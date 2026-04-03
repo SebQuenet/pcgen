@@ -16,7 +16,6 @@ import pcgen.core.AbilityCategory;
 import pcgen.facade.core.AbilityFacade;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.PendingChoice;
 import pcgen.mcp.McpUIDelegate;
 
 public final class AbilityTools
@@ -120,14 +119,19 @@ public final class AbilityTools
 	{
 		return new SyncToolSpecification(
 			new Tool("add_ability",
-				"Add an ability (feat, trait, etc.) to a character. May trigger a chooser if the ability requires selections.",
+				"Add an ability (feat, trait, etc.) to a character. If the ability requires a choice (e.g., Weapon Focus requires choosing a weapon), pass it in the 'choice' parameter.",
 				"""
 					{
 						"type": "object",
 						"properties": {
 							"character_id": { "type": "string", "description": "Character ID" },
 							"category_key": { "type": "string", "description": "Ability category key" },
-							"ability_key": { "type": "string", "description": "Ability key or name" }
+							"ability_key": { "type": "string", "description": "Ability key or name" },
+							"choice": {
+								"type": "array",
+								"items": { "type": "string" },
+								"description": "Pre-selected choices for abilities that require selection (e.g., ['Longbow'] for Weapon Focus). If the ability requires a choice and this is not provided, the first available option will be auto-selected."
+							}
 						},
 						"required": ["character_id", "category_key", "ability_key"]
 					}
@@ -139,6 +143,8 @@ public final class AbilityTools
 					CharacterFacade character = session.getCharacter(characterId);
 					String categoryKey = (String) args.get("category_key");
 					String abilityKey = (String) args.get("ability_key");
+					@SuppressWarnings("unchecked")
+					List<String> choice = (List<String>) args.get("choice");
 
 					AbilityCategory category = findCategory(character, categoryKey);
 					if (category == null)
@@ -164,26 +170,49 @@ public final class AbilityTools
 						return errorResult("Ability not found: " + abilityKey);
 					}
 
-					character.addAbility(category, found);
-
 					McpUIDelegate delegate = session.getDelegate(characterId);
-					if (delegate != null)
+
+					// If the ability requires a choice and none was provided,
+					// capture the available options and return them without adding the ability.
+					if (found.isMult() && (choice == null || choice.isEmpty()))
 					{
-						PendingChoice pending = delegate.getLatestPendingChoice();
-						if (pending != null)
+						if (delegate != null)
 						{
-							Map<String, Object> result = new LinkedHashMap<>();
-							result.put("status", "pending_choice");
-							result.put("choice_id", pending.choiceId());
-							result.put("title", pending.title());
-							result.put("available_options", pending.availableOptions());
-							result.put("remaining_selections", pending.remainingSelections());
-							result.put("message", "This ability requires a choice. Use resolve_choice tool.");
-							return toResult(result);
+							delegate.enableCaptureMode();
 						}
+						character.addAbility(category, found);
+						if (delegate != null)
+						{
+							delegate.disableCaptureMode();
+							List<String> options = delegate.getCapturedOptions();
+							if (options != null && !options.isEmpty())
+							{
+								Map<String, Object> result = new LinkedHashMap<>();
+								result.put("status", "choice_required");
+								result.put("ability", found.toString());
+								result.put("available_choices", options);
+								result.put("message", "This ability requires a choice. Call add_ability again with the 'choice' parameter.");
+								return toResult(result);
+							}
+						}
+						return toResult(Map.of("status", "ok", "ability", found.toString()));
 					}
 
-					return toResult(Map.of("status", "ok", "ability", found.toString()));
+					// Choice was provided — pre-select it
+					if (delegate != null && choice != null && !choice.isEmpty())
+					{
+						delegate.setPreSelectedChoices(choice);
+					}
+
+					character.addAbility(category, found);
+
+					if (delegate != null)
+					{
+						delegate.clearPreSelectedChoices();
+					}
+
+					return toResult(Map.of("status", "ok", "ability", found.toString(),
+						"choice", choice != null ? choice : List.of()));
 				}
 				catch (Exception e)
 				{
@@ -268,7 +297,7 @@ public final class AbilityTools
 		}
 		catch (JsonProcessingException e)
 		{
-			return errorResult("JSON serialization error: " + e.getMessage());
+			return new CallToolResult(List.of(new TextContent(data.toString())), false);
 		}
 	}
 

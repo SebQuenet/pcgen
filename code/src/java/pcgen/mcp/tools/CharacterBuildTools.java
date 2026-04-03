@@ -120,14 +120,16 @@ public final class CharacterBuildTools
 					}
 					"""),
 			(exchange, args) -> {
+				CharacterFacade character = null;
+				PCClass found = null;
+				int levelsBefore = 0;
 				try
 				{
-					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					character = session.getCharacter((String) args.get("character_id"));
 					String classKey = (String) args.get("class_key");
 					int levels = args.containsKey("levels") ? ((Number) args.get("levels")).intValue() : 1;
 					DataSetFacade dataSet = character.getDataSet();
 
-					PCClass found = null;
 					for (PCClass pcClass : dataSet.getClasses())
 					{
 						if (pcClass.getKeyName().equalsIgnoreCase(classKey) || pcClass.getDisplayName().equalsIgnoreCase(classKey))
@@ -141,7 +143,7 @@ public final class CharacterBuildTools
 						return errorResult("Class not found: " + classKey);
 					}
 
-					int levelsBefore = character.getClassLevel(found);
+					levelsBefore = character.getClassLevel(found);
 					PCClass[] classArray = new PCClass[levels];
 					Arrays.fill(classArray, found);
 					character.addCharacterLevels(classArray);
@@ -151,10 +153,28 @@ public final class CharacterBuildTools
 					{
 						return errorResult("Failed to add class level. Check character prerequisites and abilities.");
 					}
+					if (actuallyAdded < levels)
+					{
+						return toResult(Map.of("status", "partial", "class", found.getDisplayName(),
+							"levelsAdded", actuallyAdded, "levelsRequested", levels,
+							"message", "Only " + actuallyAdded + " of " + levels + " levels were added."));
+					}
 					return toResult(Map.of("status", "ok", "class", found.getDisplayName(), "levelsAdded", actuallyAdded));
 				}
 				catch (Exception e)
 				{
+					// Check if levels were added despite the error
+					if (character != null && found != null)
+					{
+						int levelsAfter = character.getClassLevel(found);
+						int actuallyAdded = levelsAfter - levelsBefore;
+						if (actuallyAdded > 0)
+						{
+							return toResult(Map.of("status", "ok_with_warning", "class", found.getDisplayName(),
+								"levelsAdded", actuallyAdded,
+								"warning", "Levels were added but an error occurred: " + e.getMessage()));
+						}
+					}
 					return errorResult(e.getMessage());
 				}
 			}
@@ -264,7 +284,9 @@ public final class CharacterBuildTools
 		}
 		catch (JsonProcessingException e)
 		{
-			return errorResult("JSON serialization error: " + e.getMessage());
+			// Fallback: never report serialization failure as a tool error
+			// since the operation may have succeeded
+			return new CallToolResult(List.of(new TextContent(data.toString())), false);
 		}
 	}
 

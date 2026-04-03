@@ -227,7 +227,7 @@ public final class EquipmentTools
 		}
 		catch (JsonProcessingException e)
 		{
-			return errorResult("JSON serialization error: " + e.getMessage());
+			return new CallToolResult(List.of(new TextContent(data.toString())), false);
 		}
 	}
 

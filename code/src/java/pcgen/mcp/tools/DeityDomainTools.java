@@ -183,7 +183,7 @@ public final class DeityDomainTools
 		}
 		catch (JsonProcessingException e)
 		{
-			return errorResult("JSON serialization error: " + e.getMessage());
+			return new CallToolResult(List.of(new TextContent(data.toString())), false);
 		}
 	}
 
