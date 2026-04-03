@@ -1,0 +1,7 @@
+Epic Inquisitor Reckoning	CATEGORY:Special Ability	TYPE:EpicClassFeature.Inquisitor	VISIBLE:YES	DEFINE:EpicReckoningUses|0	DESC:Standard action that provokes AoO, end all Judgments and invoke Reckoning. Melee touch inflicts penalty based on Judgment type. DC 10 + 1/2 level + Wis modifier. %1/day.|EpicReckoningUses	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Inquisitor Epic Judgement	CATEGORY:Special Ability	TYPE:EpicClassFeature.Inquisitor	VISIBLE:YES	DESC:Select a permanent bonus to all Judgments: +10 temp HP, +2 sacred to skill checks, +2 sacred CMB/CMD, +1 sacred spell DCs, reroll 1 save, or immunity to a condition (Confused/Dazzled/Fatigue/Shaken/Sickened).	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Inquisitor Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Inquisitor	VISIBLE:YES	DEFINE:EpicInquisitorDamageBonus|0	BONUS:VAR|EpicInquisitorDamageBonus|floor((CL-18)/3)	BONUS:COMBAT|DAMAGE|EpicInquisitorDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicInquisitorDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Inquisitor Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Inquisitor	VISIBLE:YES	DEFINE:EpicInquisitorProwess|0	BONUS:VAR|EpicInquisitorProwess|floor((CL-19)/2)	DESC:+%1 prowess bonus to one iterative attack.|EpicInquisitorProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

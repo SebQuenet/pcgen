@@ -1,0 +1,23 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Paladin Class Abilities
+
+Epic Paladin Epic Smite	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin	VISIBLE:YES	DEFINE:EpicSmiteUses|0	DESC:When using Smite Evil, you may select a path for additional powers lasting %1 rounds or until the target is slain.|EpicSmiteUses	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Paladin Divine Mercy	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin	VISIBLE:YES	DESC:Your Lay on Hands cures an additional negative condition. At higher levels, grant immunity.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Paladin Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin	VISIBLE:YES	DEFINE:EpicPaladinDamageBonus|0	BONUS:VAR|EpicPaladinDamageBonus|floor((CL-19)/2)	BONUS:COMBAT|DAMAGE|EpicPaladinDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicPaladinDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Paladin Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin	VISIBLE:YES	DEFINE:EpicPaladinProwess|0	BONUS:VAR|EpicPaladinProwess|(CL-20)	DESC:+%1 prowess bonus to one iterative attack.|EpicPaladinProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Smite Path Choices
+
+Epic Smite Path ~ Diligence	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin.EpicSmitePath	VISIBLE:YES	DESC:Ignore difficult terrain, cannot be restrained, freedom of movement, +10 ft speed (increases by +10 every 2 levels).	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Smite Path ~ Faith	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin.EpicSmitePath	VISIBLE:YES	DESC:Divine Grace save bonus +2, aura bonuses +1 (increasing by +1 every 2 levels).	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Smite Path ~ Glory	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin.EpicSmitePath	VISIBLE:YES	DESC:CMB/CMD equal to class level, combat maneuvers against targets up to 2 size categories larger. Max size +1 every 2 levels.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Smite Path ~ Honor	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin.EpicSmitePath	VISIBLE:YES	DESC:Add Charisma bonus to AC (touch and flat-footed). Temp HP equal to class level. Bonus +1 every 2 levels.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Smite Path ~ Temperance	CATEGORY:Special Ability	TYPE:EpicClassFeature.Paladin.EpicSmitePath	VISIBLE:YES	DESC:DR equal to class level, equal energy resistance to acid, cold, electricity, and fire.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

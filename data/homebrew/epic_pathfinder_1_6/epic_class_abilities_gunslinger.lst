@@ -1,0 +1,9 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Gunslinger Class Abilities
+
+Epic Gunslinger Tinker	CATEGORY:Special Ability	TYPE:EpicClassFeature.Gunslinger	VISIBLE:YES	DESC:Spend one week to permanently improve your firearm: +5' range, +1 critical confirmation, +2 hardness, or double HP.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Gunslinger Shooters Stance	CATEGORY:Special Ability	TYPE:EpicClassFeature.Gunslinger	VISIBLE:YES	DEFINE:EpicShooterStanceDice|0	DESC:Sacrifice Nimble dodge bonus for +%1d6 damage per attack with a firearm. Recover 1 grit per successful attack.|EpicShooterStanceDice	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Gunslinger Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Gunslinger	VISIBLE:YES	DEFINE:EpicGunslingerProwess|0	BONUS:VAR|EpicGunslingerProwess|(CL-20)	DESC:+%1 prowess bonus to one iterative attack.|EpicGunslingerProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

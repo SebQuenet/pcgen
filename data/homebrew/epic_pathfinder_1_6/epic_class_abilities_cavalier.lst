@@ -1,0 +1,11 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Cavalier Class Abilities
+
+Epic Cavalier Epic Challenge	CATEGORY:Special Ability	TYPE:EpicClassFeature.Cavalier	VISIBLE:YES	DESC:When making your first attack against a Challenged foe, inflict a condition (DC 10 + 1/2 level + Cha modifier). Conditions: Bleed 5, Dazzled, Deafened, Fatigued, Shaken, Sickened.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Cavalier Epic Banner	CATEGORY:Special Ability	TYPE:EpicClassFeature.Cavalier	VISIBLE:YES	DESC:Your banner bonuses increase: +1 to saves vs fear and +1 to attack rolls on a charge. Bonuses improve by +1 every 5 levels.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Cavalier Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Cavalier	VISIBLE:YES	DEFINE:EpicCavalierDamageBonus|0	BONUS:VAR|EpicCavalierDamageBonus|floor((CL-18)/3)	BONUS:COMBAT|DAMAGE|EpicCavalierDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicCavalierDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Cavalier Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Cavalier	VISIBLE:YES	DEFINE:EpicCavalierProwess|0	BONUS:VAR|EpicCavalierProwess|(CL-20)	DESC:+%1 prowess bonus to one iterative attack.|EpicCavalierProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

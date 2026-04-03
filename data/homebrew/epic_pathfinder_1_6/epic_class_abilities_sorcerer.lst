@@ -1,0 +1,5 @@
+Epic Sorcerer Arcane Conversion	CATEGORY:Special Ability	TYPE:EpicClassFeature.Sorcerer	VISIBLE:YES	DESC:Designate daily spell slots as convertible (number = Charisma bonus, min 1). Levels 1-4. When casting, use a swift action to consume a convertible slot for bonuses: metamagic, +DC, +caster level, +penetrate SR, +DC to dispel, or raise level-dependent caps.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Sorcerer Epic Bloodline	CATEGORY:Special Ability	TYPE:EpicClassFeature.Sorcerer	VISIBLE:YES	DEFINE:EpicBloodlineAdjustment|0	DESC:Enhance bloodline powers. As swift action, apply metamagic feats with combined adjustment of +%1 or less. Uses per day = Charisma modifier (min 1).|EpicBloodlineAdjustment	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Sorcerer Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Sorcerer	VISIBLE:YES	DEFINE:EpicSorcererProwess|0	BONUS:VAR|EpicSorcererProwess|floor((CL-17)/4)	DESC:+%1 prowess bonus to one iterative attack.|EpicSorcererProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

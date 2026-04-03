@@ -1,0 +1,5 @@
+Epic Summoner Improved Summons	CATEGORY:Special Ability	TYPE:EpicClassFeature.Summoner	VISIBLE:YES	DEFINE:EpicSummonerImprovedSummons|0	DESC:When using summon monster, increase number of creatures by +%1. Or forgo bonuses to apply metamagic feats.|EpicSummonerImprovedSummons	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Summoner Epic Summons	CATEGORY:Special Ability	TYPE:EpicClassFeature.Summoner	VISIBLE:YES	DEFINE:EpicSummonsUses|0	DESC:As swift action %1/day, summoned creatures gain: max HP/HD, bonus HP = your level, bypass DR/epic, insight bonuses = prowess, deflection = Cha modifier, insight saves = Cha modifier.|EpicSummonsUses	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Summoner Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Summoner	VISIBLE:YES	DEFINE:EpicSummonerProwess|0	BONUS:VAR|EpicSummonerProwess|floor((CL-17)/4)	DESC:+%1 prowess bonus to one iterative attack.|EpicSummonerProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

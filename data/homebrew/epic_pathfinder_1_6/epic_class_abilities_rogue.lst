@@ -1,0 +1,25 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Rogue Class Abilities
+
+Epic Rogue Epic Skill	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue	VISIBLE:YES	DESC:Select a permanent bonus: +2 class skill, +2 CMB for one maneuver, +2 confirm criticals, +1 poison DC, +2 sneak attack damage, +10 ft speed, or 1 additional AoO/round.	BONUS:ABILITYPOOL|Epic Rogue Epic Skill|1	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Rogue Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue	VISIBLE:YES	DEFINE:EpicRogueDamageBonus|0	BONUS:VAR|EpicRogueDamageBonus|floor((CL-17)/4)	BONUS:COMBAT|DAMAGE|EpicRogueDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicRogueDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Rogue Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue	VISIBLE:YES	DEFINE:EpicRogueProwess|0	BONUS:VAR|EpicRogueProwess|floor((CL-19)/2)	DESC:+%1 prowess bonus to one iterative attack.|EpicRogueProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Skill Choices
+
+Epic Skill ~ Class Skill Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue.EpicSkillChoice	VISIBLE:YES	DESC:+2 bonus to one class skill.	MULT:YES	STACK:YES	CHOOSE:SKILL|CLASS	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Skill ~ CMB Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue.EpicSkillChoice	VISIBLE:YES	DESC:+2 bonus to CMB for one combat maneuver.	MULT:YES	STACK:NO	CHOOSE:STRING|Bull Rush|Dirty Trick|Disarm|Grapple|Overrun|Reposition|Steal|Sunder|Trip	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Skill ~ Confirm Criticals	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue.EpicSkillChoice	VISIBLE:YES	DESC:+2 bonus to confirm critical hits.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Skill ~ Poison DC	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue.EpicSkillChoice	VISIBLE:YES	DESC:+1 bonus to the DC of any poison you use.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Skill ~ Sneak Attack Damage	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue.EpicSkillChoice	VISIBLE:YES	DESC:+2 bonus to sneak attack damage.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Skill ~ Speed	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue.EpicSkillChoice	VISIBLE:YES	BONUS:MOVEADD|TYPE.Walk|10	DESC:+10 feet to base movement speed.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Skill ~ Extra AoO	CATEGORY:Special Ability	TYPE:EpicClassFeature.Rogue.EpicSkillChoice	VISIBLE:YES	DESC:+1 attack of opportunity per round.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

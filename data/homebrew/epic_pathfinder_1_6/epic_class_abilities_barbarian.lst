@@ -1,0 +1,21 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Barbarian Class Abilities
+
+Epic Barbarian Improved Power	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian	VISIBLE:YES	DESC:You improve one rage power you know, gaining enhanced benefits.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Barbarian Epic Rage	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian	VISIBLE:YES	DESC:Select a bonus that applies each time you rage: weapon damage +1 step, +4 CMB/CMD, +15 temp HP, or +2 Will saves.	BONUS:ABILITYPOOL|Epic Barbarian Epic Rage|1	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Barbarian Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian	VISIBLE:YES	DEFINE:EpicBarbarianDamageBonus|0	BONUS:VAR|EpicBarbarianDamageBonus|floor((CL-19)/2)	BONUS:COMBAT|DAMAGE|EpicBarbarianDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicBarbarianDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Barbarian Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian	VISIBLE:YES	DEFINE:EpicBarbarianProwess|0	BONUS:VAR|EpicBarbarianProwess|(CL-20)	DESC:+%1 prowess bonus to one iterative attack.|EpicBarbarianProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Rage Choices
+
+Epic Rage ~ Weapon Damage	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian.EpicRageChoice	VISIBLE:YES	DESC:Weapon damage die increases by 1 step while raging.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Rage ~ CMB CMD	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian.EpicRageChoice	VISIBLE:YES	DESC:+4 to CMB and CMD while raging.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Rage ~ Temporary HP	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian.EpicRageChoice	VISIBLE:YES	DESC:+15 temporary hit points while raging.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Rage ~ Will Saves	CATEGORY:Special Ability	TYPE:EpicClassFeature.Barbarian.EpicRageChoice	VISIBLE:YES	DESC:+2 to Will saves while raging.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

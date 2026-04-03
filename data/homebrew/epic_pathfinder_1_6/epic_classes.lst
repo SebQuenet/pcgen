@@ -1,0 +1,256 @@
+SOURCELONG:Epic Pathfinder Handbook	SOURCESHORT:EPH	SOURCEWEB:https://www.jessejackjones.com	SOURCEDATE:2015-07
+
+###Block: Epic Class Modifications
+# This file extends Pathfinder core and APG classes to level 30+
+# Using CLASS:ClassName.MOD to modify existing class definitions
+
+###Block: Alchemist (6-level prepared caster, 1/2 BAB)
+CLASS:Alchemist.MOD	MAXLEVEL:40
+21	CAST:0,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Half BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Alchemist Discovery
+22	CAST:0,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Alchemist Bonus Feat|1
+23	CAST:0,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Alchemist Grand Discovery
+24	CAST:0,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Alchemist Discovery
+25	CAST:0,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Alchemist Bonus Feat|1
+26	CAST:0,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Alchemist Discovery
+27	CAST:0,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Alchemist Grand Discovery
+28	CAST:0,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Alchemist Bonus Feat|1
+29	CAST:0,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Alchemist Discovery
+30	CAST:0,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Alchemist Grand Discovery
+
+###Block: Barbarian (non-caster, full BAB)
+CLASS:Barbarian.MOD	MAXLEVEL:40
+21	BONUS:VAR|BarbarianRageDuration|2	BONUS:VAR|TrapSense|1	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Full BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Improved Power	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Damage Bonus
+22	BONUS:VAR|BarbarianRageDuration|2	BONUS:ABILITYPOOL|Epic Barbarian Bonus Feat|1	BONUS:VAR|BarbarianDR|1
+23	BONUS:VAR|BarbarianRageDuration|2	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Epic Rage
+24	BONUS:VAR|BarbarianRageDuration|2	BONUS:VAR|TrapSense|1	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Improved Power
+25	BONUS:VAR|BarbarianRageDuration|2	BONUS:ABILITYPOOL|Epic Barbarian Bonus Feat|1	BONUS:VAR|BarbarianDR|1
+26	BONUS:VAR|BarbarianRageDuration|2	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Epic Rage
+27	BONUS:VAR|BarbarianRageDuration|2	BONUS:VAR|TrapSense|1	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Improved Power
+28	BONUS:VAR|BarbarianRageDuration|2	BONUS:ABILITYPOOL|Epic Barbarian Bonus Feat|1	BONUS:VAR|BarbarianDR|1
+29	BONUS:VAR|BarbarianRageDuration|2	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Epic Rage
+30	BONUS:VAR|BarbarianRageDuration|2	BONUS:VAR|TrapSense|1	ABILITY:Special Ability|AUTOMATIC|Epic Barbarian Improved Power
+
+###Block: Bard (6-level spontaneous caster, 3/4 BAB)
+CLASS:Bard.MOD	MAXLEVEL:40
+21	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Bard Epic Performance
+22	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Bard Bonus Feat|1
+23	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5
+24	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Bard Bonus Feat|1
+25	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Bard Epic Performance
+26	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Bard Bonus Feat|1
+27	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5
+28	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Bard Bonus Feat|1
+29	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Bard Epic Performance
+30	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Bard Bonus Feat|1
+
+###Block: Cavalier (non-caster, full BAB)
+CLASS:Cavalier.MOD	MAXLEVEL:40
+21	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Full BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Cavalier Epic Challenge
+22	BONUS:ABILITYPOOL|Epic Cavalier Bonus Feat|1
+23	ABILITY:Special Ability|AUTOMATIC|Epic Cavalier Epic Banner
+24	BONUS:ABILITYPOOL|Epic Cavalier Bonus Feat|1
+25	ABILITY:Special Ability|AUTOMATIC|Epic Cavalier Epic Challenge
+26	BONUS:ABILITYPOOL|Epic Cavalier Bonus Feat|1
+27	ABILITY:Special Ability|AUTOMATIC|Epic Cavalier Epic Banner
+28	BONUS:ABILITYPOOL|Epic Cavalier Bonus Feat|1
+29	ABILITY:Special Ability|AUTOMATIC|Epic Cavalier Epic Challenge
+30	BONUS:ABILITYPOOL|Epic Cavalier Bonus Feat|1
+
+###Block: Cleric (9-level prepared caster, 3/4 BAB)
+CLASS:Cleric.MOD	MAXLEVEL:40
+21	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:VAR|ClericChannelEnergyDice|1	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus
+22	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Cleric Bonus Feat|1	ABILITY:Special Ability|AUTOMATIC|Epic Cleric Epic Aura
+23	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:VAR|ClericChannelEnergyDice|1
+24	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Cleric Epic Aura
+25	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:VAR|ClericChannelEnergyDice|1	BONUS:ABILITYPOOL|Epic Cleric Bonus Feat|1
+26	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Cleric Epic Aura
+27	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:VAR|ClericChannelEnergyDice|1
+28	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Cleric Bonus Feat|1	ABILITY:Special Ability|AUTOMATIC|Epic Cleric Epic Aura
+29	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:VAR|ClericChannelEnergyDice|1
+30	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Cleric Epic Aura
+
+###Block: Druid (9-level prepared caster, 3/4 BAB)
+CLASS:Druid.MOD	MAXLEVEL:40
+21	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Druid Wild Feat
+22	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Druid Bonus Feat|1
+23	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Druid Epic Ally
+24	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Druid Wild Feat
+25	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Druid Bonus Feat|1
+26	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Druid Epic Ally
+27	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Druid Wild Feat
+28	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Druid Bonus Feat|1
+29	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Druid Epic Ally
+30	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Druid Wild Feat
+
+###Block: Fighter (non-caster, full BAB)
+CLASS:Fighter.MOD	MAXLEVEL:40
+21	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Full BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Fighter Warrior	BONUS:VAR|WeaponTraining|1
+22	BONUS:ABILITYPOOL|Epic Fighter Bonus Feat|1	BONUS:VAR|Bravery|1
+23	ABILITY:Special Ability|AUTOMATIC|Epic Fighter Warrior
+24	BONUS:ABILITYPOOL|Epic Fighter Bonus Feat|1
+25	ABILITY:Special Ability|AUTOMATIC|Epic Fighter Warrior	BONUS:VAR|WeaponTraining|1
+26	BONUS:ABILITYPOOL|Epic Fighter Bonus Feat|1	BONUS:VAR|Bravery|1
+27	ABILITY:Special Ability|AUTOMATIC|Epic Fighter Warrior
+28	BONUS:ABILITYPOOL|Epic Fighter Bonus Feat|1
+29	ABILITY:Special Ability|AUTOMATIC|Epic Fighter Warrior	BONUS:VAR|WeaponTraining|1
+30	BONUS:ABILITYPOOL|Epic Fighter Bonus Feat|1	BONUS:VAR|Bravery|1
+
+###Block: Gunslinger (non-caster, full BAB)
+CLASS:Gunslinger.MOD	MAXLEVEL:40
+21	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Full BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Gunslinger Gun Mastery
+22	BONUS:ABILITYPOOL|Epic Gunslinger Bonus Feat|1
+23	ABILITY:Special Ability|AUTOMATIC|Epic Gunslinger Deadeye
+24	BONUS:ABILITYPOOL|Epic Gunslinger Bonus Feat|1
+25	ABILITY:Special Ability|AUTOMATIC|Epic Gunslinger Gun Mastery
+26	BONUS:ABILITYPOOL|Epic Gunslinger Bonus Feat|1
+27	ABILITY:Special Ability|AUTOMATIC|Epic Gunslinger Deadeye
+28	BONUS:ABILITYPOOL|Epic Gunslinger Bonus Feat|1
+29	ABILITY:Special Ability|AUTOMATIC|Epic Gunslinger Gun Mastery
+30	BONUS:ABILITYPOOL|Epic Gunslinger Bonus Feat|1
+
+###Block: Inquisitor (6-level spontaneous caster, 3/4 BAB)
+CLASS:Inquisitor.MOD	MAXLEVEL:40
+21	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Inquisitor Epic Judgment
+22	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Inquisitor Bonus Feat|1
+23	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5
+24	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Inquisitor Bonus Feat|1
+25	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Inquisitor Epic Judgment
+26	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Inquisitor Bonus Feat|1
+27	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5
+28	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Inquisitor Bonus Feat|1
+29	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Inquisitor Epic Judgment
+30	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Inquisitor Bonus Feat|1
+
+###Block: Magus (6-level prepared caster, 3/4 BAB)
+CLASS:Magus.MOD	MAXLEVEL:40
+21	CAST:5,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Magus Spellstrike Mastery
+22	CAST:5,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Magus Bonus Feat|1
+23	CAST:5,5,5,5,5,5,5
+24	CAST:5,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Magus Bonus Feat|1
+25	CAST:5,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Magus Spellstrike Mastery
+26	CAST:5,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Magus Bonus Feat|1
+27	CAST:5,5,5,5,5,5,5
+28	CAST:5,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Magus Bonus Feat|1
+29	CAST:5,5,5,5,5,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Magus Spellstrike Mastery
+30	CAST:5,5,5,5,5,5,5	BONUS:ABILITYPOOL|Epic Magus Bonus Feat|1
+
+###Block: Monk (non-caster, 3/4 BAB)
+CLASS:Monk.MOD	MAXLEVEL:40
+21	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Monk Epic Insight	BONUS:VAR|MonkACBonus|1	BONUS:VAR|MonkFastMovement|10
+22	BONUS:ABILITYPOOL|Epic Monk Bonus Feat|1
+23	ABILITY:Special Ability|AUTOMATIC|Epic Monk Epic Insight	BONUS:VAR|MonkACBonus|1
+24	BONUS:ABILITYPOOL|Epic Monk Bonus Feat|1	BONUS:VAR|MonkACBonus|1	BONUS:VAR|MonkFastMovement|10
+25	ABILITY:Special Ability|AUTOMATIC|Epic Monk Epic Insight
+26	BONUS:ABILITYPOOL|Epic Monk Bonus Feat|1
+27	ABILITY:Special Ability|AUTOMATIC|Epic Monk Epic Insight	BONUS:VAR|MonkFastMovement|10
+28	BONUS:ABILITYPOOL|Epic Monk Bonus Feat|1	BONUS:VAR|MonkACBonus|1
+29	ABILITY:Special Ability|AUTOMATIC|Epic Monk Epic Insight
+30	BONUS:ABILITYPOOL|Epic Monk Bonus Feat|1	BONUS:VAR|MonkFastMovement|10
+
+###Block: Oracle (9-level spontaneous caster, 3/4 BAB)
+CLASS:Oracle.MOD	MAXLEVEL:40
+21	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Half BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Oracle Epic Revelation
+22	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Oracle Bonus Feat|1
+23	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3
+24	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Oracle Bonus Feat|1
+25	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Oracle Epic Revelation
+26	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Oracle Bonus Feat|1
+27	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3
+28	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Oracle Bonus Feat|1
+29	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Oracle Epic Revelation
+30	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Oracle Bonus Feat|1
+
+###Block: Paladin (4-level prepared caster, full BAB)
+CLASS:Paladin.MOD	MAXLEVEL:40
+21	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Full BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Paladin Epic Smite
+22	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Paladin Bonus Feat|1	BONUS:VAR|SmiteEvilLVL|1
+23	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Paladin Divine Mercy
+24	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Paladin Bonus Feat|1
+25	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Paladin Epic Smite	BONUS:VAR|SmiteEvilLVL|1
+26	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Paladin Bonus Feat|1
+27	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Paladin Divine Mercy
+28	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Paladin Bonus Feat|1	BONUS:VAR|SmiteEvilLVL|1
+29	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Paladin Epic Smite
+30	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Paladin Bonus Feat|1
+
+###Block: Ranger (4-level prepared caster, full BAB)
+CLASS:Ranger.MOD	MAXLEVEL:40
+21	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Full BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Ranger Epic Combat Style
+22	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Ranger Bonus Feat|1
+23	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Ranger Wild Hunter
+24	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Ranger Bonus Feat|1
+25	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Ranger Epic Combat Style
+26	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Ranger Bonus Feat|1
+27	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Ranger Wild Hunter
+28	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Ranger Bonus Feat|1
+29	CAST:0,4,4,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Ranger Epic Combat Style
+30	CAST:0,4,4,3,3	BONUS:ABILITYPOOL|Epic Ranger Bonus Feat|1
+
+###Block: Rogue (non-caster, 3/4 BAB)
+CLASS:Rogue.MOD	MAXLEVEL:40
+21	BONUS:VAR|SneakAttackDice|1	BONUS:VAR|TrapSense|1	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Rogue Epic Skill
+22	BONUS:ABILITYPOOL|Epic Rogue Bonus Feat|1
+23	BONUS:VAR|SneakAttackDice|1	ABILITY:Special Ability|AUTOMATIC|Epic Rogue Epic Skill
+24	BONUS:ABILITYPOOL|Epic Rogue Bonus Feat|1	BONUS:VAR|TrapSense|1
+25	BONUS:VAR|SneakAttackDice|1	ABILITY:Special Ability|AUTOMATIC|Epic Rogue Epic Skill
+26	BONUS:ABILITYPOOL|Epic Rogue Bonus Feat|1
+27	BONUS:VAR|SneakAttackDice|1	BONUS:VAR|TrapSense|1	ABILITY:Special Ability|AUTOMATIC|Epic Rogue Epic Skill
+28	BONUS:ABILITYPOOL|Epic Rogue Bonus Feat|1
+29	BONUS:VAR|SneakAttackDice|1	ABILITY:Special Ability|AUTOMATIC|Epic Rogue Epic Skill
+30	BONUS:ABILITYPOOL|Epic Rogue Bonus Feat|1	BONUS:VAR|TrapSense|1
+
+###Block: Sorcerer (9-level spontaneous caster, 1/2 BAB)
+CLASS:Sorcerer.MOD	MAXLEVEL:40
+21	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Half BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Sorcerer Bloodline Power
+22	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Sorcerer Bonus Feat|1
+23	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3
+24	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Sorcerer Bonus Feat|1
+25	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Sorcerer Bloodline Power
+26	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Sorcerer Bonus Feat|1
+27	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3
+28	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Sorcerer Bonus Feat|1
+29	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	ABILITY:Special Ability|AUTOMATIC|Epic Sorcerer Bloodline Power
+30	CAST:0,6,6,6,6,6,6,6,6,6	KNOWN:9,5,5,4,4,4,3,3,3,3	BONUS:ABILITYPOOL|Epic Sorcerer Bonus Feat|1
+
+###Block: Summoner (6-level spontaneous caster, 3/4 BAB)
+CLASS:Summoner.MOD	MAXLEVEL:40
+21	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Three Quarter BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Summoner Epic Eidolon
+22	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Summoner Bonus Feat|1
+23	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5
+24	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Summoner Bonus Feat|1
+25	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Summoner Epic Eidolon
+26	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Summoner Bonus Feat|1
+27	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5
+28	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Summoner Bonus Feat|1
+29	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	ABILITY:Special Ability|AUTOMATIC|Epic Summoner Epic Eidolon
+30	CAST:0,5,5,5,5,5,5	KNOWN:6,6,6,6,6,5,5	BONUS:ABILITYPOOL|Epic Summoner Bonus Feat|1
+
+###Block: Witch (9-level prepared caster, 1/2 BAB)
+CLASS:Witch.MOD	MAXLEVEL:40
+21	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Half BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Witch Grand Hex
+22	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Witch Bonus Feat|1
+23	CAST:4,4,4,4,4,4,4,4,4,4
+24	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Witch Grand Hex
+25	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Witch Bonus Feat|1
+26	CAST:4,4,4,4,4,4,4,4,4,4
+27	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Witch Grand Hex
+28	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Witch Bonus Feat|1
+29	CAST:4,4,4,4,4,4,4,4,4,4
+30	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Witch Grand Hex
+
+###Block: Wizard (9-level prepared caster, 1/2 BAB)
+CLASS:Wizard.MOD	MAXLEVEL:40
+21	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Prowess ~ Half BAB	ABILITY:Special Ability|AUTOMATIC|Epic Attack Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Saving Throw Bonus	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Spell Boost	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+22	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Wizard Bonus Feat|1	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+23	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Spell Boost	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+24	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+25	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Spell Boost	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+26	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Wizard Bonus Feat|1	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+27	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Spell Boost	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+28	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+29	CAST:4,4,4,4,4,4,4,4,4,4	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Spell Boost	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+30	CAST:4,4,4,4,4,4,4,4,4,4	BONUS:ABILITYPOOL|Epic Wizard Bonus Feat|1	ABILITY:Special Ability|AUTOMATIC|Epic Wizard Epic Cantrip
+
+#
+# End
+#

@@ -1,0 +1,33 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Monk Class Abilities
+
+Epic Monk Epic Insight	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk	VISIBLE:YES	DESC:Select a supernatural awareness bonus. Requires at least 1 ki point.	BONUS:ABILITYPOOL|Epic Monk Epic Insight|1	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Monk Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk	VISIBLE:YES	DEFINE:EpicMonkDamageBonus|0	BONUS:VAR|EpicMonkDamageBonus|floor((CL-19)/2)	BONUS:COMBAT|DAMAGE|EpicMonkDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicMonkDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Monk AC Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk	VISIBLE:YES	DEFINE:EpicMonkACBonus|0	BONUS:VAR|EpicMonkACBonus|5+floor((CL-21)/4)	BONUS:COMBAT|AC|EpicMonkACBonus|TYPE=EpicMonkAC	DESC:+%1 bonus to AC and CMD.|EpicMonkACBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Monk Fast Movement	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk	VISIBLE:YES	DEFINE:EpicMonkSpeed|0	BONUS:VAR|EpicMonkSpeed|70+floor((CL-21)/3)*10	BONUS:MOVEADD|TYPE.Walk|EpicMonkSpeed	DESC:+%1 feet to base movement speed.|EpicMonkSpeed	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Monk Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk	VISIBLE:YES	DEFINE:EpicMonkProwess|0	BONUS:VAR|EpicMonkProwess|floor((CL-19)/2)	DESC:+%1 prowess bonus to one iterative attack.|EpicMonkProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Insight Choices
+
+Epic Insight ~ Skill Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	DESC:+8 insight bonus to all checks with one chosen skill.	MULT:YES	STACK:NO	CHOOSE:SKILL|Acrobatics|Climb|Escape Artist|Fly|Heal|Perception|Perform|Ride|Sense Motive|Sleight of Hand|Stealth|Survival|Swim	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ CMB Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	DESC:+4 insight bonus to CMB for one combat maneuver.	MULT:YES	STACK:NO	CHOOSE:STRING|Bull Rush|Dirty Trick|Disarm|Drag|Grapple|Overrun|Reposition|Steal|Sunder|Trip	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ Flurry Damage	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	DESC:+1 insight bonus to all damage rolls with flurry of blows.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ Stunning Fist DC	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	BONUS:VAR|StunningFistDC|1	DESC:+1 bonus to Stunning Fist DC.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ Ki Dodge	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	DESC:When using ki pool to grant dodge bonus to AC, the bonus increases by +2.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ Ki Speed	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	DESC:When using ki pool to increase speed, gain an additional +10 feet.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ Wholeness	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	DESC:Wholeness of Body heals +8 hit points and 2 points of ability score damage.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ Diamond Soul	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	BONUS:VAR|SpellResistance|1	DESC:+1 bonus to SR from Diamond Soul.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Insight ~ DR Chaos	CATEGORY:Special Ability	TYPE:EpicClassFeature.Monk.EpicInsightChoice	VISIBLE:YES	DESC:Increase DR/chaos by 2.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

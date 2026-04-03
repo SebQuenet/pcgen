@@ -1,0 +1,8 @@
+# Epic Pathfinder Handbook v1.6 - Epic Witch Class Abilities
+# Table 3-19: The Epic Witch
+
+Epic Witch Epic Hex	CATEGORY:Special Ability	TYPE:EpicClassFeature.Witch	VISIBLE:YES	DESC:Enhance one hex with all applicable bonuses: +1 use/day, +1 DC, +10 ft range/area, +1 round duration, -2 penalties inflicted, +2 bonuses granted, +2 damage inflicted, +1 ability damage inflicted.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Witch Metahex	CATEGORY:Special Ability	TYPE:EpicClassFeature.Witch	VISIBLE:YES	DEFINE:EpicMetahexUses|0	DEFINE:EpicMetahexMaxAdjust|0	DESC:Apply metamagic feats to passive hexes as full-round action. Max combined level adjustment +%1, %2 times per day.|EpicMetahexMaxAdjust|EpicMetahexUses	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Witch Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Witch	VISIBLE:YES	DEFINE:EpicWitchProwess|0	BONUS:VAR|EpicWitchProwess|floor((CL-17)/4)	DESC:+%1 prowess bonus to one iterative attack.|EpicWitchProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

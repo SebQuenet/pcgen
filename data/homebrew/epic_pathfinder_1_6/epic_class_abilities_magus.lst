@@ -1,0 +1,7 @@
+Epic Magus Epic Spell Access	CATEGORY:Special Ability	TYPE:EpicClassFeature.Magus	VISIBLE:YES	DEFINE:EpicMagusSpellAccess|0	DESC:Add %1 spell(s) from the wizard spell list to your spellbook as magus spells of the same level.|EpicMagusSpellAccess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Magus Epic Arcana	CATEGORY:Special Ability	TYPE:EpicClassFeature.Magus	VISIBLE:YES	DESC:Select a permanent enhancement to your arcane pool abilities: extended duration, reduced cost, improved DC, improved dispel, increased damage, or other bonuses depending on your arcana.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Magus Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Magus	VISIBLE:YES	DEFINE:EpicMagusDamageBonus|0	BONUS:VAR|EpicMagusDamageBonus|floor((CL-18)/3)	BONUS:COMBAT|DAMAGE|EpicMagusDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicMagusDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Magus Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Magus	VISIBLE:YES	DEFINE:EpicMagusProwess|0	BONUS:VAR|EpicMagusProwess|floor((CL-19)/2)	DESC:+%1 prowess bonus to one iterative attack.|EpicMagusProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

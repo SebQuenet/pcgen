@@ -1,0 +1,11 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Ranger Class Abilities
+
+Epic Ranger Epic Combat Style	CATEGORY:Special Ability	TYPE:EpicClassFeature.Ranger	VISIBLE:YES	DESC:Gain a permanent bonus when using weapons from your chosen combat style. Choose from: +2 damage, +2 CMB/CMD, +4 confirm criticals, +10 ft range, +1 AC, +2 Reflex/Fortitude, -1 attack penalty, +1 DC instant death.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Ranger Wild Hunter	CATEGORY:Special Ability	TYPE:EpicClassFeature.Ranger	VISIBLE:YES	DEFINE:EpicWildHunterUses|0	DESC:After selecting a Quarry, activate true seeing, +Wis to saves and CMD, auto-confirm criticals. Duration: 1/2 level + Wis rounds. %1/day.|EpicWildHunterUses	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Ranger Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Ranger	VISIBLE:YES	DEFINE:EpicRangerDamageBonus|0	BONUS:VAR|EpicRangerDamageBonus|floor((CL-19)/2)	BONUS:COMBAT|DAMAGE|EpicRangerDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicRangerDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Ranger Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Ranger	VISIBLE:YES	DEFINE:EpicRangerProwess|0	BONUS:VAR|EpicRangerProwess|(CL-20)	DESC:+%1 prowess bonus to one iterative attack.|EpicRangerProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

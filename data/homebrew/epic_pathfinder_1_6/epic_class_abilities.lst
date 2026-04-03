@@ -1,0 +1,6 @@
+# Universal Epic Class Abilities
+# These are automatically granted to all characters at level 21+
+
+Epic Attack Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Universal	VISIBLE:YES	DEFINE:EpicAttackBonus|0	BONUS:VAR|EpicAttackBonus|max(0,floor((TL-18)/4))	BONUS:COMBAT|BAB|EpicAttackBonus|TYPE=Epic	DESC:+%1 epic bonus to attack rolls, CMB, and CMD.|EpicAttackBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Saving Throw Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Universal	VISIBLE:YES	DEFINE:EpicSaveBonus|0	BONUS:VAR|EpicSaveBonus|max(0,floor((TL-18)/3))	BONUS:SAVE|Fortitude,Reflex,Will|EpicSaveBonus|TYPE=Epic	DESC:+%1 epic bonus to all saving throws.|EpicSaveBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

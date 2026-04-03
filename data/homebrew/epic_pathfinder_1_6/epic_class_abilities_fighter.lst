@@ -1,0 +1,29 @@
+SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Epic Fighter Class Abilities
+
+Epic Fighter Warrior	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter	VISIBLE:YES	DEFINE:EpicFighterWarriorUses|0	DESC:You can activate a moment of extraordinary prowess %1 times per day as a swift action.|EpicFighterWarriorUses	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Fighter Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter	VISIBLE:YES	DEFINE:EpicFighterDamageBonus|0	BONUS:VAR|EpicFighterDamageBonus|floor((CL-19)/2)	BONUS:COMBAT|DAMAGE|EpicFighterDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicFighterDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Fighter Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter	VISIBLE:YES	DEFINE:EpicFighterProwess|0	BONUS:VAR|EpicFighterProwess|(CL-20)	DESC:+%1 prowess bonus to one iterative attack.|EpicFighterProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+###Block: Warrior Power Descriptions
+
+Epic Warrior ~ Extra Attack	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Make an additional attack at your highest BAB as part of full attack action. Stacks with haste/speed.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Weapon Mastery	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Apply Weapon Mastery to any qualifying weapon for 1 hour.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Roll Twice	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Roll twice on all attack rolls and keep the best until your next turn.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Ignore AoO	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Ignore attacks of opportunity until the beginning of your next turn.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Damage Reduction	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Reduce all damage by 50%% until next turn. First attack at 0 HP leaves you at 1 HP.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Auto Save	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Automatically succeed on one saving throw and negate secondary effects.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Cleave Rush	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Add a free Bull Rush to each Cleave target. +4 CMB if you have Great Cleave.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Vital Trip	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:Add a free Trip to Vital Strike target. +4 CMB if you have Improved Vital Strike.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Warrior ~ Dirty Trick	CATEGORY:Special Ability	TYPE:EpicClassFeature.Fighter.EpicWarriorPower	VISIBLE:YES	DESC:If you have Precise Shot, add a free Dirty Trick. +4 bonus if you have Improved Precise Shot.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

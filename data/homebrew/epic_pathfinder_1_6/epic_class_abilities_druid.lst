@@ -1,0 +1,7 @@
+Epic Druid Wild Feat	CATEGORY:Special Ability	TYPE:EpicClassFeature.Druid	VISIBLE:YES	DESC:Select one non-epic Combat or Monster feat for which you meet all prerequisites in at least one wild shape form. At level 24 and every 3 levels, select an additional feat.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Druid Epic Ally	CATEGORY:Special Ability	TYPE:EpicClassFeature.Druid	VISIBLE:YES	DEFINE:EpicDruidAllyHD|0	DESC:When casting summon nature's ally, summoned creatures gain +%1 bonus HD with associated bonuses and an extra feat.|EpicDruidAllyHD	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Druid Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Druid	VISIBLE:YES	DEFINE:EpicDruidDamageBonus|0	BONUS:VAR|EpicDruidDamageBonus|floor((CL-18)/3)	BONUS:COMBAT|DAMAGE|EpicDruidDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicDruidDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Druid Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Druid	VISIBLE:YES	DEFINE:EpicDruidProwess|0	BONUS:VAR|EpicDruidProwess|floor((CL-19)/2)	DESC:+%1 prowess bonus to one iterative attack.|EpicDruidProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

@@ -1,0 +1,5 @@
+Epic Bard Epic Performance	CATEGORY:Special Ability	TYPE:EpicClassFeature.Bard	VISIBLE:YES	DESC:Your performances transcend normal limits. Select a group of performances to enhance with a bonus from the associated list. Groups: Ally Enhancement (Inspire Courage/Competence/Greatness/Heroics), Enemy Affliction (Fascinate/Suggestion/Frightening Tune/Mass Suggestion/Deadly Performance), Soothing Performance.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Bard Damage Bonus	CATEGORY:Special Ability	TYPE:EpicClassFeature.Bard	VISIBLE:YES	DEFINE:EpicBardDamageBonus|0	BONUS:VAR|EpicBardDamageBonus|floor((CL-17)/4)	BONUS:COMBAT|DAMAGE|EpicBardDamageBonus|TYPE=EpicDamage	DESC:+%1 bonus to all physical damage rolls.|EpicBardDamageBonus	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Bard Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Bard	VISIBLE:YES	DEFINE:EpicBardProwess|0	BONUS:VAR|EpicBardProwess|floor((CL-19)/2)	DESC:+%1 prowess bonus to one iterative attack.|EpicBardProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH

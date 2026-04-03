@@ -1,0 +1,8 @@
+# Epic Pathfinder Handbook v1.6 - Epic Wizard Class Abilities
+# Table 3-20: The Epic Wizard
+
+Epic Wizard Spell Boost	CATEGORY:Special Ability	TYPE:EpicClassFeature.Wizard	VISIBLE:YES	DESC:Select one spell from your spellbook. It gains: DC = 10 + 1/2 level + Int mod, +2 to grants (ability scores, AC, attack, saves), +4 to grants (CMB, CMD, damage, skill checks), +4 penetrate SR, +4 concentration. At level 23 and every 2 levels, select another spell (each must be different).	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Wizard Epic Cantrip	CATEGORY:Special Ability	TYPE:EpicClassFeature.Wizard	VISIBLE:YES	DESC:Convert a 1st-level spell into a cantrip with a 0-level spell slot. Gains an additional 0-level slot. At level 22+, additional cantrips. At level 24, can convert 2nd-level spells. At level 28 and every 4 levels, maximum convertible level increases by 1.	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
+
+Epic Wizard Prowess	CATEGORY:Special Ability	TYPE:EpicClassFeature.Wizard	VISIBLE:YES	DEFINE:EpicWizardProwess|0	BONUS:VAR|EpicWizardProwess|floor((CL-17)/4)	DESC:+%1 prowess bonus to one iterative attack.|EpicWizardProwess	SOURCELONG:Epic Pathfinder Handbook v1.6	SOURCESHORT:EPH
