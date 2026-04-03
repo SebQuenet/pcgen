@@ -22,14 +22,14 @@ import java.util.LinkedList;
 
 import org.apache.commons.lang3.math.Fraction;
 
-class PCGenTaskExecutor extends PCGenTask implements PCGenTaskListener
+public class PCGenTaskExecutor extends PCGenTask implements PCGenTaskListener
 {
 	private final LinkedList<PCGenTask> tasks = new LinkedList<>();
 	private PCGenTask currentTask = null;
 	private Fraction progressMultiplier = null;
 	private Fraction baseProgress = Fraction.ZERO;
 
-	void addPCGenTask(PCGenTask task)
+	public void addPCGenTask(PCGenTask task)
 	{
 		tasks.add(task);
 	}

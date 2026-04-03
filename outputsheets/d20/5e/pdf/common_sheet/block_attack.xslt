@@ -6,10 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
 	<!--
 ====================================
 ====================================
@@ -27,8 +25,6 @@
 					<xsl:with-param name="attribute" select="'border'"/>
 				</xsl:call-template>
 						<fo:table-row>
-											<xsl:message>Test</xsl:message>
-
 							<fo:table-cell>
 								<fo:block>
 								<xsl:if test="count(conditional_modifiers/savebonus) &gt; 0">
@@ -37,7 +33,6 @@
 								<xsl:for-each select="conditional_modifiers/savebonus">
 									<fo:block font-size="8pt" space-before.optimum="1pt"><xsl:value-of select="description"/></fo:block>
 								</xsl:for-each>
-							
 								<xsl:if test="count(conditional_modifiers/combatbonus) &gt; 0">
 									<fo:block text-align="center" font-size="8pt" font-weight="bold">Conditional Combat Modifiers:</fo:block>	
 								</xsl:if>
@@ -51,7 +46,6 @@
 		</fo:table>
 	</xsl:template>
 <!-- End Conditional Combat Modifiers -->
-
 	<xsl:template match="attack" mode="ranged_melee">
 <!-- BEGIN Attack table -->
 		<fo:table table-layout="fixed" width="100%" space-before="2mm">
@@ -78,17 +72,13 @@
 					<xsl:with-param name="title" select="'MELEE'"/>
 				</xsl:apply-templates>
 				<fo:table-row height="2.5pt">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 				</fo:table-row>
 				<xsl:apply-templates select="ranged" mode="to_hit">
 					<xsl:with-param name="title" select="'RANGED'"/>
 				</xsl:apply-templates>
 				<fo:table-row height="2.5pt">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 				</fo:table-row>
 				<xsl:apply-templates select="grapple" mode="to_hit">
 					<xsl:with-param name="title" select="'GRAPPLE'"/>
@@ -101,12 +91,9 @@
 		<xsl:apply-templates select="cmb" mode="moves"/>
 <!-- END Attack table -->
 	</xsl:template>
-
 	<xsl:template name="to_hit.header">
         <fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell><fo:block/></fo:table-cell>
-
 			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'TOTAL'"/><xsl:with-param name="font.size" select="'6pt'"/></xsl:call-template>
 			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'BASE ATTACK BONUS'"/></xsl:call-template>
 			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'STAT'"/></xsl:call-template>
@@ -120,7 +107,6 @@
 		<xsl:param name="title"/>
 		<xsl:param name="font.size" select="'4pt'"/>
 		<fo:table-cell><fo:block/></fo:table-cell>
-
 		<fo:table-cell display-align="after">
 			<fo:block text-align="center" font-size="6pt">
 				<xsl:attribute name="font-size"><xsl:value-of select="$font.size"/></xsl:attribute>
@@ -128,11 +114,9 @@
 			</fo:block>
 		</fo:table-cell>
 	</xsl:template>
-
 	<xsl:template match="melee|ranged|grapple|cmb" mode="to_hit">
 		<xsl:param name="title"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell>
 				<xsl:call-template name="attrib">
 					<xsl:with-param name="attribute" select="'tohit.title'"/>
@@ -143,7 +127,6 @@
 				<fo:block line-height="4pt" font-size="4pt">attack bonus</fo:block>
 			</fo:table-cell>
 			<fo:table-cell><fo:block/></fo:table-cell>
-
 			<xsl:choose>
 				<xsl:when test="contains(title, 'CMB' )">
 					<xsl:call-template name="iterative.attack.entry">
@@ -174,7 +157,6 @@
 			</fo:table-cell>
 		</fo:table-row>
 	</xsl:template>
-
 <!-- Begin CMB different moves -->
 	<xsl:template match="cmb" mode="moves">
 		<!-- BEGIN CMB table -->
@@ -193,7 +175,6 @@
 			<fo:table-column column-width="1mm"/>
 			<fo:table-column column-width="8mm"/>
 			<fo:table-column column-width="0mm"/>
-
 <!--			<fo:table-column column-width="13mm"/>
 			<fo:table-column>
 				<xsl:attribute name="column-width"><xsl:value-of select="(0.55 * $pagePrintableWidth - 96) * 0.5" />mm</xsl:attribute>
@@ -206,7 +187,6 @@
 			<fo:table-body>
 				<xsl:call-template name="cmb.moves_header" />
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell display-align="center">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'tohit.title'" />
@@ -216,7 +196,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<xsl:call-template name="iterative.attack.entry"><xsl:with-param name="value" select="grapple_attack"/><xsl:with-param name="bab" select="bab"/><xsl:with-param name="separator" select="''"/></xsl:call-template>
 					<xsl:call-template name="iterative.attack.entry"><xsl:with-param name="value" select="trip_attack"/><xsl:with-param name="bab" select="bab"/><xsl:with-param name="separator" select="''"/></xsl:call-template>
 					<xsl:call-template name="iterative.attack.entry"><xsl:with-param name="value" select="disarm_attack"/><xsl:with-param name="bab" select="bab"/><xsl:with-param name="separator" select="''"/></xsl:call-template>
@@ -225,15 +204,11 @@
 					<xsl:call-template name="attack.entry"><xsl:with-param name="value" select="overrun_attack"/><xsl:with-param name="separator" select="''"/></xsl:call-template>
 <!--					<xsl:call-template name="iterative.attack.entry"><xsl:with-param name="value" select="total"/><xsl:with-param name="separator" select="''"/></xsl:call-template>	-->
 				</fo:table-row>
-			
 				<fo:table-row height="2.5pt">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 				</fo:table-row>
 <!-- Defense entries -->
 				<fo:table-row>		
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell display-align="center">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'tohit.title'" />
@@ -243,7 +218,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<xsl:call-template name="attack.entry"><xsl:with-param name="value" select="grapple_defense"/><xsl:with-param name="separator" select="''"/></xsl:call-template>
 					<xsl:call-template name="attack.entry"><xsl:with-param name="value" select="trip_defense"/><xsl:with-param name="separator" select="''"/></xsl:call-template>
 					<xsl:call-template name="attack.entry"><xsl:with-param name="value" select="disarm_defense"/><xsl:with-param name="separator" select="''"/></xsl:call-template>
@@ -255,12 +229,10 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
 	<xsl:template name="cmb.moves_header">
 		<fo:table-row>
-											<xsl:message>Test END</xsl:message>
+											
 			<fo:table-cell><fo:block/></fo:table-cell>
-
 			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'GRAPPLE'"/></xsl:call-template>
 			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'TRIP'"/></xsl:call-template>
 			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'DISARM'"/></xsl:call-template>
@@ -270,7 +242,6 @@
 <!--			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'BASE'"/><xsl:with-param name="font.size" select="'6pt'"/></xsl:call-template> -->
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="attack.entry">
 		<xsl:param name="value" />
 		<xsl:param name="separator" select="'+'"/>
@@ -291,15 +262,14 @@
 			</fo:block>
 		</fo:table-cell>
 	</xsl:template>
-
 	<xsl:template name="iterative.attack.entry">
 		<xsl:param name="value" />
 		<xsl:param name="bab" />
 		<xsl:param name="separator" select="'+'"/>
 		<xsl:param name="fontsize" select="'6pt'"/>
-											<xsl:message>Test END</xsl:message>
+											
 		<fo:table-cell>
-											<xsl:message>Test END</xsl:message>
+											
 			<xsl:call-template name="attrib">
 				<xsl:with-param name="attribute" select="'tohit'"/>
 			</xsl:call-template>
@@ -320,8 +290,5 @@
 				<xsl:value-of select="$separator"/>
 			</fo:block>
 		</fo:table-cell>
-
 	</xsl:template>
-
-
 </xsl:stylesheet>

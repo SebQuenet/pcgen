@@ -6,10 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
 	<!--
 ====================================
 ====================================
@@ -20,7 +18,6 @@
 		<xsl:param name="title"/>
 		<xsl:param name="value"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell padding-top="1pt" height="9pt">
 				<xsl:call-template name="attrib">
 					<xsl:with-param name="attribute" select="'bio'"/>
@@ -81,7 +78,6 @@
 							</xsl:choose>
 							<fo:table-body>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell>
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio'"/>
@@ -104,7 +100,6 @@
 									</xsl:if>
 								</fo:table-row>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell padding-top="1pt">
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -117,7 +112,6 @@
 									<xsl:with-param name="value" select="age"/>
 								</xsl:call-template>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell padding-top="0.5pt">
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -290,7 +284,6 @@
 			<fo:table-column/>
 			<fo:table-header>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'protection.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt">
 						<fo:block font-size="7pt">
@@ -333,7 +326,6 @@
 						</xsl:choose>
 					</xsl:variable>
 					<fo:table-row>
-											<xsl:message>Test</xsl:message>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat('protection.', $shade)"/></xsl:call-template>
 						<fo:table-cell>
 							<fo:block font-size="8pt">
@@ -367,7 +359,7 @@
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row>
-											<xsl:message>Test END</xsl:message>
+											
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="concat('protection.', $shade)"/>
 						</xsl:call-template>
@@ -377,7 +369,6 @@
 							</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
-					
 				</xsl:for-each>
 			</fo:table-body>
 		</fo:table>
@@ -385,7 +376,4 @@
 			</fo:page-sequence>
 		</xsl:if>
 	</xsl:template>
-
-
-
 </xsl:stylesheet>

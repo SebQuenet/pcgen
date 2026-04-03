@@ -62,7 +62,6 @@ import org.apache.fop.render.Renderer;
 public final class FopTask implements Runnable
 {
 	private static final FopFactory FOP_FACTORY = createFopFactory();
-	private static FOUserAgent userAgent;
 
 	private static final TransformerFactory TRANS_FACTORY = TransformerFactory.newInstance();
 
@@ -102,13 +101,15 @@ public final class FopTask implements Runnable
 	private final StreamSource xsltSource;
 	private final Renderer renderer;
 	private final OutputStream outputStream;
+	private final FOUserAgent userAgent;
 
 	private final StringBuilder errorBuilder = new StringBuilder(32);
 
-	private FopTask(StreamSource inputXml, StreamSource xsltSource, Renderer renderer, OutputStream outputStream)
+	private FopTask(StreamSource inputXml, StreamSource xsltSource, FOUserAgent userAgent, Renderer renderer, OutputStream outputStream)
 	{
 		this.inputSource = inputXml;
 		this.xsltSource = xsltSource;
+		this.userAgent = userAgent;
 		this.renderer = renderer;
 		this.outputStream = outputStream;
 	}
@@ -146,8 +147,8 @@ public final class FopTask implements Runnable
 		throws FileNotFoundException
 	{
 		StreamSource xsltSource = createXsltStreamSource(xsltFile);
-		userAgent = FOP_FACTORY.newFOUserAgent();
-		return new FopTask(new StreamSource(inputXmlStream), xsltSource, null, outputPdf);
+		FOUserAgent agent = FOP_FACTORY.newFOUserAgent();
+		return new FopTask(new StreamSource(inputXmlStream), xsltSource, agent, null, outputPdf);
 	}
 
 	/**
@@ -165,8 +166,8 @@ public final class FopTask implements Runnable
 		throws FileNotFoundException
 	{
 		StreamSource xsltSource = createXsltStreamSource(xsltFile);
-		userAgent = renderer.getUserAgent();
-		return new FopTask(new StreamSource(inputXmlStream), xsltSource, renderer, null);
+		FOUserAgent agent = renderer.getUserAgent();
+		return new FopTask(new StreamSource(inputXmlStream), xsltSource, agent, renderer, null);
 	}
 
 	public String getErrorMessages()

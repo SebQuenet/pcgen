@@ -6,10 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
 <!--
 ====================================
 ====================================
@@ -32,7 +30,6 @@
 			<!-- space -->
 			<fo:table-column column-width="8mm"/>	<!--	7	-->
 			<!-- TOTAL -->
-
 			<!-- NEW ROW - VALUES -->
 			<fo:table-body>
 				<!--	Arcane	-->
@@ -88,7 +85,6 @@
 				<!--	Divine	-->
 				<!-- NEW ROW for Text -->
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell>	
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'ac.title'"/>
@@ -138,10 +134,8 @@
 					<fo:table-cell><fo:block/></fo:table-cell>
 				</fo:table-row>
 				<!--	Occult	-->
-
 				<!-- NEW ROW for Text -->
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell>	
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'ac.title'"/>
@@ -193,7 +187,6 @@
 				<!--	Primal	-->
 				<!-- NEW ROW for Text -->
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell>	
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'ac.title'"/>
@@ -238,12 +231,8 @@
 					</fo:table-cell>	
 					<!--	7	Stat Mod	-->
 				</fo:table-row>
-
 			</fo:table-body>
 		</fo:table>
 		<!-- END AC Table -->
 	</xsl:template>
-
-
-
 </xsl:stylesheet>

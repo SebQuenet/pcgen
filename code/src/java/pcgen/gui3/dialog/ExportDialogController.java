@@ -26,10 +26,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
-
-import javax.swing.JCheckBox;
 
 import pcgen.cdom.base.Constants;
 import pcgen.core.Globals;
@@ -48,6 +45,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -103,9 +101,6 @@ public class ExportDialogController
 		boolean isPDF = exportSheetType.getSelectionModel().getSelectedItem() == ExportUtilities.SheetFilter.PDF;
 		URI selectedTemplate = templateSelect.getSelectionModel().getSelectedItem();
 		String sheetFilterPath = exportSheetType.getSelectionModel().getSelectedItem().getPath();
-		// this is kind of lie but really requires some refactoring to make this all work.
-		// it should be handled by a task manager with a 'start' and a 'finished' or 'failed' callback
-		progress.setVisible(true);
 		if (entireParty.isSelected())
 		{
 			doExportEntireParty(sheetFilterPath, selectedTemplate, isPDF);
@@ -113,10 +108,9 @@ public class ExportDialogController
 		{
 			doExportSingleCharacter(sheetFilterPath, selectedTemplate, isPDF);
 		}
-		progress.setVisible(false);
 	}
 
-	private static void doExportEntireParty(String sheetFilterPath, URI template, boolean isPDF)
+	private void doExportEntireParty(String sheetFilterPath, URI template, boolean isPDF)
 	{
 		File path = new File(PCGenSettings.getPcgDir());
 		String name = "Entire Party";
@@ -138,40 +132,21 @@ public class ExportDialogController
 				sheetFilterPath,
 				template
 		);
-		if (isPDF)
-		{
-			BatchExporter.exportPartyToPDF(party, outFile, templateAsFile);
-		}
-		else
-		{
-			PropertyContext context = UIPropertyContext.createContext("ExportDialog");
-			context.setProperty(HTML_EXPORT_DIR_PROP, outFile.getParent());
-			SettingsHandler.setSelectedPartyHTMLOutputSheet(templateAsFile.getAbsolutePath());
-			BatchExporter.exportPartyToNonPDF(party, outFile, templateAsFile);
-			Globals.executePostExportCommandStandard(outFile.getAbsolutePath());
-		}
-		if (promptUserToOpenFile(outFile))
-		{
-			doOpenFile(outFile);
-		}
-	}
-
-	private static boolean promptUserToOpenFile(File file)
-	{
-		JCheckBox checkbox = new JCheckBox();
-		checkbox.setText("Always perform this action");
-		PropertyContext context = UIPropertyContext.getInstance();
-		String value = context.getProperty(UIPropertyContext.ALWAYS_OPEN_EXPORT_FILE);
-		boolean alwaysOpenFile = Boolean.parseBoolean(value);
-		// todo: allow setting this value via the prompt. maybe use RememberingChoiceDialog or similar
-		if (alwaysOpenFile)
-		{
+		runExportInBackground(() -> {
+			if (isPDF)
+			{
+				BatchExporter.exportPartyToPDF(party, outFile, templateAsFile);
+			}
+			else
+			{
+				PropertyContext context = UIPropertyContext.createContext("ExportDialog");
+				context.setProperty(HTML_EXPORT_DIR_PROP, outFile.getParent());
+				SettingsHandler.setSelectedPartyHTMLOutputSheet(templateAsFile.getAbsolutePath());
+				BatchExporter.exportPartyToNonPDF(party, outFile, templateAsFile);
+				Globals.executePostExportCommandStandard(outFile.getAbsolutePath());
+			}
 			return true;
-		}
-		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-		alert.setContentText("Do you want to open " + file.getName() + '?');
-		Optional<ButtonType> result = alert.showAndWait();
-		return result.isPresent() && !result.get().equals(ButtonType.NO);
+		}, outFile);
 	}
 
 	private static void doOpenFile(File file)
@@ -184,19 +159,19 @@ public class ExportDialogController
 			error.show();
 			return;
 		}
-		try
-		{
-			Desktop.getDesktop().open(file);
-		}
-		catch (IOException ex)
-		{
-			String message = "Failed to open " + file.getName();
-			Alert error = new Alert(Alert.AlertType.ERROR);
-			error.setTitle("Cannot Open " + file.getName());
-			error.setContentText(message);
-			error.show();
-			Logging.errorPrint(message, ex);
-		}
+		Thread openThread = new Thread(() -> {
+			try
+			{
+				Desktop.getDesktop().open(file);
+			}
+			catch (IOException ex)
+			{
+				String message = "Failed to open " + file.getName();
+				Logging.errorPrint(message, ex);
+			}
+		}, "open-exported-file");
+		openThread.setDaemon(true);
+		openThread.start();
 	}
 
 	private void doExportSingleCharacter(String sheetFilterPath, URI template, boolean isPDF)
@@ -225,7 +200,6 @@ public class ExportDialogController
 		{
 			path = new File(PCGenSettings.getPcgDir());
 		}
-		// this should be on an "exportable" and have something like getExportedName
 		name = character.getTabNameRef().get();
 		if (StringUtils.isEmpty(name))
 		{
@@ -239,41 +213,93 @@ public class ExportDialogController
 			return;
 		}
 
-		if (isPDF)
-		{
+		runExportInBackground(() -> {
 			boolean result;
-			result = BatchExporter.exportCharacterToPDF(character, outFile, templateAsFile);
-			if (!result)
+			if (isPDF)
 			{
-				Alert alert = new Alert(Alert.AlertType.ERROR);
-				alert.setTitle(Constants.APPLICATION_NAME);
-				alert.setContentText("The character export failed. Please see the log for details.");
-				alert.show();
-				return;
+				result = BatchExporter.exportCharacterToPDF(character, outFile, templateAsFile);
+				if (result)
+				{
+					Globals.executePostExportCommandPDF(outFile.getAbsolutePath());
+				}
 			}
-			Globals.executePostExportCommandPDF(outFile.getAbsolutePath());
-		}
-		else
-		{
-			boolean result = BatchExporter.exportCharacterToNonPDF(character, outFile, templateAsFile);
-			if (!result)
+			else
 			{
-				Alert alert = new Alert(Alert.AlertType.ERROR);
-				alert.setTitle(Constants.APPLICATION_NAME);
-				alert.setContentText("The character export failed. Please see the log for details.");
-				alert.show();
-				return;
+				result = BatchExporter.exportCharacterToNonPDF(character, outFile, templateAsFile);
+				if (result)
+				{
+					Globals.executePostExportCommandStandard(outFile.getAbsolutePath());
+				}
 			}
-			Globals.executePostExportCommandStandard(outFile.getAbsolutePath());
-		}
-		if (promptUserToOpenFile(outFile))
-		{
-			doOpenFile(outFile);
-		}
+			return result;
+		}, outFile);
 	}
 
 
 
+
+	private void runExportInBackground(ExportAction exportAction, File outFile)
+	{
+		progress.setProgress(-1);
+		progress.setVisible(true);
+		doExport.setDisable(true);
+		Task<Boolean> task = new Task<>()
+		{
+			@Override
+			protected Boolean call()
+			{
+				return exportAction.execute();
+			}
+		};
+		task.setOnSucceeded(event -> {
+			progress.setVisible(false);
+			doExport.setDisable(false);
+			boolean result = task.getValue();
+			if (!result)
+			{
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+				alert.setTitle(Constants.APPLICATION_NAME);
+				alert.setContentText("The character export failed. Please see the log for details.");
+				alert.show();
+				return;
+			}
+			PropertyContext context = UIPropertyContext.getInstance();
+			String value = context.getProperty(UIPropertyContext.ALWAYS_OPEN_EXPORT_FILE);
+			boolean alwaysOpenFile = Boolean.parseBoolean(value);
+			if (alwaysOpenFile)
+			{
+				doOpenFile(outFile);
+				return;
+			}
+			Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+			alert.setContentText("Do you want to open " + outFile.getName() + '?');
+			alert.initOwner(doExport.getScene().getWindow());
+			alert.showAndWait().ifPresent(buttonType -> {
+				if (!buttonType.equals(ButtonType.NO) && !buttonType.equals(ButtonType.CANCEL))
+				{
+					doOpenFile(outFile);
+				}
+			});
+		});
+		task.setOnFailed(event -> {
+			progress.setVisible(false);
+			doExport.setDisable(false);
+			Logging.errorPrint("Export failed", task.getException());
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setTitle(Constants.APPLICATION_NAME);
+			alert.setContentText("The character export failed. Please see the log for details.");
+			alert.show();
+		});
+		Thread exportThread = new Thread(task, "pdf-export");
+		exportThread.setDaemon(true);
+		exportThread.start();
+	}
+
+	@FunctionalInterface
+	private interface ExportAction
+	{
+		boolean execute();
+	}
 
 	private class PartyCheckboxChangeListener implements ChangeListener<Boolean>
 	{

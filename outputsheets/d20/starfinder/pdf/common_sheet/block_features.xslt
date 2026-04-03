@@ -6,11 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
-
 	<!--
 ====================================
 ====================================
@@ -62,7 +59,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 		<!--
 ====================================
 ====================================
@@ -80,22 +76,18 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
-
 	<!--
 ====================================
 ====================================
 	TEMPLATE - Racial Traits
 ====================================
 ====================================-->
-
 	<xsl:template match="scr_racial_traits">
 		<xsl:if test="count(scr_racial_trait) &gt; 0">
 			<xsl:call-template name="bold.list">
 				<xsl:with-param name="attribute" select="'feats'" />
 				<xsl:with-param name="title" select="'Racial Traits'" />
 				<xsl:with-param name="list" select="scr_racial_trait"/>
-
 				<xsl:with-param name="name.tag" select="'name'"/>
 				<xsl:with-param name="desc.tag" select="'description'"/>
 			</xsl:call-template>
@@ -107,14 +99,12 @@
 	TEMPLATE - CLASS FEATURES
 ====================================
 ====================================-->
-
 	<xsl:template match="scr_class_features">
 		<xsl:if test="count(scr_class_feature) &gt; 0">
 			<xsl:call-template name="bold.list">
 				<xsl:with-param name="attribute" select="'feats'" />
 				<xsl:with-param name="title" select="'Class Features'" />
 				<xsl:with-param name="list" select="scr_class_feature"/>
-
 				<xsl:with-param name="name.tag" select="'name'"/>
 				<xsl:with-param name="desc.tag" select="'description'"/>
 			</xsl:call-template>
@@ -137,7 +127,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--	
 ====================================
 ====================================
@@ -155,7 +144,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--	
 ====================================
 ====================================
@@ -207,10 +195,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
-
-
-
 	<!--
 ====================================
 ====================================
@@ -228,8 +212,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
-
 	<!--
 ====================================
 ====================================
@@ -247,7 +229,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -265,11 +246,9 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
-
 	TEMPLATE - FEATS
 ====================================
 ====================================-->
@@ -282,7 +261,6 @@
 				<xsl:with-param name="name.tag" select="'name'"/>
 				<xsl:with-param name="desc.tag" select="'description'"/>
 				<xsl:with-param name="benefit.tag" select="'benefit'"/>
-
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
@@ -335,7 +313,6 @@
 			<fo:table-column column-width="63mm"/>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" number-columns-spanned="2">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -346,7 +323,6 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" text-align="end">
 							<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -365,7 +341,7 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test END</xsl:message>
+											
 					<fo:table-cell padding="3pt" number-columns-spanned="2">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -382,6 +358,4 @@
 		<!-- END Racial Traits table -->
 	</xsl:for-each>
 	</xsl:template>
-
-
 </xsl:stylesheet>

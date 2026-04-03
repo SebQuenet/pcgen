@@ -262,8 +262,6 @@
 		<xsl:variable name="first_page_skills_count">
 			<xsl:call-template name="view.skills.num"/>
 		</xsl:variable>
-		<xsl:message>Number of weapons on first page = <xsl:value-of select="$first_page_weapon_count"/></xsl:message>
-		<xsl:message>Number of skills on first page = <xsl:value-of select="$first_page_skills_count"/></xsl:message>
 		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
 			<xsl:call-template name="page.layouts"/>
 			<!--

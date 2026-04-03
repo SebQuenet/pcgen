@@ -43,7 +43,7 @@ public class ConsoleUIDelegate implements UIDelegate
 		String contextProp)
 	{
 		Logging.log(Logging.WARNING, title + " - " + message);
-		return false;
+		return true;
 	}
 
 	@Override

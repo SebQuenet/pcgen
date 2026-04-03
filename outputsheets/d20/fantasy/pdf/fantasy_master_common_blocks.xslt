@@ -196,7 +196,7 @@
 					<xsl:attribute name="margin-left"><xsl:value-of select="$pageMarginLeft" />mm</xsl:attribute>
 					<xsl:attribute name="margin-right"><xsl:value-of select="$pageMarginRight" />mm</xsl:attribute>
 					<fo:region-body region-name="body" column-count="2" column-gap="2mm" margin-bottom="7mm"/>
-					<fo:region-after region-name="footer" extent="4.4mm"/>
+					<fo:region-after region-name="footer" extent="7mm" overflow="hidden"/>
 				</fo:simple-page-master>
 				<fo:simple-page-master master-name="Portrait">
 					<xsl:attribute name="page-height"><xsl:value-of select="$pageHeight" />mm</xsl:attribute>
@@ -206,7 +206,7 @@
 					<xsl:attribute name="margin-left"><xsl:value-of select="$pageMarginLeft" />mm</xsl:attribute>
 					<xsl:attribute name="margin-right"><xsl:value-of select="$pageMarginRight" />mm</xsl:attribute>
 					<fo:region-body region-name="body" margin-bottom="7mm"/>
-					<fo:region-after region-name="footer" extent="4.4mm"/>
+					<fo:region-after region-name="footer" extent="7mm" overflow="hidden"/>
 				</fo:simple-page-master>
 	
 		</fo:layout-master-set>
@@ -242,7 +242,7 @@
 				<xsl:attribute name="column-width"><xsl:value-of select="0.25 * $pagePrintableWidth" />mm</xsl:attribute>
 			</fo:table-column>
 			<fo:table-body>
-				<fo:table-row keep-with-next="always" keep-together="always">
+				<fo:table-row>
 					<fo:table-cell text-align="start" wrap-option="no-wrap" border-top-color="black" border-top-style="solid" border-top-width="0.1pt" background-color="transparent" padding-top="2pt">
 						<fo:block font-size="5pt">Character: <fo:inline font-weight="bold"><xsl:value-of select="/character/basics/name"/></fo:inline></fo:block>
 						<fo:block font-size="5pt">Player: <fo:inline font-weight="bold"><xsl:value-of select="/character/basics/playername"/></fo:inline></fo:block>
@@ -271,8 +271,6 @@
 		<xsl:variable name="first_page_skills_count">
 			<xsl:call-template name="view.skills.num"/>
 		</xsl:variable>
-		<xsl:message>Number of weapons on first page = <xsl:value-of select="$first_page_weapon_count"/></xsl:message>
-		<xsl:message>Number of skills on first page = <xsl:value-of select="$first_page_skills_count"/></xsl:message>
 		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
 			<xsl:call-template name="page.layouts"/>
 			<!--

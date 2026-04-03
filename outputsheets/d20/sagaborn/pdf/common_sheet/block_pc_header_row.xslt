@@ -6,10 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
 	<!--
 ====================================
 ====================================
@@ -100,7 +98,6 @@
 			</xsl:choose>	
 			<fo:table-body>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -118,7 +115,6 @@
 						</xsl:call-template>
 						<fo:block font-size="10pt">
 							<xsl:value-of select="playername"/>
-							
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell/>
@@ -139,7 +135,6 @@
 							<xsl:value-of select="region"/>	
 						</fo:block>
 					</fo:table-cell>
-
 					<fo:table-cell/>
 					<fo:table-cell padding-top="2.5pt">
 						<xsl:call-template name="attrib">
@@ -165,7 +160,6 @@
 					</xsl:if>
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -204,7 +198,6 @@
 				</fo:table-row>
 <!-- Second Row -->
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -284,15 +277,12 @@
 					<fo:table-cell/>
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
 						<fo:block font-size="6pt" padding-top="1pt">CLASS</fo:block>
 					</fo:table-cell>
-					
-				
 					<fo:table-cell/>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
@@ -325,7 +315,6 @@
 				</fo:table-row>
 <!--	Third Row-->
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -336,7 +325,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell/>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -373,7 +361,6 @@
 						</xsl:call-template>
 						<fo:block font-size="8pt" padding-top="3pt">
 							<xsl:value-of select="gender/long"/>
-
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell/>
@@ -385,12 +372,10 @@
 							<xsl:value-of select="eyes/color"/>
 						</fo:block>
 					</fo:table-cell>
-
 				</fo:table-row>
-
 <!-- Third ROW Text-->
 				<fo:table-row>
-											<xsl:message>Test END</xsl:message>
+											
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -441,16 +426,8 @@
 						<fo:block font-size="6pt" padding-top="1pt">EYES</fo:block>
 					</fo:table-cell>
 					<fo:table-cell/>
-
-
 				</fo:table-row>	
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
-
-
-
 </xsl:stylesheet>

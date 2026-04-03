@@ -6,11 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
-
 	<!--
 ====================================
 ====================================
@@ -130,7 +127,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--	
 ====================================
 ====================================
@@ -148,7 +144,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--	
 ====================================
 ====================================
@@ -200,7 +195,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 <!--> ECLIPSE Addons -->
 	<!--
 ====================================
@@ -338,7 +332,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -458,8 +451,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
-	
 	<!--
 ====================================
 ====================================
@@ -511,7 +502,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -529,9 +519,7 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 <!-- 4e Section -->
-
 <!--
 ====================================
 ====================================
@@ -588,7 +576,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -674,7 +661,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -692,7 +678,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -725,7 +710,6 @@
 				<xsl:with-param name="name.tag" select="'name'"/>
 				<xsl:with-param name="desc.tag" select="'description'"/>
 				<xsl:with-param name="benefit.tag" select="'benefit'"/>
-
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
@@ -778,7 +762,6 @@
 			<fo:table-column column-width="63mm"/>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" number-columns-spanned="2">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -789,7 +772,6 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" text-align="end">
 							<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -808,7 +790,7 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test END</xsl:message>
+											
 					<fo:table-cell padding="3pt" number-columns-spanned="2">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -825,6 +807,4 @@
 		<!-- END Racial Traits table -->
 	</xsl:for-each>
 	</xsl:template>
-
-
 </xsl:stylesheet>

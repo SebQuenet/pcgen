@@ -6,14 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
-
-
-
-
 	<!--
 ====================================
 ====================================
@@ -145,7 +139,6 @@
 				</fo:table-column>
 				<fo:table-body>
 					<fo:table-row keep-with-next.within-column="always">
-												<xsl:message>Test</xsl:message>
 					<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -154,7 +147,6 @@
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions'"/>
@@ -183,7 +175,6 @@
 			<fo:table-column column-width="14mm"/>
 			<fo:table-body keep-together="always">
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="6">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -193,7 +184,6 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell text-align="end">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -238,7 +228,6 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell text-align="end">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -285,7 +274,6 @@
 				<xsl:for-each select="attacks/attack">
 					<xsl:if test="string-length(common/name/long) &gt; 0">
 						<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 							<fo:table-cell text-align="end">
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -345,7 +333,6 @@
 					</xsl:if>
 				</xsl:for-each>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell text-align="left">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -363,7 +350,6 @@
 				</fo:table-row>
 				<xsl:if test="count(companion/trick) &gt; 0">
 					<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 						<fo:table-cell text-align="left">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -384,7 +370,6 @@
 		</fo:table>
 	</xsl:template>
 <!-- Disable Previous Equipment Block> -->
-
 <!-- Diable Previous Equipment Stuff -->
 	<!--
 ====================================
@@ -403,7 +388,6 @@
 				</fo:table-column>
 				<fo:table-header>
 					<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 						<fo:table-cell padding-top="1pt">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'magic.title'"/>
@@ -414,7 +398,7 @@
 				</fo:table-header>
 				<fo:table-body>
 					<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test END</xsl:message>
+											
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'magic.lightline'"/>
@@ -447,6 +431,4 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
-
 </xsl:stylesheet>

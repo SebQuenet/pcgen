@@ -6,11 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
-
 	<!--
 	====================================
 	====================================
@@ -32,7 +29,6 @@
 			<fo:table-column column-width="15mm"/>
 			<fo:table-header>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'protection.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt">
 						<fo:block font-size="7pt">
@@ -76,7 +72,6 @@
 						</xsl:choose>
 					</xsl:variable>
 					<fo:table-row>
-											<xsl:message>Test</xsl:message>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat('protection.', $shade)"/></xsl:call-template>
 						<fo:table-cell>
 							<fo:block font-size="8pt">
@@ -105,12 +100,11 @@
 						</fo:table-cell>
 						<fo:table-cell text-align="center">
 							<fo:block font-size="8pt">
-								
 							</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row>
-											<xsl:message>Test END</xsl:message>
+											
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="concat('protection.', $shade)"/>
 						</xsl:call-template>
@@ -126,6 +120,4 @@
 		</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
 </xsl:stylesheet>

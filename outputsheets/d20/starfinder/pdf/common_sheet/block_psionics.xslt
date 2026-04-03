@@ -9,11 +9,8 @@
 	xmlns:myAttribs="my:Attribs"
 	exclude-result-prefixes="myAttribs Psionics"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
-
 	<!--
 	====================================
 	====================================
@@ -141,14 +138,12 @@
 			<fo:table-column column-width="0.5mm"/>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" number-columns-spanned="12">
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'psionics.title'"/></xsl:call-template>
 						<fo:block font-size="10pt" font-weight="bold">Psionics</fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="psionic.entry">
 						<xsl:with-param name="title" select="'Base PP'"/>
 						<xsl:with-param name="value" select="base_pp"/>
@@ -188,7 +183,6 @@
 			<fo:table-column column-width="12mm"/>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt">
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'psionics.title'"/></xsl:call-template>
 						<fo:block font-size="5pt"/>
@@ -206,11 +200,10 @@
 						</fo:table-cell>
 					</xsl:for-each>
 				</fo:table-row>
-
 				<xsl:variable name="defences" select="document('')/*/Psionics:attacks/defences/defence"/>
 				<xsl:for-each select="$defences">
 					<fo:table-row keep-with-previous.within-column="always">
-											<xsl:message>Test END</xsl:message>
+											
 						<fo:table-cell padding-top="1pt" padding-left="3pt">
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'psionics.title'"/></xsl:call-template>
 							<fo:block font-size="7pt"><xsl:value-of select="@name"/>
@@ -234,5 +227,4 @@
 		<!-- END psionicsTable -->
 	</xsl:if>
 	</xsl:template>
-
 </xsl:stylesheet>

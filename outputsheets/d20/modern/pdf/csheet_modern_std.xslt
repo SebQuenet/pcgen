@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- Removed Domains and prohibited schools, as they do not exist in Modern gameMode - Frank Kliewe
 	2006/02/28 implemented FREQ [ 1411525 ] [MSRD] display offhand penalties for ranged weap - Frank Kliewe
  -->
-
-
-
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:fo="http://www.w3.org/1999/XSL/Format"
@@ -14,9 +10,7 @@
 	xmlns:Psionics="my:Psionics"
 	xmlns:myAttribs="my:Attribs"
 	exclude-result-prefixes="myAttribs Psionics">
-
 	<xsl:import href="../../fantasy/pdf/leadership.xsl"/>
-
 	<xsl:output indent="yes"/>
 	<!-- Include all of the output attributes -->
 	<!-- vAttribs will be set up in the stylesheet that calls this one -->
@@ -30,7 +24,6 @@
 			</xsl:call-template>
 		</xsl:for-each>
 	</xsl:template>
-
 	<xsl:variable name="vAttribs_tree">
 		<myAttribs:myAttribs>
 			<xsl:copy-of select="$vAttribs/*"/>
@@ -161,7 +154,6 @@
 			</xsl:if>
 		</xsl:for-each>
 	</xsl:variable>
-
 	<!--
 ====================================
 ====================================
@@ -193,7 +185,6 @@
 			</xsl:for-each>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -228,25 +219,19 @@
 			</fo:table>
 		</xsl:for-each>
 	</xsl:template>
-
-
 	<myAttribs:myAttribs>
 		<border border-width="0.5pt" border-style="solid" />
 		<centre text-align="center" />
 		<border.temp border-width="2pt" border-style="solid" border-color="lightgrey"><subattrib centre=""/></border.temp>
-
 		<normal color="black" background-color="white" border-color="black"/>
 		<light color="black" background-color="white" border-color="black"/>
 		<medium color="black" background-color="lightgrey" border-color="black"/>
 		<dark color="black" background-color="lightgrey" border-color="black"/>
 		<very.dark color="black" background-color="lightgrey" border-color="black"/>
 		<inverse color="white" background-color="black" border-color="black"/>
-
 		<bio display-align="after" color="black" background-color="transparent" border-color="black"></bio>
 		<bio.title border-top-width="0.5pt" border-top-style="solid"><subattrib normal=""/></bio.title>
-
 		<picture><subattrib normal="" border=""/></picture>
-
 		<stat.title><subattrib border="" centre="" inverse="" /></stat.title>
 		<stat.score><subattrib border="" centre="" light="" /></stat.score>
 		<stat.modifier><subattrib stat.score="" /></stat.modifier>
@@ -254,14 +239,12 @@
 		<stat.base.modifier><subattrib stat.base.score="" /></stat.base.modifier>
 		<stat.temp.score color="lightgrey"><subattrib  centre="" border.temp=""/></stat.temp.score>
 		<stat.temp.modifier><subattrib stat.temp.score=""/></stat.temp.modifier>
-
 		<hp.title><subattrib border="" centre="" inverse=""/></hp.title>
 		<hp.total><subattrib border="" centre="" light=""/></hp.total>
 		<hp.current><subattrib border="" centre="" normal=""/></hp.current>
 		<hp.subdual><subattrib border="" centre="" normal=""/></hp.subdual>
 		<damage.reduction><subattrib hp.current=""/></damage.reduction>
 		<speed><subattrib border="" centre="" normal=""/></speed>
-
 		<ac.title><subattrib border="" centre="" inverse=""/></ac.title>
 		<ac.total><subattrib border="" centre="" light=""/></ac.total>
 		<ac.flatfooted><subattrib border="" centre="" light=""/></ac.flatfooted>
@@ -271,14 +254,11 @@
 		<spell_failure><subattrib border="" centre="" light=""/></spell_failure>
 		<ac_check><subattrib border="" centre="" light=""/></ac_check>
 		<spell_resistance><subattrib border="" centre="" light=""/></spell_resistance>
-
 		<initiative.title><subattrib border="" centre="" inverse=""/></initiative.title>
 		<initiative.total><subattrib border="" centre="" light=""/></initiative.total>
 		<initiative.general><subattrib border="" centre="" normal=""/></initiative.general>
-
 		<bab.title><subattrib border="" centre="" inverse=""/></bab.title>
 		<bab.total><subattrib border="" centre="" light=""/></bab.total>
-
 		<skills.header><subattrib centre="" inverse=""/></skills.header>
 		<skills.border><subattrib border="" inverse=""/></skills.border>
 		<skills.darkline><subattrib medium="" /></skills.darkline>
@@ -286,177 +266,136 @@
 		<skills.darkline.total><subattrib dark="" /></skills.darkline.total>
 		<skills.lightline.total><subattrib medium="" /></skills.lightline.total>
 		<skills.footer border-bottom-width="0.5pt" border-bottom-style="solid"></skills.footer>
-
 		<saves.title><subattrib border="" centre="" inverse=""/></saves.title>
 		<saves.total><subattrib border="" centre="" light=""/></saves.total>
 		<saves><subattrib border="" centre="" normal=""/></saves>
-
 		<tohit.title><subattrib border="" centre="" inverse=""/></tohit.title>
 		<tohit.total><subattrib border="" centre="" light=""/></tohit.total>
 		<tohit><subattrib border="" centre="" normal=""/></tohit>
-
 		<weapon.title><subattrib border="" centre="" inverse=""/></weapon.title>
 		<weapon.border><subattrib border="" inverse=""/></weapon.border>
 		<weapon.hilight><subattrib border="" centre="" light=""/></weapon.hilight>
 		<weapon><subattrib border="" centre="" normal=""/></weapon>
-
 		<protection.title><subattrib border="" centre="" inverse=""/></protection.title>
 		<protection.border padding="0.5pt"><subattrib border="" inverse=""/></protection.border>
 		<protection.darkline><subattrib  centre="" medium="" /></protection.darkline>
 		<protection.lightline><subattrib  centre="" light="" /></protection.lightline>
-
 		<rage.title><subattrib  centre="" inverse=""/></rage.title>
 		<rage.border padding="0.5pt"><subattrib border="" inverse=""/></rage.border>
 		<rage><subattrib normal=""/></rage>
-
 		<checklist.title><subattrib  centre="" inverse=""/></checklist.title>
 		<checklist.border padding="0.5pt"><subattrib border="" inverse=""/></checklist.border>
 		<checklist><subattrib normal=""/></checklist>
-
 		<wildshape.title><subattrib centre="" inverse=""/></wildshape.title>
 		<wildshape.border padding="0.5pt"><subattrib border="" inverse=""/></wildshape.border>
 		<wildshape><subattrib normal=""/></wildshape>
-
 		<bard.title><subattrib centre="" inverse=""/></bard.title>
 		<bard.border padding="0.5pt"><subattrib border="" inverse=""/></bard.border>
 		<bard><subattrib  normal=""/></bard>
-
 		<psionics.title><subattrib  centre="" inverse=""/></psionics.title>
 		<psionics.border padding="0.5pt"><subattrib border="" inverse=""/></psionics.border>
 		<psionics><subattrib border="" centre="" normal=""/></psionics>
-
 		<turning.title><subattrib centre="" inverse=""/></turning.title>
 		<turning.border padding="0.5pt"><subattrib border="" inverse=""/></turning.border>
 		<turning><subattrib  centre="" normal=""/></turning>
 		<turning.lightline><subattrib centre="" light=""/></turning.lightline>
 		<turning.darkline><subattrib centre="" medium=""/></turning.darkline>
-
 		<stunningfist.title><subattrib centre="" inverse=""/></stunningfist.title>
 		<stunningfist.border padding="0.5pt"><subattrib border="" inverse=""/></stunningfist.border>
 		<stunningfist><subattrib normal=""/></stunningfist>
-
 		<wholeness.title><subattrib  centre="" inverse=""/></wholeness.title>
 		<wholeness.border padding="0.5pt"><subattrib border="" inverse=""/></wholeness.border>
 		<wholeness><subattrib  normal=""/></wholeness>
-
 		<layonhands.title><subattrib centre="" inverse=""/></layonhands.title>
 		<layonhands.border padding="0.5pt"><subattrib border="" inverse=""/></layonhands.border>
 		<layonhands><subattrib  normal=""/></layonhands>
-
 		<domains.title><subattrib  centre="" inverse=""/></domains.title>
 		<domains.border padding="0.5pt"><subattrib border="" inverse=""/></domains.border>
 		<domains.lightline><subattrib  light=""/></domains.lightline>
 		<domains.darkline><subattrib  medium=""/></domains.darkline>
-
 		<proficiencies.title><subattrib centre="" inverse=""/></proficiencies.title>
 		<proficiencies.border padding="0.5pt"><subattrib border="" inverse=""/></proficiencies.border>
 		<proficiencies><subattrib centre="" normal=""/></proficiencies>
-
 		<prohibited.title><subattrib centre="" inverse=""/></prohibited.title>
 		<prohibited.border padding="0.5pt"><subattrib border="" inverse=""/></prohibited.border>
 		<prohibited><subattrib centre="" normal=""/></prohibited>
-
 		<languages.title><subattrib centre="" inverse=""/></languages.title>
 		<languages.border padding="0.5pt"><subattrib border="" inverse=""/></languages.border>
 		<languages><subattrib  centre="" normal=""/></languages>
-
 		<templates.title><subattrib centre="" inverse=""/></templates.title>
 		<templates.border padding="0.5pt"><subattrib border="" inverse=""/></templates.border>
 		<templates.lightline><subattrib light=""/></templates.lightline>
 		<templates.darkline><subattrib medium=""/></templates.darkline>
-
 		<companions.title><subattrib border="" centre="" inverse=""/></companions.title>
 		<companions><subattrib border="" centre="" normal=""/></companions>
-
 		<equipment.title><subattrib centre="" inverse=""/></equipment.title>
 		<equipment.border padding="0.5pt"><subattrib border="" inverse=""/></equipment.border>
 		<equipment.lightline><subattrib light=""/></equipment.lightline>
 		<equipment.darkline><subattrib medium=""/></equipment.darkline>
-
 		<weight.title><subattrib centre="" inverse=""/></weight.title>
 		<weight.border padding="0.5pt"><subattrib border="" inverse=""/></weight.border>
 		<weight.lightline><subattrib light=""/></weight.lightline>
 		<weight.darkline><subattrib  medium=""/></weight.darkline>
-
 		<money.title><subattrib  centre="" inverse=""/></money.title>
 		<money.border padding="0.5pt"><subattrib border="" inverse=""/></money.border>
 		<money.lightline><subattrib light=""/></money.lightline>
 		<money.darkline><subattrib medium=""/></money.darkline>
-
 		<magic.title><subattrib centre="" inverse=""/></magic.title>
 		<magic.border padding="0.5pt"><subattrib border="" inverse=""/></magic.border>
 		<magic.lightline><subattrib light=""/></magic.lightline>
 		<magic.darkline><subattrib medium=""/></magic.darkline>
-
 		<special_abilities.title><subattrib centre="" inverse=""/></special_abilities.title>
 		<special_abilities.border padding="0.5pt"><subattrib border="" inverse=""/></special_abilities.border>
 		<special_abilities.lightline><subattrib light=""/></special_abilities.lightline>
 		<special_abilities.darkline><subattrib medium=""/></special_abilities.darkline>
-
 		<special_attacks.title><subattrib centre="" inverse=""/></special_attacks.title>
 		<special_attacks.border padding="0.5pt"><subattrib border="" inverse=""/></special_attacks.border>
 		<special_attacks.lightline><subattrib light=""/></special_attacks.lightline>
 		<special_attacks.darkline><subattrib medium=""/></special_attacks.darkline>
-
 		<talents.title><subattrib centre="" inverse=""/></talents.title>
 		<talents.border padding="0.5pt"><subattrib border="" inverse=""/></talents.border>
 		<talents.lightline><subattrib light=""/></talents.lightline>
 		<talents.darkline><subattrib medium=""/></talents.darkline>
-
 		<occupations.title><subattrib centre="" inverse=""/></occupations.title>
 		<occupations.border padding="0.5pt"><subattrib border="" inverse=""/></occupations.border>
 		<occupations.lightline><subattrib light=""/></occupations.lightline>
 		<occupations.darkline><subattrib medium=""/></occupations.darkline>
-
-
-
 		<archetypes.title><subattrib centre="" inverse=""/></archetypes.title>
 		<archetypes.border padding="0.5pt"><subattrib border="" inverse=""/></archetypes.border>
 		<archetypes.lightline><subattrib light=""/></archetypes.lightline>
 		<archetypes.darkline><subattrib medium=""/></archetypes.darkline>
-
 		<animal_tricks.title><subattrib centre="" inverse=""/></animal_tricks.title>
 		<animal_tricks.border padding="0.5pt"><subattrib border="" inverse=""/></animal_tricks.border>
 		<animal_tricks.lightline><subattrib light=""/></animal_tricks.lightline>
 		<animal_tricks.darkline><subattrib medium=""/></animal_tricks.darkline>
-
 		<special_qualities.title><subattrib centre="" inverse=""/></special_qualities.title>
 		<special_qualities.border padding="0.5pt"><subattrib border="" inverse=""/></special_qualities.border>
 		<special_qualities.lightline><subattrib light=""/></special_qualities.lightline>
 		<special_qualities.darkline><subattrib medium=""/></special_qualities.darkline>
-
 		<afflictions.title><subattrib centre="" inverse=""/></afflictions.title>
 		<afflictions.border padding="0.5pt"><subattrib border="" inverse=""/></afflictions.border>
 		<afflictions.lightline><subattrib light=""/></afflictions.lightline>
 		<afflictions.darkline><subattrib medium=""/></afflictions.darkline>
-
 		<tempbonuses.title><subattrib centre="" inverse=""/></tempbonuses.title>
 		<tempbonuses.border padding="0.5pt"><subattrib border="" inverse=""/></tempbonuses.border>
 		<tempbonuses.lightline><subattrib light=""/></tempbonuses.lightline>
 		<tempbonuses.darkline><subattrib medium=""/></tempbonuses.darkline>
-
-
-
 		<intelligent_items.title><subattrib centre="" inverse=""/></intelligent_items.title>
 		<intelligent_items.border padding="0.5pt"><subattrib border="" inverse=""/></intelligent_items.border>
 		<intelligent_items.lightline><subattrib light=""/></intelligent_items.lightline>
 		<intelligent_items.darkline><subattrib medium=""/></intelligent_items.darkline>
-
 		<traits.title><subattrib centre="" inverse=""/></traits.title>
 		<traits.border padding="0.5pt"><subattrib border="" inverse=""/></traits.border>
 		<traits.lightline><subattrib light=""/></traits.lightline>
 		<traits.darkline><subattrib medium=""/></traits.darkline>
-
 		<salient_divine_abilities.title><subattrib centre="" inverse=""/></salient_divine_abilities.title>
 		<salient_divine_abilities.border padding="0.5pt"><subattrib border="" inverse=""/></salient_divine_abilities.border>
 		<salient_divine_abilities.lightline><subattrib light=""/></salient_divine_abilities.lightline>
 		<salient_divine_abilities.darkline><subattrib medium=""/></salient_divine_abilities.darkline>
-
 		<feats.title><subattrib centre="" inverse=""/></feats.title>
 		<feats.border padding="0.5pt"><subattrib border="" inverse=""/></feats.border>
 		<feats.lightline><subattrib light=""/></feats.lightline>
 		<feats.darkline><subattrib medium=""/></feats.darkline>
-
 		<spelllist.known.header><subattrib border="" inverse="" very.dark=""/></spelllist.known.header>
 		<spelllist.known.header.centre><subattrib border="" inverse="" very.dark="" centre="" /></spelllist.known.header.centre>
 		<spelllist.known.known><subattrib border="" centre="" dark=""/></spelllist.known.known>
@@ -469,25 +408,20 @@
 		<spells.memorized.header><subattrib centre="" very.dark=""/></spells.memorized.header>
 		<spells.memorized.level border-bottom-width="0.5pt" border-bottom-style="solid"><subattrib centre="" normal=""/></spells.memorized.level>
 		<spells.memorized><subattrib normal=""/></spells.memorized>
-
 	</myAttribs:myAttribs>
 	<xsl:variable name="vAttribs" select="document('')/*/myAttribs:*"/>
-
 	<xsl:attribute-set name="talents.title" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="border">
 		<xsl:attribute name="border-width">0.5pt</xsl:attribute>
 		<xsl:attribute name="border-style">solid</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="centre">
 		<xsl:attribute name="text-align">center</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="border.temp">
 		<xsl:attribute name="border-top-width">2pt</xsl:attribute>
 		<xsl:attribute name="border-left-width">2pt</xsl:attribute>
@@ -496,13 +430,11 @@
 		<xsl:attribute name="border-style">solid</xsl:attribute>
 		<xsl:attribute name="border-color">lightgrey</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="bio">
 		<xsl:attribute name="display-align">after</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="bio.title">
 		<xsl:attribute name="color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
@@ -510,433 +442,344 @@
  		<xsl:attribute name="border-top-width">0.5pt</xsl:attribute>
  		<xsl:attribute name="border-top-style">solid</xsl:attribute>
  	</xsl:attribute-set>
-
 	<xsl:attribute-set name="picture" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="stat.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="stat.score" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="stat.modifier" use-attribute-sets="stat.score" />
-
 	<xsl:attribute-set name="hp.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="hp.total" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="hp.current" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="hp.subdual" use-attribute-sets="hp.current" />
-
 	<xsl:attribute-set name="damage.reduction" use-attribute-sets="hp.current" />
-
  	<xsl:attribute-set name="speed" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="ac.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="ac.total" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="ac.flatfooted" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="ac.touch" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="ac" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="miss_chance" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="spell_failure" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="ac_check" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
  	<xsl:attribute-set name="spell_resistance" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="initiative.title" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="initiative.total" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="initiative.general" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="bab.title" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="bab.total" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="skills.header" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="skills.darkline">
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="skills.lightline">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="skills.darkline.total">
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="skills.lightline.total">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="skills.footer">
 		<xsl:attribute name="border-bottom-color">black</xsl:attribute>
 		<xsl:attribute name="border-bottom-width">0.5pt</xsl:attribute>
 		<xsl:attribute name="border-bottom-style">solid</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="saves.title" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="saves.total" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="saves" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="tohit.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="tohit.total" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="tohit" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
-
 	<xsl:attribute-set name="weapon.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="weapon" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="weapon.hilight" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="protection.title" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="protection" use-attribute-sets="border centre">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 		<xsl:attribute name="border-color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="protection.darkline" use-attribute-sets="centre">
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="protection.lightline" use-attribute-sets="centre">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="domains.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="domains.lightline" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="domains.darkline" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="proficiencies.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="proficiencies" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="languages.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="languages" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="templates.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="templates.lightline" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="templates.darkline" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="companions.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="companions" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="equipment.title" use-attribute-sets="centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="equipment.lightline" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="equipment.darkline" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="weight.title" use-attribute-sets="centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="weight" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="weight.solid" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="money.title" use-attribute-sets="centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="money.lightline">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="money.darkline">
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="magic.title" use-attribute-sets="centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="magic.lightline">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="magic.darkline">
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
-
 	<xsl:attribute-set name="special_abilities.title" use-attribute-sets="centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="special_abilities.lightline">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="special_abilities.darkline">
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
-
 	<xsl:attribute-set name="feats.title" use-attribute-sets="centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="feats.lightline">
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="feats.darkline">
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
-
 	<xsl:attribute-set name="spelllist.known.header" use-attribute-sets="border">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">lightgrey</xsl:attribute>
@@ -952,8 +795,6 @@
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="spelllist.header" use-attribute-sets="centre">
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
@@ -977,7 +818,6 @@
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="spells.memorized.header" use-attribute-sets="centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
@@ -994,46 +834,36 @@
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
 	<xsl:attribute-set name="reputation.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="reputation" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="occupation.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="occupation" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="allegiances.title" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">black</xsl:attribute>
 		<xsl:attribute name="color">white</xsl:attribute>
 	</xsl:attribute-set>
-
 	<xsl:attribute-set name="allegiances" use-attribute-sets="border centre">
 		<xsl:attribute name="border-color">black</xsl:attribute>
 		<xsl:attribute name="background-color">white</xsl:attribute>
 		<xsl:attribute name="color">black</xsl:attribute>
 	</xsl:attribute-set>
-
-
-
 	<xsl:template match="character">
 		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
 			<!--	PAGE DEFINITIONS	-->
@@ -1048,7 +878,6 @@
 					<fo:region-body region-name="body" column-count="2" column-gap="2mm" margin-bottom="7mm"/>
 					<fo:region-after region-name="footer" extent="0.25in"/>
 				</fo:simple-page-master>
-
 				<fo:simple-page-master master-name="Portrait"
 						page-height="297mm"
 						page-width="210mm"
@@ -1059,14 +888,9 @@
 					<fo:region-body region-name="body" margin-bottom="7mm"/>
 					<fo:region-after region-name="footer" extent="0.25in"/>
 				</fo:simple-page-master>
-
 			</fo:layout-master-set>
-
-
-
 			<fo:page-sequence master-reference="Portrait">
 				<xsl:call-template name="page.footer" />
-
 				<!--	CHARACTER BODY STARTS HERE !!!	-->
 				<fo:flow flow-name="body">
 					<!--	CHARACTER HEADER	-->
@@ -1134,8 +958,6 @@
 					</fo:block>
 				</fo:flow>
 			</fo:page-sequence>
-
-
 			<fo:page-sequence master-reference="Portrait 2 Column">
 				<xsl:call-template name="page.footer" />
 				<fo:flow flow-name="body">
@@ -1160,7 +982,6 @@
 <!-->						<xsl:apply-templates select="feats/feat[contains(., 'OCCUPATION')]" mode="starting_occupation" />	-->
 						<xsl:apply-templates select="occupations" />
 						<xsl:apply-templates select="talents" />
-
 						<xsl:apply-templates select="mutations" />
 						<xsl:apply-templates select="weapon_proficiencies" />
 						<xsl:apply-templates select="languages" />
@@ -1170,14 +991,11 @@
 					</fo:block>
 				</fo:flow>
 			</fo:page-sequence>
-
 			<xsl:apply-templates select="spells" />
 			<xsl:apply-templates select="basics" mode="bio" />
 			<xsl:apply-templates select="basics/notes" mode="bio" />
-
 		</fo:root>
 	</xsl:template>
-
 <!-->
 ====================================
 ====================================
@@ -1195,7 +1013,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -1230,7 +1047,6 @@
 			</fo:table>
 		</fo:static-content>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -1290,7 +1106,6 @@
 						<fo:table-cell xsl:use-attribute-sets="bio">
 							<fo:block font-size="8pt" padding-top="3pt"><xsl:value-of select="poolpoints/cost"/></fo:block>
 						</fo:table-cell>
-
 						<xsl:if test="string-length(portrait) &gt; 0" >
 							<fo:table-cell/>
 							<fo:table-cell number-rows-spanned="6"  xsl:use-attribute-sets="picture">
@@ -1314,9 +1129,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">POINTS</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
-
-
-
 					<fo:table-row>
 						<fo:table-cell xsl:use-attribute-sets="bio">
 							<fo:block font-size="8pt" padding-top="3pt"><xsl:value-of select="classes/shortform"/></fo:block>
@@ -1377,10 +1189,6 @@
 						</fo:table-cell>
 						<fo:table-cell/>
 					</fo:table-row>
-
-
-
-
 					<fo:table-row>
 						<fo:table-cell xsl:use-attribute-sets="bio">
 							<fo:block font-size="8pt" padding-top="3pt">
@@ -1441,11 +1249,9 @@
 						</fo:table-cell>
 						<fo:table-cell/>
 					</fo:table-row>
-
 				</fo:table-body>
 			</fo:table>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -1471,8 +1277,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
-
 	<!--
 ====================================
 ====================================
@@ -1507,13 +1311,11 @@
 	<xsl:template name="Total">
 		<xsl:param name="Items"/>
 		<xsl:param name="RunningTotal"/>
-
 		<xsl:choose>
 			<xsl:when test="not($Items)">
 				<!-- No more Items so return Running Total -->
 				<xsl:copy-of select="$RunningTotal"/>
 			</xsl:when>
-
 			<xsl:otherwise>
 				<!-- Call template for remaining Items -->
 				<xsl:variable name="CurrentTotal" select="$RunningTotal + ($Items[1]/quantity * $Items[1]/cost)"/>
@@ -1524,11 +1326,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -1538,7 +1335,6 @@
 	<xsl:template name="process.attack.string">
 		<xsl:param name="bab"/>
 		<xsl:param name="string" select="''"/>
-
 		<xsl:choose>
 			<xsl:when test="starts-with($bab, '+')">
 				<xsl:call-template name="process.attack.string">
@@ -1562,10 +1358,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -1637,10 +1429,6 @@
 		</fo:table>
 		<!-- END Ability Block -->
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -1726,15 +1514,6 @@
 		</fo:table>
 		<!-- END HP-AC Table -->
 	</xsl:template>
-
-
-
-
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -1908,8 +1687,6 @@
 		</fo:table>
 		<!-- END HP-AC Table -->
 	</xsl:template>
-
-
 <!--
 ====================================
 ====================================
@@ -1974,16 +1751,6 @@
 		</fo:table>
 		<!-- END ini-base table -->
 	</xsl:template>
-
-
-
-
-
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2018,13 +1785,6 @@
 		</fo:table>
 		<!-- END ini-base table -->
 	</xsl:template>
-
-
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2035,7 +1795,6 @@
 		<xsl:param name="first_skill" select="0" />
 		<xsl:param name="last_skill" select="0" />
 		<xsl:param name="column_width" select="'wide'" />
-
 		<!-- begin skills table -->
 		<xsl:if test="count(skill) &gt;= $first_skill" >
 			<fo:table table-layout="fixed" border-collapse="collapse">
@@ -2145,7 +1904,6 @@
 					</fo:table-row>
 				</fo:table-header>
 				<fo:table-body>
-
 					<xsl:for-each select="skill">
 						<xsl:if test="position() &gt;= $first_skill and position() &lt;= $last_skill" >
 							<xsl:variable name="skills.row">
@@ -2201,7 +1959,6 @@
 									</fo:block>
 								</fo:table-cell>
 							</xsl:variable>
-
 							<xsl:choose>
 								<xsl:when test="position() mod 2 = 0">
 									<xsl:apply-templates select="." mode="skills.darkline">
@@ -2214,10 +1971,8 @@
 									</xsl:apply-templates>
 								</xsl:otherwise>
 							</xsl:choose>
-
 						</xsl:if>
 					</xsl:for-each>
-
 					<fo:table-row height="9pt">
 						<fo:table-cell/>
 						<fo:table-cell xsl:use-attribute-sets="skills.footer"/>
@@ -2248,42 +2003,28 @@
 			</xsl:if>
 		<!-- END Skills table -->
 	</xsl:template>
-
-
-
-
 	<xsl:template match="skill" mode="skills.darkline">
 		<xsl:param name="skills.row" />
 		<fo:table-row xsl:use-attribute-sets="skills.darkline">
 			<xsl:copy-of select="$skills.row"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template match="skill" mode="skills.lightline">
 		<xsl:param name="skills.row" />
 		<fo:table-row xsl:use-attribute-sets="skills.lightline">
 			<xsl:copy-of select="$skills.row"/>
 		</fo:table-row>
 	</xsl:template>
-
-
 	<xsl:template match="skill_mod" mode="skills.total.darkline">
 		<fo:table-cell xsl:use-attribute-sets="skills.darkline.total">
 			<fo:block text-align="center" space-before.optimum="1pt" font-size="8pt"><xsl:value-of select="."/></fo:block>
 		</fo:table-cell>
 	</xsl:template>
-
-
 	<xsl:template match="skill_mod" mode="skills.total.lightline">
 		<fo:table-cell xsl:use-attribute-sets="skills.lightline.total">
 			<fo:block text-align="center" space-before.optimum="1pt" font-size="8pt"><xsl:value-of select="."/></fo:block>
 		</fo:table-cell>
 	</xsl:template>
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2330,7 +2071,6 @@
 						<fo:block text-align="center" font-size="4pt">TEMP MODIFIER</fo:block>
 					</fo:table-cell>
 				</fo:table-row>
-
 				<xsl:for-each select="saving_throw">
 					<fo:table-row height="2pt">
 						<fo:table-cell/>
@@ -2371,11 +2111,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
-
-
 	<xsl:template name="reputation">
 		<fo:table table-layout="fixed">
 			<fo:table-column column-width="20mm"/>
@@ -2409,8 +2144,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
 <!--
 ====================================
 ====================================
@@ -2447,7 +2180,6 @@
 				<xsl:apply-templates select="ranged" mode="to_hit">
 					<xsl:with-param name="title" select="'RANGED'" />
 				</xsl:apply-templates>
-
 				<fo:table-row height="0.5pt">
 					<fo:table-cell/>
 				</fo:table-row>
@@ -2459,8 +2191,6 @@
 		</fo:table>
 		<!-- END Attack table -->
 	</xsl:template>
-
-
 	<xsl:template name="to_hit.header">
 		<xsl:param name="dalign" select="'after'" />
 		<xsl:param name="stat" select="'after'" />
@@ -2498,7 +2228,6 @@
 					</fo:table-cell>
 				</fo:table-row>
 	</xsl:template>
-
 	<xsl:template match="melee|ranged" mode="to_hit">
 		<xsl:param name="title" />
 		<fo:table-row>
@@ -2540,10 +2269,6 @@
 			<fo:table-cell xsl:use-attribute-sets="border.temp"/>
 		</fo:table-row>
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2573,12 +2298,6 @@
 		</fo:table>
 		<!-- STOP Unarmed Attack Table -->
 	</xsl:template>
-
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2589,7 +2308,6 @@
 		<xsl:param name="first_weapon" select="0" />
 		<xsl:param name="last_weapon" select="0" />
 		<xsl:param name="column_width" select="'wide'" />
-
 		<xsl:for-each select="weapon">
 			<xsl:if test="(position() &gt;= $first_weapon) and (position() &lt;= $last_weapon)" >
 				<xsl:apply-templates select="common">
@@ -2623,10 +2341,6 @@
 			</fo:block>
 		</xsl:if>
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2635,7 +2349,6 @@
 ====================================-->
 	<xsl:template match="common">
 		<xsl:param name="column_width" select="'wide'" />
-
 		<fo:table table-layout="fixed" space-before="2mm" keep-with-next="always" keep-together="always">
 			<xsl:choose>
 				<xsl:when test="$column_width='wide'">
@@ -2704,10 +2417,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2761,8 +2470,6 @@
 		</xsl:if>
 		</fo:table>
 	</xsl:template>
-
-
 <!--
 ====================================
 ====================================
@@ -2794,10 +2501,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2806,7 +2509,6 @@
 ====================================-->
 	<xsl:template match="melee">
 		<xsl:param name="column_width" select="'wide'" />
-
 		<fo:table table-layout="fixed" keep-with-next="always" keep-together="always">
 			<xsl:choose>
 				<xsl:when test="$column_width='wide'">
@@ -2866,13 +2568,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -2881,7 +2576,6 @@
 ====================================-->
 	<xsl:template match="ranges">
 		<xsl:param name="column_width" select="'wide'" />
-
 		<fo:table table-layout="fixed" keep-with-next="always" keep-together="always">
 			<xsl:choose>
 				<xsl:when test="$column_width='wide'">
@@ -2906,7 +2600,6 @@
 				</xsl:otherwise>
 			</xsl:choose>
 			<fo:table-body>
-
 				<xsl:if test="./ammunition">
 					<fo:table-row keep-with-next.within-column="always">
 						<fo:table-cell xsl:use-attribute-sets="weapon.title" text-align="start" number-columns-spanned="6">
@@ -2918,7 +2611,6 @@
 						</fo:table-cell>
 					</fo:table-row>
 				</xsl:if>
-
 				<fo:table-row keep-with-next.within-column="always">
 					<!-- Handedness -->
 					<fo:table-cell xsl:use-attribute-sets="weapon.title"><fo:block font-size="5pt" font-weight="bold">To Hit</fo:block></fo:table-cell>
@@ -2958,10 +2650,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
-
 	<xsl:template match="armor">
 		<xsl:if test="string(.) != ''">
 			<fo:table table-layout="fixed" space-before="2mm">
@@ -3028,7 +2716,6 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
 <!--
 ====================================
 ====================================
@@ -3091,7 +2778,6 @@
 					<xsl:variable name="special">
 						<fo:table-cell number-columns-spanned="6" text-align="center"><fo:block font-size="6pt"><xsl:value-of select="special_properties"/></fo:block></fo:table-cell>
 					</xsl:variable>
-
 					<xsl:if test="position() mod 2 = 0">
 						<xsl:call-template name="protection.item.darkline">
 							<xsl:with-param name="content" select="$content"/>
@@ -3108,9 +2794,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
 	<xsl:template name="protection.item.darkline">
 		<xsl:param name="content"/>
 		<xsl:param name="special"/>
@@ -3121,7 +2804,6 @@
 			<xsl:copy-of select="$special"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="protection.item.lightline">
 		<xsl:param name="content"/>
 		<xsl:param name="special"/>
@@ -3132,10 +2814,6 @@
 			<xsl:copy-of select="$special"/>
 		</fo:table-row>
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -3161,8 +2839,6 @@
 		</fo:table>
 		<!-- END weapon_proficiencies Table -->
 	</xsl:template>
-
-
 <!--
 ====================================
 ====================================
@@ -3190,8 +2866,6 @@
 			<!-- END Languages Table -->
 		</xsl:if>
 	</xsl:template>
-
-
 <!--
 ====================================
 ====================================
@@ -3210,14 +2884,12 @@
 						</fo:block>
 					</fo:table-cell>
 				</fo:table-row>
-
 				<xsl:for-each select="template">
 					<xsl:variable name="content">
 						<fo:table-cell padding="1pt">
 							<fo:block font-size="7pt"><xsl:value-of select="name"/></fo:block>
 						</fo:table-cell>
 					</xsl:variable>
-
 					<xsl:if test="position() mod 2 = 0">
 						<xsl:call-template name="templates.darkline"><xsl:with-param name="content" select="$content"/></xsl:call-template>
 					</xsl:if>
@@ -3229,23 +2901,18 @@
 		</fo:table>
 		<!-- END Templates Table -->
 	</xsl:template>
-
 	<xsl:template name="templates.darkline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="templates.darkline">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="templates.lightline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="templates.lightline">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
-
-
 <!--
 ====================================
 ====================================
@@ -3306,7 +2973,6 @@
 					</fo:table-row>
 				</fo:table-footer>
 				<fo:table-body>
-
 					<xsl:for-each select="item">
 						<xsl:if test="false=contains(type, 'GEM') and false=contains(type, 'VIRTUAL')">
 							<xsl:variable name="content">
@@ -3317,7 +2983,6 @@
 										</xsl:if>
 										<xsl:value-of select="name"/>
 									</fo:block>
-
 									<fo:block space-before.optimum="1pt" font-size="5pt">
 										<xsl:value-of select="contents" />
 									</fo:block>
@@ -3327,7 +2992,6 @@
 									<fo:block space-before.optimum="1pt" font-size="5pt">
 										<xsl:value-of select="note" />
 									</fo:block>
-
 									<!-- Display the number of charges left if any -->
 									<xsl:if test="charges &gt; 0">
 										<fo:block font-size="7pt" font-family="ZapfDingbats">
@@ -3372,7 +3036,6 @@
 									</fo:block>
 								</fo:table-cell>
 							</xsl:variable>
-
 							<xsl:if test="position() mod 2 = 0">
 								<xsl:call-template name="equipment.darkline"><xsl:with-param name="content" select="$content"/></xsl:call-template>
 							</xsl:if>
@@ -3386,22 +3049,18 @@
 		</fo:block>
 			<!-- END Equipment table -->
 	</xsl:template>
-
-
 	<xsl:template name="equipment.darkline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="equipment.darkline">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="equipment.lightline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="equipment.lightline">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 <!--
 ====================================
 ====================================
@@ -3409,7 +3068,6 @@
 ====================================
 ====================================-->
 	<xsl:template match="weight_allowance">
-
 		<!-- BEGIN Weight table -->
 		<fo:table table-layout="fixed" space-before.optimum="2mm">
 			<fo:table-column column-width="20mm"/>
@@ -3467,11 +3125,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -3536,25 +3189,18 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
-
 	<xsl:template name="money.darkline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="money.darkline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="money.lightline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="money.lightline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
-
-
 <!--
 ====================================
 ====================================
@@ -3577,7 +3223,6 @@
 								<fo:block font-size="7pt"><xsl:value-of select="."/></fo:block>
 							</fo:table-cell>
 						</xsl:variable>
-
 						<xsl:if test="position() mod 2 = 0">
 							<xsl:call-template name="magic.darkline"><xsl:with-param name="content" select="$content"/></xsl:call-template>
 						</xsl:if>
@@ -3589,23 +3234,18 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
-
 	<xsl:template name="magic.darkline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="magic.darkline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="magic.lightline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="magic.lightline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -3623,21 +3263,18 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<xsl:template name="mutation.darkline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="mutation.darkline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="mutation.lightline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="mutation.lightline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 <!--
 ====================================
 ====================================
@@ -3655,7 +3292,6 @@
 							<fo:block font-size="9pt">TALENTS / SPECIAL ABILITIES</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
-
 					<xsl:for-each select="ability">
 						<xsl:variable name="content">
 							<fo:table-cell number-columns-spanned="2" padding="1pt">
@@ -3673,22 +3309,18 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
 	<xsl:template name="special_abilities.darkline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="special_abilities.darkline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="special_abilities.lightline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="special_abilities.lightline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 <!--
 ====================================
 ====================================
@@ -3716,9 +3348,6 @@
 		</fo:table>
 	</xsl:if>
 	</xsl:template>
-
-
-
 	<!--
 ====================================
 ====================================
@@ -3736,7 +3365,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -3754,8 +3382,6 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-
-
 <!--
 ====================================
 ====================================
@@ -3779,9 +3405,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
 <!--
 ====================================
 ====================================
@@ -3799,7 +3422,6 @@
 							<fo:block font-size="9pt">FEATS</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
-
 					<xsl:for-each select="feat[hidden != 'T' and name != '']">
 						<xsl:sort select="name" />
 						<xsl:variable name="content">
@@ -3821,24 +3443,18 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
-
 	<xsl:template name="feats.darkline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="feats.darkline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="feats.lightline">
 		<xsl:param name="content"/>
 		<fo:table-row xsl:use-attribute-sets="feats.lightline" keep-with-next.within-column="always">
 			<xsl:copy-of select="$content"/>
 		</fo:table-row>
 	</xsl:template>
-
-
 	<!--
 ====================================
 ====================================
@@ -3890,7 +3506,6 @@
 				</fo:table-column>
 				<fo:table-body>
 					<fo:table-row keep-with-next.within-column="always">
-												<xsl:message>Test</xsl:message>
 					<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -3899,7 +3514,6 @@
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions'"/>
@@ -3928,7 +3542,6 @@
 			<fo:table-column column-width="14mm"/>
 			<fo:table-body keep-together="always">
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="6">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -3938,7 +3551,6 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell text-align="end">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -3983,7 +3595,6 @@
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell text-align="end">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -4030,7 +3641,6 @@
 				<xsl:for-each select="attacks/attack">
 					<xsl:if test="string-length(common/name/long) &gt; 0">
 						<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 							<fo:table-cell text-align="end">
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -4090,7 +3700,6 @@
 					</xsl:if>
 				</xsl:for-each>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell text-align="left">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -4108,7 +3717,6 @@
 				</fo:table-row>
 				<xsl:if test="count(companion/trick) &gt; 0">
 					<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 						<fo:table-cell text-align="left">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions.title'"/>
@@ -4128,7 +3736,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
 <!--
 ====================================
 ====================================
@@ -4150,10 +3757,6 @@
 		</xsl:if>
 		<!-- END Spells Pages -->
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -4177,9 +3780,6 @@
 			</fo:block>
 		</xsl:if>
 	</xsl:template>
-
-
-
 <!--
 ====================================
 ====================================
@@ -4203,9 +3803,6 @@
 			</xsl:for-each>
 		</xsl:if>
 	</xsl:template>
-
-
-
 <!--
 ====================================
 ====================================
@@ -4217,11 +3814,6 @@
 			<xsl:apply-templates select="class" mode="spells.known"/>
 		</xsl:if>
 	</xsl:template>
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -4269,7 +3861,6 @@
 					<fo:table-row height="2mm" >
 						<fo:table-cell/>
 					</fo:table-row>
-
 					<xsl:apply-templates select="level" mode="known.spells">
 						<xsl:with-param name="columnOne" select="$columnOne"/>
 						<xsl:with-param name="columnOneTitle" select="$columnOneTitle"/>
@@ -4278,10 +3869,6 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
-
-
 	<xsl:template match="class" mode="spell.level.table">
 		<fo:table table-layout="fixed" border-collapse="collapse">
 			<fo:table-column column-width="40mm" />
@@ -4304,9 +3891,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
-
-
 	<xsl:template match="class" mode="spell.level.count">
 		<fo:table-row keep-with-next.within-column="always">
 			<fo:table-cell />
@@ -4323,7 +3907,6 @@
 			<fo:table-cell />
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template match="class" mode="spell.level.known">
 		<fo:table-row keep-with-next.within-column="always">
 			<fo:table-cell />
@@ -4340,9 +3923,6 @@
 			<fo:table-cell />
 		</fo:table-row>
 	</xsl:template>
-
-
-
 	<xsl:template match="class" mode="spell.level.cast">
 		<fo:table-row padding-bottom="2mm">
 			<fo:table-cell />
@@ -4359,9 +3939,6 @@
 			<fo:table-cell />
 		</fo:table-row>
 	</xsl:template>
-
-
-
 <!--
 ====================================
 ====================================
@@ -4371,7 +3948,6 @@
 	<xsl:template match="level" mode="known.spells">
 		<xsl:param name="columnOne" select="'Boxes'" />
 		<xsl:param name="columnOneTitle" select="''" />
-
 		<xsl:if test="count(.//spell) &gt; 0">
 			<fo:table-row keep-with-next.within-column="always">
 				<fo:table-cell number-columns-spanned="11" padding-top="1pt" xsl:use-attribute-sets="spelllist.header">
@@ -4391,10 +3967,6 @@
 			</fo:table-row>
 		</xsl:if>
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -4439,12 +4011,6 @@
 			</fo:table-row>
 		</fo:table-footer>
 	</xsl:template>
-
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -4489,12 +4055,6 @@
 			</fo:table-cell>
 		</fo:table-row>
 	</xsl:template>
-
-
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -4606,9 +4166,7 @@
 				<xsl:with-param name="row2" select="$row2"/>
 			</xsl:call-template>
 		</xsl:if>
-
 	</xsl:template>
-
 	<xsl:template name="spelllist.darkline">
 		<xsl:param name="row1"/>
 		<xsl:param name="row2"/>
@@ -4619,7 +4177,6 @@
 			<xsl:copy-of select="$row2"/>
 		</fo:table-row>
 	</xsl:template>
-
 	<xsl:template name="spelllist.lightline">
 		<xsl:param name="row1"/>
 		<xsl:param name="row2"/>
@@ -4630,8 +4187,6 @@
 			<xsl:copy-of select="$row2"/>
 		</fo:table-row>
 	</xsl:template>
-
-
 	<xsl:template match="memorized_spells">
 		<xsl:if test="count(.//spell) &gt; 0">
 			<fo:block break-before="page">
@@ -4639,9 +4194,6 @@
 			</fo:block>
 		</xsl:if>
 	</xsl:template>
-
-
-
 	<xsl:template name="spells.memorized.header">
 		<xsl:param name="title" select="'Unknown'"/>
 		<fo:table >
@@ -4657,7 +4209,6 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
 	<xsl:template match="racial_innate_memorized" mode="spells.memorized">
 		<xsl:if test="count(.//spell) &gt; 0">
 			<xsl:call-template name="spells.memorized.header">
@@ -4672,14 +4223,11 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
 	<xsl:template match="class_innate_memorized" mode="spells.memorized">
 		<xsl:if test="count(.//spell) &gt; 0">
 			<xsl:apply-templates mode="spells.memorized.innate"/>
 		</xsl:if>
 	</xsl:template>
-
-
 	<xsl:template match="spellbook" mode="spells.memorized.innate">
 		<xsl:if test="count(.//spell) &gt; 0">
 			<xsl:call-template name="spells.memorized.header">
@@ -4694,8 +4242,6 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
 	<xsl:template match="spellbook" mode="spells.memorized">
 		<xsl:if test="count(.//spell) &gt; 0">
 			<fo:table table-layout="fixed" space-before="4mm">
@@ -4717,8 +4263,6 @@
 			</fo:table>
 		</xsl:if>
 	</xsl:template>
-
-
 	<xsl:template match="class" mode="spells.memorized" >
 		<xsl:if test="count(.//spell) &gt; 0">
 			<fo:table-row>
@@ -4736,8 +4280,6 @@
 			</fo:table-row>
 		</xsl:if>
 	</xsl:template>
-
-
 	<xsl:template match="level" mode="spells.memorized">
 		<fo:table-cell padding-top="1pt">
 			<fo:block font-size="5pt">
@@ -4760,9 +4302,6 @@
 			</fo:block>
 		</fo:table-cell>
 	</xsl:template>
-
-
-
 	<xsl:template match="spell" mode="spells.memorized">
 		<fo:table-row>
 			<xsl:choose>
@@ -4788,7 +4327,6 @@
 			</fo:table-cell>
 		</fo:table-row>
 	</xsl:template>
-
 <!--
 ====================================
 ====================================
@@ -4813,7 +4351,6 @@
 								<fo:table-column column-width="94mm" />
 							</xsl:if>
 							<fo:table-body>
-
 								<fo:table-row>
 									<xsl:if test="string-length(portrait) &gt; 0">
 										<fo:table-cell display-align="center" xsl:use-attribute-sets="picture" number-rows-spanned="36">
@@ -4833,8 +4370,6 @@
 										<fo:block font-size="6pt">RACE</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="age" /></fo:block>
@@ -4845,7 +4380,6 @@
 										<fo:block font-size="6pt">AGE</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="gender/long" /></fo:block>
@@ -4856,7 +4390,6 @@
 										<fo:block font-size="6pt">GENDER</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="vision/all" /></fo:block>
@@ -4867,7 +4400,6 @@
 										<fo:block font-size="6pt">VISION</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="alignment/long" /></fo:block>
@@ -4878,7 +4410,6 @@
 										<fo:block font-size="6pt">ALIGNMENT</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="handed" /></fo:block>
@@ -4889,7 +4420,6 @@
 										<fo:block font-size="6pt">DOMINANT HAND</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="height/total" /></fo:block>
@@ -4900,7 +4430,6 @@
 										<fo:block font-size="6pt">HEIGHT</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="weight/weight_unit" /></fo:block>
@@ -4911,7 +4440,6 @@
 										<fo:block font-size="6pt">WEIGHT</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="eyes/color" /></fo:block>
@@ -4922,7 +4450,6 @@
 										<fo:block font-size="6pt">EYE COLOR</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="skin/color" /></fo:block>
@@ -4933,7 +4460,6 @@
 										<fo:block font-size="6pt">SKIN COLOR</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt">
@@ -4947,7 +4473,6 @@
 										<fo:block font-size="6pt">HAIR</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt"><xsl:value-of select="phobias" /></fo:block>
@@ -4960,7 +4485,6 @@
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt">
@@ -4978,7 +4502,6 @@
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt">
@@ -4993,7 +4516,6 @@
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt" color="black">
@@ -5008,7 +4530,6 @@
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt" >
@@ -5023,7 +4544,6 @@
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt" >
@@ -5038,7 +4558,6 @@
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
-
 								<fo:table-row>
 									<fo:table-cell padding-top="1pt" height="9pt" xsl:use-attribute-sets="bio">
 										<fo:block font-size="9pt">
@@ -5056,7 +4575,6 @@
 							</fo:table-body>
 						</fo:table>
 					</fo:block>
-
 					<fo:block font-size="14pt" font-weight="bold" space-before="5mm" span="all">
 						Description:
 					</fo:block>
@@ -5065,7 +4583,6 @@
 							<xsl:value-of select="." />
 						</fo:block>
 					</xsl:for-each>
-
 					<fo:block font-size="14pt" font-weight="bold" span="all">
 						Biography:
 					</fo:block>
@@ -5079,10 +4596,6 @@
 		</xsl:if>
 		<!-- END BIO Pages -->
 	</xsl:template>
-
-
-
-
 <!--
 ====================================
 ====================================
@@ -5115,7 +4628,6 @@
 		</xsl:if>
 		<!-- END CHARACTER NOTES Pages -->
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -5191,6 +4703,4 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
 </xsl:stylesheet>
-

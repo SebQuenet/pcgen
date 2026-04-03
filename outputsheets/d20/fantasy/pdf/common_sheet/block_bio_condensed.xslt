@@ -20,8 +20,7 @@
 		<xsl:param name="title"/>
 		<xsl:param name="value"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
-			<fo:table-cell padding-top="1pt" height="9pt">
+							<fo:table-cell padding-top="1pt" height="9pt">
 				<xsl:call-template name="attrib">
 					<xsl:with-param name="attribute" select="'bio'"/>
 				</xsl:call-template>
@@ -81,8 +80,7 @@
 							</xsl:choose>
 							<fo:table-body>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
-									<fo:table-cell>
+													<fo:table-cell>
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio'"/>
 										</xsl:call-template>
@@ -104,8 +102,7 @@
 									</xsl:if>
 								</fo:table-row>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
-									<fo:table-cell padding-top="1pt">
+													<fo:table-cell padding-top="1pt">
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio.title'"/>
 										</xsl:call-template>
@@ -117,8 +114,7 @@
 									<xsl:with-param name="value" select="age"/>
 								</xsl:call-template>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
-									<fo:table-cell padding-top="0.5pt">
+													<fo:table-cell padding-top="0.5pt">
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio.title'"/>
 										</xsl:call-template>
@@ -290,8 +286,7 @@
 			<fo:table-column/>
 			<fo:table-header>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
-					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'protection.title'"/></xsl:call-template>
+									<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'protection.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt">
 						<fo:block font-size="7pt">
 							Campaign
@@ -333,8 +328,7 @@
 						</xsl:choose>
 					</xsl:variable>
 					<fo:table-row>
-											<xsl:message>Test</xsl:message>
-						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat('protection.', $shade)"/></xsl:call-template>
+										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat('protection.', $shade)"/></xsl:call-template>
 						<fo:table-cell>
 							<fo:block font-size="8pt">
 								<xsl:value-of select="campaign"/>
@@ -367,7 +361,7 @@
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row>
-											<xsl:message>Test END</xsl:message>
+											
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="concat('protection.', $shade)"/>
 						</xsl:call-template>

@@ -104,6 +104,14 @@ application {
     mainClass.set('pcgen.system.Main')
 }
 
+tasks.register("runMcp", JavaExec) {
+    description = 'Run the PCGen MCP server (stdio transport)'
+    group = 'application'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass.set('pcgen.mcp.McpMain')
+    standardInput = System.in
+}
+
 /*
  * Which binary repositories this build uses.
  */
@@ -237,6 +245,8 @@ tasks.register("cleanMasterSheets", Delete) {
  */
 dependencies {
 
+    implementation 'io.modelcontextprotocol.sdk:mcp:0.10.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
     implementation 'commons-io:commons-io:2.21.0'
     implementation 'org.springframework:spring-web:7.0.6'
     implementation 'org.springframework:spring-beans:7.0.6'

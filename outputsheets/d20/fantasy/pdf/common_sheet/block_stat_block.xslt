@@ -6,11 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
-
 	<!--
 ====================================
 ====================================
@@ -48,48 +45,38 @@
 			<fo:table-column>
 				<xsl:attribute name="column-width"><xsl:value-of select="0.13 * (0.29 * $pagePrintableWidth - 9)" />mm</xsl:attribute>
 			</fo:table-column>
-
-
 			<fo:table-body>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell>
 						<fo:block text-align="center" font-size="4pt">ABILITY NAME</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<fo:block text-align="center" font-size="4pt">BASE SCORE</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<fo:block text-align="center" font-size="4pt">BASE MOD</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<fo:block text-align="center" font-size="4pt">ABILITY SCORE</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<fo:block text-align="center" font-size="4pt">ABILITY MOD</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<fo:block text-align="center" font-size="4pt">TEMP SCORE</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<fo:block text-align="center" font-size="4pt">TEMP MOD</fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<xsl:for-each select="ability">
 					<fo:table-row>
-											<xsl:message>Test</xsl:message>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'stat.title'"/>
@@ -102,7 +89,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'stat.base.score'"/>
@@ -112,7 +98,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'stat.base.modifier'"/>
@@ -122,7 +107,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'stat.score'"/>
@@ -132,7 +116,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'stat.modifier'"/>
@@ -142,7 +125,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell height="4pt">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'stat.temp.score'"/>
@@ -154,7 +136,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell height="4pt">	<!-- Temp Score and Mod-->
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'stat.temp.modifier'"/>
@@ -167,15 +148,11 @@
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row height="2pt">
-											<xsl:message>Test</xsl:message>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 					</fo:table-row>
 				</xsl:for-each>
 			</fo:table-body>
 		</fo:table>
 		<!-- END Ability Block -->
 	</xsl:template>
-
-
 </xsl:stylesheet>

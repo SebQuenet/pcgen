@@ -6,10 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
 	<!--
 ====================================
 ====================================
@@ -103,7 +101,6 @@
 				</xsl:choose>	
 				<fo:table-body>
 					<fo:table-row>
-												<xsl:message>Test</xsl:message>
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -115,18 +112,15 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell number-columns-spanned="3" font-weight="bold">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
 							</xsl:call-template>
 							<fo:block font-size="10pt">
 								<xsl:value-of select="playername"/>
-								
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell padding-top="2.5pt" number-columns-spanned="1">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -136,7 +130,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell padding-top="2.5pt" number-columns-spanned="1">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -145,9 +138,7 @@
 								<xsl:value-of select="region"/>	
 							</fo:block>
 						</fo:table-cell>
-
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell padding-top="2.5pt">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -158,7 +149,6 @@
 						</fo:table-cell>
 						<xsl:if test="string-length(portrait/portrait_thumb) &gt; 0">
 							<fo:table-cell><fo:block/></fo:table-cell>
-
 							<fo:table-cell number-rows-spanned="6">
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'picture'"/>
@@ -173,7 +163,6 @@
 						</xsl:if>
 					</fo:table-row>
 					<fo:table-row>
-												<xsl:message>Test</xsl:message>
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -181,7 +170,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">Character Name</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -189,7 +177,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">Player Name</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell number-columns-spanned="1">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -197,7 +184,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">Deity</fo:block>		
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell number-columns-spanned="1">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -217,7 +203,6 @@
 					</fo:table-row>
 	<!-- Second Row -->
 					<fo:table-row>
-												<xsl:message>Test</xsl:message>
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -302,20 +287,15 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 					</fo:table-row>
 					<fo:table-row>
-												<xsl:message>Test</xsl:message>
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
 							<fo:block font-size="6pt" padding-top="1pt">CLASS</fo:block>
 						</fo:table-cell>
-						
-					
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -323,7 +303,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">RACE</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -331,7 +310,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">SIZE / FACE</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -339,7 +317,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">HEIGHT / WEIGHT</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -347,11 +324,9 @@
 							<fo:block font-size="6pt" padding-top="1pt">CHARACTER ID</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 					</fo:table-row>
 	<!--	Third Row-->
 					<fo:table-row>
-												<xsl:message>Test</xsl:message>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -364,7 +339,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -374,7 +348,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -385,7 +358,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -395,7 +367,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -405,7 +376,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -416,7 +386,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio'"/>
@@ -426,12 +395,10 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 					</fo:table-row>
-
 	<!-- Third ROW Text-->
 					<fo:table-row>
-												<xsl:message>Test END</xsl:message>
+												
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -445,7 +412,6 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -453,7 +419,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">EXP/NEXT LEVEL</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -461,7 +426,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">AGE</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -469,7 +433,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">GENDER</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -477,7 +440,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">EYES</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -485,7 +447,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">HAIR</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -493,7 +454,6 @@
 							<fo:block font-size="6pt" padding-top="1pt">FACTION</fo:block>	
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 					</fo:table-row>	
 				</fo:table-body>
 			</fo:table>
@@ -581,7 +541,6 @@
 			</xsl:choose>	
 			<fo:table-body>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -599,7 +558,6 @@
 						</xsl:call-template>
 						<fo:block font-size="10pt">
 							<xsl:value-of select="playername"/>
-							
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
@@ -620,7 +578,6 @@
 							<xsl:value-of select="region"/>	
 						</fo:block>
 					</fo:table-cell>
-
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell padding-top="2.5pt">
 						<xsl:call-template name="attrib">
@@ -632,7 +589,6 @@
 					</fo:table-cell>
 					<xsl:if test="string-length(portrait/portrait_thumb) &gt; 0">
 						<fo:table-cell><fo:block/></fo:table-cell>
-
 						<fo:table-cell number-rows-spanned="6">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'picture'"/>
@@ -647,7 +603,6 @@
 					</xsl:if>
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -655,7 +610,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">Character Name</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -663,7 +617,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">Player Name</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell number-columns-spanned="1">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -671,7 +624,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">Deity</fo:block>		
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell number-columns-spanned="1">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -689,7 +641,6 @@
 				</fo:table-row>
 <!-- Second Row -->
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -771,20 +722,15 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
 						<fo:block font-size="6pt" padding-top="1pt">CLASS</fo:block>
 					</fo:table-cell>
-					
-				
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -792,7 +738,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">RACE</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -800,7 +745,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">SIZE / FACE</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -808,7 +752,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">HEIGHT / WEIGHT</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -816,11 +759,9 @@
 						<fo:block font-size="6pt" padding-top="1pt">VISION</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 				</fo:table-row>
 <!--	Third Row-->
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -833,7 +774,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -843,7 +783,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -854,7 +793,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -864,7 +802,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -874,7 +811,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -885,7 +821,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio'"/>
@@ -895,12 +830,10 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 				</fo:table-row>
-
 <!-- Third ROW Text-->
 				<fo:table-row>
-											<xsl:message>Test END</xsl:message>
+											
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -914,7 +847,6 @@
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -922,7 +854,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">EXP/NEXT LEVEL</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -930,7 +861,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">AGE</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -938,7 +868,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">GENDER</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -946,7 +875,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">EYES</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -954,7 +882,6 @@
 						<fo:block font-size="6pt" padding-top="1pt">HAIR</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -962,36 +889,27 @@
 						<fo:block font-size="6pt" padding-top="1pt">Points</fo:block>	
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
-
 				</fo:table-row>	
 			</fo:table-body>
 		</fo:table>	<!-- Default Standard Fantasy -->
 				</xsl:otherwise>
 			</xsl:choose>	
 		</xsl:template>
-
 	<!--
 ====================================
 ====================================
 	TEMPLATE - STANDARD HEADER
 ====================================
 ====================================-->
-
 	<xsl:template match="header_standard">
-		
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
 	TEMPLATE - society HEADER
 ====================================
 ====================================-->
-
 	<!-- society Header -->
 	<xsl:template match="header_pfs">
-
 	</xsl:template>
-
-
 </xsl:stylesheet>

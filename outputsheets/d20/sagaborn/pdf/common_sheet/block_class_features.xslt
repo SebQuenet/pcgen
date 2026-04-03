@@ -6,15 +6,12 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
 	<!--
 ====================================
 ====================================
 	TEMPLATE - CLASS FEATURES
-
 Returns the size in MM the class
 features take up on the LHS of the
 first page
@@ -23,7 +20,6 @@ first page
 	<xsl:template name="features.left">
 		<xsl:param name="features"/>
 		<xsl:param name="RunningTotal" select="0"/>
-
 		<xsl:choose>
 			<xsl:when test="not($features)">
 				<!--No more Items so return Running Total -->
@@ -54,7 +50,6 @@ first page
 ====================================
 ====================================
 	TEMPLATE - CLASS FEATURES
-
 Returns the size in MM the class
 features take up on the RHS of the
 first page
@@ -89,7 +84,6 @@ first page
 		</xsl:variable>
 		<xsl:copy-of select="$bardic_music + $turning + $eclipse_channeling + $channel_energy"/>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -104,7 +98,6 @@ first page
 		<xsl:param name="description.title" select="''"/>
 		<xsl:param name="description" />
 		<xsl:param name="width" select="'wide'" />
-
 		<fo:table table-layout="fixed" space-before="2mm" keep-together="always" border-collapse="collapse">
 			<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat($attribute, '.border')"/></xsl:call-template>
 			<fo:table-column column-width="18mm"/>
@@ -118,7 +111,6 @@ first page
 			</fo:table-column>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" number-columns-spanned="2">
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat($attribute, '.title')"/></xsl:call-template>
 						<fo:block font-size="10pt" font-weight="bold">
@@ -127,7 +119,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" text-align="end">
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat($attribute, '.title')"/></xsl:call-template>
 						<fo:block font-size="8pt"><xsl:value-of select="$uses.title"/></fo:block>
@@ -147,7 +138,6 @@ first page
 				</fo:table-row>
 				<xsl:if test="$description != '' ">
 					<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 			<!--	Remove Line
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat($attribute, '.border')"/></xsl:call-template>	-->
 						<xsl:choose>
@@ -175,7 +165,6 @@ first page
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-
 	<!--
 ====================================
 ====================================
@@ -231,7 +220,6 @@ first page
 	<xsl:template name="eclipse_channeling.intensity">
 		<xsl:param name="die"/>
 		<xsl:param name="number"/>
-
 		<xsl:variable name="shade">
 			<xsl:choose>
 				<xsl:when test="$number mod 2 = 0">darkline</xsl:when>
@@ -239,7 +227,6 @@ first page
 			</xsl:choose>
 		</xsl:variable>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat('turning.', $shade)"/></xsl:call-template>
 			<fo:table-cell>
 				<fo:block font-size="7pt"><xsl:value-of select="$die"/></fo:block>
@@ -261,7 +248,6 @@ first page
 		<xsl:param name="info2"/>
 		<xsl:param name="info3"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell padding-top="1pt" text-align="end">
 				<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 				<fo:block font-size="8pt">
@@ -299,7 +285,6 @@ first page
 			</fo:table-column>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt" number-columns-spanned="2">
 						<fo:block font-size="10pt" font-weight="bold">
@@ -308,7 +293,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 					<fo:table-cell>
 						<fo:table table-layout="fixed">
@@ -320,7 +304,6 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell>
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 										<fo:block font-size="7pt">Intensity Check</fo:block>
@@ -353,7 +336,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 						<fo:table table-layout="fixed" border-collapse="collapse" padding="0.5pt">
@@ -365,13 +347,11 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<fo:table-row height="1pt">
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell />
 								</fo:table-row>
 								<xsl:call-template name="eclipse_channeling.intensity">
 									<xsl:with-param name="die" select="'Up to 0'"/>
 									<xsl:with-param name="number" select="number(channel_intensity)-8"/>
-
 								</xsl:call-template>
 								<xsl:call-template name="eclipse_channeling.intensity">
 									<xsl:with-param name="die" select="'1 - 3'"/>
@@ -436,7 +416,6 @@ first page
 									<xsl:with-param name="info" select="range" />
 								</xsl:call-template>
 								<fo:table-row  keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell number-columns-spanned="2" padding-top="1pt" text-align="end">
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 										<fo:block font-size="8pt" padding-top="2pt">
@@ -449,7 +428,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="2">
 						<fo:table border-collapse="collapse" padding="0.5pt" table-layout="fixed">
 							<fo:table-column column-width="22mm"/>
@@ -479,7 +457,6 @@ first page
 		<xsl:param name="title" />
 		<xsl:param name="value"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell  padding-top="2pt" padding-right="2pt">
 				<fo:block text-align="end" display-align="center" font-size="9pt"><xsl:value-of select="$title"/></fo:block>
 			</fo:table-cell>
@@ -502,7 +479,6 @@ first page
 	<xsl:template name="turning.hitdice">
 		<xsl:param name="die"/>
 		<xsl:param name="number"/>
-
 		<xsl:variable name="shade">
 			<xsl:choose>
 				<xsl:when test="$number mod 2 = 0">darkline</xsl:when>
@@ -510,7 +486,6 @@ first page
 			</xsl:choose>
 		</xsl:variable>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat('turning.', $shade)"/></xsl:call-template>
 			<fo:table-cell>
 				<fo:block font-size="7pt"><xsl:value-of select="$die"/></fo:block>
@@ -530,7 +505,6 @@ first page
 		<xsl:param name="title"/>
 		<xsl:param name="info"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell padding-top="1pt" text-align="end">
 				<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 				<fo:block font-size="8pt">
@@ -565,7 +539,6 @@ first page
 			</fo:table-column>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt" number-columns-spanned="2">
 						<fo:block font-size="10pt" font-weight="bold">
@@ -574,7 +547,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 					<fo:table-cell>
 						<fo:table table-layout="fixed">
@@ -586,7 +558,6 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell>
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 										<fo:block font-size="7pt">Turning Check</fo:block>
@@ -619,7 +590,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 						<fo:table table-layout="fixed" border-collapse="collapse" padding="0.5pt">
@@ -631,7 +601,6 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<fo:table-row height="1pt">
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell />
 								</fo:table-row>
 								<xsl:call-template name="turning.hitdice">
@@ -691,7 +660,6 @@ first page
 									<xsl:with-param name="info" select="damage" />
 								</xsl:call-template>
 								<fo:table-row  keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell number-columns-spanned="2" padding-top="1pt" text-align="end">
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
 										<fo:block font-size="8pt" padding-top="2pt">
@@ -704,7 +672,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell number-columns-spanned="2">
 						<fo:table border-collapse="collapse" padding="0.5pt" table-layout="fixed">
 							<fo:table-column column-width="22mm"/>
@@ -728,7 +695,6 @@ first page
 		<xsl:param name="title" />
 		<xsl:param name="value"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell  padding-top="2pt" padding-right="2pt">
 				<fo:block text-align="end" display-align="center" font-size="9pt"><xsl:value-of select="$title"/></fo:block>
 			</fo:table-cell>
@@ -808,7 +774,6 @@ first page
 ====================================
 ====================================-->
 	<xsl:template match="layonhands">
-
 		<xsl:call-template name="class.feature.perday">
 			<xsl:with-param name="attribute" select="'bard'"/>
 			<xsl:with-param name="name" select="'LAY ON HANDS'"/>
@@ -818,7 +783,6 @@ first page
 			<xsl:with-param name="description" select="description"/>
 		</xsl:call-template>
 	</xsl:template>
-
 <!--
 ====================================
 ====================================
@@ -834,7 +798,6 @@ first page
 			<fo:table-column column-width="63mm"/>
 			<fo:table-body>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" number-columns-spanned="2">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist.title'"/>
@@ -845,7 +808,6 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test</xsl:message>
 					<fo:table-cell padding-top="1pt" text-align="end">
 							<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -866,7 +828,7 @@ first page
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
-											<xsl:message>Test END</xsl:message>
+											
 					<fo:table-cell padding="3pt" number-columns-spanned="2">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
@@ -895,7 +857,5 @@ first page
 |%|
 		<!-- END Checklists table -->
 	</xsl:for-each>
-
 	</xsl:template>
-
 </xsl:stylesheet>

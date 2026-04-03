@@ -6,10 +6,8 @@
 	xmlns:str="http://xsltsl.sourceforge.net/string.html"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	>
-
 	<xsl:import href="../../../../xsltsl-1.1/stdlib.xsl"/>
 	<xsl:import href="../inc_pagedimensions.xslt"/>
-
 	<!--
 ====================================
 ====================================
@@ -20,7 +18,6 @@
 		<xsl:param name="title"/>
 		<xsl:param name="value"/>
 		<fo:table-row>
-											<xsl:message>Test</xsl:message>
 			<fo:table-cell padding-top="1pt" height="9pt">
 				<xsl:call-template name="attrib">
 					<xsl:with-param name="attribute" select="'bio'"/>
@@ -80,7 +77,6 @@
 							</xsl:choose>
 							<fo:table-body>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell>
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio'"/>
@@ -103,7 +99,6 @@
 									</xsl:if>
 								</fo:table-row>
 								<fo:table-row>
-											<xsl:message>Test</xsl:message>
 									<fo:table-cell padding-top="1pt">
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio.title'"/>
@@ -163,14 +158,12 @@
 									<xsl:with-param name="title" select="'HAIR / HAIR STYLE'"/>
 									<xsl:with-param name="value" select="concat(hair/color, ', ', hair/length)"/>
 								</xsl:call-template>
-
 							<xsl:if test="string-length(phobias) &gt; 0">
 								<xsl:call-template name="bio.entry">
 									<xsl:with-param name="title" select="'PHOBIAS'"/>
 									<xsl:with-param name="value" select="phobias"/>
 								</xsl:call-template>
 							</xsl:if>
-
 							<xsl:if test="string-length(personality/trait) &gt; 0">
 								<xsl:call-template name="bio.entry">
 									<xsl:with-param name="title" select="'PERSONALITY TRAITS'"/>
@@ -182,36 +175,30 @@
 									</xsl:with-param>
 								</xsl:call-template>
 							</xsl:if>
-
 								<xsl:call-template name="bio.entry">
 									<xsl:with-param name="title" select="'INTERESTS'"/>
 									<xsl:with-param name="value" select="interests"/>
 								</xsl:call-template>
-
 								<xsl:call-template name="bio.entry">
 									<xsl:with-param name="title" select="'SPOKEN STYLE / CATCH PHRASE'"/>
 									<xsl:with-param name="value" select="concat(speechtendency, ', ', catchphrase)"/>
 								</xsl:call-template>
-
 								<xsl:call-template name="bio.entry">
 									<xsl:with-param name="title" select="'RESIDENCE'"/>
 									<xsl:with-param name="value" select="residence"/>
 								</xsl:call-template>
-
 							<xsl:if test="string-length(location) &gt; 0">
 								<xsl:call-template name="bio.entry">
 									<xsl:with-param name="title" select="'LOCATION'"/>
 									<xsl:with-param name="value" select="location"/>
 								</xsl:call-template>
 							</xsl:if>
-
 							<xsl:if test="string-length(region) &gt; 0">
 								<xsl:call-template name="bio.entry">
 									<xsl:with-param name="title" select="'REGION'"/>
 									<xsl:with-param name="value" select="region"/>
 								</xsl:call-template>
 							</xsl:if>
-								
 							</fo:table-body>
 						</fo:table>
 					</fo:block>
@@ -219,7 +206,6 @@
 						<fo:table-body>
 							<fo:table-row>
 																<fo:table-cell>
-
 					<fo:block font-size="14pt" font-weight="bold" space-before="5mm" span="all">
 						Description:
 					</fo:block>
@@ -238,10 +224,8 @@
 					</fo:block>
 					</fo:table-cell>
 							</fo:table-row>
-
 				</fo:table-body>
 			</fo:table>
-
 				</fo:flow>
 			</fo:page-sequence>
 <!-->		</xsl:if>	-->
@@ -305,7 +289,6 @@
 			<fo:table-column/>
 			<fo:table-header>
 				<fo:table-row>
-											<xsl:message>Test</xsl:message>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'protection.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt">
 						<fo:block font-size="7pt">
@@ -348,7 +331,6 @@
 						</xsl:choose>
 					</xsl:variable>
 					<fo:table-row>
-											<xsl:message>Test</xsl:message>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="concat('protection.', $shade)"/></xsl:call-template>
 						<fo:table-cell>
 							<fo:block font-size="8pt">
@@ -382,7 +364,7 @@
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row>
-											<xsl:message>Test END</xsl:message>
+											
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="concat('protection.', $shade)"/>
 						</xsl:call-template>
@@ -392,7 +374,6 @@
 							</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
-					
 				</xsl:for-each>
 			</fo:table-body>
 		</fo:table>
@@ -400,11 +381,4 @@
 			</fo:page-sequence>
 		</xsl:if>
 	</xsl:template>
-
-
-
-
-
-
-
 </xsl:stylesheet>

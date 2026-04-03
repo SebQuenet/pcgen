@@ -69,7 +69,7 @@ public final class FacadeFactory
 	{
 	}
 
-	static void initialize()
+	public static void initialize()
 	{
 		List<GameMode> modes = SystemCollections.getUnmodifiableGameModeList();
 		List<GameModeDisplay> modeDisplays = SystemCollections.getUnmodifiableGameModeDisplayList();
