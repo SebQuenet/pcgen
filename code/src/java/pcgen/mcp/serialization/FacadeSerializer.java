@@ -9,9 +9,11 @@ import pcgen.core.AbilityCategory;
 import pcgen.core.Campaign;
 import pcgen.core.Deity;
 import pcgen.core.GameMode;
+import pcgen.core.Kit;
 import pcgen.core.PCAlignment;
 import pcgen.core.PCClass;
 import pcgen.core.PCStat;
+import pcgen.core.PCTemplate;
 import pcgen.core.Race;
 import pcgen.core.Skill;
 import pcgen.facade.core.AbilityFacade;
@@ -89,6 +91,22 @@ public final class FacadeSerializer
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", deity.getKeyName());
 		result.put("name", deity.getDisplayName());
+		return result;
+	}
+
+	public static Map<String, Object> serializeTemplate(PCTemplate template)
+	{
+		Map<String, Object> result = new LinkedHashMap<>();
+		result.put("key", template.getKeyName());
+		result.put("name", template.getDisplayName());
+		return result;
+	}
+
+	public static Map<String, Object> serializeKit(Kit kit)
+	{
+		Map<String, Object> result = new LinkedHashMap<>();
+		result.put("key", kit.getKeyName());
+		result.put("name", kit.getDisplayName());
 		return result;
 	}
 

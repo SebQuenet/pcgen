@@ -14,18 +14,19 @@ import pcgen.core.Globals;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.core.SourceSelectionFacade;
-import pcgen.facade.core.UIDelegate;
 import pcgen.facade.util.DefaultListFacade;
 import pcgen.facade.util.ListFacade;
 import pcgen.persistence.SourceFileLoader;
 import pcgen.system.CharacterManager;
 import pcgen.system.FacadeFactory;
+import pcgen.util.chooser.ChooserFactory;
 
 public class McpSessionManager
 {
 	private DataSetFacade currentDataSet;
 	private String currentSourceSetId;
 	private final Map<String, CharacterFacade> characters = new LinkedHashMap<>();
+	private final Map<String, McpUIDelegate> characterDelegates = new LinkedHashMap<>();
 
 	public ListFacade<GameMode> getGameModes()
 	{
@@ -84,7 +85,7 @@ public class McpSessionManager
 			return currentSourceSetId;
 		}
 
-		UIDelegate delegate = new McpUIDelegate();
+		McpUIDelegate delegate = new McpUIDelegate();
 		SourceFileLoader loader = new SourceFileLoader(delegate, new DefaultListFacade<>(campaigns), gameMode.getName());
 		loader.run();
 
@@ -111,7 +112,8 @@ public class McpSessionManager
 			throw new IllegalStateException("No sources loaded. Call load_sources first.");
 		}
 
-		UIDelegate delegate = new McpUIDelegate();
+		McpUIDelegate delegate = new McpUIDelegate();
+		ChooserFactory.setDelegate(delegate);
 		CharacterFacade character = CharacterManager.createNewCharacter(delegate, currentDataSet);
 		if (name != null && !name.isBlank())
 		{
@@ -120,6 +122,7 @@ public class McpSessionManager
 
 		String characterId = UUID.randomUUID().toString();
 		characters.put(characterId, character);
+		characterDelegates.put(characterId, delegate);
 		return characterId;
 	}
 
@@ -130,7 +133,7 @@ public class McpSessionManager
 			throw new IllegalStateException("No sources loaded. Call load_sources first.");
 		}
 
-		UIDelegate delegate = new McpUIDelegate();
+		McpUIDelegate delegate = new McpUIDelegate();
 		CharacterFacade character = CharacterManager.openCharacter(file, delegate, currentDataSet);
 		if (character == null)
 		{
@@ -139,6 +142,7 @@ public class McpSessionManager
 
 		String characterId = UUID.randomUUID().toString();
 		characters.put(characterId, character);
+		characterDelegates.put(characterId, delegate);
 		return characterId;
 	}
 
@@ -149,7 +153,59 @@ public class McpSessionManager
 		{
 			throw new IllegalArgumentException("Character not found: " + characterId);
 		}
+		McpUIDelegate delegate = characterDelegates.get(characterId);
+		if (delegate != null)
+		{
+			ChooserFactory.setDelegate(delegate);
+		}
 		return character;
+	}
+
+	public pcgen.core.PlayerCharacter getPlayerCharacter(String characterId)
+	{
+		CharacterFacade facade = getCharacter(characterId);
+		pcgen.cdom.enumeration.CharID charId = facade.getCharID();
+		for (pcgen.core.PlayerCharacter pc : pcgen.core.Globals.getPCList())
+		{
+			if (pc.getCharID().equals(charId))
+			{
+				return pc;
+			}
+		}
+		throw new IllegalStateException("PlayerCharacter not found for CharID: " + charId);
+	}
+
+	public McpUIDelegate getDelegate(String characterId)
+	{
+		return characterDelegates.get(characterId);
+	}
+
+	/**
+	 * Returns all pending choices across all characters.
+	 */
+	public Map<String, PendingChoice> getAllPendingChoices()
+	{
+		Map<String, PendingChoice> all = new LinkedHashMap<>();
+		for (McpUIDelegate delegate : characterDelegates.values())
+		{
+			all.putAll(delegate.getPendingChoices());
+		}
+		return all;
+	}
+
+	/**
+	 * Resolve a pending choice by id, searching across all character delegates.
+	 */
+	public boolean resolveChoice(String choiceId, List<String> selections)
+	{
+		for (McpUIDelegate delegate : characterDelegates.values())
+		{
+			if (delegate.resolveChoice(choiceId, selections))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public synchronized boolean saveCharacter(String characterId)
@@ -161,6 +217,7 @@ public class McpSessionManager
 	public synchronized void closeCharacter(String characterId)
 	{
 		CharacterFacade character = characters.remove(characterId);
+		characterDelegates.remove(characterId);
 		if (character != null)
 		{
 			CharacterManager.removeCharacter(character);

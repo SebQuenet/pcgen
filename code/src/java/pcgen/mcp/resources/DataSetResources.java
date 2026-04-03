@@ -110,6 +110,48 @@ public final class DataSetResources
 			}
 		));
 
+		resources.add(new SyncResourceSpecification(
+			new Resource("pcgen://data/equipment", "Available Equipment",
+				"List of all equipment in the currently loaded data set", "application/json", null),
+			(exchange, request) -> {
+				DataSetFacade dataSet = session.getCurrentDataSet();
+				if (dataSet == null)
+				{
+					return textResult(request.uri(), "No sources loaded.");
+				}
+				var list = FacadeSerializer.serializeList(dataSet.getEquipment(), FacadeSerializer::serializeEquipment);
+				return jsonResult(request.uri(), list);
+			}
+		));
+
+		resources.add(new SyncResourceSpecification(
+			new Resource("pcgen://data/templates", "Available Templates",
+				"List of all character templates in the currently loaded data set", "application/json", null),
+			(exchange, request) -> {
+				DataSetFacade dataSet = session.getCurrentDataSet();
+				if (dataSet == null)
+				{
+					return textResult(request.uri(), "No sources loaded.");
+				}
+				var list = FacadeSerializer.serializeList(dataSet.getTemplates(), FacadeSerializer::serializeTemplate);
+				return jsonResult(request.uri(), list);
+			}
+		));
+
+		resources.add(new SyncResourceSpecification(
+			new Resource("pcgen://data/kits", "Available Kits",
+				"List of all character kits in the currently loaded data set", "application/json", null),
+			(exchange, request) -> {
+				DataSetFacade dataSet = session.getCurrentDataSet();
+				if (dataSet == null)
+				{
+					return textResult(request.uri(), "No sources loaded.");
+				}
+				var list = FacadeSerializer.serializeList(dataSet.getKits(), FacadeSerializer::serializeKit);
+				return jsonResult(request.uri(), list);
+			}
+		));
+
 		return resources;
 	}
 

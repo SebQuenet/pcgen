@@ -82,7 +82,7 @@ public class EquipmentBuilderFacadeImpl implements EquipmentBuilderFacade
 	 * @param character The character the equipment will be for.
 	 * @param delegate The handler for UI functions such as dialogs.
 	 */
-	EquipmentBuilderFacadeImpl(Equipment equip, PlayerCharacter character, UIDelegate delegate)
+	public EquipmentBuilderFacadeImpl(Equipment equip, PlayerCharacter character, UIDelegate delegate)
 	{
 		this.equip = equip;
 		this.character = character;
