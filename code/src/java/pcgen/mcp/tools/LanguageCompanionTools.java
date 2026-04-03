@@ -12,12 +12,16 @@ import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.core.Language;
+import pcgen.core.Race;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.CompanionSupportFacade;
 import pcgen.facade.core.CompanionStubFacade;
 import pcgen.facade.core.CompanionFacade;
 import pcgen.facade.core.LanguageChooserFacade;
 import pcgen.mcp.McpSessionManager;
+import pcgen.mcp.McpUIDelegate;
+import pcgen.system.CharacterManager;
+import pcgen.util.chooser.ChooserFactory;
 
 public final class LanguageCompanionTools
 {
@@ -142,6 +146,76 @@ public final class LanguageCompanionTools
 					}
 
 					return toResult(Map.of("companions", companions, "available", available, "maxCompanions", maxMap));
+				}
+				catch (Exception e) { return errorResult(e.getMessage()); }
+			}
+		);
+	}
+
+	public static SyncToolSpecification addCompanion(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("add_companion",
+				"Add an animal companion, familiar, or mount to a character by selecting from available companion races",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"companion_type": { "type": "string", "description": "Companion type (e.g., 'Animal Companion', 'Familiar')" },
+							"companion_race": { "type": "string", "description": "Race of the companion (from get_companions available list)" }
+						},
+						"required": ["character_id", "companion_type", "companion_race"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					String characterId = (String) args.get("character_id");
+					String companionType = (String) args.get("companion_type");
+					String companionRace = (String) args.get("companion_race");
+
+					CharacterFacade character = session.getCharacter(characterId);
+					CompanionSupportFacade support = character.getCompanionSupport();
+
+					// Find the matching stub
+					CompanionStubFacade matchedStub = null;
+					for (CompanionStubFacade stub : support.getAvailableCompanions())
+					{
+						Race race = (Race) stub.getRaceRef().get();
+						if (race != null && stub.getCompanionType().equals(companionType)
+							&& (race.getDisplayName().equalsIgnoreCase(companionRace)
+								|| race.getKeyName().equalsIgnoreCase(companionRace)))
+						{
+							matchedStub = stub;
+							break;
+						}
+					}
+					if (matchedStub == null)
+					{
+						return errorResult("No available companion found for type '" + companionType
+							+ "' with race '" + companionRace + "'");
+					}
+
+					// Create a new character for the companion
+					McpUIDelegate delegate = new McpUIDelegate();
+					ChooserFactory.setDelegate(delegate);
+					CharacterFacade newCompanion = CharacterManager.createNewCharacter(delegate, session.getCurrentDataSet());
+					if (newCompanion == null)
+					{
+						return errorResult("Failed to create companion character");
+					}
+
+					// Set the companion's race and link it to the master
+					Race selectedRace = (Race) matchedStub.getRaceRef().get();
+					newCompanion.setRace(selectedRace);
+					support.addCompanion(newCompanion, companionType);
+
+					return toResult(Map.of(
+						"status", "ok",
+						"companion_type", companionType,
+						"companion_race", selectedRace.getDisplayName()
+					));
 				}
 				catch (Exception e) { return errorResult(e.getMessage()); }
 			}

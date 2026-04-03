@@ -107,6 +107,7 @@ public final class McpServerBuilder
 				LanguageCompanionTools.getLanguages(session),
 				LanguageCompanionTools.removeLanguage(session),
 				LanguageCompanionTools.getCompanions(session),
+				LanguageCompanionTools.addCompanion(session),
 				// Biography & XP
 				BiographyTools.setBiography(session),
 				BiographyTools.getBiography(session),
