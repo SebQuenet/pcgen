@@ -894,7 +894,7 @@ public final class PCGVer2Creator
 
 			buffer.append('=').append(lvl + 1);
 
-			if (pcClass != null)
+			if (pcClass != null && lvl >= 0)
 			{
 				String aKey = charDisplay.getSubstitutionClassName(charDisplay.getActiveClassLevel(pcClass, lvl + 1));
 				if (aKey != null)

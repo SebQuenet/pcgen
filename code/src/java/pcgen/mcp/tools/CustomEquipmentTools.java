@@ -9,7 +9,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
-import io.modelcontextprotocol.spec.McpSchema.TextContent;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.cdom.enumeration.ObjectKey;
@@ -97,7 +96,7 @@ public final class CustomEquipmentTools
 	{
 		return new SyncToolSpecification(
 			new Tool("customize_equipment",
-				"Create a custom/magic equipment item by applying modifiers (enchantments) to a base item, then add it to inventory. Example: apply '+1 Enhancement' and 'Flaming' to a Longsword to create a '+1 Flaming Longsword'.",
+				"Create a custom/magic equipment item by applying modifiers (enchantments) to a base item. The item is added to the dataset and becomes available for purchase via buy_equipment. Example: customize 'Longsword' with '+1 Enhancement' then buy '+1 Longsword'.",
 				"""
 					{
 						"type": "object",
@@ -110,9 +109,7 @@ public final class CustomEquipmentTools
 								"description": "List of modifier keys to apply (from list_equipment_modifiers)"
 							},
 							"head": { "type": "string", "description": "Equipment head: PRIMARY or SECONDARY (default: PRIMARY)", "default": "PRIMARY" },
-							"custom_name": { "type": "string", "description": "Custom name override (optional)" },
-							"quantity": { "type": "integer", "description": "Quantity to add (default: 1)", "default": 1 },
-							"free": { "type": "boolean", "description": "Add for free (default: false)", "default": false }
+							"custom_name": { "type": "string", "description": "Custom name override (optional)" }
 						},
 						"required": ["character_id", "equipment_key", "modifier_keys"]
 					}
@@ -129,8 +126,6 @@ public final class CustomEquipmentTools
 					String headStr = args.containsKey("head") ? (String) args.get("head") : "PRIMARY";
 					EquipmentHead head = "SECONDARY".equalsIgnoreCase(headStr) ? EquipmentHead.SECONDARY : EquipmentHead.PRIMARY;
 					String customName = (String) args.get("custom_name");
-					int quantity = args.containsKey("quantity") ? ((Number) args.get("quantity")).intValue() : 1;
-					boolean free = args.containsKey("free") && Boolean.TRUE.equals(args.get("free"));
 					McpUIDelegate delegate = session.getDelegate(characterId);
 
 					Equipment baseEquip = findEquipment(character.getDataSet(), equipKey);
@@ -174,21 +169,18 @@ public final class CustomEquipmentTools
 					Equipment finalEquip = (Equipment) builder.getEquipment();
 
 					character.getDataSet().addEquipment(finalEquip);
-					EquipmentFacade sized = character.getEquipmentSizedForCharacter(finalEquip);
-					character.addPurchasedEquipment(sized, quantity, false, free);
 
 					InfoFactory info = character.getInfoFactory();
 					Map<String, Object> result = new LinkedHashMap<>();
 					result.put("status", "ok");
-					result.put("name", sized.toString());
+					result.put("name", finalEquip.toString());
 					result.put("appliedModifiers", applied);
 					if (!failed.isEmpty())
 					{
 						result.put("failedModifiers", failed);
 					}
-					result.put("cost", info.getCost(sized));
-					result.put("quantity", quantity);
-					result.put("funds", character.getFundsRef().get());
+					result.put("cost", info.getCost(finalEquip));
+					result.put("message", "Item created in dataset. Use buy_equipment with name '" + finalEquip.toString() + "' to purchase it.");
 					return toResult(result);
 				}
 				catch (Exception e)
@@ -232,16 +224,16 @@ public final class CustomEquipmentTools
 		try
 		{
 			String json = MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data);
-			return new CallToolResult(List.of(new TextContent(json)), false);
+			return new CallToolResult(json, false);
 		}
 		catch (JsonProcessingException e)
 		{
-			return new CallToolResult(List.of(new TextContent(data.toString())), false);
+			return new CallToolResult(data.toString(), false);
 		}
 	}
 
 	private static CallToolResult errorResult(String message)
 	{
-		return new CallToolResult(List.of(new TextContent(message)), true);
+		return new CallToolResult(message, true);
 	}
 }

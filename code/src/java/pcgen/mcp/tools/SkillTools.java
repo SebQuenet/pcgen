@@ -9,7 +9,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
-import io.modelcontextprotocol.spec.McpSchema.TextContent;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.core.Skill;
@@ -181,16 +180,16 @@ public final class SkillTools
 		try
 		{
 			String json = MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data);
-			return new CallToolResult(List.of(new TextContent(json)), false);
+			return new CallToolResult(json, false);
 		}
 		catch (JsonProcessingException e)
 		{
-			return new CallToolResult(List.of(new TextContent(data.toString())), false);
+			return new CallToolResult(data.toString(), false);
 		}
 	}
 
 	private static CallToolResult errorResult(String message)
 	{
-		return new CallToolResult(List.of(new TextContent(message)), true);
+		return new CallToolResult(message, true);
 	}
 }

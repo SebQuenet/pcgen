@@ -9,7 +9,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
-import io.modelcontextprotocol.spec.McpSchema.TextContent;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.facade.core.CharacterFacade;
@@ -185,7 +184,7 @@ public final class EquipmentSetTools
 						return errorResult("Item not found in inventory: " + equipKey);
 					}
 
-					EquipNode targetNode = findSlot(eqSet, slotName);
+					EquipNode targetNode = findSlot(eqSet, slotName, equipToWear);
 					if (targetNode == null)
 					{
 						return errorResult("Slot not found: " + slotName + ". Use get_equipped_items to see available slots.");
@@ -270,24 +269,37 @@ public final class EquipmentSetTools
 		return null;
 	}
 
-	private static EquipNode findSlot(EquipmentSetFacade eqSet, String slotName)
+	private static EquipNode findSlot(EquipmentSetFacade eqSet, String slotName, EquipmentFacade equipment)
 	{
+		// Exact match — prefer equippable slots
+		EquipNode exactMatch = null;
 		for (EquipNode node : eqSet.getNodes())
 		{
 			if (node.toString().equalsIgnoreCase(slotName))
 			{
-				return node;
+				if (equipment != null && eqSet.canEquip(node, equipment))
+				{
+					return node;
+				}
+				if (exactMatch == null) exactMatch = node;
 			}
 		}
-		// Partial match
+		if (exactMatch != null) return exactMatch;
+
+		// Partial match — prefer equippable slots
+		EquipNode partialMatch = null;
 		for (EquipNode node : eqSet.getNodes())
 		{
 			if (node.toString().toLowerCase().contains(slotName.toLowerCase()))
 			{
-				return node;
+				if (equipment != null && eqSet.canEquip(node, equipment))
+				{
+					return node;
+				}
+				if (partialMatch == null) partialMatch = node;
 			}
 		}
-		return null;
+		return partialMatch;
 	}
 
 	private static EquipNode findEquippedNode(EquipmentSetFacade eqSet, String slotOrItemName)
@@ -312,16 +324,16 @@ public final class EquipmentSetTools
 		try
 		{
 			String json = MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data);
-			return new CallToolResult(List.of(new TextContent(json)), false);
+			return new CallToolResult(json, false);
 		}
 		catch (JsonProcessingException e)
 		{
-			return new CallToolResult(List.of(new TextContent(data.toString())), false);
+			return new CallToolResult(data.toString(), false);
 		}
 	}
 
 	private static CallToolResult errorResult(String message)
 	{
-		return new CallToolResult(List.of(new TextContent(message)), true);
+		return new CallToolResult(message, true);
 	}
 }

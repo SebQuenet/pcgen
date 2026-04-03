@@ -9,7 +9,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
-import io.modelcontextprotocol.spec.McpSchema.TextContent;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.facade.core.CharacterFacade;
@@ -18,6 +17,7 @@ import pcgen.facade.core.EquipmentFacade;
 import pcgen.facade.core.EquipmentListFacade;
 import pcgen.facade.core.InfoFactory;
 import pcgen.mcp.McpSessionManager;
+import pcgen.mcp.McpUIDelegate;
 
 public final class EquipmentTools
 {
@@ -31,7 +31,7 @@ public final class EquipmentTools
 	{
 		return new SyncToolSpecification(
 			new Tool("buy_equipment",
-				"Buy/add equipment to a character's inventory",
+				"Buy/add a BASE equipment item to inventory. For magic/masterwork items, buy the base item first then use customize_equipment to add enchantments. Example: buy 'Longsword' then customize with '+1 Enhancement'.",
 				"""
 					{
 						"type": "object",
@@ -68,14 +68,34 @@ public final class EquipmentTools
 					}
 
 					EquipmentFacade sized = character.getEquipmentSizedForCharacter(found);
+					java.math.BigDecimal fundsBefore = character.getFundsRef().get();
+
+					McpUIDelegate delegate = session.getDelegate((String) args.get("character_id"));
+					if (delegate != null) { delegate.consumeLastError(); delegate.consumeLastInfo(); }
+
 					character.addPurchasedEquipment(sized, quantity, false, free);
 
-					InfoFactory info = character.getInfoFactory();
+					// Check for errors reported by the delegate
+					if (delegate != null)
+					{
+						String error = delegate.consumeLastError();
+						if (error != null)
+						{
+							return errorResult(error);
+						}
+						String info = delegate.consumeLastInfo();
+						if (info != null)
+						{
+							return errorResult(info);
+						}
+					}
+
+					InfoFactory infoFactory = character.getInfoFactory();
 					Map<String, Object> result = new LinkedHashMap<>();
 					result.put("status", "ok");
 					result.put("equipment", sized.toString());
 					result.put("quantity", quantity);
-					result.put("cost", info.getCost(sized));
+					result.put("cost", infoFactory.getCost(sized));
 					result.put("funds", character.getFundsRef().get());
 					return toResult(result);
 				}
@@ -223,16 +243,16 @@ public final class EquipmentTools
 		try
 		{
 			String json = MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data);
-			return new CallToolResult(List.of(new TextContent(json)), false);
+			return new CallToolResult(json, false);
 		}
 		catch (JsonProcessingException e)
 		{
-			return new CallToolResult(List.of(new TextContent(data.toString())), false);
+			return new CallToolResult(data.toString(), false);
 		}
 	}
 
 	private static CallToolResult errorResult(String message)
 	{
-		return new CallToolResult(List.of(new TextContent(message)), true);
+		return new CallToolResult(message, true);
 	}
 }

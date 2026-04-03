@@ -32,6 +32,8 @@ public class McpUIDelegate extends ConsoleUIDelegate
 	private volatile List<String> preSelectedChoices = null;
 	private volatile boolean captureMode = false;
 	private volatile List<String> capturedOptions = null;
+	private volatile String lastInfoMessage = null;
+	private volatile String lastErrorMessage = null;
 
 	public void setAutoChoose(boolean auto)
 	{
@@ -83,6 +85,34 @@ public class McpUIDelegate extends ConsoleUIDelegate
 	public List<String> getCapturedOptions()
 	{
 		return capturedOptions;
+	}
+
+	public String consumeLastError()
+	{
+		String msg = lastErrorMessage;
+		lastErrorMessage = null;
+		return msg;
+	}
+
+	public String consumeLastInfo()
+	{
+		String msg = lastInfoMessage;
+		lastInfoMessage = null;
+		return msg;
+	}
+
+	@Override
+	public void showErrorMessage(String title, String message)
+	{
+		lastErrorMessage = message;
+		super.showErrorMessage(title, message);
+	}
+
+	@Override
+	public void showInfoMessage(String title, String message)
+	{
+		lastInfoMessage = message;
+		super.showInfoMessage(title, message);
 	}
 
 	public PendingChoice getLatestPendingChoice()

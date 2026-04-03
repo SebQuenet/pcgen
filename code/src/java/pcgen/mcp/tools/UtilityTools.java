@@ -9,7 +9,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
-import io.modelcontextprotocol.spec.McpSchema.TextContent;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.facade.core.CharacterFacade;
@@ -239,13 +238,13 @@ public final class UtilityTools
 	{
 		try
 		{
-			return new CallToolResult(List.of(new TextContent(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data))), false);
+			return new CallToolResult(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data), false);
 		}
-		catch (JsonProcessingException e) { return errorResult("JSON error: " + e.getMessage()); }
+		catch (JsonProcessingException e) { return new CallToolResult(data.toString(), false); }
 	}
 
 	private static CallToolResult errorResult(String message)
 	{
-		return new CallToolResult(List.of(new TextContent(message)), true);
+		return new CallToolResult(message, true);
 	}
 }
