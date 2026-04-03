@@ -14,12 +14,17 @@ import pcgen.mcp.tools.BiographyTools;
 import pcgen.mcp.tools.CharacterBuildTools;
 import pcgen.mcp.tools.CharacterLifecycleTools;
 import pcgen.mcp.tools.ChoiceTools;
-import pcgen.mcp.tools.DeityDomainTools;
 import pcgen.mcp.tools.CustomEquipmentTools;
+import pcgen.mcp.tools.DeityDomainTools;
+import pcgen.mcp.tools.EquipmentSetTools;
 import pcgen.mcp.tools.EquipmentTools;
 import pcgen.mcp.tools.ExportTools;
+import pcgen.mcp.tools.LanguageCompanionTools;
 import pcgen.mcp.tools.SkillTools;
 import pcgen.mcp.tools.SourceTools;
+import pcgen.mcp.tools.SpellTools;
+import pcgen.mcp.tools.TemplateTools;
+import pcgen.mcp.tools.UtilityTools;
 
 public final class McpServerBuilder
 {
@@ -37,8 +42,8 @@ public final class McpServerBuilder
 				.tools(true)
 				.resources(false, false)
 				.build())
-			// Source management
 			.tools(
+				// Source management
 				SourceTools.listGameModes(session),
 				SourceTools.listSources(session),
 				SourceTools.loadSources(session),
@@ -62,24 +67,58 @@ public final class McpServerBuilder
 				// Skills
 				SkillTools.investSkillPoints(session),
 				SkillTools.getSkillSummary(session),
+				// Spells
+				SpellTools.getAvailableSpells(session),
+				SpellTools.getKnownSpells(session),
+				SpellTools.addKnownSpell(session),
+				SpellTools.removeKnownSpell(session),
+				SpellTools.getPreparedSpells(session),
+				SpellTools.addPreparedSpell(session),
+				SpellTools.removePreparedSpell(session),
+				SpellTools.getSpellbooks(session),
+				SpellTools.addToSpellbook(session),
 				// Deity & Domains
 				DeityDomainTools.setDeity(session),
 				DeityDomainTools.addDomain(session),
 				DeityDomainTools.removeDomain(session),
-				// Equipment
+				// Equipment - Purchase
 				EquipmentTools.buyEquipment(session),
 				EquipmentTools.sellEquipment(session),
 				EquipmentTools.getInventory(session),
 				EquipmentTools.setFunds(session),
-				// Custom/Magic Equipment
+				// Equipment - Custom/Magic
 				CustomEquipmentTools.listEquipmentModifiers(session),
 				CustomEquipmentTools.customizeEquipment(session),
+				// Equipment - Wearing/Equipping
+				EquipmentSetTools.listEquipmentSets(session),
+				EquipmentSetTools.createEquipmentSet(session),
+				EquipmentSetTools.getEquippedItems(session),
+				EquipmentSetTools.equipItem(session),
+				EquipmentSetTools.unequipItem(session),
+				// Templates & Temp Bonuses & Kits
+				TemplateTools.addTemplate(session),
+				TemplateTools.removeTemplate(session),
+				TemplateTools.getTemplates(session),
+				TemplateTools.addTempBonus(session),
+				TemplateTools.removeTempBonus(session),
+				TemplateTools.listTempBonuses(session),
+				TemplateTools.addKit(session),
+				// Languages & Companions
+				LanguageCompanionTools.getLanguages(session),
+				LanguageCompanionTools.removeLanguage(session),
+				LanguageCompanionTools.getCompanions(session),
 				// Biography & XP
 				BiographyTools.setBiography(session),
 				BiographyTools.getBiography(session),
 				BiographyTools.setXP(session),
 				// Export
 				ExportTools.exportCharacter(session),
+				// Utilities
+				UtilityTools.getTodoList(session),
+				UtilityTools.isQualifiedFor(session),
+				UtilityTools.rollStats(session),
+				UtilityTools.isDirty(session),
+				UtilityTools.getCharacterDetails(session),
 				// Chooser interaction
 				ChoiceTools.getPendingChoices(session),
 				ChoiceTools.resolveChoice(session)
