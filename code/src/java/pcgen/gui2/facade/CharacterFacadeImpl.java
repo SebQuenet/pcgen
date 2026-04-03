@@ -720,7 +720,14 @@ public class CharacterFacadeImpl
 			Logging.log(Logging.INFO,
 				charDisplay.getName() + ": Adding level " + (totalLevels + 1) //$NON-NLS-1$
 					+ " in class " + pcClass); //$NON-NLS-1$
-			theCharacter.incrementClassLevel(1, pcClass);
+			if (delegate instanceof pcgen.system.ConsoleUIDelegate)
+			{
+				theCharacter.incrementClassLevel(1, pcClass, false, true);
+			}
+			else
+			{
+				theCharacter.incrementClassLevel(1, pcClass);
+			}
 			if (totalLevels == charDisplay.getTotalLevels())
 			{
 				// The level change was rejected - no further processing needed.
