@@ -1,0 +1,27 @@
+SOURCELONG:Celmae Campaign Setting	SOURCESHORT:CEL	SOURCEDATE:2026-03
+
+###Block: New Feats for Celmae Campaign
+
+# Empalement (Combat)
+# Conditions: Str 15
+Empalement	TYPE:Combat	PRESTAT:1,STR=15	DESC:When you deal maximum damage with a piercing weapon, you may lodge it in the target as a combat maneuver. While impaled, the target takes 1 bleed damage per round, suffers -1 on attack and damage rolls, -2 on skill checks, and must concentrate to cast spells. You may hold the weapon (dealing normal damage as an attack action; target needs a CMB check as a standard action to remove it) or release it (standard action to remove). Removing deals normal weapon damage.	SOURCEPAGE:Celmae
+
+# Lance et Bouclier (Combat)
+# Conditions: BAB +1
+Lance et Bouclier	TYPE:Combat	PREATT:1	DESC:You can wield two-handed spears (corseque, lance, pike, jousting lance) in one hand. You do not gain the 1.5x Strength bonus for two-handed weapons. If the weapon has reach, you can fight in close quarters with a -2 penalty on attack rolls.	BONUS:WIELDCATEGORY|Longspear,Spear|-1	SOURCEPAGE:Celmae
+
+# Coup de Bouclier Opportuniste de l'Udaeus (Combat, Critical)
+# Conditions: BAB +9, Critical Focus, Improved Shield Bash, Shield Proficiency
+Coup de Bouclier Opportuniste de l'Udaeus	TYPE:Combat.Critical	PREATT:9	PREABILITY:1,CATEGORY=FEAT,Critical Focus	PREABILITY:1,CATEGORY=FEAT,Improved Shield Bash	PREABILITY:1,CATEGORY=FEAT,Shield Proficiency	DESC:When wielding a shield and a one-handed or light weapon, upon confirming a critical hit, you may make a shield bash against the same target as a swift action using your highest attack bonus.	SOURCEPAGE:Celmae
+
+# Coup de Bouclier Réactif (Combat)
+# Conditions: Wis 13, Improved Shield Bash, BAB +1, Shield Proficiency
+Coup de Bouclier Réactif	TYPE:Combat	PRESTAT:1,WIS=13	PREATT:1	PREABILITY:1,CATEGORY=FEAT,Improved Shield Bash	PREABILITY:1,CATEGORY=FEAT,Shield Proficiency	DESC:You gain additional attacks of opportunity per round equal to your Wisdom modifier (minimum +1). These can only be used for shield bash attacks. Stacks with Combat Reflexes.	SOURCEPAGE:Celmae
+
+# Manoeuvre Blindée (Combat)
+# Conditions: BAB +1, Str 13, Shield Proficiency
+Manoeuvre Blindée	TYPE:Combat	PREATT:1	PRESTAT:1,STR=13	PREABILITY:1,CATEGORY=FEAT,Shield Proficiency	DESC:When wielding a shield and a one-handed or light weapon, you gain +2 on bull rush, disarm, overrun, and trip combat maneuver checks.	SOURCEPAGE:Celmae
+
+# Pouvoir Rapide de Saint Thero
+# Conditions: Race Udaeus, a spell-like ability usable 2/day
+Pouvoir Rapide de Saint Thero	PRERACE:1,Udaeus	PREMULT:1,[PREVARGTEQ:ParangonTrueStrikeUses,2],[PREVARGTEQ:ParangonBarkskinUses,2],[PREVARGTEQ:ParangonHasteUses,2],[PREVARGTEQ:ParangonStoneskinUses,2],[PREVARGTEQ:ParangonAspectUses,2],[PREVARGTEQ:ParangonBattlemindUses,2]	DESC:Similar to Quicken Spell-Like Ability: you can use one of your spell-like abilities as a swift action 3/day. Also grants one extra daily use of an Udaeus spell-like ability normally usable 2/day. Choose which SLA gains the extra use.	BONUS:ABILITYPOOL|Pouvoir Rapide SLA Choice|1	SOURCEPAGE:Celmae

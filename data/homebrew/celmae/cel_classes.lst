@@ -1,0 +1,53 @@
+SOURCELONG:Celmae Campaign Setting	SOURCESHORT:CEL	SOURCEDATE:2026-03
+
+# Class Name	Hit Dice	Type		Max Level	Source Page		Combat bonus (Full BAB)																	Save bonus (Fort Good, Ref Poor, Will Poor)																																	Modify VAR													Role		FACT
+CLASS:Parangon	HD:8	TYPE:PC	MAXLEVEL:20	SOURCEPAGE:Celmae	BONUS:COMBAT|BASEAB|classlevel("APPLIEDAS=NONEPIC")|TYPE=Base.REPLACE|PREVAREQ:UseAlternateBABProgression,0	BONUS:SAVE|BASE.Fortitude|classlevel("APPLIEDAS=NONEPIC")/2+2|PREVAREQ:UseAlternateSaveProgression,0	BONUS:SAVE|BASE.Reflex,BASE.Will|classlevel("APPLIEDAS=NONEPIC")/3|PREVAREQ:UseAlternateSaveProgression,0	BONUS:VAR|ClassBABFull|classlevel("APPLIEDAS=NONEPIC")|PREVAREQ:UseFractionalBAB,1	BONUS:VAR|ClassSaveGood_Fortitude|classlevel("APPLIEDAS=NONEPIC")|PREVAREQ:UseFractionalSave,1	BONUS:VAR|ClassSavePoor_Reflex|classlevel("APPLIEDAS=NONEPIC")|PREVAREQ:UseFractionalSave,1	BONUS:VAR|ClassSavePoor_Will|classlevel("APPLIEDAS=NONEPIC")|PREVAREQ:UseFractionalSave,1	DEFINE:ParangonLVL|0	BONUS:VAR|ParangonLVL|CL	ROLE:Combat	FACT:ClassType|PC	FACT:Abb|Par
+# Class Name	Race Prerequisite
+CLASS:Parangon	PRERACE:1,Udaeus
+# Class Name	Skill Pts/Lvl	Class Skills
+CLASS:Parangon	STARTSKILLPTS:2	CSKILL:Climb|TYPE=Craft|Handle Animal|Intimidate|Knowledge (Engineering)|Knowledge (History)|TYPE=Profession|Ride|Survival|Swim
+
+###Block: Proficiencies (already granted by racial trait, but reinforced here)
+1	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Weapon and Armor Proficiency
+
+###Block: Level progression
+# Level 1: Infuse Arms/Armor +2, Dragon Enemy +2, True Strike 1/day
+1	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Infuse Arms and Armor|Parangon ~ Dragon Enemy|Parangon ~ True Strike
+# Level 2: Energy Resistance 10
+2	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Energy Resistance	BONUS:VAR|ParangonEnergyResistance|5
+# Level 3: Barkskin 1/day, Fast Healing 1, Energy Resistance 20
+3	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Barkskin|Parangon ~ Fast Healing	BONUS:VAR|ParangonInfuseBonus|2	BONUS:VAR|ParangonEnergyResistance|10
+# Level 4: Endurance (bonus feat), Mythic Tier 1
+4	ABILITY:FEAT|AUTOMATIC|Endurance	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Mythic Tier	BONUS:VAR|ParangonInfuseBonus|2	BONUS:VAR|ParangonEnergyResistance|10
+# Level 5: Boneskin +2, Dragon Enemy +4, Haste 1/day, True Strike 2/day
+5	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Haste|Parangon ~ Boneskin	BONUS:VAR|ParangonBoneskin|1	BONUS:VAR|ParangonDragonEnemy|2	BONUS:VAR|ParangonTrueStrikeUses|1
+# Level 6: Spear & Shield Style
+6	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Spear and Shield Style	BONUS:ABILITYPOOL|Parangon Combat Style Feat|1
+# Level 7: Barkskin 2/day, Fast Healing 2, Stoneskin 1/day
+7	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Stoneskin	BONUS:VAR|ParangonFastHealing|1	BONUS:VAR|ParangonBarkskinUses|1
+# Level 8: Iron Will (bonus feat)
+8	ABILITY:FEAT|AUTOMATIC|Iron Will
+# Level 9: Evasion, Haste 2/day, Aspect of Saint Thero 1/day
+9	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Evasion|Parangon ~ Aspect of Saint Thero	BONUS:VAR|ParangonHasteUses|1
+# Level 10: Combat Style Feat, Dragon Enemy +6, Shrug It Off
+10	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Shrug It Off	BONUS:ABILITYPOOL|Parangon Advanced Combat Style Feat|1	BONUS:VAR|ParangonDragonEnemy|2
+# Level 11: Battlemind Link 1/day, Fast Healing 3, Stoneskin 2/day
+11	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Battlemind Link	BONUS:VAR|ParangonFastHealing|1	BONUS:VAR|ParangonStoneskinUses|1
+# Level 12: Boneskin +3
+12	BONUS:VAR|ParangonBoneskin|1
+# Level 13: Aspect of Saint Thero 2/day
+13	BONUS:VAR|ParangonAspectUses|1
+# Level 14: Combat Style Feat, Mythic Tier 2
+14	BONUS:ABILITYPOOL|Parangon Advanced Combat Style Feat|1	BONUS:VAR|ParangonMythicTier|1
+# Level 15: Battlemind Link 2/day, Dragon Enemy +8, Fast Healing 4
+15	BONUS:VAR|ParangonBattlemindUses|1	BONUS:VAR|ParangonDragonEnemy|2	BONUS:VAR|ParangonFastHealing|1
+# Level 16: Boneskin +4, Improved Evasion
+16	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Improved Evasion	BONUS:VAR|ParangonBoneskin|1
+# Level 17: Energy Immunity (fire)
+17	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Energy Immunity
+# Level 18: Combat Style Feat
+18	BONUS:ABILITYPOOL|Parangon Advanced Combat Style Feat|1
+# Level 19: Fast Healing 5
+19	BONUS:VAR|ParangonFastHealing|1
+# Level 20: Boneskin +5, Dragon Enemy +10, Mythic Battlemind Link, Mythic Tier 3
+20	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Mythic Battlemind Link	BONUS:VAR|ParangonBoneskin|1	BONUS:VAR|ParangonDragonEnemy|2	BONUS:VAR|ParangonMythicTier|1

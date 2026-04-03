@@ -1,0 +1,109 @@
+SOURCELONG:Celmae Campaign Setting	SOURCESHORT:CEL	SOURCEDATE:2026-03
+
+###Block: Udaeus Racial Traits (Internal grouping ability)
+
+Racial Traits ~ Udaeus	KEY:Racial Traits ~ Udaeus	CATEGORY:Internal	TYPE:Racial Traits	ABILITY:Special Ability|AUTOMATIC|Udaeus ~ Boneskin|Udaeus ~ Energy Resistance|Udaeus ~ Low-Light Vision|Udaeus ~ Armor and Weapon Training|Udaeus ~ Fighter Training|Udaeus ~ Infuse Arms and Armor|Udaeus ~ Leadership Bonus|Udaeus ~ Polymorph Weakness|Udaeus ~ Easy Retraining|Udaeus ~ Fast Progression	AUTO:WEAPONPROF|TYPE=Simple|TYPE=Martial	AUTO:SHIELDPROF|Buckler|Heavy Shield|Light Shield|Tower Shield	ABILITY:FEAT|AUTOMATIC|Armor Proficiency (Light)|Armor Proficiency (Medium)|Armor Proficiency (Heavy)|Shield Proficiency	BONUS:ABILITYPOOL|Udaeus Energy Type|1
+
+###Block: Udaeus Racial Traits (Individual)
+
+Udaeus ~ Boneskin	KEY:Udaeus ~ Boneskin	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DESC:Thick, resistant skin grants +1 natural armor bonus to AC (already included in race).	SOURCEPAGE:Celmae
+
+Udaeus ~ Energy Resistance	KEY:Udaeus ~ Energy Resistance	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DEFINE:UdaeusEnergyResist|5	DESC:Energy resistance %1 (choose type from Udaeus Energy Type). Can be changed through a day-long ritual.|UdaeusEnergyResist	BONUS:VAR|UdaeusEnergyResist|ParangonEnergyResistance	SOURCEPAGE:Celmae
+
+###Block: Udaeus Energy Type Choice
+
+Udaeus Energy Type ~ Acid	KEY:Udaeus Energy Type ~ Acid	CATEGORY:Special Ability	TYPE:UdaeusEnergyTypeChoice.SpecialQuality	DESC:Your energy resistance of %1 applies to acid.|UdaeusEnergyResist	SOURCEPAGE:Celmae
+
+Udaeus Energy Type ~ Cold	KEY:Udaeus Energy Type ~ Cold	CATEGORY:Special Ability	TYPE:UdaeusEnergyTypeChoice.SpecialQuality	DESC:Your energy resistance of %1 applies to cold (default).|UdaeusEnergyResist	SOURCEPAGE:Celmae
+
+Udaeus Energy Type ~ Electricity	KEY:Udaeus Energy Type ~ Electricity	CATEGORY:Special Ability	TYPE:UdaeusEnergyTypeChoice.SpecialQuality	DESC:Your energy resistance of %1 applies to electricity.|UdaeusEnergyResist	SOURCEPAGE:Celmae
+
+Udaeus Energy Type ~ Fire	KEY:Udaeus Energy Type ~ Fire	CATEGORY:Special Ability	TYPE:UdaeusEnergyTypeChoice.SpecialQuality	DESC:Your energy resistance of %1 applies to fire.|UdaeusEnergyResist	SOURCEPAGE:Celmae
+
+Udaeus ~ Low-Light Vision	KEY:Udaeus ~ Low-Light Vision	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DESC:Udaeus can see twice as far as humans in conditions of dim light.	SOURCEPAGE:Celmae
+
+Udaeus ~ Armor and Weapon Training	KEY:Udaeus ~ Armor and Weapon Training	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DESC:Udaeus are proficient with all simple and martial weapons, all armor (light, medium, and heavy), and all shields including tower shields.	SOURCEPAGE:Celmae
+
+Udaeus ~ Fighter Training	KEY:Udaeus ~ Fighter Training	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DESC:Udaeus count their racial Hit Dice as fighter levels for the purpose of qualifying for feats.	DEFINE:FighterLVL|0	BONUS:VAR|FighterLVL|TL	DEFINE:FighterWeaponQualifyLVL|0	BONUS:VAR|FighterWeaponQualifyLVL|TL|TYPE=Class	ABILITY:Special Ability|AUTOMATIC|Fighter Level Advanced Feat Tracker|Weapon Specialization Qualify|Greater Weapon Focus Qualify|Greater Weapon Specialization Qualify	SOURCEPAGE:Celmae
+
+Udaeus ~ Infuse Arms and Armor	KEY:Udaeus ~ Infuse Arms and Armor	CATEGORY:Special Ability	TYPE:SpecialQuality.Supernatural.Udaeus Racial Trait	DESC:Udaeus can improve equipment they wield or wear. Improvised weapons become normal, normal weapons become masterwork, masterwork weapons gain a +1 enhancement bonus (capped at +5 total), and fragile items lose the fragile quality.	BONUS:COMBAT|TOHIT,DAMAGE.Melee,DAMAGE.Ranged|1|TYPE=Infuse	SOURCEPAGE:Celmae
+
+Udaeus ~ Leadership Bonus	KEY:Udaeus ~ Leadership Bonus	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DESC:Udaeus gain a +4 racial bonus to Charisma for the purpose of calculating their Leadership score.	SOURCEPAGE:Celmae
+
+Udaeus ~ Polymorph Weakness	KEY:Udaeus ~ Polymorph Weakness	CATEGORY:Special Ability	TYPE:SpecialQuality.Udaeus Racial Trait	DESC:Udaeus cannot withstand polymorph effects. Whenever an Udaeus is polymorphed (willingly or not), his mind dissipates into the new form and he becomes a new creature. This curse can be lifted by Remove Curse, but only if the Udaeus has returned to his humanoid form.	SOURCEPAGE:Celmae
+
+Udaeus ~ Easy Retraining	KEY:Udaeus ~ Easy Retraining	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DESC:An Udaeus can retrain without a teacher and at no cost (without a teacher, the time is still doubled). Hit point retraining requires rolling the die and accepting the result (even on a 1), and can retrain up to half the die +2. Parangon class levels cannot be retrained. Mythic path retraining takes ten times as long and requires a teacher of the desired mythic tier.	SOURCEPAGE:Celmae
+
+Udaeus ~ Fast Progression	KEY:Udaeus ~ Fast Progression	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Udaeus Racial Trait	DESC:Udaeus advance on the Fast experience point table, while other races use the Medium table.	SOURCEPAGE:Celmae
+
+###Block: Parangon Class Features
+
+Parangon ~ Weapon and Armor Proficiency	KEY:Parangon ~ Weapon and Armor Proficiency	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality	DESC:A Parangon is proficient with all simple and martial weapons, all armor (light, medium, and heavy), and all shields including tower shields.	SOURCEPAGE:Celmae
+
+# Infuse Arms and Armor (class upgrade)
+Parangon ~ Infuse Arms and Armor	KEY:Parangon ~ Infuse Arms and Armor	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Supernatural	DEFINE:ParangonInfuseBonus|2	DESC:The Parangon can enhance equipment wielded or worn. Magical weapons and armor gain up to +%1 enhancement bonus. Improvised weapons become normal, normal become masterwork.|ParangonInfuseBonus	SOURCEPAGE:Celmae
+
+# Dragon Enemy
+Parangon ~ Dragon Enemy	KEY:Parangon ~ Dragon Enemy	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DEFINE:ParangonDragonEnemy|2	DESC:The Parangon has an ancestral hatred of dragons. +%1 racial bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks against dragons, and +%1 racial bonus on attack and damage rolls against dragons. Can make Knowledge checks untrained to identify dragons.|ParangonDragonEnemy	SOURCEPAGE:Celmae
+
+# True Strike (SLA)
+Parangon ~ True Strike	KEY:Parangon ~ True Strike	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpellLike	DEFINE:ParangonTrueStrikeUses|1	DESC:The Parangon can use True Strike as a spell-like ability (CL = character level) %1/day.|ParangonTrueStrikeUses	SPELLS:Innate|TIMES=ParangonTrueStrikeUses|CASTERLEVEL=TL|True Strike	SOURCEPAGE:Celmae
+
+# Energy Resistance (scaling)
+Parangon ~ Energy Resistance	KEY:Parangon ~ Energy Resistance	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DEFINE:ParangonEnergyResistance|0	DESC:The Parangon's energy resistance increases (see racial trait for current value).	SOURCEPAGE:Celmae
+
+# Barkskin (SLA)
+Parangon ~ Barkskin	KEY:Parangon ~ Barkskin	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpellLike	DEFINE:ParangonBarkskinUses|1	DESC:The Parangon can use Barkskin as a spell-like ability (CL = class level) %1/day.|ParangonBarkskinUses	SPELLS:Innate|TIMES=ParangonBarkskinUses|CASTERLEVEL=ParangonLVL|Barkskin	SOURCEPAGE:Celmae
+
+# Fast Healing
+Parangon ~ Fast Healing	KEY:Parangon ~ Fast Healing	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DEFINE:ParangonFastHealing|1	DESC:The Parangon regains %1 hit point(s) per round. This fast healing functions as long as the Parangon is alive.|ParangonFastHealing	SOURCEPAGE:Celmae
+
+# Mythic Tier
+Parangon ~ Mythic Tier	KEY:Parangon ~ Mythic Tier	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DEFINE:ParangonMythicTier|1	DESC:The Parangon reaches mythic tier %1. He gains access to mythic powers and mythic surge.|ParangonMythicTier	SOURCEPAGE:Celmae
+
+# Haste (SLA)
+Parangon ~ Haste	KEY:Parangon ~ Haste	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpellLike	DEFINE:ParangonHasteUses|1	DESC:The Parangon can use Haste as a spell-like ability (CL = character level) %1/day.|ParangonHasteUses	SPELLS:Innate|TIMES=ParangonHasteUses|CASTERLEVEL=TL|Haste	SOURCEPAGE:Celmae
+
+# Boneskin (scaling natural armor from class)
+Parangon ~ Boneskin	KEY:Parangon ~ Boneskin	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DEFINE:ParangonBoneskin|0	BONUS:VAR|AC_Natural_Armor|ParangonBoneskin|TYPE=Racial	DESC:The Parangon's natural armor bonus increases by +%1 from class progression (total with racial base included in race).|ParangonBoneskin	SOURCEPAGE:Celmae
+
+# Spear and Shield Style
+Parangon ~ Spear and Shield Style	KEY:Parangon ~ Spear and Shield Style	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DESC:The Parangon masters the traditional Udaeus lance-and-tower-shield combat style. He gains Two-Weapon Fighting when wielding a spear and a shield, and can use his shield to make additional attacks.	SOURCEPAGE:Celmae
+
+# Stoneskin (SLA)
+Parangon ~ Stoneskin	KEY:Parangon ~ Stoneskin	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpellLike	DEFINE:ParangonStoneskinUses|1	DESC:The Parangon can use Stoneskin as a spell-like ability (CL = character level) %1/day.|ParangonStoneskinUses	SPELLS:Innate|TIMES=ParangonStoneskinUses|CASTERLEVEL=TL|Stoneskin	SOURCEPAGE:Celmae
+
+# Evasion
+Parangon ~ Evasion	KEY:Parangon ~ Evasion	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary.Evasion	DESC:If the Parangon succeeds on a Reflex save against an attack that normally deals half damage on a successful save, he takes no damage instead. This ability only functions if the Parangon is wielding a shield (with any armor) or wearing light armor at most (without a shield).	BONUS:VAR|SaveBonus_Reflex_Evasion|1	SOURCEPAGE:Celmae
+
+# Aspect of Saint Thero (SLA)
+Parangon ~ Aspect of Saint Thero	KEY:Parangon ~ Aspect of Saint Thero	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpellLike	DEFINE:ParangonAspectUses|1	DESC:The Parangon can invoke the Aspect of Saint Thero %1/day (CL = character level). He gains low-light vision, darkvision 60 ft., acid and cold resistance 10, DR 5/evil, fly speed 30 ft., and Good-aligned weapons for 1 min./level.|ParangonAspectUses	SPELLS:Innate|TIMES=ParangonAspectUses|CASTERLEVEL=TL|Aspect of Saint Thero	SOURCEPAGE:Celmae
+
+# Shrug It Off
+Parangon ~ Shrug It Off	KEY:Parangon ~ Shrug It Off	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DESC:Once per day as a swift action, the Parangon can recover 1d4+1 points of ability damage to one ability score, in addition to normal rest recovery.	SOURCEPAGE:Celmae
+
+# Battlemind Link (SLA)
+Parangon ~ Battlemind Link	KEY:Parangon ~ Battlemind Link	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpellLike	DEFINE:ParangonBattlemindUses|1	DESC:The Parangon can use Battlemind Link %1/day (CL = character level) for 1 min./level. Linked ally shares best initiative, best d20 on attacks against same target, and enemies take -2 on saves against combined spells.|ParangonBattlemindUses	SPELLS:Innate|TIMES=ParangonBattlemindUses|CASTERLEVEL=TL|Battlemind Link	SOURCEPAGE:Celmae
+
+# Improved Evasion
+Parangon ~ Improved Evasion	KEY:Parangon ~ Improved Evasion	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary.Evasion	DESC:The Parangon's evasion improves. He takes only half damage on a failed Reflex save against attacks that deal half damage on a successful save. Requires wielding a shield or wearing light armor at most, and being conscious.	SOURCEPAGE:Celmae
+
+# Energy Immunity
+Parangon ~ Energy Immunity	KEY:Parangon ~ Energy Immunity	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DESC:The Parangon becomes completely immune to his chosen energy type. The type can be changed through a day-long ritual.	SOURCEPAGE:Celmae
+
+# Mythic Battlemind Link
+Parangon ~ Mythic Battlemind Link	KEY:Parangon ~ Mythic Battlemind Link	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Supernatural	DESC:At level 20, the Parangon can cast the Mythic version of Battlemind Link instead of a normal use. The mythic version allows linked allies to share mythic path abilities: when one uses a path ability against a creature, the other can use the same ability as if he possessed it. The ally must pay any mythic power costs.	SOURCEPAGE:Celmae
+
+###Block: Pouvoir Rapide de Saint Thero - SLA extra use choices
+
+Pouvoir Rapide ~ True Strike	KEY:Pouvoir Rapide ~ True Strike	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonTrueStrikeUses,2	BONUS:VAR|ParangonTrueStrikeUses|1	DESC:You gain one extra daily use of True Strike (now %1/day).|ParangonTrueStrikeUses	SOURCEPAGE:Celmae
+
+Pouvoir Rapide ~ Barkskin	KEY:Pouvoir Rapide ~ Barkskin	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonBarkskinUses,2	BONUS:VAR|ParangonBarkskinUses|1	DESC:You gain one extra daily use of Barkskin (now %1/day).|ParangonBarkskinUses	SOURCEPAGE:Celmae
+
+Pouvoir Rapide ~ Haste	KEY:Pouvoir Rapide ~ Haste	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonHasteUses,2	BONUS:VAR|ParangonHasteUses|1	DESC:You gain one extra daily use of Haste (now %1/day).|ParangonHasteUses	SOURCEPAGE:Celmae
+
+Pouvoir Rapide ~ Stoneskin	KEY:Pouvoir Rapide ~ Stoneskin	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonStoneskinUses,2	BONUS:VAR|ParangonStoneskinUses|1	DESC:You gain one extra daily use of Stoneskin (now %1/day).|ParangonStoneskinUses	SOURCEPAGE:Celmae
+
+Pouvoir Rapide ~ Aspect of Saint Thero	KEY:Pouvoir Rapide ~ Aspect of Saint Thero	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonAspectUses,2	BONUS:VAR|ParangonAspectUses|1	DESC:You gain one extra daily use of Aspect of Saint Thero (now %1/day).|ParangonAspectUses	SOURCEPAGE:Celmae
+
+Pouvoir Rapide ~ Battlemind Link	KEY:Pouvoir Rapide ~ Battlemind Link	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonBattlemindUses,2	BONUS:VAR|ParangonBattlemindUses|1	DESC:You gain one extra daily use of Battlemind Link (now %1/day).|ParangonBattlemindUses	SOURCEPAGE:Celmae
