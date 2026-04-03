@@ -287,6 +287,116 @@ public final class AbilityTools
 		return null;
 	}
 
+	public static SyncToolSpecification batchAddAbilities(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("batch_add_abilities",
+				"Add multiple abilities (feats, traits, FCB, etc.) in one call.",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"abilities": {
+								"type": "array",
+								"description": "List of abilities: [{category_key, ability_key, choice?}]",
+								"items": {
+									"type": "object",
+									"properties": {
+										"category_key": { "type": "string" },
+										"ability_key": { "type": "string" },
+										"choice": { "type": "array", "items": { "type": "string" } }
+									},
+									"required": ["category_key", "ability_key"]
+								}
+							}
+						},
+						"required": ["character_id", "abilities"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					String characterId = (String) args.get("character_id");
+					CharacterFacade character = session.getCharacter(characterId);
+					@SuppressWarnings("unchecked")
+					List<Map<String, Object>> abilities = (List<Map<String, Object>>) args.get("abilities");
+					McpUIDelegate delegate = session.getDelegate(characterId);
+
+					int successCount = 0;
+					List<String> errors = new ArrayList<>();
+
+					for (Map<String, Object> entry : abilities)
+					{
+						String categoryKey = (String) entry.get("category_key");
+						String abilityKey = (String) entry.get("ability_key");
+						@SuppressWarnings("unchecked")
+						List<String> choice = (List<String>) entry.get("choice");
+
+						AbilityCategory category = findCategory(character, categoryKey);
+						if (category == null)
+						{
+							errors.add("Category not found: " + categoryKey);
+							continue;
+						}
+
+						var abilityList = character.getDataSet().getAbilities().getValue(category);
+						AbilityFacade found = null;
+						if (abilityList != null)
+						{
+							for (AbilityFacade ability : abilityList)
+							{
+								if (ability.getKeyName().equalsIgnoreCase(abilityKey)
+									|| ability.toString().equalsIgnoreCase(abilityKey))
+								{
+									found = ability;
+									break;
+								}
+							}
+						}
+						if (found == null)
+						{
+							errors.add("Ability not found: " + abilityKey + " in " + categoryKey);
+							continue;
+						}
+
+						try
+						{
+							if (delegate != null && choice != null && !choice.isEmpty())
+							{
+								delegate.setPreSelectedChoices(choice);
+							}
+							character.addAbility(category, found);
+							if (delegate != null)
+							{
+								delegate.clearPreSelectedChoices();
+							}
+							successCount++;
+						}
+						catch (Exception e)
+						{
+							errors.add("Failed: " + abilityKey + " - " + e.getMessage());
+						}
+					}
+
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("status", errors.isEmpty() ? "ok" : "partial");
+					result.put("successCount", successCount);
+					result.put("totalRequested", abilities.size());
+					if (!errors.isEmpty())
+					{
+						result.put("errors", errors);
+					}
+					return toResult(result);
+				}
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
+			}
+		);
+	}
+
 	private static CallToolResult toResult(Object data)
 	{
 		try

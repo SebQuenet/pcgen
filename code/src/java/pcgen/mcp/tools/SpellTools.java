@@ -437,6 +437,97 @@ public final class SpellTools
 		);
 	}
 
+	public static SyncToolSpecification batchAddPreparedSpells(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("batch_add_prepared_spells",
+				"Prepare multiple spells in one call.",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"spells": {
+								"type": "array",
+								"description": "List of spells: [{spell_name, class_key?, spell_list?}]",
+								"items": {
+									"type": "object",
+									"properties": {
+										"spell_name": { "type": "string" },
+										"class_key": { "type": "string" },
+										"spell_list": { "type": "string" }
+									},
+									"required": ["spell_name"]
+								}
+							}
+						},
+						"required": ["character_id", "spells"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					SpellSupportFacade spellSupport = character.getSpellSupport();
+					@SuppressWarnings("unchecked")
+					List<Map<String, Object>> spells = (List<Map<String, Object>>) args.get("spells");
+
+					int successCount = 0;
+					List<String> errors = new ArrayList<>();
+
+					for (Map<String, Object> entry : spells)
+					{
+						String spellName = (String) entry.get("spell_name");
+						String classKey = (String) entry.get("class_key");
+						String spellList = (String) entry.get("spell_list");
+
+						SpellNode found = findKnownSpell(spellSupport, spellName);
+						if (found == null)
+						{
+							found = findAvailableSpell(spellSupport, spellName, classKey, null);
+						}
+						if (found == null)
+						{
+							errors.add("Spell not found: " + spellName);
+							continue;
+						}
+
+						try
+						{
+							String list = spellList;
+							if (list == null || list.isBlank())
+							{
+								var ref = spellSupport.getDefaultSpellBookRef();
+								list = ref != null && ref.get() != null ? ref.get() : "Prepared Spells";
+							}
+
+							spellSupport.addPreparedSpell(found, list, false);
+							successCount++;
+						}
+						catch (Exception e)
+						{
+							errors.add("Failed: " + spellName + " - " + e.getMessage());
+						}
+					}
+
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("status", errors.isEmpty() ? "ok" : "partial");
+					result.put("successCount", successCount);
+					result.put("totalRequested", spells.size());
+					if (!errors.isEmpty())
+					{
+						result.put("errors", errors);
+					}
+					return toResult(result);
+				}
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
+			}
+		);
+	}
+
 	private static SpellNode findAvailableSpell(SpellSupportFacade support, String name, String classKey, String level)
 	{
 		for (SuperNode node : support.getAvailableSpellNodes())

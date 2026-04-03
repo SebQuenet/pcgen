@@ -238,6 +238,170 @@ public final class EquipmentTools
 		);
 	}
 
+	public static SyncToolSpecification batchBuyEquipment(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("batch_buy_equipment",
+				"Buy multiple equipment items in one call, with optional free flag and equip slot.",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"items": {
+								"type": "array",
+								"description": "List of items: [{equipment_key, quantity?, free?, slot?}]",
+								"items": {
+									"type": "object",
+									"properties": {
+										"equipment_key": { "type": "string" },
+										"quantity": { "type": "integer", "default": 1 },
+										"free": { "type": "boolean", "default": false },
+										"slot": { "type": "string", "description": "Equip slot (optional, e.g. 'Primary Hand', 'Armor')" }
+									},
+									"required": ["equipment_key"]
+								}
+							}
+						},
+						"required": ["character_id", "items"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					String characterId = (String) args.get("character_id");
+					CharacterFacade character = session.getCharacter(characterId);
+					@SuppressWarnings("unchecked")
+					List<Map<String, Object>> items = (List<Map<String, Object>>) args.get("items");
+					DataSetFacade dataSet = character.getDataSet();
+					McpUIDelegate delegate = session.getDelegate(characterId);
+
+					int successCount = 0;
+					List<String> errors = new ArrayList<>();
+
+					for (Map<String, Object> entry : items)
+					{
+						String equipKey = (String) entry.get("equipment_key");
+						int quantity = entry.containsKey("quantity") ? ((Number) entry.get("quantity")).intValue() : 1;
+						boolean free = entry.containsKey("free") && Boolean.TRUE.equals(entry.get("free"));
+						String slot = (String) entry.get("slot");
+
+						EquipmentFacade found = null;
+						for (EquipmentFacade equip : dataSet.getEquipment())
+						{
+							if (equip.toString().equalsIgnoreCase(equipKey) || equip.getKeyName().equalsIgnoreCase(equipKey))
+							{
+								found = equip;
+								break;
+							}
+						}
+						if (found == null)
+						{
+							errors.add("Equipment not found: " + equipKey);
+							continue;
+						}
+
+						try
+						{
+							EquipmentFacade sized = character.getEquipmentSizedForCharacter(found);
+							if (delegate != null) { delegate.consumeLastError(); delegate.consumeLastInfo(); }
+
+							character.addPurchasedEquipment(sized, quantity, false, free);
+
+							if (delegate != null)
+							{
+								String error = delegate.consumeLastError();
+								if (error != null)
+								{
+									errors.add("Buy failed: " + equipKey + " - " + error);
+									continue;
+								}
+								String info = delegate.consumeLastInfo();
+								if (info != null)
+								{
+									errors.add("Buy failed: " + equipKey + " - " + info);
+									continue;
+								}
+							}
+
+							if (slot != null && !slot.isBlank())
+							{
+								try
+								{
+									var eqSet = character.getEquipmentSetRef().get();
+									if (eqSet != null)
+									{
+										EquipmentFacade invItem = findInInventory(character, sized.toString());
+										if (invItem != null)
+										{
+											var nodes = eqSet.getNodes();
+											pcgen.gui2.facade.EquipNode targetNode = null;
+											for (var node : nodes)
+											{
+												if (node instanceof pcgen.gui2.facade.EquipNode en
+													&& en.getNodeType() == pcgen.gui2.facade.EquipNode.NodeType.PHANTOM_SLOT
+													&& en.toString().equalsIgnoreCase(slot))
+												{
+													if (eqSet.canEquip(en, invItem))
+													{
+														targetNode = en;
+														break;
+													}
+												}
+											}
+											if (targetNode != null)
+											{
+												eqSet.addEquipment(targetNode, invItem, quantity);
+											}
+										}
+									}
+								}
+								catch (Exception ignored)
+								{
+									// Equipping is best-effort; purchase already succeeded
+								}
+							}
+
+							successCount++;
+						}
+						catch (Exception e)
+						{
+							errors.add("Failed: " + equipKey + " - " + e.getMessage());
+						}
+					}
+
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("status", errors.isEmpty() ? "ok" : "partial");
+					result.put("successCount", successCount);
+					result.put("totalRequested", items.size());
+					result.put("funds", character.getFundsRef().get());
+					if (!errors.isEmpty())
+					{
+						result.put("errors", errors);
+					}
+					return toResult(result);
+				}
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
+			}
+		);
+	}
+
+	private static EquipmentFacade findInInventory(CharacterFacade character, String key)
+	{
+		EquipmentListFacade purchased = character.getPurchasedEquipment();
+		for (EquipmentFacade equip : purchased)
+		{
+			if (equip.toString().equalsIgnoreCase(key) || equip.getKeyName().equalsIgnoreCase(key))
+			{
+				return equip;
+			}
+		}
+		return null;
+	}
+
 	private static CallToolResult toResult(Object data)
 	{
 		try

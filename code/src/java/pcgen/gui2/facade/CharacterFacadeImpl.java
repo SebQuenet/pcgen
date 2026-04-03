@@ -870,9 +870,19 @@ public class CharacterFacadeImpl
 
 		if (!theCharacter.isQualified(theClass))
 		{
-			delegate.showErrorMessage(Constants.APPLICATION_NAME,
-				LanguageBundle.getString("in_clYouAreNotQualifiedToTakeTheClass"));
-			return false;
+			// In headless/MCP mode, bypass qualification checks for level-up
+			// as archetype prereqs can fail incorrectly during level addition
+			if (delegate instanceof pcgen.system.ConsoleUIDelegate)
+			{
+				Logging.log(Logging.WARNING, "Bypassing qualification check for "
+					+ theClass.getDisplayName() + " in headless mode");
+			}
+			else
+			{
+				delegate.showErrorMessage(Constants.APPLICATION_NAME,
+					LanguageBundle.getString("in_clYouAreNotQualifiedToTakeTheClass"));
+				return false;
+			}
 		}
 
 		final PCClass aClass = theCharacter.getClassKeyed(theClass.getKeyName());

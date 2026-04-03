@@ -1,6 +1,8 @@
 package pcgen.mcp.tools;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +19,7 @@ import pcgen.core.Race;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.mcp.McpSessionManager;
+
 
 public final class CharacterBuildTools
 {
@@ -265,6 +268,92 @@ public final class CharacterBuildTools
 					}
 					character.setAlignment(found);
 					return toResult(Map.of("status", "ok", "alignment", found.getDisplayName()));
+				}
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
+			}
+		);
+	}
+
+	public static SyncToolSpecification setAllAbilityScores(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("set_all_ability_scores",
+				"Set all 6 ability scores in one call.",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"scores": {
+								"type": "object",
+								"description": "Ability scores: {STR: int, DEX: int, CON: int, INT: int, WIS: int, CHA: int}",
+								"properties": {
+									"STR": { "type": "integer" },
+									"DEX": { "type": "integer" },
+									"CON": { "type": "integer" },
+									"INT": { "type": "integer" },
+									"WIS": { "type": "integer" },
+									"CHA": { "type": "integer" }
+								}
+							}
+						},
+						"required": ["character_id", "scores"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					@SuppressWarnings("unchecked")
+					Map<String, Object> scores = (Map<String, Object>) args.get("scores");
+					DataSetFacade dataSet = character.getDataSet();
+
+					// Cache stat lookups
+					Map<String, PCStat> statCache = new java.util.HashMap<>();
+					for (PCStat stat : dataSet.getStats())
+					{
+						statCache.put(stat.getKeyName().toUpperCase(), stat);
+						statCache.put(stat.getDisplayName().toUpperCase(), stat);
+					}
+
+					int successCount = 0;
+					List<String> errors = new ArrayList<>();
+
+					for (Map.Entry<String, Object> entry : scores.entrySet())
+					{
+						String statKey = entry.getKey();
+						int score = ((Number) entry.getValue()).intValue();
+
+						PCStat found = statCache.get(statKey.toUpperCase());
+						if (found == null)
+						{
+							errors.add("Stat not found: " + statKey);
+							continue;
+						}
+
+						try
+						{
+							character.setScoreBase(found, score);
+							successCount++;
+						}
+						catch (Exception e)
+						{
+							errors.add("Failed: " + statKey + " - " + e.getMessage());
+						}
+					}
+
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("status", errors.isEmpty() ? "ok" : "partial");
+					result.put("successCount", successCount);
+					result.put("totalRequested", scores.size());
+					if (!errors.isEmpty())
+					{
+						result.put("errors", errors);
+					}
+					return toResult(result);
 				}
 				catch (Exception e)
 				{

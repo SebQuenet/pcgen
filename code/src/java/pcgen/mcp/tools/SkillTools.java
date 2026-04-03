@@ -175,6 +175,102 @@ public final class SkillTools
 		);
 	}
 
+	public static SyncToolSpecification batchInvestSkills(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("batch_invest_skills",
+				"Invest skill points across multiple levels in one call. Each entry specifies a skill and points per level.",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"investments": {
+								"type": "array",
+								"description": "List of skill investments: [{skill_key, points, level_index}]",
+								"items": {
+									"type": "object",
+									"properties": {
+										"skill_key": { "type": "string" },
+										"points": { "type": "integer" },
+										"level_index": { "type": "integer" }
+									},
+									"required": ["skill_key", "points", "level_index"]
+								}
+							}
+						},
+						"required": ["character_id", "investments"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					@SuppressWarnings("unchecked")
+					List<Map<String, Object>> investments = (List<Map<String, Object>>) args.get("investments");
+					DataSetFacade dataSet = character.getDataSet();
+					CharacterLevelsFacade levels = character.getCharacterLevelsFacade();
+
+					// Cache skill lookups
+					Map<String, Skill> skillCache = new java.util.HashMap<>();
+					for (Skill skill : dataSet.getSkills())
+					{
+						skillCache.put(skill.getKeyName().toLowerCase(), skill);
+						skillCache.put(skill.getDisplayName().toLowerCase(), skill);
+					}
+
+					int successCount = 0;
+					List<String> errors = new ArrayList<>();
+
+					for (Map<String, Object> inv : investments)
+					{
+						String skillKey = (String) inv.get("skill_key");
+						int points = ((Number) inv.get("points")).intValue();
+						int levelIndex = ((Number) inv.get("level_index")).intValue();
+
+						Skill foundSkill = skillCache.get(skillKey.toLowerCase());
+						if (foundSkill == null)
+						{
+							errors.add("Skill not found: " + skillKey);
+							continue;
+						}
+
+						if (levelIndex < 0 || levelIndex >= levels.getSize())
+						{
+							errors.add("Invalid level index: " + levelIndex);
+							continue;
+						}
+
+						CharacterLevelFacade level = levels.getElementAt(levelIndex);
+						boolean success = levels.investSkillPoints(level, foundSkill, points);
+						if (success)
+						{
+							successCount++;
+						}
+						else
+						{
+							errors.add("Failed: " + skillKey + " at level " + (levelIndex + 1));
+						}
+					}
+
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("status", errors.isEmpty() ? "ok" : "partial");
+					result.put("successCount", successCount);
+					result.put("totalRequested", investments.size());
+					if (!errors.isEmpty())
+					{
+						result.put("errors", errors);
+					}
+					return toResult(result);
+				}
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
+			}
+		);
+	}
+
 	private static CallToolResult toResult(Object data)
 	{
 		try

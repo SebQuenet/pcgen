@@ -59,14 +59,17 @@ public final class McpServerBuilder
 				CharacterBuildTools.addClassLevel(session),
 				CharacterBuildTools.setAbilityScore(session),
 				CharacterBuildTools.setAlignment(session),
+				CharacterBuildTools.setAllAbilityScores(session),
 				// Abilities (feats, traits, etc.)
 				AbilityTools.listAbilityCategories(session),
 				AbilityTools.listAbilities(session),
 				AbilityTools.addAbility(session),
 				AbilityTools.removeAbility(session),
+				AbilityTools.batchAddAbilities(session),
 				// Skills
 				SkillTools.investSkillPoints(session),
 				SkillTools.getSkillSummary(session),
+				SkillTools.batchInvestSkills(session),
 				// Spells
 				SpellTools.getAvailableSpells(session),
 				SpellTools.getKnownSpells(session),
@@ -77,6 +80,7 @@ public final class McpServerBuilder
 				SpellTools.removePreparedSpell(session),
 				SpellTools.getSpellbooks(session),
 				SpellTools.addToSpellbook(session),
+				SpellTools.batchAddPreparedSpells(session),
 				// Deity & Domains
 				DeityDomainTools.setDeity(session),
 				DeityDomainTools.addDomain(session),
@@ -86,6 +90,7 @@ public final class McpServerBuilder
 				EquipmentTools.sellEquipment(session),
 				EquipmentTools.getInventory(session),
 				EquipmentTools.setFunds(session),
+				EquipmentTools.batchBuyEquipment(session),
 				// Equipment - Custom/Magic
 				CustomEquipmentTools.listEquipmentModifiers(session),
 				CustomEquipmentTools.customizeEquipment(session),
