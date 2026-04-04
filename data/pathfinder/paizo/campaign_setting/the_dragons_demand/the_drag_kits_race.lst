@@ -1,0 +1,33 @@
+SOURCELONG:The Dragon's Demand	SOURCESHORT:TDD	SOURCEWEB:http://paizo.com	SOURCEDATE:2010-01
+
+STARTPACK:Grioth Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Grioth],[!PRERACE:1,%]
+ALIGN:CE
+RACE:Grioth	!PRERACE:1,%
+NAME:Grioth
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Fly	RANK:2
+SKILL:Knowledge (Geography)	RANK:1
+SKILL:Perception	RANK:2
+SKILL:Sense Motive	RANK:1
+SKILL:Stealth	RANK:2
+ABILITY:CATEGORY=FEAT|Iron Will
+
+STARTPACK:Yangethe Default	TYPE:Default Monster.Aberration	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Yangethe],[!PRERACE:1,%]
+ALIGN:CE
+RACE:Yangethe	!PRERACE:1,%
+NAME:Yangethe
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Knowledge (Arcana)	RANK:8
+SKILL:Knowledge (Engineering)	RANK:11
+SKILL:Knowledge (Geography)	RANK:8
+SKILL:Perception	RANK:11
+SKILL:Sense Motive	RANK:8
+SKILL:Spellcraft	RANK:11
+SKILL:Use Magic Device	RANK:8
+ABILITY:CATEGORY=FEAT|Combat Casting
+ABILITY:CATEGORY=FEAT|Combat Expertise
+ABILITY:CATEGORY=FEAT|Lightning Reflexes
+ABILITY:CATEGORY=FEAT|Multiattack
+ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability (true strike)
+ABILITY:CATEGORY=FEAT|Weapon Focus (tentacles)
+

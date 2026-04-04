@@ -1,0 +1,177 @@
+SOURCELONG:Magnimar, City of Monuments	SOURCESHORT:MCoM	SOURCEWEB:http://paizo.com/products/btpy8slp	SOURCEDATE:2012-07
+
+STARTPACK:Angelic Guardian Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Angelic Guardian],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Angelic Guardian	!PRERACE:1,%
+NAME:Angelic Guardian
+STAT:STR=10|DEX=10|WIS=10|CHA=10
+
+STARTPACK:Aspis Agents Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Aspis Agents],[!PRERACE:1,%]
+ALIGN:LE
+RACE:Aspis Agents	!PRERACE:1,%
+NAME:Aspis Agents
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Acrobatics	RANK:2
+SKILL:Bluff	RANK:1
+SKILL:Diplomacy	RANK:5
+SKILL:Disguise	RANK:5
+SKILL:Intimidate	RANK:4
+SKILL:Knowledge (Local)	RANK:3
+SKILL:Knowledge (Nobility)	RANK:3
+SKILL:Perception	RANK:5
+SKILL:Perform (oratory)	RANK:5
+SKILL:Sense Motive	RANK:5
+SKILL:Sleight of Hand	RANK:4
+SKILL:Stealth	RANK:2
+ABILITY:CATEGORY=FEAT|Alertness
+ABILITY:CATEGORY=FEAT|Arcane Strike
+ABILITY:CATEGORY=FEAT|Deceitful
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+
+STARTPACK:City Guards Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,City Guards],[!PRERACE:1,%]
+ALIGN:TN
+RACE:City Guards	!PRERACE:1,%
+NAME:City Guards
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Intimidate	RANK:2
+SKILL:Perception	RANK:1
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Weapon Focus (halberd)
+
+STARTPACK:City Watch Captains Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,City Watch Captains],[!PRERACE:1,%]
+ALIGN:LN
+RACE:City Watch Captains	!PRERACE:1,%
+NAME:City Watch Captains
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Climb	RANK:1
+SKILL:Handle Animal	RANK:3
+SKILL:Intimidate	RANK:3
+SKILL:Knowledge (Local)	RANK:1
+SKILL:Perception	RANK:2
+SKILL:Ride	RANK:1
+ABILITY:CATEGORY=FEAT|Combat Expertise
+ABILITY:CATEGORY=FEAT|Exotic Weapon Proficiency (swordbreaker dagger)
+ABILITY:CATEGORY=FEAT|Improved Disarm
+ABILITY:CATEGORY=FEAT|Two-Weapon Fighting
+ABILITY:CATEGORY=FEAT|Weapon Focus (longsword)
+ABILITY:CATEGORY=FEAT|Weapon Focus (swordbreaker dagger)
+ABILITY:CATEGORY=FEAT|Weapon Specialization (longsword)
+
+STARTPACK:Mystery Cultists Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mystery Cultists],[!PRERACE:1,%]
+ALIGN:CG
+RACE:Mystery Cultists	!PRERACE:1,%
+NAME:Mystery Cultists
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Diplomacy	RANK:2
+SKILL:Heal	RANK:2
+SKILL:Knowledge (Religion)	RANK:2
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=FEAT|Mobility
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+
+STARTPACK:Night Scale Assassins Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Night Scale Assassins],[!PRERACE:1,%]
+ALIGN:NE
+RACE:Night Scale Assassins	!PRERACE:1,%
+NAME:Night Scale Assassins
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Acrobatics	RANK:6
+SKILL:Bluff	RANK:6
+SKILL:Climb	RANK:6
+SKILL:Disable Device	RANK:6
+SKILL:Disguise	RANK:6
+SKILL:Escape Artist	RANK:6
+SKILL:Intimidate	RANK:5
+SKILL:Perception	RANK:6
+SKILL:Sleight of Hand	RANK:6
+SKILL:Stealth	RANK:6
+ABILITY:CATEGORY=FEAT|Point-Blank Shot
+ABILITY:CATEGORY=FEAT|Rapid Reload (hand crossbow)
+ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
+ABILITY:CATEGORY=FEAT|Weapon Focus (hand crossbow)
+
+STARTPACK:Sczarni Thugs Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Sczarni Thugs],[!PRERACE:1,%]
+ALIGN:LE
+RACE:Sczarni Thugs	!PRERACE:1,%
+NAME:Sczarni Thugs
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Acrobatics	RANK:2
+SKILL:Bluff	RANK:2
+SKILL:Climb	RANK:2
+SKILL:Disable Device	RANK:2
+SKILL:Escape Artist	RANK:2
+SKILL:Intimidate	RANK:2
+SKILL:Perception	RANK:2
+SKILL:Sleight of Hand	RANK:2
+SKILL:Stealth	RANK:2
+ABILITY:CATEGORY=FEAT|Agile Maneuvers
+ABILITY:CATEGORY=FEAT|Combat Reflexes
+
+STARTPACK:Shifty Nobles Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Shifty Nobles],[!PRERACE:1,%]
+ALIGN:LN
+RACE:Shifty Nobles	!PRERACE:1,%
+NAME:Shifty Nobles
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Bluff	RANK:3
+SKILL:Diplomacy	RANK:2
+SKILL:Disable Device	RANK:2
+SKILL:Disguise	RANK:2
+SKILL:Escape Artist	RANK:2
+SKILL:Knowledge (Local)	RANK:2
+SKILL:Perception	RANK:3
+SKILL:Sense Motive	RANK:3
+SKILL:Sleight of Hand	RANK:3
+SKILL:Stealth	RANK:3
+ABILITY:CATEGORY=FEAT|Alertness
+ABILITY:CATEGORY=FEAT|Great Fortitude
+ABILITY:CATEGORY=FEAT|Skill Focus (Bluff)
+
+STARTPACK:Shoanti Gladiators Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Shoanti Gladiators],[!PRERACE:1,%]
+ALIGN:CN
+RACE:Shoanti Gladiators	!PRERACE:1,%
+NAME:Shoanti Gladiators
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Handle Animal	RANK:3
+SKILL:Intimidate	RANK:3
+SKILL:Perception	RANK:3
+SKILL:Ride	RANK:1
+SKILL:Survival	RANK:3
+ABILITY:CATEGORY=FEAT|Cleave
+ABILITY:CATEGORY=FEAT|Improved Bull Rush
+ABILITY:CATEGORY=FEAT|Power Attack
+
+STARTPACK:Vydrarch Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Vydrarch],[!PRERACE:1,%]
+ALIGN:CE
+RACE:Vydrarch	!PRERACE:1,%
+NAME:Vydrarch
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Perception	RANK:14
+SKILL:Swim	RANK:13
+ABILITY:CATEGORY=FEAT|Awesome Blow
+ABILITY:CATEGORY=FEAT|Cleave
+ABILITY:CATEGORY=FEAT|Critical Focus
+ABILITY:CATEGORY=FEAT|Improved Bull  Rush
+ABILITY:CATEGORY=FEAT|Improved Critical (bite)
+ABILITY:CATEGORY=FEAT|Multiattack
+ABILITY:CATEGORY=FEAT|Power Attack
+ABILITY:CATEGORY=FEAT|Staggering Critical
+ABILITY:CATEGORY=FEAT|Vital Strike
+ABILITY:CATEGORY=FEAT|Weapon Focus (bite)
+
+STARTPACK:Yamah Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Yamah],[!PRERACE:1,%]
+ALIGN:CG
+RACE:Yamah	!PRERACE:1,%
+NAME:Yamah
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Acrobatics	RANK:6
+SKILL:Bluff	RANK:3
+SKILL:Diplomacy	RANK:6
+SKILL:Escape Artist	RANK:3
+SKILL:Fly	RANK:6
+SKILL:Knowledge (Planes)	RANK:6
+SKILL:Perception	RANK:6
+SKILL:Sense Motive	RANK:3
+SKILL:Stealth	RANK:3
+ABILITY:CATEGORY=FEAT|Point-Blank Shot
+ABILITY:CATEGORY=FEAT|Precise Shot
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+

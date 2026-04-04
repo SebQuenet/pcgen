@@ -1,0 +1,141 @@
+SOURCELONG:The Emerald Spire	SOURCESHORT:TES	SOURCEWEB:http://paizo.com	SOURCEDATE:2010-01
+
+STARTPACK:Bone Priest Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Bone Priest],[!PRERACE:1,%]
+ALIGN:LE
+RACE:Bone Priest	!PRERACE:1,%
+NAME:Bone Priest
+STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
+SKILL:Intimidate	RANK:5
+SKILL:Knowledge (Religion)	RANK:5
+SKILL:Perception	RANK:5
+SKILL:Stealth	RANK:5
+ABILITY:CATEGORY=FEAT|Combat Casting
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Weapon Focus (bastard sword)
+
+STARTPACK:Caustic Stalker Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Caustic Stalker],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Caustic Stalker	!PRERACE:1,%
+NAME:Caustic Stalker
+STAT:DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Fly	RANK:7
+SKILL:Perception	RANK:7
+SKILL:Stealth	RANK:7
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Mobility
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+
+STARTPACK:Emerald Automaton Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Emerald Automaton],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Emerald Automaton	!PRERACE:1,%
+NAME:Emerald Automaton
+STAT:STR=10|DEX=10|WIS=10|CHA=10
+ABILITY:CATEGORY=FEAT|Improved Sunder
+ABILITY:CATEGORY=FEAT|Power Attack
+
+STARTPACK:Large Shadowfire Fire Elemental Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Large Shadowfire Fire Elemental],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Large Shadowfire Fire Elemental	!PRERACE:1,%
+NAME:Large Shadowfire Fire Elemental
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Acrobatics	RANK:6
+SKILL:Climb	RANK:4
+SKILL:Escape Artist	RANK:4
+SKILL:Intimidate	RANK:6
+SKILL:Knowledge (Planes)	RANK:4
+SKILL:Perception	RANK:8
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Iron Will
+ABILITY:CATEGORY=FEAT|Mobility
+ABILITY:CATEGORY=FEAT|Spring Attack
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+
+STARTPACK:Lava Lurker Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Lava Lurker],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Lava Lurker	!PRERACE:1,%
+NAME:Lava Lurker
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Perception	RANK:12
+SKILL:Stealth	RANK:12
+SKILL:Swim	RANK:12
+ABILITY:CATEGORY=FEAT|Combat Reflexes
+ABILITY:CATEGORY=FEAT|Deadly Aim
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Power Attack
+ABILITY:CATEGORY=FEAT|Stand Still
+ABILITY:CATEGORY=FEAT|Weapon Focus (magma ball)
+
+STARTPACK:Moon Spider Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Moon Spider],[!PRERACE:1,%]
+ALIGN:NE
+RACE:Moon Spider	!PRERACE:1,%
+NAME:Moon Spider
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Climb	RANK:3
+SKILL:Perception	RANK:3
+SKILL:Stealth	RANK:3
+ABILITY:CATEGORY=FEAT|Ability Focus (poison)
+ABILITY:CATEGORY=FEAT|Improved Initiative
+
+STARTPACK:Mythic Xiomorn Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mythic Xiomorn],[!PRERACE:1,%]
+ALIGN:LN
+RACE:Mythic Xiomorn	!PRERACE:1,%
+NAME:Mythic Xiomorn
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Climb	RANK:19
+SKILL:Craft (sculptures)	RANK:19
+SKILL:Disable Device	RANK:16
+SKILL:Heal	RANK:16
+SKILL:Knowledge (Arcana)	RANK:19
+SKILL:Knowledge (Planes)	RANK:19
+SKILL:Knowledge (Dungeoneering)	RANK:16
+SKILL:Knowledge (Engineering)	RANK:16
+SKILL:Knowledge (Geography)	RANK:16
+SKILL:Knowledge (Nature)	RANK:16
+SKILL:Perception	RANK:19
+SKILL:Sense Motive	RANK:19
+SKILL:Spellcraft	RANK:19
+SKILL:Stealth	RANK:19
+SKILL:Use Magic Device	RANK:19
+ABILITY:CATEGORY=FEAT|Ability Focus (crystallization)
+ABILITY:CATEGORY=FEAT|Combat Reflexes
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=FEAT|Extra Mythic Power
+ABILITY:CATEGORY=FEAT|Improved Critical (claw)
+ABILITY:CATEGORY=FEAT|Improved Sunder[M]
+ABILITY:CATEGORY=FEAT|Iron Will
+ABILITY:CATEGORY=FEAT|Mobility
+ABILITY:CATEGORY=FEAT|Power Attack
+ABILITY:CATEGORY=FEAT|Spring Attack[M]
+ABILITY:CATEGORY=FEAT|Weapon Finesse[M]
+
+STARTPACK:Xiomorn Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Xiomorn],[!PRERACE:1,%]
+ALIGN:LN
+RACE:Xiomorn	!PRERACE:1,%
+NAME:Xiomorn
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Acrobatics	RANK:9
+SKILL:Climb	RANK:16
+SKILL:Craft (sculptures)	RANK:4
+SKILL:Disable Device	RANK:13
+SKILL:Heal	RANK:13
+SKILL:Knowledge (Arcana)	RANK:16
+SKILL:Knowledge (Dungeoneering)	RANK:13
+SKILL:Knowledge (Geography)	RANK:13
+SKILL:Knowledge (Nature)	RANK:13
+SKILL:Knowledge (Planes)	RANK:16
+SKILL:Perception	RANK:16
+SKILL:Sense Motive	RANK:16
+SKILL:Spellcraft	RANK:16
+SKILL:Stealth	RANK:16
+SKILL:Use Magic Device	RANK:16
+ABILITY:CATEGORY=FEAT|Combat Reflexes
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=FEAT|Improved Critical (claw)
+ABILITY:CATEGORY=FEAT|Improved Sunder
+ABILITY:CATEGORY=FEAT|Mobility
+ABILITY:CATEGORY=FEAT|Power Attack
+ABILITY:CATEGORY=FEAT|Spring Attack
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+

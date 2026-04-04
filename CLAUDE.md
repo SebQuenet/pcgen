@@ -107,6 +107,52 @@ These directories are validated at startup (`Main.validateEnvironment()`) — re
 - Some maven repos use `allowInsecureProtocol = true` — do not change without coordination.
 - Build logic is split across `code/gradle/*.gradle` files (autobuild, distribution, reporting, release, plugins).
 
+## Importing Creature Data from PCFinder
+
+The `scripts/` directory contains a two-step pipeline to import Pathfinder bestiary creatures into PCGen LST format, using pcfinder-csr as the primary data source and d20pfsrd.com for supplemental fields.
+
+### Prerequisites
+
+- Python 3 with `requests` and `beautifulsoup4` (`pip install requests beautifulsoup4`)
+- The pcfinder-csr repo cloned alongside this one (expects `../pcfinder/apps/pcfinder-csr/static-data/creatures.json`)
+
+### Step 1 — Scrape d20pfsrd.com (optional enrichment)
+
+Scrapes feats, skills, languages, and spell-like abilities that pcfinder-csr doesn't provide:
+
+```bash
+python3 scripts/scrape_d20pfsrd.py \
+    --source ../pcfinder/apps/pcfinder-csr/static-data/creatures.json \
+    --bestiary 5 6 \
+    --output scripts/d20pfsrd_cache.json
+```
+
+Options: `--resume` (continue interrupted scrape), `--test "Creature Name"` (scrape one creature), `--limit N` (scrape first N only). The URL index is cached in `scripts/d20pfsrd_index.json` to avoid re-crawling type listing pages. Respects a 1.5s delay between requests.
+
+### Step 2 — Generate LST files
+
+Generates PCGen race, kit, and ability LST files from pcfinder-csr data, optionally enriched with the d20pfsrd cache:
+
+```bash
+python3 scripts/generate_bestiary.py \
+    --source ../pcfinder/apps/pcfinder-csr/static-data/creatures.json \
+    --bestiary 5 6 \
+    --cache scripts/d20pfsrd_cache.json
+```
+
+Output goes to `data/pathfinder/paizo/roleplaying_game/bestiary_{N}/` (races, kits, abilities). The PCC files referencing these LST files must already exist.
+
+### What each script produces
+
+| Script | Input | Output |
+|--------|-------|--------|
+| `scrape_d20pfsrd.py` | creatures.json + d20pfsrd.com | `d20pfsrd_cache.json` (feats, skills, languages, SLAs) |
+| `generate_bestiary.py` | creatures.json + cache | `b{N}_races.lst`, `b{N}_kits_race.lst`, `b{N}_abilities_race.lst` |
+
+### After generation
+
+Run `./gradlew test` to verify the generated data loads without errors.
+
 ## Issue Tracker
 
 Jira: https://pcgenorg.atlassian.net (projects: CODE, DATA, etc.)

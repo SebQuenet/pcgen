@@ -93,3 +93,206 @@ Spit Venom		KEY:Seru ~ Spit Venom	CATEGORY:Special Ability	TYPE:SpecialAttack.Ex
 ###Block: Racial Spell-Like Abilities L2 ~ Ironskin,Ironskin,2
 # Ability Name	Unique Key				Category of Ability		Type						Serves As							Define																																											Innate Spells																																																																																								Modify VAR
 Ironskin		KEY:Racial SLA ~ Ironskin	CATEGORY:Spell-Like Ability	TYPE:Racial Spell-Like Ability	SERVESAS:ABILITY=Spell-Like Ability|Ironskin	DEFINE:RacialSLA_Ironskin_LVL|0	DEFINE:RacialSLA_Ironskin_SpellLVL|0	DEFINE:RacialSLA_Ironskin_Times|0	DEFINE:RacialSLA_Ironskin_DCMod|0	DEFINE:RacialSLA_Ironskin_DC|0	DEFINE:RacialSLA_Ironskin_AtWill|0	DEFINE:RacialSLA_Ironskin_Constant|0	SPELLS:Racial|TIMES=RacialSLA_Ironskin_Times|TIMEUNIT=Day|CASTERLEVEL=RacialSLA_Ironskin_LVL|Ironskin,RacialSLA_Ironskin_DC|PREVAREQ:RacialSLA_Ironskin_AtWill,0|PREVAREQ:RacialSLA_Ironskin_Constant,0	SPELLS:Racial|TIMES=ATWILL|TIMEUNIT=Day|CASTERLEVEL=RacialSLA_Ironskin_LVL|Ironskin,RacialSLA_Ironskin_DC|PREVAREQ:RacialSLA_Ironskin_AtWill,1|PREVAREQ:RacialSLA_Ironskin_Constant,0	SPELLS:Racial|TIMES=ATWILL|TIMEUNIT=Constant|CASTERLEVEL=RacialSLA_Ironskin_LVL|Ironskin,RacialSLA_Ironskin_DC|PREVAREQ:RacialSLA_Ironskin_Constant,1	BONUS:VAR|RacialSLA_Ironskin_LVL|TL|TYPE=Base	BONUS:VAR|RacialSLA_Ironskin_SpellLVL|2	BONUS:VAR|RacialSLA_Ironskin_Times|1|TYPE=Base	BONUS:VAR|RacialSLA_Ironskin_DCMod|CHA|TYPE=Base	BONUS:VAR|RacialSLA_Ironskin_DC|10+RacialSLA_Ironskin_SpellLVL+RacialSLA_Ironskin_DCMod
+
+###Block: Monster Racial Traits (auto-generated)
+
+Racial Traits ~ Abrakarn Viper	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Poison
+Racial Traits ~ Bat, Sootwing Bat	CATEGORY:Internal
+Racial Traits ~ Beetle, Dark Spitter Beetle	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Acid|Immunity to Mind-Affecting Effects
+Racial Traits ~ Beetle, Juggernaut Beetle	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Acid|Immunity to Mind-Affecting Effects
+Racial Traits ~ Boggard, Boggard Abyssal Warrior	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease
+Racial Traits ~ Boggard, Boggard Brute	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Champion	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Farcroaker	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Hunter	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Priest-King	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Prophet	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Savage	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Scarred One	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Stalker	CATEGORY:Internal
+Racial Traits ~ Boggard, Boggard Swampseer	CATEGORY:Internal
+Racial Traits ~ Bugbear, Bugbear Ambusher	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Bloodmage	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Cultist	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Flesh Glutton	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Gnasher	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Lurker	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Shadow Sneak	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Stalker	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Bugbear, Bugbear Tyrant	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease|Scent
+Racial Traits ~ Dark Spitter Beetle	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Acid|Immunity to Mind-Affecting Effects
+Racial Traits ~ Drow, Drow Demonic Champion	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep|Immunity to Disease
+Racial Traits ~ Drow, Drow House Captain	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep
+Racial Traits ~ Drow, Drow House Guard	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep|Poison
+Racial Traits ~ Drow, Drow Master Scout	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep
+Racial Traits ~ Drow, Drow Matron	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep
+Racial Traits ~ Drow, Drow Poisoner	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep|Immunity to Poison|All-Around Vision|Poison
+Racial Traits ~ Drow, Drow Priest	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep
+Racial Traits ~ Drow, Drow Scout	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep
+Racial Traits ~ Duergar, Duergar Anvil	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Bombardier	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Captain	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Hammer	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar High Priest	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Lieutenant	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Sergeant	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Sharpshooter	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Slaver	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Duergar, Duergar Taskmaster	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Paralysis|Immunity to Poison
+Racial Traits ~ Feeder In The Depths	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Frightful Haunter	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Incorporeal
+Racial Traits ~ Ghoul Hound	CATEGORY:Internal
+Racial Traits ~ Ghoul, Ancient Gravedigger	CATEGORY:Internal
+Racial Traits ~ Ghoul, Ghoul Commander	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease
+Racial Traits ~ Ghoul, Ghoul Creeper	CATEGORY:Internal
+Racial Traits ~ Ghoul, Ghoul Huntsmaster	CATEGORY:Internal
+Racial Traits ~ Ghoul, Ghoul Monarch	CATEGORY:Internal
+Racial Traits ~ Ghoul, Ghoul Stalker	CATEGORY:Internal
+Racial Traits ~ Ghoul, Masked Murderer	CATEGORY:Internal
+Racial Traits ~ Giant (Fire), Fire Giant Doombringer	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire
+Racial Traits ~ Giant (Fire), Fire Giant Glaive	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire
+Racial Traits ~ Giant (Fire), Fire Giant King	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire
+Racial Traits ~ Giant (Fire), Fire Giant Lieutenant	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire
+Racial Traits ~ Giant (Fire), Fire Giant Magmablade	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire
+Racial Traits ~ Giant (Fire), Fire Giant Queen	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire
+Racial Traits ~ Giant (Fire), Fire Giant Strongarm	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire
+Racial Traits ~ Giant (Frost), Frost Giant Battle Priest	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Cold
+Racial Traits ~ Giant (Frost), Frost Giant Elite Scout	CATEGORY:Internal
+Racial Traits ~ Giant (Frost), Frost Giant Houndmaster	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Cold
+Racial Traits ~ Giant (Frost), Frost Giant Hunter	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Cold
+Racial Traits ~ Giant (Frost), Frost Giant Ice Mage	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Cold
+Racial Traits ~ Giant (Frost), Frost Giant Jarl	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Cold
+Racial Traits ~ Giant (Frost), Frost Giant Raider	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Cold
+Racial Traits ~ Gnoll, Chosen of Lamashtu	CATEGORY:Internal
+Racial Traits ~ Gnoll, Eye of Lamashtu	CATEGORY:Internal
+Racial Traits ~ Gnoll, Flind	CATEGORY:Internal
+Racial Traits ~ Gnoll, Gnoll Bouda	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|All-Around Vision
+Racial Traits ~ Gnoll, Gnoll Bruiser	CATEGORY:Internal
+Racial Traits ~ Gnoll, Gnoll Lieutenant	CATEGORY:Internal
+Racial Traits ~ Gnoll, Gnoll Packlord	CATEGORY:Internal
+Racial Traits ~ Gnoll, Gnoll Rageborn	CATEGORY:Internal
+Racial Traits ~ Gnoll, Gnoll Ravager	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease
+Racial Traits ~ Gnoll, Gnoll Sergeant	CATEGORY:Internal
+Racial Traits ~ Gnoll, Gnoll Warden	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Chief	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Commando	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Firestarter	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Frog-Talker	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Outrider	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Sneak	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Stickylord	CATEGORY:Internal
+Racial Traits ~ Goblin, Goblin Vulture Pilot	CATEGORY:Internal
+Racial Traits ~ Goblin, Grizzled Rider	CATEGORY:Internal
+Racial Traits ~ Goblin, Mutant Goblin	CATEGORY:Internal
+Racial Traits ~ Gorthek	CATEGORY:Internal
+Racial Traits ~ Hobgoblin, Hobgoblin Battle Priest	CATEGORY:Internal
+Racial Traits ~ Hobgoblin, Hobgoblin Battlefield Zealot	CATEGORY:Internal
+Racial Traits ~ Hobgoblin, Hobgoblin Bombardier	CATEGORY:Internal
+Racial Traits ~ Hobgoblin, Hobgoblin Commander	CATEGORY:Internal
+Racial Traits ~ Hobgoblin, Hobgoblin Forerunner	CATEGORY:Internal
+Racial Traits ~ Hobgoblin, Hobgoblin Lieutenant	CATEGORY:Internal
+Racial Traits ~ Hobgoblin, Hobgoblin Paragon	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease|Immunity to Poison
+Racial Traits ~ Hobgoblin, Hobgoblin Sergeant	CATEGORY:Internal
+Racial Traits ~ Juggernaut Beetle	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Acid|Immunity to Mind-Affecting Effects
+Racial Traits ~ Kirrix	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease|Scent
+Racial Traits ~ Kobold, Kobold Battle Master	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Blade	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Bomber	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Chieftain	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Devilspeaker	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Guilecaster	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Master Trapper	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Monster Wrangler	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Scalecaster	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Sniper	CATEGORY:Internal
+Racial Traits ~ Kobold, Kobold Yapper	CATEGORY:Internal
+Racial Traits ~ Kyrana	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fire|Immunity to Paralysis|Immunity to Sleep
+Racial Traits ~ Lizard Scion	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizard Scion	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizardfolk Berserker	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizardfolk Champion	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizardfolk Clutch Mother	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Poison
+Racial Traits ~ Lizardfolk, Lizardfolk Rattler	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizardfolk Sorcerer	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizardfolk Stalker	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizardfolk Swamp Lurker	CATEGORY:Internal
+Racial Traits ~ Lizardfolk, Lizardfolk Vanguard	CATEGORY:Internal
+Racial Traits ~ Mutant Goblin	CATEGORY:Internal
+Racial Traits ~ Ogre, Ogre Boss	CATEGORY:Internal
+Racial Traits ~ Ogre, Ogre Brute	CATEGORY:Internal
+Racial Traits ~ Ogre, Ogre Destroyer	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease
+Racial Traits ~ Ogre, Ogre Glutton	CATEGORY:Internal
+Racial Traits ~ Ogre, Ogre Hunter	CATEGORY:Internal
+Racial Traits ~ Ogre, Ogre King	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Fatigue
+Racial Traits ~ Ogre, Ogre Mancatcher	CATEGORY:Internal
+Racial Traits ~ Ogre, Ogre Priest	CATEGORY:Internal
+Racial Traits ~ Ogre, Ogre Stalker	CATEGORY:Internal
+Racial Traits ~ Orc, Gorthek	CATEGORY:Internal
+Racial Traits ~ Orc, Gorthek Rider	CATEGORY:Internal
+Racial Traits ~ Orc, Orc Chieftain	CATEGORY:Internal
+Racial Traits ~ Orc, Orc Lieutenant	CATEGORY:Internal
+Racial Traits ~ Orc, Orc Mystic	CATEGORY:Internal
+Racial Traits ~ Orc, Orc Scout	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Orc, Orc Sergeant	CATEGORY:Internal
+Racial Traits ~ Orc, Orc Thug	CATEGORY:Internal
+Racial Traits ~ Orc, Orc War Drummer	CATEGORY:Internal
+Racial Traits ~ Orc, Orc Warlord	CATEGORY:Internal
+Racial Traits ~ Orc, Orc Witch Doctor	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Bravo	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Caravan Guard	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Chemist	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Elder	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Expedition Leader	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Sage	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Tinkerer	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Troubleshooter	CATEGORY:Internal
+Racial Traits ~ Ratfolk, Ratfolk Warden	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Baron	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Brute	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Champion	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Deep Racer	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin High Priestess	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Infiltrator	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Lieutenant	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Prince	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Scout	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Shark Sentry	CATEGORY:Internal
+Racial Traits ~ Sahuagin, Sahuagin Underpriestess	CATEGORY:Internal
+Racial Traits ~ Serpentfolk, Serpentfolk Bone Prophet	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Mind-Affecting Effects|Immunity to Paralysis|Immunity to Poison|Scent
+Racial Traits ~ Serpentfolk, Serpentfolk High Priest	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Mind-Affecting Effects|Immunity to Paralysis|Immunity to Poison|Scent
+Racial Traits ~ Serpentfolk, Serpentfolk Hunter	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Mind-Affecting Effects|Immunity to Paralysis|Immunity to Poison|Scent|Poison
+Racial Traits ~ Serpentfolk, Serpentfolk Illusionist	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Mind-Affecting Effects|Immunity to Paralysis|Immunity to Poison|Scent|Poison
+Racial Traits ~ Serpentfolk, Serpentfolk Spellblade	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Mind-Affecting Effects|Immunity to Paralysis|Immunity to Poison|Scent
+Racial Traits ~ Serpentfolk, Serpentfolk Spy	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Mind-Affecting Effects|Immunity to Paralysis|Immunity to Poison|Scent
+Racial Traits ~ Sewer Troll	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Slaugrak	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Acid|Immunity to Poison|See in Darkness
+Racial Traits ~ Steam Hog	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troggle	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Trip
+Racial Traits ~ Troggle, Troggle Raider	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Trip
+Racial Traits ~ Troglodyte, Troglodyte Beast-Speaker	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Champion	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Chieftain	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Priest	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Scale-Rider	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Skulker	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Sorcerer	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Tyrant	CATEGORY:Internal
+Racial Traits ~ Troglodyte, Troglodyte Warren Guard	CATEGORY:Internal
+Racial Traits ~ Troll, Sewer Troll	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Acolyte	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Berserker	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Brute	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Elder Matron	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Fury	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Monarch	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Render	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Ripper	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Troll, Troll Warden	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent
+Racial Traits ~ Vampire Servant, Coffin Guard	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep
+Racial Traits ~ Vampire Servant, Weird Butler	CATEGORY:Internal
+Racial Traits ~ Vampire, Enlightened Vampire	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Disease|Immunity to Poison
+Racial Traits ~ Vampire, Vampire Lord	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Sleep
+Racial Traits ~ Vampire, Vampire Savage	CATEGORY:Internal
+Racial Traits ~ Vampire, Vampire Seducer	CATEGORY:Internal
+Racial Traits ~ Vampire, Vampire Warrior	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Poison
+Racial Traits ~ Yzobu	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent

@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
-"""Generate PCGen LST files for Bestiary 5 and 6 from pcfinder-csr creatures.json."""
+"""Generate PCGen LST files from pcfinder-csr creatures.json.
+
+Supports two modes:
+  1. Legacy bestiary mode:  --bestiary 5 6
+  2. Generic source mode:   --sources "Monster Codex" "Occult Bestiary" --comparison report.json
+     Or generate all:       --all --comparison scripts/creature_comparison.json
+
+Usage:
+    # Legacy (Bestiary 5/6 from pcfinder source):
+    python3 scripts/generate_bestiary.py --source creatures.json --bestiary 5 6
+
+    # From comparison report (all missing creatures):
+    python3 scripts/generate_bestiary.py --source creatures.json --all --comparison scripts/creature_comparison.json
+
+    # Specific sources from comparison report:
+    python3 scripts/generate_bestiary.py --source creatures.json \\
+        --sources "Monster Codex" "Occult Bestiary" --comparison scripts/creature_comparison.json
+"""
 
 import argparse
 import json
@@ -7,6 +24,7 @@ import math
 import os
 import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 # ─── Constants ───────────────────────────────────────────────────────────────
@@ -181,6 +199,411 @@ BESTIARY_CONFIG = {
         'dir': 'bestiary_6',
     },
 }
+
+# ─── Source directory mapping ───────────────────────────────────────────────
+# Maps normalized source names → output directory config.
+# 'existing': True means the dir and PCC already exist in pcgen.
+# Sources not listed here get auto-generated config via build_source_config().
+
+KNOWN_SOURCE_CONFIG = {
+    'Bestiary 5': {
+        'source_long': 'Bestiary 5', 'source_short': 'B5',
+        'source_web': 'http://paizo.com/products/btpy9g9x',
+        'source_date': '2015-12', 'prefix': 'b5',
+        'subdir': 'paizo/roleplaying_game/bestiary_5',
+        'exclude_names': B5_EXCLUDE_NAMES, 'existing': True,
+    },
+    'Bestiary 6': {
+        'source_long': 'Bestiary 6', 'source_short': 'B6',
+        'source_web': 'http://paizo.com/products/btpy9r1y',
+        'source_date': '2017-05', 'prefix': 'b6',
+        'subdir': 'paizo/roleplaying_game/bestiary_6',
+        'exclude_names': B6_EXCLUDE_NAMES, 'existing': True,
+    },
+    'Monster Codex': {
+        'source_long': 'Monster Codex', 'source_short': 'MC',
+        'source_web': 'http://paizo.com/products/btpy9926',
+        'source_date': '2014-11', 'prefix': 'mc',
+        'subdir': 'paizo/roleplaying_game/monster_codex',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Mythic Adventures': {
+        'source_long': 'Mythic Adventures', 'source_short': 'MA',
+        'source_web': 'http://paizo.com/products/btpy8ywe',
+        'source_date': '2013-08', 'prefix': 'ma',
+        'subdir': 'paizo/roleplaying_game/mythic_adventures',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Occult Bestiary': {
+        'source_long': 'Occult Bestiary', 'source_short': 'OB',
+        'source_web': 'http://paizo.com/products/btpy9toq',
+        'source_date': '2015-12', 'prefix': 'ob',
+        'subdir': 'paizo/roleplaying_game/occult_bestiary',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Inner Sea Bestiary': {
+        'source_long': 'Inner Sea Bestiary', 'source_short': 'ISB',
+        'source_web': 'http://paizo.com/products/btpy8v2x',
+        'source_date': '2013-06', 'prefix': 'isb',
+        'subdir': 'paizo/campaign_setting/inner_sea_bestiary',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Inner Sea Monster Codex': {
+        'source_long': 'Inner Sea Monster Codex', 'source_short': 'ISMC',
+        'source_web': 'http://paizo.com/products/btpy9elc',
+        'source_date': '2015-05', 'prefix': 'ismc',
+        'subdir': 'paizo/campaign_setting/inner_sea_monster_codex',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Inner Sea Gods': {
+        'source_long': 'Inner Sea Gods', 'source_short': 'ISG',
+        'source_web': 'http://paizo.com/products/btpy94wj',
+        'source_date': '2014-04', 'prefix': 'isg',
+        'subdir': 'paizo/campaign_setting/inner_sea_gods',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Tome of Horrors Complete': {
+        'source_long': 'Tome of Horrors Complete', 'source_short': 'ToHC',
+        'source_web': 'https://froggodgames.com',
+        'source_date': '2011-01', 'prefix': 'tohc',
+        'subdir': 'frog_god_games/tome_of_horrors_complete',
+        'exclude_names': set(), 'existing': False,
+        'publisher_long': 'Frog God Games', 'publisher_short': 'FGG',
+        'pcc_type': 'Frog God Games.Pathfinder RPG',
+    },
+    'Tome of Horrors 4': {
+        'source_long': 'Tome of Horrors 4', 'source_short': 'ToH4',
+        'source_web': 'https://froggodgames.com',
+        'source_date': '2013-01', 'prefix': 'toh4',
+        'subdir': 'frog_god_games/tome_of_horrors_4',
+        'exclude_names': set(), 'existing': False,
+        'publisher_long': 'Frog God Games', 'publisher_short': 'FGG',
+        'pcc_type': 'Frog God Games.Pathfinder RPG',
+    },
+    'Inner Sea World Guide': {
+        'source_long': 'Inner Sea World Guide', 'source_short': 'ISWG',
+        'source_web': 'http://paizo.com/products/btpy8ief',
+        'source_date': '2011-03', 'prefix': 'iswg',
+        'subdir': 'paizo/campaign_setting/inner_sea_world_guide',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Isles Of The Shackles': {
+        'source_long': 'Isles of the Shackles', 'source_short': 'IotS',
+        'source_web': 'http://paizo.com/products/btpy8qzx',
+        'source_date': '2012-08', 'prefix': 'iots',
+        'subdir': 'paizo/campaign_setting/isles_of_the_shackles',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Numeria Land Of Fallen Stars': {
+        'source_long': 'Numeria, Land of Fallen Stars', 'source_short': 'NLoFS',
+        'source_web': 'http://paizo.com/products/btpy978l',
+        'source_date': '2014-07', 'prefix': 'nlfs',
+        'subdir': 'paizo/campaign_setting/numeria_land_of_fallen_stars',
+        'exclude_names': set(), 'existing': False,
+    },
+    'The Worldwound': {
+        'source_long': 'The Worldwound', 'source_short': 'TWW',
+        'source_web': 'http://paizo.com/products/btpy8yvk',
+        'source_date': '2013-07', 'prefix': 'tww',
+        'subdir': 'paizo/campaign_setting/the_worldwound',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Horsemen Of The Apocalypse': {
+        'source_long': 'Horsemen of the Apocalypse', 'source_short': 'HotA',
+        'source_web': 'http://paizo.com/products/btpy8odg',
+        'source_date': '2011-11', 'prefix': 'hota',
+        'subdir': 'paizo/campaign_setting/horsemen_of_the_apocalypse',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Andoran Birthplace Of Freedom': {
+        'source_long': 'Andoran, Birthplace of Freedom', 'source_short': 'ABoF',
+        'source_web': 'http://paizo.com/products/btpy8bc3',
+        'source_date': '2015-03', 'prefix': 'abof',
+        'subdir': 'paizo/campaign_setting/andoran_birthplace_of_freedom',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Osirion, Legacy Of Pharaohs': {
+        'source_long': 'Osirion, Legacy of Pharaohs', 'source_short': 'OLoP',
+        'source_web': 'http://paizo.com/products/btpy93n8',
+        'source_date': '2014-02', 'prefix': 'olop',
+        'subdir': 'paizo/campaign_setting/osirion_legacy_of_pharaohs',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Magnimar City Of Monuments': {
+        'source_long': 'Magnimar, City of Monuments', 'source_short': 'MCoM',
+        'source_web': 'http://paizo.com/products/btpy8slp',
+        'source_date': '2012-07', 'prefix': 'mcom',
+        'subdir': 'paizo/campaign_setting/magnimar_city_of_monuments',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Irrisen Land Of Eternal Winter': {
+        'source_long': 'Irrisen, Land of Eternal Winter', 'source_short': 'ILoEW',
+        'source_web': 'http://paizo.com/products/btpy8w7f',
+        'source_date': '2013-03', 'prefix': 'ilew',
+        'subdir': 'paizo/campaign_setting/irrisen_land_of_eternal_winter',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Belkzen Hold Of The Orc Hordes': {
+        'source_long': 'Belkzen, Hold of the Orc Hordes', 'source_short': 'BHoOH',
+        'source_web': 'http://paizo.com/products/btpy97lw',
+        'source_date': '2015-05', 'prefix': 'bhoh',
+        'subdir': 'paizo/campaign_setting/belkzen_hold_of_the_orc_hordes',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Lands Of The Linnorm Kings': {
+        'source_long': 'Lands of the Linnorm Kings', 'source_short': 'LotLK',
+        'source_web': 'http://paizo.com/products/btpy8ode',
+        'source_date': '2011-11', 'prefix': 'lotlk',
+        'subdir': 'paizo/campaign_setting/lands_of_the_linnorm_kings',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Lost Kingdoms': {
+        'source_long': 'Lost Kingdoms', 'source_short': 'LK',
+        'source_web': 'http://paizo.com/products/btpy8sa7',
+        'source_date': '2012-06', 'prefix': 'lk',
+        'subdir': 'paizo/campaign_setting/lost_kingdoms',
+        'exclude_names': set(), 'existing': False,
+    },
+    'Heart of the Jungle': {
+        'source_long': 'Heart of the Jungle', 'source_short': 'HotJ',
+        'source_web': 'http://paizo.com/products/btpy8evh',
+        'source_date': '2010-07', 'prefix': 'hotj',
+        'subdir': 'paizo/campaign_setting/heart_of_the_jungle',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Chronicle Of The Righteous': {
+        'source_long': 'Chronicle of the Righteous', 'source_short': 'CotR',
+        'source_web': 'http://paizo.com/products/btpy8xe9',
+        'source_date': '2013-05', 'prefix': 'cotr',
+        'subdir': 'paizo/campaign_setting/chronicle_of_the_righteous',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Book of the Damned Volume 1': {
+        'source_long': 'Book of the Damned, Vol. 1: Princes of Darkness', 'source_short': 'BotD1',
+        'source_web': 'http://paizo.com/products/btpy8a6f',
+        'source_date': '2009-10', 'prefix': 'botd1',
+        'subdir': 'paizo/campaign_setting/book_of_the_damned_volume_1',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Book of the Damned Volume 2': {
+        'source_long': 'Book of the Damned, Vol. 2: Lords of Chaos', 'source_short': 'BotD2',
+        'source_web': 'http://paizo.com/products/btpy8hij',
+        'source_date': '2010-12', 'prefix': 'botd2',
+        'subdir': 'paizo/campaign_setting/book_of_the_damned_volume_2',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Familiar Folio': {
+        'source_long': 'Familiar Folio', 'source_short': 'FF',
+        'source_web': 'http://paizo.com/products/btpy9bx1',
+        'source_date': '2015-01', 'prefix': 'ff',
+        'subdir': 'paizo/player_companion/familiar_folio',
+        'exclude_names': set(), 'existing': True,
+    },
+    'Ultimate Magic': {
+        'source_long': 'Ultimate Magic', 'source_short': 'UM',
+        'source_web': 'http://paizo.com/products/btpy8g7s',
+        'source_date': '2011-05', 'prefix': 'um',
+        'subdir': 'paizo/roleplaying_game/ultimate_magic',
+        'exclude_names': set(), 'existing': True,
+    },
+}
+
+
+def slugify(name):
+    """Convert a source name to a filesystem-safe slug."""
+    s = name.lower()
+    s = re.sub(r"[''']", '', s)
+    s = re.sub(r'[^a-z0-9]+', '_', s)
+    s = s.strip('_')
+    return s
+
+
+def make_short_name(name):
+    """Generate a short source abbreviation from a name."""
+    words = name.split()
+    if len(words) == 1:
+        return name[:4].upper()
+    abbr = ''.join(w[0].upper() for w in words if w[0].isalpha())
+    return abbr[:5]
+
+
+def build_source_config(source_name):
+    """Build a source config for an unknown source based on naming conventions."""
+    ap_match = re.match(r'^AP\s+(\d+)$', source_name)
+    if ap_match:
+        ap_num = ap_match.group(1)
+        return {
+            'source_long': f'Pathfinder Adventure Path #{ap_num}',
+            'source_short': f'AP{ap_num}',
+            'source_web': 'http://paizo.com',
+            'source_date': '2010-01',
+            'prefix': f'ap{ap_num}',
+            'subdir': f'paizo/adventure_path/ap{ap_num}',
+            'exclude_names': set(),
+            'existing': False,
+        }
+
+    slug = slugify(source_name)
+    short = make_short_name(source_name)
+    prefix = slug[:8]
+
+    if any(kw in source_name.lower() for kw in ['tome of horrors', 'frog god']):
+        subdir = f'frog_god_games/{slug}'
+    elif any(kw in source_name.lower() for kw in ['kobold', 'midgard']):
+        subdir = f'kobold_press/{slug}'
+    else:
+        subdir = f'paizo/campaign_setting/{slug}'
+
+    return {
+        'source_long': source_name,
+        'source_short': short,
+        'source_web': 'http://paizo.com',
+        'source_date': '2010-01',
+        'prefix': prefix,
+        'subdir': subdir,
+        'exclude_names': set(),
+        'existing': False,
+    }
+
+
+def get_source_config(source_name):
+    """Get or generate config for a source."""
+    if source_name in KNOWN_SOURCE_CONFIG:
+        return KNOWN_SOURCE_CONFIG[source_name]
+    return build_source_config(source_name)
+
+
+# ─── Pcfinder Data Parsing (fallback when no d20pfsrd cache) ────────────────
+
+def parse_pcfinder_skills(skills_str):
+    """Parse pcfinder skills string like 'Perception +5, Stealth +10' into dict."""
+    if not skills_str:
+        return {}
+
+    skills = {}
+    for m in re.finditer(
+        r'([A-Z][a-zA-Z]*(?:\s+[a-zA-Z]+)*(?:\s*\([^)]+\))?)\s+([+-]?\d+)',
+        skills_str
+    ):
+        skill_name = m.group(1).strip()
+        bonus = int(m.group(2))
+        skills[skill_name] = bonus
+
+    return skills
+
+
+def parse_pcfinder_sla_string(sla_str, creature=None):
+    """Parse pcfinder SLA string into structured format compatible with build_sla_tags()."""
+    if not sla_str or not isinstance(sla_str, str):
+        return {}
+
+    result = {'entries': {}, 'cl': 0}
+
+    cl_match = re.search(r'CL\s+(\d+)', sla_str, re.IGNORECASE)
+    if cl_match:
+        result['cl'] = int(cl_match.group(1))
+    elif creature:
+        result['cl'] = creature.get('numericHitDice', 1)
+
+    if result['cl'] == 0:
+        return {}
+
+    lines = re.split(r'[;\n]', sla_str)
+
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+
+        freq = None
+        spells_part = None
+
+        m = re.match(r'(?:at\s+will|At\s+Will)\s*[\u2014\u2013\-]\s*(.+)', line, re.IGNORECASE)
+        if m:
+            freq = 'at_will'
+            spells_part = m.group(1)
+
+        if not freq:
+            m = re.match(r'[Cc]onstant\s*[\u2014\u2013\-]\s*(.+)', line)
+            if m:
+                freq = 'constant'
+                spells_part = m.group(1)
+
+        if not freq:
+            m = re.match(r'(\d+)/day\s*[\u2014\u2013\-]\s*(.+)', line, re.IGNORECASE)
+            if m:
+                freq = f'{m.group(1)}/day'
+                spells_part = m.group(2)
+
+        if not freq:
+            m = re.match(r'(\d+)/week\s*[\u2014\u2013\-]\s*(.+)', line, re.IGNORECASE)
+            if m:
+                freq = f'{m.group(1)}/week'
+                spells_part = m.group(2)
+
+        if not freq or not spells_part:
+            continue
+
+        spells = []
+        for spell_chunk in re.split(r',\s*(?![^(]*\))', spells_part):
+            spell_chunk = spell_chunk.strip()
+            if not spell_chunk:
+                continue
+            dc = None
+            dc_match = re.search(r'\(DC\s+(\d+)\)', spell_chunk)
+            if dc_match:
+                dc = int(dc_match.group(1))
+                spell_name = re.sub(r'\s*\(DC\s+\d+\)', '', spell_chunk).strip()
+            else:
+                spell_name = spell_chunk.strip()
+            spell_name = re.sub(r'\s*\(.*?\)\s*$', '', spell_name).strip()
+            if spell_name and len(spell_name) > 1:
+                entry = {'spell': spell_name}
+                if dc:
+                    entry['dc'] = dc
+                spells.append(entry)
+
+        if spells:
+            if freq in result['entries']:
+                result['entries'][freq].extend(spells)
+            else:
+                result['entries'][freq] = spells
+
+    if not result['entries']:
+        return {}
+
+    return {'slas': result}
+
+
+def get_effective_d20_data(creature, d20_cache):
+    """Get d20pfsrd data or build equivalent from pcfinder creature data."""
+    d20_data = d20_cache.get(creature['name']) if d20_cache else None
+
+    if d20_data:
+        return d20_data
+
+    # Build from pcfinder data
+    synthetic = {}
+
+    skills_str = creature.get('skills', '')
+    if skills_str:
+        synthetic['skills'] = parse_pcfinder_skills(skills_str)
+
+    feats = creature.get('feats', [])
+    if feats:
+        synthetic['feats'] = feats
+
+    langs = creature.get('languages', [])
+    if langs:
+        synthetic['languages'] = langs
+
+    sla_str = creature.get('spellLikeAbilities', '')
+    if sla_str:
+        sla_data = parse_pcfinder_sla_string(sla_str, creature)
+        if sla_data:
+            synthetic.update(sla_data)
+
+    return synthetic if synthetic else None
 
 
 # ─── Helper Functions ────────────────────────────────────────────────────────
@@ -719,7 +1142,7 @@ def generate_race_line(creature, config, d20_data=None):
     if d20_data and d20_data.get('languages'):
         langs = [l for l in d20_data['languages'] if l and len(l) > 1]
         if langs:
-            parts.append('LANGAUTO:' + ','.join(langs))
+            parts.append('AUTO:LANG|' + '|'.join(langs))
 
     # BaseSize fact
     parts.append(f'FACT:BaseSize|{size_code}')
@@ -933,49 +1356,96 @@ def generate_racial_traits_line(creature, d20_data=None):
 
 # ─── File Writers ────────────────────────────────────────────────────────────
 
-def write_races_file(creatures, config, output_dir, d20_cache=None):
-    """Write the bN_races.lst file."""
+def get_source_long(config):
+    """Get the source_long field from config, supporting both legacy and new format."""
+    return config.get('source_long') or config.get('source_prefix', '')
+
+
+def write_races_file(creatures, config, output_dir, d20_cache=None, append=False):
+    """Write or append to the {prefix}_races.lst file."""
     d20_cache = d20_cache or {}
     prefix = config['prefix']
+    source_long = get_source_long(config)
     filepath = os.path.join(output_dir, f'{prefix}_races.lst')
 
-    lines = []
-    lines.append(f'SOURCELONG:{config["source_prefix"]}\tSOURCESHORT:{config["source_short"]}\tSOURCEWEB:{config["source_web"]}\tSOURCEDATE:{config["source_date"]}')
-    lines.append('')
-
+    new_lines = []
     for creature in sorted(creatures, key=lambda c: c['name']):
-        d20_data = d20_cache.get(creature['name'])
-        lines.append(generate_race_line(creature, config, d20_data))
+        d20_data = get_effective_d20_data(creature, d20_cache)
+        new_lines.append(generate_race_line(creature, config, d20_data))
 
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(lines) + '\n')
+    if append and os.path.exists(filepath):
+        # Append auto-generated block to existing file
+        existing = ''
+        with open(filepath, 'r', encoding='utf-8') as f:
+            existing = f.read()
 
-    print(f"  Wrote {len(creatures)} races to {filepath}")
+        marker = '###Block: Monster Races (auto-generated)'
+        if marker in existing:
+            existing = existing[:existing.index(marker)].rstrip()
+
+        block = ['\n', marker, '']
+        block.extend(new_lines)
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(existing.rstrip() + '\n' + '\n'.join(block) + '\n')
+    else:
+        lines = []
+        lines.append(f'SOURCELONG:{source_long}\tSOURCESHORT:{config["source_short"]}\tSOURCEWEB:{config["source_web"]}\tSOURCEDATE:{config["source_date"]}')
+        lines.append('')
+        lines.extend(new_lines)
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(lines) + '\n')
+
+    action = "Appended" if append else "Wrote"
+    print(f"  {action} {len(creatures)} races to {filepath}")
 
 
-def write_kits_file(creatures, config, output_dir, d20_cache=None):
-    """Write the bN_kits_race.lst file."""
+def write_kits_file(creatures, config, output_dir, d20_cache=None, append=False):
+    """Write or append to the {prefix}_kits_race.lst file."""
     d20_cache = d20_cache or {}
     prefix = config['prefix']
+    source_long = get_source_long(config)
     filepath = os.path.join(output_dir, f'{prefix}_kits_race.lst')
 
-    lines = []
-    lines.append(f'SOURCELONG:{config["source_prefix"]}\tSOURCESHORT:{config["source_short"]}\tSOURCEWEB:{config["source_web"]}\tSOURCEDATE:{config["source_date"]}')
-    lines.append('')
-
+    new_blocks = []
     for creature in sorted(creatures, key=lambda c: c['name']):
-        d20_data = d20_cache.get(creature['name'])
-        lines.append(generate_kit_block(creature, config, d20_data))
+        d20_data = get_effective_d20_data(creature, d20_cache)
+        new_blocks.append(generate_kit_block(creature, config, d20_data))
+
+    if append and os.path.exists(filepath):
+        existing = ''
+        with open(filepath, 'r', encoding='utf-8') as f:
+            existing = f.read()
+
+        marker = '###Block: Monster Kits (auto-generated)'
+        if marker in existing:
+            existing = existing[:existing.index(marker)].rstrip()
+
+        block = ['\n', marker, '']
+        for b in new_blocks:
+            block.append(b)
+            block.append('')
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(existing.rstrip() + '\n' + '\n'.join(block) + '\n')
+    else:
+        lines = []
+        lines.append(f'SOURCELONG:{source_long}\tSOURCESHORT:{config["source_short"]}\tSOURCEWEB:{config["source_web"]}\tSOURCEDATE:{config["source_date"]}')
         lines.append('')
+        for b in new_blocks:
+            lines.append(b)
+            lines.append('')
 
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(lines) + '\n')
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(lines) + '\n')
 
-    print(f"  Wrote {len(creatures)} kits to {filepath}")
+    action = "Appended" if append else "Wrote"
+    print(f"  {action} {len(creatures)} kits to {filepath}")
 
 
 def append_abilities_file(creatures, config, output_dir, d20_cache=None):
-    """Append Racial Traits entries to existing bN_abilities_race.lst."""
+    """Append Racial Traits entries to existing {prefix}_abilities_race.lst."""
     d20_cache = d20_cache or {}
     prefix = config['prefix']
     filepath = os.path.join(output_dir, f'{prefix}_abilities_race.lst')
@@ -993,7 +1463,7 @@ def append_abilities_file(creatures, config, output_dir, d20_cache=None):
     new_lines.append('')
 
     for creature in sorted(creatures, key=lambda c: c['name']):
-        d20_data = d20_cache.get(creature['name'])
+        d20_data = get_effective_d20_data(creature, d20_cache)
         new_lines.append(generate_racial_traits_line(creature, d20_data))
 
     # Remove any previous auto-generated block
@@ -1010,23 +1480,36 @@ def append_abilities_file(creatures, config, output_dir, d20_cache=None):
 def update_pcc_file(config, output_dir):
     """Update the PCC file to reference new monster files."""
     prefix = config['prefix']
-    pcc_path = os.path.join(output_dir, f'_bestiary_{config["dir"].split("_")[1]}.pcc')
+    source_long = get_source_long(config)
 
-    if not os.path.exists(pcc_path):
-        # Try alternate naming
-        pcc_path = os.path.join(output_dir, f'_{config["dir"]}.pcc')
+    # Legacy bestiary naming
+    if 'dir' in config:
+        pcc_path = os.path.join(output_dir, f'_bestiary_{config["dir"].split("_")[1]}.pcc')
+        if not os.path.exists(pcc_path):
+            pcc_path = os.path.join(output_dir, f'_{config["dir"]}.pcc')
+    else:
+        pcc_path = None
 
-    if not os.path.exists(pcc_path):
-        print(f"  WARNING: PCC file not found at {pcc_path}", file=sys.stderr)
-        return
+    # Generic: find any .pcc file in the directory
+    if not pcc_path or not os.path.exists(pcc_path):
+        pcc_files = [f for f in os.listdir(output_dir) if f.endswith('.pcc')]
+        if pcc_files:
+            pcc_path = os.path.join(output_dir, pcc_files[0])
+        else:
+            print(f"  WARNING: No PCC file found in {output_dir}", file=sys.stderr)
+            return
 
     with open(pcc_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
     # Rename CAMPAIGN if it still says "Only Player Options"
     content = content.replace(
-        f'CAMPAIGN:{config["source_prefix"]} (Only Player Options Implemented)',
-        f'CAMPAIGN:{config["source_prefix"]}'
+        f'CAMPAIGN:{source_long} (Only Player Options Implemented)',
+        f'CAMPAIGN:{source_long}'
+    )
+    content = content.replace(
+        f'CAMPAIGN:{source_long} (Player Options Only)',
+        f'CAMPAIGN:{source_long}'
     )
 
     # Check if race/kit references already exist
@@ -1035,7 +1518,6 @@ def update_pcc_file(config, output_dir):
 
     if race_ref in content:
         print(f"  PCC already contains {race_ref}, skipping update")
-        # Still write the CAMPAIGN rename if changed
         with open(pcc_path, 'w', encoding='utf-8') as f:
             f.write(content)
         return
@@ -1044,20 +1526,65 @@ def update_pcc_file(config, output_dir):
     insert_marker = '# ENTRY DATE'
     if insert_marker in content:
         idx = content.index(insert_marker)
-        # Find start of line
         line_start = content.rfind('\n', 0, idx)
         insert_point = line_start if line_start >= 0 else idx
 
         new_refs = f'\n{race_ref}\n{kit_ref}\n\n'
         content = content[:insert_point] + new_refs + content[insert_point:]
     else:
-        # Append at end
         content = content.rstrip() + f'\n\n{race_ref}\n{kit_ref}\n'
 
     with open(pcc_path, 'w', encoding='utf-8') as f:
         f.write(content)
 
     print(f"  Updated PCC: {pcc_path}")
+
+
+def create_pcc_file(config, output_dir):
+    """Create a new PCC file for a source that doesn't have one."""
+    source_long = get_source_long(config)
+    prefix = config['prefix']
+    slug = slugify(source_long)
+    pcc_path = os.path.join(output_dir, f'{slug}.pcc')
+
+    publisher_long = config.get('publisher_long', 'Paizo Inc.')
+    publisher_short = config.get('publisher_short', 'Paizo')
+    pcc_type = config.get('pcc_type', 'Paizo Publishing.Pathfinder RPG')
+
+    content = f"""CAMPAIGN:{source_long}
+KEY:{source_long} ~ Creatures
+GAMEMODE:Pathfinder|Pathfinder_PFS
+TYPE:{pcc_type}
+STATUS:ALPHA
+GENRE:Fantasy
+BOOKTYPE:Supplement
+SETTING:Pathfinder
+PRECAMPAIGN:1,INCLUDESBOOKTYPE=Core Rules
+PRECAMPAIGN:1,INCLUDES=Bestiary,INCLUDES=Bestiary ~ Player Options Only
+PUBNAMELONG:{publisher_long}
+PUBNAMESHORT:{publisher_short}
+PUBNAMEWEB:{config['source_web']}
+SOURCELONG:{source_long}
+SOURCESHORT:{config['source_short']}
+SOURCEWEB:{config['source_web']}
+SOURCEDATE:{config['source_date']}
+RANK:{config['source_date'].replace('-', '')}
+ISOGL:YES
+
+INFOTEXT:This dataset uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This dataset is not published, endorsed, or specifically approved by Paizo Publishing. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Publishing and Paizo products, please visit paizo.com.
+COPYRIGHT:Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.
+COPYRIGHT:System Reference Document Copyright 2000, Wizards of the Coast, Inc; Authors: Jonathan Tweet, Monte Cook, Skip Williams, based on material by E. Gary Gygax and Dave Arneson.
+COPYRIGHT:PCGen dataset conversion for "{source_long}" Copyright 2025, PCGen Data Team (auto-generated from pcfinder-csr)
+
+ABILITY:{prefix}_abilities_race.lst
+RACE:{prefix}_races.lst
+KIT:{prefix}_kits_race.lst
+"""
+
+    with open(pcc_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+    print(f"  Created PCC: {pcc_path}")
 
 
 # ─── Main ────────────────────────────────────────────────────────────────────
@@ -1072,7 +1599,7 @@ def load_creatures(source_path):
 
 
 def filter_bestiary(creatures, bestiary_num, config):
-    """Filter creatures belonging to a specific bestiary."""
+    """Filter creatures belonging to a specific bestiary (legacy mode)."""
     prefix = config['source_prefix']
     filtered = []
     for c in creatures:
@@ -1083,8 +1610,14 @@ def filter_bestiary(creatures, bestiary_num, config):
     return filtered
 
 
+def filter_by_names(creatures, creature_names):
+    """Filter pcfinder creatures by a set of names (from comparison report)."""
+    names_lower = {n.lower() for n in creature_names}
+    return [c for c in creatures if c.get('name', '').lower() in names_lower]
+
+
 def generate_bestiary(creatures, bestiary_num, pcgen_data_dir, d20_cache=None):
-    """Generate all files for one bestiary."""
+    """Generate all files for one bestiary (legacy mode)."""
     d20_cache = d20_cache or {}
     config = BESTIARY_CONFIG[bestiary_num]
     output_dir = os.path.join(pcgen_data_dir, 'pathfinder', 'paizo', 'roleplaying_game', config['dir'])
@@ -1100,7 +1633,6 @@ def generate_bestiary(creatures, bestiary_num, pcgen_data_dir, d20_cache=None):
         print("  No creatures found! Check source field format.")
         return
 
-    # Count cache hits
     cache_hits = sum(1 for c in filtered if c['name'] in d20_cache)
     print(f"  {cache_hits}/{len(filtered)} creatures have d20pfsrd scraped data")
 
@@ -1110,6 +1642,50 @@ def generate_bestiary(creatures, bestiary_num, pcgen_data_dir, d20_cache=None):
     update_pcc_file(config, output_dir)
 
     print(f"\nBestiary {bestiary_num} complete: {len(filtered)} creatures generated")
+
+
+def generate_source(source_name, creature_names, all_creatures, pcgen_data_dir, d20_cache=None):
+    """Generate LST files for a source from comparison report."""
+    d20_cache = d20_cache or {}
+    config = get_source_config(source_name)
+    output_dir = os.path.join(pcgen_data_dir, 'pathfinder', config['subdir'])
+
+    print(f"\n{'='*60}")
+    print(f"Generating: {source_name} ({len(creature_names)} creatures)")
+    print(f"{'='*60}")
+
+    # Filter pcfinder creatures to just the ones we need
+    filtered = filter_by_names(all_creatures, creature_names)
+
+    # Also apply exclusions
+    exclude = config.get('exclude_names', set())
+    if exclude:
+        filtered = [c for c in filtered if not should_exclude(c, exclude)]
+
+    if not filtered:
+        print(f"  No matching creatures found in pcfinder data for {source_name}")
+        return
+
+    print(f"  {len(filtered)} creatures to generate")
+
+    # Create output directory if needed
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Check if this is an existing directory with existing files
+    pcc_files = [f for f in os.listdir(output_dir) if f.endswith('.pcc')] if os.path.isdir(output_dir) else []
+    is_existing = bool(pcc_files)
+
+    if is_existing:
+        update_pcc_file(config, output_dir)
+    else:
+        create_pcc_file(config, output_dir)
+
+    # For existing directories, append to existing files rather than overwriting
+    write_races_file(filtered, config, output_dir, d20_cache, append=is_existing)
+    write_kits_file(filtered, config, output_dir, d20_cache, append=is_existing)
+    append_abilities_file(filtered, config, output_dir, d20_cache)
+
+    print(f"\n{source_name} complete: {len(filtered)} creatures generated in {output_dir}")
 
 
 def load_d20_cache(cache_path):
@@ -1124,20 +1700,31 @@ def load_d20_cache(cache_path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate PCGen bestiary LST files from pcfinder creatures.json')
+    parser = argparse.ArgumentParser(
+        description='Generate PCGen LST files from pcfinder creatures.json')
     parser.add_argument('--source', required=True, help='Path to creatures.json')
     parser.add_argument('--pcgen-data', default=None, help='Path to PCGen data/ directory')
-    parser.add_argument('--bestiary', type=int, nargs='+', default=[5, 6], choices=[5, 6],
-                        help='Which bestiaries to generate (default: 5 6)')
     parser.add_argument('--cache', default=None,
                         help='Path to d20pfsrd_cache.json (scraped feats/skills/SLAs)')
+
+    # Legacy bestiary mode
+    parser.add_argument('--bestiary', type=int, nargs='+', choices=[5, 6],
+                        help='Legacy mode: which bestiaries to generate')
+
+    # New source mode
+    parser.add_argument('--sources', nargs='+',
+                        help='Source names to generate (from comparison report)')
+    parser.add_argument('--all', action='store_true',
+                        help='Generate all sources from comparison report')
+    parser.add_argument('--comparison', default=None,
+                        help='Path to creature_comparison.json (from compare_creatures.py)')
+
     args = parser.parse_args()
 
     # Determine PCGen data directory
     if args.pcgen_data:
         pcgen_data = args.pcgen_data
     else:
-        # Default: assume script is in pcgen-seb/scripts/
         script_dir = os.path.dirname(os.path.abspath(__file__))
         pcgen_data = os.path.join(os.path.dirname(script_dir), 'data')
 
@@ -1148,8 +1735,53 @@ def main():
     creatures = load_creatures(args.source)
     d20_cache = load_d20_cache(args.cache)
 
-    for bn in args.bestiary:
-        generate_bestiary(creatures, bn, pcgen_data, d20_cache)
+    # New source mode (comparison-based)
+    if args.all or args.sources:
+        comparison_path = args.comparison
+        if not comparison_path:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            comparison_path = os.path.join(script_dir, 'creature_comparison.json')
+
+        if not os.path.exists(comparison_path):
+            print(f"ERROR: Comparison report not found: {comparison_path}", file=sys.stderr)
+            print("  Run compare_creatures.py first to generate it.", file=sys.stderr)
+            sys.exit(1)
+
+        print(f"Loading comparison report from {comparison_path}...")
+        with open(comparison_path, 'r', encoding='utf-8') as f:
+            comparison = json.load(f)
+
+        if args.all:
+            sources_to_generate = sorted(comparison.keys())
+        else:
+            sources_to_generate = args.sources
+            # Validate
+            for s in sources_to_generate:
+                if s not in comparison:
+                    print(f"WARNING: Source '{s}' not found in comparison report", file=sys.stderr)
+
+        total_creatures = 0
+        for source_name in sources_to_generate:
+            if source_name not in comparison:
+                continue
+            creature_list = comparison[source_name]
+            creature_names = [c['name'] for c in creature_list]
+            generate_source(source_name, creature_names, creatures, pcgen_data, d20_cache)
+            total_creatures += len(creature_names)
+
+        print(f"\n{'='*60}")
+        print(f"TOTAL: Generated {total_creatures} creatures across {len(sources_to_generate)} sources")
+        print(f"{'='*60}")
+
+    # Legacy bestiary mode
+    elif args.bestiary:
+        for bn in args.bestiary:
+            generate_bestiary(creatures, bn, pcgen_data, d20_cache)
+
+    # Default: legacy mode with B5/B6
+    else:
+        for bn in [5, 6]:
+            generate_bestiary(creatures, bn, pcgen_data, d20_cache)
 
     print("\nDone!")
 

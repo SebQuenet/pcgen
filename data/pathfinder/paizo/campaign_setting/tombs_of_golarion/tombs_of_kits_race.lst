@@ -1,0 +1,23 @@
+SOURCELONG:Tombs Of Golarion	SOURCESHORT:TOG	SOURCEWEB:http://paizo.com	SOURCEDATE:2010-01
+
+STARTPACK:Gravitic Globe Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Gravitic Globe],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Gravitic Globe	!PRERACE:1,%
+NAME:Gravitic Globe
+STAT:STR=10|DEX=10|WIS=10|CHA=10
+
+STARTPACK:Prismatic Orrery Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Prismatic Orrery],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Prismatic Orrery	!PRERACE:1,%
+NAME:Prismatic Orrery
+STAT:STR=10|DEX=10|WIS=10|CHA=10
+SKILL:Perception	RANK:9
+
+STARTPACK:Toy Golem Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Toy Golem],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Toy Golem	!PRERACE:1,%
+NAME:Toy Golem
+STAT:STR=10|DEX=10|WIS=10|CHA=10
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Lightning Reflexes
+

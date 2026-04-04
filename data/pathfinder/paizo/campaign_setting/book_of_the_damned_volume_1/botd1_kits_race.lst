@@ -148,3 +148,44 @@ GEAR:Trident			LOCATION:Equipped	EQMOD:Special Quality ~ Masterwork ~ Weapon
 GEAR:Net		SIZE:PC	LOCATION:Equipped
 
 #Languages Celestial, Draconic, Infernal; telepathy 100 ft.
+
+
+###Block: Monster Kits (auto-generated)
+
+STARTPACK:Lesser Host Devil Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Lesser Host Devil],[!PRERACE:1,%]
+ALIGN:LE
+RACE:Lesser Host Devil	!PRERACE:1,%
+NAME:Lesser Host Devil
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Acrobatics	RANK:3
+SKILL:Escape Artist	RANK:3
+SKILL:Fly	RANK:4
+SKILL:Perception	RANK:4
+SKILL:Stealth	RANK:4
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=FEAT|Hover
+
+STARTPACK:Oitos Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Oitos],[!PRERACE:1,%]	SOURCEPAGE:p.249
+ALIGN:LE
+RACE:Oitos	!PRERACE:1,%
+NAME:Oitos
+STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+SKILL:Appraise	RANK:13
+SKILL:Bluff	RANK:13
+SKILL:Craft (any one)	RANK:13
+SKILL:Diplomacy	RANK:13
+SKILL:Fly	RANK:6
+SKILL:Intimidate	RANK:13
+SKILL:Knowledge (Planes)	RANK:13
+SKILL:Perception	RANK:13
+SKILL:Sense Motive	RANK:13
+SKILL:Spellcraft	RANK:13
+SKILL:Stealth	RANK:13
+ABILITY:CATEGORY=FEAT|Combat Expertise
+ABILITY:CATEGORY=FEAT|Combat Reflexes
+ABILITY:CATEGORY=FEAT|Improved Critical (claw)
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Improved Trip
+ABILITY:CATEGORY=FEAT|Iron Will
+ABILITY:CATEGORY=FEAT|Lightning Reflexes
+
