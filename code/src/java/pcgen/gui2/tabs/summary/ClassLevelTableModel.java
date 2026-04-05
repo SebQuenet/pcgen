@@ -21,10 +21,6 @@ package pcgen.gui2.tabs.summary;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,11 +28,12 @@ import javax.swing.AbstractCellEditor;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.JTableHeader;
@@ -54,11 +51,12 @@ import pcgen.facade.core.CharacterLevelsFacade.HitPointListener;
 import pcgen.facade.util.event.ListEvent;
 import pcgen.facade.util.event.ListListener;
 import pcgen.gui2.tabs.Utilities;
+import pcgen.gui2.util.FilterableListPanel;
 import pcgen.gui2.util.SignIcon.Sign;
 import pcgen.gui2.util.table.TableCellUtilities;
 
 public class ClassLevelTableModel extends AbstractTableModel implements ListListener<CharacterLevelFacade>,
-		ItemListener, PropertyChangeListener, HitPointListener, ClassListener
+		ListSelectionListener, HitPointListener, ClassListener
 {
 
 	private CharacterLevelsFacade levels;
@@ -66,10 +64,10 @@ public class ClassLevelTableModel extends AbstractTableModel implements ListList
 	private CharacterFacade character;
 	private Editor editor = new Editor();
 	private Editor renderer = new Editor();
-	private JComboBox classComboBox;
+	private FilterableListPanel<PCClass> classSelection;
 	private JTable classTable;
 
-	public ClassLevelTableModel(CharacterFacade character, JTable table, JComboBox comboBox)
+	public ClassLevelTableModel(CharacterFacade character, JTable table, FilterableListPanel<PCClass> classSelection)
 	{
 		super();
 		this.character = character;
@@ -79,7 +77,7 @@ public class ClassLevelTableModel extends AbstractTableModel implements ListList
 		levels.addListListener(this);
 		levels.addClassListener(this);
 		levels.addHitPointListener(this);
-		this.classComboBox = comboBox;
+		this.classSelection = classSelection;
 		this.classTable = table;
 	}
 
@@ -107,14 +105,12 @@ public class ClassLevelTableModel extends AbstractTableModel implements ListList
 		classTable.setDefaultRenderer(Object.class, renderer);
 		classTable.setDefaultRenderer(Integer.class, new TableCellUtilities.AlignRenderer(SwingConstants.CENTER));
 		classTable.setDefaultEditor(Object.class, editor);
-		classComboBox.addItemListener(this);
-		classComboBox.addPropertyChangeListener("model", this);
+		classSelection.addListSelectionListener(this);
 	}
 
 	public void uninstall()
 	{
-		classComboBox.removeItemListener(this);
-		classComboBox.removePropertyChangeListener("model", this);
+		classSelection.removeListSelectionListener(this);
 	}
 
 	private void resetLevelMap()
@@ -220,18 +216,12 @@ public class ClassLevelTableModel extends AbstractTableModel implements ListList
 	}
 
 	@Override
-	public void itemStateChanged(ItemEvent e)
+	public void valueChanged(ListSelectionEvent e)
 	{
-		if (e.getStateChange() == ItemEvent.SELECTED)
+		if (!e.getValueIsAdjusting())
 		{
 			fireTableRowsUpdated(levels.getSize(), levels.getSize());
 		}
-	}
-
-	@Override
-	public void propertyChange(PropertyChangeEvent evt)
-	{
-		fireTableRowsUpdated(levels.getSize(), levels.getSize());
 	}
 
 	@Override
@@ -306,7 +296,7 @@ public class ClassLevelTableModel extends AbstractTableModel implements ListList
 				cellPanel.add(Box.createHorizontalGlue());
 				cellPanel.add(cellLabel);
 				cellPanel.add(Box.createHorizontalStrut(3));
-				addLevelButton.setEnabled(classComboBox.getSelectedItem() != null);
+				addLevelButton.setEnabled(classSelection.getSelectedItem() != null);
 				cellPanel.add(addLevelButton);
 			}
 			else
@@ -322,7 +312,7 @@ public class ClassLevelTableModel extends AbstractTableModel implements ListList
 		{
 			if (e.getSource() == addLevelButton)
 			{
-				PCClass c = (PCClass) classComboBox.getSelectedItem();
+				PCClass c = classSelection.getSelectedItem();
 				if (c != null)
 				{
 					character.addCharacterLevels(new PCClass[]{c});

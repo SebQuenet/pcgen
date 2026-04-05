@@ -56,7 +56,7 @@ public class McpSessionManager
 		return null;
 	}
 
-	public synchronized String loadSources(String gameModeName, List<String> campaignKeys)
+	public synchronized LoadSourcesResult loadSources(String gameModeName, List<String> campaignKeys)
 	{
 		GameMode gameMode = findGameMode(gameModeName);
 		if (gameMode == null)
@@ -78,11 +78,19 @@ public class McpSessionManager
 			throw new IllegalArgumentException("No valid campaigns found for keys: " + campaignKeys);
 		}
 
-		String canonicalKey = gameModeName + ":" + campaignKeys.stream().sorted().collect(Collectors.joining(","));
+		// Auto-resolve prerequisites
+		CampaignDependencyResolver.ResolvedCampaigns resolved =
+			CampaignDependencyResolver.resolve(campaigns, getSupportedCampaigns(gameMode));
+		campaigns = new ArrayList<>(resolved.getCampaigns());
+
+		String canonicalKey = gameModeName + ":" + campaigns.stream()
+			.map(Campaign::getKeyName)
+			.sorted()
+			.collect(Collectors.joining(","));
 
 		if (canonicalKey.equals(currentSourceSetId) && currentDataSet != null)
 		{
-			return currentSourceSetId;
+			return new LoadSourcesResult(currentSourceSetId, resolved);
 		}
 
 		McpUIDelegate delegate = new McpUIDelegate();
@@ -92,7 +100,32 @@ public class McpSessionManager
 		currentDataSet = loader.getDataSetFacade();
 		currentSourceSetId = canonicalKey;
 
-		return currentSourceSetId;
+		return new LoadSourcesResult(currentSourceSetId, resolved);
+	}
+
+	/**
+	 * Result of loading sources, including information about auto-resolved dependencies.
+	 */
+	public static final class LoadSourcesResult
+	{
+		private final String sourceSetId;
+		private final CampaignDependencyResolver.ResolvedCampaigns resolved;
+
+		LoadSourcesResult(String sourceSetId, CampaignDependencyResolver.ResolvedCampaigns resolved)
+		{
+			this.sourceSetId = sourceSetId;
+			this.resolved = resolved;
+		}
+
+		public String getSourceSetId()
+		{
+			return sourceSetId;
+		}
+
+		public CampaignDependencyResolver.ResolvedCampaigns getResolved()
+		{
+			return resolved;
+		}
 	}
 
 	public DataSetFacade getCurrentDataSet()

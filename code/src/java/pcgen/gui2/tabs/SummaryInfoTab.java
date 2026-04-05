@@ -30,6 +30,8 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Collection;
@@ -87,7 +89,6 @@ import pcgen.gui2.dialog.RandomNameDialog;
 import pcgen.gui2.dialog.SinglePrefDialog;
 import pcgen.gui2.prefs.CharacterStatsPanel;
 import pcgen.gui2.tabs.models.CharacterComboBoxModel;
-import pcgen.gui2.tabs.models.DeferredCharacterComboBoxModel;
 import pcgen.gui2.tabs.models.FormattedFieldHandler;
 import pcgen.gui2.tabs.models.TextFieldHandler;
 import pcgen.gui2.tabs.summary.ClassLevelTableModel;
@@ -95,7 +96,7 @@ import pcgen.gui2.tabs.summary.InfoPaneHandler;
 import pcgen.gui2.tabs.summary.LanguageTableModel;
 import pcgen.gui2.tabs.summary.StatTableModel;
 import pcgen.gui2.tools.Icons;
-import pcgen.gui2.util.FacadeComboBoxModel;
+import pcgen.gui2.util.FilterableListPanel;
 import pcgen.gui2.util.FontManipulation;
 import pcgen.gui2.util.ManagedField;
 import pcgen.gui2.util.SignIcon;
@@ -141,9 +142,9 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 	private final JComboBox handsComboBox;
 	private final JComboBox alignmentComboBox;
 	private final JComboBox deityComboBox;
-	private final JComboBox raceComboBox;
+	private final FilterableListPanel<Race> raceListPanel;
 	private final JComboBox ageComboBox;
-	private final JComboBox classComboBox;
+	private final FilterableListPanel<PCClass> classListPanel;
 	private final InfoBoxRenderer infoBoxRenderer;
 	private final ClassBoxRenderer classBoxRenderer;
 	private final JButton generateRollsButton;
@@ -190,9 +191,9 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		this.handsComboBox = new JComboBox<>();
 		this.alignmentComboBox = new JComboBox<>();
 		this.deityComboBox = new JComboBox<>();
-		this.raceComboBox = new JComboBox<>();
+		this.raceListPanel = new FilterableListPanel<>();
 		this.ageComboBox = new JComboBox<>();
-		this.classComboBox = new JComboBox<>();
+		this.classListPanel = new FilterableListPanel<>();
 		this.tabLabelField = new JTextField();
 		this.ageField = new JFormattedTextField(NumberFormat.getIntegerInstance());
 		this.generateRollsButton = new JButton();
@@ -232,8 +233,8 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		setPanelTitle(basicsPanel, LanguageBundle.getString("in_sumCharacterBasics")); //$NON-NLS-1$
 		basicsPanel.setLayout(new GridBagLayout());
 		deityComboBox.setRenderer(infoBoxRenderer);
-		raceComboBox.setRenderer(infoBoxRenderer);
-		classComboBox.setRenderer(classBoxRenderer);
+		raceListPanel.setCellRenderer(infoBoxRenderer);
+		classListPanel.setCellRenderer(classBoxRenderer);
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.weightx = 0.1;
 		gbc.weighty = 0.7;
@@ -354,9 +355,6 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		nextlevelField.setEnabled(false);
 		expmodField.setHorizontalAlignment(SwingConstants.RIGHT);
 
-		raceComboBox.setPrototypeDisplayValue("PrototypeDisplayValue"); //$NON-NLS-1$
-		classComboBox.setPrototypeDisplayValue("PrototypeDisplayValue"); //$NON-NLS-1$
-
 		expaddButton.setMargin(new Insets(0, 8, 0, 8));
 		expsubtractButton.setMargin(new Insets(0, 8, 0, 8));
 		hpButton.setMargin(new Insets(0, 0, 0, 0));
@@ -383,12 +381,13 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		 */
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.fill = GridBagConstraints.BOTH;
-		gbc.insets = new Insets(racePanelInsets.top, racePanelInsets.left, 0, 0);
-		gbc.gridwidth = 2;
-		rightPanel.add(raceLabel, gbc);
-		gbc.insets = new Insets(racePanelInsets.top, 1, 1, racePanelInsets.right);
+		gbc.insets = new Insets(racePanelInsets.top, racePanelInsets.left, 0, racePanelInsets.right);
 		gbc.gridwidth = GridBagConstraints.REMAINDER;
-		rightPanel.add(raceComboBox, gbc);
+		rightPanel.add(raceLabel, gbc);
+		gbc.insets = new Insets(1, racePanelInsets.left, 1, racePanelInsets.right);
+		gbc.weighty = 0.3;
+		rightPanel.add(raceListPanel, gbc);
+		gbc.weighty = 0;
 		gbc.insets = new Insets(0, racePanelInsets.left, 0, 1);
 		gbc.gridwidth = 1;
 		rightPanel.add(ageLabel, gbc);
@@ -402,12 +401,13 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		/*
 		 * classPanel
 		 */
-		gbc.gridwidth = 2;
-		gbc.insets = new Insets(classPanelInsets.top, classPanelInsets.left, 0, 0);
-		rightPanel.add(classLabel, gbc);
 		gbc.gridwidth = GridBagConstraints.REMAINDER;
-		gbc.insets = new Insets(classPanelInsets.top, 0, 0, classPanelInsets.right);
-		rightPanel.add(classComboBox, gbc);
+		gbc.insets = new Insets(classPanelInsets.top, classPanelInsets.left, 0, classPanelInsets.right);
+		rightPanel.add(classLabel, gbc);
+		gbc.insets = new Insets(1, classPanelInsets.left, 1, classPanelInsets.right);
+		gbc.weighty = 0.2;
+		rightPanel.add(classListPanel, gbc);
+		gbc.weighty = 0;
 
 		gbc.weighty = 1;
 		gbc.fill = GridBagConstraints.BOTH;
@@ -462,11 +462,11 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		gbc = new GridBagConstraints();
 		gbc.gridx = gbc.gridy = 0;
 		gbc.gridwidth = GridBagConstraints.REMAINDER;
-		gbc.gridheight = 3;
+		gbc.gridheight = 4;
 		gbc.fill = GridBagConstraints.BOTH;
 		rightPanel.add(racePanel, gbc);
 
-		gbc.gridy = 3;
+		gbc.gridy = 4;
 		gbc.gridheight = GridBagConstraints.REMAINDER;
 		rightPanel.add(classPanel, gbc);
 	}
@@ -598,13 +598,13 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		}
 		else if ("Race".equals(fieldName)) //$NON-NLS-1$
 		{
-			raceComboBox.requestFocusInWindow();
-			highlightBorder(raceComboBox);
+			raceListPanel.getFilterField().requestFocusInWindow();
+			highlightBorder(raceListPanel);
 		}
 		else if ("Class".equals(fieldName)) //$NON-NLS-1$
 		{
-			classComboBox.requestFocusInWindow();
-			highlightBorder(classComboBox);
+			classListPanel.getFilterField().requestFocusInWindow();
+			highlightBorder(classListPanel);
 		}
 		else if ("Languages".equals(fieldName)) //$NON-NLS-1$
 		{
@@ -648,7 +648,7 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 
 		models.put(RandomNameAction.class,
                 new RandomNameAction(character, (JFrame) SwingUtilities.getWindowAncestor(this)));
-		models.put(ClassLevelTableModel.class, new ClassLevelTableModel(character, classLevelTable, classComboBox));
+		models.put(ClassLevelTableModel.class, new ClassLevelTableModel(character, classLevelTable, classListPanel));
 
 		models.put(GenerateRollsAction.class, new GenerateRollsAction(character));
 		models.put(RollMethodAction.class,
@@ -877,11 +877,11 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		private final CharacterComboBoxModel<Handed> handsModel;
 		private CharacterComboBoxModel<PCAlignment> alignmentModel;
 		private CharacterComboBoxModel<Deity> deityModel;
-		private final DeferredCharacterComboBoxModel<Race> raceModel;
 		private final CharacterComboBoxModel<String> ageCatModel;
-		private final FacadeComboBoxModel<PCClass> classModel;
 		private final CharacterComboBoxModel<String> xpTableModel;
 		private final CharacterComboBoxModel<String> characterTypeModel;
+		private ReferenceListener<Race> raceRefListener;
+		private FocusListener raceFocusListener;
 
 		ComboBoxModelHandler(final CharacterFacade character)
 		{
@@ -958,18 +958,6 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 				};
 			}
 
-			//initialize race model
-			raceModel = new DeferredCharacterComboBoxModel<>(dataset.getRaces(), character.getRaceRef())
-			{
-
-				@Override
-				public void commitSelectedItem(Object anItem)
-				{
-					character.setRace((Race) anItem);
-				}
-
-			};
-
 			//initialize age category model
 			ageCatModel = new CharacterComboBoxModel<>(
 					character.getAgeCategories(),
@@ -996,8 +984,6 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 				}
 
 			};
-
-			classModel = new FacadeComboBoxModel<>(dataset.getClasses(), null);
 		}
 
 		public void install()
@@ -1020,16 +1006,60 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 			{
 				deityComboBox.setModel(deityModel);
 			}
-			raceComboBox.setModel(raceModel);
-			raceComboBox.addFocusListener(raceModel);
 			ageComboBox.setModel(ageCatModel);
-			classComboBox.setModel(classModel);
 			xpTableComboBox.setModel(xpTableModel);
+
+			//initialize race list panel
+			DataSetFacade dataset = character.getDataSet();
+			raceListPanel.setListFacade(dataset.getRaces());
+			Race currentRace = character.getRaceRef().get();
+			if (currentRace != null)
+			{
+				raceListPanel.setSelectedItem(currentRace);
+			}
+
+			raceRefListener = e -> raceListPanel.setSelectedItem(e.getNewReference());
+			character.getRaceRef().addReferenceListener(raceRefListener);
+
+			raceFocusListener = new FocusListener()
+			{
+				@Override
+				public void focusGained(FocusEvent e)
+				{
+					// Ignored
+				}
+
+				@Override
+				public void focusLost(FocusEvent e)
+				{
+					if (e.isTemporary())
+					{
+						return;
+					}
+					Component opposite = e.getOppositeComponent();
+					if (opposite != null && SwingUtilities.isDescendingFrom(opposite, raceListPanel))
+					{
+						return;
+					}
+					Race selected = raceListPanel.getSelectedItem();
+					if (selected != null)
+					{
+						character.setRace(selected);
+					}
+				}
+			};
+			raceListPanel.getList().addFocusListener(raceFocusListener);
+			raceListPanel.getFilterField().addFocusListener(raceFocusListener);
+
+			//initialize class list panel
+			classListPanel.setListFacade(dataset.getClasses());
 		}
 
 		public void uninstall()
 		{
-			raceComboBox.removeFocusListener(raceModel);
+			character.getRaceRef().removeReferenceListener(raceRefListener);
+			raceListPanel.getList().removeFocusListener(raceFocusListener);
+			raceListPanel.getFilterField().removeFocusListener(raceFocusListener);
 		}
 	}
 
@@ -1354,7 +1384,7 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		@Override
 		public void actionPerformed(ActionEvent e)
 		{
-			PCClass c = (PCClass) classComboBox.getSelectedItem();
+			PCClass c = classListPanel.getSelectedItem();
 			if (c != null)
 			{
 				Number levels = (Number) addLevelsField.getValue();
@@ -1375,7 +1405,7 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 			{
 				PCClass classTaken =
 						characterLevelsFacade.getClassTaken(characterLevelsFacade.getElementAt(maxLvl - 1));
-				classComboBox.setSelectedItem(classTaken);
+				classListPanel.setSelectedItem(classTaken);
 			}
 		}
 	}

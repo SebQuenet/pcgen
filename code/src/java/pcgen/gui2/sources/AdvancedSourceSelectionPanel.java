@@ -58,6 +58,7 @@ import pcgen.facade.util.ListFacades;
 import pcgen.facade.util.event.ListEvent;
 import pcgen.facade.util.event.ListListener;
 import pcgen.gui2.PCGenFrame;
+import pcgen.mcp.CampaignDependencyResolver;
 import pcgen.gui2.UIContext;
 import pcgen.gui2.UIPropertyContext;
 import pcgen.gui2.filter.FilterBar;
@@ -417,20 +418,44 @@ class AdvancedSourceSelectionPanel extends JPanel
 					{
 						if (selectedCampaigns.containsElement(camp))
 						{
-							// Already in the list - ignore
 							continue;
 						}
 						selectedCampaigns.addElement(camp);
 						if (!FacadeFactory.passesPrereqs(selectedCampaigns.getContents()))
 						{
-							String prereqDesc = FacadeFactory.getCampaignInfoFactory().getRequirementsHTMLString(camp,
-								selectedCampaigns.getContents());
-							JOptionPane.showMessageDialog(AdvancedSourceSelectionPanel.this,
-								LanguageBundle.getFormattedString("in_src_badComboMsg", //$NON-NLS-1$
-									prereqDesc),
-								LanguageBundle.getString("in_src_badComboTitle"), //$NON-NLS-1$
-								JOptionPane.INFORMATION_MESSAGE);
-							selectedCampaigns.removeElement(camp);
+							// Try to auto-resolve missing dependencies
+							CampaignDependencyResolver.ResolvedCampaigns resolved =
+								CampaignDependencyResolver.resolve(
+									selectedCampaigns.getContents(),
+									FacadeFactory.getSupportedCampaigns(gameMode));
+							List<Campaign> autoAdded = resolved.getAutoAdded();
+
+							if (!autoAdded.isEmpty())
+							{
+								for (Campaign dep : autoAdded)
+								{
+									if (!selectedCampaigns.containsElement(dep))
+									{
+										selectedCampaigns.addElement(dep);
+									}
+								}
+							}
+
+							if (!FacadeFactory.passesPrereqs(selectedCampaigns.getContents()))
+							{
+								// Still failing — revert all additions
+								for (Campaign dep : autoAdded)
+								{
+									selectedCampaigns.removeElement(dep);
+								}
+								selectedCampaigns.removeElement(camp);
+								String prereqDesc = FacadeFactory.getCampaignInfoFactory()
+									.getRequirementsHTMLString(camp, selectedCampaigns.getContents());
+								JOptionPane.showMessageDialog(AdvancedSourceSelectionPanel.this,
+									LanguageBundle.getFormattedString("in_src_badComboMsg", prereqDesc),
+									LanguageBundle.getString("in_src_badComboTitle"),
+									JOptionPane.INFORMATION_MESSAGE);
+							}
 						}
 					}
 				}

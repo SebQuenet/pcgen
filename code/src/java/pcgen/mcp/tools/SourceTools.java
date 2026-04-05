@@ -1,5 +1,7 @@
 package pcgen.mcp.tools;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +11,7 @@ import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
+import pcgen.core.Campaign;
 import pcgen.core.GameMode;
 import pcgen.mcp.McpSessionManager;
 import pcgen.mcp.serialization.FacadeSerializer;
@@ -99,8 +102,30 @@ public final class SourceTools
 				List<String> campaigns = (List<String>) args.get("campaigns");
 				try
 				{
-					String sourceSetId = session.loadSources(gameModeName, campaigns);
-					return toResult(Map.of("source_set_id", sourceSetId, "status", "loaded"));
+					McpSessionManager.LoadSourcesResult result =
+						session.loadSources(gameModeName, campaigns);
+					Map<String, Object> response = new LinkedHashMap<>();
+					response.put("source_set_id", result.getSourceSetId());
+					response.put("status", "loaded");
+
+					List<Campaign> autoAdded = result.getResolved().getAutoAdded();
+					if (!autoAdded.isEmpty())
+					{
+						List<String> addedKeys = new ArrayList<>();
+						for (Campaign c : autoAdded)
+						{
+							addedKeys.add(c.getKeyName());
+						}
+						response.put("auto_added_dependencies", addedKeys);
+					}
+
+					List<String> warnings = result.getResolved().getWarnings();
+					if (!warnings.isEmpty())
+					{
+						response.put("warnings", warnings);
+					}
+
+					return toResult(response);
 				}
 				catch (Exception e)
 				{
