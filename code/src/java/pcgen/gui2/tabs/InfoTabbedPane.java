@@ -21,7 +21,6 @@ package pcgen.gui2.tabs;
 import java.awt.Component;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -431,23 +430,13 @@ public final class InfoTabbedPane extends JTabbedPane implements CharacterSelect
 			@Override
 			public void run()
 			{
-				try
-				{
-					SwingUtilities.invokeAndWait(() -> {
-						if (!executed)
-						{
-							restoreTab(infoTab, models);
-						}
-					});
-				}
-				catch (InterruptedException | InvocationTargetException ex)
-				{
-					Logging.errorPrint("exception in InfoTabbedPane", ex);
-				}
-				finally
-				{
-					executed = true;
-				}
+				SwingUtilities.invokeLater(() -> {
+					if (!executed)
+					{
+						executed = true;
+						restoreTab(infoTab, models);
+					}
+				});
 			}
 
 		}

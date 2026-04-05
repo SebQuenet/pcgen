@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import pcgen.core.GameMode;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.SettingsHandler;
@@ -24,6 +25,8 @@ import pcgen.util.Logging;
 
 public class FreeMarkerExportHandler extends ExportHandler
 {
+	private static final Map<File, Configuration> CONFIG_CACHE = new ConcurrentHashMap<>();
+
 	/**
 	 * Constructor.  Populates the token map (a list of possible output tokens) and
 	 * sets the character sheet template we are using.
@@ -33,6 +36,23 @@ public class FreeMarkerExportHandler extends ExportHandler
 	FreeMarkerExportHandler(File templateFile)
 	{
 		super(templateFile);
+	}
+
+	private static Configuration getConfiguration(File templateDir)
+	{
+		return CONFIG_CACHE.computeIfAbsent(templateDir, dir -> {
+			Configuration cfg = new Configuration(VERSION_2_3_20);
+			try
+			{
+				cfg.setDirectoryForTemplateLoading(dir);
+			}
+			catch (IOException e)
+			{
+				Logging.errorPrint("Failed to set template directory: " + dir, e);
+			}
+			cfg.setSharedVariable("loop", new LoopDirective());
+			return cfg;
+		});
 	}
 
 	@Override
@@ -61,23 +81,15 @@ public class FreeMarkerExportHandler extends ExportHandler
 	{
 		try
 		{
-			// Set Directory for templates
-			Configuration cfg = new Configuration(VERSION_2_3_20);
-			cfg.setDirectoryForTemplateLoading(getTemplateFile().getParentFile());
+			Configuration cfg = getConfiguration(getTemplateFile().getParentFile());
 
-			// load template
+			// load template (cached by FreeMarker's Configuration)
 			Template template = cfg.getTemplate(getTemplateFile().getName());
 
-			// Configure our custom directives and functions.
-			cfg.setSharedVariable("pcstring", new PCStringDirective(aPC, this));
-			cfg.setSharedVariable("pcvar", new PCVarFunction(aPC));
-			cfg.setSharedVariable("pcboolean", new PCBooleanFunction(aPC, this));
-			cfg.setSharedVariable("pchasvar", new PCHasVarFunction(aPC, this));
-			cfg.setSharedVariable("loop", new LoopDirective());
-			cfg.setSharedVariable("equipsetloop", new EquipSetLoopDirective(aPC));
-
+			// Configure per-character directives and functions via the data model
+			// (shared variables on cfg are shared across all threads, so per-character
+			// state goes into the data model instead)
 			GameMode gamemode = SettingsHandler.getGameAsProperty().get();
-			// data-model
 			Map<String, Object> pc = OutputDB.buildDataModel(aPC.getCharID());
 			Map<String, Object> mode = OutputDB.buildModeDataModel(gamemode);
 			Map<String, Object> input = new HashMap<>();
@@ -85,6 +97,11 @@ public class FreeMarkerExportHandler extends ExportHandler
 			input.put("pc", ExportUtilities.getObjectWrapper().wrap(pc));
 			input.put("gamemode", mode);
 			input.put("gamemodename", gamemode.getName());
+			input.put("pcstring", new PCStringDirective(aPC, this));
+			input.put("pcvar", new PCVarFunction(aPC));
+			input.put("pcboolean", new PCBooleanFunction(aPC, this));
+			input.put("pchasvar", new PCHasVarFunction(aPC, this));
+			input.put("equipsetloop", new EquipSetLoopDirective(aPC));
 
 			// Process the template
 			template.process(input, outputWriter);

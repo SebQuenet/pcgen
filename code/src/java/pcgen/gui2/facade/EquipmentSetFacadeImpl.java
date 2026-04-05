@@ -888,6 +888,11 @@ public class EquipmentSetFacadeImpl implements EquipmentSetFacade, EquipmentList
 	@Override
 	public EquipmentFacade removeEquipment(EquipNode node, int quantity)
 	{
+		return removeEquipmentInternal(node, quantity, true);
+	}
+
+	private EquipmentFacade removeEquipmentInternal(EquipNode node, int quantity, boolean recalcBonuses)
+	{
 		if (node.getNodeType() != EquipNode.NodeType.EQUIPMENT)
 		{
 			return null;
@@ -942,7 +947,10 @@ public class EquipmentSetFacadeImpl implements EquipmentSetFacade, EquipmentList
 		updateTotalWeight(eqI, quantity * -1, node.getBodyStructure());
 		updateTotalQuantity(eqI, quantity * -1);
 		updateNaturalWeaponSlots();
-		theCharacter.calcActiveBonuses();
+		if (recalcBonuses)
+		{
+			theCharacter.calcActiveBonuses();
+		}
 		updatePhantomSlots();
 
 		return eqI;
@@ -971,7 +979,7 @@ public class EquipmentSetFacadeImpl implements EquipmentSetFacade, EquipmentList
 
 		for (EquipNode node : equipToBeRemoved)
 		{
-			removeEquipment(node, getQuantity(node));
+			removeEquipmentInternal(node, getQuantity(node), false);
 		}
 	}
 

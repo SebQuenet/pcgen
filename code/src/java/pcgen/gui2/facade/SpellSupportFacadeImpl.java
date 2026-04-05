@@ -717,7 +717,7 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 	 */
 	private void buildAvailableNodes()
 	{
-		availableSpellNodes.clearContents();
+		List<SpellNode> newNodes = new ArrayList<>();
 		// Scan character classes for spell classes
 		List<PCClass> classList = getCharactersSpellcastingClasses();
 
@@ -745,14 +745,14 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 							SpellNodeImpl node = new SpellNodeImpl(spellImplem, pcClass, String.valueOf(level), null);
 							if (!existingSpells.containsInList(spellImplem, node.getSpellLevel(), node))
 							{
-								// Add to list
-								availableSpellNodes.addElement(node);
+								newNodes.add(node);
 							}
 						}
 					}
 				}
 			}
 		}
+		availableSpellNodes.setContents(newNodes);
 	}
 
 	/**
@@ -786,11 +786,6 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 	 */
 	private void buildKnownPreparedNodes()
 	{
-		allKnownSpellNodes.clearContents();
-		knownSpellNodes.clearContents();
-		bookSpellNodes.clearContents();
-		preparedSpellNodes.clearContents();
-
 		// Ensure spell information is up to date
 		pc.getSpellList();
 
@@ -801,11 +796,21 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 		// Include spells from race etc
 		pobjList.add(charDisplay.getRace());
 
+		// Collect all nodes into temp lists, then set in bulk
+		List<SpellNode> allKnownList = new ArrayList<>();
+		List<SpellNode> knownList = new ArrayList<>();
+		List<SpellNode> bookList = new ArrayList<>();
+		List<SpellNode> preparedList = new ArrayList<>();
+
 		// Look at each spell on each spellcasting class
 		for (PObject pcClass : pobjList)
 		{
-			buildKnownPreparedSpellsForCDOMObject(pcClass);
+			buildKnownPreparedSpellsForCDOMObject(pcClass, allKnownList, knownList, bookList, preparedList);
 		}
+		allKnownSpellNodes.setContents(allKnownList);
+		knownSpellNodes.setContents(knownList);
+		bookSpellNodes.setContents(bookList);
+		preparedSpellNodes.setContents(preparedList);
 
 		spellBooks.clear();
 		spellBookNames.clearContents();
@@ -827,7 +832,9 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 		}
 	}
 
-	private void buildKnownPreparedSpellsForCDOMObject(CDOMObject pObject)
+	private void buildKnownPreparedSpellsForCDOMObject(CDOMObject pObject,
+		List<SpellNode> allKnownList, List<SpellNode> knownList,
+		List<SpellNode> bookList, List<SpellNode> preparedList)
 	{
 		Collection<? extends CharacterSpell> sp = charDisplay.getCharacterSpells(pObject);
 		List<CharacterSpell> cSpells = new ArrayList<>(sp);
@@ -863,20 +870,20 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 				// Add to list
 				if (isKnown)
 				{
-					allKnownSpellNodes.addElement(node);
-					knownSpellNodes.addElement(node);
+					allKnownList.add(node);
+					knownList.add(node);
 				}
 				else if (isSpellBook)
 				{
-					bookSpellNodes.addElement(node);
+					bookList.add(node);
 				}
 				else if (pObject instanceof Race)
 				{
-					allKnownSpellNodes.addElement(node);
+					allKnownList.add(node);
 				}
 				else
 				{
-					preparedSpellNodes.addElement(node);
+					preparedList.add(node);
 				}
 			}
 		}

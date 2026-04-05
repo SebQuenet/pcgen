@@ -44,6 +44,7 @@ public final class AbilityTools
 				{
 					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
 					List<Map<String, Object>> categories = new ArrayList<>();
+					java.util.Set<String> seen = new java.util.HashSet<>();
 					for (AbilityCategory cat : character.getActiveAbilityCategories())
 					{
 						Map<String, Object> catMap = new LinkedHashMap<>();
@@ -52,6 +53,27 @@ public final class AbilityTools
 						catMap.put("remaining", character.getRemainingSelections(cat));
 						catMap.put("total", character.getTotalSelections(cat));
 						categories.add(catMap);
+						seen.add(cat.getKeyName());
+					}
+					// Also include dataset categories with pool > 0 that are not
+					// in activeAbilityCategories (e.g. mythic path categories in headless mode)
+					for (AbilityCategory cat : character.getDataSet().getAbilities().getKeys())
+					{
+						if (!seen.contains(cat.getKeyName()))
+						{
+							int remaining = character.getRemainingSelections(cat);
+							int total = character.getTotalSelections(cat);
+							if (total > 0)
+							{
+								Map<String, Object> catMap = new LinkedHashMap<>();
+								catMap.put("key", cat.getKeyName());
+								catMap.put("name", cat.getDisplayName());
+								catMap.put("remaining", remaining);
+								catMap.put("total", total);
+								categories.add(catMap);
+								seen.add(cat.getKeyName());
+							}
+						}
 					}
 					return toResult(categories);
 				}
@@ -278,6 +300,15 @@ public final class AbilityTools
 	private static AbilityCategory findCategory(CharacterFacade character, String categoryKey)
 	{
 		for (AbilityCategory cat : character.getActiveAbilityCategories())
+		{
+			if (cat.getKeyName().equalsIgnoreCase(categoryKey) || cat.getDisplayName().equalsIgnoreCase(categoryKey))
+			{
+				return cat;
+			}
+		}
+		// Fall back to all dataset categories (needed for mythic path categories
+		// that may not appear in activeAbilityCategories in headless mode)
+		for (AbilityCategory cat : character.getDataSet().getAbilities().getKeys())
 		{
 			if (cat.getKeyName().equalsIgnoreCase(categoryKey) || cat.getDisplayName().equalsIgnoreCase(categoryKey))
 			{

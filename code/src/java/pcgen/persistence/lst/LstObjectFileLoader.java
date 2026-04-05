@@ -27,6 +27,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Observable;
+import java.util.Optional;
 import java.util.Set;
 
 import pcgen.cdom.base.CDOMObject;
@@ -281,7 +282,13 @@ public abstract class LstObjectFileLoader<T extends CDOMObject> extends Observab
 		String aString;
 		try
 		{
-			aString = LstFileLoader.readFromURI(uri).get();
+			Optional<String> content = LstFileLoader.readFromURI(uri);
+			if (content.isEmpty())
+			{
+				setChanged();
+				return;
+			}
+			aString = content.get();
 		}
 		catch (PersistenceLayerException ple)
 		{

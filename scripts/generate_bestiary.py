@@ -949,10 +949,30 @@ def clean_dr(dr_raw):
     return f'{num}/{dr_type}'
 
 
+def normalize_spell_name(name):
+    """Convert spell names from natural English to PCGen convention.
+    'Greater Dispel Magic' -> 'Dispel Magic (Greater)'
+    'Lesser Restoration' -> 'Restoration (Lesser)'
+    'Mass Heal' -> 'Heal (Mass)'
+    'Communal Stoneskin' -> 'Stoneskin (Communal)'
+    """
+    for qualifier in ('Greater', 'Lesser', 'Mass', 'Communal'):
+        if name.startswith(qualifier + ' '):
+            base = name[len(qualifier) + 1:]
+            return f'{base} ({qualifier})'
+    return name
+
+
 def sanitize_name(name):
-    """Clean creature name for use as PCGen KEY."""
-    # Remove problematic characters but keep commas, parentheses, spaces
-    return name.strip()
+    """Clean creature name for use as PCGen KEY.
+    Converts comma-separated names like 'Giant, Moon Giant' to
+    parenthesized form 'Giant (Moon Giant)' since commas are
+    prohibited in PCGen keys."""
+    name = name.strip()
+    if ',' in name:
+        parts = [p.strip() for p in name.split(',', 1)]
+        name = f'{parts[0]} ({parts[1]})'
+    return name
 
 
 def get_inferred_abilities(creature):
@@ -1292,6 +1312,8 @@ def build_sla_tags(d20_data):
             spell_name = spell_name.replace('\u00e2\u0080\u0099', "'")
             # Capitalize spell name (PCGen convention: Title Case)
             spell_name = spell_name.title()
+            # Convert "Greater/Lesser/Mass X" to "X (Greater/Lesser/Mass)" (PCGen convention)
+            spell_name = normalize_spell_name(spell_name)
             dc = s.get('dc')
             if dc:
                 spell_parts.append(f'{spell_name},{dc}')

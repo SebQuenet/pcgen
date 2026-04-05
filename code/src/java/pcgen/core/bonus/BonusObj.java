@@ -19,9 +19,11 @@ package pcgen.core.bonus;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 import pcgen.base.formula.Formula;
@@ -163,6 +165,14 @@ public abstract class BonusObj extends ConcretePrereqObject implements Serializa
 	public boolean getDependsOnBonusName(final String bonusName)
 	{
 		return dependMap.containsKey("NAME|" + bonusName);
+	}
+
+	/**
+	 * @return the set of dependency keys for this bonus
+	 */
+	public Set<String> getDependsOnKeys()
+	{
+		return Collections.unmodifiableSet(dependMap.keySet());
 	}
 
 	/**

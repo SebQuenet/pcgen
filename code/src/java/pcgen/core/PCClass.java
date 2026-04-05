@@ -414,12 +414,8 @@ public class PCClass extends PObject implements InfoFacade, Cloneable
 			}
 		}
 
-		if (!aPC.isImporting())
-		{
-			aPC.calcActiveBonuses();
-			//Need to do this again if caching is re-integrated
-			//aPC.getSpellTracker().buildSpellLevelMap(newLevel);
-		}
+		// calcActiveBonuses is called by the caller (incrementClassLevel)
+		// after all levels have been processed
 
 		if ((newLevel == 1) && !aPC.isImporting() && (curLevel == 0))
 		{

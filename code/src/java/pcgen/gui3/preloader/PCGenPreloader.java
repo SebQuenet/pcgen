@@ -19,10 +19,10 @@
 package pcgen.gui3.preloader;
 
 import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
 
 import pcgen.gui3.Controllable;
 import pcgen.gui3.GuiAssertions;
-import pcgen.gui3.GuiUtility;
 import pcgen.system.PCGenTaskEvent;
 import pcgen.system.PCGenTaskListener;
 import pcgen.system.ProgressContainer;
@@ -34,7 +34,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * This is the application logic for the "Splash Screen" when loading PCGEn
+ * This is the application logic for the "Splash Screen" when loading PCGen.
  * It isn't directly the controller for the UI, but interacts the view
  * and interacts with the controller.
  * Once we're 100% on JavaFX can possibly be replaced with the native Preloader,
@@ -47,6 +47,8 @@ public class PCGenPreloader implements PCGenTaskListener, Controllable<PCGenPrel
 
 	private final FXMLLoader loader = new FXMLLoader();
 	private Stage primaryStage;
+	private volatile PCGenPreloaderController cachedController;
+	private final CountDownLatch controllerReady = new CountDownLatch(1);
 
 
 	public PCGenPreloader()
@@ -62,9 +64,12 @@ public class PCGenPreloader implements PCGenTaskListener, Controllable<PCGenPrel
 			} catch (IOException e)
 			{
 				Logging.errorPrint("failed to load preloader", e);
+				controllerReady.countDown();
 				return;
 			}
 
+			cachedController = loader.getController();
+			controllerReady.countDown();
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		});
@@ -76,15 +81,29 @@ public class PCGenPreloader implements PCGenTaskListener, Controllable<PCGenPrel
 	@Override
 	public PCGenPreloaderController getController()
 	{
-		GuiAssertions.assertIsNotOnGUIThread();
-		return GuiUtility.runOnJavaFXThreadNow(loader::getController);
+		try
+		{
+			controllerReady.await();
+		}
+		catch (InterruptedException e)
+		{
+			Thread.currentThread().interrupt();
+		}
+		return cachedController;
 	}
 
 	@Override
 	public void progressChanged(final PCGenTaskEvent event)
 	{
 		ProgressContainer task = event.getSource();
-		getController().setProgress(task.getMessage(), task.getProgress() / (double)task.getMaximum());
+		double progress = task.getProgress() / (double) task.getMaximum();
+		String message = task.getMessage();
+		Platform.runLater(() -> {
+			if (cachedController != null)
+			{
+				cachedController.setProgress(message, progress);
+			}
+		});
 	}
 
 	@Override

@@ -22,7 +22,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.StringWriter;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -32,7 +31,6 @@ import java.util.concurrent.ThreadFactory;
 
 import javax.swing.SwingUtilities;
 
-import pcgen.base.lang.UnreachableError;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.gui3.JFXPanelFromResource;
 import pcgen.gui3.SimpleHtmlPanelController;
@@ -136,15 +134,15 @@ public class HtmlSheetSupport
 			try
 			{
 				final String doc = get();
-				SwingUtilities.invokeAndWait(() -> htmlPane.getController().setHtml(doc));
+				SwingUtilities.invokeLater(() -> htmlPane.getController().setHtml(doc));
 			}
-			catch (InvocationTargetException ex)
-			{
-				throw new UnreachableError(ex);
-			}
-			catch (InterruptedException | ExecutionException ex)
+			catch (ExecutionException ex)
 			{
 				Logging.errorPrint(templateFile.getName(), ex);
+			}
+			catch (InterruptedException ex)
+			{
+				Thread.currentThread().interrupt();
 			}
 
 		}

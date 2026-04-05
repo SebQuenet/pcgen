@@ -624,17 +624,9 @@ public class SummaryInfoTab extends JPanel implements CharacterInfoTab, TodoHand
 		Border highlightBorder = BorderFactory.createLineBorder(Color.GREEN, 3);
 		comp.setBorder(highlightBorder);
 
-		SwingUtilities.invokeLater(() -> {
-			try
-			{
-				Thread.sleep(500);
-			}
-			catch (InterruptedException e)
-			{
-				// Ignored as we'll exit shortly anyway.
-			}
-			comp.setBorder(oldBorder);
-		});
+		javax.swing.Timer timer = new javax.swing.Timer(500, e -> comp.setBorder(oldBorder));
+		timer.setRepeats(false);
+		timer.start();
 	}
 
 	@Override

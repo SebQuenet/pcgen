@@ -360,16 +360,12 @@ public final class PCGIOHandler extends IOHandler
         //
         for (PCClass pcClass : currentPC.getClassSet())
         {
-            currentPC.calcActiveBonuses();
             currentPC.calculateKnownSpellsForClassLevel(pcClass);
         }
 
         //
         // need to calc the movement rates
         currentPC.adjustMoveRates();
-
-        // re-calculate all the bonuses
-        currentPC.calcActiveBonuses();
 
         // make sure we are not dirty
         currentPC.setDirty(false);

@@ -621,12 +621,8 @@ public class SourceFileLoader extends PCGenTask implements Observer
 
         classLoader.loadSubLines(context);
 
-        /*
-         * This is technically bad behavior, but we at least want to provide the
-         * hint here since we are using WeakReferences as a container for
-         * references to ensure those that are not used are not resolved.
-         */
-        System.gc(); // NOPMD
+        // WeakReferences used for unresolved references will be collected
+        // naturally by the GC — no forced gc() needed here.
     }
 
     /**

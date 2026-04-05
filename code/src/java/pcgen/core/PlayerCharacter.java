@@ -466,7 +466,10 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	private boolean[] ageSetKitSelections = new boolean[Constants.NUMBER_OF_AGESET_KIT_SELECTIONS];
 	private boolean dirtyFlag = false;
 	private int serial = 0;
+	private volatile List<? extends CDOMObject> cachedCDOMObjectList;
 	private boolean importing = false;
+	private int batchModeDepth = 0;
+	private boolean batchModeDirty = false;
 
 	// Should temp mods/bonuses be used/saved?
 	private boolean useTempMods = true;
@@ -983,6 +986,7 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		{
 			serial++;
 			cache = new ObjectCache();
+			cachedCDOMObjectList = null;
 			variableProcessor.setSerial(serial);
 			cabFacet.update(id);
 			cAvSpellFacet.update(id);
@@ -992,6 +996,33 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		}
 
 		dirtyFlag = dirtyState;
+	}
+
+	/**
+	 * Enters batch mode. While in batch mode, calls to calcActiveBonuses()
+	 * are suppressed. Call endBatchMode() to trigger a single recalculation
+	 * if any were suppressed. Supports nesting.
+	 */
+	public void beginBatchMode()
+	{
+		batchModeDepth++;
+	}
+
+	/**
+	 * Exits batch mode. If bonus recalculations were suppressed during
+	 * batch mode, a single calcActiveBonuses() is performed.
+	 */
+	public void endBatchMode()
+	{
+		if (batchModeDepth > 0)
+		{
+			batchModeDepth--;
+		}
+		if (batchModeDepth == 0 && batchModeDirty)
+		{
+			batchModeDirty = false;
+			calcActiveBonuses();
+		}
 	}
 
 	/**
@@ -3281,10 +3312,8 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 			success = raceInputFacet.set(id, newRace);
 		}
 
-		if (success)
-		{
-			calcActiveBonuses();
-		}
+		// calcActiveBonuses is triggered automatically by CalcBonusFacet
+		// listening to the RaceFacet change event
 		return success;
 	}
 
@@ -4490,6 +4519,11 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	{
 		if (importing || (getRace() == null))
 		{
+			return;
+		}
+		if (batchModeDepth > 0)
+		{
+			batchModeDirty = true;
 			return;
 		}
 
@@ -5890,6 +5924,11 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 
 	public List<? extends CDOMObject> getCDOMObjectList()
 	{
+		List<? extends CDOMObject> cached = cachedCDOMObjectList;
+		if (cached != null)
+		{
+			return cached;
+		}
 		List<CDOMObject> list = new ArrayList<>(expandedCampaignFacet.getSet(id));
 
 		// Loaded campaigns
@@ -5973,6 +6012,7 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 				list.add(classLevel);
 			}
 		}
+		cachedCDOMObjectList = list;
 		return list;
 	}
 
@@ -6675,9 +6715,6 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 
 		// Recalculate the movement rates
 		adjustMoveRates();
-
-		// Calculate any active bonuses
-		calcActiveBonuses();
 	}
 
 	private static final class CasterLevelSpellBonus
@@ -6916,6 +6953,101 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		//Just to be safe
 		aClone.equippedFacet.reset(aClone.id);
 
+		aClone.serial = serial;
+
+		return aClone;
+	}
+
+	/**
+	 * Creates a clone optimized for export. Skips the bonus recalculation
+	 * since preparePCForOutput() will perform it anyway.
+	 *
+	 * @return a new deep copy intended for export use
+	 */
+	public PlayerCharacter cloneForExport()
+	{
+		PlayerCharacter aClone;
+		aClone = new PlayerCharacter(this);
+		try
+		{
+			aClone.assocSupt = assocSupt.clone();
+		} catch (CloneNotSupportedException e)
+		{
+			Logging.errorPrint("PlayerCharacter.cloneForExport failed", e);
+		}
+		Collection<AbstractStorageFacet> beans = SpringHelper.getStorageBeans();
+		for (AbstractStorageFacet bean : beans)
+		{
+			bean.copyContents(id, aClone.id);
+		}
+		SolverManager sm = solverManagerFacet.get(id);
+		if (sm != null)
+		{
+			SolverManager replacement = sm.createReplacement(variableStoreFacet.get(aClone.id));
+			solverManagerFacet.set(aClone.id, replacement);
+		}
+		aClone.bonusManager = bonusManager.buildDeepClone(aClone);
+
+		for (PCClass cloneClass : aClone.classFacet.getSet(aClone.id))
+		{
+			cloneClass.addFeatPoolBonus(aClone);
+		}
+		Follower followerMaster = masterFacet.get(id);
+		if (followerMaster != null)
+		{
+			aClone.masterFacet.set(id, followerMaster.clone());
+		} else
+		{
+			aClone.masterFacet.remove(id);
+		}
+		aClone.equipSetFacet.removeAll(aClone.id);
+		for (EquipSet eqSet : equipSetFacet.getSet(id))
+		{
+			aClone.addEquipSet(eqSet.clone());
+		}
+		List<Equipment> equipmentMasterList = aClone.getEquipmentMasterList();
+		aClone.userEquipmentFacet.removeAll(aClone.id);
+		aClone.equipmentFacet.removeAll(aClone.id);
+		aClone.equippedFacet.removeAll(aClone.id);
+		FacetLibrary.getFacet(SourcedEquipmentFacet.class).removeAll(aClone.id);
+		for (Equipment equip : equipmentMasterList)
+		{
+			aClone.addEquipment(equip.clone());
+		}
+
+		aClone.levelInfoFacet.removeAll(aClone.id);
+		for (PCLevelInfo info : getLevelInfo())
+		{
+			PCLevelInfo newLvlInfo = info.clone();
+			aClone.levelInfoFacet.add(aClone.id, newLvlInfo);
+		}
+		aClone.spellBookFacet.removeAll(aClone.id);
+		for (String book : spellBookFacet.getBookNames(id))
+		{
+			aClone.addSpellBook(spellBookFacet.getBookNamed(id, book).clone());
+		}
+		aClone.calcEquipSetId = calcEquipSetId;
+		aClone.tempBonusItemList.addAll(tempBonusItemList);
+		aClone.autoKnownSpells = autoKnownSpells;
+		aClone.autoLoadCompanion = autoLoadCompanion;
+		aClone.outputSheetHTML = outputSheetHTML;
+		aClone.outputSheetPDF = outputSheetPDF;
+		aClone.defaultDomainSource = defaultDomainSource;
+
+		aClone.ageSetKitSelections =
+				Arrays.copyOf(ageSetKitSelections, ageSetKitSelections.length);
+
+		aClone.importing = false;
+		aClone.useTempMods = useTempMods;
+		aClone.costPool = costPool;
+		aClone.currentEquipSetNumber = currentEquipSetNumber;
+		aClone.poolAmount = poolAmount;
+		aClone.skillsOutputOrder = skillsOutputOrder;
+		aClone.spellLevelTemp = spellLevelTemp;
+		aClone.pointBuyPoints = pointBuyPoints;
+
+		// Skip calcActiveBonuses() and equippedFacet.reset() —
+		// preparePCForOutput() will handle these
 		aClone.serial = serial;
 
 		return aClone;
@@ -9733,7 +9865,6 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		}
 		CDOMObjectUtilities.removeAdds(cnas.getCNAbility().getAbility(), this);
 		setDirty(true);
-		calcActiveBonuses();
 	}
 
 	public void removeSavedAbility(CNAbilitySelection cnas, Object owner, Object location)

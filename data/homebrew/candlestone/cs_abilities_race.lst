@@ -1,0 +1,19 @@
+SOURCELONG:Candlestone	SOURCESHORT:CS	SOURCEDATE:2026-04
+
+###Block: Racial Traits
+# Ability Name								Category of Ability
+Racial Traits ~ Devil (Gelharoth)	CATEGORY:Internal	ABILITY:Internal|AUTOMATIC|Mythic Devil (Gelharoth)
+
+###Block: Mythic Internal
+Mythic Devil (Gelharoth)	CATEGORY:Internal	TEMPLATE:Mythic	BONUS:VAR|Mythic_Rank|6
+
+###Block: Devil (Gelharoth) Special Abilities
+Glacial Aura	KEY:Gelharoth ~ Glacial Aura	CATEGORY:Special Ability	TYPE:SpecialQuality.Supernatural.Aura	DEFINE:GlacialAuraDC|0	DESC:The Gelharoth radiates an aura of supernatural cold in a 60-foot radius. Creatures entering or beginning their turn in the aura take 6d6 points of cold damage and must succeed on a DC %1 Fortitude save or be slowed (as the slow spell) for 1d4 rounds. This cold damage bypasses cold resistance but not cold immunity. The Gelharoth can suppress or resume this aura as a free action.|GlacialAuraDC	BONUS:VAR|GlacialAuraDC|10+(HD/2)+CHA	BONUS:VAR|GlacialAuraDC|2|PREABILITY:1,CATEGORY=FEAT,Ability Focus (Glacial Aura)	SOURCEPAGE:Candlestone	ASPECT:Ability Benefit|(60 ft., 6d6 cold, DC %1, slow 1d4 rds)|GlacialAuraDC
+
+Breath Weapon	KEY:Gelharoth ~ Breath Weapon	CATEGORY:Special Ability	TYPE:SpecialAttack.Supernatural	DEFINE:BreathWeaponDC|0	DESC:Once every 1d4 rounds, the Gelharoth can exhale a 60-foot cone of supernatural cold, dealing 20d6 points of cold damage (Reflex DC %1 half). Creatures that fail their save are encased in ice and are paralyzed for 1d4 rounds (a DC %1 Strength check as a full-round action frees an encased creature). The Gelharoth can expend one use of mythic power to use this breath weapon as a swift action.|BreathWeaponDC	BONUS:VAR|BreathWeaponDC|10+(HD/2)+CON	BONUS:VAR|BreathWeaponDC|2|PREABILITY:1,CATEGORY=FEAT,Ability Focus (Breath Weapon)	SOURCEPAGE:Candlestone	ASPECT:Ability Benefit|(60-ft. cone, 20d6 cold, DC %1)|BreathWeaponDC
+
+Blizzard Control	KEY:Gelharoth ~ Blizzard Control	CATEGORY:Special Ability	TYPE:SpecialQuality.Supernatural	DESC:The Gelharoth can control weather within a 5-mile radius as a standard action (as control weather but instantaneous and limited to cold/winter conditions). All natural and magical ice and snow within 1 mile is considered difficult terrain for all creatures except the Gelharoth and those it designates. The Gelharoth can see perfectly through snow, sleet, and similar precipitation. By expending one use of mythic power, the Gelharoth can create a localized blizzard (as a sleet storm spell, CL 24th) as a swift action that persists for 24 hours without concentration.	SOURCEPAGE:Candlestone
+
+Soul Frost	KEY:Gelharoth ~ Soul Frost	CATEGORY:Special Ability	TYPE:SpecialAttack.Supernatural	DEFINE:SoulFrostDC|0	DESC:Any creature struck by the Gelharoth's natural attacks must succeed on a DC %1 Fortitude save or take 1d6 points of Charisma drain as the supernatural cold freezes its soul. Creatures killed by this Charisma drain have their souls trapped in icy crystalline shards that form on the Gelharoth's body; such creatures cannot be raised or resurrected until the shard is destroyed (hardness 30, 50 hp) or the Gelharoth is slain. Whenever the Gelharoth deals cold damage, any magical fire effects of CL 24th or lower within 30 feet of the target are automatically dispelled.|SoulFrostDC	BONUS:VAR|SoulFrostDC|10+(HD/2)+CHA	BONUS:VAR|SoulFrostDC|2|PREABILITY:1,CATEGORY=FEAT,Ability Focus (Soul Frost)	SOURCEPAGE:Candlestone	ASPECT:Ability Benefit|(DC %1)|SoulFrostDC
+
+Mythic Power	KEY:Gelharoth ~ Mythic Power	CATEGORY:Special Ability	TYPE:SpecialQuality.Supernatural	DESC:The Gelharoth can draw upon a wellspring of mythic power to accomplish amazing deeds and cheat fate. Each day, it can expend a number of uses of mythic power equal to 11 (3 + double its mythic rank). As a free action, it can expend one use of mythic power to add 1d8 to any d20 roll it just made, using the result it prefers. This is a surge ability.	SOURCEPAGE:Candlestone

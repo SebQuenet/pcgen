@@ -980,21 +980,33 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 	 */
 	public void createNewCharacter(File file)
 	{
-		GuiAssertions.assertIsSwingThread();
 		DataSetFacade data = getLoadedDataSetRef().get();
-		CharacterFacade character = CharacterManager.createNewCharacter(this, data);
-		//This is called before the we set it as the selected character so
-		//the InfoTabbedPane can catch any character specific properties when
-		//it is first displayed
-		if (file != null)
+		if (SwingUtilities.isEventDispatchThread())
 		{
-			character.setFile(file);
+			new Thread(() -> {
+				CharacterFacade character = CharacterManager.createNewCharacter(PCGenFrame.this, data);
+				if (character != null)
+				{
+					if (file != null)
+					{
+						character.setFile(file);
+					}
+					SwingUtilities.invokeLater(() -> setCharacter(character));
+				}
+			}, "CharacterCreator").start();
 		}
-		//Because CharacterManager adds the new character to the character
-		//list before it returns, it is not necessary to update the character
-		//tabs since they will catch that event before the call to
-		//setCharacter is called
-		setCharacter(character);
+		else
+		{
+			CharacterFacade character = CharacterManager.createNewCharacter(this, data);
+			if (character != null)
+			{
+				if (file != null)
+				{
+					character.setFile(file);
+				}
+				SwingUtilities.invokeLater(() -> setCharacter(character));
+			}
+		}
 	}
 
 	/**
@@ -1104,12 +1116,13 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 		statusBar.startShowingProgress(msg, false);
 		statusBar.getProgressBar().getModel().setRangeProperties(0, 1, 0, 2, false);
 		statusBar.getProgressBar().setString(LanguageBundle.getString("in_loadPcOpening"));
-		SwingUtilities.invokeLater(() -> {
-
+		new Thread(() -> {
 			try
 			{
 				CharacterManager.openCharacter(pcgFile, PCGenFrame.this, reference);
-				statusBar.getProgressBar().getModel().setRangeProperties(1, 1, 0, 2, false);
+				SwingUtilities.invokeLater(() ->
+					statusBar.getProgressBar().getModel().setRangeProperties(1, 1, 0, 2, false)
+				);
 			}
 			catch (Exception e)
 			{
@@ -1117,9 +1130,9 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 			}
 			finally
 			{
-				statusBar.endShowingProgress();
+				SwingUtilities.invokeLater(statusBar::endShowingProgress);
 			}
-		});
+		}, "CharacterLoader-" + pcgFile.getName()).start();
 	}
 
 	private static String getFormattedCampaigns(SourceSelectionFacade sources)
@@ -1166,7 +1179,15 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 				SwingUtilities.invokeLater(() -> {
 					try
 					{
-						CharacterManager.openCharacter(pcgFile, PCGenFrame.this, currentDataSetRef.get());
+						DataSetFacade dataset = currentDataSetRef.get();
+						if (dataset == null)
+						{
+							Logging.errorPrint("No sources loaded, cannot open character: " + pcgFile.getName());
+							showErrorMessage(LanguageBundle.getString("in_loadPcFailTtile"),
+								"No sources are loaded. Please load the required sources before opening this character.");
+							return;
+						}
+						CharacterManager.openCharacter(pcgFile, PCGenFrame.this, dataset);
 						statusBar.getProgressBar().getModel().setRangeProperties(1, 1, 0, 2, false);
 					}
 					catch (Exception e)

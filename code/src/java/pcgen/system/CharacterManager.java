@@ -179,7 +179,7 @@ public final class CharacterManager
 			ioHandler.read(newPC, file.getAbsolutePath());
 			// Ensure any custom equipment held by the character is added to the dataset's list
 			dataset.refreshEquipment();
-			newPC.calcActiveBonuses();
+			// calcActiveBonuses already called at end of PCGIOHandler.read()
 
 			if (!showLoadNotices(true, ioHandler.getErrors(), file.getName(), delegate))
 			{

@@ -183,6 +183,7 @@ public class CharacterFacadeImpl
 {
 
 	private static final PlayerCharacter DUMMY_PC = new PlayerCharacter();
+	private static volatile List<TempBonusFacadeImpl> cachedGlobalTempBonuses;
 	private List<PCClass> pcClasses;
 	private DefaultListFacade<TempBonusFacade> appliedTempBonuses;
 	private DefaultListFacade<TempBonusFacade> availTempBonuses;
@@ -617,7 +618,15 @@ public class CharacterFacadeImpl
 	@Override
 	public void addAbility(AbilityCategory category, AbilityFacade ability)
 	{
-		characterAbilities.addAbility(category, ability);
+		theCharacter.beginBatchMode();
+		try
+		{
+			characterAbilities.addAbility(category, ability);
+		}
+		finally
+		{
+			theCharacter.endBatchMode();
+		}
 		refreshKitList();
 		refreshAvailableTempBonuses();
 		buildAvailableDomainsList();
@@ -630,7 +639,15 @@ public class CharacterFacadeImpl
 	@Override
 	public void removeAbility(AbilityCategory category, AbilityFacade ability)
 	{
-		characterAbilities.removeAbility(category, ability);
+		theCharacter.beginBatchMode();
+		try
+		{
+			characterAbilities.removeAbility(category, ability);
+		}
+		finally
+		{
+			theCharacter.endBatchMode();
+		}
 		refreshKitList();
 		companionSupportFacade.refreshCompanionData();
 		spellSupportFacade.refreshAvailableKnownSpells();
@@ -710,45 +727,50 @@ public class CharacterFacadeImpl
 		int oldLevel = charLevelsFacade.getSize();
 		boolean needFullRefresh = false;
 
-		for (PCClass pcClass : classes)
+		theCharacter.beginBatchMode();
+		try
 		{
-			int totalLevels = charDisplay.getTotalLevels();
-			if (!validateAddLevel(pcClass))
+			for (PCClass pcClass : classes)
 			{
-				return;
+				int totalLevels = charDisplay.getTotalLevels();
+				if (!validateAddLevel(pcClass))
+				{
+					return;
+				}
+				Logging.log(Logging.INFO,
+					charDisplay.getName() + ": Adding level " + (totalLevels + 1) //$NON-NLS-1$
+						+ " in class " + pcClass); //$NON-NLS-1$
+				if (delegate instanceof pcgen.system.ConsoleUIDelegate)
+				{
+					theCharacter.incrementClassLevel(1, pcClass, false, true);
+				}
+				else
+				{
+					theCharacter.incrementClassLevel(1, pcClass);
+				}
+				if (totalLevels == charDisplay.getTotalLevels())
+				{
+					// The level change was rejected - no further processing needed.
+					return;
+				}
+				if (pcClass.containsKey(ObjectKey.EXCHANGE_LEVEL))
+				{
+					needFullRefresh = true;
+				}
+				if (!pcClasses.contains(pcClass))
+				{
+					pcClasses.add(pcClass);
+				}
+				CharacterLevelFacadeImpl cl = new CharacterLevelFacadeImpl(pcClass, charLevelsFacade.getSize() + 1);
+				pcClassLevels.addElement(cl);
+				charLevelsFacade.addLevelOfClass(cl);
 			}
-			Logging.log(Logging.INFO,
-				charDisplay.getName() + ": Adding level " + (totalLevels + 1) //$NON-NLS-1$
-					+ " in class " + pcClass); //$NON-NLS-1$
-			if (delegate instanceof pcgen.system.ConsoleUIDelegate)
-			{
-				theCharacter.incrementClassLevel(1, pcClass, false, true);
-			}
-			else
-			{
-				theCharacter.incrementClassLevel(1, pcClass);
-			}
-			if (totalLevels == charDisplay.getTotalLevels())
-			{
-				// The level change was rejected - no further processing needed.
-				return;
-			}
-			if (pcClass.containsKey(ObjectKey.EXCHANGE_LEVEL))
-			{
-				needFullRefresh = true;
-			}
-			if (!pcClasses.contains(pcClass))
-			{
-				pcClasses.add(pcClass);
-			}
-			CharacterLevelFacadeImpl cl = new CharacterLevelFacadeImpl(pcClass, charLevelsFacade.getSize() + 1);
-			pcClassLevels.addElement(cl);
-			charLevelsFacade.addLevelOfClass(cl);
+		}
+		finally
+		{
+			theCharacter.endBatchMode();
 		}
 		CharacterUtils.selectClothes(getTheCharacter());
-
-		// Calculate any active bonuses
-		theCharacter.calcActiveBonuses();
 
 		if (needFullRefresh)
 		{
@@ -1017,21 +1039,6 @@ public class CharacterFacadeImpl
 			scanForTempBonuses(tempBonuses, cdo);
 		}
 
-		//
-		// next do all abilities to get TEMPBONUS:ANYPC only
-		GameMode game = dataSet.getGameMode();
-		for (AbilityCategory cat : game.getAllAbilityCategories())
-		{
-			if (cat.getParentCategory() == cat)
-			{
-				for (Ability aFeat : Globals.getContext().getReferenceContext().getManufacturerId(cat).getAllObjects())
-				{
-					scanForAnyPcTempBonuses(tempBonuses, aFeat);
-				}
-			}
-		}
-
-		//
 		// Do all the PC's spells
 		for (Spell aSpell : theCharacter.aggregateSpellList("", "", "", 0, 9))
 		{
@@ -1050,21 +1057,59 @@ public class CharacterFacadeImpl
 			scanForTempBonuses(tempBonuses, aCharacterSpell.getSpell());
 		}
 
-		//
-		// Next do all spells to get TEMPBONUS:ANYPC or TEMPBONUS:EQUIP
-		for (Spell spell : Globals.getContext().getReferenceContext().getConstructedCDOMObjects(Spell.class))
-		{
-			scanForNonPcTempBonuses(tempBonuses, spell);
-		}
-
-		// do all Templates to get TEMPBONUS:ANYPC or TEMPBONUS:EQUIP
-		for (PCTemplate aTemp : Globals.getContext().getReferenceContext().getConstructedCDOMObjects(PCTemplate.class))
-		{
-			scanForNonPcTempBonuses(tempBonuses, aTemp);
-		}
+		// Add cached global temp bonuses (abilities ANYPC, all spells ANYPC/EQUIP, all templates)
+		// These are constant for a loaded data set
+		tempBonuses.addAll(getGlobalTempBonuses());
 
 		Collections.sort(tempBonuses);
 		availTempBonuses.updateContents(tempBonuses);
+	}
+
+	private List<TempBonusFacadeImpl> getGlobalTempBonuses()
+	{
+		List<TempBonusFacadeImpl> cached = cachedGlobalTempBonuses;
+		if (cached != null)
+		{
+			return cached;
+		}
+
+		List<TempBonusFacadeImpl> globalBonuses = new ArrayList<>();
+
+		// All abilities with TEMPBONUS:ANYPC
+		GameMode game = dataSet.getGameMode();
+		for (AbilityCategory cat : game.getAllAbilityCategories())
+		{
+			if (cat.getParentCategory() == cat)
+			{
+				for (Ability aFeat : Globals.getContext().getReferenceContext().getManufacturerId(cat).getAllObjects())
+				{
+					scanForAnyPcTempBonuses(globalBonuses, aFeat);
+				}
+			}
+		}
+
+		// All spells with TEMPBONUS:ANYPC or TEMPBONUS:EQUIP
+		for (Spell spell : Globals.getContext().getReferenceContext().getConstructedCDOMObjects(Spell.class))
+		{
+			scanForNonPcTempBonuses(globalBonuses, spell);
+		}
+
+		// All templates with TEMPBONUS:ANYPC or TEMPBONUS:EQUIP
+		for (PCTemplate aTemp : Globals.getContext().getReferenceContext().getConstructedCDOMObjects(PCTemplate.class))
+		{
+			scanForNonPcTempBonuses(globalBonuses, aTemp);
+		}
+
+		cachedGlobalTempBonuses = globalBonuses;
+		return globalBonuses;
+	}
+
+	/**
+	 * Invalidate the cached global temp bonuses. Call when sources are reloaded.
+	 */
+	public static void clearGlobalTempBonusCache()
+	{
+		cachedGlobalTempBonuses = null;
 	}
 
 	private void scanForNonPcTempBonuses(List<TempBonusFacadeImpl> tempBonuses, PObject obj)
@@ -2279,7 +2324,7 @@ public class CharacterFacadeImpl
 			// serial when checking for real changes
 			// Get serial at beginning so we can detect if a change occurs during clone and preparePCForOutput
 			lastExportCharSerial = theCharacter.getSerial();
-			exportPc = theCharacter.clone();
+			exportPc = theCharacter.cloneForExport();
 
 			// Get the PC all up to date, (equipment and active bonuses etc)
 			exportPc.preparePCForOutput();

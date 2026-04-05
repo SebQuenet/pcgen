@@ -25,7 +25,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import javax.swing.SwingUtilities;
+import javax.swing.Timer;
 
 import pcgen.cdom.base.Category;
 import pcgen.cdom.base.Constants;
@@ -84,6 +87,8 @@ public class CharacterAbilities
 	private final List<ChangeListener> abilityCatSelectionListeners;
 	private final TodoManager todoManager;
 	private GrantedAbilityChangeHandler grantedAbilityChangeHandler;
+	private final AtomicBoolean rebuildPending = new AtomicBoolean(false);
+	private final Timer rebuildTimer;
 
 	/**
 	 * Create a new instance of CharacterAbilities for a character.
@@ -101,6 +106,13 @@ public class CharacterAbilities
 		this.dataSetFacade = dataSetFacade;
 		this.todoManager = todoManager;
 		abilityCatSelectionListeners = new ArrayList<>();
+		rebuildTimer = new Timer(50, e -> {
+			if (rebuildPending.compareAndSet(true, false))
+			{
+				rebuildAbilityLists();
+			}
+		});
+		rebuildTimer.setRepeats(false);
 
 		initForCharacter();
 	}
@@ -110,8 +122,19 @@ public class CharacterAbilities
 	 */
 	protected void closeCharacter()
 	{
+		rebuildTimer.stop();
 		GrantedAbilityFacet grantedAbilityFacet = FacetLibrary.getFacet(GrantedAbilityFacet.class);
 		grantedAbilityFacet.removeDataFacetChangeListener(grantedAbilityChangeHandler);
+	}
+
+	/**
+	 * Schedule a deferred rebuild of ability lists. Multiple calls within
+	 * the coalescing window (50ms) result in a single rebuild.
+	 */
+	private void scheduleDeferredRebuild()
+	{
+		rebuildPending.set(true);
+		rebuildTimer.restart();
 	}
 
 	private void initForCharacter()
@@ -138,6 +161,7 @@ public class CharacterAbilities
 		Map<AbilityCategory, DefaultListFacade<AbilityFacade>> workingAbilityListMap = new LinkedHashMap<>();
 		DefaultListFacade<AbilityCategory> workingActiveCategories = new DefaultListFacade<>();
 
+		List<AbilityCategory> visibleCategories = new ArrayList<>();
 		for (AbilityCategory category : dataSetFacade.getAbilities().getKeys())
 		{
 			for (CNAbility cna : theCharacter.getPoolAbilities(category))
@@ -156,13 +180,23 @@ public class CharacterAbilities
 			if (!visible && workingActiveCategories.containsElement(category))
 			{
 				workingActiveCategories.removeElement(category);
-				//				updateAbilityCategoryTodo(cat);
 			}
 
 			if (visible)
 			{
-				adviseSelectionChangeLater(category);
+				visibleCategories.add(category);
 			}
+		}
+		if (!visibleCategories.isEmpty())
+		{
+			SwingUtilities.invokeLater(() -> {
+				for (AbilityCategory cat : visibleCategories)
+				{
+					updateAbilityCategoryTodo(cat);
+					fireAbilityCatSelectionUpdated(cat);
+					refreshChoices(cat);
+				}
+			});
 		}
 
 		// Update map contents
@@ -521,20 +555,6 @@ public class CharacterAbilities
 	}
 
 	/**
-	 * After any other processing has finished, advise any listeners that 
-	 * the number of selections may have changed. 
-	 * @param cat The ability category that may have changed.
-	 */
-	private void adviseSelectionChangeLater(final AbilityCategory cat)
-	{
-		SwingUtilities.invokeLater(() -> {
-            updateAbilityCategoryTodo(cat);
-            fireAbilityCatSelectionUpdated(cat);
-            refreshChoices(cat);
-        });
-	}
-
-	/**
 	 * Signal that any ability that could have choices has been modified. This 
 	 * ensures that the choice display is up to date.
 	 * @param category The ability category being refreshed.
@@ -628,16 +648,13 @@ public class CharacterAbilities
 		{
 			if (dfce.getCharID() != charID)
 			{
-				//					Logging.debugPrint("CA for " + theCharacter.getName()
-				//						+ ". Ignoring granted ability added for character "
-				//						+ dfce.getCharID());
 				return;
 			}
 			if (Logging.isDebugMode())
 			{
 				Logging.debugPrint("Got granted ability added of " + dfce.getCDOMObject());
 			}
-			rebuildAbilityLists();
+			scheduleDeferredRebuild();
 		}
 
 		@SuppressWarnings("nls")
@@ -654,7 +671,7 @@ public class CharacterAbilities
 			{
 				Logging.debugPrint("Got granted ability removed of " + dfce.getCDOMObject());
 			}
-			rebuildAbilityLists();
+			scheduleDeferredRebuild();
 		}
 	}
 

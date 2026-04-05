@@ -351,6 +351,25 @@ public class BonusManager
 		}
 
 		//
+		// Build reverse dependency index for O(1) lookup during processBonus.
+		// Maps each bonus info key and "NAME|bonusName" to the set of bonuses
+		// that provide that key — so processBonus can find dependencies without
+		// scanning all active bonuses.
+		Map<String, List<BonusObj>> depProviderIndex = new HashMap<>();
+		for (BonusObj bonus : getActiveBonusList())
+		{
+			if (processedBonuses.contains(bonus))
+			{
+				continue;
+			}
+			for (String infoKey : bonus.getUnparsedBonusInfoList())
+			{
+				depProviderIndex.computeIfAbsent(infoKey, k -> new ArrayList<>()).add(bonus);
+			}
+			String nameKey = "NAME|" + bonus.getBonusName();
+			depProviderIndex.computeIfAbsent(nameKey, k -> new ArrayList<>()).add(bonus);
+		}
+
 		// Now we do all the BonusObj's that require calculations
 		for (BonusObj bonus : getActiveBonusList())
 		{
@@ -369,7 +388,7 @@ public class BonusManager
 			try
 			{
 				processBonus(bonus, Collections.newSetFromMap(new IdentityHashMap<>()), processedBonuses, nonStackMap,
-					stackMap);
+					stackMap, depProviderIndex);
 			}
 			catch (Exception e)
 			{
@@ -529,7 +548,7 @@ public class BonusManager
 	 *            The map of stacking (i.e. total all) bonuses being built up.
 	 */
 	private void processBonus(final BonusObj aBonus, final Set<BonusObj> prevProcessed, Set<BonusObj> processedBonuses,
-		Map<String, String> nonStackMap, Map<String, String> stackMap)
+		Map<String, String> nonStackMap, Map<String, String> stackMap, Map<String, List<BonusObj>> depProviderIndex)
 	{
 		// Make sure we don't get into an infinite loop - can occur due to LST
 		// coding or best guess dependancy mapping
@@ -546,30 +565,30 @@ public class BonusManager
 		}
 		prevProcessed.add(aBonus);
 
-		final List<BonusObj> aList = new ArrayList<>();
-
-		// Go through all bonuses and check to see if they add to
-		// aBonus's dependencies and have not already been processed
-		for (BonusObj newBonus : getActiveBonusList())
+		// Use the reverse dependency index to find bonuses that provide
+		// keys this bonus depends on — O(dependencies) instead of O(all bonuses)
+		Set<BonusObj> depSet = Collections.newSetFromMap(new IdentityHashMap<>());
+		for (String depKey : aBonus.getDependsOnKeys())
 		{
-			if (processedBonuses.contains(newBonus))
+			List<BonusObj> providers = depProviderIndex.get(depKey);
+			if (providers != null)
 			{
-				continue;
-			}
-
-			if (aBonus.getDependsOn(newBonus.getUnparsedBonusInfoList())
-				|| aBonus.getDependsOnBonusName(newBonus.getBonusName()))
-			{
-				aList.add(newBonus);
+				for (BonusObj provider : providers)
+				{
+					if (!processedBonuses.contains(provider))
+					{
+						depSet.add(provider);
+					}
+				}
 			}
 		}
 
 		// go through all the BonusObj's that aBonus depends on
 		// and process them first
-		for (BonusObj newBonus : aList)
+		for (BonusObj newBonus : depSet)
 		{
 			// Recursively call itself
-			processBonus(newBonus, prevProcessed, processedBonuses, nonStackMap, stackMap);
+			processBonus(newBonus, prevProcessed, processedBonuses, nonStackMap, stackMap, depProviderIndex);
 		}
 
 		// Double check that it hasn't been processed yet
@@ -579,7 +598,6 @@ public class BonusManager
 		}
 
 		// Add to processed list
-		//Logging.log(Logging.INFO, "Processing bonus " + aBonus + " depends on " + aBonus.listDependsMap());
 		processedBonuses.add(aBonus);
 
 		final CDOMObject anObj = (CDOMObject) getSourceObject(aBonus);
@@ -596,8 +614,6 @@ public class BonusManager
 			final double iBonus = bp.resolve(pc).doubleValue();
 			setActiveBonusStack(iBonus, bp.fullyQualifiedBonusType, nonStackMap, stackMap);
 			totalBonusesForType(nonStackMap, stackMap, bp.fullyQualifiedBonusType, activeBonusMap);
-			//			Logging.debugPrint("vBONUS: " + anObj.getDisplayName() + " : "
-			//					+ iBonus + " : " + bp.fullyQualifiedBonusType);
 		}
 		prevProcessed.remove(aBonus);
 	}

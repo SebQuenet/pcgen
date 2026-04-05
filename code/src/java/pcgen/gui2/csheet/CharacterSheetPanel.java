@@ -23,6 +23,7 @@ import java.io.File;
 import java.io.StringWriter;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.swing.SwingUtilities;
 
@@ -51,12 +52,16 @@ import javafx.scene.web.WebView;
  */
 public final class CharacterSheetPanel extends JFXPanel implements CharacterSelectionListener
 {
+    private static final long DEBOUNCE_DELAY_MS = 250;
+
     private PreviewVariablesHandler previewVariableHandler = new PreviewVariablesHandler();
     private WebView browser;
     private CharacterFacade character;
     private ExportHandler handler;
 
     private final Executor executor = Executors.newSingleThreadExecutor();
+    private final AtomicBoolean refreshPending = new AtomicBoolean(false);
+    private volatile String lastRenderedContent;
 
     public CharacterSheetPanel()
     {
@@ -77,55 +82,75 @@ public final class CharacterSheetPanel extends JFXPanel implements CharacterSele
     }
 
     /**
-     * TODO: This is pseudo-async and can be strucutured much better.
-     * TODO: handle progress reporting from the webview
+     * Schedules a debounced refresh. Multiple calls within DEBOUNCE_DELAY_MS
+     * are coalesced into a single export operation.
      */
     public void refresh()
     {
-        executor.execute(() -> {
-            // loading of the output sheet is much faster than in the past (lobo-browser).
-            // do we still really need a statusbar/progress bar?
-            final PCGenStatusBar statusBar = ((PCGenFrame) Globals.getRootFrame()).getStatusBar();
-            SwingUtilities.invokeLater(() ->
-                    statusBar.startShowingProgress(LanguageBundle.getString("in_loadingCharacterPreview"), true)
-            );
-
-            String content;
-            if (handler == null || character == null)
-            {
-                Logging.debugPrint("no character found");
-                content = "<html><body>No Character Found.</body></html>";
-            } else
-                {
+        if (refreshPending.compareAndSet(false, true))
+        {
+            executor.execute(() -> {
                 try
                 {
-                    StringWriter out = new StringWriter();
-                    BufferedWriter buf = new BufferedWriter(out);
-                    Logging.debugPrint("ready to export");
-                    character.export(handler, buf);
-                    Logging.debugPrint("export complete");
-                    content = out.toString();
+                    Thread.sleep(DEBOUNCE_DELAY_MS);
                 }
-                catch (ExportException e)
+                catch (InterruptedException e)
                 {
-                    content = "<html><body>Exception when exporting</body></html>";
-                    Logging.errorPrint("failed to export", e);
+                    Thread.currentThread().interrupt();
+                    return;
                 }
-            }
-
-            final String finalContent = content;
-            Platform.runLater(() -> {
-                try
-                {
-                    Logging.debugPrint("loading character content");
-                    browser.getEngine().loadContent(finalContent);
-                }
-                catch (Throwable e)
-                {
-                    Logging.errorPrint("Exception in GUI update", e);
-                }
-                SwingUtilities.invokeLater(statusBar::endShowingProgress);
+                refreshPending.set(false);
+                doRefresh();
             });
+        }
+    }
+
+    private void doRefresh()
+    {
+        final PCGenStatusBar statusBar = ((PCGenFrame) Globals.getRootFrame()).getStatusBar();
+        SwingUtilities.invokeLater(() ->
+                statusBar.startShowingProgress(LanguageBundle.getString("in_loadingCharacterPreview"), true)
+        );
+
+        String content;
+        if (handler == null || character == null)
+        {
+            content = "<html><body>No Character Found.</body></html>";
+        }
+        else
+        {
+            try
+            {
+                StringWriter out = new StringWriter();
+                BufferedWriter buf = new BufferedWriter(out);
+                character.export(handler, buf);
+                content = out.toString();
+            }
+            catch (ExportException e)
+            {
+                content = "<html><body>Exception when exporting</body></html>";
+                Logging.errorPrint("failed to export", e);
+            }
+        }
+
+        if (content.equals(lastRenderedContent))
+        {
+            SwingUtilities.invokeLater(statusBar::endShowingProgress);
+            return;
+        }
+        lastRenderedContent = content;
+
+        final String finalContent = content;
+        Platform.runLater(() -> {
+            try
+            {
+                browser.getEngine().loadContent(finalContent);
+            }
+            catch (Throwable e)
+            {
+                Logging.errorPrint("Exception in GUI update", e);
+            }
+            SwingUtilities.invokeLater(statusBar::endShowingProgress);
         });
     }
 
@@ -133,6 +158,7 @@ public final class CharacterSheetPanel extends JFXPanel implements CharacterSele
     public void setCharacter(CharacterFacade character)
     {
         this.character = character;
+        lastRenderedContent = null;
         previewVariableHandler.setCharacter(character);
         refresh();
     }
