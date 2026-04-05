@@ -439,7 +439,7 @@ public abstract class AbstractSourcedListFacet<IDT extends PCGenIdentifier, T> e
 		Map<T, Set<Object>> sourceMap = getCachedMap(source);
 		if (sourceMap != null)
 		{
-			for (Map.Entry<T, Set<Object>> me : sourceMap.entrySet())
+			for (Map.Entry<T, Set<Object>> me : new IdentityHashMap<>(sourceMap).entrySet())
 			{
 				T obj = me.getKey();
 				Set<Object> sourceSet = me.getValue();
