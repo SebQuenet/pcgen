@@ -257,6 +257,111 @@ public final class EquipmentSetTools
 		);
 	}
 
+	public static SyncToolSpecification equipItems(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("equip_items",
+				"Equip multiple items from inventory into body slots in one call. "
+					+ "Returns which items succeeded and which failed.",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"items": {
+								"type": "array",
+								"description": "List of items to equip: [{equipment_key, slot, quantity?}]",
+								"items": {
+									"type": "object",
+									"properties": {
+										"equipment_key": { "type": "string", "description": "Equipment name or key from inventory" },
+										"slot": { "type": "string", "description": "Target slot name (e.g. Primary Hand, Armor, Equipped)" },
+										"quantity": { "type": "integer", "description": "Quantity to equip (default: 1)", "default": 1 }
+									},
+									"required": ["equipment_key", "slot"]
+								}
+							}
+						},
+						"required": ["character_id", "items"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					@SuppressWarnings("unchecked")
+					List<Map<String, Object>> items = (List<Map<String, Object>>) args.get("items");
+
+					EquipmentSetFacade eqSet = character.getEquipmentSetRef().get();
+					if (eqSet == null)
+					{
+						return errorResult("No active equipment set");
+					}
+
+					List<Map<String, String>> equipped = new ArrayList<>();
+					List<Map<String, String>> failed = new ArrayList<>();
+
+					for (Map<String, Object> item : items)
+					{
+						String equipKey = (String) item.get("equipment_key");
+						String slotName = (String) item.get("slot");
+						int quantity = item.containsKey("quantity")
+							? ((Number) item.get("quantity")).intValue() : 1;
+
+						EquipmentFacade equipToWear = findInInventory(character, equipKey);
+						if (equipToWear == null)
+						{
+							failed.add(Map.of("equipment_key", equipKey, "slot", slotName,
+								"reason", "Item not found in inventory"));
+							continue;
+						}
+
+						EquipNode targetNode = findSlot(eqSet, slotName, equipToWear);
+						if (targetNode == null)
+						{
+							failed.add(Map.of("equipment_key", equipKey, "slot", slotName,
+								"reason", "Slot not found"));
+							continue;
+						}
+
+						if (!eqSet.canEquip(targetNode, equipToWear))
+						{
+							failed.add(Map.of("equipment_key", equipKey, "slot", slotName,
+								"reason", "Cannot equip in this slot"));
+							continue;
+						}
+
+						EquipmentFacade result = eqSet.addEquipment(targetNode, equipToWear, quantity);
+						if (result == null)
+						{
+							failed.add(Map.of("equipment_key", equipKey, "slot", slotName,
+								"reason", "Equip failed"));
+						}
+						else
+						{
+							equipped.add(Map.of("equipment", result.toString(), "slot", slotName));
+						}
+					}
+
+					Map<String, Object> response = new LinkedHashMap<>();
+					response.put("status", failed.isEmpty() ? "ok" : "partial");
+					response.put("equippedCount", equipped.size());
+					response.put("equipped", equipped);
+					if (!failed.isEmpty())
+					{
+						response.put("failed", failed);
+					}
+					return toResult(response);
+				}
+				catch (Exception e)
+				{
+					String msg = e.getMessage();
+					return errorResult(msg != null ? msg : e.getClass().getSimpleName());
+				}
+			}
+		);
+	}
+
 	private static EquipmentFacade findInInventory(CharacterFacade character, String key)
 	{
 		for (EquipmentFacade equip : character.getPurchasedEquipment())

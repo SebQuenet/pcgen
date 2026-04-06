@@ -17,6 +17,7 @@ import pcgen.core.Equipment;
 import pcgen.core.EquipmentModifier;
 import pcgen.core.Globals;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.analysis.ChooseActivation;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.core.EquipmentBuilderFacade;
@@ -86,7 +87,8 @@ public final class CustomEquipmentTools
 				}
 				catch (Exception e)
 				{
-					return errorResult(e.getMessage());
+					String msg = e.getMessage();
+					return errorResult(msg != null ? msg : e.getClass().getSimpleName());
 				}
 			}
 		);
@@ -109,7 +111,15 @@ public final class CustomEquipmentTools
 								"description": "List of modifier keys to apply (from list_equipment_modifiers)"
 							},
 							"head": { "type": "string", "description": "Equipment head: PRIMARY or SECONDARY (default: PRIMARY)", "default": "PRIMARY" },
-							"custom_name": { "type": "string", "description": "Custom name override (optional)" }
+							"custom_name": { "type": "string", "description": "Custom name override (optional)" },
+							"choices": {
+								"type": "object",
+								"description": "Map of modifier key to list of choice strings for CHOOSE-based modifiers (e.g. Bane key mapped to Evil Outsider Bane)",
+								"additionalProperties": {
+									"type": "array",
+									"items": { "type": "string" }
+								}
+							}
 						},
 						"required": ["character_id", "equipment_key", "modifier_keys"]
 					}
@@ -126,6 +136,9 @@ public final class CustomEquipmentTools
 					String headStr = args.containsKey("head") ? (String) args.get("head") : "PRIMARY";
 					EquipmentHead head = "SECONDARY".equalsIgnoreCase(headStr) ? EquipmentHead.SECONDARY : EquipmentHead.PRIMARY;
 					String customName = (String) args.get("custom_name");
+					@SuppressWarnings("unchecked")
+					Map<String, List<String>> choices = args.containsKey("choices")
+						? (Map<String, List<String>>) args.get("choices") : null;
 					McpUIDelegate delegate = session.getDelegate(characterId);
 
 					Equipment baseEquip = findEquipment(character.getDataSet(), equipKey);
@@ -150,14 +163,42 @@ public final class CustomEquipmentTools
 							failed.add(modKey + " (not found/not available)");
 							continue;
 						}
-						boolean success = builder.addModToEquipment(mod, head);
-						if (success)
+
+						// Pre-set choices for CHOOSE-based modifiers (e.g. Bane's designated foe)
+						// Equipment modifiers use StringKey.CHOICE_STRING, not ObjectKey.CHOOSE_INFO
+						boolean hasChoose = ChooseActivation.hasNewChooseToken(mod)
+							|| !mod.getSafe(pcgen.cdom.enumeration.StringKey.CHOICE_STRING).isEmpty();
+						if (hasChoose && choices != null && delegate != null)
 						{
-							applied.add(mod.getDisplayName());
+							List<String> modChoices = choices.get(modKey);
+							if (modChoices == null)
+							{
+								modChoices = choices.get(mod.getDisplayName());
+							}
+							if (modChoices != null && !modChoices.isEmpty())
+							{
+								delegate.setPreSelectedChoices(modChoices);
+							}
 						}
-						else
+
+						try
 						{
-							failed.add(modKey + " (add failed)");
+							boolean success = builder.addModToEquipment(mod, head);
+							if (success)
+							{
+								applied.add(mod.getDisplayName());
+							}
+							else
+							{
+								failed.add(modKey + " (add failed)");
+							}
+						}
+						finally
+						{
+							if (delegate != null)
+							{
+								delegate.clearPreSelectedChoices();
+							}
 						}
 					}
 
@@ -185,7 +226,8 @@ public final class CustomEquipmentTools
 				}
 				catch (Exception e)
 				{
-					return errorResult(e.getMessage());
+					String msg = e.getMessage();
+					return errorResult(msg != null ? msg : e.getClass().getSimpleName());
 				}
 			}
 		);
@@ -209,8 +251,10 @@ public final class CustomEquipmentTools
 
 	private static EquipmentModifier findModifier(EquipmentBuilderFacadeImpl builder, EquipmentHead head, String key)
 	{
-		for (EquipmentModifier mod : builder.getAvailList(head))
+		var availList = builder.getAvailList(head);
+		for (int i = 0; i < availList.getSize(); i++)
 		{
+			EquipmentModifier mod = availList.getElementAt(i);
 			if (mod.getKeyName().equalsIgnoreCase(key) || mod.getDisplayName().equalsIgnoreCase(key))
 			{
 				return mod;

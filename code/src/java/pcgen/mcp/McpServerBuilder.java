@@ -99,6 +99,7 @@ public final class McpServerBuilder
 				EquipmentSetTools.createEquipmentSet(session),
 				EquipmentSetTools.getEquippedItems(session),
 				EquipmentSetTools.equipItem(session),
+				EquipmentSetTools.equipItems(session),
 				EquipmentSetTools.unequipItem(session),
 				// Templates & Temp Bonuses & Kits
 				TemplateTools.addTemplate(session),
@@ -121,6 +122,7 @@ public final class McpServerBuilder
 				BiographyTools.setXP(session),
 				// Export
 				ExportTools.exportCharacter(session),
+				ExportTools.getCharacterSheet(session),
 				// Utilities
 				UtilityTools.getTodoList(session),
 				UtilityTools.isQualifiedFor(session),

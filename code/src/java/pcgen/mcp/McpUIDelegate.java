@@ -182,8 +182,9 @@ public class McpUIDelegate extends ConsoleUIDelegate
 		{
 			for (String sel : preSelected)
 			{
-				for (InfoFacade item : available)
+				for (int i = 0; i < available.getSize(); i++)
 				{
+					InfoFacade item = available.getElementAt(i);
 					if (item.toString().equalsIgnoreCase(sel) || item.getKeyName().equalsIgnoreCase(sel))
 					{
 						chooserFacade.addSelected(item);
@@ -195,15 +196,9 @@ public class McpUIDelegate extends ConsoleUIDelegate
 		}
 		else
 		{
-			int count = 0;
-			for (InfoFacade item : available)
+			for (int i = 0; i < remaining && i < available.getSize(); i++)
 			{
-				if (count >= remaining)
-				{
-					break;
-				}
-				chooserFacade.addSelected(item);
-				count++;
+				chooserFacade.addSelected(available.getElementAt(i));
 			}
 		}
 		chooserFacade.commit();
