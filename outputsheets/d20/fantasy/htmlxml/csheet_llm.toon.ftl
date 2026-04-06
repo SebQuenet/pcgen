@@ -29,10 +29,9 @@ gender: ${pcstring('GENDER.LONG')}
 age: ${pcstring('AGE')}
 height: ${tq(pcstring('HEIGHT'))}
 weight: ${tq(pcstring('WEIGHT'))}
-<#if (pcstring('DEITY') != '')>
+<#if (pcstring('DEITY') != '' && pcstring('DEITY') != 'None')>
 deity: ${tq(pcstring('DEITY'))}
 deityAlignment: ${tq(pcstring('DEITY.ALIGNMENT'))}
-domains: ${tq(pcstring('DEITY.DOMAINLIST'))}
 </#if>
 <#assign classItems = [] >
 <@loop from=0 to=pcvar('COUNT[CLASSES]-1') ; class, class_has_next>
@@ -108,7 +107,7 @@ skills[${trainedSkills?size}]{name,total,ranks,abilMod,ability,misc}:
 <#if (featCount > 0)>
 feats[${featCount}]{name,type,description}:
 <@loop from=0 to=featCount-1 ; feat, feat_has_next>
-  ${tq(pcstring('FEAT.VISIBLE.${feat}'))},${tq(pcstring('FEAT.VISIBLE.${feat}.TYPE'))},${tq(pcstring('FEAT.VISIBLE.${feat}.DESC'))}
+  ${tq(pcstring('FEAT.VISIBLE.${feat}'))},${tq(pcstring('FEAT.VISIBLE.${feat}.TYPE')?split(".")?first)},${tq(pcstring('FEAT.VISIBLE.${feat}.DESC'))}
 </@loop>
 </#if>
 <#-- Auto feats -->
@@ -116,7 +115,7 @@ feats[${featCount}]{name,type,description}:
 <#if (autoFeatCount > 0)>
 autoFeats[${autoFeatCount}]{name,type}:
 <@loop from=0 to=autoFeatCount-1 ; feat, feat_has_next>
-  ${tq(pcstring('FEATAUTO.VISIBLE.${feat}'))},${tq(pcstring('FEATAUTO.VISIBLE.${feat}.TYPE'))}
+  ${tq(pcstring('FEATAUTO.VISIBLE.${feat}'))},${tq(pcstring('FEATAUTO.VISIBLE.${feat}.TYPE')?split(".")?first)}
 </@loop>
 </#if>
 <#-- Special Abilities -->
@@ -158,9 +157,9 @@ naturalAttacks[${natAttackCount}]{name,toHit,damage,type,crit}:
 <#-- Equipment -->
 <#assign equipCount = pcvar('COUNT[EQUIPMENT.MERGELOC]')?int >
 <#if (equipCount > 0)>
-equipment[${equipCount}]{name,qty,weight,cost,location}:
+equipment[${equipCount}]{name,qty,weight,cost,location,special}:
 <@loop from=0 to=equipCount-1 ; equip, equip_has_next>
-  ${tq(pcstring('EQ.MERGELOC.${equip}.NAME'))},${pcstring('EQ.MERGELOC.${equip}.QTY')},${pcstring('EQ.MERGELOC.${equip}.WT')},${pcstring('EQ.MERGELOC.${equip}.COST')},${tq(pcstring('EQ.MERGELOC.${equip}.LOCATION'))}
+  ${tq(pcstring('EQ.MERGELOC.${equip}.NAME'))},${pcstring('EQ.MERGELOC.${equip}.QTY')},${pcstring('EQ.MERGELOC.${equip}.WT')},${pcstring('EQ.MERGELOC.${equip}.COST')},${tq(pcstring('EQ.MERGELOC.${equip}.LOCATION'))},${tq(pcstring('EQ.MERGELOC.${equip}.SPROP'))}
 </@loop>
 </#if>
 gold: ${pcstring('GOLD')}
