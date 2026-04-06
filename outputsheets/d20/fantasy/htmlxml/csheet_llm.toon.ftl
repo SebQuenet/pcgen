@@ -126,24 +126,97 @@ specialAbilities[${saCount}]{name,description}:
   ${tq(pcstring('SPECIALABILITY.${sa}'))},${tq(pcstring('SPECIALABILITY.${sa}.DESCRIPTION'))}
 </@loop>
 </#if>
-<#-- Ability categories -->
-<#assign abilCategories = ["Racial Trait", "Class Feature", "Archetype", "Trait"] >
-<#list abilCategories as cat>
-<#assign catCount = pcvar('countdistinct("ABILITIES","CATEGORY=${cat}","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")')?int >
-<#if (catCount > 0)>
-<#assign catKey = cat?replace(" ", "")?uncap_first + "s" >
-${catKey}[${catCount}]{name,description}:
-<@loop from=0 to=catCount-1 ; ability, ability_has_next>
-  ${tq(pcstring('ABILITYALL.${cat}.VISIBLE.${ability}'))},${tq(pcstring('ABILITYALL.${cat}.VISIBLE.${ability}.DESC'))}
+<#-- Ability sections: [outputKey, category, typeFilter] -->
+<#-- Use CATEGORY=Special Ability + TYPE for reliable output; ABILITYCATEGORY names don't resolve in countdistinct -->
+<#assign abilSections = [
+  ["traits", "Special Ability", "Trait"],
+  ["racialTraits", "Special Ability", "RacialTrait"],
+  ["classFeatures", "Special Ability", "ClassFeatures"],
+  ["specialAttacks", "Special Ability", "SpecialAttack"],
+  ["archetypes", "Archetype", ""],
+  ["mythicTiers", "Special Ability", "Mythic Tier"],
+  ["mythicPaths", "Special Ability", "Mythic Path"],
+  ["mythicPathAbilities", "Special Ability", "Mythic Path Ability"],
+  ["mythicAbilityBonuses", "Special Ability", "Mythic Ability Bonus"],
+  ["championStrikes", "Special Ability", "Champion Path Feature"],
+  ["guardianCalls", "Special Ability", "Guardian Path Feature"],
+  ["marshalOrders", "Special Ability", "Marshal Path Feature"],
+  ["tricksterAttacks", "Special Ability", "Trickster Path Feature"],
+  ["archmageArcanas", "Special Ability", "Archmage Path Feature"],
+  ["hierophantSurges", "Special Ability", "Hierophant Path Feature"]
+] >
+<#list abilSections as sec>
+<#assign typeFilter = (sec[2] != "")?then(',"TYPE=${sec[2]}"', '') >
+<#assign typeSuffix = (sec[2] != "")?then('.TYPE=${sec[2]}', '') >
+<#assign secCount = pcvar('countdistinct("ABILITIES","CATEGORY=${sec[1]}"${typeFilter},"VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")')?int >
+<#if (secCount > 0)>
+${sec[0]}[${secCount}]{name,description}:
+<@loop from=0 to=secCount-1 ; ability, ability_has_next>
+  ${tq(pcstring('ABILITYALL.${sec[1]}.VISIBLE.${ability}${typeSuffix}'))},${tq(pcstring('ABILITYALL.${sec[1]}.VISIBLE.${ability}${typeSuffix}.DESC'))}
 </@loop>
 </#if>
 </#list>
+<#-- Tracked resources (mythic pool, channel energy, etc.) -->
+<#assign resourceVars = [
+  ["MythicTierLevel", "mythicTier"],
+  ["MythicSurgeDieSize", "mythicSurgeDie"],
+  ["MythicPowerTimes", "mythicPoolPerDay"],
+  ["ClericChannelEnergyTimes", "channelEnergyPerDay"],
+  ["ClericChannelPositiveEnergyDice", "channelPositiveDice"],
+  ["ClericChannelPositiveEnergyDieSize", "channelPositiveDieSize"],
+  ["ClericChannelPositiveEnergyDC", "channelPositiveDC"],
+  ["PaladinChannelPerDay", "paladinChannelPerDay"],
+  ["PaladinChannelDC", "paladinChannelDC"],
+  ["LayOnHandsTimes", "layOnHandsPerDay"],
+  ["SmiteEvilTimes", "smiteEvilPerDay"],
+  ["KiPool", "kiPool"],
+  ["RageDuration", "rageRoundsPerDay"],
+  ["BardicMusicDuration", "bardicPerformanceRounds"],
+  ["WildShapeTimes", "wildShapePerDay"],
+  ["SneakAttackDice", "sneakAttackDice"],
+  ["StunningFistCount", "stunningFistPerDay"]
+] >
+<#assign hasResources = false >
+<#list resourceVars as rv>
+<#if pchasvar(rv[0]) && (pcvar(rv[0]) > 0)>
+<#if !hasResources>
+resources:
+<#assign hasResources = true >
+</#if>
+  ${rv[1]}: ${pcvar(rv[0])?int}
+</#if>
+</#list>
+<#-- Conditional modifiers (save, combat, skill bonuses) -->
+<#assign condSaveCount = pcvar('countdistinct("ABILITIES","ASPECT=SaveBonus")')?int >
+<#assign condCombatCount = pcvar('countdistinct("ABILITIES","ASPECT=CombatBonus")')?int >
+<#assign condSkillCount = pcvar('countdistinct("ABILITIES","ASPECT=SkillBonus")')?int >
+<#if (condSaveCount + condCombatCount + condSkillCount > 0)>
+conditionalModifiers:
+<#if (condSaveCount > 0)>
+  saves:
+<@loop from=0 to=condSaveCount-1 ; cm, cm_has_next>
+    - ${tq(pcstring('ABILITYALL.ANY.${cm}.ASPECT=SaveBonus.ASPECT.SaveBonus'))}
+</@loop>
+</#if>
+<#if (condCombatCount > 0)>
+  combat:
+<@loop from=0 to=condCombatCount-1 ; cm, cm_has_next>
+    - ${tq(pcstring('ABILITYALL.ANY.${cm}.ASPECT=CombatBonus.ASPECT.CombatBonus'))}
+</@loop>
+</#if>
+<#if (condSkillCount > 0)>
+  skills:
+<@loop from=0 to=condSkillCount-1 ; cm, cm_has_next>
+    - ${tq(pcstring('ABILITYALL.ANY.${cm}.ASPECT=SkillBonus.ASPECT.SkillBonus'))}
+</@loop>
+</#if>
+</#if>
 <#-- Weapons -->
 <#assign weapCount = pcvar('COUNT[EQTYPE.WEAPON]')?int >
 <#if (weapCount > 0)>
-weapons[${weapCount}]{name,toHit,damage,crit,range,type,special}:
+weapons[${weapCount}]{name,toHit,damage,crit,range,type,hand,special}:
 <@loop from=0 to=weapCount-1 ; weap, weap_has_next>
-  ${tq(pcstring('WEAPON.${weap}.NAME'))},${tq(pcstring('WEAPON.${weap}.TOTALHIT'))},${tq(pcstring('WEAPON.${weap}.DAMAGE'))},${tq(pcstring('WEAPON.${weap}.CRIT') + '/x' + pcstring('WEAPON.${weap}.MULT'))},${tq(pcstring('WEAPON.${weap}.RANGE'))},${tq(pcstring('WEAPON.${weap}.TYPE'))},${tq(pcstring('WEAPON.${weap}.SPROP'))}
+  ${tq(pcstring('WEAPON.${weap}.NAME'))},${tq(pcstring('WEAPON.${weap}.BASEHIT'))},${tq(pcstring('WEAPON.${weap}.DAMAGE'))},${tq(pcstring('WEAPON.${weap}.CRIT') + '/x' + pcstring('WEAPON.${weap}.MULT'))},${tq(pcstring('WEAPON.${weap}.RANGE'))},${tq(pcstring('WEAPON.${weap}.TYPE'))},${tq(pcstring('WEAPON.${weap}.HAND'))},${tq(pcstring('WEAPON.${weap}.SPROP'))}
 </@loop>
 </#if>
 <#-- Natural Attacks -->

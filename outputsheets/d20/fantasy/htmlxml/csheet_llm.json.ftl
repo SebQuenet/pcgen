@@ -94,23 +94,23 @@
     {"name": "${pcstring('SPECIALABILITY.${sa}')?json_string}", "description": "${pcstring('SPECIALABILITY.${sa}.DESCRIPTION')?json_string}"}<#if sa_has_next>,</#if>
 </@loop>
   ],
-<#-- Ability categories -->
-<#assign abilCategories = [["Racial Trait", "racialTraits"], ["Class Feature", "classFeatures"], ["Archetype", "archetypes"], ["Trait", "traits"]] >
-<#list abilCategories as catPair>
-<#assign cat = catPair[0] >
-<#assign catKey = catPair[1] >
-<#assign catCount = pcvar('countdistinct("ABILITIES","CATEGORY=${cat}","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")')?int >
-  "${catKey}": [
-<#if (catCount > 0)>
-<@loop from=0 to=catCount-1 ; ability, ability_has_next>
-    {"name": "${pcstring('ABILITYALL.${cat}.VISIBLE.${ability}')?json_string}", "description": "${pcstring('ABILITYALL.${cat}.VISIBLE.${ability}.DESC')?json_string}"}<#if ability_has_next>,</#if>
+<#-- Ability sections: use CATEGORY=Special Ability + TYPE for reliable output -->
+<#assign abilSections = [["traits", "Special Ability", "Trait"], ["racialTraits", "Special Ability", "RacialTrait"], ["classFeatures", "Special Ability", "ClassFeatures"], ["specialAttacks", "Special Ability", "SpecialAttack"], ["archetypes", "Archetype", ""]] >
+<#list abilSections as sec>
+<#assign typeFilter = (sec[2] != "")?then(',"TYPE=${sec[2]}"', '') >
+<#assign typeSuffix = (sec[2] != "")?then('.TYPE=${sec[2]}', '') >
+<#assign secCount = pcvar('countdistinct("ABILITIES","CATEGORY=${sec[1]}"${typeFilter},"VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")')?int >
+  "${sec[0]}": [
+<#if (secCount > 0)>
+<@loop from=0 to=secCount-1 ; ability, ability_has_next>
+    {"name": "${pcstring('ABILITYALL.${sec[1]}.VISIBLE.${ability}${typeSuffix}')?json_string}", "description": "${pcstring('ABILITYALL.${sec[1]}.VISIBLE.${ability}${typeSuffix}.DESC')?json_string}"}<#if ability_has_next>,</#if>
 </@loop>
 </#if>
-  ]<#if catPair_has_next>,</#if>
+  ]<#if sec_has_next>,</#if>
 </#list>,
   "weapons": [
 <@loop from=0 to=pcvar('COUNT[EQTYPE.WEAPON]-1') ; weap, weap_has_next>
-    {"name": "${pcstring('WEAPON.${weap}.NAME')?json_string}", "toHit": "${pcstring('WEAPON.${weap}.TOTALHIT')?json_string}", "damage": "${pcstring('WEAPON.${weap}.DAMAGE')?json_string}", "crit": "${pcstring('WEAPON.${weap}.CRIT')?json_string}/x${pcstring('WEAPON.${weap}.MULT')}", "range": "${pcstring('WEAPON.${weap}.RANGE')?json_string}", "type": "${pcstring('WEAPON.${weap}.TYPE')?json_string}", "special": "${pcstring('WEAPON.${weap}.SPROP')?json_string}"}<#if weap_has_next>,</#if>
+    {"name": "${pcstring('WEAPON.${weap}.NAME')?json_string}", "toHit": "${pcstring('WEAPON.${weap}.BASEHIT')?json_string}", "damage": "${pcstring('WEAPON.${weap}.DAMAGE')?json_string}", "crit": "${pcstring('WEAPON.${weap}.CRIT')?json_string}/x${pcstring('WEAPON.${weap}.MULT')}", "range": "${pcstring('WEAPON.${weap}.RANGE')?json_string}", "type": "${pcstring('WEAPON.${weap}.TYPE')?json_string}", "special": "${pcstring('WEAPON.${weap}.SPROP')?json_string}"}<#if weap_has_next>,</#if>
 </@loop>
   ],
   "naturalAttacks": [

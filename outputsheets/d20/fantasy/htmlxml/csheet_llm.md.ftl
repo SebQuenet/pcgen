@@ -64,7 +64,7 @@
 | Weapon | To Hit | Damage | Crit | Range | Type | Special |
 |--------|--------|--------|------|-------|------|---------|
 <@loop from=0 to=pcvar('COUNT[EQTYPE.WEAPON]-1') ; weap, weap_has_next>
-| ${pcstring('WEAPON.${weap}.NAME')} | ${pcstring('WEAPON.${weap}.TOTALHIT')} | ${pcstring('WEAPON.${weap}.DAMAGE')} | ${pcstring('WEAPON.${weap}.CRIT')}/x${pcstring('WEAPON.${weap}.MULT')} | ${pcstring('WEAPON.${weap}.RANGE')} | ${pcstring('WEAPON.${weap}.TYPE')} | ${pcstring('WEAPON.${weap}.SPROP')} |
+| ${pcstring('WEAPON.${weap}.NAME')} | ${pcstring('WEAPON.${weap}.BASEHIT')} | ${pcstring('WEAPON.${weap}.DAMAGE')} | ${pcstring('WEAPON.${weap}.CRIT')}/x${pcstring('WEAPON.${weap}.MULT')} | ${pcstring('WEAPON.${weap}.RANGE')} | ${pcstring('WEAPON.${weap}.TYPE')} | ${pcstring('WEAPON.${weap}.SPROP')} |
 </@loop>
 </#if>
 
@@ -127,15 +127,23 @@
 </@loop>
 </#if>
 
-<#-- Ability categories: Racial Trait, Class Feature, Archetype, Trait, etc. -->
-<#assign abilCategories = ["Racial Trait", "Class Feature", "Archetype", "Trait", "Special Quality"] >
-<#list abilCategories as cat>
-<#assign catCount = pcvar('countdistinct("ABILITIES","CATEGORY=${cat}","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') >
-<#if (catCount > 0)>
+<#-- Ability sections: use CATEGORY=Special Ability + TYPE for reliable output -->
+<#assign abilSections = [
+  ["Traits", "Special Ability", "Trait"],
+  ["Racial Traits", "Special Ability", "RacialTrait"],
+  ["Class Features", "Special Ability", "ClassFeatures"],
+  ["Special Attacks", "Special Ability", "SpecialAttack"],
+  ["Archetypes", "Archetype", ""]
+] >
+<#list abilSections as sec>
+<#assign typeFilter = (sec[2] != "")?then(',"TYPE=${sec[2]}"', '') >
+<#assign typeSuffix = (sec[2] != "")?then('.TYPE=${sec[2]}', '') >
+<#assign secCount = pcvar('countdistinct("ABILITIES","CATEGORY=${sec[1]}"${typeFilter},"VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")')?int >
+<#if (secCount > 0)>
 
-### ${cat}s
-<@loop from=0 to=catCount-1 ; ability, ability_has_next>
-- **${pcstring('ABILITYALL.${cat}.VISIBLE.${ability}')}**<#if (pcstring('ABILITYALL.${cat}.VISIBLE.${ability}.DESC') != '')> — ${pcstring('ABILITYALL.${cat}.VISIBLE.${ability}.DESC')}</#if>
+### ${sec[0]}
+<@loop from=0 to=secCount-1 ; ability, ability_has_next>
+- **${pcstring('ABILITYALL.${sec[1]}.VISIBLE.${ability}${typeSuffix}')}**<#if (pcstring('ABILITYALL.${sec[1]}.VISIBLE.${ability}${typeSuffix}.DESC') != '')> — ${pcstring('ABILITYALL.${sec[1]}.VISIBLE.${ability}${typeSuffix}.DESC')}</#if>
 </@loop>
 </#if>
 </#list>
