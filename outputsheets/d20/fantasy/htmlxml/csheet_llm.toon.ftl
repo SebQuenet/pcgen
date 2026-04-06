@@ -132,8 +132,11 @@ specialAbilities[${saCount}]{name,description}:
   ["traits", "Special Ability", "Trait"],
   ["racialTraits", "Special Ability", "RacialTrait"],
   ["classFeatures", "Special Ability", "ClassFeatures"],
+  ["domainPowers", "Special Ability", "DomainPower"],
   ["specialAttacks", "Special Ability", "SpecialAttack"],
+  ["auras", "Special Ability", "Aura"],
   ["archetypes", "Archetype", ""],
+  ["mythicAbilities", "Special Ability", "Mythic Ability"],
   ["mythicTiers", "Special Ability", "Mythic Tier"],
   ["mythicPaths", "Special Ability", "Mythic Path"],
   ["mythicPathAbilities", "Special Ability", "Mythic Path Ability"],
@@ -174,7 +177,17 @@ ${sec[0]}[${secCount}]{name,description}:
   ["BardicMusicDuration", "bardicPerformanceRounds"],
   ["WildShapeTimes", "wildShapePerDay"],
   ["SneakAttackDice", "sneakAttackDice"],
-  ["StunningFistCount", "stunningFistPerDay"]
+  ["StunningFistCount", "stunningFistPerDay"],
+  ["TouchofGoodTimes", "touchOfGoodPerDay"],
+  ["TouchofEvilTimes", "touchOfEvilPerDay"],
+  ["TouchofLawTimes", "touchOfLawPerDay"],
+  ["TouchofChaosTimes", "touchOfChaosPerDay"],
+  ["HolyLanceTimes", "holyLancePerDay"],
+  ["SunNimbusOfLightRounds", "nimbusOfLightRounds"],
+  ["BleedingTouchTimes", "bleedingTouchPerDay"],
+  ["CalmingTouchTimes", "calmingTouchPerDay"],
+  ["TouchofGloryTimes", "touchOfGloryPerDay"],
+  ["ResistantTouchTimes", "resistantTouchPerDay"]
 ] >
 <#assign hasResources = false >
 <#list resourceVars as rv>
@@ -211,12 +224,14 @@ conditionalModifiers:
 </@loop>
 </#if>
 </#if>
-<#-- Weapons -->
+<#-- Weapons: BASEHIT for primary/equipped, TOTALHIT for off-hand (includes TWF penalty) -->
 <#assign weapCount = pcvar('COUNT[EQTYPE.WEAPON]')?int >
 <#if (weapCount > 0)>
 weapons[${weapCount}]{name,toHit,damage,crit,range,type,hand,special}:
 <@loop from=0 to=weapCount-1 ; weap, weap_has_next>
-  ${tq(pcstring('WEAPON.${weap}.NAME'))},${tq(pcstring('WEAPON.${weap}.BASEHIT'))},${tq(pcstring('WEAPON.${weap}.DAMAGE'))},${tq(pcstring('WEAPON.${weap}.CRIT') + '/x' + pcstring('WEAPON.${weap}.MULT'))},${tq(pcstring('WEAPON.${weap}.RANGE'))},${tq(pcstring('WEAPON.${weap}.TYPE'))},${tq(pcstring('WEAPON.${weap}.HAND'))},${tq(pcstring('WEAPON.${weap}.SPROP'))}
+<#assign weapHand = pcstring('WEAPON.${weap}.HAND')?lower_case >
+<#assign weapHit = (weapHand?contains("non") || weapHand?contains("off") || weapHand?contains("secondary"))?then(pcstring('WEAPON.${weap}.TOTALHIT'), pcstring('WEAPON.${weap}.BASEHIT')) >
+  ${tq(pcstring('WEAPON.${weap}.NAME'))},${tq(weapHit)},${tq(pcstring('WEAPON.${weap}.DAMAGE'))},${tq(pcstring('WEAPON.${weap}.CRIT') + '/x' + pcstring('WEAPON.${weap}.MULT'))},${tq(pcstring('WEAPON.${weap}.RANGE'))},${tq(pcstring('WEAPON.${weap}.TYPE'))},${tq(pcstring('WEAPON.${weap}.HAND'))},${tq(pcstring('WEAPON.${weap}.SPROP'))}
 </@loop>
 </#if>
 <#-- Natural Attacks -->
