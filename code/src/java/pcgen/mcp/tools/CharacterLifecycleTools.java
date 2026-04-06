@@ -1,7 +1,7 @@
 package pcgen.mcp.tools;
 
 import java.io.File;
-import java.util.List;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -90,7 +90,9 @@ public final class CharacterLifecycleTools
 	{
 		return new SyncToolSpecification(
 			new Tool("open_character",
-				"Open an existing character from a .pcg file. Sources must be loaded first.",
+				"Open an existing character from a .pcg file. Sources must be loaded first. "
+					+ "If the character requires different sources (same game mode), sources are "
+					+ "automatically merged and all open characters are reopened with new IDs.",
 				"""
 					{
 						"type": "object",
@@ -107,8 +109,17 @@ public final class CharacterLifecycleTools
 				try
 				{
 					String filePath = (String) args.get("file_path");
-					String characterId = session.openCharacter(new File(filePath));
-					return toResult(Map.of("character_id", characterId, "status", "opened"));
+					McpSessionManager.OpenCharacterResult result = session.openCharacter(new File(filePath));
+
+					Map<String, Object> response = new LinkedHashMap<>();
+					response.put("character_id", result.getCharacterId());
+					response.put("status", "opened");
+					response.put("sources_merged", result.isSourcesMerged());
+					if (result.isSourcesMerged() && !result.getReopenedCharacters().isEmpty())
+					{
+						response.put("reopened_characters", result.getReopenedCharacters());
+					}
+					return toResult(response);
 				}
 				catch (Exception e)
 				{

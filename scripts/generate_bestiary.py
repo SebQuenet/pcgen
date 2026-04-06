@@ -238,7 +238,7 @@ KNOWN_SOURCE_CONFIG = {
         'source_long': 'Occult Bestiary', 'source_short': 'OB',
         'source_web': 'http://paizo.com/products/btpy9toq',
         'source_date': '2015-12', 'prefix': 'ob',
-        'subdir': 'paizo/roleplaying_game/occult_bestiary',
+        'subdir': 'pcfinder/roleplaying_game/occult_bestiary',
         'exclude_names': set(), 'existing': False,
     },
     'Inner Sea Bestiary': {
@@ -252,7 +252,7 @@ KNOWN_SOURCE_CONFIG = {
         'source_long': 'Inner Sea Monster Codex', 'source_short': 'ISMC',
         'source_web': 'http://paizo.com/products/btpy9elc',
         'source_date': '2015-05', 'prefix': 'ismc',
-        'subdir': 'paizo/campaign_setting/inner_sea_monster_codex',
+        'subdir': 'pcfinder/campaign_setting/inner_sea_monster_codex',
         'exclude_names': set(), 'existing': False,
     },
     'Inner Sea Gods': {
@@ -266,7 +266,7 @@ KNOWN_SOURCE_CONFIG = {
         'source_long': 'Tome of Horrors Complete', 'source_short': 'ToHC',
         'source_web': 'https://froggodgames.com',
         'source_date': '2011-01', 'prefix': 'tohc',
-        'subdir': 'frog_god_games/tome_of_horrors_complete',
+        'subdir': 'pcfinder/frog_god_games/tome_of_horrors_complete',
         'exclude_names': set(), 'existing': False,
         'publisher_long': 'Frog God Games', 'publisher_short': 'FGG',
         'pcc_type': 'Frog God Games.Pathfinder RPG',
@@ -275,7 +275,7 @@ KNOWN_SOURCE_CONFIG = {
         'source_long': 'Tome of Horrors 4', 'source_short': 'ToH4',
         'source_web': 'https://froggodgames.com',
         'source_date': '2013-01', 'prefix': 'toh4',
-        'subdir': 'frog_god_games/tome_of_horrors_4',
+        'subdir': 'pcfinder/frog_god_games/tome_of_horrors_4',
         'exclude_names': set(), 'existing': False,
         'publisher_long': 'Frog God Games', 'publisher_short': 'FGG',
         'pcc_type': 'Frog God Games.Pathfinder RPG',
@@ -291,28 +291,28 @@ KNOWN_SOURCE_CONFIG = {
         'source_long': 'Isles of the Shackles', 'source_short': 'IotS',
         'source_web': 'http://paizo.com/products/btpy8qzx',
         'source_date': '2012-08', 'prefix': 'iots',
-        'subdir': 'paizo/campaign_setting/isles_of_the_shackles',
+        'subdir': 'pcfinder/campaign_setting/isles_of_the_shackles',
         'exclude_names': set(), 'existing': False,
     },
     'Numeria Land Of Fallen Stars': {
         'source_long': 'Numeria, Land of Fallen Stars', 'source_short': 'NLoFS',
         'source_web': 'http://paizo.com/products/btpy978l',
         'source_date': '2014-07', 'prefix': 'nlfs',
-        'subdir': 'paizo/campaign_setting/numeria_land_of_fallen_stars',
+        'subdir': 'pcfinder/campaign_setting/numeria_land_of_fallen_stars',
         'exclude_names': set(), 'existing': False,
     },
     'The Worldwound': {
         'source_long': 'The Worldwound', 'source_short': 'TWW',
         'source_web': 'http://paizo.com/products/btpy8yvk',
         'source_date': '2013-07', 'prefix': 'tww',
-        'subdir': 'paizo/campaign_setting/the_worldwound',
+        'subdir': 'pcfinder/campaign_setting/the_worldwound',
         'exclude_names': set(), 'existing': False,
     },
     'Horsemen Of The Apocalypse': {
         'source_long': 'Horsemen of the Apocalypse', 'source_short': 'HotA',
         'source_web': 'http://paizo.com/products/btpy8odg',
         'source_date': '2011-11', 'prefix': 'hota',
-        'subdir': 'paizo/campaign_setting/horsemen_of_the_apocalypse',
+        'subdir': 'pcfinder/campaign_setting/horsemen_of_the_apocalypse',
         'exclude_names': set(), 'existing': False,
     },
     'Andoran Birthplace Of Freedom': {
@@ -326,42 +326,42 @@ KNOWN_SOURCE_CONFIG = {
         'source_long': 'Osirion, Legacy of Pharaohs', 'source_short': 'OLoP',
         'source_web': 'http://paizo.com/products/btpy93n8',
         'source_date': '2014-02', 'prefix': 'olop',
-        'subdir': 'paizo/campaign_setting/osirion_legacy_of_pharaohs',
+        'subdir': 'pcfinder/campaign_setting/osirion_legacy_of_pharaohs',
         'exclude_names': set(), 'existing': False,
     },
     'Magnimar City Of Monuments': {
         'source_long': 'Magnimar, City of Monuments', 'source_short': 'MCoM',
         'source_web': 'http://paizo.com/products/btpy8slp',
         'source_date': '2012-07', 'prefix': 'mcom',
-        'subdir': 'paizo/campaign_setting/magnimar_city_of_monuments',
+        'subdir': 'pcfinder/campaign_setting/magnimar_city_of_monuments',
         'exclude_names': set(), 'existing': False,
     },
     'Irrisen Land Of Eternal Winter': {
         'source_long': 'Irrisen, Land of Eternal Winter', 'source_short': 'ILoEW',
         'source_web': 'http://paizo.com/products/btpy8w7f',
         'source_date': '2013-03', 'prefix': 'ilew',
-        'subdir': 'paizo/campaign_setting/irrisen_land_of_eternal_winter',
+        'subdir': 'pcfinder/campaign_setting/irrisen_land_of_eternal_winter',
         'exclude_names': set(), 'existing': False,
     },
     'Belkzen Hold Of The Orc Hordes': {
         'source_long': 'Belkzen, Hold of the Orc Hordes', 'source_short': 'BHoOH',
         'source_web': 'http://paizo.com/products/btpy97lw',
         'source_date': '2015-05', 'prefix': 'bhoh',
-        'subdir': 'paizo/campaign_setting/belkzen_hold_of_the_orc_hordes',
+        'subdir': 'pcfinder/campaign_setting/belkzen_hold_of_the_orc_hordes',
         'exclude_names': set(), 'existing': False,
     },
     'Lands Of The Linnorm Kings': {
         'source_long': 'Lands of the Linnorm Kings', 'source_short': 'LotLK',
         'source_web': 'http://paizo.com/products/btpy8ode',
         'source_date': '2011-11', 'prefix': 'lotlk',
-        'subdir': 'paizo/campaign_setting/lands_of_the_linnorm_kings',
+        'subdir': 'pcfinder/campaign_setting/lands_of_the_linnorm_kings',
         'exclude_names': set(), 'existing': False,
     },
     'Lost Kingdoms': {
         'source_long': 'Lost Kingdoms', 'source_short': 'LK',
         'source_web': 'http://paizo.com/products/btpy8sa7',
         'source_date': '2012-06', 'prefix': 'lk',
-        'subdir': 'paizo/campaign_setting/lost_kingdoms',
+        'subdir': 'pcfinder/campaign_setting/lost_kingdoms',
         'exclude_names': set(), 'existing': False,
     },
     'Heart of the Jungle': {
@@ -438,7 +438,7 @@ def build_source_config(source_name):
             'source_web': 'http://paizo.com',
             'source_date': '2010-01',
             'prefix': f'ap{ap_num}',
-            'subdir': f'paizo/adventure_path/ap{ap_num}',
+            'subdir': f'pcfinder/adventure_path/ap{ap_num}',
             'exclude_names': set(),
             'existing': False,
         }
@@ -448,11 +448,11 @@ def build_source_config(source_name):
     prefix = slug[:8]
 
     if any(kw in source_name.lower() for kw in ['tome of horrors', 'frog god']):
-        subdir = f'frog_god_games/{slug}'
+        subdir = f'pcfinder/frog_god_games/{slug}'
     elif any(kw in source_name.lower() for kw in ['kobold', 'midgard']):
-        subdir = f'kobold_press/{slug}'
+        subdir = f'pcfinder/kobold_press/{slug}'
     else:
-        subdir = f'paizo/campaign_setting/{slug}'
+        subdir = f'pcfinder/campaign_setting/{slug}'
 
     return {
         'source_long': source_name,

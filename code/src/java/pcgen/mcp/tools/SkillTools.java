@@ -12,11 +12,13 @@ import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.core.Skill;
+import pcgen.core.analysis.ChooseActivation;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.CharacterLevelFacade;
 import pcgen.facade.core.CharacterLevelsFacade;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.mcp.McpSessionManager;
+import pcgen.mcp.McpUIDelegate;
 
 public final class SkillTools
 {
@@ -30,7 +32,9 @@ public final class SkillTools
 	{
 		return new SyncToolSpecification(
 			new Tool("invest_skill_points",
-				"Invest skill points in a skill at a specific character level",
+				"Invest skill points in a skill at a specific character level. "
+					+ "For skills with a CHOOSE token (e.g. Linguistics, Craft, Perform, Profession), "
+					+ "provide the 'choices' parameter to select what the skill rank grants.",
 				"""
 					{
 						"type": "object",
@@ -38,7 +42,12 @@ public final class SkillTools
 							"character_id": { "type": "string", "description": "Character ID" },
 							"skill_key": { "type": "string", "description": "Skill key or name" },
 							"points": { "type": "integer", "description": "Number of skill points to invest" },
-							"level_index": { "type": "integer", "description": "Character level index (0-based, defaults to latest level)", "default": -1 }
+							"level_index": { "type": "integer", "description": "Character level index (0-based, defaults to latest level)", "default": -1 },
+							"choices": {
+								"type": "array",
+								"items": { "type": "string" },
+								"description": "Choices for CHOOSE-based skills (e.g. language name for Linguistics). Required for skills like Linguistics, Craft, Perform, Profession."
+							}
 						},
 						"required": ["character_id", "skill_key", "points"]
 					}
@@ -46,10 +55,14 @@ public final class SkillTools
 			(exchange, args) -> {
 				try
 				{
-					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					String characterId = (String) args.get("character_id");
+					CharacterFacade character = session.getCharacter(characterId);
 					String skillKey = (String) args.get("skill_key");
 					int points = ((Number) args.get("points")).intValue();
 					int levelIndex = args.containsKey("level_index") ? ((Number) args.get("level_index")).intValue() : -1;
+
+					@SuppressWarnings("unchecked")
+					List<String> choices = args.containsKey("choices") ? (List<String>) args.get("choices") : null;
 
 					DataSetFacade dataSet = character.getDataSet();
 					Skill foundSkill = null;
@@ -82,26 +95,53 @@ public final class SkillTools
 						level = levels.getElementAt(levelIndex);
 					}
 
-					int remaining = levels.getRemainingSkillPoints(level);
-					boolean success = levels.investSkillPoints(level, foundSkill, points);
-
-					if (!success)
+					// Pre-set choices for CHOOSE-based skills (e.g. Linguistics → language selection)
+					McpUIDelegate delegate = session.getDelegate(characterId);
+					boolean hasChoose = ChooseActivation.hasNewChooseToken(foundSkill);
+					if (hasChoose && choices != null && !choices.isEmpty() && delegate != null)
 					{
-						return errorResult("Failed to invest " + points + " points in " + foundSkill.getDisplayName()
-							+ ". Remaining points: " + remaining);
+						delegate.setPreSelectedChoices(choices);
 					}
 
-					Map<String, Object> result = new LinkedHashMap<>();
-					result.put("status", "ok");
-					result.put("skill", foundSkill.getDisplayName());
-					result.put("pointsInvested", points);
-					result.put("totalRanks", levels.getSkillRanks(level, foundSkill));
-					result.put("remainingPoints", levels.getRemainingSkillPoints(level));
-					return toResult(result);
+					try
+					{
+						int remaining = levels.getRemainingSkillPoints(level);
+						boolean success = levels.investSkillPoints(level, foundSkill, points);
+
+						if (!success)
+						{
+							return errorResult("Failed to invest " + points + " points in " + foundSkill.getDisplayName()
+								+ ". Remaining points: " + remaining);
+						}
+
+						Map<String, Object> result = new LinkedHashMap<>();
+						result.put("status", "ok");
+						result.put("skill", foundSkill.getDisplayName());
+						result.put("pointsInvested", points);
+						result.put("totalRanks", levels.getSkillRanks(level, foundSkill));
+						result.put("remainingPoints", levels.getRemainingSkillPoints(level));
+						if (hasChoose && choices != null)
+						{
+							result.put("choices_applied", choices);
+						}
+						else if (hasChoose)
+						{
+							result.put("warning", "Skill has CHOOSE token but no choices provided — first available option was auto-selected");
+						}
+						return toResult(result);
+					}
+					finally
+					{
+						if (delegate != null)
+						{
+							delegate.clearPreSelectedChoices();
+						}
+					}
 				}
 				catch (Exception e)
 				{
-					return errorResult(e.getMessage());
+					String msg = e.getMessage();
+					return errorResult(msg != null ? msg : e.getClass().getSimpleName());
 				}
 			}
 		);
@@ -179,7 +219,8 @@ public final class SkillTools
 	{
 		return new SyncToolSpecification(
 			new Tool("batch_invest_skills",
-				"Invest skill points across multiple levels in one call. Each entry specifies a skill and points per level.",
+				"Invest skill points across multiple levels in one call. Each entry specifies a skill and points per level. "
+					+ "For CHOOSE-based skills (Linguistics, Craft, Perform, Profession), include 'choices' in the entry.",
 				"""
 					{
 						"type": "object",
@@ -187,13 +228,18 @@ public final class SkillTools
 							"character_id": { "type": "string", "description": "Character ID" },
 							"investments": {
 								"type": "array",
-								"description": "List of skill investments: [{skill_key, points, level_index}]",
+								"description": "List of skill investments: [{skill_key, points, level_index, choices?}]",
 								"items": {
 									"type": "object",
 									"properties": {
 										"skill_key": { "type": "string" },
 										"points": { "type": "integer" },
-										"level_index": { "type": "integer" }
+										"level_index": { "type": "integer" },
+										"choices": {
+											"type": "array",
+											"items": { "type": "string" },
+											"description": "Choices for CHOOSE-based skills (e.g. language name for Linguistics)"
+										}
 									},
 									"required": ["skill_key", "points", "level_index"]
 								}
@@ -205,11 +251,13 @@ public final class SkillTools
 			(exchange, args) -> {
 				try
 				{
-					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					String characterId = (String) args.get("character_id");
+					CharacterFacade character = session.getCharacter(characterId);
 					@SuppressWarnings("unchecked")
 					List<Map<String, Object>> investments = (List<Map<String, Object>>) args.get("investments");
 					DataSetFacade dataSet = character.getDataSet();
 					CharacterLevelsFacade levels = character.getCharacterLevelsFacade();
+					McpUIDelegate delegate = session.getDelegate(characterId);
 
 					// Cache skill lookups
 					Map<String, Skill> skillCache = new java.util.HashMap<>();
@@ -228,6 +276,9 @@ public final class SkillTools
 						int points = ((Number) inv.get("points")).intValue();
 						int levelIndex = ((Number) inv.get("level_index")).intValue();
 
+						@SuppressWarnings("unchecked")
+						List<String> choices = inv.containsKey("choices") ? (List<String>) inv.get("choices") : null;
+
 						Skill foundSkill = skillCache.get(skillKey.toLowerCase());
 						if (foundSkill == null)
 						{
@@ -241,15 +292,32 @@ public final class SkillTools
 							continue;
 						}
 
-						CharacterLevelFacade level = levels.getElementAt(levelIndex);
-						boolean success = levels.investSkillPoints(level, foundSkill, points);
-						if (success)
+						// Pre-set choices for CHOOSE-based skills
+						if (ChooseActivation.hasNewChooseToken(foundSkill) && choices != null
+							&& !choices.isEmpty() && delegate != null)
 						{
-							successCount++;
+							delegate.setPreSelectedChoices(choices);
 						}
-						else
+
+						try
 						{
-							errors.add("Failed: " + skillKey + " at level " + (levelIndex + 1));
+							CharacterLevelFacade level = levels.getElementAt(levelIndex);
+							boolean success = levels.investSkillPoints(level, foundSkill, points);
+							if (success)
+							{
+								successCount++;
+							}
+							else
+							{
+								errors.add("Failed: " + skillKey + " at level " + (levelIndex + 1));
+							}
+						}
+						finally
+						{
+							if (delegate != null)
+							{
+								delegate.clearPreSelectedChoices();
+							}
 						}
 					}
 
@@ -265,7 +333,8 @@ public final class SkillTools
 				}
 				catch (Exception e)
 				{
-					return errorResult(e.getMessage());
+					String msg = e.getMessage();
+					return errorResult(msg != null ? msg : e.getClass().getSimpleName());
 				}
 			}
 		);

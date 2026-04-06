@@ -96,6 +96,7 @@ import pcgen.system.CharacterManager;
 import pcgen.system.ConfigurationSettings;
 import pcgen.system.FacadeFactory;
 import pcgen.system.LanguageBundle;
+import pcgen.system.SourceMerger;
 import pcgen.system.Main;
 import pcgen.system.PCGenPropBundle;
 import pcgen.system.PCGenSettings;
@@ -1045,20 +1046,41 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 			boolean gameModesSame = checkGameModeEquality(sources, currentSourceSelection.get());
 			if (!dontLoadSources && !sourcesSame && gameModesSame)
 			{
-				Object[] btnNames = {LanguageBundle.getString("in_loadPcDiffSourcesLoaded"),
-					LanguageBundle.getString("in_loadPcDiffSourcesCharacter"), LanguageBundle.getString("in_cancel")};
+				final int CHOICE_USE_LOADED = 0;
+				final int CHOICE_USE_CHARACTER = 1;
+				final int CHOICE_MERGE = 2;
+				final int CHOICE_CANCEL = 3;
+				Object[] btnNames = {
+					LanguageBundle.getString("in_loadPcDiffSourcesLoaded"),
+					LanguageBundle.getString("in_loadPcDiffSourcesCharacter"),
+					LanguageBundle.getString("in_loadPcDiffSourcesMerge"),
+					LanguageBundle.getString("in_cancel")};
 				int choice = JOptionPane.showOptionDialog(this,
 					LanguageBundle.getFormattedString("in_loadPcDiffSources",
 						getFormattedCampaigns(currentSourceSelection.get()), getFormattedCampaigns(sources)),
-					LanguageBundle.getString("in_loadPcSourcesLoadTitle"), JOptionPane.YES_NO_CANCEL_OPTION,
+					LanguageBundle.getString("in_loadPcSourcesLoadTitle"), JOptionPane.DEFAULT_OPTION,
 					JOptionPane.QUESTION_MESSAGE, null, btnNames, null);
-				if (choice == JOptionPane.CANCEL_OPTION)
+				if (choice == CHOICE_CANCEL || choice == CLOSED_OPTION)
 				{
 					return;
 				}
-				if (choice == JOptionPane.YES_OPTION)
+				if (choice == CHOICE_USE_LOADED)
 				{
 					openCharacter(pcgFile, currentDataSetRef.get());
+					return;
+				}
+				if (choice == CHOICE_MERGE)
+				{
+					SourceSelectionFacade mergedSources = SourceMerger.merge(currentSourceSelection.get(), sources);
+					if (mergedSources != null)
+					{
+						mergeSourcesAndReopenCharacters(mergedSources, pcgFile);
+					}
+					else
+					{
+						showErrorMessage(LanguageBundle.getString("in_loadPcFailTtile"),
+							LanguageBundle.getString("in_loadPcIncompatSource"));
+					}
 					return;
 				}
 			}
@@ -1209,6 +1231,185 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 				Logging.errorPrint("Error showing progress bar.", e1);
 			}
 		}).start();
+	}
+
+	/**
+	 * Merge sources and reopen all characters. This allows characters with different
+	 * source selections (same game mode) to coexist by loading the union of all sources.
+	 *
+	 * Workflow: save all open characters → close all → load merged sources → reopen all + new one.
+	 *
+	 * @param mergedSources the merged source selection (union of current + new character's sources)
+	 * @param newCharacterFile the new character file that triggered the merge
+	 */
+	private void mergeSourcesAndReopenCharacters(SourceSelectionFacade mergedSources, File newCharacterFile)
+	{
+		Logging.log(Logging.INFO, "Source merge: starting merge for " + newCharacterFile.getName());
+
+		// 1. Snapshot all open characters
+		ListFacade<CharacterFacade> openChars = CharacterManager.getCharacters();
+		List<File> filesToReopen = new ArrayList<>();
+		List<File> tempFiles = new ArrayList<>();
+
+		for (CharacterFacade ch : openChars)
+		{
+			File charFile = ch.getFileRef().get();
+
+			if (CharacterManager.characterFilenameValid(ch))
+			{
+				// Save if dirty
+				if (ch.isDirty())
+				{
+					Logging.log(Logging.INFO, "Source merge: saving dirty character " + ch.getNameRef().get());
+					reallySaveCharacter(ch);
+				}
+				filesToReopen.add(charFile);
+				Logging.log(Logging.INFO, "Source merge: will reopen " + charFile.getAbsolutePath());
+			}
+			else
+			{
+				// Never-saved character — save to temp file
+				try
+				{
+					File tmpFile = Files.createTempFile("pcgen_merge_", ".pcg").toFile();
+					ch.setFile(tmpFile);
+					reallySaveCharacter(ch);
+					filesToReopen.add(tmpFile);
+					tempFiles.add(tmpFile);
+					Logging.log(Logging.INFO, "Source merge: saved unsaved character to " + tmpFile.getAbsolutePath());
+				}
+				catch (IOException e)
+				{
+					Logging.errorPrint("Source merge: failed to save unsaved character to temp file", e);
+				}
+			}
+		}
+
+		// 2. Close all characters (skip interactive prompts — we already saved)
+		Logging.log(Logging.INFO, "Source merge: closing all " + openChars.getSize() + " characters");
+		CharacterManager.removeAllCharacters();
+
+		// 3. Set currentSourceSelection before loading (matches existing flow at line 1082)
+		if (sourceSelectionDialog == null)
+		{
+			sourceSelectionDialog = new SourceSelectionDialog(this, uiContext);
+		}
+		((SourceSelectionDialog) sourceSelectionDialog).setAdvancedSources(mergedSources);
+		currentSourceSelection.set(mergedSources);
+
+		// 4. Load merged sources
+		Logging.log(Logging.INFO, "Source merge: loading " + mergedSources.getCampaigns().getSize() + " merged campaigns");
+		sourceLoader = new SourceLoadWorker(mergedSources, this);
+		final Thread loader = sourceLoader;
+		sourceLoader.start();
+
+		// 5. Reopen all characters after sources finish loading (same pattern as loadSourcesThenCharacter)
+		new Thread(() -> {
+			try
+			{
+				loader.join();
+				Logging.log(Logging.INFO, "Source merge: source loading complete, reopening characters");
+
+				// Set up progress bar on EDT (blocking, to ensure it's ready before we open characters)
+				SwingUtilities.invokeAndWait(() -> {
+					statusBar.startShowingProgress("Reopening characters after source merge...", false);
+					statusBar.getProgressBar().getModel().setRangeProperties(0, 1, 0,
+						filesToReopen.size() + 2, false);
+					statusBar.getProgressBar().setString("Reopening characters...");
+				});
+
+				// Open characters on EDT
+				SwingUtilities.invokeLater(() -> {
+					try
+					{
+						DataSetFacade dataset = currentDataSetRef.get();
+						if (dataset == null)
+						{
+							Logging.errorPrint("Source merge failed — no data set available after reload.");
+							showErrorMessage(LanguageBundle.getString("in_loadPcFailTtile"),
+								LanguageBundle.getString("in_loadPcIncompatSource"));
+							return;
+						}
+
+						Logging.log(Logging.INFO, "Source merge: dataset available, reopening "
+							+ filesToReopen.size() + " characters + new character");
+
+						List<String> failures = new ArrayList<>();
+						int progress = 0;
+
+						// Reopen previously open characters
+						for (File file : filesToReopen)
+						{
+							Logging.log(Logging.INFO, "Source merge: reopening " + file.getAbsolutePath());
+							CharacterFacade reopened = CharacterManager.openCharacter(file, PCGenFrame.this, dataset);
+							if (reopened == null)
+							{
+								Logging.errorPrint("Source merge: openCharacter returned null for " + file.getName());
+								failures.add(file.getName());
+							}
+							progress++;
+							statusBar.getProgressBar().getModel().setRangeProperties(progress, 1, 0,
+								filesToReopen.size() + 2, false);
+						}
+
+						// Open the new character
+						Logging.log(Logging.INFO, "Source merge: opening new character "
+							+ newCharacterFile.getAbsolutePath());
+						CharacterFacade newChar =
+							CharacterManager.openCharacter(newCharacterFile, PCGenFrame.this, dataset);
+						if (newChar == null)
+						{
+							Logging.errorPrint("Source merge: openCharacter returned null for new character "
+								+ newCharacterFile.getName());
+							failures.add(newCharacterFile.getName());
+						}
+
+						// Cleanup temp files and restore "unsaved" state
+						for (File tmp : tempFiles)
+						{
+							for (CharacterFacade ch : CharacterManager.getCharacters())
+							{
+								if (tmp.equals(ch.getFileRef().get()))
+								{
+									ch.setFile(new File(""));
+									break;
+								}
+							}
+							tmp.delete();
+						}
+
+						if (!failures.isEmpty())
+						{
+							Logging.errorPrint("Source merge: failed to reopen " + failures.size() + " characters");
+							showErrorMessage(LanguageBundle.getString("in_loadPcFailTtile"),
+								"Failed to reopen: " + String.join(", ", failures));
+						}
+						else
+						{
+							Logging.log(Logging.INFO, "Source merge: all characters reopened successfully");
+						}
+					}
+					catch (Exception e)
+					{
+						Logging.errorPrint("Source merge: unexpected error during character reopen", e);
+						showErrorMessage(LanguageBundle.getString("in_loadPcFailTtile"),
+							"Error during source merge: " + e.getMessage());
+					}
+					finally
+					{
+						statusBar.endShowingProgress();
+					}
+				});
+			}
+			catch (InterruptedException e)
+			{
+				Logging.errorPrint("Source merge: interrupted while waiting for source load", e);
+			}
+			catch (InvocationTargetException e)
+			{
+				Logging.errorPrint("Source merge: error setting up progress bar", e);
+			}
+		}, "SourceMerge-Reopen").start();
 	}
 
 	public void loadPartyFromFile(final File pcpFile)

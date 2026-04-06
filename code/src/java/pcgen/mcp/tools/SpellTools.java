@@ -280,11 +280,7 @@ public final class SpellTools
 						return errorResult("Spell not found: " + spellName);
 					}
 
-					if (spellList == null || spellList.isBlank())
-					{
-						var ref = spellSupport.getDefaultSpellBookRef();
-						spellList = ref != null && ref.get() != null ? ref.get() : "Prepared Spells";
-					}
+					spellList = resolveAndEnsureSpellList(spellSupport, spellList);
 
 					spellSupport.addPreparedSpell(found, spellList, false);
 					return toResult(Map.of("status", "ok", "spell", found.getSpell().toString(), "spellList", spellList));
@@ -494,12 +490,7 @@ public final class SpellTools
 
 						try
 						{
-							String list = spellList;
-							if (list == null || list.isBlank())
-							{
-								var ref = spellSupport.getDefaultSpellBookRef();
-								list = ref != null && ref.get() != null ? ref.get() : "Prepared Spells";
-							}
+							String list = resolveAndEnsureSpellList(spellSupport, spellList);
 
 							spellSupport.addPreparedSpell(found, list, false);
 							successCount++;
@@ -598,6 +589,32 @@ public final class SpellTools
 		map.put("duration", spell.getDuration());
 		map.put("castTime", spell.getCastTime());
 		return map;
+	}
+
+	private static String resolveAndEnsureSpellList(SpellSupportFacade spellSupport, String spellList)
+	{
+		if (spellList == null || spellList.isBlank())
+		{
+			var ref = spellSupport.getDefaultSpellBookRef();
+			String defaultBook = ref != null ? ref.get() : null;
+			spellList = (defaultBook != null && !defaultBook.isEmpty()) ? defaultBook : "Prepared Spells";
+		}
+		// Only create the spell list if it doesn't already exist
+		boolean exists = false;
+		for (SuperNode node : spellSupport.getPreparedSpellNodes())
+		{
+			if (node instanceof SpellNode spellNode && spellNode.getRootNode() != null
+				&& spellList.equals(spellNode.getRootNode().getName()))
+			{
+				exists = true;
+				break;
+			}
+		}
+		if (!exists)
+		{
+			spellSupport.addSpellList(spellList);
+		}
+		return spellList;
 	}
 
 	private static CallToolResult toResult(Object data)

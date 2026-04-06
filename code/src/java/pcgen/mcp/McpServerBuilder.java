@@ -110,9 +110,11 @@ public final class McpServerBuilder
 				TemplateTools.addKit(session),
 				// Languages & Companions
 				LanguageCompanionTools.getLanguages(session),
+				LanguageCompanionTools.addLanguage(session),
 				LanguageCompanionTools.removeLanguage(session),
 				LanguageCompanionTools.getCompanions(session),
 				LanguageCompanionTools.addCompanion(session),
+				LanguageCompanionTools.removeCompanion(session),
 				// Biography & XP
 				BiographyTools.setBiography(session),
 				BiographyTools.getBiography(session),

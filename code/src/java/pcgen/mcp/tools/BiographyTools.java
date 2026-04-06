@@ -13,7 +13,10 @@ import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.cdom.enumeration.Gender;
 import pcgen.cdom.enumeration.Handed;
+import pcgen.cdom.enumeration.PCStringKey;
+import pcgen.core.NoteItem;
 import pcgen.facade.core.CharacterFacade;
+import pcgen.facade.core.DescriptionFacade;
 import pcgen.mcp.McpSessionManager;
 
 public final class BiographyTools
@@ -24,11 +27,21 @@ public final class BiographyTools
 	{
 	}
 
+	private static final Map<String, PCStringKey> NOTE_FIELD_MAP = Map.of(
+		"bio", PCStringKey.BIO,
+		"description", PCStringKey.DESCRIPTION,
+		"companions", PCStringKey.COMPANIONS,
+		"assets", PCStringKey.ASSETS,
+		"magic", PCStringKey.MAGIC,
+		"gm_notes", PCStringKey.GMNOTES
+	);
+
 	public static SyncToolSpecification setBiography(McpSessionManager session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_biography",
-				"Set biography fields for a character (gender, age, height, weight, hair color, eye color, skin color, handed)",
+				"Set biography fields for a character. Supports basic fields (gender, age, etc.) "
+					+ "and text note fields (bio, description, companions, assets, magic, gm_notes).",
 				"""
 					{
 						"type": "object",
@@ -41,7 +54,13 @@ public final class BiographyTools
 							"eye_color": { "type": "string", "description": "Eye color" },
 							"skin_color": { "type": "string", "description": "Skin color" },
 							"handed": { "type": "string", "description": "Handedness (Right, Left, Ambidextrous)" },
-							"players_name": { "type": "string", "description": "Player's real name" }
+							"players_name": { "type": "string", "description": "Player's real name" },
+							"bio": { "type": "string", "description": "Character biography / backstory text" },
+							"description": { "type": "string", "description": "Physical description of the character" },
+							"companions": { "type": "string", "description": "Notes about companions and allies" },
+							"assets": { "type": "string", "description": "Notes about other assets and possessions" },
+							"magic": { "type": "string", "description": "Notes about magic items and effects" },
+							"gm_notes": { "type": "string", "description": "GM-only notes" }
 						},
 						"required": ["character_id"]
 					}
@@ -101,11 +120,33 @@ public final class BiographyTools
 						updated.add("players_name");
 					}
 
+					// Handle text note fields (bio, description, companions, assets, magic, gm_notes)
+					DescriptionFacade descFacade = character.getDescriptionFacade();
+					for (Map.Entry<String, PCStringKey> entry : NOTE_FIELD_MAP.entrySet())
+					{
+						String fieldName = entry.getKey();
+						if (args.containsKey(fieldName))
+						{
+							String text = (String) args.get(fieldName);
+							PCStringKey targetKey = entry.getValue();
+							for (NoteItem note : descFacade.getNotes())
+							{
+								if (note.getPCStringKey().isPresent() && note.getPCStringKey().get() == targetKey)
+								{
+									descFacade.setNote(note, text);
+									updated.add(fieldName);
+									break;
+								}
+							}
+						}
+					}
+
 					return toResult(Map.of("status", "ok", "updated", updated));
 				}
 				catch (Exception e)
 				{
-					return errorResult(e.getMessage());
+					String msg = e.getMessage();
+					return errorResult(msg != null ? msg : e.getClass().getSimpleName());
 				}
 			}
 		);
@@ -115,7 +156,8 @@ public final class BiographyTools
 	{
 		return new SyncToolSpecification(
 			new Tool("get_biography",
-				"Get biography details for a character",
+				"Get biography details for a character, including basic fields and text notes "
+					+ "(bio, description, companions, assets, magic, gm_notes)",
 				"""
 					{
 						"type": "object",
@@ -140,11 +182,32 @@ public final class BiographyTools
 					bio.put("eyeColor", character.getEyeColorRef().get());
 					bio.put("skinColor", character.getSkinColorRef().get());
 					bio.put("handed", character.getHandedRef().get() != null ? character.getHandedRef().get().toString() : null);
+
+					// Include text note fields
+					DescriptionFacade descFacade = character.getDescriptionFacade();
+					Map<PCStringKey, String> keyToField = new LinkedHashMap<>();
+					for (Map.Entry<String, PCStringKey> entry : NOTE_FIELD_MAP.entrySet())
+					{
+						keyToField.put(entry.getValue(), entry.getKey());
+					}
+					for (NoteItem note : descFacade.getNotes())
+					{
+						if (note.getPCStringKey().isPresent())
+						{
+							String fieldName = keyToField.get(note.getPCStringKey().get());
+							if (fieldName != null)
+							{
+								bio.put(fieldName, note.getValue());
+							}
+						}
+					}
+
 					return toResult(bio);
 				}
 				catch (Exception e)
 				{
-					return errorResult(e.getMessage());
+					String msg = e.getMessage();
+					return errorResult(msg != null ? msg : e.getClass().getSimpleName());
 				}
 			}
 		);

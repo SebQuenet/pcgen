@@ -57,7 +57,22 @@ public final class LanguageCompanionTools
 					List<Map<String, Object>> choosers = new ArrayList<>();
 					for (LanguageChooserFacade lc : character.getLanguageChoosers())
 					{
-						choosers.add(Map.of("name", lc.toString()));
+						Map<String, Object> chooserMap = new LinkedHashMap<>();
+						chooserMap.put("name", lc.getName());
+						chooserMap.put("remaining", lc.getRemainingSelections().get());
+						List<String> available = new ArrayList<>();
+						for (Language lang : lc.getAvailableList())
+						{
+							available.add(lang.getDisplayName());
+						}
+						chooserMap.put("available", available);
+						List<String> selected = new ArrayList<>();
+						for (Language lang : lc.getSelectedList())
+						{
+							selected.add(lang.getDisplayName());
+						}
+						chooserMap.put("selected", selected);
+						choosers.add(chooserMap);
 					}
 
 					return toResult(Map.of("languages", languages, "choosers", choosers));
@@ -100,6 +115,51 @@ public final class LanguageCompanionTools
 					if (!character.isRemovable(found)) return errorResult("Language is not removable: " + found.getDisplayName());
 					character.removeLanguage(found);
 					return toResult(Map.of("status", "ok", "removed", found.getDisplayName()));
+				}
+				catch (Exception e) { return errorResult(e.getMessage()); }
+			}
+		);
+	}
+
+	public static SyncToolSpecification addLanguage(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("add_language",
+				"Add a bonus language to a character by selecting from an available language chooser",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"language_key": { "type": "string", "description": "Language name or key (from get_languages chooser available list)" }
+						},
+						"required": ["character_id", "language_key"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					String key = (String) args.get("language_key");
+
+					for (LanguageChooserFacade chooser : character.getLanguageChoosers())
+					{
+						if (chooser.getRemainingSelections().get() <= 0)
+						{
+							continue;
+						}
+						for (Language lang : chooser.getAvailableList())
+						{
+							if (lang.getKeyName().equalsIgnoreCase(key) || lang.getDisplayName().equalsIgnoreCase(key))
+							{
+								chooser.addSelected(lang);
+								chooser.commit();
+								return toResult(Map.of("status", "ok", "added", lang.getDisplayName(),
+									"chooser", chooser.getName()));
+							}
+						}
+					}
+					return errorResult("Language not found or no available chooser with remaining selections: " + key);
 				}
 				catch (Exception e) { return errorResult(e.getMessage()); }
 			}
@@ -216,6 +276,60 @@ public final class LanguageCompanionTools
 						"companion_type", companionType,
 						"companion_race", selectedRace.getDisplayName()
 					));
+				}
+				catch (Exception e) { return errorResult(e.getMessage()); }
+			}
+		);
+	}
+
+	public static SyncToolSpecification removeCompanion(McpSessionManager session)
+	{
+		return new SyncToolSpecification(
+			new Tool("remove_companion",
+				"Remove a companion (animal companion, familiar, mount, follower) from a character",
+				"""
+					{
+						"type": "object",
+						"properties": {
+							"character_id": { "type": "string", "description": "Character ID" },
+							"companion_type": { "type": "string", "description": "Companion type (e.g., 'Animal Companion', 'Familiar', 'Follower')" },
+							"companion_race": { "type": "string", "description": "Race of the companion to remove (optional, uses first match if omitted)" }
+						},
+						"required": ["character_id", "companion_type"]
+					}
+					"""),
+			(exchange, args) -> {
+				try
+				{
+					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
+					String companionType = (String) args.get("companion_type");
+					String companionRace = (String) args.get("companion_race");
+					CompanionSupportFacade support = character.getCompanionSupport();
+
+					CompanionFacade matched = null;
+					for (CompanionFacade c : support.getCompanions())
+					{
+						if (c.getCompanionType().equalsIgnoreCase(companionType))
+						{
+							if (companionRace == null || companionRace.isBlank()
+								|| (c.getRaceRef().get() != null
+									&& c.getRaceRef().get().getDisplayName().equalsIgnoreCase(companionRace)))
+							{
+								matched = c;
+								break;
+							}
+						}
+					}
+					if (matched == null)
+					{
+						return errorResult("No companion found for type '" + companionType
+							+ "'" + (companionRace != null ? " with race '" + companionRace + "'" : ""));
+					}
+
+					String removedRace = matched.getRaceRef().get() != null
+						? matched.getRaceRef().get().getDisplayName() : "Unknown";
+					support.removeCompanion(matched);
+					return toResult(Map.of("status", "ok", "removed_type", companionType, "removed_race", removedRace));
 				}
 				catch (Exception e) { return errorResult(e.getMessage()); }
 			}
