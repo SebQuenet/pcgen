@@ -225,11 +225,19 @@ public final class AbilityTools
 						delegate.setPreSelectedChoices(choice);
 					}
 
+					// Clear stale errors before the operation
+					if (delegate != null) { delegate.consumeLastError(); }
+
 					character.addAbility(category, found);
 
 					if (delegate != null)
 					{
 						delegate.clearPreSelectedChoices();
+						String error = delegate.consumeLastError();
+						if (error != null)
+						{
+							return errorResult("Failed to add ability: " + error);
+						}
 					}
 
 					return toResult(Map.of("status", "ok", "ability", found.toString(),

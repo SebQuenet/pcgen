@@ -1424,9 +1424,10 @@ public class CharacterFacadeImpl
 		{
 			for (Gender raceGender : availGenders)
 			{
-				if (raceGender.toString().equals(gender))
+				if (raceGender.name().equalsIgnoreCase(gender) || raceGender.toString().equalsIgnoreCase(gender))
 				{
 					setGender(raceGender);
+					return;
 				}
 			}
 		}
