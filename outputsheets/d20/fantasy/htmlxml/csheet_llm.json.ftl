@@ -109,8 +109,10 @@
   ]<#if sec_has_next>,</#if>
 </#list>,
   "weapons": [
-<@loop from=0 to=pcvar('COUNT[EQTYPE.WEAPON]-1') ; weap, weap_has_next>
-    {"name": "${pcstring('WEAPON.${weap}.NAME')?json_string}", "toHit": "${pcstring('WEAPON.${weap}.BASEHIT')?json_string}", "damage": "${pcstring('WEAPON.${weap}.DAMAGE')?json_string}", "crit": "${pcstring('WEAPON.${weap}.CRIT')?json_string}/x${pcstring('WEAPON.${weap}.MULT')}", "range": "${pcstring('WEAPON.${weap}.RANGE')?json_string}", "type": "${pcstring('WEAPON.${weap}.TYPE')?json_string}", "special": "${pcstring('WEAPON.${weap}.SPROP')?json_string}"}<#if weap_has_next>,</#if>
+<@loop from=0 to=pcvar('COUNT[EQTYPE.MERGENONE.WEAPON]-1') ; weap, weap_has_next>
+<#assign weapHand = pcstring('WEAPON.MERGENONE.${weap}.HAND')?lower_case >
+<#assign weapHit = (weapHand?contains("non") || weapHand?contains("off") || weapHand?contains("secondary"))?then(pcstring('WEAPON.MERGENONE.${weap}.TOTALHIT'), pcstring('WEAPON.MERGENONE.${weap}.BASEHIT')) >
+    {"name": "${pcstring('WEAPON.MERGENONE.${weap}.NAME')?json_string}", "toHit": "${weapHit?json_string}", "damage": "${pcstring('WEAPON.MERGENONE.${weap}.DAMAGE')?json_string}", "crit": "${pcstring('WEAPON.MERGENONE.${weap}.CRIT')?json_string}/x${pcstring('WEAPON.MERGENONE.${weap}.MULT')}", "range": "${pcstring('WEAPON.MERGENONE.${weap}.RANGE')?json_string}", "type": "${pcstring('WEAPON.MERGENONE.${weap}.TYPE')?json_string}", "hand": "${pcstring('WEAPON.MERGENONE.${weap}.HAND')?json_string}", "special": "${pcstring('WEAPON.MERGENONE.${weap}.SPROP')?json_string}"}<#if weap_has_next>,</#if>
 </@loop>
   ],
   "naturalAttacks": [

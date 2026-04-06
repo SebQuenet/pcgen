@@ -60,11 +60,13 @@
 
 ## Weapons
 
-<#if (pcvar('COUNT[EQTYPE.WEAPON]') > 0)>
-| Weapon | To Hit | Damage | Crit | Range | Type | Special |
-|--------|--------|--------|------|-------|------|---------|
-<@loop from=0 to=pcvar('COUNT[EQTYPE.WEAPON]-1') ; weap, weap_has_next>
-| ${pcstring('WEAPON.${weap}.NAME')} | ${pcstring('WEAPON.${weap}.BASEHIT')} | ${pcstring('WEAPON.${weap}.DAMAGE')} | ${pcstring('WEAPON.${weap}.CRIT')}/x${pcstring('WEAPON.${weap}.MULT')} | ${pcstring('WEAPON.${weap}.RANGE')} | ${pcstring('WEAPON.${weap}.TYPE')} | ${pcstring('WEAPON.${weap}.SPROP')} |
+<#if (pcvar('COUNT[EQTYPE.MERGENONE.WEAPON]') > 0)>
+| Weapon | To Hit | Damage | Crit | Range | Type | Hand | Special |
+|--------|--------|--------|------|-------|------|------|---------|
+<@loop from=0 to=pcvar('COUNT[EQTYPE.MERGENONE.WEAPON]-1') ; weap, weap_has_next>
+<#assign weapHand = pcstring('WEAPON.MERGENONE.${weap}.HAND')?lower_case >
+<#assign weapHit = (weapHand?contains("non") || weapHand?contains("off") || weapHand?contains("secondary"))?then(pcstring('WEAPON.MERGENONE.${weap}.TOTALHIT'), pcstring('WEAPON.MERGENONE.${weap}.BASEHIT')) >
+| ${pcstring('WEAPON.MERGENONE.${weap}.NAME')} | ${weapHit} | ${pcstring('WEAPON.MERGENONE.${weap}.DAMAGE')} | ${pcstring('WEAPON.MERGENONE.${weap}.CRIT')}/x${pcstring('WEAPON.MERGENONE.${weap}.MULT')} | ${pcstring('WEAPON.MERGENONE.${weap}.RANGE')} | ${pcstring('WEAPON.MERGENONE.${weap}.TYPE')} | ${pcstring('WEAPON.MERGENONE.${weap}.HAND')} | ${pcstring('WEAPON.MERGENONE.${weap}.SPROP')} |
 </@loop>
 </#if>
 

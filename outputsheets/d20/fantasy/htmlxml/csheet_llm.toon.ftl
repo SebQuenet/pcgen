@@ -224,14 +224,15 @@ conditionalModifiers:
 </@loop>
 </#if>
 </#if>
-<#-- Weapons: BASEHIT for primary/equipped, TOTALHIT for off-hand (includes TWF penalty) -->
-<#assign weapCount = pcvar('COUNT[EQTYPE.WEAPON]')?int >
+<#-- Weapons: MERGENONE to show each weapon instance separately (e.g. dual-wield) -->
+<#-- BASEHIT for primary/equipped, TOTALHIT for off-hand (includes TWF penalty) -->
+<#assign weapCount = pcvar('COUNT[EQTYPE.MERGENONE.WEAPON]')?int >
 <#if (weapCount > 0)>
 weapons[${weapCount}]{name,toHit,damage,crit,range,type,hand,special}:
 <@loop from=0 to=weapCount-1 ; weap, weap_has_next>
-<#assign weapHand = pcstring('WEAPON.${weap}.HAND')?lower_case >
-<#assign weapHit = (weapHand?contains("non") || weapHand?contains("off") || weapHand?contains("secondary"))?then(pcstring('WEAPON.${weap}.TOTALHIT'), pcstring('WEAPON.${weap}.BASEHIT')) >
-  ${tq(pcstring('WEAPON.${weap}.NAME'))},${tq(weapHit)},${tq(pcstring('WEAPON.${weap}.DAMAGE'))},${tq(pcstring('WEAPON.${weap}.CRIT') + '/x' + pcstring('WEAPON.${weap}.MULT'))},${tq(pcstring('WEAPON.${weap}.RANGE'))},${tq(pcstring('WEAPON.${weap}.TYPE'))},${tq(pcstring('WEAPON.${weap}.HAND'))},${tq(pcstring('WEAPON.${weap}.SPROP'))}
+<#assign weapHand = pcstring('WEAPON.MERGENONE.${weap}.HAND')?lower_case >
+<#assign weapHit = (weapHand?contains("non") || weapHand?contains("off") || weapHand?contains("secondary"))?then(pcstring('WEAPON.MERGENONE.${weap}.TOTALHIT'), pcstring('WEAPON.MERGENONE.${weap}.BASEHIT')) >
+  ${tq(pcstring('WEAPON.MERGENONE.${weap}.NAME'))},${tq(weapHit)},${tq(pcstring('WEAPON.MERGENONE.${weap}.DAMAGE'))},${tq(pcstring('WEAPON.MERGENONE.${weap}.CRIT') + '/x' + pcstring('WEAPON.MERGENONE.${weap}.MULT'))},${tq(pcstring('WEAPON.MERGENONE.${weap}.RANGE'))},${tq(pcstring('WEAPON.MERGENONE.${weap}.TYPE'))},${tq(pcstring('WEAPON.MERGENONE.${weap}.HAND'))},${tq(pcstring('WEAPON.MERGENONE.${weap}.SPROP'))}
 </@loop>
 </#if>
 <#-- Natural Attacks -->
