@@ -107,3 +107,59 @@ Pouvoir Rapide ~ Stoneskin	KEY:Pouvoir Rapide ~ Stoneskin	CATEGORY:Special Abili
 Pouvoir Rapide ~ Aspect of Saint Thero	KEY:Pouvoir Rapide ~ Aspect of Saint Thero	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonAspectUses,2	BONUS:VAR|ParangonAspectUses|1	DESC:You gain one extra daily use of Aspect of Saint Thero (now %1/day).|ParangonAspectUses	SOURCEPAGE:Celmae
 
 Pouvoir Rapide ~ Battlemind Link	KEY:Pouvoir Rapide ~ Battlemind Link	CATEGORY:Special Ability	TYPE:PouvoirRapideChoice.SpecialQuality	PREVARGTEQ:ParangonBattlemindUses,2	BONUS:VAR|ParangonBattlemindUses|1	DESC:You gain one extra daily use of Battlemind Link (now %1/day).|ParangonBattlemindUses	SOURCEPAGE:Celmae
+
+###Block: Practiced Spellcaster (Complete Arcane) — MOD lines linking class choice to caster level bonus
+# Pattern follows Magical Knack (APG): feat CHOOSE gives class, MOD grants per-class hidden ability with BONUS:CASTERLEVEL
+
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Wizard|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Wizard)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Sorcerer|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Sorcerer)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Cleric|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Cleric)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Druid|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Druid)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Oracle|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Oracle)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Witch|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Witch)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Arcanist|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Arcanist)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Shaman|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Shaman)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Bard|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Bard)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Magus|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Magus)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Alchemist|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Alchemist)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Inquisitor|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Inquisitor)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Summoner|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Summoner)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Skald|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Skald)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Warpriest|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Warpriest)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Hunter|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Hunter)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Investigator|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Investigator)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Paladin|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Paladin)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Antipaladin|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Antipaladin)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Ranger|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Ranger)
+CATEGORY=FEAT|Practiced Spellcaster.MOD	ABILITY:Special Ability|AUTOMATIC|PracticedSpellcaster ~ Bloodrager|PREABILITY:1,CATEGORY=FEAT,Practiced Spellcaster (Bloodrager)
+
+###Block: Practiced Spellcaster (Complete Arcane) — per-class caster level bonus abilities
+# Formula: min(4, TL - (CL + BL)) ensures bonus cannot push caster level above Hit Dice
+# Delayed casters (Paladin, Ranger, Antipaladin, Bloodrager): use -3 offset and PRECLASS=4
+
+# Full casters (CL = class level from level 1)
+Wizard		KEY:PracticedSpellcaster ~ Wizard		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Wizard|min(4,(TL-(var("CL=Wizard")+var("BL=Wizard"))))
+Sorcerer	KEY:PracticedSpellcaster ~ Sorcerer	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Sorcerer|min(4,(TL-(var("CL=Sorcerer")+var("BL=Sorcerer"))))
+Cleric		KEY:PracticedSpellcaster ~ Cleric		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Cleric|min(4,(TL-(var("CL=Cleric")+var("BL=Cleric"))))
+Druid		KEY:PracticedSpellcaster ~ Druid		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Druid|min(4,(TL-(var("CL=Druid")+var("BL=Druid"))))
+Oracle		KEY:PracticedSpellcaster ~ Oracle		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Oracle|min(4,(TL-(var("CL=Oracle")+var("BL=Oracle"))))
+Witch		KEY:PracticedSpellcaster ~ Witch		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Witch|min(4,(TL-(var("CL=Witch")+var("BL=Witch"))))
+Arcanist	KEY:PracticedSpellcaster ~ Arcanist	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Arcanist|min(4,(TL-(var("CL=Arcanist")+var("BL=Arcanist"))))
+Shaman		KEY:PracticedSpellcaster ~ Shaman		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Shaman|min(4,(TL-(var("CL=Shaman")+var("BL=Shaman"))))
+
+# 3/4 casters (CL = class level from level 1)
+Bard		KEY:PracticedSpellcaster ~ Bard		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Bard|min(4,(TL-(var("CL=Bard")+var("BL=Bard"))))
+Magus		KEY:PracticedSpellcaster ~ Magus		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Magus|min(4,(TL-(var("CL=Magus")+var("BL=Magus"))))
+Alchemist	KEY:PracticedSpellcaster ~ Alchemist	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Alchemist|min(4,(TL-(var("CL=Alchemist")+var("BL=Alchemist"))))
+Inquisitor	KEY:PracticedSpellcaster ~ Inquisitor	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Inquisitor|min(4,(TL-(var("CL=Inquisitor")+var("BL=Inquisitor"))))
+Summoner	KEY:PracticedSpellcaster ~ Summoner	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Summoner|min(4,(TL-(var("CL=Summoner")+var("BL=Summoner"))))
+Skald		KEY:PracticedSpellcaster ~ Skald		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Skald|min(4,(TL-(var("CL=Skald")+var("BL=Skald"))))
+Warpriest	KEY:PracticedSpellcaster ~ Warpriest	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Warpriest|min(4,(TL-(var("CL=Warpriest")+var("BL=Warpriest"))))
+Hunter		KEY:PracticedSpellcaster ~ Hunter		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Hunter|min(4,(TL-(var("CL=Hunter")+var("BL=Hunter"))))
+Investigator	KEY:PracticedSpellcaster ~ Investigator	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Investigator|min(4,(TL-(var("CL=Investigator")+var("BL=Investigator"))))
+
+# Delayed casters (CL = class level - 3, spellcasting starts at level 4)
+Paladin		KEY:PracticedSpellcaster ~ Paladin		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Paladin|min(4,(TL-(var("CL=Paladin")+var("BL=Paladin")-3)))|PRECLASS:1,Paladin=4
+Antipaladin	KEY:PracticedSpellcaster ~ Antipaladin	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Antipaladin|min(4,(TL-(var("CL=Antipaladin")+var("BL=Antipaladin")-3)))|PRECLASS:1,Antipaladin=4
+Ranger		KEY:PracticedSpellcaster ~ Ranger		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Ranger|min(4,(TL-(var("CL=Ranger")+var("BL=Ranger")-3)))|PRECLASS:1,Ranger=4
+Bloodrager	KEY:PracticedSpellcaster ~ Bloodrager	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Bloodrager|min(4,(TL-(var("CL=Bloodrager")+var("BL=Bloodrager")-3)))|PRECLASS:1,Bloodrager=4

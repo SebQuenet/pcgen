@@ -50,6 +50,8 @@ public final class SpellTools
 					String classFilter = (String) args.get("class_filter");
 					String levelFilter = (String) args.get("level_filter");
 
+					// Ensure spell lists are up-to-date (they may not be refreshed in headless/MCP mode)
+					spellSupport.refreshAvailableKnownSpells();
 					var available = spellSupport.getAvailableSpellNodes();
 					List<Map<String, Object>> spells = new ArrayList<>();
 					for (SuperNode node : available)
@@ -521,6 +523,8 @@ public final class SpellTools
 
 	private static SpellNode findAvailableSpell(SpellSupportFacade support, String name, String classKey, String level)
 	{
+		// Ensure spell lists are up-to-date (they may not be refreshed in headless/MCP mode)
+		support.refreshAvailableKnownSpells();
 		for (SuperNode node : support.getAvailableSpellNodes())
 		{
 			if (node instanceof SpellNode sn && sn.getSpell() != null)

@@ -995,15 +995,17 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 		Collection<PCClass> classes = charDisplay.getClassSet();
 		for (PCClass pcClass : classes)
 		{
-			if (pcClass.get(FactKey.valueOf("SpellType")) != null)
+			Object spellType = pcClass.get(FactKey.valueOf("SpellType"));
+			if (spellType != null)
 			{
 				SpellSupportForPCClass spellSupport = pc.getSpellSupport(pcClass);
-				if (spellSupport.canCastSpells(pc) || spellSupport.hasKnownList())
+				boolean canCast = spellSupport.canCastSpells(pc);
+				boolean hasKnown = spellSupport.hasKnownList();
+				if (canCast || hasKnown)
 				{
 					castingClasses.add(pcClass);
 				}
 			}
-
 		}
 
 		return castingClasses;

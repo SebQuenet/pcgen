@@ -25,3 +25,8 @@ Manoeuvre Blindée	TYPE:Combat	PREATT:1	PRESTAT:1,STR=13	PREABILITY:1,CATEGORY=F
 # Pouvoir Rapide de Saint Thero
 # Conditions: Race Udaeus, a spell-like ability usable 2/day
 Pouvoir Rapide de Saint Thero	PRERACE:1,Udaeus	PREMULT:1,[PREVARGTEQ:ParangonTrueStrikeUses,2],[PREVARGTEQ:ParangonBarkskinUses,2],[PREVARGTEQ:ParangonHasteUses,2],[PREVARGTEQ:ParangonStoneskinUses,2],[PREVARGTEQ:ParangonAspectUses,2],[PREVARGTEQ:ParangonBattlemindUses,2]	DESC:Similar to Quicken Spell-Like Ability: you can use one of your spell-like abilities as a swift action 3/day. Also grants one extra daily use of an Udaeus spell-like ability normally usable 2/day. Choose which SLA gains the extra use.	BONUS:ABILITYPOOL|Pouvoir Rapide SLA Choice|1	SOURCEPAGE:Celmae
+
+# Practiced Spellcaster (General)
+# Prerequisites: Spellcraft 4 ranks
+# Source: Complete Arcane (D&D 3.5, adapted for Pathfinder)
+Practiced Spellcaster	TYPE:General	PRESKILL:1,Spellcraft=4	DESC:You get a +4 bonus on caster level checks for %1. This bonus can't increase your caster level to beyond your Hit Dice. Does not affect spells per day or spells known.|%LIST	MULT:YES	STACK:NO	CHOOSE:NUMCHOICES=1|CLASS|SPELLCASTER	SOURCEPAGE:Complete Arcane
