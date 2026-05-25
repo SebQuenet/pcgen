@@ -68,6 +68,7 @@ final class EquipmentTokenSupport
 			}
 		}
 		context.commit();
+		context.getReferenceContext().resolveReferences(null);
 		return failures;
 	}
 
