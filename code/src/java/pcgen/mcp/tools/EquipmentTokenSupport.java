@@ -67,8 +67,11 @@ final class EquipmentTokenSupport
 				failures.add(raw + " (" + (m != null ? m : e.getClass().getSimpleName()) + ")");
 			}
 		}
+		// Do not call resolveReferences here: at runtime the global LoadContext is already
+		// resolved, so getCDOMReference (e.g. for a SPELLS: spell) hands back an already-resolved
+		// direct reference. Re-resolving an already-resolved context throws
+		// "Cannot resolve a Single Reference twice".
 		context.commit();
-		context.getReferenceContext().resolveReferences(null);
 		return failures;
 	}
 
