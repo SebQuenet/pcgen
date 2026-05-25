@@ -2,8 +2,10 @@ package pcgen.mcp.tools;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import pcgen.core.Equipment;
+import pcgen.core.spell.Spell;
 import pcgen.rules.context.LoadContext;
 
 final class EquipmentTokenSupport
@@ -66,6 +68,44 @@ final class EquipmentTokenSupport
 			}
 		}
 		context.commit();
+		return failures;
+	}
+
+	/**
+	 * Validate each spell exists in the loaded data, build a SPELLS: line per ability, and apply
+	 * them. Each ability map must contain string entries "spell", "times_per_day" and
+	 * "caster_level". Returns failure messages (empty == all granted).
+	 */
+	static List<String> applySpellAbilities(LoadContext context, Equipment equip, String itemId,
+		List<Map<String, Object>> abilities)
+	{
+		List<String> failures = new ArrayList<>();
+		if (abilities == null || abilities.isEmpty())
+		{
+			return failures;
+		}
+		List<String> spellTokens = new ArrayList<>();
+		for (Map<String, Object> ability : abilities)
+		{
+			Object spell = ability.get("spell");
+			Object times = ability.get("times_per_day");
+			Object casterLevel = ability.get("caster_level");
+			if (spell == null || times == null || casterLevel == null)
+			{
+				failures.add(ability + " (spell, times_per_day and caster_level are required)");
+				continue;
+			}
+			Spell found = context.getReferenceContext()
+				.silentlyGetConstructedCDOMObject(Spell.class, spell.toString());
+			if (found == null)
+			{
+				failures.add(spell + " (spell not found in loaded data)");
+				continue;
+			}
+			spellTokens.add(buildSpellsToken(itemId, found.getKeyName(),
+				times.toString(), casterLevel.toString()));
+		}
+		failures.addAll(applyTokens(context, equip, spellTokens));
 		return failures;
 	}
 }

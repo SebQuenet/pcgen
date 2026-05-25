@@ -5,11 +5,13 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
+import java.util.Map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import pcgen.core.Equipment;
+import pcgen.core.spell.Spell;
 import pcgen.rules.context.ConsolidatedListCommitStrategy;
 import pcgen.rules.context.LoadContext;
 import pcgen.rules.context.RuntimeLoadContext;
@@ -17,6 +19,7 @@ import pcgen.rules.context.RuntimeReferenceContext;
 import plugin.bonustokens.Var;
 import plugin.lsttokens.BonusLst;
 import plugin.lsttokens.DefineLst;
+import plugin.lsttokens.SpellsLst;
 import plugin.lsttokens.testsupport.TokenRegistration;
 
 class EquipmentTokenSupportTest
@@ -29,6 +32,7 @@ class EquipmentTokenSupportTest
 		TokenRegistration.clearTokens();
 		TokenRegistration.register(new DefineLst());
 		TokenRegistration.register(new BonusLst());
+		TokenRegistration.register(new SpellsLst());
 		TokenRegistration.register(Var.class);
 		context = new RuntimeLoadContext(
 			RuntimeReferenceContext.createRuntimeReferenceContext(),
@@ -82,5 +86,42 @@ class EquipmentTokenSupportTest
 		Equipment equip = new Equipment();
 		equip.setName("Test Item");
 		assertTrue(EquipmentTokenSupport.applyTokens(context, equip, null).isEmpty());
+	}
+
+	@Test
+	void applySpellAbilitiesReportsUnknownSpell()
+	{
+		Equipment equip = new Equipment();
+		equip.setName("Sceptre");
+		List<String> failures = EquipmentTokenSupport.applySpellAbilities(
+			context, equip, "Sceptre",
+			List.of(Map.of("spell", "No Such Spell",
+				"times_per_day", "1", "caster_level", "10")));
+		assertEquals(1, failures.size());
+		assertTrue(failures.get(0).contains("No Such Spell"));
+	}
+
+	@Test
+	void applySpellAbilitiesGrantsKnownSpell()
+	{
+		context.getReferenceContext().constructCDOMObject(Spell.class, "Holy Smite");
+		Equipment equip = new Equipment();
+		equip.setName("Sceptre");
+		List<String> failures = EquipmentTokenSupport.applySpellAbilities(
+			context, equip, "Sceptre",
+			List.of(Map.of("spell", "Holy Smite",
+				"times_per_day", "1", "caster_level", "SceptreCL")));
+		assertTrue(failures.isEmpty(), () -> "unexpected failures: " + failures);
+	}
+
+	@Test
+	void applySpellAbilitiesReportsMissingField()
+	{
+		Equipment equip = new Equipment();
+		equip.setName("Sceptre");
+		List<String> failures = EquipmentTokenSupport.applySpellAbilities(
+			context, equip, "Sceptre",
+			List.of(Map.of("spell", "Holy Smite", "times_per_day", "1")));
+		assertEquals(1, failures.size());
 	}
 }
