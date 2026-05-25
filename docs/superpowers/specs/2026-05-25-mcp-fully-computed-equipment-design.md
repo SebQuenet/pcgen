@@ -68,14 +68,15 @@ A list of objects:
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `spell` | string | yes | Spell key/name; validated against loaded data |
-| `times_per_day` | string | yes | Integer or formula (becomes `TIMES=`) |
+| `times_per_day` | string | yes | Integer or formula (becomes `TIMES=`; `-1` = at will) |
 | `caster_level` | string | yes | Integer, variable, or formula (becomes `CASTERLEVEL=`) |
-| `spell_type` | string | no | Default `"Divine"` |
 
 For each ability the tool emits and applies one
-`SPELLS:<item-identifier>|TIMES=<times_per_day>|CASTERLEVEL=<caster_level>|<SpellKey>` line.
-The `<item-identifier>` is a stable per-item label (e.g. the custom item name) so the granted
-spells are grouped under the item.
+`SPELLS:<item-identifier>|TIMES=<times_per_day>|CASTERLEVEL=<caster_level>|<SpellKey>` line
+(format per `plugin/lsttokens/SpellsLst.java:60`). The `<item-identifier>` is a stable per-item
+label (the custom item name) so the granted spells are grouped under the item. The `SPELLS:`
+token has no Arcane/Divine field — the spell-like ability's save DC uses the engine default for
+the spell, so no `spell_type` parameter is needed.
 
 ### 2. `extra_tokens` (general escape hatch)
 
