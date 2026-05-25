@@ -2,10 +2,12 @@ SOURCELONG:Celmae Campaign Setting	SOURCESHORT:CEL	SOURCEDATE:2026-03
 
 ###Block: Celmae Artifacts and Magic Items
 
-# Sceptre de Timéon — artefact d'Udaeus (NLS 10, NLS 15 avec le Diadème de Lyra).
+# Sceptre de Timéon — artefact d'Udaeus (NLS 10).
 # Base : morgenstern +4 tueur d'extérieurs Mauvais (Evil Outsider Bane). NON saint par défaut.
 # Pouvoirs (porteur d'alignement Bon) : Bénédiction d'arme (Align Weapon) à volonté ;
 #   Châtiment Sacré / Parole Sacrée / Épée Sainte / Lance de Pureté 1x/jour chacun.
-# Avec le Diadème de Lyra : NLS -> 15 et l'arme gagne la propriété sainte (Holy).
-# Toute créature Mauvaise qui le manie reçoit 1 niveau négatif.
-Morningstar (Base).COPY=Sceptre de Timéon	OUTPUTNAME:Sceptre de Timéon	SORTKEY:Sceptre de Timéon	NAMEISPI:YES	TYPE:Magic	EQMOD:Special Ability ~ +4 ~ Weapon.Special Ability ~ Bane ~ Weapon|Evil Outsider Bane.Material ~ Steel	EQMOD:Special Ability ~ Holy ~ Weapon|PREEQUIP:1,Diadème de Lyra	DEFINE:SceptreCL|10	BONUS:VAR|SceptreCL|5|PREEQUIP:1,Diadème de Lyra	BONUS:VAR|SceptreDispelEvil|2|PREALIGN:LG,NG,CG	BONUS:VAR|NEGLEVELS|1|PREALIGN:LE,NE,CE|!PREEQUIP:1,Diadème de Lyra	SPELLS:Sceptre de Timéon|TIMES=1|CASTERLEVEL=SceptreCL|Holy Smite|Holy Word|Holy Sword|Holy Javelin|PREALIGN:LG,NG,CG	SPELLS:Sceptre de Timéon|TIMES=-1|CASTERLEVEL=SceptreCL|Align Weapon|PREALIGN:LG,NG,CG	SPROP:+2 de saintete (tests de NLS pour dissiper la magie du Mal / effets d'exterieurs Mauvais); benediction d'arme a volonte; avec le Diademe de Lyra: NLS 15 et arme sainte (holy)	VISIBLE:YES	SOURCEPAGE:Celmae
+# Avec le Diadème de Lyra : NLS -> 15 et l'arme gagne la propriété sainte (Holy) — effet
+#   décrit en SPROP uniquement (un préreq PREEQUIP sur un EQMOD ne se déclenche pas au runtime,
+#   et aucun Diadème n'est défini). À mécaniser si le Diadème est un jour créé.
+# Toute créature Mauvaise qui le manie reçoit 1 niveau négatif (variable suivie).
+Morningstar (Base).COPY=Sceptre de Timéon	OUTPUTNAME:Sceptre de Timéon	SORTKEY:Sceptre de Timéon	NAMEISPI:YES	TYPE:Magic	EQMOD:Special Ability ~ +4 ~ Weapon.Special Ability ~ Bane ~ Weapon|Evil Outsider Bane.Material ~ Steel	DEFINE:SceptreCL|10	BONUS:VAR|SceptreCL|5|PREEQUIP:1,Diadème de Lyra	BONUS:VAR|SceptreDispelEvil|2|PREALIGN:LG,NG,CG	BONUS:VAR|NEGLEVELS|1|PREALIGN:LE,NE,CE	SPELLS:Sceptre de Timéon|TIMES=1|CASTERLEVEL=SceptreCL|Holy Smite|Holy Word|Holy Sword|Holy Javelin|PREALIGN:LG,NG,CG	SPELLS:Sceptre de Timéon|TIMES=-1|CASTERLEVEL=SceptreCL|Align Weapon|PREALIGN:LG,NG,CG	SPROP:+2 de saintete (tests de NLS pour dissiper la magie du Mal / effets d'exterieurs Mauvais); benediction d'arme a volonte; avec le Diademe de Lyra: NLS 15 et arme sainte (holy)	VISIBLE:YES	SOURCEPAGE:Celmae
