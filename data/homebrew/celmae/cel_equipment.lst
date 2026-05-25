@@ -1,0 +1,8 @@
+SOURCELONG:Celmae Campaign Setting	SOURCESHORT:CEL	SOURCEDATE:2026-03
+
+###Block: Celmae Artifacts and Magic Items
+
+# Sceptre de Timéon — artefact d'Udaeus (NLS 10, NLS 15 avec le Diadème de Lyra)
+# Fonctionne comme un morgenstern +4, tueur d'extérieurs Mauvais (bane), saint (holy).
+# Pouvoirs 1x/jour : Châtiment Sacré, Parole Sacrée, Épée Sainte, Lance de Pureté.
+Morningstar (Base).COPY=Sceptre de Timéon	OUTPUTNAME:Sceptre de Timéon	SORTKEY:Sceptre de Timéon	NAMEISPI:YES	TYPE:Magic	EQMOD:Special Ability ~ +4 ~ Weapon.Special Ability ~ Holy ~ Weapon.Special Ability ~ Bane ~ Weapon|Evil Outsider Bane.Material ~ Steel	DEFINE:SceptreCL|10	BONUS:VAR|SceptreCL|5|PREEQUIP:1,Diadème de Lyra	BONUS:VAR|SceptreDispelEvil|2|PREALIGN:LG,NG,CG	SPELLS:Sceptre de Timéon|TIMES=1|CASTERLEVEL=SceptreCL|Holy Smite|Holy Word|Holy Sword|Holy Javelin	SPROP:+2 de saintete aux tests de niveau de lanceur pour dissiper la magie du Mal ou les effets d'exterieurs Mauvais; avec le Diademe de Lyra le NLS passe a 15	VISIBLE:YES	SOURCEPAGE:Celmae
