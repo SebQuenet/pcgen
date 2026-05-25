@@ -1,5 +1,11 @@
 package pcgen.mcp.tools;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import pcgen.core.Equipment;
+import pcgen.rules.context.LoadContext;
+
 final class EquipmentTokenSupport
 {
 	private EquipmentTokenSupport()
@@ -22,5 +28,44 @@ final class EquipmentTokenSupport
 			+ "|TIMES=" + timesPerDay
 			+ "|CASTERLEVEL=" + casterLevel
 			+ "|" + spell;
+	}
+
+	/**
+	 * Apply a list of raw LST token strings ("NAME:value") to the equipment using the same
+	 * parser + validation as data loading. Returns a list of human-readable failure messages;
+	 * an empty list means every token applied. Tokens that parse are committed onto the item.
+	 */
+	static List<String> applyTokens(LoadContext context, Equipment equip, List<String> tokens)
+	{
+		List<String> failures = new ArrayList<>();
+		if (tokens == null || tokens.isEmpty())
+		{
+			return failures;
+		}
+		for (String raw : tokens)
+		{
+			int colon = raw.indexOf(':');
+			if (colon < 0)
+			{
+				failures.add(raw + " (not a NAME:value token)");
+				continue;
+			}
+			String name = raw.substring(0, colon);
+			String value = raw.substring(colon + 1);
+			try
+			{
+				if (!context.processToken(equip, name, value))
+				{
+					failures.add(raw + " (rejected by token parser)");
+				}
+			}
+			catch (Exception e)
+			{
+				String m = e.getMessage();
+				failures.add(raw + " (" + (m != null ? m : e.getClass().getSimpleName()) + ")");
+			}
+		}
+		context.commit();
+		return failures;
 	}
 }
