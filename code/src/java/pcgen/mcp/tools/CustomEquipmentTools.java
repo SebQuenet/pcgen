@@ -119,6 +119,24 @@ public final class CustomEquipmentTools
 									"type": "array",
 									"items": { "type": "string" }
 								}
+							},
+							"spell_abilities": {
+								"type": "array",
+								"description": "Activated spell-like abilities granted by the item. Each entry needs spell (key), times_per_day (int or formula; -1=at will) and caster_level (int, variable or formula).",
+								"items": {
+									"type": "object",
+									"properties": {
+										"spell": { "type": "string" },
+										"times_per_day": { "type": "string" },
+										"caster_level": { "type": "string" }
+									},
+									"required": ["spell", "times_per_day", "caster_level"]
+								}
+							},
+							"extra_tokens": {
+								"type": "array",
+								"items": { "type": "string" },
+								"description": "Raw LST token strings applied to the item (e.g. 'DEFINE:SceptreCL|10', 'BONUS:VAR|SceptreCL|5|PREEQUIP:1,Diadème de Lyra', 'SPROP|...')."
 							}
 						},
 						"required": ["character_id", "equipment_key", "modifier_keys"]
@@ -208,6 +226,22 @@ public final class CustomEquipmentTools
 					}
 
 					Equipment finalEquip = (Equipment) builder.getEquipment();
+
+					String itemId = (customName != null && !customName.isBlank())
+						? customName : finalEquip.toString();
+					pcgen.rules.context.LoadContext loadContext = Globals.getContext();
+
+					@SuppressWarnings("unchecked")
+					List<Map<String, Object>> spellAbilities = args.containsKey("spell_abilities")
+						? (List<Map<String, Object>>) args.get("spell_abilities") : null;
+					failed.addAll(EquipmentTokenSupport.applySpellAbilities(
+						loadContext, finalEquip, itemId, spellAbilities));
+
+					@SuppressWarnings("unchecked")
+					List<String> extraTokens = args.containsKey("extra_tokens")
+						? (List<String>) args.get("extra_tokens") : null;
+					failed.addAll(EquipmentTokenSupport.applyTokens(
+						loadContext, finalEquip, extraTokens));
 
 					character.getDataSet().addEquipment(finalEquip);
 
