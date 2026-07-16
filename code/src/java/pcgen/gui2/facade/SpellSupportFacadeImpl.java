@@ -724,8 +724,12 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 		// Look at each spell on each spellcasting class
 		for (PCClass pcClass : classList)
 		{
-			DoubleKeyMapToList<SpellFacade, String, SpellNode> existingSpells =
-					buildExistingSpellMap(availableSpellNodes, pcClass);
+			// Track spells already added during THIS rebuild to avoid duplicate
+			// nodes for the same spell/level. This must start empty: deriving it
+			// from the current availableSpellNodes made the rebuild non-idempotent
+			// (each refresh excluded whatever the previous refresh produced, so the
+			// available list oscillated between full and empty on alternate calls).
+			DoubleKeyMapToList<SpellFacade, String, SpellNode> existingSpells = new DoubleKeyMapToList<>();
 
 			for (Spell spell : pc.getAllSpellsInLists(charDisplay.getSpellLists(pcClass)))
 			{
@@ -746,6 +750,7 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 							if (!existingSpells.containsInList(spellImplem, node.getSpellLevel(), node))
 							{
 								newNodes.add(node);
+								existingSpells.addToListFor(spellImplem, node.getSpellLevel(), node);
 							}
 						}
 					}
@@ -756,32 +761,7 @@ public class SpellSupportFacadeImpl implements SpellSupportFacade, EquipmentList
 	}
 
 	/**
-	 * Create a map of the spell nodes for a class in the supplied list. This
-	 * is intended to allow quick checking of the presence of a spell in the 
-	 * list.
-	 * 
-	 * @param spellNodeList The list of spell nodes 
-	 * @param pcClass The class to filter the map by
-	 * @return A double map to the class' spells from the list. 
-	 */
-	private DoubleKeyMapToList<SpellFacade, String, SpellNode> buildExistingSpellMap(
-		DefaultListFacade<SpellNode> spellNodeList, PCClass pcClass)
-	{
-		DoubleKeyMapToList<SpellFacade, String, SpellNode> spellMap = new DoubleKeyMapToList<>();
-
-		for (SpellNode spellNode : spellNodeList)
-		{
-			if (pcClass.equals(spellNode.getSpellcastingClass()))
-			{
-				spellMap.addToListFor(spellNode.getSpell(), spellNode.getSpellLevel(), spellNode);
-			}
-		}
-
-		return spellMap;
-	}
-
-	/**
-	 * Construct the list of spells the character knows, has prepared or has in 
+	 * Construct the list of spells the character knows, has prepared or has in
 	 * a spell book. 
 	 */
 	private void buildKnownPreparedNodes()

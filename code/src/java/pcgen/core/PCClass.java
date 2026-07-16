@@ -856,6 +856,15 @@ public class PCClass extends PObject implements InfoFacade, Cloneable
 				return false;
 			}
 		}
+		else
+		{
+			// When prereqs are bypassed (e.g. headless/console level-up) the block
+			// above is skipped, so the level must still be rolled back to newLevel-1
+			// before setLevel() runs. Otherwise setLevel() sees curLevel == newLevel
+			// and skips the first-level-only setup (notably setSpellLists()), leaving
+			// spellcasting classes with no associated spell list.
+			aPC.setLevelWithoutConsequence(this, newLevel - 1);
+		}
 		aPC.setAllowInteraction(true);
 
 		if (isMonster())
