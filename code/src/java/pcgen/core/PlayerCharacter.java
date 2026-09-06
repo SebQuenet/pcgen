@@ -3731,6 +3731,15 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		return bonusManager.getTotalBonusTo(bonusType, bonusName);
 	}
 
+	/**
+	 * @param bonusType the bonus tag, such as "DR"
+	 * @return what that tag is currently granted for, such as "Evil"
+	 */
+	public Set<String> getActiveBonusTargets(final String bonusType)
+	{
+		return bonusManager.getActiveBonusTargets(bonusType);
+	}
+
 	public int getTotalLevels()
 	{
 		return levelFacet.getTotalLevels(id);

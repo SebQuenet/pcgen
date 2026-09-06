@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
@@ -465,6 +466,27 @@ public class BonusManager
 	public Collection<BonusObj> getActiveBonusList()
 	{
 		return activeBonusBySource.keySet();
+	}
+
+	/**
+	 * BONUS:DR|Evil|5 and its kind name what they apply to inside the bonus itself, so
+	 * nothing else knows those names exist. Report them, keeping the spelling the data
+	 * used, so a caller can ask for each of them in turn.
+	 *
+	 * @param bonusName the bonus tag, such as "DR"
+	 * @return what that tag is currently granted for, such as "Evil"
+	 */
+	public Set<String> getActiveBonusTargets(String bonusName)
+	{
+		Set<String> targets = new TreeSet<>();
+		for (BonusObj bonus : getActiveBonusList())
+		{
+			if (bonusName.equalsIgnoreCase(bonus.getBonusName()))
+			{
+				targets.add(bonus.getBonusInfo());
+			}
+		}
+		return targets;
 	}
 
 	public void setActiveBonusList()
