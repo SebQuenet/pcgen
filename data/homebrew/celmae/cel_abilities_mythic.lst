@@ -1,0 +1,15 @@
+SOURCELONG:Celmae Campaign Setting	SOURCESHORT:CEL	SOURCEDATE:2026-03
+
+# Loaded only when Mythic Adventures is also selected (see _celmae.pcc).
+# ParangonMythicTier is raised by the class at levels 4, 14 and 20; Mythic Level Tracker
+# turns it into real mythic tiers, which grant Hard to Kill, Mythic Power, Surge (tier 1),
+# Amazing Initiative (tier 2) and Recuperation (tier 3) on their own.
+# The book forces the Champion path and hands out Fleet Charge, Always a Chance, Precision
+# and Extra Mythic Power, so the matching selection pools are reduced by as much.
+
+# Draconic Hatred has no Mythic Adventures equivalent: it is specific to this book.
+Parangon ~ Draconic Hatred	KEY:Parangon ~ Draconic Hatred	CATEGORY:Special Ability	TYPE:Parangon Class Feature.SpecialQuality.Extraordinary	DESC:As a free action, the Parangon may expend one use of mythic power to increase every Dragon Enemy bonus by 2 for 1 minute. For the rest of that turn his attacks against dragons bypass all damage reduction.	SOURCEPAGE:Celmae
+
+CATEGORY=Special Ability|Parangon ~ Mythic Tier.MOD	ABILITY:Special Ability|AUTOMATIC|Mythic Level Tracker	BONUS:VAR|MythicTierLevel|ParangonMythicTier	ABILITY:Special Ability|AUTOMATIC|Mythic Path ~ Champion	BONUS:ABILITYPOOL|Mythic Path|-1	ABILITY:Special Ability|AUTOMATIC|Mythic Path Feature ~ Fleet Charge	BONUS:ABILITYPOOL|Mythic Path Feature ~ Champion's Strike|-1	ABILITY:Special Ability|AUTOMATIC|Mythic Path Ability ~ Always a Chance	ABILITY:Mythic Feat|AUTOMATIC|Extra Mythic Power	ABILITY:Special Ability|AUTOMATIC|Parangon ~ Draconic Hatred|PREVARGTEQ:ParangonMythicTier,2	ABILITY:Special Ability|AUTOMATIC|Mythic Path Ability ~ Precision|PREVARGTEQ:ParangonMythicTier,3	ABILITY:Mythic Feat|AUTOMATIC|Endurance|PREVARGTEQ:ParangonMythicTier,3	BONUS:ABILITYPOOL|Mythic Path Ability|-1-(ParangonMythicTier>=3)
+
+
