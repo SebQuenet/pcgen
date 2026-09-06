@@ -18,6 +18,8 @@
  */
 package pcgen.facade.core;
 
+import java.util.Map;
+
 import pcgen.core.Deity;
 import pcgen.core.Domain;
 import pcgen.core.EquipmentModifier;
@@ -260,6 +262,17 @@ public interface InfoFactory
 	 * @return The targets.
 	 */
 	public String getTempBonusTarget(TempBonusFacade tempBonusFacade);
+
+	/**
+	 * Retrieve the spell level at which each of the character's spellcasting
+	 * classes grants the spell that an ability is named after, such as a mythic
+	 * spell. Classes that do not grant the spell are left out.
+	 *
+	 * @param abilityFacade The ability to be examined.
+	 * @return The spell level keyed by class name, empty when the ability does
+	 *         not name a spell the character can cast.
+	 */
+	public Map<String, Integer> getSpellLevelsByClass(AbilityFacade abilityFacade);
 
 	public String getSize(Race obj);
 

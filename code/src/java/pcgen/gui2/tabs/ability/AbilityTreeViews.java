@@ -21,10 +21,12 @@ package pcgen.gui2.tabs.ability;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import pcgen.facade.core.AbilityFacade;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
+import pcgen.facade.core.InfoFactory;
 import pcgen.gui2.util.treeview.TreeView;
 import pcgen.gui2.util.treeview.TreeViewPath;
 import pcgen.system.LanguageBundle;
@@ -46,6 +48,8 @@ public final class AbilityTreeViews
 		list.add(new TypeTreeView());
 		list.add(new PreReqTreeView(character.getDataSet()));
 		list.add(new SourceTreeView());
+		// Appended last: the corner menu remembers the chosen view by index.
+		list.add(new SpellLevelTreeView(character.getInfoFactory()));
 		return list;
 	}
 
@@ -92,6 +96,46 @@ public final class AbilityTreeViews
 				}
 			}
 			return list;
+		}
+
+	}
+
+	/**
+	 * Groups abilities that are named after a spell, such as mythic spells, under
+	 * the character's spellcasting class and the level at which that class grants
+	 * the spell. Abilities that name no castable spell are grouped on their own.
+	 */
+	private static class SpellLevelTreeView implements TreeView<AbilityFacade>
+	{
+
+		private final InfoFactory infoFactory;
+
+		private SpellLevelTreeView(InfoFactory infoFactory)
+		{
+			this.infoFactory = infoFactory;
+		}
+
+		@Override
+		public String getViewName()
+		{
+			return LanguageBundle.getString("in_spellClassLevelSpell"); //$NON-NLS-1$
+		}
+
+		@Override
+		public List<TreeViewPath<AbilityFacade>> getPaths(AbilityFacade pobj)
+		{
+			Map<String, Integer> levelsByClass = infoFactory.getSpellLevelsByClass(pobj);
+			if (levelsByClass.isEmpty())
+			{
+				return Collections.singletonList(
+					new TreeViewPath<>(pobj, LanguageBundle.getString("in_none"))); //$NON-NLS-1$
+			}
+			List<TreeViewPath<AbilityFacade>> paths = new ArrayList<>();
+			for (Map.Entry<String, Integer> classLevel : levelsByClass.entrySet())
+			{
+				paths.add(new TreeViewPath<>(pobj, classLevel.getKey(), classLevel.getValue()));
+			}
+			return paths;
 		}
 
 	}
