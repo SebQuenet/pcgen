@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -72,6 +73,7 @@ import pcgen.core.Domain;
 import pcgen.core.Equipment;
 import pcgen.core.EquipmentModifier;
 import pcgen.core.Globals;
+import pcgen.core.analysis.SpellLevel;
 import pcgen.core.Kit;
 import pcgen.core.PCClass;
 import pcgen.core.PCStat;
@@ -2200,6 +2202,46 @@ public class Gui2InfoFactory implements InfoFactory
 	{
 		Formula formula = race.get(FormulaKey.SIZE);
 		return (formula == null) ? "" : formula.toString();
+	}
+
+	@Override
+	public Map<String, Integer> getSpellLevelsByClass(AbilityFacade abilityFacade)
+	{
+		Map<String, Integer> levelsByClass = new LinkedHashMap<>();
+		if (pc == null || !(abilityFacade instanceof final Ability ability))
+		{
+			return levelsByClass;
+		}
+		// Spell-based abilities such as mythic spells carry no level of their own;
+		// they are keyed on the spell they enhance.
+		Spell namedSpell = Globals.getContext().getReferenceContext()
+			.silentlyGetConstructedCDOMObject(Spell.class, ability.getKeyName());
+		if (namedSpell == null)
+		{
+			return levelsByClass;
+		}
+		for (PCClass spellcastingClass : charDisplay.getClassSet())
+		{
+			int level = lowestSpellLevel(namedSpell, spellcastingClass);
+			if (level >= 0)
+			{
+				levelsByClass.put(spellcastingClass.getDisplayName(), level);
+			}
+		}
+		return levelsByClass;
+	}
+
+	private int lowestSpellLevel(Spell spell, PCClass spellcastingClass)
+	{
+		int lowest = -1;
+		for (Integer level : SpellLevel.levelForKey(spell, pc.getSpellLists(spellcastingClass), pc))
+		{
+			if (level >= 0 && (lowest < 0 || level < lowest))
+			{
+				lowest = level;
+			}
+		}
+		return lowest;
 	}
 
 }

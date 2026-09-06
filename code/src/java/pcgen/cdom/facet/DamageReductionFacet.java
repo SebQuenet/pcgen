@@ -18,6 +18,7 @@
 package pcgen.cdom.facet;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -208,12 +209,29 @@ public class DamageReductionFacet extends AbstractSourcedListFacet<CharID, Damag
 	public String getDRString(CharID id, Map<DamageReduction, Set<Object>> cachedMap)
 	{
 		CaseInsensitiveMap<Integer> map = getDRMap(id, cachedMap);
+		// A BONUS:DR can name a reduction the character has no DR: tag for, such as the
+		// DR 5/evil that righteous might grants. Without this, that bonus is added to
+		// nothing and never shows up.
+		for (String bonusTarget : bonusCheckingFacet.getBonusTargets(id, "DR"))
+		{
+			// A bonus keeps what it applies to in upper case; the DR: tags this sits
+			// beside are written lower case, so match them rather than shout.
+			String reduction = bonusTarget.toLowerCase(Locale.ENGLISH);
+			if (!map.containsKey(reduction))
+			{
+				map.put(reduction, 0);
+			}
+		}
 		TreeMapToList<Integer, String> hml = new TreeMapToList<>();
 		for (Map.Entry<Object, Integer> me : map.entrySet())
 		{
 			String key = me.getKey().toString();
 			int value = me.getValue();
 			value += (int) bonusCheckingFacet.getBonus(id, "DR", key);
+			if (value <= 0)
+			{
+				continue;
+			}
 			hml.addToListFor(value, key);
 		}
 		for (Integer reduction : hml.getKeySet())

@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import pcgen.cdom.base.CDOMObject;
 import pcgen.cdom.enumeration.CharID;
@@ -63,6 +64,17 @@ public class BonusCheckingFacet
 	{
 		PlayerCharacter pc = trackingFacet.getPC(id);
 		return pc.getTotalBonusTo(bonusType, bonusName);
+	}
+
+	/**
+	 * @param id identifies the Player Character
+	 * @param bonusType the bonus tag, such as "DR"
+	 * @return what that tag is currently granted for, such as "Evil"
+	 */
+	public Set<String> getBonusTargets(CharID id, String bonusType)
+	{
+		PlayerCharacter pc = trackingFacet.getPC(id);
+		return pc.getActiveBonusTargets(bonusType);
 	}
 
 	/**

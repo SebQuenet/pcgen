@@ -24,11 +24,13 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.StringJoiner;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
@@ -3055,7 +3057,117 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 			}
 		}
 
+		collapseTempBonusWeapons(weapList);
+
 		return weapList;
+	}
+
+	/**
+	 * A weapon under temporary bonuses is listed once per bonus, alongside the untouched
+	 * weapon, so a sheet shows each bonus in isolation and never their sum. Replace that
+	 * whole group with a single entry carrying every temporary bonus at once: the reader
+	 * sees the weapon as it actually is, without the unmodified copy alongside it.
+	 *
+	 * @param weapList the weapon list being expanded, modified in place
+	 */
+	private void collapseTempBonusWeapons(final List<Equipment> weapList)
+	{
+		final Map<String, List<Equipment>> variantsByWeapon = new LinkedHashMap<>();
+		for (Equipment weapon : weapList)
+		{
+			if (!weapon.getAppliedName().isEmpty())
+			{
+				variantsByWeapon.computeIfAbsent(weapon.getName(), name -> new ArrayList<>()).add(weapon);
+			}
+		}
+
+		for (Map.Entry<String, List<Equipment>> weaponVariants : variantsByWeapon.entrySet())
+		{
+			final List<Equipment> variants = weaponVariants.getValue();
+			final Equipment kept = (variants.size() == 1) ? variants.get(0) : combineTempBonuses(variants);
+
+			// The plain copy shares the weapon's name but carries no applied name. Split
+			// heads of a double weapon carry a name of their own, so they are left alone.
+			final List<Equipment> superseded = new ArrayList<>();
+			for (Equipment weapon : weapList)
+			{
+				boolean isPlainCopy = weapon.getAppliedName().isEmpty()
+					&& weapon.getName().equals(weaponVariants.getKey());
+				if (isPlainCopy || containsIdentity(variants, weapon))
+				{
+					superseded.add(weapon);
+				}
+			}
+
+			int insertionPoint = identityIndexOf(weapList, superseded.get(0));
+			for (Equipment replaced : superseded)
+			{
+				int position = identityIndexOf(weapList, replaced);
+				if (position >= 0)
+				{
+					weapList.remove(position);
+				}
+			}
+			weapList.add(Math.min(Math.max(insertionPoint, 0), weapList.size()), kept);
+		}
+	}
+
+	/**
+	 * @param variants two or more virtual copies of one weapon, each holding one temporary bonus
+	 * @return a further copy holding all of their temporary bonuses, named after each of them
+	 */
+	private static Equipment combineTempBonuses(final List<Equipment> variants)
+	{
+		final Equipment combined = variants.get(0).clone();
+		final StringJoiner appliedNames = new StringJoiner(", ");
+		appliedNames.add(strippedAppliedName(variants.get(0)));
+		for (Equipment furtherVariant : variants.subList(1, variants.size()))
+		{
+			appliedNames.add(strippedAppliedName(furtherVariant));
+			for (BonusObj tempBonus : furtherVariant.getSafeListFor(ListKey.TEMP_BONUS))
+			{
+				combined.addTempBonus(tempBonus);
+			}
+		}
+		combined.setAppliedName(appliedNames.toString());
+		return combined;
+	}
+
+	/**
+	 * @param weapons the list to search
+	 * @param sought the exact instance to look for
+	 * @return whether that very instance is present
+	 */
+	private static boolean containsIdentity(final List<Equipment> weapons, final Equipment sought)
+	{
+		return identityIndexOf(weapons, sought) >= 0;
+	}
+
+	/**
+	 * @param weapon a weapon carrying an applied name
+	 * @return that name without the surrounding " [" and "]"
+	 */
+	private static String strippedAppliedName(final Equipment weapon)
+	{
+		final String applied = weapon.getAppliedName();
+		return applied.substring(2, applied.length() - 1);
+	}
+
+	/**
+	 * @param weapons the list to search
+	 * @param sought the exact instance to find
+	 * @return the position of that instance, or -1 when it is absent
+	 */
+	private static int identityIndexOf(final List<Equipment> weapons, final Equipment sought)
+	{
+		for (int position = 0; position < weapons.size(); position++)
+		{
+			if (weapons.get(position) == sought)
+			{
+				return position;
+			}
+		}
+		return -1;
 	}
 
 	/**
@@ -3617,6 +3729,15 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	public double getTotalBonusTo(final String bonusType, final String bonusName)
 	{
 		return bonusManager.getTotalBonusTo(bonusType, bonusName);
+	}
+
+	/**
+	 * @param bonusType the bonus tag, such as "DR"
+	 * @return what that tag is currently granted for, such as "Evil"
+	 */
+	public Set<String> getActiveBonusTargets(final String bonusType)
+	{
+		return bonusManager.getActiveBonusTargets(bonusType);
 	}
 
 	public int getTotalLevels()

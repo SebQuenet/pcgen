@@ -61,19 +61,36 @@ public final class CharacterSheetPanel extends JFXPanel implements CharacterSele
 
     private final Executor executor = Executors.newSingleThreadExecutor();
     private final AtomicBoolean refreshPending = new AtomicBoolean(false);
+    private final AtomicBoolean sceneInitialised = new AtomicBoolean(false);
     private volatile String lastRenderedContent;
 
     public CharacterSheetPanel()
     {
         GuiAssertions.assertIsNotJavaFXThread();
-        Platform.runLater(() -> {
-            browser = new WebView();
-            previewVariableHandler = new PreviewVariablesHandler();
-            browser.setContextMenuEnabled(true);
-            browser.getEngine().setJavaScriptEnabled(true);
-            browser.getEngine().documentProperty().addListener(previewVariableHandler);
-            this.setScene(new Scene(browser));
-        });
+    }
+
+    /**
+     * Attaching a scene to a JFXPanel that is not yet on screen makes JavaFX read the
+     * embedded scene's state before it exists, which throws inside the render lock and
+     * leaves rendering wedged. Build the scene once the panel has a peer instead.
+     */
+    @Override
+    public void addNotify()
+    {
+        super.addNotify();
+        if (sceneInitialised.compareAndSet(false, true))
+        {
+            Platform.runLater(() -> {
+                browser = new WebView();
+                previewVariableHandler = new PreviewVariablesHandler();
+                previewVariableHandler.setCharacter(character);
+                browser.setContextMenuEnabled(true);
+                browser.getEngine().setJavaScriptEnabled(true);
+                browser.getEngine().documentProperty().addListener(previewVariableHandler);
+                this.setScene(new Scene(browser));
+                refresh();
+            });
+        }
     }
 
     public void setCharacterSheet(File sheet)
@@ -144,6 +161,13 @@ public final class CharacterSheetPanel extends JFXPanel implements CharacterSele
         Platform.runLater(() -> {
             try
             {
+                if (browser == null)
+                {
+                    // the panel is not on screen yet; addNotify will refresh once it is
+                    lastRenderedContent = null;
+                    SwingUtilities.invokeLater(statusBar::endShowingProgress);
+                    return;
+                }
                 browser.getEngine().loadContent(finalContent);
             }
             catch (Throwable e)

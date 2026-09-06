@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
@@ -40,6 +41,7 @@ import pcgen.cdom.base.CDOMObject;
 import pcgen.cdom.base.Constants;
 import pcgen.cdom.base.FormulaFactory;
 import pcgen.cdom.enumeration.StringKey;
+import pcgen.cdom.enumeration.Type;
 import pcgen.core.analysis.ChooseActivation;
 import pcgen.core.bonus.BonusObj;
 import pcgen.core.bonus.BonusPair;
@@ -64,6 +66,9 @@ public class BonusManager
 	private static final String VAR_TOKEN_PATTERN = Pattern.quote(VAR_TOKEN_REPLACEMENT);
 
 	private static final List<String> NO_ASSOC_LIST = Collections.singletonList("");
+
+	private static final String WEAPONPROF_PREFIX = "WEAPONPROF=";
+	private static final String WEAPONPROF_TYPE_PREFIX = "WEAPONPROF=TYPE.";
 
 	private Map<String, String> activeBonusMap = new ConcurrentHashMap<>();
 
@@ -236,7 +241,39 @@ public class BonusManager
 	{
 		final String prefix = bonusName + '.' + bonusInfo;
 
-		return sumActiveBonusMap(prefix);
+		return sumActiveBonusMap(prefix) + sumWeaponProfTypeBonusTo(bonusName, bonusInfo);
+	}
+
+	/**
+	 * BONUS:WEAPONPROF=TYPE.Simple|... is meant to reach every proficiency of that type,
+	 * but the active bonus map is keyed on whatever the tag literally named, so asking for
+	 * one proficiency by name never matches it. Add whatever that proficiency's own types
+	 * were granted, so the type form reaches the weapons it covers.
+	 *
+	 * @param bonusName the bonus target, such as "WEAPONPROF=Morningstar"
+	 * @param bonusInfo the value being asked for, such as "DAMAGESIZE"
+	 * @return what the type form grants this proficiency, zero when the target names no
+	 *         weapon proficiency
+	 */
+	private double sumWeaponProfTypeBonusTo(String bonusName, String bonusInfo)
+	{
+		final String target = bonusName.toUpperCase();
+		if (!target.startsWith(WEAPONPROF_PREFIX) || target.startsWith(WEAPONPROF_TYPE_PREFIX))
+		{
+			return 0;
+		}
+		WeaponProf prof = Globals.getContext().getReferenceContext().silentlyGetConstructedCDOMObject(WeaponProf.class,
+			bonusName.substring(WEAPONPROF_PREFIX.length()));
+		if (prof == null)
+		{
+			return 0;
+		}
+		double bonus = 0;
+		for (Type type : prof.getTrueTypeList(false))
+		{
+			bonus += sumActiveBonusMap(WEAPONPROF_TYPE_PREFIX + type + '.' + bonusInfo);
+		}
+		return bonus;
 	}
 
 	public String getSpellBonusType(String bonusName, String bonusInfo)
@@ -429,6 +466,27 @@ public class BonusManager
 	public Collection<BonusObj> getActiveBonusList()
 	{
 		return activeBonusBySource.keySet();
+	}
+
+	/**
+	 * BONUS:DR|Evil|5 and its kind name what they apply to inside the bonus itself, so
+	 * nothing else knows those names exist. Report them, keeping the spelling the data
+	 * used, so a caller can ask for each of them in turn.
+	 *
+	 * @param bonusName the bonus tag, such as "DR"
+	 * @return what that tag is currently granted for, such as "Evil"
+	 */
+	public Set<String> getActiveBonusTargets(String bonusName)
+	{
+		Set<String> targets = new TreeSet<>();
+		for (BonusObj bonus : getActiveBonusList())
+		{
+			if (bonusName.equalsIgnoreCase(bonus.getBonusName()))
+			{
+				targets.add(bonus.getBonusInfo());
+			}
+		}
+		return targets;
 	}
 
 	public void setActiveBonusList()
