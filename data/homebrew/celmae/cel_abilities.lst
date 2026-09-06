@@ -163,3 +163,8 @@ Paladin		KEY:PracticedSpellcaster ~ Paladin		CATEGORY:Special Ability	BONUS:CAST
 Antipaladin	KEY:PracticedSpellcaster ~ Antipaladin	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Antipaladin|min(4,(TL-(var("CL=Antipaladin")+var("BL=Antipaladin")-3)))|PRECLASS:1,Antipaladin=4
 Ranger		KEY:PracticedSpellcaster ~ Ranger		CATEGORY:Special Ability	BONUS:CASTERLEVEL|Ranger|min(4,(TL-(var("CL=Ranger")+var("BL=Ranger")-3)))|PRECLASS:1,Ranger=4
 Bloodrager	KEY:PracticedSpellcaster ~ Bloodrager	CATEGORY:Special Ability	BONUS:CASTERLEVEL|Bloodrager|min(4,(TL-(var("CL=Bloodrager")+var("BL=Bloodrager")-3)))|PRECLASS:1,Bloodrager=4
+
+# Carried by the Sceptre de Timeon. A weapon is cloned once per temporary bonus,
+# and each copy would apply its own BONUS:VAR, so the caster level and the negative
+# levels multiplied. An automatic ability is granted once however many copies exist.
+Sceptre de Timeon ~ Attunement	KEY:Sceptre de Timeon ~ Attunement	CATEGORY:Internal	TYPE:Celmae Artifact	BONUS:VAR|SceptreCL|5|PREEQUIP:1,Diadème de Lyra	BONUS:VAR|SceptreDispelEvil|2|PREALIGN:LG,NG,CG	BONUS:VAR|NEGLEVELS|1|PREALIGN:LE,NE,CE	SOURCEPAGE:Celmae
