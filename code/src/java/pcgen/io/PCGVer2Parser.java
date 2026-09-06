@@ -119,6 +119,7 @@ import pcgen.core.chooser.ChoiceManagerList;
 import pcgen.core.chooser.ChooserUtilities;
 import pcgen.core.display.BonusDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
+import pcgen.core.prereq.PrereqHandler;
 import pcgen.core.spell.Spell;
 import pcgen.core.utils.CoreUtility;
 import pcgen.core.utils.MessageType;
@@ -5223,15 +5224,17 @@ final class PCGVer2Parser implements PCGParser
 			}
 
 			TempBonusInfo tempBonusInfo;
-			// Check to see if the target was the PC or an Item
+			// Check to see if the target was the PC or an Item. Test the prerequisites as
+			// TempBonusHelper does when the bonus is applied by hand: a saved bonus whose
+			// condition no longer holds must not come back as though it did.
 			if (tName.equals(IOConstants.TAG_PC))
 			{
-				thePC.setApplied(newB, true);
+				thePC.setApplied(newB, newB.qualifies(thePC, null));
 				tempBonusInfo = thePC.addTempBonus(newB, creator, thePC);
 			}
 			else
 			{
-				thePC.setApplied(newB, true);
+				thePC.setApplied(newB, PrereqHandler.passesAll(newB, aEq, thePC));
 				aEq.addTempBonus(newB);
 				tempBonusInfo = thePC.addTempBonus(newB, creator, aEq);
 			}
