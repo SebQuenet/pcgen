@@ -18,6 +18,10 @@ Coup de Bouclier Opportuniste de l'Udaeus	TYPE:Combat.Critical	PREATT:9	PREABILI
 # Conditions: Wis 13, Improved Shield Bash, BAB +1, Shield Proficiency
 Coup de Bouclier Réactif	TYPE:Combat	PRESTAT:1,WIS=13	PREATT:1	PREABILITY:1,CATEGORY=FEAT,Improved Shield Bash	PREABILITY:1,CATEGORY=FEAT,Shield Proficiency	DESC:You gain additional attacks of opportunity per round equal to your Wisdom modifier (minimum +1). These can only be used for shield bash attacks. Stacks with Combat Reflexes.	SOURCEPAGE:Celmae
 
+# Contrôle du Bouclier (Combat) — Shield Check
+# Conditions: Combat Reflexes, Improved Shield Bash, Shield Proficiency, Stand Still
+Contrôle du Bouclier	TYPE:Combat	PREABILITY:1,CATEGORY=FEAT,Combat Reflexes	PREABILITY:1,CATEGORY=FEAT,Improved Shield Bash	PREABILITY:1,CATEGORY=FEAT,Shield Proficiency	PREABILITY:1,CATEGORY=FEAT,Stand Still	DESC:When wielding a shield and a one-handed or light weapon, if a foe provokes an attack of opportunity by moving through a square adjacent to you, you may make a combat maneuver check as that attack of opportunity. On a success the foe cannot move for the rest of his turn and takes your shield bash damage; he may still take the rest of his action. This also applies to any creature leaving a square adjacent to you when that movement provokes an attack of opportunity.	SOURCEPAGE:Celmae
+
 # Manoeuvre Blindée (Combat)
 # Conditions: BAB +1, Str 13, Shield Proficiency
 Manoeuvre Blindée	TYPE:Combat	PREATT:1	PRESTAT:1,STR=13	PREABILITY:1,CATEGORY=FEAT,Shield Proficiency	DESC:When wielding a shield and a one-handed or light weapon, you gain +2 on bull rush, disarm, overrun, and trip combat maneuver checks.	SOURCEPAGE:Celmae
