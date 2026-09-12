@@ -1,5 +1,8 @@
 package pcgen.mcp;
 
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Optional;
 import java.util.logging.Level;
 
 import io.modelcontextprotocol.server.McpSyncServer;
@@ -10,6 +13,9 @@ import pcgen.system.Main;
 import pcgen.system.PCGenTaskExecutor;
 import pcgen.persistence.CampaignFileLoader;
 import pcgen.persistence.GameModeFileLoader;
+import pcgen.mcp.config.McpConfigInstaller;
+import pcgen.mcp.config.ServerExecutable;
+import pcgen.util.GracefulExit;
 import pcgen.util.Logging;
 
 /**
@@ -18,8 +24,20 @@ import pcgen.util.Logging;
  */
 public class McpMain
 {
+	private static final String INSTALL_CONFIG_FLAG = "--install-config";
+
+	private McpMain()
+	{
+	}
+
 	public static void main(String... args)
 	{
+		if (List.of(args).contains(INSTALL_CONFIG_FLAG))
+		{
+			installIntoClients();
+			return;
+		}
+
 		Logging.log(Level.INFO, "Starting PCGen MCP server...");
 
 		String settingsDir = parseSettingsDir(args);
@@ -54,6 +72,20 @@ public class McpMain
 			Logging.log(Level.INFO, "Shutting down MCP server...");
 			server.close();
 		}));
+	}
+
+	private static void installIntoClients()
+	{
+		Optional<Path> serverExecutable = ServerExecutable.forCurrentProcess();
+		if (serverExecutable.isEmpty())
+		{
+			System.out.println("Cannot tell where this program is installed; add the server to your client by hand.");
+			GracefulExit.exit(1);
+			return;
+		}
+		McpConfigInstaller.installFor(serverExecutable.get(), McpConfigInstaller.clientsForCurrentPlatform())
+			.forEach(System.out::println);
+		System.out.println("Restart your client to pick up the change.");
 	}
 
 	private static String parseSettingsDir(String[] args)
