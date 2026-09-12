@@ -22,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.HashSet;
 import java.util.IdentityHashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
@@ -78,14 +79,7 @@ public class DamageReductionFacetTest extends
 		DamageReductionFacet drFacet = new DamageReductionFacet();
 		drFacet.setPrerequisiteFacet(new PrerequisiteFacet());
 		drFacet.setFormulaResolvingFacet(new FormulaResolvingFacet());
-		drFacet.setBonusCheckingFacet(new BonusCheckingFacet()
-		{
-			@Override
-			public double getBonus(CharID charID, String bonusType, String bonusName)
-			{
-				return 0.0d;
-			}	
-		});
+		drFacet.setBonusCheckingFacet(bonusesOn(Set.of()));
 
 		Map<DamageReduction, Set<Object>> drList =
                 new IdentityHashMap<>();
@@ -268,6 +262,45 @@ public class DamageReductionFacetTest extends
 		// System.out.println("DR List: " + drList1.toString() + " = " +
 		// listResult);
 		// assertTrue(listResult.equalsIgnoreCase("10/epic and lawful");
+	}
+
+	/**
+	 * A BONUS:DR names a reduction the character has no DR: tag for, such as the
+	 * DR 5/evil that righteous might grants.
+	 */
+	@Test
+	public void testGetDRStringShowsAReductionOnlyABonusNames()
+	{
+		DamageReductionFacet drFacet = new DamageReductionFacet();
+		drFacet.setPrerequisiteFacet(new PrerequisiteFacet());
+		drFacet.setFormulaResolvingFacet(new FormulaResolvingFacet());
+		drFacet.setBonusCheckingFacet(bonusesOn(Set.of("EVIL")));
+
+		String listResult = drFacet.getDRString(id, new IdentityHashMap<>());
+
+		assertEquals("5/evil", listResult);
+	}
+
+	/**
+	 * A bonus checking facet that grants 5 to every reduction named in
+	 * {@code bonusTargets} and nothing to any other.
+	 */
+	private static BonusCheckingFacet bonusesOn(Set<String> bonusTargets)
+	{
+		return new BonusCheckingFacet()
+		{
+			@Override
+			public double getBonus(CharID charID, String bonusType, String bonusName)
+			{
+				return bonusTargets.contains(bonusName.toUpperCase(Locale.ENGLISH)) ? 5.0d : 0.0d;
+			}
+
+			@Override
+			public Set<String> getBonusTargets(CharID charID, String bonusType)
+			{
+				return bonusTargets;
+			}
+		};
 	}
 
 	@Override
