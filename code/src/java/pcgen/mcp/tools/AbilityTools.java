@@ -151,7 +151,7 @@ public final class AbilityTools
 							"choice": {
 								"type": "array",
 								"items": { "type": "string" },
-								"description": "Pre-selected choices for abilities that require selection (e.g., ['Longbow'] for Weapon Focus). If the ability requires a choice and this is not provided, the first available option will be auto-selected."
+								"description": "Choices for abilities that need one, e.g. ['Longbow'] for Weapon Focus. Left out, the first option is taken."
 							}
 						},
 						"required": ["character_id", "category_key", "ability_key"]
@@ -226,7 +226,10 @@ public final class AbilityTools
 					}
 
 					// Clear stale errors before the operation
-					if (delegate != null) { delegate.consumeLastError(); }
+					if (delegate != null)
+					{
+						delegate.consumeLastError();
+					}
 
 					character.addAbility(category, found);
 

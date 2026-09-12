@@ -1,6 +1,5 @@
 package pcgen.mcp;
 
-import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServer;

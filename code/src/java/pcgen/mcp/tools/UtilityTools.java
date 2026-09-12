@@ -12,7 +12,6 @@ import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.facade.core.CharacterFacade;
-import pcgen.facade.core.InfoFacade;
 import pcgen.facade.core.TodoFacade;
 import pcgen.mcp.McpSessionManager;
 
@@ -43,7 +42,10 @@ public final class UtilityTools
 					}
 					return toResult(Map.of("todoList", todos, "count", todos.size()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -137,7 +139,10 @@ public final class UtilityTools
 					}
 					return toResult(Map.of("qualified", qualified, "item", itemName, "type", itemType));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -168,7 +173,10 @@ public final class UtilityTools
 					}
 					return toResult(Map.of("status", "ok", "scores", scores));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -187,7 +195,10 @@ public final class UtilityTools
 					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
 					return toResult(Map.of("dirty", character.isDirty()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -229,7 +240,10 @@ public final class UtilityTools
 
 					return toResult(result);
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -240,7 +254,10 @@ public final class UtilityTools
 		{
 			return new CallToolResult(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data), false);
 		}
-		catch (JsonProcessingException e) { return new CallToolResult(data.toString(), false); }
+		catch (JsonProcessingException e)
+		{
+			return new CallToolResult(data.toString(), false);
+		}
 	}
 
 	private static CallToolResult errorResult(String message)

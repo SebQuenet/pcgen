@@ -31,7 +31,8 @@ public final class EquipmentTools
 	{
 		return new SyncToolSpecification(
 			new Tool("buy_equipment",
-				"Buy/add a BASE equipment item to inventory. For magic/masterwork items, buy the base item first then use customize_equipment to add enchantments. Example: buy 'Longsword' then customize with '+1 Enhancement'.",
+				"Buy/add a BASE equipment item to inventory. "
+				+ "For magic/masterwork items, buy the base item first then use customize_equipment to add enchantments. Example: buy 'Longsword' then customize with '+1 Enhancement'.",
 				"""
 					{
 						"type": "object",
@@ -71,7 +72,11 @@ public final class EquipmentTools
 					java.math.BigDecimal fundsBefore = character.getFundsRef().get();
 
 					McpUIDelegate delegate = session.getDelegate((String) args.get("character_id"));
-					if (delegate != null) { delegate.consumeLastError(); delegate.consumeLastInfo(); }
+					if (delegate != null)
+					{
+						delegate.consumeLastError();
+						delegate.consumeLastInfo();
+					}
 
 					character.addPurchasedEquipment(sized, quantity, false, free);
 
@@ -304,7 +309,11 @@ public final class EquipmentTools
 						try
 						{
 							EquipmentFacade sized = character.getEquipmentSizedForCharacter(found);
-							if (delegate != null) { delegate.consumeLastError(); delegate.consumeLastInfo(); }
+							if (delegate != null)
+							{
+								delegate.consumeLastError();
+								delegate.consumeLastInfo();
+							}
 
 							character.addPurchasedEquipment(sized, quantity, false, free);
 

@@ -1,7 +1,6 @@
 package pcgen.mcp.tools;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -56,11 +55,17 @@ public final class TemplateTools
 							break;
 						}
 					}
-					if (found == null) return errorResult("Template not found: " + key);
+					if (found == null)
+					{
+						return errorResult("Template not found: " + key);
+					}
 					character.addTemplate(found);
 					return toResult(Map.of("status", "ok", "template", found.getDisplayName()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -94,11 +99,17 @@ public final class TemplateTools
 							break;
 						}
 					}
-					if (found == null) return errorResult("Character does not have template: " + key);
+					if (found == null)
+					{
+						return errorResult("Character does not have template: " + key);
+					}
 					character.removeTemplate(found);
 					return toResult(Map.of("status", "ok", "removed", found.getDisplayName()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -122,7 +133,10 @@ public final class TemplateTools
 					}
 					return toResult(list);
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -156,11 +170,17 @@ public final class TemplateTools
 							break;
 						}
 					}
-					if (found == null) return errorResult("Temp bonus not found: " + name);
+					if (found == null)
+					{
+						return errorResult("Temp bonus not found: " + name);
+					}
 					character.addTempBonus(found);
 					return toResult(Map.of("status", "ok", "bonus", found.toString()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -194,11 +214,17 @@ public final class TemplateTools
 							break;
 						}
 					}
-					if (found == null) return errorResult("Active temp bonus not found: " + name);
+					if (found == null)
+					{
+						return errorResult("Active temp bonus not found: " + name);
+					}
 					character.removeTempBonus(found);
 					return toResult(Map.of("status", "ok", "removed", found.toString()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -216,12 +242,21 @@ public final class TemplateTools
 				{
 					CharacterFacade character = session.getCharacter((String) args.get("character_id"));
 					List<String> available = new ArrayList<>();
-					for (TempBonusFacade b : character.getAvailableTempBonuses()) available.add(b.toString());
+					for (TempBonusFacade b : character.getAvailableTempBonuses())
+					{
+						available.add(b.toString());
+					}
 					List<String> active = new ArrayList<>();
-					for (TempBonusFacade b : character.getTempBonuses()) active.add(b.toString());
+					for (TempBonusFacade b : character.getTempBonuses())
+					{
+						active.add(b.toString());
+					}
 					return toResult(Map.of("available", available, "active", active));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -255,11 +290,17 @@ public final class TemplateTools
 							break;
 						}
 					}
-					if (found == null) return errorResult("Kit not found: " + key);
+					if (found == null)
+					{
+						return errorResult("Kit not found: " + key);
+					}
 					character.addKit(found);
 					return toResult(Map.of("status", "ok", "kit", found.getDisplayName()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -270,7 +311,10 @@ public final class TemplateTools
 		{
 			return new CallToolResult(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data), false);
 		}
-		catch (JsonProcessingException e) { return new CallToolResult(data.toString(), false); }
+		catch (JsonProcessingException e)
+		{
+			return new CallToolResult(data.toString(), false);
+		}
 	}
 
 	private static CallToolResult errorResult(String message)

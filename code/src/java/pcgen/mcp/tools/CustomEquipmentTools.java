@@ -20,7 +20,6 @@ import pcgen.core.PlayerCharacter;
 import pcgen.core.analysis.ChooseActivation;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
-import pcgen.facade.core.EquipmentBuilderFacade;
 import pcgen.facade.core.EquipmentBuilderFacade.EquipmentHead;
 import pcgen.facade.core.EquipmentFacade;
 import pcgen.facade.core.InfoFactory;
@@ -98,7 +97,8 @@ public final class CustomEquipmentTools
 	{
 		return new SyncToolSpecification(
 			new Tool("customize_equipment",
-				"Create a custom/magic equipment item by applying modifiers (enchantments) to a base item. The item is added to the dataset and becomes available for purchase via buy_equipment. Example: customize 'Longsword' with '+1 Enhancement' then buy '+1 Longsword'.",
+				"Create a custom/magic equipment item by applying modifiers (enchantments) to a base item. "
+				+ "The item is added to the dataset and becomes available for purchase via buy_equipment. Example: customize 'Longsword' with '+1 Enhancement' then buy '+1 Longsword'.",
 				"""
 					{
 						"type": "object",
@@ -122,7 +122,7 @@ public final class CustomEquipmentTools
 							},
 							"spell_abilities": {
 								"type": "array",
-								"description": "Activated spell-like abilities granted by the item. Each entry needs spell (key), times_per_day (int or formula; -1=at will) and caster_level (int, variable or formula).",
+								"description": "Spell-like abilities the item grants. Each needs spell (key), times_per_day (-1=at will) and caster_level.",
 								"items": {
 									"type": "object",
 									"properties": {

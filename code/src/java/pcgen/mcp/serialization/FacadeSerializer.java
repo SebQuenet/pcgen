@@ -5,7 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import pcgen.core.AbilityCategory;
 import pcgen.core.Campaign;
 import pcgen.core.Deity;
 import pcgen.core.GameMode;
@@ -22,7 +21,6 @@ import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.core.EquipmentFacade;
 import pcgen.facade.core.TodoFacade;
 import pcgen.facade.util.ListFacade;
-import pcgen.facade.util.MapFacade;
 
 public final class FacadeSerializer
 {

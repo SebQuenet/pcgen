@@ -77,7 +77,10 @@ public final class LanguageCompanionTools
 
 					return toResult(Map.of("languages", languages, "choosers", choosers));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -111,12 +114,21 @@ public final class LanguageCompanionTools
 							break;
 						}
 					}
-					if (found == null) return errorResult("Language not found: " + key);
-					if (!character.isRemovable(found)) return errorResult("Language is not removable: " + found.getDisplayName());
+					if (found == null)
+					{
+						return errorResult("Language not found: " + key);
+					}
+					if (!character.isRemovable(found))
+					{
+						return errorResult("Language is not removable: " + found.getDisplayName());
+					}
 					character.removeLanguage(found);
 					return toResult(Map.of("status", "ok", "removed", found.getDisplayName()));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -161,7 +173,10 @@ public final class LanguageCompanionTools
 					}
 					return errorResult("Language not found or no available chooser with remaining selections: " + key);
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -207,7 +222,10 @@ public final class LanguageCompanionTools
 
 					return toResult(Map.of("companions", companions, "available", available, "maxCompanions", maxMap));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -277,7 +295,10 @@ public final class LanguageCompanionTools
 						"companion_race", selectedRace.getDisplayName()
 					));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -331,7 +352,10 @@ public final class LanguageCompanionTools
 					support.removeCompanion(matched);
 					return toResult(Map.of("status", "ok", "removed_type", companionType, "removed_race", removedRace));
 				}
-				catch (Exception e) { return errorResult(e.getMessage()); }
+				catch (Exception e)
+				{
+					return errorResult(e.getMessage());
+				}
 			}
 		);
 	}
@@ -342,7 +366,10 @@ public final class LanguageCompanionTools
 		{
 			return new CallToolResult(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(data), false);
 		}
-		catch (JsonProcessingException e) { return new CallToolResult(data.toString(), false); }
+		catch (JsonProcessingException e)
+		{
+			return new CallToolResult(data.toString(), false);
+		}
 	}
 
 	private static CallToolResult errorResult(String message)

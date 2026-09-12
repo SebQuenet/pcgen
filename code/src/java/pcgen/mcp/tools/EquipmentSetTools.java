@@ -386,10 +386,16 @@ public final class EquipmentSetTools
 				{
 					return node;
 				}
-				if (exactMatch == null) exactMatch = node;
+				if (exactMatch == null)
+				{
+					exactMatch = node;
+				}
 			}
 		}
-		if (exactMatch != null) return exactMatch;
+		if (exactMatch != null)
+		{
+			return exactMatch;
+		}
 
 		// Partial match — prefer equippable slots
 		EquipNode partialMatch = null;
@@ -401,7 +407,10 @@ public final class EquipmentSetTools
 				{
 					return node;
 				}
-				if (partialMatch == null) partialMatch = node;
+				if (partialMatch == null)
+				{
+					partialMatch = node;
+				}
 			}
 		}
 		return partialMatch;
