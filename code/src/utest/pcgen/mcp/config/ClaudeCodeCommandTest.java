@@ -12,10 +12,12 @@ class ClaudeCodeCommandTest
 	@Test
 	void registersTheServerForEveryProjectOfTheUser()
 	{
-		List<String> command = ClaudeCodeCommand.addServer("claude", Path.of("/opt/pcgen/bin/pcgen-mcp"));
+		Path serverExecutable = Path.of("/opt/pcgen/bin/pcgen-mcp");
+
+		List<String> command = ClaudeCodeCommand.addServer("claude", serverExecutable);
 
 		assertEquals(
-			List.of("claude", "mcp", "add", "--scope", "user", "pcgen", "--", "/opt/pcgen/bin/pcgen-mcp"),
+			List.of("claude", "mcp", "add", "--scope", "user", "pcgen", "--", serverExecutable.toString()),
 			command);
 	}
 }

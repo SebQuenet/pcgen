@@ -21,18 +21,22 @@ class ClaudeCodeClientTest
 
 	@Test
 	@DisabledOnOs(OS.WINDOWS)
-	void reportsTheServerAsRegisteredWhenTheCliAcceptsIt()
+	void reportsTheServerAsRegisteredWhenTheCliAcceptsIt(@TempDir Path directory) throws IOException
 	{
-		ConfigInstallOutcome outcome = new ClaudeCodeClient("/bin/true").install(SERVER_EXECUTABLE);
+		Path acceptingCli = writeScript(directory, "exit 0\n");
+
+		ConfigInstallOutcome outcome = new ClaudeCodeClient(acceptingCli.toString()).install(SERVER_EXECUTABLE);
 
 		assertEquals(new ConfigInstallOutcome.Installed(Optional.empty()), outcome);
 	}
 
 	@Test
 	@DisabledOnOs(OS.WINDOWS)
-	void reportsAFailureWhenTheCliRejectsTheServer()
+	void reportsAFailureWhenTheCliRejectsTheServer(@TempDir Path directory) throws IOException
 	{
-		ConfigInstallOutcome outcome = new ClaudeCodeClient("/bin/false").install(SERVER_EXECUTABLE);
+		Path rejectingCli = writeScript(directory, "exit 1\n");
+
+		ConfigInstallOutcome outcome = new ClaudeCodeClient(rejectingCli.toString()).install(SERVER_EXECUTABLE);
 
 		assertInstanceOf(ConfigInstallOutcome.InstallFailed.class, outcome);
 	}

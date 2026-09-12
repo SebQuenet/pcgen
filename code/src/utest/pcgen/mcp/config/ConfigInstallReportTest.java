@@ -22,13 +22,13 @@ class ConfigInstallReportTest
 	@Test
 	void namesTheBackupItLeftBehind()
 	{
-		ConfigInstallOutcome outcome =
-			new ConfigInstallOutcome.Installed(Optional.of(Path.of("/home/joe/config.json.bak")));
+		Path backupFile = Path.of("/home/joe/config.json.bak");
+		ConfigInstallOutcome outcome = new ConfigInstallOutcome.Installed(Optional.of(backupFile));
 
 		String line = ConfigInstallReport.describe(CLIENT, outcome);
 
 		assertEquals(CLIENT + ": server 'pcgen' registered, previous configuration saved as "
-			+ "/home/joe/config.json.bak.", line);
+			+ backupFile + ".", line);
 	}
 
 	@Test
