@@ -30,6 +30,7 @@ public class LoggingRecorder extends FileHandler
 
 	public LoggingRecorder() throws IOException
 	{
+		super(LogFileLocation.forCurrentUser());
 	}
 
 	@Override
