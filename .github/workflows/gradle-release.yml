@@ -82,6 +82,8 @@ jobs:
     name: Build Release
     needs: create_release
     strategy:
+      # One platform failing must not cancel the installers of the others.
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, ubuntu-24.04-arm, macos-latest, windows-latest]
         include:
@@ -101,6 +103,8 @@ jobs:
           ref: ${{ inputs.tag_name || github.ref }}
 
       - name: Update PCGenProp.properties with release version and date
+        # The Windows runner defaults to PowerShell, which cannot read this script.
+        shell: bash
         run: |
           PROPS_FILE="code/src/resources/pcgen/system/prop/PCGenProp.properties"
           GRADLE_VERSION=$(grep '^version=' gradle.properties | head -1 | cut -d'=' -f2 | tr -d '[:space:]')
