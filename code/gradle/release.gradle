@@ -23,7 +23,6 @@ apply from: "code/gradle/releaseUtils.groovy"
 apply plugin: 'java'
 
 import org.apache.tools.ant.filters.FixCrLfFilter
-import org.apache.tools.ant.taskdefs.condition.Os
 import org.gradle.api.internal.file.copy.DefaultCopySpec
 
 ext {
@@ -272,12 +271,7 @@ tasks.register("sourcesJar", Jar) {
 }
 
 tasks.register("assembleArtifacts", Copy) {
-    dependsOn build, runtimeZip, sourcesJar
-
-    if (Os.isFamily(Os.FAMILY_MAC) || Os.isFamily(Os.FAMILY_UNIX))
-    {
-        dependsOn jpackage
-    }
+    dependsOn build, runtimeZip, sourcesJar, jpackage
 
     description = "Create the release artifacts and get them into the release folder."
     into releaseDir
@@ -292,7 +286,9 @@ tasks.register("assembleArtifacts", Copy) {
         include "image*.zip"
     }
     from(layout.buildDirectory.dir("jpackage")){
+        // jpackage names its output pcgen-<version>.msi on Windows and pcgen_<version>_<arch>.deb on Linux
         include 'pcgen-*.*'
+        include 'pcgen_*.*'
     }
 }
 

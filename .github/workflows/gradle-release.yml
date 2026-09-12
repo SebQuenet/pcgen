@@ -148,6 +148,10 @@ jobs:
             ${{ matrix.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
             ${{ matrix.os }}-gradle
 
+      - name: Install the WiX toolset, which jpackage needs to build an msi
+        if: matrix.os == 'windows-latest'
+        run: choco install wixtoolset --no-progress -y
+
       - name: Build the image
         if: success()
         run: ./gradlew clean build copyToOutput test compileSlowtest datatest pfinttest allReports buildDist prepareRelease pcgenRelease
@@ -173,22 +177,25 @@ jobs:
           name: ${{ matrix.os }}-pkg
           path: ${{ github.workspace }}/build/release/*.pkg
 
-#      - name: Upload release assets for ubuntu
-#        uses: actions/upload-artifact@v4
-#        if: matrix.os == 'ubuntu-latest'
-#        with:
-#          name: ${{ matrix.os }}
-#          path: ${{ github.workspace }}/build/jpackage/*.deb
-#
-#      - name: Upload release assets for windows
-#        uses: actions/upload-artifact@v4
-#        if: matrix.os == 'windows-latest'
-#        with:
-#          name: ${{ matrix.os }}
-#          path: ${{ github.workspace }}/build/jpackage/*.msi
-#
-#      - name: Release - ${{ matrix.os }}
-#        uses: softprops/action-gh-release@v2
-#        with:
-#          tag_name: ${{ needs.create_release.outputs.tag-name }}
-#          files: ${{ github.workspace }}/build/release/pcgen-*.*
+      - name: Upload Linux installer
+        uses: actions/upload-artifact@v4
+        if: startsWith(matrix.os, 'ubuntu')
+        with:
+          name: ${{ matrix.release_suffix }}-deb
+          path: ${{ github.workspace }}/build/release/*.deb
+
+      - name: Upload Windows installer
+        uses: actions/upload-artifact@v4
+        if: matrix.os == 'windows-latest'
+        with:
+          name: ${{ matrix.release_suffix }}-msi
+          path: ${{ github.workspace }}/build/release/*.msi
+
+      - name: Attach the installers to the release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(matrix.os, 'ubuntu') || matrix.os == 'windows-latest'
+        with:
+          tag_name: ${{ inputs.tag_name || github.ref_name }}
+          files: |
+            ${{ github.workspace }}/build/release/*.deb
+            ${{ github.workspace }}/build/release/*.msi
