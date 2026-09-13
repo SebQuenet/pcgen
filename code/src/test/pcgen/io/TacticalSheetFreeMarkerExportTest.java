@@ -104,6 +104,24 @@ public class TacticalSheetFreeMarkerExportTest extends AbstractCharacterTestCase
 		assertEquals("", export(getCharacter()).strip());
 	}
 
+	/**
+	 * Every export goes through a copy of the character, built by
+	 * {@link PlayerCharacter#cloneForExport()}, so the facet holding the sheet
+	 * must be one of the storage beans that copy carries over.
+	 */
+	@Test
+	public void testTheExportCopyOfTheCharacterKeepsTheSheet() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setTacticalSheet(new TacticalSheet(
+			List.of(new TacticalSection("Opening", List.of(new TacticalEntry("Round 1", "Cast bless", ""))))));
+
+		String exported = export(character.cloneForExport());
+
+		assertTrue(exported.contains("[Opening]"), exported);
+		assertTrue(exported.contains("Round 1 -> Cast bless"), exported);
+	}
+
 	@Test
 	public void testOlderEngineLoopsOverTheFlatViewOfTheSheet() throws IOException, ExportException
 	{
