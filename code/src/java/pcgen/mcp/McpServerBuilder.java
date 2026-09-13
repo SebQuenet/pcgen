@@ -22,6 +22,7 @@ import pcgen.mcp.tools.LanguageCompanionTools;
 import pcgen.mcp.tools.SkillTools;
 import pcgen.mcp.tools.SourceTools;
 import pcgen.mcp.tools.SpellTools;
+import pcgen.mcp.tools.TacticalSheetTools;
 import pcgen.mcp.tools.TemplateTools;
 import pcgen.mcp.tools.UtilityTools;
 
@@ -119,6 +120,10 @@ public final class McpServerBuilder
 				BiographyTools.setBiography(session),
 				BiographyTools.getBiography(session),
 				BiographyTools.setXP(session),
+				// Tactical sheet
+				TacticalSheetTools.setTacticalSheet(session),
+				TacticalSheetTools.getTacticalSheet(session),
+				TacticalSheetTools.clearTacticalSheet(session),
 				// Export
 				ExportTools.exportCharacter(session),
 				ExportTools.getCharacterSheet(session),

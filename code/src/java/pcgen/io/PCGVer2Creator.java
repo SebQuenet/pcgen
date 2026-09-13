@@ -93,6 +93,9 @@ import pcgen.core.display.CharacterDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.pclevelinfo.PCLevelInfoStat;
 import pcgen.core.spell.Spell;
+import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalSection;
+import pcgen.core.tactics.TacticalSheet;
 import pcgen.output.channel.ChannelUtilities;
 import pcgen.output.channel.compat.AlignmentCompat;
 import pcgen.output.channel.compat.HairColorCompat;
@@ -454,6 +457,13 @@ public final class PCGVer2Creator
 		appendNewline(buffer);
 		appendComment("Character Notes Tab", buffer); //$NON-NLS-1$
 		appendNotesLines(buffer);
+
+		/*
+		 * #Tactical Sheet
+		 */
+		appendNewline(buffer);
+		appendComment("Tactical Sheet", buffer); //$NON-NLS-1$
+		appendTacticalSheetLines(buffer);
 
 		/*
 		 * #AgeSet Kit selections
@@ -1606,6 +1616,61 @@ public final class PCGVer2Creator
 			buffer.append(EntityEncoder.encode(ni.getValue()));
 			buffer.append(IOConstants.LINE_SEP);
 		}
+	}
+
+	/*
+	 * ###############################################################
+	 * Tactical Sheet methods
+	 * ###############################################################
+	 */
+
+	/**
+	 * Writes the tactical sheet as one line per section followed by one line
+	 * per entry. Each entry names the index of the section it belongs to, so
+	 * sections keep their order and their entries stay attached to them.
+	 *
+	 * @param buffer the character file being built.
+	 */
+	private void appendTacticalSheetLines(StringBuilder buffer)
+	{
+		Optional<TacticalSheet> sheet = charDisplay.getTacticalSheet();
+		if (sheet.isEmpty())
+		{
+			return;
+		}
+
+		List<TacticalSection> sections = sheet.get().sections();
+		for (int sectionIndex = 0; sectionIndex < sections.size(); sectionIndex++)
+		{
+			TacticalSection section = sections.get(sectionIndex);
+			buffer.append(IOConstants.TAG_TACTICALSECTION).append(':');
+			buffer.append(EntityEncoder.encode(section.title()));
+			buffer.append(IOConstants.LINE_SEP);
+
+			for (TacticalEntry entry : section.entries())
+			{
+				appendTacticalEntryLine(buffer, sectionIndex, entry);
+			}
+		}
+	}
+
+	private void appendTacticalEntryLine(StringBuilder buffer, int sectionIndex, TacticalEntry entry)
+	{
+		buffer.append(IOConstants.TAG_TACTICALENTRY).append(':');
+		buffer.append(sectionIndex);
+		buffer.append('|');
+		buffer.append(IOConstants.TAG_TACTICALTRIGGER).append(':');
+		buffer.append(EntityEncoder.encode(entry.trigger()));
+		buffer.append('|');
+		buffer.append(IOConstants.TAG_TACTICALACTIONS).append(':');
+		buffer.append(EntityEncoder.encode(entry.actions()));
+		if (!entry.note().isEmpty())
+		{
+			buffer.append('|');
+			buffer.append(IOConstants.TAG_TACTICALNOTE).append(':');
+			buffer.append(EntityEncoder.encode(entry.note()));
+		}
+		buffer.append(IOConstants.LINE_SEP);
 	}
 
 	private void appendPersonalityTrait1Line(StringBuilder buffer)

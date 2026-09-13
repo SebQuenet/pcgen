@@ -2333,5 +2333,27 @@ ${pcstring('TEMPBONUS.${temp}')}
 </@loop>
 </table>
 </#if>
+<#if (pcvar("COUNT[TACTICS]") > 0) >
+<br style="page-break-after: always" />
+<div class="pcgen">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')}<br/>Player: ${pcstring('PLAYERNAME')}; Character Name: ${pcstring('NAME')}</div>
+
+<table width="100%" cellspacing="0" cellpadding="5">
+ <tr>
+  <th colspan="3" class="notehead">Tactical Sheet</th>
+ </tr>
+<@loop from=0 to=pcvar('COUNT[TACTICS]-1') ; tacticalsection , tacticalsection_has_next>
+	<tr>
+		<td class="notetab" colspan="3"><b>${pcstring('TACTIC.${tacticalsection}.TITLE')}</b></td>
+	</tr>
+<@loop from=0 to=pcstring('TACTIC.${tacticalsection}.COUNT')?number-1 ; tacticalentry , tacticalentry_has_next>
+	<tr>
+		<td class="notetab" width="25%"><span class="notes">${pcstring('TACTIC.${tacticalsection}.${tacticalentry}.TRIGGER')}</span></td>
+		<td class="notetab" width="55%"><span class="notes">${pcstring('TACTIC.${tacticalsection}.${tacticalentry}.ACTIONS')}</span></td>
+		<td class="notetab" width="20%"><span class="notes">${pcstring('TACTIC.${tacticalsection}.${tacticalentry}.NOTE')}</span></td>
+	</tr>
+</@loop>
+</@loop>
+</table>
+</#if>
 </body>
 </html>

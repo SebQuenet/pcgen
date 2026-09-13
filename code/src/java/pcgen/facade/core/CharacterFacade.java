@@ -455,6 +455,14 @@ public interface CharacterFacade extends CompanionFacade
 	 */
     DescriptionFacade getDescriptionFacade();
 
+    /**
+     * Retrieves the tactical sheet of the character: what to do round by round
+     * and in which circumstances.
+     *
+     * @return the facade the Tactical tab edits the sheet through.
+     */
+    TacticalSheetFacade getTacticalSheetFacade();
+
 	/**
 	 * Set the character's current experience point value
 	 * @param xp The new XP value to be set

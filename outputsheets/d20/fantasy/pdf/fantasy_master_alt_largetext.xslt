@@ -7,6 +7,7 @@
 	xmlns:myAttribs="my:Attribs"
 	exclude-result-prefixes="myAttribs Psionics">
 	<xsl:import href="fantasy_common.xsl"/>
+	<xsl:import href="common_sheet/block_tactics.xslt"/>
 	<xsl:output indent="yes"/>
 	<xsl:variable name="vAttribs_tree">
 		<myAttribs:myAttribs>
@@ -411,6 +412,7 @@
 			<xsl:apply-templates select="spells"/>
 			<xsl:apply-templates select="basics" mode="bio"/>
 			<xsl:apply-templates select="basics/notes" mode="bio"/>
+			<xsl:apply-templates select="basics/tactics"/>
 		</fo:root>
 	</xsl:template>
 	<!--

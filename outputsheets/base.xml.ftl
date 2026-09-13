@@ -242,6 +242,20 @@
 			</note>
 		</@loop>
 		</notes>
+		<tactics>
+		<@loop from=0 to=pcvar('COUNT[TACTICS]-1') ; tacticalsection , tacticalsection_has_next>
+			<tactical_section>
+				<title>${pcstring('TACTIC.${tacticalsection}.TITLE')}</title>
+				<@loop from=0 to=pcstring('TACTIC.${tacticalsection}.COUNT')?number-1 ; tacticalentry , tacticalentry_has_next>
+				<tactical_entry>
+					<trigger>${pcstring('TACTIC.${tacticalsection}.${tacticalentry}.TRIGGER')}</trigger>
+					<actions>${pcstring('TACTIC.${tacticalsection}.${tacticalentry}.ACTIONS')}</actions>
+					<note>${pcstring('TACTIC.${tacticalsection}.${tacticalentry}.NOTE')}</note>
+				</tactical_entry>
+				</@loop>
+			</tactical_section>
+		</@loop>
+		</tactics>
 		<campaign_histories>
 			<@loop from=0 to=pcvar('count("CAMPAIGNHISTORY")-1') ; campaignhistory , campaignhistory_has_next>	
 			<campaign_history>

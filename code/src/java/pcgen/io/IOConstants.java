@@ -408,6 +408,17 @@ interface IOConstants
 	/** TABNAME */
 	String TAG_TABNAME = "TABNAME";
 
+	/** Tactical sheet: one line per section, in reading order */
+	String TAG_TACTICALSECTION = "TACTICALSECTION";
+	/** Tactical sheet: one line per entry, keyed by the index of its section */
+	String TAG_TACTICALENTRY = "TACTICALENTRY";
+	/** Tactical sheet: the circumstance an entry applies to */
+	String TAG_TACTICALTRIGGER = "TACTICALTRIGGER";
+	/** Tactical sheet: what the character does */
+	String TAG_TACTICALACTIONS = "TACTICALACTIONS";
+	/** Tactical sheet: extra detail on an entry */
+	String TAG_TACTICALNOTE = "TACTICALNOTE";
+
 	/** Temporary Bonuses */
 	String TAG_TEMPBONUS = "TEMPBONUS";
 	/** TBBONUS */

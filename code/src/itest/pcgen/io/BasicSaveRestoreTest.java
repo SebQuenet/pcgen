@@ -18,6 +18,7 @@
 package pcgen.io;
 
 import java.util.Arrays;
+import java.util.List;
 
 import pcgen.cdom.util.CControl;
 import pcgen.core.Deity;
@@ -27,6 +28,9 @@ import pcgen.core.PCClass;
 import pcgen.core.PCTemplate;
 import pcgen.core.SettingsHandler;
 import pcgen.core.Skill;
+import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalSection;
+import pcgen.core.tactics.TacticalSheet;
 import pcgen.io.testsupport.AbstractSaveRestoreTest;
 import pcgen.output.channel.ChannelUtilities;
 import pcgen.output.channel.compat.AlignmentCompat;
@@ -151,6 +155,38 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 		NoteItem item = new NoteItem(1, -1, "NoteName", "NoteValue");
 		pc.addNotesItem(item);
 		pc.removeNote(item);
+		runRoundRobin(null);
+	}
+
+	@Test
+	public void testTacticalSheet()
+	{
+		finishLoad();
+		pc.setTacticalSheet(new TacticalSheet(List.of(
+			new TacticalSection("Opening",
+				List.of(new TacticalEntry("Round 1", "Cast bless, then advance", "Provokes"))),
+			new TacticalSection("Emergency",
+				List.of(new TacticalEntry("HP below 12", "Drink a potion, withdraw", ""),
+					new TacticalEntry("Outnumbered", "Fall back to the corridor", ""))))));
+		runRoundRobin(null);
+	}
+
+	@Test
+	public void testTacticalSheetSurvivesSeparatorCharacters()
+	{
+		finishLoad();
+		pc.setTacticalSheet(new TacticalSheet(List.of(new TacticalSection("Rounds 1|2",
+			List.of(new TacticalEntry("HP: below 12", "Cast [bless] & withdraw", "Two lines\nof note"))))));
+		runRoundRobin(null);
+	}
+
+	@Test
+	public void testTacticalSheetAddRemove()
+	{
+		finishLoad();
+		pc.setTacticalSheet(new TacticalSheet(
+			List.of(new TacticalSection("Opening", List.of(new TacticalEntry("Round 1", "Charge", ""))))));
+		pc.clearTacticalSheet();
 		runRoundRobin(null);
 	}
 

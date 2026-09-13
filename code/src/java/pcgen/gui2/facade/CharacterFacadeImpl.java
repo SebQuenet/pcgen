@@ -135,6 +135,7 @@ import pcgen.facade.core.InfoFactory;
 import pcgen.facade.core.LanguageChooserFacade;
 import pcgen.facade.core.SpellFacade;
 import pcgen.facade.core.SpellSupportFacade;
+import pcgen.facade.core.TacticalSheetFacade;
 import pcgen.facade.core.TempBonusFacade;
 import pcgen.facade.core.TodoFacade;
 import pcgen.facade.core.UIDelegate;
@@ -252,6 +253,7 @@ public class CharacterFacadeImpl
 	private Gui2InfoFactory infoFactory;
 	private CharacterAbilities characterAbilities;
 	private DescriptionFacade descriptionFacade;
+	private TacticalSheetFacade tacticalSheetFacade;
 	private SpellSupportFacadeImpl spellSupportFacade;
 	private CompanionSupportFacadeImpl companionSupportFacade;
 	private TodoManager todoManager;
@@ -315,6 +317,7 @@ public class CharacterFacadeImpl
 		infoFactory = new Gui2InfoFactory(theCharacter);
 		characterAbilities = new CharacterAbilities(theCharacter, delegate, dataSet, todoManager);
 		descriptionFacade = new DescriptionFacadeImpl(theCharacter);
+		tacticalSheetFacade = new TacticalSheetFacadeImpl(theCharacter);
 		spellSupportFacade = new SpellSupportFacadeImpl(theCharacter, delegate, dataSet, todoManager, this);
 
 		name = new DefaultReferenceFacade<>(charDisplay.getName());
@@ -2534,6 +2537,12 @@ public class CharacterFacadeImpl
 	public DescriptionFacade getDescriptionFacade()
 	{
 		return descriptionFacade;
+	}
+
+	@Override
+	public TacticalSheetFacade getTacticalSheetFacade()
+	{
+		return tacticalSheetFacade;
 	}
 
 	@Override

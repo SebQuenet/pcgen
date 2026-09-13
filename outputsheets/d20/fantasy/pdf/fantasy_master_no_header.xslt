@@ -27,6 +27,7 @@
 	<xsl:import href="common_sheet/block_skills.xslt"/>
 	<xsl:import href="common_sheet/block_spells_condensed.xslt"/>
 	<xsl:import href="common_sheet/block_stat_block.xslt"/>
+	<xsl:import href="common_sheet/block_tactics.xslt"/>
 	<xsl:import href="common_sheet/block_weapons.xslt"/>
 <!-- END -->
 
@@ -436,6 +437,7 @@
 			<xsl:apply-templates select="spells"/>	
 			<xsl:apply-templates select="basics" mode="bio"/>
 			<xsl:apply-templates select="basics/notes" mode="bio"/>
+			<xsl:apply-templates select="basics/tactics"/>
 		</fo:root>
 	</xsl:template>
 

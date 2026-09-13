@@ -366,6 +366,30 @@ public enum TermEvaluatorBuilderPCVar implements TermEvaluatorBuilder
 		}
 	},
 
+	COMPLETE_PC_COUNT_TACTICS("COUNT\\[TACTICS\\]", new String[]{"COUNT[TACTICS]"}, true)
+	{
+
+		@Override
+		public TermEvaluator getTermEvaluator(final String expressionString, final String src,
+			final String matchedSection)
+		{
+
+			return new PCCountTacticalSectionsTermEvaluator(expressionString);
+		}
+	},
+
+	COMPLETE_PC_COUNT_TACTICENTRIES("COUNT\\[TACTICENTRIES\\]", new String[]{"COUNT[TACTICENTRIES]"}, true)
+	{
+
+		@Override
+		public TermEvaluator getTermEvaluator(final String expressionString, final String src,
+			final String matchedSection)
+		{
+
+			return new PCCountTacticalEntriesTermEvaluator(expressionString);
+		}
+	},
+
 	COMPLETE_PC_COUNT_RACESUBTYPES("COUNT\\[RACESUBTYPES\\]", new String[]{"COUNT[RACESUBTYPES]"}, true)
 	{
 

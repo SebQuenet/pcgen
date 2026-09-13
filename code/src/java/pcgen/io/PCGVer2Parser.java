@@ -121,6 +121,9 @@ import pcgen.core.display.BonusDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.prereq.PrereqHandler;
 import pcgen.core.spell.Spell;
+import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalSection;
+import pcgen.core.tactics.TacticalSheet;
 import pcgen.core.utils.CoreUtility;
 import pcgen.core.utils.MessageType;
 import pcgen.core.utils.ShowMessageDelegate;
@@ -1149,6 +1152,18 @@ final class PCGVer2Parser implements PCGParser
 			{
 				parseNoteLine(line);
 			}
+		}
+
+		/*
+		 * #Tactical Sheet
+		 * TACTICALSECTION:Opening
+		 * TACTICALENTRY:0|TACTICALTRIGGER:Round 1|TACTICALACTIONS:Cast bless|TACTICALNOTE:Provokes
+		 */
+		if (cache.containsKey(IOConstants.TAG_TACTICALSECTION))
+		{
+			List<String> entryLines = cache.containsKey(IOConstants.TAG_TACTICALENTRY)
+				? cache.get(IOConstants.TAG_TACTICALENTRY) : List.of();
+			parseTacticalSheetLines(cache.get(IOConstants.TAG_TACTICALSECTION), entryLines);
 		}
 
 		/*
@@ -3175,6 +3190,122 @@ final class PCGVer2Parser implements PCGParser
 	 * Character Notes Tab methods
 	 * ###############################################################
 	 */
+	/**
+	 * Rebuilds the tactical sheet from the section lines and the entry lines.
+	 * An entry naming a section that is not in the file is dropped with a
+	 * warning, and a section left without a single entry is dropped too, since
+	 * the model does not allow an empty one.
+	 *
+	 * @param sectionLines the TACTICALSECTION lines, in file order.
+	 * @param entryLines   the TACTICALENTRY lines, in file order.
+	 */
+	private void parseTacticalSheetLines(final List<String> sectionLines, final List<String> entryLines)
+	{
+		final List<String> titles = new ArrayList<>();
+		for (final String line : sectionLines)
+		{
+			titles.add(EntityEncoder.decode(line.substring(IOConstants.TAG_TACTICALSECTION.length() + 1)));
+		}
+
+		final List<List<TacticalEntry>> entriesBySection = new ArrayList<>();
+		for (int i = 0; i < titles.size(); i++)
+		{
+			entriesBySection.add(new ArrayList<>());
+		}
+
+		for (final String line : entryLines)
+		{
+			parseTacticalEntryLine(line, entriesBySection);
+		}
+
+		final List<TacticalSection> sections = new ArrayList<>();
+		for (int i = 0; i < titles.size(); i++)
+		{
+			final List<TacticalEntry> entries = entriesBySection.get(i);
+			if (entries.isEmpty())
+			{
+				warnings.add("Tactical section '" + titles.get(i) + "' has no entry and was dropped");
+				continue;
+			}
+			try
+			{
+				sections.add(new TacticalSection(titles.get(i), entries));
+			}
+			catch (IllegalArgumentException e)
+			{
+				warnings.add("Illegal tactical section: " + e.getMessage());
+			}
+		}
+
+		if (!sections.isEmpty())
+		{
+			thePC.setTacticalSheet(new TacticalSheet(sections));
+		}
+	}
+
+	private void parseTacticalEntryLine(final String line, final List<List<TacticalEntry>> entriesBySection)
+	{
+		final PCGTokenizer tokens;
+		try
+		{
+			tokens = new PCGTokenizer(line);
+		}
+		catch (PCGParseException pcgpex)
+		{
+			warnings.add("Illegal tactical entry line: " + line + " (" + pcgpex.getMessage() + ')');
+			return;
+		}
+
+		int sectionIndex = -1;
+		String trigger = Constants.EMPTY_STRING;
+		String actions = Constants.EMPTY_STRING;
+		String note = Constants.EMPTY_STRING;
+
+		for (PCGElement element : tokens.getElements())
+		{
+			final String tag = element.getName();
+			if (IOConstants.TAG_TACTICALENTRY.equals(tag))
+			{
+				try
+				{
+					sectionIndex = Integer.parseInt(element.getText());
+				}
+				catch (NumberFormatException nfe)
+				{
+					warnings.add("Tactical entry with a non numeric section index: " + line);
+					return;
+				}
+			}
+			else if (IOConstants.TAG_TACTICALTRIGGER.equals(tag))
+			{
+				trigger = EntityEncoder.decode(element.getText());
+			}
+			else if (IOConstants.TAG_TACTICALACTIONS.equals(tag))
+			{
+				actions = EntityEncoder.decode(element.getText());
+			}
+			else if (IOConstants.TAG_TACTICALNOTE.equals(tag))
+			{
+				note = EntityEncoder.decode(element.getText());
+			}
+		}
+
+		if (sectionIndex < 0 || sectionIndex >= entriesBySection.size())
+		{
+			warnings.add("Tactical entry pointing at an unknown section was dropped: " + line);
+			return;
+		}
+
+		try
+		{
+			entriesBySection.get(sectionIndex).add(new TacticalEntry(trigger, actions, note));
+		}
+		catch (IllegalArgumentException e)
+		{
+			warnings.add("Illegal tactical entry: " + e.getMessage());
+		}
+	}
+
 	private void parseNoteLine(final String line)
 	{
 		final PCGTokenizer tokens;

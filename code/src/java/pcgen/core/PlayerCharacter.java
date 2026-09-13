@@ -137,6 +137,7 @@ import pcgen.cdom.facet.StatCalcFacet;
 import pcgen.cdom.facet.StatValueFacet;
 import pcgen.cdom.facet.SubClassFacet;
 import pcgen.cdom.facet.SubstitutionClassFacet;
+import pcgen.cdom.facet.TacticalSheetFacet;
 import pcgen.cdom.facet.TargetTrackingFacet;
 import pcgen.cdom.facet.TemplateFeatFacet;
 import pcgen.cdom.facet.UserEquipmentFacet;
@@ -252,6 +253,7 @@ import pcgen.core.display.CharacterDisplay;
 import pcgen.core.display.SkillDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.spell.Spell;
+import pcgen.core.tactics.TacticalSheet;
 import pcgen.core.utils.CoreUtility;
 import pcgen.core.utils.MessageType;
 import pcgen.core.utils.ShowMessageDelegate;
@@ -300,6 +302,7 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	private final AutoListWeaponProfFacet alWeaponProfFacet = FacetLibrary.getFacet(AutoListWeaponProfFacet.class);
 	private final RegionFacet regionFacet = FacetLibrary.getFacet(RegionFacet.class);
 	private final NoteItemFacet noteItemFacet = FacetLibrary.getFacet(NoteItemFacet.class);
+	private final TacticalSheetFacet tacticalSheetFacet = FacetLibrary.getFacet(TacticalSheetFacet.class);
 	private final GlobalAddedSkillCostFacet globalAddedSkillCostFacet =
 			FacetLibrary.getFacet(GlobalAddedSkillCostFacet.class);
 	private final LocalAddedSkillCostFacet localAddedSkillCostFacet =
@@ -2360,6 +2363,34 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	public void addNotesItem(final NoteItem item)
 	{
 		if (noteItemFacet.add(id, item))
+		{
+			setDirty(true);
+		}
+	}
+
+	/**
+	 * Replaces the tactical sheet of this character.
+	 *
+	 * @param sheet the sheet to store, never null.
+	 */
+	public void setTacticalSheet(final TacticalSheet sheet)
+	{
+		if (sheet == null)
+		{
+			throw new IllegalArgumentException("Use clearTacticalSheet to remove a tactical sheet");
+		}
+		if (tacticalSheetFacet.set(id, sheet))
+		{
+			setDirty(true);
+		}
+	}
+
+	/**
+	 * Removes the tactical sheet of this character, if it has one.
+	 */
+	public void clearTacticalSheet()
+	{
+		if (tacticalSheetFacet.remove(id) != null)
 		{
 			setDirty(true);
 		}

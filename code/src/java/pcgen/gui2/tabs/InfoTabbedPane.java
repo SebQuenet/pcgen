@@ -122,6 +122,7 @@ public final class InfoTabbedPane extends JTabbedPane implements CharacterSelect
 		addTab(new SpellsInfoTab());
 		addTab(new InventoryInfoTab());
 		addTab(new DescriptionInfoTab());
+		addTab(new TacticalInfoTab());
 		addTab(new TempBonusInfoTab());
 		addTab(new CompanionInfoTab());
 		addTab(new CharacterSheetInfoTab());

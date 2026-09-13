@@ -74,6 +74,7 @@ import pcgen.cdom.facet.StatCalcFacet;
 import pcgen.cdom.facet.StatValueFacet;
 import pcgen.cdom.facet.SubClassFacet;
 import pcgen.cdom.facet.SubstitutionClassFacet;
+import pcgen.cdom.facet.TacticalSheetFacet;
 import pcgen.cdom.facet.XPTableFacet;
 import pcgen.cdom.facet.analysis.AgeSetFacet;
 import pcgen.cdom.facet.analysis.ArmorClassFacet;
@@ -151,6 +152,7 @@ import pcgen.core.character.Follower;
 import pcgen.core.character.SpellBook;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.spell.Spell;
+import pcgen.core.tactics.TacticalSheet;
 import pcgen.output.channel.compat.AlignmentCompat;
 import pcgen.util.enumeration.Load;
 import pcgen.util.enumeration.View;
@@ -207,6 +209,7 @@ public class CharacterDisplay
 	private XPTableFacet xpTableFacet = FacetLibrary.getFacet(XPTableFacet.class);
 	private WeightFacet weightFacet = FacetLibrary.getFacet(WeightFacet.class);
 	private NoteItemFacet noteItemFacet = FacetLibrary.getFacet(NoteItemFacet.class);
+	private TacticalSheetFacet tacticalSheetFacet = FacetLibrary.getFacet(TacticalSheetFacet.class);
 	private SubRaceFacet subRaceFacet = FacetLibrary.getFacet(SubRaceFacet.class);
 	private UserSpecialAbilityFacet userSpecialAbilityFacet = FacetLibrary.getFacet(UserSpecialAbilityFacet.class);
 	private SkillRankFacet skillRankFacet = FacetLibrary.getFacet(SkillRankFacet.class);
@@ -1440,6 +1443,39 @@ public class CharacterDisplay
 	public Collection<NoteItem> getNotesList()
 	{
 		return noteItemFacet.getSet(id);
+	}
+
+	/**
+	 * Gets the tactical sheet of the character.
+	 *
+	 * @return the tactical sheet, empty when the character has none.
+	 */
+	public Optional<TacticalSheet> getTacticalSheet()
+	{
+		return Optional.ofNullable(tacticalSheetFacet.get(id));
+	}
+
+	/**
+	 * Counts the sections of the tactical sheet.
+	 *
+	 * @return the number of sections, 0 when the character has no tactical
+	 *         sheet.
+	 */
+	public int getTacticalSectionCount()
+	{
+		return getTacticalSheet().map(sheet -> sheet.sections().size()).orElse(0);
+	}
+
+	/**
+	 * Counts the entries of the tactical sheet, across every section.
+	 *
+	 * @return the number of entries, 0 when the character has no tactical
+	 *         sheet.
+	 */
+	public int getTacticalEntryCount()
+	{
+		return getTacticalSheet()
+			.map(sheet -> sheet.sections().stream().mapToInt(section -> section.entries().size()).sum()).orElse(0);
 	}
 
 	/**
