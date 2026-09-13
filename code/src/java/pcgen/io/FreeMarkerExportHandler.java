@@ -20,6 +20,7 @@ import pcgen.io.freemarker.PCBooleanFunction;
 import pcgen.io.freemarker.PCHasVarFunction;
 import pcgen.io.freemarker.PCStringDirective;
 import pcgen.io.freemarker.PCVarFunction;
+import pcgen.io.tactics.TacticalOutputModel;
 import pcgen.output.publish.OutputDB;
 import pcgen.util.Logging;
 
@@ -102,6 +103,7 @@ public class FreeMarkerExportHandler extends ExportHandler
 			input.put("pcboolean", new PCBooleanFunction(aPC, this));
 			input.put("pchasvar", new PCHasVarFunction(aPC, this));
 			input.put("equipsetloop", new EquipSetLoopDirective(aPC));
+			input.put("tactics", TacticalOutputModel.of(aPC));
 
 			// Process the template
 			template.process(input, outputWriter);

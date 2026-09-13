@@ -20,15 +20,15 @@ package pcgen.core.tactics;
 import java.util.List;
 
 /**
- * A titled group of tactical entries, such as "Opening", "Rounds 1-2" or
+ * A titled group of tactical blocks, such as "Opening", "Rounds 1-2" or
  * "Emergency".
  *
- * @param title   the heading shown in the GUI and on the exported sheet. Never
- *                blank.
- * @param entries the lines of the section, in the order they should be read.
- *                Never empty, and never modifiable through the list passed in.
+ * @param title  the heading shown in the GUI and on the exported sheet. Never
+ *               blank.
+ * @param blocks the blocks of the section, in the order they should be read.
+ *               Never empty, and never modifiable through the list passed in.
  */
-public record TacticalSection(String title, List<TacticalEntry> entries)
+public record TacticalSection(String title, List<TacticalBlock> blocks)
 {
 	public TacticalSection
 	{
@@ -36,11 +36,27 @@ public record TacticalSection(String title, List<TacticalEntry> entries)
 		{
 			throw new IllegalArgumentException("A tactical section needs a non blank title");
 		}
-		if (entries == null || entries.isEmpty())
+		if (blocks == null || blocks.isEmpty())
 		{
-			throw new IllegalArgumentException("Tactical section '" + title + "' needs at least one entry");
+			throw new IllegalArgumentException("Tactical section '" + title + "' needs at least one block");
 		}
 		title = title.strip();
-		entries = List.copyOf(entries);
+		blocks = List.copyOf(blocks);
+	}
+
+	/**
+	 * The steps of the rotation this section holds, skipping every other kind of
+	 * block.
+	 *
+	 * @return the steps, in reading order. Empty when the section holds none.
+	 */
+	public List<TacticalStep> steps()
+	{
+		return blocks.stream().<TacticalStep>mapMulti((block, accept) -> {
+			if (block instanceof TacticalStep step)
+			{
+				accept.accept(step);
+			}
+		}).toList();
 	}
 }

@@ -93,9 +93,7 @@ import pcgen.core.display.CharacterDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.pclevelinfo.PCLevelInfoStat;
 import pcgen.core.spell.Spell;
-import pcgen.core.tactics.TacticalEntry;
-import pcgen.core.tactics.TacticalSection;
-import pcgen.core.tactics.TacticalSheet;
+import pcgen.core.tactics.TacticalSessionState;
 import pcgen.output.channel.ChannelUtilities;
 import pcgen.output.channel.compat.AlignmentCompat;
 import pcgen.output.channel.compat.HairColorCompat;
@@ -1625,52 +1623,39 @@ public final class PCGVer2Creator
 	 */
 
 	/**
-	 * Writes the tactical sheet as one line per section followed by one line
-	 * per entry. Each entry names the index of the section it belongs to, so
-	 * sections keep their order and their entries stay attached to them.
+	 * Writes the tactical plan and what the session has used up.
+	 *
+	 * <p>
+	 * The plan goes out as its source text on a single line: the entity encoder
+	 * escapes the newlines, colons and pipes the syntax uses, so the text comes
+	 * back exactly as it was written.
 	 *
 	 * @param buffer the character file being built.
 	 */
 	private void appendTacticalSheetLines(StringBuilder buffer)
 	{
-		Optional<TacticalSheet> sheet = charDisplay.getTacticalSheet();
-		if (sheet.isEmpty())
-		{
-			return;
-		}
-
-		List<TacticalSection> sections = sheet.get().sections();
-		for (int sectionIndex = 0; sectionIndex < sections.size(); sectionIndex++)
-		{
-			TacticalSection section = sections.get(sectionIndex);
-			buffer.append(IOConstants.TAG_TACTICALSECTION).append(':');
-			buffer.append(EntityEncoder.encode(section.title()));
+		charDisplay.getTacticalPlan().ifPresent(plan -> {
+			buffer.append(IOConstants.TAG_TACTICALPLAN).append(':');
+			buffer.append(EntityEncoder.encode(plan));
 			buffer.append(IOConstants.LINE_SEP);
+		});
 
-			for (TacticalEntry entry : section.entries())
-			{
-				appendTacticalEntryLine(buffer, sectionIndex, entry);
-			}
-		}
-	}
-
-	private void appendTacticalEntryLine(StringBuilder buffer, int sectionIndex, TacticalEntry entry)
-	{
-		buffer.append(IOConstants.TAG_TACTICALENTRY).append(':');
-		buffer.append(sectionIndex);
-		buffer.append('|');
-		buffer.append(IOConstants.TAG_TACTICALTRIGGER).append(':');
-		buffer.append(EntityEncoder.encode(entry.trigger()));
-		buffer.append('|');
-		buffer.append(IOConstants.TAG_TACTICALACTIONS).append(':');
-		buffer.append(EntityEncoder.encode(entry.actions()));
-		if (!entry.note().isEmpty())
+		TacticalSessionState session = charDisplay.getTacticalSession();
+		if (session.damageTaken() > 0)
 		{
-			buffer.append('|');
-			buffer.append(IOConstants.TAG_TACTICALNOTE).append(':');
-			buffer.append(EntityEncoder.encode(entry.note()));
+			buffer.append(IOConstants.TAG_TACTICALDAMAGE).append(':');
+			buffer.append(session.damageTaken());
+			buffer.append(IOConstants.LINE_SEP);
 		}
-		buffer.append(IOConstants.LINE_SEP);
+		session.resourcesSpent().entrySet().stream()
+			.sorted(java.util.Map.Entry.comparingByKey())
+			.forEach(spent -> {
+				buffer.append(IOConstants.TAG_TACTICALSPENT).append(':');
+				buffer.append(EntityEncoder.encode(spent.getKey()));
+				buffer.append('|');
+				buffer.append(spent.getValue());
+				buffer.append(IOConstants.LINE_SEP);
+			});
 	}
 
 	private void appendPersonalityTrait1Line(StringBuilder buffer)

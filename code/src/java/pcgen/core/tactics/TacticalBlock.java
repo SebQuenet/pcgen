@@ -15,17 +15,19 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package pcgen.cdom.facet;
-
-import pcgen.cdom.enumeration.CharID;
-import pcgen.cdom.facet.base.AbstractItemFacet;
-import pcgen.core.tactics.TacticalSheet;
+package pcgen.core.tactics;
 
 /**
- * TacticalSheetFacet tracks the tactical sheet of a Player Character. A
- * character either holds one sheet or none at all.
+ * One element of a tactical section.
+ *
+ * <p>
+ * A section holds a heterogeneous list of these: a step of the rotation, an
+ * attack with its variants, a tickable resource, a summoned creature's stat
+ * block, a tagged spell repertoire, or a prose note. The interface is sealed so
+ * that a renderer must handle every kind, and so that no block can exist in a
+ * half filled state.
  */
-public class TacticalSheetFacet extends AbstractItemFacet<CharID, TacticalSheet>
+public sealed interface TacticalBlock
+		permits TacticalStep, TacticalAttack, TacticalResource, TacticalCreature, TacticalSpellList, TacticalNote
 {
-
 }

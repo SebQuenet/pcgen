@@ -17,53 +17,58 @@
  */
 package pcgen.facade.core;
 
-import pcgen.core.tactics.TacticalSection;
-import pcgen.facade.util.ListFacade;
+import java.util.List;
+
+import pcgen.core.tactics.TacticalParseError;
 
 /**
- * Tracks the tactical sheet of a character — what to do round by round and in
- * which circumstances — between the user interface and the core.
+ * The tactical sheet of a character, between the user interface and the core.
  *
  * <p>
- * Sections are held in reading order and edited one at a time: the user
- * interface never rebuilds the whole sheet to change one line.
+ * Two different acts live here. Changing the plan rewrites its source text,
+ * which is what the character stores. Playing the session ticks off damage and
+ * resources, which is play state kept apart from the plan.
  */
 public interface TacticalSheetFacade
 {
 
 	/**
-	 * Retrieves the sections of the character's tactical sheet, in reading
-	 * order. The list is empty when the character has no tactical sheet.
+	 * The source text of the character's plan.
 	 *
-	 * @return the sections of the sheet.
+	 * @return the plan as written, empty when the character has none.
 	 */
-	ListFacade<TacticalSection> getSections();
+	String getPlanSource();
 
 	/**
-	 * Adds a section at the end of the sheet, holding one placeholder line for
-	 * the user to fill in. A section is never empty, so a new one comes with a
-	 * line already.
+	 * Replaces the plan with what the writer has typed, whether or not it
+	 * reads: losing someone's typing because of a half finished line would be
+	 * worse than storing it.
 	 *
-	 * @param title the heading of the new section.
+	 * @param source the plan's source text. Blank removes the plan.
 	 */
-	void addSection(String title);
+	void setPlanSource(String source);
 
 	/**
-	 * Replaces the section at a position, keeping that position in the sheet.
-	 * A position outside the sheet changes nothing — two sections may hold the
-	 * same title and the same lines, so sections are addressed by where they
-	 * are rather than by what they contain.
+	 * Reads a candidate plan without storing it, so an editor can say what is
+	 * wrong while it is being typed.
 	 *
-	 * @param position    where the section sits, counting from zero.
-	 * @param replacement what to put in its place.
+	 * @param source the plan's source text.
+	 * @return every error found, empty when the plan reads.
 	 */
-	void replaceSection(int position, TacticalSection replacement);
+	List<TacticalParseError> errorsIn(String source);
 
 	/**
-	 * Removes the section at a position. A position outside the sheet changes
-	 * nothing.
+	 * Records damage the character has taken.
 	 *
-	 * @param position where the section sits, counting from zero.
+	 * @param damage total damage taken, never negative.
 	 */
-	void removeSection(int position);
+	void setDamage(int damage);
+
+	/**
+	 * Records how much of a resource is gone.
+	 *
+	 * @param label the resource's label, as the plan writes it.
+	 * @param count how many of its uses are gone, never negative.
+	 */
+	void spend(String label, int count);
 }

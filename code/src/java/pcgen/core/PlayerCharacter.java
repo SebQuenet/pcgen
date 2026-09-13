@@ -137,7 +137,8 @@ import pcgen.cdom.facet.StatCalcFacet;
 import pcgen.cdom.facet.StatValueFacet;
 import pcgen.cdom.facet.SubClassFacet;
 import pcgen.cdom.facet.SubstitutionClassFacet;
-import pcgen.cdom.facet.TacticalSheetFacet;
+import pcgen.cdom.facet.TacticalPlanFacet;
+import pcgen.cdom.facet.TacticalSessionFacet;
 import pcgen.cdom.facet.TargetTrackingFacet;
 import pcgen.cdom.facet.TemplateFeatFacet;
 import pcgen.cdom.facet.UserEquipmentFacet;
@@ -253,6 +254,8 @@ import pcgen.core.display.CharacterDisplay;
 import pcgen.core.display.SkillDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.spell.Spell;
+import pcgen.core.tactics.TacticalPlanWriter;
+import pcgen.core.tactics.TacticalSessionState;
 import pcgen.core.tactics.TacticalSheet;
 import pcgen.core.utils.CoreUtility;
 import pcgen.core.utils.MessageType;
@@ -302,7 +305,8 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	private final AutoListWeaponProfFacet alWeaponProfFacet = FacetLibrary.getFacet(AutoListWeaponProfFacet.class);
 	private final RegionFacet regionFacet = FacetLibrary.getFacet(RegionFacet.class);
 	private final NoteItemFacet noteItemFacet = FacetLibrary.getFacet(NoteItemFacet.class);
-	private final TacticalSheetFacet tacticalSheetFacet = FacetLibrary.getFacet(TacticalSheetFacet.class);
+	private final TacticalPlanFacet tacticalPlanFacet = FacetLibrary.getFacet(TacticalPlanFacet.class);
+	private final TacticalSessionFacet tacticalSessionFacet = FacetLibrary.getFacet(TacticalSessionFacet.class);
 	private final GlobalAddedSkillCostFacet globalAddedSkillCostFacet =
 			FacetLibrary.getFacet(GlobalAddedSkillCostFacet.class);
 	private final LocalAddedSkillCostFacet localAddedSkillCostFacet =
@@ -2379,18 +2383,61 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		{
 			throw new IllegalArgumentException("Use clearTacticalSheet to remove a tactical sheet");
 		}
-		if (tacticalSheetFacet.set(id, sheet))
+		setTacticalPlan(TacticalPlanWriter.write(sheet));
+	}
+
+	/**
+	 * Sets the source text of this character's tactical plan.
+	 *
+	 * @param source the plan's source text. Never null, and never blank: use
+	 *               {@link #clearTacticalSheet()} to remove a plan.
+	 */
+	public void setTacticalPlan(final String source)
+	{
+		if (source == null || source.isBlank())
+		{
+			throw new IllegalArgumentException("Use clearTacticalSheet to remove a tactical plan");
+		}
+		if (tacticalPlanFacet.set(id, source))
 		{
 			setDirty(true);
 		}
 	}
 
 	/**
-	 * Removes the tactical sheet of this character, if it has one.
+	 * Removes the tactical sheet of this character, if it has one, and forgets
+	 * what the session had used up.
 	 */
 	public void clearTacticalSheet()
 	{
-		if (tacticalSheetFacet.remove(id) != null)
+		boolean removed = tacticalPlanFacet.remove(id) != null;
+		removed |= tacticalSessionFacet.remove(id) != null;
+		if (removed)
+		{
+			setDirty(true);
+		}
+	}
+
+	/**
+	 * Records what the tactical session has used up so far.
+	 *
+	 * @param state the session state. Never null.
+	 */
+	public void setTacticalSession(final TacticalSessionState state)
+	{
+		if (state == null)
+		{
+			throw new IllegalArgumentException("A tactical session needs a state");
+		}
+		if (state.isUntouched())
+		{
+			if (tacticalSessionFacet.remove(id) != null)
+			{
+				setDirty(true);
+			}
+			return;
+		}
+		if (tacticalSessionFacet.set(id, state))
 		{
 			setDirty(true);
 		}
@@ -2493,6 +2540,17 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	 * @param variableString The variable to check for.
 	 * @return True if the PC has the variable.
 	 */
+	/**
+	 * The names of the variables this character defines, so a caller can offer
+	 * them rather than make someone guess.
+	 *
+	 * @return the variable names, empty when the character defines none.
+	 */
+	public java.util.Set<String> getVariableNames()
+	{
+		return variableFacet.getVariableNames(id);
+	}
+
 	public boolean hasVariable(final String variableString)
 	{
 		try

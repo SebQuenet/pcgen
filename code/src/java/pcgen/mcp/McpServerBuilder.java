@@ -124,6 +124,7 @@ public final class McpServerBuilder
 				TacticalSheetTools.setTacticalSheet(session),
 				TacticalSheetTools.getTacticalSheet(session),
 				TacticalSheetTools.clearTacticalSheet(session),
+				TacticalSheetTools.listTacticalReferences(session),
 				// Export
 				ExportTools.exportCharacter(session),
 				ExportTools.getCharacterSheet(session),

@@ -26,6 +26,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.IdentityHashMap;
 import java.util.Iterator;
@@ -121,7 +122,13 @@ import pcgen.core.display.BonusDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.prereq.PrereqHandler;
 import pcgen.core.spell.Spell;
-import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalBlock;
+import pcgen.core.tactics.TacticalParseError;
+import pcgen.core.tactics.TacticalParseFailure;
+import pcgen.core.tactics.TacticalParseSuccess;
+import pcgen.core.tactics.TacticalPlanParser;
+import pcgen.core.tactics.TacticalSessionState;
+import pcgen.core.tactics.TacticalStep;
 import pcgen.core.tactics.TacticalSection;
 import pcgen.core.tactics.TacticalSheet;
 import pcgen.core.utils.CoreUtility;
@@ -1156,15 +1163,25 @@ final class PCGVer2Parser implements PCGParser
 
 		/*
 		 * #Tactical Sheet
-		 * TACTICALSECTION:Opening
-		 * TACTICALENTRY:0|TACTICALTRIGGER:Round 1|TACTICALACTIONS:Cast bless|TACTICALNOTE:Provokes
+		 * TACTICALPLAN:## Opening&nl;step&colon; Round 1&nl;  do&colon; Cast bless
+		 * TACTICALDAMAGE:19
+		 * TACTICALSPENT:Mythic power|4
 		 */
-		if (cache.containsKey(IOConstants.TAG_TACTICALSECTION))
+		if (cache.containsKey(IOConstants.TAG_TACTICALPLAN))
 		{
+			parseTacticalPlanLine(cache.get(IOConstants.TAG_TACTICALPLAN).getFirst());
+		}
+		else if (cache.containsKey(IOConstants.TAG_TACTICALSECTION))
+		{
+			// Saved before the plan became source text; migrated on the next save.
 			List<String> entryLines = cache.containsKey(IOConstants.TAG_TACTICALENTRY)
 				? cache.get(IOConstants.TAG_TACTICALENTRY) : List.of();
 			parseTacticalSheetLines(cache.get(IOConstants.TAG_TACTICALSECTION), entryLines);
 		}
+
+		parseTacticalSessionLines(cache.containsKey(IOConstants.TAG_TACTICALDAMAGE)
+			? cache.get(IOConstants.TAG_TACTICALDAMAGE) : List.of(),
+			cache.containsKey(IOConstants.TAG_TACTICALSPENT) ? cache.get(IOConstants.TAG_TACTICALSPENT) : List.of());
 
 		/*
 		 * #Character Bio
@@ -3191,6 +3208,90 @@ final class PCGVer2Parser implements PCGParser
 	 * ###############################################################
 	 */
 	/**
+	 * Reads the tactical plan's source text off its line.
+	 *
+	 * @param line the TACTICALPLAN line, tag and all.
+	 */
+	private void parseTacticalPlanLine(final String line)
+	{
+		final String source =
+				EntityEncoder.decode(line.substring(IOConstants.TAG_TACTICALPLAN.length() + 1));
+		if (source.isBlank())
+		{
+			return;
+		}
+		switch (TacticalPlanParser.parse(source))
+		{
+			case TacticalParseSuccess ignored -> thePC.setTacticalPlan(source);
+			case TacticalParseFailure failure ->
+			{
+				thePC.setTacticalPlan(source);
+				for (TacticalParseError error : failure.errors())
+				{
+					warnings.add("Tactical plan, line " + error.line() + ": " + error.message());
+				}
+			}
+		}
+	}
+
+	/**
+	 * Reads what the tactical session had used up. A line that does not make
+	 * sense is dropped with a warning rather than losing the rest.
+	 *
+	 * @param damageLines the TACTICALDAMAGE lines, in file order.
+	 * @param spentLines  the TACTICALSPENT lines, in file order.
+	 */
+	private void parseTacticalSessionLines(final List<String> damageLines, final List<String> spentLines)
+	{
+		int damage = 0;
+		for (final String line : damageLines)
+		{
+			final String text = line.substring(IOConstants.TAG_TACTICALDAMAGE.length() + 1).strip();
+			try
+			{
+				damage = Integer.parseInt(text);
+			}
+			catch (NumberFormatException nfe)
+			{
+				warnings.add("Tactical damage that is not a number was dropped: " + text);
+			}
+		}
+
+		final Map<String, Integer> spent = new HashMap<>();
+		for (final String line : spentLines)
+		{
+			final String body = line.substring(IOConstants.TAG_TACTICALSPENT.length() + 1);
+			final int separator = body.lastIndexOf('|');
+			if (separator < 0)
+			{
+				warnings.add("Tactical resource line without a count was dropped: " + body);
+				continue;
+			}
+			try
+			{
+				spent.put(EntityEncoder.decode(body.substring(0, separator)),
+					Integer.parseInt(body.substring(separator + 1).strip()));
+			}
+			catch (NumberFormatException nfe)
+			{
+				warnings.add("Tactical resource line with a non numeric count was dropped: " + body);
+			}
+		}
+
+		if (damage > 0 || !spent.isEmpty())
+		{
+			try
+			{
+				thePC.setTacticalSession(new TacticalSessionState(damage, spent));
+			}
+			catch (IllegalArgumentException e)
+			{
+				warnings.add("Illegal tactical session state: " + e.getMessage());
+			}
+		}
+	}
+
+	/**
 	 * Rebuilds the tactical sheet from the section lines and the entry lines.
 	 * An entry naming a section that is not in the file is dropped with a
 	 * warning, and a section left without a single entry is dropped too, since
@@ -3207,7 +3308,7 @@ final class PCGVer2Parser implements PCGParser
 			titles.add(EntityEncoder.decode(line.substring(IOConstants.TAG_TACTICALSECTION.length() + 1)));
 		}
 
-		final List<List<TacticalEntry>> entriesBySection = new ArrayList<>();
+		final List<List<TacticalStep>> entriesBySection = new ArrayList<>();
 		for (int i = 0; i < titles.size(); i++)
 		{
 			entriesBySection.add(new ArrayList<>());
@@ -3215,13 +3316,13 @@ final class PCGVer2Parser implements PCGParser
 
 		for (final String line : entryLines)
 		{
-			parseTacticalEntryLine(line, entriesBySection);
+			parseTacticalStepLine(line, entriesBySection);
 		}
 
 		final List<TacticalSection> sections = new ArrayList<>();
 		for (int i = 0; i < titles.size(); i++)
 		{
-			final List<TacticalEntry> entries = entriesBySection.get(i);
+			final List<TacticalStep> entries = entriesBySection.get(i);
 			if (entries.isEmpty())
 			{
 				warnings.add("Tactical section '" + titles.get(i) + "' has no entry and was dropped");
@@ -3229,7 +3330,7 @@ final class PCGVer2Parser implements PCGParser
 			}
 			try
 			{
-				sections.add(new TacticalSection(titles.get(i), entries));
+				sections.add(new TacticalSection(titles.get(i), List.<TacticalBlock>copyOf(entries)));
 			}
 			catch (IllegalArgumentException e)
 			{
@@ -3243,7 +3344,7 @@ final class PCGVer2Parser implements PCGParser
 		}
 	}
 
-	private void parseTacticalEntryLine(final String line, final List<List<TacticalEntry>> entriesBySection)
+	private void parseTacticalStepLine(final String line, final List<List<TacticalStep>> entriesBySection)
 	{
 		final PCGTokenizer tokens;
 		try
@@ -3298,7 +3399,7 @@ final class PCGVer2Parser implements PCGParser
 
 		try
 		{
-			entriesBySection.get(sectionIndex).add(new TacticalEntry(trigger, actions, note));
+			entriesBySection.get(sectionIndex).add(new TacticalStep(trigger, actions, note));
 		}
 		catch (IllegalArgumentException e)
 		{

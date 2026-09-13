@@ -17,33 +17,19 @@
  */
 package pcgen.cdom.facet;
 
-import java.util.List;
-
 import pcgen.cdom.enumeration.CharID;
 import pcgen.cdom.facet.base.AbstractItemFacet;
-import pcgen.cdom.testsupport.AbstractItemFacetTest;
-import pcgen.core.tactics.TacticalEntry;
-import pcgen.core.tactics.TacticalSection;
-import pcgen.core.tactics.TacticalSheet;
 
-public class TacticalSheetFacetTest extends AbstractItemFacetTest<TacticalSheet>
+/**
+ * TacticalPlanFacet tracks the source text of a Player Character's tactical
+ * plan. A character either holds one plan or none at all.
+ *
+ * <p>
+ * The text is what the character stores: the object model is read back out of
+ * it wherever it is needed, so there is one representation rather than two to
+ * keep in agreement.
+ */
+public class TacticalPlanFacet extends AbstractItemFacet<CharID, String>
 {
 
-	private final TacticalSheetFacet facet = new TacticalSheetFacet();
-
-	private int sheetCount = 0;
-
-	@Override
-	protected AbstractItemFacet<CharID, TacticalSheet> getFacet()
-	{
-		return facet;
-	}
-
-	@Override
-	protected TacticalSheet getItem()
-	{
-		sheetCount++;
-		TacticalEntry entry = new TacticalEntry("Round " + sheetCount, "Attack " + sheetCount, "");
-		return new TacticalSheet(List.of(new TacticalSection("Opening " + sheetCount, List.of(entry))));
-	}
 }

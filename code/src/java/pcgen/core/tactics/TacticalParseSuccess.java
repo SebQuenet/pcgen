@@ -18,29 +18,17 @@
 package pcgen.core.tactics;
 
 /**
- * One line of a tactical sheet: the circumstance the character is in, and what
- * the character does about it.
+ * A source text that read cleanly.
  *
- * @param trigger the circumstance in plain words, such as "Round 1", "enemy at
- *                range" or "HP below 12". Never blank.
- * @param actions what the character does. Never blank.
- * @param note    extra detail, empty when there is none.
+ * @param sheet the sheet it described. Never null.
  */
-public record TacticalEntry(String trigger, String actions, String note)
+public record TacticalParseSuccess(TacticalSheet sheet) implements TacticalParseResult
 {
-	public TacticalEntry
+	public TacticalParseSuccess
 	{
-		trigger = requireText(trigger, "trigger");
-		actions = requireText(actions, "actions");
-		note = (note == null) ? "" : note.strip();
-	}
-
-	private static String requireText(String candidate, String fieldName)
-	{
-		if (candidate == null || candidate.isBlank())
+		if (sheet == null)
 		{
-			throw new IllegalArgumentException("A tactical entry needs a non blank " + fieldName);
+			throw new IllegalArgumentException("A successful parse needs a sheet");
 		}
-		return candidate.strip();
 	}
 }

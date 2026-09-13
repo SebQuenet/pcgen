@@ -248,6 +248,24 @@ public class VariableFacet extends AbstractStorageFacet<CharID> implements DataF
 		return (vkMap != null) && vkMap.containsKey(vk);
 	}
 
+	/**
+	 * Returns the names of the variables defined for the Player Character
+	 * represented by the given CharID.
+	 *
+	 * @param id
+	 *            The CharID representing the Player Character
+	 * @return the variable names, empty when the character defines none
+	 */
+	public Set<String> getVariableNames(CharID id)
+	{
+		Map<VariableKey, Map<Formula, Set<CDOMObject>>> vkMap = getCachedMap(id);
+		if (vkMap == null)
+		{
+			return Set.of();
+		}
+		return vkMap.keySet().stream().map(VariableKey::toString).collect(java.util.stream.Collectors.toUnmodifiableSet());
+	}
+
 	public int getVariableCount(CharID id)
 	{
 		Map<VariableKey, Map<Formula, Set<CDOMObject>>> vkMap = getCachedMap(id);

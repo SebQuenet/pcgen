@@ -17,102 +17,86 @@
  */
 package pcgen.gui2.facade;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import pcgen.core.PlayerCharacter;
-import pcgen.core.tactics.TacticalEntry;
-import pcgen.core.tactics.TacticalSection;
-import pcgen.core.tactics.TacticalSheet;
+import pcgen.core.tactics.TacticalParseError;
+import pcgen.core.tactics.TacticalParseFailure;
+import pcgen.core.tactics.TacticalParseSuccess;
+import pcgen.core.tactics.TacticalPlanParser;
+import pcgen.core.tactics.TacticalSessionState;
 import pcgen.facade.core.TacticalSheetFacade;
-import pcgen.facade.util.DefaultListFacade;
-import pcgen.facade.util.ListFacade;
-import pcgen.system.LanguageBundle;
 
 /**
  * Edits the tactical sheet of a character on behalf of the Tactical tab.
  *
  * <p>
- * The sections the tab shows are kept in a list facade so the tab is told when
- * they change; the character is the source of truth and is rewritten after each
- * edit.
+ * The character is the source of truth: every edit is written straight through
+ * to it, and nothing is cached here that the character could contradict.
  */
 class TacticalSheetFacadeImpl implements TacticalSheetFacade
 {
 
 	private final PlayerCharacter theCharacter;
-	private final DefaultListFacade<TacticalSection> sections;
 
 	TacticalSheetFacadeImpl(PlayerCharacter pc)
 	{
 		theCharacter = pc;
-		sections = new DefaultListFacade<>();
-		pc.getDisplay().getTacticalSheet()
-			.ifPresent(sheet -> sheet.sections().forEach(sections::addElement));
 	}
 
 	@Override
-	public ListFacade<TacticalSection> getSections()
+	public String getPlanSource()
 	{
-		return sections;
+		return theCharacter.getDisplay().getTacticalPlan().orElse("");
 	}
 
 	@Override
-	public void addSection(String title)
+	public void setPlanSource(String source)
 	{
-		sections.addElement(new TacticalSection(title, List.of(placeholderEntry())));
-		storeOnCharacter();
-	}
-
-	@Override
-	public void replaceSection(int position, TacticalSection replacement)
-	{
-		if (isOutsideTheSheet(position))
-		{
-			return;
-		}
-		sections.removeElement(position);
-		sections.addElement(position, replacement);
-		storeOnCharacter();
-	}
-
-	@Override
-	public void removeSection(int position)
-	{
-		if (isOutsideTheSheet(position))
-		{
-			return;
-		}
-		sections.removeElement(position);
-		storeOnCharacter();
-	}
-
-	private boolean isOutsideTheSheet(int position)
-	{
-		return position < 0 || position >= sections.getSize();
-	}
-
-	/**
-	 * The line a brand new section starts with, since a section is never empty.
-	 *
-	 * @return a line whose text tells the user what to replace it with.
-	 */
-	private static TacticalEntry placeholderEntry()
-	{
-		return new TacticalEntry(LanguageBundle.getString("in_tactical_when"),
-			LanguageBundle.getString("in_tactical_do"), "");
-	}
-
-	private void storeOnCharacter()
-	{
-		List<TacticalSection> current = new ArrayList<>(sections.getContents());
-		if (current.isEmpty())
+		if (source == null || source.isBlank())
 		{
 			theCharacter.clearTacticalSheet();
+			return;
+		}
+		theCharacter.setTacticalPlan(source);
+	}
+
+	@Override
+	public List<TacticalParseError> errorsIn(String source)
+	{
+		if (source == null || source.isBlank())
+		{
+			return List.of();
+		}
+		return switch (TacticalPlanParser.parse(source))
+		{
+			case TacticalParseSuccess ignored -> List.of();
+			case TacticalParseFailure failure -> failure.errors();
+		};
+	}
+
+	@Override
+	public void setDamage(int damage)
+	{
+		TacticalSessionState session = theCharacter.getDisplay().getTacticalSession();
+		theCharacter.setTacticalSession(new TacticalSessionState(Math.max(damage, 0), session.resourcesSpent()));
+	}
+
+	@Override
+	public void spend(String label, int count)
+	{
+		TacticalSessionState session = theCharacter.getDisplay().getTacticalSession();
+		Map<String, Integer> spent = new HashMap<>(session.resourcesSpent());
+		if (count <= 0)
+		{
+			spent.remove(label);
 		}
 		else
 		{
-			theCharacter.setTacticalSheet(new TacticalSheet(current));
+			spent.put(label, count);
 		}
+		theCharacter.setTacticalSession(new TacticalSessionState(session.damageTaken(), spent));
 	}
 }

@@ -74,7 +74,8 @@ import pcgen.cdom.facet.StatCalcFacet;
 import pcgen.cdom.facet.StatValueFacet;
 import pcgen.cdom.facet.SubClassFacet;
 import pcgen.cdom.facet.SubstitutionClassFacet;
-import pcgen.cdom.facet.TacticalSheetFacet;
+import pcgen.cdom.facet.TacticalPlanFacet;
+import pcgen.cdom.facet.TacticalSessionFacet;
 import pcgen.cdom.facet.XPTableFacet;
 import pcgen.cdom.facet.analysis.AgeSetFacet;
 import pcgen.cdom.facet.analysis.ArmorClassFacet;
@@ -152,6 +153,8 @@ import pcgen.core.character.Follower;
 import pcgen.core.character.SpellBook;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.spell.Spell;
+import pcgen.core.tactics.TacticalPlanParser;
+import pcgen.core.tactics.TacticalSessionState;
 import pcgen.core.tactics.TacticalSheet;
 import pcgen.output.channel.compat.AlignmentCompat;
 import pcgen.util.enumeration.Load;
@@ -209,7 +212,8 @@ public class CharacterDisplay
 	private XPTableFacet xpTableFacet = FacetLibrary.getFacet(XPTableFacet.class);
 	private WeightFacet weightFacet = FacetLibrary.getFacet(WeightFacet.class);
 	private NoteItemFacet noteItemFacet = FacetLibrary.getFacet(NoteItemFacet.class);
-	private TacticalSheetFacet tacticalSheetFacet = FacetLibrary.getFacet(TacticalSheetFacet.class);
+	private TacticalPlanFacet tacticalPlanFacet = FacetLibrary.getFacet(TacticalPlanFacet.class);
+	private TacticalSessionFacet tacticalSessionFacet = FacetLibrary.getFacet(TacticalSessionFacet.class);
 	private SubRaceFacet subRaceFacet = FacetLibrary.getFacet(SubRaceFacet.class);
 	private UserSpecialAbilityFacet userSpecialAbilityFacet = FacetLibrary.getFacet(UserSpecialAbilityFacet.class);
 	private SkillRankFacet skillRankFacet = FacetLibrary.getFacet(SkillRankFacet.class);
@@ -1452,7 +1456,29 @@ public class CharacterDisplay
 	 */
 	public Optional<TacticalSheet> getTacticalSheet()
 	{
-		return Optional.ofNullable(tacticalSheetFacet.get(id));
+		return getTacticalPlan().flatMap(TacticalPlanParser::sheetOf);
+	}
+
+	/**
+	 * The source text of the character's tactical plan, which is what the
+	 * character actually stores.
+	 *
+	 * @return the plan's source text, empty when the character has none.
+	 */
+	public Optional<String> getTacticalPlan()
+	{
+		return Optional.ofNullable(tacticalPlanFacet.get(id));
+	}
+
+	/**
+	 * What the tactical session has used up so far.
+	 *
+	 * @return the session state, untouched when nothing has been used up.
+	 */
+	public TacticalSessionState getTacticalSession()
+	{
+		TacticalSessionState state = tacticalSessionFacet.get(id);
+		return (state == null) ? TacticalSessionState.untouched() : state;
 	}
 
 	/**
@@ -1472,10 +1498,10 @@ public class CharacterDisplay
 	 * @return the number of entries, 0 when the character has no tactical
 	 *         sheet.
 	 */
-	public int getTacticalEntryCount()
+	public int getTacticalStepCount()
 	{
 		return getTacticalSheet()
-			.map(sheet -> sheet.sections().stream().mapToInt(section -> section.entries().size()).sum()).orElse(0);
+			.map(sheet -> sheet.sections().stream().mapToInt(section -> section.steps().size()).sum()).orElse(0);
 	}
 
 	/**

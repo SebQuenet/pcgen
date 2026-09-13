@@ -18,16 +18,13 @@
 package pcgen.gui2.facade;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
 import pcgen.AbstractCharacterTestCase;
 import pcgen.core.PlayerCharacter;
-import pcgen.core.tactics.TacticalEntry;
-import pcgen.core.tactics.TacticalSection;
-import pcgen.core.tactics.TacticalSheet;
+import pcgen.core.tactics.TacticalParseError;
 import pcgen.facade.core.TacticalSheetFacade;
 
 import org.junit.jupiter.api.Test;
@@ -38,131 +35,124 @@ import org.junit.jupiter.api.Test;
 public class TacticalSheetFacadeImplTest extends AbstractCharacterTestCase
 {
 
-	private static List<TacticalSection> sectionsOf(TacticalSheetFacade facade)
-	{
-		List<TacticalSection> listed = new java.util.ArrayList<>();
-		facade.getSections().forEach(listed::add);
-		return listed;
-	}
+	private static final String A_PLAN = """
+		## Before the fight
+		resource: Mythic power | 11 | immediate
+		""";
 
-	private static TacticalSection aSection(String title)
+	private TacticalSheetFacade facadeFor(PlayerCharacter character)
 	{
-		return new TacticalSection(title, List.of(new TacticalEntry("Round 1", "Charge", "")));
-	}
-
-	@Test
-	public void testCharacterWithoutASheetHasNoSection()
-	{
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(getCharacter());
-
-		assertTrue(facade.getSections().isEmpty());
+		return new TacticalSheetFacadeImpl(character);
 	}
 
 	@Test
-	public void testReadsTheSectionsAlreadyOnTheCharacter()
+	public void reportsNoPlanForACharacterWithoutOne()
+	{
+		assertEquals("", facadeFor(getCharacter()).getPlanSource());
+	}
+
+	@Test
+	public void storesThePlanOnTheCharacter()
 	{
 		PlayerCharacter character = getCharacter();
-		character.setTacticalSheet(new TacticalSheet(List.of(aSection("Opening"), aSection("Emergency"))));
+		TacticalSheetFacade facade = facadeFor(character);
 
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
+		facade.setPlanSource(A_PLAN);
 
-		assertEquals(List.of(aSection("Opening"), aSection("Emergency")), sectionsOf(facade));
+		assertEquals(A_PLAN, character.getDisplay().getTacticalPlan().orElseThrow());
+		assertEquals(A_PLAN, facade.getPlanSource());
 	}
 
 	@Test
-	public void testAddedSectionReachesTheCharacterWithALineToFillIn()
+	public void storesTextThatDoesNotReadRatherThanLosingIt()
 	{
 		PlayerCharacter character = getCharacter();
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
+		TacticalSheetFacade facade = facadeFor(character);
 
-		facade.addSection("Opening");
+		facade.setPlanSource("## Before the fight\nmanoeuvre: Trip the ogre\n");
 
-		List<TacticalSection> stored = character.getDisplay().getTacticalSheet().orElseThrow().sections();
-		assertEquals(1, stored.size());
-		assertEquals("Opening", stored.get(0).title());
-		assertEquals(1, stored.get(0).entries().size());
+		assertTrue(character.getDisplay().getTacticalPlan().isPresent());
 	}
 
 	@Test
-	public void testReplacedSectionKeepsItsPosition()
+	public void namesTheOffendingLineOfTextThatDoesNotRead()
 	{
-		PlayerCharacter character = getCharacter();
-		character.setTacticalSheet(new TacticalSheet(List.of(aSection("Opening"), aSection("Emergency"))));
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
+		List<TacticalParseError> errors =
+				facadeFor(getCharacter()).errorsIn("## Before the fight\nmanoeuvre: Trip the ogre\n");
 
-		TacticalSection rewritten =
-				new TacticalSection("Opening", List.of(new TacticalEntry("Round 1", "Cast bless", "")));
-		facade.replaceSection(0, rewritten);
-
-		List<TacticalSection> stored = character.getDisplay().getTacticalSheet().orElseThrow().sections();
-		assertEquals(rewritten, stored.get(0));
-		assertEquals(aSection("Emergency"), stored.get(1));
+		assertEquals(List.of(2), errors.stream().map(TacticalParseError::line).toList());
 	}
 
 	@Test
-	public void testRemovingTheLastSectionLeavesTheCharacterWithoutASheet()
+	public void findsNothingWrongWithAPlanThatReads()
 	{
-		PlayerCharacter character = getCharacter();
-		character.setTacticalSheet(new TacticalSheet(List.of(aSection("Opening"))));
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
-
-		facade.removeSection(0);
-
-		assertTrue(character.getDisplay().getTacticalSheet().isEmpty());
-		assertTrue(facade.getSections().isEmpty());
+		assertEquals(List.of(), facadeFor(getCharacter()).errorsIn(A_PLAN));
 	}
 
 	@Test
-	public void testRemovingOneSectionKeepsTheOthers()
+	public void blankSourceRemovesThePlan()
 	{
 		PlayerCharacter character = getCharacter();
-		character.setTacticalSheet(new TacticalSheet(List.of(aSection("Opening"), aSection("Emergency"))));
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
+		TacticalSheetFacade facade = facadeFor(character);
+		facade.setPlanSource(A_PLAN);
 
-		facade.removeSection(0);
+		facade.setPlanSource("");
 
-		assertEquals(List.of(aSection("Emergency")), sectionsOf(facade));
-		assertEquals(List.of(aSection("Emergency")),
-			character.getDisplay().getTacticalSheet().orElseThrow().sections());
+		assertEquals(List.of(), character.getDisplay().getTacticalPlan().stream().toList());
 	}
 
 	@Test
-	public void testEditingTheSheetMarksTheCharacterDirty()
+	public void recordsDamageTaken()
 	{
 		PlayerCharacter character = getCharacter();
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
-		character.setDirty(false);
 
-		facade.addSection("Opening");
+		facadeFor(character).setDamage(19);
 
-		assertTrue(character.isDirty());
+		assertEquals(19, character.getDisplay().getTacticalSession().damageTaken());
 	}
 
 	@Test
-	public void testRemovingAPositionOutsideTheSheetChangesNothing()
+	public void treatsNegativeDamageAsNone()
 	{
 		PlayerCharacter character = getCharacter();
-		character.setTacticalSheet(new TacticalSheet(List.of(aSection("Opening"))));
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
-		character.setDirty(false);
 
-		facade.removeSection(4);
+		facadeFor(character).setDamage(-5);
 
-		assertEquals(List.of(aSection("Opening")), sectionsOf(facade));
-		assertFalse(character.isDirty());
+		assertEquals(0, character.getDisplay().getTacticalSession().damageTaken());
 	}
 
 	@Test
-	public void testTwoSectionsWithTheSameContentAreEditedIndependently()
+	public void recordsWhatIsSpentOfAResource()
 	{
 		PlayerCharacter character = getCharacter();
-		character.setTacticalSheet(new TacticalSheet(List.of(aSection("Emergency"), aSection("Emergency"))));
-		TacticalSheetFacade facade = new TacticalSheetFacadeImpl(character);
 
-		TacticalSection rewritten =
-				new TacticalSection("Emergency", List.of(new TacticalEntry("HP below 12", "Withdraw", "")));
-		facade.replaceSection(1, rewritten);
+		facadeFor(character).spend("Mythic power", 4);
 
-		assertEquals(List.of(aSection("Emergency"), rewritten), sectionsOf(facade));
+		assertEquals(4, character.getDisplay().getTacticalSession().spent("Mythic power"));
+	}
+
+	@Test
+	public void spendingNothingForgetsTheResource()
+	{
+		PlayerCharacter character = getCharacter();
+		TacticalSheetFacade facade = facadeFor(character);
+		facade.spend("Mythic power", 4);
+
+		facade.spend("Mythic power", 0);
+
+		assertEquals(0, character.getDisplay().getTacticalSession().spent("Mythic power"));
+	}
+
+	@Test
+	public void keepsDamageWhenAResourceIsSpent()
+	{
+		PlayerCharacter character = getCharacter();
+		TacticalSheetFacade facade = facadeFor(character);
+		facade.setDamage(19);
+
+		facade.spend("Mythic power", 4);
+
+		assertEquals(19, character.getDisplay().getTacticalSession().damageTaken());
+		assertEquals(4, character.getDisplay().getTacticalSession().spent("Mythic power"));
 	}
 }

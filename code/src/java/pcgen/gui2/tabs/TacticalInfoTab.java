@@ -18,27 +18,21 @@
 package pcgen.gui2.tabs;
 
 import java.awt.BorderLayout;
-import java.awt.CardLayout;
-import java.awt.Component;
-import java.awt.event.ActionListener;
+import java.awt.Font;
+import java.util.List;
 
-import javax.swing.DefaultListCellRenderer;
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-import javax.swing.SwingConstants;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.JTextArea;
+import javax.swing.Timer;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
-import pcgen.core.tactics.TacticalSection;
+import pcgen.core.tactics.TacticalParseError;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.TacticalSheetFacade;
-import pcgen.gui2.tabs.tactics.TacticalSectionTableModel;
+import pcgen.gui2.tabs.tactics.TacticalSheetPanel;
 import pcgen.gui2.tools.FlippingSplitPane;
 import pcgen.system.LanguageBundle;
 import pcgen.util.enumeration.Tab;
@@ -48,25 +42,25 @@ import pcgen.util.enumeration.Tab;
  * circumstances.
  *
  * <p>
- * Sections are listed on the left, the lines of the selected section are edited
- * on the right. The sheet is usually written by an AI agent through the MCP
- * server; this tab lets the player correct it and add to it.
+ * Two different acts share the tab. On the left, the plan's source text is
+ * edited; typing re-reads it, and a banner names the offending line while it
+ * does not read. On the right, the rendered sheet is played: ticking a resource
+ * or taking damage writes through to the character.
+ *
+ * <p>
+ * The plan is usually written by an AI agent through the MCP server, in the
+ * same syntax the editor shows, so what the agent wrote can be read and
+ * corrected here.
  */
 @SuppressWarnings("serial")
 public class TacticalInfoTab extends FlippingSplitPane implements CharacterInfoTab
 {
+	private static final int TYPING_PAUSE_MS = 300;
 
 	private final TabTitle tabTitle = new TabTitle(Tab.TACTICAL);
-	private final JList<TacticalSection> sectionList = new JList<>();
-	private final JTable entryTable = new JTable();
-	private final JButton addSectionButton = new JButton();
-	private final JButton removeSectionButton = new JButton();
-	private final JButton addEntryButton = new JButton();
-	private final JButton removeEntryButton = new JButton();
-	private final JPanel rightPanel = new JPanel(new CardLayout());
-
-	private static final String EMPTY_CARD = "empty"; //$NON-NLS-1$
-	private static final String TABLE_CARD = "table"; //$NON-NLS-1$
+	private final JTextArea sourceEditor = new JTextArea();
+	private final JLabel banner = new JLabel();
+	private final TacticalSheetPanel sheetPanel = new TacticalSheetPanel();
 
 	public TacticalInfoTab()
 	{
@@ -76,46 +70,26 @@ public class TacticalInfoTab extends FlippingSplitPane implements CharacterInfoT
 
 	private void initComponents()
 	{
-		sectionList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		sectionList.setCellRenderer(new SectionTitleRenderer());
+		sourceEditor.setFont(new Font(Font.MONOSPACED, Font.PLAIN, sourceEditor.getFont().getSize()));
+		sourceEditor.setTabSize(2);
+		sourceEditor.setLineWrap(false);
 
-		addSectionButton.setText(LanguageBundle.getString("in_tactical_add_section")); //$NON-NLS-1$
-		removeSectionButton.setText(LanguageBundle.getString("in_tactical_remove")); //$NON-NLS-1$
-		addEntryButton.setText(LanguageBundle.getString("in_tactical_add_entry")); //$NON-NLS-1$
-		removeEntryButton.setText(LanguageBundle.getString("in_tactical_remove")); //$NON-NLS-1$
+		banner.setBorder(javax.swing.BorderFactory.createEmptyBorder(3, 6, 3, 6));
 
-		JPanel sectionPanel = new JPanel(new BorderLayout());
-		sectionPanel.add(new JScrollPane(sectionList), BorderLayout.CENTER);
-		sectionPanel.add(buttonRow(addSectionButton, removeSectionButton), BorderLayout.SOUTH);
+		JPanel editorPanel = new JPanel(new BorderLayout());
+		editorPanel.add(new JScrollPane(sourceEditor), BorderLayout.CENTER);
+		editorPanel.add(banner, BorderLayout.SOUTH);
 
-		entryTable.setFillsViewportHeight(true);
-		entryTable.setRowHeight(entryTable.getRowHeight() * 2);
-		JPanel entryPanel = new JPanel(new BorderLayout());
-		entryPanel.add(new JScrollPane(entryTable), BorderLayout.CENTER);
-		entryPanel.add(buttonRow(addEntryButton, removeEntryButton), BorderLayout.SOUTH);
-
-		JLabel emptyLabel = new JLabel(LanguageBundle.getString("in_tactical_empty"), SwingConstants.CENTER); //$NON-NLS-1$
-		rightPanel.add(emptyLabel, EMPTY_CARD);
-		rightPanel.add(entryPanel, TABLE_CARD);
-
-		setLeftComponent(sectionPanel);
-		setRightComponent(rightPanel);
-		setResizeWeight(0.25);
-	}
-
-	private static JPanel buttonRow(JButton first, JButton second)
-	{
-		JPanel row = new JPanel();
-		row.add(first);
-		row.add(second);
-		return row;
+		setLeftComponent(editorPanel);
+		setRightComponent(sheetPanel);
+		setResizeWeight(0.38);
 	}
 
 	@Override
 	public ModelMap createModels(CharacterFacade character)
 	{
 		ModelMap models = new ModelMap();
-		models.put(TacticalSheetHandler.class, new TacticalSheetHandler(character.getTacticalSheetFacade()));
+		models.put(TacticalSheetHandler.class, new TacticalSheetHandler(character));
 		return models;
 	}
 
@@ -138,158 +112,96 @@ public class TacticalInfoTab extends FlippingSplitPane implements CharacterInfoT
 	}
 
 	/**
-	 * Keeps one character's tactical sheet wired to this tab's widgets.
+	 * Keeps one character's plan wired to the editor and the rendered sheet.
+	 *
+	 * <p>
+	 * Every keystroke restarts a short timer rather than storing at once, so a
+	 * word being typed does not each time rewrite the character and re-render
+	 * the page.
 	 */
-	private final class TacticalSheetHandler
+	private final class TacticalSheetHandler implements DocumentListener
 	{
-
+		private final CharacterFacade character;
 		private final TacticalSheetFacade sheet;
-		private final TacticalSectionTableModel tableModel;
-		private final DefaultListModel<TacticalSection> listModel = new DefaultListModel<>();
-		private final ListSelectionListener sectionSelected = event -> showSelectedSection();
-		private final ActionListener addSectionPressed = event -> addSection();
-		private final ActionListener removeSectionPressed = event -> removeSelectedSection();
-		private final ActionListener addEntryPressed = event -> addEntry();
-		private final ActionListener removeEntryPressed = event -> removeSelectedEntry();
+		private final Timer typingPause;
+		private boolean loading;
 
-		private TacticalSheetHandler(TacticalSheetFacade sheet)
+		private TacticalSheetHandler(CharacterFacade character)
 		{
-			this.sheet = sheet;
-			this.tableModel = new TacticalSectionTableModel(this::sectionEdited);
+			this.character = character;
+			this.sheet = character.getTacticalSheetFacade();
+			typingPause = new Timer(TYPING_PAUSE_MS, event -> store());
+			typingPause.setRepeats(false);
 		}
 
 		private void install()
 		{
-			entryTable.setModel(tableModel);
-			refreshSectionList(0);
-
-			sectionList.addListSelectionListener(sectionSelected);
-			addSectionButton.addActionListener(addSectionPressed);
-			removeSectionButton.addActionListener(removeSectionPressed);
-			addEntryButton.addActionListener(addEntryPressed);
-			removeEntryButton.addActionListener(removeEntryPressed);
+			loading = true;
+			sourceEditor.setText(sheet.getPlanSource());
+			sourceEditor.setCaretPosition(0);
+			loading = false;
+			showErrors(sheet.errorsIn(sourceEditor.getText()));
+			sourceEditor.getDocument().addDocumentListener(this);
+			sheetPanel.setCharacter(character);
 		}
 
 		private void uninstall()
 		{
-			sectionList.removeListSelectionListener(sectionSelected);
-			addSectionButton.removeActionListener(addSectionPressed);
-			removeSectionButton.removeActionListener(removeSectionPressed);
-			addEntryButton.removeActionListener(addEntryPressed);
-			removeEntryButton.removeActionListener(removeEntryPressed);
+			typingPause.stop();
+			sourceEditor.getDocument().removeDocumentListener(this);
+			store();
+			sheetPanel.setCharacter(null);
 		}
 
-		/**
-		 * Rebuilds the list of sections and selects one of them. Called when a
-		 * section is added or removed, never while the user edits a line.
-		 *
-		 * @param positionToSelect which section to leave selected, clamped to
-		 *                         what the sheet now holds.
-		 */
-		private void refreshSectionList(int positionToSelect)
+		private void store()
 		{
-			listModel.clear();
-			sheet.getSections().forEach(listModel::addElement);
-			sectionList.setModel(listModel);
-
-			if (listModel.isEmpty())
+			if (loading)
 			{
-				tableModel.showNoSection();
-				showCard(EMPTY_CARD);
 				return;
 			}
-
-			sectionList.setSelectedIndex(Math.clamp(positionToSelect, 0, listModel.getSize() - 1));
-			showCard(TABLE_CARD);
-		}
-
-		private void showCard(String card)
-		{
-			((CardLayout) rightPanel.getLayout()).show(rightPanel, card);
-		}
-
-		private void showSelectedSection()
-		{
-			TacticalSection selected = sectionList.getSelectedValue();
-			if (selected == null)
+			String source = sourceEditor.getText();
+			List<TacticalParseError> errors = sheet.errorsIn(source);
+			showErrors(errors);
+			sheet.setPlanSource(source);
+			if (errors.isEmpty())
 			{
-				tableModel.showNoSection();
-			}
-			else
-			{
-				tableModel.showSection(selected);
+				sheetPanel.refresh();
 			}
 		}
 
 		/**
-		 * Stores a section the user has just edited. The list of sections is
-		 * updated in place rather than rebuilt, so neither the selection nor the
-		 * cell being edited moves under the user.
-		 *
-		 * @param edited the new state of the selected section.
+		 * @param errors what is wrong with the text as it stands, empty when it
+		 *               reads
 		 */
-		private void sectionEdited(TacticalSection edited)
+		private void showErrors(List<TacticalParseError> errors)
 		{
-			int position = sectionList.getSelectedIndex();
-			if (position < 0)
+			if (errors.isEmpty())
 			{
+				banner.setText(" ");
 				return;
 			}
-			sheet.replaceSection(position, edited);
-			listModel.set(position, edited);
+			TacticalParseError first = errors.getFirst();
+			String more = (errors.size() > 1) ? " (+" + (errors.size() - 1) + ')' : "";
+			banner.setText(LanguageBundle.getFormattedString("in_tactical_error", first.line(), first.message())
+				+ more);
 		}
 
-		private void addSection()
-		{
-			String title = JOptionPane.showInputDialog(TacticalInfoTab.this,
-				LanguageBundle.getString("in_tactical_add_section")); //$NON-NLS-1$
-			if (title == null || title.isBlank())
-			{
-				return;
-			}
-			int positionOfTheNewSection = listModel.getSize();
-			sheet.addSection(title);
-			refreshSectionList(positionOfTheNewSection);
-		}
-
-		private void removeSelectedSection()
-		{
-			int position = sectionList.getSelectedIndex();
-			if (position < 0)
-			{
-				return;
-			}
-			sheet.removeSection(position);
-			refreshSectionList(position);
-		}
-
-		private void addEntry()
-		{
-			if (sectionList.getSelectedValue() == null)
-			{
-				return;
-			}
-			tableModel.addEntry(LanguageBundle.getString("in_tactical_when"), //$NON-NLS-1$
-				LanguageBundle.getString("in_tactical_do")); //$NON-NLS-1$
-		}
-
-		private void removeSelectedEntry()
-		{
-			tableModel.removeEntry(entryTable.getSelectedRow());
-		}
-	}
-
-	/**
-	 * Shows a section in the list by its title alone.
-	 */
-	private static final class SectionTitleRenderer extends DefaultListCellRenderer
-	{
 		@Override
-		public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
-			boolean cellHasFocus)
+		public void insertUpdate(DocumentEvent event)
 		{
-			Object shown = (value instanceof TacticalSection section) ? section.title() : value;
-			return super.getListCellRendererComponent(list, shown, index, isSelected, cellHasFocus);
+			typingPause.restart();
+		}
+
+		@Override
+		public void removeUpdate(DocumentEvent event)
+		{
+			typingPause.restart();
+		}
+
+		@Override
+		public void changedUpdate(DocumentEvent event)
+		{
+			typingPause.restart();
 		}
 	}
 }

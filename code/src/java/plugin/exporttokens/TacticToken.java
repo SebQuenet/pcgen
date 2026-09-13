@@ -22,7 +22,7 @@ import java.util.Optional;
 import java.util.StringTokenizer;
 
 import pcgen.core.PlayerCharacter;
-import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalStep;
 import pcgen.core.tactics.TacticalSection;
 import pcgen.core.tactics.TacticalSheet;
 import pcgen.io.ExportHandler;
@@ -104,14 +104,14 @@ public class TacticToken extends Token
 		String secondPart = tokens.nextToken();
 		if (COUNT.equals(secondPart))
 		{
-			return Integer.toString(section.get().entries().size());
+			return Integer.toString(section.get().steps().size());
 		}
 		if (TITLE.equals(secondPart))
 		{
 			return section.get().title();
 		}
 
-		Optional<TacticalEntry> entry = at(section.get().entries(), secondPart);
+		Optional<TacticalStep> entry = at(section.get().steps(), secondPart);
 		if (entry.isEmpty() || !tokens.hasMoreTokens())
 		{
 			return "";
@@ -139,7 +139,7 @@ public class TacticToken extends Token
 		String part = tokens.nextToken();
 		if (COUNT.equals(part))
 		{
-			return Integer.toString(sections.stream().mapToInt(section -> section.entries().size()).sum());
+			return Integer.toString(sections.stream().mapToInt(section -> section.steps().size()).sum());
 		}
 
 		int position;
@@ -159,12 +159,12 @@ public class TacticToken extends Token
 		String fieldName = tokens.nextToken();
 		for (TacticalSection section : sections)
 		{
-			if (position < section.entries().size())
+			if (position < section.steps().size())
 			{
 				return SECTION.equals(fieldName) ? section.title()
-					: fieldOf(section.entries().get(position), fieldName);
+					: fieldOf(section.steps().get(position), fieldName);
 			}
-			position -= section.entries().size();
+			position -= section.steps().size();
 		}
 		return "";
 	}
@@ -174,7 +174,7 @@ public class TacticToken extends Token
 		return pc.getDisplay().getTacticalSheet().map(TacticalSheet::sections).orElse(List.of());
 	}
 
-	private static String fieldOf(TacticalEntry entry, String fieldName)
+	private static String fieldOf(TacticalStep entry, String fieldName)
 	{
 		return switch (fieldName)
 		{

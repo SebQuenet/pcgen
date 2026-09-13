@@ -408,7 +408,13 @@ interface IOConstants
 	/** TABNAME */
 	String TAG_TABNAME = "TABNAME";
 
-	/** Tactical sheet: one line per section, in reading order */
+	/** Tactical plan: the whole source text, entity encoded, on one line */
+	String TAG_TACTICALPLAN = "TACTICALPLAN";
+	/** Tactical session: damage the character has taken */
+	String TAG_TACTICALDAMAGE = "TACTICALDAMAGE";
+	/** Tactical session: one line per resource entamed, label then count */
+	String TAG_TACTICALSPENT = "TACTICALSPENT";
+	/** Tactical sheet, before the source syntax: one line per section */
 	String TAG_TACTICALSECTION = "TACTICALSECTION";
 	/** Tactical sheet: one line per entry, keyed by the index of its section */
 	String TAG_TACTICALENTRY = "TACTICALENTRY";

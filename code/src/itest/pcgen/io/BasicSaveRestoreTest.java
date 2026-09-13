@@ -17,8 +17,11 @@
  */
 package pcgen.io;
 
+import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import pcgen.cdom.util.CControl;
 import pcgen.core.Deity;
@@ -28,7 +31,8 @@ import pcgen.core.PCClass;
 import pcgen.core.PCTemplate;
 import pcgen.core.SettingsHandler;
 import pcgen.core.Skill;
-import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalSessionState;
+import pcgen.core.tactics.TacticalStep;
 import pcgen.core.tactics.TacticalSection;
 import pcgen.core.tactics.TacticalSheet;
 import pcgen.io.testsupport.AbstractSaveRestoreTest;
@@ -36,6 +40,8 @@ import pcgen.output.channel.ChannelUtilities;
 import pcgen.output.channel.compat.AlignmentCompat;
 
 import plugin.lsttokens.pcclass.HdToken;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -164,10 +170,10 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 		finishLoad();
 		pc.setTacticalSheet(new TacticalSheet(List.of(
 			new TacticalSection("Opening",
-				List.of(new TacticalEntry("Round 1", "Cast bless, then advance", "Provokes"))),
+				List.of(new TacticalStep("Round 1", "Cast bless, then advance", "Provokes"))),
 			new TacticalSection("Emergency",
-				List.of(new TacticalEntry("HP below 12", "Drink a potion, withdraw", ""),
-					new TacticalEntry("Outnumbered", "Fall back to the corridor", ""))))));
+				List.of(new TacticalStep("HP below 12", "Drink a potion, withdraw", ""),
+					new TacticalStep("Outnumbered", "Fall back to the corridor", ""))))));
 		runRoundRobin(null);
 	}
 
@@ -176,7 +182,7 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 	{
 		finishLoad();
 		pc.setTacticalSheet(new TacticalSheet(List.of(new TacticalSection("Rounds 1|2",
-			List.of(new TacticalEntry("HP: below 12", "Cast [bless] & withdraw", "Two lines\nof note"))))));
+			List.of(new TacticalStep("HP: below 12", "Cast [bless] & withdraw", "Two lines\nof note"))))));
 		runRoundRobin(null);
 	}
 
@@ -185,9 +191,87 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 	{
 		finishLoad();
 		pc.setTacticalSheet(new TacticalSheet(
-			List.of(new TacticalSection("Opening", List.of(new TacticalEntry("Round 1", "Charge", ""))))));
+			List.of(new TacticalSection("Opening", List.of(new TacticalStep("Round 1", "Charge", ""))))));
 		pc.clearTacticalSheet();
 		runRoundRobin(null);
+	}
+
+	@Test
+	public void testTacticalPlanHoldingEveryKindOfBlock()
+	{
+		finishLoad();
+		pc.setTacticalPlan("""
+			## Before the fight
+			note: Baseline
+			  No buffs are up.
+			  Infusion is on the mace.
+			resource: Mythic power | 11 | immediate
+			resource: Channel | @var(ChannelUses)
+			attack: @weapon(Sceptre of Timeon)
+			  target: evil outsider | +2 enhancement, +2d6
+			  note: only works in good hands
+			attack: Spear +1 | +13/+8 | 1d8+4 | 20/x3
+
+			## Summons
+			creature: Hound archon | Summon monster IV | 7 rounds
+			  row: Def | AC 19 (touch 10, flat-footed 19)
+
+			## Spells
+			spells: @prepared
+			  tag: Holy smite | damage, good descriptor
+
+			## Emergency
+			step: HP below 12
+			  do: Withdraw
+			  note: Provokes
+			""");
+		runRoundRobin(null);
+	}
+
+	@Test
+	public void testTacticalSessionSurvivesASave()
+	{
+		finishLoad();
+		pc.setTacticalPlan("""
+			## Before the fight
+			resource: Mythic power | 11
+			""");
+		pc.setTacticalSession(new TacticalSessionState(19, Map.of("Mythic power", 4, "Channel", 2)));
+		runRoundRobin(null);
+	}
+
+	@Test
+	public void testTacticalSessionIsForgottenWithThePlan()
+	{
+		finishLoad();
+		pc.setTacticalPlan("""
+			## Before the fight
+			resource: Mythic power | 11
+			""");
+		pc.setTacticalSession(new TacticalSessionState(19, Map.of("Mythic power", 4)));
+		pc.clearTacticalSheet();
+		runRoundRobin(null);
+	}
+
+	@Test
+	public void testTacticalSheetSavedUnderTheOldTagsBecomesSourceText()
+	{
+		finishLoad();
+		String legacy = new PCGVer2Creator(pc, SettingsHandler.getGameAsProperty().get(), null).createPCGString()
+			+ "TACTICALSECTION:Opening" + IOConstants.LINE_SEP
+			+ "TACTICALENTRY:0|TACTICALTRIGGER:Round 1|TACTICALACTIONS:Cast bless|TACTICALNOTE:Provokes"
+			+ IOConstants.LINE_SEP;
+
+		PCGIOHandler handler = new PCGIOHandler();
+		handler.read(reloadedPC, new ByteArrayInputStream(legacy.getBytes(StandardCharsets.UTF_8)), true);
+
+		assertEquals(List.of(), handler.getErrors());
+		assertEquals("""
+			## Opening
+			step: Round 1
+			  do: Cast bless
+			  note: Provokes
+			""", reloadedPC.getDisplay().getTacticalPlan().orElseThrow());
 	}
 
 	@Test

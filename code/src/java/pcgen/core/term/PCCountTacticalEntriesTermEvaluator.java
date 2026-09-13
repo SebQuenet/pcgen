@@ -33,7 +33,7 @@ public class PCCountTacticalEntriesTermEvaluator extends BasePCDTermEvaluator im
 	@Override
 	public Float resolve(CharacterDisplay display)
 	{
-		return (float) display.getTacticalEntryCount();
+		return (float) display.getTacticalStepCount();
 	}
 
 	@Override

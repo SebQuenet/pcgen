@@ -31,15 +31,15 @@ import org.junit.jupiter.api.Test;
 class TacticalSheetTest
 {
 
-	private static TacticalEntry anEntry()
+	private static TacticalStep anEntry()
 	{
-		return new TacticalEntry("Round 1", "Cast bless, then advance", "");
+		return new TacticalStep("Round 1", "Cast bless, then advance", "");
 	}
 
 	@Test
 	void entryKeepsTheTextItWasGiven()
 	{
-		TacticalEntry entry = new TacticalEntry("HP below 12", "Drink a potion of cure light wounds", "Provokes");
+		TacticalStep entry = new TacticalStep("HP below 12", "Drink a potion of cure light wounds", "Provokes");
 
 		assertEquals("HP below 12", entry.trigger());
 		assertEquals("Drink a potion of cure light wounds", entry.actions());
@@ -49,19 +49,19 @@ class TacticalSheetTest
 	@Test
 	void entryWithoutANoteStoresAnEmptyNote()
 	{
-		assertEquals("", new TacticalEntry("Round 1", "Charge", null).note());
+		assertEquals("", new TacticalStep("Round 1", "Charge", null).note());
 	}
 
 	@Test
 	void entryRejectsABlankTrigger()
 	{
-		assertThrows(IllegalArgumentException.class, () -> new TacticalEntry("  ", "Charge", ""));
+		assertThrows(IllegalArgumentException.class, () -> new TacticalStep("  ", "Charge", ""));
 	}
 
 	@Test
 	void entryRejectsBlankActions()
 	{
-		assertThrows(IllegalArgumentException.class, () -> new TacticalEntry("Round 1", "", ""));
+		assertThrows(IllegalArgumentException.class, () -> new TacticalStep("Round 1", "", ""));
 	}
 
 	@Test
@@ -77,14 +77,14 @@ class TacticalSheetTest
 	}
 
 	@Test
-	void sectionEntriesCannotBeModifiedThroughTheListPassedIn()
+	void sectionBlocksCannotBeModifiedThroughTheListPassedIn()
 	{
-		List<TacticalEntry> mutableEntries = new java.util.ArrayList<>(List.of(anEntry()));
-		TacticalSection section = new TacticalSection("Opening", mutableEntries);
+		List<TacticalBlock> mutableBlocks = new java.util.ArrayList<>(List.of(anEntry()));
+		TacticalSection section = new TacticalSection("Opening", mutableBlocks);
 
-		mutableEntries.clear();
+		mutableBlocks.clear();
 
-		assertEquals(1, section.entries().size());
+		assertEquals(1, section.steps().size());
 	}
 
 	@Test

@@ -30,7 +30,7 @@ import java.util.List;
 
 import pcgen.AbstractCharacterTestCase;
 import pcgen.core.PlayerCharacter;
-import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalStep;
 import pcgen.core.tactics.TacticalSection;
 import pcgen.core.tactics.TacticalSheet;
 
@@ -85,9 +85,9 @@ public class TacticalSheetFreeMarkerExportTest extends AbstractCharacterTestCase
 	{
 		PlayerCharacter character = getCharacter();
 		character.setTacticalSheet(new TacticalSheet(List.of(
-			new TacticalSection("Opening", List.of(new TacticalEntry("Round 1", "Cast bless", ""))),
-			new TacticalSection("Emergency", List.of(new TacticalEntry("HP below 12", "Withdraw", ""),
-				new TacticalEntry("Outnumbered", "Fall back", ""))))));
+			new TacticalSection("Opening", List.of(new TacticalStep("Round 1", "Cast bless", ""))),
+			new TacticalSection("Emergency", List.of(new TacticalStep("HP below 12", "Withdraw", ""),
+				new TacticalStep("Outnumbered", "Fall back", ""))))));
 
 		String exported = export(character);
 
@@ -114,7 +114,7 @@ public class TacticalSheetFreeMarkerExportTest extends AbstractCharacterTestCase
 	{
 		PlayerCharacter character = getCharacter();
 		character.setTacticalSheet(new TacticalSheet(
-			List.of(new TacticalSection("Opening", List.of(new TacticalEntry("Round 1", "Cast bless", ""))))));
+			List.of(new TacticalSection("Opening", List.of(new TacticalStep("Round 1", "Cast bless", ""))))));
 
 		String exported = export(character.cloneForExport());
 
@@ -127,8 +127,8 @@ public class TacticalSheetFreeMarkerExportTest extends AbstractCharacterTestCase
 	{
 		PlayerCharacter character = getCharacter();
 		character.setTacticalSheet(new TacticalSheet(List.of(
-			new TacticalSection("Opening", List.of(new TacticalEntry("Round 1", "Cast bless", ""))),
-			new TacticalSection("Emergency", List.of(new TacticalEntry("HP below 12", "Withdraw", ""))))));
+			new TacticalSection("Opening", List.of(new TacticalStep("Round 1", "Cast bless", ""))),
+			new TacticalSection("Emergency", List.of(new TacticalStep("HP below 12", "Withdraw", ""))))));
 
 		String exported = exportThroughTheOlderEngine(character);
 

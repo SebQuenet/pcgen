@@ -25,7 +25,7 @@ import java.util.List;
 
 import pcgen.AbstractCharacterTestCase;
 import pcgen.core.PlayerCharacter;
-import pcgen.core.tactics.TacticalEntry;
+import pcgen.core.tactics.TacticalStep;
 import pcgen.core.tactics.TacticalSection;
 import pcgen.core.tactics.TacticalSheet;
 import pcgen.io.FileAccess;
@@ -47,10 +47,10 @@ public class TacticTokenTest extends AbstractCharacterTestCase
 		FileAccess.setCurrentOutputFilter("foo.htm");
 		getCharacter().setTacticalSheet(new TacticalSheet(List.of(
 			new TacticalSection("Opening",
-				List.of(new TacticalEntry("Round 1", "Cast bless, then advance", "Provokes"))),
+				List.of(new TacticalStep("Round 1", "Cast bless, then advance", "Provokes"))),
 			new TacticalSection("Emergency",
-				List.of(new TacticalEntry("HP below 12", "Drink a potion, withdraw", ""),
-					new TacticalEntry("Outnumbered", "Fall back to the corridor", ""))))));
+				List.of(new TacticalStep("HP below 12", "Drink a potion, withdraw", ""),
+					new TacticalStep("Outnumbered", "Fall back to the corridor", ""))))));
 	}
 
 	@Test
@@ -140,7 +140,7 @@ public class TacticTokenTest extends AbstractCharacterTestCase
 	public void testMarkupInTheSheetIsEscaped() throws IOException
 	{
 		getCharacter().setTacticalSheet(new TacticalSheet(List.of(new TacticalSection("Opening",
-			List.of(new TacticalEntry("Round 1", "Attack <b>hard</b> & fast", ""))))));
+			List.of(new TacticalStep("Round 1", "Attack <b>hard</b> & fast", ""))))));
 
 		assertEquals("Attack &lt;b&gt;hard&lt;/b&gt; &amp; fast", evaluateToken("TACTIC.0.0.ACTIONS", getCharacter()));
 	}
