@@ -1,14 +1,13 @@
-package pcgen.mcp.tools;
+package pcgen.session.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import pcgen.core.Equipment;
 import pcgen.core.spell.Spell;
 import pcgen.rules.context.LoadContext;
 
-final class EquipmentTokenSupport
+public final class EquipmentTokenSupport
 {
 	private EquipmentTokenSupport()
 	{
@@ -37,7 +36,7 @@ final class EquipmentTokenSupport
 	 * parser + validation as data loading. Returns a list of human-readable failure messages;
 	 * an empty list means every token applied. Tokens that parse are committed onto the item.
 	 */
-	static List<String> applyTokens(LoadContext context, Equipment equip, List<String> tokens)
+	public static List<String> applyTokens(LoadContext context, Equipment equip, List<String> tokens)
 	{
 		List<String> failures = new ArrayList<>();
 		if (tokens == null || tokens.isEmpty())
@@ -80,8 +79,13 @@ final class EquipmentTokenSupport
 	 * them. Each ability map must contain string entries "spell", "times_per_day" and
 	 * "caster_level". Returns failure messages (empty == all granted).
 	 */
-	static List<String> applySpellAbilities(LoadContext context, Equipment equip, String itemId,
-		List<Map<String, Object>> abilities)
+	/** A spell-like ability an item is to grant, as a caller describes it. */
+	public record SpellAbility(String spell, String timesPerDay, String casterLevel)
+	{
+	}
+
+	public static List<String> applySpellAbilities(LoadContext context, Equipment equip, String itemId,
+		List<SpellAbility> abilities)
 	{
 		List<String> failures = new ArrayList<>();
 		if (abilities == null || abilities.isEmpty())
@@ -89,25 +93,22 @@ final class EquipmentTokenSupport
 			return failures;
 		}
 		List<String> spellTokens = new ArrayList<>();
-		for (Map<String, Object> ability : abilities)
+		for (SpellAbility ability : abilities)
 		{
-			Object spell = ability.get("spell");
-			Object times = ability.get("times_per_day");
-			Object casterLevel = ability.get("caster_level");
-			if (spell == null || times == null || casterLevel == null)
+			if (ability.spell() == null || ability.timesPerDay() == null || ability.casterLevel() == null)
 			{
 				failures.add(ability + " (spell, times_per_day and caster_level are required)");
 				continue;
 			}
 			Spell found = context.getReferenceContext()
-				.silentlyGetConstructedCDOMObject(Spell.class, spell.toString());
+				.silentlyGetConstructedCDOMObject(Spell.class, ability.spell());
 			if (found == null)
 			{
-				failures.add(spell + " (spell not found in loaded data)");
+				failures.add(ability.spell() + " (spell not found in loaded data)");
 				continue;
 			}
 			spellTokens.add(buildSpellsToken(itemId, found.getKeyName(),
-				times.toString(), casterLevel.toString()));
+				ability.timesPerDay(), ability.casterLevel()));
 		}
 		failures.addAll(applyTokens(context, equip, spellTokens));
 		return failures;
