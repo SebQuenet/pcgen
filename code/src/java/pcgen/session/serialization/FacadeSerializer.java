@@ -1,4 +1,4 @@
-package pcgen.mcp.serialization;
+package pcgen.session.serialization;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

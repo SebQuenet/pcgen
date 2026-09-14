@@ -20,12 +20,12 @@ import pcgen.mcp.tools.EquipmentTools;
 import pcgen.mcp.tools.ExportTools;
 import pcgen.mcp.tools.LanguageCompanionTools;
 import pcgen.mcp.tools.SkillTools;
-import pcgen.mcp.tools.SourceTools;
 import pcgen.mcp.tools.SpellTools;
 import pcgen.mcp.tools.TacticalSheetTools;
 import pcgen.mcp.tools.TemplateTools;
 import pcgen.mcp.tools.UtilityTools;
 import pcgen.session.PcgenSession;
+import pcgen.session.api.OperationRegistry;
 
 public final class McpServerBuilder
 {
@@ -37,17 +37,16 @@ public final class McpServerBuilder
 	{
 		var transportProvider = new StdioServerTransportProvider(new ObjectMapper());
 
+		OperationRegistry registry = OperationRegistry.forSession(session);
+
 		return McpServer.sync(transportProvider)
 			.serverInfo("pcgen", "1.0.0")
 			.capabilities(McpSchema.ServerCapabilities.builder()
 				.tools(true)
 				.resources(false, false)
 				.build())
+			.tools(McpOperationAdapter.toolsFrom(registry))
 			.tools(
-				// Source management
-				SourceTools.listGameModes(session),
-				SourceTools.listSources(session),
-				SourceTools.loadSources(session),
 				// Character lifecycle
 				CharacterLifecycleTools.createCharacter(session),
 				CharacterLifecycleTools.getCharacter(session),

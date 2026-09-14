@@ -12,7 +12,7 @@ import io.modelcontextprotocol.spec.McpSchema.TextResourceContents;
 
 import pcgen.facade.core.DataSetFacade;
 import pcgen.session.PcgenSession;
-import pcgen.mcp.serialization.FacadeSerializer;
+import pcgen.session.serialization.FacadeSerializer;
 
 public final class DataSetResources
 {
