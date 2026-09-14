@@ -18,7 +18,7 @@ import pcgen.core.PCStat;
 import pcgen.core.Race;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 
 public final class CharacterBuildTools
@@ -29,7 +29,7 @@ public final class CharacterBuildTools
 	{
 	}
 
-	public static SyncToolSpecification setName(McpSessionManager session)
+	public static SyncToolSpecification setName(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_name",
@@ -59,7 +59,7 @@ public final class CharacterBuildTools
 		);
 	}
 
-	public static SyncToolSpecification setRace(McpSessionManager session)
+	public static SyncToolSpecification setRace(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_race",
@@ -105,7 +105,7 @@ public final class CharacterBuildTools
 		);
 	}
 
-	public static SyncToolSpecification addClassLevel(McpSessionManager session)
+	public static SyncToolSpecification addClassLevel(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_class_level",
@@ -183,7 +183,7 @@ public final class CharacterBuildTools
 		);
 	}
 
-	public static SyncToolSpecification setAbilityScore(McpSessionManager session)
+	public static SyncToolSpecification setAbilityScore(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_ability_score",
@@ -231,7 +231,7 @@ public final class CharacterBuildTools
 		);
 	}
 
-	public static SyncToolSpecification setAlignment(McpSessionManager session)
+	public static SyncToolSpecification setAlignment(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_alignment",
@@ -277,7 +277,7 @@ public final class CharacterBuildTools
 		);
 	}
 
-	public static SyncToolSpecification setAllAbilityScores(McpSessionManager session)
+	public static SyncToolSpecification setAllAbilityScores(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_all_ability_scores",

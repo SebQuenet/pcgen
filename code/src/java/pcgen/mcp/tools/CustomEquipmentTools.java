@@ -24,8 +24,8 @@ import pcgen.facade.core.EquipmentBuilderFacade.EquipmentHead;
 import pcgen.facade.core.EquipmentFacade;
 import pcgen.facade.core.InfoFactory;
 import pcgen.gui2.facade.EquipmentBuilderFacadeImpl;
-import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.McpUIDelegate;
+import pcgen.session.PcgenSession;
+import pcgen.session.HeadlessUIDelegate;
 
 public final class CustomEquipmentTools
 {
@@ -35,7 +35,7 @@ public final class CustomEquipmentTools
 	{
 	}
 
-	public static SyncToolSpecification listEquipmentModifiers(McpSessionManager session)
+	public static SyncToolSpecification listEquipmentModifiers(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_equipment_modifiers",
@@ -60,7 +60,7 @@ public final class CustomEquipmentTools
 					String equipKey = (String) args.get("equipment_key");
 					String headStr = args.containsKey("head") ? (String) args.get("head") : "PRIMARY";
 					EquipmentHead head = "SECONDARY".equalsIgnoreCase(headStr) ? EquipmentHead.SECONDARY : EquipmentHead.PRIMARY;
-					McpUIDelegate delegate = session.getDelegate(characterId);
+					HeadlessUIDelegate delegate = session.getDelegate(characterId);
 
 					Equipment baseEquip = findEquipment(character.getDataSet(), equipKey);
 					if (baseEquip == null)
@@ -93,7 +93,7 @@ public final class CustomEquipmentTools
 		);
 	}
 
-	public static SyncToolSpecification customizeEquipment(McpSessionManager session)
+	public static SyncToolSpecification customizeEquipment(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("customize_equipment",
@@ -157,7 +157,7 @@ public final class CustomEquipmentTools
 					@SuppressWarnings("unchecked")
 					Map<String, List<String>> choices = args.containsKey("choices")
 						? (Map<String, List<String>>) args.get("choices") : null;
-					McpUIDelegate delegate = session.getDelegate(characterId);
+					HeadlessUIDelegate delegate = session.getDelegate(characterId);
 
 					Equipment baseEquip = findEquipment(character.getDataSet(), equipKey);
 					if (baseEquip == null)

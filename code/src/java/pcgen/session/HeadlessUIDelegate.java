@@ -1,4 +1,4 @@
-package pcgen.mcp;
+package pcgen.session;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ import pcgen.util.Logging;
  * Use setAutoChoose(true) before operations that may trigger choosers on the same thread
  * (like addCharacterLevels), then setAutoChoose(false) after.
  */
-public class McpUIDelegate extends ConsoleUIDelegate
+public class HeadlessUIDelegate extends ConsoleUIDelegate
 {
 	private final Map<String, CompletableFuture<List<String>>> pendingFutures = new ConcurrentHashMap<>();
 	private final Map<String, PendingChoice> pendingChoices = new ConcurrentHashMap<>();

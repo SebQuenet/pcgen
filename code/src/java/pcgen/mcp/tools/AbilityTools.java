@@ -14,8 +14,8 @@ import io.modelcontextprotocol.spec.McpSchema.Tool;
 import pcgen.core.AbilityCategory;
 import pcgen.facade.core.AbilityFacade;
 import pcgen.facade.core.CharacterFacade;
-import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.McpUIDelegate;
+import pcgen.session.PcgenSession;
+import pcgen.session.HeadlessUIDelegate;
 
 public final class AbilityTools
 {
@@ -25,7 +25,7 @@ public final class AbilityTools
 	{
 	}
 
-	public static SyncToolSpecification listAbilityCategories(McpSessionManager session)
+	public static SyncToolSpecification listAbilityCategories(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_ability_categories",
@@ -85,7 +85,7 @@ public final class AbilityTools
 		);
 	}
 
-	public static SyncToolSpecification listAbilities(McpSessionManager session)
+	public static SyncToolSpecification listAbilities(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_abilities",
@@ -136,7 +136,7 @@ public final class AbilityTools
 		);
 	}
 
-	public static SyncToolSpecification addAbility(McpSessionManager session)
+	public static SyncToolSpecification addAbility(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_ability",
@@ -191,7 +191,7 @@ public final class AbilityTools
 						return errorResult("Ability not found: " + abilityKey);
 					}
 
-					McpUIDelegate delegate = session.getDelegate(characterId);
+					HeadlessUIDelegate delegate = session.getDelegate(characterId);
 
 					// If the ability requires a choice and none was provided,
 					// capture the available options and return them without adding the ability.
@@ -254,7 +254,7 @@ public final class AbilityTools
 		);
 	}
 
-	public static SyncToolSpecification removeAbility(McpSessionManager session)
+	public static SyncToolSpecification removeAbility(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_ability",
@@ -329,7 +329,7 @@ public final class AbilityTools
 		return null;
 	}
 
-	public static SyncToolSpecification batchAddAbilities(McpSessionManager session)
+	public static SyncToolSpecification batchAddAbilities(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("batch_add_abilities",
@@ -363,7 +363,7 @@ public final class AbilityTools
 					CharacterFacade character = session.getCharacter(characterId);
 					@SuppressWarnings("unchecked")
 					List<Map<String, Object>> abilities = (List<Map<String, Object>>) args.get("abilities");
-					McpUIDelegate delegate = session.getDelegate(characterId);
+					HeadlessUIDelegate delegate = session.getDelegate(characterId);
 
 					int successCount = 0;
 					List<String> errors = new ArrayList<>();

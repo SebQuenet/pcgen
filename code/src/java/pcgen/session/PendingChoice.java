@@ -1,4 +1,4 @@
-package pcgen.mcp;
+package pcgen.session;
 
 import java.util.List;
 

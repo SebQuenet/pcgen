@@ -16,7 +16,7 @@ import pcgen.io.ExportHandler;
 import pcgen.io.ExportUtilities;
 import pcgen.system.BatchExporter;
 import pcgen.system.ConfigurationSettings;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 public final class ExportTools
 {
@@ -26,7 +26,7 @@ public final class ExportTools
 	{
 	}
 
-	public static SyncToolSpecification exportCharacter(McpSessionManager session)
+	public static SyncToolSpecification exportCharacter(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("export_character",
@@ -84,7 +84,7 @@ public final class ExportTools
 		);
 	}
 
-	public static SyncToolSpecification getCharacterSheet(McpSessionManager session)
+	public static SyncToolSpecification getCharacterSheet(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_character_sheet",

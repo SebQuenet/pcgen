@@ -11,8 +11,8 @@ import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
-import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.PendingChoice;
+import pcgen.session.PcgenSession;
+import pcgen.session.PendingChoice;
 
 public final class ChoiceTools
 {
@@ -22,7 +22,7 @@ public final class ChoiceTools
 	{
 	}
 
-	public static SyncToolSpecification getPendingChoices(McpSessionManager session)
+	public static SyncToolSpecification getPendingChoices(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_pending_choices",
@@ -60,7 +60,7 @@ public final class ChoiceTools
 		);
 	}
 
-	public static SyncToolSpecification resolveChoice(McpSessionManager session)
+	public static SyncToolSpecification resolveChoice(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("resolve_choice",

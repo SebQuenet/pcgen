@@ -13,7 +13,7 @@ import pcgen.core.Domain;
 import pcgen.core.QualifiedObject;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 public final class DeityDomainTools
 {
@@ -23,7 +23,7 @@ public final class DeityDomainTools
 	{
 	}
 
-	public static SyncToolSpecification setDeity(McpSessionManager session)
+	public static SyncToolSpecification setDeity(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_deity",
@@ -69,7 +69,7 @@ public final class DeityDomainTools
 		);
 	}
 
-	public static SyncToolSpecification addDomain(McpSessionManager session)
+	public static SyncToolSpecification addDomain(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_domain",
@@ -123,7 +123,7 @@ public final class DeityDomainTools
 		);
 	}
 
-	public static SyncToolSpecification removeDomain(McpSessionManager session)
+	public static SyncToolSpecification removeDomain(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_domain",

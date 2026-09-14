@@ -16,8 +16,8 @@ import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.core.EquipmentFacade;
 import pcgen.facade.core.EquipmentListFacade;
 import pcgen.facade.core.InfoFactory;
-import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.McpUIDelegate;
+import pcgen.session.PcgenSession;
+import pcgen.session.HeadlessUIDelegate;
 
 public final class EquipmentTools
 {
@@ -27,7 +27,7 @@ public final class EquipmentTools
 	{
 	}
 
-	public static SyncToolSpecification buyEquipment(McpSessionManager session)
+	public static SyncToolSpecification buyEquipment(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("buy_equipment",
@@ -71,7 +71,7 @@ public final class EquipmentTools
 					EquipmentFacade sized = character.getEquipmentSizedForCharacter(found);
 					java.math.BigDecimal fundsBefore = character.getFundsRef().get();
 
-					McpUIDelegate delegate = session.getDelegate((String) args.get("character_id"));
+					HeadlessUIDelegate delegate = session.getDelegate((String) args.get("character_id"));
 					if (delegate != null)
 					{
 						delegate.consumeLastError();
@@ -112,7 +112,7 @@ public final class EquipmentTools
 		);
 	}
 
-	public static SyncToolSpecification sellEquipment(McpSessionManager session)
+	public static SyncToolSpecification sellEquipment(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("sell_equipment",
@@ -164,7 +164,7 @@ public final class EquipmentTools
 		);
 	}
 
-	public static SyncToolSpecification getInventory(McpSessionManager session)
+	public static SyncToolSpecification getInventory(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_inventory",
@@ -212,7 +212,7 @@ public final class EquipmentTools
 		);
 	}
 
-	public static SyncToolSpecification setFunds(McpSessionManager session)
+	public static SyncToolSpecification setFunds(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_funds",
@@ -243,7 +243,7 @@ public final class EquipmentTools
 		);
 	}
 
-	public static SyncToolSpecification batchBuyEquipment(McpSessionManager session)
+	public static SyncToolSpecification batchBuyEquipment(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("batch_buy_equipment",
@@ -279,7 +279,7 @@ public final class EquipmentTools
 					@SuppressWarnings("unchecked")
 					List<Map<String, Object>> items = (List<Map<String, Object>>) args.get("items");
 					DataSetFacade dataSet = character.getDataSet();
-					McpUIDelegate delegate = session.getDelegate(characterId);
+					HeadlessUIDelegate delegate = session.getDelegate(characterId);
 
 					int successCount = 0;
 					List<String> errors = new ArrayList<>();

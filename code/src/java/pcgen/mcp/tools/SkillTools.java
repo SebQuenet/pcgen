@@ -17,8 +17,8 @@ import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.CharacterLevelFacade;
 import pcgen.facade.core.CharacterLevelsFacade;
 import pcgen.facade.core.DataSetFacade;
-import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.McpUIDelegate;
+import pcgen.session.PcgenSession;
+import pcgen.session.HeadlessUIDelegate;
 
 public final class SkillTools
 {
@@ -28,7 +28,7 @@ public final class SkillTools
 	{
 	}
 
-	public static SyncToolSpecification investSkillPoints(McpSessionManager session)
+	public static SyncToolSpecification investSkillPoints(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("invest_skill_points",
@@ -96,7 +96,7 @@ public final class SkillTools
 					}
 
 					// Pre-set choices for CHOOSE-based skills (e.g. Linguistics → language selection)
-					McpUIDelegate delegate = session.getDelegate(characterId);
+					HeadlessUIDelegate delegate = session.getDelegate(characterId);
 					boolean hasChoose = ChooseActivation.hasNewChooseToken(foundSkill);
 					if (hasChoose && choices != null && !choices.isEmpty() && delegate != null)
 					{
@@ -147,7 +147,7 @@ public final class SkillTools
 		);
 	}
 
-	public static SyncToolSpecification getSkillSummary(McpSessionManager session)
+	public static SyncToolSpecification getSkillSummary(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_skill_summary",
@@ -215,7 +215,7 @@ public final class SkillTools
 		);
 	}
 
-	public static SyncToolSpecification batchInvestSkills(McpSessionManager session)
+	public static SyncToolSpecification batchInvestSkills(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("batch_invest_skills",
@@ -257,7 +257,7 @@ public final class SkillTools
 					List<Map<String, Object>> investments = (List<Map<String, Object>>) args.get("investments");
 					DataSetFacade dataSet = character.getDataSet();
 					CharacterLevelsFacade levels = character.getCharacterLevelsFacade();
-					McpUIDelegate delegate = session.getDelegate(characterId);
+					HeadlessUIDelegate delegate = session.getDelegate(characterId);
 
 					// Cache skill lookups
 					Map<String, Skill> skillCache = new java.util.HashMap<>();
