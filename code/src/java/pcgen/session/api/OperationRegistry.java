@@ -24,6 +24,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import pcgen.session.PcgenSession;
+import pcgen.session.service.CharacterBuildService;
+import pcgen.session.service.CharacterLifecycleService;
 import pcgen.session.service.SourceService;
 
 /**
@@ -55,6 +57,8 @@ public final class OperationRegistry
 	{
 		List<Operation> operations = new ArrayList<>();
 		operations.addAll(SourceOperations.of(new SourceService(session)));
+		operations.addAll(CharacterOperations.of(
+			new CharacterLifecycleService(session), new CharacterBuildService(session)));
 		return new OperationRegistry(operations);
 	}
 

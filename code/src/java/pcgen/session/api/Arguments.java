@@ -158,6 +158,31 @@ public final class Arguments
 		return List.copyOf(texts);
 	}
 
+	/** An object whose values are whole numbers, such as a set of ability scores. */
+	public Map<String, Integer> requiredIntMap(String field)
+	{
+		Object value = raw.get(field);
+		if (value == null)
+		{
+			throw unreadable(field, "is required");
+		}
+		if (!(value instanceof Map<?, ?> entries))
+		{
+			throw unreadable(field, "must be an object of whole numbers");
+		}
+		Map<String, Integer> numbers = new LinkedHashMap<>();
+		for (Map.Entry<?, ?> entry : entries.entrySet())
+		{
+			Integer number = asInt(entry.getValue());
+			if (!(entry.getKey() instanceof String key) || number == null)
+			{
+				throw unreadable(field, "must be an object of whole numbers");
+			}
+			numbers.put(key, number);
+		}
+		return Map.copyOf(numbers);
+	}
+
 	/**
 	 * The entries of an array of objects, each readable in its own right. The batch
 	 * operations use it: their payload is one argument set per item.
