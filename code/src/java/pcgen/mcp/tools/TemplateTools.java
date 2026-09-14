@@ -15,7 +15,7 @@ import pcgen.core.PCTemplate;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.core.TempBonusFacade;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 public final class TemplateTools
 {
@@ -25,7 +25,7 @@ public final class TemplateTools
 	{
 	}
 
-	public static SyncToolSpecification addTemplate(McpSessionManager session)
+	public static SyncToolSpecification addTemplate(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_template",
@@ -70,7 +70,7 @@ public final class TemplateTools
 		);
 	}
 
-	public static SyncToolSpecification removeTemplate(McpSessionManager session)
+	public static SyncToolSpecification removeTemplate(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_template",
@@ -114,7 +114,7 @@ public final class TemplateTools
 		);
 	}
 
-	public static SyncToolSpecification getTemplates(McpSessionManager session)
+	public static SyncToolSpecification getTemplates(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_templates",
@@ -141,7 +141,7 @@ public final class TemplateTools
 		);
 	}
 
-	public static SyncToolSpecification addTempBonus(McpSessionManager session)
+	public static SyncToolSpecification addTempBonus(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_temp_bonus",
@@ -185,7 +185,7 @@ public final class TemplateTools
 		);
 	}
 
-	public static SyncToolSpecification removeTempBonus(McpSessionManager session)
+	public static SyncToolSpecification removeTempBonus(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_temp_bonus",
@@ -229,7 +229,7 @@ public final class TemplateTools
 		);
 	}
 
-	public static SyncToolSpecification listTempBonuses(McpSessionManager session)
+	public static SyncToolSpecification listTempBonuses(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_temp_bonuses",
@@ -261,7 +261,7 @@ public final class TemplateTools
 		);
 	}
 
-	public static SyncToolSpecification addKit(McpSessionManager session)
+	public static SyncToolSpecification addKit(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_kit",

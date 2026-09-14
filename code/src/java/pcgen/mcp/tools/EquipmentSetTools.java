@@ -16,7 +16,7 @@ import pcgen.facade.core.EquipmentFacade;
 import pcgen.facade.core.EquipmentSetFacade;
 import pcgen.gui2.facade.EquipNode;
 import pcgen.facade.util.ListFacade;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 public final class EquipmentSetTools
 {
@@ -26,7 +26,7 @@ public final class EquipmentSetTools
 	{
 	}
 
-	public static SyncToolSpecification listEquipmentSets(McpSessionManager session)
+	public static SyncToolSpecification listEquipmentSets(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_equipment_sets",
@@ -65,7 +65,7 @@ public final class EquipmentSetTools
 		);
 	}
 
-	public static SyncToolSpecification createEquipmentSet(McpSessionManager session)
+	public static SyncToolSpecification createEquipmentSet(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("create_equipment_set",
@@ -97,7 +97,7 @@ public final class EquipmentSetTools
 		);
 	}
 
-	public static SyncToolSpecification getEquippedItems(McpSessionManager session)
+	public static SyncToolSpecification getEquippedItems(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_equipped_items",
@@ -147,7 +147,7 @@ public final class EquipmentSetTools
 		);
 	}
 
-	public static SyncToolSpecification equipItem(McpSessionManager session)
+	public static SyncToolSpecification equipItem(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("equip_item",
@@ -211,7 +211,7 @@ public final class EquipmentSetTools
 		);
 	}
 
-	public static SyncToolSpecification unequipItem(McpSessionManager session)
+	public static SyncToolSpecification unequipItem(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("unequip_item",
@@ -257,7 +257,7 @@ public final class EquipmentSetTools
 		);
 	}
 
-	public static SyncToolSpecification equipItems(McpSessionManager session)
+	public static SyncToolSpecification equipItems(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("equip_items",

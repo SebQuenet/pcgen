@@ -16,7 +16,7 @@ import pcgen.cdom.enumeration.PCStringKey;
 import pcgen.core.NoteItem;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.DescriptionFacade;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 public final class BiographyTools
 {
@@ -35,7 +35,7 @@ public final class BiographyTools
 		"gm_notes", PCStringKey.GMNOTES
 	);
 
-	public static SyncToolSpecification setBiography(McpSessionManager session)
+	public static SyncToolSpecification setBiography(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_biography",
@@ -151,7 +151,7 @@ public final class BiographyTools
 		);
 	}
 
-	public static SyncToolSpecification getBiography(McpSessionManager session)
+	public static SyncToolSpecification getBiography(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_biography",
@@ -212,7 +212,7 @@ public final class BiographyTools
 		);
 	}
 
-	public static SyncToolSpecification setXP(McpSessionManager session)
+	public static SyncToolSpecification setXP(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_xp",

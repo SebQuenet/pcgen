@@ -13,7 +13,7 @@ import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.TodoFacade;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 public final class UtilityTools
 {
@@ -23,7 +23,7 @@ public final class UtilityTools
 	{
 	}
 
-	public static SyncToolSpecification getTodoList(McpSessionManager session)
+	public static SyncToolSpecification getTodoList(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_todo_list",
@@ -50,7 +50,7 @@ public final class UtilityTools
 		);
 	}
 
-	public static SyncToolSpecification isQualifiedFor(McpSessionManager session)
+	public static SyncToolSpecification isQualifiedFor(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("is_qualified_for",
@@ -147,7 +147,7 @@ public final class UtilityTools
 		);
 	}
 
-	public static SyncToolSpecification rollStats(McpSessionManager session)
+	public static SyncToolSpecification rollStats(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("roll_stats",
@@ -181,7 +181,7 @@ public final class UtilityTools
 		);
 	}
 
-	public static SyncToolSpecification isDirty(McpSessionManager session)
+	public static SyncToolSpecification isDirty(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("is_dirty",
@@ -203,7 +203,7 @@ public final class UtilityTools
 		);
 	}
 
-	public static SyncToolSpecification getCharacterDetails(McpSessionManager session)
+	public static SyncToolSpecification getCharacterDetails(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_character_details",

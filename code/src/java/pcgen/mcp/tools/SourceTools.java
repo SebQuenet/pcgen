@@ -13,7 +13,7 @@ import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.core.Campaign;
 import pcgen.core.GameMode;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 import pcgen.mcp.serialization.FacadeSerializer;
 
 public final class SourceTools
@@ -24,7 +24,7 @@ public final class SourceTools
 	{
 	}
 
-	public static SyncToolSpecification listGameModes(McpSessionManager session)
+	public static SyncToolSpecification listGameModes(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_game_modes",
@@ -43,7 +43,7 @@ public final class SourceTools
 		);
 	}
 
-	public static SyncToolSpecification listSources(McpSessionManager session)
+	public static SyncToolSpecification listSources(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_sources",
@@ -74,7 +74,7 @@ public final class SourceTools
 		);
 	}
 
-	public static SyncToolSpecification loadSources(McpSessionManager session)
+	public static SyncToolSpecification loadSources(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("load_sources",
@@ -102,7 +102,7 @@ public final class SourceTools
 				List<String> campaigns = (List<String>) args.get("campaigns");
 				try
 				{
-					McpSessionManager.LoadSourcesResult result =
+					PcgenSession.LoadSourcesResult result =
 						session.loadSources(gameModeName, campaigns);
 					Map<String, Object> response = new LinkedHashMap<>();
 					response.put("source_set_id", result.getSourceSetId());

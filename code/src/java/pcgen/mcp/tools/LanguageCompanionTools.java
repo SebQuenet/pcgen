@@ -18,8 +18,8 @@ import pcgen.facade.core.CompanionSupportFacade;
 import pcgen.facade.core.CompanionStubFacade;
 import pcgen.facade.core.CompanionFacade;
 import pcgen.facade.core.LanguageChooserFacade;
-import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.McpUIDelegate;
+import pcgen.session.PcgenSession;
+import pcgen.session.HeadlessUIDelegate;
 import pcgen.system.CharacterManager;
 import pcgen.util.chooser.ChooserFactory;
 
@@ -31,7 +31,7 @@ public final class LanguageCompanionTools
 	{
 	}
 
-	public static SyncToolSpecification getLanguages(McpSessionManager session)
+	public static SyncToolSpecification getLanguages(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_languages",
@@ -85,7 +85,7 @@ public final class LanguageCompanionTools
 		);
 	}
 
-	public static SyncToolSpecification removeLanguage(McpSessionManager session)
+	public static SyncToolSpecification removeLanguage(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_language",
@@ -133,7 +133,7 @@ public final class LanguageCompanionTools
 		);
 	}
 
-	public static SyncToolSpecification addLanguage(McpSessionManager session)
+	public static SyncToolSpecification addLanguage(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_language",
@@ -181,7 +181,7 @@ public final class LanguageCompanionTools
 		);
 	}
 
-	public static SyncToolSpecification getCompanions(McpSessionManager session)
+	public static SyncToolSpecification getCompanions(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_companions",
@@ -230,7 +230,7 @@ public final class LanguageCompanionTools
 		);
 	}
 
-	public static SyncToolSpecification addCompanion(McpSessionManager session)
+	public static SyncToolSpecification addCompanion(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_companion",
@@ -276,7 +276,7 @@ public final class LanguageCompanionTools
 					}
 
 					// Create a new character for the companion
-					McpUIDelegate delegate = new McpUIDelegate();
+					HeadlessUIDelegate delegate = new HeadlessUIDelegate();
 					ChooserFactory.setDelegate(delegate);
 					CharacterFacade newCompanion = CharacterManager.createNewCharacter(delegate, session.getCurrentDataSet());
 					if (newCompanion == null)
@@ -303,7 +303,7 @@ public final class LanguageCompanionTools
 		);
 	}
 
-	public static SyncToolSpecification removeCompanion(McpSessionManager session)
+	public static SyncToolSpecification removeCompanion(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_companion",

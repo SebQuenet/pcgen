@@ -58,7 +58,7 @@ import pcgen.facade.util.ListFacades;
 import pcgen.facade.util.event.ListEvent;
 import pcgen.facade.util.event.ListListener;
 import pcgen.gui2.PCGenFrame;
-import pcgen.mcp.CampaignDependencyResolver;
+import pcgen.session.CampaignDependencyResolver;
 import pcgen.gui2.UIContext;
 import pcgen.gui2.UIPropertyContext;
 import pcgen.gui2.filter.FilterBar;

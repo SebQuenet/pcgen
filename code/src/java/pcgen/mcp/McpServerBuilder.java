@@ -25,6 +25,7 @@ import pcgen.mcp.tools.SpellTools;
 import pcgen.mcp.tools.TacticalSheetTools;
 import pcgen.mcp.tools.TemplateTools;
 import pcgen.mcp.tools.UtilityTools;
+import pcgen.session.PcgenSession;
 
 public final class McpServerBuilder
 {
@@ -32,7 +33,7 @@ public final class McpServerBuilder
 	{
 	}
 
-	public static McpSyncServer build(McpSessionManager session)
+	public static McpSyncServer build(PcgenSession session)
 	{
 		var transportProvider = new StdioServerTransportProvider(new ObjectMapper());
 

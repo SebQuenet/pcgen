@@ -1,4 +1,4 @@
-package pcgen.mcp;
+package pcgen.session;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,13 +25,13 @@ import pcgen.system.SourceMerger;
 import pcgen.util.Logging;
 import pcgen.util.chooser.ChooserFactory;
 
-public class McpSessionManager
+public class PcgenSession
 {
 	private DataSetFacade currentDataSet;
 	private String currentSourceSetId;
 	private SourceSelectionFacade currentSourceSelection;
 	private final Map<String, CharacterFacade> characters = new LinkedHashMap<>();
-	private final Map<String, McpUIDelegate> characterDelegates = new LinkedHashMap<>();
+	private final Map<String, HeadlessUIDelegate> characterDelegates = new LinkedHashMap<>();
 	private final Map<String, SourceSelectionFacade> characterSources = new LinkedHashMap<>();
 
 	public ListFacade<GameMode> getGameModes()
@@ -99,7 +99,7 @@ public class McpSessionManager
 			return new LoadSourcesResult(currentSourceSetId, resolved);
 		}
 
-		McpUIDelegate delegate = new McpUIDelegate();
+		HeadlessUIDelegate delegate = new HeadlessUIDelegate();
 		SourceFileLoader loader = new SourceFileLoader(delegate, new DefaultListFacade<>(campaigns), gameMode.getName());
 		loader.run();
 
@@ -152,7 +152,7 @@ public class McpSessionManager
 			throw new IllegalStateException("No sources loaded. Call load_sources first.");
 		}
 
-		McpUIDelegate delegate = new McpUIDelegate();
+		HeadlessUIDelegate delegate = new HeadlessUIDelegate();
 		ChooserFactory.setDelegate(delegate);
 		CharacterFacade character = CharacterManager.createNewCharacter(delegate, currentDataSet);
 		if (name != null && !name.isBlank())
@@ -187,7 +187,7 @@ public class McpSessionManager
 		}
 
 		// Read required sources from the character file
-		McpUIDelegate tempDelegate = new McpUIDelegate();
+		HeadlessUIDelegate tempDelegate = new HeadlessUIDelegate();
 		SourceSelectionFacade requiredSources = CharacterManager.getRequiredSourcesForCharacter(file, tempDelegate);
 
 		boolean needsMerge = false;
@@ -221,7 +221,7 @@ public class McpSessionManager
 
 	private String openCharacterSimple(File file)
 	{
-		McpUIDelegate delegate = new McpUIDelegate();
+		HeadlessUIDelegate delegate = new HeadlessUIDelegate();
 		CharacterFacade character = CharacterManager.openCharacter(file, delegate, currentDataSet);
 		if (character == null)
 		{
@@ -296,7 +296,7 @@ public class McpSessionManager
 			mergedCampaigns.add(c);
 		}
 
-		McpUIDelegate loaderDelegate = new McpUIDelegate();
+		HeadlessUIDelegate loaderDelegate = new HeadlessUIDelegate();
 		SourceFileLoader loader = new SourceFileLoader(loaderDelegate,
 			new DefaultListFacade<>(mergedCampaigns), gameMode.getName());
 		loader.run();
@@ -396,7 +396,7 @@ public class McpSessionManager
 		{
 			throw new IllegalArgumentException("Character not found: " + characterId);
 		}
-		McpUIDelegate delegate = characterDelegates.get(characterId);
+		HeadlessUIDelegate delegate = characterDelegates.get(characterId);
 		if (delegate != null)
 		{
 			ChooserFactory.setDelegate(delegate);
@@ -418,7 +418,7 @@ public class McpSessionManager
 		throw new IllegalStateException("PlayerCharacter not found for CharID: " + charId);
 	}
 
-	public McpUIDelegate getDelegate(String characterId)
+	public HeadlessUIDelegate getDelegate(String characterId)
 	{
 		return characterDelegates.get(characterId);
 	}
@@ -429,7 +429,7 @@ public class McpSessionManager
 	public Map<String, PendingChoice> getAllPendingChoices()
 	{
 		Map<String, PendingChoice> all = new LinkedHashMap<>();
-		for (McpUIDelegate delegate : characterDelegates.values())
+		for (HeadlessUIDelegate delegate : characterDelegates.values())
 		{
 			all.putAll(delegate.getPendingChoices());
 		}
@@ -441,7 +441,7 @@ public class McpSessionManager
 	 */
 	public boolean resolveChoice(String choiceId, List<String> selections)
 	{
-		for (McpUIDelegate delegate : characterDelegates.values())
+		for (HeadlessUIDelegate delegate : characterDelegates.values())
 		{
 			if (delegate.resolveChoice(choiceId, selections))
 			{

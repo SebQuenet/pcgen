@@ -10,7 +10,7 @@ import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 import pcgen.mcp.serialization.FacadeSerializer;
 
 public final class CharacterLifecycleTools
@@ -21,7 +21,7 @@ public final class CharacterLifecycleTools
 	{
 	}
 
-	public static SyncToolSpecification createCharacter(McpSessionManager session)
+	public static SyncToolSpecification createCharacter(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("create_character",
@@ -53,7 +53,7 @@ public final class CharacterLifecycleTools
 		);
 	}
 
-	public static SyncToolSpecification getCharacter(McpSessionManager session)
+	public static SyncToolSpecification getCharacter(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_character",
@@ -86,7 +86,7 @@ public final class CharacterLifecycleTools
 		);
 	}
 
-	public static SyncToolSpecification openCharacter(McpSessionManager session)
+	public static SyncToolSpecification openCharacter(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("open_character",
@@ -109,7 +109,7 @@ public final class CharacterLifecycleTools
 				try
 				{
 					String filePath = (String) args.get("file_path");
-					McpSessionManager.OpenCharacterResult result = session.openCharacter(new File(filePath));
+					PcgenSession.OpenCharacterResult result = session.openCharacter(new File(filePath));
 
 					Map<String, Object> response = new LinkedHashMap<>();
 					response.put("character_id", result.getCharacterId());
@@ -129,7 +129,7 @@ public final class CharacterLifecycleTools
 		);
 	}
 
-	public static SyncToolSpecification saveCharacter(McpSessionManager session)
+	public static SyncToolSpecification saveCharacter(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("save_character",
@@ -171,7 +171,7 @@ public final class CharacterLifecycleTools
 		);
 	}
 
-	public static SyncToolSpecification closeCharacter(McpSessionManager session)
+	public static SyncToolSpecification closeCharacter(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("close_character",

@@ -16,7 +16,7 @@ import pcgen.facade.core.SpellFacade;
 import pcgen.facade.core.SpellSupportFacade;
 import pcgen.facade.core.SpellSupportFacade.SpellNode;
 import pcgen.facade.core.SpellSupportFacade.SuperNode;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 public final class SpellTools
 {
@@ -26,7 +26,7 @@ public final class SpellTools
 	{
 	}
 
-	public static SyncToolSpecification getAvailableSpells(McpSessionManager session)
+	public static SyncToolSpecification getAvailableSpells(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_available_spells",
@@ -81,7 +81,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification getKnownSpells(McpSessionManager session)
+	public static SyncToolSpecification getKnownSpells(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_known_spells",
@@ -119,7 +119,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification addKnownSpell(McpSessionManager session)
+	public static SyncToolSpecification addKnownSpell(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_known_spell",
@@ -164,7 +164,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification removeKnownSpell(McpSessionManager session)
+	public static SyncToolSpecification removeKnownSpell(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_known_spell",
@@ -202,7 +202,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification getPreparedSpells(McpSessionManager session)
+	public static SyncToolSpecification getPreparedSpells(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_prepared_spells",
@@ -246,7 +246,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification addPreparedSpell(McpSessionManager session)
+	public static SyncToolSpecification addPreparedSpell(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_prepared_spell",
@@ -295,7 +295,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification removePreparedSpell(McpSessionManager session)
+	public static SyncToolSpecification removePreparedSpell(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("remove_prepared_spell",
@@ -341,7 +341,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification getSpellbooks(McpSessionManager session)
+	public static SyncToolSpecification getSpellbooks(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_spellbooks",
@@ -395,7 +395,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification addToSpellbook(McpSessionManager session)
+	public static SyncToolSpecification addToSpellbook(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("add_to_spellbook",
@@ -435,7 +435,7 @@ public final class SpellTools
 		);
 	}
 
-	public static SyncToolSpecification batchAddPreparedSpells(McpSessionManager session)
+	public static SyncToolSpecification batchAddPreparedSpells(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("batch_add_prepared_spells",

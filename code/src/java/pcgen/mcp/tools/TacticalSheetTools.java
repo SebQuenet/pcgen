@@ -37,7 +37,7 @@ import pcgen.core.tactics.TacticalPlanParser;
 import pcgen.core.tactics.TacticalSessionState;
 import pcgen.io.tactics.ResolvedSpell;
 import pcgen.io.tactics.TacticalResolver;
-import pcgen.mcp.McpSessionManager;
+import pcgen.session.PcgenSession;
 
 /**
  * MCP tools for the tactical sheet: what a character should do round by round
@@ -75,7 +75,7 @@ public final class TacticalSheetTools
 	{
 	}
 
-	public static SyncToolSpecification setTacticalSheet(McpSessionManager session)
+	public static SyncToolSpecification setTacticalSheet(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("set_tactical_sheet",
@@ -121,7 +121,7 @@ public final class TacticalSheetTools
 		);
 	}
 
-	public static SyncToolSpecification getTacticalSheet(McpSessionManager session)
+	public static SyncToolSpecification getTacticalSheet(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("get_tactical_sheet",
@@ -152,7 +152,7 @@ public final class TacticalSheetTools
 		);
 	}
 
-	public static SyncToolSpecification clearTacticalSheet(McpSessionManager session)
+	public static SyncToolSpecification clearTacticalSheet(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("clear_tactical_sheet", "Remove the tactical sheet of a character.",
@@ -189,7 +189,7 @@ public final class TacticalSheetTools
 	 * @param session the MCP session holding the open characters
 	 * @return the tool that lists what a plan may point at
 	 */
-	public static SyncToolSpecification listTacticalReferences(McpSessionManager session)
+	public static SyncToolSpecification listTacticalReferences(PcgenSession session)
 	{
 		return new SyncToolSpecification(
 			new Tool("list_tactical_references",
