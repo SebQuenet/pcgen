@@ -112,6 +112,16 @@ tasks.register("runMcp", JavaExec) {
     standardInput = System.in
 }
 
+tasks.register("runServer", JavaExec) {
+    description = 'Run the PCGen HTTP server on the loopback address (default port 8420)'
+    group = 'application'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass.set('pcgen.web.WebMain')
+    if (project.hasProperty('port')) {
+        args '--port', project.property('port')
+    }
+}
+
 /*
  * Which binary repositories this build uses.
  */

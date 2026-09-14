@@ -64,8 +64,10 @@ Trois couches, chacune ignorant celle du dessus.
 pcgen.web          HttpApiServer, routage, encodage JSON, gardes Host/Origin
 pcgen.mcp          McpMain, McpServerBuilder, adaptateurs vers le SDK MCP
         \         /
-pcgen.session.api  OperationRegistry : nom, description, schéma JSON, décodage des arguments
-pcgen.session.service  17 services à méthodes typées, renvoyant ServiceResult
+pcgen.session.api  Operation, OperationRegistry, Arguments, JsonPayload
+pcgen.session.service        17 services à méthodes typées, renvoyant ServiceResult
+pcgen.session.service.model  les records que les services renvoient
+pcgen.session.serialization  FacadeSerializer, pour les ressources MCP
 pcgen.session      PcgenSession, HeadlessUIDelegate, PendingChoice, HeadlessBootstrap
         |
 pcgen.facade, pcgen.core, pcgen.cdom   (inchangés)
@@ -156,14 +158,25 @@ public record Operation(
 	String name,
 	String description,
 	String inputSchema,
-	Function<Map<String, Object>, ServiceResult<?>> invoke)
+	boolean needsExclusiveAccess,
+	Function<Arguments, ServiceResult<?>> invoke)
 {
 }
 ```
 
-`invoke` est la frontière de validation : il décode le `Map` venu du transport, refuse un
-argument manquant ou mal typé par `Failure(new InvalidArgument(...))`, puis appelle la méthode
-typée du service. Aucun autre point du code ne manipule de `Map`.
+`Arguments` est la frontière de validation, et le seul endroit où le `Map` venu du transport
+devient des valeurs typées. Un descripteur lit ses arguments à l'intérieur de
+`arguments.decodeThen(...)` : un lecteur `requiredX` qui ne trouve pas ce qu'il cherche
+abandonne l'appel sur place, donc le service n'est jamais atteint avec un `null` en main.
+
+```java
+arguments -> arguments.decodeThen(() -> service.loadSources(
+	arguments.requiredString("game_mode"),
+	arguments.requiredStringList("campaigns")))
+```
+
+`needsExclusiveAccess` dit si l'appel touche l'état partagé de PCGen. Il vaut `false` pour les
+seules deux opérations décrites au §7.
 
 `OperationRegistry` assemble les 77 `Operation` à partir des 17 services.
 `McpServerBuilder` les convertit en `SyncToolSpecification` ; `HttpApiServer` les monte en routes.
@@ -222,8 +235,10 @@ tests les couvre. Et `GET /api/operations` renvoyant les schémas déjà écrits
 générer. Pour un consommateur unique en local, un découpage REST n'apporterait rien de ces
 trois-là.
 
-**Exécution** : `server.setExecutor(Executors.newSingleThreadExecutor())` — sauf pour les deux
-opérations décrites en §7.
+**Exécution** : les requêtes sont traitées sur un pool, mais une opération `needsExclusiveAccess`
+est soumise à un unique fil de travail et attendue là. C'est cette séparation qui évite
+l'interblocage du §7 : le fil de travail reste bloqué tant qu'un choix n'est pas résolu, et la
+requête qui porte la résolution arrive sur un autre fil du pool.
 
 ## 7. Choix en attente et interblocage
 
@@ -232,10 +247,11 @@ opérations décrites en §7.
 `CompletableFuture`. Avec un exécuteur mono-thread, `resolve_choice` fait la queue derrière
 l'opération qu'il est censé débloquer : interblocage garanti de 300 secondes.
 
-Règle : **`get_pending_choices` et `resolve_choice` ne passent pas par l'exécuteur mono-thread.**
-Ils s'exécutent directement sur le thread HTTP. C'est sûr parce qu'ils ne touchent pas l'état
-PCGen : ils lisent une `ConcurrentHashMap` et complètent un `CompletableFuture`, tous deux
-détenus par le délégué.
+Règle : **`get_pending_choices` et `resolve_choice` ne passent pas par le fil de travail
+exclusif.** Ils s'exécutent directement sur le thread HTTP. C'est sûr parce qu'ils ne touchent
+pas l'état PCGen : ils lisent une `ConcurrentHashMap` et complètent un `CompletableFuture`, tous
+deux détenus par le délégué. `HttpApiServerTest.answersAConcurrentCallWhileAnExclusiveOneIsBlocked`
+rejoue exactement cet enchaînement.
 
 Le front apprend qu'un choix est en attente en interrogeant `GET /api/pending-choices` pendant
 que sa requête d'origine est encore ouverte. Un flux SSE serait plus élégant ; pour un seul
@@ -303,7 +319,7 @@ Un incrément par PR, moins de 500 lignes modifiées chacune.
 | 7 | `EquipmentService` + `EquipmentSetService` + `CustomEquipmentService` (13 opérations) | migration |
 | 8 | `DeityDomainService` + `TemplateService` + `LanguageCompanionService` (16 opérations) | migration |
 | 9 | `BiographyService` + `TacticalSheetService` + `ExportService` + `ChoiceService` + `UtilityService` (16 opérations) | migration |
-| 10 | Tâche Gradle `runServer`, service des fichiers statiques du front, `pcgen.web.WebMain` | mise en service |
+| 10 | `pcgen.web.WebMain`, tâche Gradle `runServer`, service des fichiers statiques du front | mise en service |
 
 Après l'incrément 3, le serveur MCP et le serveur HTTP tournent tous les deux, chacun sur une
 partie du registre ; les incréments 4 à 9 les remplissent en parallèle sans jamais casser l'un
@@ -313,7 +329,8 @@ des deux.
 
 - `./gradlew test`, `./gradlew slowtest` et `./gradlew allReports` passent sans nouvelle
   violation à chaque incrément.
-- `OperationRegistry` expose les 77 mêmes noms d'opération qu'aujourd'hui.
+- `OperationRegistry` expose les 77 mêmes noms d'opération qu'aujourd'hui
+  (`OperationRegistryTest.servesEveryOperationTheMcpServerUsedToServe`).
 - Le serveur MCP répond comme avant sur `initialize` puis `tools/call`, vérifié sur
   `load_sources` et `create_character`.
 - Un enchaînement `curl` de `POST /api/load_sources` puis `POST /api/create_character` puis

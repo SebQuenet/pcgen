@@ -18,6 +18,7 @@ PCGen — Java desktop application for creating/managing RPG player characters (
 ./gradlew compileJava        # Compile only
 ./gradlew run                # Launch GUI
 ./gradlew runMcp             # Launch MCP server (headless, stdio)
+./gradlew runServer          # Launch HTTP server (headless, 127.0.0.1:8420; -Pport=N to change)
 
 # Testing
 ./gradlew test               # Fast unit tests (code/src/utest/)
@@ -54,7 +55,8 @@ Config: `code/standards/checkstyle.xml`, `code/standards/ruleset.xml`, `code/sta
 
 ### Entry Points
 - **GUI**: `pcgen.system.Main` — launches JavaFX application, validates runtime environment
-- **MCP Server**: `pcgen.mcp.McpMain` — headless mode, loads data and exposes tools over stdio
+- **MCP Server**: `pcgen.mcp.McpMain` — headless mode, exposes the operations as MCP tools over stdio
+- **HTTP Server**: `pcgen.web.WebMain` — headless mode, exposes the same operations over HTTP for a web front end
 
 ### Source Layout
 Production code: `code/src/java/pcgen/`
@@ -67,7 +69,9 @@ Production code: `code/src/java/pcgen/`
 | `gui2` | JavaFX GUI (main frame, tabs, dialogs) |
 | `gui3` | Newer FXML-based GUI components |
 | `io` | Character save/load (PCGVer2Creator/Parser), export (FreeMarker templates) |
-| `mcp` | MCP server — tools, resources, session management for AI agents |
+| `mcp` | MCP transport — dresses the operations as MCP tools over stdio |
+| `session` | Headless session, services holding the operation logic, and the operation registry |
+| `web` | HTTP transport — serves the same operations, plus a front end's static files |
 | `persistence` | LST file loading, campaign/game mode loaders |
 | `system` | Application bootstrap, configuration, facade factory |
 | `output` | Export actors and channels |
@@ -79,14 +83,24 @@ Production code: `code/src/java/pcgen/`
 - `code/src/testcommon/` — shared test fixtures (available to all test sets)
 - `code/src/testResources/` — test data files
 
-### MCP Server (`pcgen.mcp`)
-Exposes PCGen as an MCP server for AI-driven character building. Key classes:
-- `McpMain` — entry point, headless initialization
-- `McpServerBuilder` — registers all tools and resources
-- `McpSessionManager` — manages loaded sources, open characters, pending choices
-- `tools/` — 16 tool classes (source loading, character lifecycle, abilities, skills, spells, equipment, etc.)
+### Headless server (`pcgen.session`, `pcgen.mcp`, `pcgen.web`)
+PCGen runs without a GUI and offers the same 77 operations to an AI agent over MCP
+and to a web front end over HTTP. The logic lives in neither transport:
+
+- `session/HeadlessBootstrap` — brings PCGen up: settings, plugins, game modes, campaign index
+- `session/PcgenSession` — loaded sources, open characters, pending choices
+- `session/HeadlessUIDelegate` — answers the questions PCGen's data asks, or queues them as pending choices
+- `session/service/` — 17 services holding the operation logic, returning `ServiceResult` rather than throwing
+- `session/api/` — `Operation` (name, JSON schema, call), `OperationRegistry`, and `Arguments`, the one place
+  a transport's untyped map becomes typed values
+- `mcp/McpOperationAdapter` — dresses the registry as MCP tools
+- `web/HttpApiServer` — `POST /api/{operation}`, `GET /api/operations`, `GET /health`, front-end files
+
+Operations that touch PCGen's process-wide state run one at a time; `get_pending_choices` and
+`resolve_choice` do not, because the call waiting on a choice is holding the worker.
 
 MCP config for Claude Code: `.mcp.json`
+Spec: `specs/serveur-headless.md`
 Known issues: `mcp-to-fix.md`
 
 ### Runtime File Layout
