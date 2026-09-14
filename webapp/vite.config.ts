@@ -10,5 +10,7 @@ export default defineConfig({
   // In dev the page is served by Vite, so calls are proxied to PCGen rather
   // than sent cross-origin, which the server's Host check would refuse.
   server: { proxy: { '/api': PCGEN_SERVER, '/health': PCGEN_SERVER } },
-  test: { environment: 'node', globals: true },
+  // Tests run without a DOM unless a file asks for one with
+  // `// @vitest-environment jsdom`, which only the screens need.
+  test: { globals: true, environment: 'node' },
 })

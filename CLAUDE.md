@@ -19,6 +19,8 @@ PCGen — Java desktop application for creating/managing RPG player characters (
 ./gradlew run                # Launch GUI
 ./gradlew runMcp             # Launch MCP server (headless, stdio)
 ./gradlew runServer          # Launch HTTP server (headless, 127.0.0.1:8420; -Pport=N to change)
+./gradlew buildWebapp        # Build the web front end from webapp/ into web/
+./gradlew testWebapp         # Run the web front end tests
 
 # Testing
 ./gradlew test               # Fast unit tests (code/src/utest/)
@@ -102,6 +104,19 @@ Operations that touch PCGen's process-wide state run one at a time; `get_pending
 MCP config for Claude Code: `.mcp.json`
 Spec: `specs/serveur-headless.md`
 Known issues: `mcp-to-fix.md`
+
+### Web front end (`webapp/`)
+TypeScript and React, built by Vite into `web/`, which `HttpApiServer` serves. It covers the
+character-building journey: sources, character, identity, levels, ability scores, skills, feats,
+equipment, spells, sheet.
+
+- `webapp/src/api/client.ts` — the one way through to PCGen; returns a discriminated union, never throws
+- `webapp/src/api/schemas.ts` — Zod schemas, checked in tests against answers captured from a live server
+- `webapp/src/choices/watching.ts` — polls for pending choices while a call is in flight
+- `webapp/src/screens/` — one file per screen
+
+In development, `npm run dev` in `webapp/` serves the page and proxies `/api` to port 8420, so the
+server's Host check still passes. Spec: `specs/front-web.md`
 
 ### Runtime File Layout
 These directories are validated at startup (`Main.validateEnvironment()`) — renames/deletions break the app:

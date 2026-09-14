@@ -18,6 +18,8 @@
 package pcgen.web;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -48,6 +50,11 @@ public final class WebMain
 		try
 		{
 			HttpApiServer server = HttpApiServer.start(OperationRegistry.forSession(session), portFrom(args));
+			if (!Files.isDirectory(Path.of("web")))
+			{
+				Logging.log(Level.INFO, "No front end in web/ — the API is served, the pages are not. "
+					+ "Run ./gradlew buildWebapp to build one.");
+			}
 			Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 				Logging.log(Level.INFO, "Shutting down PCGen HTTP server...");
 				server.stop();
