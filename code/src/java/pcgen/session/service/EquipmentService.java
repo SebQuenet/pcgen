@@ -71,7 +71,7 @@ public final class EquipmentService
 					return ServiceResult.failure(new ServiceError.NotAllowed(refusal));
 				}
 				return ServiceResult.success(new PurchasedItem(sized.toString(), quantity,
-					character.getInfoFactory().getCost(sized), character.getFundsRef().get()));
+					character.getInfoFactory().getCost(sized), Money.amountOf(character.getFundsRef())));
 			}));
 	}
 
@@ -84,7 +84,8 @@ public final class EquipmentService
 				return ServiceResult.failure(new ServiceError.NotAllowed("Character does not own: " + equipmentKey));
 			}
 			character.removePurchasedEquipment(owned, quantity, free);
-			return ServiceResult.success(new SoldItem(owned.toString(), quantity, character.getFundsRef().get()));
+			return ServiceResult.success(
+				new SoldItem(owned.toString(), quantity, Money.amountOf(character.getFundsRef())));
 		});
 	}
 
@@ -99,7 +100,7 @@ public final class EquipmentService
 				items.add(new InventoryItem(item.getKeyName(), item.toString(), owned.getQuantity(item),
 					info.getCost(item), info.getWeight(item)));
 			}
-			return new Inventory(List.copyOf(items), character.getFundsRef().get(),
+			return new Inventory(List.copyOf(items), Money.amountOf(character.getFundsRef()),
 				character.getCarriedWeightRef().get(), character.getLoadRef().get());
 		});
 	}
@@ -108,7 +109,7 @@ public final class EquipmentService
 	{
 		return characters.byId(characterId).map(character -> {
 			character.setFunds(BigDecimal.valueOf(amount));
-			return new FundsSet(character.getFundsRef().get());
+			return new FundsSet(Money.amountOf(character.getFundsRef()));
 		});
 	}
 
@@ -151,7 +152,8 @@ public final class EquipmentService
 					errors.add("Failed: " + request.equipmentKey() + " - " + e.getMessage());
 				}
 			}
-			return new BatchPurchase(accepted, requests.size(), character.getFundsRef().get(), List.copyOf(errors));
+			return new BatchPurchase(accepted, requests.size(),
+				Money.amountOf(character.getFundsRef()), List.copyOf(errors));
 		});
 	}
 

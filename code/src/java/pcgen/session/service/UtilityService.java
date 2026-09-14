@@ -133,8 +133,8 @@ public final class UtilityService
 				character.getCarriedWeightRef().get(),
 				character.getLoadRef().get(),
 				character.getWeightLimitRef().get(),
-				character.getFundsRef().get(),
-				character.getWealthRef().get(),
+				Money.amountOf(character.getFundsRef()),
+				Money.amountOf(character.getWealthRef()),
 				Map.copyOf(stats));
 		});
 	}
