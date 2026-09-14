@@ -25,17 +25,22 @@ import java.util.Optional;
 
 import pcgen.session.PcgenSession;
 import pcgen.session.service.AbilityService;
+import pcgen.session.service.BiographyService;
 import pcgen.session.service.CharacterBuildService;
+import pcgen.session.service.ChoiceService;
 import pcgen.session.service.CustomEquipmentService;
 import pcgen.session.service.DeityDomainService;
 import pcgen.session.service.CharacterLifecycleService;
 import pcgen.session.service.EquipmentService;
+import pcgen.session.service.ExportService;
 import pcgen.session.service.EquipmentSetService;
 import pcgen.session.service.LanguageCompanionService;
 import pcgen.session.service.SkillService;
 import pcgen.session.service.SourceService;
 import pcgen.session.service.SpellService;
+import pcgen.session.service.TacticalSheetService;
 import pcgen.session.service.TemplateService;
+import pcgen.session.service.UtilityService;
 
 /**
  * Everything a caller can ask PCGen to do, gathered once from the services and
@@ -62,6 +67,12 @@ public final class OperationRegistry
 		this.ordered = List.copyOf(operations);
 	}
 
+	/** A registry over exactly these operations, for a caller that assembles its own. */
+	public static OperationRegistry of(List<Operation> operations)
+	{
+		return new OperationRegistry(operations);
+	}
+
 	public static OperationRegistry forSession(PcgenSession session)
 	{
 		List<Operation> operations = new ArrayList<>();
@@ -75,6 +86,9 @@ public final class OperationRegistry
 			new EquipmentSetService(session), new CustomEquipmentService(session)));
 		operations.addAll(CharacterTraitOperations.of(new DeityDomainService(session),
 			new TemplateService(session), new LanguageCompanionService(session)));
+		operations.addAll(CharacterRecordOperations.of(new BiographyService(session),
+			new TacticalSheetService(session), new ExportService(session),
+			new ChoiceService(session), new UtilityService(session)));
 		return new OperationRegistry(operations);
 	}
 
