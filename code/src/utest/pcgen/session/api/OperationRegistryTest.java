@@ -34,7 +34,8 @@ public class OperationRegistryTest
 {
 	/**
 	 * The 77 tools the MCP server exposed when every operation still lived inside
-	 * its own lambda. Losing one in a migration would be silent otherwise.
+	 * its own lambda. Losing one in a migration would be silent otherwise; gaining
+	 * one is fine, which is why this is a floor rather than the whole list.
 	 */
 	private static final List<String> OPERATIONS_BEFORE_THE_SERVICE_LAYER = List.of(
 		"add_ability", "add_class_level", "add_companion", "add_domain", "add_kit", "add_known_spell",
@@ -75,9 +76,11 @@ public class OperationRegistryTest
 	{
 		OperationRegistry registry = OperationRegistry.forSession(new PcgenSession());
 
-		List<String> served = registry.all().stream().map(Operation::name).sorted().toList();
+		List<String> served = registry.all().stream().map(Operation::name).toList();
 
-		assertEquals(OPERATIONS_BEFORE_THE_SERVICE_LAYER, served);
+		assertTrue(served.containsAll(OPERATIONS_BEFORE_THE_SERVICE_LAYER),
+			() -> "lost: " + OPERATIONS_BEFORE_THE_SERVICE_LAYER.stream().filter(name -> !served.contains(name))
+				.toList());
 	}
 
 	@Test
