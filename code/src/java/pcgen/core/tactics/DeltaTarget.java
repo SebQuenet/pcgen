@@ -18,20 +18,32 @@
 package pcgen.core.tactics;
 
 /**
- * What kind of thing a tactical block points at when it borrows the
- * character's own numbers.
+ * What a buff's declared delta changes on the sheet.
  *
  * <p>
- * Only kinds PCGen can actually answer are listed. A name pointing at
- * something PCGen has no concept of would resolve to nothing, so the sheet
- * writes such a value out instead.
+ * A closed set, because a target the sheet cannot find would otherwise be a
+ * delta that silently changes nothing.
  */
-public enum ReferenceKind
+public enum DeltaTarget
 {
-	/** An equipped weapon, for its attack bonus, damage and critical. */
-	WEAPON,
-	/** A variable PCGen computes, for a number such as uses per day. */
-	VAR,
-	/** A temporary bonus the character holds, for a buff PCGen can recompute. */
-	TEMPBONUS
+	/** Every attack line's attack bonus. */
+	ATTACK,
+	/** Every attack line's damage. */
+	DAMAGE,
+	/** Armour class. */
+	AC,
+	/** Touch armour class. */
+	TOUCH,
+	/** Flat footed armour class. */
+	FLAT,
+	/** The Fortitude save. */
+	FORTITUDE,
+	/** The Reflex save. */
+	REFLEX,
+	/** The Will save. */
+	WILL,
+	/** Initiative. */
+	INITIATIVE,
+	/** Speed. */
+	SPEED
 }

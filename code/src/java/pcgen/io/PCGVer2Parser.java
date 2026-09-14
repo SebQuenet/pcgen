@@ -1181,7 +1181,8 @@ final class PCGVer2Parser implements PCGParser
 
 		parseTacticalSessionLines(cache.containsKey(IOConstants.TAG_TACTICALDAMAGE)
 			? cache.get(IOConstants.TAG_TACTICALDAMAGE) : List.of(),
-			cache.containsKey(IOConstants.TAG_TACTICALSPENT) ? cache.get(IOConstants.TAG_TACTICALSPENT) : List.of());
+			cache.containsKey(IOConstants.TAG_TACTICALSPENT) ? cache.get(IOConstants.TAG_TACTICALSPENT) : List.of(),
+			cache.containsKey(IOConstants.TAG_TACTICALBUFF) ? cache.get(IOConstants.TAG_TACTICALBUFF) : List.of());
 
 		/*
 		 * #Character Bio
@@ -3241,7 +3242,8 @@ final class PCGVer2Parser implements PCGParser
 	 * @param damageLines the TACTICALDAMAGE lines, in file order.
 	 * @param spentLines  the TACTICALSPENT lines, in file order.
 	 */
-	private void parseTacticalSessionLines(final List<String> damageLines, final List<String> spentLines)
+	private void parseTacticalSessionLines(final List<String> damageLines, final List<String> spentLines,
+		final List<String> buffLines)
 	{
 		int damage = 0;
 		for (final String line : damageLines)
@@ -3257,6 +3259,7 @@ final class PCGVer2Parser implements PCGParser
 			}
 		}
 
+		final Set<String> buffs = new HashSet<>();
 		final Map<String, Integer> spent = new HashMap<>();
 		for (final String line : spentLines)
 		{
@@ -3278,11 +3281,21 @@ final class PCGVer2Parser implements PCGParser
 			}
 		}
 
-		if (damage > 0 || !spent.isEmpty())
+		for (final String line : buffLines)
+		{
+			final String label =
+					EntityEncoder.decode(line.substring(IOConstants.TAG_TACTICALBUFF.length() + 1)).strip();
+			if (!label.isEmpty())
+			{
+				buffs.add(label);
+			}
+		}
+
+		if (damage > 0 || !spent.isEmpty() || !buffs.isEmpty())
 		{
 			try
 			{
-				thePC.setTacticalSession(new TacticalSessionState(damage, spent));
+				thePC.setTacticalSession(new TacticalSessionState(damage, spent, buffs));
 			}
 			catch (IllegalArgumentException e)
 			{

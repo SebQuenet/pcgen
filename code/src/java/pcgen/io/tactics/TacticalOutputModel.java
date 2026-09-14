@@ -18,17 +18,26 @@
 package pcgen.io.tactics;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 
+import pcgen.core.Globals;
+import pcgen.core.PCCheck;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.tactics.DeltaTarget;
 import pcgen.core.tactics.SpellSource;
 import pcgen.core.tactics.TacticalAttack;
+import pcgen.core.tactics.TacticalBuff;
+import pcgen.core.tactics.TacticalCapability;
+import pcgen.core.tactics.TacticalCapabilityList;
 import pcgen.core.tactics.TacticalBlock;
 import pcgen.core.tactics.TacticalCreature;
+import pcgen.core.tactics.TacticalDelta;
+import pcgen.core.tactics.TacticalItem;
 import pcgen.core.tactics.TacticalLiteral;
 import pcgen.core.tactics.TacticalNote;
 import pcgen.core.tactics.TacticalParseError;
@@ -81,16 +90,17 @@ public final class TacticalOutputModel
 		if (plan.isEmpty())
 		{
 			return Map.of("present", Boolean.FALSE, "errors", List.of(), "sections", List.of(), "session",
-				sessionOf(TacticalSessionState.untouched()), "labels", labels());
+				sessionOf(TacticalSessionState.untouched()), "labels", labels(), "saveTargets", saveTargets());
 		}
 		TacticalSessionState session = character.getDisplay().getTacticalSession();
 		return switch (TacticalPlanParser.parse(plan.get()))
 		{
 			case TacticalParseSuccess success -> Map.of("present", Boolean.TRUE, "errors", List.of(), "sections",
 				sectionsOf(success.sheet().sections(), new TacticalResolver(character), session), "session",
-				sessionOf(session), "labels", labels());
+				sessionOf(session), "labels", labels(), "saveTargets", saveTargets());
 			case TacticalParseFailure failure -> Map.of("present", Boolean.TRUE, "errors", errorsOf(failure),
-				"sections", List.of(), "session", sessionOf(session), "labels", labels());
+				"sections", List.of(), "session", sessionOf(session), "labels", labels(), "saveTargets",
+				saveTargets());
 		};
 	}
 
@@ -100,6 +110,31 @@ public final class TacticalOutputModel
 	 *
 	 * @return the labels the template shows, keyed by what they name
 	 */
+	/**
+	 * Which buff target each save in the vitals band answers to.
+	 *
+	 * <p>
+	 * The band prints the saves through {@code CHECK.n.NAME}, whose text is
+	 * translated, so a buff cannot find a save by what it reads. The checks come
+	 * back here in the same order the band loops over them, named by their
+	 * English key, which is what a delta target is named after.
+	 *
+	 * @return one target name per check, in check order, empty where a check
+	 *         answers to no target
+	 */
+	private static List<String> saveTargets()
+	{
+		List<String> targets = new ArrayList<>();
+		for (PCCheck check : Globals.getContext().getReferenceContext()
+			.getSortkeySortedCDOMObjects(PCCheck.class))
+		{
+			String key = check.getKeyName().toUpperCase(Locale.ROOT);
+			targets.add(java.util.Arrays.stream(DeltaTarget.values()).map(DeltaTarget::name)
+				.filter(key::equals).findFirst().map(name -> name.toLowerCase(Locale.ROOT)).orElse(""));
+		}
+		return targets;
+	}
+
 	private static Map<String, Object> labels()
 	{
 		return Map.ofEntries(Map.entry("attack", LanguageBundle.getString("in_tactical_attack")),
@@ -115,7 +150,10 @@ public final class TacticalOutputModel
 			Map.entry("empty", LanguageBundle.getString("in_tactical_empty")),
 			Map.entry("doesNotRead", LanguageBundle.getString("in_tactical_does_not_read")),
 			Map.entry("noWeapon", LanguageBundle.getString("in_tactical_no_weapon")),
-			Map.entry("noVariable", LanguageBundle.getString("in_tactical_no_variable")));
+			Map.entry("noVariable", LanguageBundle.getString("in_tactical_no_variable")),
+			Map.entry("unmatchedTags", LanguageBundle.getString("in_tactical_unmatched_tags")),
+			Map.entry("throughPcgen", LanguageBundle.getString("in_tactical_through_pcgen")),
+			Map.entry("noBonus", LanguageBundle.getString("in_tactical_no_bonus")));
 	}
 
 	private static List<Map<String, Object>> errorsOf(TacticalParseFailure failure)
@@ -163,6 +201,9 @@ public final class TacticalOutputModel
 			case TacticalAttack attack -> attackOf(attack, resolver);
 			case TacticalCreature creature -> creatureOf(creature);
 			case TacticalSpellList spells -> spellsOf(spells, resolver);
+			case TacticalCapabilityList capabilities -> capabilitiesOf(capabilities);
+			case TacticalItem item -> itemOf(item);
+			case TacticalBuff buff -> buffOf(buff, resolver, session);
 		};
 	}
 
@@ -208,6 +249,7 @@ public final class TacticalOutputModel
 			{
 				case VAR -> resolver.number(reference.key());
 				case WEAPON -> resolver.weapon(reference.key()).map(ResolvedWeapon::name);
+				case TEMPBONUS -> Optional.of(reference.key());
 			};
 		};
 	}
@@ -241,6 +283,50 @@ public final class TacticalOutputModel
 		return described;
 	}
 
+	private static Map<String, Object> capabilitiesOf(TacticalCapabilityList list)
+	{
+		List<Map<String, Object>> capabilities = new ArrayList<>();
+		for (TacticalCapability capability : list.capabilities())
+		{
+			capabilities.add(Map.of("name", capability.name(), "tags", capability.tags(), "action",
+				capability.action(), "uses", capability.uses(), "effect", capability.effect()));
+		}
+		return Map.of(KIND, "capabilities", "title", list.title(), "tags", list.tags(), "capabilities",
+			capabilities);
+	}
+
+	private static Map<String, Object> itemOf(TacticalItem item)
+	{
+		List<Map<String, Object>> rows = new ArrayList<>();
+		for (TacticalRow row : item.rows())
+		{
+			rows.add(Map.of("label", row.label(), "content", row.content()));
+		}
+		return Map.of(KIND, "item", "name", item.name(), "rows", rows);
+	}
+
+	/**
+	 * A buff carries what the page needs to apply it: its deltas, keyed by what
+	 * they change, and whether PCGen can be asked to recompute instead.
+	 */
+	private static Map<String, Object> buffOf(TacticalBuff buff, TacticalResolver resolver,
+		TacticalSessionState session)
+	{
+		List<Map<String, Object>> deltas = new ArrayList<>();
+		for (TacticalDelta delta : buff.gives())
+		{
+			deltas.add(Map.of("target", delta.target().name().toLowerCase(Locale.ROOT), "amount", delta.amount(),
+				"signed", delta.signed()));
+		}
+		boolean throughPcgen = buff.applies().isPresent();
+		String bonus = buff.applies().map(TacticalReference::key).orElse("");
+		return Map.ofEntries(Map.entry(KIND, "buff"), Map.entry("label", buff.label()),
+			Map.entry("duration", buff.duration()), Map.entry("deltas", deltas),
+			Map.entry("throughPcgen", throughPcgen), Map.entry("bonus", bonus),
+			Map.entry("known", !throughPcgen || resolver.hasTemporaryBonus(bonus)),
+			Map.entry("active", session.isBuffActive(buff.label())), Map.entry("note", buff.note()));
+	}
+
 	private static Map<String, Object> creatureOf(TacticalCreature creature)
 	{
 		List<Map<String, Object>> rows = new ArrayList<>();
@@ -261,12 +347,25 @@ public final class TacticalOutputModel
 		}
 
 		List<Map<String, Object>> spells = new ArrayList<>();
+		java.util.Set<String> matched = new java.util.LinkedHashSet<>();
 		for (ResolvedSpell spell : resolver.spells(block.source()))
 		{
-			spells.add(Map.of("name", spell.name(), "level", spell.level(), "times", spell.times(), "tags",
-				tagsByName.getOrDefault(spell.name().toLowerCase(Locale.ROOT), List.of())));
+			String key = spell.name().toLowerCase(Locale.ROOT);
+			List<String> tags = tagsByName.getOrDefault(key, List.of());
+			if (!tags.isEmpty())
+			{
+				matched.add(key);
+			}
+			spells.add(Map.of("name", spell.name(), "level", spell.level(), "times", spell.times(), "tags", tags));
 		}
+
+		List<String> declared = block.tags().stream().flatMap(tag -> tag.tags().stream()).distinct()
+			.sorted(Comparator.comparing(tag -> tag.toLowerCase(Locale.ROOT))).toList();
+		List<String> unmatched = block.tags().stream().map(TacticalTag::spellName)
+			.filter(name -> !matched.contains(name.toLowerCase(Locale.ROOT))).toList();
+
 		return Map.of(KIND, "spells", "source",
-			(block.source() == SpellSource.PREPARED) ? "prepared" : "known", "spells", spells);
+			(block.source() == SpellSource.PREPARED) ? "prepared" : "known", "spells", spells, "tags", declared,
+			"unmatched", unmatched);
 	}
 }

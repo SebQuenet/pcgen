@@ -22,6 +22,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import pcgen.cdom.util.CControl;
 import pcgen.core.Deity;
@@ -220,6 +221,21 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 			spells: @prepared
 			  tag: Holy smite | damage, good descriptor
 
+			## Repertoire
+			capabilities: Everything
+			  power: Touch of Good | buff, support | standard | 10/day | +3 sacred
+			  power: Hard to Kill | survival
+
+			## Gear
+			item: Sceptre of Timeon
+			  row: Aura | moderate evocation, CL 10
+
+			## Buffs
+			buff: Aura of holiness | 15 rounds
+			  gives: ac +4 | will +4
+			buff: Divine favour | 1 min
+			  applies: @tempbonus(Divine Favor)
+
 			## Emergency
 			step: HP below 12
 			  do: Withdraw
@@ -236,7 +252,7 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 			## Before the fight
 			resource: Mythic power | 11
 			""");
-		pc.setTacticalSession(new TacticalSessionState(19, Map.of("Mythic power", 4, "Channel", 2)));
+		pc.setTacticalSession(new TacticalSessionState(19, Map.of("Mythic power", 4, "Channel", 2), Set.of("Aura of holiness")));
 		runRoundRobin(null);
 	}
 
@@ -248,7 +264,7 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 			## Before the fight
 			resource: Mythic power | 11
 			""");
-		pc.setTacticalSession(new TacticalSessionState(19, Map.of("Mythic power", 4)));
+		pc.setTacticalSession(new TacticalSessionState(19, Map.of("Mythic power", 4), Set.of()));
 		pc.clearTacticalSheet();
 		runRoundRobin(null);
 	}

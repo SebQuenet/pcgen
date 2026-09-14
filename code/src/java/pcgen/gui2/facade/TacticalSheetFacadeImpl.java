@@ -18,8 +18,11 @@
 package pcgen.gui2.facade;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 
 import pcgen.core.PlayerCharacter;
 import pcgen.core.tactics.TacticalParseError;
@@ -27,7 +30,9 @@ import pcgen.core.tactics.TacticalParseFailure;
 import pcgen.core.tactics.TacticalParseSuccess;
 import pcgen.core.tactics.TacticalPlanParser;
 import pcgen.core.tactics.TacticalSessionState;
+import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.TacticalSheetFacade;
+import pcgen.facade.core.TempBonusFacade;
 
 /**
  * Edits the tactical sheet of a character on behalf of the Tactical tab.
@@ -40,10 +45,12 @@ class TacticalSheetFacadeImpl implements TacticalSheetFacade
 {
 
 	private final PlayerCharacter theCharacter;
+	private final CharacterFacade characterFacade;
 
-	TacticalSheetFacadeImpl(PlayerCharacter pc)
+	TacticalSheetFacadeImpl(PlayerCharacter pc, CharacterFacade facade)
 	{
 		theCharacter = pc;
+		characterFacade = facade;
 	}
 
 	@Override
@@ -81,7 +88,8 @@ class TacticalSheetFacadeImpl implements TacticalSheetFacade
 	public void setDamage(int damage)
 	{
 		TacticalSessionState session = theCharacter.getDisplay().getTacticalSession();
-		theCharacter.setTacticalSession(new TacticalSessionState(Math.max(damage, 0), session.resourcesSpent()));
+		theCharacter.setTacticalSession(
+			new TacticalSessionState(Math.max(damage, 0), session.resourcesSpent(), session.activeBuffs()));
 	}
 
 	@Override
@@ -97,6 +105,48 @@ class TacticalSheetFacadeImpl implements TacticalSheetFacade
 		{
 			spent.put(label, count);
 		}
-		theCharacter.setTacticalSession(new TacticalSessionState(session.damageTaken(), spent));
+		theCharacter.setTacticalSession(
+			new TacticalSessionState(session.damageTaken(), spent, session.activeBuffs()));
+	}
+
+	@Override
+	public void setBuffActive(String label, boolean active)
+	{
+		TacticalSessionState session = theCharacter.getDisplay().getTacticalSession();
+		Set<String> running = new HashSet<>(session.activeBuffs());
+		if (active)
+		{
+			running.add(label);
+		}
+		else
+		{
+			running.remove(label);
+		}
+		theCharacter.setTacticalSession(
+			new TacticalSessionState(session.damageTaken(), session.resourcesSpent(), running));
+	}
+
+	@Override
+	public boolean applyTemporaryBonus(String name, boolean active)
+	{
+		Optional<TempBonusFacade> held = availableBonusNamed(name);
+		held.ifPresent(bonus -> characterFacade.setTempBonusActive(bonus, active));
+		return held.isPresent();
+	}
+
+	private Optional<TempBonusFacade> availableBonusNamed(String name)
+	{
+		if (characterFacade == null || name == null || name.isBlank())
+		{
+			return Optional.empty();
+		}
+		for (TempBonusFacade bonus : characterFacade.getTempBonuses())
+		{
+			if (bonus.toString().equalsIgnoreCase(name.strip()))
+			{
+				return Optional.of(bonus);
+			}
+		}
+		return Optional.empty();
 	}
 }

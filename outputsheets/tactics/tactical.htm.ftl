@@ -69,6 +69,20 @@ section.closed > .body{display:none}
 .action-cost{margin-left:auto}
 .block.creature{border-left-color:var(--grn)}
 .block.spells{border-left-color:var(--def)}
+.block.capabilities{border-left-color:var(--holy)}
+.block.item{border-left-color:var(--gold)}
+.block.buff{border-left-color:var(--buff)}
+.capability{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:baseline;font-size:12px;
+  padding:3px 0 4px;border-bottom:1px solid var(--bg3)}
+.capability:last-child{border-bottom:none}
+.capability.hidden{display:none}
+.cap-name{color:var(--gold-bright);font-weight:600;margin-right:auto}
+.cap-effect{color:var(--text);flex:1 1 100%;padding-left:10px}
+.buff-switch{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;cursor:pointer}
+.buff-label{color:var(--buff);font-weight:600}
+.tag.through{color:var(--grn)}
+.buffed{color:var(--holy)!important}
+.was{color:var(--text-dim);font-size:11px;text-decoration:line-through;margin-right:4px}
 
 .step .trigger{color:var(--warn)}
 .step .actions{display:block}
@@ -123,17 +137,17 @@ td{padding:2px 6px 2px 0;vertical-align:top}
 
 <div class="vitals">
   <div class="vital hp"><span class="name">HP</span><span class="value">${hitPoints}</span></div>
-  <div class="vital ac"><span class="name">AC</span><span class="value">${pcstring('AC.Total')}</span></div>
-  <div class="vital"><span class="name">Touch</span><span class="value">${pcstring('AC.Touch')}</span></div>
-  <div class="vital"><span class="name">Flat</span><span class="value">${pcstring('AC.Flatfooted')}</span></div>
-  <div class="vital"><span class="name">Init</span><span class="value">${pcstring('INITIATIVEMOD')}</span></div>
+  <div class="vital ac" data-target="ac" data-base="${pcstring('AC.Total')}"><span class="name">AC</span><span class="value">${pcstring('AC.Total')}</span></div>
+  <div class="vital" data-target="touch" data-base="${pcstring('AC.Touch')}"><span class="name">Touch</span><span class="value">${pcstring('AC.Touch')}</span></div>
+  <div class="vital" data-target="flat" data-base="${pcstring('AC.Flatfooted')}"><span class="name">Flat</span><span class="value">${pcstring('AC.Flatfooted')}</span></div>
+  <div class="vital" data-target="initiative" data-base="${pcstring('INITIATIVEMOD')}"><span class="name">Init</span><span class="value">${pcstring('INITIATIVEMOD')}</span></div>
   <div class="vital atk"><span class="name">Melee</span><span class="value">${pcstring('ATTACK.MELEE.TOTAL')}</span></div>
   <div class="vital atk"><span class="name">Ranged</span><span class="value">${pcstring('ATTACK.RANGED.TOTAL')}</span></div>
 <@loop from=0 to=pcvar('COUNT[CHECKS]-1') ; check , check_has_next>
-  <div class="vital"><span class="name">${pcstring('CHECK.${check}.NAME')}</span><span class="value">${pcstring('CHECK.${check}.TOTAL')}</span></div>
+  <div class="vital" data-target="${tactics.saveTargets[check]!''}" data-base="${pcstring('CHECK.${check}.TOTAL')}"><span class="name">${pcstring('CHECK.${check}.NAME')}</span><span class="value">${pcstring('CHECK.${check}.TOTAL')}</span></div>
 </@loop>
 <@loop from=0 to=pcvar('COUNT[MOVE]-1') ; movement , movement_has_next>
-  <div class="vital"><span class="name">${pcstring('MOVE.${movement}.NAME')}</span><span class="value">${pcstring('MOVE.${movement}.RATE')}</span></div>
+  <div class="vital" data-target="speed" data-base="${pcstring('MOVE.${movement}.RATE')}"><span class="name">${pcstring('MOVE.${movement}.NAME')}</span><span class="value">${pcstring('MOVE.${movement}.RATE')}</span></div>
 </@loop>
 </div>
 
@@ -201,8 +215,8 @@ td{padding:2px 6px 2px 0;vertical-align:top}
             </#if>
             <tr>
               <td class="block-head">${block.name}</td>
-              <td class="hit">${block.toHit}</td>
-              <td class="dmg">${block.damage}</td>
+              <td class="hit" data-base="${block.toHit}">${block.toHit}</td>
+              <td class="dmg" data-base="${block.damage}">${block.damage}</td>
               <td>${block.critical}</td>
             </tr>
           </table>
@@ -232,8 +246,11 @@ td{padding:2px 6px 2px 0;vertical-align:top}
       <#elseif block.kind == 'spells'>
         <div class="block spells">
           <div class="block-head"><#if block.source == 'prepared'>${tactics.labels.prepared}<#else>${tactics.labels.known}</#if></div>
+          <#if block.unmatched?size gt 0>
+            <span class="unresolved">${tactics.labels.unmatchedTags} ${block.unmatched?join(", ")}</span>
+          </#if>
           <#if block.spells?size gt 0>
-            <div class="filters"></div>
+            <div class="filters" data-tags="${block.tags?join(",")}"></div>
             <#list block.spells as spell>
               <div class="spell" data-tags="<#list spell.tags as tag>${tag}<#sep>,</#sep></#list>">
                 <span class="level">Lv ${spell.level}</span>
@@ -245,6 +262,50 @@ td{padding:2px 6px 2px 0;vertical-align:top}
           <#else>
             <span class="note">${tactics.labels.noSpells}</span>
           </#if>
+        </div>
+      <#elseif block.kind == 'capabilities'>
+        <div class="block capabilities">
+          <div class="block-head">${block.title}</div>
+          <div class="filters" data-tags="${block.tags?join(",")}"></div>
+          <#list block.capabilities as capability>
+            <div class="capability" data-tags="${capability.tags?join(",")}">
+              <span class="cap-name">${capability.name}</span>
+              <#if capability.action?has_content><span class="action-cost">${capability.action}</span></#if>
+              <#if capability.uses?has_content><span class="pip-count">${capability.uses}</span></#if>
+              <#list capability.tags as tag><span class="tag">${tag}</span></#list>
+              <#if capability.effect?has_content><span class="cap-effect">${capability.effect}</span></#if>
+            </div>
+          </#list>
+        </div>
+      <#elseif block.kind == 'item'>
+        <div class="block item">
+          <div class="block-head">${block.name}</div>
+          <dl class="rows">
+          <#list block.rows as row>
+            <dt>${row.label}</dt><dd>${row.content}</dd>
+          </#list>
+          </dl>
+        </div>
+      <#elseif block.kind == 'buff'>
+        <div class="block buff">
+          <label class="buff-switch">
+            <input type="checkbox" data-buff="${block.label}"
+              data-deltas="<#list block.deltas as delta>${delta.target} ${delta.amount}<#sep>,</#sep></#list>"
+              <#if block.throughPcgen>data-bonus="${block.bonus}"</#if>
+              <#if block.active>checked</#if>
+              <#if block.throughPcgen && !block.known>disabled</#if> />
+            <span class="buff-label">${block.label}</span>
+            <#if block.duration?has_content><span class="action-cost">${block.duration}</span></#if>
+            <#list block.deltas as delta><span class="tag">${delta.target} ${delta.signed}</span></#list>
+            <#if block.throughPcgen>
+              <#if block.known>
+                <span class="tag through">${tactics.labels.throughPcgen}</span>
+              <#else>
+                <span class="unresolved">${tactics.labels.noBonus?replace("{0}", "'" + block.bonus + "'")}</span>
+              </#if>
+            </#if>
+          </label>
+          <#if block.note?has_content><span class="note">${block.note}</span></#if>
         </div>
       </#if>
     </#list>
@@ -341,43 +402,143 @@ td{padding:2px 6px 2px 0;vertical-align:top}
     });
   });
 
-  Array.prototype.forEach.call(document.querySelectorAll(".block.spells"), function (block) {
-    var filters = block.querySelector(".filters");
-    var spells = Array.prototype.slice.call(block.querySelectorAll(".spell"));
-    if (!filters) {
-      return;
-    }
-    var tags = [];
-    spells.forEach(function (spell) {
-      (spell.getAttribute("data-tags") || "").split(",").forEach(function (tag) {
-        if (tag && tags.indexOf(tag) < 0) {
-          tags.push(tag);
-        }
-      });
+  // One filter bar for anything that declares tags: a spell repertoire or a
+  // capability list. The bar is built from the tags the plan declared, not from
+  // the ones that happen to have matched, so a tag that matches nothing is
+  // still visible as an empty filter rather than quietly absent.
+  Array.prototype.forEach.call(document.querySelectorAll(".filters"), function (bar) {
+    var declared = (bar.getAttribute("data-tags") || "").split(",").filter(function (tag) {
+      return tag !== "";
     });
-    if (!tags.length) {
+    if (!declared.length) {
       return;
     }
+    var block = bar.parentNode;
+    var rows = Array.prototype.slice.call(block.querySelectorAll(".spell, .capability"));
     var show = function (wanted) {
-      spells.forEach(function (spell) {
-        var owned = (spell.getAttribute("data-tags") || "").split(",");
-        spell.classList.toggle("hidden", wanted !== "" && owned.indexOf(wanted) < 0);
+      rows.forEach(function (row) {
+        var owned = (row.getAttribute("data-tags") || "").split(",");
+        row.classList.toggle("hidden", wanted !== "" && owned.indexOf(wanted) < 0);
       });
     };
-    ["", ].concat(tags).forEach(function (tag) {
+    [""].concat(declared).forEach(function (tag) {
       var button = document.createElement("button");
       button.type = "button";
       button.className = "target-tab" + (tag === "" ? " on" : "");
       button.textContent = tag === "" ? everyTag : tag;
       button.addEventListener("click", function () {
-        Array.prototype.forEach.call(filters.querySelectorAll(".target-tab"), function (other) {
+        Array.prototype.forEach.call(bar.querySelectorAll(".target-tab"), function (other) {
           other.classList.remove("on");
         });
         button.classList.add("on");
         show(tag);
       });
-      filters.appendChild(button);
+      bar.appendChild(button);
     });
   });
+
+  // Buffs. A buff that declares deltas is arithmetic the page does on the
+  // numbers it can see; a buff that names a temporary bonus is handed to PCGen,
+  // which recomputes everything and re-renders the sheet.
+  var switches = Array.prototype.slice.call(document.querySelectorAll("[data-buff]"));
+
+  function sumOfActiveDeltas() {
+    var total = {};
+    switches.forEach(function (box) {
+      if (!box.checked) {
+        return;
+      }
+      (box.getAttribute("data-deltas") || "").split(",").forEach(function (pair) {
+        var parts = pair.trim().split(/\s+/);
+        if (parts.length < 2) {
+          return;
+        }
+        var amount = parseInt(parts[1], 10);
+        if (!isNaN(amount)) {
+          total[parts[0]] = (total[parts[0]] || 0) + amount;
+        }
+      });
+    });
+    return total;
+  }
+
+  // "+14/+9" plus 3 is "+17/+12"; "1d8+9" plus 2 is "1d8+11"; "20 ft." plus 10
+  // is "30 ft.". Anything with no number in it is left alone.
+  function shift(text, amount) {
+    if (amount === 0 || !text) {
+      return text;
+    }
+    if (/^[+-]?\d+([/][+-]?\d+)+$/.test(text.replace(/\s/g, ""))) {
+      return text.replace(/\s/g, "").split("/").map(function (part) {
+        var moved = parseInt(part, 10) + amount;
+        return (moved < 0 ? "" : "+") + moved;
+      }).join("/");
+    }
+    if (/\dd\d/.test(text)) {
+      var dice = text.match(/^(.*?\dd\d+)\s*([+-]\s*\d+)?(.*)$/);
+      if (dice) {
+        var constant = dice[2] ? parseInt(dice[2].replace(/\s/g, ""), 10) : 0;
+        var moved = constant + amount;
+        return dice[1] + (moved === 0 ? "" : (moved < 0 ? moved : "+" + moved)) + (dice[3] || "");
+      }
+      return text;
+    }
+    var single = text.match(/^(\D*)([+-]?\d+)(.*)$/);
+    if (!single) {
+      return text;
+    }
+    var value = parseInt(single[2], 10) + amount;
+    var signed = /^[+-]/.test(single[2]) ? ((value < 0 ? "" : "+") + value) : String(value);
+    return single[1] + signed + single[3];
+  }
+
+  function paintBuffs() {
+    var total = sumOfActiveDeltas();
+    var apply = function (node, amount) {
+      var base = node.getAttribute("data-base");
+      if (base === null) {
+        return;
+      }
+      var target = node.classList.contains("value") ? node : node;
+      var moved = shift(base, amount || 0);
+      target.textContent = moved;
+      target.classList.toggle("buffed", moved !== base);
+    };
+    Array.prototype.forEach.call(document.querySelectorAll(".attack .hit"), function (cell) {
+      apply(cell, total.attack);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".attack .dmg"), function (cell) {
+      apply(cell, total.damage);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".vital[data-target]"), function (vital) {
+      var target = vital.getAttribute("data-target");
+      var value = vital.querySelector(".value");
+      if (!target || !value) {
+        return;
+      }
+      var base = vital.getAttribute("data-base");
+      var moved = shift(base, total[target] || 0);
+      value.textContent = moved;
+      value.classList.toggle("buffed", moved !== base);
+    });
+  }
+
+  switches.forEach(function (box) {
+    box.addEventListener("change", function () {
+      var link = bridge();
+      var bonus = box.getAttribute("data-bonus");
+      if (link && link.setBuffActive) {
+        link.setBuffActive(box.getAttribute("data-buff"), box.checked);
+      }
+      if (bonus && link && link.applyTemporaryBonus) {
+        // PCGen recomputes and the sheet is rendered again, so there is nothing
+        // for the page to add up.
+        link.applyTemporaryBonus(bonus, box.checked);
+        return;
+      }
+      paintBuffs();
+    });
+  });
+  paintBuffs();
 }());
 </script>

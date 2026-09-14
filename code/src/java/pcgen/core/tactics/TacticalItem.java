@@ -17,21 +17,29 @@
  */
 package pcgen.core.tactics;
 
+import java.util.List;
+
 /**
- * What kind of thing a tactical block points at when it borrows the
- * character's own numbers.
+ * A piece of gear worth a card of its own: its aura, its price, its powers,
+ * its curse.
  *
  * <p>
- * Only kinds PCGen can actually answer are listed. A name pointing at
- * something PCGen has no concept of would resolve to nothing, so the sheet
- * writes such a value out instead.
+ * Its rows are free labels, like a creature's, because what an item is worth
+ * saying differs from item to item.
+ *
+ * @param name what to call it. Never blank.
+ * @param rows what to say about it, in reading order. Never empty, and never
+ *             modifiable through the list passed in.
  */
-public enum ReferenceKind
+public record TacticalItem(String name, List<TacticalRow> rows) implements TacticalBlock
 {
-	/** An equipped weapon, for its attack bonus, damage and critical. */
-	WEAPON,
-	/** A variable PCGen computes, for a number such as uses per day. */
-	VAR,
-	/** A temporary bonus the character holds, for a buff PCGen can recompute. */
-	TEMPBONUS
+	public TacticalItem
+	{
+		name = TacticalText.required(name, "name");
+		if (rows == null || rows.isEmpty())
+		{
+			throw new IllegalArgumentException("Item '" + name + "' needs at least one row");
+		}
+		rows = List.copyOf(rows);
+	}
 }

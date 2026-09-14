@@ -18,20 +18,26 @@
 package pcgen.core.tactics;
 
 /**
- * What kind of thing a tactical block points at when it borrows the
- * character's own numbers.
+ * How much a buff changes one thing.
  *
- * <p>
- * Only kinds PCGen can actually answer are listed. A name pointing at
- * something PCGen has no concept of would resolve to nothing, so the sheet
- * writes such a value out instead.
+ * @param target what it changes. Never null.
+ * @param amount by how much, which may be negative.
  */
-public enum ReferenceKind
+public record TacticalDelta(DeltaTarget target, int amount)
 {
-	/** An equipped weapon, for its attack bonus, damage and critical. */
-	WEAPON,
-	/** A variable PCGen computes, for a number such as uses per day. */
-	VAR,
-	/** A temporary bonus the character holds, for a buff PCGen can recompute. */
-	TEMPBONUS
+	public TacticalDelta
+	{
+		if (target == null)
+		{
+			throw new IllegalArgumentException("A delta needs something to change");
+		}
+	}
+
+	/**
+	 * @return the amount as it should read on the sheet, signed
+	 */
+	public String signed()
+	{
+		return (amount < 0) ? Integer.toString(amount) : "+" + amount;
+	}
 }

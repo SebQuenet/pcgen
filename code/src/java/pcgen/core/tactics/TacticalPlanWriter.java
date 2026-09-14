@@ -66,6 +66,9 @@ public final class TacticalPlanWriter
 			case TacticalAttack attack -> writeAttack(out, attack);
 			case TacticalCreature creature -> writeCreature(out, creature);
 			case TacticalSpellList spells -> writeSpells(out, spells);
+			case TacticalCapabilityList capabilities -> writeCapabilities(out, capabilities);
+			case TacticalItem item -> writeItem(out, item);
+			case TacticalBuff buff -> writeBuff(out, buff);
 		}
 	}
 
@@ -136,6 +139,56 @@ public final class TacticalPlanWriter
 			out.append("  tag: ").append(escape(tag.spellName())).append(" | ")
 				.append(escape(String.join(", ", tag.tags()))).append('\n');
 		}
+	}
+
+	private static void writeCapabilities(StringBuilder out, TacticalCapabilityList list)
+	{
+		out.append("capabilities: ").append(escape(list.title())).append('\n');
+		for (TacticalCapability capability : list.capabilities())
+		{
+			out.append("  power: ").append(escape(capability.name()));
+			out.append(" | ").append(escape(String.join(", ", capability.tags())));
+			if (!capability.action().isEmpty() || !capability.uses().isEmpty() || !capability.effect().isEmpty())
+			{
+				out.append(" | ").append(escape(capability.action()));
+				out.append(" | ").append(escape(capability.uses()));
+				out.append(" | ").append(escape(capability.effect()));
+			}
+			out.append('\n');
+		}
+	}
+
+	private static void writeItem(StringBuilder out, TacticalItem item)
+	{
+		out.append("item: ").append(escape(item.name())).append('\n');
+		for (TacticalRow row : item.rows())
+		{
+			out.append("  row: ").append(escape(row.label())).append(" | ").append(escape(row.content())).append('\n');
+		}
+	}
+
+	private static void writeBuff(StringBuilder out, TacticalBuff buff)
+	{
+		out.append("buff: ").append(escape(buff.label()));
+		if (!buff.duration().isEmpty())
+		{
+			out.append(" | ").append(escape(buff.duration()));
+		}
+		out.append('\n');
+		if (!buff.gives().isEmpty())
+		{
+			out.append("  gives: ");
+			for (int index = 0; index < buff.gives().size(); index++)
+			{
+				TacticalDelta delta = buff.gives().get(index);
+				out.append((index == 0) ? "" : " | ");
+				out.append(delta.target().name().toLowerCase(java.util.Locale.ROOT)).append(' ')
+					.append(delta.signed());
+			}
+			out.append('\n');
+		}
+		buff.applies().ifPresent(reference -> out.append("  applies: ").append(subject(reference)).append('\n'));
+		appendNote(out, buff.note());
 	}
 
 	private static void appendNote(StringBuilder out, String note)

@@ -172,6 +172,21 @@ public final class TacticalPlanParser
 			{
 				return readSpells(spells.get(), lineNumber);
 			}
+			Optional<String> capabilities = valueOf(line, "capabilities");
+			if (capabilities.isPresent())
+			{
+				return readCapabilities(capabilities.get(), lineNumber);
+			}
+			Optional<String> item = valueOf(line, "item");
+			if (item.isPresent())
+			{
+				return readItem(item.get(), lineNumber);
+			}
+			Optional<String> buff = valueOf(line, "buff");
+			if (buff.isPresent())
+			{
+				return readBuff(buff.get(), lineNumber);
+			}
 			errors.add(new TacticalParseError(lineNumber, "Unknown block: " + keyOf(line)));
 			skipSubLines();
 			return Optional.empty();
@@ -327,6 +342,169 @@ public final class TacticalPlanParser
 				return Optional.empty();
 			}
 			return block(() -> new TacticalSpellList(source.get(), tags), lineNumber);
+		}
+
+		private Optional<TacticalBlock> readCapabilities(String title, int lineNumber)
+		{
+			List<TacticalCapability> capabilities = new ArrayList<>();
+			for (SubLine sub : subLines("capability list", List.of("power")))
+			{
+				List<String> fields = fieldsOf(sub.value());
+				if (fields.size() < 2 || fields.get(1).isEmpty())
+				{
+					errors.add(new TacticalParseError(sub.line(),
+						"A capability is written 'power: name | tag, tag | action | uses | effect', "
+							+ "and it needs at least one tag so the list can be filtered"));
+					continue;
+				}
+				List<String> tags = List.of(fields.get(1).split(","));
+				String action = fieldAt(fields, 2).orElse("");
+				String uses = fieldAt(fields, 3).orElse("");
+				String effect = fieldAt(fields, 4).orElse("");
+				try
+				{
+					capabilities.add(new TacticalCapability(fields.getFirst(), tags, action, uses, effect));
+				}
+				catch (IllegalArgumentException e)
+				{
+					errors.add(new TacticalParseError(sub.line(), e.getMessage()));
+				}
+			}
+			if (capabilities.isEmpty())
+			{
+				errors.add(new TacticalParseError(lineNumber, "A capability list needs at least one 'power:' line"));
+				return Optional.empty();
+			}
+			return block(() -> new TacticalCapabilityList(title, capabilities), lineNumber);
+		}
+
+		private Optional<TacticalBlock> readItem(String name, int lineNumber)
+		{
+			List<TacticalRow> rows = new ArrayList<>();
+			for (SubLine sub : subLines("item", List.of("row")))
+			{
+				List<String> parts = fieldsOf(sub.value());
+				if (parts.size() < 2)
+				{
+					errors.add(new TacticalParseError(sub.line(), "A row is written 'row: heading | contents'"));
+					continue;
+				}
+				rows.add(new TacticalRow(parts.get(0), parts.get(1)));
+			}
+			if (rows.isEmpty())
+			{
+				errors.add(new TacticalParseError(lineNumber, "An item needs at least one 'row:' line"));
+				return Optional.empty();
+			}
+			return block(() -> new TacticalItem(name, rows), lineNumber);
+		}
+
+		private Optional<TacticalBlock> readBuff(String head, int lineNumber)
+		{
+			List<String> fields = fieldsOf(head);
+			List<TacticalDelta> gives = new ArrayList<>();
+			Optional<TacticalReference> applies = Optional.empty();
+			String note = "";
+			for (SubLine sub : subLines("buff", List.of("gives", "applies", "note")))
+			{
+				switch (sub.key())
+				{
+					case "note" -> note = sub.value();
+					case "applies" -> applies = temporaryBonus(sub.value(), sub.line());
+					default -> gives.addAll(deltasOf(sub.value(), sub.line()));
+				}
+			}
+			if (gives.isEmpty() && applies.isEmpty())
+			{
+				errors.add(new TacticalParseError(lineNumber,
+					"A buff needs a 'gives:' line saying what it changes, or an 'applies:' line naming a "
+						+ "temporary bonus PCGen holds"));
+				return Optional.empty();
+			}
+			String label = fields.getFirst();
+			String duration = fieldAt(fields, 1).orElse("");
+			Optional<TacticalReference> named = applies;
+			String buffNote = note;
+			return block(() -> new TacticalBuff(label, duration, gives, named, buffNote), lineNumber);
+		}
+
+		private Optional<TacticalReference> temporaryBonus(String value, int lineNumber)
+		{
+			Optional<TacticalSubject> named = subject(value, lineNumber);
+			if (named.isEmpty())
+			{
+				return Optional.empty();
+			}
+			if (named.get() instanceof TacticalReference reference && reference.kind() == ReferenceKind.TEMPBONUS)
+			{
+				return Optional.of(reference);
+			}
+			errors.add(new TacticalParseError(lineNumber,
+					"An 'applies:' line names a temporary bonus, written '@tempbonus(name)'"));
+			return Optional.empty();
+		}
+
+		/**
+		 * Read the deltas on one 'gives:' line.
+		 *
+		 * @param value      everything after the key
+		 * @param lineNumber the line it sits on, for an error
+		 * @return the deltas it declares, skipping the ones that did not read
+		 */
+		private List<TacticalDelta> deltasOf(String value, int lineNumber)
+		{
+			List<TacticalDelta> deltas = new ArrayList<>();
+			for (String field : fieldsOf(value))
+			{
+				if (field.isEmpty())
+				{
+					continue;
+				}
+				String[] parts = field.split("\\s+");
+				if (parts.length < 2)
+				{
+					errors.add(new TacticalParseError(lineNumber,
+						"A delta is written 'target +2', and '" + field + "' carries no amount"));
+					continue;
+				}
+				Optional<DeltaTarget> target = deltaTarget(parts[0], lineNumber);
+				if (target.isEmpty())
+				{
+					continue;
+				}
+				try
+				{
+					deltas.add(new TacticalDelta(target.get(), Integer.parseInt(parts[1].replace("+", ""))));
+				}
+				catch (NumberFormatException notANumber)
+				{
+					errors.add(new TacticalParseError(lineNumber,
+						"'" + parts[1] + "' is not an amount a delta can add"));
+				}
+			}
+			return deltas;
+		}
+
+		private Optional<DeltaTarget> deltaTarget(String name, int lineNumber)
+		{
+			String wanted = name.strip().toUpperCase(java.util.Locale.ROOT);
+			for (DeltaTarget target : DeltaTarget.values())
+			{
+				if (target.name().equals(wanted))
+				{
+					return Optional.of(target);
+				}
+			}
+			errors.add(new TacticalParseError(lineNumber,
+				"A buff cannot change '" + name.strip() + "'; it changes one of " + targetNames()));
+			return Optional.empty();
+		}
+
+		private static String targetNames()
+		{
+			return java.util.Arrays.stream(DeltaTarget.values())
+				.map(target -> target.name().toLowerCase(java.util.Locale.ROOT))
+				.collect(java.util.stream.Collectors.joining(", "));
 		}
 
 		private Optional<SpellSource> spellSource(String head, int lineNumber)

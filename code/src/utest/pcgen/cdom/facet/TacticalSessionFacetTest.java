@@ -18,6 +18,7 @@
 package pcgen.cdom.facet;
 
 import java.util.Map;
+import java.util.Set;
 
 import pcgen.cdom.enumeration.CharID;
 import pcgen.cdom.facet.base.AbstractItemFacet;
@@ -41,6 +42,6 @@ public class TacticalSessionFacetTest extends AbstractItemFacetTest<TacticalSess
 	protected TacticalSessionState getItem()
 	{
 		stateCount++;
-		return new TacticalSessionState(stateCount, Map.of("Mythic power", stateCount));
+		return new TacticalSessionState(stateCount, Map.of("Mythic power", stateCount), Set.of());
 	}
 }

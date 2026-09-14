@@ -62,6 +62,9 @@ public final class TacticalSheetTools
 		  attack: <name> | <to hit> | <damage> | <crit>  all four fields when written out
 		  creature: <name> | <source> | <duration>      then one or more '  row: <heading> | <contents>'
 		  spells: @prepared                             then optionally '  tag: <spell> | <tag>, <tag>'
+		  capabilities: <title>     then '  power: <name> | <tag>, <tag> | <action> | <uses> | <effect>'
+		  item: <name>              then one or more '  row: <heading> | <contents>'
+		  buff: <label> | <duration>  then '  gives: <target> +2 | <target> +2' or '  applies: @tempbonus(<name>)'
 
 		Fields are separated by '|'. Two spaces of indentation attach a line to the
 		block above it. In a single line field, the two characters \\n mean a line break.
@@ -69,6 +72,16 @@ public final class TacticalSheetTools
 		'@weapon(name)' and '@var(name)' read the character's own numbers, so the sheet
 		follows a level up without being rewritten. Call list_tactical_references to see
 		what those names may be. Anything else is written out as text.
+
+		A capability needs at least one tag: the tags become the list's filter bar, which is
+		the point of the list. Tag by what a capability is FOR — buff, damage, control,
+		protection, healing, utility, emergency, summoning — not by where it comes from.
+
+		A buff changes the numbers one of two ways. 'gives:' declares deltas the page adds up,
+		which works in the exported file too but is your arithmetic; targets are attack,
+		damage, ac, touch, flat, fortitude, reflex, will, initiative, speed. 'applies:' names a
+		temporary bonus PCGen holds, which is exact and knows what does not stack, but only
+		works inside PCGen. Note on the sheet when bonuses do not stack: the page cannot know.
 		""";
 
 	private TacticalSheetTools()
@@ -193,8 +206,8 @@ public final class TacticalSheetTools
 	{
 		return new SyncToolSpecification(
 			new Tool("list_tactical_references",
-				"List what a tactical sheet may point at with @weapon(...) and @var(...), plus the spells "
-					+ "a spells block would show. Use these names verbatim.",
+				"List what a tactical sheet may point at with @weapon(...), @var(...) and @tempbonus(...), "
+					+ "plus the spells a spells block would show. Use these names verbatim.",
 				"""
 					{
 						"type": "object",
@@ -208,7 +221,8 @@ public final class TacticalSheetTools
 				try
 				{
 					PlayerCharacter pc = session.getPlayerCharacter((String) args.get("character_id"));
-					return toResult(Map.of("weapons", weaponsOf(pc), "variables", variablesOf(pc), "preparedSpells",
+					return toResult(Map.of("weapons", weaponsOf(pc), "variables", variablesOf(pc),
+						"temporaryBonuses", new TacticalResolver(pc).temporaryBonusNames(), "preparedSpells",
 						spellsOf(pc, pcgen.core.tactics.SpellSource.PREPARED), "knownSpells",
 						spellsOf(pc, pcgen.core.tactics.SpellSource.KNOWN)));
 				}

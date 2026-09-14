@@ -124,6 +124,37 @@ class TacticalPlanWriterTest
 	}
 
 	@Test
+	void roundTripsACapabilityList()
+	{
+		assertRoundTrips(sheetOf(new TacticalCapabilityList("Repertoire",
+			List.of(new TacticalCapability("Touch of Good", List.of("buff", "support"), "standard", "10/day",
+				"+3 sacred to attacks and saves"),
+				new TacticalCapability("Hard to Kill", List.of("survival"), "", "", "")))));
+	}
+
+	@Test
+	void roundTripsAnItemCard()
+	{
+		assertRoundTrips(sheetOf(new TacticalItem("Sceptre of Timeon",
+			List.of(new TacticalRow("Aura", "moderate evocation, CL 10")))));
+	}
+
+	@Test
+	void roundTripsABuffThatDeclaresItsDeltas()
+	{
+		assertRoundTrips(sheetOf(new TacticalBuff("Aura of holiness", "15 rounds",
+			List.of(new TacticalDelta(DeltaTarget.AC, 4), new TacticalDelta(DeltaTarget.WILL, -1)),
+			Optional.empty(), "only against evil creatures")));
+	}
+
+	@Test
+	void roundTripsABuffThatLeansOnATemporaryBonus()
+	{
+		assertRoundTrips(sheetOf(new TacticalBuff("Divine favour", "1 min", List.of(),
+			Optional.of(new TacticalReference(ReferenceKind.TEMPBONUS, "Divine Favor")), "")));
+	}
+
+	@Test
 	void roundTripsSeveralSections()
 	{
 		assertRoundTrips(new TacticalSheet(List.of(

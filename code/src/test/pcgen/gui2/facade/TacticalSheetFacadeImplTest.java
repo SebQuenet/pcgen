@@ -18,6 +18,7 @@
 package pcgen.gui2.facade;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
@@ -42,7 +43,7 @@ public class TacticalSheetFacadeImplTest extends AbstractCharacterTestCase
 
 	private TacticalSheetFacade facadeFor(PlayerCharacter character)
 	{
-		return new TacticalSheetFacadeImpl(character);
+		return new TacticalSheetFacadeImpl(character, null);
 	}
 
 	@Test
@@ -141,6 +142,48 @@ public class TacticalSheetFacadeImplTest extends AbstractCharacterTestCase
 		facade.spend("Mythic power", 0);
 
 		assertEquals(0, character.getDisplay().getTacticalSession().spent("Mythic power"));
+	}
+
+	@Test
+	public void recordsThatABuffIsUp()
+	{
+		PlayerCharacter character = getCharacter();
+		TacticalSheetFacade facade = facadeFor(character);
+
+		facade.setBuffActive("Divine favour", true);
+
+		assertTrue(character.getDisplay().getTacticalSession().isBuffActive("Divine favour"));
+	}
+
+	@Test
+	public void forgetsABuffThatIsSwitchedOff()
+	{
+		PlayerCharacter character = getCharacter();
+		TacticalSheetFacade facade = facadeFor(character);
+		facade.setBuffActive("Divine favour", true);
+
+		facade.setBuffActive("Divine favour", false);
+
+		assertFalse(character.getDisplay().getTacticalSession().isBuffActive("Divine favour"));
+	}
+
+	@Test
+	public void saysSoWhenNoTemporaryBonusAnswersToThatName()
+	{
+		assertFalse(facadeFor(getCharacter()).applyTemporaryBonus("Divine Favor", true));
+	}
+
+	@Test
+	public void keepsBuffsWhenDamageIsRecorded()
+	{
+		PlayerCharacter character = getCharacter();
+		TacticalSheetFacade facade = facadeFor(character);
+		facade.setBuffActive("Divine favour", true);
+
+		facade.setDamage(19);
+
+		assertTrue(character.getDisplay().getTacticalSession().isBuffActive("Divine favour"));
+		assertEquals(19, character.getDisplay().getTacticalSession().damageTaken());
 	}
 
 	@Test

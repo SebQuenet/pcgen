@@ -18,11 +18,13 @@
 package pcgen.core.tactics;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -44,7 +46,7 @@ class TacticalSessionStateTest
 	@Test
 	void keepsWhatItWasGiven()
 	{
-		TacticalSessionState state = new TacticalSessionState(19, Map.of("Mythic power", 4));
+		TacticalSessionState state = new TacticalSessionState(19, Map.of("Mythic power", 4), Set.of());
 
 		assertEquals(19, state.damageTaken());
 		assertEquals(4, state.spent("Mythic power"));
@@ -59,20 +61,35 @@ class TacticalSessionStateTest
 	@Test
 	void refusesNegativeDamage()
 	{
-		assertThrows(IllegalArgumentException.class, () -> new TacticalSessionState(-1, Map.of()));
+		assertThrows(IllegalArgumentException.class, () -> new TacticalSessionState(-1, Map.of(), Set.of()));
 	}
 
 	@Test
 	void refusesANegativeCount()
 	{
-		assertThrows(IllegalArgumentException.class, () -> new TacticalSessionState(0, Map.of("Channel", -1)));
+		assertThrows(IllegalArgumentException.class, () -> new TacticalSessionState(0, Map.of("Channel", -1), Set.of()));
+	}
+
+	@Test
+	void remembersWhichBuffsAreUp()
+	{
+		TacticalSessionState state = new TacticalSessionState(0, Map.of(), Set.of("Divine favour"));
+
+		assertTrue(state.isBuffActive("Divine favour"));
+		assertFalse(state.isBuffActive("Bless"));
+	}
+
+	@Test
+	void aSessionWithABuffUpIsNotUntouched()
+	{
+		assertFalse(new TacticalSessionState(0, Map.of(), Set.of("Divine favour")).isUntouched());
 	}
 
 	@Test
 	void cannotBeChangedThroughTheMapPassedIn()
 	{
 		Map<String, Integer> mutable = new HashMap<>(Map.of("Channel", 2));
-		TacticalSessionState state = new TacticalSessionState(0, mutable);
+		TacticalSessionState state = new TacticalSessionState(0, mutable, Set.of());
 
 		mutable.clear();
 

@@ -125,6 +125,99 @@ public class TacticalSheetRenderTest extends AbstractCharacterTestCase
 	}
 
 	@Test
+	public void offersAFilterForEveryTagACapabilityListDeclares() throws IOException, ExportException
+	{
+		getCharacter().setTacticalPlan("""
+			## Repertoire
+			capabilities: Everything
+			  power: Touch of Good | buff, support | standard | 10/day | +3 sacred
+			  power: Holy smite | damage
+			""");
+
+		String html = render();
+
+		assertTrue(html.contains("data-tags=\"buff,damage,support\""), html);
+		assertTrue(html.contains("Touch of Good"), html);
+		assertTrue(html.contains("+3 sacred"), html);
+	}
+
+	@Test
+	public void saysWhichSpellTagsMatchNothingTheCharacterHolds() throws IOException, ExportException
+	{
+		getCharacter().setTacticalPlan("""
+			## Spells
+			spells: @prepared
+			  tag: Chatiment sacre | damage
+			""");
+
+		String html = render();
+
+		assertTrue(html.contains(LanguageBundle.getString("in_tactical_unmatched_tags")), html);
+		assertTrue(html.contains("Chatiment sacre"), html);
+	}
+
+	@Test
+	public void rendersABuffAsASwitchCarryingItsDeltas() throws IOException, ExportException
+	{
+		getCharacter().setTacticalPlan("""
+			## Buffs
+			buff: Aura of holiness | 15 rounds
+			  gives: ac +4 | will +4
+			""");
+
+		String html = render();
+
+		assertTrue(html.contains("data-buff=\"Aura of holiness\""), html);
+		assertTrue(html.contains("data-deltas=\"ac 4,will 4\""), html);
+	}
+
+	@Test
+	public void leavesABuffInertWhenPCGenHoldsNoSuchTemporaryBonus() throws IOException, ExportException
+	{
+		getCharacter().setTacticalPlan("""
+			## Buffs
+			buff: Divine favour | 1 min
+			  applies: @tempbonus(Divine Favor)
+			""");
+
+		String html = render();
+
+		assertTrue(html.contains("disabled"), html);
+		assertTrue(html.contains(LanguageBundle.getFormattedString("in_tactical_no_bonus", "'Divine Favor'"))
+			|| html.contains(LanguageBundle.getFormattedString("in_tactical_no_bonus", "&#39;Divine Favor&#39;")),
+			html);
+	}
+
+	@Test
+	public void givesEachAttackCellItsRestingValueSoABuffCanAddToIt() throws IOException, ExportException
+	{
+		getCharacter().setTacticalPlan("""
+			## Attacks
+			attack: Spear +1 | +13/+8 | 1d8+4 | 20/x3
+			""");
+
+		String html = render();
+
+		assertTrue(html.contains("data-base=\"+13/+8\""), html);
+		assertTrue(html.contains("data-base=\"1d8+4\""), html);
+	}
+
+	@Test
+	public void rendersAnItemCard() throws IOException, ExportException
+	{
+		getCharacter().setTacticalPlan("""
+			## Gear
+			item: Sceptre of Timeon
+			  row: Aura | moderate evocation, CL 10
+			""");
+
+		String html = render();
+
+		assertTrue(html.contains("Sceptre of Timeon"), html);
+		assertTrue(html.contains("moderate evocation, CL 10"), html);
+	}
+
+	@Test
 	public void countsOutThePipsOfAResource() throws IOException, ExportException
 	{
 		PlayerCharacter character = getCharacter();

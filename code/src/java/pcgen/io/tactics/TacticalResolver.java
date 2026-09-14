@@ -103,6 +103,30 @@ public final class TacticalResolver
 	}
 
 	/**
+	 * The temporary bonuses the character holds, which is what a buff may hand
+	 * its arithmetic to PCGen by naming.
+	 *
+	 * @return their names, empty when the character holds none
+	 */
+	public List<String> temporaryBonusNames()
+	{
+		return List.copyOf(character.getNamedTempBonusList());
+	}
+
+	/**
+	 * @param name the temporary bonus's name
+	 * @return true when the character holds a temporary bonus of that name
+	 */
+	public boolean hasTemporaryBonus(String name)
+	{
+		if (name == null || name.isBlank())
+		{
+			return false;
+		}
+		return character.getNamedTempBonusList().stream().anyMatch(held -> held.equalsIgnoreCase(name.strip()));
+	}
+
+	/**
 	 * The spells the character holds, in level then name order.
 	 *
 	 * @param source which list to read

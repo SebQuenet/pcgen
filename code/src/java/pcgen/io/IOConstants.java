@@ -414,6 +414,8 @@ interface IOConstants
 	String TAG_TACTICALDAMAGE = "TACTICALDAMAGE";
 	/** Tactical session: one line per resource entamed, label then count */
 	String TAG_TACTICALSPENT = "TACTICALSPENT";
+	/** Tactical session: one line per buff currently up */
+	String TAG_TACTICALBUFF = "TACTICALBUFF";
 	/** Tactical sheet, before the source syntax: one line per section */
 	String TAG_TACTICALSECTION = "TACTICALSECTION";
 	/** Tactical sheet: one line per entry, keyed by the index of its section */

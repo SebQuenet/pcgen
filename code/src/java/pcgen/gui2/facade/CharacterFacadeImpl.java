@@ -317,7 +317,7 @@ public class CharacterFacadeImpl
 		infoFactory = new Gui2InfoFactory(theCharacter);
 		characterAbilities = new CharacterAbilities(theCharacter, delegate, dataSet, todoManager);
 		descriptionFacade = new DescriptionFacadeImpl(theCharacter);
-		tacticalSheetFacade = new TacticalSheetFacadeImpl(theCharacter);
+		tacticalSheetFacade = new TacticalSheetFacadeImpl(theCharacter, this);
 		spellSupportFacade = new SpellSupportFacadeImpl(theCharacter, delegate, dataSet, todoManager, this);
 
 		name = new DefaultReferenceFacade<>(charDisplay.getName());

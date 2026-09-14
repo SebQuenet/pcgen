@@ -1647,6 +1647,11 @@ public final class PCGVer2Creator
 			buffer.append(session.damageTaken());
 			buffer.append(IOConstants.LINE_SEP);
 		}
+		session.activeBuffs().stream().sorted().forEach(label -> {
+			buffer.append(IOConstants.TAG_TACTICALBUFF).append(':');
+			buffer.append(EntityEncoder.encode(label));
+			buffer.append(IOConstants.LINE_SEP);
+		});
 		session.resourcesSpent().entrySet().stream()
 			.sorted(java.util.Map.Entry.comparingByKey())
 			.forEach(spent -> {

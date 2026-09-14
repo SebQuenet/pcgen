@@ -28,6 +28,7 @@ package pcgen.core.tactics;
  * half filled state.
  */
 public sealed interface TacticalBlock
-		permits TacticalStep, TacticalAttack, TacticalResource, TacticalCreature, TacticalSpellList, TacticalNote
+		permits TacticalStep, TacticalAttack, TacticalResource, TacticalCreature, TacticalSpellList, TacticalNote,
+				TacticalCapabilityList, TacticalItem, TacticalBuff
 {
 }

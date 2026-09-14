@@ -71,4 +71,25 @@ public interface TacticalSheetFacade
 	 * @param count how many of its uses are gone, never negative.
 	 */
 	void spend(String label, int count);
+
+	/**
+	 * Records that a buff is up, or no longer is.
+	 *
+	 * @param label  the buff's label, as the plan writes it.
+	 * @param active whether it is up.
+	 */
+	void setBuffActive(String label, boolean active);
+
+	/**
+	 * Hands a buff's arithmetic to PCGen by switching the temporary bonus it
+	 * names on or off, so the numbers come back exact and knowing what does not
+	 * stack.
+	 *
+	 * @param name   the temporary bonus's name, as the character knows it.
+	 * @param active whether it should be applied.
+	 * @return true when the character held such a bonus and it was switched;
+	 *         false when it holds none, so the caller can say so rather than
+	 *         leave a dead switch on the page.
+	 */
+	boolean applyTemporaryBonus(String name, boolean active);
 }
