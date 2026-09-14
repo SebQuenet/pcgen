@@ -29,6 +29,7 @@ import pcgen.session.service.CharacterBuildService;
 import pcgen.session.service.CharacterLifecycleService;
 import pcgen.session.service.SkillService;
 import pcgen.session.service.SourceService;
+import pcgen.session.service.SpellService;
 
 /**
  * Everything a caller can ask PCGen to do, gathered once from the services and
@@ -63,6 +64,7 @@ public final class OperationRegistry
 			new CharacterLifecycleService(session), new CharacterBuildService(session)));
 		operations.addAll(AbilitySkillOperations.of(
 			new AbilityService(session), new SkillService(session)));
+		operations.addAll(SpellOperations.of(new SpellService(session)));
 		return new OperationRegistry(operations);
 	}
 
