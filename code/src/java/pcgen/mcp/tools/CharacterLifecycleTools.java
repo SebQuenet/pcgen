@@ -11,7 +11,7 @@ import io.modelcontextprotocol.spec.McpSchema.CallToolResult;
 import io.modelcontextprotocol.spec.McpSchema.Tool;
 
 import pcgen.session.PcgenSession;
-import pcgen.mcp.serialization.FacadeSerializer;
+import pcgen.session.serialization.FacadeSerializer;
 
 public final class CharacterLifecycleTools
 {
