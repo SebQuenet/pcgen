@@ -26,19 +26,29 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import pcgen.session.PcgenSession;
+import pcgen.session.api.Operation;
 import pcgen.session.api.OperationRegistry;
+import pcgen.session.service.ServiceResult;
 
 /**
  * What the HTTP server answers, before any game data is loaded.
  */
 public class HttpApiServerTest
 {
+	private static final String EMPTY_SCHEMA = """
+		{ "type": "object", "properties": {}, "required": [] }
+		""";
+
 	private HttpApiServer server;
 	private HttpClient client;
 
@@ -119,6 +129,64 @@ public class HttpApiServerTest
 		HttpResponse<String> response = get("/api/load_sources");
 
 		assertEquals(405, response.statusCode());
+	}
+
+	/**
+	 * The deadlock the single worker would cause if every operation queued behind
+	 * every other: a call that opens a chooser waits for the answer, and the call
+	 * carrying that answer has to reach the session while it waits.
+	 */
+	@Test
+	public void answersAConcurrentCallWhileAnExclusiveOneIsBlocked() throws Exception
+	{
+		CountDownLatch started = new CountDownLatch(1);
+		CountDownLatch released = new CountDownLatch(1);
+		server.stop();
+		server = HttpApiServer.start(OperationRegistry.of(List.of(
+			Operation.exclusive("wait_for_a_choice", "blocks until the choice arrives", EMPTY_SCHEMA,
+				arguments -> {
+					started.countDown();
+					awaitQuietly(released);
+					return ServiceResult.success("unblocked");
+				}),
+			Operation.concurrent("send_the_choice", "answers the waiting call", EMPTY_SCHEMA,
+				arguments -> {
+					released.countDown();
+					return ServiceResult.success("sent");
+				}))), 0);
+
+		CompletableFuture<HttpResponse<String>> blocked =
+			CompletableFuture.supplyAsync(() -> postQuietly("/api/wait_for_a_choice"));
+		assertTrue(started.await(5, TimeUnit.SECONDS), "the blocking call never started");
+
+		HttpResponse<String> answer = post("/api/send_the_choice", "{}");
+
+		assertEquals(200, answer.statusCode());
+		assertEquals(200, blocked.get(5, TimeUnit.SECONDS).statusCode());
+	}
+
+	private HttpResponse<String> postQuietly(String path)
+	{
+		try
+		{
+			return post(path, "{}");
+		}
+		catch (Exception e)
+		{
+			throw new IllegalStateException(e);
+		}
+	}
+
+	private static void awaitQuietly(CountDownLatch latch)
+	{
+		try
+		{
+			latch.await(5, TimeUnit.SECONDS);
+		}
+		catch (InterruptedException e)
+		{
+			Thread.currentThread().interrupt();
+		}
 	}
 
 	private HttpResponse<String> get(String path) throws Exception

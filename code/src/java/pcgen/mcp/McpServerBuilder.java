@@ -1,6 +1,5 @@
 package pcgen.mcp;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServer;
 import io.modelcontextprotocol.server.McpSyncServer;
@@ -8,14 +7,12 @@ import io.modelcontextprotocol.server.transport.StdioServerTransportProvider;
 import io.modelcontextprotocol.spec.McpSchema;
 
 import pcgen.mcp.resources.DataSetResources;
-import pcgen.mcp.tools.BiographyTools;
-import pcgen.mcp.tools.ChoiceTools;
-import pcgen.mcp.tools.ExportTools;
-import pcgen.mcp.tools.TacticalSheetTools;
-import pcgen.mcp.tools.UtilityTools;
 import pcgen.session.PcgenSession;
 import pcgen.session.api.OperationRegistry;
 
+/**
+ * Dresses a session's operations as an MCP server speaking over stdio.
+ */
 public final class McpServerBuilder
 {
 	private McpServerBuilder()
@@ -25,7 +22,6 @@ public final class McpServerBuilder
 	public static McpSyncServer build(PcgenSession session)
 	{
 		var transportProvider = new StdioServerTransportProvider(new ObjectMapper());
-
 		OperationRegistry registry = OperationRegistry.forSession(session);
 
 		return McpServer.sync(transportProvider)
@@ -35,29 +31,6 @@ public final class McpServerBuilder
 				.resources(false, false)
 				.build())
 			.tools(McpOperationAdapter.toolsFrom(registry))
-			.tools(
-				// Biography & XP
-				BiographyTools.setBiography(session),
-				BiographyTools.getBiography(session),
-				BiographyTools.setXP(session),
-				// Tactical sheet
-				TacticalSheetTools.setTacticalSheet(session),
-				TacticalSheetTools.getTacticalSheet(session),
-				TacticalSheetTools.clearTacticalSheet(session),
-				TacticalSheetTools.listTacticalReferences(session),
-				// Export
-				ExportTools.exportCharacter(session),
-				ExportTools.getCharacterSheet(session),
-				// Utilities
-				UtilityTools.getTodoList(session),
-				UtilityTools.isQualifiedFor(session),
-				UtilityTools.rollStats(session),
-				UtilityTools.isDirty(session),
-				UtilityTools.getCharacterDetails(session),
-				// Chooser interaction
-				ChoiceTools.getPendingChoices(session),
-				ChoiceTools.resolveChoice(session)
-			)
 			.resources(DataSetResources.createResources(session))
 			.build();
 	}
