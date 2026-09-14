@@ -158,6 +158,48 @@ public final class Arguments
 		return List.copyOf(texts);
 	}
 
+	public double requiredDouble(String field)
+	{
+		Object value = raw.get(field);
+		if (value instanceof Number number)
+		{
+			return number.doubleValue();
+		}
+		if (value instanceof String text)
+		{
+			try
+			{
+				return Double.parseDouble(text.trim());
+			}
+			catch (NumberFormatException e)
+			{
+				throw unreadable(field, "must be a number");
+			}
+		}
+		throw unreadable(field, value == null ? "is required" : "must be a number");
+	}
+
+	/** The names of the fields this object holds, in the order they arrived. */
+	public List<String> fieldNames()
+	{
+		return List.copyOf(raw.keySet());
+	}
+
+	/** A nested object, readable in its own right. */
+	public Arguments requiredNestedObject(String field)
+	{
+		Object value = raw.get(field);
+		if (value == null)
+		{
+			throw unreadable(field, "is required");
+		}
+		if (!(value instanceof Map<?, ?> fields))
+		{
+			throw unreadable(field, "must be an object");
+		}
+		return new Arguments(onlyStringKeys(fields));
+	}
+
 	/** An object whose values are whole numbers, such as a set of ability scores. */
 	public Map<String, Integer> requiredIntMap(String field)
 	{
@@ -205,17 +247,22 @@ public final class Arguments
 			{
 				throw unreadable(field, "must be an array of objects");
 			}
-			Map<String, Object> typed = new LinkedHashMap<>();
-			for (Map.Entry<?, ?> entry : fields.entrySet())
-			{
-				if (entry.getKey() instanceof String key)
-				{
-					typed.put(key, entry.getValue());
-				}
-			}
-			entries.add(new Arguments(typed));
+			entries.add(new Arguments(onlyStringKeys(fields)));
 		}
 		return List.copyOf(entries);
+	}
+
+	private static Map<String, Object> onlyStringKeys(Map<?, ?> fields)
+	{
+		Map<String, Object> typed = new LinkedHashMap<>();
+		for (Map.Entry<?, ?> entry : fields.entrySet())
+		{
+			if (entry.getKey() instanceof String key)
+			{
+				typed.put(key, entry.getValue());
+			}
+		}
+		return typed;
 	}
 
 	private static Integer asInt(Object value)

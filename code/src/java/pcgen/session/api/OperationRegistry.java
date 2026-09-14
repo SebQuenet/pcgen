@@ -26,7 +26,10 @@ import java.util.Optional;
 import pcgen.session.PcgenSession;
 import pcgen.session.service.AbilityService;
 import pcgen.session.service.CharacterBuildService;
+import pcgen.session.service.CustomEquipmentService;
 import pcgen.session.service.CharacterLifecycleService;
+import pcgen.session.service.EquipmentService;
+import pcgen.session.service.EquipmentSetService;
 import pcgen.session.service.SkillService;
 import pcgen.session.service.SourceService;
 import pcgen.session.service.SpellService;
@@ -65,6 +68,8 @@ public final class OperationRegistry
 		operations.addAll(AbilitySkillOperations.of(
 			new AbilityService(session), new SkillService(session)));
 		operations.addAll(SpellOperations.of(new SpellService(session)));
+		operations.addAll(EquipmentOperations.of(new EquipmentService(session),
+			new EquipmentSetService(session), new CustomEquipmentService(session)));
 		return new OperationRegistry(operations);
 	}
 

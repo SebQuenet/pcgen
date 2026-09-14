@@ -1,11 +1,10 @@
-package pcgen.mcp.tools;
+package pcgen.session.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
-import java.util.Map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -95,8 +94,7 @@ class EquipmentTokenSupportTest
 		equip.setName("Sceptre");
 		List<String> failures = EquipmentTokenSupport.applySpellAbilities(
 			context, equip, "Sceptre",
-			List.of(Map.of("spell", "No Such Spell",
-				"times_per_day", "1", "caster_level", "10")));
+			List.of(new EquipmentTokenSupport.SpellAbility("No Such Spell", "1", "10")));
 		assertEquals(1, failures.size());
 		assertTrue(failures.get(0).contains("No Such Spell"));
 	}
@@ -109,8 +107,7 @@ class EquipmentTokenSupportTest
 		equip.setName("Sceptre");
 		List<String> failures = EquipmentTokenSupport.applySpellAbilities(
 			context, equip, "Sceptre",
-			List.of(Map.of("spell", "Holy Smite",
-				"times_per_day", "1", "caster_level", "SceptreCL")));
+			List.of(new EquipmentTokenSupport.SpellAbility("Holy Smite", "1", "SceptreCL")));
 		assertTrue(failures.isEmpty(), () -> "unexpected failures: " + failures);
 	}
 
@@ -121,7 +118,7 @@ class EquipmentTokenSupportTest
 		equip.setName("Sceptre");
 		List<String> failures = EquipmentTokenSupport.applySpellAbilities(
 			context, equip, "Sceptre",
-			List.of(Map.of("spell", "Holy Smite", "times_per_day", "1")));
+			List.of(new EquipmentTokenSupport.SpellAbility("Holy Smite", "1", null)));
 		assertEquals(1, failures.size());
 	}
 }
