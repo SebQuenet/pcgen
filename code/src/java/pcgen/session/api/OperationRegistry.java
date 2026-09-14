@@ -29,6 +29,7 @@ import pcgen.session.service.BiographyService;
 import pcgen.session.service.CharacterBuildService;
 import pcgen.session.service.ChoiceService;
 import pcgen.session.service.CustomEquipmentService;
+import pcgen.session.service.DataSetService;
 import pcgen.session.service.DeityDomainService;
 import pcgen.session.service.CharacterLifecycleService;
 import pcgen.session.service.EquipmentService;
@@ -76,7 +77,7 @@ public final class OperationRegistry
 	public static OperationRegistry forSession(PcgenSession session)
 	{
 		List<Operation> operations = new ArrayList<>();
-		operations.addAll(SourceOperations.of(new SourceService(session)));
+		operations.addAll(SourceOperations.of(new SourceService(session), new DataSetService(session)));
 		operations.addAll(CharacterOperations.of(
 			new CharacterLifecycleService(session), new CharacterBuildService(session)));
 		operations.addAll(AbilitySkillOperations.of(
