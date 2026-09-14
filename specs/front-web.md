@@ -85,8 +85,12 @@ est la lecture des réponses, pas PCGen.
 
 ## 8. Build
 
-`npm run build` produit `web/`. Une tâche Gradle `buildWebapp` l'enchaîne, et `runServer` en
-dépend, pour que lancer le serveur suffise à avoir l'interface.
+`npm run build` produit `web/`. La tâche Gradle `buildWebapp` l'enchaîne, et `testWebapp` lance
+les tests.
+
+`runServer` ne dépend volontairement pas de `buildWebapp` : le serveur doit démarrer sur une
+machine sans npm, et une interface déjà construite n'a pas besoin d'être reconstruite pour lancer
+le serveur. Quand `web/` est absent, le démarrage le dit en une ligne.
 
 ## 9. Hors périmètre
 

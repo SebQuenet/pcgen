@@ -15,6 +15,18 @@ export const listSources = (gameMode: string): Promise<Result<schemas.NamedEntry
 export const loadSources = (gameMode: string, campaigns: string[]): Promise<Result<schemas.SourcesLoaded>> =>
   callOperation('load_sources', { game_mode: gameMode, campaigns }, schemas.sourcesLoaded)
 
+/** What the loaded data holds of one kind, so a screen can offer a choice. */
+export const listDatasetEntries = (
+  kind: string,
+  nameContains?: string,
+  limit = 200,
+): Promise<Result<schemas.NamedEntry[]>> =>
+  callOperation(
+    'list_dataset_entries',
+    nameContains ? { kind, name_contains: nameContains, limit } : { kind, limit },
+    list(schemas.namedEntry),
+  )
+
 // Character lifecycle
 export const createCharacter = (name: string): Promise<Result<{ character_id: string }>> =>
   callOperation('create_character', { name }, schemas.characterCreated)
