@@ -11,8 +11,8 @@ import io.modelcontextprotocol.spec.McpSchema.Resource;
 import io.modelcontextprotocol.spec.McpSchema.TextResourceContents;
 
 import pcgen.facade.core.DataSetFacade;
-import pcgen.mcp.McpSessionManager;
-import pcgen.mcp.serialization.FacadeSerializer;
+import pcgen.session.PcgenSession;
+import pcgen.session.serialization.FacadeSerializer;
 
 public final class DataSetResources
 {
@@ -22,7 +22,7 @@ public final class DataSetResources
 	{
 	}
 
-	public static List<SyncResourceSpecification> createResources(McpSessionManager session)
+	public static List<SyncResourceSpecification> createResources(PcgenSession session)
 	{
 		List<SyncResourceSpecification> resources = new ArrayList<>();
 

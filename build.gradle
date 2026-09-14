@@ -112,6 +112,40 @@ tasks.register("runMcp", JavaExec) {
     standardInput = System.in
 }
 
+tasks.register("runServer", JavaExec) {
+    description = 'Run the PCGen HTTP server on the loopback address (default port 8420)'
+    group = 'application'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass.set('pcgen.web.WebMain')
+    if (project.hasProperty('port')) {
+        args '--port', project.property('port')
+    }
+}
+
+/**
+ * Build the web front end into web/, where the HTTP server serves it from.
+ *
+ * runServer deliberately does not depend on this: the server has to start on a
+ * machine with no npm, and a front end that is already built does not need
+ * rebuilding to launch it.
+ */
+tasks.register("buildWebapp", Exec) {
+    description = 'Build the web front end from webapp/ into web/'
+    group = 'application'
+    workingDir = file('webapp')
+    commandLine 'npm', 'run', 'build'
+    inputs.dir file('webapp/src')
+    inputs.files file('webapp/package.json'), file('webapp/index.html'), file('webapp/vite.config.ts')
+    outputs.dir file('web')
+}
+
+tasks.register("testWebapp", Exec) {
+    description = 'Run the web front end tests'
+    group = 'verification'
+    workingDir = file('webapp')
+    commandLine 'npm', 'test'
+}
+
 /*
  * Which binary repositories this build uses.
  */
