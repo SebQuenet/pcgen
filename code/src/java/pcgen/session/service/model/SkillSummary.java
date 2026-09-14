@@ -19,10 +19,7 @@ package pcgen.session.service.model;
 
 import java.util.List;
 
-/**
- * How a request to set several scores at once turned out: how many were
- * accepted out of how many were sent, and what went wrong with the rest.
- */
-public record AbilityScoresSet(int acceptedCount, int requestedCount, List<String> errors)
+/** Where a character's skill points went, level by level and skill by skill. */
+public record SkillSummary(List<LevelSkillPoints> levels, List<TrainedSkill> trainedSkills)
 {
 }

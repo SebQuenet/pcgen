@@ -29,7 +29,7 @@ import pcgen.core.PCStat;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.session.PcgenSession;
 import pcgen.session.service.model.AbilityScoreSet;
-import pcgen.session.service.model.AbilityScoresSet;
+import pcgen.session.service.model.BatchOutcome;
 import pcgen.session.service.model.AlignmentSet;
 import pcgen.session.service.model.CharacterName;
 import pcgen.session.service.model.LevelsAdded;
@@ -90,7 +90,7 @@ public final class CharacterBuildService
 	 * Set several scores in one call. A stat that cannot be set does not stop the
 	 * others: what failed comes back in the result rather than as a failed call.
 	 */
-	public ServiceResult<AbilityScoresSet> setAllAbilityScores(String characterId, Map<String, Integer> scores)
+	public ServiceResult<BatchOutcome> setAllAbilityScores(String characterId, Map<String, Integer> scores)
 	{
 		return characters.byId(characterId).map(character -> {
 			Map<String, PCStat> knownStats = statsByEveryNameTheyAnswerTo(character);
@@ -115,7 +115,7 @@ public final class CharacterBuildService
 					errors.add("Failed: " + wanted.getKey() + " - " + e.getMessage());
 				}
 			}
-			return new AbilityScoresSet(accepted, scores.size(), List.copyOf(errors));
+			return new BatchOutcome(accepted, scores.size(), List.copyOf(errors));
 		});
 	}
 

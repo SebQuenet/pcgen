@@ -8,7 +8,6 @@ import io.modelcontextprotocol.server.transport.StdioServerTransportProvider;
 import io.modelcontextprotocol.spec.McpSchema;
 
 import pcgen.mcp.resources.DataSetResources;
-import pcgen.mcp.tools.AbilityTools;
 import pcgen.mcp.tools.BiographyTools;
 import pcgen.mcp.tools.ChoiceTools;
 import pcgen.mcp.tools.CustomEquipmentTools;
@@ -17,7 +16,6 @@ import pcgen.mcp.tools.EquipmentSetTools;
 import pcgen.mcp.tools.EquipmentTools;
 import pcgen.mcp.tools.ExportTools;
 import pcgen.mcp.tools.LanguageCompanionTools;
-import pcgen.mcp.tools.SkillTools;
 import pcgen.mcp.tools.SpellTools;
 import pcgen.mcp.tools.TacticalSheetTools;
 import pcgen.mcp.tools.TemplateTools;
@@ -45,16 +43,6 @@ public final class McpServerBuilder
 				.build())
 			.tools(McpOperationAdapter.toolsFrom(registry))
 			.tools(
-				// Abilities (feats, traits, etc.)
-				AbilityTools.listAbilityCategories(session),
-				AbilityTools.listAbilities(session),
-				AbilityTools.addAbility(session),
-				AbilityTools.removeAbility(session),
-				AbilityTools.batchAddAbilities(session),
-				// Skills
-				SkillTools.investSkillPoints(session),
-				SkillTools.getSkillSummary(session),
-				SkillTools.batchInvestSkills(session),
 				// Spells
 				SpellTools.getAvailableSpells(session),
 				SpellTools.getKnownSpells(session),
