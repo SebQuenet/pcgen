@@ -22,9 +22,11 @@ import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -62,12 +64,14 @@ public final class HttpApiServer
 	private final ExecutorService oneAtATime;
 	private final LoopbackGuard guard;
 	private final ObjectMapper requestReader = new ObjectMapper();
+	private final StaticFiles frontEnd;
 
-	private HttpApiServer(OperationRegistry registry, HttpServer server, LoopbackGuard guard)
+	private HttpApiServer(OperationRegistry registry, HttpServer server, LoopbackGuard guard, StaticFiles frontEnd)
 	{
 		this.registry = registry;
 		this.server = server;
 		this.guard = guard;
+		this.frontEnd = frontEnd;
 		this.oneAtATime = Executors.newSingleThreadExecutor(runnable -> {
 			Thread worker = new Thread(runnable, "pcgen-operations");
 			worker.setDaemon(true);
@@ -82,11 +86,24 @@ public final class HttpApiServer
 	 */
 	public static HttpApiServer start(OperationRegistry registry, int port) throws IOException
 	{
+		return start(registry, port, Path.of("web"));
+	}
+
+	/**
+	 * Start listening on the loopback address, serving a front end's files from
+	 * {@code frontEndRoot} when that directory exists.
+	 *
+	 * @param port the port to listen on, or 0 to let the system pick one
+	 */
+	public static HttpApiServer start(OperationRegistry registry, int port, Path frontEndRoot) throws IOException
+	{
 		HttpServer server = HttpServer.create(new InetSocketAddress(InetAddress.getLoopbackAddress(), port), 0);
-		HttpApiServer api = new HttpApiServer(registry, server, new LoopbackGuard(server.getAddress().getPort()));
+		HttpApiServer api = new HttpApiServer(registry, server,
+			new LoopbackGuard(server.getAddress().getPort()), new StaticFiles(frontEndRoot));
 		server.createContext("/health", api::handleHealth);
 		server.createContext("/api/operations", api::handleOperations);
 		server.createContext(API_PREFIX, api::handleCall);
+		server.createContext("/", api::handleFrontEnd);
 		server.setExecutor(Executors.newCachedThreadPool());
 		server.start();
 		Logging.log(Level.INFO, "PCGen HTTP API listening on http://127.0.0.1:" + api.port());
@@ -102,6 +119,27 @@ public final class HttpApiServer
 	{
 		server.stop(STOP_DELAY_SECONDS);
 		oneAtATime.shutdownNow();
+	}
+
+	private void handleFrontEnd(HttpExchange exchange) throws IOException
+	{
+		if (!allowed(exchange))
+		{
+			return;
+		}
+		Optional<StaticFiles.Served> file = frontEnd.at(exchange.getRequestURI().getPath());
+		if (file.isEmpty())
+		{
+			respond(exchange, 404, ApiResponse.of(
+				new ServiceError.EntryNotFound("Path", exchange.getRequestURI().getPath())));
+			return;
+		}
+		exchange.getResponseHeaders().add("Content-Type", file.get().contentType());
+		exchange.sendResponseHeaders(200, file.get().bytes().length);
+		try (OutputStream out = exchange.getResponseBody())
+		{
+			out.write(file.get().bytes());
+		}
 	}
 
 	private void handleHealth(HttpExchange exchange) throws IOException

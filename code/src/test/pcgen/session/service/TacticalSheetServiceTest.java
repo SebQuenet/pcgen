@@ -15,7 +15,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package pcgen.mcp.tools;
+package pcgen.session.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -29,14 +29,10 @@ import pcgen.core.PlayerCharacter;
 import org.junit.jupiter.api.Test;
 
 /**
- * What the MCP server does with a tactical plan an agent sends it.
- *
- * <p>
- * The tools are lambdas inside a protocol specification, so what is tested here
- * is the behaviour they wrap: a plan is stored as written, and the names an
- * agent may point at are the character's own.
+ * What happens to a tactical plan a caller sends in: it is stored as written, and
+ * the names a plan may point at are the character's own.
  */
-public class TacticalSheetToolsTest extends AbstractCharacterTestCase
+public class TacticalSheetServiceTest extends AbstractCharacterTestCase
 {
 
 	private static final String A_PLAN = """
