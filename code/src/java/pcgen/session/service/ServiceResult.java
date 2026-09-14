@@ -47,15 +47,21 @@ public sealed interface ServiceResult<T>
 	}
 
 	/**
-	 * Carry a failure over to another value type, so one call's error can be
-	 * returned by a caller that produces something else.
+	 * Go on to a call that needs this one's value, or stop here and carry the
+	 * failure over to the value type the caller was going to produce.
 	 */
-	default <U> ServiceResult<U> mapValue(Function<T, U> mapping)
+	default <U> ServiceResult<U> andThen(Function<T, ServiceResult<U>> next)
 	{
 		return switch (this)
 		{
-			case Success<T> success -> new Success<>(mapping.apply(success.value()));
+			case Success<T> success -> next.apply(success.value());
 			case Failure<T> failure -> new Failure<>(failure.error());
 		};
+	}
+
+	/** Reshape the value a successful call produced, leaving a failure as it is. */
+	default <U> ServiceResult<U> map(Function<T, U> mapping)
+	{
+		return andThen(value -> new Success<>(mapping.apply(value)));
 	}
 }

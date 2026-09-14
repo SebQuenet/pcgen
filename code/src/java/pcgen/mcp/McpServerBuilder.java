@@ -10,8 +10,6 @@ import io.modelcontextprotocol.spec.McpSchema;
 import pcgen.mcp.resources.DataSetResources;
 import pcgen.mcp.tools.AbilityTools;
 import pcgen.mcp.tools.BiographyTools;
-import pcgen.mcp.tools.CharacterBuildTools;
-import pcgen.mcp.tools.CharacterLifecycleTools;
 import pcgen.mcp.tools.ChoiceTools;
 import pcgen.mcp.tools.CustomEquipmentTools;
 import pcgen.mcp.tools.DeityDomainTools;
@@ -47,19 +45,6 @@ public final class McpServerBuilder
 				.build())
 			.tools(McpOperationAdapter.toolsFrom(registry))
 			.tools(
-				// Character lifecycle
-				CharacterLifecycleTools.createCharacter(session),
-				CharacterLifecycleTools.getCharacter(session),
-				CharacterLifecycleTools.openCharacter(session),
-				CharacterLifecycleTools.saveCharacter(session),
-				CharacterLifecycleTools.closeCharacter(session),
-				// Character build basics
-				CharacterBuildTools.setName(session),
-				CharacterBuildTools.setRace(session),
-				CharacterBuildTools.addClassLevel(session),
-				CharacterBuildTools.setAbilityScore(session),
-				CharacterBuildTools.setAlignment(session),
-				CharacterBuildTools.setAllAbilityScores(session),
 				// Abilities (feats, traits, etc.)
 				AbilityTools.listAbilityCategories(session),
 				AbilityTools.listAbilities(session),
