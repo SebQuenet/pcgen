@@ -16,7 +16,6 @@ import pcgen.mcp.tools.EquipmentSetTools;
 import pcgen.mcp.tools.EquipmentTools;
 import pcgen.mcp.tools.ExportTools;
 import pcgen.mcp.tools.LanguageCompanionTools;
-import pcgen.mcp.tools.SpellTools;
 import pcgen.mcp.tools.TacticalSheetTools;
 import pcgen.mcp.tools.TemplateTools;
 import pcgen.mcp.tools.UtilityTools;
@@ -43,17 +42,6 @@ public final class McpServerBuilder
 				.build())
 			.tools(McpOperationAdapter.toolsFrom(registry))
 			.tools(
-				// Spells
-				SpellTools.getAvailableSpells(session),
-				SpellTools.getKnownSpells(session),
-				SpellTools.addKnownSpell(session),
-				SpellTools.removeKnownSpell(session),
-				SpellTools.getPreparedSpells(session),
-				SpellTools.addPreparedSpell(session),
-				SpellTools.removePreparedSpell(session),
-				SpellTools.getSpellbooks(session),
-				SpellTools.addToSpellbook(session),
-				SpellTools.batchAddPreparedSpells(session),
 				// Deity & Domains
 				DeityDomainTools.setDeity(session),
 				DeityDomainTools.addDomain(session),
