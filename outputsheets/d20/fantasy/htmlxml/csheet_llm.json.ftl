@@ -1,23 +1,30 @@
 <#ftl encoding="UTF-8" strip_whitespace=true >
 <#-- LLM-optimized JSON character sheet export -->
+<#-- JSON accepts neither a leading '+' nor an empty number, and PCGen prints
+     both, so every unquoted numeric field goes through num(). -->
+<#function num expr>
+  <#local value = expr?replace("+", "")?trim>
+  <#-- An undead has no Constitution and PCGen prints a dash for it. -->
+  <#return value?matches(r"-?[0-9]+(\.[0-9]+)?")?then(value, "0")>
+</#function>
 <#-- Produces structured, machine-parseable JSON for programmatic consumption -->
 {
   "name": "${pcstring('NAME')?json_string}",
   "race": "${pcstring('RACE')?json_string}",
   "alignment": "${pcstring('ALIGNMENT')?json_string}",
-  "totalLevel": ${pcstring('TOTALLEVELS')},
-  "ecl": ${pcstring('ECL')},
+  "totalLevel": ${num(pcstring('TOTALLEVELS'))},
+  "ecl": ${num(pcstring('ECL'))},
   "cr": "${pcstring('CR')?json_string}",
-  "hp": ${pcstring('HP')},
+  "hp": ${num(pcstring('HP'))},
   "hitDice": "${pcstring('HITDICE')?json_string}",
-  "xp": ${pcstring('EXP.CURRENT')},
-  "xpNext": ${pcstring('EXP.NEXT')},
+  "xp": ${num(pcstring('EXP.CURRENT'))},
+  "xpNext": ${num(pcstring('EXP.NEXT'))},
   "size": "${pcstring('SIZELONG')?json_string}",
   "speed": "${pcstring('MOVEMENT')?json_string}",
-  "reach": ${pcstring('REACH')},
+  "reach": "${pcstring('REACH')}",
   "vision": "${pcstring('VISION')?json_string}",
   "gender": "${pcstring('GENDER.LONG')?json_string}",
-  "age": ${pcstring('AGE')},
+  "age": ${num(pcstring('AGE'))},
   "height": "${pcstring('HEIGHT')?json_string}",
   "weight": "${pcstring('WEIGHT')?json_string}",
   "deity": "${pcstring('DEITY')?json_string}",
@@ -26,45 +33,45 @@
   "classes": [
 <@loop from=0 to=pcvar('COUNT[CLASSES]-1') ; class, class_has_next>
 <#if (pcvar(pcstring('CLASS.${class}.LEVEL')) > 0) >
-    {"name": "${pcstring('CLASS.${class}')?json_string}", "level": ${pcstring('CLASS.${class}.LEVEL')}}<#if class_has_next>,</#if>
+    {"name": "${pcstring('CLASS.${class}')?json_string}", "level": ${num(pcstring('CLASS.${class}.LEVEL'))}}<#if class_has_next>,</#if>
 </#if>
 </@loop>
   ],
   "abilityScores": {
 <@loop from=0 to=pcvar('COUNT[STATS]-1') ; stat, stat_has_next>
-    "${pcstring('STAT.${stat}.NAME')?json_string}": {"score": ${pcstring('STAT.${stat}')}, "mod": ${pcstring('STAT.${stat}.MOD')}, "base": ${pcstring('STAT.${stat}.NOTEMP.NOEQUIP')}, "baseMod": ${pcstring('STAT.${stat}.MOD.NOTEMP.NOEQUIP')}}<#if stat_has_next>,</#if>
+    "${pcstring('STAT.${stat}.NAME')?json_string}": {"score": ${num(pcstring('STAT.${stat}'))}, "mod": ${num(pcstring('STAT.${stat}.MOD'))}, "base": ${num(pcstring('STAT.${stat}.NOTEMP.NOEQUIP'))}, "baseMod": ${num(pcstring('STAT.${stat}.MOD.NOTEMP.NOEQUIP'))}}<#if stat_has_next>,</#if>
 </@loop>
   },
-  "initiative": ${pcstring('INITIATIVEMOD')},
+  "initiative": ${num(pcstring('INITIATIVEMOD'))},
   "ac": {
-    "total": ${pcstring('AC.Total')},
-    "touch": ${pcstring('AC.Touch')},
-    "flatFooted": ${pcstring('AC.Flatfooted')},
-    "armor": ${pcstring('AC.Armor')},
-    "shield": ${pcstring('AC.Shield')},
-    "dex": ${pcstring('AC.Ability')},
-    "size": ${pcstring('AC.Size')},
-    "natural": ${pcstring('AC.NaturalArmor')},
-    "deflection": ${pcstring('AC.Deflection')},
-    "dodge": ${pcstring('AC.Dodge')},
-    "misc": ${pcstring('AC.Misc')},
-    "maxDex": ${pcstring('MAXDEX')},
-    "spellFailure": ${pcstring('SPELLFAILURE')},
-    "armorCheck": ${pcstring('ACCHECK')}
+    "total": ${num(pcstring('AC.Total'))},
+    "touch": ${num(pcstring('AC.Touch'))},
+    "flatFooted": ${num(pcstring('AC.Flatfooted'))},
+    "armor": ${num(pcstring('AC.Armor'))},
+    "shield": ${num(pcstring('AC.Shield'))},
+    "dex": ${num(pcstring('AC.Ability'))},
+    "size": ${num(pcstring('AC.Size'))},
+    "natural": ${num(pcstring('AC.NaturalArmor'))},
+    "deflection": ${num(pcstring('AC.Deflection'))},
+    "dodge": ${num(pcstring('AC.Dodge'))},
+    "misc": ${num(pcstring('AC.Misc'))},
+    "maxDex": ${num(pcstring('MAXDEX'))},
+    "spellFailure": ${num(pcstring('SPELLFAILURE'))},
+    "armorCheck": ${num(pcstring('ACCHECK'))}
   },
   "attack": {
     "bab": "${pcstring('ATTACK.MELEE.BASE')?json_string}",
     "melee": "${pcstring('ATTACK.MELEE.TOTAL')?json_string}",
     "ranged": "${pcstring('ATTACK.RANGED.TOTAL')?json_string}"<#if (pchasvar('CMB') || pcboolean('VAR.HASFEAT:CMB Output')) >,
-    "cmb": ${pcstring('VAR.CMB.INTVAL')},
-    "cmd": ${pcstring('VAR.CMD.INTVAL')}</#if>
+    "cmb": ${num(pcstring('VAR.CMB.INTVAL'))},
+    "cmd": ${num(pcstring('VAR.CMD.INTVAL'))}</#if>
   },
   "dr": "${pcstring('DR')?json_string}",
   "sr": "${pcstring('SR')?json_string}",
   "saves": [
 <#assign checknum = 0 />
 <#list pc.checks as check>
-    {"name": "${pcstring('CHECK.${checknum}.NAME')?json_string}", "total": ${pcstring('CHECK.${checknum}.TOTAL')}, "base": ${pcstring('CHECK.${checknum}.BASE')}, "ability": ${pcstring('CHECK.${checknum}.STATMOD')}, "magic": ${pcstring('CHECK.${checknum}.MAGIC')}, "misc": ${pcstring('CHECK.${checknum}.MISC.NOMAGIC.NOSTAT')}}<#assign checknum = checknum + 1 /><#if check_has_next>,</#if>
+    {"name": "${pcstring('CHECK.${checknum}.NAME')?json_string}", "total": ${num(pcstring('CHECK.${checknum}.TOTAL'))}, "base": ${num(pcstring('CHECK.${checknum}.BASE'))}, "ability": ${num(pcstring('CHECK.${checknum}.STATMOD'))}, "magic": ${num(pcstring('CHECK.${checknum}.MAGIC'))}, "misc": ${num(pcstring('CHECK.${checknum}.MISC.NOMAGIC.NOSTAT'))}}<#assign checknum = checknum + 1 /><#if check_has_next>,</#if>
 </#list>
   ],
   "skills": [
@@ -74,7 +81,7 @@
 <#if (pcstring('SKILLSIT.${skill}.RANK') != "0.0" && pcstring('SKILLSIT.${skill}.RANK') != "0")>
 <#if !first>,
 </#if>
-    {"name": "${pcstring('SKILLSIT.${skill}')?json_string}", "total": ${pcstring('SKILLSIT.${skill}.TOTAL')}, "ranks": ${pcstring('SKILLSIT.${skill}.RANK')}, "abilMod": ${pcstring('SKILLSIT.${skill}.ABMOD')}, "ability": "${pcstring('SKILLSIT.${skill}.ABILITY')?json_string}", "misc": ${pcstring('SKILLSIT.${skill}.MISC')}}<#assign first = false>
+    {"name": "${pcstring('SKILLSIT.${skill}')?json_string}", "total": ${num(pcstring('SKILLSIT.${skill}.TOTAL'))}, "ranks": ${num(pcstring('SKILLSIT.${skill}.RANK'))}, "abilMod": ${num(pcstring('SKILLSIT.${skill}.ABMOD'))}, "ability": "${pcstring('SKILLSIT.${skill}.ABILITY')?json_string}", "misc": ${num(pcstring('SKILLSIT.${skill}.MISC'))}}<#assign first = false>
 </#if>
 </@loop>
 
@@ -112,6 +119,8 @@
 <@loop from=0 to=pcvar('COUNT[EQTYPE.MERGENONE.WEAPON]-1') ; weap, weap_has_next>
 <#assign weapHand = pcstring('WEAPON.MERGENONE.${weap}.HAND')?lower_case >
 <#assign weapHit = (weapHand?contains("non") || weapHand?contains("off") || weapHand?contains("secondary"))?then(pcstring('WEAPON.MERGENONE.${weap}.TOTALHIT'), pcstring('WEAPON.MERGENONE.${weap}.BASEHIT')) >
+<#-- A two-handed weapon has no base attack line of its own; use its total. -->
+<#if !weapHit?matches(r"[+-][0-9].*") ><#assign weapHit = pcstring('WEAPON.MERGENONE.${weap}.TOTALHIT') ></#if>
     {"name": "${pcstring('WEAPON.MERGENONE.${weap}.NAME')?json_string}", "toHit": "${weapHit?json_string}", "damage": "${pcstring('WEAPON.MERGENONE.${weap}.DAMAGE')?json_string}", "crit": "${pcstring('WEAPON.MERGENONE.${weap}.CRIT')?json_string}/x${pcstring('WEAPON.MERGENONE.${weap}.MULT')}", "range": "${pcstring('WEAPON.MERGENONE.${weap}.RANGE')?json_string}", "type": "${pcstring('WEAPON.MERGENONE.${weap}.TYPE')?json_string}", "hand": "${pcstring('WEAPON.MERGENONE.${weap}.HAND')?json_string}", "special": "${pcstring('WEAPON.MERGENONE.${weap}.SPROP')?json_string}"}<#if weap_has_next>,</#if>
 </@loop>
   ],
@@ -122,7 +131,7 @@
   ],
   "equipment": [
 <@loop from=0 to=pcvar('COUNT[EQUIPMENT.MERGELOC]-1') ; equip, equip_has_next>
-    {"name": "${pcstring('EQ.MERGELOC.${equip}.NAME')?json_string}", "qty": ${pcstring('EQ.MERGELOC.${equip}.QTY')}, "weight": "${pcstring('EQ.MERGELOC.${equip}.WT')?json_string}", "cost": "${pcstring('EQ.MERGELOC.${equip}.COST')?json_string}", "location": "${pcstring('EQ.MERGELOC.${equip}.LOCATION')?json_string}"}<#if equip_has_next>,</#if>
+    {"name": "${pcstring('EQ.MERGELOC.${equip}.NAME')?json_string}", "qty": ${num(pcstring('EQ.MERGELOC.${equip}.QTY'))}, "weight": "${pcstring('EQ.MERGELOC.${equip}.WT')?json_string}", "cost": "${pcstring('EQ.MERGELOC.${equip}.COST')?json_string}", "location": "${pcstring('EQ.MERGELOC.${equip}.LOCATION')?json_string}"}<#if equip_has_next>,</#if>
 </@loop>
   ],
   "gold": "${pcstring('GOLD')?json_string}",
@@ -136,8 +145,8 @@
 <#if !firstClass>,
 </#if>
     "${pcstring('SPELLLISTCLASS.${class}')?json_string}": {
-      "casterLevel": ${pcstring('SPELLLISTCLASS.${class}.CASTERLEVEL')},
-      "concentration": ${pcstring('SPELLLISTCLASS.${class}.CONCENTRATION')},
+      "casterLevel": "${pcstring('SPELLLISTCLASS.${class}.CASTERLEVEL')?json_string}",
+      "concentration": "${pcstring('SPELLLISTCLASS.${class}.CONCENTRATION')?replace("+","")?json_string}",
       "type": "${pcstring('SPELLLISTTYPE.${class}')?json_string}",
       "levels": {
 <#assign firstLevel = true >
@@ -151,7 +160,7 @@
           "known": "${pcstring('SPELLLISTKNOWN.${class}.${level}')?json_string}",
           "spells": [
 <@loop from=0 to=spellCount-1 ; spell, spell_has_next>
-            {"name": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.NAME')?json_string}", "dc": ${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DC')}, "school": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.SCHOOL')?json_string}", "range": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.RANGE')?json_string}", "duration": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DURATION')?json_string}", "saveInfo": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.SAVEINFO')?json_string}", "components": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.COMPONENTS')?json_string}", "description": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DESCRIPTION')?json_string}"}<#if spell_has_next>,</#if>
+            {"name": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.NAME')?json_string}", "dc": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DC')?json_string}", "school": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.SCHOOL')?json_string}", "range": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.RANGE')?json_string}", "duration": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DURATION')?json_string}", "saveInfo": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.SAVEINFO')?json_string}", "components": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.COMPONENTS')?json_string}", "description": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DESCRIPTION')?json_string}"}<#if spell_has_next>,</#if>
 </@loop>
           ]
         }<#assign firstLevel = false>
