@@ -198,7 +198,9 @@ public final class CharacterOperations
 					"properties": {
 						"character_id": { "type": "string", "description": "Character ID" },
 						"class_key": { "type": "string", "description": "Class key (from resources or list)" },
-						"levels": { "type": "integer", "description": "Number of levels to add (default: 1)", "default": 1 }
+						"levels": { "type": "integer", "description": "Number of levels to add (default: 1)", "default": 1 },
+						"subclass": { "type": "string",
+							"description": "Subclass taken at first level, such as a wizard's arcane school (Abjurer, Diviner, Transmuter). Left out, PCGen takes the first one it offers." }
 					},
 					"required": ["character_id", "class_key"]
 				}
@@ -206,7 +208,8 @@ public final class CharacterOperations
 			arguments -> arguments.decodeThen(() -> service.addClassLevel(
 				arguments.requiredString(CHARACTER_ID),
 				arguments.requiredString("class_key"),
-				arguments.optionalInt("levels", 1))));
+				arguments.optionalInt("levels", 1),
+				arguments.optionalString("subclass", null))));
 	}
 
 	private static Operation setAbilityScore(CharacterBuildService service)

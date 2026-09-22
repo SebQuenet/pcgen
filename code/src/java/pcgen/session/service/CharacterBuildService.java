@@ -20,6 +20,7 @@ package pcgen.session.service;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Arrays;
+import java.util.stream.Collectors;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +28,9 @@ import java.util.Map;
 import pcgen.core.PCClass;
 import pcgen.core.PCStat;
 import pcgen.facade.core.CharacterFacade;
+import pcgen.cdom.enumeration.ListKey;
+import pcgen.core.SubClass;
+import pcgen.session.HeadlessUIDelegate;
 import pcgen.session.PcgenSession;
 import pcgen.session.service.model.AbilityScoreSet;
 import pcgen.session.service.model.BatchOutcome;
@@ -44,10 +48,12 @@ public final class CharacterBuildService
 	private static final String STATUS_OK = "ok";
 
 	private final CharacterLookup characters;
+	private final PcgenSession session;
 
 	public CharacterBuildService(PcgenSession session)
 	{
 		this.characters = new CharacterLookup(session);
+		this.session = session;
 	}
 
 	public ServiceResult<CharacterName> setName(String characterId, String name)
@@ -130,16 +136,67 @@ public final class CharacterBuildService
 	 */
 	public ServiceResult<LevelsAdded> addClassLevel(String characterId, String classKey, int levels)
 	{
-		return characters.byId(characterId).andThen(character ->
-			DataSetLookup.require("Class", classKey, character.getDataSet().getClasses())
-				.andThen(pcClass -> addLevels(character, pcClass, levels)));
+		return addClassLevel(characterId, classKey, levels, null);
 	}
 
-	private static ServiceResult<LevelsAdded> addLevels(CharacterFacade character, PCClass pcClass, int levels)
+	/**
+	 * Add levels of a class, naming the subclass when the class has them.
+	 *
+	 * <p>
+	 * A wizard's arcane school, a cleric's order and anything else PCGen models
+	 * as a SUBCLASS is asked for at the first level through a chooser. Headless,
+	 * that chooser answers itself with the first entry, which is why every
+	 * wizard came out an abjurer. Naming the subclass here hands the chooser the
+	 * answer before it is raised.
+	 */
+	public ServiceResult<LevelsAdded> addClassLevel(String characterId, String classKey, int levels,
+		String subclassKey)
+	{
+		return characters.byId(characterId).andThen(character ->
+			DataSetLookup.require("Class", classKey, character.getDataSet().getClasses())
+				.andThen(pcClass -> requireSubclass(pcClass, subclassKey)
+					.andThen(subclass -> addLevels(character,
+						session == null ? null : session.getDelegate(characterId), pcClass, levels, subclass))));
+	}
+
+	/**
+	 * The subclass PCGen holds under that key, or none when the caller named none.
+	 */
+	private static ServiceResult<String> requireSubclass(PCClass pcClass, String subclassKey)
+	{
+		if (subclassKey == null || subclassKey.isBlank())
+		{
+			return ServiceResult.success(null);
+		}
+		List<SubClass> subclasses = pcClass.getListFor(ListKey.SUB_CLASS);
+		if (subclasses == null || subclasses.isEmpty())
+		{
+			return ServiceResult.failure(new ServiceError.NotAllowed(
+				pcClass.getDisplayName() + " has no subclasses to choose from."));
+		}
+		for (SubClass subclass : subclasses)
+		{
+			if (subclass.getKeyName().equalsIgnoreCase(subclassKey)
+				|| subclass.getDisplayName().equalsIgnoreCase(subclassKey))
+			{
+				return ServiceResult.success(subclass.getKeyName());
+			}
+		}
+		return ServiceResult.failure(new ServiceError.EntryNotFound("Subclass of " + pcClass.getDisplayName(),
+			subclassKey + " (offered: "
+				+ subclasses.stream().map(SubClass::getKeyName).collect(Collectors.joining(", ")) + ")"));
+	}
+
+	private static ServiceResult<LevelsAdded> addLevels(CharacterFacade character, HeadlessUIDelegate delegate,
+		PCClass pcClass, int levels, String subclassKey)
 	{
 		int before = character.getClassLevel(pcClass);
 		try
 		{
+			if (delegate != null && subclassKey != null)
+			{
+				delegate.setPreSelectedChoices(List.of(subclassKey));
+			}
 			PCClass[] wanted = new PCClass[levels];
 			Arrays.fill(wanted, pcClass);
 			character.addCharacterLevels(wanted);
@@ -153,6 +210,14 @@ public final class CharacterBuildService
 					added, levels, "Levels were added but an error occurred: " + e.getMessage()));
 			}
 			return ServiceResult.failure(new ServiceError.NotAllowed(String.valueOf(e.getMessage())));
+		}
+
+		finally
+		{
+			if (delegate != null)
+			{
+				delegate.clearPreSelectedChoices();
+			}
 		}
 
 		int added = character.getClassLevel(pcClass) - before;

@@ -94,6 +94,18 @@ public class OperationRegistryTest
 	}
 
 	@Test
+	public void letsACallerNameTheSubclassTakenWithAClassLevel()
+	{
+		OperationRegistry registry = OperationRegistry.forSession(new PcgenSession());
+
+		String schema = registry.find("add_class_level").orElseThrow().inputSchema();
+
+		// A wizard's arcane school is a subclass, and headless PCGen answers that
+		// chooser itself unless the caller says which one.
+		assertTrue(schema.contains("\"subclass\""), () -> schema);
+	}
+
+	@Test
 	public void marksLoadingSourcesAsNeedingTheSessionToItself()
 	{
 		OperationRegistry registry = OperationRegistry.forSession(new PcgenSession());
