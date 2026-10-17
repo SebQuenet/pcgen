@@ -228,4 +228,89 @@ class ConjurationSessionTest
 
 		assertEquals(1, session.conjured().size());
 	}
+
+	private static final AppliedBonus PRAYER =
+		new AppliedBonus(new BonusSourceKey(BonusSourceKey.SPELL, "", "Prayer"), OptionalInt.empty());
+	private static final AppliedBonus BULLS_STRENGTH =
+		new AppliedBonus(new BonusSourceKey(BonusSourceKey.SPELL, "", "Bull's Strength"), OptionalInt.empty());
+
+	@Test
+	void addingAGroupBonusTwiceKeepsOne()
+	{
+		ConjurationSession session = ConjurationSession.empty().withGroupBonus(PRAYER).withGroupBonus(PRAYER);
+
+		assertEquals(List.of(PRAYER), session.groupBonuses());
+	}
+
+	@Test
+	void addingAGroupBonusAgainReplacesItsValue()
+	{
+		AppliedBonus courage = new AppliedBonus(new BonusSourceKey(BonusSourceKey.ABILITY, "Special Ability",
+			"Inspire Courage"), OptionalInt.of(1));
+		AppliedBonus strongerCourage = new AppliedBonus(courage.source(), OptionalInt.of(2));
+
+		ConjurationSession session =
+			ConjurationSession.empty().withGroupBonus(courage).withGroupBonus(strongerCourage);
+
+		assertEquals(List.of(strongerCourage), session.groupBonuses());
+	}
+
+	@Test
+	void removingAGroupBonusKeepsTheSameBonusOnACreature()
+	{
+		ConjurationSession session = threeArchons().withGroupBonus(PRAYER).withBonus(ARCHON, 2, PRAYER)
+			.withoutGroupBonus(PRAYER.source());
+
+		assertEquals(List.of(PRAYER), session.conjured().get(1).bonuses());
+	}
+
+	@Test
+	void aCreatureBonusStaysOnThatCreatureOnly()
+	{
+		ConjurationSession session = threeArchons().withBonus(ARCHON, 2, BULLS_STRENGTH);
+
+		assertEquals(List.of(List.of(), List.of(BULLS_STRENGTH), List.of()),
+			session.conjured().stream().map(ConjuredCreature::bonuses).toList());
+	}
+
+	@Test
+	void removesACreatureBonus()
+	{
+		ConjurationSession session =
+			threeArchons().withBonus(ARCHON, 2, BULLS_STRENGTH).withoutBonus(ARCHON, 2, BULLS_STRENGTH.source());
+
+		assertEquals(List.of(), session.conjured().get(1).bonuses());
+	}
+
+	@Test
+	void dismissingACreatureDropsItsBonuses()
+	{
+		ConjurationSession session = threeArchons().withBonus(ARCHON, 2, BULLS_STRENGTH).dismiss(ARCHON, 2);
+		ConjurationSession again = conjured(session, ARCHON);
+
+		assertEquals(List.of(), again.conjured().getLast().bonuses());
+	}
+
+	@Test
+	void dismissAllKeepsTheGroupBonuses()
+	{
+		ConjurationSession session = threeArchons().withGroupBonus(PRAYER).dismissAll();
+
+		assertEquals(List.of(PRAYER), session.groupBonuses());
+	}
+
+	@Test
+	void theFightKeepsItsGroupBonusesThroughItsChanges()
+	{
+		ConjurationSession session = threeArchons().withGroupBonus(PRAYER).withDamage(ARCHON, 1, 5).nextRound()
+			.withDuration(4).withRoundsLeft(ARCHON, 1, 2);
+
+		assertEquals(List.of(PRAYER), session.groupBonuses());
+	}
+
+	@Test
+	void aSessionWithOnlyAGroupBonusIsNotEmpty()
+	{
+		assertFalse(ConjurationSession.empty().withGroupBonus(PRAYER).isEmpty());
+	}
 }

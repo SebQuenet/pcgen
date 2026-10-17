@@ -174,6 +174,10 @@ interface IOConstants
 	String TAG_CONJURATIONDURATION = "CONJURATIONDURATION";
 	/** Conjurations: one line per creature in play, its name, number, damage and rounds left */
 	String TAG_CONJURED = "CONJURED";
+	/** Conjurations: one line per group bonus, its source key and chosen value */
+	String TAG_CONJUREDGROUPBONUS = "CONJUREDGROUPBONUS";
+	/** Conjurations: one line per creature's own bonus, its name, number, source key and chosen value */
+	String TAG_CONJUREDBONUS = "CONJUREDBONUS";
 
 	/** COST - Currently (20/03/2006) only being used by CMP data sources */
 	String TAG_COST = "COST";

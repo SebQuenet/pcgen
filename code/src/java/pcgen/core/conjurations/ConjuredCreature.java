@@ -17,6 +17,7 @@
  */
 package pcgen.core.conjurations;
 
+import java.util.List;
 import java.util.OptionalInt;
 
 /**
@@ -29,11 +30,23 @@ import java.util.OptionalInt;
  *                   hit points.
  * @param roundsLeft how many rounds it stays, never negative; empty when its
  *                   rounds are not counted.
+ * @param bonuses    the temporary bonuses laid on this creature alone, on top of
+ *                   the fight's group bonuses.
  */
-public record ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft)
+public record ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft,
+	List<AppliedBonus> bonuses)
 {
+	/**
+	 * A creature with no bonus of its own.
+	 */
+	public ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft)
+	{
+		this(creature, number, damage, roundsLeft, List.of());
+	}
+
 	public ConjuredCreature
 	{
+		bonuses = (bonuses == null) ? List.of() : List.copyOf(bonuses);
 		if (creature == null || creature.isBlank())
 		{
 			throw new IllegalArgumentException("A conjured creature needs the name of its stat line");

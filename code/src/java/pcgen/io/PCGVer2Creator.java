@@ -88,6 +88,7 @@ import pcgen.core.character.EquipSet;
 import pcgen.core.character.Follower;
 import pcgen.core.character.SpellBook;
 import pcgen.core.character.SpellInfo;
+import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.display.BonusDisplay;
@@ -1713,6 +1714,29 @@ public final class PCGVer2Creator
 			creature.roundsLeft().ifPresent(buffer::append);
 			buffer.append(IOConstants.LINE_SEP);
 		}
+		for (AppliedBonus bonus : fight.groupBonuses())
+		{
+			buffer.append(IOConstants.TAG_CONJUREDGROUPBONUS).append(':');
+			appendConjurationBonus(buffer, bonus);
+		}
+		for (ConjuredCreature creature : fight.conjured())
+		{
+			for (AppliedBonus bonus : creature.bonuses())
+			{
+				buffer.append(IOConstants.TAG_CONJUREDBONUS).append(':');
+				buffer.append(EntityEncoder.encode(creature.creature()));
+				buffer.append('|').append(creature.number()).append('|');
+				appendConjurationBonus(buffer, bonus);
+			}
+		}
+	}
+
+	private static void appendConjurationBonus(StringBuilder buffer, AppliedBonus bonus)
+	{
+		buffer.append(EntityEncoder.encode(bonus.source().text()));
+		buffer.append('|');
+		bonus.chosenValue().ifPresent(buffer::append);
+		buffer.append(IOConstants.LINE_SEP);
 	}
 
 	private void appendPersonalityTrait1Line(StringBuilder buffer)

@@ -18,18 +18,18 @@
 package pcgen.io.conjurations;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 import pcgen.core.PlayerCharacter;
+import pcgen.core.bonus.TemporaryBonusSources;
+import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.conjurations.SummonCatalog;
 import pcgen.core.conjurations.SummonCatalogParser;
-import pcgen.core.conjurations.SummonField;
 import pcgen.core.conjurations.SummonGroup;
 import pcgen.core.conjurations.SummonParseError;
 import pcgen.core.conjurations.SummonParseFailure;
@@ -53,19 +53,6 @@ public final class ConjurationOutputModel
 	private static final String KEY = "key";
 	private static final String LABEL = "label";
 
-	/** The columns of a catalog table, after the creature's name. */
-	private static final List<SummonField> COLUMNS = List.of(SummonField.SPEED, SummonField.HIT_POINTS,
-		SummonField.ARMOR_CLASS, SummonField.ATTACK, SummonField.DAMAGE, SummonField.CMB, SummonField.CMD,
-		SummonField.REFLEX, SummonField.FORTITUDE, SummonField.WILL, SummonField.INITIATIVE);
-
-	/** The fields too long for a column, shown on a line under the creature. */
-	private static final List<SummonField> DETAILS = List.of(SummonField.SPECIAL, SummonField.SPELLS,
-		SummonField.NOTE);
-
-	/** What a card in play repeats of its stat line: all of it but the hit points it tracks. */
-	private static final List<SummonField> CARD_FIELDS = Arrays.stream(SummonField.values())
-		.filter(field -> field != SummonField.HIT_POINTS).toList();
-
 	private ConjurationOutputModel()
 	{
 	}
@@ -84,10 +71,9 @@ public final class ConjurationOutputModel
 		Map<String, Object> model = new LinkedHashMap<>();
 		model.put("present", source.isPresent());
 		model.put("duration", fight.duration());
-		model.put("columns", labelled(COLUMNS));
-		model.put("details", labelled(DETAILS));
-		model.put("cardFields", labelled(CARD_FIELDS));
 		model.put("labels", labels());
+		model.put("statLabels", statLabels());
+		model.put("groupBonuses", bonusesOf(fight.groupBonuses()));
 
 		Optional<SummonCatalog> catalog = Optional.empty();
 		List<Map<String, Object>> errors = List.of();
@@ -102,37 +88,8 @@ public final class ConjurationOutputModel
 		model.put("errors", errors);
 		model.put("groups", catalog.map(ConjurationOutputModel::groupsOf).orElse(List.of()));
 		model.put("summons", catalog.map(ConjurationOutputModel::summonsOf).orElse(List.of()));
-		model.put("roles", catalog.map(SummonCatalog::roles).orElse(List.of()));
 		model.put("conjured", conjuredOf(fight, catalog, errors.isEmpty()));
 		return model;
-	}
-
-	private static List<Map<String, Object>> labelled(List<SummonField> fields)
-	{
-		return fields.stream()
-			.map(field -> Map.<String, Object>of(KEY, field.key(), LABEL, LanguageBundle.getString(labelKeyOf(field))))
-			.toList();
-	}
-
-	private static String labelKeyOf(SummonField field)
-	{
-		return switch (field)
-		{
-			case SPEED -> "in_conjurations_speed";
-			case HIT_POINTS -> "in_conjurations_hp";
-			case ARMOR_CLASS -> "in_conjurations_ac";
-			case ATTACK -> "in_conjurations_attack";
-			case DAMAGE -> "in_conjurations_damage";
-			case SPECIAL -> "in_conjurations_special";
-			case CMB -> "in_conjurations_cmb";
-			case CMD -> "in_conjurations_cmd";
-			case REFLEX -> "in_conjurations_ref";
-			case FORTITUDE -> "in_conjurations_fort";
-			case WILL -> "in_conjurations_will";
-			case INITIATIVE -> "in_conjurations_init";
-			case SPELLS -> "in_conjurations_spells";
-			case NOTE -> "in_conjurations_note";
-		};
 	}
 
 	/**
@@ -154,9 +111,33 @@ public final class ConjurationOutputModel
 			Map.entry("nobody", LanguageBundle.getString("in_conjurations_nobody")),
 			Map.entry("empty", LanguageBundle.getString("in_conjurations_empty")),
 			Map.entry("doesNotRead", LanguageBundle.getString("in_conjurations_does_not_read")),
-			Map.entry("everyRole", LanguageBundle.getString("in_conjurations_every_role")),
 			Map.entry("creature", LanguageBundle.getString("in_conjurations_creature")),
-			Map.entry("damage", LanguageBundle.getString("in_conjurations_damage")));
+			Map.entry("damage", LanguageBundle.getString("in_conjurations_damage")),
+			Map.entry("group", LanguageBundle.getString("in_conjurations_group")),
+			Map.entry("ownBonuses", LanguageBundle.getString("in_conjurations_own_bonuses")),
+			Map.entry("addBonus", LanguageBundle.getString("in_conjurations_add_bonus")),
+			Map.entry("value", LanguageBundle.getString("in_conjurations_value")),
+			Map.entry("building", LanguageBundle.getString("in_conjurations_building")));
+	}
+
+	/**
+	 * The names of the numbers a card shows, which the page's script fills in
+	 * once PCGen has built the creature.
+	 */
+	private static Map<String, Object> statLabels()
+	{
+		Map<String, Object> labels = new LinkedHashMap<>();
+		for (String stat : List.of("speed", "hp", "ac", "attack", "cmb", "cmd", "ref", "fort", "will", "init"))
+		{
+			labels.put(stat, LanguageBundle.getString("in_conjurations_" + stat));
+		}
+		return labels;
+	}
+
+	private static List<Map<String, Object>> bonusesOf(List<AppliedBonus> bonuses)
+	{
+		return bonuses.stream().map(bonus -> Map.<String, Object>of("key", bonus.source().text(), "label",
+			TemporaryBonusSources.labelOf(bonus.source()))).toList();
 	}
 
 	private static List<Map<String, Object>> errorsOf(SummonParseFailure failure)
@@ -189,17 +170,10 @@ public final class ConjurationOutputModel
 
 	private static Map<String, Object> summonOf(SummonTemplate summon)
 	{
-		Map<String, Object> fields = new LinkedHashMap<>();
-		for (SummonField field : SummonField.values())
-		{
-			fields.put(field.key(), summon.field(field));
-		}
 		Map<String, Object> described = new LinkedHashMap<>();
 		described.put("name", summon.name());
-		described.put("roles", summon.roles());
-		described.put("fields", fields);
-		described.put("hasMax", summon.maximumHitPoints().isPresent());
-		described.put("hpMax", summon.maximumHitPoints().orElse(0));
+		described.put("race", summon.raceKey());
+		described.put("templates", summon.templateKeys());
 		return described;
 	}
 
@@ -222,6 +196,7 @@ public final class ConjurationOutputModel
 			described.put("counted", creature.roundsLeft().isPresent());
 			described.put("rounds", creature.roundsLeft().orElse(0));
 			described.put("found", summon.isPresent());
+			described.put("bonuses", bonusesOf(creature.bonuses()));
 			described.put("summon", summon.map(ConjurationOutputModel::summonOf).orElse(Map.of()));
 			described.put("missing", (summon.isEmpty() && catalogReads)
 				? LanguageBundle.getFormattedString("in_conjurations_missing", creature.creature()) : "");

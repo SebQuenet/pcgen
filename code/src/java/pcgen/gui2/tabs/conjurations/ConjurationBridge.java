@@ -17,7 +17,16 @@
  */
 package pcgen.gui2.tabs.conjurations;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.OptionalInt;
+
+import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.ConjurationSheetFacade;
+import pcgen.util.Logging;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * What the conjurations page can call back into. Planted on the page's window
@@ -31,6 +40,11 @@ import pcgen.facade.core.ConjurationSheetFacade;
  */
 public final class ConjurationBridge
 {
+
+	/** What the page passes for a bonus that asks no value. */
+	public static final int NO_VALUE = -1;
+
+	private static final ObjectMapper JSON = new ObjectMapper();
 
 	private final ConjurationSheetFacade sheet;
 
@@ -116,5 +130,110 @@ public final class ConjurationBridge
 	public void setDuration(int rounds)
 	{
 		sheet.setDuration(rounds);
+	}
+
+	/**
+	 * @return the group bonuses, as JSON: a list of {key, label}.
+	 */
+	public String groupBonuses()
+	{
+		return json(sheet.groupBonuses());
+	}
+
+	/**
+	 * @return what may be laid on every creature, as JSON: a list of {key, label, range}.
+	 */
+	public String groupBonusChoices()
+	{
+		return json(sheet.groupBonusChoices().stream().map(ConjurationBridge::choiceOf).toList());
+	}
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @return what may be laid on that creature, as JSON: a list of {key, label, range}.
+	 */
+	public String bonusChoices(String creature, int number)
+	{
+		return json(sheet.bonusChoices(creature, number).stream().map(ConjurationBridge::choiceOf).toList());
+	}
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @return the creature as JSON, or "null" when it is not in play.
+	 */
+	public String view(String creature, int number)
+	{
+		return json(sheet.viewOf(creature, number).orElse(null));
+	}
+
+	/**
+	 * @param key   the key of the bonus's source
+	 * @param value the value chosen, or {@value #NO_VALUE} for a bonus that asks none
+	 * @return every creature in play, refreshed, as JSON.
+	 */
+	public String addGroupBonus(String key, int value)
+	{
+		return json(sheet.addGroupBonus(key, valueOf(value)));
+	}
+
+	/**
+	 * @param key the key of a group bonus's source
+	 * @return every creature in play, refreshed, as JSON.
+	 */
+	public String removeGroupBonus(String key)
+	{
+		return json(sheet.removeGroupBonus(key));
+	}
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @param key      the key of the bonus's source
+	 * @param value    the value chosen, or {@value #NO_VALUE} for a bonus that asks none
+	 * @return that creature, refreshed, as JSON.
+	 */
+	public String addBonus(String creature, int number, String key, int value)
+	{
+		return json(sheet.addBonus(creature, number, key, valueOf(value)));
+	}
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @param key      the key of that creature's own bonus's source
+	 * @return that creature, refreshed, as JSON.
+	 */
+	public String removeBonus(String creature, int number, String key)
+	{
+		return json(sheet.removeBonus(creature, number, key));
+	}
+
+	private static OptionalInt valueOf(int value)
+	{
+		return (value == NO_VALUE) ? OptionalInt.empty() : OptionalInt.of(value);
+	}
+
+	private static Map<String, Object> choiceOf(BonusChoice choice)
+	{
+		Map<String, Object> written = new LinkedHashMap<>();
+		written.put("key", choice.key());
+		written.put("label", choice.label());
+		written.put("range", choice.range().orElse(null));
+		return written;
+	}
+
+	private static String json(Object value)
+	{
+		try
+		{
+			return JSON.writeValueAsString(value);
+		}
+		catch (JsonProcessingException e)
+		{
+			Logging.errorPrint("Could not write conjurations for the page", e);
+			return "null";
+		}
 	}
 }

@@ -18,10 +18,8 @@
 package pcgen.core.conjurations;
 
 import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -68,27 +66,5 @@ public record SummonCatalog(List<SummonGroup> groups)
 		String wanted = name.strip();
 		return groups.stream().flatMap(group -> group.summons().stream())
 			.filter(summon -> summon.name().equalsIgnoreCase(wanted)).findFirst();
-	}
-
-	/**
-	 * The roles the catalog can be filtered on: each role once, whatever the
-	 * case it is written in, spelt as it first appears.
-	 *
-	 * @return the roles, in the order they first appear
-	 */
-	public List<String> roles()
-	{
-		Map<String, String> byLowerCase = new LinkedHashMap<>();
-		for (SummonGroup group : groups)
-		{
-			for (SummonTemplate summon : group.summons())
-			{
-				for (String role : summon.roles())
-				{
-					byLowerCase.putIfAbsent(role.toLowerCase(Locale.ROOT), role);
-				}
-			}
-		}
-		return List.copyOf(byLowerCase.values());
 	}
 }

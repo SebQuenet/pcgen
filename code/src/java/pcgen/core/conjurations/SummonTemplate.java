@@ -18,55 +18,36 @@
 package pcgen.core.conjurations;
 
 import java.util.List;
-import java.util.Map;
-import java.util.OptionalInt;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
- * A creature the character can conjure, as its catalog writes it. The values
- * are the author's: nothing here is computed from PCGen's own data.
+ * A creature the character can conjure: a race of PCGen's data and the
+ * templates laid on it. PCGen computes every number from them.
  *
- * @param name   the creature's name, which a creature in play uses to find its
- *               stat line again. Never blank.
- * @param roles  what the creature is for, such as "Tank"; the catalog filters
- *               on them. Never modifiable through the list passed in.
- * @param fields the rest of its stat line, as written. A field the author left
- *               out is simply missing.
+ * @param raceKey      the key of the creature's race in the loaded sources. Never blank.
+ * @param templateKeys the keys of the templates laid on that race, in the order written.
+ * @param line         the line of the catalog that opens this summon, from 1, so that a
+ *                     race the loaded sources lack can be reported where it is written.
  */
-public record SummonTemplate(String name, List<String> roles, Map<SummonField, String> fields)
+public record SummonTemplate(String raceKey, List<String> templateKeys, int line)
 {
-	private static final Pattern WHOLE_NUMBER = Pattern.compile("\\d{1,6}");
-
 	public SummonTemplate
 	{
-		if (name == null || name.isBlank())
+		if (raceKey == null || raceKey.isBlank())
 		{
-			throw new IllegalArgumentException("A conjuration needs a name");
+			throw new IllegalArgumentException("A conjuration needs a race");
 		}
-		name = name.strip();
-		roles = (roles == null) ? List.of() : List.copyOf(roles);
-		fields = (fields == null) ? Map.of() : Map.copyOf(fields);
+		raceKey = raceKey.strip();
+		templateKeys = (templateKeys == null) ? List.of() : List.copyOf(templateKeys);
 	}
 
 	/**
-	 * @param field one column of the stat line
-	 * @return what the author wrote there, empty when nothing was written
-	 */
-	public String field(SummonField field)
-	{
-		return fields.getOrDefault(field, "");
-	}
-
-	/**
-	 * The hit points a creature in play starts from. They are free text, so the
-	 * first whole number in them is taken as the maximum.
+	 * The name a creature in play uses to find this summon again: its race,
+	 * followed by its templates in parentheses when it has any.
 	 *
-	 * @return the maximum, empty when the hit points hold no whole number
+	 * @return the name, such as "Eagle (Celestial Creature)".
 	 */
-	public OptionalInt maximumHitPoints()
+	public String name()
 	{
-		Matcher number = WHOLE_NUMBER.matcher(field(SummonField.HIT_POINTS));
-		return number.find() ? OptionalInt.of(Integer.parseInt(number.group())) : OptionalInt.empty();
+		return templateKeys.isEmpty() ? raceKey : raceKey + " (" + String.join(", ", templateKeys) + ')';
 	}
 }

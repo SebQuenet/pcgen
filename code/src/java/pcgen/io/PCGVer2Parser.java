@@ -32,6 +32,7 @@ import java.util.IdentityHashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Set;
 import java.util.StringTokenizer;
@@ -112,6 +113,7 @@ import pcgen.core.analysis.SubClassApplication;
 import pcgen.core.analysis.SubstitutionLevelSupport;
 import pcgen.core.bonus.Bonus;
 import pcgen.core.bonus.BonusObj;
+import pcgen.core.bonus.TemporaryBonusSources;
 import pcgen.core.character.CharacterSpell;
 import pcgen.core.character.EquipSet;
 import pcgen.core.character.Follower;
@@ -119,6 +121,8 @@ import pcgen.core.character.SpellBook;
 import pcgen.core.character.SpellInfo;
 import pcgen.core.chooser.ChoiceManagerList;
 import pcgen.core.chooser.ChooserUtilities;
+import pcgen.core.conjurations.AppliedBonus;
+import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.conjurations.SummonCatalogParser;
@@ -1205,7 +1209,10 @@ final class PCGVer2Parser implements PCGParser
 		}
 		parseConjuredLines(cache.containsKey(IOConstants.TAG_CONJURATIONDURATION)
 			? cache.get(IOConstants.TAG_CONJURATIONDURATION) : List.of(),
-			cache.containsKey(IOConstants.TAG_CONJURED) ? cache.get(IOConstants.TAG_CONJURED) : List.of());
+			cache.containsKey(IOConstants.TAG_CONJURED) ? cache.get(IOConstants.TAG_CONJURED) : List.of(),
+			cache.containsKey(IOConstants.TAG_CONJUREDGROUPBONUS)
+				? cache.get(IOConstants.TAG_CONJUREDGROUPBONUS) : List.of(),
+			cache.containsKey(IOConstants.TAG_CONJUREDBONUS) ? cache.get(IOConstants.TAG_CONJUREDBONUS) : List.of());
 
 		/*
 		 * #Character Bio
@@ -3356,8 +3363,11 @@ final class PCGVer2Parser implements PCGParser
 	 *
 	 * @param durationLines the CONJURATIONDURATION lines, in file order.
 	 * @param conjuredLines the CONJURED lines, in file order.
+	 * @param groupBonusLines the CONJUREDGROUPBONUS lines, in file order.
+	 * @param bonusLines the CONJUREDBONUS lines, in file order.
 	 */
-	private void parseConjuredLines(final List<String> durationLines, final List<String> conjuredLines)
+	private void parseConjuredLines(final List<String> durationLines, final List<String> conjuredLines,
+		final List<String> groupBonusLines, final List<String> bonusLines)
 	{
 		int duration = 0;
 		for (final String line : durationLines)
@@ -3396,7 +3406,74 @@ final class PCGVer2Parser implements PCGParser
 					+ e.getMessage() + ')');
 			}
 		}
+		for (final String line : groupBonusLines)
+		{
+			final String body = line.substring(IOConstants.TAG_CONJUREDGROUPBONUS.length() + 1);
+			final Optional<AppliedBonus> bonus = conjurationBonusOf(body.split("\\|", -1), 0, body);
+			if (bonus.isPresent())
+			{
+				fight = fight.withGroupBonus(bonus.get());
+			}
+		}
+		for (final String line : bonusLines)
+		{
+			final String body = line.substring(IOConstants.TAG_CONJUREDBONUS.length() + 1);
+			final String[] fields = body.split("\\|", -1);
+			final Optional<AppliedBonus> bonus = conjurationBonusOf(fields, 2, body);
+			if (bonus.isEmpty())
+			{
+				continue;
+			}
+			final String creature = EntityEncoder.decode(fields[0]);
+			final int number;
+			try
+			{
+				number = Integer.parseInt(fields[1].strip());
+			}
+			catch (NumberFormatException nfe)
+			{
+				warnings.add("Conjured creature bonus without a number was dropped: " + body);
+				continue;
+			}
+			if (fight.conjured().stream().noneMatch(found -> found.is(creature, number)))
+			{
+				warnings.add("Bonus of " + creature + ' ' + number + ", who is not in play, was dropped: " + body);
+				continue;
+			}
+			fight = fight.withBonus(creature, number, bonus.get());
+		}
 		thePC.setConjurationSession(fight);
+	}
+
+	/**
+	 * Reads a bonus laid on conjured creatures: its source key, then its chosen
+	 * value, from a given field on. A bonus whose source the loaded sources lack
+	 * is dropped with a warning.
+	 */
+	private Optional<AppliedBonus> conjurationBonusOf(final String[] fields, final int first, final String body)
+	{
+		if (fields.length != first + 2)
+		{
+			warnings.add("Conjuration bonus line without its fields was dropped: " + body);
+			return Optional.empty();
+		}
+		final Optional<BonusSourceKey> source = BonusSourceKey.parse(EntityEncoder.decode(fields[first]));
+		if (source.isEmpty() || TemporaryBonusSources.find(source.get()).isEmpty())
+		{
+			warnings.add("Conjuration bonus whose source is not loaded was dropped: " + EntityEncoder.decode(fields[first]));
+			return Optional.empty();
+		}
+		try
+		{
+			final String value = fields[first + 1].strip();
+			return Optional.of(new AppliedBonus(source.get(),
+				value.isEmpty() ? OptionalInt.empty() : OptionalInt.of(Integer.parseInt(value))));
+		}
+		catch (NumberFormatException nfe)
+		{
+			warnings.add("Conjuration bonus whose value is not a number was dropped: " + body);
+			return Optional.empty();
+		}
 	}
 
 	/**

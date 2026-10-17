@@ -39,8 +39,7 @@ public class ConjurationCharacterTest extends AbstractCharacterTestCase
 
 	private static final String A_CATALOG = """
 		## Summon Monster IV
-		summon: Hound Archon
-		  hp: 51
+		summon: Archon (Hound)
 		""";
 
 	private static final ConjurationSession A_FIGHT = new ConjurationSession(12,

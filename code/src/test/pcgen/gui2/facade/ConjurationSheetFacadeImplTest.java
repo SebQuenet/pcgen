@@ -44,8 +44,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 
 	private static final String A_CATALOG = """
 		## Summon Monster IV
-		summon: Hound Archon
-		  hp: 51
+		summon: Archon (Hound)
 		""";
 
 	private static ConjurationSheetFacade facadeFor(PlayerCharacter character)

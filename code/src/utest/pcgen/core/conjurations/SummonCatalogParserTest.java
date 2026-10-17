@@ -22,12 +22,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
-import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
 /**
- * Behaviour of the conjuration catalog source syntax.
+ * Reading the text of a catalog of conjurations: groups, a race per summon and its templates.
  */
 class SummonCatalogParserTest
 {
@@ -64,89 +63,50 @@ class SummonCatalogParserTest
 	}
 
 	@Test
-	void readsAGroupHoldingOneSummon()
+	void readsARaceWithoutTemplate()
+	{
+		SummonCatalog catalog = parsed("## Summon Monster IV\nsummon: Archon (Hound)\n");
+
+		assertEquals(new SummonCatalog(List.of(new SummonGroup("Summon Monster IV",
+			List.of(new SummonTemplate("Archon (Hound)", List.of(), 2))))), catalog);
+	}
+
+	@Test
+	void namesASummonWithoutTemplateAfterItsRace()
+	{
+		assertEquals("Archon (Hound)", firstSummon("## IV\nsummon: Archon (Hound)\n").name());
+	}
+
+	@Test
+	void readsTemplatesSeparatedByCommas()
+	{
+		SummonTemplate eagle =
+			firstSummon("## I\nsummon: Eagle\n  template: Celestial Creature, Augment Summoning\n");
+
+		assertEquals(List.of("Celestial Creature", "Augment Summoning"), eagle.templateKeys());
+	}
+
+	@Test
+	void namesASummonAfterItsRaceAndTemplates()
+	{
+		SummonTemplate eagle =
+			firstSummon("## I\nsummon: Eagle\n  template: Celestial Creature, Augment Summoning\n");
+
+		assertEquals("Eagle (Celestial Creature, Augment Summoning)", eagle.name());
+	}
+
+	@Test
+	void sameRaceWithDifferentTemplatesAreTwoEntries()
 	{
 		SummonCatalog catalog = parsed("""
 			## Summon Monster I
-			summon: Dire Rat
-			  hp: 8
+			summon: Eagle
+			  template: Celestial Creature
+			summon: Eagle
+			  template: Fiendish Creature
 			""");
 
-		assertEquals(new SummonCatalog(List.of(new SummonGroup("Summon Monster I",
-			List.of(new SummonTemplate("Dire Rat", List.of(), Map.of(SummonField.HIT_POINTS, "8")))))), catalog);
-	}
-
-	@Test
-	void readsEveryFieldTheSpreadsheetHolds()
-	{
-		SummonTemplate archon = firstSummon("""
-			## Summon Monster IV
-			summon: Hound Archon
-			  speed: 8
-			  hp: 51
-			  ac: 19 / 10 / 19
-			  attack: +11/+6 sword
-			  damage: 2d6+6
-			  special: beast shape II
-			  cmb: 10
-			  cmd: 20
-			  ref: 5
-			  fort: 8
-			  will: 5 / +2 evil
-			  init: 4
-			  spells: greater teleport
-			  note: SR 15
-			""");
-
-		assertEquals(Map.ofEntries(Map.entry(SummonField.SPEED, "8"), Map.entry(SummonField.HIT_POINTS, "51"),
-			Map.entry(SummonField.ARMOR_CLASS, "19 / 10 / 19"), Map.entry(SummonField.ATTACK, "+11/+6 sword"),
-			Map.entry(SummonField.DAMAGE, "2d6+6"), Map.entry(SummonField.SPECIAL, "beast shape II"),
-			Map.entry(SummonField.CMB, "10"), Map.entry(SummonField.CMD, "20"), Map.entry(SummonField.REFLEX, "5"),
-			Map.entry(SummonField.FORTITUDE, "8"), Map.entry(SummonField.WILL, "5 / +2 evil"),
-			Map.entry(SummonField.INITIATIVE, "4"), Map.entry(SummonField.SPELLS, "greater teleport"),
-			Map.entry(SummonField.NOTE, "SR 15")), archon.fields());
-	}
-
-	@Test
-	void readsRolesSeparatedByCommas()
-	{
-		SummonTemplate archon = firstSummon("""
-			## Summon Monster IV
-			summon: Hound Archon
-			  role: Tank, Buff ,Debuff
-			""");
-
-		assertEquals(List.of("Tank", "Buff", "Debuff"), archon.roles());
-	}
-
-	@Test
-	void turnsAnEscapedNewlineIntoALineBreak()
-	{
-		SummonTemplate archon = firstSummon("""
-			## Summon Monster IV
-			summon: Hound Archon
-			  attack: +11/+6 sword\\n+5 bite
-			""");
-
-		assertEquals("+11/+6 sword\n+5 bite", archon.field(SummonField.ATTACK));
-	}
-
-	@Test
-	void keepsAColonInsideAValue()
-	{
-		SummonTemplate vulpinal = firstSummon("""
-			## Summon Monster V
-			summon: Agathion, Vulpinal
-			  spells: 3/day: charm monster
-			""");
-
-		assertEquals("3/day: charm monster", vulpinal.field(SummonField.SPELLS));
-	}
-
-	@Test
-	void reportsAnEmptyStringForAFieldNotWritten()
-	{
-		assertEquals("", firstSummon("## I\nsummon: Dire Rat\n").field(SummonField.SPELLS));
+		assertEquals(2, catalog.groups().getFirst().summons().size());
 	}
 
 	@Test
@@ -157,54 +117,21 @@ class SummonCatalogParserTest
 
 			summon: Dire Rat
 
-			summon: Poisonous Frog
-
 			## Summon Monster II
-			summon: Small Earth Elemental
+			summon: Eagle
+			  template: Celestial Creature
 			""");
 
-		assertEquals(List.of(List.of("Dire Rat", "Poisonous Frog"), List.of("Small Earth Elemental")),
-			catalog.groups().stream()
-				.map(group -> group.summons().stream().map(SummonTemplate::name).toList()).toList());
-	}
-
-	@Test
-	void takesTheFirstWholeNumberOfItsHitPointsAsTheMaximum()
-	{
-		SummonTemplate vulpinal = firstSummon("## V\nsummon: Vulpinal\n  hp: 73 (6 HD)\n");
-
-		assertEquals(73, vulpinal.maximumHitPoints().orElseThrow());
-	}
-
-	@Test
-	void hasNoMaximumWhenItsHitPointsHoldNoWholeNumber()
-	{
-		assertTrue(firstSummon("## V\nsummon: Vulpinal\n  hp: plenty\n").maximumHitPoints().isEmpty());
+		assertEquals(List.of("Dire Rat", "Eagle (Celestial Creature)"), catalog.groups().stream()
+			.flatMap(group -> group.summons().stream()).map(SummonTemplate::name).toList());
 	}
 
 	@Test
 	void findsASummonByNameWhateverItsCase()
 	{
-		SummonCatalog catalog = parsed("## IV\nsummon: Hound Archon\n");
+		SummonCatalog catalog = parsed("## I\nsummon: Eagle\n  template: Celestial Creature\n");
 
-		assertEquals("Hound Archon", catalog.find("hound archon").orElseThrow().name());
-	}
-
-	@Test
-	void listsEveryRoleOnceInTheOrderItFirstAppears()
-	{
-		SummonCatalog catalog = parsed("""
-			## III
-			summon: Crocodile
-			  role: Attacker, Controller
-			## IV
-			summon: Air Elemental
-			  role: controller
-			summon: Hound Archon
-			  role: Tank, attacker
-			""");
-
-		assertEquals(List.of("Attacker", "Controller", "Tank"), catalog.roles());
+		assertEquals("Eagle", catalog.find("eagle (celestial creature)").orElseThrow().raceKey());
 	}
 
 	@Test
@@ -220,33 +147,36 @@ class SummonCatalogParserTest
 	}
 
 	@Test
-	void refusesAnUnknownField()
+	void refusesAnOldField()
 	{
-		assertErrorOnLine(3, "## I\nsummon: Dire Rat\n  size: small\n");
+		List<SummonParseError> errors = errorsOf("## I\nsummon: Dire Rat\n  hp: 51\n");
+
+		assertTrue(errors.stream().anyMatch(error -> error.line() == 3 && error.message().contains("'hp'")),
+			"Expected an error naming 'hp' on line 3, got " + errors);
 	}
 
 	@Test
 	void refusesAnIndentedLineWithNoSummonAboveIt()
 	{
-		assertErrorOnLine(2, "## I\n  hp: 8\nsummon: Dire Rat\n");
+		assertErrorOnLine(2, "## I\n  template: Celestial Creature\nsummon: Dire Rat\n");
 	}
 
 	@Test
-	void refusesAFieldWrittenTwiceForTheSameSummon()
+	void refusesTemplatesWrittenTwiceForTheSameSummon()
 	{
-		assertErrorOnLine(4, "## I\nsummon: Dire Rat\n  hp: 8\n  hp: 9\n");
+		assertErrorOnLine(4, "## I\nsummon: Eagle\n  template: Celestial Creature\n  template: Fiendish Creature\n");
 	}
 
 	@Test
-	void refusesASummonWithNoName()
+	void refusesASummonWithNoRace()
 	{
-		assertErrorOnLine(2, "## I\nsummon:\n  hp: 8\n");
+		assertErrorOnLine(2, "## I\nsummon:\n");
 	}
 
 	@Test
-	void refusesANameAlreadyTakenWhateverItsCase()
+	void refusesTheSameNameTwice()
 	{
-		assertErrorOnLine(4, "## I\nsummon: Dire Rat\n## II\nsummon: dire rat\n");
+		assertErrorOnLine(4, "## I\nsummon: Eagle\n## II\nsummon: eagle\n");
 	}
 
 	@Test

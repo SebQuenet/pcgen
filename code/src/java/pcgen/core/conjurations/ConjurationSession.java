@@ -38,11 +38,22 @@ import java.util.function.UnaryOperator;
  * @param conjured the creatures in play, in the order they arrived. No two
  *                 share a name and a number, and the list is never modifiable
  *                 through the one passed in.
+ * @param groupBonuses the temporary bonuses laid on every creature in play and
+ *                     on every creature conjured after them, in the order laid.
  */
-public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
+public record ConjurationSession(int duration, List<ConjuredCreature> conjured, List<AppliedBonus> groupBonuses)
 {
+	/**
+	 * A fight with no group bonus.
+	 */
+	public ConjurationSession(int duration, List<ConjuredCreature> conjured)
+	{
+		this(duration, conjured, List.of());
+	}
+
 	public ConjurationSession
 	{
+		groupBonuses = (groupBonuses == null) ? List.of() : List.copyOf(groupBonuses);
 		if (duration < 0)
 		{
 			throw new IllegalArgumentException("A duration cannot be negative, and " + duration + " is");
@@ -72,7 +83,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	 */
 	public boolean isEmpty()
 	{
-		return duration == 0 && conjured.isEmpty();
+		return duration == 0 && conjured.isEmpty() && groupBonuses.isEmpty();
 	}
 
 	/**
@@ -101,7 +112,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	{
 		List<ConjuredCreature> joined = new ArrayList<>(conjured);
 		joined.add(arrived);
-		return new ConjurationSession(duration, joined);
+		return new ConjurationSession(duration, joined, groupBonuses);
 	}
 
 	/**
@@ -114,7 +125,8 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	public ConjurationSession withDamage(String creature, int number, int damage)
 	{
 		return changing(creature, number,
-			found -> new ConjuredCreature(found.creature(), found.number(), damage, found.roundsLeft()));
+			found -> new ConjuredCreature(found.creature(), found.number(), damage, found.roundsLeft(),
+				found.bonuses()));
 	}
 
 	/**
@@ -127,7 +139,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	public ConjurationSession withRoundsLeft(String creature, int number, int rounds)
 	{
 		return changing(creature, number, found -> new ConjuredCreature(found.creature(), found.number(),
-			found.damage(), OptionalInt.of(rounds)));
+			found.damage(), OptionalInt.of(rounds), found.bonuses()));
 	}
 
 	/**
@@ -136,7 +148,8 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	 */
 	public ConjurationSession nextRound()
 	{
-		return new ConjurationSession(duration, conjured.stream().map(ConjurationSession::oneRoundLater).toList());
+		return new ConjurationSession(duration, conjured.stream().map(ConjurationSession::oneRoundLater).toList(),
+			groupBonuses);
 	}
 
 	/**
@@ -147,7 +160,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	public ConjurationSession dismiss(String creature, int number)
 	{
 		return new ConjurationSession(duration,
-			conjured.stream().filter(found -> !found.is(creature, number)).toList());
+			conjured.stream().filter(found -> !found.is(creature, number)).toList(), groupBonuses);
 	}
 
 	/**
@@ -155,7 +168,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	 */
 	public ConjurationSession dismissAll()
 	{
-		return new ConjurationSession(duration, List.of());
+		return new ConjurationSession(duration, List.of(), groupBonuses);
 	}
 
 	/**
@@ -165,7 +178,50 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	 */
 	public ConjurationSession withDuration(int rounds)
 	{
-		return new ConjurationSession(rounds, conjured);
+		return new ConjurationSession(rounds, conjured, groupBonuses);
+	}
+
+	/**
+	 * @param bonus a bonus to lay on every creature, now and to come; it replaces a group
+	 *              bonus from the same source
+	 * @return the same fight with that group bonus
+	 */
+	public ConjurationSession withGroupBonus(AppliedBonus bonus)
+	{
+		return new ConjurationSession(duration, conjured, AppliedBonus.adding(groupBonuses, bonus));
+	}
+
+	/**
+	 * @param source the source of a group bonus to lift
+	 * @return the same fight without it; a creature's own bonus from that source stays
+	 */
+	public ConjurationSession withoutGroupBonus(BonusSourceKey source)
+	{
+		return new ConjurationSession(duration, conjured, AppliedBonus.removing(groupBonuses, source));
+	}
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @param bonus    a bonus to lay on that creature alone
+	 * @return the same fight with that bonus on that creature
+	 */
+	public ConjurationSession withBonus(String creature, int number, AppliedBonus bonus)
+	{
+		return changing(creature, number, found -> new ConjuredCreature(found.creature(), found.number(),
+			found.damage(), found.roundsLeft(), AppliedBonus.adding(found.bonuses(), bonus)));
+	}
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @param source   the source of that creature's own bonus to lift
+	 * @return the same fight without that bonus on that creature
+	 */
+	public ConjurationSession withoutBonus(String creature, int number, BonusSourceKey source)
+	{
+		return changing(creature, number, found -> new ConjuredCreature(found.creature(), found.number(),
+			found.damage(), found.roundsLeft(), AppliedBonus.removing(found.bonuses(), source)));
 	}
 
 	private boolean holds(String creature, int number)
@@ -176,7 +232,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 	private ConjurationSession changing(String creature, int number, UnaryOperator<ConjuredCreature> change)
 	{
 		return new ConjurationSession(duration,
-			conjured.stream().map(found -> found.is(creature, number) ? change.apply(found) : found).toList());
+			conjured.stream().map(found -> found.is(creature, number) ? change.apply(found) : found).toList(), groupBonuses);
 	}
 
 	private static ConjuredCreature oneRoundLater(ConjuredCreature creature)
@@ -187,7 +243,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 		}
 		int rounds = Math.max(creature.roundsLeft().getAsInt() - 1, 0);
 		return new ConjuredCreature(creature.creature(), creature.number(), creature.damage(),
-			OptionalInt.of(rounds));
+			OptionalInt.of(rounds), creature.bonuses());
 	}
 
 	private static String identityOf(String creature, int number)

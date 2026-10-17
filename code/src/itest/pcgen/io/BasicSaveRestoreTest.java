@@ -33,8 +33,11 @@ import pcgen.core.PCClass;
 import pcgen.core.PCTemplate;
 import pcgen.core.SettingsHandler;
 import pcgen.core.Skill;
+import pcgen.core.conjurations.AppliedBonus;
+import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
+import pcgen.core.spell.Spell;
 import pcgen.core.tactics.TacticalSessionState;
 import pcgen.core.tactics.TacticalStep;
 import pcgen.core.tactics.TacticalSection;
@@ -299,10 +302,8 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 		finishLoad();
 		String catalog = """
 			## Summon Monster IV
-			summon: Hound Archon | "molosse"
-			  role: Tank, Buff
-			  attack: +11/+6 sword\\n+5 bite
-			  note: SR 15: immune to [electricity] & petrification
+			summon: Archon (Hound) | "molosse"
+			  template: Celestial Creature: [electricity] & petrification\\n
 			""";
 		pc.setConjurationCatalog(catalog);
 		runRoundRobin(null);
@@ -313,7 +314,7 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 	public void testConjuredCreaturesSurviveASave()
 	{
 		finishLoad();
-		pc.setConjurationCatalog("## Summon Monster IV\nsummon: Hound Archon\n  hp: 51\n");
+		pc.setConjurationCatalog("## Summon Monster IV\nsummon: Archon (Hound)\n");
 		ConjurationSession fight = new ConjurationSession(12, List.of(
 			new ConjuredCreature("Hound Archon", 1, 14, OptionalInt.of(7)),
 			new ConjuredCreature("Hound Archon", 2, 0, OptionalInt.empty()),
@@ -321,6 +322,51 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 		pc.setConjurationSession(fight);
 		runRoundRobin(null);
 		assertEquals(fight, reloadedPC.getDisplay().getConjurationSession());
+	}
+
+	@Test
+	public void testConjurationBonusesSurviveASave()
+	{
+		create(Spell.class, "Prayer");
+		create(Spell.class, "Bull's Strength | [odd]: name");
+		finishLoad();
+		AppliedBonus prayer = new AppliedBonus(new BonusSourceKey(BonusSourceKey.SPELL, "", "Prayer"), OptionalInt.of(2));
+		AppliedBonus strength = new AppliedBonus(
+			new BonusSourceKey(BonusSourceKey.SPELL, "", "Bull's Strength | [odd]: name"), OptionalInt.empty());
+		ConjurationSession fight = new ConjurationSession(0, List.of(
+			new ConjuredCreature("Archon: hound | [large]", 1, 3, OptionalInt.empty(), List.of(strength))),
+			List.of(prayer));
+		pc.setConjurationSession(fight);
+		runRoundRobin(null);
+		assertEquals(fight, reloadedPC.getDisplay().getConjurationSession());
+	}
+
+	@Test
+	public void testDropsAConjurationBonusWhoseSourceIsNotLoaded()
+	{
+		finishLoad();
+		String saved = new PCGVer2Creator(pc, SettingsHandler.getGameAsProperty().get(), null).createPCGString()
+			+ "CONJUREDGROUPBONUS:SPELL=No Such Spell|" + IOConstants.LINE_SEP;
+
+		PCGIOHandler handler = new PCGIOHandler();
+		handler.read(reloadedPC, new ByteArrayInputStream(saved.getBytes(StandardCharsets.UTF_8)), true);
+
+		assertEquals(List.of(List.of(), 1L), List.of(reloadedPC.getDisplay().getConjurationSession().groupBonuses(),
+			handler.getWarnings().stream().filter(warning -> warning.contains("No Such Spell")).count()));
+	}
+
+	@Test
+	public void testDropsACreatureBonusForACreatureNotInPlay()
+	{
+		create(Spell.class, "Prayer");
+		finishLoad();
+		String saved = new PCGVer2Creator(pc, SettingsHandler.getGameAsProperty().get(), null).createPCGString()
+			+ "CONJUREDBONUS:Archon (Hound)|1|SPELL=Prayer|" + IOConstants.LINE_SEP;
+
+		PCGIOHandler handler = new PCGIOHandler();
+		handler.read(reloadedPC, new ByteArrayInputStream(saved.getBytes(StandardCharsets.UTF_8)), true);
+
+		assertEquals(1L, handler.getWarnings().stream().filter(warning -> warning.contains("Archon (Hound)")).count());
 	}
 
 	@Test

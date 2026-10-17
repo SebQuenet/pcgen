@@ -18,6 +18,8 @@
 package pcgen.facade.core;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 import pcgen.core.conjurations.SummonParseError;
 
@@ -100,4 +102,62 @@ public interface ConjurationSheetFacade
 	 *               less not to count them.
 	 */
 	void setDuration(int rounds);
+
+	/**
+	 * @return the bonuses laid on every creature in play and to come, in the order laid.
+	 */
+	List<BonusLabel> groupBonuses();
+
+	/**
+	 * @return what may be laid on every creature: the bonuses anyone can lay on another.
+	 */
+	List<BonusChoice> groupBonusChoices();
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @return what may be laid on that creature, its own abilities included; empty when
+	 *         it is not in play or its catalog entry is gone.
+	 */
+	List<BonusChoice> bonusChoices(String creature, int number);
+
+	/**
+	 * Builds the creature the first time it is asked for, which takes seconds.
+	 *
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @return the creature as the page shows it, or nothing when it is not in play or
+	 *         its catalog entry is gone.
+	 */
+	Optional<ConjuredCreatureView> viewOf(String creature, int number);
+
+	/**
+	 * @param key   the key of the bonus's source, such as "SPELL=Prayer"
+	 * @param value the value chosen for a bonus that asks one
+	 * @return every creature in play, refreshed; nothing when the key names no loaded source.
+	 */
+	List<ConjuredCreatureView> addGroupBonus(String key, OptionalInt value);
+
+	/**
+	 * @param key the key of a group bonus's source
+	 * @return every creature in play, refreshed.
+	 */
+	List<ConjuredCreatureView> removeGroupBonus(String key);
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @param key      the key of the bonus's source
+	 * @param value    the value chosen for a bonus that asks one
+	 * @return that creature, refreshed; nothing when the key names no loaded source.
+	 */
+	List<ConjuredCreatureView> addBonus(String creature, int number, String key, OptionalInt value);
+
+	/**
+	 * @param creature the creature's name
+	 * @param number   its number
+	 * @param key      the key of that creature's own bonus's source
+	 * @return that creature, refreshed.
+	 */
+	List<ConjuredCreatureView> removeBonus(String creature, int number, String key);
 }

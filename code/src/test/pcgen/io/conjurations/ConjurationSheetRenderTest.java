@@ -29,6 +29,8 @@ import java.util.OptionalInt;
 
 import pcgen.AbstractCharacterTestCase;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.conjurations.AppliedBonus;
+import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.io.ExportException;
@@ -48,17 +50,11 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 
 	private static final String A_CATALOG = """
 		## Summon Monster IV
-		summon: Hound Archon
-		  role: Tank, Buff
-		  hp: 51
-		  ac: 19 / 10 / 19
-		  attack: +11/+6 sword\\n+5 bite
-		  special: Beast shape II
+		summon: Archon (Hound)
 
 		## Summon Monster V
-		summon: Bralani Azata
-		  role: Ranged, healer
-		  hp: 80
+		summon: Azata (Bralani)
+		  template: Augment Summoning
 		""";
 
 	private static String render(PlayerCharacter character) throws IOException, ExportException
@@ -95,56 +91,14 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 	}
 
 	@Test
-	public void showsTheStatLineOfEveryCreature() throws IOException, ExportException
-	{
-		getCharacter().setConjurationCatalog(A_CATALOG);
-
-		String html = render(getCharacter());
-
-		assertShows("19 / 10 / 19", html);
-		assertShows("Beast shape II", html);
-	}
-
-	@Test
-	public void breaksAFieldOnItsLineBreaks() throws IOException, ExportException
-	{
-		getCharacter().setConjurationCatalog(A_CATALOG);
-
-		assertShows("+11/+6 sword<br>+5 bite", render(getCharacter()));
-	}
-
-	@Test
-	public void offersAFilterForEveryRole() throws IOException, ExportException
-	{
-		getCharacter().setConjurationCatalog(A_CATALOG);
-
-		assertShows("data-roles=\"Tank,Buff,Ranged,healer\"", render(getCharacter()));
-	}
-
-	@Test
 	public void holdsACardReadyForEveryCreatureTheCatalogCanConjure() throws IOException, ExportException
 	{
 		getCharacter().setConjurationCatalog(A_CATALOG);
 
 		String html = render(getCharacter());
 
-		assertShows("<template data-creature=\"Hound Archon\"", html);
-		assertShows("<template data-creature=\"Bralani Azata\"", html);
-	}
-
-	@Test
-	public void showsTheHitPointsLeftToEachCreatureInPlay() throws IOException, ExportException
-	{
-		PlayerCharacter character = getCharacter();
-		character.setConjurationCatalog(A_CATALOG);
-		character.setConjurationSession(new ConjurationSession(12, List.of(
-			new ConjuredCreature("Hound Archon", 1, 14, OptionalInt.of(7)),
-			new ConjuredCreature("Hound Archon", 2, 0, OptionalInt.of(12)))));
-
-		String html = render(character);
-
-		assertShows("<span class=\"hp-current\">37</span> / 51", html);
-		assertShows("<span class=\"hp-current\">51</span> / 51", html);
+		assertShows("<template data-creature=\"Archon (Hound)\"", html);
+		assertShows("<template data-creature=\"Azata (Bralani) (Augment Summoning)\"", html);
 	}
 
 	@Test
@@ -153,7 +107,7 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 		PlayerCharacter character = getCharacter();
 		character.setConjurationCatalog(A_CATALOG);
 		character.setConjurationSession(new ConjurationSession(12,
-			List.of(new ConjuredCreature("Hound Archon", 1, 0, OptionalInt.of(7)))));
+			List.of(new ConjuredCreature("Archon (Hound)", 1, 0, OptionalInt.of(7)))));
 
 		assertShows("<span class=\"rounds-left\">7</span>", render(character));
 	}
@@ -169,13 +123,56 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 		assertShows(LanguageBundle.getFormattedString("in_conjurations_missing", "Lantern Archon"), render(character));
 	}
 
+	private static final AppliedBonus PRAYER =
+		new AppliedBonus(new BonusSourceKey(BonusSourceKey.SPELL, "", "Prayer"), OptionalInt.empty());
+
+	@Test
+	public void offersAStripForTheGroupBonuses() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog(A_CATALOG);
+
+		assertShows(LanguageBundle.getString("in_conjurations_group"), render(getCharacter()));
+	}
+
+	@Test
+	public void showsAChipForEveryGroupBonus() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog(A_CATALOG);
+		character.setConjurationSession(new ConjurationSession(0, List.of(), List.of(PRAYER)));
+
+		assertShows("data-bonus=\"SPELL=Prayer\"", render(character));
+	}
+
+	@Test
+	public void showsAChipForACreaturesOwnBonus() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog(A_CATALOG);
+		character.setConjurationSession(new ConjurationSession(0, List.of(
+			new ConjuredCreature("Archon (Hound)", 1, 0, OptionalInt.empty(), List.of(PRAYER)))));
+
+		assertShows("<span class=\"chip own\" data-bonus=\"SPELL=Prayer\"", render(character));
+	}
+
+	@Test
+	public void escapesMarkupInABonusKey() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog(A_CATALOG);
+		character.setConjurationSession(new ConjurationSession(0, List.of(), List.of(new AppliedBonus(
+			new BonusSourceKey(BonusSourceKey.SPELL, "", "<script>window.pcgen.dismissAll()</script>"),
+			OptionalInt.empty()))));
+
+		assertFalse(render(character).contains("<script>window.pcgen"), "A bonus key reached the page unescaped");
+	}
+
 	@Test
 	public void escapesMarkupWrittenIntoTheCatalog() throws IOException, ExportException
 	{
 		getCharacter().setConjurationCatalog("""
 			## Summon Monster I
-			summon: Dire Rat
-			  special: <script>window.pcgen.dismissAll()</script>
+			summon: <script>window.pcgen.dismissAll()</script>
 			""");
 
 		String html = render(getCharacter());
@@ -206,11 +203,12 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 		PlayerCharacter character = getCharacter();
 		character.setConjurationCatalog(A_CATALOG);
 		character.setConjurationSession(new ConjurationSession(0,
-			List.of(new ConjuredCreature("Hound Archon", 1, 14, OptionalInt.empty()))));
+			List.of(new ConjuredCreature("Archon (Hound)", 1, 14, OptionalInt.empty())), List.of(PRAYER)));
 
 		String html = render(character.cloneForExport());
 
 		assertShows("Summon Monster IV", html);
-		assertShows("<span class=\"hp-current\">37</span> / 51", html);
+		assertShows("<span class=\"hp-damage\">14</span>", html);
+		assertShows("data-bonus=\"SPELL=Prayer\"", html);
 	}
 }

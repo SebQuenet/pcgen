@@ -20,33 +20,31 @@ package pcgen.core.conjurations;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 /**
  * Reads the source text of a conjuration catalog into a {@link SummonCatalog}.
  *
  * <p>
  * The syntax is line oriented, like the tactical plan's. {@code ## } opens a
- * group; {@code summon:} at column zero opens a creature; each of its fields
- * is a key indented two spaces. The two characters {@code \n} in a value stand
- * for a line break, since a field cannot hold a real one.
+ * group; {@code summon:} at column zero names a creature's race; an indented
+ * {@code template:} line under it lists the templates laid on that race,
+ * separated by commas. The two characters {@code \n} in a value stand for a
+ * line break.
  */
 public final class SummonCatalogParser
 {
 	private static final String GROUP_PREFIX = "## ";
 	private static final String INDENT = "  ";
 	private static final String SUMMON_KEY = "summon";
-	private static final String ROLE_KEY = "role";
-	private static final String ROLE_SEPARATOR = ",";
+	private static final String TEMPLATE_KEY = "template";
+	private static final String TEMPLATE_SEPARATOR = ",";
 	private static final String ESCAPED_NEWLINE = "\\n";
 	private static final Pattern KEYED_LINE = Pattern.compile("([A-Za-z]+):(?:\\s(.*))?");
 
@@ -143,18 +141,17 @@ public final class SummonCatalogParser
 			if (block.isEmpty() || !SUMMON_KEY.equals(block.get().key()))
 			{
 				errors.add(new SummonParseError(lineNumber,
-					"Unknown block " + keyOf(line) + "; a creature is written 'summon: name'"));
+					"Unknown block " + keyOf(line) + "; a creature is written 'summon: race'"));
 				skipFieldLines();
 				return;
 			}
 			readSummon(block.get().value(), lineNumber);
 		}
 
-		private void readSummon(String name, int lineNumber)
+		private void readSummon(String raceKey, int lineNumber)
 		{
-			Map<SummonField, String> fields = new EnumMap<>(SummonField.class);
-			List<String> roles = new ArrayList<>();
-			boolean rolesWritten = false;
+			List<String> templates = List.of();
+			boolean templatesWritten = false;
 			while (cursor < lines.size() && lines.get(cursor).startsWith(INDENT))
 			{
 				String line = lines.get(cursor).strip();
@@ -165,44 +162,34 @@ public final class SummonCatalogParser
 					continue;
 				}
 				Optional<KeyedValue> keyedValue = keyed(line);
-				String key = keyedValue.map(KeyedValue::key).orElse("");
-				Optional<SummonField> field = SummonField.forKey(key);
-				if (ROLE_KEY.equals(key))
-				{
-					if (rolesWritten)
-					{
-						errors.add(new SummonParseError(fieldLine, "'role:' is written twice for '" + name + "'"));
-						continue;
-					}
-					rolesWritten = true;
-					roles = rolesOf(keyedValue.get().value());
-				}
-				else if (field.isEmpty())
+				if (keyedValue.isEmpty() || !TEMPLATE_KEY.equals(keyedValue.get().key()))
 				{
 					errors.add(new SummonParseError(fieldLine,
-						"A summon takes " + fieldKeys() + ", not " + keyOf(line)));
+						"A summon takes '" + TEMPLATE_KEY + ":', not " + keyOf(line)));
 				}
-				else if (fields.containsKey(field.get()))
+				else if (templatesWritten)
 				{
 					errors.add(new SummonParseError(fieldLine,
-						"'" + key + ":' is written twice for '" + name + "'"));
+						"'" + TEMPLATE_KEY + ":' is written twice for '" + raceKey + "'"));
 				}
-				else if (!keyedValue.get().value().isEmpty())
+				else
 				{
-					fields.put(field.get(), keyedValue.get().value());
+					templatesWritten = true;
+					templates = listOf(keyedValue.get().value());
 				}
 			}
-			if (name.isBlank())
+			if (raceKey.isBlank())
 			{
-				errors.add(new SummonParseError(lineNumber, "A summon needs a name, written 'summon: name'"));
+				errors.add(new SummonParseError(lineNumber, "A summon needs a race, written 'summon: race'"));
 				return;
 			}
-			if (!takenNames.add(name.toLowerCase(Locale.ROOT)))
+			SummonTemplate summon = new SummonTemplate(raceKey, templates, lineNumber);
+			if (!takenNames.add(summon.name().toLowerCase(Locale.ROOT)))
 			{
-				errors.add(new SummonParseError(lineNumber, "Another summon is already named '" + name + "'"));
+				errors.add(new SummonParseError(lineNumber, "Another summon is already named '" + summon.name() + "'"));
 				return;
 			}
-			summons.add(new SummonTemplate(name, roles, fields));
+			summons.add(summon);
 		}
 
 		private void skipFieldLines()
@@ -251,9 +238,9 @@ public final class SummonCatalogParser
 			return new SummonParseSuccess(new SummonCatalog(groups));
 		}
 
-		private static List<String> rolesOf(String value)
+		private static List<String> listOf(String value)
 		{
-			return Arrays.stream(value.split(ROLE_SEPARATOR)).map(String::strip).filter(role -> !role.isEmpty())
+			return Arrays.stream(value.split(TEMPLATE_SEPARATOR)).map(String::strip).filter(key -> !key.isEmpty())
 				.toList();
 		}
 
@@ -277,12 +264,6 @@ public final class SummonCatalogParser
 		{
 			int colon = line.indexOf(':');
 			return "'" + ((colon < 0) ? line.strip() : line.substring(0, colon).strip()) + "'";
-		}
-
-		private static String fieldKeys()
-		{
-			return "'" + ROLE_KEY + ":', " + Arrays.stream(SummonField.values()).map(field -> "'" + field.key() + ":'")
-				.collect(Collectors.joining(", "));
 		}
 	}
 
