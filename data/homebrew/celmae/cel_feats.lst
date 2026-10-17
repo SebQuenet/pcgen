@@ -34,3 +34,7 @@ Pouvoir Rapide de Saint Thero	PRERACE:1,Udaeus	PREMULT:1,[PREVARGTEQ:ParangonTru
 # Prerequisites: Spellcraft 4 ranks
 # Source: Complete Arcane (D&D 3.5, adapted for Pathfinder)
 Practiced Spellcaster	TYPE:General	PRESKILL:1,Spellcraft=4	DESC:You get a +4 bonus on caster level checks for %1. This bonus can't increase your caster level to beyond your Hit Dice. Does not affect spells per day or spells known.|%LIST	MULT:YES	STACK:NO	CHOOSE:NUMCHOICES=1|CLASS|SPELLCASTER	SOURCEPAGE:Complete Arcane
+
+# Invocateur Qualifié (General) — Practiced Tactician
+# Conditions: the Invocateur de Saint Thero's Invocateur Naturel or the Monster Tactician's Summon Monster, and at least 4 Hit Dice from other classes or racial Hit Dice
+Invocateur Qualifié	TYPE:General	PREVARGTEQ:CelmaeSummonClassLVL,1	PREVARGTEQ:TL-CelmaeSummonClassLVL,4	DESC:Your caster level for the class that grants your summon monster spell-like ability increases by 4, which cannot raise it beyond your Hit Dice; this increases the duration, damage, spell resistance checks and dispel checks of your spells. Your 4 Hit Dice from other classes or racial Hit Dice also add to that class's levels to determine the power of your summon monster spell-like ability (the highest summon monster available and its duration in minutes). This feat does not increase your spells per day nor the highest level of spells you can cast.	BONUS:CASTERLEVEL|Cleric|4|PREABILITY:1,CATEGORY=Special Ability,Invocateur de Saint Thero ~ Invocateur Naturel	BONUS:VAR|CelmaeSummonLVL|4	SOURCEPAGE:Celmae
