@@ -39,6 +39,18 @@ Conséquences, non négociables :
   GUI. Une langue par processus : pas de choix par requête HTTP.
 - Changer de langue demande un redémarrage, comme aujourd'hui pour l'interface.
 
+### Unités
+
+En français, PCGen affiche les unités métriques, comme l'édition française : le jeu d'unités
+`Metric` du mode de jeu Pathfinder (`miscinfo.lst`) convertit déjà 5 ft en 1,5 m et 1 lb en
+0,5 kg. Le choix se fait dans le panneau de préférences de la langue (`LanguagePanel`), qui
+propose déjà les jeux d'unités. Choisir le français sans avoir jamais choisi de jeu d'unités
+sélectionne `Metric` ; un choix explicite de l'utilisateur est toujours respecté.
+
+Les distances et poids écrits dans les textes (`DESC`, `BENEFIT` : « within 30 ft. ») ne passent
+pas par le jeu d'unités : la traduction les convertit elle-même (« à 9 m »), selon une règle
+du glossaire (§ 7).
+
 ## 4. Table de traduction
 
 ### Format
@@ -89,6 +101,18 @@ parenthèses et des virgules, que `.properties` obligerait à échapper.
 - Un objet porteur de plusieurs `DESC` ou `BENEFIT` n'en reçoit pas de traduction ; la ligne est
   signalée.
 
+### Mode de jeu
+
+Une partie du texte vient du mode de jeu (`system/gameModes/Pathfinder`), pas des campagnes :
+caractéristiques, jets de sauvegarde, alignements, catégories de taille. Une table au même
+format, `system/gameModes/Pathfinder/gamemode.fr.tsv`, est chargée avec le mode de jeu, avant
+les campagnes. Elle porte les types `STAT`, `CHECK`, `ALIGNMENT` et `SIZEADJUSTMENT`, et un champ
+supplémentaire `ABB` pour les abréviations (STR → FOR, NG → NB).
+
+Les types de déplacement (Walk, Fly, Swim, Climb, Burrow) ne sont pas des objets : ce sont des
+mots fixes du code et des données. Ils passent par le bundle (`in_move_walk`…), consulté là où
+la vitesse s'affiche.
+
 ## 5. Points d'affichage
 
 | Couche | Où lire la traduction |
@@ -132,6 +156,10 @@ créatures, termes d'action). Il s'appuie sur la terminologie de l'édition fran
 (Black Book Éditions) et sur les traductions de pcfinder (`~/Documents/projects/pcfinder`).
 Il est construit avec Opus et relu à la main.
 
+Le glossaire porte aussi les règles de forme : distances converties en mètres (5 ft = 1,5 m,
+30 ft = 9 m), poids en kilos (1 lb = 0,5 kg), abréviations françaises (DD, NLS, BBA, BMO, DMD,
+PV, CA).
+
 ### Reprise de pcfinder
 
 Les 2 817 dons de `pcfinder-csr/static-data/feats_i18n.json` donnent les noms français des
@@ -168,6 +196,8 @@ Chaque étape est une PR de moins de 500 lignes, utilisable seule.
 2. **Chargement** : format TSV, chargement, rangement sur l'objet, nom traduit dans
    `toString()`, inventaire des usages de ce nom comme clé.
 3. **Affichage GUI et fiches** : branchement du § 5, fiches du § 6.
+3 bis. **Mode de jeu et unités** : table du mode de jeu, types de déplacement, `Metric` par
+   défaut en français (§ 3 et § 4).
 4. **Affichage headless et webapp** : `displayName` dans les modèles de service.
 5. **Glossaire et script** : glossaire relu, script testé sur le Core Rulebook.
 6. **Contenu** : passes de traduction livre par livre, un ou plusieurs livres par PR de
