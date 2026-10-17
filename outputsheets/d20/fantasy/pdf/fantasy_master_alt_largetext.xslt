@@ -2094,7 +2094,7 @@
 							<xsl:with-param name="attribute" select="'initiative.total'"/>
 						</xsl:call-template>
 						<fo:block space-before.optimum="2pt" font-size="12pt">
-							<xsl:value-of select="/character/equipment/total/load"/>
+							<xsl:value-of select="key('label', concat('in_sheet_', translate(/character/equipment/total/load, 'LMHO', 'lmho')))"/>
 						</fo:block>
 					</fo:table-cell>
 				</fo:table-row>

@@ -1162,7 +1162,7 @@
 	<#if (pcvar("VAR.RageTimes") >= 1) >	<!-- If character can Rage -->
 	<rage>
 		<uses_per_day>${pcstring('VAR.RageTimes.INTVAL')}</uses_per_day>
-		<uses_per_day.title>Uses per day</uses_per_day.title>
+		<uses_per_day.title>${i18n('in_sheet_usesPerDay')?xml}</uses_per_day.title>
 		<#if (pcboolean('ABILITYALL.Special Ability.0.TYPE=RageDescription.HASASPECT.RageDescription')) >
 		<description>${pcstring('ABILITYALL.Special Ability.0.TYPE=RageDescription.ASPECT.RageDescription')}</description>
 		<#else>
@@ -1205,7 +1205,7 @@
 	<channel_energy>
 		<level>${pcstring('VAR.ChannelEnergyLVL.INTVAL')}</level>
 		<uses_per_day>${pcstring('VAR.ChannelEnergyTimes.INTVAL')}</uses_per_day>
-		<uses_per_day.title>Uses per day</uses_per_day.title>
+		<uses_per_day.title>${i18n('in_sheet_usesPerDay')?xml}</uses_per_day.title>
 		<save_dc>${pcstring('VAR.ChannelEnergyDC.INTVAL')}</save_dc>
 		<dice>${pcstring('VAR.ChannelEnergyDice.INTVAL')}</dice>
 		<die_size>${pcstring('VAR.ChannelEnergyDieSize.INTVAL')}</die_size>
@@ -1274,7 +1274,7 @@
 		<#if (pcvar("VAR.LayOnHandsTimes") >= 1) > 
 		<layonhands>
 			<hp_per_day>${pcstring('VAR.LayOnHandsTimes.INTVAL')}</hp_per_day>
-			<hp_per_day.title>Uses per day</hp_per_day.title>
+			<hp_per_day.title>${i18n('in_sheet_usesPerDay')?xml}</hp_per_day.title>
 			<description>cure ${pcstring('VAR.LayOnHandsDice.INTVAL')}d6 per use</description>
 		</layonhands>
 		</#if>

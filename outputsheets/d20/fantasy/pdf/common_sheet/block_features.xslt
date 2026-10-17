@@ -793,7 +793,7 @@
 							<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'checklist'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt" text-align="center"><xsl:value-of select="check_type"/></fo:block>
+						<fo:block font-size="8pt" text-align="center"><xsl:call-template name="translated"><xsl:with-param name="prefix" select="'in_sheet_checkType_'"/><xsl:with-param name="text" select="check_type"/></xsl:call-template></fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="1pt" padding-left="9pt">
 						<xsl:call-template name="attrib">

@@ -23,6 +23,7 @@ import java.util.Optional;
 import pcgen.core.display.CharacterDisplay;
 import pcgen.io.ExportHandler;
 import pcgen.io.exporttoken.AbstractExportToken;
+import pcgen.system.LanguageBundle;
 
 //REGION
 public class RegionToken extends AbstractExportToken
@@ -37,7 +38,7 @@ public class RegionToken extends AbstractExportToken
 	public String getToken(String tokenSource, CharacterDisplay display, ExportHandler eh)
 	{
 		StringBuilder sb = new StringBuilder(40);
-		sb.append(display.getRegionString());
+		sb.append(LanguageBundle.getTerm("in_region_", display.getRegionString()));
 		Optional<String> subRegion = display.getSubRegion();
 		subRegion.ifPresent(region -> sb.append(" (").append(region.toString()).append(')'));
 

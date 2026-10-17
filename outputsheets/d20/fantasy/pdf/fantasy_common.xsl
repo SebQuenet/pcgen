@@ -13,6 +13,18 @@
 	<!-- Labels in the configured language, published by base.xml.ftl: key('label', 'in_sheet_skills') -->
 	<xsl:key name="label" match="/character/labels/label" use="@key"/>
 
+	<!-- A data value in the configured language when a label names it, otherwise as it is:
+	     the label key is the prefix followed by the value in lower case without spaces or hyphens -->
+	<xsl:template name="translated">
+		<xsl:param name="prefix"/>
+		<xsl:param name="text"/>
+		<xsl:variable name="label" select="key('label', concat($prefix, translate($text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ -', 'abcdefghijklmnopqrstuvwxyz')))"/>
+		<xsl:choose>
+			<xsl:when test="$label"><xsl:value-of select="$label"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="$text"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
 	<xsl:variable name="PCGenFont">Noto Sans</xsl:variable>
 	<xsl:template match="spell" mode="spell.card">
 		<xsl:param name="break" select="'page'" />
@@ -855,9 +867,9 @@
 			</fo:table-cell>
 			<fo:table-cell>
 				<fo:block text-align="right" space-before.optimum="1pt" font-size="7pt">
-					<xsl:value-of select="format-number(item/weight, '####0.0#')" />
+					<xsl:value-of select="format-number(translate(item/weight, ',', '.'), '####0.0#')" />
 					<xsl:if test="item/quantity &gt; 1">
-						<fo:inline font-size="5pt">(<xsl:value-of select="format-number(item/weight * item/quantity, '####0.0#')" />)</fo:inline>
+						<fo:inline font-size="5pt">(<xsl:value-of select="format-number(translate(item/weight, ',', '.') * item/quantity, '####0.0#')" />)</fo:inline>
 					</xsl:if>
 				</fo:block>
 			</fo:table-cell>

@@ -27,6 +27,7 @@ import pcgen.core.Vision;
 import pcgen.core.display.CharacterDisplay;
 import pcgen.io.ExportHandler;
 import pcgen.io.exporttoken.AbstractExportToken;
+import pcgen.system.LanguageBundle;
 
 /**
  * {@code VisionToken} produces the output for the output token
@@ -82,7 +83,7 @@ public class VisionToken extends AbstractExportToken
 			{
 				result.append(", ");
 			}
-			result.append(vision.getType());
+			result.append(LanguageBundle.getTerm("in_vision_", vision.getType().toString()));
 			String distStr = vision.getDistance().toString();
 			int dist = 0;
 			if ((distStr != null) && (!distStr.trim().isEmpty()))

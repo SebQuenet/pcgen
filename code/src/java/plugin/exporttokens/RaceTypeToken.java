@@ -21,6 +21,7 @@ package plugin.exporttokens;
 import pcgen.core.display.CharacterDisplay;
 import pcgen.io.ExportHandler;
 import pcgen.io.exporttoken.AbstractExportToken;
+import pcgen.system.LanguageBundle;
 
 //RACETYPE
 public class RaceTypeToken extends AbstractExportToken
@@ -38,7 +39,7 @@ public class RaceTypeToken extends AbstractExportToken
 
 		if ("RACETYPE".equals(tokenSource))
 		{
-			retString = display.getRaceType();
+			retString = LanguageBundle.getTerm("in_raceType_", display.getRaceType());
 		}
 
 		return retString;

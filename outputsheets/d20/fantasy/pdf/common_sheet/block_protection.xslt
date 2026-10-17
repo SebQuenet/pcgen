@@ -80,7 +80,7 @@
 						</fo:table-cell>
 						<fo:table-cell text-align="center">
 							<fo:block font-size="8pt">
-								<xsl:value-of select="type"/>
+								<xsl:call-template name="translated"><xsl:with-param name="prefix" select="'in_sheet_armorType_'"/><xsl:with-param name="text" select="type"/></xsl:call-template>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell text-align="center">

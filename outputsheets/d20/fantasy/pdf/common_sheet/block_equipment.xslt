@@ -145,7 +145,7 @@
 							</fo:table-cell>
 							<fo:table-cell text-align="center">
 								<fo:block space-before.optimum="1pt" font-size="7pt">
-									<xsl:value-of select="location"/>
+									<xsl:call-template name="translated"><xsl:with-param name="prefix" select="'in_sheet_location_'"/><xsl:with-param name="text" select="location"/></xsl:call-template>
 								</fo:block>
 							</fo:table-cell>
 							<fo:table-cell>
@@ -155,9 +155,9 @@
 							</fo:table-cell>
 							<fo:table-cell number-columns-spanned="2">
 								<fo:block text-align="center" space-before.optimum="1pt" font-size="7pt">
-									<xsl:value-of select="format-number(weight, '##,##0.#')"/>
+									<xsl:value-of select="format-number(translate(weight, ',', '.'), '##,##0.#')"/>
 									<xsl:if test="quantity &gt; 1">
-										(<xsl:value-of select="format-number(weight * quantity, '##,##0.#')"/>)
+										(<xsl:value-of select="format-number(translate(weight, ',', '.') * quantity, '##,##0.#')"/>)
 									</xsl:if>
 									<xsl:text> / </xsl:text>
 									<xsl:value-of select="format-number(cost, '##,##0.#')"/>
@@ -341,7 +341,7 @@
 							<fo:table-cell>
 								<fo:block>
 									<xsl:value-of select="name"/>: <xsl:value-of select="quantity"/>
-									 <fo:inline font-size="6pt">[<xsl:value-of select="location"/>]</fo:inline>
+									 <fo:inline font-size="6pt">[<xsl:call-template name="translated"><xsl:with-param name="prefix" select="'in_sheet_location_'"/><xsl:with-param name="text" select="location"/></xsl:call-template>]</fo:inline>
 								</fo:block>
 							</fo:table-cell>
 						</fo:table-row>
@@ -361,7 +361,7 @@
 							<fo:table-cell>
 								<fo:block>
 									<xsl:value-of select="quantity"/> x <xsl:value-of select="name"/> (<xsl:value-of select="cost"/>)
-									 <fo:inline font-size="6pt">[<xsl:value-of select="location"/>]</fo:inline>
+									 <fo:inline font-size="6pt">[<xsl:call-template name="translated"><xsl:with-param name="prefix" select="'in_sheet_location_'"/><xsl:with-param name="text" select="location"/></xsl:call-template>]</fo:inline>
 								</fo:block>
 							</fo:table-cell>
 						</fo:table-row>

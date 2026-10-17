@@ -959,13 +959,13 @@
 						</xsl:call-template>
 						<xsl:if test="(/character/equipment/total/load = 'Medium' or /character/equipment/total/load = 'Heavy' or /character/equipment/total/load = 'Overload')">
 						<fo:block font-size="10pt" font-weight="bold" color="red">
-							<xsl:value-of select="/character/equipment/total/load"/>
+							<xsl:value-of select="key('label', concat('in_sheet_', translate(/character/equipment/total/load, 'LMHO', 'lmho')))"/>
 							<fo:inline font-size="6" font-weight="italics"> <xsl:value-of select="key('label','in_sheet_rulesApplied')"/></fo:inline>
 						</fo:block>
 						</xsl:if>
 						<xsl:if test="/character/equipment/total/load = 'Light'">
 						<fo:block space-before.optimum="2pt" font-size="10pt">
-							<xsl:value-of select="/character/equipment/total/load"/>
+							<xsl:value-of select="key('label', concat('in_sheet_', translate(/character/equipment/total/load, 'LMHO', 'lmho')))"/>
 						</fo:block>
 						</xsl:if>
 					</fo:table-cell>

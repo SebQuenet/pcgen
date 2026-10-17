@@ -102,6 +102,21 @@ public final class LanguageBundle
 	 * @return property
 	 */
 	/**
+	 * A game term that is not a loaded object, such as a race type or a vision type, in the configured
+	 * language: the text under the prefix followed by the term's letters and digits in lower case,
+	 * or the term itself when the bundle has no such key.
+	 *
+	 * @param prefix the key prefix of the kind of term, such as {@code in_raceType_}
+	 * @param term the term as the data names it
+	 * @return the term in the configured language
+	 */
+	public static String getTerm(String prefix, String term)
+	{
+		String key = prefix + term.replaceAll("[^A-Za-z0-9]", "").toLowerCase(Locale.ROOT);
+		return hasString(key) ? getString(key) : term;
+	}
+
+	/**
 	 * @param key the key of a property
 	 * @return whether the bundle defines it, for a label that falls back to another text
 	 */

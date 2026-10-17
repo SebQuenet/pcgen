@@ -44,6 +44,7 @@ import pcgen.core.PlayerCharacter;
 import pcgen.core.analysis.OutputNameFormatting;
 import pcgen.io.ExportHandler;
 import pcgen.io.FileAccess;
+import pcgen.system.LanguageBundle;
 import pcgen.util.BigDecimalHelper;
 
 /**
@@ -363,6 +364,19 @@ public class EqToken extends Token
 		}
 
 		return "x" + Integer.toString(mult);
+	}
+
+	/**
+	 * An equipment quality as a person reads it: its name, and the value of a Slot, in the configured language.
+	 *
+	 * @param name the quality's name, such as Slot
+	 * @param value the quality's value as the data gives it
+	 * @return the quality, "name: value"
+	 */
+	static String localizedQuality(String name, String value)
+	{
+		String shownValue = "Slot".equals(name) ? LanguageBundle.getTerm("in_slot_", value) : value;
+		return LanguageBundle.getTerm("in_quality_", name) + ": " + shownValue;
 	}
 
 	/**
@@ -1236,8 +1250,7 @@ public class EqToken extends Token
 				Set<String> qualities = new TreeSet<>();
 				for (Map.Entry<String, String> me : qualityMap.entrySet())
 				{
-					qualities
-						.add(me.getKey() + ": " + me.getValue());
+					qualities.add(localizedQuality(me.getKey(), me.getValue()));
 				}
 				return StringUtil.join(qualities, ", ");
 			}

@@ -56,7 +56,7 @@ public final class SkillInfoUtilities
 				StringBuilder sb = new StringBuilder(50);
 				for (PCStat s : statList)
 				{
-                    sb.append(s.getKeyName());
+                    sb.append(s.getLocalizedAbbreviation());
 				}
 				return sb.toString();
 			}
@@ -67,7 +67,7 @@ public final class SkillInfoUtilities
 		}
 		else
 		{
-			return stat.get().getKeyName();
+			return stat.get().getLocalizedAbbreviation();
 		}
 	}
 
