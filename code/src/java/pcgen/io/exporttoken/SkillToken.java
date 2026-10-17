@@ -467,7 +467,7 @@ public class SkillToken extends Token
 					{
 						if (pc.getSkillCostForClass(aSkill, aClass) == SkillCost.CLASS)
 						{
-							classes.add(aClass.getDisplayName());
+							classes.add(aClass.getLocalizedName());
 						}
 					}
 					retValue.append(StringUtils.join(classes, "."));

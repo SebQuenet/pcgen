@@ -119,7 +119,7 @@ public class ClassToken extends Token
 			}
 			else
 			{
-				retString = pcClass.getSubClassKeyed(subClassKey).getDisplayName();
+				retString = pcClass.getSubClassKeyed(subClassKey).getLocalizedName();
 			}
 		}
 
@@ -199,7 +199,7 @@ public class ClassToken extends Token
 		// to include all of the variables
 		for (SpecialAbility sa : saList)
 		{
-			String str = sa.getDisplayName();
+			String str = sa.getLocalizedName();
 			if (str == null || str.isEmpty())
 			{
 				continue;

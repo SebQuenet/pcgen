@@ -105,7 +105,7 @@ public class RaceToken extends Token
 
 			firstLine = false;
 
-			returnString.append(sa.getDisplayName());
+			returnString.append(sa.getLocalizedName());
 		}
 
 		return returnString.toString();
@@ -120,7 +120,7 @@ public class RaceToken extends Token
 
 		if (tempRaceName == null || tempRaceName.isEmpty())
 		{
-			tempRaceName = race.getDisplayName();
+			tempRaceName = race.getLocalizedName();
 		}
 
 		StringBuilder extraRaceInfo = new StringBuilder(40);

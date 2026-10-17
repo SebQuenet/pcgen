@@ -101,6 +101,19 @@ public final class LanguageBundle
 	 * @param key
 	 * @return property
 	 */
+	/**
+	 * @param key the key of a property
+	 * @return whether the bundle defines it, for a label that falls back to another text
+	 */
+	public static boolean hasString(String key)
+	{
+		if (bundle == null)
+		{
+			init();
+		}
+		return bundle.containsKey(key);
+	}
+
 	private static String getProperty(String key)
 	{
 		if (bundle == null)

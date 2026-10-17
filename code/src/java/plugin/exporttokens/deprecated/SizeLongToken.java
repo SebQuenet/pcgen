@@ -40,7 +40,7 @@ public class SizeLongToken extends Token
 		final SizeAdjustment sadj = pc.getSizeAdjustment();
 		if (sadj != null)
 		{
-			return sadj.getDisplayName();
+			return sadj.getLocalizedName();
 		}
 		return "";
 	}

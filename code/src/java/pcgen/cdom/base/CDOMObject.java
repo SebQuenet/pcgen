@@ -855,6 +855,18 @@ public abstract class CDOMObject extends ConcretePrereqObject
 	}
 
 	/**
+	 * The abbreviation to show a person: the translated one when loaded, otherwise the key,
+	 * which is the abbreviation of the objects that have one (stats, alignments, sizes).
+	 *
+	 * @return the abbreviation in the configured language
+	 */
+	public String getLocalizedAbbreviation()
+	{
+		String abbreviation = get(StringKey.LOCALIZED_ABB);
+		return abbreviation == null ? getKeyName() : abbreviation;
+	}
+
+	/**
 	 * The descriptions to show a person: the translation when one is loaded, otherwise the
 	 * English ones.
 	 *

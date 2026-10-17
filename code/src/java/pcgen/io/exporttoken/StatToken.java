@@ -104,11 +104,11 @@ public class StatToken extends Token
 
 			if ("NAME".equals(token))
 			{
-				return stat.getKeyName();
+				return stat.getLocalizedAbbreviation();
 			}
 			if ("LONGNAME".equals(token))
 			{
-				return stat.getDisplayName();
+				return stat.getLocalizedName();
 			}
 
 			if ("ISNONABILITY".equals(token))

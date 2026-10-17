@@ -20,6 +20,7 @@
  */
 package pcgen.io.exporttoken;
 
+import java.util.Locale;
 import java.util.StringTokenizer;
 
 import pcgen.base.util.NamedValue;
@@ -27,11 +28,14 @@ import pcgen.cdom.enumeration.MovementType;
 import pcgen.core.Globals;
 import pcgen.core.display.CharacterDisplay;
 import pcgen.io.ExportHandler;
+import pcgen.system.LanguageBundle;
 
 //MOVEMENT
 //MOVEMENT.movetype
 public class MovementToken extends AbstractExportToken
 {
+	private static final String MOVEMENT_KEY_PREFIX = "in_move_";
+
 	@Override
 	public String getTokenName()
 	{
@@ -72,6 +76,19 @@ public class MovementToken extends AbstractExportToken
 		return retString;
 	}
 
+	/**
+	 * The name of a movement type in the configured language, from the language bundle
+	 * ({@code in_move_fly}...), or as written in the data when the bundle has none.
+	 *
+	 * @param movementType the movement type, as the data names it (Walk, Fly...)
+	 * @return the name to show
+	 */
+	public static String getLocalizedMovementName(String movementType)
+	{
+		String key = MOVEMENT_KEY_PREFIX + movementType.toLowerCase(Locale.ROOT);
+		return LanguageBundle.hasString(key) ? LanguageBundle.getString(key) : movementType;
+	}
+
 	public static String getMovementToken(CharacterDisplay display)
 	{
 		StringBuilder retString = new StringBuilder();
@@ -84,7 +101,7 @@ public class MovementToken extends AbstractExportToken
 				retString.append(", ");
 			}
 			firstLine = false;
-			retString.append(move.getName()).append(" ");
+			retString.append(getLocalizedMovementName(move.getName())).append(" ");
 			retString.append(getRateToken(move.getWeight()));
 		}
 

@@ -577,7 +577,7 @@ public class AbilityToken extends Token
 			}
 			else if (tokenSource.contains(".NAME"))
 			{
-				retString = aAbility.getDisplayName();
+				retString = aAbility.getLocalizedName();
 			}
 			else if (tokenSource.contains(".KEY"))
 			{

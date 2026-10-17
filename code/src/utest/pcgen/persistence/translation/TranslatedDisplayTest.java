@@ -24,6 +24,7 @@ import java.util.List;
 import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.StringKey;
 import pcgen.core.Description;
+import pcgen.core.PCStat;
 import pcgen.core.analysis.OutputNameFormatting;
 import pcgen.core.spell.Spell;
 import pcgen.rules.context.AbstractReferenceContext;
@@ -100,6 +101,24 @@ class TranslatedDisplayTest
 		bless.put(StringKey.TEMP_DESCRIPTION, "+1 morale bonus");
 
 		assertEquals("+1 morale bonus", bless.getLocalizedSafe(StringKey.TEMP_DESCRIPTION));
+	}
+
+	@Test
+	void showsTheTranslatedAbbreviation()
+	{
+		PCStat strength = references.constructCDOMObject(PCStat.class, "STR");
+
+		apply("STAT\t\tSTR\tABB\tFOR");
+
+		assertEquals("FOR", strength.getLocalizedAbbreviation());
+	}
+
+	@Test
+	void showsTheKeyAsAbbreviationWithoutATranslation()
+	{
+		PCStat strength = references.constructCDOMObject(PCStat.class, "STR");
+
+		assertEquals("STR", strength.getLocalizedAbbreviation());
 	}
 
 	@Test

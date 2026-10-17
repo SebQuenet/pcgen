@@ -98,7 +98,7 @@ public class DeityToken extends Token
 
 			if ("NAME".equals(subTag))
 			{
-				retString = deity.getDisplayName();
+				retString = deity.getLocalizedName();
 			}
 			else if ("OUTPUTNAME".equals(subTag))
 			{
@@ -210,7 +210,7 @@ public class DeityToken extends Token
 
 			firstLine = false;
 
-			returnString.append(sa.getDisplayName());
+			returnString.append(sa.getLocalizedName());
 		}
 
 		return returnString.toString();

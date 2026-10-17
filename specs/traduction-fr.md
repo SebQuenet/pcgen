@@ -44,8 +44,10 @@ Conséquences, non négociables :
 En français, PCGen affiche les unités métriques, comme l'édition française : le jeu d'unités
 `Metric` du mode de jeu Pathfinder (`miscinfo.lst`) convertit déjà 5 ft en 1,5 m et 1 lb en
 0,5 kg. Le choix se fait dans le panneau de préférences de la langue (`LanguagePanel`), qui
-propose déjà les jeux d'unités. Choisir le français sans avoir jamais choisi de jeu d'unités
-sélectionne `Metric` ; un choix explicite de l'utilisateur est toujours respecté.
+propose déjà les jeux d'unités. Quand aucun jeu d'unités n'est enregistré pour le mode de jeu,
+le français démarre en `Metric`. PCGen enregistre le jeu d'unités de chaque mode de jeu à chaque
+sauvegarde des options, choisi ou non : une installation existante garde donc le sien, et
+l'utilisateur passe en `Metric` une fois, dans ce panneau.
 
 Les distances et poids écrits dans les textes (`DESC`, `BENEFIT` : « within 30 ft. ») ne passent
 pas par le jeu d'unités : la traduction les convertit elle-même (« à 9 m »), selon une règle
@@ -101,17 +103,18 @@ parenthèses et des virgules, que `.properties` obligerait à échapper.
 - Un objet porteur de plusieurs `DESC` ou `BENEFIT` n'en reçoit pas de traduction ; la ligne est
   signalée.
 
-### Mode de jeu
+### Objets du système
 
-Une partie du texte vient du mode de jeu (`system/gameModes/Pathfinder`), pas des campagnes :
-caractéristiques, jets de sauvegarde, alignements, catégories de taille. Une table au même
-format, `system/gameModes/Pathfinder/gamemode.fr.tsv`, est chargée avec le mode de jeu, avant
-les campagnes. Elle porte les types `STAT`, `CHECK`, `ALIGNMENT` et `SIZEADJUSTMENT`, et un champ
-supplémentaire `ABB` pour les abréviations (STR → FOR, NG → NB).
+Les caractéristiques, jets de sauvegarde, alignements et catégories de taille ne viennent pas du
+mode de jeu mais des données (`cr__stats.lst`, `cr__saves.lst`, `cr__align.lst` du Core
+Rulebook, `ce__sizes.lst` des Core Essentials) : les tables de campagne les couvrent, sous les
+types `STAT`, `CHECK`, `ALIGNMENT` et `SIZEADJUSTMENT`. Un champ `ABB` traduit leur abréviation
+(STR → FOR, NG → NB), que les jetons `STAT.x.NAME`, `ALIGNMENT.SHORT` et `SIZE` affichent ; leur
+clé, qui est aussi leur abréviation anglaise, ne change pas.
 
 Les types de déplacement (Walk, Fly, Swim, Climb, Burrow) ne sont pas des objets : ce sont des
-mots fixes du code et des données. Ils passent par le bundle (`in_move_walk`…), consulté là où
-la vitesse s'affiche.
+mots des données. Ils passent par le bundle (`in_move_walk`…), consulté par les jetons `MOVE` et
+`MOVEMENT`. `BASEMOVEMENT` les lit comme des clés et les garde en anglais.
 
 ## 5. Points d'affichage
 
@@ -199,7 +202,7 @@ Chaque étape est une PR de moins de 500 lignes, utilisable seule.
 2. **Chargement** : format TSV, chargement, rangement sur l'objet, nom traduit dans
    `toString()`, inventaire des usages de ce nom comme clé.
 3. **Affichage GUI et fiches** : branchement du § 5, fiches du § 6.
-3 bis. **Mode de jeu et unités** : table du mode de jeu, types de déplacement, `Metric` par
+3 bis. **Objets du système et unités** : abréviations, types de déplacement, `Metric` par
    défaut en français (§ 3 et § 4).
 4. **Affichage headless et webapp** : `displayName` dans les modèles de service.
 5. **Glossaire et script** : glossaire relu, script testé sur le Core Rulebook.

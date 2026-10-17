@@ -962,7 +962,7 @@ public class EqToken extends Token
 	 */
 	public static String getSizeLongToken(Equipment eq)
 	{
-		return eq.getSizeAdjustment().getDisplayName();
+		return eq.getSizeAdjustment().getLocalizedName();
 	}
 
 	/**

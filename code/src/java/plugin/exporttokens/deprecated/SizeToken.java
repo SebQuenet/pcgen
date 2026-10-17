@@ -36,6 +36,6 @@ public class SizeToken extends Token
 	@Override
 	public String getToken(String tokenSource, PlayerCharacter pc, ExportHandler eh)
 	{
-		return pc.getSizeAdjustment().getKeyName();
+		return pc.getSizeAdjustment().getLocalizedAbbreviation();
 	}
 }

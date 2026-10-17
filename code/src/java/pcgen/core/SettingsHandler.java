@@ -60,6 +60,8 @@ import org.apache.commons.lang3.SystemUtils;
  **/
 public final class SettingsHandler
 {
+	private static final String FRENCH_LANGUAGE = "fr"; //$NON-NLS-1$
+
 
 	//
 	// For EqBuilder
@@ -268,6 +270,18 @@ public final class SettingsHandler
 		guiUsesOutputNameSpells = argUseOutputNameSpells;
 	}
 
+	/**
+	 * The unit set a game mode starts with when none was ever saved: metric in French, as the
+	 * French rulebooks measure, otherwise the game mode's default. A game mode without a metric
+	 * set falls back to its default when the selection fails.
+	 */
+	private static String firstUnitSet(GameMode gameMode)
+	{
+		return FRENCH_LANGUAGE.equals(ConfigurationSettings.getLanguage())
+			? Constants.METRIC_UNITSET_NAME
+			: gameMode.getDefaultUnitSet();
+	}
+
 	public static void setGame(final String key)
 	{
 		final GameMode newMode = SystemCollections.getGameModeNamed(key);
@@ -279,7 +293,7 @@ public final class SettingsHandler
 		// new key for game mode specific options are pcgen.options.gameMode.X.optionName
 		// but offer downward compatible support to read in old version for unitSet from 5.8.0
 		String unitSetName = getOptions().getProperty("pcgen.options.gameMode." + key + ".unitSetName",
-			getOptions().getProperty("pcgen.options.unitSetName." + key, game.get().getDefaultUnitSet()));
+			getOptions().getProperty("pcgen.options.unitSetName." + key, firstUnitSet(game.get())));
 		if (!game.get().selectUnitSet(unitSetName))
 		{
 			if (!game.get().selectDefaultUnitSet())

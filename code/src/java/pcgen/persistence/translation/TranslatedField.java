@@ -22,5 +22,5 @@ package pcgen.persistence.translation;
  */
 public enum TranslatedField
 {
-	NAME, OUTPUTNAME, DESC, BENEFIT, TEMPDESC
+	NAME, OUTPUTNAME, DESC, BENEFIT, TEMPDESC, ABB
 }

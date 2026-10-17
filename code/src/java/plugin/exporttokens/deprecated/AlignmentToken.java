@@ -60,7 +60,7 @@ public class AlignmentToken extends Token
 			return "";
 		}
 		final PCAlignment alignment = AlignmentCompat.getCurrentAlignment(pc.getCharID());
-		return alignment == null ? "None" : alignment.getDisplayName();
+		return alignment == null ? "None" : alignment.getLocalizedName();
 	}
 
 	/**
@@ -76,6 +76,6 @@ public class AlignmentToken extends Token
 		}
 
 		final PCAlignment alignment = AlignmentCompat.getCurrentAlignment(pc.getCharID());
-		return alignment == null ? "None" : alignment.getKeyName();
+		return alignment == null ? "None" : alignment.getLocalizedAbbreviation();
 	}
 }

@@ -57,7 +57,7 @@ public class MoveToken extends AbstractExportToken
 
 				if ("NAME".equals(subToken))
 				{
-					retString = display.getMovementValues().get(moveIndex).getName();
+					retString = MovementToken.getLocalizedMovementName(display.getMovementValues().get(moveIndex).getName());
 				}
 				else if ("RATE".equals(subToken))
 				{
@@ -86,7 +86,7 @@ public class MoveToken extends AbstractExportToken
 	public static String getMoveXToken(CharacterDisplay display, int moveIndex)
 	{
 		NamedValue move = display.getMovementValues().get(moveIndex);
-		return move.getName() + ' ' + MovementToken.getRateToken(move.getWeight());
+		return MovementToken.getLocalizedMovementName(move.getName()) + ' ' + MovementToken.getRateToken(move.getWeight());
 	}
 
 	public static String getSquaresToken(CharacterDisplay display, int moveIndex)

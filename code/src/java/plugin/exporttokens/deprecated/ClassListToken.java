@@ -68,7 +68,7 @@ public class ClassListToken extends AbstractExportToken
 			}
 			else
 			{
-				returnString.append(pcClass.getSubClassKeyed(subClassKey).getDisplayName());
+				returnString.append(pcClass.getSubClassKeyed(subClassKey).getLocalizedName());
 			}
 
 			returnString.append(display.getLevel(pcClass));

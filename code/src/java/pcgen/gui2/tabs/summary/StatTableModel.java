@@ -491,8 +491,7 @@ public class StatTableModel extends AbstractTableModel implements ReferenceListe
 			setBackground(jTable.getBackground());
 			setForeground(jTable.getForeground());
 			PCStat stat = (PCStat) value;
-			//TODO: this should really call stat.toString()
-			setText(stat.getDisplayName());
+			setText(stat.getLocalizedName());
 			return this;
 		}
 

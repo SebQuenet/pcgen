@@ -140,6 +140,9 @@ public interface Constants
 	/** The name of the Standard Unit Set. */
 	String STANDARD_UNITSET_NAME = "Imperial"; //$NON-NLS-1$
 
+	/** The unit set a French player starts with, as the French rulebooks measure. */
+	String METRIC_UNITSET_NAME = "Metric"; //$NON-NLS-1$
+
 	/**
 	 * The unit of height in the standard Unit set.  ftin is hardcoded to translate
 	 * to feet and inches (x'y"). */
