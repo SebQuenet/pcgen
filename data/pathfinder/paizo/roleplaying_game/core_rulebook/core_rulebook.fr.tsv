@@ -4220,11 +4220,11 @@ ABILITY	Special Ability	Rage Power ~ Intimidating Glare	DESC	Par une action de m
 ABILITY	Special Ability	Rage Power ~ Knockback	NAME	Repoussement
 ABILITY	Special Ability	Rage Power ~ Knockback	DESC	Une fois par round, vous pouvez tenter une bousculade contre une cible à la place d'une attaque au corps à corps. En cas de réussite, la cible subit %1 points de dégâts et recule normalement. Vous n'avez pas besoin de la suivre. Cela ne provoque pas d'attaque d'opportunité.
 ABILITY	Special Ability	Rage Power ~ Low-Light Vision	DESC	Vos sens s'aiguisent et vous gagnez la vision nocturne quand vous êtes en rage.
-ABILITY	Special Ability	Rage Power ~ Mighty Swing	NAME	Coup puissant
+ABILITY	Special Ability	Rage Power ~ Mighty Swing	NAME	Coup formidable
 ABILITY	Special Ability	Rage Power ~ Mighty Swing	DESC	Vous confirmez automatiquement un coup critique. Ce pouvoir s'utilise par une action immédiate une fois le coup critique possible déterminé. Il ne peut être utilisé qu'une fois par rage.
 ABILITY	Special Ability	Rage Power ~ Moment of Clarity	NAME	Moment de lucidité
 ABILITY	Special Ability	Rage Power ~ Moment of Clarity	DESC	Pendant 1 round, vous ne bénéficiez d'aucun avantage et ne subissez aucun malus de la rage, y compris le malus à la classe d'armure et les restrictions d'actions. Ce round compte quand même dans votre total quotidien de rounds de rage. Ce pouvoir ne peut être utilisé qu'une fois par rage. L'activer est une action rapide.
-ABILITY	Special Ability	Rage Power ~ Night Vision	NAME	Vision nocturne
+ABILITY	Special Ability	Rage Power ~ Night Vision	NAME	Vision dans le noir
 ABILITY	Special Ability	Rage Power ~ Night Vision	DESC	Vos sens deviennent incroyablement aiguisés quand vous êtes en rage, et vous gagnez la vision dans le noir à 18 m.
 ABILITY	Special Ability	Rage Power ~ No Escape	NAME	Pas d'échappatoire
 ABILITY	Special Ability	Rage Power ~ No Escape	DESC	Par une action immédiate, vous pouvez vous déplacer jusqu'à votre vitesse normale, mais seulement quand un ennemi adjacent utilise une action de retraite pour s'éloigner de vous. Vous devez terminer votre déplacement adjacent à cet ennemi. Vous provoquez normalement des attaques d'opportunité pendant ce déplacement. Ce pouvoir ne peut être utilisé qu'une fois par rage.
@@ -8839,7 +8839,7 @@ EQUIPMENT		Gauntlet	DESC	Ce gant de métal vous permet d'infliger des dégâts l
 EQUIPMENT		Gauntlet (Part of Armor Suit)	DESC	Ce gant de métal vous permet d'infliger des dégâts létaux plutôt que non létaux avec vos attaques à mains nues. Une attaque avec un gantelet est par ailleurs considérée comme une attaque à mains nues. Le prix et le poids indiqués sont pour un seul gantelet. Les armures intermédiaires et lourdes (sauf la cuirasse) sont fournies avec des gantelets. Votre adversaire ne peut pas vous désarmer de vos gantelets.
 EQUIPMENT		Full Plate	DESC	Cette armure de métal comprend des gantelets, de lourdes bottes de cuir, un heaume à visière et une épaisse couche de rembourrage portée sous l'armure. Chaque harnois doit être ajusté individuellement à son propriétaire par un maître armurier, mais un harnois pris à l'ennemi peut être retaillé pour un nouveau propriétaire pour 200 à 800 po (2d4 x 100).
 EQUIPMENT		Eversmoking Bottle	DESC	Cette urne de métal a exactement la même apparence qu'une bouteille d'éfrit, mais elle ne fait que fumer. Si l'on retire le bouchon, la fumée sort en abondance et bloque totalement la vision dans une étendue de 15 m en 1 round. Si la bouteille reste débouchée, la fumée s'étend de 3 m supplémentaires par round jusqu'à couvrir un rayon de 30 m. Cette zone reste enfumée jusqu'à ce que la flasque fumigène soit rebouchée.\nLa bouteille doit être refermée par un mot de commande, après quoi la fumée se dissipe normalement. Un vent modéré (plus de 18 km/h) disperse la fumée en 4 rounds ; un vent fort (plus de 34 km/h), en 1 round.
-EQUIPMENT		Hand of the Mage	DESC	Cette main d'elfe momifiée pend à une chaîne d'or autour du cou d'un personnage (elle occupe l'emplacement d'un collier magique). Elle permet au porteur d'utiliser le sort main du mage à volonté.
+EQUIPMENT		Hand of the Mage	DESC	Cette main d'elfe momifiée pend à une chaîne d'or autour du cou d'un personnage (elle occupe l'emplacement d'un collier magique). Elle permet au porteur d'utiliser le sort manipulation à distance à volonté.
 EQUIPMENT		Ring of Energy Resistance (Greater/Acid)	DESC	Cet anneau protège en permanence son porteur des dégâts d'un type d'énergie : acide, froid, électricité, feu ou son (choisi par le créateur de l'objet ; à déterminer au hasard s'il fait partie d'un trésor). Chaque fois que le porteur devrait subir de tels dégâts, soustrayez-en la valeur de résistance de l'anneau.\nUn anneau de résistance aux énergies supérieure confère une résistance de 30 points.
 EQUIPMENT		Ring of Energy Resistance (Greater/Cold)	DESC	Cet anneau protège en permanence son porteur des dégâts d'un type d'énergie : acide, froid, électricité, feu ou son (choisi par le créateur de l'objet ; à déterminer au hasard s'il fait partie d'un trésor). Chaque fois que le porteur devrait subir de tels dégâts, soustrayez-en la valeur de résistance de l'anneau.\nUn anneau de résistance aux énergies supérieure confère une résistance de 30 points.
 EQUIPMENT		Ring of Energy Resistance (Greater/Electricity)	DESC	Cet anneau protège en permanence son porteur des dégâts d'un type d'énergie : acide, froid, électricité, feu ou son (choisi par le créateur de l'objet ; à déterminer au hasard s'il fait partie d'un trésor). Chaque fois que le porteur devrait subir de tels dégâts, soustrayez-en la valeur de résistance de l'anneau.\nUn anneau de résistance aux énergies supérieure confère une résistance de 30 points.
@@ -9064,3 +9064,19 @@ WEAPONPROF		Shuriken	NAME	Shuriken
 WEAPONPROF		Trident	NAME	Trident
 ALIGNMENT		CN	NAME	Chaotique neutre
 SPELL		Contingency	NAME	Contingence
+ABILITY	Special Ability	Animal Domain	NAME	Animal
+ABILITY	Special Ability	Druid Domain ~ Animal	NAME	Animal
+ABILITY	Special Ability	Favored Enemy Bonus ~ Dragon	NAME	Dragon
+ABILITY	Special Ability	Favored Enemy ~ Dragon	NAME	Dragon
+DOMAIN		Animal	NAME	Animal
+SPELL		Charm Animal (caster's own kind only)	DESC	Ce sort fonctionne comme charme-personne, mais affecte une créature de type animal.
+SPELL		Darkvision (self only)	DESC	Le sujet gagne la capacité de voir à 18 m même dans les ténèbres totales.
+SPELL		Delay Poison (self only)	DESC	Le sujet devient temporairement immunisé contre le poison.
+SPELL		Entangle (in water only)	DESC	Ce sort fait s'enrouler les hautes herbes, les mauvaises herbes et les autres plantes autour des ennemis dans la zone d'effet ou qui y entrent.
+SPELL		Goodberry (created berries bud from the ghoran's own body)	DESC	Lancer baies nourricières rend magiques 2d4 baies fraîchement cueillies.
+SPELL		Rivethun Sixth Sense	DESC	Vous pouvez détecter l'aura qui entoure les créatures mortes-vivantes.
+SPELL		Summon Monster II (giant spider only)	DESC	Ce sort fonctionne comme convocation de monstres I, mais vous pouvez convoquer une créature de la liste de niveau 2 ou 1d3 créatures de la même espèce de la liste de niveau 1.
+SPELL		Summon Monster II (octopus or squid only)	DESC	Ce sort fonctionne comme convocation de monstres I, mais vous pouvez convoquer une créature de la liste de niveau 2 ou 1d3 créatures de la même espèce de la liste de niveau 1.
+SPELL		Summon Monster V (elementals only)	DESC	Ce sort fonctionne comme convocation de monstres I, mais vous pouvez convoquer une créature de la liste de niveau 5, 1d3 créatures de la même espèce de la liste de niveau 4 ou 1d4+1 créatures de la même espèce d'une liste de niveau inférieur.
+SPELL		Summon Monster VI (giant octopus only)	DESC	Ce sort fonctionne comme convocation de monstres I, mais vous pouvez convoquer une créature de la liste de niveau 6, 1d3 créatures de la même espèce de la liste de niveau 5 ou 1d4+1 créatures de la même espèce d'une liste de niveau inférieur.
+SPELL		Wood Meld (as Meld into Stone but only with wood)	DESC	Fusion dans la pierre vous permet de fondre votre corps et vos biens dans un bloc de pierre.
