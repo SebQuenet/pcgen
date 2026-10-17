@@ -17,6 +17,8 @@
  */
 package pcgen.session.service.model;
 
+import java.util.List;
+
 /**
  * One creature in play, as a caller reads it.
  *
@@ -24,7 +26,9 @@ package pcgen.session.service.model;
  * @param number     which of the creatures of that name it is, from 1
  * @param damage     the damage it has taken
  * @param roundsLeft how many rounds it stays; null when its rounds are not counted
+ * @param bonuses    the bonuses laid on it alone, each its source key with the value
+ *                   chosen in parentheses, such as "SPELL=Prayer" or "ABILITY=Internal=Temp Bonus ~ Inspire Courage (2)"
  */
-public record ConjuredCreatureEntry(String creature, int number, int damage, Integer roundsLeft)
+public record ConjuredCreatureEntry(String creature, int number, int damage, Integer roundsLeft, List<String> bonuses)
 {
 }

@@ -44,15 +44,17 @@ public final class ConjurationOperations
 		A catalog is line oriented text.
 
 		'## title' opens a group, usually one summoning spell level. At column zero,
-		'summon: <name>' opens a creature. Its fields follow, each indented two spaces:
-		  role: <role>, <role>   what it is for; the catalog filters on these
-		  speed: hp: ac: attack: damage: special: cmb: cmd: ref: fort: will: init: spells: note:
+		'summon: <race key>' names a creature by the key of its race in the loaded sources,
+		such as 'summon: Archon (Hound)'. Under it, indented two spaces, an optional
+		  template: <template key>, <template key>
+		lays templates on that race, such as 'template: Celestial Creature'.
 
-		Every field is optional and written at most once per creature. No two creatures
-		share a name, whatever its case. Values are free text, written as the player wants
-		to read them; the two characters \\n in a value stand for a line break. The fight
-		takes the first whole number of 'hp:' as the creature's maximum hit points.
-		Nothing is computed from PCGen's data, so write the values out.
+		PCGen builds each creature from its race, the Bestiary's default kit for that race
+		and its templates, and computes every number; Augment Summoning is laid by itself
+		when the character has the feat. A creature is named after its race followed by its
+		templates in parentheses, and no two creatures share that name. A race or template
+		the loaded sources lack is refused, naming its line. Bonuses laid on creatures in
+		play are set by the player on the page and read back by get_conjuration_sheet.
 		""";
 
 	private ConjurationOperations()
@@ -68,9 +70,9 @@ public final class ConjurationOperations
 	private static Operation setConjurationSheet(ConjurationService service)
 	{
 		return Operation.exclusive("set_conjuration_sheet",
-			"Write the catalog of conjurations of a character: the creatures it can conjure, grouped and "
-				+ "with their stat lines, as source text. Refuses text that does not read, naming the "
-				+ "offending lines.\n\n" + SYNTAX,
+			"Write the catalog of conjurations of a character: the creatures it can conjure, grouped, each "
+				+ "named by its race and templates, as source text. Refuses text that does not read or names "
+				+ "what the loaded sources lack, naming the offending lines.\n\n" + SYNTAX,
 			"""
 				{
 					"type": "object",
@@ -90,7 +92,8 @@ public final class ConjurationOperations
 	{
 		return Operation.exclusive("get_conjuration_sheet",
 			"Get the catalog of conjurations of a character as source text, together with the creatures "
-				+ "it has conjured into the fight: their wounds and the rounds they have left.",
+				+ "it has conjured into the fight: their wounds, the rounds they have left and the bonuses "
+				+ "laid on each, together with the bonuses laid on the whole group.",
 			CHARACTER_ONLY_SCHEMA,
 			arguments -> arguments.decodeThen(
 				() -> service.getConjurationSheet(arguments.requiredString(CHARACTER_ID))));

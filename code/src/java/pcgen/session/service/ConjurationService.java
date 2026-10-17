@@ -17,7 +17,11 @@
  */
 package pcgen.session.service;
 
+import java.util.List;
+
 import pcgen.core.PlayerCharacter;
+import pcgen.core.conjurations.AppliedBonus;
+import pcgen.core.conjurations.CatalogResolution;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.conjurations.SummonCatalog;
@@ -81,11 +85,17 @@ public final class ConjurationService
 		return switch (SummonCatalogParser.parse(source))
 		{
 			case SummonParseSuccess read -> {
+				List<SummonParseError> unresolved = CatalogResolution.unresolvedIn(read.catalog());
+				if (!unresolved.isEmpty())
+				{
+					yield ServiceResult.failure(new ServiceError.InvalidArgument("source",
+						"the catalog names what the loaded sources lack:\n" + listed(unresolved)));
+				}
 				character.setConjurationCatalog(source);
 				yield ServiceResult.success(storedOf(read.catalog()));
 			}
 			case SummonParseFailure refused -> ServiceResult.failure(
-				new ServiceError.InvalidArgument("source", "the catalog does not read:\n" + listed(refused)));
+				new ServiceError.InvalidArgument("source", "the catalog does not read:\n" + listed(refused.errors())));
 		};
 	}
 
@@ -97,7 +107,7 @@ public final class ConjurationService
 	{
 		ConjurationSession fight = character.getDisplay().getConjurationSession();
 		return new ConjurationSheet(character.getDisplay().getConjurationCatalog().orElse(""), fight.duration(),
-			fight.conjured().stream().map(ConjurationService::entryOf).toList());
+			fight.conjured().stream().map(ConjurationService::entryOf).toList(), written(fight.groupBonuses()));
 	}
 
 	/**
@@ -119,13 +129,20 @@ public final class ConjurationService
 	private static ConjuredCreatureEntry entryOf(ConjuredCreature creature)
 	{
 		Integer roundsLeft = creature.roundsLeft().isPresent() ? creature.roundsLeft().getAsInt() : null;
-		return new ConjuredCreatureEntry(creature.creature(), creature.number(), creature.damage(), roundsLeft);
+		return new ConjuredCreatureEntry(creature.creature(), creature.number(), creature.damage(), roundsLeft,
+			written(creature.bonuses()));
 	}
 
-	private static String listed(SummonParseFailure refused)
+	private static List<String> written(List<AppliedBonus> bonuses)
+	{
+		return bonuses.stream().map(bonus -> bonus.source().text()
+			+ (bonus.chosenValue().isPresent() ? " (" + bonus.chosenValue().getAsInt() + ')' : "")).toList();
+	}
+
+	private static String listed(List<SummonParseError> errors)
 	{
 		StringBuilder lines = new StringBuilder();
-		for (SummonParseError error : refused.errors())
+		for (SummonParseError error : errors)
 		{
 			lines.append("line ").append(error.line()).append(": ").append(error.message()).append('\n');
 		}

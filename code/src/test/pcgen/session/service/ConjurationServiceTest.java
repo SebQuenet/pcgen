@@ -25,7 +25,11 @@ import java.util.List;
 import java.util.OptionalInt;
 
 import pcgen.AbstractCharacterTestCase;
+import pcgen.core.Globals;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.Race;
+import pcgen.core.conjurations.AppliedBonus;
+import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.session.service.model.ConjurationSheet;
@@ -49,6 +53,16 @@ public class ConjurationServiceTest extends AbstractCharacterTestCase
 		## Summon Monster V
 		summon: Bralani Azata
 		""";
+
+	@Override
+	protected void defaultSetupEnd()
+	{
+		for (String race : List.of("Hound Archon", "Lantern Archon", "Bralani Azata"))
+		{
+			Globals.getContext().getReferenceContext().constructCDOMObject(Race.class, race);
+		}
+		super.defaultSetupEnd();
+	}
 
 	private static String reasonRefused(ServiceResult<?> result)
 	{
@@ -101,6 +115,14 @@ public class ConjurationServiceTest extends AbstractCharacterTestCase
 	}
 
 	@Test
+	public void refusesAnUnknownRaceOnItsLine()
+	{
+		String reason = reasonRefused(ConjurationService.write(getCharacter(), "## IV\nsummon: Hound Archon\nsummon: Dretch\n"));
+
+		assertTrue(reason.contains("line 3"), reason);
+	}
+
+	@Test
 	public void refusesABlankCatalog()
 	{
 		assertTrue(reasonRefused(ConjurationService.write(getCharacter(), " ")).contains("clear_conjuration_sheet"));
@@ -116,8 +138,26 @@ public class ConjurationServiceTest extends AbstractCharacterTestCase
 			new ConjuredCreature("Lantern Archon", 1, 0, OptionalInt.empty()))));
 
 		assertEquals(new ConjurationSheet(A_CATALOG, 12, List.of(
-			new ConjuredCreatureEntry("Hound Archon", 2, 14, 7),
-			new ConjuredCreatureEntry("Lantern Archon", 1, 0, null))), ConjurationService.describe(character));
+			new ConjuredCreatureEntry("Hound Archon", 2, 14, 7, List.of()),
+			new ConjuredCreatureEntry("Lantern Archon", 1, 0, null, List.of())), List.of()),
+			ConjurationService.describe(character));
+	}
+
+	@Test
+	public void reportsTheGroupBonusesAndEachCreaturesOwn()
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog(A_CATALOG);
+		AppliedBonus prayer = new AppliedBonus(new BonusSourceKey(BonusSourceKey.SPELL, "", "Prayer"), OptionalInt.empty());
+		AppliedBonus courage = new AppliedBonus(
+			new BonusSourceKey(BonusSourceKey.ABILITY, "Internal", "Temp Bonus ~ Inspire Courage"), OptionalInt.of(2));
+		character.setConjurationSession(new ConjurationSession(0,
+			List.of(new ConjuredCreature("Hound Archon", 1, 0, OptionalInt.empty(), List.of(courage))), List.of(prayer)));
+
+		assertEquals(new ConjurationSheet(A_CATALOG, 0,
+			List.of(new ConjuredCreatureEntry("Hound Archon", 1, 0, null,
+				List.of("ABILITY=Internal=Temp Bonus ~ Inspire Courage (2)"))), List.of("SPELL=Prayer")),
+			ConjurationService.describe(character));
 	}
 
 	@Test
@@ -130,6 +170,6 @@ public class ConjurationServiceTest extends AbstractCharacterTestCase
 
 		ConjurationService.clear(character);
 
-		assertEquals(new ConjurationSheet("", 0, List.of()), ConjurationService.describe(character));
+		assertEquals(new ConjurationSheet("", 0, List.of(), List.of()), ConjurationService.describe(character));
 	}
 }

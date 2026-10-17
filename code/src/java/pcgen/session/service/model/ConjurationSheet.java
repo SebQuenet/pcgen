@@ -25,7 +25,9 @@ import java.util.List;
  * @param source   the catalog's source text, empty when the character has none
  * @param duration how many rounds a newly conjured creature stays, 0 when rounds are not counted
  * @param conjured the creatures in play, in the order they arrived
+ * @param groupBonuses the bonuses laid on every creature, written as {@link ConjuredCreatureEntry#bonuses()} are
  */
-public record ConjurationSheet(String source, int duration, List<ConjuredCreatureEntry> conjured)
+public record ConjurationSheet(String source, int duration, List<ConjuredCreatureEntry> conjured,
+	List<String> groupBonuses)
 {
 }
