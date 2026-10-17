@@ -22,77 +22,60 @@ et exportable comme fiche de sortie.
 
 ## 2. Décisions
 
-1. **Une syntaxe dédiée, pas une section de la fiche tactique.** Le bloc `creature:` de la fiche
-   tactique porte des lignes libres (`row: étiquette | contenu`), qui ne permettent ni un tableau
-   où l'on compare les créatures, ni un filtre par rôle. Une conjuration a des champs fixes : ceux
-   du tableur.
+1. **Une syntaxe dédiée, pas une section de la fiche tactique.** Une conjuration désigne une race
+   de PCGen et ses gabarits, ce que le bloc `creature:` de la fiche tactique ne sait pas dire.
 2. **Le texte source fait foi**, comme pour la fiche tactique. Le modèle objet est le résultat
    d'une lecture et n'est jamais réécrit en texte.
 3. **La partie droite est coupée en deux, haut et bas** : le catalogue en haut, les créatures en
    jeu en bas, séparés par une barre que l'on déplace. C'est une seule page HTML, donc un seul
    gabarit, un seul pont vers Java et une seule exportation. Conjurer une créature ou la blesser
    ne redessine pas la page : le script met la page à jour lui-même et enregistre par le pont,
-   si bien que le défilement et le filtre du catalogue restent en place.
+   si bien que le défilement du catalogue reste en place.
 4. **L'état du combat est enregistré dans le `.pcg`**, parce qu'un combat survit à une pause, et
    chaque clic marque le personnage modifié. Aucune opération ne l'écrit : c'est le joueur qui
    clique, comme pour la fiche tactique. `get_conjuration_sheet` le renvoie en lecture.
-5. **Les valeurs sont écrites, jamais calculées.** Une conjuration ne pointe pas vers une race du
-   bestiaire de PCGen ; les nombres sont ceux que l'auteur a écrits.
+5. **Les valeurs sont calculées par PCGen** (conception : `docs/superpowers/specs/2026-10-17-conjuration-buffs-design.md`).
+   Chaque créature est construite comme un personnage : sa race, le kit `<race> Default` du
+   bestiaire, ses gabarits, puis `Augment Summoning` quand le conjurateur a le don. Les bonus
+   temporaires (Prière, Rapidité…) lui sont appliqués par les règles de cumul de PCGen.
+6. **Construire une créature prend plusieurs secondes** (environ 4 s : la vérification du kit sur
+   une copie du personnage en prend la moitié). Le catalogue n'affiche donc que les noms ; une
+   créature en jeu est construite une fois puis gardée en mémoire par la façade, et un bonus posé
+   ou retiré la modifie sans la reconstruire. Ses valeurs n'arrivent sur la page que par le pont :
+   une page exportée et ouverte dans un navigateur ne les montre pas.
 
 ## 3. Syntaxe
 
-Orientée ligne, comme la fiche tactique : `## ` ouvre un groupe, une clé en colonne zéro ouvre un
-bloc, une sous-clé indentée de deux espaces complète le bloc au-dessus.
+Orientée ligne, comme la fiche tactique : `## ` ouvre un groupe, `summon:` en colonne zéro nomme
+la race d'une créature, une ligne `template:` indentée de deux espaces liste ses gabarits.
 
 ```
 ## Convocation de monstres IV
 
-summon: Hound Archon
-  role: Tank, Buff, Debuff
-  speed: 8
-  hp: 51
-  ac: 19 / 10 / 19
-  attack: +11/+6 épée\n+5 morsure
-  damage: 2x2D6+6 / 1D8+4
-  special: beast shape II
-  cmb: 10
-  cmd: 20
-  ref: 5 / +2 mal
-  fort: 8 / +2 mal / +4 poison
-  will: 5 / +2 mal
-  init: 4
-  spells: greater teleport / aid +6
-  note: SR 15\nimmunité électricité et pétrification
+summon: Archon (Hound)
+summon: Bear (Grizzly)
+  template: Celestial Creature
 ```
 
 | Ligne | Forme |
 |---|---|
 | groupe | `## <titre>`, en général un niveau de convocation |
-| créature | `summon: <nom>`, puis ses champs en sous-lignes |
-| champ | `  <clé>: <valeur>` |
+| créature | `summon: <clé de race>` |
+| gabarits | `  template: <clé>, <clé>`, facultatif, une fois au plus |
 
-Les clés de champ forment un ensemble fermé, dans l'ordre du tableur : `role`, `speed`, `hp`, `ac`,
-`attack`, `damage`, `special`, `cmb`, `cmd`, `ref`, `fort`, `will`, `init`, `spells`, `note`.
-
-- Tous les champs sont facultatifs ; le nom ne l'est pas.
-- `role:` liste des étiquettes séparées par des virgules. Elles deviennent le filtre du catalogue,
-  sans tenir compte de la casse.
-- Dans une valeur, les deux caractères `\n` valent un saut de ligne, comme dans la fiche tactique.
-- `hp:` est du texte libre ; le suivi des points de vie prend son premier entier comme maximum.
-  Sans entier, la carte compte les dégâts sans barre de vie.
-- Les lignes vides sont ignorées.
+- Le nom d'une créature se déduit : la race, suivie de ses gabarits entre parenthèses
+  (« Bear (Grizzly) (Celestial Creature) »). Deux créatures ne portent pas le même nom, sans tenir
+  compte de la casse : c'est par lui que les créatures en jeu désignent leur modèle.
+- Les lignes vides sont ignorées ; les deux caractères `\n` valent un saut de ligne.
 
 Une lecture qui échoue renvoie toutes ses erreurs, chacune avec son numéro de ligne (base 1),
-sous forme de valeurs typées et non d'exceptions. Cas d'échec :
+sous forme de valeurs typées. Cas d'échec : un texte qui ne s'ouvre pas sur un groupe, une clé
+inconnue en colonne zéro, une sous-clé autre que `template:`, une ligne indentée sans créature
+au-dessus, `template:` écrit deux fois, une race vide, un nom déjà pris, un groupe sans créature,
+un texte sans groupe.
 
-- un texte qui ne s'ouvre pas sur un groupe ;
-- une clé inconnue en colonne zéro, ou une sous-clé inconnue ;
-- une ligne indentée sans créature au-dessus ;
-- un champ écrit deux fois pour la même créature ;
-- un nom vide, ou un nom déjà pris (sans tenir compte de la casse), puisque les créatures en jeu
-  désignent leur modèle par son nom ;
-- un groupe sans créature ;
-- un texte sans aucun groupe.
+`CatalogResolution.unresolvedIn` vérifie ensuite le catalogue contre les sources chargées : une
+race ou un gabarit qu'elles n'ont pas est une erreur sur la ligne de sa créature.
 
 ## 4. Modèle
 
@@ -101,34 +84,26 @@ Paquet `pcgen.core.conjurations`, des records immuables qui se valident à la co
 ```java
 record SummonCatalog(List<SummonGroup> groups)
 record SummonGroup(String title, List<SummonTemplate> summons)
-record SummonTemplate(String name, List<String> roles, Map<SummonField, String> fields)
-enum SummonField { SPEED, HIT_POINTS, ARMOR_CLASS, ATTACK, DAMAGE, SPECIAL, CMB, CMD,
-                   REFLEX, FORTITUDE, WILL, INITIATIVE, SPELLS, NOTE }
+record SummonTemplate(String raceKey, List<String> templateKeys, int line)   // name() déduit
 
-sealed interface SummonParseResult permits SummonParseSuccess, SummonParseFailure
-record SummonParseSuccess(SummonCatalog catalog)
-record SummonParseFailure(List<SummonParseError> errors)
-record SummonParseError(int line, String message)
+record BonusSourceKey(String kind, String category, String key)   // "SPELL=Prayer", "ABILITY=FEAT=Power Attack"
+record AppliedBonus(BonusSourceKey source, OptionalInt chosenValue)
+
+record ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft, List<AppliedBonus> bonuses)
+record ConjurationSession(int duration, List<ConjuredCreature> conjured, List<AppliedBonus> groupBonuses)
 ```
 
-L'état du combat est une structure à part, parce qu'un catalogue n'est pas un compteur :
-
-```java
-record ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft)
-record ConjurationSession(int duration, List<ConjuredCreature> conjured)
-```
-
-- Une créature en jeu se désigne par le nom de son modèle et son numéro : « Hound Archon 2 ».
-  Conjurer donne le plus petit numéro libre pour ce nom, de sorte qu'après un combat vidé les
-  numéros repartent de 1.
-- `duration` est le nombre de rounds donné à une créature au moment où elle arrive ; 0 veut dire
-  que les rounds ne sont pas comptés, et `roundsLeft` est alors vide.
-- « Round suivant » retire un round à chaque créature comptée, sans descendre sous zéro. Une
-  créature à zéro reste affichée, marquée partie, jusqu'à ce que le joueur la renvoie.
-- Les dégâts ne sont jamais négatifs ; ils peuvent dépasser le maximum, la carte affiche alors des
-  points de vie négatifs.
-- Une créature en jeu dont le nom n'est plus dans le catalogue garde son état et s'affiche avec un
-  avertissement.
+- Une créature en jeu se désigne par le nom de son modèle et son numéro. Conjurer donne le plus
+  petit numéro libre pour ce nom.
+- `groupBonuses` s'appliquent à toutes les créatures en jeu et à celles conjurées ensuite ; ils
+  survivent à « Tout renvoyer ». Les `bonuses` d'une créature s'ajoutent aux siens ; quand les deux
+  viennent de la même source, la valeur propre à la créature l'emporte.
+- `SummonedCreatureBuilder` construit une créature (PV moyens des dés de vie, comme le bestiaire)
+  et lit ses valeurs (`CreatureStats`) par les jetons des fiches de sortie. `ConjuredCreatures`
+  garde les créatures construites d'un conjurateur.
+- `pcgen.core.bonus.TemporaryBonusSources` liste les sources de bonus : `castableOnOthers()` pour
+  le groupe (bonus `TEMPBONUS:ANYPC`), `availableTo(créature)` pour une créature, ses propres
+  capacités comprises. `TemporaryBonusApplier` pose et retire un bonus sans boîte de dialogue.
 
 ## 5. Stockage
 
@@ -136,50 +111,46 @@ record ConjurationSession(int duration, List<ConjuredCreature> conjured)
 |---|---|
 | `CONJURATIONS` | tout le texte source, encodé par `EntityEncoder` |
 | `CONJURATIONDURATION` | la durée donnée aux nouvelles créatures, quand elle n'est pas 0 |
-| `CONJURED` | `<nom encodé>\|<numéro>\|<dégâts>\|<rounds restants, vide si non comptés>`, une ligne par créature en jeu, dans l'ordre d'arrivée |
+| `CONJURED` | `<nom encodé>\|<numéro>\|<dégâts>\|<rounds restants, vide si non comptés>`, dans l'ordre d'arrivée |
+| `CONJUREDGROUPBONUS` | `<clé encodée>\|<valeur choisie, vide sinon>`, un bonus de groupe par ligne |
+| `CONJUREDBONUS` | `<nom encodé>\|<numéro>\|<clé encodée>\|<valeur>`, un bonus propre par ligne |
 
-Deux facettes, chacune avec un seul rôle, toutes deux déclarées dans `applicationContext.xml` :
-une facette absente de ce fichier ne survit pas à `cloneForExport`, et la page ne la verrait pas.
-
-- `ConjurationCatalogFacet` garde le texte source ;
-- `ConjurationSessionFacet` garde la `ConjurationSession`.
-
-Accès en lecture par `CharacterDisplay`, en écriture par `PlayerCharacter`, comme la fiche
-tactique. La lecture d'un texte qui ne se lit plus le garde tel quel et ajoute un avertissement
-par erreur ; une ligne `CONJURED` illisible est écartée avec un avertissement.
+Deux facettes, toutes deux déclarées dans `applicationContext.xml` : `ConjurationCatalogFacet` garde
+le texte source, `ConjurationSessionFacet` la `ConjurationSession`. Une ligne illisible, un bonus
+dont la source n'est plus chargée ou qui vise une créature absente sont écartés avec un
+avertissement.
 
 ## 6. La page
 
 Le gabarit `outputsheets/conjurations/conjurations.htm.ftl` reçoit le modèle `conjurations`,
-construit par `pcgen.io.conjurations.ConjurationOutputModel` et ajouté par
-`FreeMarkerExportHandler` à côté de `tactics`. Il ouvre sur `<#ftl output_format="HTML">` : le texte
-vient d'un agent IA et n'est pas fiable, et la page tient un pont ouvert vers Java. Le script
-n'écrit que par `textContent` et par attributs, jamais par `innerHTML`.
+construit par `pcgen.io.conjurations.ConjurationOutputModel`. Il ouvre sur
+`<#ftl output_format="HTML">`, et le script n'écrit que par `textContent` et par attributs.
 
-**En haut, le catalogue.** Une barre de filtres par rôle, puis un tableau par groupe : un bouton
-« Conjurer », le nom, vitesse, PV, CA, attaque, dégâts, CMB, CMD, Réf, Vig, Vol, Init. Sous chaque
-créature, une ligne de détail porte ses rôles, capacités, sorts et notes, quand elle en a.
+**En haut, le catalogue** : un tableau par groupe, avec un bouton « Conjurer » et le nom.
 
-**En bas, les créatures en jeu.** Un en-tête avec « Round suivant », « Tout renvoyer » et la
-durée donnée aux nouvelles créatures. Puis une carte par créature : nom et numéro, rounds
-restants avec − et +, points de vie actuels sur maximum avec une barre, un montant et les boutons
-« Blesser » et « Soigner », une ligne de stats reprise du catalogue, et « Renvoyer ».
+**En bas, les créatures en jeu.** Un en-tête avec « Round suivant », « Tout renvoyer » et la durée ;
+un bandeau « Tout le groupe » avec un jeton par bonus de groupe (× le retire) et un champ
+« + bonus ». Puis une carte par créature : nom et numéro, rounds restants, points de vie, « Blesser »
+et « Soigner », une ligne « Ses bonus » avec ses jetons et son champ « + bonus », ses statistiques
+(vitesse, CA, attaques, BMO, DMD, jets de sauvegarde, initiative), et « Renvoyer ». Une valeur
+qu'un bonus a changée montre l'ancienne barrée.
 
-Une nouvelle carte se clone depuis un `<template>` rendu pour chaque créature du catalogue, avec
-la même macro que les cartes rendues côté serveur.
+Le champ « + bonus » propose, à la première saisie, les bonus que le pont renvoie ; un bonus qui
+demande une valeur (Inspiration vaillante) fait apparaître un champ numérique borné. Au chargement
+et après chaque conjuration, le script demande au pont les valeurs de chaque carte.
 
-Le pont planté sur `window.pcgen` offre :
+Le pont planté sur `window.pcgen` offre, en plus de `conjure`, `setDamage`, `setRoundsLeft`,
+`nextRound`, `dismiss`, `dismissAll` et `setDuration` :
 
-| Méthode | Effet |
+| Méthode | Renvoie (JSON) |
 |---|---|
-| `conjure(nom)` | ajoute une créature en jeu, renvoie son numéro |
-| `setDamage(nom, numéro, dégâts)` | dégâts totaux de cette créature |
-| `setRoundsLeft(nom, numéro, rounds)` | rounds restants de cette créature |
-| `nextRound()` | un round de moins pour chaque créature comptée |
-| `dismiss(nom, numéro)` / `dismissAll()` | renvoie une créature, ou toutes |
-| `setDuration(rounds)` | durée donnée aux prochaines créatures |
+| `view(nom, numéro)` | la créature : `stats`, `baseStats`, `bonuses` |
+| `groupBonuses()` | les bonus de groupe : `key`, `label` |
+| `groupBonusChoices()` / `bonusChoices(nom, numéro)` | `key`, `label`, `range` |
+| `addGroupBonus(clé, valeur)` / `removeGroupBonus(clé)` | toutes les créatures, mises à jour |
+| `addBonus(nom, numéro, clé, valeur)` / `removeBonus(nom, numéro, clé)` | cette créature, mise à jour |
 
-La même page ouverte dans un navigateur ne trouve pas de pont et garde son état pour elle.
+`valeur` vaut `-1` pour un bonus qui n'en demande pas.
 
 ## 7. L'onglet
 
@@ -207,8 +178,8 @@ deux onglets :
 
 | Opération | Effet |
 |---|---|
-| `set_conjuration_sheet` | écrit le texte source ; refuse un texte qui ne se lit pas, en nommant ses lignes |
-| `get_conjuration_sheet` | renvoie le texte source, la durée et les créatures en jeu |
+| `set_conjuration_sheet` | écrit le texte source ; refuse un texte qui ne se lit pas ou qui nomme une race ou un gabarit absents des sources, en nommant ses lignes |
+| `get_conjuration_sheet` | renvoie le texte source, la durée, les créatures en jeu et leurs bonus, et les bonus de groupe |
 | `clear_conjuration_sheet` | retire le catalogue et l'état du combat |
 
 L'aide de `set_conjuration_sheet` décrit la syntaxe, pour qu'un agent l'écrive sans deviner.
@@ -225,15 +196,19 @@ L'aide de `set_conjuration_sheet` décrit la syntaxe, pour qu'un agent l'écrive
   `<script>` écrit dans le texte ressort échappé ; la copie faite par `cloneForExport` garde le
   catalogue et le combat, ce qui échoue si une facette manque dans `applicationContext.xml`.
 - **Façade et service** : sur un vrai personnage, jamais une doublure.
+- **Créatures et bonus** : sur les vraies données du Livre de base et du Bestiaire
+  (`BestiarySources`) — l'archonte molosse a les valeurs du bestiaire, Augmentation des
+  convocations, Prière, Force du taureau, Rapidité, Inspiration vaillante, deux bonus de chance qui
+  ne se cumulent pas.
 
 Le `WebView` et le pont sont la frontière qu'on ne teste pas automatiquement ; ils restent aussi
 minces que possible.
 
 ## 10. Hors périmètre
 
-- Calculer les statistiques depuis les races du bestiaire, les gabarits céleste ou fiélon, ou un
-  don comme Augmentation des convocations.
+- Les valeurs d'arrivée dans le catalogue (voir décision 6).
 - Le nombre de créatures qu'une convocation amène, et les utilisations par jour.
+- Une exception par créature à un bonus de groupe.
 - Rendre la page en PDF.
 
 ## 11. Ordre de construction
