@@ -101,7 +101,7 @@ public class CDOMObjectModel implements TemplateHashModel, TemplateScalarModel, 
 	@Override
 	public String getAsString()
 	{
-		return cdo.getDisplayName();
+		return cdo.getLocalizedName();
 	}
 
 	@Override

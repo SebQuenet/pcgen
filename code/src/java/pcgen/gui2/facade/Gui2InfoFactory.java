@@ -1330,7 +1330,7 @@ public class Gui2InfoFactory implements InfoFactory
 				aSpell.getSafe(StringKey.TARGET_AREA));
 		}
 
-		String aString = originObj.getSafe(StringKey.TEMP_DESCRIPTION);
+		String aString = originObj.getLocalizedSafe(StringKey.TEMP_DESCRIPTION);
 		if (StringUtils.isEmpty(aString) && originObj instanceof Spell sp)
 		{
 			aString = DescriptionFormatting.piWrapDesc(sp, pc.getDescription(sp), false);
@@ -1958,7 +1958,7 @@ public class Gui2InfoFactory implements InfoFactory
 		{
 			TempBonusFacadeImpl tempBonus = (TempBonusFacadeImpl) tempBonusFacade;
 			CDOMObject originObj = tempBonus.getOriginObj();
-			String desc = originObj.getSafe(StringKey.TEMP_DESCRIPTION);
+			String desc = originObj.getLocalizedSafe(StringKey.TEMP_DESCRIPTION);
 			if (StringUtils.isEmpty(desc))
 			{
 				if (originObj instanceof Spell sp)

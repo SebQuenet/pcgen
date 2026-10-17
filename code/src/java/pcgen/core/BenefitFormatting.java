@@ -52,8 +52,8 @@ public final class BenefitFormatting
 			Logging.errorPrint("Unable to resolve Description with object of type: " + b.getClass().getName());
 			return "";
 		}
-		List<Description> theBenefits = sampleObject.getListFor(ListKey.BENEFIT);
-		if (theBenefits == null)
+		List<Description> theBenefits = sampleObject.getLocalizedDescriptions(ListKey.BENEFIT);
+		if (theBenefits.isEmpty())
 		{
 			return Constants.EMPTY_STRING;
 		}

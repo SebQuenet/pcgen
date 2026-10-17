@@ -63,8 +63,8 @@ public class DescriptionActor implements OutputActor<PObject>
 	@Override
 	public TemplateModel process(CharID id, PObject d) throws TemplateModelException
 	{
-		List<Description> theBenefits = d.getListFor(listKey);
-		if (theBenefits == null)
+		List<Description> theBenefits = d.getLocalizedDescriptions(listKey);
+		if (theBenefits.isEmpty())
 		{
 			return FacetLibrary.getFacet(ObjectWrapperFacet.class).wrap(id, Constants.EMPTY_STRING);
 		}

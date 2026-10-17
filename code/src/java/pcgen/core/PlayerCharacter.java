@@ -8446,8 +8446,8 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 			return Constants.EMPTY_STRING;
 		}
 
-		List<Description> theDescriptions = cdo.getListFor(cdo.getDescriptionKey());
-		if (theDescriptions == null)
+		List<Description> theDescriptions = cdo.getLocalizedDescriptions(cdo.getDescriptionKey());
+		if (theDescriptions.isEmpty())
 		{
 			return Constants.EMPTY_STRING;
 		}

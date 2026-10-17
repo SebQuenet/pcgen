@@ -165,8 +165,8 @@ public final class OutputNameFormatting
 	 */
 	public static String getOutputName(CDOMObject po)
 	{
-		String outputName = po.get(StringKey.OUTPUT_NAME);
-		String displayName = po.getDisplayName();
+		String outputName = po.getLocalized(StringKey.OUTPUT_NAME);
+		String displayName = po.getLocalizedName();
 		// if no OutputName has been defined, just return the regular name
 		if (outputName == null)
 		{

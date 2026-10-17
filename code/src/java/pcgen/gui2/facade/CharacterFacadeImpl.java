@@ -933,7 +933,7 @@ public class CharacterFacadeImpl
 				{
 					delegate.showErrorMessage(Constants.APPLICATION_NAME,
 						LanguageBundle.getFormattedString("in_sumYouAreNotQualifiedToTakeTheClass", //$NON-NLS-1$
-							aClass.getDisplayName() + "/" + subClass.getDisplayName())); //$NON-NLS-1$
+							aClass.getLocalizedName() + "/" + subClass.getLocalizedName())); //$NON-NLS-1$
 					return false;
 				}
 			}
@@ -1894,7 +1894,7 @@ public class CharacterFacadeImpl
 		if (!isQualifiedFor(wrappedDomain))
 		{
 			delegate.showErrorMessage(Constants.APPLICATION_NAME,
-				LanguageBundle.getFormattedString("in_qualifyMess", domain.getDisplayName()));
+				LanguageBundle.getFormattedString("in_qualifyMess", domain.getLocalizedName()));
 
 			return;
 		}
@@ -3865,7 +3865,7 @@ public class CharacterFacadeImpl
 		warningMsg.append('\n');
 		warningMsg.append(LanguageBundle.getString("in_kitWarnEnd")); //$NON-NLS-1$
 
-		return delegate.showWarningConfirm(kit.getDisplayName(), warningMsg.toString());
+		return delegate.showWarningConfirm(kit.getLocalizedName(), warningMsg.toString());
 	}
 
 	@Override

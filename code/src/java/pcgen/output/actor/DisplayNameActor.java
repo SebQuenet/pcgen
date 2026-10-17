@@ -37,6 +37,6 @@ public class DisplayNameActor implements OutputActor<CDOMObject>
 	@Override
 	public TemplateModel process(CharID id, CDOMObject d) throws TemplateModelException
 	{
-		return SimpleWrapperLibrary.wrap(d.getDisplayName());
+		return SimpleWrapperLibrary.wrap(d.getLocalizedName());
 	}
 }

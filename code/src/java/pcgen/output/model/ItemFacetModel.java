@@ -128,7 +128,7 @@ public class ItemFacetModel<T> implements TemplateHashModel, TemplateScalarModel
 		}
 		if (obj instanceof CDOMObject)
 		{
-			return ((CDOMObject) obj).getDisplayName();
+			return ((CDOMObject) obj).getLocalizedName();
 		}
 		return obj.toString();
 	}

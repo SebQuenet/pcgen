@@ -25,6 +25,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -45,14 +46,15 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 /**
  * A translated name is display only. Every loaded object is given a made up name, and a real
- * character saved afterwards must be the same file as before: a difference is a place where a
- * shown name is used as a key.
+ * character saved afterwards must hold the same lines as before, in whatever order: a
+ * difference is a place where a shown name is used as a key.
  */
 class PseudoTranslationTest
 {
 	private static final String TEST_CONFIG_FILE = "config.ini.junit-translation";
 	private static final String CHARACTERS_FOLDER = "code/testsuite/PCGfiles";
 	private static final String SAVE_DATE_LINE = "# Character Save Date";
+	private static final Pattern OUTPUT_ORDER = Pattern.compile("\\|OUTPUTORDER:-?\\d+");
 
 	@TempDir
 	static Path workFolder;
@@ -100,8 +102,11 @@ class PseudoTranslationTest
 		String characterId = session.openCharacter(new File(copy.toString())).getCharacterId();
 		session.saveCharacter(characterId);
 		session.closeCharacter(characterId);
+		// Skills are listed in the order of their shown names, which a translation changes
 		return Files.readAllLines(copy, StandardCharsets.UTF_8).stream()
 			.filter(line -> !line.startsWith(SAVE_DATE_LINE))
+			.map(line -> OUTPUT_ORDER.matcher(line).replaceAll(""))
+			.sorted()
 			.collect(Collectors.joining("\n"));
 	}
 }

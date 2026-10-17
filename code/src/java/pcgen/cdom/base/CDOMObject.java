@@ -108,6 +108,14 @@ public abstract class CDOMObject extends ConcretePrereqObject
 	 */
 	private String displayName = Constants.EMPTY_STRING;
 
+	private static final Map<StringKey, StringKey> TRANSLATED_STRINGS = Map.of(
+		StringKey.OUTPUT_NAME, StringKey.LOCALIZED_OUTPUT_NAME,
+		StringKey.TEMP_DESCRIPTION, StringKey.LOCALIZED_TEMP_DESCRIPTION);
+
+	private static final Map<ListKey<Description>, ObjectKey<Description>> TRANSLATED_DESCRIPTIONS = Map.of(
+		ListKey.DESCRIPTION, ObjectKey.LOCALIZED_DESCRIPTION,
+		ListKey.BENEFIT, ObjectKey.LOCALIZED_BENEFIT);
+
 	/**
 	 * Support object to store the variable information on an object.
 	 */
@@ -822,6 +830,42 @@ public abstract class CDOMObject extends ConcretePrereqObject
 	{
 		String localizedName = get(StringKey.LOCALIZED_NAME);
 		return localizedName == null ? getDisplayName() : localizedName;
+	}
+
+	/**
+	 * The translated text of a field, when a translation is loaded, otherwise the English one.
+	 *
+	 * @param key a translatable field: OUTPUT_NAME or TEMP_DESCRIPTION
+	 * @return the text in the configured language, or null when the field is not set
+	 */
+	public String getLocalized(StringKey key)
+	{
+		StringKey translatedKey = TRANSLATED_STRINGS.get(key);
+		String translated = translatedKey == null ? null : get(translatedKey);
+		return translated == null ? get(key) : translated;
+	}
+
+	/**
+	 * @return as {@link #getLocalized(StringKey)}, with an empty string rather than null
+	 */
+	public String getLocalizedSafe(StringKey key)
+	{
+		String localized = getLocalized(key);
+		return localized == null ? Constants.EMPTY_STRING : localized;
+	}
+
+	/**
+	 * The descriptions to show a person: the translation when one is loaded, otherwise the
+	 * English ones.
+	 *
+	 * @param key DESCRIPTION or BENEFIT
+	 * @return the descriptions, empty when there are none
+	 */
+	public List<Description> getLocalizedDescriptions(ListKey<Description> key)
+	{
+		ObjectKey<Description> translatedKey = TRANSLATED_DESCRIPTIONS.get(key);
+		Description translated = translatedKey == null ? null : get(translatedKey);
+		return translated == null ? getSafeListFor(key) : List.of(translated);
 	}
 
 	/**
