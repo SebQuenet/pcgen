@@ -59,7 +59,7 @@ export function Spells() {
               <span>
                 {spell.name} <span className="muted">niv. {spell.level} — {spell.character_class}</span>
               </span>
-              <button type="button" onClick={() => act(() => addKnownSpell(characterId, spell.name))}>
+              <button type="button" onClick={() => act(() => addKnownSpell(characterId, spell.key))}>
                 apprendre
               </button>
             </li>
@@ -76,7 +76,7 @@ export function Spells() {
                 <span>
                   {spell.name} <span className="muted">niv. {spell.level}</span>
                 </span>
-                <button type="button" onClick={() => act(() => addPreparedSpell(characterId, spell.name))}>
+                <button type="button" onClick={() => act(() => addPreparedSpell(characterId, spell.key))}>
                   préparer
                 </button>
               </li>

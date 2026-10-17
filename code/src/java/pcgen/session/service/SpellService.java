@@ -313,7 +313,8 @@ public final class SpellService
 			return true;
 		}
 		return node.getSpellcastingClass().getKeyName().equalsIgnoreCase(classKey)
-			|| node.getSpellcastingClass().getDisplayName().equalsIgnoreCase(classKey);
+			|| node.getSpellcastingClass().getDisplayName().equalsIgnoreCase(classKey)
+			|| node.getSpellcastingClass().getLocalizedName().equalsIgnoreCase(classKey);
 	}
 
 	private static boolean matchesLevel(SpellNode node, String level)
@@ -378,7 +379,7 @@ public final class SpellService
 
 	private static String classNameOf(SpellNode node)
 	{
-		return node.getSpellcastingClass() == null ? null : node.getSpellcastingClass().getDisplayName();
+		return node.getSpellcastingClass() == null ? null : node.getSpellcastingClass().getLocalizedName();
 	}
 
 	private static String rootNameOf(SpellNode node)

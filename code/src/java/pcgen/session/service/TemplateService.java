@@ -52,7 +52,7 @@ public final class TemplateService
 			DataSetLookup.require(TEMPLATE, templateKey, character.getDataSet().getTemplates())
 				.map(template -> {
 					character.addTemplate(template);
-					return new TemplateApplied(template.getDisplayName());
+					return new TemplateApplied(template.getLocalizedName());
 				}));
 	}
 
@@ -63,7 +63,8 @@ public final class TemplateService
 			for (PCTemplate candidate : character.getTemplates())
 			{
 				if (candidate.getKeyName().equalsIgnoreCase(templateKey)
-					|| candidate.getDisplayName().equalsIgnoreCase(templateKey))
+					|| candidate.getDisplayName().equalsIgnoreCase(templateKey)
+					|| candidate.getLocalizedName().equalsIgnoreCase(templateKey))
 				{
 					held = candidate;
 					break;
@@ -75,7 +76,7 @@ public final class TemplateService
 					new ServiceError.NotAllowed("Character does not have template: " + templateKey));
 			}
 			character.removeTemplate(held);
-			return ServiceResult.success(new TemplateRemoved(held.getDisplayName()));
+			return ServiceResult.success(new TemplateRemoved(held.getLocalizedName()));
 		});
 	}
 
@@ -85,7 +86,7 @@ public final class TemplateService
 			List<NamedEntry> applied = new ArrayList<>();
 			for (PCTemplate template : character.getTemplates())
 			{
-				applied.add(new NamedEntry(template.getKeyName(), template.getDisplayName()));
+				applied.add(new NamedEntry(template.getKeyName(), template.getLocalizedName()));
 			}
 			return List.copyOf(applied);
 		});
@@ -128,7 +129,7 @@ public final class TemplateService
 		return characters.byId(characterId).andThen(character ->
 			DataSetLookup.require("Kit", kitKey, character.getAvailableKits()).map(kit -> {
 				character.addKit(kit);
-				return new KitApplied(kit.getDisplayName());
+				return new KitApplied(kit.getLocalizedName());
 			}));
 	}
 

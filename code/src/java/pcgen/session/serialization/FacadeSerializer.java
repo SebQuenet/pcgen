@@ -48,7 +48,7 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", race.getKeyName());
-		result.put("name", race.getDisplayName());
+		result.put("name", race.getLocalizedName());
 		return result;
 	}
 
@@ -56,7 +56,7 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", pcClass.getKeyName());
-		result.put("name", pcClass.getDisplayName());
+		result.put("name", pcClass.getLocalizedName());
 		return result;
 	}
 
@@ -64,7 +64,7 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", stat.getKeyName());
-		result.put("name", stat.getDisplayName());
+		result.put("name", stat.getLocalizedName());
 		return result;
 	}
 
@@ -72,7 +72,7 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", alignment.getKeyName());
-		result.put("name", alignment.getDisplayName());
+		result.put("name", alignment.getLocalizedName());
 		return result;
 	}
 
@@ -80,7 +80,7 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", skill.getKeyName());
-		result.put("name", skill.getDisplayName());
+		result.put("name", skill.getLocalizedName());
 		return result;
 	}
 
@@ -88,7 +88,7 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", deity.getKeyName());
-		result.put("name", deity.getDisplayName());
+		result.put("name", deity.getLocalizedName());
 		return result;
 	}
 
@@ -96,7 +96,7 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", template.getKeyName());
-		result.put("name", template.getDisplayName());
+		result.put("name", template.getLocalizedName());
 		return result;
 	}
 
@@ -104,14 +104,14 @@ public final class FacadeSerializer
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
 		result.put("key", kit.getKeyName());
-		result.put("name", kit.getDisplayName());
+		result.put("name", kit.getLocalizedName());
 		return result;
 	}
 
 	public static Map<String, Object> serializeEquipment(EquipmentFacade equipment)
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
-		result.put("key", equipment.toString());
+		result.put("key", equipment.getKeyName());
 		result.put("name", equipment.toString());
 		return result;
 	}
@@ -119,7 +119,7 @@ public final class FacadeSerializer
 	public static Map<String, Object> serializeAbility(AbilityFacade ability)
 	{
 		Map<String, Object> result = new LinkedHashMap<>();
-		result.put("key", ability.toString());
+		result.put("key", ability.getKeyName());
 		result.put("name", ability.toString());
 		return result;
 	}
@@ -140,10 +140,10 @@ public final class FacadeSerializer
 		result.put("name", character.getNameRef().get());
 
 		Race race = character.getRaceRef().get();
-		result.put("race", race != null ? race.getDisplayName() : null);
+		result.put("race", race != null ? race.getLocalizedName() : null);
 
 		PCAlignment alignment = character.getAlignmentRef().get();
-		result.put("alignment", alignment != null ? alignment.getDisplayName() : null);
+		result.put("alignment", alignment != null ? alignment.getLocalizedName() : null);
 
 		DataSetFacade dataSet = character.getDataSet();
 
@@ -168,7 +168,7 @@ public final class FacadeSerializer
 			if (level > 0)
 			{
 				Map<String, Object> classInfo = new LinkedHashMap<>();
-				classInfo.put("name", pcClass.getDisplayName());
+				classInfo.put("name", pcClass.getLocalizedName());
 				classInfo.put("level", level);
 				classes.add(classInfo);
 			}
@@ -185,7 +185,7 @@ public final class FacadeSerializer
 		result.put("load", character.getLoadRef().get());
 
 		Deity deity = character.getDeityRef().get();
-		result.put("deity", deity != null ? deity.getDisplayName() : null);
+		result.put("deity", deity != null ? deity.getLocalizedName() : null);
 
 		List<String> todoItems = new ArrayList<>();
 		for (TodoFacade todo : character.getTodoList())

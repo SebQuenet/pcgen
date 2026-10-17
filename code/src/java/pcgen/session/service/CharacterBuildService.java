@@ -69,7 +69,7 @@ public final class CharacterBuildService
 		return characters.byId(characterId).andThen(character ->
 			DataSetLookup.require("Race", raceKey, character.getDataSet().getRaces()).map(race -> {
 				character.setRace(race);
-				return new RaceSet(race.getDisplayName());
+				return new RaceSet(race.getLocalizedName());
 			}));
 	}
 
@@ -79,7 +79,7 @@ public final class CharacterBuildService
 			DataSetLookup.require("Alignment", alignmentKey, character.getDataSet().getAlignments())
 				.map(alignment -> {
 					character.setAlignment(alignment);
-					return new AlignmentSet(alignment.getDisplayName());
+					return new AlignmentSet(alignment.getLocalizedName());
 				}));
 	}
 
@@ -172,17 +172,18 @@ public final class CharacterBuildService
 		if (subclasses == null || subclasses.isEmpty())
 		{
 			return ServiceResult.failure(new ServiceError.NotAllowed(
-				pcClass.getDisplayName() + " has no subclasses to choose from."));
+				pcClass.getLocalizedName() + " has no subclasses to choose from."));
 		}
 		for (SubClass subclass : subclasses)
 		{
 			if (subclass.getKeyName().equalsIgnoreCase(subclassKey)
-				|| subclass.getDisplayName().equalsIgnoreCase(subclassKey))
+				|| subclass.getDisplayName().equalsIgnoreCase(subclassKey)
+				|| subclass.getLocalizedName().equalsIgnoreCase(subclassKey))
 			{
 				return ServiceResult.success(subclass.getKeyName());
 			}
 		}
-		return ServiceResult.failure(new ServiceError.EntryNotFound("Subclass of " + pcClass.getDisplayName(),
+		return ServiceResult.failure(new ServiceError.EntryNotFound("Subclass of " + pcClass.getLocalizedName(),
 			subclassKey + " (offered: "
 				+ subclasses.stream().map(SubClass::getKeyName).collect(Collectors.joining(", ")) + ")"));
 	}
@@ -206,7 +207,7 @@ public final class CharacterBuildService
 			int added = character.getClassLevel(pcClass) - before;
 			if (added > 0)
 			{
-				return ServiceResult.success(new LevelsAdded("ok_with_warning", pcClass.getDisplayName(),
+				return ServiceResult.success(new LevelsAdded("ok_with_warning", pcClass.getLocalizedName(),
 					added, levels, "Levels were added but an error occurred: " + e.getMessage()));
 			}
 			return ServiceResult.failure(new ServiceError.NotAllowed(String.valueOf(e.getMessage())));
@@ -228,10 +229,10 @@ public final class CharacterBuildService
 		}
 		if (added < levels)
 		{
-			return ServiceResult.success(new LevelsAdded("partial", pcClass.getDisplayName(), added, levels,
+			return ServiceResult.success(new LevelsAdded("partial", pcClass.getLocalizedName(), added, levels,
 				"Only " + added + " of " + levels + " levels were added."));
 		}
-		return ServiceResult.success(new LevelsAdded(STATUS_OK, pcClass.getDisplayName(), added, levels, null));
+		return ServiceResult.success(new LevelsAdded(STATUS_OK, pcClass.getLocalizedName(), added, levels, null));
 	}
 
 	private static Map<String, PCStat> statsByEveryNameTheyAnswerTo(CharacterFacade character)
@@ -241,6 +242,8 @@ public final class CharacterBuildService
 		{
 			byName.put(stat.getKeyName().toUpperCase(Locale.ROOT), stat);
 			byName.put(stat.getDisplayName().toUpperCase(Locale.ROOT), stat);
+			byName.put(stat.getLocalizedName().toUpperCase(Locale.ROOT), stat);
+			byName.put(stat.getLocalizedAbbreviation().toUpperCase(Locale.ROOT), stat);
 		}
 		return byName;
 	}

@@ -68,7 +68,7 @@ public final class CustomEquipmentService
 				List<NamedEntry> modifiers = new ArrayList<>();
 				for (EquipmentModifier modifier : builder.getAvailList(headNamed(head)))
 				{
-					modifiers.add(new NamedEntry(modifier.getKeyName(), modifier.getDisplayName()));
+					modifiers.add(new NamedEntry(modifier.getKeyName(), modifier.getLocalizedName()));
 				}
 				return List.copyOf(modifiers);
 			}));
@@ -138,7 +138,7 @@ public final class CustomEquipmentService
 			preSelect(delegate, modifier, modifierKey, choices);
 			if (builder.addModToEquipment(modifier, head))
 			{
-				applied.add(modifier.getDisplayName());
+				applied.add(modifier.getLocalizedName());
 			}
 			else
 			{
@@ -205,7 +205,8 @@ public final class CustomEquipmentService
 		{
 			EquipmentModifier modifier = available.getElementAt(index);
 			if (modifier.getKeyName().equalsIgnoreCase(modifierKey)
-				|| modifier.getDisplayName().equalsIgnoreCase(modifierKey))
+				|| modifier.getDisplayName().equalsIgnoreCase(modifierKey)
+				|| modifier.getLocalizedName().equalsIgnoreCase(modifierKey))
 			{
 				return modifier;
 			}

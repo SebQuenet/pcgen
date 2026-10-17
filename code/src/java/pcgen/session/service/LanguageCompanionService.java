@@ -71,7 +71,7 @@ public final class LanguageCompanionService
 			List<KnownLanguage> spoken = new ArrayList<>();
 			for (Language language : character.getLanguages())
 			{
-				spoken.add(new KnownLanguage(language.getKeyName(), language.getDisplayName(),
+				spoken.add(new KnownLanguage(language.getKeyName(), language.getLocalizedName(),
 					character.isAutomatic(language), character.isRemovable(language)));
 			}
 			List<LanguageChooserSummary> offers = new ArrayList<>();
@@ -98,12 +98,13 @@ public final class LanguageCompanionService
 				for (Language offered : chooser.getAvailableList())
 				{
 					if (offered.getKeyName().equalsIgnoreCase(languageKey)
-						|| offered.getDisplayName().equalsIgnoreCase(languageKey))
+						|| offered.getDisplayName().equalsIgnoreCase(languageKey)
+						|| offered.getLocalizedName().equalsIgnoreCase(languageKey))
 					{
 						chooser.addSelected(offered);
 						chooser.commit();
 						return ServiceResult.success(
-							new LanguageAdded(offered.getDisplayName(), chooser.getName()));
+							new LanguageAdded(offered.getLocalizedName(), chooser.getName()));
 					}
 				}
 			}
@@ -119,7 +120,8 @@ public final class LanguageCompanionService
 			for (Language candidate : character.getLanguages())
 			{
 				if (candidate.getKeyName().equalsIgnoreCase(languageKey)
-					|| candidate.getDisplayName().equalsIgnoreCase(languageKey))
+					|| candidate.getDisplayName().equalsIgnoreCase(languageKey)
+					|| candidate.getLocalizedName().equalsIgnoreCase(languageKey))
 				{
 					spoken = candidate;
 					break;
@@ -132,10 +134,10 @@ public final class LanguageCompanionService
 			if (!character.isRemovable(spoken))
 			{
 				return ServiceResult.failure(
-					new ServiceError.NotAllowed("Language is not removable: " + spoken.getDisplayName()));
+					new ServiceError.NotAllowed("Language is not removable: " + spoken.getLocalizedName()));
 			}
 			character.removeLanguage(spoken);
-			return ServiceResult.success(new LanguageRemoved(spoken.getDisplayName()));
+			return ServiceResult.success(new LanguageRemoved(spoken.getLocalizedName()));
 		});
 	}
 
@@ -216,6 +218,7 @@ public final class LanguageCompanionService
 			Race race = stub.getRaceRef().get();
 			if (race != null && stub.getCompanionType().equals(companionType)
 				&& (race.getDisplayName().equalsIgnoreCase(companionRace)
+					|| race.getLocalizedName().equalsIgnoreCase(companionRace)
 					|| race.getKeyName().equalsIgnoreCase(companionRace)))
 			{
 				return stub;
@@ -245,7 +248,7 @@ public final class LanguageCompanionService
 		List<String> names = new ArrayList<>();
 		for (Language language : languages)
 		{
-			names.add(language.getDisplayName());
+			names.add(language.getLocalizedName());
 		}
 		return List.copyOf(names);
 	}
@@ -257,6 +260,6 @@ public final class LanguageCompanionService
 
 	private static String raceNameOf(Race race)
 	{
-		return race == null ? UNKNOWN_RACE : race.getDisplayName();
+		return race == null ? UNKNOWN_RACE : race.getLocalizedName();
 	}
 }

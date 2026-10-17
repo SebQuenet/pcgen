@@ -41,7 +41,7 @@ public final class DeityDomainService
 		return characters.byId(characterId).andThen(character ->
 			DataSetLookup.require("Deity", deityKey, character.getDataSet().getDeities()).map(deity -> {
 				character.setDeity(deity);
-				return new DeitySet(deity.getDisplayName());
+				return new DeitySet(deity.getLocalizedName());
 			}));
 	}
 
@@ -59,7 +59,7 @@ public final class DeityDomainService
 				return ServiceResult.failure(new ServiceError.NotAllowed("No domain selections remaining"));
 			}
 			character.addDomain(offered);
-			return ServiceResult.success(new DomainAdded(offered.getRawObject().getDisplayName(),
+			return ServiceResult.success(new DomainAdded(offered.getRawObject().getLocalizedName(),
 				character.getRemainingDomainSelectionsRef().get()));
 		});
 	}
@@ -74,7 +74,7 @@ public final class DeityDomainService
 					new ServiceError.NotAllowed("Character does not have domain: " + domainKey));
 			}
 			character.removeDomain(held);
-			return ServiceResult.success(new DomainRemoved(held.getRawObject().getDisplayName()));
+			return ServiceResult.success(new DomainRemoved(held.getRawObject().getLocalizedName()));
 		});
 	}
 
@@ -83,7 +83,7 @@ public final class DeityDomainService
 		for (QualifiedObject<Domain> candidate : candidates)
 		{
 			Domain domain = candidate.getRawObject();
-			if (domain.getKeyName().equalsIgnoreCase(wanted) || domain.getDisplayName().equalsIgnoreCase(wanted))
+			if (DataSetLookup.answersTo(domain, wanted))
 			{
 				return candidate;
 			}

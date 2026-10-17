@@ -83,7 +83,7 @@ public final class SkillService
 				CharacterLevelFacade level = levels.getElementAt(index);
 				perLevel.add(new LevelSkillPoints(
 					index + 1,
-					levels.getClassTaken(level) == null ? "" : levels.getClassTaken(level).getDisplayName(),
+					levels.getClassTaken(level) == null ? "" : levels.getClassTaken(level).getLocalizedName(),
 					levels.getRemainingSkillPoints(level),
 					levels.getSpentSkillPoints(level),
 					levels.getGainedSkillPoints(level)));
@@ -156,12 +156,12 @@ public final class SkillService
 			if (!levels.investSkillPoints(level, skill, points))
 			{
 				return ServiceResult.failure(new ServiceError.NotAllowed(
-					"Failed to invest " + points + " points in " + skill.getDisplayName()
+					"Failed to invest " + points + " points in " + skill.getLocalizedName()
 						+ ". Remaining points: " + remainingBefore));
 			}
 			boolean choicesGiven = choices != null && !choices.isEmpty();
 			return ServiceResult.success(new SkillInvestment(
-				skill.getDisplayName(),
+				skill.getLocalizedName(),
 				points,
 				levels.getSkillRanks(level, skill),
 				levels.getRemainingSkillPoints(level),
@@ -187,7 +187,7 @@ public final class SkillService
 			if (levels.getSkillRanks(latest, skill) > 0)
 			{
 				CharacterLevelsFacade.SkillBreakdown breakdown = levels.getSkillBreakdown(latest, skill);
-				trained.add(new TrainedSkill(skill.getKeyName(), skill.getDisplayName(),
+				trained.add(new TrainedSkill(skill.getKeyName(), skill.getLocalizedName(),
 					breakdown.ranks, breakdown.modifier, breakdown.total));
 			}
 		}
@@ -207,6 +207,7 @@ public final class SkillService
 		{
 			byName.put(skill.getKeyName().toLowerCase(Locale.ROOT), skill);
 			byName.put(skill.getDisplayName().toLowerCase(Locale.ROOT), skill);
+			byName.put(skill.getLocalizedName().toLowerCase(Locale.ROOT), skill);
 		}
 		return byName;
 	}

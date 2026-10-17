@@ -123,8 +123,8 @@ mots des données. Ils passent par le bundle (`in_move_walk`…), consulté par 
 | Fiches FreeMarker | `DisplayNameActor`, `OutputNameActor`, `DescriptionActor`, `CDOMObjectModel` |
 | Anciens jetons d'export (`.htm`) | `OutputNameFormatting.getOutputName` pour l'affichage, `BenefitFormatting`, jetons `DESC` |
 | GUI | `PObject.toString()` (utilisé par les tables et les listes), `Gui2InfoFactory` (panneau d'information) |
-| Services headless | chaque modèle renvoyé garde `name` (la clé, à repasser en argument) et gagne `displayName` (le nom traduit) |
-| Webapp | affiche `displayName`, envoie `name` |
+| Services headless | les modèles qui listent des objets portent déjà `key` (à repasser en argument) et `name` (à afficher) : `name` devient le nom traduit ; les arguments acceptent la clé, le nom anglais ou le nom traduit (`DataSetLookup.answersTo`) |
+| Webapp | affiche `name`, envoie `key` |
 
 `PObject.toString()` (et ses redéfinitions dans `Spell`, `Equipment`, `EquipmentModifier`)
 renvoie le nom traduit. L'inventaire des endroits où ce nom servait de clé est fait par
@@ -204,7 +204,7 @@ Chaque étape est une PR de moins de 500 lignes, utilisable seule.
 3. **Affichage GUI et fiches** : branchement du § 5, fiches du § 6.
 3 bis. **Objets du système et unités** : abréviations, types de déplacement, `Metric` par
    défaut en français (§ 3 et § 4).
-4. **Affichage headless et webapp** : `displayName` dans les modèles de service.
+4. **Affichage headless et webapp** : nom traduit dans `name`, noms traduits acceptés en argument.
 5. **Glossaire et script** : glossaire relu, script testé sur le Core Rulebook.
 6. **Contenu** : passes de traduction livre par livre, un ou plusieurs livres par PR de
    données (les `.fr.tsv` ne comptent pas dans la limite de lignes, qui vise le code).

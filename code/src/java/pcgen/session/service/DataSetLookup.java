@@ -17,6 +17,7 @@
  */
 package pcgen.session.service;
 
+import pcgen.cdom.base.CDOMObject;
 import pcgen.cdom.base.Identified;
 
 /**
@@ -24,7 +25,8 @@ import pcgen.cdom.base.Identified;
  *
  * <p>
  * Callers name things either by the key the data files use or by the name a
- * player would read, and PCGen matches both without regard to case.
+ * player would read, in English or in the configured language, and PCGen matches them all
+ * without regard to case.
  */
 public final class DataSetLookup
 {
@@ -43,11 +45,30 @@ public final class DataSetLookup
 	{
 		for (T candidate : candidates)
 		{
-			if (candidate.getKeyName().equalsIgnoreCase(wanted) || candidate.getDisplayName().equalsIgnoreCase(wanted))
+			if (answersTo(candidate, wanted))
 			{
 				return ServiceResult.success(candidate);
 			}
 		}
 		return ServiceResult.failure(new ServiceError.EntryNotFound(kind, wanted));
+	}
+
+	/**
+	 * The name to give a caller for a piece of data: in the configured language when it has one.
+	 */
+	public static String shownName(Identified entry)
+	{
+		return entry instanceof CDOMObject object ? object.getLocalizedName() : entry.getDisplayName();
+	}
+
+	/**
+	 * Whether a piece of data is the one a caller named: by its key, its English name, or its
+	 * name in the configured language, without regard to case.
+	 */
+	public static boolean answersTo(Identified candidate, String wanted)
+	{
+		return candidate.getKeyName().equalsIgnoreCase(wanted)
+			|| candidate.getDisplayName().equalsIgnoreCase(wanted)
+			|| candidate instanceof CDOMObject object && object.getLocalizedName().equalsIgnoreCase(wanted);
 	}
 }

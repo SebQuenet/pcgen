@@ -64,7 +64,7 @@ public final class CharacterSummaries
 			int level = character.getClassLevel(pcClass);
 			if (level > 0)
 			{
-				classes.add(new ClassLevel(pcClass.getDisplayName(), level));
+				classes.add(new ClassLevel(pcClass.getLocalizedName(), level));
 			}
 		}
 
@@ -76,9 +76,9 @@ public final class CharacterSummaries
 
 		return new CharacterSummary(
 			character.getNameRef().get(),
-			race == null ? null : race.getDisplayName(),
-			alignment == null ? null : alignment.getDisplayName(),
-			deity == null ? null : deity.getDisplayName(),
+			race == null ? null : race.getLocalizedName(),
+			alignment == null ? null : alignment.getLocalizedName(),
+			deity == null ? null : deity.getLocalizedName(),
 			Map.copyOf(scores),
 			Map.copyOf(modifiers),
 			List.copyOf(classes),

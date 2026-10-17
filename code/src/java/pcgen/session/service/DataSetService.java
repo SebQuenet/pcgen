@@ -113,7 +113,7 @@ public final class DataSetService
 		List<NamedEntry> named = new ArrayList<>();
 		for (Identified entry : entries)
 		{
-			named.add(new NamedEntry(entry.getKeyName(), entry.getDisplayName()));
+			named.add(new NamedEntry(entry.getKeyName(), DataSetLookup.shownName(entry)));
 		}
 		return named;
 	}

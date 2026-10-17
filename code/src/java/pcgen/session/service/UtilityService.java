@@ -88,7 +88,7 @@ public final class UtilityService
 		Iterable<T> candidates, Predicate<T> qualifies)
 	{
 		return DataSetLookup.require(itemType, itemKey, candidates).map(item ->
-			new QualificationCheck(qualifies.test(item), item.getDisplayName(), itemType));
+			new QualificationCheck(qualifies.test(item), DataSetLookup.shownName(item), itemType));
 	}
 
 	public ServiceResult<StatsRolled> rollStats(String characterId)
