@@ -32,32 +32,32 @@
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'protection.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt">
 						<fo:block font-size="7pt">
-							ARMOR
+							<xsl:value-of select="key('label','in_sheet_armor')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="4pt">
-							TYPE
+							<xsl:value-of select="key('label','in_sheet_type')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="4pt">
-							AC
+							<xsl:value-of select="key('label','in_sheet_ac')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="4pt">
-							MAXDEX
+							<xsl:value-of select="key('label','in_sheet_maxdex')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="4pt">
-							CHECK
+							<xsl:value-of select="key('label','in_sheet_check')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="4pt">
-							SPELL FAILURE
+							<xsl:value-of select="key('label','in_sheet_spellFailure')"/>
 						</fo:block>
 					</fo:table-cell>
 				</fo:table-row>

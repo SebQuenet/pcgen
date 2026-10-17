@@ -140,27 +140,27 @@
 				<fo:table-row keep-with-next.within-column="always">
 					<fo:table-cell padding-top="1pt" number-columns-spanned="12">
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'psionics.title'"/></xsl:call-template>
-						<fo:block font-size="10pt" font-weight="bold">Psionics</fo:block>
+						<fo:block font-size="10pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_psionics')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-next.within-column="always">
 					<xsl:call-template name="psionic.entry">
-						<xsl:with-param name="title" select="'Base PP'"/>
+						<xsl:with-param name="title" select="key('label','in_sheet_basePp')"/>
 						<xsl:with-param name="value" select="base_pp"/>
 					</xsl:call-template>
 					<fo:table-cell/>
 					<xsl:call-template name="psionic.entry">
-						<xsl:with-param name="title" select="'BonusPP'"/>
+						<xsl:with-param name="title" select="key('label','in_sheet_bonuspp')"/>
 						<xsl:with-param name="value" select="bonus_pp"/>
 					</xsl:call-template>
 					<fo:table-cell/>
 					<xsl:call-template name="psionic.entry">
-						<xsl:with-param name="title" select="'Total PP'"/>
+						<xsl:with-param name="title" select="key('label','in_sheet_totalPp')"/>
 						<xsl:with-param name="value" select="total_pp"/>
 					</xsl:call-template>
 					<fo:table-cell/>
 					<xsl:call-template name="psionic.entry">
-						<xsl:with-param name="title" select="'Current PP'"/>
+						<xsl:with-param name="title" select="key('label','in_sheet_currentPp')"/>
 						<xsl:with-param name="value" select="''"/>
 					</xsl:call-template>
 					<fo:table-cell/>
@@ -189,14 +189,14 @@
 					</fo:table-cell>
 					<fo:table-cell padding-top="1pt">
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'psionics.title'"/></xsl:call-template>
-						<fo:block font-size="5pt">Mental Hardness</fo:block>
+						<fo:block font-size="5pt"><xsl:value-of select="key('label','in_sheet_mentalHardness')"/></fo:block>
 					</fo:table-cell>
 					<xsl:variable name="attacks" select="document('')/*/Psionics:attacks/attack"/>
 					<xsl:for-each select="$attacks">
 						<fo:table-cell padding-top="1pt">
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'psionics.title'"/></xsl:call-template>
 							<fo:block font-size="5pt"><xsl:value-of select="@title"/></fo:block>
-							<fo:block font-size="4pt">(<xsl:value-of select="@damage"/>) <xsl:value-of select="@pp"/>pp</fo:block>
+							<fo:block font-size="4pt">(<xsl:value-of select="@damage"/>) <xsl:value-of select="@pp"/><xsl:value-of select="key('label','in_sheet_pp')"/></fo:block>
 						</fo:table-cell>
 					</xsl:for-each>
 				</fo:table-row>
@@ -207,7 +207,7 @@
 						<fo:table-cell padding-top="1pt" padding-left="3pt">
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'psionics.title'"/></xsl:call-template>
 							<fo:block font-size="7pt"><xsl:value-of select="@name"/>
-								<xsl:if test="@pp != ''"> (<xsl:value-of select="@pp"/>pp)</xsl:if>
+								<xsl:if test="@pp != ''"> (<xsl:value-of select="@pp"/><xsl:value-of select="key('label','in_sheet_ppPdf')"/></xsl:if>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell padding-top="1pt">

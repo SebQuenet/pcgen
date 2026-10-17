@@ -104,7 +104,7 @@
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell number-columns-spanned="2" border-top-width="1pt" border-left-width="0pt" border-right-width="0pt" border-bottom-width="0pt">
 							<fo:block text-align="left" space-before.optimum="4pt" line-height="4pt" font-size="5pt">
-								<xsl:text>TOTAL SKILLPOINTS: </xsl:text>
+								<xsl:value-of select="key('label','in_sheet_totalSkillpoints')"/><xsl:text> </xsl:text>
 								<xsl:choose>
 								<xsl:when test="skillpoints/eclipse_total &gt; 0">	
 									<xsl:value-of select="skillpoints/eclipse_total"/>
@@ -112,7 +112,7 @@
 								<xsl:otherwise>
 								<xsl:value-of select="skillpoints/total"/>
 								<xsl:if test="skillpoints/unused &gt; 0">
-									<xsl:text> (UNUSED: </xsl:text>
+									<xsl:text> </xsl:text><xsl:value-of select="key('label','in_sheet_unused')"/><xsl:text> </xsl:text>
 									<xsl:value-of select="skillpoints/unused"/>
 									<xsl:text>)</xsl:text>
 								</xsl:if>
@@ -121,11 +121,11 @@
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="4">
-							<fo:block text-align="end" line-height="10pt" font-weight="bold" font-size="10pt">SKILLS</fo:block>
+							<fo:block text-align="end" line-height="10pt" font-weight="bold" font-size="10pt"><xsl:value-of select="key('label','in_sheet_skills')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="10">
 								<fo:block text-align="end" space-before.optimum="4pt" line-height="4pt" font-size="5pt">
-									<xsl:text>MAX RANKS: </xsl:text>
+									<xsl:value-of select="key('label','in_sheet_maxRanks')"/><xsl:text> </xsl:text>
 									<xsl:value-of select="max_class_skill_level"/>/<xsl:value-of select="max_cross_class_skill_level"/>
 								</fo:block>
 						</fo:table-cell>
@@ -135,32 +135,32 @@
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell number-columns-spanned="2">
 							<fo:block font-weight="bold" font-size="8pt">
-								SKILL NAME
+								<xsl:value-of select="key('label','in_sheet_skillName')"/>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="3">
 							<fo:block font-size="3pt">
-								KEY ABILITY
+								<xsl:value-of select="key('label','in_sheet_keyAbility')"/>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="3">
 							<fo:block text-align="center" font-size="3pt">
-								SKILL MODIFIER
+								<xsl:value-of select="key('label','in_sheet_skillModifier')"/>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="3">
 							<fo:block text-align="center" font-size="3pt">
-								ABILITY MODIFIER
+								<xsl:value-of select="key('label','in_sheet_abilityModifier')"/>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="3">
 							<fo:block text-align="center" font-size="3pt">
-								RANKS
+								<xsl:value-of select="key('label','in_sheet_ranks')"/>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="2">
 							<fo:block text-align="center" font-size="3pt">
-								MISC MODIFIER
+								<xsl:value-of select="key('label','in_sheet_miscModifier')"/>
 							</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
@@ -297,9 +297,8 @@
 					<fo:table-row>
 						<fo:table-cell number-columns-spanned="17" padding-top="1pt">
 							<fo:block text-align="center" font-size="6pt">
-								<fo:inline font-family="ZapfDingbats">&#x2713;</fo:inline>: can be used untrained.
-								<fo:inline font-family="ZapfDingbats">&#x2717;</fo:inline>: exclusive skills.
-								*: Skill Mastery.
+								<fo:inline font-family="ZapfDingbats">&#x2713;</fo:inline><xsl:value-of select="key('label','in_sheet_canBeUsedUntrained')"/>
+								<fo:inline font-family="ZapfDingbats">&#x2717;</fo:inline><xsl:value-of select="key('label','in_sheet_exclusiveSkillsSkillMastery')"/>
 							</fo:block>
 						</fo:table-cell>
 					</fo:table-row>
@@ -349,7 +348,7 @@
 					<fo:table-row>
 											
 						<fo:table-cell padding-top="1pt" border-width="0.5pt" border-style="solid">
-							<fo:block text-align="center" font-size="8pt" font-weight="bold">Conditional Skill Modifiers:</fo:block>
+							<fo:block text-align="center" font-size="8pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_conditionalSkillModifiers')"/></fo:block>
 								<xsl:for-each select="conditional_modifiers/skillbonus">
 									<fo:block font-size="8pt" space-before.optimum="1pt"><xsl:value-of select="description"/></fo:block>
 								</xsl:for-each>

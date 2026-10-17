@@ -617,7 +617,7 @@
 							<xsl:for-each select = "classes/class">
 								<xsl:sort select="sequence"/>
 								<xsl:variable name="classname">
-									<xsl:value-of select="translate(name, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+									<xsl:value-of select="translate(name, 'abcdefghijklmnopqrstuvwxyzàâäçéèêëîïôöùûüÿæœ', 'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ')"/>
 								</xsl:variable>
 								<xsl:variable name="archetypecount">
 									<xsl:value-of select="count(/character/basics/archetypes/archetype[contains(type,$classname)])"/>
@@ -2522,7 +2522,7 @@
 								<xsl:with-param name="attribute" select="'saves.title'"/>
 							</xsl:call-template>
 							<fo:block line-height="10pt" font-weight="bold" font-size="12pt" space-before="1pt">
-								<xsl:value-of select="translate(name/long, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+								<xsl:value-of select="translate(name/long, 'abcdefghijklmnopqrstuvwxyzàâäçéèêëîïôöùûüÿæœ', 'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ')"/>
 							</fo:block>
 							<fo:block line-height="4pt" font-size="4pt">(<xsl:value-of select="ability"/>)</fo:block>
 						</fo:table-cell>

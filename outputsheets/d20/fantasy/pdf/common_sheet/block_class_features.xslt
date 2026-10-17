@@ -94,7 +94,7 @@ first page
 		<xsl:param name="attribute"/>
 		<xsl:param name="name" />
 		<xsl:param name="uses" />
-		<xsl:param name="uses.title" select="'Uses per day'" />
+		<xsl:param name="uses.title" select="key('label','in_sheet_usesPerDay')" />
 		<xsl:param name="description.title" select="''"/>
 		<xsl:param name="description" />
 		<xsl:param name="width" select="'wide'" />
@@ -308,13 +308,13 @@ first page
 								<fo:table-row>
 									<fo:table-cell>
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
-										<fo:block font-size="7pt">Intensity Check</fo:block>
-										<fo:block font-size="7pt">Result</fo:block>
+										<fo:block font-size="7pt"><xsl:value-of select="key('label','in_sheet_intensityCheck')"/></fo:block>
+										<fo:block font-size="7pt"><xsl:value-of select="key('label','in_sheet_resultPdf')"/></fo:block>
 									</fo:table-cell>
 									<fo:table-cell>
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
-										<fo:block font-size="7pt"><xsl:value-of select="@kind"/> Intensity</fo:block>
-										<fo:block font-size="6pt">(Level)</fo:block>
+										<fo:block font-size="7pt"><xsl:value-of select="@kind"/> <xsl:value-of select="key('label','in_sheet_intensity')"/></fo:block>
+										<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_levelPdf')"/></fo:block>
 									</fo:table-cell>
 								</fo:table-row>
 							</fo:table-body>
@@ -330,7 +330,7 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<xsl:call-template name="eclipse_channeling.info">
-									<xsl:with-param name="title" select="'Intensity Check'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_intensityCheck')"/>
 									<xsl:with-param name="info" select="channeling_check" />
 								</xsl:call-template>
 							</fo:table-body>
@@ -404,17 +404,17 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<xsl:call-template name="eclipse_channeling.info">
-									<xsl:with-param name="title" select="'Channeling level'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_channelingLevelPdf')"/>
 									<xsl:with-param name="info" select="level" />
 								</xsl:call-template>
 								<xsl:call-template name="eclipse_channeling.info">
-									<xsl:with-param name="title" select="'Magnitude'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_magnitudePdf')"/>
 									<xsl:with-param name="info" select="damage" />
 									<xsl:with-param name="info2" select="damage_bonus" />
 									<xsl:with-param name="info3" select="factor" />
 								</xsl:call-template>
 								<xsl:call-template name="eclipse_channeling.info">
-									<xsl:with-param name="title" select="'Range'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_range')"/>
 									<xsl:with-param name="info" select="range" />
 								</xsl:call-template>
 								<fo:table-row  keep-with-next.within-column="always">
@@ -562,13 +562,13 @@ first page
 								<fo:table-row>
 									<fo:table-cell>
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
-										<fo:block font-size="7pt">Turning Check</fo:block>
-										<fo:block font-size="7pt">Result</fo:block>
+										<fo:block font-size="7pt"><xsl:value-of select="key('label','in_sheet_turningCheckPdf')"/></fo:block>
+										<fo:block font-size="7pt"><xsl:value-of select="key('label','in_sheet_resultPdf')"/></fo:block>
 									</fo:table-cell>
 									<fo:table-cell>
 										<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'turning.title'"/></xsl:call-template>
-										<fo:block font-size="7pt"><xsl:value-of select="@kind"/> Affected</fo:block>
-										<fo:block font-size="6pt">(Maximum Hit Dice)</fo:block>
+										<fo:block font-size="7pt"><xsl:value-of select="@kind"/> <xsl:value-of select="key('label','in_sheet_affectedPdf')"/></fo:block>
+										<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_maximumHitDice')"/></fo:block>
 									</fo:table-cell>
 								</fo:table-row>
 							</fo:table-body>
@@ -584,7 +584,7 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<xsl:call-template name="turning.info">
-									<xsl:with-param name="title" select="'Turning Check'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_turningCheckPdf')"/>
 									<xsl:with-param name="info" select="turn_check" />
 								</xsl:call-template>
 							</fo:table-body>
@@ -654,11 +654,11 @@ first page
 							</fo:table-column>
 							<fo:table-body>
 								<xsl:call-template name="turning.info">
-									<xsl:with-param name="title" select="'Turn level'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_turnLevelPdf')"/>
 									<xsl:with-param name="info" select="level" />
 								</xsl:call-template>
 								<xsl:call-template name="turning.info">
-									<xsl:with-param name="title" select="'Turn damage'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_turnDamagePdf')"/>
 									<xsl:with-param name="info" select="damage" />
 								</xsl:call-template>
 								<fo:table-row  keep-with-next.within-column="always">
@@ -766,7 +766,7 @@ first page
 			<xsl:with-param name="attribute" select="'wholeness'"/>
 			<xsl:with-param name="name" select="'WHOLENESS OF BODY'"/>
 			<xsl:with-param name="uses" select="hp_per_day"/>
-			<xsl:with-param name="uses.title" select="'HP per day'"/>
+			<xsl:with-param name="uses.title" select="key('label','in_sheet_hpPerDay')"/>
 		</xsl:call-template>
 	</xsl:template>
 	<!--

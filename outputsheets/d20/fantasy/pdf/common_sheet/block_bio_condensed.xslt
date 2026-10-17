@@ -48,7 +48,7 @@
 		<!-- BEGIN BIO Pages -->
 <!-->		<xsl:if test="string-length(translate(normalize-space(concat(description,bio)), ' ', '')) &gt; 0">	-->
 			<fo:page-sequence>
-				<xsl:attribute name="master-reference">Portrait</xsl:attribute>
+				<xsl:attribute name="master-reference"><xsl:value-of select="key('label','in_sheet_portrait')"/></xsl:attribute>
 				<xsl:attribute name="font-family"><xsl:value-of select="$PCGenFont"/></xsl:attribute>
 				<xsl:call-template name="page.footer"/>
 				<fo:flow flow-name="body" font-size="8pt">
@@ -106,11 +106,11 @@
 										<xsl:call-template name="attrib">
 											<xsl:with-param name="attribute" select="'bio.title'"/>
 										</xsl:call-template>
-										<fo:block font-size="6pt">RACE</fo:block>
+										<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_race')"/></fo:block>
 									</fo:table-cell>
 								</fo:table-row>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'AGE'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_age')"/>
 									<xsl:with-param name="value" select="age"/>
 								</xsl:call-template>
 								<fo:table-row>
@@ -122,47 +122,47 @@
 									</fo:table-cell>
 								</fo:table-row>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'GENDER'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_gender')"/>
 									<xsl:with-param name="value" select="gender/long"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'VISION'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_vision')"/>
 									<xsl:with-param name="value" select="vision/all"/>	
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'ALIGNMENT'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_alignment')"/>
 									<xsl:with-param name="value" select="alignment/long"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'DOMINANT HAND'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_dominantHand')"/>
 									<xsl:with-param name="value" select="handed"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'HEIGHT'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_height')"/>
 									<xsl:with-param name="value" select="height/total"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'WEIGHT'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_weight')"/>
 									<xsl:with-param name="value" select="weight/weight_unit"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'EYE COLOUR'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_eyeColour')"/>
 									<xsl:with-param name="value" select="eyes/color"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'SKIN COLOUR'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_skinColour')"/>
 									<xsl:with-param name="value" select="skin/color"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'HAIR / HAIR STYLE'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_hairHairStyle')"/>
 									<xsl:with-param name="value" select="concat(hair/color, ', ', hair/length)"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'PHOBIAS'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_phobias')"/>
 									<xsl:with-param name="value" select="phobias"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'PERSONALITY TRAITS'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_personalityTraits')"/>
 									<xsl:with-param name="value">
 										<xsl:for-each select="personality/trait">
 											<xsl:if test="position() &gt; 1">, </xsl:if>
@@ -171,42 +171,42 @@
 									</xsl:with-param>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'INTERESTS'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_interests')"/>
 									<xsl:with-param name="value" select="interests"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'SPOKEN STYLE / CATCH PHRASE'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_spokenStyleCatchPhrase')"/>
 									<xsl:with-param name="value" select="concat(speechtendency, ', ', catchphrase)"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'RESIDENCE'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_residence')"/>
 									<xsl:with-param name="value" select="residence"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'LOCATION'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_location')"/>
 									<xsl:with-param name="value" select="location"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'REGION'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_region')"/>
 									<xsl:with-param name="value" select="region"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'DEITY'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_deity')"/>
 									<xsl:with-param name="value" select="deity/name"/>	
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'Race Type'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_raceType')"/>
 									<xsl:with-param name="value" select="race/racetype"/>
 								</xsl:call-template>
 								<xsl:call-template name="bio.entry">
-									<xsl:with-param name="title" select="'Race Sub Type'"/>
+									<xsl:with-param name="title" select="key('label','in_sheet_raceSubType')"/>
 									<xsl:with-param name="value" select="race/racesubtype"/>
 								</xsl:call-template>
 							</fo:table-body>
 						</fo:table>
 					</fo:block>
 					<fo:block font-size="14pt" font-weight="bold" space-before="5mm" span="all">
-						Description:
+						<xsl:value-of select="key('label','in_sheet_descriptionPdf')"/>
 					</fo:block>
 					<fo:block font-size="9pt" text-indent="5mm" span="all">
 						<xsl:call-template name="paragraghlist">
@@ -214,7 +214,7 @@
 						</xsl:call-template>
 					</fo:block>
 					<fo:block font-size="14pt" font-weight="bold" span="all">
-						Biography:
+						<xsl:value-of select="key('label','in_sheet_biographyPdf')"/>
 					</fo:block>
 					<fo:block font-size="9pt" text-indent="5mm" span="all">
 						<xsl:call-template name="paragraghlist">
@@ -240,7 +240,7 @@
 				<xsl:call-template name="page.footer"/>
 				<fo:flow flow-name="body" font-size="8pt">
 					<fo:block font-size="14pt" font-weight="bold" space-after.optimum="2mm" break-before="page" span="all">
-						Notes:
+						<xsl:value-of select="key('label','in_sheet_notesPdf')"/>
 					</fo:block>
 					<xsl:for-each select="note">
 						<fo:block font-size="12pt" space-after.optimum="2mm" space-before.optimum="5mm">
@@ -289,32 +289,32 @@
 									<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'protection.title'"/></xsl:call-template>
 					<fo:table-cell padding-top="1pt">
 						<fo:block font-size="7pt">
-							Campaign
+							<xsl:value-of select="key('label','in_sheet_campaign')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="7pt">
-							Adventure
+							<xsl:value-of select="key('label','in_sheet_adventure')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="7pt">
-							Party
+							<xsl:value-of select="key('label','in_sheet_party')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="7pt">
-							Date
+							<xsl:value-of select="key('label','in_sheet_date')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="7pt">
-							Xp
+							<xsl:value-of select="key('label','in_sheet_xp')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="3pt">
 						<fo:block font-size="7pt">
-							Gm
+							<xsl:value-of select="key('label','in_sheet_gm')"/>
 						</fo:block>
 					</fo:table-cell>
 				</fo:table-row>

@@ -18,7 +18,7 @@
 		<!-- BEGIN Domains Table -->
 		<xsl:call-template name="bold.list">
 			<xsl:with-param name="attribute" select="'domains'" />
-			<xsl:with-param name="title" select="'Domains'" />
+			<xsl:with-param name="title" select="key('label','in_sheet_domains')" />
 			<xsl:with-param name="list" select="domain"/>
 			<xsl:with-param name="name.tag" select="'name'"/>
 			<xsl:with-param name="desc.tag" select="'power'"/>
@@ -35,7 +35,7 @@
 		<!-- BEGIN weapon_proficiencies Table -->
 		<xsl:call-template name="list">
 			<xsl:with-param name="attribute" select="'proficiencies'"/>
-			<xsl:with-param name="title" select="'Proficiencies'"/>
+			<xsl:with-param name="title" select="key('label','in_sheet_proficienciesPdf')"/>
 			<xsl:with-param name="value" select="." />
 		</xsl:call-template>
 		<!-- END weapon_proficiencies Table -->
@@ -50,7 +50,7 @@
 		<!-- BEGIN Languages Table -->
 		<xsl:call-template name="list">
 			<xsl:with-param name="attribute" select="'languages'"/>
-			<xsl:with-param name="title" select="'Languages'"/>
+			<xsl:with-param name="title" select="key('label','in_sheet_languagesPdf')"/>
 			<xsl:with-param name="value" select="." />
 		</xsl:call-template>
 		<!-- END Languages Table -->
@@ -65,7 +65,7 @@
 		<!-- BEGIN Templates Table -->
 		<xsl:call-template name="stripped.list">
 			<xsl:with-param name="attribute" select="'templates'" />
-			<xsl:with-param name="title" select="'Templates'" />
+			<xsl:with-param name="title" select="key('label','in_sheet_templatesPdf')" />
 			<xsl:with-param name="list" select="template"/>
 			<xsl:with-param name="name.tag" select="'name'"/>
 		</xsl:call-template>
@@ -81,7 +81,7 @@
 		<xsl:if test=". != ''">
 			<xsl:call-template name="list">
 				<xsl:with-param name="attribute" select="'prohibited'"/>
-				<xsl:with-param name="title" select="'Prohibited'"/>
+				<xsl:with-param name="title" select="key('label','in_sheet_prohibitedPdf')"/>
 				<xsl:with-param name="value" select="." />
 			</xsl:call-template>
 		</xsl:if>
@@ -104,28 +104,28 @@
 	<xsl:template match="familiar">
 		<!-- BEGIN Familiar Table -->
 		<xsl:call-template name="show_companion">
-			<xsl:with-param name="followerType" select="'Familiar'"/>
+			<xsl:with-param name="followerType" select="key('label','in_sheet_familiar')"/>
 		</xsl:call-template>
 		<!-- END Familiar Table -->
 	</xsl:template>
 	<xsl:template match="psicrystal">
 		<!-- BEGIN Psicrystal Table -->
 		<xsl:call-template name="show_companion">
-			<xsl:with-param name="followerType" select="'Psicrystal'"/>
+			<xsl:with-param name="followerType" select="key('label','in_sheet_psicrystal')"/>
 		</xsl:call-template>
 		<!-- END Familiar Table -->
 	</xsl:template>
 	<xsl:template match="mount">
 		<!-- BEGIN Familiar Table -->
 		<xsl:call-template name="show_companion">
-			<xsl:with-param name="followerType" select="'Special Mount'"/>
+			<xsl:with-param name="followerType" select="key('label','in_sheet_specialMount')"/>
 		</xsl:call-template>
 		<!-- END Familiar Table -->
 	</xsl:template>
 	<xsl:template match="companion">
 		<!-- BEGIN Familiar Table -->
 		<xsl:call-template name="show_companion">
-			<xsl:with-param name="followerType" select="'Animal Companion'"/>
+			<xsl:with-param name="followerType" select="key('label','in_sheet_animalCompanion')"/>
 		</xsl:call-template>
 		<!-- END Familiar Table -->
 	</xsl:template>
@@ -141,7 +141,7 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="10pt" font-weight="bold">Followers: </fo:block>
+							<fo:block font-size="10pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_followers')"/> </fo:block>
 						</fo:table-cell>
 					</fo:table-row>
 					<fo:table-row keep-with-next.within-column="always">
@@ -186,7 +186,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt">HP:</fo:block>
+						<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_hpPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
@@ -200,7 +200,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt">AC:</fo:block>
+						<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_acPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
@@ -214,7 +214,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt">INIT:</fo:block>
+						<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_initPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
@@ -230,7 +230,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt">FORT:</fo:block>
+						<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_fortPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
@@ -244,7 +244,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt">REF:</fo:block>
+						<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_refPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
@@ -258,7 +258,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt">WILL:</fo:block>
+						<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_willPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
@@ -303,7 +303,7 @@
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'companions.title'"/>
 								</xsl:call-template>
-								<fo:block font-size="8pt">DAM:</fo:block>
+								<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_damPdf')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell>
 								<xsl:call-template name="attrib">
@@ -317,7 +317,7 @@
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'companions.title'"/>
 								</xsl:call-template>
-								<fo:block font-size="8pt">CRIT:</fo:block>
+								<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_crit')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell>
 								<xsl:call-template name="attrib">
@@ -335,7 +335,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'companions.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="8pt">Special:</fo:block>
+						<fo:block font-size="8pt"><xsl:value-of select="key('label','in_sheet_specialPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell number-columns-spanned="5">
 						<xsl:call-template name="attrib">
@@ -352,7 +352,7 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'companions.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="8pt" text-align="left">Tricks:</fo:block>
+							<fo:block font-size="8pt" text-align="left"><xsl:value-of select="key('label','in_sheet_tricks')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell number-columns-spanned="5">
 							<xsl:call-template name="attrib">
@@ -390,7 +390,7 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'magic.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="9pt">Other Companions</fo:block>
+							<fo:block font-size="9pt"><xsl:value-of select="key('label','in_sheet_otherCompanionsPdf')"/></fo:block>
 						</fo:table-cell>
 					</fo:table-row>
 				</fo:table-header>
@@ -422,7 +422,7 @@
 		<xsl:if test="count(tempbonus) &gt; 0">
 			<xsl:call-template name="stripped.list">
 				<xsl:with-param name="attribute" select="'tempbonuses'" />
-				<xsl:with-param name="title" select="'Temporary Bonus'" />
+				<xsl:with-param name="title" select="key('label','in_sheet_temporaryBonus')" />
 				<xsl:with-param name="list" select="tempbonus" />
 				<xsl:with-param name="name.tag" select="'name'"/>
 				<xsl:with-param name="desc.tag" select="''"/>

@@ -48,31 +48,31 @@
 			<fo:table-body>
 				<fo:table-row>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ABILITY NAME</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_abilityName')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">BASE SCORE</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_baseScore')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">BASE MOD</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_baseMod')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ABILITY SCORE</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_abilityScore')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ABILITY MOD</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_abilityMod')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">TEMP SCORE</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_tempScore')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">TEMP MOD</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_tempMod')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<xsl:for-each select="ability">

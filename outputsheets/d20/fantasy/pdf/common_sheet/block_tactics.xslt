@@ -19,7 +19,7 @@
 				<xsl:call-template name="page.footer"/>
 				<fo:flow flow-name="body" font-size="8pt">
 					<fo:block font-size="14pt" font-weight="bold" space-after.optimum="2mm" break-before="page">
-						Tactical Sheet
+						<xsl:value-of select="key('label','in_sheet_tacticalSheet')"/>
 					</fo:block>
 					<xsl:for-each select="tactical_section">
 						<fo:block font-size="11pt" font-weight="bold" space-after.optimum="1mm"
@@ -33,13 +33,13 @@
 							<fo:table-header>
 								<fo:table-row>
 									<fo:table-cell padding="1pt" border-bottom="0.5pt solid black">
-										<fo:block font-size="7pt" font-weight="bold">When</fo:block>
+										<fo:block font-size="7pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_when')"/></fo:block>
 									</fo:table-cell>
 									<fo:table-cell padding="1pt" border-bottom="0.5pt solid black">
-										<fo:block font-size="7pt" font-weight="bold">Do</fo:block>
+										<fo:block font-size="7pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_do')"/></fo:block>
 									</fo:table-cell>
 									<fo:table-cell padding="1pt" border-bottom="0.5pt solid black">
-										<fo:block font-size="7pt" font-weight="bold">Note</fo:block>
+										<fo:block font-size="7pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_note')"/></fo:block>
 									</fo:table-cell>
 								</fo:table-row>
 							</fo:table-header>

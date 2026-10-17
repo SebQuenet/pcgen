@@ -76,6 +76,11 @@ public class CheckToken extends Token
 		{
 			return getNameToken(saveType).toString();
 		}
+		// The key stays the same in every language, unlike the name
+		if ("KEY".equals(saveMods))
+		{
+			return getNameToken(saveType).getKeyName();
+		}
 		if (isNosign)
 		{
 			return String.valueOf(getCheckToken(pc, saveType, saveMods));

@@ -36,7 +36,7 @@
 				<fo:table table-layout="fixed" width="100%">
 					<xsl:call-template name="spells.known.header.row">
 						<xsl:with-param name="columnOne" select="''"/>
-						<xsl:with-param name="title" select="'Innate Racial Spells'"/>
+						<xsl:with-param name="title" select="key('label','in_sheet_innateRacialSpells')"/>
 					</xsl:call-template>
 					<fo:table-body>
 						<xsl:apply-templates select="spell" mode="details">	<!-- > was <xsl:apply-templates select="spell" mode="innate_details">	-->
@@ -112,7 +112,7 @@
 				</xsl:variable>
 				<xsl:variable name="columnOneTitle">
 					<xsl:choose>
-						<xsl:when test="@spellcastertype = 'Psionic'">Power Points</xsl:when>
+						<xsl:when test="@spellcastertype = 'Psionic'"><xsl:value-of select="key('label','in_sheet_powerPoints')"/></xsl:when>
 						<xsl:otherwise/>
 					</xsl:choose>
 				</xsl:variable>
@@ -181,7 +181,7 @@
 				<xsl:call-template name="attrib">
 					<xsl:with-param name="attribute" select="'spelllist.known.header.centre'"/>
 				</xsl:call-template>
-				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="3pt" space-after="1pt"> LEVEL</fo:block>
+				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="3pt" space-after="1pt"> <xsl:value-of select="key('label','in_sheet_level')"/></fo:block>
 			</fo:table-cell>
 			<xsl:for-each select="level">
 				<fo:table-cell>
@@ -209,7 +209,7 @@
 				<xsl:call-template name="attrib">
 					<xsl:with-param name="attribute" select="'spelllist.known.header.centre'"/>
 				</xsl:call-template>
-				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="3pt" space-after="1pt"> KNOWN</fo:block>
+				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="3pt" space-after="1pt"> <xsl:value-of select="key('label','in_sheet_known')"/></fo:block>
 			</fo:table-cell>
 			<xsl:for-each select="level">
 				<fo:table-cell>
@@ -244,7 +244,7 @@
 				<xsl:call-template name="attrib">
 					<xsl:with-param name="attribute" select="'spelllist.known.header.centre'"/>
 				</xsl:call-template>
-				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="3pt" space-after="1pt">PER DAY</fo:block>
+				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="3pt" space-after="1pt"><xsl:value-of select="key('label','in_sheet_perDay')"/></fo:block>
 			</fo:table-cell>
 			<xsl:for-each select="level">
 				<fo:table-cell>
@@ -259,7 +259,7 @@
 							<xsl:otherwise>
 								<xsl:choose>
 									<xsl:when test="@number != 0 and @known != 0">
-										at will
+										<xsl:value-of select="key('label','in_sheet_atWill')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										&#x2014;
@@ -287,7 +287,7 @@
 					<xsl:with-param name="attribute" select="'spelllist.known.header.centre'"/>
 				</xsl:call-template>
 		<!-->	xsl:use-attribute-sets="spelllist.known.header">-->
-				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="2pt" space-after="1pt">Concentration</fo:block>
+				<fo:block font-size="6pt" font-weight="bold" space-start="2pt" space-before="2pt" space-after="1pt"><xsl:value-of select="key('label','in_sheet_concentration')"/></fo:block>
 			</fo:table-cell>
 			<fo:table-cell>
 				<xsl:call-template name="attrib">
@@ -317,10 +317,10 @@
 										<xsl:with-param name="count" select="@cast"/>
 									</xsl:call-template>
 					<fo:block font-size="12pt">
-						LEVEL <xsl:value-of select="@number"/> / Per Day:<xsl:value-of select="@cast"/> / Caster Level:<xsl:value-of select="spell/basecasterlevel"/>
+						<xsl:value-of select="key('label','in_sheet_level')"/> <xsl:value-of select="@number"/> <xsl:value-of select="key('label','in_sheet_perDayPdf')"/><xsl:value-of select="@cast"/> <xsl:value-of select="key('label','in_sheet_casterLevel')"/><xsl:value-of select="spell/basecasterlevel"/>
 					<xsl:if test="concentration != ''">
 							<fo:inline> / </fo:inline>
-						<fo:inline font-style="italic" font-weight="bold">Concentration:</fo:inline>
+						<fo:inline font-style="italic" font-weight="bold"><xsl:value-of select="key('label','in_sheet_concentrationPdf')"/></fo:inline>
 						<xsl:value-of select="concentration"/>
 					</xsl:if>
 					</fo:block>
@@ -395,7 +395,7 @@
 					<xsl:call-template name="attrib">
 						<xsl:with-param name="attribute" select="'spelllist.footer'"/>
 					</xsl:call-template>
-					<fo:block font-size="5pt">* =Domain/Speciality Spell
+					<fo:block font-size="5pt"><xsl:value-of select="key('label','in_sheet_domainSpecialitySpell')"/>
 					</fo:block>
 				</fo:table-cell>
 			</fo:table-row>
@@ -420,22 +420,22 @@
 				</fo:block>
 			</fo:table-cell>
 			<fo:table-cell padding-top="1pt" number-columns-spanned="1">
-				<fo:block text-align="start" font-size="5pt" font-weight="bold">Name</fo:block>
+				<fo:block text-align="start" font-size="5pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_namePdf')"/></fo:block>
 			</fo:table-cell>
 			<fo:table-cell padding-top="1pt">
-				<fo:block text-align="start" font-size="5pt" font-weight="bold">School</fo:block>
+				<fo:block text-align="start" font-size="5pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_school')"/></fo:block>
 			</fo:table-cell>
 			<fo:table-cell padding-top="1pt">
-				<fo:block text-align="start" font-size="5pt" font-weight="bold">Time</fo:block>
+				<fo:block text-align="start" font-size="5pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_time')"/></fo:block>
 			</fo:table-cell>
 			<fo:table-cell padding-top="1pt">
-				<fo:block text-align="start" font-size="5pt" font-weight="bold">Duration</fo:block>
+				<fo:block text-align="start" font-size="5pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_duration')"/></fo:block>
 			</fo:table-cell>
 			<fo:table-cell padding-top="1pt">
-				<fo:block text-align="start" font-size="5pt" font-weight="bold">Range</fo:block>
+				<fo:block text-align="start" font-size="5pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_range')"/></fo:block>
 			</fo:table-cell>
 			<fo:table-cell padding-top="1pt" number-columns-spanned="1">
-				<fo:block text-align="right" font-size="5pt" font-weight="bold">Source</fo:block>		<!--> Source / Now target is taking both blocks-->
+				<fo:block text-align="right" font-size="5pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_source')"/></fo:block>		<!--> Source / Now target is taking both blocks-->
 			</fo:table-cell>
 		</fo:table-row>
 	</xsl:template>
@@ -473,7 +473,7 @@
 						</xsl:when>
 						<xsl:otherwise>
 							<fo:table-cell padding-top="1pt" text-align="start">
-								<fo:block text-align="start" font-size="7pt">At Will</fo:block>
+								<fo:block text-align="start" font-size="7pt"><xsl:value-of select="key('label','in_sheet_atWillPdf')"/></fo:block>
 							</fo:table-cell>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -518,7 +518,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 						<xsl:if test="casterlevel != $basecasterlevel">				
-							(CL:<xsl:value-of select="casterlevel"/>)
+							<xsl:value-of select="key('label','in_sheet_cl')"/><xsl:value-of select="casterlevel"/>)
 						</xsl:if>
 				</fo:block>
 			</fo:table-cell>
@@ -563,9 +563,9 @@
 						<fo:inline font-weight="bold">[<xsl:value-of select="components"/>]</fo:inline>
 						<fo:inline> </fo:inline>
 					</xsl:if>
-					<fo:inline font-weight="bold"> TARGET: </fo:inline><xsl:value-of select="target"/>
+					<fo:inline font-weight="bold"> <xsl:value-of select="key('label','in_sheet_target')"/> </fo:inline><xsl:value-of select="target"/>
 					<fo:inline>; </fo:inline>
-					<fo:inline font-style="italic" font-weight="bold" font-size="5pt">EFFECT: </fo:inline>
+					<fo:inline font-style="italic" font-weight="bold" font-size="5pt"><xsl:value-of select="key('label','in_sheet_effect')"/> </fo:inline>
 						<xsl:if test="string-length(effect) &gt; 150">
 							<fo:inline font-size="7pt"><xsl:value-of select="effect"/></fo:inline>
 						</xsl:if>
@@ -574,16 +574,16 @@
 						</xsl:if>
 						<xsl:if test="string-length(spell_resistance) &gt; 0 or dc &gt; 0"><fo:inline> [</fo:inline>
 							<xsl:if test="string-length(spell_resistance) &gt; 0">
-								<fo:inline font-weight="bold">SR:</fo:inline>
+								<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_sr')"/></fo:inline>
 								<xsl:value-of select="spell_resistance"/>
 							</xsl:if>
 							<xsl:choose>
 								<xsl:when test="dc &gt; 0">
-									<fo:inline>; </fo:inline><fo:inline font-weight="bold">DC:</fo:inline> <xsl:value-of select="dc"/> 
+									<fo:inline>; </fo:inline><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_dc')"/></fo:inline> <xsl:value-of select="dc"/> 
 									<fo:inline>, </fo:inline> <xsl:value-of select="saveinfo"/>
 								</xsl:when>
 								<xsl:when test="/character/house_var/spelldisplaydc &gt; 0">
-									<fo:inline>; </fo:inline><fo:inline font-weight="bold">DC: N/A</fo:inline>
+									<fo:inline>; </fo:inline><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_dcNA')"/></fo:inline>
 								</xsl:when>
 								<xsl:otherwise>
 								</xsl:otherwise>
@@ -592,7 +592,7 @@
 						</xsl:if>
 						<xsl:if test="concentration != $baseconcentration">
 							<fo:inline>; </fo:inline>
-							<fo:inline font-style="italic" font-weight="bold">CONCENTRATION:</fo:inline>
+							<fo:inline font-style="italic" font-weight="bold"><xsl:value-of select="key('label','in_sheet_concentrationPdfPdf')"/></fo:inline>
 							<xsl:value-of select="concentration"/>
 						</xsl:if>
 				</fo:block>
@@ -636,7 +636,7 @@
 						</xsl:when>
 						<xsl:otherwise>
 							<fo:table-cell padding-top="1pt" text-align="start">
-								<fo:block text-align="start" font-size="7pt">At Will</fo:block>
+								<fo:block text-align="start" font-size="7pt"><xsl:value-of select="key('label','in_sheet_atWillPdf')"/></fo:block>
 							</fo:table-cell>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -715,9 +715,9 @@
 						<fo:inline font-weight="bold">[<xsl:value-of select="components"/>]</fo:inline>
 						<fo:inline> </fo:inline>
 					</xsl:if>
-						<fo:inline font-weight="bold"> TARGET: </fo:inline><xsl:value-of select="target"/>
+						<fo:inline font-weight="bold"> <xsl:value-of select="key('label','in_sheet_target')"/> </fo:inline><xsl:value-of select="target"/>
 						<fo:inline>; </fo:inline>
-						<fo:inline font-style="italic" font-weight="bold" font-size="5pt">EFFECT: </fo:inline>
+						<fo:inline font-style="italic" font-weight="bold" font-size="5pt"><xsl:value-of select="key('label','in_sheet_effect')"/> </fo:inline>
 						<xsl:if test="string-length(effect) &gt; 150">
 							<fo:inline font-size="7pt"><xsl:value-of select="effect"/></fo:inline>
 						</xsl:if>
@@ -726,28 +726,28 @@
 						</xsl:if>
 						<xsl:if test="string-length(spell_resistance) &gt; 0 or dc &gt; 0"><fo:inline> [</fo:inline>
 							<xsl:if test="string-length(spell_resistance) &gt; 0">
-								<fo:inline font-weight="bold">SR:</fo:inline>
+								<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_sr')"/></fo:inline>
 								<xsl:value-of select="spell_resistance"/>
 							</xsl:if>
 							<xsl:choose>
 								<xsl:when test="dc &gt; 0">
-									<fo:inline>; </fo:inline><fo:inline font-weight="bold">DC:</fo:inline> <xsl:value-of select="dc"/> 
+									<fo:inline>; </fo:inline><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_dc')"/></fo:inline> <xsl:value-of select="dc"/> 
 									<fo:inline>, </fo:inline> <xsl:value-of select="saveinfo"/>
 								</xsl:when>
 								<xsl:when test="/character/house_var/spelldisplaydc &gt; 0">
-									<fo:inline>; </fo:inline><fo:inline font-weight="bold">DC: N/A</fo:inline>
+									<fo:inline>; </fo:inline><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_dcNA')"/></fo:inline>
 								</xsl:when>
 								<xsl:otherwise>
 								</xsl:otherwise>
 							</xsl:choose>
 							<fo:inline>] </fo:inline>
 						</xsl:if>
-						(<fo:inline font-weight="bold">Caster Level:</fo:inline>
+						(<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_casterLevelPdf')"/></fo:inline>
 						<xsl:value-of select="casterlevel"/>)
 		<!-->			<xsl:if test="concentration != ''">	-->
 					<xsl:if test="concentration != $baseconcentration">
 						<fo:inline>; </fo:inline>
-						<fo:inline font-style="italic" font-weight="bold">Concentration:</fo:inline>
+						<fo:inline font-style="italic" font-weight="bold"><xsl:value-of select="key('label','in_sheet_concentrationPdf')"/></fo:inline>
 						<xsl:value-of select="concentration"/>
 					</xsl:if>
 				</fo:block>
@@ -778,7 +778,7 @@
 ====================================
 ====================================-->
 	<xsl:template name="spells.memorized.header">
-		<xsl:param name="title" select="'Unknown'"/>
+		<xsl:param name="title" select="key('label','in_sheet_unknown')"/>
 		<fo:table table-layout="fixed" width="100%">
 			<fo:table-column>
 				<xsl:attribute name="column-width"><xsl:value-of select="$pagePrintableWidth" />mm</xsl:attribute>
@@ -806,7 +806,7 @@
 	<xsl:template match="racial_innate_memorized" mode="spells.memorized">
 		<xsl:if test="count(.//spell) &gt; 0">
 			<xsl:call-template name="spells.memorized.header">
-				<xsl:with-param name="title" select="'Innate'"/>
+				<xsl:with-param name="title" select="key('label','in_sheet_innate')"/>
 			</xsl:call-template>
 			<fo:table table-layout="fixed" width="100%" space-after="5mm">
 				<fo:table-column>
@@ -948,7 +948,7 @@
 										<xsl:with-param name="attribute" select="'spells.memorized.level'"/>
 									</xsl:call-template>
 									<fo:block font-size="7pt">
-										Level <xsl:value-of select="@number"/>
+										<xsl:value-of select="key('label','in_sheet_levelPdfPdf')"/> <xsl:value-of select="@number"/>
 									</fo:block>
 								</fo:table-cell>
 							</fo:table-row>
@@ -986,7 +986,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'spells.memorized'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">At Will</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_atWillPdf')"/></fo:block>
 					</fo:table-cell>
 				</xsl:otherwise>
 			</xsl:choose>
@@ -996,7 +996,7 @@
 						<xsl:with-param name="attribute" select="'spells.memorized'"/>
 					</xsl:call-template>
 					<xsl:value-of select="bonusspell"/>
-					<xsl:value-of select="name"/> (DC:<xsl:value-of select="dc"/>)
+					<xsl:value-of select="name"/> <xsl:value-of select="key('label','in_sheet_dcPdf')"/><xsl:value-of select="dc"/>)
 				</fo:block>
 			</fo:table-cell>
 		</fo:table-row>

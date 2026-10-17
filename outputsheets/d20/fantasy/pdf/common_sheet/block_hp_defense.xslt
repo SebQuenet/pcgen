@@ -57,19 +57,19 @@
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell>
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="4pt">WOUNDS/CURRENT HP</fo:block>
+								<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_woundsCurrentHp')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell>
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="4pt">SUBDUAL DAMAGE</fo:block>
+								<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_subdualDamage')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell>
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="4pt">DAMAGE REDUCTION</fo:block>
+								<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_damageReduction')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell>
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="6pt">SPEED</fo:block>
+								<fo:block text-align="center" font-size="6pt"><xsl:value-of select="key('label','in_sheet_speed')"/></fo:block>
 							</fo:table-cell>
 						</fo:table-row>
 						<fo:table-row>
@@ -77,8 +77,8 @@
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'hp.title'"/>
 								</xsl:call-template>
-								<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt">HP</fo:block>
-								<fo:block line-height="4pt" font-size="4pt">hit points</fo:block>
+								<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt"><xsl:value-of select="key('label','in_sheet_hp')"/></fo:block>
+								<fo:block line-height="4pt" font-size="4pt"><xsl:value-of select="key('label','in_sheet_hitPointsPdf')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell>
 							<fo:table-cell>
@@ -171,11 +171,11 @@
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell><!-- space -->
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="4pt">WOUNDS/CURRENT HP</fo:block>
+								<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_woundsCurrentHp')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell><!-- space -->
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="4pt">SUBDUAL DAMAGE</fo:block>
+								<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_subdualDamage')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell><!-- space -->
 							<fo:table-cell><fo:block/></fo:table-cell><!-- TITLE Wound points -->
@@ -185,11 +185,11 @@
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell><!-- space -->
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="4pt">DAMAGE REDUCTION</fo:block>
+								<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_damageReduction')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell><!-- space -->
 							<fo:table-cell display-align="after">
-								<fo:block text-align="center" font-size="6pt">SPEED</fo:block>
+								<fo:block text-align="center" font-size="6pt"><xsl:value-of select="key('label','in_sheet_speed')"/></fo:block>
 							</fo:table-cell>
 						</fo:table-row>
 						<fo:table-row>
@@ -197,8 +197,8 @@
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'hp.title'"/>
 								</xsl:call-template>
-								<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt">VP</fo:block>
-								<fo:block line-height="4pt" font-size="4pt">Vitality</fo:block>
+								<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt"><xsl:value-of select="key('label','in_sheet_vp')"/></fo:block>
+								<fo:block line-height="4pt" font-size="4pt"><xsl:value-of select="key('label','in_sheet_vitality')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell><!-- space -->
 							<fo:table-cell>
@@ -228,8 +228,8 @@
 								<xsl:call-template name="attrib">
 									<xsl:with-param name="attribute" select="'hp.title'"/>
 								</xsl:call-template>
-								<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt">WP</fo:block>
-								<fo:block line-height="4pt" font-size="4pt">Wound Points</fo:block>
+								<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt"><xsl:value-of select="key('label','in_sheet_wp')"/></fo:block>
+								<fo:block line-height="4pt" font-size="4pt"><xsl:value-of select="key('label','in_sheet_woundPoints')"/></fo:block>
 							</fo:table-cell>
 							<fo:table-cell><fo:block/></fo:table-cell><!-- space -->
 							<fo:table-cell>
@@ -371,8 +371,8 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'ac.title'"/>
 						</xsl:call-template>
-						<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt">AC</fo:block>
-						<fo:block line-height="4pt" font-size="4pt">armor class</fo:block>
+						<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt"><xsl:value-of select="key('label','in_sheet_ac')"/></fo:block>
+						<fo:block line-height="4pt" font-size="4pt"><xsl:value-of select="key('label','in_sheet_armorClass')"/></fo:block>
 					</fo:table-cell>	<!--	1	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	2	-->
 					<fo:table-cell display-align="center">
@@ -558,67 +558,67 @@
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	1	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	2	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="6pt">TOTAL</fo:block>
+						<fo:block text-align="center" font-size="6pt"><xsl:value-of select="key('label','in_sheet_total')"/></fo:block>
 					</fo:table-cell>	<!--	3	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	4	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="6pt">FLAT</fo:block>
+						<fo:block text-align="center" font-size="6pt"><xsl:value-of select="key('label','in_sheet_flat')"/></fo:block>
 					</fo:table-cell>	<!--	5	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	6	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="6pt">TOUCH</fo:block>
+						<fo:block text-align="center" font-size="6pt"><xsl:value-of select="key('label','in_sheet_touch')"/></fo:block>
 					</fo:table-cell>	<!--	7	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	8	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">BASE</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_base')"/></fo:block>
 					</fo:table-cell>	<!--	9	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	10	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ARMOR BONUS</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_armorBonus')"/></fo:block>
 					</fo:table-cell>	<!--	11	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	12	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">SHIELD BONUS</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_shieldBonus')"/></fo:block>
 					</fo:table-cell>	<!--	13	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	14	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">STAT</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_stat')"/></fo:block>
 					</fo:table-cell>	<!--	15	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	16	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">SIZE</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_size')"/></fo:block>
 					</fo:table-cell>	<!--	17	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	18	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="3pt">NATURAL ARMOR</fo:block>
+						<fo:block text-align="center" font-size="3pt"><xsl:value-of select="key('label','in_sheet_naturalArmor')"/></fo:block>
 					</fo:table-cell>	<!--	19	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	20	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="3pt">DEFLEC- TION</fo:block>
+						<fo:block text-align="center" font-size="3pt"><xsl:value-of select="key('label','in_sheet_deflecTion')"/></fo:block>
 					</fo:table-cell>	<!--	21	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	22	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">DODGE</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_dodge')"/></fo:block>
 					</fo:table-cell>	<!--	23	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	24	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">Morale</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_morale')"/></fo:block>
 					</fo:table-cell>	<!--	25	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	26	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">Insight</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_insight')"/></fo:block>
 					</fo:table-cell>	<!--	27	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	28	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">Sacred</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_sacred')"/></fo:block>
 					</fo:table-cell>	<!--	29	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	30	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">Profane</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_profane')"/></fo:block>
 					</fo:table-cell>	<!--	31	-->
 					<fo:table-cell><fo:block/></fo:table-cell>	<!--	32	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">MISC</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_misc')"/></fo:block>
 					</fo:table-cell>	<!--	33	-->
 		<!-->			<fo:table-cell><fo:block/></fo:table-cell> -->	<!--	34	-->
 				</fo:table-row>
@@ -707,8 +707,8 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'initiative.title'"/>
 						</xsl:call-template>
-						<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt">INITIATIVE</fo:block>
-						<fo:block line-height="4pt" font-size="4pt">modifier</fo:block>
+						<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt"><xsl:value-of select="key('label','in_sheet_initiative')"/></fo:block>
+						<fo:block line-height="4pt" font-size="4pt"><xsl:value-of select="key('label','in_sheet_modifierPdf')"/></fo:block>
 					</fo:table-cell>		<!--	1	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	2	-->
 					<fo:table-cell>
@@ -828,48 +828,48 @@
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	1	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	2	-->
 					<fo:table-cell>
-						<fo:block text-align="center" space-before.optimum="1pt" font-size="6pt">TOTAL</fo:block>
+						<fo:block text-align="center" space-before.optimum="1pt" font-size="6pt"><xsl:value-of select="key('label','in_sheet_total')"/></fo:block>
 					</fo:table-cell>		<!--	3	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	4	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">DEX MODIFIER</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_dexModifier')"/></fo:block>
 					</fo:table-cell>		<!--	5	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	6	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">MISC MODIFIER</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_miscModifier')"/></fo:block>
 					</fo:table-cell>		<!--	7	-->
 					<!-- New Stuff	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	8	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">MISS CHANCE</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_missChance')"/></fo:block>
 					</fo:table-cell>		<!--	9	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	10	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">Arcane Spell Failure</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_arcaneSpellFailure')"/></fo:block>
 					</fo:table-cell>		<!--	11	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	12	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ARMOR CHECK PENALTY</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_armorCheckPenalty')"/></fo:block>
 					</fo:table-cell>		<!--	13	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	14	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">SPELL RESIST</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_spellResist')"/></fo:block>
 					</fo:table-cell>		<!--	15	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	14	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ACID RESIST</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_acidResist')"/></fo:block>
 					</fo:table-cell>		<!--	15	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	14	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">COLD RESIST</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_coldResist')"/></fo:block>
 					</fo:table-cell>		<!--	15	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	14	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ELECT. RESIST</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_electResist')"/></fo:block>
 					</fo:table-cell>		<!--	15	-->
 					<fo:table-cell><fo:block/></fo:table-cell>		<!--	14	-->
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">FIRE RESIST</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_fireResist')"/></fo:block>
 					</fo:table-cell>		<!--	15	-->
 				</fo:table-row>
 			</fo:table-body>
@@ -902,8 +902,8 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bab.title'"/>
 						</xsl:call-template>
-						<fo:block line-height="10pt" font-weight="bold" font-size="7.5pt">BASE ATTACK</fo:block>
-						<fo:block line-height="4pt" font-size="4pt">bonus</fo:block>
+						<fo:block line-height="10pt" font-weight="bold" font-size="7.5pt"><xsl:value-of select="key('label','in_sheet_baseAttack')"/></fo:block>
+						<fo:block line-height="4pt" font-size="4pt"><xsl:value-of select="key('label','in_sheet_bonusPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
@@ -950,7 +950,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'initiative.title'"/>
 						</xsl:call-template>
-					<fo:block line-height="10pt" font-weight="bold" font-size="7pt" space-before="0pt">Encumbrance</fo:block>
+					<fo:block line-height="10pt" font-weight="bold" font-size="7pt" space-before="0pt"><xsl:value-of select="key('label','in_sheet_encumbrance')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
@@ -960,7 +960,7 @@
 						<xsl:if test="(/character/equipment/total/load = 'Medium' or /character/equipment/total/load = 'Heavy' or /character/equipment/total/load = 'Overload')">
 						<fo:block font-size="10pt" font-weight="bold" color="red">
 							<xsl:value-of select="/character/equipment/total/load"/>
-							<fo:inline font-size="6" font-weight="italics"> (rules applied)</fo:inline>
+							<fo:inline font-size="6" font-weight="italics"> <xsl:value-of select="key('label','in_sheet_rulesApplied')"/></fo:inline>
 						</fo:block>
 						</xsl:if>
 						<xsl:if test="/character/equipment/total/load = 'Light'">
@@ -997,7 +997,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'initiative.title'"/>
 						</xsl:call-template>
-					<fo:block line-height="10pt" font-weight="bold" font-size="7pt" space-before="1pt">Res</fo:block>
+					<fo:block line-height="10pt" font-weight="bold" font-size="7pt" space-before="1pt"><xsl:value-of select="key('label','in_sheet_res')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
@@ -1076,33 +1076,33 @@
 			<fo:table-body>
 				<fo:table-row>
 					<fo:table-cell>
-						<fo:block text-align="center" space-before.optimum="1pt" font-size="6pt">SAVING THROWS</fo:block>
+						<fo:block text-align="center" space-before.optimum="1pt" font-size="6pt"><xsl:value-of select="key('label','in_sheet_savingThrows')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell number-columns-spanned="3">
-						<fo:block text-align="center" space-before.optimum="1pt" font-size="6pt">TOTAL</fo:block>
+						<fo:block text-align="center" space-before.optimum="1pt" font-size="6pt"><xsl:value-of select="key('label','in_sheet_total')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">BASE SAVE</fo:block>
-					</fo:table-cell>
-					<fo:table-cell><fo:block/></fo:table-cell>
-					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">ABILITY</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_baseSave')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">MAGIC</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_ability')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">MISC</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_magic')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">EPIC</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_misc')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="center" font-size="4pt">TEMP</fo:block>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_epic')"/></fo:block>
+					</fo:table-cell>
+					<fo:table-cell><fo:block/></fo:table-cell>
+					<fo:table-cell>
+						<fo:block text-align="center" font-size="4pt"><xsl:value-of select="key('label','in_sheet_temp')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<xsl:for-each select="saving_throw">
@@ -1112,7 +1112,7 @@
 								<xsl:with-param name="attribute" select="'saves.title'"/>
 							</xsl:call-template>
 							<fo:block line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt">
-								<xsl:value-of select="translate(name/long, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+								<xsl:value-of select="translate(name/long, 'abcdefghijklmnopqrstuvwxyzàâäçéèêëîïôöùûüÿæœ', 'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ')"/>
 							</fo:block>
 							<fo:block line-height="4pt" font-size="4pt">(<xsl:value-of select="ability"/>)</fo:block>
 						</fo:table-cell>

@@ -28,13 +28,13 @@
 							<fo:table-cell>
 								<fo:block>
 								<xsl:if test="count(conditional_modifiers/savebonus) &gt; 0">
-									<fo:block text-align="center" font-size="8pt" font-weight="bold">Conditional Save Modifiers:</fo:block>	
+									<fo:block text-align="center" font-size="8pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_conditionalSaveModifiers')"/></fo:block>	
 								</xsl:if>
 								<xsl:for-each select="conditional_modifiers/savebonus">
 									<fo:block font-size="8pt" space-before.optimum="1pt"><xsl:value-of select="description"/></fo:block>
 								</xsl:for-each>
 								<xsl:if test="count(conditional_modifiers/combatbonus) &gt; 0">
-									<fo:block text-align="center" font-size="8pt" font-weight="bold">Conditional Combat Modifiers:</fo:block>	
+									<fo:block text-align="center" font-size="8pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_conditionalCombatModifiers')"/></fo:block>	
 								</xsl:if>
 								<xsl:for-each select="conditional_modifiers/combatbonus">
 									<fo:block font-size="8pt" space-before.optimum="1pt"><xsl:value-of select="description"/></fo:block>
@@ -69,22 +69,22 @@
 			<fo:table-body>
 				<xsl:call-template name="to_hit.header" />
 				<xsl:apply-templates select="melee" mode="to_hit">
-					<xsl:with-param name="title" select="'MELEE'"/>
+					<xsl:with-param name="title" select="key('label','in_sheet_melee')"/>
 				</xsl:apply-templates>
 				<fo:table-row height="2.5pt">
 					<fo:table-cell><fo:block/></fo:table-cell>
 				</fo:table-row>
 				<xsl:apply-templates select="ranged" mode="to_hit">
-					<xsl:with-param name="title" select="'RANGED'"/>
+					<xsl:with-param name="title" select="key('label','in_sheet_ranged')"/>
 				</xsl:apply-templates>
 				<fo:table-row height="2.5pt">
 					<fo:table-cell><fo:block/></fo:table-cell>
 				</fo:table-row>
 				<xsl:apply-templates select="grapple" mode="to_hit">
-					<xsl:with-param name="title" select="'GRAPPLE'"/>
+					<xsl:with-param name="title" select="key('label','in_sheet_grapple')"/>
 				</xsl:apply-templates>
 				<xsl:apply-templates select="cmb" mode="to_hit">
-					<xsl:with-param name="title" select="'CMB'"/>
+					<xsl:with-param name="title" select="key('label','in_sheet_cmb')"/>
 				</xsl:apply-templates>
 			</fo:table-body>
 		</fo:table>
@@ -96,13 +96,13 @@
 		<xsl:param name="dalign" select="'after'"/>
 		<fo:table-row>
 			<fo:table-cell><fo:block/></fo:table-cell>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'TOTAL'"/><xsl:with-param name="font.size" select="'6pt'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'BASE ATTACK BONUS'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'STAT'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'SIZE'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'MISC'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'EPIC'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'TEMP'"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_total')"/><xsl:with-param name="font.size" select="'6pt'"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_baseAttackBonus')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_stat')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_size')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_misc')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_epic')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_temp')"/></xsl:call-template>
 		</fo:table-row>
 	</xsl:template>
 	<xsl:template name="attack.header.entry">
@@ -126,7 +126,7 @@
 				<fo:block space-before.optimum="0.5pt" line-height="10pt" font-weight="bold" font-size="10pt" space-before="1pt">
 					<xsl:value-of select="$title"/>
 				</fo:block>
-				<fo:block line-height="4pt" font-size="4pt">attack bonus</fo:block>
+				<fo:block line-height="4pt" font-size="4pt"><xsl:value-of select="key('label','in_sheet_attackBonusPdf')"/></fo:block>
 			</fo:table-cell>
 			<fo:table-cell><fo:block/></fo:table-cell>
 			<xsl:choose>
@@ -283,22 +283,22 @@
 		<fo:table-row>
 											
 			<fo:table-cell><fo:block/></fo:table-cell>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'DIRTY TRICK'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'DRAG'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'REPOSITION'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'STEAL'"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_dirtyTrick')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_drag')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_reposition')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_steal')"/></xsl:call-template>
 		</fo:table-row>
 	</xsl:template>
 	<xsl:template name="cmb.moves_header">
 		<fo:table-row>
 											
 			<fo:table-cell><fo:block/></fo:table-cell>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'GRAPPLE'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'TRIP'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'DISARM'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'SUNDER'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'BULL RUSH'"/></xsl:call-template>
-			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="'OVERRUN'"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_grapple')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_trip')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_disarm')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_sunder')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_bullRush')"/></xsl:call-template>
+			<xsl:call-template name="attack.header.entry"><xsl:with-param name="title" select="key('label','in_sheet_overrun')"/></xsl:call-template>
 		</fo:table-row>
 	</xsl:template>
 	<xsl:template name="attack.entry">

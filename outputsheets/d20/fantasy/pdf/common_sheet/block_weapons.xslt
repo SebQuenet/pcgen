@@ -58,31 +58,31 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-weight="bold" font-size="9pt">Martial Arts</fo:block>
+						<fo:block font-weight="bold" font-size="9pt"><xsl:value-of select="key('label','in_sheet_martialArts')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TOTAL ATTACK BONUS</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_totalAttackBonus')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">DAMAGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_damage')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">CRITICAL</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_critical')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">REACH</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_reach')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
@@ -155,31 +155,31 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-weight="bold" font-size="9pt">Spirit Weapon - Melee</fo:block>
+						<fo:block font-weight="bold" font-size="9pt"><xsl:value-of select="key('label','in_sheet_spiritWeaponMelee')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TOTAL ATTACK BONUS</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_totalAttackBonus')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">DAMAGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_damage')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">CRITICAL</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_critical')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">REACH</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_reach')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
@@ -252,31 +252,31 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-weight="bold" font-size="9pt">Spirit Weapon - Ranged</fo:block>
+						<fo:block font-weight="bold" font-size="9pt"><xsl:value-of select="key('label','in_sheet_spiritWeaponRanged')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TOTAL ATTACK BONUS</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_totalAttackBonus')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">DAMAGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_damage')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">CRITICAL</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_critical')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">RANGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_rangePdf')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
@@ -351,31 +351,31 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-weight="bold" font-size="9pt">UNARMED</fo:block>
+						<fo:block font-weight="bold" font-size="9pt"><xsl:value-of select="key('label','in_sheet_unarmed')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TOTAL ATTACK BONUS</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_totalAttackBonus')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">DAMAGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_damage')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">CRITICAL</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_critical')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">REACH</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_reach')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
@@ -430,7 +430,7 @@
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
 						<fo:block font-size="8pt" font-weight="bold">
-							<xsl:text>Special Properties:</xsl:text>
+							<xsl:value-of select="key('label','in_sheet_specialPropertiesPdf')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell number-columns-spanned="4">
@@ -454,13 +454,13 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-weight="bold" font-size="9pt">Flurry of Blows</fo:block>
+						<fo:block font-weight="bold" font-size="9pt"><xsl:value-of select="key('label','in_sheet_flurryOfBlows')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell  number-rows-spanned="1" number-columns-spanned="4">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TOTAL ATTACK BONUS</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_totalAttackBonus')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 					<!--
@@ -548,13 +548,13 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TOTAL ATTACK BONUS</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_totalAttackBonus')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">DAMAGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_damage')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
@@ -562,10 +562,10 @@
 						</xsl:call-template>
 				<xsl:choose>
 					<xsl:when test="string-length(critmult) &gt; 0">
-						<fo:block font-size="6pt">CRIT / MULT</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_critMult')"/></fo:block>
 					</xsl:when>
 					<xsl:otherwise>
-						<fo:block font-size="6pt">CRITICAL</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_critical')"/></fo:block>
 					</xsl:otherwise>
 				</xsl:choose>
 					</fo:table-cell>
@@ -575,10 +575,10 @@
 						</xsl:call-template>
 				<xsl:choose>
 					<xsl:when test="(range) &gt; 0">
-						<fo:block font-size="6pt">RANGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_rangePdf')"/></fo:block>
 					</xsl:when>
 					<xsl:otherwise>
-						<fo:block font-size="6pt">REACH</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_reach')"/></fo:block>
 					</xsl:otherwise>
 				</xsl:choose>
 					</fo:table-cell>
@@ -646,7 +646,7 @@
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
 						<fo:block font-size="8pt" font-weight="bold">
-							<xsl:text>Special Properties:</xsl:text>
+							<xsl:value-of select="key('label','in_sheet_specialPropertiesPdf')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell number-columns-spanned="4">
@@ -709,7 +709,7 @@
 									<xsl:with-param name="attribute" select="'weapon.title'"/>
 							</xsl:call-template>
 								<fo:block font-size="7pt" padding-right="2pt">
-									Rng
+									<xsl:value-of select="key('label','in_sheet_rng')"/>
 								</fo:block>
 							</fo:table-cell>
 					<!-->	<xsl:for-each select="range">	-->
@@ -767,7 +767,7 @@
 									<xsl:with-param name="attribute" select="'weapon.title'"/>
 							</xsl:call-template>
 								<fo:block font-size="7pt" padding-right="2pt">
-									TH
+									<xsl:value-of select="key('label','in_sheet_th')"/>
 								</fo:block>
 							</fo:table-cell>
 							<fo:table-cell padding-top="2pt" padding-bottom="2pt" padding-left="2pt">
@@ -878,15 +878,15 @@
 		</xsl:for-each>
 		<xsl:if test="position() &gt;= $first_weapon">
 			<fo:block font-size="5pt" space-before="2mm" color="black">
-				<fo:inline font-weight="bold">*</fo:inline>: weapon is equipped
+				<fo:inline font-weight="bold">*</fo:inline><xsl:value-of select="key('label','in_sheet_weaponIsEquipped')"/>
 			</fo:block>
 			<fo:block font-size="5pt" space-before="1pt" color="black">
-				<fo:inline font-weight="bold">1H-P</fo:inline>: One handed, in primary hand.
-				<fo:inline font-weight="bold">1H-O</fo:inline>: One handed, in off hand.
-				<fo:inline font-weight="bold">2H</fo:inline>: Two handed.
-				<fo:inline font-weight="bold">2W-P-(OH)</fo:inline>: 2 weapons, primary hand (off hand weapon is heavy).
-				<fo:inline font-weight="bold">2W-P-(OL)</fo:inline>: 2 weapons, primary hand (off hand weapon is light).
-				<fo:inline font-weight="bold">2W-OH</fo:inline>: 2 weapons, off hand.
+				<fo:inline font-weight="bold">1H-P</fo:inline><xsl:value-of select="key('label','in_sheet_oneHandedInPrimaryHand')"/>
+				<fo:inline font-weight="bold">1H-O</fo:inline><xsl:value-of select="key('label','in_sheet_oneHandedInOffHand')"/>
+				<fo:inline font-weight="bold">2H</fo:inline><xsl:value-of select="key('label','in_sheet_twoHandedPdf')"/>
+				<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_2wPOh')"/></fo:inline><xsl:value-of select="key('label','in_sheet_2WeaponsPrimaryHandOffHandWeaponIs')"/>
+				<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_2wPOl')"/></fo:inline><xsl:value-of select="key('label','in_sheet_2WeaponsPrimaryHandOffHandWeaponIsPdf')"/>
+				<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_2wOh')"/></fo:inline><xsl:value-of select="key('label','in_sheet_2WeaponsOffHandPdf')"/>
 			</fo:block>
 		</xsl:if>
 	</xsl:template>
@@ -934,31 +934,31 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">HAND</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_hand')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TYPE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_type')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">SIZE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_size')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">CRITICAL</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_critical')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">REACH</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_reach')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row keep-with-previous.within-page="always">
@@ -1048,7 +1048,7 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'equipment.border'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">Special Properties: <xsl:value-of select="special_properties"/></fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_specialPropertiesPdf')"/> <xsl:value-of select="special_properties"/></fo:block>
 					</fo:table-cell>
 				</xsl:if>
 				<xsl:if test="special_properties = ''">
@@ -1091,13 +1091,13 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">TOTAL ATTACK BONUS</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_totalAttackBonus')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'weapon.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt">DAMAGE</fo:block>
+						<fo:block font-size="6pt"><xsl:value-of select="key('label','in_sheet_damage')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row  keep-with-previous.within-page="always">
@@ -1220,11 +1220,11 @@
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold" space-before="1pt">To Hit</fo:block>
+						<fo:block font-size="6pt" font-weight="bold" space-before="1pt"><xsl:value-of select="key('label','in_sheet_toHit')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold" space-before="1pt">Dam</fo:block>
+						<fo:block font-size="6pt" font-weight="bold" space-before="1pt"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
@@ -1232,23 +1232,23 @@
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold" space-before="1pt">To Hit</fo:block>
+						<fo:block font-size="6pt" font-weight="bold" space-before="1pt"><xsl:value-of select="key('label','in_sheet_toHit')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold" space-before="1pt">Dam</fo:block>
+						<fo:block font-size="6pt" font-weight="bold" space-before="1pt"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<xsl:if test="not(w1_h1_p/to_hit = /character/export/invalidtext/tohit and w1_h1_p/damage = /character/export/invalidtext/damage and w2_p_oh/to_hit = /character/export/invalidtext/tohit and w2_p_oh/damage = /character/export/invalidtext/damage)">
 					<fo:table-row keep-with-previous.within-page="always">
 						<!-- 1HP, 2WP-OH -->
 						<xsl:call-template name="weapon.complex.tohit">
-							<xsl:with-param name="title" select="'1H-P'"/>
+							<xsl:with-param name="title" select="key('label','in_sheet_1hP')"/>
 							<xsl:with-param name="tohit" select="w1_h1_p/to_hit"/>
 							<xsl:with-param name="damage" select="w1_h1_p/damage" />
 						</xsl:call-template>
 						<xsl:call-template name="weapon.complex.tohit">
-							<xsl:with-param name="title" select="'2W-P-(OH)'"/>
+							<xsl:with-param name="title" select="key('label','in_sheet_2wPOh')"/>
 							<xsl:with-param name="tohit" select="w2_p_oh/to_hit"/>
 							<xsl:with-param name="damage" select="w2_p_oh/damage" />
 						</xsl:call-template>
@@ -1258,12 +1258,12 @@
 					<fo:table-row keep-with-previous.within-page="always">
 						<!-- 1HO, 2WPOL -->
 						<xsl:call-template name="weapon.complex.tohit">
-							<xsl:with-param name="title" select="'1H-O'"/>
+							<xsl:with-param name="title" select="key('label','in_sheet_1hO')"/>
 							<xsl:with-param name="tohit" select="w1_h1_o/to_hit"/>
 							<xsl:with-param name="damage" select="w1_h1_o/damage" />
 						</xsl:call-template>
 						<xsl:call-template name="weapon.complex.tohit">
-							<xsl:with-param name="title" select="'2W-P-(OL)'"/>
+							<xsl:with-param name="title" select="key('label','in_sheet_2wPOl')"/>
 							<xsl:with-param name="tohit" select="w2_p_ol/to_hit"/>
 							<xsl:with-param name="damage" select="w2_p_ol/damage" />
 						</xsl:call-template>
@@ -1272,12 +1272,12 @@
 				<fo:table-row keep-with-previous.within-page="always">
 					<!-- 2H, OH -->
 					<xsl:call-template name="weapon.complex.tohit">
-						<xsl:with-param name="title" select="'2H'"/>
+						<xsl:with-param name="title" select="key('label','in_sheet_2h')"/>
 						<xsl:with-param name="tohit" select="w1_h2/to_hit"/>
 						<xsl:with-param name="damage" select="w1_h2/damage" />
 					</xsl:call-template>
 					<xsl:call-template name="weapon.complex.tohit">
-						<xsl:with-param name="title" select="'2W-OH'"/>
+						<xsl:with-param name="title" select="key('label','in_sheet_2wOh')"/>
 						<xsl:with-param name="tohit" select="w2_o/to_hit"/>
 						<xsl:with-param name="damage" select="w2_o/damage" />
 					</xsl:call-template>
@@ -1334,7 +1334,7 @@
 								<xsl:with-param name="attribute" select="'weapon.title'"/>
 							</xsl:call-template>
 							<fo:block font-size="7pt" font-weight="bold">
-							Range: <xsl:value-of select="distance"/>
+							<xsl:value-of select="key('label','in_sheet_rangePdfPdf')"/> <xsl:value-of select="distance"/>
 							</fo:block>
 							</fo:table-cell>
 							<fo:table-cell number-columns-spanned="2">
@@ -1342,7 +1342,7 @@
 								<xsl:with-param name="attribute" select="'weapon.title'"/>
 							</xsl:call-template>
 							<fo:block font-size="7pt" font-weight="bold">
-							To Hit: <xsl:value-of select="to_hit"/> 
+							<xsl:value-of select="key('label','in_sheet_toHitPdf')"/> <xsl:value-of select="to_hit"/> 
 							</fo:block>
 							</fo:table-cell>
 							<fo:table-cell number-columns-spanned="2">
@@ -1350,7 +1350,7 @@
 								<xsl:with-param name="attribute" select="'weapon.title'"/>
 							</xsl:call-template>
 							<fo:block font-size="7pt" font-weight="bold">
-							Damage: <xsl:value-of select="damage"/>
+							<xsl:value-of select="key('label','in_sheet_damagePdf')"/> <xsl:value-of select="damage"/>
 							</fo:block>
 							</fo:table-cell>
 						</xsl:for-each>	
@@ -1378,7 +1378,7 @@
 					<!-- Range To-Hits -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 1 and position() &lt; 7]">
 						<fo:table-cell>
@@ -1399,7 +1399,7 @@
 					<!-- Damages -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 1 and position() &lt; 7]">
 						<fo:table-cell>
@@ -1434,7 +1434,7 @@
 					<!-- Range To-Hits -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 0 and position() &lt; 6]">
 						<fo:table-cell>
@@ -1455,7 +1455,7 @@
 					<!-- Damages -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 0 and position() &lt; 6]">
 						<fo:table-cell>
@@ -1489,7 +1489,7 @@
 					<!-- Range To-Hits -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 6 and position() &lt; 12]">
 						<fo:table-cell>
@@ -1510,7 +1510,7 @@
 					<!-- Damages -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 6 and position() &lt; 12]">
 						<fo:table-cell>
@@ -1543,7 +1543,7 @@
 					<!-- Range To-Hits -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 5 and position() &lt; 11]">
 						<fo:table-cell>
@@ -1564,7 +1564,7 @@
 					<!-- Damages -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 5 and position() &lt; 11]">
 						<fo:table-cell>
@@ -1589,7 +1589,7 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'weapon.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="5pt" font-weight="bold">Ammunition: <xsl:value-of select="ammunition/name"/>
+							<fo:block font-size="5pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_ammunitionLabel')"/> <xsl:value-of select="ammunition/name"/>
 								<xsl:if test="string(ammunition/special_properties) != ''">
 									(<xsl:value-of select="ammunition/special_properties"/>)
 								</xsl:if>
@@ -1612,7 +1612,7 @@
 									<xsl:with-param name="attribute" select="'weapon.title'"/>
 								</xsl:call-template>
 								<fo:block font-size="7pt" font-weight="bold">
-								Range: <xsl:value-of select="distance"/>
+								<xsl:value-of select="key('label','in_sheet_rangePdfPdf')"/> <xsl:value-of select="distance"/>
 								</fo:block>
 								</fo:table-cell>
 								<fo:table-cell number-columns-spanned="2">
@@ -1620,7 +1620,7 @@
 									<xsl:with-param name="attribute" select="'weapon.title'"/>
 								</xsl:call-template>
 								<fo:block font-size="7pt" font-weight="bold">
-								To Hit: <xsl:value-of select="./ammunition/to_hit"/> 
+								<xsl:value-of select="key('label','in_sheet_toHitPdf')"/> <xsl:value-of select="./ammunition/to_hit"/> 
 								</fo:block>
 								</fo:table-cell>
 								<fo:table-cell number-columns-spanned="2">
@@ -1628,7 +1628,7 @@
 									<xsl:with-param name="attribute" select="'weapon.title'"/>
 								</xsl:call-template>
 								<fo:block font-size="7pt" font-weight="bold">
-								Damage: <xsl:value-of select="./ammunition/damage"/>
+								<xsl:value-of select="key('label','in_sheet_damagePdf')"/> <xsl:value-of select="./ammunition/damage"/>
 								</fo:block>
 								</fo:table-cell>
 							</xsl:for-each>	
@@ -1654,7 +1654,7 @@
 					<!-- Range To-Hits -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 1 and position() &lt; 7]">
 						<fo:table-cell>
@@ -1675,7 +1675,7 @@
 					<!-- Damages -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-						<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+						<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 					</fo:table-cell>
 					<xsl:for-each select="range[position() &gt; 1 and position() &lt; 7]">
 						<fo:table-cell>
@@ -1709,7 +1709,7 @@
 						<!-- Range To-Hits -->
 						<fo:table-cell>
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-							<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+							<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 						</fo:table-cell>
 						<xsl:for-each select="range[position() &gt; 0 and position() &lt; 6]">
 							<fo:table-cell>
@@ -1730,7 +1730,7 @@
 						<!-- Damages -->
 						<fo:table-cell>
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-							<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+							<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 						</fo:table-cell>
 						<xsl:for-each select="range[position() &gt; 0 and position() &lt; 6]">
 							<fo:table-cell>
@@ -1763,7 +1763,7 @@
 						<!-- Range To-Hits -->
 						<fo:table-cell>
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-							<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+							<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 						</fo:table-cell>
 						<xsl:for-each select="range[position() &gt; 6 and position() &lt; 12]">
 							<fo:table-cell>
@@ -1784,7 +1784,7 @@
 						<!-- Damages -->
 						<fo:table-cell>
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-							<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+							<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 						</fo:table-cell>
 						<xsl:for-each select="range[position() &gt; 6 and position() &lt; 12]">
 							<fo:table-cell>
@@ -1817,7 +1817,7 @@
 						<!-- Range To-Hits -->
 						<fo:table-cell>
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-							<fo:block font-size="6pt" font-weight="bold">TH</fo:block>
+							<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_th')"/></fo:block>
 						</fo:table-cell>
 						<xsl:for-each select="range[position() &gt; 5 and position() &lt; 11]">
 							<fo:table-cell>
@@ -1838,7 +1838,7 @@
 						<!-- Damages -->
 						<fo:table-cell>
 							<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'weapon.title'"/></xsl:call-template>
-							<fo:block font-size="6pt" font-weight="bold">Dam</fo:block>
+							<fo:block font-size="6pt" font-weight="bold"><xsl:value-of select="key('label','in_sheet_dam')"/></fo:block>
 						</fo:table-cell>
 						<xsl:for-each select="range[position() &gt; 5 and position() &lt; 11]">
 							<fo:table-cell>

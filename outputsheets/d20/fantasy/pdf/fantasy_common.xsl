@@ -10,6 +10,9 @@
 	<xsl:import href="../../../xsltsl-1.1/stdlib.xsl"/>
   	<xsl:import href="inc_pagedimensions.xslt"/>
 
+	<!-- Labels in the configured language, published by base.xml.ftl: key('label', 'in_sheet_skills') -->
+	<xsl:key name="label" match="/character/labels/label" use="@key"/>
+
 	<xsl:variable name="PCGenFont">Noto Sans</xsl:variable>
 	<xsl:template match="spell" mode="spell.card">
 		<xsl:param name="break" select="'page'" />
@@ -20,15 +23,15 @@
 
 			<fo:block font-size="14pt" space-before="2mm" font-weight="bold" margin-left="5mm" text-indent="-5mm"><xsl:value-of select="bonusspell"/> <xsl:value-of select="name"/></fo:block>
 			<fo:block font-size="10pt" text-indent="5mm"><xsl:value-of select="school/fullschool"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Level: </fo:inline><xsl:value-of select="source/sourcelevel"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Components: </fo:inline><xsl:value-of select="components"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Casting Time: </fo:inline><xsl:value-of select="castingtime"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Range: </fo:inline><xsl:value-of select="range"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Target: </fo:inline><xsl:value-of select="target"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Duration: </fo:inline><xsl:value-of select="duration"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Saving Throw: </fo:inline><xsl:value-of select="saveinfo"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Spell Resistance: </fo:inline><xsl:value-of select="spell_resistance"/></fo:block>
-			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold">Effect: </fo:inline><xsl:value-of select="effect"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_levelPdfPdfPdf')"/> </fo:inline><xsl:value-of select="source/sourcelevel"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_components')"/> </fo:inline><xsl:value-of select="components"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_castingTime')"/> </fo:inline><xsl:value-of select="castingtime"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_rangePdfPdf')"/> </fo:inline><xsl:value-of select="range"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_targetPdf')"/> </fo:inline><xsl:value-of select="target"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_durationPdf')"/> </fo:inline><xsl:value-of select="duration"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_savingThrow')"/> </fo:inline><xsl:value-of select="saveinfo"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_spellResistance')"/> </fo:inline><xsl:value-of select="spell_resistance"/></fo:block>
+			<fo:block font-size="10pt" margin-left="5mm" text-indent="-5mm"><fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_effectPdf')"/> </fo:inline><xsl:value-of select="effect"/></fo:block>
 			<fo:block font-size="5pt" text-indent="3mm"><xsl:value-of select="source/source"/></fo:block>
 
 		</fo:block>
@@ -407,7 +410,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$power_use.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$power_use.tag"/>
 										</xsl:call-template>
@@ -415,7 +418,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$action_type.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Action Type  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_actionType')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$action_type.tag"/>
 										</xsl:call-template>
@@ -423,7 +426,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$special.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Special  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_special')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$special.tag"/>
 										</xsl:call-template>
@@ -431,7 +434,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$target.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Target  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_targetPdfPdf')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$target.tag"/>
 										</xsl:call-template>
@@ -439,7 +442,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$attack.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Attack  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_attack')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$attack.tag"/>
 										</xsl:call-template>
@@ -447,7 +450,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$trigger.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Trigger  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_trigger')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$trigger.tag"/>
 										</xsl:call-template>
@@ -455,7 +458,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$hit.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Hit  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_hit')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$hit.tag"/>
 										</xsl:call-template>
@@ -463,7 +466,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$miss.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Miss  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_missPdf')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$miss.tag"/>
 										</xsl:call-template>
@@ -471,7 +474,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$effect.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Effect  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_effectPdfPdf')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$effect.tag"/>
 										</xsl:call-template>
@@ -479,7 +482,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$sustain.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Sustain  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_sustain')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$sustain.tag"/>
 										</xsl:call-template>
@@ -558,7 +561,7 @@
 								</xsl:if>
 						<!-->		<xsl:if test="string-length(./*[name()=$alignment.tag]) &gt; 0">	-->
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$alignment.tag"/>
 										</xsl:call-template>
@@ -568,7 +571,7 @@
 
 							<!-->	<xsl:if test="string-length(./*[name()=$domainlist.tag]) &gt; 0">	-->
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$domainlist.tag"/>
 										</xsl:call-template>
@@ -576,7 +579,7 @@
 						<!-->		</xsl:if>	-->
 								<xsl:if test="string-length(./*[name()=$favoredweapon.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$favoredweapon.tag"/>
 										</xsl:call-template>
@@ -584,7 +587,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$holyitem.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$holyitem.tag"/>
 										</xsl:call-template>
@@ -592,7 +595,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$pantheonlist.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$pantheonlist.tag"/>
 										</xsl:call-template>
@@ -600,7 +603,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$source.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$source.tag"/>
 										</xsl:call-template>
@@ -608,7 +611,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$special_abilities.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$special_abilities.tag"/>
 										</xsl:call-template>
@@ -616,7 +619,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$appearance.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$appearance.tag"/>
 										</xsl:call-template>
@@ -624,7 +627,7 @@
 								</xsl:if>
 								<xsl:if test="string-length(./*[name()=$worshippers.tag]) &gt; 0">
 									<fo:block font-size="7pt" text-align="left" text-indent="5pt">
-										<fo:inline font-weight="bold">Power Use  </fo:inline>
+										<fo:inline font-weight="bold"><xsl:value-of select="key('label','in_sheet_powerUse')"/>  </fo:inline>
 										<xsl:call-template name="paragraghlist">
 											<xsl:with-param name="tag" select="$worshippers.tag"/>
 										</xsl:call-template>
@@ -714,29 +717,29 @@
 				<fo:table-row keep-with-next.within-column="always">
 					<fo:table-cell padding-top="1pt" number-columns-spanned="4">
 						<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'equipment.title'"/></xsl:call-template>
-						<fo:block font-size="9pt">EQUIPMENT</fo:block>
+						<fo:block font-size="9pt"><xsl:value-of select="key('label','in_sheet_equipment')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 				<fo:table-row>
 					<xsl:call-template name="attrib"><xsl:with-param name="attribute" select="'equipment.title'"/></xsl:call-template>
 					<fo:table-cell>
-						<fo:block>Name</fo:block>
+						<fo:block><xsl:value-of select="key('label','in_sheet_namePdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="right">Qty</fo:block>
+						<fo:block text-align="right"><xsl:value-of select="key('label','in_sheet_qtyPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="right">Weight</fo:block>
+						<fo:block text-align="right"><xsl:value-of select="key('label','in_sheet_weightPdf')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell>
-						<fo:block text-align="right">Cost</fo:block>
+						<fo:block text-align="right"><xsl:value-of select="key('label','in_sheet_costPdf')"/></fo:block>
 					</fo:table-cell>
 				</fo:table-row>
 			</fo:table-header>
 			<fo:table-footer>
 				<fo:table-row xsl:use-attribute-sets="equipment.title">
 					<fo:table-cell padding-top="1pt" number-columns-spanned="2" >
-						<fo:block font-size="7pt">TOTAL WEIGHT CARRIED/VALUE</fo:block>
+						<fo:block font-size="7pt"><xsl:value-of select="key('label','in_sheet_totalWeightCarriedValue')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell padding-top="1pt">
 						<fo:block font-size="7pt" text-align="right">
@@ -753,7 +756,7 @@
 									<xsl:with-param name="RunningTotal" select="0"/>
 								</xsl:call-template>
 							</xsl:variable>
-							<xsl:value-of select="format-number($TotalValue, '####0.0#')"/> gp
+							<xsl:value-of select="format-number($TotalValue, '####0.0#')"/> <xsl:value-of select="key('label','in_sheet_gp')"/>
 						</fo:block>
 					</fo:table-cell>
 				</fo:table-row>

@@ -167,28 +167,28 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">Character Name</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_characterName')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">Player Name</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_playerName')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell number-columns-spanned="1">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">Deity</fo:block>		
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_deityPdf')"/></fo:block>		
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell number-columns-spanned="1">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">Region</fo:block>	
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_regionPdf')"/></fo:block>	
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 	<!-- SPACE -->
@@ -196,7 +196,7 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">Alignment</fo:block>	
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_alignmentPdf')"/></fo:block>	
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 	<!-- SPACE -->
@@ -215,7 +215,7 @@
 								<xsl:for-each select = "classes/class">
 									<xsl:sort select="sequence"/>
 									<xsl:variable name="classname">
-										<xsl:value-of select="translate(name, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+										<xsl:value-of select="translate(name, 'abcdefghijklmnopqrstuvwxyzàâäçéèêëîïôöùûüÿæœ', 'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ')"/>
 									</xsl:variable>
 									<xsl:variable name="archetypecount">
 										<xsl:value-of select="count(/character/basics/archetypes/archetype[contains(type,$classname)])"/>
@@ -293,35 +293,35 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">CLASS</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_class')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell number-columns-spanned="3">
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">RACE</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_race')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">SIZE / FACE</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_sizeFace')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">HEIGHT / WEIGHT</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_heightWeight')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">CHARACTER ID</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_characterId')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 					</fo:table-row>
@@ -404,11 +404,11 @@
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
 							<fo:block font-size="6pt" padding-top="1pt">
-								<xsl:text>Character Level</xsl:text>
+								<xsl:value-of select="key('label','in_sheet_characterLevel')"/>
 								<xsl:if test="classes/levels_total != classes/levels_ecl">
-									<xsl:text>/ECL</xsl:text>
+									<xsl:value-of select="key('label','in_sheet_ecl')"/>
 								</xsl:if>
-								<xsl:text> (CR)</xsl:text>
+								<xsl:text> </xsl:text><xsl:value-of select="key('label','in_sheet_cr')"/>
 							</fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
@@ -416,42 +416,42 @@
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">EXP/NEXT LEVEL</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_expNextLevel')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">AGE</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_age')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">GENDER</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_gender')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">EYES</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_eyes')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">HAIR</fo:block>
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_hair')"/></fo:block>
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 						<fo:table-cell>
 							<xsl:call-template name="attrib">
 								<xsl:with-param name="attribute" select="'bio.title'"/>
 							</xsl:call-template>
-							<fo:block font-size="6pt" padding-top="1pt">FACTION</fo:block>	
+							<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_faction')"/></fo:block>	
 						</fo:table-cell>
 						<fo:table-cell><fo:block/></fo:table-cell>
 					</fo:table-row>	
@@ -607,35 +607,35 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">Character Name</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_characterName')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">Player Name</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_playerName')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell number-columns-spanned="1">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">Deity</fo:block>		
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_deityPdf')"/></fo:block>		
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell number-columns-spanned="1">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">Region</fo:block>	
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_regionPdf')"/></fo:block>	
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>	<!-- SPACE -->
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">Alignment</fo:block>	
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_alignmentPdf')"/></fo:block>	
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>	<!-- SPACE -->
 				</fo:table-row>
@@ -653,7 +653,7 @@
 							<xsl:for-each select = "classes/class">
 								<xsl:sort select="sequence"/>
 								<xsl:variable name="classname">
-									<xsl:value-of select="translate(name, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+									<xsl:value-of select="translate(name, 'abcdefghijklmnopqrstuvwxyzàâäçéèêëîïôöùûüÿæœ', 'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ')"/>
 								</xsl:variable>
 								<xsl:variable name="archetypecount">
 									<xsl:value-of select="count(/character/basics/archetypes/archetype[contains(type,$classname)])"/>
@@ -718,7 +718,7 @@
 						</xsl:call-template>
 						<fo:block font-size="8pt" padding-top="3pt">
 							<xsl:value-of select="vision/all"/>
-							<xsl:if test="vision/all = ''">Normal</xsl:if>
+							<xsl:if test="vision/all = ''"><xsl:value-of select="key('label','in_sheet_normal')"/></xsl:if>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
@@ -728,35 +728,35 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">CLASS</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_class')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell number-columns-spanned="3">
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">RACE</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_race')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">SIZE / FACE</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_sizeFace')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">HEIGHT / WEIGHT</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_heightWeight')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">VISION</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_vision')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 				</fo:table-row>
@@ -839,11 +839,11 @@
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
 						<fo:block font-size="6pt" padding-top="1pt">
-							<xsl:text>Character Level</xsl:text>
+							<xsl:value-of select="key('label','in_sheet_characterLevel')"/>
 							<xsl:if test="classes/levels_total != classes/levels_ecl">
-								<xsl:text>/ECL</xsl:text>
+								<xsl:value-of select="key('label','in_sheet_ecl')"/>
 							</xsl:if>
-							<xsl:text> (CR)</xsl:text>
+							<xsl:text> </xsl:text><xsl:value-of select="key('label','in_sheet_cr')"/>
 						</fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
@@ -851,42 +851,42 @@
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">EXP/NEXT LEVEL</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_expNextLevel')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">AGE</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_age')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">GENDER</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_gender')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">EYES</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_eyes')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">HAIR</fo:block>
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_hair')"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 					<fo:table-cell>
 						<xsl:call-template name="attrib">
 							<xsl:with-param name="attribute" select="'bio.title'"/>
 						</xsl:call-template>
-						<fo:block font-size="6pt" padding-top="1pt">Points</fo:block>	
+						<fo:block font-size="6pt" padding-top="1pt"><xsl:value-of select="key('label','in_sheet_pointsPdf')"/></fo:block>	
 					</fo:table-cell>
 					<fo:table-cell><fo:block/></fo:table-cell>
 				</fo:table-row>	

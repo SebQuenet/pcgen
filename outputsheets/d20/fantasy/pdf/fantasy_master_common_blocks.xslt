@@ -245,17 +245,17 @@
 			<fo:table-body>
 				<fo:table-row>
 					<fo:table-cell text-align="start" wrap-option="no-wrap" border-top-color="black" border-top-style="solid" border-top-width="0.1pt" background-color="transparent" padding-top="2pt">
-						<fo:block font-size="5pt">Character: <fo:inline font-weight="bold"><xsl:value-of select="/character/basics/name"/></fo:inline></fo:block>
-						<fo:block font-size="5pt">Player: <fo:inline font-weight="bold"><xsl:value-of select="/character/basics/playername"/></fo:inline></fo:block>
+						<fo:block font-size="5pt"><xsl:value-of select="key('label','in_sheet_character')"/> <fo:inline font-weight="bold"><xsl:value-of select="/character/basics/name"/></fo:inline></fo:block>
+						<fo:block font-size="5pt"><xsl:value-of select="key('label','in_sheet_playerPdf')"/> <fo:inline font-weight="bold"><xsl:value-of select="/character/basics/playername"/></fo:inline></fo:block>
 					</fo:table-cell>
 					<fo:table-cell text-align="center" wrap-option="no-wrap" border-top-color="black" border-top-style="solid" border-top-width="0.1pt" background-color="transparent" padding-top="2pt">
-						<fo:block text-align="center" font-size="5pt">PCGen Character Template by Andrew Maitland (LegacyKing) and Stefan Radermacher (Zaister), based on work by Frugal, ROG, Arcady, Barak, Dimrill, &amp; Dekker.</fo:block>
-						<fo:block text-align="center" font-size="5pt">Created using <fo:basic-link external-destination="http://pcgen.org/" color="blue" text-decoration="underline">PCGen</fo:basic-link> v<xsl:value-of select="/character/export/version"/> on <xsl:value-of select="/character/export/date"/><xsl:text> at </xsl:text><xsl:value-of select="/character/export/time"/></fo:block>
+						<fo:block text-align="center" font-size="5pt"><xsl:value-of select="key('label','in_sheet_pcgenCharacterTemplateByAndrewMaitlandLegacykingAnd')"/></fo:block>
+						<fo:block text-align="center" font-size="5pt"><xsl:value-of select="key('label','in_sheet_createdUsing')"/> <fo:basic-link external-destination="http://pcgen.org/" color="blue" text-decoration="underline">PCGen</fo:basic-link> v<xsl:value-of select="/character/export/version"/> <xsl:value-of select="key('label','in_sheet_on')"/> <xsl:value-of select="/character/export/date"/><xsl:text> </xsl:text><xsl:value-of select="key('label','in_sheet_at')"/><xsl:text> </xsl:text><xsl:value-of select="/character/export/time"/></fo:block>
 					</fo:table-cell>
 					<fo:table-cell text-align="end" border-top-color="black" border-top-style="solid" border-top-width="0.1pt" background-color="transparent" padding-top="2pt">
 						<fo:block font-size="5pt">
-						Level:<xsl:value-of select="/character/basics/classes/levels_total"/> (CR:<xsl:value-of select="/character/basics/cr"/>)</fo:block>
-						<fo:block font-size="5pt">Page <fo:page-number/>
+						<xsl:value-of select="key('label','in_sheet_levelPdfPdfPdf')"/><xsl:value-of select="/character/basics/classes/levels_total"/> <xsl:value-of select="key('label','in_sheet_crPdf')"/><xsl:value-of select="/character/basics/cr"/>)</fo:block>
+						<fo:block font-size="5pt"><xsl:value-of select="key('label','in_sheet_page')"/> <fo:page-number/>
 						</fo:block>
 					</fo:table-cell>
 				</fo:table-row>
@@ -278,7 +278,7 @@
 				Start the first page
 				-->
 			<fo:page-sequence>
-				<xsl:attribute name="master-reference">Portrait</xsl:attribute>
+				<xsl:attribute name="master-reference"><xsl:value-of select="key('label','in_sheet_portrait')"/></xsl:attribute>
 				<xsl:attribute name="font-family"><xsl:value-of select="$PCGenFont"/></xsl:attribute>
 				<xsl:call-template name="page.footer"/>
 				<!--	CHARACTER BODY STARTS HERE !!!	-->

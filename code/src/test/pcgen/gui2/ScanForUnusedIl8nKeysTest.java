@@ -154,6 +154,12 @@ class ScanForUnusedIl8nKeysTest
 				return keys.stream()
 						.filter(key -> javaFile.contains("i18n(\"%s\"".formatted(key)))
 						.collect(Collectors.toSet());
+			} else if (file.getName().endsWith(".xslt") || file.getName().endsWith(".xsl"))
+			{
+				// PDF sheets read their labels with key('label','key')
+				return keys.stream()
+						.filter(key -> javaFile.contains("key('label','%s')".formatted(key)))
+						.collect(Collectors.toSet());
 			} else
 			{
 				LOG.warning(
@@ -249,7 +255,7 @@ class ScanForUnusedIl8nKeysTest
 
 			List<File> sheetFiles = sheetsWalk
 					.filter(Files::isRegularFile)
-					.filter(e -> e.toString().endsWith(".ftl"))
+					.filter(e -> e.toString().endsWith(".ftl") || e.toString().endsWith(".xslt") || e.toString().endsWith(".xsl"))
 					.map(Path::toFile)
 					.toList();
 			allFiles.addAll(sheetFiles);

@@ -3,6 +3,11 @@
 <!--
 -->
 <character>
+	<labels>
+		<#list i18nKeys("in_sheet_") as labelKey>
+		<label key="${labelKey}">${i18n(labelKey)?xml}</label>
+		</#list>
+	</labels>
 	<proficiency_bonus>${pcstring('VAR.Proficiency_Bonus.INTVAL.SIGN')}</proficiency_bonus>
 	<export>
 		<date>${pcstring('EXPORT.DATE')}</date>
@@ -394,23 +399,24 @@
 		</conditional_modifiers>
 		<@loop from=0 to=pcvar('COUNT[CHECKS]-1') ; check , check_has_next>
 		<#assign checkName = pcstring('CHECK.${check}.NAME')?lower_case />
-		<#assign checkShortName = checkName />
-		<#if (checkName = 'reflex')>
-			<#assign checkShortName = checkName?substring(0,3) />
-		<#elseif (checkName?length >= 4) >
-			<#assign checkShortName = checkName?substring(0,4) />
+		<#assign checkKey = pcstring('CHECK.${check}.KEY')?lower_case />
+		<#assign checkShortName = checkKey />
+		<#if (checkKey = 'reflex')>
+			<#assign checkShortName = checkKey?substring(0,3) />
+		<#elseif (checkKey?length >= 4) >
+			<#assign checkShortName = checkKey?substring(0,4) />
 		</#if>
 		<saving_throw>
 			<name>
 				<long>${checkName}</long>
 				<short>${checkShortName}</short>
 			</name>
-			<#if (checkName = 'fortitude')>
-				<ability>constitution</ability>
-			<#elseif (checkName = 'reflex')>
-				<ability>dexterity</ability>
-			<#elseif (checkName = 'will')>
-				<ability>wisdom</ability>
+			<#if (checkKey = 'fortitude')>
+				<ability>${i18n('in_sheet_constitution')?lower_case?xml}</ability>
+			<#elseif (checkKey = 'reflex')>
+				<ability>${i18n('in_sheet_dexterity')?lower_case?xml}</ability>
+			<#elseif (checkKey = 'will')>
+				<ability>${i18n('in_sheet_wisdom')?lower_case?xml}</ability>
 			<#else>
 				<ability></ability>
 			</#if>
