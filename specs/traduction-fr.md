@@ -140,11 +140,14 @@ sinon l'original. La substitution des variables ne change pas.
 
 ## 6. Fiches de personnage
 
-Seules les fiches utilisées pour Pathfinder sont traduites : `csheet_fantasy_std.htm.ftl`,
-`csheet_fantasy_statblock_pathfinder.htm.ftl`, `csheet_llm.json.ftl`, `csheet_llm.md.ftl`,
-`csheet_llm.toon.ftl`. Leurs libellés passent par le bundle (`LanguageBundle`) et non par une
-copie de fichier par langue. Les clés JSON de `csheet_llm.json.ftl` restent en anglais : seules
-les valeurs sont traduites.
+Seules les fiches lues par un joueur sont traduites : `csheet_fantasy_std.htm.ftl` et
+`csheet_fantasy_statblock_pathfinder.htm.ftl`. Leurs libellés passent par le bundle, avec la
+fonction `i18n` des modèles, et non par une copie de fichier par langue.
+
+Les fiches LLM (`csheet_llm.json.ftl`, `.md.ftl`, `.toon.ftl`) gardent leurs intitulés et leurs
+clés en anglais : leur lecteur est un modèle, et les outils qui les lisent attendent des
+intitulés stables. Les valeurs qu'elles contiennent (noms, descriptions) sortent dans la langue
+réglée, comme partout.
 
 ## 7. Production des traductions
 
