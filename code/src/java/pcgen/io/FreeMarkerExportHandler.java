@@ -15,6 +15,7 @@ import pcgen.core.GameMode;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.SettingsHandler;
 import pcgen.io.freemarker.EquipSetLoopDirective;
+import pcgen.io.freemarker.I18nFunction;
 import pcgen.io.freemarker.LoopDirective;
 import pcgen.io.freemarker.PCBooleanFunction;
 import pcgen.io.freemarker.PCHasVarFunction;
@@ -101,6 +102,7 @@ public class FreeMarkerExportHandler extends ExportHandler
 			input.put("gamemodename", gamemode.getName());
 			input.put("pcstring", new PCStringDirective(aPC, this));
 			input.put("pcvar", new PCVarFunction(aPC));
+			input.put("i18n", new I18nFunction());
 			input.put("pcboolean", new PCBooleanFunction(aPC, this));
 			input.put("pchasvar", new PCHasVarFunction(aPC, this));
 			input.put("equipsetloop", new EquipSetLoopDirective(aPC));

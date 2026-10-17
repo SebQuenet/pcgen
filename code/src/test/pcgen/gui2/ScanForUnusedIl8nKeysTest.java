@@ -58,6 +58,7 @@ class ScanForUnusedIl8nKeysTest
 	private static final String CODE_PATH = "code/src/java/";
 	private static final String RESOURCES_PATH = "code/src/resources/";
 	private static final String TEST_RESOURCES_PATH = "code/src/testResources/";
+	private static final String OUTPUT_SHEETS_PATH = "outputsheets/";
 	private static final String PROPERTIES_PATH = "pcgen/lang/";
 	private static final String PROPERTIES_FILE = "LanguageBundle.properties";
 	private static final String NEW_PROPERTIES_FILE = "cleaned.properties";
@@ -147,6 +148,12 @@ class ScanForUnusedIl8nKeysTest
 				return keys.stream()
 						.filter(key -> javaFile.contains("\"%%%s\"".formatted(key)))
 						.collect(Collectors.toSet());
+			} else if (file.getName().endsWith(".ftl"))
+			{
+				// Character sheets read their labels with i18n("key")
+				return keys.stream()
+						.filter(key -> javaFile.contains("i18n(\"%s\"".formatted(key)))
+						.collect(Collectors.toSet());
 			} else
 			{
 				LOG.warning(
@@ -223,7 +230,8 @@ class ScanForUnusedIl8nKeysTest
 		LOG.info("Current working directory: " + ConfigurationSettings.getUserDir());
 
 		try (Stream<Path> codeWalk = Files.walk(Paths.get(CODE_PATH));
-			 Stream<Path> resourcesWalk = Files.walk(Paths.get(RESOURCES_PATH)))
+			 Stream<Path> resourcesWalk = Files.walk(Paths.get(RESOURCES_PATH));
+			 Stream<Path> sheetsWalk = Files.walk(Paths.get(OUTPUT_SHEETS_PATH)))
 		{
 			List<File> javaFiles = codeWalk
 					.filter(Files::isRegularFile)
@@ -238,6 +246,13 @@ class ScanForUnusedIl8nKeysTest
 					.map(Path::toFile)
 					.toList();
 			allFiles.addAll(fxmlFiles);
+
+			List<File> sheetFiles = sheetsWalk
+					.filter(Files::isRegularFile)
+					.filter(e -> e.toString().endsWith(".ftl"))
+					.map(Path::toFile)
+					.toList();
+			allFiles.addAll(sheetFiles);
 		}
 
 		LOG.info("The size of found files is %d, that will be scanned.".formatted(allFiles.size()));

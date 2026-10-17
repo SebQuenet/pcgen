@@ -19,7 +19,7 @@ $Date: 2014-06-12 11:36:12 +1000 (Thu, 12 Jun 2014) $
 -->
 <head>
 <meta http-equiv="content-type" content="text-html; charset=utf-8" />
-<title>${pcstring('NAME')} [${pcstring('POOL.COST')} Points]</title>
+<title>${pcstring('NAME')} [${i18n("in_sheet_poolPoints", pcstring('POOL.COST'))}]</title>
 <style type="text/css">
 	p { margin:0; }
 	.pcgen {
@@ -107,7 +107,7 @@ $Date: 2014-06-12 11:36:12 +1000 (Thu, 12 Jun 2014) $
 </head>
 
 <body bgcolor="white">
-<div class="pcgen">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')}</div>
+<div class="pcgen">${i18n("in_sheet_createdUsing")} <a href="http://pcgen.org/">PCGen</a> ${i18n("in_sheet_versionOnDate", pcstring('EXPORT.VERSION'), pcstring('EXPORT.DATE'))}</div>
 <!-- START Top Character Data -->
 <table cellpadding="0" cellspacing="4" border="0" width="100%" summary="Character Info">
  <tr>
@@ -119,11 +119,11 @@ $Date: 2014-06-12 11:36:12 +1000 (Thu, 12 Jun 2014) $
   <td rowspan="6" align="center" width="1%" class="border" class="font10"><a href="#Bio"><img src="file://localhost/${pcstring('PORTRAIT.THUMB')}" height="100%" alt="Click for Bio" border="0" /></a><br /></td>
  </tr>
  <tr>
-  <td colspan="2" class="topline">Character Name</td>
-  <td colspan="2" class="topline">PLAYER</td>
-  <td colspan="1" class="topline">ALIGNMENT</td>
-  <td colspan="1" class="topline">DEITY</td>
-  <td class="topline">POINTS</td>
+  <td colspan="2" class="topline">${i18n("in_sheet_characterName")}</td>
+  <td colspan="2" class="topline">${i18n("in_sheet_player")?upper_case}</td>
+  <td colspan="1" class="topline">${i18n("in_sheet_alignment")?upper_case}</td>
+  <td colspan="1" class="topline">${i18n("in_sheet_deity")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_points")?upper_case}</td>
  </tr>
  <tr>
  <!-- 	<@loop from=0 to=pcvar('COUNT[CLASSES]-1') ; class , class_has_next>>-->
@@ -150,18 +150,18 @@ $Date: 2014-06-12 11:36:12 +1000 (Thu, 12 Jun 2014) $
 <#if (pcvar("COUNT[VISION]") > 0) >
   <td colspan="1" class="h">${pcstring('VISION')}</td>
 <#else>
-  <td colspan="1" class="h">Normal</td>
+  <td colspan="1" class="h">${i18n("in_sheet_normal")}</td>
 </#if>
 
  </tr>
  <tr>
-  <td colspan="1" class="topline">CLASS</td>
-  <td colspan="1" class="topline">EXPERIENCE</td>
-  <td colspan="1" class="topline">RACE</td>
-  <td class="topline">SIZE / FACE</td>
-  <td class="topline">HEIGHT</td>
-  <td class="topline">WEIGHT</td>
-  <td colspan="1" class="topline">VISION</td>
+  <td colspan="1" class="topline">${i18n("in_sheet_class")?upper_case}</td>
+  <td colspan="1" class="topline">${i18n("in_sheet_experience")?upper_case}</td>
+  <td colspan="1" class="topline">${i18n("in_sheet_race")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_sizeFace")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_height")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_weight")?upper_case}</td>
+  <td colspan="1" class="topline">${i18n("in_sheet_vision")?upper_case}</td>
  </tr>
  <tr>
   <td class="h">${pcstring('TOTALLEVELS')}</td>
@@ -172,12 +172,12 @@ $Date: 2014-06-12 11:36:12 +1000 (Thu, 12 Jun 2014) $
   <td colspan="2" class="h">${pcstring('COLOR.HAIR')}, ${pcstring('LENGTH.HAIR')}</td>
  </tr>
  <tr>
-  <td class="topline">LEVEL</td>
-  <td class="topline">NEXT LEVEL</td>
-  <td class="topline">AGE</td>
-  <td class="topline">GENDER</td>
-  <td class="topline">EYES</td>
-  <td colspan="2" class="topline">HAIR</td>
+  <td class="topline">${i18n("in_sheet_level")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_nextLevel")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_age")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_gender")?upper_case}</td>
+  <td class="topline">${i18n("in_sheet_eyes")?upper_case}</td>
+  <td colspan="2" class="topline">${i18n("in_sheet_hair")?upper_case}</td>
  </tr>
 </table>
 <!-- STOP Top Character Data -->
@@ -188,11 +188,11 @@ $Date: 2014-06-12 11:36:12 +1000 (Thu, 12 Jun 2014) $
 	<!-- START Abilities Table -->
 	<table summary="Stat Block">
         <tr>
-          <td align="center" width="20%" class="font6">ABILITY<br />NAME</td>
-          <td align="center" width="20%" class="font6">ABILITY<br />SCORE</td>
-          <td align="center" width="20%" class="font6">ABILITY<br />MODIFIER</td>
-          <td align="center" width="20%" class="font6">TEMPORARY<br />SCORE</td>
-          <td align="center" width="20%" class="font6">TEMPORARY<br />MODIFIER</td>
+          <td align="center" width="20%" class="font6">${i18n("in_sheet_ability")?upper_case}<br />${i18n("in_sheet_name")?upper_case}</td>
+          <td align="center" width="20%" class="font6">${i18n("in_sheet_ability")?upper_case}<br />${i18n("in_sheet_score")?upper_case}</td>
+          <td align="center" width="20%" class="font6">${i18n("in_sheet_ability")?upper_case}<br />${i18n("in_sheet_modifier")?upper_case}</td>
+          <td align="center" width="20%" class="font6">${i18n("in_sheet_temporary")?upper_case}<br />${i18n("in_sheet_score")?upper_case}</td>
+          <td align="center" width="20%" class="font6">${i18n("in_sheet_temporary")?upper_case}<br />${i18n("in_sheet_modifier")?upper_case}</td>
           </tr>
 <@loop from=0 to=pcvar('COUNT[STATS]-1') ; stat , stat_has_next><#-- TODO: Loop was of early exit type 1 -->
         <tr>
@@ -214,30 +214,30 @@ $Date: 2014-06-12 11:36:12 +1000 (Thu, 12 Jun 2014) $
           <td align="center" width="50"></td>
           <td align="center" width="25" valign="bottom"></td>
           <td align="center"></td>
-          <td align="center" width="100" class="font6"><br />CURRENT STAMINA</td>
+          <td align="center" width="100" class="font6"><br />${i18n("in_sheet_currentStamina")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="100" class="font6"><br />SUBDUAL DAMAGE</td>
+          <td align="center" width="100" class="font6"><br />${i18n("in_sheet_subdualDamage")?upper_case}</td>
           <td align="center"></td>
           <td align="center" width="50"></td>
           <td align="center" width="25" valign="bottom"></td>
           <td align="center"></td>
-          <td align="center" width="75" class="font6"><br />CURRENT HP</td>
+          <td align="center" width="75" class="font6"><br />${i18n("in_sheet_currentHp")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="60" class="font6"><br />DAMAGE<br />REDUCTION</td>
+          <td align="center" width="60" class="font6"><br />${i18n("in_sheet_damage")?upper_case}<br />${i18n("in_sheet_reduction")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="120" class="font6"><br />SPEED</td>
+          <td align="center" width="120" class="font6"><br />${i18n("in_sheet_speed")?upper_case}</td>
           </tr>
         <tr>
-          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>SP</b></font>
-            <font style="font-size:5pt" color="white"><br />Stamina</font></td>
+          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>${i18n("in_sheet_sp")?upper_case}</b></font>
+            <font style="font-size:5pt" color="white"><br />${i18n("in_sheet_stamina")}</font></td>
           <td align="center" class="border9"><b>${pcstring('HP')}</b></td>
           <td align="center"><br /></td>
           <td align="center" class="border9"><input type="text"/></td>
           <td align="center"><br /></td>
           <td align="center" class="border9"><input type="text"/></td>
           <td align="center"><br /></td>
-          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>HP</b></span>
-            <font style="font-size:5pt" color="white"><br />Hit Points</font></td>
+          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>${i18n("in_sheet_hp")?upper_case}</b></span>
+            <font style="font-size:5pt" color="white"><br />${i18n("in_sheet_hitPoints")}</font></td>
           <td align="center" class="border9"><b>${pcstring('ALTHP')}</b></td>
           <td align="center"><br /></td>
           <td align="center" class="border9"><input type="text"/></td>
@@ -268,17 +268,17 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
           <td align="center" width="50"></td>
           <td align="center" width="25" valign="bottom"></td>
           <td align="center"></td>
-          <td align="center" width="130" class="font6"><br />WOUNDS/CURRENT HP</td>
+          <td align="center" width="130" class="font6"><br />${i18n("in_sheet_woundsCurrentHp")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="130" class="font6"><br />SUBDUAL DAMAGE</td>
+          <td align="center" width="130" class="font6"><br />${i18n("in_sheet_subdualDamage")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="130" class="font6"><br />DAMAGE<br />REDUCTION</td>
+          <td align="center" width="130" class="font6"><br />${i18n("in_sheet_damage")?upper_case}<br />${i18n("in_sheet_reduction")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="130" class="font6"><br />SPEED</td>
+          <td align="center" width="130" class="font6"><br />${i18n("in_sheet_speed")?upper_case}</td>
           </tr>
         <tr>
-          <td align="center" bgcolor="black" style="color:white;"><span class="font9"><b>HP</b></span>
-            <span class="font6" ><br />Hit Points</span></td>
+          <td align="center" bgcolor="black" style="color:white;"><span class="font9"><b>${i18n("in_sheet_hp")?upper_case}</b></span>
+            <span class="font6" ><br />${i18n("in_sheet_hitPoints")}</span></td>
           <td align="center" class="border9"><b>${pcstring('HP')}</b></td>
           <td align="center"><br /></td>
           <td align="center" class="border9"><input type="text"/></td>
@@ -305,30 +305,30 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
           <td align="center" width="50"></td>
           <td align="center" width="25" valign="bottom"></td>
           <td align="center"></td>
-          <td align="center" width="100" class="font6"><br />CURRENT VITALITY</td>
+          <td align="center" width="100" class="font6"><br />${i18n("in_sheet_currentVitality")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="100" class="font6"><br />SUBDUAL DAMAGE</td>
+          <td align="center" width="100" class="font6"><br />${i18n("in_sheet_subdualDamage")?upper_case}</td>
           <td align="center"></td>
           <td align="center" width="50"></td>
           <td align="center" width="25" valign="bottom"></td>
           <td align="center"></td>
-          <td align="center" width="75" class="font6"><br />CURRENT WP</td>
+          <td align="center" width="75" class="font6"><br />${i18n("in_sheet_currentWp")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="60" class="font6"><br />DAMAGE<br />REDUCTION</td>
+          <td align="center" width="60" class="font6"><br />${i18n("in_sheet_damage")?upper_case}<br />${i18n("in_sheet_reduction")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="120" class="font6"><br />SPEED</td>
+          <td align="center" width="120" class="font6"><br />${i18n("in_sheet_speed")?upper_case}</td>
           </tr>
         <tr>
-          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>VP</b></font>
-            <font style="font-size:5pt" color="white"><br />Vitality</font></td>
+          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>${i18n("in_sheet_vp")?upper_case}</b></font>
+            <font style="font-size:5pt" color="white"><br />${i18n("in_sheet_vitality")}</font></td>
           <td align="center" class="border9"><b>${pcstring('HP')}</b></td>
           <td align="center"><br /></td>
           <td align="center" class="border9"><input type="text"/></td>
           <td align="center"><br /></td>
           <td align="center" class="border9"><input type="text"/></td>
           <td align="center"><br /></td>
-          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>WP</b></span>
-            <font style="font-size:5pt" color="white"><br />Wound Points</font></td>
+          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>${i18n("in_sheet_wp")?upper_case}</b></span>
+            <font style="font-size:5pt" color="white"><br />${i18n("in_sheet_woundPoints")}</font></td>
           <td align="center" class="border9"><b>${pcstring('ALTHP')}</b></td>
           <td align="center"><br /></td>
           <td align="center" class="border9"><input type="text"/></td>
@@ -350,8 +350,8 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
 <!-- START Armor Class Table -->
       <table summary="AC Table">
         <tr>
-          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>AC</b></font>
-            <font style="font-size:5pt" color="white"><br />Armour Class</font></td>
+          <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>${i18n("in_sheet_ac")?upper_case}</b></font>
+            <font style="font-size:5pt" color="white"><br />${i18n("in_sheet_armourClass")}</font></td>
           <td align="center" class="border9"><b>${pcstring('AC.Total')}</b></td>
           <td align="center" class="font7"><b>:</b></td>
           <td align="center" class="border9"><b>${pcstring('AC.Touch')}</b></td>
@@ -380,29 +380,29 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
           </tr>
         <tr>
           <td align="center" width="50"></td>
-          <td align="center" width="25" valign="top"><font style="font-size: 6pt"><b>TOTAL</b></font></td>
+          <td align="center" width="25" valign="top"><font style="font-size: 6pt"><b>${i18n("in_sheet_total")?upper_case}</b></font></td>
           <td align="center"></td>
-          <td align="center" width="25" valign="top"><font style="font-size: 6pt"><b>TOUCH</b></font></td>
+          <td align="center" width="25" valign="top"><font style="font-size: 6pt"><b>${i18n("in_sheet_touch")?upper_case}</b></font></td>
           <td align="center"></td>
-          <td align="center" width="25" valign="top"><font style="font-size: 6pt"><b>FLAT</b></font></td>
+          <td align="center" width="25" valign="top"><font style="font-size: 6pt"><b>${i18n("in_sheet_flat")?upper_case}</b></font></td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">BASE</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_base")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">ARMOR<br />BONUS</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_armor")?upper_case}<br />${i18n("in_sheet_bonus")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">SHIELD<br />BONUS</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_shield")?upper_case}<br />${i18n("in_sheet_bonus")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">STAT<br />BONUS</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_stat")?upper_case}<br />${i18n("in_sheet_bonus")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">SIZE<br />BONUS</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_size")?upper_case}<br />${i18n("in_sheet_bonus")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">NATURAL<br />ARMOR</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_natural")?upper_case}<br />${i18n("in_sheet_armor")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">DODGE<br />BONUS</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_dodge")?upper_case}<br />${i18n("in_sheet_bonus")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">DEFLECTION<br />BONUS</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_deflection")?upper_case}<br />${i18n("in_sheet_bonus")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">MISC<br />BONUS</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_misc")?upper_case}<br />${i18n("in_sheet_bonus")?upper_case}</td>
           </tr>
         </table>
 <!-- STOP AC Table -->
@@ -413,7 +413,7 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
 <!-- START Initiative Table -->
    <table summary="Initiative Table">
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>INITIATIVE</b></font><font style="font-size:5pt" color="white"><br />Modifier</font></td>
+     <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>${i18n("in_sheet_initiative")?upper_case}</b></font><font style="font-size:5pt" color="white"><br />${i18n("in_sheet_modifier")}</font></td>
      <td align="center" class="border10"><b>${pcstring('INITIATIVEMOD')}</b></td>
      <td align="center" class="font7"><b>=</b></td>
      <td align="center" class="border10"><b>${pcstring('STAT.1.MOD')}</b></td>
@@ -423,11 +423,11 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
     </tr>
     <tr>
      <td align="center" width="50" class="font7"></td>
-     <td align="center" width="25" valign="top" class="font7">TOTAL</td>
+     <td align="center" width="25" valign="top" class="font7">${i18n("in_sheet_total")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" class="font6">DEX</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_dex")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" class="font6">MISC</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_misc")?upper_case}</td>
     </tr>
    </table>
 <!-- STOP Initiative Table -->
@@ -436,7 +436,7 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
 <!-- START Base Attack Table -->
    <table summary="Base Attack Table">
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>BASE ATTACK</b></font><font style="font-size:5pt" color="white"><br />Bonus</font></td>
+     <td align="center" bgcolor="black"><font style="font-size:9pt" color="white"><b>${i18n("in_sheet_baseAttack")?upper_case}</b></font><font style="font-size:5pt" color="white"><br />${i18n("in_sheet_bonus")}</font></td>
      <td align="center" width="94" class="border"><font style="font-size: small"><b>${pcstring('ATTACK.MELEE')}<br /></b></font></td>
      <td align="center" width="50%"><br /></td>
     </tr>
@@ -464,17 +464,17 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
           <td align="center" class="border9"><b>&nbsp;</b></td>
           </tr>
         <tr>
-          <td align="center" width="25" class="font6">MISS<br />CHANCE</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_miss")?upper_case}<br />${i18n("in_sheet_chance")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">ARCANE<br />FAILURE</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_arcane")?upper_case}<br />${i18n("in_sheet_failure")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">ARMOR<br />CHECK</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_armor")?upper_case}<br />${i18n("in_sheet_check")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">MAX<br />DEX</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_max")?upper_case}<br />${i18n("in_sheet_dex")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">SPELL<br />RESIST.</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_spell")?upper_case}<br />${i18n("in_sheet_resist")?upper_case}</td>
           <td align="center"></td>
-          <td align="center" width="25" class="font6">TEMP</td>
+          <td align="center" width="25" class="font6">${i18n("in_sheet_temp")?upper_case}</td>
           </tr>
         </table>
 <!-- STOP Misc Stat Table -->
@@ -486,34 +486,34 @@ ${pcstring('MOVE.${movement}.NAME')}&nbsp;${pcstring('MOVE.${movement}.RATE')}
 <!-- START Saving Throws Table -->
    <table width="100%" summary="Saving Throws">
     <tr>
-     <td align="center" class="font6">SAVING THROWS</td>
-     <td align="center" width="25" class="font6">TOTAL</td>
+     <td align="center" class="font6">${i18n("in_sheet_savingThrows")?upper_case}</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_total")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" class="font6">BASE</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_base")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" class="font6">ABILITY</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_ability")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" class="font6">MAGIC</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_magic")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" class="font6 epic">EPIC</td>
+     <td align="center" width="25" class="font6 epic">${i18n("in_sheet_epic")?upper_case}</td>
      <td align="center" class="epic"></td>
-     <td align="center" width="25" class="font6">MISC</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_misc")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" class="font6">TEMPORARY</td>
+     <td align="center" width="25" class="font6">${i18n("in_sheet_temporary")?upper_case}</td>
     </tr>
 <@loop from=0 to=pcvar('COUNT[CHECKS]-1') ; checks , checks_has_next>
     <tr>
      <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${pcstring('CHECK.${checks}.NAME')}</b></font><font style="font-size:5pt" color="white"><br />
 <#if (pcstring("CHECK.${checks}.NAME") = "Fortitude")>
-Constitution
+${i18n("in_sheet_constitution")}
 <#else>
 </#if>
 <#if (pcstring("CHECK.${checks}.NAME") = "Reflex")>
-Dexterity
+${i18n("in_sheet_dexterity")}
 <#else>
 </#if>
 <#if (pcstring("CHECK.${checks}.NAME") = "Will")>
-Wisdom
+${i18n("in_sheet_wisdom")}
 <#else>
 </#if>
      </font></td>
@@ -535,7 +535,7 @@ Wisdom
    </table>
    <table width="100%" summary="Saving Throws">
      <tr>
-	   <td align="left" valign="top" class="border8"><div class="font6">CONDITIONAL MODIFIERS:</div>
+	   <td align="left" valign="top" class="border8"><div class="font6">${i18n("in_sheet_conditionalModifiers")?upper_case}:</div>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","ASPECT=SaveBonus")-1') ; ability , ability_has_next>
 	 ${pcstring('ABILITYALL.ANY.${ability}.ASPECT=SaveBonus.ASPECT.SaveBonus')} <br />
 </@loop>
@@ -547,22 +547,22 @@ Wisdom
    <table width="100%" summary="Melee ~ Ranged Attacks">
     <tr>
      <td align="center"></td>
-     <td align="center" width="60" valign="bottom" class="font6">TOTAL</td>
+     <td align="center" width="60" valign="bottom" class="font6">${i18n("in_sheet_total")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="60" valign="bottom" class="font6">BASE ATTACK</td>
+     <td align="center" width="60" valign="bottom" class="font6">${i18n("in_sheet_baseAttack")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" valign="bottom" class="font6">STAT</td>
+     <td align="center" width="25" valign="bottom" class="font6">${i18n("in_sheet_stat")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" valign="bottom" class="font6">SIZE</td>
+     <td align="center" width="25" valign="bottom" class="font6">${i18n("in_sheet_size")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" valign="bottom" class="font6 epic">EPIC</td>
+     <td align="center" width="25" valign="bottom" class="font6 epic">${i18n("in_sheet_epic")?upper_case}</td>
      <td align="center" class="epic"></td>
-     <td align="center" width="25" valign="bottom" class="font6">MISC</td>
+     <td align="center" width="25" valign="bottom" class="font6">${i18n("in_sheet_misc")?upper_case}</td>
      <td align="center"></td>
-     <td align="center" width="25" valign="bottom" class="font6">TEMP</td>
+     <td align="center" width="25" valign="bottom" class="font6">${i18n("in_sheet_temp")?upper_case}</td>
     </tr>
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>MELEE</b></font><font style="font-size:5pt" color="white"><br />ATTACK BONUS</font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_melee")?upper_case}</b></font><font style="font-size:5pt" color="white"><br />${i18n("in_sheet_attackBonus")?upper_case}</font></td>
      <td align="center" class="border10"><b>${pcstring('ATTACK.MELEE.TOTAL')}</b></td>
      <td align="center" class="font7"><b>=</b></td>
      <td align="center" class="border10"><b>${pcstring('ATTACK.MELEE')}<br /></b></td>
@@ -578,7 +578,7 @@ Wisdom
      <td align="center" class="tempborder"><br /></td>
     </tr>
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>RANGED</b></font><font style="font-size:5pt" color="white"><br />ATTACK BONUS</font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_ranged")?upper_case}</b></font><font style="font-size:5pt" color="white"><br />${i18n("in_sheet_attackBonus")?upper_case}</font></td>
      <td align="center" class="border10"><b>${pcstring('ATTACK.RANGED.TOTAL')}</b></td>
      <td align="center" class="font7"><b>=</b></td>
      <td align="center" class="border10"><b>${pcstring('ATTACK.RANGED')}<br /></b></td>
@@ -595,7 +595,7 @@ Wisdom
     </tr>
 <#if (pcvar("UseCombatManueverBonus") = 1)>
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>CMB</b></font><font style="font-size:5pt" color="white"><br />ATTACK BONUS</font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_cmb")?upper_case}</b></font><font style="font-size:5pt" color="white"><br />${i18n("in_sheet_attackBonus")?upper_case}</font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB.INTVAL.SIGN')}</b></td>
      <td align="center" class="font7"><b>=</b></td>
      <td align="center" class="border10"><b>${pcstring('ATTACK.MELEE.BASE')}<br /></b></td>
@@ -614,7 +614,7 @@ Wisdom
    <table width="100%" summary="CMB block">
 <#if (pcvar("CMD") > 0)>
    <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>CMB</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_cmb")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Grapple.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Trip.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Disarm.INTVAL.SIGN')}</b></td>
@@ -623,11 +623,11 @@ Wisdom
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Overrun.INTVAL.SIGN')}</b></td>
    </tr>
    <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>CMD</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_cmd")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMD_Grapple.INTVAL')}</b></td>
      <td align="center" class="border10"><b>
 <#if (pcvar("CantBeTripped") != 0)>
-Immune
+${i18n("in_sheet_immune")}
 <#else>
 ${pcstring('VAR.CMD_Trip.INTVAL')}
 </#if>
@@ -639,7 +639,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
     </tr>
 <#else>
    <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>OFFENSE</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_offense")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Grapple.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Trip.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Disarm.INTVAL.SIGN')}</b></td>
@@ -648,7 +648,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Overrun.INTVAL.SIGN')}</b></td>
     </tr>
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>DEFENSE</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_defense")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Grapple_DEF.INTVAL')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Trip_DEF.INTVAL')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Disarm_DEF.INTVAL')}</b></td>
@@ -659,25 +659,25 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 </#if>
     <tr>
      <td align="center" width="28%"></td>
-     <td align="center" width="12%" valign="bottom" class="font6">GRAPPLE</td>
-     <td align="center" width="12%" valign="bottom" class="font6">TRIP</td>
-     <td align="center" width="12%" valign="bottom" class="font6">DISARM</td>
-     <td align="center" width="12%" valign="bottom" class="font6">SUNDER</td>
-     <td align="center" width="12%" valign="bottom" class="font6">BULL RUSH</td>
-     <td align="center" width="12%" valign="bottom" class="font6">OVERRUN</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_grapple")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_trip")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_disarm")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_sunder")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_bullRush")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_overrun")?upper_case}</td>
     </tr>
    <br />
 
 <#if (pcvar("CMD") > 0)>
    <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>CMB</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_cmb")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_DirtyTrick.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Drag.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Reposition.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Steal.INTVAL.SIGN')}</b></td>
    </tr>
    <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>CMD</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_cmd")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMD_DirtyTrick.INTVAL')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMD_Drag.INTVAL')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMD_Reposition.INTVAL')}</b></td>
@@ -685,14 +685,14 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
     </tr>
 <#else>
    <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>OFFENSE</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_offense")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_DirtyTrick.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Drag.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Reposition.INTVAL.SIGN')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Steal.INTVAL.SIGN')}</b></td>
     </tr>
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>DEFENSE</b></font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_defense")?upper_case}</b></font></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_DirtyTrick_DEF.INTVAL')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Drag_DEF.INTVAL')}</b></td>
      <td align="center" class="border10"><b>${pcstring('VAR.CMB_Reposition_DEF.INTVAL')}</b></td>
@@ -701,17 +701,17 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 </#if>
     <tr>
      <td align="center" width="28%"></td>
-     <td align="center" width="12%" valign="bottom" class="font6">DIRTY TRICK</td>
-     <td align="center" width="12%" valign="bottom" class="font6">DRAG</td>
-     <td align="center" width="12%" valign="bottom" class="font6">REPOSITION</td>
-     <td align="center" width="12%" valign="bottom" class="font6">STEAL</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_dirtyTrick")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_drag")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_reposition")?upper_case}</td>
+     <td align="center" width="12%" valign="bottom" class="font6">${i18n("in_sheet_steal")?upper_case}</td>
     </tr>
    </table>
    <br />
 
 <#else>
     <tr>
-     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>GRAPPLE</b></font><font style="font-size:5pt" color="white"><br />ATTACK BONUS</font></td>
+     <td align="center" bgcolor="black"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_grapple")?upper_case}</b></font><font style="font-size:5pt" color="white"><br />${i18n("in_sheet_attackBonus")?upper_case}</font></td>
      <td align="center" class="border10"><b>${pcstring('ATTACK.GRAPPLE.TOTAL')}</b></td>
      <td align="center" class="font7"><b>=</b></td>
      <td align="center" class="border10"><b>${pcstring('ATTACK.GRAPPLE')}<br /></b></td>
@@ -731,7 +731,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 </#if>
    <table width="100%" summary="Saving Throws">
      <tr>
-	   <td align="left" valign="top" class="border8"><div class="font6">CONDITIONAL MODIFIERS:</div>
+	   <td align="left" valign="top" class="border8"><div class="font6">${i18n("in_sheet_conditionalModifiers")?upper_case}:</div>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","ASPECT=CombatBonus")-1') ; ability , ability_has_next>
 	 ${pcstring('ABILITYALL.ANY.${ability}.ASPECT=CombatBonus.ASPECT.CombatBonus')} <br />
 </@loop>
@@ -746,10 +746,10 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 	<table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Natural Attack Block">
 		<tr>
 			<td align="center" height="25" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${pcstring('ABILITYALL.Natural Attack.VISIBLE.${ability}.TYPE=NaturalAttack')}</b></font></td>
-			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>TOTAL ATTACK BONUS</b></font></td>
-			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>DAMAGE</b></font></td>
-			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>CRIT / MULT</b></font></td>
-			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>REACH</b></font></td>
+			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_totalAttackBonus")?upper_case}</b></font></td>
+			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_damage")?upper_case}</b></font></td>
+			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_critMult")?upper_case}</b></font></td>
+			<td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_reach")?upper_case}</b></font></td>
 		</tr>
 		<tr>
 			<td align="center" bgcolor="white" class="border"><font style="font-size:8pt" color="black"><b>${pcstring('ABILITYALL.Natural Attack.VISIBLE.${ability}.TYPE=NaturalAttack.ASPECT.NaturalAttackToHit.SIGN')}<br /></b></font></td>
@@ -760,7 +760,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 		</tr>
 		<#if (pcstring("ABILITYALL.Natural Attack.VISIBLE.${ability}.TYPE=NaturalAttack.DESC:YES") = "Y")>
 		<tr>
-			<td align="center" bgcolor="black" colspan="1" width="15%" class="ablable" height="20">Special Properties</td>
+			<td align="center" bgcolor="black" colspan="1" width="15%" class="ablable" height="20">${i18n("in_sheet_specialProperties")}</td>
 			<td colspan="4" class="border10">${pcstring('ABILITYALL.Natural Attack.${ability}.TYPE=NaturalAttack.ASPECT.NaturalAttackNotes')}${pcstring('ABILITYALL.Natural Attack.${ability}.TYPE=NaturalAttack.DESC')}</td>
 		</tr>
 		</#if>
@@ -772,11 +772,11 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <!-- START Unarmed Attack Table -->
    <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Unarmed Attack">
     <tr>
-     <td align="center" height="25" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>UNARMED</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>TOTAL ATTACK BONUS</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>DAMAGE</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>CRITICAL</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>REACH</b></font></td>
+     <td align="center" height="25" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_unarmed")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_totalAttackBonus")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_damage")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_critical")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_reach")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td align="center" bgcolor="white" class="border"><font style="font-size:8pt" color="black"><b>${pcstring('WEAPONH.TOTALHIT')}<br /></b></font></td>
@@ -786,7 +786,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
     </tr>
 	<@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=UnarmedDisplay","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; ability , ability_has_next>
 	<tr>
-		<td colspan="5" bgcolor="white" class="border"><font style="font-size:8pt" color="black"><b>SPROP: ${pcstring('ABILITYALL.Special Ability.VISIBLE.${ability}.TYPE=UnarmedDisplay.ASPECT.UnarmedNotes')}<br /></b></font></td>
+		<td colspan="5" bgcolor="white" class="border"><font style="font-size:8pt" color="black"><b>${i18n("in_sheet_spropLabel")} ${pcstring('ABILITYALL.Special Ability.VISIBLE.${ability}.TYPE=UnarmedDisplay.ASPECT.UnarmedNotes')}<br /></b></font></td>
 	</tr>
 	</@loop>
    </table>
@@ -808,8 +808,8 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <!-- START Flurry Attack Table -->
    <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Flurry Attack">
     <tr>
-     <td align="center" height="25" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>Flurry of Blows</b></font></td>
-     <td align="center" bgcolor="black" width="60%" height="15"><font style="font-size:6pt" color="white"><b>TOTAL ATTACK BONUS</b></font></td>
+     <td align="center" height="25" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${i18n("in_sheet_flurryOfBlows")}</b></font></td>
+     <td align="center" bgcolor="black" width="60%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_totalAttackBonus")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td align="center" bgcolor="white" class="border"><font style="font-size:8pt" color="black"><b>
@@ -852,15 +852,15 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
    <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Weapon Table">
     <tr>
      <td align="center" height="15" bgcolor="black" width="8%"></td>
-     <td align="center" height="15" bgcolor="black" width="17%"><font style="font-size:6pt" color="white"><b>1H-P</b></font></td>
-     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>1H-O</b></font></td>
-     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>2H</b></font></td>
-     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>2W-P-(OH)</b></font></td>
-     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>2W-P-(OL)</b></font></td>
-     <td align="center" bgcolor="black" width="10%" height="15"><font style="font-size:6pt" color="white"><b>2W-OH</b></font></td>
+     <td align="center" height="15" bgcolor="black" width="17%"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_1hP")}</b></font></td>
+     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_1hO")}</b></font></td>
+     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_2h")}</b></font></td>
+     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_2wPOh")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="17%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_2wPOl")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="10%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_2wOh")?upper_case}</b></font></td>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Bonus</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_bonus")}</b></font></td>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.BASEHIT')}<br /></b></td>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.OHHIT')}<br /></b></td>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.THHIT')}<br /></b></td>
@@ -869,7 +869,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.TWOHIT')}<br /></b></td>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Dam</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_dam")}</b></font></td>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.BASICDAMAGE')}<br /></b></td>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.OHDAMAGE')}<br /></b></td>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.THDAMAGE')}<br /></b></td>
@@ -879,7 +879,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
     </tr>
     <#if (pcstring('WEAPON.${weap}.SPROP') != "")>
     <tr>
-     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;Special Properties</b></font></td>
+     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_specialProperties")}</b></font></td>
      <td align="left" bgcolor="white" class="border8" colspan="5"><b>&nbsp;${pcstring('WEAPON.${weap}.SPROP')}<br /></b></td>
     </tr>
     </#if>
@@ -895,29 +895,29 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <#if (weaponCategory?contains('both'))>
 <#if (weaponCategory?contains('ranged'))>
     <tr>
-     <td align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;&nbsp;Range</b></font></td>
+     <td align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;&nbsp;${i18n("in_sheet_range")}</b></font></td>
 <@loop from=0 to=4 ; range , range_has_next>
      <td width="18%" align="center" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range}')}'<br /></b></font></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Bonus</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_bonus")}</b></font></td>
 <@loop from=0 to=4 ; range1 , range1_has_next>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range1}.TOTALHIT')}<br /></b></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Dam</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_dam")}</b></font></td>
 <@loop from=0 to=4 ; range2 , range2_has_next>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range2}.DAMAGE')}</b></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;Ammunition Used<br /></b></font></td>
+     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_ammunitionUsed")}<br /></b></font></td>
      <td align="center" valign="bottom" bgcolor="white" class="border" colspan="5"><font style="font-size: x-small">&#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</font></td>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;Special Properties<br /></b></font></td>
+     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_specialProperties")}<br /></b></font></td>
      <td align="left" bgcolor="white" class="border8" colspan="5"><b>&nbsp;${pcstring('WEAPON.${weap}.SPROP')}<br /></b></td>
     </tr>
    </table>
@@ -925,11 +925,11 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <#else>
     <tr>
      <td align="center" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${pcstring('WEAPON.${weap}.NAME')}<br /></b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>HAND</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>TYPE</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>SIZE</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>CRITICAL</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>REACH</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_hand")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_type")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_size")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_critical")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_reach")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td align="center" bgcolor="white" class="border8 font8"><b>${pcstring('WEAPON.${weap}.HAND')}<br /></b></td>
@@ -945,10 +945,10 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <#if (weaponCategory?contains('ranged'))>
     <tr>
      <td align="center" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${pcstring('WEAPON.${weap}.NAME')}<br /></b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>HAND</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>TYPE</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>SIZE</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>CRITICAL</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_hand")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_type")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_size")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_critical")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td align="center" bgcolor="white" class="border8"><b>${pcstring('WEAPON.${weap}.HAND')}<br /></b></td>
@@ -960,29 +960,29 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
    <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Weapon Table">
 <#if (pcstring("WEAPON.${weap}.CONTENTS") = "0")>
     <tr>
-     <td align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;&nbsp;Range</b></font></td>
+     <td align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;&nbsp;${i18n("in_sheet_range")}</b></font></td>
 <@loop from=0 to=4 ; range , range_has_next>
      <td width="18%" align="center" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range}')}'<br /></b></font></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Bonus</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_bonus")}</b></font></td>
 <@loop from=0 to=4 ; range1 , range1_has_next>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range1}.TOTALHIT')}<br /></b></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Dam</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_dam")}</b></font></td>
 <@loop from=0 to=4 ; range2 , range2_has_next>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range2}.DAMAGE')}</b></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;Ammunition Used<br /></b></font></td>
+     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_ammunitionUsed")}<br /></b></font></td>
      <td align="center" valign="bottom" bgcolor="white" class="border" colspan="5"><font style="font-size: x-small">&#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</font></td>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;Special Properties<br /></b></font></td>
+     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_specialProperties")}<br /></b></font></td>
      <td align="left" bgcolor="white" class="border8" colspan="5"><b>&nbsp;${pcstring('WEAPON.${weap}.SPROP')}<br /></b></td>
     </tr>
    </table>
@@ -990,37 +990,37 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <#else>
 <@loop from=0 to=pcvar('WEAPON.${weap}.CONTENTS-1') ; ammo , ammo_has_next>
     <tr>
-     <td colspan="6" align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;AMMUNITION:  ${pcstring('WEAPON.${weap}.CONTENTS.${ammo}')}
+     <td colspan="6" align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_ammunitionLabel")?upper_case}  ${pcstring('WEAPON.${weap}.CONTENTS.${ammo}')}
 <#if (pcstring("WEAPON.${weap}.CONTENTS.${ammo}.SPROP") = " ")>
 (${pcstring('WEAPON.${weap}.CONTENTS.${ammo}.SPROP')})
 </#if>
      </b></font></td>
     </tr>
     <tr>
-     <td align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;Range</b></font></td>
+     <td align="left" height="15" bgcolor="black" width="8%"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_range")}</b></font></td>
 <@loop from=0 to=4 ; range , range_has_next>
      <td width="18%" align="center" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range}')}'<br /></b></font></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Bonus</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_bonus")}</b></font></td>
 <@loop from=0 to=4 ; range1 , range1_has_next>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range1}.CONTENTS.${ammo}.TOTALHIT')}<br /></b></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;Dam</b></font></td>
+     <td align="left" bgcolor="black" class="border"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_dam")}</b></font></td>
 <@loop from=0 to=4 ; range2 , range2_has_next>
      <td align="center" bgcolor="white" class="border7"><b>${pcstring('WEAPON.${weap}.RANGELIST.${range2}.CONTENTS.${ammo}.DAMAGE')}</b></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;Ammunition Used<br /></b></font></td>
+     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_ammunitionUsed")}<br /></b></font></td>
      <td align="center" valign="bottom" bgcolor="white" class="border" colspan="5"><font style="font-size: x-small">&#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</font></td>
 </@loop>
     </tr>
     <tr>
-     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;Special Properties<br /></b></font></td>
+     <td align="left" bgcolor="black" class="border" colspan="2"><font style="font-size:8pt" color="white"><b>&nbsp;${i18n("in_sheet_specialProperties")}<br /></b></font></td>
      <td align="left" bgcolor="white" class="border8" colspan="5"><b>&nbsp;${pcstring('WEAPON.${weap}.SPROP')}<br /></b></td>
     </tr>
    </table>
@@ -1030,9 +1030,9 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 	<#if (pcboolean("WEAPON.${weap}.ISTYPE.Double") || weaponCategory?contains('non-standard-melee') || weaponCategory?contains('natural'))>
     <tr>
      <td align="center" height="15" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${pcstring('WEAPON.${weap}.NAME')}<br /></b></font></td>
-     <td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>TOTAL ATTACK BONUS</b></font></td>
-     <td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>DAMAGE</b></font></td>
-     <td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>CRITICAL</b></font></td>
+     <td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_totalAttackBonus")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_damage")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_critical")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td align="center" bgcolor="white" class="border8"><b>${pcstring('WEAPON.${weap}.TOTALHIT')}<br /></b></td>
@@ -1042,11 +1042,11 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
    </table>
    <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Weapon Table">
     <tr>
-     <td align="center" height="15" bgcolor="black" width="15%"><font style="font-size:6pt" color="white"><b>HAND</b></font></td>
-     <td align="center" height="15" bgcolor="black" width="15%"><font style="font-size:6pt" color="white"><b>REACH</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>TYPE</b></font></td>
-     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>SIZE</b></font></td>
-     <td align="center" bgcolor="black" width="40%" height="15"><font style="font-size:6pt" color="white"><b>SPECIAL PROPERTIES</b></font></td>
+     <td align="center" height="15" bgcolor="black" width="15%"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_hand")?upper_case}</b></font></td>
+     <td align="center" height="15" bgcolor="black" width="15%"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_reach")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_type")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="15%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_size")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="40%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_specialProperties")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td align="center" bgcolor="white" class="border8"><b>${pcstring('WEAPON.${weap}.HAND')}<br /></b></td>
@@ -1060,11 +1060,11 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 	<#else>
     <tr>
      <td align="center" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${pcstring('WEAPON.${weap}.NAME')}<br /></b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>HAND</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>TYPE</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>SIZE</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>CRITICAL</b></font></td>
-     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>RANGE</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_hand")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_type")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_size")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_critical")?upper_case}</b></font></td>
+     <td align="center" bgcolor="black" width="12%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_range")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td align="center" bgcolor="white" class="border8"><b>${pcstring('WEAPON.${weap}.HAND')}<br /></b></td>
@@ -1102,7 +1102,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 
    <table cellpadding="0" width="100%" cellspacing="0" border="0" summary="Weapon Abbreviations">
     <tr>
-     <td><font style="font-size:5pt"><b>1H-P:</b> One handed, primary hand.&nbsp;<b>1H-O:</b> One handed, off hand.&nbsp;<b>2H:</b> Two handed.&nbsp;<b>2W-P-(OH):</b> 2 weapons, primary hand (off hand weapon is heavy).&nbsp;<b>2W-P-(OL):</b> 2 weapons, primary hand (off hand weapon is light).&nbsp;<b>2W-OH:</b>2 weapons, off hand.</font></td>
+     <td><font style="font-size:5pt"><b>${i18n("in_sheet_1hP")}:</b> ${i18n("in_sheet_oneHandedPrimaryHand")}&nbsp;<b>${i18n("in_sheet_1hO")}:</b> ${i18n("in_sheet_oneHandedOffHand")}&nbsp;<b>${i18n("in_sheet_2h")}:</b> ${i18n("in_sheet_twoHanded")}&nbsp;<b>${i18n("in_sheet_2wPOh")?upper_case}:</b> ${i18n("in_sheet_2WeaponsPrimaryHandOffHandWeaponIsHeavy")}&nbsp;<b>${i18n("in_sheet_2wPOl")?upper_case}:</b> ${i18n("in_sheet_2WeaponsPrimaryHandOffHandWeaponIsLight")}&nbsp;<b>${i18n("in_sheet_2wOh")?upper_case}:</b>${i18n("in_sheet_2WeaponsOffHand")}</font></td>
     </tr>
    </table>
 <!-- STOP Weapon Table -->
@@ -1110,11 +1110,11 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <@loop from=0 to=2 ; count , count_has_next>
 <#if (pcstring("ARMOR.${count}.NAME") != "") >
 <table cellpadding="0" cellspacing="0" width="100%" border="0" summary="Armor Table">
-<tr><td align="center" height="20" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${pcstring("ARMOR.EQUIPPED.${count}.NAME")}<br /></b></font></td><td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>TYPE</b></font></td><td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>ARMOR BONUS</b></font></td><td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>MAX DEX BONUS</b></font></td></tr>
+<tr><td align="center" height="20" bgcolor="black" rowspan="2" width="40%"><font style="font-size:10pt" color="white"><b>${pcstring("ARMOR.EQUIPPED.${count}.NAME")}<br /></b></font></td><td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_type")?upper_case}</b></font></td><td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_armorBonus")?upper_case}</b></font></td><td align="center" bgcolor="black" width="20%" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_maxDexBonus")?upper_case}</b></font></td></tr>
 <tr><td align="center" bgcolor="white" class="border8"><b>${pcstring("ARMOR.EQUIPPED.${count}.TYPE")}<br /></b></td><td align="center" bgcolor="white" class="border8"><b>${pcstring("ARMOR.EQUIPPED.${count}.TOTALAC")}<br /></b></td><td align="center" bgcolor="white" class="border8"><b>${pcstring("ARMOR.EQUIPPED.${count}.MAXDEX")}<br /></b></td></tr>
 </table>
 <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Armor Table">
-<tr><td align="center" height="15" bgcolor="black" width="60"><font style="font-size:5pt" color="white"><b>CHECK PENALTY</b></font></td><td align="center" bgcolor="black" width="60" height="15"><font style="font-size:5pt" color="white"><b>SPELL FAILURE</b></font></td><td align="center" bgcolor="black" width="237" height="15"><font style="font-size:6pt" color="white"><b>SPECIAL PROPERTIES</b></font></td></tr>
+<tr><td align="center" height="15" bgcolor="black" width="60"><font style="font-size:5pt" color="white"><b>${i18n("in_sheet_checkPenalty")?upper_case}</b></font></td><td align="center" bgcolor="black" width="60" height="15"><font style="font-size:5pt" color="white"><b>${i18n("in_sheet_spellFailure")?upper_case}</b></font></td><td align="center" bgcolor="black" width="237" height="15"><font style="font-size:6pt" color="white"><b>${i18n("in_sheet_specialProperties")?upper_case}</b></font></td></tr>
 <tr><td align="center" bgcolor="white" class="border8"><b>${pcstring("ARMOR.EQUIPPED.${count}.ACCHECK")}<br /></b></td><td align="center" bgcolor="white" class="border8"><b>${pcstring("ARMOR.EQUIPPED.${count}.SPELLFAIL")}<br /></b></td><td align="center" bgcolor="white" class="border8"><b>${pcstring("ARMOR.EQUIPPED.${count}.SPROP")}<br /></b></td></tr>
 </table>
 </#if>
@@ -1127,14 +1127,14 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <!-- START PSI Power Points Table -->
    <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Power Point Table">
     <tr>
-     <td colspan="6" bgcolor="black" align="center"><font style="font-size: small" color="white"><b>PSI POWER POINTS</b></font></td>
+     <td colspan="6" bgcolor="black" align="center"><font style="font-size: small" color="white"><b>${i18n("in_sheet_psiPowerPoints")?upper_case}</b></font></td>
     </tr>
     <tr>
-     <td bgcolor="#000000"><font color="#FFFFFF" style="font-size:9pt"><b>&nbsp;Base PP</b></font></td>
+     <td bgcolor="#000000"><font color="#FFFFFF" style="font-size:9pt"><b>&nbsp;${i18n("in_sheet_basePp")}</b></font></td>
      <td bgcolor="#FFFFFF" class="border" align="center"><font style="font-size:9pt">${pcstring('VAR.BASEPOWERPOINTS.INTVAL')}</font></td>
-     <td bgcolor="#000000"><font color="#FFFFFF" style="font-size:9pt"><b>&nbsp;Bonus PP</b></font></td>
+     <td bgcolor="#000000"><font color="#FFFFFF" style="font-size:9pt"><b>&nbsp;${i18n("in_sheet_bonusPp")}</b></font></td>
      <td bgcolor="#FFFFFF" class="border" align="center"><font style="font-size:9pt">${pcstring('VAR.BONUSPOWERPOINTS.INTVAL')}</font></td>
-     <td bgcolor="#000000"><font color="#FFFFFF" style="font-size:9pt"><b>&nbsp;Total PP</b></font></td>
+     <td bgcolor="#000000"><font color="#FFFFFF" style="font-size:9pt"><b>&nbsp;${i18n("in_sheet_totalPp")}</b></font></td>
      <td bgcolor="#FFFFFF" class="border" align="center"><font style="font-size:9pt">${pcstring('VAR.TOTALPOWERPOINTS.INTVAL')}</font></td>
     </tr>
     <tr>
@@ -1147,19 +1147,19 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
    <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Skills Table">
     <tr>
      <td colspan="5" height="30" bgcolor="black"></td>
-     <td colspan="4" height="30" bgcolor="black" align="center"><font style="font-size: small" color="white"><b>SKILLS</b></font></td>
+     <td colspan="4" height="30" bgcolor="black" align="center"><font style="font-size: small" color="white"><b>${i18n("in_sheet_skills")?upper_case}</b></font></td>
      <td colspan="4" height="30" bgcolor="black" align="center"></td>
      <td height="30" bgcolor="black" align="right" ></td>
-     <td height="30" bgcolor="black" align="center"><font style="font-size: x-small" color="white" >MAX<br />RANKS</font></td>
+     <td height="30" bgcolor="black" align="center"><font style="font-size: x-small" color="white" >${i18n("in_sheet_max")?upper_case}<br />${i18n("in_sheet_ranks")?upper_case}</font></td>
      <td colspan="2" height="30"  bgcolor="white" align="center" class="skl"><b>${pcstring('MAXSKILLLEVEL')}/${pcstring('MAXCCSKILLLEVEL')}</b></td>
     </tr>
     <tr>
-     <td colspan="9" align="center" width="40%" class="border6">SKILL NAME</td>
-     <td colspan="1" align="center" width="5%" class="border6">ABILITY</td>
-     <td colspan="1" align="center" width="13%" class="border6">SKILL<br />MODIFIER</td>
-     <td colspan="2" align="center" width="13%" class="border6">ABILITY<br />MODIFIER</td>
-     <td colspan="2" align="center" width="13%" class="border6">RANKS</td>
-     <td colspan="2" align="center" width="13%" class="border6">MISC<br />MODIFIER</td>
+     <td colspan="9" align="center" width="40%" class="border6">${i18n("in_sheet_skillName")?upper_case}</td>
+     <td colspan="1" align="center" width="5%" class="border6">${i18n("in_sheet_ability")?upper_case}</td>
+     <td colspan="1" align="center" width="13%" class="border6">${i18n("in_sheet_skill")?upper_case}<br />${i18n("in_sheet_modifier")?upper_case}</td>
+     <td colspan="2" align="center" width="13%" class="border6">${i18n("in_sheet_ability")?upper_case}<br />${i18n("in_sheet_modifier")?upper_case}</td>
+     <td colspan="2" align="center" width="13%" class="border6">${i18n("in_sheet_ranks")?upper_case}</td>
+     <td colspan="2" align="center" width="13%" class="border6">${i18n("in_sheet_misc")?upper_case}<br />${i18n("in_sheet_modifier")?upper_case}</td>
     </tr>
 <@loop from=0 to=pcvar('count("SKILLSIT", "VIEW=VISIBLE_EXPORT")')-1; skill , skill_has_next >
 <#if (skill % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1183,11 +1183,11 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
     </tr>
 </@loop>
    </table>
-<div class="font6">&#9670; = Useable Untrained; * = armor check penalty applies</div>
+<div class="font6">${i18n("in_sheet_skillLegend")}</div>
 <div class="font7"></div>
    <table width="100%" summary="Saving Throws">
      <tr>
-	   <td align="left" valign="top" class="border8"><div class="font6">CONDITIONAL MODIFIERS:</div>
+	   <td align="left" valign="top" class="border8"><div class="font6">${i18n("in_sheet_conditionalModifiers")?upper_case}:</div>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","ASPECT=SkillBonus")-1') ; ability , ability_has_next>
 	 ${pcstring('ABILITYALL.ANY.${ability}.ASPECT=SkillBonus.ASPECT.SkillBonus')}<br />
 </@loop>
@@ -1199,12 +1199,12 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
   </td>
  </tr>
 </table>
-<hr /><center><font style="font-size: x-small">PCGen Character Template by ROG, mods/maint by Arcady, Barak &amp; Dimrill.  For suggestions please post to pcgen@yahoogroups.com with "OS Suggestion" in the subject line.</font></center>
+<hr /><center><font style="font-size: x-small">${i18n("in_sheet_templateCredits")}</font></center>
 <!-- ================================================================ -->
 <br style="page-break-after: always" />
-<!--<center><font size="-1">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')} <br />Player: ${pcstring('PLAYERNAME')}; Character Name: ${pcstring('NAME')}</font></center><br />
+<!--<center><font size="-1">Created using <a href="http://pcgen.org/">PCGen</a> ${i18n("in_sheet_versionOnDate", pcstring('EXPORT.VERSION'), pcstring('EXPORT.DATE'))} <br />${i18n("in_sheet_playerAndCharacter", pcstring('PLAYERNAME'), pcstring('NAME'))}</font></center><br />
 -->
-<div class="pcgen">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')} <br />Player: ${pcstring('PLAYERNAME')}; Character Name: ${pcstring('NAME')}</div>
+<div class="pcgen">${i18n("in_sheet_createdUsing")} <a href="http://pcgen.org/">PCGen</a> ${i18n("in_sheet_versionOnDate", pcstring('EXPORT.VERSION'), pcstring('EXPORT.DATE'))} <br />${i18n("in_sheet_playerAndCharacter", pcstring('PLAYERNAME'), pcstring('NAME'))}</div>
 
 <table width="100%" border="0" summary="Page 2 Master Table"> <!-- Master Page Table -->
  <tr>
@@ -1238,17 +1238,17 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 </#macro>
    <table width="100%" cellspacing="0" cellpadding="0" border="0" summary="Master Equipment Table"> <!-- Master Equipment Table -->
     <tr>
-     <td bgcolor="black" align="center" colspan="10"><font color="white" style="font-size: small"><b>EQUIPMENT</b></font></td>
+     <td bgcolor="black" align="center" colspan="10"><font color="white" style="font-size: small"><b>${i18n("in_sheet_equipment")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td width="50%" valign="top">
       <table width="100%" cellspacing="0" cellpadding="0" border="0" summary="Equipment Table Left Column"> <!-- Equipment Table left pane -->
        <tr>
-        <td valign="top" width="70%" class="border8"><b>ITEM</b></td>
-        <td valign="top" width="12%" class="border8" align="center"><b>LOCATION</b></td>
-        <td valign="top" width="6%" class="border8" align="center"><b>QTY</b></td>
-        <td valign="top" width="6%" class="border8" align="center"><b>WT.</b></td>
-        <td valign="top" width="6%" class="border8" align="center"><b>COST</b></td>
+        <td valign="top" width="70%" class="border8"><b>${i18n("in_sheet_item")?upper_case}</b></td>
+        <td valign="top" width="12%" class="border8" align="center"><b>${i18n("in_sheet_location")?upper_case}</b></td>
+        <td valign="top" width="6%" class="border8" align="center"><b>${i18n("in_sheet_qty")?upper_case}</b></td>
+        <td valign="top" width="6%" class="border8" align="center"><b>${i18n("in_sheet_wt")?upper_case}</b></td>
+        <td valign="top" width="6%" class="border8" align="center"><b>${i18n("in_sheet_cost")?upper_case}</b></td>
        </tr>
 <@loop from=0 to=(pcvar("COUNT[EQUIPMENT.Not.Coin.NOT.Gem]")-1)/2 ; equip1, equip1_has_next >
 	<@equipmentRow equip1=equip1 />
@@ -1258,17 +1258,17 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
      <td width="50%" valign="top">
       <table width="100%" cellspacing="0" cellpadding="0" border="0" summary="Equipment Table Right Column"> <!-- Equipment Table right pane -->
        <tr>
-        <td valign="top" width="70%" class="border8"><b>ITEM</b></td>
-        <td valign="top" width="12%" class="border8" align="center"><b>LOCATION</b></td>
-        <td valign="top" width="6%" class="border8" align="center"><b>QTY</b></td>
-        <td valign="top" width="6%" class="border8" align="center"><b>WT.</b></td>
-        <td valign="top" width="6%" class="border8" align="center"><b>COST</b></td>
+        <td valign="top" width="70%" class="border8"><b>${i18n("in_sheet_item")?upper_case}</b></td>
+        <td valign="top" width="12%" class="border8" align="center"><b>${i18n("in_sheet_location")?upper_case}</b></td>
+        <td valign="top" width="6%" class="border8" align="center"><b>${i18n("in_sheet_qty")?upper_case}</b></td>
+        <td valign="top" width="6%" class="border8" align="center"><b>${i18n("in_sheet_wt")?upper_case}</b></td>
+        <td valign="top" width="6%" class="border8" align="center"><b>${i18n("in_sheet_cost")?upper_case}</b></td>
        </tr>
 <@loop from=((pcvar("COUNT[EQUIPMENT.Not.Coin.NOT.Gem]")-1)/2)+1 to=pcvar("COUNT[EQUIPMENT.Not.Coin.NOT.Gem]")-1 ; equip2, equip2_has_next >
 	<@equipmentRow equip1=equip2 />
 </@loop>
        <tr>
-        <td valign="top" width="41%" class="border" align="right" colspan="1"><font style="font-size: x-small">TOTAL WEIGHT CARRIED/VALUE&nbsp;&nbsp;</font></td>
+        <td valign="top" width="41%" class="border" align="right" colspan="1"><font style="font-size: x-small">${i18n("in_sheet_totalWeightCarriedValue")?upper_case}&nbsp;&nbsp;</font></td>
         <td valign="top" width="3%" class="border" align="center" colspan="2" nowrap><font style="font-size: x-small">${pcstring('TOTAL.WEIGHT')}</font></td>
         <td valign="top" width="3%" class="border" align="center" colspan="2" nowrap><font style="font-size: x-small">${pcstring('TOTAL.VALUE')}</font></td>
        </tr>
@@ -1284,14 +1284,14 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <!-- START Weight Table -->
     <table width="100%" cellspacing="0" cellpadding="3" summary="Weight Allowance Table">
      <tr>
-      <td bgcolor="black" align="center" colspan="6"><font color="white" style="font-size: small"><b>WEIGHT ALLOWANCE</b></font></td>
+      <td bgcolor="black" align="center" colspan="6"><font color="white" style="font-size: small"><b>${i18n("in_sheet_weightAllowance")?upper_case}</b></font></td>
      </tr>
      <tr>
-      <td valign="top" class="border8" align="right"><b>Light</b></td>
+      <td valign="top" class="border8" align="right"><b>${i18n("in_sheet_light")}</b></td>
       <td valign="top" class="border8">${pcstring('WEIGHT.LIGHT')}</td>
-      <td valign="top" class="border8" align="right"><b>Medium</b></td>
+      <td valign="top" class="border8" align="right"><b>${i18n("in_sheet_medium")}</b></td>
       <td valign="top" class="border8">${pcstring('WEIGHT.MEDIUM')}</td>
-      <td valign="top" class="border8" align="right"><b>Heavy</b></td>
+      <td valign="top" class="border8" align="right"><b>${i18n("in_sheet_heavy")}</b></td>
       <td valign="top" class="border8">${pcstring('WEIGHT.HEAVY')}</td>
      </tr>
     </table>
@@ -1301,13 +1301,13 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <br/>
     <table width="100%" cellspacing="0" cellpadding="3" summary="Illumination">
      <tr>
-      <td bgcolor="black" align="center" colspan="4"><font color="white" style="font-size: small"><b>ILLUMINATION</b></font></td>
+      <td bgcolor="black" align="center" colspan="4"><font color="white" style="font-size: small"><b>${i18n("in_sheet_illumination")?upper_case}</b></font></td>
      </tr>
      <tr>
-      	<td width="45%" class="border8"><b>Light Source</b></td>
-      	<td width="15%" class="border8"><b>Bright</b></td>
-       	<td width="15%" class="border8"><b>Shadowy</b></td>
-     	<td width="15%" class="border8"><b>Duration</b></td>
+      	<td width="45%" class="border8"><b>${i18n("in_sheet_lightSource")}</b></td>
+      	<td width="15%" class="border8"><b>${i18n("in_sheet_bright")}</b></td>
+       	<td width="15%" class="border8"><b>${i18n("in_sheet_shadowy")}</b></td>
+     	<td width="15%" class="border8"><b>${i18n("in_sheet_duration")}</b></td>
      </tr>
 <@loop from=0 to=pcvar('COUNT[EQTYPE.LightSource.ADD.Light Source]-1') ; light , light_has_next>
 <#if (light % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1324,7 +1324,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <br />
     <table width="100%" cellspacing="0" cellpadding="3" summary="Money">
      <tr>
-      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>MONEY</b></font></td>
+      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_money")?upper_case}</b></font></td>
      </tr>
      <tr>
       <td valign="top" width="70%" class="border"><font style="font-size: x-small">
@@ -1334,7 +1334,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <@loop from=0 to=pcvar('COUNT[EQTYPE.Gem]')-1 ; count , count_has_next>
   ${pcstring('EQTYPE.Gem.%.QTY')}x${pcstring('EQTYPE.Gem.${count}.NAME')} (${pcstring('EQTYPE.Gem.${count}.COST')})<br/>
 </@loop>
-<span class="notes">${pcstring('MISC.FUNDS')} Unspent Funds = ${pcstring('GOLD.TRUNC')}</span></font></td>
+<span class="notes">${pcstring('MISC.FUNDS')} ${i18n("in_sheet_unspentFunds", pcstring('GOLD.TRUNC'))}</span></font></td>
      </tr>
     </table>
 <!-- STOP Money Table -->
@@ -1343,34 +1343,34 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <#if (pcvar("FOLLOWERTYPE.Familiar") > 0) >
     <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Familiar Table">
      <tr>
-      <td bgcolor="black" align="left" class="border" colspan="12"><font color="white" style="font-size: medium"><b>Familiar: ${pcstring('FOLLOWERTYPE.FAMILIAR.0.NAME')} (${pcstring('FOLLOWERTYPE.FAMILIAR.0.RACE')})</b></font></td>
+      <td bgcolor="black" align="left" class="border" colspan="12"><font color="white" style="font-size: medium"><b>${i18n("in_sheet_familiarLabel")} ${pcstring('FOLLOWERTYPE.FAMILIAR.0.NAME')} (${pcstring('FOLLOWERTYPE.FAMILIAR.0.RACE')})</b></font></td>
      </tr>
      <tr>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>FORT:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_fort")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.CHECK.FORTITUDE.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>REF:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_ref")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.CHECK.REFLEX.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>WILL:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_will")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.CHECK.2.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>HP:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_hp")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.HP')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border" ><font color="white" style="font-size: x-small"><b>AC:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border" ><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_ac")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border" >${pcstring('FOLLOWERTYPE.FAMILIAR.0.AC.Total')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>INIT:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_init")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.INITIATIVEMOD')}</td>
      </tr>
 <@loop from=0 to=pcvar('COUNT[FOLLOWERTYPE.FAMILIAR.0.EQTYPE.WEAPON]-1') ; wep , wep_has_next><#-- TODO: Loop was of early exit type 1 -->
      <tr>
       <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${pcstring('FOLLOWERTYPE.FAMILIAR.0.WEAPON.${wep}.NAME')}</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.WEAPON.${wep}.TOTALHIT')}</td>
-      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>DAMAGE:</b></font></td>
+      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_damage")?upper_case}:</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.WEAPON.${wep}.DAMAGE')}</td>
-      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>CRITICAL:</b></font></td>
+      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_critical")?upper_case}:</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.FAMILIAR.0.WEAPON.${wep}.CRIT')}/x${pcstring('FOLLOWERTYPE.FAMILIAR.0.WEAPON.${wep}.MULT')}</td>
       </tr>
 </@loop>
      <tr>
-      <td bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>Special:</b></font></td>
+      <td bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_special")}:</b></font></td>
       <td align="left" class="border" colspan="12"><font style="font-size: small">&nbsp;&nbsp;${pcstring('FOLLOWERTYPE.FAMILIAR.0.SPECIALLIST')}</font></td>
      </tr>
      <tr>
@@ -1381,34 +1381,34 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <#if (pcvar("FOLLOWERTYPE.SPECIAL MOUNT") > 0) >
     <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Special Mount Table">
      <tr>
-      <td bgcolor="black" align="left" class="border" colspan="12"><font color="white" style="font-size: medium"><b>Special Mount: ${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.NAME')} (${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.RACE')})</b></font></td>
+      <td bgcolor="black" align="left" class="border" colspan="12"><font color="white" style="font-size: medium"><b>${i18n("in_sheet_specialMountLabel")} ${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.NAME')} (${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.RACE')})</b></font></td>
      </tr>
      <tr>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>FORT:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_fort")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.CHECK.FORTITUDE.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>REF:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_ref")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.CHECK.REFLEX.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>WILL:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_will")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.CHECK.2.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>HP:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_hp")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.HP')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border" ><font color="white" style="font-size: x-small"><b>AC:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border" ><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_ac")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border" >${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.AC.Total')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>INIT:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_init")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.INITIATIVEMOD')}</td>
      </tr>
 <@loop from=0 to=pcvar('COUNT[FOLLOWERTYPE.SPECIAL MOUNT.0.EQTYPE.WEAPON]-1') ; wep , wep_has_next><#-- TODO: Loop was of early exit type 1 -->
      <tr>
       <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.WEAPON.${wep}.NAME')}</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.WEAPON.${wep}.TOTALHIT')}</td>
-      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>DAMAGE:</b></font></td>
+      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_damage")?upper_case}:</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.WEAPON.${wep}.DAMAGE')}</td>
-      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>CRITICAL:</b></font></td>
+      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_critical")?upper_case}:</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.WEAPON.${wep}.CRIT')}/x${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.WEAPON.${wep}.MULT')}</td>
       </tr>
 </@loop>
      <tr>
-      <td bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>Special:</b></font></td>
+      <td bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_special")}:</b></font></td>
       <td align="left" class="border" colspan="12"><font style="font-size: small">&nbsp;&nbsp;${pcstring('FOLLOWERTYPE.SPECIAL MOUNT.0.SPECIALLIST')}</font></td>
      </tr>
      <tr>
@@ -1420,34 +1420,34 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <@loop from=0 to=pcvar('COUNT[FOLLOWERTYPE.ANIMAL COMPANION]-1') ; anm , anm_has_next>
     <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="Animal Companion Table">
      <tr>
-      <td bgcolor="black" align="left" class="border" colspan="12"><font color="white" style="font-size: medium"><b>Animal Companion: ${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.NAME')} (${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.RACE')})</b></font></td>
+      <td bgcolor="black" align="left" class="border" colspan="12"><font color="white" style="font-size: medium"><b>${i18n("in_sheet_animalCompanionLabel")} ${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.NAME')} (${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.RACE')})</b></font></td>
      </tr>
      <tr>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>FORT:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_fort")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.CHECK.FORTITUDE.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>REF:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_ref")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.CHECK.REFLEX.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>WILL:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_will")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.CHECK.2.TOTAL')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>HP:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_hp")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.HP')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border" ><font color="white" style="font-size: x-small"><b>AC:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border" ><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_ac")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border" >${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.AC.Total')}</td>
-      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>INIT:</b></font></td>
+      <td width="8%" bgcolor="black" align="center" class="border"><font color="white" style="font-size: x-small"><b>${i18n("in_sheet_init")?upper_case}:</b></font></td>
       <td width="8%" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.INITIATIVEMOD')}</td>
      </tr>
 <@loop from=0 to=pcvar('COUNT[FOLLOWERTYPE.ANIMAL COMPANION.${anm}.EQTYPE.WEAPON]-1') ; wep , wep_has_next><#-- TODO: Loop was of early exit type 1 -->
      <tr>
       <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.WEAPON.${wep}.NAME')}</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.WEAPON.${wep}.TOTALHIT')}</td>
-      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>DAMAGE:</b></font></td>
+      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_damage")?upper_case}:</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.WEAPON.${wep}.DAMAGE')}</td>
-      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>CRITICAL:</b></font></td>
+      <td colspan="2" bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_critical")?upper_case}:</b></font></td>
       <td colspan="2" align="center" class="border">${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.WEAPON.${wep}.CRIT')}/x${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.WEAPON.${wep}.MULT')}</td>
       </tr>
 </@loop>
      <tr>
-      <td bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>Special:</b></font></td>
+      <td bgcolor="black" align="center" class="border"><font color="white" style="font-size: small"><b>${i18n("in_sheet_special")}:</b></font></td>
       <td align="left" class="border" colspan="11"><font style="font-size: small">&nbsp;&nbsp;${pcstring('FOLLOWERTYPE.ANIMAL COMPANION.${anm}.SPECIALLIST')}<br /></font></td>
      </tr>
     </table>
@@ -1458,7 +1458,7 @@ ${pcstring('VAR.CMD_Trip.INTVAL')}
 <#if (pcvar("FOLLOWERTYPE.FOLLOWERS") > 0) >
     <table width="100%" cellspacing="0" cellpadding="3" summary="Henchmen Table">
      <tr>
-      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>HENCHMEN</b></font></td>
+      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_henchmen")?upper_case}</b></font></td>
      </tr>
      <tr>
       <td valign="top" width="70%" class="border8">
@@ -1474,7 +1474,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <!-- START Misc Companions Table -->
     <table width="100%" cellspacing="0" cellpadding="3" summary="Misc. Magic Table">
      <tr>
-      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>OTHER COMPANIONS</b></font></td>
+      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_otherCompanions")?upper_case}</b></font></td>
      </tr>
      <tr>
       <td valign="top" width="70%" class="border8"><span class="notes">${pcstring('MISC.COMPANIONS')}<span class="notes"></td>
@@ -1487,7 +1487,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <#if (pcstring("TEMPLATELIST") != '') >
     <table width="100%" cellspacing="0" cellpadding="3" summary="Template Table">
      <tr>
-      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>TEMPLATES</b></font></td>
+      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_templates")?upper_case}</b></font></td>
      </tr>
      <tr>
       <td valign="top" width="70%" class="border8">${pcstring('TEMPLATELIST')}<br /></td>
@@ -1500,7 +1500,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <#if (pchasvar("DivineRank"))>
     <table width="100%" cellspacing="0" cellpadding="3" summary="Template Table">
      <tr>
-      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>SALIENT DIVINE ABILITIES</b></font></td>
+      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_salientDivineAbilities")?upper_case}</b></font></td>
      </tr>
      <tr>
       <td valign="top" width="70%" class="border8">${pcstring('ABILITYLIST.Salient Divine Ability')}<br /></td>
@@ -1514,7 +1514,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <!-- START Misc Magic Table -->
     <table width="100%" cellspacing="0" cellpadding="3" summary="Misc. Magic Table">
      <tr>
-      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>MAGIC</b></font></td>
+      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_magic")?upper_case}</b></font></td>
      </tr>
      <tr>
       <td valign="top" width="70%" class="border8"><span class="notes">${pcstring('MISC.MAGIC')}</span></td>
@@ -1527,7 +1527,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <!-- START Prohibited Table -->
     <table width="100%" cellspacing="0" cellpadding="3" summary="Prohiubited List">
      <tr>
-      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>PROHIBITED</b></font></td>
+      <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_prohibited")?upper_case}</b></font></td>
      </tr>
      <tr>
       <td valign="top" width="100%" class="border8">${pcstring('PROHIBITEDLIST')}<br /></td>
@@ -1540,11 +1540,11 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <!-- START Domain Table -->
     <table width="100%" cellspacing="0" cellpadding="3" summary="Domain List">
      <tr>
-      <td bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>Cleric of ${pcstring('DEITY')}</b></font></td>
+      <td bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_clericOf", pcstring('DEITY'))}</b></font></td>
      </tr>
      <tr>
-      <td valign="top" class="border8"><b>Domain</b><br /></td>
-      <td valign="top" class="border8"><b>Granted Power</b><br /></td>
+      <td valign="top" class="border8"><b>${i18n("in_sheet_domain")}</b><br /></td>
+      <td valign="top" class="border8"><b>${i18n("in_sheet_grantedPower")}</b><br /></td>
      </tr>
 <@loop from=1 to=pcvar('COUNT[DOMAINS]') ; count , count_has_next>
 <tr><td valign="top" class="border7">${pcstring('DOMAIN.${count}')}<br /></td><td valign="top" class="border7">${pcstring('DOMAIN.${count}.POWER')}<br /></td></tr>
@@ -1562,25 +1562,25 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
       <td bgcolor="black" align="center" colspan="4"><font color="white" style="font-size: small"><b>${pcstring('ABILITYALL.Special Ability.${turncount}.ASPECT=TurnType.ASPECT.TurnType')} ${pcstring('ABILITYALL.Special Ability.${turncount}.ASPECT=TurnType.ASPECT.TurnKind')}</b></font></td>
      </tr>
      <tr >
-      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">TURNING CHECK<br />RESULT</font></td>
-      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">AFFECTED<br />(MAX HIT DICE)</font></td>
-      <td width="25%" bgcolor="black" align="right"><font color="white" style="font-size: x-small">TURN LEVEL</font></td>
+      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">${i18n("in_sheet_turningCheck")?upper_case}<br />${i18n("in_sheet_result")?upper_case}</font></td>
+      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">${i18n("in_sheet_affected")?upper_case}<br />${i18n("in_sheet_maxHitDice")?upper_case}</font></td>
+      <td width="25%" bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_turnLevel")?upper_case}</font></td>
       <td width="25%" class="border9" align="center"><b>${turnLevel}</b></td>
      </tr>
      <tr>
-      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">TURN DAMAGE</font></td>
+      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_turnDamage")?upper_case}</font></td>
       <td class="border9" align="center"><b>${pcstring('ABILITYALL.Special Ability.${turncount}.ASPECT=TurnType.ASPECT.TurnDamage')}</b></td>
      </tr>
      <tr>
-      <td align="center" class="font8"><b>Up to 0</b></td>
+      <td align="center" class="font8"><b>${i18n("in_sheet_upTo0")}</b></td>
       <td align="center" class="font8"><b>${turnLevel-4}</b></td>
-      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">TURNING CHECK</font></td>
+      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_turningCheck")?upper_case}</font></td>
       <td class="border9" align="center"><b>1d20${pcstring('ABILITYALL.Special Ability.${turncount}.ASPECT=TurnType.ASPECT.TurnCheck.INTVAL.SIGN.NOZERO')}</b></td>
      </tr>
      <tr>
       <td bgcolor="gray" align="center" class="font8"><b>1 - 3</b></td>
       <td bgcolor="gray" align="center" class="font8"><b>${turnLevel-3}</b></td>
-      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">TURNS/DAY</font></td>
+      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_turnsDay")?upper_case}</font></td>
       <td class="border9" align="center"><b>${pcstring('ABILITYALL.Special Ability.${turncount}.ASPECT=TurnType.ASPECT.TurnTimes.INTVAL')}</b></td>
      </tr>
      <tr>
@@ -1632,25 +1632,25 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
       <td bgcolor="black" align="center" colspan="4"><font color="white" style="font-size: small"><b>${pcstring('ABILITYALL.Special Ability.${channelingcount}.ASPECT=ChannelingType.ASPECT.ChannelingType')} ${pcstring('ABILITYALL.Special Ability.${channelingcount}.ASPECT=ChannelingType.ASPECT.ChannelingKind')}</b></font></td>
      </tr>
      <tr >
-      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">CHANNELING CHECK<br />RESULT</font></td>
-      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">AFFECTED<br />(MAX HIT DICE)</font></td>
-      <td width="25%" bgcolor="black" align="right"><font color="white" style="font-size: x-small">CHANNELING LEVEL</font></td>
+      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">${i18n("in_sheet_channelingCheck")?upper_case}<br />${i18n("in_sheet_result")?upper_case}</font></td>
+      <td rowspan="2" width="25%" bgcolor="black" align="center"><font color="white" style="font-size: x-small">${i18n("in_sheet_affected")?upper_case}<br />${i18n("in_sheet_maxHitDice")?upper_case}</font></td>
+      <td width="25%" bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_channelingLevel")?upper_case}</font></td>
       <td width="25%" class="border9" align="center"><b>${ChannelingLevel}</b></td>
      </tr>
      <tr>
-      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">MAGNITUDE</font></td>
+      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_magnitude")?upper_case}</font></td>
       <td class="border9" align="center"><b>${pcstring('ABILITYALL.Special Ability.${channelingcount}.ASPECT=ChannelingType.ASPECT.Magnitude')}</b></td>
      </tr>
      <tr>
-      <td align="center" class="font8"><b>Up to 0</b></td>
+      <td align="center" class="font8"><b>${i18n("in_sheet_upTo0")}</b></td>
       <td align="center" class="font8"><b>${ChannelingLevel-8}</b></td>
-      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">CHANNELING CHECK</font></td>
+      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_channelingCheck")?upper_case}</font></td>
       <td class="border9" align="center"><b>1d20${pcstring('ABILITYALL.Special Ability.${channelingcount}.ASPECT=ChannelingType.ASPECT.ChannelingCheck.INTVAL.SIGN.NOZERO')}</b></td>
      </tr>
      <tr>
       <td bgcolor="gray" align="center" class="font8"><b>1 - 3</b></td>
       <td bgcolor="gray" align="center" class="font8"><b>${ChannelingLevel-7}</b></td>
-      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">USES/DAY</font></td>
+      <td bgcolor="black" align="right"><font color="white" style="font-size: x-small">${i18n("in_sheet_usesDay")?upper_case}</font></td>
       <td class="border9" align="center"><b>${pcstring('ABILITYALL.Special Ability.${channelingcount}.ASPECT=ChannelingType.ASPECT.ChannelingUses.INTVAL')}</b></td>
      </tr>
      <tr>
@@ -1706,7 +1706,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 
    <table cellpadding="0" width="100%" cellspacing="0" border="0" summary="Weapon Abbreviations">
     <tr>
-     <td><font style="font-size:5pt"><b>1H-P:</b> One handed, primary hand.&nbsp;<b>1H-O:</b> One handed, off hand.&nbsp;<b>2H:</b> Two handed.&nbsp;<b>2W-P-(OH):</b> 2 weapons, primary hand (off hand weapon is heavy).&nbsp;<b>2W-P-(OL):</b> 2 weapons, primary hand (off hand weapon is light).&nbsp;<b>2W-OH:</b>2 weapons, off hand.</font></td>
+     <td><font style="font-size:5pt"><b>${i18n("in_sheet_1hP")}:</b> ${i18n("in_sheet_oneHandedPrimaryHand")}&nbsp;<b>${i18n("in_sheet_1hO")}:</b> ${i18n("in_sheet_oneHandedOffHand")}&nbsp;<b>${i18n("in_sheet_2h")}:</b> ${i18n("in_sheet_twoHanded")}&nbsp;<b>${i18n("in_sheet_2wPOh")?upper_case}:</b> ${i18n("in_sheet_2WeaponsPrimaryHandOffHandWeaponIsHeavy")}&nbsp;<b>${i18n("in_sheet_2wPOl")?upper_case}:</b> ${i18n("in_sheet_2WeaponsPrimaryHandOffHandWeaponIsLight")}&nbsp;<b>${i18n("in_sheet_2wOh")?upper_case}:</b>${i18n("in_sheet_2WeaponsOffHand")}</font></td>
     </tr>
    </table>
 <!-- End Overflow Weapons Table -->
@@ -1715,7 +1715,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <!-- START Language Table -->
    <table width="100%" cellspacing="0" cellpadding="3" summary="Language Table">
     <tr>
-     <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>LANGUAGES</b></font></td>
+     <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_languages")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td valign="top" width="100%" class="border8">${pcstring('LANGUAGES')} ${pcstring('ABILITYALL.ANY.0.ASPECT=Language.ASPECT.Language')}<br /></td>
@@ -1726,7 +1726,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <#if (pcstring("WEAPONPROFS") != "") >
    <table width="100%" cellspacing="0" cellpadding="3" summary="Proficiency Table">
     <tr>
-     <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>PROFICIENCIES</b></font></td>
+     <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_proficiencies")?upper_case}</b></font></td>
     </tr>
     <tr>
      <td valign="top" width="100%" class="border8">${pcstring('WEAPONPROFS')}<br /></td>
@@ -1738,7 +1738,7 @@ ${pcstring('FOLLOWERTYPE.FOLLOWERS.${follower}.NAME')},&nbsp;
 <#if (pcvar('count("ABILITIES","CATEGORY=Archetype","TYPE=Archetype","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Archetype Table">
     <tr>
-     <td bgcolor="black" align="center"><font color="white" style="font-size: small"><b>Archetypes</b></font></td>
+     <td bgcolor="black" align="center"><font color="white" style="font-size: small"><b>${i18n("in_sheet_archetypes")}</b></font></td>
     </tr>
 <@loop from=0 to=pcvar('count("ABILITIES","CATEGORY=Archetype","TYPE=Archetype","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; archetype , archetype_has_next>
 <#if (archetype % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1755,7 +1755,7 @@ ${pcstring('ABILITYALL.Archetype.VISIBLE.${archetype}.TYPE=Archetype.DESC')}</td
 <#if (pcvar('count("ABILITIES","CATEGORY=Afflictions","TYPE=Affliction","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Afflictions">
     <tr>
-     <th bgcolor="black" align="center" class="ab" colspan="2"><b>Afflictions</b></th>
+     <th bgcolor="black" align="center" class="ab" colspan="2"><b>${i18n("in_sheet_afflictions")}</b></th>
     </tr>
 <@loop from=0 to=pcvar('count("ABILITIES","CATEGORY=Afflictions","TYPE=Affliction","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; affliction , affliction_has_next>
 <#if (affliction % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1776,7 +1776,7 @@ ${pcstring('ABILITYALL.Afflictions.VISIBLE.${affliction}.TYPE=Affliction.DESC')}
 <#if (pcvar('count("ABILITIES","CATEGORY=Special Ability","TYPE=Trait","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Traits Table" class="sa-table">
     <tr>
-     <th colspan="2">Traits</th>
+     <th colspan="2">${i18n("in_sheet_traits")}</th>
     </tr>
 <@loop from=0 to=pcvar('count("ABILITIES","CATEGORY=Special Ability","TYPE=Trait","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; trait , trait_has_next>
 <#if (trait % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1795,23 +1795,23 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${trait}.TYPE=Trait.DESC')}
 
 <#macro typeOfAbilitySuffix typeOfAbility >
 <#if (typeOfAbility?contains("extraordinary"))>
- (Ex)
+ ${i18n("in_sheet_extraordinary")}
 </#if>
 <#if (typeOfAbility?contains("supernatural"))>
- (Su)
+ ${i18n("in_sheet_supernatural")}
 </#if>
 <#if (typeOfAbility?contains("spelllike"))>
- (Sp)
+ ${i18n("in_sheet_spellLike")}
 </#if>
 <#if (typeOfAbility?contains("psilike"))>
- (Ps)
+ ${i18n("in_sheet_psionic")}
 </#if>
 </#macro>
 <!-- START Special Attacks Table -->
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=SpecialAttack","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Special Attacks Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>SPECIAL ATTACKS</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_specialAttacks")?upper_case}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=SpecialAttack","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; specialAttack , specialAttack_has_next>
 <#if (specialAttack % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1841,7 +1841,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${specialAttack}.TYPE=SpecialAtta
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=Prestige Award Display","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Prestige Award Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>Prestige Awards</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_prestigeAwards")}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=Prestige Award Display","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; prestigeAward , prestigeAward_has_next>
 <#if (prestigeAward % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1873,7 +1873,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${prestigeAward}.TYPE=Prestige Aw
 <#else>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Animal Tricks Table">
     <tr>
-     <td bgcolor="black" align="center"><font color="white" style="font-size: small"><b>ANIMAL TRICKS</b></font></td>
+     <td bgcolor="black" align="center"><font color="white" style="font-size: small"><b>${i18n("in_sheet_animalTricks")?upper_case}</b></font></td>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY","TYPE=AnimalTrick")-1') ; animalTrick , animalTrick_has_next>
 <#if (animalTrick % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1888,7 +1888,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${prestigeAward}.TYPE=Prestige Aw
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=SpecialQuality","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>SPECIAL QUALITIES</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_specialQualities")?upper_case}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=SpecialQuality","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; specialQuality , specialQuality_has_next>
 <#if (specialQuality % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1918,7 +1918,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${specialQuality}.TYPE=SpecialQua
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Racial Trait","TYPE=Racial Trait","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>RACIAL TRAITS</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_racialTraits")?upper_case}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Racial Trait","TYPE=Racial Trait","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; RacialTrait , RacialTrait_has_next>
 <#if (RacialTrait % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1948,7 +1948,7 @@ ${pcstring('ABILITYALL.Racial Trait.VISIBLE.${RacialTrait}.TYPE=Racial Trait.DES
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Class Feature","TYPE=Class Feature","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>CLASS FEATURE</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_classFeature")?upper_case}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Class Feature","TYPE=Class Feature","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; ClassFeature , ClassFeature_has_next>
 <#if (ClassFeature % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -1978,7 +1978,7 @@ ${pcstring('ABILITYALL.Class Feature.VISIBLE.${ClassFeature}.TYPE=Class Feature.
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=EclipseAbilityOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>ECLIPSE ABILITIES</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_eclipseAbilities")?upper_case}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=EclipseAbilityOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; specialQuality , specialQuality_has_next>
 <#if (specialQuality % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2008,7 +2008,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${specialQuality}.TYPE=EclipseAbi
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=MartialArtsOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>Martial Arts</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_martialArts")}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=MartialArtsOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; specialQuality , specialQuality_has_next>
 <#if (specialQuality % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2038,7 +2038,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${specialQuality}.TYPE=MartialArt
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=WitchcraftOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>Witchcraft</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_witchcraft")}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=WitchcraftOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; specialQuality , specialQuality_has_next>
 <#if (specialQuality % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2069,7 +2069,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${specialQuality}.TYPE=Witchcraft
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Words of Power","TYPE=WordsOfPowerOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>Words of Power</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_wordsOfPower")}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Words of Power","TYPE=WordsOfPowerOutput","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; ClassFeature , ClassFeature_has_next>
 <#if (ClassFeature % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2099,7 +2099,7 @@ ${pcstring('ABILITYALL.Words of Power.VISIBLE.${ClassFeature}.TYPE=WordsOfPowerO
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Condition","TYPE=Condition","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>condition</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_condition")}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Condition","TYPE=Condition","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; object , object_has_next>
 <#if (object % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2131,7 +2131,7 @@ ${pcstring('ABILITYALL.Condition.VISIBLE.${object}.TYPE=condition.DESC')}</td>
 <#if (pcvar("COUNT[SA]") > 0) >
    <table width="100%" cellspacing="0" cellpadding="2" summary="Special Abilities Table">
     <tr>
-     <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>SPECIAL ABILITIES</b></font></td>
+     <td bgcolor="black" align="center" colspan="1"><font color="white" style="font-size: small"><b>${i18n("in_sheet_specialAbilities")?upper_case}</b></font></td>
     </tr>
 
 <@loop from=0 to=pcvar('COUNT[SA]-1') ; sa , sa_has_next>
@@ -2149,7 +2149,7 @@ ${pcstring('ABILITYALL.Condition.VISIBLE.${object}.TYPE=condition.DESC')}</td>
 <!-- START Feat Table -->
 <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
   <tr>
-     <td bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>FEATS</b></font></td>
+     <td bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_feats")?upper_case}</b></font></td>
   </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=FEAT","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; feat , feat_has_next>
 <#if (feat % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2174,7 +2174,7 @@ ${pcstring('ABILITYALL.Condition.VISIBLE.${object}.TYPE=condition.DESC')}</td>
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=PFSBoon","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>PFS Boons</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_pfsBoons")}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=Special Ability","TYPE=PFSBoon","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; PFSBoon , PFSBoon_has_next>
 <#if (PFSBoon % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2205,7 +2205,7 @@ ${pcstring('ABILITYALL.Special Ability.VISIBLE.${PFSBoon}.TYPE=PFSBoon.DESC')}
 <#if (pcvar('countdistinct("ABILITIES","CATEGORY=PFS Chronicle","TYPE=PFSChronicle","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")') > 0)>
    <table width="100%" cellspacing="0" cellpadding="2" summary="Feat Table">
     <tr>
-     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>PFS Chronicles</b></font></th>
+     <th bgcolor="black" align="center" colspan="2"><font color="white" style="font-size: small"><b>${i18n("in_sheet_pfsChronicles")}</b></font></th>
     </tr>
 <@loop from=0 to=pcvar('countdistinct("ABILITIES","CATEGORY=PFS Chronicle","TYPE=PFSChronicle","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")-1') ; PFSChronicle , PFSChronicle_has_next>
 <#if (PFSChronicle % 2 = 0)><tr bgcolor="#DDDDDD"><#else><tr bgcolor="white"></#if>
@@ -2240,7 +2240,7 @@ ${pcstring('ABILITYALL.PFS Chronicle.VISIBLE.${PFSChronicle}.TYPE=PFSChronicle.D
 <tr><td>
 <table width="100%" cellspacing="0" cellpadding="2">
 <tr>
-<td class="c9wB">Temporary Bonuses Applied</td>
+<td class="c9wB">${i18n("in_sheet_temporaryBonusesApplied")}</td>
 </tr>
 <tr>
 <td width="100%" class="l8">
@@ -2266,9 +2266,9 @@ ${pcstring('TEMPBONUS.${temp}')}
 
 <#if (pcstring("BIO") != '' || pcstring('DESC') != '') >
 <br style="page-break-after: always" />
-<!--<center><font size="-1">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')} <br />Player: ${pcstring('PLAYERNAME')}; Character Name: ${pcstring('NAME')}</font></center><br />
+<!--<center><font size="-1">Created using <a href="http://pcgen.org/">PCGen</a> ${i18n("in_sheet_versionOnDate", pcstring('EXPORT.VERSION'), pcstring('EXPORT.DATE'))} <br />${i18n("in_sheet_playerAndCharacter", pcstring('PLAYERNAME'), pcstring('NAME'))}</font></center><br />
 -->
-<div class="pcgen">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')} <br />Player: ${pcstring('PLAYERNAME')}; Character Name: ${pcstring('NAME')}</div>
+<div class="pcgen">${i18n("in_sheet_createdUsing")} <a href="http://pcgen.org/">PCGen</a> ${i18n("in_sheet_versionOnDate", pcstring('EXPORT.VERSION'), pcstring('EXPORT.DATE'))} <br />${i18n("in_sheet_playerAndCharacter", pcstring('PLAYERNAME'), pcstring('NAME'))}</div>
 <!-- START Bio Table -->
 <table width="100%" cellspacing="0" cellpadding="2" id="Bio">
  <tr>
@@ -2279,48 +2279,48 @@ ${pcstring('TEMPBONUS.${temp}')}
   <td valign="top" width="99%">
    <table width="100%" cellspacing="0" cellpadding="2">
     <tr><td class="biodata">${pcstring('RACE')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">RACE</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_race")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('AGE')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">AGE</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_age")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('HEIGHT')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">HEIGHT</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_height")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('WEIGHT')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">WEIGHT</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_weight")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('COLOR.EYE')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">EYE COLOR</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_eyeColor")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('COLOR.SKIN')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">SKIN COLOR</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_skinColor")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('COLOR.HAIR')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">HAIR COLOR</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_hairColor")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('LENGTH.HAIR')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">HAIR LENGTH</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_hairLength")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('PHOBIAS')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">PHOBIAS</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_phobias")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('PERSONALITY1')} ${pcstring('PERSONALITY2')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">PERSONALITY TRAITS</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_personalityTraits")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('INTERESTS')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">INTERESTS</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_interests")?upper_case}</font></td></tr>
     <tr><td class="biodata">${pcstring('SPEECHTENDENCY')}, ${pcstring('CATCHPHRASE')}<br/></td></tr>
-    <tr><td class="topline"><font style="font-size: 6pt">SPOKEN STYLE</font></td></tr>
+    <tr><td class="topline"><font style="font-size: 6pt">${i18n("in_sheet_spokenStyle")?upper_case}</font></td></tr>
    </table>
 <!-- STOP BIO Table -->
   </td>
  </tr>
- <tr><td class="borderbottom" colspan="2"><font style="font-size: large">Description</font></td></tr>
+ <tr><td class="borderbottom" colspan="2"><font style="font-size: large">${i18n("in_sheet_description")}</font></td></tr>
  <tr><td colspan="2"><font style="font-size: small"><span class="notes">${pcstring('DESC')}</span></font></td></tr>
- <tr><td class="borderbottom" colspan="2"><font style="font-size: large">Home</font></td></tr>
- <tr><td colspan="2"><font style="font-size: small"><#if (pcstring("REGION") != "" && pcstring("REGION") != "None") > From ${pcstring('REGION')}. </#if> ${pcstring('RESIDENCE')}, ${pcstring('LOCATION')}<br/></font></td></tr>
- <tr><td class="borderbottom" colspan="2"><font style="font-size: large">Biography</font></td></tr>
+ <tr><td class="borderbottom" colspan="2"><font style="font-size: large">${i18n("in_sheet_home")}</font></td></tr>
+ <tr><td colspan="2"><font style="font-size: small"><#if (pcstring("REGION") != "" && pcstring("REGION") != "None") > ${i18n("in_sheet_fromRegion", pcstring('REGION'))} </#if> ${pcstring('RESIDENCE')}, ${pcstring('LOCATION')}<br/></font></td></tr>
+ <tr><td class="borderbottom" colspan="2"><font style="font-size: large">${i18n("in_sheet_biography")}</font></td></tr>
  <tr><td colspan="2"><font style="font-size: small"><span class="notes">${pcstring('BIO')}</span></font></td></tr>
 </table>
 </#if>
 <#if (pcvar("COUNT[NOTES]") > 0) >
 <br style="page-break-after: always" />
-<div class="pcgen">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')}<br/>Player: ${pcstring('PLAYERNAME')}; Character Name: ${pcstring('NAME')}</div>
+<div class="pcgen">${i18n("in_sheet_createdUsing")} <a href="http://pcgen.org/">PCGen</a> ${i18n("in_sheet_versionOnDate", pcstring('EXPORT.VERSION'), pcstring('EXPORT.DATE'))}<br/>${i18n("in_sheet_playerAndCharacter", pcstring('PLAYERNAME'), pcstring('NAME'))}</div>
 
 <table width="100%" cellspacing="0" cellpadding="5">
  <tr>
-  <th colspan="2" class="notehead">Notes</th>
+  <th colspan="2" class="notehead">${i18n("in_sheet_notes")}</th>
  </tr>
 <@loop from=0 to=pcvar('COUNT[NOTES]-1') ; note , note_has_next><#-- TODO: Loop was of early exit type 1 -->
 <#if (pcstring("NOTE.${note}.NAME") = "DM Notes")>
@@ -2335,11 +2335,11 @@ ${pcstring('TEMPBONUS.${temp}')}
 </#if>
 <#if (pcvar("COUNT[TACTICS]") > 0) >
 <br style="page-break-after: always" />
-<div class="pcgen">Created using <a href="http://pcgen.org/">PCGen</a> ${pcstring('EXPORT.VERSION')} on ${pcstring('EXPORT.DATE')}<br/>Player: ${pcstring('PLAYERNAME')}; Character Name: ${pcstring('NAME')}</div>
+<div class="pcgen">${i18n("in_sheet_createdUsing")} <a href="http://pcgen.org/">PCGen</a> ${i18n("in_sheet_versionOnDate", pcstring('EXPORT.VERSION'), pcstring('EXPORT.DATE'))}<br/>${i18n("in_sheet_playerAndCharacter", pcstring('PLAYERNAME'), pcstring('NAME'))}</div>
 
 <table width="100%" cellspacing="0" cellpadding="5">
  <tr>
-  <th colspan="3" class="notehead">Tactical Sheet</th>
+  <th colspan="3" class="notehead">${i18n("in_sheet_tacticalSheet")}</th>
  </tr>
 <@loop from=0 to=pcvar('COUNT[TACTICS]-1') ; tacticalsection , tacticalsection_has_next>
 	<tr>
