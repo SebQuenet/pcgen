@@ -25,6 +25,7 @@ import pcgen.facade.core.SpellSupportFacade;
 import pcgen.facade.core.SpellSupportFacade.SpellNode;
 import pcgen.facade.core.SpellSupportFacade.SuperNode;
 import pcgen.facade.util.ReferenceFacade;
+import pcgen.session.HeadlessUIDelegate;
 import pcgen.session.PcgenSession;
 import pcgen.session.service.model.BatchOutcome;
 import pcgen.session.service.model.SpellEntry;
@@ -47,10 +48,29 @@ public final class SpellService
 	private static final String FALLBACK_SPELL_LIST = "Prepared Spells";
 
 	private final CharacterLookup characters;
+	private final PcgenSession session;
 
 	public SpellService(PcgenSession session)
 	{
 		this.characters = new CharacterLookup(session);
+		this.session = session;
+	}
+
+	/**
+	 * What PCGen refused, if it refused. A spell that cannot be learned or prepared — a slot
+	 * reserved for a specialty school, a spellbook with no pages left — is turned away through
+	 * the delegate rather than by a return value, and a caller told nothing would believe the
+	 * spell was added.
+	 */
+	private String refusal(String characterId)
+	{
+		HeadlessUIDelegate delegate = session.getDelegate(characterId);
+		if (delegate == null)
+		{
+			return null;
+		}
+		String message = delegate.consumeLastError();
+		return message == null || message.isBlank() ? null : message;
 	}
 
 	public ServiceResult<List<SpellEntry>> getAvailableSpells(String characterId, String classFilter,
@@ -106,7 +126,13 @@ public final class SpellService
 				return ServiceResult.failure(
 					new ServiceError.EntryNotFound("Spell in available spells", spellName));
 			}
+			refusal(characterId);
 			spells.addKnownSpell(node);
+			String refused = refusal(characterId);
+			if (refused != null)
+			{
+				return ServiceResult.failure(new ServiceError.NotAllowed(refused));
+			}
 			return ServiceResult.success(new SpellLearned(
 				node.getSpell().toString(), classNameOf(node), node.getSpellLevel()));
 		});
@@ -137,7 +163,13 @@ public final class SpellService
 				return ServiceResult.failure(new ServiceError.EntryNotFound("Spell", spellName));
 			}
 			String list = listToPrepareOn(spells, spellList);
+			refusal(characterId);
 			spells.addPreparedSpell(node, list, false);
+			String refused = refusal(characterId);
+			if (refused != null)
+			{
+				return ServiceResult.failure(new ServiceError.NotAllowed(refused));
+			}
 			return ServiceResult.success(new SpellPrepared(node.getSpell().toString(), list));
 		});
 	}
@@ -184,7 +216,13 @@ public final class SpellService
 			{
 				return ServiceResult.failure(new ServiceError.EntryNotFound("Spell in known spells", spellName));
 			}
+			refusal(characterId);
 			spells.addToSpellBook(node, spellbook);
+			String refused = refusal(characterId);
+			if (refused != null)
+			{
+				return ServiceResult.failure(new ServiceError.NotAllowed(refused));
+			}
 			return ServiceResult.success(new SpellWritten(node.getSpell().toString(), spellbook));
 		});
 	}
@@ -207,7 +245,14 @@ public final class SpellService
 				}
 				try
 				{
+					refusal(characterId);
 					spells.addPreparedSpell(node, listToPrepareOn(spells, request.spellList()), false);
+					String refused = refusal(characterId);
+					if (refused != null)
+					{
+						errors.add("Refused: " + request.spellName() + " - " + refused);
+						continue;
+					}
 					accepted++;
 				}
 				catch (RuntimeException e)
