@@ -323,6 +323,33 @@ public class Description extends ConcretePrereqObject
 	}
 
 	/**
+	 * The text of the description as the data writes it, before its first pipe: placeholders
+	 * as %1 to %n, no variables, no prerequisites, no entity encoding.
+	 *
+	 * @return the template
+	 */
+	public String getTemplate()
+	{
+		final StringBuilder template = new StringBuilder(250);
+		for (final String component : theComponents)
+		{
+			if (component.startsWith(VAR_MARKER))
+			{
+				template.append('%').append(component.substring(VAR_MARKER.length()));
+			}
+			else if (component.equals("%"))
+			{
+				template.append("%%");
+			}
+			else
+			{
+				template.append(component);
+			}
+		}
+		return template.toString();
+	}
+
+	/**
 	 * Gets the Description tag in PCC format.
 	 * 
 	 * @return A String in LST file format for this description.

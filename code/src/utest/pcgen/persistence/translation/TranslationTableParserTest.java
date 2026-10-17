@@ -85,6 +85,14 @@ class TranslationTableParserTest
 	}
 
 	@Test
+	void readsEscapedLineBreaksTabsAndBackslashes()
+	{
+		TranslationTable table = TranslationTableParser.parse("SPELL\t\tFireball\tDESC\tUne ligne\\nune autre\\tun \\\\ ici");
+
+		assertEquals("Une ligne\nune autre\tun \\ ici", table.entries().getFirst().text());
+	}
+
+	@Test
 	void keepsTheGoodLinesAroundABadOne()
 	{
 		TranslationTable table = TranslationTableParser.parse("""

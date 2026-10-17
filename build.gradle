@@ -112,6 +112,16 @@ tasks.register("runMcp", JavaExec) {
     standardInput = System.in
 }
 
+tasks.register("exportTranslationSources", JavaExec) {
+    description = 'Write the English text of the loaded sources, one .en.tsv per campaign, for translation'
+    group = 'application'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass.set('pcgen.persistence.translation.TranslationSourceMain')
+    args '--gamemode', project.findProperty('gamemode') ?: 'Pathfinder_RPG',
+        '--campaigns', project.findProperty('campaigns') ?: 'Core Rulebook',
+        '--out', project.findProperty('out') ?: "${buildDir}/translation"
+}
+
 tasks.register("runServer", JavaExec) {
     description = 'Run the PCGen HTTP server on the loopback address (default port 8420)'
     group = 'application'

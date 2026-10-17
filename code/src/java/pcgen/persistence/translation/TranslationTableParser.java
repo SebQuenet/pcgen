@@ -67,7 +67,8 @@ public final class TranslationTableParser
 				problems.add(new TranslationProblem(lineNumber, "Empty text"));
 				continue;
 			}
-			entries.add(new TranslationEntry(lineNumber, columns[0], columns[1], columns[2], field, columns[4]));
+			entries.add(new TranslationEntry(lineNumber, columns[0], columns[1], columns[2], field,
+				TableText.unescape(columns[4])));
 		}
 		return new TranslationTable(entries, problems);
 	}

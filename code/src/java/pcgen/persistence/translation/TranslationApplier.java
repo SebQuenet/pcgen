@@ -43,7 +43,6 @@ public final class TranslationApplier
 {
 	private static final String ABILITY_TYPE = "ABILITY";
 	private static final Pattern PLACEHOLDER = Pattern.compile("%%|%\\{?(\\d+)\\}?");
-	private static final char VARIABLE_SEPARATOR = '|';
 
 	private TranslationApplier()
 	{
@@ -126,20 +125,13 @@ public final class TranslationApplier
 		{
 			return entry.key() + " has " + english.size() + " " + entry.field() + " entries; only one can be translated";
 		}
-		String englishTemplate = templateOf(english.getFirst());
+		String englishTemplate = english.getFirst().getTemplate();
 		if (!placeholdersOf(englishTemplate).equals(placeholdersOf(entry.text())))
 		{
 			return "The translation does not name the same placeholders as \"" + englishTemplate + "\"";
 		}
 		translated.put(translatedKey, english.getFirst().withTemplate(entry.text()));
 		return null;
-	}
-
-	private static String templateOf(Description description)
-	{
-		String text = description.getPCCText();
-		int separator = text.indexOf(VARIABLE_SEPARATOR);
-		return separator < 0 ? text : text.substring(0, separator);
 	}
 
 	private static Set<String> placeholdersOf(String template)
