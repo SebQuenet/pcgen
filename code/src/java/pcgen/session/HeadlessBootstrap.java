@@ -52,6 +52,7 @@ public final class HeadlessBootstrap
 			settingsDir != null ? settingsDir : ConfigurationSettings.getDefaultSettingsFilesPath();
 		ConfigurationSettings.setSystemProperty(ConfigurationSettings.SETTINGS_FILES_PATH, resolvedSettingsDir);
 
+		Main.configureLanguage();
 		Main.loadProperties(false);
 
 		Logging.log(Level.INFO, "Loading plugins and game data...");

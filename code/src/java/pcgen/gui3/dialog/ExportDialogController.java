@@ -37,6 +37,7 @@ import pcgen.gui2.UIPropertyContext;
 import pcgen.io.ExportUtilities;
 import pcgen.system.BatchExporter;
 import pcgen.system.CharacterManager;
+import pcgen.system.LanguageBundle;
 import pcgen.system.PCGenSettings;
 import pcgen.system.PropertyContext;
 import pcgen.util.Logging;
@@ -120,7 +121,7 @@ public class ExportDialogController
 		fileChooser.getExtensionFilters().add(fileFilter);
 		fileChooser.setSelectedExtensionFilter(fileFilter);
 		fileChooser.setInitialDirectory(path);
-		fileChooser.setTitle("Export " + name);
+		fileChooser.setTitle(LanguageBundle.getFormattedString("in_exportTitle", name));
 		fileChooser.setInitialDirectory(ExportUtilities.getExportDialogBaseDir(isPDF));
 		File outFile = fileChooser.showSaveDialog(null);
 		if (outFile == null)
@@ -154,8 +155,8 @@ public class ExportDialogController
 		if (!Desktop.isDesktopSupported() || !Desktop.getDesktop().isSupported(Desktop.Action.OPEN))
 		{
 			Alert error = new Alert(Alert.AlertType.ERROR);
-			error.setTitle("Cannot Open " + file.getName());
-			error.setContentText("Operating System does not support this operation");
+			error.setTitle(LanguageBundle.getFormattedString("in_cannotOpenTitle", file.getName()));
+			error.setContentText(LanguageBundle.getString("in_osCannotOpen"));
 			error.show();
 			return;
 		}
@@ -206,7 +207,7 @@ public class ExportDialogController
 			name = character.getNameRef().get();
 		}
 		fileChooser.setInitialDirectory(path);
-		fileChooser.setTitle("Export " + name);
+		fileChooser.setTitle(LanguageBundle.getFormattedString("in_exportTitle", name));
 		File outFile = fileChooser.showSaveDialog(null);
 		if (outFile == null)
 		{
@@ -259,7 +260,7 @@ public class ExportDialogController
 			{
 				Alert alert = new Alert(Alert.AlertType.ERROR);
 				alert.setTitle(Constants.APPLICATION_NAME);
-				alert.setContentText("The character export failed. Please see the log for details.");
+				alert.setContentText(LanguageBundle.getString("in_exportFailed"));
 				alert.show();
 				return;
 			}
@@ -272,7 +273,7 @@ public class ExportDialogController
 				return;
 			}
 			Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-			alert.setContentText("Do you want to open " + outFile.getName() + '?');
+			alert.setContentText(LanguageBundle.getFormattedString("in_exportOpenQuery", outFile.getName()));
 			alert.initOwner(doExport.getScene().getWindow());
 			alert.showAndWait().ifPresent(buttonType -> {
 				if (!buttonType.equals(ButtonType.NO) && !buttonType.equals(ButtonType.CANCEL))
@@ -287,7 +288,7 @@ public class ExportDialogController
 			Logging.errorPrint("Export failed", task.getException());
 			Alert alert = new Alert(Alert.AlertType.ERROR);
 			alert.setTitle(Constants.APPLICATION_NAME);
-			alert.setContentText("The character export failed. Please see the log for details.");
+			alert.setContentText(LanguageBundle.getString("in_exportFailed"));
 			alert.show();
 		});
 		Thread exportThread = new Thread(task, "pdf-export");

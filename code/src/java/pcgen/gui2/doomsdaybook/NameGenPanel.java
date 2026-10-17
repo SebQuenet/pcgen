@@ -738,7 +738,7 @@ public class NameGenPanel extends JPanel
 		}
 		else
 		{
-			JOptionPane.showMessageDialog(this, "No data files in directory " + path.getPath());
+			JOptionPane.showMessageDialog(this, LanguageBundle.getFormattedString("in_noDataFilesInDir", path.getPath()));
 		}
 	}
 

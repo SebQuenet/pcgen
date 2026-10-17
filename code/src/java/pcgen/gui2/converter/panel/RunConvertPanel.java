@@ -194,7 +194,7 @@ public class RunConvertPanel extends ConvertSubPanel implements Observer, Conver
 	{
 		panel.setLayout(new GridBagLayout());
 
-		JLabel introLabel = new JLabel("Conversion in progress");
+		JLabel introLabel = new JLabel(LanguageBundle.getString("in_convInProgress"));
 		GridBagConstraints gbc = new GridBagConstraints();
 		Utility.buildRelativeConstraints(gbc, GridBagConstraints.REMAINDER, 1, 1.0, 0);
 		gbc.fill = GridBagConstraints.HORIZONTAL;

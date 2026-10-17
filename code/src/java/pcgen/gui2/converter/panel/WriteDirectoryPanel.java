@@ -41,6 +41,7 @@ import pcgen.core.Campaign;
 import pcgen.gui2.converter.event.ProgressEvent;
 import pcgen.gui2.converter.event.TaskStrategyMessage;
 import pcgen.gui3.GuiUtility;
+import pcgen.system.LanguageBundle;
 import pcgen.system.PCGenSettings;
 import pcgen.util.Logging;
 
@@ -102,8 +103,8 @@ public class WriteDirectoryPanel extends ConvertSubPanel
 	public void setupDisplay(JPanel panel, final CDOMObject pc)
 	{
 		panel.setLayout(layout);
-		Component label = new JLabel("Please select the Directory where Converted files should be written: ");
-		AbstractButton button = new JButton("Browse...");
+		Component label = new JLabel(LanguageBundle.getString("in_convSelectWriteDir"));
+		AbstractButton button = new JButton(LanguageBundle.getString("in_browse"));
 		button.setMnemonic('r');
 		button.addActionListener(arg0 -> {
 			DirectoryChooser directoryChooser = new DirectoryChooser();

@@ -94,17 +94,17 @@ public final class PCGenMenuBar extends JMenuBar implements CharacterSelectionLi
 		menu.addSeparator();
 
 		JMenuItem cutMenuItem = new JMenuItem(new DefaultEditorKit.CutAction());
-		cutMenuItem.setText("Cut");
+		cutMenuItem.setText(LanguageBundle.getString("in_mnuEditCut"));
 		cutMenuItem.setMnemonic(KeyEvent.VK_T);
 		menu.add(cutMenuItem);
 
 		JMenuItem copyMenuItem = new JMenuItem(new DefaultEditorKit.CopyAction());
-		copyMenuItem.setText("Copy");
+		copyMenuItem.setText(LanguageBundle.getString("in_mnuEditCopy"));
 		copyMenuItem.setMnemonic(KeyEvent.VK_C);
 		menu.add(copyMenuItem);
 
 		JMenuItem pasteMenuItem = new JMenuItem(new DefaultEditorKit.PasteAction());
-		pasteMenuItem.setText("Paste");
+		pasteMenuItem.setText(LanguageBundle.getString("in_mnuEditPaste"));
 		pasteMenuItem.setMnemonic(KeyEvent.VK_P);
 		menu.add(pasteMenuItem);
 		return menu;

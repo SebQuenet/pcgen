@@ -302,7 +302,7 @@ public class BatchExporter
 		}
 		catch (final IOException ioe)
 		{
-			ShowMessageDelegate.showMessageDialog("Could not create temporary preview file.", "PCGen",
+			ShowMessageDelegate.showMessageDialog(LanguageBundle.getString("in_previewTempFileFailed"), "PCGen",
 				MessageType.ERROR);
 			Logging.errorPrint("Could not create temporary preview file.", ioe);
 			return null;

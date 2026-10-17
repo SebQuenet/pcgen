@@ -34,6 +34,7 @@ import pcgen.core.SystemCollections;
 import pcgen.gui2.converter.event.ProgressEvent;
 import pcgen.persistence.CampaignFileLoader;
 import pcgen.system.ConfigurationSettings;
+import pcgen.system.LanguageBundle;
 import pcgen.system.PCGenSettings;
 import pcgen.util.Logging;
 
@@ -121,7 +122,7 @@ public class GameModePanel extends ConvertSubPanel
 	public void setupDisplay(JPanel panel, final CDOMObject pc)
 	{
 		panel.setLayout(layout);
-		JLabel introLabel = new JLabel("Please select the Game Mode to Convert:");
+		JLabel introLabel = new JLabel(LanguageBundle.getString("in_convSelectGameMode"));
 		panel.add(introLabel);
 		layout.putConstraint(SpringLayout.NORTH, introLabel, 50, SpringLayout.NORTH, panel);
 		layout.putConstraint(SpringLayout.WEST, introLabel, 25, SpringLayout.WEST, panel);

@@ -54,6 +54,7 @@ import pcgen.gui2.tabs.Utilities;
 import pcgen.gui2.util.FilterableListPanel;
 import pcgen.gui2.util.SignIcon.Sign;
 import pcgen.gui2.util.table.TableCellUtilities;
+import pcgen.system.LanguageBundle;
 
 public class ClassLevelTableModel extends AbstractTableModel implements ListListener<CharacterLevelFacade>,
 		ListSelectionListener, HitPointListener, ClassListener
@@ -292,7 +293,7 @@ public class ClassLevelTableModel extends AbstractTableModel implements ListList
 			}
 			else if (row == levels.getSize())
 			{
-				cellLabel.setText("Add Level");
+				cellLabel.setText(LanguageBundle.getString("in_addLevel"));
 				cellPanel.add(Box.createHorizontalGlue());
 				cellPanel.add(cellLabel);
 				cellPanel.add(Box.createHorizontalStrut(3));

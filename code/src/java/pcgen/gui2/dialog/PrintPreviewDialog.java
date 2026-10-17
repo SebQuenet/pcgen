@@ -66,6 +66,7 @@ import pcgen.gui2.tools.Icons;
 import pcgen.gui2.tools.Utility;
 import pcgen.system.BatchExporter;
 import pcgen.system.ConfigurationSettings;
+import pcgen.system.LanguageBundle;
 import pcgen.util.Logging;
 import pcgen.util.fop.FopTask;
 
@@ -137,7 +138,7 @@ public final class PrintPreviewDialog extends JDialog implements ActionListener
 
     private <E> void initComponents()
     {
-        setTitle("Print Preview");
+        setTitle(LanguageBundle.getString("in_mnuFilePrintPreview"));
         sheetBox.setRenderer(new DefaultListCellRenderer()
         {
 
@@ -189,11 +190,11 @@ public final class PrintPreviewDialog extends JDialog implements ActionListener
         zoomOutButton.setActionCommand(ZOOM_OUT_COMMAND);
         zoomOutButton.addActionListener(this);
 
-        printButton.setText("Print");
+        printButton.setText(LanguageBundle.getString("in_print"));
         printButton.setActionCommand(PRINT_COMMAND);
         printButton.addActionListener(this);
 
-        cancelButton.setText("Cancel");
+        cancelButton.setText(LanguageBundle.getString("in_cancel"));
         cancelButton.setActionCommand(CANCEL_COMMAND);
         cancelButton.addActionListener(this);
 
@@ -273,7 +274,7 @@ public final class PrintPreviewDialog extends JDialog implements ActionListener
             gbc.fill = GridBagConstraints.HORIZONTAL;
             gbc.anchor = GridBagConstraints.BASELINE;
             gbc.insets = new Insets(8, 6, 8, 2);
-            bar.add(new JLabel("Select Template:"), gbc);
+            bar.add(new JLabel(LanguageBundle.getString("in_selectTemplateLabel")), gbc);
             gbc.insets = new Insets(8, 2, 8, 6);
             gbc.weightx = 1;
             bar.add(sheetBox, gbc);
@@ -288,11 +289,11 @@ public final class PrintPreviewDialog extends JDialog implements ActionListener
         }
         {
             Box hbox = Box.createHorizontalBox();
-            hbox.add(new JLabel("Page:"));
+            hbox.add(new JLabel(LanguageBundle.getString("in_pageLabel")));
             hbox.add(Box.createHorizontalStrut(4));
             hbox.add(pageBox);
             hbox.add(Box.createHorizontalStrut(10));
-            hbox.add(new JLabel("Zoom:"));
+            hbox.add(new JLabel(LanguageBundle.getString("in_zoomLabel")));
             hbox.add(Box.createHorizontalStrut(4));
             hbox.add(zoomBox);
             hbox.add(Box.createHorizontalStrut(5));

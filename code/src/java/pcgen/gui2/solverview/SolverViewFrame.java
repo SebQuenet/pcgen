@@ -306,7 +306,7 @@ public final class SolverViewFrame extends JFrame
 		gridbag.setConstraints(pane, c);
 		getContentPane().add(pane);
 
-		setTitle("Core Variable Debug View");
+		setTitle(LanguageBundle.getString("in_solverDebugTitle"));
 		getContentPane().setSize(500, 400);
 		pack();
 		setLocationRelativeTo(null);

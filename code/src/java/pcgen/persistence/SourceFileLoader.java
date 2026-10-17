@@ -234,7 +234,7 @@ public class SourceFileLoader extends PCGenTask implements Observer
         } catch (PersistenceLayerException e)
         {
             Logging.errorPrint("Failed to load sources", e);
-            uiDelegate.showErrorMessage(Constants.APPLICATION_NAME, "Failed to load sources, see log for details.");
+            uiDelegate.showErrorMessage(Constants.APPLICATION_NAME, LanguageBundle.getString("in_loadSourcesFailed"));
         }
         Logging.removeHandler(handler);
     }
@@ -497,7 +497,7 @@ public class SourceFileLoader extends PCGenTask implements Observer
         } catch (Throwable thr)
         {
             Logging.errorPrint("Exception loading files.", thr);
-            uiDelegate.showErrorMessage(Constants.APPLICATION_NAME, "Failed to load campaigns, see log for details.");
+            uiDelegate.showErrorMessage(Constants.APPLICATION_NAME, LanguageBundle.getString("in_loadCampaignsFailed"));
         }
     }
 

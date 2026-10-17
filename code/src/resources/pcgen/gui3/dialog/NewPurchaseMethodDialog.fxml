@@ -23,13 +23,13 @@
        xmlns:fx="http://javafx.com/fxml"
        fx:id="newPurchaseDialog"
        fx:controller="pcgen.gui3.dialog.NewPurchaseMethodDialogController">
-    <TitledPane text="Enter name and points for Purchase Method" collapsible="false">
+    <TitledPane text="%in_purchaseMethodPrompt" collapsible="false">
         <AnchorPane>
             <VBox>
-                <Label text="Name:" labelFor="$nameEdit"/>
+                <Label text="%in_sumName" labelFor="$nameEdit"/>
                 <TextField fx:id="nameEdit"/>
                 <HBox>
-                    <Label text="Points:" labelFor="$pointsEdit"/>
+                    <Label text="%in_Prefs_points" labelFor="$pointsEdit"/>
                     <!-- should this come from the model ? -->
                     <Slider value="10"
                             fx:id="pointsEdit"

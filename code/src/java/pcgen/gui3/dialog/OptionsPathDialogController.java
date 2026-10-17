@@ -22,6 +22,7 @@ import java.io.File;
 import java.util.Optional;
 
 import pcgen.system.ConfigurationSettings;
+import pcgen.system.LanguageBundle;
 import pcgen.util.Logging;
 
 import javafx.event.ActionEvent;
@@ -124,9 +125,8 @@ public class OptionsPathDialogController
 			if (dir.listFiles().length > 0)
 			{
 				Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-				alert.setTitle("Directory Not Empty");
-				alert.setContentText("The folder " + dir.getAbsolutePath() + " is not empty.\n"
-						+ "All ini files in this directory may be overwritten. " + "Are you sure?");
+				alert.setTitle(LanguageBundle.getString("in_dirNotEmptyTitle"));
+				alert.setContentText(LanguageBundle.getFormattedString("in_dirNotEmptyMessage", dir.getAbsolutePath()));
 				Optional<ButtonType> buttonType = alert.showAndWait();
 				buttonType.ifPresent(option -> {
 					if (option != ButtonType.YES)

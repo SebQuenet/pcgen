@@ -52,6 +52,7 @@ import pcgen.facade.util.ReferenceFacade;
 import pcgen.facade.util.event.ReferenceListener;
 import pcgen.gui2.tools.Utility;
 import pcgen.gui2.util.table.IntegerEditor;
+import pcgen.system.LanguageBundle;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
@@ -118,7 +119,7 @@ public final class CharacterHPDialog extends JDialog implements ActionListener
 		pane.add(scrollPane, BorderLayout.CENTER);
 
 		Box box = Box.createHorizontalBox();
-		box.add(new JLabel("Total Hp:"));
+		box.add(new JLabel(LanguageBundle.getString("in_hpTotalLabel")));
 		box.add(Box.createHorizontalStrut(3));
 
 		final ReferenceListener<Integer> hpListener = e -> totalHp.setText(e.getNewReference().toString());
@@ -128,13 +129,13 @@ public final class CharacterHPDialog extends JDialog implements ActionListener
 		box.add(totalHp);
 		box.add(Box.createHorizontalStrut(5));
 
-		JButton button = new JButton("Reroll All");
+		JButton button = new JButton(LanguageBundle.getString("in_hpRerollAll"));
 		button.setActionCommand("Reroll");
 		button.addActionListener(this);
 		box.add(button);
 
 		box.add(Box.createHorizontalGlue());
-		button = new JButton("Close");
+		button = new JButton(LanguageBundle.getString("in_mnuClose"));
 		button.setActionCommand("Close");
 		button.addActionListener(this);
 		box.add(button);
@@ -269,7 +270,7 @@ public final class CharacterHPDialog extends JDialog implements ActionListener
 		public Renderer()
 		{
 			button.setMargin(new Insets(0, 0, 0, 0));
-			button.setText("Reroll");
+			button.setText(LanguageBundle.getString("in_hpReroll"));
 		}
 
 		@Override
@@ -290,7 +291,7 @@ public final class CharacterHPDialog extends JDialog implements ActionListener
 		public Editor()
 		{
 			button.setMargin(new Insets(0, 0, 0, 0));
-			button.setText("Reroll");
+			button.setText(LanguageBundle.getString("in_hpReroll"));
 			button.addActionListener(this);
 		}
 

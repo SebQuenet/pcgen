@@ -37,11 +37,11 @@
     <AnchorPane>
         <VBox>
             <HBox>
-                <Label labelFor="$selectCharacterBox" text="Select Character" />
+                <Label labelFor="$selectCharacterBox" text="%in_selectCharacter" />
                 <ComboBox fx:id="selectCharacterBox" />
-                <Label labelFor="$exportSheetType" text="in_entireParty"/>
+                <Label labelFor="$exportSheetType" text="%in_entireParty"/>
                 <CheckBox fx:id="entireParty" />
-                <Label labelFor="$exportSheetType" text="export To"/>
+                <Label labelFor="$exportSheetType" text="%in_exportTo"/>
                 <ComboBox fx:id="exportSheetType" />
             </HBox>
             <TitledPane text="%in_templates" collapsible="false" >

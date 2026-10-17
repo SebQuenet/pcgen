@@ -44,6 +44,7 @@ import pcgen.gui2.converter.event.TaskStrategyMessage;
 import pcgen.gui2.converter.panel.ConvertSubPanel;
 import pcgen.gui2.tools.CursorControlUtilities;
 import pcgen.gui2.tools.Utility;
+import pcgen.system.LanguageBundle;
 import pcgen.util.GracefulExit;
 
 public class ConvertPanel extends JPanel
@@ -84,7 +85,7 @@ public class ConvertPanel extends JPanel
 		prevButton.addActionListener(new PreviousButtonListener());
 		prevButton.setEnabled(false); // FUTURE Need to reenable this
 		buttonBox.add(prevButton);
-		nextButton = new JButton("Next >");
+		nextButton = new JButton(LanguageBundle.getString("in_convNext"));
 		nextButton.setMnemonic('N');
 		pl = new ProgressListener()
 		{
@@ -109,10 +110,10 @@ public class ConvertPanel extends JPanel
 		};
 		nextButton.addActionListener(arg0 -> proceedToNextPanel());
 		buttonBox.add(nextButton);
-		cancelButton = new JButton("Cancel");
+		cancelButton = new JButton(LanguageBundle.getString("in_cancel"));
 		cancelButton.addActionListener(arg0 -> checkExit());
 		buttonBox.add(cancelButton);
-		finishButton = new JButton("Finish");
+		finishButton = new JButton(LanguageBundle.getString("in_convFinish"));
 		finishButton.addActionListener(arg0 -> {
             PCGenDataConvert.savePrefs();
             GracefulExit.exit(0);
@@ -170,7 +171,7 @@ public class ConvertPanel extends JPanel
 
 	public void checkExit()
 	{
-		int response = JOptionPane.showConfirmDialog(this, "Are you sure you wish to cancel and exit?", "Confirm Exit",
+		int response = JOptionPane.showConfirmDialog(this, LanguageBundle.getString("in_convConfirmExitMessage"), LanguageBundle.getString("in_convConfirmExitTitle"),
 			JOptionPane.OK_CANCEL_OPTION);
 		if (response == JOptionPane.OK_OPTION)
 		{

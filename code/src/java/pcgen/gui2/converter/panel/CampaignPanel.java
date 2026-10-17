@@ -39,6 +39,7 @@ import pcgen.core.GameMode;
 import pcgen.core.Globals;
 import pcgen.gui2.converter.event.ProgressEvent;
 import pcgen.gui2.tools.Utility;
+import pcgen.system.LanguageBundle;
 import pcgen.system.PCGenSettings;
 
 import org.apache.commons.lang3.StringUtils;
@@ -96,7 +97,7 @@ public class CampaignPanel extends ConvertSubPanel
 	public void setupDisplay(JPanel panel, final CDOMObject pc)
 	{
 		panel.setLayout(new GridBagLayout());
-		JLabel introLabel = new JLabel("Please select the Campaign(s) to Convert:");
+		JLabel introLabel = new JLabel(LanguageBundle.getString("in_convSelectCampaigns"));
 		GridBagConstraints gbc = new GridBagConstraints();
 		Utility.buildRelativeConstraints(gbc, GridBagConstraints.REMAINDER, 1, 1.0, 0, GridBagConstraints.HORIZONTAL,
 			GridBagConstraints.NORTHWEST);

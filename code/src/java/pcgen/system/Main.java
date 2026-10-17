@@ -180,8 +180,8 @@ public final class Main
 
 	private static void startupWithGUI()
 	{
-		// configure the UI before any type of user prompting may take place
-		configureUI();
+		// configure the language before any type of user prompting may take place
+		configureLanguage();
 		validateEnvironment(true);
 		loadProperties(true);
 		initPrintPreviewFonts();
@@ -202,7 +202,10 @@ public final class Main
 		PCGenUIManager.startGUI();
 	}
 
-	private static void configureUI()
+	/**
+	 * Apply the language chosen in the preferences to the interface text and the default locale.
+	 */
+	public static void configureLanguage()
 	{
 		String language = ConfigurationSettings.getLanguage();
 		String country = ConfigurationSettings.getCountry();
@@ -268,7 +271,7 @@ public final class Main
 					OptionsPathDialogController.class,
 					"OptionsPathDialog.fxml"
 			);
-			panel.showAndBlock("Directory for options.ini location");
+			panel.showAndBlock(LanguageBundle.getString("in_optionsDirTitle"));
 		}
 		PropertyContextFactory.setDefaultFactory(commandLineArguments.getSettingsDir().map(File::getPath).orElse(null));
 

@@ -49,6 +49,7 @@ import pcgen.gui2.util.treeview.TreeView;
 import pcgen.gui2.util.treeview.TreeViewModel;
 import pcgen.gui2.util.treeview.TreeViewTableModel;
 import pcgen.gui3.GuiUtility;
+import pcgen.system.LanguageBundle;
 import pcgen.system.PropertyContext;
 import pcgen.util.CollectionMaps;
 import pcgen.util.ListMap;
@@ -450,7 +451,7 @@ public class JTreeViewTable<T> extends JTreeTable
 			ToggleGroup group = new ToggleGroup();
 			TreeView<? super T> startingView = views.getElementAt(viewIndex);
 			removeAll();
-			JLabel treeLabel = new JLabel("Tree Views");
+			JLabel treeLabel = new JLabel(LanguageBundle.getString("in_treeViews"));
 			treeLabel.setBorder(BorderFactory.createEmptyBorder(0, 4, 0, 0));
 			add(treeLabel);
 			for (TreeView<T> treeview : views)
@@ -465,7 +466,7 @@ public class JTreeViewTable<T> extends JTreeTable
 				getItems().add(item);
 			}
 			this.getItems().add(new SeparatorMenuItem());
-			JLabel columnLabel = new JLabel("Columns");
+			JLabel columnLabel = new JLabel(LanguageBundle.getString("in_columns"));
 			columnLabel.setBorder(BorderFactory.createEmptyBorder(0, 4, 0, 0));
 			add(columnLabel);
 			List<TableColumn> columns = dynamicColumnModel.getAvailableColumns();

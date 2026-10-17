@@ -28,6 +28,7 @@ import pcgen.gui2.converter.UnstretchingGridLayout;
 import pcgen.gui2.converter.event.ProgressEvent;
 import pcgen.persistence.CampaignFileLoader;
 import pcgen.persistence.GameModeFileLoader;
+import pcgen.system.LanguageBundle;
 import pcgen.system.Main;
 import pcgen.system.PCGenPropBundle;
 import pcgen.system.PCGenTask;
@@ -52,9 +53,9 @@ public class StartupPanel extends ConvertSubPanel
 		message = new JPanel();
 		message.setLayout(new UnstretchingGridLayout(0, 1));
 		message
-			.add(new JLabel("Welcome to the PCGen " + PCGenPropBundle.getProdVersionSeries() + " Data Converter..."));
+			.add(new JLabel(LanguageBundle.getFormattedString("in_convWelcome", PCGenPropBundle.getProdVersionSeries())));
 		message.add(new JLabel(" "));
-		message.add(new JLabel("Loading Game Modes and Campaign Information."));
+		message.add(new JLabel(LanguageBundle.getString("in_convLoading")));
 		message.add(new JLabel(" "));
 
 		progressBar = new JProgressBar(0, 3);
@@ -77,7 +78,7 @@ public class StartupPanel extends ConvertSubPanel
 			campaignFileLoader.run();
 			progressBar.setValue(3);
 
-			message.add(new JLabel("Initialization complete, press next button to continue..."));
+			message.add(new JLabel(LanguageBundle.getString("in_convInitDone")));
 			message.revalidate();
 
 			fireProgressEvent(ProgressEvent.AUTO_ADVANCE);

@@ -102,7 +102,7 @@ public class CoreViewFrame extends JFrame
 		gridbag.setConstraints(pane, c);
 		getContentPane().add(pane);
 
-		setTitle("Core Debug View");
+		setTitle(LanguageBundle.getString("in_coreDebugTitle"));
 		getContentPane().setSize(500, 400);
 		pack();
 		this.setLocationRelativeTo(null);

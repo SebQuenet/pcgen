@@ -400,14 +400,14 @@ public final class CharacterManager
 			}
 			catch (final NullPointerException e)
 			{
-				Logging.errorPrint("Could not save " + character.getNameRef().get(), e);
-				delegate.showErrorMessage(Constants.APPLICATION_NAME, "Could not save " + character.getNameRef().get());
+				Logging.errorPrint(LanguageBundle.getFormattedString("in_couldNotSave", character.getNameRef().get()), e);
+				delegate.showErrorMessage(Constants.APPLICATION_NAME, LanguageBundle.getFormattedString("in_couldNotSave", character.getNameRef().get()));
 				return false;
 			}
 		}
 		else
 		{
-			Logging.errorPrint("Could not save " + character.getNameRef().get()
+			Logging.errorPrint(LanguageBundle.getFormattedString("in_couldNotSave", character.getNameRef().get())
 				+ " due to unexpected class of character: " + character.getClass().getCanonicalName());
 			return false;
 		}

@@ -751,7 +751,7 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 
 
 		FileChooser fileChooser = new FileChooser();
-		fileChooser.setTitle("Save PCGen Party");
+		fileChooser.setTitle(LanguageBundle.getString("in_saveParty"));
 		fileChooser.setInitialDirectory(new File(parentPath));
 
 		FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(
@@ -831,7 +831,7 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 		}
 
 		FileChooser fileChooser = new FileChooser();
-		fileChooser.setTitle("Save PCGen Character File");
+		fileChooser.setTitle(LanguageBundle.getString("in_saveCharacterFile"));
 		FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(
 				"character files only", '*' + Constants.EXTENSION_CHARACTER_FILE
 		);
@@ -935,7 +935,7 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 		}
 
 		FileChooser fileChooser = new FileChooser();
-		fileChooser.setTitle("Open PCGen Character");
+		fileChooser.setTitle(LanguageBundle.getString("in_openCharacter"));
 		fileChooser.setInitialDirectory(new File(path));
 
 		FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(
@@ -957,7 +957,7 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 	{
 		PropertyContext context = PCGenSettings.getInstance();
 		FileChooser fileChooser = new FileChooser();
-		fileChooser.setTitle("Open PCGen Party File");
+		fileChooser.setTitle(LanguageBundle.getString("in_openPartyFile"));
 		fileChooser.setInitialDirectory(new File(context.getProperty(PCGenSettings.PCP_SAVE_PATH)));
 
 		FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(

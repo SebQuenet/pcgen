@@ -31,7 +31,7 @@ We could possibly rely on the system locale, but that's a bigger decision.
     <BorderPane id="selectDirectoryPane">
         <top>
             <HBox id="topRegion">
-                <Text text="Select a directory to store PCGen options in" />
+                <Text text="%in_optionsDirPrompt" />
             </HBox>
         </top>
         <center>
@@ -39,13 +39,13 @@ We could possibly rely on the system locale, but that's a bigger decision.
                 <ToggleGroup fx:id="directoryGroup" />
             </fx:define>
             <VBox>
-            <Text text="If you have an existing options.ini file, then select the directory containing that file"/>
-                <RadioButton toggleGroup="$directoryGroup" fx:id="pcgenDir" text="PCGen Dir: This is the directory that PCGen is installed into." userData="pcgen"/>
-                <RadioButton toggleGroup="$directoryGroup" fx:id="macUserDir" text="Mac User Dir" userData="user"/>
-                <RadioButton toggleGroup="$directoryGroup" fx:id="freedesktop" text="Freedesktop configuration sub-directory: Use for most Linux/BSD" userData="FD_USER">
+            <Text text="%in_optionsDirExisting"/>
+                <RadioButton toggleGroup="$directoryGroup" fx:id="pcgenDir" text="%in_optionsDirPcgen" userData="pcgen"/>
+                <RadioButton toggleGroup="$directoryGroup" fx:id="macUserDir" text="%in_optionsDirMac" userData="user"/>
+                <RadioButton toggleGroup="$directoryGroup" fx:id="freedesktop" text="%in_optionsDirFreedesktop" userData="FD_USER">
                 </RadioButton>
-                <RadioButton toggleGroup="$directoryGroup" fx:id="homedir" text="Home Dir: This is your home directory" userData="mac_user"/>
-                <RadioButton toggleGroup="$directoryGroup" fx:id="select" text="Select a directory to use"/>
+                <RadioButton toggleGroup="$directoryGroup" fx:id="homedir" text="%in_optionsDirHome" userData="mac_user"/>
+                <RadioButton toggleGroup="$directoryGroup" fx:id="select" text="%in_optionsDirSelect"/>
             </VBox>
         </center>
         <bottom>
@@ -54,7 +54,7 @@ We could possibly rely on the system locale, but that's a bigger decision.
                     <TextField fx:id="dirSelection" editable="false" disable="true" HBox.hgrow="always"/>
                     <Button fx:id="selectButton" text="..." onAction="#doChooser" />
                 </HBox>
-                <Button text="OK" onAction="#onConfirm" />
+                <Button text="%in_Prefs_OK" onAction="#onConfirm" />
             </VBox>
         </bottom>
     </BorderPane>

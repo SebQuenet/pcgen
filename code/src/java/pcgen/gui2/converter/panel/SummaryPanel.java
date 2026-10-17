@@ -37,6 +37,7 @@ import pcgen.core.Campaign;
 import pcgen.gui2.converter.event.ProgressEvent;
 import pcgen.gui2.tools.Utility;
 import pcgen.gui2.util.FontManipulation;
+import pcgen.system.LanguageBundle;
 
 /**
  * The Class {@code SummaryPanel} presents a summary of the user's
@@ -65,14 +66,14 @@ public class SummaryPanel extends ConvertSubPanel
 	{
 		panel.setLayout(new GridBagLayout());
 
-		JLabel introLabel = new JLabel("Ready to convert.");
+		JLabel introLabel = new JLabel(LanguageBundle.getString("in_convReady"));
 		GridBagConstraints gbc = new GridBagConstraints();
 		Utility.buildRelativeConstraints(gbc, GridBagConstraints.REMAINDER, 1, 1.0, 0, GridBagConstraints.HORIZONTAL,
 			GridBagConstraints.NORTHWEST);
 		gbc.insets = new Insets(50, 25, 10, 25);
 		panel.add(introLabel, gbc);
 
-		JLabel instructLabel = new JLabel("Press Next to begin converting using the following settings:");
+		JLabel instructLabel = new JLabel(LanguageBundle.getString("in_convPressNext"));
 		Utility.buildRelativeConstraints(gbc, GridBagConstraints.REMAINDER, 1, 1.0, 0, GridBagConstraints.HORIZONTAL,
 			GridBagConstraints.NORTHWEST);
 		gbc.insets = new Insets(10, 25, 20, 25);
@@ -80,10 +81,10 @@ public class SummaryPanel extends ConvertSubPanel
 
 		JLabel[] labels = new JLabel[4];
 		JComponent[] values = new JComponent[4];
-		labels[0] = new JLabel("Source Folder:");
-		labels[1] = new JLabel("Destination Folder:");
-		labels[2] = new JLabel("Game mode:");
-		labels[3] = new JLabel("Sources:");
+		labels[0] = new JLabel(LanguageBundle.getString("in_convSourceFolder"));
+		labels[1] = new JLabel(LanguageBundle.getString("in_convDestFolder"));
+		labels[2] = new JLabel(LanguageBundle.getString("in_convGameMode"));
+		labels[3] = new JLabel(LanguageBundle.getString("in_convSources"));
 
 		values[0] = new JLabel(pc.get(ObjectKey.DIRECTORY).getAbsolutePath());
 		values[1] = new JLabel(pc.get(ObjectKey.WRITE_DIRECTORY).getAbsolutePath());

@@ -37,6 +37,7 @@ import pcgen.gui2.tools.Utility;
 import pcgen.gui2.util.FontManipulation;
 import pcgen.gui3.GuiUtility;
 import pcgen.system.ConfigurationSettings;
+import pcgen.system.LanguageBundle;
 import pcgen.system.PCGenSettings;
 import pcgen.system.PropertyContext;
 
@@ -120,20 +121,20 @@ public class SourceSelectionPanel extends ConvertSubPanel
 	{
 		panel.setLayout(new GridBagLayout());
 
-		JLabel label = new JLabel("Please select the Source Directory to Convert: ");
+		JLabel label = new JLabel(LanguageBundle.getString("in_convSelectSourceDir"));
 		GridBagConstraints gbc = new GridBagConstraints();
 		Utility.buildRelativeConstraints(gbc, GridBagConstraints.REMAINDER, 1, 1.0, 0, GridBagConstraints.HORIZONTAL,
 			GridBagConstraints.NORTHWEST);
 		gbc.insets = new Insets(50, 25, 10, 25);
 		panel.add(label, gbc);
 
-		JButton button = new JButton("Browse...");
+		JButton button = new JButton(LanguageBundle.getString("in_browse"));
 		button.setMnemonic('r');
 		button.addActionListener(arg0 -> {
 			DirectoryChooser directoryChooser = new DirectoryChooser();
 			directoryChooser.setInitialDirectory(SourceFolder.OTHER.getFile());
 			directoryChooser.showDialog(null);
-			directoryChooser.setTitle("Please select the Source Directory to Convert");
+			directoryChooser.setTitle(LanguageBundle.getString("in_convSelectSourceDir"));
 
 			File file = GuiUtility.runOnJavaFXThreadNow(
 					() -> directoryChooser.showDialog(null));

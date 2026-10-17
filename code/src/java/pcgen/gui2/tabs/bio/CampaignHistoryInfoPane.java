@@ -53,6 +53,7 @@ import pcgen.gui2.tabs.CharacterInfoTab;
 import pcgen.gui2.tabs.TabTitle;
 import pcgen.gui2.tabs.models.TextFieldListener;
 import pcgen.gui2.tools.Icons;
+import pcgen.system.LanguageBundle;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -86,16 +87,16 @@ public class CampaignHistoryInfoPane extends JPanel implements CharacterInfoTab
 	{
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-		addButton.setText("Add Next Chronicle");
+		addButton.setText(LanguageBundle.getString("in_chronicleAddNext"));
 		addButton.setActionCommand(ADD_COMMAND);
-		allButton.setText("All");
+		allButton.setText(LanguageBundle.getString("in_all"));
 		allButton.setActionCommand(ALL_COMMAND);
-		noneButton.setText("None");
+		noneButton.setText(LanguageBundle.getString("in_none"));
 		noneButton.setActionCommand(NONE_COMMAND);
 
 		Box hbox = Box.createHorizontalBox();
 		hbox.add(Box.createRigidArea(new Dimension(5, 0)));
-		hbox.add(new JLabel("Check an item to include on your Character Sheet"));
+		hbox.add(new JLabel(LanguageBundle.getString("in_chronicleIncludeHint")));
 		hbox.add(Box.createRigidArea(new Dimension(5, 0)));
 		hbox.add(allButton);
 		hbox.add(Box.createRigidArea(new Dimension(3, 0)));
@@ -381,24 +382,24 @@ public class CampaignHistoryInfoPane extends JPanel implements CharacterInfoTab
 			gbc2.gridwidth = 3;
 			gbc2.insets = new Insets(1, 4, 1, 0);
 
-			add(new JLabel("Campaign:"), gbc);
+			add(new JLabel(LanguageBundle.getString("in_chronicleCampaign")), gbc);
 			add(campaignField, gbc2);
-			add(new JLabel("Adventure:"), gbc);
+			add(new JLabel(LanguageBundle.getString("in_chronicleAdventure")), gbc);
 			gbc2.gridwidth = GridBagConstraints.REMAINDER;
 			add(adventureField, gbc2);
 
 			add(new JLabel(), gbc);
-			add(new JLabel("Party Name:"), gbc);
+			add(new JLabel(LanguageBundle.getString("in_chroniclePartyName")), gbc);
 			gbc2.gridwidth = 1;
 			gbc2.weightx = 0.35;
 			add(partyField, gbc2);
-			add(new JLabel("Date:"), gbc);
+			add(new JLabel(LanguageBundle.getString("in_chronicleDate")), gbc);
 			gbc2.weightx = 0.15;
 			add(dateField, gbc2);
-			add(new JLabel("XP Gained:"), gbc);
+			add(new JLabel(LanguageBundle.getString("in_chronicleXpGained")), gbc);
 			gbc2.weightx = 0.05;
 			add(xpField, gbc2);
-			add(new JLabel("GM:"), gbc);
+			add(new JLabel(LanguageBundle.getString("in_chronicleGm")), gbc);
 
 			gbc2.gridwidth = GridBagConstraints.REMAINDER;
 			gbc2.weightx = 0.45;

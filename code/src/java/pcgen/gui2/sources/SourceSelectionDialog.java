@@ -265,7 +265,7 @@ public class SourceSelectionDialog extends JDialog implements ActionListener, Ch
 				JPanel panel = new JPanel(new BorderLayout());
 				panel.add(new JScrollPane(sourcesList), BorderLayout.CENTER);
 				panel.add(nameField, BorderLayout.SOUTH);
-				int ret = JOptionPane.showOptionDialog(this, panel, "Save the source selection as...",
+				int ret = JOptionPane.showOptionDialog(this, panel, LanguageBundle.getString("in_saveSourceSelectionAs"),
 						JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, null, null
 				);
 				if (ret == JOptionPane.OK_OPTION)
@@ -330,7 +330,7 @@ public class SourceSelectionDialog extends JDialog implements ActionListener, Ch
 		}
 		else
 		{
-			JOptionPane.showMessageDialog(this, "Some sources have unfulfilled prereqs", "Cannot Load Selected Sources",
+			JOptionPane.showMessageDialog(this, LanguageBundle.getString("in_sourcesUnfulfilledPrereqs"), LanguageBundle.getString("in_cannotLoadSelectedSources"),
 				JOptionPane.INFORMATION_MESSAGE);
 		}
 	}

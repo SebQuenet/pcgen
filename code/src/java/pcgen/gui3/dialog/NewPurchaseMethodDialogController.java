@@ -19,6 +19,7 @@
 package pcgen.gui3.dialog;
 
 import pcgen.cdom.base.Constants;
+import pcgen.system.LanguageBundle;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -67,7 +68,7 @@ public class NewPurchaseMethodDialogController
 			Alert alert = new Alert(Alert.AlertType.ERROR);
 			alert.setTitle(Constants.APPLICATION_NAME);
 			// todo: i18n
-			alert.setContentText("Please enter a name for this method.");
+			alert.setContentText(LanguageBundle.getString("in_purchaseMethodNameMissing"));
 			alert.initOwner(newPurchaseDialog.getWindow());
 			alert.showAndWait();
 			return;
