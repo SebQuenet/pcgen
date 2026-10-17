@@ -463,6 +463,14 @@ public interface CharacterFacade extends CompanionFacade
      */
     TacticalSheetFacade getTacticalSheetFacade();
 
+    /**
+     * Retrieves the conjurations of the character: the creatures it can
+     * conjure, and the ones it has conjured into the fight.
+     *
+     * @return the facade the Conjurations tab works through.
+     */
+    ConjurationSheetFacade getConjurationSheetFacade();
+
 	/**
 	 * Set the character's current experience point value
 	 * @param xp The new XP value to be set

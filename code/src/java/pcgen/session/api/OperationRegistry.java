@@ -28,6 +28,7 @@ import pcgen.session.service.AbilityService;
 import pcgen.session.service.BiographyService;
 import pcgen.session.service.CharacterBuildService;
 import pcgen.session.service.ChoiceService;
+import pcgen.session.service.ConjurationService;
 import pcgen.session.service.CustomEquipmentService;
 import pcgen.session.service.DataSetService;
 import pcgen.session.service.DeityDomainService;
@@ -90,6 +91,7 @@ public final class OperationRegistry
 		operations.addAll(CharacterRecordOperations.of(new BiographyService(session),
 			new TacticalSheetService(session), new ExportService(session),
 			new ChoiceService(session), new UtilityService(session)));
+		operations.addAll(ConjurationOperations.of(new ConjurationService(session)));
 		return new OperationRegistry(operations);
 	}
 

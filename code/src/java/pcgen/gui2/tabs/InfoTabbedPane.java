@@ -74,7 +74,11 @@ public final class InfoTabbedPane extends JTabbedPane implements CharacterSelect
 	public static final int SPELLS_TAB = 7;
 	public static final int INVENTORY_TAB = 8;
 	public static final int DESCRIPTION_TAB = 9;
-	public static final int CHARACTER_SHEET_TAB = 10;
+	public static final int TACTICAL_TAB = 10;
+	public static final int CONJURATIONS_TAB = 11;
+	public static final int TEMPBONUS_TAB = 12;
+	public static final int COMPANIONS_TAB = 13;
+	public static final int CHARACTER_SHEET_TAB = 14;
 	private final DoubleKeyMap<CharacterFacade, CharacterInfoTab, ModelMap> stateMap;
 	private final Map<CharacterFacade, Integer> tabSelectionMap;
 	private final TabModelService modelService;
@@ -123,6 +127,7 @@ public final class InfoTabbedPane extends JTabbedPane implements CharacterSelect
 		addTab(new InventoryInfoTab());
 		addTab(new DescriptionInfoTab());
 		addTab(new TacticalInfoTab());
+		addTab(new ConjurationsInfoTab());
 		addTab(new TempBonusInfoTab());
 		addTab(new CompanionInfoTab());
 		addTab(new CharacterSheetInfoTab());

@@ -35,6 +35,7 @@ public enum Tab
 	EQUIPPING("Equipping", "in_equipping", 1),
 	DESCRIPTION("Description", "in_descrip"),
 	TACTICAL("Tactical", "in_tactical"),
+	CONJURATIONS("Conjurations", "in_conjurations"),
 	TEMPBONUS("TempMod", "in_InfoTempMod"),
 	COMPANIONS("Companions", "in_companions"),
 	CHARACTERSHEET("Character Sheet", "in_character_sheet");

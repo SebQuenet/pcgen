@@ -84,6 +84,17 @@ public class OperationRegistryTest
 	}
 
 	@Test
+	public void offersToWriteReadAndClearACatalogOfConjurations()
+	{
+		OperationRegistry registry = OperationRegistry.forSession(new PcgenSession());
+
+		List<String> served = registry.all().stream().map(Operation::name).toList();
+
+		assertTrue(served.containsAll(List.of("set_conjuration_sheet", "get_conjuration_sheet", "clear_conjuration_sheet")),
+			() -> "served: " + served);
+	}
+
+	@Test
 	public void namesEveryOperationOnlyOnce()
 	{
 		OperationRegistry registry = OperationRegistry.forSession(new PcgenSession());

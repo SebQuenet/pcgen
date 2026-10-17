@@ -121,6 +121,7 @@ import pcgen.facade.core.CharacterLevelsFacade.CharacterLevelEvent;
 import pcgen.facade.core.CharacterLevelsFacade.HitPointListener;
 import pcgen.facade.core.CharacterStubFacade;
 import pcgen.facade.core.CompanionSupportFacade;
+import pcgen.facade.core.ConjurationSheetFacade;
 import pcgen.facade.core.CoreViewNodeFacade;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.core.DescriptionFacade;
@@ -254,6 +255,7 @@ public class CharacterFacadeImpl
 	private CharacterAbilities characterAbilities;
 	private DescriptionFacade descriptionFacade;
 	private TacticalSheetFacade tacticalSheetFacade;
+	private ConjurationSheetFacade conjurationSheetFacade;
 	private SpellSupportFacadeImpl spellSupportFacade;
 	private CompanionSupportFacadeImpl companionSupportFacade;
 	private TodoManager todoManager;
@@ -318,6 +320,7 @@ public class CharacterFacadeImpl
 		characterAbilities = new CharacterAbilities(theCharacter, delegate, dataSet, todoManager);
 		descriptionFacade = new DescriptionFacadeImpl(theCharacter);
 		tacticalSheetFacade = new TacticalSheetFacadeImpl(theCharacter, this);
+		conjurationSheetFacade = new ConjurationSheetFacadeImpl(theCharacter);
 		spellSupportFacade = new SpellSupportFacadeImpl(theCharacter, delegate, dataSet, todoManager, this);
 
 		name = new DefaultReferenceFacade<>(charDisplay.getName());
@@ -2543,6 +2546,12 @@ public class CharacterFacadeImpl
 	public TacticalSheetFacade getTacticalSheetFacade()
 	{
 		return tacticalSheetFacade;
+	}
+
+	@Override
+	public ConjurationSheetFacade getConjurationSheetFacade()
+	{
+		return conjurationSheetFacade;
 	}
 
 	@Override

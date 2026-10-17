@@ -98,6 +98,8 @@ import pcgen.cdom.facet.ConditionalAbilityFacet;
 import pcgen.cdom.facet.ConditionallyGrantedAbilityFacet;
 import pcgen.cdom.facet.ConditionallyGrantedAvailableSpellFacet;
 import pcgen.cdom.facet.ConditionallyGrantedKnownSpellFacet;
+import pcgen.cdom.facet.ConjurationCatalogFacet;
+import pcgen.cdom.facet.ConjurationSessionFacet;
 import pcgen.cdom.facet.DeityWeaponProfFacet;
 import pcgen.cdom.facet.DirectAbilityFacet;
 import pcgen.cdom.facet.DomainSpellCountFacet;
@@ -250,6 +252,7 @@ import pcgen.core.character.SpellBook;
 import pcgen.core.character.SpellInfo;
 import pcgen.core.chooser.ChoiceManagerList;
 import pcgen.core.chooser.ChooserUtilities;
+import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.display.CharacterDisplay;
 import pcgen.core.display.SkillDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
@@ -307,6 +310,10 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	private final NoteItemFacet noteItemFacet = FacetLibrary.getFacet(NoteItemFacet.class);
 	private final TacticalPlanFacet tacticalPlanFacet = FacetLibrary.getFacet(TacticalPlanFacet.class);
 	private final TacticalSessionFacet tacticalSessionFacet = FacetLibrary.getFacet(TacticalSessionFacet.class);
+	private final ConjurationCatalogFacet conjurationCatalogFacet =
+			FacetLibrary.getFacet(ConjurationCatalogFacet.class);
+	private final ConjurationSessionFacet conjurationSessionFacet =
+			FacetLibrary.getFacet(ConjurationSessionFacet.class);
 	private final GlobalAddedSkillCostFacet globalAddedSkillCostFacet =
 			FacetLibrary.getFacet(GlobalAddedSkillCostFacet.class);
 	private final LocalAddedSkillCostFacet localAddedSkillCostFacet =
@@ -2438,6 +2445,63 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 			return;
 		}
 		if (tacticalSessionFacet.set(id, state))
+		{
+			setDirty(true);
+		}
+	}
+
+	/**
+	 * Sets the source text of this character's catalog of conjurations.
+	 *
+	 * @param source the catalog's source text. Never null, and never blank: use
+	 *               {@link #clearConjurations()} to remove a catalog.
+	 */
+	public void setConjurationCatalog(final String source)
+	{
+		if (source == null || source.isBlank())
+		{
+			throw new IllegalArgumentException("Use clearConjurations to remove a catalog of conjurations");
+		}
+		if (conjurationCatalogFacet.set(id, source))
+		{
+			setDirty(true);
+		}
+	}
+
+	/**
+	 * Removes this character's catalog of conjurations, if it has one, and
+	 * forgets the creatures it had conjured into the fight.
+	 */
+	public void clearConjurations()
+	{
+		boolean removed = conjurationCatalogFacet.remove(id) != null;
+		removed |= conjurationSessionFacet.remove(id) != null;
+		if (removed)
+		{
+			setDirty(true);
+		}
+	}
+
+	/**
+	 * Records the creatures this character has conjured into the fight.
+	 *
+	 * @param session the fight as it stands. Never null.
+	 */
+	public void setConjurationSession(final ConjurationSession session)
+	{
+		if (session == null)
+		{
+			throw new IllegalArgumentException("A fight needs a state, even an empty one");
+		}
+		if (session.isEmpty())
+		{
+			if (conjurationSessionFacet.remove(id) != null)
+			{
+				setDirty(true);
+			}
+			return;
+		}
+		if (conjurationSessionFacet.set(id, session))
 		{
 			setDirty(true);
 		}

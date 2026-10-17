@@ -32,6 +32,7 @@ import java.util.IdentityHashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.OptionalInt;
 import java.util.Set;
 import java.util.StringTokenizer;
 
@@ -118,6 +119,11 @@ import pcgen.core.character.SpellBook;
 import pcgen.core.character.SpellInfo;
 import pcgen.core.chooser.ChoiceManagerList;
 import pcgen.core.chooser.ChooserUtilities;
+import pcgen.core.conjurations.ConjurationSession;
+import pcgen.core.conjurations.ConjuredCreature;
+import pcgen.core.conjurations.SummonCatalogParser;
+import pcgen.core.conjurations.SummonParseError;
+import pcgen.core.conjurations.SummonParseFailure;
 import pcgen.core.display.BonusDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
 import pcgen.core.prereq.PrereqHandler;
@@ -180,6 +186,9 @@ final class PCGVer2Parser implements PCGParser
 	private RaceInputFacet raceInputFacet = FacetLibrary.getFacet(RaceInputFacet.class);
 	private DomainInputFacet domainInputFacet = FacetLibrary.getFacet(DomainInputFacet.class);
 	private TemplateInputFacet templateInputFacet = FacetLibrary.getFacet(TemplateInputFacet.class);
+
+	/** A CONJURED line holds a creature's name, number, damage and rounds left. */
+	private static final int CONJURED_FIELDS = 4;
 
 	/**
 	 * DO NOT CHANGE line separator.
@@ -1183,6 +1192,20 @@ final class PCGVer2Parser implements PCGParser
 			? cache.get(IOConstants.TAG_TACTICALDAMAGE) : List.of(),
 			cache.containsKey(IOConstants.TAG_TACTICALSPENT) ? cache.get(IOConstants.TAG_TACTICALSPENT) : List.of(),
 			cache.containsKey(IOConstants.TAG_TACTICALBUFF) ? cache.get(IOConstants.TAG_TACTICALBUFF) : List.of());
+
+		/*
+		 * #Conjurations
+		 * CONJURATIONS:## Summon Monster IV&nl;summon&colon; Hound Archon
+		 * CONJURATIONDURATION:12
+		 * CONJURED:Hound Archon|2|14|7
+		 */
+		if (cache.containsKey(IOConstants.TAG_CONJURATIONS))
+		{
+			parseConjurationsLine(cache.get(IOConstants.TAG_CONJURATIONS).getFirst());
+		}
+		parseConjuredLines(cache.containsKey(IOConstants.TAG_CONJURATIONDURATION)
+			? cache.get(IOConstants.TAG_CONJURATIONDURATION) : List.of(),
+			cache.containsKey(IOConstants.TAG_CONJURED) ? cache.get(IOConstants.TAG_CONJURED) : List.of());
 
 		/*
 		 * #Character Bio
@@ -3302,6 +3325,78 @@ final class PCGVer2Parser implements PCGParser
 				warnings.add("Illegal tactical session state: " + e.getMessage());
 			}
 		}
+	}
+
+	/**
+	 * Reads the catalog of conjurations off its line. Text that no longer reads
+	 * is kept as it was, with a warning per error, rather than lost.
+	 *
+	 * @param line the CONJURATIONS line, tag and all.
+	 */
+	private void parseConjurationsLine(final String line)
+	{
+		final String source = EntityEncoder.decode(line.substring(IOConstants.TAG_CONJURATIONS.length() + 1));
+		if (source.isBlank())
+		{
+			return;
+		}
+		thePC.setConjurationCatalog(source);
+		if (SummonCatalogParser.parse(source) instanceof SummonParseFailure failure)
+		{
+			for (SummonParseError error : failure.errors())
+			{
+				warnings.add("Conjurations, line " + error.line() + ": " + error.message());
+			}
+		}
+	}
+
+	/**
+	 * Reads the creatures conjured into the fight. A line that does not make
+	 * sense is dropped with a warning rather than losing the rest.
+	 *
+	 * @param durationLines the CONJURATIONDURATION lines, in file order.
+	 * @param conjuredLines the CONJURED lines, in file order.
+	 */
+	private void parseConjuredLines(final List<String> durationLines, final List<String> conjuredLines)
+	{
+		int duration = 0;
+		for (final String line : durationLines)
+		{
+			final String text = line.substring(IOConstants.TAG_CONJURATIONDURATION.length() + 1).strip();
+			try
+			{
+				duration = Math.max(Integer.parseInt(text), 0);
+			}
+			catch (NumberFormatException nfe)
+			{
+				warnings.add("Conjuration duration that is not a number was dropped: " + text);
+			}
+		}
+
+		ConjurationSession fight = new ConjurationSession(duration, List.of());
+		for (final String line : conjuredLines)
+		{
+			final String body = line.substring(IOConstants.TAG_CONJURED.length() + 1);
+			final String[] fields = body.split("\\|", -1);
+			if (fields.length != CONJURED_FIELDS)
+			{
+				warnings.add("Conjured creature line without its four fields was dropped: " + body);
+				continue;
+			}
+			try
+			{
+				final OptionalInt rounds =
+						fields[3].isBlank() ? OptionalInt.empty() : OptionalInt.of(Integer.parseInt(fields[3].strip()));
+				fight = fight.with(new ConjuredCreature(EntityEncoder.decode(fields[0]),
+					Integer.parseInt(fields[1].strip()), Integer.parseInt(fields[2].strip()), rounds));
+			}
+			catch (IllegalArgumentException e)
+			{
+				warnings.add("Conjured creature line that does not make sense was dropped: " + body + " ("
+					+ e.getMessage() + ')');
+			}
+		}
+		thePC.setConjurationSession(fight);
 	}
 
 	/**

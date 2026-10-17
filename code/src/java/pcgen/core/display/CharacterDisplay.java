@@ -52,6 +52,8 @@ import pcgen.cdom.enumeration.SkillFilter;
 import pcgen.cdom.facet.ActiveSpellsFacet;
 import pcgen.cdom.facet.AutoLanguageGrantedFacet;
 import pcgen.cdom.facet.AutoLanguageUnconditionalFacet;
+import pcgen.cdom.facet.ConjurationCatalogFacet;
+import pcgen.cdom.facet.ConjurationSessionFacet;
 import pcgen.cdom.facet.DamageReductionFacet;
 import pcgen.cdom.facet.EquipSetFacet;
 import pcgen.cdom.facet.EquipmentFacet;
@@ -148,6 +150,7 @@ import pcgen.core.SubClass;
 import pcgen.core.Vision;
 import pcgen.core.WeaponProf;
 import pcgen.core.character.CharacterSpell;
+import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.character.EquipSet;
 import pcgen.core.character.Follower;
 import pcgen.core.character.SpellBook;
@@ -214,6 +217,8 @@ public class CharacterDisplay
 	private NoteItemFacet noteItemFacet = FacetLibrary.getFacet(NoteItemFacet.class);
 	private TacticalPlanFacet tacticalPlanFacet = FacetLibrary.getFacet(TacticalPlanFacet.class);
 	private TacticalSessionFacet tacticalSessionFacet = FacetLibrary.getFacet(TacticalSessionFacet.class);
+	private ConjurationCatalogFacet conjurationCatalogFacet = FacetLibrary.getFacet(ConjurationCatalogFacet.class);
+	private ConjurationSessionFacet conjurationSessionFacet = FacetLibrary.getFacet(ConjurationSessionFacet.class);
 	private SubRaceFacet subRaceFacet = FacetLibrary.getFacet(SubRaceFacet.class);
 	private UserSpecialAbilityFacet userSpecialAbilityFacet = FacetLibrary.getFacet(UserSpecialAbilityFacet.class);
 	private SkillRankFacet skillRankFacet = FacetLibrary.getFacet(SkillRankFacet.class);
@@ -1502,6 +1507,28 @@ public class CharacterDisplay
 	{
 		return getTacticalSheet()
 			.map(sheet -> sheet.sections().stream().mapToInt(section -> section.steps().size()).sum()).orElse(0);
+	}
+
+	/**
+	 * The source text of the character's catalog of conjurations, which is what
+	 * the character actually stores.
+	 *
+	 * @return the catalog's source text, empty when the character has none.
+	 */
+	public Optional<String> getConjurationCatalog()
+	{
+		return Optional.ofNullable(conjurationCatalogFacet.get(id));
+	}
+
+	/**
+	 * The creatures the character has conjured into the fight.
+	 *
+	 * @return the fight as it stands, empty when nobody is in play.
+	 */
+	public ConjurationSession getConjurationSession()
+	{
+		ConjurationSession session = conjurationSessionFacet.get(id);
+		return (session == null) ? ConjurationSession.empty() : session;
 	}
 
 	/**

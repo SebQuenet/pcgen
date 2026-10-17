@@ -15,18 +15,19 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package pcgen.gui2.tabs.tactics;
+package pcgen.gui2.tabs;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.IOException;
 import java.io.StringWriter;
 import java.nio.file.Path;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.function.Function;
 
 import pcgen.facade.core.CharacterFacade;
-import pcgen.facade.core.TacticalSheetFacade;
 import pcgen.io.ExportException;
 import pcgen.io.ExportHandler;
 import pcgen.system.ConfigurationSettings;
@@ -40,25 +41,41 @@ import javafx.scene.web.WebView;
 import netscape.javascript.JSObject;
 
 /**
- * Shows the rendered tactical sheet, and lets it write back.
+ * Shows a character rendered through an output sheet, and lets the page write
+ * back.
  *
  * <p>
  * The page is the same HTML the export writes to a file: one renderer, two
- * consumers. Inside PCGen a bridge is planted on the page's window, so ticking
- * a resource reaches the character; the exported file finds no bridge.
+ * consumers. Inside PCGen a bridge is planted on the page's window, so what the
+ * page does reaches the character; the exported file finds no bridge.
  */
-public final class TacticalSheetPanel extends JFXPanel
+public final class RenderedSheetPanel extends JFXPanel
 {
 	private static final long DEBOUNCE_DELAY_MS = 200;
-	private static final String TEMPLATE = "tactics" + File.separator + "tactical.htm.ftl";
+	private static final String EMPTY_PAGE = "<html><body></body></html>";
 
+	private final String template;
+	private final Function<CharacterFacade, Object> bridgeFor;
 	private final Executor executor = Executors.newSingleThreadExecutor();
 	private final AtomicBoolean refreshPending = new AtomicBoolean(false);
 	private final AtomicBoolean sceneInitialised = new AtomicBoolean(false);
 	private WebView browser;
 	private CharacterFacade character;
-	private TacticalBridge bridge;
+	/** Held here because the page holds it only weakly: a bridge nobody keeps is collected. */
+	private Object bridge;
 	private volatile String lastRenderedContent;
+
+	/**
+	 * @param template  the output sheet to render, relative to the output
+	 *                  sheets directory
+	 * @param bridgeFor what the page of a character may call back into; its
+	 *                  public methods are what the page's script sees
+	 */
+	public RenderedSheetPanel(String template, Function<CharacterFacade, Object> bridgeFor)
+	{
+		this.template = template;
+		this.bridgeFor = bridgeFor;
+	}
 
 	/**
 	 * Attaching a scene to a panel that is not yet on screen wedges JavaFX
@@ -83,12 +100,12 @@ public final class TacticalSheetPanel extends JFXPanel
 	}
 
 	/**
-	 * @param shown the character whose sheet to show, null for none.
+	 * @param shown the character whose page to show, null for none.
 	 */
 	public void setCharacter(CharacterFacade shown)
 	{
 		character = shown;
-		bridge = (shown == null) ? null : new TacticalBridge(shown.getTacticalSheetFacade());
+		bridge = (shown == null) ? null : bridgeFor.apply(shown);
 		lastRenderedContent = null;
 		refresh();
 	}
@@ -118,7 +135,7 @@ public final class TacticalSheetPanel extends JFXPanel
 
 	private void render()
 	{
-		String content = (character == null) ? "<html><body></body></html>" : exported();
+		String content = (character == null) ? EMPTY_PAGE : exported();
 		if (content.equals(lastRenderedContent))
 		{
 			return;
@@ -134,21 +151,21 @@ public final class TacticalSheetPanel extends JFXPanel
 
 	private String exported()
 	{
-		File template = Path.of(ConfigurationSettings.getOutputSheetsDir(), TEMPLATE).toFile();
-		if (!template.isFile())
+		File sheet = Path.of(ConfigurationSettings.getOutputSheetsDir(), template).toFile();
+		if (!sheet.isFile())
 		{
-			Logging.errorPrint("No tactical sheet template at " + template);
-			return "<html><body></body></html>";
+			Logging.errorPrint("No output sheet at " + sheet);
+			return EMPTY_PAGE;
 		}
 		StringWriter written = new StringWriter();
 		try (BufferedWriter out = new BufferedWriter(written))
 		{
-			character.export(ExportHandler.createExportHandler(template), out);
+			character.export(ExportHandler.createExportHandler(sheet), out);
 		}
-		catch (ExportException | java.io.IOException e)
+		catch (ExportException | IOException e)
 		{
-			Logging.errorPrint("Failed to render the tactical sheet", e);
-			return "<html><body></body></html>";
+			Logging.errorPrint("Failed to render " + template, e);
+			return EMPTY_PAGE;
 		}
 		return written.toString();
 	}
@@ -175,16 +192,7 @@ public final class TacticalSheetPanel extends JFXPanel
 		}
 		catch (RuntimeException e)
 		{
-			Logging.errorPrint("Could not give the tactical sheet its bridge to PCGen", e);
+			Logging.errorPrint("Could not give " + template + " its bridge to PCGen", e);
 		}
-	}
-
-	/**
-	 * @return the facade the panel writes through, null when no character is
-	 *         shown.
-	 */
-	public TacticalSheetFacade getSheet()
-	{
-		return (character == null) ? null : character.getTacticalSheetFacade();
 	}
 }

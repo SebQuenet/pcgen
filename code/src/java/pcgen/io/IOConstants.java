@@ -168,6 +168,13 @@ interface IOConstants
 	/** CLASSSKILL */
 	String TAG_CLASSSKILL = "CLASSSKILL";
 
+	/** Conjurations: the catalog's whole source text, entity encoded, on one line */
+	String TAG_CONJURATIONS = "CONJURATIONS";
+	/** Conjurations: how many rounds a newly conjured creature stays */
+	String TAG_CONJURATIONDURATION = "CONJURATIONDURATION";
+	/** Conjurations: one line per creature in play, its name, number, damage and rounds left */
+	String TAG_CONJURED = "CONJURED";
+
 	/** COST - Currently (20/03/2006) only being used by CMP data sources */
 	String TAG_COST = "COST";
 

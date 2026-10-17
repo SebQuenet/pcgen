@@ -199,6 +199,8 @@
 		<property name="templateFacet" ref="templateFacet"/>
 		<property name="levelFacet" ref="levelFacet"/>
 	</bean>
+	<bean id="conjurationCatalogFacet" class="pcgen.cdom.facet.ConjurationCatalogFacet"/>
+	<bean id="conjurationSessionFacet" class="pcgen.cdom.facet.ConjurationSessionFacet"/>
 	<!-- D -->
 	<bean id="damageReductionFacet" class="pcgen.cdom.facet.DamageReductionFacet">
 		<property name="prerequisiteFacet" ref="prerequisiteFacet"/>

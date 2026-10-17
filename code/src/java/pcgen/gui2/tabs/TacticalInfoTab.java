@@ -17,22 +17,12 @@
  */
 package pcgen.gui2.tabs;
 
-import java.awt.BorderLayout;
-import java.awt.Font;
+import java.io.File;
 import java.util.List;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.Timer;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-
-import pcgen.core.tactics.TacticalParseError;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.TacticalSheetFacade;
-import pcgen.gui2.tabs.tactics.TacticalSheetPanel;
+import pcgen.gui2.tabs.tactics.TacticalBridge;
 import pcgen.gui2.tools.FlippingSplitPane;
 import pcgen.system.LanguageBundle;
 import pcgen.util.enumeration.Tab;
@@ -55,34 +45,20 @@ import pcgen.util.enumeration.Tab;
 @SuppressWarnings("serial")
 public class TacticalInfoTab extends FlippingSplitPane implements CharacterInfoTab
 {
-	private static final int TYPING_PAUSE_MS = 300;
+	private static final String TEMPLATE = "tactics" + File.separator + "tactical.htm.ftl";
+	private static final double EDITOR_SHARE = 0.38;
 
 	private final TabTitle tabTitle = new TabTitle(Tab.TACTICAL);
-	private final JTextArea sourceEditor = new JTextArea();
-	private final JLabel banner = new JLabel();
-	private final TacticalSheetPanel sheetPanel = new TacticalSheetPanel();
+	private final SourceEditorPanel editorPanel = new SourceEditorPanel();
+	private final RenderedSheetPanel sheetPanel =
+			new RenderedSheetPanel(TEMPLATE, character -> new TacticalBridge(character.getTacticalSheetFacade()));
 
 	public TacticalInfoTab()
 	{
 		super(HORIZONTAL_SPLIT);
-		initComponents();
-	}
-
-	private void initComponents()
-	{
-		sourceEditor.setFont(new Font(Font.MONOSPACED, Font.PLAIN, sourceEditor.getFont().getSize()));
-		sourceEditor.setTabSize(2);
-		sourceEditor.setLineWrap(false);
-
-		banner.setBorder(javax.swing.BorderFactory.createEmptyBorder(3, 6, 3, 6));
-
-		JPanel editorPanel = new JPanel(new BorderLayout());
-		editorPanel.add(new JScrollPane(sourceEditor), BorderLayout.CENTER);
-		editorPanel.add(banner, BorderLayout.SOUTH);
-
 		setLeftComponent(editorPanel);
 		setRightComponent(sheetPanel);
-		setResizeWeight(0.38);
+		setResizeWeight(EDITOR_SHARE);
 	}
 
 	@Override
@@ -113,95 +89,52 @@ public class TacticalInfoTab extends FlippingSplitPane implements CharacterInfoT
 
 	/**
 	 * Keeps one character's plan wired to the editor and the rendered sheet.
-	 *
-	 * <p>
-	 * Every keystroke restarts a short timer rather than storing at once, so a
-	 * word being typed does not each time rewrite the character and re-render
-	 * the page.
 	 */
-	private final class TacticalSheetHandler implements DocumentListener
+	private final class TacticalSheetHandler implements SourceEditorPanel.EditedText
 	{
 		private final CharacterFacade character;
 		private final TacticalSheetFacade sheet;
-		private final Timer typingPause;
-		private boolean loading;
 
 		private TacticalSheetHandler(CharacterFacade character)
 		{
 			this.character = character;
 			this.sheet = character.getTacticalSheetFacade();
-			typingPause = new Timer(TYPING_PAUSE_MS, event -> store());
-			typingPause.setRepeats(false);
 		}
 
 		private void install()
 		{
-			loading = true;
-			sourceEditor.setText(sheet.getPlanSource());
-			sourceEditor.setCaretPosition(0);
-			loading = false;
-			showErrors(sheet.errorsIn(sourceEditor.getText()));
-			sourceEditor.getDocument().addDocumentListener(this);
+			editorPanel.install(this);
 			sheetPanel.setCharacter(character);
 		}
 
 		private void uninstall()
 		{
-			typingPause.stop();
-			sourceEditor.getDocument().removeDocumentListener(this);
-			store();
+			editorPanel.uninstall();
 			sheetPanel.setCharacter(null);
 		}
 
-		private void store()
+		@Override
+		public String stored()
 		{
-			if (loading)
-			{
-				return;
-			}
-			String source = sourceEditor.getText();
-			List<TacticalParseError> errors = sheet.errorsIn(source);
-			showErrors(errors);
-			sheet.setPlanSource(source);
-			if (errors.isEmpty())
+			return sheet.getPlanSource();
+		}
+
+		@Override
+		public List<String> problemsIn(String text)
+		{
+			return sheet.errorsIn(text).stream()
+				.map(error -> LanguageBundle.getFormattedString("in_tactical_error", error.line(), error.message()))
+				.toList();
+		}
+
+		@Override
+		public void store(String text, boolean reads)
+		{
+			sheet.setPlanSource(text);
+			if (reads)
 			{
 				sheetPanel.refresh();
 			}
-		}
-
-		/**
-		 * @param errors what is wrong with the text as it stands, empty when it
-		 *               reads
-		 */
-		private void showErrors(List<TacticalParseError> errors)
-		{
-			if (errors.isEmpty())
-			{
-				banner.setText(" ");
-				return;
-			}
-			TacticalParseError first = errors.getFirst();
-			String more = (errors.size() > 1) ? " (+" + (errors.size() - 1) + ')' : "";
-			banner.setText(LanguageBundle.getFormattedString("in_tactical_error", first.line(), first.message())
-				+ more);
-		}
-
-		@Override
-		public void insertUpdate(DocumentEvent event)
-		{
-			typingPause.restart();
-		}
-
-		@Override
-		public void removeUpdate(DocumentEvent event)
-		{
-			typingPause.restart();
-		}
-
-		@Override
-		public void changedUpdate(DocumentEvent event)
-		{
-			typingPause.restart();
 		}
 	}
 }

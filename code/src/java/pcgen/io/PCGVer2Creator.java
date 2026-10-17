@@ -88,6 +88,8 @@ import pcgen.core.character.EquipSet;
 import pcgen.core.character.Follower;
 import pcgen.core.character.SpellBook;
 import pcgen.core.character.SpellInfo;
+import pcgen.core.conjurations.ConjurationSession;
+import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.display.BonusDisplay;
 import pcgen.core.display.CharacterDisplay;
 import pcgen.core.pclevelinfo.PCLevelInfo;
@@ -462,6 +464,13 @@ public final class PCGVer2Creator
 		appendNewline(buffer);
 		appendComment("Tactical Sheet", buffer); //$NON-NLS-1$
 		appendTacticalSheetLines(buffer);
+
+		/*
+		 * #Conjurations
+		 */
+		appendNewline(buffer);
+		appendComment("Conjurations", buffer); //$NON-NLS-1$
+		appendConjurationLines(buffer);
 
 		/*
 		 * #AgeSet Kit selections
@@ -1661,6 +1670,49 @@ public final class PCGVer2Creator
 				buffer.append(spent.getValue());
 				buffer.append(IOConstants.LINE_SEP);
 			});
+	}
+
+	/*
+	 * ###############################################################
+	 * Conjurations methods
+	 * ###############################################################
+	 */
+
+	/**
+	 * Writes the catalog of conjurations and the creatures in play.
+	 *
+	 * <p>
+	 * The catalog goes out as its source text on a single line, as the tactical
+	 * plan does. Each creature in play goes out on a line of its own, its name
+	 * entity encoded so that a pipe in it cannot be read as a separator.
+	 *
+	 * @param buffer the character file being built.
+	 */
+	private void appendConjurationLines(StringBuilder buffer)
+	{
+		charDisplay.getConjurationCatalog().ifPresent(catalog -> {
+			buffer.append(IOConstants.TAG_CONJURATIONS).append(':');
+			buffer.append(EntityEncoder.encode(catalog));
+			buffer.append(IOConstants.LINE_SEP);
+		});
+
+		ConjurationSession fight = charDisplay.getConjurationSession();
+		if (fight.duration() > 0)
+		{
+			buffer.append(IOConstants.TAG_CONJURATIONDURATION).append(':');
+			buffer.append(fight.duration());
+			buffer.append(IOConstants.LINE_SEP);
+		}
+		for (ConjuredCreature creature : fight.conjured())
+		{
+			buffer.append(IOConstants.TAG_CONJURED).append(':');
+			buffer.append(EntityEncoder.encode(creature.creature()));
+			buffer.append('|').append(creature.number());
+			buffer.append('|').append(creature.damage());
+			buffer.append('|');
+			creature.roundsLeft().ifPresent(buffer::append);
+			buffer.append(IOConstants.LINE_SEP);
+		}
 	}
 
 	private void appendPersonalityTrait1Line(StringBuilder buffer)

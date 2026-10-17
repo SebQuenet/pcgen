@@ -22,6 +22,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.OptionalInt;
 import java.util.Set;
 
 import pcgen.cdom.util.CControl;
@@ -32,6 +33,8 @@ import pcgen.core.PCClass;
 import pcgen.core.PCTemplate;
 import pcgen.core.SettingsHandler;
 import pcgen.core.Skill;
+import pcgen.core.conjurations.ConjurationSession;
+import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.tactics.TacticalSessionState;
 import pcgen.core.tactics.TacticalStep;
 import pcgen.core.tactics.TacticalSection;
@@ -288,6 +291,48 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 			  do: Cast bless
 			  note: Provokes
 			""", reloadedPC.getDisplay().getTacticalPlan().orElseThrow());
+	}
+
+	@Test
+	public void testConjurationCatalogSurvivesSeparatorCharacters()
+	{
+		finishLoad();
+		String catalog = """
+			## Summon Monster IV
+			summon: Hound Archon | "molosse"
+			  role: Tank, Buff
+			  attack: +11/+6 sword\\n+5 bite
+			  note: SR 15: immune to [electricity] & petrification
+			""";
+		pc.setConjurationCatalog(catalog);
+		runRoundRobin(null);
+		assertEquals(catalog, reloadedPC.getDisplay().getConjurationCatalog().orElseThrow());
+	}
+
+	@Test
+	public void testConjuredCreaturesSurviveASave()
+	{
+		finishLoad();
+		pc.setConjurationCatalog("## Summon Monster IV\nsummon: Hound Archon\n  hp: 51\n");
+		ConjurationSession fight = new ConjurationSession(12, List.of(
+			new ConjuredCreature("Hound Archon", 1, 14, OptionalInt.of(7)),
+			new ConjuredCreature("Hound Archon", 2, 0, OptionalInt.empty()),
+			new ConjuredCreature("Archon: hound | [large]", 1, 3, OptionalInt.of(0))));
+		pc.setConjurationSession(fight);
+		runRoundRobin(null);
+		assertEquals(fight, reloadedPC.getDisplay().getConjurationSession());
+	}
+
+	@Test
+	public void testConjuredCreaturesAreForgottenWithTheCatalog()
+	{
+		finishLoad();
+		pc.setConjurationCatalog("## Summon Monster IV\nsummon: Hound Archon\n");
+		pc.setConjurationSession(new ConjurationSession(12,
+			List.of(new ConjuredCreature("Hound Archon", 1, 14, OptionalInt.of(7)))));
+		pc.clearConjurations();
+		runRoundRobin(null);
+		assertEquals(ConjurationSession.empty(), reloadedPC.getDisplay().getConjurationSession());
 	}
 
 	@Test
