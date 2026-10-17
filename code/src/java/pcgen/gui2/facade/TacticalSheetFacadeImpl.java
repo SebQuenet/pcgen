@@ -142,7 +142,7 @@ class TacticalSheetFacadeImpl implements TacticalSheetFacade
 		}
 		for (TempBonusFacade bonus : characterFacade.getTempBonuses())
 		{
-			if (bonus.toString().equalsIgnoreCase(name.strip()))
+			if (bonus.toString().equalsIgnoreCase(name.strip()) || bonus.getKeyName().equalsIgnoreCase(name.strip()))
 			{
 				return Optional.of(bonus);
 			}

@@ -136,7 +136,7 @@ public final class TemplateService
 	{
 		for (TempBonusFacade candidate : candidates)
 		{
-			if (candidate.toString().equalsIgnoreCase(wanted))
+			if (candidate.toString().equalsIgnoreCase(wanted) || candidate.getKeyName().equalsIgnoreCase(wanted))
 			{
 				return candidate;
 			}

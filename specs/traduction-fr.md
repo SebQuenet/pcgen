@@ -77,23 +77,21 @@ parenthèses et des virgules, que `.properties` obligerait à échapper.
 - Une ligne qui désigne un objet absent, ou un `TEXT` dont les marqueurs `%n` diffèrent de
   l'original, est ignorée et signalée dans le journal de chargement, comme les erreurs de
   `.lst`. Elle ne fait pas échouer le chargement.
-- Les traductions sont rangées dans un `TranslationCatalog` attaché au jeu de données chargé :
-
-```java
-public interface TranslationCatalog
-{
-	String name(CDOMObject object);                  // falls back to getDisplayName()
-	String outputName(CDOMObject object);            // falls back to OutputNameFormatting
-	Optional<String> text(CDOMObject object, TranslatedField field);
-}
-```
-
-  L'anglais utilise une implémentation qui renvoie toujours l'original. Les points
-  d'affichage reçoivent le catalogue par injection, jamais par un singleton.
+- La traduction est rangée sur l'objet lui-même, à côté de l'anglais, comme `OUTPUTNAME` :
+  `StringKey.LOCALIZED_NAME`, `LOCALIZED_OUTPUT_NAME`, `LOCALIZED_TEMP_DESCRIPTION`, et
+  `ObjectKey.LOCALIZED_DESCRIPTION`, `LOCALIZED_BENEFIT` pour les gabarits, qui gardent les
+  variables et les prérequis de l'original (`Description.withTemplate`). Un catalogue injecté
+  était prévu ; il ne pouvait pas atteindre `PObject.toString()`, qui n'a pas de dépendances.
+  Ranger la traduction sur l'objet la rend aussi propre au jeu de données chargé, sans état global.
+- `CDOMObject.getLocalizedName()` renvoie le nom traduit, sinon le nom anglais.
+- Renommer un objet (`setDisplayName`) efface son nom traduit, qui traduisait l'ancien nom :
+  un équipement agrandi ou personnalisé reprend son nom anglais complet.
+- Un objet porteur de plusieurs `DESC` ou `BENEFIT` n'en reçoit pas de traduction ; la ligne est
+  signalée.
 
 ## 5. Points d'affichage
 
-| Couche | Où brancher le catalogue |
+| Couche | Où lire la traduction |
 |---|---|
 | Fiches FreeMarker | `DisplayNameActor`, `OutputNameActor`, `DescriptionActor`, `CDOMObjectModel` |
 | Anciens jetons d'export (`.htm`) | `OutputNameFormatting.getOutputName` pour l'affichage, `BenefitFormatting`, jetons `DESC` |
@@ -101,11 +99,19 @@ public interface TranslationCatalog
 | Services headless | chaque modèle renvoyé garde `name` (la clé, à repasser en argument) et gagne `displayName` (le nom traduit) |
 | Webapp | affiche `displayName`, envoie `name` |
 
-`PObject.toString()` est un cas à vérifier objet par objet : s'il sert quelque part de clé
-(tri, comparaison, sérialisation), ce site doit passer à `getKeyName()` avant d'activer la
-traduction. L'inventaire de ces sites fait partie de l'étape 2 (§ 8).
+`PObject.toString()` (et ses redéfinitions dans `Spell`, `Equipment`, `EquipmentModifier`)
+renvoie le nom traduit. L'inventaire des endroits où ce nom servait de clé est fait par
+`PseudoTranslationTest` : il donne un nom factice à chaque objet chargé, rouvre les personnages
+Pathfinder de `code/testsuite` et vérifie que le `.pcg` réenregistré est identique. Constats :
 
-`Description.getDescription()` applique le gabarit traduit quand le catalogue en fournit un,
+- `Equipment` écrivait le nom affiché dans `CUSTOMIZATION:[…DATA:NAME=…]` ; il écrit désormais
+  le nom anglais (le même défaut existait avec l'option « nom de sortie »).
+- La recherche d'un bonus temporaire par nom (`TacticalSheetFacadeImpl`, `TemplateService`)
+  n'acceptait que le nom affiché ; elle accepte aussi la clé.
+- Les services headless renvoient tantôt `toString()`, tantôt `getDisplayName()` : c'est
+  l'objet de l'étape 4.
+
+`Description.getDescription()` applique le gabarit traduit quand l'objet en porte un,
 sinon l'original. La substitution des variables ne change pas.
 
 ## 6. Fiches de personnage
@@ -159,8 +165,8 @@ complète vise d'abord ces livres. Le reste est livré en traduction automatique
 Chaque étape est une PR de moins de 500 lignes, utilisable seule.
 
 1. **Interface** : bundle complété, libellés en dur sortis, langue appliquée en headless.
-2. **Catalogue** : format TSV, chargement, `TranslationCatalog`, inventaire des usages de
-   `toString()` comme clé.
+2. **Chargement** : format TSV, chargement, rangement sur l'objet, nom traduit dans
+   `toString()`, inventaire des usages de ce nom comme clé.
 3. **Affichage GUI et fiches** : branchement du § 5, fiches du § 6.
 4. **Affichage headless et webapp** : `displayName` dans les modèles de service.
 5. **Glossaire et script** : glossaire relu, script testé sur le Core Rulebook.

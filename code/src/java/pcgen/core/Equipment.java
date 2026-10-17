@@ -2797,7 +2797,8 @@ public final class Equipment extends PObject
 		{
 			base = baseItem.get();
 			sbuf.append(base.getKeyName());
-			sbuf.append(sep).append("NAME").append(endPart).append(toString(false));
+			// The saved name is the English one, whatever name is shown
+			sbuf.append(sep).append("NAME").append(endPart).append(withModifiedName(getDisplayName()));
 		}
 
 		// When you customise a piece of equipment using the customiser, it sets
