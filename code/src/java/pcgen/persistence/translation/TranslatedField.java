@@ -22,5 +22,13 @@ package pcgen.persistence.translation;
  */
 public enum TranslatedField
 {
-	NAME, OUTPUTNAME, DESC, BENEFIT, TEMPDESC, ABB
+	NAME, OUTPUTNAME, DESC, BENEFIT, TEMPDESC, ABB;
+
+	/**
+	 * @return whether an object can carry several texts in this field, each under its own prerequisites
+	 */
+	public boolean isDescription()
+	{
+		return this == DESC || this == BENEFIT;
+	}
 }

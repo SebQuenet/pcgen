@@ -112,9 +112,9 @@ public abstract class CDOMObject extends ConcretePrereqObject
 		StringKey.OUTPUT_NAME, StringKey.LOCALIZED_OUTPUT_NAME,
 		StringKey.TEMP_DESCRIPTION, StringKey.LOCALIZED_TEMP_DESCRIPTION);
 
-	private static final Map<ListKey<Description>, ObjectKey<Description>> TRANSLATED_DESCRIPTIONS = Map.of(
-		ListKey.DESCRIPTION, ObjectKey.LOCALIZED_DESCRIPTION,
-		ListKey.BENEFIT, ObjectKey.LOCALIZED_BENEFIT);
+	private static final Map<ListKey<Description>, ObjectKey<Map<String, Description>>> TRANSLATED_DESCRIPTIONS = Map.of(
+		ListKey.DESCRIPTION, ObjectKey.LOCALIZED_DESCRIPTIONS,
+		ListKey.BENEFIT, ObjectKey.LOCALIZED_BENEFITS);
 
 	/**
 	 * Support object to store the variable information on an object.
@@ -867,17 +867,23 @@ public abstract class CDOMObject extends ConcretePrereqObject
 	}
 
 	/**
-	 * The descriptions to show a person: the translation when one is loaded, otherwise the
-	 * English ones.
+	 * The descriptions to show a person: each one in translation when one is loaded, otherwise
+	 * in English.
 	 *
 	 * @param key DESCRIPTION or BENEFIT
 	 * @return the descriptions, empty when there are none
 	 */
 	public List<Description> getLocalizedDescriptions(ListKey<Description> key)
 	{
-		ObjectKey<Description> translatedKey = TRANSLATED_DESCRIPTIONS.get(key);
-		Description translated = translatedKey == null ? null : get(translatedKey);
-		return translated == null ? getSafeListFor(key) : List.of(translated);
+		ObjectKey<Map<String, Description>> translatedKey = TRANSLATED_DESCRIPTIONS.get(key);
+		Map<String, Description> translations = translatedKey == null ? null : get(translatedKey);
+		List<Description> english = getSafeListFor(key);
+		if (translations == null)
+		{
+			return english;
+		}
+		return english.stream().map(description -> translations.getOrDefault(description.getTemplate(), description))
+			.toList();
 	}
 
 	/**

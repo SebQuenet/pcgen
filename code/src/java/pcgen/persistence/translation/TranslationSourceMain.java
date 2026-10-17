@@ -101,8 +101,13 @@ public final class TranslationSourceMain
 		for (TranslatableText text : texts)
 		{
 			table.append(String.join("\t", text.type(), text.category(), text.key(), text.field().name(),
-				TableText.escape(text.english())))
-				.append('\n');
+				TableText.escape(text.english())));
+			if (text.isOneOfSeveral())
+			{
+				// The English column tells the object's descriptions apart
+				table.append('\t').append(TableText.escape(text.english()));
+			}
+			table.append('\n');
 		}
 		return Files.writeString(file, table, StandardCharsets.UTF_8);
 	}

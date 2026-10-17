@@ -24,8 +24,11 @@ package pcgen.persistence.translation;
  * @param category the ability category, empty for every other type
  * @param key      the object's key
  * @param field    the field the text comes from
- * @param english  the English text
+ * @param english       the English text
+ * @param isOneOfSeveral whether the object has other texts in the same field, so that a table
+ *                       must name this one by its English text
  */
-public record TranslatableText(String type, String category, String key, TranslatedField field, String english)
+public record TranslatableText(String type, String category, String key, TranslatedField field, String english,
+	boolean isOneOfSeveral)
 {
 }

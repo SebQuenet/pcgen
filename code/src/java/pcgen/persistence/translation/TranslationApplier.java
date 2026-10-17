@@ -18,7 +18,9 @@
 package pcgen.persistence.translation;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
@@ -113,30 +115,49 @@ public final class TranslationApplier
 			case ABB -> translated.put(StringKey.LOCALIZED_ABB, entry.text());
 			case DESC ->
 			{
-				return storeDescription(entry, translated, ListKey.DESCRIPTION, ObjectKey.LOCALIZED_DESCRIPTION);
+				return storeDescription(entry, translated, ListKey.DESCRIPTION, ObjectKey.LOCALIZED_DESCRIPTIONS);
 			}
 			case BENEFIT ->
 			{
-				return storeDescription(entry, translated, ListKey.BENEFIT, ObjectKey.LOCALIZED_BENEFIT);
+				return storeDescription(entry, translated, ListKey.BENEFIT, ObjectKey.LOCALIZED_BENEFITS);
 			}
 		}
 		return null;
 	}
 
 	private static String storeDescription(TranslationEntry entry, CDOMObject translated,
-		ListKey<Description> englishKey, ObjectKey<Description> translatedKey)
+		ListKey<Description> englishKey, ObjectKey<Map<String, Description>> translatedKey)
 	{
 		List<Description> english = translated.getSafeListFor(englishKey);
-		if (english.size() != 1)
+		Description original;
+		if (entry.english() == null)
 		{
-			return entry.key() + " has " + english.size() + " " + entry.field() + " entries; only one can be translated";
+			if (english.size() != 1)
+			{
+				return entry.key() + " has " + english.size() + " " + entry.field()
+					+ " entries; a line must name the English text it translates";
+			}
+			original = english.getFirst();
 		}
-		String englishTemplate = english.getFirst().getTemplate();
+		else
+		{
+			original = english.stream().filter(description -> description.getTemplate().equals(entry.english()))
+				.findFirst().orElse(null);
+			if (original == null)
+			{
+				// The book that adds this description is not loaded
+				return null;
+			}
+		}
+		String englishTemplate = original.getTemplate();
 		if (!placeholdersOf(englishTemplate).equals(placeholdersOf(entry.text())))
 		{
 			return "The translation does not name the same placeholders as \"" + englishTemplate + "\"";
 		}
-		translated.put(translatedKey, english.getFirst().withTemplate(entry.text()));
+		Map<String, Description> earlier = translated.get(translatedKey);
+		Map<String, Description> translations = new HashMap<>(earlier == null ? Map.of() : earlier);
+		translations.put(englishTemplate, original.withTemplate(entry.text()));
+		translated.put(translatedKey, translations);
 		return null;
 	}
 

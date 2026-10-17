@@ -77,7 +77,7 @@ class TranslationSourceExporterTest
 	{
 		spellFromTheCoreRulebook("Magic Missile");
 
-		assertEquals(List.of(new TranslatableText("SPELL", "", "Magic Missile", TranslatedField.NAME, "Magic Missile")),
+		assertEquals(List.of(new TranslatableText("SPELL", "", "Magic Missile", TranslatedField.NAME, "Magic Missile", false)),
 			exported());
 	}
 
@@ -90,7 +90,7 @@ class TranslationSourceExporterTest
 		fireball.addToListFor(ListKey.DESCRIPTION, description);
 
 		assertTrue(exported().contains(new TranslatableText("SPELL", "", "Fireball", TranslatedField.DESC,
-			"Deals %1d6 fire damage; a save halves it")));
+			"Deals %1d6 fire damage; a save halves it", false)));
 	}
 
 	@Test
@@ -126,7 +126,7 @@ class TranslationSourceExporterTest
 		abjurer.put(ObjectKey.SOURCE_CAMPAIGN, coreRulebook);
 		references.importObject(abjurer);
 
-		assertEquals(List.of(new TranslatableText("SUBCLASS", "Wizard", "Abjurer", TranslatedField.NAME, "Abjurer")),
+		assertEquals(List.of(new TranslatableText("SUBCLASS", "Wizard", "Abjurer", TranslatedField.NAME, "Abjurer", false)),
 			exported());
 	}
 
@@ -168,12 +168,14 @@ class TranslationSourceExporterTest
 	}
 
 	@Test
-	void leavesOutTheDescriptionsOfAnObjectThatHasSeveral()
+	void listsEachDescriptionOfAnObjectThatHasSeveral()
 	{
 		Spell fireball = spellFromTheCoreRulebook("Fireball");
 		fireball.addToListFor(ListKey.DESCRIPTION, new Description("First part"));
 		fireball.addToListFor(ListKey.DESCRIPTION, new Description("Second part"));
 
-		assertTrue(exported().stream().noneMatch(text -> text.field() == TranslatedField.DESC));
+		assertEquals(List.of(new TranslatableText("SPELL", "", "Fireball", TranslatedField.DESC, "First part", true),
+				new TranslatableText("SPELL", "", "Fireball", TranslatedField.DESC, "Second part", true)),
+			exported().stream().filter(text -> text.field() == TranslatedField.DESC).toList());
 	}
 }

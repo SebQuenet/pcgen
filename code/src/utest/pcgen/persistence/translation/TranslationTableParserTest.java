@@ -36,7 +36,7 @@ class TranslationTableParserTest
 		TranslationTable table = TranslationTableParser.parse("ABILITY\tFEAT\tPower Attack\tNAME\tAttaque en puissance\n");
 
 		assertEquals(List.of(new TranslationEntry(1, "ABILITY", "FEAT", "Power Attack", TranslatedField.NAME,
-			"Attaque en puissance")), table.entries());
+			"Attaque en puissance", null)), table.entries());
 	}
 
 	@Test
@@ -102,5 +102,21 @@ class TranslationTableParserTest
 			""");
 
 		assertEquals(2, table.entries().size());
+	}
+
+	@Test
+	void readsTheEnglishTextADescriptionLineTranslates()
+	{
+		TranslationTable table = TranslationTableParser.parse("SPELL\t\tFireball\tDESC\tPremière partie\tFirst part");
+
+		assertEquals("First part", table.entries().getFirst().english());
+	}
+
+	@Test
+	void reportsAnEnglishTextOnALineThatIsNotADescription()
+	{
+		TranslationTable table = TranslationTableParser.parse("SPELL\t\tFireball\tNAME\tBoule de feu\tFireball");
+
+		assertTrue(table.entries().isEmpty() && table.problems().size() == 1);
 	}
 }

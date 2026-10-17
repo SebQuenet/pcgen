@@ -26,7 +26,10 @@ package pcgen.persistence.translation;
  * @param key      the object's key, which never changes with the language
  * @param field    the field translated
  * @param text     the translated text
+ * @param english  for a description, the English template it translates, or null when the object
+ *                 has only one description
  */
-public record TranslationEntry(int line, String type, String category, String key, TranslatedField field, String text)
+public record TranslationEntry(int line, String type, String category, String key, TranslatedField field, String text,
+	String english)
 {
 }

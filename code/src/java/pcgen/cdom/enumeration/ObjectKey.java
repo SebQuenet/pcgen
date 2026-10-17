@@ -95,9 +95,15 @@ public class ObjectKey<T>
 
 	private static CaseInsensitiveMap<ObjectKey<?>> map = null;
 
-	public static final ObjectKey<Description> LOCALIZED_DESCRIPTION = new ObjectKey<>(null);
+	/**
+	 * The translated descriptions, by the English template each one translates.
+	 */
+	public static final ObjectKey<Map<String, Description>> LOCALIZED_DESCRIPTIONS = new ObjectKey<>(null);
 
-	public static final ObjectKey<Description> LOCALIZED_BENEFIT = new ObjectKey<>(null);
+	/**
+	 * The translated benefits, by the English template each one translates.
+	 */
+	public static final ObjectKey<Map<String, Description>> LOCALIZED_BENEFITS = new ObjectKey<>(null);
 
 	public static final ObjectKey<Boolean> USE_UNTRAINED = new ObjectKey<>(Boolean.TRUE);
 

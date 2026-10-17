@@ -31,6 +31,7 @@ public final class TranslationTableParser
 	private static final String COMMENT_MARKER = "#";
 	private static final String COLUMN_SEPARATOR = "\t";
 	private static final int COLUMN_COUNT = 5;
+	private static final int COLUMN_COUNT_WITH_ENGLISH = 6;
 
 	private TranslationTableParser()
 	{
@@ -50,10 +51,10 @@ public final class TranslationTableParser
 				continue;
 			}
 			String[] columns = line.split(COLUMN_SEPARATOR, -1);
-			if (columns.length != COLUMN_COUNT)
+			if (columns.length != COLUMN_COUNT && columns.length != COLUMN_COUNT_WITH_ENGLISH)
 			{
-				problems.add(new TranslationProblem(lineNumber,
-					"Expected " + COLUMN_COUNT + " tab separated columns, found " + columns.length));
+				problems.add(new TranslationProblem(lineNumber, "Expected " + COLUMN_COUNT + " or "
+					+ COLUMN_COUNT_WITH_ENGLISH + " tab separated columns, found " + columns.length));
 				continue;
 			}
 			TranslatedField field = fieldNamed(columns[3]);
@@ -67,8 +68,15 @@ public final class TranslationTableParser
 				problems.add(new TranslationProblem(lineNumber, "Empty text"));
 				continue;
 			}
+			String english = columns.length == COLUMN_COUNT_WITH_ENGLISH && !columns[5].isEmpty()
+				? TableText.unescape(columns[5]) : null;
+			if (english != null && !field.isDescription())
+			{
+				problems.add(new TranslationProblem(lineNumber, "Only a DESC or BENEFIT line names its English text"));
+				continue;
+			}
 			entries.add(new TranslationEntry(lineNumber, columns[0], columns[1], columns[2], field,
-				TableText.unescape(columns[4])));
+				TableText.unescape(columns[4]), english));
 		}
 		return new TranslationTable(entries, problems);
 	}

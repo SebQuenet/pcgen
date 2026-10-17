@@ -55,6 +55,12 @@ class TranslateTest(unittest.TestCase):
 
         self.assertEqual(FIREBALL_DESC.identity(), accepted[1].identity())
 
+    def test_keeps_the_english_text_that_tells_two_descriptions_apart(self):
+        warped = translate_data.Row("SPELL", "", "Fireball", "DESC", FIREBALL_DESC.text, FIREBALL_DESC.text)
+        accepted, _ = run(ReplayingClient("fireball_ok.json"), rows=(FIREBALL_NAME, warped))
+
+        self.assertEqual(FIREBALL_DESC.text, accepted[1].english)
+
     def test_sends_again_a_translation_that_lost_a_placeholder(self):
         accepted, refused = run(ReplayingClient("fireball_lost_placeholder.json", "fireball_desc_retry_ok.json"))
 
@@ -91,6 +97,15 @@ class TableTest(unittest.TestCase):
 
     def test_reads_back_what_it_appends_with_line_breaks_and_tabs(self):
         row = translate_data.Row("SPELL", "", "Fireball", "DESC", "Ligne un\nligne deux\tet \\ fin")
+        with tempfile.TemporaryDirectory() as folder:
+            table = Path(folder) / "core.fr.tsv"
+
+            translate_data.append_rows(table, [row])
+
+            self.assertEqual([row], translate_data.read_table(table))
+
+    def test_reads_back_the_english_text_of_one_description_among_several(self):
+        row = translate_data.Row("ABILITY", "Special Ability", "Aberrant", "DESC", "Sang déformé", "Warped blood")
         with tempfile.TemporaryDirectory() as folder:
             table = Path(folder) / "core.fr.tsv"
 

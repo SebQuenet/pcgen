@@ -18,13 +18,12 @@
 package pcgen.persistence.translation;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
+import pcgen.cdom.base.CDOMObject;
 import pcgen.cdom.enumeration.ListKey;
-import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.StringKey;
 import pcgen.cdom.enumeration.SubClassCategory;
 import pcgen.core.Ability;
@@ -168,7 +167,7 @@ class TranslationApplierTest
 
 		apply("SPELL\t\tFireball\tDESC\tInflige %1d6 dégâts de feu");
 
-		assertEquals("Inflige %1d6 dégâts de feu|CASTERLEVEL", spell.get(ObjectKey.LOCALIZED_DESCRIPTION).getPCCText());
+		assertEquals(List.of("Inflige %1d6 dégâts de feu|CASTERLEVEL"), shownDescriptionsOf(spell, ListKey.DESCRIPTION));
 	}
 
 	@Test
@@ -181,7 +180,8 @@ class TranslationApplierTest
 
 		List<TranslationProblem> problems = apply("SPELL\t\tFireball\tDESC\tInflige des dégâts de feu");
 
-		assertTrue(problems.size() == 1 && spell.get(ObjectKey.LOCALIZED_DESCRIPTION) == null);
+		assertTrue(problems.size() == 1
+			&& shownDescriptionsOf(spell, ListKey.DESCRIPTION).equals(List.of("Deals %1d6 fire damage|CASTERLEVEL")));
 	}
 
 	@Test
@@ -189,9 +189,9 @@ class TranslationApplierTest
 	{
 		Spell spell = spellNamed("Fireball");
 
-		apply("SPELL\t\tFireball\tDESC\tInflige des dégâts de feu");
+		List<TranslationProblem> problems = apply("SPELL\t\tFireball\tDESC\tInflige des dégâts de feu");
 
-		assertNull(spell.get(ObjectKey.LOCALIZED_DESCRIPTION));
+		assertTrue(problems.size() == 1 && shownDescriptionsOf(spell, ListKey.DESCRIPTION).isEmpty());
 	}
 
 	@Test
@@ -202,6 +202,84 @@ class TranslationApplierTest
 
 		apply("ABILITY\tFEAT\tPower Attack\tBENEFIT\tVous pouvez subir un malus");
 
-		assertEquals("Vous pouvez subir un malus", feat.get(ObjectKey.LOCALIZED_BENEFIT).getPCCText());
+		assertEquals(List.of("Vous pouvez subir un malus"), shownDescriptionsOf(feat, ListKey.BENEFIT));
+	}
+
+	private Spell spellDescribedAs(String name, String... templates)
+	{
+		Spell spell = spellNamed(name);
+		for (String template : templates)
+		{
+			spell.addToListFor(ListKey.DESCRIPTION, new Description(template));
+		}
+		return spell;
+	}
+
+	private static List<String> shownDescriptionsOf(CDOMObject object, ListKey<Description> key)
+	{
+		return object.getLocalizedDescriptions(key).stream().map(Description::getPCCText).toList();
+	}
+
+	@Test
+	void translatesEachDescriptionByItsEnglishText()
+	{
+		Spell aberrant = spellDescribedAs("Aberrant", "Alien blood", "Warped blood");
+
+		apply("""
+			SPELL\t\tAberrant\tDESC\tSang déformé\tWarped blood
+			SPELL\t\tAberrant\tDESC\tSang étranger\tAlien blood
+			""");
+
+		assertEquals(List.of("Sang étranger", "Sang déformé"), shownDescriptionsOf(aberrant, ListKey.DESCRIPTION));
+	}
+
+	@Test
+	void keepsInEnglishADescriptionNoLineTranslates()
+	{
+		Spell aberrant = spellDescribedAs("Aberrant", "Alien blood", "Warped blood");
+
+		apply("SPELL\t\tAberrant\tDESC\tSang étranger\tAlien blood");
+
+		assertEquals(List.of("Sang étranger", "Warped blood"), shownDescriptionsOf(aberrant, ListKey.DESCRIPTION));
+	}
+
+	@Test
+	void translatesTheOnlyDescriptionByItsEnglishText()
+	{
+		Spell aberrant = spellDescribedAs("Aberrant", "Alien blood");
+
+		apply("SPELL\t\tAberrant\tDESC\tSang étranger\tAlien blood");
+
+		assertEquals(List.of("Sang étranger"), shownDescriptionsOf(aberrant, ListKey.DESCRIPTION));
+	}
+
+	@Test
+	void ignoresWithoutReportAnEnglishTextOfABookNotLoaded()
+	{
+		spellDescribedAs("Aberrant", "Alien blood");
+
+		List<TranslationProblem> problems = apply("SPELL\t\tAberrant\tDESC\tSang déformé\tWarped blood");
+
+		assertTrue(problems.isEmpty());
+	}
+
+	@Test
+	void reportsALineWithoutEnglishTextForAnObjectWithSeveralDescriptions()
+	{
+		spellDescribedAs("Aberrant", "Alien blood", "Warped blood");
+
+		List<TranslationProblem> problems = apply("SPELL\t\tAberrant\tDESC\tSang étranger");
+
+		assertEquals(1, problems.size());
+	}
+
+	@Test
+	void checksTheMarkersAgainstTheDescriptionTheLineNames()
+	{
+		spellDescribedAs("Aberrant", "Alien blood", "Warped blood, %1 times");
+
+		List<TranslationProblem> problems = apply("SPELL\t\tAberrant\tDESC\tSang déformé\tWarped blood, %1 times");
+
+		assertEquals(1, problems.size());
 	}
 }

@@ -79,9 +79,11 @@ class Row:
     key: str
     field: str
     text: str
+    # The English template a DESC or BENEFIT row translates, when the object has several
+    english: str = ""
 
     def identity(self):
-        return (self.type, self.category, self.key, self.field)
+        return (self.type, self.category, self.key, self.field, self.english)
 
 
 @dataclass(frozen=True)
@@ -110,6 +112,8 @@ def read_table(path):
         columns = line.split("\t")
         if len(columns) == 5:
             rows.append(Row(*columns[:4], unescape(columns[4])))
+        elif len(columns) == 6:
+            rows.append(Row(*columns[:4], unescape(columns[4]), unescape(columns[5])))
     return rows
 
 
@@ -120,7 +124,10 @@ def append_rows(path, rows):
         if is_new:
             table.write(HEADER + "\n")
         for row in rows:
-            table.write("\t".join([row.type, row.category, row.key, row.field, escape(row.text)]) + "\n")
+            columns = [row.type, row.category, row.key, row.field, escape(row.text)]
+            if row.english:
+                columns.append(escape(row.english))
+            table.write("\t".join(columns) + "\n")
 
 
 def read_glossary(path):
@@ -217,7 +224,8 @@ def translate(source_rows, already_translated, client, glossary, model=DEFAULT_M
                 translated = answers.get(index)
                 reason = "no answer" if translated is None else refusal_reason(source, translated, glossary)
                 if reason is None:
-                    accepted.append(Row(source.type, source.category, source.key, source.field, translated))
+                    accepted.append(Row(source.type, source.category, source.key, source.field, translated,
+                                        source.english))
                     refused.pop(source.identity(), None)
                 else:
                     retry.append(source)

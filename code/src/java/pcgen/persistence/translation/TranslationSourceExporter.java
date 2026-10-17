@@ -118,26 +118,33 @@ public final class TranslationSourceExporter
 		addIfPresent(texts, type, category, object, TranslatedField.OUTPUTNAME, object.get(StringKey.OUTPUT_NAME));
 		addIfPresent(texts, type, category, object, TranslatedField.TEMPDESC, object.get(StringKey.TEMP_DESCRIPTION));
 		addIfPresent(texts, type, category, object, TranslatedField.ABB, object.get(StringKey.ABB_KR));
-		addIfPresent(texts, type, category, object, TranslatedField.DESC, onlyTemplate(object, ListKey.DESCRIPTION));
-		addIfPresent(texts, type, category, object, TranslatedField.BENEFIT, onlyTemplate(object, ListKey.BENEFIT));
+		addDescriptions(texts, type, category, object, TranslatedField.DESC, ListKey.DESCRIPTION);
+		addDescriptions(texts, type, category, object, TranslatedField.BENEFIT, ListKey.BENEFIT);
 		return texts;
 	}
 
-	/**
-	 * @return the template of the object's one description, or null: several cannot be translated
-	 */
-	private static String onlyTemplate(CDOMObject object, ListKey<Description> key)
+	private static void addDescriptions(List<TranslatableText> texts, String type, String category, CDOMObject object,
+		TranslatedField field, ListKey<Description> key)
 	{
 		List<Description> descriptions = object.getSafeListFor(key);
-		return descriptions.size() == 1 ? descriptions.getFirst().getTemplate() : null;
+		for (Description description : descriptions)
+		{
+			addIfPresent(texts, type, category, object, field, description.getTemplate(), descriptions.size() > 1);
+		}
 	}
 
 	private static void addIfPresent(List<TranslatableText> texts, String type, String category, CDOMObject object,
 		TranslatedField field, String english)
 	{
+		addIfPresent(texts, type, category, object, field, english, false);
+	}
+
+	private static void addIfPresent(List<TranslatableText> texts, String type, String category, CDOMObject object,
+		TranslatedField field, String english, boolean isOneOfSeveral)
+	{
 		if (english != null && !english.isBlank())
 		{
-			texts.add(new TranslatableText(type, category, object.getKeyName(), field, english));
+			texts.add(new TranslatableText(type, category, object.getKeyName(), field, english, isOneOfSeveral));
 		}
 	}
 }

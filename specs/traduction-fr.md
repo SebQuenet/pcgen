@@ -79,6 +79,13 @@ EQUIPMENT		Longsword	NAME	Épée longue
   (le texte avant le premier `|`) et doit contenir exactement les mêmes marqueurs `%1`…`%n`
   que l'original. Les variables qui suivent le `|` ne sont pas reprises : PCGen garde
   celles de l'objet anglais.
+- `ENGLISH`, sixième colonne facultative, réservée à `DESC` et `BENEFIT` : le gabarit anglais
+  que la ligne traduit. Un objet peut porter plusieurs `DESC` ou `BENEFIT`, chacun sous ses
+  prérequis, et souvent parce qu'un autre livre lui en ajoute un par `.MOD` (le Core Rulebook
+  décrit la lignée Aberrant, Ultimate Magic lui ajoute la description de sa variante). La
+  position d'une description dépend des livres chargés ; son texte anglais, non. L'export écrit
+  cette colonne pour chaque description d'un objet qui en porte plusieurs, et la laisse vide
+  pour un objet qui n'en porte qu'une.
 
 Le format est en TSV et non en `.properties` : les clés contiennent des espaces, des
 parenthèses et des virgules, que `.properties` obligerait à échapper.
@@ -93,15 +100,22 @@ parenthèses et des virgules, que `.properties` obligerait à échapper.
   `.lst`. Elle ne fait pas échouer le chargement.
 - La traduction est rangée sur l'objet lui-même, à côté de l'anglais, comme `OUTPUTNAME` :
   `StringKey.LOCALIZED_NAME`, `LOCALIZED_OUTPUT_NAME`, `LOCALIZED_TEMP_DESCRIPTION`, et
-  `ObjectKey.LOCALIZED_DESCRIPTION`, `LOCALIZED_BENEFIT` pour les gabarits, qui gardent les
+  `ObjectKey.LOCALIZED_DESCRIPTIONS`, `LOCALIZED_BENEFITS` pour les gabarits, qui gardent les
   variables et les prérequis de l'original (`Description.withTemplate`). Un catalogue injecté
   était prévu ; il ne pouvait pas atteindre `PObject.toString()`, qui n'a pas de dépendances.
   Ranger la traduction sur l'objet la rend aussi propre au jeu de données chargé, sans état global.
 - `CDOMObject.getLocalizedName()` renvoie le nom traduit, sinon le nom anglais.
 - Renommer un objet (`setDisplayName`) efface son nom traduit, qui traduisait l'ancien nom :
   un équipement agrandi ou personnalisé reprend son nom anglais complet.
-- Un objet porteur de plusieurs `DESC` ou `BENEFIT` n'en reçoit pas de traduction ; la ligne est
-  signalée.
+- Une ligne `DESC` ou `BENEFIT` sans colonne `ENGLISH` traduit la description unique de
+  l'objet ; si l'objet en porte plusieurs, elle est signalée. Une ligne avec `ENGLISH` traduit
+  la description dont le gabarit anglais lui est identique. Si aucune ne l'est, la ligne est
+  ignorée sans être signalée : le livre qui apporte cette description n'est pas chargé.
+  Contrepartie : une ligne dont l'anglais a changé depuis l'export est ignorée en silence ;
+  seule une nouvelle comparaison avec l'export la révèle.
+- Chaque description traduite est rangée sous son gabarit anglais
+  (`ObjectKey.LOCALIZED_DESCRIPTIONS`, `LOCALIZED_BENEFITS`). L'affichage remplace chaque
+  description qui a une traduction et garde l'anglais des autres.
 
 ### Objets du système
 
