@@ -58,10 +58,10 @@
 </#macro>
 <style>
 :root{
-  --bg:#0b0d0c; --bg2:#121614; --bg3:#1b211d; --border:#2b3a30;
-  --text:#dce4dc; --text-dim:#7a8a7c;
-  --gold:#c9a03a; --gold-dim:#6e5820; --gold-bright:#f0d47a;
-  --atk:#d98030; --dmg:#cc4a40; --def:#5a9abf; --grn:#4aaa6a; --buff:#4ac0b0; --warn:#d0a860;
+  --bg:#ffffff; --bg2:#f5f6f3; --bg3:#e5e9e3; --border:#c3cbc2;
+  --text:#1a1f1b; --text-dim:#545e56;
+  --gold:#7f5d0b; --gold-dim:#d6c08a; --gold-bright:#5e4400;
+  --atk:#a14700; --dmg:#b0241c; --def:#1d5a85; --grn:#1c6f37; --buff:#0a6b62; --warn:#8a5a00;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 [hidden]{display:none!important}
