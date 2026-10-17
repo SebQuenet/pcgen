@@ -115,6 +115,18 @@
 </#if>
   ]<#if sec_has_next>,</#if>
 </#list>,
+<#-- Everything the character picked out of a class pool: schools, talents,
+     discoveries, hexes, bloodlines, domains. Feats are listed on their own. -->
+<#-- No category filter: the count command matches one category at a time, and
+     what is wanted here is every pool the character chose from. -->
+<#assign chosenCount = pcvar('countdistinct("ABILITIES","VISIBILITY=DEFAULT[or]VISIBILITY=OUTPUT_ONLY")')?int >
+  "chosenAbilities": [
+<#if (chosenCount > 0)>
+<@loop from=0 to=chosenCount-1 ; chosen, chosen_has_next>
+    {"name": "${pcstring('ABILITYALL.ANY.VISIBLE.${chosen}')?json_string}", "type": "${pcstring('ABILITYALL.ANY.VISIBLE.${chosen}.TYPE')?json_string}", "associated": "${pcstring('ABILITYALL.ANY.VISIBLE.${chosen}.ASSOCIATED')?json_string}", "description": "${pcstring('ABILITYALL.ANY.VISIBLE.${chosen}.DESC')?json_string}"}<#if chosen_has_next>,</#if>
+</@loop>
+</#if>
+  ],
   "weapons": [
 <@loop from=0 to=pcvar('COUNT[EQTYPE.MERGENONE.WEAPON]-1') ; weap, weap_has_next>
 <#assign weapHand = pcstring('WEAPON.MERGENONE.${weap}.HAND')?lower_case >
@@ -148,11 +160,11 @@
       "casterLevel": "${pcstring('SPELLLISTCLASS.${class}.CASTERLEVEL')?json_string}",
       "concentration": "${pcstring('SPELLLISTCLASS.${class}.CONCENTRATION')?replace("+","")?json_string}",
       "type": "${pcstring('SPELLLISTTYPE.${class}')?json_string}",
+      "memorize": "${pcstring('SPELLLISTMEMORIZE.${class}')?json_string}",
       "levels": {
 <#assign firstLevel = true >
 <@loop from=0 to=pcvar('MAXSPELLLEVEL.${class}') ; level, level_has_next>
 <#assign spellCount = pcvar('COUNT[SPELLSINBOOK.${class}.0.${level}]')?int >
-<#if (spellCount > 0)>
 <#if !firstLevel>,
 </#if>
         "${level}": {
@@ -162,9 +174,21 @@
 <@loop from=0 to=spellCount-1 ; spell, spell_has_next>
             {"name": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.NAME')?json_string}", "dc": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DC')?json_string}", "school": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.SCHOOL')?json_string}", "range": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.RANGE')?json_string}", "duration": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DURATION')?json_string}", "saveInfo": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.SAVEINFO')?json_string}", "components": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.COMPONENTS')?json_string}", "description": "${pcstring('SPELLMEM.${class}.0.${level}.${spell}.DESCRIPTION')?json_string}"}<#if spell_has_next>,</#if>
 </@loop>
+          ],
+          "prepared": [
+<#-- Book 0 holds what the character knows or has written down; the prepared
+     lists are the books after it, each with its own name. -->
+<#assign firstPrepared = true >
+<@loop from=1 to=pcvar('COUNT[SPELLBOOKS]-1') ; book, book_has_next>
+<#assign preparedCount = pcvar('COUNT[SPELLSINBOOK.${class}.${book}.${level}]')?int >
+<@loop from=0 to=preparedCount-1 ; spell, spell_has_next>
+<#if !firstPrepared>,
+</#if>
+            {"name": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.NAME')?json_string}", "book": "${pcstring('SPELLBOOKNAME.${book}')?json_string}", "times": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.TIMES')?json_string}", "dc": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.DC')?json_string}", "school": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.SCHOOL')?json_string}", "range": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.RANGE')?json_string}", "duration": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.DURATION')?json_string}", "saveInfo": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.SAVEINFO')?json_string}", "components": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.COMPONENTS')?json_string}", "description": "${pcstring('SPELLMEM.${class}.${book}.${level}.${spell}.DESCRIPTION')?json_string}"}<#assign firstPrepared = false>
+</@loop>
+</@loop>
           ]
         }<#assign firstLevel = false>
-</#if>
 </@loop>
 
       }
