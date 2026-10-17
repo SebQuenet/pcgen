@@ -29,6 +29,7 @@ import pcgen.cdom.base.Loadable;
 import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.StringKey;
+import pcgen.cdom.enumeration.SubClassCategory;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
 import pcgen.core.Description;
@@ -42,6 +43,7 @@ import pcgen.util.StringPClassUtil;
 public final class TranslationApplier
 {
 	private static final String ABILITY_TYPE = "ABILITY";
+	private static final String SUBCLASS_TYPE = "SUBCLASS";
 	private static final Pattern PLACEHOLDER = Pattern.compile("%%|%\\{?(\\d+)\\}?");
 
 	private TranslationApplier()
@@ -84,6 +86,10 @@ public final class TranslationApplier
 			}
 			Ability ability = references.getManufacturerId(category).getActiveObject(entry.key());
 			return ability;
+		}
+		if (SUBCLASS_TYPE.equals(entry.type()))
+		{
+			return references.getManufacturerId(SubClassCategory.getConstant(entry.category())).getActiveObject(entry.key());
 		}
 		Class<? extends Loadable> type = StringPClassUtil.getClassFor(entry.type());
 		if (type == null)

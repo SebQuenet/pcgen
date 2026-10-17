@@ -26,10 +26,12 @@ import java.util.List;
 import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.StringKey;
+import pcgen.cdom.enumeration.SubClassCategory;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
 import pcgen.core.Description;
 import pcgen.core.Equipment;
+import pcgen.core.SubClass;
 import pcgen.core.spell.Spell;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.rules.context.ConsolidatedListCommitStrategy;
@@ -100,6 +102,19 @@ class TranslationApplierTest
 		apply("ABILITY\tFEAT\tPower Attack\tNAME\tAttaque en puissance");
 
 		assertEquals("Attaque en puissance", feat.toString());
+	}
+
+	@Test
+	void findsASubclassUnderItsParentClass()
+	{
+		SubClass abjurer = new SubClass();
+		abjurer.setName("Abjurer");
+		abjurer.setCDOMCategory(SubClassCategory.getConstant("Wizard"));
+		references.importObject(abjurer);
+
+		apply("SUBCLASS\tWizard\tAbjurer\tNAME\tAbjurateur");
+
+		assertEquals("Abjurateur", abjurer.toString());
 	}
 
 	@Test

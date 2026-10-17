@@ -26,10 +26,12 @@ import java.util.Map;
 import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.StringKey;
+import pcgen.cdom.enumeration.SubClassCategory;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
 import pcgen.core.Campaign;
 import pcgen.core.Description;
+import pcgen.core.SubClass;
 import pcgen.core.spell.Spell;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.rules.context.ConsolidatedListCommitStrategy;
@@ -116,11 +118,53 @@ class TranslationSourceExporterTest
 	}
 
 	@Test
+	void namesASubclassUnderItsParentClass()
+	{
+		SubClass abjurer = new SubClass();
+		abjurer.setName("Abjurer");
+		abjurer.setCDOMCategory(SubClassCategory.getConstant("Wizard"));
+		abjurer.put(ObjectKey.SOURCE_CAMPAIGN, coreRulebook);
+		references.importObject(abjurer);
+
+		assertEquals(List.of(new TranslatableText("SUBCLASS", "Wizard", "Abjurer", TranslatedField.NAME, "Abjurer")),
+			exported());
+	}
+
+	@Test
 	void leavesOutAnObjectNobodySees()
 	{
 		spellFromTheCoreRulebook("Hidden Helper").put(ObjectKey.VISIBILITY, Visibility.HIDDEN);
 
 		assertTrue(exported().isEmpty());
+	}
+
+	@Test
+	void leavesOutAnInternalAbility()
+	{
+		assertTrue(exportedAbilityOf(hiddenCategory("Internal")).isEmpty());
+	}
+
+	@Test
+	void keepsAnAbilityOfAHiddenCategoryThatTheSheetShows()
+	{
+		assertEquals(1, exportedAbilityOf(hiddenCategory("Special Ability")).size());
+	}
+
+	private AbilityCategory hiddenCategory(String key)
+	{
+		AbilityCategory category = new AbilityCategory(key);
+		category.setVisible(Visibility.HIDDEN);
+		references.importObject(category);
+		return category;
+	}
+
+	private List<TranslatableText> exportedAbilityOf(AbilityCategory category)
+	{
+		Ability ability = category.newInstance();
+		ability.setName("Some Ability");
+		ability.put(ObjectKey.SOURCE_CAMPAIGN, coreRulebook);
+		references.importObject(ability);
+		return exported();
 	}
 
 	@Test

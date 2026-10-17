@@ -30,6 +30,8 @@ import pcgen.cdom.enumeration.StringKey;
 import pcgen.core.Ability;
 import pcgen.core.Campaign;
 import pcgen.core.Description;
+import pcgen.core.SubClass;
+import pcgen.core.SubstitutionClass;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.util.StringPClassUtil;
 import pcgen.util.enumeration.Visibility;
@@ -44,6 +46,9 @@ public final class TranslationSourceExporter
 		.thenComparing(TranslatableText::category)
 		.thenComparing(TranslatableText::key)
 		.thenComparing(TranslatableText::field);
+
+	private static final String SUBCLASS_TYPE = "SUBCLASS";
+	private static final String INTERNAL_CATEGORY = "Internal";
 
 	private TranslationSourceExporter()
 	{
@@ -61,9 +66,9 @@ public final class TranslationSourceExporter
 			{
 				continue;
 			}
-			String type = StringPClassUtil.getStringFor(object.getClass());
+			String type = typeOf(object);
 			Campaign campaign = object.get(ObjectKey.SOURCE_CAMPAIGN);
-			if (type == null || campaign == null || object.getSafe(ObjectKey.VISIBILITY) == Visibility.HIDDEN)
+			if (type == null || campaign == null || !isSeen(object))
 			{
 				continue;
 			}
@@ -73,9 +78,41 @@ public final class TranslationSourceExporter
 		return byCampaign;
 	}
 
+	/**
+	 * Whether a player can ever see the object. A hidden category is not enough to tell: Special
+	 * Ability is hidden from the GUI tabs, yet its abilities are on the character sheet. Only the
+	 * Internal category holds bookkeeping abilities nobody reads.
+	 */
+	private static boolean isSeen(CDOMObject object)
+	{
+		if (object.getSafe(ObjectKey.VISIBILITY) == Visibility.HIDDEN)
+		{
+			return false;
+		}
+		return !(object instanceof Ability ability && INTERNAL_CATEGORY.equals(ability.getCDOMCategory().getKeyName()));
+	}
+
+	/**
+	 * @return the type a translation table names the object by, or null for a type it cannot name
+	 */
+	private static String typeOf(CDOMObject object)
+	{
+		if (object instanceof SubClass)
+		{
+			return SUBCLASS_TYPE;
+		}
+		// StringPClassUtil names a substitution class CLASS, yet the table cannot find it as one
+		return object instanceof SubstitutionClass ? null : StringPClassUtil.getStringFor(object.getClass());
+	}
+
 	private static List<TranslatableText> textsOf(String type, CDOMObject object)
 	{
-		String category = object instanceof Ability ability ? ability.getCDOMCategory().getKeyName() : "";
+		String category = switch (object)
+		{
+			case Ability ability -> ability.getCDOMCategory().getKeyName();
+			case SubClass subClass -> subClass.getCDOMCategory().getKeyName();
+			default -> "";
+		};
 		List<TranslatableText> texts = new ArrayList<>();
 		addIfPresent(texts, type, category, object, TranslatedField.NAME, object.getDisplayName());
 		addIfPresent(texts, type, category, object, TranslatedField.OUTPUTNAME, object.get(StringKey.OUTPUT_NAME));
