@@ -51,6 +51,7 @@ import pcgen.cdom.reference.CDOMSingleRef;
 import pcgen.core.Ability;
 import pcgen.core.ArmorProf;
 import pcgen.core.Campaign;
+import pcgen.core.Description;
 import pcgen.core.Equipment;
 import pcgen.core.GameMode;
 import pcgen.core.Language;
@@ -93,6 +94,10 @@ public class ObjectKey<T>
 {
 
 	private static CaseInsensitiveMap<ObjectKey<?>> map = null;
+
+	public static final ObjectKey<Description> LOCALIZED_DESCRIPTION = new ObjectKey<>(null);
+
+	public static final ObjectKey<Description> LOCALIZED_BENEFIT = new ObjectKey<>(null);
 
 	public static final ObjectKey<Boolean> USE_UNTRAINED = new ObjectKey<>(Boolean.TRUE);
 

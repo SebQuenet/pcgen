@@ -94,6 +94,6 @@ public final class Spell extends PObject implements InfoFacade, Ungranted
 			return getOutputName();
 		}
 
-		return getDisplayName();
+		return getLocalizedName();
 	}
 }

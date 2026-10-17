@@ -246,7 +246,7 @@ public final class EquipmentModifier extends PObject implements Comparable<Objec
 	@Override
 	public String toString()
 	{
-		return getDisplayName();
+		return getLocalizedName();
 	}
 
 	public int getSR(Equipment parent, PlayerCharacter aPC)

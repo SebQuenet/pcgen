@@ -211,7 +211,7 @@ public class PObject extends CDOMObject
 			return getOutputName();
 		}
 
-		return getDisplayName();
+		return getLocalizedName();
 	}
 
 	/**

@@ -145,6 +145,24 @@ public class Description extends ConcretePrereqObject
 	 * 
 	 * @param aVariable
 	 */
+	/**
+	 * The same description with its text replaced, as a translation does: the variables and
+	 * prerequisites are kept, so the text must name the same %1 to %n placeholders.
+	 *
+	 * @param template the replacement text, in the DESC syntax before its first pipe
+	 * @return a new description
+	 */
+	public Description withTemplate(final String template)
+	{
+		final Description translated = new Description(template);
+		if (theVariables != null)
+		{
+			theVariables.forEach(translated::addVariable);
+		}
+		translated.addAllPrerequisites(getPrerequisiteList());
+		return translated;
+	}
+
 	public void addVariable(final String aVariable)
 	{
 		if (theVariables == null)

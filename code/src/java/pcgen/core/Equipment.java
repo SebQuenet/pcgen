@@ -1345,6 +1345,14 @@ public final class Equipment extends PObject
 		setDirty(true);
 	}
 
+	@Override
+	public void setLocalizedName(final String localizedName)
+	{
+		super.setLocalizedName(localizedName);
+		// The shown name is cached
+		setDirty(true);
+	}
+
 	/**
 	 * Sets the modifiedName attribute of the Equipment object
 	 * 
@@ -3451,6 +3459,11 @@ public final class Equipment extends PObject
 		return toString(true);
 	}
 
+	private String withModifiedName(final String name)
+	{
+		return modifiedName.isEmpty() ? name : name + " (" + modifiedName + ")";
+	}
+
 	/**
 	 * Returns a String representation of the Equipment
 	 * 
@@ -3468,19 +3481,8 @@ public final class Equipment extends PObject
 			// respect to the name then rebuid the names
 			final StringBuilder buffer = new StringBuilder(100);
 
-			if (SettingsHandler.guiUsesOutputNameEquipment())
-			{
-				buffer.append(getOutputName());
-			}
-			else
-			{
-				buffer.append(getDisplayName());
-			}
-
-			if (!modifiedName.isEmpty())
-			{
-				buffer.append(" (").append(modifiedName).append(")");
-			}
+			buffer.append(withModifiedName(
+				SettingsHandler.guiUsesOutputNameEquipment() ? getOutputName() : getLocalizedName()));
 			cachedNameWithoutCharges = buffer.toString();
 
 			if (addCharges)

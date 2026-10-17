@@ -31,6 +31,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
@@ -811,8 +812,36 @@ public abstract class CDOMObject extends ConcretePrereqObject
 		setDisplayName(name);
 	}
 
+	/**
+	 * The name to show a person: the translation when one is loaded, otherwise the display name.
+	 * It is never a key.
+	 *
+	 * @return the name in the configured language
+	 */
+	public String getLocalizedName()
+	{
+		String localizedName = get(StringKey.LOCALIZED_NAME);
+		return localizedName == null ? getDisplayName() : localizedName;
+	}
+
+	/**
+	 * Give the name shown to a person in the configured language. It is dropped when the
+	 * object is renamed, since it translates the old name.
+	 *
+	 * @param localizedName the translated name
+	 */
+	public void setLocalizedName(String localizedName)
+	{
+		put(StringKey.LOCALIZED_NAME, localizedName);
+	}
+
 	public void setDisplayName(String name)
 	{
+		if (!Objects.equals(name, displayName))
+		{
+			// A translated name belongs to the name it translates
+			remove(StringKey.LOCALIZED_NAME);
+		}
 		displayName = name;
 	}
 

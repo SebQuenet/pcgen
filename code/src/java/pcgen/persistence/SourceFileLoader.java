@@ -108,6 +108,7 @@ import pcgen.persistence.lst.LstObjectFileLoader;
 import pcgen.persistence.lst.PCClassLoader;
 import pcgen.persistence.lst.SourceEntry;
 import pcgen.persistence.lst.VariableLoader;
+import pcgen.persistence.translation.TranslationLoader;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.rules.context.LoadContext;
 import pcgen.rules.context.LoadValidator;
@@ -176,6 +177,8 @@ public class SourceFileLoader extends PCGenTask implements Observer
     private boolean showMature = false;
     private boolean showOGL = false;
     private final List<Campaign> selectedCampaigns = new ArrayList<>();
+    /** The selected campaigns and every campaign they pulled in */
+    private Collection<Campaign> loadedCampaigns = new ArrayList<>();
     private final GameMode selectedGame;
     private DataSet dataset = null;
     private int progress = 0;
@@ -483,6 +486,8 @@ public class SourceFileLoader extends PCGenTask implements Observer
             // Verify weapons are melee or ranged
             verifyWeaponsMeleeOrRanged(context);
 
+            loadTranslations(context);
+
             context.setLoaded(selectedCampaigns);
 
             /*
@@ -501,6 +506,21 @@ public class SourceFileLoader extends PCGenTask implements Observer
         }
     }
 
+    /**
+     * Lay the translation tables of the configured language over the loaded objects. Run last,
+     * once every object has its final name.
+     */
+    private void loadTranslations(LoadContext context)
+    {
+        String language = ConfigurationSettings.getLanguage();
+        if (language == null || language.isBlank())
+        {
+            return;
+        }
+        TranslationLoader.load(loadedCampaigns, language, context.getReferenceContext())
+                .forEach(problem -> Logging.log(Logging.LST_ERROR, problem));
+    }
+
     private void loadCampaigns(GameMode gamemode, final List<Campaign> aSelectedCampaignsList, LoadContext context)
             throws PersistenceLayerException
     {
@@ -513,6 +533,7 @@ public class SourceFileLoader extends PCGenTask implements Observer
 
         // Read the campaigns
         Collection<Campaign> loaded = readPccFiles(aSelectedCampaignsList);
+        loadedCampaigns = loaded;
 
         // Add custom campaign files at the start of the lists
         addCustomFilesToStartOfList();
