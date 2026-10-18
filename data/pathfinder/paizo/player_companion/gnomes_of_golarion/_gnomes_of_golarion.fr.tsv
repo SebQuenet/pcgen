@@ -1,0 +1,82 @@
+TYPE	CATEGORY	KEY	FIELD	TEXT
+ABILITY	Special Ability	Trait ~ Charlatan	NAME	Charlatan
+ABILITY	Special Ability	Trait ~ Sprint	NAME	Sprint
+ABILITY	Special Ability	Trait ~ Gnome Trickster	NAME	Filou
+ABILITY	Special Ability	Trait ~ Explorer	NAME	Explorateur
+ABILITY	Special Ability	Trait ~ Brastlewark Businessman	NAME	Homme d'affaires de Brastlewark
+ABILITY	Afflictions	The Bleaching	NAME	Le Blanchiment
+ABILITY	Background	Wonderseekers Faction	NAME	Faction des chercheurs de merveilles
+ABILITY	FEAT	Arcane School Spirit	NAME	Esprit d'école profane
+ABILITY	FEAT	Babble-Peddler	NAME	Colporteur de babillage
+ABILITY	FEAT	Bewildering Koan	NAME	Koan déroutant
+ABILITY	FEAT	Blood Ties	NAME	Liens du sang
+ABILITY	FEAT	Caustic Slur	NAME	Insulte caustique
+ABILITY	FEAT	Effortless Trickery	NAME	Ruse sans effort
+ABILITY	FEAT	Extra Gnome Magic	NAME	Magie gnome supplémentaire
+ABILITY	FEAT	Helpless Prisoner	NAME	Prisonnier sans défense
+ABILITY	FEAT	Invoke Primal Instinct	NAME	Invoquer l'instinct primitif
+ABILITY	FEAT	Master of Wonders	NAME	Maître des merveilles
+ABILITY	FEAT	Tantrum	NAME	Crise de colère
+ABILITY	FEAT	Threatening Illusion	NAME	Illusion menaçante
+ABILITY	FEAT	Witty Feint	NAME	Feinte spirituelle
+ABILITY	Special Ability	Lucid Dreamer ~ Wonderseekers	NAME	Rêveur lucide (faction des chercheurs de merveilles)
+ABILITY	Special Ability	Trait ~ Collector	NAME	Collectionneur
+ABILITY	Special Ability	Trait ~ Etymologist	NAME	Étymologiste
+ABILITY	Special Ability	Trait ~ Excitable	NAME	Excitable
+ABILITY	Special Ability	Trait ~ First Memories	NAME	Premiers souvenirs
+ABILITY	Special Ability	Trait ~ Naturally Gifted	NAME	Doué de nature
+ABILITY	Special Ability	Trait ~ Zealot	NAME	Fanatique
+EQUIPMENT		Battle Ladder	NAME	Échelle de combat
+EQUIPMENT		Flailpole	NAME	Perche-fléau
+EQUIPMENT		Flickmace	NAME	Masse-fronde
+EQUIPMENT		Glaive (Ripsaw)	NAME	Glaive (à scie)
+EQUIPMENT		Glaive (Ripsaw)	OUTPUTNAME	Glaive à scie
+EQUIPMENT		Javelin (Shrillshaft)	NAME	Javeline (stridente)
+EQUIPMENT		Javelin (Shrillshaft)	OUTPUTNAME	Javeline stridente
+EQUIPMENT		Maul (Piston)	NAME	Maillet (à piston)
+EQUIPMENT		Maul (Piston)	OUTPUTNAME	Maillet à piston
+SPELL		Illusory Poison	NAME	Poison illusoire
+WEAPONPROF		Battle Ladder	NAME	Échelle de combat
+WEAPONPROF		Flailpole	NAME	Perche-fléau
+WEAPONPROF		Flickmace	NAME	Masse-fronde
+WEAPONPROF		Glaive (Ripsaw)	NAME	Glaive à scie
+WEAPONPROF		Javelin (Shrillshaft)	NAME	Javeline stridente
+WEAPONPROF		Maul (Piston)	NAME	Maillet à piston
+SPELL		Illusory Poison	DESC	Vous créez sur l'arme ciblée la chimère d'un poison fantasmagorique vert et huileux. [Poison fantasmagorique : type poison, blessure ; jet de sauvegarde Vigueur au DD du sort ; fréquence 1/round pendant 6 rounds ; effet 1d3 points d'affaiblissement de For ; guérison 1 jet]
+ABILITY	FEAT	Arcane School Spirit	BENEFIT	Par une action complexe, vous vantez les mérites de votre école de magie à une créature à 9 m ou moins : faites un test de Bluff opposé à sa Psychologie. Si vous l'emportez, la cible subit un malus de -2 aux jets de sauvegarde contre le prochain sort de cette école que vous lancez. Si vous êtes universaliste, choisissez une école précise à chaque utilisation ; en cas de réussite, votre manque d'engagement envers l'école limite toutefois le malus à -1.
+ABILITY	FEAT	Bewildering Koan	BENEFIT	Par une action rapide, dépensez 1 point de votre réserve de ki et faites un test de Bluff en posant à une créature l'une des questions impossibles sur lesquelles vous méditez. Si elle rate son test, vous choisissez qu'elle perde sa prochaine action ou que vous obteniez un bonus de +2 à tous vos jets de dégâts contre elle pendant 1 round.
+ABILITY	FEAT	Blood Ties	BENEFIT	Quand vous faites un test de Diplomatie pour influencer une créature ayant un lien plausible avec votre lignage d'ensorceleur, vous pouvez faire un test de Bluff à la place. Par exemple, un ensorceleur gnome du lignage draconique peut utiliser ce don contre les dragons et leurs semblables, mais pas d'autres créatures.
+ABILITY	FEAT	Caustic Slur	BENEFIT	Par une action simple, vous pouvez faire un test de Bluff contre un type d'ennemi juré : toute créature de ce type à 18 m ou moins doit réussir un jet de Volonté ou être mise en colère. Si une créature affectée vous attaque, elle est traitée comme si elle utilisait Attaque en puissance (malus aux jets d'attaque, bonus aux jets de dégâts) ; si elle a déjà ce don, le malus d'attaque augmente de 1 et le bonus de dégâts de 2. Ces modificateurs prennent fin avec le combat. Ce pouvoir ne fonctionne pas sur les créatures qui ne vous comprennent pas, mais un simple geste suffit parfois à un adversaire intelligent pour saisir l'idée, quelle que soit la barrière de la langue.
+ABILITY	FEAT	Effortless Trickery	BENEFIT	Vous pouvez maintenir votre concentration sur un sort d'illusion par une action rapide. Cela n'affecte ni les sorts d'autres écoles ni les sorts d'illusion dont la durée ne dépend pas de votre concentration. Vous ne pouvez maintenir qu'un sort par une action rapide, mais pouvez utiliser vos actions de mouvement et simple pour en maintenir d'autres normalement.
+ABILITY	FEAT	Extra Gnome Magic	BENEFIT	Vous obtenez trois utilisations quotidiennes supplémentaires de vos pouvoirs magiques de gnome (lumières dansantes, son imaginaire, prestidigitation), à combiner comme vous le souhaitez : par exemple utiliser lumières dansantes quatre fois dans la journée (les trois utilisations supplémentaires pour le même sort), ou son imaginaire deux fois, prestidigitation deux fois, communication avec les animaux deux fois et lumières dansantes une fois. Si un don, un trait ou une autre aptitude remplace vos pouvoirs magiques raciaux de niveau 0 par d'autres sorts de niveau 0, ce don s'applique à ceux-ci.
+ABILITY	FEAT	Helpless Prisoner	BENEFIT	Quand vous êtes entravé ou emprisonné, vous pouvez faire un test de Bluff contre une créature à 9 m ou moins en insistant sur votre innocuité et sur la douleur ou la gêne de votre situation. Si elle vous sait dangereux, elle ajoute un bonus de +4 à son test de Psychologie. Si vous l'emportez, elle fait quelque chose pour vous mettre un peu plus à l'aise, ou au moins pour vous faire taire, ce qui vous confère un bonus de +5 à votre prochain test d'Évasion.
+ABILITY	FEAT	Invoke Primal Instinct	BENEFIT	Par une action simple, vous pouvez mimer ou décrire un comportement de prédateur ou de proie, dépenser une utilisation de forme animale et faire un test de Bluff. Toutes les créatures à 9 m ou moins qui ratent un jet de Volonté contre le DD de votre test vous perçoivent comme une figure de peur ou de mépris (au choix, pour toutes). Par la peur, elles sont effrayées pendant 1 round par niveau de druide ; par le mépris, elles vous jugent inoffensif pendant 1 minute et vous ignorent, sauf si vous les attaquez ou les menacez.
+ABILITY	FEAT	Tantrum	BENEFIT	Vous pouvez utiliser Bluff pour feinter en rage. L'effet de la feinte ne dure que jusqu'à ce que vous touchiez la cible pour la première fois.
+ABILITY	FEAT	Threatening Illusion	BENEFIT	Vous ne pouvez utiliser ce don de métamagie que sur les sorts d'illusion (image).
+ABILITY	FEAT	Witty Feint	BENEFIT	Quand vous feintez avec succès un adversaire au combat, au lieu de le priver de son bonus de Dextérité, vous pouvez obtenir contre ses attaques un bonus d'esquive à la CA égal à votre bonus d'entraînement aux armes pour l'arme utilisée, jusqu'à la fin du combat, jusqu'à ce que vous changiez d'adversaire ou d'arme, selon ce qui survient en premier.
+ABILITY	Afflictions	The Bleaching	DESC	Malédiction ; Volonté DD variable (voir texte) arrête ou inverse ; délai d'action âge mûr ; fréquence 1/an ; effet voir texte
+ABILITY	FEAT	Arcane School Spirit	DESC	Vous savez vanter le pouvoir de votre école de magie au point que les créatures ont plus de mal à résister à vos sorts.
+ABILITY	FEAT	Babble-Peddler	DESC	Votre talent pour l'arnaque vous permet de tromper des créatures pour qu'elles échangent des objets de valeur contre n'importe quelle camelote que vous leur proposez.
+ABILITY	FEAT	Bewildering Koan	DESC	Vous pouvez poser des questions sans réponse qui laissent les créatures interdites un instant, absorbées par leur signification.
+ABILITY	FEAT	Blood Ties	DESC	Souligner votre parenté avec quelqu'un vous donne une chance de vous gagner les créatures liées à votre lignage.
+ABILITY	FEAT	Caustic Slur	DESC	Vous savez exactement comment insulter vos ennemis jurés pour leur faire perdre la tête.
+ABILITY	FEAT	Effortless Trickery	DESC	Votre don naturel pour l'illusion vous permet de maintenir au moins un sort d'illusion sans grand effort.
+ABILITY	FEAT	Extra Gnome Magic	DESC	La magie brute qui coule dans votre sang de gnome est plus forte que la normale.
+ABILITY	FEAT	Helpless Prisoner	DESC	Vous savez vous tirer de la plupart des entraves par la parole.
+ABILITY	FEAT	Invoke Primal Instinct	DESC	Vous pouvez utiliser votre capacité à prendre la forme d'un animal pour renforcer votre Bluff, vous donnant une aura de danger ou de docilité qui pousse les créatures proches à faire ce que vous voulez.
+ABILITY	FEAT	Master of Wonders	DESC	Quand vous activez un bâtonnet merveilleux, lancez un d%% pour déterminer l'effet. Si vous le souhaitez, vous pouvez relancer le d%% et utiliser ce second résultat. Vous ne pouvez utiliser ce pouvoir qu'une fois par round.
+ABILITY	FEAT	Tantrum	DESC	Vos pleurs, vos bafouillages et même votre bave aux lèvres vous rendent si risiblement incohérent que les adversaires ont tendance à ne pas vous considérer comme une menace.
+ABILITY	FEAT	Threatening Illusion	DESC	Vous maîtrisez l'art de créer des illusions qui forcent les ennemis à diviser leur attention au combat.
+ABILITY	FEAT	Witty Feint	DESC	Votre mélange de conversation et de prouesse martiale rend difficile aux adversaires de passer votre garde.
+ABILITY	Special Ability	Lucid Dreamer ~ Wonderseekers	DESC	Vos rêves sont un lieu de pouvoir particulier dont vous seul profitez, et chasser les menaces de votre subconscient est aussi facile que claquer une porte. Vous obtenez un bonus de trait de +1 aux tests de Connaissances (plans) et un bonus de trait de +2 aux jets de Volonté contre les effets qui visent votre esprit endormi ou votre subconscient, comme le pouvoir hantise des rêves d'une guenaude nocturne, le sort cauchemar et les illusions de la sous-école fantasme.
+ABILITY	Special Ability	Trait ~ Brastlewark Businessman	DESC	Votre temps parmi l'élite gnome de Brastlewark au Chéliax vous a donné une vaste connaissance de l'alchimie et des contacts tout trouvés dans ce commerce.
+ABILITY	Special Ability	Trait ~ Charlatan	DESC	Votre talent pour l'illusion dépasse le simple goût pour les chimères et les fantasmes : vous savez canaliser l'énergie de vos sorts en illusions simples qui soutiennent vos tentatives de tromperie. Par une action rapide, vous pouvez dépenser un sort préparé ou un emplacement de sort pour obtenir un bonus égal à son niveau à votre prochain test de Bluff, s'il a lieu avant le début de votre prochain tour. Vous pouvez utiliser ce pouvoir 3 fois par jour.
+ABILITY	Special Ability	Trait ~ Collector	DESC	Vous avez une petite collection bizarre d'objets apparemment sans valeur, comme des clous rouillés, des crottes d'animaux, des rouages d'horlogerie ou des cuillères tordues, dont vous tirez une utilité qu'aucun non-gnome ne comprendrait. Chercher de nouvelles pièces vous fascine sans fin, et si personne d'autre ne comprend pourquoi un clou de fer à cheval chélaxien mérite d'y figurer et pas un clou de brouette naine, tout cela a un sens pour vous. Tant que votre collection est à 1,5 m ou moins de vous, vous obtenez un bonus de trait de +2 à tous les tests de %1.
+ABILITY	Special Ability	Trait ~ Etymologist	DESC	Quand on vous a appris, comme à tous les jeunes gnomes, la langue gnome hétéroclite, vous vous êtes demandé quel était le sens d'origine de chaque mot et de quelle langue il venait. Chaque fois que vous découvrez une nouvelle langue, vous vous passionnez aussitôt pour son fonctionnement et pour les mots que le gnome pourrait lui emprunter. Vous obtenez un bonus de trait de +1 aux tests de Linguistique, connaissez une langue supplémentaire, et Linguistique est une compétence de classe pour vous.
+ABILITY	Special Ability	Trait ~ Excitable	DESC	Vous exigez que tout se passe tout de suite, coûte que coûte, et êtes trop impatient pour attendre que les autres suivent. Vous finissez les phrases des gens, lâchez la chute des blagues trop lentes, faites rarement des plans et vous jetez tête baissée dans tout ce qui semble intéressant. Cela vous a parfois attiré des ennuis, mais vous a aussi appris à bouger une fraction de seconde avant les autres, ce qui vous a sauvé la peau plus d'une fois.
+ABILITY	Special Ability	Trait ~ Explorer	DESC	Si beaucoup de gnomes s'installent dans des communautés assez grandes et intéressantes pour leur fournir toute la stimulation nécessaire contre la Décoloration, vous ne serez jamais de ceux-là : vous regardez toujours derrière le prochain tournant ou la prochaine colline, au-delà de l'endroit où vous êtes, vers celui où vous voulez aller. Au début de chaque niveau de personnage, choisissez un environnement désiré parmi : froid, désert, forêt, jungle, montagnes (collines comprises), plaines, plans (autres que le plan Matériel), marais, souterrain (grottes et donjons compris), urbain ou aquatique. Vous obtenez un bonus de +2 à tous les tests de Survie dans cet environnement. Au début de chaque niveau, vous devez choisir un nouvel environnement désiré (jamais le même deux niveaux de suite).
+ABILITY	Special Ability	Trait ~ First Memories	DESC	Toute votre vie, vous avez senti qu'un monde existait juste derrière l'étoffe des objets matériels qui vous entourent ; parfois, vous entendez le vent du nord vous appeler ou sentez l'odeur redoutable d'une eau polluée avant de la goûter. Vous n'obtenez pas la liste normale de pouvoirs magiques du trait racial magie gnome du Manuel des Joueurs. À la place, si vous avez une Sagesse de 11 ou plus, vous obtenez les pouvoirs magiques suivants : 1 fois par jour, détection du poison, sens de l'orientation, stabilisation et communication avec les animaux, avec un niveau de lanceur égal à votre niveau de personnage et un DD égal à 10 + niveau du sort + votre modificateur de Sagesse.
+ABILITY	Special Ability	Trait ~ Gnome Trickster	DESC	Vous excellez avec vos pouvoirs magiques raciaux : enfant, vous avez vite appris à utiliser lumières dansantes et son imaginaire pour amuser vos amis et berner vos aînés. Ce talent naturel pour l'illusion s'est confirmé en grandissant, et l'on vous a bientôt proposé une formation aux chimères et hallucinations plus avancées. Vous obtenez un bonus de trait de +1 à votre niveau de lanceur pour déterminer la durée, la portée et la zone de tous les sorts de l'école d'illusion.
+ABILITY	Special Ability	Trait ~ Naturally Gifted	DESC	Pour des raisons inconnues, vous avez de plus grandes réserves d'énergie magique que votre entourage. Peut-être descendez-vous d'une famille de puissants lanceurs de sorts profanes, ou croyez-vous que ce trait vous destine à la grandeur magique. Quoi qu'il en soit, vous obtenez chaque jour une utilisation supplémentaire de l'un de vos pouvoirs magiques de magie gnome, pas forcément toujours le même : un jour lumières dansantes deux fois, le lendemain communication avec les animaux.
+ABILITY	Special Ability	Trait ~ Sprint	DESC	On vous a appris très jeune que le monde est plein d'ennemis grands, rapides et dangereux, et que parfois le mieux est de baisser la tête et de courir. Vos parents vous ont appris à tirer le meilleur d'un sprint de moyenne distance et à gagner encore un peu de vitesse.
+ABILITY	Special Ability	Trait ~ Zealot	DESC	Vous n'êtes pas seulement fidèle au culte de votre divinité patronne : vous êtes d'une loyauté obsessionnelle envers tous les préceptes et principes de cette foi. Votre dévotion est une ancre qui vous empêche de dériver dans les affres de la Décoloration, et vous vous y accrochez comme au radeau de sauvetage qu'elle est. Tant que vous restez parfaitement fidèle aux préceptes de votre foi (à la discrétion du MJ), vous ne souffrez jamais de la Décoloration.
