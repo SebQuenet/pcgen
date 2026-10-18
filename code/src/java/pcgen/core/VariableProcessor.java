@@ -433,7 +433,7 @@ public abstract class VariableProcessor
 	private CachableResult processJepFormula(final CharacterSpell spell, final String formula, final String src)
 	{
 		final String DEBUG_FORMULA_PREFIX = "CLASSLEVEL";
-		if (Logging.isLoggable(Logging.DEBUG) && formula.startsWith(DEBUG_FORMULA_PREFIX))
+		if (formula.startsWith(DEBUG_FORMULA_PREFIX) && Logging.isLoggable(Logging.DEBUG))
 		{
 			Logging.debugPrint(jepIndent + "getJepVariable: " + formula);
 		}
@@ -446,7 +446,7 @@ public abstract class VariableProcessor
 			parser.parseExpression(formula);
 			if (parser.hasError())
 			{
-				if (Logging.isLoggable(Logging.DEBUG) && formula.startsWith(DEBUG_FORMULA_PREFIX))
+				if (formula.startsWith(DEBUG_FORMULA_PREFIX) && Logging.isLoggable(Logging.DEBUG))
 				{
 					Logging.debugPrint(jepIndent + "not a JEP expression: " + formula);
 				}
@@ -475,7 +475,7 @@ public abstract class VariableProcessor
 			final Object result = parser.getValueAsObject();
 			if (result != null)
 			{
-				if (Logging.isLoggable(Logging.DEBUG) && formula.startsWith(DEBUG_FORMULA_PREFIX))
+				if (formula.startsWith(DEBUG_FORMULA_PREFIX) && Logging.isLoggable(Logging.DEBUG))
 				{
 					Logging.debugPrint(jepIndent + "Result '" + formula + "' = " + result);
 				}
@@ -485,7 +485,7 @@ public abstract class VariableProcessor
 				}
 				catch (NumberFormatException nfe)
 				{
-					if (Logging.isLoggable(Logging.DEBUG) && formula.startsWith(DEBUG_FORMULA_PREFIX))
+					if (formula.startsWith(DEBUG_FORMULA_PREFIX) && Logging.isLoggable(Logging.DEBUG))
 					{
 						Logging.debugPrint(jepIndent + "Result '" + formula + "' = " + result + " was not a number...");
 					}
@@ -496,7 +496,7 @@ public abstract class VariableProcessor
 			{
 				Logging.errorPrint("Failed to process formula " + formula + " due to error: " + parser.getErrorInfo());
 			}
-			if (Logging.isLoggable(Logging.DEBUG) && formula.startsWith(DEBUG_FORMULA_PREFIX))
+			if (formula.startsWith(DEBUG_FORMULA_PREFIX) && Logging.isLoggable(Logging.DEBUG))
 			{
 				Logging.debugPrint(jepIndent + "Result '" + formula + "' was null...");
 			}

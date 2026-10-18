@@ -56,8 +56,8 @@ public final class CharacterSheetPanel extends JFXPanel implements CharacterSele
 
     private PreviewVariablesHandler previewVariableHandler = new PreviewVariablesHandler();
     private WebView browser;
-    private CharacterFacade character;
-    private ExportHandler handler;
+    private volatile CharacterFacade character;
+    private volatile ExportHandler handler;
 
     private final Executor executor = Executors.newSingleThreadExecutor();
     private final AtomicBoolean refreshPending = new AtomicBoolean(false);
@@ -96,6 +96,7 @@ public final class CharacterSheetPanel extends JFXPanel implements CharacterSele
     public void setCharacterSheet(File sheet)
     {
         handler = (sheet == null) ? null : ExportHandler.createExportHandler(sheet);
+        lastRenderedContent = null;
     }
 
     /**
@@ -109,7 +110,12 @@ public final class CharacterSheetPanel extends JFXPanel implements CharacterSele
             executor.execute(() -> {
                 try
                 {
-                    Thread.sleep(DEBOUNCE_DELAY_MS);
+                    // The first display should start immediately. Debounce only
+                    // updates to a sheet that is already visible.
+                    if (lastRenderedContent != null)
+                    {
+                        Thread.sleep(DEBOUNCE_DELAY_MS);
+                    }
                 }
                 catch (InterruptedException e)
                 {

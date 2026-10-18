@@ -27,6 +27,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.Timer;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
@@ -49,13 +50,17 @@ import org.apache.commons.lang3.StringUtils;
 public class SearchFilterPanel extends JPanel
 		implements DisplayableFilter<Object, Object>, DocumentListener, ActionListener
 {
+	private static final int SEARCH_DELAY_MS = 120;
 
 	private FilterHandler filterHandler;
+	private String searchText = "";
 	private final JTextField searchField = new JTextField();
 	private final JButton clearButton = new JButton(Icons.CloseX9.getImageIcon());
+	private final Timer searchTimer = new Timer(SEARCH_DELAY_MS, event -> applyFilter());
 
 	public SearchFilterPanel()
 	{
+		searchTimer.setRepeats(false);
 		searchField.getDocument().addDocumentListener(this);
 		clearButton.addActionListener(this);
 		setLayout(new BorderLayout());
@@ -84,8 +89,19 @@ public class SearchFilterPanel extends JPanel
 
 	private void refreshFilter()
 	{
-		String text = searchField.getText();
-		filterHandler.setSearchEnabled(text != null && !text.isEmpty());
+		// A tree rebuild can be expensive. Keep typing responsive and apply only
+		// the latest text once the user pauses briefly.
+		searchTimer.restart();
+	}
+
+	private void applyFilter()
+	{
+		if (filterHandler == null)
+		{
+			return;
+		}
+		searchText = searchField.getText();
+		filterHandler.setSearchEnabled(!searchText.isEmpty());
 		filterHandler.refilter();
 		filterHandler.scrollToTop();
 	}
@@ -93,6 +109,10 @@ public class SearchFilterPanel extends JPanel
 	@Override
 	public boolean accept(Object context, Object element)
 	{
+		if (searchText.isEmpty())
+		{
+			return true;
+		}
 		String typeStr = ""; //$NON-NLS-1$
 		String abbStr = ""; //$NON-NLS-1$
 		if (element instanceof InfoFacade)
@@ -104,7 +124,6 @@ public class SearchFilterPanel extends JPanel
 			typeStr = ((Campaign) element).getListAsString(ListKey.BOOK_TYPE);
 			abbStr = ((Campaign) element).get(StringKey.SOURCE_SHORT);
 		}
-		final String searchText = searchField.getText();
 		return StringUtils.containsIgnoreCase(element.toString(), searchText)
 			|| StringUtils.containsIgnoreCase(typeStr, searchText)
 			|| StringUtils.containsIgnoreCase(abbStr, searchText);
@@ -120,6 +139,10 @@ public class SearchFilterPanel extends JPanel
 	public void setFilterHandler(FilterHandler handler)
 	{
 		this.filterHandler = handler;
+		if (handler != null && !searchField.getText().equals(searchText))
+		{
+			searchTimer.restart();
+		}
 	}
 
 	@Override

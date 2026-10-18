@@ -447,11 +447,13 @@ public final class PrerequisiteUtilities
 				abilityList.add(cna.getAbility());
 			}
 
-			Collection<AbilityCategory> allCats = SettingsHandler.getGameAsProperty().get().getAllAbilityCategories();
-			// Now scan for relevant SERVESAS occurrences
-			for (AbilityCategory aCat : allCats)
+			Set<AbilityCategory> allCats =
+				new HashSet<>(SettingsHandler.getGameAsProperty().get().getAllAbilityCategories());
+			// Scan the granted abilities once rather than scanning all of them
+			// separately for every category.
+			for (CNAbility cna : character.getCNAbilities())
 			{
-				for (CNAbility cna : character.getPoolAbilities(aCat))
+				if (allCats.contains(cna.getAbilityCategory()))
 				{
 					for (CDOMReference<Ability> ref : cna.getAbility().getSafeListFor(ListKey.SERVES_AS_ABILITY))
 					{

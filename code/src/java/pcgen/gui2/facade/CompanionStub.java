@@ -17,6 +17,8 @@
  */
 package pcgen.gui2.facade;
 
+import java.util.Objects;
+
 import pcgen.core.Race;
 import pcgen.facade.core.CompanionStubFacade;
 import pcgen.facade.util.DefaultReferenceFacade;
@@ -54,6 +56,27 @@ public class CompanionStub implements CompanionStubFacade
 	public String getCompanionType()
 	{
 		return companionType;
+	}
+
+	@Override
+	public boolean equals(Object other)
+	{
+		if (this == other)
+		{
+			return true;
+		}
+		if (!(other instanceof CompanionStub stub))
+		{
+			return false;
+		}
+		return Objects.equals(race.get(), stub.race.get())
+			&& Objects.equals(companionType, stub.companionType);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return Objects.hash(race.get(), companionType);
 	}
 
 	@Override
