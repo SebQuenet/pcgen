@@ -28,6 +28,7 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -155,6 +156,20 @@ public class Gui2InfoFactory implements InfoFactory
 	{
 		this.pc = pc;
 		this.charDisplay = pc == null ? null : pc.getDisplay();
+	}
+
+	/** Show the original name alongside a translated French name in detail panes. */
+	static String titleWithEnglishName(CDOMObject object)
+	{
+		String title = OutputNameFormatting.piString(object);
+		String englishName = object.getDisplayName();
+		String language = Locale.getDefault().getLanguage();
+		if ((Locale.FRENCH.getLanguage().equals(language) || "fre".equals(language)) //$NON-NLS-1$
+				&& !object.getLocalizedName().equals(englishName))
+		{
+			return title + " (" + englishName + ")"; //$NON-NLS-1$ //$NON-NLS-2$
+		}
+		return title;
 	}
 
 	@Override
@@ -503,7 +518,7 @@ public class Gui2InfoFactory implements InfoFactory
 		}
 
 		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
-		infoText.appendTitleElement(OutputNameFormatting.piString(ability));
+		infoText.appendTitleElement(titleWithEnglishName(ability));
 		infoText.appendLineBreak();
 
 		infoText.appendI18nFormattedElement("Ability.Info.Type", //$NON-NLS-1$
@@ -725,7 +740,7 @@ public class Gui2InfoFactory implements InfoFactory
 	private HtmlInfoBuilder getEquipmentHtmlInfo(Equipment equip)
 	{
 		final StringBuilder title = new StringBuilder(50);
-		title.append(OutputNameFormatting.piString(equip));
+		title.append(titleWithEnglishName(equip));
 
 		if (!equip.longName().equals(equip.getName()))
 		{
@@ -1537,7 +1552,7 @@ public class Gui2InfoFactory implements InfoFactory
 		{
 			return EMPTY_STRING;
 		}
-		final HtmlInfoBuilder b = new HtmlInfoBuilder(OutputNameFormatting.piString(aSpell));
+		final HtmlInfoBuilder b = new HtmlInfoBuilder(titleWithEnglishName(aSpell));
 
 		if (si != null)
 		{

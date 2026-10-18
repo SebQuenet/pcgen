@@ -31,10 +31,13 @@ import javax.swing.Timer;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
+import pcgen.cdom.base.CDOMObject;
 import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.StringKey;
 import pcgen.core.Campaign;
 import pcgen.facade.core.InfoFacade;
+import pcgen.facade.core.SpellSupportFacade.SpellNode;
+import pcgen.gui2.facade.EquipNode;
 import pcgen.gui2.tools.Icons;
 import pcgen.system.LanguageBundle;
 
@@ -113,20 +116,49 @@ public class SearchFilterPanel extends JPanel
 		{
 			return true;
 		}
+		return matchesSearchText(element, searchText);
+	}
+
+	static boolean matchesSearchText(Object element, String text)
+	{
 		String typeStr = ""; //$NON-NLS-1$
 		String abbStr = ""; //$NON-NLS-1$
-		if (element instanceof InfoFacade)
+		InfoFacade info = null;
+		if (element instanceof SpellNode spellNode)
 		{
-			typeStr = ((InfoFacade) element).getType();
+			info = spellNode.getSpell();
 		}
-		else if (element instanceof Campaign)
+		else if (element instanceof EquipNode equipNode)
 		{
-			typeStr = ((Campaign) element).getListAsString(ListKey.BOOK_TYPE);
-			abbStr = ((Campaign) element).get(StringKey.SOURCE_SHORT);
+			info = equipNode.getEquipment();
 		}
-		return StringUtils.containsIgnoreCase(element.toString(), searchText)
-			|| StringUtils.containsIgnoreCase(typeStr, searchText)
-			|| StringUtils.containsIgnoreCase(abbStr, searchText);
+		else if (element instanceof InfoFacade facade)
+		{
+			info = facade;
+		}
+		if (info != null)
+		{
+			typeStr = info.getType();
+			if (StringUtils.containsIgnoreCase(info.toString(), text)
+					|| StringUtils.containsIgnoreCase(info.getKeyName(), text))
+			{
+				return true;
+			}
+			if (info instanceof CDOMObject object
+					&& (StringUtils.containsIgnoreCase(object.getDisplayName(), text)
+						|| StringUtils.containsIgnoreCase(object.getLocalizedName(), text)))
+			{
+				return true;
+			}
+		}
+		if (element instanceof Campaign campaign)
+		{
+			typeStr = campaign.getListAsString(ListKey.BOOK_TYPE);
+			abbStr = campaign.get(StringKey.SOURCE_SHORT);
+		}
+		return StringUtils.containsIgnoreCase(element.toString(), text)
+			|| StringUtils.containsIgnoreCase(typeStr, text)
+			|| StringUtils.containsIgnoreCase(abbStr, text);
 	}
 
 	@Override
