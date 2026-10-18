@@ -3151,5 +3151,61 @@ ABILITY	Special Ability	Druid Domain ~ Plant	DESC	Vous trouvez du réconfort dan
 ABILITY	Special Ability	Grab ~ Colossal	DESC	La créature peut agripper des adversaires de taille Colossale au maximum.
 ABILITY	Special Ability	Rage Power ~ Clear Mind	DESC	Vous pouvez relancer un jet de Volonté raté. Vous utilisez ce pouvoir par une action immédiate après avoir effectué le premier jet, mais avant que le MJ n'en révèle le résultat. Vous devez conserver le second résultat, même s'il est moins bon. Ce pouvoir ne peut être utilisé qu'une fois par rage.
 ABILITY	Special Ability	Rage Power ~ Superstition	DESC	Vous bénéficiez d'un bonus de moral de +%1 aux jets de sauvegarde contre les sorts, les pouvoirs surnaturels et les pouvoirs magiques. Tant que vous êtes en rage, vous ne pouvez être la cible consentante d'aucun sort et devez effectuer un jet de sauvegarde pour résister à tous les sorts, même ceux de vos alliés.
+ABILITY	Special Ability	Discovery ~ Cognatogen	NAME	Cognatogène
+ABILITY	Special Ability	Discovery ~ Cognatogen	DESC	Vous pouvez créer un cognatogène, mélange semblable à un mutagène qui augmente une caractéristique mentale au détriment d'une caractéristique physique : s'il augmente l'Intelligence, il impose un malus à la Force ; la Sagesse, un malus à la Dextérité ; le Charisme, un malus à la Constitution. Sinon, ce pouvoir fonctionne exactement comme mutagène (y compris le bonus d'armure naturelle). Chaque fois que vous prépareriez un mutagène, vous pouvez préparer un cognatogène à la place. Toutes les limites des mutagènes s'appliquent aux cognatogènes comme s'il s'agissait de la même substance : un seul mutagène ou cognatogène à la fois, un cognatogène hors de votre possession devient inerte, en boire rend malade un non-alchimiste, etc. À la fin de l'effet, vous subissez 2 points d'affaiblissement de la caractéristique pénalisée. La découverte infusion de mutagène et l'aptitude mutagène persistant s'appliquent aux cognatogènes.
+ABILITY	Special Ability	Discovery ~ Mutagen	NAME	Mutagène
+ABILITY	Special Ability	Discovery ~ Mutagen	DESC	Vous obtenez l'aptitude de classe mutagène, décrite dans le Manuel des Joueurs, Règles avancées.
+ABILITY	Special Ability	Rage Power ~ Disruptive	NAME	Perturbateur
+ABILITY	Special Ability	Rage Power ~ Disruptive	DESC	Pendant sa rage, le barbare gagne Perturbateur comme don supplémentaire. Il doit posséder le pouvoir de rage superstition pour choisir ce pouvoir.
+ABILITY	Special Ability	Rage Power ~ Sunder Enchantment	NAME	Destruction d'enchantement
+ABILITY	Special Ability	Rage Power ~ Sunder Enchantment	DESC	Pendant sa rage, chaque fois que le barbare réussit une manœuvre de destruction contre un objet magique, les propriétés magiques de cet objet sont neutralisées pendant 1 round, plus 1 round par tranche de 5 points de dépassement de la DMD de la cible au test de manœuvre offensive. Le barbare doit posséder le pouvoir de rage destruction de sort et être au moins de niveau 8 pour choisir ce pouvoir.
+ABILITY	Special Ability	Witch Major Hex ~ Agony	NAME	Maléfice majeur - agonie
+ABILITY	Special Ability	Witch Major Hex ~ Agony	DESC	DD %1 	DC %1 
+ABILITY	Special Ability	Witch Major Hex ~ Agony	DESC	La cible est nauséeuse pendant %1 rounds. Un jet de Vigueur l'annule ; en cas d'échec, la cible peut refaire un jet chaque round pour y mettre fin.	The target is nauseated for %1 rounds. A Fortitude save negates this effect. If the saving throw is failed, the target can attempt a new save each round to end the effect.
+ABILITY	Special Ability	Witch Major Hex ~ Nightmares	NAME	Maléfice majeur - cauchemars
+ABILITY	Special Ability	Witch Major Hex ~ Nightmares	DESC	DD %1 	DC %1 
+ABILITY	Special Ability	Witch Major Hex ~ Nightmares	DESC	Ce maléfice fonctionne comme le sort cauchemar chaque fois que la créature affectée tente de se reposer. Un jet de Volonté l'annule ; en cas d'échec, la cible doit refaire un jet chaque nuit ou être incapable de se reposer.	This hex functions as the spell nightmare each time the affected creature attempts to rest. A Will save negates this effect. If the save is failed, the target must make a new save each night or be unable to rest.
+ABILITY	Special Ability	Witch Major Hex ~ Retribution	NAME	Maléfice majeur - châtiment
+ABILITY	Special Ability	Witch Major Hex ~ Retribution	DESC	DD %1 	DC %1 
+ABILITY	Special Ability	Witch Major Hex ~ Retribution	DESC	Pendant %1 rounds, juste après que la créature maudite inflige des dégâts au corps à corps, elle en subit la moitié (arrondie à l'inférieur), qui surmontent ses résistances, immunités et réduction de dégâts. Un jet de Volonté annule cet effet.	For %1 rounds, immediately after the hexed creature deals damage in melee, it takes half that damage (round down). This damage bypasses any resistances, immunities, or damage reduction the creature possesses. A Will save negates this effect.
+SPELL		Create Greater Undead	NAME	Création de morts-vivants dominants
+SPELL		Create Greater Undead	DESC	Ce sort fonctionne comme création de morts-vivants, mais vous pouvez créer des morts-vivants plus puissants et intelligents.	This spell functions like create undead, except that you can create more powerful and intelligent sorts of undead.
+SPELL		Create Greater Undead	DESC	Ce sort fonctionne comme création de morts-vivants, mais vous pouvez créer des morts-vivants plus puissants et intelligents : ombres, âmes en peine, spectres et dévoreurs. Le ou les types de morts-vivants créés dépendent du niveau de lanceur de sorts, comme indiqué ci-dessous. \nNiveau de lanceur | Mort-vivant créé \n15 ou moins | Ombre \n16-17 | Âme en peine \n18-19 | Spectre \n20 ou plus | Dévoreur	This spell functions like create undead, except that you can create more powerful and intelligent sorts of undead: shadows, wraiths, spectres, and devourers. The type or types of undead created is based on caster level, as shown below. \nCaster Level | Undead Created \n15th or lower | Shadow \n16th-17th | Wraith \n18th-19th | Spectre \n20th or higher | Devourer
+TEMPLATE		Improve Darkvision	NAME	Améliorer la vision dans le noir
+TEMPLATE		Lycanthrope (Animal Form)	NAME	Lycanthrope (forme animale)
+TEMPLATE		Lycanthrope (Hybrid Form)	NAME	Lycanthrope (forme hybride)
+ABILITY	Special Ability	Accursed Corruption Stages	TEMPVALUE_TITLE	Stade de corruption maudite
+ABILITY	Special Ability	Accursed Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption maudite
+ABILITY	Special Ability	Accursed Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption maudite
+ABILITY	Special Ability	Deep One Corruption Stages	TEMPVALUE_TITLE	Stade de corruption profond
+ABILITY	Special Ability	Deep One Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption profond
+ABILITY	Special Ability	Deep One Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption profond
+ABILITY	Special Ability	Ghoul Corruption Stages	TEMPVALUE_TITLE	Stade de corruption goule
+ABILITY	Special Ability	Ghoul Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption goule
+ABILITY	Special Ability	Ghoul Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption goule
+ABILITY	Special Ability	Hellbound Corruption Stages	TEMPVALUE_TITLE	Stade de corruption infernal
+ABILITY	Special Ability	Hellbound Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption infernal
+ABILITY	Special Ability	Hellbound Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption infernal
+ABILITY	Special Ability	Hive Corruption Stages	TEMPVALUE_TITLE	Stade de corruption essaim
+ABILITY	Special Ability	Hive Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption essaim
+ABILITY	Special Ability	Hive Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption essaim
+ABILITY	Special Ability	Lich Corruption Stages	TEMPVALUE_TITLE	Stade de corruption liche
+ABILITY	Special Ability	Lich Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption liche
+ABILITY	Special Ability	Lich Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption liche
+ABILITY	Special Ability	Lycanthropy Corruption Stages	TEMPVALUE_TITLE	Stade de corruption lycanthropie
+ABILITY	Special Ability	Lycanthropy Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption lycanthropie
+ABILITY	Special Ability	Lycanthropy Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption lycanthropie
+ABILITY	Special Ability	Possessed Corruption Stages	TEMPVALUE_TITLE	Stade de corruption possession
+ABILITY	Special Ability	Possessed Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption possession
+ABILITY	Special Ability	Possessed Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption possession
+ABILITY	Special Ability	Promethean Corruption Stages	TEMPVALUE_TITLE	Stade de corruption prométhéenne
+ABILITY	Special Ability	Promethean Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption prométhéenne
+ABILITY	Special Ability	Promethean Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption prométhéenne
+ABILITY	Special Ability	Shadowbound Corruption Stages	TEMPVALUE_TITLE	Stade de corruption liée aux ombres
+ABILITY	Special Ability	Shadowbound Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption liée aux ombres
+ABILITY	Special Ability	Shadowbound Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption liée aux ombres
+ABILITY	Special Ability	Vampirism Corruption Stages	TEMPVALUE_TITLE	Stade de corruption vampirisme
+ABILITY	Special Ability	Vampirism Manifestation Count	TEMPVALUE_TITLE	Nombre de manifestations de la corruption vampirisme
+ABILITY	Special Ability	Vampirism Manifestation Level	TEMPVALUE_TITLE	Niveau des manifestations de la corruption vampirisme
 ABILITY	Special Ability	Slayer Talent ~ Combat Style I	NAME	Style de combat I
 ABILITY	Special Ability	Slayer Talent ~ Combat Style I	DESC	Le tueur choisit un style de combat de rôdeur et reçoit un don de combat de la première liste de ce style. Il peut choisir les dons de son style sans remplir leurs conditions habituelles.
