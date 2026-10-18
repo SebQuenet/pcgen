@@ -147,7 +147,11 @@ public final class Comparators
 			}
 			else if (obj1 instanceof CDOMObject co)
 			{
-				key = co.get(StringKey.SORT_KEY);
+				key = co.get(StringKey.LOCALIZED_NAME);
+				if (key == null)
+				{
+					key = co.get(StringKey.SORT_KEY);
+				}
 				if (key == null)
 				{
 					key = co.getDisplayName();

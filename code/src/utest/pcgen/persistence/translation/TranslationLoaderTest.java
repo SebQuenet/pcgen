@@ -24,14 +24,20 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.List;
 
+import pcgen.cdom.base.CDOMObject;
+import pcgen.core.Ability;
+import pcgen.core.AbilityCategory;
 import pcgen.core.Campaign;
 import pcgen.core.spell.Spell;
+import pcgen.gui2.util.treetable.TreeTableNode;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.rules.context.ConsolidatedListCommitStrategy;
 import pcgen.rules.context.RuntimeLoadContext;
 import pcgen.rules.context.RuntimeReferenceContext;
+import pcgen.util.Comparators;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -100,5 +106,55 @@ class TranslationLoaderTest
 		List<String> problems = TranslationLoader.load(List.of(coreRulebook), "fr", references);
 
 		assertTrue(problems.getFirst().contains("core_rulebook.fr.tsv:1"));
+	}
+
+	@Test
+	@SuppressWarnings("unchecked")
+	void findsFeatNamesInAnotherPathfinderBookAndSortsByFrenchName() throws IOException
+	{
+		Path guide = dataFolder.resolve("pathfinder/paizo/roleplaying_game/adventurers_guide");
+		Path agents = dataFolder.resolve("pathfinder/paizo/player_companion/agents_of_evil");
+		Files.createDirectories(guide);
+		Files.createDirectories(agents);
+		Files.writeString(agents.resolve("_agents_of_evil.fr.tsv"),
+			"ABILITY\tFEAT\tAspis Partner\tNAME\tPartenaire de l'Aspis\n", StandardCharsets.UTF_8);
+		Campaign adventurersGuide = new Campaign();
+		adventurersGuide.setSourceURI(guide.resolve("_adventurers_guide.pcc").toUri());
+		references.importObject(AbilityCategory.FEAT);
+		Ability aspisPartner = AbilityCategory.FEAT.newInstance();
+		aspisPartner.setName("Aspis Partner");
+		references.importObject(aspisPartner);
+		Ability aberrantTumor = AbilityCategory.FEAT.newInstance();
+		aberrantTumor.setName("Aberrant Tumor");
+		aberrantTumor.setLocalizedName("Tumeur aberrante");
+		references.importObject(aberrantTumor);
+
+		TranslationLoader.load(List.of(adventurersGuide), "fr", references);
+
+		assertEquals("Partenaire de l'Aspis", aspisPartner.toString());
+		assertEquals("Aspis Partner", aspisPartner.getKeyName());
+		assertTrue(CDOMObject.P_OBJECT_NAME_COMP.compare(aspisPartner, aberrantTumor) < 0);
+		Comparator<Object> treeComparator = (Comparator<Object>) (Comparator<?>)
+			Comparators.getComparatorFor(TreeTableNode.class);
+		assertTrue(treeComparator.compare(aspisPartner, aberrantTumor) < 0);
+	}
+
+	@Test
+	void loadedBookKeepsItsNameWhenAnotherBookUsesADifferentTranslation() throws IOException
+	{
+		Path guide = dataFolder.resolve("pathfinder/paizo/roleplaying_game/adventurers_guide");
+		Path agents = dataFolder.resolve("pathfinder/paizo/player_companion/agents_of_evil");
+		Files.createDirectories(guide);
+		Files.createDirectories(agents);
+		Files.writeString(guide.resolve("_adventurers_guide.fr.tsv"),
+			"SPELL\t\tMagic Missile\tNAME\tProjectile magique\n", StandardCharsets.UTF_8);
+		Files.writeString(agents.resolve("_agents_of_evil.fr.tsv"),
+			"SPELL\t\tMagic Missile\tNAME\tTrait magique\n", StandardCharsets.UTF_8);
+		Campaign adventurersGuide = new Campaign();
+		adventurersGuide.setSourceURI(guide.resolve("_adventurers_guide.pcc").toUri());
+
+		TranslationLoader.load(List.of(adventurersGuide), "fr", references);
+
+		assertEquals("Projectile magique", magicMissile.toString());
 	}
 }

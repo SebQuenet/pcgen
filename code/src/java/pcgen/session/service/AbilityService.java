@@ -17,7 +17,9 @@
  */
 package pcgen.session.service;
 
+import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -91,6 +93,9 @@ public final class AbilityService
 					available.add(new AvailableAbility(
 						ability.getKeyName(), ability.toString(), character.isQualifiedFor(ability)));
 				}
+				Collator collator = Collator.getInstance();
+				available.sort(Comparator.comparing(AvailableAbility::name, collator)
+					.thenComparing(AvailableAbility::key));
 				return List.copyOf(available);
 			}));
 	}

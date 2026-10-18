@@ -76,6 +76,19 @@ public final class TranslationApplier
 		return problems;
 	}
 
+	/**
+	 * A feat can be defined in several books while its translation is stored beside only one.
+	 * Apply an unambiguous name from another Pathfinder book when the loaded book has none.
+	 */
+	static void applyFallbackName(TranslationEntry entry, AbstractReferenceContext references)
+	{
+		CDOMObject object = objectOf(entry, references);
+		if (object != null && object.get(StringKey.LOCALIZED_NAME) == null)
+		{
+			object.setLocalizedName(entry.text());
+		}
+	}
+
 	private static CDOMObject objectOf(TranslationEntry entry, AbstractReferenceContext references)
 	{
 		if (ABILITY_TYPE.equals(entry.type()))

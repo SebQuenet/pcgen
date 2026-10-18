@@ -77,12 +77,20 @@ public abstract class CDOMObject extends ConcretePrereqObject
 		final Collator collator = Collator.getInstance();
 
 		// Check sort keys first
-		String key1 = o1.get(StringKey.SORT_KEY);
+		String key1 = o1.get(StringKey.LOCALIZED_NAME);
+		if (key1 == null)
+		{
+			key1 = o1.get(StringKey.SORT_KEY);
+		}
 		if (key1 == null)
 		{
 			key1 = o1.getDisplayName();
 		}
-		String key2 = o2.get(StringKey.SORT_KEY);
+		String key2 = o2.get(StringKey.LOCALIZED_NAME);
+		if (key2 == null)
+		{
+			key2 = o2.get(StringKey.SORT_KEY);
+		}
 		if (key2 == null)
 		{
 			key2 = o2.getDisplayName();
