@@ -316,6 +316,13 @@ tasks.register("checksum") {
                         .asFile
                 exeChecksumsFile << "SHA-256 digest for $file.name:\r\n$cs\r\n\r\n"
             }
+            else if (file.name.endsWith(".msi")){
+                def msiChecksumsFile = layout.buildDirectory
+                        .file("release/SHA256-digests-msi-${version}.txt")
+                        .get()
+                        .asFile
+                msiChecksumsFile << "SHA-256 digest for $file.name:\r\n$cs\r\n\r\n"
+            }
             else if (file.name.endsWith(".pkg")|| file.name.endsWith(".dmg")){
                 def macChecksumsFile = layout.buildDirectory
                         .file("release/SHA256-digests-mac-${version}.txt")
@@ -341,7 +348,7 @@ tasks.register("checksum") {
                 // does nothing
             }
             else {
-                throw new GradleException("Checksums should account for all file.")
+                throw new GradleException("Checksums do not handle ${file.name}.")
             }
         }
     }
