@@ -410,3 +410,405 @@ SPELL		Shelter out of Time	NAME	Refuge hors du temps
 TEMPLATE		Boggle Madness	NAME	Folie boggle
 TEMPLATE		Mogogol (Medium)	NAME	Mogogol (taille M)
 TEMPLATE		Mogogol (Small)	NAME	Mogogol (taille P)
+DOMAIN		Preservation	DESC	La volonté des dieux vous permet de vous défaire de tout effet susceptible d'altérer votre esprit ou votre forme.
+EQUIPMENT		Buzzblade (Boggle)	OUTPUTNAME	Lame vrombissante de boggle
+EQUIPMENT		Crossbow (Boggle)	OUTPUTNAME	Arbalète de boggle
+EQUIPMENT		Wrench (Boggle)	OUTPUTNAME	Clé de boggle
+SPELL		Crystalize	DESC	La cible est enfermée dans un cristal magique et pétrifiée. Le cristal possède une solidité de 10 et peut subir 500 points de dégâts avant de libérer son contenu pétrifié, indemne. Il se brise automatiquement et la pétrification du sujet prend fin si un sort de transmutation de la pierre en chair est appliqué avec succès ou si les conditions particulières définies lors de l'incantation sont remplies. Ce sort est sans effet sur les créatures non consentantes.
+SPELL		Extract Knowledge	DESC	Vous touchez le cerveau extrait du cadavre d'un être doué de raison et apprenez instantanément ce qu'il savait de son vivant sur une personne, un lieu ou une chose en particulier. Vous n'obtenez que des renseignements directement liés au sujet choisi. Par exemple, si vous touchez le cerveau d'un aboleth pour connaître son repaire, vous pouvez apprendre comment vous y rendre et ce qu'il contient. Vous n'apprenez cependant rien que l'aboleth ignorait au sujet du repaire, des dangers rencontrés en chemin ou de l'usage des objets qui s'y trouvent. Après le lancement du sort, le cerveau se liquéfie et devient inutilisable. Les renseignements ainsi obtenus s'effacent de votre mémoire au bout de 24 heures.
+SPELL		Protection from Aberrations	DESC	Ce sort protège une créature contre les attaques des aberrations. Premièrement, le sujet bénéficie d'un bonus de parade de +2 à la CA et d'un bonus de résistance de +2 aux jets de sauvegarde contre leurs attaques. Deuxièmement, il est immunisé contre les effets produits par une aberration qui peuvent être dissipés par guérison des maladies ou délivrance des malédictions. Enfin, il bénéficie immédiatement d'un nouveau jet de sauvegarde contre tout sort ou effet provenant d'une aberration et visant à le contrôler mentalement, avec un bonus de moral de +2.
+SPELL		Shelter out of Time	DESC	Pendant l'incantation, vous tracez des runes autour d'une case. À la fin de l'incantation, toutes les créatures et tous les objets entièrement contenus dans cette case sont transférés instantanément dans un espace extradimensionnel temporaire où le temps ne s'écoule pas. Ceux qui n'y sont que partiellement contenus restent sur place. À la fin du sort, l'espace extradimensionnel disparaît et son contenu réapparaît dans la case libre la plus proche de la case d'origine, exactement dans l'état où il se trouvait au moment du transfert. Vous ne pouvez pas mettre fin à ce sort avant son terme.
+TEMPLATE		Boggle Madness	DESC	Type maladie héréditaire ; jet de sauvegarde Volonté DD 16 ; apparition au grand âge ; fréquence 1/heure ; effet 1d4 points de dégâts de Sagesse. Si la victime subit plus de 2 points de dégâts de Sagesse, elle doit réussir un autre jet de Volonté sous peine de perdre le contrôle d'elle-même et d'attaquer la créature ou l'objet mobile le plus proche ; guérison aucune. Particularité : la folie des boggles est une maladie génétique qui touche tous les boggles. Ses symptômes n'apparaissent généralement qu'au grand âge. Elle ne se transmet pas aux autres créatures, même aux gobelins. Aucun moyen, magique ou non, ne peut la guérir définitivement. Un effet qui devrait guérir une maladie n'en supprime que les symptômes pendant 24 heures.
+ABILITY	Special Ability	Abolisher ~ Spells per Day	NAME	Sorts par jour
+ABILITY	Special Ability	Abolisher ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Amphibian ~ Acid Resistance	NAME	Résistance à l'acide
+ABILITY	Special Ability	Amphibian ~ Hold Breath	NAME	Rétention du souffle
+ABILITY	Special Ability	Anumus ~ Keen Senses	NAME	Sens aiguisés
+ABILITY	Special Ability	Arachnid ~ Bestial Reflexes	NAME	Réflexes bestiaux
+ABILITY	Special Ability	Archeovitus ~ Analyze Dweomer	NAME	Analyse d'enchantement
+ABILITY	Special Ability	Archeovitus ~ Bardic Knowledge	NAME	Savoir bardique
+ABILITY	Special Ability	Archeovitus ~ Detect Magic	NAME	Détection de la magie
+ABILITY	Special Ability	Archeovitus ~ Stonecunning	NAME	Connaissance de la pierre
+ABILITY	Special Ability	Archeovitus ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Avian ~ Bestial Reflexes	NAME	Réflexes bestiaux
+ABILITY	Special Ability	Avian ~ Eagle Eyes	NAME	Yeux d'aigle
+ABILITY	Special Ability	Battletwin ~ Double Jeopardy	NAME	Double péril
+ABILITY	Special Ability	Battletwin ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Boggle ~ Weapon Familiarity	NAME	Familiarité avec les armes
+ABILITY	Special Ability	Canine ~ Scent	NAME	Odorat
+ABILITY	Special Ability	Coleophite ~ Natural Armor	NAME	Armure naturelle
+ABILITY	Special Ability	Deathseeker ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Demolisher ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Emerald Ooze ~ Corrosion	NAME	Corrosion
+ABILITY	Special Ability	Entobian ~ Natural Weapons	NAME	Armes naturelles
+ABILITY	Special Ability	Entrepreneur ~ Blindsight	NAME	Vision aveugle
+ABILITY	Special Ability	Entrepreneur ~ Silver Tongue	NAME	Langue d'argent
+ABILITY	Special Ability	Entrepreneur ~ Treasure Sense	NAME	Sens du trésor
+ABILITY	Special Ability	Entrepreneur ~ True Seeing	NAME	Vision lucide
+ABILITY	Special Ability	Entrepreneur ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Eulite ~ Innate Resistance	NAME	Résistance innée
+ABILITY	Special Ability	Eulite ~ Spell-Like Ability	NAME	Pouvoir magique
+ABILITY	Special Ability	Farfalite ~ Spell-Like Ability	NAME	Pouvoir magique
+ABILITY	Special Ability	Feline ~ Low-Light Vision	NAME	Vision nocturne
+ABILITY	Special Ability	Gelatinous Orb ~ Transparent	NAME	Transparent
+ABILITY	Special Ability	Golden Muse ~ Divine Presence	NAME	Présence divine
+ABILITY	Special Ability	Golden Muse ~ Spells per Day	NAME	Sorts par jour
+ABILITY	Special Ability	Golden Muse ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Grim Repear ~ Expanded Spell List	NAME	Liste de sorts étendue
+ABILITY	Special Ability	Grim Repear ~ Spells per Day	NAME	Sorts par jour
+ABILITY	Special Ability	Grim Repear ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Kval ~ Detect Evil	NAME	Détection du Mal
+ABILITY	Special Ability	Kval ~ Senses	NAME	Sens
+ABILITY	Special Ability	Kval ~ Toxic	NAME	Toxique
+ABILITY	Special Ability	Larvite ~ Spin Silk	NAME	Filer la soie
+ABILITY	Special Ability	Lightseeker ~ Blindsense	NAME	Perception aveugle
+ABILITY	Special Ability	Lightseeker ~ Darksense	NAME	Sens des ténèbres
+ABILITY	Special Ability	Lightseeker ~ See the Unseen	NAME	Voir l'invisible
+ABILITY	Special Ability	Lightseeker ~ Uncanny Dodge	NAME	Esquive instinctive
+ABILITY	Special Ability	Lightseeker ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Mahrog ~ Almost Human	NAME	Presque humain
+ABILITY	Special Ability	Mahrog ~ Bonus Feats	NAME	Dons supplémentaires
+ABILITY	Special Ability	Mogogol ~ Hold Breath	NAME	Rétention du souffle
+ABILITY	Special Ability	Moscanite ~ Innate Resistance	NAME	Résistance innée
+ABILITY	Special Ability	Moscanite ~ Senses	NAME	Sens
+ABILITY	Special Ability	Moscanite ~ Spell-Like Ability	NAME	Pouvoir magique
+ABILITY	Special Ability	Muse ~ Low-Light Vision	NAME	Vision nocturne
+ABILITY	Special Ability	Numistian ~ Low-Light Vision	NAME	Vision nocturne
+ABILITY	Special Ability	Numistian ~ Slow and Steady	NAME	Lent mais sûr
+ABILITY	Special Ability	Obitu ~ Negative Energy Resistance	NAME	Résistance à l'énergie négative
+ABILITY	Special Ability	Ophidian ~ Bestial Reflexes	NAME	Réflexes bestiaux
+ABILITY	Special Ability	Pharaoh ~ Spells per Day	NAME	Sorts par jour
+ABILITY	Special Ability	Pharaoh ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Porcine ~ Scent	NAME	Odorat
+ABILITY	Special Ability	Relluk ~ Living Construct	NAME	Créature artificielle vivante
+ABILITY	Special Ability	Reverent of Spring ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Rodent ~ Bestial Reflexes	NAME	Réflexes bestiaux
+ABILITY	Special Ability	Savage ~ Call of the Wild	NAME	Appel de la nature
+ABILITY	Special Ability	Savage ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Slime Lord ~ Acid Resistance	NAME	Résistance à l'acide
+ABILITY	Special Ability	Slime Lord ~ Spells per Day	NAME	Sorts par jour
+ABILITY	Special Ability	Slime Lord ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Squole ~ Elemental Resistance	NAME	Résistance élémentaire
+ABILITY	Special Ability	Taddol ~ Low-Light Vision	NAME	Vision nocturne
+ABILITY	Special Ability	Tar Jelly ~ Flammable	NAME	Inflammable
+ABILITY	Special Ability	Tar Jelly ~ Sticky	NAME	Collant
+ABILITY	Special Ability	Warrior Philosopher ~ Combat Precognition	NAME	Précognition au combat
+ABILITY	Special Ability	Warrior Philosopher ~ Enduring Body	NAME	Corps endurant
+ABILITY	Special Ability	Warrior Philosopher ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Zubit ~ Weapon and Armor Proficiency	NAME	Armes et armures
+ABILITY	Special Ability	Abolisher ~ Favored Enemy	NAME	Ennemi juré
+ABILITY	Special Ability	Abolisher ~ Gaze of Elders	NAME	Regard des anciens
+ABILITY	Special Ability	Abolisher ~ Mind Cracker	NAME	Briseur d'esprits
+ABILITY	Special Ability	Abolisher ~ Mind Shell	NAME	Carapace mentale
+ABILITY	Special Ability	Abolisher ~ Protection From Aberrations	NAME	Protection contre les aberrations
+ABILITY	Special Ability	Abolisher ~ See The Darkness	NAME	Voir dans les ténèbres
+ABILITY	Special Ability	Amphibian ~ Bestial Fortitude	NAME	Vigueur bestiale
+ABILITY	Special Ability	Amphibian ~ Great Swimmers	NAME	Grands nageurs
+ABILITY	Special Ability	Ancient Secret ~ Book of the Dead	NAME	Livre des morts
+ABILITY	Special Ability	Ancient Secret ~ Immortal Rites	NAME	Rites immortels
+ABILITY	Special Ability	Ancient Secret ~ Lost Art	NAME	Art perdu
+ABILITY	Special Ability	Ancient Secret ~ Lost Knowledge	NAME	Savoir perdu
+ABILITY	Special Ability	Ancient Secret ~ True Name	NAME	Nom véritable
+ABILITY	Special Ability	Arachnid ~ Darkvision	NAME	Vision dans le noir
+ABILITY	Special Ability	Arachnid ~ Great Climbers	NAME	Grands grimpeurs
+ABILITY	Special Ability	Arachnid ~ Web Caster	NAME	Tisseur de toiles
+ABILITY	Special Ability	Archeovitus ~ Evasion	NAME	Esquive totale
+ABILITY	Special Ability	Archeovitus ~ Eyes of the Ancients	NAME	Yeux des anciens
+ABILITY	Special Ability	Archeovitus ~ Find the Path	NAME	Orientation
+ABILITY	Special Ability	Archeovitus ~ Legend Lore	NAME	Légende
+ABILITY	Special Ability	Archeovitus ~ Mists of Time	NAME	Brumes du temps
+ABILITY	Special Ability	Archeovitus ~ Ruins Walker	NAME	Marcheur des ruines
+ABILITY	Special Ability	Archeovitus ~ Wisdom of Ages	NAME	Sagesse des âges
+ABILITY	Special Ability	Armor Gem ~ Banded Mail Emulation (Gemstone)	NAME	Imitation de la cuirasse à bandes
+ABILITY	Special Ability	Armor Gem ~ Banded Mail Emulation (Quartz)	NAME	Imitation de la cuirasse à bandes
+ABILITY	Special Ability	Armor Gem ~ Breastplate Emulation (Gemstone)	NAME	Imitation de la cuirasse
+ABILITY	Special Ability	Armor Gem ~ Breastplate Emulation (Quartz)	NAME	Imitation de la cuirasse
+ABILITY	Special Ability	Armor Gem ~ Chainmail Emulation (Gemstone)	NAME	Imitation de la cotte de mailles
+ABILITY	Special Ability	Armor Gem ~ Chainmail Emulation (Quartz)	NAME	Imitation de la cotte de mailles
+ABILITY	Special Ability	Armor Gem ~ Chainmail Shirt Emulation (Gemstone)	NAME	Imitation de la chemise de mailles
+ABILITY	Special Ability	Armor Gem ~ Chainmail Shirt Emulation (Quartz)	NAME	Imitation de la chemise de mailles
+ABILITY	Special Ability	Armor Gem ~ Full Plate Emulation (Gemstone)	NAME	Imitation du harnois
+ABILITY	Special Ability	Armor Gem ~ Full Plate Emulation (Quartz)	NAME	Imitation du harnois
+ABILITY	Special Ability	Armor Gem ~ Half-Plate Emulation (Gemstone)	NAME	Imitation du demi-harnois
+ABILITY	Special Ability	Armor Gem ~ Half-Plate Emulation (Quartz)	NAME	Imitation du demi-harnois
+ABILITY	Special Ability	Armor Gem ~ Hide Armor Emulation (Gemstone)	NAME	Imitation de l'armure de peaux
+ABILITY	Special Ability	Armor Gem ~ Hide Armor Emulation (Quartz)	NAME	Imitation de l'armure de peaux
+ABILITY	Special Ability	Armor Gem ~ Leather Armor Emulation (Gemstone)	NAME	Imitation de l'armure de cuir
+ABILITY	Special Ability	Armor Gem ~ Leather Armor Emulation (Quartz)	NAME	Imitation de l'armure de cuir
+ABILITY	Special Ability	Armor Gem ~ Padded Armor Emulation (Gemstone)	NAME	Imitation de l'armure matelassée
+ABILITY	Special Ability	Armor Gem ~ Padded Armor Emulation (Quartz)	NAME	Imitation de l'armure matelassée
+ABILITY	Special Ability	Armor Gem ~ Scale Mail Emulation (Gemstone)	NAME	Imitation de l'armure d'écailles
+ABILITY	Special Ability	Armor Gem ~ Scale Mail Emulation (Quartz)	NAME	Imitation de l'armure d'écailles
+ABILITY	Special Ability	Armor Gem ~ Splint Mail Emulation (Gemstone)	NAME	Imitation de l'armure à plaques
+ABILITY	Special Ability	Armor Gem ~ Splint Mail Emulation (Quartz)	NAME	Imitation de l'armure à plaques
+ABILITY	Special Ability	Armor Gem ~ Studded Leather Armor Emulation (Gemstone)	NAME	Imitation de l'armure de cuir cloutée
+ABILITY	Special Ability	Armor Gem ~ Studded Leather Armor Emulation (Quartz)	NAME	Imitation de l'armure de cuir cloutée
+ABILITY	Special Ability	Avian ~ Feather Magic	NAME	Magie des plumes
+ABILITY	Special Ability	Battle Toad ~ Grasping Tongue	NAME	Langue agrippante
+ABILITY	Special Ability	Battle Toad ~ Marsh Move	NAME	Déplacement dans les marais
+ABILITY	Special Ability	Battletwin ~ Defense of Two	NAME	Défense à deux
+ABILITY	Special Ability	Battletwin ~ Doublethink	NAME	Double pensée
+ABILITY	Special Ability	Battletwin ~ Reach of Two	NAME	Allonge à deux
+ABILITY	Special Ability	Battletwin ~ Strength of Two	NAME	Force à deux
+ABILITY	Special Ability	Battletwin ~ Superior Cleave	NAME	Enchaînement supérieur
+ABILITY	Special Ability	Battletwin ~ Twintellect	NAME	Intellect jumelé
+ABILITY	Special Ability	Boggle ~ Darkvision	NAME	Vision dans le noir
+ABILITY	Special Ability	Boggle ~ Dodge Catastrophes	NAME	Esquiver les catastrophes
+ABILITY	Special Ability	Boggle ~ Fast Speed	NAME	Vitesse élevée
+ABILITY	Special Ability	Boggle ~ Goblin Blood	NAME	Sang gobelin
+ABILITY	Special Ability	Boggle ~ Mechanical Genius	NAME	Génie mécanique
+ABILITY	Special Ability	Canine ~ Improved Trip	NAME	Science du croc-en-jambe
+ABILITY	Special Ability	Coin Drake ~ Coin Camouflage	NAME	Camouflage parmi les pièces
+ABILITY	Special Ability	Coin Drake ~ Piercing Immunity	NAME	Immunité aux dégâts perforants
+ABILITY	Special Ability	Coin Drake ~ Regeneration	NAME	Régénération
+ABILITY	Special Ability	Coleophite ~ Chitinous Defense	NAME	Défense chitineuse
+ABILITY	Special Ability	Coleophite ~ Flying	NAME	Vol
+ABILITY	Special Ability	Coleophite ~ Race Stat	NAME	+2 en Constitution, +2 en Force, −2 en Dextérité
+ABILITY	Special Ability	Companion Advancement ~ Toad	NAME	Progression du compagnon : crapaud
+ABILITY	Special Ability	Companion Toad ~ Grasping Tongue	NAME	Langue agrippante
+ABILITY	Special Ability	Companion Toad ~ Marsh Move	NAME	Déplacement dans les marais
+ABILITY	Special Ability	Deathseeker ~ Bloody Toxin	NAME	Toxine sanglante
+ABILITY	Special Ability	Deathseeker ~ Damage Reduction	NAME	Réduction des dégâts
+ABILITY	Special Ability	Deathseeker ~ Fear Nothing	NAME	Sans peur
+ABILITY	Special Ability	Deathseeker ~ Last Resort	NAME	Dernier recours
+ABILITY	Special Ability	Deathseeker ~ Rage Refocus	NAME	Recentrage de la rage
+ABILITY	Special Ability	Deathseeker ~ Raging Malice	NAME	Malveillance enragée
+ABILITY	Special Ability	Deathseeker ~ Reckless Spite	NAME	Mépris téméraire
+ABILITY	Special Ability	Deathseeker ~ See Evil Fast	NAME	Repérer le Mal sans tarder
+ABILITY	Special Ability	Demolisher ~ Boggle Bomb	NAME	Bombe de boggle
+ABILITY	Special Ability	Demolisher ~ Break and bend	NAME	Briser et plier
+ABILITY	Special Ability	Demolisher ~ Evasion	NAME	Esquive totale
+ABILITY	Special Ability	Demolisher ~ Greater Boggle Bomb	NAME	Bombe de boggle supérieure
+ABILITY	Special Ability	Demolisher ~ Harness destructive force	NAME	Canaliser la force destructrice
+ABILITY	Special Ability	Demolisher ~ Improved Evasion	NAME	Esquive totale supérieure
+ABILITY	Special Ability	Demolisher ~ Improved Sunder	NAME	Science de la destruction
+ABILITY	Special Ability	Demolisher ~ Mangle mail	NAME	Déformer les mailles
+ABILITY	Special Ability	Demolisher ~ Rogue Talent	NAME	Talent de roublard
+ABILITY	Special Ability	Demolisher ~ Scratch and dent	NAME	Rayer et cabosser
+ABILITY	Special Ability	Emerald Ooze ~ Acid	NAME	Acide
+ABILITY	Special Ability	Entobian ~ Familiar Foe	NAME	Ennemi familier
+ABILITY	Special Ability	Entobian ~ Fast Speed	NAME	Vitesse élevée
+ABILITY	Special Ability	Entobian ~ Insect Mind	NAME	Esprit d'insecte
+ABILITY	Special Ability	Entrepreneur ~ Automatic Appraisal	NAME	Estimation automatique
+ABILITY	Special Ability	Entrepreneur ~ Curestrike	NAME	Frappe curative
+ABILITY	Special Ability	Entrepreneur ~ Darkvision	NAME	Vision dans le noir
+ABILITY	Special Ability	Entrepreneur ~ Knowledge is Power	NAME	Le savoir est une arme
+ABILITY	Special Ability	Entrepreneur ~ Trustworthy Aura	NAME	Aura de confiance
+ABILITY	Special Ability	Entrepreneur ~ X-ray Vision	NAME	Vision aux rayons X
+ABILITY	Special Ability	Equine ~ Bestial Fortitude	NAME	Vigueur bestiale
+ABILITY	Special Ability	Equine ~ Enhanced Speed	NAME	Vitesse accrue
+ABILITY	Special Ability	Equine ~ Rushing Charge	NAME	Charge impétueuse
+ABILITY	Special Ability	Eulite ~ Darkvision	NAME	Vision dans le noir
+ABILITY	Special Ability	Eulite ~ Flying	NAME	Vol
+ABILITY	Special Ability	Eulite ~ Race Stat	NAME	+2 en Force, +2 en Sagesse, −2 en Constitution
+ABILITY	Special Ability	Farfalite ~ Flying	NAME	Vol
+ABILITY	Special Ability	Farfalite ~ Race Stat	NAME	+2 en Dextérité, +2 en Intelligence, −2 en Constitution
+ABILITY	Special Ability	Feline ~ Cat-like Grace	NAME	Grâce féline
+ABILITY	Special Ability	Feline ~ Sure-footed	NAME	Pied sûr
+ABILITY	Special Ability	Gelatinous Orb ~ Engulf Head	NAME	Engloutir la tête
+ABILITY	Special Ability	Golden Muse ~ Golden Light	NAME	Lumière dorée
+ABILITY	Special Ability	Golden Muse ~ Golden Strike	NAME	Frappe dorée
+ABILITY	Special Ability	Golden Muse ~ Let It Shine	NAME	Que la lumière brille
+ABILITY	Special Ability	Golden Muse ~ Touch of Gold	NAME	Toucher d'or
+ABILITY	Special Ability	Grim Repear ~ Bonus Feat	NAME	Don supplémentaire
+ABILITY	Special Ability	Grim Repear ~ Favored Enemy	NAME	Ennemi juré
+ABILITY	Special Ability	Grim Repear ~ Legendary Hunter	NAME	Chasseur légendaire
+ABILITY	Special Ability	Grim Repear ~ Life From Death	NAME	La vie née de la mort
+ABILITY	Special Ability	Grim Repear ~ Life Over Death	NAME	La vie triomphe de la mort
+ABILITY	Special Ability	Grim Repear ~ Life Strike	NAME	Frappe vitale
+ABILITY	Special Ability	Grim Repear ~ Potent Carrier	NAME	Porteur puissant
+ABILITY	Special Ability	Grim Repear ~ Superior Turning	NAME	Renvoi supérieur
+ABILITY	Special Ability	Gumpawomp ~ Domestic	NAME	Domestique
+ABILITY	Special Ability	Kval ~ Big Hands	NAME	Grandes mains
+ABILITY	Special Ability	Kval ~ Fast Speed	NAME	Vitesse élevée
+ABILITY	Special Ability	Kval ~ Lost Under Foot	NAME	Perdu sous les pieds
+ABILITY	Special Ability	Kval ~ Natural Acrobat	NAME	Acrobate naturel
+ABILITY	Special Ability	Larvite ~ Race Stat	NAME	+2 en Dextérité, +2 en Charisme, −2 en Sagesse
+ABILITY	Special Ability	Larvite ~ Skilled	NAME	Doué
+ABILITY	Special Ability	Lightseeker ~ Bonus Mobility	NAME	Mobilité accrue
+ABILITY	Special Ability	Lightseeker ~ Enlighten	NAME	Éclairer
+ABILITY	Special Ability	Lightseeker ~ Precocious Speed	NAME	Vitesse précoce
+ABILITY	Special Ability	Lightseeker ~ Radiant Critical	NAME	Critique rayonnant
+ABILITY	Special Ability	Lightseeker ~ Ruins Walker	NAME	Marcheur des ruines
+ABILITY	Special Ability	Mahrog ~ Skilled	NAME	Doué
+ABILITY	Special Ability	Mahrog ~ Skin of the Beast	NAME	Peau de la bête
+ABILITY	Special Ability	Mogogol ~ Grasping Tongue	NAME	Langue agrippante
+ABILITY	Special Ability	Mogogol ~ Inborn Alignment	NAME	Alignement inné
+ABILITY	Special Ability	Mogogol ~ Marsh Move	NAME	Déplacement dans les marais
+ABILITY	Special Ability	Mogogol ~ Normal Speed	NAME	Vitesse normale
+ABILITY	Special Ability	Mogogol ~ Skilled Climber	NAME	Grimpeur expérimenté
+ABILITY	Special Ability	Mogogol ~ Skilled Jumper	NAME	Sauteur expérimenté
+ABILITY	Special Ability	Moscanite ~ Flying	NAME	Vol
+ABILITY	Special Ability	Moscanite ~ Race Stat	NAME	+2 en Constitution, +2 en Dextérité, −2 en Charisme
+ABILITY	Special Ability	Muse ~ Muse Immunities	NAME	Immunités de la muse
+ABILITY	Special Ability	Muse ~ Source of Inspiration	NAME	Source d'inspiration
+ABILITY	Special Ability	Muse ~ Touch of the Muse	NAME	Toucher de la muse
+ABILITY	Special Ability	Muse ~ Unearthly Presence	NAME	Présence surnaturelle
+ABILITY	Special Ability	Numistian ~ Adjustable Size	NAME	Taille variable
+ABILITY	Special Ability	Numistian ~ Bribe Fate	NAME	Soudoyer le destin
+ABILITY	Special Ability	Numistian ~ Detect Coins	NAME	Détection des pièces
+ABILITY	Special Ability	Numistian ~ Money is Life	NAME	L'argent, c'est la vie
+ABILITY	Special Ability	Numistian ~ Silver Stomach	NAME	Estomac d'argent
+ABILITY	Special Ability	Oakling ~ Humanoid Plant	NAME	Plante humanoïde
+ABILITY	Special Ability	Oakling ~ Protective Sap	NAME	Sève protectrice
+ABILITY	Special Ability	Oakling ~ Rooted Foot	NAME	Pied enraciné
+ABILITY	Special Ability	Oakling ~ Sun Heal	NAME	Guérison solaire
+ABILITY	Special Ability	Obitu ~ Fossil Fortitude	NAME	Vigueur fossile
+ABILITY	Special Ability	Obitu ~ Improved Initiative	NAME	Science de l'initiative
+ABILITY	Special Ability	Obitu ~ Nimble Form	NAME	Forme agile
+ABILITY	Special Ability	Obitu ~ Sleep Immunity	NAME	Immunité au sommeil
+ABILITY	Special Ability	Ophidian ~ Bestial Fortitude	NAME	Vigueur bestiale
+ABILITY	Special Ability	Ophidian ~ Contortionist	NAME	Contorsionniste
+ABILITY	Special Ability	Ophidian ~ Darkvision	NAME	Vision dans le noir
+ABILITY	Special Ability	Pharaoh ~ Ancient Secret	NAME	Secret ancestral
+ABILITY	Special Ability	Pharaoh ~ Crook and Flail	NAME	Crosse et fléau
+ABILITY	Special Ability	Pharaoh ~ Divine Decree	NAME	Décret divin
+ABILITY	Special Ability	Pharaoh ~ Divine Form	NAME	Forme divine
+ABILITY	Special Ability	Pharaoh ~ Flames of Judgment	NAME	Flammes du jugement
+ABILITY	Special Ability	Pharaoh ~ Light of the Gods	NAME	Lumière des dieux
+ABILITY	Special Ability	Pharaoh ~ Resplendent Range	NAME	Portée resplendissante
+ABILITY	Special Ability	Porcine ~ Bestial Fortitude	NAME	Vigueur bestiale
+ABILITY	Special Ability	Porcine ~ Boarish Ferocity	NAME	Férocité du sanglier
+ABILITY	Special Ability	Relluk Beast ~ Armor Gems	NAME	Gemmes d'armure
+ABILITY	Special Ability	Relluk Beast ~ Breath of Steam	NAME	Souffle de vapeur
+ABILITY	Special Ability	Relluk Beast ~ Light and Heat	NAME	Lumière et chaleur
+ABILITY	Special Ability	Relluk ~ Armor Gems	NAME	Gemmes d'armure
+ABILITY	Special Ability	Relluk ~ Breath of Steam	NAME	Souffle de vapeur
+ABILITY	Special Ability	Relluk ~ Light and Heat	NAME	Lumière et chaleur
+ABILITY	Special Ability	Reptile ~ Bestial Fortitude	NAME	Vigueur bestiale
+ABILITY	Special Ability	Reptile ~ Ferocious Hunger	NAME	Faim féroce
+ABILITY	Special Ability	Reptile ~ Reptilian Mind	NAME	Esprit reptilien
+ABILITY	Special Ability	Reverent of Spring ~ Blood Heal	NAME	Guérison par le sang
+ABILITY	Special Ability	Reverent of Spring ~ Hunter's Insight	NAME	Intuition du chasseur
+ABILITY	Special Ability	Reverent of Spring ~ Nature's Resistance	NAME	Résistance de la nature
+ABILITY	Special Ability	Reverent of Spring ~ Strangle Root	NAME	Racine étrangleuse
+ABILITY	Special Ability	Reverent of Spring ~ Tame the Mind	NAME	Apaiser l'esprit
+ABILITY	Special Ability	Reverent of Spring ~ Wild Root	NAME	Racine sauvage
+ABILITY	Special Ability	Rift Swarm ~ Lost Under Foot	NAME	Perdu sous les pieds
+ABILITY	Special Ability	Rift Swarm ~ Poison	NAME	Poison
+ABILITY	Special Ability	Rodent ~ Jittery	NAME	Nerveux
+ABILITY	Special Ability	Rodent ~ Rodent Resilience	NAME	Résilience du rongeur
+ABILITY	Special Ability	Rooted Foot	NAME	Pied enraciné
+ABILITY	Special Ability	Savage ~ Beast Hide	NAME	Peau de bête
+ABILITY	Special Ability	Savage ~ Fang Blade	NAME	Lame de croc
+ABILITY	Special Ability	Savage ~ Form of Power	NAME	Forme de puissance
+ABILITY	Special Ability	Savage ~ Power Animal	NAME	Animal de puissance
+ABILITY	Special Ability	Savage ~ Tools of Nature	NAME	Outils de la nature
+ABILITY	Special Ability	Savage ~ Unbalancing Bash	NAME	Coup déséquilibrant
+ABILITY	Special Ability	Slime Lord ~ Amorphous Body	NAME	Corps amorphe
+ABILITY	Special Ability	Slime Lord ~ Ooze Traits	NAME	Traits de vase
+ABILITY	Special Ability	Slime Lord ~ Ooze Whisperer	NAME	Murmureur des vases
+ABILITY	Special Ability	Slime Lord ~ Slime Shot	NAME	Jet de limon
+ABILITY	Special Ability	Slime Lord ~ Summon Ooze	NAME	Invocation de vase
+ABILITY	Special Ability	Snillorg ~ Fear of Light	NAME	Peur de la lumière
+ABILITY	Special Ability	Snillorg ~ Protective Shell	NAME	Carapace protectrice
+ABILITY	Special Ability	Squole ~ Blind	NAME	Aveugle
+ABILITY	Special Ability	Squole ~ Blindsight (40 feet)	NAME	Vision aveugle (12 m)
+ABILITY	Special Ability	Squole ~ Boneless	NAME	Sans os
+ABILITY	Special Ability	Squole ~ Humanoid Ooze	NAME	Vase humanoïde
+ABILITY	Special Ability	Taddol ~ Half-blood	NAME	Sang mêlé
+ABILITY	Special Ability	Taddol ~ Languages	NAME	Langues
+ABILITY	Special Ability	Taddol ~ Multitalented	NAME	Talents multiples
+ABILITY	Special Ability	Taddol ~ Two Heads	NAME	Deux têtes
+ABILITY	Special Ability	Taddol ~ Two-Weapon Fighting	NAME	Combat à deux armes
+ABILITY	Special Ability	Toog ~ Terrible Squawk	NAME	Cri strident
+ABILITY	Special Ability	Ursine ~ Bear's Might	NAME	Puissance de l'ours
+ABILITY	Special Ability	Ursine ~ Bestial Fortitude	NAME	Vigueur bestiale
+ABILITY	Special Ability	Ursine ~ Improved Grapple	NAME	Science de la lutte
+ABILITY	Special Ability	Warrior Philosopher ~ Army of One	NAME	Armée à lui seul
+ABILITY	Special Ability	Warrior Philosopher ~ Exotic Specialization	NAME	Spécialisation exotique
+ABILITY	Special Ability	Warrior Philosopher ~ Greater Probability Manipulation	NAME	Manipulation des probabilités supérieure
+ABILITY	Special Ability	Warrior Philosopher ~ Impossible Odds	NAME	Chances impossibles
+ABILITY	Special Ability	Warrior Philosopher ~ Perfect Attack	NAME	Attaque parfaite
+ABILITY	Special Ability	Warrior Philosopher ~ Summon Magic Weapon	NAME	Invocation d'arme magique
+ABILITY	Special Ability	Wicked Thorns	NAME	Épines cruelles
+ABILITY	Special Ability	Woggart ~ Marsh Move	NAME	Déplacement dans les marais
+ABILITY	Special Ability	Woggart ~ Timid	NAME	Timide
+ABILITY	Special Ability	Xax ~ Chaotic Resistance	NAME	Résistance au Chaos
+ABILITY	Special Ability	Xax ~ Memory of Conflict	NAME	Souvenir du conflit
+ABILITY	Special Ability	Xax ~ Skill Tuning	NAME	Réglage des compétences
+ABILITY	Special Ability	Xax ~ We Are One	NAME	Nous ne faisons qu'un
+ABILITY	Special Ability	Zif ~ Inborn Knowledge	NAME	Savoir inné
+ABILITY	Special Ability	Zif ~ Odd Anatomy	NAME	Anatomie étrange
+ABILITY	Special Ability	Zif ~ Protective Shell	NAME	Carapace protectrice
+ABILITY	Special Ability	Zif ~ Sucker Foot	NAME	Pied ventouse
+ABILITY	Special Ability	Zubit ~ Armor of the Heart	NAME	Armure du cœur
+ABILITY	Special Ability	Zubit ~ Claws of the Meek	NAME	Griffes des humbles
+ABILITY	Special Ability	Zubit ~ Courageous Aura	NAME	Aura de courage
+ABILITY	Special Ability	Zubit ~ Inspiring Aura	NAME	Aura inspirante
+ABILITY	Special Ability	Zubit ~ Leaping Step	NAME	Pas bondissant
+ABILITY	Special Ability	Abolisher ~ Weapon and Armor Proficiency	DESC	Les pourfendeurs ne reçoivent aucune formation au maniement des armes ni au port des armures.
+ABILITY	Special Ability	Amphibian ~ Acid Resistance	DESC	Les anumis amphibiens possèdent une résistance à l'acide de 5.
+ABILITY	Special Ability	Amphibian ~ Bestial Fortitude	DESC	Les anumis amphibiens bénéficient d'un bonus racial de +2 à tous les jets de sauvegarde contre les maladies et le poison.
+ABILITY	Special Ability	Amphibian ~ Great Swimmers	DESC	Les anumis amphibiens bénéficient d'un bonus racial de +4 à tous les tests de Natation.
+ABILITY	Special Ability	Ancient Secret ~ Book of the Dead	DESC	Bonus de connaissance de +4 aux jets de sauvegarde contre tous les sorts de mort et les effets de mort magiques.
+ABILITY	Special Ability	Ancient Secret ~ Lost Art	DESC	4 rangs dans une compétence d'Artisanat où le personnage ne possède aucun rang.
+ABILITY	Special Ability	Ancient Secret ~ Lost Knowledge	DESC	4 rangs dans une compétence de Connaissances où le personnage ne possède aucun rang.
+ABILITY	Special Ability	Ancient Secret ~ True Name	DESC	Un don quelconque ayant pour prérequis une valeur de caractéristique minimale.
+ABILITY	Special Ability	Anumus ~ Keen Senses	DESC	Les anumis bénéficient d'un bonus racial de +2 aux tests de Perception.
+ABILITY	Special Ability	Arachnid ~ Darkvision	DESC	Les anumis arachnides possèdent la vision dans le noir sur 18 mètres.
+ABILITY	Special Ability	Arachnid ~ Great Climbers	DESC	Les anumis arachnides bénéficient d'un bonus racial de +4 à tous les tests d'Escalade.
+ABILITY	Special Ability	Armor Gem ~ Banded Mail Emulation (Gemstone)	DESC	Vous bénéficiez d'une résistance au feu de 10.
+ABILITY	Special Ability	Armor Gem ~ Banded Mail Emulation (Quartz)	DESC	Vous bénéficiez d'une résistance au feu de 5.
+ABILITY	Special Ability	Armor Gem ~ Chainmail Emulation (Gemstone)	DESC	Vous bénéficiez d'un bonus racial de +4 aux jets de Volonté contre les sorts et effets mentaux.
+ABILITY	Special Ability	Armor Gem ~ Chainmail Emulation (Quartz)	DESC	Vous bénéficiez d'un bonus racial de +2 aux jets de Volonté contre les sorts et effets mentaux.
+ABILITY	Special Ability	Armor Gem ~ Chainmail Shirt Emulation (Gemstone)	DESC	Vous bénéficiez d'un bonus racial de +4 aux tests de Psychologie et de Diplomatie.
+ABILITY	Special Ability	Armor Gem ~ Chainmail Shirt Emulation (Quartz)	DESC	Vous bénéficiez d'un bonus racial de +2 aux tests de Psychologie et de Diplomatie.
+ABILITY	Special Ability	Armor Gem ~ Full Plate Emulation (Gemstone)	DESC	Vous bénéficiez d'une résistance au froid de 10 et d'une résistance au son de 10.
+ABILITY	Special Ability	Armor Gem ~ Full Plate Emulation (Quartz)	DESC	Vous bénéficiez d'une résistance au froid de 5 et d'une résistance au son de 5.
+ABILITY	Special Ability	Armor Gem ~ Half-Plate Emulation (Gemstone)	DESC	Vous bénéficiez d'une résistance à l'électricité de 10.
+ABILITY	Special Ability	Armor Gem ~ Half-Plate Emulation (Quartz)	DESC	Vous bénéficiez d'une résistance à l'électricité de 5.
+ABILITY	Special Ability	Armor Gem ~ Leather Armor Emulation (Gemstone)	DESC	Vous bénéficiez d'un bonus racial de +4 aux tests de Premiers secours et de Survie.
+ABILITY	Special Ability	Armor Gem ~ Leather Armor Emulation (Quartz)	DESC	Vous bénéficiez d'un bonus racial de +2 aux tests de Premiers secours et de Survie.
+ABILITY	Special Ability	Armor Gem ~ Padded Armor Emulation (Gemstone)	DESC	Vous bénéficiez d'un bonus racial de +4 aux tests de Connaissances (mystères) et d'Art de la magie.
+ABILITY	Special Ability	Armor Gem ~ Padded Armor Emulation (Quartz)	DESC	Vous bénéficiez d'un bonus racial de +2 aux tests de Connaissances (mystères) et d'Art de la magie.
+ABILITY	Special Ability	Armor Gem ~ Splint Mail Emulation (Gemstone)	DESC	Vous bénéficiez d'une résistance à l'acide de 10.
+ABILITY	Special Ability	Armor Gem ~ Splint Mail Emulation (Quartz)	DESC	Vous bénéficiez d'une résistance à l'acide de 5.
+ABILITY	Special Ability	Armor Gem ~ Studded Leather Armor Emulation (Gemstone)	DESC	Vous bénéficiez d'un bonus racial de +4 aux tests de Perception et de Discrétion.
+ABILITY	Special Ability	Armor Gem ~ Studded Leather Armor Emulation (Quartz)	DESC	Vous bénéficiez d'un bonus racial de +2 aux tests de Perception et de Discrétion.
+ABILITY	Special Ability	Avian ~ Eagle Eyes	DESC	Les anumis aviaires bénéficient d'un bonus racial de +1 aux jets d'attaque à distance.
+ABILITY	Special Ability	Battle Toad ~ Marsh Move	DESC	Un crapaud de combat ne subit aucune pénalité de déplacement lorsqu'il traverse des marais ou de la boue.
+ABILITY	Special Ability	Boggle ~ Darkvision	DESC	Les boggles possèdent la vision dans le noir sur 18 mètres.
+ABILITY	Special Ability	Boggle ~ Fast Speed	DESC	Comme les gobelins, les boggles sont rapides pour leur taille et possèdent une vitesse de déplacement de base de 9 mètres.
+ABILITY	Special Ability	Boggle ~ Goblin Blood	DESC	Les boggles sont considérés comme des créatures du sous-type gobelinoïde pour tout effet lié à la race.
+ABILITY	Special Ability	Boggle ~ Weapon Familiarity	DESC	Les boggles considèrent toute arme portant le mot « boggle » dans son nom comme une arme de guerre.
+ABILITY	Special Ability	Coin Drake ~ Piercing Immunity	DESC	Les armes perforantes, même magiques, n'infligent aucun dégât à un dragonnet des pièces.
+ABILITY	Special Ability	Coleophite ~ Natural Armor	DESC	Les coléophytes bénéficient d'un bonus racial de +2 à l'armure naturelle.
+ABILITY	Special Ability	Companion Toad ~ Marsh Move	DESC	Un crapaud ne subit aucune pénalité de déplacement lorsqu'il traverse des marais ou de la boue.
+ABILITY	Special Ability	Deathseeker ~ Weapon and Armor Proficiency	DESC	Les quêteurs de mort savent manier toutes les armes courantes et de guerre, porter toutes les armures et utiliser les boucliers.
+ABILITY	Special Ability	Equine ~ Bestial Fortitude	DESC	Les anumis équins bénéficient d'un bonus racial de +2 à tous les jets de sauvegarde contre les maladies et le poison.
+ABILITY	Special Ability	Eulite ~ Darkvision	DESC	Les eulites possèdent la vision dans le noir sur 18 mètres.
+ABILITY	Special Ability	Eulite ~ Innate Resistance	DESC	Les eulites possèdent une résistance à l'électricité de 5.
+ABILITY	Special Ability	Feline ~ Low-Light Vision	DESC	Les anumis félins voient deux fois plus loin que les humains dans la pénombre.
+ABILITY	Special Ability	Feline ~ Sure-footed	DESC	Les anumis félins bénéficient d'un bonus racial de +2 aux tests d'Acrobaties et d'Escalade.
+ABILITY	Special Ability	Kval ~ Natural Acrobat	DESC	Les kvals bénéficient d'un bonus racial de +4 aux tests d'Acrobaties.
+ABILITY	Special Ability	Kval ~ Senses	DESC	Les kvals possèdent la vision nocturne.
+ABILITY	Special Ability	Mahrog ~ Almost Human	DESC	Les mahrogs sont considérés comme des humains pour tout effet lié à la race.
+ABILITY	Special Ability	Mogogol ~ Inborn Alignment	DESC	Les mogogols doivent être d'alignement bon. Leur alignement ne peut pas être modifié.
+ABILITY	Special Ability	Mogogol ~ Marsh Move	DESC	Un mogogol ne subit aucune pénalité de déplacement lorsqu'il traverse des marais ou de la boue.
+ABILITY	Special Ability	Mogogol ~ Skilled Climber	DESC	Petite taille uniquement. Les mogogols de taille P bénéficient d'un bonus racial de +4 aux tests d'Escalade.
+ABILITY	Special Ability	Moscanite ~ Innate Resistance	DESC	Les moscanites possèdent une résistance à l'acide de 5.
+ABILITY	Special Ability	Moscanite ~ Race Stat	DESC	Les moscanites sont robustes et rapides, mais très désagréables.
+ABILITY	Special Ability	Moscanite ~ Senses	DESC	Les moscanites possèdent la vision nocturne.
+ABILITY	Special Ability	Muse ~ Low-Light Vision	DESC	Les muses voient deux fois plus loin que les humains dans la pénombre.
+ABILITY	Special Ability	Muse ~ Muse Immunities	DESC	Les muses sont immunisées contre les effets de sommeil magique.
+ABILITY	Special Ability	Numistian ~ Low-Light Vision	DESC	Les numistiens voient deux fois plus loin que les humains dans la pénombre.
+ABILITY	Special Ability	Numistian ~ Silver Stomach	DESC	Les numistiens bénéficient d'un bonus racial de +2 à tous les jets de sauvegarde contre le poison.
+ABILITY	Special Ability	Obitu ~ Fossil Fortitude	DESC	Les obitus bénéficient d'un bonus racial de +4 aux jets de sauvegarde contre les maladies et le poison.
+ABILITY	Special Ability	Obitu ~ Improved Initiative	DESC	Les obitus reçoivent Science de l'initiative au niveau 1 comme don racial supplémentaire.
+ABILITY	Special Ability	Ophidian ~ Bestial Fortitude	DESC	Les anumis ophidiens bénéficient d'un bonus racial de +2 à tous les jets de sauvegarde contre les maladies et le poison.
+ABILITY	Special Ability	Ophidian ~ Darkvision	DESC	Les anumis ophidiens possèdent la vision dans le noir sur 18 mètres.
+ABILITY	Special Ability	Pharaoh ~ Weapon and Armor Proficiency	DESC	Les pharaons ne reçoivent aucune formation au maniement des armes ni au port des armures.
+ABILITY	Special Ability	Porcine ~ Bestial Fortitude	DESC	Les anumis porcins bénéficient d'un bonus racial de +2 à tous les jets de sauvegarde contre les maladies et le poison.
+ABILITY	Special Ability	Reptile ~ Bestial Fortitude	DESC	Les anumis reptiliens bénéficient d'un bonus racial de +2 à tous les jets de sauvegarde contre les maladies et le poison.
+ABILITY	Special Ability	Reptile ~ Ferocious Hunger	DESC	Les anumis reptiliens bénéficient d'un bonus de +1 aux jets d'attaque contre les créatures de taille TP ou inférieure.
+ABILITY	Special Ability	Reverent of Spring ~ Weapon and Armor Proficiency	DESC	Les dévots du printemps savent manier toutes les armes courantes et porter les armures légères.
+ABILITY	Special Ability	Rodent ~ Jittery	DESC	Les anumis rongeurs bénéficient d'un bonus racial de +2 aux tests d'initiative.
+ABILITY	Special Ability	Slime Lord ~ Ooze Traits	DESC	Au niveau 10, un seigneur du limon devient immunisé contre la prise en tenaille, la paralysie et la métamorphose.
+ABILITY	Special Ability	Slime Lord ~ Weapon and Armor Proficiency	DESC	Les seigneurs du limon ne reçoivent aucune formation au maniement des armes ni au port des armures.
+ABILITY	Special Ability	Taddol ~ Half-blood	DESC	Les taddols sont considérés comme des elfes et des géants pour tout effet lié à la race.
+ABILITY	Special Ability	Taddol ~ Low-Light Vision	DESC	Les taddols voient deux fois plus loin que les humains dans la pénombre.
+ABILITY	Special Ability	Ursine ~ Bestial Fortitude	DESC	Les anumis ursins bénéficient d'un bonus racial de +2 à tous les jets de sauvegarde contre les maladies et le poison.
+ABILITY	Special Ability	Woggart ~ Marsh Move	DESC	Un woggart ne subit aucune pénalité de déplacement lorsqu'il traverse des marais ou de la boue.
+ABILITY	Special Ability	Woggart ~ Timid	DESC	À moins d'être acculé, un woggart monté traite sa morsure comme une attaque secondaire.
+ABILITY	Special Ability	Xax ~ Memory of Conflict	DESC	Lors de sa création, un xax choisit une arme exotique dont il apprend le maniement.
