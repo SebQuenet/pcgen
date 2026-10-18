@@ -474,7 +474,7 @@ public class AbilityCategory
 		}
 		else
 		{
-			return displayName;
+			return LanguageBundle.getTerm("in_abilityCategory_", displayName);
 		}
 	}
 

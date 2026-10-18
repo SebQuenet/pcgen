@@ -272,7 +272,7 @@ public final class PCGenActionMap extends ActionMap
 			{
 				dialog = new JFXPanelFromResource<>(CalculatorDialogController.class, "CalculatorDialog.fxml");
 			}
-			dialog.showAsStage(LanguageBundle.getString("mnuToolsCalculator"));
+			dialog.showAsStage(LanguageBundle.getString("in_mnuToolsCalculator"));
 		}
 	}
 

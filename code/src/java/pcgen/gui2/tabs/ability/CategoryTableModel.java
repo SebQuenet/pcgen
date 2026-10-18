@@ -27,6 +27,7 @@ import pcgen.facade.util.event.ChangeEvent;
 import pcgen.facade.util.event.ChangeListener;
 import pcgen.gui2.filter.Filter;
 import pcgen.gui2.filter.FilteredListFacadeTableModel;
+import pcgen.system.LanguageBundle;
 
 /**
  * The model for the bottom left table showing the ability categories and 
@@ -80,9 +81,9 @@ public class CategoryTableModel extends FilteredListFacadeTableModel<AbilityCate
 	{
 		return switch (column)
 				{
-					case 0 -> "Category";
-					case 1 -> "Total";
-					case 2 -> "Remaining";
+					case 0 -> LanguageBundle.getString("in_abilityTableCategory");
+					case 1 -> LanguageBundle.getString("in_abilityTableTotal");
+					case 2 -> LanguageBundle.getString("in_abilityTableRemaining");
 					default -> throw new IndexOutOfBoundsException();
 				};
 	}

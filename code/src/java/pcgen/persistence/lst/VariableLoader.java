@@ -144,7 +144,7 @@ public class VariableLoader extends Observable
 						uri, i + 1, t.getMessage());
 					Logging.errorPrint(message, t);
 					setChanged();
-					Logging.errorPrint(LanguageBundle.getString("Errors.LstFileLoader.Ignoring: " + t.getMessage()));
+					Logging.errorPrint(LanguageBundle.getString("Errors.LstFileLoader.Ignoring") + " " + t.getMessage());
 					if (Logging.isDebugMode())
 					{
 						Logging.errorPrint(LanguageBundle.getString("Errors.LstFileLoader.Ignoring"), t);

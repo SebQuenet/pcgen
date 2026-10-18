@@ -18,6 +18,7 @@
  */
 package pcgen.gui2.tabs;
 
+import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -25,6 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.JPanel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -37,6 +39,7 @@ import pcgen.facade.util.MapFacade;
 import pcgen.facade.util.event.ListEvent;
 import pcgen.facade.util.event.ListListener;
 import pcgen.gui2.util.SharedTabPane;
+import pcgen.system.LanguageBundle;
 import pcgen.util.Logging;
 import pcgen.util.enumeration.Tab;
 
@@ -54,6 +57,41 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 
 	private final AbilityChooserTab abilityTab;
 	private final TabTitle tabTitle;
+
+	private void addAbilityTab(String type)
+	{
+		JPanel panel = new JPanel(new BorderLayout());
+		panel.setName(type);
+		addTab(LanguageBundle.getTerm("in_abilityLocation_", type), panel);
+	}
+
+	private void addAbilityTab(String type, int index)
+	{
+		JPanel panel = new JPanel(new BorderLayout());
+		panel.setName(type);
+		insertTab(LanguageBundle.getTerm("in_abilityLocation_", type), null, panel, null, index);
+	}
+
+	private int indexOfAbilityTab(String type)
+	{
+		for (int i = 0; i < getTabCount(); i++)
+		{
+			if (type.equals(getComponentAt(i).getName()))
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	private void removeAbilityTab(String type)
+	{
+		int index = indexOfAbilityTab(type);
+		if (index >= 0)
+		{
+			removeTabAt(index);
+		}
+	}
 
 	public AbilitiesInfoTab()
 	{
@@ -158,7 +196,7 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 				populateFullCategoryList(type, typeMap.get(type));
 				if (isInstalled)
 				{//Add new tab
-					addTab(type, index);
+					addAbilityTab(type, index);
 				}
 			}
 			typeMap.get(type).categoryList.addElement(element);
@@ -176,7 +214,7 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 				tabs.remove(typeMap.remove(type));
 				if (isInstalled)
 				{//Remove Tab
-					removeTab(type);
+					removeAbilityTab(type);
 				}
 			}
 		}
@@ -204,7 +242,7 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 					populateFullCategoryList(type, typeMap.get(type));
 					if (isInstalled)
 					{
-						addTab(type);
+						addAbilityTab(type);
 					}
 				}
 				typeMap.get(type).categoryList.updateContents(entry.getValue());
@@ -219,7 +257,7 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 					oldTypes.remove();
 					if (isInstalled)
 					{
-						removeTab(type);
+						removeAbilityTab(type);
 					}
 				}
 			}
@@ -236,9 +274,9 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 			activeCategories.addListListener(this);
 			for (TabInfo tabInfo : tabs)
 			{
-				addTab(tabInfo.title);
+				addAbilityTab(tabInfo.title);
 			}
-			setSelectedIndex(indexOfTab(selectedTitle));
+			setSelectedIndex(indexOfAbilityTab(selectedTitle));
 			abilityTab.restoreState(typeMap.get(selectedTitle).tabData);
 			addChangeListener(this);
 			isInstalled = true;
@@ -263,7 +301,7 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 			}
 			if (getSelectedIndex() != -1)
 			{
-				selectedTitle = getTitleAt(getSelectedIndex());
+				selectedTitle = getComponentAt(getSelectedIndex()).getName();
 				if (typeMap.get(selectedTitle) == null)
 				{
 					Logging.errorPrint("Selected tab " + selectedTitle + " at index " + getSelectedIndex()
