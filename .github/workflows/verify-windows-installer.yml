@@ -1,0 +1,73 @@
+name: Verify Windows installer
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set release metadata
+        shell: bash
+        run: |
+          PROPS_FILE="code/src/resources/pcgen/system/prop/PCGenProp.properties"
+          GRADLE_VERSION=$(grep '^version=' gradle.properties | head -1 | cut -d'=' -f2 | tr -d '[:space:]')
+          RELEASE_DATE=$(date -u +%Y-%m-%d)
+          sed -i.bak "s/^VersionNumber=.*/VersionNumber=${GRADLE_VERSION}/" "${PROPS_FILE}"
+          sed -i.bak "s/^ReleaseDate=.*/ReleaseDate=${RELEASE_DATE}/" "${PROPS_FILE}"
+          rm -f "${PROPS_FILE}.bak"
+
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: temurin
+          cache: gradle
+          cache-dependency-path: |
+            build.gradle
+            code/gradle/autobuild.gradle
+            code/gradle/distribution.gradle
+            code/gradle/release.gradle
+            code/gradle/reporting.gradle
+            code/gradle/plugins.gradle
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-disabled: false
+          cache-read-only: false
+          cache-overwrite-existing: true
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ${{ github.workspace }}/build/jre
+            ${{ github.workspace }}/build/libs
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle
+
+      - name: Install WiX
+        run: choco install wixtoolset --no-progress -y
+
+      - name: Build release artifacts
+        run: ./gradlew clean build copyToOutput test compileSlowtest datatest pfinttest allReports buildDist prepareRelease pcgenRelease
+
+      - name: Verify MSI
+        shell: pwsh
+        run: |
+          $msi = @(Get-ChildItem -Path build/release/*.msi -ErrorAction Stop)
+          if ($msi.Count -ne 1 -or $msi[0].Length -eq 0) {
+            throw 'Expected one non-empty MSI in build/release'
+          }
+          Write-Host "$($msi[0].Name): $($msi[0].Length) bytes"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer-preview
+          path: build/release/*.msi
+          if-no-files-found: error
+          retention-days: 1
