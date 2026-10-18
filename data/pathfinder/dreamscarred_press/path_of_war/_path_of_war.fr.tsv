@@ -95,3 +95,616 @@ ABILITY	FEAT	Tactical Rush	DESC	%1 fois par rencontre, vous pouvez vous déplace
 ABILITY	FEAT	Take the Blow	DESC	Lorsqu'une créature à votre portée frappée de votre marque d'armiger attaque un allié au corps à corps ou à distance, vous pouvez dépenser une utilisation de cette marque par une action immédiate pour devenir la cible de l'attaque. Tous les effets de l'attaque s'appliquent alors à vous : la créature doit réussir son jet d'attaque et vous pouvez effectuer les éventuels jets de sauvegarde.
 ABILITY	FEAT	Victorious Recovery	DESC	Une fois par rencontre, lorsque vous réduisez un adversaire à 0 point de vie ou moins, vous pouvez récupérer un nombre de manœuvres égal à votre modificateur d'initiation.
 ABILITY	FEAT	Weapon Group Adaptation	DESC	Choisissez une famille d'armes autre que les armes de siège et les armes à feu de siège. Cette famille est désormais associée aux disciplines auxquelles vous avez accès. Cela ne change pas les conditions d'exécution des manœuvres : un chef de guerre pourrait par exemple associer les lames lourdes au Vent solaire, sans pour autant pouvoir porter avec elles une attaque à distance s'il ne possède pas d'autre don ou aptitude le lui permettant.
+ABILITY	Archetype	Martial Tradition ~ Black Thorn Knights	NAME	Chevaliers de l'Épine noire
+ABILITY	Archetype	Martial Tradition ~ Bloody Fangs	NAME	Crocs sanglants
+ABILITY	Archetype	Martial Tradition ~ Defenders of the Realm	NAME	Défenseurs du royaume
+ABILITY	Archetype	Martial Tradition ~ Empyreal Guardians	NAME	Gardiens empyréens
+ABILITY	Archetype	Martial Tradition ~ Scarlet Sentinels	NAME	Sentinelles écarlates
+ABILITY	Archetype	Martial Tradition ~ The Wayward Path	NAME	La voie errante
+ABILITY	Archetype	Stalker Archetype ~ Soul Hunter	NAME	Chasseur d'âmes
+ABILITY	Archetype	Warder Archetype ~ Dervish Defender	NAME	Défenseur derviche
+ABILITY	Archetype	Warder Archetype ~ Hawkguard	NAME	Garde-faucon
+ABILITY	Archetype	Warder Archetype ~ Sworn Protector	NAME	Protecteur assermenté
+ABILITY	Archetype	Warder Archetype ~ Zweihander Sentinel	NAME	Sentinelle à deux mains
+ABILITY	Archetype	Warlord Archetype ~ Bannerman	NAME	Porte-étendard
+ABILITY	Archetype	Warlord Archetype ~ Steelfist Commando	NAME	Commando aux poings d'acier
+ABILITY	Archetype	Warlord Archetype ~ Vanguard Commander	NAME	Commandant d'avant-garde
+ABILITY	Special Ability	Bannerman ~ Commander's Presence	NAME	* Présence du commandant
+ABILITY	Special Ability	Bannerman ~ Courageous Defense	NAME	Défense courageuse
+ABILITY	Special Ability	Bannerman ~ Diplomat's Presence	NAME	* Présence du diplomate
+ABILITY	Special Ability	Bannerman ~ Fearsome Presence	NAME	* Présence terrifiante
+ABILITY	Special Ability	Bannerman ~ Inspiring Banner	NAME	Bannière inspirante
+ABILITY	Special Ability	Bannerman ~ Share Boost	NAME	Partager une impulsion
+ABILITY	Special Ability	Battle Templar ~ Battlefield Invocation	NAME	Invocation du champ de bataille
+ABILITY	Special Ability	Battle Templar ~ Bolstering Channel	NAME	Canalisation revigorante
+ABILITY	Special Ability	Battle Templar ~ Divine Inspiration	NAME	Inspiration divine
+ABILITY	Special Ability	Battle Templar ~ Divine Recovery	NAME	Récupération divine
+ABILITY	Special Ability	Battle Templar ~ Guardian of the Faith	NAME	Gardien de la foi
+ABILITY	Special Ability	Battle Templar ~ Maneuvers	NAME	Manœuvres
+ABILITY	Special Ability	Battle Templar ~ Martial Healing	NAME	Guérison martiale
+ABILITY	Special Ability	Battle Templar ~ Ordained Knight	NAME	Chevalier ordonné
+ABILITY	Special Ability	Battle Templar ~ Reach of the Divine	NAME	Allonge divine
+ABILITY	Special Ability	Battle Templar ~ Shepherd of the Flock	NAME	Berger du troupeau
+ABILITY	Special Ability	Battle Templar ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Battle Templar ~ Weapon and Armor Proficiencies	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Battle Templar ~ Wrath of the Faithful	NAME	Courroux des fidèles
+ABILITY	Special Ability	Black Thorn Knights ~ Allegiance Benefit	NAME	Avantage d'allégeance
+ABILITY	Special Ability	Bladecaster ~ Arcane Assault	NAME	Assaut profane
+ABILITY	Special Ability	Bladecaster ~ Arcane Recovery	NAME	Récupération profane
+ABILITY	Special Ability	Bladecaster ~ Arcane Ruin	NAME	Ruine profane
+ABILITY	Special Ability	Bladecaster ~ Arcane Steel	NAME	Acier profane
+ABILITY	Special Ability	Bladecaster ~ Battlecaster's Strike	NAME	Frappe du mage de bataille
+ABILITY	Special Ability	Bladecaster ~ Improved Battlecasting	NAME	Incantation de bataille améliorée
+ABILITY	Special Ability	Bladecaster ~ Maneuvers	NAME	Manœuvres
+ABILITY	Special Ability	Bladecaster ~ Martial Caster	NAME	Lanceur de sorts martial
+ABILITY	Special Ability	Bladecaster ~ Martial Counterspell	NAME	Contresort martial
+ABILITY	Special Ability	Bladecaster ~ Stance of Arcane Steel	NAME	Posture de l'acier profane
+ABILITY	Special Ability	Bladecaster ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Bloody Fangs ~ Allegiance Benefit	NAME	Avantage d'allégeance
+ABILITY	Special Ability	Defenders of the Realm ~ Allegiance Benefit	NAME	Avantage d'allégeance
+ABILITY	Special Ability	Dervish Defender ~ Critical Evasion	NAME	Esquive des coups critiques
+ABILITY	Special Ability	Dervish Defender ~ Dervish Defense	NAME	Défense du derviche
+ABILITY	Special Ability	Dervish Defender ~ Grace of Blades	NAME	Grâce des lames
+ABILITY	Special Ability	Dervish Defender ~ Shield of Blades	NAME	Bouclier de lames
+ABILITY	Special Ability	Dervish Defender ~ Two-Weapon Defense	NAME	Défense à deux armes
+ABILITY	Special Ability	Dervish Defender ~ Weapon and Armor Proficiencies	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Dragon Fury ~ Dance of Thrashing Claws	NAME	Danse des griffes lacérantes
+ABILITY	Special Ability	Dragon Fury ~ Deadly Fang Recovery	NAME	Récupération du croc mortel
+ABILITY	Special Ability	Dragon Fury ~ Dragon Fury Defense	NAME	Défense de la fureur du dragon
+ABILITY	Special Ability	Dragon Fury ~ Dragon Fury Training	NAME	Entraînement de la fureur du dragon
+ABILITY	Special Ability	Dragon Fury ~ Dragon War God's Dance	NAME	Danse du dieu dragon de la guerre
+ABILITY	Special Ability	Dragon Fury ~ Dual Fang Focus	NAME	Prédilection pour les deux crocs
+ABILITY	Special Ability	Dragon Fury ~ Maneuvers	NAME	Manœuvres
+ABILITY	Special Ability	Dragon Fury ~ Sharp Fang	NAME	Croc acéré
+ABILITY	Special Ability	Dragon Fury ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Dragon Fury ~ Vicious Fang	NAME	Croc vicieux
+ABILITY	Special Ability	Empyreal Guardians ~ Allegiance Benefit	NAME	Avantage d'allégeance
+ABILITY	Special Ability	Gambit ~ Acrobatic Gambit	NAME	Gambit acrobatique
+ABILITY	Special Ability	Gambit ~ Brave Gambit	NAME	Gambit courageux
+ABILITY	Special Ability	Gambit ~ Cavalry Gambit	NAME	Gambit de cavalerie
+ABILITY	Special Ability	Gambit ~ Dastardly Gambit	NAME	Gambit sournois
+ABILITY	Special Ability	Gambit ~ Deadeye Gambit	NAME	Gambit de l'œil sûr
+ABILITY	Special Ability	Gambit ~ Duelist's Gambit	NAME	Gambit du duelliste
+ABILITY	Special Ability	Gambit ~ Gatecrasher Gambit	NAME	Gambit du brise-porte
+ABILITY	Special Ability	Gambit ~ Grappler Gambit	NAME	Gambit du lutteur
+ABILITY	Special Ability	Gambit ~ Guardian's Gambit	NAME	Gambit du gardien
+ABILITY	Special Ability	Gambit ~ Outrider's Gambit	NAME	Gambit de l'éclaireur monté
+ABILITY	Special Ability	Gambit ~ Pinhole Gambit	NAME	Gambit du chas d'aiguille
+ABILITY	Special Ability	Gambit ~ Rascal's Gambit	NAME	Gambit du fripon
+ABILITY	Special Ability	Gambit ~ Ravager's Gambit	NAME	Gambit du ravageur
+ABILITY	Special Ability	Gambit ~ Sweeping Gambit	NAME	Gambit de balayage
+ABILITY	Special Ability	Gambit ~ Unbreakable Gambit	NAME	Gambit indomptable
+ABILITY	Special Ability	Gambit ~ Victory Gambit	NAME	Gambit de la victoire
+ABILITY	Special Ability	Hawkguard ~ Archer Training Output	NAME	Entraînement d'archer
+ABILITY	Special Ability	Hawkguard ~ Close Combat Archery	NAME	Tir à bout portant
+ABILITY	Special Ability	Hawkguard ~ Defending the Sky	NAME	Défense du ciel
+ABILITY	Special Ability	Hawkguard ~ Evasive Reflexes	NAME	Réflexes fuyants
+ABILITY	Special Ability	Hawkguard ~ Ranged Defensive Focus	NAME	Concentration défensive à distance
+ABILITY	Special Ability	Hawkguard ~ Weapon and Armor Proficiencies	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Mage Hunter ~ Anchoring Point	NAME	Point d'ancrage
+ABILITY	Special Ability	Mage Hunter ~ Arcane Endurance	NAME	Endurance profane
+ABILITY	Special Ability	Mage Hunter ~ Arcane Tenacity	NAME	Ténacité profane
+ABILITY	Special Ability	Mage Hunter ~ Mage Harrier's Stance	NAME	Posture du harceleur de mages
+ABILITY	Special Ability	Mage Hunter ~ Mage Hunter Concentration	NAME	Concentration du chasseur de mages
+ABILITY	Special Ability	Mage Hunter ~ Maneuvers	NAME	Manœuvres
+ABILITY	Special Ability	Mage Hunter ~ Martial Arcanist	NAME	Arcaniste martial
+ABILITY	Special Ability	Mage Hunter ~ Stance of the Mage Killer	NAME	Posture du tueur de mages
+ABILITY	Special Ability	Mage Hunter ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Mage Hunter ~ Strike of Dispelling	NAME	Frappe de dissipation
+ABILITY	Special Ability	Mage Hunter ~ Strike of Magic Rending	NAME	Frappe déchirant la magie
+ABILITY	Special Ability	Mage Hunter ~ Tethering Point	NAME	Point d'attache
+ABILITY	Special Ability	Martial Training ~ Initiating	NAME	Initiation à l'entraînement martial
+ABILITY	Special Ability	Rogue Talent ~ Bleeding Attack	NAME	Attaque sanglante
+ABILITY	Special Ability	Rogue Talent ~ Combat Trick	NAME	Ruse de combat
+ABILITY	Special Ability	Rogue Talent ~ Fast Stealth	NAME	Discrétion rapide
+ABILITY	Special Ability	Rogue Talent ~ Finesse Rogue	NAME	Roublard en finesse
+ABILITY	Special Ability	Rogue Talent ~ Ledge Walker	NAME	Marcheur des corniches
+ABILITY	Special Ability	Rogue Talent ~ Major Magic	NAME	Magie majeure
+ABILITY	Special Ability	Rogue Talent ~ Minor Magic	NAME	Magie mineure
+ABILITY	Special Ability	Rogue Talent ~ Quick Disable	NAME	Sabotage rapide
+ABILITY	Special Ability	Rogue Talent ~ Resiliency	NAME	Résilience
+ABILITY	Special Ability	Rogue Talent ~ Rogue Crawl	NAME	Déplacement rampant
+ABILITY	Special Ability	Rogue Talent ~ Slow Reactions	NAME	Réactions ralenties
+ABILITY	Special Ability	Rogue Talent ~ Stand Up	NAME	Se relever
+ABILITY	Special Ability	Rogue Talent ~ Surprise Attack	NAME	Attaque surprise
+ABILITY	Special Ability	Rogue Talent ~ Trap Spotter	NAME	Détecteur de pièges
+ABILITY	Special Ability	Rogue Talent ~ Weapon Training	NAME	Entraînement aux armes
+ABILITY	Special Ability	Scarlet Sentinels ~ Allegiance Benefit	NAME	Avantage d'allégeance
+ABILITY	Special Ability	Soul Hunter ~ Combat Insight	NAME	Intuition de combat
+ABILITY	Special Ability	Soul Hunter ~ Initiating	NAME	Initiation du chasseur d'âmes
+ABILITY	Special Ability	Soul Hunter ~ Ki Pool	NAME	Réserve de ki
+ABILITY	Special Ability	Soul Hunter ~ Maneuvers Readied	NAME	Manœuvres préparées
+ABILITY	Special Ability	Soul Hunter ~ Sight of the Hunter	NAME	Vue du chasseur
+ABILITY	Special Ability	Soul Hunter ~ Soul Claiming	NAME	Capture d'âme
+ABILITY	Special Ability	Soul Hunter ~ Soulburning	NAME	Brûlure de l'âme
+ABILITY	Special Ability	Stalker	NAME	Traqueur
+ABILITY	Special Ability	Stalker Art ~ Advanced Study	NAME	Étude avancée
+ABILITY	Special Ability	Stalker Art ~ Alacrity	NAME	Célérité
+ABILITY	Special Ability	Stalker Art ~ Combat Art	NAME	Art de combat
+ABILITY	Special Ability	Stalker Art ~ Combat Precognition	NAME	Précognition au combat
+ABILITY	Special Ability	Stalker Art ~ Concealed Recovery	NAME	Récupération dissimulée
+ABILITY	Special Ability	Stalker Art ~ Critical Edge	NAME	Tranchant critique
+ABILITY	Special Ability	Stalker Art ~ Critical Training	NAME	Entraînement aux coups critiques
+ABILITY	Special Ability	Stalker Art ~ Deadly Ambush	NAME	Embuscade mortelle
+ABILITY	Special Ability	Stalker Art ~ Deadly Insight	NAME	Intuition mortelle
+ABILITY	Special Ability	Stalker Art ~ Deadly Recovery	NAME	Récupération mortelle
+ABILITY	Special Ability	Stalker Art ~ Evasion	NAME	Esquive totale
+ABILITY	Special Ability	Stalker Art ~ Ki Vampirism	NAME	Vampirisme du ki
+ABILITY	Special Ability	Stalker Art ~ Mind Bending	NAME	Manipulation mentale
+ABILITY	Special Ability	Stalker Art ~ Monastic Weapon Training	NAME	Entraînement aux armes monastiques
+ABILITY	Special Ability	Stalker Art ~ Murderous Insight	NAME	Intuition meurtrière
+ABILITY	Special Ability	Stalker Art ~ Obfuscation	NAME	Dissimulation
+ABILITY	Special Ability	Stalker Art ~ Phantom Reach	NAME	Allonge fantôme
+ABILITY	Special Ability	Stalker Art ~ Precocious Step	NAME	Pas précoce
+ABILITY	Special Ability	Stalker Art ~ Rogue Talent	NAME	Talent de roublard
+ABILITY	Special Ability	Stalker ~ Blending	NAME	Fusion dans le décor
+ABILITY	Special Ability	Stalker ~ Combat Insight	NAME	Intuition de combat
+ABILITY	Special Ability	Stalker ~ Deadly Strike	NAME	Frappe mortelle
+ABILITY	Special Ability	Stalker ~ Dodge Bonus	NAME	Bonus d'esquive
+ABILITY	Special Ability	Stalker ~ Dual Strike	NAME	Frappe double
+ABILITY	Special Ability	Stalker ~ Initiating	NAME	Initiation du traqueur
+ABILITY	Special Ability	Stalker ~ Ki Pool	NAME	Réserve de ki
+ABILITY	Special Ability	Stalker ~ Ki Pool Trade Maneuver	NAME	Échanger une manœuvre
+ABILITY	Special Ability	Stalker ~ Maneuvers	NAME	Manœuvres
+ABILITY	Special Ability	Stalker ~ Maneuvers Readied	NAME	Manœuvres préparées
+ABILITY	Special Ability	Stalker ~ Retributive Ki	NAME	Ki vengeur
+ABILITY	Special Ability	Stalker ~ Stalker Arts	NAME	Arts du traqueur
+ABILITY	Special Ability	Stalker ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Stalker ~ Weapon and Armor Proficiency	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Steelfist Commando ~ Commando Prowess	NAME	Prouesse du commando
+ABILITY	Special Ability	Steelfist Commando ~ Dodge Bonus	NAME	Bonus d'esquive
+ABILITY	Special Ability	Steelfist Commando ~ Powerful Pugilist	NAME	Pugiliste puissant
+ABILITY	Special Ability	Steelfist Commando ~ Unarmed Combat	NAME	Combat à mains nues
+ABILITY	Special Ability	Steelfist Commando ~ Weapon and Armor Proficiencies	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Sworn Protector ~ Defensive Intercept	NAME	Interception défensive
+ABILITY	Special Ability	Sworn Protector ~ Guardianship	NAME	Protection
+ABILITY	Special Ability	Sworn Protector ~ Shared Counter	NAME	Parade partagée
+ABILITY	Special Ability	The Wayward Path ~ Allegiance Benefit	NAME	Avantage d'allégeance
+ABILITY	Special Ability	Umbral Blade ~ Blade of Night	NAME	Lame de la nuit
+ABILITY	Special Ability	Umbral Blade ~ Embrace the Shadows	NAME	Étreinte des ombres
+ABILITY	Special Ability	Umbral Blade ~ Maneuvers Known and Readied	NAME	Manœuvres connues et préparées
+ABILITY	Special Ability	Umbral Blade ~ One with the Dark	NAME	Un avec les ténèbres
+ABILITY	Special Ability	Umbral Blade ~ Shadow Blade	NAME	Lame d'ombre
+ABILITY	Special Ability	Umbral Blade ~ Shadow Consumption	NAME	Consommation des ombres
+ABILITY	Special Ability	Umbral Blade ~ Shadowblind	NAME	Aveuglement des ombres
+ABILITY	Special Ability	Umbral Blade ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Umbral Blade ~ Terror in the Dark	NAME	Terreur dans les ténèbres
+ABILITY	Special Ability	Umbral Blade ~ Umbral Sight	NAME	Vue ombrale
+ABILITY	Special Ability	Vanguard Commander ~ Daring Defense	NAME	Défense audacieuse
+ABILITY	Special Ability	Vanguard Commander ~ Defensive Prowess	NAME	Prouesse défensive
+ABILITY	Special Ability	Vanguard Commander ~ Heightened Defenses	NAME	Défenses renforcées
+ABILITY	Special Ability	Vanguard Commander ~ Vanguard's Shield	NAME	Bouclier de l'avant-garde
+ABILITY	Special Ability	Vanguard Commander ~ Weapon and Armor Proficiencies	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Warder	NAME	Gardien
+ABILITY	Special Ability	Warder ~ Adaptive Tactics	NAME	Tactiques adaptatives
+ABILITY	Special Ability	Warder ~ Aegis	NAME	Égide
+ABILITY	Special Ability	Warder ~ Armiger's Mark	NAME	Marque du porteur d'armure
+ABILITY	Special Ability	Warder ~ Born of Steel	NAME	Né de l'acier
+ABILITY	Special Ability	Warder ~ Clad in Steel	NAME	Revêtu d'acier
+ABILITY	Special Ability	Warder ~ Deathless Defenses	NAME	Défenses contre la mort
+ABILITY	Special Ability	Warder ~ Defensive Focus	NAME	Concentration défensive
+ABILITY	Special Ability	Warder ~ Extended Defense	NAME	Défense étendue
+ABILITY	Special Ability	Warder ~ Initiating	NAME	Initiation du gardien
+ABILITY	Special Ability	Warder ~ Maneuvers	NAME	Manœuvres
+ABILITY	Special Ability	Warder ~ Maneuvers Readied	NAME	Manœuvres préparées
+ABILITY	Special Ability	Warder ~ Stalwart	NAME	Inébranlable
+ABILITY	Special Ability	Warder ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Warder ~ Steel Defense	NAME	Défense d'acier
+ABILITY	Special Ability	Warder ~ Tactical Acumen	NAME	Sens tactique
+ABILITY	Special Ability	Warder ~ Weapon and Armor Proficiency	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Warlord	NAME	Chef de guerre
+ABILITY	Special Ability	Warlord ~ Battle Prowess	NAME	Prouesse martiale
+ABILITY	Special Ability	Warlord ~ Dual Boost	NAME	Double impulsion
+ABILITY	Special Ability	Warlord ~ Dual Stance	NAME	Double posture
+ABILITY	Special Ability	Warlord ~ Dual Tactical Presence	NAME	Double présence tactique
+ABILITY	Special Ability	Warlord ~ Force of Personality	NAME	Force de caractère
+ABILITY	Special Ability	Warlord ~ Improved Warleader	NAME	Meneur de guerre amélioré
+ABILITY	Special Ability	Warlord ~ Indomitable Presence	NAME	* Présence indomptable
+ABILITY	Special Ability	Warlord ~ Initiating	NAME	Initiation du chef de guerre
+ABILITY	Special Ability	Warlord ~ Maneuvers	NAME	Manœuvres
+ABILITY	Special Ability	Warlord ~ Maneuvers Readied	NAME	Manœuvres préparées
+ABILITY	Special Ability	Warlord ~ Master Warleader	NAME	Maître meneur de guerre
+ABILITY	Special Ability	Warlord ~ Rallying Presence	NAME	* Présence galvanisante
+ABILITY	Special Ability	Warlord ~ Stances Known	NAME	Postures connues
+ABILITY	Special Ability	Warlord ~ Tactical Assistance	NAME	Assistance tactique
+ABILITY	Special Ability	Warlord ~ Tactical Flanker	NAME	Prise en tenaille tactique
+ABILITY	Special Ability	Warlord ~ Tactical Presence	NAME	Présence tactique
+ABILITY	Special Ability	Warlord ~ Victorious Presence	NAME	* Présence victorieuse
+ABILITY	Special Ability	Warlord ~ Warleader	NAME	Meneur de guerre
+ABILITY	Special Ability	Warlord ~ Warlord's Gambit	NAME	Gambit du chef de guerre
+ABILITY	Special Ability	Warlord ~ Warlord's Presence	NAME	Présence du chef de guerre
+ABILITY	Special Ability	Warlord ~ Weapon and Armor Proficiency	NAME	Maniement des armes et port des armures
+ABILITY	Special Ability	Zweihander Sentinel ~ Armament Shield	NAME	Bouclier d'armement
+ABILITY	Special Ability	Zweihander Sentinel ~ Defensive Reach	NAME	Allonge défensive
+ABILITY	Special Ability	Zweihander Sentinel ~ Punishing Defenses	NAME	Défenses punitives
+ABILITY	Special Ability	Zweihander Sentinel ~ Zweihander Training	NAME	Entraînement aux armes à deux mains
+CLASS		Battle Templar	NAME	Templier de bataille
+CLASS		Bladecaster	NAME	Lame ensorceleuse
+CLASS		Dragon Fury	NAME	Fureur du dragon
+CLASS		Mage Hunter	NAME	Chasseur de mages
+CLASS		Stalker	NAME	Traqueur
+CLASS		Umbral Blade	NAME	Lame ombrale
+CLASS		Warder	NAME	Gardien
+CLASS		Warlord	NAME	Chef de guerre
+EQUIPMENT		Travelogue	NAME	Carnet de voyage
+KIT		Classes Starting Gold ~ PoW	NAME	Or de départ des classes (Path of War)
+SKILL		Knowledge (Martial)	NAME	Connaissances (martiales)
+TEMPLATE		Martial Tradition Allegiance Benefit	NAME	Avantage d'allégeance à une tradition martiale
+SPELL		Abyssal Drive	NAME	Percée abyssale
+SPELL		Abyssal Lance	NAME	Lance abyssale
+SPELL		Adamantine Fang	NAME	Croc adamantin
+SPELL		Adamantine Knuckle	NAME	Poing adamantin
+SPELL		Adamantine Shell	NAME	Carapace adamantine
+SPELL		Aggravated Wounds	NAME	Blessures aggravées
+SPELL		Alacrity on Wing	NAME	Célérité ailée
+SPELL		Alpha's Roar	NAME	Rugissement de l'alpha
+SPELL		Altered Penumbra	NAME	Pénombre altérée
+SPELL		Anchoring Spirit	NAME	Esprit d'ancrage
+SPELL		Ancient's Fang	NAME	Croc des anciens
+SPELL		Angering Smash	NAME	Coup exaspérant
+SPELL		Apocalyptic Strike	NAME	Frappe apocalyptique
+SPELL		Argent King's Scepter	NAME	Sceptre du roi d'argent
+SPELL		Argent Knight's Banner	NAME	Bannière du chevalier d'argent
+SPELL		Armageddon Lance	NAME	Lance d'Armageddon
+SPELL		Aurora Break	NAME	Percée de l'aurore
+SPELL		Banish to the Beyond	NAME	Bannissement dans l'au-delà
+SPELL		Battle Dragon's Stance	NAME	Posture du dragon de bataille
+SPELL		Bend with the Wind	NAME	Plier sous le vent
+SPELL		Benediction of the Silver Crane	NAME	Bénédiction de la grue d'argent
+SPELL		Bilious Strike	NAME	Frappe bilieuse
+SPELL		Bite the Mongoose	NAME	Morsure de la mangouste
+SPELL		Black Seraph Battle Stance	NAME	Posture de bataille du séraphin noir
+SPELL		Black Seraph Onslaught	NAME	Assaut du séraphin noir
+SPELL		Black Seraph's Glare	NAME	Regard du séraphin noir
+SPELL		Black Seraph's Wrath	NAME	Courroux du séraphin noir
+SPELL		Blade of Breaking	NAME	Lame briseuse
+SPELL		Blade of Fury	NAME	Lame de fureur
+SPELL		Blade of Perfection	NAME	Lame de perfection
+SPELL		Blade-Breaking Counter	NAME	Parade brise-lame
+SPELL		Blazing Crane's Wing	NAME	Aile ardente de la grue
+SPELL		Blend with the Night	NAME	Se fondre dans la nuit
+SPELL		Blessed Pinions	NAME	Ailes bénies
+SPELL		Blinding Ray Shot	NAME	Tir au rayon aveuglant
+SPELL		Blinding the Bull	NAME	Aveugler le taureau
+SPELL		Blood-Spray Strike	NAME	Frappe aux éclaboussures de sang
+SPELL		Bloody Riposte	NAME	Riposte sanglante
+SPELL		Body of the Night	NAME	Corps de la nuit
+SPELL		Brawler's Attitude	NAME	Attitude du bagarreur
+SPELL		Breath of the Moon	NAME	Souffle de la lune
+SPELL		Brilliant Moon	NAME	Lune éclatante
+SPELL		Broken Blade Riposte	NAME	Riposte de la lame brisée
+SPELL		Broken Blade Stance	NAME	Posture de la lame brisée
+SPELL		Bronze Knuckle	NAME	Poing de bronze
+SPELL		Brutal Dragon's Stance	NAME	Posture du dragon brutal
+SPELL		Burning Break	NAME	Percée brûlante
+SPELL		Burning Venom Prana	NAME	Prana du venin brûlant
+SPELL		Burnished Shell	NAME	Carapace polie
+SPELL		Call to Action	NAME	Appel à l'action
+SPELL		Cartwheel Axe Kick	NAME	Coup de pied en roue
+SPELL		Celestial Pinions	NAME	Ailes célestes
+SPELL		Charge of the Battle Cat	NAME	Charge du félin de bataille
+SPELL		Charge of the Battle Panthera	NAME	Charge de la panthère de bataille
+SPELL		Charge of the Ravager	NAME	Charge du ravageur
+SPELL		Circle of Razor Feathers	NAME	Cercle de plumes rasoirs
+SPELL		Circling the Prey	NAME	Tourner autour de la proie
+SPELL		Circular Stance	NAME	Posture circulaire
+SPELL		Consumption Strike	NAME	Frappe dévorante
+SPELL		Cornered Frenzy Strike	NAME	Frappe frénétique acculée
+SPELL		Counter Step	NAME	Pas de parade
+SPELL		Crane Step	NAME	Pas de la grue
+SPELL		Crippling Strike	NAME	Frappe invalidante
+SPELL		Crushing Blow	NAME	Coup écrasant
+SPELL		Cursed Fate	NAME	Destin maudit
+SPELL		Curving Ray Shot	NAME	Tir au rayon courbe
+SPELL		Cyclonic Shell Crush	NAME	Écrasement de la carapace cyclonique
+SPELL		Dazing Attack	NAME	Attaque étourdissante
+SPELL		Dazzling Solar Flare	NAME	Éclat solaire éblouissant
+SPELL		Deadly Dragon Strike	NAME	Frappe du dragon mortel
+SPELL		Defending the Pride	NAME	Défendre la harde
+SPELL		Defensive Shell	NAME	Carapace défensive
+SPELL		Defensive Step	NAME	Pas défensif
+SPELL		Demoralizing Roar	NAME	Rugissement démoralisant
+SPELL		Descending Sunset Strike	NAME	Frappe du soleil couchant
+SPELL		Desert Serpent Mirage	NAME	Mirage du serpent du désert
+SPELL		Devastating Momentum	NAME	Élan dévastateur
+SPELL		Devastating Riposte	NAME	Riposte dévastatrice
+SPELL		Devastating Rush	NAME	Ruée dévastatrice
+SPELL		Devastation Roll	NAME	Roulade dévastatrice
+SPELL		Diamond Displacement Strike	NAME	Frappe de déplacement diamantée
+SPELL		Diamond Wings of the Imperial Crane	NAME	Ailes de diamant de la grue impériale
+SPELL		Diamond-Tipped Feathers	NAME	Plumes à pointe de diamant
+SPELL		Dimensional Strike	NAME	Frappe dimensionnelle
+SPELL		Direct the Pride	NAME	Diriger la harde
+SPELL		Disarming Gust	NAME	Rafale désarmante
+SPELL		Discipline of the Pride	NAME	Discipline de la harde
+SPELL		Disparity Blow	NAME	Coup de disparité
+SPELL		Dispersal Strike	NAME	Frappe dispersante
+SPELL		Distracting Strike	NAME	Frappe distrayante
+SPELL		Disturbing Blow	NAME	Coup perturbateur
+SPELL		Dizzying Blow	NAME	Coup vertigineux
+SPELL		Dizzying Venom Prana	NAME	Prana du venin vertigineux
+SPELL		Doom Talon	NAME	Serre funeste
+SPELL		Double Solar Reflection	NAME	Double reflet solaire
+SPELL		Dragon Assault	NAME	Assaut du dragon
+SPELL		Dragon Rush	NAME	Ruée du dragon
+SPELL		Dragon War God's Dance	NAME	Danse du dieu dragon de la guerre
+SPELL		Dragon Warrior's Talons	NAME	Serres du guerrier dragon
+SPELL		Eclipsing Moon	NAME	Lune éclipsante
+SPELL		Embrace the Shadows	NAME	Étreinte des ombres
+SPELL		Emerald Displacement Strike	NAME	Frappe de déplacement émeraude
+SPELL		Emerald-Tipped Feathers	NAME	Plumes à pointe d'émeraude
+SPELL		Encouraging Roar	NAME	Rugissement encourageant
+SPELL		Endurance of the Strong	NAME	Endurance des forts
+SPELL		Enduring Crane Strike	NAME	Frappe de la grue endurante
+SPELL		Enduring Shell	NAME	Carapace endurante
+SPELL		Enraging Strike	NAME	Frappe enrageante
+SPELL		Essence Shattering Strike	NAME	Frappe brisant l'essence
+SPELL		Ether Wave	NAME	Vague d'éther
+SPELL		Ethereal Reminiscence	NAME	Réminiscence éthérée
+SPELL		Exorcism Strike	NAME	Frappe d'exorcisme
+SPELL		Eyes of the Crane	NAME	Yeux de la grue
+SPELL		Fade Through	NAME	Traversée évanescente
+SPELL		Fading Dodge	NAME	Esquive évanescente
+SPELL		Fading Leap	NAME	Bond évanescent
+SPELL		Fading Strike	NAME	Frappe évanescente
+SPELL		Fangs Strike Low	NAME	Crocs frappant bas
+SPELL		Fear Eating Technique	NAME	Technique dévoreuse de peur
+SPELL		Feel the Wind	NAME	Sentir le vent
+SPELL		Final Blow	NAME	Coup final
+SPELL		Finishing Kick	NAME	Coup de pied final
+SPELL		Five-Fold Hydra Sting	NAME	Piqûre quintuple de l'hydre
+SPELL		Flash Kick	NAME	Coup de pied éclair
+SPELL		Flashing Ether Touch	NAME	Toucher éthéré fulgurant
+SPELL		Flashing Wings	NAME	Ailes fulgurantes
+SPELL		Flat Iron Riposte	NAME	Riposte du fer plat
+SPELL		Flick of the Wrist	NAME	Coup de poignet
+SPELL		Flicker Strike	NAME	Frappe vacillante
+SPELL		Flurry Strike	NAME	Frappe en rafale
+SPELL		Focused Solar Lance	NAME	Lance solaire concentrée
+SPELL		Formless Dance	NAME	Danse sans forme
+SPELL		Frenzy Strike	NAME	Frappe frénétique
+SPELL		Furious Primal Wrath	NAME	Colère primordiale furieuse
+SPELL		Garnet Lance	NAME	Lance de grenat
+SPELL		Ghost Hunting Blow	NAME	Coup de chasse aux fantômes
+SPELL		Ghostwalk	NAME	Marche fantôme
+SPELL		Glorious Shell Shock	NAME	Choc de carapace glorieux
+SPELL		Golden Commander Stance	NAME	Posture du commandant doré
+SPELL		Golden General's Attitude	NAME	Attitude du général doré
+SPELL		Golden General's Victory	NAME	Victoire du général doré
+SPELL		Golden Lion Charger	NAME	Charge du lion doré
+SPELL		Golden Swipe	NAME	Balayage doré
+SPELL		Great Wyrm's Fang	NAME	Croc du grand ver
+SPELL		Greater Snapping Strike	NAME	Frappe mordante supérieure
+SPELL		Guard the Pride	NAME	Protéger la harde
+SPELL		Guardian of the Faith	NAME	Gardien de la foi
+SPELL		Gutstrike	NAME	Frappe aux entrailles
+SPELL		Half-Gone	NAME	À moitié disparu
+SPELL		Harry the Prey	NAME	Harceler la proie
+SPELL		Heavenly Blade of the Scarlet Throne	NAME	Lame céleste du trône écarlate
+SPELL		Holy Pinions	NAME	Ailes sacrées
+SPELL		Holy Rush	NAME	Ruée sacrée
+SPELL		Hooded Cobra Attitude	NAME	Attitude du cobra à capuchon
+SPELL		Hooded Killer's Stance	NAME	Posture du tueur encapuchonné
+SPELL		Horizon Wind Lancet	NAME	Lance du vent de l'horizon
+SPELL		Hunting Party	NAME	Groupe de chasse
+SPELL		Hunting Serpent Blow	NAME	Coup du serpent chasseur
+SPELL		Hurricane of Fangs	NAME	Ouragan de crocs
+SPELL		Impaling Strike	NAME	Frappe empalante
+SPELL		Inner Demon Strike	NAME	Frappe du démon intérieur
+SPELL		Inner Sense	NAME	Sens intérieur
+SPELL		Inner Sphere Stance	NAME	Posture de la sphère intérieure
+SPELL		Intercepting Shade	NAME	Ombre interceptrice
+SPELL		Intimidating Force	NAME	Force intimidante
+SPELL		Invulnerable Shell of the Iron Tortoise	NAME	Carapace invulnérable de la tortue de fer
+SPELL		Iron Axe Kick	NAME	Coup de pied de la hache de fer
+SPELL		Iron Defender's Riposte	NAME	Riposte du défenseur de fer
+SPELL		Iron Dust	NAME	Poussière de fer
+SPELL		Iron Fang	NAME	Croc de fer
+SPELL		Iron Hand Stance	NAME	Posture de la main de fer
+SPELL		Iron Hide Stance	NAME	Posture de la peau de fer
+SPELL		Iron Knuckle	NAME	Poing de fer
+SPELL		Iron Monger's Throw	NAME	Projection du marchand de fer
+SPELL		Iron Shell	NAME	Carapace de fer
+SPELL		Iron Tortoise Stance	NAME	Posture de la tortue de fer
+SPELL		Iron-Breaking Palm	NAME	Paume brise-fer
+SPELL		Kill the Wounded	NAME	Achever les blessés
+SPELL		Knuckle to the Blade	NAME	Poing contre lame
+SPELL		Leaping Dragon	NAME	Dragon bondissant
+SPELL		Leaping Spirit Dance	NAME	Danse de l'esprit bondissant
+SPELL		Leg Sweeping Hilt	NAME	Garde faucheuse
+SPELL		Lightning Step	NAME	Pas de foudre
+SPELL		Lion Lord's Agony	NAME	Agonie du seigneur lion
+SPELL		Lion's Feast	NAME	Festin du lion
+SPELL		Lord of the Pridelands	NAME	Seigneur des terres de la harde
+SPELL		Lunar Penumbra	NAME	Pénombre lunaire
+SPELL		Mage Harrier's Stance	NAME	Posture du harceleur de mages
+SPELL		Meteoric Collision	NAME	Collision météorique
+SPELL		Meteoric Crash	NAME	Impact météorique
+SPELL		Meteoric Throw	NAME	Projection météorique
+SPELL		Mithral Tortoise Stance	NAME	Posture de la tortue de mithral
+SPELL		Momentum Crash	NAME	Impact de l'élan
+SPELL		Momentum Crush	NAME	Écrasement de l'élan
+SPELL		Night's Knife	NAME	Couteau de la nuit
+SPELL		Noble Blade	NAME	Lame noble
+SPELL		Numbing Venom Prana	NAME	Prana du venin engourdissant
+SPELL		Offensive Roll	NAME	Roulade offensive
+SPELL		Orichalcum Swipe	NAME	Balayage d'orichalque
+SPELL		Outer Sphere Stance	NAME	Posture de la sphère extérieure
+SPELL		Pack Pounce	NAME	Bond de la meute
+SPELL		Panthera on the Hunt	NAME	Panthère en chasse
+SPELL		Phantom Penumbra	NAME	Pénombre fantôme
+SPELL		Phantom Sun Stance	NAME	Posture du soleil fantôme
+SPELL		Phantom Sunstorm	NAME	Tempête du soleil fantôme
+SPELL		Phantom Wind Ray	NAME	Rayon du vent fantôme
+SPELL		Pit Fighter's Stance	NAME	Posture du combattant de l'arène
+SPELL		Poison Blood	NAME	Sang empoisonné
+SPELL		Poisoner's Stance	NAME	Posture de l'empoisonneur
+SPELL		Pommel Bash	NAME	Coup de pommeau
+SPELL		Pressure Point Break	NAME	Rupture des points de pression
+SPELL		Pride Leader's Stance	NAME	Posture du chef de la harde
+SPELL		Pride Movement	NAME	Mouvement de la harde
+SPELL		Primal Frenzy	NAME	Frénésie primordiale
+SPELL		Primal Warrior Stance	NAME	Posture du guerrier primordial
+SPELL		Primal Wrath	NAME	Colère primordiale
+SPELL		Prince's Attitude	NAME	Attitude du prince
+SPELL		Pugilist Stance	NAME	Posture du pugiliste
+SPELL		Pyrite Strike	NAME	Frappe de pyrite
+SPELL		Quick Snap	NAME	Coup sec
+SPELL		Raging Hunter Pounce	NAME	Bond du chasseur enragé
+SPELL		Rattler's Feint	NAME	Feinte du crotale
+SPELL		Ravaging Blow	NAME	Coup ravageur
+SPELL		Razor Wings of the Black Seraph	NAME	Ailes rasoirs du séraphin noir
+SPELL		Red Zephyr's Dance	NAME	Danse du zéphyr rouge
+SPELL		Red Zephyr's Fleetness	NAME	Rapidité du zéphyr rouge
+SPELL		Red Zephyr's Strike	NAME	Frappe du zéphyr rouge
+SPELL		Reflexive Twist	NAME	Torsion réflexe
+SPELL		Regal Blade	NAME	Lame royale
+SPELL		Rending Claws	NAME	Griffes déchirantes
+SPELL		Resonance Strike	NAME	Frappe résonnante
+SPELL		Reversing Thrust	NAME	Estoc retourné
+SPELL		Ricochet Shell	NAME	Carapace ricochet
+SPELL		Riddle of Iron	NAME	Énigme de fer
+SPELL		Riddle of Steel	NAME	Énigme d'acier
+SPELL		Rising Zenith Strike	NAME	Frappe du zénith ascendant
+SPELL		Roar of Battle	NAME	Rugissement de bataille
+SPELL		Royal Blade	NAME	Lame royale
+SPELL		Ruby Battle Lord's Strike	NAME	Frappe du seigneur de bataille rubis
+SPELL		Ruby Zenith Strike	NAME	Frappe du zénith rubis
+SPELL		Running Hunter's Stance	NAME	Posture du chasseur courant
+SPELL		Sacred Pinions	NAME	Ailes sacrées
+SPELL		Sanguine Barrier	NAME	Barrière sanguine
+SPELL		Sanguine Perfection	NAME	Perfection sanguine
+SPELL		Sanguine Perseverance	NAME	Persévérance sanguine
+SPELL		Sanguine Proclamation	NAME	Proclamation sanguine
+SPELL		Sapphire Displacement Strike	NAME	Frappe de déplacement saphir
+SPELL		Savage Drive	NAME	Percée sauvage
+SPELL		Savage Stance	NAME	Posture sauvage
+SPELL		Scarlet Duelist Attitude	NAME	Attitude du duelliste écarlate
+SPELL		Scarlet Einhander	NAME	Bretteur écarlate
+SPELL		Scarlet Eye's Perception	NAME	Perception de l'œil écarlate
+SPELL		Scarlet Majesty Stance	NAME	Posture de la majesté écarlate
+SPELL		Scarlet Riposte	NAME	Riposte écarlate
+SPELL		Scything Strike	NAME	Frappe faucheuse
+SPELL		Searing Break	NAME	Percée brûlante
+SPELL		Sensory Rip	NAME	Déchirure des sens
+SPELL		Seraph's Wrath	NAME	Courroux du séraphin
+SPELL		Shadow Feather Strike	NAME	Frappe de la plume d'ombre
+SPELL		Shadow Raptor Swarm	NAME	Nuée de rapaces d'ombre
+SPELL		Shards of Adamantine Strike	NAME	Frappe aux éclats d'adamantium
+SPELL		Shards of Iron Strike	NAME	Frappe aux éclats de fer
+SPELL		Shards of Steel Strike	NAME	Frappe aux éclats d'acier
+SPELL		Sharing the Dark Soul	NAME	Partage de l'âme sombre
+SPELL		Sharpened Talons	NAME	Serres aiguisées
+SPELL		Shell Shock	NAME	Choc de carapace
+SPELL		Shield-Breaking Strike	NAME	Frappe brise-bouclier
+SPELL		Shoulder Rush	NAME	Charge de l'épaule
+SPELL		Shrug It Off	NAME	S'en défaire
+SPELL		Sickening Venom Strike	NAME	Frappe au venin écœurant
+SPELL		Sight Piercing Fang	NAME	Croc perçant le regard
+SPELL		Silencing Strike	NAME	Frappe réduisant au silence
+SPELL		Silver Crane Endurance	NAME	Endurance de la grue d'argent
+SPELL		Silver Crane Resurgence	NAME	Résurgence de la grue d'argent
+SPELL		Silver Crane Waltz	NAME	Valse de la grue d'argent
+SPELL		Silver Crane's Blessing	NAME	Bénédiction de la grue d'argent
+SPELL		Silver Crane's Leap	NAME	Bond de la grue d'argent
+SPELL		Silver Crane's Mercy	NAME	Miséricorde de la grue d'argent
+SPELL		Silver Crane's Spiral	NAME	Spirale de la grue d'argent
+SPELL		Silver Knight's Blade	NAME	Lame du chevalier d'argent
+SPELL		Silver Strike	NAME	Frappe argentée
+SPELL		Singing Steel Punch	NAME	Coup de poing de l'acier chantant
+SPELL		Skirmisher's Stance	NAME	Posture de l'escarmoucheur
+SPELL		Smashing Shell	NAME	Carapace fracassante
+SPELL		Snapping Riposte	NAME	Riposte mordante
+SPELL		Snapping Strike	NAME	Frappe mordante
+SPELL		Snapping Turtle Rush	NAME	Ruée de la tortue mordante
+SPELL		Snapping Turtle Stance	NAME	Posture de la tortue mordante
+SPELL		Solar Flare	NAME	Éclat solaire
+SPELL		Solar Hailstorm Stance	NAME	Posture de la grêle solaire
+SPELL		Solar Lance	NAME	Lance solaire
+SPELL		Solar Meteor Blow	NAME	Coup du météore solaire
+SPELL		Solar Reflection	NAME	Reflet solaire
+SPELL		Solar Sting	NAME	Piqûre solaire
+SPELL		Solar Storm	NAME	Tempête solaire
+SPELL		Solar Wind Lancet	NAME	Lance du vent solaire
+SPELL		Solar Wind Nova	NAME	Nova du vent solaire
+SPELL		Solar Wind Tsunami	NAME	Tsunami du vent solaire
+SPELL		Soul Consumption	NAME	Consommation de l'âme
+SPELL		Soul Crusher	NAME	Broyeur d'âmes
+SPELL		Spinning Adamantine Axe	NAME	Hache adamantine tournoyante
+SPELL		Spinning Flurry Rush	NAME	Ruée en rafale tournoyante
+SPELL		Spirit Sensing Stance	NAME	Posture de perception des esprits
+SPELL		Spiritual Weapon Stance	NAME	Posture de l'arme spirituelle
+SPELL		Spitting Cobra Stance	NAME	Posture du cobra cracheur
+SPELL		Stance of Aggression	NAME	Posture agressive
+SPELL		Stance of Arcane Steel	NAME	Posture de l'acier profane
+SPELL		Stance of Piercing Rays	NAME	Posture des rayons perforants
+SPELL		Stance of the Crane Knight	NAME	Posture du chevalier de la grue
+SPELL		Stance of the Defending Shell	NAME	Posture de la carapace protectrice
+SPELL		Stance of the Ether Gate	NAME	Posture de la porte éthérée
+SPELL		Stance of the Mage Killer	NAME	Posture du tueur de mages
+SPELL		Stance of the Silver Crane	NAME	Posture de la grue d'argent
+SPELL		Steady Hand	NAME	Main ferme
+SPELL		Steel Axe Kick	NAME	Coup de pied de la hache d'acier
+SPELL		Steel Coils	NAME	Anneaux d'acier
+SPELL		Steel Fang	NAME	Croc d'acier
+SPELL		Steel Flurry Strike	NAME	Frappe en rafale d'acier
+SPELL		Steel Grappler's Attitude	NAME	Attitude du lutteur d'acier
+SPELL		Steel Shell	NAME	Carapace d'acier
+SPELL		Sting of the Adder	NAME	Piqûre de la vipère
+SPELL		Sting of the Asp	NAME	Piqûre de l'aspic
+SPELL		Sting of the Cobra	NAME	Piqûre du cobra
+SPELL		Sting of the Rattler	NAME	Piqûre du crotale
+SPELL		Sting of the Viper	NAME	Piqûre de la vipère
+SPELL		Storm of Iron Fists Strike	NAME	Frappe de la tempête de poings de fer
+SPELL		Strategic Blow	NAME	Coup stratégique
+SPELL		Strength of Hell	NAME	Force des enfers
+SPELL		Strike of Defeat	NAME	Frappe de la défaite
+SPELL		Strike of Silver Exorcism	NAME	Frappe de l'exorcisme argenté
+SPELL		Stunning Solar Flare	NAME	Éclat solaire étourdissant
+SPELL		Sun Dips Low	NAME	Le soleil décline
+SPELL		Sunwalker Stance	NAME	Posture du marcheur du soleil
+SPELL		Sweeping Tail	NAME	Queue faucheuse
+SPELL		Swift Claws	NAME	Griffes rapides
+SPELL		Tactical Snap	NAME	Coup sec tactique
+SPELL		Tactical Strike	NAME	Frappe tactique
+SPELL		Tail Slap	NAME	Coup de queue
+SPELL		Taunting Laugh	NAME	Rire provocateur
+SPELL		Taunting Turtle	NAME	Tortue provocatrice
+SPELL		Tearing Fang	NAME	Croc déchirant
+SPELL		Tendon Rip	NAME	Déchirure des tendons
+SPELL		Thrashing Blades	NAME	Lames lacérantes
+SPELL		Thrashing Dragon Frenzy	NAME	Frénésie du dragon lacérant
+SPELL		Thrashing Dragon Twist	NAME	Torsion du dragon lacérant
+SPELL		Throw the Blade Down	NAME	Jeter la lame à terre
+SPELL		Throwing Shell	NAME	Carapace lancée
+SPELL		Throwing Shell Cyclone	NAME	Cyclone de carapaces lancées
+SPELL		Tortoise Defense	NAME	Défense de la tortue
+SPELL		Triple Solar Reflection	NAME	Triple reflet solaire
+SPELL		Triumphant Lion's Leadership	NAME	Commandement du lion triomphant
+SPELL		True Shot Stance	NAME	Posture du tir assuré
+SPELL		Turtle General's Stance	NAME	Posture du général tortue
+SPELL		Turtle Knight's Stance	NAME	Posture du chevalier tortue
+SPELL		Twisting Ether	NAME	Éther tourbillonnant
+SPELL		Twisting Wind Shot	NAME	Tir du vent tournoyant
+SPELL		Unbreakable Panthera Guard	NAME	Garde indomptable de la panthère
+SPELL		Unbreakable Stride Stance	NAME	Posture du pas indomptable
+SPELL		Unbreakable Talons	NAME	Serres indomptables
+SPELL		Unfettered Movement	NAME	Mouvement sans entraves
+SPELL		Unfettered Progression	NAME	Progression sans entraves
+SPELL		Unlimited Aggression	NAME	Agression sans limites
+SPELL		Vampiric Aura	NAME	Aura vampirique
+SPELL		Vaporform Crash	NAME	Impact de forme vaporeuse
+SPELL		Vengeful Riposte	NAME	Riposte vengeresse
+SPELL		Vicious Snapping Strike	NAME	Frappe mordante vicieuse
+SPELL		Vicious Swipe	NAME	Balayage vicieux
+SPELL		Virulence	NAME	Virulence
+SPELL		Void Seraph Strike	NAME	Frappe du séraphin du néant
+SPELL		Voracious Drive	NAME	Percée vorace
+SPELL		Walk in the Dark	NAME	Marcher dans l'obscurité
+SPELL		War Lion's Charge	NAME	Charge du lion de guerre
+SPELL		Warning Roar	NAME	Rugissement d'alerte
+SPELL		Warp Worm	NAME	Ver de distorsion
+SPELL		Weakening Venom Prana	NAME	Prana du venin affaiblissant
+SPELL		Weeping Scarlet Razor	NAME	Rasoir écarlate larmoyant
+SPELL		Wrath of the Primal Hunter	NAME	Courroux du chasseur primordial
+SPELL		Wyrmling's Fang	NAME	Croc du jeune dragon
