@@ -370,6 +370,11 @@ public final class TempBonusHelper
 		String minString = aTok.nextToken().substring(4); //Take off MIN=
 		String maxString = aTok.nextToken().substring(4); //Take off MAX=
 		String titleString = aTok.nextToken().substring(6); // Take off TITLE=
+		String localizedTitle = source.get(StringKey.LOCALIZED_TEMP_VALUE_TITLE);
+		if (localizedTitle != null)
+		{
+			titleString = localizedTitle;
+		}
 
 		int min = pc.getVariableValue(minString, EMPTY_STRING).intValue();
 		int max = pc.getVariableValue(maxString, EMPTY_STRING).intValue();

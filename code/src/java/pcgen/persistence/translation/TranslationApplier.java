@@ -125,6 +125,7 @@ public final class TranslationApplier
 			case NAME -> translated.setLocalizedName(entry.text());
 			case OUTPUTNAME -> translated.put(StringKey.LOCALIZED_OUTPUT_NAME, entry.text());
 			case TEMPDESC -> translated.put(StringKey.LOCALIZED_TEMP_DESCRIPTION, entry.text());
+			case TEMPVALUE_TITLE -> translated.put(StringKey.LOCALIZED_TEMP_VALUE_TITLE, entry.text());
 			case ABB -> translated.put(StringKey.LOCALIZED_ABB, entry.text());
 			case DESC ->
 			{

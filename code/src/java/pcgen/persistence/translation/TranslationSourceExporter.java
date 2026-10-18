@@ -80,16 +80,20 @@ public final class TranslationSourceExporter
 
 	/**
 	 * Whether a player can ever see the object. A hidden category is not enough to tell: Special
-	 * Ability is hidden from the GUI tabs, yet its abilities are on the character sheet. Only the
-	 * Internal category holds bookkeeping abilities nobody reads.
+	 * Ability is hidden from the GUI tabs, yet its abilities are on the character sheet. Hidden
+	 * objects with temporary bonuses also appear in the bonus tab. Only the Internal category
+	 * holds bookkeeping abilities nobody reads.
 	 */
 	private static boolean isSeen(CDOMObject object)
 	{
-		if (object.getSafe(ObjectKey.VISIBILITY) == Visibility.HIDDEN)
+		if (object instanceof Ability ability && INTERNAL_CATEGORY.equals(ability.getCDOMCategory().getKeyName()))
 		{
 			return false;
 		}
-		return !(object instanceof Ability ability && INTERNAL_CATEGORY.equals(ability.getCDOMCategory().getKeyName()));
+		return object.getSafe(ObjectKey.VISIBILITY) != Visibility.HIDDEN
+			|| object.containsListFor(ListKey.BONUS_ANYPC)
+			|| object.containsListFor(ListKey.BONUS_PC)
+			|| object.containsListFor(ListKey.BONUS_EQUIP);
 	}
 
 	/**
@@ -117,6 +121,17 @@ public final class TranslationSourceExporter
 		addIfPresent(texts, type, category, object, TranslatedField.NAME, object.getDisplayName());
 		addIfPresent(texts, type, category, object, TranslatedField.OUTPUTNAME, object.get(StringKey.OUTPUT_NAME));
 		addIfPresent(texts, type, category, object, TranslatedField.TEMPDESC, object.get(StringKey.TEMP_DESCRIPTION));
+		String temporaryValue = object.get(StringKey.TEMPVALUE);
+		if (temporaryValue != null)
+		{
+			for (String part : temporaryValue.split("\\|"))
+			{
+				if (part.startsWith("TITLE="))
+				{
+					addIfPresent(texts, type, category, object, TranslatedField.TEMPVALUE_TITLE, part.substring(6));
+				}
+			}
+		}
 		addIfPresent(texts, type, category, object, TranslatedField.ABB, object.get(StringKey.ABB_KR));
 		addDescriptions(texts, type, category, object, TranslatedField.DESC, ListKey.DESCRIPTION);
 		addDescriptions(texts, type, category, object, TranslatedField.BENEFIT, ListKey.BENEFIT);

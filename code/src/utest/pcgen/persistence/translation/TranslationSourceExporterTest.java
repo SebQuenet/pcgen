@@ -32,6 +32,7 @@ import pcgen.core.AbilityCategory;
 import pcgen.core.Campaign;
 import pcgen.core.Description;
 import pcgen.core.SubClass;
+import pcgen.core.bonus.Bonus;
 import pcgen.core.spell.Spell;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.rules.context.ConsolidatedListCommitStrategy;
@@ -136,6 +137,21 @@ class TranslationSourceExporterTest
 		spellFromTheCoreRulebook("Hidden Helper").put(ObjectKey.VISIBILITY, Visibility.HIDDEN);
 
 		assertTrue(exported().isEmpty());
+	}
+
+	@Test
+	void exportsHiddenTemporaryBonusesShownInTheBonusTab()
+	{
+		Spell spell = spellFromTheCoreRulebook("Temporary Effect");
+		spell.put(ObjectKey.VISIBILITY, Visibility.HIDDEN);
+		spell.put(StringKey.TEMP_DESCRIPTION, "Choose a value");
+		spell.put(StringKey.TEMPVALUE, "MIN=1|MAX=20|TITLE=Ability Damage");
+		spell.addToListFor(ListKey.BONUS_ANYPC, Bonus.newBonus(
+			new RuntimeLoadContext(RuntimeReferenceContext.createRuntimeReferenceContext(),
+				new ConsolidatedListCommitStrategy()), "COMBAT|AC|2"));
+
+		assertEquals(List.of(TranslatedField.NAME, TranslatedField.TEMPDESC, TranslatedField.TEMPVALUE_TITLE),
+			exported().stream().map(TranslatableText::field).toList());
 	}
 
 	@Test

@@ -96,6 +96,14 @@ class TranslatedDisplayTest
 	}
 
 	@Test
+	void storesTheTranslatedTemporaryValueTitle()
+	{
+		apply("SPELL\t\tBless\tTEMPVALUE_TITLE\tValeur du bonus");
+
+		assertEquals("Valeur du bonus", bless.get(StringKey.LOCALIZED_TEMP_VALUE_TITLE));
+	}
+
+	@Test
 	void showsTheEnglishTemporaryDescriptionWithoutATranslation()
 	{
 		bless.put(StringKey.TEMP_DESCRIPTION, "+1 morale bonus");

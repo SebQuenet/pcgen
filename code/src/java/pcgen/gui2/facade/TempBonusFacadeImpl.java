@@ -33,6 +33,7 @@ import pcgen.core.Equipment;
 import pcgen.core.Globals;
 import pcgen.core.PCClass;
 import pcgen.core.PCTemplate;
+import pcgen.core.PlayerCharacter;
 import pcgen.core.Skill;
 import pcgen.core.spell.Spell;
 import pcgen.facade.core.TempBonusFacade;
@@ -187,7 +188,14 @@ public class TempBonusFacadeImpl implements TempBonusFacade, Comparable<TempBonu
 	{
 		if (StringUtils.isNotEmpty(bonusName))
 		{
-			return bonusName;
+			String targetName = switch (target)
+			{
+				case null -> LanguageBundle.getString("in_none");
+				case PlayerCharacter ignored -> LanguageBundle.getString("in_itmBonModelTargetTypeCharacter");
+				case Equipment equipment -> equipment.getLocalizedName();
+				default -> LanguageBundle.getString("in_none");
+			};
+			return getOriginObj().getLocalizedName() + " [" + targetName + "]";
 		}
 		return getOriginObj().toString();
 	}

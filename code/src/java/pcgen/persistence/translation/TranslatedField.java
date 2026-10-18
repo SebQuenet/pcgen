@@ -22,7 +22,7 @@ package pcgen.persistence.translation;
  */
 public enum TranslatedField
 {
-	NAME, OUTPUTNAME, DESC, BENEFIT, TEMPDESC, ABB;
+	NAME, OUTPUTNAME, DESC, BENEFIT, TEMPDESC, ABB, TEMPVALUE_TITLE;
 
 	/**
 	 * @return whether an object can carry several texts in this field, each under its own prerequisites

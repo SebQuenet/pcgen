@@ -116,6 +116,11 @@ public final class TemporaryBonusApplier
 		}
 		int lowest = character.getVariableValue(minimum, "").intValue();
 		int highest = character.getVariableValue(maximum, "").intValue();
+		String localizedTitle = source.get(StringKey.LOCALIZED_TEMP_VALUE_TITLE);
+		if (localizedTitle != null)
+		{
+			title = localizedTitle;
+		}
 		return (highest < lowest) ? Optional.empty() : Optional.of(new IntRange(lowest, highest, title));
 	}
 }
