@@ -1,0 +1,708 @@
+TYPE	CATEGORY	KEY	FIELD	TEXT
+ABILITY	FEAT	Beast Rider	NAME	Chevaucheur de bêtes
+ABILITY	Special Ability	Alchemical Trapper ~ Trapfinding	NAME	Recherche des pièges
+ABILITY	Special Ability	Ancient Guardian ~ Undo Artifice	NAME	Défaire l'artifice
+ABILITY	Special Ability	Apocalypse Mystery ~ Dust to Dust	DESC	Une fois	Once
+ABILITY	Special Ability	Apocalypse Mystery ~ Dust to Dust	DESC	Deux fois	Twice
+ABILITY	Special Ability	Apocalypse Mystery ~ Erosion Touch	NAME	Contact d'érosion
+ABILITY	Special Ability	Apocalypse Mystery ~ Erosion Touch	DESC	Par une attaque de contact au corps à corps, vous pouvez infliger %1d6 points de dégâts à un objet ou une créature artificielle. Contre un objet en possession d'une autre créature, traitez cette attaque comme une manœuvre offensive de destruction. Vous pouvez utiliser ce pouvoir %2 fois par jour.
+ABILITY	Special Ability	Apocalypse Mystery ~ Final Revelation	NAME	Révélation finale
+ABILITY	Special Ability	Apocalypse Mystery ~ Near Death	NAME	Proche de la mort
+ABILITY	Special Ability	Apocalypse Mystery ~ Near Death	DESC	Vous gagnez un bonus d'intuition de +%1 aux jets de sauvegarde contre les maladies, les effets mentaux et les poisons.	You gain a +%1 insight bonus on saves against diseases, mind-affecting effects, and poisons.
+ABILITY	Special Ability	Apocalypse Mystery ~ Near Death	DESC	Vous gagnez un bonus d'intuition de +%1 aux jets de sauvegarde contre les maladies, les effets mentaux, les poisons, les effets de mort, les effets de sommeil et l'étourdissement.	You gain a +%1 insight bonus on saves against diseases, mind-affecting effects, poisons, death effects, sleep effects, and stunning.
+ABILITY	Special Ability	Bat (Sootwing) ~ Disease	NAME	Maladie
+ABILITY	Special Ability	Bat (Sootwing) ~ Paralysis	OUTPUTNAME	Paralysie
+ABILITY	Special Ability	Bat (Sootwing) ~ Paralysis	DESC	Cette attaque spéciale immobilise la victime. Une créature paralysée ne peut ni se déplacer, ni parler, ni accomplir d'action physique : elle est clouée sur place, figée et sans défense. La paralysie agit sur le corps, et un personnage peut généralement y résister par un jet de Vigueur (DD %1). Contrairement à immobilisation de personne et aux effets similaires, la paralysie ne permet pas de nouveau jet de sauvegarde à chaque round. Une créature ailée en vol au moment de la paralysie ne peut plus battre des ailes et tombe ; un nageur ne peut plus nager et risque de se noyer. La durée de la paralysie varie et est indiquée dans la description de la créature.
+ABILITY	Special Ability	Dual-Cursed Oracle ~ Cold-Blooded	NAME	Sang-froid
+ABILITY	Special Ability	Fearmonger ~ Feed on Fear	NAME	Se nourrir de la peur
+ABILITY	Special Ability	Ghoul Bloodline ~ Bloodline Arcana	NAME	Arcane du lignage
+ABILITY	Special Ability	Ghoul Bloodline ~ Bloodline Powers	NAME	Pouvoirs du lignage
+ABILITY	Special Ability	Ghoul Bloodline ~ Ghoulish Claws	DESC	Vous pouvez utiliser vos griffes pendant %1 rounds par jour. Ces rounds ne sont pas forcément consécutifs.	You can use your claws for %1 rounds per day. These rounds do not need to be consecutive.
+ABILITY	Special Ability	Grenadier ~ Martial Weapon Proficiency	NAME	Maniement d'une arme de guerre
+ABILITY	Special Ability	Grenadier ~ Precise Bombs	NAME	Bombes précises
+ABILITY	Special Ability	Oracle ~ Cold-Blooded	NAME	Sang-froid
+ABILITY	Special Ability	Oversized Goblin ~ Size	NAME	Taille moyenne
+ABILITY	Special Ability	Pack Rager ~ Bonus Feat	NAME	Don supplémentaire
+ABILITY	Special Ability	Ratfolk ~ Surface Sprinter ~ Speed	NAME	Vitesse normale
+ABILITY	Special Ability	Ratfolk ~ Surface Sprinter ~ Vision	NAME	Vision nocturne
+ABILITY	Special Ability	Seru ~ Poison	NAME	Empoisonnement
+ABILITY	Special Ability	Seru ~ Spit Venom	NAME	Crachat de venin
+ABILITY	Special Ability	Yzobu ~ Stampede	NAME	Débandade
+ABILITY	Special Ability	Yzobu ~ Stampede	DESC	Une débandade a lieu si au moins trois créatures dotées du pouvoir débandade font une attaque de piétinement en restant adjacentes. Pendant la débandade, elles peuvent piétiner les ennemis de leur taille ou plus petits, et le DD du jet de sauvegarde contre le piétinement augmente de +2.
+EQUIPMENT		Snakebiter Arrow	DESC	Une flèche utilisée comme arme de corps à corps est traitée comme une arme improvisée légère (malus de -4 aux jets d'attaque) et inflige les dégâts d'une dague de sa taille (multiplicateur de critique x2). Les flèches sont vendues dans un carquois de cuir qui en contient 20.
+RACE		Familiar (Seru)	OUTPUTNAME	Familier arbitre
+RACE		Familiar (Sootwing Bat)	OUTPUTNAME	Familier arbitre
+SPELL		Control Vermin	NAME	Contrôle de la vermine
+SPELL		Ice Slick	NAME	Plaque de glace
+ABILITY	FEAT	Staggering Blow	NAME	Coup chancelant
+ABILITY	Special Ability	Dual-Cursed Oracle ~ Infested	NAME	Infesté
+ABILITY	Special Ability	Oracle ~ Infested	NAME	Infesté
+ABILITY	Special Ability	Apocalypse Mystery ~ Doomsayer	NAME	Prophète de malheur
+SPELL		Air Breathing	NAME	Respiration aérienne
+ABILITY	Special Ability	Bouda ~ Fetish	NAME	Fétiche
+ABILITY	Special Ability	Witch Hex ~ Mud Witch	NAME	Sorcière de la boue
+ABILITY	Arcanist Bloodline Development	Ghoul Bloodline	NAME	Lignage de la goule
+ABILITY	Archetype	Alchemist Archetype ~ Alchemical Trapper	NAME	Trappeur alchimique
+ABILITY	Archetype	Alchemist Archetype ~ Grenadier	NAME	Grenadier
+ABILITY	Archetype	Alchemist Archetype ~ Winged Marauder	NAME	Maraudeur ailé
+ABILITY	Archetype	Antipaladin Archetype ~ Fearmonger	NAME	Semeur de peur
+ABILITY	Archetype	Barbarian Archetype ~ Pack Rager	NAME	Enragé de meute
+ABILITY	Archetype	Bard Archetype ~ Dragon Yapper	NAME	Jappeur de dragon
+ABILITY	Archetype	Druid Archetype ~ Ancient Guardian	NAME	Gardien ancien
+ABILITY	Archetype	Witch Archetype ~ Bouda	NAME	Bouda
+ABILITY	Blood Arcanist Bloodline	Ghoul Bloodline	NAME	Lignage de la goule
+ABILITY	Crossblooded Bloodline	Ghoul Bloodline	NAME	Lignage de la goule
+ABILITY	Eldritch Heritage Bloodline	Ghoul Bloodline	NAME	Lignage de la goule
+ABILITY	FEAT	Angelbane Strike	NAME	Frappe fléau des anges
+ABILITY	FEAT	Aquatic Adaption	NAME	Adaptation aquatique
+ABILITY	FEAT	Aquatic Advantage	NAME	Avantage aquatique
+ABILITY	FEAT	Awesome Charge	NAME	Charge impressionnante
+ABILITY	FEAT	Bushwhack	NAME	Embuscade
+ABILITY	FEAT	Chain Challenge	NAME	Défi en chaîne
+ABILITY	FEAT	Cleaving Sweep	NAME	Balayage fendant
+ABILITY	FEAT	Coordinated Reposition	NAME	Repositionnement coordonné
+ABILITY	FEAT	Disarm Partner	NAME	Partenaire de désarmement
+ABILITY	FEAT	Draconic Magic	NAME	Magie draconique
+ABILITY	FEAT	Gnawer	NAME	Rongeur
+ABILITY	FEAT	Horn Rider	NAME	Cavalier à cornes
+ABILITY	FEAT	Horn Riders Charge	NAME	Charge des cavaliers à cornes
+ABILITY	FEAT	Hurtful	NAME	Blessant
+ABILITY	FEAT	Improved Disarm Partner	NAME	Partenaire de désarmement amélioré
+ABILITY	FEAT	Motivated March	NAME	Marche motivée
+ABILITY	FEAT	Mutual Hatred	NAME	Haine mutuelle
+ABILITY	FEAT	Pack Rat	NAME	Rat de grenier
+ABILITY	FEAT	Pile On	NAME	Mêlée générale
+ABILITY	FEAT	Scarred Legion	NAME	Légion balafrée
+ABILITY	FEAT	Shadow Shroud	NAME	Linceul d'ombre
+ABILITY	FEAT	Shared Stash	NAME	Réserve partagée
+ABILITY	FEAT	Sharptooth	NAME	Dent acérée
+ABILITY	FEAT	Shocking Bellow	NAME	Beuglement choquant
+ABILITY	FEAT	Slurk Rider	NAME	Cavalier de slurk
+ABILITY	FEAT	Snapping Flank	NAME	Tenaille mordante
+ABILITY	FEAT	Snipers Lantern	NAME	Lanterne du tireur embusqué
+ABILITY	FEAT	Spirit of the Corps	NAME	Esprit de corps
+ABILITY	FEAT	Vampiric Companion	NAME	Compagnon vampirique
+ABILITY	FEAT	Visceral Threat	NAME	Menace viscérale
+ABILITY	Sorcerer Bloodline	Ghoul Bloodline	NAME	Lignage de la goule
+ABILITY	Special Ability	Alchemical Trapper ~ Bomb Trap	NAME	Piège à bombe
+ABILITY	Special Ability	Ancient Guardian ~ Ancient Arms	NAME	Armes anciennes
+ABILITY	Special Ability	Ancient Guardian ~ Ancient Ways	NAME	Voies anciennes
+ABILITY	Special Ability	Ancient Guardian ~ Community Bond	NAME	Lien communautaire
+ABILITY	Special Ability	Ancient Guardian ~ Dispel Hostility	NAME	Dissiper l'hostilité
+ABILITY	Special Ability	Ancient Guardian ~ Patience of Nature	NAME	Patience de la nature
+ABILITY	Special Ability	Ancient Guardian ~ Unimpeachable	NAME	Irréprochable
+ABILITY	Special Ability	Apocalypse Mystery ~ Defy Acid	NAME	Défier l'acide
+ABILITY	Special Ability	Apocalypse Mystery ~ Defy Cold	NAME	Défier le froid
+ABILITY	Special Ability	Apocalypse Mystery ~ Defy Electricity	NAME	Défier l'électricité
+ABILITY	Special Ability	Apocalypse Mystery ~ Defy Elements	NAME	Défier les éléments
+ABILITY	Special Ability	Apocalypse Mystery ~ Defy Fire	NAME	Défier le feu
+ABILITY	Special Ability	Apocalypse Mystery ~ Defy Sonic	NAME	Défier le son
+ABILITY	Special Ability	Apocalypse Mystery ~ Destructive Roots	NAME	Racines destructrices
+ABILITY	Special Ability	Apocalypse Mystery ~ Dust to Dust	NAME	Poussière à la poussière
+ABILITY	Special Ability	Apocalypse Mystery ~ Pass the Torch	NAME	Passer le flambeau
+ABILITY	Special Ability	Apocalypse Mystery ~ Power of the Fallen	NAME	Pouvoir des disparus
+ABILITY	Special Ability	Apocalypse Mystery ~ Spell Blast	NAME	Déflagration de sort
+ABILITY	Special Ability	Apocalypse Mystery ~ Unstoppable Overrun	NAME	Renversement imparable
+ABILITY	Special Ability	Bat (Sootwing) ~ Paralysis	NAME	Chauve-souris (aile de suie) ~ paralysie
+ABILITY	Special Ability	Bouda ~ Hyena Shape	NAME	Forme de hyène
+ABILITY	Special Ability	Companion Advancement ~ Cave Salamander	NAME	Progression du compagnon (salamandre des cavernes)
+ABILITY	Special Ability	Companion Advancement ~ Gorthek	NAME	Progression du compagnon (gorthek)
+ABILITY	Special Ability	Companion Advancement ~ Python (Riding)	NAME	Progression du compagnon (python (de selle))
+ABILITY	Special Ability	Companion Advancement ~ Rat (Riding)	NAME	Progression du compagnon (rat (de selle))
+ABILITY	Special Ability	Companion Advancement ~ Yzobu	NAME	Progression du compagnon (yzobu)
+ABILITY	Special Ability	Cruelty ~ Panicked	NAME	Paniqué
+ABILITY	Special Ability	Discovery ~ Blackstar Bomb	NAME	Bombe d'étoile noire*
+ABILITY	Special Ability	Discovery ~ Sipping Pet	NAME	Animal buveur
+ABILITY	Special Ability	Discovery ~ Void Bomb	NAME	Bombe de vide*
+ABILITY	Special Ability	Dragon Yapper ~ Frightful Song	NAME	Chant effrayant
+ABILITY	Special Ability	Dragon Yapper ~ Yapping Song	NAME	Chant jappeur
+ABILITY	Special Ability	Duergar ~ Ironskinned	NAME	Peau de fer
+ABILITY	Special Ability	Duergar ~ Twilight-Touched	NAME	Touché par le crépuscule
+ABILITY	Special Ability	Fearmonger ~ Frightening Cruelty	NAME	Cruauté effrayante
+ABILITY	Special Ability	Ghoul Bloodline ~ Bonus Spells	NAME	Lignage de la goule ~ sorts en bonus
+ABILITY	Special Ability	Ghoul Bloodline ~ Earth Crawler	NAME	Rampeur de terre
+ABILITY	Special Ability	Ghoul Bloodline ~ Ghoulish Aspect	NAME	Aspect de goule
+ABILITY	Special Ability	Ghoul Bloodline ~ Ghoulish Claws	NAME	Griffes de goule
+ABILITY	Special Ability	Ghoul Bloodline ~ Leathery Skin	NAME	Peau coriace
+ABILITY	Special Ability	Ghoul Bloodline ~ Ravenous Frenzy	NAME	Frénésie vorace
+ABILITY	Special Ability	Grenadier ~ Alchemical Weapon	NAME	Arme alchimique
+ABILITY	Special Ability	Grenadier ~ Directed Blast	NAME	Déflagration dirigée
+ABILITY	Special Ability	Grenadier ~ Staggering Blast	NAME	Déflagration chancelante
+ABILITY	Special Ability	Oracle ~ Apocalypse Mystery	NAME	Mystères de l'apocalypse
+ABILITY	Special Ability	Oversized Goblin	NAME	Gobelin surdimensionné
+ABILITY	Special Ability	Oversized Goblin ~ Ability Scores	NAME	+2 en Force, +2 en Dextérité, -2 en Charisme
+ABILITY	Special Ability	Pack Rager ~ Raging Tactician	NAME	Tacticien enragé
+ABILITY	Special Ability	Ratfolk ~ Cheek Pouches	NAME	Abajoues
+ABILITY	Special Ability	Ratfolk ~ Cleanliness	NAME	Propreté
+ABILITY	Special Ability	Ratfolk ~ Lab Rat	NAME	Rat de laboratoire
+ABILITY	Special Ability	Ratfolk ~ Surface Sprinter	NAME	Sprinter de la surface
+ABILITY	Special Ability	Sorcerer Bloodline ~ Ghoul	NAME	Lignage de la goule
+ABILITY	Special Ability	Standard Goblin	NAME	Gobelin standard
+ABILITY	Special Ability	Winged Marauder ~ Flying Beast Tamer	NAME	Dompteur de bêtes volantes
+ABILITY	Special Ability	Witch Hex ~ Bouda's Eye	NAME	Œil de la bouda
+ABILITY	Spell-Like Ability	Ironskin	NAME	Peau de fer
+ABILITY	Spell-Like Ability	Racial SLA ~ Ironskin	NAME	Peau de fer
+EQMOD		Special Ability ~ Burning ~ Weapon	NAME	Brûlante
+EQMOD		Special Ability ~ Catalytic ~ Weapon	NAME	Catalytique
+EQMOD		Special Ability ~ Steaming ~ Armor	NAME	Fumante
+EQMOD		Special Ability ~ Virulent ~ Weapon	NAME	Virulente
+EQUIPMENT		Alchemical Blood	NAME	Sang alchimique
+EQUIPMENT		Ambush Cauldron	NAME	Chaudron d'embuscade
+EQUIPMENT		Banner of the Rushing Horde	NAME	Bannière de la horde déferlante
+EQUIPMENT		Bloodfeast Shield	NAME	Bouclier du festin de sang
+EQUIPMENT		Bolts (Bolas/10)	NAME	Carreaux-bolas (10)
+EQUIPMENT		Bombchucker	NAME	Lance-bombes
+EQUIPMENT		Bullet (Sling/Alchemical)	NAME	Bille de fronde (alchimique)
+EQUIPMENT		Cap of Enervation	NAME	Bonnet d'affaiblissement
+EQUIPMENT		Cave Dweller's Greataxe	NAME	Grande hache du troglodyte
+EQUIPMENT		Caver's Bolt	NAME	Carreau du spéléologue
+EQUIPMENT		Cloak of the Troll King	NAME	Cape du roi troll
+EQUIPMENT		Crashing Boots	NAME	Bottes fracassantes
+EQUIPMENT		Elixir of Oppression	NAME	Élixir d'oppression
+EQUIPMENT		Extractor's Gloves	NAME	Gants de l'extracteur
+EQUIPMENT		Fervor Juice	NAME	Jus de ferveur
+EQUIPMENT		Flindbar	NAME	Flindbar
+EQUIPMENT		Flying Straps	NAME	Sangles de vol
+EQUIPMENT		Flying Straps (Masterwork)	NAME	Sangles de vol (de maître)
+EQUIPMENT		Flying Straps (Masterwork)	OUTPUTNAME	Sangles de vol de maître
+EQUIPMENT		Fog-Cutting Lenses	NAME	Lentilles perce-brume
+EQUIPMENT		Frostblood Axe	NAME	Hache sang-de-givre
+EQUIPMENT		Gauntlets of Rending	NAME	Gantelets déchirants
+EQUIPMENT		Gorthek Masks	NAME	Masques gorthek
+EQUIPMENT		Headband of Vermin Control	NAME	Bandeau de contrôle de la vermine
+EQUIPMENT		Horn Harness	NAME	Harnais à cornes
+EQUIPMENT		Horror Dust	NAME	Poussière d'horreur
+EQUIPMENT		Hunter's Nose Ring	NAME	Anneau nasal du chasseur
+EQUIPMENT		Hyena Shawl	NAME	Châle de hyène
+EQUIPMENT		Irongrip Gauntlets	NAME	Gantelets poigne-de-fer
+EQUIPMENT		Light-Killer's Grease	NAME	Graisse du tueur de lumière
+EQUIPMENT		Pugwampi Braid	NAME	Tresse de pugwampi
+EQUIPMENT		Rat (Riding)	NAME	Rat (de selle)
+EQUIPMENT		Rat (Riding/Combat Trained)	NAME	Rat (de selle/dressé au combat)
+EQUIPMENT		Rhinarium Paste	NAME	Pâte de rhinarium
+EQUIPMENT		Saddle (Gorthek)	NAME	Selle (gorthek)
+EQUIPMENT		Saddle (Gorthek)	OUTPUTNAME	Selle de gorthek
+EQUIPMENT		Serpent-Necked Flail	NAME	Fléau à cou de serpent
+EQUIPMENT		Serpentine Choker	NAME	Ras-du-cou serpentin
+EQUIPMENT		Signal Rocket	NAME	Fusée de signalisation
+EQUIPMENT		Slaver's Crossbow (Heavy)	NAME	Arbalète lourde d'esclavagiste
+EQUIPMENT		Slaver's Crossbow (Light)	NAME	Arbalète légère d'esclavagiste
+EQUIPMENT		Snakebiter Arrow	NAME	Flèche mord-serpent
+EQUIPMENT		Spiderdraw	NAME	Tire-araignée
+EQUIPMENT		Spikebones	NAME	Os-pointes
+EQUIPMENT		Venomsweat Salve	NAME	Baume de sueur venimeuse
+EQUIPMENT		War Drums of Savagery	NAME	Tambours de guerre de sauvagerie
+EQUIPMENT		Winter Wolf Runetooth	NAME	Croc runique de loup arctique
+KIT		Abrakarn Viper Default	NAME	Vipère abrakarn par défaut
+KIT		Bat (Sootwing) Default	NAME	Chauve-souris (aile de suie) par défaut
+KIT		Bat, Sootwing Bat Default	NAME	Chauve-souris aile de suie par défaut
+KIT		Beetle, Dark Spitter Beetle Default	NAME	Scarabée cracheur noir par défaut
+KIT		Beetle, Juggernaut Beetle Default	NAME	Scarabée juggernaut par défaut
+KIT		Boggard, Boggard Abyssal Warrior Default	NAME	Bourbiérin guerrier abyssal par défaut
+KIT		Boggard, Boggard Brute Default	NAME	Bourbiérin brute par défaut
+KIT		Boggard, Boggard Champion Default	NAME	Bourbiérin champion par défaut
+KIT		Boggard, Boggard Farcroaker Default	NAME	Bourbiérin coasse-loin par défaut
+KIT		Boggard, Boggard Hunter Default	NAME	Bourbiérin chasseur par défaut
+KIT		Boggard, Boggard Priest-King Default	NAME	Bourbiérin roi-prêtre par défaut
+KIT		Boggard, Boggard Prophet Default	NAME	Bourbiérin prophète par défaut
+KIT		Boggard, Boggard Savage Default	NAME	Bourbiérin sauvage par défaut
+KIT		Boggard, Boggard Scarred One Default	NAME	Bourbiérin balafré par défaut
+KIT		Boggard, Boggard Stalker Default	NAME	Bourbiérin traqueur par défaut
+KIT		Boggard, Boggard Swampseer Default	NAME	Bourbiérin voyant des marais par défaut
+KIT		Bugbear, Bugbear Ambusher Default	NAME	Gobelours embusqué par défaut
+KIT		Bugbear, Bugbear Bloodmage Default	NAME	Gobelours mage de sang par défaut
+KIT		Bugbear, Bugbear Cultist Default	NAME	Gobelours cultiste par défaut
+KIT		Bugbear, Bugbear Flesh Glutton Default	NAME	Gobelours glouton de chair par défaut
+KIT		Bugbear, Bugbear Gnasher Default	NAME	Gobelours grinceur par défaut
+KIT		Bugbear, Bugbear Lurker Default	NAME	Gobelours rôdeur par défaut
+KIT		Bugbear, Bugbear Shadow Sneak Default	NAME	Gobelours furtif des ombres par défaut
+KIT		Bugbear, Bugbear Stalker Default	NAME	Gobelours traqueur par défaut
+KIT		Bugbear, Bugbear Tyrant Default	NAME	Gobelours tyran par défaut
+KIT		Dark Spitter Beetle Default	NAME	Scarabée cracheur noir par défaut
+KIT		Drow, Drow Demonic Champion Default	NAME	Drow champion démoniaque par défaut
+KIT		Drow, Drow House Captain Default	NAME	Drow capitaine de maison par défaut
+KIT		Drow, Drow House Guard Default	NAME	Drow garde de maison par défaut
+KIT		Drow, Drow Master Scout Default	NAME	Drow maître éclaireur par défaut
+KIT		Drow, Drow Matron Default	NAME	Drow matrone par défaut
+KIT		Drow, Drow Poisoner Default	NAME	Drow empoisonneur par défaut
+KIT		Drow, Drow Priest Default	NAME	Drow prêtre par défaut
+KIT		Drow, Drow Scout Default	NAME	Drow éclaireur par défaut
+KIT		Duergar, Duergar Anvil Default	NAME	Duergar enclume par défaut
+KIT		Duergar, Duergar Bombardier Default	NAME	Duergar bombardier par défaut
+KIT		Duergar, Duergar Captain Default	NAME	Duergar capitaine par défaut
+KIT		Duergar, Duergar Hammer Default	NAME	Duergar marteau par défaut
+KIT		Duergar, Duergar High Priest Default	NAME	Duergar grand prêtre par défaut
+KIT		Duergar, Duergar Lieutenant Default	NAME	Duergar lieutenant par défaut
+KIT		Duergar, Duergar Sergeant Default	NAME	Duergar sergent par défaut
+KIT		Duergar, Duergar Sharpshooter Default	NAME	Duergar tireur d'élite par défaut
+KIT		Duergar, Duergar Slaver Default	NAME	Duergar esclavagiste par défaut
+KIT		Duergar, Duergar Taskmaster Default	NAME	Duergar maître d'œuvre par défaut
+KIT		Feeder In The Depths Default	NAME	Dévoreur des profondeurs par défaut
+KIT		Frightful Haunter Default	NAME	Hanteur effrayant par défaut
+KIT		Ghoul Hound Default	NAME	Chien goule par défaut
+KIT		Ghoul, Ancient Gravedigger Default	NAME	Goule fossoyeuse ancienne par défaut
+KIT		Ghoul, Ghoul Commander Default	NAME	Goule commandante par défaut
+KIT		Ghoul, Ghoul Creeper Default	NAME	Goule rampante par défaut
+KIT		Ghoul, Ghoul Huntsmaster Default	NAME	Goule maître-chasseur par défaut
+KIT		Ghoul, Ghoul Monarch Default	NAME	Goule monarque par défaut
+KIT		Ghoul, Ghoul Stalker Default	NAME	Goule traqueuse par défaut
+KIT		Ghoul, Masked Murderer Default	NAME	Goule meurtrière masquée par défaut
+KIT		Giant (Fire), Fire Giant Doombringer Default	NAME	Géant du feu porte-malheur par défaut
+KIT		Giant (Fire), Fire Giant Glaive Default	NAME	Géant du feu à la glaive par défaut
+KIT		Giant (Fire), Fire Giant King Default	NAME	Géant du feu roi par défaut
+KIT		Giant (Fire), Fire Giant Lieutenant Default	NAME	Géant du feu lieutenant par défaut
+KIT		Giant (Fire), Fire Giant Magmablade Default	NAME	Géant du feu lame de magma par défaut
+KIT		Giant (Fire), Fire Giant Queen Default	NAME	Géante du feu reine par défaut
+KIT		Giant (Fire), Fire Giant Strongarm Default	NAME	Géant du feu gros-bras par défaut
+KIT		Giant (Frost), Frost Giant Battle Priest Default	NAME	Géant du givre prêtre de bataille par défaut
+KIT		Giant (Frost), Frost Giant Elite Scout Default	NAME	Géant du givre éclaireur d'élite par défaut
+KIT		Giant (Frost), Frost Giant Houndmaster Default	NAME	Géant du givre maître-chien par défaut
+KIT		Giant (Frost), Frost Giant Hunter Default	NAME	Géant du givre chasseur par défaut
+KIT		Giant (Frost), Frost Giant Ice Mage Default	NAME	Géant du givre mage de glace par défaut
+KIT		Giant (Frost), Frost Giant Jarl Default	NAME	Géant du givre jarl par défaut
+KIT		Giant (Frost), Frost Giant Raider Default	NAME	Géant du givre pillard par défaut
+KIT		Gnoll, Chosen of Lamashtu Default	NAME	Gnoll élu de Lamashtu par défaut
+KIT		Gnoll, Eye of Lamashtu Default	NAME	Gnoll œil de Lamashtu par défaut
+SPELL		Ironskin	NAME	Peau de fer
+WEAPONPROF		Flindbar	NAME	Flindbar
+KIT		Gnoll, Flind Default	NAME	Flind par défaut
+KIT		Gnoll, Gnoll Bouda Default	NAME	Gnoll bouda par défaut
+KIT		Gnoll, Gnoll Bruiser Default	NAME	Gnoll cogneur par défaut
+KIT		Gnoll, Gnoll Lieutenant Default	NAME	Gnoll lieutenant par défaut
+KIT		Gnoll, Gnoll Packlord Default	NAME	Gnoll seigneur de meute par défaut
+KIT		Gnoll, Gnoll Rageborn Default	NAME	Gnoll né de la rage par défaut
+KIT		Gnoll, Gnoll Ravager Default	NAME	Gnoll ravageur par défaut
+KIT		Gnoll, Gnoll Sergeant Default	NAME	Gnoll sergent par défaut
+KIT		Gnoll, Gnoll Warden Default	NAME	Gnoll gardien par défaut
+KIT		Goblin, Goblin Chief Default	NAME	Gobelin chef par défaut
+KIT		Goblin, Goblin Commando Default	NAME	Gobelin commando par défaut
+KIT		Goblin, Goblin Firestarter Default	NAME	Gobelin incendiaire par défaut
+KIT		Goblin, Goblin Frog-Talker Default	NAME	Gobelin parle-grenouille par défaut
+KIT		Goblin, Goblin Outrider Default	NAME	Gobelin éclaireur monté par défaut
+KIT		Goblin, Goblin Sneak Default	NAME	Gobelin sournois par défaut
+KIT		Goblin, Goblin Stickylord Default	NAME	Gobelin seigneur de la glu par défaut
+KIT		Goblin, Goblin Vulture Pilot Default	NAME	Gobelin pilote de vautour par défaut
+KIT		Goblin, Grizzled Rider Default	NAME	Gobelin cavalier grisonnant par défaut
+KIT		Goblin, Mutant Goblin Default	NAME	Gobelin mutant par défaut
+KIT		Gorthek Default	NAME	Gorthek par défaut
+KIT		Hobgoblin, Hobgoblin Battle Priest Default	NAME	Hobgobelin prêtre de bataille par défaut
+KIT		Hobgoblin, Hobgoblin Battlefield Zealot Default	NAME	Hobgobelin fanatique du champ de bataille par défaut
+KIT		Hobgoblin, Hobgoblin Bombardier Default	NAME	Hobgobelin bombardier par défaut
+KIT		Hobgoblin, Hobgoblin Commander Default	NAME	Hobgobelin commandant par défaut
+KIT		Hobgoblin, Hobgoblin Forerunner Default	NAME	Hobgobelin avant-coureur par défaut
+KIT		Hobgoblin, Hobgoblin Lieutenant Default	NAME	Hobgobelin lieutenant par défaut
+KIT		Hobgoblin, Hobgoblin Paragon Default	NAME	Hobgobelin parangon par défaut
+KIT		Hobgoblin, Hobgoblin Sergeant Default	NAME	Hobgobelin sergent par défaut
+KIT		Juggernaut Beetle Default	NAME	Scarabée juggernaut par défaut
+KIT		Kirrix Default	NAME	Kirrix par défaut
+KIT		Kobold, Kobold Battle Master Default	NAME	Kobold maître de bataille par défaut
+KIT		Kobold, Kobold Blade Default	NAME	Kobold lame par défaut
+KIT		Kobold, Kobold Bomber Default	NAME	Kobold bombardier par défaut
+KIT		Kobold, Kobold Chieftain Default	NAME	Kobold chef de tribu par défaut
+KIT		Kobold, Kobold Devilspeaker Default	NAME	Kobold parle-diable par défaut
+KIT		Kobold, Kobold Guilecaster Default	NAME	Kobold lanceur de ruses par défaut
+KIT		Kobold, Kobold Master Trapper Default	NAME	Kobold maître trappeur par défaut
+KIT		Kobold, Kobold Monster Wrangler Default	NAME	Kobold dompteur de monstres par défaut
+KIT		Kobold, Kobold Scalecaster Default	NAME	Kobold lanceur d'écailles par défaut
+KIT		Kobold, Kobold Sniper Default	NAME	Kobold tireur embusqué par défaut
+KIT		Kobold, Kobold Yapper Default	NAME	Kobold jappeur par défaut
+KIT		Kyrana Default	NAME	Kyrana par défaut
+KIT		Lizard Scion Default	NAME	Descendant lézard par défaut
+KIT		Lizardfolk, Lizard Scion Default	NAME	Descendant lézard par défaut
+KIT		Lizardfolk, Lizardfolk Berserker Default	NAME	Homme-lézard berserker par défaut
+KIT		Lizardfolk, Lizardfolk Champion Default	NAME	Homme-lézard champion par défaut
+KIT		Lizardfolk, Lizardfolk Clutch Mother Default	NAME	Homme-lézard mère de couvée par défaut
+KIT		Lizardfolk, Lizardfolk Rattler Default	NAME	Homme-lézard crotale par défaut
+KIT		Lizardfolk, Lizardfolk Sorcerer Default	NAME	Homme-lézard ensorceleur par défaut
+KIT		Lizardfolk, Lizardfolk Stalker Default	NAME	Homme-lézard traqueur par défaut
+KIT		Lizardfolk, Lizardfolk Swamp Lurker Default	NAME	Homme-lézard rôdeur des marais par défaut
+KIT		Lizardfolk, Lizardfolk Vanguard Default	NAME	Homme-lézard avant-garde par défaut
+KIT		Mutant Goblin Default	NAME	Gobelin mutant par défaut
+KIT		Ogre, Ogre Boss Default	NAME	Ogre chef par défaut
+KIT		Ogre, Ogre Brute Default	NAME	Ogre brute par défaut
+KIT		Ogre, Ogre Destroyer Default	NAME	Ogre destructeur par défaut
+KIT		Ogre, Ogre Glutton Default	NAME	Ogre glouton par défaut
+KIT		Ogre, Ogre Hunter Default	NAME	Ogre chasseur par défaut
+KIT		Ogre, Ogre King Default	NAME	Ogre roi par défaut
+KIT		Ogre, Ogre Mancatcher Default	NAME	Ogre attrape-homme par défaut
+KIT		Ogre, Ogre Priest Default	NAME	Ogre prêtre par défaut
+KIT		Ogre, Ogre Stalker Default	NAME	Ogre traqueur par défaut
+KIT		Orc, Gorthek Default	NAME	Gorthek par défaut
+KIT		Orc, Gorthek Rider Default	NAME	Cavalier de gorthek par défaut
+KIT		Orc, Orc Chieftain Default	NAME	Orque chef de tribu par défaut
+KIT		Orc, Orc Lieutenant Default	NAME	Orque lieutenant par défaut
+KIT		Orc, Orc Mystic Default	NAME	Orque mystique par défaut
+KIT		Orc, Orc Scout Default	NAME	Orque éclaireur par défaut
+KIT		Orc, Orc Sergeant Default	NAME	Orque sergent par défaut
+KIT		Orc, Orc Thug Default	NAME	Orque voyou par défaut
+KIT		Orc, Orc War Drummer Default	NAME	Orque tambour de guerre par défaut
+KIT		Orc, Orc Warlord Default	NAME	Orque seigneur de guerre par défaut
+KIT		Orc, Orc Witch Doctor Default	NAME	Orque sorcier-guérisseur par défaut
+KIT		Ratfolk, Ratfolk Bravo Default	NAME	Homme-rat bravache par défaut
+KIT		Ratfolk, Ratfolk Caravan Guard Default	NAME	Homme-rat garde de caravane par défaut
+KIT		Ratfolk, Ratfolk Chemist Default	NAME	Homme-rat chimiste par défaut
+KIT		Ratfolk, Ratfolk Elder Default	NAME	Homme-rat ancien par défaut
+KIT		Ratfolk, Ratfolk Expedition Leader Default	NAME	Homme-rat chef d'expédition par défaut
+KIT		Ratfolk, Ratfolk Sage Default	NAME	Homme-rat sage par défaut
+KIT		Ratfolk, Ratfolk Tinkerer Default	NAME	Homme-rat bricoleur par défaut
+KIT		Ratfolk, Ratfolk Troubleshooter Default	NAME	Homme-rat dépanneur par défaut
+KIT		Ratfolk, Ratfolk Warden Default	NAME	Homme-rat gardien par défaut
+KIT		Sahuagin, Sahuagin Baron Default	NAME	Sahuagin baron par défaut
+KIT		Sahuagin, Sahuagin Brute Default	NAME	Sahuagin brute par défaut
+KIT		Sahuagin, Sahuagin Champion Default	NAME	Sahuagin champion par défaut
+KIT		Sahuagin, Sahuagin Deep Racer Default	NAME	Sahuagin coureur des profondeurs par défaut
+KIT		Sahuagin, Sahuagin High Priestess Default	NAME	Sahuagin grande prêtresse par défaut
+KIT		Sahuagin, Sahuagin Infiltrator Default	NAME	Sahuagin infiltrateur par défaut
+KIT		Sahuagin, Sahuagin Lieutenant Default	NAME	Sahuagin lieutenant par défaut
+KIT		Sahuagin, Sahuagin Prince Default	NAME	Sahuagin prince par défaut
+KIT		Sahuagin, Sahuagin Scout Default	NAME	Sahuagin éclaireur par défaut
+KIT		Sahuagin, Sahuagin Shark Sentry Default	NAME	Sahuagin sentinelle des requins par défaut
+KIT		Sahuagin, Sahuagin Underpriestess Default	NAME	Sahuagin sous-prêtresse par défaut
+KIT		Serpentfolk, Serpentfolk Bone Prophet Default	NAME	Homme-serpent prophète d'os par défaut
+KIT		Serpentfolk, Serpentfolk High Priest Default	NAME	Homme-serpent grand prêtre par défaut
+KIT		Serpentfolk, Serpentfolk Hunter Default	NAME	Homme-serpent chasseur par défaut
+KIT		Serpentfolk, Serpentfolk Illusionist Default	NAME	Homme-serpent illusionniste par défaut
+KIT		Serpentfolk, Serpentfolk Spellblade Default	NAME	Homme-serpent lame-sort par défaut
+KIT		Serpentfolk, Serpentfolk Spy Default	NAME	Homme-serpent espion par défaut
+KIT		Seru Default	NAME	Seru par défaut
+KIT		Sewer Troll Default	NAME	Troll des égouts par défaut
+KIT		Slaugrak Default	NAME	Slaugrak par défaut
+KIT		Steam Hog Default	NAME	Porc à vapeur par défaut
+KIT		Troggle Default	NAME	Troggle par défaut
+KIT		Troggle, Troggle Raider Default	NAME	Troggle pillard par défaut
+KIT		Troglodyte, Troglodyte Beast-Speaker Default	NAME	Troglodyte parle-bête par défaut
+KIT		Troglodyte, Troglodyte Champion Default	NAME	Troglodyte champion par défaut
+KIT		Troglodyte, Troglodyte Chieftain Default	NAME	Troglodyte chef de tribu par défaut
+KIT		Troglodyte, Troglodyte Priest Default	NAME	Troglodyte prêtre par défaut
+KIT		Troglodyte, Troglodyte Scale-Rider Default	NAME	Troglodyte chevaucheur d'écailles par défaut
+KIT		Troglodyte, Troglodyte Skulker Default	NAME	Troglodyte rôdeur par défaut
+KIT		Troglodyte, Troglodyte Sorcerer Default	NAME	Troglodyte ensorceleur par défaut
+KIT		Troglodyte, Troglodyte Tyrant Default	NAME	Troglodyte tyran par défaut
+KIT		Troglodyte, Troglodyte Warren Guard Default	NAME	Troglodyte garde de terrier par défaut
+KIT		Troll, Sewer Troll Default	NAME	Troll des égouts par défaut
+KIT		Troll, Troll Acolyte Default	NAME	Troll acolyte par défaut
+KIT		Troll, Troll Berserker Default	NAME	Troll berserker par défaut
+KIT		Troll, Troll Brute Default	NAME	Troll brute par défaut
+KIT		Troll, Troll Elder Matron Default	NAME	Troll matrone ancienne par défaut
+KIT		Troll, Troll Fury Default	NAME	Troll furie par défaut
+KIT		Troll, Troll Monarch Default	NAME	Troll monarque par défaut
+KIT		Troll, Troll Render Default	NAME	Troll déchiqueteur par défaut
+KIT		Troll, Troll Ripper Default	NAME	Troll éventreur par défaut
+KIT		Troll, Troll Warden Default	NAME	Troll gardien par défaut
+KIT		Vampire Servant, Coffin Guard Default	NAME	Garde du cercueil par défaut
+KIT		Vampire Servant, Weird Butler Default	NAME	Majordome étrange par défaut
+KIT		Vampire, Enlightened Vampire Default	NAME	Vampire illuminé par défaut
+KIT		Vampire, Vampire Lord Default	NAME	Vampire seigneur par défaut
+KIT		Vampire, Vampire Savage Default	NAME	Vampire sauvage par défaut
+KIT		Vampire, Vampire Seducer Default	NAME	Vampire séducteur par défaut
+KIT		Vampire, Vampire Warrior Default	NAME	Vampire guerrier par défaut
+KIT		Yzobu Default	NAME	Yzobu par défaut
+RACE		 118	NAME	 118
+RACE		 13	NAME	 13
+RACE		 18	NAME	 18
+RACE		 26	NAME	 26
+RACE		 278	NAME	 278
+RACE		 295	NAME	 295
+RACE		 32	NAME	 32
+RACE		 42	NAME	 42
+RACE		 65	NAME	 65
+RACE		 9	NAME	 9
+RACE		Abrakarn Viper	NAME	Vipère abrakarn
+RACE		Bat (Sootwing)	NAME	Chauve-souris aile de suie
+RACE		Bat, Sootwing Bat	NAME	Chauve-souris aile de suie
+RACE		Beetle, Dark Spitter Beetle	NAME	Scarabée cracheur noir
+RACE		Beetle, Juggernaut Beetle	NAME	Scarabée juggernaut
+RACE		Boggard, Boggard Abyssal Warrior	NAME	Bourbiérin guerrier abyssal
+RACE		Boggard, Boggard Brute	NAME	Bourbiérin brute
+RACE		Boggard, Boggard Champion	NAME	Bourbiérin champion
+RACE		Boggard, Boggard Farcroaker	NAME	Bourbiérin coasse-loin
+RACE		Boggard, Boggard Hunter	NAME	Bourbiérin chasseur
+RACE		Boggard, Boggard Priest-King	NAME	Bourbiérin roi-prêtre
+RACE		Boggard, Boggard Prophet	NAME	Bourbiérin prophète
+RACE		Boggard, Boggard Savage	NAME	Bourbiérin sauvage
+RACE		Boggard, Boggard Scarred One	NAME	Bourbiérin balafré
+RACE		Boggard, Boggard Stalker	NAME	Bourbiérin traqueur
+RACE		Boggard, Boggard Swampseer	NAME	Bourbiérin voyant des marais
+RACE		Bugbear, Bugbear Ambusher	NAME	Gobelours embusqué
+RACE		Bugbear, Bugbear Bloodmage	NAME	Gobelours mage de sang
+RACE		Bugbear, Bugbear Cultist	NAME	Gobelours cultiste
+RACE		Bugbear, Bugbear Flesh Glutton	NAME	Gobelours glouton de chair
+RACE		Bugbear, Bugbear Gnasher	NAME	Gobelours grinceur
+RACE		Bugbear, Bugbear Lurker	NAME	Gobelours rôdeur
+RACE		Bugbear, Bugbear Shadow Sneak	NAME	Gobelours furtif des ombres
+RACE		Bugbear, Bugbear Stalker	NAME	Gobelours traqueur
+RACE		Bugbear, Bugbear Tyrant	NAME	Gobelours tyran
+RACE		Companion (Cave Salamander)	NAME	Compagnon (salamandre des cavernes)
+RACE		Companion (Gorthek)	NAME	Compagnon (gorthek)
+RACE		Companion (Python (Riding))	NAME	Compagnon (python (de selle))
+RACE		Companion (Rat (Riding))	NAME	Compagnon (rat (de selle))
+RACE		Companion (Yzobu)	NAME	Compagnon (yzobu)
+RACE		Dark Spitter Beetle	NAME	Scarabée cracheur noir
+RACE		Drow, Drow Demonic Champion	NAME	Drow champion démoniaque
+RACE		Drow, Drow House Captain	NAME	Drow capitaine de maison
+RACE		Drow, Drow House Guard	NAME	Drow garde de maison
+RACE		Drow, Drow Master Scout	NAME	Drow maître éclaireur
+RACE		Drow, Drow Matron	NAME	Drow matrone
+RACE		Drow, Drow Poisoner	NAME	Drow empoisonneur
+RACE		Drow, Drow Priest	NAME	Drow prêtre
+RACE		Drow, Drow Scout	NAME	Drow éclaireur
+RACE		Duergar, Duergar Anvil	NAME	Duergar enclume
+RACE		Duergar, Duergar Bombardier	NAME	Duergar bombardier
+RACE		Duergar, Duergar Captain	NAME	Duergar capitaine
+RACE		Duergar, Duergar Hammer	NAME	Duergar marteau
+RACE		Duergar, Duergar High Priest	NAME	Duergar grand prêtre
+RACE		Duergar, Duergar Lieutenant	NAME	Duergar lieutenant
+RACE		Duergar, Duergar Sergeant	NAME	Duergar sergent
+RACE		Duergar, Duergar Sharpshooter	NAME	Duergar tireur d'élite
+RACE		Duergar, Duergar Slaver	NAME	Duergar esclavagiste
+RACE		Duergar, Duergar Taskmaster	NAME	Duergar maître d'œuvre
+RACE		Familiar (Seru)	NAME	Familier (seru)
+RACE		Familiar (Sootwing Bat)	NAME	Familier (chauve-souris aile de suie)
+RACE		Feeder In The Depths	NAME	Dévoreur des profondeurs
+RACE		Frightful Haunter	NAME	Hanteur effrayant
+RACE		Ghoul Hound	NAME	Chien goule
+RACE		Ghoul, Ancient Gravedigger	NAME	Goule fossoyeuse ancienne
+RACE		Ghoul, Ghoul Commander	NAME	Goule commandante
+RACE		Ghoul, Ghoul Creeper	NAME	Goule rampante
+RACE		Ghoul, Ghoul Huntsmaster	NAME	Goule maître-chasseur
+RACE		Ghoul, Ghoul Monarch	NAME	Goule monarque
+RACE		Ghoul, Ghoul Stalker	NAME	Goule traqueuse
+RACE		Ghoul, Masked Murderer	NAME	Goule meurtrière masquée
+RACE		Giant (Fire), Fire Giant Doombringer	NAME	Géant du feu porte-malheur
+RACE		Giant (Fire), Fire Giant Glaive	NAME	Géant du feu à la glaive
+RACE		Giant (Fire), Fire Giant King	NAME	Géant du feu roi
+RACE		Giant (Fire), Fire Giant Lieutenant	NAME	Géant du feu lieutenant
+RACE		Giant (Fire), Fire Giant Magmablade	NAME	Géant du feu lame de magma
+RACE		Giant (Fire), Fire Giant Queen	NAME	Géante du feu reine
+RACE		Giant (Fire), Fire Giant Strongarm	NAME	Géant du feu gros-bras
+RACE		Giant (Frost), Frost Giant Battle Priest	NAME	Géant du givre prêtre de bataille
+RACE		Giant (Frost), Frost Giant Elite Scout	NAME	Géant du givre éclaireur d'élite
+RACE		Giant (Frost), Frost Giant Houndmaster	NAME	Géant du givre maître-chien
+RACE		Giant (Frost), Frost Giant Hunter	NAME	Géant du givre chasseur
+RACE		Giant (Frost), Frost Giant Ice Mage	NAME	Géant du givre mage de glace
+RACE		Giant (Frost), Frost Giant Jarl	NAME	Géant du givre jarl
+RACE		Giant (Frost), Frost Giant Raider	NAME	Géant du givre pillard
+RACE		Gnoll, Chosen of Lamashtu	NAME	Gnoll élu de Lamashtu
+RACE		Gnoll, Eye of Lamashtu	NAME	Gnoll œil de Lamashtu
+RACE		Gnoll, Flind	NAME	Flind
+RACE		Gnoll, Gnoll Bouda	NAME	Gnoll bouda
+RACE		Gnoll, Gnoll Bruiser	NAME	Gnoll cogneur
+RACE		Gnoll, Gnoll Lieutenant	NAME	Gnoll lieutenant
+RACE		Gnoll, Gnoll Packlord	NAME	Gnoll seigneur de meute
+RACE		Gnoll, Gnoll Rageborn	NAME	Gnoll né de la rage
+RACE		Gnoll, Gnoll Ravager	NAME	Gnoll ravageur
+RACE		Gnoll, Gnoll Sergeant	NAME	Gnoll sergent
+RACE		Gnoll, Gnoll Warden	NAME	Gnoll gardien
+RACE		Goblin, Goblin Chief	NAME	Gobelin chef
+RACE		Goblin, Goblin Commando	NAME	Gobelin commando
+RACE		Goblin, Goblin Firestarter	NAME	Gobelin incendiaire
+RACE		Goblin, Goblin Frog-Talker	NAME	Gobelin parle-grenouille
+RACE		Goblin, Goblin Outrider	NAME	Gobelin éclaireur monté
+RACE		Goblin, Goblin Sneak	NAME	Gobelin sournois
+RACE		Goblin, Goblin Stickylord	NAME	Gobelin seigneur de la glu
+RACE		Goblin, Goblin Vulture Pilot	NAME	Gobelin pilote de vautour
+RACE		Goblin, Grizzled Rider	NAME	Gobelin cavalier grisonnant
+RACE		Goblin, Mutant Goblin	NAME	Gobelin mutant
+RACE		Gorthek	NAME	Gorthek
+RACE		Hobgoblin, Hobgoblin Battle Priest	NAME	Hobgobelin prêtre de bataille
+RACE		Hobgoblin, Hobgoblin Battlefield Zealot	NAME	Hobgobelin fanatique du champ de bataille
+RACE		Hobgoblin, Hobgoblin Bombardier	NAME	Hobgobelin bombardier
+RACE		Hobgoblin, Hobgoblin Commander	NAME	Hobgobelin commandant
+RACE		Hobgoblin, Hobgoblin Forerunner	NAME	Hobgobelin avant-coureur
+RACE		Hobgoblin, Hobgoblin Lieutenant	NAME	Hobgobelin lieutenant
+RACE		Hobgoblin, Hobgoblin Paragon	NAME	Hobgobelin parangon
+RACE		Hobgoblin, Hobgoblin Sergeant	NAME	Hobgobelin sergent
+RACE		Juggernaut Beetle	NAME	Scarabée juggernaut
+RACE		Kirrix	NAME	Kirrix
+RACE		Kobold, Kobold Battle Master	NAME	Kobold maître de bataille
+RACE		Kobold, Kobold Blade	NAME	Kobold lame
+RACE		Kobold, Kobold Bomber	NAME	Kobold bombardier
+RACE		Kobold, Kobold Chieftain	NAME	Kobold chef de tribu
+RACE		Kobold, Kobold Devilspeaker	NAME	Kobold parle-diable
+RACE		Kobold, Kobold Guilecaster	NAME	Kobold lanceur de ruses
+RACE		Kobold, Kobold Master Trapper	NAME	Kobold maître trappeur
+RACE		Kobold, Kobold Monster Wrangler	NAME	Kobold dompteur de monstres
+RACE		Kobold, Kobold Scalecaster	NAME	Kobold lanceur d'écailles
+RACE		Kobold, Kobold Sniper	NAME	Kobold tireur embusqué
+RACE		Kobold, Kobold Yapper	NAME	Kobold jappeur
+RACE		Kyrana	NAME	Kyrana
+RACE		Lizard Scion	NAME	Descendant lézard
+RACE		Lizardfolk, Lizard Scion	NAME	Descendant lézard
+RACE		Lizardfolk, Lizardfolk Berserker	NAME	Homme-lézard berserker
+RACE		Lizardfolk, Lizardfolk Champion	NAME	Homme-lézard champion
+RACE		Lizardfolk, Lizardfolk Clutch Mother	NAME	Homme-lézard mère de couvée
+RACE		Lizardfolk, Lizardfolk Rattler	NAME	Homme-lézard crotale
+RACE		Lizardfolk, Lizardfolk Sorcerer	NAME	Homme-lézard ensorceleur
+RACE		Lizardfolk, Lizardfolk Stalker	NAME	Homme-lézard traqueur
+RACE		Lizardfolk, Lizardfolk Swamp Lurker	NAME	Homme-lézard rôdeur des marais
+RACE		Lizardfolk, Lizardfolk Vanguard	NAME	Homme-lézard avant-garde
+RACE		Mutant Goblin	NAME	Gobelin mutant
+RACE		Ogre, Ogre Boss	NAME	Ogre chef
+RACE		Ogre, Ogre Brute	NAME	Ogre brute
+RACE		Ogre, Ogre Destroyer	NAME	Ogre destructeur
+RACE		Ogre, Ogre Glutton	NAME	Ogre glouton
+RACE		Ogre, Ogre Hunter	NAME	Ogre chasseur
+RACE		Ogre, Ogre King	NAME	Ogre roi
+RACE		Ogre, Ogre Mancatcher	NAME	Ogre attrape-homme
+RACE		Ogre, Ogre Priest	NAME	Ogre prêtre
+RACE		Ogre, Ogre Stalker	NAME	Ogre traqueur
+RACE		Orc, Gorthek	NAME	Gorthek
+RACE		Orc, Gorthek Rider	NAME	Cavalier de gorthek
+RACE		Orc, Orc Chieftain	NAME	Orque chef de tribu
+RACE		Orc, Orc Lieutenant	NAME	Orque lieutenant
+RACE		Orc, Orc Mystic	NAME	Orque mystique
+RACE		Orc, Orc Scout	NAME	Orque éclaireur
+RACE		Orc, Orc Sergeant	NAME	Orque sergent
+RACE		Orc, Orc Thug	NAME	Orque voyou
+RACE		Orc, Orc War Drummer	NAME	Orque tambour de guerre
+RACE		Orc, Orc Warlord	NAME	Orque seigneur de guerre
+RACE		Orc, Orc Witch Doctor	NAME	Orque sorcier-guérisseur
+RACE		Ratfolk, Ratfolk Bravo	NAME	Homme-rat bravache
+RACE		Ratfolk, Ratfolk Caravan Guard	NAME	Homme-rat garde de caravane
+RACE		Ratfolk, Ratfolk Chemist	NAME	Homme-rat chimiste
+RACE		Ratfolk, Ratfolk Elder	NAME	Homme-rat ancien
+RACE		Ratfolk, Ratfolk Expedition Leader	NAME	Homme-rat chef d'expédition
+RACE		Ratfolk, Ratfolk Sage	NAME	Homme-rat sage
+RACE		Ratfolk, Ratfolk Tinkerer	NAME	Homme-rat bricoleur
+RACE		Ratfolk, Ratfolk Troubleshooter	NAME	Homme-rat dépanneur
+RACE		Ratfolk, Ratfolk Warden	NAME	Homme-rat gardien
+RACE		Sahuagin, Sahuagin Baron	NAME	Sahuagin baron
+RACE		Sahuagin, Sahuagin Brute	NAME	Sahuagin brute
+RACE		Sahuagin, Sahuagin Champion	NAME	Sahuagin champion
+RACE		Sahuagin, Sahuagin Deep Racer	NAME	Sahuagin coureur des profondeurs
+RACE		Sahuagin, Sahuagin High Priestess	NAME	Sahuagin grande prêtresse
+RACE		Sahuagin, Sahuagin Infiltrator	NAME	Sahuagin infiltrateur
+RACE		Sahuagin, Sahuagin Lieutenant	NAME	Sahuagin lieutenant
+RACE		Sahuagin, Sahuagin Prince	NAME	Sahuagin prince
+RACE		Sahuagin, Sahuagin Scout	NAME	Sahuagin éclaireur
+RACE		Sahuagin, Sahuagin Shark Sentry	NAME	Sahuagin sentinelle des requins
+RACE		Sahuagin, Sahuagin Underpriestess	NAME	Sahuagin sous-prêtresse
+RACE		Serpentfolk, Serpentfolk Bone Prophet	NAME	Homme-serpent prophète d'os
+RACE		Serpentfolk, Serpentfolk High Priest	NAME	Homme-serpent grand prêtre
+RACE		Serpentfolk, Serpentfolk Hunter	NAME	Homme-serpent chasseur
+RACE		Serpentfolk, Serpentfolk Illusionist	NAME	Homme-serpent illusionniste
+RACE		Serpentfolk, Serpentfolk Spellblade	NAME	Homme-serpent lame-sort
+RACE		Serpentfolk, Serpentfolk Spy	NAME	Homme-serpent espion
+RACE		Seru	NAME	Seru
+RACE		Sewer Troll	NAME	Troll des égouts
+RACE		Slaugrak	NAME	Slaugrak
+RACE		Steam Hog	NAME	Porc à vapeur
+RACE		Troggle	NAME	Troggle
+RACE		Troggle, Troggle Raider	NAME	Troggle pillard
+RACE		Troglodyte, Troglodyte Beast-Speaker	NAME	Troglodyte parle-bête
+RACE		Troglodyte, Troglodyte Champion	NAME	Troglodyte champion
+RACE		Troglodyte, Troglodyte Chieftain	NAME	Troglodyte chef de tribu
+RACE		Troglodyte, Troglodyte Priest	NAME	Troglodyte prêtre
+RACE		Troglodyte, Troglodyte Scale-Rider	NAME	Troglodyte chevaucheur d'écailles
+RACE		Troglodyte, Troglodyte Skulker	NAME	Troglodyte rôdeur
+RACE		Troglodyte, Troglodyte Sorcerer	NAME	Troglodyte ensorceleur
+RACE		Troglodyte, Troglodyte Tyrant	NAME	Troglodyte tyran
+RACE		Troglodyte, Troglodyte Warren Guard	NAME	Troglodyte garde de terrier
+RACE		Troll, Sewer Troll	NAME	Troll des égouts
+RACE		Troll, Troll Acolyte	NAME	Troll acolyte
+RACE		Troll, Troll Berserker	NAME	Troll berserker
+RACE		Troll, Troll Brute	NAME	Troll brute
+RACE		Troll, Troll Elder Matron	NAME	Troll matrone ancienne
+RACE		Troll, Troll Fury	NAME	Troll furie
+RACE		Troll, Troll Monarch	NAME	Troll monarque
+RACE		Troll, Troll Render	NAME	Troll déchiqueteur
+RACE		Troll, Troll Ripper	NAME	Troll éventreur
+RACE		Troll, Troll Warden	NAME	Troll gardien
+RACE		Vampire Servant, Coffin Guard	NAME	Garde du cercueil
+RACE		Vampire Servant, Weird Butler	NAME	Majordome étrange
+RACE		Vampire, Enlightened Vampire	NAME	Vampire illuminé
+RACE		Vampire, Vampire Lord	NAME	Vampire seigneur
+RACE		Vampire, Vampire Savage	NAME	Vampire sauvage
+RACE		Vampire, Vampire Seducer	NAME	Vampire séducteur
+RACE		Vampire, Vampire Warrior	NAME	Vampire guerrier
+RACE		Yzobu	NAME	Yzobu
+SPELL		Amplify Stench	NAME	Amplifier la puanteur
+SPELL		Aura of Cannibalism	NAME	Aura de cannibalisme
+SPELL		Blood in the Water	NAME	Du sang dans l'eau
+SPELL		Bouncy Body	NAME	Corps rebondissant
+SPELL		Dust Ward	NAME	Protection contre la poussière
+SPELL		Endothermic Touch	NAME	Contact endothermique
+SPELL		Fleshy Facade	NAME	Façade de chair
+SPELL		Gift of the Deep	NAME	Don des profondeurs
+SPELL		Hungry Earth	NAME	Terre affamée
+SPELL		Isolate	NAME	Isoler
+SPELL		Magic Boulder	NAME	Rocher magique
+SPELL		Mark of the Reptile God	NAME	Marque du dieu reptile
+SPELL		Mud Buddy	NAME	Copain de boue
+SPELL		Scale Spikes	NAME	Écailles hérissées
+SPELL		Scale Spikes (Greater)	NAME	Écailles hérissées (supérieur)
+SPELL		Spellsteal	NAME	Vol de sort
+SPELL		Sundered Serpent Coil	NAME	Anneau du Serpent brisé
+SPELL		Swarm of Fangs	NAME	Nuée de crocs
+SPELL		Transfer Regeneration	NAME	Transfert de régénération
+SPELL		Trial of Fire and Acid	NAME	Épreuve du feu et de l'acide
+WEAPONPROF		Slaver's Crossbow (Heavy)	NAME	Arbalète d'esclavagiste (lourde)
+WEAPONPROF		Slaver's Crossbow (Light)	NAME	Arbalète d'esclavagiste (légère)
+SPELL		Air Breathing	DESC	Les créatures transmutées peuvent respirer librement l'air. Répartissez la durée équitablement entre toutes les créatures touchées. Le sort ne rend pas les créatures incapables de respirer sous l'eau.
+SPELL		Amplify Stench	DESC	Vous amplifiez votre aptitude spéciale puanteur : son DD augmente de 2, et les créatures qui ratent leur jet de sauvegarde deviennent fiévreuses au lieu de nauséeuses. Si votre puanteur rend normalement les créatures fiévreuses (comme l'aptitude puanteur immonde), son rayon double à la place. Ce sort n'a aucun effet si vous ne possédez pas l'aptitude spéciale puanteur.
+SPELL		Blood in the Water	DESC	Dans le cadre de l'incantation, vous devez vous infliger 1 point de dégâts perforants ou tranchants pour faire couler votre sang, ce qui vous inflige 1 point de dégâts de saignement. Pendant la durée du sort, tous les requins, dévoreurs des profondeurs et créatures dotées de l'aptitude frénésie sanguinaire dans la zone obtiennent un bonus de +2 en Force et en Constitution et subissent un malus de -2 à la CA. Cela compte comme une frénésie sanguinaire pour les autres dons et effets, et ne se cumule pas avec une véritable frénésie sanguinaire. Si vous cessez de saigner, le sort prend fin immédiatement.
+SPELL		Control Vermin	DESC	Vous et un nombre d'alliés inférieur ou égal à votre niveau de lanceur de sorts, désignés lors de l'incantation, pouvez utiliser les tests de Dressage et d'Équitation pour influencer ou contrôler la vermine ciblée comme s'il s'agissait d'animaux dotés d'une intelligence animale.
+SPELL		Gift of the Deep	DESC	Vous donnez aux cibles l'apparence et de nombreuses aptitudes des mutants sahuagins, avec les effets décrits ci-dessous. Choisissez un avantage pour toutes les cibles du sort. Ce sort n'a aucun effet sur les sahuagins déjà mutants ou déjà sous l'effet de don des profondeurs. \n[Quatre bras] Le sahuagin se voit pousser une paire de bras supplémentaire, qui peut porter des attaques de griffe (1d4 points de dégâts), manier des armes ou tenir des objets. Il obtient les effets des dons Attaques multiples et Combat à plusieurs armes. \n[Molenti] Les traits du sahuagin changent pour ressembler à ceux d'un elfe aquatique. Il perd sa sensibilité à la lumière ainsi que ses attaques de griffe et de morsure. Il obtient un bonus d'altération de +4 en Dextérité et en Charisme, et un bonus de circonstances de +10 aux tests de Déguisement pour passer pour un elfe aquatique. \n[Préhistorique] Le sahuagin grandit, comme agrandissement. Il obtient aussi un bonus d'altération de +2 à son armure naturelle. \n[Sang de requin] La queue du sahuagin s'allonge et fusionne avec ses jambes. Sa bouche s'élargit, ce qui augmente les dégâts de sa morsure d'une catégorie de taille (1d6 pour un sahuagin typique). Sa vitesse de nage augmente de 6 m, mais sa vitesse au sol tombe à 1,5 m. Il ne peut pas être renversé par un croc-en-jambe. \n[Aveugle] Le sahuagin est aveuglé, mais obtient les effets du don Combat en aveugle et perception aveugle dans un rayon de 27 m. \n[Épineux] Des épines poussent sur les écailles du sahuagin. Toute créature qui réussit à l'agripper, est agrippée par lui ou le frappe avec une attaque à mains nues ou une arme naturelle subit 1d4 points de dégâts perforants. Le sahuagin obtient aussi les effets du don Science de la lutte.
+SPELL		Ironskin	DESC	Votre peau durcit et prend la couleur et la texture du fer brut. Vous obtenez un bonus d'altération de +4 à votre bonus d'armure naturelle existant (si vous n'en avez pas, votre bonus d'armure naturelle effectif est considéré comme étant de +0). Ce bonus augmente de 1 par tranche de 4 niveaux de lanceur de sorts au-delà du 3e, jusqu'à un maximum de +7 au niveau 15. Sous l'effet de ce sort, si un adversaire confirme un coup critique ou une attaque sournoise contre vous avec une arme physique (pas un sort ni un effet magique), vous pouvez révoquer le sort pour annuler le critique ou l'attaque sournoise et la traiter comme un coup normal. Révoquer le sort de cette façon ne demande pas d'action, mais vous devez être conscient et percevoir l'attaque.
+SPELL		Magic Boulder	DESC	Ce sort fonctionne comme pierre magique, mais vous transmutez jusqu'à trois rochers (de deux catégories de taille de moins que vous au plus) pour l'aptitude lancer de rochers ou comme munitions d'engin de siège. Les dégâts du rocher augmentent d'un cran, et il obtient un bonus d'altération de +1 aux jets d'attaque et de dégâts.
+SPELL		Mark of the Reptile God	DESC	Si vous réussissez une attaque de contact à distance, vous gravez au fer l'empreinte de votre main dans la chair d'une créature, ce qui lui inflige 1d6 points de dégâts d'acide. La marque peut être placée sur n'importe quelle partie exposée, généralement la tête ou l'avant-bras. La chair autour de l'empreinte devient rugueuse et écailleuse, comme la peau d'un lézard. Elle brille aussi d'une lueur verte (éclairant comme une torche) lorsqu'elle se trouve à 18 m ou moins de vous. Tant que l'empreinte brille, la cible subit un malus de -2 à la CA contre vos attaques et aux jets de sauvegarde contre vos sorts et pouvoirs magiques. De plus, chaque jour où la cible reste maudite, sa chair se couvre davantage d'écailles reptiliennes. Elle doit réussir un jet de Vigueur chaque jour ou subir 1d4 points d'affaiblissement de Charisme, dont 1 point de diminution de Charisme. Une créature dont le Charisme tombe à 0 sous cet effet est aussitôt transformée en petit lézard des cavernes inoffensif, comme métamorphose funeste. Comme pour malédiction, la malédiction de ce sort ne peut pas être dissipée, mais elle peut être levée par délivrance, souhait limité, miracle, délivrance des malédictions ou souhait.
+SPELL		Transfer Regeneration	DESC	Vous transmettez vos capacités de régénération à la cible. Votre régénération cesse de fonctionner pendant la durée du sort, et la cible obtient votre régénération. Par exemple, si vous avez régénération 5 (acide ou feu), votre cible obtient régénération 5 (acide ou feu). Cette régénération ne se cumule pas avec celle que la créature possède déjà, y compris celle d'autres incantations de ce sort. Ce sort n'a aucun effet si vous n'avez pas l'aptitude régénération ou si elle ne fonctionne pas au moment de l'incantation.
+SPELL		Trial of Fire and Acid	DESC	La créature ciblée est couverte d'acide brûlant qui inflige 1d6 points de dégâts d'acide et 1d6 points de dégâts de feu par round. Elle peut faire un jet de Vigueur à chaque round pour réduire les dégâts de moitié. Asperger la cible d'eau met fin à l'effet (acide et feu), mais se rouler par terre n'éteint pas le feu et n'affecte pas l'acide.
+SPELL		Aura of Cannibalism	DESC	Vous émettez une aura qui sape la force de vos semblables et vous transmet leur énergie. À chaque round, toute créature qui commence son tour dans la zone et partage votre type de créature et au moins un de vos sous-types (le cas échéant) doit réussir un jet de Vigueur ou subir 1d4 points de dégâts. Vous obtenez des points de vie temporaires égaux aux dégâts infligés par ce sort (maximum 10 + votre niveau de lanceur de sorts), qui disparaissent à la fin du sort. Tant que vous avez au moins 5 points de vie temporaires sous l'effet du sort, vous obtenez un bonus d'aptitude de +1 aux jets d'attaque, aux jets de sauvegarde et aux tests de compétence ; avec 15 ou plus, ce bonus passe à +2.
+SPELL		Bouncy Body	DESC	La chair de la cible devient souple et caoutchouteuse. Elle obtient un bonus de circonstances de +2 aux tests de manœuvre offensive de lutte et d'Évasion, ainsi qu'à son DMD contre la lutte. Chaque fois qu'elle devrait subir des dégâts de chute, elle compte la chute comme si elle était plus courte de 6 m (minimum 0). De plus, si elle tombe sur une surface dure, elle peut faire un test d'Acrobaties (DD = hauteur de la chute) pour tenter de rebondir ; en cas de réussite, elle rebondit de la moitié de la hauteur de sa chute.
+SPELL		Dust Ward	DESC	Vous protégez un objet magique contre les autres créatures qui tentent d'apprendre à l'utiliser ou de le copier. À l'incantation, vous désignez un type, un sous-type de créature ou un individu précis. Si l'objet est porté ou transporté pendant au moins 1 heure d'affilée par une créature qui ne correspond pas à cette désignation, la protection de poussière le désintègre en une poussière grise sans valeur. Il en va de même si la créature tente de l'étudier pour en apprendre les propriétés ou la fabrication magique (miracle ou souhait lancé sur la poussière grise peut toutefois révéler ces informations). La destruction de l'objet ne blesse pas la créature qui le porte (mais peut la mettre en danger, si par exemple une corde magique servait à franchir un gouffre à ce moment). Si la créature fautive porte l'objet moins d'une heure puis le passe à une autre, le décompte recommence. Le sort ne peut pas affecter un objet magique dont le niveau de lanceur dépasse la moitié du vôtre.
+SPELL		Endothermic Touch	DESC	Ce sort ralentit brièvement le métabolisme et les autres fonctions corporelles d'une créature. La cible est chancelante et se déplace à la moitié de sa vitesse normale (arrondie au multiple de 1,5 m inférieur), mais peut retenir son souffle deux fois plus longtemps que d'habitude.
+SPELL		Fleshy Facade	DESC	La chair de la cible s'arrondit et prend une couleur saine et naturelle, ce qui lui donne l'apparence d'une créature vivante du type qu'elle avait de son vivant (le cas échéant). Les créatures qui lancent des sorts comme détection des morts-vivants doivent réussir un jet de sauvegarde (au DD du sort) pour détecter sa présence, et si elle est intelligente, elle obtient un bonus de +10 aux tests de Déguisement pour paraître vivante ou récemment morte. Si le mort-vivant présente des traits différents de la créature vivante qu'il évoque le plus (comme les dents et griffes allongées d'une goule), ces traits rétrécissent et s'atténuent, et il inflige des dégâts comme s'il était d'une catégorie de taille de moins. Ce sort n'a aucun effet sur les créatures squelettiques ou autrement dépourvues de chair.
+SPELL		Hungry Earth	DESC	Le sol tente d'attirer les créatures sous sa surface, comme affamé de chair mortelle. \nAussitôt, puis au début de chacun de vos tours, chaque créature qui touche le sol dans la zone subit une manœuvre offensive de lutte, de même que les créatures qui entrent dans la zone. Le sol ne provoque pas d'attaque d'opportunité. Son BMO est égal à 5 + votre niveau de lanceur de sorts ; faites un seul test par round et appliquez le résultat à toutes les créatures de la zone. \nChaque fois que le sol réussit un test de lutte, il entraîne la créature plus bas, jusqu'à la faire passer sous sa surface. Au premier succès, la cible est agrippée ; elle ne peut se déplacer qu'après s'être dégagée (test de manœuvre offensive ou d'Évasion DD 20). Le sol obtient un bonus de +5 aux tests de lutte contre les adversaires qu'il agrippe déjà. Au deuxième succès, la créature est tirée au sol et tombe à terre. Au troisième, elle est entièrement ensevelie et doit retenir son souffle ou commencer à suffoquer. \nUne créature ensevelie ne peut tenter de s'échapper que si l'effet prend fin ou si elle se dégage de la lutte ; le DD pour se dégager passe à 25 pour une créature tirée sous terre.
+SPELL		Ice Slick	DESC	Vous créez une déflagration de froid intense qui couvre toutes les surfaces solides de la zone d'une fine couche de glace. Toute créature dans la zone lors de l'incantation subit 1d6+(min(10,CASTERLEVEL)) points de dégâts de froid et tombe à terre ; celles qui réussissent un jet de Réflexes ne subissent que la moitié des dégâts et ne tombent pas. La résistance à la magie s'applique à cet effet initial. Une créature peut marcher sur la glace à la moitié de sa vitesse en réussissant un test d'Acrobaties DD 10 ; si elle échoue de 4 ou moins, elle ne peut pas bouger ce round (et doit réussir un jet de Réflexes pour ne pas tomber) ; si elle échoue de 5 ou plus, elle tombe (voir la compétence Acrobaties, page 87 du Manuel des Joueurs). Les créatures qui ne bougent pas pendant leur tour n'ont pas à faire ce test. Un carré de glace de 1,5 m a une solidité de 0 et 3 points de résistance. La glace est un effet instantané, mais persiste comme glace non magique : en climat tempéré, elle dure (CASTERLEVEL) minutes, deux fois moins en climat tropical, et indéfiniment dans les environnements froids où glace et neige ne fondent pas.
+SPELL		Isolate	DESC	Vous rendez la cible invisible et silencieuse, mais seulement pour ses alliés. Toute créature dont l'attitude envers elle est indifférente ou pire, et toute créature qui lui veut du mal, la voit normalement. La cible se voit et s'entend, peut lancer des sorts à composante verbale et utiliser normalement des mots de commande, mais tout effet qui exige que des alliés la voient ou l'entendent ne fonctionne pas. Un allié capable de voir les créatures invisibles la voit et l'entend. Si la cible réussit son jet de sauvegarde, la durée du sort est réduite à 1 round.
+SPELL		Mud Buddy	DESC	Vous créez un serviteur de boue de taille P qui obéit à vos ordres. Il a une CA de 12, 10 points de vie, une Force de 5 et une vitesse de 9 m. Il peut accomplir toutes les tâches d'un serviteur invisible, plus les tâches similaires que sa Force permet (il peut soulever jusqu'à 25 kg), mais au lieu de marcher sur l'eau, il obtient une vitesse de nage de 9 m. Vous pouvez lui ordonner de se déplacer de 1,5 m et de faire un croc-en-jambe à un adversaire (BMO = votre niveau de lanceur de sorts + le modificateur de votre caractéristique d'incantation) ; une fois la tentative résolue, le sort prend fin. Le serviteur redevient alors une flaque de terre mouillée.
+SPELL		Scale Spikes	DESC	Les écailles de la cible se hérissent de pointes acérées, qui agissent comme des pointes d'armure +1. La cible est automatiquement considérée comme formée à leur maniement.
+SPELL		Scale Spikes (Greater)	DESC	Ce sort fonctionne comme écailles à pointes, mais les pointes ont un bonus d'altération aux jets d'attaque et de dégâts de +(min(5,CASTERLEVEL/4)). Ce bonus ne leur permet d'ignorer que la réduction de dégâts surmontée par la magie.
+SPELL		Spellsteal	DESC	Vous créez une déflagration d'énergie discordante qui perturbe la magie disponible de la cible et vous en transmet la connaissance. Si elle prépare ses sorts, elle doit choisir l'un de ses sorts préparés de niveau 3, aussitôt perdu ; à défaut, un sort de niveau 2, puis de niveau 1 ; le sort n'a aucun effet si elle n'en a préparé d'aucun de ces niveaux. Si ce sort figure sur votre liste, vous pouvez le lancer (à votre niveau de lanceur) à votre tour suivant. Si elle lance ses sorts spontanément, elle perd l'un de ses emplacements de niveau 3 disponibles (ou de niveau inférieur, comme ci-dessus) ; choisissez au hasard l'un de ses sorts connus de ce niveau : s'il figure sur votre liste, vous pouvez le lancer à votre tour suivant. Vous devez fournir le focaliseur ou les composantes matérielles du sort volé. Si la cible a plusieurs classes de lanceur de sorts, choisissez-en une au hasard. Ce sort n'a aucun effet sur les pouvoirs magiques. Tout sort ou emplacement perdu est traité comme si le lanceur avait raté un test de concentration : il est gaspillé sans effet, mais récupéré normalement lors de la prochaine préparation ou récupération des emplacements.
+SPELL		Sundered Serpent Coil	DESC	Ce sort fonctionne comme tentacules noirs, mais il crée un serpent décapité de taille G qui jaillit du sol et agrippe une créature de votre choix à son allonge de 1,5 m. Par une action simple, vous pouvez lui ordonner de lâcher sa cible et d'en attaquer une autre.
+SPELL		Swarm of Fangs	DESC	Vous convoquez une nuée de milliers de dents animées et volantes dans un cube de 3 m de côté, qui attaquent toutes les créatures de sa zone. Vous pouvez la faire apparaître dans une zone occupée par d'autres créatures et la déplacer de 12 m par round par une action de mouvement. Si vous ne la déplacez pas, elle se déplace automatiquement de 12 m pour envelopper la créature la plus proche (vous compris) si ce n'est pas déjà fait. Les créatures prises dans la nuée subissent 2d6 points de dégâts, à son apparition puis à la fin de son déplacement chaque round.
+EQUIPMENT		Bloodfeast Shield	DESC	Vous attachez le bouclier à votre avant-bras et le tenez par une poignée. Un écu est si lourd que vous ne pouvez rien faire d'autre de la main qui le porte.\nBois ou acier : les boucliers en bois et en acier offrent la même protection de base, mais réagissent différemment aux sorts et aux effets.\nCoups de bouclier : vous pouvez frapper un adversaire avec un écu. Si vous utilisez votre bouclier comme arme, vous perdez son bonus à la CA jusqu'à votre prochain tour. Le bonus d'altération d'un bouclier n'améliore pas l'efficacité des coups portés avec lui, mais le bouclier peut lui-même devenir une arme magique.
+EQUIPMENT		Serpent-Necked Flail	DESC	Semblable au fléau d'armes, le fléau d'armes lourd a une boule de métal plus grosse et un manche plus long.
+ABILITY	FEAT	Angelbane Strike	BENEFIT	Quand vous utilisez Châtiment canalisé contre une créature vivante d'alignement bon, vous traitez tous les 1 des dés de dégâts comme des 2. Si votre cible est un Extérieur bon ou un lanceur de sorts divins au service d'une divinité bonne, vous êtes considéré comme supérieur de 2 niveaux pour déterminer le nombre de dés de dégâts de canalisation lancés avec Châtiment canalisé.
+ABILITY	FEAT	Aquatic Adaption	BENEFIT	Vous pouvez respirer l'eau aussi bien que l'air.
+ABILITY	FEAT	Aquatic Advantage	BENEFIT	Une créature dépourvue de vitesse de nage provoque une attaque d'opportunité de votre part quand elle vous attaque sous l'eau, sauf si elle est sous l'effet de liberté de mouvement.
+ABILITY	FEAT	Awesome Charge	BENEFIT	Quand vous touchez un adversaire lors d'une charge, vous pouvez tenter contre lui une manœuvre de coup fabuleux par une action libre.
+ABILITY	FEAT	Beast Rider	BENEFIT	Choisissez l'un des types de créatures suivants : éléphant, ptéranodon, rhinocéros, stégosaure ou tricératops, que vous ajoutez à votre liste de compagnons animaux ou de montures possibles. Pour une créature de ce type, votre niveau de druide effectif est considéré comme supérieur de deux (dans la limite de votre niveau de personnage). Si elle est assez grande pour que vous la montiez, elle obtient gratuitement le dressage polyvalent entraînement au combat.
+ABILITY	FEAT	Bushwhack	BENEFIT	Quand vous agrippez une créature prise au dépourvu qui ignore votre présence, vous pouvez tenter par une action libre un second test de manœuvre de lutte pour l'immobiliser, ou pour l'étrangler si vous avez le don Étranglement (Ultimate Combat p. 92).
+ABILITY	FEAT	Chain Challenge	BENEFIT	Quand la cible de votre défi est tuée ou assommée, vous pouvez par une action immédiate lancer un nouveau défi à une cible à 9 m ou moins, aussitôt après la défaite de la cible initiale (pas plus tard si vous ne pouvez pas agir à ce moment). Ce nouveau défi ne compte pas dans vos utilisations quotidiennes. Vous pouvez enchaîner %1 défis au-delà du premier.
+ABILITY	FEAT	Cleaving Sweep	BENEFIT	Lors d'une attaque à outrance avec une arme à deux mains, vous pouvez renoncer à vos attaques normales pour tenter un croc-en-jambe à votre plus haut bonus de base à l'attaque contre chaque adversaire à votre allonge, avec un test distinct pour chacun.
+ABILITY	FEAT	Coordinated Reposition	BENEFIT	Chaque fois qu'un allié doté de ce don qui menace une créature que vous menacez fait un pas de placement de 1,5 m, vous pouvez vous déplacer de 1,5 m par une action immédiate, sans provoquer d'attaque d'opportunité.
+ABILITY	FEAT	Disarm Partner	BENEFIT	Quand un allié doté de ce don rate pendant son tour un désarmement contre un adversaire à votre allonge, vous pouvez tenter un désarmement contre cet ennemi par une action immédiate.
+ABILITY	FEAT	Draconic Magic	BENEFIT	Vous obtenez un ensemble de pouvoirs magiques qui dépend de la couleur de votre aspect draconique.
+ABILITY	FEAT	Gnawer	BENEFIT	Les dégâts de votre attaque de morsure ignorent %1 points de solidité. Par une action complexe, vous pouvez infliger le double de vos dégâts de morsure à un objet inanimé sans surveillance.
+ABILITY	FEAT	Horn Rider	BENEFIT	Vous obtenez un bonus de bouclier de +1 à la CA quand vous êtes attaché dans un harnais de corne. [Spécial] Une créature dotée de ce don peut prendre Tir monté sans avoir 1 rang en Équitation ni le don Combat monté.
+ABILITY	FEAT	Horn Riders Charge	BENEFIT	Quand vous êtes attaché dans un harnais de corne et préparez une action pour porter une attaque au corps à corps contre la cible d'une charge de la créature à laquelle vous êtes attaché, vous obtenez le bonus d'attaque de charge, et votre attaque inflige le double des dégâts (le triple avec une lance d'arçon). Cet avantage ne se cumule pas avec celui de Charge dévastatrice.
+ABILITY	FEAT	Hurtful	BENEFIT	Quand vous démoralisez par Intimidation un adversaire à votre allonge, vous pouvez lui porter une attaque au corps à corps par une action rapide. Si elle ne le blesse pas, l'état secoué dû à la démoralisation prend fin aussitôt.
+ABILITY	FEAT	Improved Disarm Partner	BENEFIT	Quand un allié doté de ce don rate pendant son tour un désarmement contre un ennemi à votre allonge, vous pouvez porter une attaque d'opportunité contre cet ennemi ; si elle touche, vous pouvez aussi tenter de le désarmer dans le cadre de cette attaque d'opportunité.
+ABILITY	FEAT	Motivated March	BENEFIT	Lors d'un voyage, vous et un nombre d'alliés égal à 10 fois votre niveau de personnage subissez moitié moins de dégâts non létaux dus à une marche forcée. Les créatures qui bénéficient de ce don peuvent retarder la fatigue d'une marche forcée de %1 heures, mais sont alors épuisées et non fatiguées quand l'état survient.
+ABILITY	FEAT	Mutual Hatred	BENEFIT	Vous obtenez un bonus de +1 aux jets d'attaque et de dégâts contre les créatures dont le trait racial haine ou l'aptitude de classe ennemi juré s'applique à vous. Par exemple, un orque obtiendrait ce bonus contre tous les nains et contre les rôdeurs ayant choisi humanoïde (orque) comme ennemi juré.
+ABILITY	FEAT	Pack Rat	BENEFIT	Une fois par jour, face à une situation qui exige un objet ordinaire particulier, il se trouve que vous l'avez sur vous. L'objet doit coûter au plus %1 po, et vous devez payer son prix en le « trouvant » (l'argent que vous pensiez avoir sur vous était en fait l'objet). Il doit être facile à transporter : par exemple, à pied avec un simple sac à dos, vous ne pourriez pas avoir un grand chaudron en fer. Ce don ne permet de trouver ni objets magiques ni objets spécifiques, comme la clé d'une porte précise. Si l'on vous dépouille de votre équipement ou de vos possessions, vous perdez les avantages de ce don jusqu'à disposer d'au moins une journée pour vous réapprovisionner.
+ABILITY	FEAT	Pile On	BENEFIT	Une fois par round, quand vous blessez une créature secouée, effrayée ou paniquée, vous pouvez infliger la moitié de vos dégâts normaux pour prolonger de 1 round son état de terreur.
+ABILITY	FEAT	Scarred Legion	BENEFIT	Vous obtenez un bonus de +2 aux tests d'Intimidation, ainsi qu'un bonus de moral de +2 aux jets de Volonté tant que vous êtes adjacent à un allié doté de ce don. Si vous commencez une charge adjacent à un tel allié, vous conservez le bonus aux jets de Volonté jusqu'au début de votre prochain tour.
+ABILITY	FEAT	Shadow Shroud	BENEFIT	Par une action immédiate, vous pouvez vous entourer d'une brume de ténèbres mouvante qui vous confère un camouflage contre une attaque, puis se dissipe une fois l'attaque résolue. Vous pouvez utiliser ce pouvoir %1 fois par jour.
+ABILITY	FEAT	Shared Stash	BENEFIT	Dans la même case qu'un allié consentant doté de ce don, vous pouvez lui prendre une arme par une action libre, ou une arme cachée ou tout autre objet par une action de mouvement. Vous pouvez aussi prendre par une action libre un objet qu'il tient en main. Dégainer ou prendre ainsi un objet (mais pas une arme) provoque une attaque d'opportunité.
+ABILITY	FEAT	Sharptooth	BENEFIT	Vous obtenez une attaque de morsure, arme naturelle principale qui inflige 1d3 points de dégâts.
+ABILITY	FEAT	Shocking Bellow	BENEFIT	Si vous agissez lors du round de surprise, vous pouvez tenter par une action libre un test d'Intimidation pour démoraliser une créature à 9 m ou moins qui vous voit ou vous entend clairement.
+ABILITY	FEAT	Slurk Rider	BENEFIT	Vous pouvez contrôler, guider et communiquer avec les slurks (Bestiaire Pathfinder 2 p. 251) comme s'ils comprenaient le draconien. Vous pouvez aussi manipuler par une action simple les nodules du dos du slurk pour activer son aptitude bave ; vous et le slurk pouvez activer cette aptitude lors du même round.
+ABILITY	FEAT	Snapping Flank	BENEFIT	Chaque fois que vous prenez un adversaire en tenaille avec un allié doté de ce don, vous pouvez lui porter une attaque de morsure par une action rapide.
+ABILITY	FEAT	Snipers Lantern	BENEFIT	Vous pouvez utiliser votre pouvoir magique racial lumières dansantes pour créer un orbe de lumière pénétrante, qui vous confère un bonus d'intuition de +2 aux attaques à distance contre les cibles à 1,5 m ou moins de lui. Vous pouvez le déplacer n'importe où à portée du sort par une action de mouvement ; l'effet fonctionne par ailleurs exactement comme lumières dansantes. Vous pouvez utiliser ce pouvoir %1 fois par jour.
+ABILITY	FEAT	Spirit of the Corps	BENEFIT	Chaque fois que vous êtes à 3 m ou moins d'un allié qui bénéficie d'un sort ou effet conférant un bonus de moral à un type de jet, vous pouvez appliquer ce bonus une fois pendant la durée de l'effet à l'un de vos jets de ce type. Par exemple, si un allié doté de ce don bénéficie d'héroïsme, vous pourriez obtenir une fois pendant la durée du sort un bonus de moral de +2 à un jet de sauvegarde, d'attaque ou à un test de compétence. Vous ne pouvez utiliser ce don qu'une fois par round, et qu'une fois par sort ou effet.
+ABILITY	FEAT	Staggering Blow	BENEFIT	Quand vous attaquez un ennemi avec Attaque décisive, vous pouvez choisir avant le jet de subir un malus de -2 pour en faire aussi une frappe déstabilisante. Si l'attaque touche, la cible doit réussir un jet de Vigueur (DD %1) ou être chancelante jusqu'au début de votre prochain tour. Une créature qui a raté son jet et s'en est remise est immunisée contre ce don pendant 24 heures. Les créatures artificielles, vases, plantes, morts-vivants, créatures intangibles et créatures immunisées contre les coups critiques sont immunisés contre cet effet.
+ABILITY	FEAT	Vampiric Companion	BENEFIT	[NON IMPLÉMENTÉ] Votre compagnon animal ou votre familier devient de type « mort-vivant ». Il obtient vos faiblesses de vampire ou de dhampir et une guérison accélérée de 5.
+ABILITY	FEAT	Visceral Threat	BENEFIT	Vous pouvez utiliser Intimidation au lieu de Bluff pour feinter une créature à votre allonge.
+ABILITY	Special Ability	Grenadier ~ Alchemical Weapon	DESC	par une action de mouvement.	as a move action.
+ABILITY	Special Ability	Grenadier ~ Alchemical Weapon	DESC	par une action rapide.	as a swift action.
+ABILITY	Special Ability	Apocalypse Mystery ~ Doomsayer	DESC	de mouvement	move
+ABILITY	Special Ability	Apocalypse Mystery ~ Doomsayer	DESC	rapide	swift
+ABILITY	Special Ability	Ratfolk ~ Lab Rat	DESC	Ce trait racial remplace bricoleur.	This racial trait replaces tinker.
+ABILITY	Special Ability	Ghoul Bloodline ~ Ghoulish Claws	DESC	1 round,	1 round,
+ABILITY	Special Ability	Bouda ~ Fetish	DESC	9 m.	30 feet.
+ABILITY	Special Ability	Duergar ~ Twilight-Touched	DESC	Ce trait racial remplace le pouvoir magique invisibilité.	This racial trait replaces the invisibility spell-like ability.
+ABILITY	Special Ability	Ratfolk ~ Cheek Pouches	DESC	Ce trait racial remplace grouillement.	This racial trait replaces swarming.
+ABILITY	Special Ability	Ratfolk ~ Cleanliness	DESC	Ce trait racial remplace empathie avec les rongeurs.	This racial trait replaces rodent empathy.
