@@ -18,12 +18,14 @@
 package pcgen.core;
 
 import java.math.BigDecimal;
+import java.text.CollationKey;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.IdentityHashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -437,6 +439,8 @@ public class DataSet implements DataSetFacade
 	 */
 	static class RaceComparator implements Comparator<Race>
 	{
+		private final Collator collator = Collator.getInstance();
+		private final Map<Race, CollationKey> sortKeys = new IdentityHashMap<>();
 
 		@Override
 		public int compare(Race r1, Race r2)
@@ -480,19 +484,14 @@ public class DataSet implements DataSetFacade
 				return AFTER;
 			}
 
-			// Check sort keys 
-			String key1 = r1.get(StringKey.SORT_KEY);
-			if (key1 == null)
-			{
-				key1 = r1.getDisplayName();
-			}
-			String key2 = r2.get(StringKey.SORT_KEY);
-			if (key2 == null)
-			{
-				key2 = r2.getDisplayName();
-			}
-			final Collator collator = Collator.getInstance();
-			return collator.compare(key1, key2);
+			return sortKeys.computeIfAbsent(r1, this::sortKey)
+					.compareTo(sortKeys.computeIfAbsent(r2, this::sortKey));
+		}
+
+		private CollationKey sortKey(Race race)
+		{
+			String key = race.get(StringKey.SORT_KEY);
+			return collator.getCollationKey(key == null ? race.getDisplayName() : key);
 		}
 
 	}

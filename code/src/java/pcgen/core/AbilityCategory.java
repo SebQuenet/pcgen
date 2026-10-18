@@ -37,6 +37,7 @@ import pcgen.cdom.base.ClassIdentity;
 import pcgen.cdom.base.FormulaFactory;
 import pcgen.cdom.base.Loadable;
 import pcgen.cdom.enumeration.DisplayLocation;
+import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.Type;
 import pcgen.cdom.reference.CDOMAllRef;
@@ -755,7 +756,7 @@ public class AbilityCategory
 			{
 				for (Type type : types)
 				{
-					if (ability.isType(type.toString()))
+					if (ability.containsInList(ListKey.TYPE, type))
 					{
 						use = true;
 						break;
