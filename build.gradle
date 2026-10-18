@@ -416,13 +416,21 @@ runtime {
     // Use the jpackage tool that comes with Java to build native installers
     jpackage {
         def licenseFile = layout.projectDirectory.file("code/LICENSE")
-        installerOptions = ["--app-version", "${version.replaceAll('-SNAPSHOT', '')}", "--license-file", licenseFile.asFile.absolutePath]
-
         def hostArchitecture = System.getProperty("os.arch")
         def osFamily =
                 Os.isFamily(Os.FAMILY_MAC) ? "mac" :
                 Os.isFamily(Os.FAMILY_UNIX) ? "linux" :
                 Os.isFamily(Os.FAMILY_WINDOWS) ? "windows" : "unknown"
+
+        def appVersion = version.toString().replaceAll('-SNAPSHOT', '')
+        // macOS and Windows require numeric jpackage versions; keep qualifiers in Linux package names.
+        def numericVersion = appVersion =~ /^(\d+)\.(\d+)\.(\d+)/
+        if (osFamily != "linux" && !numericVersion.find()) {
+            throw new GradleException("Cannot derive a native installer version from '${appVersion}'")
+        }
+        def nativeVersion = osFamily == "linux" ? appVersion : (1..3).collect { numericVersion.group(it).toInteger() }.join('.')
+        installerOptions = ["--app-version", nativeVersion, "--license-file", licenseFile.asFile.absolutePath]
+
         def targetPlatform = ["x86_64" : "x64",
                               "amd64" : "x64",
                               "aarch64" : "aarch64"]
