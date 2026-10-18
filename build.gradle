@@ -422,14 +422,15 @@ runtime {
                 Os.isFamily(Os.FAMILY_UNIX) ? "linux" :
                 Os.isFamily(Os.FAMILY_WINDOWS) ? "windows" : "unknown"
 
-        def appVersion = version.toString().replaceAll('-SNAPSHOT', '')
+        def projectVersionLabel = version.toString().replaceAll('-SNAPSHOT', '')
         // macOS and Windows require numeric jpackage versions; keep qualifiers in Linux package names.
-        def numericVersion = appVersion =~ /^(\d+)\.(\d+)\.(\d+)/
+        def numericVersion = projectVersionLabel =~ /^(\d+)\.(\d+)\.(\d+)/
         if (osFamily != "linux" && !numericVersion.find()) {
-            throw new GradleException("Cannot derive a native installer version from '${appVersion}'")
+            throw new GradleException("Cannot derive a native installer version from '${projectVersionLabel}'")
         }
-        def nativeVersion = osFamily == "linux" ? appVersion : (1..3).collect { numericVersion.group(it).toInteger() }.join('.')
-        installerOptions = ["--app-version", nativeVersion, "--license-file", licenseFile.asFile.absolutePath]
+        def nativeVersion = osFamily == "linux" ? projectVersionLabel : (1..3).collect { numericVersion.group(it).toInteger() }.join('.')
+        appVersion = nativeVersion
+        installerOptions = ["--license-file", licenseFile.asFile.absolutePath]
 
         def targetPlatform = ["x86_64" : "x64",
                               "amd64" : "x64",
