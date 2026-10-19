@@ -63,7 +63,7 @@ public final class PathfinderSummonRankings
 			Map<String, Ranking> rankings = new HashMap<>();
 			try (BufferedReader lines = new BufferedReader(new InputStreamReader(source, StandardCharsets.UTF_8)))
 			{
-				for (String line; (line = lines.readLine()) != null; )
+				for (String line; (line = lines.readLine()) != null;)
 				{
 					if (line.isBlank() || line.startsWith("#"))
 					{
