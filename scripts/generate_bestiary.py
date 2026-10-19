@@ -970,7 +970,7 @@ def sanitize_name(name):
     parenthesized form 'Giant (Moon Giant)' since commas are
     prohibited in PCGen keys."""
     name = name.strip()
-    if ',' in name:
+    while ',' in name:
         parts = [p.strip() for p in name.split(',', 1)]
         name = f'{parts[0]} ({parts[1]})'
     return name
