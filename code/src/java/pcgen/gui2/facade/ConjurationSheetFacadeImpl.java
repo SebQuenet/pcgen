@@ -231,6 +231,7 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 		Optional<SummonCatalog> catalog =
 			theCharacter.getDisplay().getConjurationCatalog().flatMap(SummonCatalogParser::catalogOf);
 		return inPlay(creature, number).flatMap(found -> catalog.flatMap(read -> read.find(found.creature()))
+			.filter(summon -> !summon.hasAuthoredStats())
 			.map(summon -> creatures.creature(summon, SummonedCreatureBuilder.augments(theCharacter), found,
 				fight().groupBonuses())));
 	}

@@ -124,6 +124,16 @@ Conventions/gotchas observed
   - `pcgenReleaseOfficial` (pcgenRelease + updateVersionRelease)
 - Artifacts collected into build/release; jpackage produces platform installers under build/jpackage.
 
+### Publication checklist learned from the Windows RC builds
+
+1. Start from committed code: inspect `git status`, `master` versus `origin/master`, `gradle.properties`, and the commit targeted by the tag. Preserve unrelated local changes.
+2. Run the manual `.github/workflows/verify-windows-installer.yml` on the candidate branch before creating a release tag. It executes the release build, verifies one nonempty MSI, and retains the preview artifact for one day.
+3. On Windows/macOS, `jpackage` requires a numeric version. The Badass Runtime plugin's `jpackage.appVersion` applies to both `jpackageImage` and `jpackage`; an `--app-version` entry in `installerOptions` affects only the installer stage. Keep the RC label in `gradle.properties` and the Git tag, while accepting a numeric MSI filename.
+4. Check `code/gradle/release.gradle` whenever installer formats change: `pcgenRelease` must checksum `.msi` as well as other generated files. Verify the complete task, not only the packaging step.
+   Review `./gradlew slowtest` or its CI job as a separate gate: the release build compiles that suite but does not run it.
+5. Push a new tag `v<version>` matching `gradle.properties` to trigger `.github/workflows/gradle-release.yml`. The workflow creates the GitHub Release before all platform jobs complete. Check each job, confirm the actual MSI is attached and nonempty, and check prerelease status for RC tags before sharing the link.
+6. If the release is partial, make it a draft while repairing it, then publish a new candidate tag after verification. Do not move a published tag. Temporary Actions artifacts and GitHub Release assets have different retention; keep temporary artifacts short lived and check storage usage separately from runner minutes.
+
 ## Data and Outputsheets
 
 - Distribution zips combine program, data, docs, libs; copy specs in code/gradle/distribution.gradle control inclusion/exclusion.

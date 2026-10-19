@@ -47,6 +47,11 @@ public final class CatalogResolution
 		{
 			for (SummonTemplate summon : group.summons())
 			{
+				// Older catalogs name a handwritten creature rather than a PCGen race.
+				if (summon.hasAuthoredStats())
+				{
+					continue;
+				}
 				if (data.silentlyGetConstructedCDOMObject(Race.class, summon.raceKey()) == null)
 				{
 					errors.add(new SummonParseError(summon.line(),

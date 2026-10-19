@@ -52,6 +52,8 @@ public final class ConjurationOutputModel
 {
 	private static final String KEY = "key";
 	private static final String LABEL = "label";
+	private static final List<String> METADATA_FIELDS = List.of("speed", "hp", "ac", "attack", "damage",
+		"special", "cmb", "cmd", "ref", "fort", "will", "init", "spells", "note");
 
 	private ConjurationOutputModel()
 	{
@@ -73,6 +75,7 @@ public final class ConjurationOutputModel
 		model.put("duration", fight.duration());
 		model.put("labels", labels());
 		model.put("statLabels", statLabels());
+		model.put("metadataFields", METADATA_FIELDS);
 		model.put("groupBonuses", bonusesOf(fight.groupBonuses()));
 
 		Optional<SummonCatalog> catalog = Optional.empty();
@@ -117,7 +120,8 @@ public final class ConjurationOutputModel
 			Map.entry("ownBonuses", LanguageBundle.getString("in_conjurations_own_bonuses")),
 			Map.entry("addBonus", LanguageBundle.getString("in_conjurations_add_bonus")),
 			Map.entry("value", LanguageBundle.getString("in_conjurations_value")),
-			Map.entry("building", LanguageBundle.getString("in_conjurations_building")));
+			Map.entry("building", LanguageBundle.getString("in_conjurations_building")),
+			Map.entry("authoredStats", LanguageBundle.getString("in_conjurations_authored_stats")));
 	}
 
 	/**
@@ -174,6 +178,10 @@ public final class ConjurationOutputModel
 		described.put("name", summon.name());
 		described.put("race", summon.raceKey());
 		described.put("templates", summon.templateKeys());
+		described.put("roles", summon.roles());
+		described.put("metadata", summon.metadata());
+		described.put("authored", summon.hasAuthoredStats());
+		described.put("hpMax", summon.authoredHitPoints().orElse(0));
 		return described;
 	}
 

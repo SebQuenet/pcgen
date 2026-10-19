@@ -136,6 +136,17 @@ These directories are validated at startup (`Main.validateEnvironment()`) — re
 - Some maven repos use `allowInsecureProtocol = true` — do not change without coordination.
 - Build logic is split across `code/gradle/*.gradle` files (autobuild, distribution, reporting, release, plugins).
 
+## Publishing a Release
+
+- Work from a clean, committed revision. Check `git status`, `git log master..origin/master`, and the exact commit to publish; do not include unrelated local edits. `gradle.properties` must contain the version matched by the tag (`v<version>`).
+- A pushed `v*.*.*` tag starts `.github/workflows/gradle-release.yml`. It creates the GitHub Release before the platform jobs finish, so check every job and the release assets before announcing it. An RC tag must be marked as a prerelease.
+- For a Windows candidate, first run `.github/workflows/verify-windows-installer.yml` with `workflow_dispatch` on the intended branch. It runs the release Gradle tasks, requires one nonempty MSI, and keeps its preview artifact for one day. Inspect its result before tagging.
+- `jpackageImage` and `jpackage` both need a numeric native version on Windows/macOS. Set the Badass Runtime plugin's `jpackage.appVersion` in `build.gradle`; passing `--app-version` only in `installerOptions` does not fix `jpackageImage`. RC suffixes remain in the Git tag and Gradle version; the MSI filename uses the numeric version.
+- `pcgenRelease` runs `checksum` from `code/gradle/release.gradle`; every emitted installer suffix, including `.msi`, must have a digest branch. A successful `jpackage` alone does not prove release assembly succeeds.
+- Confirm the Windows job uploaded and attached the MSI under the intended release, and check the actual asset size. If any platform or validation job fails, keep the release as a draft until it is repaired; use a fresh version/tag for a corrected candidate rather than moving a published tag.
+- Review `./gradlew slowtest` or the CI slow-test job separately: the release build compiles slow tests but does not execute that suite. Record unresolved failures before publishing.
+- Keep short retention for temporary workflow artifacts; published GitHub Release assets are separate. Standard GitHub-hosted Actions minutes for public repositories and storage billing are different measures. Do not infer current quota from a successful or failed build; check the billing page when investigating limits.
+
 ## Importing Creature Data from PCFinder
 
 The `scripts/` directory contains a two-step pipeline to import Pathfinder bestiary creatures into PCGen LST format, using pcfinder-csr as the primary data source and d20pfsrd.com for supplemental fields.

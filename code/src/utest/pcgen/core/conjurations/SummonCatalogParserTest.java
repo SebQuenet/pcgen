@@ -147,12 +147,42 @@ class SummonCatalogParserTest
 	}
 
 	@Test
-	void refusesAnOldField()
+	void readsAuthoredMetadataAlongsideRaceAndTemplates()
 	{
-		List<SummonParseError> errors = errorsOf("## I\nsummon: Dire Rat\n  hp: 51\n");
+		SummonTemplate summon = firstSummon("""
+			## I
+			summon: Dire Rat
+			  template: Celestial Creature
+			  role: tank, scout
+			  hp: 51
+			  note: Keep away from fire
+			""");
 
-		assertTrue(errors.stream().anyMatch(error -> error.line() == 3 && error.message().contains("'hp'")),
-			"Expected an error naming 'hp' on line 3, got " + errors);
+		assertEquals("Dire Rat (Celestial Creature)", summon.name());
+		assertEquals(List.of("tank", "scout"), summon.roles());
+		assertEquals("51", summon.metadata().get("hp"));
+		assertEquals("Keep away from fire", summon.metadata().get("note"));
+	}
+
+	@Test
+	void readsThePreviousCatalogFormat()
+	{
+		SummonTemplate summon = firstSummon("""
+			## VI
+			summon: Lillend (azata)
+			  role: lanceur, soutien, contrôle
+			  speed: 9 m, vol 21 m
+			  hp: 87
+			  ac: 20
+			  attack: épée longue
+			  damage: 2d6+8
+			  special: Sorts de barde
+			  cmb: +15
+			  cmd: 28
+			""");
+
+		assertEquals("Lillend (azata)", summon.name());
+		assertEquals("87", summon.metadata().get("hp"));
 	}
 
 	@Test

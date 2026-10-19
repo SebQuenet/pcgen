@@ -21,8 +21,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -45,6 +47,9 @@ public final class SummonCatalogParser
 	private static final String SUMMON_KEY = "summon";
 	private static final String TEMPLATE_KEY = "template";
 	private static final String TEMPLATE_SEPARATOR = ",";
+	private static final String ROLE_KEY = "role";
+	private static final Set<String> METADATA_KEYS = Set.of("speed", "hp", "ac", "attack", "damage",
+		"special", "cmb", "cmd", "ref", "fort", "will", "init", "spells", "note");
 	private static final String ESCAPED_NEWLINE = "\\n";
 	private static final Pattern KEYED_LINE = Pattern.compile("([A-Za-z]+):(?:\\s(.*))?");
 
@@ -152,6 +157,9 @@ public final class SummonCatalogParser
 		{
 			List<String> templates = List.of();
 			boolean templatesWritten = false;
+			List<String> roles = List.of();
+			boolean rolesWritten = false;
+			Map<String, String> metadata = new LinkedHashMap<>();
 			while (cursor < lines.size() && lines.get(cursor).startsWith(INDENT))
 			{
 				String line = lines.get(cursor).strip();
@@ -162,20 +170,45 @@ public final class SummonCatalogParser
 					continue;
 				}
 				Optional<KeyedValue> keyedValue = keyed(line);
-				if (keyedValue.isEmpty() || !TEMPLATE_KEY.equals(keyedValue.get().key()))
+				String key = keyedValue.map(KeyedValue::key).orElse("");
+				if (TEMPLATE_KEY.equals(key))
 				{
-					errors.add(new SummonParseError(fieldLine,
-						"A summon takes '" + TEMPLATE_KEY + ":', not " + keyOf(line)));
+					if (templatesWritten)
+					{
+						errors.add(new SummonParseError(fieldLine,
+							"'" + TEMPLATE_KEY + ":' is written twice for '" + raceKey + "'"));
+					}
+					else
+					{
+						templatesWritten = true;
+						templates = listOf(keyedValue.get().value());
+					}
 				}
-				else if (templatesWritten)
+				else if (ROLE_KEY.equals(key))
 				{
-					errors.add(new SummonParseError(fieldLine,
-						"'" + TEMPLATE_KEY + ":' is written twice for '" + raceKey + "'"));
+					if (rolesWritten)
+					{
+						errors.add(new SummonParseError(fieldLine,
+							"'role:' is written twice for '" + raceKey + "'"));
+					}
+					else
+					{
+						rolesWritten = true;
+						roles = listOf(keyedValue.get().value());
+					}
+				}
+				else if (METADATA_KEYS.contains(key))
+				{
+					if (metadata.putIfAbsent(key, keyedValue.get().value()) != null)
+					{
+						errors.add(new SummonParseError(fieldLine,
+							"'" + key + ":' is written twice for '" + raceKey + "'"));
+					}
 				}
 				else
 				{
-					templatesWritten = true;
-					templates = listOf(keyedValue.get().value());
+					errors.add(new SummonParseError(fieldLine,
+						"A summon takes 'template:', 'role:' or a known stat field, not " + keyOf(line)));
 				}
 			}
 			if (raceKey.isBlank())
@@ -183,7 +216,7 @@ public final class SummonCatalogParser
 				errors.add(new SummonParseError(lineNumber, "A summon needs a race, written 'summon: race'"));
 				return;
 			}
-			SummonTemplate summon = new SummonTemplate(raceKey, templates, lineNumber);
+			SummonTemplate summon = new SummonTemplate(raceKey, templates, lineNumber, roles, metadata);
 			if (!takenNames.add(summon.name().toLowerCase(Locale.ROOT)))
 			{
 				errors.add(new SummonParseError(lineNumber, "Another summon is already named '" + summon.name() + "'"));

@@ -25,7 +25,8 @@
 -->
 <#macro card name number damage counted rounds found summon missing bonuses>
 <#-- The maximum hit points arrive with the numbers PCGen computes, through the bridge -->
-<article class="card<#if counted && rounds == 0> gone</#if>" data-creature="${name}" data-number="${number?c}" data-damage="${damage?c}" data-max="0" data-counted="${counted?c}" data-rounds="${rounds?c}">
+<#local authored = found && summon.authored />
+<article class="card<#if counted && rounds == 0> gone</#if>" data-creature="${name}" data-number="${number?c}" data-damage="${damage?c}" data-max="${(authored?then(summon.hpMax, 0))?c}" data-counted="${counted?c}" data-rounds="${rounds?c}" data-authored="${authored?c}">
   <header>
     <span class="card-name">${name} <span class="card-number">${number?c}</span></span>
     <span class="rounds"<#if !counted> hidden</#if>>
@@ -37,7 +38,11 @@
     <button type="button" class="dismiss" data-action="dismiss">${labels.dismiss}</button>
   </header>
   <div class="hp">
+    <#if authored && summon.hpMax gt 0>
+    <span class="hp-readout"><span class="hp-current">${(summon.hpMax - damage)?c}</span> / <span class="hp-maximum">${summon.hpMax?c}</span></span><span class="bar"><span></span></span>
+    <#else>
     <span class="hp-readout">${labels.damage} <span class="hp-damage">${damage?c}</span></span>
+    </#if>
   </div>
   <div class="hp-controls">
     <input type="number" class="amount" min="1" placeholder="1" />
@@ -45,9 +50,14 @@
     <button type="button" data-action="heal">${labels.heal}</button>
   </div>
   <#if found>
+  <#if authored>
+  <p class="building">${labels.authoredStats}</p>
+  <dl class="stats"><#list conjurations.metadataFields as field><#if summon.metadata[field]?has_content><dt>${field}</dt><dd><@text summon.metadata[field]/></dd></#if></#list></dl>
+  <#else>
   <div class="own-bonuses"><span class="lbl">${labels.ownBonuses}</span><span class="chips"><#list bonuses as bonus><@chip bonus=bonus own=true/></#list></span><@adder action="add-bonus"/></div>
   <p class="building">${labels.building}</p>
   <dl class="stats"></dl>
+  </#if>
   <#elseif missing?has_content>
   <p class="unresolved">${missing}</p>
   </#if>
@@ -200,6 +210,12 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
           <td><button type="button" class="conjure" data-creature="${summon.name}">${labels.conjure}</button></td>
           <td class="name">${summon.name}</td>
         </tr>
+        <#if summon.roles?has_content || summon.metadata?has_content>
+        <tr class="details"><td></td><td>
+          <#list summon.roles as role><span class="tag">${role}</span></#list>
+          <#list conjurations.metadataFields as field><#if summon.metadata[field]?has_content><span class="detail"><b>${field}</b> <@text summon.metadata[field]/></span></#if></#list>
+        </td></tr>
+        </#if>
       </tbody>
       </#list>
     </table>
@@ -593,6 +609,9 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   }
 
   function refreshCard(card) {
+    if (card.getAttribute("data-authored") === "true") {
+      return;
+    }
     var link = bridge();
     if (link && link.view) {
       paintView(parsed(link.view(nameOf(card), numberOf(card))));

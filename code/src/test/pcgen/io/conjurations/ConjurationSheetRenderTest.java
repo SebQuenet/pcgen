@@ -91,6 +91,25 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 	}
 
 	@Test
+	public void keepsAuthoredRolesAndStatsVisibleInAnOlderCatalog() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("""
+			## VI
+			summon: Lillend (azata)
+			  role: lanceur, soutien
+			  hp: 87
+			  special: Sorts de barde
+			""");
+
+		String html = render(getCharacter());
+
+		assertShows("lanceur", html);
+		assertShows("Sorts de barde", html);
+		assertShows("data-authored=\"true\"", html);
+		assertShows("data-max=\"87\"", html);
+	}
+
+	@Test
 	public void holdsACardReadyForEveryCreatureTheCatalogCanConjure() throws IOException, ExportException
 	{
 		getCharacter().setConjurationCatalog(A_CATALOG);

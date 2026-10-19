@@ -48,6 +48,8 @@ et exportable comme fiche de sortie.
 
 Orientée ligne, comme la fiche tactique : `## ` ouvre un groupe, `summon:` en colonne zéro nomme
 la race d'une créature, une ligne `template:` indentée de deux espaces liste ses gabarits.
+Les lignes `role:` et les métadonnées facultatives restent disponibles, notamment pour relire
+les catalogues enregistrés avant le calcul des statistiques par PCGen.
 
 ```
 ## Convocation de monstres IV
@@ -62,6 +64,8 @@ summon: Bear (Grizzly)
 | groupe | `## <titre>`, en général un niveau de convocation |
 | créature | `summon: <clé de race>` |
 | gabarits | `  template: <clé>, <clé>`, facultatif, une fois au plus |
+| rôles | `  role: <rôle>, <rôle>`, facultatif, une fois au plus |
+| métadonnées | `  speed:`, `hp:`, `ac:`, `attack:`, `damage:`, `special:`, `cmb:`, `cmd:`, `ref:`, `fort:`, `will:`, `init:`, `spells:` ou `note:`, chacune facultative, une fois au plus |
 
 - Le nom d'une créature se déduit : la race, suivie de ses gabarits entre parenthèses
   (« Bear (Grizzly) (Celestial Creature) »). Deux créatures ne portent pas le même nom, sans tenir
@@ -70,12 +74,15 @@ summon: Bear (Grizzly)
 
 Une lecture qui échoue renvoie toutes ses erreurs, chacune avec son numéro de ligne (base 1),
 sous forme de valeurs typées. Cas d'échec : un texte qui ne s'ouvre pas sur un groupe, une clé
-inconnue en colonne zéro, une sous-clé autre que `template:`, une ligne indentée sans créature
+inconnue en colonne zéro, une sous-clé inconnue, une ligne indentée sans créature
 au-dessus, `template:` écrit deux fois, une race vide, un nom déjà pris, un groupe sans créature,
 un texte sans groupe.
 
 `CatalogResolution.unresolvedIn` vérifie ensuite le catalogue contre les sources chargées : une
 race ou un gabarit qu'elles n'ont pas est une erreur sur la ligne de sa créature.
+Une entrée historique avec `hp:` est traitée comme une fiche rédigée à la main : elle conserve
+son nom et ses statistiques dans la page et n'est pas résolue comme une race PCGen. Les entrées
+sans `hp:` continuent d'utiliser leurs race et gabarits pour le calcul des statistiques.
 
 ## 4. Modèle
 

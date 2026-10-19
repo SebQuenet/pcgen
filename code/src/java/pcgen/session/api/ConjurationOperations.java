@@ -48,8 +48,11 @@ public final class ConjurationOperations
 		such as 'summon: Archon (Hound)'. Under it, indented two spaces, an optional
 		  template: <template key>, <template key>
 		lays templates on that race, such as 'template: Celestial Creature'.
+		An optional 'role: tank, scout' and handwritten fields such as 'note:' may
+		also describe the creature. Older entries with 'hp:' keep their authored
+		statistics and names instead of being built from a race.
 
-		PCGen builds each creature from its race, the Bestiary's default kit for that race
+		PCGen builds each creature without an authored 'hp:' from its race, the Bestiary's default kit for that race
 		and its templates, and computes every number; Augment Summoning is laid by itself
 		when the character has the feat. A creature is named after its race followed by its
 		templates in parentheses, and no two creatures share that name. A race or template
