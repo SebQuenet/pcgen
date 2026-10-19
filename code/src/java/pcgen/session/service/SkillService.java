@@ -103,41 +103,48 @@ public final class SkillService
 			HeadlessUIDelegate delegate = session.getDelegate(characterId);
 			Map<String, Skill> knownSkills = skillsByEveryNameTheyAnswerTo(character);
 			List<String> errors = new ArrayList<>();
-			int accepted = 0;
-
-			for (SkillInvestmentRequest request : requests)
-			{
-				Skill skill = knownSkills.get(request.skillKey().toLowerCase(Locale.ROOT));
-				if (skill == null)
-				{
-					errors.add("Skill not found: " + request.skillKey());
-					continue;
-				}
-				if (request.levelIndex() < 0 || request.levelIndex() >= levels.getSize())
-				{
-					errors.add("Invalid level index: " + request.levelIndex());
-					continue;
-				}
-				try
-				{
-					preSelect(delegate, skill, request.choices());
-					CharacterLevelFacade level = levels.getElementAt(request.levelIndex());
-					if (levels.investSkillPoints(level, skill, request.points()))
-					{
-						accepted++;
-					}
-					else
-					{
-						errors.add("Failed: " + request.skillKey() + " at level " + (request.levelIndex() + 1));
-					}
-				}
-				finally
-				{
-					clearPreSelection(delegate);
-				}
-			}
+			int accepted = levels.investSkillPointsThenRecalculate(
+				() -> investEach(levels, delegate, knownSkills, requests, errors));
 			return new BatchOutcome(accepted, requests.size(), List.copyOf(errors));
 		});
+	}
+
+	private static int investEach(CharacterLevelsFacade levels, HeadlessUIDelegate delegate,
+		Map<String, Skill> knownSkills, List<SkillInvestmentRequest> requests, List<String> errors)
+	{
+		int accepted = 0;
+		for (SkillInvestmentRequest request : requests)
+		{
+			Skill skill = knownSkills.get(request.skillKey().toLowerCase(Locale.ROOT));
+			if (skill == null)
+			{
+				errors.add("Skill not found: " + request.skillKey());
+				continue;
+			}
+			if (request.levelIndex() < 0 || request.levelIndex() >= levels.getSize())
+			{
+				errors.add("Invalid level index: " + request.levelIndex());
+				continue;
+			}
+			try
+			{
+				preSelect(delegate, skill, request.choices());
+				CharacterLevelFacade level = levels.getElementAt(request.levelIndex());
+				if (levels.investSkillPoints(level, skill, request.points()))
+				{
+					accepted++;
+				}
+				else
+				{
+					errors.add("Failed: " + request.skillKey() + " at level " + (request.levelIndex() + 1));
+				}
+			}
+			finally
+			{
+				clearPreSelection(delegate);
+			}
+		}
+		return accepted;
 	}
 
 	/** One line of a batch: how many points into which skill, at which level. */

@@ -22,6 +22,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
 
 import pcgen.cdom.base.Constants;
 import pcgen.cdom.enumeration.CharID;
@@ -512,6 +513,20 @@ public class CharacterLevelsFacadeImpl extends AbstractListFacade<CharacterLevel
 		fireSkillPointEvent(this, getLevelIndex(level), false);
 		fireSkillBonusEvent(this, getLevelIndex(level), false);
 		return true;
+	}
+
+	@Override
+	public <T> T investSkillPointsThenRecalculate(Supplier<T> investments)
+	{
+		theCharacter.beginBatchMode();
+		try
+		{
+			return investments.get();
+		}
+		finally
+		{
+			theCharacter.endBatchMode();
+		}
 	}
 
 	@Override

@@ -20,6 +20,7 @@ package pcgen.facade.core;
 
 import java.util.EventListener;
 import java.util.EventObject;
+import java.util.function.Supplier;
 
 import pcgen.cdom.enumeration.SkillCost;
 import pcgen.core.PCClass;
@@ -40,6 +41,15 @@ public interface CharacterLevelsFacade extends ListFacade<CharacterLevelFacade>
 	 * @return true if the points were successfuly invested
 	 */
 	public boolean investSkillPoints(CharacterLevelFacade level, Skill skill, int points);
+
+	/**
+	 * Run several skill investments, recalculating the character's bonuses once at
+	 * the end rather than after each investment.
+	 * @param investments The calls to investSkillPoints to make.
+	 * @param <T> What the investments report back.
+	 * @return What the investments reported.
+	 */
+	public <T> T investSkillPointsThenRecalculate(Supplier<T> investments);
 
 	public PCClass getClassTaken(CharacterLevelFacade level);
 
