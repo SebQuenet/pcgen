@@ -19,6 +19,7 @@ Usage:
 """
 
 import argparse
+import glob
 import json
 import math
 import os
@@ -1050,7 +1051,7 @@ def should_exclude(creature, exclude_names):
 
 # ─── Generators ──────────────────────────────────────────────────────────────
 
-def generate_race_line(creature, config, d20_data=None):
+def generate_race_line(creature, config, known_languages, d20_data=None):
     """Generate a single race LST line for a creature."""
     name = sanitize_name(creature['name'])
     size = creature.get('size', 'Medium')
@@ -1160,7 +1161,7 @@ def generate_race_line(creature, config, d20_data=None):
 
     # Languages from d20pfsrd cache
     if d20_data and d20_data.get('languages'):
-        langs = [l for l in d20_data['languages'] if l and len(l) > 1]
+        langs = normalize_languages(d20_data['languages'], known_languages)
         if langs:
             parts.append('AUTO:LANG|' + '|'.join(langs))
 
@@ -1213,13 +1214,118 @@ def compute_skill_ranks(creature, skill_name, total_bonus):
     return ranks
 
 
-def normalize_feat_name(feat):
-    """Normalize a feat name for PCGen."""
-    # PCGen uses specific formatting for some feats
-    feat = feat.strip()
-    # Remove trailing B (bonus feat marker from d20pfsrd)
-    feat = re.sub(r'\s*[Bb]$', '', feat)
-    return feat
+# Weapon names as d20pfsrd writes them, mapped to PCGen's WeaponProf keys
+WEAPON_PROFICIENCY_KEYS = {
+    'bastard sword': 'Sword (Bastard)',
+    'short sword': 'Sword (Short)',
+    'heavy mace': 'Mace (Heavy)',
+    'light mace': 'Mace (Light)',
+    'heavy pick': 'Pick (Heavy)',
+    'light pick': 'Pick (Light)',
+    'heavy flail': 'Flail (Heavy)',
+    'light hammer': 'Hammer (Light)',
+    'hand crossbow': 'Crossbow (Hand)',
+    'heavy crossbow': 'Crossbow (Heavy)',
+    'light crossbow': 'Crossbow (Light)',
+    'composite longbow': 'Longbow',
+    'composite shortbow': 'Shortbow',
+}
+
+SPELL_LIKE_ABILITY_FEATS = {
+    'quicken': 'Quicken Spell-Like Ability',
+    'quickened': 'Quicken Spell-Like Ability',
+    'empower': 'Empower Spell-Like Ability',
+    'empowered': 'Empower Spell-Like Ability',
+}
+
+
+def normalize_feat_names(feat):
+    """Turn one feat as d20pfsrd writes it into the PCGen feat keys it stands for."""
+    feat = re.sub(r'\s+', ' ', feat.strip())
+    # d20pfsrd marks mythic (M) and bonus (B) feats with a superscript letter
+    feat = re.sub(r'\[[MB]\]', '', feat)
+    feat = re.sub(r'(?<=[a-z)])\s?[MB]$', '', feat)
+    feat = re.sub(r'(?<=[a-z])\s?B(?= \()', '', feat)
+    feat = re.sub(r'(?<=\w)- (?=\w)', '-', feat)
+    if len(feat) <= 1:
+        return []
+    run_together = re.split(r'(?<=\)) (?=[A-Z])', feat)
+    if len(run_together) > 1:
+        return [name for part in run_together for name in normalize_feat_names(part)]
+    if feat.count('(') > feat.count(')'):
+        feat += ')'
+
+    choice_match = re.match(r'^([^(\[]+?)\s*\((.*)\)$', feat)
+    if not choice_match:
+        return [feat]
+    base, choices = choice_match.groups()
+    if '~' in base:
+        return [feat]
+    sla_match = re.match(r'^(\w+) Spell-Like Ability$', base)
+    if sla_match and sla_match.group(1).lower() in SPELL_LIKE_ABILITY_FEATS:
+        base = SPELL_LIKE_ABILITY_FEATS[sla_match.group(1).lower()] + ' ~ Spell'
+
+    keys = []
+    for choice in (c.strip() for c in choices.split(',')):
+        if not choice or re.search(r'[\[(](all|any)\b', choice, re.IGNORECASE):
+            continue
+        choice = WEAPON_PROFICIENCY_KEYS.get(choice.lower(), choice)
+        if base.endswith('~ Spell'):
+            # PCGen keys "greater dispel magic" as "Dispel Magic (Greater)"
+            choice = re.sub(r'^(greater|lesser|mass)\s+(.+)$', lambda m: f'{m.group(2)} ({m.group(1).title()})', choice, flags=re.IGNORECASE)
+        choice = re.sub(r'\s*\[([^\]]+)\]', lambda m: f' ({m.group(1).title()})', choice)
+        keys.append(f'{base} ({choice})')
+    return keys
+
+
+def load_known_languages(pcgen_data_dir):
+    """Map each Pathfinder language key, lower-cased, to the key itself."""
+    known_languages = {}
+    for language_file in glob.glob(os.path.join(pcgen_data_dir, 'pathfinder', '**', '*languages*.lst'), recursive=True):
+        with open(language_file, encoding='utf-8', errors='replace') as lines:
+            for line in lines:
+                name = line.split('\t')[0].strip()
+                if name and not name.startswith('#') and ':' not in name and '.' not in name:
+                    known_languages[name.lower()] = name
+    return known_languages
+
+
+def normalize_languages(entries, known_languages):
+    """Keep the languages d20pfsrd's entries name, as PCGen keys; drop the rest of the text."""
+    names = []
+    for entry in entries:
+        # Parentheses hold qualifiers ("can't speak") or a choice left to the reader
+        entry = re.sub(r'\([^)]*\)?', ';', entry)
+        for piece in re.split(r'[;,)]', entry):
+            for name in re.split(r'\s+(?:and either|and|or|plus)\s+', piece.strip()):
+                name = re.sub(r'^(?:(?:plus|or|and|understands)\s+)+', '', name.strip(), flags=re.IGNORECASE)
+                name = re.sub(r'\s+special abilities$', '', name, flags=re.IGNORECASE)
+                key = known_languages.get(re.sub(r'\s+', ' ', name).lower())
+                if key and key not in names:
+                    names.append(key)
+    return names
+
+
+PERFORM_INSTRUMENT_FAMILIES = ('keyboard', 'percussion', 'string', 'wind')
+
+
+def normalize_kit_skills(skill_name):
+    """Turn one skill as d20pfsrd writes it into the PCGen skill keys a kit can grant."""
+    specialty_match = re.match(r'^([^(]+?)\s*\((.*)\)$', skill_name)
+    if not specialty_match:
+        return [skill_name]
+    base, specialties = specialty_match.groups()
+    if re.match(r'^(any|all)\b', specialties, re.IGNORECASE):
+        return []
+    keys = []
+    for specialty in re.split(r',|\s+and\s+', specialties, flags=re.IGNORECASE):
+        specialty = re.sub(r'^and\s+', '', specialty.strip(), flags=re.IGNORECASE)
+        if not specialty:
+            continue
+        if base == 'Perform' and specialty.lower() in PERFORM_INSTRUMENT_FAMILIES:
+            specialty += ' instruments'
+        keys.append(f'{base} ({specialty.title()})')
+    return keys
 
 
 def generate_kit_block(creature, config, d20_data=None):
@@ -1266,18 +1372,18 @@ def generate_kit_block(creature, config, d20_data=None):
                 if m:
                     subtypes = [s.strip() for s in m.group(1).split(',')]
                     for sub in subtypes:
-                        pcgen_skill = f'Knowledge ({sub.title()})'
-                        ranks = compute_skill_ranks(creature, pcgen_skill, bonus)
-                        lines.append(f'SKILL:{pcgen_skill}\tRANK:{ranks}')
+                        for pcgen_skill in normalize_kit_skills(f'Knowledge ({sub})'):
+                            ranks = compute_skill_ranks(creature, pcgen_skill, bonus)
+                            lines.append(f'SKILL:{pcgen_skill}\tRANK:{ranks}')
                     continue
-            ranks = compute_skill_ranks(creature, skill_name, bonus)
-            lines.append(f'SKILL:{skill_name}\tRANK:{ranks}')
+            for pcgen_skill in normalize_kit_skills(skill_name):
+                ranks = compute_skill_ranks(creature, pcgen_skill, bonus)
+                lines.append(f'SKILL:{pcgen_skill}\tRANK:{ranks}')
 
     # Feats from d20pfsrd cache
     if d20_data and d20_data.get('feats'):
         for feat in d20_data['feats']:
-            feat_name = normalize_feat_name(feat)
-            if feat_name:
+            for feat_name in normalize_feat_names(feat):
                 lines.append(f'ABILITY:CATEGORY=FEAT|{feat_name}')
 
     return '\n'.join(lines)
@@ -1383,7 +1489,7 @@ def get_source_long(config):
     return config.get('source_long') or config.get('source_prefix', '')
 
 
-def write_races_file(creatures, config, output_dir, d20_cache=None, append=False):
+def write_races_file(creatures, config, output_dir, known_languages, d20_cache=None, append=False):
     """Write or append to the {prefix}_races.lst file."""
     d20_cache = d20_cache or {}
     prefix = config['prefix']
@@ -1393,7 +1499,7 @@ def write_races_file(creatures, config, output_dir, d20_cache=None, append=False
     new_lines = []
     for creature in sorted(creatures, key=lambda c: c['name']):
         d20_data = get_effective_d20_data(creature, d20_cache)
-        new_lines.append(generate_race_line(creature, config, d20_data))
+        new_lines.append(generate_race_line(creature, config, known_languages, d20_data))
 
     if append and os.path.exists(filepath):
         # Append auto-generated block to existing file
@@ -1658,7 +1764,7 @@ def generate_bestiary(creatures, bestiary_num, pcgen_data_dir, d20_cache=None):
     cache_hits = sum(1 for c in filtered if c['name'] in d20_cache)
     print(f"  {cache_hits}/{len(filtered)} creatures have d20pfsrd scraped data")
 
-    write_races_file(filtered, config, output_dir, d20_cache)
+    write_races_file(filtered, config, output_dir, load_known_languages(pcgen_data_dir), d20_cache)
     write_kits_file(filtered, config, output_dir, d20_cache)
     append_abilities_file(filtered, config, output_dir, d20_cache)
     update_pcc_file(config, output_dir)
@@ -1703,7 +1809,7 @@ def generate_source(source_name, creature_names, all_creatures, pcgen_data_dir, 
         create_pcc_file(config, output_dir)
 
     # For existing directories, append to existing files rather than overwriting
-    write_races_file(filtered, config, output_dir, d20_cache, append=is_existing)
+    write_races_file(filtered, config, output_dir, load_known_languages(pcgen_data_dir), d20_cache, append=is_existing)
     write_kits_file(filtered, config, output_dir, d20_cache, append=is_existing)
     append_abilities_file(filtered, config, output_dir, d20_cache)
 
