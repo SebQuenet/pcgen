@@ -35,6 +35,7 @@ import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Supplier;
 
 import pcgen.cdom.base.AssociatedPrereqObject;
 import pcgen.cdom.base.CDOMObject;
@@ -262,6 +263,8 @@ public class CharacterFacadeImpl
 	private boolean allowDebt;
 
 	private int lastExportCharSerial = 0;
+	private int abilityAdditionsInProgress = 0;
+	private boolean isAbilityRefreshPending = false;
 	private PlayerCharacter lastExportChar = null;
 	private LanguageListener langListener;
 	private TemplateListener templateListener;
@@ -633,6 +636,35 @@ public class CharacterFacadeImpl
 		{
 			theCharacter.endBatchMode();
 		}
+		if (abilityAdditionsInProgress > 0)
+		{
+			isAbilityRefreshPending = true;
+			return;
+		}
+		refreshAfterAbilityChange();
+	}
+
+	@Override
+	public <T> T addAbilitiesThenRefresh(Supplier<T> additions)
+	{
+		abilityAdditionsInProgress++;
+		try
+		{
+			return additions.get();
+		}
+		finally
+		{
+			abilityAdditionsInProgress--;
+			if (abilityAdditionsInProgress == 0 && isAbilityRefreshPending)
+			{
+				isAbilityRefreshPending = false;
+				refreshAfterAbilityChange();
+			}
+		}
+	}
+
+	private void refreshAfterAbilityChange()
+	{
 		refreshKitList();
 		refreshAvailableTempBonuses();
 		buildAvailableDomainsList();

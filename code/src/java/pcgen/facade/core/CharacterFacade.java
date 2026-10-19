@@ -23,6 +23,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.function.Supplier;
 
 import pcgen.cdom.enumeration.CharID;
 import pcgen.cdom.enumeration.Gender;
@@ -134,6 +135,15 @@ public interface CharacterFacade extends CompanionFacade
     int getScoreOtherBonus(PCStat stat);
 
 	void addAbility(AbilityCategory category, AbilityFacade ability);
+
+	/**
+	 * Run several ability additions, refreshing what depends on the character's
+	 * abilities once at the end rather than after each addition.
+	 * @param additions The calls to addAbility to make.
+	 * @param <T> What the additions report back.
+	 * @return What the additions reported.
+	 */
+	<T> T addAbilitiesThenRefresh(Supplier<T> additions);
 
 	void removeAbility(AbilityCategory category, AbilityFacade ability);
 

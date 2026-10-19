@@ -133,45 +133,51 @@ public final class AbilityService
 		return characters.byId(characterId).map(character -> {
 			HeadlessUIDelegate delegate = session.getDelegate(characterId);
 			List<String> errors = new ArrayList<>();
-			int accepted = 0;
-
-			for (AbilityRequest request : requests)
-			{
-				AbilityCategory inCategory = switch (findCategory(character, request.categoryKey()))
-				{
-					case ServiceResult.Success<AbilityCategory> found -> found.value();
-					case ServiceResult.Failure<AbilityCategory> missing -> {
-						errors.add(missing.error().message());
-						yield null;
-					}
-				};
-				if (inCategory == null)
-				{
-					continue;
-				}
-				AbilityFacade ability = matching(abilitiesIn(character, inCategory), request.abilityKey());
-				if (ability == null)
-				{
-					errors.add("Ability not found: " + request.abilityKey() + " in " + request.categoryKey());
-					continue;
-				}
-				try
-				{
-					preSelect(delegate, request.choice());
-					character.addAbility(inCategory, ability);
-					accepted++;
-				}
-				catch (RuntimeException e)
-				{
-					errors.add("Failed: " + request.abilityKey() + " - " + e.getMessage());
-				}
-				finally
-				{
-					clearPreSelection(delegate);
-				}
-			}
+			int accepted = character.addAbilitiesThenRefresh(() -> addEach(character, delegate, requests, errors));
 			return new BatchOutcome(accepted, requests.size(), List.copyOf(errors));
 		});
+	}
+
+	private int addEach(CharacterFacade character, HeadlessUIDelegate delegate, List<AbilityRequest> requests,
+		List<String> errors)
+	{
+		int accepted = 0;
+		for (AbilityRequest request : requests)
+		{
+			AbilityCategory inCategory = switch (findCategory(character, request.categoryKey()))
+			{
+				case ServiceResult.Success<AbilityCategory> found -> found.value();
+				case ServiceResult.Failure<AbilityCategory> missing -> {
+					errors.add(missing.error().message());
+					yield null;
+				}
+			};
+			if (inCategory == null)
+			{
+				continue;
+			}
+			AbilityFacade ability = matching(abilitiesIn(character, inCategory), request.abilityKey());
+			if (ability == null)
+			{
+				errors.add("Ability not found: " + request.abilityKey() + " in " + request.categoryKey());
+				continue;
+			}
+			try
+			{
+				preSelect(delegate, request.choice());
+				character.addAbility(inCategory, ability);
+				accepted++;
+			}
+			catch (RuntimeException e)
+			{
+				errors.add("Failed: " + request.abilityKey() + " - " + e.getMessage());
+			}
+			finally
+			{
+				clearPreSelection(delegate);
+			}
+		}
+		return accepted;
 	}
 
 	/** One line of a batch: which ability, in which category, with which answer. */
