@@ -282,7 +282,7 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 {
 
 	// Constants for use in getBonus
-	private static String lastVariable;
+	private String lastVariable;
 	// This marker is static so that the spells allocated to it can also be found in the cloned character.
 	private static final CDOMObject GRANTED_SPELL_CACHE = new ObjectCache();
 

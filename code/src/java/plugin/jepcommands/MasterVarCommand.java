@@ -86,11 +86,8 @@ public class MasterVarCommand extends PCGenCommand
 				throw new ParseException("Invalid parent for function");
 			}
 			PlayerCharacter master = pc.getMasterPC();
-			if (master == null)
-			{
-				throw new ParseException("Invalid: PC had no master");
-			}
-			result = master.getVariableValue((String) param1, variableSource);
+			// A creature with no master, such as a summoned one, counts its master's variables as zero
+			result = master == null ? Float.valueOf(0) : master.getVariableValue((String) param1, variableSource);
 
 			if (result == null)
 			{
