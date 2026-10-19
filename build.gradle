@@ -500,6 +500,8 @@ tasks.named("jpackageImage") {
             // Both launchers run with user.dir set to $APPDIR, so the data has to land there.
             if (Os.isFamily(Os.FAMILY_MAC)) {
                 into layout.buildDirectory.dir("jpackage/PcGen.app/Contents/app")
+            } else if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                into layout.buildDirectory.dir("jpackage/PcGen/app")
             } else {
                 into layout.buildDirectory.dir("jpackage/PcGen/lib/app")
             }
