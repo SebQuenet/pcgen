@@ -112,4 +112,49 @@ public class BonusManagerTest extends AbstractCharacterTestCase
 		}
 	}
 
+	@Test
+	public void testTotalIgnoresBonusWhoseNameOnlyStartsTheSame()
+	{
+		PCTemplate testObj = TestHelper.makeTemplate("AcAndAcCheck");
+		LoadContext context = Globals.getContext();
+		testObj.addToListFor(ListKey.BONUS, Bonus.newBonus(context, "COMBAT|AC|2|TYPE=Luck"));
+		testObj.addToListFor(ListKey.BONUS, Bonus.newBonus(context, "COMBAT|ACCHECK|-3"));
+		PlayerCharacter pc = getCharacter();
+		pc.addTemplate(testObj);
+
+		pc.calcActiveBonuses();
+
+		assertEquals("Incorrect bonus total", 2.0, pc.getTotalBonusTo("COMBAT", "AC"), 0.0001);
+	}
+
+	@Test
+	public void testBonusDueToTypeCountsOnlyThatType()
+	{
+		PCTemplate testObj = TestHelper.makeTemplate("LuckAndArmor");
+		LoadContext context = Globals.getContext();
+		testObj.addToListFor(ListKey.BONUS, Bonus.newBonus(context, "COMBAT|AC|2|TYPE=Luck"));
+		testObj.addToListFor(ListKey.BONUS, Bonus.newBonus(context, "COMBAT|AC|5|TYPE=Armor"));
+		PlayerCharacter pc = getCharacter();
+		pc.addTemplate(testObj);
+
+		pc.calcActiveBonuses();
+
+		assertEquals("Incorrect bonus total", 2.0, pc.getBonusDueToType("COMBAT", "AC", "Luck"), 0.0001);
+	}
+
+	@Test
+	public void testBonusAbsentBeforeRecalculationCountsAfterIt()
+	{
+		PlayerCharacter pc = getCharacter();
+		pc.calcActiveBonuses();
+		pc.getTotalBonusTo("COMBAT", "AC");
+		PCTemplate testObj = TestHelper.makeTemplate("LateArmor");
+		testObj.addToListFor(ListKey.BONUS, Bonus.newBonus(Globals.getContext(), "COMBAT|AC|4|TYPE=Armor"));
+		pc.addTemplate(testObj);
+
+		pc.calcActiveBonuses();
+
+		assertEquals("Incorrect bonus total", 4.0, pc.getTotalBonusTo("COMBAT", "AC"), 0.0001);
+	}
+
 }

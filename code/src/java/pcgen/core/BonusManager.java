@@ -73,6 +73,9 @@ public class BonusManager
 
 	private Map<String, Double> cachedActiveBonusSumsMap = new ConcurrentHashMap<>();
 
+	/** The finished activeBonusMap; null while it is being built. */
+	private volatile CompletedBonusMap completedBonusMap;
+
 	private Map<BonusObj, Object> activeBonusBySource = new IdentityHashMap<>();
 
 	private final Map<BonusObj, TempBonusInfo> tempBonusBySource = new IdentityHashMap<>();
@@ -93,23 +96,39 @@ public class BonusManager
 	 */
 	private double sumActiveBonusMap(String fullyQualifiedBonusType)
 	{
-		double bonus = 0;
 		if (fullyQualifiedBonusType == null)
 		{
 			Logging.errorPrint("Unable to sum BONUS when request is null");
-			return bonus;
+			return 0;
 		}
 
 		fullyQualifiedBonusType = fullyQualifiedBonusType.toUpperCase();
-		if (cachedActiveBonusSumsMap.containsKey(fullyQualifiedBonusType))
+		CompletedBonusMap completed = completedBonusMap;
+		if (completed == null)
 		{
-			return cachedActiveBonusSumsMap.get(fullyQualifiedBonusType);
+			// While the map is being built it keeps growing: only a full scan sees every
+			// key, and a sum that found nothing yet may still change.
+			return sumMatchingBonuses(fullyQualifiedBonusType, activeBonusMap, activeBonusMap.keySet(),
+				cachedActiveBonusSumsMap, false);
+		}
+		return sumMatchingBonuses(fullyQualifiedBonusType, completed.bonuses,
+			completed.keysSharingStem(fullyQualifiedBonusType), completed.sums, true);
+	}
+
+	private static double sumMatchingBonuses(String fullyQualifiedBonusType, Map<String, String> bonuses,
+		Collection<String> candidateKeys, Map<String, Double> sums, boolean isMapComplete)
+	{
+		Double cachedSum = sums.get(fullyQualifiedBonusType);
+		if (cachedSum != null)
+		{
+			return cachedSum;
 		}
 
+		double bonus = 0;
 		final List<String> aList = new ArrayList<>();
 		boolean found = false;
 
-		for (String fullyQualifedCurrentBonus : activeBonusMap.keySet())
+		for (String fullyQualifedCurrentBonus : candidateKeys)
 		{
 			// aKey is either of the form:
 			// COMBAT.AC
@@ -129,22 +148,7 @@ public class BonusManager
 				continue;
 			}
 
-			String currentTypedBonusNameInfo = fullyQualifedCurrentBonus;
-
-			// rString could be something like:
-			// COMBAT.AC:Armor.REPLACE
-			// So need to remove the .STACK or .REPLACE
-			// to get a match for prefix like: COMBAT.AC:Armor
-			if (currentTypedBonusNameInfo.endsWith(".STACK"))
-			{
-				currentTypedBonusNameInfo =
-						currentTypedBonusNameInfo.substring(0, currentTypedBonusNameInfo.length() - 6);
-			}
-			else if (currentTypedBonusNameInfo.endsWith(".REPLACE"))
-			{
-				currentTypedBonusNameInfo =
-						currentTypedBonusNameInfo.substring(0, currentTypedBonusNameInfo.length() - 8);
-			}
+			String currentTypedBonusNameInfo = withoutStackingSuffix(fullyQualifedCurrentBonus);
 
             // if prefix is of the form:
 			// COMBAT.AC
@@ -167,9 +171,10 @@ public class BonusManager
 				aList.add(currentTypedBonusNameInfo + ".STACK");
 				aList.add(currentTypedBonusNameInfo + ".REPLACE");
 
-				final double aBonus = getActiveBonusForMapKey(currentTypedBonusNameInfo, Double.NaN);
-				final double replaceBonus = getActiveBonusForMapKey(currentTypedBonusNameInfo + ".REPLACE", Double.NaN);
-				final double stackBonus = getActiveBonusForMapKey(currentTypedBonusNameInfo + ".STACK", 0);
+				final double aBonus = getBonusForMapKey(bonuses, currentTypedBonusNameInfo, Double.NaN);
+				final double replaceBonus =
+						getBonusForMapKey(bonuses, currentTypedBonusNameInfo + ".REPLACE", Double.NaN);
+				final double stackBonus = getBonusForMapKey(bonuses, currentTypedBonusNameInfo + ".STACK", 0);
 				//
 				// Using NaNs in order to be able to get the max
 				// between an undefined bonus and a negative
@@ -199,12 +204,72 @@ public class BonusManager
 			}
 		}
 
-		// cache value only if it has been positively found
-		if (found)
+		if (found || isMapComplete)
 		{
-			cachedActiveBonusSumsMap.put(fullyQualifiedBonusType, bonus);
+			sums.put(fullyQualifiedBonusType, bonus);
 		}
 		return bonus;
+	}
+
+	/**
+	 * An activeBonusMap whose build has finished, so it no longer changes, with the
+	 * sums and the index worked out from it. A query reads it once: a rebuild that
+	 * another thread starts meanwhile cannot mix two maps into one answer.
+	 */
+	private static final class CompletedBonusMap
+	{
+		private final Map<String, String> bonuses;
+
+		private final Map<String, Double> sums;
+
+		private volatile Map<String, List<String>> keysByStem;
+
+		private CompletedBonusMap(Map<String, String> bonuses, Map<String, Double> sums)
+		{
+			this.bonuses = bonuses;
+			this.sums = sums;
+		}
+
+		/**
+		 * The keys that can add to the given bonus. A key adds to COMBAT.AC only if,
+		 * without its .STACK or .REPLACE suffix, it is COMBAT.AC or starts with
+		 * COMBAT.AC: - so it always shares the part before the first colon.
+		 */
+		private Collection<String> keysSharingStem(String fullyQualifiedBonusType)
+		{
+			Map<String, List<String>> index = keysByStem;
+			if (index == null)
+			{
+				index = new HashMap<>();
+				for (String key : bonuses.keySet())
+				{
+					index.computeIfAbsent(stemOf(withoutStackingSuffix(key)), stem -> new ArrayList<>()).add(key);
+				}
+				keysByStem = index;
+			}
+			return index.getOrDefault(stemOf(fullyQualifiedBonusType), List.of());
+		}
+	}
+
+	/** COMBAT.AC:Luck becomes COMBAT.AC */
+	private static String stemOf(String bonusType)
+	{
+		int colon = bonusType.indexOf(':');
+		return colon < 0 ? bonusType : bonusType.substring(0, colon);
+	}
+
+	/** COMBAT.AC:Armor.REPLACE becomes COMBAT.AC:Armor */
+	private static String withoutStackingSuffix(String bonusType)
+	{
+		if (bonusType.endsWith(".STACK"))
+		{
+			return bonusType.substring(0, bonusType.length() - 6);
+		}
+		if (bonusType.endsWith(".REPLACE"))
+		{
+			return bonusType.substring(0, bonusType.length() - 8);
+		}
+		return bonusType;
 	}
 
 	/**
@@ -217,9 +282,13 @@ public class BonusManager
 	 */
 	private double getActiveBonusForMapKey(String fullyQualifiedBonusType, final double defaultValue)
 	{
-		fullyQualifiedBonusType = fullyQualifiedBonusType.toUpperCase();
+		return getBonusForMapKey(activeBonusMap, fullyQualifiedBonusType, defaultValue);
+	}
 
-		final String regVal = activeBonusMap.get(fullyQualifiedBonusType);
+	private static double getBonusForMapKey(Map<String, String> bonuses, String fullyQualifiedBonusType,
+		final double defaultValue)
+	{
+		final String regVal = bonuses.get(fullyQualifiedBonusType.toUpperCase());
 
 		if (regVal != null)
 		{
@@ -331,6 +400,19 @@ public class BonusManager
 	 * Build the bonus HashMap from all active BonusObj's
 	 */
 	void buildActiveBonusMap()
+	{
+		completedBonusMap = null;
+		try
+		{
+			fillActiveBonusMap();
+		}
+		finally
+		{
+			completedBonusMap = new CompletedBonusMap(activeBonusMap, cachedActiveBonusSumsMap);
+		}
+	}
+
+	private void fillActiveBonusMap()
 	{
 		activeBonusMap = new ConcurrentHashMap<>();
 		cachedActiveBonusSumsMap = new ConcurrentHashMap<>();
@@ -916,6 +998,10 @@ public class BonusManager
 		clone.activeBonusBySource.putAll(activeBonusBySource);
 		clone.tempBonusBySource.putAll(tempBonusBySource);
 		clone.activeBonusMap.putAll(activeBonusMap);
+		if (completedBonusMap != null)
+		{
+			clone.completedBonusMap = new CompletedBonusMap(clone.activeBonusMap, clone.cachedActiveBonusSumsMap);
+		}
 		clone.tempBonusFilters.addAll(tempBonusFilters);
 		return clone;
 	}
