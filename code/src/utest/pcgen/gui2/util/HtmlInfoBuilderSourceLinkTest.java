@@ -44,7 +44,7 @@ class HtmlInfoBuilderSourceLinkTest
 		feat.put(ObjectKey.ABILITY_CAT, new AbilityCategory("FEAT"));
 		feat.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst"));
 		assertEquals("<html>Description<br><a href=\"https://aonprd.com/FeatDisplay.aspx?ItemName=Power%20Attack\">"
-			+ "Archives of Nethys</a></html>",
+			+ "Archives of Nethys</a>" + searchLinks("Power%20Attack", "Power%20Attack") + "</html>",
 			new HtmlInfoBuilder().withSource(feat).append("Description").toString());
 
 		Spell spell = new Spell();
@@ -52,14 +52,14 @@ class HtmlInfoBuilderSourceLinkTest
 		spell.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_spells.lst"));
 		spell.put(StringKey.SOURCE_LINK, "http://paizo.com/pathfinderRPG/prd/spells/magicMissile.html");
 		assertEquals("<html>Description<br><a href=\"https://aonprd.com/SpellDisplay.aspx?ItemName=Magic%20Missile\">"
-			+ "Archives of Nethys</a></html>",
+			+ "Archives of Nethys</a>" + searchLinks("Magic%20Missile", "Magic%20Missile") + "</html>",
 			new HtmlInfoBuilder().withSource(spell).append("Description").toString());
 
 		Race creature = new Race();
 		creature.setName("Wolf");
 		creature.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/bestiary/bestiary_races.lst"));
 		assertEquals("<html>Description<br><a href=\"https://aonprd.com/MonsterDisplay.aspx?ItemName=Wolf\">"
-			+ "Archives of Nethys</a></html>",
+			+ "Archives of Nethys</a>" + searchLinks("Wolf", "Wolf") + "</html>",
 			new HtmlInfoBuilder().withSource(creature).append("Description").toString());
 	}
 
@@ -71,12 +71,45 @@ class HtmlInfoBuilderSourceLinkTest
 		ability.put(ObjectKey.ABILITY_CAT, new AbilityCategory("Special Ability"));
 		ability.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities.lst"));
 		assertEquals("<html>Description<br><a href=\"https://aonprd.com/Search.aspx?Query=Rogue%20Talent\">"
-			+ "Archives of Nethys</a></html>",
+			+ "Archives of Nethys</a>" + searchLinks("Rogue%20Talent", "Rogue%20Talent") + "</html>",
 			new HtmlInfoBuilder().withSource(ability).append("Description").toString());
 
 		ability.setSourceURI(URI.create("file:/data/3e/paizo/abilities.lst"));
 		assertEquals("<html>Description</html>",
 			new HtmlInfoBuilder().withSource(ability).append("Description").toString());
+	}
+
+	@Test
+	void searchesPathfinderFrWithTheTranslatedName()
+	{
+		Ability feat = new Ability();
+		feat.setName("Power Attack");
+		feat.put(StringKey.LOCALIZED_NAME, "Attaque en puissance");
+		feat.put(ObjectKey.ABILITY_CAT, new AbilityCategory("FEAT"));
+		feat.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst"));
+		assertEquals("<html>Description<br><a href=\"https://aonprd.com/FeatDisplay.aspx?ItemName=Power%20Attack\">"
+			+ "Archives of Nethys</a>" + searchLinks("Attaque%20en%20puissance", "Power%20Attack") + "</html>",
+			new HtmlInfoBuilder().withSource(feat).append("Description").toString());
+	}
+
+	@Test
+	void doesNotRepeatTheSiteOfTheSourceLink()
+	{
+		Ability feat = new Ability();
+		feat.setName("Power Attack");
+		feat.put(StringKey.SOURCE_LINK, "https://www.d20pfsrd.com/feats/combat-feats/power-attack-combat/");
+		assertEquals("<html>Description<br><a href=\"https://www.d20pfsrd.com/feats/combat-feats/power-attack-combat/\">"
+			+ "d20PFSRD</a>"
+			+ "<br><a href=\"https://www.pathfinder-fr.org/Wiki/Search.aspx?Query=Power%20Attack\">Pathfinder-fr</a>"
+			+ "<br><a href=\"https://pathfinderwiki.com/w/index.php?search=Power%20Attack\">PathfinderWiki</a></html>",
+			new HtmlInfoBuilder().withSource(feat).append("Description").toString());
+	}
+
+	private static String searchLinks(String frenchName, String englishName)
+	{
+		return "<br><a href=\"https://www.pathfinder-fr.org/Wiki/Search.aspx?Query=" + frenchName + "\">Pathfinder-fr</a>"
+			+ "<br><a href=\"https://pathfinderwiki.com/w/index.php?search=" + englishName + "\">PathfinderWiki</a>"
+			+ "<br><a href=\"https://www.d20pfsrd.com/?s=" + englishName + "\">d20PFSRD</a>";
 	}
 
 	private void assertLink(String url, String label)

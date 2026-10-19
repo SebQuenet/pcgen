@@ -42,6 +42,14 @@ public class HtmlInfoBuilder
 	/** Constant for 3 spaces in HTML */
 	public static final String THREE_SPACES = " &nbsp; "; //$NON-NLS-1$
 
+	private static final String NETHYS_LABEL = "Archives of Nethys";
+	private static final String PATHFINDER_FR_LABEL = "Pathfinder-fr";
+	private static final String PATHFINDER_WIKI_LABEL = "PathfinderWiki";
+	private static final String D20PFSRD_LABEL = "d20PFSRD";
+	private static final String PATHFINDER_FR_SEARCH = "https://www.pathfinder-fr.org/Wiki/Search.aspx?Query=";
+	private static final String PATHFINDER_WIKI_SEARCH = "https://pathfinderwiki.com/w/index.php?search=";
+	private static final String D20PFSRD_SEARCH = "https://www.d20pfsrd.com/?s=";
+
 	private final StringBuilder buffer = new StringBuilder(300);
 	private final boolean fullDocument;
 	private CDOMObject sourceObject;
@@ -201,13 +209,12 @@ public class HtmlInfoBuilder
 			if (label == null)
 			{
 				link = paizoLink(sourceObject);
-				label = (link == null) ? null : "Archives of Nethys";
+				label = (link == null) ? null : NETHYS_LABEL;
 			}
 			if (label != null)
 			{
-				buffer.append("<br><a href=\"")
-					.append(link.trim().replace("&", "&amp;").replace("\"", "&quot;"))
-					.append("\">").append(label).append("</a>");
+				appendLink(link, label);
+				appendSearchLinks(sourceObject, label);
 			}
 		}
 		if (fullDocument)
@@ -215,6 +222,38 @@ public class HtmlInfoBuilder
 			buffer.append("</html>");
 		}
 		return buffer.toString();
+	}
+
+	private void appendLink(String link, String label)
+	{
+		buffer.append("<br><a href=\"")
+			.append(link.trim().replace("&", "&amp;").replace("\"", "&quot;"))
+			.append("\">").append(label).append("</a>");
+	}
+
+	private void appendSearchLinks(CDOMObject source, String primaryLabel)
+	{
+		String englishName = source.getDisplayName();
+		if (englishName == null || englishName.isBlank())
+		{
+			return;
+		}
+		appendSearchLink(PATHFINDER_FR_LABEL, PATHFINDER_FR_SEARCH, source.getLocalizedName(), primaryLabel);
+		appendSearchLink(PATHFINDER_WIKI_LABEL, PATHFINDER_WIKI_SEARCH, englishName, primaryLabel);
+		appendSearchLink(D20PFSRD_LABEL, D20PFSRD_SEARCH, englishName, primaryLabel);
+	}
+
+	private void appendSearchLink(String label, String searchUrl, String name, String primaryLabel)
+	{
+		if (!label.equals(primaryLabel))
+		{
+			appendLink(searchUrl + encode(name), label);
+		}
+	}
+
+	private static String encode(String name)
+	{
+		return URLEncoder.encode(name, StandardCharsets.UTF_8).replace("+", "%20");
 	}
 
 	private static String sourceLabel(String link)
@@ -234,9 +273,9 @@ public class HtmlInfoBuilder
 			}
 			return switch (host.toLowerCase(Locale.ROOT).replaceFirst("^www\\.", ""))
 			{
-				case "d20pfsrd.com" -> "d20PFSRD";
-				case "aonprd.com" -> "Archives of Nethys";
-				case "pathfinderwiki.com" -> "PathfinderWiki";
+				case "d20pfsrd.com" -> D20PFSRD_LABEL;
+				case "aonprd.com" -> NETHYS_LABEL;
+				case "pathfinderwiki.com" -> PATHFINDER_WIKI_LABEL;
 				default -> null;
 			};
 		}
@@ -263,7 +302,7 @@ public class HtmlInfoBuilder
 		{
 			return null;
 		}
-		String encodedName = URLEncoder.encode(name, StandardCharsets.UTF_8).replace("+", "%20");
+		String encodedName = encode(name);
 		String page = null;
 		if (source instanceof Spell)
 		{
