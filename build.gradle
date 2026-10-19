@@ -450,6 +450,8 @@ runtime {
         }
         else if (osFamily == "windows") {
             installerType = 'msi'
+            // Lets the player pick the install folder instead of forcing C:\Program Files.
+            installerOptions += ['--win-dir-chooser', '--win-menu', '--win-shortcut']
         }
         imageName = "PcGen"
 
