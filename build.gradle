@@ -248,6 +248,13 @@ sourceSets {
     }
 }
 
+// The About dialog reads the licence from the classpath, next to its controller
+processResources {
+    from('code/LICENSE') {
+        into 'pcgen/gui3/dialog'
+    }
+}
+
 /* Copy 'master' outputsheets into different genre folders */
 tasks.register("copyMasterSheets", Copy) {
     def filesToCopy = copySpec {

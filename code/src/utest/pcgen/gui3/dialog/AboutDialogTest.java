@@ -27,6 +27,7 @@ import pcgen.system.LanguageBundle;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -61,5 +62,12 @@ class AboutDialogTest
 	void test_about_dialog_loads(final FxRobotInterface robot)
 	{
 		FxAssert.verifyThat("#abt_credits", NodeMatchers.isVisible());
+	}
+
+	@Test
+	void test_about_dialog_shows_license(final FxRobotInterface robot)
+	{
+		FxAssert.verifyThat("#licenseArea",
+			(TextArea licenseArea) -> licenseArea.getText().contains("GNU LESSER GENERAL PUBLIC LICENSE"));
 	}
 }
