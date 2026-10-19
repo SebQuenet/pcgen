@@ -41,6 +41,7 @@ import pcgen.util.Logging;
  *
  * <p>
  * Arguments: {@code --gamemode <name> --campaigns <key>,<key>... --out <folder>}.
+ * Use semicolons between keys when a campaign key itself contains a comma.
  */
 public final class TranslationSourceMain
 {
@@ -56,7 +57,9 @@ public final class TranslationSourceMain
 	{
 		HeadlessBootstrap.start(HeadlessBootstrap.settingsDirFrom(args));
 		PcgenSession session = new PcgenSession();
-		session.loadSources(valueAfter(args, "--gamemode"), Arrays.asList(valueAfter(args, "--campaigns").split(",")));
+		String campaignKeys = valueAfter(args, "--campaigns");
+		String separator = campaignKeys.contains(";") ? ";" : ",";
+		session.loadSources(valueAfter(args, "--gamemode"), Arrays.asList(campaignKeys.split(separator)));
 
 		Path dataFolder = Path.of(ConfigurationSettings.getPccFilesDir()).toAbsolutePath().normalize();
 		Path outFolder = Path.of(valueAfter(args, "--out"));
