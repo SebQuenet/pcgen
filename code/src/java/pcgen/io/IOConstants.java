@@ -172,6 +172,8 @@ interface IOConstants
 	String TAG_CONJURATIONS = "CONJURATIONS";
 	/** Conjurations: how many rounds a newly conjured creature stays */
 	String TAG_CONJURATIONDURATION = "CONJURATIONDURATION";
+
+	String TAG_CONJURATIONSKELETONUSED = "CONJURATIONSKELETONUSED";
 	/** Conjurations: one line per creature in play, its name, number, damage and rounds left */
 	String TAG_CONJURED = "CONJURED";
 	/** Conjurations: one line per group bonus, its source key and chosen value */

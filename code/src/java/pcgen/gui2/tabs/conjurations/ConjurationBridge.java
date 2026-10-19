@@ -17,12 +17,29 @@
  */
 package pcgen.gui2.tabs.conjurations;
 
+import java.io.IOException;
+import java.net.URI;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.OptionalInt;
+import java.util.Set;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.function.BooleanSupplier;
+import java.util.function.Function;
 
+import pcgen.core.conjurations.AverageDamage;
+import pcgen.core.conjurations.CreatureStats;
 import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.ConjurationSheetFacade;
+import pcgen.gui2.tools.DesktopBrowserLauncher;
 import pcgen.util.Logging;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -38,26 +55,60 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * reaches it by reflection. The same page opened in an ordinary browser finds
  * no bridge and keeps the fight to itself.
  */
-public final class ConjurationBridge
+public final class ConjurationBridge implements AutoCloseable
 {
 
 	/** What the page passes for a bonus that asks no value. */
 	public static final int NO_VALUE = -1;
 
 	private static final ObjectMapper JSON = new ObjectMapper();
+	private static final String PENDING = "{\"pending\":true}";
+	private static final Set<String> REFERENCE_HOSTS = Set.of("rpgbot.net", "legacy.aonprd.com",
+		"aonprd.com", "www.aonprd.com", "www.d20pfsrd.com");
 
 	private final ConjurationSheetFacade sheet;
+	private final Function<String, Boolean> selectPublished;
+	private final BooleanSupplier visible;
+	private final ExecutorService catalogWorker = Executors.newSingleThreadExecutor(task -> {
+		Thread worker = new Thread(task, "pcgen-conjuration-catalog");
+		worker.setDaemon(true);
+		worker.setPriority(Thread.MIN_PRIORITY);
+		return worker;
+	});
+	private final Map<String, Future<Optional<CreatureStats>>> catalogJobs = new HashMap<>();
+	private String catalogSource = "";
 
 	/**
 	 * @param sheet the conjurations to write through. Never null.
 	 */
 	public ConjurationBridge(ConjurationSheetFacade sheet)
 	{
+		this(sheet, ignored -> false, () -> true);
+	}
+
+	/** @param selectPublished records a chosen published option in the source editor. */
+	public ConjurationBridge(ConjurationSheetFacade sheet, Function<String, Boolean> selectPublished)
+	{
+		this(sheet, selectPublished, () -> true);
+	}
+
+	/** @param visible whether the page is currently shown to the user. */
+	public ConjurationBridge(ConjurationSheetFacade sheet, Function<String, Boolean> selectPublished,
+		BooleanSupplier visible)
+	{
 		if (sheet == null)
 		{
 			throw new IllegalArgumentException("A conjuration bridge needs conjurations to write through");
 		}
 		this.sheet = sheet;
+		this.selectPublished = selectPublished;
+		this.visible = visible;
+	}
+
+	/** Selects one of the fixed choices offered by Expanded Summon Monster. */
+	public boolean selectPublished(String creature)
+	{
+		return selectPublished.apply(creature);
 	}
 
 	/**
@@ -166,6 +217,116 @@ public final class ConjurationBridge
 	public String view(String creature, int number)
 	{
 		return json(sheet.viewOf(creature, number).orElse(null));
+	}
+
+	/** Records a creature's selected alternate form on the character. */
+	public boolean setForm(String creature, int number, String form)
+	{
+		return sheet.setForm(creature, number, form);
+	}
+
+	/** Resets the daily use of Skeleton Summoner after resting. */
+	public void resetSkeletonUse()
+	{
+		sheet.resetSkeletonUse();
+	}
+
+	/** @return computed catalog metrics against the chosen AC, or null for a handwritten entry. */
+	public String catalogStats(String creature, int targetArmorClass)
+	{
+		String source = sheet.getCatalogSource();
+		if (!source.equals(catalogSource))
+		{
+			catalogJobs.values().forEach(job -> job.cancel(false));
+			catalogJobs.clear();
+			catalogSource = source;
+		}
+		if (!visible.getAsBoolean())
+		{
+			return PENDING;
+		}
+		Future<Optional<CreatureStats>> job;
+		try
+		{
+			job = catalogJobs.computeIfAbsent(creature,
+				ignored -> catalogWorker.submit(() -> sheet.catalogStatsOf(creature)));
+		}
+		catch (RejectedExecutionException closed)
+		{
+			return PENDING;
+		}
+		if (!job.isDone())
+		{
+			return PENDING;
+		}
+		try
+		{
+			Optional<CreatureStats> stats = job.get();
+			catalogJobs.remove(creature);
+			return json(stats.map(value -> catalogMetrics(value, targetArmorClass)).orElse(null));
+		}
+		catch (CancellationException | ExecutionException | InterruptedException error)
+		{
+			catalogJobs.remove(creature);
+			if (error instanceof InterruptedException)
+			{
+				Thread.currentThread().interrupt();
+			}
+			Logging.errorPrint("Could not calculate conjuration catalog stats", error);
+			return "null";
+		}
+	}
+
+	@Override
+	public void close()
+	{
+		catalogWorker.shutdownNow();
+	}
+
+	/** Computed metrics for one creature in play, including its active bonuses. */
+	public String inPlayStats(String creature, int number, int targetArmorClass)
+	{
+		return json(sheet.viewOf(creature, number)
+			.map(view -> catalogMetrics(view.stats(), targetArmorClass)).orElse(null));
+	}
+
+	/** Opens one of the published rules or guide references in the system browser. */
+	public void openReference(String address)
+	{
+		try
+		{
+			URI reference = URI.create(address);
+			if ("https".equals(reference.getScheme()) && reference.getHost() != null
+				&& REFERENCE_HOSTS.contains(reference.getHost()))
+			{
+				DesktopBrowserLauncher.viewInBrowser(reference);
+			}
+		}
+		catch (IllegalArgumentException | IOException error)
+		{
+			Logging.errorPrint("Could not open conjuration reference", error);
+		}
+	}
+
+	private static Map<String, Object> catalogMetrics(CreatureStats stats, int targetArmorClass)
+	{
+		Map<String, Object> values = new LinkedHashMap<>();
+		OptionalDouble damage = AverageDamage.expectedAgainst(stats.attacks(), targetArmorClass);
+		values.put("hitDice", stats.hitDice());
+		values.put("expectedDamagePerRound", damage.isPresent() ? damage.getAsDouble() : null);
+		values.put("armorClass", stats.armorClass());
+		values.put("touchArmorClass", stats.touchArmorClass());
+		values.put("flatFootedArmorClass", stats.flatFootedArmorClass());
+		values.put("combatManeuverBonus", stats.combatManeuverBonus());
+		values.put("combatManeuverDefense", stats.combatManeuverDefense());
+		values.put("maximumHitPoints", stats.maximumHitPoints());
+		values.put("speed", stats.speed());
+		values.put("attacks", stats.attacks());
+		values.put("reflex", stats.reflex());
+		values.put("fortitude", stats.fortitude());
+		values.put("will", stats.will());
+		values.put("initiative", stats.initiative());
+		return values;
 	}
 
 	/**

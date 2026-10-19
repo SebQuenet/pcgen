@@ -1209,6 +1209,8 @@ final class PCGVer2Parser implements PCGParser
 		}
 		parseConjuredLines(cache.containsKey(IOConstants.TAG_CONJURATIONDURATION)
 			? cache.get(IOConstants.TAG_CONJURATIONDURATION) : List.of(),
+			cache.containsKey(IOConstants.TAG_CONJURATIONSKELETONUSED)
+				? cache.get(IOConstants.TAG_CONJURATIONSKELETONUSED) : List.of(),
 			cache.containsKey(IOConstants.TAG_CONJURED) ? cache.get(IOConstants.TAG_CONJURED) : List.of(),
 			cache.containsKey(IOConstants.TAG_CONJUREDGROUPBONUS)
 				? cache.get(IOConstants.TAG_CONJUREDGROUPBONUS) : List.of(),
@@ -3366,7 +3368,8 @@ final class PCGVer2Parser implements PCGParser
 	 * @param groupBonusLines the CONJUREDGROUPBONUS lines, in file order.
 	 * @param bonusLines the CONJUREDBONUS lines, in file order.
 	 */
-	private void parseConjuredLines(final List<String> durationLines, final List<String> conjuredLines,
+	private void parseConjuredLines(final List<String> durationLines, final List<String> skeletonLines,
+		final List<String> conjuredLines,
 		final List<String> groupBonusLines, final List<String> bonusLines)
 	{
 		int duration = 0;
@@ -3383,14 +3386,15 @@ final class PCGVer2Parser implements PCGParser
 			}
 		}
 
-		ConjurationSession fight = new ConjurationSession(duration, List.of());
+		ConjurationSession fight = new ConjurationSession(duration, List.of())
+			.withSkeletonUsed(skeletonLines.stream().anyMatch(line -> line.endsWith(":1")));
 		for (final String line : conjuredLines)
 		{
 			final String body = line.substring(IOConstants.TAG_CONJURED.length() + 1);
 			final String[] fields = body.split("\\|", -1);
-			if (fields.length != CONJURED_FIELDS)
+			if (fields.length != CONJURED_FIELDS && fields.length != CONJURED_FIELDS + 1)
 			{
-				warnings.add("Conjured creature line without its four fields was dropped: " + body);
+				warnings.add("Conjured creature line without its four or five fields was dropped: " + body);
 				continue;
 			}
 			try
@@ -3398,7 +3402,8 @@ final class PCGVer2Parser implements PCGParser
 				final OptionalInt rounds =
 						fields[3].isBlank() ? OptionalInt.empty() : OptionalInt.of(Integer.parseInt(fields[3].strip()));
 				fight = fight.with(new ConjuredCreature(EntityEncoder.decode(fields[0]),
-					Integer.parseInt(fields[1].strip()), Integer.parseInt(fields[2].strip()), rounds));
+					Integer.parseInt(fields[1].strip()), Integer.parseInt(fields[2].strip()), rounds, List.of(),
+					fields.length > CONJURED_FIELDS ? EntityEncoder.decode(fields[4]) : ""));
 			}
 			catch (IllegalArgumentException e)
 			{

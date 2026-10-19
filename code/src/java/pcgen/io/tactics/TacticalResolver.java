@@ -19,8 +19,11 @@ package pcgen.io.tactics;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Optional;
 import pcgen.cdom.base.Constants;
 import pcgen.core.Equipment;
@@ -46,6 +49,10 @@ public final class TacticalResolver
 {
 	private final PlayerCharacter character;
 	private final WeaponToken weaponToken = new WeaponToken();
+	private final Map<String, Optional<ResolvedWeapon>> resolvedWeapons = new HashMap<>();
+	private final Map<SpellSource, List<ResolvedSpell>> resolvedSpells = new EnumMap<>(SpellSource.class);
+	private List<Equipment> weapons;
+	private List<String> temporaryBonusNames;
 
 	/**
 	 * @param character the character whose numbers the sheet borrows. Never
@@ -67,11 +74,19 @@ public final class TacticalResolver
 	 */
 	public Optional<ResolvedWeapon> weapon(String name)
 	{
-		List<Equipment> weapons = character.getExpandedWeapons(Constants.MERGE_ALL);
+		return resolvedWeapons.computeIfAbsent(name.strip().toLowerCase(Locale.ROOT), this::resolveWeapon);
+	}
+
+	private Optional<ResolvedWeapon> resolveWeapon(String name)
+	{
+		if (weapons == null)
+		{
+			weapons = character.getExpandedWeapons(Constants.MERGE_ALL);
+		}
 		for (int index = 0; index < weapons.size(); index++)
 		{
 			Equipment weapon = weapons.get(index);
-			if (weapon.getName().equalsIgnoreCase(name.strip()))
+			if (weapon.getName().equalsIgnoreCase(name))
 			{
 				return Optional.of(new ResolvedWeapon(weapon.getName(), field(index, "TOTALHIT"),
 					field(index, "DAMAGE"), field(index, "CRIT")));
@@ -110,7 +125,11 @@ public final class TacticalResolver
 	 */
 	public List<String> temporaryBonusNames()
 	{
-		return List.copyOf(character.getNamedTempBonusList());
+		if (temporaryBonusNames == null)
+		{
+			temporaryBonusNames = List.copyOf(character.getNamedTempBonusList());
+		}
+		return temporaryBonusNames;
 	}
 
 	/**
@@ -123,7 +142,7 @@ public final class TacticalResolver
 		{
 			return false;
 		}
-		return character.getNamedTempBonusList().stream().anyMatch(held -> held.equalsIgnoreCase(name.strip()));
+		return temporaryBonusNames().stream().anyMatch(held -> held.equalsIgnoreCase(name.strip()));
 	}
 
 	/**
@@ -133,6 +152,11 @@ public final class TacticalResolver
 	 * @return the spells, empty when the character holds none of that kind
 	 */
 	public List<ResolvedSpell> spells(SpellSource source)
+	{
+		return resolvedSpells.computeIfAbsent(source, this::resolveSpells);
+	}
+
+	private List<ResolvedSpell> resolveSpells(SpellSource source)
 	{
 		String knownBook = Globals.getDefaultSpellBook();
 		CharacterDisplay display = character.getDisplay();

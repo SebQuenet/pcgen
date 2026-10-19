@@ -19,6 +19,16 @@
  */
 package pcgen.gui2.util;
 
+import java.net.URI;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Locale;
+
+import pcgen.cdom.base.CDOMObject;
+import pcgen.cdom.enumeration.StringKey;
+import pcgen.core.Ability;
+import pcgen.core.Race;
+import pcgen.core.spell.Spell;
 import pcgen.system.LanguageBundle;
 
 /**
@@ -34,6 +44,13 @@ public class HtmlInfoBuilder
 
 	private final StringBuilder buffer = new StringBuilder(300);
 	private final boolean fullDocument;
+	private CDOMObject sourceObject;
+
+	public HtmlInfoBuilder withSource(CDOMObject sourceObject)
+	{
+		this.sourceObject = sourceObject;
+		return this;
+	}
 
 	public HtmlInfoBuilder()
 	{
@@ -177,10 +194,98 @@ public class HtmlInfoBuilder
 	@Override
 	public String toString()
 	{
+		if (sourceObject != null)
+		{
+			String link = sourceObject.get(StringKey.SOURCE_LINK);
+			String label = sourceLabel(link);
+			if (label == null)
+			{
+				link = paizoLink(sourceObject);
+				label = (link == null) ? null : "Archives of Nethys";
+			}
+			if (label != null)
+			{
+				buffer.append("<br><a href=\"")
+					.append(link.trim().replace("&", "&amp;").replace("\"", "&quot;"))
+					.append("\">").append(label).append("</a>");
+			}
+		}
 		if (fullDocument)
 		{
 			buffer.append("</html>");
 		}
 		return buffer.toString();
+	}
+
+	private static String sourceLabel(String link)
+	{
+		if (link == null || link.isBlank())
+		{
+			return null;
+		}
+		try
+		{
+			URI uri = URI.create(link.trim());
+			String host = uri.getHost();
+			if (host == null || !("http".equalsIgnoreCase(uri.getScheme())
+				|| "https".equalsIgnoreCase(uri.getScheme())))
+			{
+				return null;
+			}
+			return switch (host.toLowerCase(Locale.ROOT).replaceFirst("^www\\.", ""))
+			{
+				case "d20pfsrd.com" -> "d20PFSRD";
+				case "aonprd.com" -> "Archives of Nethys";
+				case "pathfinderwiki.com" -> "PathfinderWiki";
+				default -> null;
+			};
+		}
+		catch (IllegalArgumentException ignored)
+		{
+			return null;
+		}
+	}
+
+	private static String paizoLink(CDOMObject source)
+	{
+		URI sourceUri = source.getSourceURI();
+		if (sourceUri == null || sourceUri.getPath() == null)
+		{
+			return null;
+		}
+		String path = sourceUri.getPath().replace('\\', '/');
+		if (!path.contains("/pathfinder/paizo/") && !path.contains("/pathfinder_pfs/paizo/"))
+		{
+			return null;
+		}
+		String name = source.getDisplayName();
+		if (name == null || name.isBlank())
+		{
+			return null;
+		}
+		String encodedName = URLEncoder.encode(name, StandardCharsets.UTF_8).replace("+", "%20");
+		String page = null;
+		if (source instanceof Spell)
+		{
+			page = "SpellDisplay.aspx?ItemName=";
+		}
+		else if (source instanceof Ability ability && ability.getCDOMCategory() != null)
+		{
+			page = switch (ability.getCDOMCategory().getKeyName().toUpperCase(Locale.ROOT))
+			{
+				case "FEAT" -> "FeatDisplay.aspx?ItemName=";
+				case "TRAIT" -> "TraitDisplay.aspx?ItemName=";
+				default -> null;
+			};
+		}
+		else if (source instanceof Race)
+		{
+			page = path.contains("/bestiary") ? "MonsterDisplay.aspx?ItemName=" : "RacesDisplay.aspx?ItemName=";
+		}
+		if (page == null || name.contains("~") || name.contains("("))
+		{
+			page = "Search.aspx?Query=";
+		}
+		return "https://aonprd.com/" + page + encodedName;
 	}
 }

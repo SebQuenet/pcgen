@@ -18,6 +18,10 @@
 package pcgen.core.conjurations;
 
 import java.util.List;
+import java.util.Map;
+import java.util.OptionalInt;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * A creature the character can conjure: a race of PCGen's data and the
@@ -28,8 +32,16 @@ import java.util.List;
  * @param line         the line of the catalog that opens this summon, from 1, so that a
  *                     race the loaded sources lack can be reported where it is written.
  */
-public record SummonTemplate(String raceKey, List<String> templateKeys, int line)
+public record SummonTemplate(String raceKey, List<String> templateKeys, int line, List<String> roles,
+	Map<String, String> metadata)
 {
+	private static final Pattern WHOLE_NUMBER = Pattern.compile("\\d{1,6}");
+
+	public SummonTemplate(String raceKey, List<String> templateKeys, int line)
+	{
+		this(raceKey, templateKeys, line, List.of(), Map.of());
+	}
+
 	public SummonTemplate
 	{
 		if (raceKey == null || raceKey.isBlank())
@@ -38,6 +50,26 @@ public record SummonTemplate(String raceKey, List<String> templateKeys, int line
 		}
 		raceKey = raceKey.strip();
 		templateKeys = (templateKeys == null) ? List.of() : List.copyOf(templateKeys);
+		roles = (roles == null) ? List.of() : List.copyOf(roles);
+		metadata = (metadata == null) ? Map.of() : Map.copyOf(metadata);
+	}
+
+	/** Whether this entry carries a handwritten stat line from an earlier catalog. */
+	public boolean hasAuthoredStats()
+	{
+		return metadata.containsKey("hp") && !metadata.containsKey("race");
+	}
+
+	/** The source key used to build the creature, distinct from an optional display name. */
+	public String sourceRaceKey()
+	{
+		return metadata.getOrDefault("race", raceKey);
+	}
+
+	public OptionalInt authoredHitPoints()
+	{
+		Matcher number = WHOLE_NUMBER.matcher(metadata.getOrDefault("hp", ""));
+		return number.find() ? OptionalInt.of(Integer.parseInt(number.group())) : OptionalInt.empty();
 	}
 
 	/**
@@ -48,6 +80,7 @@ public record SummonTemplate(String raceKey, List<String> templateKeys, int line
 	 */
 	public String name()
 	{
-		return templateKeys.isEmpty() ? raceKey : raceKey + " (" + String.join(", ", templateKeys) + ')';
+		return templateKeys.isEmpty() || metadata.containsKey("race") ? raceKey
+			: raceKey + " (" + String.join(", ", templateKeys) + ')';
 	}
 }

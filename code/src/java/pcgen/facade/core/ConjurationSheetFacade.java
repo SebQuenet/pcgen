@@ -22,6 +22,7 @@ import java.util.Optional;
 import java.util.OptionalInt;
 
 import pcgen.core.conjurations.SummonParseError;
+import pcgen.core.conjurations.CreatureStats;
 
 /**
  * The conjurations of a character, between the user interface and the core.
@@ -58,6 +59,15 @@ public interface ConjurationSheetFacade
 	 * @return every error found, empty when the catalog reads.
 	 */
 	List<SummonParseError> errorsIn(String source);
+
+	/**
+	 * Computes one catalog entry from its race, templates and the conjurer's feats.
+	 * The result is cached until that entry or Augment Summoning changes.
+	 */
+	Optional<CreatureStats> catalogStatsOf(String creature);
+
+	/** A source block that records a selected published option, if selectable. */
+	Optional<String> selectionSource(String creature);
 
 	/**
 	 * Brings a creature into the fight, unhurt, for the duration set.
@@ -130,6 +140,12 @@ public interface ConjurationSheetFacade
 	 *         its catalog entry is gone.
 	 */
 	Optional<ConjuredCreatureView> viewOf(String creature, int number);
+
+	/** Changes one creature's current form when its race has that ability. */
+	boolean setForm(String creature, int number, String form);
+
+	/** Resets the once-per-day skeletal variant after the character rests. */
+	void resetSkeletonUse();
 
 	/**
 	 * @param key   the key of the bonus's source, such as "SPELL=Prayer"

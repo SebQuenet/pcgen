@@ -68,6 +68,7 @@ public class InfoPane extends JScrollPane
 		setViewportView(textPane);
 		textPane.setContentType("text/html"); //$NON-NLS-1$
 		setPreferredSize(new Dimension(300, 200));
+		new InfoPaneLinkAction(this).install();
 	}
 
 	public String getTitle()
@@ -106,6 +107,16 @@ public class InfoPane extends JScrollPane
 	 */
 	void addHyperlinkListener(HyperlinkListener linkListener)
 	{
+		if (linkListener instanceof InfoPaneLinkAction)
+		{
+			for (HyperlinkListener existing : textPane.getHyperlinkListeners())
+			{
+				if (existing instanceof InfoPaneLinkAction)
+				{
+					return;
+				}
+			}
+		}
 		textPane.addHyperlinkListener(linkListener);
 	}
 

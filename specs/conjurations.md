@@ -39,15 +39,18 @@ et exportable comme fiche de sortie.
    bestiaire, ses gabarits, puis `Augment Summoning` quand le conjurateur a le don. Les bonus
    temporaires (Prière, Rapidité…) lui sont appliqués par les règles de cumul de PCGen.
 6. **Construire une créature prend plusieurs secondes** (environ 4 s : la vérification du kit sur
-   une copie du personnage en prend la moitié). Le catalogue n'affiche donc que les noms ; une
-   créature en jeu est construite une fois puis gardée en mémoire par la façade, et un bonus posé
-   ou retiré la modifie sans la reconstruire. Ses valeurs n'arrivent sur la page que par le pont :
-   une page exportée et ouverte dans un navigateur ne les montre pas.
+   une copie du personnage en prend la moitié). Les statistiques du catalogue sont calculées au
+   chargement de la page, une créature après l'autre, puis gardées en mémoire par la façade. La
+   modification de la CA cible recalcule les dégâts attendus sans reconstruire les créatures.
+   Une créature en jeu est aussi gardée en mémoire pour appliquer les bonus. Les valeurs calculées
+   arrivent sur la page par le pont : une page exportée et ouverte dans un navigateur ne les montre pas.
 
 ## 3. Syntaxe
 
 Orientée ligne, comme la fiche tactique : `## ` ouvre un groupe, `summon:` en colonne zéro nomme
 la race d'une créature, une ligne `template:` indentée de deux espaces liste ses gabarits.
+Les lignes `role:` et les métadonnées facultatives restent disponibles, notamment pour relire
+les catalogues enregistrés avant le calcul des statistiques par PCGen.
 
 ```
 ## Convocation de monstres IV
@@ -62,20 +65,31 @@ summon: Bear (Grizzly)
 | groupe | `## <titre>`, en général un niveau de convocation |
 | créature | `summon: <clé de race>` |
 | gabarits | `  template: <clé>, <clé>`, facultatif, une fois au plus |
+| race source | `  race: <clé de race PCGen>`, facultatif pour conserver un nom affiché différent dans `summon:` |
+| niveau | `  level: IV`, facultatif si le niveau ne figure pas à la fin du titre du groupe |
+| rôles | `  role: <rôle>, <rôle>`, facultatif, une fois au plus |
+| métadonnées | `  speed:`, `hp:`, `ac:`, `attack:`, `damage:`, `special:`, `cmb:`, `cmd:`, `ref:`, `fort:`, `will:`, `init:`, `spells:` ou `note:`, chacune facultative, une fois au plus |
 
 - Le nom d'une créature se déduit : la race, suivie de ses gabarits entre parenthèses
-  (« Bear (Grizzly) (Celestial Creature) »). Deux créatures ne portent pas le même nom, sans tenir
+  (« Bear (Grizzly) (Celestial Creature) »), sauf quand `race:` fournit une clé source distincte :
+  le nom écrit dans `summon:` est alors conservé. Deux créatures ne portent pas le même nom, sans tenir
   compte de la casse : c'est par lui que les créatures en jeu désignent leur modèle.
 - Les lignes vides sont ignorées ; les deux caractères `\n` valent un saut de ligne.
 
 Une lecture qui échoue renvoie toutes ses erreurs, chacune avec son numéro de ligne (base 1),
 sous forme de valeurs typées. Cas d'échec : un texte qui ne s'ouvre pas sur un groupe, une clé
-inconnue en colonne zéro, une sous-clé autre que `template:`, une ligne indentée sans créature
+inconnue en colonne zéro, une sous-clé inconnue, une ligne indentée sans créature
 au-dessus, `template:` écrit deux fois, une race vide, un nom déjà pris, un groupe sans créature,
 un texte sans groupe.
 
 `CatalogResolution.unresolvedIn` vérifie ensuite le catalogue contre les sources chargées : une
 race ou un gabarit qu'elles n'ont pas est une erreur sur la ligne de sa créature.
+Une entrée historique avec `hp:` est traitée comme une fiche rédigée à la main : elle conserve
+son nom et ses statistiques dans la page et n'est pas résolue comme une race PCGen. Les entrées
+sans `hp:` continuent d'utiliser leurs race et gabarits pour le calcul des statistiques.
+Ajouter `race:` à une entrée historique la fait passer aux statistiques calculées par PCGen ;
+ses anciennes valeurs chiffrées restent dans le texte enregistré mais ne sont plus utilisées.
+Le nom `summon:` reste affiché et sert à retrouver les créatures déjà en jeu.
 
 ## 4. Modèle
 
@@ -89,8 +103,8 @@ record SummonTemplate(String raceKey, List<String> templateKeys, int line)   // 
 record BonusSourceKey(String kind, String category, String key)   // "SPELL=Prayer", "ABILITY=FEAT=Power Attack"
 record AppliedBonus(BonusSourceKey source, OptionalInt chosenValue)
 
-record ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft, List<AppliedBonus> bonuses)
-record ConjurationSession(int duration, List<ConjuredCreature> conjured, List<AppliedBonus> groupBonuses)
+record ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft, List<AppliedBonus> bonuses, String form)
+record ConjurationSession(int duration, List<ConjuredCreature> conjured, List<AppliedBonus> groupBonuses, boolean skeletonUsed)
 ```
 
 - Une créature en jeu se désigne par le nom de son modèle et son numéro. Conjurer donne le plus
@@ -111,7 +125,8 @@ record ConjurationSession(int duration, List<ConjuredCreature> conjured, List<Ap
 |---|---|
 | `CONJURATIONS` | tout le texte source, encodé par `EntityEncoder` |
 | `CONJURATIONDURATION` | la durée donnée aux nouvelles créatures, quand elle n'est pas 0 |
-| `CONJURED` | `<nom encodé>\|<numéro>\|<dégâts>\|<rounds restants, vide si non comptés>`, dans l'ordre d'arrivée |
+| `CONJURATIONSKELETONUSED` | `1` si la variante quotidienne de Skeleton Summoner a été utilisée |
+| `CONJURED` | `<nom encodé>\|<numéro>\|<dégâts>\|<rounds restants, vide si non comptés>[\|<forme encodée>]`, dans l'ordre d'arrivée |
 | `CONJUREDGROUPBONUS` | `<clé encodée>\|<valeur choisie, vide sinon>`, un bonus de groupe par ligne |
 | `CONJUREDBONUS` | `<nom encodé>\|<numéro>\|<clé encodée>\|<valeur>`, un bonus propre par ligne |
 
@@ -126,7 +141,34 @@ Le gabarit `outputsheets/conjurations/conjurations.htm.ftl` reçoit le modèle `
 construit par `pcgen.io.conjurations.ConjurationOutputModel`. Il ouvre sur
 `<#ftl output_format="HTML">`, et le script n'écrit que par `textContent` et par attributs.
 
-**En haut, le catalogue** : un tableau par groupe, avec un bouton « Conjurer » et le nom.
+**En haut, le catalogue** : une seule liste des options accessibles par les sorts de convocation
+connus du personnage, y compris les sorts automatiquement connus par les lanceurs préparés.
+Un sort de niveau supérieur donne aussi accès aux listes de niveaux
+inférieurs de la même famille ; les dons et anneaux ajoutent leurs options seulement si le sort
+correspondant est connu. Le pouvoir magique de convocation du convocateur et du convocateur
+unchained compte également. Les choix fixes d'Expanded Summon Monster et les gabarits Versatile
+non choisis ne sont pas proposés comme options de conjuration. Aucun sélecteur de groupe ne cache
+des lignes. Le tableau est triable par
+niveau, nom, note RPGBOT, dés de vie, dégâts attendus par round, CA totale, de contact et pris au
+dépourvu, BMO et DMD. Un champ « CA cible » au-dessus du
+tableau règle la probabilité de toucher pour les dégâts attendus ; les attaques itératives sont
+comptées, avec un échec sur 1 et une réussite sur 20. Ce calcul ne comprend ni critique ni
+réduction des dégâts. Les rôles restent visibles ; les notes sont réservées au panneau de détails.
+
+Une loupe à côté du nom, dans le catalogue comme sur la carte d'une créature en jeu, ouvre un
+panneau à droite. Il réunit le niveau et les rôles, les conseils tactiques propres à la race,
+les capacités et notes rédigées par le joueur, puis les statistiques calculées par PCGen. Les
+conseils français pour les 16 races du catalogue de Miros sont dans
+`code/src/resources/pcgen/conjurations/pathfinder1-guides-fr.json`. Ils sont séparés des notes du
+personnage et ne remplacent pas les règles ou la fiche calculée. Une race absente du guide conserve
+ses notes, capacités et statistiques dans le même panneau. Le panneau lie aussi chaque entrée à
+sa fiche complète du Bestiaire ; dans PCGen, ces liens s'ouvrent dans le navigateur système.
+
+Ces conseils synthétisent le [guide de RPGBOT](https://rpgbot.net/pathfinder/characters/summon_monster/),
+les [règles de Convocation de monstres](https://legacy.aonprd.com/coreRulebook/spells/summonMonster.html)
+et les entrées du Bestiaire de Pathfinder 1. Ils sont paraphrasés et les deux premières sources
+sont liées depuis le panneau. Les pouvoirs interdits aux créatures convoquées, notamment la
+téléportation et les sorts à composante matérielle coûteuse, sont signalés lorsque pertinents.
 
 **En bas, les créatures en jeu.** Un en-tête avec « Round suivant », « Tout renvoyer » et la durée ;
 un bandeau « Tout le groupe » avec un jeton par bonus de groupe (× le retire) et un champ
@@ -135,9 +177,16 @@ et « Soigner », une ligne « Ses bonus » avec ses jetons et son champ « + bo
 (vitesse, CA, attaques, BMO, DMD, jets de sauvegarde, initiative), et « Renvoyer ». Une valeur
 qu'un bonus a changée montre l'ancienne barrée.
 
-Le champ « + bonus » propose, à la première saisie, les bonus que le pont renvoie ; un bonus qui
-demande une valeur (Inspiration vaillante) fait apparaître un champ numérique borné. Au chargement
-et après chaque conjuration, le script demande au pont les valeurs de chaque carte.
+Les créatures dotées de formes calculées ont un sélecteur sur leur carte. Les formes canines de
+l'archon molosse recalculent taille, vitesse, CA, BMO, DMD, initiative, Réflexes et morsure ; la
+forme de vent du bralani modifie son déplacement et ses attaques. La fusion de neuf archons
+lumineux est décrite dans le panneau de détails comme capacité collective et ne figure pas parmi
+les formes d'un archon individuel.
+
+Le menu « + bonus » liste les bonus que le pont renvoie pour le groupe ou la créature ; un bonus qui
+demande une valeur (Inspiration vaillante) fait apparaître un champ numérique borné et un bouton
+« Appliquer ». Au chargement et après chaque conjuration, le script demande au pont les valeurs
+de chaque carte.
 
 Le pont planté sur `window.pcgen` offre, en plus de `conjure`, `setDamage`, `setRoundsLeft`,
 `nextRound`, `dismiss`, `dismissAll` et `setDuration` :

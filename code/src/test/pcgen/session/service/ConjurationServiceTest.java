@@ -123,6 +123,16 @@ public class ConjurationServiceTest extends AbstractCharacterTestCase
 	}
 
 	@Test
+	public void storesAnOlderHandwrittenCatalogWithoutRequiringARaceKey()
+	{
+		String source = "## VI\nsummon: Lillend (azata)\n  role: lanceur, soutien\n  hp: 87\n";
+
+		assertEquals(ServiceResult.success(new ConjurationSheetStored(1, 1)),
+			ConjurationService.write(getCharacter(), source));
+		assertEquals(source, getCharacter().getDisplay().getConjurationCatalog().orElseThrow());
+	}
+
+	@Test
 	public void refusesABlankCatalog()
 	{
 		assertTrue(reasonRefused(ConjurationService.write(getCharacter(), " ")).contains("clear_conjuration_sheet"));

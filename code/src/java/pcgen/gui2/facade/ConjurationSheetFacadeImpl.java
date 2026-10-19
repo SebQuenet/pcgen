@@ -18,7 +18,9 @@
 package pcgen.gui2.facade;
 
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.function.UnaryOperator;
@@ -32,15 +34,21 @@ import pcgen.core.bonus.TemporaryBonusSources;
 import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.BuiltCreature;
+import pcgen.core.conjurations.CatalogResolution;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.conjurations.ConjuredCreatures;
+import pcgen.core.conjurations.CreatureStats;
+import pcgen.core.conjurations.PathfinderSummonOptions;
 import pcgen.core.conjurations.SummonCatalog;
 import pcgen.core.conjurations.SummonCatalogParser;
+import pcgen.core.conjurations.SummonedCreatureBuilder;
+import pcgen.core.conjurations.SummonForms;
 import pcgen.core.conjurations.SummonParseError;
 import pcgen.core.conjurations.SummonParseFailure;
 import pcgen.core.conjurations.SummonParseSuccess;
-import pcgen.core.conjurations.SummonedCreatureBuilder;
+import pcgen.core.conjurations.SummonSelections;
+import pcgen.core.conjurations.SummonTemplate;
 import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.BonusLabel;
 import pcgen.facade.core.ConjurationSheetFacade;
@@ -62,12 +70,19 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 
 	private final PlayerCharacter theCharacter;
 	private final ConjuredCreatures creatures;
+	private final SummonedCreatureBuilder builder;
+	private final Map<String, CatalogCreature> catalogCreatures = new ConcurrentHashMap<>();
+
+	private record CatalogCreature(SummonTemplate summon, boolean augmented, CreatureStats stats)
+	{
+	}
 
 	ConjurationSheetFacadeImpl(PlayerCharacter pc)
 	{
 		theCharacter = pc;
-		creatures = new ConjuredCreatures(new SummonedCreatureBuilder(
-			FacetLibrary.getFacet(CampaignFacet.class).getSet(pc.getCharID()), new HeadlessUIDelegate()));
+		builder = new SummonedCreatureBuilder(
+			FacetLibrary.getFacet(CampaignFacet.class).getSet(pc.getCharID()), new HeadlessUIDelegate());
+		creatures = new ConjuredCreatures(builder);
 	}
 
 	@Override
@@ -79,12 +94,80 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 	@Override
 	public void setCatalogSource(String source)
 	{
+		catalogCreatures.clear();
 		if (source == null || source.isBlank())
 		{
-			theCharacter.clearConjurations();
+			theCharacter.clearConjurationCatalog();
 			return;
 		}
 		theCharacter.setConjurationCatalog(source);
+	}
+
+	@Override
+	public Optional<CreatureStats> catalogStatsOf(String creature)
+	{
+		Optional<SummonTemplate> summon = catalog().find(creature);
+		if (summon.isEmpty() || summon.get().hasAuthoredStats()
+			|| !CatalogResolution.unresolvedIn(summon.get()).isEmpty())
+		{
+			return Optional.empty();
+		}
+		boolean augmented = SummonedCreatureBuilder.augments(theCharacter);
+		CatalogCreature cached = catalogCreatures.get(creature);
+		if (cached == null || !cached.summon().equals(summon.get()) || cached.augmented() != augmented)
+		{
+			CreatureStats stats = SummonForms.statsOf(summon.get(), "",
+				builder.statsOf(builder.build(summon.get(), augmented), summon.get()));
+			cached = new CatalogCreature(summon.get(), augmented, stats);
+			catalogCreatures.put(creature, cached);
+		}
+		return Optional.of(cached.stats());
+	}
+
+	@Override
+	public Optional<String> selectionSource(String creature)
+	{
+		Optional<SummonTemplate> option = catalog().find(creature);
+		if (option.isEmpty() || !CatalogResolution.unresolvedIn(option.get()).isEmpty())
+		{
+			return Optional.empty();
+		}
+		SummonTemplate summon = option.get();
+		if ("Versatile SM".equals(summon.metadata().get("family"))
+			&& "true".equals(summon.metadata().get("choiceRequired")))
+		{
+			String source = getCatalogSource();
+			String template = summon.templateKeys().getFirst();
+			var chosen = SummonSelections.versatileMonster(source);
+			return chosen.size() < 2 && !chosen.contains(template)
+				? Optional.of(SummonSelections.versatileMonsterLine(template)) : Optional.empty();
+		}
+		if (!"Expanded".equals(summon.metadata().get("family")))
+		{
+			return Optional.empty();
+		}
+		String groupName = "Expanded Summon Monster " + summon.metadata().get("level");
+		long alreadyChosen = theCharacter.getDisplay().getConjurationCatalog()
+			.flatMap(SummonCatalogParser::catalogOf).stream().flatMap(found -> found.groups().stream())
+			.filter(group -> group.title().equals(groupName)).mapToLong(group -> group.summons().size()).sum();
+		if (alreadyChosen >= 2)
+		{
+			return Optional.empty();
+		}
+		StringBuilder source = new StringBuilder("## ")
+			.append(groupName).append('\n').append("summon: ").append(summon.name())
+			.append('\n').append("  race: ").append(summon.sourceRaceKey()).append('\n');
+		if (!summon.templateKeys().isEmpty())
+		{
+			source.append("  template: ").append(String.join(", ", summon.templateKeys())).append('\n');
+		}
+		if (summon.metadata().containsKey("kit"))
+		{
+			source.append("  kit: ").append(summon.metadata().get("kit")).append('\n');
+		}
+		source.append("  source: ").append(summon.metadata().get("source")).append('\n');
+		source.append("  level: ").append(summon.metadata().get("level")).append('\n');
+		return Optional.of(source.toString());
 	}
 
 	@Override
@@ -104,10 +187,28 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 	@Override
 	public int conjure(String creature)
 	{
+		Optional<SummonTemplate> summon = catalog().find(creature);
+		if (summon.isEmpty() || "true".equals(summon.get().metadata().get("choiceRequired"))
+			|| "true".equals(summon.get().metadata().get("dailyUsed"))
+			|| !CatalogResolution.unresolvedIn(summon.get()).isEmpty())
+		{
+			return 0;
+		}
 		ConjurationSession fight = theCharacter.getDisplay().getConjurationSession();
 		ConjuredCreature arriving = fight.arrival(creature);
-		theCharacter.setConjurationSession(fight.with(arriving));
+		ConjurationSession updated = fight.with(arriving);
+		if ("Skeleton 1/day".equals(summon.get().metadata().get("family")))
+		{
+			updated = updated.withSkeletonUsed(true);
+		}
+		theCharacter.setConjurationSession(updated);
 		return arriving.number();
+	}
+
+	@Override
+	public void resetSkeletonUse()
+	{
+		change(fight -> fight.withSkeletonUsed(false));
 	}
 
 	@Override
@@ -120,6 +221,18 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 	public void setRoundsLeft(String creature, int number, int rounds)
 	{
 		change(fight -> fight.withRoundsLeft(creature, number, Math.max(rounds, 0)));
+	}
+
+	@Override
+	public boolean setForm(String creature, int number, String form)
+	{
+		Optional<SummonTemplate> summon = catalog().find(creature);
+		if (inPlay(creature, number).isEmpty() || summon.isEmpty() || !SummonForms.supports(summon.get(), form))
+		{
+			return false;
+		}
+		change(fight -> fight.withForm(creature, number, form));
+		return true;
 	}
 
 	@Override
@@ -228,11 +341,17 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 
 	private Optional<BuiltCreature> built(String creature, int number)
 	{
-		Optional<SummonCatalog> catalog =
-			theCharacter.getDisplay().getConjurationCatalog().flatMap(SummonCatalogParser::catalogOf);
-		return inPlay(creature, number).flatMap(found -> catalog.flatMap(read -> read.find(found.creature()))
+		SummonCatalog catalog = catalog();
+		return inPlay(creature, number).flatMap(found -> catalog.find(found.creature())
+			.filter(summon -> !summon.hasAuthoredStats())
 			.map(summon -> creatures.creature(summon, SummonedCreatureBuilder.augments(theCharacter), found,
 				fight().groupBonuses())));
+	}
+
+	private SummonCatalog catalog()
+	{
+		return PathfinderSummonOptions.withPublishedOptions(theCharacter,
+			theCharacter.getDisplay().getConjurationCatalog().flatMap(SummonCatalogParser::catalogOf));
 	}
 
 	private List<ConjuredCreatureView> everyView()

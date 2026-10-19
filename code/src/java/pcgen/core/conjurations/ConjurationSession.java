@@ -40,9 +40,15 @@ import java.util.function.UnaryOperator;
  *                 through the one passed in.
  * @param groupBonuses the temporary bonuses laid on every creature in play and
  *                     on every creature conjured after them, in the order laid.
+ * @param skeletonUsed whether the once-per-day skeletal variant was used today.
  */
-public record ConjurationSession(int duration, List<ConjuredCreature> conjured, List<AppliedBonus> groupBonuses)
+public record ConjurationSession(int duration, List<ConjuredCreature> conjured, List<AppliedBonus> groupBonuses,
+	boolean skeletonUsed)
 {
+	public ConjurationSession(int duration, List<ConjuredCreature> conjured, List<AppliedBonus> groupBonuses)
+	{
+		this(duration, conjured, groupBonuses, false);
+	}
 	/**
 	 * A fight with no group bonus.
 	 */
@@ -83,7 +89,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	 */
 	public boolean isEmpty()
 	{
-		return duration == 0 && conjured.isEmpty() && groupBonuses.isEmpty();
+		return duration == 0 && conjured.isEmpty() && groupBonuses.isEmpty() && !skeletonUsed;
 	}
 
 	/**
@@ -112,7 +118,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	{
 		List<ConjuredCreature> joined = new ArrayList<>(conjured);
 		joined.add(arrived);
-		return new ConjurationSession(duration, joined, groupBonuses);
+		return new ConjurationSession(duration, joined, groupBonuses, skeletonUsed);
 	}
 
 	/**
@@ -126,7 +132,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	{
 		return changing(creature, number,
 			found -> new ConjuredCreature(found.creature(), found.number(), damage, found.roundsLeft(),
-				found.bonuses()));
+				found.bonuses(), found.form()));
 	}
 
 	/**
@@ -139,7 +145,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	public ConjurationSession withRoundsLeft(String creature, int number, int rounds)
 	{
 		return changing(creature, number, found -> new ConjuredCreature(found.creature(), found.number(),
-			found.damage(), OptionalInt.of(rounds), found.bonuses()));
+			found.damage(), OptionalInt.of(rounds), found.bonuses(), found.form()));
 	}
 
 	/**
@@ -149,7 +155,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	public ConjurationSession nextRound()
 	{
 		return new ConjurationSession(duration, conjured.stream().map(ConjurationSession::oneRoundLater).toList(),
-			groupBonuses);
+			groupBonuses, skeletonUsed);
 	}
 
 	/**
@@ -160,7 +166,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	public ConjurationSession dismiss(String creature, int number)
 	{
 		return new ConjurationSession(duration,
-			conjured.stream().filter(found -> !found.is(creature, number)).toList(), groupBonuses);
+			conjured.stream().filter(found -> !found.is(creature, number)).toList(), groupBonuses, skeletonUsed);
 	}
 
 	/**
@@ -168,7 +174,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	 */
 	public ConjurationSession dismissAll()
 	{
-		return new ConjurationSession(duration, List.of(), groupBonuses);
+		return new ConjurationSession(duration, List.of(), groupBonuses, skeletonUsed);
 	}
 
 	/**
@@ -178,7 +184,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	 */
 	public ConjurationSession withDuration(int rounds)
 	{
-		return new ConjurationSession(rounds, conjured, groupBonuses);
+		return new ConjurationSession(rounds, conjured, groupBonuses, skeletonUsed);
 	}
 
 	/**
@@ -188,7 +194,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	 */
 	public ConjurationSession withGroupBonus(AppliedBonus bonus)
 	{
-		return new ConjurationSession(duration, conjured, AppliedBonus.adding(groupBonuses, bonus));
+		return new ConjurationSession(duration, conjured, AppliedBonus.adding(groupBonuses, bonus), skeletonUsed);
 	}
 
 	/**
@@ -197,7 +203,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	 */
 	public ConjurationSession withoutGroupBonus(BonusSourceKey source)
 	{
-		return new ConjurationSession(duration, conjured, AppliedBonus.removing(groupBonuses, source));
+		return new ConjurationSession(duration, conjured, AppliedBonus.removing(groupBonuses, source), skeletonUsed);
 	}
 
 	/**
@@ -209,7 +215,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	public ConjurationSession withBonus(String creature, int number, AppliedBonus bonus)
 	{
 		return changing(creature, number, found -> new ConjuredCreature(found.creature(), found.number(),
-			found.damage(), found.roundsLeft(), AppliedBonus.adding(found.bonuses(), bonus)));
+			found.damage(), found.roundsLeft(), AppliedBonus.adding(found.bonuses(), bonus), found.form()));
 	}
 
 	/**
@@ -221,7 +227,20 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	public ConjurationSession withoutBonus(String creature, int number, BonusSourceKey source)
 	{
 		return changing(creature, number, found -> new ConjuredCreature(found.creature(), found.number(),
-			found.damage(), found.roundsLeft(), AppliedBonus.removing(found.bonuses(), source)));
+			found.damage(), found.roundsLeft(), AppliedBonus.removing(found.bonuses(), source), found.form()));
+	}
+
+	/** Selects a creature's current shape without changing its wounds or bonuses. */
+	public ConjurationSession withForm(String creature, int number, String form)
+	{
+		return changing(creature, number, found -> new ConjuredCreature(found.creature(), found.number(),
+			found.damage(), found.roundsLeft(), found.bonuses(), form));
+	}
+
+	/** Marks or resets the daily skeletal variant of Skeleton Summoner. */
+	public ConjurationSession withSkeletonUsed(boolean used)
+	{
+		return new ConjurationSession(duration, conjured, groupBonuses, used);
 	}
 
 	private boolean holds(String creature, int number)
@@ -232,7 +251,8 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 	private ConjurationSession changing(String creature, int number, UnaryOperator<ConjuredCreature> change)
 	{
 		return new ConjurationSession(duration,
-			conjured.stream().map(found -> found.is(creature, number) ? change.apply(found) : found).toList(), groupBonuses);
+			conjured.stream().map(found -> found.is(creature, number) ? change.apply(found) : found).toList(), groupBonuses,
+			skeletonUsed);
 	}
 
 	private static ConjuredCreature oneRoundLater(ConjuredCreature creature)
@@ -243,7 +263,7 @@ public record ConjurationSession(int duration, List<ConjuredCreature> conjured, 
 		}
 		int rounds = Math.max(creature.roundsLeft().getAsInt() - 1, 0);
 		return new ConjuredCreature(creature.creature(), creature.number(), creature.damage(),
-			OptionalInt.of(rounds), creature.bonuses());
+			OptionalInt.of(rounds), creature.bonuses(), creature.form());
 	}
 
 	private static String identityOf(String creature, int number)

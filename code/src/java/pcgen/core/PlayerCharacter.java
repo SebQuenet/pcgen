@@ -2482,6 +2482,15 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		}
 	}
 
+	/** Removes only the handwritten catalog; published summon lists remain available. */
+	public void clearConjurationCatalog()
+	{
+		if (conjurationCatalogFacet.remove(id) != null)
+		{
+			setDirty(true);
+		}
+	}
+
 	/**
 	 * Records the creatures this character has conjured into the fight.
 	 *

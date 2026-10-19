@@ -23,7 +23,7 @@ import java.util.List;
  * The numbers of a conjured creature a fight needs, as PCGen computes them
  * from its race, templates and temporary bonuses.
  */
-public record CreatureStats(String speed, int maximumHitPoints, int armorClass, int touchArmorClass,
+public record CreatureStats(int hitDice, String speed, int maximumHitPoints, int armorClass, int touchArmorClass,
 	int flatFootedArmorClass, List<CreatureAttack> attacks, String combatManeuverBonus, int combatManeuverDefense,
 	String reflex, String fortitude, String will, String initiative)
 {

@@ -1698,6 +1698,10 @@ public final class PCGVer2Creator
 		});
 
 		ConjurationSession fight = charDisplay.getConjurationSession();
+		if (fight.skeletonUsed())
+		{
+			buffer.append(IOConstants.TAG_CONJURATIONSKELETONUSED).append(":1").append(IOConstants.LINE_SEP);
+		}
 		if (fight.duration() > 0)
 		{
 			buffer.append(IOConstants.TAG_CONJURATIONDURATION).append(':');
@@ -1712,6 +1716,10 @@ public final class PCGVer2Creator
 			buffer.append('|').append(creature.damage());
 			buffer.append('|');
 			creature.roundsLeft().ifPresent(buffer::append);
+			if (!creature.form().isBlank())
+			{
+				buffer.append('|').append(EntityEncoder.encode(creature.form()));
+			}
 			buffer.append(IOConstants.LINE_SEP);
 		}
 		for (AppliedBonus bonus : fight.groupBonuses())

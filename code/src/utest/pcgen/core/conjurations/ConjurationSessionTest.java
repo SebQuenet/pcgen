@@ -117,6 +117,28 @@ class ConjurationSessionTest
 	}
 
 	@Test
+	void keepsTheChosenFormWhenDamageAndRoundsChange()
+	{
+		ConjurationSession session = conjured(ConjurationSession.empty().withDuration(4), ARCHON)
+			.withForm(ARCHON, 1, "wolf").withDamage(ARCHON, 1, 7).nextRound();
+
+		assertEquals("wolf", session.conjured().getFirst().form());
+		assertEquals(7, session.conjured().getFirst().damage());
+		assertEquals(OptionalInt.of(3), session.conjured().getFirst().roundsLeft());
+	}
+
+	@Test
+	void dailySkeletonUseSurvivesDismissalUntilThePlayerResetsIt()
+	{
+		ConjurationSession used = conjured(ConjurationSession.empty(), ARCHON)
+			.withSkeletonUsed(true).dismissAll();
+
+		assertTrue(used.skeletonUsed());
+		assertFalse(used.isEmpty());
+		assertFalse(used.withSkeletonUsed(false).skeletonUsed());
+	}
+
+	@Test
 	void changesNothingForACreatureNotInPlay()
 	{
 		ConjurationSession session = threeArchons();

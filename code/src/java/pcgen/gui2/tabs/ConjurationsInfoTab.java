@@ -20,6 +20,8 @@ package pcgen.gui2.tabs;
 import java.io.File;
 import java.util.List;
 
+import javax.swing.SwingUtilities;
+
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.ConjurationSheetFacade;
 import pcgen.gui2.tabs.conjurations.ConjurationBridge;
@@ -45,8 +47,28 @@ public class ConjurationsInfoTab extends FlippingSplitPane implements CharacterI
 
 	private final TabTitle tabTitle = new TabTitle(Tab.CONJURATIONS);
 	private final SourceEditorPanel editorPanel = new SourceEditorPanel();
+	private ConjurationsHandler currentHandler;
 	private final RenderedSheetPanel sheetPanel = new RenderedSheetPanel(TEMPLATE,
-		character -> new ConjurationBridge(character.getConjurationSheetFacade()));
+		character -> new ConjurationBridge(character.getConjurationSheetFacade(), name -> {
+			if (currentHandler == null || currentHandler.character != character)
+			{
+				return false;
+			}
+			return character.getConjurationSheetFacade().selectionSource(name).map(block -> {
+				SwingUtilities.invokeLater(() -> {
+					if (currentHandler != null && currentHandler.character == character)
+					{
+						editorPanel.append(block);
+					}
+				});
+				return true;
+		}).orElse(false);
+		}, this::isSheetShowing));
+
+	private boolean isSheetShowing()
+	{
+		return sheetPanel.isShowing();
+	}
 
 	public ConjurationsInfoTab()
 	{
@@ -98,12 +120,14 @@ public class ConjurationsInfoTab extends FlippingSplitPane implements CharacterI
 
 		private void install()
 		{
+			currentHandler = this;
 			editorPanel.install(this);
 			sheetPanel.setCharacter(character);
 		}
 
 		private void uninstall()
 		{
+			currentHandler = null;
 			editorPanel.uninstall();
 			sheetPanel.setCharacter(null);
 		}

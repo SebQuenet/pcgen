@@ -22,9 +22,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.nio.file.Path;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Function;
 
 import pcgen.facade.core.CharacterFacade;
@@ -56,13 +58,14 @@ public final class RenderedSheetPanel extends JFXPanel
 
 	private final String template;
 	private final Function<CharacterFacade, Object> bridgeFor;
-	private final Executor executor = Executors.newSingleThreadExecutor();
-	private final AtomicBoolean refreshPending = new AtomicBoolean(false);
+	private final ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(1);
+	private final AtomicLong renderRevision = new AtomicLong();
 	private final AtomicBoolean sceneInitialised = new AtomicBoolean(false);
+	private ScheduledFuture<?> pendingRender;
 	private WebView browser;
-	private CharacterFacade character;
+	private volatile CharacterFacade character;
 	/** Held here because the page holds it only weakly: a bridge nobody keeps is collected. */
-	private Object bridge;
+	private volatile Object bridge;
 	private volatile String lastRenderedContent;
 
 	/**
@@ -75,6 +78,7 @@ public final class RenderedSheetPanel extends JFXPanel
 	{
 		this.template = template;
 		this.bridgeFor = bridgeFor;
+		executor.setRemoveOnCancelPolicy(true);
 	}
 
 	/**
@@ -104,8 +108,20 @@ public final class RenderedSheetPanel extends JFXPanel
 	 */
 	public void setCharacter(CharacterFacade shown)
 	{
+		Object oldBridge = bridge;
 		character = shown;
 		bridge = (shown == null) ? null : bridgeFor.apply(shown);
+		if (oldBridge instanceof AutoCloseable disposable)
+		{
+			try
+			{
+				disposable.close();
+			}
+			catch (Exception error)
+			{
+				Logging.errorPrint("Could not close a rendered sheet bridge", error);
+			}
+		}
 		lastRenderedContent = null;
 		refresh();
 	}
@@ -113,43 +129,38 @@ public final class RenderedSheetPanel extends JFXPanel
 	/**
 	 * Renders again, coalescing the calls that arrive while someone is typing.
 	 */
-	public void refresh()
+	public synchronized void refresh()
 	{
-		if (refreshPending.compareAndSet(false, true))
+		long revision = renderRevision.incrementAndGet();
+		if (pendingRender != null)
 		{
-			executor.execute(() -> {
-				try
-				{
-					Thread.sleep(DEBOUNCE_DELAY_MS);
-				}
-				catch (InterruptedException interrupted)
-				{
-					Thread.currentThread().interrupt();
-					return;
-				}
-				refreshPending.set(false);
-				render();
-			});
+			pendingRender.cancel(false);
 		}
+		pendingRender = executor.schedule(() -> render(revision), DEBOUNCE_DELAY_MS, TimeUnit.MILLISECONDS);
 	}
 
-	private void render()
+	private void render(long revision)
 	{
-		String content = (character == null) ? EMPTY_PAGE : exported();
-		if (content.equals(lastRenderedContent))
+		if (revision != renderRevision.get())
 		{
 			return;
 		}
-		lastRenderedContent = content;
+		CharacterFacade current = character;
+		String content = (current == null) ? EMPTY_PAGE : exported(current);
+		if (revision != renderRevision.get() || content.equals(lastRenderedContent))
+		{
+			return;
+		}
 		Platform.runLater(() -> {
-			if (browser != null)
+			if (revision == renderRevision.get() && browser != null)
 			{
 				browser.getEngine().loadContent(content);
+				lastRenderedContent = content;
 			}
 		});
 	}
 
-	private String exported()
+	private String exported(CharacterFacade current)
 	{
 		File sheet = Path.of(ConfigurationSettings.getOutputSheetsDir(), template).toFile();
 		if (!sheet.isFile())
@@ -160,7 +171,7 @@ public final class RenderedSheetPanel extends JFXPanel
 		StringWriter written = new StringWriter();
 		try (BufferedWriter out = new BufferedWriter(written))
 		{
-			character.export(ExportHandler.createExportHandler(sheet), out);
+			current.export(ExportHandler.createExportHandler(sheet), out);
 		}
 		catch (ExportException | IOException e)
 		{

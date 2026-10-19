@@ -182,7 +182,7 @@ public class Gui2InfoFactory implements InfoFactory
 	@Override
 	public String getHTMLInfo(Race race)
 	{
-		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		final HtmlInfoBuilder infoText = new HtmlInfoBuilder().withSource(race);
 
 		if (!race.isUnselected())
 		{
@@ -296,7 +296,7 @@ public class Gui2InfoFactory implements InfoFactory
 			parentClass = possibleParentClass;
 		}
 
-		final HtmlInfoBuilder b = new HtmlInfoBuilder(OutputNameFormatting.piString(aClass));
+		final HtmlInfoBuilder b = new HtmlInfoBuilder(OutputNameFormatting.piString(aClass)).withSource(aClass);
 		b.appendLineBreak();
 
 		// Subclass cost - at the top to make choices easier
@@ -424,7 +424,7 @@ public class Gui2InfoFactory implements InfoFactory
 			return EMPTY_STRING;
 		}
 
-		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		final HtmlInfoBuilder infoText = new HtmlInfoBuilder().withSource(skill);
 
 		infoText.appendTitleElement(OutputNameFormatting.piString(skill));
 
@@ -517,7 +517,7 @@ public class Gui2InfoFactory implements InfoFactory
 			return EMPTY_STRING;
 		}
 
-		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		final HtmlInfoBuilder infoText = new HtmlInfoBuilder().withSource(ability);
 		infoText.appendTitleElement(titleWithEnglishName(ability));
 		infoText.appendLineBreak();
 
@@ -606,7 +606,7 @@ public class Gui2InfoFactory implements InfoFactory
 		{
 			return EMPTY_STRING;
 		}
-		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		final HtmlInfoBuilder infoText = new HtmlInfoBuilder().withSource(deity);
 
 		infoText.appendTitleElement(OutputNameFormatting.piString(deity));
 		infoText.appendLineBreak();
@@ -665,7 +665,7 @@ public class Gui2InfoFactory implements InfoFactory
 	{
 		Domain aDomain = domain.getRawObject();
 
-		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		final HtmlInfoBuilder infoText = new HtmlInfoBuilder().withSource(aDomain);
 
 		if (aDomain != null)
 		{
@@ -724,7 +724,7 @@ public class Gui2InfoFactory implements InfoFactory
 			return EMPTY_STRING;
 		}
 
-		final HtmlInfoBuilder b = getEquipmentHtmlInfo(equip);
+		final HtmlInfoBuilder b = getEquipmentHtmlInfo(equip).withSource(equip);
 
 		String bString = equip.getSource();
 		if (!bString.isEmpty())
@@ -1042,7 +1042,7 @@ public class Gui2InfoFactory implements InfoFactory
 			return EMPTY_STRING;
 		}
 
-		final HtmlInfoBuilder b = new HtmlInfoBuilder(null, false);
+		final HtmlInfoBuilder b = new HtmlInfoBuilder(null, false).withSource(equipMod);
 		b.appendTitleElement(OutputNameFormatting.piString(equipMod));
 		b.appendLineBreak();
 
@@ -1130,7 +1130,7 @@ public class Gui2InfoFactory implements InfoFactory
 			return EMPTY_STRING;
 		}
 
-		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		final HtmlInfoBuilder infoText = new HtmlInfoBuilder().withSource(template);
 
 		infoText.appendTitleElement(OutputNameFormatting.piString(template));
 
@@ -1196,7 +1196,7 @@ public class Gui2InfoFactory implements InfoFactory
 			return EMPTY_STRING;
 		}
 
-		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		final HtmlInfoBuilder infoText = new HtmlInfoBuilder().withSource(kit);
 
 		infoText.appendTitleElement(OutputNameFormatting.piString(kit));
 
@@ -1380,7 +1380,7 @@ public class Gui2InfoFactory implements InfoFactory
 		infoText.appendI18nElement("in_itmInfoLabelTextSource", //$NON-NLS-1$
 			SourceFormat.getFormattedString(originObj, Globals.getSourceDisplay(), true));
 
-		return infoText.toString();
+		return infoText.withSource(originObj).toString();
 	}
 
 	@Override
@@ -1414,6 +1414,10 @@ public class Gui2InfoFactory implements InfoFactory
 		}
 
 		final HtmlInfoBuilder infoText = new HtmlInfoBuilder();
+		if (facade instanceof CDOMObject cdo)
+		{
+			infoText.withSource(cdo);
+		}
 		infoText.appendTitleElement(facade.toString());
 		infoText.appendLineBreak();
 
@@ -1552,7 +1556,7 @@ public class Gui2InfoFactory implements InfoFactory
 		{
 			return EMPTY_STRING;
 		}
-		final HtmlInfoBuilder b = new HtmlInfoBuilder(titleWithEnglishName(aSpell));
+		final HtmlInfoBuilder b = new HtmlInfoBuilder(titleWithEnglishName(aSpell)).withSource(aSpell);
 
 		if (si != null)
 		{

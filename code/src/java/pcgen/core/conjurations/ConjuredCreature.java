@@ -32,21 +32,29 @@ import java.util.OptionalInt;
  *                   rounds are not counted.
  * @param bonuses    the temporary bonuses laid on this creature alone, on top of
  *                   the fight's group bonuses.
+ * @param form       its current alternate form, or empty for its ordinary form.
  */
 public record ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft,
-	List<AppliedBonus> bonuses)
+	List<AppliedBonus> bonuses, String form)
 {
 	/**
 	 * A creature with no bonus of its own.
 	 */
 	public ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft)
 	{
-		this(creature, number, damage, roundsLeft, List.of());
+		this(creature, number, damage, roundsLeft, List.of(), "");
+	}
+
+	public ConjuredCreature(String creature, int number, int damage, OptionalInt roundsLeft,
+		List<AppliedBonus> bonuses)
+	{
+		this(creature, number, damage, roundsLeft, bonuses, "");
 	}
 
 	public ConjuredCreature
 	{
 		bonuses = (bonuses == null) ? List.of() : List.copyOf(bonuses);
+		form = (form == null) ? "" : form.strip();
 		if (creature == null || creature.isBlank())
 		{
 			throw new IllegalArgumentException("A conjured creature needs the name of its stat line");

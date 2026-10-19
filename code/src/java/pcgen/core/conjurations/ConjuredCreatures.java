@@ -63,14 +63,15 @@ public final class ConjuredCreatures
 		if (found == null || !found.summon().equals(summon) || found.augmented() != augmented)
 		{
 			PlayerCharacter built = builder.build(summon, augmented);
-			found = new Kept(summon, augmented, built, builder.statsOf(built), new LinkedHashMap<>());
+			found = new Kept(summon, augmented, built, builder.statsOf(built, summon), new LinkedHashMap<>());
 			kept.put(identity, found);
 		}
 		Map<BonusSourceKey, AppliedBonus> wanted = new LinkedHashMap<>();
 		groupBonuses.forEach(bonus -> wanted.put(bonus.source(), bonus));
 		creature.bonuses().forEach(bonus -> wanted.put(bonus.source(), bonus));
 		lay(found, wanted);
-		return new BuiltCreature(found.character(), found.baseStats(), builder.statsOf(found.character()));
+		return new BuiltCreature(found.character(), SummonForms.statsOf(summon, creature.form(), found.baseStats()),
+			SummonForms.statsOf(summon, creature.form(), builder.statsOf(found.character(), summon)));
 	}
 
 	/**

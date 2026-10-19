@@ -19,6 +19,8 @@ package pcgen.gui2.facade;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.net.URI;
+
 import pcgen.AbstractCharacterTestCase;
 import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.ObjectKey;
@@ -95,6 +97,18 @@ public class Gui2InfoFactoryTest extends AbstractCharacterTestCase
 				+ "<b>Desc:</b>&nbsp;CE Desc<br><b>Source:</b>&nbsp;</html>",
 			infoFactory.getHTMLInfo(tbf));
 	}	
+
+	@Test
+	public void showsSourceLinkForPaizoFeatWithoutSourceLinkTag()
+	{
+		Ability feat = TestHelper.makeAbility("Power Attack", BuildUtilities.getFeatCat(), "Combat");
+		feat.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst"));
+
+		String html = new Gui2InfoFactory(getCharacter()).getHTMLInfo(feat);
+
+		assertTrue(html, html.contains("<a href=\"https://aonprd.com/FeatDisplay.aspx?ItemName=Power%20Attack\">"
+			+ "Archives of Nethys</a>"));
+	}
 
 	@BeforeEach
 	@Override

@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pcgen.core.Globals;
+import pcgen.core.Kit;
 import pcgen.core.PCTemplate;
 import pcgen.core.Race;
 import pcgen.rules.context.AbstractReferenceContext;
@@ -41,25 +42,44 @@ public final class CatalogResolution
 	 */
 	public static List<SummonParseError> unresolvedIn(SummonCatalog catalog)
 	{
-		AbstractReferenceContext data = Globals.getContext().getReferenceContext();
 		List<SummonParseError> errors = new ArrayList<>();
 		for (SummonGroup group : catalog.groups())
 		{
 			for (SummonTemplate summon : group.summons())
 			{
-				if (data.silentlyGetConstructedCDOMObject(Race.class, summon.raceKey()) == null)
-				{
-					errors.add(new SummonParseError(summon.line(),
-						"The loaded sources hold no race '" + summon.raceKey() + "'"));
-				}
-				for (String template : summon.templateKeys())
-				{
-					if (data.silentlyGetConstructedCDOMObject(PCTemplate.class, template) == null)
-					{
-						errors.add(new SummonParseError(summon.line(),
-							"The loaded sources hold no template '" + template + "'"));
-					}
-				}
+				errors.addAll(unresolvedIn(summon));
+			}
+		}
+		return errors;
+	}
+
+	public static List<SummonParseError> unresolvedIn(SummonTemplate summon)
+	{
+		// Older catalogs name a handwritten creature rather than a PCGen race.
+		if (summon.hasAuthoredStats())
+		{
+			return List.of();
+		}
+		AbstractReferenceContext data = Globals.getContext().getReferenceContext();
+		List<SummonParseError> errors = new ArrayList<>();
+		boolean hasRace = data.silentlyGetConstructedCDOMObject(Race.class, summon.sourceRaceKey()) != null;
+		if (!hasRace)
+		{
+			errors.add(new SummonParseError(summon.line(),
+				"The loaded sources hold no race '" + summon.sourceRaceKey() + "'"));
+		}
+		if (hasRace && data.silentlyGetConstructedCDOMObject(Kit.class,
+			summon.metadata().getOrDefault("kit", summon.sourceRaceKey() + " Default")) == null)
+		{
+			errors.add(new SummonParseError(summon.line(),
+				"The loaded sources hold no default kit for '" + summon.sourceRaceKey() + "'"));
+		}
+		for (String template : summon.templateKeys())
+		{
+			if (data.silentlyGetConstructedCDOMObject(PCTemplate.class, template) == null)
+			{
+				errors.add(new SummonParseError(summon.line(),
+					"The loaded sources hold no template '" + template + "'"));
 			}
 		}
 		return errors;

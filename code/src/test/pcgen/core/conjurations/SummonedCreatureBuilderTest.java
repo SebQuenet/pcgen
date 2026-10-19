@@ -21,6 +21,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import pcgen.core.Globals;
 import pcgen.core.PlayerCharacter;
@@ -88,12 +90,36 @@ class SummonedCreatureBuilderTest
 	}
 
 	@Test
+	void catalogMetricsUseTheBuiltCreaturesHitDiceAndAugmentedAttacks()
+	{
+		CreatureStats ordinary = statsOf(HOUND_ARCHON, false);
+		CreatureStats augmented = statsOf(HOUND_ARCHON, true);
+
+		assertEquals(6, ordinary.hitDice());
+		assertTrue(AverageDamage.expectedAgainst(augmented.attacks(), 20).orElseThrow()
+			> AverageDamage.expectedAgainst(ordinary.attacks(), 20).orElseThrow());
+	}
+
+	@Test
 	void aCelestialEagleCarriesItsTemplate()
 	{
 		PlayerCharacter eagle = builder.build(new SummonTemplate("Eagle", List.of("Celestial Creature"), 1), false);
 
 		assertTrue(eagle.getDisplay().getTemplateSet().stream()
 			.anyMatch(template -> "Celestial Creature".equals(template.getKeyName())));
+	}
+
+	@Test
+	void buildsATranslatedCatalogEntryFromItsSourceRace()
+	{
+		SummonTemplate summon = SummonCatalogParser.catalogOf("""
+			## IV
+			summon: Archonte molosse
+			  race: Archon (Hound)
+			""").orElseThrow().groups().getFirst().summons().getFirst();
+
+		assertTrue(CatalogResolution.unresolvedIn(summon).isEmpty());
+		assertEquals(6, statsOf(summon, true).hitDice());
 	}
 
 	@Test
@@ -136,5 +162,16 @@ class SummonedCreatureBuilderTest
 
 		System.out.println("Built and read 3 creatures in " + milliseconds + " ms");
 		assertTrue(milliseconds >= 0);
+	}
+
+	@Test
+	void buildsCatalogCreatureAwayFromTheUiThread() throws Exception
+	{
+		try (var worker = Executors.newSingleThreadExecutor())
+		{
+			CreatureStats archon = worker.submit(() -> statsOf(HOUND_ARCHON, true)).get(30, TimeUnit.SECONDS);
+			assertEquals(51, archon.maximumHitPoints());
+			assertEquals(6, archon.hitDice());
+		}
 	}
 }

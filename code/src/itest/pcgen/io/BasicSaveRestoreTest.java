@@ -318,7 +318,8 @@ public class BasicSaveRestoreTest extends AbstractSaveRestoreTest
 		ConjurationSession fight = new ConjurationSession(12, List.of(
 			new ConjuredCreature("Hound Archon", 1, 14, OptionalInt.of(7)),
 			new ConjuredCreature("Hound Archon", 2, 0, OptionalInt.empty()),
-			new ConjuredCreature("Archon: hound | [large]", 1, 3, OptionalInt.of(0))));
+			new ConjuredCreature("Archon: hound | [large]", 1, 3, OptionalInt.of(0))))
+			.withForm("Hound Archon", 1, "dire-wolf").withSkeletonUsed(true);
 		pc.setConjurationSession(fight);
 		runRoundRobin(null);
 		assertEquals(fight, reloadedPC.getDisplay().getConjurationSession());

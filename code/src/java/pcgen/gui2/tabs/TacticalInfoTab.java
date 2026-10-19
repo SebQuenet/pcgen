@@ -130,6 +130,10 @@ public class TacticalInfoTab extends FlippingSplitPane implements CharacterInfoT
 		@Override
 		public void store(String text, boolean reads)
 		{
+			if (text.equals(sheet.getPlanSource()))
+			{
+				return;
+			}
 			sheet.setPlanSource(text);
 			if (reads)
 			{

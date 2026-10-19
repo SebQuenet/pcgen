@@ -50,6 +50,7 @@ public final class SummonedCreatureBuilder
 	private static final String DEFAULT_KIT_SUFFIX = " Default";
 	private static final String DEFAULT_SET_NAME = "Default";
 	private static final String WEAPON = "WEAPON.MERGENONE.";
+	private static final Object BUILD_LOCK = new Object();
 	private static final int MOST_ATTACKS = 20;
 	private static final int FORTITUDE = 0;
 	private static final int REFLEX = 1;
@@ -87,6 +88,16 @@ public final class SummonedCreatureBuilder
 	 */
 	public PlayerCharacter build(SummonTemplate summon, boolean augmented)
 	{
+		// Building sets global chooser and hit point rules. Only one summon may
+		// change those settings at a time, including when catalog work runs off the UI thread.
+		synchronized (BUILD_LOCK)
+		{
+			return buildLocked(summon, augmented);
+		}
+	}
+
+	private PlayerCharacter buildLocked(SummonTemplate summon, boolean augmented)
+	{
 		AbstractReferenceContext data = Globals.getContext().getReferenceContext();
 		UIDelegate previousChoices = ChooserFactory.getDelegate();
 		int previousHitPointRule = SettingsHandler.getHPRollMethod();
@@ -101,11 +112,13 @@ public final class SummonedCreatureBuilder
 			// A kit's gear needs a set to be equipped in, or the creature goes unarmed
 			creature.addEquipSet(new EquipSet(EquipSet.DEFAULT_SET_PATH, DEFAULT_SET_NAME));
 			creature.setCalcEquipSetId(EquipSet.DEFAULT_SET_PATH);
-			creature.setRace(data.silentlyGetConstructedCDOMObject(Race.class, summon.raceKey()));
-			Kit.applyKit(data.silentlyGetConstructedCDOMObject(Kit.class, summon.raceKey() + DEFAULT_KIT_SUFFIX),
+			creature.setRace(data.silentlyGetConstructedCDOMObject(Race.class, summon.sourceRaceKey()));
+			String kit = summon.metadata().getOrDefault("kit", summon.sourceRaceKey() + DEFAULT_KIT_SUFFIX);
+			Kit.applyKit(data.silentlyGetConstructedCDOMObject(Kit.class, kit),
 				creature);
 			List<String> templates = new ArrayList<>(summon.templateKeys());
-			if (augmented)
+			if (augmented && !"true".equals(summon.metadata().get("suppressAugment"))
+				&& !templates.contains(AUGMENT_SUMMONING))
 			{
 				templates.add(AUGMENT_SUMMONING);
 			}
@@ -129,10 +142,35 @@ public final class SummonedCreatureBuilder
 	 */
 	public CreatureStats statsOf(PlayerCharacter creature)
 	{
-		return new CreatureStats(token(creature, "MOVEMENT"), number(creature, "HP"), number(creature, "AC.Total"),
-			number(creature, "AC.Touch"), number(creature, "AC.Flatfooted"), attacksOf(creature),
+		List<CreatureAttack> attacks = attacksOf(creature);
+		int hitDice = creature.getDisplay().totalHitDice() + creature.getDisplay().totalNonMonsterLevels();
+		return new CreatureStats(hitDice, token(creature, "MOVEMENT"), number(creature, "HP"), number(creature, "AC.Total"),
+			number(creature, "AC.Touch"), number(creature, "AC.Flatfooted"), attacks,
 			token(creature, "VAR.CMB.INTVAL.SIGN"), number(creature, "VAR.CMD.INTVAL"), save(creature, REFLEX),
 			save(creature, FORTITUDE), save(creature, WILL), token(creature, "INITIATIVEMOD"));
+	}
+
+	/** Applies summoning-list effects that are not part of the creature's race or template. */
+	public CreatureStats statsOf(PlayerCharacter creature, SummonTemplate summon)
+	{
+		CreatureStats stats = statsOf(creature);
+		int bonus = Integer.parseInt(summon.metadata().getOrDefault("willBonus", "0"));
+		if (bonus == 0)
+		{
+			return stats;
+		}
+		String will = stats.will();
+		try
+		{
+			will = String.format("%+d", Integer.parseInt(will.strip()) + bonus);
+		}
+		catch (NumberFormatException ignored)
+		{
+			return stats;
+		}
+		return new CreatureStats(stats.hitDice(), stats.speed(), stats.maximumHitPoints(), stats.armorClass(),
+			stats.touchArmorClass(), stats.flatFootedArmorClass(), stats.attacks(), stats.combatManeuverBonus(),
+			stats.combatManeuverDefense(), stats.reflex(), stats.fortitude(), will, stats.initiative());
 	}
 
 	private static List<CreatureAttack> attacksOf(PlayerCharacter creature)

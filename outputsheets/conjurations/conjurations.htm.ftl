@@ -17,17 +17,18 @@
 <#-- A bonus laid on creatures; own marks a creature's own, against the group's. -->
 <#macro chip bonus own><span class="chip<#if own> own</#if>" data-bonus="${bonus.key}">${bonus.label} <button type="button" class="chip-remove" data-action="<#if own>remove-bonus<#else>remove-group-bonus</#if>">&times;</button></span></#macro>
 <#-- Where the player picks a bonus to lay: a name to type, and a value when the bonus asks one. -->
-<#macro adder action><span class="adder"><input type="text" class="bonus-input" data-action="${action}" placeholder="${labels.addBonus}" /><input type="number" class="bonus-value" placeholder="${labels.value}" hidden /></span></#macro>
+<#macro adder action><span class="adder"><select class="bonus-select" data-action="${action}" aria-label="${labels.addBonus}"><option value="">${labels.addBonus}</option></select><input type="number" class="bonus-value" placeholder="${labels.value}" aria-label="${labels.value}" hidden /><button type="button" class="bonus-apply" hidden>${labels.applyBonus}</button></span></#macro>
 <#--
   One creature in play. The page renders the creatures already in play with it,
   and keeps one copy per catalog creature in a <template> for the script to
   clone when a new one arrives.
 -->
-<#macro card name number damage counted rounds found summon missing bonuses>
+<#macro card name number damage counted rounds found summon missing bonuses form="">
 <#-- The maximum hit points arrive with the numbers PCGen computes, through the bridge -->
-<article class="card<#if counted && rounds == 0> gone</#if>" data-creature="${name}" data-number="${number?c}" data-damage="${damage?c}" data-max="0" data-counted="${counted?c}" data-rounds="${rounds?c}">
+<#local authored = found && summon.authored />
+<article class="card<#if counted && rounds == 0> gone</#if>" data-creature="${name}" data-number="${number?c}" data-damage="${damage?c}" data-max="${(authored?then(summon.hpMax, 0))?c}" data-counted="${counted?c}" data-rounds="${rounds?c}" data-authored="${authored?c}" data-form="${form}">
   <header>
-    <span class="card-name">${name} <span class="card-number">${number?c}</span></span>
+    <span class="card-name"><#if found>${summon.displayName}<#else>${name}</#if> <span class="card-number">${number?c}</span><#if found><button type="button" class="inspect-creature" data-creature="${name}" title="${labels.details}" aria-label="${labels.details} : ${summon.displayName}">&#128269;</button></#if></span>
     <span class="rounds"<#if !counted> hidden</#if>>
       <button type="button" data-action="rounds-down">&minus;</button>
       <span class="rounds-left">${rounds?c}</span> ${labels.rounds}
@@ -37,7 +38,11 @@
     <button type="button" class="dismiss" data-action="dismiss">${labels.dismiss}</button>
   </header>
   <div class="hp">
+    <#if authored && summon.hpMax gt 0>
+    <span class="hp-readout"><span class="hp-current">${(summon.hpMax - damage)?c}</span> / <span class="hp-maximum">${summon.hpMax?c}</span></span><span class="bar"><span></span></span>
+    <#else>
     <span class="hp-readout">${labels.damage} <span class="hp-damage">${damage?c}</span></span>
+    </#if>
   </div>
   <div class="hp-controls">
     <input type="number" class="amount" min="1" placeholder="1" />
@@ -45,9 +50,15 @@
     <button type="button" data-action="heal">${labels.heal}</button>
   </div>
   <#if found>
+  <#if summon.forms?has_content><label>${labels.form} <select class="form-select"><option value="">${labels.normalForm}</option><#list summon.forms as alternative><option value="${alternative.key}"<#if form == alternative.key> selected</#if>>${alternative.label}</option></#list></select></label></#if>
+  <#if authored>
+  <p class="building">${labels.authoredStats}</p>
+  <dl class="stats"><#list conjurations.metadataFields as field><#if summon.metadata[field]?has_content><dt>${conjurations.fieldLabels[field]}</dt><dd><@text summon.metadata[field]/></dd></#if></#list></dl>
+  <#else>
   <div class="own-bonuses"><span class="lbl">${labels.ownBonuses}</span><span class="chips"><#list bonuses as bonus><@chip bonus=bonus own=true/></#list></span><@adder action="add-bonus"/></div>
   <p class="building">${labels.building}</p>
   <dl class="stats"></dl>
+  </#if>
   <#elseif missing?has_content>
   <p class="unresolved">${missing}</p>
   </#if>
@@ -87,7 +98,7 @@ button:hover{border-color:var(--gold)}
 .filter{color:var(--text-dim)}
 .filter.on{color:var(--gold-bright);border-color:var(--gold-dim);background:var(--bg)}
 
-table{border-collapse:collapse;width:100%;font-size:12px;table-layout:fixed}
+table{border-collapse:collapse;width:100%;min-width:950px;font-size:12px}
 col.c-conjure{width:78px}
 col.c-name{width:14%}
 col.c-speed{width:6%}
@@ -107,11 +118,35 @@ td.hp{color:var(--grn)}
 td.ac{color:var(--def)}
 td.attack{color:var(--atk)}
 td.damage{color:var(--dmg)}
+td.metric{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+th button.sort{border:0;background:transparent;padding:0;text-align:inherit;color:inherit;font:inherit}
+th button.sort[aria-pressed="true"]{color:var(--gold-bright)}
 tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 .detail{margin-right:12px}
 .detail b{color:var(--def);font-weight:600}
 .tag{color:var(--buff);font-size:10px;text-transform:uppercase;letter-spacing:.06em;margin-right:6px}
+.rating{font-size:11px;font-weight:600;white-space:nowrap}
+.rating.red{color:#a32626}.rating.orange{color:#9c5200}.rating.green{color:#187338}.rating.blue{color:#1d5a85}
 .conjure{color:var(--grn);white-space:nowrap}
+.inspect-creature{border:0;background:transparent;color:var(--def);padding:0 3px;font-size:14px;line-height:1}
+.inspect-creature:hover{color:var(--gold-bright)}
+.drawer-shade{position:fixed;inset:0;background:rgba(15,23,19,.35);z-index:30}
+.creature-drawer{position:fixed;right:0;top:0;bottom:0;width:min(480px,94vw);z-index:31;
+  overflow:auto;background:var(--bg);box-shadow:-6px 0 22px rgba(0,0,0,.25);padding:14px 18px;
+  transform:translateX(100%);transition:transform .2s ease}
+.creature-drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  border-bottom:1px solid var(--border);padding-bottom:8px}
+.drawer-head h2{font-size:17px;letter-spacing:0;text-transform:none;margin:0}
+.drawer-close{font-size:18px;line-height:1}
+.drawer-body h3{font-size:12px;color:var(--def);margin:14px 0 3px}
+.drawer-body p{margin:3px 0 8px;white-space:normal}
+.drawer-meta{color:var(--text-dim);font-size:11px;margin-top:8px}
+.drawer-stats{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;font-size:12px}
+.drawer-stats dt{font-weight:600;color:var(--text-dim)}
+.drawer-stats dd{margin:0}
+.drawer-sources{margin-top:14px;font-size:11px;display:flex;gap:12px;flex-wrap:wrap}
+.drawer-sources a{color:var(--def)}
 
 .combat-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-bottom:6px}
 .combat-head h2{margin:0}
@@ -153,7 +188,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   color:var(--buff);border-radius:10px;background:var(--bg)}
 .chip.own{border-color:var(--myth);color:var(--myth)}
 .chip-remove{border:none;background:transparent;color:var(--text-dim);padding:0 4px}
-.bonus-input{width:130px;font:inherit;font-size:11px;background:var(--bg);color:var(--text);border:1px dashed var(--text-dim);
+.bonus-select{max-width:240px;font:inherit;font-size:11px;background:var(--bg);color:var(--text);border:1px dashed var(--text-dim);
   border-radius:10px;padding:1px 7px}
 .bonus-value{width:52px;font:inherit;font-size:11px}
 .building{color:var(--text-dim);font-size:11px}
@@ -163,7 +198,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 @media print{
   .page{display:block;height:auto}
   .catalog,.combat{overflow:visible}
-  .divider,button,input,.duration,.adder{display:none}
+  .divider,button,input,select,.duration,.adder,.drawer-shade,.creature-drawer{display:none}
 }
 </style>
 
@@ -186,25 +221,42 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     </ul>
   </div>
 <#else>
-  <#list conjurations.groups as group>
-  <div class="group">
-    <h2>${group.title}</h2>
-    <table>
-      <colgroup><col class="c-conjure" /><col class="c-name" /></colgroup>
-      <thead>
-        <tr><th></th><th>${labels.creature}</th></tr>
-      </thead>
-      <#list group.summons as summon>
-      <tbody class="summon">
-        <tr>
-          <td><button type="button" class="conjure" data-creature="${summon.name}">${labels.conjure}</button></td>
-          <td class="name">${summon.name}</td>
-        </tr>
-      </tbody>
-      </#list>
-    </table>
-  </div>
-  </#list>
+  <label class="target-ac">${labels.targetArmor} <input type="number" min="1" max="99" value="20" /></label>
+  <table class="catalog-table">
+    <thead><tr>
+      <th></th>
+      <th><button class="sort" type="button" data-sort="level">${labels.level}</button></th>
+      <th><button class="sort" type="button" data-sort="name">${labels.creature}</button></th>
+      <th>${labels.role}</th>
+      <th><button class="sort" type="button" data-sort="ranking" title="${labels.ranking}">${labels.ranking}</button></th>
+      <th><button class="sort" type="button" data-sort="hitDice">${labels.hitDice}</button></th>
+      <th><button class="sort" type="button" data-sort="expectedDamagePerRound" title="${labels.expectedDamage}">${labels.expectedDamage}</button></th>
+      <th><button class="sort" type="button" data-sort="armorClass">${conjurations.statLabels.ac}</button></th>
+      <th><button class="sort" type="button" data-sort="touchArmorClass">${labels.touchArmor}</button></th>
+      <th><button class="sort" type="button" data-sort="flatFootedArmorClass">${labels.flatArmor}</button></th>
+      <th><button class="sort" type="button" data-sort="combatManeuverBonus">${conjurations.statLabels.cmb}</button></th>
+      <th><button class="sort" type="button" data-sort="combatManeuverDefense">${conjurations.statLabels.cmd}</button></th>
+    </tr></thead>
+    <#list conjurations.summons as summon>
+    <tbody class="summon" data-creature="${summon.name}" data-group="${summon.group}" data-family="${summon.family}" data-level="${summon.levelRank?c}" data-order="${summon?index?c}" data-authored="${summon.authored?c}" data-available="${summon.available?c}"<#if summon.ranking.score??> data-sort-ranking="${summon.ranking.score?c}"</#if>>
+      <tr>
+        <td><#if (summon.family == "Expanded" || summon.family == "Versatile SM") && summon.choiceRequired><button type="button" class="select-choice" data-creature="${summon.name}" title="${summon.choiceHint}">${labels.selectChoice}</button><#else><button type="button" class="conjure" data-creature="${summon.name}"<#if !summon.available> disabled title="${summon.unavailableHint}"</#if>>${labels.conjure}</button></#if></td>
+        <td class="metric">${summon.displayGroup}</td>
+        <td class="name">${summon.displayName} <button type="button" class="inspect-creature" data-creature="${summon.name}" title="${labels.details}" aria-label="${labels.details} : ${summon.displayName}">&#128269;</button></td>
+        <td><#list summon.roles as role><span class="tag">${role}</span></#list></td>
+        <td><#if summon.ranking.color?has_content><a class="rating ${summon.ranking.color}" data-reference="true" href="${summon.ranking.source}" title="${labels.ranking} : ${labels['rating_' + summon.ranking.color + '_meaning']}" target="_blank" rel="noopener noreferrer">${labels['rating_' + summon.ranking.color]}</a><#else>${labels.unranked}</#if></td>
+        <#list ["hitDice", "expectedDamagePerRound", "armorClass", "touchArmorClass", "flatFootedArmorClass", "combatManeuverBonus", "combatManeuverDefense"] as metric>
+        <td class="metric" data-metric="${metric}">…</td>
+        </#list>
+      </tr>
+      <#if summon.authored>
+      <tr class="details"><td></td><td colspan="11">
+        <span class="detail">${labels.authoredStats}</span>
+      </td></tr>
+      </#if>
+    </tbody>
+    </#list>
+  </table>
 </#if>
 </section>
 
@@ -215,6 +267,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     <h2>${labels.inPlay} <span class="count"></span></h2>
     <button type="button" data-action="next-round">${labels.nextRound}</button>
     <button type="button" data-action="dismiss-all">${labels.dismissAll}</button>
+    <#if conjurations.skeletonFeat><button type="button" data-action="reset-skeleton" data-used-title="${labels.skeletonUsed}">${labels.skeletonReset}</button></#if>
     <label class="duration">${labels.duration} <input type="number" min="0" value="${conjurations.duration?c}" /></label>
   </div>
   <div class="group-bonuses"><span class="lbl">${labels.group}</span><span class="chips"><#list conjurations.groupBonuses as bonus><@chip bonus=bonus own=false/></#list></span><@adder action="add-group-bonus"/></div>
@@ -222,7 +275,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   <p class="nobody"<#if conjurations.conjured?size gt 0> hidden</#if>>${labels.nobody}</p>
   <div class="cards">
   <#list conjurations.conjured as conjured>
-    <@card name=conjured.name number=conjured.number damage=conjured.damage counted=conjured.counted rounds=conjured.rounds found=conjured.found summon=conjured.summon missing=conjured.missing bonuses=conjured.bonuses/>
+    <@card name=conjured.name number=conjured.number damage=conjured.damage counted=conjured.counted rounds=conjured.rounds found=conjured.found summon=conjured.summon missing=conjured.missing bonuses=conjured.bonuses form=conjured.form/>
   </#list>
   </div>
   <#list conjurations.summons as summon>
@@ -230,6 +283,33 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   </#list>
 </section>
 </div>
+
+<div class="drawer-shade" hidden></div>
+<aside class="creature-drawer" role="dialog" aria-modal="true" aria-label="${labels.details}" data-hit-dice-label="${labels.hitDice}" data-expected-damage-label="${labels.expectedDamage}" data-building-label="${labels.building}" hidden>
+  <div class="drawer-head"><h2 class="drawer-name"></h2><button type="button" class="drawer-close" aria-label="${labels.closeDetails}">&times;</button></div>
+  <div class="drawer-body"></div>
+</aside>
+<#list conjurations.summons as summon>
+<template class="creature-details" data-creature="${summon.name}" data-display-name="${summon.displayName}">
+  <p class="drawer-meta">${summon.displayGroup}<#if summon.roles?has_content> · <#list summon.roles as role>${role}<#sep>, </#sep></#list></#if></p>
+  <p class="drawer-meta">${labels.sourceRace} : ${summon.displayRace}<#if summon.displayTemplates?has_content> · ${labels.templates} : <#list summon.displayTemplates as template>${template}<#sep>, </#sep></#list></#if></p>
+  <p class="drawer-meta">${labels.ranking} : <#if summon.ranking.color?has_content><a class="rating ${summon.ranking.color}" data-reference="true" href="${summon.ranking.source}" title="${labels['rating_' + summon.ranking.color + '_meaning']}" target="_blank" rel="noopener noreferrer">${labels['rating_' + summon.ranking.color]}</a><#else>${labels.unranked}</#if></p>
+  <#if summon.guide.interest?has_content><h3>${labels.interest}</h3><p><@text summon.guide.interest/></p></#if>
+  <#if summon.guide.usage?has_content><h3>${labels.usage}</h3><p><@text summon.guide.usage/></p></#if>
+  <#if summon.guide.limits?has_content><h3>${labels.limits}</h3><p><@text summon.guide.limits/></p></#if>
+  <#if summon.metadata.special?has_content><h3>${labels.abilities}</h3><p><@text summon.metadata.special/></p></#if>
+  <#if summon.metadata.spells?has_content><h3>${labels.spells}</h3><p><@text summon.metadata.spells/></p></#if>
+  <#if summon.note?has_content><h3><#if summon.metadata.publishedName?has_content>${labels.rulesNote}<#else>${labels.authoredNote}</#if></h3><p><@text summon.note/></p></#if>
+  <#if summon.forms?has_content><h3>${labels.form}</h3><#list summon.forms as alternative><p><b>${alternative.label}</b> : ${alternative.description} <a data-reference="true" href="${alternative.source}" target="_blank" rel="noopener noreferrer">${labels.publishedRules}</a></p></#list></#if>
+  <#if summon.collectiveForm.label?has_content><h3>${summon.collectiveForm.label}</h3><p>${summon.collectiveForm.description} <a data-reference="true" href="${summon.collectiveForm.source}" target="_blank" rel="noopener noreferrer">${labels.publishedRules}</a></p></#if>
+  <#if summon.choiceRequired><p>${summon.choiceHint}</p></#if>
+  <#if !summon.available && !summon.choiceRequired><p>${summon.unavailableHint}</p></#if>
+  <h3>${labels.fullStats}</h3>
+  <#if summon.authored><dl class="drawer-stats"><#list conjurations.metadataFields as field><#if summon.metadata[field]?has_content && field != "note" && field != "special" && field != "spells"><dt>${conjurations.fieldLabels[field]}</dt><dd><@text summon.metadata[field]/></dd></#if></#list></dl></#if>
+  <#if !summon.authored><p class="drawer-stat-status">${labels.computedInApp}</p><dl class="drawer-stats"></dl></#if>
+  <div class="drawer-sources"><#if summon.guide.bestiary?has_content><a data-reference="true" href="${summon.guide.bestiary}" target="_blank" rel="noopener noreferrer">${labels.bestiarySource}</a></#if><#if summon.ranking.source?has_content><a data-reference="true" href="${summon.ranking.source}" target="_blank" rel="noopener noreferrer">${labels.guideSource}</a></#if><#if summon.metadata.source?has_content><a data-reference="true" href="${summon.metadata.source}" target="_blank" rel="noopener noreferrer">${labels.publishedRules}</a><#else><a data-reference="true" href="https://legacy.aonprd.com/coreRulebook/spells/summonMonster.html" target="_blank" rel="noopener noreferrer">${labels.rulesSource}</a></#if></div>
+</template>
+</#list>
 
 <script>
 (function () {
@@ -320,7 +400,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     return found;
   }
 
-  function conjure(name) {
+  function conjure(name, family) {
     var template = templateFor(name);
     if (!template || !template.content) {
       return;
@@ -332,6 +412,9 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
         number = whole(link.conjure(name), 0);
       } catch (refused) {
         number = 0;
+      }
+      if (number < 1) {
+        return;
       }
     }
     if (number < 1) {
@@ -345,6 +428,12 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     card.setAttribute("data-rounds", String(duration));
     card.querySelector(".card-number").textContent = String(number);
     cards.appendChild(card);
+    if (family === "Skeleton 1/day") {
+      each(document.querySelectorAll('.catalog tbody[data-family="Skeleton 1/day"] .conjure'), function (button) {
+        button.disabled = true;
+        button.title = document.querySelector("[data-action=reset-skeleton]").getAttribute("data-used-title");
+      });
+    }
     paint(card);
     refreshCount();
     if (card.scrollIntoView) {
@@ -355,8 +444,32 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 
   each(document.querySelectorAll(".catalog .conjure"), function (button) {
     button.addEventListener("click", function () {
-      conjure(button.getAttribute("data-creature"));
+      conjure(button.getAttribute("data-creature"), button.closest("tbody").getAttribute("data-family"));
     });
+  });
+
+  each(document.querySelectorAll(".catalog .select-choice"), function (button) {
+    button.addEventListener("click", function () {
+      var link = bridge();
+      if (link && link.selectPublished && link.selectPublished(button.getAttribute("data-creature"))) {
+        button.disabled = true;
+      }
+    });
+  });
+
+  cards.addEventListener("change", function (event) {
+    if (!event.target.classList || !event.target.classList.contains("form-select")) {
+      return;
+    }
+    var card = event.target.closest(".card");
+    var selected = event.target.value;
+    var link = bridge();
+    if (link && link.setForm && !link.setForm(nameOf(card), numberOf(card), selected)) {
+      event.target.value = card.getAttribute("data-form") || "";
+      return;
+    }
+    card.setAttribute("data-form", selected);
+    refreshCardsLater([card]);
   });
 
   cards.addEventListener("click", function (event) {
@@ -424,6 +537,14 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       if (link && link.dismissAll) {
         link.dismissAll();
       }
+    } else if (action === "reset-skeleton") {
+      if (link && link.resetSkeletonUse) {
+        link.resetSkeletonUse();
+      }
+      each(document.querySelectorAll('.catalog tbody[data-family="Skeleton 1/day"] .conjure'), function (conjureButton) {
+        conjureButton.disabled = false;
+        conjureButton.title = "";
+      });
     }
   });
 
@@ -445,6 +566,115 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       return null;
     }
   }
+
+  var catalogTable = document.querySelector(".catalog-table");
+  var targetArmorInput = document.querySelector(".target-ac input");
+  var catalogSort = null;
+  var catalogAscending = false;
+  var catalogRevision = 0;
+
+  function sortCatalog() {
+    if (!catalogTable || !catalogSort) {
+      return;
+    }
+    var rows = Array.prototype.slice.call(catalogTable.querySelectorAll("tbody.summon"));
+    rows.sort(function (left, right) {
+      var a, b;
+      if (catalogSort === "name") {
+        a = left.getAttribute("data-creature");
+        b = right.getAttribute("data-creature");
+        var named = a.localeCompare(b);
+        return (catalogAscending ? named : -named) ||
+          whole(left.getAttribute("data-order"), 0) - whole(right.getAttribute("data-order"), 0);
+      }
+      if (catalogSort === "level") {
+        a = Number(left.getAttribute("data-level"));
+        b = Number(right.getAttribute("data-level"));
+      } else {
+        var rawA = left.getAttribute("data-sort-" + catalogSort);
+        var rawB = right.getAttribute("data-sort-" + catalogSort);
+        a = rawA === null ? NaN : Number(rawA);
+        b = rawB === null ? NaN : Number(rawB);
+      }
+      var missingA = !isFinite(a);
+      var missingB = !isFinite(b);
+      if (missingA || missingB) {
+        return missingA === missingB ? 0 : (missingA ? 1 : -1);
+      }
+      return (catalogAscending ? a - b : b - a) ||
+        whole(left.getAttribute("data-order"), 0) - whole(right.getAttribute("data-order"), 0);
+    });
+    rows.forEach(function (row) {
+      catalogTable.appendChild(row);
+    });
+  }
+
+  if (catalogTable) {
+    each(catalogTable.querySelectorAll("button.sort"), function (button) {
+      button.addEventListener("click", function () {
+        var key = button.getAttribute("data-sort");
+        catalogAscending = (catalogSort === key) ? !catalogAscending : key === "name";
+        catalogSort = key;
+        each(catalogTable.querySelectorAll("button.sort"), function (other) {
+          other.setAttribute("aria-pressed", other === button ? "true" : "false");
+        });
+        sortCatalog();
+      });
+    });
+  }
+
+  function paintCatalogStats(row, stats) {
+    each(row.querySelectorAll("[data-metric]"), function (cell) {
+      var key = cell.getAttribute("data-metric");
+      var value = stats ? stats[key] : null;
+      cell.textContent = value === null || value === undefined ? "—" :
+        (key === "expectedDamagePerRound" ? Number(value).toFixed(1) : String(value));
+      if (typeof value === "number") {
+        row.setAttribute("data-sort-" + key, String(value));
+      } else if (key === "combatManeuverBonus" && value !== null) {
+        row.setAttribute("data-sort-" + key, String(Number(value)));
+      } else {
+        row.removeAttribute("data-sort-" + key);
+      }
+    });
+    sortCatalog();
+  }
+
+  function refreshCatalogLater() {
+    if (!catalogTable || !bridge()) {
+      return;
+    }
+    var queue = Array.prototype.slice.call(catalogTable.querySelectorAll("tbody.summon:not([hidden])"));
+    var revision = ++catalogRevision;
+    var targetArmor = Math.max(1, Math.min(99, whole(targetArmorInput.value, 20)));
+    targetArmorInput.value = String(targetArmor);
+    function next() {
+      if (!queue.length || revision !== catalogRevision) {
+        return;
+      }
+      var row = queue[0];
+      var stats = null;
+      if (row.getAttribute("data-authored") !== "true" && row.getAttribute("data-available") === "true") {
+        try {
+          stats = parsed(bridge().catalogStats(row.getAttribute("data-creature"), targetArmor));
+        } catch (unavailable) {
+          stats = null;
+        }
+        if (stats && stats.pending) {
+          window.setTimeout(next, 100);
+          return;
+        }
+      }
+      queue.shift();
+      paintCatalogStats(row, stats);
+      window.setTimeout(next, 0);
+    }
+    window.setTimeout(next, 0);
+  }
+  if (targetArmorInput) {
+    targetArmorInput.addEventListener("change", refreshCatalogLater);
+  }
+  refreshCatalogLater();
 
   var statLabels = {};
   each(document.querySelectorAll(".stat-labels dt"), function (label) {
@@ -522,6 +752,142 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     paint(card);
   }
 
+  var drawer = document.querySelector(".creature-drawer");
+  var drawerShade = document.querySelector(".drawer-shade");
+  var drawerBody = drawer.querySelector(".drawer-body");
+  var drawerRevision = 0;
+  var drawerTrigger = null;
+
+  function paintDrawerStats(name, number, revision) {
+    if (revision !== drawerRevision || drawer.hidden) {
+      return;
+    }
+    var link = bridge();
+    if (!link || !link.catalogStats) {
+      return;
+    }
+    var targetArmor = targetArmorInput ? Math.max(1, Math.min(99, whole(targetArmorInput.value, 20))) : 20;
+    var stats = parsed(number > 0 && link.inPlayStats ? link.inPlayStats(name, number, targetArmor) :
+      link.catalogStats(name, targetArmor));
+    if (stats && stats.pending) {
+      window.setTimeout(function () { paintDrawerStats(name, number, revision); }, 100);
+      return;
+    }
+    var list = drawerBody.querySelector(".drawer-stats");
+    if (!stats || !list) {
+      return;
+    }
+    while (list.firstChild) {
+      list.removeChild(list.firstChild);
+    }
+    row(list, drawer.getAttribute("data-hit-dice-label"), stats.hitDice);
+    var card = number > 0 ? cardOf(name, number) : null;
+    row(list, statLabels.hp, card ? String(stats.maximumHitPoints - whole(card.getAttribute("data-damage"), 0)) +
+      " / " + stats.maximumHitPoints : stats.maximumHitPoints);
+    row(list, statLabels.speed, stats.speed);
+    row(list, statLabels.ac, armorOf(stats));
+    (stats.attacks || []).forEach(function (attack) {
+      row(list, attack.name, attack.toHit + " · " + attack.damage);
+    });
+    row(list, statLabels.cmb, stats.combatManeuverBonus);
+    row(list, statLabels.cmd, stats.combatManeuverDefense);
+    row(list, statLabels.ref + " / " + statLabels.fort + " / " + statLabels.will,
+      stats.reflex + " / " + stats.fortitude + " / " + stats.will);
+    row(list, statLabels.init, stats.initiative);
+    if (stats.expectedDamagePerRound !== null) {
+      row(list, drawer.getAttribute("data-expected-damage-label"),
+        Number(stats.expectedDamagePerRound).toFixed(1));
+    }
+    drawerBody.querySelector(".drawer-stat-status").hidden = true;
+  }
+
+  function closeDetails() {
+    drawerRevision++;
+    drawer.classList.remove("open");
+    drawerShade.hidden = true;
+    window.setTimeout(function () {
+      if (!drawer.classList.contains("open")) {
+        drawer.hidden = true;
+      }
+    }, 220);
+    if (drawerTrigger) {
+      drawerTrigger.focus();
+    }
+  }
+
+  function openDetails(name, trigger) {
+    var detail = null;
+    each(document.querySelectorAll("template.creature-details"), function (candidate) {
+      if (!detail && candidate.getAttribute("data-creature") === name) {
+        detail = candidate;
+      }
+    });
+    if (!detail || !detail.content) {
+      return;
+    }
+    drawerRevision++;
+    var revision = drawerRevision;
+    var card = trigger.closest(".card");
+    var number = card ? numberOf(card) : 0;
+    drawer.setAttribute("data-creature", name);
+    drawer.setAttribute("data-number", String(number));
+    drawerTrigger = trigger;
+    while (drawerBody.firstChild) {
+      drawerBody.removeChild(drawerBody.firstChild);
+    }
+    drawerBody.appendChild(document.importNode(detail.content, true));
+    var pending = drawerBody.querySelector(".drawer-stat-status");
+    if (pending && bridge()) {
+      pending.textContent = drawer.getAttribute("data-building-label");
+    }
+    drawer.querySelector(".drawer-name").textContent = detail.getAttribute("data-display-name") + (number > 0 ? " #" + number : "");
+    drawer.hidden = false;
+    drawerShade.hidden = false;
+    window.setTimeout(function () { drawer.classList.add("open"); }, 0);
+    drawer.querySelector(".drawer-close").focus();
+    window.setTimeout(function () { paintDrawerStats(name, number, revision); }, 0);
+  }
+
+  document.addEventListener("click", function (event) {
+    var reference = event.target.closest("a[data-reference]");
+    var link = bridge();
+    if (reference && link && link.openReference) {
+      event.preventDefault();
+      link.openReference(reference.href);
+      return;
+    }
+    var inspect = event.target.closest(".inspect-creature");
+    if (inspect) {
+      openDetails(inspect.getAttribute("data-creature"), inspect);
+    }
+  });
+  drawer.querySelector(".drawer-close").addEventListener("click", closeDetails);
+  drawerShade.addEventListener("click", closeDetails);
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !drawer.hidden) {
+      closeDetails();
+    } else if (event.key === "Tab" && !drawer.hidden) {
+      var focusable = drawer.querySelectorAll("button, a[href]");
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
+  if (targetArmorInput) {
+    targetArmorInput.addEventListener("change", function () {
+      if (!drawer.hidden) {
+        paintDrawerStats(drawer.getAttribute("data-creature"),
+          whole(drawer.getAttribute("data-number"), 0), drawerRevision);
+      }
+    });
+  }
+
   // The hit point line is drawn for a known maximum; a card cloned or rendered
   // before PCGen built its creature counts damage only until then.
   function ensureHitPointBar(card) {
@@ -593,9 +959,13 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   }
 
   function refreshCard(card) {
+    if (card.getAttribute("data-authored") === "true") {
+      return;
+    }
     var link = bridge();
     if (link && link.view) {
       paintView(parsed(link.view(nameOf(card), numberOf(card))));
+      choicesFor(card.querySelector(".bonus-select"));
     }
   }
 
@@ -611,51 +981,46 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     window.setTimeout(next, 0);
   }
 
-  // A bonus is picked by typing its name; the list of names is asked for the
-  // first time the field is used.
-  var choiceListCount = 0;
-
-  function choicesFor(input) {
-    if (input.choices) {
-      return input.choices;
+  // Ask PCGen for the bonuses available to this creature or to the group.
+  function choicesFor(select) {
+    if (select.choices) {
+      return select.choices;
     }
     var link = bridge();
-    var card = input.closest(".card");
+    var card = select.closest(".card");
     var json = null;
     if (link && card && link.bonusChoices) {
       json = link.bonusChoices(nameOf(card), numberOf(card));
     } else if (link && !card && link.groupBonusChoices) {
       json = link.groupBonusChoices();
     }
+    if (json === null) {
+      return [];
+    }
     var choices = parsed(json) || [];
-    var list = document.createElement("datalist");
-    choiceListCount++;
-    list.id = "bonus-choices-" + choiceListCount;
     choices.forEach(function (choice) {
       var option = document.createElement("option");
-      option.value = choice.label;
-      list.appendChild(option);
+      option.value = choice.key;
+      option.textContent = choice.label;
+      select.appendChild(option);
     });
-    input.parentNode.appendChild(list);
-    input.setAttribute("list", list.id);
-    input.choices = choices;
+    select.choices = choices;
     return choices;
   }
 
-  function chosen(input) {
-    var typed = input.value.trim().toLowerCase();
+  function chosen(select) {
     var found = null;
-    (input.choices || []).forEach(function (choice) {
-      if (!found && choice.label.toLowerCase() === typed) {
+    (select.choices || []).forEach(function (choice) {
+      if (!found && choice.key === select.value) {
         found = choice;
       }
     });
     return found;
   }
 
-  function lay(input, choice, value) {
+  function lay(select, choice, value) {
     var link = bridge();
-    var card = input.closest(".card");
+    var card = select.closest(".card");
     if (!link) {
       return;
     }
@@ -665,14 +1030,15 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       paintViews(link.addGroupBonus(choice.key, value));
       paintChips(document.querySelector(".group-bonuses .chips"), parsed(link.groupBonuses()), false);
     }
-    input.value = "";
-    var valueInput = input.parentNode.querySelector(".bonus-value");
+    select.value = "";
+    var valueInput = select.parentNode.querySelector(".bonus-value");
     valueInput.hidden = true;
     valueInput.value = "";
+    select.parentNode.querySelector(".bonus-apply").hidden = true;
   }
 
   document.addEventListener("focusin", function (event) {
-    if (event.target.classList && event.target.classList.contains("bonus-input")) {
+    if (event.target.classList && event.target.classList.contains("bonus-select")) {
       choicesFor(event.target);
     }
   });
@@ -682,28 +1048,41 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     if (!target.classList) {
       return;
     }
-    if (target.classList.contains("bonus-input")) {
+    if (target.classList.contains("bonus-select")) {
       var choice = chosen(target);
       if (!choice) {
+        target.parentNode.querySelector(".bonus-value").hidden = true;
+        target.parentNode.querySelector(".bonus-apply").hidden = true;
         return;
       }
       var valueInput = target.parentNode.querySelector(".bonus-value");
+      var apply = target.parentNode.querySelector(".bonus-apply");
       if (choice.range) {
         valueInput.min = String(choice.range.minimum);
         valueInput.max = String(choice.range.maximum);
         valueInput.value = String(choice.range.minimum);
         valueInput.title = choice.range.title;
         valueInput.hidden = false;
+        apply.hidden = false;
         valueInput.focus();
       } else {
+        apply.hidden = true;
         lay(target, choice, -1);
       }
-    } else if (target.classList.contains("bonus-value")) {
-      var input = target.parentNode.querySelector(".bonus-input");
-      var picked = chosen(input);
-      if (picked) {
-        lay(input, picked, whole(target.value, picked.range ? picked.range.minimum : -1));
-      }
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.classList || !event.target.classList.contains("bonus-apply")) {
+      return;
+    }
+    var select = event.target.parentNode.querySelector(".bonus-select");
+    var choice = chosen(select);
+    var valueInput = event.target.parentNode.querySelector(".bonus-value");
+    if (choice && choice.range && valueInput.value !== "" && valueInput.checkValidity()) {
+      lay(select, choice, Number(valueInput.value));
+    } else {
+      valueInput.focus();
     }
   });
 
@@ -740,6 +1119,15 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 
   each(cards.querySelectorAll(".card"), paint);
   refreshCount();
-  refreshCardsLater(cards.querySelectorAll(".card"));
+  function startStats(attempt) {
+    if (bridge() && bridge().catalogStats) {
+      choicesFor(document.querySelector(".group-bonuses .bonus-select"));
+      refreshCatalogLater();
+      refreshCardsLater(cards.querySelectorAll(".card"));
+    } else if (attempt < 30) {
+      window.setTimeout(function () { startStats(attempt + 1); }, 100);
+    }
+  }
+  startStats(0);
 }());
 </script>

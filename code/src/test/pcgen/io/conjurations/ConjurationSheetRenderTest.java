@@ -25,7 +25,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
+import java.util.Locale;
 import java.util.OptionalInt;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import pcgen.AbstractCharacterTestCase;
 import pcgen.core.PlayerCharacter;
@@ -74,20 +77,152 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 	}
 
 	@Test
-	public void saysSoWhenTheCharacterHasNoCatalog() throws IOException, ExportException
+	public void rendersGuideInTheInterfaceLanguage() throws IOException, ExportException
 	{
-		assertShows(LanguageBundle.getString("in_conjurations_empty"), render(getCharacter()));
+		getCharacter().setConjurationCatalog("## IV\nsummon: Archon (Hound)\n");
+		Locale previous = Locale.getDefault();
+		try
+		{
+			Locale.setDefault(Locale.ENGLISH);
+			LanguageBundle.reload();
+			String english = render(getCharacter());
+			assertShows("Durable defender", english);
+			assertShows("Why summon it", english);
+			Locale.setDefault(Locale.FRENCH);
+			LanguageBundle.reload();
+			String french = render(getCharacter());
+			assertShows("Combattant solide", french);
+			assertShows("Pourquoi la convoquer", french);
+			assertFalse(french.contains("Durable defender"));
+		}
+		finally
+		{
+			Locale.setDefault(previous);
+			LanguageBundle.reload();
+		}
+	}
+
+	@Test
+	public void routesEveryReferenceLinkOutOfTheEmbeddedSheet() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog(A_CATALOG);
+		String html = render(getCharacter());
+		Matcher anchors = Pattern.compile("<a\\b[^>]*href=\"https:[^\"]+\"[^>]*>").matcher(html);
+		int references = 0;
+		while (anchors.find())
+		{
+			references++;
+			assertTrue(anchors.group().contains("data-reference"), anchors.group());
+		}
+		assertTrue(references > 0);
+		assertShows("closest(\"a[data-reference]\")", html);
+	}
+
+	@Test
+	public void showsNoPublishedListsWhenTheCharacterHasNoLoadedSources() throws IOException, ExportException
+	{
+		String html = render(getCharacter());
+		assertShows(LanguageBundle.getString("in_conjurations_empty"), html);
+		assertFalse(html.contains("data-creature=\"Dire rat"));
+	}
+
+	@Test
+	public void showsTheSelectedFormOfAHoundArchonInPlay() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog("## IV\nsummon: Archon (Hound)\n");
+		character.setConjurationSession(new ConjurationSession(0,
+			List.of(new ConjuredCreature("Archon (Hound)", 1, 0, OptionalInt.empty(), List.of(), "wolf"))));
+
+		String html = render(character);
+
+		assertShows("data-form=\"wolf\"", html);
+		assertShows("value=\"wolf\" selected", html);
+		assertShows("Beast shape II", html);
 	}
 
 	@Test
 	public void titlesATableWithEveryGroup() throws IOException, ExportException
 	{
-		getCharacter().setConjurationCatalog(A_CATALOG);
+		getCharacter().setConjurationCatalog("## Summon Monster IV\nsummon: Archon (Hound)\n"
+			+ "\n## Summon Monster V\nsummon: Azata (Bralani)\n");
 
 		String html = render(getCharacter());
 
 		assertShows("Summon Monster IV", html);
 		assertShows("Summon Monster V", html);
+		assertShows("data-creature=\"Archon (Hound)\"", html);
+		assertShows("data-creature=\"Azata (Bralani)\"", html);
+		assertFalse(html.contains("class=\"group-picker\""), "The catalog must be one list, not a group picker");
+	}
+
+	@Test
+	public void showsSortableComputedColumnsAndSummoningLevel() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("""
+			## Convocation de monstres IV
+			summon: Archon (Hound)
+			  role: tank
+			  note: Holds the line
+			""");
+
+		String html = render(getCharacter());
+
+		assertShows("data-sort=\"hitDice\"", html);
+		assertShows("data-sort=\"expectedDamagePerRound\"", html);
+		assertShows("data-sort=\"touchArmorClass\"", html);
+		assertShows("data-sort=\"ranking\"", html);
+		assertShows("data-sort=\"combatManeuverDefense\"", html);
+		assertShows("data-level=\"4\"", html);
+		assertShows("tank", html);
+		assertShows("Holds the line", html);
+		assertShows("class=\"creature-drawer\"", html);
+		assertShows("class=\"inspect-creature\" data-creature=\"Archon (Hound)\"", html);
+		assertShows("<select class=\"bonus-select\" data-action=\"add-group-bonus\"", html);
+		assertShows("<select class=\"bonus-select\" data-action=\"add-bonus\"", html);
+		assertShows("class=\"bonus-apply\"", html);
+	}
+
+	@Test
+	public void aMappedOlderEntryUsesComputedStatsWhileKeepingItsNote() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("""
+			## VI
+			summon: Tigre sanguinaire céleste
+			  race: Tiger (Dire)
+			  template: Celestial Creature
+			  role: frappe
+			  note: Bondit
+			  hp: 133
+			""");
+
+		String html = render(getCharacter());
+
+		assertShows("data-creature=\"Tigre sanguinaire céleste\"", html);
+		assertShows("data-authored=\"false\"", html);
+		assertShows("Bondit", html);
+		assertTrue(html.indexOf("Bondit") > html.indexOf("class=\"creature-drawer\""));
+		assertShows("fr".equals(Locale.getDefault().getLanguage())
+			? "Principal choix de dégâts au contact" : "Strong melee damage", html);
+	}
+
+	@Test
+	public void keepsAuthoredRolesAndStatsVisibleInAnOlderCatalog() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("""
+			## VI
+			summon: Lillend (azata)
+			  role: lanceur, soutien
+			  hp: 87
+			  special: Sorts de barde
+			""");
+
+		String html = render(getCharacter());
+
+		assertShows("lanceur", html);
+		assertShows("Sorts de barde", html);
+		assertShows("data-authored=\"true\"", html);
+		assertShows("data-max=\"87\"", html);
 	}
 
 	@Test
@@ -203,12 +338,14 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 		PlayerCharacter character = getCharacter();
 		character.setConjurationCatalog(A_CATALOG);
 		character.setConjurationSession(new ConjurationSession(0,
-			List.of(new ConjuredCreature("Archon (Hound)", 1, 14, OptionalInt.empty())), List.of(PRAYER)));
+			List.of(new ConjuredCreature("Archon (Hound)", 1, 14, OptionalInt.empty())), List.of(PRAYER))
+			.withForm("Archon (Hound)", 1, "wolf").withSkeletonUsed(true));
 
 		String html = render(character.cloneForExport());
 
 		assertShows("Summon Monster IV", html);
 		assertShows("<span class=\"hp-damage\">14</span>", html);
 		assertShows("data-bonus=\"SPELL=Prayer\"", html);
+		assertShows("data-form=\"wolf\"", html);
 	}
 }

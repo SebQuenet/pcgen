@@ -26,8 +26,8 @@ import java.util.Set;
 /**
  * Everything a character can conjure, read off the catalog's source text.
  *
- * @param groups the catalog's groups, in reading order. Never empty, never
- *               modifiable through the list passed in, and no two of their
+ * @param groups the catalog's groups, in reading order. Not modifiable through
+ *               the list passed in, and no two of their
  *               creatures share a name, whatever its case: a creature in play
  *               finds its stat line by name.
  */
@@ -35,9 +35,9 @@ public record SummonCatalog(List<SummonGroup> groups)
 {
 	public SummonCatalog
 	{
-		if (groups == null || groups.isEmpty())
+		if (groups == null)
 		{
-			throw new IllegalArgumentException("A catalog of conjurations needs at least one group");
+			throw new IllegalArgumentException("A catalog of conjurations needs a group list");
 		}
 		groups = List.copyOf(groups);
 		Set<String> names = new HashSet<>();

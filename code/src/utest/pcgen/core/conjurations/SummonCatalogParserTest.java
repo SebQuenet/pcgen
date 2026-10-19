@@ -22,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -87,6 +88,58 @@ class SummonCatalogParserTest
 	}
 
 	@Test
+	void keepsADisplayNameWhileResolvingARaceAndLevel()
+	{
+		SummonTemplate summon = firstSummon("""
+			## Convocation VI
+			summon: Tigre sanguinaire céleste
+			  race: Tiger (Dire)
+			  template: Celestial Creature
+			  level: VI
+			  role: frappe, lutte
+			  note: Bondit sur sa cible
+			""");
+
+		assertEquals("Tigre sanguinaire céleste", summon.name());
+		assertEquals("Tiger (Dire)", summon.sourceRaceKey());
+		assertEquals(List.of("Celestial Creature"), summon.templateKeys());
+		assertEquals("VI", summon.metadata().get("level"));
+		assertEquals(List.of("frappe", "lutte"), summon.roles());
+	}
+
+	@Test
+	void preservesTheKitAndRulesSourceOfASelectedPublishedCreature()
+	{
+		SummonTemplate summon = firstSummon("""
+			## Expanded Summon Monster VII
+			summon: Young bronze dragon [Expanded VII]
+			  race: Dragon (Bronze)
+			  kit: Dragon (Bronze) Young
+			  source: https://aonprd.com/FeatDisplay.aspx?ItemName=Expanded+Summon+Monster
+			  level: VII
+			""");
+
+		assertEquals("Dragon (Bronze) Young", summon.metadata().get("kit"));
+		assertEquals("https://aonprd.com/FeatDisplay.aspx?ItemName=Expanded+Summon+Monster",
+			summon.metadata().get("source"));
+	}
+
+	@Test
+	void readsPermanentVersatileMonsterChoicesAlongsidePersonalSummons()
+	{
+		String source = """
+			# versatile-sm: Aerial Creature
+			# versatile-sm: Fiery Creature
+			## Favorites
+			summon: Dog
+			""";
+
+		assertEquals(Set.of("Aerial Creature", "Fiery Creature"), SummonSelections.versatileMonster(source));
+		assertEquals("Dog", parsed(source).groups().getFirst().summons().getFirst().name());
+		assertTrue(parsed("# versatile-sm: Aerial Creature").groups().isEmpty());
+	}
+
+	@Test
 	void namesASummonAfterItsRaceAndTemplates()
 	{
 		SummonTemplate eagle =
@@ -147,12 +200,42 @@ class SummonCatalogParserTest
 	}
 
 	@Test
-	void refusesAnOldField()
+	void readsAuthoredMetadataAlongsideRaceAndTemplates()
 	{
-		List<SummonParseError> errors = errorsOf("## I\nsummon: Dire Rat\n  hp: 51\n");
+		SummonTemplate summon = firstSummon("""
+			## I
+			summon: Dire Rat
+			  template: Celestial Creature
+			  role: tank, scout
+			  hp: 51
+			  note: Keep away from fire
+			""");
 
-		assertTrue(errors.stream().anyMatch(error -> error.line() == 3 && error.message().contains("'hp'")),
-			"Expected an error naming 'hp' on line 3, got " + errors);
+		assertEquals("Dire Rat (Celestial Creature)", summon.name());
+		assertEquals(List.of("tank", "scout"), summon.roles());
+		assertEquals("51", summon.metadata().get("hp"));
+		assertEquals("Keep away from fire", summon.metadata().get("note"));
+	}
+
+	@Test
+	void readsThePreviousCatalogFormat()
+	{
+		SummonTemplate summon = firstSummon("""
+			## VI
+			summon: Lillend (azata)
+			  role: lanceur, soutien, contrôle
+			  speed: 9 m, vol 21 m
+			  hp: 87
+			  ac: 20
+			  attack: épée longue
+			  damage: 2d6+8
+			  special: Sorts de barde
+			  cmb: +15
+			  cmd: 28
+			""");
+
+		assertEquals("Lillend (azata)", summon.name());
+		assertEquals("87", summon.metadata().get("hp"));
 	}
 
 	@Test

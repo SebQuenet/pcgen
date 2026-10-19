@@ -133,6 +133,21 @@ public final class SourceEditorPanel extends JPanel
 		edited = null;
 	}
 
+	/** Adds a generated, valid catalog block after the user's current text. */
+	public void append(String block)
+	{
+		if (edited == null || block == null || block.isBlank())
+		{
+			return;
+		}
+		String current = editor.getText().stripTrailing();
+		String joined = current.isBlank() ? block : current + "\n\n" + block;
+		editor.setText(joined);
+		typingPause.stop();
+		editor.setCaretPosition(joined.length());
+		storeNow();
+	}
+
 	private void storeNow()
 	{
 		if (edited == null)
