@@ -131,4 +131,14 @@ public interface UIDelegate
 	 * @return true if the spell was built, false if it was cancelled.
 	 */
 	public boolean showCustomSpellDialog(SpellBuilderFacade spellBuilderFacade);
+
+	/**
+	 * Whether there is no user interface: the character is then changed on a worker
+	 * thread, and work handed to the event thread would read it while it changes.
+	 * @return true when no user interface is shown
+	 */
+	default boolean isHeadless()
+	{
+		return false;
+	}
 }

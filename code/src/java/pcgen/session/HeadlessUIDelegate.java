@@ -35,6 +35,12 @@ public class HeadlessUIDelegate extends ConsoleUIDelegate
 	private volatile String lastInfoMessage = null;
 	private volatile String lastErrorMessage = null;
 
+	@Override
+	public boolean isHeadless()
+	{
+		return true;
+	}
+
 	public void setAutoChoose(boolean auto)
 	{
 		autoChoose.set(auto);

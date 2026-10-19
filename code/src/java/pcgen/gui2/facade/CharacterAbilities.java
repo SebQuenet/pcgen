@@ -134,7 +134,28 @@ public class CharacterAbilities
 	private void scheduleDeferredRebuild()
 	{
 		rebuildPending.set(true);
+		if (isHeadless())
+		{
+			// The next reader rebuilds, on the thread that changes the character.
+			return;
+		}
 		rebuildTimer.restart();
+	}
+
+	/**
+	 * Rebuild now if a change is still waiting for the deferred rebuild.
+	 */
+	void rebuildIfPending()
+	{
+		if (rebuildPending.compareAndSet(true, false))
+		{
+			rebuildAbilityLists();
+		}
+	}
+
+	private boolean isHeadless()
+	{
+		return delegate != null && delegate.isHeadless();
 	}
 
 	private void initForCharacter()
@@ -189,14 +210,22 @@ public class CharacterAbilities
 		}
 		if (!visibleCategories.isEmpty())
 		{
-			SwingUtilities.invokeLater(() -> {
+			Runnable announceCategories = () -> {
 				for (AbilityCategory cat : visibleCategories)
 				{
 					updateAbilityCategoryTodo(cat);
 					fireAbilityCatSelectionUpdated(cat);
 					refreshChoices(cat);
 				}
-			});
+			};
+			if (isHeadless())
+			{
+				announceCategories.run();
+			}
+			else
+			{
+				SwingUtilities.invokeLater(announceCategories);
+			}
 		}
 
 		// Update map contents
@@ -428,6 +457,7 @@ public class CharacterAbilities
 	 */
 	public ListFacade<AbilityFacade> getAbilities(AbilityCategory category)
 	{
+		rebuildIfPending();
 		DefaultListFacade<AbilityFacade> abList = abilityListMap.get(category);
 		if (abList == null)
 		{
@@ -442,6 +472,7 @@ public class CharacterAbilities
 	 */
 	public ListFacade<AbilityCategory> getActiveAbilityCategories()
 	{
+		rebuildIfPending();
 		return activeCategories;
 	}
 
@@ -508,6 +539,7 @@ public class CharacterAbilities
 	 */
 	public boolean hasAbility(AbilityCategory category, AbilityFacade ability)
 	{
+		rebuildIfPending();
 		DefaultListFacade<AbilityFacade> abList = abilityListMap.get(category);
 		if (abList == null)
 		{

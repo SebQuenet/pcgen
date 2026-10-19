@@ -2879,6 +2879,7 @@ public class CharacterFacadeImpl
 	@Override
 	public ListFacade<TodoFacade> getTodoList()
 	{
+		characterAbilities.rebuildIfPending();
 		return todoManager.getTodoList();
 	}
 
