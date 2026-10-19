@@ -58,6 +58,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public final class ConjurationBridge implements AutoCloseable
 {
 
+	/** Shows one of the published references to the user. */
+	@FunctionalInterface
+	public interface ReferenceBrowser
+	{
+		void browse(URI reference) throws IOException;
+	}
+
 	/** What the page passes for a bonus that asks no value. */
 	public static final int NO_VALUE = -1;
 
@@ -69,6 +76,7 @@ public final class ConjurationBridge implements AutoCloseable
 	private final ConjurationSheetFacade sheet;
 	private final Function<String, Boolean> selectPublished;
 	private final BooleanSupplier visible;
+	private final ReferenceBrowser browser;
 	private final ExecutorService catalogWorker = Executors.newSingleThreadExecutor(task -> {
 		Thread worker = new Thread(task, "pcgen-conjuration-catalog");
 		worker.setDaemon(true);
@@ -96,6 +104,13 @@ public final class ConjurationBridge implements AutoCloseable
 	public ConjurationBridge(ConjurationSheetFacade sheet, Function<String, Boolean> selectPublished,
 		BooleanSupplier visible)
 	{
+		this(sheet, selectPublished, visible, DesktopBrowserLauncher::viewInBrowser);
+	}
+
+	/** @param browser shows a published reference to the user. */
+	public ConjurationBridge(ConjurationSheetFacade sheet, Function<String, Boolean> selectPublished,
+		BooleanSupplier visible, ReferenceBrowser browser)
+	{
 		if (sheet == null)
 		{
 			throw new IllegalArgumentException("A conjuration bridge needs conjurations to write through");
@@ -103,6 +118,7 @@ public final class ConjurationBridge implements AutoCloseable
 		this.sheet = sheet;
 		this.selectPublished = selectPublished;
 		this.visible = visible;
+		this.browser = browser;
 	}
 
 	/** Selects one of the fixed choices offered by Expanded Summon Monster. */
@@ -290,21 +306,36 @@ public final class ConjurationBridge implements AutoCloseable
 			.map(view -> catalogMetrics(view.stats(), targetArmorClass)).orElse(null));
 	}
 
-	/** Opens one of the published rules or guide references in the system browser. */
+	/**
+	 * Opens one of the published rules or guide references in the system browser.
+	 * The browser starts on its own thread: on Linux, AWT's Desktop called from the
+	 * JavaFX thread never returns and freezes the whole application.
+	 */
 	public void openReference(String address)
 	{
+		URI reference;
 		try
 		{
-			URI reference = URI.create(address);
-			if ("https".equals(reference.getScheme()) && reference.getHost() != null
-				&& REFERENCE_HOSTS.contains(reference.getHost()))
-			{
-				DesktopBrowserLauncher.viewInBrowser(reference);
-			}
+			reference = URI.create(address);
 		}
-		catch (IllegalArgumentException | IOException error)
+		catch (IllegalArgumentException error)
 		{
 			Logging.errorPrint("Could not open conjuration reference", error);
+			return;
+		}
+		if ("https".equals(reference.getScheme()) && reference.getHost() != null
+			&& REFERENCE_HOSTS.contains(reference.getHost()))
+		{
+			Thread.ofPlatform().daemon().name("pcgen-conjuration-reference").start(() -> {
+				try
+				{
+					browser.browse(reference);
+				}
+				catch (IOException error)
+				{
+					Logging.errorPrint("Could not open conjuration reference", error);
+				}
+			});
 		}
 	}
 

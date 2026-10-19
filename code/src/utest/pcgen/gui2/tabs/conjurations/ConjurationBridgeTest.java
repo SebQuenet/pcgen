@@ -71,6 +71,42 @@ class ConjurationBridgeTest
 	}
 
 	@Test
+	void openingAReferenceDoesNotBlockTheWebView() throws Exception
+	{
+		CountDownLatch browsing = new CountDownLatch(1);
+		CountDownLatch release = new CountDownLatch(1);
+		ConjurationSheetFacade sheet = (ConjurationSheetFacade) Proxy.newProxyInstance(
+			getClass().getClassLoader(), new Class<?>[] {ConjurationSheetFacade.class}, (proxy, method, args) -> {
+				throw new UnsupportedOperationException(method.getName());
+			});
+		ConjurationBridge.ReferenceBrowser stuckBrowser = reference -> {
+			browsing.countDown();
+			try
+			{
+				release.await(5, TimeUnit.SECONDS);
+			}
+			catch (InterruptedException interrupted)
+			{
+				Thread.currentThread().interrupt();
+			}
+		};
+		try (var caller = Executors.newSingleThreadExecutor();
+			ConjurationBridge bridge = new ConjurationBridge(sheet, ignored -> false, () -> true, stuckBrowser))
+		{
+			try
+			{
+				var opening = caller.submit(() -> bridge.openReference("https://www.d20pfsrd.com/bestiary/"));
+				assertTrue(browsing.await(3, TimeUnit.SECONDS));
+				opening.get(300, TimeUnit.MILLISECONDS);
+			}
+			finally
+			{
+				release.countDown();
+			}
+		}
+	}
+
+	@Test
 	void hiddenCatalogDoesNotStartBuildingCreatures() throws Exception
 	{
 		AtomicBoolean visible = new AtomicBoolean(false);
