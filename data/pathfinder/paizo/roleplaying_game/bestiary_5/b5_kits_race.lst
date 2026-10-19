@@ -101,7 +101,7 @@ ABILITY:CATEGORY=FEAT|Mobility
 ABILITY:CATEGORY=FEAT|Point-Blank Shot
 ABILITY:CATEGORY=FEAT|Precise Shot
 ABILITY:CATEGORY=FEAT|Rapid Shot
-ABILITY:CATEGORY=FEAT|Weapon Focus (composite longbow)
+ABILITY:CATEGORY=FEAT|Weapon Focus (Longbow)
 
 STARTPACK:Agathion (Reptial) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Agathion (Reptial)],[!PRERACE:1,%]	SOURCEPAGE:p.13
 ALIGN:NG
@@ -200,7 +200,7 @@ SKILL:Knowledge (Geography)	RANK:22
 SKILL:Knowledge (Nature)	RANK:22
 SKILL:Knowledge (Planes)	RANK:22
 SKILL:Perception	RANK:22
-SKILL:Perform (wind instruments)	RANK:22
+SKILL:Perform (Wind Instruments)	RANK:22
 SKILL:Sense Motive	RANK:22
 SKILL:Spellcraft	RANK:19
 SKILL:Stealth	RANK:22
@@ -248,7 +248,7 @@ SKILL:Fly	RANK:8
 SKILL:Knowledge (Planes)	RANK:8
 SKILL:Knowledge (Religion)	RANK:8
 SKILL:Perception	RANK:8
-SKILL:Perform (sing)	RANK:8
+SKILL:Perform (Sing)	RANK:8
 SKILL:Sense Motive	RANK:8
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Great Fortitude
@@ -260,7 +260,6 @@ ALIGN:NG
 RACE:Angel (Empyrean)	!PRERACE:1,%
 NAME:Angel (Empyrean)
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
-SKILL:Craft (any)	RANK:25
 SKILL:Diplomacy	RANK:25
 SKILL:Disguise	RANK:5
 SKILL:Fly	RANK:12
@@ -269,7 +268,6 @@ SKILL:Knowledge (History)	RANK:25
 SKILL:Knowledge (Planes)	RANK:25
 SKILL:Knowledge (Religion)	RANK:25
 SKILL:Perception	RANK:25
-SKILL:Perform (any one)	RANK:25
 SKILL:Sense Motive	RANK:25
 SKILL:Spellcraft	RANK:22
 SKILL:Stealth	RANK:21
@@ -399,7 +397,7 @@ SKILL:Disguise	RANK:5
 SKILL:Intimidate	RANK:5
 SKILL:Knowledge (Planes)	RANK:1
 SKILL:Perception	RANK:5
-SKILL:Perform (wind instruments)	RANK:5
+SKILL:Perform (Wind Instruments)	RANK:5
 SKILL:Sense Motive	RANK:3
 SKILL:Stealth	RANK:1
 SKILL:Use Magic Device	RANK:2
@@ -420,7 +418,7 @@ SKILL:Knowledge (Geography)	RANK:11
 SKILL:Knowledge (Planes)	RANK:11
 SKILL:Knowledge (History)	RANK:8
 SKILL:Perception	RANK:11
-SKILL:Perform (oratory)	RANK:11
+SKILL:Perform (Oratory)	RANK:11
 SKILL:Spellcraft	RANK:11
 SKILL:Stealth	RANK:7
 ABILITY:CATEGORY=FEAT|Greater Grapple
@@ -501,7 +499,7 @@ STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
 SKILL:Intimidate	RANK:26
 SKILL:Knowledge (Geography)	RANK:10
 SKILL:Perception	RANK:26
-SKILL:Profession (sailor)	RANK:10
+SKILL:Profession (Sailor)	RANK:10
 SKILL:Swim	RANK:26
 ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Greater Bull Rush
@@ -557,7 +555,8 @@ ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Combat Reflexes
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Improved Initiative
-ABILITY:CATEGORY=FEAT|Skill Focus (Intimidate, Stealth)
+ABILITY:CATEGORY=FEAT|Skill Focus (Intimidate)
+ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
 
 STARTPACK:Caterpillar (Blood Caterpillar) Default	TYPE:Default Monster.Vermin	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Caterpillar (Blood Caterpillar)],[!PRERACE:1,%]	SOURCEPAGE:p.51
 ALIGN:TN
@@ -580,7 +579,7 @@ NAME:Celedon
 STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
 SKILL:Knowledge (Religion)	RANK:1
 ABILITY:CATEGORY=FEAT|Iron Will
-ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge [religion])
+ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge (Religion))
 
 STARTPACK:Cerynitis Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Cerynitis],[!PRERACE:1,%]	SOURCEPAGE:p.53
 ALIGN:TN
@@ -618,7 +617,7 @@ ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Greater Vital Strike
 ABILITY:CATEGORY=FEAT|Improved Vital Strike
 ABILITY:CATEGORY=FEAT|Mobility
-ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability (control water)
+ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability ~ Spell (control water)
 ABILITY:CATEGORY=FEAT|Vital Strike
 
 STARTPACK:Cherufe Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Cherufe],[!PRERACE:1,%]	SOURCEPAGE:p.55
@@ -675,7 +674,7 @@ SKILL:Stealth	RANK:9
 ABILITY:CATEGORY=FEAT|Combat Reflexes
 ABILITY:CATEGORY=FEAT|Following Step
 ABILITY:CATEGORY=FEAT|Great Fortitude
-ABILITY:CATEGORY=FEAT|Improved Critical B (bite)
+ABILITY:CATEGORY=FEAT|Improved Critical (bite)
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Step Up
 ABILITY:CATEGORY=FEAT|Step Up and Strike
@@ -688,7 +687,7 @@ NAME:Cyclops (Kabandha)
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Intimidate	RANK:5
 SKILL:Perception	RANK:14
-SKILL:Profession (soldier)	RANK:3
+SKILL:Profession (Soldier)	RANK:3
 SKILL:Sense Motive	RANK:4
 SKILL:Stealth	RANK:1
 SKILL:Survival	RANK:5
@@ -719,7 +718,7 @@ ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Lightning Stance
 ABILITY:CATEGORY=FEAT|Mobility
-ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability (fear)
+ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability ~ Spell (fear)
 ABILITY:CATEGORY=FEAT|Skill Focus (Intimidate)
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 ABILITY:CATEGORY=FEAT|Wind Stance
@@ -787,7 +786,8 @@ ABILITY:CATEGORY=FEAT|Flyby Attack
 ABILITY:CATEGORY=FEAT|Greater Bull Rush
 ABILITY:CATEGORY=FEAT|Greater Overrun
 ABILITY:CATEGORY=FEAT|Improved Bull Rush
-ABILITY:CATEGORY=FEAT|Improved Critical (bite, claw)
+ABILITY:CATEGORY=FEAT|Improved Critical (bite)
+ABILITY:CATEGORY=FEAT|Improved Critical (claw)
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Improved Overrun
 ABILITY:CATEGORY=FEAT|Intimidating Prowess
@@ -811,7 +811,8 @@ ABILITY:CATEGORY=FEAT|Flyby Attack
 ABILITY:CATEGORY=FEAT|Greater Bull Rush
 ABILITY:CATEGORY=FEAT|Greater Overrun
 ABILITY:CATEGORY=FEAT|Improved Bull Rush
-ABILITY:CATEGORY=FEAT|Improved Critical (bite, claw)
+ABILITY:CATEGORY=FEAT|Improved Critical (bite)
+ABILITY:CATEGORY=FEAT|Improved Critical (claw)
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Improved Overrun
 ABILITY:CATEGORY=FEAT|Intimidating Prowess
@@ -1143,7 +1144,7 @@ SKILL:Stealth	RANK:4
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Improved Iron Will
 ABILITY:CATEGORY=FEAT|Iron Will
-ABILITY:CATEGORY=FEAT|Point- Blank Shot
+ABILITY:CATEGORY=FEAT|Point-Blank Shot
 ABILITY:CATEGORY=FEAT|Precise Shot
 
 STARTPACK:Elemental (Aether) (Medium Aether Elemental) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Elemental (Aether) (Medium Aether Elemental)],[!PRERACE:1,%]	SOURCEPAGE:p.106
@@ -1189,8 +1190,8 @@ SKILL:Disguise	RANK:1
 SKILL:Escape Artist	RANK:10
 SKILL:Knowledge (Local)	RANK:5
 SKILL:Perception	RANK:10
-SKILL:Perform (dance)	RANK:5
-SKILL:Perform (sing)	RANK:5
+SKILL:Perform (Dance)	RANK:5
+SKILL:Perform (Sing)	RANK:5
 SKILL:Sense Motive	RANK:4
 SKILL:Stealth	RANK:10
 SKILL:Swim	RANK:9
@@ -1217,7 +1218,7 @@ RACE:Fastachee	!PRERACE:1,%
 NAME:Fastachee
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Acrobatics	RANK:18
-SKILL:Craft (alchemy)	RANK:18
+SKILL:Craft (Alchemy)	RANK:18
 SKILL:Escape Artist	RANK:18
 SKILL:Heal	RANK:18
 SKILL:Knowledge (Arcana)	RANK:15
@@ -1257,7 +1258,6 @@ RACE:Gegenees	!PRERACE:1,%
 NAME:Gegenees
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Climb	RANK:5
-SKILL:Craft (any one)	RANK:3
 SKILL:Intimidate	RANK:20
 SKILL:Perception	RANK:20
 SKILL:Stealth	RANK:12
@@ -1394,7 +1394,6 @@ RACE:Gray	!PRERACE:1,%
 NAME:Gray
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Heal	RANK:3
-SKILL:Knowledge (Any One)	RANK:3
 SKILL:Knowledge (Arcana)	RANK:1
 SKILL:Knowledge (Planes)	RANK:3
 SKILL:Perception	RANK:3
@@ -1604,8 +1603,8 @@ ABILITY:CATEGORY=FEAT|Improved Critical (unarmed strike)
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Improved Unarmed Strike
 ABILITY:CATEGORY=FEAT|Punishing Kick
-ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability (dimension door)
-ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability (mass inflict moderate wounds)
+ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability ~ Spell (dimension door)
+ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability ~ Spell (inflict moderate wounds (Mass))
 ABILITY:CATEGORY=FEAT|Weapon Focus (unarmed strike)
 
 STARTPACK:Ichthyocentaur Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ichthyocentaur],[!PRERACE:1,%]	SOURCEPAGE:p.146
@@ -1617,7 +1616,7 @@ SKILL:Diplomacy	RANK:2
 SKILL:Intimidate	RANK:5
 SKILL:Knowledge (Nature)	RANK:2
 SKILL:Perception	RANK:5
-SKILL:Perform (wind instruments)	RANK:2
+SKILL:Perform (Wind Instruments)	RANK:2
 SKILL:Survival	RANK:5
 SKILL:Swim	RANK:7
 ABILITY:CATEGORY=FEAT|Dodge
@@ -1780,7 +1779,6 @@ SKILL:Acrobatics	RANK:16
 SKILL:Diplomacy	RANK:19
 SKILL:Fly	RANK:5
 SKILL:Intimidate	RANK:16
-SKILL:Knowledge (Any One)	RANK:19
 SKILL:Knowledge (History)	RANK:19
 SKILL:Knowledge (Local)	RANK:19
 SKILL:Knowledge (Planes)	RANK:19
@@ -1793,7 +1791,7 @@ ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Improved Unarmed Strike
 ABILITY:CATEGORY=FEAT|Lightning Stance
 ABILITY:CATEGORY=FEAT|Mobility
-ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge [history])
+ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge (History))
 ABILITY:CATEGORY=FEAT|Vital Strike
 ABILITY:CATEGORY=FEAT|Wind Stance
 
@@ -1806,7 +1804,6 @@ SKILL:Acrobatics	RANK:11
 SKILL:Diplomacy	RANK:17
 SKILL:Fly	RANK:5
 SKILL:Intimidate	RANK:11
-SKILL:Knowledge (Any One)	RANK:15
 SKILL:Knowledge (History)	RANK:15
 SKILL:Knowledge (Local)	RANK:15
 SKILL:Knowledge (Planes)	RANK:15
@@ -1831,7 +1828,6 @@ SKILL:Acrobatics	RANK:15
 SKILL:Diplomacy	RANK:18
 SKILL:Fly	RANK:5
 SKILL:Intimidate	RANK:15
-SKILL:Knowledge (Any One)	RANK:18
 SKILL:Knowledge (History)	RANK:18
 SKILL:Knowledge (Local)	RANK:18
 SKILL:Knowledge (Planes)	RANK:18
@@ -1856,7 +1852,6 @@ SKILL:Acrobatics	RANK:14
 SKILL:Diplomacy	RANK:22
 SKILL:Fly	RANK:3
 SKILL:Intimidate	RANK:19
-SKILL:Knowledge (Any One)	RANK:18
 SKILL:Knowledge (History)	RANK:24
 SKILL:Knowledge (Local)	RANK:18
 SKILL:Knowledge (Planes)	RANK:18
@@ -1869,7 +1864,7 @@ ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Improved Unarmed Strike
 ABILITY:CATEGORY=FEAT|Lightning Stance
 ABILITY:CATEGORY=FEAT|Mobility
-ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge [history])
+ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge (History))
 ABILITY:CATEGORY=FEAT|Vital Strike
 ABILITY:CATEGORY=FEAT|Wind Stance
 
@@ -1894,12 +1889,9 @@ ALIGN:CG
 RACE:Muse	!PRERACE:1,%
 NAME:Muse
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
-SKILL:Craft (all)	RANK:17
 SKILL:Escape Artist	RANK:17
-SKILL:Knowledge (All)	RANK:8
 SKILL:Linguistics	RANK:4
 SKILL:Perception	RANK:17
-SKILL:Perform (all)	RANK:17
 SKILL:Spellcraft	RANK:14
 SKILL:Stealth	RANK:17
 SKILL:Use Magic Device	RANK:15
@@ -1908,7 +1900,6 @@ ABILITY:CATEGORY=FEAT|Discordant Voice
 ABILITY:CATEGORY=FEAT|Extra Performance
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Lingering Performance
-ABILITY:CATEGORY=FEAT|Skill Focus (Perform [all] and Craft [all])
 ABILITY:CATEGORY=FEAT|Toughness
 ABILITY:CATEGORY=FEAT|Weapon Finesse
 
@@ -2328,11 +2319,11 @@ SKILL:Knowledge (Religion)	RANK:20
 SKILL:Knowledge (Geography)	RANK:23
 SKILL:Knowledge (Nature)	RANK:23
 SKILL:Perception	RANK:23
-SKILL:Perform (act)	RANK:23
-SKILL:Perform (comedy)	RANK:23
-SKILL:Perform (dance)	RANK:23
-SKILL:Perform (oratory)	RANK:23
-SKILL:Perform (wind instruments)	RANK:23
+SKILL:Perform (Act)	RANK:23
+SKILL:Perform (Comedy)	RANK:23
+SKILL:Perform (Dance)	RANK:23
+SKILL:Perform (Oratory)	RANK:23
+SKILL:Perform (Wind Instruments)	RANK:23
 SKILL:Stealth	RANK:23
 SKILL:Survival	RANK:20
 ABILITY:CATEGORY=FEAT|Dodge
@@ -2342,7 +2333,7 @@ ABILITY:CATEGORY=FEAT|Mobility
 ABILITY:CATEGORY=FEAT|Point-Blank Shot
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Precise Shot
-ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability (greater heroism)
+ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability ~ Spell (heroism (Greater))
 ABILITY:CATEGORY=FEAT|Rapid Shot
 ABILITY:CATEGORY=FEAT|Spring Attack
 ABILITY:CATEGORY=FEAT|Weapon Focus (morningstar)
@@ -2447,7 +2438,7 @@ SKILL:Acrobatics	RANK:5
 SKILL:Diplomacy	RANK:5
 SKILL:Fly	RANK:5
 SKILL:Perception	RANK:6
-SKILL:Perform (dance)	RANK:5
+SKILL:Perform (Dance)	RANK:5
 SKILL:Sleight of Hand	RANK:1
 SKILL:Stealth	RANK:6
 ABILITY:CATEGORY=FEAT|Combat Reflexes
@@ -2478,7 +2469,7 @@ RACE:Tsukumogami (Boroboroton)	!PRERACE:1,%
 NAME:Tsukumogami (Boroboroton)
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Bluff	RANK:3
-SKILL:Craft (cloth)	RANK:3
+SKILL:Craft (Cloth)	RANK:3
 SKILL:Disguise	RANK:3
 SKILL:Knowledge (History)	RANK:3
 SKILL:Perception	RANK:3
@@ -2494,7 +2485,7 @@ RACE:Tsukumogami (Kasa-obake)	!PRERACE:1,%
 NAME:Tsukumogami (Kasa-obake)
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Bluff	RANK:2
-SKILL:Craft (cloth)	RANK:2
+SKILL:Craft (Cloth)	RANK:2
 SKILL:Disguise	RANK:2
 SKILL:Knowledge (History)	RANK:2
 SKILL:Perception	RANK:2
@@ -2512,7 +2503,7 @@ SKILL:Bluff	RANK:1
 SKILL:Disguise	RANK:1
 SKILL:Knowledge (History)	RANK:1
 SKILL:Perception	RANK:1
-SKILL:Perform (string)	RANK:1
+SKILL:Perform (String Instruments)	RANK:1
 SKILL:Sense Motive	RANK:1
 SKILL:Sleight of Hand	RANK:1
 SKILL:Stealth	RANK:1
@@ -2606,9 +2597,8 @@ SKILL:Acrobatics	RANK:9
 SKILL:Bluff	RANK:9
 SKILL:Diplomacy	RANK:9
 SKILL:Fly	RANK:9
-SKILL:Knowledge (Any One)	RANK:9
 SKILL:Perception	RANK:9
-SKILL:Perform (dance)	RANK:9
+SKILL:Perform (Dance)	RANK:9
 SKILL:Sense Motive	RANK:8
 SKILL:Stealth	RANK:9
 ABILITY:CATEGORY=FEAT|Ability Focus (beckoning dance)
@@ -2626,9 +2616,8 @@ SKILL:Acrobatics	RANK:9
 SKILL:Bluff	RANK:9
 SKILL:Diplomacy	RANK:9
 SKILL:Fly	RANK:9
-SKILL:Knowledge (Any One)	RANK:9
 SKILL:Perception	RANK:9
-SKILL:Perform (dance)	RANK:9
+SKILL:Perform (Dance)	RANK:9
 SKILL:Sense Motive	RANK:8
 SKILL:Stealth	RANK:9
 ABILITY:CATEGORY=FEAT|Ability Focus (beckoning dance)
@@ -2646,9 +2635,8 @@ SKILL:Acrobatics	RANK:9
 SKILL:Bluff	RANK:9
 SKILL:Diplomacy	RANK:9
 SKILL:Fly	RANK:9
-SKILL:Knowledge (Any One)	RANK:9
 SKILL:Perception	RANK:9
-SKILL:Perform (dance)	RANK:9
+SKILL:Perform (Dance)	RANK:9
 SKILL:Sense Motive	RANK:8
 SKILL:Stealth	RANK:9
 ABILITY:CATEGORY=FEAT|Ability Focus (beckoning dance)
@@ -2666,9 +2654,8 @@ SKILL:Acrobatics	RANK:9
 SKILL:Bluff	RANK:9
 SKILL:Diplomacy	RANK:9
 SKILL:Fly	RANK:9
-SKILL:Knowledge (Any One)	RANK:9
 SKILL:Perception	RANK:9
-SKILL:Perform (dance)	RANK:9
+SKILL:Perform (Dance)	RANK:9
 SKILL:Sense Motive	RANK:8
 SKILL:Stealth	RANK:9
 ABILITY:CATEGORY=FEAT|Ability Focus (beckoning dance)
@@ -2692,7 +2679,7 @@ SKILL:Knowledge (History)	RANK:13
 SKILL:Knowledge (Nobility)	RANK:13
 SKILL:Knowledge (Local)	RANK:8
 SKILL:Perception	RANK:21
-SKILL:Profession (soldier)	RANK:7
+SKILL:Profession (Soldier)	RANK:7
 SKILL:Sense Motive	RANK:17
 SKILL:Stealth	RANK:15
 SKILL:Use Magic Device	RANK:11
@@ -2803,7 +2790,7 @@ ABILITY:CATEGORY=FEAT|Flyby Attack
 ABILITY:CATEGORY=FEAT|Hover
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Multiattack
-ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability (finger of death)
+ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability ~ Spell (finger of death)
 ABILITY:CATEGORY=FEAT|Skill Focus (Intimidate)
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 ABILITY:CATEGORY=FEAT|Stealthy
