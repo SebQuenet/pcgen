@@ -178,6 +178,10 @@ public final class TranslationApplier
 	private static Set<String> placeholdersOf(String template)
 	{
 		Set<String> placeholders = new TreeSet<>();
+		if (template.indexOf('%') < 0)
+		{
+			return placeholders;
+		}
 		Matcher matcher = PLACEHOLDER.matcher(template);
 		while (matcher.find())
 		{
