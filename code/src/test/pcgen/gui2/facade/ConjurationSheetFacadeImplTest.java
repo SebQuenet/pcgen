@@ -25,7 +25,10 @@ import java.util.Optional;
 import java.util.OptionalInt;
 
 import pcgen.AbstractCharacterTestCase;
+import pcgen.core.Globals;
+import pcgen.core.Kit;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.Race;
 import pcgen.core.conjurations.ConjurationSession;
 import pcgen.core.conjurations.ConjuredCreature;
 import pcgen.core.conjurations.SummonParseError;
@@ -47,9 +50,26 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 		summon: Archon (Hound)
 		""";
 
+	private static final String ARCHON_CATALOG = "## Summon Monster IV\nsummon: " + ARCHON + "\n";
+
+	@Override
+	protected void defaultSetupEnd()
+	{
+		Globals.getContext().getReferenceContext().constructCDOMObject(Race.class, ARCHON);
+		Globals.getContext().getReferenceContext().constructCDOMObject(Kit.class, ARCHON + " Default");
+		super.defaultSetupEnd();
+	}
+
 	private static ConjurationSheetFacade facadeFor(PlayerCharacter character)
 	{
 		return new ConjurationSheetFacadeImpl(character);
+	}
+
+	/** A facade whose catalog offers the archon, so it can be brought into the fight. */
+	private static ConjurationSheetFacade fightFor(PlayerCharacter character)
+	{
+		character.setConjurationCatalog(ARCHON_CATALOG);
+		return facadeFor(character);
 	}
 
 	private static List<ConjuredCreature> inPlay(PlayerCharacter character)
@@ -112,7 +132,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	@Test
 	public void givesEachNewCreatureOfTheSameNameTheNextNumber()
 	{
-		ConjurationSheetFacade facade = facadeFor(getCharacter());
+		ConjurationSheetFacade facade = fightFor(getCharacter());
 
 		assertEquals(List.of(1, 2, 3), List.of(facade.conjure(ARCHON), facade.conjure(ARCHON), facade.conjure(ARCHON)));
 	}
@@ -121,7 +141,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	public void bringsANewCreatureIntoTheFightForTheDurationSet()
 	{
 		PlayerCharacter character = getCharacter();
-		ConjurationSheetFacade facade = facadeFor(character);
+		ConjurationSheetFacade facade = fightFor(character);
 		facade.setDuration(12);
 
 		facade.conjure(ARCHON);
@@ -133,7 +153,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	public void recordsTheDamageACreatureTakes()
 	{
 		PlayerCharacter character = getCharacter();
-		ConjurationSheetFacade facade = facadeFor(character);
+		ConjurationSheetFacade facade = fightFor(character);
 		facade.conjure(ARCHON);
 
 		facade.setDamage(ARCHON, 1, 14);
@@ -145,7 +165,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	public void neverRecordsDamageBelowZero()
 	{
 		PlayerCharacter character = getCharacter();
-		ConjurationSheetFacade facade = facadeFor(character);
+		ConjurationSheetFacade facade = fightFor(character);
 		facade.conjure(ARCHON);
 
 		facade.setDamage(ARCHON, 1, -5);
@@ -157,7 +177,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	public void recordsTheRoundsACreatureHasLeft()
 	{
 		PlayerCharacter character = getCharacter();
-		ConjurationSheetFacade facade = facadeFor(character);
+		ConjurationSheetFacade facade = fightFor(character);
 		facade.conjure(ARCHON);
 
 		facade.setRoundsLeft(ARCHON, 1, 4);
@@ -169,7 +189,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	public void takesARoundFromEveryCreatureAtTheNextRound()
 	{
 		PlayerCharacter character = getCharacter();
-		ConjurationSheetFacade facade = facadeFor(character);
+		ConjurationSheetFacade facade = fightFor(character);
 		facade.setDuration(12);
 		facade.conjure(ARCHON);
 		facade.conjure(ARCHON);
@@ -184,7 +204,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	public void dismissesThatCreatureOnly()
 	{
 		PlayerCharacter character = getCharacter();
-		ConjurationSheetFacade facade = facadeFor(character);
+		ConjurationSheetFacade facade = fightFor(character);
 		facade.conjure(ARCHON);
 		facade.conjure(ARCHON);
 
@@ -197,7 +217,7 @@ public class ConjurationSheetFacadeImplTest extends AbstractCharacterTestCase
 	public void dismissingEveryoneEndsTheFight()
 	{
 		PlayerCharacter character = getCharacter();
-		ConjurationSheetFacade facade = facadeFor(character);
+		ConjurationSheetFacade facade = fightFor(character);
 		facade.conjure(ARCHON);
 		facade.conjure(ARCHON);
 

@@ -26,6 +26,7 @@ import java.util.OptionalInt;
 
 import pcgen.AbstractCharacterTestCase;
 import pcgen.core.Globals;
+import pcgen.core.Kit;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.Race;
 import pcgen.core.conjurations.AppliedBonus;
@@ -60,6 +61,7 @@ public class ConjurationServiceTest extends AbstractCharacterTestCase
 		for (String race : List.of("Hound Archon", "Lantern Archon", "Bralani Azata"))
 		{
 			Globals.getContext().getReferenceContext().constructCDOMObject(Race.class, race);
+			Globals.getContext().getReferenceContext().constructCDOMObject(Kit.class, race + " Default");
 		}
 		super.defaultSetupEnd();
 	}
