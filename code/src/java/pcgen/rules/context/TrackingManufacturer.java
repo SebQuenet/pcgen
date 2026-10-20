@@ -26,6 +26,7 @@ import pcgen.base.util.Indirect;
 import pcgen.cdom.base.CDOMReference;
 import pcgen.cdom.base.ClassIdentity;
 import pcgen.cdom.base.Loadable;
+import pcgen.cdom.enumeration.Type;
 import pcgen.cdom.reference.CDOMGroupRef;
 import pcgen.cdom.reference.CDOMSingleRef;
 import pcgen.cdom.reference.ManufacturableFactory;
@@ -103,6 +104,12 @@ class TrackingManufacturer<T extends Loadable> implements ReferenceManufacturer<
 	public Collection<T> getAllObjects()
 	{
 		return rm.getAllObjects();
+	}
+
+	@Override
+	public Collection<T> getObjectsOfType(Type type)
+	{
+		return rm.getObjectsOfType(type);
 	}
 
 	@Override
