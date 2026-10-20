@@ -311,7 +311,7 @@ public abstract class LstObjectFileLoader<T extends CDOMObject> extends Observab
 			// Support the new file type. All lines that start with a tab belong to the previous line.
 			aString = aString.replaceAll("\r?\n\t", "\t");
 		}
-		String[] fileLines = aString.split(LstFileLoader.LINE_SEPARATOR_REGEXP);
+		String[] fileLines = aString.lines().toArray(String[]::new);
 		for (int i = 0; i < fileLines.length; i++)
 		{
 			String line = fileLines[i];
