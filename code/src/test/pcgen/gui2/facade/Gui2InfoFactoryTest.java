@@ -110,7 +110,7 @@ public class Gui2InfoFactoryTest extends AbstractCharacterTestCase
 
 		String html = new Gui2InfoFactory(getCharacter()).getHTMLInfo(feat);
 
-		assertTrue(html, html.contains("<a href=\"https://aonprd.com/FeatDisplay.aspx?ItemName=Power%20Attack\">"
+		assertTrue(html, html.contains("<a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20feat%20site%3Aaonprd.com\">"
 			+ "Archives of Nethys</a>"));
 	}
 

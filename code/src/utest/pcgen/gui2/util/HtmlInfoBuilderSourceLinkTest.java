@@ -3,14 +3,21 @@ package pcgen.gui2.util;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.net.URI;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.Test;
 
+import pcgen.cdom.base.CDOMObject;
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.StringKey;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
+import pcgen.core.Deity;
+import pcgen.core.Domain;
+import pcgen.core.PCClass;
 import pcgen.core.Race;
+import pcgen.core.Skill;
 import pcgen.core.spell.Spell;
 
 class HtmlInfoBuilderSourceLinkTest
@@ -37,59 +44,55 @@ class HtmlInfoBuilderSourceLinkTest
 	}
 
 	@Test
-	void linksPaizoEntriesWhoseSourceDataHasNoUsableLink()
+	void sendsEachSiteLinkToTheFirstSearchResultOnThatSite()
 	{
-		Ability feat = new Ability();
-		feat.setName("Power Attack");
+		Ability feat = paizoEntry(new Ability(), "Power Attack", "core_rulebook/cr_feats.lst");
 		feat.put(ObjectKey.ABILITY_CAT, new AbilityCategory("FEAT"));
-		feat.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst"));
-		assertEquals("<html>Description<br><a href=\"https://aonprd.com/FeatDisplay.aspx?ItemName=Power%20Attack\">"
-			+ "Archives of Nethys</a>" + searchLinks("Power%20Attack", "Power%20Attack") + "</html>",
+		assertEquals("<html>Description"
+			+ "<br><a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20feat%20site%3Aaonprd.com\">Archives of Nethys</a>"
+			+ "<br><a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20don%20Pathfinder-RPG%20site%3Apathfinder-fr.org\">"
+			+ "Pathfinder-fr</a>"
+			+ "<br><a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20feat%20site%3Apathfinderwiki.com\">PathfinderWiki</a>"
+			+ "<br><a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20feat%20site%3Ad20pfsrd.com\">d20PFSRD</a></html>",
 			new HtmlInfoBuilder().withSource(feat).append("Description").toString());
-
-		Spell spell = new Spell();
-		spell.setName("Magic Missile");
-		spell.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_spells.lst"));
-		spell.put(StringKey.SOURCE_LINK, "http://paizo.com/pathfinderRPG/prd/spells/magicMissile.html");
-		assertEquals("<html>Description<br><a href=\"https://aonprd.com/SpellDisplay.aspx?ItemName=Magic%20Missile\">"
-			+ "Archives of Nethys</a>" + searchLinks("Magic%20Missile", "Magic%20Missile") + "</html>",
-			new HtmlInfoBuilder().withSource(spell).append("Description").toString());
-
-		Race creature = new Race();
-		creature.setName("Wolf");
-		creature.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/bestiary/bestiary_races.lst"));
-		assertEquals("<html>Description<br><a href=\"https://aonprd.com/MonsterDisplay.aspx?ItemName=Wolf\">"
-			+ "Archives of Nethys</a>" + searchLinks("Wolf", "Wolf") + "</html>",
-			new HtmlInfoBuilder().withSource(creature).append("Description").toString());
-	}
-
-	@Test
-	void searchesNethysForPaizoAbilitiesWithoutADedicatedPageType()
-	{
-		Ability ability = new Ability();
-		ability.setName("Rogue Talent");
-		ability.put(ObjectKey.ABILITY_CAT, new AbilityCategory("Special Ability"));
-		ability.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities.lst"));
-		assertEquals("<html>Description<br><a href=\"https://aonprd.com/Search.aspx?Query=Rogue%20Talent\">"
-			+ "Archives of Nethys</a>" + searchLinks("Rogue%20Talent", "Rogue%20Talent") + "</html>",
-			new HtmlInfoBuilder().withSource(ability).append("Description").toString());
-
-		ability.setSourceURI(URI.create("file:/data/3e/paizo/abilities.lst"));
-		assertEquals("<html>Description</html>",
-			new HtmlInfoBuilder().withSource(ability).append("Description").toString());
 	}
 
 	@Test
 	void searchesPathfinderFrWithTheTranslatedName()
 	{
-		Ability feat = new Ability();
-		feat.setName("Power Attack");
-		feat.put(StringKey.LOCALIZED_NAME, "Attaque en puissance");
-		feat.put(ObjectKey.ABILITY_CAT, new AbilityCategory("FEAT"));
-		feat.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst"));
-		assertEquals("<html>Description<br><a href=\"https://aonprd.com/FeatDisplay.aspx?ItemName=Power%20Attack\">"
-			+ "Archives of Nethys</a>" + searchLinks("Attaque%20en%20puissance", "Power%20Attack") + "</html>",
-			new HtmlInfoBuilder().withSource(feat).append("Description").toString());
+		Spell spell = paizoEntry(new Spell(), "Fireball", "core_rulebook/cr_spells.lst");
+		spell.put(StringKey.LOCALIZED_NAME, "Boule de feu");
+		assertEquals(searchLinks("Fireball spell", "Boule de feu sort"),
+			new HtmlInfoBuilder().withSource(spell).append("Description").toString());
+	}
+
+	@Test
+	void namesTheKindOfEntryInBothLanguages()
+	{
+		assertEquals(searchLinks("Wolf monster", "Wolf"), describe(paizoEntry(new Race(), "Wolf", "bestiary/bestiary_races.lst")));
+		assertEquals(searchLinks("Elf race", "Elf race"), describe(paizoEntry(new Race(), "Elf", "core_rulebook/cr_races.lst")));
+		assertEquals(searchLinks("Wizard class", "Wizard classe"), describe(paizoEntry(new PCClass(), "Wizard", "core_rulebook/cr_classes.lst")));
+		assertEquals(searchLinks("Desna deity", "Desna divinité"), describe(paizoEntry(new Deity(), "Desna", "core_rulebook/cr_deities.lst")));
+		assertEquals(searchLinks("Fire domain", "Fire domaine"), describe(paizoEntry(new Domain(), "Fire", "core_rulebook/cr_domains.lst")));
+		assertEquals(searchLinks("Acrobatics skill", "Acrobatics compétence"),
+			describe(paizoEntry(new Skill(), "Acrobatics", "core_rulebook/cr_skills.lst")));
+	}
+
+	@Test
+	void searchesWithTheBareNameForEntriesOfAnotherKind()
+	{
+		Ability ability = paizoEntry(new Ability(), "Rogue Talent", "core_rulebook/cr_abilities.lst");
+		ability.put(ObjectKey.ABILITY_CAT, new AbilityCategory("Special Ability"));
+		assertEquals(searchLinks("Rogue Talent", "Rogue Talent"), describe(ability));
+	}
+
+	@Test
+	void omitsSearchLinksForDataOutsidePaizoPathfinder()
+	{
+		Ability ability = new Ability();
+		ability.setName("Rogue Talent");
+		ability.setSourceURI(URI.create("file:/data/3e/paizo/abilities.lst"));
+		assertEquals("<html>Description</html>", describe(ability));
 	}
 
 	@Test
@@ -100,16 +103,37 @@ class HtmlInfoBuilderSourceLinkTest
 		feat.put(StringKey.SOURCE_LINK, "https://www.d20pfsrd.com/feats/combat-feats/power-attack-combat/");
 		assertEquals("<html>Description<br><a href=\"https://www.d20pfsrd.com/feats/combat-feats/power-attack-combat/\">"
 			+ "d20PFSRD</a>"
-			+ "<br><a href=\"https://www.pathfinder-fr.org/Wiki/Search.aspx?Query=Power%20Attack\">Pathfinder-fr</a>"
-			+ "<br><a href=\"https://pathfinderwiki.com/w/index.php?search=Power%20Attack\">PathfinderWiki</a></html>",
-			new HtmlInfoBuilder().withSource(feat).append("Description").toString());
+			+ "<br><a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20site%3Aaonprd.com\">Archives of Nethys</a>"
+			+ "<br><a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20Pathfinder-RPG%20site%3Apathfinder-fr.org\">"
+			+ "Pathfinder-fr</a>"
+			+ "<br><a href=\"https://duckduckgo.com/?q=%5CPower%20Attack%20site%3Apathfinderwiki.com\">PathfinderWiki</a></html>",
+			describe(feat));
 	}
 
-	private static String searchLinks(String frenchName, String englishName)
+	private static <T extends CDOMObject> T paizoEntry(T entry, String name, String bookFile)
 	{
-		return "<br><a href=\"https://www.pathfinder-fr.org/Wiki/Search.aspx?Query=" + frenchName + "\">Pathfinder-fr</a>"
-			+ "<br><a href=\"https://pathfinderwiki.com/w/index.php?search=" + englishName + "\">PathfinderWiki</a>"
-			+ "<br><a href=\"https://www.d20pfsrd.com/?s=" + englishName + "\">d20PFSRD</a>";
+		entry.setName(name);
+		entry.setSourceURI(URI.create("file:/data/pathfinder/paizo/roleplaying_game/" + bookFile));
+		return entry;
+	}
+
+	private static String describe(CDOMObject source)
+	{
+		return new HtmlInfoBuilder().withSource(source).append("Description").toString();
+	}
+
+	private static String searchLinks(String englishQuery, String frenchTerms)
+	{
+		return "<html>Description"
+			+ "<br><a href=\"" + firstResult(englishQuery + " site:aonprd.com") + "\">Archives of Nethys</a>"
+			+ "<br><a href=\"" + firstResult(frenchTerms + " Pathfinder-RPG site:pathfinder-fr.org") + "\">Pathfinder-fr</a>"
+			+ "<br><a href=\"" + firstResult(englishQuery + " site:pathfinderwiki.com") + "\">PathfinderWiki</a>"
+			+ "<br><a href=\"" + firstResult(englishQuery + " site:d20pfsrd.com") + "\">d20PFSRD</a></html>";
+	}
+
+	private static String firstResult(String query)
+	{
+		return "https://duckduckgo.com/?q=" + URLEncoder.encode("\\" + query, StandardCharsets.UTF_8).replace("+", "%20");
 	}
 
 	private void assertLink(String url, String label)

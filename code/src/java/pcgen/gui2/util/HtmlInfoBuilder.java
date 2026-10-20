@@ -23,11 +23,17 @@ import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import pcgen.cdom.base.CDOMObject;
 import pcgen.cdom.enumeration.StringKey;
 import pcgen.core.Ability;
+import pcgen.core.Deity;
+import pcgen.core.Domain;
+import pcgen.core.PCClass;
 import pcgen.core.Race;
+import pcgen.core.Skill;
 import pcgen.core.spell.Spell;
 import pcgen.system.LanguageBundle;
 
@@ -46,9 +52,14 @@ public class HtmlInfoBuilder
 	private static final String PATHFINDER_FR_LABEL = "Pathfinder-fr";
 	private static final String PATHFINDER_WIKI_LABEL = "PathfinderWiki";
 	private static final String D20PFSRD_LABEL = "d20PFSRD";
-	private static final String PATHFINDER_FR_SEARCH = "https://www.pathfinder-fr.org/Wiki/Search.aspx?Query=";
-	private static final String PATHFINDER_WIKI_SEARCH = "https://pathfinderwiki.com/w/index.php?search=";
-	private static final String D20PFSRD_SEARCH = "https://www.d20pfsrd.com/?s=";
+	private static final String NETHYS_SITE = "aonprd.com";
+	private static final String PATHFINDER_FR_SITE = "pathfinder-fr.org";
+	private static final String PATHFINDER_WIKI_SITE = "pathfinderwiki.com";
+	private static final String D20PFSRD_SITE = "d20pfsrd.com";
+	/** DuckDuckGo jumps straight to the first result of a query that starts with a backslash. */
+	private static final String FIRST_RESULT_SEARCH = "https://duckduckgo.com/?q=";
+	/** Pathfinder-fr also hosts Pathfinder 2 and setting pages; this term favours the Pathfinder 1 rules. */
+	private static final String PATHFINDER_FR_RULES_TERM = "Pathfinder-RPG";
 
 	private final StringBuilder buffer = new StringBuilder(300);
 	private final boolean fullDocument;
@@ -206,14 +217,12 @@ public class HtmlInfoBuilder
 		{
 			String link = sourceObject.get(StringKey.SOURCE_LINK);
 			String label = sourceLabel(link);
-			if (label == null)
-			{
-				link = paizoLink(sourceObject);
-				label = (link == null) ? null : NETHYS_LABEL;
-			}
 			if (label != null)
 			{
 				appendLink(link, label);
+			}
+			if (label != null || isPaizoData(sourceObject))
+			{
 				appendSearchLinks(sourceObject, label);
 			}
 		}
@@ -238,17 +247,26 @@ public class HtmlInfoBuilder
 		{
 			return;
 		}
-		appendSearchLink(PATHFINDER_FR_LABEL, PATHFINDER_FR_SEARCH, source.getLocalizedName(), primaryLabel);
-		appendSearchLink(PATHFINDER_WIKI_LABEL, PATHFINDER_WIKI_SEARCH, englishName, primaryLabel);
-		appendSearchLink(D20PFSRD_LABEL, D20PFSRD_SEARCH, englishName, primaryLabel);
+		SearchKeyword keyword = SearchKeyword.of(source);
+		String englishQuery = joinTerms(englishName, keyword.english());
+		String frenchQuery = joinTerms(source.getLocalizedName(), keyword.french(), PATHFINDER_FR_RULES_TERM);
+		appendSearchLink(NETHYS_LABEL, NETHYS_SITE, englishQuery, primaryLabel);
+		appendSearchLink(PATHFINDER_FR_LABEL, PATHFINDER_FR_SITE, frenchQuery, primaryLabel);
+		appendSearchLink(PATHFINDER_WIKI_LABEL, PATHFINDER_WIKI_SITE, englishQuery, primaryLabel);
+		appendSearchLink(D20PFSRD_LABEL, D20PFSRD_SITE, englishQuery, primaryLabel);
 	}
 
-	private void appendSearchLink(String label, String searchUrl, String name, String primaryLabel)
+	private void appendSearchLink(String label, String site, String query, String primaryLabel)
 	{
 		if (!label.equals(primaryLabel))
 		{
-			appendLink(searchUrl + encode(name), label);
+			appendLink(FIRST_RESULT_SEARCH + encode("\\" + query + " site:" + site), label);
 		}
+	}
+
+	private static String joinTerms(String... terms)
+	{
+		return Stream.of(terms).filter(term -> !term.isEmpty()).collect(Collectors.joining(" "));
 	}
 
 	private static String encode(String name)
@@ -285,46 +303,68 @@ public class HtmlInfoBuilder
 		}
 	}
 
-	private static String paizoLink(CDOMObject source)
+	private static boolean isPaizoData(CDOMObject source)
+	{
+		String path = sourcePath(source);
+		return path.contains("/pathfinder/paizo/") || path.contains("/pathfinder_pfs/paizo/");
+	}
+
+	private static String sourcePath(CDOMObject source)
 	{
 		URI sourceUri = source.getSourceURI();
 		if (sourceUri == null || sourceUri.getPath() == null)
 		{
-			return null;
+			return "";
 		}
-		String path = sourceUri.getPath().replace('\\', '/');
-		if (!path.contains("/pathfinder/paizo/") && !path.contains("/pathfinder_pfs/paizo/"))
+		return sourceUri.getPath().replace('\\', '/');
+	}
+
+	/**
+	 * The word naming the kind of entry in each language, so the search lands on the rules page
+	 * rather than on a homonym.
+	 */
+	private record SearchKeyword(String english, String french)
+	{
+		private static final SearchKeyword NONE = new SearchKeyword("", "");
+
+		static SearchKeyword of(CDOMObject source)
 		{
-			return null;
-		}
-		String name = source.getDisplayName();
-		if (name == null || name.isBlank())
-		{
-			return null;
-		}
-		String encodedName = encode(name);
-		String page = null;
-		if (source instanceof Spell)
-		{
-			page = "SpellDisplay.aspx?ItemName=";
-		}
-		else if (source instanceof Ability ability && ability.getCDOMCategory() != null)
-		{
-			page = switch (ability.getCDOMCategory().getKeyName().toUpperCase(Locale.ROOT))
+			if (source instanceof Spell)
 			{
-				case "FEAT" -> "FeatDisplay.aspx?ItemName=";
-				case "TRAIT" -> "TraitDisplay.aspx?ItemName=";
-				default -> null;
-			};
+				return new SearchKeyword("spell", "sort");
+			}
+			if (source instanceof Ability ability && ability.getCDOMCategory() != null)
+			{
+				return switch (ability.getCDOMCategory().getKeyName().toUpperCase(Locale.ROOT))
+				{
+					case "FEAT" -> new SearchKeyword("feat", "don");
+					case "TRAIT" -> new SearchKeyword("trait", "trait");
+					default -> NONE;
+				};
+			}
+			if (source instanceof Race)
+			{
+				// "monstre" sends pathfinder-fr searches to monster lists instead of the creature itself
+				return sourcePath(source).contains("/bestiary") ? new SearchKeyword("monster", "")
+					: new SearchKeyword("race", "race");
+			}
+			if (source instanceof PCClass)
+			{
+				return new SearchKeyword("class", "classe");
+			}
+			if (source instanceof Deity)
+			{
+				return new SearchKeyword("deity", "divinité");
+			}
+			if (source instanceof Domain)
+			{
+				return new SearchKeyword("domain", "domaine");
+			}
+			if (source instanceof Skill)
+			{
+				return new SearchKeyword("skill", "compétence");
+			}
+			return NONE;
 		}
-		else if (source instanceof Race)
-		{
-			page = path.contains("/bestiary") ? "MonsterDisplay.aspx?ItemName=" : "RacesDisplay.aspx?ItemName=";
-		}
-		if (page == null || name.contains("~") || name.contains("("))
-		{
-			page = "Search.aspx?Query=";
-		}
-		return "https://aonprd.com/" + page + encodedName;
 	}
 }
