@@ -18,9 +18,14 @@
 package pcgen.cdom.enumeration;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 
 import pcgen.base.enumeration.TypeSafeConstant;
 import pcgen.base.lang.UnreachableError;
@@ -39,6 +44,13 @@ public final class Type implements TypeSafeConstant, Comparable<Type>
 	 * This Map contains the mappings from Strings to the Type Safe Constant
 	 */
 	private static final CaseInsensitiveMap<Type> TYPE_MAP = new CaseInsensitiveMap<>();
+
+	/**
+	 * Caches the constants for a dot-separated list of names, keyed by the
+	 * exact String, because the same few lists are matched against every
+	 * object during loading.
+	 */
+	private static final Map<String, List<Type>> DOTTED_NAMES_MAP = new ConcurrentHashMap<>();
 
 	public static final Type NATURAL = getConstant("Natural");
 
@@ -229,9 +241,35 @@ public final class Type implements TypeSafeConstant, Comparable<Type>
 		return fieldName.compareTo(type.fieldName);
 	}
 
+	/**
+	 * Returns the constants for a dot-separated list of names (e.g.
+	 * "Combat.Teamwork"), in order. Empty names are skipped. Constants that do
+	 * not already exist are created, with an upper case name.
+	 * 
+	 * @param dottedNames
+	 *            The dot-separated names of the constants
+	 * @return The constants for the given names
+	 */
+	public static List<Type> getConstantsForDottedNames(String dottedNames)
+	{
+		return DOTTED_NAMES_MAP.computeIfAbsent(dottedNames, Type::constantsForDottedNames);
+	}
+
+	private static List<Type> constantsForDottedNames(String dottedNames)
+	{
+		StringTokenizer tokenizer = new StringTokenizer(dottedNames.toUpperCase(), ".");
+		List<Type> constants = new ArrayList<>();
+		while (tokenizer.hasMoreTokens())
+		{
+			constants.add(getConstant(tokenizer.nextToken()));
+		}
+		return List.copyOf(constants);
+	}
+
 	public static void buildMap()
 	{
 		TYPE_MAP.clear();
+		DOTTED_NAMES_MAP.clear();
 		Field[] fields = Type.class.getDeclaredFields();
         for (Field field : fields)
         {

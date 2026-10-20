@@ -22,7 +22,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.StringJoiner;
-import java.util.StringTokenizer;
 
 import pcgen.base.lang.StringUtil;
 import pcgen.cdom.base.CDOMObject;
@@ -178,24 +177,23 @@ public class PObject extends CDOMObject
 		}
 		else if (aType.charAt(0) == '!')
 		{
-			myType = aType.substring(1).toUpperCase();
+			myType = aType.substring(1);
 		}
 		else if (aType.startsWith("TYPE=") || aType.startsWith("TYPE.")) //$NON-NLS-1$ //$NON-NLS-2$
 		{
-			myType = aType.substring(5).toUpperCase();
+			myType = aType.substring(5);
 		}
 		else
 		{
-			myType = aType.toUpperCase();
+			myType = aType;
 		}
 
 		//
 		// Must match all listed types in order to qualify
 		//
-		StringTokenizer tok = new StringTokenizer(myType, ".");
-		while (tok.hasMoreTokens())
+		for (Type type : Type.getConstantsForDottedNames(myType))
 		{
-			if (!containsInList(ListKey.TYPE, Type.getConstant(tok.nextToken())))
+			if (!containsInList(ListKey.TYPE, type))
 			{
 				return false;
 			}
