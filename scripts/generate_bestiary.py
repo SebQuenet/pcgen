@@ -1229,6 +1229,8 @@ WEAPON_PROFICIENCY_KEYS = {
     'light crossbow': 'Crossbow (Light)',
     'composite longbow': 'Longbow',
     'composite shortbow': 'Shortbow',
+    # natural attacks name the weapon in the plural
+    'talon': 'Talons',
 }
 
 SPELL_LIKE_ABILITY_FEATS = {
