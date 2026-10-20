@@ -21,6 +21,7 @@ import java.util.Collection;
 import pcgen.base.util.FormatManager;
 import pcgen.cdom.base.CDOMReference;
 import pcgen.cdom.base.Loadable;
+import pcgen.cdom.enumeration.Type;
 
 /**
  * A ReferenceManufacturer is an object capable of creating CDOMReferences of a
@@ -152,6 +153,21 @@ public interface ReferenceManufacturer<T extends Loadable> extends SelectionCrea
 	 *         ReferenceManufacturer
 	 */
 	public Collection<T> getAllObjects();
+
+	/**
+	 * Returns the objects contained in this ReferenceManufacturer whose TYPE
+	 * list contains the given Type. This will not return null, it will return
+	 * an empty Collection if no object has that Type.
+	 * 
+	 * The TYPE lists are read when the objects contained in this
+	 * ReferenceManufacturer last changed, so this is only reliable once loading
+	 * has stopped changing them (during reference resolution).
+	 * 
+	 * @param type
+	 *            The Type the returned objects must have
+	 * @return A Collection of the objects of the given Type
+	 */
+	public Collection<T> getObjectsOfType(Type type);
 
 	/**
 	 * Changes the identifier for a given object, as stored in this

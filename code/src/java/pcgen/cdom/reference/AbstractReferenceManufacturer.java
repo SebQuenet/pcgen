@@ -20,7 +20,9 @@ package pcgen.cdom.reference;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -43,6 +45,8 @@ import pcgen.cdom.base.CDOMReference;
 import pcgen.cdom.base.ClassIdentity;
 import pcgen.cdom.base.Loadable;
 import pcgen.cdom.content.RollMethod;
+import pcgen.cdom.enumeration.ListKey;
+import pcgen.cdom.enumeration.Type;
 import pcgen.cdom.inst.Dynamic;
 import pcgen.util.Logging;
 import pcgen.util.StringPClassUtil;
@@ -109,6 +113,12 @@ public abstract class AbstractReferenceManufacturer<T extends Loadable> implemen
 	 * AbstractReferenceManufacturer.
 	 */
 	private final KeyMap<T> active = new KeyMap<>();
+
+	/**
+	 * Indexes the active objects by the Types in their TYPE list. Built on
+	 * demand, and dropped whenever the active objects change.
+	 */
+	private Map<Type, List<T>> activeObjectsByType = null;
 
 	/**
 	 * Stores derivative objects (Those that are NOT created by this
@@ -387,6 +397,7 @@ public abstract class AbstractReferenceManufacturer<T extends Loadable> implemen
 		if (current == null)
 		{
 			active.put(key, item);
+			activeObjectsByType = null;
 		}
 		else
 		{
@@ -577,12 +588,14 @@ public abstract class AbstractReferenceManufacturer<T extends Loadable> implemen
 			{
 				// No replacement
 				active.remove(key);
+				activeObjectsByType = null;
 			}
 			else
 			{
 				T newActive = duplicates.getElementInList(ocik, 0);
 				duplicates.removeFromListFor(ocik, newActive);
 				active.put(key, newActive);
+				activeObjectsByType = null;
 			}
 		}
 		return true;
@@ -933,6 +946,32 @@ public abstract class AbstractReferenceManufacturer<T extends Loadable> implemen
 	public Collection<T> getAllObjects()
 	{
 		return active.keySortedValues();
+	}
+
+	@Override
+	public Collection<T> getObjectsOfType(Type type)
+	{
+		if (activeObjectsByType == null)
+		{
+			activeObjectsByType = indexActiveObjectsByType();
+		}
+		return Collections.unmodifiableList(activeObjectsByType.getOrDefault(type, Collections.emptyList()));
+	}
+
+	private Map<Type, List<T>> indexActiveObjectsByType()
+	{
+		Map<Type, List<T>> objectsByType = new HashMap<>();
+		for (T object : active.keySortedValues())
+		{
+			if (object instanceof CDOMObject cdomObject)
+			{
+				for (Type type : cdomObject.getSafeListFor(ListKey.TYPE))
+				{
+					objectsByType.computeIfAbsent(type, unused -> new ArrayList<>()).add(object);
+				}
+			}
+		}
+		return objectsByType;
 	}
 
 	/**

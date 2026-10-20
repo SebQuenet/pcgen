@@ -18,9 +18,11 @@
 package pcgen.cdom.enumeration;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -43,6 +45,26 @@ class TypeTest
 			typeset.add(Type.getConstant("testitem 1"));
 			typeset.add(Type.getConstant("testitem 2"));
 		}, "type can't be sorted by adding to hashset") ;
+	}
+
+	@Test
+	void splitsDottedNamesIntoConstantsInOrder()
+	{
+		List<Type> constants = Type.getConstantsForDottedNames("Combat.feat..Teamwork");
+
+		assertEquals(List.of(Type.getConstant("COMBAT"), Type.getConstant("FEAT"), Type.getConstant("TEAMWORK")),
+			constants);
+	}
+
+	@Test
+	void returnsTheCurrentConstantsAfterTheMapIsRebuilt()
+	{
+		Type.getConstantsForDottedNames("Rebuilt.Type");
+		Type.buildMap();
+
+		List<Type> constants = Type.getConstantsForDottedNames("Rebuilt.Type");
+
+		assertEquals(List.of(Type.getConstant("REBUILT"), Type.getConstant("TYPE")), constants);
 	}
 
 }

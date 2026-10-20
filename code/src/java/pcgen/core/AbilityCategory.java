@@ -37,7 +37,6 @@ import pcgen.cdom.base.ClassIdentity;
 import pcgen.cdom.base.FormulaFactory;
 import pcgen.cdom.base.Loadable;
 import pcgen.cdom.enumeration.DisplayLocation;
-import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.Type;
 import pcgen.cdom.reference.CDOMAllRef;
@@ -734,6 +733,24 @@ public class AbilityCategory
 		return (validator != null) && validator.allowUnconstructed(getReferenceIdentity(), key);
 	}
 
+	private Collection<Ability> abilitiesOfThisCategoryTypes(ReferenceManufacturer<Ability> parentCrm)
+	{
+		if (isAllAbilityTypes)
+		{
+			return parentCrm.getAllObjects();
+		}
+		if (types == null)
+		{
+			return Collections.emptyList();
+		}
+		List<Ability> abilitiesOfTypes = new ArrayList<>();
+		for (Type type : types)
+		{
+			abilitiesOfTypes.addAll(parentCrm.getObjectsOfType(type));
+		}
+		return abilitiesOfTypes;
+	}
+
 	@Override
 	public boolean populate(ReferenceManufacturer<Ability> parentCrm, ReferenceManufacturer<Ability> rm,
 		UnconstructedValidator validator)
@@ -742,30 +759,16 @@ public class AbilityCategory
 		{
 			return true;
 		}
-		Collection<Ability> allObjects = parentCrm.getAllObjects();
 		// Don't add things twice or we'll get dupe messages :)
 		Set<Ability> added = Collections.newSetFromMap(new IdentityHashMap<>());
 		/*
 		 * Pull in all the base objects... note this skips containsDirectly
 		 * because items haven't been resolved
 		 */
-		for (final Ability ability : allObjects)
+		for (final Ability ability : abilitiesOfThisCategoryTypes(parentCrm))
 		{
-			boolean use = isAllAbilityTypes;
-			if (!use && (types != null))
+			if (added.add(ability))
 			{
-				for (Type type : types)
-				{
-					if (ability.containsInList(ListKey.TYPE, type))
-					{
-						use = true;
-						break;
-					}
-				}
-			}
-			if (use)
-			{
-				added.add(ability);
 				rm.addObject(ability, ability.getKeyName());
 			}
 		}
