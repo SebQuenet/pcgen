@@ -91,6 +91,15 @@ public abstract class CDOMObject extends ConcretePrereqObject
 	};
 
 	/**
+	 * @return true when isType(String) matches only if every dot-separated type, less a leading "!", is in
+	 *         the TYPE list, so the objects listing one of those types are the only candidates
+	 */
+	public boolean isTypeMatchedOnTypeList()
+	{
+		return false;
+	}
+
+	/**
 	 * @return the text P_OBJECT_NAME_COMP sorts on first: the localized name, else the sort key, else the
 	 *         display name
 	 */

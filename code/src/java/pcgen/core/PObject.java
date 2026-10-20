@@ -201,6 +201,28 @@ public class PObject extends CDOMObject
 		return true;
 	}
 
+	private static final ClassValue<Boolean> USES_POBJECT_IS_TYPE = new ClassValue<>()
+	{
+		@Override
+		protected Boolean computeValue(Class<?> type)
+		{
+			try
+			{
+				return type.getMethod("isType", String.class).getDeclaringClass() == PObject.class;
+			}
+			catch (NoSuchMethodException e)
+			{
+				return false;
+			}
+		}
+	};
+
+	@Override
+	public boolean isTypeMatchedOnTypeList()
+	{
+		return USES_POBJECT_IS_TYPE.get(getClass());
+	}
+
 	@Override
 	public String toString()
 	{

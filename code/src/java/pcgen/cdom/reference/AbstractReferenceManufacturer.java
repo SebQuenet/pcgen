@@ -329,27 +329,24 @@ public abstract class AbstractReferenceManufacturer<T extends Loadable> implemen
 
 	private boolean resolveGroupReferences()
 	{
-		for (T obj : getAllObjects())
+		Collection<T> allObjects = getAllObjects();
+		if (allRef != null)
 		{
-			if (allRef != null)
+			allObjects.forEach(allRef::addResolution);
+		}
+		// TYPE lists can change without the active objects changing, so the index is rebuilt here
+		activeObjectsByType = null;
+		boolean canNarrowByType = allObjects.stream()
+			.allMatch(object -> object instanceof CDOMObject cdomObject && cdomObject.isTypeMatchedOnTypeList());
+		for (Map.Entry<FixedStringList, WeakReference<CDOMGroupRef<T>>> me : typeReferences.entrySet())
+		{
+			CDOMGroupRef<T> trt = me.getValue().get();
+			if (trt != null)
 			{
-				allRef.addResolution(obj);
-			}
-			for (Map.Entry<FixedStringList, WeakReference<CDOMGroupRef<T>>> me : typeReferences.entrySet())
-			{
-				CDOMGroupRef<T> trt = me.getValue().get();
-				if (trt != null)
+				Collection<T> candidates = canNarrowByType ? objectsOfRarestType(me.getKey(), allObjects) : allObjects;
+				for (T obj : candidates)
 				{
-					boolean typeOkay = true;
-					for (String type : me.getKey())
-					{
-						if (!obj.isType(type))
-						{
-							typeOkay = false;
-							break;
-						}
-					}
-					if (typeOkay)
+					if (isOfEveryType(obj, me.getKey()))
 					{
 						trt.addResolution(obj);
 					}
@@ -972,6 +969,39 @@ public abstract class AbstractReferenceManufacturer<T extends Loadable> implemen
 			}
 		}
 		return objectsByType;
+	}
+
+	/**
+	 * @return the active objects, in key order, listing the type of the reference that the fewest objects list
+	 */
+	private Collection<T> objectsOfRarestType(FixedStringList types, Collection<T> allObjects)
+	{
+		Collection<T> rarest = allObjects;
+		for (String type : types)
+		{
+			String listedType = type.startsWith("!") ? type.substring(1) : type;
+			for (Type constant : Type.getConstantsForDottedNames(listedType))
+			{
+				Collection<T> objectsOfType = getObjectsOfType(constant);
+				if (objectsOfType.size() < rarest.size())
+				{
+					rarest = objectsOfType;
+				}
+			}
+		}
+		return rarest;
+	}
+
+	private static <T extends Loadable> boolean isOfEveryType(T object, FixedStringList types)
+	{
+		for (String type : types)
+		{
+			if (!object.isType(type))
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**
