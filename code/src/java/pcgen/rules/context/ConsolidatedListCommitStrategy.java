@@ -20,7 +20,9 @@ package pcgen.rules.context;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.IdentityHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -45,6 +47,18 @@ public class ConsolidatedListCommitStrategy implements ListCommitStrategy, Maste
 
 	private final DoubleKeyMapToList<CDOMReference<? extends CDOMList<?>>,
 		CDOMObject, AssociatedPrereqObject> masterList = new DoubleKeyMapToList<>();
+
+	/**
+	 * The master list entries each owner added, so clearing an owner's lists does not scan every list.
+	 * Keyed by identity because an owner's key can change after its entries are added; entries the
+	 * master list has since dropped stay here and are skipped when cleared.
+	 */
+	private final Map<CDOMObject, List<OwnedEntry>> entriesByOwner = new IdentityHashMap<>();
+
+	private record OwnedEntry(CDOMReference<? extends CDOMList<?>> list, CDOMObject allowed,
+		AssociatedPrereqObject association)
+	{
+	}
 
 	public URI getExtractURI()
 	{
@@ -76,6 +90,7 @@ public class ConsolidatedListCommitStrategy implements ListCommitStrategy, Maste
 		a.setAssociation(AssociationKey.OWNER, owner);
 		a.setAssociation(AssociationKey.TOKEN, tokenName);
 		masterList.addToListFor(list, allowed, a);
+		entriesByOwner.computeIfAbsent(owner, newOwner -> new ArrayList<>()).add(new OwnedEntry(list, allowed, a));
 		return a;
 	}
 
@@ -118,20 +133,25 @@ public class ConsolidatedListCommitStrategy implements ListCommitStrategy, Maste
 	@Override
 	public void clearAllMasterLists(String tokenName, CDOMObject owner)
 	{
-		for (CDOMReference<? extends CDOMList<?>> ref : masterList.getKeySet())
+		for (Map.Entry<CDOMObject, List<OwnedEntry>> ownerEntries : entriesByOwner.entrySet())
 		{
-			for (CDOMObject allowed : masterList.getSecondaryKeySet(ref))
+			if (owner.equals(ownerEntries.getKey()))
 			{
-				for (AssociatedPrereqObject assoc : masterList.getListFor(ref, allowed))
-				{
-					if (owner.equals(assoc.getAssociation(AssociationKey.OWNER))
-						&& tokenName.equals(assoc.getAssociation(AssociationKey.TOKEN)))
-					{
-						masterList.removeFromListFor(ref, allowed, assoc);
-					}
-				}
+				ownerEntries.getValue().removeIf(entry -> clearEntry(tokenName, owner, entry));
 			}
 		}
+	}
+
+	private boolean clearEntry(String tokenName, CDOMObject owner, OwnedEntry entry)
+	{
+		AssociatedPrereqObject association = entry.association();
+		if (owner.equals(association.getAssociation(AssociationKey.OWNER))
+			&& tokenName.equals(association.getAssociation(AssociationKey.TOKEN)))
+		{
+			masterList.removeFromListFor(entry.list(), entry.allowed(), association);
+			return true;
+		}
+		return false;
 	}
 
 	@Override
