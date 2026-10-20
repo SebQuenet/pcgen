@@ -20,12 +20,15 @@ package pcgen.core;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.text.CollationKey;
+import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
@@ -796,9 +799,34 @@ public final class Globals
 	 */
 	public static <T extends CDOMObject> List<T> sortPObjectListByName(final List<T> aList)
 	{
-		aList.sort(CDOMObject.P_OBJECT_NAME_COMP);
-
+		// Same order as P_OBJECT_NAME_COMP, but each name is collated once rather than at every comparison
+		Collator collator = Collator.getInstance();
+		List<NameSortEntry<T>> entries = new ArrayList<>(aList.size());
+		for (T object : aList)
+		{
+			String sortName = object.getNameSortKey();
+			entries.add(new NameSortEntry<>(object, sortName, collator.getCollationKey(sortName)));
+		}
+		entries.sort(NameSortEntry::compareTo);
+		ListIterator<T> sorted = aList.listIterator();
+		for (NameSortEntry<T> entry : entries)
+		{
+			sorted.next();
+			sorted.set(entry.object());
+		}
 		return aList;
+	}
+
+	private record NameSortEntry<T extends CDOMObject>(T object, String sortName, CollationKey collationKey)
+	{
+		private int compareTo(NameSortEntry<T> other)
+		{
+			if (!sortName.equals(other.sortName))
+			{
+				return collationKey.compareTo(other.collationKey);
+			}
+			return CDOMObject.P_OBJECT_NAME_COMP.compare(object, other.object);
+		}
 	}
 
 	static String getBonusFeatString()

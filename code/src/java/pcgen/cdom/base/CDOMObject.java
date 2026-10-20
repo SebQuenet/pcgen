@@ -76,25 +76,8 @@ public abstract class CDOMObject extends ConcretePrereqObject
 	public static final Comparator<CDOMObject> P_OBJECT_NAME_COMP = (o1, o2) -> {
 		final Collator collator = Collator.getInstance();
 
-		// Check sort keys first
-		String key1 = o1.get(StringKey.LOCALIZED_NAME);
-		if (key1 == null)
-		{
-			key1 = o1.get(StringKey.SORT_KEY);
-		}
-		if (key1 == null)
-		{
-			key1 = o1.getDisplayName();
-		}
-		String key2 = o2.get(StringKey.LOCALIZED_NAME);
-		if (key2 == null)
-		{
-			key2 = o2.get(StringKey.SORT_KEY);
-		}
-		if (key2 == null)
-		{
-			key2 = o2.getDisplayName();
-		}
+		String key1 = o1.getNameSortKey();
+		String key2 = o2.getNameSortKey();
 		if (!key1.equals(key2))
 		{
 			return collator.compare(key1, key2);
@@ -106,6 +89,22 @@ public abstract class CDOMObject extends ConcretePrereqObject
 		// Fall back to keyname if the displayname is the same
 		return collator.compare(o1.getKeyName(), o2.getKeyName());
 	};
+
+	/**
+	 * @return the text P_OBJECT_NAME_COMP sorts on first: the localized name, else the sort key, else the
+	 *         display name
+	 */
+	public String getNameSortKey()
+	{
+		String localizedName = get(StringKey.LOCALIZED_NAME);
+		if (localizedName != null)
+		{
+			return localizedName;
+		}
+		String sortKey = get(StringKey.SORT_KEY);
+		return sortKey == null ? getDisplayName() : sortKey;
+	}
+
 	/**
 	 * The source URI for this CDOMObject.
 	 */
