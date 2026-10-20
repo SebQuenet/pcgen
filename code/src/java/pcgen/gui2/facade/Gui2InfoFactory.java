@@ -476,6 +476,19 @@ public class Gui2InfoFactory implements InfoFactory
 				DescriptionFormatting.piWrapDesc(skill, desc, false));
 		}
 
+		List<SkillUnlocks.Tier> skillUnlocks = SkillUnlocks.of(skill);
+		if (!skillUnlocks.isEmpty())
+		{
+			infoText.appendLineBreak();
+			infoText.appendI18nFormattedElement("in_iskSkillUnlocks"); //$NON-NLS-1$
+			for (SkillUnlocks.Tier tier : skillUnlocks)
+			{
+				infoText.appendLineBreak();
+				infoText.appendElement(LanguageBundle.getFormattedString("in_iskSkillUnlockRanks", tier.ranks()), //$NON-NLS-1$
+					getDescription(tier.ability()));
+			}
+		}
+
 		bString = skill.getSource();
 		if (!bString.isEmpty())
 		{

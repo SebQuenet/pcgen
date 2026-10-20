@@ -17,6 +17,7 @@
  */
 package pcgen.gui2.facade;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.net.URI;
@@ -24,11 +25,14 @@ import java.net.URI;
 import pcgen.AbstractCharacterTestCase;
 import pcgen.cdom.enumeration.ListKey;
 import pcgen.cdom.enumeration.ObjectKey;
+import pcgen.cdom.enumeration.SkillArmorCheck;
+import pcgen.cdom.enumeration.StringKey;
 import pcgen.core.Ability;
 import pcgen.core.Description;
 import pcgen.core.Globals;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.SettingsHandler;
+import pcgen.core.Skill;
 import pcgen.rules.persistence.token.ParseResult;
 import pcgen.util.TestHelper;
 import plugin.lsttokens.choose.StringToken;
@@ -108,6 +112,55 @@ public class Gui2InfoFactoryTest extends AbstractCharacterTestCase
 
 		assertTrue(html, html.contains("<a href=\"https://aonprd.com/FeatDisplay.aspx?ItemName=Power%20Attack\">"
 			+ "Archives of Nethys</a>"));
+	}
+
+	@Test
+	public void skillInfoListsItsSkillUnlocksByRanksFromFiveToTwenty()
+	{
+		Skill acrobatics = makeSkillKeyed("Acrobatics");
+		makeSkillUnlock("acrobatics 10 Ranks", "Trip defense.");
+		makeSkillUnlock("acrobatics 05 Ranks", "Move through threatened squares.");
+
+		String html = new Gui2InfoFactory(getCharacter()).getHTMLInfo(acrobatics);
+
+		assertTrue(html, html.contains("<b>5 rangs:</b>&nbsp;Move through threatened squares.<br>"
+			+ "<b>10 rangs:</b>&nbsp;Trip defense."));
+	}
+
+	@Test
+	public void subtypedSkillInfoListsTheSkillUnlocksOfItsBaseSkill()
+	{
+		Skill arcana = makeSkillKeyed("Knowledge (Arcana)");
+		makeSkillUnlock("knowledge 05 Ranks", "Identify creatures faster.");
+
+		String html = new Gui2InfoFactory(getCharacter()).getHTMLInfo(arcana);
+
+		assertTrue(html, html.contains("<b>5 rangs:</b>&nbsp;Identify creatures faster."));
+	}
+
+	@Test
+	public void skillInfoHasNoSkillUnlockSectionWhenTheSkillHasNone()
+	{
+		Skill swim = makeSkillKeyed("Swim");
+		makeSkillUnlock("acrobatics 05 Ranks", "Move through threatened squares.");
+
+		String html = new Gui2InfoFactory(getCharacter()).getHTMLInfo(swim);
+
+		assertFalse(html, html.contains("Skill unlocks"));
+	}
+
+	private Skill makeSkillKeyed(String name)
+	{
+		Skill skill = TestHelper.makeSkill(name, "Base", dex, true, SkillArmorCheck.NONE);
+		skill.put(StringKey.KEY_NAME, name);
+		return skill;
+	}
+
+	private static void makeSkillUnlock(String tier, String description)
+	{
+		Ability unlock = TestHelper.makeAbility("Skill unlock " + tier, "Special Ability", "SpecialQuality");
+		unlock.put(StringKey.KEY_NAME, "Skill unlock ~ " + tier);
+		unlock.addToListFor(ListKey.DESCRIPTION, new Description(description));
 	}
 
 	@BeforeEach
