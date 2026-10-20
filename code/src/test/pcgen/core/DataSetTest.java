@@ -21,14 +21,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import pcgen.cdom.base.Constants;
+import pcgen.cdom.enumeration.ListKey;
+import pcgen.cdom.enumeration.ObjectKey;
+import pcgen.cdom.enumeration.Type;
 import pcgen.core.prereq.Prerequisite;
 import pcgen.facade.core.AbilityFacade;
 import pcgen.facade.util.DefaultListFacade;
 import pcgen.facade.util.ListFacade;
 import pcgen.persistence.PersistenceLayerException;
+import pcgen.util.enumeration.Visibility;
 import pcgen.util.TestHelper;
 import plugin.lsttokens.testsupport.BuildUtilities;
 import plugin.pretokens.parser.PreAbilityParser;
@@ -102,6 +107,32 @@ class DataSetTest
 				locations, Constants.EQUIP_LOCATION_NOTCARRIED), "Expected to find Not Carried");
 		assertEquals(4, locations
 				.getSize(), "Incorrect size of body structures list");
+	}
+
+	@Test
+	public void listsVisibleRacesWithPlayerRacesThenHumanoidsFirst()
+	{
+		raceOfTypes("Wolf");
+		raceOfTypes("Goblin", "Humanoid");
+		raceOfTypes("Human", "PC", "Humanoid");
+		raceOfTypes("Hidden Elf", "PC", "Humanoid").put(ObjectKey.VISIBILITY, Visibility.HIDDEN);
+
+		DataSet dataset =
+				new DataSet(Globals.getContext(), SettingsHandler.getGameAsProperty().get(), new DefaultListFacade<>());
+
+		List<String> raceKeys = new ArrayList<>();
+		dataset.getRaces().forEach(race -> raceKeys.add(race.getKeyName()));
+		assertEquals(List.of("Human", "Goblin", "Wolf"), raceKeys);
+	}
+
+	private static Race raceOfTypes(String key, String... typeNames)
+	{
+		Race race = Globals.getContext().getReferenceContext().constructCDOMObject(Race.class, key);
+		for (String typeName : typeNames)
+		{
+			race.addToListFor(ListKey.TYPE, Type.getConstant(typeName));
+		}
+		return race;
 	}
 
 	/**

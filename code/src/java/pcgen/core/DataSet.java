@@ -112,24 +112,26 @@ public class DataSet implements DataSetFacade
 
 	private void initLists()
 	{
-		List<Race> raceList = new ArrayList<>(context.getReferenceContext().getConstructedCDOMObjects(Race.class));
-		for (Race race : raceList)
+		// The sorted views resort on every added element, so each list is filled at once
+		List<Race> visibleRaces = new ArrayList<>();
+		for (Race race : context.getReferenceContext().getConstructedCDOMObjects(Race.class))
 		{
 			if (race.getSafe(ObjectKey.VISIBILITY).isVisibleTo(View.VISIBLE_DISPLAY))
 			{
-				unsortedRaces.addElement(race);
+				visibleRaces.add(race);
 			}
 		}
+		unsortedRaces.setContents(visibleRaces);
 
-		List<PCClass> classList =
-				new ArrayList<>(context.getReferenceContext().getConstructedCDOMObjects(PCClass.class));
-		for (PCClass pcClass : classList)
+		List<PCClass> visibleClasses = new ArrayList<>();
+		for (PCClass pcClass : context.getReferenceContext().getConstructedCDOMObjects(PCClass.class))
 		{
 			if (pcClass.getSafe(ObjectKey.VISIBILITY).isVisibleTo(View.VISIBLE_DISPLAY))
 			{
-				unsortedClasses.addElement(pcClass);
+				visibleClasses.add(pcClass);
 			}
 		}
+		unsortedClasses.setContents(visibleClasses);
 
 		for (Skill skill : context.getReferenceContext().getConstructedCDOMObjects(Skill.class))
 		{
@@ -153,14 +155,8 @@ public class DataSet implements DataSetFacade
 		{
 			kits.addElement(kit);
 		}
-		for (PCAlignment alignment : context.getReferenceContext().getConstructedCDOMObjects(PCAlignment.class))
-		{
-			unsortedAlignments.addElement(alignment);
-		}
-		for (PCStat stat : context.getReferenceContext().getConstructedCDOMObjects(PCStat.class))
-		{
-			unsortedStats.addElement(stat);
-		}
+		unsortedAlignments.setContents(context.getReferenceContext().getConstructedCDOMObjects(PCAlignment.class));
+		unsortedStats.setContents(context.getReferenceContext().getConstructedCDOMObjects(PCStat.class));
 		for (AbilityCategory category : gameMode.getAllAbilityCategories())
 		{
 			if (category.isVisibleTo(View.VISIBLE_DISPLAY))
@@ -221,10 +217,7 @@ public class DataSet implements DataSetFacade
 		{
 			characterTypes.addElement(characterType);
 		}
-		for (SizeAdjustment size : context.getReferenceContext().getConstructedCDOMObjects(SizeAdjustment.class))
-		{
-			unsortedSizes.addElement(size);
-		}
+		unsortedSizes.setContents(context.getReferenceContext().getConstructedCDOMObjects(SizeAdjustment.class));
 
 		createGearBuySellSchemes();
 
