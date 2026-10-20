@@ -414,8 +414,11 @@ public class PCClass extends PObject implements InfoFacade, Cloneable
 			}
 		}
 
-		// calcActiveBonuses is called by the caller (incrementClassLevel)
-		// after all levels have been processed
+		// addLevel reads this level's bonuses (domains, skill points) right after setLevel
+		if (!aPC.isImporting())
+		{
+			aPC.calcActiveBonuses();
+		}
 
 		if ((newLevel == 1) && !aPC.isImporting() && (curLevel == 0))
 		{
@@ -856,7 +859,7 @@ public class PCClass extends PObject implements InfoFacade, Cloneable
 				return false;
 			}
 		}
-		else
+		else if (!aPC.isImporting())
 		{
 			// When prereqs are bypassed (e.g. headless/console level-up) the block
 			// above is skipped, so the level must still be rolled back to newLevel-1
