@@ -853,72 +853,6 @@ BIO
 		<weapon>
 			<common>
 				<name>
-					<short>*Flail +1 (Heavy)</short>
-					<long>*Flail +1 (Heavy)</long>
-				</name>
-				<category>Martial-Melee</category>
-				<critical>
-					<range>19-20</range>
-					<multiplier>2</multiplier>
-				</critical>
-				<to_hit>
-					<hit>+12/+7</hit>
-					<magic_hit>+1</magic_hit>
-					<total_hit>+12/+7</total_hit>
-				</to_hit>
-				<feat>
-					<hit>+0</hit>
-					<damage>+0</damage>
-				</feat>
-				<hand>Both</hand>
-				<num_attacks>2</num_attacks>
-				<reach>5</reach>
-				<size>M</size>
-				<special_properties>disarm, trip</special_properties>
-				<template>
-					<hit>+0</hit>
-					<damage>+0</damage>
-				</template>
-				<type>B</type>
-				<weight>10</weight>
-				<sequence>0</sequence>
-			</common>
-			<melee>
-				<w1_h1_p>
-					<!-- One weapon, 1 hand, primary hand -->
-					<to_hit>N/A</to_hit>
-					<damage>N/A</damage>
-				</w1_h1_p>
-				<w1_h1_o>
-					<!-- One weapon, 1 handed, offhand -->
-					<to_hit>N/A</to_hit>
-					<damage>N/A</damage>
-				</w1_h1_o>
-				<w1_h2>
-					<!-- One weapon, 2 handed -->
-					<to_hit>+12/+7</to_hit>
-					<damage>1d10+7</damage>
-				</w1_h2>
-				<w2_p_oh>
-					<!-- Two weapons, this weapon in primary hand, other hand with heavy weapon -->
-					<to_hit>N/A</to_hit>
-					<damage>N/A</damage>
-				</w2_p_oh>
-				<w2_p_ol>
-					<!-- Two weapons, this weapon in primary hand, other hand with light weapon -->
-					<to_hit>N/A</to_hit>
-					<damage>N/A</damage>
-				</w2_p_ol>
-				<w2_o>
-					<!-- Two weapons, this weapon in off-hand -->
-					<to_hit>N/A</to_hit>
-					<damage>N/A</damage>
-				</w2_o>
-			</melee>
-		</weapon>
-		<weapon>
-			<common>
-				<name>
 					<short>*Flail +1 (Heavy) [Power Attack (Two-Handed)]</short>
 					<long>*Flail +1 (Heavy) [Power Attack (Two-Handed)]</long>
 				</name>
@@ -947,7 +881,7 @@ BIO
 				</template>
 				<type>B</type>
 				<weight>0</weight>
-				<sequence>1</sequence>
+				<sequence>0</sequence>
 			</common>
 			<melee>
 				<w1_h1_p>
@@ -1013,7 +947,7 @@ BIO
 				</template>
 				<type>P</type>
 				<weight>0</weight>
-				<sequence>2</sequence>
+				<sequence>1</sequence>
 			</common>
 			<melee>
 				<w1_h1_p>
@@ -1079,7 +1013,7 @@ BIO
 				</template>
 				<type></type>
 				<weight>1</weight>
-				<sequence>3</sequence>
+				<sequence>2</sequence>
 			</common>
 			<ranges>
 				<range>
@@ -1140,7 +1074,7 @@ BIO
 				</template>
 				<type>F</type>
 				<weight>1</weight>
-				<sequence>4</sequence>
+				<sequence>3</sequence>
 			</common>
 			<ranges>
 				<range>
@@ -1201,7 +1135,7 @@ BIO
 				</template>
 				<type>PS</type>
 				<weight>0</weight>
-				<sequence>5</sequence>
+				<sequence>4</sequence>
 			</common>
 			<melee>
 				<w1_h1_p>
@@ -1294,7 +1228,7 @@ BIO
 				</template>
 				<type>P</type>
 				<weight>2</weight>
-				<sequence>7</sequence>
+				<sequence>6</sequence>
 			</common>
 			<ranges>
 				<range>
@@ -1355,7 +1289,7 @@ BIO
 				</template>
 				<type>S</type>
 				<weight>4</weight>
-				<sequence>8</sequence>
+				<sequence>7</sequence>
 			</common>
 			<melee>
 				<w1_h1_p>
@@ -1421,7 +1355,7 @@ BIO
 				</template>
 				<type>P</type>
 				<weight>0</weight>
-				<sequence>9</sequence>
+				<sequence>8</sequence>
 			</common>
 			<melee>
 				<w1_h1_p>
@@ -1514,7 +1448,7 @@ BIO
 				</template>
 				<type>P</type>
 				<weight>0</weight>
-				<sequence>11</sequence>
+				<sequence>10</sequence>
 			</common>
 			<melee>
 				<w1_h1_p>
