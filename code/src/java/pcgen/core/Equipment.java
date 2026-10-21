@@ -35,6 +35,7 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
+import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -1064,16 +1065,17 @@ public final class Equipment extends PObject
 	 */
 	public String getItemNameFromModifiers()
 	{
-		return getItemNameFromModifiers(getBaseItemName());
+		return getItemNameFromModifiers(getBaseItemName(), CDOMObject::getDisplayName);
 	}
 
 	/**
 	 * Get the item name based off the modifiers
 	 * 
 	 * @param baseName base name of the object, may instead be the base key if generating a key
+	 * @param namer gives the name of a modifier or a size, in English or in translation
 	 * @return item name based off the modifiers
 	 */
-	private String getItemNameFromModifiers(String baseName)
+	private String getItemNameFromModifiers(String baseName, Function<CDOMObject, String> namer)
 	{
 		CDOMSingleRef<Equipment> baseItem = get(ObjectKey.BASE_ITEM);
 		if (baseItem == null)
@@ -1124,7 +1126,7 @@ public final class Equipment extends PObject
 		final StringBuilder itemName = new StringBuilder(100);
 		// Add in front eq mods
 		int fcf = EqModFormatCat.FRONT.ordinal();
-		itemName.append(buildEqModDesc(commonListByFC.get(fcf), modListByFC.get(fcf), altModListByFC.get(fcf)));
+		itemName.append(buildEqModDesc(commonListByFC.get(fcf), modListByFC.get(fcf), altModListByFC.get(fcf), namer));
 		if (itemName.length() > 0)
 		{
 			itemName.append(' ');
@@ -1142,7 +1144,7 @@ public final class Equipment extends PObject
 		}
 		// Add in middle mods
 		int fcm = EqModFormatCat.MIDDLE.ordinal();
-		String eqmodDesc1 = buildEqModDesc(commonListByFC.get(fcm), modListByFC.get(fcm), altModListByFC.get(fcm));
+		String eqmodDesc1 = buildEqModDesc(commonListByFC.get(fcm), modListByFC.get(fcm), altModListByFC.get(fcm), namer);
 		if (!eqmodDesc1.isEmpty())
 		{
 			itemName.append(' ').append(eqmodDesc1);
@@ -1170,12 +1172,12 @@ public final class Equipment extends PObject
 		SizeAdjustment thisSize = getSizeAdjustment();
 		if (!getSafe(ObjectKey.BASESIZE).get().equals(thisSize))
 		{
-			itemName.append(thisSize.getDisplayName());
+			itemName.append(namer.apply(thisSize));
 			itemName.append('/');
 		}
 		// Put in parens mods
 		int fcp = EqModFormatCat.PARENS.ordinal();
-		itemName.append(buildEqModDesc(commonListByFC.get(fcp), modListByFC.get(fcp), altModListByFC.get(fcp)));
+		itemName.append(buildEqModDesc(commonListByFC.get(fcp), modListByFC.get(fcp), altModListByFC.get(fcp), namer));
 		//
 		// If there were no modifiers, then drop the trailing '/'
 		//
@@ -1229,13 +1231,13 @@ public final class Equipment extends PObject
 	 * @return The description of these equipment modifiers.
 	 */
 	private String buildEqModDesc(List<EquipmentModifier> commonList, List<EquipmentModifier> modList,
-		List<EquipmentModifier> altModList)
+		List<EquipmentModifier> altModList, Function<CDOMObject, String> namer)
 	{
 		StringBuilder desc = new StringBuilder(250);
 
-		String commonDesc = getNameFromModifiers(commonList);
-		String modDesc = getNameFromModifiers(modList);
-		String altModDesc = getNameFromModifiers(altModList);
+		String commonDesc = getNameFromModifiers(commonList, namer);
+		String modDesc = getNameFromModifiers(modList, namer);
+		String altModDesc = getNameFromModifiers(altModList, namer);
 
 		if ((modList.isEmpty()) && (altModList.isEmpty()))
 		{
@@ -3141,10 +3143,20 @@ public final class Equipment extends PObject
 	public String nameItemFromModifiers(final PlayerCharacter pc)
 	{
 
-		final String itemName = getItemNameFromModifiers(getBaseItemName());
+		final String itemName = getItemNameFromModifiers(getBaseItemName(), CDOMObject::getDisplayName);
 		setDefaultCrit(pc);
 		setName(itemName);
-		String itemKey = getItemNameFromModifiers(getBaseItemKeyName()).replaceAll("[^A-Za-z0-9/_() +-]", "_");
+		CDOMSingleRef<Equipment> baseItem = get(ObjectKey.BASE_ITEM);
+		if (baseItem != null)
+		{
+			String localizedName =
+					getItemNameFromModifiers(baseItem.get().getLocalizedName(), CDOMObject::getLocalizedName);
+			if (!localizedName.equals(itemName))
+			{
+				setLocalizedName(localizedName);
+			}
+		}
+		String itemKey = getItemNameFromModifiers(getBaseItemKeyName(), CDOMObject::getDisplayName).replaceAll("[^A-Za-z0-9/_() +-]", "_");
 		setKeyName(itemKey);
 		remove(StringKey.OUTPUT_NAME);
 
@@ -3900,7 +3912,7 @@ public final class Equipment extends PObject
 	 *            The list of modifiers
 	 * @return The nameFromModifiers value
 	 */
-	private String getNameFromModifiers(final List<EquipmentModifier> eqModList)
+	private String getNameFromModifiers(final List<EquipmentModifier> eqModList, Function<CDOMObject, String> namer)
 	{
 		//
 		// Get a sorted list so that the description will always come
@@ -3911,7 +3923,7 @@ public final class Equipment extends PObject
 
 		final StringBuilder sMod = new StringBuilder(70);
 
-		eqList.stream().map(eqMod -> eqMod.getSafe(ObjectKey.NAME_OPT).returnName(this, eqMod)).forEach(modDesc -> {
+		eqList.stream().map(eqMod -> eqMod.getSafe(ObjectKey.NAME_OPT).returnName(this, eqMod, namer.apply(eqMod))).forEach(modDesc -> {
 			if (sMod.length() > 0 && !modDesc.isEmpty())
 			{
 				sMod.append('/');

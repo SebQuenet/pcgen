@@ -60,10 +60,10 @@ public enum EqModNameOpt
 	NORMAL
 	{
 		@Override
-		public String returnName(Equipment parent, EquipmentModifier mod)
+		public String returnName(Equipment parent, EquipmentModifier mod, String modName)
 		{
 			StringBuilder sb = new StringBuilder(100);
-			sb.append(mod.getDisplayName());
+			sb.append(modName);
 			if (!parent.getAssociationList(mod).isEmpty())
 			{
 				sb.append(" (");
@@ -76,15 +76,15 @@ public enum EqModNameOpt
 	NOLIST
 	{
 		@Override
-		public String returnName(Equipment parent, EquipmentModifier mod)
+		public String returnName(Equipment parent, EquipmentModifier mod, String modName)
 		{
-			return mod.getDisplayName().trim().replace('|', ' ');
+			return modName.trim().replace('|', ' ');
 		}
 	},
 	NONAME
 	{
 		@Override
-		public String returnName(Equipment parent, EquipmentModifier mod)
+		public String returnName(Equipment parent, EquipmentModifier mod, String modName)
 		{
 			return associatedList(parent.getAssociationList(mod)).trim().replace('|', ' ');
 		}
@@ -92,7 +92,7 @@ public enum EqModNameOpt
 	NOTHING
 	{
 		@Override
-		public String returnName(Equipment parent, EquipmentModifier mod)
+		public String returnName(Equipment parent, EquipmentModifier mod, String modName)
 		{
 			return Constants.EMPTY_STRING;
 		}
@@ -100,7 +100,7 @@ public enum EqModNameOpt
 	SPELL
 	{
 		@Override
-		public String returnName(Equipment parent, EquipmentModifier mod)
+		public String returnName(Equipment parent, EquipmentModifier mod, String modName)
 		{
 			StringBuilder sb = new StringBuilder(100);
 			boolean first = true;
@@ -152,13 +152,16 @@ public enum EqModNameOpt
 	TEXT
 	{
 		@Override
-		public String returnName(Equipment parent, EquipmentModifier mod)
+		public String returnName(Equipment parent, EquipmentModifier mod, String modName)
 		{
 			return mod.get(StringKey.NAME_TEXT);
 		}
 	};
 
-	public abstract String returnName(Equipment parent, EquipmentModifier mod);
+	/**
+	 * @param modName the name of the modifier, in English or in translation
+	 */
+	public abstract String returnName(Equipment parent, EquipmentModifier mod, String modName);
 
 	public static EqModNameOpt valueOfIgnoreCase(String optName)
 	{

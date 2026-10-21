@@ -616,6 +616,26 @@ assertNotNull(eqMod, "Eqmod should be present");
 	}
 	
 	/**
+	 * A customized item is shown under a name built from the translated names of its base item
+	 * and of its modifiers.
+	 */
+	@Test
+	public void testNameItemFromModifiersKeepsTranslatedName()
+	{
+		EquipmentModifier masterwork = Globals.getContext().getReferenceContext().silentlyGetConstructedCDOMObject(
+			EquipmentModifier.class, "MWORKW");
+		masterwork.setLocalizedName("De maître");
+		eq.setLocalizedName("Factice");
+		Equipment customized = eq.clone();
+		customized.put(ObjectKey.BASE_ITEM, CDOMDirectSingleRef.getRef(eq));
+		customized.addEqModifier(masterwork, true, getCharacter());
+
+		customized.nameItemFromModifiers(getCharacter());
+
+		assertEquals("De maître Factice", customized.getLocalizedName());
+	}
+
+	/**
 	 * Verify that isPreType is working correctly for eqmods.
 	 */
 	@Test
