@@ -75,6 +75,7 @@ public final class EquipCustomizerDialog extends JDialog
 		);
 
 		Button buyButton = new Button(LanguageBundle.getString("in_buy"));
+		buyButton.setOnAction(this::doBuy);
 		buttonBar.getButtons().add(buyButton);
 
 		pane.add(GuiUtility.wrapParentAsJFXPanel(buttonBar), BorderLayout.PAGE_END);
