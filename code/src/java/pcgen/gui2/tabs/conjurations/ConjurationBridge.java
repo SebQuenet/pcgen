@@ -40,6 +40,7 @@ import pcgen.core.conjurations.CreatureStats;
 import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.ConjurationSheetFacade;
 import pcgen.gui2.tools.DesktopBrowserLauncher;
+import pcgen.io.conjurations.PathfinderSummonPortraits;
 import pcgen.util.Logging;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -304,6 +305,12 @@ public final class ConjurationBridge implements AutoCloseable
 	{
 		return json(sheet.viewOf(creature, number)
 			.map(view -> catalogMetrics(view.stats(), targetArmorClass)).orElse(null));
+	}
+
+	/** The race's illustration as a data URI, or an empty string when it has none. */
+	public String portrait(String race)
+	{
+		return PathfinderSummonPortraits.dataUriFor(race).orElse("");
 	}
 
 	/**

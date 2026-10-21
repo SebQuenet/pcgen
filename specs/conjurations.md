@@ -164,6 +164,13 @@ personnage et ne remplacent pas les règles ou la fiche calculée. Une race abse
 ses notes, capacités et statistiques dans le même panneau. Le panneau lie aussi chaque entrée à
 sa fiche complète du Bestiaire ; dans PCGen, ces liens s'ouvrent dans le navigateur système.
 
+Le panneau s'ouvre sur une illustration de la race : un JPEG de 250×250 par race du catalogue publié,
+dans `code/src/resources/pcgen/conjurations/portraits/`, nommé d'après la clé de race en minuscules,
+chaque suite de caractères non alphanumériques remplacée par `_`. `PathfinderSummonPortraits` le lit et le pont le
+renvoie à la page en URI `data:` par `portrait(race)`, car la page est chargée sans adresse de base.
+Une page exportée n'a donc pas d'illustration. `scripts/generate_summon_portraits.py` fait dessiner
+les races manquantes par la CLI Codex, en style d'affiche de film d'heroic fantasy sur fond blanc.
+
 Ces conseils synthétisent le [guide de RPGBOT](https://rpgbot.net/pathfinder/characters/summon_monster/),
 les [règles de Convocation de monstres](https://legacy.aonprd.com/coreRulebook/spells/summonMonster.html)
 et les entrées du Bestiaire de Pathfinder 1. Ils sont paraphrasés et les deux premières sources
@@ -198,6 +205,7 @@ Le pont planté sur `window.pcgen` offre, en plus de `conjure`, `setDamage`, `se
 | `groupBonusChoices()` / `bonusChoices(nom, numéro)` | `key`, `label`, `range` |
 | `addGroupBonus(clé, valeur)` / `removeGroupBonus(clé)` | toutes les créatures, mises à jour |
 | `addBonus(nom, numéro, clé, valeur)` / `removeBonus(nom, numéro, clé)` | cette créature, mise à jour |
+| `portrait(race)` | l'illustration en URI `data:`, ou une chaîne vide (texte brut, pas du JSON) |
 
 `valeur` vaut `-1` pour un bonus qui n'en demande pas.
 

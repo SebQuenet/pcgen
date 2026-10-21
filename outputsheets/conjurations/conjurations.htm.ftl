@@ -139,6 +139,8 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   border-bottom:1px solid var(--border);padding-bottom:8px}
 .drawer-head h2{font-size:17px;letter-spacing:0;text-transform:none;margin:0}
 .drawer-close{font-size:18px;line-height:1}
+.drawer-portrait{display:block;width:250px;height:250px;margin:10px auto 0;background:#fff;border-radius:4px}
+.drawer-portrait[hidden]{display:none}
 .drawer-body h3{font-size:12px;color:var(--def);margin:14px 0 3px}
 .drawer-body p{margin:3px 0 8px;white-space:normal}
 .drawer-meta{color:var(--text-dim);font-size:11px;margin-top:8px}
@@ -287,10 +289,11 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 <div class="drawer-shade" hidden></div>
 <aside class="creature-drawer" role="dialog" aria-modal="true" aria-label="${labels.details}" data-hit-dice-label="${labels.hitDice}" data-expected-damage-label="${labels.expectedDamage}" data-building-label="${labels.building}" hidden>
   <div class="drawer-head"><h2 class="drawer-name"></h2><button type="button" class="drawer-close" aria-label="${labels.closeDetails}">&times;</button></div>
+  <img class="drawer-portrait" alt="" hidden>
   <div class="drawer-body"></div>
 </aside>
 <#list conjurations.summons as summon>
-<template class="creature-details" data-creature="${summon.name}" data-display-name="${summon.displayName}">
+<template class="creature-details" data-creature="${summon.name}" data-race="${summon.race}" data-display-name="${summon.displayName}">
   <p class="drawer-meta">${summon.displayGroup}<#if summon.roles?has_content> · <#list summon.roles as role>${role}<#sep>, </#sep></#list></#if></p>
   <p class="drawer-meta">${labels.sourceRace} : ${summon.displayRace}<#if summon.displayTemplates?has_content> · ${labels.templates} : <#list summon.displayTemplates as template>${template}<#sep>, </#sep></#list></#if></p>
   <p class="drawer-meta">${labels.ranking} : <#if summon.ranking.color?has_content><a class="rating ${summon.ranking.color}" data-reference="true" href="${summon.ranking.source}" title="${labels['rating_' + summon.ranking.color + '_meaning']}" target="_blank" rel="noopener noreferrer">${labels['rating_' + summon.ranking.color]}</a><#else>${labels.unranked}</#if></p>
@@ -841,6 +844,14 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       pending.textContent = drawer.getAttribute("data-building-label");
     }
     drawer.querySelector(".drawer-name").textContent = detail.getAttribute("data-display-name") + (number > 0 ? " #" + number : "");
+    var portrait = drawer.querySelector(".drawer-portrait");
+    var portraitAddress = bridge() && bridge().portrait ? bridge().portrait(detail.getAttribute("data-race")) : "";
+    portrait.hidden = !portraitAddress;
+    if (portraitAddress) {
+      portrait.setAttribute("src", portraitAddress);
+    } else {
+      portrait.removeAttribute("src");
+    }
     drawer.hidden = false;
     drawerShade.hidden = false;
     window.setTimeout(function () { drawer.classList.add("open"); }, 0);

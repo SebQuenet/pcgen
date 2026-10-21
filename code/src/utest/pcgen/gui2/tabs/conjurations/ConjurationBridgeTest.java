@@ -139,4 +139,17 @@ class ConjurationBridgeTest
 			assertEquals("null", result);
 		}
 	}
+
+	@Test
+	void raceWithoutPortraitGivesTheWebViewAnEmptyAddress()
+	{
+		ConjurationSheetFacade sheet = (ConjurationSheetFacade) Proxy.newProxyInstance(
+			getClass().getClassLoader(), new Class<?>[] {ConjurationSheetFacade.class}, (proxy, method, args) -> {
+				throw new UnsupportedOperationException(method.getName());
+			});
+		try (ConjurationBridge bridge = new ConjurationBridge(sheet))
+		{
+			assertEquals("", bridge.portrait("Unknown Race"));
+		}
+	}
 }
