@@ -21,8 +21,8 @@ package pcgen.gui2.tabs;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -65,13 +65,6 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 		addTab(LanguageBundle.getTerm("in_abilityLocation_", type), panel);
 	}
 
-	private void addAbilityTab(String type, int index)
-	{
-		JPanel panel = new JPanel(new BorderLayout());
-		panel.setName(type);
-		insertTab(LanguageBundle.getTerm("in_abilityLocation_", type), null, panel, null, index);
-	}
-
 	private int indexOfAbilityTab(String type)
 	{
 		for (int i = 0; i < getTabCount(); i++)
@@ -82,15 +75,6 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 			}
 		}
 		return -1;
-	}
-
-	private void removeAbilityTab(String type)
-	{
-		int index = indexOfAbilityTab(type);
-		if (index >= 0)
-		{
-			removeTabAt(index);
-		}
 	}
 
 	public AbilitiesInfoTab()
@@ -142,16 +126,7 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 			this.character = character;
 			this.activeCategories = character.getActiveAbilityCategories();
 			this.categoryMap = character.getDataSet().getAbilities();
-			for (AbilityCategory category : activeCategories)
-			{
-				String type = category.getType();
-				if (!typeMap.containsKey(type))
-				{
-					tabs.add(new TabInfo(type, character));
-					populateFullCategoryList(type, typeMap.get(type));
-				}
-				typeMap.get(type).categoryList.addElement(category);
-			}
+			synchronizeTabs();
 			selectedTitle = tabs.get(0).title;
 		}
 
@@ -173,94 +148,114 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 			}
 		}
 
+		/**
+		 * Rebuild the tab list from the character's active categories, one tab
+		 * per category type, in the order of the categories. The model only
+		 * listens while installed, so it may have missed changes.
+		 */
+		private void synchronizeTabs()
+		{
+			Map<String, List<AbilityCategory>> categoriesByType = new LinkedHashMap<>();
+			for (AbilityCategory category : activeCategories)
+			{
+				categoriesByType.computeIfAbsent(category.getType(), type -> new ArrayList<>()).add(category);
+			}
+			tabs.clear();
+			typeMap.keySet().retainAll(categoriesByType.keySet());
+			for (Map.Entry<String, List<AbilityCategory>> entry : categoriesByType.entrySet())
+			{
+				String type = entry.getKey();
+				TabInfo tabInfo = typeMap.get(type);
+				if (tabInfo == null)
+				{
+					tabInfo = new TabInfo(type, character);
+					populateFullCategoryList(type, tabInfo);
+				}
+				for (AbilityCategory category : tabInfo.categoryList.getContents())
+				{
+					if (!entry.getValue().contains(category))
+					{
+						tabInfo.categoryList.removeElement(category);
+					}
+				}
+				for (AbilityCategory category : entry.getValue())
+				{
+					if (!tabInfo.categoryList.containsElement(category))
+					{
+						tabInfo.categoryList.addElement(category);
+					}
+				}
+				tabs.add(tabInfo);
+			}
+		}
+
+		private List<String> displayedTitles()
+		{
+			List<String> titles = new ArrayList<>();
+			for (int i = 0; i < getTabCount(); i++)
+			{
+				titles.add(getComponentAt(i).getName());
+			}
+			return titles;
+		}
+
+		private void displayTabs()
+		{
+			for (TabInfo tabInfo : tabs)
+			{
+				addAbilityTab(tabInfo.title);
+			}
+			if (!typeMap.containsKey(selectedTitle) && !tabs.isEmpty())
+			{
+				selectedTitle = tabs.get(0).title;
+			}
+			setSelectedIndex(indexOfAbilityTab(selectedTitle));
+			TabInfo selectedTab = typeMap.get(selectedTitle);
+			if (selectedTab != null)
+			{
+				abilityTab.restoreState(selectedTab.tabData);
+			}
+		}
+
+		private void refreshTabs()
+		{
+			TabInfo selectedTab = typeMap.get(selectedTitle);
+			synchronizeTabs();
+			List<String> titles = new ArrayList<>();
+			for (TabInfo tabInfo : tabs)
+			{
+				titles.add(tabInfo.title);
+			}
+			if (!isInstalled || titles.equals(displayedTitles()))
+			{
+				return;
+			}
+			if (selectedTab != null)
+			{
+				abilityTab.storeState(selectedTab.tabData);
+			}
+			removeChangeListener(this);
+			removeAll();
+			displayTabs();
+			addChangeListener(this);
+		}
+
 		@Override
 		public void elementAdded(ListEvent<AbilityCategory> e)
 		{
-			AbilityCategory element = e.getElement();
-			String type = element.getType();
-			if (!typeMap.containsKey(type))
-			{
-				int index = e.getIndex();
-				if (index > tabs.size())
-				{
-					Logging.log(Logging.WARNING, "Trying to add " + type + " to " //$NON-NLS-2$
-						+ tabs + " at index " + index //$NON-NLS-1$
-						+ ". Putting at end."); //$NON-NLS-1$
-					index = tabs.size();
-					tabs.add(new TabInfo(type, character));
-				}
-				else
-				{
-					tabs.add(index, new TabInfo(type, character));
-				}
-				populateFullCategoryList(type, typeMap.get(type));
-				if (isInstalled)
-				{//Add new tab
-					addAbilityTab(type, index);
-				}
-			}
-			typeMap.get(type).categoryList.addElement(element);
+			refreshTabs();
 		}
 
 		@Override
 		public void elementRemoved(ListEvent<AbilityCategory> e)
 		{
-			AbilityCategory element = e.getElement();
-			String type = element.getType();
-			TabInfo info = typeMap.get(type);
-			info.categoryList.removeElement(element);
-			if (info.categoryList.isEmpty())
-			{
-				tabs.remove(typeMap.remove(type));
-				if (isInstalled)
-				{//Remove Tab
-					removeAbilityTab(type);
-				}
-			}
+			refreshTabs();
 		}
 
 		@Override
 		public void elementsChanged(ListEvent<AbilityCategory> e)
 		{
-			Map<String, List<AbilityCategory>> tempMap;
-			tempMap = new HashMap<>();
-			for (AbilityCategory category : categoryMap.getKeys())
-			{
-				String type = category.getType();
-				if (!tempMap.containsKey(type))
-				{
-					tempMap.put(type, new ArrayList<>());
-				}
-				tempMap.get(type).add(category);
-			}
-			for (final Map.Entry<String, List<AbilityCategory>> entry : tempMap.entrySet())
-			{
-				String type = entry.getKey();
-				if (!typeMap.containsKey(type))
-				{
-					tabs.add(new TabInfo(type, character));
-					populateFullCategoryList(type, typeMap.get(type));
-					if (isInstalled)
-					{
-						addAbilityTab(type);
-					}
-				}
-				typeMap.get(type).categoryList.updateContents(entry.getValue());
-			}
-			Iterator<String> oldTypes = typeMap.keySet().iterator();
-			while (oldTypes.hasNext())
-			{
-				String type = oldTypes.next();
-				if (!tempMap.containsKey(type))
-				{
-					tabs.remove(typeMap.get(type));
-					oldTypes.remove();
-					if (isInstalled)
-					{
-						removeAbilityTab(type);
-					}
-				}
-			}
+			refreshTabs();
 		}
 
 		@Override
@@ -272,19 +267,19 @@ public class AbilitiesInfoTab extends SharedTabPane implements CharacterInfoTab,
 		public void install()
 		{
 			activeCategories.addListListener(this);
-			for (TabInfo tabInfo : tabs)
-			{
-				addAbilityTab(tabInfo.title);
-			}
-			setSelectedIndex(indexOfAbilityTab(selectedTitle));
-			abilityTab.restoreState(typeMap.get(selectedTitle).tabData);
+			synchronizeTabs();
+			displayTabs();
 			addChangeListener(this);
 			isInstalled = true;
 		}
 
 		public void uninstall()
 		{
-			abilityTab.storeState(typeMap.get(selectedTitle).tabData);
+			TabInfo selectedTab = typeMap.get(selectedTitle);
+			if (selectedTab != null)
+			{
+				abilityTab.storeState(selectedTab.tabData);
+			}
 			removeChangeListener(this);
 			removeAll();
 			activeCategories.removeListListener(this);
