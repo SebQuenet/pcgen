@@ -123,6 +123,7 @@ public class ExportDialogController
 		fileChooser.setInitialDirectory(path);
 		fileChooser.setTitle(LanguageBundle.getFormattedString("in_exportTitle", name));
 		fileChooser.setInitialDirectory(ExportUtilities.getExportDialogBaseDir(isPDF));
+		fileChooser.setInitialFileName(name + '.' + extension);
 		File outFile = fileChooser.showSaveDialog(null);
 		if (outFile == null)
 		{
@@ -208,6 +209,7 @@ public class ExportDialogController
 		}
 		fileChooser.setInitialDirectory(path);
 		fileChooser.setTitle(LanguageBundle.getFormattedString("in_exportTitle", name));
+		fileChooser.setInitialFileName(name + '.' + extension);
 		File outFile = fileChooser.showSaveDialog(null);
 		if (outFile == null)
 		{
@@ -382,16 +384,14 @@ public class ExportDialogController
 		List<ExportUtilities.SheetFilter> sheetFilterValues = Arrays.stream(
 				ExportUtilities.SheetFilter.values()).collect(Collectors.toList());
 		exportSheetType.setItems(FXCollections.observableList(sheetFilterValues));
-		exportSheetType.getSelectionModel().selectedItemProperty().addListener(new ExportSheetTypeSelectionListener());
-		exportSheetType.getSelectionModel().select(0);
+		// Read the saved type before the listener can overwrite it with the first one
 		PropertyContext context = UIPropertyContext.createContext("ExportDialog");
 		String defaultOSType = context.getProperty(UIPropertyContext.DEFAULT_OS_TYPE);
-		if (defaultOSType != null)
-		{
-			Arrays.stream(ExportUtilities.SheetFilter.values())
-			      .filter(filter -> defaultOSType.equals(filter.toString()))
-			      .findFirst()
-			      .ifPresent(filter -> exportSheetType.getSelectionModel().select(filter));
-		}
+		ExportUtilities.SheetFilter savedSheetType = sheetFilterValues.stream()
+			.filter(filter -> filter.toString().equals(defaultOSType))
+			.findFirst()
+			.orElse(sheetFilterValues.getFirst());
+		exportSheetType.getSelectionModel().selectedItemProperty().addListener(new ExportSheetTypeSelectionListener());
+		exportSheetType.getSelectionModel().select(savedSheetType);
 	}
 }
