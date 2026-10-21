@@ -1,0 +1,38 @@
+"""Tests of the skill rank placement in scripts/combat_manager/skill_ranks.py."""
+
+import sys
+import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'combat_manager'))
+
+from skill_ranks import plan_ranks  # noqa: E402
+
+
+def placement_after(budgets, placed, wanted):
+    plan_ranks(budgets, placed, wanted)
+    return placed
+
+
+class SkillRanks(unittest.TestCase):
+
+    def test_a_level_spends_no_more_than_its_points(self):
+        self.assertEqual(placement_after([1, 1], {}, {'Stealth': 1, 'Climb': 1}), {'Stealth': [0], 'Climb': [1]})
+
+    def test_a_skill_holds_no_more_ranks_than_levels(self):
+        self.assertEqual(placement_after([2, 0, 0], {}, {'Stealth': 3}), {'Stealth': [0]})
+
+    def test_the_skill_needing_most_ranks_comes_first(self):
+        self.assertEqual(placement_after([1, 1], {}, {'Climb': 1, 'Stealth': 2}), {'Climb': [], 'Stealth': [0, 1]})
+
+    def test_gives_back_the_highest_rank(self):
+        self.assertEqual(plan_ranks([0, 0], {'Stealth': [0, 1]}, {'Stealth': 1}),
+                         [{'skill_key': 'Stealth', 'points': -1, 'level_index': 1}])
+
+    def test_a_point_given_back_serves_another_skill(self):
+        self.assertEqual(placement_after([0], {'Sense Motive': [0]}, {'Sense Motive': 0, 'Spellcraft': 1}),
+                         {'Sense Motive': [], 'Spellcraft': [0]})
+
+
+if __name__ == '__main__':
+    unittest.main()

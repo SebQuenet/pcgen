@@ -1,0 +1,181 @@
+"""Import Combat Manager's NPCs into PCGen as .pcg characters.
+
+    python3 scripts/combat_manager/import_npcs.py <extracted dir> --source "NPC Codex"
+    python3 scripts/combat_manager/import_npcs.py <extracted dir> --name "Cautious Mage" --force
+
+Needs the HTTP server running with average hit points, which PCGen's own settings
+do not give (they roll). Write those settings once, then start the server on them:
+
+    python3 scripts/combat_manager/import_npcs.py --write-settings
+    ./gradlew runServer --args="--settingsdir build/combat-manager-settings"
+
+Spec: specs/import-combat-manager.md
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import shutil
+import sys
+import time
+from pathlib import Path
+
+SCRIPTS_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+
+import build  # noqa: E402
+import catalog  # noqa: E402
+import pcgen_client as pc  # noqa: E402
+import records  # noqa: E402
+import statblock  # noqa: E402
+from generate_bestiary import load_known_languages  # noqa: E402
+
+REPO_DIR = SCRIPTS_DIR.parent
+SETTINGS_DIR = REPO_DIR / 'settings'
+IMPORT_SETTINGS_DIR = REPO_DIR / 'build' / 'combat-manager-settings'
+HIT_POINT_RULE_OPTION = 'pcgen.options.hpRollMethod'
+# Constants.HP_AVERAGE: the die's average, with the extra point on even levels, as Paizo's NPCs have
+AVERAGE_HIT_POINTS = 2
+# A fighter 2 with Constitution 10 has 10 + 6 hit points under that rule
+PROBE_CLASS, PROBE_LEVELS, PROBE_HIT_POINTS = 'Fighter', 2, 16
+DEFAULT_OUTPUT_DIR = REPO_DIR / 'characters' / 'combat-manager'
+GAME_MODE = 'Pathfinder_RPG'
+CAMPAIGNS = [
+    'Core Rulebook', 'Pathfinder RPG Core Supplements', "Advanced Player's Guide", 'Advanced Class Guide',
+    'Ultimate Magic', 'Ultimate Combat', 'Ultimate Equipment', 'Ultimate Campaign', 'Ultimate Intrigue',
+    'Ultimate Wilderness', 'Advanced Race Guide', 'Occult Adventures', 'Pathfinder Unchained', 'Mythic Adventures',
+    'Horror Adventures', 'Villain Codex', 'Monster Codex', 'Inner Sea World Guide', 'Inner Sea Gods', 'Inner Sea Races',
+    'Inner Sea Magic', 'Inner Sea Combat', 'Bestiary', 'Bestiary 2', 'Bestiary 3', 'Bestiary 4', 'Bestiary 5',
+    'Bestiary 6', 'Inner Sea Bestiary', 'Occult Bestiary',
+]
+UNSAFE_PATH_CHARACTERS = r'[\\/:*?"<>|]'
+# Combat Manager lists animal companions with their master; they are not NPCs
+COMPANION_CLASS = 'animal companion'
+
+
+def write_settings() -> None:
+    """Copy PCGen's settings with the hit point rule set to the average."""
+    if IMPORT_SETTINGS_DIR.exists():
+        shutil.rmtree(IMPORT_SETTINGS_DIR)
+    shutil.copytree(SETTINGS_DIR, IMPORT_SETTINGS_DIR)
+    legacy = IMPORT_SETTINGS_DIR / 'legacy.ini'
+    lines = [line for line in legacy.read_text(encoding='utf-8').splitlines() if not line.startswith(HIT_POINT_RULE_OPTION + '=')]
+    lines.append(f'{HIT_POINT_RULE_OPTION}={AVERAGE_HIT_POINTS}')
+    legacy.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+
+def require_average_hit_points() -> None:
+    probe = pc.call('create_character', name='hit point probe')['character_id']
+    try:
+        pc.call('set_race', character_id=probe, race_key='Human')
+        pc.call('set_all_ability_scores', character_id=probe, scores={stat: 10 for stat in statblock.STAT_KEYS})
+        pc.call('add_class_level', character_id=probe, class_key=PROBE_CLASS, levels=PROBE_LEVELS)
+        hit_points = build.read_sheet(probe)['hp']
+    finally:
+        pc.call('close_character', character_id=probe)
+    if hit_points != PROBE_HIT_POINTS:
+        raise SystemExit(f'le serveur ne donne pas les PV moyens ({hit_points} au lieu de {PROBE_HIT_POINTS} sur un guerrier 2) : '
+                         'lancez-le avec --settingsdir build/combat-manager-settings (voir --write-settings)')
+
+
+def load_sources() -> None:
+    pc.call('load_sources', game_mode=GAME_MODE, campaigns=CAMPAIGNS)
+
+
+def keys_of(kind: str) -> list[str]:
+    return [entry['key'] for entry in pc.call('list_dataset_entries', kind=kind, limit=100000)]
+
+
+def load_catalogs() -> build.Catalogs:
+    return build.Catalogs(
+        classes=catalog.KeyIndex(keys_of('class')),
+        races=catalog.KeyIndex(keys_of('race')),
+        items=catalog.KeyIndex(keys_of('equipment')),
+        known_languages=load_known_languages(str(REPO_DIR / 'data')),
+    )
+
+
+def safe_name(text: str) -> str:
+    return re.sub(r'\s+', ' ', re.sub(UNSAFE_PATH_CHARACTERS, '-', text)).strip(' .') or 'sans nom'
+
+
+def character_path(record: records.NpcRecord, catalogs: build.Catalogs, output_dir: Path) -> Path:
+    """<book>/<primary class>/<name>.pcg; a second NPC of the same name gets its id."""
+    entries = statblock.parse_classes(record.get('Class') or '', set(catalogs.classes.by_reading))
+    primary = max(entries, key=lambda entry: entry.levels) if entries else None
+    class_key = catalog.resolve_class(primary, catalogs.classes)[0] if primary else None
+    folder = output_dir / safe_name(record.get('Source') or 'Source inconnue') / safe_name(class_key or (primary.name.title() if primary else 'Sans classe'))
+    path = folder / f'{safe_name(record.get("Name") or str(record.identifier))}.pcg'
+    report_path = path.with_suffix('.report.json')
+    if report_path.exists() and json.loads(report_path.read_text(encoding='utf-8')).get('id') != record.identifier:
+        path = folder / f'{path.stem} ({record.identifier}).pcg'
+    return path
+
+
+def is_npc(record: records.NpcRecord) -> bool:
+    return COMPANION_CLASS not in (record.get('Class') or '').lower()
+
+
+def new_report(record: records.NpcRecord) -> dict:
+    return {'id': record.identifier, 'name': record.get('Name'), 'source': record.get('Source'), 'class': record.get('Class'),
+            'missing_classes': [], 'missing_items': [], 'missing_modifiers': [], 'missing_spells': [],
+            'refused_feats': [], 'refused': [], 'open_pools': []}
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('extracted_dir', type=Path, nargs='?', help="directory holding the files unpacked from Combat Manager's installer")
+    parser.add_argument('--write-settings', action='store_true', help=f'write the server settings to {IMPORT_SETTINGS_DIR} and stop')
+    parser.add_argument('--source', action='append', help='only the NPCs of this book (repeatable)')
+    parser.add_argument('--name', action='append', help='only the NPC of this name (repeatable)')
+    parser.add_argument('--force', action='store_true', help='rebuild an NPC that already has a report')
+    parser.add_argument('--output', type=Path, default=DEFAULT_OUTPUT_DIR)
+    arguments = parser.parse_args()
+    if arguments.write_settings:
+        write_settings()
+        print(f'réglages écrits dans {IMPORT_SETTINGS_DIR}')
+        return 0
+    if arguments.extracted_dir is None:
+        parser.error('extracted_dir is required')
+
+    npcs = [record for record in records.load_npcs(arguments.extracted_dir) if is_npc(record)]
+    if arguments.source:
+        npcs = [record for record in npcs if record.get('Source') in arguments.source]
+    if arguments.name:
+        npcs = [record for record in npcs if record.get('Name') in arguments.name]
+    load_sources()
+    require_average_hit_points()
+    catalogs = load_catalogs()
+
+    failures = 0
+    for position, record in enumerate(npcs, start=1):
+        path = character_path(record, catalogs, arguments.output)
+        report_path = path.with_suffix('.report.json')
+        if report_path.exists() and not arguments.force:
+            continue
+        report, started = new_report(record), time.monotonic()
+        character_id = None
+        try:
+            character_id = build.build_npc(record, catalogs, report)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            pc.call('save_character', character_id=character_id, file_path=str(path))
+        except (pc.PcgenError, LookupError, KeyError, ValueError) as error:
+            failures += 1
+            print(f'[{position}/{len(npcs)}] ÉCHEC {record.get("Name")} ({record.identifier}) — {error}', file=sys.stderr, flush=True)
+            continue
+        finally:
+            if character_id:
+                try:
+                    pc.call('close_character', character_id=character_id)
+                except pc.PcgenError:
+                    pass
+        report['seconds'] = round(time.monotonic() - started, 1)
+        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f'[{position}/{len(npcs)}] ok {path.relative_to(arguments.output)} ({report["seconds"]} s)', flush=True)
+    return 1 if failures else 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
