@@ -179,6 +179,8 @@ public class CharacterAbilities
 	 */
 	synchronized void rebuildAbilityLists()
 	{
+		// This rebuild covers any pending change, so a reader called back during it must not start another.
+		rebuildPending.set(false);
 		Map<AbilityCategory, DefaultListFacade<AbilityFacade>> workingAbilityListMap = new LinkedHashMap<>();
 		DefaultListFacade<AbilityCategory> workingActiveCategories = new DefaultListFacade<>();
 

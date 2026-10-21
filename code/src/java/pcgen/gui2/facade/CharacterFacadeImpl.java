@@ -665,6 +665,8 @@ public class CharacterFacadeImpl
 
 	private void refreshAfterAbilityChange()
 	{
+		// Pools granted by the change only exist once batch mode has recalculated the bonuses.
+		characterAbilities.rebuildAbilityLists();
 		refreshKitList();
 		refreshAvailableTempBonuses();
 		buildAvailableDomainsList();
@@ -686,6 +688,7 @@ public class CharacterFacadeImpl
 		{
 			theCharacter.endBatchMode();
 		}
+		characterAbilities.rebuildAbilityLists();
 		refreshKitList();
 		companionSupportFacade.refreshCompanionData();
 		spellSupportFacade.refreshAvailableKnownSpells();
