@@ -41,7 +41,7 @@ public final class CharacterRecordOperations
 
 	private static final List<String> BIOGRAPHY_FIELDS = List.of(
 		"gender", "age", "weight", "hair_color", "eye_color", "skin_color", "handed", "players_name",
-		"bio", "description", "companions", "assets", "magic", "gm_notes");
+		"bio", "description", "companions", "assets", "magic", "gm_notes", "character_type");
 
 	private static final String SYNTAX = """
 		A plan is line oriented text.
@@ -112,7 +112,8 @@ public final class CharacterRecordOperations
 						"companions": { "type": "string", "description": "Notes about companions and allies" },
 						"assets": { "type": "string", "description": "Notes about other assets and possessions" },
 						"magic": { "type": "string", "description": "Notes about magic items and effects" },
-						"gm_notes": { "type": "string", "description": "GM-only notes" }
+						"gm_notes": { "type": "string", "description": "GM-only notes" },
+						"character_type": { "type": "string", "description": "Character type from the game mode (PC, NPC, Monster); data gives traits to a PC only" }
 					},
 					"required": ["character_id"]
 				}

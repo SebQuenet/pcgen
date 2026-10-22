@@ -112,6 +112,7 @@ public final class BiographyService
 		applyText(changes, "eye_color", character::setEyeColor, changed);
 		applyText(changes, "skin_color", character::setSkinColor, changed);
 		applyText(changes, "players_name", character::setPlayersName, changed);
+		applyText(changes, "character_type", character::setCharacterType, changed);
 		applyNumber(changes, "age", character::setAge, changed);
 		applyNumber(changes, "weight", character::setWeight, changed);
 
