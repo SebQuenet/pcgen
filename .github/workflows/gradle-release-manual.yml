@@ -114,14 +114,12 @@ jobs:
     needs: create_release
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-24.04-arm, macos-latest, windows-latest]
+        os: [ubuntu-latest, ubuntu-24.04-arm, windows-latest]
         include:
           - os: ubuntu-latest
             release_suffix: ubuntu
           - os: ubuntu-24.04-arm
             release_suffix: ubuntu-arm
-          - os: macos-latest
-            release_suffix: mac
           - os: windows-latest
             release_suffix: windows
           # windows-arm removed - no GitHub-hosted runner available yet
@@ -187,17 +185,3 @@ jobs:
         with:
           name: ${{ matrix.os }}-zip
           path: ${{ github.workspace }}/build/release/image-*.zip
-
-      - name: Upload DMG release asset for macos
-        uses: actions/upload-artifact@v4
-        if: matrix.os == 'macos-latest'
-        with:
-          name: ${{ matrix.os }}-dmg
-          path: ${{ github.workspace }}/build/release/*.dmg
-
-      - name: Upload PKG release asset for macos
-        uses: actions/upload-artifact@v4
-        if: matrix.os == 'macos-latest'
-        with:
-          name: ${{ matrix.os }}-pkg
-          path: ${{ github.workspace }}/build/release/*.pkg
