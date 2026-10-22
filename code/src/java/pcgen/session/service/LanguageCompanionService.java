@@ -29,6 +29,7 @@ import pcgen.facade.core.CompanionFacade;
 import pcgen.facade.core.CompanionStubFacade;
 import pcgen.facade.core.CompanionSupportFacade;
 import pcgen.facade.core.LanguageChooserFacade;
+import pcgen.facade.util.ListFacade;
 import pcgen.facade.util.MapFacade;
 import pcgen.session.HeadlessUIDelegate;
 import pcgen.session.PcgenSession;
@@ -77,9 +78,11 @@ public final class LanguageCompanionService
 			List<LanguageChooserSummary> offers = new ArrayList<>();
 			for (LanguageChooserFacade chooser : character.getLanguageChoosers())
 			{
+				// a chooser counts its remaining selections only once its lists are built
+				List<String> available = displayNames(chooser.getAvailableList());
 				offers.add(new LanguageChooserSummary(chooser.getName(),
 					chooser.getRemainingSelections().get(),
-					displayNames(chooser.getAvailableList()),
+					available,
 					displayNames(chooser.getSelectedList())));
 			}
 			return new Languages(List.copyOf(spoken), List.copyOf(offers));
@@ -91,11 +94,13 @@ public final class LanguageCompanionService
 		return characters.byId(characterId).andThen(character -> {
 			for (LanguageChooserFacade chooser : character.getLanguageChoosers())
 			{
+				// a chooser counts its remaining selections only once its lists are built
+				ListFacade<Language> available = chooser.getAvailableList();
 				if (chooser.getRemainingSelections().get() <= 0)
 				{
 					continue;
 				}
-				for (Language offered : chooser.getAvailableList())
+				for (Language offered : available)
 				{
 					if (offered.getKeyName().equalsIgnoreCase(languageKey)
 						|| offered.getDisplayName().equalsIgnoreCase(languageKey)
