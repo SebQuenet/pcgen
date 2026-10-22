@@ -42,6 +42,7 @@ PCG_BACKUP_OPTION = 'pcgen.options.createPcgBackup'
 # A fighter 2 with Constitution 10 has 10 + 6 hit points under that rule
 PROBE_CLASS, PROBE_LEVELS, PROBE_HIT_POINTS = 'Fighter', 2, 16
 DEFAULT_OUTPUT_DIR = REPO_DIR / 'characters' / 'combat-manager'
+DATA_DIR = REPO_DIR / 'data' / 'pathfinder'
 FAILURES_FILE = 'failures.json'
 # Exit status telling the caller to restart the server before going on
 SERVER_STUCK = 75
@@ -101,8 +102,34 @@ def require_average_hit_points() -> None:
                          'lancez-le avec --settingsdir build/combat-manager-settings (voir --write-settings)')
 
 
-def load_sources() -> None:
-    pc.call('load_sources', game_mode=GAME_MODE, campaigns=CAMPAIGNS)
+def load_sources(npc_sources: set[str] = frozenset()) -> None:
+    pc.call('load_sources', game_mode=GAME_MODE, campaigns=CAMPAIGNS + source_campaigns(npc_sources, DATA_DIR))
+
+
+def normalized(name: str) -> str:
+    return re.sub(r'[^a-z0-9]', '', name.lower().replace('&', 'and'))
+
+
+def source_campaigns(npc_sources: set[str], data_dir: Path) -> list[str]:
+    """The PCGen books the NPCs come from: "Andoran Birthplace Of Freedom" is "Andoran - Birthplace of Freedom"."""
+    books = {}
+    for pcc in sorted(data_dir.rglob('*.pcc')):
+        text = pcc.read_text(encoding='utf-8', errors='replace')
+        title, key = re.search(r'^CAMPAIGN:(.+)$', text, re.M), re.search(r'^KEY:(.+)$', text, re.M)
+        if not title or not re.search(r'^GAMEMODE:.*\bPathfinder\b', text, re.M):
+            continue
+        campaign_key = (key or title).group(1).strip()
+        # the full book rather than its player options or its Society copy
+        if 'Player Options' in campaign_key or campaign_key.startswith('PFS ~'):
+            continue
+        books.setdefault(normalized(title.group(1)), campaign_key)
+    wanted = []
+    for source in npc_sources:
+        adventure_path = re.match(r'^AP (\d+)$', source)
+        name = f'Pathfinder Adventure Path #{adventure_path.group(1)}' if adventure_path else re.sub(r'^PFRPG ', '', source)
+        if normalized(name) in books:
+            wanted.append(books[normalized(name)])
+    return sorted(set(wanted) - set(CAMPAIGNS))
 
 
 def keys_of(kind: str) -> list[str]:
@@ -174,7 +201,7 @@ def main() -> int:
         npcs = [record for record in npcs if str(record.identifier) in wanted_ids]
     if arguments.name:
         npcs = [record for record in npcs if record.get('Name') in arguments.name]
-    load_sources()
+    load_sources({record.get('Source') for record in npcs})
     require_average_hit_points()
     catalogs = load_catalogs()
 
