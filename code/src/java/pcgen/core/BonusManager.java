@@ -1142,6 +1142,15 @@ public class BonusManager
 		return tempBonusFilters;
 	}
 
+	/**
+	 * @return true unless the bonus is a temporary bonus the player has switched off
+	 */
+	public boolean isTempBonusSwitchedOn(BonusObj bonus)
+	{
+		TempBonusInfo tempBonusInfo = tempBonusBySource.get(bonus);
+		return tempBonusInfo == null || !tempBonusFilters.contains(BonusDisplay.getBonusDisplayName(tempBonusInfo));
+	}
+
 	public void addTempBonusFilter(String bonusStr)
 	{
 		tempBonusFilters.add(bonusStr);

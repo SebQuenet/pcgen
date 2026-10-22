@@ -2537,7 +2537,8 @@ public final class Equipment extends PObject
 			BonusCalc.equipBonusTo(this, aType, aName, aPC);
 
 			// now do temp bonuses
-			final List<BonusObj> tbList = getTempBonusList().stream().distinct().collect(Collectors.toList());
+			final List<BonusObj> tbList = getTempBonusList().stream().distinct()
+				.filter(bonus -> aPC == null || aPC.isTempBonusSwitchedOn(bonus)).collect(Collectors.toList());
 
 			BonusCalc.bonusTo(this, aType, aName, anObj, tbList, aPC);
 		}

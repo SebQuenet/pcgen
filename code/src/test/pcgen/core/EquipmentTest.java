@@ -41,6 +41,9 @@ import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.cdom.enumeration.StringKey;
 import pcgen.cdom.enumeration.Type;
 import pcgen.cdom.reference.CDOMDirectSingleRef;
+import pcgen.core.bonus.Bonus;
+import pcgen.core.bonus.BonusObj;
+import pcgen.core.display.BonusDisplay;
 import pcgen.persistence.PersistenceLayerException;
 import pcgen.persistence.lst.CampaignSourceEntry;
 import pcgen.persistence.lst.GenericLoader;
@@ -670,6 +673,26 @@ assertNotNull(eqMod, "Eqmod should be present");
 		Equipment aEquip = eq.clone();
 		aEquip.addEqModifier(eqMod, true, null);
 		assertSame(aEquip, eqMod.getVariableParent().get(), "Eqmod parent should be the equipment");
+	}
+
+	/**
+	 * A temporary bonus on an item that the player has switched off no longer
+	 * adds to the item.
+	 */
+	@Test
+	public void testSwitchedOffTempBonusDoesNotAddToItem()
+	{
+		PlayerCharacter pc = getCharacter();
+		Ability infuse = new Ability();
+		infuse.setName("Infuse");
+		BonusObj infuseToHit = Bonus.newBonus(Globals.getContext(), "WEAPON|TOHIT|2|TYPE=Enhancement");
+		pc.setApplied(infuseToHit, true);
+		eq.addTempBonus(infuseToHit);
+		pc.addTempBonus(infuseToHit, infuse, eq);
+
+		pc.setTempBonusFilter(BonusDisplay.getBonusDisplayName(infuse, eq));
+
+		assertEquals(0, eq.getBonusToHit(pc, true));
 	}
 
 	@Override

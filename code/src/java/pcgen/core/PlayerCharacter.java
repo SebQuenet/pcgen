@@ -2095,6 +2095,14 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 	}
 
 	/**
+	 * @return true unless the bonus is a temporary bonus the player has switched off
+	 */
+	public boolean isTempBonusSwitchedOn(BonusObj bonus)
+	{
+		return bonusManager.isTempBonusSwitchedOn(bonus);
+	}
+
+	/**
 	 * Add the temp bonus to the filter, thus removing its effects from the character.
 	 *
 	 * @param aBonusStr the temporary bonus to add.
