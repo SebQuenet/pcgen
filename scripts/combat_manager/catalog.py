@@ -139,7 +139,28 @@ def resolve_race(text: str, races: KeyIndex) -> tuple[str | None, str | None]:
         key = races.find(candidate)
         if key:
             return key, gender
-    return None, gender
+    # PCGen lists many monsters under their family: "Demon (Succubus)", "Ghoul (Ghast)"
+    for key in races.keys:
+        if re.search(r'\(' + re.escape(name) + r'\)$', key.lower()):
+            return key, gender
+    # "human magus", "serpentfolk ghast": a class or template written after the race
+    return races.by_reading.get(name.split(' ')[0]), gender
+
+
+# Fiends whose offspring the stat blocks name ("half-succubus"); PCGen has one Half-Fiend template
+HALF_FIEND_PATTERN = re.compile(r'^half-(succubus|babau|incubus|glabrezu|vrock|hezrou|nalfeshnee|marilith|balor|devil|demon)$')
+
+
+def resolve_template(name: str, templates: KeyIndex) -> str | None:
+    """The PCGen template a stat block names, however Combat Manager spells it."""
+    name = name.strip().lower()
+    variant = re.match(r'^(.+)@(.+)$', name)
+    forms = [f'{variant.group(2)} ({variant.group(1)})', f'{variant.group(1)} {variant.group(2)}'] if variant else [name]
+    if HALF_FIEND_PATTERN.match(name):
+        forms.append('half-fiend')
+    forms.append(re.sub(r'-bound$', ' bound', re.sub(r'-devil-bound$', ' devil bound', name)))
+    exact = next((templates.by_reading[form] for form in forms if form in templates.by_reading), None)
+    return exact or next((key for key in map(templates.find, forms) if key), None)
 
 
 def pick_modifier(modifier_keys: list[str], label: str) -> str | None:

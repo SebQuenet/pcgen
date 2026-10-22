@@ -84,16 +84,53 @@ class Classes(unittest.TestCase):
         self.assertEqual(catalog.resolve_class(ClassLevels('gray gardener', 3), self.index), (None, None))
 
 
+class Templates(unittest.TestCase):
+
+    def test_a_bare_template_name_finds_the_plainest_template(self):
+        index = catalog.KeyIndex(['Advanced Construct', 'Advanced Creature', 'Ghost'])
+        self.assertEqual(index.find('advanced'), 'Advanced Creature')
+
+
+class TemplateNames(unittest.TestCase):
+
+    def setUp(self):
+        self.index = catalog.KeyIndex(['Skeleton (Bloody)', 'Dread Skeleton', 'Half-Fiend', 'Bearded Devil Bound', 'Icy Creature'])
+
+    def test_a_variant_written_before_its_template(self):
+        self.assertEqual(catalog.resolve_template('bloody@skeleton', self.index), 'Skeleton (Bloody)')
+
+    def test_a_prefix_written_with_an_at_sign(self):
+        self.assertEqual(catalog.resolve_template('dread@skeleton', self.index), 'Dread Skeleton')
+
+    def test_the_offspring_of_a_fiend_is_half_fiend(self):
+        self.assertEqual(catalog.resolve_template('half-succubus', self.index), 'Half-Fiend')
+
+    def test_a_devil_bound_creature(self):
+        self.assertEqual(catalog.resolve_template('bearded-devil-bound', self.index), 'Bearded Devil Bound')
+
+    def test_a_template_named_without_creature(self):
+        self.assertEqual(catalog.resolve_template('icy', self.index), 'Icy Creature')
+
+
 class Races(unittest.TestCase):
 
     def setUp(self):
-        self.index = catalog.KeyIndex(['Human', 'Half-Elf', 'Tiefling'])
+        self.index = catalog.KeyIndex(['Human', 'Half-Elf', 'Tiefling', 'Demon (Succubus)'])
 
     def test_drops_the_ethnicity(self):
         self.assertEqual(catalog.resolve_race('human (Ulfen)', self.index), ('Human', None))
 
     def test_reads_the_gender(self):
         self.assertEqual(catalog.resolve_race('female human', self.index), ('Human', 'Female'))
+
+    def test_finds_a_monster_listed_under_its_family(self):
+        self.assertEqual(catalog.resolve_race('succubus', self.index), ('Demon (Succubus)', None))
+
+    def test_falls_back_to_the_first_word(self):
+        self.assertEqual(catalog.resolve_race('human magus', self.index), ('Human', None))
+
+    def test_the_first_word_must_name_a_race_exactly(self):
+        self.assertEqual(catalog.resolve_race('demon lord', self.index), (None, None))
 
     def test_falls_back_to_the_last_word(self):
         self.assertEqual(catalog.resolve_race('demon-spawn tiefling', self.index), ('Tiefling', None))

@@ -12,7 +12,7 @@ from pathlib import Path
 
 DEFAULT_DIR = Path(__file__).resolve().parents[2] / 'characters' / 'combat-manager'
 NUMBERS = ('hp', 'ac', 'touch', 'flat_footed', 'fort', 'ref', 'will', 'bab', 'cmb', 'cmd', 'init')
-MISSING_LISTS = ('missing_classes', 'missing_items', 'missing_modifiers', 'missing_spells', 'refused_feats')
+MISSING_LISTS = ('missing_classes', 'missing_templates', 'missing_items', 'missing_modifiers', 'missing_spells', 'refused_feats')
 MOST_COMMON = 15
 
 

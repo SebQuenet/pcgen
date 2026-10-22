@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'combat_manager'))
 
-from skill_ranks import plan_ranks  # noqa: E402
+from skill_ranks import plan_ranks, headband_skill, obsessive_bonus  # noqa: E402
 
 
 def placement_after(budgets, placed, wanted):
@@ -32,6 +32,20 @@ class SkillRanks(unittest.TestCase):
     def test_a_point_given_back_serves_another_skill(self):
         self.assertEqual(placement_after([0], {'Sense Motive': [0]}, {'Sense Motive': 0, 'Spellcraft': 1}),
                          {'Sense Motive': [], 'Spellcraft': [0]})
+
+
+
+class SkillChoices(unittest.TestCase):
+
+    def test_the_headband_goes_to_the_highest_skill(self):
+        self.assertEqual(headband_skill({'Perception': 9, 'Knowledge (Arcana)': 17}), 'Knowledge (Arcana)')
+
+    def test_a_gnome_obsesses_over_its_best_craft(self):
+        self.assertEqual(obsessive_bonus({'Craft (Pottery)': 8, 'Craft (Traps)': 3, 'Perception': 12}),
+                         ('Obsessive Craft Bonus', 'Craft (Pottery)'))
+
+    def test_no_craft_nor_profession_leaves_the_bonus_open(self):
+        self.assertIsNone(obsessive_bonus({'Perception': 12}))
 
 
 if __name__ == '__main__':

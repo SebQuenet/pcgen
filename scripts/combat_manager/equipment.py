@@ -44,9 +44,13 @@ def inventory_key(wanted: str, inventory: list[str]) -> str:
     return next((key for key in inventory if key.endswith(wanted) or key.startswith(wanted)), wanted)
 
 
+BOW_STRENGTH_MODIFIER = 'Special Quality ~ Composite Bow Strength Rating'
+
+
 def modifier_stages(item: GearItem) -> list[list[str]]:
     """The modifiers in the order PCGen takes them: a special ability is offered only once the item is enhanced."""
-    first = [item.material] if item.material else []
+    # a holy symbol's material is one of its variants, which buy() picks when PCGen refuses the bare symbol
+    first = [item.material] if item.material and 'symbol' not in item.name.lower() else []
     if item.enhancement:
         first.append(f'+{item.enhancement}')
     elif item.is_masterwork:
@@ -63,9 +67,12 @@ def display_name(item: GearItem) -> str:
 def purchase_key(character_id: str, item: GearItem, base_key: str, report: dict) -> str:
     """The key to buy: the catalogue's, or a custom item's when the gear is magic or masterwork."""
     stages = modifier_stages(item)
-    if not stages or (stages == [['masterwork']] and 'masterwork' in base_key.lower()):
+    has_strength_rating = item.strength_rating is not None
+    if not has_strength_rating and (not stages or (stages == [['masterwork']] and 'masterwork' in base_key.lower())):
         return base_key
-    key = base_key
+    # The stages only find the modifiers' keys: the item bought is customised once from the catalogue's,
+    # since a saved character names its custom item's base, and a custom base is gone when it is reopened
+    key, chosen = base_key, []
     for position, labels in enumerate(stages):
         offered = [entry['key'] for entry in pc.call('list_equipment_modifiers', character_id=character_id, equipment_key=key)]
         modifiers = []
@@ -75,19 +82,34 @@ def purchase_key(character_id: str, item: GearItem, base_key: str, report: dict)
                 modifiers.append(modifier)
             else:
                 report['missing_modifiers'].append(f'{label} ({item.name})')
-        if modifiers:
-            is_last = position == len(stages) - 1
-            key = pc.call('customize_equipment', character_id=character_id, equipment_key=key, modifier_keys=modifiers,
-                          **({'custom_name': display_name(item)} if is_last else {}))['name']
-    return key
+        chosen += modifiers
+        if modifiers and position < len(stages) - 1:
+            key = pc.call('customize_equipment', character_id=character_id, equipment_key=key, modifier_keys=modifiers)['name']
+    choices = {}
+    if has_strength_rating:
+        # a composite bow is sold only with its strength rating, chosen as "+3"
+        chosen.append(BOW_STRENGTH_MODIFIER)
+        choices[BOW_STRENGTH_MODIFIER] = [f'{item.strength_rating:+d}']
+    if not chosen:
+        return base_key
+    return pc.call('customize_equipment', character_id=character_id, equipment_key=base_key, modifier_keys=chosen,
+                   choices=choices, custom_name=display_name(item))['name']
 
 
-def required_modifier(offered: list[str], key: str, item: GearItem) -> str | None:
-    """What an item PCGen will not sell bare needs: one of its own variants, else a material."""
-    variant = next((modifier for modifier in offered if modifier.startswith(key + ' (')), None)
+def required_modifiers(offered: list[str], key: str, item: GearItem) -> list[str]:
+    """What an item PCGen will not sell bare needs: one of its own variants, else a material; a leaf symbol needs both."""
+    # an unholy symbol is offered the holy symbol's variants, "Holy Symbol (Wooden)": the last word is shared
+    last_word = key.split(' ')[-1]
+    variants = [modifier for modifier in offered if re.match(rf'^.*\b{re.escape(last_word)} \(', modifier)]
+    named_variant = next((modifier for modifier in variants if item.material and f'({item.material})' in modifier.lower()), None)
     named = catalog.pick_modifier(offered, item.material) if item.material else None
     material = next((modifier for modifier in offered if modifier.startswith('Material ~')), None)
-    return variant or named or material
+    if named_variant:
+        return [named_variant]
+    if variants:
+        plainest = next((modifier for modifier in variants if '(wooden)' in modifier.lower()), variants[0])
+        return [plainest] + ([named] if named else [])
+    return [named or material] if named or material else []
 
 
 def buy(character_id: str, purchases: list[tuple[GearItem, str, str]], report: dict) -> list[tuple[GearItem, str, str]]:
@@ -107,10 +129,10 @@ def buy(character_id: str, purchases: list[tuple[GearItem, str, str]], report: d
         failure = f'Buy failed: {key}'
         try:
             offered = [entry['key'] for entry in pc.call('list_equipment_modifiers', character_id=character_id, equipment_key=key)]
-            modifier = required_modifier(offered, key, item)
+            modifiers = required_modifiers(offered, key, item)
             # the variant names the item itself ("Holy Symbol (Wooden)"); a custom name would shadow the base item
             custom_key = pc.call('customize_equipment', character_id=character_id, equipment_key=key,
-                                 modifier_keys=[modifier] if modifier else [])['name']
+                                 modifier_keys=modifiers)['name']
             again = pc.call('batch_buy_equipment', character_id=character_id,
                             items=[{'equipment_key': custom_key, 'quantity': item.quantity, 'free': True}])
         except pc.PcgenError as error:

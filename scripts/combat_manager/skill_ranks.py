@@ -33,3 +33,20 @@ def plan_ranks(budgets: list[int], placed: dict[str, list[int]], wanted: dict[st
             budgets[level] -= 1
             investments.append({'skill_key': skill, 'points': 1, 'level_index': level})
     return investments
+
+
+OBSESSIVE_BONUSES = {'Craft': 'Obsessive Craft Bonus', 'Profession': 'Obsessive Profession Bonus'}
+
+
+def headband_skill(published: dict[str, int]) -> str | None:
+    """The skill a headband of vast intelligence gives ranks in: the published skill needing the most ranks."""
+    return max(published, key=published.get, default=None)
+
+
+def obsessive_bonus(published: dict[str, int]) -> tuple[str, str] | None:
+    """A gnome's +2 on one Craft or Profession: the published one with the highest total."""
+    candidates = {skill: total for skill, total in published.items() if skill.split(' (')[0] in OBSESSIVE_BONUSES}
+    if not candidates:
+        return None
+    skill = max(candidates, key=candidates.get)
+    return OBSESSIVE_BONUSES[skill.split(' (')[0]], skill

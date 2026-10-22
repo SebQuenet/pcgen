@@ -38,9 +38,13 @@ IMPORT_SETTINGS_DIR = REPO_DIR / 'build' / 'combat-manager-settings'
 HIT_POINT_RULE_OPTION = 'pcgen.options.hpRollMethod'
 # Constants.HP_AVERAGE: the die's average, with the extra point on even levels, as Paizo's NPCs have
 AVERAGE_HIT_POINTS = 2
+PCG_BACKUP_OPTION = 'pcgen.options.createPcgBackup'
 # A fighter 2 with Constitution 10 has 10 + 6 hit points under that rule
 PROBE_CLASS, PROBE_LEVELS, PROBE_HIT_POINTS = 'Fighter', 2, 16
 DEFAULT_OUTPUT_DIR = REPO_DIR / 'characters' / 'combat-manager'
+FAILURES_FILE = 'failures.json'
+# Exit status telling the caller to restart the server before going on
+SERVER_STUCK = 75
 GAME_MODE = 'Pathfinder_RPG'
 CAMPAIGNS = [
     'Core Rulebook', 'Pathfinder RPG Core Supplements', "Advanced Player's Guide", 'Advanced Class Guide',
@@ -48,7 +52,12 @@ CAMPAIGNS = [
     'Ultimate Wilderness', 'Advanced Race Guide', 'Occult Adventures', 'Pathfinder Unchained', 'Mythic Adventures',
     'Horror Adventures', 'Villain Codex', 'Monster Codex', 'Inner Sea World Guide', 'Inner Sea Gods', 'Inner Sea Races',
     'Inner Sea Magic', 'Inner Sea Combat', 'Bestiary', 'Bestiary 2', 'Bestiary 3', 'Bestiary 4', 'Bestiary 5',
-    'Bestiary 6', 'Inner Sea Bestiary', 'Occult Bestiary',
+    'Bestiary 6', 'Inner Sea Bestiary', 'Occult Bestiary ~ Creatures', 'Tome of Horrors Complete ~ Creatures',
+    # templates the adventures apply: Advanced Bestiary's dread and -clad, devil-bound, winter-touched
+    'Green Ronin - Advanced Bestiary', 'Bestiary 4 ~ Player Options Only', 'Pathfinder Adventure Path #67',
+    'Dungeons of Golarion', 'Rival Guide',
+    'Plunder & Peril ~ Creatures', 'The Witchwar Legacy ~ Creatures', 'Pathfinder Adventure Path #113 ~ Creatures',
+    'Doom Comes to Dustpawn ~ Creatures',
 ]
 UNSAFE_PATH_CHARACTERS = r'[\\/:*?"<>|]'
 # Combat Manager lists animal companions with their master; they are not NPCs
@@ -56,14 +65,20 @@ COMPANION_CLASS = 'animal companion'
 
 
 def write_settings() -> None:
-    """Copy PCGen's settings with the hit point rule set to the average."""
+    """Copy PCGen's settings with the hit point rule set to the average, and no backup left in characters/."""
     if IMPORT_SETTINGS_DIR.exists():
         shutil.rmtree(IMPORT_SETTINGS_DIR)
     shutil.copytree(SETTINGS_DIR, IMPORT_SETTINGS_DIR)
-    legacy = IMPORT_SETTINGS_DIR / 'legacy.ini'
-    lines = [line for line in legacy.read_text(encoding='utf-8').splitlines() if not line.startswith(HIT_POINT_RULE_OPTION + '=')]
-    lines.append(f'{HIT_POINT_RULE_OPTION}={AVERAGE_HIT_POINTS}')
-    legacy.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    set_option(IMPORT_SETTINGS_DIR / 'legacy.ini', HIT_POINT_RULE_OPTION, str(AVERAGE_HIT_POINTS))
+    # rebuilding an NPC saves over its .pcg, and PCGen would keep the old one as a .pcg.bak in characters/
+    for file_name in ('legacy.ini', 'options.ini'):
+        set_option(IMPORT_SETTINGS_DIR / file_name, PCG_BACKUP_OPTION, 'false')
+
+
+def set_option(settings_file: Path, option: str, value: str) -> None:
+    lines = [line for line in settings_file.read_text(encoding='utf-8').splitlines() if not line.startswith(option + '=')]
+    lines.append(f'{option}={value}')
+    settings_file.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
 def require_average_hit_points() -> None:
@@ -92,6 +107,7 @@ def load_catalogs() -> build.Catalogs:
     return build.Catalogs(
         classes=catalog.KeyIndex(keys_of('class')),
         races=catalog.KeyIndex(keys_of('race')),
+        templates=catalog.KeyIndex(keys_of('template')),
         items=catalog.KeyIndex(keys_of('equipment')),
         known_languages=load_known_languages(str(REPO_DIR / 'data')),
     )
@@ -120,7 +136,7 @@ def is_npc(record: records.NpcRecord) -> bool:
 
 def new_report(record: records.NpcRecord) -> dict:
     return {'id': record.identifier, 'name': record.get('Name'), 'source': record.get('Source'), 'class': record.get('Class'),
-            'missing_classes': [], 'missing_items': [], 'missing_modifiers': [], 'missing_spells': [],
+            'missing_classes': [], 'missing_templates': [], 'missing_items': [], 'missing_modifiers': [], 'missing_spells': [],
             'refused_feats': [], 'refused': [], 'open_pools': []}
 
 
@@ -131,6 +147,8 @@ def main() -> int:
     parser.add_argument('--source', action='append', help='only the NPCs of this book (repeatable)')
     parser.add_argument('--name', action='append', help='only the NPC of this name (repeatable)')
     parser.add_argument('--force', action='store_true', help='rebuild an NPC that already has a report')
+    parser.add_argument('--ids-file', type=Path, help='only the NPCs whose identifiers this file lists, one per line')
+    parser.add_argument('--retry-failures', action='store_true', help=f'retry the NPCs listed in {FAILURES_FILE}')
     parser.add_argument('--output', type=Path, default=DEFAULT_OUTPUT_DIR)
     arguments = parser.parse_args()
     if arguments.write_settings:
@@ -143,17 +161,24 @@ def main() -> int:
     npcs = [record for record in records.load_npcs(arguments.extracted_dir) if is_npc(record)]
     if arguments.source:
         npcs = [record for record in npcs if record.get('Source') in arguments.source]
+    if arguments.ids_file:
+        wanted_ids = set(arguments.ids_file.read_text(encoding='utf-8').split())
+        npcs = [record for record in npcs if str(record.identifier) in wanted_ids]
     if arguments.name:
         npcs = [record for record in npcs if record.get('Name') in arguments.name]
     load_sources()
     require_average_hit_points()
     catalogs = load_catalogs()
 
-    failures = 0
+    failures_path = arguments.output / FAILURES_FILE
+    failures = json.loads(failures_path.read_text(encoding='utf-8')) if failures_path.exists() else {}
+    failed_this_run = 0
     for position, record in enumerate(npcs, start=1):
         path = character_path(record, catalogs, arguments.output)
         report_path = path.with_suffix('.report.json')
         if report_path.exists() and not arguments.force:
+            continue
+        if str(record.identifier) in failures and not arguments.retry_failures:
             continue
         report, started = new_report(record), time.monotonic()
         character_id = None
@@ -162,8 +187,14 @@ def main() -> int:
             path.parent.mkdir(parents=True, exist_ok=True)
             pc.call('save_character', character_id=character_id, file_path=str(path))
         except (pc.PcgenError, LookupError, KeyError, ValueError) as error:
-            failures += 1
+            failed_this_run += 1
             print(f'[{position}/{len(npcs)}] ÉCHEC {record.get("Name")} ({record.identifier}) — {error}', file=sys.stderr, flush=True)
+            failures[str(record.identifier)] = f'{record.get("Name")} — {error}'
+            arguments.output.mkdir(parents=True, exist_ok=True)
+            failures_path.write_text(json.dumps(failures, ensure_ascii=False, indent=2), encoding='utf-8')
+            if isinstance(error, pc.PcgenInterrupted):
+                character_id = None  # closing it would wait on the same busy server
+                return SERVER_STUCK
             continue
         finally:
             if character_id:
@@ -174,7 +205,10 @@ def main() -> int:
         report['seconds'] = round(time.monotonic() - started, 1)
         report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
         print(f'[{position}/{len(npcs)}] ok {path.relative_to(arguments.output)} ({report["seconds"]} s)', flush=True)
-    return 1 if failures else 0
+        failures.pop(str(record.identifier), None)
+    if failures_path.exists():
+        failures_path.write_text(json.dumps(failures, ensure_ascii=False, indent=2), encoding='utf-8')
+    return 1 if failed_this_run else 0
 
 
 if __name__ == '__main__':

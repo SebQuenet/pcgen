@@ -22,6 +22,10 @@ class PcgenError(RuntimeError):
         self.message = message
 
 
+class PcgenInterrupted(PcgenError):
+    """The call outlived its timeout: the server is still busy with it and will answer nothing else."""
+
+
 def call(operation: str, **arguments):
     payload = json.dumps(arguments).encode("utf-8")
     request = urllib.request.Request(
@@ -39,7 +43,7 @@ def call(operation: str, **arguments):
         raise PcgenError(operation, f"serveur injoignable ({error.reason})") from error
     except OSError as error:
         # A single slow operation must not end a run of several hundred.
-        raise PcgenError(operation, f"appel interrompu ({error})") from error
+        raise PcgenInterrupted(operation, f"appel interrompu ({error})") from error
     if not body.get("ok"):
         raise PcgenError(operation, json.dumps(body.get("error"), ensure_ascii=False))
     return body.get("data")

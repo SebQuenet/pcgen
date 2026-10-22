@@ -24,6 +24,53 @@ class SplitList(unittest.TestCase):
         self.assertEqual(statblock.split_list(None), [])
 
 
+class Templates(unittest.TestCase):
+
+    def test_drops_the_trailing_separator(self):
+        self.assertEqual(statblock.parse_templates('ghost|'), ['ghost'])
+
+    def test_reads_every_template(self):
+        self.assertEqual(statblock.parse_templates('natural werewolf|fiendish|'), ['natural werewolf', 'fiendish'])
+
+
+class Lycanthropy(unittest.TestCase):
+
+    def test_reads_the_type_and_the_kind(self):
+        self.assertEqual(statblock.parse_lycanthropy('afflicted werewolf'), ('Afflicted Lycanthrope', 'Werewolf'))
+
+    def test_a_bare_kind_is_natural(self):
+        self.assertEqual(statblock.parse_lycanthropy('wererat'), ('Natural Lycanthrope', 'Wererat'))
+
+    def test_another_template_is_none(self):
+        self.assertIsNone(statblock.parse_lycanthropy('ghost'))
+
+
+class BaseStatistics(unittest.TestCase):
+
+    def test_reads_the_armor_class_without_the_spell(self):
+        text = "Without mage armor, Ulla's stats are as follows: AC 23, touch 13, flat-footed 20."
+        self.assertEqual(statblock.parse_base_statistics(text), {'ac': 23, 'touch': 13, 'flat_footed': 20})
+
+    def test_reads_saves_hit_points_and_maneuvers(self):
+        text = 'AC 23, touch 14, flat-footed 19; hp 150; Fort +13, Will +12; CMB +21 (+23 bull rush); CMD 30'
+        self.assertEqual(statblock.parse_base_statistics(text),
+                         {'ac': 23, 'touch': 14, 'flat_footed': 19, 'hp': 150, 'fort': 13, 'will': 12, 'cmb': 21, 'cmd': 30})
+
+
+class UnaffectedScores(unittest.TestCase):
+
+    def test_a_score_without_the_potion_replaces_the_published_one(self):
+        scores = statblock.parse_unaffected_scores('Str 18, Dex 14, Con 18, Int 10, Wis 12, Cha 8', 'hp 60; Fort +7; Con 14')
+        self.assertEqual((scores['STR'], scores['CON']), (18, 14))
+
+
+class GearDetails(unittest.TestCase):
+
+    def test_reads_what_a_holy_symbol_is_made_of(self):
+        item = statblock.parse_gear_item('wooden unholy symbol of Urgathoa')[0]
+        self.assertEqual((item.material, item.name), ('wooden', 'unholy symbol of Urgathoa'))
+
+
 class Classes(unittest.TestCase):
 
     def test_reads_a_single_class(self):
@@ -40,6 +87,10 @@ class Classes(unittest.TestCase):
     def test_reads_the_deity_after_of(self):
         self.assertEqual(statblock.parse_classes('inquisitor (heretic) of Abadar 10'),
                          [ClassLevels('inquisitor', 10, archetypes=('heretic',), deity='Abadar')])
+
+    def test_reads_the_deity_after_the_level(self):
+        self.assertEqual(statblock.parse_classes('inquisitor 8 of Zaebos'),
+                         [ClassLevels('inquisitor', 8, deity='Zaebos')])
 
     def test_reads_the_unchained_prefix(self):
         self.assertEqual(statblock.parse_classes('unchained summoner 4'),
@@ -139,9 +190,9 @@ class Gear(unittest.TestCase):
         self.assertEqual(statblock.parse_gear('brooch of shielding (10 charges)').items,
                          [GearItem('brooch of shielding')])
 
-    def test_drops_the_strength_rating(self):
+    def test_reads_the_strength_rating_out_of_the_name(self):
         self.assertEqual(statblock.parse_gear('composite shortbow (+3 Str)').items,
-                         [GearItem('composite shortbow')])
+                         [GearItem('composite shortbow', strength_rating=3)])
 
     def test_counts_the_gold(self):
         self.assertEqual(statblock.parse_gear('holy symbol, 2,010 gp, 5 pp').gold, 2060)

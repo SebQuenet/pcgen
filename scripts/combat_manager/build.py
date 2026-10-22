@@ -10,8 +10,8 @@ import equipment
 import pcgen_client as pc
 import statblock
 from generate_bestiary import normalize_languages
-from pools import fill_feats, fill_open_choices
-from skill_ranks import plan_ranks
+from pools import fill_feats, fill_open_choices, open_pools
+from skill_ranks import headband_skill, obsessive_bonus, plan_ranks
 from records import NpcRecord
 
 ALIGNMENT_KEYS = {'N': 'TN'}
@@ -23,6 +23,9 @@ FAVORED_CLASS_BONUS_POOL = 'Favored Class Bonus'
 FAVORED_HIT_POINT = 'Favored Class Bonus ~ Hit Point'
 FAVORED_SKILL_RANK = 'Favored Class Bonus ~ Skill Rank'
 # A wizard knows every cantrip, and PCGen says so when one is added
+LYCANTHROPE_TEMPLATE, LYCANTHROPE_TYPE_POOL, LYCANTHROPE_KIND_POOL = 'Lycanthrope', 'Lycanthrope Type', 'Lycanthrope Kind'
+HEADBAND_SKILL_POOL, HEADBAND_SKILL_ABILITY = 'Headband of Intellect Skill Choice', 'Headband of Intellect Skill Selection'
+OBSESSIVE_SKILL_POOL = 'Gnome Obsessive Skill Bonus'
 ALREADY_KNOWN_MARK = 'contains all spells'
 NOT_FOUND_MARK = 'Spell not found: '
 # Classes that prepare from a book of their own, so a spell must be known before it is prepared
@@ -33,6 +36,7 @@ SPELLBOOK_CLASSES = {'Wizard', 'Magus', 'Witch', 'Alchemist', 'Arcanist', 'Inves
 class Catalogs:
     classes: catalog.KeyIndex
     races: catalog.KeyIndex
+    templates: catalog.KeyIndex
     items: catalog.KeyIndex
     known_languages: dict[str, str]
 
@@ -52,7 +56,9 @@ def calibrate_scores(character_id: str, published: dict[str, int | None], report
     wanted = {stat: score for stat, score in published.items() if score is not None}
     for _ in range(CALIBRATION_PASSES):
         stats = pc.call('get_character_details', character_id=character_id)['stats']
-        gaps = {stat: wanted[stat] - int(stats[stat]['total']) for stat in wanted if stat in stats}
+        # PCGen shows "*" for a score the creature lacks, such as an undead's Constitution
+        gaps = {stat: wanted[stat] - int(stats[stat]['total']) for stat in wanted
+                if stat in stats and str(stats[stat]['total']).lstrip('-').isdigit()}
         if not any(gaps.values()):
             return
         bases = {stat: stats[stat]['base'] + gaps.get(stat, 0) for stat in stats}
@@ -84,6 +90,23 @@ def invest_skills(character_id: str, published: dict[str, int], total_level: int
         answer = pc.call('batch_invest_skills', character_id=character_id, investments=investments)
         errors = answer.get('errors', [])
     report['refused'].extend(errors)
+
+
+def fill_skill_choices(character_id: str, published: dict[str, int], report: dict) -> None:
+    """Name the skills a headband of vast intelligence and a gnome's obsession apply to, before ranks are placed."""
+    remaining = {pool['key']: pool['remaining'] for pool in open_pools(character_id)}
+    wanted = []
+    unassigned = dict(published)
+    for _ in range(int(remaining.get(HEADBAND_SKILL_POOL, 0))):
+        skill = headband_skill(unassigned)
+        if skill:
+            wanted.append({'category_key': HEADBAND_SKILL_POOL, 'ability_key': HEADBAND_SKILL_ABILITY, 'choice': [skill]})
+            unassigned.pop(skill)
+    obsession = obsessive_bonus(published) if remaining.get(OBSESSIVE_SKILL_POOL) else None
+    if obsession:
+        wanted.append({'category_key': OBSESSIVE_SKILL_POOL, 'ability_key': obsession[0], 'choice': [obsession[1]]})
+    if wanted:
+        report['refused'].extend(pc.call('batch_add_abilities', character_id=character_id, abilities=wanted).get('errors', []))
 
 
 def fill_favored_class_bonus(character_id: str, published_hp: int | None, report: dict) -> None:
@@ -133,7 +156,7 @@ def compare(record: NpcRecord, sheet: dict, published_skills: dict[str, int], ch
     save_totals = list(saves.values())
     trained = {entry['key']: entry['total'] for entry in pc.call('get_skill_summary', character_id=character_id)['trained_skills']}
     trained_by_lower = {key.lower(): total for key, total in trained.items()}
-    return {
+    comparison = {
         'hp': [statblock.parse_signed(record.get('HP')), sheet['hp']],
         'ac': [statblock.parse_signed(armor_class[0] if armor_class else None), sheet['ac']['total']],
         'touch': [statblock.parse_signed(armor_class[1] if len(armor_class) > 1 else None), sheet['ac']['touch']],
@@ -146,9 +169,32 @@ def compare(record: NpcRecord, sheet: dict, published_skills: dict[str, int], ch
         'cmd': [statblock.parse_signed(record.get('CMD')), sheet['attack']['cmd']],
         'init': [statblock.parse_signed(record.get('Init')), sheet['initiative']],
         'scores': {stat: [published, sheet_scores(sheet).get(stat, {}).get('score')]
-                   for stat, published in statblock.parse_ability_scores(record.get('AbilitiyScores') or '').items()},
+                   for stat, published in statblock.parse_unaffected_scores(record.get('AbilitiyScores'), record.get('BaseStatistics')).items()},
         'skills': {skill: [total, trained_by_lower.get(skill.lower())] for skill, total in published_skills.items()},
     }
+    return with_base_statistics(comparison, record.get('BaseStatistics'))
+
+
+def with_base_statistics(comparison: dict, base_statistics: str | None) -> dict:
+    """PCGen builds the NPC without the spells, potions or rage the published numbers include: compare to those without."""
+    for name, published in statblock.parse_base_statistics(base_statistics).items():
+        comparison[name][0] = published
+    return comparison
+
+
+def add_lycanthropy(character_id: str, template_name: str, lycanthropy: tuple[str, str], report: dict) -> None:
+    """PCGen hides the lycanthrope subraces: the Lycanthrope template asks for a type and a kind, which apply them."""
+    lycanthrope_type, kind = lycanthropy
+    try:
+        pc.call('add_template', character_id=character_id, template_key=LYCANTHROPE_TEMPLATE)
+        answer = pc.call('batch_add_abilities', character_id=character_id, abilities=[
+            {'category_key': LYCANTHROPE_TYPE_POOL, 'ability_key': lycanthrope_type},
+            {'category_key': LYCANTHROPE_KIND_POOL, 'ability_key': kind}])
+    except pc.PcgenError as error:
+        report['refused'].append(error.message[:200])
+        return
+    if answer.get('accepted_count', 0) < 2:
+        report['missing_templates'].append(template_name)
 
 
 def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
@@ -157,7 +203,7 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     race_key, gender = catalog.resolve_race(record.get('Race') or '', catalogs.races)
     if not race_key:
         raise LookupError(f'race inconnue : {record.get("Race")}')
-    published_scores = statblock.parse_ability_scores(record.get('AbilitiyScores') or '')
+    published_scores = statblock.parse_unaffected_scores(record.get('AbilitiyScores'), record.get('BaseStatistics'))
 
     character_id = pc.call('create_character', name=record.get('Name'))['character_id']
     pc.call('set_race', character_id=character_id, race_key=race_key)
@@ -189,7 +235,15 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
         raise LookupError('aucune classe reconnue')
     for field_name in ('ClassArchetypes', 'Bloodline', 'Mystery', 'Patron', 'Spirit', 'ProhibitedSchools', 'SpellDomains'):
         hints += statblock.split_list(record.get(field_name))
-    for template in statblock.split_list(record.get('TemplatesApplied')):
+    for template_name in statblock.parse_templates(record.get('TemplatesApplied')):
+        lycanthropy = statblock.parse_lycanthropy(template_name)
+        if lycanthropy:
+            add_lycanthropy(character_id, template_name, lycanthropy, report)
+            continue
+        template = catalog.resolve_template(template_name, catalogs.templates)
+        if not template:
+            report['missing_templates'].append(template_name)
+            continue
         try:
             pc.call('add_template', character_id=character_id, template_key=template)
         except pc.PcgenError as error:
@@ -214,9 +268,11 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     fill_feats(character_id, statblock.parse_feats(record.get('Feats')), owned_names, report)
     fill_open_choices(character_id, preferences, report, include_feats=False)
     calibrate_scores(character_id, published_scores, report)
-    fill_favored_class_bonus(character_id, statblock.parse_signed(record.get('HP')), report)
+    unaffected_hp = statblock.parse_base_statistics(record.get('BaseStatistics')).get('hp')
+    fill_favored_class_bonus(character_id, unaffected_hp or statblock.parse_signed(record.get('HP')), report)
 
     published_skills = statblock.parse_skills(record.get('Skills'))
+    fill_skill_choices(character_id, published_skills, report)
     invest_skills(character_id, published_skills, total_level, report)
     add_spells(character_id, statblock.parse_spells(record.get('SpellsKnown'), record.get('SpellsPrepared')), catalogs.classes, report)
 

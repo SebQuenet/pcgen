@@ -19,6 +19,19 @@ DASH_PATTERN = r'[\-–—−]'
 LOWERCASE_TITLE_WORDS = {'a', 'an', 'and', 'as', 'at', 'by', 'for', 'from', 'in', 'into', 'of', 'on', 'or', 'the', 'to', 'with'}
 
 
+def parse_templates(text: str | None) -> list[str]:
+    """Read Combat Manager's "ghost|half-fiend|" into one name per template."""
+    return [name.strip(' @') for name in re.split(r'[|,]', text or '') if name.strip(' @')]
+
+
+def parse_lycanthropy(template_name: str) -> tuple[str, str] | None:
+    """Read "natural wererat" into PCGen's lycanthrope type and kind; a bare "wererat" is natural."""
+    match = re.match(r'^(?:(natural|afflicted) )?((?:dire )?were\S.*)$', template_name.strip().lower())
+    if not match:
+        return None
+    return f'{(match.group(1) or "natural").title()} Lycanthrope', title_case(match.group(2))
+
+
 def split_list(text: str | None) -> list[str]:
     """Split a stat block list on its commas, but not inside parentheses or a number."""
     if not text:
@@ -69,10 +82,13 @@ def parse_classes(text: str, class_names: set[str] = frozenset()) -> list[ClassL
     """
     entries = []
     for part in text.split('/'):
-        match = re.match(r'^\s*(.+?)\s+(\d+)\s*$', part)
+        # The deity comes after the class or, as in "inquisitor 8 of Zaebos", after its level
+        match = re.match(r'^\s*(.+?)\s+(\d+)(?:\s+of\s+(.+?))?\s*$', part)
         if not match:
             continue
         name, levels = match.group(1), int(match.group(2))
+        if match.group(3):
+            name = f'{name} of {match.group(3)}'
         archetypes = ()
         archetype_match = re.search(r'\(([^)]*)\)', name)
         if archetype_match:
@@ -95,6 +111,33 @@ def parse_ability_scores(text: str) -> dict[str, int | None]:
         match = re.search(rf'\b{stat[:1]}{stat[1:].lower()}\s+(\d+|{DASH_PATTERN})', text, re.IGNORECASE)
         scores[stat] = int(match.group(1)) if match and match.group(1).isdigit() else None
     return scores
+
+
+BASE_STATISTIC_PATTERNS = {
+    'ac': r'\bAC (\d+)', 'touch': r'\btouch (\d+)', 'flat_footed': r'\bflat-footed (\d+)', 'hp': r'\bhp (\d+)',
+    'fort': rf'\bFort ({SIGN_PATTERN}?\d+)', 'ref': rf'\bRef ({SIGN_PATTERN}?\d+)', 'will': rf'\bWill ({SIGN_PATTERN}?\d+)',
+    'init': rf'\bInit ({SIGN_PATTERN}?\d+)', 'cmb': rf'\bCMB ({SIGN_PATTERN}?\d+)', 'cmd': r'\bCMD (\d+)',
+}
+
+
+def parse_base_statistics(text: str | None) -> dict[str, int]:
+    """The numbers a stat block gives without its pre-combat spells and potions, or rage.
+
+    "Without mage armor, Ulla's stats are as follows: AC 23, touch 13, flat-footed 20." gives ac, touch and flat_footed.
+    """
+    numbers = {}
+    for name, pattern in BASE_STATISTIC_PATTERNS.items():
+        match = re.search(pattern, text or '')
+        if match:
+            numbers[name] = parse_signed(match.group(1))
+    return numbers
+
+
+def parse_unaffected_scores(ability_scores: str | None, base_statistics: str | None) -> dict[str, int | None]:
+    """The ability scores without pre-combat effects: those the base statistics give replace the published ones."""
+    scores = parse_ability_scores(ability_scores or '')
+    without_effects = {stat: score for stat, score in parse_ability_scores(base_statistics or '').items() if score is not None}
+    return scores | without_effects
 
 
 def parse_signed(text: str | None) -> int | None:
@@ -143,6 +186,7 @@ class GearItem:
     specials: tuple[str, ...] = ()
     material: str | None = None
     is_masterwork: bool = False
+    strength_rating: int | None = None
 
 
 @dataclass(frozen=True)
@@ -179,6 +223,8 @@ def parse_gear_item(text: str) -> list[GearItem]:
         name = name[:quantity_match.start()].strip()
     elif leading_quantity_match:
         quantity, name = int(leading_quantity_match.group(1)), leading_quantity_match.group(2)
+    strength_match = re.search(r'\(([+-]\d+) Str\)', name, re.IGNORECASE)
+    strength_rating = int(strength_match.group(1)) if strength_match else None
     # charges, a strength rating or a value in parentheses say nothing PCGen keys on
     name = re.sub(r'\s*\((?:\d+ charges?|[+-]\d+ Str|worth [^)]*|[^)]*\bgp\b[^)]*)\)', '', name, flags=re.IGNORECASE)
     name = re.sub(r'\s+', ' ', name).strip()
@@ -208,8 +254,12 @@ def parse_gear_item(text: str) -> list[GearItem]:
         if name.lower().startswith(candidate + ' '):
             material, name = candidate, name[len(candidate) + 1:]
             break
+    # "wooden unholy symbol of Urgathoa": PCGen sells a holy symbol by what it is made of
+    symbol_match = re.match(r'^(\w+) ((?:un)?holy symbol\b.*)$', name, re.IGNORECASE)
+    if not material and symbol_match:
+        material, name = symbol_match.group(1).lower(), symbol_match.group(2)
 
-    return [GearItem(name, quantity, enhancement, tuple(specials), material, is_masterwork)]
+    return [GearItem(name, quantity, enhancement, tuple(specials), material, is_masterwork, strength_rating)]
 
 
 def parse_gear(*fields: str | None) -> Gear:
