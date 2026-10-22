@@ -75,21 +75,31 @@ class SpellInfoHandler implements ListSelectionListener
 			{
 				obj = selectedTable.getSelectedObject();
 			}
-			if (obj instanceof SpellNode node)
+			// The placeholder of an empty spell list is a spell node without a spell
+			if (obj instanceof SpellNode node && node.getSpell() != null)
 			{
 				String text = character.getInfoFactory().getHTMLInfo(node.getSpell());
 				currText = text;
 				spellsPane.setText(text);
 			}
+			else if (obj instanceof SpellNode node && node.getRootNode() != null)
+			{
+				showSpellBookInfo(node.getRootNode());
+			}
 			else if (obj instanceof RootNode node)
 			{
-				String text = character.getInfoFactory().getSpellBookInfo(node.getName());
-				if (!StringUtils.isEmpty(text))
-				{
-					currText = text;
-					spellsPane.setText(text);
-				}
+				showSpellBookInfo(node);
 			}
+		}
+	}
+
+	private void showSpellBookInfo(RootNode node)
+	{
+		String text = character.getInfoFactory().getSpellBookInfo(node.getName());
+		if (!StringUtils.isEmpty(text))
+		{
+			currText = text;
+			spellsPane.setText(text);
 		}
 	}
 

@@ -335,9 +335,11 @@ public final class SpellService
 			String named = defaultBook == null ? null : defaultBook.get();
 			list = named == null || named.isEmpty() ? FALLBACK_SPELL_LIST : named;
 		}
-		for (SpellNode node : spellNodesIn(spells.getPreparedSpellNodes()))
+		// An empty list shows as a node without a spell; adding it again would fail and open a dialog
+		for (SuperNode node : spells.getPreparedSpellNodes())
 		{
-			if (node.getRootNode() != null && list.equals(node.getRootNode().getName()))
+			if (node instanceof SpellNode spellNode && spellNode.getRootNode() != null
+				&& list.equals(spellNode.getRootNode().getName()))
 			{
 				return list;
 			}
