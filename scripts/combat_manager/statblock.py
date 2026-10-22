@@ -140,6 +140,24 @@ def parse_unaffected_scores(ability_scores: str | None, base_statistics: str | N
     return scores | without_effects
 
 
+NATURAL_ATTACK_WORDS = ('bite', 'claw', 'slam', 'gore', 'tail', 'wing', 'tentacle', 'hoof', 'hooves', 'sting', 'talon',
+                        'pincer', 'unarmed', 'touch', 'ray', 'bomb', 'kinetic', 'blast', 'swarm', 'butt', 'rake', 'web')
+
+
+def attack_weapons(*attack_fields: str | None) -> list[str]:
+    """The manufactured weapons a stat block's attacks name: "mwk greatsword +6 (2d6+1/19-20)" gives "mwk greatsword"."""
+    weapons = []
+    for field_text in attack_fields:
+        for attack in re.split(r',|\bor\b', re.sub(r'\([^)]*\)', '', field_text or '')):
+            name = re.split(rf'\s{SIGN_PATTERN}\d', attack.strip())[0].strip()
+            name = re.sub(r'^\d+\s+', '', name)
+            words = name.lower().split()
+            if words and not any(word.rstrip('s') in NATURAL_ATTACK_WORDS or word in NATURAL_ATTACK_WORDS for word in words) \
+                    and name.lower() not in (weapon.lower() for weapon in weapons):
+                weapons.append(name)
+    return weapons
+
+
 def parse_signed(text: str | None) -> int | None:
     """The first signed number of a field such as "+7" or "+4 (+6 vs. poison)"."""
     if not text:

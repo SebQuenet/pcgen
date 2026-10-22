@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'combat_manager'))
 
-from pools import preferred_options, worth_filling  # noqa: E402
+from pools import identity_choice, preferred_options, worth_filling  # noqa: E402
 
 PREFERENCES = {'hints': ['sniper', 'Fire'], 'highest_stat': 'INT', 'favored_class': 'Rogue'}
 
@@ -33,6 +33,19 @@ class Pools(unittest.TestCase):
 
     def test_a_region_is_left_alone(self):
         self.assertFalse(worth_filling('Region of Origin'))
+
+
+
+class IdentityPools(unittest.TestCase):
+
+    def test_the_region_named_by_the_source(self):
+        self.assertEqual(identity_choice(['Absalom', 'Andoran', 'Region ~ None'], 'Human Andoran Birthplace Of Freedom'), 'Andoran')
+
+    def test_the_ethnicity_named_by_the_race(self):
+        self.assertEqual(identity_choice(['Human Ethnicity ~ None', 'Taldan', 'Varisian'], 'human (Taldan) NPC Codex'), 'Taldan')
+
+    def test_none_when_the_stat_block_names_nothing(self):
+        self.assertEqual(identity_choice(['Racial Subtype ~ None', 'Racial Subtype ~ Dwarf'], 'human NPC Codex'), 'Racial Subtype ~ None')
 
 
 if __name__ == '__main__':

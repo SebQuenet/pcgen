@@ -7,6 +7,8 @@ here the stat block's archetypes, bloodline, domains and schools come first.
 
 from __future__ import annotations
 
+import re
+
 import pcgen_client as pc
 
 FEAT_POOL = 'FEAT'
@@ -51,7 +53,7 @@ def refused_keys(errors: list[str], requested: list[dict]) -> set[str]:
     return {wanted['ability_key'] for wanted in requested for error in errors if wanted['ability_key'] in error}
 
 
-def fill_feats(character_id: str, feats: list[tuple[str, str | None]], owned_names: set[str], report: dict) -> None:
+def fill_feats(character_id: str, feats: list[tuple[str, str | None]], owned_names: set[str], report: dict) -> list[tuple[str, str | None]]:
     """Put each published feat in a bonus pool that takes it, and the rest in the general pool.
 
     PCGen accepts more feats than a pool has slots and quietly drops the surplus, so each
@@ -62,19 +64,34 @@ def fill_feats(character_id: str, feats: list[tuple[str, str | None]], owned_nam
     pending = sorted(feats, key=lambda feat: feat[0] in FEATS_GRANTED_OUTSIDE_PCGEN)
     pools = [pool for pool in open_pools(character_id) if 'feat' in pool['key'].casefold() and worth_filling(pool['key'])]
     pools.sort(key=lambda pool: pool['key'] == FEAT_POOL)
+    placed = []
+    # the general pool's options give every feat's translated name, even when that pool is full
+    translated = option_names(character_id, FEAT_POOL)
+    # PCGen's key may differ in case from the stat block's name: "Extra Lay On Hands"
+    key_of = {key.casefold(): key for key in translated}
+    pending = [(key_of.get(key.casefold(), key), choice) for key, choice in pending]
+    pending = [feat for feat in pending if feat[1] or translated.get(feat[0]) not in owned_names]
     for pool in pools:
         offered = option_names(character_id, pool['key'])
         pending = [feat for feat in pending if feat[1] or offered.get(feat[0]) not in owned_names]
-        chosen = [feat for feat in pending if feat[0] in offered][:pool['remaining']]
-        if not chosen:
-            continue
-        requested = [{'category_key': pool['key'], 'ability_key': key, **({'choice': [choice]} if choice else {})}
-                     for key, choice in chosen]
-        answer = pc.call('batch_add_abilities', character_id=character_id, abilities=requested)
-        refused = refused_keys(answer.get('errors', []), requested)
-        report['refused_feats'].extend(answer.get('errors', []) if pool['key'] == FEAT_POOL else [])
-        pending = [feat for feat in pending if feat not in chosen or feat[0] in refused]
+        slots, tried = pool['remaining'], []
+        # a refused feat (its prerequisites unmet) leaves its slot to the next candidate
+        while slots > 0:
+            chosen = [feat for feat in pending if feat[0] in offered and feat not in tried][:slots]
+            if not chosen:
+                break
+            tried += chosen
+            requested = [{'category_key': pool['key'], 'ability_key': key, **({'choice': [choice]} if choice else {})}
+                         for key, choice in chosen]
+            answer = pc.call('batch_add_abilities', character_id=character_id, abilities=requested)
+            refused = refused_keys(answer.get('errors', []), requested)
+            report['refused_feats'].extend(answer.get('errors', []) if pool['key'] == FEAT_POOL else [])
+            accepted = [feat for feat in chosen if feat[0] not in refused]
+            placed += accepted
+            pending = [feat for feat in pending if feat not in accepted]
+            slots -= len(accepted)
     report['refused_feats'].extend(f'sans emplacement : {key}' + (f' ({choice})' if choice else '') for key, choice in pending)
+    return placed
 
 
 def matches_hint(option: str, hints: list[str]) -> bool:
@@ -121,3 +138,28 @@ def fill_open_choices(character_id: str, preferences: dict, report: dict, includ
         if answer.get('accepted_count', 0) == 0:
             exhausted.update(pool['key'] for pool in pools)
     report['open_pools'] = [pool['key'] for pool in open_pools(character_id) if worth_filling(pool['key'])]
+
+
+IDENTITY_POOLS = ('Region of Origin', 'Racial Subtype', 'Ethnicity')
+
+
+def identity_choice(options: list[str], described_as: str) -> str | None:
+    """The region, ethnicity or racial subtype the stat block names ("human (Taldan)", "Andoran"), else the "None" one."""
+    text = f' {re.sub(r"[^a-z0-9]+", " ", described_as.casefold())} '
+    named = [option for option in options
+             if f' {re.sub(r"[^a-z0-9]+", " ", option.split("~")[-1].casefold()).strip()} ' in text]
+    if named:
+        return max(named, key=len)
+    return next((option for option in options if option.split('~')[-1].strip().casefold() == 'none'), None)
+
+
+def fill_identity_pools(character_id: str, described_as: str, report: dict) -> None:
+    """Answer where the NPC comes from, so PCGen does not list these choices as left to do."""
+    wanted = []
+    for pool in open_pools(character_id):
+        if pool['key'].endswith(IDENTITY_POOLS):
+            choice = identity_choice(option_keys(character_id, pool['key']), described_as)
+            if choice:
+                wanted.append({'category_key': pool['key'], 'ability_key': choice})
+    if wanted:
+        report['refused'].extend(pc.call('batch_add_abilities', character_id=character_id, abilities=wanted).get('errors', []))

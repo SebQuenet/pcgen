@@ -25,6 +25,8 @@ SLOT_KEYWORDS = [
 ARMOR_KEYWORDS = ('shirt', 'mail', 'plate', 'armor', 'leather', 'hide', 'breastplate', 'scale', 'lamellar', 'padded',
                   'haramaki', 'kikko', 'brigandine', 'splint', 'banded')
 CARRIED_SLOT = 'Carried'
+OUTFIT_SLOT = 'Body'
+BOTH_HANDS_SLOT = 'Both Hands'
 
 
 def slot_for(item_name: str) -> str | None:
@@ -170,9 +172,7 @@ def buy_and_wear(character_id: str, gear: Gear, items_index: catalog.KeyIndex, m
             purchases.append((item, purchase_key(character_id, item, base_key, report), base_key))
         except pc.PcgenError as error:
             report['missing_modifiers'].append(f'{item.name}: {error.message[:200]}')
-    if not purchases:
-        return
-    purchases = buy(character_id, purchases, report)
+    purchases = buy(character_id, purchases, report) if purchases else []
 
     inventory = [entry['key'] for entry in pc.call('get_inventory', character_id=character_id)['items']]
     has_primary_weapon = False
@@ -182,5 +182,15 @@ def buy_and_wear(character_id: str, gear: Gear, items_index: catalog.KeyIndex, m
         if slot is None and not has_primary_weapon and item.name.lower() in melee_text.lower():
             slot, has_primary_weapon = 'Primary Hand', True
         worn.append({'equipment_key': inventory_key(key, inventory), 'slot': slot or CARRIED_SLOT, 'quantity': item.quantity})
+    # the outfit a class kit gives is worn too
+    bought = {entry['equipment_key'] for entry in worn}
+    worn += [{'equipment_key': key, 'slot': OUTFIT_SLOT, 'quantity': 1} for key in inventory if 'outfit' in key.lower() and key not in bought]
+    if not worn:
+        return
     equipped = pc.call('equip_items', character_id=character_id, items=worn)
     report['refused'].extend(equipped.get('errors', []))
+    # a two-handed weapon does not go in one hand, and PCGen says nothing: it is put in both hands
+    in_hand = {entry['equipment_key'] for entry in pc.call('get_equipped_items', character_id=character_id) if entry['equipment_key']}
+    two_handed = [dict(entry, slot=BOTH_HANDS_SLOT) for entry in worn if entry['slot'] == 'Primary Hand' and entry['equipment_key'] not in in_hand]
+    if two_handed:
+        report['refused'].extend(pc.call('equip_items', character_id=character_id, items=two_handed).get('errors', []))

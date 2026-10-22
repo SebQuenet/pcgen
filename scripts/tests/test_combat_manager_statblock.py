@@ -71,6 +71,19 @@ class GearDetails(unittest.TestCase):
         self.assertEqual((item.material, item.name), ('wooden', 'unholy symbol of Urgathoa'))
 
 
+class AttackWeapons(unittest.TestCase):
+
+    def test_a_weapon_named_in_an_attack(self):
+        self.assertEqual(statblock.attack_weapons('mwk greatsword +6 (2d6+1/19-20)', None), ['mwk greatsword'])
+
+    def test_natural_attacks_are_not_weapons(self):
+        self.assertEqual(statblock.attack_weapons('+1 longsword +8/+3 (1d8+3/19-20), bite +2 (1d4)', '2 claws +5 (1d4)'), ['+1 longsword'])
+
+    def test_each_alternative_weapon(self):
+        self.assertEqual(statblock.attack_weapons('dagger +3 (1d4) or unarmed strike +3 (1d3)', 'light crossbow +4 (1d8/19-20)'),
+                         ['dagger', 'light crossbow'])
+
+
 class Classes(unittest.TestCase):
 
     def test_reads_a_single_class(self):

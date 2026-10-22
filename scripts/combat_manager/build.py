@@ -11,13 +11,14 @@ import equipment
 import pcgen_client as pc
 import statblock
 from generate_bestiary import normalize_languages
-from pools import fill_feats, fill_open_choices, open_pools
+from pools import fill_feats, fill_identity_pools, fill_open_choices, open_pools
 from skill_ranks import headband_skill, obsessive_bonus, plan_ranks
 from records import NpcRecord
 
 ALIGNMENT_KEYS = {'N': 'TN'}
 SHEET_STAT_KEYS = {'FOR': 'STR', 'STR': 'STR', 'DEX': 'DEX', 'CON': 'CON', 'INT': 'INT', 'SAG': 'WIS', 'WIS': 'WIS', 'CHA': 'CHA'}
 DEFAULT_SCORE = 10
+FEAT_PASSES = 2
 CALIBRATION_PASSES = 2
 SKILL_PASSES = 3
 FAVORED_CLASS_BONUS_POOL = 'Favored Class Bonus'
@@ -270,13 +271,23 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
                    'favored_class': catalog.resolve_class(primary_class, catalogs.classes)[0]}
 
     gear = statblock.parse_gear(record.get('Gear'), record.get('OtherGear'))
+    if not gear.items:
+        # some stat blocks list no gear: their weapons are still named in their attacks
+        gear = statblock.parse_gear(', '.join(statblock.attack_weapons(record.get('Melee'), record.get('Ranged'))))
     equipment.buy_and_wear(character_id, gear, catalogs.items, record.get('Melee') or '', report)
     # the familiar of an arcane bond brings Alertness, so the class choices go before the feats
     fill_open_choices(character_id, preferences, report, include_feats=False)
-    sheet = read_sheet(character_id)
-    owned_names = {feat['name'] for feat in sheet['feats'] + sheet['autoFeats']}
-    fill_feats(character_id, statblock.parse_feats(record.get('Feats')), owned_names, report)
+    published_feats = statblock.parse_feats(record.get('Feats'))
+    # PCGen drops a feat placed before its prerequisite (Cleave before Power Attack): a second pass places it again
+    placed = []
+    for _ in range(FEAT_PASSES):
+        sheet = read_sheet(character_id)
+        report['refused_feats'] = []
+        # a feat with a choice shows under a translated name, so one already placed is told by the request itself
+        candidates = [feat for feat in published_feats if not (feat[1] and feat in placed)]
+        placed += fill_feats(character_id, candidates, {feat['name'] for feat in sheet['feats'] + sheet['autoFeats']}, report)
     fill_open_choices(character_id, preferences, report, include_feats=False)
+    fill_identity_pools(character_id, ' '.join(record.get(name) or '' for name in ('Race', 'SubType', 'Source')), report)
     calibrate_scores(character_id, published_scores, report)
     unaffected_hp = statblock.parse_base_statistics(record.get('BaseStatistics')).get('hp')
     fill_favored_class_bonus(character_id, unaffected_hp or statblock.parse_signed(record.get('HP')), report)
