@@ -25,8 +25,9 @@ SLOT_KEYWORDS = [
 ARMOR_KEYWORDS = ('shirt', 'mail', 'plate', 'armor', 'leather', 'hide', 'breastplate', 'scale', 'lamellar', 'padded',
                   'haramaki', 'kikko', 'brigandine', 'splint', 'banded')
 CARRIED_SLOT = 'Carried'
-OUTFIT_SLOT = 'Body'
 BOTH_HANDS_SLOT = 'Both Hands'
+MAIN_HAND_SLOT = 'Primary Hand'
+AUTOMATIC_SLOT = 'auto'
 
 
 def slot_for(item_name: str) -> str | None:
@@ -174,23 +175,36 @@ def buy_and_wear(character_id: str, gear: Gear, items_index: catalog.KeyIndex, m
             report['missing_modifiers'].append(f'{item.name}: {error.message[:200]}')
     purchases = buy(character_id, purchases, report) if purchases else []
 
-    inventory = [entry['key'] for entry in pc.call('get_inventory', character_id=character_id)['items']]
-    has_primary_weapon = False
-    worn = []
-    for item, key, base_key in purchases:
-        slot = slot_for(base_key)
-        if slot is None and not has_primary_weapon and item.name.lower() in melee_text.lower():
-            slot, has_primary_weapon = 'Primary Hand', True
-        worn.append({'equipment_key': inventory_key(key, inventory), 'slot': slot or CARRIED_SLOT, 'quantity': item.quantity})
-    # the outfit a class kit gives is worn too
-    bought = {entry['equipment_key'] for entry in worn}
-    worn += [{'equipment_key': key, 'slot': OUTFIT_SLOT, 'quantity': 1} for key in inventory if 'outfit' in key.lower() and key not in bought]
-    if not worn:
-        return
-    equipped = pc.call('equip_items', character_id=character_id, items=worn)
-    report['refused'].extend(equipped.get('errors', []))
-    # a two-handed weapon does not go in one hand, and PCGen says nothing: it is put in both hands
-    in_hand = {entry['equipment_key'] for entry in pc.call('get_equipped_items', character_id=character_id) if entry['equipment_key']}
-    two_handed = [dict(entry, slot=BOTH_HANDS_SLOT) for entry in worn if entry['slot'] == 'Primary Hand' and entry['equipment_key'] not in in_hand]
-    if two_handed:
-        report['refused'].extend(pc.call('equip_items', character_id=character_id, items=two_handed).get('errors', []))
+    wear_everything(character_id, purchases, melee_text, report)
+
+
+def comparable(key: str) -> str:
+    # the equipped list writes "Artisan_s Outfit" for the inventory's "Artisan's Outfit"
+    return re.sub(r'[^a-z0-9]', '', key.lower())
+
+
+def worn_keys(character_id: str) -> set[str]:
+    return {comparable(entry['equipment_key']) for entry in pc.call('get_equipped_items', character_id=character_id) if entry['equipment_key']}
+
+
+def wear_everything(character_id: str, purchases: list[tuple[GearItem, str, str]], melee_text: str, report: dict) -> None:
+    """Wear every item where it naturally goes; only what fits nowhere is carried.
+
+    The weapon the stat block attacks with goes in hand, both hands if one will not hold it; the
+    rest goes where PCGen would put it, else where its name says (a cloak on the shoulders).
+    """
+    inventory = {entry['key']: entry['quantity'] for entry in pc.call('get_inventory', character_id=character_id)['items']}
+    base_of = {inventory_key(key, list(inventory)): base_key for _, key, base_key in purchases}
+    main_weapon = next((inventory_key(key, list(inventory)) for item, key, base_key in purchases
+                        if slot_for(base_key) is None and item.name.lower() in melee_text.lower()), None)
+    for slot in (MAIN_HAND_SLOT, BOTH_HANDS_SLOT) if main_weapon else ():
+        if comparable(main_weapon) not in worn_keys(character_id):
+            pc.call('equip_items', character_id=character_id, items=[{'equipment_key': main_weapon, 'slot': slot}])
+    for slot_of in (lambda key: AUTOMATIC_SLOT, lambda key: slot_for(base_of.get(key, key)), lambda key: CARRIED_SLOT):
+        worn = worn_keys(character_id)
+        wanted = [{'equipment_key': key, 'slot': slot_of(key), 'quantity': int(quantity)}
+                  for key, quantity in inventory.items() if comparable(key) not in worn and slot_of(key)]
+        if wanted:
+            pc.call('equip_items', character_id=character_id, items=wanted)
+    worn = worn_keys(character_id)
+    report['refused'].extend(f'non porté : {key}' for key in inventory if comparable(key) not in worn)
