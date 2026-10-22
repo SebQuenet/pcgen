@@ -284,7 +284,7 @@ class ConjurationBridgeTest
 			}
 		}
 
-		assertEquals("{\"state\":\"saved\",\"done\":0,\"total\":0,\"file\":\"" + chosen + "\"}", status);
+		assertEquals("{\"state\":\"saved\",\"done\":0,\"total\":0,\"file\":\"" + chosen.toString().replace("\\", "\\\\") + "\"}", status);
 	}
 
 	@Test
