@@ -7,3 +7,8 @@ Racial Traits ~ Evaluator Robot	CATEGORY:Internal
 Racial Traits ~ Feranth	CATEGORY:Internal
 Racial Traits ~ Marax	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Scent|Poison
 Racial Traits ~ Yarahkut	CATEGORY:Internal
+
+###Block: Monsters an NPC of this adventure is built on, written from its stat block for the Combat Manager import
+Racial Traits ~ Mnemovore	CATEGORY:Internal	ABILITY:Special Ability|AUTOMATIC|Immunity to Cold|Immunity to Electricity|Immunity to Fire|Immunity to Sonic|Mnemovore ~ Memory Consumption|Mnemovore ~ Vulnerable to Force
+Mnemovore ~ Memory Consumption	CATEGORY:Special Ability	TYPE:SpecialQuality.Supernatural.Attack	VISIBLE:DISPLAY	DESC:A creature damaged by its incorporeal touch must succeed at a Will save (Charisma-based) or take 1d4 Intelligence drain; each point drained gives the mnemovore a memory point, spent to recover spell-like abilities, become corporeal for 1 round or absorb feats.	SOURCEPAGE:p.35
+Mnemovore ~ Vulnerable to Force	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary.Weakness	VISIBLE:DISPLAY	DESC:Takes half again as much damage from force effects. The mnemovore is an outsider formed from light and stolen memories (base creature: It Came From the Stars p.62).	SOURCEPAGE:p.35
