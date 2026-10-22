@@ -67,7 +67,9 @@ def display_name(item: GearItem) -> str:
 def purchase_key(character_id: str, item: GearItem, base_key: str, report: dict) -> str:
     """The key to buy: the catalogue's, or a custom item's when the gear is magic or masterwork."""
     stages = modifier_stages(item)
-    has_strength_rating = item.strength_rating is not None
+    # a rating of +0 leaves the bow its base name, which buys the bare bow: buy_and_wear picks the catalogue's +0 bow instead
+    strength_rating = item.strength_rating or None
+    has_strength_rating = strength_rating is not None
     if not has_strength_rating and (not stages or (stages == [['masterwork']] and 'masterwork' in base_key.lower())):
         return base_key
     # The stages only find the modifiers' keys: the item bought is customised once from the catalogue's,
@@ -89,11 +91,14 @@ def purchase_key(character_id: str, item: GearItem, base_key: str, report: dict)
     if has_strength_rating:
         # a composite bow is sold only with its strength rating, chosen as "+3"
         chosen.append(BOW_STRENGTH_MODIFIER)
-        choices[BOW_STRENGTH_MODIFIER] = [f'{item.strength_rating:+d}']
+        choices[BOW_STRENGTH_MODIFIER] = [f'{strength_rating:+d}']
     if not chosen:
         return base_key
+    # a name that says nothing more than the item's ("Composite Longbow") would make a purchase find the bare item
+    name = display_name(item)
+    custom_name = {'custom_name': name} if name.lower() != item.name.lower() else {}
     return pc.call('customize_equipment', character_id=character_id, equipment_key=base_key, modifier_keys=chosen,
-                   choices=choices, custom_name=display_name(item))['name']
+                   choices=choices, **custom_name)['name']
 
 
 def required_modifiers(offered: list[str], key: str, item: GearItem) -> list[str]:
@@ -145,11 +150,19 @@ def buy(character_id: str, purchases: list[tuple[GearItem, str, str]], report: d
     return settled
 
 
+def sellable_base(base_key: str | None, item: GearItem, items_index: catalog.KeyIndex) -> str | None:
+    """A composite bow is sold only with its strength rating: one with none or +0 is the catalogue's "+0" bow."""
+    plus_zero = f'{base_key[:-1]} +0)' if base_key and base_key.endswith(')') else None
+    if plus_zero in items_index.keys and not item.strength_rating:
+        return plus_zero
+    return base_key
+
+
 def buy_and_wear(character_id: str, gear: Gear, items_index: catalog.KeyIndex, melee_text: str, report: dict) -> None:
     pc.call('set_funds', character_id=character_id, amount=gear.gold)
     purchases = []
     for item in gear.items:
-        base_key = items_index.find(item.name)
+        base_key = sellable_base(items_index.find(item.name), item, items_index)
         if not base_key:
             report['missing_items'].append(item.name)
             continue
