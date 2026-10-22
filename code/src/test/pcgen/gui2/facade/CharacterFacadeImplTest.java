@@ -33,6 +33,7 @@ import pcgen.core.PlayerCharacter;
 import pcgen.core.SettingsHandler;
 import pcgen.core.bonus.Bonus;
 import pcgen.core.character.EquipSet;
+import pcgen.core.spell.Spell;
 import pcgen.facade.core.AbilityFacade;
 import pcgen.facade.util.event.ListEvent;
 import pcgen.facade.util.event.ListListener;
@@ -98,6 +99,29 @@ public class CharacterFacadeImplTest extends AbstractCharacterTestCase
 
 		assertTrue("The category opened by the ability should be shown",
 			charFacade.getActiveAbilityCategories().containsElement(gatedCategory));
+	}
+
+	/**
+	 * Switching off an applied temporary bonus whose name is translated removes
+	 * its effect from the character.
+	 */
+	@Test
+	public void testDeactivatingATranslatedTempBonusRemovesItsEffect()
+	{
+		LoadContext context = Globals.getContext();
+		Spell bullsStrength = new Spell();
+		bullsStrength.setName("Bull's Strength");
+		bullsStrength.setLocalizedName("Force du taureau");
+		bullsStrength.addToListFor(ListKey.BONUS_PC, Bonus.newBonus(context, "STAT|STR|4|TYPE=Enhancement"));
+		PlayerCharacter pc = getCharacter();
+		CharacterFacadeImpl charFacade = new CharacterFacadeImpl(pc, uiDelegate, dataset);
+		int strengthWithoutBonus = pc.getTotalStatFor(str);
+		TempBonusFacadeImpl appliedBonus = TempBonusHelper.applyBonusToCharacter(bullsStrength, pc);
+		pc.calcActiveBonuses();
+
+		charFacade.setTempBonusActive(appliedBonus, false);
+
+		assertEquals("Inactive bonus should not raise STR", strengthWithoutBonus, pc.getTotalStatFor(str));
 	}
 
 	/**

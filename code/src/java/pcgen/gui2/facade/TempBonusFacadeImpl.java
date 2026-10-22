@@ -201,6 +201,15 @@ public class TempBonusFacadeImpl implements TempBonusFacade, Comparable<TempBonu
 	}
 
 	/**
+	 * @return the untranslated name under which the character filters this bonus
+	 * out when it is switched off.
+	 */
+	String getFilterName()
+	{
+		return StringUtils.isNotEmpty(bonusName) ? bonusName : getOriginObj().toString();
+	}
+
+	/**
 	 * @return the object defining the temporary bonus. 
 	 */
 	public CDOMObject getOriginObj()

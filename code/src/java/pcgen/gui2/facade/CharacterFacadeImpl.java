@@ -1287,11 +1287,11 @@ public class CharacterFacadeImpl
 
 		if (active)
 		{
-			theCharacter.unsetTempBonusFilter(tempBonus.toString());
+			theCharacter.unsetTempBonusFilter(tempBonus.getFilterName());
 		}
 		else
 		{
-			theCharacter.setTempBonusFilter(tempBonus.toString());
+			theCharacter.setTempBonusFilter(tempBonus.getFilterName());
 		}
 		tempBonus.setActive(active);
 		appliedTempBonuses.modifyElement(tempBonus);
