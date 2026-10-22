@@ -72,19 +72,19 @@ def fill_feats(character_id: str, feats: list[tuple[str, str | None]], owned_nam
     pending = [(key_of.get(key.casefold(), key), choice) for key, choice in pending]
     pending = [feat for feat in pending if feat[1] or translated.get(feat[0]) not in owned_names]
     for pool in pools:
-        offered = option_names(character_id, pool['key'])
-        pending = [feat for feat in pending if feat[1] or offered.get(feat[0]) not in owned_names]
+        # a class pool names its options after itself: "Monk Bonus Feat ~ Dodge" is Dodge
+        option_of = {key.split('~')[-1].strip().casefold(): key for key in option_names(character_id, pool['key'])}
         slots, tried = pool['remaining'], []
         # a refused feat (its prerequisites unmet) leaves its slot to the next candidate
         while slots > 0:
-            chosen = [feat for feat in pending if feat[0] in offered and feat not in tried][:slots]
+            chosen = [feat for feat in pending if feat[0].casefold() in option_of and feat not in tried][:slots]
             if not chosen:
                 break
             tried += chosen
-            requested = [{'category_key': pool['key'], 'ability_key': key, **({'choice': [choice]} if choice else {})}
+            requested = [{'category_key': pool['key'], 'ability_key': option_of[key.casefold()], **({'choice': [choice]} if choice else {})}
                          for key, choice in chosen]
             answer = pc.call('batch_add_abilities', character_id=character_id, abilities=requested)
-            refused = refused_keys(answer.get('errors', []), requested)
+            refused = {key for key, _ in chosen if option_of[key.casefold()] in refused_keys(answer.get('errors', []), requested)}
             report['refused_feats'].extend(answer.get('errors', []) if pool['key'] == FEAT_POOL else [])
             accepted = [feat for feat in chosen if feat[0] not in refused]
             placed += accepted
@@ -140,7 +140,10 @@ def fill_open_choices(character_id: str, preferences: dict, report: dict, includ
     report['open_pools'] = [pool['key'] for pool in open_pools(character_id) if worth_filling(pool['key'])]
 
 
-IDENTITY_POOLS = ('Region of Origin', 'Racial Subtype', 'Ethnicity')
+IDENTITY_POOLS = ('Region of Origin', 'Racial Subtype', 'Ethnicity', 'Subrace', 'Race Version', 'Domain Alternative ~ Inquisition',
+                  'Familiar Alertness Choice')
+# what a pool the stat block says nothing about defaults to
+NEUTRAL_OPTIONS = ('none', 'standard version', 'alertness inactive')
 
 
 def identity_choice(options: list[str], described_as: str) -> str | None:
@@ -150,7 +153,11 @@ def identity_choice(options: list[str], described_as: str) -> str | None:
              if f' {re.sub(r"[^a-z0-9]+", " ", option.split("~")[-1].casefold()).strip()} ' in text]
     if named:
         return max(named, key=len)
-    return next((option for option in options if option.split('~')[-1].strip().casefold() == 'none'), None)
+    for neutral in NEUTRAL_OPTIONS:
+        found = next((option for option in options if option.split('~')[-1].strip().casefold() == neutral), None)
+        if found:
+            return found
+    return None
 
 
 def fill_identity_pools(character_id: str, described_as: str, report: dict) -> None:

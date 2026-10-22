@@ -48,5 +48,13 @@ class IdentityPools(unittest.TestCase):
         self.assertEqual(identity_choice(['Racial Subtype ~ None', 'Racial Subtype ~ Dwarf'], 'human NPC Codex'), 'Racial Subtype ~ None')
 
 
+    def test_the_standard_version_of_a_race(self):
+        self.assertEqual(identity_choice(['Mythic Version', 'Standard Version'], 'tiefling NPC Codex'), 'Standard Version')
+
+    def test_a_familiar_s_alertness_when_the_stat_block_lists_it(self):
+        options = ['Familiar Alertness Choice ~ Alertness Active', 'Familiar Alertness Choice ~ Alertness Inactive']
+        self.assertEqual(identity_choice(options, 'human NPC Codex Alertness Active'), 'Familiar Alertness Choice ~ Alertness Active')
+
+
 if __name__ == '__main__':
     unittest.main()

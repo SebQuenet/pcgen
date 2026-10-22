@@ -172,7 +172,8 @@ def is_npc(record: records.NpcRecord) -> bool:
 def new_report(record: records.NpcRecord) -> dict:
     return {'id': record.identifier, 'name': record.get('Name'), 'source': record.get('Source'), 'class': record.get('Class'),
             'missing_classes': [], 'missing_templates': [], 'missing_items': [], 'missing_modifiers': [], 'missing_spells': [],
-            'refused_feats': [], 'refused': [], 'open_pools': []}
+            'refused_feats': [], 'refused': [], 'open_pools': [],
+            'added_feats': [], 'added_languages': [], 'added_spells': [], 'added_skills': [], 'added_companion': None}
 
 
 def main() -> int:

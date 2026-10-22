@@ -84,6 +84,13 @@ class AttackWeapons(unittest.TestCase):
                          ['dagger', 'light crossbow'])
 
 
+class ClassChoices(unittest.TestCase):
+
+    def test_rogue_talents_listed_in_the_special_qualities(self):
+        self.assertEqual(statblock.class_choices('rogue talents (charmer, fast fingers, honeyed words 2/day), trapfinding +2'),
+                         ['charmer', 'fast fingers', 'honeyed words'])
+
+
 class Classes(unittest.TestCase):
 
     def test_reads_a_single_class(self):

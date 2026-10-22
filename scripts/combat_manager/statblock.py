@@ -158,6 +158,20 @@ def attack_weapons(*attack_fields: str | None) -> list[str]:
     return weapons
 
 
+CLASS_CHOICE_LISTS = r'talents?|tricks?|powers?|discoveries|discovery|mercies|mercy|hexes|revelations?|arcanas?|exploits?|dares?|deeds?|insights?|graces?|stunts?'
+
+
+def class_choices(special_qualities: str | None) -> list[str]:
+    """The talents, tricks, rage powers, mercies or hexes a stat block lists: "rogue talents (charmer, fast fingers)"."""
+    choices = []
+    for listed in re.finditer(rf'\b(?:{CLASS_CHOICE_LISTS})\s*\(([^()]*(?:\([^()]*\)[^()]*)*)\)', special_qualities or '', re.I):
+        for entry in split_list(listed.group(1)):
+            name = re.sub(r'\s*\([^)]*\)|\s+\d+/(?:day|round|week)|[*]|\b(?:APG|UC|UM|ACG|ARG|OA)\b', '', entry).strip()
+            if name:
+                choices.append(name)
+    return choices
+
+
 def parse_signed(text: str | None) -> int | None:
     """The first signed number of a field such as "+7" or "+4 (+6 vs. poison)"."""
     if not text:

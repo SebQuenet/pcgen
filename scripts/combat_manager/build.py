@@ -7,6 +7,7 @@ import re
 from dataclasses import dataclass
 
 import catalog
+import completion
 import equipment
 import pcgen_client as pc
 import statblock
@@ -19,6 +20,7 @@ ALIGNMENT_KEYS = {'N': 'TN'}
 SHEET_STAT_KEYS = {'FOR': 'STR', 'STR': 'STR', 'DEX': 'DEX', 'CON': 'CON', 'INT': 'INT', 'SAG': 'WIS', 'WIS': 'WIS', 'CHA': 'CHA'}
 DEFAULT_SCORE = 10
 FEAT_PASSES = 2
+NPC_CHARACTER_TYPE = 'NPC'
 CALIBRATION_PASSES = 2
 SKILL_PASSES = 3
 FAVORED_CLASS_BONUS_POOL = 'Favored Class Bonus'
@@ -199,6 +201,15 @@ def add_lycanthropy(character_id: str, template_name: str, lycanthropy: tuple[st
         report['missing_templates'].append(template_name)
 
 
+def main_weapon(record: NpcRecord, items: catalog.KeyIndex) -> str | None:
+    """The weapon the NPC attacks with first, as PCGen names it for Weapon Focus."""
+    for weapon in statblock.attack_weapons(record.get('Melee'), record.get('Ranged')):
+        key = items.find(statblock.parse_gear_item(weapon)[0].name)
+        if key:
+            return key
+    return None
+
+
 def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     """Build the NPC and return its character id; what PCGen refused goes into `report`."""
     class_entries = statblock.parse_classes(record.get('Class') or '', set(catalogs.classes.by_reading))
@@ -212,6 +223,8 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     published_scores = statblock.parse_unaffected_scores(record.get('AbilitiyScores'), record.get('BaseStatistics'))
 
     character_id = pc.call('create_character', name=record.get('Name'))['character_id']
+    # the data gives traits to a player character only; a published NPC has none
+    pc.call('set_biography', character_id=character_id, character_type=NPC_CHARACTER_TYPE)
     pc.call('set_race', character_id=character_id, race_key=race_key)
     alignment = record.get('Alignment')
     if alignment:
@@ -222,7 +235,7 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     pc.call('set_all_ability_scores', character_id=character_id,
             scores={stat: score if score is not None else DEFAULT_SCORE for stat, score in published_scores.items()})
 
-    total_level, hints = 0, []
+    total_level, hints, class_levels = 0, [], {}
     for entry in class_entries:
         class_key, school = catalog.resolve_class(entry, catalogs.classes)
         if not class_key:
@@ -231,6 +244,7 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
         pc.call('add_class_level', character_id=character_id, class_key=class_key, levels=entry.levels,
                 **({'subclass': school} if school else {}))
         total_level += entry.levels
+        class_levels[class_key] = class_levels.get(class_key, 0) + entry.levels
         hints += list(entry.archetypes) + (['Unchained'] if entry.is_unchained else [])
         if entry.deity:
             try:
@@ -241,6 +255,9 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
         raise LookupError('aucune classe reconnue')
     for field_name in ('ClassArchetypes', 'Bloodline', 'Mystery', 'Patron', 'Spirit', 'ProhibitedSchools', 'SpellDomains'):
         hints += statblock.split_list(record.get(field_name))
+    hints += statblock.class_choices(record.get('SQ'))
+    if completion.bond_hint(record.get('SQ')):
+        hints.append(completion.bond_hint(record.get('SQ')))
     if race_template:
         try:
             pc.call('add_template', character_id=character_id, template_key=race_template)
@@ -278,6 +295,10 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     # the familiar of an arcane bond brings Alertness, so the class choices go before the feats
     fill_open_choices(character_id, preferences, report, include_feats=False)
     published_feats = statblock.parse_feats(record.get('Feats'))
+    # a familiar's Alertness is active when the stat block lists Alertness among the feats
+    described_as = ' '.join(record.get(name) or '' for name in ('Race', 'SubType', 'Source', 'SpellDomains', 'ClassArchetypes'))
+    has_alertness = any(key == 'Alertness' for key, _ in published_feats)
+    fill_identity_pools(character_id, described_as + (' Alertness Active' if has_alertness else ''), report)
     # PCGen drops a feat placed before its prerequisite (Cleave before Power Attack): a second pass places it again
     placed = []
     for _ in range(FEAT_PASSES):
@@ -286,22 +307,31 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
         # a feat with a choice shows under a translated name, so one already placed is told by the request itself
         candidates = [feat for feat in published_feats if not (feat[1] and feat in placed)]
         placed += fill_feats(character_id, candidates, {feat['name'] for feat in sheet['feats'] + sheet['autoFeats']}, report)
+    published_skills = statblock.parse_skills(record.get('Skills'))
+    class_keys = sorted(class_levels, key=class_levels.get, reverse=True)
+    theme = completion.theme_of(class_keys)
     fill_open_choices(character_id, preferences, report, include_feats=False)
-    fill_identity_pools(character_id, ' '.join(record.get(name) or '' for name in ('Race', 'SubType', 'Source')), report)
+    completion.fill_spare_feats(character_id, theme, main_weapon(record, catalogs.items),
+                                sorted(published_skills, key=published_skills.get, reverse=True), report)
+    completion.fill_class_level_adjustments(character_id, published_scores, report)
     calibrate_scores(character_id, published_scores, report)
     unaffected_hp = statblock.parse_base_statistics(record.get('BaseStatistics')).get('hp')
     fill_favored_class_bonus(character_id, unaffected_hp or statblock.parse_signed(record.get('HP')), report)
 
-    published_skills = statblock.parse_skills(record.get('Skills'))
     fill_skill_choices(character_id, published_skills, report)
+    completion.fill_class_skill_choices(character_id, published_skills, report)
     invest_skills(character_id, published_skills, total_level, report)
+    completion.spend_skill_points(character_id, class_keys, published_skills, report)
     add_spells(character_id, statblock.parse_spells(record.get('SpellsKnown'), record.get('SpellsPrepared')), catalogs.classes, report)
+    completion.learn_missing_spells(character_id, class_keys, report)
 
     for language in normalize_languages(statblock.split_list(record.get('Languages')), catalogs.known_languages):
         try:
             pc.call('add_language', character_id=character_id, language_key=language)
         except pc.PcgenError:
             pass  # a language the race already grants is refused, and says nothing
+    completion.learn_bonus_languages(character_id, theme, class_keys, report)
+    completion.add_companion(character_id, record.get('SQ'), report)
     tactics = '\n\n'.join(f'{title}: {record.get(field)}' for field, title in
                           (('BeforeCombat', 'Avant le combat'), ('DuringCombat', 'Pendant le combat'), ('Morale', 'Moral'))
                           if record.get(field))
