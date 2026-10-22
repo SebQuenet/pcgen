@@ -58,10 +58,16 @@ CAMPAIGNS = [
     'Dungeons of Golarion', 'Rival Guide',
     'Plunder & Peril ~ Creatures', 'The Witchwar Legacy ~ Creatures', 'Pathfinder Adventure Path #113 ~ Creatures',
     'Doom Comes to Dustpawn ~ Creatures',
+    # monsters some NPCs are built on: eidolon forms, ja noi, grioth, malenti, skin stealer, clockwork servant
+    'Bestiary 3 ~ Player Options Only', "The Dragon's Demand ~ Creatures", 'Tome of Horrors 4 ~ Creatures',
+    'The Worldwound ~ Creatures', 'Pathfinder Adventure Path #37 ~ Creatures', 'Pathfinder Adventure Path #44 ~ Creatures',
+    'Pathfinder Adventure Path #52 ~ Creatures', 'Pathfinder Adventure Path #56 ~ Creatures',
+    'Pathfinder Adventure Path #111 ~ Creatures', 'Down the Blighted Path ~ Creatures',
+    'Pathfinder Adventure Path #54 ~ Creatures', 'Pathfinder Adventure Path #90 ~ Creatures',
 ]
 UNSAFE_PATH_CHARACTERS = r'[\\/:*?"<>|]'
 # Combat Manager lists animal companions with their master; they are not NPCs
-COMPANION_CLASS = 'animal companion'
+COMPANION_CLASSES = ('animal companion', 'eidolon')
 
 
 def write_settings() -> None:
@@ -131,7 +137,9 @@ def character_path(record: records.NpcRecord, catalogs: build.Catalogs, output_d
 
 
 def is_npc(record: records.NpcRecord) -> bool:
-    return COMPANION_CLASS not in (record.get('Class') or '').lower()
+    """A summoner's eidolon, like an animal companion, is a companion PCGen builds on its master, not a character."""
+    class_text = (record.get('Class') or '').lower()
+    return not any(companion in class_text for companion in COMPANION_CLASSES)
 
 
 def new_report(record: records.NpcRecord) -> dict:

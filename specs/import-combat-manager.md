@@ -72,5 +72,6 @@ elle-même se vérifie sur un premier livre, le NPC Codex, dont le rapport agré
 ## 6. Hors périmètre
 
 - les monstres sans classe, les compagnons animaux et familiers décrits en annexe du bloc ;
+- les eidolons, publiés avec une classe « eidolon » : PCGen les construit comme compagnons d'un invocateur ;
 - les capacités mythiques au-delà du choix de la voie ;
 - la traduction des noms de PNJ.

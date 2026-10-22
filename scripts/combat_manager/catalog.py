@@ -17,6 +17,16 @@ WIZARD_SCHOOLS = {
     'evoker': 'Evoker', 'illusionist': 'Illusionist', 'necromancer': 'Necromancer',
     'transmuter': 'Transmuter', 'universalist': 'Universalist', 'wizard': None,
 }
+# Peoples of Golarion a stat block names in place of human
+HUMAN_ETHNICITIES = {
+    'azlanti', 'bonuwat', 'chelaxian', 'erutaki', 'garundi', 'kellid', 'keleshite', 'kuru', 'mwangi', 'mwangi-zenji',
+    'shoanti', 'taldan', 'tian', 'ulfen', 'varisian', 'vudrani', 'zenj',
+}
+# A Thassilonian specialist's school is one of the sins: a "thassilonian conjurer" is a Sloth wizard
+THASSILONIAN_SINS = {
+    'abjurer': 'Envy', 'conjurer': 'Sloth', 'enchanter': 'Lust', 'evoker': 'Wrath',
+    'illusionist': 'Pride', 'necromancer': 'Gluttony', 'transmuter': 'Greed',
+}
 # PCGen's spelling of the materials and abilities a stat block names differently
 MODIFIER_NAMES = {'mithral': 'mithril', 'silver': 'alchemical silver'}
 
@@ -122,6 +132,12 @@ def resolve_class(entry: ClassLevels, classes: KeyIndex) -> tuple[str | None, st
     """The PCGen class key and, for a specialist wizard, the school."""
     if entry.name in WIZARD_SCHOOLS and classes.find('wizard'):
         return classes.find('wizard'), WIZARD_SCHOOLS[entry.name]
+    elementalist = re.match(r'^(air|earth|fire|water) elementalist(?: wizard)?$', entry.name)
+    if elementalist:
+        return classes.find('wizard'), elementalist.group(1).title()
+    thassilonian = re.match(r'^thassilonian (\w+)$', entry.name)
+    if thassilonian and thassilonian.group(1) in THASSILONIAN_SINS:
+        return classes.find('wizard'), THASSILONIAN_SINS[thassilonian.group(1)]
     if entry.name.endswith('kineticist'):
         return classes.by_reading.get('kineticist'), None
     key = classes.by_reading.get(entry.name)
@@ -135,16 +151,32 @@ def resolve_race(text: str, races: KeyIndex) -> tuple[str | None, str | None]:
     gender_match = re.match(r'^(male|female) (.+)$', name)
     if gender_match:
         gender, name = gender_match.group(1).title(), gender_match.group(2)
-    for candidate in (name, re.sub(r'\s*\([^)]*\)', '', name).strip(), name.split(' ')[-1]):
-        key = races.find(candidate)
+    if any(word in HUMAN_ETHNICITIES for word in name.split(' ')):
+        return races.find('human'), gender
+    without_parentheses = re.sub(r'\s*\([^)]*\)', '', name).strip()
+    parenthesized = re.findall(r'\(([^)]*)\)', name)
+    in_parentheses = [parenthesized[-1].split(' ')[-1]] if parenthesized else []
+    for candidate in (name, without_parentheses, without_parentheses.split(' ')[-1], *in_parentheses):
+        key = races.find(candidate) or family_member(candidate, races)
         if key:
             return key, gender
-    # PCGen lists many monsters under their family: "Demon (Succubus)", "Ghoul (Ghast)"
-    for key in races.keys:
-        if re.search(r'\(' + re.escape(name) + r'\)$', key.lower()):
-            return key, gender
-    # "human magus", "serpentfolk ghast": a class or template written after the race
-    return races.by_reading.get(name.split(' ')[0]), gender
+    # "human magus", "balor lord", "efreeti malik": a class, rank or template written after the race
+    first_word = name.split(' ')[0]
+    return races.by_reading.get(first_word) or family_member(first_word, races), gender
+
+
+def race_of_subtype(subtype: str | None, races: KeyIndex) -> str | None:
+    """The race a subtype names exactly: "(augmented human)", or a people of Golarion such as "(kuru)"."""
+    words = (subtype or '').strip('() ').lower()
+    augmented = re.match(r'^augmented (.+)$', words)
+    if augmented:
+        return races.by_reading.get(augmented.group(1))
+    return races.find('human') if words in HUMAN_ETHNICITIES else None
+
+
+def family_member(name: str, races: KeyIndex) -> str | None:
+    """PCGen lists many monsters under their family: "Demon (Succubus)", "Ghoul (Ghast)", "Genie (Efreeti)"."""
+    return next((key for key in races.keys if re.search(r'\(' + re.escape(name) + r'\)$', key.lower())), None)
 
 
 # Fiends whose offspring the stat blocks name ("half-succubus"); PCGen has one Half-Fiend template

@@ -80,6 +80,12 @@ class Classes(unittest.TestCase):
     def test_a_class_is_found_whatever_its_case(self):
         self.assertEqual(catalog.resolve_class(ClassLevels('hellknight signifer', 4), self.index), ('Hellknight Signifer', None))
 
+    def test_an_elementalist_is_a_wizard_of_that_element(self):
+        self.assertEqual(catalog.resolve_class(ClassLevels('air elementalist wizard', 13), self.index), ('Wizard', 'Air'))
+
+    def test_a_thassilonian_specialist_studies_a_sin(self):
+        self.assertEqual(catalog.resolve_class(ClassLevels('thassilonian conjurer', 10), self.index), ('Wizard', 'Sloth'))
+
     def test_an_unknown_class_is_none(self):
         self.assertEqual(catalog.resolve_class(ClassLevels('gray gardener', 3), self.index), (None, None))
 
@@ -115,7 +121,7 @@ class TemplateNames(unittest.TestCase):
 class Races(unittest.TestCase):
 
     def setUp(self):
-        self.index = catalog.KeyIndex(['Human', 'Half-Elf', 'Tiefling', 'Demon (Succubus)'])
+        self.index = catalog.KeyIndex(['Human', 'Half-Elf', 'Tiefling', 'Aasimar', 'Demon (Succubus)', 'Demon (Balor)'])
 
     def test_drops_the_ethnicity(self):
         self.assertEqual(catalog.resolve_race('human (Ulfen)', self.index), ('Human', None))
@@ -125,6 +131,27 @@ class Races(unittest.TestCase):
 
     def test_finds_a_monster_listed_under_its_family(self):
         self.assertEqual(catalog.resolve_race('succubus', self.index), ('Demon (Succubus)', None))
+
+    def test_a_people_of_golarion_is_human(self):
+        self.assertEqual(catalog.resolve_race('Mwangi-Zenji', self.index), ('Human', None))
+
+    def test_a_monster_variant_finds_its_family(self):
+        self.assertEqual(catalog.resolve_race('risen succubus', self.index), ('Demon (Succubus)', None))
+
+    def test_a_monster_rank_finds_its_family(self):
+        self.assertEqual(catalog.resolve_race('balor lord', self.index), ('Demon (Balor)', None))
+
+    def test_the_last_word_is_read_without_the_parentheses(self):
+        self.assertEqual(catalog.resolve_race('azata-blooded aasimar (musetouched)', self.index), ('Aasimar', None))
+
+    def test_a_variant_named_in_parentheses(self):
+        self.assertEqual(catalog.resolve_race('gutaki (variant tiefling)', self.index), ('Tiefling', None))
+
+    def test_an_augmented_subtype_names_the_race(self):
+        self.assertEqual(catalog.race_of_subtype('(augmented human)', self.index), 'Human')
+
+    def test_an_aquatic_subtype_names_no_race(self):
+        self.assertIsNone(catalog.race_of_subtype('(aquatic)', self.index))
 
     def test_falls_back_to_the_first_word(self):
         self.assertEqual(catalog.resolve_race('human magus', self.index), ('Human', None))

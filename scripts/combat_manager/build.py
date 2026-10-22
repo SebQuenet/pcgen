@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass
 
 import catalog
@@ -201,6 +202,10 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     """Build the NPC and return its character id; what PCGen refused goes into `report`."""
     class_entries = statblock.parse_classes(record.get('Class') or '', set(catalogs.classes.by_reading))
     race_key, gender = catalog.resolve_race(record.get('Race') or '', catalogs.races)
+    # "worm that walks" names a template: the race is the subtype's "(augmented human)", or a people's "(kuru)"
+    race_template = None if race_key else catalog.resolve_template(re.sub(r'^(?:male|female) ', '', (record.get('Race') or '').lower()), catalogs.templates)
+    if not race_key:
+        race_key = catalog.race_of_subtype(record.get('SubType'), catalogs.races)
     if not race_key:
         raise LookupError(f'race inconnue : {record.get("Race")}')
     published_scores = statblock.parse_unaffected_scores(record.get('AbilitiyScores'), record.get('BaseStatistics'))
@@ -235,6 +240,11 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
         raise LookupError('aucune classe reconnue')
     for field_name in ('ClassArchetypes', 'Bloodline', 'Mystery', 'Patron', 'Spirit', 'ProhibitedSchools', 'SpellDomains'):
         hints += statblock.split_list(record.get(field_name))
+    if race_template:
+        try:
+            pc.call('add_template', character_id=character_id, template_key=race_template)
+        except pc.PcgenError as error:
+            report['refused'].append(error.message[:200])
     for template_name in statblock.parse_templates(record.get('TemplatesApplied')):
         lycanthropy = statblock.parse_lycanthropy(template_name)
         if lycanthropy:
