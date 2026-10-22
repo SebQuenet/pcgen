@@ -21,14 +21,25 @@ import java.util.Map;
 import java.util.Optional;
 
 import pcgen.cdom.base.CDOMList;
+import pcgen.cdom.enumeration.ListKey;
+import pcgen.cdom.enumeration.ObjectKey;
+import pcgen.cdom.reference.CDOMSingleRef;
+import pcgen.cdom.util.CControl;
+import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
+import pcgen.core.Deity;
 import pcgen.core.Equipment;
+import pcgen.core.Globals;
+import pcgen.core.Kit;
+import pcgen.core.PCAlignment;
 import pcgen.core.PCClass;
 import pcgen.core.PObject;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.SettingsHandler;
 import pcgen.core.character.CharacterSpell;
+import pcgen.core.kit.KitAlignment;
 import pcgen.core.spell.Spell;
+import pcgen.output.channel.ChannelUtilities;
 
 /**
  * The published Pathfinder 1 summoning tables, including additions granted by
@@ -48,6 +59,13 @@ public final class PathfinderSummonOptions
 		"Chthonic Creature", "Dark Creature", "Fiery Creature", "Primordial Creature");
 	private static final List<String> NATURE_TEMPLATES = List.of("Aerial Creature", "Aqueous Creature",
 		"Chthonic Creature", "Fiery Creature", "Primordial Creature");
+	private static final String VERSATILE_SUMMON_MONSTER = "Versatile Summon Monster";
+	private static final String MIGHTY_SUMMONS = "Mythic Path Ability ~ Mighty Summons";
+	private static final String SUPERIOR_SUMMONING = "Superior Summoning";
+	private static final String MYTHIC_TEMPLATE = "mythicTemplate";
+	private static final Map<String, String> MYTHIC_VARIANTS = Map.of(
+		"Mythic Simple Template ~ Agile", "Agile", "Mythic Simple Template ~ Savage", "Savage");
+	private static final String DEVOTED_HERALD = "Invocateur de Saint Thero ~ Héraut Divin";
 	private static final String[] ROMAN = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
 	private static final List<Option> OPTIONS = readOptions();
 
@@ -75,8 +93,10 @@ public final class PathfinderSummonOptions
 	public static SummonCatalog withPublishedOptions(PlayerCharacter character, Optional<SummonCatalog> authored)
 	{
 		var chosenMonsterTemplates = SummonSelections.versatileMonster(
-			character.getDisplay().getConjurationCatalog().orElse(""));
+			character.getDisplay().getConjurationCatalog().orElse(""), versatileFeatChoices(character));
 		int[] knownLevels = knownSummonLevels(character);
+		Optional<String> heraldDeityAlignment = heraldDeityAlignment(character);
+		boolean mightySummons = hasSpecialAbility(character, MIGHTY_SUMMONS);
 		List<SummonGroup> groups = new ArrayList<>();
 		authored.ifPresent(catalog -> groups.addAll(catalog.groups()));
 		Map<String, List<SummonTemplate>> generated = new LinkedHashMap<>();
@@ -143,11 +163,77 @@ public final class PathfinderSummonOptions
 				{
 					continue;
 				}
-				generated.computeIfAbsent(title, ignored -> new ArrayList<>()).add(summon);
+				if (heraldDeityAlignment.isPresent() && !creatureAlignment(summon)
+					.filter(alignment -> SummonAlignment.isWithinOneStep(heraldDeityAlignment.get(), alignment))
+					.isPresent())
+				{
+					continue;
+				}
+				List<SummonTemplate> titled = generated.computeIfAbsent(title, ignored -> new ArrayList<>());
+				titled.add(summon);
+				if (mightySummons && option.level() >= knownLevels[familyIndex(option.family())] - 1)
+				{
+					mythicVariantsOf(summon, option, suffix).stream()
+						.filter(variant -> CatalogResolution.unresolvedIn(variant).isEmpty()).forEach(titled::add);
+				}
 			}
 		}
 		generated.forEach((title, summons) -> groups.add(new SummonGroup(title, summons)));
 		return new SummonCatalog(groups);
+	}
+
+	/**
+	 * Mighty Summons lets a creature summoned alone take the agile or savage
+	 * mythic simple template, for one use of mythic power.
+	 */
+	private static List<SummonTemplate> mythicVariantsOf(SummonTemplate summon, Option option, String suffix)
+	{
+		List<SummonTemplate> variants = new ArrayList<>();
+		MYTHIC_VARIANTS.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(variant -> {
+			List<String> templates = new ArrayList<>(summon.templateKeys());
+			templates.add(variant.getKey());
+			Map<String, String> metadata = new LinkedHashMap<>(summon.metadata());
+			metadata.put(MYTHIC_TEMPLATE, variant.getKey());
+			metadata.remove("ranking");
+			metadata.remove("rankingSource");
+			String name = option.printedName() + suffix + " · " + variant.getValue() + " [" + option.family() + " "
+				+ ROMAN[option.level()] + "]";
+			variants.add(new SummonTemplate(name, templates, 0, List.of(), metadata));
+		});
+		return variants;
+	}
+
+	/**
+	 * @param character the conjurer
+	 * @param summon    a creature of its catalog
+	 * @param level     the summoning list the creature is on
+	 * @return the most creatures of that kind one spell brings, the dice rolling their highest.
+	 */
+	public static int maximumCount(PlayerCharacter character, SummonTemplate summon, int level)
+	{
+		if (summon.metadata().containsKey(MYTHIC_TEMPLATE))
+		{
+			return 1;
+		}
+		int highest = knownSummonLevels(character)[familyIndex(summon.metadata().getOrDefault("family", "SM"))];
+		int extraCreatures = (character.hasAbilityKeyed(AbilityCategory.FEAT, SUPERIOR_SUMMONING) ? 1 : 0)
+			+ (hasSpecialAbility(character, MIGHTY_SUMMONS) ? 1 : 0);
+		return SummonCount.maximum(level, highest, extraCreatures);
+	}
+
+	/** The templates chosen in the feats tab each time Versatile Summon Monster was taken. */
+	private static List<String> versatileFeatChoices(PlayerCharacter character)
+	{
+		Ability feat = Globals.getContext().getReferenceContext().getManufacturerId(AbilityCategory.FEAT)
+			.getActiveObject(VERSATILE_SUMMON_MONSTER);
+		return feat == null ? List.of() : character.getConsolidatedAssociationList(feat);
+	}
+
+		private static boolean hasSpecialAbility(PlayerCharacter character, String key)
+	{
+		AbilityCategory specialAbilities = SettingsHandler.getGameAsProperty().get()
+			.getAbilityCategory("Special Ability");
+		return specialAbilities != null && character.hasAbilityKeyed(specialAbilities, key);
 	}
 
 	static int[] knownSummonLevels(PlayerCharacter character)
@@ -155,7 +241,8 @@ public final class PathfinderSummonOptions
 		int[] highest = new int[2];
 		for (PObject source : character.getSpellClassList())
 		{
-			for (int spellLevel = 1; spellLevel <= 9; spellLevel++)
+			// Innate spell-like abilities are recorded at level 0
+			for (int spellLevel = 0; spellLevel <= 9; spellLevel++)
 			{
 				for (CharacterSpell known : character.getCharacterSpells(source, spellLevel))
 				{
@@ -204,8 +291,10 @@ public final class PathfinderSummonOptions
 			|| name.regionMatches(true, 0, "Summon Nature's Ally ", 0, "Summon Nature's Ally ".length());
 	}
 
-	private static void recordKnownLevel(int[] highest, String name)
+	private static void recordKnownLevel(int[] highest, String spellKey)
 	{
+		// "Summon Monster VI (Invocateur Naturel)" grants the sixth tier
+		String name = spellKey.replaceFirst("\\s*\\(.*\\)$", "");
 		for (int tier = 1; tier < ROMAN.length; tier++)
 		{
 			if (("Summon Monster " + ROMAN[tier]).equalsIgnoreCase(name))
@@ -219,6 +308,40 @@ public final class PathfinderSummonOptions
 		}
 	}
 
+	/**
+	 * The deity's alignment when the character's summons must lie within one step
+	 * of it (the Invocateur de Saint Thero's Héraut Divin).
+	 */
+	private static Optional<String> heraldDeityAlignment(PlayerCharacter character)
+	{
+		if (!hasSpecialAbility(character, DEVOTED_HERALD))
+		{
+			return Optional.empty();
+		}
+		Object deity = ChannelUtilities.readControlledChannel(character.getCharID(), CControl.DEITYINPUT);
+		if (!(deity instanceof Deity heraldDeity))
+		{
+			return Optional.empty();
+		}
+		return Optional.ofNullable(heraldDeity.get(ObjectKey.ALIGNMENT)).map(CDOMSingleRef::get)
+			.map(PCAlignment::getKeyName);
+	}
+
+	/** The alignment of the Bestiary's default kit for the race, changed by the summoning templates. */
+	private static Optional<String> creatureAlignment(SummonTemplate summon)
+	{
+		Kit kit = Globals.getContext().getReferenceContext().silentlyGetConstructedCDOMObject(Kit.class,
+			summon.metadata().getOrDefault("kit", summon.sourceRaceKey() + " Default"));
+		if (kit == null)
+		{
+			return Optional.empty();
+		}
+		return kit.getSafeListFor(ListKey.KIT_TASKS).stream().filter(KitAlignment.class::isInstance)
+			.map(KitAlignment.class::cast).flatMap(task -> task.getAlignments().stream())
+			.map(CDOMSingleRef::get).map(PCAlignment::getKeyName).findFirst()
+			.map(alignment -> summon.templateKeys().stream().reduce(alignment, SummonAlignment::withTemplate));
+	}
+
 	private static int familyIndex(String family)
 	{
 		return "SNA".equals(family) || "Versatile SNA".equals(family) || "Spider SNA".equals(family)
@@ -228,7 +351,7 @@ public final class PathfinderSummonOptions
 	private static List<Option> optionsFor(PlayerCharacter character)
 	{
 		List<Option> options = new ArrayList<>(OPTIONS);
-		if (character.hasAbilityKeyed(AbilityCategory.FEAT, "Versatile Summon Monster"))
+		if (character.hasAbilityKeyed(AbilityCategory.FEAT, VERSATILE_SUMMON_MONSTER))
 		{
 			for (Option original : OPTIONS)
 			{
@@ -298,7 +421,7 @@ public final class PathfinderSummonOptions
 			case "Neutral" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Summon Neutral Monster");
 			case "Counterpoised" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Summon Neutral Monster");
 			case "Expanded" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Expanded Summon Monster");
-			case "Versatile SM" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Versatile Summon Monster");
+			case "Versatile SM" -> character.hasAbilityKeyed(AbilityCategory.FEAT, VERSATILE_SUMMON_MONSTER);
 			case "Versatile SNA" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Versatile Summon Nature's Ally");
 			case "Plant" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Summon Plant Ally");
 			case "Skeleton" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Skeleton Summoner");

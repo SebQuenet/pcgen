@@ -17,8 +17,11 @@
  */
 package pcgen.gui2.tabs.conjurations;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -41,10 +44,12 @@ import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.ConjurationSheetFacade;
 import pcgen.gui2.tools.DesktopBrowserLauncher;
 import pcgen.io.conjurations.PathfinderSummonPortraits;
+import pcgen.system.LanguageBundle;
 import pcgen.util.Logging;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javafx.stage.FileChooser;
 
 /**
  * What the conjurations page can call back into. Planted on the page's window
@@ -66,18 +71,28 @@ public final class ConjurationBridge implements AutoCloseable
 		void browse(URI reference) throws IOException;
 	}
 
+	/** Asks the user where a file should be saved. */
+	@FunctionalInterface
+	public interface SaveLocation
+	{
+		Optional<Path> choose(String suggestedFileName);
+	}
+
+	private static final String WORKBOOK_EXTENSION = ".xlsx";
+
 	/** What the page passes for a bonus that asks no value. */
 	public static final int NO_VALUE = -1;
 
 	private static final ObjectMapper JSON = new ObjectMapper();
 	private static final String PENDING = "{\"pending\":true}";
 	private static final Set<String> REFERENCE_HOSTS = Set.of("rpgbot.net", "legacy.aonprd.com",
-		"aonprd.com", "www.aonprd.com", "www.d20pfsrd.com");
+		"aonprd.com", "www.aonprd.com", "www.d20pfsrd.com", "duckduckgo.com");
 
 	private final ConjurationSheetFacade sheet;
 	private final Function<String, Boolean> selectPublished;
 	private final BooleanSupplier visible;
 	private final ReferenceBrowser browser;
+	private final SaveLocation saveLocation;
 	private final ExecutorService catalogWorker = Executors.newSingleThreadExecutor(task -> {
 		Thread worker = new Thread(task, "pcgen-conjuration-catalog");
 		worker.setDaemon(true);
@@ -85,6 +100,12 @@ public final class ConjurationBridge implements AutoCloseable
 		return worker;
 	});
 	private final Map<String, Future<Optional<CreatureStats>>> catalogJobs = new HashMap<>();
+	private volatile SpreadsheetStatus spreadsheet = new SpreadsheetStatus("idle", 0, 0, "");
+
+	/** Where saving the table has got to: idle, building, saved or failed. */
+	private record SpreadsheetStatus(String state, int done, int total, String file)
+	{
+	}
 	private String catalogSource = "";
 
 	/**
@@ -112,6 +133,13 @@ public final class ConjurationBridge implements AutoCloseable
 	public ConjurationBridge(ConjurationSheetFacade sheet, Function<String, Boolean> selectPublished,
 		BooleanSupplier visible, ReferenceBrowser browser)
 	{
+		this(sheet, selectPublished, visible, browser, ConjurationBridge::askWhereToSave);
+	}
+
+	/** @param saveLocation asks the user where a portrait or the table should be saved. */
+	public ConjurationBridge(ConjurationSheetFacade sheet, Function<String, Boolean> selectPublished,
+		BooleanSupplier visible, ReferenceBrowser browser, SaveLocation saveLocation)
+	{
 		if (sheet == null)
 		{
 			throw new IllegalArgumentException("A conjuration bridge needs conjurations to write through");
@@ -120,6 +148,7 @@ public final class ConjurationBridge implements AutoCloseable
 		this.selectPublished = selectPublished;
 		this.visible = visible;
 		this.browser = browser;
+		this.saveLocation = saveLocation;
 	}
 
 	/** Selects one of the fixed choices offered by Expanded Summon Monster. */
@@ -311,6 +340,91 @@ public final class ConjurationBridge implements AutoCloseable
 	public String portrait(String race)
 	{
 		return PathfinderSummonPortraits.dataUriFor(race).orElse("");
+	}
+
+	/** The illustration on the card of creature {@code number} of this race, or an empty string. */
+	public String cardPortrait(String race, int number)
+	{
+		return PathfinderSummonPortraits.cardDataUriFor(race, number).orElse("");
+	}
+
+	/**
+	 * Saves the race's illustration where the user chooses. The WebView ignores
+	 * download links, so the page asks the bridge instead.
+	 */
+	public void savePortrait(String race)
+	{
+		PathfinderSummonPortraits.jpegFor(race).ifPresent(jpeg ->
+			saveLocation.choose(PathfinderSummonPortraits.fileNameOf(race)).ifPresent(destination -> {
+				try
+				{
+					Files.write(destination, jpeg);
+				}
+				catch (IOException error)
+				{
+					Logging.errorPrint("Could not save the portrait of " + race, error);
+				}
+			}));
+	}
+
+	/**
+	 * Saves the catalog as a workbook where the user chooses. Building the
+	 * creatures not built yet takes seconds each, so the file is written off
+	 * the JavaFX thread.
+	 */
+	public void saveSpreadsheet()
+	{
+		saveLocation.choose(LanguageBundle.getString("in_conjurations_sheet_name") + WORKBOOK_EXTENSION)
+			.ifPresent(destination -> {
+				spreadsheet = new SpreadsheetStatus("building", 0, 0, "");
+				try
+				{
+					catalogWorker.submit(() -> writeWorkbook(destination));
+				}
+				catch (RejectedExecutionException closed)
+				{
+					spreadsheet = new SpreadsheetStatus("failed", 0, 0, "");
+					Logging.errorPrint("Could not save the conjuration table: the page is closed", closed);
+				}
+			});
+	}
+
+	/** @return where saving the table has got to, as JSON: {@code state}, {@code done}, {@code total}, {@code file}. */
+	public String spreadsheetStatus()
+	{
+		return json(spreadsheet);
+	}
+
+	private void writeWorkbook(Path destination)
+	{
+		try
+		{
+			Files.write(destination, sheet.catalogWorkbook(
+				(done, total) -> spreadsheet = new SpreadsheetStatus("building", done, total, "")));
+			spreadsheet = new SpreadsheetStatus("saved", spreadsheet.done(), spreadsheet.total(), destination.toString());
+		}
+		catch (IOException | RuntimeException error)
+		{
+			spreadsheet = new SpreadsheetStatus("failed", 0, 0, "");
+			Logging.errorPrint("Could not save the conjuration table", error);
+		}
+	}
+
+	/** Called from the page, hence already on the JavaFX thread. */
+	private static Optional<Path> askWhereToSave(String suggestedFileName)
+	{
+		boolean workbook = suggestedFileName.endsWith(WORKBOOK_EXTENSION);
+		FileChooser chooser = new FileChooser();
+		chooser.setTitle(LanguageBundle.getString(workbook ? "in_conjurations_save_sheet" : "in_conjurations_save_portrait"));
+		chooser.setInitialFileName(suggestedFileName);
+		File documents = new File(System.getProperty("user.home"), "Documents");
+		if (workbook && documents.isDirectory())
+		{
+			chooser.setInitialDirectory(documents);
+		}
+		chooser.getExtensionFilters().add(workbook ? new FileChooser.ExtensionFilter("Excel", "*.xlsx")
+			: new FileChooser.ExtensionFilter("JPEG", "*.jpg"));
+		return Optional.ofNullable(chooser.showSaveDialog(null)).map(File::toPath);
 	}
 
 	/**

@@ -9,6 +9,8 @@ Races that already have a portrait are skipped, so an interrupted run resumes.
 Usage:
     python3 scripts/generate_summon_portraits.py --workers 4
     python3 scripts/generate_summon_portraits.py --race "Archon (Hound)" --force
+    python3 scripts/generate_summon_portraits.py --race "Protean (Naunet)" --force \\
+        --description "a 12-foot serpentine creature with a reptilian face..."
 """
 
 import argparse
@@ -30,7 +32,7 @@ CODEX_TIMEOUT_SECONDS = 900
 
 PROMPT = """Generate exactly one image with your image generation tool, then save it as the PNG file {target}.
 Subject: the Pathfinder Roleplaying Game creature "{printed_name}" (bestiary entry "{race}"{race_type}),
-faithful to its Pathfinder Bestiary description.
+faithful to its Pathfinder Bestiary description.{appearance}
 Style: cinematic heroic fantasy blockbuster film concept art, epic and realistic, dramatic lighting on the creature.
 Composition: one single creature, whole body visible, centered, isolated on a pure plain white background,
 no scenery, no ground, no text, no frame, no border. Square format.
@@ -54,12 +56,13 @@ def read_races():
     return races
 
 
-def generate(race, printed_name, race_type):
+def generate(race, printed_name, race_type, description=None):
     target_jpeg = PORTRAITS / portrait_name(race)
     with tempfile.TemporaryDirectory(prefix="portrait-") as work_directory:
         generated_png = Path(work_directory) / "portrait.png"
         prompt = PROMPT.format(target=generated_png, printed_name=printed_name, race=race,
-                               race_type=f", type {race_type}" if race_type else "")
+                               race_type=f", type {race_type}" if race_type else "",
+                               appearance=f"\nAppearance: {description}" if description else "")
         try:
             completed = subprocess.run(
                 ["codex", "exec", "--skip-git-repo-check", "-s", "workspace-write", "-C", work_directory, prompt],
@@ -79,6 +82,7 @@ def main():
     parser.add_argument("--workers", type=int, default=2, help="parallel Codex runs")
     parser.add_argument("--race", action="append", help="only this race key (repeatable)")
     parser.add_argument("--force", action="store_true", help="redraw races that already have a portrait")
+    parser.add_argument("--description", help="the creature's appearance, for a name the model misreads")
     arguments = parser.parse_args()
 
     PORTRAITS.mkdir(parents=True, exist_ok=True)
@@ -92,7 +96,7 @@ def main():
 
     failures = []
     with ThreadPoolExecutor(max_workers=arguments.workers) as pool:
-        pending = [pool.submit(generate, race, *races[race]) for race in missing]
+        pending = [pool.submit(generate, race, *races[race], arguments.description) for race in missing]
         for done, future in enumerate(as_completed(pending), start=1):
             race, failure = future.result()
             if failure:

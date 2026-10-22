@@ -20,6 +20,9 @@ package pcgen.io.conjurations;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UncheckedIOException;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Locale;
 
@@ -29,6 +32,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /** Tactical advice for Pathfinder 1 summons, kept apart from character-authored notes. */
 public final class PathfinderSummonGuides
 {
+	/** The closed role vocabulary, in the order the page offers it. */
+	public static final List<String> ROLES = List.of("bruiser", "ranged", "area", "maneuvers", "control", "support",
+		"blocker", "scout", "utility");
+
 	private static final Map<String, Guide> FRENCH = readGuides("fr");
 	private static final Map<String, Guide> ENGLISH = readGuides("en");
 
@@ -58,7 +65,15 @@ public final class PathfinderSummonGuides
 		}
 	}
 
-	public record Guide(String interest, String usage, String limits, String bestiary)
+	/**
+	 * @param roles each role key of {@link #ROLES} the creature fills, in
+	 *              order, with how to play it in that role
+	 */
+	public record Guide(String interest, String usage, String limits, String bestiary, Map<String, String> roles)
 	{
+		public Guide
+		{
+			roles = (roles == null) ? Map.of() : Collections.unmodifiableMap(new LinkedHashMap<>(roles));
+		}
 	}
 }

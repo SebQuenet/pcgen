@@ -34,6 +34,7 @@ import pcgen.core.character.EquipSet;
 import pcgen.facade.core.UIDelegate;
 import pcgen.io.ExportHandler;
 import pcgen.rules.context.AbstractReferenceContext;
+import pcgen.system.LanguageBundle;
 import pcgen.util.chooser.ChooserFactory;
 
 /**
@@ -147,7 +148,33 @@ public final class SummonedCreatureBuilder
 		return new CreatureStats(hitDice, token(creature, "MOVEMENT"), number(creature, "HP"), number(creature, "AC.Total"),
 			number(creature, "AC.Touch"), number(creature, "AC.Flatfooted"), attacks,
 			token(creature, "VAR.CMB.INTVAL.SIGN"), number(creature, "VAR.CMD.INTVAL"), save(creature, REFLEX),
-			save(creature, FORTITUDE), save(creature, WILL), token(creature, "INITIATIVEMOD"));
+			save(creature, FORTITUDE), save(creature, WILL), token(creature, "INITIATIVEMOD"),
+			specialAbilitiesOf(creature));
+	}
+
+	/** The special attacks and qualities PCGen lists for the creature, then its damage reduction and spell resistance. */
+	private static String specialAbilitiesOf(PlayerCharacter creature)
+	{
+		List<String> abilities = new ArrayList<>();
+		for (String type : List.of("SpecialAttack", "SpecialQuality"))
+		{
+			String listed = token(creature, "ABILITYALLLIST.Special Ability.VISIBLE.TYPE=" + type);
+			if (!listed.isBlank())
+			{
+				abilities.add(listed);
+			}
+		}
+		String damageReduction = token(creature, "DR");
+		if (!damageReduction.isBlank())
+		{
+			abilities.add(LanguageBundle.getString("in_conjurations_damage_reduction") + " " + damageReduction);
+		}
+		String spellResistance = token(creature, "SR");
+		if (!spellResistance.isBlank() && !"0".equals(spellResistance))
+		{
+			abilities.add(LanguageBundle.getString("in_conjurations_spell_resistance") + " " + spellResistance);
+		}
+		return String.join(", ", abilities);
 	}
 
 	/** Applies summoning-list effects that are not part of the creature's race or template. */
@@ -170,7 +197,8 @@ public final class SummonedCreatureBuilder
 		}
 		return new CreatureStats(stats.hitDice(), stats.speed(), stats.maximumHitPoints(), stats.armorClass(),
 			stats.touchArmorClass(), stats.flatFootedArmorClass(), stats.attacks(), stats.combatManeuverBonus(),
-			stats.combatManeuverDefense(), stats.reflex(), stats.fortitude(), will, stats.initiative());
+			stats.combatManeuverDefense(), stats.reflex(), stats.fortitude(), will, stats.initiative(),
+			stats.specialAbilities());
 	}
 
 	private static List<CreatureAttack> attacksOf(PlayerCharacter creature)

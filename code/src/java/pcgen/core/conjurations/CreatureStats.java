@@ -25,10 +25,20 @@ import java.util.List;
  */
 public record CreatureStats(int hitDice, String speed, int maximumHitPoints, int armorClass, int touchArmorClass,
 	int flatFootedArmorClass, List<CreatureAttack> attacks, String combatManeuverBonus, int combatManeuverDefense,
-	String reflex, String fortitude, String will, String initiative)
+	String reflex, String fortitude, String will, String initiative, String specialAbilities)
 {
 	public CreatureStats
 	{
 		attacks = (attacks == null) ? List.of() : List.copyOf(attacks);
+		specialAbilities = (specialAbilities == null) ? "" : specialAbilities;
+	}
+
+	/** Numbers without the special abilities PCGen lists, as a hand-built form has none of its own. */
+	public CreatureStats(int hitDice, String speed, int maximumHitPoints, int armorClass, int touchArmorClass,
+		int flatFootedArmorClass, List<CreatureAttack> attacks, String combatManeuverBonus, int combatManeuverDefense,
+		String reflex, String fortitude, String will, String initiative)
+	{
+		this(hitDice, speed, maximumHitPoints, armorClass, touchArmorClass, flatFootedArmorClass, attacks,
+			combatManeuverBonus, combatManeuverDefense, reflex, fortitude, will, initiative, "");
 	}
 }

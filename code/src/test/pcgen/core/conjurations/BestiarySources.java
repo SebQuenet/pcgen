@@ -35,7 +35,8 @@ public final class BestiarySources
 {
 	private static final String TEST_CONFIG_FILE = "config.ini.junit-conjuration";
 	private static final String GAME_MODE = "Pathfinder_RPG";
-	private static final List<String> CAMPAIGNS = List.of("Core Rulebook", "Bestiary");
+	private static final List<String> CAMPAIGNS = List.of("Core Rulebook", "Bestiary", "Bestiary 3", "Mythic Adventures",
+		"Monster Summoner's Handbook");
 
 	private static PcgenSession session;
 

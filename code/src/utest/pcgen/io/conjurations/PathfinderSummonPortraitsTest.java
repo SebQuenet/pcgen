@@ -18,6 +18,7 @@
 package pcgen.io.conjurations;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -46,6 +47,38 @@ class PathfinderSummonPortraitsTest
 	void raceWithoutPortraitHasNone()
 	{
 		Optional<String> portrait = PathfinderSummonPortraits.dataUriFor("Unknown Race");
+
+		assertEquals(Optional.empty(), portrait);
+	}
+
+	@Test
+	void caninesInPlayCycleThroughTheirSixIllustrations()
+	{
+		Optional<String> first = PathfinderSummonPortraits.cardDataUriFor("Dog", 1);
+
+		assertEquals(first, PathfinderSummonPortraits.cardDataUriFor("Dog", 7));
+	}
+
+	@Test
+	void caninesInPlayDoNotAllShareOneIllustration()
+	{
+		Optional<String> first = PathfinderSummonPortraits.cardDataUriFor("Wolf (Dire)", 1);
+
+		assertNotEquals(first, PathfinderSummonPortraits.cardDataUriFor("Wolf (Dire)", 2));
+	}
+
+	@Test
+	void canineInPlayIsShownWithAnEmbeddableJpeg()
+	{
+		Optional<String> portrait = PathfinderSummonPortraits.cardDataUriFor("Wolf", 3);
+
+		assertTrue(portrait.orElse("").startsWith(JPEG_DATA_URI), portrait.toString());
+	}
+
+	@Test
+	void otherCreaturesInPlayHaveNoCardIllustration()
+	{
+		Optional<String> portrait = PathfinderSummonPortraits.cardDataUriFor("Archon (Hound)", 1);
 
 		assertEquals(Optional.empty(), portrait);
 	}

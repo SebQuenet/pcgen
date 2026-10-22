@@ -20,8 +20,6 @@
 package pcgen.gui2.util;
 
 import java.net.URI;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -36,6 +34,7 @@ import pcgen.core.Race;
 import pcgen.core.Skill;
 import pcgen.core.spell.Spell;
 import pcgen.system.LanguageBundle;
+import pcgen.util.FirstResultSearch;
 
 /**
  * {@code HtmlInfoBuilder} is a helper class for the various
@@ -52,14 +51,6 @@ public class HtmlInfoBuilder
 	private static final String PATHFINDER_FR_LABEL = "Pathfinder-fr";
 	private static final String PATHFINDER_WIKI_LABEL = "PathfinderWiki";
 	private static final String D20PFSRD_LABEL = "d20PFSRD";
-	private static final String NETHYS_SITE = "aonprd.com";
-	private static final String PATHFINDER_FR_SITE = "pathfinder-fr.org";
-	private static final String PATHFINDER_WIKI_SITE = "pathfinderwiki.com";
-	private static final String D20PFSRD_SITE = "d20pfsrd.com";
-	/** DuckDuckGo jumps straight to the first result of a query that starts with a backslash. */
-	private static final String FIRST_RESULT_SEARCH = "https://duckduckgo.com/?q=";
-	/** Pathfinder-fr also hosts Pathfinder 2 and setting pages; this term favours the Pathfinder 1 rules. */
-	private static final String PATHFINDER_FR_RULES_TERM = "Pathfinder-RPG";
 
 	private final StringBuilder buffer = new StringBuilder(300);
 	private final boolean fullDocument;
@@ -249,29 +240,25 @@ public class HtmlInfoBuilder
 		}
 		SearchKeyword keyword = SearchKeyword.of(source);
 		String englishQuery = joinTerms(englishName, keyword.english());
-		String frenchQuery = joinTerms(source.getLocalizedName(), keyword.french(), PATHFINDER_FR_RULES_TERM);
-		appendSearchLink(NETHYS_LABEL, NETHYS_SITE, englishQuery, primaryLabel);
-		appendSearchLink(PATHFINDER_FR_LABEL, PATHFINDER_FR_SITE, frenchQuery, primaryLabel);
-		appendSearchLink(PATHFINDER_WIKI_LABEL, PATHFINDER_WIKI_SITE, englishQuery, primaryLabel);
-		appendSearchLink(D20PFSRD_LABEL, D20PFSRD_SITE, englishQuery, primaryLabel);
+		String frenchQuery = joinTerms(source.getLocalizedName(), keyword.french(),
+			FirstResultSearch.PATHFINDER_FR_RULES_TERM);
+		appendSearchLink(NETHYS_LABEL, FirstResultSearch.NETHYS, englishQuery, primaryLabel);
+		appendSearchLink(PATHFINDER_FR_LABEL, FirstResultSearch.PATHFINDER_FR, frenchQuery, primaryLabel);
+		appendSearchLink(PATHFINDER_WIKI_LABEL, FirstResultSearch.PATHFINDER_WIKI, englishQuery, primaryLabel);
+		appendSearchLink(D20PFSRD_LABEL, FirstResultSearch.D20PFSRD, englishQuery, primaryLabel);
 	}
 
 	private void appendSearchLink(String label, String site, String query, String primaryLabel)
 	{
 		if (!label.equals(primaryLabel))
 		{
-			appendLink(FIRST_RESULT_SEARCH + encode("\\" + query + " site:" + site), label);
+			appendLink(FirstResultSearch.addressOf(query, site), label);
 		}
 	}
 
 	private static String joinTerms(String... terms)
 	{
 		return Stream.of(terms).filter(term -> !term.isEmpty()).collect(Collectors.joining(" "));
-	}
-
-	private static String encode(String name)
-	{
-		return URLEncoder.encode(name, StandardCharsets.UTF_8).replace("+", "%20");
 	}
 
 	private static String sourceLabel(String link)

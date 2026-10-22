@@ -23,6 +23,7 @@ import java.io.UncheckedIOException;
 import java.util.Base64;
 import java.util.Locale;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Illustrations of Pathfinder 1 summons, one 250x250 JPEG per race, drawn by
@@ -33,6 +34,9 @@ public final class PathfinderSummonPortraits
 {
 	private static final String DIRECTORY = "/pcgen/conjurations/portraits/";
 	private static final String JPEG_DATA_URI = "data:image/jpeg;base64,";
+	private static final String CANINE_DIRECTORY = "canine/";
+	private static final int CANINE_ILLUSTRATION_COUNT = 6;
+	private static final Set<String> CANINE_RACE_KEYS = Set.of("Dog", "Wolf", "Wolf (Dire)");
 
 	private PathfinderSummonPortraits()
 	{
@@ -40,22 +44,52 @@ public final class PathfinderSummonPortraits
 
 	public static Optional<String> dataUriFor(String raceKey)
 	{
-		try (InputStream portrait = PathfinderSummonPortraits.class.getResourceAsStream(DIRECTORY + fileNameOf(raceKey)))
+		return jpegFor(raceKey).map(PathfinderSummonPortraits::dataUriOf);
+	}
+
+	public static Optional<byte[]> jpegFor(String raceKey)
+	{
+		return read(fileNameOf(raceKey));
+	}
+
+	/**
+	 * The illustration on the card of a creature in play. Canines take turns
+	 * among their own illustrations by their number in the fight, so a pack
+	 * does not look like one dog repeated; other creatures have none.
+	 */
+	public static Optional<String> cardDataUriFor(String raceKey, int number)
+	{
+		if (!CANINE_RACE_KEYS.contains(raceKey) || number < 1)
+		{
+			return Optional.empty();
+		}
+		int illustration = (number - 1) % CANINE_ILLUSTRATION_COUNT + 1;
+		return read(CANINE_DIRECTORY + illustration + ".jpg").map(PathfinderSummonPortraits::dataUriOf);
+	}
+
+	private static String dataUriOf(byte[] jpeg)
+	{
+		return JPEG_DATA_URI + Base64.getEncoder().encodeToString(jpeg);
+	}
+
+	private static Optional<byte[]> read(String fileName)
+	{
+		try (InputStream portrait = PathfinderSummonPortraits.class.getResourceAsStream(DIRECTORY + fileName))
 		{
 			if (portrait == null)
 			{
 				return Optional.empty();
 			}
-			return Optional.of(JPEG_DATA_URI + Base64.getEncoder().encodeToString(portrait.readAllBytes()));
+			return Optional.of(portrait.readAllBytes());
 		}
 		catch (IOException error)
 		{
-			throw new UncheckedIOException("Could not read the portrait of " + raceKey, error);
+			throw new UncheckedIOException("Could not read the portrait " + fileName, error);
 		}
 	}
 
 	/** Same name as {@code portrait_name} in the generation script. */
-	private static String fileNameOf(String raceKey)
+	public static String fileNameOf(String raceKey)
 	{
 		String slug = raceKey.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]+", "_").replaceAll("^_+|_+$", "");
 		return slug + ".jpg";

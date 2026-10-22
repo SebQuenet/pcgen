@@ -8,6 +8,7 @@
  */
 package pcgen.core.conjurations;
 
+import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -21,6 +22,18 @@ public final class SummonSelections
 
 	private SummonSelections()
 	{
+	}
+
+	/**
+	 * @param source      the catalog's text, which may record choices on {@code # versatile-sm:} lines
+	 * @param featChoices the templates chosen with the feat Versatile Summon Monster
+	 * @return the versatile templates chosen either way.
+	 */
+	public static Set<String> versatileMonster(String source, Collection<String> featChoices)
+	{
+		Set<String> selected = new LinkedHashSet<>(versatileMonster(source));
+		featChoices.stream().filter(MONSTER_TEMPLATES::contains).forEach(selected::add);
+		return Set.copyOf(selected);
 	}
 
 	public static Set<String> versatileMonster(String source)

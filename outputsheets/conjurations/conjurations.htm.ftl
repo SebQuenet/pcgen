@@ -26,9 +26,9 @@
 <#macro card name number damage counted rounds found summon missing bonuses form="">
 <#-- The maximum hit points arrive with the numbers PCGen computes, through the bridge -->
 <#local authored = found && summon.authored />
-<article class="card<#if counted && rounds == 0> gone</#if>" data-creature="${name}" data-number="${number?c}" data-damage="${damage?c}" data-max="${(authored?then(summon.hpMax, 0))?c}" data-counted="${counted?c}" data-rounds="${rounds?c}" data-authored="${authored?c}" data-form="${form}">
+<article class="card<#if counted && rounds == 0> gone</#if>" data-creature="${name}" data-number="${number?c}" data-damage="${damage?c}" data-max="${(authored?then(summon.hpMax, 0))?c}" data-counted="${counted?c}" data-rounds="${rounds?c}" data-authored="${authored?c}" data-form="${form}"<#if found> data-race="${summon.race}"</#if>>
   <header>
-    <span class="card-name"><#if found>${summon.displayName}<#else>${name}</#if> <span class="card-number">${number?c}</span><#if found><button type="button" class="inspect-creature" data-creature="${name}" title="${labels.details}" aria-label="${labels.details} : ${summon.displayName}">&#128269;</button></#if></span>
+    <span class="card-name"><span class="card-label" contenteditable="true" spellcheck="false" title="${labels.rename}"><#if found>${summon.displayName}<#else>${name}</#if></span> <span class="card-number">${number?c}</span><#if found><button type="button" class="inspect-creature" data-creature="${name}" title="${labels.details}" aria-label="${labels.details} : ${summon.displayName}">&#128269;</button></#if></span>
     <span class="rounds"<#if !counted> hidden</#if>>
       <button type="button" data-action="rounds-down">&minus;</button>
       <span class="rounds-left">${rounds?c}</span> ${labels.rounds}
@@ -37,6 +37,8 @@
     </span>
     <button type="button" class="dismiss" data-action="dismiss">${labels.dismiss}</button>
   </header>
+  <#if found && summon.displayTemplates?has_content><p class="card-templates"><#list summon.displayTemplates as template><span class="template-chip">${template}</span><#sep> </#sep></#list></p></#if>
+  <img class="card-portrait" alt="" hidden>
   <div class="hp">
     <#if authored && summon.hpMax gt 0>
     <span class="hp-readout"><span class="hp-current">${(summon.hpMax - damage)?c}</span> / <span class="hp-maximum">${summon.hpMax?c}</span></span><span class="bar"><span></span></span>
@@ -58,6 +60,7 @@
   <div class="own-bonuses"><span class="lbl">${labels.ownBonuses}</span><span class="chips"><#list bonuses as bonus><@chip bonus=bonus own=true/></#list></span><@adder action="add-bonus"/></div>
   <p class="building">${labels.building}</p>
   <dl class="stats"></dl>
+  <dl class="template-differences" hidden data-title="${labels.templateDifferences}" data-abilities="${labels.addedAbilities}"></dl>
   </#if>
   <#elseif missing?has_content>
   <p class="unresolved">${missing}</p>
@@ -97,6 +100,8 @@ button:hover{border-color:var(--gold)}
 .filters{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0}
 .filter{color:var(--text-dim)}
 .filter.on{color:var(--gold-bright);border-color:var(--gold-dim);background:var(--bg)}
+.catalog-tools{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin:4px 0}
+.download-sheet[hidden]{display:none}
 
 table{border-collapse:collapse;width:100%;min-width:950px;font-size:12px}
 col.c-conjure{width:78px}
@@ -113,6 +118,16 @@ th{position:sticky;top:0;background:var(--bg);text-align:left;font-weight:600;co
   font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px 3px 0}
 td{padding:2px 6px 2px 0;vertical-align:top;overflow-wrap:anywhere}
 tbody.summon{border-top:1px solid var(--bg3)}
+tbody.summon[data-folded="true"]{display:none}
+tbody.summon[data-variant-base="false"] td.name{padding-left:18px}
+.card-templates{margin:2px 0;display:flex;flex-wrap:wrap;gap:4px}
+.template-chip{font-size:11px;padding:1px 6px;border-radius:8px;background:var(--bg3);color:var(--text)}
+.template-differences{display:grid;grid-template-columns:max-content 1fr;gap:1px 8px;margin:4px 0 0;padding-top:4px;border-top:1px dashed var(--border);font-size:11px}
+.template-differences dt{color:var(--def);font-weight:600}
+.template-differences dd{margin:0}
+.template-differences[hidden]{display:none}
+.template-differences .title{grid-column:1/-1;font-weight:600;color:var(--text-dim)}
+.unfold{border:0;background:transparent;color:var(--def);padding:0 3px;font-size:12px;cursor:pointer}
 td.name{color:var(--gold-bright);font-weight:600}
 td.hp{color:var(--grn)}
 td.ac{color:var(--def)}
@@ -128,6 +143,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 .rating{font-size:11px;font-weight:600;white-space:nowrap}
 .rating.red{color:#a32626}.rating.orange{color:#9c5200}.rating.green{color:#187338}.rating.blue{color:#1d5a85}
 .conjure{color:var(--grn);white-space:nowrap}
+.conjure-count{width:3.2em}
 .inspect-creature{border:0;background:transparent;color:var(--def);padding:0 3px;font-size:14px;line-height:1}
 .inspect-creature:hover{color:var(--gold-bright)}
 .drawer-shade{position:fixed;inset:0;background:rgba(15,23,19,.35);z-index:30}
@@ -139,6 +155,9 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   border-bottom:1px solid var(--border);padding-bottom:8px}
 .drawer-head h2{font-size:17px;letter-spacing:0;text-transform:none;margin:0}
 .drawer-close{font-size:18px;line-height:1}
+.drawer-actions{display:flex;gap:6px}
+.drawer-download{font-size:15px;line-height:1}
+.drawer-download[hidden]{display:none}
 .drawer-portrait{display:block;width:250px;height:250px;margin:10px auto 0;background:#fff;border-radius:4px}
 .drawer-portrait[hidden]{display:none}
 .drawer-body h3{font-size:12px;color:var(--def);margin:14px 0 3px}
@@ -164,6 +183,9 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 .card header{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
 .card-name{color:var(--gold-bright);font-size:13px;margin-right:auto}
 .card-number{color:var(--gold)}
+.card-label{border-bottom:1px dashed transparent;outline:none;cursor:text}
+.card-label:hover,.card-label:focus{border-bottom-color:var(--gold-dim)}
+.card-portrait{display:block;width:140px;height:140px;margin:0 auto;background:#fff;border-radius:4px}
 .rounds{display:inline-flex;align-items:center;gap:3px;color:var(--text-dim);font-size:11px}
 .rounds-left{color:var(--buff);font-weight:600}
 .gone-tag{display:none;color:var(--warn);text-transform:uppercase;font-size:10px;letter-spacing:.06em}
@@ -223,7 +245,15 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     </ul>
   </div>
 <#else>
-  <label class="target-ac">${labels.targetArmor} <input type="number" min="1" max="99" value="20" /></label>
+  <div class="catalog-tools">
+    <label class="target-ac">${labels.targetArmor} <input type="number" min="1" max="99" value="20" /></label>
+    <label>${labels.role} <select class="role-filter"><option value="">${labels.allRoles}</option><#list conjurations.roleOptions as role><option value="${role}">${role}</option></#list></select></label>
+    <#assign romanLevels = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]>
+    <label>${labels.levelMin} <select class="level-min"><#list romanLevels as roman><option value="${roman?counter?c}"<#if roman?is_first> selected</#if>>${roman}</option></#list></select></label>
+    <label>${labels.levelMax} <select class="level-max"><#list romanLevels as roman><option value="${roman?counter?c}"<#if roman?is_last> selected</#if>>${roman}</option></#list></select></label>
+    <button type="button" class="download-sheet" hidden>${labels.downloadSheet}</button>
+    <span class="sheet-status" aria-live="polite" data-building="${labels.sheetBuilding}" data-saved="${labels.sheetSaved}" data-failed="${labels.sheetFailed}"></span>
+  </div>
   <table class="catalog-table">
     <thead><tr>
       <th></th>
@@ -232,7 +262,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       <th>${labels.role}</th>
       <th><button class="sort" type="button" data-sort="ranking" title="${labels.ranking}">${labels.ranking}</button></th>
       <th><button class="sort" type="button" data-sort="hitDice">${labels.hitDice}</button></th>
-      <th><button class="sort" type="button" data-sort="expectedDamagePerRound" title="${labels.expectedDamage}">${labels.expectedDamage}</button></th>
+      <th><button class="sort" type="button" data-sort="expectedDamagePerRound" title="${labels.expectedDamage}">${labels.expectedDamageShort}</button></th>
       <th><button class="sort" type="button" data-sort="armorClass">${conjurations.statLabels.ac}</button></th>
       <th><button class="sort" type="button" data-sort="touchArmorClass">${labels.touchArmor}</button></th>
       <th><button class="sort" type="button" data-sort="flatFootedArmorClass">${labels.flatArmor}</button></th>
@@ -240,11 +270,11 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       <th><button class="sort" type="button" data-sort="combatManeuverDefense">${conjurations.statLabels.cmd}</button></th>
     </tr></thead>
     <#list conjurations.summons as summon>
-    <tbody class="summon" data-creature="${summon.name}" data-group="${summon.group}" data-family="${summon.family}" data-level="${summon.levelRank?c}" data-order="${summon?index?c}" data-authored="${summon.authored?c}" data-available="${summon.available?c}"<#if summon.ranking.score??> data-sort-ranking="${summon.ranking.score?c}"</#if>>
+    <tbody class="summon" data-creature="${summon.name}" data-variant-group="${summon.variantGroup}" data-variant-base="${summon.variantBase?c}"<#if !summon.variantBase> data-folded="true"</#if> data-display-name="${summon.displayName}" data-group="${summon.group}" data-family="${summon.family}" data-level="${summon.levelRank?c}" data-roles="<#list summon.roles as role>${role}<#sep>|</#sep></#list>" data-order="${summon?index?c}" data-authored="${summon.authored?c}" data-available="${summon.available?c}"<#if summon.ranking.score??> data-sort-ranking="${summon.ranking.score?c}"</#if>>
       <tr>
-        <td><#if (summon.family == "Expanded" || summon.family == "Versatile SM") && summon.choiceRequired><button type="button" class="select-choice" data-creature="${summon.name}" title="${summon.choiceHint}">${labels.selectChoice}</button><#else><button type="button" class="conjure" data-creature="${summon.name}"<#if !summon.available> disabled title="${summon.unavailableHint}"</#if>>${labels.conjure}</button></#if></td>
-        <td class="metric">${summon.displayGroup}</td>
-        <td class="name">${summon.displayName} <button type="button" class="inspect-creature" data-creature="${summon.name}" title="${labels.details}" aria-label="${labels.details} : ${summon.displayName}">&#128269;</button></td>
+        <td><#if (summon.family == "Expanded" || summon.family == "Versatile SM") && summon.choiceRequired><button type="button" class="select-choice" data-creature="${summon.name}" title="${summon.choiceHint}">${labels.selectChoice}</button><#else><button type="button" class="conjure" data-creature="${summon.name}"<#if !summon.available> disabled title="${summon.unavailableHint}"</#if>>${labels.conjure}</button><#if summon.family != "Skeleton 1/day"> <input type="number" class="conjure-count" min="1" max="15" value="1" title="${labels.conjureCount}" aria-label="${labels.conjureCount}"<#if !summon.available> disabled</#if>></#if></#if></td>
+        <td class="metric" title="${summon.displayGroup}"><#if summon.level?has_content>${summon.level}<#else>${summon.displayGroup}</#if></td>
+        <td class="name"><#if (summon.variantCount > 0)><button type="button" class="unfold" data-variant-group="${summon.variantGroup}" aria-expanded="false" data-show="${labels.showVariants}" data-hide="${labels.hideVariants}" title="${labels.showVariants}">&#9656; +${summon.variantCount?c}</button> </#if>${summon.displayName} <button type="button" class="inspect-creature" data-creature="${summon.name}" title="${labels.details}" aria-label="${labels.details} : ${summon.displayName}">&#128269;</button></td>
         <td><#list summon.roles as role><span class="tag">${role}</span></#list></td>
         <td><#if summon.ranking.color?has_content><a class="rating ${summon.ranking.color}" data-reference="true" href="${summon.ranking.source}" title="${labels.ranking} : ${labels['rating_' + summon.ranking.color + '_meaning']}" target="_blank" rel="noopener noreferrer">${labels['rating_' + summon.ranking.color]}</a><#else>${labels.unranked}</#if></td>
         <#list ["hitDice", "expectedDamagePerRound", "armorClass", "touchArmorClass", "flatFootedArmorClass", "combatManeuverBonus", "combatManeuverDefense"] as metric>
@@ -288,7 +318,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 
 <div class="drawer-shade" hidden></div>
 <aside class="creature-drawer" role="dialog" aria-modal="true" aria-label="${labels.details}" data-hit-dice-label="${labels.hitDice}" data-expected-damage-label="${labels.expectedDamage}" data-building-label="${labels.building}" hidden>
-  <div class="drawer-head"><h2 class="drawer-name"></h2><button type="button" class="drawer-close" aria-label="${labels.closeDetails}">&times;</button></div>
+  <div class="drawer-head"><h2 class="drawer-name"></h2><span class="drawer-actions"><button type="button" class="drawer-download" title="${labels.downloadPortrait}" aria-label="${labels.downloadPortrait}" hidden>&#11015;</button><button type="button" class="drawer-close" aria-label="${labels.closeDetails}">&times;</button></span></div>
   <img class="drawer-portrait" alt="" hidden>
   <div class="drawer-body"></div>
 </aside>
@@ -300,6 +330,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   <#if summon.guide.interest?has_content><h3>${labels.interest}</h3><p><@text summon.guide.interest/></p></#if>
   <#if summon.guide.usage?has_content><h3>${labels.usage}</h3><p><@text summon.guide.usage/></p></#if>
   <#if summon.guide.limits?has_content><h3>${labels.limits}</h3><p><@text summon.guide.limits/></p></#if>
+  <#if summon.roleUsage?has_content><h3>${labels.roleUsage}</h3><#list summon.roleUsage as play><p><b>${play.label}</b> : <@text play.usage/></p></#list></#if>
   <#if summon.metadata.special?has_content><h3>${labels.abilities}</h3><p><@text summon.metadata.special/></p></#if>
   <#if summon.metadata.spells?has_content><h3>${labels.spells}</h3><p><@text summon.metadata.spells/></p></#if>
   <#if summon.note?has_content><h3><#if summon.metadata.publishedName?has_content>${labels.rulesNote}<#else>${labels.authoredNote}</#if></h3><p><@text summon.note/></p></#if>
@@ -310,7 +341,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   <h3>${labels.fullStats}</h3>
   <#if summon.authored><dl class="drawer-stats"><#list conjurations.metadataFields as field><#if summon.metadata[field]?has_content && field != "note" && field != "special" && field != "spells"><dt>${conjurations.fieldLabels[field]}</dt><dd><@text summon.metadata[field]/></dd></#if></#list></dl></#if>
   <#if !summon.authored><p class="drawer-stat-status">${labels.computedInApp}</p><dl class="drawer-stats"></dl></#if>
-  <div class="drawer-sources"><#if summon.guide.bestiary?has_content><a data-reference="true" href="${summon.guide.bestiary}" target="_blank" rel="noopener noreferrer">${labels.bestiarySource}</a></#if><#if summon.ranking.source?has_content><a data-reference="true" href="${summon.ranking.source}" target="_blank" rel="noopener noreferrer">${labels.guideSource}</a></#if><#if summon.metadata.source?has_content><a data-reference="true" href="${summon.metadata.source}" target="_blank" rel="noopener noreferrer">${labels.publishedRules}</a><#else><a data-reference="true" href="https://legacy.aonprd.com/coreRulebook/spells/summonMonster.html" target="_blank" rel="noopener noreferrer">${labels.rulesSource}</a></#if></div>
+  <div class="drawer-sources"><#if summon.guide.bestiary?has_content><a data-reference="true" href="${summon.guide.bestiary}" target="_blank" rel="noopener noreferrer">${labels.bestiarySource}</a></#if><#if summon.ranking.source?has_content><a data-reference="true" href="${summon.ranking.source}" target="_blank" rel="noopener noreferrer">${labels.guideSource}</a></#if><#if summon.metadata.source?has_content><a data-reference="true" href="${summon.metadata.source}" target="_blank" rel="noopener noreferrer">${labels.publishedRules}</a><#else><a data-reference="true" href="https://legacy.aonprd.com/coreRulebook/spells/summonMonster.html" target="_blank" rel="noopener noreferrer">${labels.rulesSource}</a></#if><#list summon.searchLinks as search><a data-reference="true" href="${search.address}" target="_blank" rel="noopener noreferrer">${search.label}</a></#list></div>
 </template>
 </#list>
 
@@ -447,7 +478,15 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
 
   each(document.querySelectorAll(".catalog .conjure"), function (button) {
     button.addEventListener("click", function () {
-      conjure(button.getAttribute("data-creature"), button.closest("tbody").getAttribute("data-family"));
+      // As many creatures as the count asks, from 1 to 15
+      var count = button.parentNode.querySelector(".conjure-count");
+      var times = count ? Math.max(1, Math.min(15, whole(count.value, 1))) : 1;
+      if (count) {
+        count.value = String(times);
+      }
+      for (var made = 0; made < times; made++) {
+        conjure(button.getAttribute("data-creature"), button.closest("tbody").getAttribute("data-family"));
+      }
     });
   });
 
@@ -473,6 +512,33 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     }
     card.setAttribute("data-form", selected);
     refreshCardsLater([card]);
+  });
+
+  // A creature's name can be changed for the fight; the change is not saved.
+  cards.addEventListener("focusin", function (event) {
+    if (event.target.classList.contains("card-label")) {
+      event.target.setAttribute("data-before-rename", event.target.textContent);
+    }
+  });
+  cards.addEventListener("keydown", function (event) {
+    var label = event.target;
+    if (!label.classList.contains("card-label")) {
+      return;
+    }
+    if (event.key === "Enter") {
+      event.preventDefault();
+      label.blur();
+    } else if (event.key === "Escape") {
+      label.textContent = label.getAttribute("data-before-rename");
+      label.blur();
+    }
+  });
+  cards.addEventListener("focusout", function (event) {
+    var label = event.target;
+    if (label.classList.contains("card-label")) {
+      var typed = label.textContent.replace(/\s+/g, " ").trim();
+      label.textContent = typed || label.getAttribute("data-before-rename");
+    }
   });
 
   cards.addEventListener("click", function (event) {
@@ -577,11 +643,15 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   var catalogRevision = 0;
 
   function sortCatalog() {
-    if (!catalogTable || !catalogSort) {
+    if (!catalogTable) {
       return;
     }
-    var rows = Array.prototype.slice.call(catalogTable.querySelectorAll("tbody.summon"));
+    // Only the base of each creature is sorted; its variants follow it in catalog order.
+    var rows = Array.prototype.slice.call(catalogTable.querySelectorAll('tbody.summon[data-variant-base="true"]'));
     rows.sort(function (left, right) {
+      if (!catalogSort) {
+        return whole(left.getAttribute("data-order"), 0) - whole(right.getAttribute("data-order"), 0);
+      }
       var a, b;
       if (catalogSort === "name") {
         a = left.getAttribute("data-creature");
@@ -593,6 +663,9 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       if (catalogSort === "level") {
         a = Number(left.getAttribute("data-level"));
         b = Number(right.getAttribute("data-level"));
+        // Within a level, by name from A to Z whichever way the levels run
+        return (catalogAscending ? a - b : b - a) || left.getAttribute("data-display-name")
+          .localeCompare(right.getAttribute("data-display-name"), document.documentElement.lang || undefined);
       } else {
         var rawA = left.getAttribute("data-sort-" + catalogSort);
         var rawB = right.getAttribute("data-sort-" + catalogSort);
@@ -609,20 +682,79 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     });
     rows.forEach(function (row) {
       catalogTable.appendChild(row);
+      variantsOf(row.getAttribute("data-variant-group")).forEach(function (variant) {
+        catalogTable.appendChild(variant);
+      });
     });
   }
+
+  function variantsOf(variantGroup) {
+    return Array.prototype.slice.call(catalogTable.querySelectorAll('tbody.summon[data-variant-base="false"]'))
+      .filter(function (row) { return row.getAttribute("data-variant-group") === variantGroup; })
+      .sort(function (left, right) {
+        return whole(left.getAttribute("data-order"), 0) - whole(right.getAttribute("data-order"), 0);
+      });
+  }
+
+  if (catalogTable) {
+    catalogTable.addEventListener("click", function (event) {
+      var unfold = event.target.closest ? event.target.closest("button.unfold") : null;
+      if (!unfold) {
+        return;
+      }
+      var opening = unfold.getAttribute("aria-expanded") !== "true";
+      unfold.setAttribute("aria-expanded", opening ? "true" : "false");
+      unfold.title = opening ? unfold.getAttribute("data-hide") : unfold.getAttribute("data-show");
+      unfold.firstChild.textContent = (opening ? "\u25BE" : "\u25B8") + unfold.firstChild.textContent.slice(1);
+      variantsOf(unfold.getAttribute("data-variant-group")).forEach(function (variant) {
+        if (opening) {
+          variant.removeAttribute("data-folded");
+        } else {
+          variant.setAttribute("data-folded", "true");
+        }
+      });
+    });
+  }
+  // Variants written in another group of the catalog still open under their base.
+  sortCatalog();
 
   if (catalogTable) {
     each(catalogTable.querySelectorAll("button.sort"), function (button) {
       button.addEventListener("click", function () {
         var key = button.getAttribute("data-sort");
-        catalogAscending = (catalogSort === key) ? !catalogAscending : key === "name";
+        catalogAscending = (catalogSort === key) ? !catalogAscending : (key === "name" || key === "level");
         catalogSort = key;
         each(catalogTable.querySelectorAll("button.sort"), function (other) {
           other.setAttribute("aria-pressed", other === button ? "true" : "false");
         });
         sortCatalog();
       });
+    });
+  }
+
+  var roleFilter = document.querySelector(".role-filter");
+  var levelMinFilter = document.querySelector(".level-min");
+  var levelMaxFilter = document.querySelector(".level-max");
+
+  // A creature with no known level is kept whatever the level bounds.
+  function filterCatalog() {
+    if (!catalogTable) {
+      return;
+    }
+    var role = roleFilter.value;
+    var lowest = whole(levelMinFilter.value, 1);
+    var highest = whole(levelMaxFilter.value, 9);
+    each(catalogTable.querySelectorAll("tbody.summon"), function (row) {
+      var level = whole(row.getAttribute("data-level"), 0);
+      var roles = row.getAttribute("data-roles").split("|");
+      var levelFits = level === 0 || (level >= lowest && level <= highest);
+      row.hidden = !levelFits || (role !== "" && roles.indexOf(role) < 0);
+    });
+  }
+
+  if (catalogTable) {
+    each([roleFilter, levelMinFilter, levelMaxFilter], function (filter) {
+      filter.addEventListener("change", filterCatalog);
     });
   }
 
@@ -647,7 +779,10 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     if (!catalogTable || !bridge()) {
       return;
     }
-    var queue = Array.prototype.slice.call(catalogTable.querySelectorAll("tbody.summon:not([hidden])"));
+    // Rows a filter hides are built last, so that the sort still knows them.
+    var queue = Array.prototype.slice.call(catalogTable.querySelectorAll("tbody.summon:not([hidden]):not([data-folded])"))
+      .concat(Array.prototype.slice.call(catalogTable.querySelectorAll("tbody.summon[data-folded]:not([hidden])")))
+      .concat(Array.prototype.slice.call(catalogTable.querySelectorAll("tbody.summon[hidden]")));
     var revision = ++catalogRevision;
     var targetArmor = Math.max(1, Math.min(99, whole(targetArmorInput.value, 20)));
     targetArmorInput.value = String(targetArmor);
@@ -719,6 +854,38 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     list.appendChild(valueCell(now, before));
   }
 
+  // What the creature's templates change, against the same creature without them.
+  function paintTemplateDifferences(card, differences) {
+    var list = card.querySelector(".template-differences");
+    if (!list) {
+      return;
+    }
+    while (list.firstChild) {
+      list.removeChild(list.firstChild);
+    }
+    list.hidden = differences.length === 0;
+    if (list.hidden) {
+      return;
+    }
+    var title = document.createElement("dt");
+    title.className = "title";
+    title.textContent = list.getAttribute("data-title");
+    list.appendChild(title);
+    differences.forEach(function (difference) {
+      var term = document.createElement("dt");
+      var value = document.createElement("dd");
+      if (difference.stat === "abilities") {
+        term.textContent = list.getAttribute("data-abilities");
+        value.textContent = "+ " + difference.withTemplates;
+      } else {
+        term.textContent = statLabels[difference.stat] || difference.stat;
+        value.textContent = difference.withoutTemplates + " \u2192 " + difference.withTemplates;
+      }
+      list.appendChild(term);
+      list.appendChild(value);
+    });
+  }
+
   function armorOf(stats) {
     return stats.armorClass + " / " + stats.touchArmorClass + " / " + stats.flatFootedArmorClass;
   }
@@ -747,6 +914,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       now.reflex + " / " + now.fortitude + " / " + now.will,
       base.reflex === undefined ? undefined : base.reflex + " / " + base.fortitude + " / " + base.will);
     row(list, statLabels.init, now.initiative, base.initiative);
+    paintTemplateDifferences(card, view.templateDifferences || []);
     card.setAttribute("data-max", String(now.maximumHitPoints));
     var building = card.querySelector(".building");
     if (building) {
@@ -847,6 +1015,8 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     var portrait = drawer.querySelector(".drawer-portrait");
     var portraitAddress = bridge() && bridge().portrait ? bridge().portrait(detail.getAttribute("data-race")) : "";
     portrait.hidden = !portraitAddress;
+    drawer.setAttribute("data-race", detail.getAttribute("data-race"));
+    drawer.querySelector(".drawer-download").hidden = !portraitAddress || !bridge().savePortrait;
     if (portraitAddress) {
       portrait.setAttribute("src", portraitAddress);
     } else {
@@ -873,12 +1043,59 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     }
   });
   drawer.querySelector(".drawer-close").addEventListener("click", closeDetails);
+  var downloadSheet = document.querySelector(".download-sheet");
+  if (downloadSheet) {
+    // The bridge is planted once the page has loaded: show the button only when it can save.
+    (function showWhenSavable(attempts) {
+      if (bridge() && bridge().saveSpreadsheet) {
+        downloadSheet.hidden = false;
+      } else if (attempts > 0) {
+        window.setTimeout(function () { showWhenSavable(attempts - 1); }, 200);
+      }
+    })(50);
+    var sheetStatus = document.querySelector(".sheet-status");
+    function fill(pattern, values) {
+      return pattern.replace(/\{(\d)\}/g, function (match, index) { return String(values[Number(index)]); });
+    }
+    // Building every creature takes minutes: say how far it has got until the file is written.
+    function followSheet() {
+      var link = bridge();
+      var status = link && link.spreadsheetStatus ? parsed(link.spreadsheetStatus()) : null;
+      if (!status || status.state === "idle") {
+        downloadSheet.disabled = false;
+        return;
+      }
+      if (status.state === "building") {
+        sheetStatus.textContent = fill(sheetStatus.getAttribute("data-building"), [status.done, status.total]);
+        window.setTimeout(followSheet, 500);
+        return;
+      }
+      downloadSheet.disabled = false;
+      sheetStatus.textContent = status.state === "saved"
+        ? fill(sheetStatus.getAttribute("data-saved"), [status.file]) : sheetStatus.getAttribute("data-failed");
+    }
+    downloadSheet.addEventListener("click", function () {
+      var link = bridge();
+      if (link && link.saveSpreadsheet) {
+        downloadSheet.disabled = true;
+        link.saveSpreadsheet();
+        followSheet();
+      }
+    });
+  }
+
+  drawer.querySelector(".drawer-download").addEventListener("click", function () {
+    var link = bridge();
+    if (link && link.savePortrait) {
+      link.savePortrait(drawer.getAttribute("data-race"));
+    }
+  });
   drawerShade.addEventListener("click", closeDetails);
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && !drawer.hidden) {
       closeDetails();
     } else if (event.key === "Tab" && !drawer.hidden) {
-      var focusable = drawer.querySelectorAll("button, a[href]");
+      var focusable = drawer.querySelectorAll("button:not([hidden]), a[href]");
       var first = focusable[0];
       var last = focusable[focusable.length - 1];
       if (event.shiftKey && document.activeElement === first) {
@@ -969,7 +1186,20 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     }
   }
 
+  // Only some creatures have an illustration on their card, chosen by their number.
+  function showCardPortrait(card) {
+    var link = bridge();
+    var race = card.getAttribute("data-race");
+    var address = link && link.cardPortrait && race ? link.cardPortrait(race, numberOf(card)) : "";
+    var portrait = card.querySelector(".card-portrait");
+    portrait.hidden = !address;
+    if (address) {
+      portrait.setAttribute("src", address);
+    }
+  }
+
   function refreshCard(card) {
+    showCardPortrait(card);
     if (card.getAttribute("data-authored") === "true") {
       return;
     }

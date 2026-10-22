@@ -24,8 +24,10 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import pcgen.core.AbilityCategory;
 import pcgen.core.Globals;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.SettingsHandler;
 import pcgen.session.HeadlessUIDelegate;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -67,6 +69,75 @@ class SummonedCreatureBuilderTest
 		CreatureAttack greatsword = statsOf(HOUND_ARCHON, false).attacks().getFirst();
 
 		assertEquals(List.of("+9/+4", "2d6+3"), List.of(greatsword.toHit(), greatsword.damage()));
+	}
+
+	private static final SummonTemplate SAVAGE_HOUND_ARCHON = new SummonTemplate("Archon (Hound)",
+		List.of("Mythic Simple Template ~ Savage"), 1);
+	private static final SummonTemplate AGILE_HOUND_ARCHON = new SummonTemplate("Archon (Hound)",
+		List.of("Mythic Simple Template ~ Agile"), 1);
+
+	@Test
+	void aSavageHoundArchonGainsTwoNaturalArmor()
+	{
+		assertEquals(21, statsOf(SAVAGE_HOUND_ARCHON, false).armorClass());
+	}
+
+	@Test
+	void aSavageHoundArchonGainsTenHitPointsPerMythicRank()
+	{
+		assertEquals(49, statsOf(SAVAGE_HOUND_ARCHON, false).maximumHitPoints());
+	}
+
+	@Test
+	void aSavageHoundArchonOfSixHitDiceGainsEpicDamageReduction()
+	{
+		assertTrue(statsOf(SAVAGE_HOUND_ARCHON, false).specialAbilities().contains("5/epic"));
+	}
+
+	@Test
+	void anAgileHoundArchonActsTwentyInitiativeEarlier()
+	{
+		assertEquals("+24", statsOf(AGILE_HOUND_ARCHON, false).initiative());
+	}
+
+	@Test
+	void anAgileHoundArchonGainsTwoDodgeArmor()
+	{
+		assertEquals(21, statsOf(AGILE_HOUND_ARCHON, false).armorClass());
+	}
+
+	@Test
+	void anAgileHoundArchonListsItsDualInitiative()
+	{
+		AbilityCategory specialAbilities = SettingsHandler.getGameAsProperty().get()
+			.getAbilityCategory("Special Ability");
+		String dualInitiative = Globals.getContext().getReferenceContext().getManufacturerId(specialAbilities)
+			.getActiveObject("Mythic Simple Template ~ Dual Initiative").getLocalizedName();
+
+		assertTrue(statsOf(AGILE_HOUND_ARCHON, false).specialAbilities().contains(dualInitiative));
+	}
+
+	private static final SummonTemplate LEGION_ARCHON = new SummonTemplate("Archon (Legion)", List.of(), 1);
+
+	@Test
+	void aLegionArchonWearsItsFullPlate()
+	{
+		CreatureStats archon = statsOf(LEGION_ARCHON, false);
+
+		assertEquals(List.of(23, 11, 22),
+			List.of(archon.armorClass(), archon.touchArmorClass(), archon.flatFootedArmorClass()));
+	}
+
+	@Test
+	void aLegionArchonSwingsItsGreatswordWithWeaponFocus()
+	{
+		assertEquals("+13/+8", statsOf(LEGION_ARCHON, false).attacks().getFirst().toHit());
+	}
+
+	@Test
+	void aLegionArchonKeepsItsSpeedInFullPlate()
+	{
+		assertTrue(statsOf(LEGION_ARCHON, false).speed().contains("40"));
 	}
 
 	@Test

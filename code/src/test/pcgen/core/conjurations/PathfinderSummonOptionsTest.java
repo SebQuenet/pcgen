@@ -35,4 +35,18 @@ class PathfinderSummonOptionsTest extends AbstractCharacterTestCase
 
 		assertArrayEquals(new int[] {4, 0}, PathfinderSummonOptions.knownSummonLevels(character));
 	}
+
+	@Test
+	void innateSummonAbilityWithAQualifierCountsForItsTier()
+	{
+		PlayerCharacter character = getCharacter();
+		Race race = character.getRace();
+		Spell summonAbility = new Spell();
+		summonAbility.setName("Summon Monster VI (Invocateur Naturel)");
+		CharacterSpell innate = new CharacterSpell(race, summonAbility);
+		innate.addInfo(0, 3, "Innate");
+		character.addCharacterSpell(race, innate);
+
+		assertArrayEquals(new int[] {6, 0}, PathfinderSummonOptions.knownSummonLevels(character));
+	}
 }

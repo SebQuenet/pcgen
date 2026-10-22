@@ -17,12 +17,16 @@
  */
 package pcgen.io.conjurations;
 
+import java.text.Collator;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import pcgen.core.AbilityCategory;
 import pcgen.core.PlayerCharacter;
@@ -45,6 +49,7 @@ import pcgen.core.conjurations.SummonParseFailure;
 import pcgen.core.conjurations.SummonParseSuccess;
 import pcgen.core.conjurations.SummonTemplate;
 import pcgen.system.LanguageBundle;
+import pcgen.util.FirstResultSearch;
 
 /**
  * The conjurations page as an output sheet template sees it: the catalog read
@@ -106,7 +111,9 @@ public final class ConjurationOutputModel
 		model.put("present", catalog.filter(found -> !found.groups().isEmpty()).isPresent() || !errors.isEmpty());
 		model.put("errors", errors);
 		model.put("groups", catalog.map(ConjurationOutputModel::groupsOf).orElse(List.of()));
-		model.put("summons", catalog.map(ConjurationOutputModel::summonsOf).orElse(List.of()));
+		List<Map<String, Object>> summons = catalog.map(ConjurationOutputModel::summonsOf).orElse(List.of());
+		model.put("summons", summons);
+		model.put("roleOptions", roleOptionsOf(summons));
 		model.put("conjured", conjuredOf(fight, catalog, errors.isEmpty()));
 		return model;
 	}
@@ -133,6 +140,10 @@ public final class ConjurationOutputModel
 			Map.entry("creature", LanguageBundle.getString("in_conjurations_creature")),
 			Map.entry("level", LanguageBundle.getString("in_conjurations_level")),
 			Map.entry("role", LanguageBundle.getString("in_conjurations_role")),
+			Map.entry("allRoles", LanguageBundle.getString("in_conjurations_all_roles")),
+			Map.entry("levelMin", LanguageBundle.getString("in_conjurations_level_min")),
+			Map.entry("levelMax", LanguageBundle.getString("in_conjurations_level_max")),
+			Map.entry("roleUsage", LanguageBundle.getString("in_conjurations_role_usage")),
 			Map.entry("ranking", LanguageBundle.getString("in_conjurations_ranking")),
 			Map.entry("unranked", LanguageBundle.getString("in_conjurations_unranked")),
 			Map.entry("rating_red", LanguageBundle.getString("in_conjurations_rating_red")),
@@ -145,6 +156,7 @@ public final class ConjurationOutputModel
 			Map.entry("rating_blue_meaning", LanguageBundle.getString("in_conjurations_rating_blue_meaning")),
 			Map.entry("hitDice", LanguageBundle.getString("in_conjurations_hit_dice")),
 			Map.entry("expectedDamage", LanguageBundle.getString("in_conjurations_expected_damage")),
+			Map.entry("expectedDamageShort", LanguageBundle.getString("in_conjurations_expected_damage_short")),
 			Map.entry("targetArmor", LanguageBundle.getString("in_conjurations_target_armor")),
 			Map.entry("touchArmor", LanguageBundle.getString("in_conjurations_touch_armor")),
 			Map.entry("flatArmor", LanguageBundle.getString("in_conjurations_flat_armor")),
@@ -159,6 +171,17 @@ public final class ConjurationOutputModel
 			Map.entry("sourceUnavailable", LanguageBundle.getString("in_conjurations_source_unavailable")),
 			Map.entry("publishedRules", LanguageBundle.getString("in_conjurations_published_rules")),
 			Map.entry("closeDetails", LanguageBundle.getString("in_conjurations_close_details")),
+			Map.entry("downloadPortrait", LanguageBundle.getString("in_conjurations_download_portrait")),
+			Map.entry("rename", LanguageBundle.getString("in_conjurations_rename")),
+			Map.entry("downloadSheet", LanguageBundle.getString("in_conjurations_download_sheet")),
+			Map.entry("showVariants", LanguageBundle.getString("in_conjurations_show_variants")),
+			Map.entry("conjureCount", LanguageBundle.getString("in_conjurations_conjure_count")),
+			Map.entry("templateDifferences", LanguageBundle.getString("in_conjurations_template_differences")),
+			Map.entry("addedAbilities", LanguageBundle.getString("in_conjurations_added_abilities")),
+			Map.entry("hideVariants", LanguageBundle.getString("in_conjurations_hide_variants")),
+			Map.entry("sheetBuilding", LanguageBundle.getString("in_conjurations_sheet_building")),
+			Map.entry("sheetSaved", LanguageBundle.getString("in_conjurations_sheet_saved")),
+			Map.entry("sheetFailed", LanguageBundle.getString("in_conjurations_sheet_failed")),
 			Map.entry("interest", LanguageBundle.getString("in_conjurations_interest")),
 			Map.entry("usage", LanguageBundle.getString("in_conjurations_usage")),
 			Map.entry("limits", LanguageBundle.getString("in_conjurations_limits")),
@@ -235,10 +258,37 @@ public final class ConjurationOutputModel
 		return groups;
 	}
 
+	/**
+	 * Each creature, with the variants of the same race and level folded under
+	 * the one with the fewest templates.
+	 */
 	private static List<Map<String, Object>> summonsOf(SummonCatalog catalog)
 	{
-		return catalog.groups().stream().flatMap(group -> group.summons().stream()
-			.map(summon -> summonOf(summon, group))).toList();
+		List<Map<String, Object>> summons = new ArrayList<>();
+		List<SummonTemplate> ordered = new ArrayList<>();
+		Map<SummonTemplate, Integer> levels = new LinkedHashMap<>();
+		for (SummonGroup group : catalog.groups())
+		{
+			for (SummonTemplate summon : group.summons())
+			{
+				ordered.add(summon);
+				levels.put(summon, romanRank(levelOf(summon, group)));
+				summons.add(summonOf(summon, group));
+			}
+		}
+		Map<String, SummonTemplate> bases = VariantGroups.basesOf(ordered, levels::get);
+		Map<String, Long> sizes = ordered.stream().collect(Collectors.groupingBy(
+			summon -> VariantGroups.keyOf(summon, levels.get(summon)), Collectors.counting()));
+		for (int index = 0; index < summons.size(); index++)
+		{
+			SummonTemplate summon = ordered.get(index);
+			String variantGroup = VariantGroups.keyOf(summon, levels.get(summon));
+			boolean base = bases.get(variantGroup).equals(summon);
+			summons.get(index).put("variantGroup", variantGroup);
+			summons.get(index).put("variantBase", base);
+			summons.get(index).put("variantCount", base ? sizes.get(variantGroup).intValue() - 1 : 0);
+		}
+		return summons;
 	}
 
 	private static Map<String, Object> summonOf(SummonTemplate summon, SummonGroup group)
@@ -251,6 +301,7 @@ public final class ConjurationOutputModel
 			.silentlyGetConstructedCDOMObject(Race.class, summon.sourceRaceKey());
 		described.put("displayRace", sourceRace == null || !"fr".equals(Locale.getDefault().getLanguage())
 			? summon.sourceRaceKey() : sourceRace.getLocalizedName());
+		described.put("searchLinks", searchLinksOf(sourceRace));
 		described.put("templates", summon.templateKeys());
 		described.put("displayTemplates", summon.templateKeys().stream().map(key -> {
 			PCTemplate template = Globals.getContext().getReferenceContext()
@@ -258,7 +309,6 @@ public final class ConjurationOutputModel
 			return template == null || !"fr".equals(Locale.getDefault().getLanguage())
 				? key : template.getLocalizedName();
 		}).toList());
-		described.put("roles", summon.roles());
 		described.put("metadata", summon.metadata());
 		described.put("note", summon.metadata().containsKey("publishedName")
 			? publishedNote(summon.metadata()) : summon.metadata().getOrDefault("note", ""));
@@ -270,6 +320,10 @@ public final class ConjurationOutputModel
 		PathfinderSummonGuides.Guide guide = PathfinderSummonGuides.forRace(summon.sourceRaceKey());
 		described.put("guide", guide == null ? Map.of() : Map.of("interest", guide.interest(), "usage",
 			guide.usage(), "limits", guide.limits(), "bestiary", guide.bestiary()));
+		List<Map<String, Object>> roleUsage = guide == null ? List.of() : guide.roles().entrySet().stream()
+			.map(role -> Map.<String, Object>of("label", roleLabel(role.getKey()), "usage", role.getValue())).toList();
+		described.put("roleUsage", roleUsage);
+		described.put("roles", rolesOf(summon));
 		described.put("authored", summon.hasAuthoredStats());
 		boolean choiceRequired = "true".equals(summon.metadata().get("choiceRequired"));
 		described.put("choiceRequired", choiceRequired);
@@ -281,7 +335,7 @@ public final class ConjurationOutputModel
 		described.put("unavailableHint", dailyUsed ? LanguageBundle.getString("in_conjurations_skeleton_used")
 			: choiceRequired ? described.get("choiceHint") : LanguageBundle.getString("in_conjurations_source_unavailable"));
 		described.put("hpMax", summon.authoredHitPoints().orElse(0));
-		String level = summon.metadata().getOrDefault("level", levelIn(group.title()));
+		String level = levelOf(summon, group);
 		described.put("level", level);
 		described.put("levelRank", romanRank(level));
 		PathfinderSummonRankings.Ranking ranking = PathfinderSummonRankings.forOption(
@@ -294,7 +348,60 @@ public final class ConjurationOutputModel
 		return described;
 	}
 
-	private static String displayName(SummonTemplate summon)
+	/** The roles a catalog writer gave the creature, or else those of its published guide. */
+	static List<String> rolesOf(SummonTemplate summon)
+	{
+		if (!summon.roles().isEmpty())
+		{
+			return summon.roles();
+		}
+		PathfinderSummonGuides.Guide guide = PathfinderSummonGuides.forRace(summon.sourceRaceKey());
+		return guide == null ? List.of() : guide.roles().keySet().stream().map(ConjurationOutputModel::roleLabel).toList();
+	}
+
+	/** The summoning list's level as a Roman numeral, or an empty string when the catalog does not say. */
+	static String levelOf(SummonTemplate summon, SummonGroup group)
+	{
+		return summon.metadata().getOrDefault("level", levelIn(group.title()));
+	}
+
+	/**
+	 * The creature's first result on d20pfsrd, searched by its English name, and on
+	 * pathfinder-fr, searched by its French name, as PCGen's information panes do.
+	 */
+	private static List<Map<String, Object>> searchLinksOf(Race race)
+	{
+		if (race == null)
+		{
+			return List.of();
+		}
+		return List.of(
+			Map.of("label", "d20PFSRD", "address",
+				FirstResultSearch.addressOf(race.getDisplayName() + " monster", FirstResultSearch.D20PFSRD)),
+			Map.of("label", "Pathfinder-fr", "address", FirstResultSearch.addressOf(
+				race.getLocalizedName() + " " + FirstResultSearch.PATHFINDER_FR_RULES_TERM, FirstResultSearch.PATHFINDER_FR)));
+	}
+
+	private static String roleLabel(String role)
+	{
+		return LanguageBundle.getString("in_conjurations_role_" + role);
+	}
+
+	/** The roles a filter can offer, in alphabetical order in the user's language. */
+	private static List<Object> roleOptionsOf(List<Map<String, Object>> summons)
+	{
+		Set<String> present = new LinkedHashSet<>();
+		for (Map<String, Object> summon : summons)
+		{
+			if (summon.get("roles") instanceof List<?> roles)
+			{
+				roles.forEach(role -> present.add(String.valueOf(role)));
+			}
+		}
+		return present.stream().sorted(Collator.getInstance(Locale.getDefault())).<Object>map(role -> role).toList();
+	}
+
+	static String displayName(SummonTemplate summon)
 	{
 		if (!summon.metadata().containsKey("publishedName"))
 		{
@@ -315,7 +422,7 @@ public final class ConjurationOutputModel
 				.silentlyGetConstructedCDOMObject(PCTemplate.class, key);
 			display.append(" · ").append(template == null ? key : template.getLocalizedName());
 		}
-		return display.append(" [").append(publishedGroup(summon.metadata())).append(']').toString();
+		return display.toString();
 	}
 
 	private static String publishedGroup(Map<String, String> metadata)
@@ -345,7 +452,7 @@ public final class ConjurationOutputModel
 		return romanRank(candidate) > 0 ? candidate : "";
 	}
 
-	private static int romanRank(String level)
+	static int romanRank(String level)
 	{
 		return switch (level.toUpperCase(java.util.Locale.ROOT))
 		{

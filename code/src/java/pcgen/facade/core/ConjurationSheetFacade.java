@@ -19,6 +19,7 @@ package pcgen.facade.core;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.BiConsumer;
 import java.util.OptionalInt;
 
 import pcgen.core.conjurations.SummonParseError;
@@ -65,6 +66,15 @@ public interface ConjurationSheetFacade
 	 * The result is cached until that entry or Augment Summoning changes.
 	 */
 	Optional<CreatureStats> catalogStatsOf(String creature);
+
+	/**
+	 * The catalog as an {@code .xlsx} workbook, one creature per row with the most
+	 * creatures one spell brings. Builds every creature not built yet, which takes
+	 * seconds each: call it off the UI thread.
+	 *
+	 * @param progress told how many of the computed creatures are built, out of how many
+	 */
+	byte[] catalogWorkbook(BiConsumer<Integer, Integer> progress);
 
 	/** A source block that records a selected published option, if selectable. */
 	Optional<String> selectionSource(String creature);

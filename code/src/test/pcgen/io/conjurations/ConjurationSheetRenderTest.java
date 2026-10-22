@@ -31,7 +31,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import pcgen.AbstractCharacterTestCase;
+import pcgen.core.Globals;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.Race;
 import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.ConjurationSession;
@@ -126,7 +128,130 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 		assertFalse(html.contains("data-creature=\"Dire rat"));
 	}
 
+	private static final String BEAR_VARIANTS = """
+		## Summon Monster VI
+		summon: Bear (Dire)
+		  template: Resolute Creature, Mythic Simple Template ~ Savage
+		summon: Bear (Dire)
+		  template: Celestial Creature
+		summon: Bear (Dire)
+		  template: Resolute Creature
+		summon: Archon (Legion)
+		""";
+
 	@Test
+	public void foldsTheVariantsOfACreatureUnderTheOneWithFewestTemplates() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog(BEAR_VARIANTS);
+
+		String html = render(getCharacter());
+
+		assertShows("data-creature=\"Bear (Dire) (Celestial Creature)\" data-variant-group=\"Bear (Dire)|6\" "
+			+ "data-variant-base=\"true\"", html);
+	}
+
+	@Test
+	public void hidesTheOtherVariantsUntilUnfolded() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog(BEAR_VARIANTS);
+
+		String html = render(getCharacter());
+
+		assertShows("data-creature=\"Bear (Dire) (Resolute Creature)\" data-variant-group=\"Bear (Dire)|6\" "
+			+ "data-variant-base=\"false\" data-folded=\"true\"", html);
+	}
+
+	@Test
+	public void countsTheFoldedVariantsOnTheUnfoldButton() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog(BEAR_VARIANTS);
+
+		String html = render(getCharacter());
+
+		assertShows("class=\"unfold\" data-variant-group=\"Bear (Dire)|6\" aria-expanded=\"false\"", html);
+	}
+
+	@Test
+	public void givesNoUnfoldButtonToACreatureWithoutVariants() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog(BEAR_VARIANTS);
+
+		String html = render(getCharacter());
+
+		assertFalse(html.contains("class=\"unfold\" data-variant-group=\"Archon (Legion)|6\""));
+	}
+
+	@Test
+	public void namesTheTemplatesOfAConjuredVariantOnItsCard() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog(BEAR_VARIANTS);
+		character.setConjurationSession(new ConjurationSession(0, List.of(new ConjuredCreature(
+			"Bear (Dire) (Resolute Creature) (Mythic Simple Template ~ Savage)", 1, 0, OptionalInt.empty(), List.of(), ""))));
+
+		String html = render(character);
+
+		assertShows("<p class=\"card-templates\"><span class=\"template-chip\">Resolute Creature</span> "
+			+ "<span class=\"template-chip\">Mythic Simple Template ~ Savage</span></p>", html);
+	}
+
+	@Test
+	public void leavesRoomOnACardForWhatItsTemplatesChange() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog(BEAR_VARIANTS);
+		character.setConjurationSession(new ConjurationSession(0, List.of(new ConjuredCreature(
+			"Bear (Dire) (Celestial Creature)", 1, 0, OptionalInt.empty(), List.of(), ""))));
+
+		String html = render(character);
+
+		assertShows("<dl class=\"template-differences\" hidden", html);
+	}
+
+		@Test
+	public void linksACreatureToItsFirstD20pfsrdResult() throws IOException, ExportException
+	{
+		Globals.getContext().getReferenceContext().constructCDOMObject(Race.class, "Wolf");
+		getCharacter().setConjurationCatalog("## Summon Monster II\nsummon: Wolf\n");
+
+		String html = render(getCharacter());
+
+		assertShows("href=\"https://duckduckgo.com/?q=%5CWolf%20monster%20site%3Ad20pfsrd.com\"", html);
+	}
+
+	@Test
+	public void linksACreatureToItsFirstPathfinderFrResult() throws IOException, ExportException
+	{
+		Globals.getContext().getReferenceContext().constructCDOMObject(Race.class, "Wolf");
+		getCharacter().setConjurationCatalog("## Summon Monster II\nsummon: Wolf\n");
+
+		String html = render(getCharacter());
+
+		assertShows("href=\"https://duckduckgo.com/?q=%5CWolf%20Pathfinder-RPG%20site%3Apathfinder-fr.org\"", html);
+	}
+
+		@Test
+	public void offersTheRolesInAlphabeticalOrder() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("## Summon Monster II\nsummon: Wolf\n  role: Tireur, Éclaireur, Cogneur\n");
+
+		String html = render(getCharacter());
+
+		assertShows("<option value=\"Cogneur\">Cogneur</option><option value=\"Éclaireur\">Éclaireur</option>"
+			+ "<option value=\"Tireur\">Tireur</option>", html);
+	}
+
+		@Test
+	public void asksHowManyCreaturesToConjureFromOneToFifteen() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("## Summon Monster II\nsummon: Wolf\n");
+
+		String html = render(getCharacter());
+
+		assertShows("<input type=\"number\" class=\"conjure-count\" min=\"1\" max=\"15\" value=\"1\"", html);
+	}
+
+		@Test
 	public void showsTheSelectedFormOfAHoundArchonInPlay() throws IOException, ExportException
 	{
 		PlayerCharacter character = getCharacter();
@@ -139,6 +264,54 @@ public class ConjurationSheetRenderTest extends AbstractCharacterTestCase
 		assertShows("data-form=\"wolf\"", html);
 		assertShows("value=\"wolf\" selected", html);
 		assertShows("Beast shape II", html);
+	}
+
+	@Test
+	public void letsThePlayerRenameACreatureInPlay() throws IOException, ExportException
+	{
+		PlayerCharacter character = getCharacter();
+		character.setConjurationCatalog("## IV\nsummon: Archon (Hound)\n");
+		character.setConjurationSession(new ConjurationSession(0,
+			List.of(new ConjuredCreature("Archon (Hound)", 1, 0, OptionalInt.empty(), List.of(), ""))));
+
+		String html = render(character);
+
+		assertShows("class=\"card-label\" contenteditable=\"true\"", html);
+	}
+
+	@Test
+	public void givesAPublishedCreatureItsRolesAndHowToPlayEach() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("## IV\nsummon: Archon (Hound)\n");
+		Locale previous = Locale.getDefault();
+		try
+		{
+			Locale.setDefault(Locale.ENGLISH);
+			LanguageBundle.reload();
+
+			String html = render(getCharacter());
+
+			assertShows("data-roles=\"Blocker|Bruiser\"", html);
+			assertShows("<option value=\"Blocker\">Blocker</option>", html);
+			assertShows("How to play it</h3><p><b>Blocker</b>", html);
+		}
+		finally
+		{
+			Locale.setDefault(previous);
+			LanguageBundle.reload();
+		}
+	}
+
+	@Test
+	public void filtersByRoleAndByLowestAndHighestLevel() throws IOException, ExportException
+	{
+		getCharacter().setConjurationCatalog("## IV\nsummon: Archon (Hound)\n  role: tank\n");
+
+		String html = render(getCharacter());
+
+		assertShows("<option value=\"tank\">tank</option>", html);
+		assertShows("<select class=\"level-min\"><option value=\"1\" selected>I</option>", html);
+		assertShows("<option value=\"9\" selected>IX</option></select>", html);
 	}
 
 	@Test

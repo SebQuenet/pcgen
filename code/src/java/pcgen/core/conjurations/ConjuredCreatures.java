@@ -38,6 +38,7 @@ public final class ConjuredCreatures
 {
 	private final SummonedCreatureBuilder builder;
 	private final Map<String, Kept> kept = new HashMap<>();
+	private final Map<String, CreatureStats> withoutTemplates = new HashMap<>();
 
 	/**
 	 * @param builder what builds a creature the first time it is asked for.
@@ -72,6 +73,35 @@ public final class ConjuredCreatures
 		lay(found, wanted);
 		return new BuiltCreature(found.character(), SummonForms.statsOf(summon, creature.form(), found.baseStats()),
 			SummonForms.statsOf(summon, creature.form(), builder.statsOf(found.character(), summon)));
+	}
+
+	/**
+	 * @param summon        the creature's race and templates
+	 * @param augmented     whether its conjurer augments it
+	 * @param form          its selected alternate form, or an empty string
+	 * @param withTemplates its numbers before any temporary bonus
+	 * @return what its templates change, against the same creature built from its race alone,
+	 *         which is built once per race and kept.
+	 */
+	public List<TemplateDifference> templateDifferences(SummonTemplate summon, boolean augmented, String form,
+		CreatureStats withTemplates)
+	{
+		if (summon.templateKeys().isEmpty())
+		{
+			return List.of();
+		}
+		Map<String, String> building = new LinkedHashMap<>();
+		for (String key : List.of("kit", "suppressAugment", "willBonus"))
+		{
+			if (summon.metadata().containsKey(key))
+			{
+				building.put(key, summon.metadata().get(key));
+			}
+		}
+		SummonTemplate bare = new SummonTemplate(summon.sourceRaceKey(), List.of(), 0, List.of(), building);
+		CreatureStats bareStats = withoutTemplates.computeIfAbsent(bare.sourceRaceKey() + "|" + building + "|" + augmented,
+			ignored -> builder.statsOf(builder.build(bare, augmented), bare));
+		return TemplateDifferences.between(SummonForms.statsOf(bare, form, bareStats), withTemplates);
 	}
 
 	/**

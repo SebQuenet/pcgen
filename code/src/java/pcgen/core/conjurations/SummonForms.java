@@ -70,7 +70,8 @@ public final class SummonForms
 				.filter(attack -> attack.name().toLowerCase().contains("slam")).toList() : base.attacks();
 			return new CreatureStats(base.hitDice(), speed, base.maximumHitPoints(), base.armorClass(),
 				base.touchArmorClass(), base.flatFootedArmorClass(), attacks, base.combatManeuverBonus(),
-				base.combatManeuverDefense(), base.reflex(), base.fortitude(), base.will(), base.initiative());
+				base.combatManeuverDefense(), base.reflex(), base.fortitude(), base.will(), base.initiative(),
+				base.specialAbilities());
 		}
 		if (form == null || form.isBlank() || !"Archon (Hound)".equals(summon.sourceRaceKey()))
 		{
@@ -128,7 +129,7 @@ public final class SummonForms
 			base.combatManeuverDefense() + strengthDelta + dexterityDelta + maneuverSizeDelta,
 			base.reflex().isBlank() ? "" : signed(firstSigned(base.reflex()) + dexterityDelta),
 			base.fortitude(), base.will(), base.initiative().isBlank() ? ""
-				: signed(firstSigned(base.initiative()) + dexterityDelta));
+				: signed(firstSigned(base.initiative()) + dexterityDelta), base.specialAbilities());
 	}
 
 	private static int firstSigned(String value)

@@ -1022,6 +1022,7 @@ ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
 STARTPACK:Crocodile Default	TYPE:Default Monster.Animal	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Crocodile],[!PRERACE:1,%]	SOURCEPAGE:p.51
 RACE:Crocodile	!PRERACE:1,%
 NAME:Crocodile
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Crocodile ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Crocodile ~ Ecology		FREE:YES
 
@@ -1693,6 +1694,7 @@ ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 STARTPACK:Dog Default	TYPE:Default Monster.Animal	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Dog],[!PRERACE:1,%]	SOURCEPAGE:p.87
 RACE:Dog	!PRERACE:1,%
 NAME:Dog
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Dog ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Dog ~ Ecology		FREE:YES
 
@@ -3438,6 +3440,7 @@ ABILITY:CATEGORY=FEAT|Power Attack
 STARTPACK:Elemental (Earth/Small) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[!PRERACE:1,%],[PRERACE:1,Elemental (Earth/Small)]	SOURCEPAGE:p.122
 RACE:Elemental (Earth/Small)	!PRERACE:1,%
 NAME:Small Earth Elemental
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Earth Elemental ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Earth Elemental ~ Ecology	FREE:YES
 
@@ -3536,6 +3539,7 @@ STAT:STR=10|DEX=10|CON=11|INT=10|WIS=11|CHA=11
 STARTPACK:Elemental (Fire/Small) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[!PRERACE:1,%],[PRERACE:1,Elemental (Fire/Small)]	SOURCEPAGE:p.124
 RACE:Elemental (Fire/Small)	!PRERACE:1,%
 NAME:Small Fire Elemental
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Fire Elemental ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Fire Elemental ~ Ecology	FREE:YES
 
@@ -3634,6 +3638,7 @@ ABILITY:CATEGORY=FEAT|Wind Stance
 STARTPACK:Elemental (Water/Small) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[!PRERACE:1,%],[PRERACE:1,Elemental (Water/Small)]	SOURCEPAGE:p.126
 RACE:Elemental (Water/Small)	!PRERACE:1,%
 NAME:Small Water Elemental
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Water Elemental ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Water Elemental ~ Ecology	FREE:YES
 
@@ -3848,6 +3853,7 @@ ABILITY:CATEGORY=Internal|Toad ~ Ecology	FREE:YES
 STARTPACK:Viper Default	TYPE:Default Monster.Animal.Familiar	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Viper],[!PRERACE:1,%]	SOURCEPAGE:p.133
 RACE:Viper	!PRERACE:1,%
 NAME:Viper
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Viper ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Viper ~ Ecology	FREE:YES
 
@@ -5000,60 +5006,70 @@ GEAR:Longbow	SIZE:PC	LOCATION:Carried		EQMOD:Special Quality ~ Masterwork ~ Weap
 STARTPACK:Mephit (Air) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Air)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Air)	!PRERACE:1,%
 NAME:Air Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Dust) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Dust)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Dust)	!PRERACE:1,%
 NAME:Dust Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Earth) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Earth)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Earth)	!PRERACE:1,%
 NAME:Earth Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Fire) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Fire)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Fire)	!PRERACE:1,%
 NAME:Fire Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Ice) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Ice)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Ice)	!PRERACE:1,%
 NAME:Ice Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Magma) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Magma)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Magma)	!PRERACE:1,%
 NAME:Magma Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Ooze) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Ooze)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Ooze)	!PRERACE:1,%
 NAME:Ooze Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Salt) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Salt)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Salt)	!PRERACE:1,%
 NAME:Salt Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Steam) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Steam)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Steam)	!PRERACE:1,%
 NAME:Steam Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
 STARTPACK:Mephit (Water) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mephit (Water)],[!PRERACE:1,%]	SOURCEPAGE:p.202
 RACE:Mephit (Water)	!PRERACE:1,%
 NAME:Water Mephit
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Mephit ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Mephit ~ Ecology	FREE:YES
 
@@ -5518,6 +5534,7 @@ GEAR:Longbow		SIZE:PC	LOCATION:Carried
 STARTPACK:Pseudodragon Default	TYPE:Default Monster.Dragon	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Pseudodragon],[!PRERACE:1,%]	SOURCEPAGE:p.229
 RACE:Pseudodragon	!PRERACE:1,%
 NAME:Pseudodragon
+ALIGN:NG
 ABILITY:CATEGORY=Internal|Pseudodragon ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Pseudodragon ~ Ecology	FREE:YES
 
@@ -5563,6 +5580,7 @@ GEAR:Kukri	LOCATION:Equipped	EQMOD:Special Ability ~ +1 ~ Weapon
 STARTPACK:Rat (Dire) Default	TYPE:Default Monster.Animal	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[!PRERACE:1,%],[PRERACE:1,Rat (Dire)]	SOURCEPAGE:p.232
 RACE:Rat (Dire)	!PRERACE:1,%
 NAME:Dire Rat
+ALIGN:TN
 ABILITY:CATEGORY=Internal|Dire Rat ~ Monster Desc	FREE:YES
 ABILITY:CATEGORY=Internal|Dire Rat ~ Ecology	FREE:YES
 

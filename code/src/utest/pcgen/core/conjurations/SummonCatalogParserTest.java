@@ -125,6 +125,21 @@ class SummonCatalogParserTest
 	}
 
 	@Test
+	void addsTheTemplatesChosenWithTheFeatToThoseWrittenInTheCatalog()
+	{
+		Set<String> chosen = SummonSelections.versatileMonster("# versatile-sm: Aerial Creature",
+			List.of("Fiery Creature", "Dark Creature"));
+
+		assertEquals(Set.of("Aerial Creature", "Fiery Creature", "Dark Creature"), chosen);
+	}
+
+	@Test
+	void ignoresAFeatChoiceThatIsNotAVersatileTemplate()
+	{
+		assertEquals(Set.of(), SummonSelections.versatileMonster("", List.of("Celestial Creature")));
+	}
+
+		@Test
 	void readsPermanentVersatileMonsterChoicesAlongsidePersonalSummons()
 	{
 		String source = """

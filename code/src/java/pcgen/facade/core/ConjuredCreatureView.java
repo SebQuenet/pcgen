@@ -20,6 +20,7 @@ package pcgen.facade.core;
 import java.util.List;
 
 import pcgen.core.conjurations.CreatureStats;
+import pcgen.core.conjurations.TemplateDifference;
 
 /**
  * A creature in play, as the conjuration page shows it.
@@ -31,10 +32,11 @@ import pcgen.core.conjurations.CreatureStats;
  * @param bonuses   the bonuses laid on it alone.
  */
 public record ConjuredCreatureView(String name, int number, CreatureStats stats, CreatureStats baseStats,
-	List<BonusLabel> bonuses)
+	List<BonusLabel> bonuses, List<TemplateDifference> templateDifferences)
 {
 	public ConjuredCreatureView
 	{
 		bonuses = (bonuses == null) ? List.of() : List.copyOf(bonuses);
+		templateDifferences = (templateDifferences == null) ? List.of() : List.copyOf(templateDifferences);
 	}
 }

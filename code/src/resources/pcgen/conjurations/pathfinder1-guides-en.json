@@ -3,2142 +3,3468 @@
     "interest": "Versatile support: bardic performances, healing and control spells, flight, and melee presence.",
     "usage": "Start an inspiring performance when the party attacks. Save spells for decisive healing or control; use remaining healing before the summon expires.",
     "limits": "Spells and performances consume actions. Short duration limits out-of-combat effects; check available spell slots on the creature sheet.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/azata/lillend"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/azata/lillend",
+    "roles": {
+      "support": "Start an inspiring performance on the round the party attacks and keep healing spells for the ally who is about to drop.",
+      "control": "Against a dangerous foe, spend its turn on a control spell before engaging; its tail can then hold a weakened target."
+    }
   },
   "Tiger (Dire)": {
     "interest": "Strong melee damage: pounce, bite and claws, then grab and rake.",
     "usage": "Give it a clear charge lane toward a priority target. Pounce grants a full attack on the charge, while grab hampers the target afterward.",
     "limits": "It needs room to charge. Its value falls against enemies that resist grab or are hard to hit. Celestial smite applies to evil targets.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/felines/cat-great/tiger/dire-tiger/"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/felines/cat-great/tiger/dire-tiger/",
+    "roles": {
+      "bruiser": "Summon it within charge range of the priority target: pounce gives a full attack at once, and rake adds damage once it holds on.",
+      "maneuvers": "Use grab to pin a caster or archer in place; a grappled target can neither move nor cast freely."
+    }
   },
   "Bear (Dire)": {
     "interest": "Durable melee control through claw attacks and grab.",
     "usage": "Use it to block an isolated enemy or protect the front line. Two claws give it two chances to start a grapple.",
     "limits": "A dire tiger has pounce and rake for a stronger charge. Check the target’s CMD before relying on grapple.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/bear/dire-bear"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/bear/dire-bear",
+    "roles": {
+      "maneuvers": "Send it at an isolated foe: each claw can start a grapple, which takes that foe out of the fight while the party deals with the others.",
+      "blocker": "Place it in a corridor or in front of the casters; its hit points let it take several rounds of hits."
+    }
   },
   "Azata (Bralani)": {
     "interest": "Mobile support with flight, ranged attacks, lightning bolt, wind wall, blur, and healing.",
     "usage": "Use wind wall against archers, heal before the summon ends, or attack from the air. Lightning bolt can hit several aligned enemies.",
     "limits": "Magic, ranged attacks, and melee compete for its actions. Check daily uses of abilities on its sheet.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/azata/bralani"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/azata/bralani",
+    "roles": {
+      "ranged": "Keep it in the air and have it shoot with its bow at targets the melee cannot reach.",
+      "area": "When three or more foes stand in a line, open with lightning bolt before switching to the bow.",
+      "support": "Cast wind wall against enemy archers, and spend its healing on an ally before the summon ends."
+    }
   },
   "Lion (Dire)": {
     "interest": "Melee cat with pounce, grab, and rake; useful when multiple lower-level summons are available.",
     "usage": "Charge a reachable target for an immediate full attack. Several lions can surround separate foes.",
     "limits": "It deals less damage than a single dire tiger. Size and obstacles may block a charge.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/felines/cat-great/lion/dire-lion/"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/felines/cat-great/lion/dire-lion/",
+    "roles": {
+      "bruiser": "Summon it with a clear charge lane: pounce and rake make its first round its best one.",
+      "maneuvers": "Grab a lightly armored foe and keep it held while the party focuses elsewhere."
+    }
   },
   "Archon (Hound)": {
     "interest": "Durable defender with aura of menace, magic circle against evil, and damage resistance.",
     "usage": "Keep it near allies to protect and enemies to engage. The circle supports the party while the aura hinders enemies.",
     "limits": "Summoned archons cannot teleport. Costly material components must be supplied for applicable powers.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/archon/hound-archon"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/archon/hound-archon",
+    "roles": {
+      "blocker": "Put it between the enemies and the casters: its damage reduction, aura of menace and magic circle against evil make it a solid front line.",
+      "bruiser": "Against an evil foe, its greatsword and bite hit hard enough to finish a wounded target."
+    }
   },
   "Bear (Grizzly)": {
     "interest": "Melee control with grab and enough hit points to hold an enemy.",
     "usage": "Engage an isolated physical target and use grapple to restrict its movement and actions.",
     "limits": "A claw must hit before grab; the maneuver then checks CMB against CMD. It offers little mobility or utility away from melee.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/bear/brown-grizzly-bear"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/bear/brown-grizzly-bear",
+    "roles": {
+      "maneuvers": "Engage an isolated physical foe and grapple it to stop it moving or reaching the casters.",
+      "blocker": "Use its bulk and hit points to hold a doorway for a few rounds."
+    }
   },
   "Lion": {
     "interest": "A charge with pounce followed by bite, claws, grab, and rake.",
     "usage": "Summon near a vulnerable target with a clear charge lane. The immediate full attack is its main advantage.",
     "limits": "Its durability and attack bonuses trail higher-level choices. Obstacles that prevent a charge reduce its value.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/felines/cat-great/lion/"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/felines/cat-great/lion/",
+    "roles": {
+      "bruiser": "Summon it near a vulnerable target with a clear charge lane: pounce gives an immediate full attack with grab and rake."
+    }
   },
   "Wolf (Dire)": {
     "interest": "Trip after a bite, with a body large enough to occupy space.",
     "usage": "Target an enemy with moderate CMD, ideally with allies ready to exploit the knockdown.",
     "limits": "The single bite must hit first. High CMD makes trip unreliable, and its damage is modest.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/canines/wolf/dire-wolf/"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/canines/wolf/dire-wolf/",
+    "roles": {
+      "maneuvers": "Bite the foe the fighters are about to hit: a successful trip leaves it prone, with -4 to AC against melee.",
+      "bruiser": "Its bite is strong for the level; flank with an ally to make every bite count."
+    }
   },
   "Archon (Lantern)": {
     "interest": "Two ranged rays against touch AC that bypass damage reduction, plus flight, aid, and an aura of menace.",
     "usage": "Stay at range against heavily armored or resistant enemies. Several archons can distribute rays and use aid to refresh allies’ temporary hit points.",
     "limits": "The rays have limited range. Summoned creatures cannot teleport; continual flame needs a costly component.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/archon/lantern-archon/summoned-creature-lantern-archon"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/archon/lantern-archon/summoned-creature-lantern-archon",
+    "roles": {
+      "ranged": "Keep it at range against heavily armored foes: its rays target touch AC and ignore damage reduction.",
+      "support": "Cast aid on the ally who will take the next hits; several lanterns can each refresh a different ally."
+    }
   },
   "Cat (Leopard)": {
     "interest": "Small offensive cat with pounce, three attacks, grab, rake, and a climb speed.",
     "usage": "Use a clear charge lane to reach a caster or lightly armored target.",
     "limits": "Low hit points make it fragile. Without a charge or a target to grab, a lantern archon may be more reliable against high AC.",
-    "bestiary": "https://legacy.aonprd.com/bestiary/cat.html"
+    "bestiary": "https://legacy.aonprd.com/bestiary/cat.html",
+    "roles": {
+      "bruiser": "Charge a caster or lightly armored target: pounce gives three attacks with grab and rake on the first round."
+    }
   },
   "Boar": {
     "interest": "Ferocity lets it keep acting briefly below zero hit points.",
     "usage": "Use it as a temporary obstacle or to absorb another enemy attack; celestial smite can help against an evil target.",
     "limits": "One attack and low bonuses limit offense. Ferocity does not make up for a small hit point pool.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/boar/boar/summoned-creature-boar"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/boar/boar/summoned-creature-boar",
+    "roles": {
+      "blocker": "Use it as a temporary obstacle: ferocity keeps it standing a little longer than its hit points suggest.",
+      "bruiser": "Its gore hits hard for level III; aim it at a wounded foe to finish it."
+    }
   },
   "Wolf": {
     "interest": "A bite with a trip attempt and scent, useful against a susceptible ground target.",
     "usage": "Trip a nearby enemy to help melee allies; scent may reveal a hidden creature at close range.",
     "limits": "The bite must hit first, and enemy CMD quickly becomes too high. Combat statistics are modest.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/canines/wolf/summoned-creature-wolf/"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/canines/wolf/summoned-creature-wolf/",
+    "roles": {
+      "maneuvers": "Bite a nearby ground foe to trip it, so the melee allies attack a prone target.",
+      "scout": "Use scent to find a hidden or invisible creature close by."
+    }
   },
   "Horse": {
     "interest": "Large, fast creature for blocking space, a brief move, or a diversion.",
     "usage": "Use its size and speed immediately, such as to interpose it or cover a short distance.",
     "limits": "A duration measured in rounds limits travel. Its attacks are not specialized for combat.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/horse/summoned-creature-horse"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/horse/summoned-creature-horse",
+    "roles": {
+      "utility": "Summon it to carry a wounded ally or cover distance quickly.",
+      "blocker": "Its large size fills a corridor; place it where it blocks an enemy's path."
+    }
   },
   "Eagle": {
     "interest": "Flight and multiple natural attacks for brief scouting or harassment.",
     "usage": "Reach a nearby high position or threaten a fragile enemy.",
     "limits": "It is fragile; spell duration limits scouting, and an animal may not understand complex instructions.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/birds/eagle/summoned-creature-eagle/"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/birds/eagle/summoned-creature-eagle/",
+    "roles": {
+      "scout": "Send it over the battlefield or to a high point to see what waits ahead."
+    }
   },
   "Dog": {
     "interest": "Scent and ground presence for simple detection, guarding, or diversion.",
     "usage": "Follow a trail or briefly occupy an enemy rather than expecting significant damage.",
     "limits": "Low hit points and attack bonuses, short duration, and limited comprehension restrict its utility.",
-    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/canines/dog/dog/summoned-creature-dog/"
+    "bestiary": "https://www.d20pfsrd.com/bestiary/monster-listings/animals/canines/dog/dog/summoned-creature-dog/",
+    "roles": {
+      "scout": "Use scent to follow a trail or to spot a hidden creature; do not expect real damage from it."
+    }
   },
   "Achaierai": {
     "interest": "Achaierai: abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Achaierai"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Achaierai",
+    "roles": {
+      "area": "Release its black cloud when several foes stand close together; it damages everyone in the cloud.",
+      "control": "The cloud can leave foes confused; follow up while they act at random."
+    }
   },
   "Aeon (Akhana)": {
     "interest": "Aeon (Akhana): abilities noted in the bestiary entry — grab, trip, fast healing, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Akhana"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Akhana",
+    "roles": {
+      "maneuvers": "Grab a dangerous foe and keep it held while its fast healing keeps it in the fight.",
+      "control": "Open with its spell-like abilities against a group before closing in."
+    }
   },
   "Aeon (Paracletus)": {
     "interest": "Aeon (Paracletus): abilities noted in the bestiary entry — trip, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Paracletus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Paracletus",
+    "roles": {
+      "scout": "Send it flying ahead to look around corners or over walls.",
+      "utility": "Use its spell-like abilities outside combat; it is too frail to fight."
+    }
   },
   "Aeon (Theletos)": {
     "interest": "Aeon (Theletos): abilities noted in the bestiary entry — trip, fast healing, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Theletos"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Theletos",
+    "roles": {
+      "control": "Use its spell-like abilities on the strongest foe on the first round.",
+      "support": "Dispel a harmful effect on an ally or grant freedom of movement to a grappled one."
+    }
   },
   "Agathion (Leonal)": {
     "interest": "Agathion (Leonal): abilities noted in the bestiary entry — pounce, grab, rake, poison, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leonal"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leonal",
+    "roles": {
+      "bruiser": "Charge an evil foe: pounce, grab and rake make it one of the strongest melee summons of its level.",
+      "area": "Roar when several foes stand in front of it; the cone hits them all.",
+      "support": "Spend its healing on a dying ally before it engages."
+    }
   },
   "Agathion (Silvanshee)": {
     "interest": "Agathion (Silvanshee): abilities noted in the bestiary entry — pounce, trip, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Silvanshee"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Silvanshee",
+    "roles": {
+      "scout": "Send it ahead: it is small, sees in the dark and can slip past guards.",
+      "utility": "Use its spell-like abilities to detect evil or carry a message, not to fight."
+    }
   },
   "Agathion (Vulpinal)": {
     "interest": "Agathion (Vulpinal): abilities noted in the bestiary entry — pounce, invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vulpinal"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vulpinal",
+    "roles": {
+      "control": "Use its song and spells to fascinate or slow foes before they reach the party.",
+      "support": "Keep it behind the front line and spend its healing on the ally who needs it most."
+    }
   },
   "Alraune": {
     "interest": "Alraune: abilities noted in the bestiary entry — grab, trip, constrict, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Alraune"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Alraune",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe that comes into reach; the vines hold it while it takes damage every round.",
+      "control": "Use its enchantment spells on the strongest foe before engaging."
+    }
   },
   "Angel (Astral Deva)": {
     "interest": "Angel (Astral Deva): abilities noted in the bestiary entry — change shape, invisibility, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Astral%20Deva"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Astral%20Deva",
+    "roles": {
+      "bruiser": "Engage the strongest melee foe: its disrupting mace can stun, which takes that foe out of the next round.",
+      "support": "Spend its healing and remove curse on allies before the summon ends."
+    }
   },
   "Angel (Cassisian)": {
     "interest": "Angel (Cassisian): abilities noted in the bestiary entry — trip, breath weapon, change shape, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cassisian"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cassisian",
+    "roles": {
+      "scout": "Send it flying ahead; it is small and can change shape to go unnoticed.",
+      "utility": "Use its spell-like abilities and knowledge outside combat; its breath weapon is weak."
+    }
   },
   "Angel (Monadic Deva)": {
     "interest": "Angel (Monadic Deva): abilities noted in the bestiary entry — invisibility, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Monadic%20Deva"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Monadic%20Deva",
+    "roles": {
+      "bruiser": "Send it at an evil foe; its morningstar and smite deal strong damage for the level.",
+      "support": "Cast its healing and protective spells on allies before engaging.",
+      "blocker": "Its protective aura and high defenses let it hold the front line."
+    }
   },
   "Angel (Movanic Deva)": {
     "interest": "Angel (Movanic Deva): abilities noted in the bestiary entry — invisibility, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Movanic%20Deva"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Movanic%20Deva",
+    "roles": {
+      "bruiser": "Engage the strongest foe with its flaming greatsword.",
+      "support": "Its protective aura and healing help allies who stay close to it."
+    }
   },
   "Animate Dream": {
     "interest": "Animate Dream: abilities noted in the bestiary entry — fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Animate%20Dream"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Animate%20Dream",
+    "roles": {
+      "control": "Use its frightening and sleep effects against foes with weak Will saves.",
+      "scout": "Being incorporeal and flying, it can pass through walls to look ahead."
+    }
   },
   "Ankou": {
     "interest": "Ankou: abilities noted in the bestiary entry — flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ankou"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ankou",
+    "roles": {
+      "bruiser": "Send it at a caster or archer; it strikes hard and its shadow doubles multiply its attacks.",
+      "control": "Use deeper darkness and its spell-like abilities to cut foes off from one another."
+    }
   },
   "Ant (Giant)": {
     "interest": "Ant (Giant): abilities noted in the bestiary entry — grab, trip, poison, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Ant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Ant",
+    "roles": {
+      "maneuvers": "Grab a foe with its bite and keep it held; several ants can each pin a different foe."
+    }
   },
   "Ape (Dire)": {
     "interest": "Ape (Dire): abilities noted in the bestiary entry — climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Ape%20%28Gigantopithecus%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Ape%20%28Gigantopithecus%29",
+    "roles": {
+      "bruiser": "Engage a foe in melee: two claws and a bite, plus rend when both claws hit."
+    }
   },
   "Ape (Gorilla)": {
     "interest": "Ape (Gorilla): abilities noted in the bestiary entry — climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Gorilla"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Gorilla",
+    "roles": {
+      "bruiser": "Send it into melee with a foe; it can also climb to reach archers on a wall or ledge."
+    }
   },
   "Archon (Harbinger)": {
     "interest": "Archon (Harbinger): abilities noted in the bestiary entry — flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Harbinger%20Archon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Harbinger%20Archon",
+    "roles": {
+      "support": "Use its spell-like abilities to bless or protect allies at the start of the fight.",
+      "scout": "Send it flying ahead to warn the party."
+    }
   },
   "Archon (Legion)": {
     "interest": "Archon (Legion): abilities noted in the bestiary entry — whirlwind, flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Legion%20Archon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Legion%20Archon",
+    "roles": {
+      "bruiser": "Engage in melee where its several weapons hit the same foe.",
+      "ranged": "When the foe is out of reach, use its bow from the air."
+    }
   },
   "Archon (Shield)": {
     "interest": "Archon (Shield): abilities noted in the bestiary entry — trip, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shield%20Archon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shield%20Archon",
+    "roles": {
+      "blocker": "Put it in front of the most exposed ally; it is built to absorb attacks.",
+      "support": "Use its protective abilities on the ally under the heaviest attack."
+    }
   },
   "Archon (Trumpet)": {
     "interest": "Archon (Trumpet): abilities noted in the bestiary entry — poison, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Trumpet%20Archon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Trumpet%20Archon",
+    "roles": {
+      "control": "Sound its trumpet when several foes are near: it can paralyze them.",
+      "bruiser": "Once foes are paralyzed, finish them with its greatsword.",
+      "support": "Spend its cleric spells on healing and protection before the summon ends."
+    }
   },
   "Assassin Vine": {
     "interest": "Assassin Vine: abilities noted in the bestiary entry — grab, trip, constrict.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Assassin%20Vine"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Assassin%20Vine",
+    "roles": {
+      "maneuvers": "Summon it where foes will walk past: it grabs and constricts what comes into reach.",
+      "control": "Its entangle slows foes around it; use it to hold a passage."
+    }
   },
   "Asura (Adhukait)": {
     "interest": "Asura (Adhukait): abilities noted in the bestiary entry — regeneration, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Adhukait"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Adhukait",
+    "roles": {
+      "bruiser": "Engage in melee: its paired weapons hit many times per round, and regeneration keeps it fighting."
+    }
   },
   "Asura (Aghasura)": {
     "interest": "Asura (Aghasura): abilities noted in the bestiary entry — grab, trip, poison, swallow whole, regeneration, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Aghasura"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Aghasura",
+    "roles": {
+      "bruiser": "Send it at a large foe: its many attacks and regeneration let it trade blows for several rounds.",
+      "maneuvers": "Grab and swallow a smaller foe to take it out of the fight."
+    }
   },
   "Asura (Tripurasura)": {
     "interest": "Asura (Tripurasura): abilities noted in the bestiary entry — poison, fast healing, change shape, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tripurasura"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tripurasura",
+    "roles": {
+      "control": "Use its spell-like abilities and poison on a single foe to weaken it.",
+      "scout": "It can change shape and slip past guards to look ahead."
+    }
   },
   "Asura (Upasunda)": {
     "interest": "Asura (Upasunda): abilities noted in the bestiary entry — regeneration, invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Upasunda"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Upasunda",
+    "roles": {
+      "bruiser": "Engage in melee: its many arms make a flurry of attacks against one foe."
+    }
   },
   "Atomie": {
     "interest": "Atomie: abilities noted in the bestiary entry — invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Atomie"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Atomie",
+    "roles": {
+      "scout": "Send it invisible and flying to look ahead.",
+      "utility": "Use its spell-like abilities outside combat; it is too frail to fight."
+    }
   },
   "Avoral": {
     "interest": "Avoral: abilities noted in the bestiary entry — invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Avoral"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Avoral",
+    "roles": {
+      "area": "Cast its area spells from the air when several foes are grouped.",
+      "scout": "Its keen eyes and fast flight make it a good lookout."
+    }
   },
   "Axe Beak": {
     "interest": "Axe Beak: abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Axe%20Beak"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Axe%20Beak",
+    "roles": {
+      "bruiser": "Send it into melee with a ground foe; it hits hard for level III and moves fast."
+    }
   },
   "Axiomite": {
     "interest": "Axiomite: abilities noted in the bestiary entry — regeneration, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Axiomite"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Axiomite",
+    "roles": {
+      "control": "Use its spell-like abilities on the strongest foe first.",
+      "support": "Dispel harmful effects on allies, then hold its place near them."
+    }
   },
   "Azata (Ghaele)": {
     "interest": "Azata (Ghaele): abilities noted in the bestiary entry — trip, gaze, light form, invisibility, flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ghaele"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ghaele",
+    "roles": {
+      "ranged": "Keep it at range and fire its light rays at foes the melee cannot reach.",
+      "area": "Cast its area spells when several foes are grouped.",
+      "control": "Its gaze can frighten evil foes; get close enough for it to work."
+    }
   },
   "Azata (Lyrakien)": {
     "interest": "Azata (Lyrakien): abilities noted in the bestiary entry — flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lyrakien"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lyrakien",
+    "roles": {
+      "support": "Keep it close to allies and spend its healing on the most wounded.",
+      "scout": "Send it flying ahead; it is tiny and easy to overlook."
+    }
   },
   "Azer": {
     "interest": "Azer: abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Azer"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Azer",
+    "roles": {
+      "bruiser": "Send it into melee; its fire warhammer adds fire damage to each hit."
+    }
   },
   "Badger": {
     "interest": "Badger: abilities noted in the bestiary entry — trip, burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Badger"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Badger",
+    "roles": {
+      "bruiser": "Send it at a weak foe; rage makes it fight better than its size suggests.",
+      "scout": "It can burrow to come out behind a foe."
+    }
   },
   "Badger (Dire)": {
     "interest": "Badger (Dire): abilities noted in the bestiary entry — trip, burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Badger"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Badger",
+    "roles": {
+      "bruiser": "Send it into melee; rage and ferocity keep it fighting.",
+      "scout": "It can burrow to come out behind the enemy line."
+    }
   },
   "Baregara": {
     "interest": "Baregara: abilities noted in the bestiary entry — grab, invisibility, climb, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Baregara"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Baregara",
+    "roles": {
+      "bruiser": "Engage a foe in melee; it has many strong attacks.",
+      "maneuvers": "Grab a foe and hold it while the party focuses elsewhere."
+    }
   },
   "Bat (Dire)": {
     "interest": "Bat (Dire): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Bat"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Bat",
+    "roles": {
+      "scout": "Its blindsense and flight let it find foes hidden in darkness."
+    }
   },
   "Bebilith": {
     "interest": "Bebilith: abilities noted in the bestiary entry — trip, web, climb, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bebilith"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bebilith",
+    "roles": {
+      "bruiser": "Send it at a heavily armored foe: its bite rends armor.",
+      "control": "Throw its web on foes before engaging them."
+    }
   },
   "Beetle (Fire)": {
     "interest": "Beetle (Fire): abilities noted in the bestiary entry — trip, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fire%20Beetle"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fire%20Beetle",
+    "roles": {
+      "utility": "Its glowing glands give light; use it as a lantern rather than a fighter."
+    }
   },
   "Beetle (Giant Stag)": {
     "interest": "Beetle (Giant Stag): abilities noted in the bestiary entry — trip, trample, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Stag%20Beetle"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Stag%20Beetle",
+    "roles": {
+      "bruiser": "Trample through a line of foes, then bite the strongest.",
+      "blocker": "Its armor and size let it hold a passage."
+    }
   },
   "Belker": {
     "interest": "Belker: abilities noted in the bestiary entry — trip, smoke form, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Belker"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Belker",
+    "roles": {
+      "bruiser": "In smoke form, it enters a foe's lungs and deals damage each round.",
+      "scout": "Its smoke form and flight let it slip through narrow gaps."
+    }
   },
   "Blink Dog": {
     "interest": "Blink Dog: abilities noted in the bestiary entry — trip, scent, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Blink%20Dog"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Blink%20Dog",
+    "roles": {
+      "scout": "It can teleport short distances to scout or get behind foes.",
+      "maneuvers": "Blink next to a foe and trip it with its bite."
+    }
   },
   "Boar (Dire)": {
     "interest": "Boar (Dire): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Boar%20%28Daeodon%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Boar%20%28Daeodon%29",
+    "roles": {
+      "bruiser": "Its gore hits hard; send it at a wounded foe.",
+      "blocker": "Ferocity keeps it standing a little longer; use it to hold a line."
+    }
   },
   "Bogeyman": {
     "interest": "Bogeyman: abilities noted in the bestiary entry — invisibility, fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bogeyman"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bogeyman",
+    "roles": {
+      "control": "Use its fear effects on foes with weak Will saves.",
+      "scout": "It can turn invisible to look ahead."
+    }
   },
   "Brownie": {
     "interest": "Brownie: abilities noted in the bestiary entry — spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Brownie"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Brownie",
+    "roles": {
+      "utility": "Use its minor spell-like abilities outside combat: repairs, light tricks, small errands.",
+      "scout": "It is tiny and can teleport a short way; send it to look ahead."
+    }
   },
   "Bulette": {
     "interest": "Bulette: abilities noted in the bestiary entry — trip, burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bulette"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bulette",
+    "roles": {
+      "bruiser": "Summon it near a cluster of foes: its leap lets it attack with all four claws at once.",
+      "scout": "It burrows and feels movement through the ground; use it to find foes under cover."
+    }
   },
   "Cat (Cheetah)": {
     "interest": "Cat (Cheetah): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cheetah"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cheetah",
+    "roles": {
+      "maneuvers": "Sprint to a fleeing or distant foe and trip it with a bite.",
+      "bruiser": "Its speed lets it reach a caster at the back of the enemy line on the first round."
+    }
   },
   "Centipede (Giant)": {
     "interest": "Centipede (Giant): abilities noted in the bestiary entry — trip, poison, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Centipede"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Centipede",
+    "roles": {
+      "control": "Bite a foe that relies on Dexterity; its poison lowers that score."
+    }
   },
   "Cerberi": {
     "interest": "Cerberi: abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cerberi"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cerberi",
+    "roles": {
+      "maneuvers": "Its several heads give several trip attempts; target a foe with low CMD.",
+      "bruiser": "Flank with an ally: its many bites add up quickly."
+    }
   },
   "Chaos Beast": {
     "interest": "Chaos Beast: abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Chaos%20Beast"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Chaos%20Beast",
+    "roles": {
+      "control": "Its touch can make a foe's body unstable; send it at a strong melee enemy.",
+      "bruiser": "It has several attacks; keep it engaged on one target."
+    }
   },
   "Couatl": {
     "interest": "Couatl: abilities noted in the bestiary entry — grab, trip, poison, constrict, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Couatl"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Couatl",
+    "roles": {
+      "control": "Cast its spells first, then bite: its poison can put a foe to sleep.",
+      "maneuvers": "Grab and constrict a caster to stop its spells."
+    }
   },
   "Crab (Giant)": {
     "interest": "Crab (Giant): abilities noted in the bestiary entry — grab, trip, constrict, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Crab"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Crab",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe near the water or in a narrow place.",
+      "blocker": "Its shell gives it a good AC; place it in a passage to hold it."
+    }
   },
   "Crocodile": {
     "interest": "Crocodile: abilities noted in the bestiary entry — grab, trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Crocodile"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Crocodile",
+    "roles": {
+      "maneuvers": "Grab a foe and use its death roll to knock it prone, ideally near water."
+    }
   },
   "Crocodile (Dire)": {
     "interest": "Crocodile (Dire): abilities noted in the bestiary entry — grab, trip, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Crocodile"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Crocodile",
+    "roles": {
+      "maneuvers": "Grab a foe, roll it to the ground, then swallow it if it is small enough.",
+      "bruiser": "Its bite is very strong; send it at the toughest ground foe."
+    }
   },
   "Crysmal": {
     "interest": "Crysmal: abilities noted in the bestiary entry — trip, burrow, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Crysmal"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Crysmal",
+    "roles": {
+      "scout": "It burrows through stone and senses movement; use it to look past walls.",
+      "area": "Release its shard spray when several foes stand in front of it."
+    }
   },
   "Cyclops": {
     "interest": "Cyclops: abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cyclops"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cyclops",
+    "roles": {
+      "bruiser": "Its great axe hits hard; send it at the toughest foe.",
+      "ranged": "Against a foe out of reach, use its heavy crossbow."
+    }
   },
   "D'ziriak": {
     "interest": "D'ziriak: abilities noted in the bestiary entry — grab, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=D’ziriak"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=D’ziriak",
+    "roles": {
+      "control": "Use its spell-like abilities to blind or confuse foes.",
+      "scout": "It flies and moves well in shadows; send it to look ahead."
+    }
   },
   "Daemon (Cacodaemon)": {
     "interest": "Daemon (Cacodaemon): abilities noted in the bestiary entry — fast healing, change shape, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cacodaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cacodaemon",
+    "roles": {
+      "scout": "Send it invisible and flying to look ahead.",
+      "utility": "Use its spell-like abilities outside combat; it is too weak to fight."
+    }
   },
   "Daemon (Ceustodaemon)": {
     "interest": "Daemon (Ceustodaemon): abilities noted in the bestiary entry — breath weapon, invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ceustodaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ceustodaemon",
+    "roles": {
+      "area": "Breathe on several foes at once, then hold the line.",
+      "blocker": "It is a guardian by nature; place it in front of the casters."
+    }
   },
   "Daemon (Derghodaemon)": {
     "interest": "Daemon (Derghodaemon): abilities noted in the bestiary entry — trip, invisibility, fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Derghodaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Derghodaemon",
+    "roles": {
+      "bruiser": "Engage the strongest foe: its many claws hit hard every round.",
+      "control": "Its fear and spell-like abilities can break a group of foes."
+    }
   },
   "Daemon (Hydrodaemon)": {
     "interest": "Daemon (Hydrodaemon): abilities noted in the bestiary entry — grab, rake, flight, swim, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hydrodaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hydrodaemon",
+    "roles": {
+      "control": "Spit on a dangerous foe: the spittle can put it to sleep.",
+      "ranged": "Keep it at range, near water if possible, and spit each round."
+    }
   },
   "Daemon (Leukodaemon)": {
     "interest": "Daemon (Leukodaemon): abilities noted in the bestiary entry — flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leukodaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leukodaemon",
+    "roles": {
+      "ranged": "Keep it at range: its arrows carry disease.",
+      "control": "Use its spell-like abilities to weaken a group before shooting."
+    }
   },
   "Daemon (Meladaemon)": {
     "interest": "Daemon (Meladaemon): abilities noted in the bestiary entry — invisibility, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Meladaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Meladaemon",
+    "roles": {
+      "control": "Its fear and hunger effects weaken foes; use them first.",
+      "bruiser": "Then engage a weakened foe in melee."
+    }
   },
   "Daemon (Piscodaemon)": {
     "interest": "Daemon (Piscodaemon): abilities noted in the bestiary entry — grab, poison, constrict, invisibility, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Piscodaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Piscodaemon",
+    "roles": {
+      "maneuvers": "Grab a foe with its claws and constrict it while its poison works.",
+      "bruiser": "Its many attacks and poison make it strong against a single target."
+    }
   },
   "Daemon (Thanadaemon)": {
     "interest": "Daemon (Thanadaemon): abilities noted in the bestiary entry — gaze, fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Thanadaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Thanadaemon",
+    "roles": {
+      "control": "Use its gaze and fear on foes with weak Will saves, then its death spells on the strongest."
+    }
   },
   "Daemon (Vulnudaemon)": {
     "interest": "Daemon (Vulnudaemon): abilities noted in the bestiary entry — invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vulnudaemon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vulnudaemon",
+    "roles": {
+      "bruiser": "Send it into melee against a single foe.",
+      "scout": "It can turn invisible to look ahead."
+    }
   },
   "Demodand (Tarry)": {
     "interest": "Demodand (Tarry): abilities noted in the bestiary entry — flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tarry%20Demodand"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tarry%20Demodand",
+    "roles": {
+      "control": "Its sticky tar hinders foes; use its spell-like abilities to cut them off.",
+      "bruiser": "Then engage a hindered foe in melee."
+    }
   },
   "Demon (Babau)": {
     "interest": "Demon (Babau): abilities noted in the bestiary entry — invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Babau"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Babau",
+    "roles": {
+      "bruiser": "Flank a foe with an ally: its sneak attack makes each hit count, and its slime damages weapons that strike it."
+    }
   },
   "Demon (Coloxus)": {
     "interest": "Demon (Coloxus): abilities noted in the bestiary entry — invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Coloxus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Coloxus",
+    "roles": {
+      "control": "Use its spell-like abilities on foes with weak Will saves before engaging."
+    }
   },
   "Demon (Dretch)": {
     "interest": "Demon (Dretch): abilities noted in the bestiary entry — fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dretch"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dretch",
+    "roles": {
+      "control": "Release its stinking cloud on a group of foes on the first round.",
+      "blocker": "Several dretches can fill a passage; they are expendable."
+    }
   },
   "Demon (Glabrezu)": {
     "interest": "Demon (Glabrezu): abilities noted in the bestiary entry — spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Glabrezu"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Glabrezu",
+    "roles": {
+      "bruiser": "Its pincers hit hard; send it at the toughest foe.",
+      "control": "Use its confusion and other spell-like abilities on a group first."
+    }
   },
   "Demon (Hezrou)": {
     "interest": "Demon (Hezrou): abilities noted in the bestiary entry — grab, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hezrou"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hezrou",
+    "roles": {
+      "control": "Bring it next to several foes: its stench can sicken or nauseate them.",
+      "maneuvers": "Grab a nauseated foe and hold it."
+    }
   },
   "Demon (Incubus)": {
     "interest": "Demon (Incubus): abilities noted in the bestiary entry — change shape, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Incubus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Incubus",
+    "roles": {
+      "control": "Use its charm and suggestion on foes with weak Will saves.",
+      "scout": "It can change shape to mingle with foes and gather information."
+    }
   },
   "Demon (Kalavakus)": {
     "interest": "Demon (Kalavakus): abilities noted in the bestiary entry — trip, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kalavakus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kalavakus",
+    "roles": {
+      "bruiser": "Charge a foe: its horns and spines hit hard.",
+      "maneuvers": "Knock a foe prone to set up the party's attacks."
+    }
   },
   "Demon (Nalfeshnee)": {
     "interest": "Demon (Nalfeshnee): abilities noted in the bestiary entry — flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nalfeshnee"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nalfeshnee",
+    "roles": {
+      "area": "Use its unholy nimbus and area spell-like abilities on a group of foes.",
+      "control": "The nimbus can daze foes; follow up while they cannot act."
+    }
   },
   "Demon (Omox)": {
     "interest": "Demon (Omox): abilities noted in the bestiary entry — grab, trip, poison, swim, climb, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Omox"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Omox",
+    "roles": {
+      "maneuvers": "Engulf or grab a foe and hold it in its slime.",
+      "ranged": "Spit its slime at a foe out of reach."
+    }
   },
   "Demon (Schir)": {
     "interest": "Demon (Schir): abilities noted in the bestiary entry — invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Schir"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Schir",
+    "roles": {
+      "bruiser": "Charge a foe: it hits hard for its level."
+    }
   },
   "Demon (Shadow)": {
     "interest": "Demon (Shadow): abilities noted in the bestiary entry — pounce, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shadow%20Demon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shadow%20Demon",
+    "roles": {
+      "bruiser": "Pounce on a foe from the shadows; its incorporeal claws ignore armor.",
+      "control": "Use its fear and darkness to split foes.",
+      "scout": "Incorporeal and flying, it passes through walls to look ahead."
+    }
   },
   "Demon (Succubus)": {
     "interest": "Demon (Succubus): abilities noted in the bestiary entry — change shape, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Succubus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Succubus",
+    "roles": {
+      "control": "Use its charm and suggestion on the strongest foe with a weak Will save.",
+      "scout": "It can change shape to mingle with foes and gather information."
+    }
   },
   "Demon (Vrock)": {
     "interest": "Demon (Vrock): abilities noted in the bestiary entry — flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vrock"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vrock",
+    "roles": {
+      "area": "Release its spores on the foes around it; they take damage each round.",
+      "control": "Its stunning screech can stop nearby foes for a round.",
+      "bruiser": "Then engage in melee: it has many attacks."
+    }
   },
   "Devil (Accuser)": {
     "interest": "Devil (Accuser): abilities noted in the bestiary entry — invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Accuser%20Devil%20%28Zebub%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Accuser%20Devil%20%28Zebub%29",
+    "roles": {
+      "scout": "Send it invisible and flying to watch foes and report."
+    }
   },
   "Devil (Barbed)": {
     "interest": "Devil (Barbed): abilities noted in the bestiary entry — grab, fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Barbed%20Devil%20%28Hamatula%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Barbed%20Devil%20%28Hamatula%29",
+    "roles": {
+      "bruiser": "Engage the strongest foe: its claws and barbs hit hard.",
+      "maneuvers": "Grab a foe to impale it on its barbs each round."
+    }
   },
   "Devil (Bearded)": {
     "interest": "Devil (Bearded): abilities noted in the bestiary entry — spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bearded%20Devil%20%28Barbazu%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bearded%20Devil%20%28Barbazu%29",
+    "roles": {
+      "bruiser": "Its glaive leaves bleeding wounds; send it at a foe without healing.",
+      "blocker": "Its reach lets it hold a passage from behind an ally."
+    }
   },
   "Devil (Bone)": {
     "interest": "Devil (Bone): abilities noted in the bestiary entry — fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bone"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bone",
+    "roles": {
+      "control": "Use its fear aura and wall of ice to split foes.",
+      "bruiser": "Its sting poisons Strength; send it at a melee foe."
+    }
   },
   "Devil (Contract)": {
     "interest": "Devil (Contract): abilities noted in the bestiary entry — grab, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Contract%20Devil%20%28Phistophilus%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Contract%20Devil%20%28Phistophilus%29",
+    "roles": {
+      "utility": "Use it for knowledge and bargains rather than for combat.",
+      "control": "Use its spell-like abilities to hold a foe in place."
+    }
   },
   "Devil (Erinyes)": {
     "interest": "Devil (Erinyes): abilities noted in the bestiary entry — fear, flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Erinyes"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Erinyes",
+    "roles": {
+      "ranged": "Keep it flying at range and shoot the most dangerous foe.",
+      "control": "Entangle a fleeing foe with its rope, or frighten a group."
+    }
   },
   "Devil (Host)": {
     "interest": "Devil (Host): abilities noted in the bestiary entry — flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Host%20Devil%2C%20Lesser%20%28Gaav%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Host%20Devil%2C%20Lesser%20%28Gaav%29",
+    "roles": {
+      "scout": "Send it flying ahead to watch foes.",
+      "bruiser": "Engage a lone foe in melee."
+    }
   },
   "Devil (Ice)": {
     "interest": "Devil (Ice): abilities noted in the bestiary entry — regeneration, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ice%20Devil%20%28Gelugon%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ice%20Devil%20%28Gelugon%29",
+    "roles": {
+      "bruiser": "Its spear can slow the foe it hits; send it at the fastest enemy.",
+      "area": "Cast cone of cold or ice storm on a group of foes.",
+      "control": "Raise a wall of ice to split foes."
+    }
   },
   "Devil (Lemure)": {
     "interest": "Devil (Lemure): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lemure"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lemure",
+    "roles": {
+      "blocker": "Several lemures fill a passage; they are expendable."
+    }
   },
   "Dinosaur (Allosaurus)": {
     "interest": "Dinosaur (Allosaurus): abilities noted in the bestiary entry — pounce, grab, rake.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Allosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Allosaurus",
+    "roles": {
+      "bruiser": "Give it a charge lane: pounce, grab and rake make its first round devastating."
+    }
   },
   "Dinosaur (Ankylosaurus)": {
     "interest": "Dinosaur (Ankylosaurus): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ankylosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ankylosaurus",
+    "roles": {
+      "blocker": "Its very high AC makes it a wall; place it in front of the casters.",
+      "bruiser": "Its tail can stun a foe; target the strongest melee enemy."
+    }
   },
   "Dinosaur (Brachiosaurus)": {
     "interest": "Dinosaur (Brachiosaurus): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Brachiosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Brachiosaurus",
+    "roles": {
+      "blocker": "Its huge size and hit points let it fill a large space for several rounds.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Dinosaur (Compsognathus)": {
     "interest": "Dinosaur (Compsognathus): abilities noted in the bestiary entry — poison, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Compsognathus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Compsognathus",
+    "roles": {
+      "scout": "It is small and fast; send it to look ahead."
+    }
   },
   "Dinosaur (Deinonychus)": {
     "interest": "Dinosaur (Deinonychus): abilities noted in the bestiary entry — pounce.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Deinonychus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Deinonychus",
+    "roles": {
+      "bruiser": "Charge a foe: pounce gives a full attack with talons on the first round."
+    }
   },
   "Dinosaur (Dimetrodon)": {
     "interest": "Dinosaur (Dimetrodon): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dimetrodon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dimetrodon",
+    "roles": {
+      "bruiser": "Send it into melee with a ground foe."
+    }
   },
   "Dinosaur (Dimorphodon)": {
     "interest": "Dinosaur (Dimorphodon): abilities noted in the bestiary entry — poison, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dimorphodon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dimorphodon",
+    "roles": {
+      "scout": "It flies; send it to look ahead."
+    }
   },
   "Dinosaur (Diplodocus)": {
     "interest": "Dinosaur (Diplodocus): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Diplodocus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Diplodocus",
+    "roles": {
+      "blocker": "Its size and hit points fill a large space for several rounds.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Dinosaur (Elasmosaurus)": {
     "interest": "Dinosaur (Elasmosaurus): abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elasmosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elasmosaurus",
+    "roles": {
+      "bruiser": "In or near water, its long neck reaches and bites hard."
+    }
   },
   "Dinosaur (Iguanodon)": {
     "interest": "Dinosaur (Iguanodon): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Iguanodon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Iguanodon",
+    "roles": {
+      "bruiser": "Its thumb spikes hit hard; engage a ground foe.",
+      "blocker": "Its size and hit points let it hold a line."
+    }
   },
   "Dinosaur (Pachycephalosaurus)": {
     "interest": "Dinosaur (Pachycephalosaurus): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pachycephalosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pachycephalosaurus",
+    "roles": {
+      "bruiser": "Charge a foe head first.",
+      "maneuvers": "Bull rush a foe off a ledge or out of a formation."
+    }
   },
   "Dinosaur (Parasaurolophus)": {
     "interest": "Dinosaur (Parasaurolophus): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Parasaurolophus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Parasaurolophus",
+    "roles": {
+      "blocker": "Its size and hit points let it hold a line."
+    }
   },
   "Dinosaur (Pteranodon)": {
     "interest": "Dinosaur (Pteranodon): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pteranodon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pteranodon",
+    "roles": {
+      "scout": "Send it flying ahead to see what waits."
+    }
   },
   "Dinosaur (Spinosaurus)": {
     "interest": "Dinosaur (Spinosaurus): abilities noted in the bestiary entry — pounce, grab, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Spinosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Spinosaurus",
+    "roles": {
+      "bruiser": "Charge a large foe: pounce gives a full attack at once.",
+      "maneuvers": "Grab and swallow a smaller foe."
+    }
   },
   "Dinosaur (Stegosaurus)": {
     "interest": "Dinosaur (Stegosaurus): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stegosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stegosaurus",
+    "roles": {
+      "blocker": "Its armor and hit points let it hold a passage.",
+      "bruiser": "Its tail hits hard; place it where foes come to it."
+    }
   },
   "Dinosaur (Styracosaurus)": {
     "interest": "Dinosaur (Styracosaurus): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Styracosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Styracosaurus",
+    "roles": {
+      "bruiser": "Its powerful charge deals heavy damage; give it a clear lane.",
+      "blocker": "Its frill and hit points let it hold a line."
+    }
   },
   "Dinosaur (Triceratops)": {
     "interest": "Dinosaur (Triceratops): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Triceratops"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Triceratops",
+    "roles": {
+      "bruiser": "Charge the toughest foe: its powerful charge doubles its horn damage.",
+      "area": "Trample through a line of smaller foes."
+    }
   },
   "Dinosaur (Tylosaurus)": {
     "interest": "Dinosaur (Tylosaurus): abilities noted in the bestiary entry — grab, trip, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tylosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tylosaurus",
+    "roles": {
+      "maneuvers": "In water, grab and swallow a foe.",
+      "bruiser": "Its bite is very strong; use it against swimming foes."
+    }
   },
   "Dinosaur (Tyrannosaurus)": {
     "interest": "Dinosaur (Tyrannosaurus): abilities noted in the bestiary entry — grab, swallow whole.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tyrannosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tyrannosaurus",
+    "roles": {
+      "bruiser": "Send it at the toughest foe: its bite is among the strongest of its level.",
+      "maneuvers": "Grab and swallow a smaller foe to take it out of the fight."
+    }
   },
   "Dinosaur (Velociraptor)": {
     "interest": "Dinosaur (Velociraptor): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Velociraptor"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Velociraptor",
+    "roles": {
+      "bruiser": "Charge a lightly armored foe: it attacks with talons and bite."
+    }
   },
   "Div (Aghash)": {
     "interest": "Div (Aghash): abilities noted in the bestiary entry — gaze, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Aghash"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Aghash",
+    "roles": {
+      "control": "Use its gaze and spell-like abilities on foes with weak saves."
+    }
   },
   "Div (Doru)": {
     "interest": "Div (Doru): abilities noted in the bestiary entry — trip, poison, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Doru"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Doru",
+    "roles": {
+      "scout": "Send it invisible and flying to look ahead.",
+      "control": "Its poison clouds a foe's memory; bite a caster."
+    }
   },
   "Div (Ghawwas)": {
     "interest": "Div (Ghawwas): abilities noted in the bestiary entry — poison, swim, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ghawwas"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ghawwas",
+    "roles": {
+      "bruiser": "Engage a foe in melee, ideally near water.",
+      "control": "Use its spell-like abilities on a group before engaging."
+    }
   },
   "Div (Pairaka)": {
     "interest": "Div (Pairaka): abilities noted in the bestiary entry — change shape, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pairaka"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pairaka",
+    "roles": {
+      "control": "Use its charm and disease on a foe with a weak Will save.",
+      "scout": "It can change shape and turn invisible to look ahead."
+    }
   },
   "Div (Sepid)": {
     "interest": "Div (Sepid): abilities noted in the bestiary entry — invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Sepid"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Sepid",
+    "roles": {
+      "area": "Use its area spell-like abilities on a group of foes.",
+      "control": "Then use its other spell-like abilities on the strongest foe."
+    }
   },
   "Div (Shira)": {
     "interest": "Div (Shira): abilities noted in the bestiary entry — grab, rake, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shira"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shira",
+    "roles": {
+      "bruiser": "Engage a foe in melee: grab and rake add damage each round.",
+      "maneuvers": "Grab a caster and hold it to stop its spells."
+    }
   },
   "Dolphin": {
     "interest": "Dolphin: abilities noted in the bestiary entry — swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dolphin"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dolphin",
+    "roles": {
+      "scout": "In water, send it ahead to look and come back; it is useless on land."
+    }
   },
   "Dolphin (Orca)": {
     "interest": "Dolphin (Orca): abilities noted in the bestiary entry — swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Orca"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Orca",
+    "roles": {
+      "bruiser": "In water, its bite hits hard; send it at a swimming foe."
+    }
   },
   "Dorvae": {
     "interest": "Dorvae: abilities noted in the bestiary entry — grab, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dorvae"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dorvae",
+    "roles": {
+      "maneuvers": "Grab a foe and hold it while the party attacks.",
+      "scout": "Send it invisible and flying to look ahead."
+    }
   },
   "Dragon (Bronze)": {
     "interest": "Dragon (Bronze): abilities noted in the bestiary entry — trip, breath weapon, change shape, flight, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Young%20Bronze%20Dragon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Young%20Bronze%20Dragon",
+    "roles": {
+      "area": "Breathe lightning along a line of foes.",
+      "bruiser": "Then engage the strongest foe: bite, claws, wings and tail.",
+      "control": "Its repulsion breath pushes foes away from a threatened ally."
+    }
   },
   "Dragon (Faerie)": {
     "interest": "Dragon (Faerie): abilities noted in the bestiary entry — trip, breath weapon, invisibility, flight, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Faerie%20Dragon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Faerie%20Dragon",
+    "roles": {
+      "control": "Breathe euphoria on a group of foes: those who fail are dazed with joy.",
+      "scout": "It can turn invisible and fly ahead to look."
+    }
   },
   "Dragon (Gold)": {
     "interest": "Dragon (Gold): abilities noted in the bestiary entry — trip, breath weapon, change shape, flight, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Young%20Gold%20Dragon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Young%20Gold%20Dragon",
+    "roles": {
+      "area": "Breathe fire on a group of foes.",
+      "bruiser": "Then engage the strongest foe: bite, claws, wings and tail."
+    }
   },
   "Dragon (Green)": {
     "interest": "Young adult green dragon: flight, swimming, acid breath, and magic. Exact statistics depend on its age category.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://legacy.aonprd.com/bestiary/dragon.html"
+    "bestiary": "https://legacy.aonprd.com/bestiary/dragon.html",
+    "roles": {
+      "area": "Breathe acid on a group of foes.",
+      "bruiser": "Then engage the strongest foe: bite, claws, wings and tail."
+    }
   },
   "Dragon Horse": {
     "interest": "Dragon Horse: abilities noted in the bestiary entry — trip, breath weapon, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dragon%20Horse"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dragon%20Horse",
+    "roles": {
+      "area": "Breathe on a group of foes from the air.",
+      "utility": "It can carry an ally through the air."
+    }
   },
   "Drake (Desert)": {
     "interest": "Drake (Desert): abilities noted in the bestiary entry — flight, burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Desert%20Drake"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Desert%20Drake",
+    "roles": {
+      "area": "Breathe on a group of foes.",
+      "scout": "It burrows through sand and flies; send it to look ahead."
+    }
   },
   "Drake (Flame)": {
     "interest": "Drake (Flame): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Flame%20Drake"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Flame%20Drake",
+    "roles": {
+      "area": "Breathe its fireball on a group of foes.",
+      "bruiser": "Then engage a foe in melee."
+    }
   },
   "Drake (Frost)": {
     "interest": "Drake (Frost): abilities noted in the bestiary entry — flight, burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Frost%20Drake"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Frost%20Drake",
+    "roles": {
+      "area": "Breathe freezing mist on a group of foes.",
+      "control": "The icy ground it leaves slows foes."
+    }
   },
   "Drake (Shadow)": {
     "interest": "Drake (Shadow): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shadow%20Drake"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shadow%20Drake",
+    "roles": {
+      "area": "Breathe on a group of foes.",
+      "scout": "It is stealthy and flies; send it to look ahead."
+    }
   },
   "Eagle (Giant)": {
     "interest": "Eagle (Giant): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Eagle"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Eagle",
+    "roles": {
+      "scout": "Send it flying ahead to look; its sight is keen.",
+      "utility": "It can carry an ally through the air."
+    }
   },
   "Eel (Electric)": {
     "interest": "Eel (Electric): abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Electric%20Eel"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Electric%20Eel",
+    "roles": {
+      "control": "In water, its electric shock can stun a foe."
+    }
   },
   "Eel (Giant Moray)": {
     "interest": "Eel (Giant Moray): abilities noted in the bestiary entry — grab, trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Moray%20Eel"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Moray%20Eel",
+    "roles": {
+      "bruiser": "In water, its bite hits hard.",
+      "maneuvers": "Grab a swimming foe and hold it."
+    }
   },
   "Elemental (Air/Elder)": {
     "interest": "Elemental (Air/Elder): abilities noted in the bestiary entry — whirlwind, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Air%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Air%20Elemental",
+    "roles": {
+      "control": "Become a whirlwind to pick up foes and toss them aside; its air mastery hinders flying foes.",
+      "scout": "Its fast flight lets it look ahead or reach a distant foe."
+    }
   },
   "Elemental (Air/Greater)": {
     "interest": "Elemental (Air/Greater): abilities noted in the bestiary entry — whirlwind, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Air%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Air%20Elemental",
+    "roles": {
+      "control": "Become a whirlwind to pick up foes and toss them aside; its air mastery hinders flying foes.",
+      "scout": "Its fast flight lets it look ahead or reach a distant foe."
+    }
   },
   "Elemental (Air/Huge)": {
     "interest": "Elemental (Air/Huge): abilities noted in the bestiary entry — whirlwind, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Air%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Air%20Elemental",
+    "roles": {
+      "control": "Become a whirlwind to pick up foes and toss them aside; its air mastery hinders flying foes.",
+      "scout": "Its fast flight lets it look ahead or reach a distant foe."
+    }
   },
   "Elemental (Air/Large)": {
     "interest": "Elemental (Air/Large): abilities noted in the bestiary entry — whirlwind, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Air%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Air%20Elemental",
+    "roles": {
+      "control": "Become a whirlwind to pick up foes and toss them aside; its air mastery hinders flying foes.",
+      "scout": "Its fast flight lets it look ahead or reach a distant foe."
+    }
   },
   "Elemental (Air/Medium)": {
     "interest": "Elemental (Air/Medium): abilities noted in the bestiary entry — whirlwind, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Air%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Air%20Elemental",
+    "roles": {
+      "control": "Become a whirlwind to pick up foes and toss them aside; its air mastery hinders flying foes.",
+      "scout": "Its fast flight lets it look ahead or reach a distant foe."
+    }
   },
   "Elemental (Air/Small)": {
     "interest": "Elemental (Air/Small): abilities noted in the bestiary entry — whirlwind, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Air%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Air%20Elemental",
+    "roles": {
+      "control": "Become a whirlwind to pick up foes and toss them aside; its air mastery hinders flying foes.",
+      "scout": "Its fast flight lets it look ahead or reach a distant foe."
+    }
   },
   "Elemental (Earth/Elder)": {
     "interest": "Elemental (Earth/Elder): abilities noted in the bestiary entry — burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Earth%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Earth%20Elemental",
+    "roles": {
+      "bruiser": "Its slams hit hard, especially against foes standing on the ground.",
+      "blocker": "It is slow but tough; place it in front of the casters."
+    }
   },
   "Elemental (Earth/Greater)": {
     "interest": "Elemental (Earth/Greater): abilities noted in the bestiary entry — burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Earth%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Earth%20Elemental",
+    "roles": {
+      "bruiser": "Its slams hit hard, especially against foes standing on the ground.",
+      "blocker": "It is slow but tough; place it in front of the casters."
+    }
   },
   "Elemental (Earth/Huge)": {
     "interest": "Elemental (Earth/Huge): abilities noted in the bestiary entry — burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Earth%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Earth%20Elemental",
+    "roles": {
+      "bruiser": "Its slams hit hard, especially against foes standing on the ground.",
+      "blocker": "It is slow but tough; place it in front of the casters."
+    }
   },
   "Elemental (Earth/Large)": {
     "interest": "Elemental (Earth/Large): abilities noted in the bestiary entry — burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Earth%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Earth%20Elemental",
+    "roles": {
+      "bruiser": "Its slams hit hard, especially against foes standing on the ground.",
+      "blocker": "It is slow but tough; place it in front of the casters."
+    }
   },
   "Elemental (Earth/Medium)": {
     "interest": "Elemental (Earth/Medium): abilities noted in the bestiary entry — burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Earth%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Earth%20Elemental",
+    "roles": {
+      "bruiser": "Its slams hit hard, especially against foes standing on the ground.",
+      "blocker": "It is slow but tough; place it in front of the casters."
+    }
   },
   "Elemental (Earth/Small)": {
     "interest": "Elemental (Earth/Small): abilities noted in the bestiary entry — burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Earth%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Earth%20Elemental",
+    "roles": {
+      "bruiser": "Its slams hit hard, especially against foes standing on the ground.",
+      "blocker": "It is slow but tough; place it in front of the casters."
+    }
   },
   "Elemental (Fire/Elder)": {
     "interest": "Elemental (Fire/Elder): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Fire%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Fire%20Elemental",
+    "roles": {
+      "bruiser": "Its slams set foes on fire; send it at a foe without fire resistance."
+    }
   },
   "Elemental (Fire/Greater)": {
     "interest": "Elemental (Fire/Greater): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Fire%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Fire%20Elemental",
+    "roles": {
+      "bruiser": "Its slams set foes on fire; send it at a foe without fire resistance."
+    }
   },
   "Elemental (Fire/Huge)": {
     "interest": "Elemental (Fire/Huge): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Fire%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Fire%20Elemental",
+    "roles": {
+      "bruiser": "Its slams set foes on fire; send it at a foe without fire resistance."
+    }
   },
   "Elemental (Fire/Large)": {
     "interest": "Elemental (Fire/Large): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Fire%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Fire%20Elemental",
+    "roles": {
+      "bruiser": "Its slams set foes on fire; send it at a foe without fire resistance."
+    }
   },
   "Elemental (Fire/Medium)": {
     "interest": "Elemental (Fire/Medium): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Fire%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Fire%20Elemental",
+    "roles": {
+      "bruiser": "Its slams set foes on fire; send it at a foe without fire resistance."
+    }
   },
   "Elemental (Fire/Small)": {
     "interest": "Elemental (Fire/Small): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Fire%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Fire%20Elemental",
+    "roles": {
+      "bruiser": "Its slams set foes on fire; send it at a foe without fire resistance."
+    }
   },
   "Elemental (Water/Elder)": {
     "interest": "Elemental (Water/Elder): abilities noted in the bestiary entry — vortex, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Water%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elder%20Water%20Elemental",
+    "roles": {
+      "control": "In water, its vortex sweeps foes up; on land, it puts out fires and drenches foes.",
+      "blocker": "Its hit points let it hold a line, especially near water."
+    }
   },
   "Elemental (Water/Greater)": {
     "interest": "Elemental (Water/Greater): abilities noted in the bestiary entry — vortex, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Water%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Greater%20Water%20Elemental",
+    "roles": {
+      "control": "In water, its vortex sweeps foes up; on land, it puts out fires and drenches foes.",
+      "blocker": "Its hit points let it hold a line, especially near water."
+    }
   },
   "Elemental (Water/Huge)": {
     "interest": "Elemental (Water/Huge): abilities noted in the bestiary entry — vortex, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Water%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Huge%20Water%20Elemental",
+    "roles": {
+      "control": "In water, its vortex sweeps foes up; on land, it puts out fires and drenches foes.",
+      "blocker": "Its hit points let it hold a line, especially near water."
+    }
   },
   "Elemental (Water/Large)": {
     "interest": "Elemental (Water/Large): abilities noted in the bestiary entry — vortex, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Water%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Large%20Water%20Elemental",
+    "roles": {
+      "control": "In water, its vortex sweeps foes up; on land, it puts out fires and drenches foes.",
+      "blocker": "Its hit points let it hold a line, especially near water."
+    }
   },
   "Elemental (Water/Medium)": {
     "interest": "Elemental (Water/Medium): abilities noted in the bestiary entry — vortex, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Water%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Medium%20Water%20Elemental",
+    "roles": {
+      "control": "In water, its vortex sweeps foes up; on land, it puts out fires and drenches foes.",
+      "blocker": "Its hit points let it hold a line, especially near water."
+    }
   },
   "Elemental (Water/Small)": {
     "interest": "Elemental (Water/Small): abilities noted in the bestiary entry — vortex, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Water%20Elemental"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Small%20Water%20Elemental",
+    "roles": {
+      "control": "In water, its vortex sweeps foes up; on land, it puts out fires and drenches foes.",
+      "blocker": "Its hit points let it hold a line, especially near water."
+    }
   },
   "Elephant": {
     "interest": "Elephant: abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elephant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Elephant",
+    "roles": {
+      "bruiser": "Its gore and slam hit hard; send it at the toughest foe.",
+      "area": "Trample through a line of foes.",
+      "blocker": "Its size and hit points let it hold a large space."
+    }
   },
   "Elephant (Mastodon)": {
     "interest": "Elephant (Mastodon): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mastodon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mastodon",
+    "roles": {
+      "bruiser": "Its gore hits very hard; send it at the toughest foe.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Ettin": {
     "interest": "Ettin: abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ettin"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ettin",
+    "roles": {
+      "bruiser": "Engage in melee: its two heads let it fight with two weapons without penalty.",
+      "ranged": "Against a foe out of reach, throw its javelins."
+    }
   },
   "Faun": {
     "interest": "Faun: abilities noted in the bestiary entry — spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Faun"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Faun",
+    "roles": {
+      "ranged": "Keep it at range with its bow.",
+      "control": "Play its panpipes to put foes to sleep or charm them."
+    }
   },
   "Flytrap (Giant)": {
     "interest": "Flytrap (Giant): abilities noted in the bestiary entry — grab, trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Flytrap"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Flytrap",
+    "roles": {
+      "maneuvers": "Summon it where foes will pass: it grabs and swallows what comes into reach.",
+      "blocker": "It cannot move; use it to close a passage."
+    }
   },
   "Foo Dog": {
     "interest": "Foo Dog: abilities noted in the bestiary entry — trip, scent.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Foo%20Dog"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Foo%20Dog",
+    "roles": {
+      "blocker": "It is a guardian; place it in front of an ally to protect.",
+      "maneuvers": "Trip a foe that comes into reach."
+    }
   },
   "Foo Lion": {
     "interest": "Foo Lion: abilities noted in the bestiary entry — pounce, grab, trip, rake.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Foo%20Lion"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Foo%20Lion",
+    "roles": {
+      "bruiser": "Charge a foe: pounce and rake make its first round strong.",
+      "maneuvers": "Grab a foe and hold it."
+    }
   },
   "Forest Drake": {
     "interest": "Forest Drake: abilities noted in the bestiary entry — flight, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Forest%20Drake"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Forest%20Drake",
+    "roles": {
+      "area": "Breathe on a group of foes.",
+      "scout": "It flies and swims; send it to look ahead."
+    }
   },
   "Frog (Giant)": {
     "interest": "Frog (Giant): abilities noted in the bestiary entry — grab, trip, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Frog"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Frog",
+    "roles": {
+      "maneuvers": "Pull a foe with its tongue, grab it, then swallow it if it is small."
+    }
   },
   "Frog (Poison)": {
     "interest": "Frog (Poison): abilities noted in the bestiary entry — trip, poison, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Poison%20Frog"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Poison%20Frog",
+    "roles": {
+      "control": "Bite a foe to poison it; do not expect much damage."
+    }
   },
   "Gar": {
     "interest": "Gar: abilities noted in the bestiary entry — grab, trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Gar"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Gar",
+    "roles": {
+      "maneuvers": "In water, grab a swimming foe."
+    }
   },
   "Gar (Giant)": {
     "interest": "Gar (Giant): abilities noted in the bestiary entry — grab, trip, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Gar"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Gar",
+    "roles": {
+      "maneuvers": "In water, grab and swallow a foe.",
+      "bruiser": "Its bite hits hard against swimming foes."
+    }
   },
   "Genie (Djinni)": {
     "interest": "Genie (Djinni): abilities noted in the bestiary entry — whirlwind, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Djinni"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Djinni",
+    "roles": {
+      "control": "Become a whirlwind to pick up and toss small foes.",
+      "utility": "Use its creation and food spell-like abilities outside combat.",
+      "scout": "It turns invisible and flies; send it to look ahead."
+    }
   },
   "Genie (Efreeti)": {
     "interest": "Genie (Efreeti): abilities noted in the bestiary entry — change shape, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Efreeti"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Efreeti",
+    "roles": {
+      "bruiser": "Engage in melee: its fists add fire damage.",
+      "area": "Use wall of fire or its other fire spell-like abilities on a group."
+    }
   },
   "Giant (Cloud)": {
     "interest": "Giant (Cloud): abilities noted in the bestiary entry — spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cloud%20Giant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cloud%20Giant",
+    "roles": {
+      "bruiser": "Its morningstar hits very hard; send it at the toughest foe.",
+      "ranged": "Throw rocks at foes out of reach."
+    }
   },
   "Giant (Fire)": {
     "interest": "Giant (Fire): abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fire%20Giant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fire%20Giant",
+    "roles": {
+      "bruiser": "Its greatsword hits very hard; send it at the toughest foe.",
+      "ranged": "Throw hot rocks at foes out of reach."
+    }
   },
   "Giant (Frost)": {
     "interest": "Giant (Frost): abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Frost%20Giant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Frost%20Giant",
+    "roles": {
+      "bruiser": "Its greataxe hits very hard; send it at the toughest foe.",
+      "ranged": "Throw rocks at foes out of reach."
+    }
   },
   "Giant (Hill)": {
     "interest": "Giant (Hill): abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hill%20Giant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hill%20Giant",
+    "roles": {
+      "bruiser": "Its club hits hard; send it at a foe in melee.",
+      "ranged": "Throw rocks at foes out of reach."
+    }
   },
   "Giant (Stone)": {
     "interest": "Giant (Stone): abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stone%20Giant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stone%20Giant",
+    "roles": {
+      "ranged": "It is an excellent rock thrower; keep it at range.",
+      "bruiser": "In melee, its club hits hard."
+    }
   },
   "Giant (Storm)": {
     "interest": "Giant (Storm): abilities noted in the bestiary entry — swim, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Storm%20Giant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Storm%20Giant",
+    "roles": {
+      "bruiser": "Its greatsword hits very hard; send it at the toughest foe.",
+      "area": "Call lightning or use chain lightning on a group of foes."
+    }
   },
   "Giant (Wood)": {
     "interest": "Giant (Wood): abilities noted in the bestiary entry — tree shape, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Wood%20Giant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Wood%20Giant",
+    "roles": {
+      "ranged": "Keep it at range with its longbow.",
+      "scout": "In a forest, it can take the shape of a tree to watch unseen."
+    }
   },
   "Girallon": {
     "interest": "Girallon: abilities noted in the bestiary entry — climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Girallon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Girallon",
+    "roles": {
+      "bruiser": "Engage a foe in melee: four claws and rend deal heavy damage."
+    }
   },
   "Goblin Dog": {
     "interest": "Goblin Dog: abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Goblin%20Dog"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Goblin%20Dog",
+    "roles": {
+      "control": "Its dander gives an itchy rash that hinders foes it touches."
+    }
   },
   "Gremlin (Fuath)": {
     "interest": "Gremlin (Fuath): abilities noted in the bestiary entry — swim, climb, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fuath"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fuath",
+    "roles": {
+      "control": "Use its spell-like abilities near water to hinder foes."
+    }
   },
   "Gremlin (Pugwampi)": {
     "interest": "Gremlin (Pugwampi): abilities noted in the bestiary entry — spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pugwampi"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pugwampi",
+    "roles": {
+      "control": "Bring it near foes: its unluck aura makes them roll twice and keep the worse result."
+    }
   },
   "Griffon": {
     "interest": "Griffon: abilities noted in the bestiary entry — pounce, trip, rake, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Griffon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Griffon",
+    "roles": {
+      "bruiser": "Charge a foe from the air: pounce and rake make its first round strong.",
+      "scout": "Send it flying ahead to look."
+    }
   },
   "Grig": {
     "interest": "Grig: abilities noted in the bestiary entry — trip, invisibility, flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Grig"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Grig",
+    "roles": {
+      "control": "Play its fiddle: foes who fail their save dance in place.",
+      "scout": "It turns invisible and flies; send it to look ahead."
+    }
   },
   "Hell Hound": {
     "interest": "Hell Hound: abilities noted in the bestiary entry — trip, breath weapon.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hell%20Hound"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hell%20Hound",
+    "roles": {
+      "area": "Breathe fire on a group of foes.",
+      "bruiser": "Its bite adds fire damage; flank with an ally."
+    }
   },
   "Hellcat": {
     "interest": "Hellcat: abilities noted in the bestiary entry — pounce, grab, trip, rake.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hellcat"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hellcat",
+    "roles": {
+      "bruiser": "Charge a foe: pounce, grab and rake make its first round strong.",
+      "scout": "It is invisible in bright light; send it to look ahead."
+    }
   },
   "Herd Animal (Antelope)": {
     "interest": "Herd Animal (Antelope): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Antelope"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Antelope",
+    "roles": {
+      "utility": "It is fast; use it to carry a message or a light load."
+    }
   },
   "Herd Animal (Aurochs)": {
     "interest": "Herd Animal (Aurochs): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Aurochs"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Aurochs",
+    "roles": {
+      "bruiser": "Charge a foe: its gore hits hard for level III.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Herd Animal (Bison)": {
     "interest": "Herd Animal (Bison): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bison"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bison",
+    "roles": {
+      "bruiser": "Charge a foe: its gore hits hard.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Herd Animal (Camel)": {
     "interest": "Herd Animal (Camel): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Camel"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Camel",
+    "roles": {
+      "utility": "It can carry an ally or a load."
+    }
   },
   "Herd Animal (Giraffe)": {
     "interest": "Herd Animal (Giraffe): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giraffe"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giraffe",
+    "roles": {
+      "scout": "Its height lets it see over walls and crowds."
+    }
   },
   "Herd Animal (Ram)": {
     "interest": "Herd Animal (Ram): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ram"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ram",
+    "roles": {
+      "maneuvers": "Charge a foe to push it back or knock it over."
+    }
   },
   "Herd Animal (Stag)": {
     "interest": "Herd Animal (Stag): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stag"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stag",
+    "roles": {
+      "bruiser": "Charge a foe: its antlers hit hard for level II."
+    }
   },
   "Hippopotamus": {
     "interest": "Hippopotamus: abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hippopotamus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hippopotamus",
+    "roles": {
+      "bruiser": "Its bite hits hard; send it at a ground foe.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Hippopotamus (Behemoth)": {
     "interest": "Hippopotamus (Behemoth): abilities noted in the bestiary entry — grab, trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Behemoth%20Hippopotamus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Behemoth%20Hippopotamus",
+    "roles": {
+      "bruiser": "Its bite hits very hard; send it at the toughest foe.",
+      "maneuvers": "Grab a foe in its jaws and hold it.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Horse (Pony)": {
     "interest": "Horse (Pony): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pony"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pony",
+    "roles": {
+      "utility": "It can carry an ally or a load."
+    }
   },
   "Howler": {
     "interest": "Howler: abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Howler"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Howler",
+    "roles": {
+      "control": "Its howl wears down the minds of foes who hear it for a long time; keep it howling near them."
+    }
   },
   "Hyena": {
     "interest": "Hyena: abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hyena"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hyena",
+    "roles": {
+      "maneuvers": "Bite a foe to trip it, so the melee allies attack a prone target."
+    }
   },
   "Hypnalis": {
     "interest": "Hypnalis: abilities noted in the bestiary entry — grab, trip, poison, constrict, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hypnalis"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hypnalis",
+    "roles": {
+      "control": "Its poison puts foes to sleep; bite a dangerous foe first."
+    }
   },
   "Inevitable (Arbiter)": {
     "interest": "Inevitable (Arbiter): abilities noted in the bestiary entry — regeneration, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Arbiter"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Arbiter",
+    "roles": {
+      "scout": "Send it flying ahead; it is small and hard to deceive.",
+      "utility": "Use its spell-like abilities to find someone or settle a dispute."
+    }
   },
   "Inevitable (Kolyarut)": {
     "interest": "Inevitable (Kolyarut): abilities noted in the bestiary entry — regeneration, invisibility, fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kolyarut"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kolyarut",
+    "roles": {
+      "bruiser": "Its touch drains life; send it at a foe who cannot easily heal.",
+      "control": "Use its spell-like abilities to hold a fleeing foe."
+    }
   },
   "Inevitable (Marut)": {
     "interest": "Inevitable (Marut): abilities noted in the bestiary entry — regeneration, fear, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Marut"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Marut",
+    "roles": {
+      "bruiser": "Its fists strike with thunder and lightning; send it at the toughest foe.",
+      "area": "Use its area spell-like abilities on a group."
+    }
   },
   "Inevitable (Zelekhut)": {
     "interest": "Inevitable (Zelekhut): abilities noted in the bestiary entry — trip, regeneration, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Zelekhut"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Zelekhut",
+    "roles": {
+      "maneuvers": "Its spiked chains can trip foes; use them on a fleeing enemy.",
+      "bruiser": "Then strike the prone foe with its chains."
+    }
   },
   "Invisible Stalker": {
     "interest": "Invisible Stalker: abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Invisible%20Stalker"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Invisible%20Stalker",
+    "roles": {
+      "scout": "It is always invisible; send it to watch foes or follow someone.",
+      "bruiser": "Attack a caster: foes have trouble striking back at what they cannot see."
+    }
   },
   "Jinmenju": {
     "interest": "Jinmenju: abilities noted in the bestiary entry — spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Jinmenju"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Jinmenju",
+    "roles": {
+      "control": "Its laughing fruit and spell-like abilities can disable foes; summon it where they gather."
+    }
   },
   "Jyoti": {
     "interest": "Jyoti: abilities noted in the bestiary entry — breath weapon, fast healing, flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Jyoti"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Jyoti",
+    "roles": {
+      "area": "Breathe positive energy on a group of undead.",
+      "ranged": "Keep it at range and shoot its rays."
+    }
   },
   "Kami (Kodama)": {
     "interest": "Kami (Kodama): abilities noted in the bestiary entry — gaze, fast healing, tree shape, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kodama"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kodama",
+    "roles": {
+      "control": "Use its gaze and spell-like abilities to drive off foes near trees."
+    }
   },
   "Kami (Shikigami)": {
     "interest": "Kami (Shikigami): abilities noted in the bestiary entry — fast healing, invisibility, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shikigami"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shikigami",
+    "roles": {
+      "scout": "Send it invisible to look ahead.",
+      "utility": "Use its spell-like abilities outside combat."
+    }
   },
   "Kami (Toshigami)": {
     "interest": "Kami (Toshigami): abilities noted in the bestiary entry — fast healing, tree shape, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Toshigami"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Toshigami",
+    "roles": {
+      "support": "Use its spell-like abilities to heal and protect allies.",
+      "control": "Use its other spell-like abilities to hold foes off."
+    }
   },
   "Kami (Zuishin)": {
     "interest": "Kami (Zuishin): abilities noted in the bestiary entry — trip, poison, fast healing, invisibility, flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Zuishin"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Zuishin",
+    "roles": {
+      "ranged": "Keep it at range with its bow.",
+      "blocker": "It is a gate guardian; place it in a doorway."
+    }
   },
   "Kelpie": {
     "interest": "Kelpie: abilities noted in the bestiary entry — grab, change shape, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kelpie"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kelpie",
+    "roles": {
+      "maneuvers": "Lure a foe near water, grab it and drag it under.",
+      "control": "Its captivating shape can draw a foe to it."
+    }
   },
   "Kirin": {
     "interest": "Kirin: abilities noted in the bestiary entry — trip, breath weapon, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kirin"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kirin",
+    "roles": {
+      "area": "Breathe lightning on a group of foes.",
+      "scout": "It flies and senses evil; send it to look ahead."
+    }
   },
   "Kyton": {
     "interest": "Kyton: abilities noted in the bestiary entry — gaze, regeneration.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kyton"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kyton",
+    "roles": {
+      "bruiser": "Its dancing chains strike several times at reach.",
+      "control": "Its unnerving gaze hinders foes who look at it."
+    }
   },
   "Kyton (Augur)": {
     "interest": "Kyton (Augur): abilities noted in the bestiary entry — trip, gaze, regeneration, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Augur"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Augur",
+    "roles": {
+      "scout": "Send it flying ahead; it is small and sees well.",
+      "control": "Its gaze can hinder a foe."
+    }
   },
   "Kyton (Interlocutor)": {
     "interest": "Kyton (Interlocutor): abilities noted in the bestiary entry — trip, poison, gaze, regeneration, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Interlocutor"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Interlocutor",
+    "roles": {
+      "control": "Use its gaze and poison to weaken the strongest foe.",
+      "bruiser": "Then engage it in melee with its many blades."
+    }
   },
   "Kyton (Ostiarius)": {
     "interest": "Kyton (Ostiarius): abilities noted in the bestiary entry — gaze, regeneration, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ostiarius"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ostiarius",
+    "roles": {
+      "control": "Use its gaze and spell-like abilities on foes with weak saves."
+    }
   },
   "Kyton (Sacristan)": {
     "interest": "Kyton (Sacristan): abilities noted in the bestiary entry — gaze, regeneration.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Sacristan"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Sacristan",
+    "roles": {
+      "control": "Its gaze hinders foes; keep them looking at it.",
+      "blocker": "Regeneration lets it hold a passage."
+    }
   },
   "Lammasu": {
     "interest": "Lammasu: abilities noted in the bestiary entry — pounce, trip, rake, poison, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lammasu"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lammasu",
+    "roles": {
+      "bruiser": "Charge a foe: pounce and rake make its first round strong.",
+      "support": "Its protective aura and healing help allies near it.",
+      "area": "Breathe fire on a group of foes."
+    }
   },
   "Leaf Ray": {
     "interest": "Leaf Ray: abilities noted in the bestiary entry — trip, poison, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leaf%20Ray"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leaf%20Ray",
+    "roles": {
+      "control": "Its poison can paralyze a foe; strike a dangerous one first."
+    }
   },
   "Leshy (Fungus)": {
     "interest": "Leshy (Fungus): abilities noted in the bestiary entry — change shape, tree shape, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fungus%20Leshy"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Fungus%20Leshy",
+    "roles": {
+      "control": "Its spores hinder foes around it; summon it among them."
+    }
   },
   "Leshy (Gourd)": {
     "interest": "Leshy (Gourd): abilities noted in the bestiary entry — change shape, tree shape, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Gourd%20Leshy"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Gourd%20Leshy",
+    "roles": {
+      "ranged": "Keep it at range and spit seeds at foes."
+    }
   },
   "Leshy (Leaf)": {
     "interest": "Leshy (Leaf): abilities noted in the bestiary entry — change shape, tree shape, flight, climb, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leaf%20Leshy"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Leaf%20Leshy",
+    "roles": {
+      "scout": "It glides and climbs; send it to look ahead."
+    }
   },
   "Leshy (Seaweed)": {
     "interest": "Leshy (Seaweed): abilities noted in the bestiary entry — change shape, tree shape, swim, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Seaweed%20Leshy"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Seaweed%20Leshy",
+    "roles": {
+      "control": "Near water, use its spell-like abilities to hinder foes."
+    }
   },
   "Lizard (Giant Gecko)": {
     "interest": "Lizard (Giant Gecko): abilities noted in the bestiary entry — climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Gecko"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Gecko",
+    "roles": {
+      "scout": "It climbs walls and ceilings; send it to look ahead."
+    }
   },
   "Lizard (Monitor)": {
     "interest": "Lizard (Monitor): abilities noted in the bestiary entry — grab, trip, poison, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Monitor%20Lizard"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Monitor%20Lizard",
+    "roles": {
+      "maneuvers": "Grab a foe with its bite and hold it while the poison works."
+    }
   },
   "Lurker in Light": {
     "interest": "Lurker in Light: abilities noted in the bestiary entry — poison, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lurker%20in%20Light"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lurker%20in%20Light",
+    "roles": {
+      "scout": "It is invisible in bright light; send it to look ahead.",
+      "control": "Use its spell-like abilities to blind or confuse foes."
+    }
   },
   "Magmin": {
     "interest": "Magmin: abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Magmin"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Magmin",
+    "roles": {
+      "bruiser": "Its burning touch sets foes on fire; send it at one without fire resistance."
+    }
   },
   "Mandragora": {
     "interest": "Mandragora: abilities noted in the bestiary entry — grab, poison, burrow, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mandragora"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mandragora",
+    "roles": {
+      "control": "Its poison and scream hinder foes; summon it among them.",
+      "maneuvers": "Grab a foe and hold it."
+    }
   },
   "Manticore": {
     "interest": "Manticore: abilities noted in the bestiary entry — trip, flight, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Manticore"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Manticore",
+    "roles": {
+      "ranged": "Keep it in the air and throw its tail spikes.",
+      "bruiser": "Then engage a wounded foe in melee."
+    }
   },
   "Marsupial (Kangaroo)": {
     "interest": "Marsupial (Kangaroo): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kangaroo"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Kangaroo",
+    "roles": {
+      "bruiser": "Send it at a weak foe; its kick hits fairly hard for level I."
+    }
   },
   "Marsupial (Thylacine)": {
     "interest": "Marsupial (Thylacine): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Thylacine"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Thylacine",
+    "roles": {
+      "maneuvers": "Bite a foe to trip it."
+    }
   },
   "Megafauna (Archelon)": {
     "interest": "Megafauna (Archelon): abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Archelon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Archelon",
+    "roles": {
+      "blocker": "Its shell makes it a wall; place it in front of the casters, especially near water."
+    }
   },
   "Megafauna (Arsinoitherium)": {
     "interest": "Megafauna (Arsinoitherium): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Arsinoitherium"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Arsinoitherium",
+    "roles": {
+      "bruiser": "Charge a foe: its horns hit very hard.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Megafauna (Baluchitherium)": {
     "interest": "Megafauna (Baluchitherium): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Baluchitherium"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Baluchitherium",
+    "roles": {
+      "bruiser": "Its slam hits hard; send it at a ground foe.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Megafauna (Basilosaurus)": {
     "interest": "Megafauna (Basilosaurus): abilities noted in the bestiary entry — grab, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Basilosaurus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Basilosaurus",
+    "roles": {
+      "bruiser": "In water, its bite hits very hard.",
+      "maneuvers": "Grab and swallow a swimming foe."
+    }
   },
   "Megafauna (Megalania)": {
     "interest": "Megafauna (Megalania): abilities noted in the bestiary entry — grab, trip, poison, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Megalania"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Megalania",
+    "roles": {
+      "bruiser": "Its bite hits very hard and poisons.",
+      "maneuvers": "Grab and swallow a smaller foe."
+    }
   },
   "Megafauna (Megaloceros)": {
     "interest": "Megafauna (Megaloceros): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Megaloceros"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Megaloceros",
+    "roles": {
+      "bruiser": "Charge a foe: its antlers hit hard."
+    }
   },
   "Megafauna (Megatherium)": {
     "interest": "Megafauna (Megatherium): abilities noted in the bestiary entry — trip, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Megatherium"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Megatherium",
+    "roles": {
+      "bruiser": "Its claws hit hard; send it at a ground foe.",
+      "blocker": "Its size and hit points let it hold a line."
+    }
   },
   "Mephit (Air)": {
     "interest": "Mephit (Air): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "scout": "Its fast flight lets it look ahead."
+    }
   },
   "Mephit (Dust)": {
     "interest": "Mephit (Dust): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "control": "Use blur or wind wall to protect allies from arrows."
+    }
   },
   "Mephit (Earth)": {
     "interest": "Mephit (Earth): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "utility": "Use its earth-shaping abilities to open or close a passage."
+    }
   },
   "Mephit (Fire)": {
     "interest": "Mephit (Fire): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "ranged": "Use scorching ray or heat metal on an armored foe."
+    }
   },
   "Mephit (Ice)": {
     "interest": "Mephit (Ice): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "control": "Use chill metal on an armored foe."
+    }
   },
   "Mephit (Magma)": {
     "interest": "Mephit (Magma): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "control": "Use its fire tricks to dazzle foes."
+    }
   },
   "Mephit (Ooze)": {
     "interest": "Mephit (Ooze): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "control": "Use stinking cloud on a group of foes."
+    }
   },
   "Mephit (Salt)": {
     "interest": "Mephit (Salt): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "control": "Use glitterdust to blind foes or reveal invisible ones."
+    }
   },
   "Mephit (Steam)": {
     "interest": "Mephit (Steam): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "ranged": "Use its scalding attacks on a foe out of reach."
+    }
   },
   "Mephit (Water)": {
     "interest": "Mephit (Water): flight, an elemental breath weapon, and spell-like abilities specific to this variant.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mephit",
+    "roles": {
+      "area": "Breathe on a group of foes on the first round.",
+      "control": "Use stinking cloud or acid arrow on foes."
+    }
   },
   "Mercane": {
     "interest": "Mercane: abilities noted in the bestiary entry — invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mercane"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mercane",
+    "roles": {
+      "utility": "Use it for trade and knowledge; it can turn invisible and teleport goods."
+    }
   },
   "Mihstu": {
     "interest": "Mihstu: abilities noted in the bestiary entry — grab, trip, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mihstu"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mihstu",
+    "roles": {
+      "maneuvers": "Envelop a foe in its misty body and hold it.",
+      "control": "It is hard to hit; use it to tie up a strong foe."
+    }
   },
   "Mite": {
     "interest": "Mite: abilities noted in the bestiary entry — climb, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mite"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mite",
+    "roles": {
+      "scout": "It is tiny and climbs; send it to look ahead."
+    }
   },
   "Mudlord": {
     "interest": "Mudlord: abilities noted in the bestiary entry — grab, trip, swim, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mudlord"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Mudlord",
+    "roles": {
+      "control": "Its mud hinders foes; summon it on soft ground.",
+      "ranged": "Throw mud at a foe out of reach."
+    }
   },
   "Nuckelavee": {
     "interest": "Nuckelavee: abilities noted in the bestiary entry — trip, trample, breath weapon, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nuckelavee"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nuckelavee",
+    "roles": {
+      "bruiser": "Charge a foe: it hits very hard and tramples.",
+      "area": "Breathe on a group of foes."
+    }
   },
   "Octopus": {
     "interest": "Octopus: abilities noted in the bestiary entry — grab, trip, poison, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Octopus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Octopus",
+    "roles": {
+      "maneuvers": "Grab a foe with its arms and hold it.",
+      "control": "Release ink to cover a retreat or blind foes in water."
+    }
   },
   "Octopus (Giant)": {
     "interest": "Octopus (Giant): abilities noted in the bestiary entry — grab, trip, poison, constrict, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Octopus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Octopus",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe with its arms.",
+      "control": "Release ink to blind foes in water; its bite poisons."
+    }
   },
   "Owl (Great Horned)": {
     "interest": "Owl (Great Horned): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Great%20Horned%20Owl"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Great%20Horned%20Owl",
+    "roles": {
+      "scout": "It flies silently and sees in the dark; send it to look ahead."
+    }
   },
   "Owlbear": {
     "interest": "Owlbear: abilities noted in the bestiary entry — grab, trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Owlbear"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Owlbear",
+    "roles": {
+      "bruiser": "Engage a foe in melee: two claws and a bite.",
+      "maneuvers": "Grab a foe and hold it."
+    }
   },
   "Pegasus": {
     "interest": "Pegasus: abilities noted in the bestiary entry — trip, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pegasus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pegasus",
+    "roles": {
+      "utility": "It can carry an ally through the air.",
+      "scout": "It flies and detects evil; send it to look ahead."
+    }
   },
   "Pixie": {
     "interest": "Pixie: abilities noted in the bestiary entry — flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pixie"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pixie",
+    "roles": {
+      "control": "Its arrows can put foes to sleep or make them forget; shoot the strongest first.",
+      "ranged": "Keep it at range, invisible, and shoot each round.",
+      "scout": "It turns invisible and flies; send it to look ahead."
+    }
   },
   "Porcupine (Giant)": {
     "interest": "Porcupine (Giant): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Porcupine"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Porcupine",
+    "roles": {
+      "blocker": "Its quills hurt foes who strike it; place it where they must go through it."
+    }
   },
   "Primate (Baboon)": {
     "interest": "Primate (Baboon): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Baboon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Baboon",
+    "roles": {
+      "bruiser": "Send it at a weak foe; it bites fairly hard for level I."
+    }
   },
   "Protean (Imentesh)": {
     "interest": "Protean (Imentesh): abilities noted in the bestiary entry — grab, trip, constrict, fast healing, change shape, flight, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Imentesh"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Imentesh",
+    "roles": {
+      "control": "Use its warpwave and spell-like abilities on a group of foes.",
+      "maneuvers": "Grab and constrict a foe with its tail."
+    }
   },
   "Protean (Naunet)": {
     "interest": "Protean (Naunet): abilities noted in the bestiary entry — grab, constrict, change shape, flight, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Naunet"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Naunet",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe with its tail.",
+      "control": "Its touch can confuse; use it on a strong melee foe."
+    }
   },
   "Protean (Voidworm)": {
     "interest": "Protean (Voidworm): abilities noted in the bestiary entry — trip, fast healing, change shape, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Voidworm"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Voidworm",
+    "roles": {
+      "scout": "It is small and flies; send it to look ahead."
+    }
   },
   "Pseudodragon": {
     "interest": "Pseudodragon: abilities noted in the bestiary entry — trip, poison, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pseudodragon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Pseudodragon",
+    "roles": {
+      "control": "Its sting can put a foe to sleep.",
+      "scout": "It is small, flies and senses danger; send it to look ahead."
+    }
   },
   "Psychopomp (Catrina)": {
     "interest": "Psychopomp (Catrina): abilities noted in the bestiary entry — invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Catrina"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Catrina",
+    "roles": {
+      "control": "Use its calming spell-like abilities to end a fight or stop a foe.",
+      "support": "Its presence comforts allies; keep it close to them."
+    }
   },
   "Psychopomp (Morrigna)": {
     "interest": "Psychopomp (Morrigna): abilities noted in the bestiary entry — grab, regeneration, change shape, invisibility, climb, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Morrigna"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Morrigna",
+    "roles": {
+      "control": "Use its webs and spell-like abilities to hold foes.",
+      "maneuvers": "Grab a foe and hold it."
+    }
   },
   "Psychopomp (Nosoi)": {
     "interest": "Psychopomp (Nosoi): abilities noted in the bestiary entry — change shape, invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nosoi"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nosoi",
+    "roles": {
+      "scout": "It turns invisible and flies; send it to look ahead.",
+      "utility": "Use its spell-like abilities outside combat."
+    }
   },
   "Psychopomp (Vanth)": {
     "interest": "Psychopomp (Vanth): abilities noted in the bestiary entry — invisibility, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vanth"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vanth",
+    "roles": {
+      "bruiser": "Its scythe hits hard; send it at an undead or a dangerous foe.",
+      "control": "Use its spell-like abilities to hold foes off."
+    }
   },
   "Purple Worm": {
     "interest": "Purple Worm: abilities noted in the bestiary entry — grab, trip, poison, swallow whole, swim, burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Purple%20Worm"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Purple%20Worm",
+    "roles": {
+      "bruiser": "Its bite and poisoned sting hit very hard; send it at the toughest foe.",
+      "maneuvers": "Grab and swallow a foe to take it out of the fight."
+    }
   },
   "Qlippoth (Augnagar)": {
     "interest": "Qlippoth (Augnagar): abilities noted in the bestiary entry — trip, flight, climb, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Augnagar"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Augnagar",
+    "roles": {
+      "bruiser": "Engage a foe in melee; its attacks rot flesh.",
+      "control": "Use its spell-like abilities on a group before engaging."
+    }
   },
   "Qlippoth (Chernobue)": {
     "interest": "Qlippoth (Chernobue): abilities noted in the bestiary entry — trip, poison, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Chernobue"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Chernobue",
+    "roles": {
+      "control": "Use its spell-like abilities and poison on foes with weak saves."
+    }
   },
   "Qlippoth (Cythnigot)": {
     "interest": "Qlippoth (Cythnigot): abilities noted in the bestiary entry — trip, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cythnigot"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Cythnigot",
+    "roles": {
+      "control": "Its touch and spell-like abilities hinder a foe; do not expect much damage."
+    }
   },
   "Qlippoth (Nyogoth)": {
     "interest": "Qlippoth (Nyogoth): abilities noted in the bestiary entry — trip, fear, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nyogoth"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Nyogoth",
+    "roles": {
+      "bruiser": "Its tentacles strike several times at reach.",
+      "control": "Its horrific appearance frightens foes; bring it near them."
+    }
   },
   "Qlippoth (Shoggti)": {
     "interest": "Qlippoth (Shoggti): abilities noted in the bestiary entry — grab, trip, constrict, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shoggti"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shoggti",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe with its tentacles.",
+      "control": "Its touch can confuse a foe it holds."
+    }
   },
   "Rast": {
     "interest": "Rast: abilities noted in the bestiary entry — grab, trip, gaze, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Rast"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Rast",
+    "roles": {
+      "control": "Its gaze can paralyze foes; bring it near them.",
+      "maneuvers": "Grab a paralyzed foe and drain its blood."
+    }
   },
   "Rat (Dire)": {
     "interest": "Rat (Dire): abilities noted in the bestiary entry — trip, swim, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Rat"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Rat",
+    "roles": {
+      "scout": "It is small, climbs and swims; send it into narrow places to look."
+    }
   },
   "Ray (Manta)": {
     "interest": "Ray (Manta): abilities noted in the bestiary entry — swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Manta%20Ray"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Manta%20Ray",
+    "roles": {
+      "utility": "In water, it can carry an ally."
+    }
   },
   "Ray (Stingray)": {
     "interest": "Ray (Stingray): abilities noted in the bestiary entry — poison, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stingray"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stingray",
+    "roles": {
+      "control": "Its sting poisons; use it against a swimming foe."
+    }
   },
   "Rhinoceros": {
     "interest": "Rhinoceros: abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Rhinoceros"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Rhinoceros",
+    "roles": {
+      "bruiser": "Charge a foe: its powerful charge doubles its horn damage."
+    }
   },
   "Rhinoceros (Woolly)": {
     "interest": "Rhinoceros (Woolly): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Woolly%20Rhinoceros"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Woolly%20Rhinoceros",
+    "roles": {
+      "bruiser": "Charge a foe: its powerful charge doubles its horn damage.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Roc": {
     "interest": "Roc: abilities noted in the bestiary entry — grab, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Roc"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Roc",
+    "roles": {
+      "bruiser": "Its talons and beak hit very hard; send it at the toughest foe.",
+      "maneuvers": "Grab a foe and fly off with it.",
+      "utility": "It can carry several allies through the air."
+    }
   },
   "Rusalka": {
     "interest": "Rusalka: abilities noted in the bestiary entry — grab, constrict, invisibility, swim, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Rusalka"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Rusalka",
+    "roles": {
+      "control": "Use its song and spell-like abilities to charm foes.",
+      "maneuvers": "Grab and constrict a foe, then drag it under water."
+    }
   },
   "Salamander": {
     "interest": "Salamander: abilities noted in the bestiary entry — grab, trip, constrict.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Salamander"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Salamander",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe with its burning tail.",
+      "bruiser": "Its spear adds fire damage; send it at a foe without fire resistance."
+    }
   },
   "Satyr": {
     "interest": "Satyr: abilities noted in the bestiary entry — fear, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Satyr"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Satyr",
+    "roles": {
+      "control": "Play its pipes to charm, frighten or put foes to sleep.",
+      "ranged": "Keep it at range with its bow."
+    }
   },
   "Scorpion (Ghost)": {
     "interest": "Scorpion (Ghost): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ghost"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ghost",
+    "roles": {
+      "scout": "It is hard to see; send it to look ahead."
+    }
   },
   "Scorpion (Giant)": {
     "interest": "Scorpion (Giant): abilities noted in the bestiary entry — grab, trip, poison, constrict.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Scorpion"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Scorpion",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe with its claws.",
+      "bruiser": "Its sting poisons Strength; use it on a melee foe."
+    }
   },
   "Seahorse (Giant)": {
     "interest": "Seahorse (Giant): abilities noted in the bestiary entry — swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Seahorse"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Seahorse",
+    "roles": {
+      "utility": "In water, it can carry an ally."
+    }
   },
   "Shadow Mastiff": {
     "interest": "Shadow Mastiff: abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shadow%20Mastiff"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shadow%20Mastiff",
+    "roles": {
+      "control": "Its bay frightens foes; bring it near them.",
+      "maneuvers": "Bite a foe to trip it."
+    }
   },
   "Shae": {
     "interest": "Shae: abilities noted in the bestiary entry — spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shae"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shae",
+    "roles": {
+      "scout": "It blends with shadows; send it to look ahead.",
+      "control": "Use its spell-like abilities to hinder foes."
+    }
   },
   "Shambling Mound": {
     "interest": "Shambling Mound: abilities noted in the bestiary entry — grab, constrict, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shambling%20Mound"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shambling%20Mound",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe with its vines.",
+      "blocker": "It shrugs off many attacks; place it in a passage."
+    }
   },
   "Shark": {
     "interest": "Shark: abilities noted in the bestiary entry — swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shark"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shark",
+    "roles": {
+      "bruiser": "In water, its bite hits hard; send it at a swimming foe."
+    }
   },
   "Shark (Bull)": {
     "interest": "Shark (Bull): abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bull%20Shark"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bull%20Shark",
+    "roles": {
+      "bruiser": "In water, its bite hits hard; send it at a swimming foe."
+    }
   },
   "Shark (Dire)": {
     "interest": "Shark (Dire): abilities noted in the bestiary entry — grab, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Shark%20%28Megalodon%29"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Shark%20%28Megalodon%29",
+    "roles": {
+      "bruiser": "In water, its bite hits very hard.",
+      "maneuvers": "Grab and swallow a swimming foe."
+    }
   },
   "Shark (Great White)": {
     "interest": "Shark (Great White): abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Great%20White%20Shark"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Great%20White%20Shark",
+    "roles": {
+      "bruiser": "In water, its bite hits hard; send it at a swimming foe."
+    }
   },
   "Shedu": {
     "interest": "Shedu: abilities noted in the bestiary entry — trip, trample, fast healing, flight, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shedu"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shedu",
+    "roles": {
+      "support": "Use its spell-like abilities to protect and help allies.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Shoki": {
     "interest": "Shoki: abilities noted in the bestiary entry — invisibility, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shoki"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Shoki",
+    "roles": {
+      "control": "Use its spell-like abilities on foes with weak saves.",
+      "utility": "Use its spell-like abilities outside combat."
+    }
   },
   "Skeletal Champion (Human)": {
     "interest": "Skeletal Champion (Human): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Skeletal%20Champion"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Skeletal%20Champion",
+    "roles": {
+      "bruiser": "Engage a foe in melee; it fights like a trained warrior.",
+      "blocker": "Its armor and damage reduction let it hold a line."
+    }
   },
   "Skeleton (Human)": {
     "interest": "Skeleton (Human): abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Human%20Skeleton"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Human%20Skeleton",
+    "roles": {
+      "blocker": "Use it as an expendable body; it shrugs off piercing and slashing weapons."
+    }
   },
   "Skunk (Giant)": {
     "interest": "Skunk (Giant): abilities noted in the bestiary entry — ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Skunk"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Skunk",
+    "roles": {
+      "control": "Spray its musk on foes: those who fail are sickened or nauseated."
+    }
   },
   "Snake (Constrictor)": {
     "interest": "Snake (Constrictor): abilities noted in the bestiary entry — grab, trip, constrict, swim, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Constrictor%20Snake"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Constrictor%20Snake",
+    "roles": {
+      "maneuvers": "Grab and constrict a foe; it holds it while the party attacks."
+    }
   },
   "Snake (Emperor Cobra)": {
     "interest": "Snake (Emperor Cobra): abilities noted in the bestiary entry — trip, poison, swim, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Emperor%20Cobra"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Emperor%20Cobra",
+    "roles": {
+      "control": "Its bite carries a strong poison; strike a dangerous foe first."
+    }
   },
   "Snake (Giant Anaconda)": {
     "interest": "Snake (Giant Anaconda): abilities noted in the bestiary entry — grab, trip, constrict, swim, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Anaconda"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Anaconda",
+    "roles": {
+      "maneuvers": "Grab and constrict a large foe.",
+      "bruiser": "Its bite and constriction deal heavy damage each round."
+    }
   },
   "Soul Eater": {
     "interest": "Soul Eater: abilities noted in the bestiary entry — trip, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Soul%20Eater"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Soul%20Eater",
+    "roles": {
+      "bruiser": "Send it at a single foe: its claws drain the soul.",
+      "control": "The drain weakens the foe round after round."
+    }
   },
   "Spider (Giant Black Widow)": {
     "interest": "Spider (Giant Black Widow): abilities noted in the bestiary entry — trip, poison, web, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Black%20Widow"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Black%20Widow",
+    "roles": {
+      "control": "Throw its web on a foe before engaging; a stuck foe is easy prey."
+    }
   },
   "Spider (Giant Crab)": {
     "interest": "Spider (Giant Crab): abilities noted in the bestiary entry — trip, poison, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Crab%20Spider"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Crab%20Spider",
+    "roles": {
+      "control": "Its poison weakens a foe; strike from a wall or ceiling."
+    }
   },
   "Spider (Giant Tarantula)": {
     "interest": "Spider (Giant Tarantula): abilities noted in the bestiary entry — trip, poison, web, climb, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Tarantula"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Tarantula",
+    "roles": {
+      "control": "Throw its web on a foe before engaging; a stuck foe is easy prey.",
+      "bruiser": "Its bite hits hard and poisons."
+    }
   },
   "Spider (Giant)": {
     "interest": "Spider (Giant): abilities noted in the bestiary entry — trip, poison, web, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Spider"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Spider",
+    "roles": {
+      "control": "Throw its web on a foe before engaging; a stuck foe is easy prey."
+    }
   },
   "Spider (Ogre)": {
     "interest": "Spider (Ogre): abilities noted in the bestiary entry — trip, poison, web, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ogre%20Spider"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Ogre%20Spider",
+    "roles": {
+      "control": "Throw its web on a foe before engaging; a stuck foe is easy prey.",
+      "bruiser": "Its bite hits hard and poisons."
+    }
   },
   "Spring-Heeled Jack": {
     "interest": "Spring-Heeled Jack: abilities noted in the bestiary entry — breath weapon, gaze, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Spring-Heeled%20Jack"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Spring-Heeled%20Jack",
+    "roles": {
+      "control": "Its gaze frightens foes; get close.",
+      "area": "Breathe fire on a group of foes."
+    }
   },
   "Sprite": {
     "interest": "Sprite: abilities noted in the bestiary entry — flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Sprite"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Sprite",
+    "roles": {
+      "scout": "It flies and is tiny; send it to look ahead."
+    }
   },
   "Squid": {
     "interest": "Squid: abilities noted in the bestiary entry — grab, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Squid"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Squid",
+    "roles": {
+      "maneuvers": "In water, grab a foe and hold it."
+    }
   },
   "Squid (Giant)": {
     "interest": "Squid (Giant): abilities noted in the bestiary entry — grab, constrict, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Squid"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Squid",
+    "roles": {
+      "maneuvers": "In water, grab and constrict a foe with its arms."
+    }
   },
   "Stirge": {
     "interest": "Stirge: abilities noted in the bestiary entry — trip, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stirge"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stirge",
+    "roles": {
+      "control": "Attach to a foe and drain its Constitution."
+    }
   },
   "Swan (Trumpeter)": {
     "interest": "Swan (Trumpeter): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Trumpeter%20Swan"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Trumpeter%20Swan",
+    "roles": {
+      "scout": "Send it flying ahead to look."
+    }
   },
   "Tendriculos": {
     "interest": "Tendriculos: abilities noted in the bestiary entry — grab, trip, swallow whole, paralysis, regeneration.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tendriculos"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tendriculos",
+    "roles": {
+      "maneuvers": "Grab and swallow a foe; the inside paralyzes it.",
+      "blocker": "Regeneration lets it hold a passage."
+    }
   },
   "Thoqqua": {
     "interest": "Thoqqua: abilities noted in the bestiary entry — trip, burrow.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Thoqqua"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Thoqqua",
+    "roles": {
+      "bruiser": "Its burning body sets foes on fire.",
+      "scout": "It burrows through rock; use it to come out behind foes."
+    }
   },
   "Tiger": {
     "interest": "Tiger: abilities noted in the bestiary entry — pounce, grab, trip, rake.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tiger"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tiger",
+    "roles": {
+      "bruiser": "Charge a foe: pounce gives a full attack with grab and rake.",
+      "maneuvers": "Grab a foe and hold it."
+    }
   },
   "Tojanida": {
     "interest": "Tojanida: abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tojanida"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Tojanida",
+    "roles": {
+      "bruiser": "In water, its bite and claws hit hard.",
+      "control": "Release ink to blind foes in water."
+    }
   },
   "Tortoise (Giant)": {
     "interest": "Tortoise (Giant): abilities noted in the bestiary entry — trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Tortoise"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Tortoise",
+    "roles": {
+      "blocker": "Its shell makes it a wall; place it in front of the casters."
+    }
   },
   "Tortoise (Immense)": {
     "interest": "Tortoise (Immense): abilities noted in the bestiary entry — trip, trample.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Immense%20Tortoise"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Immense%20Tortoise",
+    "roles": {
+      "blocker": "Its shell and size make it a wall.",
+      "area": "Trample through a line of foes."
+    }
   },
   "Treant": {
     "interest": "Treant: abilities noted in the bestiary entry — trample, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Treant"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Treant",
+    "roles": {
+      "bruiser": "Its slams hit very hard and wreck structures.",
+      "ranged": "Throw rocks at foes out of reach."
+    }
   },
   "Turtle (Giant Snapping)": {
     "interest": "Turtle (Giant Snapping): abilities noted in the bestiary entry — grab, trip, swallow whole, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Snapping%20Turtle"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Snapping%20Turtle",
+    "roles": {
+      "maneuvers": "Grab and swallow a foe.",
+      "blocker": "Its shell makes it a wall."
+    }
   },
   "Turtle (Snapping)": {
     "interest": "Turtle (Snapping): abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Snapping%20Turtle"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Snapping%20Turtle",
+    "roles": {
+      "blocker": "Its shell makes it hard to hurt; place it in a gap."
+    }
   },
   "Unicorn": {
     "interest": "Unicorn: abilities noted in the bestiary entry — trip, poison, spellcasting.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Unicorn"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Unicorn",
+    "roles": {
+      "support": "Use its healing and neutralize poison on allies.",
+      "bruiser": "Charge an evil foe with its horn."
+    }
   },
   "Valkyrie": {
     "interest": "Valkyrie: abilities noted in the bestiary entry — trample, flight, spellcasting, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Valkyrie"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Valkyrie",
+    "roles": {
+      "bruiser": "Charge a foe on its mount: it hits very hard.",
+      "ranged": "Throw its spear at a foe out of reach."
+    }
   },
   "Vegepygmy": {
     "interest": "Vegepygmy: abilities noted in the bestiary entry — melee combat.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vegepygmy"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vegepygmy",
+    "roles": {
+      "blocker": "Use it as an expendable body to fill a gap."
+    }
   },
   "Viduus": {
     "interest": "Viduus: abilities noted in the bestiary entry — climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Viduus"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Viduus",
+    "roles": {
+      "scout": "It climbs well; send it to look ahead."
+    }
   },
   "Viper": {
     "interest": "Viper: abilities noted in the bestiary entry — trip, poison, swim, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Viper"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Viper",
+    "roles": {
+      "control": "Its bite poisons Constitution; strike a foe and leave."
+    }
   },
   "Vulture": {
     "interest": "Vulture: abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vulture"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Vulture",
+    "roles": {
+      "scout": "Send it flying ahead to look."
+    }
   },
   "Vulture (Giant)": {
     "interest": "Vulture (Giant): abilities noted in the bestiary entry — flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Vulture"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Vulture",
+    "roles": {
+      "scout": "Send it flying ahead to look."
+    }
   },
   "Wasp (Giant)": {
     "interest": "Wasp (Giant): abilities noted in the bestiary entry — poison, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Wasp"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Wasp",
+    "roles": {
+      "control": "Its sting poisons Dexterity; target a foe who relies on it.",
+      "scout": "It flies; send it to look ahead."
+    }
   },
   "Weasel (Dire)": {
     "interest": "Weasel (Dire): abilities noted in the bestiary entry — grab, trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Weasel"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Dire%20Weasel",
+    "roles": {
+      "maneuvers": "Grab a foe and drain its blood."
+    }
   },
   "Weasel (Giant)": {
     "interest": "Weasel (Giant): abilities noted in the bestiary entry — grab, trip.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Weasel"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Giant%20Weasel",
+    "roles": {
+      "maneuvers": "Grab a foe and hold it."
+    }
   },
   "Weedwhip": {
     "interest": "Weedwhip: abilities noted in the bestiary entry — trip, poison.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Weedwhip"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Weedwhip",
+    "roles": {
+      "control": "Its poison hinders foes who come near it."
+    }
   },
   "Whale": {
     "interest": "Whale: abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Whale"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Whale",
+    "roles": {
+      "bruiser": "In water, its slam hits very hard."
+    }
   },
   "Whale (Great White)": {
     "interest": "Whale (Great White): abilities noted in the bestiary entry — trip, swim.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Great%20White%20Whale"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Great%20White%20Whale",
+    "roles": {
+      "bruiser": "In water, it hits very hard and can smash a ship.",
+      "blocker": "Its huge hit points let it take many hits."
+    }
   },
   "Wolverine": {
     "interest": "Wolverine: abilities noted in the bestiary entry — trip, burrow, climb.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Wolverine"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Wolverine",
+    "roles": {
+      "bruiser": "Its rage makes it fight hard; send it at a lone foe."
+    }
   },
   "Xill": {
     "interest": "Xill: abilities noted in the bestiary entry — grab, paralysis, ranged attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Xill"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Xill",
+    "roles": {
+      "control": "Its bite paralyzes; strike the most dangerous foe.",
+      "maneuvers": "Grab a paralyzed foe and hold it."
+    }
   },
   "Yeth Hound": {
     "interest": "Yeth Hound: abilities noted in the bestiary entry — trip, flight.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Yeth%20Hound"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Yeth%20Hound",
+    "roles": {
+      "control": "Its bay frightens foes; bring it near them."
+    }
   },
   "Damned petitioner": {
     "interest": "Damned petitioner: petitioner summoned through Summon Evil Monster; its abilities depend on the exact profile available in the loaded sources.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterFamilies.aspx?ItemName=Petitioner"
+    "bestiary": "https://aonprd.com/MonsterFamilies.aspx?ItemName=Petitioner",
+    "roles": {
+      "blocker": "Use it as an expendable body to fill a gap or take a blow."
+    }
   },
   "Hunted petitioner": {
     "interest": "Hunted petitioner: petitioner summoned through Summon Evil Monster; its abilities depend on the exact profile available in the loaded sources.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterFamilies.aspx?ItemName=Petitioner"
+    "bestiary": "https://aonprd.com/MonsterFamilies.aspx?ItemName=Petitioner",
+    "roles": {
+      "blocker": "Use it as an expendable body to fill a gap or take a blow."
+    }
   },
   "Larvae petitioner": {
     "interest": "Larvae petitioner: petitioner summoned through Summon Evil Monster; its abilities depend on the exact profile available in the loaded sources.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterFamilies.aspx?ItemName=Petitioner"
+    "bestiary": "https://aonprd.com/MonsterFamilies.aspx?ItemName=Petitioner",
+    "roles": {
+      "blocker": "Use it as an expendable body to fill a gap or take a blow."
+    }
   },
   "Glyptodon (megafauna)": {
     "interest": "Glyptodon: large land megafauna useful mainly for blocking space and absorbing melee attacks.",
     "usage": "",
     "limits": "",
-    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Glyptodon"
+    "bestiary": "https://aonprd.com/MonsterDisplay.aspx?ItemName=Glyptodon",
+    "roles": {
+      "blocker": "Its shell makes it a wall; place it in front of the casters."
+    }
   }
 }

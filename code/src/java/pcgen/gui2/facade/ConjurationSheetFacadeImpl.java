@@ -17,12 +17,16 @@
  */
 package pcgen.gui2.facade;
 
+import java.text.Collator;
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.BiConsumer;
 import java.util.function.UnaryOperator;
 
 import pcgen.cdom.base.CDOMObject;
@@ -53,6 +57,7 @@ import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.BonusLabel;
 import pcgen.facade.core.ConjurationSheetFacade;
 import pcgen.facade.core.ConjuredCreatureView;
+import pcgen.io.conjurations.ConjurationSpreadsheet;
 import pcgen.session.HeadlessUIDelegate;
 
 /**
@@ -106,20 +111,39 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 	@Override
 	public Optional<CreatureStats> catalogStatsOf(String creature)
 	{
-		Optional<SummonTemplate> summon = catalog().find(creature);
-		if (summon.isEmpty() || summon.get().hasAuthoredStats()
-			|| !CatalogResolution.unresolvedIn(summon.get()).isEmpty())
+		return catalog().find(creature).flatMap(this::catalogStatsOf);
+	}
+
+	@Override
+	public byte[] catalogWorkbook(BiConsumer<Integer, Integer> progress)
+	{
+		SummonCatalog catalog = catalog();
+		int total = (int) catalog.groups().stream().flatMap(group -> group.summons().stream())
+			.filter(summon -> !summon.hasAuthoredStats()).count();
+		AtomicInteger built = new AtomicInteger();
+		progress.accept(0, total);
+		return ConjurationSpreadsheet.workbookOf(catalog,
+			(summon, level) -> PathfinderSummonOptions.maximumCount(theCharacter, summon, level), summon -> {
+				Optional<CreatureStats> stats = catalogStatsOf(summon);
+				progress.accept(built.incrementAndGet(), total);
+				return stats;
+			});
+	}
+
+	private Optional<CreatureStats> catalogStatsOf(SummonTemplate summon)
+	{
+		if (summon.hasAuthoredStats() || !CatalogResolution.unresolvedIn(summon).isEmpty())
 		{
 			return Optional.empty();
 		}
 		boolean augmented = SummonedCreatureBuilder.augments(theCharacter);
-		CatalogCreature cached = catalogCreatures.get(creature);
-		if (cached == null || !cached.summon().equals(summon.get()) || cached.augmented() != augmented)
+		CatalogCreature cached = catalogCreatures.get(summon.name());
+		if (cached == null || !cached.summon().equals(summon) || cached.augmented() != augmented)
 		{
-			CreatureStats stats = SummonForms.statsOf(summon.get(), "",
-				builder.statsOf(builder.build(summon.get(), augmented), summon.get()));
-			cached = new CatalogCreature(summon.get(), augmented, stats);
-			catalogCreatures.put(creature, cached);
+			CreatureStats stats = SummonForms.statsOf(summon, "",
+				builder.statsOf(builder.build(summon, augmented), summon));
+			cached = new CatalogCreature(summon, augmented, stats);
+			catalogCreatures.put(summon.name(), cached);
 		}
 		return Optional.of(cached.stats());
 	}
@@ -270,7 +294,9 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 	@Override
 	public List<BonusChoice> groupBonusChoices()
 	{
-		return choicesOf(TemporaryBonusSources.castableOnOthers(), theCharacter);
+		Collator alphabetical = Collator.getInstance(Locale.getDefault());
+		return choicesOf(TemporaryBonusSources.castableOnOthers(), theCharacter).stream()
+			.sorted((left, right) -> alphabetical.compare(left.label(), right.label())).toList();
 	}
 
 	@Override
@@ -284,9 +310,15 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 	@Override
 	public Optional<ConjuredCreatureView> viewOf(String creature, int number)
 	{
-		return inPlay(creature, number).flatMap(found -> built(creature, number)
-			.map(built -> new ConjuredCreatureView(found.creature(), found.number(), built.stats(), built.baseStats(),
-				labelsOf(found.bonuses()))));
+		SummonCatalog catalog = catalog();
+		boolean augmented = SummonedCreatureBuilder.augments(theCharacter);
+		return inPlay(creature, number).flatMap(found -> catalog.find(found.creature())
+			.filter(summon -> !summon.hasAuthoredStats()).map(summon -> {
+				BuiltCreature built = creatures.creature(summon, augmented, found, fight().groupBonuses());
+				return new ConjuredCreatureView(found.creature(), found.number(), built.stats(), built.baseStats(),
+					labelsOf(found.bonuses()),
+					creatures.templateDifferences(summon, augmented, found.form(), built.baseStats()));
+			}));
 	}
 
 	@Override

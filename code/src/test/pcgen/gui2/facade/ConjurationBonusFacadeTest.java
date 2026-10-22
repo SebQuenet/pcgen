@@ -20,11 +20,14 @@ package pcgen.gui2.facade;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.text.Collator;
 import java.util.List;
+import java.util.Locale;
 import java.util.OptionalInt;
 
 import pcgen.core.PlayerCharacter;
 import pcgen.core.conjurations.BestiarySources;
+import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.ConjurationSheetFacade;
 import pcgen.facade.core.ConjuredCreatureView;
 
@@ -142,5 +145,14 @@ class ConjurationBonusFacadeTest
 		sheet.addGroupBonus(PRAYER, OptionalInt.empty());
 
 		assertTrue(character.isDirty());
+	}
+
+	@Test
+	void offersTheGroupBonusesInAlphabeticalOrder()
+	{
+		List<String> labels = new ConjurationSheetFacadeImpl(conjurer()).groupBonusChoices().stream()
+			.map(BonusChoice::label).toList();
+
+		assertEquals(labels.stream().sorted(Collator.getInstance(Locale.getDefault())).toList(), labels);
 	}
 }

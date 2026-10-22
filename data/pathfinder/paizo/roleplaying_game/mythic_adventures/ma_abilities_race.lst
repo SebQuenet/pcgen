@@ -326,6 +326,12 @@ CATEGORY=Internal|Default.MOD										ABILITY:Internal|AUTOMATIC|Mythic Traits|
 #
 Mythic Traits			CATEGORY:Internal							ABILITY:Special Ability|AUTOMATIC|Mythic ~ Damage Reduction|PRELEVEL:MIN=5	ABILITY:Special Ability|AUTOMATIC|Mythic ~ Bonus Hit Points	ABILITY:Special Ability|AUTOMATIC|Mythic ~ Mythic Rank	ABILITY:Special Ability|AUTOMATIC|Mythic ~ Natural Armor Bonus	ABILITY:Special Ability|AUTOMATIC|Mythic ~ Ability Bonus	ABILITY:Special Ability|AUTOMATIC|Mythic ~ Mythic Feats	ABILITY:Special Ability|AUTOMATIC|Mythic ~ CR	ABILITY:Special Ability|AUTOMATIC|Mythic ~ Spell Resistance|PRESRGTEQ:1
 #
+# Abilities granted by the mythic simple templates
+Evasion	KEY:Mythic Simple Template ~ Evasion	CATEGORY:Special Ability	TYPE:SpecialQuality.Extraordinary	DESC:If the creature is subjected to an attack that normally allows a Reflex save for half damage, it takes no damage on a successful save.	SOURCEPAGE:p.226
+Dual Initiative	KEY:Mythic Simple Template ~ Dual Initiative	CATEGORY:Special Ability	TYPE:SpecialAttack.Extraordinary	DESC:The creature gets two turns each round, one on its initiative count and another on its initiative count - 20.	SOURCEPAGE:p.226
+Bleed 1	KEY:Mythic Simple Template ~ Bleed	CATEGORY:Special Ability	TYPE:SpecialAttack.Extraordinary	DESC:All of the creature's attacks deal 1 bleed damage; this stacks with itself.	SOURCEPAGE:p.227
+Feral Savagery (full attack)	KEY:Mythic Simple Template ~ Feral Savagery	CATEGORY:Special Ability	TYPE:SpecialAttack.Supernatural	DESC:When the creature makes a full attack, it can immediately attempt one additional attack at its full base attack bonus.	SOURCEPAGE:p.227
+#
 Mythic ~ Damage Reduction	CATEGORY:Special Ability					ABILITY:Special Ability|AUTOMATIC|Damage Reduction ~ Epic																																																																																																		BONUS:VAR|DR_Epic|5|TYPE=Base	BONUS:VAR|DR_Epic|10|TYPE=Base|PRELEVEL:MIN=11
 Damage Reduction ~ Epic		CATEGORY:Special Ability	DEFINE:DR_Epic|0																																																																																																																										DR:DR_Epic/epic
 Mythic ~ Bonus Hit Points	CATEGORY:Special Ability																																																																																																		BONUS:HP|CURRENTMAX|min(RACIALHDSIZE,10)*Mythic_Rank
