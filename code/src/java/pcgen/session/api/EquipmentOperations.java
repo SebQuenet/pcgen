@@ -287,7 +287,7 @@ public final class EquipmentOperations
 								"type": "object",
 								"properties": {
 									"equipment_key": { "type": "string", "description": "Equipment name or key from inventory" },
-									"slot": { "type": "string", "description": "Target slot name (e.g. Primary Hand, Armor, Equipped)" },
+									"slot": { "type": "string", "description": "Target slot name (e.g. Primary Hand, Armor, Equipped), or auto for the slot PCGen prefers for the item" },
 									"quantity": { "type": "integer", "description": "Quantity to equip (default: 1)", "default": 1 }
 								},
 								"required": ["equipment_key", "slot"]

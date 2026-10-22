@@ -39,6 +39,9 @@ import pcgen.session.service.model.ItemUnequipped;
  */
 public final class EquipmentSetService
 {
+	/** The slot name that lets PCGen choose where the item naturally goes. */
+	private static final String AUTOMATIC_SLOT = "auto";
+
 	private static final String NO_ACTIVE_SET = "No active equipment set";
 
 	private final CharacterLookup characters;
@@ -193,6 +196,10 @@ public final class EquipmentSetService
 	 */
 	private static EquipNode slotFor(EquipmentSetFacade equipmentSet, String slot, EquipmentFacade item)
 	{
+		if (AUTOMATIC_SLOT.equalsIgnoreCase(slot))
+		{
+			return preferredSlot(equipmentSet, item);
+		}
 		EquipNode namedExactly = null;
 		for (EquipNode node : equipmentSet.getNodes())
 		{
@@ -223,6 +230,20 @@ public final class EquipmentSetService
 			}
 		}
 		return namedInPart;
+	}
+
+	/** The slot PCGen itself would put the item in: a weapon in a hand, a cloak on the shoulders. */
+	private static EquipNode preferredSlot(EquipmentSetFacade equipmentSet, EquipmentFacade item)
+	{
+		String preferred = equipmentSet.getPreferredLoc(item);
+		for (EquipNode node : equipmentSet.getNodes())
+		{
+			if (node.toString().equals(preferred) && equipmentSet.canEquip(node, item))
+			{
+				return node;
+			}
+		}
+		return null;
 	}
 
 	/** The node holding what a caller named, whether they named the slot or the item. */
