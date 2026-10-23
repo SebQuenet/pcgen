@@ -29,14 +29,14 @@ import pcgen.util.TestHelper;
 
 /**
  * The real Pathfinder data conjuration tests build creatures from: the Core
- * Rulebook and the first Bestiary, loaded once for the whole test run.
+ * Rulebook, the Bestiaries, the summoning books and Celmae, loaded once for the whole test run.
  */
 public final class BestiarySources
 {
 	private static final String TEST_CONFIG_FILE = "config.ini.junit-conjuration";
 	private static final String GAME_MODE = "Pathfinder_RPG";
-	private static final List<String> CAMPAIGNS = List.of("Core Rulebook", "Bestiary", "Bestiary 3", "Mythic Adventures",
-		"Monster Summoner's Handbook");
+	private static final List<String> CAMPAIGNS = List.of("Core Rulebook", "Bestiary", "Bestiary 2", "Bestiary 3", "Bestiary 5",
+		"Mythic Adventures", "Monster Summoner's Handbook", "Champions of Purity", "Celmae - Udaeus Race and Paragon Class");
 
 	private static PcgenSession session;
 

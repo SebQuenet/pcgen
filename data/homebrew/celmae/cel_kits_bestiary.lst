@@ -1,0 +1,68 @@
+SOURCELONG:Celmae Campaign Setting	SOURCESHORT:CEL	SOURCEDATE:2026-03
+
+STARTPACK:Erinyes (Repentant) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Erinyes (Repentant)],[!PRERACE:1,%]	SOURCEPAGE:Celmae
+ALIGN:LG
+RACE:Erinyes (Repentant)	!PRERACE:1,%
+NAME:Repentant Erinyes
+SKILL:Acrobatics			RANK:9
+SKILL:Bluff				RANK:9
+SKILL:Diplomacy			RANK:6
+SKILL:Escape Artist		RANK:6
+SKILL:Fly				RANK:6
+SKILL:Intimidate			RANK:9
+SKILL:Knowledge (Planes)	RANK:3
+SKILL:Knowledge (Religion)	RANK:6
+SKILL:Perception			RANK:9
+SKILL:Sense Motive		RANK:3
+SKILL:Stealth			RANK:6
+ABILITY:CATEGORY=FEAT|Combat Reflexes
+ABILITY:CATEGORY=FEAT|Point-Blank Shot
+ABILITY:CATEGORY=FEAT|Precise Shot
+ABILITY:CATEGORY=FEAT|Rapid Shot
+ABILITY:CATEGORY=FEAT|Shot on the Run
+STAT:STR=10|DEX=11|CON=11|INT=10|WIS=10|CHA=11
+GEAR:Longsword			LOCATION:Both Hands	EQMOD:Special Ability ~ +1 ~ Weapon
+GEAR:Longbow (Composite)	LOCATION:Carried		EQMOD:Special Ability ~ +1 ~ Weapon.Special Ability ~ Flaming ~ Weapon.Special Quality ~ Composite Bow Strength Rating|+5
+GEAR:Rope (Hemp/50 ft)		LOCATION:Carried
+
+STARTPACK:Lion (Grisantian) Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Lion (Grisantian)],[!PRERACE:1,%]	SOURCEPAGE:Celmae
+ALIGN:NG
+RACE:Lion (Grisantian)	!PRERACE:1,%
+NAME:Grisantian Lion
+SKILL:Acrobatics	RANK:4
+SKILL:Climb	RANK:4
+SKILL:Perception	RANK:7
+SKILL:Stealth	RANK:4
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Improved Sunder
+ABILITY:CATEGORY=FEAT|Greater Sunder
+ABILITY:CATEGORY=FEAT|Iron Will
+ABILITY:CATEGORY=FEAT|Power Attack
+ABILITY:CATEGORY=FEAT|Run
+ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
+ABILITY:CATEGORY=FEAT|Vital Strike
+STAT:STR=11|DEX=11|CON=11|INT=10|WIS=10|CHA=10
+
+
+STARTPACK:Udaeus (Celestial Squire) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Udaeus (Celestial Squire)],[!PRERACE:1,%]	SOURCEPAGE:Celmae
+ALIGN:LG
+RACE:Udaeus (Celestial Squire)	!PRERACE:1,%
+NAME:Udaeus Celestial Squire
+SKILL:Acrobatics	RANK:6
+SKILL:Diplomacy	RANK:12
+SKILL:Intimidate	RANK:12
+SKILL:Knowledge (Religion)	RANK:12
+SKILL:Perception	RANK:12
+SKILL:Sense Motive	RANK:12
+SKILL:Fly	RANK:6
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Improved Shield Bash
+ABILITY:CATEGORY=FEAT|Iron Will
+ABILITY:CATEGORY=FEAT|Power Attack
+ABILITY:CATEGORY=FEAT|Improved Critical (Lance)
+ABILITY:CATEGORY=FEAT|Lance et Bouclier
+STAT:STR=11|DEX=11|CON=11|INT=10|WIS=10|CHA=10
+GEAR:Full Plate	LOCATION:Equipped	EQMOD:Material ~ Mithril ~ Armor / Heavy.Special Ability ~ +2 ~ Armor
+GEAR:Shield (Heavy/Steel)	LOCATION:Equipped	EQMOD:Material ~ Mithril ~ Shield.Special Ability ~ +1 ~ Armor
+GEAR:Lance	LOCATION:Primary Hand	EQMOD:Special Ability ~ +2 ~ Weapon.Special Ability ~ Bane ~ Weapon|Dragon Bane
+GEAR:Cloak of Resistance +3	LOCATION:Equipped

@@ -21,25 +21,16 @@ import java.util.Map;
 import java.util.Optional;
 
 import pcgen.cdom.base.CDOMList;
-import pcgen.cdom.enumeration.ListKey;
-import pcgen.cdom.enumeration.ObjectKey;
-import pcgen.cdom.reference.CDOMSingleRef;
-import pcgen.cdom.util.CControl;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
-import pcgen.core.Deity;
 import pcgen.core.Equipment;
 import pcgen.core.Globals;
-import pcgen.core.Kit;
-import pcgen.core.PCAlignment;
 import pcgen.core.PCClass;
 import pcgen.core.PObject;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.SettingsHandler;
 import pcgen.core.character.CharacterSpell;
-import pcgen.core.kit.KitAlignment;
 import pcgen.core.spell.Spell;
-import pcgen.output.channel.ChannelUtilities;
 
 /**
  * The published Pathfinder 1 summoning tables, including additions granted by
@@ -66,6 +57,7 @@ public final class PathfinderSummonOptions
 	private static final Map<String, String> MYTHIC_VARIANTS = Map.of(
 		"Mythic Simple Template ~ Agile", "Agile", "Mythic Simple Template ~ Savage", "Savage");
 	private static final String DEVOTED_HERALD = "Invocateur de Saint Thero ~ Héraut Divin";
+	private static final String SAINT_THERO = "Saint Thero";
 	private static final String[] ROMAN = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
 	private static final List<Option> OPTIONS = readOptions();
 
@@ -95,7 +87,7 @@ public final class PathfinderSummonOptions
 		var chosenMonsterTemplates = SummonSelections.versatileMonster(
 			character.getDisplay().getConjurationCatalog().orElse(""), versatileFeatChoices(character));
 		int[] knownLevels = knownSummonLevels(character);
-		Optional<String> heraldDeityAlignment = heraldDeityAlignment(character);
+		boolean devotedHerald = hasSpecialAbility(character, DEVOTED_HERALD);
 		boolean mightySummons = hasSpecialAbility(character, MIGHTY_SUMMONS);
 		List<SummonGroup> groups = new ArrayList<>();
 		authored.ifPresent(catalog -> groups.addAll(catalog.groups()));
@@ -163,9 +155,9 @@ public final class PathfinderSummonOptions
 				{
 					continue;
 				}
-				if (heraldDeityAlignment.isPresent() && !creatureAlignment(summon)
-					.filter(alignment -> SummonAlignment.isWithinOneStep(heraldDeityAlignment.get(), alignment))
-					.isPresent())
+				// Héraut Divin keeps only Saint Thero's servants and Summon Good Monster's creatures
+				if (devotedHerald && familyIndex(option.family()) == 0 && !SAINT_THERO.equals(option.family())
+					&& !"Good".equals(option.family()))
 				{
 					continue;
 				}
@@ -308,40 +300,6 @@ public final class PathfinderSummonOptions
 		}
 	}
 
-	/**
-	 * The deity's alignment when the character's summons must lie within one step
-	 * of it (the Invocateur de Saint Thero's Héraut Divin).
-	 */
-	private static Optional<String> heraldDeityAlignment(PlayerCharacter character)
-	{
-		if (!hasSpecialAbility(character, DEVOTED_HERALD))
-		{
-			return Optional.empty();
-		}
-		Object deity = ChannelUtilities.readControlledChannel(character.getCharID(), CControl.DEITYINPUT);
-		if (!(deity instanceof Deity heraldDeity))
-		{
-			return Optional.empty();
-		}
-		return Optional.ofNullable(heraldDeity.get(ObjectKey.ALIGNMENT)).map(CDOMSingleRef::get)
-			.map(PCAlignment::getKeyName);
-	}
-
-	/** The alignment of the Bestiary's default kit for the race, changed by the summoning templates. */
-	private static Optional<String> creatureAlignment(SummonTemplate summon)
-	{
-		Kit kit = Globals.getContext().getReferenceContext().silentlyGetConstructedCDOMObject(Kit.class,
-			summon.metadata().getOrDefault("kit", summon.sourceRaceKey() + " Default"));
-		if (kit == null)
-		{
-			return Optional.empty();
-		}
-		return kit.getSafeListFor(ListKey.KIT_TASKS).stream().filter(KitAlignment.class::isInstance)
-			.map(KitAlignment.class::cast).flatMap(task -> task.getAlignments().stream())
-			.map(CDOMSingleRef::get).map(PCAlignment::getKeyName).findFirst()
-			.map(alignment -> summon.templateKeys().stream().reduce(alignment, SummonAlignment::withTemplate));
-	}
-
 	private static int familyIndex(String family)
 	{
 		return "SNA".equals(family) || "Versatile SNA".equals(family) || "Spider SNA".equals(family)
@@ -416,6 +374,7 @@ public final class PathfinderSummonOptions
 		return switch (family)
 		{
 			case "SM", "SNA" -> true;
+			case SAINT_THERO -> hasSpecialAbility(character, DEVOTED_HERALD);
 			case "Good" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Summon Good Monster");
 			case "Evil" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Summon Evil Monster");
 			case "Neutral" -> character.hasAbilityKeyed(AbilityCategory.FEAT, "Summon Neutral Monster");
@@ -450,7 +409,9 @@ public final class PathfinderSummonOptions
 		}
 		return switch (policy)
 		{
-			case "celestial" -> List.of("Celestial Creature");
+			// Héraut Divin may apply the resolute template instead of the celestial one
+			case "celestial" -> hasSpecialAbility(character, DEVOTED_HERALD)
+				? List.of("Celestial Creature", "Resolute Creature") : List.of("Celestial Creature");
 			case "fiendish" -> List.of("Fiendish Creature");
 			case "auto" -> alignmentTemplates(character);
 			default -> List.of("");
