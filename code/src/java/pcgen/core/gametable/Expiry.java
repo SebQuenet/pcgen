@@ -17,14 +17,26 @@
  */
 package pcgen.core.gametable;
 
-import java.util.Optional;
-
 /**
- * Something a new round wore off.
- *
- * @param combatant the combatant's name
- * @param condition the condition that ended; empty when the conjured creature itself left
+ * Something the turn passing wore off.
  */
-public record Expiry(String combatant, Optional<String> condition)
+public sealed interface Expiry
 {
+	/** @return the name of the combatant it concerned. */
+	String combatant();
+
+	/** A conjured creature whose time ran out and left the fight. */
+	record CreatureLeft(String combatant) implements Expiry
+	{
+	}
+
+	/** A condition that ended with a new round. */
+	record ConditionEnded(String combatant, String condition) implements Expiry
+	{
+	}
+
+	/** A spell the combatant cast, ended as its turn began. */
+	record SpellEnded(String combatant, String spell) implements Expiry
+	{
+	}
 }

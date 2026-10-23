@@ -18,6 +18,7 @@
 package pcgen.session.api;
 
 import java.util.List;
+import java.util.OptionalInt;
 
 import pcgen.session.service.GameTableService;
 import pcgen.session.service.GameTableService.EncounterMonsterRequest;
@@ -31,6 +32,7 @@ import pcgen.session.service.model.PartyMemberEntry;
 public final class GameTableOperations
 {
 	private static final String COMBATANT_ID = "combatant_id";
+	private static final String CASTER_ID = "caster_id";
 	private static final String RECIPE = "recipe";
 	private static final String NAME = "name";
 	private static final String COUNT = "count";
@@ -78,7 +80,7 @@ public final class GameTableOperations
 			setParty(table), setEncounter(table), removeEncounter(table), previewMonster(table),
 			launchEncounter(table), addMonsters(table), addPlayer(table), summonCreatures(table),
 			retouchMonster(table), setInitiative(table), startCombat(table), nextTurn(table), damage(table),
-			heal(table), addCondition(table), removeCondition(table), listConditions(table), delayTurn(table),
+			heal(table), addCondition(table), removeCondition(table), castSpell(table), dropSpell(table), listConditions(table), delayTurn(table),
 			resumeTurn(table), moveCombatant(table), removeCombatant(table), endCombat(table), getCombatant(table),
 			saveMonsterAsCharacter(table));
 	}
@@ -380,39 +382,103 @@ public final class GameTableOperations
 	private static Operation addCondition(GameTableService service)
 	{
 		return Operation.exclusive("add_condition",
-			"Lay a condition, temporary bonus or negative property on a combatant. On a monster, one the data "
-				+ "holds (see list_conditions) changes its numbers; anything else, and anything on a player, "
-				+ "is a label. A condition of the same name is replaced." + STATE,
+			"Lay a condition, temporary bonus or negative property on one combatant or several at once, such as "
+				+ "a band of monsters. On a monster, one the data holds (see list_conditions) changes its numbers; "
+				+ "anything else, and anything on a player, is a label. A condition of the same name is replaced."
+				+ STATE,
 			"""
 				{
 					"type": "object",
 					"properties": {
-						"combatant_id": { "type": "integer" },
+						"combatant_id": { "type": "integer", "description": "The combatant, when it goes on one" },
+						"combatant_ids": { "type": "array", "items": { "type": "integer" },
+							"description": "The combatants, when it goes on several" },
 						"name": { "type": "string", "description": "Its name or key, such as 'Shaken'" },
-						"rounds": { "type": "integer", "description": "Rounds before it ends; omit when it lasts" }
+						"rounds": { "type": "integer", "description": "Rounds before it ends; omit when it lasts" },
+						"value": { "type": "integer",
+							"description": "The value a bonus asking one takes, such as 4 for 'Ability Damaged (Strength)'; its highest when omitted" }
 					},
-					"required": ["combatant_id", "name"]
+					"required": ["name"]
 				}
 				""",
-			arguments -> arguments.decodeThen(() -> service.addCondition(arguments.requiredInt(COMBATANT_ID),
-				arguments.requiredString(NAME), arguments.optionalInt("rounds", 0))));
+			arguments -> arguments.decodeThen(() -> service.addCondition(combatantIds(arguments),
+				arguments.requiredString(NAME), arguments.optionalInt("rounds", 0), optionalValue(arguments))));
 	}
 
 	private static Operation removeCondition(GameTableService service)
 	{
-		return Operation.exclusive("remove_condition", "Take a condition off a combatant." + STATE,
+		return Operation.exclusive("remove_condition",
+			"Take a condition off one combatant or several at once; it comes off those bearing it." + STATE,
 			"""
 				{
 					"type": "object",
 					"properties": {
-						"combatant_id": { "type": "integer" },
+						"combatant_id": { "type": "integer", "description": "The combatant, when it comes off one" },
+						"combatant_ids": { "type": "array", "items": { "type": "integer" },
+							"description": "The combatants, when it comes off several" },
 						"name": { "type": "string", "description": "The condition's name as get_game_table shows it" }
 					},
-					"required": ["combatant_id", "name"]
+					"required": ["name"]
 				}
 				""",
-			arguments -> arguments.decodeThen(() -> service.removeCondition(arguments.requiredInt(COMBATANT_ID),
+			arguments -> arguments.decodeThen(() -> service.removeCondition(combatantIds(arguments),
 				arguments.requiredString(NAME))));
+	}
+
+	private static Operation castSpell(GameTableService service)
+	{
+		return Operation.exclusive("cast_spell",
+			"Keep track of a spell a combatant cast. Its rounds count down as each turn of its caster begins; "
+				+ "its effect, a condition of its name, stays on its targets until it ends or is dropped. When "
+				+ "the data holds a temporary bonus of that name (see list_conditions), the effect changes the "
+				+ "numbers of the monsters it targets. Casting it again replaces it." + STATE,
+			"""
+				{
+					"type": "object",
+					"properties": {
+						"caster_id": { "type": "integer", "description": "Id of the combatant who cast it" },
+						"name": { "type": "string", "description": "The spell, such as 'Bless'" },
+						"rounds": { "type": "integer", "description": "Its duration in rounds; omit when it lasts until dropped" },
+						"target_ids": { "type": "array", "items": { "type": "integer" },
+							"description": "Ids of the combatants it affects; omit to only keep track of it" },
+						"value": { "type": "integer", "description": "The value its bonus takes when it asks one; its highest when omitted" }
+					},
+					"required": ["caster_id", "name"]
+				}
+				""",
+			arguments -> arguments.decodeThen(() -> service.castSpell(arguments.requiredInt(CASTER_ID),
+				arguments.requiredString(NAME), arguments.optionalInt("rounds", 0),
+				arguments.optionalIntList("target_ids"), optionalValue(arguments))));
+	}
+
+	private static Operation dropSpell(GameTableService service)
+	{
+		return Operation.exclusive("drop_spell",
+			"End a spell a combatant keeps up before its time; its effect leaves its targets." + STATE,
+			"""
+				{
+					"type": "object",
+					"properties": {
+						"caster_id": { "type": "integer" },
+						"name": { "type": "string", "description": "The spell's name as get_game_table shows it" }
+					},
+					"required": ["caster_id", "name"]
+				}
+				""",
+			arguments -> arguments.decodeThen(() -> service.dropSpell(arguments.requiredInt(CASTER_ID),
+				arguments.requiredString(NAME))));
+	}
+
+	/** The combatants an operation names, by one id or by a list of them. */
+	private static List<Integer> combatantIds(Arguments arguments)
+	{
+		return arguments.has(COMBATANT_ID) ? List.of(arguments.requiredInt(COMBATANT_ID))
+			: arguments.optionalIntList("combatant_ids");
+	}
+
+	private static OptionalInt optionalValue(Arguments arguments)
+	{
+		return arguments.has("value") ? OptionalInt.of(arguments.requiredInt("value")) : OptionalInt.empty();
 	}
 
 	private static Operation listConditions(GameTableService service)

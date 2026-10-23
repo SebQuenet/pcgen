@@ -33,8 +33,10 @@ import pcgen.core.gametable.PlayerGlance;
  * @param templates       the keys of the visible templates a monster has, empty for others
  * @param glance          a player's perception, sense motive and saves, read from its file, null when unknown
  * @param conditions      what is laid on it
+ * @param spells          the spells it cast and keeps up
  */
 public record CombatantSheet(int id, String name, String kind, CreatureStats stats, String challengeRating,
-	List<String> templates, PlayerGlance glance, List<ConditionEntry> conditions)
+	List<String> templates, PlayerGlance glance, List<ConditionEntry> conditions,
+	List<CastSpellEntry> spells)
 {
 }

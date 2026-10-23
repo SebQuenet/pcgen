@@ -22,9 +22,11 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Set;
@@ -38,9 +40,11 @@ import pcgen.core.Campaign;
 import pcgen.core.GameMode;
 import pcgen.core.PCTemplate;
 import pcgen.core.PlayerCharacter;
+import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.CreatureStats;
 import pcgen.core.conjurations.SummonedCreatureBuilder;
+import pcgen.facade.core.BonusChoice;
 import pcgen.io.PCGIOHandler;
 import pcgen.system.LanguageBundle;
 import pcgen.util.enumeration.Visibility;
@@ -54,7 +58,7 @@ public final class GameTableSession
 	private final IntSupplier d20;
 	private final List<Runnable> listeners = new CopyOnWriteArrayList<>();
 	private final Map<Integer, PlayerCharacter> monsters = new HashMap<>();
-	private final Map<Integer, Set<BonusSourceKey>> laid = new HashMap<>();
+	private final Map<Integer, Set<AppliedBonus>> laid = new HashMap<>();
 	private final Map<String, Optional<PlayerCharacter>> playerCharacters = new HashMap<>();
 	private final Map<MonsterRecipe, Long> experienceByRecipe = new HashMap<>();
 
@@ -261,6 +265,19 @@ public final class GameTableSession
 
 	/**
 	 * @param recipe how to build a monster.
+	 * @return the sheet the game master reads of it, or why it cannot be built.
+	 */
+	public synchronized ForgeOutcome<MonsterSheet> previewSheet(MonsterRecipe recipe)
+	{
+		return switch (forge(recipe))
+		{
+			case ForgedMonster.Forged built -> new ForgeOutcome.Built<>(sheets().sheet(built.character()));
+			case ForgedMonster.Missing missing -> new ForgeOutcome.Failed<>(missing.reason());
+		};
+	}
+
+	/**
+	 * @param recipe how to build a monster.
 	 * @return the keys of the templates the built monster has, or why it cannot be built.
 	 */
 	public synchronized ForgeOutcome<List<String>> templateKeysOf(MonsterRecipe recipe)
@@ -444,7 +461,8 @@ public final class GameTableSession
 	}
 
 	/**
-	 * @return what a new round wore off, if the turn passed into one.
+	 * @return what the turn passing wore off: spells of the combatant whose turn begins, and
+	 *         conditions and conjured creatures when a new round began.
 	 */
 	public synchronized List<Expiry> next()
 	{
@@ -479,11 +497,65 @@ public final class GameTableSession
 		changed();
 	}
 
+	/**
+	 * @param ids       the combatants the condition goes on at once, such as a band of monsters.
+	 * @param condition the condition; on a player's character it is only a label.
+	 */
+	public synchronized void addCondition(Collection<Integer> ids, Condition condition)
+	{
+		scenario = scenario.withCombat(scenario.combat().withConditionOn(ids, condition));
+		ids.forEach(this::relay);
+		changed();
+	}
+
+	/**
+	 * @param ids           combatants of the fight, such as a band of monsters.
+	 * @param conditionName the name of a condition to take off each of them.
+	 */
+	public synchronized void removeCondition(Collection<Integer> ids, String conditionName)
+	{
+		scenario = scenario.withCombat(scenario.combat().withoutConditionOn(ids, conditionName));
+		ids.forEach(this::relay);
+		changed();
+	}
+
+	/**
+	 * @param casterId  the caster's id.
+	 * @param effect    what the spell does, named after it; its rounds, counted down at the start of
+	 *                  its caster's turns, are the spell's duration.
+	 * @param targetIds the combatants bearing its effect until it ends; none when it is only kept track of.
+	 */
+	public synchronized void castSpell(int casterId, Condition effect, List<Integer> targetIds)
+	{
+		List<Integer> formerTargets = spellTargets(casterId, effect.name());
+		scenario = scenario.withCombat(scenario.combat().cast(casterId, effect, targetIds));
+		formerTargets.forEach(this::relay);
+		targetIds.forEach(this::relay);
+		changed();
+	}
+
+	/**
+	 * @param casterId  the caster's id.
+	 * @param spellName a spell it no longer keeps up; its effect leaves its targets.
+	 */
+	public synchronized void dropSpell(int casterId, String spellName)
+	{
+		List<Integer> targets = spellTargets(casterId, spellName);
+		scenario = scenario.withCombat(scenario.combat().withoutSpell(casterId, spellName));
+		targets.forEach(this::relay);
+		changed();
+	}
+
+	private List<Integer> spellTargets(int casterId, String spellName)
+	{
+		return scenario.combat().combatant(casterId).stream().flatMap(caster -> caster.spells().stream())
+			.filter(spell -> spell.name().equalsIgnoreCase(spellName.strip())).flatMap(spell -> spell.targetIds().stream())
+			.toList();
+	}
+
 	public synchronized void removeCondition(int id, String conditionName)
 	{
-		scenario = scenario.withCombat(scenario.combat().withoutCondition(id, conditionName));
-		relay(id);
-		changed();
+		removeCondition(List.of(id), conditionName);
 	}
 
 	public synchronized void delay(int id)
@@ -539,6 +611,15 @@ public final class GameTableSession
 
 	/**
 	 * @param id a combatant's id.
+	 * @return the sheet the game master reads of it, when the game master's and built.
+	 */
+	public synchronized Optional<MonsterSheet> monsterSheet(int id)
+	{
+		return Optional.ofNullable(monsters.get(id)).flatMap(monster -> sheets.map(found -> found.sheet(monster)));
+	}
+
+	/**
+	 * @param id a combatant's id.
 	 * @return the monster PCGen computed, when the game master's and built.
 	 */
 	public synchronized Optional<PlayerCharacter> monster(int id)
@@ -562,6 +643,26 @@ public final class GameTableSession
 			return (read instanceof ForgedMonster.Forged built) ? Optional.of(built.character()) : Optional.empty();
 		});
 		return character.map(found -> sheets().glance(found));
+	}
+
+	/**
+	 * @param id a combatant's id.
+	 * @return the conditions and bonuses the data holds, by name, for that combatant.
+	 */
+	/**
+	 * @param ids the combatants a condition is about to go on.
+	 * @return the conditions and bonuses the data holds for them, with the values a bonus asks for.
+	 */
+	public synchronized List<BonusChoice> conditionChoices(List<Integer> ids)
+	{
+		if (forge.isEmpty())
+		{
+			return List.of();
+		}
+		Optional<PlayerCharacter> single = (ids.size() == 1) ? Optional.ofNullable(monsters.get(ids.getFirst()))
+			: Optional.empty();
+		Optional<PlayerCharacter> reader = ids.stream().map(monsters::get).filter(Objects::nonNull).findFirst();
+		return CombatantSheets.conditionChoices(single, reader);
 	}
 
 	/**
@@ -594,7 +695,7 @@ public final class GameTableSession
 		{
 			return Optional.of(LanguageBundle.getString("in_gametable_notAMonster"));
 		}
-		Set<BonusSourceKey> without = sheets.get().lay(monster, laid.getOrDefault(id, Set.of()), List.of());
+		Set<AppliedBonus> without = sheets.get().lay(monster, laid.getOrDefault(id, Set.of()), List.of());
 		try
 		{
 			new PCGIOHandler().write(monster, gameMode, campaigns, target);

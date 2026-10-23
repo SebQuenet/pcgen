@@ -158,6 +158,30 @@ public final class Arguments
 		return List.copyOf(texts);
 	}
 
+	public List<Integer> optionalIntList(String field)
+	{
+		Object value = raw.get(field);
+		if (value == null)
+		{
+			return List.of();
+		}
+		if (!(value instanceof List<?> items))
+		{
+			throw unreadable(field, "must be an array of whole numbers");
+		}
+		List<Integer> numbers = new ArrayList<>(items.size());
+		for (Object item : items)
+		{
+			Integer number = asInt(item);
+			if (number == null)
+			{
+				throw unreadable(field, "must be an array of whole numbers");
+			}
+			numbers.add(number);
+		}
+		return List.copyOf(numbers);
+	}
+
 	public double requiredDouble(String field)
 	{
 		Object value = raw.get(field);

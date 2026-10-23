@@ -33,6 +33,7 @@ import java.io.File;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -106,6 +107,7 @@ final class CombatPanel extends JPanel
 		bar.add(GameTablePanel.button("in_gametable_damage", this::damage));
 		bar.add(GameTablePanel.button("in_gametable_heal", this::heal));
 		bar.add(GameTablePanel.button("in_gametable_condition", this::condition));
+		bar.add(GameTablePanel.button("in_gametable_castSpell", this::castSpell));
 		bar.add(GameTablePanel.button("in_gametable_initiative", this::initiative));
 		bar.add(GameTablePanel.button("in_gametable_delay", this::delayOrResume));
 		bar.add(GameTablePanel.button("in_gametable_conjure", this::conjure));
@@ -120,7 +122,8 @@ final class CombatPanel extends JPanel
 		bars.add(manage);
 		add(bars, BorderLayout.NORTH);
 
-		order.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		// Several rows picked take a condition at once
+		order.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 		order.setRowHeight(order.getRowHeight() + 6);
 		order.setDefaultRenderer(Object.class, new RowRenderer());
 		order.getColumnModel().getColumn(0).setMaxWidth(70);
@@ -142,7 +145,23 @@ final class CombatPanel extends JPanel
 					StandardCharsets.UTF_8);
 				target().ifPresent(combatant -> table.session().removeCondition(combatant.id(), condition));
 			}
+			else if (event.getEventType() == HyperlinkEvent.EventType.ACTIVATED
+				&& event.getDescription().startsWith(SheetHtml.DROP_SPELL_LINK))
+			{
+				String spell = URLDecoder.decode(event.getDescription().substring(SheetHtml.DROP_SPELL_LINK.length()),
+					StandardCharsets.UTF_8);
+				target().ifPresent(combatant -> table.session().dropSpell(combatant.id(), spell));
+			}
+			else if (event.getEventType() == HyperlinkEvent.EventType.ACTIVATED
+				&& event.getDescription().startsWith(SheetHtml.REMOVE_FROM_GROUP_LINK))
+			{
+				String condition = URLDecoder.decode(
+					event.getDescription().substring(SheetHtml.REMOVE_FROM_GROUP_LINK.length()), StandardCharsets.UTF_8);
+				target().ifPresent(combatant -> table.session().removeCondition(
+					SheetHtml.groupBearing(combatant, table.session().combat(), condition), condition));
+			}
 		});
+		sheet.addHyperlinkListener(GameTablePanel::browse);
 		JPanel right = new JPanel(new BorderLayout());
 		right.add(new JScrollPane(sheet), BorderLayout.CENTER);
 		JPanel sheetButtons = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -165,6 +184,7 @@ final class CombatPanel extends JPanel
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_D, 0), "damage", this::damage);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_S, 0), "heal", this::heal);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_E, 0), "condition", this::condition);
+		bind(KeyStroke.getKeyStroke(KeyEvent.VK_L, 0), "castSpell", this::castSpell);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_I, 0), "initiative", this::initiative);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_R, 0), "delay", this::delayOrResume);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_C, 0), "conjure", this::conjure);
@@ -196,6 +216,7 @@ final class CombatPanel extends JPanel
 	{
 		Combat combat = table.session().combat();
 		Optional<Integer> selected = selectedCombatant().map(Combatant::id);
+		List<Integer> alsoSelected = selectedCombatants().stream().map(Combatant::id).toList();
 		rows.show(combat);
 		round.setText(combat.isStarted() ? LanguageBundle.getFormattedString("in_gametable_round", combat.round())
 			: LanguageBundle.getString("in_gametable_notStarted"));
@@ -205,21 +226,35 @@ final class CombatPanel extends JPanel
 		{
 			row = rows.currentRow();
 		}
+		order.clearSelection();
+		for (int id : alsoSelected)
+		{
+			int other = rows.rowOf(id);
+			if (other >= 0 && other != row)
+			{
+				order.getSelectionModel().addSelectionInterval(other, other);
+			}
+		}
 		if (row >= 0)
 		{
-			order.getSelectionModel().setSelectionInterval(row, row);
-		}
-		else
-		{
-			order.clearSelection();
+			// Added last, the row the sheet shows stays the lead of the selection
+			order.getSelectionModel().addSelectionInterval(row, row);
 		}
 		showSheet();
 	}
 
 	private Optional<Combatant> selectedCombatant()
 	{
-		int row = order.getSelectedRow();
+		int lead = order.getSelectionModel().getLeadSelectionIndex();
+		int row = order.isRowSelected(lead) ? lead : order.getSelectedRow();
 		return (row < 0 || row >= rows.rows.size()) ? Optional.empty() : Optional.of(rows.rows.get(row).combatant());
+	}
+
+	/** Every combatant picked, once each though acting twice a round. */
+	private List<Combatant> selectedCombatants()
+	{
+		return Arrays.stream(order.getSelectedRows()).filter(row -> row < rows.rows.size())
+			.mapToObj(row -> rows.rows.get(row).combatant()).distinct().toList();
 	}
 
 	/** The combatant an action applies to: the one picked, else the one acting. */
@@ -247,8 +282,9 @@ final class CombatPanel extends JPanel
 			return;
 		}
 		Combatant found = combatant.get();
-		String html = monster ? SheetHtml.monster(found, table.session().sheet(found.id()))
-			: SheetHtml.player(found, table.session().glance(found.id()));
+		Combat combat = table.session().combat();
+		String html = monster ? SheetHtml.monster(found, table.session().monsterSheet(found.id()), combat)
+			: SheetHtml.player(found, table.session().glance(found.id()), combat);
 		boolean sameCombatant = shownId == found.id();
 		Rectangle visible = sheet.getVisibleRect();
 		sheet.setText(html);
@@ -281,10 +317,15 @@ final class CombatPanel extends JPanel
 
 	private static String describe(Expiry expiry)
 	{
-		return expiry.condition()
-			.map(condition -> LanguageBundle.getFormattedString("in_gametable_conditionEnded", expiry.combatant(),
-				condition))
-			.orElseGet(() -> LanguageBundle.getFormattedString("in_gametable_creatureLeft", expiry.combatant()));
+		return switch (expiry)
+		{
+			case Expiry.CreatureLeft left -> LanguageBundle.getFormattedString("in_gametable_creatureLeft",
+				left.combatant());
+			case Expiry.ConditionEnded ended -> LanguageBundle.getFormattedString("in_gametable_conditionEnded",
+				ended.combatant(), ended.condition());
+			case Expiry.SpellEnded ended -> LanguageBundle.getFormattedString("in_gametable_spellEnded",
+				ended.combatant(), ended.spell());
+		};
 	}
 
 	private void damage()
@@ -303,9 +344,80 @@ final class CombatPanel extends JPanel
 
 	private void condition()
 	{
-		target().ifPresent(combatant -> ConditionDialog.ask(this, combatant,
-			table.session().conditionSources(combatant.id()))
-			.ifPresent(condition -> table.session().addCondition(combatant.id(), condition)));
+		target().ifPresent(combatant -> ConditionDialog.ask(this, LanguageBundle.getString("in_gametable_condition"),
+			scopesAround(combatant),
+			table.session()::conditionChoices)
+			.ifPresent(laying -> table.session().addCondition(laying.scope().ids(), laying.condition())));
+	}
+
+	/**
+	 * Keeps track of a spell cast by the combatant acting, else the one picked, and lays its
+	 * effect on its targets until it ends.
+	 */
+	private void castSpell()
+	{
+		Combat combat = table.session().combat();
+		Optional<Combatant> acting = combat.current().flatMap(turn -> combat.combatant(turn.combatantId()));
+		acting.or(this::selectedCombatant).ifPresent(caster -> ConditionDialog.ask(this,
+			LanguageBundle.getFormattedString("in_gametable_castSpellBy", caster.name()), spellScopes(caster),
+			table.session()::conditionChoices)
+			.ifPresent(laying -> table.session().castSpell(caster.id(), laying.condition(), laying.scope().ids())));
+	}
+
+	/** Whom a spell can bear on: those a condition can go on, its caster, the players' side, or no one. */
+	private List<ConditionDialog.Scope> spellScopes(Combatant caster)
+	{
+		Combatant picked = selectedCombatant().orElse(caster);
+		List<ConditionDialog.Scope> scopes = new ArrayList<>(scopesAround(picked));
+		if (picked.id() != caster.id())
+		{
+			scopes.add(new ConditionDialog.Scope(LanguageBundle.getFormattedString("in_gametable_conditionOn",
+				caster.name()), List.of(caster.id())));
+		}
+		List<Combatant> players = table.session().combat().order().stream()
+			.filter(other -> !other.kind().isGameMasters()).toList();
+		if (players.size() > 1)
+		{
+			scopes.add(new ConditionDialog.Scope(LanguageBundle.getFormattedString("in_gametable_conditionOnPlayers",
+				players.size()), idsOf(players)));
+		}
+		scopes.add(new ConditionDialog.Scope(LanguageBundle.getString("in_gametable_spellUntargeted"), List.of()));
+		return scopes;
+	}
+
+	/** The combatants a condition can go on: the one acted on, the rows picked, its group, every monster. */
+	private List<ConditionDialog.Scope> scopesAround(Combatant combatant)
+	{
+		List<ConditionDialog.Scope> scopes = new ArrayList<>();
+		scopes.add(new ConditionDialog.Scope(LanguageBundle.getFormattedString("in_gametable_conditionOn",
+			combatant.name()), List.of(combatant.id())));
+		List<Combatant> picked = selectedCombatants();
+		if (picked.size() > 1)
+		{
+			// Several rows picked are what the game master meant, so they come first
+			scopes.addFirst(new ConditionDialog.Scope(LanguageBundle.getFormattedString("in_gametable_conditionOnPicked",
+				picked.size()), idsOf(picked)));
+		}
+		List<Combatant> order = table.session().combat().order();
+		List<Combatant> group = order.stream().filter(other -> other.kind().isGameMasters()
+			&& !combatant.group().isBlank() && other.group().equals(combatant.group())).toList();
+		if (combatant.kind().isGameMasters() && group.size() > 1)
+		{
+			scopes.add(new ConditionDialog.Scope(LanguageBundle.getFormattedString("in_gametable_conditionOnGroup",
+				combatant.group(), group.size()), idsOf(group)));
+		}
+		List<Combatant> monsters = order.stream().filter(other -> other.kind().isGameMasters()).toList();
+		if (monsters.size() > 1 && monsters.size() != group.size())
+		{
+			scopes.add(new ConditionDialog.Scope(LanguageBundle.getFormattedString("in_gametable_conditionOnMonsters",
+				monsters.size()), idsOf(monsters)));
+		}
+		return scopes;
+	}
+
+	private static List<Integer> idsOf(List<Combatant> combatants)
+	{
+		return combatants.stream().map(Combatant::id).toList();
 	}
 
 	private void initiative()
@@ -499,7 +611,7 @@ final class CombatPanel extends JPanel
 	private static final class RowsModel extends AbstractTableModel
 	{
 		private static final String[] COLUMNS = {"in_gametable_initiativeColumn", "in_gametable_name",
-			"in_gametable_hitPoints", "in_gametable_conditions"};
+			"in_gametable_hitPoints", "in_gametable_conditions", "in_gametable_spells"};
 
 		private List<Row> rows = List.of();
 		private Optional<Turn> current = Optional.empty();
@@ -575,14 +687,20 @@ final class CombatPanel extends JPanel
 				case 0 -> initiativeText(line);
 				case 1 -> combatant.name() + kindText(combatant);
 				case 2 -> combatant.health().map(health -> health.remaining() + " / " + health.maximum()).orElse("");
-				default -> combatant.conditions().stream()
-					.map(condition -> condition.name() + condition.roundsLeft().stream()
-						.mapToObj(rounds -> " (" + rounds + ")").findFirst().orElse(""))
+				case 3 -> combatant.conditions().stream()
+					.map(condition -> condition.name() + roundsText(condition.roundsLeft()))
 					.collect(Collectors.joining(", "))
 					+ combatant.roundsLeft().stream()
 						.mapToObj(rounds -> LanguageBundle.getFormattedString("in_gametable_leavesIn", rounds))
 						.findFirst().orElse("");
+				default -> combatant.spells().stream().map(spell -> spell.name() + roundsText(spell.roundsLeft()))
+					.collect(Collectors.joining(", "));
 			};
+		}
+
+		private static String roundsText(OptionalInt roundsLeft)
+		{
+			return roundsLeft.stream().mapToObj(rounds -> " (" + rounds + ")").findFirst().orElse("");
 		}
 
 		private String kindText(Combatant combatant)

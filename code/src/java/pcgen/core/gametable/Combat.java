@@ -18,6 +18,7 @@
 package pcgen.core.gametable;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -201,16 +202,17 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	}
 
 	/**
-	 * @return this fight at the first turn of round one.
+	 * @return this fight at the first turn of round one, the spells of the first to act worn down.
 	 */
 	public Combat started()
 	{
-		return new Combat(1, order, turns().stream().findFirst(), experience);
+		// The first to act begins its turn too: a spell cast before the fight counts that turn
+		return new Combat(1, order, turns().stream().findFirst(), experience).turnBegun(List.of()).combat();
 	}
 
 	/**
-	 * @return the fight with the turn passed to the next combatant; past the last, a new
-	 *         round begins and wears conditions and conjured creatures down.
+	 * @return the fight with the turn passed to the next combatant, whose spells wear down;
+	 *         past the last, a new round begins and wears conditions and conjured creatures down.
 	 */
 	public CombatAdvance next()
 	{
@@ -222,9 +224,34 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 		int index = current.map(turns::indexOf).orElse(-1);
 		if (index >= 0 && index + 1 < turns.size())
 		{
-			return new CombatAdvance(new Combat(round, order, Optional.of(turns.get(index + 1)), experience), List.of());
+			return new Combat(round, order, Optional.of(turns.get(index + 1)), experience).turnBegun(List.of());
 		}
 		return newRound();
+	}
+
+	/** This fight once the turn passed on: a combatant beginning its first turn of the round wears its spells down. */
+	private CombatAdvance turnBegun(List<Expiry> expiredBefore)
+	{
+		Optional<Turn> begun = current.filter(turn -> !turn.second());
+		if (begun.isEmpty())
+		{
+			return new CombatAdvance(this, expiredBefore);
+		}
+		Combatant caster = require(begun.get().combatantId());
+		List<Expiry> expired = new ArrayList<>(expiredBefore);
+		List<CastSpell> lasting = new ArrayList<>();
+		List<CastSpell> ended = new ArrayList<>();
+		for (CastSpell spell : caster.spells())
+		{
+			spell.ticked().ifPresentOrElse(lasting::add, () -> ended.add(spell));
+		}
+		Combat worn = replaced(caster.withSpells(lasting));
+		for (CastSpell spell : ended)
+		{
+			expired.add(new Expiry.SpellEnded(caster.name(), spell.name()));
+			worn = worn.lifting(spell);
+		}
+		return new CombatAdvance(worn, expired);
 	}
 
 	private CombatAdvance newRound()
@@ -239,7 +266,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 				int left = combatant.roundsLeft().getAsInt() - 1;
 				if (left < 1)
 				{
-					expired.add(new Expiry(combatant.name(), Optional.empty()));
+					expired.add(new Expiry.CreatureLeft(combatant.name()));
 					continue;
 				}
 				aged = aged.withRoundsLeft(OptionalInt.of(left));
@@ -249,12 +276,12 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 			{
 				Optional<Condition> ticked = condition.ticked();
 				ticked.ifPresentOrElse(lasting::add,
-					() -> expired.add(new Expiry(combatant.name(), Optional.of(condition.name()))));
+					() -> expired.add(new Expiry.ConditionEnded(combatant.name(), condition.name())));
 			}
 			remaining.add(aged.withConditions(lasting));
 		}
 		Combat nextRound = new Combat(round + 1, remaining, Optional.empty(), experience);
-		return new CombatAdvance(nextRound.withCurrent(nextRound.turns().stream().findFirst()), expired);
+		return nextRound.withCurrent(nextRound.turns().stream().findFirst()).turnBegun(expired);
 	}
 
 	public Combat damaged(int id, int amount)
@@ -277,6 +304,90 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	public Combat withoutCondition(int id, String conditionName)
 	{
 		return update(id, combatant -> combatant.withoutCondition(conditionName));
+	}
+
+	/**
+	 * @param ids       the combatants the condition goes on at once, such as a band of monsters.
+	 * @param condition the condition; on a player's character, whose numbers PCGen does not hold, it is only a label.
+	 * @return this fight with the condition laid.
+	 */
+	public Combat withConditionOn(Collection<Integer> ids, Condition condition)
+	{
+		Combat laid = this;
+		for (int id : ids)
+		{
+			laid = laid.update(id, combatant -> combatant.withCondition(
+				combatant.kind().isGameMasters() ? condition : condition.asLabel()));
+		}
+		return laid;
+	}
+
+	/**
+	 * @param ids           combatants of the fight.
+	 * @param conditionName the name of a condition to take off.
+	 * @return this fight with the condition off each of them.
+	 */
+	public Combat withoutConditionOn(Collection<Integer> ids, String conditionName)
+	{
+		Combat lifted = this;
+		for (int id : ids)
+		{
+			lifted = lifted.withoutCondition(id, conditionName);
+		}
+		return lifted;
+	}
+
+	public Combat withSpell(int id, CastSpell spell)
+	{
+		return update(id, combatant -> combatant.withSpell(spell));
+	}
+
+	/**
+	 * @param casterId  the caster's id.
+	 * @param effect    what the spell does, named after it, its rounds the spell's duration.
+	 * @param targetIds the combatants it affects; none when it is only kept track of.
+	 * @return this fight with the spell kept by its caster and its effect on its targets until it ends.
+	 */
+	public Combat cast(int casterId, Condition effect, List<Integer> targetIds)
+	{
+		CastSpell spell = new CastSpell(effect.name(), effect.roundsLeft(), targetIds);
+		Combat recast = withoutSpell(casterId, spell.name());
+		return recast.withSpell(casterId, spell).withConditionOn(targetIds, effect.lasting());
+	}
+
+	/**
+	 * @param casterId  the caster's id.
+	 * @param spellName the name of a spell it no longer keeps up.
+	 * @return this fight without the spell, its effect lifted from its targets.
+	 */
+	public Combat withoutSpell(int casterId, String spellName)
+	{
+		Combatant caster = require(casterId);
+		Optional<CastSpell> dropped = caster.spells().stream()
+			.filter(spell -> spell.name().equalsIgnoreCase(spellName.strip())).findFirst();
+		Combat without = replaced(caster.withoutSpell(spellName));
+		return dropped.map(without::lifting).orElse(without);
+	}
+
+	/** Whether a spell of that name kept up by a combatant of this fight affects the target. */
+	private boolean holdsEffect(String spellName, int targetId)
+	{
+		return order.stream().flatMap(combatant -> combatant.spells().stream())
+			.anyMatch(spell -> spell.name().equalsIgnoreCase(spellName) && spell.targetIds().contains(targetId));
+	}
+
+	/** This fight with an ended spell's effect off its targets, unless another spell of that name still holds it there. */
+	private Combat lifting(CastSpell ended)
+	{
+		Combat lifted = this;
+		for (int targetId : ended.targetIds())
+		{
+			if (!holdsEffect(ended.name(), targetId) && combatant(targetId).isPresent())
+			{
+				lifted = lifted.withoutCondition(targetId, ended.name());
+			}
+		}
+		return lifted;
 	}
 
 	/**
@@ -364,13 +475,37 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 
 	/**
 	 * @param id a combatant's id.
-	 * @return this fight without the combatant; its turn, if it was acting, passes on.
+	 * @return this fight without the combatant; its turn, if it was acting, passes on. The effects
+	 *         of its spells stay on their targets as conditions lasting the rounds the spells had left.
 	 */
 	public Combat removed(int id)
 	{
 		Combat without = new Combat(round, order.stream().filter(combatant -> combatant.id() != id).toList(), current,
 			experience);
+		for (CastSpell spell : require(id).spells())
+		{
+			without = without.orphaning(spell);
+		}
 		return without.withCurrent(currentOnceGone(id, without));
+	}
+
+	/** This fight with the effect of a spell whose caster left counting down on its own, where no other spell holds it. */
+	private Combat orphaning(CastSpell spell)
+	{
+		Combat orphaned = this;
+		for (int targetId : spell.targetIds())
+		{
+			if (holdsEffect(spell.name(), targetId) || combatant(targetId).isEmpty())
+			{
+				continue;
+			}
+			orphaned = orphaned.update(targetId, target -> target.withConditions(target.conditions().stream()
+				.map(condition -> condition.name().equalsIgnoreCase(spell.name())
+					? new Condition(condition.name(), condition.bonus(), spell.roundsLeft(), condition.chosenValue())
+					: condition)
+				.toList()));
+		}
+		return orphaned;
 	}
 
 	/**

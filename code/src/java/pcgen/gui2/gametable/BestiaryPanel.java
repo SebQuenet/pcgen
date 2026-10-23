@@ -39,8 +39,8 @@ import pcgen.core.Globals;
 import pcgen.core.gametable.CombatantSheets;
 import pcgen.core.gametable.EncounterMonster;
 import pcgen.core.gametable.ForgeOutcome;
-import pcgen.core.gametable.MonsterPreview;
 import pcgen.core.gametable.MonsterRecipe;
+import pcgen.core.gametable.MonsterSheet;
 import pcgen.core.gametable.MonsterSource;
 import pcgen.system.LanguageBundle;
 
@@ -62,6 +62,7 @@ final class BestiaryPanel extends JPanel
 		super(new BorderLayout());
 		this.table = table;
 		preview.setEditable(false);
+		preview.addHyperlinkListener(GameTablePanel::browse);
 		races.onSelection(name -> showPreview());
 		JPanel right = new JPanel(new BorderLayout());
 		right.add(new JScrollPane(preview), BorderLayout.CENTER);
@@ -96,12 +97,11 @@ final class BestiaryPanel extends JPanel
 	private void showPreview()
 	{
 		preview.setText("");
-		picked().ifPresent(monster -> table.inBackground(() -> table.session().preview(monster.recipe()), outcome -> {
+		picked().ifPresent(monster -> table.inBackground(() -> table.session().previewSheet(monster.recipe()), outcome -> {
 			switch (outcome)
 			{
-				case ForgeOutcome.Built<MonsterPreview> built -> preview.setText(
-					SheetHtml.preview(built.value().stats(), Optional.of(built.value().challengeRating())));
-				case ForgeOutcome.Failed<MonsterPreview> failed -> preview.setText(
+				case ForgeOutcome.Built<MonsterSheet> built -> preview.setText(SheetHtml.preview(built.value()));
+				case ForgeOutcome.Failed<MonsterSheet> failed -> preview.setText(
 					EncountersPanel.escape(failed.reason()));
 			}
 			preview.setCaretPosition(0);

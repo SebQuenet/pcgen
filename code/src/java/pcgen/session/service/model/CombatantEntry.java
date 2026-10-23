@@ -33,12 +33,13 @@ import java.util.List;
  * @param hitPoints          its hit points left, null for those whose player tracks them
  * @param maximumHitPoints   its full hit points, null for those whose player tracks them
  * @param conditions         what is laid on it
+ * @param spells             the spells it cast and keeps up
  * @param roundsLeft         the rounds before a conjured creature leaves, null when it stays
  * @param summonerId         the id of its conjurer, null when not conjured
  * @param recipe             how it is built, null for those whose player tracks them
  */
 public record CombatantEntry(int id, String name, String kind, Integer initiative, int initiativeModifier,
 	boolean secondTurn, boolean acting, boolean delaying, Integer hitPoints, Integer maximumHitPoints,
-	List<ConditionEntry> conditions, Integer roundsLeft, Integer summonerId, RecipeEntry recipe)
+	List<ConditionEntry> conditions, List<CastSpellEntry> spells, Integer roundsLeft, Integer summonerId, RecipeEntry recipe)
 {
 }

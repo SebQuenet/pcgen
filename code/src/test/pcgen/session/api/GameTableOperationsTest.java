@@ -33,6 +33,7 @@ import pcgen.core.conjurations.BestiarySources;
 import pcgen.core.gametable.MonsterPreview;
 import pcgen.session.service.ServiceError;
 import pcgen.session.service.ServiceResult;
+import pcgen.session.service.model.CastSpellEntry;
 import pcgen.session.service.model.CombatEnded;
 import pcgen.session.service.model.CombatantEntry;
 import pcgen.session.service.model.GameTableState;
@@ -125,6 +126,92 @@ class GameTableOperationsTest
 			GameTableState.class);
 
 		assertEquals(false, named(table, "Seoni").conditions().getFirst().changesNumbers());
+	}
+
+	@Test
+	void aConditionGoesOnABandAtOnceWithItsValue()
+	{
+		GameTableState before = launched();
+		List<Integer> wolves = List.of(named(before, "Wolf 1").id(), named(before, "Wolf 2").id());
+
+		GameTableState table = value(call("add_condition", Map.of("combatant_ids", wolves,
+			"name", "Ability Damaged (Strength)", "value", 4)), GameTableState.class);
+
+		assertEquals(List.of(true, true), List.of(named(table, "Wolf 1").conditions().getFirst().changesNumbers(),
+			named(table, "Wolf 2").conditions().getFirst().changesNumbers()));
+	}
+
+	@Test
+	void aValueOutsideItsBonusRangeIsRefused()
+	{
+		int wolf = named(launched(), "Wolf 1").id();
+
+		ServiceError refused = error(call("add_condition", Map.of("combatant_id", wolf,
+			"name", "Ability Damaged (Strength)", "value", 400)));
+
+		assertInstanceOf(ServiceError.InvalidArgument.class, refused);
+	}
+
+	@Test
+	void aConditionComesOffABandAtOnce()
+	{
+		GameTableState before = launched();
+		List<Integer> wolves = List.of(named(before, "Wolf 1").id(), named(before, "Wolf 2").id());
+		call("add_condition", Map.of("combatant_ids", wolves, "name", "Shaken"));
+
+		GameTableState table = value(call("remove_condition", Map.of("combatant_ids", wolves, "name", "Shaken")),
+			GameTableState.class);
+
+		assertEquals(List.of(List.of(), List.of()), List.of(named(table, "Wolf 1").conditions(),
+			named(table, "Wolf 2").conditions()));
+	}
+
+	@Test
+	void aSpellCastIsKeptByItsCasterWithItsTargets()
+	{
+		GameTableState before = launched();
+		int seoni = named(before, "Seoni").id();
+		int valeros = named(before, "Valeros").id();
+
+		GameTableState table = value(call("cast_spell", Map.of("caster_id", seoni, "name", "Ward of Sandpoint",
+			"rounds", 3, "target_ids", List.of(seoni, valeros))), GameTableState.class);
+
+		assertEquals(new CastSpellEntry("Ward of Sandpoint", 3, List.of(seoni, valeros)), named(table, "Seoni").spells().getFirst());
+	}
+
+	@Test
+	void aSpellFromTheDataChangesTheNumbersOfTheMonstersItTargets()
+	{
+		GameTableState before = launched();
+
+		GameTableState table = value(call("cast_spell", Map.of("caster_id", named(before, "Seoni").id(),
+			"name", "Shaken", "rounds", 2, "target_ids", List.of(named(before, "Wolf 1").id()))), GameTableState.class);
+
+		assertTrue(named(table, "Wolf 1").conditions().getFirst().changesNumbers());
+	}
+
+	@Test
+	void aDroppedSpellLeavesItsTargets()
+	{
+		GameTableState before = launched();
+		int seoni = named(before, "Seoni").id();
+		int wolf = named(before, "Wolf 1").id();
+		call("cast_spell", Map.of("caster_id", seoni, "name", "Shaken", "target_ids", List.of(wolf)));
+
+		GameTableState table = value(call("drop_spell", Map.of("caster_id", seoni, "name", "Shaken")),
+			GameTableState.class);
+
+		assertEquals(List.of(), named(table, "Wolf 1").conditions());
+	}
+
+	@Test
+	void droppingASpellNotCastIsReported()
+	{
+		int seoni = named(launched(), "Seoni").id();
+
+		ServiceError refused = error(call("drop_spell", Map.of("caster_id", seoni, "name", "Haste")));
+
+		assertInstanceOf(ServiceError.EntryNotFound.class, refused);
 	}
 
 	@Test

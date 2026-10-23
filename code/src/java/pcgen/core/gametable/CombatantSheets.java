@@ -34,16 +34,21 @@ import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.core.Ability;
 import pcgen.core.Equipment;
 import pcgen.core.Globals;
+import pcgen.core.PCStat;
 import pcgen.core.PCTemplate;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.Race;
 import pcgen.core.bonus.TemporaryBonusApplier;
 import pcgen.core.bonus.TemporaryBonusSources;
+import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.CreatureStats;
+import pcgen.core.conjurations.SpecialAbilities;
 import pcgen.core.conjurations.SummonedCreatureBuilder;
 import pcgen.core.spell.Spell;
+import pcgen.facade.core.BonusChoice;
 import pcgen.io.ExportHandler;
+import pcgen.util.FirstResultSearch;
 import pcgen.util.enumeration.Visibility;
 
 /**
@@ -54,6 +59,12 @@ public final class CombatantSheets
 {
 	/** The ability that gives a creature a second turn each round, twenty lower. */
 	public static final String DUAL_INITIATIVE = "Mythic Simple Template ~ Dual Initiative";
+
+	private static final String INTELLIGENCE = "INT";
+	private static final String WISDOM = "WIS";
+	private static final String HUMANOID = "Humanoid";
+	private static final String SENSE_MOTIVE = "SKILL.Sense Motive";
+	private static final String FEATS = "ABILITYALLLIST.FEAT.VISIBLE";
 
 	private final SummonedCreatureBuilder reader;
 
@@ -75,13 +86,67 @@ public final class CombatantSheets
 	}
 
 	/**
+	 * @param monster a monster PCGen computed.
+	 * @return what its sheet shows in a fight.
+	 */
+	public MonsterSheet sheet(PlayerCharacter monster)
+	{
+		return new MonsterSheet(stats(monster), challengeRating(monster),
+			SummonedCreatureBuilder.specialAbilitiesOf(monster), SpecialAbilities.split(token(monster, FEATS)),
+			feint(monster), referencesOf(monster.getRace()));
+	}
+
+	private static List<FirstResultSearch.Link> referencesOf(Race race)
+	{
+		if (race == null || race.isUnselected())
+		{
+			return List.of();
+		}
+		return FirstResultSearch.creatureLinks(race.getDisplayName(), race.getLocalizedName());
+	}
+
+	/**
+	 * @param monster a monster PCGen computed.
+	 * @return what a Bluff check must reach to feint it.
+	 */
+	public FeintDefense feint(PlayerCharacter monster)
+	{
+		Optional<PCStat> intelligence = stat(monster, INTELLIGENCE);
+		OptionalInt intelligenceScore = intelligence.filter(found -> !monster.isNonAbility(found))
+			.map(found -> OptionalInt.of(monster.getTotalStatFor(found))).orElseGet(OptionalInt::empty);
+		int wisdomModifier = stat(monster, WISDOM).map(monster::getStatModFor).orElse(0);
+		OptionalInt trainedSenseMotive = number(token(monster, SENSE_MOTIVE + ".RANK")).orElse(0) > 0
+			? number(token(monster, SENSE_MOTIVE + ".TOTAL")).map(OptionalInt::of).orElseGet(OptionalInt::empty)
+			: OptionalInt.empty();
+		return FeintDefense.of(monster.baseAttackBonus(), wisdomModifier, trainedSenseMotive, intelligenceScore,
+			HUMANOID.equalsIgnoreCase(monster.getDisplay().getRaceType()));
+	}
+
+	private static Optional<PCStat> stat(PlayerCharacter character, String key)
+	{
+		return character.getStatSet().stream().filter(found -> key.equals(found.getKeyName())).findFirst();
+	}
+
+	private static Optional<Integer> number(String written)
+	{
+		try
+		{
+			return Optional.of((int) Double.parseDouble(written.replace("+", "")));
+		}
+		catch (NumberFormatException notANumber)
+		{
+			return Optional.empty();
+		}
+	}
+
+	/**
 	 * @param character a player's character.
 	 * @return the few numbers the game master reads of it.
 	 */
 	public PlayerGlance glance(PlayerCharacter character)
 	{
 		return new PlayerGlance(token(character, "SKILL.Perception.TOTAL.SIGN"),
-			token(character, "SKILL.Sense Motive.TOTAL.SIGN"), token(character, "CHECK.0.TOTAL"),
+			token(character, SENSE_MOTIVE + ".TOTAL.SIGN"), token(character, "CHECK.0.TOTAL"),
 			token(character, "CHECK.1.TOTAL"), token(character, "CHECK.2.TOTAL"));
 	}
 
@@ -125,28 +190,29 @@ public final class CombatantSheets
 	 * @param wanted    the conditions it should be under now.
 	 * @return the bonuses laid once done: those of the wanted conditions the data holds.
 	 */
-	public Set<BonusSourceKey> lay(PlayerCharacter monster, Set<BonusSourceKey> laid, List<Condition> wanted)
+	public Set<AppliedBonus> lay(PlayerCharacter monster, Set<AppliedBonus> laid, List<Condition> wanted)
 	{
-		Set<BonusSourceKey> wantedKeys = wanted.stream().map(Condition::bonus).flatMap(Optional::stream)
+		Set<AppliedBonus> wantedBonuses = wanted.stream().map(Condition::applied).flatMap(Optional::stream)
 			.collect(Collectors.toSet());
-		Set<BonusSourceKey> nowLaid = new HashSet<>(laid);
-		for (BonusSourceKey key : laid)
+		Set<AppliedBonus> nowLaid = new HashSet<>(laid);
+		for (AppliedBonus bonus : laid)
 		{
-			if (!wantedKeys.contains(key))
+			if (!wantedBonuses.contains(bonus))
 			{
-				TemporaryBonusSources.find(key).ifPresent(source -> TemporaryBonusApplier.remove(monster, source));
-				nowLaid.remove(key);
+				TemporaryBonusSources.find(bonus.source())
+					.ifPresent(source -> TemporaryBonusApplier.remove(monster, source));
+				nowLaid.remove(bonus);
 			}
 		}
-		for (BonusSourceKey key : wantedKeys)
+		for (AppliedBonus bonus : wantedBonuses)
 		{
-			if (!nowLaid.contains(key))
+			if (!nowLaid.contains(bonus))
 			{
-				Optional<CDOMObject> source = TemporaryBonusSources.find(key);
+				Optional<CDOMObject> source = TemporaryBonusSources.find(bonus.source());
 				if (source.isPresent())
 				{
-					TemporaryBonusApplier.apply(monster, source.get(), OptionalInt.empty());
-					nowLaid.add(key);
+					TemporaryBonusApplier.apply(monster, source.get(), bonus.chosenValue());
+					nowLaid.add(bonus);
 				}
 			}
 		}
@@ -160,12 +226,29 @@ public final class CombatantSheets
 	 */
 	public static Map<String, BonusSourceKey> conditionSources(Optional<PlayerCharacter> character)
 	{
+		return keyableSources(character).stream().collect(Collectors.toMap(CDOMObject::getLocalizedName, TemporaryBonusSources::keyOf, (first, second) -> first,
+				LinkedHashMap::new));
+	}
+
+	/**
+	 * @param character the one character the condition goes on, or nothing for several or for a player's character.
+	 * @param reader    a monster whose variables the value ranges read, when the condition goes on one.
+	 * @return the conditions and bonuses the data holds, with the values a bonus asks for, as the conjurations offer.
+	 */
+	public static List<BonusChoice> conditionChoices(Optional<PlayerCharacter> character,
+		Optional<PlayerCharacter> reader)
+	{
+		return keyableSources(character).stream().map(source -> new BonusChoice(TemporaryBonusSources.keyOf(source)
+			.text(), source.getLocalizedName(), reader.flatMap(found -> TemporaryBonusApplier.choiceRange(found,
+				source)))).toList();
+	}
+
+	private static List<CDOMObject> keyableSources(Optional<PlayerCharacter> character)
+	{
 		List<CDOMObject> sources = character.map(TemporaryBonusSources::availableTo)
 			.orElseGet(TemporaryBonusSources::castableOnOthers);
 		return sources.stream().filter(CombatantSheets::canBeKeyed)
-			.sorted(Comparator.comparing(CDOMObject::getLocalizedName, String.CASE_INSENSITIVE_ORDER))
-			.collect(Collectors.toMap(CDOMObject::getLocalizedName, TemporaryBonusSources::keyOf, (first, second) -> first,
-				LinkedHashMap::new));
+			.sorted(Comparator.comparing(CDOMObject::getLocalizedName, String.CASE_INSENSITIVE_ORDER)).toList();
 	}
 
 	/** Skills also grant temporary bonuses, but a fight's condition comes from the kinds a bonus key names. */

@@ -28,6 +28,7 @@ import java.util.OptionalInt;
 import java.util.Set;
 
 import pcgen.core.PlayerCharacter;
+import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.BestiarySources;
 import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.CreatureStats;
@@ -111,7 +112,7 @@ class MonsterForgeTest
 		int bite = number(sheets.stats(wolf).attacks().getFirst().toHit());
 		Condition shaken = new Condition("Shaken", Optional.of(new BonusSourceKey(BonusSourceKey.TEMPLATE, "",
 			"Shaken")), OptionalInt.of(2));
-		Set<BonusSourceKey> laid = sheets.lay(wolf, Set.of(), List.of(shaken));
+		Set<AppliedBonus> laid = sheets.lay(wolf, Set.of(), List.of(shaken));
 
 		sheets.lay(wolf, laid, List.of());
 
@@ -166,5 +167,51 @@ class MonsterForgeTest
 		PlayerGlance glance = sheets.glance(BestiarySources.newCharacter("Seoni"));
 
 		assertTrue(glance.perception().matches("[+-]\\d+"), glance.perception());
+	}
+
+	private static FeintDefense feintOf(String race)
+	{
+		return sheets.feint(forged(MonsterRecipe.of(new MonsterSource.BestiaryRace(race))));
+	}
+
+	@Test
+	void anOgreIsFeintedAtTenPlusItsBaseAttackAndWisdom()
+	{
+		assertEquals(new FeintDefense.Difficulty(13, FeintDefense.Hindrance.NONE), feintOf("Ogre"));
+	}
+
+	@Test
+	void aWolfsAnimalMindMakesItEightHarderToFeint()
+	{
+		assertEquals(new FeintDefense.Difficulty(12, FeintDefense.Hindrance.ANIMAL_MIND), feintOf("Wolf"));
+	}
+
+	@Test
+	void aBabausTrainedSenseMotiveSetsItsFeintAsAnOutsider()
+	{
+		assertEquals(new FeintDefense.Difficulty(21, FeintDefense.Hindrance.NONHUMANOID), feintOf("Demon (Babau)"));
+	}
+
+	@Test
+	void aMindlessZombieCannotBeFeinted()
+	{
+		assertInstanceOf(FeintDefense.Impossible.class, feintOf("Zombie (Human)"));
+	}
+
+	@Test
+	void aBabausSneakAttackIsASpecialAttackApartFromItsQualities()
+	{
+		MonsterSheet babau = sheets.sheet(forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Demon (Babau)"))));
+
+		assertEquals(List.of(1, 3, 2), List.of(babau.abilities().attacks().size(),
+			babau.abilities().qualities().size(), babau.abilities().defenses().size()));
+	}
+
+	@Test
+	void anOgreSheetListsItsFeats()
+	{
+		MonsterSheet ogre = sheets.sheet(forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Ogre"))));
+
+		assertEquals(2, ogre.feats().size(), ogre.feats().toString());
 	}
 }

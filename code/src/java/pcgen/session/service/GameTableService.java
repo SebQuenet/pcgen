@@ -22,12 +22,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.function.Supplier;
 
 import pcgen.core.Campaign;
+import pcgen.core.bonus.IntRange;
 import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.gametable.Combat;
 import pcgen.core.gametable.CombatReward;
@@ -48,10 +48,12 @@ import pcgen.core.gametable.PartyMember;
 import pcgen.core.gametable.Scenario;
 import pcgen.core.gametable.ScenarioReading;
 import pcgen.core.gametable.Turn;
+import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.util.ListFacades;
 import pcgen.session.HeadlessUIDelegate;
 import pcgen.session.PcgenSession;
+import pcgen.session.service.model.CastSpellEntry;
 import pcgen.session.service.model.CombatEnded;
 import pcgen.session.service.model.CombatEntry;
 import pcgen.session.service.model.CombatantEntry;
@@ -305,35 +307,135 @@ public final class GameTableService
 	}
 
 	/**
+	 * @param ids    the combatants it goes on at once, such as a band of monsters.
 	 * @param name   a condition, temporary bonus or negative property the data holds, by its name or
-	 *               key, which changes a monster's numbers; any other name is a label.
+	 *               key, which changes a monster's numbers; any other name, and anything on a player, is a label.
 	 * @param rounds rounds before it ends; 0 when it lasts.
+	 * @param value  the value a bonus asking one takes, such as the +2 of an Inspire Courage; its
+	 *               highest when omitted.
 	 */
-	public ServiceResult<GameTableState> addCondition(int id, String name, int rounds)
+	public ServiceResult<GameTableState> addCondition(List<Integer> ids, String name, int rounds, OptionalInt value)
 	{
-		return combatant(id).map(found -> {
-			Optional<Map.Entry<String, BonusSourceKey>> known = table.conditionSources(id).entrySet().stream()
-				.filter(source -> answersTo(source, name)).findFirst();
-			OptionalInt lasting = (rounds > 0) ? OptionalInt.of(rounds) : OptionalInt.empty();
-			Condition condition = known.filter(source -> found.kind().isGameMasters())
-				.map(source -> new Condition(source.getKey(), Optional.of(source.getValue()), lasting))
-				.orElseGet(() -> Condition.label(known.map(Map.Entry::getKey).orElse(name.strip()), lasting));
-			table.addCondition(id, condition);
+		if (ids.isEmpty())
+		{
+			return ServiceResult.failure(new ServiceError.InvalidArgument("combatant_ids", "names no combatant"));
+		}
+		return everyCombatant(ids).andThen(found -> conditionNamed(ids, name, rounds, value)).map(condition -> {
+			table.addCondition(ids, condition);
 			return state(List.of());
 		});
 	}
 
-	public ServiceResult<GameTableState> removeCondition(int id, String name)
+	/**
+	 * @param ids  combatants of the fight.
+	 * @param name the condition's name as get_game_table shows it, or the key of the data's; it comes off
+	 *             those bearing it.
+	 */
+	public ServiceResult<GameTableState> removeCondition(List<Integer> ids, String name)
 	{
-		return combatant(id).andThen(found -> {
-			boolean laid = found.conditions().stream().anyMatch(condition -> condition.name().equals(name));
-			if (!laid)
+		return everyCombatant(ids).andThen(found -> {
+			String shown = shownName(ids, name);
+			List<Integer> bearing = found.stream().filter(combatant -> combatant.conditions().stream()
+				.anyMatch(condition -> condition.name().equalsIgnoreCase(shown))).map(Combatant::id).toList();
+			if (bearing.isEmpty())
 			{
-				return ServiceResult.failure(new ServiceError.EntryNotFound("Condition on " + found.name(), name));
+				return ServiceResult.failure(new ServiceError.EntryNotFound("Condition on the combatants", name));
 			}
-			table.removeCondition(id, name);
+			table.removeCondition(bearing, shown);
 			return ServiceResult.success(state(List.of()));
 		});
+	}
+
+	/**
+	 * @param casterId  the caster's id.
+	 * @param name      the spell; when the data holds a temporary bonus of that name or key, its effect
+	 *                  changes the numbers of the monsters it targets, a label otherwise.
+	 * @param rounds    turns of its caster before it ends, counted down as each begins; 0 until dropped.
+	 * @param targetIds the combatants bearing its effect until it ends; none to only keep track of it.
+	 * @param value     the value its bonus takes when it asks one; its highest when omitted.
+	 */
+	public ServiceResult<GameTableState> castSpell(int casterId, String name, int rounds, List<Integer> targetIds,
+		OptionalInt value)
+	{
+		return combatant(casterId).andThen(caster -> everyCombatant(targetIds))
+			.andThen(targets -> conditionNamed(targetIds, name, rounds, value)).map(effect -> {
+				table.castSpell(casterId, effect, targetIds);
+				return state(List.of());
+			});
+	}
+
+	/**
+	 * @param casterId the caster's id.
+	 * @param name     a spell it keeps up, as get_game_table shows it or by the key of the data's bonus;
+	 *                 its effect leaves its targets.
+	 */
+	public ServiceResult<GameTableState> dropSpell(int casterId, String name)
+	{
+		return combatant(casterId).andThen(caster -> {
+			List<Integer> targets = caster.spells().stream().flatMap(spell -> spell.targetIds().stream()).toList();
+			String shown = shownName(targets, name);
+			boolean kept = caster.spells().stream().anyMatch(spell -> spell.name().equalsIgnoreCase(shown));
+			if (!kept)
+			{
+				return ServiceResult.failure(new ServiceError.EntryNotFound("Spell cast by " + caster.name(), name));
+			}
+			table.dropSpell(casterId, shown);
+			return ServiceResult.success(state(List.of()));
+		});
+	}
+
+	private ServiceResult<List<Combatant>> everyCombatant(List<Integer> ids)
+	{
+		List<Combatant> found = new ArrayList<>();
+		for (int id : ids)
+		{
+			Optional<Combatant> combatant = table.combat().combatant(id);
+			if (combatant.isEmpty())
+			{
+				return ServiceResult.failure(new ServiceError.EntryNotFound("Combatant", String.valueOf(id)));
+			}
+			found.add(combatant.get());
+		}
+		return ServiceResult.success(found);
+	}
+
+	/** The name a condition or spell is shown under: the label of the data's bonus of that name or key, else the name. */
+	private String shownName(List<Integer> ids, String name)
+	{
+		return table.conditionChoices(ids).stream().filter(choice -> answersTo(choice, name)).map(BonusChoice::label)
+			.findFirst().orElse(name.strip());
+	}
+
+	/** The condition a name stands for on those combatants: one the data holds, with its value, else a label. */
+	private ServiceResult<Condition> conditionNamed(List<Integer> ids, String name, int rounds, OptionalInt value)
+	{
+		if (name.isBlank())
+		{
+			return ServiceResult.failure(new ServiceError.InvalidArgument("name", "is blank"));
+		}
+		OptionalInt lasting = (rounds > 0) ? OptionalInt.of(rounds) : OptionalInt.empty();
+		Optional<BonusChoice> known = table.conditionChoices(ids).stream().filter(choice -> answersTo(choice, name))
+			.findFirst();
+		if (known.isEmpty())
+		{
+			return value.isPresent()
+				? ServiceResult.failure(new ServiceError.InvalidArgument("value", name + " is a label, which takes no value"))
+				: ServiceResult.success(Condition.label(name.strip(), lasting));
+		}
+		Optional<IntRange> range = known.get().range();
+		if (range.isEmpty() && value.isPresent())
+		{
+			return ServiceResult.failure(new ServiceError.InvalidArgument("value", known.get().label() + " takes no value"));
+		}
+		if (range.isPresent() && value.isPresent()
+			&& (value.getAsInt() < range.get().minimum() || value.getAsInt() > range.get().maximum()))
+		{
+			return ServiceResult.failure(new ServiceError.InvalidArgument("value", known.get().label() + " takes from "
+				+ range.get().minimum() + " to " + range.get().maximum()));
+		}
+		OptionalInt chosen = range.isPresent() ? OptionalInt.of(value.orElse(range.get().maximum())) : OptionalInt.empty();
+		return ServiceResult.success(new Condition(known.get().label(), BonusSourceKey.parse(known.get().key()), lasting,
+			chosen));
 	}
 
 	public ServiceResult<List<String>> listConditions(int id)
@@ -398,7 +500,8 @@ public final class GameTableService
 					? preview.value().challengeRating() : null)
 				.orElse(null);
 			return new CombatantSheet(id, found.name(), found.kind().name(), table.sheet(id).orElse(null),
-				challengeRating, templates, monster ? null : table.glance(id).orElse(null), conditionsOf(found));
+				challengeRating, templates, monster ? null : table.glance(id).orElse(null), conditionsOf(found),
+				spellsOf(found));
 		}));
 	}
 
@@ -511,17 +614,21 @@ public final class GameTableService
 		return ServiceResult.success(recipe.withHitDice(request.addedHitDice()));
 	}
 
-	private static boolean answersTo(Map.Entry<String, BonusSourceKey> source, String wanted)
+	private static boolean answersTo(BonusChoice choice, String wanted)
 	{
 		String name = wanted.strip().toLowerCase(Locale.ROOT);
-		return source.getKey().toLowerCase(Locale.ROOT).equals(name)
-			|| source.getValue().key().toLowerCase(Locale.ROOT).equals(name);
+		return choice.label().toLowerCase(Locale.ROOT).equals(name) || BonusSourceKey.parse(choice.key())
+			.map(source -> source.key().toLowerCase(Locale.ROOT).equals(name)).orElse(false);
 	}
 
 	private static String described(Expiry expiry)
 	{
-		return expiry.condition().map(condition -> expiry.combatant() + ": " + condition + " ends")
-			.orElse(expiry.combatant() + " leaves the fight");
+		return switch (expiry)
+		{
+			case Expiry.CreatureLeft left -> left.combatant() + " leaves the fight";
+			case Expiry.ConditionEnded ended -> ended.combatant() + ": " + ended.condition() + " ends";
+			case Expiry.SpellEnded ended -> ended.combatant() + ": spell " + ended.spell() + " ends";
+		};
 	}
 
 	private GameTableState state(List<String> notices)
@@ -577,6 +684,7 @@ public final class GameTableService
 			combatant.initiative().modifier(), second, turn.isPresent() && turn.equals(current), combatant.delaying(),
 			combatant.health().map(health -> health.remaining()).orElse(null),
 			combatant.health().map(health -> health.maximum()).orElse(null), conditionsOf(combatant),
+			spellsOf(combatant),
 			combatant.roundsLeft().isPresent() ? combatant.roundsLeft().getAsInt() : null,
 			combatant.summonerId().isPresent() ? combatant.summonerId().getAsInt() : null,
 			combatant.recipe().map(GameTableService::recipeEntry).orElse(null));
@@ -587,6 +695,12 @@ public final class GameTableService
 		return combatant.conditions().stream().map(condition -> new ConditionEntry(condition.name(),
 			condition.roundsLeft().isPresent() ? condition.roundsLeft().getAsInt() : null,
 			condition.bonus().isPresent())).toList();
+	}
+
+	private static List<CastSpellEntry> spellsOf(Combatant combatant)
+	{
+		return combatant.spells().stream().map(spell -> new CastSpellEntry(spell.name(),
+			spell.roundsLeft().isPresent() ? spell.roundsLeft().getAsInt() : null, spell.targetIds())).toList();
 	}
 
 	private static RecipeEntry recipeEntry(MonsterRecipe recipe)

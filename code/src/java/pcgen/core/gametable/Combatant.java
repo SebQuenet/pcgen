@@ -34,6 +34,7 @@ import java.util.OptionalInt;
  * @param initiative    its place in the order
  * @param health        its hit points, present exactly when it is a monster
  * @param conditions    its conditions, temporary bonuses and labels
+ * @param spells        the spells it cast and keeps track of, counted down on its turns
  * @param recipe        how to rebuild it, present exactly when it is a monster
  * @param characterFile the player's saved character, read for a glance at a few numbers
  * @param summonerId    the conjurer's id, for a conjured creature
@@ -41,7 +42,7 @@ import java.util.OptionalInt;
  * @param delaying      whether it has stepped out of the order until it chooses to act
  */
 public record Combatant(int id, String name, String group, Initiative initiative, Optional<Health> health,
-	List<Condition> conditions, Optional<MonsterRecipe> recipe, Optional<String> characterFile, OptionalInt summonerId,
+	List<Condition> conditions, List<CastSpell> spells, Optional<MonsterRecipe> recipe, Optional<String> characterFile, OptionalInt summonerId,
 	OptionalInt roundsLeft, boolean delaying)
 {
 	public Combatant
@@ -54,6 +55,7 @@ public record Combatant(int id, String name, String group, Initiative initiative
 		group = Objects.requireNonNull(group).strip();
 		Objects.requireNonNull(initiative);
 		conditions = List.copyOf(conditions);
+		spells = List.copyOf(spells);
 		Objects.requireNonNull(characterFile);
 		Objects.requireNonNull(summonerId);
 		Objects.requireNonNull(roundsLeft);
@@ -72,7 +74,7 @@ public record Combatant(int id, String name, String group, Initiative initiative
 	public static Combatant player(int id, String name, Optional<String> characterFile)
 	{
 		return new Combatant(id, name, "", new Initiative(OptionalInt.empty(), 0, false), Optional.empty(), List.of(),
-			Optional.empty(), characterFile, OptionalInt.empty(), OptionalInt.empty(), false);
+			List.of(), Optional.empty(), characterFile, OptionalInt.empty(), OptionalInt.empty(), false);
 	}
 
 	/**
@@ -89,7 +91,7 @@ public record Combatant(int id, String name, String group, Initiative initiative
 		int initiativeModifier, boolean dual)
 	{
 		return new Combatant(id, name, group, new Initiative(OptionalInt.empty(), initiativeModifier, dual),
-			Optional.of(new Health(maximumHitPoints, 0)), List.of(), Optional.of(recipe), Optional.empty(),
+			Optional.of(new Health(maximumHitPoints, 0)), List.of(), List.of(), Optional.of(recipe), Optional.empty(),
 			OptionalInt.empty(), OptionalInt.empty(), false);
 	}
 
@@ -107,19 +109,19 @@ public record Combatant(int id, String name, String group, Initiative initiative
 
 	public Combatant withInitiative(Initiative newInitiative)
 	{
-		return new Combatant(id, name, group, newInitiative, health, conditions, recipe, characterFile, summonerId,
+		return new Combatant(id, name, group, newInitiative, health, conditions, spells, recipe, characterFile, summonerId,
 			roundsLeft, delaying);
 	}
 
 	public Combatant withHealth(Health newHealth)
 	{
-		return new Combatant(id, name, group, initiative, Optional.of(newHealth), conditions, recipe, characterFile,
+		return new Combatant(id, name, group, initiative, Optional.of(newHealth), conditions, spells, recipe, characterFile,
 			summonerId, roundsLeft, delaying);
 	}
 
 	public Combatant withConditions(List<Condition> newConditions)
 	{
-		return new Combatant(id, name, group, initiative, health, newConditions, recipe, characterFile, summonerId,
+		return new Combatant(id, name, group, initiative, health, newConditions, spells, recipe, characterFile, summonerId,
 			roundsLeft, delaying);
 	}
 
@@ -135,12 +137,12 @@ public record Combatant(int id, String name, String group, Initiative initiative
 		Health touched = health.orElseThrow(() -> new IllegalStateException(name + " is not a monster")).withMaximum(
 			maximum);
 		return new Combatant(id, name, group, new Initiative(initiative.score(), modifier, dual), Optional.of(touched),
-			conditions, Optional.of(newRecipe), characterFile, summonerId, roundsLeft, delaying);
+			conditions, spells, Optional.of(newRecipe), characterFile, summonerId, roundsLeft, delaying);
 	}
 
 	public Combatant withRoundsLeft(OptionalInt newRoundsLeft)
 	{
-		return new Combatant(id, name, group, initiative, health, conditions, recipe, characterFile, summonerId,
+		return new Combatant(id, name, group, initiative, health, conditions, spells, recipe, characterFile, summonerId,
 			newRoundsLeft, delaying);
 	}
 
@@ -148,13 +150,41 @@ public record Combatant(int id, String name, String group, Initiative initiative
 	{
 		return new Combatant(id, name, newGroup,
 			new Initiative(conjurerInitiative.score(), conjurerInitiative.modifier(), initiative.dual()), health,
-			conditions, recipe, characterFile, OptionalInt.of(conjurerId), roundsLeft, delaying);
+			conditions, spells, recipe, characterFile, OptionalInt.of(conjurerId), roundsLeft, delaying);
 	}
 
 	public Combatant withDelaying(boolean newDelaying)
 	{
-		return new Combatant(id, name, group, initiative, health, conditions, recipe, characterFile, summonerId,
+		return new Combatant(id, name, group, initiative, health, conditions, spells, recipe, characterFile, summonerId,
 			roundsLeft, newDelaying);
+	}
+
+	public Combatant withSpells(List<CastSpell> newSpells)
+	{
+		return new Combatant(id, name, group, initiative, health, conditions, newSpells, recipe, characterFile,
+			summonerId, roundsLeft, delaying);
+	}
+
+	/**
+	 * @param spell a spell it cast; one of the same name is replaced.
+	 * @return this combatant keeping track of that spell.
+	 */
+	public Combatant withSpell(CastSpell spell)
+	{
+		List<CastSpell> cast = new ArrayList<>(spells);
+		cast.removeIf(existing -> existing.name().equalsIgnoreCase(spell.name()));
+		cast.add(spell);
+		return withSpells(cast);
+	}
+
+	/**
+	 * @param spellName the name of a spell it no longer keeps up.
+	 * @return this combatant without it.
+	 */
+	public Combatant withoutSpell(String spellName)
+	{
+		return withSpells(
+			spells.stream().filter(existing -> !existing.name().equalsIgnoreCase(spellName.strip())).toList());
 	}
 
 	/**

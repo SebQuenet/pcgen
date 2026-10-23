@@ -149,32 +149,33 @@ public final class SummonedCreatureBuilder
 			number(creature, "AC.Touch"), number(creature, "AC.Flatfooted"), attacks,
 			token(creature, "VAR.CMB.INTVAL.SIGN"), number(creature, "VAR.CMD.INTVAL"), save(creature, REFLEX),
 			save(creature, FORTITUDE), save(creature, WILL), token(creature, "INITIATIVEMOD"),
-			specialAbilitiesOf(creature));
+			specialAbilitiesOf(creature).joined());
 	}
 
-	/** The special attacks and qualities PCGen lists for the creature, then its damage reduction and spell resistance. */
-	private static String specialAbilitiesOf(PlayerCharacter creature)
+	/**
+	 * @param creature a creature this builder built.
+	 * @return the special attacks and qualities PCGen lists for it, then its damage reduction and spell resistance.
+	 */
+	public static SpecialAbilities specialAbilitiesOf(PlayerCharacter creature)
 	{
-		List<String> abilities = new ArrayList<>();
-		for (String type : List.of("SpecialAttack", "SpecialQuality"))
-		{
-			String listed = token(creature, "ABILITYALLLIST.Special Ability.VISIBLE.TYPE=" + type);
-			if (!listed.isBlank())
-			{
-				abilities.add(listed);
-			}
-		}
+		List<String> defenses = new ArrayList<>();
 		String damageReduction = token(creature, "DR");
 		if (!damageReduction.isBlank())
 		{
-			abilities.add(LanguageBundle.getString("in_conjurations_damage_reduction") + " " + damageReduction);
+			defenses.add(LanguageBundle.getString("in_conjurations_damage_reduction") + " " + damageReduction);
 		}
 		String spellResistance = token(creature, "SR");
 		if (!spellResistance.isBlank() && !"0".equals(spellResistance))
 		{
-			abilities.add(LanguageBundle.getString("in_conjurations_spell_resistance") + " " + spellResistance);
+			defenses.add(LanguageBundle.getString("in_conjurations_spell_resistance") + " " + spellResistance);
 		}
-		return String.join(", ", abilities);
+		return new SpecialAbilities(specialAbilitiesTyped(creature, "SpecialAttack"),
+			specialAbilitiesTyped(creature, "SpecialQuality"), defenses);
+	}
+
+	private static List<String> specialAbilitiesTyped(PlayerCharacter creature, String type)
+	{
+		return SpecialAbilities.split(token(creature, "ABILITYALLLIST.Special Ability.VISIBLE.TYPE=" + type));
 	}
 
 	/** Applies summoning-list effects that are not part of the creature's race or template. */

@@ -21,6 +21,8 @@ import java.awt.BorderLayout;
 import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +40,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
+import javax.swing.event.HyperlinkEvent;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import pcgen.core.Campaign;
@@ -51,6 +54,7 @@ import pcgen.core.gametable.ScenarioReading;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.util.ListFacades;
 import pcgen.gui2.PCGenFrame;
+import pcgen.gui2.tools.DesktopBrowserLauncher;
 import pcgen.session.HeadlessUIDelegate;
 import pcgen.system.FacadeFactory;
 import pcgen.system.LanguageBundle;
@@ -145,6 +149,23 @@ public final class GameTablePanel extends JPanel
 		JButton button = new JButton(LanguageBundle.getString(key));
 		button.addActionListener(event -> action.run());
 		return button;
+	}
+
+	/** Opens a link of a sheet to a rules site in the browser; a link without an address is left alone. */
+	static void browse(HyperlinkEvent event)
+	{
+		if (event.getEventType() != HyperlinkEvent.EventType.ACTIVATED || event.getURL() == null)
+		{
+			return;
+		}
+		try
+		{
+			DesktopBrowserLauncher.viewInBrowser(event.getURL().toURI());
+		}
+		catch (IOException | URISyntaxException failed)
+		{
+			Logging.errorPrint("Failed to open " + event.getURL(), failed);
+		}
 	}
 
 	private void refresh()

@@ -182,6 +182,16 @@ public final class ScenarioJson
 				conditionNode.put("name", condition.name());
 				condition.bonus().ifPresent(bonus -> conditionNode.put("bonus", bonus.text()));
 				condition.roundsLeft().ifPresent(rounds -> conditionNode.put("roundsLeft", rounds));
+				condition.chosenValue().ifPresent(chosen -> conditionNode.put("value", chosen));
+			}
+			ArrayNode spells = fighter.putArray("spells");
+			for (CastSpell spell : combatant.spells())
+			{
+				ObjectNode spellNode = spells.addObject();
+				spellNode.put("name", spell.name());
+				spell.roundsLeft().ifPresent(rounds -> spellNode.put("roundsLeft", rounds));
+				ArrayNode targets = spellNode.putArray("targets");
+				spell.targetIds().forEach(targets::add);
 			}
 			combatant.recipe().ifPresent(recipe -> writeRecipe(fighter.putObject("recipe"), recipe));
 			combatant.characterFile().ifPresent(file -> fighter.put("characterFile", file));
@@ -205,10 +215,16 @@ public final class ScenarioJson
 		Optional<Health> health = Optional.ofNullable(node.get("health"))
 			.map(found -> new Health(required(found, "maximum").asInt(), required(found, "damage").asInt()));
 		List<Condition> conditions = list(node, "conditions", condition -> new Condition(text(condition, "name"),
-			optionalText(condition, "bonus").map(ScenarioJson::bonusKey), optionalInt(condition, "roundsLeft")));
+			optionalText(condition, "bonus").map(ScenarioJson::bonusKey), optionalInt(condition, "roundsLeft"),
+			optionalInt(condition, "value")));
+		// Scenarios saved before spells were kept have none
+		List<CastSpell> spells = node.has("spells")
+			? list(node, "spells", spell -> new CastSpell(text(spell, "name"), optionalInt(spell, "roundsLeft"),
+				list(spell, "targets", JsonNode::asInt)))
+			: List.of();
 		return new Combatant(required(node, "id").asInt(), text(node, "name"), text(node, "group"),
 			new Initiative(optionalInt(initiative, "score"), required(initiative, "modifier").asInt(),
-				required(initiative, "dual").asBoolean()), health, conditions,
+				required(initiative, "dual").asBoolean()), health, conditions, spells,
 			Optional.ofNullable(node.get("recipe")).map(ScenarioJson::readRecipe), optionalText(node, "characterFile"),
 			optionalInt(node, "summoner"), optionalInt(node, "roundsLeft"), required(node, "delaying").asBoolean());
 	}

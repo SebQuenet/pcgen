@@ -33,6 +33,7 @@ import java.util.stream.Collectors;
 import pcgen.core.SettingsHandler;
 import pcgen.core.conjurations.BestiarySources;
 import pcgen.core.conjurations.BonusSourceKey;
+import pcgen.facade.core.BonusChoice;
 import pcgen.io.PCGIOHandler;
 import pcgen.session.HeadlessUIDelegate;
 
@@ -214,5 +215,77 @@ class GameTableSessionTest
 
 		assertEquals(List.of(true, 4), List.of(reopened.sheet(wolf).isPresent(),
 			reopened.combat().combatant(wolf).orElseThrow().health().orElseThrow().damage()));
+	}
+
+	private static final Condition FOUR_STRENGTH_DAMAGE = new Condition("Strength damage", Optional.of(
+		new BonusSourceKey(BonusSourceKey.TEMPLATE, "", "Ability Damaged (Strength)")), OptionalInt.empty(),
+		OptionalInt.of(4));
+
+	private int biteOf(String name)
+	{
+		return Integer.parseInt(session.sheet(named(name).id()).orElseThrow().attacks().getFirst().toHit()
+			.replace("+", ""));
+	}
+
+	@Test
+	void aConditionLaidOnAGroupLowersEveryWolfByItsChosenValue()
+	{
+		session.launch(WOLVES);
+		List<Integer> before = List.of(biteOf("Wolf 1"), biteOf("Wolf 2"));
+
+		session.addCondition(List.of(named("Wolf 1").id(), named("Wolf 2").id()), FOUR_STRENGTH_DAMAGE);
+
+		assertEquals(List.of(before.get(0) - 2, before.get(1) - 2), List.of(biteOf("Wolf 1"), biteOf("Wolf 2")));
+	}
+
+	@Test
+	void aConditionLaidOnAGroupIsOnlyALabelOnAPlayer()
+	{
+		session.launch(WOLVES);
+
+		session.addCondition(List.of(named("Wolf 1").id(), named("Seoni").id()), FOUR_STRENGTH_DAMAGE);
+
+		assertEquals(List.of(FOUR_STRENGTH_DAMAGE.asLabel()), named("Seoni").conditions());
+	}
+
+	@Test
+	void severalCombatantsAreOfferedTheBonusesCastOnOthersWithTheirValues()
+	{
+		session.launch(WOLVES);
+
+		List<BonusChoice> choices = session.conditionChoices(List.of(named("Wolf 1").id(), named("Wolf 2").id()));
+
+		assertTrue(choices.stream().anyMatch(choice -> choice.range().isPresent()), choices.toString());
+	}
+
+	/** Wolf 2 lays four points of Strength damage on Wolf 1 for one round, the fight started. */
+	private int wolfCursingItsBrother()
+	{
+		session.launch(WOLVES);
+		session.start();
+		int before = biteOf("Wolf 1");
+		session.castSpell(named("Wolf 2").id(), new Condition("Strength damage", FOUR_STRENGTH_DAMAGE.bonus(),
+			OptionalInt.of(1), OptionalInt.of(4)), List.of(named("Wolf 1").id()));
+		return before;
+	}
+
+	@Test
+	void aSpellsEffectChangesTheNumbersOfTheMonsterItTargets()
+	{
+		int before = wolfCursingItsBrother();
+
+		assertEquals(before - 2, biteOf("Wolf 1"));
+	}
+
+	@Test
+	void aMonsterGetsItsNumbersBackWhenTheSpellOnItEnds()
+	{
+		int before = wolfCursingItsBrother();
+		for (int turn = 0; turn < 10 && !named("Wolf 2").spells().isEmpty(); turn++)
+		{
+			session.next();
+		}
+
+		assertEquals(before, biteOf("Wolf 1"));
 	}
 }

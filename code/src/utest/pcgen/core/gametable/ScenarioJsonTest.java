@@ -26,6 +26,10 @@ import java.util.OptionalInt;
 
 import pcgen.core.conjurations.BonusSourceKey;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -48,7 +52,11 @@ class ScenarioJsonTest
 			.summoned(1, List.of(archon)).damaged(2, 5)
 			.withCondition(2, new Condition("Shaken", Optional.of(new BonusSourceKey(BonusSourceKey.TEMPLATE, "",
 				"Shaken")), OptionalInt.of(2)))
-			.withCondition(1, Condition.label("Invisible", OptionalInt.empty())).withExperience(1_200).started()
+			.withCondition(2, new Condition("Strength damage", Optional.of(new BonusSourceKey(BonusSourceKey.TEMPLATE, "",
+				"Ability Damaged (Strength)")), OptionalInt.empty(), OptionalInt.of(4)))
+			.withCondition(1, Condition.label("Invisible", OptionalInt.empty()))
+			.cast(1, Condition.label("Mage Armor", OptionalInt.of(40)), List.of(1, 2)).withSpell(1, new CastSpell("Shield", OptionalInt.empty()))
+			.withExperience(1_200).started()
 			.next().combat();
 		return new Scenario("Pathfinder_RPG", List.of("Core Rulebook", "Bestiary"),
 			List.of(new PartyMember("Seoni", Optional.of("/players/seoni.pcg")), new PartyMember("Valeros",
@@ -63,6 +71,19 @@ class ScenarioJsonTest
 		ScenarioReading reading = ScenarioJson.read(ScenarioJson.write(scenario));
 
 		assertEquals(new ScenarioReading.Read(scenario), reading);
+	}
+
+	@Test
+	void aScenarioSavedBeforeSpellsWereKeptReadsWithNone() throws JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode saved = mapper.readTree(ScenarioJson.write(prepared()));
+		saved.get("combat").get("combatants").forEach(fighter -> ((ObjectNode) fighter).remove("spells"));
+		String json = mapper.writeValueAsString(saved);
+
+		ScenarioReading reading = ScenarioJson.read(json);
+
+		assertEquals(List.of(), ((ScenarioReading.Read) reading).scenario().combat().combatant(1).orElseThrow().spells());
 	}
 
 	@Test

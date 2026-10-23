@@ -10,6 +10,7 @@ package pcgen.util;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 /**
  * Searches one rules site and opens its first result: DuckDuckGo jumps straight
@@ -25,6 +26,16 @@ public final class FirstResultSearch
 	public static final String PATHFINDER_FR_RULES_TERM = "Pathfinder-RPG";
 
 	private static final String SEARCH = "https://duckduckgo.com/?q=";
+	/** Without this word, searching a creature lands on a homonym, such as a spell or a deity. */
+	private static final String MONSTER_TERM = "monster";
+
+	/**
+	 * @param label   the site's name, as a link shows it
+	 * @param address where the link opens
+	 */
+	public record Link(String label, String address)
+	{
+	}
 
 	private FirstResultSearch()
 	{
@@ -38,5 +49,19 @@ public final class FirstResultSearch
 	public static String addressOf(String query, String site)
 	{
 		return SEARCH + URLEncoder.encode("\\" + query + " site:" + site, StandardCharsets.UTF_8).replace("+", "%20");
+	}
+
+	/**
+	 * @param englishName  a creature's name in the data
+	 * @param localizedName its name in the user's language
+	 * @return the links opening its page on Pathfinder-fr, by its localized name, then on Archives of Nethys
+	 *         and d20PFSRD, by its English name.
+	 */
+	public static List<Link> creatureLinks(String englishName, String localizedName)
+	{
+		String englishQuery = englishName + " " + MONSTER_TERM;
+		return List.of(new Link("Pathfinder-fr", addressOf(localizedName + " " + PATHFINDER_FR_RULES_TERM, PATHFINDER_FR)),
+			new Link("Archives of Nethys", addressOf(englishQuery, NETHYS)),
+			new Link("d20PFSRD", addressOf(englishQuery, D20PFSRD)));
 	}
 }

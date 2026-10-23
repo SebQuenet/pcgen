@@ -26,6 +26,8 @@ import java.util.OptionalInt;
 
 import org.junit.jupiter.api.Test;
 
+import pcgen.core.conjurations.BonusSourceKey;
+
 /**
  * Behaviour of a fight: who acts when, what each round wears off, who is hurt.
  */
@@ -115,7 +117,126 @@ class CombatTest
 
 		CombatAdvance advance = combat.next();
 
-		assertEquals(List.of(new Expiry("Valeros", Optional.of("Shaken"))), advance.expired());
+		assertEquals(List.of(new Expiry.ConditionEnded("Valeros", "Shaken")), advance.expired());
+	}
+
+	/** Seoni, acting, casts a spell lasting the given rounds. */
+	private static Combat seoniCasting(OptionalInt rounds)
+	{
+		return skirmish().next().combat().withSpell(2, new CastSpell("Bless", rounds));
+	}
+
+	@Test
+	void aSpellOutlastsTheRoundItWasCastIn()
+	{
+		Combat combat = seoniCasting(OptionalInt.of(1));
+		for (int turn = 0; turn < 3; turn++)
+		{
+			combat = combat.next().combat();
+		}
+
+		assertEquals(List.of(new CastSpell("Bless", OptionalInt.of(1))), combat.combatant(2).orElseThrow().spells());
+	}
+
+	@Test
+	void aSpellEndsAsItsCasterBeginsItsTurnOnceItsRoundsAreSpent()
+	{
+		Combat combat = seoniCasting(OptionalInt.of(1));
+		for (int turn = 0; turn < 3; turn++)
+		{
+			combat = combat.next().combat();
+		}
+
+		CombatAdvance advance = combat.next();
+
+		assertEquals(List.of(new Expiry.SpellEnded("Seoni", "Bless")), advance.expired());
+	}
+
+	@Test
+	void theFirstToActWearsItsSpellsDownAsTheFightStarts()
+	{
+		Combat combat = Combat.empty().with(player(1, "Valeros")).withInitiative(1, 22)
+			.withSpell(1, new CastSpell("Bless", OptionalInt.of(3)));
+
+		assertEquals(List.of(new CastSpell("Bless", OptionalInt.of(2))), combat.started().combatant(1).orElseThrow().spells());
+	}
+
+	/** Seoni, acting, blesses Valeros and herself for one round. */
+	private static Combat seoniBlessing()
+	{
+		return skirmish().next().combat().cast(2, Condition.label("Bless", OptionalInt.of(1)), List.of(1, 2));
+	}
+
+	private static List<String> conditionNames(Combat combat, int id)
+	{
+		return combat.combatant(id).orElseThrow().conditions().stream().map(Condition::name).toList();
+	}
+
+	@Test
+	void aSpellLaysItsEffectOnItsTargetsUntilItEnds()
+	{
+		Combat combat = seoniBlessing();
+
+		assertEquals(List.of(Condition.label("Bless", OptionalInt.empty())), combat.combatant(1).orElseThrow().conditions());
+	}
+
+	@Test
+	void anEndedSpellLiftsItsEffectFromItsTargets()
+	{
+		Combat combat = seoniBlessing();
+		for (int turn = 0; turn < 4; turn++)
+		{
+			combat = combat.next().combat();
+		}
+
+		assertEquals(List.of(List.of(), List.of()), List.of(conditionNames(combat, 1), conditionNames(combat, 2)));
+	}
+
+	@Test
+	void aDroppedSpellLiftsItsEffect()
+	{
+		Combat combat = seoniBlessing().withoutSpell(2, "Bless");
+
+		assertEquals(List.of(), conditionNames(combat, 1));
+	}
+
+	@Test
+	void anotherCastersSpellOfTheSameNameKeepsTheEffect()
+	{
+		Combat combat = seoniBlessing().cast(3, Condition.label("Bless", OptionalInt.of(5)), List.of(1))
+			.withoutSpell(2, "Bless");
+
+		assertEquals(List.of("Bless"), conditionNames(combat, 1));
+	}
+
+	@Test
+	void aSpellsEffectCountsDownAloneOnceItsCasterLeaves()
+	{
+		Combat combat = seoniBlessing().removed(2);
+
+		assertEquals(List.of(Condition.label("Bless", OptionalInt.of(1))), combat.combatant(1).orElseThrow().conditions());
+	}
+
+	@Test
+	void aSpellOnAPlayerIsOnlyALabelThere()
+	{
+		Combat combat = skirmish().next().combat().cast(2, new Condition("Shaken", Optional.of(new BonusSourceKey(
+			BonusSourceKey.TEMPLATE, "", "Shaken")), OptionalInt.of(2)), List.of(1, 3));
+
+		assertEquals(List.of(false, true), List.of(combat.combatant(1).orElseThrow().conditions().getFirst().bonus().isPresent(),
+			combat.combatant(3).orElseThrow().conditions().getFirst().bonus().isPresent()));
+	}
+
+	@Test
+	void aSpellWithoutDurationLastsUntilDropped()
+	{
+		Combat combat = seoniCasting(OptionalInt.empty());
+		for (int turn = 0; turn < 8; turn++)
+		{
+			combat = combat.next().combat();
+		}
+
+		assertEquals(List.of(), combat.withoutSpell(2, "bless").combatant(2).orElseThrow().spells());
 	}
 
 	@Test
@@ -197,7 +318,7 @@ class CombatTest
 
 		CombatAdvance advance = combat.next();
 
-		assertEquals(List.of(new Expiry("Hound Archon 1", Optional.empty())), advance.expired());
+		assertEquals(List.of(new Expiry.CreatureLeft("Hound Archon 1")), advance.expired());
 	}
 
 	@Test
