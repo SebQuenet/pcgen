@@ -46,6 +46,8 @@ DATA_DIR = REPO_DIR / 'data' / 'pathfinder'
 FAILURES_FILE = 'failures.json'
 # Exit status telling the caller to restart the server before going on
 SERVER_STUCK = 75
+INTERRUPTED = 'interrompu'
+INTERRUPTED_TWICE = 'interrompu deux fois'  # a retry never builds it again, so it cannot stall every round
 GAME_MODE = 'Pathfinder_RPG'
 CAMPAIGNS = [
     'Core Rulebook', 'Pathfinder RPG Core Supplements', "Advanced Player's Guide", 'Advanced Class Guide',
@@ -219,17 +221,24 @@ def main() -> int:
         report_path = path.with_suffix('.report.json')
         if report_path.exists() and not arguments.force:
             continue
-        if str(record.identifier) in failures and not arguments.retry_failures:
+        previous_failure = failures.get(str(record.identifier), '')
+        if previous_failure and (not arguments.retry_failures or previous_failure.endswith(INTERRUPTED_TWICE)):
             continue
         report, started = new_report(record), time.monotonic()
         character_id = None
         # Recorded before building, so a round killed on this NPC skips it next time
-        failures[str(record.identifier)] = f'{record.get("Name")} — interrompu'
+        interruption = INTERRUPTED_TWICE if previous_failure.endswith(INTERRUPTED) else INTERRUPTED
+        failures[str(record.identifier)] = f'{record.get("Name")} — {interruption}'
         write_failures(failures_path, failures)
         try:
             character_id = build.build_npc(record, catalogs, report)
             path.parent.mkdir(parents=True, exist_ok=True)
             pc.call('save_character', character_id=character_id, file_path=str(path))
+        except pc.PcgenUnreachable:
+            failures.pop(str(record.identifier), None)
+            write_failures(failures_path, failures)
+            character_id = None
+            return SERVER_STUCK  # the next round restarts the server and builds this NPC again
         except (pc.PcgenError, LookupError, KeyError, ValueError) as error:
             failed_this_run += 1
             print(f'[{position}/{len(npcs)}] ÉCHEC {record.get("Name")} ({record.identifier}) — {error}', file=sys.stderr, flush=True)

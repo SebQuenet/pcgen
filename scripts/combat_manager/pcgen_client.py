@@ -28,6 +28,10 @@ class PcgenInterrupted(PcgenError):
     """The call outlived its timeout: the server is still busy with it and will answer nothing else."""
 
 
+class PcgenUnreachable(PcgenError):
+    """Nothing listens on the port: the server is gone, and no character is to blame."""
+
+
 def call(operation: str, **arguments):
     payload = json.dumps(arguments).encode("utf-8")
     request = urllib.request.Request(
@@ -42,7 +46,7 @@ def call(operation: str, **arguments):
     except urllib.error.HTTPError as error:
         raise PcgenError(operation, error.read().decode("utf-8", "replace")) from error
     except urllib.error.URLError as error:
-        raise PcgenError(operation, f"serveur injoignable ({error.reason})") from error
+        raise PcgenUnreachable(operation, f"serveur injoignable ({error.reason})") from error
     except OSError as error:
         # A single slow operation must not end a run of several hundred.
         raise PcgenInterrupted(operation, f"appel interrompu ({error})") from error
