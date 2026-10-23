@@ -215,7 +215,7 @@ class ConjurationBridgeTest
 			reference -> { }, suggested -> Optional.of(chosen)))
 		{
 			bridge.saveSpreadsheet();
-			for (int attempt = 0; attempt < 500 && !Files.exists(chosen); attempt++)
+			for (int attempt = 0; attempt < 500 && !bridge.spreadsheetStatus().contains("\"saved\""); attempt++)
 			{
 				Thread.sleep(10);
 			}
