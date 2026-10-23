@@ -176,6 +176,11 @@ def new_report(record: records.NpcRecord) -> dict:
             'added_feats': [], 'added_languages': [], 'added_spells': [], 'added_skills': [], 'added_companion': None}
 
 
+def write_failures(failures_path: Path, failures: dict) -> None:
+    failures_path.parent.mkdir(parents=True, exist_ok=True)
+    failures_path.write_text(json.dumps(failures, ensure_ascii=False, indent=2), encoding='utf-8')
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('extracted_dir', type=Path, nargs='?', help="directory holding the files unpacked from Combat Manager's installer")
@@ -218,6 +223,9 @@ def main() -> int:
             continue
         report, started = new_report(record), time.monotonic()
         character_id = None
+        # Recorded before building, so a round killed on this NPC skips it next time
+        failures[str(record.identifier)] = f'{record.get("Name")} — interrompu'
+        write_failures(failures_path, failures)
         try:
             character_id = build.build_npc(record, catalogs, report)
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -226,8 +234,7 @@ def main() -> int:
             failed_this_run += 1
             print(f'[{position}/{len(npcs)}] ÉCHEC {record.get("Name")} ({record.identifier}) — {error}', file=sys.stderr, flush=True)
             failures[str(record.identifier)] = f'{record.get("Name")} — {error}'
-            arguments.output.mkdir(parents=True, exist_ok=True)
-            failures_path.write_text(json.dumps(failures, ensure_ascii=False, indent=2), encoding='utf-8')
+            write_failures(failures_path, failures)
             if isinstance(error, pc.PcgenInterrupted):
                 character_id = None  # closing it would wait on the same busy server
                 return SERVER_STUCK
@@ -242,8 +249,7 @@ def main() -> int:
         report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
         print(f'[{position}/{len(npcs)}] ok {path.relative_to(arguments.output)} ({report["seconds"]} s)', flush=True)
         failures.pop(str(record.identifier), None)
-    if failures_path.exists():
-        failures_path.write_text(json.dumps(failures, ensure_ascii=False, indent=2), encoding='utf-8')
+        write_failures(failures_path, failures)
     return 1 if failed_this_run else 0
 
 

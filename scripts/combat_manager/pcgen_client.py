@@ -8,10 +8,12 @@ raises PcgenError with the operation name and the server's message.
 from __future__ import annotations
 
 import json
+import os
 import urllib.error
 import urllib.request
 
-BASE_URL = "http://127.0.0.1:8420"
+HOST = f"127.0.0.1:{os.environ.get('PCGEN_PORT', '8420')}"
+BASE_URL = f"http://{HOST}"
 TIMEOUT_SECONDS = 600
 
 
@@ -31,7 +33,7 @@ def call(operation: str, **arguments):
     request = urllib.request.Request(
         f"{BASE_URL}/api/{operation}",
         data=payload,
-        headers={"Content-Type": "application/json", "Host": "127.0.0.1:8420"},
+        headers={"Content-Type": "application/json", "Host": HOST},
         method="POST",
     )
     try:
