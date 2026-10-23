@@ -203,3 +203,12 @@ def pick_modifier(modifier_keys: list[str], label: str) -> str | None:
             if wanted and len(parts) > 1 and parts[1] == wanted:
                 return key
     return None
+
+
+MEMORIZE_DECLARATION = re.compile(r'^CLASS:([^\t.]+)[^\t]*\t.*\bMEMORIZE:(YES|NO)\b', re.M)
+
+
+def limited_known_classes(class_files_text: str) -> frozenset[str]:
+    """The casters PCGen holds to a number of known spells: those that cast without preparing (MEMORIZE:NO)."""
+    casts_unprepared = {name: flag == 'NO' for name, flag in MEMORIZE_DECLARATION.findall(class_files_text)}
+    return frozenset(name for name, unprepared in casts_unprepared.items() if unprepared)

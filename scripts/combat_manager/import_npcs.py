@@ -145,6 +145,8 @@ def load_catalogs() -> build.Catalogs:
         templates=catalog.KeyIndex(keys_of('template')),
         items=catalog.KeyIndex(keys_of('equipment')),
         known_languages=load_known_languages(str(REPO_DIR / 'data')),
+        limited_known_classes=catalog.limited_known_classes(
+            '\n'.join(path.read_text(encoding='utf-8', errors='replace') for path in DATA_DIR.rglob('*classes*.lst'))),
     )
 
 

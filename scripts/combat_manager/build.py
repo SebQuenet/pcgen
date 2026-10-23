@@ -43,6 +43,7 @@ class Catalogs:
     templates: catalog.KeyIndex
     items: catalog.KeyIndex
     known_languages: dict[str, str]
+    limited_known_classes: frozenset[str]
 
 
 def read_sheet(character_id: str) -> dict:
@@ -323,8 +324,8 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     invest_skills(character_id, published_skills, total_level, report)
     completion.spend_skill_points(character_id, class_keys, published_skills, report)
     add_spells(character_id, statblock.parse_spells(record.get('SpellsKnown'), record.get('SpellsPrepared')), catalogs.classes, report)
-    # a spellbook has no limit: filling it would learn the whole spell list
-    completion.learn_missing_spells(character_id, [key for key in class_keys if key not in SPELLBOOK_CLASSES], report)
+    # PCGen sets no limit on what a preparing caster knows: filling it would learn the whole spell list
+    completion.learn_missing_spells(character_id, [key for key in class_keys if key in catalogs.limited_known_classes], report)
 
     for language in normalize_languages(statblock.split_list(record.get('Languages')), catalogs.known_languages):
         try:

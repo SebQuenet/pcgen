@@ -184,5 +184,13 @@ class Modifiers(unittest.TestCase):
         self.assertEqual(catalog.pick_modifier(self.KEYS, '+1'), 'Special Ability ~ +1 ~ Weapon')
 
 
+class LimitedKnownSpells(unittest.TestCase):
+
+    CLASS_FILES = 'CLASS:Sorcerer\tSPELLSTAT:CHA\tMEMORIZE:NO\nCLASS:Psychic\tSPELLSTAT:INT\tMEMORIZE:YES\nCLASS:Fighter\tHD:10\n'
+
+    def test_a_caster_that_does_not_prepare_is_held_to_its_known_spells(self):
+        self.assertEqual(catalog.limited_known_classes(self.CLASS_FILES), {'Sorcerer'})
+
+
 if __name__ == '__main__':
     unittest.main()
