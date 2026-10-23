@@ -17,12 +17,14 @@
  */
 package pcgen.session.api;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import pcgen.core.gametable.GameTableSession;
 import pcgen.session.PcgenSession;
 import pcgen.session.service.AbilityService;
 import pcgen.session.service.BiographyService;
@@ -35,6 +37,7 @@ import pcgen.session.service.DeityDomainService;
 import pcgen.session.service.CharacterLifecycleService;
 import pcgen.session.service.EquipmentService;
 import pcgen.session.service.ExportService;
+import pcgen.session.service.GameTableService;
 import pcgen.session.service.EquipmentSetService;
 import pcgen.session.service.LanguageCompanionService;
 import pcgen.session.service.SkillService;
@@ -92,6 +95,9 @@ public final class OperationRegistry
 			new TacticalSheetService(session), new ExportService(session),
 			new ChoiceService(session), new UtilityService(session)));
 		operations.addAll(ConjurationOperations.of(new ConjurationService(session)));
+		SecureRandom dice = new SecureRandom();
+		operations.addAll(GameTableOperations.of(
+			new GameTableService(session, new GameTableSession(() -> dice.nextInt(20) + 1))));
 		return new OperationRegistry(operations);
 	}
 

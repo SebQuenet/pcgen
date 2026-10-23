@@ -95,6 +95,21 @@ public class OperationRegistryTest
 	}
 
 	@Test
+	public void offersTheGameTable()
+	{
+		OperationRegistry registry = OperationRegistry.forSession(new PcgenSession());
+
+		List<String> served = registry.all().stream().map(Operation::name).toList();
+
+		assertTrue(served.containsAll(List.of("new_scenario", "open_scenario", "save_scenario", "get_game_table",
+			"set_party", "set_encounter", "remove_encounter", "preview_monster", "launch_encounter", "add_monsters",
+			"add_player_to_combat", "summon_creatures", "retouch_monster", "set_initiative", "start_combat",
+			"next_turn", "damage_combatant", "heal_combatant", "add_condition", "remove_condition",
+			"list_conditions", "delay_turn", "resume_turn", "move_combatant", "remove_combatant", "end_combat",
+			"get_combatant", "save_monster_as_character")), () -> "served: " + served);
+	}
+
+	@Test
 	public void namesEveryOperationOnlyOnce()
 	{
 		OperationRegistry registry = OperationRegistry.forSession(new PcgenSession());
