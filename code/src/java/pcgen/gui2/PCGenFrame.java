@@ -19,6 +19,8 @@
 package pcgen.gui2;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -38,6 +40,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.logging.LogRecord;
 import javax.swing.Action;
 import javax.swing.ActionMap;
+import javax.swing.ButtonGroup;
 import javax.swing.InputMap;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
@@ -50,6 +53,7 @@ import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
+import javax.swing.JToggleButton;
 import javax.swing.WindowConstants;
 import org.apache.commons.lang3.StringUtils;
 import pcgen.cdom.base.Constants;
@@ -78,6 +82,7 @@ import pcgen.gui2.dialog.PostLevelUpDialog;
 import pcgen.gui2.dialog.RadioChooserDialog;
 import pcgen.gui2.dialog.SpellChoiceDialog;
 import pcgen.gui2.sources.SourceSelectionDialog;
+import pcgen.gui2.gametable.GameTablePanel;
 import pcgen.gui2.tabs.InfoTabbedPane;
 import pcgen.gui2.tools.CharacterSelectionListener;
 import pcgen.gui2.tools.Icons;
@@ -125,6 +130,13 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 
 	private final PCGenActionMap actionMap;
 	private final CharacterTabs characterTabs;
+	private static final String CHARACTERS_WORKSPACE = "characters";
+	private static final String GAME_TABLE_WORKSPACE = "gameTable";
+	private final CardLayout workspaceCards = new CardLayout();
+	private final JPanel workspaces = new JPanel(workspaceCards);
+	private final JToggleButton charactersButton = new JToggleButton(LanguageBundle.getString("in_workspaceCharacters"));
+	private final JToggleButton gameTableButton = new JToggleButton(LanguageBundle.getString("in_workspaceGameTable"));
+	private GameTablePanel gameTablePanel;
 	private final PCGenStatusBar statusBar;
 	private final PCGenMenuBar pcGenMenuBar;
 
@@ -189,10 +201,53 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 		JFXPanel wrappedToolBar = GuiUtility.wrapParentAsJFXPanel(toolBar);
 
 		add(wrappedToolBar, BorderLayout.NORTH);
-		add(characterTabs, BorderLayout.CENTER);
+		add(createWorkspaces(), BorderLayout.CENTER);
 		add(statusBar, BorderLayout.SOUTH);
 		updateTitle();
 		setIconImage(Icons.PCGenApp.getImageIcon().getImage());
+	}
+
+	/**
+	 * The two workspaces: the characters, as PCGen has always shown them, and the game
+	 * master's table, with a switch above them.
+	 */
+	private JPanel createWorkspaces()
+	{
+		gameTablePanel = new GameTablePanel(this);
+		workspaces.add(characterTabs, CHARACTERS_WORKSPACE);
+		workspaces.add(gameTablePanel, GAME_TABLE_WORKSPACE);
+		ButtonGroup switcher = new ButtonGroup();
+		switcher.add(charactersButton);
+		switcher.add(gameTableButton);
+		charactersButton.setSelected(true);
+		charactersButton.addActionListener(event -> showCharactersWorkspace());
+		gameTableButton.addActionListener(event -> showGameTableWorkspace());
+		JPanel switchBar = new JPanel(new FlowLayout(FlowLayout.LEFT, 4, 2));
+		switchBar.add(charactersButton);
+		switchBar.add(gameTableButton);
+		JPanel center = new JPanel(new BorderLayout());
+		center.add(switchBar, BorderLayout.NORTH);
+		center.add(workspaces, BorderLayout.CENTER);
+		return center;
+	}
+
+	/**
+	 * Shows the characters workspace.
+	 */
+	public void showCharactersWorkspace()
+	{
+		charactersButton.setSelected(true);
+		workspaceCards.show(workspaces, CHARACTERS_WORKSPACE);
+	}
+
+	/**
+	 * Shows the game master's table.
+	 */
+	public void showGameTableWorkspace()
+	{
+		gameTableButton.setSelected(true);
+		workspaceCards.show(workspaces, GAME_TABLE_WORKSPACE);
+		gameTablePanel.workspaceShown();
 	}
 
 	private void initSettings()
