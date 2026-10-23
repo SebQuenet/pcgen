@@ -37,8 +37,9 @@ import java.util.function.UnaryOperator;
  * @param current    the turn being played; empty before the fight starts and once the
  *                   last to act in a round has left
  * @param experience the experience points of the monsters that entered the fight
+ * @param encounters the names of the prepared encounters launched into the fight
  */
-public record Combat(int round, List<Combatant> order, Optional<Turn> current, long experience)
+public record Combat(int round, List<Combatant> order, Optional<Turn> current, long experience, List<String> encounters)
 {
 	public Combat
 	{
@@ -47,6 +48,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 			throw new IllegalArgumentException("A round is never negative: " + round);
 		}
 		order = List.copyOf(order);
+		encounters = List.copyOf(encounters);
 		Objects.requireNonNull(current);
 		Set<Integer> ids = new HashSet<>();
 		for (Combatant combatant : order)
@@ -63,7 +65,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	 */
 	public static Combat empty()
 	{
-		return new Combat(0, List.of(), Optional.empty(), 0);
+		return new Combat(0, List.of(), Optional.empty(), 0, List.of());
 	}
 
 	/**
@@ -97,7 +99,18 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	 */
 	public Combat withExperience(long added)
 	{
-		return new Combat(round, order, current, experience + added);
+		return new Combat(round, order, current, experience + added, encounters);
+	}
+
+	/**
+	 * @param name a prepared encounter launched into the fight.
+	 * @return this fight, naming that encounter too.
+	 */
+	public Combat withEncounter(String name)
+	{
+		List<String> launched = new ArrayList<>(encounters);
+		launched.add(name);
+		return new Combat(round, order, current, experience, launched);
 	}
 
 	/**
@@ -108,7 +121,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	{
 		List<Combatant> combatants = new ArrayList<>(order);
 		insertByInitiative(combatants, combatant);
-		return new Combat(round, combatants, current, experience);
+		return new Combat(round, combatants, current, experience, encounters);
 	}
 
 	/**
@@ -134,7 +147,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 				combatants.add(at++, conjured.withInitiative(conjured.initiative().withScore(score)));
 			}
 		}
-		return new Combat(round, combatants, current, experience);
+		return new Combat(round, combatants, current, experience, encounters);
 	}
 
 	private List<Combatant> conjuredBy(Combatant summoner)
@@ -207,7 +220,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	public Combat started()
 	{
 		// The first to act begins its turn too: a spell cast before the fight counts that turn
-		return new Combat(1, order, turns().stream().findFirst(), experience).turnBegun(List.of()).combat();
+		return new Combat(1, order, turns().stream().findFirst(), experience, encounters).turnBegun(List.of()).combat();
 	}
 
 	/**
@@ -224,7 +237,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 		int index = current.map(turns::indexOf).orElse(-1);
 		if (index >= 0 && index + 1 < turns.size())
 		{
-			return new Combat(round, order, Optional.of(turns.get(index + 1)), experience).turnBegun(List.of());
+			return new Combat(round, order, Optional.of(turns.get(index + 1)), experience, encounters).turnBegun(List.of());
 		}
 		return newRound();
 	}
@@ -280,7 +293,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 			}
 			remaining.add(aged.withConditions(lasting));
 		}
-		Combat nextRound = new Combat(round + 1, remaining, Optional.empty(), experience);
+		Combat nextRound = new Combat(round + 1, remaining, Optional.empty(), experience, encounters);
 		return nextRound.withCurrent(nextRound.turns().stream().findFirst()).turnBegun(expired);
 	}
 
@@ -443,7 +456,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 			at = combatants.size();
 		}
 		combatants.add(at, back.withDelaying(false).withInitiative(back.initiative().withScore(score)));
-		return new Combat(round, combatants, Optional.of(new Turn(id, false)), experience);
+		return new Combat(round, combatants, Optional.of(new Turn(id, false)), experience, encounters);
 	}
 
 	/**
@@ -470,7 +483,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 		Combatant placed = neighbour.isPresent()
 			? moving.withInitiative(moving.initiative().withScore(neighbour.getAsInt())) : moving;
 		combatants.add(at, placed);
-		return new Combat(round, combatants, current, experience);
+		return new Combat(round, combatants, current, experience, encounters);
 	}
 
 	/**
@@ -481,7 +494,7 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	public Combat removed(int id)
 	{
 		Combat without = new Combat(round, order.stream().filter(combatant -> combatant.id() != id).toList(), current,
-			experience);
+			experience, encounters);
 		for (CastSpell spell : require(id).spells())
 		{
 			without = without.orphaning(spell);
@@ -527,19 +540,19 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 		{
 			combatants.add(at++, creature.withSummoner(summonerId, group, summoner.initiative()));
 		}
-		return new Combat(round, combatants, current, experience);
+		return new Combat(round, combatants, current, experience, encounters);
 	}
 
 	private Combat withCurrent(Optional<Turn> turn)
 	{
-		return new Combat(round, order, turn, experience);
+		return new Combat(round, order, turn, experience, encounters);
 	}
 
 	private Combat update(int id, UnaryOperator<Combatant> change)
 	{
 		require(id);
 		return new Combat(round, order.stream().map(combatant -> (combatant.id() == id) ? change.apply(combatant)
-			: combatant).toList(), current, experience);
+			: combatant).toList(), current, experience, encounters);
 	}
 
 	private Combatant require(int id)

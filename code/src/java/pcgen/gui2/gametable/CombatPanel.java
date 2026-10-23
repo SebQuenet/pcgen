@@ -500,11 +500,17 @@ final class CombatPanel extends JPanel
 		{
 			return;
 		}
+		int blocksBefore = table.session().scenario().loot().size();
 		CombatReward reward = table.session().endCombat();
 		notice.setText(" ");
-		JOptionPane.showMessageDialog(this, LanguageBundle.getFormattedString("in_gametable_reward",
-			reward.challengeRating().orElse("—"), reward.experience(), reward.perPlayer(), reward.players()),
-			LanguageBundle.getString("in_gametable_endCombat"), JOptionPane.INFORMATION_MESSAGE);
+		String message = LanguageBundle.getFormattedString("in_gametable_reward", reward.challengeRating().orElse("—"),
+			reward.experience(), reward.perPlayer(), reward.players());
+		if (table.session().scenario().loot().size() > blocksBefore)
+		{
+			message += "\n" + LanguageBundle.getString("in_gametable_lootAdded");
+		}
+		JOptionPane.showMessageDialog(this, message, LanguageBundle.getString("in_gametable_endCombat"),
+			JOptionPane.INFORMATION_MESSAGE);
 	}
 
 	private void moveSelected(int step)

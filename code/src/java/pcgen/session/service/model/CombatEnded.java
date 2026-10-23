@@ -24,8 +24,10 @@ package pcgen.session.service.model;
  * @param challengeRating the challenge rating that total amounts to, null for none
  * @param players         how many players share it
  * @param perPlayer       each player's share
+ * @param loot            the fight's loot, null when no monster of the game master's took part
  * @param table           the game table once the fight is cleared
  */
-public record CombatEnded(long experience, String challengeRating, int players, long perPlayer, GameTableState table)
+public record CombatEnded(long experience, String challengeRating, int players, long perPlayer, LootBlockEntry loot,
+	GameTableState table)
 {
 }

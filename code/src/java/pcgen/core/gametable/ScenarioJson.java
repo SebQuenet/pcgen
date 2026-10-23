@@ -76,6 +76,7 @@ public final class ScenarioJson
 			}
 		}
 		writeCombat(root.putObject("combat"), scenario.combat());
+		writeLoot(root.putArray("loot"), scenario.loot());
 		try
 		{
 			return MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(root);
@@ -103,7 +104,8 @@ public final class ScenarioJson
 				node -> new PartyMember(text(node, "name"), optionalText(node, "characterFile")));
 			List<Encounter> encounters = list(root, "encounters", ScenarioJson::readEncounter);
 			Scenario scenario = new Scenario(text(root, "gameMode"), list(root, "campaigns", JsonNode::asText), party,
-				encounters, readCombat(required(root, "combat")));
+				encounters, readCombat(required(root, "combat")),
+				root.has("loot") ? list(root, "loot", ScenarioJson::readLootBlock) : List.of());
 			return new ScenarioReading.Read(scenario);
 		}
 		catch (JsonProcessingException | IllegalArgumentException | IllegalStateException badContent)
@@ -154,6 +156,7 @@ public final class ScenarioJson
 	{
 		node.put("round", combat.round());
 		node.put("experience", combat.experience());
+		strings(node.putArray("encounters"), combat.encounters());
 		combat.current().ifPresent(turn -> {
 			ObjectNode current = node.putObject("current");
 			current.put("combatant", turn.combatantId());
@@ -206,7 +209,55 @@ public final class ScenarioJson
 		List<Combatant> combatants = list(node, "combatants", ScenarioJson::readCombatant);
 		Optional<Turn> current = Optional.ofNullable(node.get("current"))
 			.map(turn -> new Turn(required(turn, "combatant").asInt(), required(turn, "second").asBoolean()));
-		return new Combat(required(node, "round").asInt(), combatants, current, required(node, "experience").asLong());
+		List<String> encounters = node.has("encounters") ? list(node, "encounters", JsonNode::asText) : List.of();
+		return new Combat(required(node, "round").asInt(), combatants, current, required(node, "experience").asLong(),
+			encounters);
+	}
+
+	private static void writeLoot(ArrayNode array, List<LootBlock> loot)
+	{
+		for (LootBlock block : loot)
+		{
+			ObjectNode node = array.addObject();
+			node.put("id", block.id());
+			node.put("title", block.title());
+			node.put("challengeRating", block.challengeRating());
+			node.put("experience", block.experience());
+			ArrayNode lines = node.putArray("lines");
+			for (LootLine line : block.lines())
+			{
+				ObjectNode lineNode = lines.addObject();
+				lineNode.put("name", line.name());
+				lineNode.put("quantity", line.quantity());
+				lineNode.put("carrier", line.carrier());
+				line.drawnAs().ifPresent(type -> lineNode.put("drawnAs", type.name()));
+				lineNode.put("value", line.value());
+				lineNode.put("resoldInFull", line.resoldInFull());
+				lineNode.put("selected", line.selected());
+			}
+			ArrayNode draws = node.putArray("draws");
+			for (LootDraw draw : block.draws())
+			{
+				ObjectNode drawNode = draws.addObject();
+				drawNode.put("carrier", draw.carrier());
+				drawNode.put("creatureType", draw.creatureType());
+				drawNode.put("type", draw.type().name());
+				drawNode.put("amount", draw.amount());
+			}
+		}
+	}
+
+	private static LootBlock readLootBlock(JsonNode node)
+	{
+		List<LootLine> lines = list(node, "lines", line -> new LootLine(text(line, "name"),
+			required(line, "quantity").asInt(), text(line, "carrier"),
+			optionalText(line, "drawnAs").map(TreasureType::valueOf), required(line, "value").asLong(),
+			required(line, "resoldInFull").asBoolean(), required(line, "selected").asBoolean()));
+		List<LootDraw> draws = list(node, "draws", draw -> new LootDraw(text(draw, "carrier"),
+			text(draw, "creatureType"), TreasureType.valueOf(text(draw, "type")), required(draw, "amount").asLong()));
+		return new LootBlock(required(node, "id").asInt(), text(node, "title"), text(node, "challengeRating"),
+			node.path("experience").asLong(), lines,
+			draws);
 	}
 
 	private static Combatant readCombatant(JsonNode node)

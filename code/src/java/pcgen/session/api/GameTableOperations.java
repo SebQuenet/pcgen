@@ -36,6 +36,16 @@ public final class GameTableOperations
 	private static final String RECIPE = "recipe";
 	private static final String NAME = "name";
 	private static final String COUNT = "count";
+	private static final String BLOCK_ID = "block_id";
+	private static final String BLOCK_ONLY_SCHEMA = """
+		{
+			"type": "object",
+			"properties": {
+				"block_id": { "type": "integer", "description": "Id of a fight's loot, from get_game_table" }
+			},
+			"required": ["block_id"]
+		}
+		""";
 
 	private static final String RECIPE_SCHEMA = """
 		{
@@ -68,7 +78,8 @@ public final class GameTableOperations
 		""";
 
 	private static final String STATE = " Answers the whole game table: the scenario's file, party, encounters with "
-		+ "their experience and challenge rating, and the fight in order of initiative, each combatant with its id.";
+		+ "their experience and challenge rating, the fight in order of initiative, each combatant with its id, "
+		+ "and the loot of the finished fights, each with its id.";
 
 	private GameTableOperations()
 	{
@@ -82,7 +93,7 @@ public final class GameTableOperations
 			retouchMonster(table), setInitiative(table), startCombat(table), nextTurn(table), damage(table),
 			heal(table), addCondition(table), removeCondition(table), castSpell(table), dropSpell(table), listConditions(table), delayTurn(table),
 			resumeTurn(table), moveCombatant(table), removeCombatant(table), endCombat(table), getCombatant(table),
-			saveMonsterAsCharacter(table));
+			saveMonsterAsCharacter(table), selectLoot(table), rerollLoot(table), removeLoot(table));
 	}
 
 	private static RecipeRequest recipe(Arguments recipe)
@@ -538,7 +549,9 @@ public final class GameTableOperations
 	{
 		return Operation.exclusive("end_combat",
 			"End the fight and clear it. Answers what its monsters were worth, the challenge rating that amounts "
-				+ "to, and each player's share; character sheets are left untouched.",
+				+ "to, and each player's share, and the fight's loot: what its monsters carried, then the treasure "
+				+ "drawn for them, slain monsters' lines kept, the others' left out; character sheets are left "
+				+ "untouched.",
 			NO_ARGUMENT_SCHEMA, arguments -> service.endCombat());
 	}
 
@@ -570,5 +583,36 @@ public final class GameTableOperations
 				""",
 			arguments -> arguments.decodeThen(() -> service.saveMonsterAsCharacter(
 				arguments.requiredInt(COMBATANT_ID), arguments.requiredString("path"))));
+	}
+
+	private static Operation selectLoot(GameTableService service)
+	{
+		return Operation.exclusive("select_loot", "Keep a line of a fight's loot, or leave it out." + STATE,
+			"""
+				{
+					"type": "object",
+					"properties": {
+						"block_id": { "type": "integer", "description": "Id of a fight's loot, from get_game_table" },
+						"line": { "type": "integer", "description": "Index of the line in that loot, from 0" },
+						"selected": { "type": "boolean", "description": "Whether the line is kept" }
+					},
+					"required": ["block_id", "line", "selected"]
+				}
+				""",
+			arguments -> arguments.decodeThen(() -> service.selectLoot(arguments.requiredInt(BLOCK_ID),
+				arguments.requiredInt("line"), arguments.optionalBoolean("selected", true))));
+	}
+
+	private static Operation rerollLoot(GameTableService service)
+	{
+		return Operation.exclusive("reroll_loot",
+			"Draw again the treasure of a fight's loot; what its monsters carried stays as it is." + STATE,
+			BLOCK_ONLY_SCHEMA, arguments -> arguments.decodeThen(() -> service.rerollLoot(arguments.requiredInt(BLOCK_ID))));
+	}
+
+	private static Operation removeLoot(GameTableService service)
+	{
+		return Operation.exclusive("remove_loot", "Forget a fight's loot, once shared out." + STATE, BLOCK_ONLY_SCHEMA,
+			arguments -> arguments.decodeThen(() -> service.removeLoot(arguments.requiredInt(BLOCK_ID))));
 	}
 }

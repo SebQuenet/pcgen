@@ -29,9 +29,11 @@ import java.util.List;
  * @param party      the players' characters
  * @param encounters the prepared encounters
  * @param combat     the fight under way
+ * @param loot       the loot of the finished fights, oldest first
  * @param notices    what the last call could not do, or what a new round wore off
  */
 public record GameTableState(String file, boolean dirty, String gameMode, List<String> campaigns,
-	List<PartyMemberEntry> party, List<EncounterEntry> encounters, CombatEntry combat, List<String> notices)
+	List<PartyMemberEntry> party, List<EncounterEntry> encounters, CombatEntry combat, List<LootBlockEntry> loot,
+	List<String> notices)
 {
 }

@@ -29,9 +29,10 @@ import java.util.Objects;
  * @param party      the players' characters
  * @param encounters the prepared encounters, in the scenario's order
  * @param combat     the fight in progress; empty when there is none
+ * @param loot       the loot of the finished fights, oldest first
  */
 public record Scenario(String gameMode, List<String> campaigns, List<PartyMember> party, List<Encounter> encounters,
-	Combat combat)
+	Combat combat, List<LootBlock> loot)
 {
 	/** The extension of a scenario file. */
 	public static final String FILE_EXTENSION = "pcgtable";
@@ -43,6 +44,7 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 		party = List.copyOf(party);
 		encounters = List.copyOf(encounters);
 		Objects.requireNonNull(combat);
+		loot = List.copyOf(loot);
 	}
 
 	/**
@@ -50,26 +52,39 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 	 */
 	public static Scenario empty()
 	{
-		return new Scenario("", List.of(), List.of(), List.of(), Combat.empty());
+		return new Scenario("", List.of(), List.of(), List.of(), Combat.empty(), List.of());
 	}
 
 	public Scenario withSources(String newGameMode, List<String> newCampaigns)
 	{
-		return new Scenario(newGameMode, newCampaigns, party, encounters, combat);
+		return new Scenario(newGameMode, newCampaigns, party, encounters, combat, loot);
 	}
 
 	public Scenario withParty(List<PartyMember> newParty)
 	{
-		return new Scenario(gameMode, campaigns, newParty, encounters, combat);
+		return new Scenario(gameMode, campaigns, newParty, encounters, combat, loot);
 	}
 
 	public Scenario withEncounters(List<Encounter> newEncounters)
 	{
-		return new Scenario(gameMode, campaigns, party, newEncounters, combat);
+		return new Scenario(gameMode, campaigns, party, newEncounters, combat, loot);
 	}
 
 	public Scenario withCombat(Combat newCombat)
 	{
-		return new Scenario(gameMode, campaigns, party, encounters, newCombat);
+		return new Scenario(gameMode, campaigns, party, encounters, newCombat, loot);
+	}
+
+	public Scenario withLoot(List<LootBlock> newLoot)
+	{
+		return new Scenario(gameMode, campaigns, party, encounters, combat, newLoot);
+	}
+
+	/**
+	 * @return the number the next fight's loot takes.
+	 */
+	public int nextLootId()
+	{
+		return loot.stream().mapToInt(LootBlock::id).max().orElse(0) + 1;
 	}
 }

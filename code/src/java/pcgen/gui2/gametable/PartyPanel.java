@@ -32,6 +32,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -45,9 +46,13 @@ import pcgen.system.PCGenSettings;
  */
 final class PartyPanel extends JPanel
 {
+	/** The share of the height the party list takes; the loot takes the rest. */
+	private static final double PARTY_SHARE = 0.25;
+
 	private final GameTablePanel table;
 	private final DefaultListModel<PartyMember> members = new DefaultListModel<>();
 	private final JList<PartyMember> list = new JList<>(members);
+	private final LootPanel lootPanel;
 
 	PartyPanel(GameTablePanel table)
 	{
@@ -59,17 +64,23 @@ final class PartyPanel extends JPanel
 			return new DefaultListCellRenderer().getListCellRendererComponent(view, member.name() + file,
 				index, selected, focused);
 		});
-		add(new JScrollPane(list), BorderLayout.CENTER);
+		JPanel members = new JPanel(new BorderLayout());
+		members.add(new JScrollPane(list), BorderLayout.CENTER);
 		JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		buttons.add(GameTablePanel.button("in_gametable_addMember", this::addMember));
 		buttons.add(GameTablePanel.button("in_gametable_addMemberFromFile", this::addMemberFromFile));
 		buttons.add(GameTablePanel.button("in_gametable_linkCharacter", this::linkCharacter));
 		buttons.add(GameTablePanel.button("in_gametable_removeMember", this::removeMember));
-		add(buttons, BorderLayout.SOUTH);
+		members.add(buttons, BorderLayout.SOUTH);
+		this.lootPanel = new LootPanel(table);
+		JSplitPane split = new JSplitPane(JSplitPane.VERTICAL_SPLIT, members, lootPanel);
+		split.setResizeWeight(PARTY_SHARE);
+		add(split, BorderLayout.CENTER);
 	}
 
 	void refresh()
 	{
+		lootPanel.refresh();
 		List<PartyMember> party = table.session().scenario().party();
 		if (party.equals(current()))
 		{

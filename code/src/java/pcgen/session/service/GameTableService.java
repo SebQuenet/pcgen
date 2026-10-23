@@ -40,6 +40,7 @@ import pcgen.core.gametable.Expiry;
 import pcgen.core.gametable.ForgeOutcome;
 import pcgen.core.gametable.GameTableSession;
 import pcgen.core.gametable.Initiative;
+import pcgen.core.gametable.LootBlock;
 import pcgen.core.gametable.MonsterForge;
 import pcgen.core.gametable.MonsterPreview;
 import pcgen.core.gametable.MonsterRecipe;
@@ -62,6 +63,8 @@ import pcgen.session.service.model.ConditionEntry;
 import pcgen.session.service.model.EncounterEntry;
 import pcgen.session.service.model.EncounterMonsterEntry;
 import pcgen.session.service.model.GameTableState;
+import pcgen.session.service.model.LootBlockEntry;
+import pcgen.session.service.model.LootLineEntry;
 import pcgen.session.service.model.PartyMemberEntry;
 import pcgen.session.service.model.RecipeEntry;
 
@@ -72,6 +75,8 @@ import pcgen.session.service.model.RecipeEntry;
  */
 public final class GameTableService
 {
+	private static final String CARRIED = "carried";
+
 	/** How a caller describes a monster: a race or a character file, then the game master's touch. */
 	public record RecipeRequest(String race, String characterFile, List<String> addedTemplates,
 		List<String> removedTemplates, int addedHitDice)
@@ -482,9 +487,58 @@ public final class GameTableService
 
 	public ServiceResult<CombatEnded> endCombat()
 	{
+		int blocksBefore = table.scenario().loot().size();
 		CombatReward reward = table.endCombat();
+		List<LootBlock> loot = table.scenario().loot();
+		LootBlockEntry ended = loot.size() > blocksBefore ? lootEntry(loot.getLast()) : null;
 		return ServiceResult.success(new CombatEnded(reward.experience(), reward.challengeRating().orElse(null),
-			reward.players(), reward.perPlayer(), state(List.of())));
+			reward.players(), reward.perPlayer(), ended, state(List.of())));
+	}
+
+	public ServiceResult<GameTableState> selectLoot(int blockId, int line, boolean selected)
+	{
+		return lootBlock(blockId).andThen(block -> {
+			if (line < 0 || line >= block.lines().size())
+			{
+				return ServiceResult.failure(new ServiceError.EntryNotFound("Loot line", String.valueOf(line)));
+			}
+			table.selectLoot(blockId, line, selected);
+			return ServiceResult.success(state(List.of()));
+		});
+	}
+
+	public ServiceResult<GameTableState> rerollLoot(int blockId)
+	{
+		return lootBlock(blockId).map(block -> {
+			table.rerollLoot(blockId);
+			return state(List.of());
+		});
+	}
+
+	public ServiceResult<GameTableState> removeLoot(int blockId)
+	{
+		return lootBlock(blockId).map(block -> {
+			table.removeLoot(blockId);
+			return state(List.of());
+		});
+	}
+
+	private ServiceResult<LootBlock> lootBlock(int blockId)
+	{
+		return table.scenario().loot().stream().filter(block -> block.id() == blockId).findFirst()
+			.<ServiceResult<LootBlock>>map(ServiceResult::success)
+			.orElseGet(() -> ServiceResult.failure(new ServiceError.EntryNotFound("Loot", String.valueOf(blockId))));
+	}
+
+	private LootBlockEntry lootEntry(LootBlock block)
+	{
+		List<LootLineEntry> lines = block.lines().stream().map(line -> new LootLineEntry(line.name(), line.quantity(),
+			line.carrier(), line.drawnAs().map(type -> type.name().toLowerCase(Locale.ROOT)).orElse(CARRIED), line.value(),
+			line.resale(), line.selected())).toList();
+		int players = table.scenario().party().size();
+		return new LootBlockEntry(block.id(), block.title(), block.challengeRating(), block.experience(),
+			block.experiencePerPlayer(players), block.budget(), lines,
+			block.selectedValue(), block.selectedResale(), block.sharePerPlayer(players));
 	}
 
 	public ServiceResult<CombatantSheet> getCombatant(int id)
@@ -639,7 +693,7 @@ public final class GameTableService
 			scenario.party().stream().map(member -> new PartyMemberEntry(member.name(),
 				member.characterFile().orElse(null))).toList(),
 			scenario.encounters().stream().map(this::encounterEntry).toList(), combatEntry(scenario.combat()),
-			List.copyOf(notices));
+			scenario.loot().stream().map(this::lootEntry).toList(), List.copyOf(notices));
 	}
 
 	private EncounterEntry encounterEntry(Encounter encounter)

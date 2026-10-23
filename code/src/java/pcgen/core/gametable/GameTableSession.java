@@ -32,6 +32,8 @@ import java.util.OptionalInt;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.IntSupplier;
+import java.util.function.UnaryOperator;
+import java.util.random.RandomGenerator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,6 +58,7 @@ import pcgen.util.enumeration.Visibility;
 public final class GameTableSession
 {
 	private final IntSupplier d20;
+	private final FightLoot fightLoot;
 	private final List<Runnable> listeners = new CopyOnWriteArrayList<>();
 	private final Map<Integer, PlayerCharacter> monsters = new HashMap<>();
 	private final Map<Integer, Set<AppliedBonus>> laid = new HashMap<>();
@@ -74,7 +77,18 @@ public final class GameTableSession
 	 */
 	public GameTableSession(IntSupplier d20)
 	{
+		this(d20, RandomGenerator.getDefault());
+	}
+
+	/**
+	 * @param d20          rolls a twenty-sided die, for the monsters' initiative.
+	 * @param treasureDice makes the rolls of the treasure drawn at the end of a fight.
+	 */
+	public GameTableSession(IntSupplier d20, RandomGenerator treasureDice)
+	{
 		this.d20 = d20;
+		this.fightLoot = new FightLoot(new CreatureLoot(TreasureTypes.bundled()),
+			new TreasureDraw(TreasureTables.bundled(), treasureDice));
 	}
 
 	/**
@@ -308,7 +322,7 @@ public final class GameTableSession
 				combat = combat.with(Combatant.player(combat.nextId(), member.name(), member.characterFile()));
 			}
 		}
-		scenario = scenario.withCombat(combat);
+		scenario = scenario.withCombat(combat.withEncounter(encounter.name()));
 		List<String> failures = new ArrayList<>();
 		for (EncounterMonster monster : encounter.monsters())
 		{
@@ -585,7 +599,8 @@ public final class GameTableSession
 	}
 
 	/**
-	 * @return what the fight is worth to the players; the fight is over and cleared.
+	 * @return what the fight is worth to the players; the fight is over and cleared, its loot
+	 *         added to the scenario's.
 	 */
 	public synchronized CombatReward endCombat()
 	{
@@ -594,10 +609,59 @@ public final class GameTableSession
 			? combat.order().stream().filter(combatant -> combatant.kind() == CombatantKind.PLAYER).count()
 			: scenario.party().size();
 		CombatReward reward = CombatReward.of(combat.experience(), (int) players);
+		Optional<LootBlock> loot = sheets.flatMap(found -> fightLoot.of(scenario.nextLootId(), combat, monsters,
+			found::challengeRating, LanguageBundle.getString("in_gametable_lootNoEncounter")));
+		loot.ifPresent(block -> {
+			List<LootBlock> blocks = new ArrayList<>(scenario.loot());
+			blocks.add(block);
+			scenario = scenario.withLoot(blocks);
+		});
 		scenario = scenario.withCombat(Combat.empty());
 		forgetBuilt();
 		changed();
 		return reward;
+	}
+
+	/**
+	 * @param blockId  a fight's loot.
+	 * @param line     the index of one of its lines.
+	 * @param selected whether the line is kept in the loot.
+	 */
+	public synchronized void selectLoot(int blockId, int line, boolean selected)
+	{
+		replaceLoot(blockId, block -> block.selecting(line, selected));
+	}
+
+	/**
+	 * @param blockId a fight's loot, whose drawn lines are drawn again.
+	 */
+	public synchronized void rerollLoot(int blockId)
+	{
+		replaceLoot(blockId, fightLoot::rerolled);
+	}
+
+	/**
+	 * @param blockId a fight's loot, forgotten.
+	 */
+	public synchronized void removeLoot(int blockId)
+	{
+		lootBlock(blockId);
+		scenario = scenario.withLoot(scenario.loot().stream().filter(block -> block.id() != blockId).toList());
+		changed();
+	}
+
+	private void replaceLoot(int blockId, UnaryOperator<LootBlock> change)
+	{
+		LootBlock changed = change.apply(lootBlock(blockId));
+		scenario = scenario.withLoot(scenario.loot().stream().map(block -> block.id() == blockId ? changed : block)
+			.toList());
+		changed();
+	}
+
+	private LootBlock lootBlock(int blockId)
+	{
+		return scenario.loot().stream().filter(block -> block.id() == blockId).findFirst()
+			.orElseThrow(() -> new IllegalArgumentException("The scenario has no loot " + blockId));
 	}
 
 	/**

@@ -27,6 +27,7 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -36,6 +37,7 @@ import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.facade.core.BonusChoice;
 import pcgen.io.PCGIOHandler;
 import pcgen.session.HeadlessUIDelegate;
+import pcgen.system.LanguageBundle;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -48,13 +50,16 @@ class GameTableSessionTest
 	private static final MonsterRecipe WOLF = MonsterRecipe.of(new MonsterSource.BestiaryRace("Wolf"));
 	private static final Encounter WOLVES = Encounter.named("Wolves in the woods")
 		.withMonster(new EncounterMonster("Wolf", WOLF, 2));
+	private static final MonsterRecipe TREANT = MonsterRecipe.of(new MonsterSource.BestiaryRace("Treant"));
+	private static final MonsterRecipe CONTRACT_KILLER = MonsterRecipe.of(new MonsterSource.CharacterFile(
+		"characters/combat-manager/NPC Codex/Rogue/Contract Killer.pcg"));
 
 	private GameTableSession session;
 
 	@BeforeEach
 	void openAScenario()
 	{
-		session = new GameTableSession(() -> 10);
+		session = new GameTableSession(() -> 10, new Random(42));
 		session.useSources(new MonsterForge(BestiarySources.campaigns(), new HeadlessUIDelegate()), "Pathfinder_RPG",
 			List.of("Core Rulebook", "Bestiary"));
 		session.setParty(List.of(new PartyMember("Seoni", Optional.empty()), new PartyMember("Valeros",
@@ -287,5 +292,132 @@ class GameTableSessionTest
 		}
 
 		assertEquals(before, biteOf("Wolf 1"));
+	}
+
+	private void slay(String name)
+	{
+		session.damage(named(name).id(), 1_000);
+	}
+
+	private LootBlock lastLoot()
+	{
+		return session.scenario().loot().getLast();
+	}
+
+	@Test
+	void endingAFightKeepsItsLoot()
+	{
+		session.launch(WOLVES);
+
+		session.endCombat();
+
+		assertEquals(List.of("Wolves in the woods"), session.scenario().loot().stream().map(LootBlock::title).toList());
+	}
+
+	@Test
+	void aSlainMonstersLinesAreChecked()
+	{
+		session.addMonsters("Contract Killer", CONTRACT_KILLER, 1);
+		slay("Contract Killer");
+
+		session.endCombat();
+
+		assertTrue(!lastLoot().lines().isEmpty() && lastLoot().lines().stream().allMatch(LootLine::selected));
+	}
+
+	@Test
+	void aLivingMonstersLinesAreUnchecked()
+	{
+		session.addMonsters("Contract Killer", CONTRACT_KILLER, 1);
+
+		session.endCombat();
+
+		assertTrue(!lastLoot().lines().isEmpty() && lastLoot().lines().stream().noneMatch(LootLine::selected));
+	}
+
+	@Test
+	void aSlainTreantLeavesDrawnTreasure()
+	{
+		session.addMonsters("Treant", TREANT, 1);
+		slay("Treant");
+
+		session.endCombat();
+
+		assertTrue(lastLoot().lines().stream().allMatch(line -> line.drawnAs().equals(Optional.of(TreasureType.STANDARD))
+			&& line.carrier().equals("Treant")) && !lastLoot().lines().isEmpty());
+	}
+
+	@Test
+	void aConjuredCreatureLeavesNoLoot()
+	{
+		session.launch(WOLVES);
+		session.summon(named("Wolf 1").id(), "Treant", Optional.of(TREANT), 1, OptionalInt.of(3));
+
+		session.endCombat();
+
+		assertEquals(List.of(), lastLoot().lines());
+	}
+
+	@Test
+	void aFightWithoutEncounterHasADefaultTitle()
+	{
+		session.addMonsters("Wolf", WOLF, 1);
+
+		session.endCombat();
+
+		assertEquals(LanguageBundle.getString("in_gametable_lootNoEncounter"), lastLoot().title());
+	}
+
+	@Test
+	void twoFightsMakeTwoBlocks()
+	{
+		session.launch(WOLVES);
+		session.endCombat();
+		session.launch(WOLVES);
+
+		session.endCombat();
+
+		assertEquals(List.of(1, 2), session.scenario().loot().stream().map(LootBlock::id).toList());
+	}
+
+	@Test
+	void aRerollKeepsTheCarriedLinesBoxes()
+	{
+		session.addMonsters("Contract Killer", CONTRACT_KILLER, 1);
+		session.addMonsters("Treant", TREANT, 1);
+		slay("Contract Killer");
+		slay("Treant");
+		session.endCombat();
+		session.selectLoot(lastLoot().id(), 0, false);
+
+		session.rerollLoot(lastLoot().id());
+
+		assertEquals(false, lastLoot().lines().getFirst().selected());
+	}
+
+	@Test
+	void removingABlockForgetsIt()
+	{
+		session.launch(WOLVES);
+		session.endCombat();
+
+		session.removeLoot(lastLoot().id());
+
+		assertEquals(List.of(), session.scenario().loot());
+	}
+
+	@Test
+	void theLootSurvivesSavingAndReopening() throws IOException
+	{
+		session.addMonsters("Treant", TREANT, 1);
+		slay("Treant");
+		session.endCombat();
+		File saved = Files.createTempFile("loot", "." + Scenario.FILE_EXTENSION).toFile();
+		saved.deleteOnExit();
+		session.save(saved);
+
+		ScenarioReading reading = session.read(saved);
+
+		assertEquals(session.scenario().loot(), ((ScenarioReading.Read) reading).scenario().loot());
 	}
 }

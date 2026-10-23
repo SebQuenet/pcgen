@@ -106,7 +106,8 @@ public class OperationRegistryTest
 			"add_player_to_combat", "summon_creatures", "retouch_monster", "set_initiative", "start_combat",
 			"next_turn", "damage_combatant", "heal_combatant", "add_condition", "remove_condition",
 			"list_conditions", "delay_turn", "resume_turn", "move_combatant", "remove_combatant", "end_combat",
-			"get_combatant", "save_monster_as_character")), () -> "served: " + served);
+			"get_combatant", "save_monster_as_character", "select_loot", "reroll_loot", "remove_loot")),
+			() -> "served: " + served);
 	}
 
 	@Test

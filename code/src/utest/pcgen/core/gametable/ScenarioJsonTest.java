@@ -56,11 +56,28 @@ class ScenarioJsonTest
 				"Ability Damaged (Strength)")), OptionalInt.empty(), OptionalInt.of(4)))
 			.withCondition(1, Condition.label("Invisible", OptionalInt.empty()))
 			.cast(1, Condition.label("Mage Armor", OptionalInt.of(40)), List.of(1, 2)).withSpell(1, new CastSpell("Shield", OptionalInt.empty()))
-			.withExperience(1_200).started()
+			.withExperience(1_200).withEncounter("Goblin ambush").started()
 			.next().combat();
+		LootBlock loot = new LootBlock(1, "Goblin ambush", "4", 1_200,
+			List.of(LootLine.carried("Dogslicer", 2, "Goblin 1", 16, false, false),
+				new LootLine("Coins", 1, "Goblin 2", Optional.of(TreasureType.STANDARD), 300, true, true)),
+			List.of(new LootDraw("Goblin 2", "humanoid", TreasureType.STANDARD, 300)));
 		return new Scenario("Pathfinder_RPG", List.of("Core Rulebook", "Bestiary"),
 			List.of(new PartyMember("Seoni", Optional.of("/players/seoni.pcg")), new PartyMember("Valeros",
-				Optional.empty())), List.of(ambush), combat.delaying(3));
+				Optional.empty())), List.of(ambush), combat.delaying(3), List.of(loot));
+	}
+
+	@Test
+	void aScenarioSavedBeforeLootReadsWithNone() throws JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+		ObjectNode saved = (ObjectNode) mapper.readTree(ScenarioJson.write(prepared()));
+		saved.remove("loot");
+		((ObjectNode) saved.get("combat")).remove("encounters");
+
+		Scenario read = ((ScenarioReading.Read) ScenarioJson.read(mapper.writeValueAsString(saved))).scenario();
+
+		assertEquals(List.of(List.of(), List.of()), List.of(read.loot(), read.combat().encounters()));
 	}
 
 	@Test
