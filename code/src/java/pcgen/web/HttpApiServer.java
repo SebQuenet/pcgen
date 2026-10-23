@@ -24,6 +24,7 @@ import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -43,6 +44,7 @@ import pcgen.session.api.Operation;
 import pcgen.session.api.OperationRegistry;
 import pcgen.session.service.ServiceError;
 import pcgen.session.service.ServiceResult;
+import pcgen.session.service.model.ImageContent;
 import pcgen.util.Logging;
 
 /**
@@ -57,6 +59,8 @@ import pcgen.util.Logging;
 public final class HttpApiServer
 {
 	private static final String API_PREFIX = "/api/";
+	private static final String IMAGES_PREFIX = "/images/";
+	private static final String GET_IMAGE = "get_image";
 	private static final int STOP_DELAY_SECONDS = 1;
 
 	private final OperationRegistry registry;
@@ -103,6 +107,7 @@ public final class HttpApiServer
 		server.createContext("/health", api::handleHealth);
 		server.createContext("/api/operations", api::handleOperations);
 		server.createContext(API_PREFIX, api::handleCall);
+		server.createContext(IMAGES_PREFIX, api::handleImage);
 		server.createContext("/", api::handleFrontEnd);
 		server.setExecutor(Executors.newCachedThreadPool());
 		server.start();
@@ -200,6 +205,37 @@ public final class HttpApiServer
 		}
 
 		respondTo(exchange, call(operation, arguments));
+	}
+
+	/**
+	 * Serves an image of the scenario as itself, for a browser to show: {@code GET /images/{id}}.
+	 */
+	private void handleImage(HttpExchange exchange) throws IOException
+	{
+		if (!allowed(exchange))
+		{
+			return;
+		}
+		String id = exchange.getRequestURI().getPath().substring(IMAGES_PREFIX.length());
+		Operation operation = registry.find(GET_IMAGE).orElse(null);
+		if (operation == null || !id.matches("\\d{1,9}"))
+		{
+			respond(exchange, 404, ApiResponse.of(new ServiceError.EntryNotFound("Image", id)));
+			return;
+		}
+		ServiceResult<?> result = call(operation, Arguments.of(Map.of("image_id", Integer.parseInt(id))));
+		if (result instanceof ServiceResult.Success<?> success && success.value() instanceof ImageContent image)
+		{
+			byte[] body = Base64.getDecoder().decode(image.contentBase64());
+			exchange.getResponseHeaders().add("Content-Type", image.mediaType());
+			exchange.sendResponseHeaders(200, body.length);
+			try (OutputStream out = exchange.getResponseBody())
+			{
+				out.write(body);
+			}
+			return;
+		}
+		respondTo(exchange, result);
 	}
 
 	private ServiceResult<?> call(Operation operation, Arguments arguments)

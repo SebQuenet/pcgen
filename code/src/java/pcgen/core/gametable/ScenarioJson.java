@@ -66,6 +66,7 @@ public final class ScenarioJson
 			ObjectNode node = encounters.addObject();
 			node.put("name", encounter.name());
 			node.put("notes", encounter.notes());
+			writeImages(node.putArray("images"), encounter.images());
 			ArrayNode monsters = node.putArray("monsters");
 			for (EncounterMonster monster : encounter.monsters())
 			{
@@ -77,6 +78,7 @@ public final class ScenarioJson
 		}
 		writeCombat(root.putObject("combat"), scenario.combat());
 		writeLoot(root.putArray("loot"), scenario.loot());
+		writeImages(root.putArray("images"), scenario.images());
 		try
 		{
 			return MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(root);
@@ -105,7 +107,7 @@ public final class ScenarioJson
 			List<Encounter> encounters = list(root, "encounters", ScenarioJson::readEncounter);
 			Scenario scenario = new Scenario(text(root, "gameMode"), list(root, "campaigns", JsonNode::asText), party,
 				encounters, readCombat(required(root, "combat")),
-				root.has("loot") ? list(root, "loot", ScenarioJson::readLootBlock) : List.of());
+				root.has("loot") ? list(root, "loot", ScenarioJson::readLootBlock) : List.of(), readImages(root));
 			return new ScenarioReading.Read(scenario);
 		}
 		catch (JsonProcessingException | IllegalArgumentException | IllegalStateException badContent)
@@ -118,7 +120,7 @@ public final class ScenarioJson
 	{
 		List<EncounterMonster> monsters = list(node, "monsters", monster -> new EncounterMonster(text(monster, "name"),
 			readRecipe(required(monster, "recipe")), required(monster, "count").asInt()));
-		return new Encounter(text(node, "name"), monsters, text(node, "notes"));
+		return new Encounter(text(node, "name"), monsters, text(node, "notes"), readImages(node));
 	}
 
 	private static void writeRecipe(ObjectNode node, MonsterRecipe recipe)
@@ -212,6 +214,26 @@ public final class ScenarioJson
 		List<String> encounters = node.has("encounters") ? list(node, "encounters", JsonNode::asText) : List.of();
 		return new Combat(required(node, "round").asInt(), combatants, current, required(node, "experience").asLong(),
 			encounters);
+	}
+
+	private static void writeImages(ArrayNode array, List<ScenarioImage> images)
+	{
+		for (ScenarioImage image : images)
+		{
+			ObjectNode node = array.addObject();
+			node.put("id", image.id());
+			node.put("name", image.name());
+			node.put("category", image.category().name());
+			node.put("format", image.format().name());
+			node.put("content", image.content());
+		}
+	}
+
+	private static List<ScenarioImage> readImages(JsonNode node)
+	{
+		return node.has("images") ? list(node, "images", image -> new ScenarioImage(required(image, "id").asInt(),
+			text(image, "name"), ImageCategory.valueOf(text(image, "category")), ImageFormat.valueOf(text(image, "format")),
+			text(image, "content"))) : List.of();
 	}
 
 	private static void writeLoot(ArrayNode array, List<LootBlock> loot)

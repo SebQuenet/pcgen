@@ -28,7 +28,7 @@ import java.util.Objects;
  * @param monsters its monsters, by kind
  * @param notes    free notes
  */
-public record Encounter(String name, List<EncounterMonster> monsters, String notes)
+public record Encounter(String name, List<EncounterMonster> monsters, String notes, List<ScenarioImage> images)
 {
 	public Encounter
 	{
@@ -39,6 +39,7 @@ public record Encounter(String name, List<EncounterMonster> monsters, String not
 		name = name.strip();
 		monsters = List.copyOf(monsters);
 		notes = Objects.requireNonNull(notes);
+		images = List.copyOf(images);
 	}
 
 	/**
@@ -47,22 +48,22 @@ public record Encounter(String name, List<EncounterMonster> monsters, String not
 	 */
 	public static Encounter named(String name)
 	{
-		return new Encounter(name, List.of(), "");
+		return new Encounter(name, List.of(), "", List.of());
 	}
 
 	public Encounter withName(String newName)
 	{
-		return new Encounter(newName, monsters, notes);
+		return new Encounter(newName, monsters, notes, images);
 	}
 
 	public Encounter withNotes(String newNotes)
 	{
-		return new Encounter(name, monsters, newNotes);
+		return new Encounter(name, monsters, newNotes, images);
 	}
 
 	public Encounter withMonsters(List<EncounterMonster> newMonsters)
 	{
-		return new Encounter(name, newMonsters, notes);
+		return new Encounter(name, newMonsters, notes, images);
 	}
 
 	public Encounter withMonster(EncounterMonster added)
@@ -70,5 +71,19 @@ public record Encounter(String name, List<EncounterMonster> monsters, String not
 		List<EncounterMonster> all = new ArrayList<>(monsters);
 		all.add(added);
 		return withMonsters(all);
+	}
+
+	public Encounter withImages(List<ScenarioImage> newImages)
+	{
+		return new Encounter(name, monsters, notes, newImages);
+	}
+
+	/**
+	 * @param added a location illustration, a battlemap or another image of the encounter.
+	 * @return the encounter showing it after the images of its category.
+	 */
+	public Encounter withImage(ScenarioImage added)
+	{
+		return withImages(ScenarioImage.shelved(images, added, false));
 	}
 }

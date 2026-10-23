@@ -37,6 +37,16 @@ public final class GameTableOperations
 	private static final String NAME = "name";
 	private static final String COUNT = "count";
 	private static final String BLOCK_ID = "block_id";
+	private static final String IMAGE_ID = "image_id";
+	private static final String IMAGE_ONLY_SCHEMA = """
+		{
+			"type": "object",
+			"properties": {
+				"image_id": { "type": "integer", "description": "Id of an image of the scenario, from get_game_table" }
+			},
+			"required": ["image_id"]
+		}
+		""";
 	private static final String BLOCK_ONLY_SCHEMA = """
 		{
 			"type": "object",
@@ -79,7 +89,8 @@ public final class GameTableOperations
 
 	private static final String STATE = " Answers the whole game table: the scenario's file, party, encounters with "
 		+ "their experience and challenge rating, the fight in order of initiative, each combatant with its id, "
-		+ "and the loot of the finished fights, each with its id.";
+		+ "the loot of the finished fights, each with its id, and the images of the scenario and of each "
+		+ "encounter, without their content.";
 
 	private GameTableOperations()
 	{
@@ -93,7 +104,8 @@ public final class GameTableOperations
 			retouchMonster(table), setInitiative(table), startCombat(table), nextTurn(table), damage(table),
 			heal(table), addCondition(table), removeCondition(table), castSpell(table), dropSpell(table), listConditions(table), delayTurn(table),
 			resumeTurn(table), moveCombatant(table), removeCombatant(table), endCombat(table), getCombatant(table),
-			saveMonsterAsCharacter(table), selectLoot(table), rerollLoot(table), removeLoot(table));
+			saveMonsterAsCharacter(table), selectLoot(table), rerollLoot(table), removeLoot(table), addImage(table),
+			getImage(table), removeImage(table), sendImageToTabletop(table));
 	}
 
 	private static RecipeRequest recipe(Arguments recipe)
@@ -614,5 +626,63 @@ public final class GameTableOperations
 	{
 		return Operation.exclusive("remove_loot", "Forget a fight's loot, once shared out." + STATE, BLOCK_ONLY_SCHEMA,
 			arguments -> arguments.decodeThen(() -> service.removeLoot(arguments.requiredInt(BLOCK_ID))));
+	}
+
+	private static Operation addImage(GameTableService service)
+	{
+		return Operation.exclusive("add_image",
+			"Keep an image in the scenario file: an illustration of the scenario or a general map for the whole "
+				+ "scenario, a location illustration, a battlemap or another image for an encounter. PNG, JPEG, GIF "
+				+ "or BMP, up to 50 MB, from a local file or from its content in base 64." + STATE,
+			"""
+				{
+					"type": "object",
+					"properties": {
+						"encounter": { "type": "string", "description": "Name of the encounter it belongs to; omitted for the whole scenario" },
+						"category": { "type": "string", "enum": ["scenario_illustration", "general_map", "location_illustration", "battlemap", "other"] },
+						"name": { "type": "string", "description": "What to call it; the file's name by default" },
+						"path": { "type": "string", "description": "Path of a local image file" },
+						"content_base64": { "type": "string", "description": "The image's bytes in base 64, when no path is given" }
+					},
+					"required": ["category"]
+				}
+				""",
+			arguments -> arguments.decodeThen(() -> service.addImage(arguments.optionalString("encounter", null),
+				arguments.optionalString(NAME, null), arguments.requiredString("category"),
+				arguments.optionalString("path", null), arguments.optionalString("content_base64", null))));
+	}
+
+	private static Operation getImage(GameTableService service)
+	{
+		return Operation.exclusive("get_image",
+			"Read an image of the scenario: its name, category, media type and content in base 64. Over HTTP, "
+				+ "GET /images/{id} serves the image itself.",
+			IMAGE_ONLY_SCHEMA, arguments -> arguments.decodeThen(() -> service.getImage(arguments.requiredInt(IMAGE_ID))));
+	}
+
+	private static Operation removeImage(GameTableService service)
+	{
+		return Operation.exclusive("remove_image", "Remove an image from the scenario." + STATE, IMAGE_ONLY_SCHEMA,
+			arguments -> arguments.decodeThen(() -> service.removeImage(arguments.requiredInt(IMAGE_ID))));
+	}
+
+	private static Operation sendImageToTabletop(GameTableService service)
+	{
+		return Operation.exclusive("send_image_to_tabletop",
+			"Send an image of the scenario to Tabletop Simulator through the game master's TTS-cloud-manager, "
+				+ "which must be running: into the PCGen folder of the Steam cloud, and, when place_on_table is true, "
+				+ "onto the table of the loaded game as a tile. Answers its cloud key and address.",
+			"""
+				{
+					"type": "object",
+					"properties": {
+						"image_id": { "type": "integer", "description": "Id of an image of the scenario, from get_game_table" },
+						"place_on_table": { "type": "boolean", "description": "Also lay it on the table; false by default" }
+					},
+					"required": ["image_id"]
+				}
+				""",
+			arguments -> arguments.decodeThen(() -> service.sendImageToTabletop(arguments.requiredInt(IMAGE_ID),
+				arguments.optionalBoolean("place_on_table", false))));
 	}
 }

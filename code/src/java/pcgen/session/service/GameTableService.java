@@ -18,6 +18,11 @@
 package pcgen.session.service;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Base64;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -39,6 +44,8 @@ import pcgen.core.gametable.Experience;
 import pcgen.core.gametable.Expiry;
 import pcgen.core.gametable.ForgeOutcome;
 import pcgen.core.gametable.GameTableSession;
+import pcgen.core.gametable.HttpTabletopTransfer;
+import pcgen.core.gametable.ImageCategory;
 import pcgen.core.gametable.Initiative;
 import pcgen.core.gametable.LootBlock;
 import pcgen.core.gametable.MonsterForge;
@@ -47,7 +54,10 @@ import pcgen.core.gametable.MonsterRecipe;
 import pcgen.core.gametable.MonsterSource;
 import pcgen.core.gametable.PartyMember;
 import pcgen.core.gametable.Scenario;
+import pcgen.core.gametable.ScenarioImage;
 import pcgen.core.gametable.ScenarioReading;
+import pcgen.core.gametable.TabletopOutcome;
+import pcgen.core.gametable.TabletopTransfer;
 import pcgen.core.gametable.Turn;
 import pcgen.facade.core.BonusChoice;
 import pcgen.facade.core.DataSetFacade;
@@ -63,10 +73,13 @@ import pcgen.session.service.model.ConditionEntry;
 import pcgen.session.service.model.EncounterEntry;
 import pcgen.session.service.model.EncounterMonsterEntry;
 import pcgen.session.service.model.GameTableState;
+import pcgen.session.service.model.ImageContent;
+import pcgen.session.service.model.ImageEntry;
 import pcgen.session.service.model.LootBlockEntry;
 import pcgen.session.service.model.LootLineEntry;
 import pcgen.session.service.model.PartyMemberEntry;
 import pcgen.session.service.model.RecipeEntry;
+import pcgen.session.service.model.TabletopSent;
 
 /**
  * The game table without its screens: the scenario a game master runs, its party,
@@ -76,6 +89,7 @@ import pcgen.session.service.model.RecipeEntry;
 public final class GameTableService
 {
 	private static final String CARRIED = "carried";
+	private static final String CATEGORY = "category";
 
 	/** How a caller describes a monster: a race or a character file, then the game master's touch. */
 	public record RecipeRequest(String race, String characterFile, List<String> addedTemplates,
@@ -89,13 +103,23 @@ public final class GameTableService
 	}
 
 	private final PcgenSession session;
+	private final TabletopTransfer tabletop;
 	private final GameTableSession table;
 	private String sourcesBuiltOn = "";
 
 	public GameTableService(PcgenSession session, GameTableSession table)
 	{
+		this(session, table, HttpTabletopTransfer.fromEnvironment());
+	}
+
+	/**
+	 * @param tabletop sends the scenario's images to Tabletop Simulator.
+	 */
+	public GameTableService(PcgenSession session, GameTableSession table, TabletopTransfer tabletop)
+	{
 		this.session = session;
 		this.table = table;
+		this.tabletop = tabletop;
 	}
 
 	public ServiceResult<GameTableState> newScenario()
@@ -495,6 +519,101 @@ public final class GameTableService
 			reward.players(), reward.perPlayer(), ended, state(List.of())));
 	}
 
+	public ServiceResult<GameTableState> addImage(String encounter, String name, String category, String path,
+		String contentBase64)
+	{
+		Optional<ImageCategory> kind = categoryNamed(category);
+		if (kind.isEmpty())
+		{
+			return ServiceResult.failure(new ServiceError.InvalidArgument(CATEGORY, "one of "
+				+ Arrays.stream(ImageCategory.values()).map(GameTableService::categoryName).toList()));
+		}
+		byte[] bytes;
+		String imageName = name;
+		try
+		{
+			if (path != null && !path.isBlank())
+			{
+				Path file = Path.of(path);
+				bytes = Files.readAllBytes(file);
+				imageName = (name == null || name.isBlank()) ? file.getFileName().toString() : name;
+			}
+			else if (contentBase64 != null && !contentBase64.isBlank())
+			{
+				bytes = Base64.getDecoder().decode(contentBase64.strip());
+			}
+			else
+			{
+				return ServiceResult.failure(new ServiceError.InvalidArgument("path", "a file path or content_base64 is needed"));
+			}
+		}
+		catch (IOException | IllegalArgumentException unreadable)
+		{
+			return ServiceResult.failure(new ServiceError.InvalidArgument("path", String.valueOf(unreadable.getMessage())));
+		}
+		if (imageName == null || imageName.isBlank())
+		{
+			return ServiceResult.failure(new ServiceError.InvalidArgument("name", "an image has a name"));
+		}
+		try
+		{
+			table.addImage(Optional.ofNullable(encounter).filter(found -> !found.isBlank()), imageName, kind.get(), bytes);
+		}
+		catch (IllegalArgumentException refused)
+		{
+			return ServiceResult.failure(new ServiceError.NotAllowed(refused.getMessage()));
+		}
+		return ServiceResult.success(state(List.of()));
+	}
+
+	public ServiceResult<ImageContent> getImage(int id)
+	{
+		return image(id).map(image -> new ImageContent(image.id(), image.name(), categoryName(image.category()),
+			image.format().mediaType(), image.content()));
+	}
+
+	public ServiceResult<GameTableState> removeImage(int id)
+	{
+		return image(id).map(image -> {
+			table.removeImage(id);
+			return state(List.of());
+		});
+	}
+
+	public ServiceResult<TabletopSent> sendImageToTabletop(int id, boolean placeOnTable)
+	{
+		return image(id).andThen(image -> switch (tabletop.send(image, placeOnTable))
+		{
+			case TabletopOutcome.Sent sent -> ServiceResult.success(new TabletopSent(sent.key(), sent.url().orElse(null),
+				sent.placed()));
+			case TabletopOutcome.Failed failed -> ServiceResult.failure(new ServiceError.DataFailure(failed.reason()));
+		});
+	}
+
+	private ServiceResult<ScenarioImage> image(int id)
+	{
+		return table.image(id).<ServiceResult<ScenarioImage>>map(ServiceResult::success)
+			.orElseGet(() -> ServiceResult.failure(new ServiceError.EntryNotFound("Image", String.valueOf(id))));
+	}
+
+	private static List<ImageEntry> imageEntries(List<ScenarioImage> images)
+	{
+		return images.stream().map(image -> new ImageEntry(image.id(), image.name(), categoryName(image.category()),
+			image.format().mediaType(), image.sizeInBytes())).toList();
+	}
+
+	private static String categoryName(ImageCategory category)
+	{
+		return category.name().toLowerCase(Locale.ROOT);
+	}
+
+	private static Optional<ImageCategory> categoryNamed(String category)
+	{
+		return Arrays.stream(ImageCategory.values())
+			.filter(found -> categoryName(found).equals(category == null ? "" : category.strip().toLowerCase(Locale.ROOT)))
+			.findFirst();
+	}
+
 	public ServiceResult<GameTableState> selectLoot(int blockId, int line, boolean selected)
 	{
 		return lootBlock(blockId).andThen(block -> {
@@ -693,7 +812,7 @@ public final class GameTableService
 			scenario.party().stream().map(member -> new PartyMemberEntry(member.name(),
 				member.characterFile().orElse(null))).toList(),
 			scenario.encounters().stream().map(this::encounterEntry).toList(), combatEntry(scenario.combat()),
-			scenario.loot().stream().map(this::lootEntry).toList(), List.copyOf(notices));
+			scenario.loot().stream().map(this::lootEntry).toList(), imageEntries(scenario.images()), List.copyOf(notices));
 	}
 
 	private EncounterEntry encounterEntry(Encounter encounter)
@@ -710,7 +829,7 @@ public final class GameTableService
 			total += experience;
 		}
 		return new EncounterEntry(encounter.name(), encounter.notes(), monsters, total,
-			Experience.challengeRatingOf(total).orElse(null));
+			Experience.challengeRatingOf(total).orElse(null), imageEntries(encounter.images()));
 	}
 
 	private static CombatEntry combatEntry(Combat combat)

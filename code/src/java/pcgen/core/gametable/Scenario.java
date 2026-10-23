@@ -19,6 +19,7 @@ package pcgen.core.gametable;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 /**
  * A campaign scenario the game master runs: the sources its monsters need, the party,
@@ -30,9 +31,10 @@ import java.util.Objects;
  * @param encounters the prepared encounters, in the scenario's order
  * @param combat     the fight in progress; empty when there is none
  * @param loot       the loot of the finished fights, oldest first
+ * @param images     the scenario's illustrations and general maps, in the order they are shown
  */
 public record Scenario(String gameMode, List<String> campaigns, List<PartyMember> party, List<Encounter> encounters,
-	Combat combat, List<LootBlock> loot)
+	Combat combat, List<LootBlock> loot, List<ScenarioImage> images)
 {
 	/** The extension of a scenario file. */
 	public static final String FILE_EXTENSION = "pcgtable";
@@ -45,6 +47,7 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 		encounters = List.copyOf(encounters);
 		Objects.requireNonNull(combat);
 		loot = List.copyOf(loot);
+		images = List.copyOf(images);
 	}
 
 	/**
@@ -52,32 +55,32 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 	 */
 	public static Scenario empty()
 	{
-		return new Scenario("", List.of(), List.of(), List.of(), Combat.empty(), List.of());
+		return new Scenario("", List.of(), List.of(), List.of(), Combat.empty(), List.of(), List.of());
 	}
 
 	public Scenario withSources(String newGameMode, List<String> newCampaigns)
 	{
-		return new Scenario(newGameMode, newCampaigns, party, encounters, combat, loot);
+		return new Scenario(newGameMode, newCampaigns, party, encounters, combat, loot, images);
 	}
 
 	public Scenario withParty(List<PartyMember> newParty)
 	{
-		return new Scenario(gameMode, campaigns, newParty, encounters, combat, loot);
+		return new Scenario(gameMode, campaigns, newParty, encounters, combat, loot, images);
 	}
 
 	public Scenario withEncounters(List<Encounter> newEncounters)
 	{
-		return new Scenario(gameMode, campaigns, party, newEncounters, combat, loot);
+		return new Scenario(gameMode, campaigns, party, newEncounters, combat, loot, images);
 	}
 
 	public Scenario withCombat(Combat newCombat)
 	{
-		return new Scenario(gameMode, campaigns, party, encounters, newCombat, loot);
+		return new Scenario(gameMode, campaigns, party, encounters, newCombat, loot, images);
 	}
 
 	public Scenario withLoot(List<LootBlock> newLoot)
 	{
-		return new Scenario(gameMode, campaigns, party, encounters, combat, newLoot);
+		return new Scenario(gameMode, campaigns, party, encounters, combat, newLoot, images);
 	}
 
 	/**
@@ -86,5 +89,28 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 	public int nextLootId()
 	{
 		return loot.stream().mapToInt(LootBlock::id).max().orElse(0) + 1;
+	}
+
+	public Scenario withImages(List<ScenarioImage> newImages)
+	{
+		return new Scenario(gameMode, campaigns, party, encounters, combat, loot, newImages);
+	}
+
+	/**
+	 * @param added an illustration of the scenario or a general map.
+	 * @return the scenario showing it after the images of its category.
+	 */
+	public Scenario withImage(ScenarioImage added)
+	{
+		return withImages(ScenarioImage.shelved(images, added, true));
+	}
+
+	/**
+	 * @return the number the next image takes, unique across the scenario and its encounters.
+	 */
+	public int nextImageId()
+	{
+		return Stream.concat(images.stream(), encounters.stream().flatMap(found -> found.images().stream()))
+			.mapToInt(ScenarioImage::id).max().orElse(0) + 1;
 	}
 }

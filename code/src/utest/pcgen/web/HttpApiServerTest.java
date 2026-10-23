@@ -26,6 +26,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.Base64;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
@@ -38,7 +40,9 @@ import org.junit.jupiter.api.Test;
 import pcgen.session.PcgenSession;
 import pcgen.session.api.Operation;
 import pcgen.session.api.OperationRegistry;
+import pcgen.session.service.ServiceError;
 import pcgen.session.service.ServiceResult;
+import pcgen.session.service.model.ImageContent;
 
 /**
  * What the HTTP server answers, before any game data is loaded.
@@ -163,6 +167,39 @@ public class HttpApiServerTest
 
 		assertEquals(200, answer.statusCode());
 		assertEquals(200, blocked.get(5, TimeUnit.SECONDS).statusCode());
+	}
+
+	private static final byte[] PNG = {(byte) 0x89, 'P', 'N', 'G', '\r', '\n', 0x1A, '\n', 0, 0, 0, 13};
+
+	private void serveOneImage() throws IOException
+	{
+		server.stop();
+		server = HttpApiServer.start(OperationRegistry.of(List.of(
+			Operation.exclusive("get_image", "reads an image", EMPTY_SCHEMA,
+				arguments -> arguments.requiredInt("image_id") == 7
+					? ServiceResult.success(new ImageContent(7, "Kyonin", "general_map", "image/png",
+						Base64.getEncoder().encodeToString(PNG)))
+					: ServiceResult.failure(new ServiceError.EntryNotFound("Image", "8"))))), 0);
+	}
+
+	@Test
+	public void servesAnImageOfTheScenarioAsItself() throws Exception
+	{
+		serveOneImage();
+
+		HttpResponse<byte[]> response = client.send(HttpRequest.newBuilder(uri("/images/7")).GET().build(),
+			HttpResponse.BodyHandlers.ofByteArray());
+
+		assertEquals(List.of(200, "image/png", Arrays.toString(PNG)), List.of(response.statusCode(),
+			response.headers().firstValue("Content-Type").orElse(""), Arrays.toString(response.body())));
+	}
+
+	@Test
+	public void answersAnUnknownImageWithNotFound() throws Exception
+	{
+		serveOneImage();
+
+		assertEquals(404, get("/images/8").statusCode());
 	}
 
 	private HttpResponse<String> postQuietly(String path)

@@ -36,6 +36,7 @@ import java.util.function.UnaryOperator;
 import java.util.random.RandomGenerator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.core.Campaign;
@@ -620,6 +621,58 @@ public final class GameTableSession
 		forgetBuilt();
 		changed();
 		return reward;
+	}
+
+	/**
+	 * @param encounterName the encounter the image belongs to; empty for one of the whole scenario.
+	 * @param name          what the game master calls it.
+	 * @param category      what it shows.
+	 * @param bytes         the file's content.
+	 * @return the image kept; IllegalArgumentException for an unknown encounter, a category that
+	 *         does not belong there, or bytes that are no image the game table keeps.
+	 */
+	public synchronized ScenarioImage addImage(Optional<String> encounterName, String name, ImageCategory category,
+		byte[] bytes)
+	{
+		ScenarioImage image = ScenarioImage.of(scenario.nextImageId(), name, category, bytes);
+		if (encounterName.isEmpty())
+		{
+			scenario = scenario.withImage(image);
+		}
+		else
+		{
+			String wanted = encounterName.get();
+			if (scenario.encounters().stream().noneMatch(encounter -> encounter.name().equals(wanted)))
+			{
+				throw new IllegalArgumentException("The scenario has no encounter " + wanted);
+			}
+			scenario = scenario.withEncounters(scenario.encounters().stream()
+				.map(encounter -> encounter.name().equals(wanted) ? encounter.withImage(image) : encounter).toList());
+		}
+		changed();
+		return image;
+	}
+
+	/**
+	 * @param id an image's number.
+	 * @return the image, wherever it is kept in the scenario.
+	 */
+	public synchronized Optional<ScenarioImage> image(int id)
+	{
+		return Stream.concat(scenario.images().stream(),
+			scenario.encounters().stream().flatMap(encounter -> encounter.images().stream()))
+			.filter(image -> image.id() == id).findFirst();
+	}
+
+	/**
+	 * @param id an image's number, forgotten.
+	 */
+	public synchronized void removeImage(int id)
+	{
+		scenario = scenario.withImages(scenario.images().stream().filter(image -> image.id() != id).toList())
+			.withEncounters(scenario.encounters().stream().map(encounter -> encounter.withImages(
+				encounter.images().stream().filter(image -> image.id() != id).toList())).toList());
+		changed();
 	}
 
 	/**

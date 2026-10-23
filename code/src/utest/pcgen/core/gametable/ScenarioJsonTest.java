@@ -44,7 +44,8 @@ class ScenarioJsonTest
 		MonsterRecipe chief = MonsterRecipe.of(new MonsterSource.CharacterFile("/campaign/goblin-chief.pcg"))
 			.withoutTemplate("Fiendish Creature");
 		Encounter ambush = Encounter.named("Goblin ambush").withNotes("On the road to Sandpoint")
-			.withMonster(new EncounterMonster("Goblin", goblin, 3)).withMonster(new EncounterMonster("Chief", chief, 1));
+			.withMonster(new EncounterMonster("Goblin", goblin, 3)).withMonster(new EncounterMonster("Chief", chief, 1))
+			.withImage(ScenarioImageTest.image(2, "Thistletop bridge", ImageCategory.BATTLEMAP));
 		Combatant seoni = Combatant.player(1, "Seoni", Optional.of("/players/seoni.pcg"));
 		Combatant hurt = Combatant.monster(2, "Goblin 1", "goblins", goblin, 8, 3, true);
 		Combatant archon = Combatant.player(3, "Hound Archon 1", Optional.empty()).withRoundsLeft(OptionalInt.of(4));
@@ -64,7 +65,21 @@ class ScenarioJsonTest
 			List.of(new LootDraw("Goblin 2", "humanoid", TreasureType.STANDARD, 300)));
 		return new Scenario("Pathfinder_RPG", List.of("Core Rulebook", "Bestiary"),
 			List.of(new PartyMember("Seoni", Optional.of("/players/seoni.pcg")), new PartyMember("Valeros",
-				Optional.empty())), List.of(ambush), combat.delaying(3), List.of(loot));
+				Optional.empty())), List.of(ambush), combat.delaying(3), List.of(loot), List.of())
+			.withImage(ScenarioImageTest.image(1, "Sandpoint", ImageCategory.GENERAL_MAP));
+	}
+
+	@Test
+	void aScenarioSavedBeforeImagesReadsWithNone() throws JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+		ObjectNode saved = (ObjectNode) mapper.readTree(ScenarioJson.write(prepared()));
+		saved.remove("images");
+		((ObjectNode) saved.get("encounters").get(0)).remove("images");
+
+		Scenario read = ((ScenarioReading.Read) ScenarioJson.read(mapper.writeValueAsString(saved))).scenario();
+
+		assertEquals(List.of(List.of(), List.of()), List.of(read.images(), read.encounters().getFirst().images()));
 	}
 
 	@Test

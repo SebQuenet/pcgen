@@ -30,10 +30,11 @@ import java.util.List;
  * @param encounters the prepared encounters
  * @param combat     the fight under way
  * @param loot       the loot of the finished fights, oldest first
+ * @param images     the scenario's illustrations and general maps, without their content
  * @param notices    what the last call could not do, or what a new round wore off
  */
 public record GameTableState(String file, boolean dirty, String gameMode, List<String> campaigns,
 	List<PartyMemberEntry> party, List<EncounterEntry> encounters, CombatEntry combat, List<LootBlockEntry> loot,
-	List<String> notices)
+	List<ImageEntry> images, List<String> notices)
 {
 }

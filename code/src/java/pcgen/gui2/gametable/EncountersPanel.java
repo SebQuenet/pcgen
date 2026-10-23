@@ -43,8 +43,11 @@ import pcgen.core.gametable.Encounter;
 import pcgen.core.gametable.EncounterMonster;
 import pcgen.core.gametable.Experience;
 import pcgen.core.gametable.ForgeOutcome;
+import pcgen.core.gametable.HttpTabletopTransfer;
+import pcgen.core.gametable.ImageCategory;
 import pcgen.core.gametable.MonsterRecipe;
 import pcgen.core.gametable.MonsterSource;
+import pcgen.core.gametable.TabletopTransfer;
 import pcgen.system.LanguageBundle;
 
 /**
@@ -61,6 +64,8 @@ final class EncountersPanel extends JPanel
 	private final JTextArea notes = new JTextArea(4, 30);
 	private final JLabel title = new JLabel();
 	private final JLabel worth = new JLabel();
+	private final ImagesPanel scenarioImages;
+	private final ImagesPanel encounterImages;
 	private boolean refreshing;
 
 	EncountersPanel(GameTablePanel table)
@@ -83,6 +88,13 @@ final class EncountersPanel extends JPanel
 		listButtons.add(GameTablePanel.button("in_gametable_moveUp", () -> moveEncounter(-1)));
 		listButtons.add(GameTablePanel.button("in_gametable_moveDown", () -> moveEncounter(1)));
 		left.add(listButtons, BorderLayout.SOUTH);
+		TabletopTransfer tabletop = HttpTabletopTransfer.fromEnvironment();
+		scenarioImages = new ImagesPanel(table, "in_gametable_scenarioImages", Optional::empty,
+			List.of(ImageCategory.SCENARIO_ILLUSTRATION, ImageCategory.GENERAL_MAP), tabletop);
+		encounterImages = new ImagesPanel(table, "in_gametable_encounterImages",
+			() -> selected().map(Encounter::name),
+			List.of(ImageCategory.LOCATION_ILLUSTRATION, ImageCategory.BATTLEMAP, ImageCategory.OTHER), tabletop);
+		JSplitPane leftSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT, scenarioImages, left);
 
 		JPanel right = new JPanel(new BorderLayout(4, 4));
 		JPanel head = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -111,11 +123,14 @@ final class EncountersPanel extends JPanel
 					.ifPresent(encounter -> replaceSelected(encounter.withNotes(notes.getText())));
 			}
 		});
-		south.add(new JScrollPane(notes), BorderLayout.CENTER);
+		JPanel notesAndImages = new JPanel(new GridLayout(1, 2));
+		notesAndImages.add(new JScrollPane(notes));
+		notesAndImages.add(encounterImages);
+		south.add(notesAndImages, BorderLayout.CENTER);
 		south.add(GameTablePanel.button("in_gametable_launch", this::launch), BorderLayout.SOUTH);
 		right.add(south, BorderLayout.SOUTH);
 
-		add(new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, left, right), BorderLayout.CENTER);
+		add(new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftSplit, right), BorderLayout.CENTER);
 	}
 
 	void refresh()
@@ -188,6 +203,8 @@ final class EncountersPanel extends JPanel
 			notes.setText(encounter.map(Encounter::notes).orElse(""));
 		}
 		notes.setEnabled(encounter.isPresent());
+		scenarioImages.refresh(table.session().scenario().images(), true);
+		encounterImages.refresh(encounter.map(Encounter::images).orElse(List.of()), encounter.isPresent());
 		worth.setText("");
 		encounter.ifPresent(found -> table.inBackground(() -> found.monsters().stream()
 			.mapToLong(monster -> table.session().experienceOf(monster)).sum(), this::showWorth));
