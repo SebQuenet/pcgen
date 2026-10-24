@@ -14,10 +14,15 @@ Usage:
 """
 
 import argparse
+import json
+import os
 import re
+import shutil
+import signal
 import subprocess
 import sys
 import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -29,6 +34,8 @@ PORTRAITS = REPOSITORY / "code/src/resources/pcgen/conjurations/portraits"
 PORTRAIT_SIZE = (250, 250)
 JPEG_QUALITY = 85
 CODEX_TIMEOUT_SECONDS = 900
+CODEX_POLL_SECONDS = 30
+CODEX_GENERATED_IMAGES = Path.home() / ".codex/generated_images"
 
 PROMPT = """Generate exactly one image with your image generation tool, then save it as the PNG file {target}.
 Subject: the Pathfinder Roleplaying Game creature "{printed_name}" (bestiary entry "{race}"{race_type}),
@@ -56,6 +63,40 @@ def read_races():
     return races
 
 
+def draw_with_codex(prompt, generated_png):
+    """Has `codex exec` draw `prompt` into `generated_png`; the reason it failed, or None.
+
+    The deadline is on the wall clock, so a run the computer slept through times out on waking,
+    and a timed-out run is killed with its whole process group, the Codex binary the launcher started included.
+    Codex keeps nothing: the session is ephemeral and the copy of the image it files away is removed."""
+    codex = subprocess.Popen(
+        ["codex", "exec", "--ephemeral", "--json", "--skip-git-repo-check", "-s", "workspace-write",
+         "-C", str(generated_png.parent), prompt],
+        stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, start_new_session=True)
+    deadline = time.time() + CODEX_TIMEOUT_SECONDS
+    while True:
+        try:
+            output, _ = codex.communicate(timeout=CODEX_POLL_SECONDS)
+            break
+        except subprocess.TimeoutExpired:
+            if time.time() > deadline:
+                os.killpg(codex.pid, signal.SIGKILL)
+                remove_filed_images(codex.communicate()[0])
+                return "timeout"
+    remove_filed_images(output)
+    if not generated_png.is_file():
+        return f"no image (codex exit {codex.returncode}): {output[-300:]}"
+    return None
+
+
+def remove_filed_images(json_events):
+    """Removes the copies Codex filed under its thread id, named by the run's thread.started event."""
+    for line in json_events.splitlines():
+        if '"thread.started"' in line:
+            shutil.rmtree(CODEX_GENERATED_IMAGES / json.loads(line)["thread_id"], ignore_errors=True)
+            return
+
+
 def generate(race, printed_name, race_type, description=None):
     target_jpeg = PORTRAITS / portrait_name(race)
     with tempfile.TemporaryDirectory(prefix="portrait-") as work_directory:
@@ -63,14 +104,9 @@ def generate(race, printed_name, race_type, description=None):
         prompt = PROMPT.format(target=generated_png, printed_name=printed_name, race=race,
                                race_type=f", type {race_type}" if race_type else "",
                                appearance=f"\nAppearance: {description}" if description else "")
-        try:
-            completed = subprocess.run(
-                ["codex", "exec", "--skip-git-repo-check", "-s", "workspace-write", "-C", work_directory, prompt],
-                stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=CODEX_TIMEOUT_SECONDS)
-        except subprocess.TimeoutExpired:
-            return race, "timeout"
-        if not generated_png.is_file():
-            return race, f"no image (codex exit {completed.returncode}): {completed.stdout[-300:]}"
+        failure = draw_with_codex(prompt, generated_png)
+        if failure:
+            return race, failure
         with Image.open(generated_png) as drawn:
             drawn.convert("RGB").resize(PORTRAIT_SIZE, Image.LANCZOS).save(
                 target_jpeg, "JPEG", quality=JPEG_QUALITY, optimize=True)
