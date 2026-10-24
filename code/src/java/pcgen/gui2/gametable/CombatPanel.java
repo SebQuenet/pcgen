@@ -283,7 +283,8 @@ final class CombatPanel extends JPanel
 		}
 		Combatant found = combatant.get();
 		Combat combat = table.session().combat();
-		String html = monster ? SheetHtml.monster(found, table.session().monsterSheet(found.id()), combat)
+		String html = monster ? SheetHtml.monster(found, table.session().monsterSheet(found.id()), combat,
+				table.session().monster(found.id()).map(TacticsHtml::of).orElse(""))
 			: SheetHtml.player(found, table.session().glance(found.id()), combat);
 		boolean sameCombatant = shownId == found.id();
 		Rectangle visible = sheet.getVisibleRect();

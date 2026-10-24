@@ -56,7 +56,7 @@ final class SheetHtml
 
 	private static final String BODY = "<html><body style='font-family:sans-serif;font-size:14pt;margin:6px'>";
 	private static final String END = "</body></html>";
-	private static final String MUTED = "#6b5a48";
+	static final String MUTED = "#6b5a48";
 	private static final String FIGURE_BACKGROUND = "#f1ebe1";
 	private static final String SECTION_BACKGROUND = "#7a2b1d";
 
@@ -83,9 +83,10 @@ final class SheetHtml
 	 * @param combatant a monster in the fight.
 	 * @param sheet     what PCGen computed of it, when it could be built.
 	 * @param combat    the fight it is in, which names its group and the targets of its spells.
-	 * @return its sheet, with its hit points left, its conditions and the spells it cast.
+	 * @param tactics   how to play it, as {@link TacticsHtml} writes it; empty when it has no tactical sheet.
+	 * @return its sheet, with its hit points left, its conditions, the spells it cast and its tactics.
 	 */
-	static String monster(Combatant combatant, Optional<MonsterSheet> sheet, Combat combat)
+	static String monster(Combatant combatant, Optional<MonsterSheet> sheet, Combat combat, String tactics)
 	{
 		StringBuilder html = head(combatant, sheet.map(MonsterSheet::challengeRating));
 		Health health = combatant.health().orElseThrow();
@@ -94,6 +95,7 @@ final class SheetHtml
 			figures(html, hitPoints, found);
 			conditions(html, combatant, combat);
 			statBlock(html, found);
+			html.append(tactics);
 		}, () -> {
 			html.append("<p style='font-size:20pt'><b>").append(LanguageBundle.getString("in_gametable_hitPoints"))
 				.append(" ").append(hitPoints).append("</b></p>");
@@ -284,9 +286,15 @@ final class SheetHtml
 
 	private static void section(StringBuilder html, String titleKey)
 	{
+		sectionTitle(html, LanguageBundle.getString(titleKey));
+	}
+
+	/** A section's title row, in capitals on the section colour, inside a two-column table. */
+	static void sectionTitle(StringBuilder html, String title)
+	{
 		html.append("<tr><td colspan='2' bgcolor='").append(SECTION_BACKGROUND)
 			.append("' style='color:#ffffff;font-size:12pt'><b>")
-			.append(LanguageBundle.getString(titleKey).toUpperCase()).append("</b></td></tr>");
+			.append(escape(title.toUpperCase())).append("</b></td></tr>");
 	}
 
 	private static void row(StringBuilder html, String labelKey, String value)
