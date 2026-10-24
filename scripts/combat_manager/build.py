@@ -9,10 +9,11 @@ from dataclasses import dataclass
 import catalog
 import completion
 import equipment
+import mythic
 import pcgen_client as pc
 import statblock
 from generate_bestiary import normalize_languages
-from pools import fill_feats, fill_identity_pools, fill_open_choices, open_pools
+from pools import fill_feats, fill_identity_pools, fill_open_choices, open_pools, option_keys
 from skill_ranks import headband_skill, obsessive_bonus, plan_ranks
 from records import NpcRecord
 
@@ -237,7 +238,10 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
             scores={stat: score if score is not None else DEFAULT_SCORE for stat, score in published_scores.items()})
 
     total_level, hints, class_levels = 0, [], {}
+    path = mythic.path_entry(record, class_entries)
     for entry in class_entries:
+        if entry is path:
+            continue
         class_key, school = catalog.resolve_class(entry, catalogs.classes)
         if not class_key:
             report['missing_classes'].append(f'{entry.name} {entry.levels}')
@@ -254,6 +258,9 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
                 report['refused'].append(error.message[:200])
     if total_level == 0:
         raise LookupError('aucune classe reconnue')
+    if path:
+        mythic.add_tiers(character_id, path, report)
+        hints += mythic.ability_hints(record)
     for field_name in ('ClassArchetypes', 'Bloodline', 'Mystery', 'Patron', 'Spirit', 'ProhibitedSchools', 'SpellDomains'):
         hints += statblock.split_list(record.get(field_name))
     hints += statblock.class_choices(record.get('SQ'))
@@ -283,7 +290,7 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
         except pc.PcgenError as error:
             report['refused'].append(error.message[:200])
 
-    primary_class = max(class_entries, key=lambda entry: entry.levels)
+    primary_class = max((entry for entry in class_entries if entry is not path), key=lambda entry: entry.levels)
     highest_stat = max((stat for stat in published_scores if published_scores[stat] is not None), key=lambda stat: published_scores[stat])
     preferences = {'hints': hints, 'highest_stat': highest_stat,
                    'favored_class': catalog.resolve_class(primary_class, catalogs.classes)[0]}
@@ -296,6 +303,11 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
     # the familiar of an arcane bond brings Alertness, so the class choices go before the feats
     fill_open_choices(character_id, preferences, report, include_feats=False)
     published_feats = statblock.parse_feats(record.get('Feats'))
+    mythic_options = set(option_keys(character_id, mythic.FEAT_POOL)) if path else set()
+    if path:
+        # "Mythic Dodge" is no ordinary feat, but means Dodge as well
+        published_feats = [feat for feat in published_feats if not mythic.marked(feat[0])[0] or feat[0] in mythic_options]
+        published_feats += mythic.implied_feats(record.get('Feats'), mythic_options)
     # a familiar's Alertness is active when the stat block lists Alertness among the feats
     described_as = ' '.join(record.get(name) or '' for name in ('Race', 'SubType', 'Source', 'SpellDomains', 'ClassArchetypes'))
     has_alertness = any(key == 'Alertness' for key, _ in published_feats)
@@ -308,6 +320,9 @@ def build_npc(record: NpcRecord, catalogs: Catalogs, report: dict) -> str:
         # a feat with a choice shows under a translated name, so one already placed is told by the request itself
         candidates = [feat for feat in published_feats if not (feat[1] and feat in placed)]
         placed += fill_feats(character_id, candidates, {feat['name'] for feat in sheet['feats'] + sheet['autoFeats']}, report)
+    if path:
+        unplaced = [feat for feat in published_feats if feat not in placed and feat[0] not in {key for key, _ in placed}]
+        mythic.add_feats(character_id, mythic.requested_feats(record.get('Feats'), unplaced, mythic_options), report)
     published_skills = statblock.parse_skills(record.get('Skills'))
     class_keys = sorted(class_levels, key=class_levels.get, reverse=True)
     theme = completion.theme_of(class_keys)

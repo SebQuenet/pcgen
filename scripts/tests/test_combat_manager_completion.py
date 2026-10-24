@@ -36,6 +36,9 @@ class FillablePools(unittest.TestCase):
     def test_an_archetype_is_never_chosen_for_the_npc(self):
         self.assertFalse(fillable('Fighter Archetype'))
 
+    def test_a_mythic_path_ability_is_never_chosen_for_the_npc(self):
+        self.assertFalse(fillable('Mythic Path Feature ~ Trickster Attack'))
+
 
 class BonusLanguages(unittest.TestCase):
 

@@ -18,11 +18,14 @@ STEADY_FEATS = ['Toughness', 'Iron Will', 'Improved Initiative', 'Lightning Refl
 POOL_IS_WORTH_FILLING = ('Feat', 'Talent', 'Arcana', 'Discovery', 'Hex', 'Revelation', 'Rage Power', 'Domain', 'Bond',
                          'Bloodline', 'Channel', 'Mystery', 'Curse', 'Judgment', 'Favored Enemy', 'Favored Terrain',
                          'Combat Style', 'Selection', 'Performance', 'Weapon Training', 'Armor Training', 'Class Feature',
-                         'Inquisition', 'School', 'Archetype', 'Ability Bonus', 'Favored Class', 'Patron', 'Spirit')
+                         'Inquisition', 'School', 'Archetype', 'Ability Bonus', 'Favored Class', 'Patron', 'Spirit',
+                         'Mythic Path')
 POOLS_LEFT_ALONE = {'Retraining', 'GM Awards', 'Afflictions', 'Drawbacks', 'Optional Rules Systems',
                     'Permanency Applied Effects', 'Favored Class Bonus', 'Region of Origin', 'Race Version', 'Traits', 'Pact'}
 # A pool whose first option would change the class is only filled when the stat block names the option
-POOLS_FILLED_ONLY_BY_NAME = ('Archetype',)
+POOLS_FILLED_ONLY_BY_NAME = ('Archetype', 'Mythic Path')
+# the mythic version of a feat shares its key, so mythic.py places those
+MYTHIC_FEAT_POOL = 'Mythic Feat'
 FILL_PASSES = 6
 FEATS_GRANTED_OUTSIDE_PCGEN = {'Alertness'}
 
@@ -62,7 +65,8 @@ def fill_feats(character_id: str, feats: list[tuple[str, str | None]], owned_nam
     """
     # a familiar grants Alertness without PCGen knowing, so it is the feat to go without
     pending = sorted(feats, key=lambda feat: feat[0] in FEATS_GRANTED_OUTSIDE_PCGEN)
-    pools = [pool for pool in open_pools(character_id) if 'feat' in pool['key'].casefold() and worth_filling(pool['key'])]
+    pools = [pool for pool in open_pools(character_id)
+             if 'feat' in pool['key'].casefold() and worth_filling(pool['key']) and pool['key'] != MYTHIC_FEAT_POOL]
     pools.sort(key=lambda pool: pool['key'] == FEAT_POOL)
     placed = []
     # the general pool's options give every feat's translated name, even when that pool is full
@@ -104,8 +108,9 @@ def preferred_options(category: str, options: list[str], preferences: dict) -> l
     hints = preferences['hints']
     if category == 'Favored Class':
         wanted = [option for option in options if option == preferences['favored_class']]
-    elif category == 'Ability Bonus':
-        wanted = [f'+2 {STAT_NAMES[preferences["highest_stat"]]}']
+    elif category.endswith('Ability Bonus'):
+        # "+2 Strength", or "Mythic Ability Bonus ~ +2 Strength"
+        wanted = [option for option in options if option.split('~')[-1].strip() == f'+2 {STAT_NAMES[preferences["highest_stat"]]}']
     elif 'class selection' in category.casefold():
         mark = 'unchained' if any(hint.casefold() == 'unchained' for hint in hints) else 'standard'
         wanted = [option for option in options if mark in option.casefold()]

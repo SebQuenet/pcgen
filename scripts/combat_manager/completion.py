@@ -100,7 +100,8 @@ def skill_ranking(class_names: list[str], published: dict[str, int]) -> list[str
 
 def fillable(pool_key: str) -> bool:
     """A pool the import may complete: not an archetype, an ability adjustment, an identity or a pool left alone."""
-    return (pool_key not in POOLS_LEFT_ALONE and not pool_key.endswith(IDENTITY_POOLS + POOLS_FILLED_ONLY_BY_NAME)
+    return (pool_key not in POOLS_LEFT_ALONE and not pool_key.endswith(IDENTITY_POOLS)
+            and not any(mark in pool_key for mark in POOLS_FILLED_ONLY_BY_NAME)
             and 'Ability Adjustment' not in pool_key and pool_key != CLASS_SKILL_POOL)
 
 
