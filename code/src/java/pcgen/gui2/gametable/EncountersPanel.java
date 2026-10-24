@@ -39,15 +39,14 @@ import javax.swing.JTextArea;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.AbstractTableModel;
 
+import pcgen.core.gametable.BestiaryPawn;
 import pcgen.core.gametable.Encounter;
 import pcgen.core.gametable.EncounterMonster;
 import pcgen.core.gametable.Experience;
 import pcgen.core.gametable.ForgeOutcome;
-import pcgen.core.gametable.HttpTabletopTransfer;
 import pcgen.core.gametable.ImageCategory;
 import pcgen.core.gametable.MonsterRecipe;
 import pcgen.core.gametable.MonsterSource;
-import pcgen.core.gametable.TabletopTransfer;
 import pcgen.system.LanguageBundle;
 
 /**
@@ -88,12 +87,12 @@ final class EncountersPanel extends JPanel
 		listButtons.add(GameTablePanel.button("in_gametable_moveUp", () -> moveEncounter(-1)));
 		listButtons.add(GameTablePanel.button("in_gametable_moveDown", () -> moveEncounter(1)));
 		left.add(listButtons, BorderLayout.SOUTH);
-		TabletopTransfer tabletop = HttpTabletopTransfer.fromEnvironment();
 		scenarioImages = new ImagesPanel(table, "in_gametable_scenarioImages", Optional::empty,
-			List.of(ImageCategory.SCENARIO_ILLUSTRATION, ImageCategory.GENERAL_MAP), tabletop);
+			List.of(ImageCategory.SCENARIO_ILLUSTRATION, ImageCategory.GENERAL_MAP));
 		encounterImages = new ImagesPanel(table, "in_gametable_encounterImages",
 			() -> selected().map(Encounter::name),
-			List.of(ImageCategory.LOCATION_ILLUSTRATION, ImageCategory.BATTLEMAP, ImageCategory.OTHER), tabletop);
+			List.of(ImageCategory.LOCATION_ILLUSTRATION, ImageCategory.BATTLEMAP, ImageCategory.PAWN,
+				ImageCategory.OTHER));
 		JSplitPane leftSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT, scenarioImages, left);
 
 		JPanel right = new JPanel(new BorderLayout(4, 4));
@@ -110,6 +109,7 @@ final class EncountersPanel extends JPanel
 		monsterButtons.add(GameTablePanel.button("in_gametable_changeCount", this::changeCount));
 		monsterButtons.add(GameTablePanel.button("in_gametable_retouch", this::retouch));
 		monsterButtons.add(GameTablePanel.button("in_gametable_removeMonster", this::removeMonster));
+		PawnButtons.of(table, this, this::selectedPawn).forEach(monsterButtons::add);
 		south.add(monsterButtons, BorderLayout.NORTH);
 		notes.setLineWrap(true);
 		notes.setWrapStyleWord(true);
@@ -329,6 +329,11 @@ final class EncountersPanel extends JPanel
 				monster.count()).filter(count -> count > 0)
 				.ifPresent(count -> changeMonster(index, monster.withCount(count)));
 		});
+	}
+
+	private Optional<BestiaryPawn> selectedPawn()
+	{
+		return selectedMonsterIndex().flatMap(index -> BestiaryPawn.of(monstersModel.monsters.get(index).recipe().source()));
 	}
 
 	private void retouch()

@@ -59,6 +59,7 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 
 import pcgen.core.Campaign;
+import pcgen.core.gametable.BestiaryPawn;
 import pcgen.core.gametable.Combat;
 import pcgen.core.gametable.Combatant;
 import pcgen.core.gametable.CombatantKind;
@@ -169,6 +170,7 @@ final class CombatPanel extends JPanel
 		openButton = GameTablePanel.button("in_gametable_openInCharacters", this::openInCharacters);
 		sheetButtons.add(retouchButton);
 		sheetButtons.add(openButton);
+		PawnButtons.of(table, this, this::targetPawn).forEach(sheetButtons::add);
 		right.add(sheetButtons, BorderLayout.SOUTH);
 
 		JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, new JScrollPane(order), right);
@@ -255,6 +257,11 @@ final class CombatPanel extends JPanel
 	{
 		return Arrays.stream(order.getSelectedRows()).filter(row -> row < rows.rows.size())
 			.mapToObj(row -> rows.rows.get(row).combatant()).distinct().toList();
+	}
+
+	private Optional<BestiaryPawn> targetPawn()
+	{
+		return target().flatMap(Combatant::recipe).flatMap(recipe -> BestiaryPawn.of(recipe.source()));
 	}
 
 	/** The combatant an action applies to: the one picked, else the one acting. */

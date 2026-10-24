@@ -27,7 +27,7 @@ import java.util.List;
  * @param monsters        its monsters
  * @param experience      what its monsters are worth together
  * @param challengeRating the challenge rating that total amounts to, null for none
- * @param images          its location illustrations, battlemaps and other images, without their content
+ * @param images          its location illustrations, battlemaps, pawns and other images, without their content
  */
 public record EncounterEntry(String name, String notes, List<EncounterMonsterEntry> monsters, long experience,
 	String challengeRating, List<ImageEntry> images)

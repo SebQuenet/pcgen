@@ -49,8 +49,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import pcgen.core.gametable.ImageCategory;
 import pcgen.core.gametable.ScenarioImage;
-import pcgen.core.gametable.TabletopOutcome;
-import pcgen.core.gametable.TabletopTransfer;
 import pcgen.system.LanguageBundle;
 
 /**
@@ -65,7 +63,6 @@ final class ImagesPanel extends JPanel
 	private final GameTablePanel table;
 	private final Supplier<Optional<String>> encounter;
 	private final List<ImageCategory> categories;
-	private final TabletopTransfer tabletop;
 	private final DefaultListModel<ScenarioImage> images = new DefaultListModel<>();
 	private final JList<ScenarioImage> list = new JList<>(images);
 	private final JButton add;
@@ -75,16 +72,13 @@ final class ImagesPanel extends JPanel
 	 * @param titleKey   the key of the list's title.
 	 * @param encounter  the encounter the images belong to; empty for the scenario's own.
 	 * @param categories the kinds of image kept here.
-	 * @param tabletop   sends images to Tabletop Simulator.
 	 */
-	ImagesPanel(GameTablePanel table, String titleKey, Supplier<Optional<String>> encounter, List<ImageCategory> categories,
-		TabletopTransfer tabletop)
+	ImagesPanel(GameTablePanel table, String titleKey, Supplier<Optional<String>> encounter, List<ImageCategory> categories)
 	{
 		super(new BorderLayout());
 		this.table = table;
 		this.encounter = encounter;
 		this.categories = List.copyOf(categories);
-		this.tabletop = tabletop;
 		setBorder(BorderFactory.createTitledBorder(LanguageBundle.getString(titleKey)));
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		list.setVisibleRowCount(4);
@@ -211,35 +205,12 @@ final class ImagesPanel extends JPanel
 
 	private void save(ScenarioImage image)
 	{
-		JFileChooser chooser = new JFileChooser();
-		chooser.setSelectedFile(new File(image.fileName()));
-		if (chooser.showSaveDialog(this) != JFileChooser.APPROVE_OPTION)
-		{
-			return;
-		}
-		try
-		{
-			Files.write(chooser.getSelectedFile().toPath(), image.bytes());
-		}
-		catch (IOException failed)
-		{
-			JOptionPane.showMessageDialog(this, failed.getMessage(), LanguageBundle.getString("in_gametable_title"),
-				JOptionPane.WARNING_MESSAGE);
-		}
+		ImageActions.save(this, image.fileName(), image.bytes());
 	}
 
 	private void send(ScenarioImage image, boolean placeOnTable)
 	{
-		table.inBackground(() -> tabletop.send(image, placeOnTable), outcome -> {
-			String message = switch (outcome)
-			{
-				case TabletopOutcome.Sent sent -> LanguageBundle.getFormattedString(sent.placed()
-					? "in_gametable_imageOnTableDone" : "in_gametable_imageToCloudDone", image.name(), sent.key());
-				case TabletopOutcome.Failed failed -> failed.reason();
-			};
-			JOptionPane.showMessageDialog(this, message, LanguageBundle.getString("in_gametable_title"),
-				outcome instanceof TabletopOutcome.Sent ? JOptionPane.INFORMATION_MESSAGE : JOptionPane.WARNING_MESSAGE);
-		});
+		ImageActions.send(table, this, image.forTabletop(), image.name(), placeOnTable);
 	}
 
 	private void remove(ScenarioImage image)

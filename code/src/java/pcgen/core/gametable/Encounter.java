@@ -79,7 +79,7 @@ public record Encounter(String name, List<EncounterMonster> monsters, String not
 	}
 
 	/**
-	 * @param added a location illustration, a battlemap or another image of the encounter.
+	 * @param added a location illustration, a battlemap, a pawn or another image of the encounter.
 	 * @return the encounter showing it after the images of its category.
 	 */
 	public Encounter withImage(ScenarioImage added)

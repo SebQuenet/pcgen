@@ -27,6 +27,7 @@ import java.util.OptionalInt;
 import pcgen.core.conjurations.CreatureAttack;
 import pcgen.core.conjurations.CreatureStats;
 import pcgen.core.conjurations.SpecialAbilities;
+import pcgen.core.gametable.BestiaryPawn;
 import pcgen.core.gametable.CastSpell;
 import pcgen.core.gametable.Combat;
 import pcgen.core.gametable.Combatant;
@@ -59,6 +60,9 @@ final class SheetHtml
 	static final String MUTED = "#6b5a48";
 	private static final String FIGURE_BACKGROUND = "#f1ebe1";
 	private static final String SECTION_BACKGROUND = "#7a2b1d";
+	private static final int PAWN_WIDTH = 100;
+	private static final int PAWN_HEIGHT = 150;
+	private static final int PAWN_MARGIN = 8;
 
 	private SheetHtml()
 	{
@@ -66,14 +70,17 @@ final class SheetHtml
 
 	/**
 	 * @param sheet a monster's sheet, before it enters an encounter.
-	 * @return its stat block, without any fight state.
+	 * @param pawn  its pawn; empty when none was drawn for it.
+	 * @return its stat block and its pawn, without any fight state.
 	 */
-	static String preview(MonsterSheet sheet)
+	static String preview(MonsterSheet sheet, Optional<BestiaryPawn> pawn)
 	{
 		StringBuilder html = new StringBuilder(BODY);
-		html.append("<p align='right' style='color:").append(MUTED).append("'>")
-			.append(LanguageBundle.getString("in_gametable_challengeRating")).append(" <b>")
-			.append(escape(sheet.challengeRating())).append("</b></p>");
+		html.append("<table width='100%' cellspacing='0' cellpadding='0'><tr><td align='right' valign='bottom' style='color:")
+			.append(MUTED).append("'>").append(LanguageBundle.getString("in_gametable_challengeRating")).append(" <b>")
+			.append(escape(sheet.challengeRating())).append("</b></td>");
+		pawnCell(html, pawn);
+		html.append("</tr></table>");
 		figures(html, String.valueOf(sheet.stats().maximumHitPoints()), sheet);
 		statBlock(html, sheet);
 		return html.append(END).toString();
@@ -135,6 +142,7 @@ final class SheetHtml
 		challengeRating.ifPresent(rating -> html.append("<td align='right' valign='bottom' style='color:").append(MUTED)
 			.append("'>").append(LanguageBundle.getString("in_gametable_challengeRating")).append(" <b>")
 			.append(escape(rating)).append("</b></td>"));
+		pawnCell(html, combatant.recipe().flatMap(recipe -> BestiaryPawn.of(recipe.source())));
 		html.append("</tr></table>");
 		combatant.recipe().ifPresent(recipe -> {
 			String touches = EncountersPanel.touchesOf(recipe);
@@ -143,6 +151,14 @@ final class SheetHtml
 				.append(touches.isEmpty() ? "" : " — " + escape(touches)).append("</i></div>");
 		});
 		return html;
+	}
+
+	/** The creature's pawn, at the right end of the sheet's first row. */
+	private static void pawnCell(StringBuilder html, Optional<BestiaryPawn> pawn)
+	{
+		pawn.ifPresent(found -> html.append("<td align='right' width='").append(PAWN_WIDTH + PAWN_MARGIN)
+			.append("'><img src='").append(escape(found.location().toExternalForm())).append("' width='").append(PAWN_WIDTH)
+			.append("' height='").append(PAWN_HEIGHT).append("'></td>"));
 	}
 
 	/** The numbers asked for every round, in large type. */

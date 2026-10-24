@@ -48,9 +48,11 @@ import pcgen.core.GameMode;
 import pcgen.core.Globals;
 import pcgen.core.SystemCollections;
 import pcgen.core.gametable.GameTableSession;
+import pcgen.core.gametable.HttpTabletopTransfer;
 import pcgen.core.gametable.MonsterForge;
 import pcgen.core.gametable.Scenario;
 import pcgen.core.gametable.ScenarioReading;
+import pcgen.core.gametable.TabletopTransfer;
 import pcgen.facade.core.DataSetFacade;
 import pcgen.facade.util.ListFacades;
 import pcgen.gui2.PCGenFrame;
@@ -77,6 +79,7 @@ public final class GameTablePanel extends JPanel
 	private final EncountersPanel encountersPanel;
 	private final CombatPanel combatPanel;
 	private final BestiaryPanel bestiaryPanel;
+	private final TabletopTransfer tabletop = HttpTabletopTransfer.fromEnvironment();
 
 	/**
 	 * @param frame PCGen's main window, which loads sources and opens characters.
@@ -106,6 +109,14 @@ public final class GameTablePanel extends JPanel
 	GameTableSession session()
 	{
 		return session;
+	}
+
+	/**
+	 * @return what sends images to Tabletop Simulator.
+	 */
+	TabletopTransfer tabletop()
+	{
+		return tabletop;
 	}
 
 	PCGenFrame frame()

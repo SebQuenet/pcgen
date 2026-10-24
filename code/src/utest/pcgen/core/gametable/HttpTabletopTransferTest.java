@@ -89,13 +89,13 @@ class HttpTabletopTransferTest
 	void anImageGoesToTheCloud()
 	{
 		assertEquals(new TabletopOutcome.Sent("abc-Clearing.png", Optional.of("https://steam/abc"), false),
-			transfer().send(CLEARING, false));
+			transfer().send(CLEARING.forTabletop(), false));
 	}
 
 	@Test
 	void anImageIsFiledInThePcgenFolderUnderItsFileName()
 	{
-		transfer().send(CLEARING, false);
+		transfer().send(CLEARING.forTabletop(), false);
 
 		assertTrue(received.getFirst().contains("PCGen") && received.getFirst().contains("filename=\"Clearing.png\""),
 			received.getFirst());
@@ -107,15 +107,25 @@ class HttpTabletopTransferTest
 		uploadStatus = 409;
 		uploadAnswer = "{\"failure\":{\"kind\":\"file-already-exists\",\"key\":\"abc-Clearing.png\"}}";
 
-		assertEquals(new TabletopOutcome.Sent("abc-Clearing.png", Optional.empty(), false), transfer().send(CLEARING, false));
+		assertEquals(new TabletopOutcome.Sent("abc-Clearing.png", Optional.empty(), false), transfer().send(CLEARING.forTabletop(), false));
 	}
 
 	@Test
 	void anImagePlacedOnTheTableIsSpawnedAsATile()
 	{
-		transfer().send(CLEARING, true);
+		transfer().send(CLEARING.forTabletop(), true);
 
 		assertEquals("{\"keys\":[\"abc-Clearing.png\"],\"kind\":\"Custom_Tile\"}", received.getLast());
+	}
+
+	@Test
+	void aPawnPlacedOnTheTableIsSpawnedAsAFigurine()
+	{
+		TabletopUpload pawn = new TabletopUpload("aboleth.jpg", ImageFormat.JPEG, new byte[]{1}, TabletopPiece.FIGURINE);
+
+		transfer().send(pawn, true);
+
+		assertTrue(received.getLast().contains("\"kind\":\"Figurine_Custom\""), received.getLast());
 	}
 
 	@Test
@@ -124,7 +134,7 @@ class HttpTabletopTransferTest
 		uploadStatus = 503;
 		uploadAnswer = "{\"failure\":{\"kind\":\"steam-unavailable\"}}";
 
-		TabletopOutcome outcome = transfer().send(CLEARING, false);
+		TabletopOutcome outcome = transfer().send(CLEARING.forTabletop(), false);
 
 		assertTrue(outcome instanceof TabletopOutcome.Failed failed && failed.reason().contains("steam-unavailable"),
 			outcome.toString());
@@ -135,7 +145,7 @@ class HttpTabletopTransferTest
 	{
 		tool.stop(0);
 
-		assertInstanceOf(TabletopOutcome.Failed.class, transfer().send(CLEARING, false));
+		assertInstanceOf(TabletopOutcome.Failed.class, transfer().send(CLEARING.forTabletop(), false));
 	}
 
 	@Test
@@ -143,7 +153,7 @@ class HttpTabletopTransferTest
 	{
 		tool.stop(0);
 
-		TabletopOutcome outcome = transfer().send(CLEARING, false);
+		TabletopOutcome outcome = transfer().send(CLEARING.forTabletop(), false);
 
 		assertTrue(outcome instanceof TabletopOutcome.Failed failed && !failed.reason().endsWith("null"), outcome.toString());
 	}

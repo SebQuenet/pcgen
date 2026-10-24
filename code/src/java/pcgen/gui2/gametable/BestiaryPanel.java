@@ -36,6 +36,7 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingUtilities;
 
 import pcgen.core.Globals;
+import pcgen.core.gametable.BestiaryPawn;
 import pcgen.core.gametable.CombatantSheets;
 import pcgen.core.gametable.EncounterMonster;
 import pcgen.core.gametable.ForgeOutcome;
@@ -71,6 +72,7 @@ final class BestiaryPanel extends JPanel
 		buttons.add(new JSpinner(count));
 		buttons.add(GameTablePanel.button("in_gametable_toEncounter", this::toEncounter));
 		buttons.add(GameTablePanel.button("in_gametable_toFight", this::toFight));
+		PawnButtons.of(table, this, this::pickedPawn).forEach(buttons::add);
 		right.add(buttons, BorderLayout.SOUTH);
 		JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, races, right);
 		split.setResizeWeight(0.35);
@@ -94,13 +96,19 @@ final class BestiaryPanel extends JPanel
 			MonsterRecipe.of(new MonsterSource.BestiaryRace(key)), count.getNumber().intValue()));
 	}
 
+	private Optional<BestiaryPawn> pickedPawn()
+	{
+		return picked().flatMap(monster -> BestiaryPawn.of(monster.recipe().source()));
+	}
+
 	private void showPreview()
 	{
 		preview.setText("");
 		picked().ifPresent(monster -> table.inBackground(() -> table.session().previewSheet(monster.recipe()), outcome -> {
 			switch (outcome)
 			{
-				case ForgeOutcome.Built<MonsterSheet> built -> preview.setText(SheetHtml.preview(built.value()));
+				case ForgeOutcome.Built<MonsterSheet> built -> preview.setText(SheetHtml.preview(built.value(),
+					BestiaryPawn.of(monster.recipe().source())));
 				case ForgeOutcome.Failed<MonsterSheet> failed -> preview.setText(
 					EncountersPanel.escape(failed.reason()));
 			}

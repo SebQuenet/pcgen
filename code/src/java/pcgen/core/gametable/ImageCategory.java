@@ -23,17 +23,28 @@ package pcgen.core.gametable;
  */
 public enum ImageCategory
 {
-	SCENARIO_ILLUSTRATION(true),
-	GENERAL_MAP(true),
-	LOCATION_ILLUSTRATION(false),
-	BATTLEMAP(false),
-	OTHER(false);
+	SCENARIO_ILLUSTRATION(true, TabletopPiece.TILE),
+	GENERAL_MAP(true, TabletopPiece.TILE),
+	LOCATION_ILLUSTRATION(false, TabletopPiece.TILE),
+	BATTLEMAP(false, TabletopPiece.TILE),
+	PAWN(false, TabletopPiece.FIGURINE),
+	OTHER(false, TabletopPiece.TILE);
 
 	private final boolean isScenarioWide;
+	private final TabletopPiece piece;
 
-	ImageCategory(boolean isScenarioWide)
+	ImageCategory(boolean isScenarioWide, TabletopPiece piece)
 	{
 		this.isScenarioWide = isScenarioWide;
+		this.piece = piece;
+	}
+
+	/**
+	 * @return what images of this kind become once placed on Tabletop Simulator's table.
+	 */
+	public TabletopPiece piece()
+	{
+		return piece;
 	}
 
 	/**

@@ -582,7 +582,7 @@ public final class GameTableService
 
 	public ServiceResult<TabletopSent> sendImageToTabletop(int id, boolean placeOnTable)
 	{
-		return image(id).andThen(image -> switch (tabletop.send(image, placeOnTable))
+		return image(id).andThen(image -> switch (tabletop.send(image.forTabletop(), placeOnTable))
 		{
 			case TabletopOutcome.Sent sent -> ServiceResult.success(new TabletopSent(sent.key(), sent.url().orElse(null),
 				sent.placed()));

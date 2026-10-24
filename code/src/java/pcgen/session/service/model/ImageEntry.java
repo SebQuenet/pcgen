@@ -22,7 +22,7 @@ package pcgen.session.service.model;
  *
  * @param id        its number, to read, remove or send it
  * @param name      what the game master calls it
- * @param category  what it shows: scenario_illustration, general_map, location_illustration, battlemap or other
+ * @param category  what it shows: scenario_illustration, general_map, location_illustration, battlemap, pawn or other
  * @param mediaType its format, such as image/png
  * @param sizeBytes its size
  */

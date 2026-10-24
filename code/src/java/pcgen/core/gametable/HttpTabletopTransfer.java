@@ -43,7 +43,6 @@ public final class HttpTabletopTransfer implements TabletopTransfer
 	public static final String DEFAULT_ADDRESS = "http://127.0.0.1:8788";
 	public static final String ADDRESS_VARIABLE = "PCGEN_TABLETOP_URL";
 	private static final String CLOUD_FOLDER = "PCGen";
-	private static final String TILE = "Custom_Tile";
 	private static final String ALREADY_THERE = "file-already-exists";
 	private static final int SUCCESS_LIMIT = 300;
 	private static final Duration CONNECTION_TIMEOUT = Duration.ofSeconds(5);
@@ -72,11 +71,11 @@ public final class HttpTabletopTransfer implements TabletopTransfer
 	}
 
 	@Override
-	public TabletopOutcome send(ScenarioImage image, boolean placeOnTable)
+	public TabletopOutcome send(TabletopUpload upload, boolean placeOnTable)
 	{
 		try
 		{
-			HttpResponse<String> uploaded = post("/files", multipart(image), UPLOAD_TIMEOUT);
+			HttpResponse<String> uploaded = post("/files", multipart(upload), UPLOAD_TIMEOUT);
 			JsonNode answer = parse(uploaded.body());
 			String key;
 			Optional<String> url;
@@ -98,7 +97,7 @@ public final class HttpTabletopTransfer implements TabletopTransfer
 			{
 				return new TabletopOutcome.Sent(key, url, false);
 			}
-			String spawn = json.writeValueAsString(spawnRequest(key));
+			String spawn = json.writeValueAsString(spawnRequest(key, upload.piece()));
 			HttpResponse<String> spawned = post("/spawn", new Body(spawn.getBytes(StandardCharsets.UTF_8),
 				"application/json"), CONNECTION_TIMEOUT.multipliedBy(6));
 			return spawned.statusCode() < SUCCESS_LIMIT ? new TabletopOutcome.Sent(key, url, true)
@@ -117,11 +116,11 @@ public final class HttpTabletopTransfer implements TabletopTransfer
 		}
 	}
 
-	private ObjectNode spawnRequest(String key)
+	private ObjectNode spawnRequest(String key, TabletopPiece piece)
 	{
 		ObjectNode request = json.createObjectNode();
 		request.putArray("keys").add(key);
-		request.put("kind", TILE);
+		request.put("kind", piece.objectName());
 		return request;
 	}
 
@@ -136,15 +135,15 @@ public final class HttpTabletopTransfer implements TabletopTransfer
 		return client.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
 	}
 
-	private static Body multipart(ScenarioImage image) throws IOException
+	private static Body multipart(TabletopUpload upload) throws IOException
 	{
 		String boundary = "pcgen-" + UUID.randomUUID();
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		out.write(("--" + boundary + "\r\nContent-Disposition: form-data; name=\"folder\"\r\n\r\n" + CLOUD_FOLDER + "\r\n")
 			.getBytes(StandardCharsets.UTF_8));
-		out.write(("--" + boundary + "\r\nContent-Disposition: form-data; name=\"file\"; filename=\"" + image.fileName()
-			+ "\"\r\nContent-Type: " + image.format().mediaType() + "\r\n\r\n").getBytes(StandardCharsets.UTF_8));
-		out.write(image.bytes());
+		out.write(("--" + boundary + "\r\nContent-Disposition: form-data; name=\"file\"; filename=\"" + upload.fileName()
+			+ "\"\r\nContent-Type: " + upload.format().mediaType() + "\r\n\r\n").getBytes(StandardCharsets.UTF_8));
+		out.write(upload.bytes());
 		out.write(("\r\n--" + boundary + "--\r\n").getBytes(StandardCharsets.UTF_8));
 		return new Body(out.toByteArray(), "multipart/form-data; boundary=" + boundary);
 	}

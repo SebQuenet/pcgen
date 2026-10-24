@@ -38,6 +38,18 @@ class ScenarioImageTest
 	}
 
 	@Test
+	void aPawnStandsOnTheTableAsAFigurine()
+	{
+		assertEquals(TabletopPiece.FIGURINE, image(1, "Goblin", ImageCategory.PAWN).forTabletop().piece());
+	}
+
+	@Test
+	void aBattlemapLiesOnTheTableAsATile()
+	{
+		assertEquals(TabletopPiece.TILE, image(1, "Clearing", ImageCategory.BATTLEMAP).forTabletop().piece());
+	}
+
+	@Test
 	void aPngIsKnownByItsFirstBytes()
 	{
 		assertEquals(Optional.of(ImageFormat.PNG), ImageFormat.detect(PNG));

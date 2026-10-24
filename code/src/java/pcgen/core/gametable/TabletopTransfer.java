@@ -18,14 +18,14 @@
 package pcgen.core.gametable;
 
 /**
- * Sends the scenario's images to Tabletop Simulator.
+ * Sends images to Tabletop Simulator: the scenario's, and the pawns of its creatures.
  */
 public interface TabletopTransfer
 {
 	/**
-	 * @param image        an image of the scenario.
-	 * @param placeOnTable whether to lay it on the table of the loaded game, after putting it in the cloud.
+	 * @param upload       the image.
+	 * @param placeOnTable whether to place it on the table of the loaded game, after putting it in the cloud.
 	 * @return what became of it.
 	 */
-	TabletopOutcome send(ScenarioImage image, boolean placeOnTable);
+	TabletopOutcome send(TabletopUpload upload, boolean placeOnTable);
 }

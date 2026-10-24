@@ -632,14 +632,14 @@ public final class GameTableOperations
 	{
 		return Operation.exclusive("add_image",
 			"Keep an image in the scenario file: an illustration of the scenario or a general map for the whole "
-				+ "scenario, a location illustration, a battlemap or another image for an encounter. PNG, JPEG, GIF "
+				+ "scenario, a location illustration, a battlemap, a pawn or another image for an encounter. PNG, JPEG, GIF "
 				+ "or BMP, up to 50 MB, from a local file or from its content in base 64." + STATE,
 			"""
 				{
 					"type": "object",
 					"properties": {
 						"encounter": { "type": "string", "description": "Name of the encounter it belongs to; omitted for the whole scenario" },
-						"category": { "type": "string", "enum": ["scenario_illustration", "general_map", "location_illustration", "battlemap", "other"] },
+						"category": { "type": "string", "enum": ["scenario_illustration", "general_map", "location_illustration", "battlemap", "pawn", "other"] },
 						"name": { "type": "string", "description": "What to call it; the file's name by default" },
 						"path": { "type": "string", "description": "Path of a local image file" },
 						"content_base64": { "type": "string", "description": "The image's bytes in base 64, when no path is given" }

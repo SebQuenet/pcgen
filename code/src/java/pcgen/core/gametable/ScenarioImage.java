@@ -25,7 +25,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 /**
- * An image kept in the scenario file: an illustration, a map, a battlemap.
+ * An image kept in the scenario file: an illustration, a map, a battlemap, a pawn.
  *
  * @param id       its number, unique in the scenario.
  * @param name     what the game master calls it.
@@ -88,6 +88,14 @@ public record ScenarioImage(int id, String name, ImageCategory category, ImageFo
 	public byte[] bytes()
 	{
 		return Base64.getDecoder().decode(content);
+	}
+
+	/**
+	 * @return the image, to be placed on Tabletop Simulator's table as its category asks: a pawn standing, the others flat.
+	 */
+	public TabletopUpload forTabletop()
+	{
+		return new TabletopUpload(fileName(), format, bytes(), category.piece());
 	}
 
 	/**
