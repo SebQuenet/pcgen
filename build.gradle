@@ -459,12 +459,15 @@ runtime {
             installerType = 'msi'
             // Lets the player pick the install folder instead of forcing C:\Program Files.
             installerOptions += ['--win-dir-chooser', '--win-menu', '--win-shortcut']
+            // jpackage's main.wxs plus a step that saves the characters before an upgrade deletes them.
+            resourceDir = layout.projectDirectory.dir("installers/windows-msi").asFile
         }
         imageName = "PcGen"
 
         // The game data sits next to the jar, in $APPDIR, and PCGen resolves it against user.dir.
         // Without this a native launcher started from anywhere but that directory finds nothing.
-        jvmArgs = ['-Dsun.java2d.d3d=false', '-Duser.dir=$APPDIR']
+        // Characters go to the user's documents: the Windows installer deletes $APPDIR on upgrade.
+        jvmArgs = ['-Dsun.java2d.d3d=false', '-Duser.dir=$APPDIR', '-Dpcgen.charactersInDocuments=true']
 
         // A second executable, next to the GUI one, that speaks the Model Context Protocol.
         imageOptions += ['--add-launcher', "pcgen-mcp=${mcpLauncherPropertiesFile.get().asFile.absolutePath}"]

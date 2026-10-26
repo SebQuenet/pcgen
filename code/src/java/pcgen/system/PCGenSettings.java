@@ -19,6 +19,7 @@
 package pcgen.system;
 
 import java.io.File;
+import java.util.List;
 
 import pcgen.output.publish.OutputDB;
 
@@ -32,6 +33,10 @@ import org.apache.commons.lang3.SystemUtils;
 public final class PCGenSettings extends PropertyContext
 {
 
+	private static final CharactersLocation CHARACTERS_LOCATION = CharactersLocation.forCurrentProgram();
+	// Qualified because the constants are declared after the instance that needs them.
+	private static final List<String> CHARACTERS_PATH_KEYS = List.of(PCGenSettings.PCG_SAVE_PATH,
+		PCGenSettings.PCP_SAVE_PATH, PCGenSettings.CHAR_PORTRAITS_PATH, PCGenSettings.BACKUP_PCG_PATH);
 	private static final PCGenSettings INSTANCE = new PCGenSettings();
 	/**
 	 * This is the PropertyContext for the pcgen options, all keys that are used with
@@ -84,18 +89,24 @@ public final class PCGenSettings extends PropertyContext
 	private PCGenSettings()
 	{
 		super("options.ini");
-		setProperty(PCG_SAVE_PATH,
-			(ConfigurationSettings.getUserDir() + "/characters").replace('/', File.separatorChar));
-		setProperty(PCP_SAVE_PATH,
-			(ConfigurationSettings.getUserDir() + "/characters").replace('/', File.separatorChar));
-		setProperty(CHAR_PORTRAITS_PATH,
-			(ConfigurationSettings.getUserDir() + "/characters").replace('/', File.separatorChar));
-		setProperty(BACKUP_PCG_PATH,
-			(ConfigurationSettings.getUserDir() + "/characters").replace('/', File.separatorChar));
+		String charactersDirectory = CHARACTERS_LOCATION.defaultDirectory();
+		for (String charactersPathKey : CHARACTERS_PATH_KEYS)
+		{
+			setProperty(charactersPathKey, charactersDirectory);
+		}
 		setProperty(VENDOR_DATA_DIR, "@vendordata");
 		setProperty(HOMEBREW_DATA_DIR, "@homebrewdata");
 		setProperty(CUSTOM_DATA_DIR, "@data/customsources".replace('/', File.separatorChar));
 		OutputDB.registerBooleanPreference(OPTION_SHOW_OUTPUT_NAME_FOR_OTHER_ITEMS, false);
+	}
+
+	@Override
+	protected void afterPropertiesLoaded()
+	{
+		for (String charactersPathKey : CHARACTERS_PATH_KEYS)
+		{
+			setProperty(charactersPathKey, CHARACTERS_LOCATION.relocated(getProperty(charactersPathKey)));
+		}
 	}
 
 	@Override

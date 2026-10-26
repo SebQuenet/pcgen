@@ -288,7 +288,7 @@ public final class Main
 		if (!savepath_dir.exists() && !savepath_dir.isDirectory())
 		{
             Logging.log(Level.INFO, "Making directory " + savepath_dir);
-            boolean succeeded = savepath_dir.mkdir();
+            boolean succeeded = savepath_dir.mkdirs();
             if (!succeeded)
             {
                 Logging.log(Level.SEVERE, "Unable to create PCG_SAVE_PATH " + savepath_dir);

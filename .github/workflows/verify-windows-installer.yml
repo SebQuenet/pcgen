@@ -65,6 +65,38 @@ jobs:
           }
           Write-Host "$($msi[0].Name): $($msi[0].Length) bytes"
 
+      # The previous version must have a lower numeric version, or the MSI is not an upgrade.
+      - name: Keep characters across an upgrade
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREVIOUS_RELEASE: v6.09.08
+        run: |
+          gh release download $env:PREVIOUS_RELEASE --repo $env:GITHUB_REPOSITORY --pattern '*.msi' --dir previous-msi
+          $previousMsi = (Get-ChildItem previous-msi/*.msi).FullName
+          $currentMsi = (Get-ChildItem build/release/*.msi).FullName
+          $installDirectory = 'C:\PcGenUpgradeTest'
+
+          $previousInstall = Start-Process msiexec -Wait -PassThru -ArgumentList "/i `"$previousMsi`" /qn INSTALLDIR=$installDirectory /l*v previous-install.log"
+          if ($previousInstall.ExitCode -ne 0) { throw "Installing $env:PREVIOUS_RELEASE failed: $($previousInstall.ExitCode)" }
+          $savedCharacter = Join-Path $installDirectory 'app\characters\Upgrade Witness.pcg'
+          Set-Content -Path $savedCharacter -Value 'saved before the upgrade'
+
+          $upgrade = Start-Process msiexec -Wait -PassThru -ArgumentList "/i `"$currentMsi`" /qn /l*v upgrade.log"
+          if ($upgrade.ExitCode -ne 0) { throw "Upgrading failed: $($upgrade.ExitCode)" }
+
+          $keptCharacter = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'PCGen\characters\Upgrade Witness.pcg'
+          if (-not (Test-Path $keptCharacter)) { throw "The upgrade lost $savedCharacter" }
+          Write-Host "Kept: $keptCharacter"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: windows-installer-logs
+          path: '*.log'
+          if-no-files-found: ignore
+          retention-days: 1
+
       - uses: actions/upload-artifact@v4
         with:
           name: windows-installer-preview
