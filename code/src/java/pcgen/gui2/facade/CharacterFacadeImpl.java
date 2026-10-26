@@ -3938,6 +3938,12 @@ public class CharacterFacadeImpl
 	}
 
 	@Override
+	public boolean hasVariable(String variableString)
+	{
+		return theCharacter.hasVariable(variableString);
+	}
+
+	@Override
 	public boolean matchesCharacter(PlayerCharacter pc)
 	{
 		return theCharacter != null && theCharacter.equals(pc);

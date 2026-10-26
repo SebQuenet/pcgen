@@ -832,6 +832,11 @@ public interface CharacterFacade extends CompanionFacade
     Float getVariable(String variableString, boolean isMax);
 
 	/**
+	 * @return whether the loaded data defines this variable for the current character
+	 */
+    boolean hasVariable(String variableString);
+
+	/**
 	 * Advise the character facade that it is being closed.
 	 */
     void closeCharacter();

@@ -897,8 +897,13 @@ public final class PCGenFrame extends JFrame implements UIDelegate, CharacterSel
 		if (prevFile == null || StringUtils.isEmpty(prevFile.getName()))
 		{
 			fileChooser.setInitialDirectory(new File(parentPath));
-			fileChooser.setInitialFileName(character.getNameRef().get() + Constants.EXTENSION_CHARACTER_FILE);
 		}
+		else if (prevFile.getParentFile() != null && prevFile.getParentFile().isDirectory())
+		{
+			// JavaFX refuses an initial directory that does not exist.
+			fileChooser.setInitialDirectory(prevFile.getParentFile());
+		}
+		fileChooser.setInitialFileName(CharacterFileName.suggestFor(character));
 
 		File file = GuiUtility.runOnJavaFXThreadNow(() ->
 				fileChooser.showSaveDialog(null));
