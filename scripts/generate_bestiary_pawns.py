@@ -11,6 +11,7 @@ Usage:
     python3 scripts/generate_bestiary_pawns.py --dry-run
     python3 scripts/generate_bestiary_pawns.py --workers 4 --limit 20
     python3 scripts/generate_bestiary_pawns.py --only giant_stone --force
+    python3 scripts/generate_bestiary_pawns.py --only penanggalen --description "a floating severed head..."
 """
 
 import argparse
@@ -19,7 +20,7 @@ import re
 import sys
 import tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 from PIL import Image
@@ -154,6 +155,7 @@ def main():
     parser.add_argument("--only", action="append", help="only this pawn file stem, e.g. giant_stone (repeatable)")
     parser.add_argument("--force", action="store_true", help="redraw creatures that already have a pawn")
     parser.add_argument("--limit", type=int, help="draw at most this many creatures")
+    parser.add_argument("--description", help="the appearance to draw instead of the bestiary's, for a refused drawing")
     parser.add_argument("--dry-run", action="store_true", help="list the creatures to draw without drawing them")
     arguments = parser.parse_args()
 
@@ -164,6 +166,8 @@ def main():
     unknown = [stem for stem in selected if stem not in pawns]
     if unknown:
         sys.exit(f"Unknown creatures: {unknown}")
+    if arguments.description:
+        pawns.update({stem: replace(pawns[stem], description=arguments.description) for stem in selected})
 
     for stem in selected:
         if (NATIVE_PAWNS / f"{stem}.png").exists() and not (PAWNS / f"{stem}.jpg").exists():
