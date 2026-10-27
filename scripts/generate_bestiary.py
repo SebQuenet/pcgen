@@ -509,7 +509,8 @@ def parse_pcfinder_sla_string(sla_str, creature=None):
     if result['cl'] == 0:
         return {}
 
-    lines = re.split(r'[;\n]', sla_str)
+    # a semicolon inside parentheses belongs to a spell's note, "(DC 36; self only)"
+    lines = re.split(r';(?![^(]*\))|\n', sla_str)
 
     for line in lines:
         line = line.strip()
@@ -547,17 +548,14 @@ def parse_pcfinder_sla_string(sla_str, creature=None):
 
         spells = []
         for spell_chunk in re.split(r',\s*(?![^(]*\))', spells_part):
-            spell_chunk = spell_chunk.strip()
+            # "any one of the following: symbol of fear" names the spell after its colon
+            name_part, parenthesis, note = spell_chunk.partition('(')
+            spell_chunk = (name_part.split(':')[-1] + parenthesis + note).strip()
             if not spell_chunk:
                 continue
-            dc = None
-            dc_match = re.search(r'\(DC\s+(\d+)\)', spell_chunk)
-            if dc_match:
-                dc = int(dc_match.group(1))
-                spell_name = re.sub(r'\s*\(DC\s+\d+\)', '', spell_chunk).strip()
-            else:
-                spell_name = spell_chunk.strip()
-            spell_name = re.sub(r'\s*\(.*?\)\s*$', '', spell_name).strip()
+            dc_match = re.search(r'\(.*?\bDC\s+(\d+)', spell_chunk)
+            dc = int(dc_match.group(1)) if dc_match else None
+            spell_name = re.sub(r'\s*\(.*$', '', spell_chunk).strip()
             if spell_name and len(spell_name) > 1:
                 entry = {'spell': spell_name}
                 if dc:
@@ -950,18 +948,37 @@ def clean_dr(dr_raw):
     return f'{num}/{dr_type}'
 
 
-def normalize_spell_name(name):
-    """Convert spell names from natural English to PCGen convention.
-    'Greater Dispel Magic' -> 'Dispel Magic (Greater)'
-    'Lesser Restoration' -> 'Restoration (Lesser)'
-    'Mass Heal' -> 'Heal (Mass)'
-    'Communal Stoneskin' -> 'Stoneskin (Communal)'
-    """
-    for qualifier in ('Greater', 'Lesser', 'Mass', 'Communal'):
-        if name.startswith(qualifier + ' '):
-            base = name[len(qualifier) + 1:]
-            return f'{base} ({qualifier})'
-    return name
+LOWERCASE_TITLE_WORDS = {'a', 'an', 'and', 'as', 'at', 'by', 'for', 'from', 'in', 'into', 'of', 'on', 'or', 'the', 'to', 'with'}
+ROMAN_NUMERALS = {'ii', 'iii', 'iv', 'vi', 'vii', 'viii', 'ix'}
+METAMAGIC_PREFIXES = ('empowered', 'quickened', 'maximized', 'extended', 'stilled', 'silent', 'widened', 'heightened',
+                      'enlarged', 'persistent', 'reach', 'selective', 'dazing', 'intensified', 'bouncing', 'sickening',
+                      'thundering', 'lingering', 'piercing', 'disruptive', 'echoing', 'merciful', 'toppling', 'elemental')
+
+
+def title_case(name):
+    """Capitalise a name the way PCGen keys spells and items: small words stay lower case."""
+    titled = []
+    for index, word in enumerate(name.split(' ')):
+        if index > 0 and word.lower() in LOWERCASE_TITLE_WORDS:
+            titled.append(word.lower())
+        elif word.lower() in ROMAN_NUMERALS:
+            titled.append(word.upper())
+        else:
+            titled.append('/'.join(part[:1].upper() + part[1:] for part in word.split('/')))
+    return ' '.join(titled)
+
+
+def spell_key(name):
+    """"greater dispel magic" is keyed "Dispel Magic (Greater)" in PCGen; a metamagic prefix is no part of it."""
+    name = re.sub(r'\s+', ' ', name.strip())
+    words = name.split(' ')
+    while len(words) > 1 and words[0].lower() in METAMAGIC_PREFIXES and not name.lower().startswith('elemental body'):
+        words = words[1:]
+    name = ' '.join(words)
+    modifier_match = re.match(r'^(greater|lesser|mass|communal)\s+(.+)$', name, re.IGNORECASE)
+    if modifier_match:
+        return f'{title_case(modifier_match.group(2))} ({modifier_match.group(1).title()})'
+    return title_case(name)
 
 
 def sanitize_name(name):
@@ -1125,10 +1142,10 @@ def generate_race_line(creature, config, known_languages, d20_data=None):
     if sr:
         parts.append(f'SR:{sr}')
 
-    # Damage Reduction
-    dr_raw = creature.get('damageReduction', '')
-    if dr_raw and '/' in dr_raw:
-        dr_clean = clean_dr(dr_raw)
+    # Damage Reduction: one DR tag per reduction, "10/adamantine, 10/magic" being two
+    dr_raw = re.sub(r'\s*\([^)]*\)', '', creature.get('damageReduction') or '')
+    for reduction in re.split(r',\s*(?=\d+/)', dr_raw):
+        dr_clean = clean_dr(reduction) if '/' in reduction else None
         if dr_clean:
             parts.append(f'DR:{dr_clean}')
 
@@ -1387,6 +1404,8 @@ def generate_kit_block(creature, config, d20_data=None):
         for feat in d20_data['feats']:
             for feat_name in normalize_feat_names(feat):
                 lines.append(f'ABILITY:CATEGORY=FEAT|{feat_name}')
+    for feat in creature.get('mythicFeats', []):
+        lines.append(f'ABILITY:CATEGORY=Mythic Feat|{feat}')
 
     return '\n'.join(lines)
 
@@ -1418,10 +1437,7 @@ def build_sla_tags(d20_data):
             # Fix encoding issues
             spell_name = spell_name.replace('\u2019', "'").replace('\u2018', "'")
             spell_name = spell_name.replace('\u00e2\u0080\u0099', "'")
-            # Capitalize spell name (PCGen convention: Title Case)
-            spell_name = spell_name.title()
-            # Convert "Greater/Lesser/Mass X" to "X (Greater/Lesser/Mass)" (PCGen convention)
-            spell_name = normalize_spell_name(spell_name)
+            spell_name = spell_key(spell_name)
             dc = s.get('dc')
             if dc:
                 spell_parts.append(f'{spell_name},{dc}')

@@ -145,5 +145,58 @@ class KitSkills(unittest.TestCase):
         self.assertEqual(generate_bestiary.normalize_kit_skills('Stealth'), ['Stealth'])
 
 
+def innate_spells(*spells):
+    return generate_bestiary.build_sla_tags({'slas': {'cl': 5, 'entries': {'3/day': [{'spell': spell} for spell in spells]}}})
+
+
+class SpellLikeAbilities(unittest.TestCase):
+
+    def test_keeps_an_apostrophe_and_a_roman_numeral(self):
+        self.assertEqual(innate_spells("summon nature's ally ix"), ["SPELLS:Innate|TIMES=3|CASTERLEVEL=5|Summon Nature's Ally IX"])
+
+    def test_drops_a_metamagic_prefix(self):
+        self.assertEqual(innate_spells('quickened confusion'), ['SPELLS:Innate|TIMES=3|CASTERLEVEL=5|Confusion'])
+
+    def test_puts_the_modifier_after_the_spell(self):
+        self.assertEqual(innate_spells('greater dispel magic'), ['SPELLS:Innate|TIMES=3|CASTERLEVEL=5|Dispel Magic (Greater)'])
+
+    def test_capitalises_after_a_slash(self):
+        self.assertEqual(innate_spells('geas/quest'), ['SPELLS:Innate|TIMES=3|CASTERLEVEL=5|Geas/Quest'])
+
+    def test_leaves_a_small_word_in_lower_case(self):
+        self.assertEqual(innate_spells('protection from evil'), ['SPELLS:Innate|TIMES=3|CASTERLEVEL=5|Protection from Evil'])
+
+
+def damage_reduction_tags(text):
+    creature = {'name': 'Brute', 'damageReduction': text, 'abilityScores': {}}
+    return [tag for tag in generate_bestiary.generate_race_line(creature, {}, set()).split('\t') if tag.startswith('DR:')]
+
+
+class DamageReduction(unittest.TestCase):
+
+    def test_writes_one_tag_per_reduction(self):
+        self.assertEqual(damage_reduction_tags('10/adamantine, 10/magic'), ['DR:10/adamantine', 'DR:10/magic'])
+
+    def test_drops_a_note_in_parentheses(self):
+        self.assertEqual(damage_reduction_tags('10/adamantine (110 points)'), ['DR:10/adamantine'])
+
+
+def parsed_spells(text):
+    entries = generate_bestiary.parse_pcfinder_sla_string(text)['slas']['entries']
+    return [(spell['spell'], spell.get('dc')) for spells in entries.values() for spell in spells]
+
+
+class SpellLikeAbilityText(unittest.TestCase):
+
+    def test_a_semicolon_in_parentheses_does_not_split(self):
+        self.assertEqual(parsed_spells('CL 20th\nAt Will-wind walk (DC 36; self only), dream'), [('wind walk', 36), ('dream', None)])
+
+    def test_drops_a_lead_in_before_a_colon(self):
+        self.assertEqual(parsed_spells('CL 12th\n1/week-any one of the following: symbol of fear (DC 23)'), [('symbol of fear', 23)])
+
+    def test_keeps_a_colon_in_parentheses(self):
+        self.assertEqual(parsed_spells('CL 14th\n1/day-summon (level 7, 1d3 daemons [Setting: Book, Vol. 3 56] 80%)'), [('summon', None)])
+
+
 if __name__ == '__main__':
     unittest.main()

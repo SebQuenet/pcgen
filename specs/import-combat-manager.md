@@ -17,7 +17,7 @@ Les fichiers extraits portent des noms hachés ; le script les reconnaît à leu
   (`Gear`, `OtherGear`), sorts préparés et connus, tactiques.
 
 Un **PNJ** est une entrée dont le champ `Class` n'est pas vide (4 466 entrées). Les monstres sans
-classe restent hors périmètre : le bestiaire de PCGen les porte déjà sous forme de races.
+classe deviennent des races (§ 7).
 
 ## 2. Décisions
 
@@ -71,7 +71,54 @@ elle-même se vérifie sur un premier livre, le NPC Codex, dont le rapport agré
 
 ## 6. Hors périmètre
 
-- les monstres sans classe, les compagnons animaux et familiers décrits en annexe du bloc ;
+- les compagnons animaux et familiers décrits en annexe du bloc ;
 - les eidolons, publiés avec une classe « eidolon » : PCGen les construit comme compagnons d'un invocateur ;
 - les capacités mythiques au-delà du choix de la voie ;
 - la traduction des noms de PNJ.
+
+## 7. Monstres sans classe
+
+**But** : que chaque monstre sans classe de Combat Manager existe comme race dans PCGen.
+
+**Script** : `scripts/combat_manager/import_monsters.py <dossier extrait> [--dry-run]`. Il ne parle
+pas au serveur : il lit les fichiers de `data/pathfinder` et écrit des fichiers LST.
+
+1. **Ce qui existe déjà est sauté.** Un monstre est présent si son nom correspond à une race ou à
+   un gabarit de `data/pathfinder`, directement ou sous une forme de PCGen : famille entre
+   parenthèses (« Ghoul (Ghast) »), virgule inversée (« Amoeba, Giant » → « Amoeba (Giant) »),
+   mots inversés (« Solar Pitri » → « Pitri (Solar) »), âge de dragon (« Adult Red Dragon » →
+   « Dragon (Red) »), taille d'élémentaire (« Large Ice Elemental » → « Elemental (Ice/Large) »),
+   race suivie ou précédée d'un gabarit (« Giant Cockroach Exoskeleton »). Une liste d'équivalences
+   écrite à la main couvre les noms que ces règles ne rapprochent pas (« Weremantis » →
+   « Entothrope (Weremantis (Hybrid Form)) »).
+2. **Un nom, une race.** Un monstre publié dans plusieurs livres est créé une fois, dans le premier
+   livre rencontré selon l'ordre des identifiants de Combat Manager.
+3. **Rangement mixte.** Un monstre va dans le dossier du livre d'où il vient quand PCGen a déjà un
+   `.pcc` pour ce livre (bestiaires, Adventure Paths existants) ; sinon dans une source unique,
+   `data/pathfinder/pcfinder/combat_manager/` (campagne « Combat Manager ~ Creatures »), où chaque
+   race garde son livre d'origine dans `SOURCELONG`.
+4. **Fichiers à part.** Le script écrit `<préfixe>_cm_races.lst`, `<préfixe>_cm_kits_race.lst` et
+   `<préfixe>_cm_abilities_race.lst`, réécrits en entier à chaque passage, et ajoute leurs
+   références au `.pcc` s'il ne les a pas. Les fichiers existants d'un livre ne sont jamais modifiés :
+   le mode « ajout » de `generate_bestiary.py` efface le bloc auto-généré déjà présent.
+5. **Même traduction que `generate_bestiary.py`.** Le bloc de Combat Manager est converti dans la
+   forme des créatures de pcfinder (caractéristiques, CA, vitesses, sens, attaques naturelles,
+   immunités, RD, RM, dons, compétences, langues, pouvoirs magiques), puis passe par les fonctions
+   de génération de ligne de race, de kit et de traits raciaux de ce script. Le type est ramené au
+   type de base (« advanced magical beast » → créature magique, « elemental » → extérieur). Un don
+   marqué `[M]` ou nommé « Mythic … » donne le don de base et, dans le kit, le don de catégorie
+   `Mythic Feat` du même nom.
+6. **Une race ne référence que ce que PCGen définit.** Chaque don, choix d'arme, compétence et sort
+   est rapproché des clés de `data/pathfinder` (clé `KEY:` quand elle existe, armes naturelles
+   comprises) ; ce qui n'y est pas est retiré, et le script en donne le compte. « Ability Focus »
+   est toujours retiré : il vise une capacité de la race que la race générée ne définit pas. Les
+   langues accordées se limitent à celles des livres de règles et de l'Inner Sea World Guide, que
+   tout livre de monstres charge.
+7. **Hors de cette passe** : les entrées marquées gabarit (`IsTemplate`) ou compagnon
+   (`CompanionFlag`) de Combat Manager.
+
+**Tests** : la conversion d'un bloc de Combat Manager et le rapprochement des noms sont testés
+unitairement (`scripts/tests/test_combat_manager_monsters.py`). Le chargement des sources produites
+se vérifie avec `DataLoadTest` sur un `.pcc` temporaire qui regroupe les sources modifiées et leurs
+livres de référence, comparé au même chargement sans les fichiers `_cm_` ; puis avec le serveur HTTP :
+un personnage construit sur une race créée a les caractéristiques, la CA et la RD du bloc publié.

@@ -1,4 +1,4 @@
-"""Read Combat Manager's NPCs out of the files its installer unpacks.
+"""Read Combat Manager's NPCs and monsters out of the files its installer unpacks.
 
 The installer names its files by hash, so they are told apart by their content:
 the stat blocks' numbers live in XML files whose root is <ArrayOfMonster>, their
@@ -14,7 +14,8 @@ from pathlib import Path
 
 SQLITE_HEADER = b'SQLite format 3\x00'
 MONSTER_LIST_MARK = b'<ArrayOfMonster'
-TEXT_COLUMNS = ('Gear', 'OtherGear', 'Feats', 'Skills', 'SpellsKnown', 'SpellsPrepared', 'BeforeCombat', 'DuringCombat', 'Morale')
+TEXT_COLUMNS = ('Gear', 'OtherGear', 'Feats', 'Skills', 'SpellsKnown', 'SpellsPrepared', 'BeforeCombat', 'DuringCombat', 'Morale',
+                'SpellLikeAbilities')
 
 
 @dataclass(frozen=True)
@@ -45,19 +46,28 @@ def find_files(extracted_dir: Path) -> tuple[list[Path], Path]:
 
 def load_npcs(extracted_dir: Path) -> list[NpcRecord]:
     """Every stat block that has class levels, with its text joined in."""
+    return load_records(extracted_dir, has_classes=True)
+
+
+def load_monsters(extracted_dir: Path) -> list[NpcRecord]:
+    """Every stat block without class levels, with its text joined in."""
+    return load_records(extracted_dir, has_classes=False)
+
+
+def load_records(extracted_dir: Path, has_classes: bool) -> list[NpcRecord]:
     monster_lists, database = find_files(extracted_dir)
     connection = sqlite3.connect(f'file:{database}?mode=ro', uri=True)
     connection.row_factory = sqlite3.Row
-    npcs = []
+    loaded = []
     for path in monster_lists:
         for monster in ElementTree.parse(path).getroot():
             fields = {child.tag: child.text or '' for child in monster}
-            if not fields.get('Class', '').strip():
+            if bool(fields.get('Class', '').strip()) != has_classes:
                 continue
             identifier = int(fields['id'])
             row = connection.execute(f'select {", ".join(TEXT_COLUMNS)} from Bestiary where ID = ?', (identifier,)).fetchone()
             if row:
                 fields.update({column: row[column] or '' for column in TEXT_COLUMNS})
-            npcs.append(NpcRecord(identifier, fields))
+            loaded.append(NpcRecord(identifier, fields))
     connection.close()
-    return npcs
+    return loaded

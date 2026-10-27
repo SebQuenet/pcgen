@@ -9,14 +9,13 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from generate_bestiary import WEAPON_PROFICIENCY_KEYS, normalize_feat_names, normalize_kit_skills
+from generate_bestiary import WEAPON_PROFICIENCY_KEYS, normalize_feat_names, normalize_kit_skills, spell_key, title_case  # noqa: F401
 
 STAT_KEYS = ('STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA')
 COIN_VALUES_IN_GP = {'pp': 10, 'gp': 1, 'sp': 0.1, 'cp': 0.01}
 MINUS_SIGNS = '-–—−'
 SIGN_PATTERN = r'[+\-–—−]'
 DASH_PATTERN = r'[\-–—−]'
-LOWERCASE_TITLE_WORDS = {'a', 'an', 'and', 'as', 'at', 'by', 'for', 'from', 'in', 'into', 'of', 'on', 'or', 'the', 'to', 'with'}
 
 
 def parse_templates(text: str | None) -> list[str]:
@@ -51,18 +50,6 @@ def split_list(text: str | None) -> list[str]:
             current += character
     pieces.append(current.strip())
     return [piece for piece in pieces if piece]
-
-
-def title_case(name: str) -> str:
-    """Capitalise a name the way PCGen keys spells and items: small words stay lower case."""
-    words = name.split(' ')
-    titled = []
-    for index, word in enumerate(words):
-        if index > 0 and word.lower() in LOWERCASE_TITLE_WORDS:
-            titled.append(word.lower())
-        else:
-            titled.append(word[:1].upper() + word[1:])
-    return ' '.join(titled)
 
 
 @dataclass(frozen=True)
@@ -311,24 +298,6 @@ class SpellBlock:
     class_name: str
     is_prepared: bool
     spells: dict[int, dict[str, int]] = field(default_factory=dict)
-
-
-METAMAGIC_PREFIXES = ('empowered', 'quickened', 'maximized', 'extended', 'stilled', 'silent', 'widened', 'heightened',
-                      'enlarged', 'persistent', 'reach', 'selective', 'dazing', 'intensified', 'bouncing', 'sickening',
-                      'thundering', 'lingering', 'piercing', 'disruptive', 'echoing', 'merciful', 'toppling', 'elemental')
-
-
-def spell_key(name: str) -> str:
-    """"greater dispel magic" is keyed "Dispel Magic (Greater)" in PCGen; a metamagic prefix is no part of it."""
-    name = re.sub(r'\s+', ' ', name.strip())
-    words = name.split(' ')
-    while len(words) > 1 and words[0].lower() in METAMAGIC_PREFIXES and not name.lower().startswith('elemental body'):
-        words = words[1:]
-    name = ' '.join(words)
-    modifier_match = re.match(r'^(greater|lesser|mass|communal)\s+(.+)$', name, re.IGNORECASE)
-    if modifier_match:
-        return f'{title_case(modifier_match.group(2))} ({modifier_match.group(1).title()})'
-    return title_case(name)
 
 
 def parse_spell_list(text: str) -> dict[str, int]:

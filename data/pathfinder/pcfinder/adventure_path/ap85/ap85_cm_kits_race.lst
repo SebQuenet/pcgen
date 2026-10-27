@@ -1,0 +1,31 @@
+SOURCELONG:Pathfinder Adventure Path #85	SOURCESHORT:AP85	SOURCEWEB:http://paizo.com	SOURCEDATE:2010-01
+
+STARTPACK:Malfunctioning Repair Drone Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Malfunctioning Repair Drone],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Malfunctioning Repair Drone	!PRERACE:1,%
+NAME:Malfunctioning Repair Drone
+STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
+SKILL:Disable Device	RANK:1
+SKILL:Knowledge (Engineering)	RANK:2
+SKILL:Perception	RANK:1
+ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge (Engineering))
+
+STARTPACK:Medical Drone Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Medical Drone],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Medical Drone	!PRERACE:1,%
+NAME:Medical Drone
+STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
+SKILL:Heal	RANK:2
+SKILL:Perception	RANK:2
+ABILITY:CATEGORY=FEAT|Skill Focus (Heal)
+
+STARTPACK:Repair Drone Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Repair Drone],[!PRERACE:1,%]
+ALIGN:TN
+RACE:Repair Drone	!PRERACE:1,%
+NAME:Repair Drone
+STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
+SKILL:Disable Device	RANK:1
+SKILL:Knowledge (Engineering)	RANK:2
+SKILL:Perception	RANK:1
+ABILITY:CATEGORY=FEAT|Skill Focus (Knowledge (Engineering))
+
