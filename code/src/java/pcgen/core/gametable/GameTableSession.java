@@ -280,13 +280,14 @@ public final class GameTableSession
 
 	/**
 	 * @param recipe how to build a monster.
-	 * @return the sheet the game master reads of it, or why it cannot be built.
+	 * @return the sheet the game master reads of it and the monster it was read from, or why it cannot be built.
 	 */
-	public synchronized ForgeOutcome<MonsterSheet> previewSheet(MonsterRecipe recipe)
+	public synchronized ForgeOutcome<SheetPreview> previewSheet(MonsterRecipe recipe)
 	{
 		return switch (forge(recipe))
 		{
-			case ForgedMonster.Forged built -> new ForgeOutcome.Built<>(sheets().sheet(built.character()));
+			case ForgedMonster.Forged built -> new ForgeOutcome.Built<>(
+				new SheetPreview(sheets().sheet(built.character()), built.character()));
 			case ForgedMonster.Missing missing -> new ForgeOutcome.Failed<>(missing.reason());
 		};
 	}

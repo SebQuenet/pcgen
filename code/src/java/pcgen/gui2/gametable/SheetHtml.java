@@ -69,11 +69,12 @@ final class SheetHtml
 	}
 
 	/**
-	 * @param sheet a monster's sheet, before it enters an encounter.
-	 * @param pawn  its pawn; empty when none was drawn for it.
-	 * @return its stat block and its pawn, without any fight state.
+	 * @param sheet   a monster's sheet, before it enters an encounter.
+	 * @param pawn    its pawn; empty when none was drawn for it.
+	 * @param tactics how to play it, as {@link TacticsHtml} writes it; empty when it has no tactical sheet.
+	 * @return its stat block, its pawn and its tactics, without any fight state.
 	 */
-	static String preview(MonsterSheet sheet, Optional<BestiaryPawn> pawn)
+	static String preview(MonsterSheet sheet, Optional<BestiaryPawn> pawn, String tactics)
 	{
 		StringBuilder html = new StringBuilder(BODY);
 		html.append("<table width='100%' cellspacing='0' cellpadding='0'><tr><td align='right' valign='bottom' style='color:")
@@ -83,6 +84,7 @@ final class SheetHtml
 		html.append("</tr></table>");
 		figures(html, String.valueOf(sheet.stats().maximumHitPoints()), sheet);
 		statBlock(html, sheet);
+		html.append(tactics);
 		return html.append(END).toString();
 	}
 

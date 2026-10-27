@@ -73,6 +73,18 @@ class GameTableSessionTest
 	}
 
 	@Test
+	void aPreviewedWolfCarriesItsTacticalPlan()
+	{
+		Optional<String> plan = switch (session.previewSheet(WOLF))
+		{
+			case ForgeOutcome.Built<SheetPreview> built -> built.value().monster().getDisplay().getTacticalPlan();
+			case ForgeOutcome.Failed<SheetPreview> failed -> Optional.of(failed.reason());
+		};
+
+		assertEquals(BestiaryTactics.of("Wolf"), plan);
+	}
+
+	@Test
 	void launchingAnEncounterBringsThePartyAndTheMonsters()
 	{
 		session.launch(WOLVES);

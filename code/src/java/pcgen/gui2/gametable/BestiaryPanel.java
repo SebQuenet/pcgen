@@ -41,8 +41,8 @@ import pcgen.core.gametable.CombatantSheets;
 import pcgen.core.gametable.EncounterMonster;
 import pcgen.core.gametable.ForgeOutcome;
 import pcgen.core.gametable.MonsterRecipe;
-import pcgen.core.gametable.MonsterSheet;
 import pcgen.core.gametable.MonsterSource;
+import pcgen.core.gametable.SheetPreview;
 import pcgen.system.LanguageBundle;
 
 /**
@@ -107,9 +107,9 @@ final class BestiaryPanel extends JPanel
 		picked().ifPresent(monster -> table.inBackground(() -> table.session().previewSheet(monster.recipe()), outcome -> {
 			switch (outcome)
 			{
-				case ForgeOutcome.Built<MonsterSheet> built -> preview.setText(SheetHtml.preview(built.value(),
-					BestiaryPawn.of(monster.recipe().source())));
-				case ForgeOutcome.Failed<MonsterSheet> failed -> preview.setText(
+				case ForgeOutcome.Built<SheetPreview> built -> preview.setText(SheetHtml.preview(built.value().sheet(),
+					BestiaryPawn.of(monster.recipe().source()), TacticsHtml.of(built.value().monster())));
+				case ForgeOutcome.Failed<SheetPreview> failed -> preview.setText(
 					EncountersPanel.escape(failed.reason()));
 			}
 			preview.setCaretPosition(0);
