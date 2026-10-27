@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Fantôme d'engrenages, esprit d'un artisan tué par une machine, qui crée des pièges.
+  2 coups +5 ; télékinésie (DD 18) ; création de pièges ; réinitialisateur ; RD 5/- ; régénération.
+
+step: Des intrus dans son atelier
+  do: Réarmer les pièges
+
+## Ouverture
+
+step: Ennemis
+  do: Télékinésie : lancer des objets ou déclencher des pièges
+  note: chaque piège réarmé se redéclenche au round suivant ; détruire les mécanismes l'affaiblit
+
+## Rounds suivants
+
+step: Toujours
+  do: Réarmer et relancer les pièges
+
+## Repli
+
+step: Il est détruit
+  do: Il revient tant que l'atelier existe

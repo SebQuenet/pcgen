@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Archon étoile, général et champion des armées du Paradis, géant de lumière blanche constellé d'étoiles. Il commande les autres archons et prêtre de NLS 19.
+  Lamétoile sainte +5 +31/+26/+21/+16 (1d6+12, x3) ; aura de menace (6 m, Volonté DD 27) et aura de courage ; châtiment du mal ; RD 10/mal, RM 30 ; immunité au charme, à la coercition, à la peur et au feu ; vol à 36 m par round. Vision lucide permanente.
+
+resource: Châtiment du mal | 1 | +6 à l'attaque, +19 aux dégâts
+resource: Sorts du 9e niveau | 3 | implosion (DD 26), guérison suprême de groupe, miracle
+resource: Destruction | 2 | sort, DD 24
+resource: Parole sacrée | 2 | sort, DD 24
+
+step: Il mène une troupe d'archons
+  do: Aura sacrée sur lui et ses alliés, puis verrou dimensionnel sur le champ de bataille
+  note: aura de courage : ses alliés à 3 m ont +4 contre la peur
+
+## Ouverture
+
+step: Ennemis mauvais groupés
+  do: Parole sacrée (DD 24) ou tempête de feu (DD 25)
+
+step: Le chef ennemi
+  do: Destruction (DD 24)
+
+## Rounds suivants
+
+step: Le pire des ennemis au contact
+  do: Châtiment du mal, puis lamétoile +31/+26/+21/+16
+
+step: Ses alliés tombent
+  do: Guérison suprême de groupe ou résurrection
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'au bout
+  note: renaissance explosive : à sa mort, il explose (50 dégâts, moitié feu, moitié sacré, 30 m, Réflexes DD 29) et renaît en archon lumineux 1d4 rounds après

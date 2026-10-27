@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Diable cornu, officier des légions infernales. Chaîne cloutée qui étourdit, queue qui laisse des blessures qui saignent.
+  RD 10/argent et Bien, immunisé au feu et au poison, RM 23. Régénération 5 (Bien ou argent). Aura de peur.
+
+step: Combat annoncé
+  do: Mur de feu ou dissipation sur les protections ennemies
+
+## Ouverture
+
+step: Ennemi à 3 m
+  do: Chaîne cloutée : l'ennemi touché est étourdi (Vigueur)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Chaîne, morsure et queue ; blessure infernale par la queue
+
+step: Ennemis groupés
+  do: Boule de feu ou mur de feu
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Téléportation suprême ; la régénération le remettra sur pied

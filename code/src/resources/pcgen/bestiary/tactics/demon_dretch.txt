@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Démon le plus bas de l'Abysse, lâche et stupide. Il ne combat qu'en foule et obéit à tout démon plus fort.
+  Résistances : RD 5/fer froid ou bien, immunité à l'électricité et au poison, résistance à l'acide, au froid et au feu 10.
+
+resource: Nuage puant | 1 | magique, DD 13
+resource: Frayeur | 1 | magique, DD 11
+resource: Convocation de dretch | 1 | 35 % de chances
+
+step: Combat inévitable
+  do: Tenter de convoquer un autre dretch avant le contact
+  note: une foule de dretchs se lance sans ordre, chacun pour soi
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Nuage puant (DD 13) sur le groupe, même si d'autres dretchs y sont pris
+  note: nuage puant : nauséeux tant qu'on reste dedans et 1d4+1 rounds après ; les dretchs n'y sont pas immunisés
+
+step: Un ennemi isolé
+  do: Frayeur (DD 11) pour l'empêcher de les rejoindre
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Attaque à outrance : 2 griffes +4 (1d4+1) et morsure +4 (1d4+1)
+  note: attaquer à plusieurs le même adversaire pour le prendre en tenaille
+
+## Repli
+
+step: Points de vie sous 6
+  do: Fuir en geignant, sauf si un démon supérieur le regarde

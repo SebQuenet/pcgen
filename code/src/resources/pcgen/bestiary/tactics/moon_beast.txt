@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Bête lunaire, aberration sans visage venue de la lune des rêves, cruelle et intelligente (Int 19), marchande d'esclaves.
+  2 griffes +15, 4 tentacules +11 ; déchirure (absorption de Sagesse) ; RD 10/perforant ou tranchant, RM 22 ; marche dans les airs ; immunité aux regards et aux illusions.
+
+resource: Charme-monstre | 3 | magique, DD 21
+resource: Domination de personne | 3 | magique, DD 22
+resource: Évocation d'ombre | 3 | magique
+
+step: Des intrus
+  do: Lire leurs pensées (DD 19)
+
+## Ouverture
+
+step: Le plus fort
+  do: Domination de personne (DD 22)
+
+step: Ennemis groupés
+  do: Évocation d'ombre
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Griffes et tentacules, déchirure
+
+## Repli
+
+step: Points de vie sous 35
+  do: Marche dans les airs et fuite

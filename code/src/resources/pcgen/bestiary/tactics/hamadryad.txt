@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Hamadryade, reine des dryades, gardienne bienveillante des forêts, sage (Int 18) et puissante druidesse.
+  Dague de maître +16/+11 ; magie druidique ; fusion avec les arbres ; RD 10/fer froid.
+
+resource: Charme-personne | 5 | magique
+
+step: Des intrus dans la forêt
+  do: Parler aux arbres et aux animaux
+
+## Ouverture
+
+step: Des ennemis
+  do: Enchevêtrement (DD 17) et immobilisation d'animal
+  note: ses dryades et les animaux de la forêt combattent à ses côtés
+
+## Rounds suivants
+
+step: Toujours
+  do: Magie druidique
+
+## Repli
+
+step: Points de vie sous 45
+  do: Fusion avec un arbre

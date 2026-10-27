@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Géant des marais né de la saumure, variante aquatique qui vit dans les eaux salées et les estuaires. Il respire sous l'eau.
+  Gaffe et rochers comme le géant des marais ; malédiction et brouillard ; aquatique.
+
+step: Des intrus sur la côte ou une barque
+  do: Approcher sous l'eau dans le brouillard
+
+## Ouverture
+
+step: Ennemis sur une barque
+  do: Chavirer la barque
+
+step: Ennemis à distance
+  do: Lancer des rochers
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Gaffe, puis l'entraîner sous l'eau
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Plonger

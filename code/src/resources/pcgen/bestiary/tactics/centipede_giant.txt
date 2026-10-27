@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Mille-pattes de taille humaine, sans esprit. Il grimpe aussi vite qu'il court (12 m) et attend dans les fissures des murs et des plafonds.
+  Morsure +2 (1d6-1 et poison) ; on ne peut pas le faire tomber par un croc-en-jambe.
+
+step: Une proie passe dans sa galerie
+  do: Rester au plafond ou dans une fissure jusqu'à ce qu'elle soit dessous
+
+## Ouverture
+
+step: La proie est au contact
+  do: Tomber du plafond et mordre
+  note: poison : Vigueur DD 13, 1 fois par round pendant 6 rounds, 1d3 Dextérité ; une réussite l'arrête
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même cible, pour cumuler la perte de Dextérité
+  note: une colonie de 3 à 6 se répartit sur les adversaires les plus proches
+
+step: Une cible fuit
+  do: La poursuivre sur les murs et le plafond, hors de portée des épées
+
+## Repli
+
+step: Points de vie sous 2
+  do: Fuir dans la fissure la plus proche

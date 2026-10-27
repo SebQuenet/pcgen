@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Vrolikai, démon de la mort, ailé et multi-bras, maniant des dagues de flamme noire. Il chasse les âmes des héros.
+  4 dagues de flamme noire +1 +29 (absorption d'énergie), morsure, dard (folie) ; regard voleur de mort ; RD 15/fer froid et bien, RM 30 ; vision lucide permanente ; Int 22.
+
+resource: Énervation rapide | 3 | magique
+resource: Régénération | 3 | magique
+resource: Silence | 3 | magique, DD 20
+
+step: Des héros approchent
+  do: Ténèbres profondes, puis silence (DD 20) sur leurs lanceurs de sorts
+
+## Ouverture
+
+step: Le héros le plus fort
+  do: Énervation rapide, puis charger
+
+step: Ennemis qui le regardent
+  do: Regard voleur de mort
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 4 dagues de flamme noire (absorption d'énergie), morsure et dard
+
+step: Il est blessé
+  do: Régénération ou toucher vampirique
+
+## Repli
+
+step: Points de vie sous 70
+  do: Téléportation suprême

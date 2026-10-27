@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Mercane, marchand planaire géant à la peau bleue, cultivé (Int 20) et commerçant. Il préfère négocier et fuir plutôt que combattre.
+  Cimeterre à deux mains de maître +8/+3 (2d6+3, 18-20), allonge 3 m ; RM 20 ; coffre secret.
+
+resource: Porte dimensionnelle | 3 | magique
+resource: Invisibilité | 3 | lui seul
+resource: Changement de plan | 1 | magique, DD 17
+
+step: Des clients approchent
+  do: Négocier ; il connaît la valeur de tout
+  note: son coffre secret garde ses marchandises sur un autre plan
+
+## Ouverture
+
+step: On l'attaque ou on le vole
+  do: Invisibilité, puis porte dimensionnelle hors de portée
+
+## Rounds suivants
+
+step: Il est acculé
+  do: Cimeterre à deux mains
+
+## Repli
+
+step: Toujours, dès que possible
+  do: Changement de plan ; il n'oublie pas un client malhonnête

@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Nuée d'araignées, des milliers de petites araignées venimeuses, sans esprit. Elle sort des fissures et des toiles quand une proie passe.
+  Nuée (1d6, poison et distraction) ; immunisée aux dégâts des armes ; elle grimpe à 6 m par round.
+
+step: Des créatures traversent la pièce
+  do: Attendre dans les fissures et sous les toiles
+
+## Ouverture
+
+step: Des créatures à portée
+  do: Envahir leurs cases : 1d6 et poison
+  note: poison : Vigueur DD 11, 1 fois par round pendant 2 rounds, 1d2 Force
+
+## Rounds suivants
+
+step: Toujours
+  do: Couvrir le plus de créatures possible, en priorité les lanceurs de sorts
+  note: distraction : Vigueur DD 11 ou nauséeux 1 round
+
+step: Feu ou effet de zone
+  do: S'écarter du lanceur et envahir les autres
+
+## Repli
+
+step: Points de vie sous 3
+  do: Se disperser dans les fissures

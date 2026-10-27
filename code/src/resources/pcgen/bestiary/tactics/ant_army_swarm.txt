@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Nuée de fourmis légionnaires qui dévore tout sur son passage. Immunisée aux armes : on l'arrête par le feu, une zone ou en fuyant.
+  Distraction : qui commence son tour dans la nuée fait Vigueur ou est fiévreux.
+
+step: Proie à proximité
+  do: Avancer en tapis vers la créature vivante la plus proche
+
+## Ouverture
+
+step: Proie dans sa case
+  do: Envahir la case : dégâts de nuée automatiques et distraction
+  note: une nuée ne fait pas de jet d'attaque, elle entre dans la case de ses victimes
+
+## Rounds suivants
+
+step: Plusieurs proies
+  do: Couvrir le plus de créatures possible à la fois
+
+## Repli
+
+step: Feu ou zone d'effet qui la ravage
+  do: Se disperser dans les fissures et les buissons

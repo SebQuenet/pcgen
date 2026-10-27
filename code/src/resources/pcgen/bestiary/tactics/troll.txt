@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Troll, géant vorace, efflanqué et sans peur, qui se régénère de presque tout. Seuls le feu et l'acide l'arrêtent ; il le sait et les craint.
+  Morsure +8 (1d8+5), 2 griffes +8 (1d6+5), allonge 3 m ; déchirure (2 griffes, 1d6+7) ; régénération 5 (feu ou acide) ; odorat.
+
+step: Des proies sentent la chair fraîche
+  do: Les traquer à l'odeur et charger le plus proche, sans tactique
+  note: une bande de trolls se dispute la proie ; ils ne coopèrent qu'en présence d'un chef
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes, déchirure si les 2 griffes touchent
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le plus proche, même gravement blessé : sa régénération le relève
+
+step: Un ennemi utilise le feu ou l'acide
+  do: Le charger en priorité pour l'empêcher de recommencer
+
+step: Il tombe à 0 point de vie sans feu ni acide
+  do: Il se relève quelques rounds plus tard, régénéré
+  note: un troll ne meurt que si on brûle ou acidifie ses restes
+
+## Repli
+
+step: Points de vie sous 10, et blessé par le feu ou l'acide
+  do: Fuir et revenir quand il aura régénéré

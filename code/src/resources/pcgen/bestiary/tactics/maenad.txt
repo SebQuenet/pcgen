@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Ménade, humanoïde folle des fêtes sauvages, qui fait danser ses victimes jusqu'à la mort.
+  Morsure +13, 2 griffes +13 (19-20, poison) ; danse contagieuse ; festin fou ; RM 19 ; immunité à l'apaisement.
+
+resource: Charme-monstre | 3 | magique, DD 19
+resource: Hallucination folle | 3 | magique, DD 17
+resource: Force de taureau | 3 | magique
+
+step: Une fête ou des voyageurs
+  do: Danse contagieuse
+
+## Ouverture
+
+step: Ennemis
+  do: Rage et ordre meurtrier (DD 16)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes empoisonnées
+
+## Repli
+
+step: Points de vie sous 20
+  do: Fuir dans les bois

@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Homme-serpent, survivant d'un empire très ancien, érudit (Int 18) et cruel, qui intrigue pour retrouver sa gloire. Il se déguise en humain.
+  Dague de maître +11 (1d4-1, 19-20), morsure +5 (1d6-1 et poison) ; RM 15 ; immunité aux effets mentaux, à la paralysie et au poison.
+
+resource: Flou | 1 | magique
+resource: Image miroir | 1 | magique
+resource: Suggestion | 1 | magique, DD 16
+
+step: Il infiltre une cité
+  do: Déguisement en humain et intrigues
+  note: ventriloquie à volonté pour égarer
+
+## Ouverture
+
+step: Le plus fort des ennemis
+  do: Suggestion (DD 16)
+
+step: Combat au contact
+  do: Flou et image miroir
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Dague et morsure empoisonnée
+
+## Repli
+
+step: Points de vie sous 12
+  do: Fuir et reprendre un déguisement

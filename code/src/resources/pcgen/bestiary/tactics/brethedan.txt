@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Bréthédan, aberration flottante gonflée de gaz, qui enveloppe et paralyse ses proies.
+  2 coups +9 (étreinte) ; constriction ; engloutissement (DD 17, acide et paralysie) ; amorphe ; adaptation ; combinaison ; vol à 9 m par round.
+
+step: Des proies
+  do: Flotter vers elles
+
+## Ouverture
+
+step: Une proie au contact
+  do: Coups avec étreinte
+  note: plusieurs bréthédans peuvent fusionner pour former une créature plus grande
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Engloutir : acide et paralysie
+  note: une proie engloutie est paralysée et rongée par l'acide ; il ne lâche que mort
+
+## Repli
+
+step: Points de vie sous 15
+  do: S'élever hors de portée

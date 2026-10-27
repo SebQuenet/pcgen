@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Drake de lave, dragon mineur des volcans, qui vomit de la lave et fait trembler la roche.
+  Morsure +17, 2 griffes +17, queue +15 ; secousse de magma ; vomissement pyroclastique ; immunité au feu, vulnérable au froid.
+
+step: Des intrus près du volcan
+  do: Rester dans la lave
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Vomissement pyroclastique
+  note: la lave vomie continue de brûler au sol pendant quelques rounds
+
+step: Ennemis sur la roche
+  do: Secousse de magma
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, griffes et queue
+
+## Repli
+
+step: Points de vie sous 30
+  do: Plonger dans la lave

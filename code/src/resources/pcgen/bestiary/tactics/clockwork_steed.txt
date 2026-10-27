@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Destrier mécanique, cheval-automate de guerre, sans esprit, qui porte un cavalier.
+  Morsure +14, 2 sabots +9 ; ruade puissante ; piétinement (DD 21) ; vulnérable à l'électricité.
+
+step: Son cavalier va au combat
+  do: Charger
+  note: sans cavalier, il reste immobile jusqu'à ce qu'on le remonte
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Piétinement
+  note: il piétine sans ralentir et sert de monture aux chevaliers mécaniques
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, sabots et ruade
+  note: sa ruade puissante projette l'ennemi au sol
+
+## Repli
+
+step: Jamais
+  do: Il obéit jusqu'à sa destruction

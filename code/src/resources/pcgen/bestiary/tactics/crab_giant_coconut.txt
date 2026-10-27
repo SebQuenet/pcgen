@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Petit crabe terrestre sans esprit, qui grimpe aux palmiers et casse les noix de coco. Ses pinces saisissent et broient.
+  Dépendance à l'eau : hors de l'eau, il tient 1 heure par point de Constitution, puis suffoque. Il ne s'éloigne jamais de la côte.
+
+step: Une proie approche
+  do: Attendre dans les racines ou au pied d'un palmier
+  note: immunisé aux effets mentaux : ni peur ni charme ne l'arrêtent
+
+## Ouverture
+
+step: La proie est au contact
+  do: Pincer la cheville de la proie et serrer
+  note: il vit plus longtemps hors de l'eau que les autres crabes, mais garde la même dépendance
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Maintenir la prise et la serrer : constriction à chaque test de lutte réussi
+  note: une créature agrippée ne lance pas de sort à composante gestuelle sans test de concentration
+
+step: La proie se libère
+  do: La saisir de nouveau, ou en saisir une autre
+
+step: L'eau est à portée
+  do: Reculer vers l'eau avec la proie agrippée ; il nage à 6 m par round
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Lâcher prise et s'enfoncer dans l'eau ou sous le sable

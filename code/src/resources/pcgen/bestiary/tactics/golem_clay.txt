@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Golem d'argile, gardien sans esprit qui obéit aux ordres de son créateur. Ses coups laissent des blessures maudites qui ne guérissent pas par magie sans test de NLS.
+  2 coups +19 (2d10+7 et blessure maudite) ; RD 10/adamantium et contondant ; immunité à la magie (sauf quelques sorts de terre).
+
+resource: Hâte | 1 | une fois par jour, après un round de combat, pendant 3 rounds
+
+step: Il garde un lieu
+  do: Rester immobile jusqu'à ce que la condition de son ordre soit remplie
+  note: ses ordres sont simples : « tue quiconque entre sans le mot de passe »
+
+## Ouverture
+
+step: Ennemi au contact
+  do: 2 coups +19 (2d10+7) sur le plus proche
+
+step: Deuxième round de combat
+  do: Activer la hâte : une attaque de plus et +1 à l'attaque et à la CA
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le plus proche ; il poursuit les ennemis jusqu'aux limites de sa zone de garde
+  note: désintégration le ralentit, dissipation ne fait rien ; transmutation de la pierre en boue et des sorts de terre l'affectent
+
+step: Son créateur n'est pas là
+  do: Berserk : chaque round de combat, 1 % de chances cumulatif qu'il échappe à tout contrôle et attaque n'importe qui
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction ou celle des intrus

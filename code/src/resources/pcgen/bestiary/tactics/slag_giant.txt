@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Géant des scories, géant forgeron des volcans, loyal et irritable, qui brise armes et armures.
+  Marteau de guerre +15/+10 (2d6+12, x3) ; rochers +8 ; coup fracassant ; il attrape les rochers ; résistance au feu 30.
+
+step: Des intrus dans sa forge
+  do: Les chasser
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Rochers
+
+step: Ennemi au contact
+  do: Coup fracassant sur son arme ou son armure
+  note: son coup fracassant peut briser l'arme ou l'armure de l'ennemi d'un seul coup
+
+## Rounds suivants
+
+step: Toujours
+  do: Marteau de guerre
+
+## Repli
+
+step: Points de vie sous 20
+  do: Reculer dans sa forge

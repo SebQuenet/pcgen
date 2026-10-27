@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Axiomite, extérieur loyal neutre fait de nombres et de lumière, habitant d'Axis. Il défend l'ordre absolu et méprise le chaos.
+  Épée longue +1 +16/+11 (1d8+7, 19-20) ; RD 10/chaos, RM 19 ; immunité aux maladies, à l'électricité et aux effets mentaux ; forme de poussière cristalline ; Int 21.
+
+resource: Hâte | 3 | magique
+resource: Immobilisation de monstre | 3 | magique, DD 20
+resource: Éclair | 3 | magique, DD 18
+resource: Colère de l'ordre renforcée | 3 | magique, DD 19
+resource: Convocation d'inévitable | 1 | un zelekhut
+resource: Vision lucide | 1 | magique
+
+step: Des créatures chaotiques menacent l'ordre
+  do: Convoquer un zelekhut, puis hâte sur lui et ses alliés
+  note: il calcule chaque combat avant de le livrer
+
+## Ouverture
+
+step: Ennemis chaotiques groupés
+  do: Colère de l'ordre renforcée (DD 19)
+
+step: L'ennemi le plus dangereux
+  do: Immobilisation de monstre (DD 20)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coup au but, puis épée longue
+
+step: Un démon ou un extérieur chaotique
+  do: Dissipation du chaos
+
+## Repli
+
+step: Points de vie sous 20
+  do: Forme de poussière cristalline et fuite

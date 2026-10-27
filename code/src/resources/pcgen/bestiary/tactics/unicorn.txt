@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Licorne, cheval à corne, gardienne des forêts, bonne et méfiante. Elle ne s'approche que des innocents et des purs.
+  Coup de corne et 2 sabots ; cercle magique contre le mal permanent ; immunité au poison, au charme et à la coercition.
+
+resource: Soins légers | 3 | magique
+resource: Soins modérés | 1 | magique
+resource: Neutralisation du poison | 1 | magique
+resource: Téléportation suprême | 1 | magique, dans sa forêt
+
+step: Des intrus dans sa forêt
+  do: Les observer et juger s'ils sont bons ou mauvais
+
+## Ouverture
+
+step: Des créatures mauvaises menacent la forêt
+  do: Charger : coup de corne
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coup de corne et 2 sabots
+
+step: Un allié est blessé
+  do: Soins légers ou modérés
+
+## Repli
+
+step: Points de vie sous 10
+  do: Téléportation suprême dans sa forêt

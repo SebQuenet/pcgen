@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Kodama, kami gardien des arbres sauvages, timide et espiègle. Il protège la forêt contre les bûcherons.
+  2 griffes +9 (1d3+2) ; regard distrayant ; attaque sournoise +2d6 ; RD 5/fer froid, RM 16.
+
+resource: Enchevêtrement | 3 | magique, DD 14
+resource: Charme-animal | 3 | magique, DD 14
+resource: Passage par les arbres | 3 | lui seul
+
+step: Des bûcherons dans la forêt
+  do: Forme d'arbre et observer
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Enchevêtrement (DD 14)
+
+step: Un ennemi
+  do: Regard distrayant, puis attaque sournoise
+
+## Rounds suivants
+
+step: Toujours
+  do: Passage par les arbres pour frapper de côté
+
+## Repli
+
+step: Il est blessé
+  do: Fusion avec son arbre

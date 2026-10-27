@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Crocodile, prédateur d'embuscade des rivières. Il saisit, entraîne sous l'eau et noie.
+
+step: Proie au bord de l'eau
+  do: Approcher immergé, seuls les yeux dépassent (Discrétion bonus dans l'eau)
+
+## Ouverture
+
+step: Proie à portée
+  do: Sprint hors de l'eau, morsure et saisie
+
+## Rounds suivants
+
+step: Proie agrippée
+  do: Roulade mortelle : dégâts et la proie tombe à terre, puis l'entraîner sous l'eau
+  note: la proie sous l'eau risque la noyade
+
+step: Ennemi derrière lui
+  do: Coup de queue
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Plonger avec la proie

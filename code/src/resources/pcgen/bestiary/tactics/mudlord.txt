@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Seigneur de boue, élémentaire de boue qui se cache en flaque et étouffe ses proies.
+  2 coups +13 (étreinte) ; boule de boue +12 contact (aveuglement) ; engloutissement (DD 17, étouffement) ; amorphe ; RD 10/magie, RM 17 ; vulnérable à la magie.
+
+step: Des proies
+  do: Rester immobile comme une flaque de boue
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Boule de boue aveuglante
+
+step: Une proie au contact
+  do: Coups avec étreinte
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Engloutir et étouffer
+
+## Repli
+
+step: Points de vie sous 15
+  do: Redevenir flaque

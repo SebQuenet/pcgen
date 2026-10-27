@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Baku, bête magique qui dévore les rêves et les cauchemars. Neutre, elle protège parfois les dormeurs.
+  2 griffes +15 (1d4+2), corne +15 ; drain mental ; griffes de rêve ; RD 10/fer froid, RM 19 ; invisibilité à volonté.
+
+resource: Sommeil profond | 3 | magique, DD 20
+resource: Rêve | 3 | magique
+resource: Forme éthérée | 1 | magique
+resource: Modification de mémoire | 1 | magique, DD 21
+
+step: Des créatures éveillées
+  do: Invisibilité, puis sommeil (DD 18)
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Sommeil profond (DD 20)
+
+## Rounds suivants
+
+step: Un dormeur
+  do: Drain mental : elle se nourrit de ses rêves
+
+step: Ennemi éveillé au contact
+  do: 2 griffes et corne
+
+## Repli
+
+step: Points de vie sous 20
+  do: Forme éthérée

@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Ourdivar, protéen gardien et métamorphe (Int 11), qui se fait passer pour un humanoïde pour s'infiltrer parmi les mortels.
+  Coup +8 (1d6+4), queue +3 (1d8+2 et étreinte) ; constriction (1d8+4) ; frappe adaptative ; sortie d'onde de distorsion ; anatomie amorphe ; liberté de mouvement ; RM 15.
+
+resource: Rayons colorés | 3 | magique, DD 13
+resource: Dissipation de la magie | 1 | magique
+resource: Rage | 1 | magique
+
+step: Des intrus
+  do: Prendre une forme humanoïde et se mêler à eux
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Rayons colorés
+
+step: Ennemis protégés par magie
+  do: Dissipation de la magie
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coup et queue avec étreinte ; constriction
+
+## Repli
+
+step: Points de vie sous 12
+  do: Fuir en changeant de forme

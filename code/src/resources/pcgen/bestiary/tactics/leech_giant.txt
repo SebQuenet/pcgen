@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Sangsue géante des marais, sans esprit. Elle se fixe à sa proie et boit son sang.
+  Morsure +2 (1d6 et fixation) ; immunisée aux effets mentaux ; sensible au sel.
+
+step: Une créature entre dans le marais
+  do: Nager vers elle sans bruit
+  note: amphibie : elle sort de l'eau pour suivre une proie
+
+## Ouverture
+
+step: La proie est au contact
+  do: Mordre : fixation, elle agrippe automatiquement
+  note: +8 pour maintenir la prise
+
+## Rounds suivants
+
+step: Elle est fixée
+  do: Drainer le sang : 1 Force et 1 Constitution à la fin de chaque tour
+
+step: Une poignée de sel
+  do: Elle subit 1d6 comme sous un flacon d'acide
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, elle reste fixée jusqu'à être tuée ou arrachée

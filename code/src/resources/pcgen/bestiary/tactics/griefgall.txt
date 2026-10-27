@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Galle de chagrin, minuscule plante parasite (Int 4), qui se fixe aux créatures tristes ou endormies, les paralyse et se nourrit de leur chagrin. Elle pousse souvent près des tombes.
+  Vrilles +12 (1d2-3 et paralysie) ; RD 5/tranchant ; elle creuse.
+
+step: Une victime triste ou endormie
+  do: Ramper vers elle
+
+## Ouverture
+
+step: La victime
+  do: Vrilles paralysantes
+  note: une victime paralysée ne peut rien faire ; un sort de délivrance de la paralysie la libère
+
+## Rounds suivants
+
+step: Toujours
+  do: Se nourrir de la victime paralysée
+
+step: D'autres approchent
+  do: Les paralyser à leur tour
+
+## Repli
+
+step: Elle est blessée
+  do: S'enfouir

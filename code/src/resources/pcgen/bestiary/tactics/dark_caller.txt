@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Appeleur obscur, prêtre du peuple de l'ombre, qui mène les rituels et commande les siens.
+  Dague de maître +10/+5 (poison de suie noire) ; attaque sournoise +2d6 ; rituel d'ombre ; aveuglé par la lumière vive.
+
+resource: Ténèbres profondes | 3 | magique
+resource: Pas d'ombre | 3 | magique
+resource: Invocation d'ombre | 1 | magique, DD 18
+
+step: Des intrus
+  do: Ténèbres profondes
+
+## Ouverture
+
+step: Ennemis
+  do: Invocation d'ombre
+
+## Rounds suivants
+
+step: Un ennemi pris en tenaille
+  do: Dague empoisonnée avec attaque sournoise
+
+## Repli
+
+step: Points de vie sous 12
+  do: Pas d'ombre et fuite

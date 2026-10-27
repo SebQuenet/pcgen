@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Mille-pattes colossal, sans esprit, capable de broyer un chariot. Il ne cherche pas à se cacher : il avance droit sur ce qui bouge.
+  Morsure empoisonnée (perte de Dextérité, DD très élevé à cette taille) ; on ne peut pas le faire tomber ; il grimpe à 12 m par round, même sur une paroi.
+
+step: Proies en vue
+  do: Avancer sur la plus grande : monture, géant, chariot
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Mordre le plus gros adversaire
+  note: poison de mille-pattes : Vigueur, 1 fois par round pendant 6 rounds, 1d3 Dextérité
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même cible jusqu'à ce qu'elle tombe
+  note: les petits adversaires qui l'escaladent sont ignorés tant qu'une grosse proie reste à portée
+
+step: Plus de grosse proie
+  do: Mordre le plus proche
+
+## Repli
+
+step: Points de vie sous le quart
+  do: S'enfoncer dans une crevasse ou sous terre

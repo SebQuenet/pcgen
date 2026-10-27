@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Objet animé par un sort, sans esprit : chaise, statuette, coffre. Il obéit à une consigne et se bat jusqu'à destruction. Solidité : soustraire ce chiffre à chaque coup.
+  Immunités des créatures artificielles : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Sa consigne se déclenche
+  do: Rester immobile, l'air d'un meuble, jusqu'à ce qu'un intrus soit à portée
+
+## Ouverture
+
+step: Intrus à portée
+  do: Coup sur le premier intrus, ou croc-en-jambe s'il s'agit d'un tapis ou d'une corde
+  note: un objet animé peut recevoir des points de construction : attaque supplémentaire, enchevêtrement, vitesse
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper la même cible jusqu'à ce qu'elle tombe ou sorte de la zone gardée
+
+## Repli
+
+step: Jamais
+  do: Il se bat jusqu'à être détruit

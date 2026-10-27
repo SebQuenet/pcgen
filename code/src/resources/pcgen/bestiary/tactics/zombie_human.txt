@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Zombie humain, cadavre animé sans esprit par un nécromant. Lent et chancelant, il n'agit qu'une fois par round.
+  Coup +4 (1d6+4) ; RD 5/tranchant ; chancelant : une seule action de mouvement ou une seule action simple par round (sauf la charge).
+
+step: Il garde un lieu
+  do: Rester immobile jusqu'à ce que l'ordre de son créateur s'applique
+
+## Ouverture
+
+step: Ennemi à portée de charge
+  do: Charger : la charge lui permet de se déplacer et frapper au même round
+
+step: Ennemi au contact
+  do: Coup +4 (1d6+4)
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le plus proche ; plusieurs zombies encerclent naturellement leur cible
+  note: les armes tranchantes l'abîment plus vite ; il ne change pas de cible pour autant
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, il combat jusqu'à la destruction

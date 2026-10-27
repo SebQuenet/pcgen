@@ -91,7 +91,15 @@ public final class PathfinderSummonPortraits
 	/** Same name as {@code portrait_name} in the generation script. */
 	public static String fileNameOf(String raceKey)
 	{
-		String slug = raceKey.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]+", "_").replaceAll("^_+|_+$", "");
-		return slug + ".jpg";
+		return slugOf(raceKey) + ".jpg";
+	}
+
+	/**
+	 * @param raceKey a race's key, such as Giant (Stone).
+	 * @return the name a file about that race is given, without its extension: giant_stone.
+	 */
+	public static String slugOf(String raceKey)
+	{
+		return raceKey.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]+", "_").replaceAll("^_+|_+$", "");
 	}
 }

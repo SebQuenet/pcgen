@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Yamah, azata en forme de dragonnet aux ailes de papillon (Int 13), voleuse de magie, qui protège les faibles contre les tyrans.
+  Lamétoile de retour +2 +14/+9 au contact et lancée ; vol de magie ; RD 5/fer froid ou mal ; vol à 30 m par round.
+
+resource: Soins modérés | 3 | magique
+resource: Invisibilité | 3 | magique
+resource: Charme-personne | 1 | magique, DD 16
+
+step: Des ennemis mauvais
+  do: Invisibilité et approcher
+
+## Ouverture
+
+step: Un lanceur de sorts mauvais
+  do: Vol de magie : lui retirer une protection
+
+## Rounds suivants
+
+step: Toujours
+  do: Lamétoile de retour, au contact ou lancée
+
+step: Un allié blessé
+  do: Soins modérés
+
+## Repli
+
+step: Points de vie sous 12
+  do: Invisibilité et s'envoler

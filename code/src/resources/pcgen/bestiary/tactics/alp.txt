@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Alp, fée des cauchemars (Int 10) qui s'assied sur la poitrine des dormeurs, leur vole le souffle et se nourrit de leurs mauvais rêves.
+  Morsure +17 (1d6+5), 2 griffes +17 ; RD 10/fer froid, RM 21 ; immunité au sommeil.
+
+step: Des dormeurs
+  do: S'asseoir sur leur poitrine et provoquer des cauchemars
+
+step: Une sentinelle veille
+  do: Attendre qu'elle s'assoupisse
+
+## Ouverture
+
+step: Un éveillé l'attaque
+  do: Morsure et griffes
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le même ennemi
+
+step: Un ennemi a une arme de fer froid
+  do: Fuir
+
+## Repli
+
+step: Points de vie sous 30
+  do: Fuir ; il reviendra une autre nuit

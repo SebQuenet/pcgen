@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Soldat de terre cuite, statue de guerrier animée, gardienne de tombeau impérial, qui combat en rang.
+  Épée longue +10/+5 et épée courte +10 (armes acérées) ; combat en rang ; RD 5/contondant, RM 17 ; immunité au feu.
+
+step: Il garde un tombeau
+  do: Rester en rang, immobile
+
+## Ouverture
+
+step: Des intrus
+  do: Avancer en rang et frapper
+  note: ses armes acérées font des critiques fréquents ; il ne craint ni le feu ni la peur
+
+## Rounds suivants
+
+step: Toujours
+  do: Combattre en rang avec les autres soldats
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction

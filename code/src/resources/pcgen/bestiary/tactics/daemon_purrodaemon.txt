@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Purrodémon, daémon guerrier hérissé de lames, incarnation de la mort à la guerre. Il mène les armées d'Abaddon.
+  Hallebarde +2 sanglante +32/+27/+22/+17 (2d8+18, 19-20/x3), morsure +24 (1d8+5) ; aura de terreur (4,50 m, DD 24) ; aura impie ; armes trempées ; RD 10/bien et argent, RM 29.
+
+resource: Chaîne d'éclairs | 3 | magique, DD 21
+resource: Cône de froid | 3 | magique, DD 20
+resource: Colonne de feu | 3 | magique, DD 20
+resource: Convocation de dergodémons | 1 | magique
+
+step: Il mène une armée
+  do: Convoquer des dergodémons et les lancer devant lui
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Chaîne d'éclairs (DD 21) ou cône de froid (DD 20)
+
+step: Le champion ennemi
+  do: Le charger : hallebarde sanglante
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Hallebarde +32/+27/+22/+17 et morsure ; les blessures saignent
+
+step: Prêtres ennemis
+  do: Colonne de feu (DD 20)
+
+## Repli
+
+step: Points de vie sous 70
+  do: Téléportation suprême

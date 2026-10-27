@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Petit mille-pattes des égouts et des tas d'ordures, sans esprit. Il se cache dans les déchets et l'eau sale ; on ne le voit qu'au moment de la morsure.
+  Morsure empoisonnée (perte de Dextérité) ; il grimpe à 12 m par round.
+
+step: Une proie traverse le tas d'ordures ou le canal
+  do: Rester caché sous les déchets
+
+## Ouverture
+
+step: La proie marche à côté
+  do: Mordre au mollet
+  note: poison de mille-pattes : Vigueur, 1 fois par round pendant 6 rounds, 1d3 Dextérité ; une réussite l'arrête
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même cible ; plusieurs mille-pattes des égouts se rassemblent sur la même proie
+
+step: La proie riposte
+  do: Grimper au mur ou sous la voûte, puis redescendre sur une cible moins vigilante
+
+## Repli
+
+step: Points de vie sous la moitié
+  do: Fuir dans les déchets ou dans un conduit

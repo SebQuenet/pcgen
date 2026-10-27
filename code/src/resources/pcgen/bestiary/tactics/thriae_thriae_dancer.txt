@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Danseuse thriae, abeille humanoïde (Int 12) au service de la reine de la ruche, qui inspire les soldates par sa danse et charme les intrus.
+  Coutille de maître +12/+7 (1d10+3/x3), dard +10 (1d8+3 et poison) ; danse inspirante.
+
+resource: Charme-personne | 3 | magique, DD 14
+resource: Hypnose | 3 | magique, DD 14
+resource: Sommeil profond | 1 | magique, DD 16
+resource: Suggestion | 1 | magique, DD 16
+
+step: Des intrus
+  do: Danse inspirante pour les soldates
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Sommeil profond ou hypnose
+
+step: Un chef ennemi
+  do: Suggestion : déposer les armes
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coutille et dard
+
+## Repli
+
+step: Points de vie sous 15
+  do: S'envoler vers la ruche

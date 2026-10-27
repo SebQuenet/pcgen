@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Vierge cygne, fée bonne qui se change en cygne grâce à son manteau de plumes, protectrice des lacs.
+  Rapière de maître +11 ; arc long +10 ; manteau de plumes ; pas sans traces ; RD 5/fer froid, RM 17.
+
+resource: Confusion | 1 | magique, DD 16
+resource: Sommeil profond | 1 | magique, DD 15
+resource: Enchevêtrement | 1 | magique, DD 13
+
+step: Des créatures mauvaises près du lac
+  do: Forme de cygne et observer
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Sommeil profond ou confusion
+
+## Rounds suivants
+
+step: Toujours
+  do: Arc long puis rapière
+
+## Repli
+
+step: Points de vie sous 15
+  do: Forme de cygne et s'envoler

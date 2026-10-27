@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Fourmi chevalier, grande fourmi sans esprit au corps cuirassé, guerrière de la colonie, qui patrouille les abords de la fourmilière et attaque en groupe tout intrus.
+  Morsure +7 (1d8+5 et étreinte), dard +7 (1d6+5 et poison) ; vision dans le noir ; elle creuse et grimpe.
+
+step: Intrus près de la colonie
+  do: Attaquer en groupe, plusieurs fourmis par intrus
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Morsure avec étreinte, puis dard
+
+## Rounds suivants
+
+step: Elle tient une proie
+  do: Piquer encore ; le poison affaiblit
+
+step: Une sœur est tuée
+  do: Les autres accourent
+
+## Repli
+
+step: Jamais
+  do: Elle défend la colonie jusqu'à la mort

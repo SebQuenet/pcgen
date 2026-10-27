@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Soldat mécanique, automate de guerre sans esprit, armé d'une hallebarde.
+  Hallebarde +1 +18/+13 (1d10+14, x3) ; accrochage ; veille ; RD 5/adamantium ; vulnérable à l'électricité.
+
+step: Il garde un poste
+  do: Veille : rester immobile, prêt à s'activer
+
+## Ouverture
+
+step: Ennemi à 3 m
+  do: Hallebarde
+  note: en veille, il ne consomme pas son remontoir ; il s'active dès qu'un intrus franchit la limite
+
+## Rounds suivants
+
+step: Toujours
+  do: Accrocher l'ennemi touché et le frapper encore
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction

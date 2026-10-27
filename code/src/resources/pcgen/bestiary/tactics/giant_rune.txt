@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Géant des runes, géant gigantesque créé par Thassilon pour commander les autres géants. Il porte des runes de pouvoir sur la peau et domine les esprits.
+  Épée longue de maître +27/+22/+17 (4d6+22, 17-20), allonge 6 m ; lances +12 (4d6+15) ; commandement des géants ; runes ; pluie d'étincelles ; immunité au froid, à l'électricité et au feu.
+
+resource: Charme-monstre de groupe | 3 | magique, DD 22
+resource: Domination de personne | 3 | magique, DD 19
+resource: Exigence | 1 | magique, DD 22
+
+step: Il mène des géants
+  do: Les commander : ils lui obéissent sans faillir
+  note: marche dans les airs permanente
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Charme-monstre de groupe (DD 22)
+
+step: Le combattant le plus fort
+  do: Domination de personne (DD 19)
+
+## Rounds suivants
+
+step: Ennemis groupés au sol
+  do: Pluie d'étincelles
+
+step: Ennemi au contact
+  do: Épée longue +27/+22/+17
+
+## Repli
+
+step: Points de vie sous 60
+  do: S'éloigner dans les airs et envoyer ses géants

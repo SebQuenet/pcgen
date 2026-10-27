@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Fouette-herbe, plante carnivore camouflée parmi les herbes, qui fouette ses proies de tentacules empoisonnés.
+  3 tentacules +5 (poison : nauséeux, DD 12), allonge 4,50 m ; puanteur (DD 12) ; camouflage (Perception DD 15) ; enfouissement.
+
+step: Des proies
+  do: S'enfouir parmi les herbes
+
+## Ouverture
+
+step: Une proie à 4,50 m
+  do: 3 tentacules empoisonnés
+  note: son poison rend nauséeux ; sa puanteur repousse la plupart des animaux
+
+## Rounds suivants
+
+step: Toujours
+  do: Fouetter les proies à portée
+
+## Repli
+
+step: Jamais
+  do: Elle reste enfouie

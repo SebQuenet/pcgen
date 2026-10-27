@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Sanglier géant au caractère exécrable. Il attaque tout ce qui l'approche, et sa férocité le fait combattre sous 0 point de vie.
+  Coup de boutoir +8 (2d6+9) ; Science de l'initiative.
+
+step: Intrus près de sa bauge
+  do: Charger dès qu'ils sont repérés, sans démonstration ni avertissement
+  note: l'odorat lui révèle les intrus cachés à proximité
+
+## Ouverture
+
+step: Ennemi à portée de charge
+  do: Charger : coup de boutoir +10 (2d6+9), puis malus de -2 à la CA jusqu'au round suivant
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coup de boutoir sur le même adversaire jusqu'à ce qu'il tombe
+
+step: Un adversaire recule pour prendre de la distance
+  do: Le recharger : 12 m de déplacement
+
+step: Points de vie sous 0
+  do: Continuer à combattre, chancelant, en perdant 1 point de vie par round
+  note: férocité : il meurt à -17
+
+## Repli
+
+step: Jamais
+  do: Il ne fuit pas ; seuls la mort ou le départ des intrus l'arrêtent

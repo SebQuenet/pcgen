@@ -1,0 +1,23 @@
+## Avant le combat
+
+note: Profil
+  Tique géante, vermine sans esprit grosse comme un chien, qui attend dans les buissons et se fixe à sa proie.
+  Morsure +2 (1d4, étreinte, fixation et maladie de la douleur rouge) ; absorption de sang (1 Constitution par round).
+
+step: Une proie passe dans les buissons
+  do: Se laisser tomber sur elle
+
+## Ouverture
+
+step: La proie au contact
+  do: Morsure : elle se fixe
+
+## Rounds suivants
+
+step: Fixée sur une proie
+  do: Boire le sang ; après 6 points de Constitution, elle se détache, rassasiée
+
+## Repli
+
+step: Rassasiée ou blessée
+  do: Se détacher et fuir

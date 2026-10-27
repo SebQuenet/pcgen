@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Chien de l'Enfer, molosse infernal aux yeux rougeoyants. Il chasse en meute et adore la chair brûlée.
+  Morsure +5 (1d8+1 et 1d6 feu) ; souffle en cône de 3 m (2d6 feu, Réflexes DD 14 pour moitié), une fois tous les 2d4 rounds. Immunité au feu, vulnérabilité au froid.
+
+resource: Souffle de feu | 1 | une fois tous les 2d4 rounds
+
+step: Une meute patrouille
+  do: Suivre les intrus à l'odeur, puis les encercler
+  note: Science de l'initiative
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle en cône de 3 m : 2d6 feu, Réflexes DD 14 pour moitié
+
+step: Ennemi au contact
+  do: Morsure +5 (1d8+1 et 1d6 feu)
+
+## Rounds suivants
+
+step: Souffle rechargé
+  do: Souffler sur le plus de cibles possible
+
+step: Toujours
+  do: Mordre la même cible que la meute
+
+## Repli
+
+step: Points de vie sous 8
+  do: Fuir, sauf s'il est commandé par un diable

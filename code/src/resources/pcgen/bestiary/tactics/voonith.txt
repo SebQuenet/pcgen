@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Voonith, bête amphibie à quatre griffes, dont le hurlement glace le sang.
+  Morsure +8 (croc-en-jambe, allonge 3 m), 4 griffes +7 ; hurlement glaçant ; bond ; amphibie.
+
+step: Des proies au bord de l'eau
+  do: Attendre sous l'eau
+  note: il comprend l'aklo et sert parfois de gardien à des créatures plus puissantes
+
+## Ouverture
+
+step: Ennemis à portée d'ouïe
+  do: Hurlement glaçant
+  note: son hurlement glace le sang : les victimes restent figées un instant
+
+step: Une proie
+  do: Bond : morsure et 4 griffes
+
+## Rounds suivants
+
+step: Toujours
+  do: Attaque à outrance
+
+## Repli
+
+step: Points de vie sous 10
+  do: Plonger

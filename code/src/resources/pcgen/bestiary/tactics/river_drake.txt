@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Drake des rivières, petit dragon mineur des cours d'eau, qui crache un mucus caustique.
+  Morsure +7 (2d4+3), queue +2 ; mucus caustique ; bond ; amphibie ; résistance à l'acide 20.
+
+step: Des proies au bord de la rivière
+  do: Attendre sous l'eau
+  note: il chasse les animaux venus boire et les pêcheurs imprudents
+
+## Ouverture
+
+step: Une proie
+  do: Mucus caustique, puis bond
+  note: le mucus caustique brûle et aveugle ; il bondit sur la proie aveuglée
+
+## Rounds suivants
+
+step: Toujours
+  do: Morsure et queue
+
+## Repli
+
+step: Points de vie sous 8
+  do: Plonger

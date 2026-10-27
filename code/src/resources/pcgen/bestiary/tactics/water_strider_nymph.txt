@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Jeune gerris, petit insecte sans esprit qui patine sur l'eau.
+  2 griffes -1, morsure -1 ; patinage sur l'eau.
+
+step: Une proie sur l'eau
+  do: Patiner vers elle
+  note: les nymphes vivent en groupes à la surface des mares calmes
+
+## Ouverture
+
+step: La proie
+  do: Griffes et morsure
+  note: il chasse les insectes et les petits poissons ; il évite les créatures de taille humaine
+
+## Rounds suivants
+
+step: Toujours
+  do: Fuir si elle se défend
+  note: une nymphe qu'on frappe plonge ou s'enfuit en patinant
+
+## Repli
+
+step: Il est blessé
+  do: Fuir
+  note: elle ne revient pas : elle cherche une autre mare

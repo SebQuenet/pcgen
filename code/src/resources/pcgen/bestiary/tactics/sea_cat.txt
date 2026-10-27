@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Chat de mer, grande bête magique mi-lion mi-poisson, territoriale, qui défend son récif contre tout intrus, même plus grand qu'elle. Elle retient longtemps son souffle et chasse en surface.
+  Morsure +8 (1d8+3), 2 griffes +9 (1d4+3) ; déchirure (1d4+4) ; nage à 12 m par round.
+
+step: Des intrus près de son récif
+  do: Approcher sous l'eau
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Morsure et griffes
+  note: si les deux griffes touchent, il déchire la chair de la victime
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le même ennemi
+
+step: Ennemi sur une embarcation
+  do: Bondir sur le pont
+
+## Repli
+
+step: Points de vie sous 10
+  do: Plonger

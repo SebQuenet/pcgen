@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Béhémoth thalassique, monstre marin colossal créé par les dieux pour détruire, qui engloutit flottes et ports.
+  Morsure +39 (étreinte), 2 griffes +39, queue +34 (croc-en-jambe) ; jet d'eau +20 (étourdissement et poussée) ; chavirement ; il avale les proies ; ruineux ; inarrêtable ; RD 15/épique, RM 31.
+
+resource: Tsunami | 3 | magique, DD 21
+
+step: Une flotte ou un port
+  do: Tsunami
+
+## Ouverture
+
+step: Des navires
+  do: Chavirer (DD 25)
+
+step: Ennemis à distance
+  do: Jet d'eau
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, griffes et queue ; avaler les proies tenues
+
+## Repli
+
+step: Jamais
+  do: Seul un miracle ou un souhait l'arrête

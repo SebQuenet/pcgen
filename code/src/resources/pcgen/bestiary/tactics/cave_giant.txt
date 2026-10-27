@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Géant des cavernes, géant brutal et stupide des profondeurs, qui pille la surface la nuit.
+  Hache d'armes +12/+7 (2d6+9, x3) ; rochers +6 (1d8+9) ; férocité ; sensible à la lumière.
+
+step: Des intrus dans les cavernes
+  do: Les attendre dans le noir
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Rochers
+
+step: Ennemi au contact
+  do: Hache d'armes
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le plus proche
+  note: férocité : il combat encore sous 0 point de vie
+
+## Repli
+
+step: Lumière vive ou points de vie sous 15
+  do: Fuir dans les cavernes

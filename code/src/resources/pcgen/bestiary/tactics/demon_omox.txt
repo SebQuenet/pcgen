@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Omox, démon de boue et de vase, né des âmes de ceux qui se sont noyés dans leur jalousie. Il étouffe ses proies dans sa substance.
+  2 coups +21 (1d6+8, 3d6 acide et étreinte) ; jet de vase +20 (1d6 et 3d6 acide, enchevêtrement) ; étouffement ; RD 10/bien, RM 23 ; amorphe ; nage à 24 m par round.
+
+resource: Nuage puant | 3 | magique, DD 17
+resource: Contrôle de l'eau | 3 | magique
+resource: Poison | 3 | magique, DD 18
+
+step: Des intrus près de l'eau
+  do: Rester immergé ; bond liquide d'une étendue d'eau à l'autre
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Nuage puant (DD 17)
+
+step: Un ennemi à distance
+  do: Jet de vase : enchevêtrement et acide
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Étouffement : la proie se noie dans sa substance
+
+step: Ennemi au contact
+  do: 2 coups d'acide avec étreinte
+
+## Repli
+
+step: Points de vie sous 30
+  do: Forme gazeuse ou téléportation suprême

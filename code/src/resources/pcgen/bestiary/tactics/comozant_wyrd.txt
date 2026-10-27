@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Feu Saint-Elme vivant, élémentaire d'air et de plasma, qui apparaît pendant les tempêtes sur les mâts.
+  Fouet de foudre +8 (2d8 électricité) ; forme de plasma ; intangible ; flammes éclairantes ; immunité au froid et à l'électricité.
+
+resource: Contrôle du climat | 2 | renforcer ou dissiper un orage
+
+step: Un navire dans l'orage
+  do: Briller sur les mâts
+
+## Ouverture
+
+step: On l'attaque
+  do: Fouet de foudre
+  note: les marins le croient de bon augure ; il ne combat que si on l'attaque ou si on souille le navire
+
+## Rounds suivants
+
+step: Toujours
+  do: Renforcer l'orage
+
+## Repli
+
+step: Points de vie sous 8
+  do: Dissiper sa forme dans l'orage

@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Citrouille-lanterne, plante maléfique en forme de citrouille sculptée, qui crache le feu et explose.
+  Morsure +3, coup +3 (étranglement) ; souffle de feu en cône de 6 m (1d10, DD 12) ; aura de peur (6 m, DD 13) ; explosion ; forme de citrouille.
+
+step: Des intrus dans le champ
+  do: Forme de citrouille
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de feu
+  note: elle reprend son souffle tous les 1d4 rounds ; entre-temps, elle étrangle de ses vrilles
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et coup étranglant
+
+## Repli
+
+step: Elle meurt
+  do: Elle explose

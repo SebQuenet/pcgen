@@ -1,0 +1,23 @@
+## Avant le combat
+
+note: Profil
+  Objet animé colossal : tour, statue de temple, épave entière. Allonge 9 m. On le contourne, on le fuit ou on brise le sort qui l'anime.
+  Immunités des créatures artificielles : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Sa consigne se déclenche
+  do: Rester immobile : on le prend pour une partie du bâtiment
+
+## Ouverture
+
+step: Intrus à portée
+  do: Piétinement à travers le groupe, puis coup sur le plus résistant
+
+## Rounds suivants
+
+step: Toujours
+  do: Écraser tout ce qui reste dans la zone gardée
+
+## Repli
+
+step: Jamais
+  do: Il se bat jusqu'à être détruit

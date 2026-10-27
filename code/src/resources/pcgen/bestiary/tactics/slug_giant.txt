@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Limace géante, vermine sans esprit des cavernes humides. Lente, elle crache un acide terrible à distance.
+  Langue +15 (2d10+12 et 2d8 acide) ; crachat d'acide +3 contact à distance (10d6 acide) ; RD 10/tranchant ou perforant ; immunité à l'acide ; sensible au sel. Malléable : elle se glisse dans les passages étroits.
+
+step: Des créatures dans la caverne
+  do: Avancer vers elles à 6 m par round
+  note: elle se faufile par des fissures bien plus étroites que son corps
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Cracher l'acide (10d6) sur le plus proche
+  note: le crachat est une attaque de contact à distance : l'armure ne protège pas
+
+step: Ennemi au contact
+  do: Langue +15 (2d10+12 et 2d8 acide)
+
+## Rounds suivants
+
+step: Toujours
+  do: Langue sur le plus proche, crachat sur ceux qui restent à distance
+
+step: On lui jette du sel
+  do: Reculer : le sel la brûle comme de l'acide
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, elle combat jusqu'à la mort ; elle ne poursuit pas loin

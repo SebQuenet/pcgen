@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Petite bête des cavernes en forme de cape. Pendue au plafond, elle se fait passer pour une stalactite et tombe sur sa proie.
+  Vision aveugle à 27 m : les ténèbres et l'invisibilité ne la gênent pas ; elle peut agripper une proie de n'importe quelle taille.
+
+resource: Ténèbres | 1 | magique, NLS 5
+
+step: Une proie passe sous elle
+  do: Rester immobile au plafond, camouflée en stalactite
+  note: une couvée compte 3 à 12 ; elles tombent toutes sur le même groupe
+
+## Ouverture
+
+step: La proie est juste dessous
+  do: Ténèbres, puis se laisser tomber et frapper +3 (1d4+4 et étreinte)
+  note: dans ses ténèbres, la proie est aveugle alors que la darkmantle la perçoit
+
+## Rounds suivants
+
+step: Elle tient la proie
+  do: Envelopper sa tête : constriction 1d4+4 à chaque test de lutte réussi
+  note: la proie, la tête couverte, ne voit plus rien même hors des ténèbres
+
+step: La proie se libère
+  do: S'envoler au plafond (9 m par round) et retomber sur elle au round suivant
+
+## Repli
+
+step: Points de vie sous 5
+  do: S'envoler dans les ténèbres vers le plafond de la caverne

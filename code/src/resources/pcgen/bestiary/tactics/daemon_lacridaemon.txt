@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Lacridémon, petit daémon de la mort par chagrin (Int 11), dont l'aura fait pleurer les vivants et dont les larmes empoisonnent.
+  Morsure +6 (1d4+2, 1d4 acide et poison), 2 griffes +7 (1d4 acide) ; larmes empoisonnées ; aura de pleurs (30 m) ; RD 5/bien ou argent.
+
+resource: Chagrin accablant | 3 | magique, DD 14
+resource: Téléportation | 3 | magique
+resource: Immobilisation de personne | 1 | magique, DD 14
+
+step: Des mortels
+  do: S'approcher sans traces ; l'aura de pleurs les gagne à 30 m
+
+## Ouverture
+
+step: Ennemis
+  do: Chagrin accablant (DD 14) sur le plus combatif
+
+step: Un ennemi isolé
+  do: Immobilisation de personne
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes acides
+
+step: Toujours
+  do: Larmes empoisonnées sur ceux qui pleurent
+
+## Repli
+
+step: Points de vie sous 8
+  do: Téléportation

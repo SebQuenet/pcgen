@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Génie de l'air, fier, joueur et plutôt bienveillant (chaotique bon). Il méprise les éfrits et aide volontiers qui le traite avec respect.
+  Maîtrise de l'air : à l'attaque et aux dégâts contre les créatures volantes. Vol à 18 m par round ; immunité à l'acide.
+  Noble djinn (malik) : plus puissant que ses semblables, il peut exaucer trois vœux à un mortel qui l'a capturé ou servi.
+
+resource: Tourbillon | 1 | toutes les 10 minutes
+resource: Image persistante | 1 | magique
+resource: Forme gazeuse | 1 | magique
+
+step: Des étrangers approchent
+  do: Les observer invisible, puis se montrer et parler avant de combattre
+  note: il ne combat pas des gens de bien sans raison ; un affront à son honneur suffit cependant
+
+step: Le combat devient inévitable
+  do: Image persistante d'une troupe de djinns pour faire hésiter les ennemis
+
+step: Des alliés génies l'accompagnent
+  do: Les envoyer au contact et rester en retrait, invisible
+
+## Ouverture
+
+step: Plusieurs ennemis au sol
+  do: Se changer en tourbillon et les balayer  : Réflexes ou emportés
+  note: une créature emportée par le tourbillon subit ses dégâts chaque round et ne peut pas agir librement
+
+step: Un ennemi volant
+  do: Le frapper au cimeterre de maître avec la maîtrise de l'air
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Cimeterre ou 2 coups, puis s'élever hors de portée
+  note: invisibilité à volonté : redevenir invisible entre deux assauts
+
+step: Les ennemis sont trop forts
+  do: Changer de plan (changement de plan à volonté) avec ses alliés consentants
+
+## Repli
+
+step: Points de vie sous 15
+  do: Forme gazeuse ou changement de plan vers le plan de l'Air

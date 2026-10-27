@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Taniniver, dragon mort-vivant pestilentiel, porteur de la pourriture de momie, intelligent (Int 18).
+  Morsure +30, 2 griffes +30, queue +24 (maladie) ; souffle en cône de 18 m (absorption de Force et pourriture de momie, DD 27) ; présence terrifiante (54 m, DD 25) ; RD 15/bien et magie, RM 29.
+
+resource: Souffle | 1 | une fois tous les 1d4 rounds
+resource: Flétrissure horrible | 1 | magique, DD 23
+resource: Mauvais œil | 1 | magique, DD 21
+
+step: Des vivants
+  do: Animer les morts
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle pestilentiel
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, griffes et queue porteuses de maladie
+
+step: Ennemis groupés
+  do: Flétrissure horrible
+
+## Repli
+
+step: Points de vie sous 70
+  do: S'envoler

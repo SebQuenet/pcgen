@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Mégalania, varan géant préhistorique, venimeux, qui avale ses proies.
+  Morsure +14 (2d8+12, étreinte et poison) ; il avale les proies (2d8+12, CA 16, 8 points de vie) ; il nage.
+
+step: Une proie
+  do: S'approcher à couvert
+  note: il chasse près des berges et des points d'eau ; il attend des heures sans bouger
+
+## Ouverture
+
+step: La proie au contact
+  do: Morsure avec étreinte et poison
+  note: son venin empêche le sang de coaguler : la proie s'affaiblit vite
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: L'avaler
+
+## Repli
+
+step: Points de vie sous 20
+  do: Fuir dans l'eau

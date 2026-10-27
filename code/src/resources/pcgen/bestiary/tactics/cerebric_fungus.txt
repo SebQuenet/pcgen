@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Champignon cérébral, plante venue d'au-delà des étoiles, à l'aspect troublant, qui rend fou.
+  Morsure +5 (1d6+2), 2 vrilles +3 (traction, allonge 4,50 m) ; cri stellaire ; aspect troublant (18 m, DD 14) ; vulnérable au son.
+
+resource: Apaisement des émotions | 3 | magique, DD 14
+resource: Contact d'idiotie | 3 | magique, DD 14
+
+step: Des créatures approchent
+  do: Lire leurs pensées (DD 14)
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cri stellaire
+
+step: Un ennemi à 4,50 m
+  do: Vrilles : le tirer à lui
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure ; contact de folie (DD 14)
+
+## Repli
+
+step: Points de vie sous 8
+  do: Fuir

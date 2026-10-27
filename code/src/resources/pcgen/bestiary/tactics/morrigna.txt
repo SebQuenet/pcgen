@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Morrigna, psychopompe enveloppée de bandelettes, inquisitrice qui traque ceux qui défient la mort.
+  2 coups +24, 2 bandelettes +19 (étreinte) ; inquisitrice NLS 12 ; RD 10/adamantium, RM 24.
+
+resource: Convocation d'araignées | 3 | tarentules géantes ou nuées
+resource: Ancre dimensionnelle | 5 | sort
+
+step: Elle traque un nécromant
+  do: Divination et ancre dimensionnelle
+
+## Ouverture
+
+step: Le nécromant
+  do: Bandelettes avec étreinte
+
+## Rounds suivants
+
+step: Toujours
+  do: Coups ; convoquer des araignées
+
+## Repli
+
+step: Points de vie sous 45
+  do: Changer de forme et fuir

@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Grenouille venimeuse, minuscule et aux couleurs vives, inoffensive sauf pour qui la touche. Son poison est recherché par les assassins.
+  Morsure +3 (1 et poison) ; nage à 6 m par round.
+
+step: Une créature approche
+  do: Rester immobile ; ses couleurs suffisent à avertir les prédateurs
+
+step: On veut l'attraper
+  do: Sauter hors de portée, dans l'eau ou sous les feuilles
+
+## Ouverture
+
+step: On la saisit ou on l'accule
+  do: Mordre
+  note: poison : Vigueur DD 10, 1 fois par round pendant 6 rounds, 1d2 Constitution ; 1 réussite l'arrête
+
+## Rounds suivants
+
+step: Elle est libre
+  do: Fuir plutôt que mordre de nouveau
+
+step: Elle est tenue
+  do: Mordre encore
+
+## Repli
+
+step: Toujours
+  do: Sauter dans l'eau ou sous les feuilles

@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Pazuzu, seigneur démon des créatures volantes et des tentations, qui répond quand on prononce son nom trois fois. Très intelligent (Int 28).
+  Épée longue anarchique acérée impie +5 +54/+49/+44/+39, morsure, griffe, dard (poison), 2 serres +49 ; souffles ; domination des créatures aériennes ; aura impie ; RD 25/fer froid et bien, RM 39.
+
+resource: Pluie de météores | 1 | sort, DD 28
+resource: Emprisonnement | 1 | sort, DD 28
+
+step: Un mortel prononce son nom
+  do: Apparaître et proposer un marché
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Pluie de météores ou souffles
+
+step: Le plus fort
+  do: Domination de monstre ou emprisonnement
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée, morsure, griffe, dard et serres
+
+step: Créatures volantes
+  do: Les dominer
+
+## Repli
+
+step: Points de vie bas
+  do: Forme éthérée

@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Fée des dents, minuscule fée cruelle armée de pinces, qui arrache les dents des dormeurs.
+  Pinces (dague +1) ; voleuse habile ; paralysie (1d3 rounds, DD 11) ; agonie (poussière nauséabonde).
+
+resource: Sommeil | 1 | magique, DD 13
+resource: Invisibilité | 1 | elle seule
+
+step: Des dormeurs
+  do: Invisibilité et approcher
+
+## Ouverture
+
+step: Un éveillé
+  do: Sommeil
+
+## Rounds suivants
+
+step: Une victime endormie
+  do: Arracher une dent avec ses pinces
+  note: à sa mort, elle explose en poussière nauséabonde ; ses pinces paralysent d'un pincement
+
+## Repli
+
+step: Elle est blessée
+  do: S'envoler

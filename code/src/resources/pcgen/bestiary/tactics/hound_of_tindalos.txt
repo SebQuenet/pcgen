@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Chien de Tindalos, chasseur venu des angles du temps. Une fois sur la piste d'une proie, il la traque à travers le temps et l'espace.
+  Morsure +15 (2d6+3), 2 griffes +15 (1d8+3) ; regard déchirant ; entrée par les angles ; RD 10/magie ; immunité aux effets mentaux et au poison ; Int 16.
+
+resource: Ancre dimensionnelle | 3 | magique
+resource: Hâte | 3 | magique
+resource: Lenteur | 3 | magique, DD 16
+resource: Scrutation suprême | 3 | magique, DD 20
+
+step: Il a une proie
+  do: Localisation et scrutation, puis apparaître par un angle de la pièce
+  note: il ne peut entrer que par un angle d'au moins 90 degrés ; une pièce aux murs arrondis le gêne
+
+## Ouverture
+
+step: La proie
+  do: Ancre dimensionnelle pour l'empêcher de fuir, puis hâte
+
+step: Ses protecteurs
+  do: Lenteur (DD 16)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes ; regard déchirant
+
+## Repli
+
+step: Points de vie sous 20
+  do: Disparaître par un angle ; il reviendra

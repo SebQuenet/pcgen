@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Armure fantôme gardienne, armure possédée par l'esprit d'un guerrier mort, qui garde un lieu.
+  Épée longue de maître +5 ; immobilité (paraît une armure ordinaire, +20 en Discrétion).
+
+step: Elle garde un lieu
+  do: Rester immobile comme une armure exposée
+
+## Ouverture
+
+step: Des intrus passent
+  do: Frapper par surprise
+  note: on la prend pour une armure exposée ; la détection des morts-vivants la trahit
+
+## Rounds suivants
+
+step: Toujours
+  do: Épée longue sur le plus proche
+  note: l'esprit qui l'habite ne connaît que sa consigne : il ne parle pas, ne négocie pas
+
+## Repli
+
+step: Jamais
+  do: Elle garde le lieu

@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Roi des rats, masse de rats aux queues nouées, intelligente, qui commande les rats et porte la peste.
+  5 morsures +11 (maladie) ; porteur de peste ; parle aux rats ; immunité aux critiques et à la prise en tenaille.
+
+step: Des intrus dans les égouts
+  do: Appeler les rats
+
+## Ouverture
+
+step: Ennemis
+  do: Envoyer les rats
+  note: une centaine de rats répondent à son appel ; tant qu'ils vivent, il reste en retrait
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 5 morsures porteuses de maladie
+
+## Repli
+
+step: Points de vie sous 15
+  do: Se glisser dans un conduit

@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Ceustodémon mineur, jeune gardien daémon, plus faible que le ceustodémon ordinaire. Il obéit à celui qui l'a convoqué.
+  Morsure, 2 griffes ; souffle de feu en cône ; vision de l'invisible ; immunité aux effets mentaux.
+
+resource: Souffle de feu | 1 | une fois tous les 1d4 rounds
+
+step: Il garde un lieu
+  do: Rester à son poste
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de feu
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes
+
+step: Un ennemi tente de passer
+  do: Porte dimensionnelle devant lui
+
+## Repli
+
+step: Jamais, tant que son service dure
+  do: Il garde son poste jusqu'à la destruction

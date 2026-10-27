@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Svartalfar, elfe noir du Premier Monde, assassin et magicien, serviteur des seigneurs féeriques maléfiques.
+  Frappe de sort rapide ; fléau ; attaque sournoise +3d6 ; RD 10/fer froid, RM 19 ; aveuglé par la lumière vive ; Int 18.
+
+resource: Pas d'ombre | 3 | magique
+resource: Disparition | 3 | magique
+resource: Invisibilité suprême | 1 | magique
+
+step: Il traque une cible
+  do: Invisibilité suprême et approche
+
+## Ouverture
+
+step: La cible
+  do: Frappe de sort rapide (contact glacial ou corrosif) avec attaque sournoise
+
+## Rounds suivants
+
+step: Toujours
+  do: Pas d'ombre et frapper encore
+
+## Repli
+
+step: Lumière vive ou points de vie sous 25
+  do: Disparition

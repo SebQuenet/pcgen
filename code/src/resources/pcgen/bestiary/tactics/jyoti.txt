@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Jyoti, extérieur du plan de l'Énergie positive, gardien farouche de son plan et ennemi des morts-vivants. Il méprise les visiteurs.
+  Rayon +16 contact à distance ; souffle en cône de 18 m (11d6 feu, Réflexes DD 19) tous les 1d4 rounds ; énergie positive ; RM 20 ; armure de mage permanente ; vol à 27 m par round.
+
+resource: Souffle de feu | 1 | une fois tous les 1d4 rounds
+resource: Lumière brûlante | 3 | magique
+resource: Soins importants | 3 | magique
+resource: Souffle de vie | 1 | magique
+
+step: Des visiteurs sur son plan
+  do: Les sommer de partir
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de feu (11d6, DD 19)
+
+step: Un mort-vivant
+  do: Lumière brûlante
+
+## Rounds suivants
+
+step: Toujours
+  do: Rayons à distance, sans jamais se mettre au contact
+
+step: Un allié est blessé
+  do: Soins importants
+
+## Repli
+
+step: Points de vie sous 25
+  do: Porte dimensionnelle vers son plan

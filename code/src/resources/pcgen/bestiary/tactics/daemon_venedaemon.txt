@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Vénédémon, daémon de la mort par le poison et la magie mal employée, ensorceleur (Int 22) qui écrase les âmes des lanceurs de sorts.
+  2 tentacules +6 ; écrasement arcanique de l'âme ; vision arcanique ; ensorceleur NLS 6 ; RD 5/bien ou argent, RM 16.
+
+resource: Lenteur | 3 | magique
+resource: Dissipation de la magie | 3 | magique
+
+step: Un lanceur de sorts
+  do: Vision arcanique pour le repérer
+
+## Ouverture
+
+step: Le lanceur de sorts
+  do: Écrasement arcanique de l'âme
+
+step: Ennemis groupés
+  do: Lenteur
+
+## Rounds suivants
+
+step: Toujours
+  do: Rayon ardent, immobilisation de personne
+
+## Repli
+
+step: Points de vie sous 15
+  do: Porte dimensionnelle

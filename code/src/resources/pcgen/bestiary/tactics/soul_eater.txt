@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Mangeur d'âmes, extérieur mauvais convoqué pour traquer et dévorer l'âme d'une cible. Il ne s'arrête qu'une fois sa mission accomplie.
+  2 griffes +18 (1d6+1, 19-20 et 1d6 Sagesse) ; trouver la cible ; drain d'âme ; lien avec son invocateur ; RD 10/magie ; vol à 30 m par round.
+
+step: Il a une cible
+  do: La trouver où qu'elle soit et voler jusqu'à elle
+
+## Ouverture
+
+step: La cible
+  do: 2 griffes : chaque coup ronge sa Sagesse
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper la cible ; ignorer les autres sauf s'ils le gênent
+  note: une cible à 0 de Sagesse a son âme dévorée
+
+step: Il échoue
+  do: Lien avec l'invocateur : il retourne contre lui
+
+## Repli
+
+step: Jamais
+  do: Il poursuit sa cible

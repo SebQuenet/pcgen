@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Azruverda, aberration bonne en forme de scarabée géant, gardienne des forêts et maîtresse de la vermine.
+  Morsure +21 (2d6+11), 2 griffes +21 (1d10+11) ; crachat d'acide +13 contact (10d6) ; déchirure ; RD 10/magie et tranchant ; immunité à l'acide.
+
+resource: Fléau d'insectes | 3 | magique
+resource: Vermine géante | 3 | magique
+resource: Répulsif à vermine | 3 | magique, DD 21
+
+step: Des créatures menacent la forêt
+  do: Vermine géante et fléau d'insectes
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Crachat d'acide (10d6)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes, déchirure
+
+## Repli
+
+step: Points de vie sous 40
+  do: Grimper et se replier dans la forêt

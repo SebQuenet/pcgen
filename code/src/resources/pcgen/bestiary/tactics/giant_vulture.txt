@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Vautour géant, grand charognard aux ailes immenses, porteur de maladies, plus hardi que ses petits cousins : il attaque les blessés et les voyageurs épuisés du désert.
+  Morsure +9 (2d6+9 et maladie) ; odorat ; vol.
+
+step: Des blessés
+  do: Tourner au-dessus en attendant qu'ils faiblissent
+
+## Ouverture
+
+step: Un blessé ou un mourant
+  do: Plonger et mordre
+  note: sa morsure transmet la fièvre des charognes
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre le plus faible
+
+step: Ses semblables arrivent
+  do: Se disputer la proie
+
+## Repli
+
+step: Points de vie sous 10
+  do: S'envoler

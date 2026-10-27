@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Ijiraq, fée métamorphe des terres gelées, qui égare les voyageurs et enlève les enfants.
+  2 griffes +10, morsure +10, corne +10 ; javelots +9 ; regard désorientant ; camouflage en plein jour ; il prend la forme d'un élan.
+
+resource: Métamorphose funeste | 3 | magique, DD 21
+resource: Tempête de grêle | 3 | magique, DD 20
+resource: Soins critiques | 3 | magique
+
+step: Des voyageurs
+  do: Terrain hallucinatoire (DD 20) pour les égarer
+
+## Ouverture
+
+step: Ennemis qui le regardent
+  do: Regard désorientant
+
+step: Le plus fort
+  do: Métamorphose funeste
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Griffes, morsure et corne
+
+## Repli
+
+step: Points de vie sous 25
+  do: Porte dimensionnelle

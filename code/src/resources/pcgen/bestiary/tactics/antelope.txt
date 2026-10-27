@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Antilope, petit animal gracieux et très rapide des plaines, qui vit en troupeau, guette les prédateurs et fuit au moindre danger. Acculée, elle charge tête baissée.
+  Coup de corne +1 (1d4) ; charge puissante (1d4+2) ; 18 m de déplacement.
+
+step: Danger
+  do: Fuir avec le troupeau
+  note: le troupeau détale au premier signe d'un prédateur ; on ne l'approche pas à découvert
+
+## Ouverture
+
+step: On l'accule
+  do: Charge puissante pour se frayer un passage
+
+## Rounds suivants
+
+step: Toujours
+  do: Fuir à la première occasion
+
+## Repli
+
+step: Toujours
+  do: Fuir à 18 m par round

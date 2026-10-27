@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Jinmenju, arbre géant dont les fruits sont des têtes humaines qui rient et attirent les voyageurs.
+  Morsure +15, 2 coups +16 ; têtes-fruits attirantes ; puanteur enivrante ; bourdonnement troublant (9 m, DD 18).
+
+resource: Cri | 3 | magique, DD 16
+
+step: Des voyageurs
+  do: Têtes-fruits attirantes
+  note: les têtes rient et appellent : qui s'approche pour cueillir un fruit tombe sous ses coups
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cri (DD 16)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 coups
+
+## Repli
+
+step: Jamais
+  do: Il ne peut pas fuir

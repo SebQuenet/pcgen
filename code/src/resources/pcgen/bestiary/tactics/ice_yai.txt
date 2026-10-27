@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Yai des glaces, oni géant de glace à quatre bras, brutal et chaotique.
+  4 coups +24 (2d8+9) ; frappes chancelantes ; projectile de glace +17 contact (4d6 froid) ; immunité au froid, vulnérable au feu ; vol et armure de mage permanents.
+
+resource: Charme-monstre | 3 | magique, DD 18
+resource: Cône de froid | 3 | magique, DD 19
+resource: Sommeil profond | 3 | magique, DD 17
+
+step: Des ennemis approchent
+  do: Invisibilité et ténèbres
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cône de froid (DD 19)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 4 coups : chancellement
+
+## Repli
+
+step: Feu ou points de vie sous 50
+  do: Forme gazeuse

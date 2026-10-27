@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Vermlek, démon-ver qui habite les cadavres et les porte comme une armure de chair.
+  Épée longue +6, morsure +1 ; habiter un corps ; armure de chair ; abandon de la chair ; RD 5/fer froid ou bien, RM 14.
+
+resource: Blessure légère de groupe | 3 | magique, DD 16
+
+step: Un cadavre
+  do: L'habiter et marcher parmi les vivants
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Blessure légère de groupe
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée longue et morsure
+
+step: Le corps est détruit
+  do: Abandonner la chair et fuir
+
+## Repli
+
+step: Points de vie sous 8
+  do: S'enfouir

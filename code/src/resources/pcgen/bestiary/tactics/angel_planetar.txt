@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Général des armées célestes, lanceur de sorts divin de niveau 16 en plus de ses pouvoirs. Vision lucide permanente : invisibilité et illusions ne le trompent pas.
+  CA 32, RD 10/Mal, RM 27, régénération 10 (Mal), immunisé à l'acide, au froid et à la pétrification.
+
+resource: Mot de pouvoir étourdissant | 3 | simple
+resource: Barrière de lames | 3 | simple, DD 21
+resource: Colonne de feu | 3 | simple, DD 22
+resource: Rappel à la vie | 3 | 1 minute
+
+step: Combat annoncé
+  do: Puissance divine, aura sainte si préparée, puis Force du colosse au moment d'entrer
+  note: Force du colosse : taille Très Grande, +4 Force, RD supplémentaire
+
+## Ouverture
+
+step: Groupe ennemi serré
+  do: Tempête de feu (DD 25) ou tremblement de terre (DD 25)
+  note: le tremblement de terre fait tomber les ennemis et ouvre des crevasses
+
+step: Lanceur de sorts ennemi visible
+  do: Mot de pouvoir étourdissant sur lui : moins de 150 PV, il est étourdi sans jet de sauvegarde
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Attaque à outrance à l'épée sainte +27/+22/+17 (3d6+15, 19-20), Attaque en puissance
+  note: Science de la destruction : il brise une arme magique gênante
+
+step: Extérieur maléfique
+  do: Bannissement (DD 23) ou renvoi (DD 21)
+
+step: Allié tombé
+  do: Guérison sur l'allié, ou rappel à la vie après le combat
+
+## Repli
+
+step: Points de vie sous 70
+  do: Régénération en se tenant à distance, en vol (27 m), puis revenir. Il ne recule que face au Mal invincible

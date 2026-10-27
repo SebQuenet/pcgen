@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Géant des océans, géant bon et marin, qui protège les eaux et commande les créatures marines.
+  Trident de maître +29/+24/+19 (3d6+22) ; rochers +13 ; foyer de la conque ; liberté de mouvement ; amphibie.
+
+resource: Orbe aqueuse | 3 | magique, DD 17
+resource: Contrôle des vents | 3 | magique, DD 19
+resource: Cri | 3 | magique, DD 18
+resource: Convocation d'alliés naturels VII | 3 | créatures nageuses
+
+step: Des pirates ou des monstres
+  do: Convocation d'alliés naturels VII
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cri (DD 18) ou orbe aqueuse
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Trident
+
+## Repli
+
+step: Points de vie sous 55
+  do: Plonger

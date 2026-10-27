@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Démon-crapaud des marais abyssaux, rusé et cruel, à la puanteur insoutenable. Il commande les petits démons et préfère se battre dans l'eau et la boue.
+  Aura de puanteur : Vigueur DD 24 ou nauséeux 10 rounds (3 m). RD 10/bien, RM 22, immunité à l'électricité et au poison.
+
+resource: Blasphème | 1 | magique, DD 21
+resource: Forme gazeuse | 3 | magique
+resource: Convocation d'hezrou | 1 | 35 % de chances
+
+step: Combat inévitable
+  do: Convoquer un hezrou, puis attendre dans l'eau trouble ou la boue
+  note: il se téléporte à volonté (téléportation suprême, lui seul) : il choisit toujours son terrain
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Châtiment chaotique ou fléau impie (DD 18) sur le groupe
+  note: à volonté : il peut alterner les deux selon les alignements de la cible
+
+step: Plusieurs ennemis à moins de 12 m
+  do: Blasphème (DD 21) : les créatures non mauvaises de niveau inférieur sont hébétées, affaiblies ou pire
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Attaque à outrance : morsure +17 (4d4+8 et étreinte), 2 griffes +17 (1d8+8 et étreinte)
+  note: nausée : une créature qu'il agrippe fait Vigueur DD 24 ou est nauséeuse tant qu'elle est agrippée
+
+step: Plusieurs ennemis au contact
+  do: Attaque en puissance et Enchaînement sur les adversaires adjacents
+
+step: Il tient une proie nauséeuse
+  do: L'entraîner sous l'eau ; il est amphibie, elle non
+
+## Repli
+
+step: Points de vie sous 40
+  do: Téléportation suprême vers l'Abysse ou son repaire, ou forme gazeuse pour s'échapper

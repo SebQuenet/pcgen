@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Nuno, minuscule gremlin vieux et ridé (Int 13), qui vit dans les termitières et maudit quiconque les abîme. Les paysans demandent pardon en passant près d'elles.
+  Coup +0 (1d2-2) ; malédiction ; RD 2/fer froid ; il creuse.
+
+step: On passe près de sa termitière sans s'excuser
+  do: Observer l'intrus
+
+step: On dérange ou on abîme sa termitière
+  do: Maudire l'intrus : enflure, douleur, malchance
+
+## Ouverture
+
+step: L'intrus l'attaque
+  do: Coup
+
+## Rounds suivants
+
+step: Toujours
+  do: Fuir dans sa termitière
+  note: la malédiction se lève si l'intrus s'excuse et répare les dégâts
+
+## Repli
+
+step: Toujours
+  do: S'enfouir

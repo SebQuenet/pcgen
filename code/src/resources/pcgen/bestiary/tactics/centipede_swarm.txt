@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Nuée de milliers de petits mille-pattes, sans esprit. Les armes ordinaires n'ont presque pas de prise sur elle ; le feu et les effets de zone la dispersent.
+  Distraction : qui commence son tour dans la nuée fait Vigueur ou est nauséeux 1 round.
+
+step: Intrus dans la cave ou le terrier
+  do: Sortir des murs et du sol sur toute la largeur du couloir
+
+## Ouverture
+
+step: Des créatures sont à portée
+  do: Envahir leurs cases : dégâts de nuée 2d6 et poison
+  note: la nuée n'a pas besoin de jet d'attaque ; elle touche toutes les créatures de ses cases
+
+## Rounds suivants
+
+step: Toujours
+  do: Se déplacer pour couvrir le plus de créatures possible
+  note: viser en priorité les lanceurs de sorts : la distraction les empêche de lancer un sort sans concentration
+
+step: Un adversaire utilise le feu ou une zone
+  do: S'écarter de lui et envahir les autres
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Se disperser dans les fissures ; elle ne poursuit pas hors de son terrier

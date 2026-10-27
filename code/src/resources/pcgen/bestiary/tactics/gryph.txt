@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Gryph, oiseau parasite à six pattes, qui pond dans des hôtes vivants. Il chasse dans les forêts sombres et sous terre.
+  Morsure +5 (1d6, x3), griffe +5 (étreinte) ; implantation d'œufs (dard, 1 fois par jour) ; vol à 15 m par round.
+
+resource: Implantation d'œufs | 1 | sur une créature sans défense ou agrippée
+
+step: Une proie isolée
+  do: Plonger sur elle
+
+## Ouverture
+
+step: La proie est à portée
+  do: Morsure et griffe avec étreinte
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Implanter ses œufs : 1d4 œufs, la proie est fiévreuse
+
+step: La proie se défend bien
+  do: S'envoler
+
+## Repli
+
+step: Points de vie sous 5
+  do: Fuir en vol

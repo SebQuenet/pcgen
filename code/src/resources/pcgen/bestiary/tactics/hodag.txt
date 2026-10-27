@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Hodag, bête magique trapue à queue hérissée de pointes, qui ne laisse aucune trace.
+  Morsure +11, 2 griffes +11, queue +11 ; queue à pointes ; projection ; férocité ; sans traces ; il creuse.
+
+step: Des intrus dans la forêt
+  do: Les suivre sans laisser de traces
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Morsure, 2 griffes et queue
+  note: sa queue hérissée de pointes blesse quiconque l'attaque par derrière
+
+## Rounds suivants
+
+step: Toujours
+  do: Projection : lancer l'ennemi au loin
+
+## Repli
+
+step: Points de vie sous 0
+  do: Continuer (férocité)

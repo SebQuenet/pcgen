@@ -1,0 +1,35 @@
+## Avant le combat
+
+note: Profil
+  Fiélon canin qui chasse et dévore les humanoïdes pour devenir plus fort. Rusé, il prend forme de gobelin pour manipuler les tribus ou de loup pour chasser.
+  RD 5/magie.
+
+resource: Charme-monstre | 1 | simple, DD 16
+resource: Désespoir foudroyant | 1 | simple, DD 16
+resource: Porte dimensionnelle | 1 | simple
+
+step: Il commande une tribu de gobelins
+  do: Les envoyer en premier, et rester derrière sous fausse apparence
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Désespoir foudroyant (DD 16) : −2 à l'attaque, aux dégâts, aux sauvegardes et aux tests
+
+step: Un guerrier dangereux
+  do: Charme-monstre (DD 16) pour l'écarter du combat
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Clignotement, puis morsure +10 (1d6+4) et 2 griffes +10 (1d4+4)
+  note: clignotement : 50 % de chances de rater ses attaques contre lui
+
+step: Un ennemi est tombé
+  do: Le dévorer (action complexe) pour gagner en puissance
+  note: dévorer empêche la résurrection sauf par miracle ou souhait
+
+## Repli
+
+step: Points de vie sous 15
+  do: Porte dimensionnelle, puis lévitation hors d'atteinte

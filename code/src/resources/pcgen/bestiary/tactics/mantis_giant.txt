@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Mante géante, prédatrice sans esprit qui chasse à l'affût. Elle reste immobile parmi les feuillages et frappe soudain.
+  2 griffes +5 (1d6+3 et étreinte), allonge 3 m ; détente ; mandibules ; attaque soudaine ; elle grimpe et vole.
+
+step: Une proie approche
+  do: Rester immobile, couleur de la végétation
+  note: immunisée aux effets mentaux
+
+## Ouverture
+
+step: La proie est à portée
+  do: Attaque soudaine : frapper pendant le round de surprise, même si elle a été repérée
+  note: détente : elle allonge sa portée pour une attaque, jusqu'à 6 m
+
+## Rounds suivants
+
+step: Elle tient une proie
+  do: Mandibules : mordre la proie agrippée chaque round
+
+step: D'autres la frappent
+  do: Garder sa proie ; elle ne la lâche que gravement blessée
+
+## Repli
+
+step: Points de vie sous 8
+  do: Lâcher prise et s'envoler

@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Vulnudémon, petit daémon de la mort par blessure, assassin sournois qui fait saigner.
+  Épée courte +10/+5 (1d4+2, 19-20 et saignement 1d4), morsure +5 ; attaque sournoise +1d6 ; aura de malheur (9 m, DD 18) ; RD 5/bien ou argent.
+
+resource: Flou | 3 | magique
+resource: Invisibilité | 3 | magique
+resource: Blessure critique | 1 | magique, DD 17
+
+step: Une cible
+  do: Invisibilité et approcher
+
+## Ouverture
+
+step: La cible
+  do: Attaque sournoise avec saignement
+
+## Rounds suivants
+
+step: Toujours
+  do: Flou et frapper ; glas sur les mourants
+
+step: Un ennemi dangereux
+  do: Blessure critique (DD 17)
+
+## Repli
+
+step: Points de vie sous 10
+  do: Invisibilité et fuite

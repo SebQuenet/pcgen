@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Destrier cauchemardesque, cheval noir aux sabots de feu et aux naseaux fumants. Intelligent et cruel, il ne sert qu'un cavalier mauvais qui l'a dompté.
+  Morsure +9 (1d4+4), 2 sabots +4 (1d6+2 et 1d4 feu) ; fumée ; vol à 27 m par round (il galope dans les airs).
+
+resource: Changement de plan | 1 | lui et un cavalier
+
+step: Son cavalier se prépare au combat
+  do: Prendre son envol pour lui donner la hauteur
+  note: il obéit à son cavalier mais choisit ses propres cibles quand celui-ci ne donne pas d'ordre
+
+## Ouverture
+
+step: Ennemis groupés autour de lui
+  do: Fumée : nuage étouffant autour de lui ; ceux qui le respirent font Vigueur ou sont fiévreux, et tous ont un camouflage
+
+step: Ennemi au contact
+  do: Morsure et 2 sabots de feu
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper celui que son cavalier attaque, pour le prendre en tenaille
+
+step: Son cavalier est en danger
+  do: L'emporter en vol hors de portée
+
+## Repli
+
+step: Points de vie sous 12, ou son cavalier fuit
+  do: Changement de plan avec son cavalier vers les plans inférieurs

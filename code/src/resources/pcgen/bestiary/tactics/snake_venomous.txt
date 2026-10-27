@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Serpent venimeux (vipère, cobra), animal qui préfère éviter l'affrontement. Il prévient par un sifflement ou une posture avant de mordre.
+  Morsure +2 (1d4-1 et poison) ; Science de l'initiative ; il grimpe et nage à 6 m par round.
+
+step: Une créature approche
+  do: Siffler, se dresser ou faire sonner sa queue
+  note: une créature qui recule n'est pas attaquée
+
+## Ouverture
+
+step: La créature avance ou le touche
+  do: Mordre
+  note: poison : Vigueur DD 13, 1 fois par round pendant 6 rounds, 1d2 Constitution ; 1 réussite l'arrête
+
+## Rounds suivants
+
+step: La créature reste au contact
+  do: Mordre de nouveau
+
+step: La créature recule
+  do: Ne pas poursuivre ; se glisser hors de vue
+
+## Repli
+
+step: Il est blessé
+  do: Fuir dans les herbes, les rochers ou l'eau

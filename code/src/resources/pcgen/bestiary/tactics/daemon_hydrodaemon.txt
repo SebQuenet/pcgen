@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Hydrodémon, daémon-crapaud ailé, incarnation de la mort par noyade. Il endort ses proies et les noie.
+  2 griffes +10 (1d6+4), morsure +10 (2d6+4 et étreinte) ; crachat soporifique +8 ; griffures ; RD 10/bien, RM 18 ; marche sur l'eau ; vol plané ; nage à 18 m par round.
+
+resource: Porte dimensionnelle | 2 | magique
+resource: Convocation d'hydrodémon | 1 | 50 % de chances
+
+step: Des proies près de l'eau
+  do: Ténèbres profondes et approcher par l'eau
+
+## Ouverture
+
+step: Une proie à distance
+  do: Crachat soporifique +8 : Vigueur ou endormie
+
+step: Une proie au contact
+  do: Morsure avec étreinte
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: L'entraîner sous l'eau et la noyer ; griffures
+
+step: Plusieurs ennemis
+  do: Frayeur (DD 13) ou convocation
+
+## Repli
+
+step: Points de vie sous 15
+  do: Porte dimensionnelle ou téléportation suprême

@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Contremaître formien, formien barde (Int 13), qui dirige les esclaves et les ouvriers de la ruche par la musique et la persuasion. Il rend compte à la reine par télépathie.
+  Dard +13 (1d4+3 et poison), 2 griffes +13 ; fléchettes +12/+7 ; motivateur mental (20 rounds par jour) ; barde NLS 7 ; détection des pensées.
+
+resource: Confusion | 2 | sort, DD 18
+resource: Message à la reine | 3 | magique
+
+step: Des intrus
+  do: Prévenir la reine par message
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Confusion (DD 18)
+
+step: Un ennemi
+  do: Suggestion (DD 17) : déposer les armes
+
+## Rounds suivants
+
+step: Ses ouvriers
+  do: Motivateur mental pour les galvaniser
+
+step: Ennemi au contact
+  do: Dard et griffes
+
+## Repli
+
+step: Points de vie sous 20
+  do: Invisibilité

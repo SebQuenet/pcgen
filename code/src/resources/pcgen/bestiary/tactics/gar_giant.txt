@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Lépisosté géant, poisson énorme aux mâchoires interminables, capable d'avaler un homme.
+  Morsure +13 (2d6+15 et étreinte), allonge 4,50 m ; il avale les proies (2d6+10, CA 15, 7 points de vie) ; nage à 18 m par round.
+
+step: Une proie dans l'eau ou une barque
+  do: Approcher par-dessous
+
+## Ouverture
+
+step: La proie est à portée
+  do: Mordre avec étreinte
+  note: une proie avalée en sort en perçant l'estomac (CA 15, 7 pv)
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: L'avaler, puis chercher la suivante
+
+## Repli
+
+step: Points de vie sous 18
+  do: Plonger en eau profonde

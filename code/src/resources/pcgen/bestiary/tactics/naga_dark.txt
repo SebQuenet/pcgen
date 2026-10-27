@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Naga noire, serpent à tête humaine, rusée et maléfique. Elle protège ses pensées et utilise sorts et poison.
+  Morsure +8 (1d4+2), dard +8 (2d4+2 et poison) ; pensées protégées ; immunité au poison ; ensorceleuse NLS 7.
+
+resource: Sorts du 3e niveau | 5 | déplacement, éclair (DD 16)
+resource: Sorts du 2e niveau | 7 | grâce féline, invisibilité, rayon ardent
+
+step: Des intrus dans son repaire
+  do: Bouclier et invisibilité, puis attendre
+
+## Ouverture
+
+step: Ennemis alignés
+  do: Éclair (DD 16)
+
+step: Un ennemi isolé
+  do: Rayon ardent
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Déplacement, puis dard empoisonné et morsure
+  note: le poison du dard endort la victime
+
+## Repli
+
+step: Points de vie sous 20
+  do: Invisibilité et retraite rapide

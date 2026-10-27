@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Vase grise, sans esprit, qui ressemble à de la pierre mouillée. Son acide dissout le métal et le bois en un instant.
+  Coup +6 (1d6+4, 1d6 acide et étreinte), constriction (1d6+1 et 1d6 acide) ; immunité au froid et au feu ; transparente.
+
+step: Une créature passe sur ou près d'elle
+  do: Rester immobile sur le sol ou dans une flaque, où elle passe pour de la pierre humide
+
+## Ouverture
+
+step: Une créature au contact
+  do: Coup avec étreinte : l'acide ronge armure et vêtements
+  note: les armes en métal ou en bois qui la frappent sont rongées par l'acide
+
+## Rounds suivants
+
+step: Elle tient une proie
+  do: Constriction à chaque test de lutte réussi : 1d6+1 et 1d6 acide
+  note: l'armure de la proie peut être détruite en quelques rounds
+
+step: Personne au contact
+  do: Ramper vers la créature la plus proche à 3 m par round
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, elle combat jusqu'à sa destruction ; elle ne poursuit pas loin

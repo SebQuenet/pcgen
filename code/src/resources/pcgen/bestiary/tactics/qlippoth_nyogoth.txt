@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Nyogoth, qlippoth fait d'entrailles volantes, couvert de bouches acides. Il dévore tout ce qu'il touche.
+  4 morsures +15 (1d6+3, 19-20 et 1d4 acide), morsure +15 (2d6+3 et 1d4 acide) ; jet d'acide défensif ; aspect horrible (DD 18) ; RD 10/loi ; immunité à l'acide.
+
+resource: Terreur | 7 | magique, DD 17
+resource: Brouillard acide | 1 | magique
+resource: Porte dimensionnelle | 1 | magique
+
+step: Des vivants approchent
+  do: Brouillard acide sur eux
+
+## Ouverture
+
+step: Ennemis qui le voient
+  do: Aspect horrible, puis terreur (DD 17)
+
+step: Ennemis à distance
+  do: Flèche acide à volonté
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 5 morsures acides
+  note: qui le frappe au contact reçoit un jet d'acide
+
+## Repli
+
+step: Points de vie sous 25
+  do: Porte dimensionnelle

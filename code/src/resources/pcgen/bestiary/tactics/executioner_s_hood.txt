@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Cagoule du bourreau, petite aberration qui tombe sur la tête de sa victime et l'étouffe.
+  Coup +3 (étreinte) ; chute enveloppante ; constriction ; étranglement ; sensible à la lumière ; vulnérable à l'alcool.
+
+step: Une victime passe dessous
+  do: Attendre au plafond
+
+## Ouverture
+
+step: La victime
+  do: Tomber sur sa tête et l'envelopper
+
+## Rounds suivants
+
+step: Elle tient la victime
+  do: Étranglement : elle ne peut ni parler ni respirer
+  note: les coups sur la cagoule blessent aussi la victime ; l'alcool fort la fait lâcher prise
+
+## Repli
+
+step: Alcool ou lumière vive
+  do: Lâcher prise et fuir

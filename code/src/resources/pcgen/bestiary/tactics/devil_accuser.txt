@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Accusateur (zébub), petit diable mouche espion de l'Enfer. Il note les péchés des mortels et rapporte tout.
+  Morsure +5 (1d6, 1d6 acide et maladie) ; œil infernal ; RD 5/bien ou argent ; immunité au feu et au poison ; vol à 18 m par round.
+
+resource: Graisse | 3 | magique
+resource: Convocation d'insectes | 3 | magique
+resource: Murmures du vent | 3 | magique
+resource: Convocation de diable | 1 | 40 % de chances
+
+step: Il espionne
+  do: Invisibilité et observer
+  note: œil infernal : il enregistre ce qu'il voit et le rejoue à ses maîtres
+
+## Ouverture
+
+step: On le découvre
+  do: Convocation d'insectes sur les ennemis, puis fuir
+
+## Rounds suivants
+
+step: Il est coincé
+  do: Morsure
+
+## Repli
+
+step: Toujours dès que possible
+  do: Téléportation suprême pour faire son rapport

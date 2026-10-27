@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Chose des cryptes, mort-vivant intelligent assis sur un trône dans les tombeaux qu'il garde. Il disperse les pilleurs par magie.
+  2 griffes +10 (1d8+4) ; aura de peur (3 m, Volonté DD 16) ; éclatement téléportant ; RD 10/contondant ou magie.
+
+resource: Éclatement téléportant | 1 | une fois par jour
+resource: Porte dimensionnelle rapide | 3 | magique
+
+step: Des pilleurs entrent dans la crypte
+  do: Rester immobile sur son trône jusqu'à ce qu'ils approchent
+
+## Ouverture
+
+step: Plusieurs pilleurs à portée
+  do: Éclatement téléportant : chacun est téléporté au hasard dans le tombeau, loin des autres
+  note: le groupe dispersé affronte seul les pièges et les gardiens
+
+## Rounds suivants
+
+step: Un pilleur isolé
+  do: Porte dimensionnelle rapide à côté de lui, puis 2 griffes
+
+step: Plusieurs ennemis
+  do: Se téléporter de l'un à l'autre
+
+## Repli
+
+step: Points de vie sous 15
+  do: Porte dimensionnelle vers une autre salle de la crypte

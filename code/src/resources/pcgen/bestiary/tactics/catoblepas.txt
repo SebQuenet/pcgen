@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Catoblépas, bête magique des marais au cou lourd et à l'haleine empoisonnée. Il pue la mort et tue d'un souffle.
+  Morsure +18 (3d6+5), corne +18 (2d8+5, 19-20), 2 sabots +16 (1d8+2), allonge 4,50 m ; puanteur (9 m, DD 23) ; souffle en cône de 18 m (poison, Vigueur DD 23) tous les 1d4 rounds ; piétinement (4d6+7, DD 22) ; RM 23.
+
+resource: Souffle empoisonné | 1 | une fois tous les 1d4 rounds
+
+step: Des intrus dans le marais
+  do: Rester dans la boue, sa puanteur faisant déjà son œuvre
+  note: puanteur : Vigueur DD 23 ou nauséeux 10 rounds
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle en cône de 18 m : Vigueur DD 23 contre le poison
+
+## Rounds suivants
+
+step: Ennemis au contact
+  do: Morsure, corne et 2 sabots
+
+step: Ennemis groupés au sol
+  do: Piétinement (4d6+7, DD 22)
+
+step: Souffle rechargé
+  do: Souffler de nouveau
+
+## Repli
+
+step: Points de vie sous 30
+  do: S'enfoncer dans le marais

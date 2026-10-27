@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Aghasura, asura serpent géant à deux cimeterres, qui avale ses ennemis. Il attire les créatures vers lui.
+  2 cimeterres de maître +26 (2d6+12, 15-20 et poison), morsure +19 (étreinte et poison) ; il avale les proies ; aura d'attraction (15 m) ; RD 10/bien, RM 22.
+
+resource: Brume mortelle | 1 | magique, DD 19
+resource: Ténèbres profondes | 3 | magique
+
+step: Des ennemis approchent
+  do: Ténèbres profondes
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Brume mortelle (DD 19)
+
+step: Ennemis à 15 m
+  do: Aura d'attraction : ils sont tirés vers lui
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 2 cimeterres et morsure
+
+step: Il tient une proie
+  do: L'avaler
+
+## Repli
+
+step: Points de vie sous 40
+  do: Téléportation suprême

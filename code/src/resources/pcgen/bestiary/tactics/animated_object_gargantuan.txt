@@ -1,0 +1,23 @@
+## Avant le combat
+
+note: Profil
+  Objet animé gigantesque : statue colossale, navire. Allonge 6 m, un coup peut abattre un combattant.
+  Immunités des créatures artificielles : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Sa consigne se déclenche
+  do: Rester immobile ; à cette taille il passe pour un élément du décor
+
+## Ouverture
+
+step: Intrus à portée
+  do: Coup sur le plus proche, ou piétinement à travers le groupe
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper sans relâche ; ses coups font tomber plus d'un adversaire
+
+## Repli
+
+step: Jamais
+  do: Il se bat jusqu'à être détruit

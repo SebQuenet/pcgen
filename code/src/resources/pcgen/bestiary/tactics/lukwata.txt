@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Lukwata, monstre lacustre gigantesque qui dévore la magie. Il chavire les barques et mord les lanceurs de sorts.
+  Morsure +22 (4d10+15, 19-20 et étreinte) ; chavirement (DD 25) ; digestion de la magie ; morsure dissipante ; RD 10/armes non magiques, RM 27.
+
+step: Une barque sur son lac
+  do: Approcher sous l'eau
+
+## Ouverture
+
+step: La barque
+  do: Chavirer
+  note: il sent la magie et vise d'abord les lanceurs de sorts et les objets magiques
+
+## Rounds suivants
+
+step: Un ennemi avec des objets magiques
+  do: Morsure dissipante
+
+step: Il tient une proie
+  do: Digérer sa magie
+
+## Repli
+
+step: Points de vie sous 35
+  do: Plonger

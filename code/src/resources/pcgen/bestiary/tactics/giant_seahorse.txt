@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Hippocampe géant, grand cheval de mer paisible, monture des tritons et des elfes marins, qui ne combat que pour protéger son cavalier.
+  Coup +6 (1d6+6) ; vision panoramique ; ancrage de la queue ; nage.
+
+step: Son cavalier va au combat
+  do: Obéir
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Coup
+  note: sa vision panoramique empêche de le prendre en tenaille
+
+## Rounds suivants
+
+step: Courant fort
+  do: S'ancrer avec sa queue
+  note: ancré, il ne peut être ni renversé ni emporté
+
+step: Son cavalier tombe
+  do: Le pousser vers la surface
+
+## Repli
+
+step: Il est blessé
+  do: Fuir avec son cavalier

@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Ver de la mort, ver géant des déserts, à la peau venimeuse et au souffle d'acide. Il électrocute ses proies à distance.
+  Morsure +11 (2d8+6 et poison) ; décharge électrique +8 contact à distance (4d6) ; souffle en ligne de 9 m (8d6 acide, Réflexes DD 17) tous les 1d4 rounds ; sang corrosif ; peau venimeuse ; il creuse à 6 m par round.
+
+resource: Souffle d'acide | 1 | une fois tous les 1d4 rounds
+
+step: Des vibrations dans le sable
+  do: Creuser vers elles
+
+## Ouverture
+
+step: Ennemis alignés
+  do: Souffle d'acide (8d6, DD 17)
+
+step: Un ennemi à distance
+  do: Décharge électrique (4d6)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure empoisonnée
+  note: qui le touche ou le frappe à mains nues s'empoisonne ; son sang ronge les armes
+
+step: Souffle rechargé
+  do: Souffler de nouveau
+
+## Repli
+
+step: Points de vie sous 15
+  do: S'enfouir sous le sable

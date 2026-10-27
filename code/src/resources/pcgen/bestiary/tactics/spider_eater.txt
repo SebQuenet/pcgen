@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Mangeur d'araignées, guêpe géante à deux pattes avant en pinces, qui chasse les araignées et pond dans ses proies paralysées.
+  Morsure +9, 2 pinces +4, dard +9 (poison paralysant) ; implantation ; liberté de mouvement permanente (les toiles ne la retiennent pas) ; vol à 18 m par round.
+
+step: Des araignées ou des proies
+  do: Survoler leurs toiles
+
+## Ouverture
+
+step: Une proie
+  do: Dard paralysant
+  note: son poison paralyse longtemps ; les toiles ne la retiennent pas
+
+## Rounds suivants
+
+step: Une proie paralysée
+  do: Implanter ses œufs
+
+## Repli
+
+step: Points de vie sous 15
+  do: S'envoler

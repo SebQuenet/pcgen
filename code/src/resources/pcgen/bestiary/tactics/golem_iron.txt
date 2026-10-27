@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Golem de fer, le plus redoutable des golems communs. Sans esprit, il souffle un gaz empoisonné et frappe à coups terribles.
+  2 coups +28 (2d10+16, 19-20) ; RD 15/adamantium ; immunité à la magie, mais l'électricité le ralentit et le feu le soigne.
+
+resource: Souffle de gaz | 1 | une fois tous les 1d4+1 rounds, nuage empoisonné (Constitution)
+
+step: Il garde un lieu
+  do: Rester immobile jusqu'à ce que la condition de son ordre soit remplie
+
+## Ouverture
+
+step: Plusieurs ennemis groupés
+  do: Souffle de gaz empoisonné sur le groupe
+  note: le nuage reste sur place un round ; le poison attaque la Constitution
+
+step: Ennemi au contact
+  do: 2 coups +28 (2d10+16, 19-20)
+  note: coups puissants : il frappe avec une fois et demie sa Force
+
+## Rounds suivants
+
+step: Souffle rechargé
+  do: Souffler sur le groupe
+
+step: Toujours
+  do: Frapper le plus proche ; il poursuit jusqu'aux limites de sa zone de garde
+  note: un sort d'électricité le ralentit ; un sort de feu le guérit
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction ; la rouille (monstre ou sort) est sa faiblesse

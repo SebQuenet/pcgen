@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Araignée goliath, colossale et sans esprit, capable de tendre des toiles entre deux arbres géants ou au plafond d'une caverne immense. Elle chasse les monstres.
+  Immunisée aux effets mentaux ; elle grimpe à 9 m par round. Son venin affaiblit la Force (Vigueur, 1 fois par round pendant 4 rounds, 1d2 Force ; 1 réussite l'arrête) ; le DD monte avec sa taille.
+
+step: Une proie approche
+  do: Rester au centre de sa toile immense, qui couvre toute la clairière
+
+## Ouverture
+
+step: La proie est à portée
+  do: Toile sur la plus grosse proie, puis morsure
+
+step: Une proie est prise dans la toile
+  do: Descendre la mordre ; elle ne peut ni fuir ni bien se défendre
+  note: une créature enchevêtrée a -2 à l'attaque, -4 en Dextérité et ne peut pas courir
+
+step: Une proie libre approche
+  do: Lancer une toile sur elle depuis le plafond ou une branche
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même proie pour cumuler le poison
+  note: une proie affaiblie porte mal son armure et frappe moins fort
+
+step: La proie se défend bien
+  do: Reculer en grimpant hors de portée et attendre que le poison agisse
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Remonter dans les hauteurs

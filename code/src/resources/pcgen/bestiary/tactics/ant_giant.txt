@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Fourmi géante soldat : sans esprit, elle défend la colonie. Morsure qui saisit, dard empoisonné qui affaiblit la Force.
+
+step: Intrus près de la fourmilière
+  do: Signaler par l'odeur et accourir à plusieurs
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Morsure +3 (1d6+2) et saisie, puis dard +3 (1d4+2 et poison)
+  note: poison Vigueur DD 14, 1d2 Force par round pendant 4 rounds
+
+## Rounds suivants
+
+step: Ennemi agrippé
+  do: Maintenir et piquer chaque round jusqu'à ce qu'il cède
+  note: les autres fourmis entourent le même ennemi
+
+## Repli
+
+step: Jamais près de la colonie
+  do: Elle se bat jusqu'à la mort pour la reine

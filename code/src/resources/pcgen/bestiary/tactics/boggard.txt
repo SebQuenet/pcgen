@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Homme-grenouille des marais, cruel et adorateur de démons. Il se bat dans l'eau ou dans la vase, où il garde toute sa vitesse.
+
+resource: Coassement terrifiant | 1 | par heure
+
+step: Intrus dans le marais
+  do: Attendre sous l'eau (il retient son souffle longtemps) et surgir tous ensemble
+
+## Ouverture
+
+step: Ennemis à 9 m
+  do: Coassement terrifiant : Volonté DD 13 ou secoué 1d4 rounds (effrayé s'il l'était déjà)
+  note: plusieurs boggards qui coassent ensemble rendent les ennemis effrayés
+
+## Rounds suivants
+
+step: Ennemi à 3 m
+  do: Langue collante (contact) pour le tenir, puis morgenstern +5 (1d8+3)
+  note: la cible collée ne peut pas s'éloigner à plus de 3 m et a −2 à la CA
+
+step: Ennemi qui fuit
+  do: Le ramener par la langue et l'entraîner dans l'eau
+
+## Repli
+
+step: Points de vie sous 6
+  do: Plonger et fuir à la nage

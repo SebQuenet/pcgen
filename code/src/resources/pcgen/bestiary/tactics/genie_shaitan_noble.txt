@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Génie de la terre, avide, patient et marchand (loyal neutre). Il aime les gemmes et les métaux, et négocie tout.
+  Maîtrise de la terre : à l'attaque et aux dégâts s'il touche le sol. Il glisse à travers la pierre et la terre comme un poisson dans l'eau ; maîtrise des métaux contre les armes en métal.
+  Noble shaitan (pasha) : plus puissant que ses semblables, il règne sur des mines et des palais de pierre, et peut exaucer des vœux.
+
+resource: Peau de pierre | 3 | magique
+resource: Poussière scintillante | 3 | magique
+resource: Mur de pierre | 1 | magique
+resource: Passe-muraille | 1 | magique
+resource: Transmutation de la pierre en boue | 1 | magique
+
+step: Des étrangers approchent
+  do: Se fondre dans la pierre pour les observer, puis surgir et proposer un marché
+  note: il n'attaque pas un client potentiel
+
+step: Le combat devient inévitable
+  do: Peau de pierre, puis mur de pierre pour isoler le lanceur de sorts
+
+step: Des serviteurs l'accompagnent
+  do: Les envoyer au contact et rester dans la pierre
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Poussière scintillante pour les aveugler et révéler les invisibles
+
+step: Ennemis sur un sol de pierre
+  do: Transmutation de la pierre en boue sous leurs pieds
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Frapper de ses poings ou de son arme, en gardant le contact avec le sol
+  note: maîtrise des métaux : les armes en métal de ses ennemis sont moins efficaces contre lui
+
+step: Un ennemi s'en prend à lui à distance
+  do: Plonger dans la pierre et ressortir à côté de lui
+
+## Repli
+
+step: Points de vie sous le quart
+  do: S'enfoncer dans la pierre et disparaître, ou changement de plan

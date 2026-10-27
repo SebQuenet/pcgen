@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Ankou, fée de la mort, chasseresse ailée des Seigneurs du Premier Monde, qui crée des doubles d'ombre.
+  2 griffes +14, queue +9 et 2 ailes +9 (saignement 2d6) ; attaque sournoise +3d6 ; doubles d'ombre ; tueuse au fer froid ; RD 10/fer froid ; vol à 27 m par round.
+
+resource: Ancre dimensionnelle | 3 | magique
+resource: Cercle de mort | 1 | magique, DD 23
+
+step: Sa cible
+  do: Silence sur elle-même, puis approcher
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cercle de mort (DD 23)
+
+step: La cible
+  do: Ancre dimensionnelle, puis doubles d'ombre
+
+## Rounds suivants
+
+step: Toujours
+  do: Attaque sournoise avec ses doubles
+
+## Repli
+
+step: Points de vie sous 40
+  do: Téléportation suprême

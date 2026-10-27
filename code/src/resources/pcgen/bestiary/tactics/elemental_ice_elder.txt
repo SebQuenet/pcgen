@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire de glace, blizzard vivant des confins entre les plans de l'Air et de l'Eau. Son toucher gèle et il glisse sur la glace et la neige.
+  Élémentaire de glace noble : deux coups par round. Immunisé au froid, vulnérable au feu ; il traverse la glace et la neige (marche sur la glace, creusement dans la glace). Immunités des élémentaires : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Il est convoqué ou garde un lieu
+  do: Obéir à son invocateur ; sans ordre, attaquer la créature la plus proche
+  note: sans esprit tactique : il combat de front
+
+step: Le terrain s'y prête
+  do: Attirer les ennemis sur la glace, où il se déplace librement et eux glissent
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Deux coups sur le plus proche
+  note: Aura de froid : ceux qui le touchent ou restent au contact gèlent ; ses coups infligent du froid en plus
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le même ennemi jusqu'à ce qu'il tombe
+
+step: Un ennemi utilise le feu
+  do: Le frapper en priorité ou s'enfoncer dans la glace
+
+## Repli
+
+step: Son invocation prend fin, ou il est presque détruit
+  do: Retourner sur son plan ; il ne fuit pas autrement

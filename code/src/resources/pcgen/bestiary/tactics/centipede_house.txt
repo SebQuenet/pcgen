@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Mille-pattes minuscule, sans esprit. Il vit dans les fissures des maisons et n'attaque que ce qui le touche ; seul, il n'est qu'une nuisance.
+  Morsure empoisonnée (perte de Dextérité) ; il grimpe à 12 m par round.
+
+step: Quelqu'un fouille son recoin, un coffre ou une botte
+  do: Mordre la main qui le dérange
+  note: il occupe la case de sa cible sans provoquer d'attaque d'opportunité
+
+## Ouverture
+
+step: Il a été dérangé
+  do: Mordre une fois
+  note: poison de mille-pattes : Vigueur, 1 fois par round pendant 6 rounds, 1d3 Dextérité ; le DD est faible à cette taille
+
+## Rounds suivants
+
+step: La cible ne bouge pas
+  do: Mordre de nouveau
+
+step: Elle le frappe ou le chasse
+  do: Fuir dans une fissure, hors d'atteinte
+
+## Repli
+
+step: Il est touché
+  do: Fuir dans la fissure la plus proche

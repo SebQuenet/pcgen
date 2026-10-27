@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Sauterelle d'apocalypse, créature mythique de l'Abysse, annonciatrice de fléaux.
+  2 pinces +7 (étreinte), dard +11 ; souffle en ligne (feu et marque maudite, DD 15) ; bourdonnement affolant ; tourment abyssal ; pouvoir mythique (3 par jour) ; RD 5/épique.
+
+resource: Pouvoir mythique | 3 | sursaut +1d6
+resource: Convocation de nuée | 1 | sauterelles
+
+step: Des vivants
+  do: Convoquer une nuée de sauterelles
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Bourdonnement affolant, puis souffle
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Pinces avec étreinte et dard
+
+## Repli
+
+step: Points de vie sous 20
+  do: S'envoler

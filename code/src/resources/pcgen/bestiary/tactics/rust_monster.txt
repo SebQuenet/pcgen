@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Oxydeur, aberration qui se nourrit de métal. Il n'attaque pas les créatures pour les tuer : il veut leur armure et leurs armes.
+  Morsure +6 (1d3), antennes +6 contact (rouille) ; il sent le métal à 27 m ; il grimpe à 3 m par round.
+
+step: Du métal approche
+  do: Se précipiter vers lui à 12 m par round
+  note: il choisit le porteur du plus de métal : guerrier en armure lourde
+
+## Ouverture
+
+step: Le porteur de métal est au contact
+  do: Toucher des antennes l'armure ou l'arme : elle rouille et se désagrège
+  note: les objets magiques ont un jet de sauvegarde ; une arme qui le frappe peut rouiller aussi
+
+## Rounds suivants
+
+step: Un objet en métal tombe ou est lâché
+  do: S'arrêter pour le dévorer
+
+step: Toujours
+  do: Toucher l'objet de métal le plus gros à portée
+
+## Repli
+
+step: Points de vie sous 8
+  do: Fuir, sauf si on lui lance du métal à manger

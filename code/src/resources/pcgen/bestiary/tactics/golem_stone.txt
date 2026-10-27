@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Golem de pierre, statue animée et sans esprit qui garde temples et tombeaux. Il ralentit ses ennemis.
+  2 coups +22 (2d10+9) ; RD 10/adamantium ; immunité à la magie, mais transmutation de la pierre en chair le rend vulnérable.
+
+resource: Lenteur | 1 | une fois tous les 2 rounds, Volonté
+
+step: Il garde un lieu
+  do: Rester immobile, comme une statue, jusqu'à ce que la condition de son ordre soit remplie
+
+## Ouverture
+
+step: Plusieurs ennemis devant lui
+  do: Lenteur sur eux
+  note: lenteur : une seule action par round et malus à l'attaque, à la CA et aux Réflexes
+
+step: Ennemi au contact
+  do: 2 coups +22 (2d10+9)
+
+## Rounds suivants
+
+step: Lenteur rechargée
+  do: La relancer sur les ennemis qui y ont échappé
+
+step: Toujours
+  do: Frapper le plus proche
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction

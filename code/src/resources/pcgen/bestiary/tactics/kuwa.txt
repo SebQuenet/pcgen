@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Kuwa, petit oni sous forme humaine, qui vit parmi les humains et nourrit sa malveillance en secret.
+  Massue de maître +10 (1d10+6), ou 2 griffes +9 ; arc long composite de maître +9 ; RM 15.
+
+resource: Ténèbres | 3 | magique
+resource: Vol | 3 | magique
+resource: Sommeil profond | 1 | magique, DD 16
+
+step: Il vit parmi les humains
+  do: Charme-personne (DD 14)
+  note: il peut vivre des années comme un voisin ordinaire avant de révéler sa nature
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Sommeil profond
+
+## Rounds suivants
+
+step: Toujours
+  do: Massue ou arc
+
+## Repli
+
+step: Points de vie sous 10
+  do: Invisibilité et vol

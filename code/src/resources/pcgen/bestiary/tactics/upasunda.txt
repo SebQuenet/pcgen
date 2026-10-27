@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Upasunda, asura à six bras, maître d'armes qui manie épée, lance et kukri en même temps.
+  Épée longue, lance et kukri de maître +19 (armes infusées) ; maîtrise des armes multiples ; évasion supérieure ; RD 10/bien, RM 20 ; vision de l'invisible.
+
+resource: Motif arc-en-ciel | 3 | magique
+resource: Ténèbres profondes | 3 | magique
+
+step: Des ennemis approchent
+  do: Déguisement, puis ténèbres profondes
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Motif arc-en-ciel
+
+step: Ennemi au contact
+  do: Épée, lance et kukri sur un ou plusieurs adversaires
+
+## Rounds suivants
+
+step: Toujours
+  do: Attaque à outrance
+
+## Repli
+
+step: Points de vie sous 30
+  do: Téléportation suprême

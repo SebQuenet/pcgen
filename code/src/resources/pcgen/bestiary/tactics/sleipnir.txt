@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Sleipnir, cheval à huit pattes des dieux, monture des héros, qui galope dans les airs.
+  Morsure +19, 4 sabots +17 ; souffle (DD 22) ; charge puissante (2d8+12) ; piétinement (DD 23) ; marche dans les airs permanente ; immunité à l'électricité ; 24 m de déplacement.
+
+step: Son cavalier va au combat
+  do: Galoper dans les airs
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle, puis piétinement
+
+step: Ennemi à portée de charge
+  do: Charge puissante
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 4 sabots
+
+## Repli
+
+step: Points de vie sous 35
+  do: Galoper au loin dans les airs

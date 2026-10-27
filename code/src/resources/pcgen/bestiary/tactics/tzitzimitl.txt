@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Tzitzimitl, squelette céleste gigantesque, mort-vivant des éclipses, qui veut éteindre le soleil. Intelligent (Int 20).
+  Morsure +26 (électricité et absorption d'énergie), 2 griffes +27 (électricité) ; rayon oculaire +17 contact (10d6 électricité et 10d6 force) ; éclipse ; RD 15/contondant et bien, RM 30 ; vision lucide.
+
+resource: Animation des morts | 3 | magique
+resource: Contagion | 3 | magique, DD 24
+resource: Hâte | 3 | magique
+
+step: Des vivants
+  do: Éclipse : plonger la région dans les ténèbres
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Rayon oculaire
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes électriques
+
+step: Toujours
+  do: Animer les morts
+
+## Repli
+
+step: Points de vie sous 80
+  do: Téléportation suprême

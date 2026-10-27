@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Capitaine draugr, ancien commandant de navire noyé, plus fort et plus rusé que ses marins draugrs. Il commande l'équipage mort-vivant et contrôle parfois les brumes.
+  Grande hache et nausée comme les draugrs ; RD contre le contondant ou le tranchant ; il nage.
+
+step: Il commande un équipage
+  do: Envoyer ses draugrs à l'abordage, rester à la barre du navire fantôme
+
+## Ouverture
+
+step: Le capitaine ennemi
+  do: L'affronter en duel pendant que l'équipage occupe les autres
+
+## Rounds suivants
+
+step: Toujours
+  do: Grande hache avec nausée sur le même ennemi
+
+step: Ses draugrs tombent
+  do: Rappeler d'autres noyés de l'eau
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction ; son navire coule avec lui

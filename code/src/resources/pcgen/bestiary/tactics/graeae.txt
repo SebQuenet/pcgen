@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Grées, trois sorcières mythiques qui partagent un seul œil, voyantes (Int 23) et rusées. Leur œil est leur faiblesse.
+  2 griffes +8 ; onde de chance ; lecture du destin ; covent ; pouvoir mythique (2 par jour) ; RD 5/épique, RM 16 ; vol à volonté.
+
+resource: Mauvais présage | 5 | magique, DD 17
+resource: Envoûtement | 3 | magique, DD 18
+resource: Festin de cendres | 3 | magique, DD 18
+resource: Augure | 3 | magique
+
+step: Des visiteurs
+  do: Augure et marchander leur savoir
+
+## Ouverture
+
+step: Ennemis
+  do: Mauvais présage, puis festin de cendres
+
+## Rounds suivants
+
+step: Toujours
+  do: Onde de chance pour elles, malchance pour l'ennemi
+
+step: On vole l'œil
+  do: Négocier à tout prix pour le récupérer
+
+## Repli
+
+step: Points de vie sous 15
+  do: S'envoler

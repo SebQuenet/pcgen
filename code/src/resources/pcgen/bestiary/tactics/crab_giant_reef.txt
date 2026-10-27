@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Crabe gigantesque, sans esprit, qui vit sur les récifs et prend les petits bateaux pour des proies. Ses pinces broient une barque.
+  Dépendance à l'eau : hors de l'eau, il tient 1 heure par point de Constitution, puis suffoque. Il ne s'éloigne jamais de la côte.
+
+step: Une proie approche
+  do: Rester enfoui dans le récif, sous la surface
+  note: immunisé aux effets mentaux : ni peur ni charme ne l'arrêtent
+
+## Ouverture
+
+step: La proie est au contact
+  do: Saisir un nageur ou un rameur et l'arracher de l'embarcation
+  note: il peut aussi saisir une barque et la faire chavirer : test de manœuvre contre le pilote
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Maintenir la prise et la serrer : constriction à chaque test de lutte réussi
+  note: une créature agrippée ne lance pas de sort à composante gestuelle sans test de concentration
+
+step: La proie se libère
+  do: La saisir de nouveau, ou en saisir une autre
+
+step: L'eau est à portée
+  do: Reculer vers l'eau avec la proie agrippée ; il nage à 6 m par round
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Lâcher prise et s'enfoncer dans l'eau ou sous le sable

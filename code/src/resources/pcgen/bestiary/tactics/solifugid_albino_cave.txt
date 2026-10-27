@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Solifuge albinos des cavernes, vermine aveugle et rapide (15 m) qui bondit sur ses proies dans le noir.
+  Morsure +7 (1d8+3), 2 griffes +7 (1d4+3) ; bond ; déchirure (1d6+4) ; il grimpe à 9 m par round.
+
+step: Des proies dans la caverne
+  do: Grimper et attendre au plafond
+
+## Ouverture
+
+step: La proie est à portée de charge
+  do: Bond : charge et attaque à outrance
+  note: aveugle, il chasse aux vibrations ; une proie immobile peut lui échapper
+
+## Rounds suivants
+
+step: Toujours
+  do: Morsure et griffes, déchirure si les 2 griffes touchent
+
+## Repli
+
+step: Points de vie sous 10
+  do: Fuir à 15 m par round

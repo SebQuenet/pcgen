@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Cube gélatineux transparent qui nettoie les couloirs des donjons. Sans esprit, il avance et dissout tout ce qu'il rencontre.
+  Transparent : très difficile à voir. Immunisé à l'électricité ; paralysie au contact ; engloutissement.
+
+step: Couloir étroit
+  do: Avancer lentement (4,50 m) et remplir toute la largeur du couloir
+  note: un PJ distrait marche dedans sans le voir
+
+## Ouverture
+
+step: Une créature au contact
+  do: Coup +2 (1d6 et 1d6 acide), avec paralysie
+  note: paralysie : Vigueur ou paralysé quelques rounds
+
+step: Plusieurs créatures devant lui
+  do: Les engloutir en avançant : Réflexes pour s'écarter, ou être englouti
+
+## Rounds suivants
+
+step: Une créature engloutie
+  do: Continuer d'avancer ; elle subit l'acide et la paralysie à chaque round
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, il avance jusqu'à sa destruction

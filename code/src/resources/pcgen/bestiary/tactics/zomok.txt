@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Zomok, dragon végétal gigantesque du Premier Monde, gardien des forêts, sage (Int 16).
+  Morsure +20, 2 griffes +20, queue +15, 2 ailes +15 ; souffle de bois en cône de 18 m (18d6 et enchevêtrement, DD 28) ; il avale les proies ; piétinement (DD 30) ; vulnérable au feu.
+
+resource: Souffle | 1 | une fois tous les 1d4 rounds
+
+step: Des intrus dans sa forêt
+  do: Commandement des plantes
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de bois
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, griffes, queue et ailes
+
+step: Il tient une proie
+  do: L'avaler
+
+## Repli
+
+step: Feu ou points de vie sous 60
+  do: S'envoler

@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Gardien gravé, statue animée qui garde un temple au nom d'un dieu (domaines de la Mort et du Repos).
+  Arme magique ; saignement 2 ; repos éternel ; RD 5/adamantium, RM 16 ; lié à la foi.
+
+resource: Hâte | 1 | lui seul
+
+step: Il garde un temple
+  do: Rester immobile
+  note: il porte l'arme préférée de son dieu
+
+## Ouverture
+
+step: Des profanateurs
+  do: Hâte, puis frapper
+  note: ses coups saignent ; les morts qu'il fait ne peuvent pas être relevés en morts-vivants
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le profanateur
+
+## Repli
+
+step: Jamais
+  do: Il garde le temple

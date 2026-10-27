@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Murène géante, prédatrice embusquée dans les récifs et les épaves. Elle reste dans son trou et ne sort que la tête.
+  Morsure +11 (2d6+9 et étreinte) ; elle ronge la proie agrippée.
+
+step: Une créature nage devant son trou
+  do: Rester dans l'ombre du récif
+  note: Science de l'initiative : elle frappe souvent la première
+
+## Ouverture
+
+step: La proie passe à portée (3 m)
+  do: Jaillir et mordre avec étreinte
+
+## Rounds suivants
+
+step: Elle tient la proie
+  do: Ronger : morsure automatique à chaque test de lutte réussi
+  note: elle tire la proie vers son trou ; sous l'eau, une créature agrippée a du mal à retenir son souffle
+
+step: D'autres l'attaquent
+  do: Reculer dans son trou avec sa proie ; on ne peut l'atteindre que de face
+
+## Repli
+
+step: Points de vie sous 15
+  do: Lâcher prise et s'enfoncer au fond de son trou

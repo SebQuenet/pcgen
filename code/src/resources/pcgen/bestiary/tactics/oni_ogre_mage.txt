@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Oni mage, esprit maléfique incarné en ogre, rusé et ambitieux. Il commande des ogres et des gobelinoïdes, et se cache sous une forme humaine.
+  Épée à deux mains +14/+9 (3d6+10) ; arc long composite +10 (2d6+7) ; RM 19 ; régénération 5 (acide ou feu) ; vol permanent à 18 m par round.
+
+resource: Charme-monstre | 1 | magique, DD 17
+resource: Cône de froid | 1 | magique, DD 18
+resource: Forme gazeuse | 1 | magique
+resource: Sommeil profond | 1 | magique, DD 16
+
+step: Il prépare une embuscade
+  do: Prendre forme humaine et attirer les voyageurs dans un piège gardé par ses ogres
+
+step: Le combat devient inévitable
+  do: Invisibilité et ténèbres sur la lumière du groupe
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cône de froid (DD 18) ou sommeil profond (DD 16)
+
+step: Le guerrier le plus fort
+  do: Charme-monstre (DD 17)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée à deux mains +14/+9 (3d6+10)
+  note: sa régénération le remet sur pied sauf contre l'acide et le feu
+
+step: Ses ogres tombent
+  do: S'élever en vol hors de portée et tirer à l'arc
+
+## Repli
+
+step: Points de vie sous 25
+  do: Forme gazeuse ou invisibilité et vol ; il revient régénéré

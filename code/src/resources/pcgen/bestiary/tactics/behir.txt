@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Serpent à douze pattes, ennemi des dragons. Il souffle la foudre, saisit et avale.
+  Immunisé à l'électricité.
+
+resource: Souffle de foudre | 1 | tous les 1d4 rounds
+
+step: Proies repérées
+  do: Grimper au plafond ou sur une falaise pour attaquer d'en haut
+
+## Ouverture
+
+step: Ennemis alignés
+  do: Souffle de foudre en ligne de 6 m, 7d6 (Réflexes DD 20 moitié)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure +15 (2d6+9) et saisie
+  note: une proie saisie subit étreinte 2d6+9 et griffures de 6 griffes +14 (1d4+6)
+
+step: Proie agrippée et affaiblie
+  do: L'avaler (2d8+9 par round, CA 16, 10 PV pour sortir)
+
+step: Souffle de nouveau disponible
+  do: Souffler sur les autres
+
+## Repli
+
+step: Points de vie sous 25
+  do: Fuir avec la proie avalée

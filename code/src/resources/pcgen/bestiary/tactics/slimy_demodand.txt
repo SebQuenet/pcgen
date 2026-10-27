@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Démodand visqueux, démodand couvert d'une bave acide, qui vole la foi de ses ennemis.
+  Morsure +30 (1d10+9 et 2d6 acide), 2 griffes +30 (étreinte et acide) ; griffes redoutables ; frappe voleuse de foi (DD 23) ; puanteur (DD 26) ; RD 10/bien et magie, RM 27.
+
+resource: Brouillard acide | 3 | magique
+resource: Dissipation suprême | 3 | magique
+
+step: Des fidèles approchent
+  do: Brouillard acide
+
+## Ouverture
+
+step: Un prêtre
+  do: Frappe voleuse de foi
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes acides avec étreinte
+
+## Repli
+
+step: Points de vie sous 60
+  do: S'envoler

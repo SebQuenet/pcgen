@@ -1,0 +1,35 @@
+## Avant le combat
+
+note: Profil
+  Cheval-dragon, bête magique céleste et sage (Int 16), cheval ailé couleur de ciel. Il voyage entre les plans et ne combat que le mal.
+  2 sabots +14 (1d6+7) ; souffle en cône de 9 m (8d6 froid, DD 18) une fois tous les 10 rounds ; charge en vol ; RM 16 ; vol à 36 m par round.
+
+resource: Souffle de froid | 1 | une fois tous les 10 rounds
+resource: Changement de plan | 3 | magique, DD 22
+
+step: Des voyageurs approchent
+  do: Détection du mal et du bien pour les juger
+
+step: Le combat devient inévitable
+  do: Nappe de brouillard pour se cacher, puis prendre de la hauteur
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de froid (8d6, DD 18)
+
+step: Un ennemi isolé
+  do: Charge en vol : 2 sabots
+
+## Rounds suivants
+
+step: Ennemis volants
+  do: Bourrasque (DD 17) pour les déstabiliser
+
+step: Toujours
+  do: Frapper puis remonter
+
+## Repli
+
+step: Points de vie sous 20
+  do: Changement de plan

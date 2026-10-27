@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Génie du désert, le plus proche des mortels : il vit sur le plan Matériel, en tribus nomades. Fier et hospitalier, il défend son oasis et ses hôtes.
+  Endurance élémentaire : il supporte la chaleur et le froid ; résistance au feu 10. Il peut changer de taille.
+
+resource: Invisibilité | 3 | magique, lui seul
+resource: Changement de plan | 3 | magique
+resource: Forme éthérée | 1 | magique, pendant 1 heure
+
+step: Des voyageurs approchent de l'oasis
+  do: Les accueillir s'ils respectent l'hospitalité ; les surveiller sinon
+  note: une tribu de janns agit en groupe, archers et bretteurs
+
+step: Le combat devient inévitable
+  do: Agrandissement (changement de taille) et prendre de la hauteur, en vol
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Arc long composite +8/+3 (1d8+3, x3) sur le lanceur de sorts
+
+step: Un ennemi isolé
+  do: Invisibilité, puis l'attaquer au cimeterre
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Cimeterre +9/+4 (1d6+4, 18-20)
+  note: ses alliés janns le prennent en tenaille
+
+step: Le combat tourne mal
+  do: Forme éthérée pour traverser les murs et disparaître
+
+## Repli
+
+step: Points de vie sous 12
+  do: Forme éthérée ou changement de plan
+  note: il revient avec sa tribu venger l'affront

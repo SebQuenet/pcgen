@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Naga lunaire, naga chaotique fascinée par la lune et les étoiles, qui hypnotise ses proies.
+  Morsure +7 (2d6+3 et poison) ; hypnose ; attaque sournoise +3d6 ; ensorceleuse NLS 5.
+
+resource: Sorts du 2e niveau | 5 | invisibilité, rayon ardent
+resource: Sorts du 1er niveau | 7 | charme-personne, projectile magique, rayon affaiblissant
+
+step: Des intrus
+  do: Invisibilité
+
+## Ouverture
+
+step: Ennemis
+  do: Hypnose : fasciner
+
+## Rounds suivants
+
+step: Un ennemi fasciné
+  do: Morsure avec attaque sournoise
+
+step: Ennemis à distance
+  do: Rayon ardent
+
+## Repli
+
+step: Points de vie sous 15
+  do: Retraite rapide

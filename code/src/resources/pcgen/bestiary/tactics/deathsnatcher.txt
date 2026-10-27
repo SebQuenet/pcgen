@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Voleur de mort, monstre ailé à tête de chacal, qui enlève les âmes des mourants avant qu'elles atteignent leur jugement.
+  Morsure +29, 4 griffes +29 (19-20) ; RM 29 ; immunité à la mort ; résistance au froid et au feu 30 ; vol à 15 m par round.
+
+step: Des mourants sur un champ de bataille
+  do: Voler vers eux
+
+## Ouverture
+
+step: Des ennemis
+  do: Morsure et 4 griffes
+
+## Rounds suivants
+
+step: Un mourant
+  do: Enlever son âme
+
+step: Un prêtre soigne les mourants
+  do: Le frapper en priorité
+
+## Repli
+
+step: Points de vie sous 80
+  do: S'envoler avec les âmes volées

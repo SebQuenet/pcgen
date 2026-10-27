@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Mogaru, kaiju reptile colossal, roi des monstres, qui surgit de la mer et rase les villes. Seule la musique l'apaise.
+  Morsure +46 (étreinte), 2 griffes +46, 2 queues +44 ; traits de feu +31 ; souffle ; souffle réflexe ; il avale les proies ; piétinement (DD 47) ; absorption d'énergie ; RD 20/épique ; sensible au chant.
+
+step: Il approche
+  do: Marcher sur la ville
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle
+
+step: Un attaquant
+  do: Souffle réflexe en riposte
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, griffes et queues ; avaler
+
+step: Un chant l'apaise
+  do: Se calmer et retourner à la mer
+
+## Repli
+
+step: Il est gravement blessé
+  do: Retourner à la mer

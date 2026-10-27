@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Skrimsl, monstre lacustre énorme des légendes nordiques, au long cou et à la morsure terrible, qui vit sous la glace des lacs et des fjords. Les pêcheurs lui laissent des offrandes pour qu'il les épargne.
+  Morsure +25 ; immunité au froid et à l'électricité ; résistance au feu 20 ; il nage.
+
+step: Des intrus sur son lac
+  do: Approcher sous la glace ou sous l'eau, sans remous
+
+## Ouverture
+
+step: Une proie sur la glace
+  do: Briser la glace sous elle, puis morsure
+
+step: Une barque
+  do: La renverser d'un coup de tête
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même proie
+
+step: Une proie tombe à l'eau
+  do: L'entraîner au fond
+
+## Repli
+
+step: Points de vie sous 45
+  do: Plonger

@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Drake des brumes, grand dragon mineur aux écailles grises (Int 9), qui vit dans les marais et les côtes embrumées et chasse en se camouflant dans le brouillard.
+  Morsure +9 (2d6+4), queue +4 (1d8+2) ; explosion de brume ; camouflage dans la brume ; accélération ; vol à 24 m par round.
+
+step: Des proies
+  do: Se cacher dans la brume
+
+## Ouverture
+
+step: Ennemis
+  do: Explosion de brume : les aveugler
+  note: dans la brume, il a un camouflage parfait ; le vent ou le feu le révèlent
+
+## Rounds suivants
+
+step: Toujours
+  do: Morsure et queue, puis disparaître dans la brume
+
+step: Le brouillard se dissipe
+  do: Fuir vers un autre banc de brume
+
+## Repli
+
+step: Points de vie sous 15
+  do: S'envoler dans la brume

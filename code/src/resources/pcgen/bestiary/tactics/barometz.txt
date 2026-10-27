@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Baromets, plante gigantesque en forme de bélier, qui charge tout ce qui menace son champ.
+  Coup de corne +23 (5d10+15, 19-20) ; charge puissante (10d10+15) ; piétinement (DD 31) ; immunité à l'électricité.
+
+step: Des intrus dans son champ
+  do: Gratter le sol
+
+## Ouverture
+
+step: Ennemi à portée de charge
+  do: Charge puissante
+  note: sa charge puissante fait 10d10+15 : elle peut tuer un guerrier d'un coup
+
+step: Ennemis groupés
+  do: Piétinement
+
+## Rounds suivants
+
+step: Toujours
+  do: Coup de corne
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction

@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Champignon ambulant sans esprit. Ses spores provoquent des hallucinations ; il est vulnérable au froid qui le ralentit.
+  Immunités des plantes : ni critique, ni effet mental.
+
+step: Créature vivante à portée
+  do: Avancer lentement vers elle
+
+## Ouverture
+
+step: Plusieurs créatures proches
+  do: Nuage de spores en cône de 6 m : Vigueur ou hallucinations (étouffement, insectes, chute, terreur)
+  note: une créature qui hallucine perd son tour à se débattre contre une menace imaginaire
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coup et spores au contact
+
+## Repli
+
+step: Jamais
+  do: Il avance jusqu'à être détruit

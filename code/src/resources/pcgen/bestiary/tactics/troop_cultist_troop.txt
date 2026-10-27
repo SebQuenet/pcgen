@@ -1,0 +1,23 @@
+## Avant le combat
+
+note: Profil
+  Troupe de cultistes elfes fanatiques, une masse de combattants qui agit comme une seule créature et occupe plusieurs cases.
+  Attaque de troupe : touche automatiquement les créatures adjacentes ; armes et sorts mineurs de leur culte. Les sorts de zone la blessent davantage ; un héros seul ne la retient pas.
+
+step: Une cible ou un village
+  do: Avancer en masse
+
+## Ouverture
+
+step: Des ennemis
+  do: Les encercler : attaque de troupe sur tous les adjacents
+
+## Rounds suivants
+
+step: Toujours
+  do: Se déplacer pour engloutir le plus d'ennemis possible
+
+## Repli
+
+step: Points de vie sous la moitié
+  do: Se disperser en fuyant

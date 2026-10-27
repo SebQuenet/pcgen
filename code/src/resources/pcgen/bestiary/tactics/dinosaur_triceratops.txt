@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Dinosaure cornu, agressif et têtu. Il charge à la moindre menace : charge puissante (4d10+16), piétinement (1d8+12, Réflexes DD 25).
+  119 points de vie, coup de corne +17 (2d10+12).
+
+step: Des créatures approchent du troupeau
+  do: Gratter le sol, baisser la tête, puis charger
+
+## Ouverture
+
+step: Ennemi à portée de charge
+  do: Charge puissante : coup de corne 4d10+16
+  note: pendant la charge, il peut piétiner les créatures sur sa route
+
+step: Plusieurs ennemis groupés
+  do: Piétinement : 1d8+12, Réflexes DD 25 pour moitié
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coup de corne +17 (2d10+12)
+
+step: L'ennemi recule
+  do: Reculer lui aussi, puis recharger
+
+## Repli
+
+step: Points de vie sous 25
+  do: Fuir avec le troupeau ; il charge encore qui lui barre la route

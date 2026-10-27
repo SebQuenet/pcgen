@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Mimique, aberration intelligente qui prend la forme d'un objet : coffre, porte, armoire. Elle chasse les aventuriers trop curieux.
+  Coup +10 (1d8+6 et adhésif), constriction (1d8+6) ; immunité à l'acide ; elle ne se déplace que de 3 m par round.
+
+step: Des aventuriers fouillent la salle
+  do: Rester immobile sous forme d'objet tentant, coffre au trésor ou porte
+  note: imitation d'objet : il faut un test de Perception très élevé pour la reconnaître
+
+step: Ils la touchent
+  do: Frapper au moment où la main se pose sur elle
+
+## Ouverture
+
+step: Une créature la touche
+  do: Coup avec adhésif : la créature et son arme restent collées à elle
+  note: adhésif : la créature collée est agrippée ; une arme qui la frappe colle aussi
+
+## Rounds suivants
+
+step: Elle tient une proie
+  do: Constriction (1d8+6) chaque round
+
+step: D'autres la frappent
+  do: Garder la proie collée ; les armes qui la touchent se collent à leur tour
+
+## Repli
+
+step: Points de vie sous 10
+  do: Négocier : elle parle commun et échange des informations sur le donjon contre de la nourriture

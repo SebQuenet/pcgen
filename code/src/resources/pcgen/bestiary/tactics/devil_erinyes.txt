@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Diablesse ailée, archère et tentatrice. Elle combat de loin, entrave avec sa corde et charme les faibles.
+  RD 5/Bien, immunisée au feu et au poison, RM 19. Vision lucide permanente.
+
+step: Ennemis en vue
+  do: Rester en vol, à portée d'arc
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Arc long composite enflammé +14/+14/+9 (1d8+6, x3, et 1d6 feu)
+  note: Tir rapide : deux flèches au premier palier
+
+step: Ennemi qui fuit ou lanceur gênant
+  do: Corde +15 contact : enchevêtrement
+  note: la corde vole seule jusqu'à 9 m et ligote la cible
+
+## Rounds suivants
+
+step: Ennemi charmable
+  do: Charme-monstre pour le retourner contre son groupe
+
+step: Ennemi au contact
+  do: Épée longue +15/+10 (1d8+8, 19-20), ou reprendre son vol
+
+## Repli
+
+step: Points de vie sous 25
+  do: Téléportation suprême

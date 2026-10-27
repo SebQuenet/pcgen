@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Simurgh, oiseau colossal et sage, bon, porteur de paix et ennemi du mal.
+  Morsure +32, 2 griffes +32 (2d6 feu), queue +30 (bannissement) ; rayon éblouissant +23 contact (20d6 feu) ; plumes radieuses ; aura de paix (15 m) ; RM 29.
+
+resource: Colonne de feu | 3 | magique, DD 21
+resource: Soins critiques de groupe | 3 | magique
+
+step: Des créatures mauvaises
+  do: Détection du mal ; aura de paix
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Rayon éblouissant (20d6 feu)
+
+step: Ennemis groupés
+  do: Colonne de feu
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, griffes et queue qui bannit
+
+step: Des alliés blessés
+  do: Soins critiques de groupe
+
+## Repli
+
+step: Points de vie sous 80
+  do: S'envoler

@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Pachycéphalosaure, dinosaure à crâne épais qui charge tête baissée.
+  Coup +8 (2d6+9) ; charge assommante.
+
+step: Un intrus
+  do: Baisser la tête
+  note: les mâles se battent à coups de tête pour le troupeau ; un intrus passe pour un rival
+
+## Ouverture
+
+step: Ennemi à portée de charge
+  do: Charge assommante : coup de crâne qui étourdit
+  note: un ennemi étourdi par sa charge perd son tour
+
+## Rounds suivants
+
+step: Toujours
+  do: Reculer et recharger
+  note: il recule pour reprendre son élan entre deux charges
+
+## Repli
+
+step: Points de vie sous 10
+  do: Fuir

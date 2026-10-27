@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Diable soldat de première ligne, armé d'une coutille. Ses blessures saignent sans s'arrêter. Il se bat en frénésie.
+  RD 5/argent ou Bien, immunisé au feu et au poison, RM 16.
+
+step: Combat annoncé
+  do: Entrer en frénésie de combat : +4 Force et Constitution
+
+## Ouverture
+
+step: Ennemi à 3 m
+  do: Coutille avec allonge ; blessure infernale : saignement que les soins ordinaires n'arrêtent pas
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coutille et barbe (la barbe transmet une maladie)
+
+step: Ennemis nombreux
+  do: Appeler un autre diable barbu
+
+## Repli
+
+step: Jamais en frénésie
+  do: Il se bat jusqu'à la fin de sa frénésie, puis se téléporte

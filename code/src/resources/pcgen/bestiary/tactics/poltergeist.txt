@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Esprit frappeur, mort-vivant invisible lié à un lieu, qui tourmente les vivants en lançant des objets. Il reviendra tant que la cause de sa présence n'est pas réglée.
+  Pas d'attaque directe ; télékinésie (+3, objets jusqu'à 35 kg) ; effroi (DD 14) ; invisible et intangible ; régénération ; lié à son lieu (36 m).
+
+resource: Effroi | 1 | une fois par minute, il devient visible
+
+step: Des vivants dans son lieu
+  do: Faire bouger les objets, claquer les portes, pour les chasser
+
+## Ouverture
+
+step: Les vivants restent
+  do: Effroi : il apparaît, Volonté DD 14 ou effrayé 1d4 rounds
+
+## Rounds suivants
+
+step: Toujours
+  do: Télékinésie : lancer des objets sur les vivants
+
+## Repli
+
+step: Il est détruit
+  do: Il revient en 2d4 jours tant que la cause n'est pas réglée

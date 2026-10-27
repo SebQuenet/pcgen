@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Fuath, petite fée aquatique cruelle qui noie les voyageurs. Elle craint le feu et le soleil.
+  2 griffes +3 (1d3-2) ; fléchettes +3 ; eau figée ; RD 5/fer froid, RM 12.
+
+resource: Sommeil | 1 | magique, DD 10
+
+step: Des voyageurs près de l'eau
+  do: Les attirer vers l'eau
+
+## Ouverture
+
+step: Un voyageur au bord de l'eau
+  do: Sommeil (DD 10), puis l'entraîner
+  note: elle fige l'eau autour de la victime pour l'empêcher de nager
+
+## Rounds suivants
+
+step: Toujours
+  do: Eau figée : solidifier l'eau autour de la victime
+
+## Repli
+
+step: Feu ou soleil
+  do: Plonger

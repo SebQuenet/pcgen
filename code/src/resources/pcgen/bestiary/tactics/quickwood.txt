@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Bois-vif, arbre intelligent qui garde un lieu ou un trésor. Ses racines saisissent les intrus jusqu'à 18 m et il absorbe les sorts.
+  Morsure +14 (2d6+9), 3 racines +12 (1d6+4 et traction, allonge 18 m) ; aura de terreur (DD 20) ; absorption de sorts ; immunité à l'électricité et au feu.
+
+step: Des intrus approchent
+  do: Rester immobile comme un arbre ordinaire
+
+## Ouverture
+
+step: Ennemis à 18 m
+  do: 3 racines : tirer les ennemis vers sa gueule
+  note: aura de terreur : Volonté DD 20 ou effrayés
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure +14
+
+step: Un sort le vise
+  do: Absorption de sorts : il s'en nourrit
+
+## Repli
+
+step: Jamais
+  do: Il ne peut pas fuir

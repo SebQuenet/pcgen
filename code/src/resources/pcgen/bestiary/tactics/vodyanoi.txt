@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Vodianoï, humanoïde-crapaud des rivières, gardien capricieux des moulins et des eaux douces.
+  Lance courte +9/+4, morsure +4 ; eau étouffante ; amphibie.
+
+resource: Contrôle de l'eau | 3 | magique
+resource: Graisse | 3 | magique, DD 12
+resource: Orbe aqueuse | 1 | magique, DD 14
+
+step: Des intrus près de la rivière
+  do: Graisse sur la berge
+
+## Ouverture
+
+step: Ennemis
+  do: Orbe aqueuse (DD 14)
+  note: il noie ceux qui se baignent sans lui faire d'offrande ; les meuniers lui sacrifient des animaux
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Lance et morsure ; eau étouffante
+
+## Repli
+
+step: Points de vie sous 12
+  do: Plonger

@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Lamie, mi-femme mi-lion, cruelle et décadente. Elle trompe par illusions et draine la Sagesse.
+
+resource: Charme-monstre | 3 | simple, DD 15
+resource: Image majeure | 3 | simple, DD 14
+resource: Image miroir | 3 | simple
+resource: Suggestion | 3 | simple, DD 14
+resource: Sommeil profond | 1 | simple, DD 14
+
+step: Voyageurs
+  do: Déguisement et ventriloquie pour les attirer
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Sommeil profond (DD 14) ou image majeure
+
+step: Combattant dangereux
+  do: Charme-monstre (DD 15)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Image miroir, puis dague +1 +13/+8 (1d4+4, 19-20), toucher de drain de Sagesse +7, 2 griffes +7 (1d4+2)
+  note: Attaque éclair : frapper et reculer
+
+## Repli
+
+step: Points de vie sous 20
+  do: Fuir à 18 m par round

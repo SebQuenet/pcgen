@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Cauchemar, destrier infernal énorme, monture des seigneurs démons et des puissants morts-vivants. Plus fort et plus rusé que le destrier cauchemardesque.
+  Morsure +22 (2d6+10), 2 sabots +17 (2d6+5 et 1d6 feu) ; fumée (DD 22) ; vol à 27 m par round.
+
+resource: Forme éthérée | 1 | une fois par heure, lui et un cavalier
+resource: Changement de plan | 1 | une fois par heure, lui et un cavalier
+
+step: Son cavalier se prépare au combat
+  do: Prendre son envol et tourner au-dessus des ennemis
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Fumée (DD 22) : Vigueur ou fiévreux, et camouflage autour de lui
+
+step: Ennemi au contact
+  do: Morsure et 2 sabots de feu
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper celui que son cavalier attaque
+
+step: Le combat tourne mal pour son cavalier
+  do: Forme éthérée avec lui, puis réapparaître derrière les ennemis
+
+## Repli
+
+step: Points de vie sous 30
+  do: Changement de plan avec son cavalier

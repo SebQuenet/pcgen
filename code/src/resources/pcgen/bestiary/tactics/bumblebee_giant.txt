@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Bourdon géant, sans esprit, plus gros et plus calme que l'abeille géante. Il ne pique que pour défendre son nid.
+  Dard empoisonné ; vol ; vulnérable à la fumée.
+
+step: Des intrus près du nid
+  do: Bourdonner bruyamment autour d'eux
+  note: on le domestique parfois pour son miel et comme monture des halfelins
+
+## Ouverture
+
+step: Ils touchent au nid
+  do: Piquer le plus proche
+  note: son dard empoisonne et ne se détache pas : il peut piquer plusieurs fois
+
+## Rounds suivants
+
+step: Toujours
+  do: Piquer celui qui touche au nid
+
+step: Fumée
+  do: Reculer
+
+## Repli
+
+step: Les intrus s'éloignent
+  do: Retourner au nid

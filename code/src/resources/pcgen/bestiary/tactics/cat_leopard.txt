@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Félin embusqué, il grimpe à 6 m par round et attend sur une branche. Il bondit sur la proie et l'attaque de tout son corps dès le premier round.
+  Bond (attaque à outrance après une charge), étreinte sur la morsure, pattes arrière (griffures).
+
+step: Une proie passe sous son arbre ou son rocher
+  do: Rester immobile sur la branche et la laisser approcher
+  note: l'odorat lui fait repérer les proies cachées à proximité
+
+## Ouverture
+
+step: La proie est à portée de charge
+  do: Bond : charge et attaque à outrance, morsure et 2 griffes, étreinte sur la morsure
+  note: s'il agrippe la proie, il ajoute ses 2 griffures de pattes arrière
+
+## Rounds suivants
+
+step: Il tient sa proie
+  do: Maintenir la prise : morsure et 2 griffures chaque round
+  note: les pattes arrière ne frappent que la créature agrippée
+
+step: Les compagnons de la proie le frappent
+  do: Lâcher prise s'il perd plus d'un quart de ses points de vie en un round
+
+## Repli
+
+step: Points de vie sous la moitié
+  do: Remonter dans les arbres à 6 m par round et disparaître
+  note: il revient parfois la nuit suivante sur la même proie

@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Bythos, éon gardien du temps et des passages entre les plans. Il frappe ceux qui abusent des portails et du voyage temporel.
+  4 coups +23 (1d6+6, 1d6 froid et vieillissement) ; regard de confusion ; frappe temporelle ; RM 27 ; vol à 12 m par round ; Int 24.
+
+resource: Ancre dimensionnelle | 3 | magique
+resource: Hâte | 3 | magique
+resource: Stase temporelle | 1 | magique, DD 23
+resource: Verrou dimensionnel | 1 | magique
+
+step: Des voyageurs planaires ou un portail
+  do: Verrou dimensionnel sur la zone : personne ne s'échappe
+  note: augure à volonté : il sait souvent ce que ses ennemis vont tenter
+
+## Ouverture
+
+step: Le lanceur de sorts ou le téléporteur
+  do: Stase temporelle (DD 23) : il sort du temps
+
+step: Ennemis groupés
+  do: Lenteur (DD 18) puis hâte sur lui-même
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 4 coups glacés avec vieillissement ; frappe temporelle pour l'expulser du temps un moment
+  note: regard de confusion sur ceux qui le regardent
+
+step: Un ennemi tente de fuir par magie
+  do: Ancre dimensionnelle sur lui
+
+## Repli
+
+step: Points de vie sous 50
+  do: Téléportation suprême ou changement de plan

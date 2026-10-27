@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Yaénit, démon des os brisés, qui brise les squelettes de ses victimes.
+  Cimeterre à deux mains de maître +14/+9, morsure +8 ; briser les os ; aura hallucinatoire (6 m, DD 16) ; RD 5/fer froid ou bien ; vision de l'invisible.
+
+resource: Immobilisation de personne | 3 | magique, DD 16
+resource: Toucher vampirique | 3 | magique
+
+step: Des ennemis
+  do: Ténèbres et aura hallucinatoire
+
+## Ouverture
+
+step: Le plus fort
+  do: Immobilisation de personne
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Cimeterre et briser les os
+
+## Repli
+
+step: Points de vie sous 20
+  do: Téléportation suprême

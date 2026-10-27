@@ -1,0 +1,23 @@
+## Avant le combat
+
+note: Profil
+  Vase de jardin, petite vase sans esprit qui se cache parmi les plantes malades et dévore les chairs.
+  Coup +3 (1d4 et 1d8 acide) ; puanteur (1 fois par jour, rayon 1,50 m, Vigueur DD 13 ou fiévreux) ; camouflage (Perception DD 15).
+
+step: Une créature dans le jardin
+  do: Rester immobile parmi les plantes
+
+## Ouverture
+
+step: La créature la touche
+  do: Coup acide ; les créatures qui ne l'ont pas repérée sont touchées automatiquement
+
+## Rounds suivants
+
+step: Elle est blessée
+  do: Puanteur
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, elle combat jusqu'à la destruction

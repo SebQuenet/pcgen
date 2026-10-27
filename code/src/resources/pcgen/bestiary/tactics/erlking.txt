@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Roi des aulnes, chasseur sauvage du Premier Monde, maître de la chasse, qui traque les humanoïdes pour le plaisir.
+  Épée longue acérée de fer froid +3 +20/+20/+15 (saignement) ; arc long en bois de fer +3 +20/+20/+15 (saignement) ; ennemi juré de tous les humanoïdes (+10) ; flou et hâte permanents ; RD 10/fer froid.
+
+step: Il chasse
+  do: Parler aux animaux et aux plantes pour pister sa proie
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Arc long en bois de fer
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée longue
+
+step: Toujours
+  do: Se déplacer à 27 m par round en vol
+
+## Repli
+
+step: Points de vie sous 70
+  do: S'envoler ; la chasse reprendra

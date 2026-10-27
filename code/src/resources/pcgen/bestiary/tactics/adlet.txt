@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Adlet, homme-loup des terres glacées, chasseur rusé et cruel, ennemi juré des peuples du Nord. Il voyage sans laisser de traces.
+  Lance +1 +17/+12/+7 (1d8+7, x3), morsure +10 (1d6+2 et 1d6 froid) ; souffle glacé ; immunité au froid, vulnérable au feu ; passage sans trace permanent.
+
+resource: Tempête de grêle | 1 | magique
+resource: Tempête de neige | 3 | magique
+resource: Nappe de brouillard | 3 | magique
+resource: Forme éthérée du vent | 1 | lui seul
+
+step: Il traque des voyageurs
+  do: Les suivre dans la neige sans laisser de trace, en meute
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Tempête de neige ou tempête de grêle
+
+step: Ennemis à distance
+  do: Rayon de givre à volonté
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Lance et morsure glacée
+
+step: Ennemis groupés au contact
+  do: Souffle glacé
+
+## Repli
+
+step: Feu ou points de vie sous 30
+  do: Marche sur le vent

@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Pukwudgie, petit humanoïde maléfique des forêts, nécromant, qui prend la forme d'un porc-épic.
+  2 griffes +14 (poison), 2 piquants +15 (poison) ; attaque sournoise +3d6 ; rejeton mort-vivant ; commandement des morts-vivants (DD 16) ; immunité au poison.
+
+resource: Animation des morts | 3 | magique
+resource: Invisibilité | 3 | magique
+resource: Glas | 3 | magique, DD 16
+
+step: Des intrus dans sa forêt
+  do: Invisibilité et animer les morts
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Piquants empoisonnés
+
+step: Un ennemi pris en tenaille
+  do: Griffes avec attaque sournoise
+
+## Rounds suivants
+
+step: Un ennemi mourant
+  do: Glas ; il se relèvera mort-vivant
+
+## Repli
+
+step: Points de vie sous 20
+  do: Forme de porc-épic et fuite

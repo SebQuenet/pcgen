@@ -1,0 +1,23 @@
+## Avant le combat
+
+note: Profil
+  Monarque de la Chasse sauvage, fée du Premier Monde qui traque une proie désignée jusqu'au bout du monde.
+  Arme légendaire et commandement de la chasse ; résistances féeriques (fer froid) ; la Chasse agit en meute coordonnée.
+
+step: La Chasse a désigné une proie
+  do: Commander la chasse et défier la proie
+
+## Ouverture
+
+step: La proie
+  do: Frapper avec toute la Chasse
+
+## Rounds suivants
+
+step: Toujours
+  do: Ignorer les autres sauf s'ils protègent la proie
+
+## Repli
+
+step: La proie leur échappe
+  do: Reprendre la traque ; la Chasse n'abandonne jamais

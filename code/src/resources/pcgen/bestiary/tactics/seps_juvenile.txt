@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Jeune seps, petit serpent au venin qui dissout la chair et au sang acide.
+  Morsure +4 (poison : Vigueur DD 13, 1d4 acide et 1d2 Constitution) ; sang acide (2d6, DD 13) ; liquéfaction.
+
+step: Une proie
+  do: Approcher
+  note: il chasse les petites proies et fuit les créatures plus grandes que lui
+
+## Ouverture
+
+step: La proie
+  do: Morsure empoisonnée
+  note: son venin ronge la chair à l'acide ; on le frappe à distance pour éviter son sang acide
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même proie
+
+## Repli
+
+step: Il meurt
+  do: Liquéfaction

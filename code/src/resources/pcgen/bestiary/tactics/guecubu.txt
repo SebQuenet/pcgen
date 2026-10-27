@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Guécubu, mort-vivant de la terre, esprit malveillant qui provoque des catastrophes et porte malheur.
+  Morsure +14, 2 coups +14 (malchance) ; aura de sol brisé (9 m, DD 20) ; RD 5/contondant ; il creuse.
+
+resource: Croissance d'épines | 3 | magique, DD 18
+resource: Pierres acérées | 1 | magique, DD 19
+resource: Transmutation de la pierre en boue | 1 | magique, DD 20
+
+step: Des vivants approchent
+  do: Façonnage de la pierre pour les piéger
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Transmutation de la pierre en boue, ou pierres acérées
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et coups porte-malheur
+
+## Repli
+
+step: Points de vie sous 25
+  do: S'enfoncer dans la terre

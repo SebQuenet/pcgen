@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Syricta, grande aberration à trois gueules venimeuses et un tentacule, prédatrice brutale (Int 7) qui chasse dans les cavernes et les forêts sombres.
+  3 morsures +22 (2d6+10, 19-20 et poison), tentacule +20 ; RM 23 ; immunité aux effets mentaux.
+
+step: Des proies
+  do: Charger depuis l'ombre
+
+## Ouverture
+
+step: Une proie
+  do: 3 morsures empoisonnées et tentacule
+  note: chaque gueule injecte son venin : trois sauvegardes par round pour la même cible
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper la même proie ; le poison s'accumule
+
+step: La proie tombe
+  do: Passer à la plus proche
+
+## Repli
+
+step: Points de vie sous 45
+  do: Fuir

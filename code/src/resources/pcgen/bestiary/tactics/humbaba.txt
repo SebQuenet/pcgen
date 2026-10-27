@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Humbaba, géant colossal gardien des forêts de cèdres, au souffle de feu et à l'aura prismatique.
+  Épée longue +29/+24/+19/+14 (6d6+22, 17-20) ; rochers +18 ; souffle en cône de 18 m (20d6 feu, DD 31) ; aura prismatique (9 m, DD 26) ; RM 30 ; vision lucide.
+
+resource: Cri suprême | 3 | magique, DD 23
+resource: Destruction | 1 | magique, DD 22
+resource: Tremblement de terre | 1 | magique, DD 23
+resource: Mot de pouvoir étourdissant | 1 | magique
+
+step: Des intrus dans sa forêt
+  do: Tremblement de terre
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de feu (20d6, DD 31)
+
+step: Le plus fort
+  do: Mot de pouvoir étourdissant ou destruction
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée longue
+
+## Repli
+
+step: Points de vie sous 80
+  do: Reculer au cœur de sa forêt

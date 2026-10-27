@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Einherji, héros mort au combat, guerrier éternel des plans célestes, qui vit pour la bataille.
+  Haches de lancer de maître +17 ; défi de combat singulier ; soif de bataille ; liberté de mouvement ; RD 10/fer froid et loi, RM 21 ; immunité à la peur.
+
+resource: Puissance divine | 3 | magique
+resource: Festin des héros | 1 | magique
+
+step: Avant la bataille
+  do: Festin des héros
+
+## Ouverture
+
+step: Le plus fort des ennemis
+  do: Défi de combat singulier
+
+step: Combat
+  do: Rage et puissance divine
+
+## Rounds suivants
+
+step: Toujours
+  do: Haches lancées et au contact
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la mort

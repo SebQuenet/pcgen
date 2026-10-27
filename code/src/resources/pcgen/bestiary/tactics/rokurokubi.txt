@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Rokurokubi, humanoïde au cou extensible, ensorceleur cruel qui maudit ses victimes la nuit.
+  Morsure +24 (malédiction, allonge 6 m), 2 griffes +23 ; cou allongé ; aura de tombée de la nuit (4,50 m) ; ensorceleur NLS 12 ; RD 5/fer froid, RM 25.
+
+resource: Sorts du 5e niveau | 6 | débilité, cauchemar
+resource: Sorts du 4e niveau | 7 | charme-monstre, confusion
+
+step: Des victimes la nuit
+  do: Cauchemar
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Confusion
+
+step: Un lanceur de sorts
+  do: Débilité
+
+## Rounds suivants
+
+step: Toujours
+  do: Morsure à 6 m
+
+## Repli
+
+step: Points de vie sous 50
+  do: Image permanente et fuite

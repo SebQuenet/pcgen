@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Thoqqua, ver élémentaire de feu et de roche, qui creuse en faisant fondre la pierre. Il attaque ce qui le dérange.
+  Coup +4 (1d6+1 et brûlure, Réflexes DD 13 ou prendre feu) ; corps en fusion ; immunité au feu, vulnérable au froid ; il creuse à 6 m par round.
+
+step: Des créatures dans ses tunnels
+  do: Creuser vers elles
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Coup brûlant
+  note: corps en fusion : qui le frappe à mains nues subit 1d6 feu ; le saisir brûle de 3d6 par round
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le plus proche
+
+## Repli
+
+step: Points de vie sous 6
+  do: S'enfoncer dans la roche

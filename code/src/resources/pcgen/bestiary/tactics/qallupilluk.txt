@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Qallupilluk, humanoïde marin couvert d'écailles, qui enlève les enfants près de la glace. Malédiction des écailles.
+  Morsure +13, 2 griffes +13 (étreinte) ; javelots +10 ; malédiction des écailles ; parfum écœurant (4,50 m) ; RD 5/fer froid.
+
+resource: Charme-personne | 3 | magique, DD 13
+resource: Tempête de neige | 3 | magique
+resource: Métal gelé | 3 | magique, DD 14
+
+step: Des enfants au bord de la glace
+  do: Charme-personne
+
+## Ouverture
+
+step: Ennemis
+  do: Tempête de neige
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Griffes avec étreinte ; malédiction des écailles
+
+## Repli
+
+step: Points de vie sous 20
+  do: Plonger sous la glace avec sa proie

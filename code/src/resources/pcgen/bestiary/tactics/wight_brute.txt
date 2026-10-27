@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Nécrophage brute, variante massive et bestiale du nécrophage. Moins rusé, il frappe plus fort et absorbe l'énergie de ses victimes.
+  Coups puissants avec absorption d'énergie ; vulnérable aux sorts de résurrection.
+
+step: Des vivants dans son domaine
+  do: Charger le premier qu'il voit
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Coups avec absorption d'énergie sur le plus proche
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le même ennemi jusqu'à ce qu'il tombe
+  note: ses victimes se relèvent en nécrophages
+
+step: Plusieurs ennemis
+  do: Frapper celui qui lui fait le plus mal
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction

@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Ceustodémon majeur, gardien daémon plus fort et plus résistant que l'ordinaire. Il obéit à celui qui l'a convoqué.
+  Morsure, 2 griffes ; souffle de feu en cône ; immobilisation de monstre ; vision de l'invisible ; immunité aux effets mentaux.
+
+resource: Souffle de feu | 1 | une fois tous les 1d4 rounds
+resource: Immobilisation de monstre | 1 | magique
+
+step: Il garde un lieu
+  do: Rester à son poste
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de feu
+
+step: Le plus dangereux
+  do: Immobilisation de monstre
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes
+
+## Repli
+
+step: Jamais, tant que son service dure
+  do: Il garde son poste jusqu'à la destruction

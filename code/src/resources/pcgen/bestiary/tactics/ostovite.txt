@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Ostovite, minuscule bête faite d'os (Int 3), qui ronge les squelettes, crache de l'acide et attaque en meute. Ses meutes nettoient les champs de bataille.
+  Morsure +7 (1d2 et 1d6 acide) ; immunité au froid ; souvent en meutes de dix ou plus.
+
+step: Des proies
+  do: Attaquer en meute
+
+## Ouverture
+
+step: Une proie
+  do: Morsure acide, tous ensemble
+  note: une meute de dix dévore un humain en quelques rounds ; les sorts de zone la dispersent
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre à plusieurs la même proie
+
+step: La meute est réduite de moitié
+  do: Fuir
+
+## Repli
+
+step: Il est blessé
+  do: Fuir

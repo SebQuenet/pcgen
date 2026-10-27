@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire de foudre, éclair vivant issu du plan de l'Air. Rapide et instable, il frappe puis repart.
+  Élémentaire de foudre supérieur : deux coups par round. Immunisé à l'électricité ; très rapide en vol ; ses coups électrisent les armures métalliques. Immunités des élémentaires : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Il est convoqué ou garde un lieu
+  do: Obéir à son invocateur ; sans ordre, attaquer la créature la plus proche
+  note: sans esprit tactique : il combat de front
+
+step: Le terrain s'y prête
+  do: Viser les combattants en armure métallique
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Deux coups sur le plus proche
+  note: Ses coups électriques sont plus dangereux contre les ennemis en armure de métal ; il peut traverser les ennemis en arc électrique
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper le même ennemi jusqu'à ce qu'il tombe
+
+step: Un ennemi se met à l'abri de l'électricité
+  do: Changer de cible pour un ennemi sans protection
+
+## Repli
+
+step: Son invocation prend fin, ou il est presque détruit
+  do: Retourner sur son plan ; il ne fuit pas autrement

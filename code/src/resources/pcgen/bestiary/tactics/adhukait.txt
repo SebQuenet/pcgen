@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Adhukaït, asura à deux corps fusionnés, acrobate et danseur meurtrier. Les asuras haïssent les dieux et leurs créations.
+  2 kukris de maître +15/+10 (1d4+5, 18-20), 2 griffes +9 ; danse du désastre ; aura insaisissable ; RD 5/bien, RM 18 ; on ne peut pas le prendre en tenaille.
+
+resource: Clignotement | 3 | magique
+resource: Image miroir | 3 | magique
+resource: Croissance d'épines | 3 | magique
+
+step: Des ennemis approchent
+  do: Image miroir et clignotement
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Croissance d'épines sous eux
+
+step: Ennemi au contact
+  do: Danse du désastre : 2 kukris et 2 griffes en se déplaçant
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper et bouger entre les ennemis
+
+## Repli
+
+step: Points de vie sous 20
+  do: Téléportation suprême

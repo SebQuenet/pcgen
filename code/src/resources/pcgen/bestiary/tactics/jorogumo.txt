@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Jorogumo, femme-araignée métamorphe, séductrice et cruelle, qui charme les hommes et les dévore.
+  Morsure +20 (1d4+6, 19-20 et poison), 2 griffes +20 ; attaque sournoise +3d6 ; toile +18 (DD 23) ; RD 10/fer froid et magie.
+
+resource: Malédiction | 3 | magique, DD 21
+resource: Suggestion | 3 | magique, DD 20
+resource: Immobilisation de monstre | 1 | magique, DD 22
+
+step: Une victime
+  do: Sous forme humaine, charme-personne (DD 18)
+
+## Ouverture
+
+step: Le plus fort
+  do: Immobilisation de monstre (DD 22)
+
+step: Ennemis à distance
+  do: Toile
+
+## Rounds suivants
+
+step: Une proie immobilisée ou enchevêtrée
+  do: Forme d'araignée : morsure avec attaque sournoise
+
+## Repli
+
+step: Points de vie sous 40
+  do: Grimper au plafond et fuir

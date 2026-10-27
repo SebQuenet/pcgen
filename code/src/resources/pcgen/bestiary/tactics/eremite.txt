@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Érémite, kyton suprême, chirurgien de la chair parvenu à la perfection par la douleur. Très intelligent (Int 22), il dissèque ses victimes.
+  Morsure +30, 2 griffes +30 (étreinte), 2 ailes +25 (douleur, Vigueur DD 30) ; éviscération (absorption de caractéristique) ; regard troublant (paralysie, DD 31) ; régénération 15 (bien et argent) ; RD 15/bien et argent, RM 31.
+
+resource: Barrière de lames | 3 | magique
+resource: Cage de force | 3 | magique
+resource: Aliénation mentale | 3 | magique
+resource: Guérison | 3 | lui seul
+
+step: Des victimes
+  do: Marche dans l'ombre jusqu'à elles
+
+## Ouverture
+
+step: Le plus fort
+  do: Cage de force ou aliénation mentale
+
+step: Ennemis qui le regardent
+  do: Regard troublant : paralysés
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Griffes avec étreinte, puis éviscération
+
+step: Il est blessé
+  do: Greffer la chair d'une victime : guérison
+
+## Repli
+
+step: Points de vie sous 70
+  do: Téléportation suprême

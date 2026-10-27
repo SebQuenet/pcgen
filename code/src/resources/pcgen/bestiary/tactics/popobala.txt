@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Popobala, monstre chauve-souris qui hante un village, viole les esprits et sème la terreur. Intelligent (Int 17), il se nourrit du chagrin.
+  Morsure +25 (absorption de Charisme), 2 serres +25 (étreinte et fièvre), 2 ailes +20 ; déchirure ; présence terrifiante (9 m, DD 25) ; puanteur (DD 25) ; RD 10/magie.
+
+resource: Domination de personne | 3 | magique, DD 21
+
+step: Il hante un village
+  do: Hantise horrible : les villageois vivent dans la terreur
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Présence terrifiante et puanteur
+
+step: Le plus fort
+  do: Domination de personne (DD 21)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, serres avec étreinte, ailes ; déchirure
+
+## Repli
+
+step: Points de vie sous 60
+  do: Prendre la forme d'une chauve-souris et fuir

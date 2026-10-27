@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Crapaud géant, animal vorace des marais, qui avale ses proies. Sa peau est empoisonnée.
+  Morsure +5 (1d6+6 et étreinte), allonge 3 m ; il avale les proies (1d4, CA 12, 2 points de vie) ; peau empoisonnée.
+
+step: Une proie au bord de l'eau
+  do: Attendre immobile
+
+## Ouverture
+
+step: La proie à 3 m
+  do: Morsure avec étreinte
+  note: sa langue collante attire la proie dans sa gueule
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: L'avaler
+  note: peau empoisonnée : qui le frappe à mains nues s'empoisonne (Sagesse)
+
+## Repli
+
+step: Il est blessé
+  do: Sauter dans l'eau

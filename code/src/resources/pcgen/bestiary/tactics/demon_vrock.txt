@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Vrock, démon vautour, soldat de l'Abysse brutal et bruyant. Il combat en bande et ses danses de ruine détruisent tout autour du groupe.
+  Griffes, serres et bec ; spores qui germent dans la chair ; cri étourdissant ; RD contre le bien, RM ; immunité à l'électricité et au poison ; vol.
+
+resource: Cri étourdissant | 1 | une fois par heure
+resource: Spores | 1 | une fois tous les 3 rounds
+resource: Convocation de vrock | 1 | chances faibles
+
+step: Plusieurs vrocks réunis avant le combat
+  do: Danse de ruine : en se tenant la main 3 rounds, ils déclenchent une explosion d'énergie qui frappe toutes les créatures autour d'eux
+  note: tuer ou disperser un danseur arrête la danse
+
+step: Combat inévitable
+  do: Tenter de convoquer un autre vrock
+
+## Ouverture
+
+step: Ennemis groupés à portée de voix
+  do: Cri étourdissant : les créatures non démoniaques autour de lui font Vigueur ou sont étourdies
+
+step: Ennemis au contact
+  do: Spores : elles blessent toutes les créatures adjacentes et germent en lianes dans leur chair
+
+## Rounds suivants
+
+step: Toujours
+  do: Attaque à outrance sur l'ennemi étourdi, puis passer au suivant
+  note: les lianes des spores continuent de blesser jusqu'à un sort de bénédiction, de délivrance ou d'eau bénite
+
+step: Un ennemi utilise des armes bénies
+  do: Le harceler en vol et laisser les autres vrocks le prendre en tenaille
+
+## Repli
+
+step: Points de vie bas
+  do: Téléportation suprême vers l'Abysse

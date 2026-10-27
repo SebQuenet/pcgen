@@ -1,0 +1,35 @@
+## Avant le combat
+
+note: Profil
+  Ceustodémon, daémon gardien, souvent convoqué pour servir. Il garde un lieu ou une personne avec une loyauté sinistre.
+  Morsure +11 (2d6+4), 2 griffes +11 (1d6+4), allonge 3 m ; souffle en cône de 9 m (6d6 feu, Réflexes DD 17) tous les 1d4 rounds ; RD 10/bien ou argent ; immunité aux effets mentaux, à la paralysie et au sommeil.
+
+resource: Souffle de feu | 1 | une fois tous les 1d4 rounds
+resource: Dissipation de la magie | 3 | magique
+resource: Immobilisation de monstre | 1 | magique, DD 17
+resource: Lenteur | 1 | magique, DD 15
+
+step: Il garde un lieu
+  do: Rester à son poste ; vision de l'invisible permanente
+  note: attiré par le service : il obéit au maître qui l'a convoqué
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de feu (6d6, DD 17)
+
+step: Le plus dangereux
+  do: Immobilisation de monstre (DD 17) ou lenteur (DD 15)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes
+
+step: Un ennemi tente de passer
+  do: Porte dimensionnelle devant lui
+
+## Repli
+
+step: Jamais, tant que son service dure
+  do: Il garde son poste jusqu'à la destruction

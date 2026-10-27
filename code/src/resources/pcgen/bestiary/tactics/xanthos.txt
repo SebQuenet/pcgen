@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Xanthos, cheval céleste gigantesque, sage (Int 12), qui guide les héros et voyage par téléportation.
+  Morsure +23, 2 sabots +21, queue +21 ; exploiter la conjonction stellaire ; RM 25 ; 18 m de déplacement.
+
+resource: Téléportation | 5 | magique
+resource: Localisation de créature | 5 | magique
+
+step: Un héros à guider
+  do: Le porter et le conseiller
+  note: il peut prédire les dangers à venir et le dire à son cavalier
+
+## Ouverture
+
+step: Des ennemis
+  do: Morsure, sabots et queue
+
+## Rounds suivants
+
+step: Toujours
+  do: Protéger son cavalier
+
+## Repli
+
+step: Points de vie sous 50
+  do: Téléportation

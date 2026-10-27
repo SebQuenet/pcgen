@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Rampeur fongique, aberration couverte de champignons, qui chasse dans les cavernes. Il bondit sur ses proies.
+  Morsure +6 (1d6+2 et poison), 2 griffes +6 (1d4+2) ; bond ; défenses végétales ; il grimpe à 12 m par round.
+
+step: Des proies dans la caverne
+  do: Grimper au plafond et attendre
+
+## Ouverture
+
+step: Une proie dessous
+  do: Bond : sauter sur elle et attaquer
+  note: ses défenses végétales le protègent du sommeil et de la paralysie
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre et griffer la même proie
+  note: le poison affaiblit la Constitution
+
+## Repli
+
+step: Points de vie sous 8
+  do: Remonter au plafond

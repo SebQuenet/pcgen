@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Saurien, humanoïde dinosaure énorme, ancien et sage (Int 16), dernier gardien de ruines oubliées. Il ne tue que ceux qui pillent.
+  Lance courte de retour +1, au contact et lancée ; résistance au feu 20.
+
+step: Des intrus dans ses ruines
+  do: Les sommer de partir, d'une voix grave
+
+step: Des pilleurs
+  do: Les attaquer sans sommation
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Lance courte lancée ; elle revient dans sa main
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Lance courte
+
+step: Ennemis dispersés
+  do: Lance lancée sur celui qui fuit avec un trésor
+
+## Repli
+
+step: Points de vie sous 60
+  do: Reculer dans les ruines qu'il connaît

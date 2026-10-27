@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Démodand filandreux, démodand aux replis enchevêtrants, qui vole la foi.
+  Morsure +29, 2 griffes +29 (19-20) ; replis enchevêtrants ; frappe voleuse de foi ; RD 10/bien et magie, RM 26.
+
+resource: Immobilisation de monstre | 1 | magique, DD 19
+
+step: Des fidèles
+  do: Lire leurs pensées
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Terreur (DD 18)
+
+step: Un prêtre
+  do: Immobilisation de monstre
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes ; replis enchevêtrants ; frappe voleuse de foi
+
+## Repli
+
+step: Points de vie sous 50
+  do: S'envoler

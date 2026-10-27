@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Arbitre, petit inévitable sphérique de bronze, éclaireur et diplomate des forces de la loi. Il conseille plus qu'il ne combat.
+  Épée courte +7 (1d3, 19-20) ; explosion électrique (rayon 3 m, 3d6, Réflexes DD 13) ; RM 13 ; vol à 15 m par round ; vigilance constante contre les illusions chaotiques.
+
+resource: Injonction | 3 | magique, DD 13
+resource: Protection contre le chaos | 3 | magique
+resource: Explosion électrique | 1 | puis il est hébété un moment
+
+step: Il accompagne un mortel loyal
+  do: Le conseiller et détecter le chaos autour
+
+## Ouverture
+
+step: Une créature chaotique attaque
+  do: Protection contre le chaos sur son allié, puis injonction (DD 13)
+
+step: Ennemis groupés autour de lui
+  do: Explosion électrique (3d6, DD 13)
+
+## Rounds suivants
+
+step: Toujours
+  do: Épée courte en restant en vol
+
+## Repli
+
+step: Points de vie sous 5
+  do: S'envoler et prévenir l'inévitable le plus proche

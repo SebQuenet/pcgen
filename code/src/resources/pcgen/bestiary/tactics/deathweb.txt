@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Toile-de-mort, cadavre d'araignée géante habité par une nuée d'araignées mortes-vivantes.
+  Morsure +15 (2d8+12) ; toile +9 (DD 15) ; aura d'infestation (1,50 m, 1d6 et poison) ; compression.
+
+step: Des intrus dans les tunnels
+  do: Attendre dans sa toile
+
+## Ouverture
+
+step: Ennemi à distance
+  do: Toile
+
+step: Ennemi au contact
+  do: Morsure ; les araignées infestent ceux qui l'approchent
+  note: les araignées qui l'habitent se répandent sur les victimes et les empoisonnent
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre les ennemis enchevêtrés
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction

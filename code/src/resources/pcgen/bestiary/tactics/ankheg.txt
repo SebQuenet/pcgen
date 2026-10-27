@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Insecte fouisseur affamé, perception des vibrations à 18 m. Il attend sous la terre d'un champ ou d'une forêt et surgit sous sa proie.
+
+step: Vibrations au-dessus de lui
+  do: Creuser sous la proie la plus lourde (cheval, guerrier en armure) et attendre qu'elle passe
+
+## Ouverture
+
+step: Proie juste au-dessus
+  do: Surgir et mordre +5 (2d6+4 et 1d4 acide), puis saisir
+  note: s'il saisit, il tient la proie et la mord chaque round
+
+## Rounds suivants
+
+step: Proie agrippée
+  do: Maintenir la lutte et mordre ; reculer dans son tunnel avec elle si possible
+
+step: Plusieurs ennemis l'entourent sans proie saisie
+  do: Cracher l'acide en ligne de 9 m, 4d4 acide (Réflexes DD 14 moitié)
+  note: une fois par 6 heures ; ensuite il ne peut plus digérer pendant ce temps
+
+## Repli
+
+step: Points de vie sous 10
+  do: S'enfouir et disparaître sous terre, avec la proie s'il la tient encore

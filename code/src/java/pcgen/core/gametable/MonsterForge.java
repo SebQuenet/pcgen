@@ -105,7 +105,9 @@ public final class MonsterForge
 		{
 			return new ForgedMonster.Missing(LanguageBundle.getFormattedString("in_gametable_missingRace", raceKey));
 		}
-		return new ForgedMonster.Forged(builder.build(new SummonTemplate(raceKey, templates, 0), false));
+		PlayerCharacter monster = builder.build(new SummonTemplate(raceKey, templates, 0), false);
+		BestiaryTactics.of(raceKey).ifPresent(monster::setTacticalPlan);
+		return new ForgedMonster.Forged(monster);
 	}
 
 	private ForgedMonster fromFile(AbstractReferenceContext data, String path, List<String> templates)

@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Nécrophage d'hiver, mort-vivant de glace et de feu noir, terreur des contrées gelées. Ses coups allument un feu de flétrissure.
+  Morsure +30 (2d8+15 et feu de flétrissure), 2 griffes +30 (feu de flétrissure) ; déchirure (2d8+22) ; aura de froid (3 m) ; RD 15/contondant et bien, RM 28 ; vulnérable au feu.
+
+resource: Rayon polaire | 3 | magique
+resource: Contrôle du climat | 1 | magique
+
+step: Des vivants dans son domaine
+  do: Contrôle du climat : blizzard
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cône de froid (DD 24) ou tempête de neige
+
+step: Le plus dangereux
+  do: Rayon polaire
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes, déchirure
+
+step: Ennemis qui fuient
+  do: Mur de glace pour les enfermer
+
+## Repli
+
+step: Feu ou points de vie sous 60
+  do: Porte dimensionnelle

@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Poney, monture docile des halfelins, des gnomes et des enfants. Non dressé au combat, il s'affole plutôt que de se battre.
+  2 sabots -3 (1d3), attaques secondaires s'il n'est pas dressé ; 12 m de déplacement.
+
+step: Son cavalier l'emmène au combat
+  do: Obéir s'il est dressé au combat ; sinon, test de Dressage du cavalier pour le garder calme
+  note: un poney non dressé qui sent le sang tente de fuir
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Ruer : 2 sabots -3 (1d3)
+
+## Rounds suivants
+
+step: Il n'est pas dressé
+  do: Fuir à 12 m par round, avec ou sans son cavalier
+
+step: Il est dressé
+  do: Frapper l'ennemi de son cavalier
+
+## Repli
+
+step: Il est blessé
+  do: Fuir

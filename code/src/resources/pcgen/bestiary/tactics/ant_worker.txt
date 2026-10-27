@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Ouvrière de la colonie, sans esprit, plus faible que la soldate : elle n'a ni dard ni saisie, seulement sa morsure. Elle compte sur le nombre.
+  Elle grimpe à 6 m par round et marche à 15 m : elle surgit des parois et des plafonds des galeries.
+
+step: Intrus dans les galeries
+  do: L'odeur d'alarme se répand : toutes les ouvrières proches convergent, et les soldates suivent
+  note: l'odorat lui fait trouver les intrus invisibles ou cachés à proximité
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Mordre, à plusieurs sur la même cible pour obtenir les bonus de prise en tenaille
+  note: arriver par les parois et le plafond pour encercler en un round
+
+step: Le groupe tient un couloir
+  do: Passer par une galerie parallèle et le prendre à revers
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre le même intrus que les autres fourmis jusqu'à ce qu'il tombe, puis le suivant
+
+step: Un intrus emporte des œufs ou de la nourriture
+  do: Le poursuivre en priorité, même hors des galeries
+
+## Repli
+
+step: Les intrus quittent le nid
+  do: Retourner au nid ; elle ne poursuit pas au-delà des abords
+  note: sans esprit, elle ne fuit pas tant que la colonie est menacée

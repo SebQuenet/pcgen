@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Tortue géante, animal lent et paisible des îles, qui vit plus d'un siècle, protégée par une carapace épaisse. Elle flotte et dérive parfois d'île en île.
+  Morsure +4 (1d6+3) ; carapace (rétractée, sa CA augmente beaucoup) ; lente et régulière ; flottante.
+
+step: Danger
+  do: Se rétracter dans sa carapace
+
+## Ouverture
+
+step: On l'attaque
+  do: Mordre ce qui reste à portée
+  note: sa morsure est lente mais puissante ; elle ne poursuit jamais
+
+## Rounds suivants
+
+step: Toujours
+  do: Rester dans sa carapace jusqu'à ce que le danger passe
+
+## Repli
+
+step: Toujours
+  do: S'éloigner lentement

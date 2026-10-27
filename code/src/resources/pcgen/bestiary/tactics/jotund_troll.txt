@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Troll jotund, troll géant à neuf têtes, chaotique et vorace, qui avale ses ennemis.
+  Massue +20/+15/+10, morsure +15 (étreinte), griffe +15 (étreinte) ; rochers +10 ; attaques omniscientes ; rugissement cacophonique ; déglutition rapide ; esprits multiples ; régénération.
+
+step: Des intrus
+  do: Lancer des rochers
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Rugissement cacophonique
+  note: ses neuf têtes voient tout : on ne le prend ni en tenaille ni par surprise
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Massue, morsure et griffe ; avaler la proie tenue
+
+## Repli
+
+step: Points de vie sous 50
+  do: Fuir et régénérer

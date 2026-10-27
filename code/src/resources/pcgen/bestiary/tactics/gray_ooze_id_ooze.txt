@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Vase psychique, variante de la vase grise dotée d'un vestige d'esprit. Elle attaque l'esprit de ses proies en plus de leur corps.
+  Elle ronge par acide comme une vase grise et se camoufle en flaque.
+
+step: Des créatures approchent
+  do: Rester immobile et sonder leurs esprits
+
+## Ouverture
+
+step: Une créature au contact
+  do: Coup avec étreinte et attaque mentale
+  note: ses proies qui rêvent ou paniquent cessent de se défendre
+
+## Rounds suivants
+
+step: Elle tient une proie
+  do: Constriction et acide à chaque test de lutte réussi
+
+step: Plusieurs créatures
+  do: Attaquer l'esprit du lanceur de sorts le plus proche
+
+## Repli
+
+step: Jamais
+  do: Elle combat jusqu'à sa destruction

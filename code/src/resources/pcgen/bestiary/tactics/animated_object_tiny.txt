@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Objet animé par un sort, sans esprit : il obéit à une consigne simple et se bat jusqu'à destruction. Solidité : soustraire ce chiffre à chaque coup.
+  Immunités des créatures artificielles : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Sa consigne se déclenche (porte ouverte, intrus dans la pièce)
+  do: Rester immobile et passer pour un objet ordinaire jusqu'à ce qu'un intrus soit à portée
+
+## Ouverture
+
+step: Intrus à portée
+  do: Attaquer le premier qui passe, coup +5
+  note: un objet minuscule se glisse entre les jambes et vise les créatures qui le négligent
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper la même cible jusqu'à ce qu'elle tombe ou quitte la zone de la consigne
+  note: il ne poursuit pas au-delà de ce que dit sa consigne
+
+## Repli
+
+step: Jamais
+  do: Il se bat jusqu'à être détruit

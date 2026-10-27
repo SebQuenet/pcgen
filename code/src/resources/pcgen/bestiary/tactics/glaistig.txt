@@ -1,0 +1,35 @@
+## Avant le combat
+
+note: Profil
+  Glaistig, fée mythique de la terre et des cours d'eau sauvages, chaotique (Int 27), à moitié chèvre, protectrice des troupeaux et des lieux sauvages. Elle charme ou détruit les intrus.
+  Armes ; armure de déflexion +10 ; RD 15/fer froid et épique, RM 32 ; perception des vibrations 36 m ; immunité aux effets mentaux et à l'étourdissement ; 18 m de déplacement, elle creuse et grimpe.
+
+resource: Rochers broyeurs | 3 | magique, DD 29
+resource: Confusion | 3 | magique, DD 23
+resource: Pétrification | 3 | magique, DD 26
+resource: Glissement de terrain | 3 | magique
+resource: Convocation d'alliés naturels IX | 3 | magique
+
+step: Des intrus sur ses terres
+  do: Les sentir par la terre et les suivre en passant d'arbre en arbre
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Confusion (DD 23)
+
+step: Le plus fort
+  do: Pétrification (DD 26)
+
+## Rounds suivants
+
+step: Toujours
+  do: Rochers broyeurs ; convoquer des alliés naturels
+
+step: Ennemis retranchés
+  do: Glissement de terrain
+
+## Repli
+
+step: Points de vie bas
+  do: S'enfoncer dans la terre ou passer par les plantes

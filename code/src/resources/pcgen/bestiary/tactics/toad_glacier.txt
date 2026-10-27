@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Crapaud des glaciers, bête magique des terres gelées, entourée d'un froid mordant. Il avale ses proies.
+  Morsure +13 (2d6+9, 1d6 froid et étreinte), allonge 3 m ; aura de froid amer (6 m) ; il avale les proies ; immunité au froid, vulnérable au feu.
+
+step: Des proies sur la glace
+  do: Attendre immobile, couleur de la glace
+  note: aura de froid : les créatures proches subissent des dégâts de froid chaque round
+
+## Ouverture
+
+step: La proie à 3 m
+  do: Morsure avec étreinte
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: L'avaler
+
+step: Un ennemi utilise le feu
+  do: Le cibler en priorité
+
+## Repli
+
+step: Points de vie sous 15
+  do: Plonger sous la glace

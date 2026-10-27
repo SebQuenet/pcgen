@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Monstre en bocal, fœtus mort-vivant conservé dans un bocal, qui s'agrippe et irrite.
+  Morsure +4 (fixation) ; irritant ; agonie ; opportuniste ; RD 5/contondant.
+
+step: Des curieux
+  do: Attendre dans son bocal
+  note: on le trouve dans les cabinets de curiosités et les foires ; il attend qu'on se penche sur le bocal
+
+## Ouverture
+
+step: Le bocal est ouvert ou brisé
+  do: Mordre et s'accrocher
+  note: son liquide irritant brûle les yeux et la peau de ceux qu'il éclabousse
+
+## Rounds suivants
+
+step: Toujours
+  do: Rester accroché
+
+## Repli
+
+step: Il meurt
+  do: Agonie : liquide irritant

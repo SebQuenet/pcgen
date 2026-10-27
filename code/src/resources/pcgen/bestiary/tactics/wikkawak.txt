@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Wikkawak, gobelinoïde géant et brutal, qui commande les gobelins par la force.
+  Hache d'armes +9 (1d8+7, x3) ; javelots +7 ; brutalité ; pas sans traces.
+
+resource: Extinction | 3 | magique
+
+step: Il mène des gobelins
+  do: Les envoyer devant
+  note: il ne doit son rang qu'à la peur ; s'il tombe, les gobelins fuient ou se disputent
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Javelots
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Hache d'armes
+  note: il frappe les blessés pour les achever et effrayer les autres
+
+## Repli
+
+step: Points de vie sous 10
+  do: Fuir et laisser les gobelins mourir

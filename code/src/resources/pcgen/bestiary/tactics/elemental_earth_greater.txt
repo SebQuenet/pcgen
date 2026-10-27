@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire de terre, lent et inébranlable. Il traverse la pierre comme un poisson l'eau et frappe plus fort quand il touche le sol.
+  Élémentaire de terre noble. Deux coups puissants, allonge 4,50 m, RD 10/—. Immunités des élémentaires : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Ennemis en vue
+  do: Avancer sous la terre jusqu'aux ennemis
+
+## Ouverture
+
+step: Ennemi au sol
+  do: Surgir de la pierre à côté de lui et frapper
+  note: maîtrise de la terre : +1 à l'attaque et aux dégâts s'il touche le sol, −4 contre une cible en vol ou dans l'eau
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coups, et bousculer vers un mur ou un gouffre
+
+step: Ennemi en vol
+  do: L'ignorer et frapper ceux qui restent au sol
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Disparaître dans la pierre ; convoqué, il se bat jusqu'à la fin du sort

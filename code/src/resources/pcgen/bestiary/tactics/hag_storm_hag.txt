@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Guenaude des tempêtes, sorcière volante qui chevauche les orages et frappe de la foudre.
+  Morsure +13, 2 griffes +13 (1d6 électricité) ; frappe d'orage ; vents fouettants ; RM 18 ; immunité à l'électricité.
+
+resource: Éclair | 3 | magique, DD 16
+resource: Tempête de neige | 3 | magique
+resource: Invisibilité | 3 | magique
+
+step: Des voyageurs dans l'orage
+  do: Invisibilité et approcher
+
+## Ouverture
+
+step: Ennemis alignés
+  do: Éclair (DD 16)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes électriques
+
+## Repli
+
+step: Points de vie sous 20
+  do: Chevaucher la tempête au loin

@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Bakekujira, squelette de baleine colossal mort-vivant, qui coule les navires et appelle les monstres marins.
+  Morsure +27, queue +21 ; chavirement ; brèche fracassante ; chant résonnant ; appel du léviathan ; aura de parasites morts-vivants (9 m, DD 28) ; RD 15/contondant.
+
+step: Un navire
+  do: Chant résonnant pour l'attirer
+
+## Ouverture
+
+step: Le navire
+  do: Brèche fracassante
+  note: les parasites morts-vivants de son aura attaquent ceux qui s'approchent de ses os
+
+## Rounds suivants
+
+step: Des marins à l'eau
+  do: Morsure
+
+step: Toujours
+  do: Appel du léviathan
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction

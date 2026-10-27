@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Ypotryll, bête énorme à défenses, entêtée et destructrice, qui charge sans s'arrêter.
+  Corne +31 (poussée), 2 sabots +29, queue +29 (poussée) ; charge destructrice ; chemin tonitruant ; force inarrêtable ; piétinement ; RD 5/-.
+
+step: Des intrus
+  do: Charger
+
+## Ouverture
+
+step: Ennemi à portée de charge
+  do: Charge destructrice
+  note: il renverse tout sur son passage ; ses coups repoussent ses ennemis de 3 m
+
+## Rounds suivants
+
+step: Ennemis groupés
+  do: Piétinement et chemin tonitruant
+
+step: Ennemi au contact
+  do: Corne, sabots et queue
+
+## Repli
+
+step: Jamais
+  do: Entêté, il combat jusqu'à la mort

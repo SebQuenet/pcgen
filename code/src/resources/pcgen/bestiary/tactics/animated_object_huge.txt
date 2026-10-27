@@ -1,0 +1,23 @@
+## Avant le combat
+
+note: Profil
+  Très grand objet animé : colonne, chariot de guerre, statue géante. Allonge 4,50 m, coups écrasants.
+  Immunités des créatures artificielles : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Sa consigne se déclenche
+  do: Garder la salle ; il occupe souvent le passage à lui seul
+
+## Ouverture
+
+step: Intrus à portée
+  do: Coup sur le plus proche ; piétiner le groupe s'il en a l'option
+
+## Rounds suivants
+
+step: Toujours
+  do: Bousculer les intrus hors de la zone gardée, vers un gouffre ou un piège si la salle en a un
+
+## Repli
+
+step: Jamais
+  do: Il se bat jusqu'à être détruit

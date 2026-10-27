@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Léchi champignon, petit esprit des champignons, timide et curieux. Ses spores aveuglent.
+  Morsure +2, 2 griffes +2 ; boule de spores +4 (1 et spores) ; spores (quand il est blessé : vision réduite à 3 m, DD 14) ; immunité à l'électricité et au son.
+
+step: Des intrus
+  do: Prendre la forme d'un champignon
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Boule de spores
+  note: ses spores réduisent la vue à 3 m ; il en profite pour se cacher
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre et griffer
+
+## Repli
+
+step: Il est blessé
+  do: Fuir ; ses spores couvrent sa fuite

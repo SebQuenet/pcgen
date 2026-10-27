@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Crapaud géant féerique, crapaud du Premier Monde qui vole et disparaît. Il avale ses proies.
+  Morsure +4 (1d6+4 et étreinte), allonge 3 m ; il avale les proies ; disparition (3 rounds par jour) ; peau empoisonnée ; RD 5/fer froid.
+
+resource: Enchevêtrement | 1 | magique, DD 10
+resource: Lueur féerique | 1 | magique
+resource: Poussière scintillante | 1 | magique, DD 11
+resource: Disparition | 3 | rounds par jour
+
+step: Des proies
+  do: Disparaître et approcher
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Enchevêtrement ou poussière scintillante
+
+## Rounds suivants
+
+step: Une proie à 3 m
+  do: Morsure avec étreinte, puis l'avaler
+
+## Repli
+
+step: Il est blessé
+  do: Disparaître et s'envoler

@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Sirène, oiseau à visage de femme, chanteuse envoûtante qui attire les marins vers les récifs. Capricieuse plus que cruelle.
+  2 serres +11 (1d6) ; attaque sournoise +2d6 ; chant de sirène ; représentation bardique ; vol à 18 m par round.
+
+resource: Sommeil profond | 3 | magique, DD 18
+resource: Charme-personne | 3 | magique, DD 16
+resource: Cri | 3 | magique, DD 19
+resource: Frayeur | 3 | magique, DD 16
+
+step: Un navire passe près de son rocher
+  do: Chant de sirène : ceux qui l'entendent sont captivés et viennent à elle
+
+## Ouverture
+
+step: Ennemis qui résistent au chant
+  do: Sommeil profond (DD 18) ou charme-personne (DD 16)
+
+## Rounds suivants
+
+step: Une victime captivée
+  do: 2 serres avec attaque sournoise
+
+step: Ennemis groupés qui l'attaquent
+  do: Cri (DD 19)
+
+## Repli
+
+step: Points de vie sous 12
+  do: S'envoler

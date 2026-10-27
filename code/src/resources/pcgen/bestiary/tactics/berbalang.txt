@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Berbalang, mort-vivant ailé qui projette son esprit pour se nourrir pendant que son corps dort.
+  Morsure +9, 2 griffes +9 (paralysie 1d4+1 rounds, DD 18) ; ou contact intangible +10 (1d4 Constitution) sous forme projetée ; RD 10/bien ou argent.
+
+resource: Modification d'apparence | 3 | magique
+resource: Charme-personne | 3 | magique, DD 15
+
+step: Il chasse
+  do: Projeter son esprit ; son corps reste caché
+
+## Ouverture
+
+step: Une victime isolée
+  do: Contact intangible
+
+step: Corps physique attaqué
+  do: Morsure et griffes paralysantes
+
+## Rounds suivants
+
+step: Une victime paralysée
+  do: La dévorer
+
+## Repli
+
+step: Points de vie sous 15
+  do: S'envoler

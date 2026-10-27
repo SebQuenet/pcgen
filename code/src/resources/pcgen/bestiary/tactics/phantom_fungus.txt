@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Champignon fantôme, plante invisible qui chasse dans les cavernes.
+  Morsure +5 (2d6+3) ; chair fantôme (invisible) ; il grimpe.
+
+step: Une proie
+  do: Approcher invisible
+  note: il chasse dans les cavernes sombres ; les proies ne voient jamais ce qui les mord
+
+## Ouverture
+
+step: La proie au contact
+  do: Mordre
+  note: il reste invisible même quand il attaque ; on ne le localise qu'au bruit
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre et se déplacer
+
+## Repli
+
+step: Il est blessé
+  do: Fuir invisible
+  note: il fuit sans bruit ; seule la vision de l'invisible le révèle

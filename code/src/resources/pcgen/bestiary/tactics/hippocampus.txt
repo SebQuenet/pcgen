@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Hippocampe, cheval de mer, monture des tritons et des elfes aquatiques. Paisible, il fuit plutôt que de combattre.
+  Morsure +4 (1d4+3), queue -1 (1d4+1) ; nage à 18 m par round ; dépendance à l'eau.
+
+step: Son cavalier l'emmène au combat
+  do: Obéir et le porter
+  note: il nage plus vite que la plupart des créatures marines
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Morsure et queue
+  note: loin de l'eau, il s'affaiblit vite ; il ne quitte jamais la mer
+
+## Rounds suivants
+
+step: Son cavalier est en danger
+  do: Fuir avec lui à 18 m par round
+
+## Repli
+
+step: Il est blessé
+  do: Fuir à la nage

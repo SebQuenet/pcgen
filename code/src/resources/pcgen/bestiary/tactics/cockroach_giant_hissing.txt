@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Cafard siffleur géant, vermine sans esprit plus grosse que le cafard géant. Il siffle bruyamment pour effrayer avant de mordre.
+  Morsure ; il grimpe ; sensible à la lumière.
+
+step: Une créature approche
+  do: Siffler pour l'éloigner
+  note: il est plus gros qu'un chien ; ses carapaces servent d'armures chez les gobelins
+
+## Ouverture
+
+step: Elle approche malgré tout
+  do: Mordre
+  note: son sifflement porte loin et alerte les autres cafards
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre le plus proche
+
+## Repli
+
+step: Il est blessé
+  do: Fuir dans les fissures

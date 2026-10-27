@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Asticot géant, larve de mouche géante, sans esprit et vorace. Il dévore les charognes et se défend en vomissant.
+  Morsure +0 (1d6) ; régurgitation (1 fois par jour, Vigueur DD 13 ou fiévreux 1 minute).
+
+step: Des créatures près de la charogne
+  do: Continuer de manger
+
+## Ouverture
+
+step: Une créature au contact
+  do: Régurgitation sur elle
+  note: il vomit une bouillie infecte qui rend fiévreux ; il ne poursuit jamais
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la créature la plus proche
+
+## Repli
+
+step: Il est blessé
+  do: S'enfoncer dans la charogne

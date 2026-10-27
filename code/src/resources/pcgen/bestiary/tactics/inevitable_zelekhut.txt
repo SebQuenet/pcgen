@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Zelekhut, inévitable centaure ailé, chargé de traquer les fugitifs qui échappent à la justice.
+  2 chaînes +17 (2d6+7, 1d6 électricité et croc-en-jambe), allonge 3 m ; RD 10/chaos, RM 20 ; vision lucide ; vol à 18 m par round.
+
+resource: Immobilisation de monstre | 3 | magique, DD 18
+resource: Marque de la justice | 3 | magique
+
+step: Il traque un fugitif
+  do: Localisation de créature et clairvoyance
+
+## Ouverture
+
+step: Le fugitif tente de fuir par magie
+  do: Ancre dimensionnelle
+
+step: Le fugitif
+  do: Immobilisation de monstre (DD 18)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 2 chaînes électriques avec croc-en-jambe
+
+step: Le fugitif est vaincu
+  do: Marque de la justice
+
+## Repli
+
+step: Jamais
+  do: Il ne renonce pas

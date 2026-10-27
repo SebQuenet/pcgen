@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Colosse de fer, construction mythique gigantesque qui sert de tour de siège, armée de balistes.
+  Fléau +35/+30/+25/+20 ou piétinement immobilisant ; 2 balistes lourdes +14 ; aura de fumées mortelles (9 m) ; antimagie sélective ; RD 10/épique ; absorption du feu.
+
+resource: Mur de feu | 3 | magique
+resource: Boule de feu à retardement | 1 | magique, DD 19
+
+step: Un siège
+  do: Avancer vers les remparts
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Balistes
+
+step: Ennemis groupés
+  do: Boule de feu à retardement
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Fléau ou piétinement
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction

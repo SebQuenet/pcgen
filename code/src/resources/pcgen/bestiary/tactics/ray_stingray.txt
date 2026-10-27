@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Pastenague, raie qui s'enfouit dans le sable des hauts-fonds. Son dard empoisonné blesse qui marche dessus.
+  Dard +1 (1d4 et poison) ; nage à 12 m par round.
+
+step: Des créatures pataugent
+  do: Rester enfouie dans le sable
+  note: elle se cache dans le sable des hauts-fonds, invisible
+
+## Ouverture
+
+step: On marche sur elle
+  do: Piquer de son dard
+  note: son poison cause une douleur atroce ; on traîne les pieds dans l'eau pour la faire fuir
+
+## Rounds suivants
+
+step: Toujours
+  do: Fuir à la nage
+  note: elle ne pique que pour se défendre
+
+## Repli
+
+step: Toujours
+  do: Fuir

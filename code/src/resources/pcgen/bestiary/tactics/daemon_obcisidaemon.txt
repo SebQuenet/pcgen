@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Obcisidémon, daémon gigantesque de la mort par la guerre, qui brûle la terre et vole les âmes.
+  Hallebarde impie +1 +28/+23/+18/+13 (vol d'âme), morsure +21 ; manteau d'âmes ; aura de terre brûlée (18 m) ; RD 15/bien et argent, RM 30.
+
+resource: Destruction | 3 | magique, DD 24
+resource: Tempête de feu | 3 | magique, DD 25
+
+step: Une bataille
+  do: Avancer au milieu
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Tempête de feu ou brume mortelle
+
+step: Le champion ennemi
+  do: Destruction
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Hallebarde qui vole l'âme
+
+## Repli
+
+step: Points de vie sous 80
+  do: Téléportation suprême

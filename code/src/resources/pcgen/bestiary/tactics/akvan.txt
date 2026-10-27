@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Akvan, div géant à tête d'ours, tyran colossal qui brise la foi et dévore ses ennemis.
+  Morsure +32 (étreinte), 2 griffes +32, queue +30 ; déchirure ; il avale les proies (gorge tortueuse) ; piétinement (DD 34) ; ébranler la foi ; aura de désespoir (9 m, DD 30) ; RD 15/fer froid et bien, RM 31 ; vision lucide.
+
+step: Des ennemis approchent
+  do: Aura de désespoir
+
+## Ouverture
+
+step: Un prêtre
+  do: Ébranler la foi
+
+step: Ennemis groupés
+  do: Piétinement
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes, déchirure ; avaler les proies tenues
+
+## Repli
+
+step: Points de vie sous 90
+  do: Téléportation suprême

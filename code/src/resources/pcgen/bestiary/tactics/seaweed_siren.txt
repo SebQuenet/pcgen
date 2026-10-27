@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Sirène des algues, bête marine qui agite de fausses têtes humaines pour attirer les marins.
+  Morsure +25 (4d6+15, 19-20) ; 3 rayons soniques +17 (5d6) ; regard chancelant ; piétinement (DD 28) ; aura de cacophonie (30 m, DD 22) ; fausses têtes.
+
+resource: Charme-monstre | 3 | magique, DD 18
+resource: Confusion rapide | 3 | magique, DD 18
+
+step: Des marins
+  do: Fausses têtes qui appellent à l'aide
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Confusion rapide
+
+step: Ennemis à distance
+  do: Rayons soniques
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure
+
+## Repli
+
+step: Points de vie sous 45
+  do: Plonger

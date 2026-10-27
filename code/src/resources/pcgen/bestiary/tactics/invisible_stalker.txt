@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Rôdeur invisible, élémentaire de l'air convoqué pour une mission. Il est naturellement invisible et traque sa cible sans relâche.
+  2 coups +12 (2d6+4) ; pistage amélioré ; Science de l'initiative.
+
+step: Il a reçu une mission
+  do: Suivre sa cible à distance, invisible, en attendant qu'elle soit seule
+  note: il déteste ses missions et en tord les termes s'il le peut
+
+## Ouverture
+
+step: La cible est seule
+  do: Attaque à outrance : 2 coups +12 (2d6+4)
+  note: invisible : ses attaques ont souvent l'avantage de la surprise
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper la cible de sa mission ; ignorer les autres sauf s'ils le gênent
+
+step: On le détecte (poussière, voir l'invisible)
+  do: S'éloigner et revenir plus tard
+
+## Repli
+
+step: Points de vie sous 20
+  do: Fuir et reprendre la traque plus tard

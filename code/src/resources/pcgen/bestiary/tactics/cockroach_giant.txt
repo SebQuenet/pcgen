@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Cafard géant, vermine sans esprit, grande comme un chien, qui pullule dans les égouts. Il n'attaque que s'il est menacé ou affamé.
+  Morsure +1 (1d4) ; il grimpe et vole ; sensible à la lumière.
+
+step: Des créatures traversent l'égout
+  do: Rester caché dans les déchets
+
+## Ouverture
+
+step: On le menace
+  do: Mordre
+  note: il transmet des maladies par ses morsures sales
+
+## Rounds suivants
+
+step: Lumière vive
+  do: Fuir, ébloui
+
+step: Toujours
+  do: Mordre le plus proche
+  note: seul il fuit ; en nombre, ils submergent une proie affaiblie
+
+## Repli
+
+step: Il est blessé
+  do: Fuir dans les fissures

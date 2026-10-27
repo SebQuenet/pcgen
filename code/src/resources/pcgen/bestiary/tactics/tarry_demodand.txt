@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Démodand goudronneux, démodand soldat couvert de goudron collant, qui vole la foi de ses ennemis.
+  2 épées courtes de maître +27, morsure +22 ; adhésion ; frappe voleuse de foi (DD 22) ; RD 10/bien et magie, RM 24.
+
+step: Des fidèles approchent
+  do: Les charger
+
+## Ouverture
+
+step: Un prêtre
+  do: Frappe voleuse de foi
+  note: la frappe voleuse de foi prive un prêtre de ses sorts divins pour un temps
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 2 épées courtes et morsure ; armes et membres collent au goudron
+
+## Repli
+
+step: Points de vie sous 40
+  do: S'envoler

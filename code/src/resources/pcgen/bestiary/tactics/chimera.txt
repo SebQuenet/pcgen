@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Monstre à trois têtes (lion, chèvre, dragon), cruel et vorace. Elle vole et souffle selon la couleur de sa tête de dragon.
+
+resource: Souffle | 1 | tous les 1d4 rounds
+
+step: Proies repérées
+  do: Les survoler pour juger le groupe
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle (cône de 6 m, 6d8, Réflexes DD 19 moitié)
+  note: l'énergie dépend de la tête de dragon : rouge feu, bleue foudre, noire acide, verte acide, blanche froid
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Deux morsures +12 (2d6+4, 1d8+4), coup de cornes +12 (1d8+4) et 2 griffes +12 (1d6+4)
+  note: elle s'attaque aux plus faibles ; elle peut parlementer s'ils lui offrent à manger
+
+step: Souffle de nouveau disponible
+  do: Souffler sur un nouveau groupe
+
+## Repli
+
+step: Points de vie sous 20
+  do: S'envoler

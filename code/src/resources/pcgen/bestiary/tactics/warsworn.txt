@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Juré de guerre, mort-vivant gigantesque fait des corps de soldats tombés, qui absorbe les mourants des champs de bataille.
+  4 coups +21 (absorption d'énergie) ; boule de ferraille +12 ; absorption des mourants ; piétinement (DD 31) ; présence terrifiante (18 m, DD 26) ; RD 10/contondant et magie.
+
+resource: Animation d'objets | 3 | 7 armes
+resource: Télékinésie | 3 | armures lourdes
+
+step: Un champ de bataille
+  do: Avancer vers les mourants
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Piétinement, puis animer les armes
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 4 coups qui absorbent l'énergie
+
+step: Un mourant
+  do: L'absorber pour grandir
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction

@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Raie manta, grand poisson paisible qui se nourrit de plancton. Il ne se bat que s'il est acculé.
+  Coup de queue +4 (1d6+4) ; nage à 18 m par round.
+
+step: Des créatures approchent
+  do: S'éloigner
+  note: elle est curieuse et tourne autour des plongeurs sans les menacer
+
+## Ouverture
+
+step: On l'attaque
+  do: Coup de queue
+  note: elle bondit hors de l'eau et retombe, ce qui renverse les petites barques
+
+## Rounds suivants
+
+step: Toujours
+  do: Fuir
+  note: sa queue n'a pas de dard : elle n'est dangereuse qu'en bondissant
+
+## Repli
+
+step: Toujours
+  do: Fuir à 18 m par round

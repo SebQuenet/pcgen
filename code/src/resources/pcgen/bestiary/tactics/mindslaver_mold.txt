@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Moisissure asservissante, plante intelligente qui infeste les esprits de ses spores et domine ses victimes.
+  Boule de spores +7 contact ; infestation ; esquive ; RM 14.
+
+resource: Domination de personne | 1 | magique, DD 16
+
+step: Des créatures
+  do: Domination de personne sur la plus forte
+
+## Ouverture
+
+step: Ennemis
+  do: Boules de spores : infestation
+  note: une victime infestée tombe sous son contrôle au fil des jours ; une guérison des maladies l'en libère
+
+## Rounds suivants
+
+step: Toujours
+  do: Faire combattre ses dominés
+
+## Repli
+
+step: Jamais
+  do: Elle ne peut presque pas fuir

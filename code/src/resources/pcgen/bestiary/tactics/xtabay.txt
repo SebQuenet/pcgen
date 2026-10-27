@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Xtabay, petite fleur carnivore sans esprit, dont le pollen endort et qui dévore les dormeurs.
+  2 dards +0 (1d3-1 et 1d2 acide) ; pollen soporifique ; dévoration.
+
+step: Une créature approche
+  do: Libérer son pollen soporifique
+  note: son parfum est doux ; ses victimes s'endorment en pensant se reposer
+
+## Ouverture
+
+step: Une créature endormie
+  do: Dévorer : dards et acide
+  note: elle pousse en massifs dans les jungles ; une victime réveillée par un allié peut fuir
+
+## Rounds suivants
+
+step: Toujours
+  do: Piquer la créature la plus proche
+
+## Repli
+
+step: Jamais
+  do: Elle ne peut pas fuir

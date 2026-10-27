@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  L'ange le plus puissant : CA 44, RD 15/épique et Mal, RM 34, régénération 15 (Mal). Il porte une épée dansante et un arc dont les flèches tuent.
+  Lanceur de sorts divin de niveau 20 : miracle, soin de groupe, tempête vengeresse.
+
+resource: Flèche tueuse | 1 | par flèche, Vigueur DD 20 ou mort
+resource: Miracle | 1 | simple
+
+step: Combat annoncé
+  do: Aura sainte (DD 26), convocation de monstres VII, puis il approche invisible
+  note: son épée dansante se bat seule pendant 4 rounds pendant qu'il tire
+
+## Ouverture
+
+step: Ennemi puissant à distance
+  do: Arc composite +31/+26/+21/+16 (2d6+14), la flèche tueuse sur le chef
+  note: la flèche, créée pour un type de créature, tue sur un Vigueur raté
+
+step: Groupe ennemi
+  do: Tempête vengeresse (DD 27) ou mot sacré (DD 25)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Lâcher l'épée dansante sur un ennemi et tirer à l'arc sur un autre
+  note: l'épée +35/+30/+25/+20 (3d6+18) combat 4 rounds seule puis revient
+
+step: Ennemi qui fuit par magie
+  do: Ancre dimensionnelle, puis emprisonnement (DD 26)
+
+step: Alliés en mauvaise posture
+  do: Guérison de groupe ou miracle
+
+## Repli
+
+step: Points de vie sous 100
+  do: Éthéralité, régénération à l'abri, puis retour. Il ne laisse jamais un artefact maléfique aux mains de l'ennemi

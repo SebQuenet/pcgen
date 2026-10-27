@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Kamadan, léopard aux serpents sur les épaules, qui endort ses proies d'un souffle.
+  Morsure +7, 2 griffes +7, serpents +2 ; souffle en cône de 9 m (sommeil, Vigueur DD 15) ; bond.
+
+step: Une proie
+  do: S'approcher à couvert
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle soporifique
+  note: il reprend son souffle tous les 1d4 rounds ; il chasse surtout de nuit
+
+step: Une proie endormie
+  do: Bond : attaque à outrance
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper les endormis
+  note: ses serpents mordent ceux qui l'approchent par les flancs
+
+## Repli
+
+step: Points de vie sous 10
+  do: Fuir

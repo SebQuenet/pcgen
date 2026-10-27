@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Akhana, éon gardien de l'équilibre entre la vie et la mort. Sans cruauté, il traque ceux qui défient la mort : nécromants, morts-vivants, ressuscités en trop.
+  4 griffes +16 (1d4+5 et étreinte) ; siphon d'âme ; RM 23 ; immunité au froid, aux critiques et au poison ; vol à 12 m par round. Œil de la mort permanent.
+
+resource: Mise à mort | 3 | magique, DD 19
+resource: Restauration | 3 | magique
+resource: Rappel à la vie | 1 | magique
+
+step: Il repère sa cible
+  do: Ignorer les autres s'ils ne s'interposent pas ; parler par gestes et visions, jamais par mots
+  note: il peut soigner (soins importants à volonté) ou ramener à la vie selon ce que l'équilibre demande
+
+## Ouverture
+
+step: La cible est à portée
+  do: Mise à mort (DD 19) sur elle
+
+step: Des alliés de la cible s'interposent
+  do: Sanctuaire (DD 15) sur lui-même, puis avancer vers la cible
+
+## Rounds suivants
+
+step: Cible au contact
+  do: 4 griffes avec étreinte, puis siphon d'âme sur la proie tenue
+
+step: Il est blessé
+  do: Soins importants sur lui-même
+
+## Repli
+
+step: L'équilibre est rétabli, ou points de vie sous 30
+  do: Quitter le combat ; il revient tant que la mission n'est pas accomplie

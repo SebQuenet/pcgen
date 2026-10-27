@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Vavakia, démon géant du feu et de la guerre, cruel (Int 18).
+  Corsèque impie +1 +28/+23/+18/+13 (allonge 9 m) ou morsure, 2 griffes et queue (étourdissement) ; souffle ; piétinement (DD 30) ; présence terrifiante ; aura impie ; RD 15/fer froid et bien, RM 29.
+
+resource: Blasphème | 3 | magique
+
+step: Des ennemis
+  do: Présence terrifiante
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle ou blasphème
+
+## Rounds suivants
+
+step: Ennemis à 9 m
+  do: Corsèque
+
+step: Ennemis au contact
+  do: Morsure, griffes et queue
+
+## Repli
+
+step: Points de vie sous 75
+  do: Téléportation suprême

@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Gongorinan, qlippoth-araignée qui pond dans ses victimes et métamorphose ses ennemis.
+  Cimeterre +1 +18/+13/+8, griffe +15 (saignement), pince +15 (étreinte), dard +15 (poison) ; toile +17 (DD 22) ; aspect horrible (DD 20) ; RD 10/loi, RM 22.
+
+resource: Métamorphose funeste | 3 | magique, DD 20
+resource: Rapetissement de groupe | 1 | magique, DD 19
+
+step: Des vivants
+  do: Aspect horrible
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Toile
+
+step: Le plus fort
+  do: Métamorphose funeste
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Cimeterre, griffe, pince et dard ; pondre
+
+## Repli
+
+step: Points de vie sous 35
+  do: Porte dimensionnelle

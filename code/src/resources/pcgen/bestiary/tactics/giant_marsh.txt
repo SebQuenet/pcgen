@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Géant des marais, brute superstitieuse qui vénère les dieux anciens des eaux. Ses chamanes lisent les présages et maudissent les ennemis.
+  Gaffe +16/+11 (2d6+12), allonge 3 m ; rochers +12 (2d6+9, 36 m) ; il attrape les rochers ; il nage à 6 m par round.
+
+resource: Augure | 3 | magique
+resource: Malédiction | 3 | magique, DD 15
+resource: Nappe de brouillard | 3 | magique
+
+step: Des intrus dans le marais
+  do: Augure pour savoir si l'attaque est favorable, puis nappe de brouillard
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Rochers +12 (2d6+9)
+
+step: L'ennemi le plus fort
+  do: Malédiction (DD 15)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Gaffe : l'accrocher et le tirer vers l'eau
+
+step: Toujours
+  do: Combattre dans l'eau, où ses ennemis peinent
+
+## Repli
+
+step: Points de vie sous 25
+  do: Disparaître dans le brouillard et l'eau

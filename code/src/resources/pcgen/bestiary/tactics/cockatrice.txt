@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Petit coq-reptile irascible, bête magique à l'intelligence animale. Sa morsure change en pierre : Vigueur ou pétrification.
+  Elle vole à 18 m par round ; au sol, elle n'avance que de 6 m.
+
+step: Intrus près du nid
+  do: Battre des ailes et piailler, puis piquer s'ils approchent
+  note: un vol de 3 à 5 ou une volée de 6 à 12 attaque ensemble
+
+## Ouverture
+
+step: Ennemi à portée
+  do: Mordre +9 (1d4-2 et pétrification)
+  note: pétrification : Vigueur ou changé en pierre, de façon permanente ; une réussite ne protège que de cette morsure
+
+step: Plusieurs ennemis
+  do: Chaque cockatrice mord une cible différente pour multiplier les jets de Vigueur
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la créature la plus proche ; voler pour changer de cible
+  note: Esquive et taille Petite : CA 15, difficile à toucher
+
+step: Une cible est pétrifiée
+  do: Passer à la suivante ; une statue ne l'intéresse plus
+
+## Repli
+
+step: Points de vie sous 10
+  do: S'envoler à 18 m par round vers le nid ou les rochers

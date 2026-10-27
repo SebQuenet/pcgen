@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Chien gobelin, bête galeuse et stupide que montent les gobelins. Ses squames provoquent une allergie chez les non-gobelinoïdes.
+  Morsure +2 (1d6+3 et réaction allergique) ; immunité aux maladies ; 15 m de déplacement.
+
+step: Il porte un gobelin
+  do: Obéir à son cavalier et se ruer sur la cible désignée
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Mordre
+  note: réaction allergique : Vigueur DD 12 ou éruption qui dure 1 jour : -2 en Dextérité et en Charisme, sans cumul
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même cible
+
+step: Son cavalier tombe
+  do: Fuir ou mordre au hasard
+
+## Repli
+
+step: Points de vie sous 3
+  do: Fuir en glapissant

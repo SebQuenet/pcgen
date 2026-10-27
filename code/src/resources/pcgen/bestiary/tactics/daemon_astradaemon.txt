@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Astradémon, daémon chasseur d'âmes du plan Astral, rapide et implacable. Il se nourrit des âmes en transit vers leur jugement.
+  Morsure +23 (2d6+5, absorption d'énergie et étreinte), 2 griffes +23, queue +18 (absorption d'énergie) ; aura siphon d'âme (3 m) ; déplacement permanent ; RD 10/bien et argent, RM 27 ; 27 m de déplacement et de vol.
+
+resource: Doigt de mort | 1 | magique
+resource: Absorption d'énergie | 1 | magique, DD 24
+resource: Changement de plan | 3 | magique, DD 24
+
+step: Il chasse des âmes
+  do: Localiser une créature, puis téléportation suprême à côté d'elle
+  note: vision lucide et déplacement permanents : ses ennemis le ratent souvent
+
+## Ouverture
+
+step: Le combattant le plus dangereux
+  do: Doigt de mort ou absorption d'énergie (DD 24)
+
+step: Ennemis groupés
+  do: Terreur (DD 21)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure, 2 griffes et queue, chaque coup absorbe un niveau
+
+step: Une victime meurt
+  do: Dévorer son âme ; elle ne peut plus être ramenée
+
+## Repli
+
+step: Points de vie sous 50
+  do: Changement de plan vers l'Astral

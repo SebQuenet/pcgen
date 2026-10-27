@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Vase cristalline, variante aquatique de la vase grise : presque invisible dans l'eau. Sa touche paralyse au lieu de ronger le métal.
+  Sans esprit ; immunisée aux effets mentaux ; elle nage et attend dans les bassins.
+
+step: Une créature entre dans l'eau ou se penche au bord
+  do: Rester immobile, invisible dans l'eau claire
+
+## Ouverture
+
+step: La créature est au contact
+  do: Coup avec étreinte et paralysie
+  note: une créature paralysée dans l'eau se noie
+
+## Rounds suivants
+
+step: Elle tient une proie
+  do: La maintenir sous l'eau et la ronger d'acide
+
+step: Une autre créature tente de l'aider
+  do: La frapper aussi ; elle a assez de masse pour deux
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, elle combat jusqu'à sa destruction

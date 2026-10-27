@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Tataka, rakshasa géant maître des arts martiaux, prêtre cruel.
+  Coups à mains nues +24/+19/+14/+9 (2d6+7, 19-20), morsure +19 ; artiste martial ; prêtre NLS 12 ; RD 15/bien et perforant, RM 30 ; vision lucide.
+
+resource: Guérison | 3 | sort
+resource: Colonne de feu | 6 | sort, DD 20
+
+step: Des ennemis
+  do: Liberté de mouvement
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Colonne de feu (DD 20)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coups à mains nues et morsure
+
+step: Il est blessé
+  do: Guérison
+
+## Repli
+
+step: Points de vie sous 60
+  do: Porte dimensionnelle

@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Zuvembie, mort-vivant créé par un vaudou, qui appelle les cadavres et commande les bêtes nocturnes.
+  Hache d'armes +4 ou 2 griffes +4 ; appel des cadavres (DD 16) ; RD 5/perforant ; ténèbres à volonté.
+
+resource: Contact du goule | 3 | magique
+resource: Animation des morts | 1 | magique
+resource: Convocation de nuées | 1 | chauves-souris ou oiseaux
+
+step: Des vivants
+  do: Ténèbres, puis convoquer une nuée
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Appel des cadavres
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Hache d'armes ; contact du goule
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction

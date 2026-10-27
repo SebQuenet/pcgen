@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Habitant de la vase géant, grande bête magique des marais à la gueule énorme (Int 9), qui guette enfouie dans la boue et crache de l'eau sale pour aveugler ses proies.
+  Morsure +5 (2d6+4) ; crachat aveuglant ; nage à 18 m par round.
+
+step: Des proies dans le marais
+  do: Attendre dans la boue, seuls les yeux dépassent
+
+## Ouverture
+
+step: Une proie à distance
+  do: Crachat d'eau sale pour l'aveugler
+
+## Rounds suivants
+
+step: Une proie aveuglée
+  do: Morsure
+
+step: Toujours
+  do: Mordre la même proie
+
+## Repli
+
+step: Il est blessé
+  do: Plonger dans la vase

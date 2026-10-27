@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Piscodémon, daémon-homard, incarnation de la mort par le poison. Geôlier et tortionnaire d'Abaddon.
+  2 pinces +18 (2d6+7, 18-20/x3, étreinte et saignement 1d6), tentacules +16 (1d10+3 et poison) ; constriction (2d6+10) ; RD 10/bien, RM 21 ; amphibie.
+
+resource: Nuage puant | 3 | magique, DD 16
+resource: Vol | 3 | magique
+resource: Convocation d'hydrodémons | 1 | 35 % de chances
+
+step: Des intrus dans son domaine
+  do: Nuage puant (DD 16) sur leur position
+  note: vision de l'invisible permanente
+
+## Ouverture
+
+step: Ennemi au contact
+  do: 2 pinces avec étreinte et saignement, tentacules empoisonnés
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Constriction et tentacules
+  note: critique augmenté : ses pinces font des critiques terribles
+
+step: Un lanceur de sorts protégé
+  do: Dissipation de la magie
+
+## Repli
+
+step: Points de vie sous 30
+  do: Téléportation suprême

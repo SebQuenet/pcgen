@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Araignée démoniaque chasseuse de démons, Très Grande. Ses griffes arrachent les armures, sa morsure fait pourrir la chair.
+  RD 10/Bien. Elle ignore toute autre proie si un démon est présent.
+
+step: Proie repérée
+  do: Tendre ses toiles dans le passage et attendre au plafond
+
+## Ouverture
+
+step: Ennemi à distance
+  do: Toile +11 contact à distance (DD 23 pour se libérer, 12 PV)
+  note: une cible enchevêtrée ne peut plus fuir ni bien se défendre
+
+step: Ennemi en armure au contact
+  do: Démantèlement d'armure : une griffe qui touche détruit l'armure ou le bouclier (Réflexes DD 23)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure +19 (2d6+9 et pourriture) et 2 griffes +19 (2d4+9, 19-20)
+  note: pourriture : Vigueur DD 23, 1d4 Con par round 6 rounds. Ses griffes contournent les protections (frappe perforante)
+
+## Repli
+
+step: Points de vie sous 30
+  do: Changement de plan vers l'Abysse

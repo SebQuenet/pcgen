@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Shriezyx, aberration-araignée des ruines, sauvage, qui ralentit ses proies de son venin. Elle craint le feu.
+  Morsure +8 (poison ralentissant), 4 griffes +8 ; toile +8 (DD 14) ; férocité ; peur du feu.
+
+step: Des proies
+  do: Attendre dans sa toile
+  note: le feu la terrifie ; une torche brandie la fait reculer
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Toile
+
+step: Une proie
+  do: Morsure ralentissante
+  note: son venin ralentit : une proie ralentie ne peut plus fuir ni se défendre bien
+
+## Rounds suivants
+
+step: Toujours
+  do: Morsure et griffes
+
+## Repli
+
+step: Feu
+  do: Fuir, terrifiée

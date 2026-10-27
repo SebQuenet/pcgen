@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Nue, chimère à tête de singe, corps de tanuki, pattes de tigre et queue de serpent, qui porte malheur et maladie.
+  Morsure +17 (absorption de 2 niveaux), morsure de serpent +17 (poison), 2 griffes +17 ; bond ; forme de nuage.
+
+resource: Contagion | 3 | magique, DD 14
+resource: Immobilisation de personne | 3 | magique, DD 13
+resource: Cri | 1 | magique, DD 14
+resource: Vagues de fatigue | 1 | magique
+
+step: Des victimes la nuit
+  do: Forme de nuage et approcher
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cri ou vagues de fatigue
+
+step: Une proie
+  do: Bond : attaque à outrance
+
+## Rounds suivants
+
+step: Toujours
+  do: Contagion sur les survivants
+
+## Repli
+
+step: Points de vie sous 30
+  do: Forme de nuage

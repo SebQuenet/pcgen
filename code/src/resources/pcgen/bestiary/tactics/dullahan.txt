@@ -1,0 +1,30 @@
+## Avant le combat
+
+note: Profil
+  Dullahan, chevalier sans tête mort-vivant, héraut de la mort. Il annonce la fin d'une victime et vient la prendre.
+  Épée longue +1 acérée +14/+9 (1d8+6, 17-20 et 1d6 froid) ; présence terrifiante (9 m, DD 19) ; lame glaçante ; appel de la mort ; RM 18 ; résistance à la canalisation +4.
+
+resource: Appel de la mort | 1 | il désigne une victime
+resource: Convocation de monture | 1 | un destrier fantôme
+
+step: Il a désigné sa victime
+  do: Convoquer sa monture et la poursuivre
+  note: appel de la mort : il prononce le nom de la victime, qui peut mourir de terreur
+
+## Ouverture
+
+step: Ennemis à 9 m
+  do: Laisser agir la présence terrifiante, puis charger la victime désignée
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée acérée et lame glaçante
+
+step: On s'interpose
+  do: Écarter l'intrus et revenir à sa victime
+
+## Repli
+
+step: Points de vie sous 20
+  do: Disparaître dans la nuit ; il reviendra

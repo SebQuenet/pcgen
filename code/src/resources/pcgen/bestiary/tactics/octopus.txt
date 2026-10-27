@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Pieuvre, animal timide et intelligent pour sa taille. Elle préfère se cacher ou fuir.
+  Morsure +5 (1d3+1 et poison), tentacules +3 (étreinte) ; nuage d'encre (rayon 3 m, une fois par minute) ; jet à 60 m par round.
+
+step: Une créature approche
+  do: Se cacher dans les rochers en changeant de couleur
+
+## Ouverture
+
+step: On l'attrape ou on la coince
+  do: Tentacules avec étreinte, puis mordre
+  note: poison : Vigueur DD 13, 1 fois par round pendant 6 rounds, 1 Force ; 1 réussite l'arrête
+
+## Rounds suivants
+
+step: La créature la lâche
+  do: Fuir
+
+step: Elle est encore tenue
+  do: Mordre de nouveau
+
+## Repli
+
+step: Toujours, dès que possible
+  do: Nuage d'encre et jet en arrière à 60 m, sans attaque d'opportunité

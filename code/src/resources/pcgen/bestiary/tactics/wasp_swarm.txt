@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Nuée de guêpes, sans esprit, qui jaillit d'un nid dérangé. Elle poursuit les intrus sur une bonne distance.
+  Nuée (2d6 et poison), distraction (DD 13) ; immunisée aux dégâts des armes ; vol à 12 m par round.
+
+step: On touche ou on approche le nid
+  do: Jaillir du nid sur la créature la plus proche
+
+## Ouverture
+
+step: Des créatures à portée
+  do: Envahir leurs cases : 2d6 et poison
+  note: le poison affaiblit la Dextérité
+
+## Rounds suivants
+
+step: Toujours
+  do: Suivre les créatures qui fuient et les couvrir
+  note: distraction : Vigueur DD 13 ou nauséeux 1 round
+
+step: Une créature plonge dans l'eau
+  do: Rester au-dessus de l'eau et attendre qu'elle remonte
+
+step: Fumée ou feu
+  do: S'en éloigner
+
+## Repli
+
+step: Les intrus sont loin du nid
+  do: Retourner au nid

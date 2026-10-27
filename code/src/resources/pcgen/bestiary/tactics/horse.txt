@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Cheval, monture courante. Non dressé, il s'affole au combat ; un cheval de guerre dressé frappe sous son cavalier.
+  2 sabots -2 (1d4+1), attaques secondaires s'il n'est pas dressé ; 15 m de déplacement.
+
+step: Son cavalier l'emmène au combat
+  do: Obéir s'il est dressé ; sinon, test de Dressage du cavalier pour le garder calme
+  note: un cheval non dressé qui sent le sang tente de fuir
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Ruer : 2 sabots -2 (1d4+1)
+
+## Rounds suivants
+
+step: Il n'est pas dressé
+  do: Fuir à 15 m par round, avec ou sans son cavalier
+
+step: Il est dressé
+  do: Frapper l'ennemi de son cavalier
+
+## Repli
+
+step: Il est blessé
+  do: Fuir

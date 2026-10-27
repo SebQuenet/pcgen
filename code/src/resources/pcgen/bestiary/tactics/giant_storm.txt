@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Géant des tempêtes, le plus puissant des géants, solitaire, sage et juste. Il commande le climat et vit dans les îles, les falaises ou sous la mer.
+  Épée à deux mains de maître +27/+22/+17 (4d6+21, 17-20) ; arc long composite de maître +15/+10/+5 (3d6+14, x3). Immunité à l'électricité, liberté de mouvement permanente.
+
+resource: Chaîne d'éclairs | 1 | magique, DD 18
+resource: Appel de la foudre | 1 | magique, DD 15
+resource: Contrôle du climat | 2 | 10 minutes
+resource: Lévitation | 2 | magique
+
+step: Des intrus approchent de son domaine
+  do: Les observer depuis la tempête ; il ne combat pas les justes
+  note: il écoute les arguments ; l'injustice seule le met en colère
+
+step: Le combat devient inévitable
+  do: Contrôle du climat : tempête violente qui gêne les ennemis volants et les archers
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Chaîne d'éclairs (DD 18)
+
+step: Ennemis à distance
+  do: Arc long composite +15/+10/+5 (3d6+14, x3)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée à deux mains +27/+22/+17 (4d6+21, 17-20)
+
+step: Tempête en place
+  do: Appel de la foudre (DD 15) chaque round
+
+## Repli
+
+step: Points de vie sous 50
+  do: Lévitation dans la tempête, ou plonger sous la mer
+  note: il respire sous l'eau

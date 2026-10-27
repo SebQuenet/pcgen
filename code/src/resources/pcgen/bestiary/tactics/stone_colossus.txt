@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Colosse de pierre, construction mythique gigantesque, forteresse mobile qui se répare elle-même.
+  2 coups +32 (3d10+19) ou piétinement immobilisant ; baliste légère +13 ; aura antimagie sélective (9 m) ; autoréparation ; donjon mobile ; RD 10/épique.
+
+resource: Mur de pierre | 3 | magique
+resource: Répulsion | 1 | magique, DD 17
+
+step: Il défend une place
+  do: Mur de pierre pour fermer les brèches
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Baliste
+
+step: Ennemis groupés
+  do: Répulsion (DD 17)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coups ou piétinement
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction et se répare

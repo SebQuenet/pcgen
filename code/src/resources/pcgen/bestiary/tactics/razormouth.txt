@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Gueule-rasoir, vermine énorme sans esprit aux mandibules tranchantes comme des faux, qui chasse dans les jungles et les cavernes.
+  Morsure +17 (2d6+10, 19-20/x3), 2 griffes +17 (1d8+10) ; 15 m de déplacement ; elle grimpe.
+
+step: Des proies
+  do: Charger de loin
+
+## Ouverture
+
+step: Une proie
+  do: Morsure et griffes
+  note: la morsure tranche les membres sur un critique
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper la même proie
+
+step: La proie tombe
+  do: Passer à la plus proche
+
+## Repli
+
+step: Jamais
+  do: Sans esprit, elle combat jusqu'à la mort

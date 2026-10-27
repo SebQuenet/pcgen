@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Myrmarque formien, commandant de la ruche formienne, peuple-fourmi loyal et ordonné. Il inspire la ruche.
+  Dard +16 (poison), 2 griffes +16, morsure +16 ; javelots +15/+10/+5 (poison) ; inspiration de la ruche ; esprit de ruche.
+
+resource: Immobilisation de monstre | 3 | magique, DD 18
+resource: Débilité | 1 | magique, DD 18
+
+step: La ruche est menacée
+  do: Inspirer la ruche et placer les guerriers
+
+## Ouverture
+
+step: Le plus fort
+  do: Immobilisation de monstre (DD 18)
+
+step: Ennemis à distance
+  do: Javelots empoisonnés
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Dard, griffes et morsure
+
+## Repli
+
+step: Points de vie sous 30
+  do: Reculer derrière les guerriers

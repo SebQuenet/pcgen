@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Crysmal, élémentaire de cristal en forme de scorpion, qui se nourrit de gemmes. Il n'est pas mauvais, mais défend jalousement ses cristaux.
+  Dard +7 (2d6+3) ; projection d'éclat +7 (3d6, facteur 18 m) ; RD 5/contondant ; immunité au froid et au feu ; il creuse à 6 m par round.
+
+resource: Porte dimensionnelle | 3 | magique
+resource: Sanctuaire | 3 | magique, DD 13
+resource: Contact d'idiotie | 3 | magique, DD 14
+
+step: Des intrus portent des gemmes ou approchent de ses cristaux
+  do: Image silencieuse et son imaginaire pour les détourner
+  note: on peut l'apaiser en lui offrant des gemmes
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Projection d'éclat +7 (3d6)
+
+step: Un lanceur de sorts
+  do: Contact d'idiotie (DD 14)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Dard +7 (2d6+3)
+
+step: Il est menacé
+  do: Sanctuaire (DD 13), puis s'enfouir dans la roche
+
+## Repli
+
+step: Points de vie sous 8
+  do: Porte dimensionnelle ou s'enfouir

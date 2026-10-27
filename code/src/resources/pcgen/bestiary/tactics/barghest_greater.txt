@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Barghest qui a assez dévoré pour grandir. Il commande souvent une tribu entière de gobelins et la renforce par magie.
+  RD 10/magie.
+
+resource: Force de taureau de groupe | 1 | simple
+resource: Agrandissement de groupe | 1 | simple
+resource: Charme-monstre | 1 | simple, DD 18
+resource: Désespoir foudroyant | 1 | simple, DD 18
+resource: Porte dimensionnelle | 1 | simple
+
+step: Combat annoncé, ses gobelins autour de lui
+  do: Force de taureau de groupe puis agrandissement de groupe sur ses guerriers
+  note: des gobelins de taille moyenne et forts comme des ogres surprennent toujours
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Désespoir foudroyant (DD 18), ou sphère d'invisibilité pour faire avancer sa troupe
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Clignotement, puis morsure +14 (1d8+6) et 2 griffes +14 (1d6+6)
+
+step: Un ennemi est tombé
+  do: Le dévorer pour gagner en puissance
+
+## Repli
+
+step: Points de vie sous 25
+  do: Porte dimensionnelle et laisser les gobelins mourir pour lui

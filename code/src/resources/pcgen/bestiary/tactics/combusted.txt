@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Brûlé vif, mort-vivant sans esprit né d'une mort dans les flammes, toujours fumant, qui brûle tout ce qu'il touche.
+  2 coups +6 (1d6+3 et 1d6 feu) ; explosion de feu +4 contact à distance (3d6 feu) ; immunité au feu ; immunités de mort-vivant.
+
+step: Des vivants
+  do: Avancer en titubant
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Explosion de feu
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coups brûlants
+  note: le toucher enflamme les vêtements : 1d6 feu par round jusqu'à ce qu'on éteigne
+
+step: Matières inflammables
+  do: Il les embrase en passant
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à la destruction

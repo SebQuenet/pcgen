@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Bélostome géant, punaise d'eau géante sans esprit, qui guette au fond des mares, saisit ses proies et leur injecte une enzyme qui les liquéfie.
+  Morsure +4 (1d6+2 et enzyme digestive), 2 griffes +4 ; il nage et vole.
+
+step: Une proie dans l'eau ou au bord
+  do: Approcher sous la surface
+
+## Ouverture
+
+step: La proie
+  do: Griffes et morsure
+
+## Rounds suivants
+
+step: Toujours
+  do: Injecter son enzyme dans la même proie
+  note: l'enzyme ronge la chair : la proie perd des points de vie chaque round tant qu'elle est tenue
+
+step: La proie sort de l'eau
+  do: La lâcher
+
+## Repli
+
+step: Il est blessé
+  do: S'envoler vers une autre mare

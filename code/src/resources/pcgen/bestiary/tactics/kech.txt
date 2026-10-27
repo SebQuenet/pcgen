@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Kech, humanoïde simiesque des forêts, chasseur cruel qui tend des embuscades depuis les arbres.
+  Morsure +5, 2 griffes +5 ; arc long +6 ; déchirure ; passage sans trace permanent ; il grimpe à 6 m par round.
+
+step: Des voyageurs dans la forêt
+  do: Les guetter dans les arbres
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Arc long
+
+step: Une proie sous lui
+  do: Sauter et frapper
+  note: il ne laisse aucune trace ; on ne le piste pas
+
+## Rounds suivants
+
+step: Toujours
+  do: Morsure et griffes, déchirure
+
+## Repli
+
+step: Points de vie sous 8
+  do: Grimper et fuir

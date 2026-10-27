@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Rêve animé, cauchemar devenu créature, né d'un rêve trop puissant. Intangible et mauvais, il hante les dormeurs et cherche à les tuer de peur.
+  Contact intangible +16 (6d8 énergie négative et malédiction du cauchemar) ; RM 19 ; vol à 12 m par round.
+
+resource: Sommeil profond | 3 | magique, DD 18
+resource: Cauchemar | 3 | magique, DD 20
+resource: Porte dimensionnelle | 3 | magique
+resource: Assassin imaginaire | 1 | magique, DD 19
+resource: Confusion | 1 | magique, DD 19
+
+step: Des voyageurs dorment
+  do: Cauchemar (DD 20) sur eux : ils ne récupèrent pas
+
+step: Ils sont éveillés
+  do: Sommeil profond (DD 18) sur le groupe
+
+## Ouverture
+
+step: Le plus fort des éveillés
+  do: Assassin imaginaire (DD 19)
+
+step: Ennemis groupés
+  do: Confusion (DD 19) ou terreur (DD 19)
+
+## Rounds suivants
+
+step: Toujours
+  do: Contact intangible sur un dormeur ou un confus
+  note: malédiction du cauchemar : la victime ne dort plus en paix
+
+## Repli
+
+step: Points de vie sous 20
+  do: Porte dimensionnelle et fuite à travers les murs

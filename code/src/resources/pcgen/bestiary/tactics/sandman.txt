@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Marchand de sable, élémentaire de sable mauvais, qui endort ses victimes pour les ensevelir.
+  Coup +6 (1d6+3 et sommeil) ; aura de sommeil (6 m, DD 14) ; amorphe ; RD 10/contondant ; il creuse à 9 m par round.
+
+step: Des voyageurs dans le désert
+  do: S'approcher sous le sable
+
+## Ouverture
+
+step: Ennemis à 6 m
+  do: Laisser agir l'aura de sommeil
+  note: son aura endort ; les créatures qui ne dorment pas en sont immunisées
+
+step: Ennemi au contact
+  do: Coup endormant
+
+## Rounds suivants
+
+step: Des ennemis endormis
+  do: Les ensevelir sous le sable
+
+## Repli
+
+step: Points de vie sous 8
+  do: S'enfoncer dans le sable

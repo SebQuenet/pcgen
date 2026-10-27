@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Otyugh, aberration des fosses à ordures, qui se nourrit de déchets et de charognes. Il est intelligent (il parle le commun) et conclut volontiers des marchés avec qui le nourrit.
+  Morsure +7 (1d8+4 et maladie), 2 tentacules +3 (1d6+2 et étreinte, allonge 4,50 m), constriction (1d6+2) ; immunité aux maladies.
+
+step: Des créatures approchent de sa fosse
+  do: Rester enfoui sous les ordures, seul l'œil sur sa tige dépasse
+  note: des gardes ou des voleurs le nourrissent parfois en échange de sa protection
+
+step: Les créatures lui offrent à manger
+  do: Négocier : il laisse passer qui le nourrit bien
+
+## Ouverture
+
+step: Une créature entre dans sa fosse
+  do: Tentacules sur elle depuis 4,50 m, avec étreinte
+  note: une créature agrippée est tirée vers sa gueule
+
+step: Plusieurs créatures
+  do: Saisir une créature par tentacule
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: Constriction (1d6+2) et morsure (1d8+4 et maladie)
+  note: fièvre des ordures : la morsure transmet une maladie qui ronge Dextérité et Constitution
+
+step: Ses proies le frappent à distance
+  do: S'enfoncer dans les ordures pour gagner un abri
+
+## Repli
+
+step: Points de vie sous 10
+  do: S'enfouir au fond de la fosse et proposer un marché
+  note: il échange volontiers des objets trouvés dans les ordures contre sa vie

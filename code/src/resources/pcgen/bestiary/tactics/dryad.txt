@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Esprit d'un arbre, lié à lui. Timide, elle charme les intrus plutôt que les combattre, mais tue pour défendre son arbre.
+
+resource: Charme-personne | 3 | simple, DD 15
+resource: Sommeil profond | 3 | simple, DD 17
+resource: Passage par les arbres | 3 | mouvement
+
+step: Intrus dans son bosquet
+  do: Forme d'arbre pour observer
+
+## Ouverture
+
+step: Intrus menaçants
+  do: Enchevêtrement (DD 15) ou sommeil profond (DD 17)
+
+step: Intrus charmant
+  do: Charme-personne pour l'emmener
+
+## Rounds suivants
+
+step: Ennemis à distance
+  do: Arc long de maître +8 (1d8)
+
+step: Ennemi qui s'en prend à son arbre
+  do: Suggestion (DD 17) pour qu'il s'en aille
+
+## Repli
+
+step: Points de vie sous 10
+  do: Passage par les arbres vers son arbre

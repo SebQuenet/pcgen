@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Grand objet animé : statue, carriole, lit à baldaquin. Allonge 3 m, coup lourd, solidité selon la matière.
+  Immunités des créatures artificielles : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Sa consigne se déclenche
+  do: Rester immobile à l'endroit gardé, souvent au centre d'une salle
+
+## Ouverture
+
+step: Intrus à portée
+  do: Coup sur le plus proche, en profitant de l'allonge pour frapper avant qu'on l'atteigne
+  note: s'il a l'option piétinement, traverser le groupe
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper qui le frappe ; sans esprit, il ne distingue pas un mage d'un guerrier
+
+## Repli
+
+step: Jamais
+  do: Il se bat jusqu'à être détruit

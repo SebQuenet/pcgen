@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Guenaude d'hiver, sorcière du froid éternel, rusée (Int 16), au bâton de glace.
+  Bâton de givre +2 +15/+10 (1d6+6 et 1d6 froid) ; souffle en cône de 9 m (4d6 froid et aveuglement, DD 18) ; RD 10/magie, RM 18 ; marche sur la glace ; vision de l'invisible.
+
+resource: Souffle glacé | 1 | une fois tous les 1d4 rounds
+resource: Charme-monstre | 3 | magique
+
+step: Des voyageurs dans la neige
+  do: Modification d'apparence et nappe de brouillard
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle glacé
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Bâton de givre
+
+step: Le plus fort
+  do: Charme-monstre
+
+## Repli
+
+step: Feu ou points de vie sous 20
+  do: Brouillard et fuite

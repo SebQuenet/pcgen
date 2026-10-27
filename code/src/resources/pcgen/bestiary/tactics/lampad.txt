@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Lampade, nymphe des cavernes, d'une beauté folle et triste, druidesse qui pleure pour affaiblir ses ennemis.
+  Dague de maître +9 ; fronde de maître +9 ; aura de beauté démente (9 m) ; pleurs ; druidesse NLS 5 ; RD 5/fer froid.
+
+step: Des intrus dans sa caverne
+  do: Se fondre dans la pierre et observer
+
+## Ouverture
+
+step: Ennemis à 9 m
+  do: Aura de beauté démente
+
+step: Ennemis groupés
+  do: Pleurs : ses larmes accablent
+
+## Rounds suivants
+
+step: Toujours
+  do: Lueur féerique, appel des pierres, fronde
+
+## Repli
+
+step: Elle est blessée
+  do: Se fondre dans la pierre

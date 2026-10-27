@@ -1,0 +1,32 @@
+## Avant le combat
+
+note: Profil
+  Silvanshee, agathion en forme de chat noir aux yeux d'argent, compagnon et gardien des mortels bons. Il préfère la ruse et la chance au combat.
+  Morsure +6 (1d3-4), 2 griffes +6 (1d2-4) ; bond ; force héroïque (+8 Force 1 minute, 1 fois par jour) ; chance du chat ; forme de brume ; RD 5/mal ou argent, RM 13.
+
+resource: Force héroïque | 1 | +8 Force pendant 1 minute
+resource: Chance du chat | 1 | bonus de chance pour un allié, 10 minutes
+resource: Porte dimensionnelle | 1 | lui seul
+resource: Imposition des mains | 1 | 1d6
+
+step: Il accompagne un mortel
+  do: Chance du chat sur son protégé avant le danger
+  note: il parle aux animaux et s'en sert comme éclaireurs
+
+## Ouverture
+
+step: Son protégé est menacé
+  do: Force héroïque, puis bond sur l'agresseur
+
+## Rounds suivants
+
+step: Son protégé est à terre
+  do: Stabilisation ou imposition des mains
+
+step: Il est menacé
+  do: Forme de brume et s'éloigner
+
+## Repli
+
+step: Points de vie sous 5
+  do: Porte dimensionnelle

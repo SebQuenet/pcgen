@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Manananggal, morte-vivante qui sépare son buste de ses jambes la nuit pour voler et boire le sang. Elle craint la lumière et les lames lumineuses.
+  Morsure +11, 2 griffes +12 (étreinte) ; absorption de sang (1d2 Constitution) ; RD 10/bien ou argent ; sensible à la lumière ; séparation ; vol à 30 m par round.
+
+resource: Ténèbres | 3 | magique
+resource: Sommeil profond | 3 | magique, DD 17
+resource: Terreur | 3 | magique, DD 18
+
+step: La nuit
+  do: Se séparer de ses jambes et voler vers une maison
+  note: détruire sa moitié inférieure pendant qu'elle chasse la condamne à l'aube
+
+## Ouverture
+
+step: Des dormeurs
+  do: Sommeil profond (DD 17)
+
+step: Ennemis éveillés
+  do: Terreur (DD 18)
+
+## Rounds suivants
+
+step: Une victime
+  do: Griffes avec étreinte, absorption de sang
+
+## Repli
+
+step: Lumière vive ou points de vie sous 20
+  do: S'envoler vers sa moitié inférieure

@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Léviathan astral, bête colossale du plan Astral, qui avale les voyageurs planaires.
+  Morsure +24 (étreinte), 2 coups +24, queue +19 ; déglutition rapide ; marée engloutissante ; il avale les proies ; RD 10/adamantium ; vol à 27 m par round.
+
+resource: Porte dimensionnelle | 3 | magique
+
+step: Des voyageurs dans l'Astral
+  do: Approcher lentement
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Marée engloutissante : aspirer les créatures vers sa gueule
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: L'avaler
+
+step: Ennemi au contact
+  do: Coups et queue
+
+## Repli
+
+step: Points de vie sous 80
+  do: Porte dimensionnelle

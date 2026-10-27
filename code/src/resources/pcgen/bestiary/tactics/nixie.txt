@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Nixe, petite fée aquatique qui charme les mortels pour les faire travailler pour elle.
+  Épée courte +5 ; arbalète légère +5 ; RD 5/fer froid, RM 12 ; amphibie.
+
+resource: Charme-personne | 3 | magique, DD 15
+resource: Respiration aquatique | 1 | magique
+
+step: Des voyageurs près du lac
+  do: Charme-personne (DD 15)
+  note: elle fait travailler les charmés un an pour elle, puis les libère sans souvenir
+
+## Ouverture
+
+step: Ennemis à distance
+  do: Arbalète légère
+
+## Rounds suivants
+
+step: Toujours
+  do: Faire combattre ses charmés
+
+## Repli
+
+step: Elle est blessée
+  do: Plonger

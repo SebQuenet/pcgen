@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Leucodémon, daémon à crâne de cheval, incarnation de la mort par la maladie. Il répand les épidémies et se nourrit des âmes des malades.
+  Morsure +16 (1d8+7), 2 griffes +16 (1d6+7) ; aura infectieuse (15 m) ; souffle de mouches ; RD 10/bien ou argent, RM 20 ; vol à 18 m par round.
+
+resource: Mise à mal | 1 | magique, DD 19
+resource: Convocation de leucodémon | 1 | 35 % de chances
+
+step: Des vivants dans sa zone
+  do: Contagion (DD 17) à volonté sur chacun, de loin
+  note: aura infectieuse : les maladies progressent plus vite près de lui et les soins magiques agissent mal
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Souffle de mouches : nuée qui transmet la maladie
+
+step: Un prêtre soigne le groupe
+  do: Dissipation de la magie sur ses protections, puis mise à mal (DD 19)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes
+
+step: Toujours
+  do: Contagion sur ceux qui ne sont pas encore malades
+
+## Repli
+
+step: Points de vie sous 25
+  do: Téléportation suprême ; la maladie fera le reste

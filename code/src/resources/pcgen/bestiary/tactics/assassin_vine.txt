@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Plante carnivore immobile, camouflée dans la végétation : on ne la repère pas avant qu'elle frappe. Sans esprit, elle attaque tout ce qui est vivant à portée.
+  Immunisée à l'électricité, résistance au froid et au feu 10.
+
+step: Créature dans les 9 m
+  do: Enchevêtrement sur la zone (DD 13), comme le sort
+  note: les plantes animées retiennent la proie à portée de liane
+
+## Ouverture
+
+step: Proie à 3 m
+  do: Coup +7 (1d8+7) et saisie
+
+## Rounds suivants
+
+step: Proie agrippée
+  do: Étreinte 1d8+7 chaque round ; elle la garde jusqu'à la mort
+  note: le corps nourrit le sol où la plante pousse
+
+## Repli
+
+step: Jamais
+  do: Elle ne peut pas se déplacer plus de 1,50 m par round ; elle se bat jusqu'au bout

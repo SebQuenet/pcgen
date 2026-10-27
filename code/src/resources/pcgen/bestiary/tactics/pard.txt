@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Pard, félin magique d'une vitesse fulgurante (36 m), qui attaque en traversant ses proies.
+  Morsure +12, 2 griffes +7 ; attaque traversante ; évasion ; esquive instinctive supérieure ; RD 5/magie.
+
+step: Une proie
+  do: Courir vers elle
+
+## Ouverture
+
+step: La proie
+  do: Attaque traversante : frapper en passant à travers elle
+  note: il traverse la proie comme un fantôme et frappe en passant, sans provoquer d'attaque d'opportunité
+
+## Rounds suivants
+
+step: Toujours
+  do: Frapper et repartir à toute vitesse
+
+## Repli
+
+step: Points de vie sous 8
+  do: Fuir à 36 m par round

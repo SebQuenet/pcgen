@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Mélodémon, daémon décharné, incarnation de la mort par la faim et la soif. Il flétrit les récoltes et dessèche les vivants.
+  Morsure +20 (2d8+6, 19-20 et maladie), 2 griffes +19 (2d6+6 et faim) ; aura de consomption (6 m) ; RD 10/bien, RM 22 ; immunité aux critiques et aux attaques sournoises ; Int 21.
+
+resource: Flétrissure | 3 | magique, DD 19
+resource: Projectile magique rapide | 3 | magique
+
+step: Des vivants approchent
+  do: Ténèbres profondes, puis flétrir les plantes et les récoltes autour
+  note: aura de consomption : les vivants proches ont faim et soif, et deviennent fatigués
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Frayeur (DD 15), puis flétrissure (DD 19) sur une créature végétale ou un druide
+
+step: Un lanceur de sorts
+  do: Projectile magique rapide
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et 2 griffes ; la faim épuise la victime
+
+step: Un ennemi fatigué
+  do: Le frapper en priorité
+
+## Repli
+
+step: Points de vie sous 30
+  do: Téléportation suprême

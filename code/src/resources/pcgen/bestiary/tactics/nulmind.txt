@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Nulesprit, petite plante intelligente (Int 17) en forme de fleur pâle, qui projette des spores dans l'esprit de ses victimes pour les rendre dociles et en faire des jardiniers à son service.
+  Spore +16 contact à distance (spores mentales) ; RM 22 ; elle grimpe.
+
+step: Des créatures
+  do: Rester immobile parmi d'autres fleurs
+
+step: Ses serviteurs infestés
+  do: Les placer entre elle et les intrus
+
+## Ouverture
+
+step: Une créature
+  do: Spores mentales sur le plus fort
+
+## Rounds suivants
+
+step: Toujours
+  do: Infester les esprits, un par round
+
+step: Ennemi au contact
+  do: Grimper hors de portée
+
+## Repli
+
+step: Elle est blessée
+  do: Grimper hors de portée ; ses serviteurs la défendent

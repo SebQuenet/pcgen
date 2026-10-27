@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Dinosaure herbivore cuirassé, lent et placide. Il ne chasse pas : il se défend avec sa queue en massue, qui étourdit.
+  Queue +14 (3d6+12 et étourdissement), allonge 4,50 m, CA 22.
+
+step: Des créatures approchent du troupeau
+  do: Se tourner, présenter la carapace et balancer la queue en menace
+
+## Ouverture
+
+step: Un ennemi entre dans son allonge
+  do: Coup de queue +14 (3d6+12 et étourdissement)
+  note: étourdissement : Vigueur ou étourdi 1d4 rounds ; l'adversaire étourdi lâche ce qu'il tient
+
+## Rounds suivants
+
+step: Un ennemi est étourdi
+  do: Frapper le suivant ; l'étourdi n'est plus une menace pour l'instant
+
+step: Plusieurs ennemis
+  do: Garder chacun à distance de queue ; il ne poursuit pas
+
+## Repli
+
+step: Points de vie sous 20
+  do: S'éloigner pesamment à 9 m par round avec le troupeau
+  note: un ennemi qui le laisse partir ne sera pas poursuivi

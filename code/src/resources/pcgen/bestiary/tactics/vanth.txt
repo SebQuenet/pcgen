@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Vanth, psychopompe ailé à la faux, gardien des portes de la mort, qui punit les morts-vivants.
+  Faux d'adamantium +1 +14/+9 (2d4+7, x4) ; faux de la faucheuse ; aura de peur (9 m, DD 17) ; RD 10/adamantium, RM 18.
+
+resource: Lumière brûlante | 3 | magique
+resource: Malédiction | 3 | magique, DD 17
+
+step: Des morts-vivants ou des profanateurs
+  do: Localisation de créature
+
+## Ouverture
+
+step: Un mort-vivant
+  do: Lumière brûlante
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Faux
+
+## Repli
+
+step: Points de vie sous 20
+  do: Téléportation suprême

@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Brimorak, petit démon de feu au sang bouillant, qui incendie tout.
+  Épée longue +11/+6 (1d6 feu), sabot +0 (1d6 feu) ; souffle de sang bouillant en ligne de 6 m (5d6, DD 17) ; sabots brûlants ; aura de fumée ; RD 5/fer froid ou bien, RM 16 ; vulnérable au froid.
+
+resource: Boule de feu | 1 | magique, DD 15
+resource: Métal brûlant | 3 | magique, DD 14
+
+step: Des cibles à incendier
+  do: Se ruer
+
+## Ouverture
+
+step: Ennemis alignés
+  do: Souffle de sang bouillant
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Épée et sabot brûlants
+
+## Repli
+
+step: Froid ou points de vie sous 12
+  do: Téléportation suprême

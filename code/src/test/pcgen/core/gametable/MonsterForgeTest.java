@@ -132,6 +132,12 @@ class MonsterForgeTest
 	}
 
 	@Test
+	void aWolfIsBuiltWithItsTacticalPlan()
+	{
+		assertEquals(BestiaryTactics.of("Wolf"), forged(WOLF).getDisplay().getTacticalPlan());
+	}
+
+	@Test
 	void aWolfHasAChallengeRating()
 	{
 		assertEquals("1", sheets.challengeRating(forged(WOLF)));

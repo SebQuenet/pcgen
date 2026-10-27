@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Espion mécanique, petit automate volant sans esprit qui enregistre les conversations.
+  Coup +3 (1d2) ; enregistrement sonore ; autodestruction (1d6 feu à 1,50 m, DD 10) ; vol à 9 m par round.
+
+step: Il espionne
+  do: Se cacher et enregistrer
+  note: il vole sans bruit et se pose dans les recoins ; on le prend pour un bibelot
+
+## Ouverture
+
+step: On le découvre
+  do: Fuir en vol
+  note: ce qu'il a enregistré peut être rejoué : le capturer intact révèle les secrets de son maître
+
+## Rounds suivants
+
+step: Il est coincé
+  do: Coup
+
+## Repli
+
+step: Il est détruit
+  do: Hurler puis exploser un round plus tard

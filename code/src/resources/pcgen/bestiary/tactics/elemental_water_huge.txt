@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire d'eau, puissant dans l'eau, plus faible sur terre. Il éteint les flammes et noie ses ennemis.
+  Élémentaire d'eau très grand. Deux coups puissants, allonge 4,50 m. Immunités des élémentaires : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Ennemis en vue
+  do: Attendre dans l'eau, invisible sous la surface
+
+## Ouverture
+
+step: Ennemi dans l'eau ou sur un bateau
+  do: Vortex : aspirer et noyer les créatures plus petites
+  note: maîtrise de l'eau : +1 à l'attaque et aux dégâts si lui et sa cible sont dans l'eau, −4 si l'un d'eux est à terre
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coups ; éteindre les feux magiques et ordinaires d'un toucher
+
+step: Navire
+  do: Faire chavirer l'embarcation
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Se fondre dans l'eau ; convoqué, il se bat jusqu'à la fin du sort

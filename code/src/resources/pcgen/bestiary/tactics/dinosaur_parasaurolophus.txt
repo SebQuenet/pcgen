@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Parasaurolophus, dinosaure herbivore à crête creuse, qui sonne l'alarme pour le troupeau.
+  Coup de queue +8 (2d6+9), allonge 4,50 m ; piétinement (2d6+9, DD 19).
+
+step: Des prédateurs approchent
+  do: Sonner de la crête : le troupeau se regroupe ou fuit
+  note: le son grave de sa crête porte à des kilomètres
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Piétinement (2d6+9, DD 19)
+  note: il ne cherche pas le combat ; il protège surtout les petits du troupeau
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Coup de queue
+
+## Repli
+
+step: Points de vie sous 12
+  do: Fuir avec le troupeau

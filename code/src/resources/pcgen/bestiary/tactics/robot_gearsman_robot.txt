@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Robot rouage, robot humanoïde de Numérie (Int 10), qui apprend en combattant, adapte ses attaques et se répare tout seul.
+  Coup +9 (1d4+7) ou lance de maître +10 (1d8+5/x3 et 1d6 électricité) ; apprentissage adaptatif ; arme chargée ; autoréparation ; solidité 10.
+
+step: Il garde un lieu
+  do: Rester en veille
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Lance chargée d'électricité
+
+## Rounds suivants
+
+step: Toujours
+  do: Adapter sa tactique : il gagne un bonus contre l'ennemi qu'il a déjà affronté
+
+step: Il est blessé
+  do: Se réparer entre deux coups
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction

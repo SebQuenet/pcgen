@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Pugwampi, gremlin lâche à tête de chien, qui porte la malchance. Il provoque les accidents et les regarde de loin.
+  Dague +3, arc court +3 (1d3-4) ; aura de malchance (6 m) ; RD 2/fer froid.
+
+resource: Fracassement | 1 | magique, DD 10
+
+step: Des intrus approchent
+  do: Rester caché à 6 m d'eux
+  note: aura de malchance : chacun lance deux d20 et garde le pire
+
+## Ouverture
+
+step: Un ennemi a une arme ou un objet fragile
+  do: Fracassement (DD 10)
+
+## Rounds suivants
+
+step: Toujours
+  do: Tirer à l'arc caché, rester dans l'aura de ses ennemis
+
+## Repli
+
+step: On le repère
+  do: Fuir

@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Harionago, morte-vivante aux cheveux crochus, qui rit et séduit ses victimes avant de les déchirer.
+  2 griffes +15 (paralysie, DD 23), 4 crochets de cheveux +12 (saignement 5), allonge 3 m ; rire contagieux ; RD 10/magie.
+
+resource: Charme-monstre | 1 | magique, DD 19
+resource: Toucher vampirique | 1 | magique
+
+step: Une victime
+  do: Désir contre nature ou charme-monstre
+
+## Ouverture
+
+step: Ennemis
+  do: Rire contagieux
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Griffes paralysantes et crochets de cheveux
+
+## Repli
+
+step: Points de vie sous 35
+  do: Lévitation et fuite

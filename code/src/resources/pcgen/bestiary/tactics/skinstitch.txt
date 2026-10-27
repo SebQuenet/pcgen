@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Cousu-de-peau, construction de peaux cousues remplies de paille, sans esprit, qui se répare.
+  Épée longue +7, coup +2 ; nid ; réparation ; RD 5/tranchant ; vulnérable au feu.
+
+step: Il garde un lieu
+  do: Rester immobile
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Épée longue et coup
+  note: on le trouve souvent dans les fermes abandonnées, gardant le nid de paille où il se répare
+
+## Rounds suivants
+
+step: Il est blessé
+  do: Se réparer avec la paille de son nid
+  note: loin de son nid, il ne peut plus se réparer
+
+## Repli
+
+step: Feu
+  do: Il brûle mais ne fuit pas

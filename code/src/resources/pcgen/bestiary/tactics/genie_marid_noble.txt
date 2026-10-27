@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Génie de l'eau, le plus capricieux et le plus orgueilleux des génies (chaotique neutre). Il se croit supérieur à tout et le fait savoir.
+  Maîtrise de l'eau : à l'attaque et aux dégâts si lui et son adversaire touchent l'eau. Nage à 18 m par round ; il peut prendre la forme d'un élémentaire d'eau.
+  Noble marid (padishah) : plus puissant que ses semblables, il règne sur un domaine aquatique et peut exaucer un vœu par an.
+
+resource: Vortex | 1 | toutes les 10 minutes
+resource: Contrôle de l'eau | 5 | magique
+resource: Brume de dissimulation | 5 | magique
+resource: Vision de l'invisible | 3 | magique
+resource: Image persistante | 1 | magique
+
+step: Des mortels approchent de son domaine aquatique
+  do: Les jauger depuis l'eau, invisible ; exiger qu'ils le flattent
+  note: détection du mal, du bien et de la magie permanentes
+
+step: Le combat devient inévitable
+  do: Contrôle de l'eau pour faire monter les flots ou assécher le passage de ses ennemis
+
+step: Des serviteurs marins l'accompagnent
+  do: Les envoyer au contact et rester dans l'eau profonde
+
+## Ouverture
+
+step: Ennemis dans l'eau ou sur un bateau
+  do: Vortex  : Réflexes ou emportés sous l'eau
+
+step: Ennemis au sol près de l'eau
+  do: Fureur des eaux : jet d'eau puissant qui renverse et repousse
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Trident de maître ou 2 coups
+  note: rester dans l'eau pour profiter de la maîtrise de l'eau
+
+step: Un ennemi invisible
+  do: Vision de l'invisible, puis le frapper
+
+## Repli
+
+step: Points de vie sous 30
+  do: Forme gazeuse ou changement de plan vers le plan de l'Eau

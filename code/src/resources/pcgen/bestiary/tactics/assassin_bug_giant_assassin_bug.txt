@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Punaise assassine géante, insecte sans esprit au venin paralysant, qui guette sur les tiges, crache son poison dans les yeux et liquéfie ses proies.
+  Morsure +6 (1d4+2 et poison), 2 griffes +6 (1d3+2) ; jet de poison à distance ; elle vole et grimpe.
+
+step: Une proie
+  do: Approcher immobile le long des tiges
+
+## Ouverture
+
+step: La proie à distance
+  do: Jet de poison
+  note: le jet vise les yeux : une cible touchée peut être aveuglée en plus d'empoisonnée
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes
+
+step: La proie est paralysée
+  do: La mordre pour la liquéfier
+
+## Repli
+
+step: Elle est blessée
+  do: S'envoler

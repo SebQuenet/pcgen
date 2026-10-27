@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Korrigan, fée des rochers et des collines, grincheuse et rieuse. Il danse au clair de lune et punit ceux qui l'interrompent.
+  Gourdin +8 (1d4+6) ; rochers +8 (1d6+4, 30 m) ; cheveux animés ; rire étourdissant (3 fois par jour, rayon 9 m) ; passage par la pierre ; RD 5/fer froid, RM 15.
+
+resource: Rire étourdissant | 3 | les non-fées dans un rayon de 9 m sont étourdies 1d2 rounds
+
+step: Des intrus interrompent sa danse
+  do: Animation de corde pour les entraver
+
+## Ouverture
+
+step: Ennemis groupés à 9 m
+  do: Rire étourdissant
+
+## Rounds suivants
+
+step: Ennemis étourdis
+  do: Gourdin, et ses cheveux entravent l'ennemi adjacent
+
+step: Ennemis à distance
+  do: Lancer des rochers
+
+## Repli
+
+step: Points de vie sous 10
+  do: Passer dans un rocher et ressortir 9 m plus loin

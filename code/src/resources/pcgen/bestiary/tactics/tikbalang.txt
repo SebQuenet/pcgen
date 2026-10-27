@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Tikbalang, homme-cheval maléfique des forêts, qui égare les voyageurs et les piétine.
+  Morsure +18, 2 sabots +13 (coups puissants) ; 4 épines +14 ; bond ; piétinement (DD 23) ; invisibilité à volonté ; imitation des voix.
+
+resource: Image majeure | 3 | magique, DD 17
+resource: Labyrinthe | 1 | une fois par semaine
+
+step: Des voyageurs dans la forêt
+  do: Imitation des voix et image majeure pour les égarer
+
+## Ouverture
+
+step: Une victime
+  do: Bond : attaque à outrance
+
+## Rounds suivants
+
+step: Ennemis groupés
+  do: Piétinement
+
+## Repli
+
+step: Points de vie sous 25
+  do: Invisibilité

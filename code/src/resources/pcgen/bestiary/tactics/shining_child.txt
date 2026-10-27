@@ -1,0 +1,31 @@
+## Avant le combat
+
+note: Profil
+  Enfant lumineux, extérieur mauvais fait de lumière aveuglante, venu de l'au-delà des étoiles. Il brûle tout de sa lumière.
+  2 contacts +19 (4d10 feu et toucher brûlant) ; rayon brûlant +19 (10d6 feu) ; aura de lumière aveuglante (18 m) ; armure radieuse ; immunité au feu, à la cécité et au poison.
+
+resource: Dissipation suprême | 3 | magique
+resource: Motif arc-en-ciel | 3 | magique, DD 22
+resource: Arcane de mirage | 3 | magique, DD 20
+
+step: Des intrus approchent
+  do: Arcane de mirage pour transformer le lieu
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Motif arc-en-ciel (DD 22)
+  note: aura de lumière aveuglante : ceux qui le voient risquent la cécité
+
+step: Ennemi à distance
+  do: Rayon brûlant (10d6 feu)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: 2 contacts brûlants
+
+## Repli
+
+step: Points de vie sous 35
+  do: Téléportation suprême

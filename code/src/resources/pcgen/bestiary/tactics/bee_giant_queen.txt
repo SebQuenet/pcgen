@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Reine des abeilles géantes, énorme et sans esprit. Elle ne quitte pas la ruche ; toutes les ouvrières meurent pour elle.
+  Dard +8 (1d8+6 et poison) ; vol à 18 m par round ; vulnérable à la fumée.
+
+step: Intrus dans la ruche
+  do: Rester au cœur de la ruche, entourée d'ouvrières
+
+## Ouverture
+
+step: Ennemi au contact
+  do: Piquer avec poison
+
+## Rounds suivants
+
+step: Toujours
+  do: Piquer l'ennemi le plus proche ; les ouvrières attaquent ceux qui la frappent
+
+step: Fumée
+  do: Reculer au fond de la ruche
+
+## Repli
+
+step: Jamais
+  do: Elle meurt dans sa ruche

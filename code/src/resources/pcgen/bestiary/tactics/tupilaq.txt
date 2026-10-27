@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Tupilaq, automate d'os gravés, créé pour traquer et tuer une cible.
+  Morsure +15 (1d8+10, 19-20 et étreinte), 2 griffes +15 ; chercher la cible ; mâchoires cisaillantes ; RD 10/contondant ; invisibilité 3 fois par jour.
+
+step: Il a une cible
+  do: La chercher et la suivre
+
+## Ouverture
+
+step: La cible
+  do: Invisibilité, puis morsure avec étreinte
+  note: ses mâchoires cisaillantes tranchent sur un critique ; on le détruit en brisant ses os gravés
+
+## Rounds suivants
+
+step: Il tient la cible
+  do: Mâchoires cisaillantes
+
+## Repli
+
+step: Jamais
+  do: Il poursuit sa cible

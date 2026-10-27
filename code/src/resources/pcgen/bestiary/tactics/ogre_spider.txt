@@ -1,0 +1,25 @@
+## Avant le combat
+
+note: Profil
+  Araignée ogre, énorme araignée sans esprit qui tisse des toiles dans les forêts et les ruines.
+  Morsure +8 (2d8+7 et poison), allonge 4,50 m ; toile +5 (DD 16) ; compression ; elle grimpe à 12 m par round.
+
+step: Une proie
+  do: Attendre dans sa toile
+
+## Ouverture
+
+step: Une proie à distance
+  do: Toile
+  note: sa toile est assez forte pour retenir un cheval ; son poison affaiblit la Force
+
+## Rounds suivants
+
+step: Une proie enchevêtrée
+  do: Morsure empoisonnée
+  note: elle mord de loin grâce à sa grande allonge
+
+## Repli
+
+step: Points de vie sous 15
+  do: Remonter dans sa toile

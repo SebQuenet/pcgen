@@ -1,0 +1,28 @@
+## Avant le combat
+
+note: Profil
+  Grand mille-pattes sans esprit qui siffle bruyamment avant d'attaquer. Le sifflement prévient : il cherche d'abord à éloigner l'intrus.
+  Morsure empoisonnée (perte de Dextérité) ; on ne peut pas le faire tomber par un croc-en-jambe ; il grimpe à 12 m par round.
+
+step: Un intrus approche
+  do: Se dresser et siffler pour l'écarter
+  note: un intrus qui recule n'est pas attaqué
+
+## Ouverture
+
+step: L'intrus avance malgré le sifflement
+  do: Mordre le plus proche
+  note: poison de mille-pattes : Vigueur, 1 fois par round pendant 6 rounds, 1d3 Dextérité ; une réussite l'arrête
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la même cible jusqu'à ce qu'elle tombe
+
+step: Il est encerclé
+  do: Grimper sur un mur ou un arbre pour ne garder qu'un adversaire au contact
+
+## Repli
+
+step: Points de vie sous le quart
+  do: Fuir en grimpant hors de portée

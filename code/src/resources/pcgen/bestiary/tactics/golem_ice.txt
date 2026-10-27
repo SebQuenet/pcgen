@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Golem de glace, gardien sans esprit des contrées froides. Il exhale un souffle glacé et explose en mourant.
+  2 coups +9 (1d6+3 et 1d6 froid) ; souffle en cône de 6 m, 3d6 froid, Réflexes DD 13 pour moitié, une fois tous les 1d4 rounds. RD 5/adamantium ; vulnérable au feu.
+
+resource: Souffle | 1 | une fois tous les 1d4 rounds
+
+step: Il garde un lieu
+  do: Rester immobile jusqu'à ce que la condition de son ordre soit remplie
+
+## Ouverture
+
+step: Plusieurs ennemis groupés
+  do: Souffle en cône de 6 m : 3d6 froid, Réflexes DD 13 pour moitié
+
+step: Un ennemi au contact
+  do: 2 coups +9 (1d6+3 et 1d6 froid)
+  note: son corps glacé inflige 1d6 froid à qui le touche
+
+## Rounds suivants
+
+step: Souffle rechargé
+  do: Souffler sur le plus de cibles possible
+
+step: Toujours
+  do: Frapper le plus proche
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction
+  note: destruction glacée : quand il est détruit, il explose en éclats de glace qui blessent les créatures proches

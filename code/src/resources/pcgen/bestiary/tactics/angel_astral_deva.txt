@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Soldat céleste, loyal à sa mission. Il juge d'abord : détection du Mal et discernement du mensonge. Il épargne les égarés et frappe les serviteurs du Mal sans hésiter.
+  CA 29, RD 10/Mal, RM 25, immunisé à l'acide, au froid et à la pétrification. Esquive instinctive : jamais pris au dépourvu.
+
+resource: Soins légers | 7 | simple
+resource: Barrière de lames | 1 | simple, DD 22
+resource: Guérison | 1 | simple
+
+step: Mal détecté, combat probable
+  do: Aura sainte (DD 24) sur lui-même, puis devenir invisible pour approcher
+  note: aura sainte : +4 CA et sauvegardes, RM 25 contre les sorts du Mal, aveugle qui le frappe s'il rate Vigueur
+
+## Ouverture
+
+step: Plusieurs créatures maléfiques groupées
+  do: Mot sacré (DD 23) ou châtiment sacré (DD 20) sur le groupe
+  note: mot sacré assourdit, aveugle, paralyse ou tue selon les DV des créatures non Bonnes
+
+step: Un ennemi isolé, puissant
+  do: Vol à 30 m, puis attaque à outrance au marteau +26/+21/+16 (1d8+14, x3)
+  note: marteau perturbateur : un mort-vivant touché fait Volonté DD 17 ou est détruit. Tout coup peut étourdir (Vigueur DD 23)
+
+## Rounds suivants
+
+step: Les ennemis encerclent
+  do: Barrière de lames (DD 22) pour couper leur ligne
+  note: mur tranchant de 15d6, Réflexes pour la moitié
+
+step: Un convoqué ou un extérieur maléfique
+  do: Dissipation du Mal au toucher : le renvoie chez lui
+
+step: Allié céleste blessé
+  do: Soins légers (7/jour) ou guérison sur l'allié le plus mal en point
+
+## Repli
+
+step: Points de vie sous 50
+  do: Changement de plan vers les cieux, puis revenir avec des renforts
+  note: un ange ne fuit pas pour se sauver mais pour rapporter ce qu'il a vu

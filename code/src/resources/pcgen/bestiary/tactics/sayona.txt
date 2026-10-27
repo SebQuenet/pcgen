@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Sayona, morte-vivante vengeresse, qui paralyse et boit le sang des infidèles.
+  Morsure +18, 2 griffes +18 (saignement et paralysie, DD 23) ; absorption de sang ; cône de peur (18 m, DD 23) ; regard chancelant ; forme vivante.
+
+resource: Domination de personne | 3 | magique, DD 20
+resource: Forme gazeuse | 3 | magique
+
+step: Une victime
+  do: Forme vivante pour l'approcher
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cône de peur
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure et griffes paralysantes, absorption de sang
+
+## Repli
+
+step: Points de vie sous 40
+  do: Forme gazeuse

@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Veuve noire géante, grande araignée sans esprit aux toiles très solides et au venin redoutable.
+  Morsure +6 (1d8+6 et poison) ; toile +4 (DD 19, 5 points de vie) ; toiles solides ; elle grimpe à 9 m par round.
+
+step: Une proie approche de sa toile
+  do: Rester au fond de sa toile
+
+## Ouverture
+
+step: La proie à portée
+  do: Toile (DD 19)
+
+step: Une proie prise dans la toile
+  do: Morsure empoisonnée
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre les proies enchevêtrées
+  note: son venin affaiblit la Force ; ses toiles sont presque impossibles à rompre
+
+## Repli
+
+step: Points de vie sous 10
+  do: Remonter dans sa toile

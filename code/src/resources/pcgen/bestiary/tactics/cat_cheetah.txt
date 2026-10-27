@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Le plus rapide des félins (15 m), chasseur de plaine. Il ne combat pas pour le territoire : il chasse, et renonce si la proie se défend trop.
+  Sa morsure fait chuter la proie (croc-en-jambe gratuit) ; une fois à terre, elle est à sa merci.
+
+resource: Sprint | 1 | une fois par heure, déplacement décuplé lors d'une charge
+
+step: Une proie isolée dans un terrain dégagé
+  do: S'approcher à couvert dans les herbes hautes, contre le vent
+  note: l'odorat lui fait repérer les proies cachées à proximité
+
+## Ouverture
+
+step: La proie est à portée de sprint
+  do: Sprint et charge : morsure avec croc-en-jambe, sans provoquer d'attaque d'opportunité
+  note: la proie qui tombe est à terre : -4 à sa CA contre ses attaques au contact
+
+step: La proie est déjà à terre
+  do: Attaque à outrance : morsure et 2 griffes
+
+## Rounds suivants
+
+step: La proie se relève
+  do: Mordre de nouveau pour la renverser ; se relever lui provoque une attaque d'opportunité
+  note: ne pas attaquer un adversaire debout en armure lourde : changer de proie
+
+step: Plusieurs adversaires l'entourent
+  do: Rompre et s'éloigner en courant, puis revenir sur le plus faible
+
+## Repli
+
+step: Points de vie sous la moitié, ou deux attaques ratées de suite
+  do: Fuir à 15 m par round ; personne ne le rattrape à pied

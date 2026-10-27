@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Nekomata, chat à deux queues, très intelligent (Int 19) et maléfique, qui anime les morts et porte la maladie. Il vit souvent caché dans une famille sous forme de chat.
+  Morsure +12 (maladie), 2 griffes +12 ; immunité à la mort et aux maladies ; 15 m de déplacement.
+
+step: Il vit dans une maison
+  do: Prendre la forme d'un chat ordinaire et observer
+
+step: Des ennemis arrivent
+  do: Animer les morts de la maison ou du cimetière
+
+## Ouverture
+
+step: Ennemis
+  do: Envoyer les morts-vivants devant
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Morsure porteuse de maladie et griffes
+
+## Repli
+
+step: Points de vie sous 18
+  do: Fuir sous forme de chat

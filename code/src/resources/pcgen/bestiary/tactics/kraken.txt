@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Kraken, calmar colossal, génie maléfique des abysses (Int élevée). Il règne sur les fonds, asservit les bêtes marines et coule les navires par plaisir.
+  2 bras +26 (2d6+10, 19-20 et étreinte, allonge 18 m), 8 tentacules +24 (1d8+5 et étreinte, allonge 12 m), bec +26 (2d8+10). Immunisé au froid, au poison et aux effets mentaux.
+
+resource: Contrôle du climat | 1 | magique
+resource: Contrôle des vents | 1 | magique
+resource: Domination de monstre | 1 | magique, DD 24, animaux seulement
+resource: Nuage d'encre | 1 | pour fuir ou aveugler
+
+step: Un navire entre dans son domaine
+  do: Contrôle du climat et des vents : tempête qui immobilise le navire et sépare l'équipage
+  note: domination de monstre sur une baleine ou un requin géant pour l'envoyer en éclaireur
+
+## Ouverture
+
+step: Le navire est à portée de bras
+  do: Saisir la coque de ses bras et ses tentacules : briser le navire
+  note: brisement de coque : il fait couler un navire en quelques rounds
+
+step: Des marins se battent sur le pont
+  do: Saisir les plus dangereux avec les tentacules, un par tentacule
+
+## Rounds suivants
+
+step: Il tient des proies
+  do: Constriction (1d8+10) avec chaque tentacule, puis les amener à son bec
+  note: étreinte tenace : il garde sa prise même quand il se déplace, et peut tenir une prise avec chaque tentacule
+
+step: Des marins tombent à l'eau
+  do: Les entraîner au fond ; sous l'eau, ils se noient
+
+## Repli
+
+step: Points de vie sous 60
+  do: Nuage d'encre et fuite à 85 m par round (vitesse de jet)
+  note: il n'oublie jamais un navire qui l'a blessé

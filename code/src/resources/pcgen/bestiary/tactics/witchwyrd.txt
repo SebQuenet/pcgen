@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Witchwyrd, marchand planaire à quatre bras, cultivé (Int 18) et calculateur. Il commerce et ne combat que pour protéger ses affaires.
+  Corsèque +11/+6 (2d4+4, x3), 2 coups +6 (étreinte) ; trait de force ; absorption de force ; RD 5/magie ; armure de mage et serviteur invisible permanents.
+
+resource: Déplacement | 3 | magique
+resource: Suggestion | 3 | magique, DD 18
+resource: Dissipation de la magie | 3 | magique
+
+step: Il commerce
+  do: Négocier ; il connaît la valeur de tout
+
+## Ouverture
+
+step: On l'attaque
+  do: Déplacement, puis trait de force
+
+step: Un projectile magique le vise
+  do: Absorber la force
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Corsèque et coups avec étreinte
+
+step: Le plus fort
+  do: Suggestion (DD 18)
+
+## Repli
+
+step: Points de vie sous 20
+  do: Porte dimensionnelle

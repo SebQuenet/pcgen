@@ -1,0 +1,27 @@
+## Avant le combat
+
+note: Profil
+  Huldre, fée des forêts à la queue de vache, séductrice et capricieuse, qui manipule la chance.
+  Coup +7, queue +7 (1d4 Charisme) ; queue fouettante ; manipulation de la chance ; immunité au charme et à la coercition.
+
+resource: Charme-personne | 3 | magique, DD 15
+resource: Hébétement de monstre | 3 | magique, DD 16
+resource: Sommeil profond | 1 | magique, DD 17
+
+step: Des voyageurs
+  do: Charme-personne
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Sommeil profond
+
+## Rounds suivants
+
+step: Toujours
+  do: Manipulation de la chance ; coup et queue
+
+## Repli
+
+step: Elle est blessée
+  do: Fuir dans la forêt

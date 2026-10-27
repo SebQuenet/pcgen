@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Monaciello, petite fée en robe de moine, qui hante les caves et pourrit la nourriture.
+  Morsure +4, dague +4 ; aura qui gêne la canalisation (6 m, DD 12) ; sac magique ; compression.
+
+resource: Poussière scintillante | 1 | magique
+
+step: Des intrus dans la cave
+  do: Pourrir la nourriture et la boisson
+  note: il vole de petits objets et les cache dans son sac magique, plus grand à l'intérieur
+
+## Ouverture
+
+step: Ennemis
+  do: Poussière scintillante
+
+## Rounds suivants
+
+step: Toujours
+  do: Morsure et dague
+
+## Repli
+
+step: Il est blessé
+  do: Se glisser dans une fissure

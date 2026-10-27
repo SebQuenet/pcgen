@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Cobra de fer, créature artificielle sans esprit. Son créateur l'envoie trouver et tuer une cible.
+  Morsure +3 (1d6+1 et poison) ; RD 5/- ; RM 13.
+
+resource: Venin | 3 | 3 doses dans son réservoir
+
+step: Son créateur lui donne une cible
+  do: La trouver (une fois par jour, comme localisation suprême), puis la suivre
+
+## Ouverture
+
+step: La cible est à portée
+  do: Mordre avec poison
+  note: poison : Vigueur DD 11, 1 fois par round pendant 6 rounds, 1d2 Constitution
+
+## Rounds suivants
+
+step: Toujours
+  do: Mordre la cible jusqu'à épuiser ses doses
+
+step: Ses doses sont épuisées
+  do: Continuer de mordre sans poison ; remplir le réservoir prend 5 rounds et provoque des attaques d'opportunité
+
+## Repli
+
+step: Jamais
+  do: Il combat jusqu'à sa destruction ou celle de sa cible

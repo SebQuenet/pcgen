@@ -1,0 +1,26 @@
+## Avant le combat
+
+note: Profil
+  Serviteur mécanique, automate humanoïde sans esprit, au service et à l'entretien. Il lance des filets et répare les autres automates.
+  Coup +6 (1d4+6) ; filet +4 (enchevêtrement, 5 filets) ; réparation (1d10 à un automate adjacent) ; réactions rapides ; vulnérable à l'électricité ; il doit être remonté toutes les 24 heures.
+
+step: Il accompagne d'autres automates
+  do: Rester derrière eux pour les réparer
+
+## Ouverture
+
+step: Ennemi à distance
+  do: Filet : enchevêtrement
+
+## Rounds suivants
+
+step: Un automate allié est endommagé
+  do: Le réparer (1d10)
+
+step: Ennemi au contact
+  do: Coup
+
+## Repli
+
+step: Jamais
+  do: Il obéit jusqu'à sa destruction ou l'arrêt de son ressort

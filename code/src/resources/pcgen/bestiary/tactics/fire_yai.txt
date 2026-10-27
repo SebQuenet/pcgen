@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Yai du feu, oni géant de feu, seigneur de guerre cruel. Les onis sont des esprits mauvais incarnés.
+  Katana +1 +27/+22/+17/+12 (2d6+16, 18-20) ; projectile de feu +19 contact (4d6 et brûlure) ; forme de fumée ; immunité au feu, vulnérable au froid ; vol permanent.
+
+resource: Charme-monstre | 3 | magique, DD 16
+resource: Boule de feu | 3 | magique, DD 15
+resource: Bouclier de feu | 3 | magique
+
+step: Des ennemis approchent
+  do: Bouclier de feu et invisibilité
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Boule de feu (DD 15)
+
+step: Le plus fort
+  do: Charme-monstre (DD 16)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Katana
+
+step: Ennemis à distance
+  do: Rayon ardent ou projectile de feu
+
+## Repli
+
+step: Froid ou points de vie sous 60
+  do: Forme de fumée

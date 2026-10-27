@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Mobogo, crapaud géant maléfique des marais, qui commande les animaux et écrase ses proies.
+  Morsure +20, 2 coups +20, ou langue +20 (étreinte et traction, allonge 13,50 m) ; écrasement (DD 21) ; il avale les proies ; coassement immonde ; marche dans les marais.
+
+resource: Contrôle de l'eau | 3 | magique
+resource: Nappe de brouillard | 3 | magique
+resource: Bourrasque | 3 | magique
+
+step: Des intrus dans le marais
+  do: Charme-animal et nappe de brouillard
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Coassement immonde, puis fracassement de son (DD 15)
+
+step: Une proie à 13,50 m
+  do: Langue : saisir et tirer
+
+## Rounds suivants
+
+step: Il tient une proie
+  do: L'avaler
+
+step: Ennemis groupés
+  do: Écrasement : sauter sur eux
+
+## Repli
+
+step: Points de vie sous 35
+  do: Plonger dans le marais

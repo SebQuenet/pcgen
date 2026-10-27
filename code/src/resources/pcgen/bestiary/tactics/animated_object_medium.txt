@@ -1,0 +1,24 @@
+## Avant le combat
+
+note: Profil
+  Objet animé de taille humaine : armure vide, statue, armoire. Coup +5 (1d6+3), solidité 5 ou plus selon la matière.
+  Immunités des créatures artificielles : ni critique, ni attaque sournoise, ni effet mental.
+
+step: Sa consigne se déclenche
+  do: Garder une porte ou un couloir, immobile, et frapper qui entre
+
+## Ouverture
+
+step: Intrus à portée
+  do: Coup sur le premier intrus
+  note: s'il a l'option écrasement ou enchevêtrement, l'utiliser sur un lanceur de sorts
+
+## Rounds suivants
+
+step: Plusieurs intrus
+  do: Bloquer le passage : rester dans la porte pour qu'un seul puisse le frapper à la fois
+
+## Repli
+
+step: Jamais
+  do: Il se bat jusqu'à être détruit

@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Yai de l'eau, oni géant des mers, chaotique et cruel, qui naufrage les navires.
+  Lance de maître +35/+30/+25/+20 (3d6+21, 19-20/x3, allonge 6 m) ; projectile acide +23 contact (4d6 et nausée) ; forme liquide ; liberté de mouvement ; RM 29.
+
+resource: Charme-monstre | 3 | magique, DD 20
+resource: Cône de froid | 3 | magique, DD 21
+
+step: Un navire
+  do: Forme liquide et approcher
+
+## Ouverture
+
+step: Ennemis groupés
+  do: Cône de froid (DD 21)
+
+step: Le plus fort
+  do: Charme-monstre (DD 20)
+
+## Rounds suivants
+
+step: Ennemi au contact
+  do: Lance
+
+## Repli
+
+step: Points de vie sous 70
+  do: Forme liquide et plonger
