@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Carnag, naga ténébreux mâle de grande taille, loyal mauvais, FP 11 : un manipulateur mobile qui isole ses ennemis avant de les frapper.
+  152 pv, CA 24 ; déplacement 12 m, espace occupé 3 m, allonge 1,50 m ; vision dans le noir à 18 m, détection des pensées.
+  Dard +13 (2d6+3 et poison), morsure +13 (1d6+3) ; sorts de contrôle et de dégâts, NLS 10, concentration +13.
+  Immunisé au poison, pensées protégées ; impossible à faire tomber par un croc-en-jambe. Discrétion +23, Perception +21.
+
+resource: Sorts de niveau 5 | 3/jour | main interposée
+resource: Sorts de niveau 4 | 5/jour | réserve commune : invisibilité suprême, mur de glace
+resource: Sorts de niveau 3 | 7/jour | réserve commune : déplacement, éclair (DD 16), nuage nauséabond
+resource: Sorts de niveau 2 | 7/jour | réserve commune : grâce féline, invisibilité, rayon ardent, toile d'araignée
+resource: Sorts de niveau 1 | 7/jour | réserve commune, notamment : bouclier, projectile magique, rayon affaiblissant (DD 14), repli expéditif, image silencieuse
+
+step: Il entend quelqu'un descendre l'escalier
+  do: Se glisser dans une cachette et lancer grâce féline pour améliorer sa discrétion ; interpeller les arrivants pour découvrir leur identité et leurs intentions
+  note: Décompter grâce féline de la réserve de niveau 2 ; les valeurs du profil ci-dessus sont celles de la fiche, avant ce sort
+
+step: La conversation tourne mal
+  do: Lancer invisibilité suprême avant de quitter sa cachette ; utiliser détection des pensées pour identifier l'intrus le plus intelligent
+  note: Préparer une approche vers cette cible en tenant compte des fosses profondes ; décompter invisibilité suprême de la réserve de niveau 4
+
+## Ouverture
+
+step: Il bénéficie d'un round de surprise et la cible la plus intelligente est à 1,50 m ou moins
+  do: Porter une attaque de dard +13 (2d6+3 et poison) contre elle
+  note: La fiche ne précise ni les effets ni le DD du poison ; ne pas lui attribuer de valeurs supplémentaires
+
+step: Il bénéficie d'un round de surprise mais sa cible est hors de portée
+  do: Consacrer son action à se placer pour l'atteindre ensuite, en profitant de son invisibilité suprême
+  note: Ne pas cumuler un déplacement ordinaire et une attaque pendant ce round de surprise
+
+step: Le combat commence sans surprise ou les adversaires restent groupés
+  do: Employer mur de glace ou toile d'araignée pour séparer une cible de ses alliés
+  note: Privilégier une séparation qui oblige les renforts à contourner une fosse ; main interposée peut ensuite gêner l'approche de l'adversaire le plus menaçant
+
+## Rounds suivants
+
+step: Une cible est isolée et accessible au dard
+  do: Privilégier Attaque éclair pour se déplacer, porter un seul coup de dard, puis poursuivre son déplacement
+  note: Rester dans sa capacité de déplacement ; utiliser les abords des fosses pour réduire les directions d'approche et éviter d'être pris en tenaille
+
+step: Il vient de frapper au dard et peut attaquer à distance
+  do: Au round suivant, lancer rayon ardent ou projectile magique contre la cible isolée ; choisir éclair (DD 16) si plusieurs ennemis sont alignés
+  note: Alterner les attaques empoisonnées et les sorts de dégâts selon les occasions ; ne pas ajouter une attaque de dard au round consacré à lancer un sort
+
+step: Les alliés de sa cible parviennent à la rejoindre
+  do: Rétablir la séparation avec mur de glace ou toile d'araignée ; employer main interposée pour gêner le poursuivant le plus dangereux
+  note: Nuage nauséabond offre une autre manière de perturber les renforts ; préserver un passage pour ses propres déplacements
+
+step: Il subit trop de pression ou son invisibilité suprême prend fin
+  do: Consacrer un round à renouveler invisibilité suprême, à lancer déplacement ou à se protéger avec bouclier, selon la menace et les sorts restants
+  note: Se replacer ensuite pour poursuivre le combat mobile ; éviter de rester entouré au contact
+
+step: Une cible isolée reste au contact et il peut se permettre de rester sur place
+  do: Exceptionnellement, effectuer une attaque à outrance : morsure +13 (1d6+3) et dard +13 (2d6+3 et poison)
+  note: Carnag préfère habituellement sa mobilité ; renoncer à cette option si elle permet aux autres ennemis de l'encercler
+
+## Repli
+
+step: Ses points de vie passent sous 76
+  do: Supplier les intrus de l'épargner tout en continuant à attaquer
+  note: Il chercherait normalement à fuir après avoir perdu la moitié de ses points de vie, mais sa quête magique le contraint à combattre jusqu'à la mort
+
+step: Il doit céder du terrain pour ne pas être submergé
+  do: Se repositionner autour des fosses et derrière ses obstacles magiques, puis reprendre ses attaques
+  note: Ces déplacements servent à poursuivre le combat ; sa contrainte magique lui interdit d'abandonner l'affrontement

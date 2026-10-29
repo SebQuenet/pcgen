@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Qwoshokk est un kraken ancien, une créature magique aquatique gigantesque, neutre mauvaise, très intelligente. Il dispose de 348 pv, d'une CA de 36 et d'une résistance à la magie de 31.
+  Attaque à outrance : 2 bras +31 (3d6+11, critique 19–20, plus 1d6 d'électricité), morsure +31 (2d8+11) et 8 tentacules +29 (1d8+5).
+  Allonge : bras 18 m, tentacules 12 m, morsure 6 m ; espace occupé 6 m. Nage 12 m, déplacement terrestre 3 m, propulsion 84 m.
+  Immunisé au froid, au poison et aux effets mentaux ; résistance à l'électricité 30. Vision dans le noir à 36 m, vision nocturne et Perception +32. Pouvoirs magiques au NLS 19, concentration +24.
+
+resource: Éclair multiple | 3/jour | Réflexes DD 21
+resource: Domination de personne | 3/jour | Volonté DD 20 ; humanoïdes uniquement
+resource: Convocation de monstres IX | 3/jour | 1d4+1 requins sanguinaires uniquement
+resource: Appel de la tempête | 1/jour | Réflexes DD 20
+resource: Contrôle du climat | 1/jour | préparer longtemps avant l'affrontement
+resource: Contrôle des vents | 1/jour | modifier les vents autour du champ de bataille
+resource: Domination de monstre | 1/jour | Volonté DD 24 ; animaux uniquement
+resource: Téléportation suprême | 1/jour | conserver si possible pour le repli
+resource: Résistance aux énergies destructives | 1/jour | protection à choisir selon la menace
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Rester en eau profonde et obliger les intrus à s'approcher de ses bras ; repérer leurs mouvements avec Perception +32
+  note: Sur terre, sa vitesse de 3 m rend les poursuites défavorables ; sa CA de contact de 6 l'expose aux attaques de contact à distance
+
+step: Une attaque est annoncée assez tôt
+  do: Utiliser contrôle du climat pour préparer les conditions de l'affrontement ; lancer résistance aux énergies destructives contre le feu ou l'acide si cette menace est identifiée
+  note: Le changement de climat demande du temps ; il ne constitue pas une réaction immédiate à l'arrivée des ennemis
+
+step: Un animal dangereux est disponible avant le combat
+  do: Tenter domination de monstre sur lui, Volonté DD 24, et lui ordonner d'intercepter les intrus dans l'eau
+  note: Ce pouvoir ne peut pas asservir un personnage humanoïde
+
+## Ouverture
+
+note: Choix d'ouverture
+  Choisir l'action adaptée à la situation ; répartir les préparatifs et les pouvoirs offensifs sur des rounds distincts.
+
+step: Les ennemis approchent dans l'eau et il dispose d'un délai
+  do: Convoquer 1d4+1 requins sanguinaires pour attaquer les nageurs et les empêcher de l'aborder librement
+
+step: Plusieurs adversaires sont visibles et hors de portée des bras
+  do: Lancer éclair multiple, Réflexes DD 21, en prenant pour cible principale l'adversaire le plus dangereux et pour cibles secondaires ses alliés à portée du pouvoir
+  note: Éviter de dépenser ce pouvoir contre des adversaires manifestement protégés de l'électricité
+
+step: Un humanoïde dangereux paraît vulnérable à l'asservissement
+  do: Tenter domination de personne, Volonté DD 20, puis lui ordonner d'attaquer ses alliés
+  note: Une sauvegarde réussie ne permet pas de compter sur ce renfort ; adapter les rounds suivants au résultat
+
+step: Les ennemis sont déjà à portée de ses membres
+  do: Effectuer une attaque à outrance avec tous les membres qui peuvent atteindre leur cible
+  note: Entre 12 m et 18 m, seuls les deux bras portent ; les huit tentacules s'ajoutent à 12 m, la morsure à 6 m
+
+## Rounds suivants
+
+step: Une cible prioritaire reste à portée sans nécessiter de déplacement important
+  do: Concentrer les attaques à outrance sur elle, en privilégiant un lanceur de sorts accessible ou un ennemi déjà blessé
+  note: Employer Attaque en puissance contre une défense facile à toucher ; appliquer Critique sanglant lorsqu'un critique est confirmé
+
+step: Il doit se déplacer avant de frapper
+  do: Nager pour reprendre une position favorable, puis effectuer une attaque de bras avec Frappe décisive
+  note: Cette attaque inflige 6d6+11 plus 1d6 d'électricité, hors critique et Attaque en puissance ; elle remplace l'attaque à outrance de ce round
+
+step: Une cible immédiatement adjacente mérite d'être immobilisée
+  do: Engager une lutte par une manœuvre de combat, BMO +39, puis maintenir la prise si cela empêche cette cible d'agir utilement
+  note: Les attaques de bras et de tentacules ne donnent pas ici de prise automatique ; engager la lutte consomme une action distincte
+
+step: Les ennemis restent hors de portée de ses membres
+  do: Utiliser les éclairs multiples restants ou tenter une nouvelle domination de personne sur un humanoïde approprié
+  note: Si le combat doit durer, consacrer un round à appel de la tempête, puis des actions aux rounds suivants pour appeler ses éclairs, Réflexes DD 20
+
+step: Des ennemis aériens ou des tireurs exploitent la surface
+  do: Utiliser contrôle des vents pour gêner leur approche et leurs tirs, puis se replacer sous l'eau
+  note: Évaluer aussi l'effet du vent sur ses propres alliés et sur les créatures dominées
+
+## Repli
+
+step: Ses points de vie tombent à 87 ou moins, ou les ennemis neutralisent ses principales attaques
+  do: Utiliser téléportation suprême vers un refuge connu si le pouvoir est encore disponible
+  note: Les créatures dominées et les requins encore présents continuent d'occuper les poursuivants
+
+step: La téléportation est indisponible ou empêchée
+  do: Consacrer le round à une propulsion de 84 m en ligne droite vers les profondeurs, puis poursuivre la fuite en nageant
+  note: Choisir une trajectoire dégagée ; sa nage ordinaire de 12 m permet ensuite de contourner les obstacles

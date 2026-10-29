@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Breathless Orchid, plante prédatrice neutre de taille M, sans intelligence : 19 PV, CA 13, déplacement de 3 m et allonge de 1,50 m.
+  Coup +5 (1d4 et fixation) ; BMC +10 en lutte lorsqu'elle est fixée. Elle s'accroche à une proie pour en extraire l'air.
+  Vision aveugle à 9 m, vision nocturne ; immunités des plantes ; impossible à renverser.
+
+step: Aucune proie au contact
+  do: Rester immobile, camouflée en plante fleurie, et attendre qu'une créature approche à 1,50 m.
+  note: Camouflage : Perception DD 20 pour la remarquer avant son attaque ; Survie ou Connaissances (nature) peuvent remplacer Perception si l'observateur possède des rangs dans la compétence choisie.
+
+## Ouverture
+
+step: Une créature vivante qui respire entre à portée
+  do: Porter un coup +5 (1d4 et fixation) ; sur une touche, les feuilles s'accrochent automatiquement à la cible.
+  note: Fixée, l'orchidée agrippe sa proie et sa CA tombe à 10. Elle peut toujours être attaquée ; un test réussi de lutte ou d'Évasion contre son DMD 15 la détache.
+
+step: Repérée, sans adversaire au contact
+  do: Avancer de 3 m vers la proie la plus proche ; attaquer si elle arrive à 1,50 m.
+
+## Rounds suivants
+
+step: Toujours fixée à sa proie
+  do: Maintenir la lutte avec son BMC +10 et conserver la même victime.
+  note: Le coup initial ne se répète pas automatiquement chaque round.
+
+step: Elle commence son tour fixée à une créature vivante qui respire
+  do: Appliquer l'extraction d'air : guérison accélérée 2 pour l'orchidée ; en fin de tour, si elle reste fixée, Vigueur DD 13 ou la victime est chancelante pendant 3 rounds.
+  note: La victime peut encore parler.
+
+step: Les 3 rounds sont écoulés et elle est toujours fixée
+  do: Faire effectuer un nouveau jet de Vigueur DD 13 ; un échec rend la victime inconsciente.
+
+step: La victime a perdu connaissance et la fixation persiste
+  do: À la fin du round suivant, la victime tombe à -1 PV et devient mourante ; à la fin du round encore suivant, elle meurt si l'orchidée reste fixée.
+
+step: La victime l'a détachée
+  do: Reprendre les coups +5 pour se fixer de nouveau.
+
+## Repli
+
+step: Elle est blessée et une proie reste accessible
+  do: Continuer à attaquer ou à rester fixée, même grièvement blessée.
+  note: Sans intelligence, elle ne mène pas de retraite organisée ; rester fixée entretient sa guérison accélérée contre une proie vivante qui respire.
+
+step: Les proies s'éloignent hors de portée
+  do: Revenir à l'affût et reprendre son camouflage en restant immobile.

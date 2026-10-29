@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Drone de réparation neutre, de taille M, construit de sous-type robot ; 31 pv, CA 14, déplacement de 9 m.
+  Coup +6 (1d4+6), allonge de 1,50 m ; filet +4 à distance pour enchevêtrer une cible. Son rôle de soutien favorise les réparations et l'entrave des ennemis.
+  Guérison accélérée 2 ; immunités des créatures artificielles, mais vulnérabilité aux coups critiques et à l'électricité.
+
+resource: Filets en mailles de polymère | 5 | Un filet engagé par lancer ; attaque à distance +4, enchevêtrement.
+resource: Guérison accélérée | Permanente | Récupère 2 pv par round, sans dépasser 31 pv.
+
+step: Des robots alliés peuvent former une première ligne
+  do: Se placer derrière eux, avec un accès aux robots susceptibles d'avoir besoin de réparations.
+  note: Vision dans le noir à 18 m et vision nocturne ; Perception +4 pour repérer les intrus.
+
+## Ouverture
+
+step: Un ennemi approche et peut être atteint avec un filet
+  do: Lancer un filet +4 sur l'adversaire qui menace le plus directement le drone ou un robot allié endommagé.
+  note: Chercher à gêner sa progression ; l'enchevêtrement ne l'empêche pas d'agir.
+
+step: Un ennemi est déjà au contact
+  do: Porter un coup +6 (1d4+6).
+  note: Éviter de lancer un filet sous la menace immédiate d'une arme de mêlée.
+
+## Rounds suivants
+
+step: Un robot allié endommagé est accessible et les autres alliés tiennent les ennemis à distance
+  do: Utiliser sa capacité réparation de robot.
+  note: Garder les alliés entre le drone et les adversaires pendant les réparations.
+
+step: Un ennemi non enchevêtré menace de rejoindre le drone et il reste un filet
+  do: Lancer un filet +4 sur cet ennemi.
+  note: Répartir les filets sur les menaces encore mobiles plutôt que multiplier les lancers sur une cible déjà enchevêtrée.
+
+step: Un adversaire reste à portée de 1,50 m
+  do: Porter un coup +6 (1d4+6), en privilégiant celui qui menace les réparations.
+
+step: Un ennemi emploie des attaques électriques
+  do: Chercher un couvert et laisser, si possible, les robots alliés s'interposer.
+  note: La guérison accélérée ne justifie pas de subir volontairement des attaques exploitant cette vulnérabilité.
+
+## Repli
+
+step: Points de vie à 10 ou moins, avec une voie de sortie praticable
+  do: Effectuer un retrait vers un abri ou derrière les alliés.
+  note: Son déplacement est de 9 m ; éviter les voies qui l'exposent à l'électricité.
+
+step: Le drone a rompu le contact
+  do: Rester à couvert pour laisser agir la guérison accélérée 2 avant de reprendre son soutien.
+  note: Revenir lorsque les alliés peuvent le protéger ; ne pas quitter son abri tant qu'il reste directement exposé à la même menace.

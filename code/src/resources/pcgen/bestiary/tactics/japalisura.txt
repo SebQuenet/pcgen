@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Japalisura, asura loyal mauvais de taille M, FP 12 : oracle manipulateur à six bras, surtout dangereux lorsqu'il peut tirer sans bouger.
+  Deux arcs courts composites +1 : +20/+20/+15/+15/+10, chacun infligeant 1d6+4, critique x3 ; un seul arc : +22/+17/+12. Deux hachettes de maître : +16/+11/+6 (1d6+3, x3) et +16/+11 (1d6+1, x3).
+  147 pv, CA 27 ; déplacement 12 m, escalade 9 m. Vision dans le noir à 18 m, détection de l'invisibilité permanente, Perception +25, Discrétion +24 ; télépathie à 30 m.
+
+note: Défenses
+  Régénération 5, interrompue par les sorts et armes du Bien ; réduction des dégâts 10/Bien, résistance à la magie 23, résistances à l'acide et à l'électricité 10 ; immunité aux malédictions, maladies et poisons.
+  Aura insaisissable à 22,50 m : antidétection pour les créatures présentes, test de niveau de lanceur de sorts DD 29 pour les divinations concernées. Ses propres divinations franchissent automatiquement cette aura.
+
+resource: Augure et flèches enflammées | à volonté | pouvoirs magiques, NLS 14
+resource: Vision magique | 3/jour | repérer les auras magiques avant l'affrontement
+resource: Divination | 3/jour | préparer une rencontre ou corrompre une consultation
+resource: Convocation | 1/jour | niveau 5 ; 1d3 adhukaits avec 50 % de réussite, ou 1 upasunda avec 30 % ; choisir une seule option
+resource: Vision lucide | 1/jour | préparer la lutte contre les illusions ; durée 14 minutes
+resource: Vision mystique | 1/jour | obtenir des renseignements avant la rencontre
+resource: Flèches infernales | à volonté | action rapide avec une main libre : créer 10 flèches ordinaires ; maximum 20 existantes ; détruites après le tir
+
+step: Un visiteur consent à recevoir une prédiction
+  do: Rester derrière un écran ou dans une alcôve et utiliser augure ou divination pour délivrer une prophétie haineuse
+  note: Profession (prophète) +21 opposée à Psychologie ; en cas de réussite, Volonté DD 20 ou la victime subit une fureur vengeresse contre l'ennemi choisi par le japalisura. Préparer ainsi une trahison avant le combat.
+
+step: Il peut préparer le terrain
+  do: Choisir une position avec couvert, ligne de tir et issue d'escalade ; conserver une main libre en maniant les arcs
+  note: Préférer une position que les combattants doivent contourner ou escalader pour atteindre.
+
+step: Le combat approche
+  do: Créer 20 flèches, puis lancer flèches enflammées sur cette réserve
+  note: Ces flèches infligent 1d6 de feu supplémentaire pendant 140 minutes. Les flèches créées ultérieurement nécessitent une nouvelle utilisation du pouvoir pour recevoir cet effet.
+
+step: Une attaque imminente justifie des renforts
+  do: Tenter de convoquer 1d3 adhukaits pour occuper les approches ; choisir l'upasunda si un seul renfort convient mieux
+  note: Prévoir un round d'incantation ; une tentative ratée consomme l'utilisation. Les renforts restent une heure ; leur demander par télépathie d'intercepter les assaillants.
+
+## Ouverture
+
+step: Une cible dangereuse est visible et il peut rester sur place
+  do: Concentrer les cinq tirs des deux arcs sur le lanceur de sorts ou le porteur d'une arme du Bien
+  note: +20/+20/+15/+15/+10, 1d6+4 par flèche, plus 1d6 de feu si elle a été préparée. Tir de précision permet de viser une cible engagée en mêlée sans le malus habituel.
+
+step: Il doit se déplacer pour obtenir une ligne de tir sûre
+  do: Se déplacer jusqu'à 12 m, puis tirer une flèche à +22
+  note: Garder les renforts éventuels entre lui et les combattants de contact.
+
+## Rounds suivants
+
+step: Il conserve une position de tir stable
+  do: Poursuivre les attaques à outrance et achever la cible prioritaire avant d'en changer
+  note: Avec Tir rapide, effectuer six tirs à +18/+18/+18/+13/+13/+8. À 9 m ou moins, Tir à bout portant ajoute +1 au toucher et aux dégâts.
+
+step: La cible est facile à toucher
+  do: Activer Tir mortel avant les attaques : -4 au toucher et +8 aux dégâts de chaque flèche
+  note: Avec Tir rapide, les six tirs deviennent +14/+14/+14/+9/+9/+4, pour 1d6+12 chacun, avant les bonus de proximité et de feu.
+
+step: Les réserves de flèches baissent
+  do: Créer 10 flèches par une action rapide, avec une main libre et sans dépasser 20 flèches existantes
+  note: Si la réserve enflammée est épuisée, continuer les tirs ordinaires ; renouveler flèches enflammées seulement si la situation laisse une action simple disponible.
+
+step: Un adversaire arrive à son contact
+  do: Faire un pas de placement de 1,50 m puis tirer à outrance si cela suffit à sortir de toutes les zones menacées
+  note: Sinon, chercher une issue par déplacement et Acrobaties +24, ou combattre avec les deux hachettes si le passage reste bloqué.
+
+step: Un archer le prend pour cible
+  do: Dévier ou saisir un projectile par round avec une main libre
+  note: Il doit percevoir l'attaque et ne pas être pris au dépourvu ; appliquer les limites de Parade de projectiles et Capture de projectiles.
+
+## Repli
+
+step: Points de vie sous 40, ou blessures répétées par des armes ou sorts du Bien
+  do: Rompre le contact, utiliser le couvert et gagner une issue en escalade ; demander aux renforts encore présents de couvrir la fuite
+  note: Au besoin, consacrer le round au désengagement plutôt qu'aux tirs ; déplacement de base 12 m au sol, 9 m en escalade.
+
+step: Il a rompu la poursuite
+  do: Se cacher et attendre que sa régénération restaure ses forces avant de préparer une nouvelle embuscade
+  note: Récupérer 5 pv par round, jusqu'à 147, lorsque la régénération fonctionne ; les dégâts d'une arme ou d'un sort du Bien l'arrêtent au round suivant.

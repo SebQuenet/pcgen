@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Poryphanes, satyre demi-fiélon chaotique mauvais, manipule les intrus avant de les affronter. 68 pv, CA 21 ; déplacement 12 m, vol 24 m avec une bonne manœuvrabilité.
+  Au contact : morsure +9 (1d6+5), 2 griffes +9 (1d4+5), coup de cornes +9 (1d6+5). Arc court +8 (1d6, critique x3), 20 flèches. Allonge 1,50 m.
+  Réduction des dégâts 5/fer froid et magie ; résistance à la magie 17 ; immunité au poison ; résistances acide, froid, électricité et feu 10.
+
+note: Repérage et manipulation
+  Perception +18, Discrétion +19 ; vision dans le noir à 18 m et vision nocturne. Il parle l'iobarien et le sylvestre : ses suggestions doivent être comprises par leur cible.
+
+resource: Charme-personne, sommeil, suggestion | à volonté | DD 16, DD 16, DD 18 respectivement ; NLS 8
+resource: Ténèbres | 3/jour | gêner les poursuivants qui dépendent de la lumière
+resource: Empoisonnement | 3/jour | contact, DD 19
+resource: Ténèbres maudites | 1/jour | DD 19
+resource: Terreur | 1/jour | DD 19
+resource: Convocation d'alliés naturels III | 1/jour | appeler un glouton
+
+## Ouverture
+
+step: Les adversaires entrent dans la salle
+  do: Prendre son envol, puis employer suggestion (DD 18) pour attirer un intrus près du tendriculos.
+  note: Présenter l'approche comme raisonnable et dissimuler le danger ; rester en hauteur hors de portée des armes de mêlée.
+
+step: Une femme peut être écartée du combat
+  do: Donner priorité à charme-personne (DD 16) si elle est humanoïde, ou à suggestion (DD 18), pour l'inciter à rester à l'écart.
+  note: Il espère la séduire puis la sacrifier après la bataille. Ce contrôle remplace sa prochaine action offensive ; le charme ne donne pas un contrôle absolu.
+
+## Rounds suivants
+
+step: Plusieurs adversaires le menacent
+  do: Lancer ténèbres maudites (DD 19) sur les ennemis regroupés.
+
+step: La menace persiste après cette attaque
+  do: Employer terreur (DD 19) pour disperser les assaillants.
+  note: Utiliser ces deux pouvoirs lors de rounds distincts.
+
+step: Il lui faut un allié supplémentaire
+  do: Employer convocation d'alliés naturels III pour appeler un glouton et renforcer la mêlée auprès du tendriculos.
+
+step: Un ennemi reste au contact et Poryphanes peut demeurer sur place
+  do: Faire une attaque à outrance : morsure +9 (1d6+5), deux griffes +9 (1d4+5), cornes +9 (1d6+5).
+  note: Exploiter les attaques d'opportunité permises par Attaques réflexes dans son allonge de 1,50 m.
+
+step: Une cible au contact mérite une utilisation de poison
+  do: Consacrer son action à empoisonnement (DD 19), délivré par une attaque de contact.
+
+step: Le contact devient défavorable ou les ennemis restent inaccessibles
+  do: Reprendre de la hauteur ; employer suggestion (DD 18) pour les rapprocher du tendriculos, ou tirer à l'arc court +8 (1d6, critique x3).
+  note: S'il se déplace pour engager une cible, limiter sa mêlée à une seule attaque naturelle ce round.
+
+## Repli
+
+step: Points de vie strictement inférieurs à 15
+  do: Fuir en vol, à 24 m par déplacement, pour rejoindre ses fils dans la zone E4.
+  note: Employer ténèbres s'il reste une utilisation et si l'obscurité peut gêner les poursuivants.

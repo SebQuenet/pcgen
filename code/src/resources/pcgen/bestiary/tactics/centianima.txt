@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Centianima, mort-vivant de taille G, neutre mauvais, FP 4 : un assemblage d'ossements à deux têtes, prédateur territorial qui tue les vivants et collectionne leurs os.
+  32 pv ; CA 17 ; initiative +6 ; déplacement de 9 m ; espace et allonge de 3 m. Attaque à outrance : deux morsures +7, chacune infligeant 1d8+5 dégâts.
+  Double menace : chaque tête ne peut mordre qu'une fois par round ; les deux têtes constituent une seule créature.
+
+note: Défenses
+  Réduction des dégâts 5/contondant ; immunité au froid et traits des morts-vivants ; résistance à la canalisation +4.
+  Sa vision à 360° empêche la prise en tenaille. Vision dans le noir à 18 m ; Perception +9.
+
+step: Il peut choisir son terrain
+  do: Se dissimuler parmi les ossements d'une ruine sombre, près d'un passage étroit, avec Discrétion +6.
+  note: Sa compression lui permet d'emprunter des passages exigus ; privilégier une position qui limite le nombre d'ennemis pouvant l'attaquer ensemble.
+
+step: Des intrus approchent
+  do: Attendre qu'une proie vivante entre à portée des mâchoires avant de sortir de sa cachette.
+  note: Il comprend le commun mais ne peut pas parler.
+
+## Ouverture
+
+step: Une proie est à 3 m ou moins et il dispose de son tour complet
+  do: Attaque à outrance : deux morsures +7 sur la même proie, pour 1d8+5 dégâts chacune.
+  note: Privilégier une cible isolée ou déjà blessée ; concentrer les deux attaques accélère sa mise hors de combat.
+
+step: Il bénéficie seulement d'une action pendant le round de surprise
+  do: Porter une seule morsure +7 si une cible est à portée.
+
+step: Aucune proie n'est à portée
+  do: Avancer de 9 m au maximum pour amener une cible dans son allonge de 3 m, puis porter une morsure +7.
+  note: Après un déplacement ordinaire, il ne porte pas ses deux morsures.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter les deux morsures en attaque à outrance ; conserver la même victime tant qu'elle reste accessible.
+
+step: Un pas de placement de 1,50 m suffit à retrouver une cible à portée
+  do: Faire ce pas puis porter les deux morsures, si ce pas est autorisé ce tour.
+
+step: Un adversaire adjacent fait un pas de placement de 1,50 m pour s'éloigner
+  do: Utiliser Step Up en action immédiate pour le suivre de 1,50 m et terminer adjacent à lui.
+  note: Au prochain tour, aucun pas de placement ; soustraire aussi 1,50 m à son déplacement s'il se déplace.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter une morsure +7 uniquement si une tête n'a pas encore mordu ce round et si son attaque d'opportunité est disponible.
+  note: Une tête ayant déjà mordu ne peut pas mordre de nouveau ce round, même pour une attaque d'opportunité.
+
+step: Les ennemis restent à distance ou frappent avec des armes contondantes
+  do: Rejoindre un couvert et les passages étroits des ruines pour les obliger à approcher, puis reprendre les morsures.
+  note: Les armes contondantes passent sa réduction des dégâts ; éviter de rester exposé à plusieurs de leurs porteurs.
+
+## Repli
+
+step: Il tombe à 8 pv ou moins, ou les intrus sont manifestement trop nombreux ou trop puissants
+  do: Utiliser l'action de retraite vers un passage étroit, puis exploiter sa compression pour gagner une cachette.
+  note: Ce seuil est un choix tactique. Son instinct territorial peut céder devant des adversaires supérieurs ; il ne dispose d'aucun soin dans ce profil.
+
+step: La fuite est impossible
+  do: Se placer dans un étranglement et concentrer ses morsures sur l'adversaire qui bloque la sortie.

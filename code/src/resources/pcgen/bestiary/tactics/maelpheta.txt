@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Maelpheta, rakshasa marai loyale mauvaise de taille M, privilégie le combat à distance et cherche à désorganiser les adversaires qui l'approchent.
+  94 pv ; CA 25, contact 16 ; réduction des dégâts 10, surmontée par une arme à la fois bonne et perforante ; résistance à la magie 23.
+  Déplacement 12 m ; allonge 1,50 m ; vision dans le noir à 18 m.
+  À outrance : 6 projectiles d'énergie +14 au contact à distance (1d8 chacun, plus effet spécial), ou 7 morsures +14 (1d4+2 et confusion chacune).
+
+resource: Sorts de niveau 1 | 7/jour, réserve commune | armure de mage, projectile magique, charme-personne (Volonté DD 15), saut ; une utilisation dépensée si elle prépare armure de mage
+
+resource: Sorts de niveau 2 | 5/jour, réserve commune | rayon ardent et invisibilité ; niveau de lanceur de sorts 5
+
+resource: Cape of the mountebank | 1/jour | porte dimensionnelle ; garder cette utilisation pour fuir
+
+step: Elle apprend qu'un incident s'est produit au Serpent d'or
+  do: Lancer armure de mage avant l'affrontement
+  note: Le bonus d'armure est déjà compris dans la CA 25 ; ne pas l'ajouter une seconde fois
+
+## Ouverture
+
+step: Les adversaires restent à distance et ses projectiles sont disponibles
+  do: Effectuer une attaque à outrance avec ses 6 projectiles d'énergie, répartis entre autant d'adversaires que possible
+  note: Chaque attaque vise la CA de contact ; privilégier une position permettant de tirer sans rester au contact d'un ennemi
+
+step: Un adversaire lui impose le corps à corps et elle peut attaquer à outrance
+  do: Concentrer les 7 morsures sur ce seul adversaire
+  note: Elle compte sur la confusion pour perturber cette cible au round suivant et obtenir une occasion de s'éloigner
+
+## Rounds suivants
+
+step: Les bras de vipère se rechargent et aucun ennemi ne la menace au contact
+  do: Lancer rayon ardent, puis projectile magique lors d'un round suivant si les projectiles d'énergie restent indisponibles
+  note: Alterner un sort par round ; rayon ardent et invisibilité consomment la même réserve de 5 sorts de niveau 2
+
+step: Des projectiles d'énergie sont de nouveau disponibles et elle peut tirer à distance
+  do: Reprendre les attaques avec les projectiles disponibles, en touchant autant d'adversaires que possible
+  note: Les effets spéciaux des projectiles, leur portée et leur délai de recharge ne sont pas détaillés dans le bloc fourni ; aucune valeur supplémentaire n'est supposée ici
+
+step: Un adversaire la maintient au contact
+  do: Répéter l'attaque à outrance de 7 morsures contre un seul adversaire
+  note: La confusion est associée aux morsures ; son DD et sa durée ne sont pas précisés dans le bloc fourni
+
+step: La confusion désorganise son adversaire et une voie de dégagement s'ouvre
+  do: S'éloigner pour rétablir le combat à distance, puis reprendre les tirs ou les sorts au round suivant
+  note: Elle se déplace à 12 m ; la confusion ne garantit pas que l'ennemi renonce à l'attaquer. Si nécessaire, utiliser un retrait pour se dégager
+
+## Repli
+
+step: Ses points de vie tombent à 15 ou moins
+  do: Activer immédiatement sa cape pour fuir par porte dimensionnelle le plus loin possible des adversaires
+  note: Le repli devient prioritaire sur toute attaque ; après la téléportation, elle n'entreprend plus d'autre action jusqu'à son prochain tour
+
+step: La cape est indisponible et elle doit fuir
+  do: Profiter d'une ouverture pour lancer invisibilité si un sort de niveau 2 reste disponible, puis s'éloigner sans attaquer
+  note: Si elle est bloquée au contact, utiliser le retrait pour gagner de la distance

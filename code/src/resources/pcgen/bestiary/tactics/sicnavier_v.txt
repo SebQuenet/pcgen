@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Sicnavier V, grand dracosire d'ombre colossal, chaotique mauvais, FP 22 : prédateur intelligent qui sépare ses adversaires par magie avant de les déchirer.
+  426 pv ; CA 39, contact 0 ; RD 20/magie ; RM 33 ; immunités aux effets de mort, à l'énergie négative, à la paralysie et au sommeil.
+  Morsure +35 (4d6+14, critique 19-20), 2 griffes +35 (2d8+14), queue +33 (4d6+7), 2 ailes +33 (2d8+7), avant améliorations magiques.
+  Déplacement terrestre 12 m, vol 75 m de manœuvrabilité déplorable ; allonge indiquée : 1,50 m. Aura de terreur à 108 m, Volonté DD 32.
+
+resource: Sorts de niveaux 1 à 4 | 8/jour par niveau | réserve commune aux sorts d'un même niveau ; NLS 19, concentration +27
+resource: Sorts de niveaux 5 à 8 | 7/jour par niveau | réserve commune aux sorts d'un même niveau ; conserver un emplacement de niveau 7 pour téléportation suprême
+resource: Sorts de niveau 9 | 4/jour | réserve partagée entre main broyeuse et plainte d'outre-tombe, cette dernière à DD 27
+resource: Doigt de mort | 3/jour | pouvoir magique, NLS 29 ; 290 dégâts, ou 3d6+29 si le jet de Vigueur réussit
+resource: Pouvoirs magiques à volonté | illimité | ténèbres, projection d'image, reflets d'ombre, traversée des ombres et toucher vampirique ; NLS 29, concentration +37
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Lancer armure de mage sur lui-même : CA 43 pendant 19 heures
+  do: Observer une approche connue avec clairaudience/clairvoyance ; préparer vision lucide si les intrus utilisent des illusions ou l'invisibilité
+  note: Perception +40 et Discrétion +20 favorisent une embuscade préparée ; vision lucide requiert ses composantes matérielles
+
+step: Les intrus approchent et il peut garder son corps en retrait
+  do: Créer une projection d'image pour les attirer vers une position favorable et y faire commencer ses sorts
+  note: L'image reste à 117 m au plus de son corps et dure 29 rounds ; conserver une ligne d'effet dégagée entre les deux, même en se tenant hors de vue des ennemis
+
+step: Le combat va commencer dans quelques instants
+  do: Lancer rapidité sur son corps réel ; elle dure 19 rounds
+  note: Avec armure de mage et rapidité, CA 44 ; rapidité donne +1 aux attaques et une morsure supplémentaire lors d'une attaque à outrance
+
+## Ouverture
+
+step: Il attaque ou charge et des adversaires sont dans les 108 m de son corps réel
+  do: Déclencher l'aura de terreur, Volonté DD 32, en complément de son action offensive
+  note: Ne pas centrer cette aura sur la projection d'image ; une sauvegarde réussie immunise contre cette aura pendant 24 heures
+
+step: Plusieurs ennemis vivants peuvent être pris dans une même zone de 12 m de rayon
+  do: Lancer plainte d'outre-tombe depuis son corps ou sa projection, à portée de 21 m : Vigueur DD 27 annule, sinon 190 dégâts
+  note: Privilégier les adversaires qui ne semblent pas protégés contre les effets de mort ; les créatures les plus proches du centre sont affectées en premier
+
+step: Le groupe est dispersé ou un combattant menace immédiatement son corps
+  do: Lancer dédale sur l'adversaire le plus dangereux à 21 m ou moins, puis profiter de son absence pour attaquer ses alliés
+  note: Aucun jet de sauvegarde ; RM applicable. La sortie demande une action complexe et un test d'Intelligence DD 20 ; durée maximale de 10 minutes
+
+## Rounds suivants
+
+step: Des protections magiques empêchent ses attaques décisives
+  do: Consacrer un round à dissipation suprême sur la cible prioritaire, puis reprendre les sorts offensifs au round suivant
+  note: Employer le NLS 19 des sorts, et non le NLS 29 des pouvoirs magiques
+
+step: Une cible vivante isolée paraît vulnérable aux effets de mort
+  do: Employer doigt de mort depuis son corps réel, à 28,50 m ou moins
+  note: Ne pas dépenser les trois utilisations contre une immunité déjà constatée
+
+step: Plusieurs ennemis restent accessibles à distance
+  do: Lancer chaîne d'éclairs, Réflexes DD 24, pour frapper plusieurs cibles sans devoir les regrouper
+  note: Si elles se massent dans un passage, préférer nuage incendiaire, Réflexes DD 26 ; rester hors de son propre nuage
+
+step: Il faut couper les renforts ou diviser les lignes ennemies
+  do: Élever un mur de glace entre les combattants et leurs soutiens ; employer dédale sur un second adversaire si nécessaire
+  note: Un mur qui coupe la ligne d'effet vers sa projection d'image met fin à celle-ci ; placer le mur en conséquence
+
+step: Un adversaire est à 1,50 m et il peut rester sur place
+  do: Attaque à outrance : morsure, deux griffes, queue et deux ailes ; concentrer les coups sur une cible déjà blessée
+  note: Sous rapidité, ajouter une morsure et +1 à chaque jet d'attaque ; appliquer les bonus aux attaques du profil
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Se déplacer puis porter une morsure avec Frappe décisive supérieure : +35, 16d6+14 avant améliorations
+  note: En espace ouvert, Attaque en vol permet de placer cette attaque pendant son déplacement aérien ; respecter sa manœuvrabilité et les attaques d'opportunité
+
+step: Il est blessé mais conserve l'avantage et peut toucher un ennemi vivant
+  do: Employer toucher vampirique pour infliger 10d6 dégâts et gagner autant de points de vie temporaires que de dégâts effectivement infligés
+  note: Ce pouvoir demande une attaque de contact au corps à corps ; les points de vie temporaires ne restaurent pas ses pv perdus et ne se cumulent pas entre utilisations
+
+## Repli
+
+step: Ses points de vie tombent sous 110 ou ses adversaires menacent de l'abattre au prochain round
+  do: Lancer téléportation suprême vers un refuge connu sur le même plan
+  note: Ce seuil est une consigne tactique ; conserver l'emplacement nécessaire avant d'être acculé
+
+step: La téléportation suprême n'est plus disponible
+  do: Employer porte dimensionnelle pour rompre le contact et gagner une position hors de vue, puis fuir en vol au round suivant
+  note: Aucune autre action après porte dimensionnelle jusqu'à son prochain tour ; les interdictions de téléportation peuvent également bloquer cette solution
+
+step: Les déplacements magiques sont bloqués
+  do: Rompre le contact par le vol dès qu'une trajectoire se libère, à 75 m par déplacement avant rapidité
+  note: Éviter les passages exigeant des virages serrés ; ne pas compter sur les ténèbres pour arrêter des poursuivants capables de voir dans le noir

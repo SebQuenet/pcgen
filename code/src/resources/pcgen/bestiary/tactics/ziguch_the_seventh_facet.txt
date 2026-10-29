@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Ziguch, la Septième Facette, est un xiomorn gardien des caveaux, extérieur de la terre et élémentaire, loyal neutre, FP 15. Il combat sous l'effet d'une domination de monstre et cherche à neutraliser les intrus plutôt qu'à les tuer.
+  Ses moyens privilégiés sont transmutation de la chair en pierre (Vigueur DD 25) et sa baguette d'énervation. Acculé, il dispose de quatre griffes +26 (2d4+8, critique 19–20, plus cristallisation), à 1,50 m d'allonge.
+  232 pv ; CA 32, contact 21 ; guérison accélérée 5 ; résistance à la magie 25 ; RD 10/adamantium et RD 10/contondant ; immunités des élémentaires. Déplacement et escalade à 12 m.
+
+resource: Transmutation de la chair en pierre | 3/jour | Vigueur DD 25 ; neutralisation prioritaire
+resource: Baguette d'énervation | 13 charges | rayon infligeant 1d4 niveaux négatifs, sans jet de sauvegarde ; une charge par activation
+resource: Mur de pierre | 3/jour | séparer les adversaires ou créer un écran
+resource: Pierres acérées | 3/jour | DD 23 ; réserver ce terrain dangereux aux situations de débordement
+resource: Convocation de monstres VII | 1/jour | élémentaires de la terre uniquement
+resource: Dissipation de la magie | à volonté | niveau de lanceur de sorts 16
+resource: Téléportation suprême | à volonté | Ziguch et au plus 50 livres d'objets ; aucun autre combattant
+
+step: Des intrus approchent et Ziguch peut choisir sa position
+  do: Se placer près d'une paroi à escalader et d'un passage permettant de garder les adversaires à distance
+  note: Perception +25, vision dans le noir à 18 m et perception des vibrations à 36 m ; cette dernière exige un contact avec le sol et ne remplace pas la vue pour viser un rayon.
+
+## Ouverture
+
+step: Un adversaire accessible semble vulnérable à la pétrification
+  do: Utiliser transmutation de la chair en pierre sur lui, Vigueur DD 25
+  note: Privilégier un adversaire dangereux qui semble moins robuste ; Ziguch ne connaît pas automatiquement les sauvegardes des PJ. Laisser ensuite la victime pétrifiée intacte.
+
+step: La cible prioritaire semble trop robuste pour une pétrification immédiate
+  do: Utiliser la baguette d'énervation sur elle avec une attaque de contact à distance
+  note: Utilisation d'objets magiques +28 si nécessaire. Les niveaux négatifs affaiblissent notamment ses sauvegardes ; tenter la pétrification à un round ultérieur. Éviter les cibles immunisées aux niveaux négatifs.
+
+step: Plusieurs adversaires peuvent immédiatement l'encercler
+  do: Créer un mur de pierre pour couper leur progression et réduire le nombre d'ennemis capables de l'atteindre
+  note: Appuyer le mur sur la pierre existante ; conserver une ligne de vue vers la prochaine cible. Cette action remplace l'attaque de ce round.
+
+## Rounds suivants
+
+step: Une cible affaiblie par énervation reste dangereuse et une pétrification est disponible
+  do: Utiliser transmutation de la chair en pierre sur elle, Vigueur DD 25
+  note: Compter séparément les trois utilisations quotidiennes. Changer de cible si les tentatives révèlent une résistance trop forte.
+
+step: Une cible encore valide résiste et la baguette conserve des charges
+  do: Réutiliser énervation pour l'affaiblir, puis réévaluer la possibilité de la pétrifier au round suivant
+  note: Les niveaux négatifs peuvent tuer ; ne pas multiplier les rayons sur une victime déjà neutralisée. Ziguch cherche des captifs.
+
+step: Une protection magique identifiable empêche sa tactique de fonctionner
+  do: Tenter une dissipation de la magie ciblée avant de reprendre ses attaques de neutralisation
+  note: Utiliser Art de la magie +29 pour comprendre les effets observables ; une dissipation ne garantit pas de supprimer toutes les protections.
+
+step: La pression adverse exige des combattants supplémentaires
+  do: Utiliser convocation de monstres VII pour appeler des élémentaires de la terre
+  note: Leur faire occuper les accès et retenir les assaillants pendant que Ziguch poursuit ses tentatives de pétrification.
+
+step: Les adversaires le débordent mais doivent encore franchir une zone de pierre
+  do: Placer des pierres acérées sur leur trajet pour ralentir leur progression
+  note: Ce pouvoir inflige des dégâts et peut gêner le déplacement ; l'employer lorsque les moyens de capture ne suffisent plus. Le DD indiqué est 23.
+
+step: Ziguch est débordé et doit combattre au contact sans se déplacer
+  do: Effectuer une attaque à outrance avec ses quatre griffes +26, chacune infligeant 2d4+8 plus cristallisation
+  note: Utiliser Attaques réflexes lorsque les ennemis provoquent des attaques d'opportunité. La cristallisation et l'explosion de cristal mentionnée dans sa tactique ne sont pas détaillées ici ; leurs effets exigent la description officielle, sans inventer de dégâts ni de DD.
+
+step: Une griffe suffit et Ziguch peut encore circuler
+  do: Utiliser Attaque éclair pour porter une seule attaque de griffe +26 et poursuivre son déplacement, dans la limite totale de 12 m
+  note: Cette manœuvre remplace l'attaque à outrance ; employer l'escalade pour rejoindre une position difficile d'accès lorsque le terrain le permet.
+
+## Repli
+
+step: L'ichor immortel est tué ou la domination de monstre sur Ziguch est brisée
+  do: Cesser les hostilités et proposer la paix, au besoin par télépathie à 90 m
+  note: Sa volonté de combattre vient de la contrainte ; une fois libéré, privilégier immédiatement la négociation.
+
+step: Ziguch reste dominé et doit se dégager pour continuer à combattre
+  do: Si les ordres qui le contraignent le permettent, utiliser téléportation suprême pour rejoindre une position sûre et connue du champ de bataille
+  note: Il ne peut emmener ni allié ni captif. Sa guérison accélérée lui rend 5 pv par round ; exploiter ce répit avant de reprendre ses actions selon les ordres reçus. Aucun seuil de pv ne déclenche automatiquement une fuite définitive tant que la domination persiste.

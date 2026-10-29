@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Bolla, bête magique de taille Très grande, neutre mauvaise, solitaire et intelligente, poussée par une faim vorace. FP 14 ; 207 pv ; CA 29.
+  Morsure +24 (4d8+8, étreinte et malédiction de léthargie), coup de queue +19 (2d6+4) ; espace et allonge de 4,50 m. Déplacement de 12 m, creusement de 9 m.
+  Flétrissure et appel de la tempête permettent de frapper à distance ; Frappe décisive supérieure rend une morsure unique particulièrement dangereuse.
+
+note: Défenses
+  Réduction des dégâts 10/magie ; résistance à l'acide 20 et à l'électricité 20. Vision à 360° ; impossible à faire tomber par un croc-en-jambe.
+  Sa vulnérabilité à la cécité rend prioritaires les adversaires capables de l'aveugler.
+
+resource: Flétrissure | 1/jour | NLS 18 ; Vigueur DD 22, moitié ; 18d6 dégâts aux créatures vivantes ciblées
+resource: Appel de la tempête | 1/jour | NLS 18 ; Réflexes DD 19, moitié ; 5d6 dégâts d'électricité par éclair, 5d10 dehors par temps orageux ; jusqu'à 15 éclairs en 18 minutes
+resource: Attaques d'opportunité | 4/round | Attaques réflexes ; morsure ordinaire, sans Frappe décisive
+
+step: Des proies approchent sans l'avoir repéré
+  do: Les observer avec Perception +29 et se dissimuler avec Discrétion +16 ; identifier les créatures intelligentes et les cibles les plus vulnérables.
+  note: Préparer une approche et une issue par un terrain meuble où son creusement est utilisable ; garder les proies en vue pour choisir où surgir.
+
+## Ouverture
+
+step: Plusieurs ennemis vivants sont visibles à distance et flétrissure est disponible
+  do: Lancer flétrissure sur le plus grand nombre possible, avant de s'engager au contact.
+  note: Portée de 336 m ; aucune paire de cibles ne doit être distante de plus de 18 m. Vigueur DD 22 pour réduire de moitié les 18d6 dégâts.
+
+step: Les ennemis restent dispersés ou hors d'atteinte de la morsure
+  do: Déclencher appel de la tempête et frapper une cible dangereuse avec le premier éclair ; se rapprocher si cela permet de menacer les suivants.
+  note: Portée de 336 m ; privilégier ce pouvoir contre une cible exposée par temps orageux. L'éclair vise une case de 1,50 m de côté, selon une ligne verticale de 9 m ; le pouvoir fonctionne aussi sous terre, mais pas sous l'eau.
+
+step: Une proie est accessible après un déplacement de 12 m au plus
+  do: Se placer à portée de morsure et utiliser Frappe décisive supérieure : morsure +24, 16d8+8 dégâts, plus étreinte et malédiction de léthargie.
+  note: Il s'agit d'une action d'attaque après le déplacement ; privilégier une créature intelligente vulnérable ou un lanceur de sorts.
+
+## Rounds suivants
+
+step: Il doit changer de position pour atteindre sa cible
+  do: Se déplacer, puis employer Frappe décisive supérieure avec la morsure : +24, 16d8+8 dégâts.
+  note: Cette frappe remplace l'attaque ordinaire de son action simple ; elle ne s'ajoute ni à une charge, ni à une attaque à outrance, ni à une attaque d'opportunité.
+
+step: Deux adversaires sont à portée et il peut rester en place
+  do: Attaquer à outrance : morsure +24 (4d8+8, étreinte et malédiction de léthargie), puis queue +19 (2d6+4).
+  note: Mordre la cible prioritaire et diriger la queue vers elle ou vers un autre ennemi menaçant. Face à une seule cible, préférer généralement les dégâts de Frappe décisive supérieure.
+
+step: La morsure touche une créature de taille Grande ou inférieure et l'immobiliser est avantageux
+  do: Tenter gratuitement l'étreinte avec un BMO de +32, sans provoquer d'attaque d'opportunité.
+  note: Maintenir ensuite la lutte demande une action simple ; choisir cette option pour retenir une proie isolée. Face à plusieurs ennemis dangereux, relâcher la prise pour retrouver sa mobilité et ses attaques d'opportunité.
+
+step: La cible est facile à toucher et les dégâts supplémentaires sont utiles
+  do: Activer Attaque en puissance : morsure +19 (4d8+18), ou 16d8+18 avec Frappe décisive supérieure ; queue +14 (2d6+9).
+  note: Le malus de 5 affecte aussi les manœuvres offensives et les attaques d'opportunité jusqu'au prochain tour ; conserver la précision contre une défense élevée ou pour réussir l'étreinte.
+
+step: Un ennemi adjacent tente un pas de placement de 1,50 m pour s'éloigner
+  do: Le suivre en action immédiate avec Step Up et Following Step, jusqu'à 3 m en terminant adjacent, puis le mordre grâce à Step Up and Strike.
+  note: Cette morsure consomme une des quatre attaques d'opportunité du round. Following Step conserve son déplacement et son pas de placement au prochain tour ; l'action immédiate consomme son action rapide suivante.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Utiliser la morsure pour infliger des dégâts et appliquer la malédiction de léthargie ; tenter l'étreinte si elle sert sa position.
+  note: Réserver des attaques d'opportunité aux lanceurs de sorts et aux adversaires qui traversent sa zone de menace.
+
+step: Une cible reste hors de portée et appel de la tempête est encore actif
+  do: Dépenser une action simple pour appeler un nouvel éclair sur cette cible.
+  note: Un seul éclair par round ; cette action remplace la morsure du tour. Si plusieurs ennemis se regroupent et que flétrissure reste disponible, privilégier celle-ci.
+
+## Repli
+
+step: La défaite devient probable ou ses ennemis exploitent efficacement sa vulnérabilité à la cécité
+  do: Relâcher toute proie et effectuer une retraite vers le terrain meuble repéré, puis s'enfoncer grâce au creusement de 9 m.
+  note: Privilégier la rupture de la ligne de vue et la survie ; la retraite protège la sortie de la case de départ, mais les déplacements suivants peuvent encore provoquer des attaques d'opportunité.

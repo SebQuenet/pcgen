@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Statue gardienne de samouraï, colonne cariatide de taille M, créature artificielle neutre sans intelligence, FP 4. Elle exécute sa consigne de garde sans peur ni initiative tactique élaborée.
+  Katana de maître +11 (1d8+7, critique 18–20) ; une seule attaque par round à son tour. Déplacement 9 m ; allonge 1,50 m.
+  47 pv ; CA 16, contact 11, prise au dépourvu 15 ; RD 5/— ; bris d'armes ; immunités des créatures artificielles et immunité à la magie. Elle ne peut pas être désarmée.
+
+step: Aucun intrus ne déclenche sa consigne de garde
+  do: Rester parfaitement immobile sous son apparence de statue, katana en main, dans la zone à protéger.
+  note: Vision dans le noir à 18 m, vision nocturne et Perception +0 ; elle ne dispose d'aucune détection spéciale des intrus dissimulés.
+
+## Ouverture
+
+step: Un intrus déclenche sa consigne et se trouve à 1,50 m ou moins
+  do: S'animer et frapper immédiatement au katana, +11 (1d8+7, critique 18–20).
+
+step: L'intrus est hors de portée
+  do: Avancer jusqu'à 9 m et frapper s'il devient accessible à 1,50 m ; sinon, effectuer un double déplacement jusqu'à 18 m pour l'approcher.
+  note: Respecter les limites de sa consigne de garde pendant l'approche.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter l'attaque de katana +11 à chaque tour, en tenant le passage ou l'accès à l'objet gardé.
+
+step: Une arme touche la statue
+  do: Appliquer le bris d'armes : l'arme subit 3d6 dégâts, en tenant compte de sa solidité ; si des dégâts passent la solidité, elle devient brisée.
+  note: Ce pouvoir est automatique et concerne aussi les armes magiques ; il ne demande aucune action de la statue. Appliquer séparément sa RD 5/— aux dégâts physiques qu'elle reçoit.
+
+step: Un sort ou pouvoir magique la prend pour cible
+  do: Appliquer son immunité si l'effet autorise la résistance à la magie.
+  note: Cette immunité ne neutralise pas automatiquement les effets qui n'autorisent pas la résistance à la magie.
+
+step: Sa cible s'éloigne mais reste dans la zone qu'elle doit défendre
+  do: La rejoindre et reprendre les attaques de katana dès qu'elle est à portée.
+
+## Repli
+
+step: La statue est endommagée
+  do: Continuer à défendre sa zone jusqu'à sa destruction, à 0 pv ; aucun repli motivé par ses blessures.
+
+step: Les intrus quittent le périmètre couvert par sa consigne
+  do: Cesser la poursuite et reprendre son poste de garde sous forme de statue.

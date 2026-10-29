@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Polina, fée des pierres tombales de taille P, neutre mauvaise, préfère manipuler un adversaire pour couvrir sa fuite. Elle possède 97 pv, une CA de 22 et une résistance à la magie de 20.
+  Ténèbres maudites pour frapper le groupe, puis suggestion pour obtenir un défenseur ; dague +12/+7 en attaque à outrance (1d3-1, critique 19-20), allonge de 1,50 m.
+  Déplacement terrestre de 6 m ; réduction des dégâts 10, surmontée seulement par une arme à la fois en fer froid et d'alignement bon.
+
+resource: Ténèbres maudites | 1/jour | Volonté DD 19, NLS 15
+resource: Suggestion | 1/jour | Volonté DD 18, NLS 15
+resource: Dissipation de la magie | 3/jour | NLS 15
+resource: Protection contre le Bien | 3/jour | durée de 15 minutes
+resource: Protection contre la mort | 3/jour | durée de 15 minutes
+resource: Détection de pensées | 3/jour | Volonté DD 17
+
+step: Des intrus approchent sans l'avoir repérée
+  do: Observer avec Perception +21 et rester dissimulée avec Discrétion +26 ; repérer une issue avant de se montrer
+
+step: Elle peut parler avant que les armes soient tirées
+  do: Temporiser avec Bluff +23 ou Diplomatie +23 ; employer détection de pensées si elle dispose du temps nécessaire
+  note: elle parle l'aklo, le russe et le sylvestre
+
+step: Elle prévoit une attaque et dispose de rounds de préparation
+  do: Lancer protection contre le Bien ; ajouter protection contre la mort si elle redoute des effets de mort ou d'énergie négative
+  note: protection contre le Bien donne +2 aux sauvegardes contre les créatures bonnes ; son bonus de parade ne se cumule pas avec celui de l'anneau, donc la CA reste à 22
+
+## Ouverture
+
+step: Polina est attaquée et possède encore ténèbres maudites
+  do: Lancer ténèbres maudites sur le plus grand nombre d'assaillants, dans une zone de 6 m de rayon, à une portée maximale de 75 m ; se rapprocher de l'issue avec son déplacement disponible
+  note: créatures bonnes : 5d8 dégâts et état fiévreux pendant 1d4 rounds ; Volonté DD 19 réduit les dégâts de moitié et annule cet état. Extérieurs bons : 10d6 dégâts à la place des 5d8
+  note: créatures ni bonnes ni mauvaises : demi-dégâts, encore réduits de moitié sur sauvegarde réussie, sans état fiévreux ; créatures mauvaises indemnes
+
+## Rounds suivants
+
+step: Au round suivant, suggestion reste disponible et une cible vivante peut la comprendre à 18 m ou moins
+  do: Lancer suggestion sur un adversaire susceptible de la protéger : « Évitons un massacre inutile : interpose-toi et laisse-moi partir. » Puis avancer vers la sortie
+  note: Volonté DD 18 annule l'effet ; présenter la demande comme raisonnable, sans exiger de sacrifice ni imposer d'attaquer ses alliés
+
+step: Un effet magique dissipable bloque sa fuite et elle peut consacrer une action à l'enlever
+  do: Tenter une dissipation de la magie ciblée, puis poursuivre son déplacement vers l'issue
+
+step: Un ennemi menace sa position quand elle doit utiliser un pouvoir magique
+  do: Faire un pas de placement de 1,50 m si cela suffit à sortir de son allonge ; sinon tenter l'utilisation sur la défensive
+  note: concentration +20, augmentée à +24 sur la défensive grâce à Magie de guerre ; le pas de placement remplace tout autre déplacement du round
+
+## Repli
+
+step: Une issue reste accessible, que suggestion réussisse ou échoue
+  do: Fuir sans attendre un seuil de pv ; laisser le défenseur obtenu s'interposer, s'il y en a un, puis rompre la ligne de vue et se dissimuler
+  note: 6 m par action de mouvement, jusqu'à 12 m par double déplacement ; au contact, employer l'action de retraite pour quitter la première case sans attaque d'opportunité
+
+step: Elle est acculée sans possibilité de fuite
+  do: Combattre jusqu'à la mort en invectivant ses agresseurs ; employer les pouvoirs offensifs encore disponibles, puis la dague contre l'ennemi à portée
+  note: dague +12 après déplacement, ou +12/+7 en attaque à outrance ; ses malédictions verbales n'ajoutent aucun effet magique

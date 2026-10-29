@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Tuan Huy, dragon souverain juvénile de taille G, neutre et fin diplomate ; le combat est son dernier recours. 161 PV, CA 26 ; déplacement terrestre de 15 m, vol de 60 m avec une manœuvrabilité médiocre.
+  Morsure +21 (2d6+12), 2 griffes +21 (1d8+8 chacune), encornement +21 (1d8+12), coup de queue +19 (1d8+12). Allonge de 1,50 m, portée à 3 m pour la morsure et l'encornement.
+  Présence terrifiante à 36 m, DD 21 ; immunité à la paralysie et au sommeil. Ses attaques en vol servent à affaiblir l'ennemi avant une mêlée décisive.
+
+resource: Sorts de niveau 1 | 6/jour au total | réserve commune à charme-personne (DD 15), couleurs dansantes (DD 15) et coup au but ; NLS 3
+resource: Apaisement des émotions | à volonté | pouvoir magique, NLS 14
+resource: Détection du Bien et du Mal | à volonté | pouvoirs magiques, NLS 14
+resource: Sorts de niveau 0 | à volonté | hébétement (DD 14), détection de la magie, message, lecture de la magie, résistance
+
+step: Des interlocuteurs acceptent encore de parler
+  do: Négocier avec Diplomatie +25 ; utiliser Psychologie +21 pour cerner leurs intentions et proposer une issue pacifique.
+  note: Épuiser les solutions diplomatiques avant d'attaquer ; message permet de communiquer discrètement avec un interlocuteur.
+
+step: La colère menace de faire échouer les pourparlers
+  do: Employer apaisement des émotions pour permettre la reprise du dialogue.
+  note: Ce pouvoir exige de la concentration ; une attaque contre les créatures apaisées compromet son effet.
+
+step: Un humanoïde peut encore être convaincu avant les hostilités
+  do: Tenter charme-personne sur lui, Volonté DD 15, puis reprendre la négociation.
+  note: Le charme rend la cible amicale ; il ne permet pas de lui imposer des ordres suicidaires.
+
+## Ouverture
+
+step: Le combat devient inévitable et l'espace permet de voler
+  do: Décoller, gagner de la hauteur et préparer un passage à portée de morsure.
+  note: Utiliser la présence terrifiante lors de la première attaque : les adversaires concernés dans les 36 m résistent avec Volonté DD 21.
+
+step: Une cible est accessible depuis les airs
+  do: Effectuer une Attaque en vol : approcher, porter une seule morsure +21 (2d6+12) à 3 m, puis poursuivre le déplacement pour s'éloigner.
+  note: Le mouvement total reste limité à 60 m. L'allonge de la morsure aide à éviter le contact ; ce don ne supprime pas les attaques d'opportunité.
+
+## Rounds suivants
+
+step: Les adversaires restent dangereux au contact
+  do: Répéter les passages avec morsure, en visant une cible isolée ou déjà blessée, puis reprendre de la distance.
+  note: Prévoir des trajectoires larges adaptées à sa manœuvrabilité médiocre ; son bonus de Vol n'est que de +2. Le don Vol stationnaire permet de rester en place si nécessaire.
+
+step: Les ennemis sont suffisamment affaiblis et une cible peut être achevée au contact
+  do: Se rapprocher pour préparer une attaque à outrance au round suivant.
+  note: Après un déplacement ordinaire, ne porter qu'une attaque ; privilégier la morsure.
+
+step: Une cible est à 1,50 m et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance : morsure +21, 2 griffes +21, encornement +21 et coup de queue +19.
+  note: À 3 m, seules la morsure et l'encornement ont l'allonge nécessaire. Garder les mêmes bonus et dégâts que dans le profil.
+
+step: Plusieurs ennemis proches lui ferment la retraite
+  do: Si leur neutralisation permet de se dégager, lancer couleurs dansantes dans un cône de 4,50 m, Volonté DD 15.
+  note: Ce sort consomme une des 6 utilisations quotidiennes de niveau 1 ; orienter le cône pour épargner les alliés. Il est moins efficace contre les créatures aux nombreux DV.
+
+step: Une attaque unique doit toucher une cible particulièrement difficile à atteindre
+  do: Lancer coup au but, puis porter la morsure au tour suivant avec un bonus de +20 au jet d'attaque.
+  note: Lancer le sort prend une action simple ; le bonus ne s'applique qu'à la prochaine attaque, effectuée avant la fin du round suivant.
+
+## Repli
+
+step: Points de vie à 50 ou moins, ou poursuite du combat sans perspective favorable
+  do: Rompre la mêlée et fuir par les airs ; utiliser le retrait si nécessaire pour quitter le contact, puis exploiter son déplacement en vol de 60 m.
+  note: Éviter de traverser les zones menacées par d'autres adversaires ; choisir une trajectoire dégagée et adaptée à sa manœuvrabilité.
+
+step: Les adversaires acceptent de cesser les hostilités
+  do: Proposer une trêve à distance et reprendre la négociation ; employer apaisement des émotions si la situation s'y prête.
+  note: Sa priorité reste de terminer le conflit et de survivre.

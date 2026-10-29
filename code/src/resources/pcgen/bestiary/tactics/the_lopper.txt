@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  The Lopper est une âme-en-peine variante, mort-vivant intangible de taille M, neutre mauvais, FP 5. Intelligent et mobile, il multiplie les victimes qui saignent pour entretenir ses soins.
+  57 PV ; CA 18, contact 18, pris au dépourvu 15 ; initiative +7. Déplacement de 9 m ; allonge de 1,50 m.
+  Toucher intangible +7 contre la CA de contact : 1d6 dégâts d'énergie négative et 1d6 de saignement. Il frappe sous l'apparence d'une hache spectrale.
+  Intangible ; immunités des morts-vivants ; résistance à la canalisation +2. Vision dans le noir à 18 m, perception de la vie, Perception +11 ; aura surnaturelle à 9 m.
+
+step: Des intrus approchent
+  do: Les repérer avec ses sens et attendre dissimulé dans son oubliette, en utilisant Discrétion +12
+  note: Privilégier les espaces sombres où il peut passer d'une victime à l'autre sans s'exposer au soleil
+
+resource: Siphonnage du sang | permanent | Les dégâts de ses saignements le soignent d'autant si la victime est à 9 m ou moins ; les soins ne dépassent jamais 57 PV
+
+## Ouverture
+
+step: Une créature vivante approche de l'oubliette
+  do: Surgir avec un hurlement et se porter vers une première victime
+
+step: Une cible est accessible avec un déplacement de 9 m au maximum
+  do: Se placer à 1,50 m et porter un toucher intangible +7 : 1d6 dégâts d'énergie négative et 1d6 de saignement
+  note: Chercher d'abord à ouvrir une blessure qui continuera de saigner
+
+step: Aucun adversaire n'est accessible ce round
+  do: Se rapprocher à couvert pour préparer le contact au round suivant
+
+## Rounds suivants
+
+step: Un adversaire accessible ne saigne pas encore
+  do: Changer de victime et lui porter un toucher intangible
+  note: Utiliser Acrobaties +9 pour éviter les attaques d'opportunité ; à demi-vitesse, ce déplacement couvre au maximum 4,50 m
+
+step: Plusieurs victimes saignent déjà
+  do: Rester à 9 m ou moins du plus grand nombre possible, en continuant à changer de position et à attaquer
+  note: Chaque victime fournit au maximum 1d6 de soins par application de son saignement ; multiplier les blessures sur la même cible n'augmente pas ce montant
+
+step: Toutes les cibles accessibles saignent
+  do: Attaquer la plus affaiblie tout en gardant les autres dans le rayon du siphonnage
+  note: Une victime tuée par son toucher est décapitée et lui rend 2d6 PV, sans dépasser 57 PV
+
+step: Un adversaire adjacent fait un pas de placement pour s'éloigner
+  do: Utiliser le don Step Up pour le suivre de 1,50 m par une action immédiate
+  note: Ce déplacement réduit de 1,50 m son déplacement au prochain tour et l'empêche d'y faire un pas de placement
+
+step: Une créature qu'il a tuée est morte depuis 1d4 rounds
+  do: Faire agir le mort-vivant ectoplasmique ainsi créé sous ses ordres contre les survivants
+
+step: Une attaque de feu lui inflige des dégâts
+  do: Appliquer l'état chancelant pendant 1 round ; choisir entre attaquer une cible à portée et se déplacer pour se soustraire au feu
+  note: Pendant ce round, il dispose d'une action simple ou d'une action de mouvement ; les saignements continuent d'alimenter ses soins
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Combattre jusqu'à la destruction et maintenir autant de victimes saignantes que possible à proximité
+  note: Aucun seuil de fuite ; sa peur du feu peut interrompre son rythme sans changer sa détermination
+
+step: Les adversaires fuient
+  do: Les poursuivre jusqu'aux limites de Harrowstone
+  note: De jour, il ne poursuit pas les fuyards à l'extérieur ; au soleil, il devient chancelant et ne peut pas attaquer

@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Snap Jaw, compagnon animal alligator de taille P, protège Bog Mother. Animal neutre, peu intelligent : il se concentre sur les ennemis qui approchent la kobold.
+  19 pv ; CA 17, contact 13, pris au dépourvu 15 ; initiative +6. Morsure +5 (1d6+3), allonge 1,50 m.
+  Déplacement au sol 6 m, nage 9 m ; Perception +5, Discrétion +10, Natation +14 ; vision nocturne et capacité à retenir son souffle.
+
+## Ouverture
+
+step: Plusieurs créatures menacent Bog Mother
+  do: Choisir le plus petit de ces adversaires ; se déplacer vers lui et le mordre dès qu'il est à portée.
+  note: La morsure se fait à +5 et inflige 1d6+3 dégâts.
+
+step: Aucune ou une seule créature menace Bog Mother
+  do: Se diriger vers l'adversaire le plus proche de Bog Mother et le mordre s'il est à portée.
+  note: Se déplacer de 6 m au sol ou de 9 m à la nage avant de porter une morsure ; si cela ne suffit pas, consacrer le round à se rapprocher.
+
+## Rounds suivants
+
+step: Le combat continue
+  do: Réévaluer les menaces autour de Bog Mother et mordre l'adversaire le plus proche d'elle ; si plusieurs créatures la menacent, attaquer la plus petite.
+  note: Une seule morsure +5 (1d6+3) par round ; se déplacer si nécessaire pour atteindre la cible prioritaire.
+
+## Repli
+
+step: Bog Mother est encore en vie
+  do: Combattre jusqu'à la mort, même à 5 pv ou moins.
+
+step: Bog Mother est vaincue et Snap Jaw a plus de 5 pv
+  do: Continuer à combattre.
+
+step: Bog Mother est vaincue et Snap Jaw a 5 pv ou moins
+  do: Fuir dans le marais, en nageant à 9 m par déplacement lorsque l'eau le permet, ou à 6 m au sol.

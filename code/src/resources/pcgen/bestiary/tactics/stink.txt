@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Stink est un lémure diabolique loyal mauvais, lâche, qui devient furieux dès qu'il tombe sous 30 pv. Il possède 38 pv et une CA de 18.
+  Deux griffes +8 (1d6+4 chacune) à 1,50 m ; déplacement de 9 m ; puanteur dans un rayon de 3 m, Vigueur DD 16.
+  Réduction des dégâts 5/bien ou argent ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10.
+
+step: Des intrus sont repérés
+  do: Geindre et pleurer sans engager le combat.
+  note: Perception +10 ; vision dans le noir à 18 m et vision dans les ténèbres.
+
+## Ouverture
+
+step: Stink a encore au moins 30 pv et n'a pas encore basculé dans la fureur
+  do: Continuer à geindre et à pleurer, même s'il est attaqué.
+  note: Il ne commence jamais le combat ; sa puanteur reste présente dans un rayon de 3 m, Vigueur DD 16.
+
+step: Stink tombe à moins de 30 pv
+  do: Entrer dans une fureur soudaine et attaquer l'adversaire visible le plus proche.
+  note: Cette fureur change son comportement sans modifier ses caractéristiques, ses jets d'attaque ou ses dégâts.
+
+step: La fureur est déclenchée et l'adversaire le plus proche est hors de portée
+  do: Avancer vers lui, jusqu'à 9 m, puis porter une griffe +8 (1d6+4) s'il arrive à 1,50 m.
+
+step: La fureur est déclenchée et l'adversaire le plus proche est déjà à 1,50 m
+  do: Effectuer une attaque à outrance avec ses deux griffes +8 (1d6+4 chacune).
+
+## Rounds suivants
+
+step: Stink est furieux et un adversaire reste visible
+  do: Attaquer l'adversaire visible le plus proche ; utiliser ses deux griffes à outrance s'il est à portée, ou se déplacer vers lui et porter une griffe si possible.
+  note: Il se déchaîne sans élaborer de tactique complexe ; les créatures à 3 m ou moins sont exposées à sa puanteur, Vigueur DD 16.
+
+step: Il ne reste aucune cible vivante évidente
+  do: Retrouver son comportement lâche et recommencer à geindre et à pleurer.
+
+## Repli
+
+step: Stink est furieux et des adversaires restent présents, même s'il est près de mourir
+  do: Poursuivre le combat jusqu'à la mort.
+  note: Aucun seuil de pv ne provoque sa fuite ; seule l'absence de toute cible vivante évidente met fin à sa fureur.

@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Table animée, objet animé de taille G, créature artificielle neutre et dépourvue d'intelligence ; FP 5.
+  Coup +9 (1d8+9) ; espace occupé de 3 m sur 3 m et allonge de 3 m ; déplacement de 12 m par round.
+  52 pv, CA 14, contact 8, prise au dépourvu 14 ; solidité 5 et immunités des créatures artificielles.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5, initiative -1.
+
+note: Comportement
+  Appliquer un comportement simple et mécanique : approcher une cible, puis la frapper. Elle ne conçoit pas de ruse ni de plan complexe.
+
+## Ouverture
+
+step: Un ennemi est à 3 m ou moins
+  do: Porter un coup +9 (1d8+9).
+  note: Son allonge permet de frapper sans être adjacente à la cible.
+
+step: L'ennemi le plus proche est à plus de 3 m, mais à 15 m ou moins
+  do: Avancer de 12 m au maximum pour le placer dans son allonge de 3 m, puis porter un coup +9 (1d8+9).
+  note: Ce déplacement suppose un passage libre et un terrain sans obstacle ralentissant la marche.
+
+step: Aucun ennemi ne peut être atteint après un déplacement simple
+  do: Effectuer un double déplacement, jusqu'à 24 m sur terrain dégagé, pour se rapprocher de l'ennemi le plus proche.
+  note: Elle ne porte pas de coup pendant ce double déplacement.
+
+## Rounds suivants
+
+step: Sa cible reste à portée
+  do: Répéter le coup +9 (1d8+9) à chaque round.
+  note: Son attaque de mêlée ne comporte qu'un seul coup.
+
+step: Sa cible s'éloigne ou tombe
+  do: Rejoindre la cible encore debout la plus proche ; porter un coup si un déplacement de 12 m au maximum suffit à la mettre à portée.
+  note: Si cela ne suffit pas, poursuivre avec un double déplacement, sans attaque ce round.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à avancer et à frapper, sans repli motivé par la peur ou les blessures.
+  note: Dépourvue d'intelligence, elle ne choisit pas de seuil de fuite ; elle est détruite à 0 pv.

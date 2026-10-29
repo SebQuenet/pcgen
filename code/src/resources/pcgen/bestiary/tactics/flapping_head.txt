@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Flapping Head, tête de vargouille transformée en mort-vivant de taille P, sans intelligence. Elle attaque au contact, sans tactique élaborée.
+  18 PV ; CA 14 ; morsure +5 (1d4+1) et coup +5 (1d4+1) ; allonge de 1,50 m.
+  Vol à 9 m, manœuvrabilité maladroite, Vol -6 ; vision dans le noir à 18 m ; immunités des morts-vivants.
+
+step: Des intrus approchent
+  do: Les repérer avec sa vision dans le noir et Perception +0, puis se diriger vers une cible accessible
+  note: Son absence d'intelligence exclut les ruses et la sélection réfléchie des adversaires.
+
+## Ouverture
+
+step: Une cible est accessible après un déplacement de 9 m au maximum
+  do: Voler jusqu'à portée de 1,50 m, puis porter une morsure +5 (1d4+1)
+  note: Après ce déplacement, elle ne porte qu'une seule attaque.
+
+step: Les adversaires sont trop éloignés pour être attaqués après un déplacement
+  do: Se rapprocher par un double déplacement en vol, jusqu'à 18 m au total
+
+step: Une cible est déjà à portée et elle peut rester sur place
+  do: Effectuer une attaque à outrance : morsure +5 (1d4+1) et coup +5 (1d4+1)
+
+## Rounds suivants
+
+step: La cible reste à portée et elle peut rester sur place
+  do: Répéter l'attaque à outrance, morsure et coup
+  note: En vol, rester sur place exige de réussir le vol stationnaire ; avec Vol -6, ce maintien n'est pas assuré.
+
+step: La cible s'éloigne ou tombe hors de combat
+  do: Rejoindre cette cible ou un autre adversaire accessible, puis porter une seule morsure si le déplacement le permet
+  note: Privilégier les trajets directs ; son vol maladroit rend les manœuvres difficiles peu fiables.
+
+## Repli
+
+step: Elle est encore animée, même avec peu de PV
+  do: Continuer à attaquer jusqu'à sa destruction
+  note: Sans intelligence, elle ne prévoit pas de fuite et n'adopte pas de seuil de repli.

@@ -1,0 +1,90 @@
+## Avant le combat
+
+note: Profil
+  Chorus-Of-Guises, naga royal de taille Très Grande, aberration loyale neutre et gardien des salles N1 à N5 ; 267 PV, CA 31, initiative +12.
+  Attaque à outrance : 6 morsures +21, chacune infligeant 2d6+6 dégâts, critique sur 19–20, plus saignement. Espace occupé et allonge : 4,50 m ; déplacement : 24 m.
+  Il cherche d'abord à désorienter les intrus avec confusion, lenteur et cécité/surdité, puis emploie ses morsures et ses sorts offensifs si les intrus persistent.
+  Guérison accélérée 5 ; immunité aux maladies, aux poisons et aux effets mentaux. Vision dans le noir à 18 m, vision nocturne et détection de l'invisibilité permanente ; Perception +42.
+
+resource: Sorts de niveau 1 | 8/jour, réserve commune | Armure de mage, bouclier, projectile magique, rayon affaiblissant et charme-personne ; DD 17 lorsque nécessaire.
+resource: Sorts de niveau 2 | 8/jour, réserve commune | Image miroir, invisibilité, rayon ardent et cécité/surdité ; DD 18 lorsque nécessaire.
+resource: Sorts de niveau 3 | 7/jour, réserve commune | Lenteur, éclair et dissipation de la magie ; DD 19 lorsque nécessaire.
+resource: Sorts de niveau 4 | 5/jour, réserve commune | Confusion et assassin imaginaire ; DD 20.
+resource: Porte dimensionnelle | À volonté | Seulement à l'intérieur du site sacré, zones N1 à N5.
+resource: Alarme | 3/jour | Prévenir l'approche d'intrus dans les accès surveillés.
+resource: Répulsion | 1/jour | Volonté DD 23.
+resource: Bannissement et renvoi | 1/jour chacun | Volonté DD 22 et DD 21 respectivement ; contre les créatures extraplanaires.
+
+step: Préparation quotidienne
+  do: Lancer armure de mage et surveiller les accès avec alarme.
+  note: Le bonus d'armure est déjà inclus dans la CA 31 ; décompter cet emplacement de niveau 1.
+
+step: Des combats se font entendre à proximité, notamment dans la zone N2
+  do: Lancer image miroir et bouclier avant l'arrivée des intrus, si le délai le permet.
+  note: Ces deux protections ne sont pas incluses dans le profil ; bouclier porte la CA à 35. Chaque sort demande sa propre action.
+
+step: Il accueille les intrus sous une apparence humanoïde
+  do: Employer l'une de ses 12 formes précises pour parlementer et demander leur départ ; reprendre sa forme de naga avant de combattre avec ses six morsures.
+  note: Diplomatie +28, Bluff +28 et Psychologie +39 ; son changement de forme ne permet pas d'inventer d'autres identités physiques.
+
+## Ouverture
+
+step: Plusieurs intrus sont regroupés
+  do: Lancer confusion sur le groupe, Volonté DD 20.
+  note: La zone a un rayon de 4,50 m. Privilégier les adversaires susceptibles de se retourner contre leurs alliés ; son immunité aux effets mentaux le protège lui-même de confusion.
+
+step: Les intrus sont trop dispersés pour confusion, ou leur avancée doit être freinée
+  do: Lancer lenteur sur les ennemis accessibles, Volonté DD 19.
+  note: Jusqu'à 9 cibles, distantes de 9 m au maximum les unes des autres ; une cible ralentie ne peut plus effectuer d'attaque à outrance.
+
+step: Plusieurs combattants menacent de l'encercler immédiatement
+  do: Lancer répulsion pour gêner leur approche, Volonté DD 23.
+  note: Exploiter les rounds gagnés pour lancer ses sorts de désorientation ; répulsion n'empêche pas les tirs ou les sorts ennemis.
+
+## Rounds suivants
+
+step: Un combattant dangereux résiste au premier contrôle
+  do: Lancer cécité/surdité en choisissant la cécité, Vigueur DD 18.
+  note: Privilégier un adversaire dont la précision dépend de la vue ; si sa Vigueur paraît trop solide, tenter lenteur ou confusion sur sa Volonté lors d'un autre round.
+
+step: Une protection magique ennemie compromet ses sorts ou ses morsures
+  do: Tenter une dissipation de la magie ciblée.
+  note: Les sorts de naga sont lancés au NLS 9 ; ne pas employer le NLS 14 de ses pouvoirs magiques pour ce test.
+
+step: Une créature extraplanaire joue un rôle décisif dans le combat
+  do: Tenter renvoi, Volonté DD 21, ou bannissement, Volonté DD 22.
+  note: Réserver ces pouvoirs aux cibles qu'ils peuvent effectivement renvoyer vers leur plan d'origine.
+
+step: Les intrus persistent et une cible est déjà à portée de 4,50 m
+  do: Effectuer une attaque à outrance de 6 morsures +21, chacune à 2d6+6 dégâts plus saignement.
+  note: Concentrer les morsures sur une cible dangereuse ou déjà affaiblie. Un déplacement ordinaire ne permet pas de conserver cette attaque à outrance.
+
+step: Il doit rejoindre une cible au lieu de rester sur place
+  do: Se déplacer jusqu'à 24 m, puis porter une seule morsure +21 si la cible est à portée.
+  note: Exploiter son allonge pour atteindre un adversaire sans s'enfoncer au milieu du groupe.
+
+step: Les intrus restent à distance et les sorts de désorientation ne suffisent plus
+  do: Lancer éclair sur plusieurs adversaires alignés, ou rayon ardent sur une cible isolée ; employer projectile magique pour achever une cible très blessée.
+  note: Éclair inflige 9d6 dégâts d'électricité, Réflexes DD 19 pour réduire de moitié ; rayon ardent fournit deux rayons de 4d6 dégâts de feu, chacun avec une attaque de contact à distance ; projectile magique produit cinq projectiles de 1d4+1 dégâts.
+
+step: Une cible prioritaire paraît vulnérable aux effets de peur
+  do: Envisager assassin imaginaire si les contrôles habituels échouent et qu'il faut éliminer cette menace.
+  note: Volonté DD 20 pour reconnaître l'illusion, puis Vigueur DD 20 pour éviter la mort ; un succès à ce second jet laisse 3d6 dégâts. Le sort partage les cinq emplacements de niveau 4 avec confusion.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter une morsure ; utiliser Attaques réflexes pour répondre à plusieurs occasions distinctes.
+  note: Jusqu'à cinq attaques d'opportunité par round. Immobilisation permet de tenter d'arrêter un déplacement seulement si celui-ci provoque dans une case adjacente ; ce don ne couvre pas toute son allonge.
+
+step: Il doit lancer un sort alors qu'un ennemi le menace
+  do: Lancer sur la défensive si nécessaire, ou chercher une position permettant de lancer sans être menacé.
+  note: Incantation au combat améliore ses tests de concentration défensifs ; image miroir et bouclier l'aident à tenir pendant ces échanges.
+
+## Repli
+
+step: Il est encerclé, ses protections ont disparu ou ses PV diminuent fortement
+  do: Employer porte dimensionnelle pour gagner une position plus favorable dans les zones N1 à N5, puis reprendre la défense au tour suivant.
+  note: Aucune autre action après cette téléportation avant son prochain tour. Sa guérison accélérée lui rend 5 PV par round pendant ce repositionnement.
+
+step: Les intrus continuent de menacer les chambres, même lorsqu'il est gravement blessé
+  do: Poursuivre le combat jusqu'à la mort.
+  note: Sa garde relève d'un mandat divin : aucun seuil de PV ne provoque une fuite ou l'abandon des chambres.

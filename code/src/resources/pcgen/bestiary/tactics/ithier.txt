@@ -1,0 +1,90 @@
+## Avant le combat
+
+note: Profil
+  Ithier, marcheur écarlate de taille Très Grande, extérieur loyal mauvais, FP 17 : un manipulateur qui affaiblit la volonté des intrus avant de les retourner contre leurs alliés.
+  272 pv, CA 32, résistance à la magie 27, guérison accélérée 10 ; immunité à l'acide, au froid et au poison ; vulnérabilité à l'électricité.
+  Deux griffes +28 (3d6+9, critique 19–20, plus saignement) et un tentacule +23 (4d6+4, plus paralysie et saignement). Allonge de 9 m, espace occupé de 4,50 m.
+  Déplacement et escalade à 12 m ; marche dans les airs permanente. Vision dans le noir à 18 m, perception du sang et télépathie à 90 m.
+
+resource: Emplacements de niveau 6 | 3/jour | dissipation suprême ; NLS 19
+resource: Emplacements de niveau 5 | 4/jour partagés | brume mentale et domination de personne, DD 24 ; NLS 19
+resource: Emplacements de niveau 4 | 4/jour partagés | invisibilité suprême et énergie négative (enervation) ; NLS 19
+resource: Confusion partielle à incantation rapide | 3/jour | DD 20 ; action rapide ; NLS 16
+resource: Confusion | 3/jour | DD 23 ; NLS 16
+resource: Exigence | 3/jour | DD 27 ; NLS 16
+resource: Débilité | 1/jour | DD 24 ; NLS 16
+resource: Aliénation mentale | 1/jour | DD 26 ; NLS 16
+resource: Vision lucide | 1/jour | NLS 16
+resource: Rayon d'acide | 12/jour | 1d6+8 dégâts d'acide ; NLS 19
+resource: Pouvoirs permanents | permanents | marche dans les airs et détection de pensées, DD 21
+resource: Communication à distance | à volonté | pouvoir magique sending ; NLS 16
+
+step: Des intrus approchent
+  do: Utiliser ses sens et sa détection de pensées permanente pour repérer les adversaires et identifier les combattants bien armés.
+  do: Choisir une position permettant de garder ses distances grâce à la marche dans les airs et à son allonge de 9 m.
+  note: L'ouverture prévue commence par brume mentale ; l'invisibilité suprême vient au deuxième round.
+
+step: Des illusions ou des dissimulations trompeuses sont soupçonnées
+  do: Activer vision lucide si le temps le permet.
+
+## Ouverture
+
+step: Premier round
+  do: Lancer brume mentale sur la zone occupée par les intrus, en couvrant autant de cibles que possible ; Volonté DD 24.
+  do: Ajouter confusion partielle à incantation rapide sur un guerrier, un barbare ou un autre adversaire bien armé ; Volonté DD 20.
+  note: Les victimes de la brume qui ratent leur sauvegarde subissent un malus de −10 aux tests de Sagesse et aux sauvegardes de Volonté ; les pouvoirs mentaux suivants deviennent bien plus dangereux.
+
+step: Deuxième round
+  do: Lancer invisibilité suprême, puis se déplacer pour éviter le contact immédiat tout en conservant une ligne d'attaque.
+  do: Employer une deuxième confusion partielle rapide sur un combattant bien armé ; Volonté DD 20.
+  note: Les quatre emplacements de niveau 4 servent aussi à énergie négative ; les quatre emplacements de niveau 5 servent aussi à domination de personne.
+
+## Rounds suivants
+
+step: Une utilisation de confusion partielle rapide reste disponible
+  do: La lancer en action rapide sur un combattant bien armé, en complément de l'action principale du round ; Volonté DD 20.
+  note: Trois utilisations par jour au total : cette tactique ne peut pas continuer indéfiniment.
+
+step: Un humanoïde dangereux a été affaibli par la brume
+  do: Tenter domination de personne ; Volonté DD 24. Lui ordonner de combattre ses alliés si la domination réussit.
+  note: Réserver ce sort aux humanoïdes ; privilégier une cible dont l'armement menace réellement le groupe.
+
+step: La cible de la gemme de capture d'âme de la zone B19 est affectée par domination de personne ou exigence
+  do: Lui ordonner d'aller chercher la gemme afin qu'elle tombe victime de ses effets.
+
+step: Plusieurs adversaires peuvent être atteints ensemble
+  do: Lancer confusion sur eux ; Volonté DD 23. Privilégier ceux qui ont subi les effets de brume mentale.
+
+step: Un lanceur de sorts profanes reste dangereux
+  do: Employer débilité sur lui ; Volonté DD 24.
+
+step: Un adversaire important doit être neutralisé durablement
+  do: Employer aliénation mentale ; Volonté DD 26.
+
+step: Des protections magiques empêchent ses attaques ou ses pouvoirs d'agir
+  do: Utiliser dissipation suprême pour tenter de retirer les protections concernées.
+
+step: Les pouvoirs mentaux sont inefficaces ou les cibles y résistent
+  do: Employer énergie négative à distance, ou profiter de l'invisibilité suprême pour attaquer au corps à corps.
+  note: Le rayon d'acide fournit une attaque à distance supplémentaire quand il faut économiser les emplacements de sorts.
+
+step: Un adversaire est à portée et Ithier peut consacrer son round aux attaques
+  do: Effectuer une attaque à outrance : deux griffes +28 et un tentacule +23, avec leurs dégâts, saignements et paralysie.
+  note: Le profil fourni ne précise pas le montant du saignement, ni le DD et la durée de la paralysie.
+  note: Exploiter son allonge de 9 m et Réflexes de combat pour saisir les attaques d'opportunité provoquées à sa portée.
+
+step: Il doit frapper tout en changeant de position
+  do: Utiliser Attaque éclair pour porter une seule attaque de griffe et poursuivre son déplacement, dans la limite de 12 m au total.
+
+step: Le combat se prolonge
+  do: Tenir Ileosa informée de la bataille par télépathie tant qu'elle se trouve dans les 90 m.
+  note: Récupérer 10 pv par round grâce à la guérison accélérée, sans dépasser 272 pv ; chercher à limiter l'exposition aux attaques électriques.
+
+## Repli
+
+step: Les intrus battent en retraite
+  do: Les poursuivre à travers la Reine engloutie, mais s'arrêter à l'entrée des zones inondées.
+
+step: Ses points de vie diminuent, même jusqu'au seuil critique
+  do: Continuer le combat jusqu'à la mort ; aucun seuil de fuite.
+  note: Ses changements de position servent à poursuivre le combat et à profiter de sa guérison accélérée.

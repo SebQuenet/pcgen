@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Mog-Lathar, créature artificielle de pierre de taille TG, chaotique mauvaise et intelligente. 78 pv, CA 16, solidité 8 et immunités des créatures artificielles.
+  Deux coups +15 (2d6+10 chacun) en attaque à outrance ; allonge et espace occupé de 4,50 m. Marche et escalade à 9 m ; vision dans le noir à 18 m et vision nocturne.
+  Il écrase les ennemis regroupés par piétinement ou Succession d'enchaînements, puis concentre ses deux coups sur une cible isolée.
+
+step: Les intrus approchent
+  do: Choisir une position permettant de les frapper à 4,50 m et de leur barrer le passage avec son corps massif
+  note: Perception +8 ; sa solidité amortit les coups, mais sa CA 16 et ses Réflexes +0 rendent les échanges prolongés dangereux
+
+## Ouverture
+
+step: Plusieurs ennemis de taille G ou inférieure se trouvent sur un trajet praticable
+  do: Piétiner en action complexe, en traversant entièrement leurs espaces sur un déplacement maximal de 18 m
+  note: 2d6+15 dégâts par cible, une seule fois par round ; chaque victime choisit une attaque d'opportunité avec un malus de -4 ou un jet de Réflexes DD 23 pour réduire les dégâts de moitié
+
+step: Une cible est à plus de 4,50 m et le piétinement ne convient pas
+  do: Avancer de 9 m au maximum, puis porter un seul coup +15 (2d6+10) si elle est désormais à portée
+  note: Utiliser l'escalade à 9 m pour contourner un obstacle si une paroi praticable offre un passage ; privilégier une cible peu protégée
+
+step: Une cible est déjà à portée et les ennemis sont dispersés
+  do: Attaque à outrance : deux coups +15 (2d6+10 chacun) contre la même cible
+
+## Rounds suivants
+
+step: Au moins trois ennemis forment une chaîne de cibles adjacentes entre elles, toutes à 4,50 m ou moins
+  do: Utiliser Succession d'enchaînements en action simple, en commençant par la cible la plus facile à toucher
+  note: Un coup +15 (2d6+10), puis, après chaque réussite, un coup identique contre une autre cible adjacente à la précédente et à portée ; arrêter au premier échec. Une seule attaque par cible ; CA réduite à 14 jusqu'au prochain tour
+
+step: Une cible prioritaire reste à portée
+  do: Répéter les deux coups de l'attaque à outrance et concentrer les dégâts sur elle
+  note: Contre une CA faible, activer Attaque en puissance avant d'attaquer : coups +13 (2d6+14 chacun), jusqu'au prochain tour. Conserver +15 contre une cible difficile à toucher
+
+step: Les ennemis se regroupent à nouveau sur un trajet dégagé
+  do: Reprendre le piétinement pour toucher plusieurs adversaires et finir près d'une cible vulnérable
+  note: Le piétinement occupe le round entier ; aucun coup supplémentaire ce tour-ci
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup, avec les modificateurs d'Attaque en puissance si elle est active
+  note: Une seule attaque d'opportunité par round ; exploiter l'allonge pour punir les déplacements imprudents
+
+## Repli
+
+step: À 20 pv ou moins, si une voie de fuite reste accessible
+  do: Se retirer vers un obstacle ou une paroi praticable, puis utiliser l'escalade à 9 m pour distancer les poursuivants
+  note: S'il est menacé au départ, privilégier le désengagement ; ce déplacement protège seulement la sortie de son espace initial contre les attaques d'opportunité
+
+step: La fuite est impossible
+  do: Concentrer les deux coups sur l'adversaire qui bloque le passage ; piétiner si cela permet de traverser les ennemis de taille G ou inférieure

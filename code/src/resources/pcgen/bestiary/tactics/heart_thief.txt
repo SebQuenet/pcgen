@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Heart Thief, extérieur natif de taille G, chaotique mauvais et intelligent, qui prépare une embuscade en forêt avec des pièges et des animaux sous son contrôle.
+  114 PV, CA 24 ; déplacement 12 m, escalade 6 m, allonge 3 m, vision dans le noir 18 m ; Initiative +7, Perception +19, Discrétion +14.
+  Attaque à outrance : 2 griffes +17 (1d8+6, critique 19–20 et agrippement), cornes +17 (2d6+6).
+  RD 10/argent, RM 20 ; immunité au feu, aux maladies, au poison et à la terreur ; résistance à l'acide 10 et au froid 10.
+
+resource: Passage sans trace et communication avec les animaux | constants | approche discrète et renseignements auprès de la faune
+resource: Domination d'animal | à volonté | Volonté DD 18 ; uniquement les animaux
+resource: Atavisme | à volonté | Vigueur DD 19 ; renforce un animal, pas le Heart Thief
+resource: Voyage par les arbres | à volonté | lui-même et 50 livres d'objets seulement
+resource: Marche dans les airs | 3/jour | déplacement au-dessus du terrain dangereux
+resource: Collet | 3/jour | pièges préparés sur les passages obligés
+resource: Pierres acérées | 3/jour | Réflexes DD 19 ; contrôle des surfaces rocheuses
+resource: Convocation d'alliés naturels VII | 3/jour | animaux uniquement ; durée 9 rounds au NLS 9
+resource: Convocation d'un baykok | 1/jour | pouvoir de niveau 3 ; 35 % de réussite
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Repérer un végétal vivant de taille G ou supérieure pour fuir par voyage par les arbres ; préparer des collets avec des lianes ou des cordes sur les accès étroits.
+  note: Prévoir trois rounds de préparation par collet ; conserver un passage libre pour ses propres déplacements.
+
+step: Des animaux sont disponibles avant l'arrivée des intrus
+  do: Les dominer, puis employer atavisme sur ceux qui combattront ; les placer pour intercepter les intrus et protéger sa retraite.
+  note: Atavisme dure 9 minutes ; communication avec les animaux permet de leur donner des instructions compréhensibles.
+
+step: L'affrontement est imminent et il reste hors de danger
+  do: Activer marche dans les airs si le terrain le justifie ; tenter la convocation du baykok avant d'engager le combat.
+  note: Décompter l'utilisation quotidienne même si la convocation échoue.
+
+## Ouverture
+
+step: Les intrus doivent traverser une surface rocheuse
+  do: Employer pierres acérées pour séparer l'avant-garde de ses soutiens, puis rester sur le bord de la zone ou au-dessus grâce à marche dans les airs.
+  note: Le déplacement dans la zone inflige des dégâts ; le jet de Réflexes DD 19 concerne la blessure qui réduit la vitesse.
+
+step: Les ennemis sont encore éloignés et aucun animal allié ne les occupe
+  do: Employer convocation d'alliés naturels VII pour interposer des animaux et menacer les adversaires vulnérables.
+  note: Convoquer près du début du combat pour profiter des 9 rounds de présence ; choisir seulement des animaux autorisés par ce pouvoir.
+
+step: Une cible vulnérable est déjà à 3 m ou moins et une attaque à outrance est possible
+  do: Concentrer les deux griffes et les cornes sur elle ; tenter l'agrippement gratuit après une griffe réussie si elle est de taille M ou inférieure.
+  note: Privilégier un lanceur de sorts isolé ou une victime retenue par un collet.
+
+## Rounds suivants
+
+step: Une cible reste à portée et il peut consacrer son round aux attaques
+  do: Répéter l'attaque à outrance et concentrer les dégâts jusqu'à mettre cette cible hors de combat.
+  note: Employer Attaque en puissance contre une cible facile à toucher ; y renoncer si les attaques échouent trop souvent.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer de 12 m au maximum, puis employer Frappe décisive avec les cornes : +17, 4d6+6.
+  note: Frappe décisive accompagne une action d'attaque simple ; elle ne s'ajoute ni à une charge ni à une attaque à outrance.
+
+step: Il a agrippé une cible et peut l'isoler sans subir les coups de tout le groupe
+  do: Consacrer l'action simple au maintien de la lutte ; choisir d'infliger les dégâts d'une griffe ou de déplacer la victime vers ses animaux alliés.
+  note: Le maintien de la lutte remplace l'attaque à outrance ; relâcher la prise si l'encerclement devient dangereux.
+
+step: Un animal ennemi représente une menace importante
+  do: Tenter domination d'animal sur lui, Volonté DD 18, puis l'envoyer gêner ses anciens alliés.
+  note: Ce pouvoir ne contrôle pas les humanoïdes ni les créatures d'un autre type.
+
+step: Ses premiers animaux disparaissent ou les ennemis débordent sa position
+  do: Dépenser une nouvelle convocation pour rétablir un écran ; employer pierres acérées sur un autre accès rocheux si cela coupe réellement une poursuite.
+  note: Garder son trajet vers le végétal de fuite libre et éviter de multiplier les préparatifs pendant que les adversaires le frappent.
+
+## Repli
+
+step: PV à 35 ou moins, ou adversaires capables de l'abattre rapidement
+  do: Relâcher toute victime agrippée, rejoindre le végétal repéré et employer voyage par les arbres vers un autre végétal vivant de même espèce.
+  note: Le végétal d'entrée doit être au moins de sa taille ; ce pouvoir n'emporte aucun prisonnier ni allié vivant, seulement lui et au plus 50 livres d'objets.
+
+step: Aucun végétal utilisable n'est accessible immédiatement
+  do: Faire couvrir son recul par les animaux sous son contrôle ; gagner un passage sûr à 12 m, grimper à 6 m ou utiliser marche dans les airs si elle est active.
+  note: Rejoindre un végétal adapté dès que possible pour achever la fuite par voyage par les arbres.

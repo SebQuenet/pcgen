@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  The Baelmourn est un assemblage mort-vivant de taille TG, sans intelligence, constitué surtout de squelettes. Il possède 161 pv, une CA de 25 et une allonge de 4,50 m ; il occupe un espace de 4,50 m.
+  Attaque à outrance : 2 griffes-lames +21 (1d8+11 plus 1d4 de saignement et saisie), puis 2 griffes +21 (1d8+11 et saisie).
+  Déplacement terrestre de 12 m ; escalade de 9 m, Escalade +19. Vision dans le noir à 18 m, vision à 360°, Perception +0.
+
+note: Défenses
+  Réduction des dégâts de 5/contondant, résistance au froid de 5 et immunités des morts-vivants.
+  Ses armures d'os et de métal sont déjà comprises dans sa CA ; elles ne demandent aucune activation.
+
+note: Saisie et constriction
+  BMO de lutte de base +29. La saisie fonctionne sur les cibles de taille G ou inférieure.
+  La constriction accompagne les tests de lutte réussis, y compris celui de la saisie initiale ; ses dégâts ne sont pas précisés dans le bloc fourni.
+
+## Ouverture
+
+step: Un adversaire est déjà à 4,50 m ou moins
+  do: Effectuer l'attaque à outrance avec les quatre griffes, en commençant par les griffes-lames pour provoquer le saignement.
+  do: Tenter une saisie gratuite après une touche sur une cible de taille admissible.
+  note: Une saisie réussie le met lui-même en lutte ; appliquer les conséquences de cet état aux attaques restantes.
+
+step: Un adversaire peut être atteint après un déplacement de 12 m au maximum
+  do: Avancer pour placer l'adversaire dans son allonge de 4,50 m, puis porter une seule attaque de griffe-lame +21 (1d8+11 plus 1d4 de saignement et saisie).
+  note: Un déplacement ordinaire suivi d'une attaque ne permet pas les quatre attaques de l'attaque à outrance.
+
+step: Aucun adversaire ne peut être attaqué après un déplacement simple
+  do: Se rapprocher par un double déplacement, jusqu'à 24 m au sol ou 18 m en escalade.
+  note: Il ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Il tient un adversaire en lutte
+  do: Consacrer son action simple à maintenir la lutte, avec un BMO de base de +29, puis blesser la prise avec une griffe si le test réussit.
+  do: Appliquer également la constriction lors du test de lutte réussi.
+  note: Maintenir la lutte et effectuer une attaque à outrance sont deux choix distincts pour ce round.
+
+step: Aucune prise n'est maintenue et un adversaire reste dans son allonge
+  do: Répéter l'attaque à outrance et tenter une nouvelle saisie après une touche.
+  note: Le saignement des griffes-lames entretient la pression ; les saignements identiques ne s'additionnent pas.
+
+step: Les adversaires s'écartent ou gagnent une hauteur accessible
+  do: Les poursuivre à 12 m au sol ou à 9 m en escalade, puis attaquer si une action simple reste disponible.
+  note: Exploiter son allonge de 4,50 m lorsqu'un adversaire provoque une attaque d'opportunité dans sa zone menacée ; une griffe qui touche peut aussi permettre une saisie.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à attaquer et à saisir, sans organiser de retraite fondée sur ses blessures.
+  note: Sans intelligence, il ne prépare pas de fuite tactique ; à 0 pv, ce mort-vivant est détruit.

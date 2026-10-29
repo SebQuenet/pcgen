@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Dahruun Firehorn, minotaure ancien de taille G, chaotique mauvais, combat pour Baphomet. 133 pv ; CA 23, contact 9 ; déplacement 6 m, allonge 3 m.
+  Grande hache +20/+15/+10 (3d6+10, critique x3), cornes +15 (1d8+3) ; charge puissante aux cornes (4d6+10).
+  Lutte et bousculade +24 ; Perception +20, vision dans le noir à 18 m ; Discrétion +9, ou +17 dans les labyrinthes.
+
+note: Pouvoirs magiques
+  NLS 9 ; concentration +12. Chaque utilisation demande une action simple, sauf glyphe de garde, qui exige 10 minutes de préparation.
+
+resource: Nappe de brouillard | 3/jour | masquer les lignes de tir ; gêne également la vision de Dahruun
+resource: Glyphe de garde | 3/jour | DD 16 ; défense préparée avant l'arrivée des intrus
+resource: Façonnage de la pierre | 3/jour | modifier un passage ou un obstacle de pierre existant
+resource: Dédale | 1/jour | isoler une créature ; aucun jet de sauvegarde, résistance à la magie applicable
+resource: Mur de pierre | 1/jour | séparer les adversaires ou bloquer un passage ; doit prendre appui sur de la pierre existante
+
+step: Auprès des brimoraks avant le combat
+  do: Rester prêt à charger les intrus
+  note: Dahruun a déjà réussi son jet contre leur souffle de fumée ; il n'est pas fiévreux lorsqu'il leur est adjacent. Cela ne lui donne aucune immunité générale au feu ou à la fumée.
+
+step: Il dispose de temps pour préparer les accès
+  do: Placer un glyphe de garde sur un passage que devront emprunter les intrus
+  note: Préserver une trajectoire dégagée pour sa charge d'ouverture.
+
+## Ouverture
+
+step: Le PJ le plus proche peut être chargé
+  do: Charger ce PJ et porter un coup de cornes avec charge puissante, pour 4d6+10 dégâts
+  note: Parcourir au moins 3 m en ligne droite, jusqu'à 12 m ; terminer à portée de ses cornes. La charge donne +2 à l'attaque et réduit sa CA à 21 jusqu'à son prochain tour.
+
+step: Le PJ le plus proche ne peut pas être chargé
+  do: Avancer jusqu'à pouvoir le frapper ; s'il reste une action simple, porter une attaque de grande hache +20 (3d6+10, critique x3)
+  note: Un déplacement suivi d'une attaque ne permet pas l'attaque à outrance.
+
+## Rounds suivants
+
+step: Dahruun tombe à 70 pv ou moins et possède encore dédale
+  do: Choisir de préférence un PJ qui ne lance pas de sorts, se placer à 9 m ou moins de lui, puis utiliser dédale et accompagner la cible grâce à maîtrise des labyrinthes
+  note: Les 9 m sont la distance maximale permettant de suivre la victime dans le dédale. Le pouvoir isole ce PJ avec Dahruun, loin de ses alliés.
+
+step: Dahruun et sa victime sont dans le dédale
+  do: Rejoindre la victime et engager une lutte avec un BMO de +24
+  note: Il cherche à immobiliser et tuer ce PJ ; engager la lutte ne lui accorde pas gratuitement une attaque de cornes.
+
+step: Il tient déjà sa victime en lutte
+  do: Maintenir la prise aux tours suivants et choisir d'infliger les dégâts de ses cornes lors des manœuvres de maintien réussies
+  note: Le maintien bénéficie du bonus habituel de +5 si la victime ne s'est pas libérée. S'il perd la prise, tenter de la reprendre.
+
+step: Il combat hors du dédale et peut rester au contact d'un adversaire
+  do: Effectuer une attaque à outrance : grande hache +20/+15/+10 (3d6+10, critique x3), puis cornes +15 (1d8+3)
+  note: Concentrer les coups sur la même cible. Contre une cible facile à toucher, Attaque en puissance permet de privilégier les dégâts au prix de la précision.
+
+step: Plusieurs ennemis sont adjacents entre eux et à portée de sa grande hache
+  do: Envisager Enchaînement ou Succession d'enchaînements pour frapper plusieurs adversaires
+  note: Cette action remplace l'attaque à outrance ; chaque attaque supplémentaire exige que la précédente ait touché. Sa CA baisse de 2 jusqu'à son prochain tour.
+
+step: Les tireurs le harcèlent pendant qu'il cherche à rejoindre une cible
+  do: Placer une nappe de brouillard pour couper leur ligne de vue, puis se rapprocher à couvert
+  note: Sa vision dans le noir ne traverse pas le brouillard ; il doit revoir sa cible avant de la charger.
+
+step: Il doit empêcher plusieurs adversaires de l'attaquer ensemble
+  do: Utiliser mur de pierre pour diviser le groupe, ou façonnage de la pierre pour modifier un passage existant
+  note: Privilégier une séparation qui lui laisse accès à une victime au corps à corps.
+
+step: Sa victime meurt ou quitte le dédale
+  do: Sortir du dédale par une action de mouvement grâce à maîtrise des labyrinthes, puis reprendre le combat contre les autres PJ
+
+## Repli
+
+step: Quelle que soit la quantité de pv restante
+  do: Combattre jusqu'à la mort pour la gloire de Baphomet
+  note: Le passage dans le dédale sert à tuer une victime isolée ; Dahruun ne cherche pas à fuir.

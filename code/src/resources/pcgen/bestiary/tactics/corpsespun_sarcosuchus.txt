@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Corpsespun Sarcosuchus, crocodile sanguinaire mort-vivant de taille gigantesque, neutre mauvais, FP 10. Intelligence 1 : il attaque surtout l'ennemi le plus proche.
+  Morsure +19 (3d6+14, critique 19–20, étreinte et transfert d'araignées), queue +14 (4d8+7 et transfert d'araignées). Projection d'araignées et roulade mortelle constituent ses attaques décisives.
+  138 pv ; CA 24 ; RD 10/magie ; résistance à la canalisation +2 ; immunités des morts-vivants. Déplacement terrestre 6 m, nage 9 m ; espace occupé 6 m, allonge 4,50 m.
+
+note: Vigilance
+  Perception +14, vision dans le noir à 18 m. Discrétion −1, ou +7 dans l'eau si le terrain permet de s'y dissimuler.
+
+resource: Projection d'araignées | à volonté, tous les 1d4 rounds | action simple ; cône de 6 m
+
+step: Dans le repaire d'Illaghri
+  do: Garder son garde-manger ; sortir attaquer si les intrus font du bruit ou restent plus de 4 rounds près de l'entrée
+
+## Ouverture
+
+step: Un ennemi peut être pris dans le cône de 6 m
+  do: Projeter les araignées en direction des intrus, en couvrant plusieurs adversaires si possible
+  note: 3d6 dégâts d'essaim ; Réflexes DD 23 pour réduire de moitié. Distraction : Vigueur DD 23 pour annuler. Cette action simple remplace la morsure de ce round.
+
+step: La projection ne peut pas atteindre l'ennemi
+  do: Avancer vers l'adversaire le plus proche ; le mordre dès qu'il est à 4,50 m ou moins
+  note: Morsure +19, 3d6+14 ; si elle touche, tenter gratuitement l'étreinte avec un test de lutte à +31.
+
+## Rounds suivants
+
+step: La projection est de nouveau disponible et des ennemis sont dans son cône
+  do: Réutiliser la projection d'araignées en priorité
+  note: Les araignées infligent leurs dégâts d'essaim et leur distraction chaque round pendant 1d4 rounds, puis meurent. Leur poison inflige 1d4 dégâts de Force, Vigueur DD 23, une fois par round pendant 4 rounds ; une sauvegarde réussie le neutralise.
+
+step: La projection est indisponible et une victime de sa taille ou plus petite est agrippée
+  do: Consacrer son action simple à un test de lutte à +31 pour effectuer une roulade mortelle
+  note: Sur réussite : 3d6+19 dégâts, victime à terre et prise maintenue.
+
+step: La projection est indisponible et aucune victime n'est agrippée
+  do: Mordre l'ennemi le plus proche et tenter l'étreinte ; s'il peut attaquer à outrance, ajouter un coup de queue contre un autre ennemi à portée
+  note: Morsure +19 (3d6+14, critique 19–20) et queue +14 (4d8+7). Après un déplacement ordinaire, effectuer seulement la morsure.
+
+note: Transfert d'araignées
+  Chaque attaque naturelle réussie transmet des araignées ; un adversaire qui le touche par une attaque naturelle ou à mains nues en reçoit aussi. Même effet que la projection, mais les araignées meurent après 1 round.
+
+## Repli
+
+step: Il lui reste des points de vie
+  do: Continuer à combattre jusqu'à sa destruction, sans seuil de fuite
+
+step: Les intrus fuient hors de la caverne d'Illaghri
+  do: Cesser la poursuite à 30 m au-delà de l'entrée

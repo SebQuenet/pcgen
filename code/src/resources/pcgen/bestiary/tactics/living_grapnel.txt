@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Living Grapnel, grappin métallique animé de taille M, créature artificielle neutre sans intelligence, FP 4.
+  Coup +5 (1d6+3 et étreinte) ; BMO +9 en lutte ; constriction (1d6+3). Il frappe, saisit puis écrase sa victime.
+  36 pv ; CA 16 ; solidité 10 ; immunités des créatures artificielles. Déplacement terrestre de 9 m par action de mouvement ; allonge de 1,50 m.
+  Vision dans le noir à 18 m, vision nocturne ; Perception -5.
+
+step: Il a reçu un ordre de garde
+  do: Rester à son poste et attaquer les intrus conformément à cet ordre.
+  note: Son absence d'intelligence appelle un comportement simple et répétitif.
+
+## Ouverture
+
+step: Un adversaire repéré est hors de son allonge
+  do: Avancer vers lui, jusqu'à 9 m avec une action de mouvement, puis porter un coup s'il arrive à 1,50 m.
+  note: Si deux actions de mouvement sont nécessaires pour approcher, il ne porte pas de coup ce tour-ci.
+
+step: Un adversaire est à 1,50 m
+  do: Porter un coup +5 infligeant 1d6+3 dégâts.
+  note: Si le coup touche une cible de taille M ou inférieure, tenter aussitôt l'étreinte en action libre : BMO +9 contre sa DMD, sans attaque d'opportunité. Une réussite inflige aussi 1d6+3 dégâts de constriction.
+
+## Rounds suivants
+
+step: Il tient toujours une victime en lutte
+  do: Consacrer son action simple au maintien de la lutte et choisir de lui infliger des dégâts : 1d6+3, plus 1d6+3 de constriction si le test réussit.
+  note: BMO de lutte +9 ; le bonus de circonstances de +5 au maintien porte le jet à +14 si la victime n'a pas rompu la prise depuis son tour précédent. Ces dégâts remplacent son attaque ordinaire du tour.
+
+step: La victime s'est libérée avant son tour ou aucune prise n'est établie
+  do: Frapper de nouveau un adversaire à portée et retenter l'étreinte après un coup réussi ; avancer si nécessaire.
+  note: Contre une cible de taille G ou supérieure, répéter les coups sans utiliser l'étreinte.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre les coups et la constriction jusqu'à destruction, sauf ordre contraire.
+  note: Sans intelligence et immunisé contre la terreur, il ne choisit pas de fuir pour se préserver. À 0 pv, il est détruit.

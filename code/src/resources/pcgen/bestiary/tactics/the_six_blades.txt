@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  The Six Blades est un objet animé de taille G, une créature artificielle neutre et sans intelligence. Il possède 101 pv, une CA de 22 et une solidité de 10, ainsi que les immunités des créatures artificielles.
+  Coup tranchant +21 (2d6+13), allonge de 3 m, espace occupé de 3 m. Son nom ne lui accorde pas six attaques : son profil donne une seule attaque de mêlée.
+  Déplacement au sol de 9 m ; vol de 9 m, manœuvrabilité déplorable, Vol -5. Aucune attaque à distance.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5. Ne pas lui prêter une vigilance ou une capacité de planification supérieures à ce profil.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Porter un coup tranchant +21, infligeant 2d6+13 dégâts.
+  note: Exploiter son allonge : il peut frapper une cible située à 3 m sans se placer contre elle.
+
+step: Un adversaire peut être atteint après un déplacement de 9 m ou moins
+  do: Avancer jusqu'à placer cet adversaire dans son allonge de 3 m, puis porter un coup tranchant +21 (2d6+13).
+  note: Privilégier un trajet direct et une cible accessible.
+
+step: Aucun adversaire ne peut être frappé après un déplacement simple
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour se rapprocher d'une cible.
+  note: Ce double déplacement ne laisse pas d'action pour une attaque ordinaire ce round.
+
+## Rounds suivants
+
+step: La cible reste dans son allonge de 3 m
+  do: Répéter le coup tranchant +21 (2d6+13) à chaque round.
+  note: Sa solidité de 10 et ses immunités soutiennent un combat prolongé au contact ; il ne dispose d'aucune capacité de soin indiquée.
+
+step: La cible tombe ou devient inaccessible, et un autre adversaire est à portée
+  do: Reporter le coup tranchant sur cet adversaire.
+
+step: Une cible quitte son allonge
+  do: Se déplacer jusqu'à 9 m pour la remettre à portée, puis frapper si possible ; sinon, effectuer un double déplacement pour s'en rapprocher.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup tranchant +21 (2d6+13).
+  note: Sans don ou capacité supplémentaire indiqué, il dispose d'une seule attaque d'opportunité par round.
+
+step: Le vol permet d'atteindre une cible hors d'accès depuis le sol
+  do: Voler vers elle à 9 m par déplacement et frapper si elle entre dans son allonge et qu'il lui reste son action d'attaque.
+  note: Avec Vol -5 et une manœuvrabilité déplorable, privilégier les trajectoires simples ; ne pas compter sur le vol stationnaire ou les virages serrés.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre le combat sans seuil de fuite spontané, jusqu'à sa destruction à 0 pv.
+  note: Créature artificielle sans intelligence, il ne prend pas de décision de survie fondée sur la peur ; aucun moyen de fuite spécial n'est indiqué.

@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Tuirziaz, géante des ombres de taille G, loyale mauvaise, FP 15 : 218 pv, CA 29, déplacement de 12 m. Elle tient sa position et affaiblit d’abord les lanceurs de sorts profanes par absorption d’énergie.
+  Fouet +1 de froid intense +27/+22/+17, allonge de 6 m : 1d4+13 dégâts non létaux et 1d6 de froid, critique sur 19–20, absorption d’énergie sur la première attaque réussie. Coup +20 à 3 m : 1d8+6. Rocher +11 : 1d8+6 et absorption d’énergie.
+  Résistance au froid 10, manteau d’ombre et réception de rochers. Vision dans le noir à 36 m et vision nocturne ; Perception +17, ou +21 dans la pénombre.
+
+resource: Sorts de niveau 3 | 3/jour au total | déplacement et charme-monstre, Volonté DD 17 pour le charme ; réserve commune
+resource: Sorts de niveau 4 | 3/jour au total | domination de personne et immobilisation de monstre, Volonté DD 18 ; réserve commune
+resource: Suggestion de groupe | 2/jour | Volonté DD 19
+resource: Baguette de soins intensifs | 12 charges | une charge par activation
+
+step: Les intrus approchent
+  do: Repérer leurs lanceurs de sorts profanes et les combattants armés ; privilégier la pénombre si elle est disponible
+  note: elle parle le géant et le thassilonien ; ses suggestions et ses ordres verbaux doivent être compris
+
+## Ouverture
+
+step: Premier round
+  do: Activer sa représentation bardique d’inspiration vaillante, puis lancer déplacement sur elle-même
+  note: déplacement impose 50 % de risque d’échec aux attaques qui se fient à sa position apparente ; à NLS 19, le sort dure 19 rounds
+
+step: Après cette préparation, si elle n’est pas déjà en M10
+  do: Reculer vers M10, à 12 m par action de mouvement, et s’établir sur la rune au sol ou près d’elle
+  note: elle veut y communiquer avec Xanderghul et y soutenir la mêlée ; un déplacement important lui laisse seulement une attaque simple, pas une attaque à outrance
+
+## Rounds suivants
+
+step: Un lanceur de sorts profanes est à portée du fouet
+  do: Commencer ses attaques du round contre lui ; si elle peut rester sur place, effectuer les trois attaques de fouet à +27/+22/+17
+  note: chercher d’abord la première touche pour appliquer l’absorption d’énergie et réduire ses capacités magiques ; les bonus de l’inspiration s’ajoutent aux valeurs indiquées
+
+step: La première touche du round a atteint un lanceur de sorts, ou aucun n’est accessible
+  do: Diriger les attaques restantes contre les utilisateurs d’armes ; ajouter le coup à +20 lors d’une attaque à outrance si un adversaire est à 3 m ou moins
+  note: rester près de la rune et exploiter les 6 m d’allonge du fouet pour atteindre les cibles prioritaires
+
+step: Un combattant dépend de son arme
+  do: Remplacer ponctuellement une attaque de fouet par une tentative de désarmement
+  note: utiliser le BMO +27 comme base, puis les modificateurs applicables au fouet et à l’attaque remplacée ; elle ne possède pas Science du désarmement
+
+step: Elle attaque avec ses armes et dispose de son action rapide
+  do: Activer Frappe magique pour ajouter +4 aux dégâts d’armes pendant ce round
+  note: ce bonus, fondé sur son NLS 19, s’ajoute aux dégâts indiqués
+
+step: Plusieurs ennemis comprennent sa langue et peuvent être écartés par une consigne plausible
+  do: Lancer suggestion de groupe, Volonté DD 19, pour leur faire quitter le combat
+  note: proposer une conduite raisonnable dans la situation ; une consigne manifestement suicidaire ne convient pas
+
+step: Un adversaire particulièrement dangereux exige un contrôle immédiat
+  do: Lancer immobilisation de monstre, Volonté DD 18 ; contre un humanoïde, envisager domination de personne au même DD pour lui ordonner de contenir ses alliés
+  note: ces deux sorts consomment la même réserve de trois sorts de niveau 4 ; ils remplacent ses attaques du round
+
+step: Un adversaire peut être neutralisé par la négociation
+  do: Envisager charme-monstre, Volonté DD 17, puis lui demander de cesser le combat
+  note: le charme ne donne pas un contrôle absolu ; ses alliés et elle doivent éviter de menacer la cible. Ce sort consomme la réserve qui sert aussi à déplacement
+
+step: Aucun ennemi n’est accessible au fouet et un rocher est disponible
+  do: Lancer le rocher à +11, pour 1d8+6 et absorption d’énergie, en visant de préférence un lanceur de sorts profanes
+
+step: Déplacement expire et des attaques continuent de la menacer
+  do: Relancer déplacement si un emplacement de niveau 3 reste disponible
+
+## Repli
+
+step: Elle est blessée et peut consacrer une action aux soins
+  do: Utiliser une charge de la baguette de soins intensifs, puis continuer à tenir la position près de la rune
+
+step: Le combat tourne contre elle, quel que soit son total de points de vie
+  do: Combattre jusqu’à la mort
+  note: son recul initial vers M10 sert à choisir sa position ; elle ne fuit pas pour sauver sa vie

@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Grenouille-taureau géante, animal de taille G, neutre, FP 5 ; 69 pv, CA 16. Son intelligence animale dicte des attaques simples et des réactions aux blessures.
+  Morsure +11 (2d6+12 et agrippement), allonge de 3 m ; ou langue +11 (agrippement), allonge de 9 m. Lutte +17.
+  Déplacement de 9 m au sol et à la nage ; espace occupé de 3 m. Vision nocturne, Perception +6, Discrétion +10, Natation +20, Acrobaties +10 (+14 pour sauter).
+
+## Ouverture
+
+step: L'ennemi le plus proche est à 3 m ou moins
+  do: Le mordre à +11 pour 2d6+12 dégâts, puis tenter de l'agripper avec un test de lutte à +17 si la morsure touche.
+
+step: L'ennemi le plus proche est à plus de 3 m et à 9 m ou moins
+  do: L'attaquer avec la langue à +11, puis tenter de l'agripper avec un test de lutte à +17 si l'attaque touche.
+  note: La langue sert à saisir la cible et n'inflige pas de dégâts.
+
+step: L'ennemi le plus proche est à plus de 9 m
+  do: Avancer vers lui, jusqu'à 9 m, puis utiliser la morsure s'il est à 3 m ou moins, ou la langue s'il est à 9 m ou moins.
+
+## Rounds suivants
+
+step: Au début de son tour, elle a déjà subi des dégâts d'un adversaire
+  do: Concentrer ses attaques sur la dernière créature qui lui a infligé des dégâts avant ce tour ; relâcher une autre proie si nécessaire pour attaquer cet adversaire.
+  note: Choisir la morsure à 3 m ou moins, la langue jusqu'à 9 m, ou avancer vers la cible si elle est trop loin.
+
+step: Aucun adversaire ne l'a encore blessée
+  do: Continuer d'attaquer l'ennemi le plus proche, avec la morsure ou la langue selon la distance.
+
+step: La cible qu'elle veut attaquer est déjà agrippée
+  do: Poursuivre la lutte ; chercher à lui infliger les dégâts de morsure lorsqu'elle est à portée de morsure.
+
+## Repli
+
+step: Points de vie strictement inférieurs à 10
+  do: Abandonner le combat et toute proie agrippée, bondir dans la rivière Grackle et fuir à la nage vers l'aval, à 9 m par déplacement.
+  note: La fuite prend alors le pas sur les attaques contre la dernière créature qui l'a blessée.

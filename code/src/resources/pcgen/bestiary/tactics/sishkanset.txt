@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Sishkanset, extérieur incorporel de taille M, neutre mauvais, issu du désespoir de voyageurs morts isolés. Il épie les pensées des vivants et attaque ceux qui le confrontent.
+  105 pv ; CA 19, contact 19 ; résistance à la magie 19. Vol parfait à 12 m ; toucher glaçant +14 contre la CA de contact, à 1,50 m, infligeant 6d8 de froid. Il désorganise ses ennemis par la confusion et les vents.
+
+resource: Détection des pensées | constant | Volonté DD 16 ; le voile de l'espion permet de sonder les pensées sans rompre son invisibilité, avec une ligne d'effet
+resource: Invisibilité | à volonté | durée 10 minutes ; une attaque ou un pouvoir offensif la dissipe
+resource: Confusion mineure | à volonté | une créature vivante à 15 m au plus ; Volonté DD 15 annule ; durée 1 round
+resource: Altération des vents | à volonté | DD 15 ; activation 1 minute ; modifie d'un cran les vents naturels dans une zone fixe de 3 m de rayon, pendant 10 heures
+resource: Manteau de vents | 1/jour | durée 10 minutes ; attaques à distance contre lui à -4 ; Vigueur DD 17 pour les assaillants de taille TP ou inférieure qui tentent de le toucher au corps à corps
+resource: Confusion | 1/jour | portée 60 m ; rayon 4,50 m ; Volonté DD 17 annule ; durée 10 rounds
+resource: Rivière de vent | 1/jour | ligne fixe de 36 m, large de 1,50 m ; Vigueur DD 18 ; durée 10 rounds
+
+step: Des intrus approchent
+  do: Se rendre invisible et les observer depuis un point élevé ; sonder leurs pensées avant de choisir une cible
+  note: Discrétion +21, Perception +15, vision dans le noir à 18 m ; la lecture des pensées demande une observation progressive, pas une connaissance immédiate de leurs capacités
+
+step: Le combat paraît imminent
+  do: Activer manteau de vents sur lui-même avant d'engager
+  note: Ses vents insidieux rendent modérés les vents naturels légers alentour ; ils ne constituent pas une attaque infligeant des dégâts
+
+## Ouverture
+
+step: Plusieurs ennemis tiennent dans un rayon de 4,50 m
+  do: Lancer confusion depuis les airs, hors de leur allonge, puis se déplacer pour rester difficile à atteindre
+  note: Volonté DD 17 ; son invisibilité cesse dès cette attaque. Chaque pouvoir exige son action simple
+
+step: Les ennemis sont dispersés et une cible vulnérable au froid est accessible
+  do: Utiliser Attaque en vol : approcher, porter un toucher glaçant +14 pour 6d8 de froid, puis poursuivre le déplacement
+  note: Le trajet total reste limité à 12 m ; le don ne supprime pas les attaques d'opportunité
+
+## Rounds suivants
+
+step: Plusieurs ennemis sont confus
+  do: Rester à l'écart et attaquer en vol un adversaire encore lucide
+  note: Laisser les victimes confuses se gêner ; attaquer l'une d'elles l'incite à riposter contre lui à son prochain tour
+
+step: Des adversaires sont alignés dans un passage
+  do: Déployer rivière de vent pour les renverser et gêner leur progression
+  note: À l'apparition, 4d6 dégâts non létaux et chute ; Vigueur DD 18 réduit les dégâts de moitié et évite la chute. Au début d'un tour dans la ligne, un échec inflige 2d6 non létaux, repousse de 6 m et renverse ; une réussite inflige seulement 1d6 non létaux
+
+step: Un ennemi dangereux reste libre d'agir et le contact serait risqué
+  do: Tenter confusion mineure sur lui, puis gagner de la hauteur ou rejoindre un couvert
+  note: Volonté DD 15 ; l'effet ne dure qu'un round et peut être retenté aux rounds suivants
+
+step: Une cible isolée reste accessible au contact
+  do: Répéter les passages avec toucher glaçant, puis sortir de son allonge
+  note: Privilégier les ennemis capables de le blesser efficacement ; utiliser les obstacles traversables grâce à son état incorporel pour limiter les ripostes
+
+## Repli
+
+step: Points de vie sous 30 et possibilité de s'échapper
+  do: S'éloigner en vol de 12 m et lancer invisibilité ; chercher un couvert ou traverser une paroi mince pour couper la poursuite
+  note: Aux rounds suivants, parcourir 24 m par double déplacement. Il ne possède aucun pouvoir lui permettant de rejoindre spontanément le plan Éthéré

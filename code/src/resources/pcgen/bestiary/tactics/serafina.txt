@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Serafina, érodaemon avancée de FP 12, neutre mauvaise, manipule le désir et le désespoir avant de saisir une victime pour l'embrasser. Initiative +11 ; 175 pv ; CA 29, contact 18 ; déplacement 9 m ; allonge 1,50 m.
+  Morsure de sa queue serpentine +21 (1d6+6 et diminution permanente de 1d4 points de Charisme), deux griffes +21 (1d6+6 chacune). Ses principales armes magiques sont désespoir foudroyant accéléré, désir anormal et énergie négative.
+
+note: Défenses
+  Réduction des dégâts 10/Bien ou argent ; résistance à la magie 22 ; résistances au froid, à l'électricité et au feu 10. Immunités à l'acide, aux effets de mort, aux maladies et aux poisons.
+
+resource: Désespoir foudroyant accéléré | 3/jour | action rapide ; cône de 9 m ; Volonté DD 22 annule
+resource: Désir anormal | à volonté | action simple ; portée 18 m ; Volonté DD 20 annule ; durée 1 round
+resource: Énergie négative | 3/jour | action simple ; rayon à 18 m ; attaque de contact à distance +21 ; 1d4 niveaux négatifs temporaires ; aucun jet de sauvegarde
+resource: Téléportation suprême | à volonté | Serafina seule et jusqu'à 25 kg d'objets ; respecter l'interdiction de la chapelle
+resource: Convocation | 1/jour | 1d3 ceustodaemons, 35 % de réussite ; inutilisable dans la chapelle sous interdiction
+
+step: Elle peut observer les intrus avant l'affrontement
+  do: Exploiter détection du Bien, détection des pensées et Bluff +35 pour évaluer les adversaires et entretenir la conversation jusqu'au moment favorable
+  note: Détection des pensées : Volonté DD 20 ; vision dans le noir à 18 m ; télépathie à 30 m et don des langues pour communiquer.
+
+step: Le combat a lieu dans la chapelle protégée par interdiction
+  do: Renoncer à convoquer des ceustodaemons et repérer un passage vers Rasputine, en H6
+  note: L'interdiction empêche les convocations ainsi que les téléportations vers la zone protégée ou à l'intérieur de celle-ci.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans un cône de 9 m
+  do: Lancer désespoir foudroyant accéléré, puis désir anormal sur un adversaire à 18 m au plus, de préférence affaibli par le désespoir
+  note: Le désespoir impose pendant 14 minutes un malus de -2 aux attaques, sauvegardes, tests de caractéristique et de compétence, et dégâts d'armes. Il facilite donc le second pouvoir.
+
+step: Les adversaires sont trop éloignés pour le cône
+  do: Avancer de 9 m au plus pour obtenir une position favorable ; lancer désir anormal si une cible est à portée, puis désespoir foudroyant accéléré dès que le cône devient utile
+
+note: Choix du désir
+  Désigner une créature ou un objet perceptible par la victime et situé à 18 m au plus de Serafina, afin de détourner l'adversaire du combat. À son prochain tour, la victime doit rejoindre ce sujet pour l'embrasser ou le caresser, sans autre action.
+  La victime gagne +4 à sa sauvegarde si le sujet choisi ne lui inspire normalement aucun désir. Ce pouvoir ne donne aucun contrôle durable sur elle.
+
+## Rounds suivants
+
+step: Un personnage non affecté par ses pouvoirs est accessible au contact
+  do: Tenter de l'agripper avec son BMO +21, puis chercher à lui donner un baiser flétrissant une fois la lutte engagée
+  note: Elle ne possède ni étreinte automatique ni Science de la lutte ; engager la lutte provoque normalement une attaque d'opportunité. Le profil mentionne le baiser sans en préciser les effets chiffrés ni le DD.
+
+step: Des adversaires encore indemnes du désespoir se regroupent
+  do: Dépenser une autre utilisation de désespoir foudroyant accéléré, puis employer son action simple pour désir anormal, une lutte ou une attaque selon la situation
+  note: Les malus de plusieurs désespoirs ne se cumulent pas. Le pouvoir accéléré peut accompagner une autre action, dans la limite d'une action rapide par round.
+
+step: Elle est pressée par un adversaire vivant à distance
+  do: Employer énergie négative pour l'affaiblir, en visant de préférence une cible dont la CA de contact est faible
+  note: Les niveaux négatifs se cumulent ; conserver une distance suffisante pour éviter les attaques d'opportunité lors de l'utilisation du pouvoir.
+
+step: Elle est pressée au corps à corps et peut rester sur place
+  do: Faire une attaque à outrance : deux griffes +21 et morsure +21 de la queue serpentine
+  note: Chaque attaque inflige 1d6+6 ; la morsure diminue aussi le Charisme de 1d4 points de façon permanente. Si elle doit se déplacer de plus de 1,50 m, se limiter normalement à une seule attaque, de préférence la morsure.
+
+## Repli
+
+step: Ses points de vie passent sous 90
+  do: Abandonner l'affrontement et tenter de rejoindre Rasputine en H6 ; prendre la retraite par une sortie praticable, jusqu'à 18 m avec cette action
+  note: Employer téléportation suprême seulement si la destination et les protections en place l'autorisent ; elle ne peut transporter aucune autre créature.
+
+step: Elle est acculée et ne peut plus fuir
+  do: Combattre jusqu'à la mort avec les utilisations restantes d'énergie négative et de désespoir foudroyant accéléré, puis ses griffes et sa morsure

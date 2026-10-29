@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Boag-Hok, élémentaire de l'air de taille M teinté de fiélon, chaotique mauvais, FP 6 ; 68 pv, CA 21, initiative +10.
+  Morsure +14, 5d6+3 dégâts de force, allonge 1,50 m ; vol parfait à 30 m et Attaque en vol pour frapper puis s'éloigner.
+  Réduction des dégâts 5/magie ; résistances à l'acide, au froid, à l'électricité et au feu 10 ; résistance à la magie 17 ; immunités des élémentaires.
+  Vision dans le noir à 18 m ; Perception +12, Discrétion +17 ; télépathie à 30 m.
+
+resource: Ténèbres maudites | 1/jour | pouvoir magique, NLS 8, DD 16 Volonté
+resource: Empoisonnement | 3/jour | pouvoir magique de contact, NLS 8, DD 16 Vigueur
+resource: Ténèbres | 3/jour | pouvoir magique, NLS 8 ; garder une utilisation pour se dégager
+resource: Profanation | 1/jour | pouvoir magique, NLS 8 ; ne renforce pas directement sa morsure
+
+step: Les intrus approchent derrière des barreaux
+  do: Rester à l'abri de leurs armes de mêlée et repérer les cibles de ses pouvoirs.
+  note: Son corps vaporeux lui permet de passer entre les barreaux ; exploiter ces interstices comme voie de passage.
+
+## Ouverture
+
+step: Premier round de combat
+  do: Lancer ténèbres maudites sur les adversaires, en visant en priorité ceux d'alignement bon ; DD 16 Volonté.
+  note: C'est son ouverture habituelle ; conserver assez de distance pour ne pas subir immédiatement plusieurs attaques de mêlée.
+
+step: Ténèbres maudites a été lancé et un adversaire est accessible
+  do: Se glisser entre les barreaux s'ils le séparent des ennemis, approcher et utiliser empoisonnement au contact ; DD 16 Vigueur.
+  note: Empoisonnement et la morsure demandent chacun leur action simple ; les employer lors de rounds distincts.
+
+## Rounds suivants
+
+step: Une cible peut être approchée puis laissée à distance
+  do: Utiliser Attaque en vol : approcher, mordre à +14 pour 5d6+3 dégâts de force, puis poursuivre son déplacement hors de son allonge.
+  note: Le déplacement total reste limité à 30 m ; terminer assez loin pour obliger l'adversaire à se déplacer et l'empêcher ainsi d'effectuer une attaque à outrance de mêlée.
+
+step: Le trajet traverse des cases menacées
+  do: Choisir un passage qui limite les attaques d'opportunité, en utilisant au besoin Acrobaties +17.
+  note: Attaque en vol ne supprime pas les attaques d'opportunité ; Souplesse du serpent donne +4 à la CA contre celles provoquées par ses déplacements.
+
+step: Une occasion permet d'empoisonner sans rester encerclé
+  do: Employer une nouvelle utilisation d'empoisonnement au contact, puis reprendre les passages avec morsure aux rounds suivants.
+  note: Il dispose de trois utilisations quotidiennes ; ne pas ajouter automatiquement du poison à sa morsure.
+
+## Repli
+
+step: Il est encerclé et possède moins de 30 pv
+  do: Lancer ténèbres, puis profiter de la baisse d'éclairage pour s'éloigner en vol et retrouver de l'espace.
+  note: Ce pouvoir ne garantit pas de dissimulation contre un ennemi doté de vision dans le noir ; les déplacements peuvent toujours provoquer des attaques d'opportunité.
+
+step: Il a repris ses distances
+  do: Revenir à la morsure avec Attaque en vol, en finissant chaque passage hors de l'allonge adverse.
+  note: Ce recul est un changement de position : Boag-Hok combat jusqu'à la mort.

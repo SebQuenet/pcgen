@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Lesson Of Yith, gardien sculpté de taille G, créature artificielle neutre sans intelligence, FP 11. Il exécute ses consignes de garde avec des attaques de mêlée répétées.
+  107 PV ; CA 25 ; réduction des dégâts 5/adamantium ; résistance à la magie 22 ; immunités des créatures artificielles ; guérison accélérée 5.
+  Dague de poing +1 acérée +21/+16/+11 (1d6+8, critique 19–20/x3), ou coup +15 (1d8+10). Espace occupé 3 m ; allonge 3 m ; déplacement 15 m ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Rapidité | 1/jour | pouvoir magique sur lui-même uniquement ; action simple ; NLS 13 ; durée 13 rounds
+resource: Réparation | permanent | domaine de l'Artisanat : rend 5 PV au début de chaque tour, sans dépasser 107 PV
+
+step: Aucun ennemi ne déclenche ses consignes
+  do: Garder le poste assigné, arme prête, et conserver rapidité pour un affrontement imminent
+  note: Les bénéfices du domaine du Voyage sont déjà compris dans son déplacement de 15 m et son don Souplesse du serpent.
+
+step: Une créature affiche ouvertement le symbole de la divinité à laquelle il est consacré
+  do: Respecter le lien à la foi : ne pas l'attaquer tant qu'elle ne l'a pas attaqué elle-même
+  note: Ce symbole ne permet pas de lui donner de nouveaux ordres.
+
+## Ouverture
+
+step: Le combat commence et il peut activer son pouvoir hors d'une zone menacée
+  do: Activer rapidité, puis avancer de 24 m au maximum pour mettre un intrus à portée de son allonge de 3 m
+  note: Pendant 13 rounds : CA 26, Réflexes +11 et +1 aux attaques. L'activation et le déplacement consomment ce tour ; rapidité ne donne pas d'action supplémentaire.
+
+step: Un ennemi est déjà à portée et rapidité ne peut pas être activée sans danger
+  do: Attaquer à outrance avec la dague : +21/+16/+11, chaque touche infligeant 1d6+8 dégâts
+  note: Un pas de 1,50 m reste possible avec cette attaque à outrance. L'activation du pouvoir magique dans une zone menacée provoque une attaque d'opportunité.
+
+## Rounds suivants
+
+step: Une cible reste à portée de 3 m
+  do: Rester sur place, ou faire seulement un pas de 1,50 m, puis attaquer à outrance avec la dague
+  note: Sous rapidité : quatre attaques à +22/+22/+17/+12, pour 1d6+8 chacune ; après expiration : trois attaques à +21/+16/+11. Le critique reste 19–20/x3.
+
+step: La cible a déjà subi une tentative d'attaque du gardien au round précédent
+  do: Concentrer les coups sur elle tant qu'elle reste accessible et que les consignes le permettent
+  note: Domaine de la Connaissance : +2 aux jets d'attaque contre cette cible, même si les attaques précédentes ont raté. Sous rapidité, les quatre attaques passent à +24/+24/+19/+14.
+
+step: La cible impose un déplacement supérieur à 1,50 m
+  do: Avancer de 15 m au maximum, ou de 24 m sous rapidité, puis porter une seule attaque de dague à +21, ou +22 sous rapidité
+  note: Ajouter le bonus de Connaissance si applicable. Souplesse du serpent donne +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements ; il ne permet pas d'attaquer à outrance après ce mouvement.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter une attaque de dague, avec les bonus de rapidité et de Connaissance applicables
+  note: Il ne dispose que d'une attaque d'opportunité par round.
+
+step: Il ne peut plus utiliser sa dague
+  do: Employer son coup à +15 pour 1d8+10 dégâts, avec les bonus applicables
+  note: Le coup remplace les attaques à la dague ; il ne s'ajoute pas à leur série.
+
+## Repli
+
+step: Ses PV diminuent et ses consignes exigent toujours le combat
+  do: Continuer à combattre jusqu'à la destruction, en récupérant 5 PV au début de chaque tour
+  note: Ce gardien sans intelligence ne prend pas la fuite par peur ; à 0 PV, il est détruit.
+
+step: Les intrus se retirent et ses ordres limitent la poursuite à une zone de garde
+  do: Cesser la poursuite à cette limite, reprendre son poste et laisser Réparation restaurer ses PV jusqu'à 107

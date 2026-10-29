@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Anobaith, érodaemon neutre mauvaise, manipule ses adversaires avant de les affaiblir par ses pouvoirs magiques et sa morsure. Elle possède 147 pv, une CA de 25 et se déplace de 9 m par round ; son allonge est de 1,50 m.
+  Morsure +21, 1d6+4 dégâts et diminution permanente de 1d4 points de Charisme ; deux griffes +21, 1d6+4 chacune. Elle privilégie une victime isolée plutôt que plusieurs combattants au contact.
+  RD 10/Bien ou argent ; RM 22 ; immunité à l'acide, aux effets de mort, aux maladies et au poison ; résistance de 10 au froid, à l'électricité et au feu.
+
+note: Bougie d'invocation
+  Les valeurs fournies comprennent les bonus de sa bougie d'invocation neutre mauvaise. Sans ces bonus : morsure et griffes +19 ; Vigueur +9, Réflexes +14, Volonté +12 ; Bluff +33, Discrétion +22, Perception +20 et Psychologie +20.
+
+resource: Désespoir foudroyant accéléré | 3/jour | action rapide, Volonté DD 20, cône de 9 m
+resource: Énergie négative | 3/jour | rayon, attaque de contact à distance, 1d4 niveaux négatifs temporaires, sans sauvegarde
+resource: Suggestion | 3/jour | éloigner une cible par une consigne vraisemblable
+resource: Profanation | 3/jour | préparation éventuelle, sans bénéfice direct pour une extérieure
+resource: Modification de mémoire | 1/jour | manipulation avant les hostilités, si elle dispose du temps nécessaire
+resource: Convocation | 1/jour | 35 % de chances d'appeler 1d3 ceustodaemons ; un échec dépense l'utilisation
+resource: Mépris absolu | 1/jour | Volonté DD 20 ; dégrade de deux crans l'attitude de la cible envers toutes les autres créatures
+resource: Téléportation suprême | à volonté | elle-même et au maximum 50 livres d'objets ; aucun autre combattant transporté
+
+step: Elle peut observer les intrus sans être attaquée
+  do: Rester discrète et combiner détection du Bien, détection des pensées et Psychologie +22 pour choisir une victime et une approche crédible
+  note: Vision dans le noir à 18 m ; Bluff +35, Discrétion +24 ; don des langues et télépathie à 30 m facilitent les échanges
+
+step: Une conversation permet de séparer un intrus de ses compagnons
+  do: Employer suggestion pour lui faire accomplir une tâche plausible à l'écart du groupe
+  note: Présenter la consigne comme raisonnable ; suggestion ne permet pas d'imposer n'importe quel ordre
+
+step: Elle est avertie d'un combat et dispose du temps nécessaire
+  do: Tenter la convocation de ceustodaemons, puis placer ceux qui apparaissent entre elle et les intrus
+  note: Prévoir de combattre seule si la tentative échoue
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans un cône de 9 m
+  do: Employer désespoir foudroyant accéléré, Volonté DD 20
+  note: Le malus de 2 aux attaques, sauvegardes et dégâts des armes facilite la suite ; l'action rapide laisse son action simple disponible
+
+step: Une cible vivante dangereuse reste à distance, dans les 18 m
+  do: Tirer un rayon d'énergie négative sur elle, en privilégiant un lanceur de sorts ou le principal assaillant
+  note: Il faut réussir une attaque de contact à distance et franchir sa résistance à la magie éventuelle ; aucun jet de sauvegarde ne réduit les niveaux négatifs
+
+step: Un ennemi est déjà à 1,50 m et elle peut rester sur place
+  do: Porter une attaque à outrance : morsure +21 et deux griffes +21
+  note: Concentrer les trois attaques sur la même victime pour exploiter la diminution permanente de Charisme de la morsure
+
+## Rounds suivants
+
+step: Une cible dangereuse a déjà subi énergie négative et reste à portée
+  do: Répéter le rayon jusqu'à épuisement des trois utilisations si elle demeure la menace principale
+  note: Les niveaux négatifs se cumulent ; éviter de consacrer ces rayons à une cible manifestement immunisée
+
+step: Une cible non affectée par le désespoir rejoint le combat
+  do: Dépenser une nouvelle utilisation de désespoir foudroyant accéléré si le placement est favorable
+  note: Ne pas gaspiller les utilisations pour cumuler plusieurs fois le même malus sur une victime déjà affectée
+
+step: Un adversaire isolé reste accessible au contact
+  do: L'approcher de 9 m au maximum et mordre ; aux rounds suivants, rester au contact pour porter morsure et deux griffes
+  note: Après un déplacement ordinaire, elle ne porte qu'une attaque ; un pas de 1,50 m permet encore l'attaque à outrance
+
+step: Elle veut désorganiser les relations entre adversaires
+  do: Employer mépris absolu sur un membre influent ou un soutien du groupe, Volonté DD 20
+  note: L'attitude de la victime se dégrade envers tout le monde ; ce pouvoir ne lui ordonne pas automatiquement d'attaquer ses alliés
+
+step: Elle doit faire perdre un tour à un adversaire sensible aux enchantements
+  do: Employer attirance contre nature en désignant une créature ou un objet perceptible à l'écart d'elle
+  note: À volonté ; si la cible succombe, elle consacre son prochain tour à rejoindre et embrasser ou caresser le sujet désigné. Une attirance inhabituelle lui donne un bonus de 4 à sa sauvegarde
+
+step: Plusieurs combattants l'encerclent ou la position devient défavorable
+  do: Utiliser téléportation suprême pour rejoindre un emplacement connu, hors de portée de mêlée, puis reprendre ses pouvoirs aux rounds suivants
+  note: Cette téléportation prend son action simple ; elle ne peut pas enchaîner immédiatement avec un rayon ou une attaque à outrance
+
+## Repli
+
+step: Ses points de vie tombent sous 40, ou les adversaires traversent aisément ses défenses
+  do: Employer téléportation suprême pour fuir vers un refuge connu
+  note: Ce seuil est une consigne tactique ; elle fuit plus tôt si elle risque d'être abattue avant son prochain tour. Les éventuels ceustodaemons restent sur place
+
+step: La téléportation est empêchée
+  do: Chercher un passage en se déplaçant de 9 m et employer attirance contre nature ou suggestion pour écarter un poursuivant
+  note: Dès que la téléportation redevient possible, quitter le combat

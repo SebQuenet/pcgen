@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Menottes animées, créature artificielle de taille TP, neutre et sans intelligence ; 5 pv, CA 16, initiative +2.
+  Coup +1 au contact, portée 1,50 m, dégâts 1d3-2 et étreinte ; BMO +3 en lutte, DMD 11.
+  Déplacement au sol de 4,50 m ; vol de 4,50 m, manœuvrabilité déplorable.
+
+note: Défenses et perception
+  Solidité 10 et immunités des créatures artificielles ; vulnérabilité au froid.
+  Vision dans le noir à 18 m, vision nocturne ; Perception -5.
+
+step: Aucun intrus repéré
+  do: Rester immobiles à l'endroit à garder, si telle est leur consigne.
+  note: Leur immobilité ne leur donne aucun bonus de Discrétion indiqué dans le profil.
+
+## Ouverture
+
+step: L'adversaire le plus proche est à plus de 1,50 m
+  do: Se rapprocher de 4,50 m au sol, puis porter un coup +1 si la cible est désormais à portée.
+  note: Employer le vol si le trajet l'exige, sans dépasser sa vitesse de 4,50 m.
+
+step: Un adversaire est à portée de 1,50 m
+  do: Porter un coup +1, infligeant 1d3-2 dégâts.
+  note: Sur une touche contre une cible de taille TP ou inférieure, tenter immédiatement l'étreinte avec un test de lutte à +3, en action libre et sans attaque d'opportunité.
+
+## Rounds suivants
+
+step: Une cible est agrippée
+  do: Consacrer l'action simple à maintenir la lutte et à infliger les dégâts du coup, 1d3-2, si le test réussit.
+  note: Le BMO de lutte est de +3 avant les modificateurs de maintien ; aucune constriction ni autre source de dégâts n'est indiquée.
+
+step: La cible se libère ou l'étreinte échoue
+  do: Recommencer à porter des coups +1 et tenter une nouvelle étreinte après une touche contre une cible admissible.
+
+step: L'adversaire est trop grand pour l'étreinte
+  do: Continuer les coups +1 à 1,50 m de portée, pour 1d3-2 dégâts.
+  note: Le profil ne donne aucune exception permettant à l'étreinte automatique de saisir une cible plus grande que TP.
+
+step: Plus aucun adversaire n'est à portée
+  do: Rejoindre l'adversaire le plus proche, à 4,50 m au sol ou en vol, puis reprendre les coups dès qu'il est à portée.
+
+## Repli
+
+step: Les menottes ont encore au moins 1 pv
+  do: Poursuivre leur attaque ou leur consigne, sans retraite déclenchée par la perte de points de vie.
+  note: Sans intelligence, elles ne conçoivent pas spontanément de plan de fuite ; leur vulnérabilité au froid ne leur donne aucune parade particulière.
+
+step: Les menottes atteignent 0 pv
+  do: Cesser toute action : elles sont détruites.

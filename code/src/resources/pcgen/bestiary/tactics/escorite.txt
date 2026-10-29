@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Escorite, fée solitaire de taille G, chaotique mauvaise : un papillon géant au crâne de biche qui cherche à répandre la destruction et l'entropie.
+  97 pv, CA 21 ; vol à 18 m, déplacement au sol à 3 m ; allonge de 3 m. Attaque à outrance : 4 tentacules +12, chacun infligeant 1d6+3 dégâts et 1d4 dégâts de Constitution.
+  Il combine son aura d'inéluctabilité, ses tentacules et ses pouvoirs magiques pour affaiblir une victime avant de l'achever.
+
+note: Défenses et aura
+  RD 10/fer froid ; résistance à l'acide, au froid et au feu 10 ; résistance à la magie 19.
+  À 9 m ou moins, chaque créature doit réussir chaque round un jet de Vigueur DD 20 ou être secouée pendant ce round. C'est un effet mental de terreur ; l'aura fonctionne sans action.
+
+resource: Énergie négative | 3/jour | rayon de contact à distance ; 1d4 niveaux négatifs, sans sauvegarde
+resource: Rouille | 3/jour | contact ; affecte le fer et ses alliages non magiques
+resource: Rapetissement des plantes | 3/jour | réduit la végétation normale ; dissipe notamment enchevêtrement et mur d'épines
+resource: Poussière scintillante | à volonté | Volonté DD 14 contre l'aveuglement ; révèle aussi les créatures invisibles
+resource: Rayon ardent | à volonté | deux rayons au NLS 7, chacun infligeant 4d6 dégâts de feu
+resource: Mise à mort | à volonté | contact sur une créature vivante à moins de 0 pv ; Volonté DD 14 annule
+resource: Porte dimensionnelle | à volonté | lui-même et jusqu'à 22,7 kg d'objets seulement
+
+step: Des intrus approchent
+  do: Les observer depuis les ténèbres ou un couvert, avec Discrétion +16 et Perception +21 ; choisir une position permettant de voler et une destination de fuite dégagée
+  note: Il voit dans les ténèbres, mais ne voit pas automatiquement les créatures invisibles.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés ou un adversaire invisible est localisé
+  do: Lancer Poussière scintillante sur une zone de 3 m de rayon, puis se placer en vol pour englober des ennemis dans son aura sans s'exposer inutilement
+  note: L'aveuglement dure au plus 7 rounds ; chaque victime peut retenter Volonté DD 14 à la fin de chacun de ses tours. La poussière révèle l'invisibilité même si la sauvegarde réussit.
+
+step: Aucun groupe intéressant à aveugler et une cible vivante dangereuse se trouve à 12 m ou moins
+  do: Lancer Énergie négative sur elle, avec une attaque de contact à distance à +9
+  note: Privilégier un lanceur de sorts ou un combattant difficile à blesser ; les niveaux négatifs affaiblissent aussi ses sauvegardes.
+
+step: Une cible est déjà à portée de ses tentacules et ne nécessite aucun déplacement
+  do: Privilégier l'attaque à outrance, en concentrant les quatre tentacules sur elle
+
+## Rounds suivants
+
+step: Une victime reste à 3 m ou moins
+  do: Attaque à outrance de quatre tentacules ; poursuivre la même cible pour cumuler les dégâts de Constitution
+  note: S'il doit se déplacer de plus de 1,50 m pour l'atteindre, il ne porte normalement qu'une seule attaque de tentacule ce tour.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Frapper d'un tentacule
+  note: Attaques réflexes autorise jusqu'à cinq attaques d'opportunité par round, si des occasions distinctes se présentent.
+
+step: Les adversaires restent hors de son allonge
+  do: Voler pour conserver une distance favorable, puis lancer Rayon ardent à 12 m ou moins ; concentrer les deux rayons sur une cible vulnérable au feu
+  note: Chaque rayon demande une attaque de contact à distance à +9. Employer plutôt Énergie négative si la cible vivante résiste au feu et qu'il reste une utilisation.
+
+step: Une arme en fer froid non magique menace sérieusement sa survie
+  do: Employer Rouille et toucher l'arme pour la détruire
+  note: Toucher l'arme exige une attaque de contact au corps à corps et provoque une attaque d'opportunité ; les objets magiques sont immunisés.
+
+step: Un enchevêtrement ou un mur d'épines l'empêche de se dégager
+  do: Employer Rapetissement des plantes pour dissiper l'obstacle végétal
+
+step: Une créature vivante agonise à portée et il peut consacrer une action à l'achever
+  do: Employer Mise à mort, Volonté DD 14 annule
+  note: En cas d'échec, elle meurt ; il gagne 1d8 pv temporaires, +2 en Force et +1 au NLS pendant 10 minutes par DV de la victime. Ces pv temporaires ne soignent pas ses blessures.
+
+## Repli
+
+step: Points de vie sous 30, ou plusieurs adversaires équipés de fer froid l'encerclent
+  do: Employer Porte dimensionnelle vers un emplacement libre à l'abri, jusqu'à 204 m
+  note: Après la téléportation, il ne peut plus effectuer d'action avant son prochain tour ; il ne peut emporter aucune autre créature.
+
+step: Il a rejoint une position sûre
+  do: S'éloigner en vol à 18 m par déplacement ; répéter Porte dimensionnelle aux tours suivants si la poursuite continue

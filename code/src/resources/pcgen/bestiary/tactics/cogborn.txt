@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Cogborn, objet animé mécanique de taille M, neutre et sans intelligence. Il suit des consignes simples et combat au contact.
+  36 pv ; CA 22, contact 14, pris au dépourvu 18 ; dureté 10 ; immunités des créatures artificielles ; vulnérabilité à l'électricité.
+  Attaque à outrance : 3 coups +7, chacun infligeant 1d8+4 dégâts ; allonge de 1,50 m. Après un déplacement ordinaire, il ne porte qu'un seul coup.
+  Déplacement terrestre et nage à 9 m ; escalade à 4,50 m ; Natation +12. Initiative +6 ; vision dans le noir à 18 m, vision nocturne ; Perception -3.
+
+step: Un responsable le prépare à l'affrontement
+  do: Le remonter et lui donner une consigne simple : garder un passage ou attaquer les intrus désignés.
+  note: Son absence d'intelligence exclut les ruses improvisées et les choix tactiques complexes.
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance : 3 coups +7, chacun pour 1d8+4 dégâts.
+
+step: Rejoindre un ennemi demande au plus 9 m de déplacement terrestre
+  do: Avancer jusqu'au contact et porter un coup +7 pour 1d8+4 dégâts.
+
+step: Aucun ennemi ne peut être rejoint avec un seul déplacement
+  do: Consacrer le round à l'approche, jusqu'à 18 m au sol ou à la nage avec un double déplacement.
+  note: Il ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Répéter les 3 coups +7 en attaque à outrance sur cet adversaire.
+  note: La dureté 10 soutient le combat prolongé ; elle ne supprime pas sa vulnérabilité à l'électricité.
+
+step: Un pas de 1,50 m suffit pour retrouver le contact
+  do: Faire ce pas puis porter les 3 coups en attaque à outrance, si aucun autre déplacement n'a été effectué pendant le round.
+
+step: L'adversaire s'éloigne davantage
+  do: Le poursuivre selon les consignes reçues ; après un déplacement ordinaire, porter un seul coup si le contact est rétabli.
+
+step: Le trajet impose de nager ou de grimper
+  do: Employer la nage à 9 m ou l'escalade à 4,50 m pour rejoindre la cible.
+  note: Adapter la distance d'approche au mode de déplacement employé.
+
+## Repli
+
+step: Aucune consigne ne prévoit de repli
+  do: Continuer d'exécuter l'ordre reçu jusqu'à la destruction.
+  note: Sans intelligence, il ne décide pas spontanément de fuir lorsque ses pv baissent ; à 0 pv, il est détruit.
+
+step: Une consigne préalable impose le repli
+  do: Effectuer une retraite vers la position prévue, en utilisant le déplacement adapté au terrain.

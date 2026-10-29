@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Antaios, topiaire vivante de taille G, plante neutre, FP 8 : combattant de mêlée simple et puissant, troublé par les violences du matin.
+  103 pv ; CA 21, contact 12, pris au dépourvu 18 ; RD 5/tranchant ; immunités des plantes.
+  Deux coups +15 (2d6+9 chacun) ; allonge et espace occupé de 3 m ; déplacement de 9 m ; initiative +7.
+  Attaque en puissance : deux coups +13 (2d6+13 chacun). Ses membres sont épineux ; conserver les dégâts indiqués ci-dessus.
+  Il comprend le commun et le sylvestre, mais ne peut pas parler.
+
+step: Aucun intrus détecté dans la boutique
+  do: Rester assis tranquillement, perturbé par les événements du matin.
+  note: Perception +9 ; vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses végétales
+  Immunité aux effets mentaux, au poison, au sommeil, à la paralysie, à la métamorphose et à l'étourdissement.
+  Ignifugation supprime la vulnérabilité habituelle au feu des topiaires ; elle ne confère pas de résistance au feu.
+
+resource: Passage sans trace | constant | Ses déplacements ne laissent pas de traces.
+resource: Traversée des haies (hedge stride) | 3/jour | NLS 5 ; passage magique entre broussailles ou haies similaires distantes de 450 m au maximum.
+
+## Ouverture
+
+step: Intrus détectés, cible la plus proche hors de son allonge de 3 m
+  do: Avancer vers cette cible, jusqu'à 9 m avec une action de mouvement, puis donner un coup avec Attaque en puissance si elle est à portée : +13 (2d6+13).
+  note: S'il doit consacrer tout son tour à l'approche, attendre le tour suivant pour frapper.
+
+step: La cible la plus proche est déjà à portée sans déplacement important
+  do: Effectuer une attaque à outrance avec Attaque en puissance : deux coups +13 (2d6+13 chacun).
+  note: Un pas de placement de 1,50 m permet encore l'attaque à outrance.
+
+## Rounds suivants
+
+step: Antaios a plus de 51 pv et n'a pas encore manqué deux attaques
+  do: Continuer à frapper l'adversaire le plus proche avec Attaque en puissance ; donner deux coups s'il peut effectuer une attaque à outrance, sinon un seul après déplacement.
+  note: Compter les attaques manquées, y compris lorsque deux attaques sont effectuées dans le même round.
+
+step: Deux attaques ont manqué
+  do: Choisir entre attaquer l'adversaire suivant le plus proche ou abandonner Attaque en puissance pour toucher plus facilement.
+  note: Sans Attaque en puissance : un coup +15 (2d6+9), ou deux coups identiques lors d'une attaque à outrance.
+
+step: Des haies ou des ronces gênent son déplacement
+  do: Les traverser sans pénalité pour rejoindre sa cible ou la végétation dont il a besoin.
+  note: Il doit commencer et terminer son tour hors de cette masse végétale ; utiliser Traversée des haies seulement si une végétation appropriée relie les positions souhaitées.
+
+## Repli
+
+step: Antaios tombe à 51 pv ou moins, mais reste au-dessus de 25 pv
+  do: Rejoindre la matière végétale assimilable la plus proche et tenter de l'assimiler pour se soigner.
+  note: Assimilation exige le contact et une action complexe ; consommer environ 0,14 m³ de broussailles ou de végétaux touffus rend 1d8 pv. Après un déplacement, attendre le tour suivant pour assimiler.
+  note: Répéter si nécessaire tant qu'il reste blessé et que la matière végétale est disponible ; ce soin dépend de la végétation consommée.
+
+step: Antaios tombe à 25 pv ou moins
+  do: Se retirer dans un coin de la boutique et adopter la défense totale ; maintenir cette défense aux tours suivants.
+  note: La défense totale prend une action simple et porte sa CA à 25 jusqu'au début de son prochain tour ; elle permet encore un déplacement, mais aucune attaque d'opportunité.
+  note: Ce repli devient prioritaire sur l'assimilation et la poursuite des intrus.

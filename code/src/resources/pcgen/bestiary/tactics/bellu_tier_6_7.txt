@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Bellu, eidolon bipède de taille M, mauvaise et liée à Ichon, entre avec grâce dans la mêlée et se délecte des os qui craquent.
+  45 pv ; CA 24, contact 12, prise au dépourvu 22 ; initiative +6 ; déplacement 9 m ; allonge 1,50 m.
+  Deux coups +10, chacun infligeant 2d6+10 dégâts plus 1d6 de feu. Attaque en puissance est toujours utilisée et déjà comprise dans ces valeurs.
+
+note: Défenses
+  Déplacement : 50 % de chances d'échec pour les attaques qui la visent.
+  Résistances : froid 10, électricité 20, feu 10, à déduire des dégâts du type correspondant à chaque attaque.
+  Esquive totale : aucun dégât sur un jet de Réflexes réussi contre une attaque qui permet normalement de réduire les dégâts de moitié.
+  Vigueur +11, Réflexes +5, Volonté +6 ; contre les enchantements, Volonté +10 grâce à la dévotion.
+
+step: Avant l'affrontement
+  do: Accepter les sorts d'Ichon, sans autre préparation particulière.
+  note: Les effets de ces sorts sont déjà inclus dans les statistiques fournies ; ne pas ajouter de nouveau leurs bonus.
+
+## Ouverture
+
+step: Bellu doit avancer et un déplacement de 9 m au maximum suffit à mettre un ennemi à portée
+  do: Avancer au contact et porter un coup +10, pour 2d6+10 dégâts plus 1d6 de feu.
+  note: Chercher si possible une position à 1,50 m de deux ennemis adjacents pour les rounds suivants.
+
+step: Aucun ennemi n'est à portée après un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour entrer dans la mêlée ou s'en rapprocher.
+  note: Ce round est consacré au déplacement ; Bellu ne porte pas de coup.
+
+step: Bellu commence déjà au contact
+  do: Effectuer une attaque à outrance avec ses deux coups +10, chacun pour 2d6+10 dégâts plus 1d6 de feu.
+  note: Répartir les coups entre deux ennemis adjacents à portée dès que possible ; sinon, frapper deux fois la même cible.
+
+## Rounds suivants
+
+step: Deux ennemis adjacents sont à portée
+  do: Effectuer une attaque à outrance et porter un coup à chacun.
+  note: Chaque coup est à +10 et inflige 2d6+10 dégâts plus 1d6 de feu ; conserver Attaque en puissance.
+
+step: Un seul ennemi est à portée
+  do: Effectuer une attaque à outrance et lui porter les deux coups.
+
+step: Un pas de placement permet de garder le contact ou d'atteindre deux ennemis adjacents
+  do: Faire un pas de placement de 1,50 m, puis effectuer l'attaque à outrance.
+  note: Répartir les deux coups si deux cibles sont à portée après ce pas.
+
+step: Un déplacement plus important est nécessaire pour frapper
+  do: Avancer jusqu'à 9 m et porter un seul coup si une cible devient accessible à 1,50 m.
+  note: Si cela ne suffit pas, consacrer le round à un double déplacement jusqu'à 18 m vers les adversaires.
+
+## Repli
+
+step: Quel que soit son total de points de vie
+  do: Continuer à combattre ; Bellu ne peut pas fuir, car elle est liée à Ichon.
+  note: Aucun seuil de points de vie ne déclenche de retraite.

@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Nezirrius est une ankou demi-invidiak, extérieure chaotique mauvaise de taille G, FP 17. Assassine mobile, elle isole une victime et concentre ses attaques sur elle. Vol à 27 m, manœuvrabilité parfaite ; allonge de 1,50 m.
+  Arbalète +22/+17, dégâts 2d6+3, critique 17–20. Au contact : morsure +20 (1d8+10), deux griffes +20 (1d6+10), queue +15 (1d8+6 et saignement), deux ailes +15 (1d6+6 et saignement).
+  175 pv ; CA 34, contact 21 ; RM 28 ; réduction des dégâts 10/fer froid et magie. Immunité au poison ; résistance 10 à l’acide, au froid, à l’électricité et au feu.
+  Discrétion +25, initiative +12 ; perception aveugle à 36 m, vision dans le noir à 18 m. Elle ne parle pas et communique par télépathie à 30 m.
+
+resource: Vision lucide | 3/jour | NLS 15 ; une utilisation pour la préparation habituelle
+resource: Flou | 1/jour | NLS 14 ; utilisé avant le combat
+resource: Aura maudite | 3/jour | NLS 14, DD 27
+resource: Munitions utilisables à l’arbalète | 20 carreaux et 10 carreaux +1 tueurs d’humains | réserver les carreaux tueurs d’humains aux cibles humaines
+
+step: Elle peut se préparer avant l’arrivée des ennemis
+  do: Activer vision lucide et flou, puis se placer à couvert en hauteur pour tirer depuis une embuscade.
+  note: Préparer sa position avec Discrétion ; son vol lui permet de choisir un angle de tir et une voie de fuite.
+
+step: Le combat est imminent et elle dispose encore du temps nécessaire
+  do: Ajouter aura maudite avant de s’exposer.
+  note: Chaque pouvoir demande son activation ; ne pas les cumuler en une seule action.
+
+## Ouverture
+
+step: Elle attaque ses propres ennemis depuis son embuscade
+  do: Ouvrir par un tir d’arbalète à +22 sur une cible prise au dépourvu ; employer un carreau tueur d’humains si elle est humaine.
+  note: Sa tactique prévoit une attaque sournoise initiale, mais le bloc ne chiffre aucun dégât supplémentaire : ne pas inventer de dés.
+
+step: Elle aide les PJ contre Minagho
+  do: Ouvrir par ancre dimensionnelle sur Minagho pour empêcher sa fuite.
+  note: Au round suivant, chercher une position de prise en tenaille avec un PJ. Minagho concentre alors ses attaques sur Nezirrius, furieuse de sa trahison.
+
+resource: Ancre dimensionnelle | 3/jour | NLS 15 ; priorité à Minagho lorsqu’elle combat aux côtés des PJ
+
+## Rounds suivants
+
+step: Plusieurs ennemis entrent dans le même cône sans exposer un allié
+  do: Utiliser immédiatement rayons prismatiques, cône de 18 m, DD 26.
+  note: Cette occasion prime sur la poursuite des tirs contre sa victime initiale.
+
+resource: Rayons prismatiques | 1/jour | NLS 15, DD 26
+
+step: Elle peut rester en place et poursuivre le tir sur sa cible
+  do: Faire une attaque à outrance avec Tir rapide : trois tirs à +20/+20/+15, chacun infligeant 2d6+3 avant les effets des munitions.
+  note: Rechargement rapide permet de recharger l’arbalète légère par une action libre. À 9 m ou moins, Tir à bout portant ajoute +1 aux attaques et aux dégâts.
+
+step: Sa cible est facile à toucher et elle veut augmenter les dégâts des carreaux
+  do: Ajouter Visée mortelle : avec Tir rapide, attaques à +18/+18/+13 et dégâts 2d6+7 avant les effets des munitions.
+  note: Ajouter encore les bonus de Tir à bout portant si la cible est à 9 m ou moins.
+
+step: Elle doit changer de position pour conserver une ligne de tir ou échapper à la mêlée
+  do: Voler jusqu’à 27 m et effectuer un seul tir à +22.
+  note: Un déplacement normal empêche l’attaque à outrance ; éviter les attaques d’opportunité en quittant une zone menacée.
+
+step: Un poursuivant menace de la rejoindre et elle veut l’affaiblir
+  do: Employer rayon d’épuisement, DD 22, puis reprendre ses attaques sur la même victime.
+  note: Pouvoir à volonté, NLS 15 ; son activation remplace les tirs de ce round.
+
+step: Elle est entourée d’adversaires
+  do: Déclencher blasphème, DD 26, puis passer aux attaques naturelles lors des rounds suivants.
+  note: Vérifier les effets selon l’alignement et les DV des créatures présentes ; tenir compte des alliés susceptibles d’être affectés.
+
+resource: Blasphème | 1/jour | NLS 14, DD 26
+
+step: Sa victime reste à portée de 1,50 m et elle peut consacrer le round à l’attaquer
+  do: Faire l’attaque à outrance complète : morsure, deux griffes, queue et deux ailes ; concentrer les six attaques sur elle.
+  note: Queue et ailes provoquent un saignement dont la valeur n’est pas précisée. Contre Minagho, maintenir la prise en tenaille avec un PJ si possible.
+
+## Repli
+
+step: Ses points de vie passent sous 40
+  do: Utiliser téléportation suprême pour gagner un refuge sûr, dès qu’elle peut agir.
+  note: Donner la priorité à la fuite ; conserver une utilisation de téléportation pour ce seuil.
+
+resource: Téléportation suprême d’ankou | 3/jour | NLS 15
+resource: Téléportation suprême de demi-invidiak | 1/jour | NLS 14 ; réserve distincte
+resource: Anneau de stockage de sorts | un soins critiques et un soins légers stockés | chaque sort est consommé lorsqu’il est lancé
+resource: Localisation suprême | 1/jour | NLS 15 ; retrouver son ennemi après récupération
+
+step: Elle a atteint son refuge
+  do: Employer les soins stockés dans son anneau selon ses blessures, puis attendre d’avoir récupéré avant de revenir.
+  note: Après chaque récupération, utiliser localisation suprême pour retrouver son ennemi et préparer une nouvelle tentative d’assassinat ; elle recommence tant que sa cible survit.

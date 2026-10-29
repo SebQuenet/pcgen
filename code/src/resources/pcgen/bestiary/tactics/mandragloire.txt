@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Mandragloire, mandragore demi-fiélonne de taille P, chaotique mauvaise, FP 13 : chasseuse patiente qui affaiblit ses proies par harcèlement avant de les achever.
+  Morsure +15 (1d6+4 et étreinte), 2 coups +14 (1d4+4 et venin) ; allonge 1,50 m ; lutte +15.
+  126 pv, CA 31, RD 5/magie, résistance à la magie 24 ; résistances acide, froid, électricité et feu 10 ; immunités des plantes.
+  Vol 24 m, déplacement et escalade 12 m, creusement 3 m ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Poison rapide | 3/jour | action rapide ; contact au corps à corps ; Vigueur DD 17 ; NLS 5
+resource: Ténèbres | 3/jour | action simple ; objet touché, rayon 6 m, durée 5 minutes
+resource: Cri | 1/jour | action simple ; rayon 9 m ; effet sonique mental, Volonté ou nausée pendant 1d4 rounds ; DD non indiqué dans le profil fourni
+resource: Blasphème | 1/jour | action simple ; rayon 12 m ; Volonté DD 20 ; NLS 5
+resource: Contagion | 1/jour | action simple ; contact au corps à corps ; Vigueur DD 16 ; NLS 5
+resource: Ténèbres maudites | 1/jour | action simple ; rayon 6 m, portée 45 m ; Volonté DD 17 ; NLS 5
+resource: Profanation | 1/jour | préparation d'une zone ; aucun bénéfice direct à ses propres attaques
+
+step: Les intrus approchent
+  do: Les observer depuis la végétation avec Discrétion +31 et Perception +23 ; repérer une cible isolée et un couvert accessible en vol.
+  note: Discrétion +23 hors végétation ; privilégier une retraite derrière un obstacle qui coupe la ligne de vue.
+
+step: Une approche discrète profite d'un éclairage réduit
+  do: Utiliser ténèbres sur un objet transportable avant l'approche.
+  note: L'éclairage baisse d'un degré ; sa vision dans le noir reste utilisable. Ce pouvoir ne déclenche pas sa vulnérabilité aux ténèbres surnaturelles.
+
+## Ouverture
+
+step: Une cible vivante isolée est accessible
+  do: Approcher en vol, tenter le contact de poison en action rapide, puis employer l'action simple comme second déplacement pour regagner un couvert.
+  note: Chaque déplacement permet jusqu'à 24 m. Quitter une case menacée peut provoquer une attaque d'opportunité : choisir une cible peu dangereuse au contact.
+  note: Poison inflige 1d3 points d'affaiblissement de Constitution par round pendant 6 rounds au maximum ; Vigueur DD 17 chaque round annule les dégâts et met fin au poison.
+
+step: Le groupe reste compact et l'approche au contact serait trop risquée
+  do: Lancer ténèbres maudites sur le groupe depuis les airs, puis gagner un couvert avec son déplacement.
+  note: Au NLS 5, les créatures bonnes subissent 2d8 dégâts et sont fiévreuses pendant 1d4 rounds ; Volonté DD 17 réduit les dégâts de moitié et annule cet état. Les Extérieurs bons subissent 5d6 dégâts ; les créatures neutres subissent la moitié des dégâts sans cet état ; les mauvaises sont indemnes.
+
+## Rounds suivants
+
+step: Les proies sont encore organisées et dangereuses
+  do: Les suivre à couvert en ricanant ; attendre que le poison agisse, puis répéter les approches avec poison rapide jusqu'à épuisement des trois utilisations.
+  note: Ne pas rester au contact pour échanger des attaques avec plusieurs adversaires.
+
+step: Plusieurs ennemis affaiblis se trouvent à 9 m ou moins
+  do: Gagner une position favorable avec son déplacement et pousser son cri pour les rendre nauséeux avant de passer à la mêlée.
+  note: Le cri affecte toutes les créatures dans la zone qui ne sont pas immunisées ; ne pas y exposer inutilement ses alliés.
+
+step: Après le cri, des ennemis non mauvais de 5 DV ou moins sont à 12 m ou moins
+  do: Employer blasphème pour les empêcher d'agir et isoler une victime.
+  note: Avec le NLS 5 fourni, blasphème est sans effet sur les créatures de plus de 5 DV. À 5 DV, hébétement pendant 1 round ; à 4 DV ou moins, également affaiblissement de Force de 2d6 pendant 2d4 rounds. Volonté DD 20 annule l'hébétement et réduit l'affaiblissement de moitié.
+
+step: Une victime affaiblie est isolée et déjà au contact
+  do: Attaquer à outrance avec la morsure +15 et les deux coups +14 ; tenter l'étreinte après une morsure réussie sur une cible de taille autorisée.
+  note: Les coups transmettent un venin qui provoque confusion et fatigue ; son DD n'est pas précisé dans le profil et ne doit pas être confondu avec le DD 17 du pouvoir poison.
+  note: Une attaque à outrance exige de rester sur place, sauf un pas de 1,50 m ; après un déplacement ordinaire, ne porter qu'une attaque naturelle.
+
+step: Poison rapide est épuisé et une cible vivante peut être touchée sans exposition excessive
+  do: Employer contagion pour lui transmettre une maladie, puis reprendre le harcèlement à couvert.
+  note: Vigueur DD 16 annule la contamination ; l'incubation est supprimée, mais la maladie suit ensuite sa fréquence normale.
+
+## Repli
+
+step: Points de vie strictement sous 20
+  do: Rompre le combat et fuir en vol vers une cachette ; utiliser le retrait si nécessaire pour quitter le contact, puis se dissimuler dans la végétation.
+  note: Le retrait permet jusqu'à 48 m de vol et protège la sortie de la première case menacée. Elle évite désormais ces adversaires trop dangereux.
+
+step: Des ténèbres surnaturelles, telles que ténèbres profondes, couvrent sa position
+  do: Sortir immédiatement de la zone par le trajet le plus court, puis rejoindre un couvert.
+  note: Ces ténèbres la ralentissent comme le sort lenteur ; ses propres ténèbres ordinaires ne produisent pas cet effet. Adapter sa fuite aux déplacements et aux actions réduits.

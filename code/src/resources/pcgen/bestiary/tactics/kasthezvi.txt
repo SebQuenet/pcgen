@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Kasthezvi, aberration métamorphe loyale mauvaise des souterrains de Kaer Maga, patiente et silencieuse. Il privilégie l'embuscade et les attaques suivies d'un décrochage.
+  152 pv ; CA 27 ; déplacement 9 m. Toucher subsonique +14 contre la CA de contact, à 1,50 m : 1d8 dégâts plus 12d6 dégâts sonores ; le premier dé de dégâts ignore la réduction des dégâts.
+  RD 15/magie, RM 23, immunité au son ; Volonté +15 et bonus de +8 aux sauvegardes contre les effets mentaux. Esprit impénétrable est permanent.
+
+resource: Fracassement | 3/jour | action simple ; NLS 16 ; portée 19,50 m ; DD 15
+resource: Changement de forme | 8 heures/jour au total | n'importe quel humanoïde, comme modification d'apparence ; conserve ses pouvoirs spéciaux
+
+step: Il peut préparer une embuscade
+  do: Observer depuis un abri avec Perception +22 et Discrétion +31 ; choisir une cible isolée et une voie de retraite.
+  note: Vision dans le noir à 18 m et perception aveugle à 36 m. Son absence de bruit facilite l'approche, mais ne le rend pas invisible.
+
+step: Il doit approcher sans révéler sa nature
+  do: Prendre une apparence humanoïde et se faire passer pour un individu muet ; conserver cette forme pour porter son toucher.
+  note: Il ne peut pas parler. Ses déplacements, ses attaques et ses pouvoirs ne produisent aucun bruit ; ses victimes peuvent cependant crier.
+
+## Ouverture
+
+step: La cible est déjà à portée pendant un round de surprise
+  do: Porter un toucher subsonique +14 ; choisir de préférence un lanceur de sorts ou un adversaire déjà blessé.
+  note: Si nécessaire, annoncer Fente avant l'attaque pour atteindre 3 m ; sa CA descend alors à 25 jusqu'à son prochain tour.
+
+step: Il dispose d'un tour complet et sa cible n'est pas adjacente au début du tour
+  do: Utiliser Attaque éclair : avancer d'au moins 3 m, porter un toucher subsonique +14, puis employer le déplacement restant pour s'éloigner vers un abri.
+  note: Le déplacement total ne dépasse pas 9 m ; c'est une action complexe. La cible ne peut pas porter d'attaque d'opportunité contre ce déplacement ; les autres ennemis le peuvent.
+
+## Rounds suivants
+
+step: Il peut de nouveau approcher sans commencer adjacent à sa cible
+  do: Répéter Attaque éclair sur la même victime jusqu'à la mettre hors de combat ; finir aussi loin que possible des autres combattants.
+  note: Fente permet de toucher à 3 m en échange de -2 à la CA jusqu'au prochain tour. Cette allonge supplémentaire cesse à la fin de son tour.
+
+step: Un adversaire le maintient au contact
+  do: Faire un pas de placement de 1,50 m vers une case libre si le terrain le permet, puis porter un toucher ; employer Fente si la cible est désormais à 3 m.
+  note: Attaque éclair ne fonctionne pas contre un ennemi adjacent au début du tour. Mobilité donne +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements.
+
+step: Une arme non magique ou un objet solide gêne sérieusement sa tactique
+  do: Depuis une position hors de portée adverse, utiliser Fracassement sur cet objet, dans la limite de poids du sort.
+  note: Volonté DD 15 annule ; un objet porté bénéficie des règles de sauvegarde des objets. Le pouvoir ne détruit pas les objets magiques et ne blesse directement que les créatures cristallines, pour 10d6 dégâts sonores, Vigueur DD 15 pour moitié.
+
+step: Un ennemi est invisible ou dissimulé
+  do: Le localiser par perception aveugle dans les 36 m, puis tenter le toucher si la position permet l'attaque.
+  note: La perception aveugle ne supprime pas le camouflage. Combattre en aveugle permet de relancer le jet d'échec dû au camouflage en mêlée.
+
+## Repli
+
+step: Points de vie sous 38, ou plusieurs ennemis menacent de l'encercler
+  do: Prendre une action de retraite jusqu'à 18 m vers un passage dégagé ; rompre la ligne de vue, puis se cacher avec Discrétion +31.
+  note: La retraite protège seulement la sortie de sa case initiale contre les attaques d'opportunité des ennemis qu'il voit. Une fois à couvert, une apparence humanoïde peut faciliter sa fuite.
+
+step: Il est acculé sans issue
+  do: Continuer les touchers subsoniques contre l'adversaire le plus susceptible de tomber rapidement.
+  note: À sa mort, ses spasmes d'agonie libèrent une explosion de 30 m de rayon : 16d6 dégâts sonores et surdité permanente ; Vigueur DD 21 réduit les dégâts de moitié et annule la surdité. Cet effet est automatique et ne constitue pas une attaque volontaire.

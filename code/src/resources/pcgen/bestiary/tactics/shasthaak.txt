@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Shasthaak, géant des runes mort-vivant loyal mauvais, FP 19, prend d'abord ses adversaires pour Xin. Il combat jusqu'à sa destruction.
+  270 pv ; CA 38 ; résistance à la magie 30 ; réduction des dégâts 10/magie ; immunité au froid, à l'électricité, au feu et immunités des morts-vivants.
+  Épée longue +4 tueuse d'humains : +35/+30/+25, dégâts 4d6+33 et 5d6 de feu, critique 17–20. Allonge 6 m ; espace occupé 6 m ; déplacement 6 m.
+  Vision dans le noir à 18 m ; Perception +39 ; aura sacrilège à 9 m ; résistance à la canalisation +4.
+
+resource: Marche dans les airs | permanent | permet de se déplacer dans les airs ; ne donne pas de vitesse de vol
+resource: Charme-personne | à volonté | DD 17
+resource: Suggestion | à volonté | DD 19
+resource: Domination d'humanoïde | 3/jour | DD 21
+resource: Charme-monstre de groupe | 3/jour | DD 24
+resource: Exigence | 1/jour | DD 24
+resource: Vision lucide | 1/jour | à réserver aux illusions et dissimulations trompeuses
+
+## Ouverture
+
+step: Le combat commence
+  do: Tirer 2d6 pour déterminer combien de rounds Shasthaak s'en tient aux attaques physiques
+  note: durant toute cette période, il hurle en géant des insultes et des malédictions contre Xin ; il n'utilise pas ses pouvoirs magiques pour contrôler les adversaires
+
+step: Une cible est déjà dans son allonge de 6 m
+  do: Attaque à outrance à l'épée longue : +35/+30/+25, chaque coup infligeant 4d6+33 et 5d6 de feu
+  note: garder les ennemis dans son allonge ; un pas de 1,50 m permet de se replacer tout en conservant l'attaque à outrance
+
+step: Aucune cible n'est à portée
+  do: Avancer de 6 m au maximum, en utilisant la marche dans les airs si le terrain l'exige ; frapper si un adversaire entre dans son allonge
+  note: après ce déplacement, porter une seule attaque ; employer Science de la frappe décisive pour renforcer ce coup unique
+
+## Rounds suivants
+
+step: La période initiale de 2d6 rounds n'est pas terminée
+  do: Continuer les attaques physiques, en privilégiant l'attaque à outrance dès qu'une cible reste à portée
+  note: même blessé, il persiste à croire qu'il affronte Xin
+
+step: La période initiale est terminée et plusieurs adversaires peuvent être affectés
+  do: Reconnaître son erreur et employer charme-monstre de groupe, DD 24, pour tenter de neutraliser plusieurs opposants
+  note: un charme rend la cible amicale ; il ne permet pas de lui imposer les ordres d'une domination. Respecter les limites du sort et les conséquences des attaques contre les créatures charmées
+
+step: Un humanoïde dangereux reste hostile
+  do: Employer domination d'humanoïde, DD 21, puis lui ordonner de combattre les adversaires encore libres
+  note: privilégier un combattant capable de gêner ses alliés ; recommencer sur une autre cible si nécessaire, dans la limite des trois utilisations quotidiennes
+
+step: Il emploie ses pouvoirs magiques alors que des ennemis le menacent
+  do: Se placer hors de la portée de leurs armes avant d'utiliser un pouvoir, si possible par un pas de 1,50 m
+  note: il ne peut pas cumuler une attaque à outrance et l'utilisation d'un de ces pouvoirs dans le même round
+
+step: Des adversaires restent libres après les premiers pouvoirs de contrôle
+  do: Employer les utilisations restantes de charme-monstre de groupe ou de domination ; recourir ensuite à suggestion, DD 19, avec une consigne raisonnable qui écarte une cible du combat
+  note: charme-personne, DD 17, offre une autre tentative contre un humanoïde ; ces pouvoirs à volonté n'obligent pas à économiser leurs utilisations
+
+step: Des illusions l'empêchent de choisir ses cibles après la période initiale
+  do: Employer vision lucide avant de reprendre ses tentatives de contrôle
+
+step: Les pouvoirs de contrôle échouent ou les cibles ne peuvent pas être affectées
+  do: Reprendre les attaques à l'épée et exploiter l'allonge de 6 m pour menacer les approches
+
+step: Tous les adversaires sont effectivement sous son contrôle
+  do: Faire cesser les hostilités et donner ses ordres dans les limites des pouvoirs employés
+  note: ne pas considérer une créature simplement charmée comme un serviteur dominé
+
+## Repli
+
+step: Quel que soit son total de points de vie
+  do: Combattre jusqu'à sa destruction, sans chercher à fuir
+  note: il possède la revivification ; sa destruction au combat ne suffit donc pas nécessairement à l'éliminer définitivement

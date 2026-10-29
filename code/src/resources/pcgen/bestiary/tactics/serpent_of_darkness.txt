@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Serpent des ténèbres, amphisbène extraplanaire neutre de très grande taille, peu intelligent. 174 pv, CA 27.
+  Deux morsures +19 (3d6+8, critique 19–20) ; avec Attaque en puissance : deux morsures +15 (3d6+16, critique 19–20).
+  Déplacement, escalade et nage : 6 m ; espace occupé : 4,50 m ; allonge : 1,50 m.
+
+note: Obscurité et défenses
+  Il voit dans les ténèbres et bénéficie d'une vision à 360°, de l'odorat et de Perception +23.
+  Guérison accélérée de 5 pv par round, uniquement dans l'obscurité. RD 10/Bien, résistance au froid 15 et au feu 15, RM 18 ; immunité à la pétrification.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Attendre dans l'obscurité et laisser les adversaires venir à portée de morsure
+  note: Privilégier un emplacement où il peut rester dans les ténèbres pendant le combat et récupérer 5 pv par round
+
+## Ouverture
+
+step: Un champion évident d'une divinité bonne est présent
+  do: Le choisir comme cible prioritaire
+
+step: Aucun champion évident d'une divinité bonne ne se distingue
+  do: Choisir l'adversaire le plus fort et le plus lourdement protégé
+
+step: Première attaque du combat
+  do: Employer le châtiment du Bien contre la cible choisie et commencer avec Attaque en puissance
+  note: Les valeurs avec Attaque en puissance sont +15 et 3d6+16 par morsure, avant les éventuels effets du châtiment
+
+step: La cible est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance avec les deux morsures
+
+step: La cible est hors de portée
+  do: Avancer jusqu'au contact, en restant dans l'obscurité si possible, puis porter une morsure si une attaque est encore possible
+
+## Rounds suivants
+
+step: Au moins une morsure atteint la cible par round avec Attaque en puissance
+  do: Continuer les attaques à outrance avec deux morsures +15 (3d6+16 chacune)
+  note: Concentrer les morsures sur la cible prioritaire tant qu'elle reste accessible
+
+step: Aucune morsure ne touche la cible pendant un round avec Attaque en puissance
+  do: Abandonner Attaque en puissance contre cette cible ; reprendre les deux morsures +19 (3d6+8 chacune)
+
+step: La cible tombe ou devient inaccessible
+  do: Choisir une nouvelle cible selon la même priorité, puis se rapprocher si nécessaire
+  note: Sans déplacement nécessaire, employer les deux morsures en attaque à outrance
+
+step: Il combat dans l'obscurité et a perdu des points de vie
+  do: Appliquer la guérison accélérée de 5 pv à chaque round
+  note: La guérison cesse dès qu'il se trouve dans une zone éclairée
+
+## Repli
+
+step: Il combat dans l'obscurité
+  do: Combattre jusqu'à la mort, même à 40 pv ou moins
+
+step: Il est à 40 pv ou moins et exposé à une lumière, même faible
+  do: Fuir vers un endroit obscur pour s'y cacher et guérir ; utiliser la nage ou l'escalade si le terrain s'y prête
+  note: Il se déplace à 6 m sur terre, dans l'eau ou en escalade ; sa guérison accélérée de 5 pv par round reprend une fois dans l'obscurité

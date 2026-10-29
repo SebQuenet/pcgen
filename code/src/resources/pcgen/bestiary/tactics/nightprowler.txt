@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Nightprowler, mort-vivant de taille G, chaotique mauvais, félin d'ombre intelligent et cruel. Il traque les vivants et cherche à isoler une proie.
+  136 pv ; CA 25 ; déplacement 15 m ; espace et allonge 3 m. Morsure +18 (3d6+10, critique 19-20, ténèbres rampantes et étreinte), 2 griffes +18 (1d8+10 et ténèbres rampantes).
+  RD 10/Bien et argent : une arme doit réunir les deux propriétés pour l'ignorer ; RM 21 ; immunité au froid et traits des morts-vivants. Aura de profanation sur 9 m.
+
+resource: Détection de la magie, morsure magique | constants | déjà prises en compte ; ne pas ajouter une seconde fois les bonus aux attaques
+resource: Ténèbres profondes | à volonté | préparer l'obscurité et neutraliser les lumières compatibles avec ce pouvoir
+resource: Ténèbres maudites | à volonté | Volonté DD 18
+resource: Dissipation de la magie | 3/jour | NLS 10 ; cibler une protection ou une lumière magique gênante
+resource: Contagion | 3/jour | Vigueur DD 18 ; maladie, sans priorité sur les attaques immédiates
+resource: Invisibilité | 3/jour | approche discrète ; prend fin lorsqu'il attaque
+resource: Marche dans les airs | 1/jour | gagner une position inaccessible par le sol
+resource: Confusion | 1/jour | Volonté DD 18
+resource: Cône de froid | 1/jour | Réflexes DD 19
+resource: Rapidité | 1/jour | préparer juste avant l'engagement ; renforce les attaques à outrance
+resource: Immobilisation de monstre | 1/jour | Volonté DD 19
+resource: Convocation | 1/jour | niveau 4 ; 2 ombres, à convoquer dans l'obscurité
+
+step: Il repère des intrus sans être découvert
+  do: Les suivre à couvert et choisir une cible isolée ; employer invisibilité si l'approche l'exige
+  note: Discrétion +23, +31 dans la pénombre ou l'obscurité ; Perception +20, odorat et Survie +17 pour la traque. Ses sens obscurs portent à 9 m ; sa vision dans le noir à 18 m.
+
+step: L'affrontement semble équilibré ou difficile
+  do: Préparer ténèbres profondes, puis convoquer les 2 ombres et employer rapidité si le temps le permet
+  note: Consacrer une action distincte à chaque pouvoir ; inclure les ombres dans rapidité lorsqu'elles sont présentes et à portée.
+
+step: Une vive lumière éclaire le terrain
+  do: Choisir une approche obscure ou réduire l'éclairage avec ténèbres profondes avant de s'exposer
+  note: L'aversion à la lumière le rend fiévreux en vive lumière ; les malus sont doublés au soleil naturel.
+
+## Ouverture
+
+step: Une proie vulnérable est accessible au corps à corps
+  do: S'approcher et mordre ; si elle est déjà à portée sans déplacement, effectuer une attaque à outrance
+  note: Après une morsure réussie, tenter l'étreinte gratuite sur une cible de taille M ou inférieure. Une approche ordinaire ne permet pas d'enchaîner les trois attaques.
+
+step: Plusieurs ennemis restent groupés et hors de son allonge
+  do: Employer confusion pour désorganiser leur coopération ; préférer cône de froid si une ligne de tir permet de toucher plusieurs ennemis
+  note: Choisir un seul de ces pouvoirs pour ce round ; préserver les alliés exposés à confusion.
+
+step: Un adversaire isolé doit être neutralisé avant l'approche
+  do: Employer immobilisation de monstre, puis se rapprocher pour exploiter la paralysie tant qu'elle dure
+
+## Rounds suivants
+
+step: Une victime reste à portée
+  do: Effectuer morsure et 2 griffes ; sous rapidité, ajouter une morsure lors de l'attaque à outrance
+  note: Conserver sa précision contre une défense élevée ; employer Attaque en puissance contre une cible facile à toucher.
+
+note: Ténèbres rampantes
+  Chaque attaque naturelle peut imposer Vigueur DD 20 : en cas d'échec, victime chancelante pendant 1 round, puis soins entravés et vision obscurcie.
+  Les soins magiques exigent un test de NLS DD 26 ; les attaques de la victime subissent 20 % de chances d'échec. La malédiction persiste jusqu'à sa suppression ou la guérison de toutes les blessures.
+
+step: Il domine une victime déjà affaiblie
+  do: Plonger la zone dans les ténèbres profondes, puis reprendre ses attaques
+  note: Il aime prolonger la peur d'une proie qu'il pense condamnée ; garder celle-ci dans les 9 m de ses sens obscurs.
+
+step: Une cible est saisie et ses alliés ne menacent pas directement le monstre
+  do: Entretenir la lutte pour retenir la victime ; la relâcher si cela compromet une meilleure attaque à outrance
+  note: La lutte limite ses actions et l'expose davantage aux autres combattants.
+
+step: Des adversaires provoquent des attaques d'opportunité dans son allonge de 3 m
+  do: Exploiter Réflexes de combat pour frapper sur les occasions distinctes
+
+step: Une protection magique empêche ses attaques ou une lumière dissipe son avantage
+  do: Tenter une dissipation ciblée, puis reprendre le corps à corps au round suivant
+  note: Ne pas gaspiller les 3 utilisations sur des effets sans influence sur le combat.
+
+step: Les ennemis refusent le corps à corps
+  do: Employer ténèbres maudites contre les créatures qu'elles affectent ; utiliser marche dans les airs pour rejoindre une position surélevée si nécessaire
+  note: Contagion sert surtout à laisser une maladie à une proie ; elle ne remplace pas une neutralisation immédiate.
+
+## Repli
+
+step: Le combat est engagé, même à très peu de points de vie
+  do: Continuer à combattre ; convoquer les ombres si ce pouvoir est encore disponible et que le rapport de force devient défavorable
+  note: Sa description officielle exclut la fuite, même près de la destruction : il croit pouvoir renaître. Aucun seuil de repli en points de vie.
+
+step: Avant l'engagement, l'ennemi paraît manifestement trop puissant
+  do: Rester caché, différer l'attaque et rechercher des alliés morts-vivants avant de revenir
+  note: Il évite les engagements manifestement suicidaires et peut coordonner ses alliés par télépathie à 30 m.

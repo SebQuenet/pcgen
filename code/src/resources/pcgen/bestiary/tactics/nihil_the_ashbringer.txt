@@ -1,0 +1,88 @@
+## Avant le combat
+
+note: Profil
+  Nihil The Ashbringer, diablesse ashmede de taille G, loyale mauvaise, FP 13. Elle observe les intrus, les affaiblit par ses pouvoirs et réserve sa faux aux mises à mort.
+  Faux +1 impie +21/+16/+11 (2d6+11, 19-20/×4) et 2 ailes +14 (1d6+3 chacune) en attaque à outrance ; allonge de 3 m, espace occupé de 3 m.
+  175 PV, CA 30, contact 14, prise au dépourvu 27 ; initiative +7. Déplacement de 12 m, vol de 18 m, manœuvrabilité moyenne.
+
+note: Défenses et perception
+  Guérison accélérée de 3 PV par round ; réduction des dégâts 10/Bien ; résistance à la magie 24. Immunité au feu et au poison ; résistance à l’acide 10 et au froid 10.
+  Vigueur +16, Réflexes +7, Volonté +11. Aura de terreur dans un rayon de 9 m, DD 19.
+  Vision d’aura et détection de la magie constantes ; vision dans les ténèbres, vision dans le noir à 18 m, Perception +19. Télépathie à 30 m.
+  Pouvoirs magiques au NLS 12, concentration +15.
+
+resource: Œil indiscret | 3/jour | reconnaissance des hauteurs de Scarwall
+resource: Invisibilité suprême | 3/jour | préparation à lancer peu avant l’arrivée des intrus
+resource: Convocation | 1/jour | 1 diable barbelé, 50 % de réussite ; pouvoir de niveau 4
+resource: Blasphème | 3/jour | DD 20, NLS 12
+resource: Flétrissure | 1/jour | DD 21
+resource: Chaîne d’éclairs | 1/jour | DD 19
+resource: Cage de force | 1/jour | DD 20, pour isoler l’adversaire le plus dangereux
+resource: Dissipation de la magie | à volonté | retirer un effet magique gênant
+resource: Téléportation suprême | à volonté | elle-même et au plus 22,7 kg d’objets, sans passager
+
+step: Elle apprend que les PJ ont pénétré dans le château
+  do: Employer œil indiscret pour explorer les hauteurs de Scarwall et rechercher les intrus
+  note: Si elle les trouve, observer leurs tactiques ; repérer notamment les combattants capables de franchir sa réduction des dégâts et les protections magiques visibles.
+
+step: Les PJ approchent de sa salle
+  do: Lancer invisibilité suprême, puis tenter de convoquer un diable barbelé avant leur entrée
+  note: Décompter les deux pouvoirs ; un échec de convocation consomme l’unique tentative quotidienne.
+
+step: Des serviteurs sont présents
+  do: Leur transmettre par télépathie la consigne d’isoler un intrus, de l’affaiblir, puis de changer de cible pour laisser Nihil l’achever
+  note: Utiliser les serviteurs disponibles et le diable barbelé seulement si sa convocation a réussi.
+
+## Ouverture
+
+step: Tous les PJ sont entrés dans la salle
+  do: Lancer blasphème sur le groupe
+  note: Résoudre le pouvoir au NLS 12 ; tenir compte de l’alignement et des DV des cibles pour déterminer ses effets.
+
+step: Un PJ se révèle nettement plus dangereux que les autres
+  do: Employer cage de force pour l’écarter du combat et le garder pour la fin
+  note: Priorité au combattant lourdement protégé dont l’arme franchit sa réduction des dégâts. Cette action remplace le pouvoir prévu ce round ; reprendre ensuite la séquence offensive.
+
+step: Un ennemi entre à 9 m ou moins
+  do: Appliquer l’aura de terreur, DD 19
+  note: L’aura accompagne ses autres actions ; tenir compte des immunités éventuelles des victimes.
+
+## Rounds suivants
+
+step: Premier round après blasphème, sauf urgence imposant cage de force
+  do: Lancer flétrissure sur les intrus en choisissant les cibles pour épargner ses serviteurs
+  note: DD 21 ; une seule utilisation quotidienne. Si cage de force a retardé ce pouvoir, le lancer au prochain round disponible.
+
+step: Round suivant flétrissure
+  do: Lancer chaîne d’éclairs, avec le PJ le plus menaçant encore libre comme cible principale et les autres intrus comme cibles secondaires
+  note: DD 19 ; une seule utilisation quotidienne.
+
+step: Une cible affaiblie est accessible et Nihil peut rester sur place
+  do: Effectuer une attaque à outrance : faux +21/+16/+11 et deux ailes +14, en concentrant les attaques sur cette cible
+  note: Faux : 2d6+11, critique 19-20/×4 ; chaque aile : 1d6+3. Privilégier les mises à mort préparées par ses serviteurs.
+
+step: Il faut se déplacer pour atteindre une cible
+  do: Avancer puis porter une seule attaque de faux à +21 ; ou employer Attaque en vol pour frapper en passant et poursuivre son mouvement
+  note: En vol, respecter les 18 m de déplacement et la manœuvrabilité moyenne. Une passe ne permet pas l’attaque à outrance.
+
+step: Une protection magique identifiée gêne fortement son offensive
+  do: Consacrer son action à dissipation de la magie sur cet effet
+  note: Pouvoir à volonté, au NLS 12 ; cette action remplace ses attaques ou son autre pouvoir du round.
+
+step: Son invisibilité a pris fin et elle dispose encore du pouvoir
+  do: Relancer invisibilité suprême si cela améliore sa survie ou lui permet de reprendre l’avantage
+  note: Décompter l’utilisation quotidienne et reprendre l’offensive au round suivant.
+
+step: Elle est encerclée ou doit changer de position dans la salle
+  do: Se repositionner par le vol ou par téléportation suprême, puis reprendre l’attaque au round suivant
+  note: La téléportation n’emporte pas ses serviteurs ; conserver une position permettant d’exploiter son allonge de 3 m.
+
+## Repli
+
+step: Nihil reste une ancre spirituelle, même avec très peu de PV
+  do: Combattre jusqu’à la mort ; concentrer ses dernières attaques sur un adversaire déjà blessé
+  note: Son lien d’ancre spirituelle l’empêche de fuir. Téléportation suprême ne fournit pas d’échappatoire à ce lien ; ses déplacements servent à poursuivre le combat.
+
+step: Elle subit des dégâts mais reste en vie
+  do: Appliquer sa guérison accélérée de 3 PV par round et continuer le combat
+  note: Cette guérison ne la ramène pas à la vie après sa mort.

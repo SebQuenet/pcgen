@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Thora Petska est une poupée gardienne malveillante de très petite taille, une créature artificielle du froid. Elle cherche à combattre en hauteur et à se faire protéger par des humanoïdes charmés.
+  Dague de poupée +10 (1d2-1, critique 19-20, plus 1d6 de froid et paralysie), allonge de 1,50 m ; rayon de givre à volonté. Déplacement au sol de 9 m, initiative +7, Discrétion +15.
+  22 points de vie ; CA 16, contact 15, prise au dépourvu 13 ; réduction des dégâts 5/magie ; résistance à la magie 14. Immunité au froid et traits des créatures artificielles, mais sensible aux effets mentaux et vulnérable au feu.
+
+resource: Lévitation | 1/jour | Sur elle-même pour combattre hors de portée de mêlée ; NLS 4
+resource: Charme-personne | 3/jour | Volonté DD 11 ; cible humanoïde ; NLS 4
+resource: Chute de givre (frost fall) | 1/jour | DD 12 ; à réserver à une mêlée imposée ; NLS 4
+resource: Rayon de givre | À volonté | Attaque à distance lorsqu'elle est hors d'atteinte ; NLS 4
+resource: Alarme | 3/jour | Avertir de l'approche d'intrus ; NLS 4
+resource: Lumière, manipulation à distance, ouverture/fermeture, prestidigitation | 3/jour chacun | Pouvoirs utilitaires ; NLS 4
+
+step: Elle a le temps de préparer sa position
+  do: Placer une alarme sur un accès et se dissimuler avec Discrétion +15
+  note: Vision dans le noir à 18 m, vision nocturne et Perception +5 pour repérer les intrus.
+
+## Ouverture
+
+step: Les adversaires ne l'ont pas encore acculée au contact
+  do: Lancer lévitation sur elle-même et s'élever au-delà de leur allonge
+  note: La lévitation permet de monter et descendre ; elle ne fournit pas un déplacement horizontal libre.
+
+step: Elle est en hauteur et un humanoïde peut intervenir en sa faveur
+  do: Au round suivant, lancer charme-personne sur cet humanoïde, Volonté DD 11, puis lui demander d'empêcher les autres de l'attaquer
+  note: Le charme rend la cible amicale envers Thora ; son aide dépend de ce qu'elle accepte de faire. Elle ne devient pas automatiquement une combattante contre ses compagnons.
+
+step: Elle est contrainte à la mêlée dès le début
+  do: Lancer chute de givre, DD 12, en plaçant la zone sur les adversaires au contact
+  note: Passer aux attaques de dague à partir du round suivant ; son immunité au froid lui permet de rester dans la zone glacée.
+
+## Rounds suivants
+
+step: Elle reste hors de portée de mêlée et personne ne la protège
+  do: Tenter un nouveau charme-personne sur un humanoïde utile, jusqu'à épuiser ses trois utilisations
+  note: Demander à la cible de s'interposer ou de convaincre ses compagnons de cesser leurs attaques.
+
+step: Elle peut attaquer à distance depuis sa position
+  do: Utiliser rayon de givre sur un adversaire qui continue à la menacer
+  note: Maintenir une hauteur suffisante contre les combattants au sol ; les attaques à distance et les sorts peuvent toujours l'atteindre.
+
+step: Un adversaire la rejoint au contact et chute de givre est encore disponible
+  do: Lancer chute de givre, DD 12, sur sa position
+  note: Préparer ainsi la combinaison avec la paralysie de sa dague, qui peut retenir une victime dans le froid surnaturel.
+
+step: La mêlée se poursuit
+  do: Frapper avec la dague de poupée +10, pour 1d2-1 plus 1d6 de froid et paralysie
+  note: Privilégier un adversaire dans la zone de chute de givre afin qu'une paralysie l'y immobilise pendant que le sort agit.
+
+## Repli
+
+step: Elle perd des points de vie, même si sa destruction est proche
+  do: Continuer le combat jusqu'à sa destruction
+  note: Thora ne fuit pas. Elle peut reprendre de la hauteur avec une lévitation encore active pour poursuivre ses attaques à distance.

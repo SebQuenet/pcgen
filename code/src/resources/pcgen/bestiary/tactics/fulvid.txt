@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Fulvid est une abeille géante de taille M, compagnon vermine de Tenzekil, sans intelligence. Elle attaque les adversaires qu'il lui désigne.
+  52 pv ; CA 23, contact 14, prise au dépourvu 19 ; esquive totale.
+  Morsure +11/+6 (1d6+5 chacune en attaque à outrance), ou dard +11 (1d4+5 et poison) ; allonge de 1,50 m.
+  Déplacement au sol de 6 m ; vol de 12 m, bonne manœuvrabilité ; vision dans le noir à 18 m ; Perception +10.
+
+step: Tenzekil lui ordonne de garder un lieu ou de chercher
+  do: Exécuter la consigne en utilisant Perception +10 et la vision dans le noir
+
+## Ouverture
+
+step: Tenzekil désigne une cible et Fulvid a plus de 15 pv
+  do: Rejoindre cette cible, en volant si nécessaire, puis porter une morsure +11 (1d6+5) si un seul déplacement suffit à arriver au contact
+  note: Si la cible est trop éloignée, un double déplacement en vol couvre jusqu'à 24 m et ne laisse aucune attaque ce round.
+
+step: La cible désignée est déjà au contact et Fulvid a plus de 15 pv
+  do: Faire une attaque à outrance avec deux morsures, +11 puis +6, infligeant chacune 1d6+5 dégâts
+
+## Rounds suivants
+
+step: Fulvid n'a pas encore atteint le seuil de 15 pv
+  do: Continuer à mordre la cible désignée par Tenzekil
+  note: Au contact sans déplacement, utiliser les deux morsures +11/+6 ; après un déplacement, une seule morsure +11.
+
+step: Fulvid tombe à 15 pv ou moins et n'a pas encore réussi son attaque de dard
+  do: Remplacer les morsures par une attaque de dard +11 (1d4+5 et poison) chaque round, jusqu'à toucher
+  note: Les effets et le DD du poison ne sont pas précisés dans le bloc fourni.
+
+step: Une attaque de dard a touché
+  do: Reprendre les morsures contre la cible désignée, même si Fulvid reste à 15 pv ou moins
+  note: Utiliser les deux morsures +11/+6 si une attaque à outrance est possible, sinon une seule morsure +11.
+
+## Repli
+
+step: Tenzekil maintient l'ordre de combattre
+  do: Poursuivre les attaques jusqu'à la mort
+  note: Le seuil de 15 pv déclenche le passage au dard ; Fulvid ne fuit pas spontanément.
+
+step: Tenzekil lui ordonne de cesser le combat
+  do: Interrompre immédiatement ses attaques

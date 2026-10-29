@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Taldaris est un inévitable impariut loyal neutre, intelligent et perspicace. Il possède 172 points de vie, une CA de 27 et une vitesse de 9 m ; son allonge est de 1,50 m.
+  Hallebarde : +23/+18/+13/+8, 1d10+9, critique x3 ; sans arme, deux coups à +22, 1d8+6 chacun. Il combine ces attaques avec immobilisation de monstre, dissipation de la magie et ses manœuvres de combat.
+  Réduction des dégâts 10/chaotique, résistance à la magie 24 et régénération de 5 points de vie par round, interrompue par les dégâts chaotiques. Vision dans le noir à 18 m, vision nocturne, Perception +27.
+
+note: Arme à vérifier
+  La ligne d’attaque indique une hallebarde +1 en mithral, tandis que l’équipement mentionne une hallebarde +3 axiomatique en mithral. Les attaques de ce plan reprennent les chiffres fournis dans la ligne d’attaque ; résoudre cette divergence avant de jouer.
+
+resource: Dissipation de la magie, détection du mensonge, signature magique | à volonté | NLS 16 ; détection du mensonge : Volonté DD 20
+resource: Immobilisation de monstre | 3/jour | Volonté DD 21 ; une cible par utilisation
+resource: Porte dimensionnelle | 3/jour | déplacement et repli ; aucune autre action après son utilisation jusqu’au prochain tour
+resource: Invisibilité | 3/jour | préparation ou fuite ; prend fin lorsqu’il attaque
+resource: Projectile magique | 3/jour | attaque à distance ; cinq projectiles de 1d4+1 dégâts de force chacun
+resource: Marque de la justice | 3/jour | incantation de 10 minutes ; à réserver à une cible entravée ou consentante, hors de la mêlée
+resource: Vision lucide | 1/jour | préparation contre les illusions et les créatures invisibles
+resource: Changement de plan | 1/jour | lui-même et, éventuellement, des compagnons consentants ; ne permet pas de bannir un ennemi récalcitrant
+
+step: Il peut observer avant de se révéler
+  do: Utiliser son changement de forme en humanoïde de taille P ou M, ou invisibilité, pour reconnaître les adversaires et les issues
+  note: Psychologie +27 et détection du mensonge permettent d’évaluer des déclarations ; ce dernier pouvoir ne lit pas les pensées
+
+step: Des illusions ou des ennemis invisibles sont probables
+  do: Activer vision lucide avant d’approcher
+
+## Ouverture
+
+step: Un adversaire dangereux peut être paralysé
+  do: Lancer immobilisation de monstre sur lui, de préférence avant le contact, puis avancer vers une position qui limite les ennemis capables de l’entourer
+  note: Volonté DD 21 ; la cible peut tenter un nouveau jet à son tour en y consacrant une action complexe
+
+step: Une protection magique adverse compromet ses attaques
+  do: Employer une dissipation de la magie ciblée sur l’adversaire protégé
+  note: Le jet de dissipation est de 1d20+10, le bonus de ce sort étant plafonné malgré son NLS 16
+
+step: Un ennemi est déjà à 1,50 m et aucune protection prioritaire ne doit être dissipée
+  do: Effectuer l’attaque à outrance à la hallebarde, +23/+18/+13/+8, plutôt que dépenser son déplacement
+
+## Rounds suivants
+
+step: Un adversaire reste à portée sans nécessiter de déplacement important
+  do: Répéter l’attaque à outrance ; un pas de 1,50 m permet de se replacer tout en conservant les quatre attaques
+  note: Activer Attaque en puissance contre une CA facile à toucher : malus de 5 aux attaques et bonus de 15 aux dégâts de la hallebarde maniée à deux mains
+
+step: Un combattant mobile doit être retenu au contact
+  do: Remplacer une attaque de mêlée par un croc-en-jambe ; BMO +24 pour la première attaque
+  note: Les tentatives remplaçant des attaques suivantes subissent les malus itératifs correspondants ; se relever peut exposer la cible à une attaque d’opportunité
+
+step: Déplacer un adversaire libérerait un passage ou améliorerait sa position
+  do: Consacrer une action simple à un repositionnement, BMO +26
+  note: Le repositionnement ne permet pas d’envoyer directement la cible dans une case intrinsèquement dangereuse ; cette manœuvre remplace la routine d’attaques de ce tour
+
+step: Un objet accessible porté par l’ennemi est décisif
+  do: Avec une main libre, tenter une subtilisation, BMO +24
+  note: Cette manœuvre ne permet pas de prendre une arme tenue ni une armure portée
+
+step: Une cible prioritaire reste hors d’atteinte
+  do: Utiliser projectile magique pour lui infliger des dégâts, ou une nouvelle immobilisation de monstre si la neutraliser est plus utile
+  note: Conserver au moins une porte dimensionnelle pour se dégager ; une téléportation offensive le laisse sans autre action jusqu’à son prochain tour
+
+step: La pression en mêlée devient trop forte
+  do: Employer Expertise du combat pendant ses attaques pour gagner de la CA, ou utiliser porte dimensionnelle pour rompre l’encerclement
+
+## Repli
+
+step: Points de vie à 43 ou moins, ou dégâts chaotiques répétés empêchant la régénération de le soutenir
+  do: Utiliser porte dimensionnelle vers un emplacement sûr, puis invisibilité au tour suivant si nécessaire
+  note: Ce seuil est une consigne tactique ; éviter de rester au contact d’une arme chaotique en comptant sur la régénération
+
+step: Il est hors d’atteinte et les dégâts chaotiques ont cessé
+  do: Rester à couvert pendant que sa régénération rétablit 5 points de vie par round lorsqu’elle fonctionne de nouveau
+
+step: Les poursuivants peuvent encore l’acculer et changement de plan est disponible
+  do: Quitter le plan ; n’emmener que des créatures consentantes

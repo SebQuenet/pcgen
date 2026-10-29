@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  L'Émissaire de l'Au-delà est un vespergaunt, une vase intelligente de taille M, neutre mauvaise, FP 12. Il possède 195 pv et une CA de 20.
+  Il frappe avec deux coups +21, chacun infligeant 2d8+8 dégâts plus siphon d'esprit ; son allonge est de 3 m. Il n'a aucune attaque à distance.
+  Il vole à 18 m avec une manœuvrabilité parfaite, mais ne se déplace au sol qu'à 3 m. Son aura de folie porte à 18 m, DD 21.
+  Vision à 360°, vision aveugle à 18 m et vision lucide constante lui permettent de repérer ses adversaires dans l'obscurité. RD 10/aligné, résistance à la magie 23, corps amorphe et immunités des vases soutiennent sa résistance.
+
+resource: Ténèbres profondes | à volonté | pouvoir magique, NLS 17, concentration +20
+resource: Contact avec les plans | 3/jour | renseignements avant le combat, NLS 17
+resource: Souhait | 0 disponible ce mois | déjà utilisé pour provoquer le crépuscule surnaturel et les transformations autour de Dustpawn
+resource: Don des langues et vision lucide | constants | télépathie à 30 m également disponible
+
+step: Il choisit sa position avant l'affrontement
+  do: Privilégier un emplacement sombre et accessible en vol, à proximité des adversaires attendus
+  note: sa sensibilité à la lumière l'incite à éviter les zones vivement éclairées ; il doit pouvoir rejoindre ses victimes au corps à corps
+
+## Ouverture
+
+step: Le combat commence
+  do: Lancer ténèbres profondes sur un objet à portée de contact, puis se déplacer en vol pour approcher un lanceur de sorts divins tout en restant dans la zone obscurcie si possible
+  note: lancer le pouvoir et se déplacer ne lui laisse pas d'attaque de coup pendant ce tour ; s'il est déjà menacé, utiliser le pouvoir sur la défensive
+
+step: Des adversaires se trouvent à 18 m ou moins
+  do: Appliquer l'aura de folie, DD 21
+  note: l'aura accompagne ses déplacements ; elle ne remplace pas ses attaques ou ses pouvoirs magiques
+
+## Rounds suivants
+
+step: Un lanceur de sorts divins est à portée et aucune approche n'est nécessaire
+  do: Faire une attaque à outrance : deux coups +21, chacun pour 2d8+8 dégâts plus siphon d'esprit
+  note: concentrer les coups sur ce lanceur ; un pas de 1,50 m reste possible pour ajuster sa position
+
+step: La cible est facile à toucher
+  do: Utiliser Attaque en puissance : coups +17, chacun pour 2d8+16 dégâts plus siphon d'esprit
+  note: conserver les attaques à +21 contre une CA élevée pour favoriser les touches et le siphon d'esprit
+
+step: Un déplacement de 18 m ou moins permet de placer une cible à portée de son allonge de 3 m
+  do: La rejoindre en vol et porter un seul coup +21, pour 2d8+8 dégâts plus siphon d'esprit
+  note: choisir en priorité un lanceur de sorts divins ; utiliser son allonge pour frapper sans devoir se placer au contact immédiat
+
+step: Les ennemis restent hors de portée ou cherchent à l'attirer hors des ténèbres
+  do: Les poursuivre en vol et sortir de la zone obscurcie si cela devient nécessaire pour porter des coups
+  note: il cherche normalement à rester dans ses ténèbres, mais ne dispose d'aucun tir ni pouvoir offensif à distance ; rejoindre une nouvelle zone de ténèbres dès que possible
+
+step: Les ténèbres sont dissipées et les conditions d'éclairage le justifient
+  do: Relancer ténèbres profondes, puis se repositionner en vol dans leur zone
+  note: ce pouvoir est utilisable à volonté ; le relancer consomme l'action qui aurait permis de frapper
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter un coup +21, pour 2d8+8 dégâts plus siphon d'esprit
+  note: Attaques réflexes et sa Dextérité de 14 permettent jusqu'à trois attaques d'opportunité par round, si des occasions distinctes se présentent
+
+## Repli
+
+step: Ses points de vie diminuent, même s'il est diminué par la destruction de le planétaire des mondes lointains
+  do: Continuer à combattre jusqu'à la mort, sans fuir ni se rendre
+  note: après un si long voyage, il refuse d'abandonner sa destination ; ses déplacements vers les ténèbres servent à poursuivre le combat, sans seuil de repli en points de vie

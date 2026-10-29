@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Ears et Greenie sont des chairs affamées, des vases de taille M sans intelligence. Chacune possède 15 pv et une CA de 9 ; déplacement et nage à 6 m.
+  Coup +3 (1d4+3 plus étreinte), allonge de 1,50 m ; BMO +7 en lutte.
+  Perception aveugle à 9 m et odorat ; corps amorphe, immunités des vases et immunité au croc-en-jambe.
+  Autres qualités : compression, régénération réactive et traînée de bave.
+
+resource: Régénération | permanente | 3 pv par round ; neutralisée par l'acide ou le feu
+
+## Ouverture
+
+step: Une créature autre qu'un gobelin ou une chair affamée est repérée
+  do: Se diriger vers la plus proche, à 6 m par déplacement, en nageant si nécessaire.
+  note: Chaque chair affamée choisit sa cible indépendamment, sans coordination tactique.
+
+step: La cible est à 1,50 m ou moins
+  do: Porter un coup +3, infligeant 1d4+3 dégâts ; en cas de réussite, tenter l'étreinte avec un BMO de +7.
+
+## Rounds suivants
+
+step: La cible reste consciente et à portée
+  do: Continuer à la frapper ; si elle est agrippée, poursuivre la lutte pour lui infliger les dégâts du coup.
+  note: BMO de lutte +7 ; dégâts du coup 1d4+3.
+
+step: La cible s'éloigne ou une autre créature admissible devient la plus proche
+  do: Se rapprocher de la créature la plus proche qui n'est ni un gobelin ni une chair affamée, puis attaquer dès qu'elle est à portée.
+
+step: Un PJ tombe inconscient
+  do: Abandonner cette victime et se tourner vers le PJ en mouvement le plus proche, en relâchant l'étreinte si nécessaire.
+  note: Leur avidité les attire vers les proies qui bougent ; elles ne s'acharnent pas sur un PJ inconscient.
+
+step: La régénération fonctionne
+  do: Récupérer 3 pv par round en poursuivant les attaques.
+
+## Repli
+
+step: Quel que soit le nombre de points de vie restants
+  do: Combattre jusqu'à la mort, sans fuir ni se rendre.
+  note: Même l'acide ou le feu ne provoquent aucun repli réfléchi.

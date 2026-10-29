@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Idole azlante, minuscule créature artificielle de pierre, neutre, gardienne de souvenirs anciens. Elle fascine les intrus, fait retentir une injonction magique, puis paralyse et frappe ceux qui résistent.
+  Coup +8 (1d4+1), allonge 0 m ; déplacement au sol 3 m, vol 9 m (moyen). 19 PV, CA 17, réduction des dégâts 5/— ; immunité au froid, à l'électricité, au feu et aux dégâts sonores.
+  Vision dans le noir à 18 m, vision nocturne, Perception +7. Elle comprend l'azlanti mais ne parle pas elle-même.
+
+note: Immobilité
+  Immobile, elle ressemble parfaitement à une statuette ordinaire et peut utiliser la plupart de ses pouvoirs sans bouger. Au round suivant leur utilisation, Perception DD 25 permet de remarquer des indices d'animation ; un déplacement ou une attaque révèle sa nature.
+
+note: Esprit de pierre
+  Dans un rayon de 9 m, les divinations visant une créature ou un objet sont détournées vers l'idole. Une lecture de ses pensées peut révéler le souvenir qu'elle conserve.
+
+resource: Motif hypnotique | 3/jour | Volonté DD 14 ; NLS 5
+resource: Immobilisation de personne | 1/jour | humanoïde ; Volonté DD 14 ; NLS 5
+resource: Anathème | 3/jour | Volonté DD 13 ; NLS 5
+resource: Rapetissement | 3/jour | humanoïde ; Vigueur DD 13 ; NLS 5
+resource: Hypnose des animaux | à volonté | Volonté DD 14 ; NLS 5
+resource: Détection des collets et des fosses | à volonté | NLS 5
+resource: Pierre magique | à volonté | nécessite des cailloux ; NLS 5
+resource: Endurance de l'ours | 1/jour | aucun bénéfice sur l'idole, dépourvue de Constitution
+
+step: Des intrus approchent
+  do: Rester immobile parmi les pierres et attendre qu'ils soient regroupés
+  note: Discrétion +11, ou +15 parmi les pierres
+
+## Ouverture
+
+step: Plusieurs intrus peuvent voir les lueurs
+  do: Utiliser motif hypnotique sans bouger, en couvrant le plus de cibles possible dans un rayon de 3 m, à 45 m au maximum
+  note: Volonté DD 14 ; affecte 2d4+5 DV au total, en commençant par les créatures ayant le moins de DV. Maintenir la concentration tant que la fascination sert le piège ; elle persiste 2 rounds après son interruption
+
+step: Des intrus sont fascinés
+  do: Laisser la bouche magique permanente leur ordonner de déposer leurs armes et d'attendre leur jugement
+  note: Le pouvoir suggestif décrit dans l'aventure impose Volonté DD 15 aux créatures fascinées pour résister à cette suggestion. La bouche se déclenche automatiquement ; l'idole reste immobile
+
+## Rounds suivants
+
+step: Un humanoïde résiste à la fascination ou à l'injonction, et l'immobilisation est disponible
+  do: Utiliser immobilisation de personne sur lui avant d'animer l'idole
+  note: Volonté DD 14 ; paralysie pendant 5 rounds au maximum, avec un nouveau jet de Volonté DD 14 possible à chaque tour de la victime
+
+step: Il faut attaquer les adversaires qui résistent
+  do: S'animer, voler jusqu'à la cible à 9 m par déplacement et entrer dans sa case pour porter un coup +8 (1d4+1)
+  note: Avec une allonge de 0 m, elle doit partager la case de sa victime pour la frapper. L'entrée dans une case menacée expose aux attaques d'opportunité ; sa réduction des dégâts amortit les coups
+  note: Une menace manifeste brise la fascination ; obtenir l'obéissance avant de passer aux attaques physiques
+
+step: Après l'entrée en mêlée, un adversaire continue à résister
+  do: Utiliser anathème sur l'adversaire le plus dangereux, puis reprendre les coups aux rounds suivants
+  note: Volonté DD 13 ; une cible affectée est secouée pendant 5 minutes et subit notamment −2 aux attaques et aux sauvegardes
+
+step: Un combattant humanoïde puissant reste actif
+  do: Utiliser rapetissement pour diminuer sa Force et les dégâts de ses armes, puis le frapper
+  note: Vigueur DD 13 ; durée 5 minutes. La réduction augmente aussi sa Dextérité et sa CA ; privilégier un adversaire qui dépend de sa force physique
+
+step: Un animal participe au combat et peut être fasciné
+  do: Utiliser hypnose des animaux pour le neutraliser sans dépenser de motif hypnotique
+  note: Volonté DD 14 ; maintenir la concentration exige de renoncer aux coups et aux autres pouvoirs pendant ce temps
+
+step: Les pouvoirs limités sont épuisés ou les ennemis y résistent
+  do: Poursuivre les coups +8 (1d4+1) contre les intrus encore présents
+
+## Repli
+
+step: Quels que soient ses PV restants
+  do: Défendre les connaissances confiées à sa garde jusqu'à sa destruction
+  note: Elle ne fuit pas. À 0 PV, elle est détruite et les souvenirs qu'elle conservait sont libérés

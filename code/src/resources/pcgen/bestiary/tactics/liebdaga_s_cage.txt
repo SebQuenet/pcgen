@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  La Cage de Liebdaga est un objet animé neutre, sans intelligence, qui frappe les cibles visibles dans sa salle. Elle possède 52 PV, une CA de 22 et une solidité de 20 ; elle est immunisée au feu et bénéficie des immunités des créatures artificielles.
+  Attaque à outrance : 3 coups +11, chacun infligeant 1d8+8 dégâts et 1d6 dégâts de feu, avec étreinte ; BMO +13, ou +17 pour l'étreinte.
+  Déplacement de 9 m, espace occupé de 3 m et allonge de 3 m. Ses chaînes l'empêchent de quitter la salle. Vision dans le noir à 18 m et vision nocturne.
+
+note: Refroidissement
+  Le profil fourni suppose les cinq chambres de refroidissement désactivées : aucune guérison accélérée.
+  Chaque chambre encore active lui donne 2 points de guérison accélérée, soit de 2 à 10 PV récupérés par round selon le nombre de chambres actives.
+
+## Ouverture
+
+step: Une cible visible est à portée au début du tour
+  do: Effectuer une attaque à outrance avec ses 3 coups +11, infligeant chacun 1d8+8 dégâts plus 1d6 dégâts de feu.
+  note: Après un coup réussi contre une cible pouvant subir l'étreinte, tenter gratuitement de l'agripper avec un BMO de +17.
+
+step: Aucune cible visible n'est à portée au début du tour
+  do: Avancer vers une cible visible, jusqu'à 9 m dans les limites des chaînes et de la salle ; si elle devient accessible à 3 m, porter un seul coup +11 et tenter l'étreinte en cas de réussite.
+
+## Rounds suivants
+
+step: Une cible est encore agrippée
+  do: Maintenir la lutte pour la retenir.
+  note: L'étreinte bénéficie du bonus indiqué de +17 ; la cage ne dispose d'aucune attaque de constriction dans ce profil.
+
+step: Aucune cible n'est agrippée et un adversaire reste à portée
+  do: Répéter l'attaque à outrance et tenter l'étreinte après un coup réussi.
+
+step: Les cibles visibles se sont éloignées
+  do: Se rapprocher et frapper dès que possible, sans quitter la salle.
+  note: Sans intelligence, elle poursuit son comportement d'attaque ; elle n'élabore pas de diversion ni de manœuvre coordonnée.
+
+## Repli
+
+step: Une cible reste visible, même si les PV sont très bas
+  do: Combattre jusqu'à la destruction, sans chercher à fuir.
+
+step: Il ne reste aucune cible visible
+  do: Cesser le combat et rester dans la salle.
+  note: La cage reste animée tant qu'elle dispose de cibles visibles ; elle ne poursuit personne hors de sa chambre.

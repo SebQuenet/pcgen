@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Illvaster, jeune dragon noir devenu zombie de taille M, mort-vivant sans intelligence : il attaque l'adversaire le plus proche et suit les ordres de Koth'Vaul.
+  49 pv ; CA 13, contact 11, pris au dépourvu 12 ; réduction des dégâts 5/tranchant ; immunités des morts-vivants.
+  Morsure +7 (1d8+5) ou coup +7 (1d6+5), une seule attaque ; allonge 1,50 m. Privilégier la morsure.
+  Déplacement terrestre et nage : 18 m ; vol : 45 m, manœuvrabilité déplorable ; vision dans le noir : 18 m.
+
+note: Chancelant
+  Il ne dispose que d'une action simple ou d'une action de mouvement par round. Un déplacement ordinaire et une attaque doivent donc être répartis sur deux rounds.
+
+note: Équipement
+  Son chapeau de déguisement apparaît comme une bande de mithral sur sa corne gauche.
+
+step: Avant l'arrivée des intrus
+  do: Attendre dans le bassin, à l'abri des regards des observateurs inattentifs.
+  note: Ne pas lui attribuer de préparation tactique élaborée : il est dépourvu d'intelligence.
+
+## Ouverture
+
+step: L'adversaire le plus proche est à 1,50 m ou moins
+  do: Le mordre à +7, pour 1d8+5 dégâts.
+
+step: L'adversaire le plus proche est hors de portée
+  do: Nager ou avancer vers lui, jusqu'à 18 m avec une action de mouvement.
+  note: Après ce déplacement ordinaire, attendre le round suivant pour attaquer.
+
+## Rounds suivants
+
+step: Un intrus passe pour aller aider Sulianna et Koth'Vaul ordonne de le prendre pour cible
+  do: Faire de cet intrus la cible prioritaire ; se déplacer vers lui s'il est hors de portée, ou le mordre à +7 (1d8+5) s'il est à portée.
+  note: Ignorer les attaques d'opportunité provoquées par cette poursuite. Respecter la limite d'actions due à l'état chancelant.
+
+step: Aucun ordre prioritaire et une attaque vient de réussir
+  do: Choisir de nouveau l'adversaire le plus proche pour la prochaine attaque.
+  note: Illvaster change souvent d'adversaire après avoir touché ; il ne cherche pas à achever méthodiquement une cible.
+
+step: Sa cible est à portée
+  do: Répéter la morsure +7 (1d8+5), une fois par round.
+
+step: Sa cible est hors de portée
+  do: Consacrer son action à la rejoindre ; nager ou avancer jusqu'à 18 m, ou voler jusqu'à 45 m si nécessaire.
+  note: Son vol est de manœuvrabilité déplorable. Après un déplacement ordinaire, il ne porte pas d'attaque durant ce round.
+
+## Repli
+
+step: Tant qu'il n'est pas détruit
+  do: Continuer à attaquer, quel que soit son nombre de points de vie restants.
+  note: Illvaster combat jusqu'à sa destruction ; il ne fuit pas.

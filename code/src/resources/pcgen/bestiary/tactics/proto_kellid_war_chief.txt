@@ -1,0 +1,29 @@
+## Avant le combat
+
+note: Profil
+  Chef de guerre proto-kellid, squelette humain sans intelligence, animé par la haine du Tik Taan. Il attaque simplement la cible la plus proche.
+  Massue en ivoire de maître +3 (1d10+3) ; allonge de 1,50 m ; déplacement de 9 m ; initiative +6.
+  4 PV ; CA 14, contact 12, pris au dépourvu 12 ; RD 5/contondant ; immunité au froid et traits des morts-vivants ; vision dans le noir à 18 m.
+
+## Ouverture
+
+step: La cible la plus proche est à 1,50 m ou moins
+  do: La frapper avec la massue en ivoire de maître, +3 (1d10+3).
+
+step: La cible la plus proche est hors de portée
+  do: Avancer vers elle de 9 m au maximum et la frapper à la massue si elle est alors à portée.
+
+## Rounds suivants
+
+step: Une cible est à portée
+  do: Frapper la plus proche avec la massue, +3 (1d10+3).
+  note: Sans intelligence, il ne choisit pas ses adversaires selon leur dangerosité ou leur équipement.
+
+step: Aucune cible n'est à portée
+  do: Avancer vers la plus proche de 9 m au maximum et la frapper à la massue si elle est alors à portée.
+
+## Repli
+
+step: Tant qu'il n'est pas détruit
+  do: Continuer à attaquer la cible la plus proche, sans chercher à fuir.
+  note: La haine du Tik Taan l'anime jusqu'à sa destruction, même s'il ne lui reste qu'un seul point de vie.

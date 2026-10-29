@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Ithanothaur, dragon d'ombre adulte mûr de taille TG, chaotique neutre, FP 15. Intelligent et mobile, il affaiblit les intrus au souffle, attaque en vol, puis termine au contact.
+  218 pv ; CA 39 ; RD 10/magie ; RM 26. Immunisé au froid, aux effets de mort, à l'énergie négative, à la paralysie et au sommeil ; anneau de liberté de mouvement.
+  Morsure +26 (2d8+13, critique 19–20), 2 griffes +26 (2d6+9), queue +21 (2d6+13), 2 ailes +21 (1d8+4). Allonge 3 m, ou 4,50 m avec la morsure ; espace occupé 4,50 m.
+  Déplacement 12 m ; vol 60 m, manœuvrabilité médiocre. Présence terrifiante à 63 m, DD 24.
+
+resource: Sorts de niveau 1 | 8/jour | réserve commune, notamment armure de mage et blessure légère ; décompter la préparation
+resource: Sorts de niveau 2 | 7/jour | réserve commune : invisibilité, image miroir, blessure modérée, contrôle des morts-vivants
+resource: Sorts de niveau 3 | 7/jour | réserve commune : dissipation de la magie, lenteur, blessure grave
+resource: Sorts de niveau 4 | 5/jour | réserve commune : porte dimensionnelle et charme-monstre, DD 19 ; conserver une utilisation pour le repli
+resource: Pouvoirs magiques | à volonté | ténèbres, traversée des ombres (DD 21), toucher du vampire ; NLS 19
+
+step: Il prévoit un affrontement
+  do: Lancer armure de mage avant d'entrer au combat
+  note: La CA 39 comprend déjà ce bonus d'armure ; ne pas l'ajouter une seconde fois.
+
+note: Prisonniers
+  Il préfère garder les intrus vivants pour les interroger après leur réveil : cesser les attaques contre ceux qui sont hors de combat. Lors d'une seconde attaque des mêmes adversaires, il n'hésite plus à tuer.
+
+## Ouverture
+
+step: Le combat commence
+  do: Souffle d'ombre sur le plus grand nombre d'adversaires possible, puis prendre de l'altitude si le déplacement du tour le permet
+  note: Appliquer la présence terrifiante aux adversaires concernés, DD 24.
+
+step: Premier tour de préparation en vol après le souffle
+  do: Lancer invisibilité et se déplacer pour préparer une nouvelle approche
+  note: Une attaque rompra l'invisibilité ; elle sert surtout à protéger sa préparation et son approche.
+
+step: Tour de préparation suivant
+  do: Lancer image miroir en restant en vol
+  note: Invisibilité et image miroir demandent chacune leur propre lancement ; respecter la manœuvrabilité médiocre pour les déplacements aériens.
+
+## Rounds suivants
+
+step: Ses protections sont en place et le souffle se recharge
+  do: Attaque en vol : approcher, porter une morsure +26 (2d8+13, critique 19–20), puis poursuivre le déplacement
+  note: Activer Frappe magique en action rapide pour renforcer les dégâts. Les valeurs indiquées sont celles du profil, avant ce bonus ; ce passage permet une seule morsure.
+
+step: Le souffle est de nouveau disponible et plusieurs ennemis peuvent être atteints
+  do: Souffler de nouveau, puis atterrir au milieu des adversaires si le déplacement disponible le permet
+  note: Le souffle et l'attaque à outrance se font sur des tours distincts.
+
+step: Au sol, des ennemis sont à portée et une attaque à outrance est possible
+  do: Activer Frappe magique en action rapide, puis mordre, donner deux coups de griffe, un coup de queue et deux coups d'aile
+  note: Concentrer les attaques sur un adversaire encore dangereux ; profiter de l'allonge de la morsure à 4,50 m.
+
+step: Les protections magiques adverses empêchent ses attaques d'être efficaces
+  do: Consacrer un tour à dissipation de la magie sur l'effet gênant
+  note: Ses sorts ont un NLS de 9 ; cette action remplace le souffle ou les attaques du tour.
+
+step: Plusieurs adversaires maintiennent une forte pression
+  do: Envisager lenteur, DD 18, pour réduire leur capacité à l'encercler et à multiplier les attaques
+  note: Décompter ce sort de la même réserve que dissipation de la magie et blessure grave.
+
+## Repli
+
+step: Il tombe à 100 pv ou moins, mais reste au-dessus de 50 pv
+  do: Utiliser porte dimensionnelle pour rejoindre la zone C4a
+  note: Aucune autre action après ce lancement pendant le même tour ; décompter une utilisation de niveau 4.
+
+step: À couvert en C4a, avec plus de 50 pv
+  do: Se soigner avec ses sorts de blessure grave, modérée ou légère, puis revenir combattre après récupération
+  note: Ces sorts lui rendent des points de vie. Décompter chaque lancement de sa réserve de niveau correspondante, sans dépasser 218 pv.
+
+step: Il tombe à 50 pv ou moins
+  do: Abandonner le combat et fuir, de préférence par traversée des ombres vers son repaire dans les montagnes au sud
+  note: Cette fuite est prioritaire sur le repli de soin à C4a. Une éventuelle vengeance ultérieure reste à la discrétion du meneur.

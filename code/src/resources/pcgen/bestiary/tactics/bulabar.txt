@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Bulabar, fée loyale neutre de taille très petite, intelligente et fragile : 7 pv, CA 16, réduction des dégâts 5/fer froid.
+  Arbalète légère +3 (1d4, critique 19–20), deux griffes +3 (1d2-2 chacune) ou lance +0 (1d4-2, x3). Il privilégie le tir et évite les échanges au contact.
+  Déplacement de 9 m, fouissement de 3 m ; allonge de 0 m. Vision nocturne, Perception +4 et Discrétion +13.
+
+resource: Carreaux | 20 | un carreau par tir d'arbalète légère
+resource: Réparation | à volonté | pouvoir magique, niveau de lanceur 1 ; entretien du matériel endommagé hors combat
+
+step: Il peut préparer sa position
+  do: Charger l'arbalète, chercher un couvert et repérer un sol meuble permettant de s'enfouir.
+  note: Utiliser Discrétion +13 pour attendre à couvert ; conserver une issue accessible sans traverser les adversaires.
+
+step: Un piège mécanique accessible gêne ses déplacements
+  do: Examiner le dispositif et tenter de le désamorcer avec Sabotage +10 avant le combat.
+  note: Connaissances en ingénierie +7 aide à comprendre les ouvrages ; ne pas consacrer les premiers rounds à une manipulation longue sous les attaques.
+
+## Ouverture
+
+step: Une cible est visible et l'arbalète est chargée
+  do: Tirer depuis le couvert avec l'arbalète légère +3 (1d4, critique 19–20).
+  note: Profiter de sa discrétion pour surprendre si possible ; un tir peut révéler sa position. Choisir une cible exposée plutôt qu'un adversaire protégé par un couvert.
+
+step: Un ennemi arrive au contact avant qu'il puisse tirer
+  do: Chercher à se dégager et à rejoindre le sol meuble repéré.
+  note: Son allonge de 0 m l'oblige à entrer dans la case ennemie pour attaquer en mêlée, ce qui l'expose à une attaque d'opportunité.
+
+## Rounds suivants
+
+step: Il reste à distance et peut conserver sa position
+  do: Recharger l'arbalète avec une action de mouvement et tirer avec son action simple.
+  note: Ce rythme ne laisse pas d'action de mouvement pour parcourir 9 m dans le même round ; tenir compte des carreaux dépensés.
+
+step: Un adversaire se rapproche ou contourne son couvert
+  do: Consacrer les actions nécessaires à changer de position, à 9 m par déplacement, ou s'enfouir dans un sol meuble à 3 m par déplacement.
+  note: Renoncer au tir si nécessaire pour conserver de la distance. Le fouissement ne permet pas de traverser la roche et ne lui donne aucun sens permettant de viser un ennemi à travers la terre.
+
+step: Il est acculé et peut atteindre un ennemi dans sa propre case
+  do: S'il peut rester sur place, effectuer une attaque à outrance avec ses deux griffes +3 (1d2-2 chacune).
+  note: Après un déplacement ordinaire, ne porter qu'une seule attaque de griffe. La lance +0 est moins fiable ; la mêlée reste une solution de dernier recours.
+
+step: Il subit des attaques physiques ordinaires
+  do: Garder son couvert et poursuivre le tir tant qu'une fuite reste possible.
+  note: Réduire de 5 les dégâts auxquels sa réduction des dégâts s'applique ; le fer froid la contourne. Ses 7 pv ne permettent pas de compter uniquement sur cette protection.
+
+## Repli
+
+step: Il tombe à 3 pv ou moins, subit une menace qu'il ne peut contenir ou affronte une arme en fer froid
+  do: Cesser l'attaque, utiliser le retrait si nécessaire pour quitter le contact et s'enfouir dès que le sol le permet.
+  note: Fouissement de 3 m par déplacement ; sinon, fuir à terre à 9 m par déplacement en recherchant un couvert.
+
+step: Il a rompu le contact
+  do: Rester caché et s'éloigner ; ne reprendre le combat que depuis une position sûre.
+  note: Réparation peut servir au matériel, mais ne rend aucun point de vie au bulabar.

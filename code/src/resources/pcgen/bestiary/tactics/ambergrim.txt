@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Ambergrim, vase de forêt de taille M, neutre et sans intelligence, FP 6. Elle combat par instinct, au contact.
+  103 pv ; CA 5 ; initiative -5. Morsure +9 (1d6+3 et étreinte), coup +9 (2d4+3 et étreinte) ; allonge 1,50 m ; lutte +13.
+  Déplacement 6 m ; escalade 6 m, compétence Escalade +11. Vision aveugle à 18 m et vision nocturne ; Perception -5.
+  Immunisée aux dégâts contondants et aux effets mentaux, avec les immunités des vases ; impossible à faire tomber à terre.
+
+step: Une créature est repérée à portée de ses sens
+  do: Se diriger instinctivement vers la créature accessible la plus proche.
+  note: Ne pas lui prêter de préparation élaborée, de coordination tactique ou de sélection réfléchie des cibles.
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m au début de son tour
+  do: Attaque à outrance : morsure +9 (1d6+3) et coup +9 (2d4+3), chacun avec étreinte.
+
+step: Un déplacement de 6 m suffit pour atteindre une cible
+  do: Avancer jusqu'à 1,50 m de la cible, puis porter un coup +9 (2d4+3 et étreinte).
+  note: Après ce déplacement, elle ne porte qu'une attaque ; le coup inflige davantage de dégâts que la morsure.
+
+step: Aucune cible ne peut être attaquée après un déplacement de 6 m
+  do: Effectuer un double déplacement, jusqu'à 12 m, pour se rapprocher.
+
+## Rounds suivants
+
+step: Une morsure ou un coup touche une créature de taille P ou inférieure
+  do: Tenter immédiatement l'étreinte avec un test de lutte à +13, en action libre et sans attaque d'opportunité.
+  note: L'étreinte ordinaire ne fonctionne que contre une cible plus petite que l'Ambergrim.
+
+step: Une cible est agrippée au début de son tour
+  do: Consacrer son action simple au maintien de la lutte ; en cas de réussite, infliger les dégâts du coup, 2d4+3.
+  note: Son bonus de lutte est +13 ; appliquer le bonus habituel de +5 pour maintenir une prise dont la victime ne s'est pas libérée. Ce maintien remplace l'attaque à outrance.
+
+step: Aucune cible n'est agrippée et un adversaire reste au contact
+  do: Répéter l'attaque à outrance, morsure et coup, contre l'adversaire le plus proche.
+
+step: La cible s'éloigne ou grimpe sur une surface accessible
+  do: La suivre à 6 m par déplacement, au sol ou en escalade, puis attaquer si une action simple reste disponible.
+  note: Utiliser Escalade +11 lorsqu'un test est nécessaire.
+
+## Repli
+
+step: Elle subit des dégâts mais perçoit encore un adversaire accessible
+  do: Continuer à attaquer ou à maintenir sa prise, sans seuil de fuite tactique.
+  note: Avec son intelligence inexistante, jouer une réaction instinctive plutôt qu'une retraite organisée selon ses pv restants.
+
+step: Aucun adversaire n'est plus repéré
+  do: Cesser la poursuite dirigée et reprendre son comportement instinctif.

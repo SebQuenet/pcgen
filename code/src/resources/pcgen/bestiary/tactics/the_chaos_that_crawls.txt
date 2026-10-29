@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  The Chaos That Crawls, récupérateur extraplanaire de taille TG, est un construit chaotique mauvais à l'intelligence rudimentaire. Il combat surtout au corps à corps et comprend l'abyssal sans pouvoir parler.
+  157 pv ; CA 27, contact 11 ; guérison rapide 5. Déplacement de 15 m ; espace occupé et allonge de 4,50 m ; vision dans le noir à 18 m et vision nocturne ; Perception +18 ; initiative +7.
+  Quatre griffes +22 (2d6+6, critique 19–20) et morsure +22 (1d8+6 et étreinte). BMO +26, +30 en lutte ; DMD 39, 43 contre le croc-en-jambe.
+
+resource: Localisation suprême | à volonté | pouvoir magique, NLS 20 ; sert à retrouver une proie, sans infliger de dégâts
+resource: Guérison rapide | permanente | récupère 5 pv au début de son tour, jusqu'au maximum de 157 pv ; ne le répare plus après sa destruction
+
+step: Une proie doit être retrouvée et les conditions du pouvoir sont remplies
+  do: Employer localisation suprême, puis rejoindre sa position par les voies accessibles
+  note: Ce pouvoir ne permet ni de se téléporter ni de traverser un obstacle
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de 4,50 m
+  do: Effectuer une attaque à outrance : quatre griffes +22, puis morsure +22
+  note: Garder la morsure pour la fin évite que la lutte déclenchée par l'étreinte ne gêne les griffes de cette attaque à outrance
+
+step: Il faut se rapprocher pour atteindre un ennemi
+  do: Avancer jusqu'à 15 m, puis porter une morsure +22 si une cible se trouve désormais à portée
+  note: Exploiter l'allonge de 4,50 m pour engager le combat sans devoir venir au contact immédiat
+
+step: La morsure touche une cible de taille G ou inférieure
+  do: Tenter immédiatement l'étreinte, par un test de lutte à +30 en action libre
+  note: L'étreinte saisit la cible ; elle n'inflige aucun dégât de constriction supplémentaire indiqué dans cette fiche
+
+## Rounds suivants
+
+step: Aucune cible n'est agrippée et un ennemi reste à portée
+  do: Répéter l'attaque à outrance, en concentrant les quatre griffes et la morsure sur le même adversaire
+
+step: Une cible est agrippée et doit être neutralisée
+  do: Consacrer une action simple au maintien de la lutte ; en cas de réussite, immobiliser la cible ou lui infliger les dégâts de morsure
+  note: Le maintien bénéficie du bonus habituel de +5 si la cible ne s'est pas libérée ; le même test permet l'immobilisation, que l'étreinte initiale ne donne pas automatiquement
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée, mais une attaque à outrance est impossible
+  do: Employer Enchaînement avec une griffe : si la première attaque touche, porter la seconde contre l'autre ennemi
+  note: Enchaînement utilise une action simple et impose un malus de −2 à la CA jusqu'au prochain tour
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Frapper avec une griffe +22
+  note: Attaques réflexes permet jusqu'à quatre attaques d'opportunité par round, sans multiplier les attaques pour une même occasion
+
+step: Les coups atteignent facilement leur cible et les dégâts doivent être augmentés
+  do: Activer Attaque en puissance : griffes +17 (2d6+16) et morsure +17 (1d8+16)
+  note: Le malus de −5 s'applique aussi aux tests de manœuvre offensive, dont la lutte ; renoncer à ce don si la précision ou l'étreinte devient prioritaire
+
+## Repli
+
+step: Des ennemis restent accessibles
+  do: Continuer le combat et poursuivre les fuyards à 15 m par déplacement
+  note: Sa ténacité et sa guérison rapide favorisent une poursuite obstinée
+
+step: La proie devient inaccessible
+  do: Chercher un passage praticable et employer localisation suprême si ses conditions sont réunies
+  note: La guérison rapide restaure 5 pv par round pendant cette interruption ; à 0 pv, le construit est détruit

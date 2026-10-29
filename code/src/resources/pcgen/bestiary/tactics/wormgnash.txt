@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Wormgnash, vermlek démoniaque chaotique mauvais de taille M, combat dans un cadavre qui lui sert d'armure. Intelligent, il combine tromperie, escrime et énergie négative.
+  30 pv ; CA 15 ; déplacement 9 m ; allonge 1,50 m. Rapière de maître +7 (1d6+2, critique 18-20/x2) et morsure +1 (1d6+1) lors d'une attaque à outrance.
+  RD 5/fer froid ou Bien ; immunité à l'électricité et au poison ; résistances acide, froid et feu 10 ; RM 14. L'énergie négative le soigne et l'énergie positive le blesse comme un mort-vivant.
+
+resource: Blessure légère de groupe | 3/jour | NLS 3 ; portée 9 m ; jusqu'à 3 cibles, distantes entre elles de 9 m au maximum ; 1d8+3 dégâts, Volonté DD 16 pour réduire de moitié ; le soigne s'il se choisit comme cible.
+resource: Saut | 3/jour | Pendant 3 minutes, bonus de +10 aux tests d'Acrobaties pour sauter.
+resource: Préservation des morts | 1/jour | Préserver le cadavre qu'il habite ; aucun effet offensif.
+resource: Convocation | 1/jour | 50 % de chances de convoquer 1d4 dretchs visqueux ; un échec consomme l'utilisation.
+
+step: Les intrus ne l'ont pas encore identifié
+  do: Exploiter son apparence d'hôte et Déguisement +16 pour retarder leur réaction ; parler en commun et tromper avec Bluff +8.
+  note: Perception +8, perception aveugle à 9 m, vision dans le noir à 18 m et odorat lui permettent de surveiller leur approche.
+
+step: Un obstacle à franchir est repéré avant l'affrontement
+  do: Utiliser Saut si cela prépare une approche ou une issue de secours utile.
+  note: Ce pouvoir facilite les sauts ; son déplacement reste de 9 m.
+
+## Ouverture
+
+step: Il dispose du temps nécessaire avant que les ennemis arrivent au contact
+  do: Tenter sa convocation ; si elle réussit, envoyer les dretchs visqueux gêner l'approche et prendre les ennemis en tenaille.
+  note: Coordonner leurs mouvements par télépathie à 30 m.
+
+step: Plusieurs ennemis vivants sont à portée de 9 m
+  do: Lancer Blessure légère de groupe sur jusqu'à trois ennemis ; s'il est déjà blessé, se choisir avec deux ennemis au maximum.
+  note: Respecter aussi l'écartement maximal de 9 m entre les cibles ; Volonté DD 16 pour les dégâts.
+
+step: Il doit rejoindre un adversaire au contact
+  do: Avancer de 9 m au maximum et porter une attaque de rapière +7.
+  note: Après ce déplacement, il ne peut pas ajouter la morsure d'une attaque à outrance.
+
+## Rounds suivants
+
+step: Il est blessé et possède encore Blessure légère de groupe
+  do: Se cibler pour récupérer 1d8+3 pv, en incluant jusqu'à deux ennemis vivants à portée.
+  note: Prendre d'abord ses distances si possible : utiliser un pouvoir magique au contact provoque une attaque d'opportunité.
+
+step: Un adversaire difficile à toucher bénéficie d'un bonus de Dextérité à la CA
+  do: Feinter avec Bluff +8 en action de mouvement grâce à Feinte améliorée, puis attaquer à la rapière +7 en action simple.
+  note: Une feinte réussie prive la cible de son bonus de Dextérité contre sa prochaine attaque de mêlée ; cette séquence ne permet pas d'ajouter la morsure.
+
+step: Un adversaire reste à portée et aucune feinte ni guérison n'est nécessaire
+  do: Effectuer une attaque à outrance : rapière +7 (1d6+2), puis morsure +1 (1d6+1).
+
+step: Il doit tenir au contact sous une forte pression
+  do: Activer Expertise du combat en attaquant : CA 17, rapière +5 et morsure -1 si attaque à outrance.
+  note: Le bonus d'esquive de +2 et le malus de -2 aux attaques de mêlée durent jusqu'à son prochain tour.
+
+## Repli
+
+step: Il tombe à 10 pv ou moins et risque d'être abattu au contact
+  do: Abandonner la chair en action rapide pour récupérer 2d6+3 pv, puis chercher à se dégager.
+  note: Il perd le bonus d'armure de chair : CA 12. Il ne peut plus manier sa rapière ni réutiliser cet hôte ; il conserve sa morsure et ses pouvoirs magiques.
+
+step: Il a quitté son hôte et un sol qu'il peut creuser est accessible
+  do: Fuir en creusant à 6 m par déplacement ; utiliser la retraite si nécessaire pour quitter le contact.
+  note: Le creusement est indisponible tant qu'il habite le cadavre ; hors de l'hôte, Évasion passe à +14.
+
+step: Aucun passage souterrain n'est praticable
+  do: Se retirer au sol à 9 m par déplacement, en laissant les dretchs convoqués couvrir sa fuite s'ils sont encore présents.

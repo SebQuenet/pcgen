@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Tik Taan, idole d'os minuscule et créature artificielle neutre ; 16 pv, CA 16, contact 15, pris au dépourvu 15. Déplacement de 3 m ; allonge de 0 m.
+  Morsure +3 (1d2-4 plus rage démente). Évite la mêlée et soutient Da'Tunga par ses pouvoirs magiques et spéciaux.
+  RD 5/contondant ; résistances au froid, à l'électricité et au feu de 5 ; immunités des créatures artificielles. Aura de vigueur fiévreuse sur 9 m.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +3, Discrétion +14, ou +18 parmi les ossements. Comprend le polyglotte, mais ne parle pas.
+
+resource: Imprécation | 3/jour | DD 12 ; NLS 5, concentration +6 pour les pouvoirs magiques
+resource: Frayeur | 3/jour | DD 12
+resource: Perception de la mort | 3/jour | repérer les créatures mourantes
+resource: Invisibilité aux morts-vivants | 3/jour | DD 12 ; utile face aux morts-vivants
+resource: Animation des morts | 1/jour | animer des cadavres disponibles
+resource: Glas funèbre | 1/jour | DD 13 ; contact sur une créature vivante agonisante
+
+step: Avant l'arrivée des intrus
+  do: Se dissimuler parmi les ossements si possible, derrière Da'Tunga et ses alliés.
+  note: Choisir une position qui permette de soutenir Da'Tunga sans devoir rejoindre la mêlée.
+
+## Ouverture
+
+step: Plusieurs adversaires sont à portée d'imprécation
+  do: Lancer imprécation pour affaiblir leurs attaques et soutenir Da'Tunga ; Volonté DD 12.
+  note: Un seul pouvoir magique par action simple ; réserver les autres aux rounds suivants.
+
+step: Une menace isolée de 5 DV ou moins doit être écartée en priorité
+  do: Ouvrir avec frayeur sur cette cible ; Volonté DD 12.
+  note: Privilégier un adversaire qui approche de l'idole ou menace directement Da'Tunga.
+
+## Rounds suivants
+
+step: Les adversaires continuent de combattre Da'Tunga
+  do: Rester en retrait et employer frayeur sur une cible admissible, ou imprécation sur des adversaires encore indemnes de cet effet.
+  note: Laisser Da'Tunga et les autres primates occuper la mêlée ; les utilisations quotidiennes sont limitées pour chaque idole.
+
+step: Une personne est tuée pendant le combat
+  do: Appliquer le fétiche zombie : la personne tuée est immédiatement animée en zombie rapide.
+  note: Cette animation immédiate relève du pouvoir spécial ; ne pas la confondre avec l'utilisation quotidienne d'animation des morts.
+
+step: Des cadavres exploitables sont disponibles et l'idole peut agir sans s'exposer
+  do: Utiliser animation des morts pour renforcer les combattants alliés.
+
+step: Il faut repérer une créature mourante
+  do: Utiliser perception de la mort si la situation laisse le temps de consacrer une action à ce repérage.
+
+step: Une créature vivante agonise au contact et l'approche est sûre
+  do: Employer glas funèbre, DD 13.
+  note: Ne pas traverser la mêlée pour chercher cette occasion.
+
+step: Un adversaire vient menacer l'idole
+  do: Chercher à remettre Da'Tunga ou un autre allié entre lui et l'idole ; se dégager prudemment si possible.
+  note: Avec une allonge de 0 m, mordre exige d'entrer dans l'espace adverse et peut provoquer une attaque d'opportunité. Réserver la morsure aux situations sans meilleure issue.
+
+## Repli
+
+step: L'idole tombe à 5 pv ou moins
+  do: Reprendre immédiatement son état inanimé et espérer que l'assaillant se désintéresse d'elle.
+  note: Continuer à utiliser ses pouvoirs magiques et spéciaux sous cette forme ; cet état n'empêche pas leur utilisation.
+
+step: Une idole Tik Taan est détruite
+  do: Appliquer l'étourdissement de tous les primates, y compris Da'Tunga, pendant 1 round.
+  note: La salle sombre alors dans un bref silence lugubre.

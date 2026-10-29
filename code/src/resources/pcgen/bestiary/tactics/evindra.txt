@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Evindra, néréide féerique aquatique, chaotique neutre, combat depuis l’eau et privilégie le poison. Contact empoisonné +10 ; projection de poison +15.
+  126 pv ; CA 25 ; déplacement à terre de 9 m, nage de 18 m. Amphibie, elle peut rester immergée pour combattre ou se cacher.
+  Réduction des dégâts 10/fer froid, immunité au froid et au poison, résistance à la magie 21. Son châle constitue son point faible.
+
+resource: Convocation de monstres VI | 1/jour | élémentaire d’eau uniquement ; NLS 10
+resource: Contrôle de l’eau | à volonté | NLS 10
+resource: Suggestion | à volonté | uniquement contre les créatures fascinées par son aura ; NLS 10
+
+step: Des intrus approchent du bassin
+  do: Rester près de l’eau et garder un accès libre au bassin ; protéger son châle de toute tentative de capture
+  note: Perception +21 pour repérer les intrus ; Discrétion +24 pour préparer une position dissimulée lorsque le terrain le permet
+
+## Ouverture
+
+step: Premier round de combat
+  do: Utiliser Convocation de monstres VI pour appeler un élémentaire d’eau et l’envoyer occuper les adversaires
+  note: Cette invocation constitue sa première action offensive ; elle ne dispose que d’une utilisation par jour
+
+step: Elle peut se déplacer après l’invocation
+  do: Se retirer dans le bassin et placer l’élémentaire entre elle et les poursuivants
+  note: Exploiter sa nage de 18 m et sa transparence dans l’eau pour compliquer la riposte
+
+## Rounds suivants
+
+step: Une cible est à portée de sa projection de poison
+  do: Utiliser la projection de poison +15 depuis l’eau, puis changer de position si ses actions le permettent
+  note: Laisser l’élémentaire occuper les combattants pendant qu’elle empoisonne les intrus
+
+step: Un adversaire arrive à son contact et elle conserve une possibilité de fuite
+  do: Utiliser le contact empoisonné +10 si elle peut le faire sans compromettre sa retraite, puis reprendre ses distances
+  note: Sa portée au contact est de 1,50 m ; éviter de rester encerclée sur la berge
+
+step: Une créature est fascinée par son aura envoûtante
+  do: Utiliser Suggestion pour lui proposer de s’éloigner du bassin ou de renoncer à la poursuite
+  note: Cette capacité ne peut cibler qu’une créature déjà fascinée par l’aura ; formuler une consigne qui puisse lui sembler raisonnable
+
+step: Modifier le niveau de l’eau peut améliorer sa position
+  do: Utiliser Contrôle de l’eau pour adapter le bassin au combat et conserver une retraite aquatique
+  note: Consacrer cette action au terrain seulement si le changement lui apporte un avantage immédiat
+
+step: La retraite dans l’eau et les attaques de poison ne permettent pas de combattre efficacement
+  do: Prendre la forme d’un élémentaire d’eau de taille M, par son changement de forme équivalent à Corps élémentaire II, puis attaquer physiquement
+  note: Recourir à cette solution lorsque sa tactique habituelle est impraticable
+
+## Repli
+
+step: Ses points de vie tombent à 30 ou moins
+  do: Rompre le combat, gagner le bassin voisin et s’y cacher
+  note: Nage de 18 m ; Discrétion +24 lorsque les conditions permettent de se dissimuler ; exploiter sa transparence sous sa forme de néréide
+
+step: L’élémentaire invoqué est encore présent pendant sa fuite
+  do: Lui ordonner de couvrir sa retraite en occupant les poursuivants

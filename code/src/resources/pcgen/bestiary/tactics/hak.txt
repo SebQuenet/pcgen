@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Hak est un allosaure de taille M, compagnon animal d’Intelligence 2 : il combat au contact, avec 12 pv et une CA de 17.
+  Morsure +3 (1d6+2) et deux griffes +3 (1d4+2 chacune) ; déplacement de 12 m, allonge de 1,50 m.
+
+step: Une menace approche
+  do: La repérer avec Perception +6, la vision nocturne et l’odorat.
+  note: Son intelligence animale appelle des réactions simples : approcher, attaquer ou fuir.
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de 1,50 m
+  do: Attaque à outrance : une morsure +3 (1d6+2) et deux griffes +3 (1d4+2 chacune).
+
+step: Un ennemi est hors de portée, mais accessible avec un déplacement
+  do: Avancer de 12 m au maximum, puis porter une morsure +3 (1d6+2).
+  note: Après ce déplacement, Hak ne porte qu’une attaque ; il ne peut pas ajouter ses deux griffes.
+
+## Rounds suivants
+
+step: La cible reste à portée, ou un pas de 1,50 m suffit pour la rejoindre
+  do: Faire ce pas si nécessaire, puis attaquer à outrance avec la morsure et les deux griffes.
+  note: Privilégier cette situation pour profiter de ses trois attaques par round.
+
+step: La cible s’éloigne, mais reste accessible avec un déplacement
+  do: La poursuivre de 12 m au maximum, puis la mordre si elle est à portée de 1,50 m.
+
+step: Aucun ennemi ne peut être atteint après un seul déplacement
+  do: Se rapprocher par un double déplacement, jusqu’à 24 m, sans attaquer ce round.
+
+## Repli
+
+step: Points de vie à 4 ou moins et une issue est accessible
+  do: Utiliser l’action de retraite pour s’éloigner jusqu’à 24 m, puis poursuivre la fuite si la menace demeure.
+  note: La retraite protège seulement la case de départ des attaques d’opportunité ; éviter de traverser d’autres cases menacées.
+
+step: La fuite est impossible
+  do: Attaquer l’adversaire à portée avec la morsure et les deux griffes pour tenter de se dégager.

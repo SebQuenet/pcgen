@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Misery Siktempora, extérieur chaotique mauvais de taille G, né de la détresse dans la Dimension du Temps ; il cherche à propager la souffrance.
+  168 pv, CA 27, guérison accélérée 10 ; initiative +13. Deux griffes +21, chacune infligeant 2d6+6 dégâts, critique 19–20, et malheur ; allonge de 4,50 m.
+  Déplacement de 12 m, marche dans les airs permanente ; vision dans le noir à 18 m, télépathie à 90 m. Il privilégie les passes de griffes et les changements de position.
+
+note: Défenses
+  Immunisé aux maladies, poisons, effets mentaux et effets de douleur ; esquive totale contre les attaques autorisant un jet de Réflexes pour demi-dégâts.
+  Le sens temporel est déjà compris dans la CA et l'initiative indiquées.
+
+resource: Déplacement (displacement) | 3/jour | action simple ; 12 rounds, 50 % de risque d'échec des attaques contre lui
+resource: Disparition accélérée (quickened vanish) | 3/jour | action rapide ; invisibilité pendant 5 rounds au maximum, interrompue dès qu'il attaque
+resource: Bond temporel (temporal jaunt) | à volonté | action simple ; jusqu'à 264 m vers un lieu accessible normalement à pied ; limité à 12 m si la téléportation est interdite
+resource: Changement de plan (plane shift) | 1/jour | action simple ; conserver pour fuir ; Volonté DD 21 contre une cible non consentante
+
+step: Les adversaires approchent et il dispose d'un round de préparation
+  do: Activer déplacement, puis gagner une position d'approche avec la marche dans les airs
+  note: Rester discret avec Discrétion +19 ; ne pas gaspiller les 12 rounds de protection en attendant longtemps
+
+## Ouverture
+
+step: Une cible vulnérable et non adjacente peut être atteinte puis dépassée en 12 m de mouvement
+  do: Utiliser Attaque éclair : avancer d'au moins 3 m, porter une griffe +21, puis terminer le déplacement hors de sa portée
+  note: Cette action complexe permet une seule griffe ; la cible ne peut pas porter d'attaque d'opportunité contre ce mouvement, mais ses alliés le peuvent
+
+step: Une cible est déjà à portée et il peut tenir sa position
+  do: Faire une attaque à outrance : deux griffes +21 sur cette cible
+  note: Chaque griffe qui inflige des dégâts impose Volonté DD 22 contre le malheur : échec, malus de –4 aux attaques, jets de Volonté et tests de compétence pendant 1 minute ; effet mental et d'émotion
+
+step: Aucune cible ne peut être attaquée ce round sans exposition excessive
+  do: Utiliser bond temporel pour gagner une position favorable, puis employer le mouvement restant pour préparer l'approche suivante
+  note: Le bond consomme l'action simple ; il ne permet pas d'enchaîner une attaque à outrance ou une Attaque éclair ce round
+
+## Rounds suivants
+
+step: Au moins trois ennemis sont dans son allonge de 4,50 m
+  do: Utiliser Attaque en rotation en action complexe : une griffe +21 contre chaque adversaire à portée
+  note: Appliquer le malheur à chaque victime blessée ; cette action remplace les deux griffes habituelles
+
+step: Une victime souffre déjà du malheur et reste accessible
+  do: Concentrer les deux griffes sur elle si une attaque à outrance est possible ; sinon revenir à Attaque éclair
+  note: Chaque nouvel échec contre le malheur renouvelle sa durée et rend 5 pv au siktempora ; cela s'ajoute à sa guérison accélérée de 10 pv par round
+
+step: Il doit traverser une zone menacée ou approcher un ennemi qui ne voit pas l'invisible
+  do: Activer disparition accélérée avant le mouvement, puis se repositionner ou porter l'attaque prévue
+  note: L'invisibilité cesse dès la première attaque ; elle ne protège donc pas toute une série de griffes
+
+step: Les ennemis se dispersent ou concentrent leurs attaques sur lui
+  do: Exploiter la marche dans les airs et Attaque éclair pour isoler une cible ; utiliser bond temporel si un changement de position plus important est nécessaire
+  note: Souplesse du serpent donne +4 à la CA contre les attaques d'opportunité provoquées par son mouvement ; Acrobaties +23 peut aussi aider à traverser une zone menacée
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter une griffe +21 et appliquer le malheur si elle blesse
+  note: Attaques réflexes permet jusqu'à cinq attaques d'opportunité par round, selon les occasions distinctes
+
+step: Déplacement expire et le combat doit durer
+  do: Renouveler déplacement à couvert ou après avoir rompu le contact
+  note: Cette action simple remplace son attaque du round
+
+## Repli
+
+step: Ses points de vie passent sous 50 et les ennemis gardent l'avantage
+  do: Activer disparition accélérée s'il en reste une utilisation, puis effectuer un bond temporel vers un endroit hors de vue accessible à pied
+  note: Choisir un trajet réellement accessible ; le bond ne permet pas de traverser une paroi qui ferme toute issue
+
+step: La poursuite continue et changement de plan est encore disponible
+  do: Utiliser changement de plan sur lui-même pour fuir vers un autre plan accessible
+  note: Ne pas compter sur ce pouvoir pour regagner la Dimension du Temps
+
+step: Il a rompu le contact
+  do: Rester caché et récupérer grâce à la guérison accélérée de 10 pv par round
+  note: Ne reprendre la chasse qu'une fois suffisamment rétabli et en position favorable

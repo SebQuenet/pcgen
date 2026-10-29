@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Yib Thoolp, géante des marais aquatique et amphibie, chaotique mauvaise, puissante mais couarde. 126 pv, CA 25 ; déplacement et nage à 12 m ; allonge de 3 m.
+  Massue +18/+13 (2d8+15), ou deux coups +18 (1d6+10 chacun) ; rocher +14 (2d6+11). Elle désorganise ses ennemis par confusion, puis les frappe dans le brouillard grâce à Combat en aveugle.
+
+resource: Nappe de brouillard | 3/jour | pouvoir magique, NLS 12 ; rayon de 6 m, durée de 120 minutes
+resource: Confusion | 3/jour | pouvoir magique, Volonté DD 17 ; rayon de 4,50 m, durée de 12 rounds
+resource: Augure | 3/jour | pouvoir magique, NLS 12
+resource: Communication avec les animaux | constant | permet de questionner les animaux, sans les commander
+resource: Volonté de fer améliorée | 1/jour | relancer un jet de Volonté avant de connaître son résultat ; conserver le second jet
+resource: Rochers | 10 | attaque à distance +14, 2d6+11 dégâts
+
+step: Elle repère les intrus avant d'être découverte
+  do: Se dissimuler dans le marais avec Discrétion +21 et choisir une position proche de l'eau, avec une voie de fuite
+  note: Perception +16 ; si elle dispose du temps nécessaire, utiliser augure pour évaluer une embuscade imminente
+
+## Ouverture
+
+step: Premier round
+  do: Utiliser nappe de brouillard pour couvrir la zone de mêlée et son accès à l'eau ; rester à la lisière
+  note: Le brouillard accorde un camouflage à 1,50 m et un camouflage total au-delà ; Yib ne voit pas à travers. Il ne fonctionne pas sous l'eau.
+
+step: Deuxième round
+  do: Utiliser confusion sur le plus grand nombre d'adversaires possible, en plaçant l'explosion hors de sa propre position ; avancer ensuite vers les victimes dans la brume
+  note: Volonté DD 17 ; conserver depuis la lisière une vue dégagée sur la zone choisie. Chaque pouvoir prend son propre round.
+
+## Rounds suivants
+
+step: Un adversaire confus est à portée dans la brume
+  do: Le frapper à la massue ; si elle peut rester sur place, effectuer les deux attaques +18/+13 (2d8+15 chacune)
+  note: Combat en aveugle permet de relancer une fois le jet de camouflage raté de chaque attaque de mêlée ; il faut toujours localiser la cible. Une victime confuse attaquée riposte contre son agresseur à son prochain tour.
+
+step: Elle doit se déplacer avant de frapper
+  do: Avancer puis utiliser Frappe décisive : une seule attaque de massue +18 (4d8+15)
+  note: Contre une cible facile à toucher, Attaque en puissance donne +15 (4d8+24) ; sur une attaque à outrance, +15/+10 (2d8+24 chacune).
+
+step: Un adversaire visible provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Frapper à la massue avec Attaques réflexes
+  note: Jusqu'à six attaques d'opportunité par round, selon les occasions ; le camouflage total empêche ces attaques.
+
+step: Les ennemis restent hors de portée de mêlée et sont visibles
+  do: Lancer un rocher ; renouveler confusion si plusieurs adversaires encore lucides sont regroupés
+
+resource: Malédiction | 3/jour | attaque de contact, Volonté DD 17
+resource: Contagion | 3/jour | attaque de contact, Vigueur DD 17
+resource: Extinction des feux | 3/jour | pouvoir magique, DD 16 lorsque applicable
+
+step: Un adversaire résistant est accessible au contact sans l'exposer aux autres
+  do: Envisager malédiction pour lui imposer un malus de -4 aux attaques, sauvegardes et tests, puis reprendre les coups de massue
+  note: Employer ses pouvoirs hors des cases menacées si possible ; contagion sert surtout à laisser une maladie aux survivants.
+
+step: Des flammes gênent le combat ou barrent sa retraite
+  do: Utiliser extinction des feux pour les supprimer selon leur nature
+
+## Repli
+
+step: Points de vie strictement sous 50
+  do: Rompre le combat et fuir dans le marais ; se retirer si elle est engagée, puis gagner l'eau et nager à 12 m par action de déplacement
+  note: Utiliser une nappe de brouillard restante si elle peut couvrir sa fuite sans retarder dangereusement son départ ; se cacher avec Discrétion +21 dès que les poursuivants la perdent de vue. Amphibie, elle peut rester immergée.

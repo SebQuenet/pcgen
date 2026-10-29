@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Légionnaire de bronze : humain zombifié de taille M, mort-vivant sans intelligence, neutre mauvais. Il attaque simplement la cible la plus proche.
+  Épée longue +4 (1d8+3, critique 19–20) ; coup +4 (1d6+3). Allonge 1,50 m ; déplacement 9 m ; vision dans le noir à 18 m.
+  12 pv ; CA 20, contact 10 ; réduction des dégâts 5/tranchant ; immunités des morts-vivants. Sa demi-plate de bronze le protège sans lui donner de tactique élaborée.
+
+note: Chancelant
+  Il ne dispose que d'une action de mouvement ou d'une action simple par round. S'il utilise son action pour un déplacement ordinaire, il n'attaque pas pendant ce round.
+
+## Ouverture
+
+step: La cible la plus proche est à portée de mêlée
+  do: Porter une attaque d'épée longue à +4, pour 1d8+3 dégâts, critique sur 19–20.
+
+step: La cible la plus proche est hors de portée de mêlée
+  do: Avancer vers elle de 9 m au maximum pour arriver à portée de 1,50 m.
+  note: Ce déplacement ordinaire consomme son action du round.
+
+## Rounds suivants
+
+step: La cible la plus proche reste à portée
+  do: Répéter une attaque d'épée longue par round.
+  note: Ne pas ajouter le coup à l'attaque d'épée : son état chancelant ne lui permet pas d'attaque à outrance.
+
+step: Il ne dispose plus de son épée et une cible est à portée
+  do: Porter un coup à +4, pour 1d6+3 dégâts.
+
+step: La cible tombe ou s'éloigne
+  do: Prendre pour cible l'adversaire désormais le plus proche ; l'attaquer s'il est à portée, sinon avancer vers lui de 9 m au maximum.
+  note: Il ne choisit pas ses victimes selon leur armure, leurs blessures ou leur rôle dans le groupe.
+
+## Repli
+
+step: Il subit des dégâts
+  do: Continuer à attaquer la cible la plus proche, sans fuir ni se rendre, jusqu'à sa destruction.
+  note: Aucun seuil de repli ; à 0 pv, il est détruit.

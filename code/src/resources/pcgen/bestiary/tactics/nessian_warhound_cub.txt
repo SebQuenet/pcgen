@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Jeune molosse infernal loyal mauvais, de taille M : 102 pv, CA 19, initiative +8. Prédateur peu intelligent, fait pour traquer et combattre au contact.
+  Morsure +19 (1d8+9 et 2d6 de feu, critique 19–20) ; allonge 1,50 m ; déplacement 12 m.
+  Immunisé au feu, vulnérable au froid ; Vigueur +11, Réflexes +12, Volonté +5.
+
+step: Les intrus ne l'ont pas encore repéré
+  do: Se dissimuler à couvert et les laisser approcher avant de bondir
+  note: Discrétion +28, Perception +12 et vision dans le noir à 18 m ; Survie +20 pour suivre une piste
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m
+  do: Le mordre à +19, pour 1d8+9 dégâts et 2d6 dégâts de feu
+
+step: Un ennemi est à 12 m ou moins, hors de son allonge
+  do: Se déplacer pour arriver à 1,50 m de lui, puis le mordre
+  note: Privilégier une cible isolée et accessible sans traverser les positions ennemies
+
+step: Aucun ennemi n'est accessible après un déplacement de 12 m
+  do: Se rapprocher en profitant du couvert disponible
+
+## Rounds suivants
+
+step: Sa cible reste au contact
+  do: Continuer à la mordre chaque round, à +19, pour 1d8+9 dégâts et 2d6 dégâts de feu
+
+step: Sa cible tombe ou s'éloigne
+  do: Rejoindre l'adversaire accessible le plus proche et reprendre les morsures
+  note: Garder ses déplacements courts pour éviter de s'exposer aux attaques d'autres ennemis
+
+step: Un adversaire emploie le froid
+  do: Le prendre pour cible s'il est facilement accessible
+  note: La vulnérabilité au froid augmente de moitié les dégâts de froid subis
+
+## Repli
+
+step: Blessé, exposé au froid et disposant d'une issue
+  do: Utiliser un retrait pour s'éloigner jusqu'à 24 m, puis chercher du couvert
+  note: Le retrait évite les attaques d'opportunité dues à la sortie de sa case de départ ; les autres cases traversées restent dangereuses
+
+step: Acculé sans voie de fuite
+  do: Continuer à mordre l'adversaire qui lui barre le passage

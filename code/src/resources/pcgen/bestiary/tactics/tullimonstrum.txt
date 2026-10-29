@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Tullimonstrum, animal aquatique neutre de taille TP, peu intelligent, qui combat par instinct dans l'océan. Il possède 11 points de vie et une CA de 15.
+  Morsure +6 (1d3-3 et fixation) ; allonge de 0 m ; nage à 9 m par déplacement ; aucune vitesse terrestre.
+  Vision nocturne, odorat et vision à 360° ; Perception +4, Discrétion +15. Sa vision à 360° empêche de le prendre en tenaille.
+
+step: Une proie est repérée dans l'eau
+  do: Approcher discrètement en utilisant les cachettes disponibles, puis attendre de pouvoir atteindre la proie à la nage
+  note: Discrétion +15 ; il reste dans l'eau et ne poursuit pas une proie sur la terre ferme
+
+## Ouverture
+
+step: Une cible peut être atteinte avec un déplacement de 9 m
+  do: Nager jusque dans l'espace de la cible, puis porter une morsure +6 (1d3-3 et fixation)
+  note: Son allonge de 0 m l'oblige à entrer dans l'espace adverse ; cette entrée peut provoquer une attaque d'opportunité
+
+step: La morsure touche
+  do: Se fixer à la cible avec la morsure
+  note: La fixation découle de la morsure réussie ; aucun jet de lutte initial supplémentaire n'est nécessaire
+
+## Rounds suivants
+
+step: Il est encore fixé à une cible
+  do: Rester accroché et continuer à la mordre tant qu'il n'est pas gravement blessé
+  note: La fixation seule n'ajoute aucun dégât automatique indiqué dans son profil
+
+step: Il est détaché et une cible reste accessible dans l'eau
+  do: Rejoindre son espace et tenter une nouvelle morsure pour se fixer
+  note: Privilégier la proie déjà attaquée ou la plus proche ; son intelligence de 1 ne justifie pas de manœuvres complexes
+
+## Repli
+
+step: Points de vie à 5 ou moins
+  do: Se décrocher s'il est fixé, puis fuir à la nage ; effectuer un double déplacement de 18 m si possible
+  note: Chercher une cachette aquatique et utiliser Discrétion +15 dès que le milieu permet de se dissimuler
+
+step: La proie quitte l'eau
+  do: Abandonner la poursuite et rester immergé

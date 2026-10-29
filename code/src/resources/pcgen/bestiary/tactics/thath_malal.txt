@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Thath-Malal, jeune néothélide de taille TG, est une aberration chaotique mauvaise, intelligente et manipulatrice. Il sépare ses adversaires par influence mentale avant de concentrer ses langues sur une victime isolée.
+  178 pv ; CA 28, contact 8 ; réduction des dégâts 10/fer froid ; résistance à la magie 24. Ses Réflexes +5 et sa faible CA de contact rendent dangereux les sorts de zone et les rayons.
+  Attaque à outrance : 4 langues +13, chacune infligeant 2d6+8 dégâts, critique sur 19–20, avec étreinte ; allonge de 4,50 m. Déplacement au sol de 9 m, vol de 18 m, bonne manœuvrabilité.
+  Vision aveugle et télépathie à 30 m ; Perception +22. Ses pouvoirs magiques ont un NLS de 17 et une concentration de +22.
+
+resource: Charme-monstre | à volonté | action simple ; Volonté DD 19
+resource: Détection de pensées | à volonté | concentration ; Volonté DD 17
+resource: Suggestion | à volonté | action simple ; Volonté DD 18 ; portée de 19,50 m
+resource: Poison | à volonté | action simple et attaque de contact au corps à corps ; Vigueur DD 19
+resource: Téléportation | à volonté | action simple ; préparer une destination familière
+resource: Clairaudience/clairvoyance | 3/jour | reconnaissance d'un lieu connu ou évident
+resource: Télékinésie | 3/jour | Volonté DD 20 pour projeter une créature ; manœuvres sans sauvegarde
+resource: Suggestion accélérée | 1/jour | action rapide ; Volonté DD 18
+
+step: Il dispose du temps nécessaire pour préparer l'affrontement
+  do: Observer les accès par clairaudience/clairvoyance ; choisir un passage qui limite le nombre d'assaillants et repérer une destination de fuite par téléportation
+  note: La vision aveugle repère les ennemis proches dans l'obscurité, mais ne traverse pas les obstacles solides
+
+step: Un intrus peut être approché avant les hostilités
+  do: Sonder ses pensées, puis employer charme-monstre et Bluff +22 pour obtenir des renseignements ou l'inciter à éloigner ses compagnons
+  note: Le charme rend la cible amicale ; les ordres inhabituels demandent un test opposé de Charisme. Une cible déjà menacée par lui ou ses alliés reçoit +5 à sa sauvegarde contre le charme
+
+## Ouverture
+
+step: Un adversaire comprenant ses paroles se trouve à 19,50 m ou moins
+  do: Employer suggestion accélérée pour lui présenter un départ comme raisonnable : « Va chercher des renforts avant que cette créature ne vous écrase tous »
+  note: Utiliser la télépathie pour communiquer ; choisir une consigne plausible, sans danger manifeste. L'action rapide laisse disponible l'action simple ou l'attaque à outrance
+
+step: Les adversaires restent hors de portée des langues
+  do: Employer télékinésie pour désarmer le porteur d'une arme en fer froid ou bousculer un ennemi afin de séparer le groupe
+  note: La résistance à la magie s'applique aux manœuvres télékinétiques ; leur maintien demande une action simple de concentration chaque round
+
+step: Une victime est déjà à 4,50 m ou moins
+  do: Attaque à outrance avec les quatre langues sur cette victime ; tenter l'étreinte gratuitement après une touche si elle est de taille G ou inférieure
+  note: Après un véritable déplacement, effectuer une seule attaque de langue ; garder les quatre attaques pour un round sans déplacement autre qu'un pas de 1,50 m
+
+## Rounds suivants
+
+step: Une cible vulnérable reste à portée et aucune lutte ne le retient
+  do: Répéter les quatre attaques de langue et exploiter son allonge pour frapper avant que les combattants à courte allonge arrivent au contact
+  note: Avec +13 au toucher, réserver Attaque en puissance aux adversaires faciles à toucher
+
+step: Une victime est saisie et ses alliés ne menacent pas immédiatement Thath-Malal
+  do: Maintenir la lutte par une action simple pour infliger les dégâts d'une langue ou immobiliser la victime
+  note: Maintenir la lutte remplace l'attaque à outrance de ce round ; relâcher gratuitement la prise si elle l'empêche de se replacer ou de fuir
+
+step: Un adversaire paraît vulnérable aux influences mentales
+  do: Renouveler suggestion sur une cible encore active pour l'envoyer surveiller un passage ou chercher de l'aide ailleurs
+  note: Choisir une autre tactique contre les créatures immunisées aux effets mentaux ; éviter de menacer une créature dont il souhaite conserver le charme
+
+step: Une cible difficile à blesser paraît avoir une faible Vigueur
+  do: Employer poison avec une attaque de contact au lieu des attaques de langue
+  note: Vigueur DD 19 ; le poison inflige 1d3 dégâts de Constitution par round pendant 6 rounds au maximum. Une sauvegarde réussie annule les dégâts du round et met fin au poison
+
+step: Les ennemis concentrent leurs attaques sur lui ou contournent son allonge
+  do: Se replacer en volant, ou employer téléportation vers un emplacement connu pour reprendre ses distances
+  note: Privilégier l'éloignement face aux rayons, aux attaques en fer froid et aux effets visant les Réflexes ; une bousculade au corps à corps utilise son BMO de +24
+
+step: Un ennemi se téléporte à 18 m ou moins
+  do: Mémoriser la destination grâce à sa perception des téléportations ; envisager une poursuite par téléportation seulement si le rapport de force reste favorable
+  note: Cette information disparaît après 1 minute et donne la familiarité d'un lieu peu connu ; elle ne révèle pas les dangers à l'arrivée et ne garantit pas une téléportation sans incident
+
+## Repli
+
+step: Points de vie sous 50, ou adversaires capables de le tuer au prochain assaut
+  do: Relâcher toute étreinte et employer téléportation vers la destination familière préparée avant le combat
+  note: Se soustraire d'abord aux ennemis qui menacent son espace si cela est possible ; employer le pouvoir sur la défensive si nécessaire pour éviter une attaque d'opportunité
+
+step: La téléportation est empêchée
+  do: Se replier en volant vers un passage protecteur ; employer le retrait si nécessaire pour quitter le contact
+  note: S'il reste disponible, consacrer suggestion accélérée à éloigner un poursuivant sensible aux effets mentaux

@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Graff, géant du froid fiélon de taille G, chaotique mauvais : 161 PV, CA 23, déplacement de 9 m, espace et allonge de 3 m.
+  Grande hache +19/+14 (3d6+15, x3) ; à défaut, 2 coups +19 (1d8+10) ; rocher +8 (1d8+15).
+  Immunité au froid, réduction des dégâts 10/Bien, résistance à la magie 16 ; résistance au feu 15 et vulnérabilité au feu. Réflexes +2 et Volonté +6 : éviter de laisser les lanceurs de sorts agir librement.
+
+resource: Blocs de glace | 4 | projectiles pour les attaques de rocher, +8, 1d8+15 dégâts
+
+step: Il repère des intrus avant qu'ils arrivent au contact
+  do: Garder sa grande hache prête et ses blocs de glace accessibles ; choisir une position où les ennemis doivent entrer dans son allonge de 3 m.
+  note: Vision dans le noir à 18 m, vision nocturne et Perception +10 ; sa Discrétion reste modeste, +0 ou +4 dans la neige.
+
+## Ouverture
+
+step: Aucun adversaire n'est accessible au corps à corps ce round
+  do: Lancer un bloc de glace sur une cible exposée, de préférence un lanceur de sorts, et avancer jusqu'à 9 m si cela rapproche du contact.
+  note: Une attaque à distance +8 ; décompter un des quatre blocs. Éviter ce lancer si un ennemi le menace au corps à corps.
+
+step: Un adversaire est à portée après un déplacement
+  do: Avancer jusqu'à 9 m puis porter une seule attaque de grande hache +19 (3d6+15, x3).
+  note: Profiter de l'allonge de 3 m ; le déplacement ne permet pas l'attaque à outrance +19/+14.
+
+step: Plusieurs ennemis sont déjà dans son allonge et adjacents les uns aux autres
+  do: Employer Succession d'enchaînements avec la grande hache : attaquer à +19, puis, après chaque coup réussi, une nouvelle cible adjacente à la précédente et toujours à portée.
+  note: Une attaque par cible ; arrêter la chaîne au premier échec. Cette action simple remplace l'attaque à outrance et réduit sa CA à 21 jusqu'à son prochain tour.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement autre qu'un pas de 1,50 m
+  do: Faire une attaque à outrance à la grande hache, +19/+14, chaque coup infligeant 3d6+15 dégâts, critique x3.
+  note: Concentrer les coups sur une même cible tant qu'elle tient debout. Sans sa hache, employer ses deux coups +19, chacun pour 1d8+10 dégâts.
+
+step: La cible est assez facile à toucher pour accepter une pénalité de 3 à l'attaque
+  do: Activer Attaque en puissance : grande hache +16/+11, dégâts 3d6+24 par coup ; pour un enchaînement, chaque attaque est à +16.
+  note: Ces valeurs remplacent celles de la grande hache jusqu'au prochain tour. Revenir aux valeurs normales contre une défense élevée.
+
+step: Les adversaires restent regroupés dans son allonge
+  do: Préférer Succession d'enchaînements si elle permet de frapper davantage de cibles que les deux attaques de l'attaque à outrance.
+  note: Maintenir toutes les cibles à 3 m au plus ; chacune doit être adjacente à la précédente. Tenir compte de la baisse de CA à 21.
+
+step: Un ennemi se déplace hors d'une case qu'il menace et provoque une attaque d'opportunité
+  do: Porter une attaque de grande hache avec le bonus actuellement applicable.
+  note: Son allonge menace jusqu'à 3 m ; il ne dispose que d'une attaque d'opportunité par round. Un pas de 1,50 m ne la déclenche pas.
+
+step: Un ennemi bloque le passage vers une cible plus dangereuse
+  do: Envisager un renversement, BMO +23 contre la DMD, pour franchir sa position.
+  note: Ce bonus suppose qu'Attaque en puissance n'est pas active. Science du renversement empêche la cible de choisir de simplement s'écarter et évite l'attaque d'opportunité de cette cible.
+
+step: Une arme ou un objet tenu constitue la principale menace
+  do: Remplacer sa première attaque de mêlée par une destruction, BMO +23 contre la DMD du porteur, avec la grande hache.
+  note: Ce bonus suppose qu'Attaque en puissance n'est pas active. Science de la destruction évite l'attaque d'opportunité du porteur ; appliquer la dureté et les PV de l'objet avant de conclure qu'il est brisé.
+
+step: Des ennemis restent à distance et il possède encore des blocs de glace
+  do: Lancer un bloc par round tout en cherchant à réduire la distance.
+  note: Si un rocher lui est lancé, tenter de le saisir avec réception de rochers.
+
+## Repli
+
+step: Ses PV passent sous 40 et une issue reste accessible
+  do: Se retirer jusqu'à 18 m vers un couvert ou un passage qui limite le nombre de poursuivants au contact.
+  note: Sa résistance au feu 15 ne supprime pas sa vulnérabilité au feu. Un retrait protège seulement la première case quittée contre les attaques d'opportunité dues au déplacement.
+
+step: Ses PV sont négatifs et il est encore vivant
+  do: Appliquer férocité : effectuer une seule action simple ou de mouvement par round, en frappant une fois à la hache si un ennemi est à portée, ou en cherchant à se dégager.
+  note: Il reste conscient mais chancelant et perd 1 PV par round ; aucune attaque à outrance. Avec Constitution 23, il meurt à -23 PV.

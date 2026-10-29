@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Quatronicus, inévitable yarahkut loyal neutre de taille G, FP 14 : combattant méthodique qui sépare ses adversaires, les désarme et concentre ses coups sur une cible isolée.
+  187 pv, CA 29, résistance à la magie 25, régénération 10 interrompue par les attaques chaotiques. Déplacement terrestre de 9 m, vol de 18 m ; espace et allonge de 3 m.
+  Attaque à outrance : 2 griffes +21 (2d6+7), 2 coups +21 (1d6+7), 2 ailes +21 (1d6+7). Désarmement et subtilisation à +27 ; débilité, désintégration et mur de force complètent son arsenal.
+
+note: Vigilance et équipement
+  Perception magique et vision lucide sont constantes : repérer les auras et déjouer les illusions avant de choisir ses cibles. La vision à 360° empêche la prise en tenaille.
+  Garder son anneau de liberté de mouvement et son collier d'adaptation ; l'anneau facilite ses déplacements malgré les entraves, le collier le protège des gaz et lui permet de respirer sous l'eau.
+
+resource: Métal brûlant et métal gelé | à volonté | Volonté DD 16, chacun
+resource: Localisation d'objet | 3/jour | rechercher un objet selon les conditions du pouvoir
+resource: Modification de mémoire | 3/jour | Volonté DD 18 ; à réserver à une situation calme
+resource: Rouille | 3/jour | contact ; objets ferreux non magiques ou créatures ferreuses
+resource: Mur de force | 3/jour | aucun jet de sauvegarde ; durée de 15 rounds
+resource: Désintégration | 1/jour | rayon ; Vigueur DD 20, effet partiel
+resource: Débilité | 1/jour | Volonté DD 19
+resource: Marque de la justice | 1/jour | à réserver à une cible maîtrisée
+resource: Mission | 1/semaine | Volonté DD 18 ; cible vivante de 7 DV au maximum
+
+step: Les adversaires sont repérés avant l'affrontement
+  do: Identifier les lanceurs de sorts visibles, les armes dangereuses et une position permettant de couper le groupe par un mur de force.
+  note: Garder si possible une utilisation de mur de force pour le repli ; les auras magiques seules ne révèlent pas toutes les propriétés d'un objet.
+
+## Ouverture
+
+step: Un mur peut séparer efficacement les combattants de leurs soutiens
+  do: Créer un mur de force entre eux, puis se placer du côté de la cible à neutraliser.
+  note: Le mur est un plan vertical continu : utiliser un passage ou les parois existantes pour éviter un contournement immédiat. Les sorts ne le traversent dans aucun sens.
+
+step: Aucune séparation utile n'est possible et un lanceur de sorts est accessible
+  do: Lancer débilité sur le lanceur de sorts le plus dangereux, en privilégiant un utilisateur de magie profane.
+  note: Volonté DD 19 ; une créature capable de lancer des sorts profanes subit un malus de 4 à ce jet. Un échec l'empêche notamment de lancer des sorts.
+
+step: Une cible prioritaire est déjà à portée et aucune action de contrôle n'est plus urgente
+  do: Effectuer l'attaque à outrance avec les six attaques naturelles.
+  note: S'il doit effectuer un déplacement ordinaire pour l'atteindre, se limiter à une attaque ; un pas de 1,50 m reste compatible avec l'attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible reste à portée de 3 m
+  do: Concentrer les six attaques sur elle pour la mettre hors de combat rapidement.
+  note: Utiliser l'allonge et Attaques réflexes pour punir les déplacements et les autres actions qui provoquent des attaques d'opportunité ; jusqu'à 7 attaques d'opportunité par round, selon les occasions.
+
+step: Un adversaire à portée tient une arme particulièrement dangereuse
+  do: Remplacer une attaque de mêlée par un désarmement à +27 contre son DMD, puis poursuivre avec les attaques restantes.
+  note: Priorité à une arme qui neutralise sa régénération. Le désarmement ne provoque pas d'attaque d'opportunité ; Désarmement supérieur projette l'arme à 4,50 m dans une direction aléatoire.
+
+step: Un objet accessible présente un intérêt tactique immédiat
+  do: Utiliser Subtilisation rapide pour remplacer une seule attaque de son tour par une subtilisation à +27, avec une main libre.
+  note: Viser un objet lâchement attaché ou glissé à la ceinture. Un objet solidement attaché augmente le DMD adverse ; une arme tenue exige un désarmement, et les anneaux ou armures ne peuvent pas être subtilisés ainsi.
+
+step: Une cible dangereuse reste à distance et résiste probablement moins bien en Vigueur
+  do: Employer désintégration : attaque de contact à distance, puis Vigueur DD 20.
+  note: Au NLS 15, le rayon inflige 30d6 dégâts sur un jet de Vigueur raté, 5d6 sur un jet réussi. Conserver cette unique utilisation jusqu'à disposer d'une ligne de tir utile.
+
+step: Une mêlée prolongée l'exposerait à trop d'adversaires
+  do: Utiliser Attaque en vol pour se déplacer, porter une seule attaque à 3 m, puis poursuivre son déplacement, dans la limite de 18 m au total.
+  note: Choisir une trajectoire hors de l'allonge ennemie : Attaque en vol ne supprime pas les attaques d'opportunité. Revenir à l'attaque à outrance dès qu'une cible peut être affrontée seule.
+
+step: Les adversaires restent difficiles à atteindre mais portent du métal
+  do: Lancer métal brûlant ou métal gelé sur leur équipement, puis exploiter le terrain pendant que l'effet progresse.
+  note: Volonté DD 16 ; les dégâts montent progressivement pendant un effet de 7 rounds. Inutile de relancer chaque round le même pouvoir sur les mêmes objets.
+
+step: Une protection ou un obstacle ferreux non magique gêne son attaque
+  do: Employer rouille au contact pour corroder l'obstacle ou l'armure.
+  note: Le métal magique est immunisé ; contre une armure admissible, une attaque de contact réussie réduit de 1d6 la protection qu'elle fournit.
+
+step: Des tireurs utilisent des armes mécaniques
+  do: Les maintenir dans le rayon de 30 m de son aura de dysfonctionnement tout en poursuivant sa cible principale.
+  note: L'aura perturbe leurs armes ; elle reste active sans lui coûter d'action.
+
+## Repli
+
+step: Points de vie sous 47, ou attaques chaotiques rendant la poursuite du combat trop dangereuse
+  do: Interposer un mur de force encore disponible et s'éloigner en vol de 18 m avec son action de mouvement.
+  note: Dès qu'il peut consacrer tout son tour à la fuite, un double déplacement permet de voler sur 36 m. Choisir une issue que ses poursuivants ne peuvent pas facilement contourner.
+
+step: Il a rompu le contact et sa régénération fonctionne
+  do: Rester à couvert pour récupérer 10 pv par round avant d'envisager un retour.
+  note: Une attaque chaotique suspend la régénération pendant le round suivant ; éviter d'offrir une nouvelle prise au porteur de cette attaque.

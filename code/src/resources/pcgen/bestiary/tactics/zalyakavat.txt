@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Zalyakavat, rakshasa natif métamorphe de taille M, loyal mauvais, FP 13. Intelligent et trompeur, il peut prendre l'apparence de n'importe quel humanoïde.
+  178 pv ; CA 28, contact 17, pris au dépourvu 21 ; résistance à la magie 28 ; réduction des dégâts 15, surmontée par une arme à la fois bonne et perforante.
+  Urumi +2 : +24/+19/+14/+9, 1d8+6, critique 15–20 ; allonge de 3 m avec cette arme, contre 1,50 m normalement. Déplacement de 12 m ; vision dans le noir à 18 m.
+  Ses sorts servent surtout à se protéger, diviser les adversaires et se repositionner ; ses attaques à l'urumi constituent sa principale source de dégâts réguliers.
+
+resource: Sorts de niveau 1 | 7/jour | réserve commune, notamment armure de mage, repli expéditif et rayon affaiblissant, DD 13
+resource: Sorts de niveau 2 | 7/jour | réserve commune : flou, ténèbres, déblocage et détection de l'invisibilité
+resource: Sorts de niveau 3 | 6/jour | réserve commune : dissipation de la magie, éclair, DD 15, et protection contre les énergies destructives
+resource: Sorts de niveau 4 | 5/jour | réserve commune : porte dimensionnelle et tempête de grêle ; conserver une utilisation pour fuir
+resource: Sorts de niveau 5 | 3/jour | mur de pierre, DD 17
+resource: Sorts de niveau 0 | à volonté | notamment détection de la magie, son imaginaire, DD 12, et message
+
+step: Il peut préparer la rencontre sous une identité d'emprunt
+  do: Prendre une forme humanoïde adaptée au lieu et approcher par le déguisement et le mensonge
+  note: Déguisement +30, Bluff +26, Psychologie +24 ; utiliser Discrétion +26 s'il préfère se poster en embuscade. La métamorphose ne donne pas les pouvoirs de l'humanoïde imité.
+
+step: Un affrontement devient probable
+  do: Lancer armure de mage, puis flou peu avant le combat ; dégainer l'urumi au début de l'affrontement grâce à Arme en main
+  note: Armure de mage porte sa CA à 32, contact 17, pris au dépourvu 25 ; flou impose 20 % de chances de rater les attaques qui le visent.
+
+step: Il a identifié une menace élémentaire ou invisible
+  do: Préparer protection contre les énergies destructives contre l'énergie attendue, ou détection de l'invisibilité contre un adversaire invisible
+  note: Chaque lancement consomme une utilisation de la réserve du niveau correspondant.
+
+## Ouverture
+
+step: Un mur peut séparer le groupe et de la pierre permet de l'ancrer
+  do: Lancer mur de pierre pour couper les lignes de vue et isoler un adversaire accessible à l'urumi
+  note: Préférer une séparation qui laisse une cible de son côté. Si le mur enferme complètement une créature, celle-ci peut tenter un jet de Réflexes DD 17 pour éviter l'enfermement.
+
+step: Plusieurs ennemis sont regroupés et aucune séparation utile n'est possible
+  do: Lancer tempête de grêle sur le groupe avant de l'accueillir à l'urumi
+  note: Ce sort n'accorde pas de jet de sauvegarde ; il évite de miser l'ouverture sur les faibles DD de ses autres sorts offensifs.
+
+step: Une cible est déjà à portée de l'urumi et une attaque à outrance est possible
+  do: Effectuer les quatre attaques +24/+19/+14/+9 contre la même cible
+  note: Son initiative +10 favorise une ouverture rapide ; concentrer les coups sur un adversaire vulnérable ou capable de franchir ses défenses.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement important
+  do: Poursuivre les attaques à outrance à l'urumi ; utiliser au besoin un pas de placement de 1,50 m pour conserver une position favorable
+  note: L'allonge de 3 m permet de frapper avant le contact habituel. Attaques réflexes permet plusieurs attaques d'opportunité lorsque les ennemis provoquent ; une simple entrée dans sa zone menacée ne suffit pas.
+
+step: Il doit changer de cible ou empêcher un encerclement
+  do: Se déplacer jusqu'à 12 m vers une position qui limite les approches, puis porter une seule attaque à +24 si une cible est à portée
+  note: Acrobaties +26 aide à éviter les attaques d'opportunité pendant le déplacement, au prix de la vitesse selon la manœuvre ; ses dons de déplacement facilitent le passage en terrain difficile.
+
+step: Une protection magique adverse gêne réellement ses attaques
+  do: Employer dissipation de la magie sur l'adversaire ou l'effet concerné, puis reprendre l'offensive au round suivant
+  note: Lancer avec prudence si un ennemi le menace : incanter peut provoquer une attaque d'opportunité.
+
+step: Plusieurs ennemis offrent une ligne de tir dégagée
+  do: Lancer éclair si cette ligne touche davantage de cibles qu'une attaque à l'urumi
+  note: Réflexes DD 15 pour réduire les dégâts de moitié ; éviter d'en faire son attaque principale contre des ennemis agiles.
+
+step: Il est encerclé ou séparé d'une position avantageuse
+  do: Utiliser porte dimensionnelle pour rejoindre une position libre, ou mur de pierre pour interrompre les approches
+  note: Après porte dimensionnelle, il ne peut plus agir jusqu'à son prochain tour. Préserver si possible une utilisation de niveau 4 pour le repli.
+
+## Repli
+
+step: Ses points de vie tombent sous 60, ou ses défenses ne lui permettent plus de tenir
+  do: Lancer porte dimensionnelle vers un refuge connu, jusqu'à 240 m, hors de la vue des poursuivants
+  note: Ses 178 pv ne justifient pas un combat jusqu'à la mort ; anticiper le repli si des armes bonnes et perforantes surmontent sa réduction des dégâts.
+
+step: Porte dimensionnelle n'est plus disponible
+  do: Couper la poursuite avec mur de pierre si possible, puis utiliser repli expéditif et fuir à 21 m de déplacement
+  note: Une fois hors de vue, prendre une autre forme humanoïde et employer Discrétion +26 ou Déguisement +30 pour échapper aux recherches.

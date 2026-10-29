@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Luccaro et Myrllial sont deux lions sanguinaires foo loyaux bons, gardiens de Taldaris. Chacun possède 160 pv, une CA de 25 et une RD 10/contondant.
+  Morsure +20 (1d8+9 et étreinte), 2 griffes +21 (1d6+9) ; bond et pattes arrière pour submerger deux adversaires différents.
+  Espace occupé : 3 m ; allonge : 1,50 m ; déplacement en armure : 9 m. Perception +15, odorat, vision nocturne et vision dans le noir à 18 m.
+
+resource: Défense de pierre | 16/jour par lion | action immédiate ; solidité 8 jusqu’à la fin du prochain tour du lion ; déplacement réduit à 6 m pendant cette durée
+resource: Fusion aux fresques | à volonté | action simple dans les salles A9 ou A10 ; fonctionne comme fusion dans la pierre, mais le lion reste visible et peut parcourir 9 m le long des murs par action de mouvement
+
+step: Des visiteurs entrent dans les salles gardées
+  do: Les observer depuis les fresques ; émerger pour les interroger s’ils s’attardent, volent un trésor ou déclenchent un piège
+  note: Myrllial exige des explications ; Luccaro approche avec curiosité. Ils défendent leur charge et peuvent écouter des visiteurs légitimes.
+
+step: Les deux lions se placent avant l’affrontement
+  do: Rester à 9 m ou moins l’un de l’autre pour bénéficier des protecteurs appariés
+  note: chacun bénéficie de protection contre le Mal, au niveau de lanceur de sorts 16 ; si l’effet est dissipé, le réactiver par une action rapide disponible
+
+## Ouverture
+
+step: Deux ennemis sont accessibles par une charge
+  do: Chaque lion choisit une cible différente et charge en utilisant son bond pour effectuer une attaque à outrance
+  note: charge en ligne droite dégagée, sur au moins 3 m et au plus 18 m en armure, ou 12 m sous défense de pierre ; +2 aux attaques et −2 à la CA jusqu’au prochain tour
+  note: morsure +20 et 2 griffes +21 avant le bonus de charge ; le bond permet aussi 2 attaques de pattes arrière +21 (1d6+9 chacune)
+
+step: Une cible est déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance : morsure +20 (1d8+9) et 2 griffes +21 (1d6+9 chacune)
+  note: sur une morsure réussie, tenter gratuitement l’étreinte avec le BMO de lutte +26 contre le DMD de la cible, sans provoquer d’attaque d’opportunité
+
+step: Une attaque dangereuse menace un lion
+  do: Déclencher sa défense de pierre en action immédiate
+  note: l’utiliser largement ; tenir compte de la vitesse réduite pour la prochaine charge
+
+## Rounds suivants
+
+step: Un lion tient déjà un adversaire en lutte au début de son tour
+  do: Maintenir la lutte pour le blesser et utiliser ses 2 attaques de pattes arrière +21 (1d6+9 chacune)
+  note: BMO de lutte +26 ; le maintien reçoit le bonus habituel de +5 si la cible ne s’est pas libérée. Les pattes arrière ne s’ajoutent pas au tour où l’étreinte commence, sauf lors du bond.
+
+step: Une cible reste au contact sans être agrippée
+  do: Répéter morsure et griffes en attaque à outrance, puis tenter l’étreinte si la morsure touche
+  note: conserver deux cibles distinctes tant que cela permet aux lions de combattre ensemble à 9 m ou moins
+
+step: Une nouvelle charge est nécessaire pour atteindre un ennemi
+  do: Utiliser de nouveau le bond si le trajet est dégagé ; sinon avancer de 9 m, ou de 6 m sous défense de pierre, et porter une seule attaque si la cible est atteinte
+  note: choisir la morsure pour tenter l’étreinte ; réserver Attaque en puissance aux ennemis faciles à toucher, avec −4 aux attaques et +8 aux dégâts de chaque attaque naturelle
+
+step: Déclencher un glyphe de garde permet de toucher au moins un ennemi
+  do: Le déclencher volontairement en se plaçant pour entraîner cet adversaire dans son effet
+  note: employer les effets et le DD du glyphe de la rencontre ; il s’agit d’un piège du lieu, pas d’un pouvoir des lions
+
+step: Le combat se prolonge
+  do: Renouveler la défense de pierre contre les attaques dangereuses tant qu’il reste des utilisations
+  note: suivre séparément les 160 pv et les 16 utilisations de chaque lion ; la solidité ne supprime pas la RD 10/contondant
+
+## Repli
+
+step: Myrllial combat encore
+  do: Myrllial et Luccaro poursuivent le combat jusqu’à la mort
+
+step: Myrllial est vaincu et Luccaro possède plus de 25 pv
+  do: Luccaro continue de se battre
+
+step: Myrllial est vaincu et Luccaro tombe à 25 pv ou moins
+  do: Luccaro rejoint une fresque de la salle A9 ou A10 et fusionne avec elle par une action simple
+  note: elle se déplace ensuite dans les peintures pour s’éloigner ; sa silhouette reste visible

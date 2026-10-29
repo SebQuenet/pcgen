@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Drone de réparation défectueux, créature artificielle de taille M (robot), neutre, FP 1/2 ; 11 PV, CA 12.
+  Coup +4 (1d4+2), allonge de 1,50 m ; déplacement de 9 m. Vision dans le noir à 18 m et vision nocturne ; Perception +4.
+  Immunités des créatures artificielles ; vulnérable à l'électricité et aux coups critiques.
+
+step: Personne ne le blesse ni ne lui barre le passage
+  do: Ignorer les personnages et continuer à démanteler le bâtiment, pierre après pierre.
+  note: Son comportement défectueux le pousse à détruire le bâtiment malgré sa fonction de réparation.
+
+## Ouverture
+
+step: Un personnage tente de le blesser ou se place simplement sur son chemin
+  do: Se retourner contre ce personnage et lui porter un coup +4 (1d4+2) s'il est à 1,50 m ou moins.
+
+step: Le personnage qui l'a provoqué est hors de portée
+  do: Avancer vers lui, jusqu'à 9 m avec une action de mouvement, puis porter un coup +4 (1d4+2) si la cible est désormais à portée.
+
+## Rounds suivants
+
+step: Un adversaire est à portée de mêlée
+  do: Continuer à porter un coup +4 (1d4+2) par round.
+
+step: Son adversaire s'éloigne
+  do: Le poursuivre au sol pour revenir à 1,50 m et reprendre les coups dès que possible.
+  note: Sa vitesse est de 9 m ; il ne dispose d'aucune attaque à distance.
+
+step: Les personnages l'ignorent sans avoir déclenché son attaque
+  do: Poursuivre le démantèlement du bâtiment.
+  note: Si rien ne l'arrête, plusieurs habitants finissent par s'unir pour l'abattre, au risque de faire plusieurs blessés parmi eux.
+
+## Repli
+
+step: Le drone a commencé à attaquer
+  do: Combattre jusqu'à sa destruction, sans fuir ni se rendre, quel que soit le nombre de PV restants.

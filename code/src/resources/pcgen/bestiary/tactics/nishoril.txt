@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Nishoril, jeune merrow d'eau douce de taille M, mauvaise et affamée ; 22 pv, CA 18, initiative +6.
+  Deux griffes +5 (1d4+2 chacune, plus étreinte) ; lutte +9 ; javelot +9 (1d6+2). Allonge de 1,50 m.
+  Amphibie ; déplacement et nage à 12 m. Vision nocturne, Perception +5, Discrétion +6 (+10 dans l'eau).
+
+resource: Javelot | 1 | un seul projectile disponible ; à récupérer après un lancer pour le réutiliser
+
+step: Les intrus approchent
+  do: Rester embusquée dans la salle au sud de la zone 3a et attendre que tout le groupe soit entré avant d'attaquer
+  note: profiter de l'eau, si elle est présente, pour se dissimuler avec Discrétion +10
+
+## Ouverture
+
+step: Tout le groupe est entré dans la salle
+  do: Se placer pour barrer la sortie et choisir le personnage qui paraît le plus faible
+  note: concentrer ensuite ses attaques sur cette victime
+
+step: La victime est à 1,50 m au début de son tour
+  do: Faire une attaque à outrance avec les deux griffes, chacune à +5 pour 1d4+2 dégâts et étreinte
+
+step: Elle doit se déplacer pour atteindre la victime
+  do: Avancer de 12 m au maximum, puis porter une seule attaque de griffe à +5 pour 1d4+2 dégâts et étreinte
+
+step: La victime reste hors de portée après un déplacement et le javelot est disponible
+  do: Lancer le javelot à +9 pour 1d6+2 dégâts, en appliquant les malus de distance éventuels
+  note: garder une position qui gêne la sortie du groupe
+
+## Rounds suivants
+
+step: Une griffe touche une victime de taille P ou inférieure
+  do: Tenter immédiatement une lutte à +9 grâce à l'étreinte, sans attaque d'opportunité
+  note: l'étreinte ne permet pas de saisir gratuitement une cible de taille M ou supérieure
+
+step: Elle agrippe encore sa victime au début de son tour
+  do: Consacrer son action simple à maintenir la lutte ; en cas de réussite, infliger les dégâts d'une griffe, soit 1d4+2
+  note: appliquer le bonus de +5 au maintien si la victime n'a pas rompu la prise depuis le tour précédent
+
+step: La victime est libre et reste au contact
+  do: Répéter l'attaque à outrance avec les deux griffes contre elle
+
+step: La victime est facile à toucher et Nishoril privilégie les dégâts
+  do: Activer Attaque en puissance avant ses attaques de mêlée : griffes +4, chacune pour 1d4+4 dégâts
+  note: le malus de -1 s'applique aussi aux tests de lutte pendant cet effet ; l'étreinte passe à +8, avant les autres modificateurs
+
+step: La victime s'éloigne ou tombe
+  do: Poursuivre la même victime si elle combat encore ; sinon, choisir le personnage restant qui paraît le plus faible
+  note: après un déplacement ordinaire, ne porter qu'une seule attaque de griffe ; privilégier une cible à portée qui permet de continuer à barrer la sortie
+
+## Repli
+
+step: Ses points de vie diminuent, même à l'approche de 0
+  do: Continuer à combattre jusqu'à la mort
+  note: Nishoril n'a pas fait de bon repas depuis longtemps ; elle ne fuit pas et ne se rend pas

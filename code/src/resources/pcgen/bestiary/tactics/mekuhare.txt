@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Mekuhare, sphinx mythique colossal, neutre mauvais, associe une force écrasante à une intelligence de 20 et aux sorts divins préparés d'un lanceur de niveau 13.
+  379 pv ; CA 33, contact 3 ; espace occupé de 9 m et allonge de 6 m. Déplacement de 15 m, vol de 18 m avec une manœuvrabilité médiocre.
+  Attaque à outrance : 2 griffes +32 (3d6+18, critique 19–20/x3, étreinte) et 2 ailes +27 (2d8+9). Ces valeurs précèdent les bonus de ses sorts et les ajustements de ses dons.
+  RD 15/adamantium, magie et épique ; résistance à la magie 31 ; immunité à la pétrification ; 50 % de chances d'annuler les dégâts supplémentaires des critiques et des attaques sournoises grâce à sa fortification.
+
+resource: Liberté de mouvement | 1 | sort préparé
+resource: Bouclier de la foi | 1 | sort préparé
+resource: Puissance divine | 1 | sort préparé
+resource: Barrière de lames | 1 | Réflexes DD 23
+resource: Dissipation suprême | 1 | sort préparé
+resource: Colonne de feu | 1 | Réflexes DD 22
+resource: Guérison suprême | 1 | rend 130 pv, sans dépasser 379 pv
+resource: Soins intensifs | 1 | rend 4d8+13 pv, sans dépasser 379 pv
+resource: Changement de plan | 1 | réserver pour une fuite
+
+step: Il dispose de temps avant l'arrivée des adversaires
+  do: Lancer liberté de mouvement, puis bouclier de la foi, chacun à son tour
+  note: Liberté de mouvement dure 130 minutes ; bouclier de la foi dure 13 minutes et accorde +4 de parade à la CA.
+
+step: Le combat est imminent et il dispose encore d'un round
+  do: Lancer puissance divine
+  note: Pendant 13 rounds, il gagne +4 de chance aux attaques et aux dégâts des armes, 13 pv temporaires et une attaque supplémentaire à son meilleur bonus lors d'une attaque à outrance. Faveur divine ne cumule pas ses bonus de chance avec ceux de puissance divine.
+
+step: Il choisit sa position
+  do: Garder un espace assez vaste pour son corps de 9 m et plusieurs ennemis dans son allonge de 6 m
+  note: Sa perception aveugle porte à 9 m ; sa vision dans le noir à 18 m. Sa faible CA de contact l'incite à rechercher un couvert contre les attaques de contact à distance.
+
+## Ouverture
+
+step: Les ennemis sont séparables et aucun n'est encore à portée de ses griffes
+  do: Placer une barrière de lames entre les combattants et leurs soutiens pour fractionner le groupe
+  note: Garder un accès à une victime isolée ; le franchissement inflige 13d6 dégâts, Réflexes DD 23 pour moitié.
+
+step: Plusieurs ennemis sont regroupés et une barrière serait peu utile
+  do: Lancer colonne de feu sur leur concentration
+  note: 13d6 dégâts, Réflexes DD 22 pour moitié ; la moitié des dégâts est du feu, l'autre moitié de la puissance divine.
+
+step: Un ennemi est déjà à 6 m ou moins
+  do: Faire une attaque à outrance en concentrant griffes et ailes sur la cible la plus dangereuse qu'il peut atteindre
+  note: Si puissance divine n'est pas active, ne consacrer un round à ce sort que si les adversaires lui laissent ce répit.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Répéter l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m pour la conserver à portée
+  note: Privilégier les lanceurs de sorts accessibles et les ennemis déjà blessés. Après un déplacement ordinaire, il ne porte normalement qu'une attaque avec son action simple.
+
+step: Une griffe touche une cible que son étreinte peut saisir
+  do: Tenter la lutte gratuite pour gêner ses déplacements et ses incantations
+  note: Maintenir ensuite la lutte demande une action ; choisir entre retenir cette victime et libérer ses griffes pour une nouvelle attaque à outrance.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 6 m
+  do: Frapper avec une griffe, en priorité lorsqu'il lance un sort ou quitte une case menacée
+  note: Attaques réflexes et sa Dextérité de 13 lui permettent jusqu'à deux attaques d'opportunité par round.
+
+step: Des protections magiques rendent une cible difficile à atteindre ou à blesser
+  do: Consacrer un round à une dissipation suprême ciblée sur elle, puis reprendre les attaques
+  note: Son niveau de lanceur de sorts est de 13 ; la dissipation reste incertaine contre des protections de niveau élevé.
+
+step: Une cible facile à toucher doit tomber rapidement
+  do: Envisager Attaque en puissance mythique pour augmenter les dégâts de ses attaques naturelles
+  note: Renoncer au malus d'attaque lorsque les griffes manquent trop souvent ; toucher permet aussi de déclencher l'étreinte.
+
+step: Il a perdu au moins 130 pv et peut encore consacrer un round aux soins
+  do: Lancer guérison suprême sur lui-même avant de reprendre l'offensive
+  note: S'écarter si possible des ennemis qui le menacent avant d'incanter ; sinon, envisager l'incantation sur la défensive. Une fois ce sort dépensé, soins intensifs constitue son autre soin préparé.
+
+## Repli
+
+step: Il tombe sous 95 pv et ne peut plus retourner le combat avec ses soins
+  do: Lancer changement de plan sur lui-même pour quitter le combat
+  note: Ce seuil est un choix tactique. Conserver ce sort tant que la victoire reste incertaine et chercher à incanter hors de l'allonge adverse.
+
+step: Changement de plan est indisponible ou ne peut pas être lancé
+  do: Profiter d'une séparation créée par la barrière de lames, puis s'éloigner en volant à 18 m par déplacement
+  note: Privilégier une trajectoire dégagée ; sa manœuvrabilité médiocre et son bonus de Vol de +0 rendent les manœuvres serrées peu fiables.

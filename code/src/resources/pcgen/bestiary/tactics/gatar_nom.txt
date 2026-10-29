@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Gatar-Nom, gigas des Abysses femelle, chaotique mauvaise, immense et très intelligente ; 283 pv, CA 31. Elle combine contrôle magique, allonge et coups dévastateurs.
+  Marteau de guerre en adamantium +25/+20/+15 (4d6+19, critique 19–20/×3), morsure +19 (2d8+6 et spasmes), rocher +13 (4d6+19).
+  Espace et allonge de 6 m ; déplacement de 15 m en armure ; vision aveugle à 30 m.
+
+note: Défenses
+  Immunité à l'électricité ; résistance de 10 à l'acide, au froid, au feu et au son.
+  RD 10/Loi et RD 3/— : appliquer la meilleure réduction pertinente, sans les additionner. Réflexes +8 et Volonté +10 sont moins solides que Vigueur +21.
+
+resource: Ténèbres profondes | à volonté | NLS 16 ; réduit l'éclairage dans un rayon de 18 m autour de l'objet touché
+resource: Terreur | à volonté | Volonté DD 15 ; cône de 9 m
+resource: Image miroir | à volonté | NLS 16 ; protection contre les attaques qui dépendent de la vue
+resource: Dissipation de la magie | 3/jour | NLS 16 ; test de dissipation plafonné à +10
+resource: Domination de personne | 3/jour | Volonté DD 17 ; cible humanoïde uniquement
+resource: Télékinésie | 3/jour | Volonté DD 17 lorsque le mode employé autorise ce jet
+resource: Vision lucide | 3/jour | NLS 16 ; déjoue notamment invisibilité et illusions
+
+step: Elle dispose de quelques rounds avant l'arrivée des ennemis
+  do: Activer image miroir, puis ténèbres profondes sur un objet porté, à raison d'un pouvoir par round
+  note: sa vision aveugle lui permet de combattre dans l'obscurité à 30 m ; les ténèbres profondes abaissent l'éclairage de deux degrés, sans garantir partout une obscurité totale
+
+step: Une tromperie magique est soupçonnée au-delà de sa vision aveugle
+  do: Activer vision lucide avant l'engagement
+
+## Ouverture
+
+step: Un humanoïde dangereux est accessible et elle peut consacrer un round à son pouvoir hors de portée ennemie
+  do: Tenter domination de personne, Volonté DD 17, puis lui ordonner de combattre ses compagnons
+  note: l'activation demande 1 round ; une fois le pouvoir établi, donner un ordre simple. Ne pas insister sur une cible qui résiste si le corps à corps devient possible
+
+step: Plusieurs adversaires sont réunis à moins de 9 m et semblent sensibles à la peur
+  do: Utiliser terreur, Volonté DD 15, pour disperser le groupe
+  note: un échec provoque la panique pendant 16 rounds ; une réussite rend secoué pendant 1 round. Le DD modeste réserve cette option aux cibles vulnérables
+
+step: Un ennemi peut être atteint après un déplacement de 15 m au maximum
+  do: Avancer jusqu'à le placer dans son allonge de 6 m, puis porter un coup de marteau +25, 4d6+19
+  note: si elle commence déjà à portée et n'a pas besoin de se déplacer, passer directement à l'attaque à outrance
+
+step: Aucun ennemi n'est accessible en mêlée et aucun pouvoir de contrôle ne paraît prometteur
+  do: Lancer un rocher +13, 4d6+19, si elle en a un à disposition
+
+## Rounds suivants
+
+step: Une cible reste à portée sans imposer de déplacement supérieur à 1,50 m
+  do: Attaque à outrance : trois coups de marteau +25/+20/+15, puis morsure +19
+  note: concentrer les coups sur un adversaire pour l'abattre ; la morsure ajoute les spasmes indiqués au profil
+
+step: La cible est assez facile à toucher pour accepter une pénalité de −4
+  do: Activer Attaque en puissance : marteau +21/+16/+11, 4d6+31 ; morsure +15, 2d8+10 et spasmes
+  note: choisir ce mode avant les attaques ; conserver les bonus ordinaires contre une CA élevée
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 6 m
+  do: Le frapper au marteau ; exploiter Attaques réflexes pour effectuer jusqu'à deux attaques d'opportunité par round
+  note: sa grande allonge gêne les approches et les déplacements, mais n'accorde pas d'attaque gratuite contre chaque ennemi qui entre simplement à portée
+
+step: Un adversaire adjacent provoque une attaque d'opportunité en se déplaçant
+  do: Remplacer cette attaque par la manœuvre d'Immobilisation, BMO +32 contre sa DMD, pour arrêter son déplacement
+  note: ce don exige une case adjacente ; il ne fonctionne pas sur toute l'allonge de 6 m
+
+step: Une arme ou un bouclier constitue l'avantage principal d'un adversaire à portée
+  do: Remplacer une attaque de mêlée par une destruction d'objet, BMO +36 pour la première attaque, sans Attaque en puissance
+  note: l'adamantium ignore une solidité inférieure à 20 ; avec Destruction supérieure, les dégâts excédentaires peuvent atteindre le porteur si l'objet est détruit
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Consacrer son action à une dissipation de la magie ciblée sur l'effet gênant
+  note: test de 1d20+10 contre 11 + NLS de l'effet ; éviter de gaspiller ses trois utilisations sur des protections qu'elle peut contourner
+
+step: Une cible reste hors d'atteinte et peut être désarmée ou repoussée utilement
+  do: Employer télékinésie pour une manœuvre de désarmement ou de bousculade à distance
+  note: ces manœuvres utilisent un bonus de +18, issu du NLS 16 et du Charisme +2 ; chaque nouveau round de manœuvre exige de se concentrer et remplace ses attaques
+
+step: Les images ont disparu et les ennemis la touchent régulièrement grâce à leur vue
+  do: Reculer hors de leur allonge si possible, puis renouveler image miroir
+  note: ce pouvoir consomme son action ; les images ne gênent pas un adversaire qui ne les voit pas ou qui les perce
+
+## Repli
+
+step: Points de vie sous 70 et une issue est praticable
+  do: Se retirer à 30 m par round avec l'action de retraite, en gardant si possible les poursuivants dans ses ténèbres profondes
+  note: seuil tactique proposé ; la retraite protège des attaques d'opportunité liées au départ de sa position initiale, mais pas de toutes celles du trajet
+
+step: Un poursuivant bloque la sortie
+  do: Consacrer un round à terreur, Volonté DD 15, ou à une bousculade au BMO +34 pour dégager le passage, puis se retirer au round suivant
+  note: elle ne possède aucun moyen de téléportation ni de déplacement aérien dans ce profil

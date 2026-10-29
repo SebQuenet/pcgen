@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Effigie de chef gobelin, objet animé de taille G, neutre et sans intelligence, qui attaque tout ce qui bouge.
+  52 pv, CA 14, solidité 5 et immunités des créatures artificielles ; déplacement de 6 m, allonge de 3 m.
+  Deux coups +9 (1d8+6 chacun, plus brûlure) en attaque à outrance ; piétinement et feux d'artifice.
+
+note: Comportement
+  Elle sème la destruction dans le vallon devant la grotte. Elle ne prépare ni embuscade ni manœuvre élaborée : le mouvement des créatures attire ses attaques.
+
+## Ouverture
+
+step: Des cibles sont hors de son allonge de 3 m
+  do: Se rapprocher en utilisant le piétinement pour traverser la position des gobelins sur son passage
+  note: Son déplacement est de 6 m ; elle cherche à écraser les créatures en comblant la distance qui les sépare.
+
+step: Une cible est déjà à portée et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : deux coups +9, infligeant chacun 1d8+6 plus brûlure
+
+## Rounds suivants
+
+step: Des gobelins restent à portée
+  do: Continuer les attaques à outrance avec ses deux coups brûlants
+  note: Rester au contact de plusieurs cibles pour que les feux d'artifice aient une chance d'en affecter le plus possible.
+
+step: Les cibles s'éloignent
+  do: Les poursuivre en tentant de les piétiner, puis reprendre les coups dès qu'elles sont à portée
+  note: Si elle effectue un déplacement ordinaire pour se rapprocher, elle ne porte qu'un coup +9 ce round ; les deux coups demandent une attaque à outrance.
+
+## Repli
+
+step: Même gravement endommagée
+  do: Continuer à attaquer tout ce qui bouge jusqu'à sa destruction
+  note: Sans intelligence et vouée à la destruction, elle ne fuit jamais.

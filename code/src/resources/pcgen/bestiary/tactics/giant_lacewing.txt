@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Chrysope géante, vermine neutre de très grande taille, dépourvue d'intelligence ; 85 pv, CA 19, initiative +3.
+  Morsure +12 (2d8+10) ; allonge de 3 m et espace occupé de 4,50 m.
+  Déplacement au sol de 9 m, vol de 18 m avec une bonne manœuvrabilité ; vision dans le noir à 18 m, Perception +0.
+  Immunisée contre les effets mentaux par ses traits de vermine ; elle réagit instinctivement, sans élaborer de stratégie complexe.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Le mordre à +12, pour 2d8+10 dégâts.
+
+step: L'adversaire le plus proche est accessible en un déplacement
+  do: Avancer jusqu'à 9 m au sol ou voler jusqu'à 18 m pour le placer à portée de morsure, puis attaquer.
+  note: Exploiter l'allonge de 3 m ; il suffit que la cible soit à portée pour la mordre.
+
+step: Aucun adversaire n'est accessible en un déplacement
+  do: Se rapprocher en vol, avec un double déplacement si nécessaire, jusqu'à 36 m.
+  note: Un double déplacement ne laisse pas d'action pour mordre pendant ce tour.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Continuer à le mordre à +12 (2d8+10).
+  note: Son attaque à outrance ne comporte qu'une morsure.
+
+step: Sa cible s'éloigne ou tombe
+  do: Rejoindre la cible accessible la plus proche, en utilisant le vol si nécessaire ; mordre si une action standard reste disponible.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Le mordre à +12 (2d8+10), si son attaque d'opportunité est encore disponible.
+  note: Elle dispose d'une seule attaque d'opportunité par round.
+
+## Repli
+
+note: Instinct
+  Le profil ne précise aucun seuil de pv déclenchant une fuite.
+
+step: Elle rompt le combat
+  do: S'éloigner en vol à 18 m par action de mouvement, jusqu'à 36 m avec un double déplacement.
+  note: Quitter une case menacée peut provoquer une attaque d'opportunité.

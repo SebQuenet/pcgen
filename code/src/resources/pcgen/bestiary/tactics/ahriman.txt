@@ -1,0 +1,102 @@
+## Avant le combat
+
+note: Profil
+  Ahriman, seigneur des divs, est un Extérieur NE de taille TG : 610 pv, CA 46, initiative +20. Il combine magie de neutralisation, auras et attaques à outrance.
+  Fléau d'Ahriman +47/+42/+37/+32, 3d6+16, critique 19–20/×3, allonge 4,50 m. Morsure +45, 3d6+8, critique 19–20, avec étreinte et bottomless maw ; cornes +45, 2d6+8, avec crown of fourfold curses ; griffe et deux serres +45, 1d8+8 chacune.
+  Allonge naturelle 3 m ; déplacement terrestre 12 m, vol parfait 18 m. Vision dans le noir à 18 m, vision dans les ténèbres et vision lucide ; Perception +43.
+  Régénération 20 (mythique et épique ou Bien), RD 20/fer froid, épique et Bien ; résistance à la magie 37, ou 41 contre le Bien. Immunité au feu, au poison, à la pétrification, aux effets de mort, au charme et à la coercition ; résistance à l'acide et à l'électricité 30.
+
+resource: Perception magique et vision lucide | constantes | NLS 20
+resource: Téléportation suprême | à volonté | déplacement et repli
+resource: Communication avec les morts | à volonté | DD 25
+resource: Sanctification maléfique | à volonté | préparation du terrain
+resource: Ténèbres maudites | à volonté | DD 26
+resource: Flétrissure | 3/jour | DD 30
+resource: Implosion | 3/jour | DD 31, concentration
+resource: Labyrinthe | 3/jour | isolement d'un adversaire
+resource: Changement de plan | 3/jour | DD 29 si employé contre un ennemi
+resource: Invocation | 3/jour | niveau 9
+resource: Souhait | 3/jour | conserver si possible une utilisation pour une urgence
+resource: Exigence | 1/jour | DD 30
+resource: Symbole de terreur | 1/jour | DD 28
+resource: Symbole de persuasion | 1/jour | DD 28
+resource: Symbole d'étourdissement | 1/jour | DD 29
+resource: Symbole de faiblesse | 1/jour | DD 29
+
+step: Il dispose de temps pour préparer le lieu de l'affrontement
+  do: Employer sanctification maléfique et préparer ses symboles sur les accès que les intrus devront franchir.
+  note: Respecter les conditions de déclenchement des symboles ; préparer ces effets avant l'arrivée des ennemis.
+
+step: Il peut recueillir des renseignements avant l'arrivée du groupe
+  do: Interroger les morts disponibles et observer les protections magiques avec perception magique et vision lucide.
+  note: Repérer en priorité les armes capables de franchir ses défenses et les adversaires qui peuvent empêcher sa fuite.
+
+step: Des renforts lui seront utiles et leur durée permet de les appeler avant l'affrontement
+  do: Employer invocation et placer les créatures obtenues entre les intrus et lui.
+  note: La télépathie porte à 90 m ; il peut coordonner ses alliés sans parler à voix haute.
+
+## Ouverture
+
+step: Les ennemis entrent à portée de ses auras
+  do: Faire résoudre la présence terrifiante à 18 m, DD 38, et le désespoir à 9 m, DD 38, selon leurs conditions d'application.
+  note: Privilégier une position qui soumet plusieurs adversaires aux auras tout en gardant une voie de sortie.
+
+step: Un adversaire concentre l'essentiel de la menace immédiate
+  do: Lancer labyrinthe sur lui pour l'écarter, puis s'occuper de ses alliés pendant son absence.
+  note: Choisir notamment le combattant dont les attaques traversent ses défenses ou le lanceur de sorts qui contrôle ses déplacements.
+
+step: Plusieurs adversaires vivants constituent des cibles intéressantes pour un même pouvoir
+  do: Ouvrir avec flétrissure, DD 30, en sélectionnant les ennemis.
+  note: Cette option convient lorsqu'aucune menace isolée n'impose d'abord un labyrinthe.
+
+step: Une cible prioritaire reste exposée et il peut consacrer les rounds suivants à la concentration
+  do: Lancer implosion, DD 31.
+  note: Choisir une cible dont la Vigueur semble faible ; prévoir de maintenir le pouvoir au lieu de passer immédiatement à la mêlée.
+
+step: Un ennemi est déjà à portée et la mêlée est préférable à un pouvoir magique
+  do: Faire une attaque à outrance avec les quatre attaques de fléau, la morsure, la griffe, les cornes et les deux serres, si leurs allonges respectives le permettent.
+  note: Entre 3 m et 4,50 m, seul le fléau atteint la cible. Une approche nécessitant une action de mouvement ne permet pas l'attaque à outrance ce round.
+
+## Rounds suivants
+
+step: Implosion est toujours active et d'autres cibles sont disponibles
+  do: Maintenir la concentration et désigner une nouvelle cible à chaque round permis par le pouvoir, DD 31.
+  note: La concentration occupe son action ; réserver les attaques à outrance et les autres pouvoirs aux rounds où il ne la maintient pas.
+
+step: Un ennemi dangereux revient du labyrinthe ou une nouvelle menace doit être isolée
+  do: Employer une autre utilisation de labyrinthe si cela permet de conserver l'avantage numérique.
+  note: Profiter du temps gagné pour abattre les adversaires restés présents, au lieu de disperser les attaques.
+
+step: Il commence son tour à portée de plusieurs attaques et n'entretient pas implosion
+  do: Concentrer l'attaque à outrance sur une cible prioritaire, puis reporter les attaques restantes si elle tombe.
+  note: Après une morsure réussie permettant l'étreinte, tenter la lutte à +55. Le fléau exploite son allonge de 4,50 m ; les autres attaques exigent une cible à 3 m ou moins.
+
+step: Un adversaire provoque une attaque d'opportunité à portée
+  do: Frapper avec le fléau ; utiliser Attaques réflexes pour exploiter plusieurs occasions dans le round.
+  note: Son allonge menace les approches et les déplacements imprudents ; un simple mouvement ennemi ne provoque pas nécessairement une attaque.
+
+step: Les ennemis restent hors de portée de mêlée
+  do: Employer flétrissure si plusieurs cibles le justifient ; sinon utiliser ténèbres maudites, DD 26, contre les adversaires sensibles à ce pouvoir.
+  note: Se déplacer en vol à 18 m pour améliorer sa position lorsque cela vaut davantage qu'une attaque à outrance.
+
+step: Il veut bannir un ennemi et accepte de risquer une attaque de contact
+  do: Employer changement de plan offensivement, DD 29.
+  note: Cette option dépense aussi une ressource utilisable pour son propre repli.
+
+step: La pression ennemie l'empêche de profiter de sa régénération
+  do: Se téléporter vers une position connue à l'abri des attaques, puis préparer son retour.
+  note: Chaque round où la régénération fonctionne lui rend 20 pv ; il peut recommencer à combattre après avoir récupéré suffisamment.
+
+## Repli
+
+step: Ses pv passent sous 200 et les ennemis restent capables de le menacer
+  do: Employer téléportation suprême pour rejoindre un refuge connu.
+  note: Se retirer plus tôt si les ennemis neutralisent sa régénération ou menacent d'empêcher son déplacement magique.
+
+step: Il doit quitter le plan et peut encore voyager entre les plans
+  do: Employer changement de plan sur lui-même.
+  note: Garder cette possibilité en tête avant de dépenser ses trois utilisations contre les ennemis.
+
+step: Ses déplacements magiques sont empêchés
+  do: Voler à 18 m par action de mouvement vers un couvert ou une issue, en faisant couvrir son départ par les renforts encore présents.
+  note: Exploiter le vol parfait pour choisir une trajectoire que les combattants terrestres suivent difficilement.

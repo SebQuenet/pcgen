@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Poupée guerrière (Warrior Doll), objet animé neutre de taille très petite, sans Intelligence ; FP 1/2.
+  5 PV, CA 18, contact 14, prise au dépourvu 16 ; solidité 5 et immunités des créatures artificielles ; vulnérabilité au feu.
+  Deux coups +3 (1d3 chacun) en attaque à outrance ; un seul coup après une action de mouvement. Déplacement de 9 m ; allonge de 0 m.
+
+note: Repérage
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5. Ne pas lui prêter une analyse tactique élaborée ou une vigilance exceptionnelle.
+
+## Ouverture
+
+step: Un adversaire est accessible avec un déplacement de 9 m au plus
+  do: Entrer dans sa case et porter un coup +3 (1d3).
+  note: Son allonge de 0 m impose de partager la case adverse pour frapper. Cette entrée peut provoquer une attaque d'opportunité.
+
+step: Aucun adversaire n'est accessible avec un déplacement de 9 m
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un adversaire partage toujours sa case
+  do: Effectuer une attaque à outrance : deux coups +3, infligeant chacun 1d3 dégâts.
+
+step: La cible est à une case et un pas de placement suffit pour la rejoindre
+  do: Faire un pas de placement de 1,50 m dans sa case, puis porter les deux coups +3 (1d3 chacun).
+  note: Ce pas ne provoque pas d'attaque d'opportunité.
+
+step: La cible s'éloigne davantage
+  do: La rejoindre à 9 m au plus et porter un seul coup ; si elle reste hors d'atteinte, poursuivre par un double déplacement.
+  note: Avec une allonge de 0 m, la poupée ne menace aucune case et ne porte pas d'attaque d'opportunité lorsque sa cible s'éloigne.
+
+note: Résistance
+  Appliquer la solidité 5 et les immunités de créature artificielle ; tenir compte de sa vulnérabilité au feu. Sa faible réserve de 5 PV rend chaque blessure dangereuse.
+
+## Repli
+
+step: La poupée subit des dégâts mais reste à plus de 0 PV
+  do: Continuer le combat sans repli spontané fondé sur la peur ou sur ses blessures.
+  note: Dépourvue d'Intelligence, elle ne prépare pas de fuite de sa propre initiative. À 0 PV, elle est détruite.

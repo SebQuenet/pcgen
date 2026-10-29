@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Xochatli, créature artificielle mécanique gigantesque, neutre mauvaise, FP 16 : prédateur marin intelligent et intrépide, avec 229 pv, CA 30 et guérison accélérée 5.
+  Morsure +31 (2d8+9, critique 19-20), 2 bras +26 (2d6+4 et étreinte), 4 tentacules +26 (1d8+4 et étreinte). Allonge de 6 m, portée à 18 m avec les bras ; espace occupé de 6 m.
+  Nage à 18 m, déplacement terrestre de 3 m, propulsion de 72 m. Perception +43, perception aveugle et vision dans le noir à 18 m.
+  RD 10/adamantium et contondant : une attaque doit réunir ces deux propriétés pour l'ignorer. Immunité au froid et immunités des créatures artificielles ; vulnérabilité à l'électricité.
+
+resource: Résistance aux énergies destructives | 1/jour | NLS 15 ; choisir l'électricité
+resource: Contrôle du climat | 1/jour | préparer un temps défavorable adapté au climat et à la saison
+resource: Contrôle des vents | 1/jour | gêner les adversaires exposés aux vents à la surface
+resource: Domination de monstre | 1/jour | animaux uniquement ; Volonté DD 22 ; NLS 15
+
+step: Une confrontation se prépare
+  do: Utiliser résistance aux énergies destructives sur lui-même contre l'électricité avant d'engager le combat.
+  note: Cette protection atténue sa principale faiblesse ; elle ne supprime pas sa vulnérabilité.
+
+step: Il peut préparer une attaque en surface
+  do: Employer contrôle du climat assez tôt pour que le mauvais temps se manifeste ; utiliser contrôle des vents si les tirs ou les déplacements aériens des ennemis constituent une menace.
+  note: Ces pouvoirs modifient les conditions du combat ; ils ne permettent pas de diriger des éclairs sur une cible.
+
+step: Un animal utile est présent et peut être atteint par son pouvoir
+  do: Tenter domination de monstre sur cet animal, Volonté DD 22, puis lui ordonner de harceler les intrus.
+  note: Ce pouvoir ne cible que les animaux ; il ne fournit aucun serviteur à lui seul.
+
+## Ouverture
+
+step: Les ennemis sont encore hors de portée des bras
+  do: Approcher sous l'eau en nageant à 18 m pour placer les adversaires à portée de ses appendices.
+  note: Si une grande distance doit être franchie, employer la propulsion de 72 m en ligne droite, comme action complexe ; consacrer ce round au déplacement.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Effectuer une seule attaque après le déplacement : bras à 18 m au plus, ou morsure à 6 m au plus.
+  note: Avec Frappe décisive, une morsure portée comme action d'attaque inflige 4d8+9 ; réserver l'attaque à outrance à un round où il peut rester en place.
+
+step: Plusieurs ennemis sont à portée et il peut effectuer une attaque à outrance
+  do: Répartir les 4 tentacules +26 entre les ennemis à 6 m ou moins, frapper les adversaires plus éloignés avec les 2 bras +26, et mordre une cible proche à +31.
+  note: Après une touche de bras ou de tentacule, tenter gratuitement l'étreinte contre une cible de taille appropriée ; BMO de lutte +43 avant les modificateurs de situation.
+
+## Rounds suivants
+
+step: Des adversaires libres restent accessibles
+  do: Continuer les attaques à outrance pour saisir autant de victimes que possible avec les tentacules ; employer les bras contre ceux qui restent entre 6 m et 18 m.
+  note: Donner la priorité aux utilisateurs d'électricité accessibles, puis aux ennemis déjà blessés que la morsure peut achever.
+
+step: Il veut garder sa liberté d'action en saisissant une victime avec un seul appendice
+  do: Utiliser l'option d'étreinte avec un seul membre, au prix d'un malus de -20 au test de lutte.
+  note: Cette option lui évite de recevoir lui-même l'état agrippé et lui permet de continuer à menacer les autres adversaires ; tenir compte de ce malus dans les tests concernés.
+
+step: Écraser une victime saisie devient prioritaire
+  do: Consacrer une action simple à maintenir la lutte ; sur réussite, choisir d'infliger les dégâts de l'appendice qui la retient.
+  note: Appliquer le bonus de +5 au maintien si la victime n'a pas rompu la prise. Cette action remplace son attaque à outrance du round.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Exploiter Attaques réflexes pour le frapper avec un appendice disponible, puis tenter l'étreinte si la touche le permet.
+  note: Les bras menacent jusqu'à 18 m ; les limites liées à la lutte et aux membres déjà occupés restent applicables.
+
+step: Il subit des blessures mais peut poursuivre le combat
+  do: Récupérer 5 pv par round grâce à la guérison accélérée et maintenir la pression.
+  note: Sa carapace réfléchissante dévie sans effet les sorts et effets de rayon qui le ciblent ; elle ne renvoie pas ces attaques sur leur auteur.
+
+## Repli
+
+step: Quel que soit son total de points de vie
+  do: Continuer à attaquer jusqu'à sa destruction ; Xochatli ne bat jamais en retraite.
+  note: Ses déplacements sous l'eau et sa propulsion servent à poursuivre ou à rejoindre ses proies. Ses blessures ne déclenchent aucun seuil de fuite.

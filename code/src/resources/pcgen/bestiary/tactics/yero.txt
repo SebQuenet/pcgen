@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Yero est un jeune doppelganger de taille P, humanoïde monstrueux métamorphe, chaotique neutre. Amical mais bravache, il devient violent lorsqu'il comprend ce que cherchent les PJ.
+  18 PV ; CA 19, contact 15, pris au dépourvu 15 ; initiative +3. Déplacement de 9 m ; allonge de 1,50 m.
+  Épée longue +1 : attaque +9, dégâts 1d6+3, critique 19–20. Il dispose aussi d'une flasque d'acide et de deux bâtons fumigènes.
+  Vision dans le noir à 18 m, vision nocturne ; Perception +9, Discrétion +11. Immunisé au charme et au sommeil.
+
+resource: Flasque d'acide | 1 | projectile pour le premier tour
+resource: Bâtons fumigènes | 2 | pour masquer ses mouvements
+resource: Potion de force de taureau | 1 | disponible dans son équipement ; sa tactique décrite ne prévoit pas de la boire
+resource: Détection des pensées | à volonté | NLS 8, concentration +9 ; aucun DD n'est précisé dans ce profil
+
+note: Imposture
+  Changement de forme, mimétisme et copie parfaite servent à soutenir son identité d'emprunt. Bluff +9, ou +13 sous changement de forme ; Déguisement +9, ou +29 sous changement de forme.
+  Il parle le commun et le gnome ; Diplomatie +4, Psychologie +6.
+
+step: Il n'a pas encore compris l'objectif des PJ
+  do: Converser avec eux de façon amicale, quoique bravache
+
+step: Il comprend ce que les PJ recherchent
+  do: Se retourner contre eux et engager le combat
+
+## Ouverture
+
+step: Premier tour, s'il choisit de masquer ses mouvements
+  do: Jeter un bâton fumigène au sol pour couvrir ses déplacements vers le PJ le plus proche
+  note: Cette ouverture remplace le lancer d'acide.
+
+step: Premier tour, s'il choisit l'attaque directe
+  do: Lancer sa flasque d'acide sur le PJ le plus proche
+  note: Passer ensuite à l'épée longue ; cette ouverture remplace l'emploi du fumigène.
+
+## Rounds suivants
+
+step: Le PJ le plus proche est hors de son allonge de 1,50 m
+  do: S'approcher de lui, avec un déplacement de 9 m, et le frapper à l'épée si ses actions le permettent
+
+step: Sa cible est à portée et peut encore combattre
+  do: La frapper à l'épée longue +1, attaque +9, dégâts 1d6+3, critique 19–20
+  note: Continuer à attaquer ce même PJ jusqu'à ce qu'il soit hors de combat.
+
+step: Sa cible est hors de combat
+  do: Choisir le PJ encore capable de combattre le plus proche et poursuivre les attaques à l'épée
+
+## Repli
+
+step: Yero est blessé mais peut encore combattre
+  do: Poursuivre le combat jusqu'à être rendu inconscient ou tué
+  note: Il ne fuit pas et ne se rend pas, quel que soit le nombre de PV qui lui reste.

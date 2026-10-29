@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Rimetusk est un troll des glaces affaibli, chaotique mauvais, de taille G : 22 pv, CA 15, déplacement de 9 m et allonge de 3 m.
+  À outrance : hache d'armes +4 (2d6+3, critique x3) et morsure -1 (1d8+1). Sans la hache, morsure seule +4 (1d8+3).
+  Il concentre ses attaques sur le dernier PJ qui l'a blessé ou qui a défié son autorité.
+
+note: Défenses et perception
+  Immunité au froid et vulnérabilité au feu : les dégâts de feu sont augmentés de moitié.
+  Perception +7, vision dans le noir à 18 m et vision nocturne.
+
+resource: Régénération | permanente | Récupère 2 pv par round ; les dégâts d'acide ou de feu interrompent cette régénération pendant le round suivant l'attaque.
+
+## Ouverture
+
+step: Un PJ vient de le blesser ou de défier son autorité
+  do: Prendre ce PJ pour cible et diriger ses attaques contre lui.
+  note: Son orgueil dicte le choix de sa cible ; il ne privilégie pas systématiquement l'adversaire le plus fragile.
+
+step: La cible est hors de son allonge de 3 m
+  do: Se déplacer de 9 m au maximum pour la mettre à portée, puis porter une attaque de hache d'armes +4 (2d6+3, critique x3).
+  note: Si ce déplacement ne suffit pas, poursuivre l'approche ; un déplacement ordinaire suivi d'une attaque ne permet pas d'ajouter la morsure.
+
+step: La cible est déjà à portée et une attaque à outrance est possible
+  do: Frapper avec la hache d'armes +4 (2d6+3, critique x3), puis mordre à -1 (1d8+1).
+
+## Rounds suivants
+
+step: Un autre PJ le blesse ou défie son autorité
+  do: Reporter ses attaques sur ce nouveau provocateur, en se rapprochant si nécessaire.
+
+step: Sa cible reste à portée
+  do: Répéter l'attaque à outrance, hache d'armes puis morsure.
+  note: Son allonge de 3 m lui permet de frapper sans être adjacent à la cible.
+
+step: Sa cible s'éloigne
+  do: La poursuivre à sa vitesse de 9 m et attaquer à la hache dès qu'un déplacement suivi d'une attaque le permet.
+
+step: Il ne peut plus utiliser sa hache
+  do: Attaquer avec sa morsure seule +4 (1d8+3).
+  note: Ne pas employer le bonus de morsure -1, qui correspond à la morsure secondaire accompagnant la hache.
+
+step: Il subit des dégâts d'acide ou de feu
+  do: Suspendre sa régénération pendant le round suivant l'attaque et continuer à combattre selon sa priorité habituelle.
+  note: Le feu exploite aussi sa vulnérabilité ; le froid ne lui inflige aucun dégât.
+
+## Repli
+
+step: Ses points de vie diminuent, même près de 0
+  do: Continuer à attaquer jusqu'à la mort, sans fuir ni se rendre.
+  note: Rimetusk surestime sa force et ne reconnaît pas sa défaite. Aucun seuil de points de vie ne déclenche de repli.

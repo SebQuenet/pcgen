@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Hiracapath, extérieur loyal bon de taille G, gardien du Paradis à l'allure de bélier cuirassé. Simple et obstiné, il poursuit les intrus pour les livrer aux autorités célestes et épargne les adversaires sans défense.
+  94 pv ; CA 18 ; coup de corne +14 (1d8+6), 2 sabots +12 (1d6+3). Déplacement de 12 m ; espace de 3 m ; allonge de 1,50 m.
+  Réduction des dégâts 5/Mal ; résistance à l'électricité 5 et au feu 5. Il comprend le céleste, mais ne parle pas.
+
+resource: Marche dans les airs | constant | Se déplace dans l'air comme sur un sol solide ; les montées sont limitées à une pente de 45° et se font à demi-vitesse.
+resource: Changement de plan | 1/jour | Action simple ; NLS 9 ; concentration +12 ; lui seul, sans passager ni prisonnier.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +12, sa vision dans le noir à 18 m et son odorat ; suivre leur piste avec Survie +12 s'ils s'éloignent.
+  note: Se placer entre les intrus et ce qu'il protège ; utiliser la marche dans les airs pour franchir les obstacles.
+
+note: Nimbus glorieux
+  Sa lumière augmente l'éclairage d'un cran et s'oppose aux ténèbres magiques comme une flamme éternelle. Une créature chaotique ou mauvaise qui le touche en mêlée subit 1d6 dégâts non létaux ; une créature chaotique mauvaise dans l'aura en subit 2d6.
+
+## Ouverture
+
+step: Un intrus peut être repoussé vers ses alliés
+  do: Effectuer une bousculade à +20 ; si une charge rectiligne est possible sur 3 à 24 m, charger et effectuer cette bousculade à +22.
+  note: La bousculade ne provoque pas d'attaque d'opportunité de la cible. Grâce à Bousculade supérieure, son déplacement provoque celles des alliés du hiracapath, selon leur portée et leurs attaques disponibles.
+
+step: Une menace doit être frappée et une charge est possible
+  do: Charger sur 3 à 24 m et porter un coup de corne +16 (1d8+6).
+  note: CA 16 jusqu'au prochain tour ; une charge ne permet pas d'ajouter les deux sabots.
+
+## Rounds suivants
+
+step: L'adversaire reste à 1,50 m ou moins
+  do: Attaque à outrance : coup de corne +14 (1d8+6), puis 2 sabots +12 (1d6+3).
+  note: Un pas de 1,50 m permet de se replacer en conservant l'attaque à outrance.
+
+step: Il cherche à capturer un adversaire vivant
+  do: Porter des attaques non létales avec le malus normal de -4 : corne +10 (1d8+6), 2 sabots +8 (1d6+3) en attaque à outrance.
+  note: Cesser de frapper dès que la cible est hors de combat ; la remettre ensuite aux autorités célestes.
+
+step: Il emploie la force létale contre une cible facile à toucher
+  do: Activer Attaque en puissance : corne +11 (1d8+12), 2 sabots +9 (1d6+6) en attaque à outrance.
+  note: Le malus de -3 s'applique aussi aux manœuvres offensives jusqu'au prochain tour ; éviter cette option lorsqu'une bousculade doit réussir.
+
+step: La cible s'éloigne ou prend de la hauteur
+  do: La rejoindre avec son déplacement de 12 m et la marche dans les airs ; après un déplacement, porter seulement le coup de corne +14 (1d8+6) si elle est à portée.
+  note: Privilégier une nouvelle bousculade pour ouvrir un passage ou ramener l'intrus vers les alliés ; éviter de pousser un prisonnier potentiel dans une chute mortelle.
+
+## Repli
+
+step: Moins de 24 pv et aucun espoir raisonnable d'arrêter les intrus
+  do: Battre en retraite, au besoin dans les airs, pour gagner une position hors de portée ; utiliser ensuite changement de plan s'il est encore disponible.
+  note: Ce seuil est un choix tactique. Le pouvoir ne permet pas d'emporter un allié ou un captif.
+
+step: Changement de plan déjà dépensé
+  do: Se retirer vers des renforts célestes avec la marche dans les airs ; employer l'action de retraite pour quitter le contact.
+  note: La retraite permet jusqu'à 24 m sur terrain horizontal et protège seulement la case de départ contre les attaques d'opportunité ordinaires.

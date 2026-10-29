@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Miranksha, asura adhukaït loyal mauvais de taille M, FP 8, privilégie le contact contre une cible isolée. 85 pv, CA 22, déplacement de 12 m, allonge de 1,50 m.
+  À outrance : quatre attaques avec ses deux kukris de maître, deux à +16 et deux à +11 (1d4+6, critique 18–20), puis deux griffes +10 (1d4+3).
+  Vision à 360°, vision dans le noir à 18 m, Perception +20 ; impossible à prendre en tenaille. Télépathie à 30 m.
+
+note: Défenses
+  Régénération 5, interrompue pendant 1 round par les armes ou sorts du Bien ; RD 5/Bien, RM 19, résistances à l'acide et à l'électricité 10.
+  Immunité aux malédictions, maladies et poisons. Esprit dual : deux sauvegardes contre chaque effet mental, une seule réussite suffit ; +2 contre les enchantements.
+  Aura insaisissable à 9 m : protection contre les divinations, pas invisibilité.
+
+resource: Pas léger | constant | ignore les entraves des terrains difficiles et permet les pas de placement ; ne protège pas des dégâts du terrain
+resource: Téléportation suprême | à volonté | Miranksha et jusqu'à 22,5 kg d'objets uniquement
+resource: Pattes d'araignée | à volonté | contourner un obstacle par les murs, mains libres
+resource: Flou | 3/jour | 20 % de chances de rater les attaques contre lui ; durée 7 minutes
+resource: Image miroir | 3/jour | 1d4+2 doubles ; durée 7 minutes
+resource: Liberté de mouvement | 3/jour | protection contre les entraves et la lutte ; durée 70 minutes
+resource: Clignotement | 3/jour | durée 7 rounds ; ses propres attaques ont aussi 20 % de chances d'échec
+resource: Pierres acérées | 3/jour | Réflexes DD 18 contre les blessures ralentissantes
+resource: Convocation | 1/jour | 1 adhukaït, 50 % de réussite ; activation en 1 round entier
+
+step: Les ennemis approchent et il peut se préparer
+  do: Activer liberté de mouvement s'il prévoit une lutte ou des entraves, puis flou et image miroir juste avant le contact, un pouvoir par round
+  note: Se dissimuler avec Discrétion +16 pour choisir l'engagement.
+
+step: Il dispose encore d'un round entier avant l'engagement
+  do: Tenter la convocation et coordonner l'adhukaït par télépathie si elle réussit
+  note: Ne pas compter sur cette aide tant que le jet de convocation n'est pas réussi.
+
+## Ouverture
+
+step: Les ennemis doivent traverser un sol rocheux et restent à distance
+  do: Placer pierres acérées sur leur passage pour séparer les premiers combattants de leurs soutiens ; conserver un accès sûr au contact
+  note: Traverser coûte le double de mouvement et inflige 1d8 dégâts perforants par 1,50 m ; après avoir subi des dégâts, Réflexes DD 18 ou vitesse réduite de moitié. Miranksha évite aussi les pointes malgré pas léger.
+
+step: Une cible vulnérable est accessible par un déplacement
+  do: S'approcher, puis porter une seule attaque de kukri +16 (1d4+6, critique 18–20)
+  note: Utiliser Acrobaties +16 pour éviter les attaques d'opportunité ; Souplesse du serpent accorde +4 à la CA contre celles provoquées par son déplacement.
+
+step: La cible choisie est trop éloignée ou protégée par un obstacle
+  do: Se téléporter sur un emplacement libre près d'elle, afin de l'engager au round suivant
+  note: La téléportation consomme son action simple ; elle ne permet pas une attaque à outrance au même tour.
+
+## Rounds suivants
+
+step: Un adversaire est à portée et aucune fuite urgente ne s'impose
+  do: Effectuer les six attaques à outrance sur la même cible, en priorité un ennemi blessé ou un lanceur de sorts
+  note: Un pas de placement de 1,50 m reste possible ; un déplacement ordinaire empêche cette attaque à outrance.
+
+step: Un ennemi adjacent s'écarte par un pas de placement de 1,50 m
+  do: Le suivre avec Step Up en action immédiate pour rester adjacent
+  note: Au prochain tour, aucun pas de placement et retrancher 1,50 m d'un éventuel déplacement.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Frapper avec un kukri +16
+  note: Attaques réflexes permet jusqu'à cinq attaques d'opportunité par round, y compris pris au dépourvu ; un pas de placement adverse ne provoque pas à lui seul.
+
+step: Les tireurs le prennent pour cible et flou ne le protège plus
+  do: Se déplacer de plus de 1,50 m pour activer Wind Stance, puis attaquer une fois si une cible est accessible
+  note: Dissimulation de 20 % contre les attaques à distance pendant 1 round ; elle ne se cumule pas avec celle de flou.
+
+step: Ses protections disparaissent et les attaques deviennent dangereuses
+  do: Renouveler image miroir ou flou depuis une position sûre ; choisir clignotement si la survie prime sur la précision
+  note: Chaque pouvoir prend une action simple ; ne pas enchaîner plusieurs protections et une attaque au même tour.
+
+## Repli
+
+step: Ses pv passent sous 30, ou les attaques du Bien menacent de l'achever
+  do: Faire un pas de placement pour sortir des allonges si possible, puis utiliser téléportation suprême vers un refuge connu
+  note: Au contact, l'activation peut provoquer une attaque d'opportunité ; s'il doit l'utiliser sur la défensive, sa concentration est de +11.
+
+step: Il a rejoint un refuge hors de portée
+  do: Laisser sa régénération restaurer 5 pv par round avant de reprendre des risques
+  note: Après une blessure infligée par une arme ou un sort du Bien, attendre la fin de l'interruption de régénération. La téléportation ne transporte aucun allié ni prisonnier.

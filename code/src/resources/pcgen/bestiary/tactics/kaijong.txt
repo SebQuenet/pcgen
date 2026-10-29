@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Kaijong est un dragon des saumures juvénile, loyal neutre, intelligent, de taille M : 95 pv, CA 27, contact 11, dépourvu 26.
+  Il ouvre au souffle puis privilégie les attaques à outrance avec Attaque en puissance. Sans ce don : morsure +18 (1d8+12), 2 griffes +18 (1d6+8), 2 ailes +13 (1d4+4) ; allonge de 1,50 m.
+  Déplacement terrestre et nage : 18 m ; vol : 45 m, manœuvrabilité moyenne. Il respire sous l'eau et possède le don Vol stationnaire.
+  Il est immunisé à l'acide, à la paralysie et au sommeil ; Perception +15.
+
+resource: Sorts de niveau 1 | 6/jour, réserve commune | armure de mage, image silencieuse (DD 13), disparition ; NLS 3, concentration +5
+resource: Souffle | réutilisable après recharge | le bloc fourni ne précise ni la forme, ni la portée, ni les dégâts, ni le DD, ni le délai de recharge
+resource: Brume de dissimulation | à volonté | pouvoir magique, NLS 10
+
+step: Avant l'affrontement
+  do: Lancer armure de mage sur lui-même.
+  note: La CA 27 inclut déjà son bonus d'armure de +4 ; ne pas l'ajouter une seconde fois. Cette préparation consomme une des 6 utilisations quotidiennes de sorts de niveau 1.
+
+## Ouverture
+
+step: Premier round de combat
+  do: Utiliser son souffle contre les ennemis, en cherchant à en atteindre plusieurs.
+  note: La condition d'au moins trois cibles s'applique aux utilisations suivantes ; elle ne retarde pas son souffle d'ouverture.
+
+step: Après le souffle, tant qu'il conserve au moins 50 pv
+  do: Fondre sur les adversaires pour atteindre le contact.
+  note: S'il doit consacrer son action de mouvement à l'approche, il ne peut pas aussi faire une attaque à outrance ; effectuer une morsure si une action simple reste disponible.
+
+## Rounds suivants
+
+step: Au moins 50 pv et un adversaire à portée de 1,50 m
+  do: Faire une attaque à outrance : une morsure, deux griffes et deux ailes ; employer de préférence Attaque en puissance.
+  note: Appliquer les modificateurs du don aux valeurs de base indiquées dans le profil. Rester au contact pour renouveler l'attaque à outrance au round suivant.
+
+step: Au moins 50 pv, mais aucun adversaire au contact
+  do: Rejoindre une cible par le sol, le vol ou la nage, puis porter une morsure si une action simple reste disponible.
+  note: Une attaque à outrance exige de conserver l'action complexe nécessaire ; un déplacement normal ne permet pas les cinq attaques.
+
+step: Souffle rechargé et au moins trois ennemis peuvent être pris dans son effet
+  do: Utiliser de nouveau le souffle à la place des attaques de mêlée.
+
+step: Souffle rechargé, mais moins de trois ennemis peuvent être atteints
+  do: Garder le souffle disponible et poursuivre la tactique correspondant à ses pv actuels.
+
+step: Moins de 50 pv, mais au moins 30 pv
+  do: Rompre le contact, lancer disparition si possible et rester à distance de la mêlée.
+  note: S'éloigner par le vol ou la nage selon le terrain. Ne plus revenir effectuer d'attaques à outrance ; attendre une occasion de souffler sur au moins trois ennemis.
+
+step: Il doit masquer son éloignement et disparition n'est pas disponible
+  do: Employer brume de dissimulation si elle peut couper la vue des poursuivants, puis s'éloigner.
+  note: La brume gêne aussi sa propre visibilité ; elle sert ici à couvrir son départ.
+
+## Repli
+
+step: Moins de 30 pv et le combat se déroule ailleurs qu'au phare
+  do: Cesser le combat et rejoindre le phare pour s'y cacher et se reposer ; utiliser disparition si possible pour faciliter la fuite.
+
+step: Moins de 30 pv et le combat se déroule au phare
+  do: Abandonner son trésor et s'envoler vers l'ouest, au large, à 45 m par déplacement.
+  note: Il peut revenir quelques jours plus tard pour récupérer son trésor ou se venger, sans que ce retour soit certain.

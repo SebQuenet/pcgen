@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Katroome est une petite créature magique des forêts, chaotique neutre, intelligente et fragile : 11 pv, CA 13. Son coup +1 (1d3-2) fait du corps à corps un dernier recours.
+  Il privilégie suggestion et injonction pour écarter les adversaires, et invisibilité pour se soustraire au danger. Déplacement et escalade à 6 m ; allonge de 1,50 m.
+  Discrétion +10, ou +14 en forêt ; Escalade +10 ; Perception +5 ; Psychologie +6. Vision dans le noir à 18 m et vision nocturne. Il parle le commun, le gobelin et le sylvestre.
+
+resource: Injonction | 3/jour | Volonté DD 12 ; une cible à 10,50 m maximum ; durée 1 round ; doit comprendre l'ordre
+resource: Détection de la magie | 3/jour | repérer les auras magiques avant un affrontement, si le temps le permet
+resource: Invisibilité | 1/jour | durée 5 minutes ; prend fin s'il attaque, y compris par un pouvoir visant un adversaire
+resource: Suggestion | 1/jour | Volonté DD 14 ; une cible à 10,50 m maximum ; doit comprendre ses paroles ; consigne raisonnable, durée maximale 5 heures ou jusqu'à son accomplissement
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Les observer depuis un couvert ; en forêt, utiliser Discrétion +14 et l'escalade pour choisir une position difficile à atteindre
+  note: Prévoir un trajet de fuite praticable à 6 m par déplacement ; grimper ne le rend pas automatiquement caché
+
+step: Il peut observer sans urgence un objet ou un passage suspect
+  do: Employer détection de la magie pour rechercher des auras
+  note: Ce pouvoir ne lui révèle pas automatiquement les capacités des intrus
+
+## Ouverture
+
+step: Un intrus comprend ses paroles et peut encore être convaincu de partir
+  do: À 10,50 m maximum, employer suggestion : « Vous devriez chercher un autre passage et poursuivre votre route ailleurs »
+  note: Volonté DD 14 ; adapter la proposition à la situation pour qu'elle paraisse raisonnable. Le pouvoir ne touche qu'une cible et ne lui permet pas de commander tout le groupe
+
+step: L'affrontement commence et suggestion serait inadaptée ou a déjà échoué
+  do: Employer injonction sur l'adversaire qui menace de l'atteindre : « Fuis ! », puis se déplacer vers un couvert ou un accès en hauteur
+  note: Volonté DD 12, portée 10,50 m ; la cible qui échoue fuit pendant son prochain tour. Une seule utilisation de pouvoir magique par round
+
+## Rounds suivants
+
+step: Un poursuivant revient à portée et comprend ses paroles
+  do: Renouveler injonction « Fuis ! » si des utilisations restent, puis continuer à s'éloigner ou à grimper
+  note: Chaque utilisation exige un nouveau jet de Volonté DD 12 ; ne pas compter sur cet effet pour neutraliser plusieurs adversaires à la fois
+
+step: Il dispose d'un couvert et peut rompre le contact
+  do: Se déplacer hors de vue, puis se cacher ; exploiter l'escalade et Discrétion +14 en forêt
+  note: Éviter les échanges de coups et les déplacements qui provoqueraient inutilement des attaques d'opportunité
+
+step: Un adversaire est au contact et aucune fuite immédiate n'est possible
+  do: Si un coup peut achever l'adversaire, porter son coup +1 (1d3-2) ; sinon, combattre sur la défensive ou chercher à se dégager
+  note: Son faible bonus d'attaque et ses dégâts réduits rendent un duel prolongé très défavorable
+
+## Repli
+
+step: Il tombe à 5 pv ou moins, ou plusieurs ennemis menacent de l'encercler
+  do: Employer invisibilité si elle est disponible et s'éloigner vers un couvert, en grimpant si le terrain s'y prête
+  note: L'activation au contact peut provoquer une attaque d'opportunité ; privilégier une position hors d'allonge. Une fois invisible, consacrer ses actions à la fuite et au camouflage
+
+step: Invisibilité est épuisée et un adversaire bloque la fuite
+  do: À distance, tenter une dernière injonction « Fuis ! » si possible ; au contact, utiliser l'action de retraite pour se dégager vers un passage libre
+  note: La retraite protège contre les attaques d'opportunité dues à la sortie de la case de départ seulement ; éviter de traverser d'autres cases menacées

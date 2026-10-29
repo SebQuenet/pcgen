@@ -1,0 +1,87 @@
+## Avant le combat
+
+note: Profil
+  Avatar d'Ydersius, Extérieur de taille TG, chaotique mauvais : il combat avec la sauvagerie d'un constricteur et la rapidité d'une vipère. 322 pv, CA 35, régénération 30.
+  Attaque à outrance : deux morsures +36/+36 (2d6+20, critique 19–20, plus poison), deux griffes +36 (2d6+10) et une queue +31 (2d8+5, plus saisie). BMO +40, +46 en lutte ; DMD 59.
+  Déplacement 15 m, escalade 12 m ; espace occupé 4,50 m ; allonge 4,50 m, ou 6 m avec la queue. Il cherche à empoisonner plusieurs adversaires et à immobiliser les lanceurs de sorts.
+
+note: Défenses et perception
+  RD 15, contournée par une attaque à la fois loyale et en argent ; résistance à la magie 30 ; résistance à l'électricité 20.
+  Immunisé contre l'acide, le feu, les effets mentaux, la paralysie, la pétrification et le poison. Sa faiblesse est la décapitation.
+  Perception aveugle et vision dans le noir à 36 m, odorat, vision lucide constante ; Perception +34. Télépathie à 60 m.
+  Aura maudite constante, DD 26 ; présence terrifiante à 90 m, DD 32. Les bonus défensifs du profil comprennent déjà l'aura maudite.
+
+resource: Liberté de mouvement | 3/jour | une utilisation avant le combat ; deux restent ensuite
+resource: Métamorphose funeste | 3/jour | DD 23 ; transformation en vipère uniquement
+resource: Domination de monstre | 3/jour | Volonté DD 27
+resource: Colonne de feu à effet maximal | 3/jour | Réflexes DD 23 pour réduire les dégâts
+resource: Suggestion de groupe | 3/jour | Volonté DD 24
+resource: Blasphème | 1/jour | DD 25 ; NLS 20
+resource: Dissipation suprême | à volonté | NLS 20
+
+step: Avant de sortir du gouffre
+  do: Activer liberté de mouvement, puis escalader pour rejoindre les intrus.
+  note: Garder le bord du Gouffre de retraite dans la zone de combat afin de pouvoir y projeter les adversaires.
+
+## Ouverture
+
+note: Cadence
+  Un pouvoir magique demande normalement une action simple : choisir entre ce pouvoir et une attaque à outrance pendant le tour.
+
+step: Il attaque ou charge à portée des intrus
+  do: Résoudre sa présence terrifiante contre les adversaires concernés dans les 90 m, DD 32.
+  note: Cette présence accompagne son action ; elle ne consomme pas son tour.
+
+step: Un guerrier particulièrement dangereux menace de le submerger
+  do: Employer métamorphose funeste sur ce guerrier, DD 23, pour le transformer en vipère.
+  note: C'est sa réponse privilégiée aux combattants menaçants ; choisir une nouvelle cible si la première est déjà neutralisée.
+
+step: Plusieurs ennemis non mauvais sont regroupés à 12 m ou moins
+  do: Envisager blasphème pour désorganiser le groupe avant le corps à corps.
+  note: Résoudre ses effets selon les DV des victimes et son NLS 20 ; ne pas appliquer indistinctement tous les effets à toutes les cibles.
+
+step: Les adversaires sont déjà dans son allonge et aucun pouvoir n'est prioritaire
+  do: Porter une attaque à outrance ; répartir les morsures entre des ennemis encore indemnes de son venin et diriger la queue vers un lanceur de sorts.
+  note: Si la queue touche, tenter la saisie avec son BMO de lutte +46.
+
+## Rounds suivants
+
+step: Plusieurs adversaires restent dans son allonge
+  do: Continuer les attaques à outrance, en exposant autant de cibles que possible au poison des morsures.
+  note: Le profil fourni ne précise ni le DD ni les effets de ce venin ; ne pas les confondre avec ceux du pouvoir magique poison, DD 22.
+
+step: Un adversaire plus petit se trouve entre lui et le gouffre
+  do: Consacrer une action simple à Coup fabuleux pour le projeter de 3 m en direction du gouffre et le renverser.
+  note: Se placer de façon que la projection, qui éloigne la victime de lui, puisse réellement la faire tomber dans le Gouffre de retraite.
+
+step: Un lanceur de sorts est à portée de queue
+  do: Chercher à le saisir et à le retenir dans les anneaux de sa queue pour gêner ses incantations.
+  note: Utiliser la saisie et la lutte ; aucun dégât supplémentaire de constriction n'est chiffré dans le profil fourni.
+
+step: Il tient déjà un lanceur de sorts en lutte
+  do: Maintenir la lutte en action de mouvement grâce à Greater Grapple, puis porter une morsure avec son action simple.
+  note: Appliquer les modificateurs de lutte ; ce maintien laisse une action simple, pas une attaque à outrance.
+
+step: Un ennemi bénéficie de protections magiques gênantes
+  do: Utiliser dissipation suprême sur cet ennemi pour supprimer ses protections, puis reprendre les attaques aux tours suivants.
+
+step: Une cible dangereuse paraît plus facile à contrôler qu'à abattre
+  do: Utiliser domination de monstre, Volonté DD 27, et lui ordonner d'attaquer ses compagnons.
+  note: Si plusieurs ennemis sont réceptifs à une même proposition plausible, suggestion de groupe, DD 24, peut les détourner du combat.
+
+step: Des ennemis restent groupés hors de son allonge
+  do: Employer colonne de feu à effet maximal, Réflexes DD 23, ou avancer de 15 m au plus pour atteindre une meilleure position.
+  note: Un déplacement ordinaire laisse une action simple ; il ne permet pas d'enchaîner toute sa routine de mêlée.
+
+step: Un adversaire provoque une attaque d'opportunité
+  do: Exploiter son allonge et Attaques réflexes pour frapper avant qu'il s'éloigne ou accomplisse son action risquée.
+  note: Contre un déplacement qui provoque dans une case adjacente, Immobilisation permet de remplacer l'attaque par une manœuvre pour arrêter ce déplacement.
+
+## Repli
+
+step: Ses points de vie diminuent, mais sa tête reste attachée
+  do: Continuer le combat en profitant de sa régénération 30 ; il ne fuit pas à un seuil de points de vie.
+
+step: Sa tête est tranchée
+  do: Faire s'agiter son corps décapité sans discernement dans la caverne, puis le faire fuir dans le Gouffre de retraite.
+  note: Cette fuite met fin à sa conduite tactique organisée ; elle ne signifie pas la mort définitive d'Ydersius.

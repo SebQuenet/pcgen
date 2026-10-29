@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Lieutenant Fanalyx, axiomite loyale neutre, FP 11 : combattante méthodique qui contrôle ses adversaires à distance avant de les affronter au bâton.
+  127 pv ; CA 25 sous forme solide ; RD 10/chaotique ; RM 22 ; régénération 5, interrompue par les dégâts chaotiques ou magiques. Immunisée à l'électricité, aux maladies et aux effets mentaux ; résistance au froid 10 et au feu 10.
+  Bâton +1/+1 : attaque à outrance +21/+16/+11, 1d6+8 ; ou combat à deux armes +19/+19/+14/+9, 1d6+6. Allonge 1,50 m ; déplacement terrestre 9 m.
+  Ses principaux pouvoirs sont immobilisation de monstre, courroux de l'ordre augmenté et éclair ; NLS 14, concentration +19.
+
+note: Poussière cristalline
+  Une fois par round, une action libre permet de changer de forme. Sous forme de poussière, elle devient intangible, vole à 9 m avec une bonne manœuvrabilité et peut utiliser ses pouvoirs magiques, mais ne peut porter aucune attaque physique.
+  Sous forme solide, elle peut manier son bâton mais ne peut pas voler. Choisir la forme nécessaire avant d'agir ; elle ne peut pas redevenir poussière le même round après s'être solidifiée.
+
+resource: Détection de la magie | à volonté | repérer les auras ; ne révèle pas l'alignement
+resource: Compréhension des langages | 3/jour | comprendre les paroles et les écrits, sans pouvoir répondre dans une langue inconnue
+resource: Vision lucide | 1/jour | durée 14 minutes ; vision à 36 m
+resource: Rapidité | 3/jour | durée 14 rounds ; déplacements portés à 18 m, +1 aux attaques, à la CA et aux Réflexes ; une attaque supplémentaire à outrance
+resource: Immobilisation de monstre | 3/jour | Volonté DD 20 ; portée 72 m ; durée maximale 14 rounds
+resource: Courroux de l'ordre augmenté | 3/jour | Volonté DD 19 ; portée 72 m ; explosion remplissant un cube de 9 m de côté
+resource: Éclair | 3/jour | ligne de 36 m ; 10d6 dégâts d'électricité ; Réflexes DD 18 pour moitié
+resource: Télékinésie | 3/jour | Volonté DD 20 lorsque le mode choisi l'autorise ; concentration pour les manœuvres
+resource: Dissipation du Chaos | 3/jour | protection contre les créatures chaotiques ; peut aussi servir à renvoyer une créature chaotique extraplanaire au contact
+resource: Coup au but | 3/jour | +20 à une seule attaque avant la fin du round suivant ; demande une action simple de préparation
+resource: Convocation | 1/jour | pouvoir de niveau 8 ; 1 zélékhut ; la convocation raciale demande quatre axiomites réunis
+
+step: Des intrus approchent et elle dispose de temps
+  do: Observer avec Perception +23 et détection de la magie ; activer vision lucide si elle soupçonne des illusions ou des ennemis invisibles
+  note: Vision dans le noir à 18 m ; vision lucide ne permet pas de voir à travers les murs.
+
+step: Trois autres axiomites sont présents et peuvent participer
+  do: Se réunir à quatre pour convoquer le zélékhut, par une action complexe, puis lui faire tenir l'accès aux ennemis
+  note: Ne pas compter sur cette convocation si Fanalyx est seule.
+
+step: Le combat est imminent
+  do: Lancer rapidité sur elle-même et les alliés présents, puis prendre sa forme de poussière pour se placer hors d'allonge
+  note: Lancer rapidité au dernier moment pour préserver ses 14 rounds de durée.
+
+## Ouverture
+
+step: Plusieurs ennemis non loyaux sont regroupés, surtout des chaotiques identifiés
+  do: Lancer courroux de l'ordre augmenté sur leur position, depuis les airs
+  note: Contre les chaotiques, dégâts égaux à 5d8 multipliés par 1,5, ou 10d6 multipliés par 1,5 contre les Extérieurs chaotiques ; hébétement pendant 1 round. Volonté DD 19 réduit les dégâts de moitié et annule l'hébétement.
+  note: Les créatures neutres sur l'axe Loi-Chaos subissent la moitié des dégâts, puis encore la moitié si elles réussissent leur sauvegarde ; aucun hébétement. Les créatures loyales ne sont pas affectées.
+
+step: Une menace isolée domine le combat ou les ennemis sont loyaux
+  do: Utiliser immobilisation de monstre sur une créature vivante dangereuse, en priorité celle qui peut la poursuivre ou la frapper en vol
+  note: Volonté DD 20 annule la paralysie ; une cible paralysée peut tenter une nouvelle sauvegarde à chaque tour, par une action complexe. Éviter les créatures immunisées aux effets mentaux.
+
+step: Elle est surprise sans rapidité et doit gagner de la distance
+  do: Prendre sa forme de poussière, lancer rapidité, puis s'éloigner en volant
+  note: Un seul pouvoir demandant une action simple par round ; rapidité ne permet pas d'en lancer deux.
+
+## Rounds suivants
+
+step: Deux adversaires ou davantage peuvent être pris dans une même ligne
+  do: Se déplacer en vol pour les aligner, puis lancer éclair
+  note: Épargner les alliés présents dans la ligne ; Fanalyx est elle-même immunisée à l'électricité.
+
+step: Les adversaires chaotiques restent regroupés
+  do: Réutiliser courroux de l'ordre augmenté pour infliger des dégâts et leur faire perdre des actions par l'hébétement
+  note: Préférer éclair contre des cibles loyales ; ne pas déduire leur alignement de leur apparence.
+
+step: Une arme dangereuse ou un poursuivant doit être neutralisé à distance
+  do: Utiliser télékinésie pour tenter un désarmement ou une bousculade, puis maintenir le pouvoir si le contrôle reste utile
+  note: Les manœuvres de télékinésie ne donnent pas de sauvegarde ; la résistance à la magie s'applique. Maintenir le pouvoir demande une action simple à chaque round.
+
+step: Une cible accessible au sol peut être combattue sans s'exposer au groupe entier
+  do: Se poser, reprendre sa forme solide et frapper au bâton ; privilégier l'attaque à outrance à deux armes si elle peut rester sur place
+  note: Sans rapidité : +19/+19/+14/+9, 1d6+6. Sous rapidité : +20/+20/+20/+15/+10, 1d6+6. Après un déplacement ordinaire, une seule attaque à +21, ou +22 sous rapidité, pour 1d6+8.
+
+step: Une seule attaque décisive pourra être portée au round suivant
+  do: Préparer coup au but à couvert, puis employer son bonus sur cette attaque
+  note: Le bonus ne s'applique pas à toute une attaque à outrance ; ne pas sacrifier un round de frappes ordinaires pour le préparer sans raison.
+
+step: Le contact devient défavorable et elle peut de nouveau changer de forme
+  do: Redevenir poussière et reprendre le combat à distance
+  note: L'intangibilité protège des attaques ordinaires, mais les attaques magiques restent dangereuses et peuvent interrompre sa régénération.
+
+## Repli
+
+step: Ses points de vie passent sous 35 ou les ennemis exploitent régulièrement sa faiblesse aux dégâts magiques ou chaotiques
+  do: Prendre sa forme de poussière et rompre le contact en volant vers un abri ; utiliser un double déplacement si nécessaire
+  note: Seuil tactique proposé : 18 m par round en double déplacement, ou 36 m sous rapidité. Faire couvrir la retraite par le zélékhut seulement s'il a été convoqué.
+
+step: Elle a rejoint un abri hors des attaques adverses
+  do: Rester à couvert pour laisser sa régénération restaurer 5 pv par round avant d'envisager de revenir
+  note: Après des dégâts chaotiques ou magiques, la régénération cesse pendant le round suivant. Ne pas attendre d'être à 0 pv pour fuir.

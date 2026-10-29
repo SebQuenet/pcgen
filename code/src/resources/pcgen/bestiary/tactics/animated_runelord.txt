@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Seigneur des runes animé, objet animé de taille M, créature artificielle neutre et sans intelligence, FP 9. 91 pv, CA 24, solidité 20 ; immunités des créatures artificielles.
+  Hallebarde +2 acérée en adamantium : +18/+13/+8, dégâts 1d10+9, critique 19–20/×3. Allonge de 1,50 m ; déplacement de 9 m.
+  Vision dans le noir à 18 m, vision nocturne ; Perception −3. Il suit des consignes simples et ne conçoit pas de tactique élaborée.
+
+note: Défense
+  Sa solidité 20 constitue sa principale protection. Réflexes +5, Vigueur +3, Volonté +0 ; ses immunités de créature artificielle restent essentielles malgré ses faibles sauvegardes.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance à la hallebarde : +18/+13/+8, chaque coup infligeant 1d10+9 dégâts.
+  note: La hallebarde ne permet pas de frapper au-delà de 1,50 m.
+
+step: Un adversaire peut être rejoint avec un déplacement de 9 m
+  do: Avancer au contact et porter une seule attaque de hallebarde à +18, pour 1d10+9 dégâts.
+  note: Un déplacement ordinaire empêche de porter les trois attaques pendant ce tour.
+
+step: Aucun adversaire ne peut être rejoint avec un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, vers l'intrus à atteindre selon ses consignes.
+  note: Il ne porte aucune attaque ce tour et ne dispose d'aucune attaque à distance indiquée.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Rester au contact et répéter l'attaque à outrance à +18/+13/+8.
+  note: Concentrer les coups sur l'adversaire engagé tant qu'il demeure une cible ; chaque attaque menace un critique sur 19–20, avec un multiplicateur ×3.
+
+step: Un pas de placement de 1,50 m suffit pour retrouver le contact
+  do: Faire ce pas, puis effectuer l'attaque à outrance à la hallebarde.
+  note: Ce pas permet les trois attaques si aucun autre déplacement n'est effectué pendant ce round.
+
+step: L'adversaire s'éloigne davantage
+  do: Le poursuivre dans les limites de ses consignes ; avancer de 9 m et attaquer une fois si le contact est rétabli, ou effectuer un double déplacement jusqu'à 18 m.
+
+## Repli
+
+step: Ses consignes imposent de tenir sa position ou de combattre
+  do: Continuer à attaquer même lorsque ses points de vie deviennent faibles.
+  note: Sans intelligence et immunisé aux effets mentaux, il ne décide pas d'une retraite par peur. À 0 pv, il est détruit.

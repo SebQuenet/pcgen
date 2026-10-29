@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Petit meuble animé, créature artificielle neutre et sans Intelligence. Il combat par des assauts simples au corps à corps.
+  Coup +3 (1d4), allonge de 1,50 m ; déplacement de 12 m ; CA 16 ; 21 points de vie ; solidité 5 ; immunités des créatures artificielles.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5.
+
+note: Préparation
+  Aucune préparation tactique élaborée. Sa vitesse accrue est déjà comprise dans son déplacement de 12 m.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m ou moins
+  do: Porter un coup +3 infligeant 1d4 points de dégâts.
+
+step: Un ennemi repéré est hors de portée
+  do: Avancer de 12 m au maximum pour l'amener à portée de 1,50 m, puis porter un coup +3 (1d4) si possible.
+  note: Si un déplacement ne suffit pas, effectuer un second déplacement, pour un total maximal de 24 m, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Continuer à porter un seul coup +3 (1d4) par round.
+  note: Il ne possède ni attaque supplémentaire ni attaque à distance.
+
+step: Aucun ennemi n'est plus à portée
+  do: Se rapprocher d'une cible repérée et reprendre les coups dès que le déplacement laisse une action pour attaquer.
+  note: Appliquer la solidité 5 aux dégâts subis selon les règles de solidité, ainsi que les immunités des créatures artificielles.
+
+## Repli
+
+step: Le meuble subit des dégâts mais conserve au moins 1 point de vie
+  do: Continuer le combat sans organiser de retraite de sa propre initiative.
+  note: Sans Intelligence, il ne développe pas de stratégie de survie.
+
+step: Ses points de vie atteignent 0
+  do: Cesser toute action : le meuble est détruit.

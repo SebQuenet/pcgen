@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Khai-Utef, gypsosphinx de taille TG, bête magique neutre mauvaise, FP 14 : prédateur intelligent qui vise d'abord le soigneur, puis multiplie les charges avec bond.
+  243 pv ; CA 30, contact 13 ; initiative +9. Morsure +30 (2d6+14), 2 griffes +30 (1d8+14) ; espace occupé 4,50 m, allonge 3 m.
+  Déplacement 15 m, vol 27 m de manœuvrabilité moyenne. Perception +27 ; vision dans le noir à 18 m, vision nocturne, détection de la magie et détection de l'invisibilité permanentes.
+
+resource: Exécution | 1/jour | NLS 14 ; contact en mêlée ; Vigueur DD 22 ; 12d6+14 dégâts, ou 3d6+14 si le jet réussit
+resource: Dissipation suprême | 3/jour | NLS 14 ; supprimer les protections magiques qui gênent ses attaques
+resource: Augure | à volonté | consulter avant un affrontement prévisible
+resource: Compréhension des langages | 3/jour | comprendre les paroles des intrus avant de choisir sa cible
+resource: Mythes et légendes | 3/jour | renseignement hors combat
+
+step: Les intrus sont repérés avant l'affrontement
+  do: Observer leurs gestes et leurs échanges pour identifier le soigneur le plus évident ; utiliser ses perceptions et sa détection de l'invisibilité pour suivre les adversaires dissimulés par ce sort
+  note: La détection de la magie aide à repérer des auras ; elle ne révèle pas automatiquement les sorts précis ni le rôle de chaque adversaire
+
+## Ouverture
+
+step: Le soigneur le plus évident est à portée après un seul déplacement
+  do: Se rapprocher, puis tenter Exécution sur lui par une attaque de contact en mêlée
+  note: L'activation prend une action simple et remplace ses attaques naturelles ce round ; Vigueur DD 22, avec des dégâts même en cas de réussite
+
+step: Le soigneur est encore trop éloigné ou inaccessible
+  do: Se rapprocher par le sol ou les airs pour tenter Exécution dès qu'il peut l'atteindre
+  note: Ne pas remplacer cette première tentative par une charge avec bond ; son ouverture vise d'abord le soigneur
+
+## Rounds suivants
+
+step: Exécution a été tentée et une autre cible est accessible par une charge dégagée
+  do: Charger cette cible et utiliser bond pour porter l'attaque à outrance complète : morsure et deux griffes
+  note: La charge ajoute +2 aux attaques et impose −2 à la CA jusqu'au prochain tour. Elle exige au moins 3 m de déplacement en ligne droite ; bond ne permet pas une attaque à outrance après un déplacement ordinaire
+  note: Changer de victime quand la position le permet afin de forcer les autres combattants à se déplacer pour le rejoindre ; les déplacements peuvent provoquer des attaques d'opportunité
+
+step: Une cible reste à portée et aucune charge avantageuse n'est possible
+  do: Effectuer une attaque à outrance : morsure +30 (2d6+14), 2 griffes +30 (1d8+14)
+  note: Un pas de placement de 1,50 m peut améliorer sa position sans sacrifier cette attaque à outrance
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Employer une utilisation de Dissipation suprême sur l'adversaire protégé, puis reprendre les attaques physiques au round suivant
+  note: Cette action simple remplace ses attaques du round ; conserver la priorité aux charges quand les protections ne constituent pas un obstacle sérieux
+
+step: Ses points de vie sont inférieurs à 175, mais encore au moins égaux à 50
+  do: Utiliser Expertise du combat lors de ses attaques de mêlée
+  note: Malus de −5 aux attaques et aux manœuvres, bonus d'esquive de +5 à la CA jusqu'au prochain tour : attaques naturelles +25 et CA 35 avant les modificateurs de charge
+
+## Repli
+
+step: Ses points de vie sont inférieurs à 50
+  do: Cesser l'offensive et fuir les Tranchées des esclaves par les airs ; utiliser la retraite si nécessaire pour se dégager, puis s'éloigner en vol
+  note: Vol 27 m par action de mouvement ; une retraite permet jusqu'à 54 m et protège seulement la sortie de la case initiale contre les attaques d'opportunité. Il ne revient pas avant plusieurs mois

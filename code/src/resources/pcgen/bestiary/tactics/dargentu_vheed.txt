@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Dargentu Vheed, mort-vivant neutre mauvais de taille M, ancien magicien devenu fou, défend la Spirale nessienne comme son domaine. FP 9 ; 104 pv ; initiative +8.
+  Deux griffes +15, chacune infligeant 1d6+7 dégâts plus 1d6 de froid ; allonge 1,50 m ; déplacement 9 m. Il malmène les non-lanceurs de sorts pour laisser les autres alimenter son absorption magique.
+
+note: Défenses
+  CA 20, contact 15, pris au dépourvu 15 ; Vigueur +10, Réflexes +9, Volonté +12.
+  RD 10, surmontée par une arme à la fois contondante et magique ; résistance au froid 10 et à l'électricité 10 ; résistance à la magie 19 ; résistance à la canalisation +2 ; immunités des morts-vivants.
+
+step: Il cherche des intrus
+  do: Surveiller avec Perception +17, vision dans le noir à 18 m et perception des sorts à 30 m
+  note: Il localise automatiquement tout lanceur ayant incanté au round précédent et identifie sorts et effets magiques comme par vision magique suprême.
+
+resource: Énergie absorbée | 1 sort stocké à la fois | dépenser cette énergie pour relancer le sort, se soigner ou produire un rayon
+
+## Ouverture
+
+step: Un intrus est repéré par la vue ou la perception des sorts
+  do: Se porter immédiatement à l'attaque, en visant d'abord un non-lanceur de sorts
+  note: S'il peut atteindre sa cible en un déplacement de 9 m, avancer puis porter une seule griffe +15 ; réserver les deux griffes aux attaques à outrance.
+
+step: Le condensateur de F14 est désactivé et aucun ennemi n'est localisé
+  do: Rejoindre immédiatement F14 pour trouver les intrus
+
+## Rounds suivants
+
+step: Un lanceur de sorts incante à 15 m ou moins
+  do: Appliquer l'absorption : Volonté DD 20 ; échec, sort perdu et énergie transférée à Dargentu
+
+step: Le sort absorbé est utile et son éventuel focaliseur est disponible
+  do: Le lancer à son tour, en priorité sur les autres usages de l'énergie
+  note: NLS 11 ; composantes matérielles ignorées, focaliseurs requis.
+
+step: Le sort absorbé est inutilisable et Dargentu a perdu des pv
+  do: Convertir son énergie en soins : 4 pv par niveau du sort
+  note: Maximum normal 104 pv ; l'excédent devient des pv temporaires pendant 1 heure.
+
+step: Le sort absorbé est inutilisable et Dargentu n'est pas blessé
+  do: Dépenser l'énergie en rayon : action simple, contact à distance +12, portée 15 m, 1d6 dégâts par tranche de deux niveaux du sort
+
+step: Aucun sort absorbé n'est dépensé ce tour et un non-lanceur de sorts est au contact
+  do: Attaque à outrance : deux griffes +15, chacune pour 1d6+7 dégâts plus 1d6 de froid
+  note: Une cible subissant le froid doit réussir Vigueur DD 20 ou être chancelante pendant 1 round.
+
+step: Aucun adversaire n'est au contact et aucune énergie absorbée n'est exploitable
+  do: Se rapprocher d'un non-lanceur de sorts à 9 m par déplacement et porter une griffe si une action simple reste disponible
+  note: Rester si possible à 15 m ou moins des lanceurs pour absorber leurs sorts.
+
+step: Un ennemi à portée de griffe provoque une attaque d'opportunité
+  do: Frapper d'une griffe +15 ; exploiter Attaques réflexes pour répondre à plusieurs occasions distinctes
+
+## Repli
+
+step: Ses points de vie diminuent, même dangereusement
+  do: Continuer le combat jusqu'à destruction ; utiliser les soins absorbés selon les priorités précédentes
+
+step: Dargentu est détruit
+  do: Déclencher l'explosion de poussière sur toutes les créatures à 3 m ou moins
+  note: Vigueur DD 20 : échec, affaiblissement temporaire de Constitution de 1d6 et nausée pendant 1d6 rounds ; réussite, état fiévreux pendant 1d6 rounds.

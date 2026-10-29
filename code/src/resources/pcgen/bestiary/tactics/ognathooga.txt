@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Ognathooga, Mère de l'Oubli, est un extérieur aquatique gigantesque, chaotique mauvais, intelligent et manipulateur. Elle attire les intrus dans le lac pour les isoler et les dévorer.
+  232 pv, CA 30 ; déplacement terrestre 6 m, nage 18 m ; espace et allonge 6 m ; vision dans le noir à 18 m et vision à 360°.
+  Morsure +24 (2d8+13, critique 19–20, plus absorption d'énergie) et 4 tentacules +19 (2d6+6 plus étreinte), lutte +36.
+
+note: Défenses
+  RD 15/fer froid et magie, résistance à la magie 26 ; résistance à l'acide 20 et au froid 20.
+  Immunité aux effets de mort, aux effets mentaux, à la pétrification et à la métamorphose ; impossible à faire tomber par un croc-en-jambe.
+
+note: Réacteur d'abysium
+  Dans sa zone d'effet, les tentacules transdimensionnels et la distorsion dimensionnelle ne fonctionnent pas. Ne pas les employer dans cette zone.
+
+resource: Négation de l'invisibilité | permanent | pouvoir constant
+resource: Domination de personne | 3/jour | Volonté DD 20 ; cible humanoïde
+resource: Exigence | 3/jour | Volonté DD 23 ; message assorti d'une suggestion
+resource: Injonction suprême | 3/jour | Volonté DD 20 ; disperser plusieurs adversaires
+resource: Ancre dimensionnelle | 3/jour | entraver une fuite par déplacement dimensionnel
+resource: Prière | à volonté | favoriser son camp et pénaliser les ennemis proches
+resource: Mise à mort | à volonté | Vigueur DD 17 ; créature vivante agonisante au contact
+resource: Divination | 3/jour | préparer ses décisions avant l'affrontement
+resource: Communion | 1/jour | obtenir des renseignements avant l'affrontement
+resource: Songe | 1/jour | communiquer avec une cible endormie
+resource: Sanctification maléfique | 1/jour | préparer son repaire longtemps avant l'affrontement
+
+step: Les intrus approchent
+  do: Les observer en restant principalement sous l'eau ; choisir un humanoïde susceptible d'attirer ses compagnons dans le lac
+  note: sa discrétion n'est que de +6 ; l'immersion ne garantit pas qu'elle reste cachée
+
+step: Elle dispose du temps nécessaire avant l'affrontement
+  do: Employer Exigence pour suggérer à un intrus une conduite plausible qui l'éloigne du groupe ou l'attire vers l'eau
+
+## Ouverture
+
+step: Un PJ humanoïde est visible et peut être ciblé
+  do: Tenter Domination de personne, Volonté DD 20, en restant autant que possible immergée
+
+step: La domination réussit
+  do: Ordonner au dominé d'attirer ses compagnons dans le lac par un prétexte crédible
+  note: une fois les autres dans l'eau, lui ordonner de les attaquer ; cet ordre peut provoquer une nouvelle sauvegarde s'il contrarie sa nature
+
+step: Aucun humanoïde ne peut être dominé, ou la tentative a échoué
+  do: Employer Injonction suprême, Volonté DD 20, avec l'ordre de fuir pour disperser les adversaires
+  note: consacrer les actions suivantes à rejoindre une victime isolée dans l'eau
+
+## Rounds suivants
+
+step: Plusieurs ennemis sont proches et Prière n'agit pas encore
+  do: Lancer Prière avant de poursuivre les attaques physiques
+  note: répéter ce pouvoir ne cumule pas ses effets
+
+step: Une victime isolée se trouve à 6 m ou moins et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : morsure +24 et 4 tentacules +19
+  note: la morsure inflige aussi l'absorption d'énergie ; utiliser l'étreinte des tentacules pour tenter une prise avec lutte +36
+
+step: Elle doit se déplacer pour atteindre sa victime
+  do: Nager jusqu'à 18 m, puis porter une morsure avec Improved Vital Strike : +24, 6d8+13 plus absorption d'énergie
+  note: cette attaque utilise l'action simple ; elle ne s'ajoute pas à une attaque à outrance
+
+step: Les adversaires se regroupent ou restent sur la berge
+  do: Employer une nouvelle Injonction suprême pour les disperser, puis changer de position dans l'eau et poursuivre une cible isolée
+  note: conserver l'avantage de sa nage ; éviter de ramper à terre au milieu du groupe
+
+step: Une cible importante menace de s'échapper par déplacement dimensionnel
+  do: Employer Ancre dimensionnelle si empêcher sa fuite vaut l'action consacrée au rayon
+
+step: Une créature vivante agonise au contact et aucune menace urgente n'exige une attaque
+  do: Employer Mise à mort, Vigueur DD 17, pour se renforcer
+
+## Repli
+
+step: Ses points de vie passent sous 75 et elle n'est pas en D3
+  do: Rompre le combat et regagner D3 à la nage, à 18 m par action de déplacement
+  note: elle poursuit rarement les PJ au-delà de D6
+
+step: Elle est affrontée en D3
+  do: Combattre jusqu'à la mort, même sous 75 pv

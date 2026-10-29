@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Zephyr, fée de l'air de taille G, chaotique neutre, esprit des intempéries fier et mobile. Il sépare ses adversaires et frappe les plus isolés.
+  168 pv, CA 27 ; morsure +16 et deux sabots +16, chacun infligeant 1d8+7 plus 2d6 soniques. Allonge 1,50 m ; espace occupé 3 m.
+  Marche à 18 m, vol parfait à 60 m par action de mouvement ; initiative +9. Réduction des dégâts 10/fer froid, immunité à l'électricité, résistance au froid 10 et au son 10.
+
+resource: Cape de vents | constant | attaques à distance contre lui à -4 ; les créatures de taille Min ou inférieure doivent réussir Vigueur DD 18 pour le toucher au contact
+resource: Invisibilité | à volonté | lui-même seulement ; cesse lorsqu'il attaque
+resource: Nappe de brouillard | à volonté | masque les lignes de vue ; ses sens du vent lui permettent de voir à travers
+resource: Bourrasque | à volonté | ligne de 18 m, Vigueur DD 17 ; effets selon la taille des adversaires
+resource: Murmure de vent | à volonté | transmettre un message vers un lieu connu
+resource: Contrôle du climat | 3/jour | préparer une météo compatible avec la saison et le climat ; effets progressifs
+resource: Croissance végétale | 3/jour | épaissir une végétation existante pour entraver les déplacements au sol
+resource: Tempête de neige | 3/jour | rayon 12 m, hauteur 6 m, durée 16 rounds ; aucun jet de sauvegarde
+resource: Chaîne d'éclairs | 1/jour | NLS 16 ; Réflexes DD 21 pour la cible principale
+
+step: Il repère des intrus avant d'être engagé
+  do: Devenir invisible et les observer depuis les airs ; choisir une approche qui laisse une sortie dégagée
+  note: Perception +24, Discrétion +24 ; privilégier un espace où ses 60 m de vol permettent de contourner les combattants
+
+step: Il prépare une embuscade longtemps à l'avance
+  do: Modifier le climat pour gêner les intrus et épaissir les plantes sur leur itinéraire, en conservant son accès par les airs
+  note: Prévoir le délai d'installation de la météo ; ses sens du vent traversent les intempéries naturelles et magiques
+
+## Ouverture
+
+step: Plusieurs adversaires sont visibles et regroupés
+  do: Lancer chaîne d'éclairs depuis les airs, puis se déplacer hors de portée de mêlée
+  note: 16d6 d'électricité par cible, réduits de moitié sur un jet de Réflexes réussi ; choisir les cibles secondaires à 9 m au plus de la cible principale
+
+step: Les ennemis sont dispersés ou la chaîne d'éclairs ne présente pas d'intérêt
+  do: Placer une tempête de neige sur les soutiens pour les séparer d'un adversaire isolé, puis se repositionner en vol
+  note: La neige bloque leur vue et rend le sol glissant ; lui voit à travers et survole le sol. Ne lancer qu'un pouvoir dans ce round
+
+## Rounds suivants
+
+step: Une cible isolée est accessible
+  do: Utiliser Attaque en vol : approcher, porter une morsure +16 pour 1d8+7 plus 2d6 soniques, puis poursuivre le déplacement
+  note: Le trajet total reste limité à 60 m. Cette passe permet une seule attaque ; Souplesse du serpent donne +4 à la CA contre les attaques d'opportunité dues au déplacement
+
+step: Une cible est déjà à 1,50 m et rester au contact est avantageux
+  do: Attaque à outrance : une morsure et deux sabots, tous à +16, chacun pour 1d8+7 plus 2d6 soniques
+  note: Employer cette séquence sans déplacement, ou avec un simple pas de 1,50 m ; repartir en vol si les alliés de la cible approchent
+
+step: Les adversaires cherchent à se regrouper ou leurs tireurs le suivent
+  do: Interposer une nappe de brouillard, ou employer une nouvelle tempête de neige pour couper leurs lignes de vue ; attaquer ensuite depuis cet écran
+  note: Ses sens du vent préservent sa vision. Avec de la végétation, croissance végétale peut aussi ralentir leurs renforts sans gêner son vol
+
+step: Des poursuivants de taille M ou inférieure arrivent dans une même direction
+  do: Utiliser bourrasque, Vigueur DD 17, pour entraver leur progression, puis s'éloigner en vol
+  note: Les créatures de taille P peuvent être renversées ; celles de taille M ne sont pas automatiquement repoussées. Le vent disperse aussi le brouillard sur sa trajectoire
+
+step: Il reste exposé aux attaques à distance
+  do: Se déplacer de plus de 1,50 m chaque round où il peut renoncer à l'attaque à outrance
+  note: Son don de posture du vent lui procure alors 20 % de dissimulation contre les attaques à distance pendant 1 round, en plus de la protection de sa cape de vents
+
+## Repli
+
+step: Points de vie sous 42 ou combat devenu défavorable
+  do: S'il est au contact, faire retraite en vol jusqu'à 120 m ; sinon, devenir invisible et s'éloigner de 60 m
+  note: La retraite protège seulement le départ des cases initialement occupées. Après avoir rompu le contact, renouveler l'invisibilité et gagner le large par les airs
+
+step: Les ennemis abandonnent la poursuite
+  do: Préparer une revanche en modifiant le climat sur leur route et en choisissant une nouvelle embuscade
+  note: Sa fierté l'incite à revenir dans des conditions météorologiques favorables plutôt qu'à accepter durablement la défaite

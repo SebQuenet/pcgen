@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Kixexa est une noble éfrit de taille G, loyale mauvaise, qui privilégie la magie et l'invisibilité. Elle possède 149 pv, une CA de 25 et une initiative de +9.
+  Deux coups +20, chacun infligeant 2d6+8 dégâts et 1d6 de feu ; allonge de 3 m. Déplacement de 6 m au sol, vol de 12 m à manœuvrabilité parfaite.
+  Immunisée au feu, elle subit 50 % de dégâts supplémentaires du froid. Elle cherche à rester hors de portée des combattants et surveille les utilisateurs de froid.
+
+resource: Invisibilité suprême | 1/jour | action simple ; durée de 15 rounds ; attaquer ne met pas fin à l'effet
+resource: Boule de feu à incantation rapide | 3/jour | action rapide ; 10d6 de feu, rayon de 6 m ; Réflexes DD 17 pour moitié
+resource: Rayon ardent à incantation rapide | 3/jour | action rapide ; trois rayons, chacun infligeant 4d6 de feu
+resource: Rayon ardent | à volonté | action simple ; trois attaques de contact à distance à +17, portée de 18 m, 4d6 de feu par rayon
+resource: Mur de feu | 3/jour | DD 18 ; séparer les adversaires et barrer leurs approches
+resource: Tempête pyroclastique | 1/jour | comme tempête de grêle, avec du feu à la place du froid ; 3d6 contondants et 2d6 de feu, sans sauvegarde
+resource: État gazeux | 1/jour | moyen de fuite vers Picasi, en zone H9
+
+step: Des intrus approchent
+  do: Les surveiller avec Perception +20, la vision dans le noir à 18 m et la détection de la magie constante
+  note: La détection de la magie révèle les auras ; elle ne remplace pas la vue pour choisir les cibles
+
+## Ouverture
+
+step: Premier round de combat
+  do: Lancer invisibilité suprême sur elle-même, puis une boule de feu à incantation rapide sur le plus grand nombre d'ennemis possible
+  note: Elle peut combiner une action simple et une action rapide dans le même round ; une seule action rapide est disponible par round
+
+## Rounds suivants
+
+step: Il reste des boules de feu et des cibles intéressantes
+  do: Lancer une boule de feu à incantation rapide, puis rayon ardent en action simple sur un adversaire exposé
+  note: Répéter jusqu'à épuiser les trois boules de feu ; rester mobile en vol et hors de portée de mêlée
+
+step: Les boules de feu sont épuisées
+  do: Diriger les rayons ardents à incantation rapide contre les ennemis que le feu semble avoir le plus blessés ; employer l'action simple pour une tempête pyroclastique ou un mur de feu contre les autres
+  note: Placer le mur pour couper une approche ou diviser le groupe ; la tempête conserve ses dégâts contondants contre les cibles protégées du feu
+
+step: Les rayons rapides ou les pouvoirs de zone utiles sont épuisés
+  do: Continuer avec rayon ardent à volonté, en concentrant les trois rayons sur une cible vulnérable
+  note: Éviter de gaspiller les attaques de feu contre une immunité manifeste
+
+step: Un ennemi impose le corps à corps et aucune meilleure option ne subsiste
+  do: Porter les deux coups lors d'une attaque à outrance ; si elle doit se déplacer, ne porter qu'un coup
+  note: Son allonge de 3 m et Attaques réflexes lui permettent aussi de menacer les ennemis qui s'exposent à ses attaques d'opportunité
+
+## Repli
+
+step: Ses points de vie passent sous 50
+  do: Lancer état gazeux et fuir pour rejoindre Picasi en zone H9
+  note: Au contact, lancer sur la défensive avec une concentration de +23 grâce à Magie de guerre. Sous forme gazeuse, son vol passe à 3 m ; emprunter les ouvertures étroites accessibles et les couverts disponibles

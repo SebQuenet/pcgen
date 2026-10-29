@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Skirkatla, géante du givre devenue chevalier du tombeau, morte-vivante de taille G, neutre mauvaise, FP 13. Elle défend son estrade et privilégie les ennemis touchés par les flammes des feux sorciers présents.
+  Hache d'armes +1 : +29/+24, 2d6+20 plus 3d6 de feu, critique 19–20/×3 ; à défaut, deux coups +25, 1d8+16 chacun.
+  Déplacement de 12 m ; espace occupé et allonge de 3 m ; perception aveugle et vision dans le noir à 18 m ; Perception +25.
+
+note: Défenses
+  183 PV ; CA 31, contact 8 ; RD 10/magie ; RM 22 ; résistance à la canalisation +4.
+  Immunités au froid, à l'électricité, au feu et immunités des morts-vivants. Son armure et sa reconstitution lui permettent de combattre sans craindre sa destruction corporelle.
+
+note: Aura sacrilège
+  Rayon de 9 m, DD 19. Toute créature qui tente d'y utiliser de l'énergie positive, notamment une canalisation, une imposition des mains ou un sort de soins, doit réussir un test de concentration DD 19 ; sinon, l'utilisation est dépensée sans effet.
+  Les bénéfices permanents de l'aura pour Skirkatla sont déjà compris dans ses caractéristiques.
+
+resource: Explosion dévastatrice | 3/jour | action simple ; cône de feu de 9 m, 8d6 dégâts, Réflexes DD 19 pour moitié
+resource: Élixir de souffle de dragon noir | 1 | après ingestion, un souffle en ligne de 9 m, 7d6 d'acide, Réflexes DD 16 pour moitié ; souffler demande une action simple ; expire après le souffle ou 1 heure
+resource: Lances de maître | 3 | attaque à distance +11, 2d6+16, critique ×3
+
+step: Des intrus approchent de l'estrade
+  do: Garder la hache et le bouclier prêts ; laisser les adversaires venir dans son allonge et dans son aura
+  note: Sa perception aveugle lui permet de repérer les adversaires invisibles à 18 m, sous réserve des obstacles qui bloquent ce sens.
+
+step: Le combat est imminent et elle dispose d'un round de préparation
+  do: Boire l'élixir de souffle de dragon noir pour préparer son unique souffle d'acide
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans un cône de 9 m
+  do: Utiliser une explosion dévastatrice, en visant d'abord les victimes des flammes des feux sorciers
+  note: Se placer pour toucher plusieurs ennemis sans englober les alliés qui pourraient souffrir du feu ; décompter une utilisation.
+
+step: Les ennemis arrivent au corps à corps
+  do: Frapper à la hache avec Attaque en puissance ; choisir l'enchaînement contre des ennemis adjacents, ou l'attaque à outrance contre une cible prioritaire déjà à portée
+  note: Attaque en puissance donne +26/+21 et 2d6+26 plus 3d6 de feu avec la hache tenue à une main et le bouclier conservé.
+
+## Rounds suivants
+
+step: Un adversaire corporel de taille M ou inférieure monte sur l'estrade
+  do: Employer Coup fabuleux pour le projeter de 3 m en ligne droite vers l'extérieur et le faire tomber à terre
+  note: Action simple, manœuvre à +25 sans Attaque en puissance, contre le DMD de la cible ; infliger les dégâts d'un coup, 1d8+16, si elle réussit.
+
+step: Une bousculade permet de dégager l'estrade plus utilement
+  do: Effectuer une bousculade à +27 sans Attaque en puissance, contre le DMD de l'intrus
+  note: Repousser la cible de 1,50 m, plus 1,50 m par tranche de 5 points de réussite ; elle ne doit pas dépasser la taille TG. La bousculade améliorée évite l'attaque d'opportunité de la cible.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge de 3 m
+  do: Employer Enchaînement avec Attaque en puissance contre deux ennemis, ou Succession d'enchaînements contre davantage
+  note: Action simple ; chaque attaque est à +26 et inflige 2d6+26 plus 3d6 de feu. Chaque réussite permet de frapper un autre ennemi adjacent au précédent et à portée ; arrêter au premier échec, sans toucher deux fois la même cible. CA 29 jusqu'au prochain tour.
+
+step: Une cible prioritaire reste à portée sans déplacement nécessaire
+  do: Porter l'attaque à outrance à la hache avec Attaque en puissance, +26/+21, pour concentrer les dégâts sur elle
+  note: Si sa CA empêche de toucher régulièrement, renoncer à Attaque en puissance : +29/+24, 2d6+20 plus 3d6 de feu.
+
+step: Elle doit se déplacer pour atteindre une cible isolée
+  do: Avancer de 12 m au maximum et employer Frappe décisive avec Attaque en puissance : une attaque à +26, 4d6+26 plus 3d6 de feu
+  note: Frappe décisive ne se cumule ni avec un enchaînement ni avec une attaque à outrance.
+
+step: Des ennemis marqués par les flammes restent groupés à 9 m ou moins
+  do: Dépenser une nouvelle explosion dévastatrice tant qu'il en reste
+  note: Ce cône ne demande aucun jet d'attaque à distance.
+
+step: Des ennemis s'alignent à 9 m ou moins, surtout s'ils résistent au feu
+  do: Libérer le souffle d'acide de l'élixir s'il a été bu et si son effet est encore disponible
+  note: S'il faut encore boire l'élixir, consacrer d'abord une action simple à l'ingestion ; le souffle exige une autre action simple.
+
+step: Une cible reste hors de portée de la hache et des cônes
+  do: Lancer une lance de maître à +11, ou un rocher disponible à +11 pour 1d8+16 dégâts
+  note: Préférer les explosions aux jets à distance lorsque les ennemis entrent dans leur zone ; ne pas abandonner inutilement l'estrade.
+
+## Repli
+
+step: Ses points de vie diminuent, même jusqu'à la destruction
+  do: Continuer le combat sans fuir ni se rendre ; défendre l'estrade jusqu'au bout
+  note: Elle sait qu'elle se reconstituera tant que son armure subsiste.
+
+step: Son corps est détruit
+  do: Faire commencer sa reconstitution un jour plus tard ; elle retrouve un corps et tous ses PV après 1d10 jours de reconstruction
+  note: Pour la détruire définitivement, il faut aussi anéantir toute son armure, y compris le maillon isolé de la zone T11. Sa cotte de mailles possède une solidité de 19 et 80 PV ; la rendre simplement brisée ne suffit pas.

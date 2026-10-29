@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Le comte Barenby Ghoom est un éclaireur féerique de la chasse sauvage, chaotique neutre, FP 16. Chasseur opportuniste, il préfère les proies déjà épuisées ou blessées et tient davantage à sa survie qu'à la société.
+  299 PV ; CA 29, contact 23 ; initiative +12 ; déplacement de 15 m ; allonge de 1,50 m.
+  Épée longue de force : +20/+15/+10 contre la CA de contact, 1d8+6 dégâts, critique 19-20. Cristal : +21 au contact à distance, 3d6 dégâts de force et cécité.
+
+note: Résistance et repérage
+  Réduction des dégâts 15/fer froid ; immunité au froid et à la cécité ; résistance de 10 à l'électricité et au feu.
+  Perception +35, Discrétion +31, Survie +32 ; vision végétale à 18 m, vision nocturne, vision dans les ténèbres et odorat.
+
+resource: Connaissance de la direction et passage sans trace | constants | facilitent la traque et le choix d'une voie de fuite
+resource: Clairaudience/clairvoyance | 3/jour | reconnaissance avant de s'exposer
+resource: Invisibilité pour les animaux | 3/jour | approche discrète si des animaux risquent de le repérer
+resource: Vision lucide | 1/jour | à préparer si des illusions ou des ennemis invisibles sont soupçonnés
+resource: Porte dimensionnelle à incantation rapide | 3/jour | action rapide ; réserve commune pour se dégager et fuir
+
+step: Les proies sont repérées mais encore en pleine possession de leurs moyens
+  do: Les suivre discrètement et attendre qu'elles soient blessées ou épuisées avant d'attaquer.
+  note: Employer clairaudience/clairvoyance pour observer sans s'exposer ; repérer une position de repli et l'accès au passage secret E16.
+
+## Ouverture
+
+step: Les ennemis sont encore à distance
+  do: Tirer avec le cristal sur une proie blessée ou particulièrement dangereuse, puis avancer de 15 m au maximum vers la mêlée.
+  note: Le tir vise la CA de contact et inflige 3d6 dégâts de force avec cécité ; le bloc ne donne ni portée, ni DD, ni durée de cette cécité.
+  note: Tirer avant d'entrer au contact ; ce déplacement ne permet pas d'ajouter une attaque d'épée au même tour.
+
+step: Un ennemi est déjà au contact au début de son tour
+  do: Attaquer à outrance avec l'épée de force : +20/+15/+10 contre la CA de contact, 1d8+6 par coup.
+
+## Rounds suivants
+
+step: Une proie reste à portée et Ghoom n'est pas encerclé
+  do: Concentrer les trois attaques d'épée sur cette proie, en privilégiant les adversaires déjà blessés ou aveuglés.
+
+step: Il doit se déplacer pour rejoindre une cible
+  do: Avancer de 15 m au maximum et porter une seule attaque d'épée à +20 ; si le contact reste impossible, poursuivre les tirs de cristal depuis une position dégagée.
+
+step: Un adversaire adjacent tente un déplacement qui provoque une attaque d'opportunité
+  do: Utiliser Attaques réflexes pour frapper ou remplacer l'attaque par Immobilisation : manœuvre à +19 contre le DMD pour arrêter son déplacement.
+  note: Immobilisation ne supprime pas les autres actions de la victime et ne déclenche pas de réaction contre un simple pas de placement.
+
+step: Une arme ennemie représente une menace particulière, notamment une arme en fer froid
+  do: Envisager un désarmement à +21 contre le DMD à la place de sa première attaque de mêlée.
+  note: Science du désarmement évite l'attaque d'opportunité normalement provoquée par cette manœuvre.
+
+step: Il est encerclé
+  do: Utiliser porte dimensionnelle à incantation rapide pour gagner une position sûre et dégagée.
+  note: S'il attaque avant de se téléporter, résoudre les attaques d'abord ; après porte dimensionnelle, il ne peut plus agir jusqu'à son prochain tour. Garder si possible une utilisation pour la fuite définitive.
+
+## Repli
+
+step: Ses PV sont strictement inférieurs à 75, ou ses adversaires le surclassent clairement
+  do: Abandonner le combat et utiliser porte dimensionnelle à incantation rapide pour s'échapper vers un endroit sûr.
+  note: Il n'attend pas d'être acculé pour sauver sa peau et ne sacrifie pas sa dernière téléportation à une poursuite.
+
+step: La téléportation est épuisée ou une fuite négociée est possible
+  do: Gagner le passage secret E16 ; si nécessaire, proposer de livrer Lotheed en échange de sa survie.
+  note: Exploiter son déplacement de 15 m, sa Discrétion +31 et passage sans trace dès qu'il peut rompre le contact.

@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Kaava Bush-Devil, golem de chair éveillé et avancé, de taille G, intelligent et neutre mauvais. Entièrement dominé par M'deggog, il combat jusqu'à sa destruction.
+  160 PV, CA 30, réduction des dégâts 10/adamantium, immunités des créatures artificielles et immunité à la magie.
+  Deux coups +25 (3d8+6, critique 19-20) et morsure +25 (1d8+6). Déplacement 9 m ; espace occupé 3 m et allonge 3 m.
+  Vision dans le noir à 18 m, vision nocturne, Perception +10 et Discrétion +14 : il peut guetter les intrus sans éclairage.
+
+resource: Potion d'invisibilité | 1 | Pour dissimuler son attente s'il peut boire avant l'arrivée des intrus ; l'invisibilité cesse dès qu'il attaque
+resource: Potion de blessure grave, étiquetée « soin » | 1 | Ce faux soin ne lui rend aucun PV : il est une créature artificielle, pas un mort-vivant
+resource: Armure en peau de rhinocéros | permanent | Ajoute 2d6 dégâts à une attaque de charge réussie
+
+step: Il peut choisir son poste avant l'intrusion
+  do: Attendre à couvert, en gardant une trajectoire de charge dégagée vers l'entrée.
+  note: Employer Discrétion +14 pour dissimuler sa présence ; sa domination impose l'assaut dès l'arrivée du premier ennemi.
+
+## Ouverture
+
+step: Le premier ennemi entre et une charge est possible
+  do: Charger cet ennemi en ligne droite, avec un déplacement d'au moins 3 m et d'au plus 18 m, puis porter un coup +27 infligeant 3d8+6 plus 2d6 dégâts.
+  note: La charge donne +2 à l'attaque et abaisse sa CA à 28 jusqu'à son prochain tour. Elle ne permet qu'une attaque ; les 2d6 supplémentaires viennent de l'armure.
+
+step: L'ennemi est déjà à 3 m ou moins, ou le trajet interdit la charge
+  do: S'il est à portée, porter l'attaque à outrance ; sinon, avancer jusqu'à 9 m et porter un coup +25 (3d8+6) si l'ennemi devient accessible.
+  note: Utiliser son allonge de 3 m pour engager sans avancer davantage que nécessaire.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans nécessiter plus d'un pas de 1,50 m
+  do: Effectuer une attaque à outrance : deux coups +25 (3d8+6 chacun), puis morsure +25 (1d8+6), en concentrant les attaques sur la même cible tant qu'elle tient debout.
+  note: Les coups menacent un critique sur 19-20 ; la morsure sur 20. Ajouter +4 aux jets de confirmation grâce à Critical Focus.
+
+step: La cible est assez facile à toucher pour sacrifier de la précision
+  do: Activer Attaque en puissance avant les attaques : coups +19 (3d8+18) et morsure +19 (1d8+18).
+  note: Le malus de -6 et le bonus de +12 dégâts durent jusqu'à son prochain tour. Sur une charge, le coup devient +21 et inflige 3d8+18 plus 2d6 dégâts.
+
+step: Il confirme un critique contre une cible sensible à l'étourdissement
+  do: Appliquer Stunning Critical : Vigueur DD 30 ou étourdissement pendant 1d4 rounds ; sur une réussite, la cible reste chancelante pendant 1d4 rounds.
+  note: Achever en priorité cet adversaire pendant que ses possibilités d'action sont réduites.
+
+step: Il confirme un critique contre une cible immunisée à l'étourdissement mais sensible à l'état chancelant
+  do: Choisir Staggering Critical : cible chancelante pendant 1d4+1 rounds, ou 1 round si elle réussit Vigueur DD 30.
+  note: Choisir un seul de ces deux effets par critique ; il ne possède pas Critical Mastery.
+
+step: Plusieurs ennemis adjacents entre eux sont à portée après son déplacement
+  do: Utiliser Great Cleave en action simple : un coup +25 (3d8+6), puis, après chaque touche, un autre coup contre un ennemi adjacent au précédent et situé dans son allonge de 3 m.
+  note: Une seule attaque par adversaire ; le premier échec arrête l'enchaînement. Sa CA tombe à 28 jusqu'à son prochain tour. S'il peut déjà effectuer trois attaques sur une cible prioritaire, préférer l'attaque à outrance.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup, avec les modificateurs d'Attaque en puissance si ce don est actif.
+  note: Il ne dispose que d'une attaque d'opportunité par round.
+
+step: Les ennemis quittent sa portée
+  do: Les poursuivre à 9 m par déplacement ; charger de nouveau si une trajectoire légale se présente, sinon avancer et frapper dès que possible.
+  note: Il ne possède aucune attaque à distance ; maintenir la pression au corps à corps.
+
+## Repli
+
+step: Ses PV diminuent, même jusqu'aux derniers points
+  do: Poursuivre le combat jusqu'à sa destruction à 0 PV, sans fuir ni se rendre.
+  note: Sa domination par M'deggog exclut tout seuil de repli ; la potion étiquetée « soin » ne constitue pas une réserve de guérison.

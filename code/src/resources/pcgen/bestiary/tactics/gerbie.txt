@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Gerbie, petite fée chaotique bonne du Premier Monde, mi-souris, mi-lézard, qui cherche à interrompre les violences et à réconcilier les adversaires.
+  38 pv, CA 17 ; réduction des dégâts 10/fer froid, résistance à la magie 15 ; déplacement 9 m, allonge 1,50 m.
+  Toucher +8 (oubli) ou morsure +7 (1d4-2). Ses principaux moyens d'action sont son aura d'amitié, l'apaisement des émotions et le charme-monstre.
+
+resource: Aura d'amitié | permanente | rayon 18 m, Volonté DD 18
+resource: Apaisement des émotions | à volonté | Volonté DD 17, NLS 7
+resource: Charme-monstre | à volonté | Volonté DD 18, NLS 7
+resource: Apaisement des animaux | à volonté | Volonté DD 16, NLS 7
+resource: Don des langues | à volonté | NLS 7
+resource: Détection des pensées | 3/jour | Volonté DD 17, NLS 7
+
+step: Des créatures approchent
+  do: Les repérer avec Perception +13 et engager la conversation grâce à son langage universel ; proposer une trêve avec Diplomatie +19.
+  note: Donner des langues à un interlocuteur si cela permet aux deux camps de se comprendre.
+
+step: Une discussion laisse le temps de sonder les intentions
+  do: Utiliser détection des pensées et se concentrer pour comprendre la cause immédiate du conflit.
+  note: La lecture des pensées superficielles demande trois rounds d'observation ; Volonté DD 17 pour y résister.
+
+## Ouverture
+
+step: Les adversaires entrent à 18 m ou moins
+  do: Laisser agir l'aura d'amitié et demander à chacun de cesser les hostilités.
+  note: En cas d'échec au jet de Volonté DD 18, les créatures deviennent amicales envers le gerbie et les autres occupants de l'aura. Une sauvegarde réussie immunise contre cette aura pendant 24 heures.
+
+step: Plusieurs adversaires continuent de se battre
+  do: Lancer apaisement des émotions sur les combattants regroupés, puis rester hors de leur allonge.
+  note: Volonté DD 17 ; les créatures apaisées ne peuvent entreprendre d'action violente. Toute agression ou tout dégât contre l'une d'elles met fin au sort pour toutes.
+
+step: Un seul agresseur persiste et aucun apaisement n'est à maintenir
+  do: Utiliser charme-monstre sur lui à 12 m ou moins, puis lui demander de discuter.
+  note: Volonté DD 18. Charmeur supprime le bonus de +5 normalement accordé à une cible attaquée par le gerbie ou ses alliés ; cette exception ne concerne pas l'aura.
+
+## Rounds suivants
+
+step: L'apaisement des émotions permet une trêve
+  do: Maintenir la concentration et laisser les adversaires discuter ; se déplacer si nécessaire pour garder ses distances.
+  note: Ne pas lancer d'autre pouvoir pendant cette concentration.
+
+step: Un adversaire est devenu amical
+  do: Lui demander de ranger son arme et de favoriser une séparation pacifique.
+  note: Un charme ne permet pas de commander automatiquement la cible ni de lui imposer des actes suicidaires.
+
+step: Un animal demeure agressif
+  do: Employer apaisement des animaux, Volonté DD 16, puis s'éloigner sans le menacer.
+
+step: Un agresseur arrive à 1,50 m et un souvenir précis nourrit sa colère
+  do: Tenter le toucher d'oubli +8 pour effacer ce souvenir, puis proposer de reprendre la discussion.
+  note: Sur un toucher réussi, l'oubli est immédiat, sans sauvegarde supplémentaire, selon modification de mémoire ; limiter le souvenir effacé à cinq minutes.
+
+step: L'aura est rompue par une attaque
+  do: Revenir à l'apaisement ou au charme-monstre si le combat continue.
+  note: La victime cesse d'être amicale envers son agresseur et refait une sauvegarde contre l'aura avec le bonus de +5 lié à la menace.
+
+step: Il est acculé et ne peut plus désamorcer l'affrontement
+  do: Se dégager ; ne mordre à +7 (1d4-2) qu'en dernier recours.
+  note: Il choisit soit la morsure, soit le toucher d'oubli ; il ne les cumule pas.
+
+## Repli
+
+step: Il tombe à 15 pv ou moins, ou un adversaire au fer froid menace de l'abattre
+  do: Se désengager, puis fuir par un passage praticable ; utiliser l'action de retraite pour parcourir jusqu'à 18 m.
+  note: La retraite protège seulement le départ de sa case initiale contre les attaques d'opportunité ; éviter de traverser d'autres zones menacées.
+
+step: Les poursuivants restent à distance et il peut encore agir sans s'exposer
+  do: Tenter un charme-monstre sur le poursuivant le plus proche ou un apaisement des émotions sur les poursuivants regroupés, puis s'éloigner de 9 m.
+  note: S'il utilise l'apaisement, maintenir ensuite sa concentration pendant le déplacement afin de prolonger la trêve.

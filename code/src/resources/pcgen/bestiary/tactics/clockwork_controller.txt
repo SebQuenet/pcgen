@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Contrôleur mécanique de FP 18, gigantesque et sans Intelligence, encastré dans le sol : il suit ses instructions et attaque les créatures entrant dans sa salle.
+  225 pv ; CA 33, contact 9 ; RD 15/adamantium ; immunités des créatures artificielles ; vulnérabilité à l'électricité, qui lui inflige 50 % de dégâts supplémentaires.
+  Attaque à outrance : 4 coups +33, chacun pour 3d6+7 dégâts ; allonge de 6 m ; espace occupé de 6 m de côté.
+  Jet d'énergie +27 contre la CA de contact, 6d6 dégâts sur une cible à 18 m maximum ; vitesse de 0 m, aucun déplacement possible.
+
+note: Vigilance et mécanisme
+  Vision dans le noir à 18 m, vision nocturne ; Perception +0 ; initiative +5.
+  Les réactions rapides sont déjà comprises dans les valeurs du profil ; elles ne donnent aucune action supplémentaire.
+
+step: Mise en service avant l'arrivée des intrus
+  do: Faire remonter le mécanisme avec sa clé par son gardien
+  note: Un remontage complet assure normalement 30 jours d'activité ; le contrôleur ne dispose d'aucun moyen indiqué pour se réparer.
+
+resource: Jet d'énergie | à volonté, 1 fois par round | action simple ; froid, électricité, feu, force ou son, au choix à chaque tir
+
+## Ouverture
+
+step: Une créature entre et se trouve à 6 m ou moins
+  do: Attaque à outrance : 4 coups +33, chacun pour 3d6+7 dégâts
+  note: Concentrer les coups sur un intrus à portée ; si celui-ci tombe, diriger les coups restants vers un autre intrus accessible.
+
+step: Aucun intrus à portée des coups, mais une cible visible à 18 m ou moins
+  do: Tirer un jet d'énergie +27 contre la CA de contact, pour 6d6 dégâts de force
+  note: Le jet vise une seule créature ; il ne balaie pas une ligne ou une zone.
+
+step: Aucun intrus accessible à 18 m ou moins
+  do: Préparer un jet d'énergie contre le premier intrus qui devient visible à portée
+  note: Rester à son emplacement ; aucune poursuite n'est possible.
+
+## Rounds suivants
+
+step: Un ou plusieurs intrus restent à 6 m ou moins
+  do: Répéter l'attaque à outrance de 4 coups et poursuivre la même cible tant qu'elle reste accessible
+  note: Le jet demande une action simple ; ne pas l'ajouter aux quatre coups dans le même tour.
+
+step: Les intrus combattent au-delà de 6 m, dans la limite de 18 m
+  do: Répéter le jet d'énergie sur une cible visible, à raison d'un tir par round
+  note: Employer la force par défaut ; les autres types restent disponibles selon sa programmation. Il ne déduit pas spontanément les faiblesses des adversaires.
+
+step: Un intrus provoque une attaque d'opportunité dans son allonge de 6 m
+  do: Porter un coup +33, pour 3d6+7 dégâts
+  note: Une seule attaque d'opportunité par round ; ses quatre bras ne lui en accordent pas davantage.
+
+step: Un intrus emploie l'électricité ou une arme en adamantium
+  do: Continuer les attaques permises par sa position et sa programmation
+  note: Appliquer sa vulnérabilité à l'électricité ; une arme en adamantium ignore sa RD 15. Son immobilité l'empêche de chercher un abri.
+
+## Repli
+
+step: Ses points de vie diminuent, mais restent supérieurs à 0
+  do: Continuer le combat sur place
+  note: Aucun seuil de fuite ; il ne peut ni se déplacer ni organiser un repli.
+
+step: Ses points de vie atteignent 0
+  do: Déclencher son autodestruction ; faire trembler le mécanisme et jaillir des étincelles pendant un round
+  note: Un round après sa destruction, explosion dans un rayon de 6 m : 12d6 dégâts tranchants et 12d6 dégâts de feu ; Réflexes DD 25 pour réduire les dégâts de moitié.

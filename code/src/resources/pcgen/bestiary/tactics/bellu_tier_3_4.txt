@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Bellu, eidolon bipède de taille M, neutre mauvaise, liée à Ichon : 26 PV, CA 20, initiative +6.
+  Deux coups +8 (2d6+10 chacun), allonge de 1,50 m ; déplacement de 9 m. Attaque en puissance toujours active et déjà comprise dans ces valeurs.
+  Résistance à l’électricité 10 et au feu 10 ; esquive totale. Vision dans le noir à 18 m, Perception +15.
+
+step: Avant l’affrontement
+  do: Accepter les sorts d’Ichon, sans autre préparation particulière
+  note: leurs effets sont déjà inclus dans les statistiques ; ne pas ajouter de bonus supplémentaires
+
+## Ouverture
+
+step: Les adversaires sont hors de portée
+  do: Avancer avec grâce dans la mêlée, jusqu’à 9 m, puis porter un coup +8 (2d6+10) si une cible est à 1,50 m
+  note: privilégier une position permettant de menacer deux adversaires ; après ce déplacement, elle ne porte qu’un seul coup
+
+step: Deux adversaires sont déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance et répartir ses deux coups entre eux : un coup +8 (2d6+10) contre chacun
+  note: Bellu frappe des poings et des pieds et se délecte du craquement des os
+
+step: Un seul adversaire est déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance : deux coups +8 (2d6+10 chacun) contre lui
+
+## Rounds suivants
+
+step: Deux adversaires sont à portée
+  do: Continuer les attaques à outrance en donnant un coup à chacun
+  note: elle préfère toujours répartir ses attaques entre deux cibles lorsque sa position le permet ; Attaque en puissance reste active
+
+step: Un seul adversaire est à portée
+  do: Lui porter les deux coups d’une attaque à outrance
+
+step: Plus aucun adversaire n’est à portée
+  do: Rejoindre la mêlée à une vitesse de 9 m et porter un seul coup si le déplacement permet d’atteindre une cible
+  note: rechercher de nouveau une position au contact de deux adversaires pour les rounds suivants
+
+## Repli
+
+step: Bellu est blessée ou le combat tourne mal
+  do: Poursuivre le combat au corps à corps, sans fuir
+  note: liée à Ichon, elle ne peut pas prendre la fuite ; aucun seuil de PV ne déclenche de repli

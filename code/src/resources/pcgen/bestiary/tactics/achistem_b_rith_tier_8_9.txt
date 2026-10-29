@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Achistem B'rith, noble janni demi-fiélon avancé, de taille G et d'alignement neutre mauvais, est un combattant aérien intelligent mais fou, convaincu d'être indestructible.
+  142 pv ; CA 25, contact 14 ; réduction des dégâts 10/magie ; RM 22 ; immunité au poison ; résistance 10 à l'acide, au froid, à l'électricité et au feu.
+  Au contact : 2 griffes +21 (1d6+7) et morsure +21 (1d8+7), avec une allonge de 3 m. À distance : arc long composite +16/+11/+6 (2d6+3, critique x3).
+  Déplacement terrestre 6 m ; vol 9 m, bonne manœuvrabilité ; vision dans le noir à 18 m ; Perception +22. Les valeurs indiquées tiennent déjà compte de son agrandissement.
+
+resource: Blasphème | 1/jour | DD 19 ; pouvoir magique, NLS 11
+resource: Flétrissure | 1/jour | DD 20 ; pouvoir magique, NLS 11
+resource: Aura maudite | 3/jour | DD 20 ; à lancer sur lui-même lorsqu'il tombe à 50 pv ou moins
+resource: Flèches | 20 | une flèche par tir ; trois par attaque à outrance complète à l'arc
+
+step: Les intrus progressent dans les ruines
+  do: Surveiller leur approche depuis le sommet du pinacle d'invocation.
+
+step: Les intrus approchent de son perchoir
+  do: S'agrandir avec son pouvoir de changement de taille, puis s'envoler dans la couverture nuageuse au-dessus.
+  note: Conserver l'altitude pour obliger les adversaires à voler jusqu'à lui s'ils veulent engager un combat de mêlée prolongé.
+
+## Ouverture
+
+step: Premier round de combat
+  do: Ouvrir avec blasphème (DD 19) ou flétrissure (DD 20) pour affaiblir les adversaires.
+  note: Choisir le pouvoir permettant de toucher les cibles les plus intéressantes selon leur position ; garder l'autre disponible pour la suite.
+
+step: Il identifie un prêtre bon ou un paladin parmi ses adversaires
+  do: Utiliser son châtiment du Bien contre cet adversaire et en faire sa cible prioritaire.
+  note: Maintenir cette priorité lors des tirs et des attaques au passage.
+
+## Rounds suivants
+
+step: Il peut tirer sans être menacé au contact
+  do: Rester en vol stationnaire et effectuer une attaque à outrance à l'arc : +16/+11/+6, chaque flèche infligeant 2d6+3 dégâts, critique x3.
+  note: Rester hors de l'allonge adverse. Une attaque à outrance ne permet pas de cumuler ces trois tirs avec un déplacement de 9 m.
+
+step: Une cible peut être atteinte au passage en gardant une position aérienne favorable
+  do: Effectuer une attaque en vol : approcher, porter une morsure +21 (1d8+7) avec son allonge de 3 m, puis poursuivre le mouvement pour reprendre de la distance.
+  note: Répartir au maximum 9 m de déplacement avant et après cette unique attaque. Alterner ces passages avec les attaques à outrance à l'arc ; le don n'empêche pas les attaques d'opportunité adverses.
+
+step: Un adversaire volant vient le combattre au contact
+  do: Si une attaque à outrance est possible, porter les deux griffes +21 (1d6+7 chacune) et la morsure +21 (1d8+7), en privilégiant la cible du châtiment.
+  note: Exploiter son allonge de 3 m et Attaques réflexes lorsque l'adversaire provoque des attaques d'opportunité. Reprendre de la distance dès que la position devient défavorable.
+
+step: Une nouvelle occasion justifie son second pouvoir offensif majeur
+  do: Employer blasphème (DD 19) ou flétrissure (DD 20), selon celui qu'il n'a pas encore utilisé.
+  note: Chaque pouvoir n'est disponible qu'une fois par jour.
+
+step: Il tombe à 50 pv ou moins et n'a pas encore activé cette défense
+  do: Lancer aura maudite sur lui-même pour augmenter sa CA et sa RM, puis poursuivre le combat.
+  note: DD 20 pour les effets de l'aura qui demandent un jet de sauvegarde.
+
+step: Ses flèches sont épuisées
+  do: Poursuivre les attaques au passage et employer les pouvoirs offensifs encore disponibles ; combattre avec griffes et morsure les ennemis qui le rejoignent.
+
+## Repli
+
+step: Quel que soit son total de points de vie
+  do: Combattre jusqu'à la mort.
+  note: Sa folie lui fait croire qu'il est indestructible. Ses prises de distance servent à poursuivre l'affrontement ; il ne cherche pas à fuir.

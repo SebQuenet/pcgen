@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Druj Nasu, div NE de taille M, FP 8 : corrupteur des sépultures, qui affaiblit ses victimes avec des nuées avant de les attaquer au contact.
+  105 pv ; CA 24, contact 16 ; initiative +10. Morsure +16 (1d6+4 et maladie), 2 griffes +16 (1d4+4 et distraction) ; allonge 1,50 m.
+  Déplacement au sol 9 m ; vol parfait 18 m. Il préfère combattre depuis les airs et traverser les nuées, dont les dégâts et la distraction ne l'affectent pas.
+
+note: Défenses
+  Réduction des dégâts 10, surmontée par une arme à la fois en fer froid et d'alignement bon ; résistance à la magie 19.
+  Immunité au feu et au poison ; résistance à l'acide 10 et à l'électricité 10. Les nuées qu'il convoque et les morts-vivants qu'il anime gagnent son immunité au feu.
+
+resource: Invisibilité sur lui-même, vision de l'invisible, convocation de nuées, putréfaction de nourriture et d'eau | à volonté | NLS 10
+resource: Malédiction | 3/jour | contact ; Volonté DD 20
+resource: Contrôle des morts-vivants | 3/jour | Volonté DD 18 ; aucun jet pour un mort-vivant sans intelligence
+resource: Énergie négative | 3/jour | rayon de contact à distance +16 ; portée 15 m ; 1d4 niveaux négatifs ; aucun jet de sauvegarde
+resource: Animation des morts | 1/jour | nécessite des cadavres
+resource: Fléau d'insectes | 1/jour | trois nuées de guêpes adjacentes ; durée 10 minutes ; restent sur place
+resource: Convocation de div | 1/jour | 50 % de réussite ; une pairaka ou 1d6 mouches géantes fiélonnes
+
+step: Il peut préparer l'affrontement
+  do: Activer vision de l'invisible, puis invisibilité ; observer depuis les airs avec Perception +21, détection du Bien et détection de la magie constantes
+  note: il voit dans les ténèbres ; Discrétion +19 pour choisir son approche
+
+step: Des cadavres sont disponibles et il dispose de temps
+  do: Employer animation des morts, puis contrôle des morts-vivants sur les serviteurs retenus pour garder les accès
+  note: préparer ces auxiliaires avant le combat ; décompter les utilisations dépensées
+
+## Ouverture
+
+step: Les ennemis sont regroupés dans un passage ou autour d'un objectif
+  do: Depuis une position protégée, lancer fléau d'insectes pour recouvrir leurs positions et le passage qu'ils veulent emprunter
+  note: cette convocation ne rompt pas l'invisibilité ; les nuées restent fixes, il faut donc choisir leur emplacement avec soin
+
+step: Il conserve fléau d'insectes ou les ennemis sont dispersés
+  do: Convoquer une nuée d'araignées sur une cible isolée, de préférence un lanceur de sorts
+  note: convocation de nuées exige de la concentration, puis subsiste 2 rounds après son interruption ; la nuée poursuit la créature vivante la plus proche sans recevoir d'ordres
+
+step: Les nuées sont installées et des adversaires sont à 9 m ou moins
+  do: Activer son bourdonnement par une action simple
+  note: rayon 9 m ; chaque créature a 25 % de risque par round d'être nauséeuse pendant 1 round, Vigueur DD 20 annule. Lancer un sort exige concentration DD 15 + niveau du sort ; Perception auditive à -4. Maintien par action libre ; arrêt par action de mouvement
+
+## Rounds suivants
+
+step: Une cible reste au contact dans les nuées et il peut rester sur place
+  do: Interrompre au besoin la concentration sur convocation de nuées, puis effectuer une attaque à outrance : morsure +16 et deux griffes +16
+  note: sa première attaque rompt l'invisibilité ; profiter des 2 rounds de persistance de la nuée. La maladie agit après le combat, avec une incubation d'une heure
+
+step: Un adversaire dangereux demeure à distance
+  do: Employer énergie négative depuis les airs, en privilégiant le lanceur de sorts ou le combattant qui menace réellement ses défenses
+  note: les niveaux négatifs se cumulent ; rester à 15 m ou moins et compter chaque utilisation
+
+step: Une cible résistante est accessible au contact
+  do: Consacrer son action simple à malédiction, plutôt qu'à une attaque à outrance
+  note: choisir le malus de -4 aux attaques, sauvegardes, tests de caractéristique et de compétence pour faciliter la suite du combat
+
+step: Les adversaires sont nombreux ou dominent la mêlée
+  do: Utiliser Attaque en vol : approcher, porter une seule morsure, puis poursuivre le déplacement, pour un trajet total maximal de 18 m
+  note: ce don ne supprime pas les attaques d'opportunité ; éviter les trajectoires exposées. Rétablir invisibilité lors d'un autre round avant une nouvelle passe
+
+step: Il a besoin de renforts et sa convocation quotidienne reste disponible
+  do: Tenter de convoquer une pairaka ou 1d6 mouches géantes fiélonnes depuis une position protégée
+  note: une seule tentative, même en cas d'échec ; communiquer ses intentions par télépathie à 30 m
+
+step: Un fidèle de Sarenrae est identifié
+  do: Le choisir en priorité parmi les cibles accessibles
+
+## Repli
+
+step: Ses pv tombent sous 30, ou les ennemis surmontent ses défenses et contrôlent les airs
+  do: Se dégager, rétablir invisibilité dès qu'il peut le faire sans s'exposer, puis fuir en vol, à 18 m par déplacement
+  note: laisser les nuées et les serviteurs déjà commandés gêner la poursuite ; utiliser le relief pour rompre la ligne de vue
+
+step: Un chien ordinaire s'interpose
+  do: Fuir immédiatement par les airs ou abandonner les autres cibles pour le tuer
+  note: sa réaction aux chiens peut bouleverser toute sa tactique

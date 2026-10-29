@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Statue animée de Nethys, sous-grade 4–5 : gardien sculpté évolué, créature artificielle neutre de taille M, sans Intelligence. Elle combat au corps à corps et suit les ordres de son créateur.
+  53 pv ; CA 24, contact 14, prise au dépourvu 20. Bâton +1 acéré +12/+7 (1d6+8, critique 19–20), ou coup +11 (1d6+7).
+  Déplacement 12 m ; allonge 1,50 m ; vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses
+  Réduction des dégâts 5/adamantium ; immunités des créatures artificielles ; résistance à la magie 21, bonus du domaine de la Magie déjà compris.
+  Guérison accélérée 2 : récupère 2 pv au début de son tour, sans dépasser 53 pv.
+
+resource: Rapidité | 1/jour | pouvoir magique, action simple, uniquement sur elle-même ; NLS 5, durée 5 rounds
+
+step: Une créature porte ou présente ouvertement un symbole de Nethys
+  do: Ne pas l'attaquer tant qu'elle n'a pas elle-même attaqué la statue ; combattre les autres intrus autorisés.
+  note: Le lien à la foi protège individuellement le porteur du symbole ; il ne lui permet pas de donner de nouveaux ordres à la statue.
+
+## Ouverture
+
+step: Premier tour de combat, Rapidité disponible
+  do: Activer Rapidité sur elle-même, puis avancer vers l'adversaire autorisé le plus proche, jusqu'à 21 m, pour l'amener à portée de son bâton.
+  note: L'activation consomme l'action simple et peut provoquer une attaque d'opportunité ; l'effectuer hors de l'allonge ennemie si la position le permet. Elle n'attaque pas avec son bâton pendant ce tour.
+  note: Pendant 5 rounds : CA 25, Réflexes +7, déplacement 21 m et +1 aux jets d'attaque ; une attaque supplémentaire seulement lors d'une attaque à outrance.
+
+step: Rapidité déjà dépensée, adversaire accessible par un déplacement
+  do: Avancer jusqu'à 12 m, puis porter une attaque de bâton à +12 (1d6+8, critique 19–20) si l'adversaire est à 1,50 m.
+
+## Rounds suivants
+
+step: Adversaire au contact, éventuellement après un pas de placement de 1,50 m
+  do: Effectuer une attaque à outrance au bâton : +12/+7, ou +13/+13/+8 sous Rapidité ; chaque coup inflige 1d6+8, critique 19–20.
+  note: Privilégier la même cible d'un round à l'autre pour exploiter le domaine de la Connaissance.
+
+step: La cible a déjà été attaquée par la statue au round précédent
+  do: Ajouter +2 à tous les jets d'attaque contre elle grâce à Familiarité, même si les attaques précédentes ont raté.
+  note: L'attaque à outrance au bâton devient +14/+9, ou +15/+15/+10 sous Rapidité. Ce bonus ne se cumule pas avec lui-même d'un round à l'autre.
+
+step: Aucun adversaire à portée après un pas de placement
+  do: Se déplacer jusqu'à 12 m, ou 21 m sous Rapidité, puis porter une seule attaque de bâton si une cible est à portée.
+  note: Attaque +12, ou +13 sous Rapidité ; ajouter +2 contre une cible attaquée au round précédent. Un déplacement ordinaire empêche l'attaque à outrance et l'attaque supplémentaire de Rapidité.
+
+step: Elle ne peut plus utiliser son bâton
+  do: Frapper avec son coup : +11, dégâts 1d6+7 ; appliquer les bonus de Rapidité et de Familiarité lorsqu'ils sont actifs.
+
+step: Les 5 rounds de Rapidité sont écoulés
+  do: Revenir aux valeurs normales : déplacement 12 m, CA 24, Réflexes +6 et deux attaques de bâton à outrance.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à combattre jusqu'à sa destruction, sans fuite ni reddition.
+  note: Appliquer la guérison accélérée 2 tant qu'elle existe. À 0 pv, cette créature artificielle est détruite ; elle ne se relève pas grâce à cette guérison.
+
+step: Tous les adversaires présents sont protégés par le lien à la foi
+  do: Cesser de les attaquer et rester à son poste, sauf si l'un d'eux attaque la statue.

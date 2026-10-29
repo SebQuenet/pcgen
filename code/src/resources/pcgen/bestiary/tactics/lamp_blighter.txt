@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Lamp Blighter, fée de taille P, chaotique mauvaise, FP 6 : ancien pixie haineux qui obscurcit les lampes pour attirer et mutiler ses victimes.
+  45 PV ; CA 17 ; réduction des dégâts 10/fer froid ; résistance à la magie 17. Déplacement au sol de 9 m ; perception aveugle et vision dans le noir à 18 m.
+  Morsure +11 (1d8-2), deux griffes +11 (1d10-2, critique 19-20 et arrachement d'œil) ; arc court +1, attaque +13 (1d4-1, critique ×3). Allonge de 1,50 m.
+  Son invisibilité est constante et persiste lorsqu'il attaque ; il peut la suspendre ou la rétablir par une action libre.
+
+resource: Ténèbres | à volonté | pouvoir magique, NLS 10
+resource: Lumières dansantes | 1/jour | leurre lumineux
+resource: Ténèbres profondes | 1/jour | obscurcir davantage le terrain
+resource: Détection des pensées | 1/jour | Volonté DD 14
+resource: Déguisement | 1/jour | prendre une apparence de pixie inoffensif
+resource: Dissipation de la magie | 1/jour | test de dissipation à +10
+resource: Enchevêtrement | 1/jour | Réflexes DD 13 ; nécessite des végétaux
+resource: Bouclier | 1/jour | +4 de bouclier à la CA pendant 10 minutes : CA 21
+
+step: Il peut préparer une embuscade
+  do: Rester invisible, repérer les intrus avec Perception +15 et choisir un couvert avec une issue de fuite
+  note: Discrétion +22 ; garder les futures cibles à moins de 18 m pour les percevoir même dans l'obscurité
+
+step: Une approche trompeuse est possible
+  do: Suspendre son invisibilité et utiliser déguisement pour se présenter comme un pixie amical ; conduire une victime vers un endroit isolé par Bluff +13
+  note: Rétablir l'invisibilité au moment de trahir sa confiance ; les lumières dansantes peuvent aussi attirer les curieux vers l'embuscade
+
+step: Le combat paraît imminent
+  do: Activer bouclier avant de se montrer hostile
+
+step: Il dispose encore d'un moment avant l'arrivée des intrus
+  do: Lancer ténèbres sur un objet de son poste d'embuscade
+  note: Ce pouvoir abaisse l'éclairage d'un degré ; il ne crée pas automatiquement une obscurité totale en pleine lumière
+
+## Ouverture
+
+step: Plusieurs ennemis traversent une zone de végétation
+  do: Lancer enchevêtrement sur leur passage, puis se déplacer pour rester hors de leur portée
+  note: Réflexes DD 13 ; la zone devient un terrain difficile même pour ceux qui réussissent leur sauvegarde. Rester hors des végétaux affectés
+
+step: Des ennemis voient dans le noir et le terrain est déjà dans la pénombre ou l'obscurité
+  do: Consacrer un round à ténèbres profondes sur un objet proche
+  note: Dans ces conditions, l'obscurité surnaturelle gêne même la vision dans le noir ; sa perception aveugle reste utilisable à 18 m
+
+step: Une cible est à distance et il peut attaquer
+  do: Tirer une flèche avec l'arc court +1, puis changer de position à couvert
+  note: Privilégier une cible isolée ou enchevêtrée. Tir à bout portant ajoute +1 au toucher et aux dégâts à 9 m ou moins ; Tir de précision supprime le malus de tir dans une mêlée
+
+## Rounds suivants
+
+step: Les ennemis peinent à le localiser
+  do: Poursuivre les tirs en restant invisible et à moins de 18 m des cibles ; se déplacer après chaque tir si cela permet de déjouer leur approche
+  note: Éviter de se laisser enfermer entre plusieurs adversaires
+
+step: Une victime isolée est au contact et il peut rester sur place ou faire seulement un pas de 1,50 m
+  do: Effectuer une attaque à outrance : deux griffes +11 et morsure +11
+  note: Après un déplacement plus long, porter seulement une attaque de griffe avec son action simple
+
+step: Une griffe confirme un critique ou touche une créature sans défense
+  do: Utiliser arrachement d'œil en action libre, au maximum une fois par round
+  note: Vigueur DD 13 pour éviter la perte de l'œil ; un œil arraché impose -4 aux tests de Perception fondés sur la vue jusqu'à réparation
+
+step: Un effet magique permet de le repérer ou protège efficacement sa cible
+  do: Tenter une dissipation ciblée avec dissipation de la magie si le pouvoir est encore disponible
+  note: Cette tentative remplace ses attaques du round ; privilégier la protection qui compromet le plus son avantage d'invisibilité
+
+## Repli
+
+step: Il tombe à 15 PV ou moins, ou un adversaire au fer froid le localise et le menace directement
+  do: Rompre le combat par une retraite jusqu'à 18 m, vers un couvert ou un passage qui coupe la ligne de vue
+  note: Rester invisible ; sa réduction des dégâts ne protège pas des armes en fer froid
+
+step: Des poursuivants approchent sans être encore au contact et enchevêtrement est disponible
+  do: Lancer enchevêtrement sur les végétaux entre eux et lui, puis s'éloigner de 9 m
+  note: Réflexes DD 13 ; contourner soi-même la zone et poursuivre la fuite aux rounds suivants

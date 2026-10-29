@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Nephlei, nymphe des nuages solitaire du plan de l'Air, Extérieur de taille G, chaotique neutre, FP 9. Intelligente, elle privilégie le combat aérien, les vents et les décharges électriques.
+  115 pv, CA 20 ; immunité au froid et à l'électricité. Vol à 12 m, bonne manœuvrabilité ; déplacement au sol à 9 m ; espace et allonge de 3 m.
+  Fouet-scorpion +1 de foudre intense +12/+7/+2 : 1d6+2, critique 18–20, plus 1d6 d'électricité ; ou coup +14 : 1d6+1. Ses pouvoirs magiques fonctionnent au NLS 9.
+
+resource: Modification des vents | 5/jour | DD 16 ; modifie d'un cran les vents naturels admissibles dans une zone fixe de 3 m de rayon
+resource: Nappe de brouillard | 5/jour | sans sauvegarde ; rayon de 6 m, durée 90 minutes
+resource: Contact glacial | 5/jour | attaque de contact, 4d6 de froid et chancelant 1 round ; sans sauvegarde
+resource: Bourrasque | 5/jour | Vigueur DD 17 ; ligne de 18 m, durée 1 round
+resource: Brume de dissimulation | 5/jour | sans sauvegarde ; rayon de 6 m autour d'elle, durée 9 minutes
+resource: Cape de vents | 3/jour | durée 9 minutes ; attaques à distance contre elle à −4
+resource: Éclair | 3/jour | ligne de 30 m, 9d6 d'électricité ; Réflexes DD 18, moitié
+resource: Rivière de vent | 3/jour | ligne de 36 m, diamètre de 1,50 m, durée 9 rounds ; Vigueur DD 19, effet partiel
+resource: Mur de vent | 3/jour | durée 9 rounds ; DD 18 pour conserver les objets arrachés par le vent
+resource: Boules de foudre | 1/jour | deux sphères, 9 rounds ; chacune inflige 3d6 d'électricité, Réflexes DD 19 annule
+resource: Contrôle des vents | 1/jour | Vigueur DD 20 ; rayon maximal de 108 m, hauteur de 12 m, durée 90 minutes
+resource: Arc de foudre | 1/jour | deux cibles séparées de 18 m au maximum et la ligne entre elles ; 9d6 d'électricité, Réflexes DD 20, moitié
+
+step: Des intrus approchent et elle peut se préparer
+  do: Activer cape de vents, puis prendre une position aérienne hors de l'allonge des combattants.
+  note: Perception +16, vision dans le noir à 18 m et vision nocturne. Sa demeure peut occuper une formation nuageuse ; elle ne voit pas à travers le brouillard.
+
+step: Un affrontement dans une zone ouverte est imminent
+  do: Utiliser contrôle des vents pour gêner l'approche et les tirs, en ménageant un œil calme autour de sa position.
+  note: Au NLS 9, modifier la force du vent de trois crans au maximum. Cape de vents la protège des déplacements forcés par les vents de force tempête ou inférieure ; éviter de s'exposer à des vents plus violents.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être reliés par une ligne entre deux cibles distantes de 18 m au maximum
+  do: Lancer arc de foudre pour toucher les deux extrémités et les adversaires intermédiaires, puis voler pour conserver ses distances.
+
+step: Les ennemis sont alignés devant elle
+  do: Lancer éclair sur la ligne la plus fournie, puis se déplacer hors de leur portée de mêlée.
+
+step: Les adversaires sont dispersés et le combat promet de durer
+  do: Créer les deux boules de foudre près des cibles prioritaires, notamment celles portant une armure métallique.
+  note: Une armure métallique impose −4 au jet de Réflexes contre les sphères. Leur portée maximale est de 57 m.
+
+step: Les archers représentent la menace immédiate
+  do: Interposer un mur de vent avant de poursuivre l'offensive.
+  note: Les flèches et carreaux qui le traversent ratent automatiquement ; il ne bloque pas tous les projectiles ni les sorts.
+
+## Rounds suivants
+
+step: Les boules de foudre sont actives et sa position reste sûre
+  do: Dépenser une action de mouvement pour diriger les deux sphères, jusqu'à 6 m chacune, puis une action simple pour lancer un autre pouvoir offensif.
+  note: Une sphère s'arrête en rencontrant une créature. Si elle doit elle-même se déplacer, laisser les sphères en place ce round.
+
+step: Plusieurs ennemis avancent dans un passage étroit
+  do: Placer rivière de vent dans leur axe d'approche, puis les attaquer à distance.
+  note: À l'apparition, 4d6 non létaux et à terre ; Vigueur DD 19 réduit les dégâts de moitié et évite la chute. Au début des tours suivants dans la ligne : échec, recul de 6 m, 2d6 non létaux et à terre ; réussite, seulement 1d6 non létaux. Le sous-type air de la nephlei la rend insensible à cette rivière.
+
+step: Un adversaire isolé doit être harcelé sans rester au contact
+  do: Employer Attaque au passage : voler, porter un seul coup de fouet +12 à 3 m, puis terminer son déplacement, dans la limite de 12 m.
+  note: Le don autorise aussi un pouvoir à action simple pendant le vol. Il ne supprime pas les attaques d'opportunité ; éviter de traverser l'allonge ennemie.
+
+step: Un combattant dangereux menace de la verrouiller en mêlée
+  do: Employer contact glacial pour lui infliger 4d6 de froid et le rendre chancelant, puis s'éloigner si le déplacement est sûr.
+  note: Un critique prolonge l'état chancelant à 1 minute. Si elle utilise un pouvoir sur la défensive, sa concentration est de +18 grâce à Incantation de combat.
+
+step: Une cible vulnérable reste dans son allonge et elle peut demeurer sur place
+  do: Effectuer une attaque à outrance au fouet : +12/+7/+2.
+  note: Réserver cette option aux situations favorables ; son vol et ses pouvoirs de zone sont plus utiles contre plusieurs ennemis.
+
+step: Les ennemis résistent manifestement à l'électricité
+  do: Privilégier rivière de vent, contact glacial et les dégâts physiques du fouet, en maintenant la séparation par les vents.
+
+## Repli
+
+step: Ses points de vie passent sous 35 ou ses défenses ne suffisent plus
+  do: Créer une nappe de brouillard entre les poursuivants et sa route de fuite, puis voler à 12 m ; poursuivre par un double déplacement de 24 m aux rounds suivants.
+  note: Brume de dissimulation convient si les ennemis sont déjà proches. Ces brumes gênent aussi sa propre vision et peuvent être dispersées par le vent ; choisir un trajet qui ne traverse pas ses vents violents.
+
+step: Des poursuivants persistent dans un passage étroit
+  do: Couvrir la fuite par rivière de vent ou bourrasque, puis gagner les nuages.
+  note: Bourrasque impose Vigueur DD 17 et gêne surtout les petites créatures ; elle ne repousse pas automatiquement tous les poursuivants.

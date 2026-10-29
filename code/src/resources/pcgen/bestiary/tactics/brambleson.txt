@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Brambleson, fée de taille P, chaotique neutre, combat en chevalier fantasque : il harcèle ses adversaires et recherche les branches ou les passages difficiles pour les grandes créatures.
+  Épée des serments, épée courte +2 brisée : +15/+10 (1d6+3) ; morsure +10 (1d4+3). Allonge 1,50 m ; déplacement 15 m ; escalade 4,50 m ; Acrobaties +20, +28 pour sauter.
+  97 pv ; CA 24, contact 19 ; guérison accélérée 5 ; réduction des dégâts 5/fer froid. Réflexes +16, esquive totale et esquive instinctive ; Volonté +7 et faiblesse suggestible.
+
+resource: Armure de mage | 3/jour | personnelle dans ce plan ; durée 7 heures ; bonus d'armure de +4, portant sa CA à 28
+resource: Invisibilité suprême | 3/jour | lui-même uniquement ; durée 7 rounds ; attaquer ne met pas fin à l'invisibilité
+resource: Porte dimensionnelle | 3/jour | repositionnement ou fuite ; aucune autre action après son utilisation pendant ce tour
+resource: Confusion partielle | 3/jour | Volonté DD 14 ; confusion pendant 1 round
+resource: Coup au but | 3/jour | +20 à une seule attaque avant la fin de son prochain tour ; demande une action simple de préparation
+resource: Délivrance des malédictions | 1/jour | à réserver à une malédiction qui le gêne
+resource: Détection de la magie, connaissance des directions, localisation d'objet, passage sans traces | à volonté | repérage et déplacement discret
+resource: Jetons de plume, arbre | 2 | chacun fait apparaître un arbre ; support possible pour gagner les branches
+resource: Jetons de plume, ancre et oiseau | 1 de chaque | conserver pour leur usage propre ; aucun effet offensif indiqué
+resource: Élixir de vérité | 1 | utile pour un interrogatoire, sans avantage direct dans sa tactique de harcèlement
+
+step: Il peut préparer le terrain avant l'arrivée des adversaires
+  do: Choisir un secteur boisé et repérer une voie vers les fourrés ; observer avec Perception +15 et se dissimuler avec Discrétion +24
+  note: odorat et vision nocturne complètent son repérage ; déplacement facilité lui permet de traverser les broussailles naturelles sans ralentir
+
+step: Un affrontement paraît probable
+  do: Activer armure de mage avant le contact
+  note: ce bonus s'ajoute à son armure naturelle ; ne pas dépenser plusieurs utilisations pour cumuler le même effet
+
+## Ouverture
+
+step: Les adversaires approchent et il peut encore agir hors de leur allonge
+  do: Activer invisibilité suprême, puis se placer pour attaquer depuis un flanc ou près d'un arbre
+  note: l'activation et l'attaque à l'épée occupent des actions simples distinctes ; ne pas les effectuer dans le même tour
+
+step: Il peut traverser la portée d'un adversaire puis s'éloigner
+  do: Utiliser Attaque éclair : avancer, porter un seul coup d'épée, puis poursuivre son déplacement vers les branches ou les broussailles
+  note: rester dans ses 15 m de déplacement, avec au moins 3 m avant et 3 m après le coup ; cette attaque ne provoque pas d'attaque d'opportunité de la cible
+
+## Rounds suivants
+
+step: Il poursuit le harcèlement au corps à corps
+  do: Répéter Attaque éclair en utilisant Expertise du combat : épée +13, bonus d'esquive de +2 à la CA
+  note: CA 26, ou 30 avec armure de mage ; Souplesse du serpent ajoute +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements auprès des autres adversaires
+
+step: Les grandes créatures tentent de le suivre
+  do: Sauter ou grimper vers les branches et emprunter les passages encombrés ; frapper seulement lorsqu'une cible entre dans son allonge de 1,50 m
+  note: une position en hauteur ne lui donne pas d'allonge supplémentaire ; ses sauts demandent toujours les jets d'Acrobaties appropriés
+
+step: Un adversaire provoque une attaque d'opportunité à sa portée
+  do: Porter un coup d'épée et exploiter Attaques réflexes si plusieurs occasions se présentent
+  note: cette riposte ne permet pas de se déplacer ni de mordre en supplément
+
+step: Un ennemi reste au contact et une attaque à outrance est préférable au déplacement
+  do: Porter les deux coups d'épée +15/+10 et la morsure +10
+  note: sous Expertise du combat, les attaques deviennent +13/+8 et +8 ; cette option l'expose davantage que son harcèlement habituel
+
+step: Un poursuivant isolé gêne son changement de position
+  do: Depuis une position hors de son allonge, tenter confusion partielle sur lui, Volonté DD 14, puis se déplacer
+  note: le DD est modeste et la confusion dure 1 round ; elle ne garantit pas que la cible cesse d'attaquer
+
+step: Il dispose d'un tour à couvert avant un coup difficile
+  do: Préparer coup au but, puis effectuer une attaque à l'épée au tour suivant
+  note: le bonus de +20 concerne cette seule attaque ; ne pas sacrifier sa mobilité pour préparer ce pouvoir au contact
+
+step: Il subit des blessures sans atteindre son seuil de repli
+  do: Garder ses distances et laisser sa guérison accélérée rendre 5 pv par round, sans dépasser 97 pv
+  note: renouveler invisibilité suprême si nécessaire ; garder si possible une porte dimensionnelle pour la fuite
+
+## Repli
+
+step: Ses points de vie tombent à 32 ou moins
+  do: Déclarer le combat nul et offrir son gage aux adversaires
+  note: son honneur lui interdit d'admettre une défaite ; il propose une égalité dès qu'il atteint ce tiers de ses 97 pv
+
+step: Un adversaire refuse l'égalité et poursuit le combat
+  do: Fuir dans le Briar ; utiliser porte dimensionnelle pour sortir de l'encerclement, puis reprendre la fuite au tour suivant
+  note: à défaut, exploiter ses 15 m de déplacement, les broussailles naturelles et l'escalade ; utiliser invisibilité suprême et passage sans traces lorsque possible

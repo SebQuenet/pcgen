@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Nisid, petite fée chaotique bonne et solitaire, liée à une île. Il privilégie la discrétion et les pouvoirs qui désorganisent les adversaires avant de tirer à l'arc.
+  33 pv ; CA 17 ; réduction des dégâts 5/fer froid ; déplacement de 9 m ; vision nocturne ; Perception +14 et Discrétion +16.
+  Arc long +7 (1d6, x3), dague +7 (1d3-1, 19-20), lance au contact +3 ou lancée +7 (1d6-1, x3). Allonge de 1,50 m.
+
+resource: Charme-animal | à volonté | Volonté DD 15
+resource: Création d'eau et endurance aux énergies destructives | à volonté | Préparation et survie ; aucune protection générale contre les attaques élémentaires
+resource: Détection de pensées | 3/jour | Volonté DD 16 ; niveau de lanceur de sorts 6
+resource: Enchevêtrement | 3/jour | Réflexes DD 15 ; nécessite de la végétation
+resource: Invisibilité | 3/jour | Lui-même uniquement
+resource: Appel de la foudre | 1/jour | Réflexes DD 17
+resource: Confusion | 1/jour | Volonté DD 18
+resource: Bourrasque | 1/jour | Vigueur DD 16
+resource: Terrain hallucinatoire | 1/jour | Volonté DD 18 pour reconnaître l'illusion en interagissant avec elle
+resource: Flèches | 20 | Une flèche par tir à l'arc long
+
+step: Il a le temps de préparer les lieux
+  do: Utiliser terrain hallucinatoire pour modifier l'apparence du terrain naturel et brouiller les repères des intrus ; repérer une position de tir et un chemin de repli.
+  note: Prévoir les 10 minutes d'incantation. L'illusion ne transforme pas réellement le terrain et ne masque pas les créatures.
+
+step: Des visiteurs approchent sans hostilité manifeste
+  do: Les observer à couvert ; utiliser détection de pensées si leurs intentions restent douteuses, puis parler en commun ou en sylvestre pour tenter d'éviter le combat.
+  note: Psychologie +14 et Bluff +13 l'aident à apprécier les intentions et à détourner les intrus.
+
+step: Un affrontement devient probable
+  do: Se placer discrètement à distance du groupe, près de végétation exploitable ; utiliser invisibilité si nécessaire pour se positionner.
+  note: Conserver si possible une utilisation d'invisibilité pour le repli. Attaquer ou lancer un pouvoir offensif rompt l'invisibilité.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés
+  do: Lancer confusion sur le groupe, en évitant les créatures qu'il souhaite épargner.
+  note: Volonté DD 18. Exploiter leur désorganisation pour conserver ses distances.
+
+step: Les ennemis avancent dans une zone de végétation et confusion n'est pas le meilleur choix
+  do: Lancer enchevêtrement sur leur passage, en restant hors de la zone.
+  note: Réflexes DD 15. Garder une ligne de tir vers les adversaires ralentis.
+
+step: Aucun groupe ne justifie un pouvoir de zone et une cible reste à distance
+  do: Tirer à l'arc long sur la menace la plus pressante.
+  note: Attaque +7, dégâts 1d6, critique x3.
+
+## Rounds suivants
+
+note: Priorité des actions
+  Choisir une action principale par round : lancer un pouvoir, tirer ou rappeler un éclair déjà préparé. Utiliser le déplacement pour garder ses distances et rejoindre un couvert.
+
+step: Des ennemis encore libres menacent de le rejoindre à travers la végétation
+  do: Employer enchevêtrement pour freiner leur approche, puis changer de position.
+  note: Réflexes DD 15 ; trois utilisations par jour au total.
+
+step: Le combat se prolonge à ciel ouvert et il peut consacrer un round à l'incantation
+  do: Lancer appel de la foudre, puis diriger les éclairs sur les adversaires les plus dangereux.
+  note: Incantation d'un round ; jusqu'à six éclairs au niveau 6, au plus un par round. Chaque éclair inflige 3d6 dégâts d'électricité, Réflexes DD 17 pour réduire de moitié ; rappeler un éclair demande une action simple.
+
+step: Il dispose d'une ligne de tir et n'a pas besoin d'un pouvoir ce round
+  do: Tirer à l'arc long, en priorité sur un adversaire qui le poursuit ou continue d'agir efficacement malgré les entraves.
+  note: Il ne possède qu'une attaque par action d'attaque et doit compter ses 20 flèches.
+
+step: Un ennemi arrive au contact
+  do: Faire un pas de 1,50 m si cela permet de sortir de son allonge, puis tirer ; sinon, se dégager pour retrouver une position de tir.
+  note: Si le contact reste inévitable, utiliser la dague +7 (1d3-1, 19-20). La lance au contact n'a qu'un bonus de +3.
+
+step: Une menace volante ou un passage étroit se prête à l'emploi du vent
+  do: Utiliser bourrasque pour gêner l'approche, puis profiter du répit pour s'éloigner.
+  note: Vigueur DD 16 ; l'effet dépend de la taille et du mode de déplacement des créatures exposées.
+
+## Repli
+
+step: Il tombe à 11 pv ou moins, ou les ennemis lui interdisent de garder ses distances
+  do: Se dégager du contact, utiliser invisibilité puis rejoindre une cachette de l'île en se déplaçant de 9 m par action de mouvement.
+  note: Cesser les attaques pour conserver l'invisibilité ; utiliser ensuite Discrétion +16 dès que les conditions permettent de se cacher.
+
+step: Il n'a plus d'invisibilité disponible
+  do: Utiliser un dernier enchevêtrement si la végétation le permet, puis gagner un couvert et rompre la ligne de vue.
+  note: Sa réduction des dégâts 5/fer froid aide contre certaines armes, mais ses 33 pv ne lui permettent pas de soutenir longtemps une mêlée.

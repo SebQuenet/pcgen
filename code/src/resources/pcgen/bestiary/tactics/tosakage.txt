@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Tosakage est un nue mâle de Grande taille, une créature magique neutre mauvaise (FP 12). Il affaiblit les intrus par ses pouvoirs magiques avant de les déchirer au corps à corps.
+  161 pv ; CA 27, contact 16 ; initiative +10 ; déplacement de 9 m ; espace et allonge de 3 m.
+  Morsure +21 (2d6+8 et absorption d'énergie), seconde morsure +21 (1d4+8 et poison), 2 griffes +21 (1d6+8 chacune).
+  Perception +20, Discrétion +23 ; vision dans le noir à 18 m et vision nocturne. Il parle le tien et possède une forme de nuage.
+
+resource: Cri | 1/jour | DD 16 ; NLS 12
+resource: Vagues de fatigue | 1/jour | NLS 12
+resource: Immobilisation de personne | 3/jour | DD 15 ; NLS 12
+resource: Contagion | 3/jour | DD 16 ; NLS 12
+resource: Cauchemar | 1/jour | DD 17 ; NLS 12
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +23 et observer leur progression avec Perception +20.
+  note: Repérer les lanceurs de sorts pour les viser ensuite avec immobilisation de personne ; conserver ses pouvoirs de zone pour l'ouverture.
+
+## Ouverture
+
+step: Premier round, les intrus sont à portée de son cri
+  do: Utiliser cri (DD 16) en visant plusieurs adversaires si leur position le permet.
+  note: Il commence par affaiblir les intrus avant d'engager la mêlée.
+
+step: Round suivant, plusieurs intrus peuvent être touchés par vagues de fatigue
+  do: Utiliser vagues de fatigue, puis avancer si nécessaire pour préparer le corps à corps, avec un déplacement de 9 m au maximum.
+  note: Cri et vagues de fatigue se jouent sur des rounds distincts ; cette approche ne lui accorde aucune attaque supplémentaire.
+
+step: Ses pouvoirs d'ouverture sont employés et aucun ennemi n'est à son allonge
+  do: Avancer vers un adversaire, puis porter la morsure +21 qui inflige 2d6+8 et l'absorption d'énergie s'il arrive à 3 m ou moins.
+  note: Après un déplacement normal, il porte une seule attaque ; il réserve l'attaque à outrance aux rounds où il peut rester sur place ou faire un pas de 1,50 m.
+
+## Rounds suivants
+
+step: Un adversaire l'affronte à 3 m ou moins et il peut effectuer une attaque à outrance
+  do: Porter les deux morsures +21 et les deux griffes +21 ; concentrer les attaques sur une même cible lorsque c'est possible.
+  note: La première morsure inflige 2d6+8 et l'absorption d'énergie ; la seconde inflige 1d4+8 et le poison ; chaque griffe inflige 1d6+8.
+
+step: Un lanceur de sorts humanoïde reste actif et il dispose d'immobilisation de personne
+  do: Utiliser immobilisation de personne (DD 15) sur ce lanceur de sorts.
+  note: Ce pouvoir remplace ses attaques de ce round ; il reprend les morsures au round suivant. Les créatures non humanoïdes ne sont pas des cibles valides.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Profiter d'Attaques réflexes pour porter une morsure avec absorption d'énergie.
+  note: Son allonge lui permet de menacer les ennemis avant qu'ils n'arrivent au contact immédiat.
+
+note: Pouvoirs secondaires
+  Contagion et cauchemar ne sont pas prioritaires pendant cette mêlée : il privilégie son ouverture, l'immobilisation des lanceurs de sorts et ses morsures.
+  Les valeurs et les effets détaillés du poison et de l'absorption d'énergie ne sont pas précisés dans le profil fourni ; ne pas leur attribuer de DD ou de quantité supplémentaires.
+
+## Repli
+
+step: Ses points de vie passent sous 75
+  do: Rompre le combat et battre en retraite vers la zone G6 pour rejoindre son maître.
+  note: Le seuil est strict : il fuit à 74 pv ou moins. Employer le retrait si nécessaire pour quitter la mêlée ; utiliser sa forme de nuage si elle facilite la fuite.

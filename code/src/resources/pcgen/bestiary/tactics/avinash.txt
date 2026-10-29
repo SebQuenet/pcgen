@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Avinash, naga royal de taille énorme, aberration métamorphe loyale mauvaise, privilégie la manipulation et sa propre survie. 119 PV ; CA 25, contact 10, pris au dépourvu 23.
+  Attaque à outrance : 5 morsures +13, chacune infligeant 2d6+5 et un saignement. Espace et allonge : 4,50 m ; déplacement : 12 m.
+  Lanceur de sorts de niveau 9 ; concentration +14. Volonté +16, Vigueur et Réflexes +8.
+  Le montant du saignement et les règles du double regard mentionné dans les tactiques ne sont pas fournis.
+
+resource: Sorts de niveau 4 | 5/jour | réserve commune : charme-monstre (Volonté DD 19), œil du mage
+resource: Sorts de niveau 3 | 7/jour | réserve commune : clignotement, dissipation de la magie, suggestion (Volonté DD 18)
+resource: Sorts de niveau 2 | 7/jour | réserve commune : invisibilité, rayon ardent, immobilisation de personne (Volonté DD 17), discours captivant (Volonté DD 17)
+resource: Sorts de niveau 1 | 8/jour | réserve commune : armure de mage, bouclier, projectile magique, rayon affaiblissant (Vigueur DD 16), charme-personne (Volonté DD 16)
+resource: Détection de l'invisibilité | permanent | vision dans le noir à 18 m ; Perception +28
+
+step: Des intrus approchent sans avoir encore attaqué
+  do: Les observer et leur parler pour identifier les combattants et les lanceurs de sorts
+  note: Bluff et Diplomatie +19, Psychologie +25 ; il peut prendre les formes humanoïdes indiquées dans son bloc grâce à changement de forme
+
+## Ouverture
+
+step: Avinash est attaqué et n'a pas encore commencé sa préparation
+  do: Lancer invisibilité, puis s'éloigner des assaillants avec son déplacement de 12 m
+  note: S'il est menacé au moment de lancer un sort, privilégier l'incantation sur la défensive ; Magie de guerre porte alors sa concentration à +18
+
+step: Il est invisible mais ne bénéficie pas encore d'armure de mage
+  do: Au round suivant, lancer armure de mage et continuer à prendre de la distance
+  note: CA 29 tant que seule cette protection est active ; ce sort ne rompt pas son invisibilité
+
+step: Armure de mage est active, mais bouclier manque encore
+  do: Au round suivant, lancer bouclier et se placer à distance des combattants
+  note: Avec les deux sorts actifs, CA 33 ; ces protections ne modifient pas sa CA de contact
+
+step: Ses protections sont actives et un combattant adverse peut être influencé
+  do: Lancer charme-monstre sur lui (Volonté DD 19), ou suggestion (Volonté DD 18) pour le convaincre de se retirer ou de retenir ses compagnons
+  note: Chercher à diviser le groupe ; un charme ne donne pas le contrôle absolu de la cible. Ce sort hostile met fin à son invisibilité
+
+## Rounds suivants
+
+step: Un combattant résiste à son influence ou une autre cible devient plus utile
+  do: Tenter charme-monstre ou suggestion sur cette nouvelle cible
+  note: Formuler une suggestion plausible ; éviter de fonder sa tactique sur un ordre manifestement suicidaire ou sur une attaque automatique contre les alliés de la cible
+
+step: Un humanoïde dangereux reste libre et menace de le rejoindre
+  do: Lancer immobilisation de personne (Volonté DD 17), puis maintenir la distance
+  note: Ce sort ne vise que les humanoïdes ; il puise dans la même réserve qu'invisibilité
+
+step: Une protection magique adverse empêche sa tactique de fonctionner
+  do: Tenter dissipation de la magie sur l'effet gênant
+  note: Préserver des sorts de niveau 3 pour suggestion ou clignotement selon la pression ennemie
+
+step: Il subit une forte pression malgré ses protections
+  do: Lancer clignotement, puis chercher une position permettant de continuer ses sorts ou de fuir
+
+step: Les sorts d'influence sont inefficaces et il peut rester à distance
+  do: Employer rayon ardent ou projectile magique contre la menace prioritaire
+  note: Éviter d'épuiser toute sa réserve de niveau 2 afin de conserver invisibilité pour le repli
+
+step: Un ennemi reste à son allonge et Avinash peut consacrer son round à attaquer
+  do: Faire une attaque à outrance avec ses 5 morsures +13, chacune pour 2d6+5 et saignement
+  note: Exploiter son allonge de 4,50 m et Attaques réflexes pour punir les déplacements qui provoquent des attaques d'opportunité ; ne pas poursuivre au prix de sa sécurité
+
+## Repli
+
+step: Points de vie strictement inférieurs à 30
+  do: Abandonner le combat ; lancer invisibilité s'il lui reste un sort de niveau 2, puis s'éloigner vers une sortie à 12 m par déplacement
+  note: Ce seuil prime sur toute autre action. S'il ne peut plus devenir invisible, profiter de ses protections encore actives et consacrer ses actions à fuir

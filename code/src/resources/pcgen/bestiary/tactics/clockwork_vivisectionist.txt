@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Vivisectionniste mécanique, créature artificielle de taille M, neutre et sans intelligence, qui applique les consignes reçues. 91 pv ; CA 24, contact 14, pris au dépourvu 20.
+  Deux griffes +22, chacune infligeant 2d6+9 dégâts avec étreinte ; BMO +26 en lutte, DMD 36. Déplacement de 9 m ; allonge de 1,50 m.
+  Vision à 360°, vision dans le noir à 18 m et vision crépusculaire ; Perception -1.
+
+note: Protection et faiblesse
+  RD 10/contondant et immunités des créatures artificielles. Les attaques contondantes passent sa réduction des dégâts ; les dégâts d'électricité sont augmentés de 50 %.
+  Sa vision à 360° empêche la prise en tenaille. Son absence d'intelligence impose des choix simples, conformes à ses consignes.
+
+step: Il est chargé de garder un accès
+  do: Attendre au poste assigné, près du passage que les intrus doivent emprunter, pour les engager à portée de griffe.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux griffes +22, chacune pour 2d6+9 dégâts et étreinte.
+
+step: Aucun ennemi au contact, mais une cible est accessible après un déplacement de 9 m au plus
+  do: Rejoindre la cible désignée par ses consignes, ou l'intrus le plus proche, puis porter une seule griffe +22 pour 2d6+9 dégâts et étreinte.
+
+step: Aucun ennemi ne peut être atteint après ce déplacement
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour se rapprocher de sa cible.
+  note: Il ne dispose d'aucune attaque à distance.
+
+note: Étreinte
+  Chaque griffe qui touche une cible de taille M ou inférieure permet de tenter immédiatement une lutte à +26, en action libre et sans provoquer d'attaque d'opportunité.
+  S'il établit une prise avant la fin de son attaque à outrance, son état agrippé impose un malus de -2 aux attaques de griffe restantes.
+
+## Rounds suivants
+
+step: Il tient toujours une cible en lutte
+  do: Consacrer son action simple au maintien de la prise, avec son BMO +26 et le bonus de maintien de +5 si la cible n'a pas rompu la lutte ; en cas de réussite, lui infliger les dégâts d'une griffe, soit 2d6+9.
+  note: Le maintien de la prise remplace son attaque à outrance pour ce round.
+
+step: Aucune prise en cours et un ennemi reste à portée
+  do: Reprendre l'attaque à outrance avec les deux griffes et tenter l'étreinte sur les coups au but contre une cible de taille M ou inférieure.
+
+step: La cible échappe au contact
+  do: La rejoindre selon les consignes reçues ; après un déplacement de 9 m au plus, porter une griffe si elle est à portée.
+
+step: La cible ne peut plus combattre
+  do: Relâcher la prise et engager le prochain intrus désigné par ses consignes, ou le plus proche.
+
+## Repli
+
+step: Ses consignes ne prévoient aucun repli
+  do: Continuer à combattre, même gravement endommagé, jusqu'à sa destruction à 0 pv.
+  note: Son absence d'intelligence ne lui donne aucune raison d'inventer un seuil de fuite ou une réaction tactique à l'électricité.
+
+step: Une consigne explicite impose de quitter le combat
+  do: Relâcher une éventuelle prise et exécuter cette consigne ; utiliser une retraite jusqu'à 18 m pour quitter le contact si le trajet le permet.

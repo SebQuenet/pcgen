@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Nakurrh, géante des scories métisse d’ascendance des cendres, ensorceleuse chaotique mauvaise, FP 9. Elle désorganise les intrus par ses sorts avant de les écraser au marteau.
+  95 pv ; CA 23, contact 10 ; déplacement de 12 m ; espace et allonge de 3 m. Marteau de guerre de maître +16/+11 (2d6+8, critique x3) et coup secondaire +9 (1d8+4 et maladie), ou deux coups +14 (1d8+8 et maladie) ; rocher +8 (1d8+8).
+  Immunité au poison et aux afflictions de son ascendance ; résistance à l’acide 10 et au feu 30. Sa Volonté +4 et sa CA de contact 10 l’exposent aux lanceurs de sorts.
+
+resource: Sorts de niveau 3 | 2/jour | nuage nauséabond, Vigueur DD 15 ; NLS 10
+resource: Sorts de niveau 2 | 2/jour au total | réserve commune à flèche acide et rayon ardent ; NLS 10
+resource: Sorts de niveau 1 | 2/jour au total | réserve commune à rayon affaiblissant, Vigueur DD 13, et décharge électrique ; NLS 10
+resource: Rayon élémentaire | 5/jour | contact à distance, portée 9 m, 1d6+4 dégâts d’acide ; NLS 8
+
+step: Elle peut choisir sa position
+  do: Garder un passage dégagé pour son gabarit et sa retraite ; placer les ennemis à portée de son allonge en limitant les possibilités de l’encercler
+  note: Conserver les rochers disponibles à proximité ; aucun de ses sorts connus ne fournit de protection à lancer avant le combat.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et vulnérables au poison
+  do: Lancer nuage nauséabond sur eux, puis se rapprocher d’un bord du nuage pour intercepter ceux qui en sortent
+  note: Portée 60 m, rayon 6 m, durée 10 rounds ; Vigueur DD 15 ou nausée dans le nuage puis pendant 1d4+1 rounds après la sortie. Répéter le jet chaque round pour ceux qui restent après une réussite.
+  note: Nakurrh est immunisée à la nausée du nuage, mais sa visibilité est gênée comme celle des autres ; privilégier les cibles qui en émergent.
+
+step: Un combattant dangereux approche seul à 15 m ou moins
+  do: Lancer rayon affaiblissant avant son arrivée au corps à corps
+  note: Contact à distance ; malus de Force de 1d6+5 pendant 10 rounds, réduit de moitié par Vigueur DD 13. Les malus de plusieurs rayons ne se cumulent pas.
+
+step: Un ennemi est déjà à portée de mêlée
+  do: Attaquer à outrance au marteau et avec le coup secondaire, sans dépenser un round à lancer un sort
+
+## Rounds suivants
+
+step: Une cible reste à 3 m ou moins et une attaque à outrance est possible
+  do: Concentrer marteau +16/+11 et coup +9 sur elle ; achever en priorité un lanceur de sorts accessible ou une cible nauséeuse
+  note: Si elle doit se déplacer de plus de 1,50 m pour l’atteindre, avancer puis porter seulement une attaque de marteau +16. Sans marteau, employer les deux coups +14 lors d’une attaque à outrance.
+
+step: Une cible dangereuse reste hors de mêlée, à 15 m ou moins
+  do: Lancer rayon ardent converti en acide par son lignage, en concentrant ses deux rayons sur la même cible
+  note: Chaque rayon exige un contact à distance et inflige 4d6 dégâts ; aucun jet de sauvegarde. Cette attaque consomme une seule utilisation de niveau 2.
+
+step: Une cible éloignée est difficile à rejoindre ou possède une résistance à la magie
+  do: Employer flèche acide, jusqu’à 240 m
+  note: Contact à distance ; 2d4 dégâts d’acide immédiatement puis à chacun des 3 rounds suivants, sans sauvegarde ni résistance à la magie.
+
+step: Elle économise ses sorts ou a épuisé les utilisations utiles
+  do: Employer le rayon élémentaire contre une cible à 9 m ou moins ; sinon lancer un rocher disponible
+  note: Décharge électrique reste une option de contact à 5d6 dégâts, convertibles en acide, si frapper une CA de contact est préférable au marteau. Sous menace, privilégier une incantation défensive ; Incantation de combat ajoute +4 à la concentration correspondante.
+
+step: Un rocher visible va la toucher
+  do: Tenter de le rattraper avec sa capacité de réception de rochers
+
+step: Un obstacle de pierre ou de métal barre son accès à une cible
+  do: Si le détruire ouvre réellement le passage, lui consacrer une attaque à outrance
+  note: Son pouvoir de fracassement double les dégâts contre cet objet ou cette structure.
+
+## Repli
+
+step: Points de vie sous 25 et issue accessible
+  do: Se désengager par une retraite, jusqu’à 24 m, en utilisant le nuage existant pour couper la vue des poursuivants
+  note: Si nécessaire et s’il lui reste un nuage nauséabond, le lancer sur les poursuivants puis s’éloigner de 12 m ce round ; sa propre immunité au poison permet d’en traverser les vapeurs.
+
+step: Toute fuite est bloquée
+  do: Concentrer ses attaques au marteau sur l’adversaire qui ferme le passage, puis partir dès qu’une ouverture apparaît

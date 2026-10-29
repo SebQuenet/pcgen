@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Objet animé de pierre de grande taille, créature artificielle sans intelligence : 52 pv, CA 15, solidité 8 et immunités des créatures artificielles.
+  Deux coups +10 (1d8+6 chacun) ; espace occupé de 3 m et allonge de 3 m ; déplacement de 12 m par round.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5.
+
+note: Comportement
+  Jouer un combattant mécanique : il frappe les adversaires accessibles, sans élaborer de stratégie ni identifier les faiblesses de leurs classes.
+  Ses améliorations de construction sont déjà comprises dans ses caractéristiques : deux attaques, vitesse accrue et solidité de la pierre.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance : deux coups +10, infligeant chacun 1d8+6 dégâts.
+
+step: Aucun adversaire n'est à portée
+  do: Avancer de 12 m au maximum vers l'adversaire le plus proche, puis porter un seul coup +10 (1d8+6) si celui-ci est désormais à 3 m ou moins.
+  note: S'il reste hors de portée, un second déplacement permet de parcourir jusqu'à 24 m au total, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée au début du tour
+  do: Répéter les deux coups +10 (1d8+6 chacun) en attaque à outrance.
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant les deux attaques.
+
+step: Aucun adversaire n'est à portée, même après un pas de placement
+  do: Se déplacer vers le plus proche et porter un seul coup si la distance le permet ; consacrer le tour au déplacement si nécessaire.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter un coup +10 (1d8+6) contre cet adversaire.
+  note: Une seule attaque d'opportunité par round ; un simple pas de placement de l'adversaire ne la provoque pas.
+
+step: L'objet subit des dégâts
+  do: Appliquer sa solidité 8 et les immunités des créatures artificielles.
+  note: La solidité réduit les dégâts de chaque attaque qui y est soumise ; elle ne constitue pas une réserve à dépenser.
+
+## Repli
+
+step: Il lui reste des points de vie
+  do: Continuer à combattre sans repli volontaire lié aux blessures.
+  note: Sans intelligence, il ne prend pas de décision de survie ; à 0 pv, il est détruit.

@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Pilali, archonte exscinder loyale bonne de taille TG, conserve les objets maléfiques pour les soustraire aux mortels. Elle cherche à neutraliser les intrus et à récupérer ces objets.
+  147 pv ; CA 29, contact 12 ; épée longue +3 de feu +25/+20/+15 (3d6+15, critique 19–20, plus 1d6 de feu). Espace et allonge de 4,50 m ; déplacement de 9 m, vol de 27 m par round, bonne manœuvrabilité.
+  Réduction des dégâts 10/Mal, résistance à la magie 23 ; immunité à l'acide, au froid, au feu, à l'électricité et à la pétrification. Ses pouvoirs magiques ont un NLS de 15.
+
+resource: Dissipation du Mal | 3/jour | DD 20 de Volonté pour renvoyer une créature extraplanaire mauvaise ; protection personnelle avant décharge
+resource: Boule de feu | 3/jour | 10d6 de feu, Réflexes DD 18 pour moitié ; rayon de 6 m
+resource: Colonne de feu | 3/jour | 15d6, moitié feu et moitié puissance divine, Réflexes DD 20 pour moitié ; rayon de 3 m
+resource: Changement de plan | 3/jour | fuite vers un autre plan ; Volonté DD 20 contre une cible non consentante
+resource: Localisation suprême | 1/jour | retrouver une créature ou un objet, selon les conditions du pouvoir
+resource: Orientation | 1/jour | trouver un itinéraire vers un lieu déterminé
+
+step: Des intrus approchent sans attaquer
+  do: Les observer avec Perception +28, vision lucide et détection du Mal constantes ; leur demander leurs intentions par télépathie à 30 m
+  note: Psychologie +28 et détection du mensonge, Volonté DD 19, servent à évaluer leurs réponses ; une aura mauvaise ne révèle pas à elle seule leurs projets
+
+step: Un affrontement devient probable et elle dispose de temps
+  do: Activer successivement protection contre le Mal et invisibilité personnelle ; choisir une position laissant de la place à son vol et à son allonge
+  note: Protection contre le Mal dure 15 minutes ; son bonus de parade de +2 ne se cumule pas avec celui déjà indiqué contre les créatures mauvaises. L'invisibilité prend fin lorsqu'elle attaque
+
+## Ouverture
+
+step: Des adversaires hostiles entrent dans un rayon de 9 m
+  do: Appliquer l'aura de menace, Volonté DD 24
+  note: Échec : −2 aux attaques, à la CA et aux sauvegardes pendant 10 rounds, ou jusqu'à ce que la victime touche Pilali. Une créature ayant résisté ou rompu l'effet y échappe ensuite pendant 24 heures
+
+step: Un intrus dangereux doit être capturé ou porte l'objet convoité
+  do: Immobilisation de monstre à 18 m au plus, Volonté DD 20 ; utiliser ensuite son déplacement pour approcher ou se placer entre la cible et sa sortie
+  note: Pouvoir à volonté ; la paralysie dure au plus 15 rounds. La cible peut consacrer une action complexe à un nouveau jet de sauvegarde à chaque tour ; ne pas compter sur une neutralisation définitive
+
+step: Plusieurs ennemis mauvais sont regroupés
+  do: Châtiment sacré à volonté, dans un rayon de 6 m, sans atteindre d'innocents neutres
+  note: 5d8 contre les créatures mauvaises, 10d6 contre les Extérieurs mauvais, et aveuglement pendant 1 round ; Volonté DD 19 réduit les dégâts de moitié et annule l'aveuglement. Les créatures bonnes sont épargnées ; les neutres subissent la moitié des dégâts, encore réduite de moitié sur sauvegarde réussie, sans aveuglement
+
+## Rounds suivants
+
+step: Un ennemi reste à portée et doit être abattu
+  do: Attaque à outrance à l'épée, +25/+20/+15, en restant si possible à 4,50 m de lui
+  note: Un déplacement supérieur à un pas de 1,50 m empêche normalement cette attaque à outrance. Réserver Attaque en puissance aux cibles faciles à toucher
+
+step: Une arme ennemie menace la mission ou une capture reste possible
+  do: Tenter un désarmement avec le BMC indiqué de +28 contre la DMD adverse
+  note: Science du désarmement évite l'attaque d'opportunité de la cible pour cette manœuvre ; privilégier le retrait de l'arme plutôt que les dégâts contre un adversaire qu'elle veut épargner
+
+step: L'objet recherché est accessible sur un adversaire et n'est pas tenu en main
+  do: Garder une main libre et tenter une subtilisation, BMC +28 contre la DMD adverse
+  note: Science de la subtilisation évite l'attaque d'opportunité de la cible ; cette manœuvre ne permet pas d'arracher une arme tenue ni de prendre un objet enfermé dans un sac
+
+step: Des ennemis provoquent des attaques d'opportunité dans son allonge
+  do: Les frapper à l'épée pour limiter leurs déplacements ou leurs actions imprudentes
+  note: Attaques réflexes permet jusqu'à 5 attaques d'opportunité par round, sans multiplier les attaques pour une même occasion. Une simple entrée dans son allonge ne suffit pas à en provoquer une
+
+step: Plusieurs ennemis restent groupés et les dégâts de zone sont justifiés
+  do: Choisir colonne de feu contre des ennemis résistants au feu, ou boule de feu contre un groupe plus étalé dépourvu de protection contre le feu
+  note: La moitié divine de colonne de feu contourne les protections contre le feu. Écarter des zones les alliés, les prisonniers et les objets qu'elle doit préserver
+
+step: Un Extérieur mauvais constitue la menace principale
+  do: Activer dissipation du Mal, puis tenter de le toucher en mêlée lors d'une action ultérieure pour le renvoyer, Volonté DD 20
+  note: Avant sa décharge, le pouvoir donne +4 de parade contre le Mal, remplaçant le bonus de +2 : CA 33 contre ces attaques. Il dure au plus 15 rounds ; le renvoi reste soumis à la résistance à la magie
+
+step: La position devient défavorable ou une cible tente de s'enfuir
+  do: Se repositionner en vol à 27 m, ou employer téléportation suprême à volonté vers une destination connue
+  note: La téléportation transporte seulement Pilali et jusqu'à 50 livres d'objets, sans passager ; elle consomme son action simple et ne permet donc pas une attaque à outrance dans le même tour
+
+## Repli
+
+step: Points de vie sous 40, ou objet récupéré sans nécessité de poursuivre le combat
+  do: Employer téléportation suprême vers un lieu sûr connu, avec l'objet si la limite de charge le permet ; utiliser changement de plan si une fuite extraplanaire est préférable
+  note: Ne pas supposer que changement de plan contourne un effet interdisant aussi les voyages planaires
+
+step: La téléportation est empêchée mais une issue physique reste libre
+  do: Profiter du vol à 27 m pour gagner une sortie ; si elle est menacée au contact, envisager un retrait avant de s'éloigner
+  note: Activer l'invisibilité une fois à couvert facilite la fuite ; ce pouvoir ne protège pas contre les attaques déjà dirigées sur elle
+
+step: Elle est hors de danger
+  do: Répéter soins légers à volonté, 1d8+5 pv par utilisation, jusqu'à récupération ; stabiliser les blessés accessibles si cela ne relance pas le combat
+  note: Localisation de créature ou d'objet permet de reprendre la recherche ; conserver localisation suprême pour une cible difficile à retrouver

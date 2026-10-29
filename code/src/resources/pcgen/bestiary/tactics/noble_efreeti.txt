@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Efrit noble appelé malik, Extérieur de Grande taille, loyal mauvais, FP 10. Il privilégie le combat aérien et les pouvoirs de feu, puis ses coups au contact.
+  136 pv ; CA 28, contact 13 ; initiative +7. Attaque à outrance : 2 coups +18, chacun infligeant 1d8+6 et 1d6 de feu ; allonge de 3 m.
+  Déplacement terrestre de 6 m, vol de 12 m avec manœuvrabilité parfaite. Immunité au feu ; vulnérabilité au froid, dont les dégâts sont augmentés de moitié.
+  Vision dans le noir à 18 m, détection de la magie permanente, Perception +18 et télépathie à 30 m. Ses pouvoirs ont un NLS de 15 et une concentration de +17.
+
+resource: Rayon ardent | à volonté | trois rayons par utilisation, chacun infligeant 4d6 de feu sur une attaque de contact à distance ; portée de 18 m
+resource: Rayon ardent rapide | 3/jour | mêmes rayons, en action rapide ; une seule action rapide par round
+resource: Boule de feu | 3/jour | 10d6 de feu dans un rayon de 6 m ; Réflexes DD 15 pour réduire de moitié
+resource: Mur de feu | 3/jour | DD 16 indiqué au profil ; les dégâts habituels du mur ne permettent pas de sauvegarde
+resource: Métal brûlant | 3/jour | chauffe progressivement l'équipement métallique ; ne remplace pas une attaque immédiatement décisive
+resource: Invisibilité | 3/jour | dure 15 minutes au maximum ; cesse lorsqu'il attaque
+resource: Invisibilité suprême | 1/jour | dure 15 rounds ; reste active lorsqu'il attaque
+resource: Image permanente | 1/jour | illusion ; Volonté DD 18 pour la reconnaître en interagissant avec elle
+resource: Tempête pyroclastique | 1/jour | comme tempête de grêle, avec du feu à la place du froid ; 3d6 contondants et 2d6 de feu, sans sauvegarde
+resource: Forme gazeuse | 1/jour | secours pour franchir des fissures ; vitesse de vol réduite à 3 m
+resource: Souhaits accordés | 1/jour | jusqu'à trois souhaits, uniquement pour des non-génies ; monnaie de négociation, aucun souhait personnel
+resource: Changement de plan | à volonté | fuite personnelle ou transport de créatures consentantes vers un plan élémentaire, le plan Astral ou le plan Matériel
+
+step: Il repère les intrus avant d'être attaqué
+  do: Observer leurs auras magiques et prendre de la hauteur ; utiliser invisibilité pour se placer sans révéler sa position.
+  note: Détection de la magie ne révèle pas à elle seule les sorts préparés ni toutes les résistances des adversaires.
+
+step: Il dispose du temps nécessaire pour préparer le terrain
+  do: Placer une image permanente de sa silhouette ailleurs dans la salle pour détourner l'approche, puis attendre à distance.
+  note: L'image ne blesse personne et ne constitue aucun obstacle matériel. Le changement de forme sert aussi à approcher sous une apparence humanoïde ou de géant, sans transformer ses pouvoirs en capacités supplémentaires.
+
+## Ouverture
+
+note: Ordre des actions
+  Choisir une seule des actions simples ci-dessous, éventuellement accompagnée d'un rayon ardent rapide et d'un déplacement en vol. Concentrer les trois rayons sur la cible prioritaire.
+
+step: L'invisibilité suprême n'est pas encore active et les ennemis peuvent le menacer
+  do: Activer invisibilité suprême, lancer un rayon ardent rapide sur le lanceur de sorts de froid ou le tireur le plus dangereux, puis voler hors de portée du contact.
+  note: Les attaques révèlent sa présence et peuvent permettre de situer son emplacement ; changer de position malgré l'invisibilité.
+
+step: Il est déjà protégé et plusieurs ennemis sont regroupés
+  do: Lancer boule de feu sur le groupe, puis un rayon ardent rapide sur la cible prioritaire encore debout.
+  note: Épargner ses alliés éventuels ; son immunité lui permet de supporter sa propre boule de feu.
+
+step: Une avancée ennemie doit être coupée immédiatement
+  do: Dresser un mur de feu entre les combattants et leurs soutiens, face chaude tournée vers les ennemis.
+  note: Le mur est opaque, mais franchissable ; sa traversée inflige 2d6+15 de feu. Ne tirer aucun rayon à travers : se déplacer pour retrouver une ligne de vue.
+
+## Rounds suivants
+
+step: Une cible dangereuse reste exposée à 18 m ou moins
+  do: Répéter rayon ardent en action simple ; ajouter sa version rapide tant qu'il en reste, puis changer de position en vol.
+  note: Priorité aux utilisateurs de froid, puis aux adversaires capables de le poursuivre en vol. Contre une résistance au feu, chaque rayon subit séparément cette résistance.
+
+step: Plusieurs ennemis restent groupés ou résistent au feu
+  do: Déclencher tempête pyroclastique dans une zone de 6 m de rayon et de 12 m de haut.
+  note: Les dégâts ne surviennent qu'au lancement. Pendant les 15 rounds de durée, la zone reste un terrain difficile ; sa partie contondante peut atteindre une cible immunisée au feu.
+
+step: Il peut ralentir une poursuite ou user un adversaire lourdement équipé
+  do: Employer mur de feu pour gêner le passage, ou métal brûlant sur l'équipement métallique si le combat doit durer.
+  note: Il traverse lui-même les flammes sans dommage. Un ennemi immunisé au feu ne subit pas cette pression : privilégier les coups ou les dégâts contondants de la tempête.
+
+step: Un adversaire l'atteint au contact et ne peut pas être évité
+  do: Porter ses deux coups en attaque à outrance ; exploiter son allonge de 3 m contre les déplacements qui provoquent des attaques d'opportunité.
+  note: Attaques réflexes permet jusqu'à quatre attaques d'opportunité par round, si des occasions distinctes se présentent. Pour lancer un pouvoir sous la menace, se dégager ou utiliser l'incantation sur la défensive.
+
+## Repli
+
+step: Ses points de vie passent sous 40, ou les attaques de froid rendent la poursuite du combat trop dangereuse
+  do: Utiliser changement de plan pour gagner le plan du Feu dès qu'il peut activer son pouvoir sans interruption.
+  note: Ce pouvoir ne bannit pas un ennemi récalcitrant. Si un adversaire le menace, se dégager d'abord ou l'activer sur la défensive ; aucun pouvoir de soin n'est fourni par ce profil.
+
+step: Le voyage planaire est empêché ou une position sûre doit être atteinte avant de l'utiliser
+  do: Fuir en vol à 12 m par déplacement, sous invisibilité si disponible ; interposer un mur de feu si cela retarde les poursuivants.
+  note: Si seules des fissures offrent une issue, employer forme gazeuse. Sa vitesse de 3 m en fait un moyen d'infiltration, peu adapté à une course-poursuite.

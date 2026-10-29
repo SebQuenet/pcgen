@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Miglargu est un froghemoth demi-fiélon de taille TG, mauvais et d'intelligence rudimentaire : une brute qui saisit ses proies et les écrase sous ses attaques naturelles.
+  216 pv ; CA 30 ; réduction des dégâts 10/magie ; résistance à la magie 27. Immunisé au poison ; résistances à l'acide, au froid, au feu et à l'électricité 10 ; protection électrique partielle, mais l'électricité le ralentit.
+  Morsure +22 (2d6+12, critique 19–20), quatre tentacules +20 (1d8+6 chacun) et langue +20 (1d4+6) ; chaque attaque permet une étreinte, avec un BMO de lutte de +30.
+  Allonge de 4,50 m, ou 9 m avec la langue ; espace occupé de 4,50 m. Déplacement terrestre de 6 m, vol de 12 m avec une bonne manœuvrabilité, nage de 9 m par action de déplacement.
+  Vision à 360°, vision aveugle à 9 m, vision dans le noir à 18 m ; Perception +29. Discrétion +19, ou +27 dans les marais.
+
+resource: Aura maudite | 3/jour | DD 20 ; NLS 16
+resource: Flétrissure | 1/jour | DD 20 ; NLS 16
+resource: Blasphème | 1/jour | DD 19 ; NLS 16
+resource: Ténèbres infernales | 1/jour | DD 16 ; NLS 16
+resource: Ténèbres | 3/jour | NLS 16
+
+step: Il repère les intrus avant qu'ils ne l'attaquent
+  do: Lancer aura maudite, puis attendre à couvert près d'un passage que sa langue peut atteindre
+  note: Dans un marais, exploiter sa Discrétion de +27 ; sa vision aveugle repère les créatures proches même sans visibilité
+
+## Ouverture
+
+step: Plusieurs ennemis sont encore à distance et peuvent être visés ensemble
+  do: Lancer flétrissure, DD 20, puis se rapprocher en volant pour menacer le groupe avec sa langue
+  note: Employer cette utilisation unique avant que les adversaires ne se dispersent
+
+step: Plusieurs adversaires non mauvais sont proches
+  do: Lancer blasphème, puis se placer pour atteindre les survivants au round suivant
+  note: Résoudre les effets selon les DV des cibles et son NLS 16 ; le DD 19 concerne le bannissement éventuel, pas les autres effets
+
+step: Une proie est à 9 m ou moins, sans être à portée de ses autres attaques
+  do: Attaquer avec la langue +20 (1d4+6), puis tenter l'étreinte à +30 si elle touche
+  note: S'il doit d'abord se déplacer, effectuer une seule attaque après ce déplacement
+
+step: Des ennemis sont déjà à portée et il peut consacrer son tour à une attaque à outrance
+  do: Porter la morsure, les quatre attaques de tentacule et l'attaque de langue, en respectant l'allonge de chacune
+  note: Concentrer les attaques sur une proie vulnérable et tenter l'étreinte après une touche
+
+## Rounds suivants
+
+step: Il peut encore effectuer une attaque à outrance
+  do: Répéter les six attaques naturelles et concentrer les coups sur une cible déjà blessée
+  note: Utiliser Attaque en puissance contre les adversaires faciles à toucher
+
+step: Il tient une proie dont il veut empêcher la fuite
+  do: Maintenir la lutte avec son BMO de +30 et choisir d'infliger des dégâts avec une attaque naturelle appropriée
+  note: Le maintien de la lutte prend une action simple ; il ne peut pas aussi effectuer une attaque à outrance ce round
+
+step: Les adversaires restent hors d'atteinte et flétrissure a déjà été utilisée
+  do: Lancer ténèbres infernales sur les ennemis bons regroupés, DD 16, puis se rapprocher en volant
+  note: Ses déplacements aériens permettent de poursuivre les ennemis que sa vitesse terrestre ne suffit pas à rejoindre
+
+step: Une attaque électrique le ralentit
+  do: Exploiter son allonge pour frapper une cible accessible, ou employer un pouvoir magique encore disponible
+  note: Appliquer le ralentissement malgré ses protections électriques ; adapter ses actions à cet effet
+
+## Repli
+
+step: Ses points de vie tombent sous 54 et il ne peut pas abattre rapidement son adversaire
+  do: Se retirer en volant, à 12 m par action de déplacement, ou nager à 9 m si l'eau offre une issue
+  note: Chercher un couvert, puis exploiter sa Discrétion ; préférer les marais quand le terrain le permet
+
+step: Il peut masquer son trajet par l'obscurité
+  do: Lancer ténèbres sur un objet qu'il emporte, puis poursuivre sa fuite
+  note: Cette protection dépend de l'éclairage et des sens des poursuivants ; elle ne bloque pas leur vision dans le noir

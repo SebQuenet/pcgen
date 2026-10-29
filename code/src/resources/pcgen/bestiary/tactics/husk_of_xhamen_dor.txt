@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Vestige mort-vivant gargantuesque de Xhamen-Dor, Grand Ancien affaibli, NE, FP 17. Prédateur peu intelligent, il attire ses proies avant de les dévorer.
+  253 PV, CA 32 ; morsure +25 (2d8+12 et décomposition redoutable), 4 tentacules +25 (2d6+12, critique 19–20). Espace et allonge : 6 m.
+  Déplacement 15 m, escalade et nage 9 m ; marche dans les airs permanente. Vision aveugle et perception des vibrations à 36 m, vision dans le noir à 18 m ; Perception +26, initiative +11.
+
+note: Endurance
+  Guérison accélérée 10 : récupérer 10 PV au début de son tour, sans dépasser 253 PV. RD 10, surmontée seulement par une arme à la fois épique et loyale.
+  Immunité au froid, au vieillissement, à la pétrification et aux dégâts de caractéristiques ; immunités des morts-vivants. Impossible à faire tomber à terre.
+
+resource: Marche dans les airs | permanent | franchir les obstacles et atteindre des adversaires en hauteur
+resource: Songe | à volonté | communiquer avec une créature endormie ; préparation hors combat
+resource: Cauchemar | à volonté | Volonté DD 21 ; activation de 10 minutes
+resource: Exigence | 3/jour | Volonté DD 24 contre la suggestion ; activation de 10 minutes
+resource: Attirance | 1/jour | Volonté DD 25 ; activation de 1 heure, durée 34 heures
+resource: Dissipation suprême | 1/jour | NLS 17, test de dissipation à +17
+resource: Flétrissure | 1/jour | 17d6 dégâts, Vigueur DD 24 pour moitié
+
+step: Il attend des proies dans son repaire
+  do: Rester immobile au fond du lac et laisser les intrus approcher avant de se révéler
+  note: Dans l'aventure, sa silhouette se confond avec le fond ; son objectif est d'attirer les victimes vers lui pour les consommer.
+
+step: Il dispose d'une heure avant l'arrivée des intrus
+  do: Placer Attirance sur un lieu proche de son embuscade, en désignant une espèce intelligente précise ou un alignement précis
+  note: Les créatures concernées sont poussées à rester dans le lieu enchanté si elles échouent au jet de Volonté DD 25.
+
+step: Une proie connue peut être contactée longtemps avant le combat
+  do: Employer Exigence pour lui suggérer de rejoindre les abords du repaire, sous un prétexte vraisemblable, en 25 mots au maximum
+  note: La suggestion doit paraître raisonnable ; un ordre manifestement suicidaire échoue. Songe transmet un leurre pendant le sommeil ; Cauchemar perturbe le repos d'une cible endormie, inflige 1d10 dégâts, la laisse fatiguée et empêche la récupération de ses sorts profanes pendant 24 heures en cas d'échec.
+
+## Ouverture
+
+step: Des ennemis le voient et l'entendent à 90 m ou moins
+  do: Résoudre la présence indicible, Volonté DD 27, avant de choisir son action offensive
+  note: Un échec retire le bonus de Dextérité à la CA contre ses attaques. Une victime déjà infectée par la consomption liée aux germes doit aussi avancer vers lui d'au moins sa vitesse chaque round ; arrivée dans son allonge, elle devient chancelante jusqu'à la fin de son prochain tour et cesse cette marche forcée.
+
+step: Plusieurs adversaires vivants sont encore hors de son allonge
+  do: Lancer Flétrissure sur le plus grand nombre possible, puis avancer si cela améliore sa position
+  note: Aucune paire de cibles ne doit être séparée de plus de 18 m. Vigueur DD 24 pour moitié ; contre les créatures végétales et les élémentaires de l'eau, remplacer les 17d6 par 17d8.
+
+step: Un adversaire est déjà à 6 m ou moins
+  do: Effectuer une attaque à outrance : morsure et quatre tentacules, tous à +25
+  note: Concentrer les attaques sur une victime privée de son bonus de Dextérité ou déjà affaiblie ; faire porter la morsure sur elle pour transmettre la décomposition.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement important
+  do: Répéter l'attaque à outrance ; au besoin, faire seulement un pas de 1,50 m pour conserver les cinq attaques
+  note: Contre une cible facile à toucher, activer Attaque en puissance : attaques à +20, morsure 2d8+22 et tentacules 2d6+22. Conserver +25 contre une CA élevée.
+
+step: Il doit se déplacer pour atteindre une victime
+  do: Avancer jusqu'à 15 m au sol, ou 9 m en nageant ou en grimpant, puis effectuer une morsure avec Science de la frappe décisive : +25, 6d8+12 et décomposition
+  note: Avec Attaque en puissance : +20 et 6d8+22. Cette attaque unique remplace l'attaque à outrance ; elle ne s'ajoute pas à une charge ni à une attaque d'opportunité.
+
+step: Une victime subit la décomposition redoutable
+  do: Suivre l'affliction dès la blessure puis pendant les quatre rounds suivants, et continuer à frapper cette victime si elle reste accessible
+  note: Chaque round, Vigueur DD 27 ou 2 dégâts de Constitution et 2 de Sagesse. Deux réussites consécutives ou le sort Guérison mettent fin à l'effet.
+
+step: Un critique est confirmé
+  do: Appliquer le don qui rend la victime chancelante pendant 1d4+1 rounds
+  note: Vigueur DD 26 réduit cette durée à 1 round. Les tentacules menacent sur 19–20 ; son don de confirmation des critiques ajoute +4 au jet de confirmation.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 6 m
+  do: Frapper avec la morsure pour transmettre la décomposition, ou avec un tentacule pour rechercher un critique
+  note: Attaques réflexes permet deux attaques d'opportunité par round, chacune sur une occasion distincte, même lorsqu'il est pris au dépourvu.
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Employer Dissipation suprême sur le bénéficiaire avant de reprendre les attaques physiques
+  note: Test à +17 contre DD 11 + NLS de l'effet ; une seule utilisation quotidienne, à réserver à un obstacle décisif.
+
+step: Un adversaire dangereux reste hors d'allonge mais à 30 m ou moins
+  do: Consacrer une action simple à focaliser sa folie sur lui par télépathie : Volonté DD 27 ou Aliénation mentale permanente
+  note: Une tentative ennemie de lire directement ses pensées déclenche également cette défense. Une conversation télépathique ordinaire ne suffit pas à l'infliger.
+
+## Repli
+
+step: Il tombe sous 60 PV et peut rompre le contact
+  do: Gagner les profondeurs du lac à 9 m par déplacement, ou emprunter un obstacle vertical grâce à l'escalade ou à la marche dans les airs
+  note: Chercher un abri qui interrompt les attaques ennemies et laisser la guérison accélérée restaurer 10 PV par round avant de revenir à l'embuscade.
+
+step: Les adversaires lui interdisent toute fuite
+  do: Concentrer morsure et tentacules sur la cible la plus affaiblie jusqu'à ouvrir une issue
+  note: À 0 PV, ce mort-vivant est détruit ; sa guérison accélérée ne le ramène pas au combat.

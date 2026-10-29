@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Windchaser est un cheval lourd éveillé et avancé, une bête magique de taille G, intelligente, qui parle le commun. Il défend son troupeau, mais préfère autrement fuir le combat.
+  46 pv, CA 16 ; déplacement de 9 m ; espace occupé de 3 m et allonge de 1,50 m. Morsure +8 (1d4+5), deux sabots +3 (1d6+2 chacun).
+
+step: Une menace approche du troupeau
+  do: Repérer les intrus avec Perception +10, la vision nocturne et l'odorat ; se placer entre eux et le troupeau
+  note: Il peut parler pour avertir les intrus avant d'engager le combat.
+
+## Ouverture
+
+step: Le troupeau est menacé et un ennemi est à portée de 1,50 m
+  do: Attaque à outrance : morsure +8 (1d4+5) et deux sabots +3 (1d6+2 chacun)
+
+step: Un ennemi menace le troupeau à une distance permettant une charge
+  do: Charger et porter une morsure +10 (1d4+5)
+  note: Parcourir entre 3 m et 18 m en ligne droite sur un trajet dégagé ; sa CA descend à 14 jusqu'au début de son prochain tour.
+
+step: La charge est impossible, mais le troupeau reste menacé
+  do: Avancer de 9 m au maximum pour intercepter l'ennemi ; porter une morsure +8 (1d4+5) si celui-ci arrive à portée de 1,50 m
+
+step: Son troupeau n'est pas menacé
+  do: Privilégier immédiatement la fuite selon les conditions de repli
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et menace le troupeau
+  do: Répéter l'attaque à outrance : morsure +8 (1d4+5) et deux sabots +3 (1d6+2 chacun)
+  note: Un pas de placement de 1,50 m permet d'ajuster sa position tout en conservant ses trois attaques.
+
+step: Un adversaire contourne Windchaser pour atteindre le troupeau
+  do: Se déplacer pour l'intercepter et le mordre si possible
+  note: Après un déplacement ordinaire, il porte seulement sa morsure ; il privilégie la protection du troupeau au nombre d'attaques.
+
+## Repli
+
+step: Le troupeau reste en danger, même si Windchaser est grièvement blessé
+  do: Tenir sa position et combattre jusqu'à la mort pour le protéger
+  note: Aucun seuil de points de vie ne déclenche sa fuite lorsqu'il défend son troupeau.
+
+step: Le troupeau est en sécurité ou Windchaser combat pour une autre raison
+  do: Fuir ; s'il est au contact, effectuer une retraite jusqu'à 18 m, puis courir aux rounds suivants dès que le terrain le permet
+  note: Avec le don Course, il parcourt jusqu'à 45 m par round en ligne droite sur un trajet dégagé.

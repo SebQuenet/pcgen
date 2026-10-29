@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Ghatanothoa, Grand Ancien de FP 29, aberration colossale neutre mauvaise, est un amas intelligent et monstrueux de membres, de bouches et d'yeux.
+  717 pv, guérison accélérée 25, CA 47, RM 40 ; déplacement et nage à 27 m, marche dans les airs permanente.
+  Trois morsures +40 (4d6+21, critique 19-20, étreinte), allonge 9 m ; six tentacules +38 (2d8+10, critique 19-20, étreinte), allonge 18 m. Présence indicible à 90 m, Volonté DD 39.
+
+note: Défenses et perception
+  RD 15/épique et loyal, résistance au feu 30 ; immunités notamment au froid, à l'électricité, à l'énergie négative, aux effets mentaux, à la paralysie et à la pétrification.
+  Vision lucide et liberté de mouvement permanentes ; vision aveugle et vision dans le noir à 18 m, Perception +49. Sa vision à 360 degrés empêche la prise en tenaille.
+
+resource: Pouvoirs permanents | constant | marche dans les airs, liberté de mouvement, vision lucide
+resource: Dissipation suprême, tentacules noirs, aliénation mentale, projection d'image | à volonté | NLS 29 ; aliénation mentale : Volonté DD 27 ; projection d'image : Volonté DD 27 pour interagir avec l'illusion
+resource: Débilité accélérée | 3/jour | action rapide, Volonté DD 25
+resource: Tremblement de terre | 3/jour | bouleverser le terrain et les structures
+resource: Tourbillon | 3/jour | DD 27, nécessite une étendue d'eau adaptée
+resource: Emprisonnement | 1/jour | attaque de contact au corps à corps, Volonté DD 29
+resource: Tempête vengeresse | 1/jour | DD 29, concentration pour faire progresser la tempête
+resource: Symbole d'aliénation mentale | 1/jour | Volonté DD 28
+resource: Tsunami | 1/jour | DD 29
+
+step: Il sait par où les intrus entreront et dispose du temps nécessaire
+  do: Préparer un symbole d'aliénation mentale sur leur passage, puis se placer avec une voie de sortie vers l'eau ou les airs.
+  note: Adapter le déclencheur aux intrus ; ne pas placer le symbole là où ils pourront le déclencher sans s'exposer.
+
+step: Il peut accueillir les intrus à distance
+  do: Créer une projection d'image pour observer leurs réactions et lancer ses pouvoirs depuis l'image en gardant son corps en retrait.
+  note: Maintenir une ligne d'effet entre son corps et l'image. Cette représentation parfaite transmet aussi sa malédiction, mais avec Volonté DD 20 ; ce jet est distinct du DD 27 de l'illusion.
+
+## Ouverture
+
+step: Les adversaires perçoivent sa présence dans les 90 m
+  do: Appliquer la présence indicible, Volonté DD 39, pendant qu'il choisit sa première action.
+  note: Un échec inflige une malédiction : diminution permanente de Dextérité de 1d10 par round, réduite à 1 point par round si la victime détourne les yeux. À Dextérité 0, elle devient une momie immobile mais consciente et vivante ; lever la malédiction est nécessaire pour mettre fin à cet état.
+
+step: Un lanceur de sorts dangereux est à portée et reste vulnérable aux effets mentaux
+  do: Lancer débilité accélérée sur lui, Volonté DD 25, puis employer son action simple selon la situation ci-dessous.
+  note: Cette action rapide peut accompagner un autre pouvoir ou une attaque à outrance ; elle consomme une des trois utilisations quotidiennes.
+
+step: Les protections magiques adverses gênent ses attaques ou ses pouvoirs
+  do: Employer dissipation suprême sur le porteur des protections les plus gênantes, puis avancer si cela améliore sa position.
+  note: Donner la priorité aux protections contre ses effets mentaux et à la liberté de mouvement avant de tenter une étreinte.
+
+step: Plusieurs adversaires sont regroupés au sol et leurs protections ne sont pas prioritaires
+  do: Lancer tentacules noirs pour gêner leurs déplacements, puis se placer afin de menacer la sortie de la zone avec ses tentacules.
+  note: Les tentacules du pouvoir effectuent leurs propres tests de lutte ; ils n'utilisent pas son BMO +55.
+
+step: Une cible est déjà à portée de ses membres et aucun contrôle préalable n'est nécessaire
+  do: Effectuer une attaque à outrance : six tentacules jusqu'à 18 m et trois morsures sur les cibles dans les 9 m.
+  note: Concentrer les attaques sur une cible prioritaire accessible. Une attaque à outrance ne permet pas d'avancer normalement pendant le même tour.
+
+## Rounds suivants
+
+step: Des ennemis restent à portée
+  do: Poursuivre les attaques à outrance et exploiter les attaques d'opportunité permises par Attaques réflexes lorsque les ennemis en provoquent.
+  note: Utiliser l'étreinte après une touche contre une cible admissible. Maintenir ensuite une lutte demande une action simple et remplace donc l'attaque à outrance de ce tour.
+
+step: Les ennemis restent hors de portée des morsures
+  do: Attaquer à outrance avec les tentacules s'ils sont dans les 18 m ; sinon avancer jusqu'à 27 m et effectuer une seule attaque naturelle si une cible devient accessible.
+  note: Marcher dans les airs pour atteindre les adversaires en hauteur ; nager pour poursuivre ceux qui se réfugient dans l'eau.
+
+step: Un adversaire vulnérable aux effets mentaux continue de soutenir le groupe
+  do: Employer une nouvelle débilité accélérée s'il en reste, ou aliénation mentale en action simple, Volonté DD 27.
+  note: Changer de cible si une immunité est manifeste ; consacrer alors l'action simple à la dissipation ou aux attaques physiques.
+
+step: Une cible décisive est accessible au contact et résiste aux autres méthodes
+  do: Tenter emprisonnement, attaque de contact puis Volonté DD 29.
+  note: Réserver cette unique utilisation à un adversaire dont la disparition ferait basculer le combat.
+
+step: Le terrain ou l'eau permettent de séparer les adversaires
+  do: Choisir tremblement de terre pour briser leurs positions, tourbillon dans une étendue d'eau, ou tsunami pour balayer leur regroupement.
+  note: Choisir un seul de ces pouvoirs avec l'action simple du tour ; exploiter ensuite la séparation et sa mobilité pour isoler une victime.
+
+step: Les adversaires refusent l'approche et il peut les soumettre à un combat prolongé
+  do: Déclencher tempête vengeresse sur leur position, puis maintenir la concentration tant que ses effets restent plus utiles que ses attaques.
+  note: La concentration occupe son action simple ; il peut encore se déplacer et employer débilité accélérée s'il en reste.
+
+## Repli
+
+step: Il tombe sous 180 pv et les adversaires infligent plus de dégâts que sa guérison n'en répare
+  do: Se désengager vers l'eau profonde ou les airs, avec une retraite si nécessaire, puis mettre un obstacle entre lui et ses poursuivants.
+  note: Son déplacement de base est de 27 m. Une fois à l'abri, sa guérison accélérée rend 25 pv par round ; reprendre l'offensive lorsqu'il peut de nouveau imposer sa portée et sa présence.
+
+step: Les poursuivants menacent sa fuite
+  do: Employer tentacules noirs ou un tremblement de terre encore disponible pour gêner la poursuite, puis continuer à s'éloigner.
+  note: L'immortalité lui permet de renaître dans son repaire après la destruction de son corps ; elle ne lui rend pas instantanément ses pv pendant le combat.

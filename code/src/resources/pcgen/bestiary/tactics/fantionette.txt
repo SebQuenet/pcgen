@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Fantionette, petit extérieur chaotique mauvais, assassin trompeur sous une apparence d'enfant humain ou de halfelin adulte.
+  37 PV, CA 17 ; morsure +7 (1d4+1) et deux griffes +7 (1d3+1), allonge 1,50 m. Déplacement 9 m, escalade 6 m ; initiative +8, Discrétion +16.
+  Réduction des dégâts 5/Bien, résistance à la magie 15, immunité au poison ; vision dans le noir à 18 m. Privilégier une victime isolée et éviter l'encerclement.
+
+resource: Charme-personne | à volonté | Volonté DD 14 ; humanoïde, portée 10,50 m, durée 5 heures
+resource: Lumières dansantes | à volonté | diversion visuelle
+resource: Son imaginaire | à volonté | Volonté DD 14 pour incrédulité en cas d'interaction
+resource: Saignement | à volonté | Vigueur DD 14 ; fait recommencer à mourir une créature vivante stabilisée à PV négatifs
+resource: Ténèbres | 3/jour | objet touché, rayon 6 m, durée 5 minutes ; éclairage abaissé d'un cran
+resource: Porte dimensionnelle | 3/jour | portée 180 m ; aucune autre action avant son prochain tour après utilisation
+resource: Arme spirituelle | 3/jour | portée 45 m, durée 5 rounds ; attaque +7, dégâts de force 1d8+1
+resource: Poussière scintillante | 1/jour | rayon 3 m, portée 45 m, durée 5 rounds ; Volonté DD 15 contre l'aveuglement
+resource: Effroi | 1/jour | Volonté DD 15 ; au NLS 5, une créature vivante de moins de 6 DV
+resource: Fils de marionnette | 1/jour | action immédiate ; une attaque supplémentaire pendant une action simple, un déplacement ou une relance
+
+step: Des adultes peuvent être approchés sans hostilité
+  do: Jouer l'enfant perdu ou le halfelin inoffensif avec Bluff +11 ; employer charme-personne pour gagner la confiance d'un humanoïde et l'inviter à s'écarter du groupe.
+  note: Le charme rend amical ; il ne contraint pas à combattre ses alliés et se rompt si la fantionette ou ses alliés apparents menacent la cible.
+
+step: Elle veut conserver son déguisement
+  do: Rester à plus de 3 m des observateurs jusqu'à l'embuscade ; attirer une victime adulte par son imaginaire ou lumières dansantes.
+  note: Dans l'aura de révélation de 3 m, une créature qui l'étudie ou interagit avec elle peut tenter Volonté DD 15. Une réussite, ou une attaque subie de sa part, révèle sa vraie forme pendant 24 heures.
+
+## Ouverture
+
+step: Plusieurs ennemis sont groupés et ne la menacent pas encore au contact
+  do: Lancer poussière scintillante pour en aveugler plusieurs sans se prendre dans la zone ; se déplacer ensuite vers une victime isolée.
+  note: Les victimes aveuglées retentent Volonté DD 15 à la fin de chacun de leurs tours. La poussière révèle aussi les créatures invisibles, même si elles réussissent leur sauvegarde.
+
+step: Une victime est déjà à 1,50 m et elle peut consacrer son tour aux attaques
+  do: Attaque à outrance : morsure +7 (1d4+1) et deux griffes +7 (1d3+1), concentrées sur cette victime.
+
+step: Elle doit se déplacer pour atteindre une victime
+  do: Avancer jusqu'au contact, puis porter une morsure +7 (1d4+1).
+  note: Un déplacement ordinaire ne permet pas les trois attaques ; garder les fils de marionnette pour un besoin décisif.
+
+## Rounds suivants
+
+step: Une victime reste au contact
+  do: Répéter l'attaque à outrance ; préférer un adversaire aveuglé ou déjà blessé et rester hors de portée de ses soutiens.
+
+step: Un adversaire adjacent fait un pas de placement de 1,50 m pour s'éloigner
+  do: Utiliser Step Up et Following Step en action immédiate pour le suivre jusqu'à 3 m et finir adjacent.
+  note: Following Step préserve le déplacement et le pas de placement du prochain tour. Cette poursuite ne donne pas d'attaque gratuite et ne se déclenche pas sur un déplacement ordinaire.
+
+step: Une cible demeure à distance ou possède une réduction des dégâts gênante
+  do: Créer une arme spirituelle depuis une position sûre, puis la laisser frapper cette cible pendant que la fantionette se déplace ou attaque.
+  note: L'arme attaque chaque round sans nouvelle action tant qu'elle garde sa cible en vue et à portée ; changer de cible coûte une action de mouvement. Elle ne permet pas de prendre en tenaille.
+
+step: Une créature vivante de moins de 6 DV doit être écartée
+  do: Utiliser effroi pour la faire fuir et isoler une autre victime.
+  note: Volonté DD 15 ; échec : effrayée pendant 1d4 rounds, réussite : secouée pendant 1 round. Les créatures de 6 DV ou plus sont immunisées.
+
+step: La pénombre peut gêner des adversaires dépourvus de vision dans le noir
+  do: Lancer ténèbres sur un objet accessible, puis exploiter sa propre vision dans le noir pour combattre ou se dérober.
+  note: En lumière vive, le sort ne produit qu'un éclairage normal ; les ennemis dotés de vision dans le noir voient à travers ces ténèbres.
+
+step: Une seule intervention peut décider de l'issue du combat
+  do: Dépenser les fils de marionnette pour relancer un jet avant d'en connaître le résultat, ajouter une attaque à une action simple d'attaque, ou se déplacer jusqu'à 9 m.
+  note: Le déplacement fait perdre l'action de mouvement du prochain tour et peut provoquer normalement des attaques d'opportunité. Les fils et la poursuite par Step Up utilisent la même action immédiate disponible.
+
+## Repli
+
+step: Ses PV tombent à 12 ou moins, ou plusieurs ennemis peuvent la submerger
+  do: Garder au moins une porte dimensionnelle pour gagner un emplacement sûr, si possible connu, hors de vue des poursuivants.
+  note: Éviter d'utiliser ce pouvoir sous la menace d'une attaque d'opportunité ; s'écarter d'abord d'un pas de placement si cela suffit. La téléportation termine ses actions jusqu'à son prochain tour.
+
+step: Elle ne dispose plus de porte dimensionnelle
+  do: Se désengager, puis profiter d'une paroi praticable et de son escalade à 6 m pour gagner une issue ; se cacher avec Discrétion +16 une fois hors de vue.
+  note: Employer ténèbres si l'éclairage et la vision des poursuivants lui donnent un avantage. Son déguisement ne trompe plus, pendant 24 heures, ceux qu'elle a attaqués ou qui l'ont démasquée.

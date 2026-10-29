@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Volorog est un traqueur sans visage de Petite taille, une aberration métamorphe chaotique mauvaise, affaiblie et fatiguée. Il possède 18 PV et une CA de 15.
+  Coup +5 (1d4+1 et étreinte), allonge 1,50 m ; lutte +7. Déplacement 6 m ; vision dans le noir à 18 m.
+  Sa réduction des dégâts de 5 est ignorée par les armes perforantes ou tranchantes. Sa fatigue lui interdit de courir et de charger.
+
+resource: Don des langues | constant | NLS 5 ; facilite ses échanges et ses mensonges
+
+step: Il peut préparer la rencontre sans révéler sa nature
+  do: Prendre l'apparence d'un humanoïde de Petite taille grâce à changement de forme et utiliser Bluff +10 pour tromper les intrus
+  note: Déguisement +24 sous cette forme, contre +14 autrement ; ne pas lui attribuer de nouvelle attaque grâce au déguisement
+
+step: Les intrus approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +10 et les observer avec Perception +9 ; repérer un mur proche et une issue vers le marais
+
+## Ouverture
+
+step: Une cible prise au dépourvu est accessible au premier round
+  do: S'approcher à portée de 1,50 m, dans la limite de son déplacement de 6 m, puis porter un coup +5 pour 1d4+1 dégâts et tenter l'étreinte si elle est applicable
+  note: Privilégier cette cible conformément à ses tactiques ; aucun dégât d'attaque sournoise n'est indiqué dans ce profil, donc ne pas en ajouter
+  note: Après un coup réussi, l'étreinte permet une tentative de lutte à +7 en action libre, sans attaque d'opportunité
+
+step: Aucun adversaire pris au dépourvu n'est accessible
+  do: Se placer près d'un mur et frapper un ennemi à portée ; s'il est trop loin, s'en approcher sans charger
+
+## Rounds suivants
+
+step: Le combat est engagé et aucun motif de fuite ne s'applique
+  do: Combattre au contact d'un mur pour limiter les possibilités de prise en tenaille ; continuer les coups +5 et les tentatives d'étreinte après une touche
+  note: Le mur doit réellement empêcher un ennemi de se placer de l'autre côté ; il ne confère pas d'immunité à la prise en tenaille
+
+step: Il tient déjà un adversaire en lutte
+  do: Maintenir la lutte pour infliger les dégâts de son coup, soit 1d4+1, en cas de réussite
+  note: Son bonus de lutte est de +7, avant les modificateurs de situation ; aucun dégât de constriction n'est indiqué
+
+## Repli
+
+step: Un adversaire utilise du poison ou des serpents
+  do: Fuir immédiatement vers le marais, quel que soit son total de PV ; lâcher toute créature agrippée
+
+step: Ses PV sont inférieurs à 6
+  do: Lâcher toute prise et fuir vers le marais ; utiliser la retraite si possible pour s'éloigner jusqu'à 12 m sans courir
+  note: La fatigue reste applicable pendant la fuite ; utiliser compression si un passage étroit permet de semer les poursuivants
+
+step: Les adversaires se retirent dans la zone G5
+  do: Cesser la poursuite ; ne pas les suivre dans cette zone

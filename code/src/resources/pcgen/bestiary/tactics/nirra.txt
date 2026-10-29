@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Nirra est une araignée géante femelle de taille M, compagne vermine dressée : 22 pv, CA 17.
+  Morsure +6 (1d6 et poison), allonge de 1,50 m ; déplacement au sol et escalade à 9 m par round.
+  Vision dans le noir à 18 m, perception des vibrations à 9 m ; intelligence limitée, conduite guidée par ses tours appris et les ordres de son maître.
+
+step: Son maître lui ordonne de défendre
+  do: Rester près de lui pour attaquer les créatures qui le menacent
+
+step: Elle attend une cible à couvert
+  do: Se dissimuler près du passage, éventuellement sur une paroi accessible
+  note: Discrétion +7, Escalade +12 ; la perception des vibrations repère les mouvements transmis par une surface qu'elle touche
+
+## Ouverture
+
+step: Une cible désignée ou menaçant son maître est à 1,50 m ou moins
+  do: Mordre, attaque +6, pour 1d6 dégâts et poison
+  note: Le DD et les effets du poison ne sont pas précisés dans le profil fourni
+
+step: La cible est plus loin
+  do: Avancer ou grimper jusqu'à 9 m, puis mordre si la cible est désormais à portée
+  note: Utiliser une paroi si elle permet d'atteindre la cible ; la morsure exige toujours une distance de 1,50 m ou moins
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Répéter la morsure +6 à chaque round
+  note: Chaque morsure inflige 1d6 dégâts et expose au poison ; Nirra ne dispose que d'une attaque de morsure
+
+step: La cible s'éloigne et l'ordre d'attaquer reste valable
+  do: La poursuivre au sol ou en escalade, puis mordre si un déplacement de 9 m suffit à revenir à portée
+
+step: Son maître est attaqué alors qu'elle le défend
+  do: Revenir à portée de l'agresseur et le mordre dès que possible
+
+note: Esquive totale
+  Avec Réflexes +7, un jet de Réflexes réussi contre une attaque qui inflige normalement des dégâts réduits de moitié annule ces dégâts.
+  Un jet raté inflige les dégâts normaux : cette capacité ne justifie pas de rester dans une zone dangereuse.
+
+## Repli
+
+step: Son maître lui ordonne de venir
+  do: Le rejoindre au sol ou en escalade, à 9 m par action de mouvement
+
+step: Son maître lui ordonne de cesser l'attaque
+  do: Rompre l'engagement ; utiliser un pas de 1,50 m si cela suffit à sortir de portée, puis s'éloigner lorsque le passage est libre
+
+step: Points de vie à 7 ou moins et aucune consigne ne la maintient au combat
+  do: Chercher un abri en hauteur ou rejoindre son maître ; utiliser le retrait pour quitter le contact, jusqu'à 18 m au sol ou en escalade
+  note: Le retrait évite les attaques d'opportunité dues au départ de sa case initiale ; les autres cases menacées restent dangereuses

@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Xan, vanth psychopompe neutre, FP 12, est un combattant patient et fanatique qui observe ses ennemis avant de frapper par surprise.
+  Red Reaper, faux +1 conductrice en mithral : +21/+16/+11, 2d4+10, critique x4 ; à défaut, deux griffes +15, 1d6+3 chacune. Allonge : 1,50 m.
+  147 pv, CA 25, RD 10/adamantium, RM 23 ; résistance au froid 10 et à l'électricité 10 ; immunité aux effets de mort, aux maladies et aux poisons. Déplacement : 9 m au sol, 15 m en vol.
+
+resource: Invisibilité accélérée | à volonté | personnelle, action rapide ; prend fin lorsqu'il attaque
+resource: Vision lucide | 1/jour | déjoue notamment l'invisibilité et les illusions visuelles
+resource: Malédiction | 3/jour | contact, Volonté DD 17 ; la propriété conductrice de Red Reaper consomme deux utilisations pour transmettre le pouvoir sur un coup réussi
+resource: Lumière brûlante | 3/jour | rayon nécessitant une attaque de contact à distance
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,7 kg d'objets
+
+step: Il peut étudier ses adversaires avant l'affrontement
+  do: Les observer sous invisibilité, avec Perception +25 et Psychologie +25 ; repérer les combattants dangereux et une approche permettant d'atteindre une cible isolée
+  note: Discrétion +18 ; son changement de forme humanoïde permet aussi de se mêler aux vivants pendant l'observation
+
+step: L'attaque est imminente
+  do: Reprendre sa forme naturelle et rappeler sa faux en main si nécessaire, puis se placer sous invisibilité
+  note: S'il a déjà identifié des ennemis usant d'invisibilité ou d'illusions, activer vision lucide avant de s'exposer
+
+## Ouverture
+
+step: Une cible est accessible après un déplacement
+  do: Approcher sous invisibilité, puis porter une attaque de faux avec Attaque en puissance et Science de la frappe décisive : +17, 6d4+22
+  note: Ajouter les avantages de l'invisibilité contre une cible qui ne le voit pas : +2 à l'attaque et perte de son bonus de Dextérité à la CA. Cette frappe utilise une action simple
+
+step: Des adversaires entrent à 9 m ou moins
+  do: Appliquer son aura de peur : Volonté DD 20
+  note: Elle affecte les créatures de moins de 10 DV : un échec les laisse secouées tant qu'elles restent dans l'aura ; une réussite immunise contre cette aura pendant 24 heures
+
+## Rounds suivants
+
+step: Il peut encore tromper la vue de sa cible
+  do: Redevenir invisible par une action rapide, changer d'angle en marchant ou en volant, puis répéter la frappe décisive améliorée avec Attaque en puissance
+  note: Un déplacement permet de parcourir 9 m au sol ou 15 m en vol ; il choisit un nouvel angle d'attaque à chaque approche
+
+step: Une cible importante subit une touche de Red Reaper et il reste au moins deux malédictions
+  do: Transmettre malédiction par la faux conductrice, en dépensant deux utilisations ; Volonté DD 17 pour résister
+  note: Choisir le malus de -4 aux attaques, sauvegardes, tests de caractéristique et de compétence. La conduction est limitée à une fois par round
+
+step: Un ennemi emploie invisibilité ou illusions contre lui et vision lucide reste disponible
+  do: Activer vision lucide, puis reprendre ses attaques aux rounds suivants
+  note: Xan méprise les adversaires qui utilisent ses propres ruses contre lui
+
+step: Une cible reste au contact et poursuivre les frappes est avantageux
+  do: Attaque à outrance avec Attaque en puissance : faux +17/+12/+7, 2d4+22 par touche
+  note: Contre une CA difficile à toucher, abandonner Attaque en puissance et employer les valeurs normales +21/+16/+11, 2d4+10
+
+step: Une cible demeure hors de portée de la faux
+  do: Utiliser lumière brûlante si une ligne de tir est disponible, ou se rapprocher en vol ; employer téléportation suprême pour contourner un obstacle infranchissable
+  note: La téléportation utilise son action simple ; il reprend ses attaques au round suivant
+
+## Repli
+
+step: Ses points de vie diminuent, même près de 0
+  do: Continuer à combattre jusqu'à être tué
+  note: Fanatique dans son travail, Xan ne fuit pas ; ses déplacements et téléportations servent à poursuivre le combat

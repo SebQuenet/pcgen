@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Ultramarine Chaser, libellule géante féerique neutre, affamée de proies à sang chaud ; 52 points de vie, CA 18.
+  Morsure +10 (3d8+6 et étreinte), allonge de 1,50 m ; lutte +13, ou +17 lors d'une charge.
+  Vol parfait à 24 m par round, déplacement au sol à 6 m ; Attaque en vol et vol stationnaire.
+  Réduction des dégâts 5/fer froid, résistance au froid 10 et à l'électricité 10, esquive totale ; +4 aux sauvegardes contre les effets mentaux.
+
+resource: Enchevêtrement | 1/jour | DD 11
+resource: Poussière scintillante | 1/jour | DD 12
+resource: Sommeil profond | 1/jour | DD 13
+resource: Lueur féerique | 1/jour | signaler les cibles dissimulées
+resource: Image majeure | 1/jour | DD 13
+resource: Lumières dansantes | 3/jour | diversion visuelle
+resource: Disparition | 7 rounds/jour | décompter les rounds d'utilisation
+
+step: Des proies sont repérées
+  do: Rester en vol et chercher un angle d'approche dégagé vers une proie accessible
+  note: Perception +8, Discrétion +10 ; vision dans le noir à 18 m et vision nocturne.
+
+step: Une approche discrète est nécessaire
+  do: Utiliser disparition pendant l'approche
+  note: Conserver le décompte des 7 rounds disponibles pour la journée.
+
+## Ouverture
+
+step: Plusieurs adversaires se trouvent dans une zone de végétation adaptée
+  do: Lancer enchevêtrement sur eux (DD 11)
+  note: Le but est de gêner le groupe et de laisser une proie plus facile à isoler.
+
+step: Au round suivant, des adversaires ont échappé à l'enchevêtrement
+  do: Lancer poussière scintillante sur ces adversaires (DD 12), en couvrant autant de cibles que possible
+  note: En l'absence de végétation adaptée, commencer directement par poussière scintillante.
+
+step: Tous les adversaires sont enchevêtrés
+  do: Lancer poussière scintillante sur la proie choisie et les ennemis proches (DD 12)
+
+step: Une proie aveuglée est accessible par une trajectoire de charge dégagée
+  do: Charger en vol et porter une morsure, puis tenter l'étreinte si elle touche
+  note: Le bonus de lutte indiqué pour cette étreinte lors d'une charge est de +17. Commencer les passages avec Attaque en vol aux rounds suivants.
+
+## Rounds suivants
+
+step: Une proie aveuglée reste accessible et la libellule est libre de se déplacer
+  do: Utiliser Attaque en vol : approcher, porter une morsure +10 (3d8+6), puis poursuivre le déplacement
+  note: Le déplacement total du passage ne dépasse pas 24 m. Privilégier la même proie jusqu'à sa chute.
+
+step: La morsure touche et une étreinte est avantageuse
+  do: Tenter l'étreinte avec un bonus de lutte de +13, ou +17 si cette morsure provient d'une charge
+  note: Saisir une proie isolée évite de rester exposé au milieu de ses alliés.
+
+step: Une proie est agrippée et ses alliés ne peuvent pas intervenir immédiatement
+  do: Maintenir la lutte pour lui infliger les dégâts de morsure, 3d8+6
+
+step: La lutte l'expose aux attaques de plusieurs adversaires
+  do: Relâcher la proie et reprendre les passages avec Attaque en vol
+  note: Quitter une case menacée peut provoquer une attaque d'opportunité ; Attaque en vol ne supprime pas ce risque.
+
+step: Aucune cible n'est aveuglée et sommeil profond reste disponible
+  do: Lancer sommeil profond sur des proies regroupées (DD 13), puis attaquer une cible neutralisée au round suivant
+  note: Le sort affecte au maximum 10 DV de créatures, en commençant par celles qui ont le moins de DV.
+
+step: Une proie se dissimule grâce à l'invisibilité ou à un effet similaire
+  do: Employer lueur féerique si elle reste disponible, puis reprendre les attaques aériennes
+
+step: Les pouvoirs de contrôle sont épuisés ou inefficaces
+  do: Continuer les morsures en vol contre la proie la plus vulnérable
+  note: Éviter de terminer son déplacement au contact de plusieurs ennemis ; exploiter sa vitesse et son vol parfait.
+
+## Repli
+
+step: Le combat tourne à son désavantage, même avec très peu de points de vie
+  do: Poursuivre les attaques jusqu'à la mort
+  note: Sa faim de proies à sang chaud l'emporte sur son instinct de conservation ; aucun seuil de fuite.

@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Rêve de Xhamen-Dor, rêve animé de taille G, extérieur extraplanaire et intangible, neutre mauvais. 254 PV ; CA 19, contact 19 ; résistance à la magie 27.
+  Contact intangible +22 contre la CA de contact : 8d8 d'énergie négative et malédiction des cauchemars ; allonge de 3 m. Vol à 12 m, manœuvrabilité parfaite.
+  Vision dans le noir à 18 m, Perception +25 et télépathie à 30 m. Il cherche à faire échouer le rituel et accepte de mourir pour y parvenir.
+
+note: Objectif
+  Priorité à un lanceur secondaire du rituel : le faire fuir à plus de 30 m pour interrompre celui-ci. À défaut, tuer un PJ ou maintenir les PJ au combat pendant plus de 10 rounds.
+  Compter les rounds dès le début de l'affrontement.
+
+resource: Sommeil profond | 3/jour | DD 19 ; affecte au maximum 10 DV au total ; incantation de 1 round
+resource: Porte dimensionnelle | 3/jour | repositionnement ; NLS 12
+resource: Cauchemar | 3/jour | DD 21 ; préparation contre une victime endormie, incantation de 10 minutes
+resource: Confusion | 1/jour | DD 20
+resource: Terreur | 1/jour | DD 20 ; cône de 9 m
+resource: Assassin imaginaire | 1/jour | DD 20, Volonté puis Vigueur
+
+## Ouverture
+
+step: Un lanceur secondaire du rituel peut être pris dans le cône de terreur
+  do: Se placer en vol pour que sa fuite l'éloigne du rituel, puis utiliser terreur, Volonté DD 20
+  note: Chercher à le pousser au-delà de 30 m ; la peur est ici un moyen de provoquer l'échec du rituel. Une sauvegarde réussie ne provoque pas cette fuite.
+
+step: Terreur ne permet pas de menacer le rituel ou aucun lanceur secondaire n'est une cible viable
+  do: Utiliser assassin imaginaire sur un PJ susceptible de rater ses sauvegardes
+  note: Volonté DD 20 pour reconnaître l'illusion ; en cas d'échec, Vigueur DD 20 pour éviter la mort. Choisir la cible selon les faiblesses effectivement observées.
+
+## Rounds suivants
+
+step: Plusieurs PJ sont regroupés et confusion est encore disponible
+  do: Utiliser confusion, Volonté DD 20, pour désorganiser le groupe et prolonger l'affrontement
+  note: Si terreur a déjà mis un lanceur en fuite, occuper ses alliés pendant qu'il s'éloigne.
+
+step: Assassin imaginaire reste disponible après l'ouverture
+  do: L'employer contre un PJ vulnérable dès qu'aucune interruption immédiate du rituel par terreur n'est possible
+
+step: Une cible peut être frappée sans rester au milieu des combattants
+  do: Utiliser Attaque au passage : voler, porter un contact intangible +22 pour 8d8 d'énergie négative et la malédiction des cauchemars, puis poursuivre le déplacement
+  note: Exploiter l'allonge de 3 m et les 12 m de vol pour limiter les ripostes. Attaque au passage ne supprime pas les attaques d'opportunité.
+  note: Attaques réflexes permet jusqu'à 4 attaques d'opportunité par round si les adversaires en provoquent ; chacune utilise le contact intangible.
+
+step: Les PJ l'encerclent ou peuvent lui infliger une attaque à outrance
+  do: Utiliser porte dimensionnelle pour se replacer hors de leur concentration, puis les obliger à se déplacer pour reprendre le combat
+  note: Agilité dimensionnelle permet d'employer les actions encore disponibles après la téléportation. Le déplacement sert à gagner du temps pour dépasser 10 rounds de combat.
+
+step: Des adversaires totalisant au plus 10 DV peuvent être neutralisés et le rêve dispose du temps d'incantation
+  do: Utiliser sommeil profond, Volonté DD 19
+  note: Ne pas le gaspiller sur un PJ ayant plus de 10 DV ; ce pouvoir ne peut pas être combiné avec une Attaque au passage pendant le même round.
+
+## Repli
+
+step: Le rituel est interrompu
+  do: Le rêve s'efface vers le plan Éthéré ; déclencher l'événement d'échec du rituel
+  note: Cette disparition correspond à la fin prévue de l'affrontement.
+
+step: Le rituel se poursuit, même si ses points de vie sont très bas
+  do: Continuer à combattre jusqu'à la mort ou à l'interruption du rituel
+  note: Aucun seuil de PV ne déclenche une fuite ; ses repositionnements servent à prolonger le combat.

@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Drakestomper est un yzobu de taille G, un animal dressé au combat et à la monte, doté de 119 points de vie et d’une CA de 33.
+  Coup de corne +19 (2d6+15) ; à outrance, deux coups de corne +19/+14 (2d6+15 chacun). Espace occupé et allonge : 3 m ; déplacement : 9 m.
+  Son Intelligence de 2 appelle des réactions animales et des ordres simples : attaquer, défendre, garder ou suivre son maître.
+
+resource: Puanteur | permanente | rayon de 9 m ; Vigueur DD 20 ou état fiévreux pendant 10 rounds
+
+step: Avant l’approche des ennemis
+  do: Repérer les intrus grâce à l’odorat, à la vision nocturne et à Perception +24
+  note: S’il reçoit l’ordre de garder ou de rester, tenir sa position jusqu’à une menace ou un nouvel ordre.
+
+step: Il accompagne son maître
+  do: Rester assez près pour le défendre et suivre ses ordres de combat
+  note: Son dressage permet d’attaquer toute cible désignée. La puanteur peut aussi affecter les alliés présents dans son rayon.
+
+## Ouverture
+
+step: Une cible est déjà à 3 m ou moins
+  do: Attaque à outrance avec les deux coups de corne +19/+14
+  note: Profiter immédiatement de son allonge ; chaque coup inflige 2d6+15 dégâts.
+
+step: Une cible est accessible après un déplacement de 9 m ou moins
+  do: Avancer jusqu’à portée et donner un coup de corne +19 (2d6+15)
+  note: Les ennemis entrant dans le rayon de 9 m sont exposés à la puanteur, Vigueur DD 20.
+
+step: La cible est plus loin et une trajectoire de charge est libre
+  do: Charger en ligne droite sur 3 m à 18 m, puis donner un coup de corne +21 (2d6+15)
+  note: La charge réduit sa CA à 31 jusqu’au début de son prochain tour.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter l’attaque à outrance, deux coups de corne +19/+14
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant les deux attaques.
+
+step: La cible sort de portée
+  do: La rejoindre avec un déplacement de 9 m au maximum et porter un seul coup de corne +19
+  note: Privilégier la cible désignée par le maître ou l’ennemi qui le menace.
+
+step: Un adversaire provoque une attaque d’opportunité dans son allonge de 3 m
+  do: Donner un coup de corne +19 (2d6+15)
+  note: Une seule attaque d’opportunité par round.
+
+note: Résistance
+  Esquive totale : un jet de Réflexes réussi annule les dégâts d’une attaque qui en infligerait normalement la moitié sur une réussite ; Réflexes +12.
+  Dévotion : bonus de +4 aux sauvegardes contre les enchantements ; sa Volonté passe alors de +7 à +11.
+
+## Repli
+
+step: Son maître ordonne le repli
+  do: Rompre le combat et le suivre ; s’il est monté, se laisser guider vers une issue
+
+step: Points de vie sous 30, sans ordre de tenir ni maître à défendre
+  do: Effectuer une retraite jusqu’à 18 m vers un passage dégagé, puis continuer à s’éloigner
+  note: La retraite protège seulement la sortie de sa position initiale contre les attaques d’opportunité ; éviter de traverser les autres zones menacées.

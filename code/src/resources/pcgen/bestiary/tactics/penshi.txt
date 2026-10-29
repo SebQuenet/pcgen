@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Penshi est un ange choral de petite taille, neutre bon, qui privilégie la protection de ses alliés et le combat à distance.
+  Hymne perçant +12 au contact à distance : 4d6 dégâts sonores et surdité. Au corps à corps, coup +10 (1d3+1), à 1,50 m d'allonge.
+  68 pv, CA 29, réduction des dégâts 5/Mal, résistance à la magie 17 ; immunité à l'acide, au froid et à la pétrification ; résistance de 10 à l'électricité et au feu.
+  Déplacement terrestre de 12 m, vol de 18 m avec une bonne manœuvrabilité ; aura protectrice.
+
+resource: Soins modérés | 3/jour | soins pour lui-même ou un allié
+resource: Baies nourricières | 3/jour | réserve de soins à préparer avant l'affrontement
+resource: Sculpture sonore | 3/jour | DD 17 contre une cible non consentante
+resource: Aide, Dissipation du Mal, Dissipation de la magie, Invisibilité, Changement de plan, Délivrance de la peur | à volonté | Invisibilité et Changement de plan sur lui-même uniquement ; Dissipation du Mal DD 19
+
+step: Des inconnus approchent sans hostilité déclarée
+  do: Observer avec Détection du Mal, constante, et chercher une issue pacifique par la Diplomatie
+  note: La présence du Mal renseigne ses choix sans imposer une attaque immédiate
+
+step: Le combat se prépare et il dispose de quelques instants
+  do: Lancer Aide sur lui-même, puis Invisibilité ; préparer aussi ses alliés avec Aide si le temps le permet
+  note: Une attaque met fin à son invisibilité ; les points de vie temporaires d'Aide ne se cumulent pas avec ceux d'une nouvelle utilisation
+
+step: Une approche discrète est utile aux alliés
+  do: Employer Sculpture sonore pour atténuer leurs bruits de déplacement
+
+## Ouverture
+
+step: Il peut attaquer sans être engagé au corps à corps
+  do: Gagner une position aérienne, puis utiliser l'hymne perçant sur l'adversaire qui menace le plus ses alliés
+  note: Rester à portée de son hymne, mais au-delà de 1,50 m des ennemis dont l'allonge est limitée à cette distance
+
+step: Un ennemi le menace déjà au contact
+  do: Se dégager par un mouvement de retraite, en volant si l'espace le permet
+  note: Son coup est une solution de dernier recours ; retrouver une position permettant l'hymne est prioritaire
+
+## Rounds suivants
+
+step: Aucune urgence de soin ou de dissipation ne s'impose
+  do: Répéter l'hymne perçant sur la cible prioritaire et employer son déplacement pour conserver ses distances
+  note: Le bloc ne précise ni la portée de l'hymne, ni le DD ou la durée de sa surdité ; ne pas lui attribuer de valeurs supplémentaires
+
+step: Une protection magique ennemie gêne fortement le groupe
+  do: Consacrer son action à Dissipation de la magie sur cette protection
+
+step: Un extérieur mauvais extraplanaire mérite le risque d'une approche
+  do: Lancer Dissipation du Mal, puis tenter son renvoi par un contact lors d'un round ultérieur ; Volonté DD 19
+  note: Préférer l'hymne si atteindre la créature l'expose à plusieurs adversaires
+
+step: Il tombe à 34 pv ou moins, ou un allié risque de tomber
+  do: Employer Soins modérés si une utilisation reste disponible et si le bénéficiaire est accessible
+  note: Réserver les baies aux soins hors de l'urgence ; les pouvoirs de soutien remplacent l'attaque du round
+
+step: La peur empêche un allié d'agir utilement
+  do: Employer Délivrance de la peur sur lui
+
+## Repli
+
+step: Le combat tourne mal et une fuite locale reste possible
+  do: Lancer Invisibilité, puis s'éloigner en vol jusqu'à 18 m en utilisant les obstacles pour couper les lignes de vue
+  note: Rejoindre une position sûre pour se soigner avant de revenir soutenir les alliés
+
+step: Il tombe à 20 pv ou moins et ne peut plus tenir sa position sans risquer sa vie
+  do: Employer Changement de plan sur lui-même pour quitter le combat
+  note: Ce pouvoir ne lui permet pas d'emporter ses alliés

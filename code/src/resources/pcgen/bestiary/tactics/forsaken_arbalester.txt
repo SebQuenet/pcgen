@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Forsaken Arbalester, soldat mort-vivant loyal mauvais et intelligent, spécialisé dans le combat à distance. Il privilégie une position de tir protégée et le soutien de ses camarades.
+  Arbalète lourde à répétition de maître +6 (1d10, critique 19–20) ; épée courte +4 (1d6, critique 19–20), allonge 1,50 m.
+  27 pv ; CA 16, contact 11 ; initiative +5 ; déplacement de 6 m ; vision dans le noir à 18 m ; Perception +7.
+  Réduction des dégâts 5/contondant ou tranchant : les armes contondantes ou tranchantes la surmontent. Immunités des morts-vivants.
+
+resource: Carreaux | 20 | Chaque tir consomme un carreau ; chargeur de 5 carreaux.
+
+step: Il peut préparer sa position
+  do: Charger l'arbalète et se poster derrière un couvert des ruines, avec une ligne de tir dégagée et une voie de recul.
+  note: Chercher si possible une position à 9 m ou moins de la zone d'approche, hors de l'allonge adverse, pour profiter de Tir à bout portant.
+
+step: Il combat avec d'autres soldats
+  do: Se placer derrière les combattants de mêlée et convenir d'une cible commune en commun ou en jistka.
+  note: Décaler sa position pour que ses alliés ne donnent pas de couvert à la cible ; Tir de précision ne supprime pas le couvert.
+
+## Ouverture
+
+step: Une cible est visible et aucun ennemi ne le menace au corps à corps
+  do: Tirer un carreau sur une cible exposée, de préférence un adversaire peu protégé ou déjà blessé.
+  note: À 9 m ou moins, Tir à bout portant porte l'attaque à +7 et les dégâts à 1d10+1. Au-delà, utiliser +6 et 1d10, avant les éventuels malus de portée ; le facteur de portée est de 36 m.
+
+step: Un ennemi le menace et un pas suffit à sortir de toute allonge adverse
+  do: Faire un pas de placement de 1,50 m, puis tirer sur cet ennemi.
+  note: Vérifier qu'aucun autre adversaire ne menace sa nouvelle case avant de tirer.
+
+step: Un ennemi le menace et aucun pas sûr n'est possible
+  do: Lâcher l'arbalète, dégainer l'épée courte et attaquer à +4 pour 1d6 dégâts.
+  note: Il conserve son arbalète tant qu'un recul immédiat lui permet de reprendre le tir ; l'épée sert lorsqu'il est acculé.
+
+## Rounds suivants
+
+step: Il dispose d'une ligne de tir et de carreaux dans le chargeur
+  do: Continuer à tirer un carreau par round sur la même cible jusqu'à sa mise hors de combat, puis en choisir une autre.
+  note: Action simple pour tirer ; manœuvrer le levier à deux mains est une action libre tant que le chargeur contient des carreaux.
+
+step: La cible combat un de ses alliés au corps à corps
+  do: Continuer à la viser avec Tir de précision.
+  note: Le don annule le malus de −4 pour tirer dans une mêlée ; les autres obstacles et couverts s'appliquent normalement.
+
+step: L'ennemi approche ou la ligne de tir se ferme
+  do: Se déplacer jusqu'à 6 m vers une autre position protégée, puis tirer si aucune allonge ennemie ne le menace.
+  note: Préserver la distance avant de rechercher le bonus à 9 m ; sa lenteur rend une poursuite en terrain ouvert défavorable.
+
+step: Le chargeur est vide et il reste des carreaux
+  do: Charger 5 nouveaux carreaux pendant un round complet, depuis une position hors de l'allonge ennemie.
+  note: Le remplacement du chargeur exige les deux mains et provoque des attaques d'opportunité ; il ne tire pas pendant ce round.
+
+step: Il n'a plus de carreaux ou reste acculé
+  do: Combattre à l'épée courte, en rejoignant ses alliés si le passage est libre.
+  note: Privilégier une cible déjà engagée et prendre une position de tenaille lorsque c'est possible.
+
+## Repli
+
+step: Il lui reste 9 pv ou moins et une position de tir plus sûre est accessible
+  do: Se replier derrière un couvert ou ses camarades ; s'il est engagé, utiliser l'action de retraite pour parcourir jusqu'à 12 m.
+  note: La retraite occupe le round entier ; seule la case de départ cesse normalement d'être menacée pour ce déplacement. Reprendre le tir une fois hors d'atteinte.
+
+step: Il est encerclé sans issue
+  do: Tenir sa position à l'épée courte et concentrer ses attaques sur un adversaire.
+  note: Sa réduction des dégâts ne le protège pas des armes qui la surmontent ; à 0 pv, il est détruit.

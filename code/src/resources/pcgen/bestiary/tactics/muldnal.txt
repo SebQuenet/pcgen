@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Muldnal, petit agathion neutre bon, gardien des souterrains de Nirvana. Pacifiste, il cherche à chasser les intrus ou à les assommer ; le sang qui coule le révulse.
+  38 pv, CA 14 ; bâton de maître +6 (1d4), ou morsure +5 (1d8 et paralysie) et 2 griffes +5 (1d3 chacune). Allonge 1,50 m.
+  Déplacement 6 m ; creusement 12 m dans un sol approprié. Vision dans le noir à 36 m, perception des vibrations à 9 m, Perception +12 et Discrétion +14 sous terre.
+  Réduction des dégâts 5/Mal ou argent ; résistance à la magie 14 ; immunité à l'électricité, à la paralysie et à la pétrification ; résistances acide, froid et son 10.
+
+resource: Création de fosse | 3/jour | Réflexes DD 13 ; NLS 4
+resource: Imposition des mains | 3/jour | 2d6 pv ; action rapide sur lui-même, action simple sur autrui
+resource: Convocation de silvanshee | 1/jour | 35 % de réussite ; un seul silvanshee, sans garantie de renfort
+resource: Déplacement de terre | 1/jour | Aménagement préalable du terrain meuble
+resource: Sorts préparés de niveaux 1 et 2 | 1 utilisation par sort indiqué | NLS 4 ; contrôle de la vermine : DD 17
+
+step: Des intrus approchent sans attaquer
+  do: Leur parler grâce à son don des langues et leur demander de repartir ; indiquer une issue sûre.
+  note: Il ne déclenche pas un combat contre des voyageurs pacifiques.
+
+step: Il peut choisir le lieu de la confrontation
+  do: Rester dans une galerie sombre, reconnaître les pièges avec détection des collets et des fosses et garder un accès au sol meuble pour fuir.
+  note: Éviter la lumière vive, qui déclenche sa sensibilité à la lumière. Le creusement ne permet pas de traverser automatiquement la roche.
+
+step: Il dispose de temps pour préparer les abords
+  do: Employer déplacement de terre pour aménager un fossé ou un talus en terre meuble et canaliser l'approche des intrus.
+
+step: Le combat paraît imminent
+  do: Lancer bâton magique sur son bâton avant le contact.
+  note: Pendant 4 minutes, le bâton frappe à +6 pour 1d8+1. Le don Bludgeoner permet d'infliger des dégâts non létaux sans pénalité d'attaque.
+
+## Ouverture
+
+step: Un adversaire dangereux approche à distance
+  do: Ouvrir une création de fosse sous lui ou dans le passage pour séparer les assaillants.
+  note: Surface de 3 m sur 3 m, profondeur de 6 m, durée de 5 rounds ; Réflexes DD 13 pour éviter la chute. Rester à distance des bords inclinés.
+
+step: Un ennemi est déjà au contact et peut être neutralisé sans le blesser mortellement
+  do: Porter un coup de bâton non létal, avec bâton magique si le sort est actif.
+  note: Une seule attaque après un déplacement ; il ne cumule pas cette action avec la création de fosse.
+
+## Rounds suivants
+
+step: Les adversaires peuvent encore négocier ou se retirer
+  do: Leur proposer de cesser le combat et les laisser partir.
+
+step: Un poursuivant reste au sol à distance
+  do: Employer piétinement tonitruant pour tenter de le faire tomber, puis s'éloigner.
+  note: Le muldnal et sa cible doivent toucher le sol ; ce sort provoque une tentative de croc-en-jambe, sans jet de sauvegarde.
+
+step: Plusieurs ennemis progressent sur un terrain naturel non travaillé
+  do: Employer ramollissement de la terre et de la pierre pour gêner leur progression, puis combattre depuis le bord de la zone.
+  note: Choisir un sol adapté ; ce sort ne transforme pas la pierre travaillée en boue.
+
+step: Une vermine présente menace le muldnal ou ses alliés
+  do: Employer contrôle de la vermine, DD 17, pour la détourner selon les possibilités du sort.
+
+step: Il doit tenir seul et peut consacrer du temps à appeler du secours
+  do: Tenter sa convocation de silvanshee, puis poursuivre son propre combat.
+  note: En cas d'échec, continuer sans renfort ; cette tentative consomme l'utilisation quotidienne.
+
+step: Il reste au contact sans danger mortel immédiat
+  do: Répéter les coups de bâton non létaux contre un seul adversaire jusqu'à l'assommer.
+
+step: Sa vie ou celle d'un protégé est directement menacée
+  do: Employer la morsure ; s'il peut effectuer une attaque à outrance, ajouter ses deux griffes.
+  note: La morsure peut paralyser 1 round, Vigueur DD 16. Profiter de l'immobilité pour s'écarter ; ne pas achever une cible neutralisée.
+
+step: Il a perdu assez de pv pour justifier un soin
+  do: Utiliser une imposition des mains sur lui-même en action rapide, puis employer normalement son action simple.
+  note: Garder soins légers comme soin supplémentaire : 1d8+4 pv, une seule fois avec la préparation indiquée.
+
+## Repli
+
+step: Il subit un saignement, ou une créature en subit un à 9 m ou moins
+  do: Appliquer la révulsion avant de choisir une fuite par creusement : Volonté DD 17 chaque round contre une source qui l'affecte encore.
+  note: Un échec le rend secoué jusqu'au début de son prochain tour ou jusqu'à ce que la créature soit soignée, et interdit le creusement pendant cet effet. Une réussite l'immunise contre cette même source de sang pendant 24 heures.
+
+step: Points de vie à 12 ou moins, ou adversaires trop puissants
+  do: Se soigner si possible, puis se retirer par creusement à 12 m par action de déplacement si la révulsion ne l'en empêche pas.
+  note: Si le creusement est indisponible, fuir par une galerie à 6 m par action de déplacement ; une fosse restante peut couper la poursuite avant de partir.
+
+step: Les ennemis cessent de poursuivre
+  do: Se cacher sous terre, soigner les survivants accessibles et stabiliser les mourants si cela ne l'expose pas à nouveau.

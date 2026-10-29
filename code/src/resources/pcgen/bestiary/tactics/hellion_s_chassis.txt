@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Châssis de Hellion : robot arachnide de grande taille, créature artificielle chaotique mauvaise, FP 8. Hellion privilégie son chalumeau à plasma, même au contact.
+  122 PV ; CA 21 ; solidité 10 ; immunités des créatures artificielles. Déplacement 12 m, escalade 6 m ; espace et allonge 3 m ; vision dans le noir à 18 m et vision nocturne.
+  Rayon de plasma +9 au contact à distance, 2d6+2 dégâts de plasma ; routine à distance alternative +7/+7/+2. Deux griffes +16, chacune 1d8+8 et étreinte ; combinées au plasma, elles deviennent secondaires : +11, 1d8+5 et étreinte.
+
+resource: Pouvoirs magiques | 1/jour chacun | NLS 8, concentration +11 ; chaque pouvoir possède sa propre utilisation quotidienne.
+
+step: Il entend les intrus approcher et dispose d'un round de préparation
+  do: Activer Bouclier entropique si les intrus utilisent des attaques à distance
+  note: Chaque autre préparation demande son propre lancement ; ne pas supposer tous les effets déjà actifs.
+
+step: Il dispose de temps supplémentaire et connaît l'alignement de ses adversaires
+  do: Lancer Cercle magique contre le Bien ou Cercle magique contre la Loi selon les ennemis attendus
+  note: Protection contre le Bien et Protection contre la Loi restent des solutions individuelles ; leurs bonus ne se cumulent pas avec ceux du cercle correspondant.
+
+step: Le terrain offre une position surélevée accessible en escalade
+  do: S'y placer si cela permet de tirer tout en limitant l'accès des combattants adverses
+  note: Surveiller les voies d'approche avec Perception +16.
+
+## Ouverture
+
+step: Plusieurs adversaires sensibles aux effets mentaux peuvent être pris ensemble
+  do: Lancer Confusion, Volonté DD 18, puis reprendre les attaques au plasma au round suivant
+  note: Privilégier les combattants dont les actions désordonnées gêneront leurs alliés.
+
+step: Plusieurs adversaires sont regroupés et leur alignement rend le pouvoir efficace
+  do: Envisager Marteau du Chaos ou Ténèbres infernales, Volonté DD 18, en remplacement de l'ouverture par Confusion
+  note: Tenir compte des effets réduits ou nuls selon l'alignement des cibles ; chaque pouvoir n'est disponible qu'une fois par jour.
+
+step: Aucun pouvoir de zone ne présente d'avantage décisif et les ennemis sont à distance
+  do: Tirer au plasma ; s'il peut rester sur place, employer l'attaque à outrance à +7/+7/+2, chaque impact infligeant 2d6+2
+  note: S'il doit se déplacer, avancer de 12 m au maximum et effectuer un seul tir à +9 au contact à distance.
+
+step: Une cible est déjà à portée de ses griffes et il peut attaquer à outrance
+  do: Tirer au plasma à +9 au contact à distance, puis porter deux griffes secondaires à +11, chacune infligeant 1d8+5 et permettant l'étreinte
+  note: Le chalumeau est intégré : son utilisation ne provoque pas d'attaque d'opportunité, même en mêlée.
+
+## Rounds suivants
+
+step: Il peut poursuivre ses attaques sans se déplacer
+  do: Répéter les tirs à outrance contre une cible exposée ; ajouter les griffes secondaires si une cible est à 3 m ou moins
+  note: Les deux griffes à +16 et 1d8+8 correspondent à la routine sans plasma ; Hellion préfère conserver son tir.
+
+step: Une griffe touche une cible que l'étreinte permet de saisir
+  do: Tenter l'étreinte pour entraver cet adversaire
+  note: Une prise maintenue demande la gestion normale de la lutte ; ne pas ajouter automatiquement son maintien à une attaque à outrance.
+
+step: Une protection magique adverse neutralise ses attaques ou donne un avantage décisif
+  do: Employer Dissipation de la magie sur cet effet
+  note: Cette tentative consomme son utilisation quotidienne ; reprendre ensuite les attaques au plasma.
+
+step: Un adversaire isolé doit être neutralisé et les pouvoirs correspondants sont encore disponibles
+  do: Employer Confusion partielle ou Injonction, Volonté DD 15
+  note: Choisir un effet auquel la cible peut être sensible ; chaque lancement remplace les attaques de ce round.
+
+step: Les ennemis gagnent sa position ou se mettent à couvert
+  do: Se déplacer ou escalader pour retrouver une ligne de tir, puis utiliser un tir simple si l'action restante le permet
+  note: Exploiter son allonge de 3 m et la solidité 10 sans abandonner une position favorable pour poursuivre inutilement un fuyard.
+
+## Repli
+
+step: Le processeur central de la zone S3 fonctionne encore
+  do: Combattre jusqu'à la destruction du châssis, même à moins de 30 PV
+
+step: Le processeur central de S3 est détruit ou arrêté et le châssis tombe sous 30 PV
+  do: Chercher à quitter Scrapwall en utilisant son déplacement de 12 m ou son escalade de 6 m
+  note: Si un obstacle adapté bloque la fuite, employer Façonnage de la pierre ou Façonnage du bois, si le pouvoir est encore disponible et peut dégager le passage.
+
+step: Dans ces conditions de repli, il est acculé
+  do: Négocier sa survie et offrir tout ce qu'il peut en échange de la clémence
+  note: À la première occasion sans risque évident, tenter de s'enfuir ou de tuer ses geôliers ; il peut aussi attendre que ses dommages soient réparés avant de les trahir.

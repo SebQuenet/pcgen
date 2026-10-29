@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Monture du Cavalier noir : destrier fiélon de Grande taille, loyal mauvais, dressé au combat. Animal d'Intelligence 2, il suit des consignes simples et sert d'abord à transporter son cavalier.
+  85 pv ; CA 25 ; déplacement de 15 m ; espace et allonge de 3 m. Morsure +12 (1d4+6), 2 sabots +7 chacun (1d6+3).
+  Réduction des dégâts 5/bien ; résistance au froid 10 et au feu 10 ; résistance à la magie 17.
+
+resource: Marche dans les airs | constant | NLS 15 ; permet de marcher dans les airs, sans conférer de vitesse de vol
+
+step: Avant d'approcher les adversaires
+  do: Repérer les menaces avec Perception +14, l'odorat, la vision nocturne et la vision dans le noir à 18 m.
+  note: Marche dans les airs est déjà actif ; aucune action de lancement n'est nécessaire pour l'utiliser.
+
+## Ouverture
+
+step: Le cavalier indique une cible accessible après un déplacement
+  do: Avancer jusqu'à 15 m, puis mordre à +12 (1d4+6) si la cible est à portée de son allonge de 3 m.
+  note: Marcher dans les airs permet de contourner les obstacles au sol et d'approcher une cible en hauteur, si le passage est libre. Ne pas ajouter les sabots après ce déplacement.
+
+step: La cible est déjà à portée au début du tour
+  do: Faire une attaque à outrance : morsure +12 (1d4+6) et 2 sabots +7 chacun (1d6+3).
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Répéter l'attaque à outrance contre la cible désignée par le cavalier ; sans consigne, attaquer l'adversaire qui le menace directement.
+  note: Un pas de placement de 1,50 m permet d'ajuster sa position tout en conservant l'attaque à outrance, s'il n'effectue aucun autre déplacement ce round.
+
+step: Il doit rejoindre une autre cible ou repositionner son cavalier
+  do: Se déplacer, puis porter une morsure si un adversaire est à portée ; utiliser les voies aériennes disponibles pour franchir les obstacles.
+  note: Souplesse du serpent ajoute +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements, soit CA 29 contre ces attaques seulement.
+
+step: Un ennemi quitte une case menacée en provoquant une attaque d'opportunité
+  do: Porter une morsure +12 (1d4+6).
+  note: Il dispose normalement d'une seule attaque d'opportunité par round.
+
+## Repli
+
+step: Le cavalier ordonne la retraite
+  do: Rompre le contact et emporter le cavalier par un passage dégagé, en marchant dans les airs si cela facilite la fuite.
+  note: Les montées et descentes avec marche dans les airs sont limitées à une pente de 45 degrés et se font à demi-vitesse.
+
+step: Sans cavalier ni consigne, il tombe à 21 pv ou moins
+  do: Chercher à s'éloigner des adversaires et à sortir de leur portée.
+  note: Ce seuil est un choix tactique proposé au meneur ; le profil ne précise pas de règle de moral.

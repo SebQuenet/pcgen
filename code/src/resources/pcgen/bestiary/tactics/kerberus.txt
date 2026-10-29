@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Kerberus est un ogre de taille G, chaotique mauvais, qui privilégie la force brute : 37 PV, CA 17, déplacement de 9 m et allonge de 3 m.
+  Attaque à outrance : deux coups de gourdin à +7/+7, chacun pour 2d8+5 dégâts ; à distance, deux javelines à +1/+1, chacune pour 1d8+5 dégâts.
+  Il occupe un espace de 3 m ; vision dans le noir à 18 m, vision nocturne et Perception +7.
+
+resource: Javelines | 4 | une javeline dépensée par lancer ; deux par attaque à outrance à distance
+
+step: Des intrus approchent
+  do: Préparer les gourdins et tenir un passage où les adversaires devront entrer dans son allonge de 3 m.
+  note: Exploiter l'obscurité pour repérer les intrus grâce à sa vision dans le noir ; elle ne lui permet pas de voir au-delà de 18 m.
+
+## Ouverture
+
+step: Un ennemi est déjà à 3 m ou moins et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance avec les deux gourdins : +7/+7, 2d8+5 dégâts par coup.
+
+step: Un ennemi peut être atteint après un déplacement de 9 m ou moins
+  do: Avancer jusqu'à le placer dans son allonge de 3 m, puis porter un seul coup de gourdin à +7, pour 2d8+5 dégâts.
+  note: Après ce déplacement, il ne bénéficie pas des deux attaques de l'attaque à outrance.
+
+step: Les ennemis restent hors d'atteinte et il a des javelines en main
+  do: Lancer une javeline à +1, pour 1d8+5 dégâts ; en lancer deux à +1/+1 si une attaque à outrance est possible.
+  note: Privilégier une cible proche et peu protégée ; ses attaques à distance sont nettement moins précises que ses coups de gourdin.
+
+## Rounds suivants
+
+step: Un adversaire reste dans son allonge
+  do: Répéter l'attaque à outrance aux gourdins et concentrer les deux coups sur le même adversaire tant qu'il tient debout.
+  note: Éviter les déplacements inutiles qui lui feraient perdre sa seconde attaque.
+
+step: Un adversaire s'éloigne hors de son allonge
+  do: Le suivre de 9 m au maximum et porter un seul coup de gourdin s'il revient à portée.
+  note: Chercher à terminer le déplacement à 3 m de la cible pour exploiter son allonge.
+
+step: Les adversaires refusent la mêlée
+  do: Avancer vers eux ; utiliser les javelines restantes lorsqu'il peut les préparer et les lancer.
+  note: Prévoir le passage des javelines aux gourdins ; aucune capacité indiquée ne lui permet de dégainer instantanément ses armes.
+
+## Repli
+
+step: Points de vie sous 10 et chemin de fuite accessible
+  do: Chercher à rompre le contact et fuir par le passage libre, avec son déplacement de 9 m.
+  note: Ce seuil est un choix tactique pour le meneur ; aucun comportement de fuite particulier n'est indiqué dans le profil fourni.
+
+step: Repli impossible
+  do: Frapper l'adversaire qui bloque la sortie avec les deux gourdins si une attaque à outrance est possible.

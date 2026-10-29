@@ -1,0 +1,100 @@
+## Avant le combat
+
+note: Profil
+  Garaudhilyx, dragon d'or mâle vénérable de taille colossale, loyal bon, FP 23 ; 465 pv. Pacifiste, il cherche d'abord à maîtriser ses ennemis et accepte toujours une reddition sans condition.
+  Attaque à outrance : morsure +38 (4d8+24), 2 griffes +38 (4d6+16 chacune), coup de queue +36 (4d6+24), 2 ailes +36 (2d8+8 chacune) ; toutes ces attaques ont une zone de critique de 19-20.
+  Espace occupé : 9 m ; allonge : 6 m, ou 9 m avec la morsure. Déplacement terrestre et nage : 18 m ; vol : 75 m, manœuvrabilité déplorable.
+  Lanceur de sorts de niveau 19 ; pouvoirs magiques de niveau 30. Sa magie sert à immobiliser, se protéger, dissiper les défenses adverses et empêcher les blessés de mourir.
+
+note: Défenses
+  CA 40, contact 0 ; Vigueur +26, Réflexes +15, Volonté +27 ; réduction des dégâts 20/magie et résistance à la magie 34.
+  Immunisé au feu, à la paralysie et au sommeil ; vulnérable au froid. Ses Réflexes et sa CA de contact sont ses principales faiblesses.
+
+resource: Sorts du 9e niveau | 4/jour | réserve commune pour arrêt du temps et guérison suprême de groupe
+resource: Sorts du 8e niveau | 7/jour | notamment verrou dimensionnel
+resource: Sorts du 7e niveau | 7/jour | notamment immobilisation de personne de groupe et téléportation suprême
+resource: Sorts du 6e niveau | 7/jour | guérison suprême, dissipation suprême et zone d'antimagie partagent cette réserve
+resource: Sorts du 5e niveau | 7/jour | notamment vision lucide, téléportation et changement de plan ; sert aussi aux sorts du 1er niveau à incantation rapide
+resource: Sorts du 4e niveau | 8/jour | notamment immunité contre les sorts et peau de pierre
+resource: Sorts du 3e niveau | 8/jour | notamment rapidité, prière, dissipation de la magie et négation de l'invisibilité
+resource: Sorts du 2e niveau | 8/jour | notamment résistance aux énergies destructives, aide et silence
+resource: Sorts du 1er niveau | 8/jour | notamment armure de mage, bouclier, bouclier de la foi et faveur divine
+resource: Pouvoirs magiques | à volonté | bénédiction, lumière du jour, détection du Mal, prémonition, mission et explosion de lumière (DD 26)
+
+step: Des adversaires approchent et une discussion reste possible
+  do: Employer Diplomatie +41 et Psychologie +45 pour comprendre leurs intentions, négocier et demander leur reddition
+  note: La détection du Mal renseigne ses choix ; elle ne remplace pas l'évaluation des actes et de la menace. Il répugne à blesser même un ennemi maléfique.
+
+step: Il dispose de temps pour se préparer
+  do: Maintenir prémonition sur lui-même ; lancer armure de mage et vision lucide avant l'affrontement
+  do: Ajouter résistance aux énergies destructives contre le froid si cette menace est connue ou probable
+  note: Au niveau de lanceur 19, cette résistance absorbe 30 points de froid par attaque avant d'appliquer la vulnérabilité aux dégâts restants ; elle ne supprime pas cette vulnérabilité.
+
+## Ouverture
+
+step: Le combat devient inévitable
+  do: Lancer arrêt du temps, puis consacrer les rounds obtenus à bouclier, bouclier de la foi, rapidité et faveur divine
+  do: Accélérer au besoin un sort du 1er niveau en dépensant un emplacement du 5e niveau ; au maximum un sort à incantation rapide par round apparent
+  note: Arrêt du temps accorde 1d4+1 rounds apparents ; ajuster la préparation au résultat. Durant cet arrêt, il agit sur lui-même et ne peut ni attaquer ni affecter directement les autres créatures.
+  note: Avec prémonition, armure de mage, bouclier, bouclier de la foi et rapidité, sa CA atteint 56. Rapidité accorde aussi une attaque supplémentaire de morsure lors d'une attaque à outrance.
+
+step: Plusieurs ennemis sont des humanoïdes et peuvent encore être capturés sans blessure
+  do: Lancer immobilisation de personne de groupe, Volonté DD 25, puis faire désarmer et garder les cibles paralysées par ses alliés
+  note: Ce sort n'affecte pas les autres types de créatures ; les victimes peuvent renouveler leur jet à chaque round pendant leur tour. Ne pas considérer une immobilisation comme une capture définitive.
+
+step: Il engage physiquement des ennemis qui refusent de se rendre
+  do: Mettre sa présence terrifiante à profit lors de l'attaque ; rayon de 108 m, Volonté DD 33 pour les créatures concernées
+  do: Se placer entre les adversaires et les innocents, en utilisant son allonge pour contrôler les approches
+  note: Il déchaîne toute sa puissance si des innocents sont gravement menacés ou si ses alliés sont en danger.
+
+## Rounds suivants
+
+step: Un adversaire offre une reddition sans condition
+  do: Cesser de l'attaquer, exiger qu'il dépose ses armes et organiser sa garde
+  note: Garaudhilyx accepte cette reddition même au milieu du combat ; il ne poursuit les attaques que contre ceux qui continuent de menacer autrui.
+
+step: Un ennemi dangereux reste à portée et Garaudhilyx peut rester sur place
+  do: Effectuer une attaque à outrance avec morsure, griffes, queue et ailes ; ajouter la morsure supplémentaire si rapidité est active
+  do: Employer des attaques non létales avec le malus de -4 lorsqu'il peut maîtriser la cible sans compromettre la sécurité des innocents
+  note: Les valeurs d'attaque du profil sont celles du bloc, avant les bonus des sorts. Faveur divine apporte +3 de chance aux attaques et aux dégâts ; rapidité apporte +1 aux attaques.
+
+step: Il doit se déplacer pour atteindre une cible prioritaire ou protéger un allié
+  do: Se déplacer puis porter une seule morsure avec Frappe décisive améliorée : +38, dégâts 12d8+24 avant les bonus des sorts
+  note: Ce don s'emploie avec l'action d'attaque ; ne pas l'ajouter aux morsures d'une attaque à outrance ni à une charge.
+
+step: Les protections magiques adverses empêchent de maîtriser une cible
+  do: Employer dissipation suprême sur cette cible, puis reprendre l'immobilisation ou les attaques physiques
+  note: Privilégier les effets qui empêchent concrètement sa capture ou menacent les innocents ; ne pas gaspiller les rounds à dissiper des protections sans conséquence tactique.
+
+step: Un lanceur de sorts adverse reste libre d'agir
+  do: Tenter silence sur lui, Volonté DD 20, si sa magie dépend de composantes verbales
+  note: Le silence gêne aussi les sorts verbaux de Garaudhilyx et de ses alliés s'ils entrent dans la zone ; conserver la distance nécessaire.
+
+step: Des ennemis invisibles échappent à ses alliés
+  do: Employer négation de l'invisibilité ; conserver vision lucide pour identifier lui-même les menaces
+
+step: Des morts-vivants menacent les innocents
+  do: Employer explosion de lumière, DD 26, en plaçant la zone pour épargner les alliés
+  note: Ce pouvoir est utilisable à volonté ; ses effets peuvent également blesser ou aveugler des créatures vivantes.
+
+step: Un ennemi dangereux tente une fuite dimensionnelle et Garaudhilyx peut encore tenir le terrain
+  do: Employer verrou dimensionnel sur la zone à défendre
+  note: Le verrou gêne également ses propres téléportations et celles de ses alliés dans la zone ; conserver une sortie physique.
+
+step: Un adversaire blessé risque de mourir
+  do: Employer sa magie de soins pour empêcher sa mort, puis le faire garder en vue d'un emprisonnement sur l'île de Valkus
+  note: Stabilisation convient à une victime mourante accessible ; une guérison plus puissante peut être nécessaire, mais rend aussi à un ennemi insoumis la capacité de combattre.
+
+step: Ses points de vie tombent à 232 ou moins et il peut encore rester au combat
+  do: Lancer arrêt du temps, récupérer jusqu'à 150 pv avec guérison suprême, puis rétablir les protections dissipées ou adapter ses défenses aux attaques observées
+  note: Chaque guérison suprême consomme un emplacement du 6e niveau. Guérison suprême de groupe peut lui rendre jusqu'à 190 pv, mais partage les quatre emplacements du 9e niveau avec arrêt du temps.
+
+## Repli
+
+step: Ses points de vie tombent à 116 ou moins
+  do: Se retirer par téléportation suprême vers un lieu sûr connu, en emmenant les alliés accessibles dans les limites du sort
+  note: Garaudhilyx tient tête au mal jusqu'à ce seuil ; passer sous la moitié de ses pv déclenche d'abord les soins et le renforcement des défenses.
+
+step: La téléportation est empêchée ou aucun emplacement approprié ne reste disponible
+  do: Sortir physiquement de la zone qui interdit le voyage dimensionnel ; utiliser le vol à 75 m pour rompre le contact, puis se soigner
+  note: Sa manœuvrabilité déplorable impose de prévoir une trajectoire dégagée ; ne pas compter sur un vol stationnaire ou un demi-tour serré.

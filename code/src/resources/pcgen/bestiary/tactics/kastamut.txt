@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Kastamut, inévitable loyal neutre de taille M, gardien des traditions contre les bouleversements brutaux. Il cherche d'abord à faire renoncer le responsable, puis impose sa volonté et combat au marteau.
+  80 pv ; CA 19 ; RD 5/chaotique ; résistance à la magie 17 ; régénération 3, interrompue par les attaques chaotiques. Déplacement de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m.
+  Marteau de guerre +1 : +14/+9 en attaque à outrance, 1d8+7, critique x3. Ses injonctions gênent une cible pendant qu'il se rapproche.
+
+resource: Faveur divine | 3/jour | +2 aux attaques et aux dégâts d'arme pendant 1 minute
+resource: Protection contre le Chaos | 3/jour | 8 minutes ; +2 de parade à la CA et +2 de résistance aux sauvegardes contre les créatures chaotiques
+resource: Discours captivant | 3/jour | Volonté DD 14 ; pour parlementer avant les hostilités
+resource: Zone de vérité | 3/jour | Volonté DD 14 ; pour interroger, sans contraindre à répondre
+resource: Imprécation | à volonté | Volonté DD 13 ; malus de -1 aux attaques et aux sauvegardes contre la terreur
+resource: Injonction | à volonté | Volonté DD 13 ; une cible vivante, 1 round
+resource: Interdiction | à volonté | Volonté DD 13 ; interdit une catégorie d'actions pendant 1 round
+resource: Litanie de paresse | à volonté | Volonté DD 13 ; 1 round
+resource: Litanie de faiblesse | 5/jour | fatigue pendant 1 round ; aucun jet de sauvegarde
+resource: Litanie d'enchevêtrement | 3/jour | Volonté DD 15 ; enchevêtre pendant 1 round, seulement sur sol solide
+resource: Malédiction | 1/jour | contact ; Volonté DD 15
+resource: Litanie de vengeance | 1/jour | +5 aux dégâts de chaque attaque qui touche la cible pendant 1 round ; aucun jet de sauvegarde
+resource: Remords dévorants | 1/jour | Volonté DD 16 ; jusqu'à 8 rounds
+resource: Changement de plan | 1/semaine | lui-même uniquement
+
+step: Les adversaires acceptent encore de discuter
+  do: Exiger l'abandon du bouleversement des traditions ; employer Diplomatie +13 ou Intimidation +13, et Psychologie +14 pour apprécier leurs intentions
+  note: Son don des langues permet de se faire comprendre ; discours captivant et zone de vérité servent à la discussion.
+
+step: Il peut se préparer avant une confrontation imminente
+  do: Activer protection contre le Chaos, puis faveur divine juste avant le contact, sur deux rounds distincts
+  note: Sous faveur divine, marteau +16/+11, 1d8+9, critique x3. Contre les créatures chaotiques, la protection porte sa CA à 21 ; elle ne rend pas ses défenses invulnérables aux armes chaotiques.
+
+## Ouverture
+
+note: Choix des pouvoirs
+  Au NLS 8, les injonctions, les litanies et remords dévorants portent à 13,50 m. Une seule litanie par round, en action rapide ; une cible déjà sous une litanie ne peut en recevoir une autre avant sa fin.
+
+step: Une cible vivante dangereuse se trouve à 13,50 m ou moins, hors de son allonge
+  do: Utiliser remords dévorants sur elle, puis avancer de 6 m au maximum vers le responsable à maîtriser
+  note: À chaque round, Volonté DD 16 ou la cible s'inflige 1d8 + son modificateur de Force dégâts. Une réussite la laisse chancelante avec -2 à la CA pendant 1 round, puis termine le sort.
+
+step: Plusieurs adversaires sont regroupés à 15 m ou moins et le contact attendra
+  do: Employer imprécation pour affaiblir leurs attaques, puis se placer pour recevoir leur approche
+  note: Volonté DD 13 annule ; durée 8 minutes. Choisir cette ouverture à la place de remords dévorants.
+
+step: Un adversaire est déjà à 1,50 m au début de son tour
+  do: Litanie de faiblesse en action rapide, puis attaque à outrance au marteau
+  note: La fatigue inflige -2 en Force et en Dextérité et interdit charge et course pendant 1 round ; la résistance à la magie s'applique.
+
+## Rounds suivants
+
+step: Il peut rester au contact de sa cible principale
+  do: Privilégier l'attaque à outrance ; se limiter au pas de 1,50 m pour conserver ses deux attaques
+  note: Après un déplacement ordinaire, il ne frappe qu'une fois, à +14, ou +16 sous faveur divine.
+
+step: Sa cible va subir ses deux coups ou plusieurs attaques de ses alliés
+  do: Choisir litanie de vengeance comme action rapide avant les attaques
+  note: Chaque coup qui touche gagne +5 dégâts pendant 1 round ; réserver cette utilisation à un tour où plusieurs touches sont probables.
+
+step: Un combattant reste dangereux ou tente de s'éloigner
+  do: Choisir litanie de faiblesse pour réduire sa puissance, ou litanie d'enchevêtrement pour gêner son déplacement, puis avancer et frapper si possible
+  note: L'enchevêtrement ne fonctionne pas sur une créature en vol ; il réduit le déplacement sans immobiliser automatiquement.
+
+step: Un lanceur de sorts menace de prendre l'avantage
+  do: Employer interdiction, option interdisant de lancer des sorts et d'utiliser des pouvoirs magiques, à la place de l'attaque
+  note: Volonté DD 13 annule ; effet limité à 1 round. Litanie de paresse peut aussi empêcher les incantations sur la défensive pendant 1 round.
+
+step: Il doit désorganiser une cible plutôt que frapper immédiatement
+  do: Employer injonction « Lâche » pour lui faire abandonner ce qu'elle tient, ou malédiction au contact pour lui infliger -4 aux attaques, sauvegardes et tests
+  note: Injonction : Volonté DD 13 ; malédiction : attaque de contact puis Volonté DD 15. Pour un pouvoir exigeant une action simple, se dégager d'abord par un pas de 1,50 m si cela évite une attaque d'opportunité.
+
+## Repli
+
+step: Moins de 20 pv et des attaques chaotiques ont neutralisé sa régénération, ou le combat devient intenable
+  do: Se dégager si possible, puis utiliser changement de plan pour quitter le combat
+  note: Ce seuil est une consigne tactique ; le pouvoir n'emporte aucun allié et reste indisponible s'il a déjà été utilisé cette semaine.
+
+step: Changement de plan est indisponible et il doit se retirer
+  do: Employer litanie de paresse sur le poursuivant au contact, puis se déplacer vers un couvert ; sinon utiliser l'action de retraite
+  note: Volonté DD 13 annule la litanie ; en cas d'échec, la cible ne fait aucune attaque d'opportunité pendant 1 round. La retraite permet jusqu'à 12 m, mais protège seulement la case de départ.
+
+step: Il a rompu le contact et sa régénération fonctionne
+  do: Rester à couvert pour récupérer 3 pv par round avant de reprendre sa mission

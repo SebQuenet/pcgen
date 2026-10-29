@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Dusha Koza est une chèvre-lanterne morte-vivante de taille M, chaotique mauvaise, peu intelligente (Int 6). Elle combat au contact et concentre ses coups sur une même proie.
+  161 pv ; CA 27 ; initiative +10 ; déplacement de 9 m ; allonge de 1,50 m.
+  Coup de cornes +20 (1d8+4) et deux sabots +18 (1d6+2 chacun) lors d'une attaque à outrance.
+
+resource: Guérison accélérée | permanente | Récupère 10 pv par round ; ne dépasse pas 161 pv.
+resource: Résistance à la canalisation | permanente | +4 aux sauvegardes contre la canalisation d'énergie.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +20, la vision dans le noir à 18 m et la perception de la vie à 18 m.
+  note: Elle comprend le russe, mais ne peut pas parler.
+
+step: Le terrain permet de se dissimuler
+  do: Se cacher avec Discrétion +24 près d'un passage que les intrus devront emprunter, puis les laisser approcher.
+  note: Privilégier un endroit où elle pourra atteindre une cible au contact avec un déplacement de 9 m au maximum.
+
+## Ouverture
+
+step: Une cible est déjà à portée de 1,50 m
+  do: Porter une attaque à outrance : cornes +20 (1d8+4), puis deux sabots +18 (1d6+2 chacun).
+  note: Concentrer les trois attaques sur la cible la plus vulnérable à portée.
+
+step: Un déplacement de 9 m au maximum permet d'atteindre une cible
+  do: Avancer au contact et porter un coup de cornes +20 (1d8+4).
+  note: Garder les attaques de sabots pour les rounds où une attaque à outrance sera possible.
+
+step: Toutes les cibles sont plus éloignées
+  do: Se rapprocher en utilisant les couverts disponibles ; effectuer un double déplacement, jusqu'à 18 m, si nécessaire.
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter l'attaque à outrance et concentrer les coups jusqu'à sa chute.
+  note: Appliquer la guérison accélérée de 10 pv à chaque round.
+
+step: Un pas de placement de 1,50 m suffit à rejoindre la proie
+  do: Faire ce pas, puis porter l'attaque à outrance.
+
+step: La proie s'éloigne davantage
+  do: La suivre sur 9 m au maximum, puis donner un coup de cornes si elle est à portée.
+  note: Si une autre cible vulnérable est déjà au contact, l'attaquer à outrance permet d'exploiter les trois attaques.
+
+step: Ses coups touchent facilement la cible
+  do: Utiliser Attaque en puissance pour augmenter les dégâts.
+  note: Cesser de l'utiliser si la pénalité empêche trop souvent ses attaques de toucher.
+
+## Repli
+
+step: Ses points de vie tombent à 40 ou moins et une issue reste accessible
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 18 m et gagner un abri.
+  note: Sa guérison accélérée rend une courte interruption du combat avantageuse.
+
+step: Elle a rompu le contact
+  do: Rester dissimulée pendant que sa guérison accélérée restaure 10 pv par round ; envisager une nouvelle embuscade une fois remontée à au moins 80 pv.
+
+step: Toute retraite est impossible
+  do: Continuer les attaques à outrance contre l'adversaire le plus vulnérable à portée.

@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Le Prométhéen aberrant est un golem de chair de taille TG, sans intelligence, qui frappe la cible en mouvement la plus proche. Il cherche à infliger le maximum de dégâts.
+  117 PV ; CA 25 ; RD 10/adamantium ; immunités des créatures artificielles et immunité à la magie.
+  Deux coups +21, chacun infligeant 4d6+9 dégâts et permettant une étreinte ; BMO +29 en lutte, DMD 35. Espace occupé et allonge : 4,50 m.
+  Déplacement de 9 m ; escalade de 6 m ; vision dans le noir à 18 m et vision nocturne. Il ne parle aucune langue.
+
+resource: Rapidité | 1/round | une action de mouvement supplémentaire pendant son tour
+
+note: Position initiale
+  Dans la rencontre de l'aventure, il se tient dans ses toiles, près du sommet de la salle. L'entrée d'une créature ou l'ouverture des volets supérieurs déclenche son attaque contre ce qui bouge.
+
+## Ouverture
+
+step: La cible en mouvement la plus proche est à plus de 4,50 m
+  do: Utiliser le mouvement supplémentaire de rapidité pour approcher, au sol ou en escaladant, puis porter les deux coups en attaque à outrance si la cible est désormais à portée.
+  note: S'il faut encore avancer, employer aussi son mouvement normal et ne porter qu'un coup avec son action simple si la cible devient accessible.
+
+step: La cible en mouvement la plus proche est déjà à portée
+  do: Porter les deux coups en attaque à outrance : +21 chacun, 4d6+9 dégâts par coup réussi.
+
+step: Un coup touche une créature de taille inférieure à la sienne
+  do: Tenter immédiatement l'étreinte par un test de lutte à +29 contre la DMD de la cible, sans attaque d'opportunité.
+  note: Cette tentative est une action libre ; elle n'ajoute aucun dégât par elle-même.
+
+## Rounds suivants
+
+step: Une victime reste agrippée
+  do: Consacrer l'action simple au maintien de la lutte ; en cas de réussite, lui infliger les dégâts d'un coup, soit 4d6+9.
+  note: Le test utilise le BMO de lutte +29, avec le bonus de circonstances de +5 pour maintenir une prise établie au round précédent.
+
+step: Aucune victime n'est agrippée
+  do: Reprendre les attaques contre la cible en mouvement la plus proche ; utiliser rapidité pour la rejoindre, puis les deux coups si une attaque à outrance est possible.
+  note: Il poursuit cette cible sans élaborer de stratégie, choisir un lanceur de sorts en priorité ni organiser d'embuscade.
+
+## Repli
+
+step: Il lui reste des points de vie
+  do: Continuer à attaquer jusqu'à sa destruction, sans retraite ni reddition.

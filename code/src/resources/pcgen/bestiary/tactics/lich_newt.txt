@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Lich Newt, triton aquatique neutre de taille TP, charognard des cours d'eau pollués. Son Intelligence de 1 appelle des réactions animales simples : se cacher, fuir ou se défendre s'il est acculé.
+  5 PV, CA 13 ; coup −2 (1d2−4 plus poison), allonge 0 m. Amphibie ; déplacement terrestre de 4,50 m et nage de 6 m par action de mouvement.
+
+step: Des créatures approchent
+  do: Rester à couvert près de l'eau et surveiller les mouvements avec Perception +4.
+  note: Discrétion +13 et vision nocturne ; profiter de la végétation ou d'un abri disponible.
+
+## Ouverture
+
+step: Une menace approche et une issue reste accessible
+  do: Gagner l'eau ou un couvert pour éviter l'affrontement.
+
+step: Acculé et obligé de se défendre
+  do: Entrer dans la case de l'agresseur et porter un coup à −2 (1d2−4 plus poison).
+  note: Son allonge de 0 m impose de partager l'espace de sa cible ; cette approche peut provoquer une attaque d'opportunité.
+
+resource: Poison | sans limite indiquée | blessure ou contact ; Vigueur DD 11 ; fréquence 1 fois par round pendant 2 rounds ; affaiblissement de Force de 1d2 ; guérison après 1 sauvegarde réussie.
+
+## Rounds suivants
+
+step: Une créature le touche avec une arme naturelle ou une attaque à mains nues
+  do: Appliquer immédiatement le poison à l'assaillant, avec une sauvegarde de Vigueur DD 11.
+  note: Le mucus agit automatiquement, sans action du triton. Malgré son nom, il inflige les effets du poison décrits ci-dessus, sans paralysie supplémentaire.
+
+step: Toujours acculé dans la case d'un adversaire
+  do: Répéter le coup à −2 et appliquer le poison si l'attaque touche.
+
+step: Un adversaire est empoisonné
+  do: Résoudre les sauvegardes et l'affaiblissement de Force selon la fréquence du poison.
+  note: L'effet se poursuit même si le triton s'éloigne.
+
+## Repli
+
+step: Une issue se libère, surtout après une blessure
+  do: Rompre le combat par une retraite et gagner l'eau ou un abri.
+  note: Privilégier la nage à 6 m par action de mouvement ; à terre, avancer de 4,50 m. Avec seulement 5 PV, fuir dès que possible.
+
+step: Hors de vue et à couvert
+  do: Se cacher avec Discrétion +13 et cesser le combat.

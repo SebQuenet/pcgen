@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Sivit est une sphinge des ténèbres loyale mauvaise, un extérieur de taille G qui défend le Labyrinthe vivifié. Intelligente et tenace, elle ouvre par un pouvoir offensif puis cherche le corps à corps.
+  Deux kukris +1 : +16/+11/+6 avec le premier et +16 avec le second, chacun à 1d6+7, critique 15-20/x2 ; coup de queue +11, 1d6+3. Allonge de 1,50 m malgré son espace occupé de 3 m.
+  126 pv ; CA 24, contact 12 ; réduction des dégâts 10/Bien ; résistance à la magie 22 ; immunité au poison ; résistance 10 à l'acide, au froid, à l'électricité et au feu.
+  Déplacement de 12 m, vol de 18 m avec une manœuvrabilité médiocre. Vision dans le noir à 18 m, Perception +18 et détection de l'invisibilité permanente.
+
+note: Symboles déjà utilisés
+  Sivit a déjà employé ses quatre symboles avant la rencontre. Conserver leurs emplacements et leurs déclencheurs prévus par l'aventure ; elle ne peut pas en créer de nouveaux pendant ce combat.
+
+resource: Symbole de terreur | 0 disponible cette semaine | déjà utilisé ; Volonté DD 21
+resource: Symbole de douleur | 0 disponible cette semaine | déjà utilisé ; Vigueur DD 20
+resource: Symbole de sommeil | 0 disponible cette semaine | déjà utilisé ; Volonté DD 20
+resource: Symbole d'étourdissement | 0 disponible cette semaine | déjà utilisé ; Volonté DD 22
+resource: Clairaudience/clairvoyance | 3/jour | surveillance à distance ; NLS 10
+
+step: Les intrus approchent et elle dispose du temps nécessaire pour les observer
+  do: Surveiller un passage connu par clairaudience/clairvoyance et choisir où les intercepter
+  note: Détection de la magie, lecture de la magie et compréhension des langages sont également permanentes ; ces pouvoirs ne révèlent pas automatiquement les capacités ou l'alignement des intrus.
+
+## Ouverture
+
+resource: Ténèbres maudites | 1/jour | action simple ; Volonté DD 19 ; NLS 10
+
+step: Premier tour, adversaires à portée
+  do: Utiliser ténèbres maudites sur le plus grand nombre d'ennemis possible, puis se rapprocher avec son déplacement
+  note: Portée de 60 m, zone de 6 m de rayon. Les créatures bonnes subissent 5d8 dégâts et sont fiévreuses pendant 1d4 rounds ; Volonté DD 19 réduit les dégâts de moitié et annule cet état. Contre un extérieur bon, les dégâts sont de 10d6.
+  note: Les créatures neutres subissent la moitié des dégâts, encore réduits de moitié si elles réussissent leur sauvegarde, sans devenir fiévreuses ; les créatures mauvaises sont indemnes.
+  note: Ce pouvoir et le déplacement occupent son tour. La fiche fournie ne donne ni bond ni attaques de griffes permettant une attaque à outrance en charge ou une éventration.
+
+## Rounds suivants
+
+step: Un ennemi est à 1,50 m et aucun déplacement supérieur à un pas de 1,50 m n'est nécessaire
+  do: Attaque à outrance avec les deux kukris et la queue, en concentrant les coups sur une même cible jusqu'à la mettre hors de combat
+  note: Premier kukri +16/+11/+6 et second kukri +16, chacun à 1d6+7, critique 15-20/x2 ; queue +11, 1d6+3. Privilégier une cible déjà blessée ou fiévreuse.
+
+step: Elle doit avancer pour atteindre un adversaire
+  do: Se déplacer puis porter une seule attaque de kukri
+  note: Garder le vol pour les espaces qui permettent ses manœuvres ; sa manœuvrabilité médiocre rend les changements de direction difficiles dans les passages étroits.
+
+resource: Baguette de projectile magique | 18 charges | NLS 9 ; une charge par activation réussie ; action simple
+
+step: Les ennemis combattent à distance ou restent difficiles à atteindre
+  do: Libérer une main pour la baguette, puis concentrer ses cinq projectiles sur un adversaire visible à 57 m ou moins
+  note: Chaque projectile inflige 1d4+1 dégâts de force, soit 5d4+5 sur une seule cible ; aucun jet d'attaque ni sauvegarde, mais la résistance à la magie s'applique. Un abri total ou un camouflage total empêche de viser la cible.
+  note: Chaque activation exige Utilisation d'objets magiques +16 contre DD 20. Un échec ne dépense pas de charge ; un 1 naturel accompagné d'un échec interdit de réutiliser cette baguette pendant 24 heures.
+
+resource: Dissipation de la magie | 1/jour | action simple ; test de dissipation à +10
+
+step: Un effet magique empêche ses attaques d'être efficaces
+  do: Tenter une dissipation ciblée avant de reprendre ses attaques aux rounds suivants
+  note: Réserver cette unique utilisation à un obstacle décisif, plutôt qu'à un avantage mineur.
+
+resource: Ténèbres | 3/jour | action simple ; objet touché ; rayon de 6 m ; durée de 10 minutes
+
+step: Réduire l'éclairage gênerait les intrus sans gêner sa vision dans le noir
+  do: Utiliser ténèbres sur un objet proche pour combattre dans une zone moins éclairée
+  note: Le pouvoir abaisse l'éclairage d'un seul degré ; il ne produit pas automatiquement une obscurité totale. La vision dans le noir adverse peut annuler cet avantage.
+
+resource: Poison | 3/jour | action simple ; attaque de contact au corps à corps ; Vigueur DD 19
+
+step: Une cible vivante au contact semble vulnérable au poison et résiste bien aux kukris
+  do: Remplacer l'attaque à outrance par poison
+  note: Après un contact réussi, le poison inflige 1d3 dégâts de Constitution par round pendant 6 rounds au maximum ; Vigueur DD 19 annule les dégâts et met fin au poison. Ce pouvoir ne recouvre pas les kukris de venin.
+
+## Repli
+
+resource: Baguette de porte dimensionnelle | 19 charges | action simple ; Utilisation d'objets magiques +16 contre DD 20
+
+step: Un obstacle ou un encerclement l'empêche de rejoindre une cible
+  do: Employer la baguette pour se repositionner dans un endroit connu à l'intérieur du Labyrinthe vivifié, puis reprendre l'offensive au tour suivant
+  note: Après une porte dimensionnelle réussie, elle ne peut plus agir avant son prochain tour. Cette manœuvre sert à poursuivre le combat.
+
+step: Ses points de vie diminuent, même très fortement
+  do: Continuer à combattre jusqu'à la mort
+  note: Aucun seuil de fuite ; Sivit ne se rend pas et n'abandonne pas le combat pour sauver sa vie.
+
+step: Les intrus franchissent les limites du Labyrinthe vivifié
+  do: Cesser la poursuite à la frontière
+  note: Sivit ne peut pas poursuivre au-delà de ces limites, même avec sa baguette de porte dimensionnelle.

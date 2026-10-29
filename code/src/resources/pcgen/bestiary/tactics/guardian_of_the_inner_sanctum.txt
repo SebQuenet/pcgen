@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Gardien du sanctuaire intérieur, golem de pierre protecteur de taille G, neutre et sans intelligence. Il exécute des ordres simples et défend le lieu ou le maître qui lui a été confié.
+  107 pv, CA 26, réduction des dégâts 10/adamantium, guérison accélérée 5 ; immunités des créatures artificielles et immunité à la magie autorisant la résistance à la magie.
+  Deux coups +22, chacun pour 2d10+9 dégâts ; allonge et espace occupé de 3 m ; déplacement de 6 m par action de mouvement. Vision dans le noir à 18 m et vision nocturne.
+
+resource: Protection d'autrui | 1/jour | NLS 13 ; activation par le porteur de l'amulette, à 30 m ou moins du gardien
+resource: Malédiction stockée | 1/jour, idole de fertilité uniquement | NLS 20 ; contact ; Volonté DD 32 annule
+resource: Debilitating portent stocké | 1/jour, sorcière uniquement | NLS 20 ; portée 90 m ; durée 20 rounds ; DD des jets de Volonté non précisé dans la fiche
+
+note: Réserve de sorts
+  L'idole de fertilité et la sorcière sont deux variantes : chacune possède uniquement le sort stocké indiqué pour elle. La libération se fait sur ordre ou au déclenchement d'une condition programmée.
+
+step: Il reçoit l'ordre de défendre le porteur de son amulette
+  do: Se placer à côté de lui, entre lui et l'accès emprunté par les intrus
+  note: Garde impose un malus de -2 aux attaques visant le maître tant que le gardien lui est adjacent.
+
+step: Le porteur de l'amulette prévoit un affrontement et se trouve à 30 m ou moins
+  do: Le porteur active protection d'autrui par une action simple
+  note: La moitié des dégâts subis par le porteur est transférée au gardien, sans réduction par ses défenses ; ce pouvoir n'accorde aucun bonus de CA ou de sauvegarde.
+
+## Ouverture
+
+step: Variante sorcière, sort encore disponible et ordre ou déclencheur approprié
+  do: Libérer debilitating portent sur l'intrus désigné, en privilégiant sur ordre celui qui inflige le plus de dégâts
+  note: Aucun jet de sauvegarde initial ; résistance à la magie applicable. À chaque attaque ou sort, la cible doit réussir un jet de Volonté ou n'infliger que la moitié des dégâts. Employer le DD prévu par le scénario, sans lui attribuer le DD 32 de malédiction.
+
+step: Variante idole de fertilité, sort encore disponible et intrus à portée de contact
+  do: Libérer malédiction par une action simple et une attaque de contact au corps à corps +22
+  note: Volonté DD 32 annule ; résistance à la magie applicable. Une option utile est le malus permanent de -4 aux attaques, sauvegardes et tests de caractéristique ou de compétence, selon la malédiction programmée.
+
+step: Aucun sort stocké n'est libéré ce round et un intrus est à 3 m ou moins
+  do: Attaque à outrance, deux coups +22 pour 2d10+9 dégâts chacun
+
+step: Aucun sort stocké n'est libéré et la cible est hors d'allonge
+  do: Avancer de 6 m au maximum, puis porter un seul coup +22 si la cible est désormais à 3 m ou moins
+  note: Si un déplacement plus long est nécessaire, employer un double déplacement de 12 m et renoncer à l'attaque ce round, sans quitter la zone à défendre sauf ordre.
+
+## Rounds suivants
+
+step: La cible reste à portée, éventuellement après un pas de 1,50 m
+  do: Répéter les deux coups de l'attaque à outrance sur elle
+  note: Suivre les priorités reçues ; conserver une position adjacente au maître si sa protection est l'ordre principal.
+
+step: Un intrus contourne le gardien ou s'éloigne en provoquant une attaque d'opportunité
+  do: Porter un coup +22 pour 2d10+9 dégâts
+  note: Une seule attaque d'opportunité par round ; l'allonge de 3 m permet de menacer les approches.
+
+step: Debilitating portent est actif et sa cible confirme un coup critique
+  do: Sur ordre ou condition programmée, dissiper ce sort par une action immédiate pour annuler le critique
+  note: L'attaque touche encore, mais inflige seulement la moitié des dégâts ; le sort prend fin.
+
+step: Début du tour du gardien, encore actif et blessé
+  do: Récupérer 5 pv, sans dépasser 107 pv
+
+## Repli
+
+step: Ses points de vie baissent sans nouvel ordre
+  do: Continuer à défendre sa position ou son maître jusqu'à sa destruction à 0 pv
+  note: Il ne décide pas de fuir pour se préserver ; si le maître meurt, il poursuit son dernier ordre tant que l'amulette demeure intacte.
+
+step: Le maître ordonne un repli ou le rappelle
+  do: Le suivre à 6 m par action de mouvement et reprendre sa protection dès qu'il lui est adjacent
+  note: Localisation du maître permet de retrouver le porteur de l'amulette sur le même plan.

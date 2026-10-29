@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Pyrohydre à six têtes, bête magique de taille TG, neutre, FP 8 ; 69 pv, CA 20.
+  Attaque à outrance : six morsures +9, chacune infligeant 1d8+5 dégâts ; allonge de 3 m, espace occupé de 4,50 m.
+  Déplacement et nage à 6 m ; immunité au feu, vulnérabilité au froid : dégâts de froid augmentés de moitié.
+
+note: Repérage
+  Perception +13, odorat, vision nocturne et vision dans le noir à 18 m. Repérer les intrus avant de s'avancer à leur rencontre.
+
+resource: Guérison accélérée | 6 pv par round | récupération des blessures du corps, jusqu'à 69 pv
+resource: Réflexes de combat | 4 attaques d'opportunité par round | une morsure +9, 1d8+5 dégâts, par occasion distincte ; utilisable même prise au dépourvu
+
+step: Le terrain permet de choisir sa position
+  do: Occuper un passage assez large pour son corps et laisser les adversaires approcher dans son allonge de 3 m.
+  note: Si de l'eau est présente, elle peut y manœuvrer avec sa nage à 6 m et Natation +13.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance avec les six morsures ; concentrer les attaques sur une cible accessible pour l'abattre rapidement.
+
+step: Aucun adversaire n'est à portée, mais un déplacement de 6 m suffit
+  do: Avancer jusqu'à placer une cible à portée, puis effectuer une seule morsure +9, pour 1d8+5 dégâts.
+
+step: Les ennemis sont encore trop loin
+  do: Se rapprocher, avec un double déplacement de 12 m si nécessaire, en cherchant un passage qui limite leur dispersion.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Rester sur place ou faire un pas de placement de 1,50 m, puis attaquer à outrance avec toutes les têtes disponibles.
+  note: Achever d'abord la cible blessée ; si un utilisateur d'attaques de froid est accessible, le prendre pour cible en priorité.
+
+step: Un adversaire provoque une attaque d'opportunité dans les 3 m
+  do: Lui porter une morsure, dans la limite des quatre attaques d'opportunité du round.
+  note: Entrer dans l'allonge ne provoque pas à lui seul ; surveiller les déplacements qui quittent une case menacée et les actions qui provoquent.
+
+step: Une tête est tranchée
+  do: Continuer à combattre avec les têtes restantes et suivre séparément le délai de repousse de chaque moignon.
+  note: Deux têtes repoussent en 1d4 rounds, avec un maximum de douze têtes. Au moins 5 dégâts d'acide ou de froid sur le moignon avant la repousse l'empêchent ; le feu est sans effet grâce à l'immunité.
+
+step: Les ennemis reculent hors de portée
+  do: Les suivre de 6 m au maximum et mordre une fois si une cible devient accessible ; retrouver une position permettant une attaque à outrance au round suivant.
+
+## Repli
+
+step: Gravement blessée, elle peut encore quitter la mêlée
+  do: Utiliser une retraite pour s'éloigner jusqu'à 12 m, sur terre ou à la nage selon le terrain, puis chercher un obstacle qui coupe les attaques à distance.
+  note: Le froid rend le repli particulièrement urgent. La guérison accélérée rend 6 pv par round tant qu'elle est vivante.
+
+step: Elle est acculée sans issue accessible
+  do: Concentrer toutes les morsures disponibles sur l'adversaire qui bloque sa sortie, puis se retirer dès qu'un passage se libère.

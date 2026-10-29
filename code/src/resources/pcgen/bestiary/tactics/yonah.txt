@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Yonah est un ratling mâle de taille Très Petite, créature magique chaotique mauvaise. Intelligent et discret, il fait combattre ses invocations et exploite ses parchemins depuis une position protégée.
+  93 PV, CA 24, résistance à la magie 21 ; immunité aux maladies et aux poisons, esquive extraordinaire. Morsure +8 (1d3-2 et saignement), allonge 0 m : il doit entrer dans l'espace adverse pour mordre.
+  Déplacement et nage à 9 m, escalade à 6 m, creusement à 3 m ; pattes d'araignée permanent. Discrétion +32, Perception +22, vision dans le noir à 18 m.
+
+resource: Invisibilité personnelle | 3/jour | NLS 6 ; disparaît s'il attaque directement
+resource: Porte dimensionnelle | 3/jour | NLS 6 ; conserver au moins une utilisation pour fuir
+resource: Frayeur | 3/jour | Volonté DD 12 ; seulement contre une créature vivante de 5 DV ou moins
+resource: Nuée de rats | 1/jour | convocation de nuées ; concentration puis 2 rounds, sans contrôle de ses déplacements
+resource: Communion | 1/semaine | 6 questions ; renseignement préalable
+resource: Parchemin de convocation de monstres VIII | 3 parchemins | principal moyen de combat ; lecture pendant 1 round
+resource: Parchemin de boule de feu | 2 parchemins | attaque de zone à distance
+resource: Parchemin de mise à mal | 2 parchemins | attaque de contact contre une cible vivante
+resource: Parchemin de détection de l'invisibilité | 2 parchemins | préparation contre les adversaires invisibles
+
+step: Il dispose d'un délai avant l'arrivée des intrus
+  do: Déchiffrer ses parchemins avec lecture de la magie, repérer une position sur un mur ou au plafond et une destination de fuite sûre
+  note: Détection de la magie est permanente. Son aptitude aux parchemins lui donne accès à leurs sorts ; appliquer les conditions normales d'activation et Utilisation d'objets magiques +13 si nécessaire. Les DD et NLS des parchemins sont ceux des objets.
+
+step: Il peut obtenir des renseignements avant l'affrontement
+  do: Interroger les rongeurs présents ; employer communion si disponible pour préciser les dangers et les possibilités de fuite
+  note: Parler aux rongeurs ne permet pas de les commander.
+
+step: Les intrus approchent
+  do: Se rendre invisible, puis gagner sa position protégée avec pattes d'araignée ; préparer un parchemin de convocation de monstres VIII
+  note: Si une menace invisible est connue ou soupçonnée, lire auparavant un parchemin de détection de l'invisibilité.
+
+## Ouverture
+
+step: Il peut agir depuis une position protégée
+  do: Lire un parchemin de convocation de monstres VIII ; placer une créature autorisée par le sort entre les intrus et lui
+  note: La lecture prend 1 round et peut être interrompue. Laisser ensuite la créature attaquer ; cette attaque indirecte ne rompt pas l'invisibilité de Yonah.
+
+step: Il est surpris au contact et ne peut lire sans s'exposer
+  do: Utiliser porte dimensionnelle pour gagner un emplacement sûr, puis commencer son offensive au tour suivant
+  note: Aucune autre action n'est possible après porte dimensionnelle jusqu'à son prochain tour.
+
+## Rounds suivants
+
+step: Une invocation retient les ennemis
+  do: Rester à distance et lui ordonner de concentrer ses attaques sur un adversaire dangereux ; employer un autre parchemin de convocation si davantage de combattants sont nécessaires
+  note: Les créatures issues de convocation de monstres combattent sans exiger de concentration continue.
+
+step: Plusieurs ennemis sont regroupés et une zone de tir est dégagée
+  do: Lire un parchemin de boule de feu en plaçant l'explosion hors de sa propre position et, si possible, de ses invocations
+  note: Le rayon de l'explosion est de 6 m. Cette attaque directe met fin à son invisibilité ; chercher ensuite un nouveau couvert.
+
+step: Une cible vivante isolée est accessible sans traverser la mêlée
+  do: Employer un parchemin de mise à mal et porter l'attaque de contact requise
+  note: Son allonge est de 0 m : approcher expose aux attaques d'opportunité. Réserver ce risque à une occasion favorable ; mise à mal ne soigne pas Yonah.
+
+step: Des ennemis restent groupés et il veut économiser ses parchemins
+  do: Convoquer une nuée de rats près d'eux, puis maintenir sa concentration depuis une position hors d'atteinte
+  note: La nuée poursuit les créatures selon son propre comportement. Yonah ne dirige pas ses cibles et reste vulnérable à ses dégâts physiques ; lancer un autre sort interrompt sa concentration.
+
+step: Un adversaire vivant de 5 DV ou moins gêne sa manœuvre
+  do: Employer frayeur, Volonté DD 12, pour le faire fuir
+  note: Échec : effrayé pendant 1d4 rounds ; réussite : secoué pendant 1 round. Les créatures de 6 DV ou plus sont immunisées.
+
+step: Il doit mordre faute de meilleure option
+  do: Attaquer une cible isolée avec sa morsure +8 (1d3-2 et saignement)
+  note: Le profil ne donne pas la valeur du saignement. Sa faible attaque de mêlée et son allonge nulle rendent cette option secondaire.
+
+## Repli
+
+step: Points de vie sous 30, encerclement ou position devenue intenable
+  do: Utiliser la porte dimensionnelle réservée pour rejoindre un emplacement libre et sûr, jusqu'à 192 m
+  note: Attendre son prochain tour pour agir de nouveau ; les créatures déjà convoquées peuvent continuer à combattre pendant sa fuite.
+
+step: Il a rejoint un abri ou ses portes dimensionnelles sont épuisées
+  do: Employer une invisibilité restante et poursuivre sa fuite par les murs à 6 m, par un sol meuble à 3 m ou à la nage à 9 m selon le terrain
+  note: Rompre le contact avec les poursuivants avant de se dissimuler avec Discrétion +32.

@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Faernip, viflin hivernal de petite taille, chaotique mauvais, harcèle ses victimes grâce à sa vitesse et à ses griffes glaciales.
+  22 pv ; CA 22 ; déplacement de 36 m ; allonge de 1,50 m. Deux griffes +10 en attaque à outrance, chacune infligeant 1d4 plus 1d6 de froid ; une seule griffe lors d'une Attaque éclair.
+  RD 5/fer froid ; immunité au froid ; vulnérabilité au feu, qui lui inflige 50 % de dégâts supplémentaires. Guérison accélérée 3 uniquement au contact de la glace ou de la neige.
+
+step: Il peut choisir le terrain
+  do: Préparer une embuscade près de la neige ou de la glace, avec un passage dégagé pour frapper puis s'éloigner
+  note: sa marche sur la glace favorise ce terrain ; Discrétion +18 et Perception +9 pour surveiller les approches
+
+step: Les intrus ne l'ont pas encore repéré
+  do: Attendre immobile, invisible, et choisir une cible peu protégée ou isolée
+  note: son invisibilité naturelle cesse pendant 1 round dès qu'il entreprend une action autre qu'une action libre ; ses attaques et déplacements le révèlent
+
+resource: Lumières dansantes | 1/jour | NLS 6 ; diversion lumineuse
+resource: Ventriloquie | 1/jour | NLS 6 ; Volonté DD 13 pour reconnaître l'illusion en interagissant avec elle
+resource: Illumination | 1/jour | NLS 6 ; Vigueur DD 12 annule ; cible éblouie pendant 1 minute
+resource: Fracassement | 1/jour | NLS 6 ; Volonté DD 14 annule sur un objet ; portée de 12 m
+resource: Lévitation | 1/jour | NLS 6 ; sur lui-même, durée de 6 minutes ; déplacement vertical de 6 m au plus par round, au prix d'une action de mouvement
+
+## Ouverture
+
+step: Une diversion peut séparer un intrus de ses compagnons
+  do: Utiliser ventriloquie pour faire entendre une voix ailleurs, ou lumières dansantes pour détourner les regards, puis se replacer avant d'attaquer
+  note: ces pouvoirs consomment chacun une action simple ; attendre de retrouver l'invisibilité avant de lancer l'embuscade si les intrus lui en laissent le temps
+
+step: Une cible est accessible sans être adjacente au début de son tour
+  do: Attaque éclair : parcourir au moins 3 m avant de porter une griffe +10, puis poursuivre son déplacement hors de portée
+  note: action complexe ; 36 m de déplacement au total, avant et après l'attaque ; dégâts de 1d4 plus 1d6 de froid
+  note: la cible ne peut pas lui porter d'attaque d'opportunité pendant cette manœuvre ; les autres ennemis le peuvent
+
+step: Un ennemi est déjà adjacent et Faernip peut risquer de rester au contact
+  do: Attaque à outrance avec ses deux griffes +10, chacune pour 1d4 plus 1d6 de froid
+
+## Rounds suivants
+
+step: Il garde une voie de sortie
+  do: Répéter les Attaques éclair sur la même cible, en terminant ses déplacements loin des combattants et au contact de la neige ou de la glace
+  note: sa vitesse surnaturelle lui procure un camouflage donnant 20 % de chances de rater les attaques contre lui lorsqu'il est visible ; elle lui accorde aussi esquive totale et esquive instinctive
+
+step: Il doit passer près d'autres ennemis
+  do: Contourner leurs zones menacées ou utiliser Acrobaties +14 pour éviter leurs attaques d'opportunité
+  note: Souplesse du serpent donne +4 à la CA contre les attaques d'opportunité provoquées par son déplacement ; un échec en Acrobaties reste dangereux
+
+step: Une cible affaiblie reste à portée et les autres ennemis ne peuvent pas l'encercler
+  do: Préférer les deux griffes de l'attaque à outrance pour tenter de l'abattre
+  note: un pas de placement de 1,50 m est possible si le terrain le permet ; un déplacement ordinaire ne permet pas de porter les deux griffes
+
+step: Une arme non magique en fer froid menace de neutraliser sa réduction des dégâts
+  do: Utiliser fracassement à 12 m au plus sur cette arme, puis s'éloigner avec son action de mouvement
+  note: l'objet doit peser au plus 27 kg ; une arme tenue bénéficie d'un jet de Volonté DD 14 pour résister ; activer le pouvoir au contact provoque une attaque d'opportunité
+
+step: Il doit affaiblir un poursuivant à distance plutôt que revenir au contact
+  do: Utiliser illumination à 12 m au plus, puis se déplacer
+  note: Vigueur DD 12 annule ; l'état ébloui impose seulement un malus de 1 aux attaques et aux tests de Perception visuelle
+
+## Repli
+
+step: Il tombe à 7 pv ou moins, ou plusieurs ennemis menacent de l'encercler
+  do: Utiliser la retraite pour quitter le contact, jusqu'à 72 m si le terrain le permet, puis chercher un couvert sur la neige ou la glace
+  note: la retraite protège seulement le départ de sa case initiale contre les ennemis visibles ; éviter les autres zones menacées
+
+step: Un effet de lenteur l'affecte
+  do: Consacrer son action disponible à gagner un couvert et interrompre ses assauts
+  note: il perd sa vitesse surnaturelle, donc son camouflage, son esquive totale et son esquive instinctive ; il est aussi fiévreux pendant l'effet et encore 1 round après sa fin
+
+step: Le passage au sol est bloqué et une issue en hauteur est accessible
+  do: Utiliser lévitation sur lui-même, puis monter vers une corniche ou une ouverture
+  note: la montée coûte une action de mouvement et atteint 6 m ; lévitation ne lui donne aucun déplacement horizontal autonome et le prive de guérison accélérée tant qu'il ne touche plus la neige ou la glace
+
+step: Il a rompu la poursuite
+  do: Rester immobile à couvert sur la neige ou la glace pour retrouver son invisibilité et récupérer 3 pv par round, jusqu'à 22 pv

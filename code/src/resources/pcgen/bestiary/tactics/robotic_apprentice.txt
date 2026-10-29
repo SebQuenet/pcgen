@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Apprenti robotique, mage mécanique neutre de taille M, créature artificielle qui cherche à capturer les intrus. 117 pv, CA 23, solidité 10 ; vulnérable aux coups critiques et à l'électricité.
+  Attaque à outrance : 4 coups +18 (1d6+3 chacun), allonge 1,50 m ; déplacement de 9 m. Il contrôle le terrain par ses sorts avant d'engager la mêlée.
+
+note: Objectif
+  Immobiliser les adversaires et les priver de leur équipement pour les livrer ligotés au laboratoire personnel de son maître, dans le donjon.
+
+resource: Nuage nauséabond | 1 | Vigueur DD 8 ; niveau de lanceur de sorts 9
+resource: Toile d'araignée et poussière scintillante | 3 au total | réserve commune ; Réflexes DD 7 pour la toile, Volonté DD 7 contre l'aveuglement de la poussière
+resource: Graisse | à volonté | entraver les déplacements ou faciliter son propre passage dans la toile
+resource: Convocation de monstres I | à volonté | renfort temporaire ; ne remplace pas la séquence de contrôle initiale
+
+step: Des intrus approchent
+  do: Repérer la sortie à bloquer et les lanceurs de sorts à neutraliser en priorité
+  note: Perception +17, vision dans le noir à 18 m et vision nocturne ; rester à distance de mêlée tant que les ennemis capables de riposter sont trop nombreux
+
+## Ouverture
+
+step: Premier round, les intrus sont dans la salle
+  do: Lancer toile d'araignée pour obstruer la sortie et, si possible, prendre plusieurs adversaires dans la zone
+  note: Réflexes DD 7 ; ancrer la toile entre des surfaces opposées. Cette incantation dépense une des trois utilisations communes avec poussière scintillante
+
+step: Round suivant, des ennemis regroupés peuvent encore riposter
+  do: Lancer nuage nauséabond sur eux, en privilégiant les lanceurs de sorts et les adversaires retenus par la toile
+  note: Vigueur DD 8 ; la nausée limite leurs actions. Ses immunités de créature artificielle le protègent de cet effet, mais le nuage gêne aussi sa vision
+
+## Rounds suivants
+
+step: Des adversaires visibles restent dangereux et la réserve de sorts du deuxième niveau n'est pas épuisée
+  do: Lancer poussière scintillante, en visant d'abord les lanceurs de sorts encore capables d'agir
+  note: Volonté DD 7 contre l'aveuglement ; chaque incantation utilise la même réserve que toile d'araignée. Choisir les cibles dont l'aveuglement réduira le plus les représailles
+
+step: Il doit traverser sa propre toile
+  do: Lancer graisse sur lui-même pour faciliter son dégagement, puis progresser vers sa cible lors d'une action ultérieure
+  note: La graisse aide à se libérer ; elle ne lui permet pas d'ignorer automatiquement la toile
+
+step: Les ennemis capables de riposter sont encore trop nombreux
+  do: Garder ses distances dans la salle et lancer graisse sur leur trajet pour gêner leur approche
+  note: Si plusieurs apprentis combattent ensemble, répartir leurs zones de contrôle et concentrer leurs efforts sur les lanceurs de sorts
+
+step: Les apprentis sont plus nombreux que les adversaires encore capables de se défendre
+  do: Engager la mêlée, en priorité contre les lanceurs de sorts ; utiliser les quatre coups à outrance lorsqu'il peut rester au contact
+  note: Pour capturer une cible vivante, porter des coups non létaux avec le malus de -4 : quatre coups +14, chacun infligeant 1d6+3 dégâts non létaux. S'il doit se déplacer de plus de 1,50 m, il ne porte normalement qu'un coup
+
+step: Un adversaire est maîtrisé et les autres ne peuvent plus intervenir
+  do: Lui retirer son équipement, puis le ligoter avec du ruban ionique pour le livrer au laboratoire du maître
+  note: Cesser de frapper une cible neutralisée ; l'objectif est de la détenir vivante
+
+## Repli
+
+step: Il subit de lourds dégâts
+  do: Continuer le combat jusqu'à sa destruction
+  note: Aucun seuil de fuite ; il ne se replie pas pour préserver ses 117 pv
+
+step: Les intrus quittent la salle
+  do: Cesser la poursuite à la limite de la pièce
+  note: Il ne poursuit jamais les fuyards au-delà de cette salle

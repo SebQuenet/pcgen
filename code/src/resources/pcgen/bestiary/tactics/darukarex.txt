@@ -1,0 +1,93 @@
+## Avant le combat
+
+note: Profil
+  Darukarex, diable des contrats loyal mauvais de FP 11, négociateur intelligent qui cherche à neutraliser les adversaires avant de les affronter au fouet. Initiative +11 ; 147 pv ; CA 26 ; déplacement terrestre de 9 m.
+  Contrat contraignant utilisé comme fouet : +22/+17/+12, 1d4+8, critique x3 et étreinte, allonge de 3 m. Cornes +13, 2d6+2, allonge de 1,50 m.
+  Réduction des dégâts 10/Bien ; résistance à la magie 22 ; immunité au feu, au poison et aux effets mentaux ; résistance à l'acide et au froid de 10. Vision dans les ténèbres et télépathie à 30 m.
+
+resource: Vol | 3/jour | durée de 14 minutes ; déplacement aérien de 18 m
+resource: Vision lucide | 3/jour | durée de 14 minutes
+resource: Renvoi des sorts | 1/jour | renvoie 1d4+6 niveaux de sorts dirigés contre lui ; ne protège pas des sorts de zone
+resource: Cor du Bien et du Mal | 1/jour | cercle magique contre le Bien pendant 1 heure
+resource: Convocation | 1/jour | 50 % de chances de convoquer 1d4 érinyes
+resource: Symbole de douleur | 1/jour | Vigueur DD 22 ; malus de -4 aux attaques, tests de compétence et de caractéristique
+
+step: Il peut observer les intrus avant de se montrer
+  do: Employer œil du mage, disponible 3/jour, pour repérer leur approche ; choisir une position qui laisse une issue et une destination de téléportation connue
+  note: Sa Perception +24 et sa Psychologie +24 servent à repérer les menaces et les intentions pendant les échanges.
+
+step: Une discussion reste possible
+  do: Employer langue de miel, Diplomatie +31 et Bluff +27 pour négocier ; détection de pensées à volonté, Volonté DD 20, pour sonder les interlocuteurs
+  note: Charme-personne à volonté, Volonté DD 18, facilite une approche avant les hostilités ; il ne donne pas le contrôle total d'une victime et ne remplace pas son consentement à un contrat infernal.
+
+step: Le combat devient probable et il dispose de plusieurs rounds
+  do: Activer successivement renvoi des sorts, le cor, puis vol ; ajouter vision lucide si des illusions ou des ennemis invisibles sont à craindre
+  note: Préparer ces effets sur des rounds distincts. Le cor accorde notamment +2 de parade à la CA et +2 de résistance aux sauvegardes contre les attaques et effets des créatures bonnes.
+
+step: Il défend un lieu préparé
+  do: Placer un symbole de douleur sur un support visible près du passage attendu, avec une condition de déclenchement adaptée aux intrus
+  note: Il cherche à faire commencer le combat avec des ennemis affaiblis ; le symbole exige une préparation préalable.
+
+step: Les ennemis approchent et il peut préparer des renforts
+  do: Tenter sa convocation ; en cas de réussite, placer les érinyes de façon à gêner l'approche et leur transmettre ses priorités par télépathie
+  note: Une tentative ratée consomme l'unique utilisation ; son plan doit rester viable sans renforts.
+
+## Ouverture
+
+resource: Appel cacophonique de groupe | 3/jour | Volonté DD 22 ; nausée pendant 14 rounds
+resource: Injonction suprême | 3/jour | Volonté DD 22 ; durée maximale de 14 rounds, nouvelle sauvegarde à chaque tour après le premier
+resource: Immobilisation de monstre | 3/jour | Volonté DD 21 ; nouvelle sauvegarde à chaque tour de la cible
+
+step: Plusieurs adversaires sensibles aux effets mentaux sont groupés à portée
+  do: Ouvrir avec appel cacophonique de groupe à 18 m au maximum, en privilégiant les lanceurs de sorts et les combattants dangereux
+  note: Les cibles doivent être à 9 m au maximum les unes des autres. Un ennemi nauséeux ne peut normalement effectuer qu'une action de mouvement par tour ; Darukarex attaque ensuite ceux qui restent capables d'agir.
+
+step: Il préfère immobiliser plusieurs adversaires vivants capables de comprendre son ordre
+  do: Employer injonction suprême avec l'ordre « Halte », à 18 m au maximum
+  note: Tous reçoivent le même ordre et doivent être à 9 m au maximum les uns des autres. Polyglottisme facilite la communication ; l'ordre interdit les actions, mais ne rend pas les victimes sans défense.
+
+step: Une seule menace prioritaire reste libre ou les ennemis sont dispersés
+  do: Employer immobilisation de monstre sur cette menace, de préférence un combattant qui pourrait le rejoindre ou un lanceur de sorts
+  note: Il choisit une seule de ces ouvertures par round. Si les adversaires sont immunisés aux effets mentaux, il passe aux rayons ou au contrat contraignant.
+
+## Rounds suivants
+
+resource: Rayon ardent | 3/jour | trois rayons, chacun infligeant 4d6 dégâts de feu sur une attaque de contact à distance ; portée de 18 m
+
+step: Des adversaires restent capables d'attaquer malgré son premier contrôle
+  do: Neutraliser en priorité une menace encore active avec immobilisation de monstre, ou reprendre plusieurs cibles avec appel cacophonique de groupe
+  note: Il évite de consacrer un nouveau pouvoir à des victimes déjà neutralisées tant qu'une menace libre demeure.
+
+step: Il peut combattre à distance ou au-dessus de la mêlée
+  do: Garder ses distances grâce à vol et concentrer les rayons ardents sur une cible vulnérable au feu, notamment un adversaire à forte armure
+  note: Les rayons visent la CA de contact. Les regrouper sur une même menace augmente ses chances d'éliminer un adversaire encore actif.
+
+step: Un ennemi se trouve à 3 m et Darukarex peut rester sur place
+  do: Effectuer une attaque à outrance avec le contrat contraignant à +22/+17/+12 ; ajouter les cornes à +13 seulement si une cible se trouve à 1,50 m
+  note: Une touche du contrat permet une tentative d'étreinte gratuite. Il réserve cette prise à une victime isolée qu'il peut se permettre de retenir, car une lutte gêne aussi sa propre liberté d'action.
+
+step: Un combattant armé menace sa position
+  do: Tenter un désarmement ou un croc-en-jambe avec un BMO de +20 à la place d'une attaque de mêlée appropriée
+  note: Privilégier le désarmement d'une arme qui contourne sa réduction des dégâts, ou le croc-en-jambe d'un ennemi au sol. S'il doit tenir sa position en mêlée, Expertise du combat échange -4 aux attaques et manœuvres contre +4 d'esquive à la CA.
+
+step: Une image trompeuse peut détourner une poursuite ou dissimuler une issue
+  do: Employer image accomplie à volonté, Volonté DD 20 en cas d'interaction, pour créer une fausse présence ou un obstacle apparent
+  note: L'image exige normalement sa concentration ; il ne la traite pas comme un écran solide et ne compte pas entretenir l'illusion tout en lançant librement ses autres pouvoirs.
+
+## Repli
+
+resource: Téléportation suprême | 3/jour | lui-même et au maximum 22,7 kg d'objets ; aucun allié transporté
+resource: Porte dimensionnelle | à volonté | portée maximale de 288 m ; aucune autre action avant son prochain tour après utilisation
+resource: Changement de plan | 1/jour | solution de fuite vers un autre plan si le voyage planaire est possible
+
+step: Ses points de vie passent sous 50, ou des ennemis capables de le tuer le coincent
+  do: Utiliser téléportation suprême pour gagner un refuge connu ; abandonner la position aux érinyes éventuellement convoquées
+  note: Il fuit plus tôt si ses contrôles échouent et qu'il subit des dégâts que ses protections n'arrêtent pas. Sa téléportation suprême ne permet pas d'emporter ses renforts ni un prisonnier.
+
+step: La téléportation suprême est épuisée ou un dégagement immédiat suffit
+  do: Employer porte dimensionnelle pour passer derrière un obstacle ou atteindre un point hors d'atteinte
+  note: Il attend son prochain tour avant toute autre action ; il ne combine pas cette fuite avec un second pouvoir après son arrivée.
+
+step: Il doit quitter le plan et peut encore voyager entre les plans
+  do: Employer changement de plan sur lui-même pour échapper aux poursuivants
+  note: Si les déplacements magiques sont bloqués, chercher une issue physique en volant, ou se déplacer de 9 m par action de mouvement si vol est indisponible.

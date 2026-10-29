@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Plizeazoth, aberration aquatique de taille TG, neutre mauvaise, FP 12 : un bourreau brutal qui brise les esprits pour ses maîtres alghollthus et suit des ordres simples.
+  157 pv, CA 26 ; nage à 18 m, déplacement terrestre à 3 m. Allonge de 4,50 m ; deux tentacules +20 (1d8+10, pointe psychique et mucus), queue +14 (2d6+5 et mucus).
+  Vision dans le noir et perception des pensées à 18 m ; télépathie à 30 m. Corps amorphe, immunité aux effets mentaux et à la douleur, résistance au froid 10, résistance à la magie 23.
+
+resource: Désespoir foudroyant scarifiant | 3/jour | Volonté DD 20 ; cône de 9 m ; version ordinaire à volonté
+resource: Blocage émotionnel | 3/jour | Volonté DD 19 ; portée 18 m
+resource: Hallucination démente | 3/jour | Volonté DD 18 ; un humanoïde à 18 m au plus
+resource: Poussée mentale IV | 3/jour | Volonté DD 20, demi-dégâts ; portée 18 m ; 15d8 dégâts et fatigue pendant 1 round si échec
+resource: Modification de mémoire | 3/jour | Volonté DD 20 ; portée 18 m ; à réserver aux captifs
+resource: Mauvais œil | 1/jour | Vigueur DD 22 ; portée 18 m ; actif pendant 15 rounds
+
+step: Il attend les victimes désignées par ses ordres
+  do: Rester immergé et repérer leur approche avec ses sens ; employer détection des pensées à volonté, Volonté DD 18, s'il a le temps de sonder leurs intentions.
+  note: Préférer une position permettant de combattre à 4,50 m des ennemis et de repartir vers l'eau profonde.
+
+step: Il dispose d'un round avant l'affrontement
+  do: Créer une projection d'image à volonté pour attirer les attaques et faire partir ses pouvoirs magiques de cette silhouette.
+  note: Durée 15 rounds, portée 75 m, Volonté DD 23 pour reconnaître l'illusion en interagissant avec elle. Maintenir une ligne d'effet entre son corps et l'image ; celle-ci ne transmet ni tentacules ni nuage de mucus.
+
+## Ouverture
+
+step: Plusieurs adversaires entrent dans un cône de 9 m
+  do: Lancer désespoir foudroyant scarifiant, Volonté DD 20, puis les laisser approcher dans son nuage.
+  note: Échec : −2 aux attaques, sauvegardes, tests de caractéristique et de compétence, ainsi qu'aux dégâts d'armes, pendant 15 minutes. La scarification ajoute pendant 24 heures −2 aux sauvegardes contre ses effets de peur ou d'émotion ; elle ne se cumule pas avec elle-même.
+
+step: Un adversaire est déjà à 4,50 m ou moins et aucun affaiblissement préalable n'est nécessaire
+  do: Attaquer à outrance avec les deux tentacules et la queue, en concentrant les tentacules sur la même victime.
+  note: Chaque tentacule qui touche implante une pointe psychique ; chaque attaque naturelle qui touche applique aussi le mucus.
+
+step: Il doit nager pour atteindre une victime ce round
+  do: Se déplacer de 18 m au plus, puis porter un seul coup de tentacule avec Frappe décisive : +20, 2d8+10, pointe psychique et mucus.
+  note: S'il reste hors d'allonge mais à 18 m ou moins, employer plutôt poussée mentale IV sur une cible vulnérable aux effets mentaux.
+
+## Rounds suivants
+
+step: Des ennemis demeurent dans son nuage sous l'eau
+  do: Faire effectuer à chacun une sauvegarde de Vigueur DD 23 chaque round dans un rayon de 9 m.
+  note: Échec : respiration aquatique, mais perte de la respiration aérienne pendant 24 heures ; chaque nouvel échec prolonge cet effet de 24 heures.
+
+step: Une attaque naturelle a touché
+  do: Faire effectuer une sauvegarde de Vigueur DD 23 contre le mucus.
+  note: Échec : après 1d4 rounds, la chair transformée impose −4 en Constitution ; hors humidité, la victime subit 1d12 dégâts toutes les 10 minutes. Ce mucus est distinct de l'effet respiratoire du nuage.
+
+step: Une victime porte des pointes psychiques et reste à 30 m ou moins
+  do: Après les coups de tentacule, faire exploser ses pointes par une action rapide, puis reprendre les attaques à outrance aux rounds suivants.
+  note: Chaque pointe inflige 1d6 dégâts non létaux et 1d2 dégâts de Sagesse ; une seule sauvegarde de Volonté DD 25 par victime et par détonation réduit les dégâts non létaux de moitié et annule les dégâts de Sagesse.
+  note: Maximum 15 pointes actives au total ; disparition après 1 heure, détonation ou séparation de plus de 30 m. Effet mental et de douleur ; la baisse de Sagesse fragilise les sauvegardes suivantes.
+
+step: Un lanceur de sorts subit déjà désespoir foudroyant
+  do: Employer blocage émotionnel, Volonté DD 19, au lieu d'une attaque à outrance.
+  note: Pendant 15 rounds, ses sorts et pouvoirs magiques exigent une composante émotionnelle ; le désespoir l'empêche de les utiliser tant que les deux effets persistent.
+
+step: Un humanoïde résiste aux premières agressions mentales
+  do: Employer hallucination démente, Volonté DD 18, puis exploiter son malus de −2 en Volonté avec les pointes ou poussée mentale IV.
+  note: L'hallucination impose aussi −2 aux tests de niveau de lanceur de sorts et aux compétences fondées sur l'Intelligence ou la Sagesse, pendant 1 heure.
+
+step: Un combattant dangereux reste hors d'allonge
+  do: Employer douleur à volonté, Volonté DD 19, pour lui imposer −4 aux attaques, tests de compétence et de caractéristique.
+  note: Durée 15 rounds, réduite à 1 round sur une sauvegarde réussie ; ce pouvoir n'inflige pas de dégâts directs.
+
+step: Plusieurs ennemis vivants doivent être affaiblis sur plusieurs rounds
+  do: Activer mauvais œil, puis viser un ennemi par round avec l'action rapide disponible, Vigueur DD 22.
+  note: Au moins 10 DV : fiévreux ; 5 à 9 DV : aussi paniqué ; 4 DV ou moins : aussi comateux. Choisir chaque round entre cette action rapide et la détonation des pointes.
+
+step: Une cible est immunisée aux effets mentaux
+  do: Concentrer sur elle les attaques naturelles et le mucus, en conservant les pouvoirs mentaux pour les autres ennemis.
+
+## Repli
+
+step: Moins de 40 pv et ses ordres autorisent la retraite
+  do: Faire exploser les pointes encore à portée avant de rompre le contact, puis se retirer vers l'eau profonde ; l'action de retraite permet de nager jusqu'à 36 m.
+  note: Seuil de repli proposé au MJ. Utiliser compression pour emprunter un passage étroit ; éviter la terre, où il avance à 3 m.
+
+step: Le combat est terminé et une victime peut être gardée captive
+  do: Employer modification de mémoire, Volonté DD 20, pour effacer ou déformer jusqu'à 5 minutes de souvenirs avant de la livrer à ses maîtres.
+  note: Prévoir le temps de concentration nécessaire, jusqu'à 5 minutes après l'activation ; la victime doit rester à portée pendant cette préparation.

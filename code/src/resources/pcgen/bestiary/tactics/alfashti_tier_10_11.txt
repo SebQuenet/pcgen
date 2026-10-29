@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Alfashti est une naga gardienne avancée, aberration de grande taille, chaotique mauvaise et atteinte de psychose. Elle privilégie les sorts offensifs sous invisibilité suprême.
+  152 pv ; CA 29, contact 16, prise au dépourvu 22 ; initiative +10 ; déplacement 12 m ; espace et allonge 3 m ; vision dans le noir 18 m.
+  Morsure +16 (2d6+7 et poison) ; crachat +17 contre la CA de contact (poison). Les effets et le DD du poison ne sont pas précisés dans ce profil.
+  Sorts de niveau de lanceur 9 ; concentration +13. Bluff +30 pour dissimuler sa folie ; Perception +27.
+
+resource: Sorts de niveau 4 | 5/jour | Réserve commune à puissance divine et invisibilité suprême.
+resource: Sorts de niveau 3 | 7/jour | Réserve commune à éclair, dissipation de la magie et soins importants.
+resource: Sorts de niveau 2 | 7/jour | Réserve commune à détection de pensées, restauration partielle, rayon ardent et détection de l'invisibilité.
+resource: Sorts de niveau 1 | 7/jour | Réserve commune à soins légers, faveur divine, repli expéditif, armure de mage et projectile magique ; décompter l'armure de mage quotidienne.
+
+step: Chaque jour
+  do: Lancer armure de mage.
+  note: Son bonus est déjà compris dans la CA 29 ; ne pas l'ajouter une seconde fois.
+
+step: Les intrus sont repérés avant l'engagement
+  do: Lancer puissance divine en prévision du combat.
+  note: Dépenser un emplacement de niveau 4 ; les valeurs d'attaque du profil ne comprennent pas ce renforcement.
+
+## Ouverture
+
+step: Le combat commence
+  do: Lancer invisibilité suprême avant toute offensive.
+  note: Consacrer cette première action au sort, puis attaquer aux rounds suivants. Décompter un emplacement de niveau 4.
+
+## Rounds suivants
+
+step: Plusieurs adversaires peuvent être pris dans une même ligne
+  do: Lancer éclair, DD 17 de Réflexes.
+  note: Se déplacer au besoin pour obtenir un meilleur alignement, en conservant une distance avec les combattants de mêlée.
+
+step: Une cible prioritaire est isolée ou aucun alignement intéressant ne se présente
+  do: Lancer projectile magique sur cette cible.
+  note: Elle privilégie éclair et projectile magique, car elle suppose les intrus protégés contre le feu à proximité du magma.
+
+step: Une protection magique adverse gêne son offensive
+  do: Tenter de la supprimer avec dissipation de la magie, puis reprendre les attaques.
+
+step: Un adversaire invisible échappe à son observation
+  do: Lancer détection de l'invisibilité pour pouvoir le viser.
+
+step: Un adversaire arrive au contact
+  do: Faire un pas de placement de 1,50 m si cela permet de lancer un sort sans être menacée ; sinon, mordre à +16 pour 2d6+7 dégâts et poison, ou lancer sur la défensive avec Magie de guerre.
+  note: Sa morsure atteint jusqu'à 3 m. Elle préfère la magie, mais accepte de combattre avec ses armes naturelles.
+
+step: Elle choisit d'attaquer à distance avec son venin
+  do: Cracher à +17 contre la CA de contact.
+  note: Le profil ne précise pas la portée du crachat.
+
+step: Invisibilité suprême est dissipée ou prend fin, et un emplacement de niveau 4 reste disponible
+  do: Relancer invisibilité suprême avant de poursuivre son offensive.
+
+step: Elle est blessée et dispose d'un répit
+  do: Lancer soins importants, puis reprendre le combat.
+  note: Les soins consomment la même réserve de niveau 3 qu'éclair et dissipation de la magie.
+
+## Repli
+
+step: Sa psychose persiste
+  do: Combattre jusqu'à la mort, quels que soient ses points de vie restants.
+
+step: Sa psychose est guérie
+  do: Cesser immédiatement les attaques et se rendre.

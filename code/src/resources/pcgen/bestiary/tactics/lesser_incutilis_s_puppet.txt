@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Marionnette humaine de taille M, sans intelligence ; 12 pv, CA 12. Son attaque est un coup à +4, infligeant 1d6+4 dégâts, avec une allonge de 1,50 m.
+  Vitesse de déplacement : 9 m ; vision dans le noir à 18 m. Réduction des dégâts de 5, sauf contre les armes tranchantes.
+  Chancelante : elle ne peut effectuer qu'une action de mouvement ou une action simple par round.
+
+step: Aucun adversaire à portée
+  do: Ne préparer aucune manœuvre complexe ; attendre le contact ou avancer lorsque le combat commence.
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m ou moins
+  do: Porter un coup à +4, pour 1d6+4 dégâts.
+
+step: Aucun adversaire n'est à portée de son coup
+  do: Se rapprocher de l'adversaire le plus proche avec une action de mouvement, jusqu'à 9 m.
+  note: Après ce déplacement ordinaire, son état chancelant l'empêche d'ajouter une attaque pendant ce tour.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter le coup à +4, pour 1d6+4 dégâts, une fois par tour.
+  note: Rester au contact évite de consacrer son unique action à un déplacement.
+
+step: Plus aucun adversaire n'est à portée
+  do: Avancer jusqu'à 9 m pour retrouver le contact.
+
+step: Elle subit des dégâts d'arme
+  do: Appliquer sa réduction des dégâts de 5, sauf si l'arme inflige des dégâts tranchants.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à frapper ou à avancer jusqu'à sa mise hors de combat.
+  note: Sans intelligence, elle ne choisit pas de seuil de retraite et n'organise pas de fuite tactique.

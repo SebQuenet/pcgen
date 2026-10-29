@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Black Shuck, créature magique de taille G, chaotique neutre et solitaire des côtes et marais tempérés. Intelligent, il parle le commun et peut prendre forme humaine.
+  85 pv, CA 20 ; réduction des dégâts 10/fer froid ou magie. Déplacement terrestre de 12 m, nage de 4,50 m ; espace occupé de 3 m et allonge de 1,50 m.
+  Morsure +13, 1d8+5 et maladie, avec croc-en-jambe gratuit à +17 ; deux griffes +13, 1d6+5 chacune. Son objectif est de renverser une cible isolée, puis de la déchiqueter au sol.
+  Initiative +11, Discrétion +17, Perception +12 ; vision aveugle et vision dans le noir à 18 m, vision nocturne et odorat.
+
+resource: Clignotement | 3/jour | NLS 9 ; durée de 9 rounds. Protection intermittente contre les attaques, mais ses propres attaques ont aussi 20 % de risque d'échec.
+resource: Nappe de brouillard | 3/jour | NLS 9 ; rayon de 6 m, durée de 90 minutes. Le brouillard gêne la vue ordinaire, mais pas sa vision aveugle.
+resource: Détection faussée | 3/jour | NLS 9 ; durée de 9 heures. Brouille les renseignements des détections d'auras en leur substituant ceux d'une autre cible ; ne masque pas sa présence physique.
+
+step: Il peut observer les intrus sans être vu
+  do: Se dissimuler avec Discrétion +17 et repérer un adversaire peu protégé, séparé de ses alliés.
+  note: Privilégier un passage étroit ou un couvert où une nappe de brouillard lui permettra de rester près de sa proie.
+
+step: Une approche sous apparence humaine peut rapprocher une proie
+  do: Prendre forme humaine, parler en commun et employer Bluff +11 pour attirer la cible vers le lieu choisi.
+  note: Reprendre sa forme naturelle avant d'utiliser la morsure et les griffes indiquées dans ce profil.
+
+step: Le combat est imminent et il dispose d'un round de préparation
+  do: Activer clignotement juste avant l'engagement.
+  note: Sa courte durée interdit de le lancer longtemps à l'avance ; chaque pouvoir magique demande une action simple.
+
+## Ouverture
+
+step: Les ennemis sont encore à distance et le terrain est découvert
+  do: Créer une nappe de brouillard sur la zone d'engagement, puis avancer jusqu'à 12 m vers la cible choisie.
+  note: Ce tour sert à installer le brouillard et à se placer ; il ne comprend pas d'attaque. Éviter de lancer le pouvoir sous la menace d'une attaque d'opportunité.
+
+step: Le brouillard est déjà en place et la cible peut être rejointe avec un déplacement de 12 m
+  do: Avancer jusqu'à 1,50 m de la cible et porter une morsure +13, pour 1d8+5 et maladie ; tenter le croc-en-jambe gratuit à +17 si elle touche.
+  note: Après ce déplacement, il ne porte qu'une attaque. Garder la proie dans les 18 m de sa vision aveugle.
+
+step: Une cible est déjà à portée au début de son tour
+  do: Attaquer à outrance : morsure +13, puis deux griffes +13 ; tenter de renverser la cible dès que la morsure touche.
+  note: Une cible mise à terre par la morsure est plus facile à toucher avec les griffes qui suivent.
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter l'attaque à outrance, en commençant par la morsure et son croc-en-jambe, puis en portant les deux griffes.
+  note: La morsure inflige une maladie, mais le profil fourni ne précise ni son DD ni ses effets ; ne pas lui attribuer de conséquence immédiate inventée.
+
+step: Une proie à terre tente de se relever à portée
+  do: Porter une morsure en attaque d'opportunité si celle-ci est disponible.
+  note: Cette attaque se résout avant la fin du relèvement ; ne pas tenter de renverser une créature encore à terre.
+
+step: Les ennemis cherchent à le viser à travers le brouillard
+  do: Rester dans la nappe et poursuivre la même proie grâce à la vision aveugle.
+  note: Le brouillard ne bloque ni les déplacements ni les effets de zone. Sa réduction des dégâts peut être franchie par une arme magique ou en fer froid.
+
+step: La cible s'éloigne ou le groupe se rassemble autour de lui
+  do: Se déplacer dans le brouillard pour retrouver une cible isolée ; ne porter qu'une morsure s'il a dû effectuer un déplacement normal.
+  note: Un pas de 1,50 m permet de se replacer tout en conservant une attaque à outrance.
+
+step: Il doit tenir au contact malgré des coups dangereux
+  do: Employer Expertise du combat : CA 23, morsure et griffes +10, croc-en-jambe +14.
+  note: Ces valeurs s'appliquent pendant qu'il accepte le malus de -3 aux attaques pour obtenir +3 d'esquive à la CA.
+
+## Repli
+
+step: Ses points de vie tombent à 25 ou moins, ou les adversaires le dominent au contact
+  do: Si possible hors de leur allonge, lancer une nappe de brouillard restante pour couvrir la fuite et se déplacer de 12 m vers un couvert.
+  note: S'il est déjà menacé et doit partir immédiatement, privilégier une retraite complète plutôt que le lancement d'un pouvoir magique.
+
+step: Une voie de fuite terrestre est ouverte
+  do: Effectuer une retraite jusqu'à 24 m, puis poursuivre la fuite en utilisant les couverts et Discrétion +17 dès qu'il peut se cacher.
+  note: La retraite protège seulement contre les attaques d'opportunité dues au départ de sa position initiale ; éviter de traverser d'autres zones menacées.
+
+step: La poursuite est rompue
+  do: Prendre forme humaine à l'abri des regards pour compliquer son identification.
+  note: Nager seulement si l'eau offre une issue inaccessible aux poursuivants : sa nage de 4,50 m est plus lente que sa course terrestre.

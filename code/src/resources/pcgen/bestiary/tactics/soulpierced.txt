@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Soulpierced, mort-vivant intangible de taille M, chaotique mauvais, FP 17 : esprit d'une victime de meurtre rituel, rongé par la colère et attaché au lieu de sa mort.
+  275 PV ; CA 31, contact 31 ; résistance à la magie 28 ; résistance à la canalisation +6 ; immunités des morts-vivants.
+  Contact intangible +28, 17d6 dégâts et contact frustrant ; allonge 1,50 m. Vol parfait à 12 m ; initiative +16.
+
+resource: Antidétection | permanent | pouvoir magique, NLS 20
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +39, puis se placer à couvert pour préparer une attaque avec Discrétion +37
+  note: vision dans le noir à 18 m ; antidétection gêne les recherches magiques, mais ne le rend pas invisible
+
+step: Choix de la position d'embuscade
+  do: Privilégier une mince cloison ou un obstacle qu'il peut franchir grâce à son intangibilité
+  note: il reste dans un rayon maximal de 30 m autour de son lieu de création
+
+## Ouverture
+
+step: Une cible isolée est accessible
+  do: Utiliser Attaque en vol pour approcher, porter un contact intangible +28 contre la CA de contact, puis poursuivre son déplacement vers un couvert
+  note: répartir les 12 m de vol entre l'approche et le dégagement ; cette attaque en vol ne supprime pas les attaques d'opportunité adverses
+
+step: Le contact inflige des dégâts
+  do: Infliger 17d6 dégâts et appliquer le contact frustrant
+  note: Vigueur DD 25 ou chancelant pendant 1 round ; effet mental et d'émotion. Viser de préférence un adversaire qui dépend de plusieurs actions pour être efficace
+
+## Rounds suivants
+
+step: Il peut frapper puis se mettre à couvert
+  do: Répéter les passages avec Attaque en vol et concentrer les contacts sur la même cible jusqu'à sa chute
+  note: son attaque de contact reste unique ; ne pas ajouter d'attaques itératives
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Porter un contact intangible +28, avec ses dégâts et son contact frustrant
+  note: Attaques réflexes permet jusqu'à 13 attaques d'opportunité par round, selon les occasions offertes
+
+step: Une cible adjacente fait un pas de 1,50 m pour s'éloigner
+  do: Utiliser Step Up pour la suivre immédiatement de 1,50 m et maintenir la menace
+  note: cette action immédiate interdit son propre pas de placement au prochain tour et réduit alors son déplacement de 1,50 m
+
+step: Un intrus tente d'arracher la lame de son cœur
+  do: Concentrer ses attaques sur cet intrus et se dégager par les obstacles si nécessaire
+  note: il réagit par douleur et méfiance ; il ignore le lien entre cette lame et son tourment
+
+## Repli
+
+step: Les adversaires le mettent en difficulté
+  do: Rompre le contact en volant vers un couvert ou derrière une mince cloison, puis reprendre les attaques depuis une autre direction
+  note: son repli reste limité au rayon de 30 m de son lieu de création
+
+step: Les intrus quittent son périmètre
+  do: Cesser la poursuite et rester sur le site
+
+step: Il est détruit alors que la lame reste dans son cœur
+  do: Le faire réapparaître au même endroit après 2d4 jours
+  note: sa destruction ne devient définitive que si la lame a d'abord été retirée ; cette reconstitution ne lui rend aucun PV pendant le combat

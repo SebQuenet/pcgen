@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Narlysa, witchfire avancée de FP 10, est une morte-vivante incorporelle, chaotique mauvaise et intelligente. Elle harcèle ses ennemis à distance et protège l'œuf de l'oiseau-tonnerre.
+  135 PV ; CA 28, contact 28 ; initiative +12 ; vol à 15 m par round, manœuvrabilité parfaite ; vision dans le noir à 18 m. Immunité à l'électricité et immunités des morts-vivants.
+  Toucher incorporel +15 contre la CA de contact, allonge 1,50 m ; trait de feu à distance (witchbolt) +15. Chaque attaque inflige 8d6 de feu, plus l'effet de witchbolt indiqué dans son profil.
+
+resource: Convocation | 1/jour | pouvoir de niveau 4 ; convoque 2 feux follets avec 50 % de chances de réussite
+resource: Pouvoirs magiques | à volonté | NLS 9, concentration +18 ; décharge défensive, rayon affaiblissant (DD 20), invisibilité, lumières dansantes, déguisement, son imaginaire (DD 19)
+
+step: Elle entend un combat dans la zone G1
+  do: Tenter de convoquer deux feux follets pour l'assister avant l'arrivée des intrus
+  note: Une tentative consomme son unique utilisation quotidienne, même en cas d'échec
+
+## Ouverture
+
+step: Premier round de combat
+  do: Activer décharge défensive et utiliser son déplacement en vol pour rester hors de portée des combattants au corps à corps
+  note: Elle privilégie la distance ; l'activation du pouvoir occupe son action principale de ce round
+
+## Rounds suivants
+
+step: Elle peut attaquer à distance sans être engagée au corps à corps
+  do: Lancer un witchbolt +15, infligeant 8d6 de feu plus witchbolt, puis se déplacer en vol si nécessaire pour conserver ses distances
+  note: Adapter l'ordre du déplacement et du tir pour éviter de tirer au contact d'un adversaire
+
+step: Un adversaire frappe très fort au corps à corps ou porte une armure lourde
+  do: Remplacer périodiquement le trait de feu par un rayon affaiblissant sur cet adversaire (Vigueur DD 20)
+  note: La baisse de Force réduit sa puissance et peut rendre son équipement assez lourd pour l'encombrer ; profiter de sa mobilité réduite pour maintenir l'écart
+
+step: Un ennemi parvient au contact
+  do: Se dégager en vol dès que possible ; si elle doit combattre au contact, utiliser son toucher incorporel +15, infligeant 8d6 de feu plus witchbolt
+  note: Souplesse du serpent facilite ses déplacements exposés ; Attaques réflexes lui permet de saisir les occasions de toucher les ennemis qui se découvrent
+
+## Repli
+
+step: Dans ses cavernes, ses points de vie descendent sous 15 et les intrus ne cherchent pas à emporter l'œuf
+  do: Utiliser invisibilité, puis fuir en vol en profitant de son corps incorporel pour traverser les obstacles du repaire
+  note: Elle quitte l'affrontement pour se préserver
+
+step: Les intrus manifestent l'intention de quitter la caverne avec l'œuf de l'oiseau-tonnerre
+  do: Renoncer à la fuite ou ressortir de sa cachette et reprendre le combat jusqu'à sa destruction
+  note: Cette priorité l'emporte sur son seuil habituel de repli
+
+step: Elle est affrontée ailleurs, notamment après avoir rejoint les Stormreaders, et tombe à 15 PV ou moins
+  do: Utiliser invisibilité et son intangibilité pour fuir, puis regagner ses cavernes afin de se reposer et récupérer
+  note: Une éventuelle vengeance ultérieure reste au choix du maître de jeu

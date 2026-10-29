@@ -1,0 +1,98 @@
+## Avant le combat
+
+note: Profil
+  Mordiggian, FP 30, est un Grand Ancien chaotique mauvais, une aberration gigantesque et intangible prenant l'aspect d'un ver d'ombre. Ce dieu du charnier combat par les ténèbres, l'aveuglement et l'élimination méthodique des vivants.
+  752 pv ; CA 47, contact 47 ; guérison accélérée 30. Vol parfait à 18 m ; espace occupé 6 m ; allonge 6 m, portée à 12 m avec les tentacules.
+  Attaque à outrance : six tentacules +5, chacun à +43, pour 5d6+18 dégâts, critique sur 19-20 et étreinte indiquée au profil. Ses pouvoirs rapides complètent ses frappes ou ses autres pouvoirs magiques.
+
+note: Défenses à exploiter
+  L'intangibilité annule les attaques ordinaires non magiques et réduit de moitié les dégâts des sources corporelles, sauf exceptions comme les effets de force. RD 20/épique et loyal ; RM 41 ; résistances au feu et à l'électricité 30.
+  Il est notamment immunisé à l'acide, au froid, à la cécité, aux effets de mort et aux effets mentaux. Vision à 360 degrés, vision dans les ténèbres et vision lucide constante lui permettent de poursuivre les cibles dissimulées.
+
+resource: Ténèbres profondes rapides | 3/jour | action rapide ; version ordinaire à volonté
+resource: Débilité rapide | 3/jour | action rapide ; Volonté DD 28
+resource: Exécution rapide | 3/jour | action rapide ; contact ; Vigueur DD 30, partiel
+resource: Absorption d'énergie | 3/jour | action simple ; rayon ; DD 32 pour retirer les niveaux négatifs après 24 heures
+resource: Exigence | 3/jour | Volonté DD 31 ; influence à distance avant l'affrontement
+resource: Destruction | 1/jour | action simple ; Vigueur DD 30, partiel
+resource: Mot de pouvoir mortel | 1/jour | action simple ; cible vivante à 100 pv ou moins ; aucun jet de sauvegarde
+resource: Symbole de mort | 1/jour | Vigueur DD 31 ; piège préparé
+resource: Symbole d'aliénation mentale | 1/jour | Volonté DD 31 ; piège préparé
+resource: Résurrection suprême | 1/jour | restauration d'un mort avant ou après l'affrontement
+resource: Dissipation suprême et téléportation suprême | à volonté | actions simples ; NLS 30
+
+step: Il peut choisir le terrain
+  do: Attendre dans un espace sombre permettant le vol et les attaques à 12 m ; lancer ténèbres profondes sur un objet fixe pour couvrir l'approche dans un rayon de 18 m
+  note: Le pouvoir abaisse l'éclairage de deux catégories ; dans la pénombre ou l'obscurité, il crée des ténèbres surnaturelles que la vision dans le noir ordinaire ne perce pas. Mordiggian voit dans ces ténèbres.
+
+step: Il prépare son repaire à l'arrivée d'intrus
+  do: Placer le symbole d'aliénation mentale sur un passage obligé et le symbole de mort sur une autre voie, avec déclenchement au franchissement du passage
+  note: Les runes doivent rester exposées. Leur rayon est de 18 m ; le symbole de mort affecte au maximum 150 pv cumulés de victimes. Prévoir ces pièges avant le combat.
+
+note: Absorption de lumière
+  Tant qu'il possède au moins 1 pv, l'éclairage baisse d'une catégorie dans un rayon de 30 m. Y lancer un sort de lumière exige un test de niveau de lanceur de sorts DD 30 ; un échec fait perdre le sort.
+
+## Ouverture
+
+step: Un adversaire le voit et l'entend à 90 m ou moins
+  do: Appliquer la présence indicible : Volonté DD 40 ou cécité permanente
+  note: C'est un effet mental. Une victime tuée alors qu'elle est aveuglée par cette présence se relève immédiatement en zombie juju chaotique mauvais ; cela ne donne pas automatiquement à Mordiggian le contrôle du mort-vivant.
+
+step: Un lanceur de sorts vulnérable aux effets mentaux est visible
+  do: Employer débilité rapide sur lui, puis choisir l'action simple ou l'attaque à outrance selon les conditions ci-dessous
+  note: Volonté DD 28 ; un utilisateur de sorts profanes subit un malus de -4 au jet. L'échec réduit Intelligence et Charisme à 1 et empêche notamment de lancer des sorts.
+
+step: Les ennemis sont hors de portée des tentacules et protégés par des sorts
+  do: Dissipation suprême sur le plus dangereux, en visant notamment protection contre la mort ou une défense qui neutralise ses ténèbres
+  note: Test de dissipation à 1d20+20, le bonus étant plafonné. Retirer les protections avant de dépenser les pouvoirs de mort ou d'absorption d'énergie.
+
+step: Une cible prioritaire est déjà à 12 m ou moins et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance avec les six tentacules, en concentrant les coups sur le lanceur de sorts ou le combattant capable de lui infliger les plus gros dégâts
+  note: Une seule action rapide par round : choisir débilité, ténèbres profondes ou exécution, selon la menace. Une attaque à outrance remplace l'action simple et le déplacement, sauf pas de placement de 1,50 m.
+
+## Rounds suivants
+
+step: Une victime reste à portée et les défenses ennemies sont entamées
+  do: Répéter l'attaque à outrance ; rester autant que possible entre l'allonge adverse et les 12 m d'allonge des tentacules
+  note: Attaques réflexes permet plusieurs attaques d'opportunité lorsque les ennemis provoquent dans cette zone. L'intangibilité ne fournit pas, à elle seule, une exception permettant de lutter contre une cible corporelle.
+
+step: Il doit se déplacer pour atteindre une victime
+  do: Voler jusqu'à 18 m, puis utiliser Frappe décisive supérieure pour une seule attaque de tentacule à +43 infligeant 20d6+18 dégâts
+  note: Cette frappe utilise l'action d'attaque ; elle ne s'ajoute ni à une attaque à outrance ni à une charge. Les dés supplémentaires ne sont pas multipliés sur un critique.
+
+step: Une cible vivante vulnérable aux effets de mort est à portée de contact, jusqu'à 6 m
+  do: Ajouter exécution rapide à ses frappes ou à son pouvoir de l'action simple, si son action rapide est disponible
+  note: Attaque de contact au corps à corps requise ; 12d6+30 dégâts, réduits à 3d6+30 sur Vigueur DD 30 réussie. La portée de 12 m des tentacules n'étend pas automatiquement celle du pouvoir de contact.
+
+step: Une cible vivante non protégée contre les niveaux négatifs est à 30 m ou moins
+  do: Absorption d'énergie, de préférence sur une cible résistante aux dégâts des tentacules ou dont il veut diminuer les jets de sauvegarde
+  note: Le rayon exige une attaque de contact à distance et inflige 2d4 niveaux négatifs sans sauvegarde immédiate. Vigueur DD 32 intervient après 24 heures, pour chaque niveau négatif.
+
+step: Une cible prioritaire est affaiblie et estimée à 100 pv ou moins, à 30 m ou moins
+  do: Mot de pouvoir mortel pour l'achever avant qu'elle soit soignée
+  note: La RM s'applique ; les immunités aux effets mentaux ou de mort peuvent l'arrêter. Au-delà de 100 pv actuels, le pouvoir échoue.
+
+step: Une cible dangereuse est à 30 m ou moins, vulnérable aux effets de mort et peu résistante en Vigueur
+  do: Destruction pour tenter de l'éliminer immédiatement
+  note: 300 dégâts sur échec à Vigueur DD 30, 10d6 sur réussite ; RM applicable. Si le pouvoir la tue après un échec au jet, son corps est consumé.
+
+step: Les ennemis rétablissent l'éclairage ou dissipent ses ténèbres
+  do: Employer ténèbres profondes rapides sur un objet accessible si cela rétablit un avantage, puis poursuivre les frappes ; sinon dissiper la source lumineuse avec dissipation suprême
+  note: Les ténèbres ne gênent pas un adversaire qui voit lui aussi dans les ténèbres magiques. Dans ce cas, réserver l'action rapide à débilité ou exécution.
+
+step: Un adversaire tente de lire directement ses pensées
+  do: Appliquer la folie : Volonté DD 40 ou aliénation mentale permanente
+  note: Une communication télépathique ordinaire initiée par Mordiggian ne suffit pas ; provoquer cet effet volontairement sur un interlocuteur exige une action simple de concentration.
+
+## Repli
+
+step: Ses pv passent sous 200 et les ennemis continuent de lui infliger des dégâts importants
+  do: Utiliser téléportation suprême vers un refuge connu ; si la téléportation est empêchée, voler à 18 m par round vers un couvert et traverser les obstacles compatibles avec son intangibilité
+  note: Il ne traverse pas les effets de force ; dans un obstacle solide, il doit rester adjacent à sa surface extérieure. Ce seuil de repli est un choix tactique.
+
+step: Il a rompu le contact
+  do: Rester hors d'atteinte pendant que la guérison accélérée restaure 30 pv par round, puis choisir le moment d'un retour par téléportation suprême
+
+step: Il est tué malgré son repli
+  do: Sous sa forme d'obscurité invulnérable, fuir à 90 m en vol parfait et rejoindre un mort-vivant à investir ; éviter la lumière vive
+  note: L'hôte intelligent résiste par Volonté DD 40. Après 24 heures dans l'hôte, Mordiggian revient à 752 pv et l'hôte est détruit. Sans hôte ou bloqué par la lumière vive pendant 24 heures, il disparaît pour reparaître sur un autre monde.

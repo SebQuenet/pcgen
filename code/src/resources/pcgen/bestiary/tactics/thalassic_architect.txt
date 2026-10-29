@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Architecte thalassique, aberration aquatique de taille G, loyale mauvaise, FP 10. Intelligent, il privilégie les illusions, les obstacles et les combats dans l'eau.
+  126 pv ; CA 24 ; initiative +8. Nage à 18 m, déplacement terrestre à 4,50 m. Espace occupé : 3 m ; allonge de la morsure : 3 m ; griffes et tentacules : 4,50 m.
+  Morsure +13 (1d8+5 et vase), 2 griffes +13 (1d6+5 et vase), 2 tentacules +11 (1d6+2 et 2d6 soniques). L'effet de la vase n'est pas précisé dans le profil fourni.
+  Vision dans le noir et perception des vibrations à 18 m ; télépathie à 30 m. Immunisé contre l'électricité, le son et les effets mentaux ; résistance au froid 10 ; résistance à la magie 21.
+
+resource: Pouvoirs à volonté | illimité | détection de la magie, détection de pensées (Volonté DD 16), torrent hydraulique, projection d'image (Volonté DD 21 pour incrédulité), télékinésie ; NLS 14
+resource: Mur illusoire et mirage | 3/jour chacun | Volonté DD 18 et DD 19 pour incrédulité, respectivement
+resource: Façonnage de la pierre et mur de force | 3/jour chacun | conserver si possible un mur de force pour le repli
+resource: Torrent hydraulique rapide | 3/jour | action rapide, cumulable avec une action simple ou une attaque à outrance
+resource: Désintégration | 1/jour | Vigueur DD 20
+resource: Fabrication, réparation intégrale et glissement de terrain | 1/jour chacun | préparation du repaire ; glissement de terrain agit sur la terre, pas sur la roche
+
+step: Il peut préparer le terrain
+  do: Aménager un accès à l'eau profonde et une sortie avec façonnage de la pierre ; masquer les accès et sa position avec mur illusoire ou mirage
+  note: Les illusions dissimulent le terrain sans créer d'obstacle matériel. Préparer ces aménagements avant l'arrivée des intrus.
+
+step: Les intrus sont repérés avant le contact
+  do: Créer une projection d'image et rester en retrait ; faire parler l'image et utiliser ses pouvoirs magiques depuis elle
+  note: Maintenir une ligne d'effet entre son corps et l'image. La projection ne porte pas ses attaques naturelles.
+
+step: Des alliés ou des serviteurs sont présents
+  do: Les coordonner par télépathie à 30 m pour tenir les accès et intercepter ceux qui cherchent son véritable corps
+
+## Ouverture
+
+step: Plusieurs adversaires avancent ensemble
+  do: Utiliser mur de force pour séparer leur avant-garde de leurs soutiens et limiter le nombre d'ennemis capables de l'attaquer
+  note: Choisir un placement qui préserve sa sortie et la ligne d'effet nécessaire à sa projection.
+
+step: Un adversaire menace immédiatement sa position
+  do: Utiliser torrent hydraulique rapide pour le repousser, puis employer son action simple pour contrôler le terrain ou son déplacement pour gagner l'eau profonde
+  note: Décompter une des trois utilisations rapides ; le torrent ordinaire reste disponible à volonté en action simple.
+
+## Rounds suivants
+
+step: Des adversaires restent à portée et il peut consacrer le round à attaquer
+  do: Attaque à outrance : morsure +13, 2 griffes +13 et 2 tentacules +11, selon l'allonge de chaque attaque
+  note: À plus de 3 m et jusqu'à 4,50 m, seules les griffes et les tentacules atteignent la cible. Profiter de cette allonge sans avancer inutilement.
+
+step: Une cible reste à distance ou cherche à contourner ses obstacles
+  do: Employer télékinésie pour déplacer un objet gênant ou tenter de désarmer la cible ; employer torrent hydraulique pour repousser une progression dangereuse
+  note: Privilégier ces pouvoirs à volonté tant que les ressources limitées ne sont pas nécessaires.
+
+step: Une cible prioritaire justifie sa principale attaque magique
+  do: Désintégration sur cette cible, avec attaque de contact à distance et Vigueur DD 20
+  note: Cette utilisation unique peut aussi supprimer un obstacle matériel qui condamne sa sortie.
+
+step: Après ses attaques, un adversaire menace de le poursuivre
+  do: S'il reste une utilisation rapide, lancer torrent hydraulique rapide pour éloigner ce poursuivant
+  note: Une seule action rapide par round ; ne pas répéter ce pouvoir s'il l'a déjà utilisé ce round.
+
+## Repli
+
+step: Points de vie à 40 ou moins, ou position devenue intenable
+  do: Séparer les poursuivants par mur de force s'il en reste une utilisation, puis nager de 18 m vers la sortie préparée
+  note: Si le mur est indisponible, tenter de dégager le passage avec torrent hydraulique avant de se déplacer.
+
+step: Il est dégagé mais encore poursuivi
+  do: Effectuer un double déplacement à la nage, jusqu'à 36 m par round ; demander aux alliés encore à portée télépathique de couvrir sa fuite
+  note: Éviter un repli terrestre, limité à 4,50 m par déplacement.

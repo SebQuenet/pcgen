@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Bagman, fée de taille M, neutre mauvaise (FP 4), ravisseur urbain opportuniste et lâche face aux adversaires armés.
+  45 pv ; CA 17, contact 12, pris au dépourvu 15 ; réduction des dégâts 5/fer froid ; vision nocturne ; Perception +11.
+  Déplacement de 12 m par action de mouvement ; allonge de 1,50 m. Deux griffes +8 (1d4+4 et étreinte) en attaque à outrance, ou hachette +7 (1d6+6, critique x3).
+  Lutte +11 ; bousculade +9 ; DMD 19, 21 contre les bousculades.
+
+step: Il peut approcher sans éveiller les soupçons
+  do: Se déguiser en marchand humain avec Déguisement +17 et attirer une victime isolée avec Bluff +13.
+  note: Son odorat ne repère que les enfants humanoïdes ; il ne détecte pas ainsi leurs protecteurs.
+
+resource: Potion de guérison infernale | 1 | guérison accélérée 1 pendant 1 minute, soit 10 pv au maximum ; ne soigne pas les blessures dues à l'argent, aux armes du Bien ou aux effets du Bien
+resource: Potion d'apparence juvénile | 1 | réservée à son apparence
+
+## Ouverture
+
+step: Un enfant peut être repoussé loin de ses protecteurs
+  do: Effectuer une bousculade à +9 contre sa DMD et le suivre si la voie est libre.
+  note: Le repousser de 1,50 m, puis de 1,50 m supplémentaires par tranche de 5 points de réussite ; choisir une direction qui l'isole.
+
+step: Une victime isolée est à plus de 1,50 m, mais accessible avec un déplacement de 12 m
+  do: Avancer puis porter une seule attaque de griffe +8 (1d4+4).
+  note: Le déplacement empêche l'attaque à outrance à deux griffes pendant ce tour.
+
+step: Une victime est déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance avec les deux griffes +8 (1d4+4 chacune).
+  note: Chaque griffe qui touche permet une tentative d'étreinte à +11 contre la DMD, en action libre sans attaque d'opportunité, sur une cible de taille M ou inférieure.
+
+## Rounds suivants
+
+step: Il commence son tour avec une victime de taille P ou inférieure agrippée et son sac utilisable
+  do: L'enfourner dans le sac par une action rapide, puis fuir.
+
+step: Il commence son tour avec une victime de taille M agrippée et peut risquer une attaque d'opportunité
+  do: L'enfourner dans le sac par une action simple, puis s'éloigner avec son action de mouvement.
+  note: Cet ensachage provoque des attaques d'opportunité.
+
+note: Sac
+  Contient deux créatures de taille P ou une de taille M, sans compter leur poids dans sa charge. CA 12, 15 pv ; une arme légère perforante ou tranchante permet de le découper de l'intérieur. Une déchirure exige 1 heure de réparation avant tout nouvel ensachage.
+
+step: La lutte échoue ou la victime se libère
+  do: Reprendre les attaques de griffes et les tentatives d'étreinte ; privilégier la capture plutôt que les dégâts.
+
+step: Il doit abattre un adversaire facile à toucher
+  do: Activer Attaque en puissance : deux griffes +7 (1d4+6 chacune) en attaque à outrance, ou hachette tenue à deux mains +6 (1d6+9, critique x3).
+  note: Le malus de -1 affecte aussi ses manœuvres jusqu'à son prochain tour ; désactiver ce don lorsque l'étreinte est prioritaire.
+
+step: Un adversaire adjacent recule seulement de 1,50 m et il veut maintenir la pression
+  do: Utiliser Step Up pour le suivre de 1,50 m par une action immédiate.
+  note: Au prochain tour, aucun pas de placement et déplacement réduit de 1,50 m ; l'action rapide est également consommée, ce qui retarde un ensachage rapide.
+
+## Repli
+
+step: Une victime est ensachée
+  do: Quitter les lieux avec le sac ; choisir la retraite si un ennemi le menace au contact, jusqu'à 24 m sur terrain libre.
+
+step: Il tombe à 15 pv ou moins, ou les combattants armés le surpassent en nombre
+  do: Abandonner la capture et se retirer vers une issue libre ; relâcher une prise si elle compromet sa fuite.
+  note: La retraite protège seulement la case de départ contre les attaques d'opportunité ; éviter de traverser d'autres cases menacées.
+
+step: Il est blessé et dispose d'un abri pour boire sans être immédiatement frappé
+  do: Boire sa potion de guérison infernale par une action simple, puis poursuivre sa fuite.
+  note: Boire provoque une attaque d'opportunité ; la récupération progressive ne justifie pas de reprendre un combat défavorable.

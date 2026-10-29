@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Tickleback est une tique géante de taille M, une vermine sans intelligence : 34 pv, CA 15, déplacement de 6 m.
+  Morsure +7 (1d6+6, étreinte et maladie), avec une allonge de 1,50 m. Immunité aux effets mentaux.
+
+note: Repérage
+  Vision dans le noir à 18 m, odorat et Perception +0 pour repérer les intrus.
+
+## Ouverture
+
+step: Grabbles lui donne un ordre d'attaque
+  do: Prendre pour cible l'adversaire désigné par Grabbles.
+
+step: Aucun ordre n'est donné
+  do: Attaquer la cible de grande taille la plus proche.
+
+step: La cible est hors de portée
+  do: Avancer de 6 m au maximum, puis mordre si la cible est à 1,50 m ou moins.
+  note: Si une seule action de mouvement ne suffit pas, consacrer le round à se rapprocher, jusqu'à 12 m avec un double déplacement.
+
+step: La cible est à portée de morsure
+  do: Mordre à +7 pour 1d6+6 dégâts ; sur une touche, tenter gratuitement une lutte grâce à l'étreinte.
+  note: La morsure porte aussi une maladie ; son DD et ses effets ne sont pas précisés dans le profil fourni.
+
+## Rounds suivants
+
+step: Une victime est agrippée
+  do: Maintenir la lutte ; si la manœuvre réussit, infliger les dégâts de morsure, soit 1d6+6.
+
+step: La victime s'est libérée et reste à portée
+  do: Mordre de nouveau à +7 et tenter de la saisir avec l'étreinte en cas de touche.
+
+step: Aucune victime n'est agrippée et la cible est hors de portée
+  do: La rejoindre à 6 m par action de mouvement et reprendre les morsures dès que possible.
+
+step: La cible est abattue ou Grabbles désigne une autre cible
+  do: Suivre les ordres de Grabbles ; sans ordre, attaquer la cible de grande taille la plus proche.
+
+## Repli
+
+step: Toujours, même grièvement blessé
+  do: Combattre jusqu'à la mort.

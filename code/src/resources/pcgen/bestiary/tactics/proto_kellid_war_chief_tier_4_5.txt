@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Chef de guerre proto-kellide, humain mort-vivant de taille M devenu squelette sans intelligence ; 22 PV, CA 14, initiative +6.
+  Massue de maître en ivoire +7 (1d10+4) ; déplacement de 9 m, allonge de 1,50 m ; vision dans le noir à 18 m.
+  Réduction des dégâts 5/contondant ; immunité au froid et traits des morts-vivants.
+
+note: Comportement
+  Son absence d'intelligence impose des actions simples : rejoindre un ennemi et le frapper, sans feinte ni plan élaboré.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m ou moins
+  do: Porter une attaque de massue de maître à +7, infligeant 1d10+4 dégâts.
+
+step: L'ennemi le plus proche peut être rejoint avec un déplacement de 9 m
+  do: Avancer jusqu'au contact et porter une attaque de massue de maître à +7 (1d10+4).
+
+step: Aucun ennemi ne peut être rejoint avec un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour approcher l'ennemi le plus proche.
+  note: Aucune attaque à distance n'est indiquée.
+
+## Rounds suivants
+
+step: Un ennemi reste au contact
+  do: Continuer à le frapper à la massue de maître, une attaque par round à +7 (1d10+4).
+  note: Ne pas ajouter d'attaque de griffes ni d'attaque supplémentaire : aucune n'est indiquée.
+
+step: La cible tombe ou quitte sa portée
+  do: Frapper un autre ennemi à portée ; sinon, avancer vers le plus proche et attaquer si un déplacement de 9 m suffit.
+
+step: Une attaque physique lui inflige des dégâts
+  do: Appliquer la réduction des dégâts 5/contondant.
+  note: Réduire les dégâts de 5, sauf si l'attaque est contondante ou ignore cette réduction ; sa propre massue inflige des dégâts contondants.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre le combat sans repli volontaire, jusqu'à sa destruction à 0 PV.
+  note: Squelette sans intelligence, il n'adapte pas sa conduite à ses blessures ; aucun seuil de fuite n'est fourni.

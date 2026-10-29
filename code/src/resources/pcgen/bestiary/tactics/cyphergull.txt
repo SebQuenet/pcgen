@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Cyphergull, bête magique de taille TP, neutre : goéland intelligent des côtes tempérées, amateur de parchemins et protecteur de sa colonie. FP 2 ; 19 pv ; CA 15.
+  Morsure +3 (1d4-1), 2 serres +3 (1d3-1 chacune). Allonge 0 m : il doit entrer dans l'espace de sa cible pour la frapper.
+  Vol 15 m, bonne manœuvrabilité ; marche et nage 3 m. Acrobaties +15, Vol +15, Perception +5. Comprend le commun mais ne parle pas.
+
+resource: Vision magique et lecture de la magie | constantes | NLS 3 ; repérage des auras magiques et lecture des inscriptions magiques
+resource: Marque magique | à volonté | NLS 3 ; inscription d'un signe sur une surface ou un objet
+resource: Dévorer un parchemin | selon les parchemins disponibles | absorption en une action complexe ; réserve maximale de 3 niveaux de sorts ; lancement comme un magicien de niveau 1 utilisant un parchemin
+
+step: Des intrus approchent du nid ou de la colonie
+  do: Donner l'alarme par ses cris et prendre de la hauteur ; attaquer avec les autres oiseaux si les intrus persistent
+  note: Ses cris permettent de coordonner une diversion ou une embuscade.
+
+step: Un parchemin est disponible avant la rencontre
+  do: Le dévorer à l'abri pour en stocker les sorts, dans la limite de sa réserve
+  note: Aucun parchemin ni sort stocké n'est indiqué dans ce profil ; utiliser seulement ceux effectivement présents dans la rencontre, avec leurs caractéristiques d'origine.
+
+note: Synergie de familier
+  S'il appartient à un cyphermage, il bénéficie des découvertes compatibles de son maître : analyse des parchemins, contournement des symboles, incantation défensive de parchemins et détection des glyphes, seulement si ce maître les possède.
+
+## Ouverture
+
+step: Un intrus isolé est accessible en vol
+  do: Attaque en vol : entrer dans l'espace de la cible, porter une morsure +3 (1d4-1), puis poursuivre son déplacement pour reprendre de la distance ; trajet total maximal de 15 m
+  note: Tenter Acrobaties +15 pour éviter les attaques d'opportunité lors des déplacements exposés, à demi-vitesse sur ces portions. Attaque en vol permet de répartir le mouvement autour d'une seule attaque ; les attaques d'opportunité restent possibles si les tests échouent.
+
+## Rounds suivants
+
+step: L'intrus poursuit son approche et une trajectoire de sortie reste libre
+  do: Répéter les passages avec morsure, en privilégiant une cible peu protégée ; terminer le mouvement hors de sa portée de mêlée
+
+step: Plusieurs cyphergulls défendent les lieux
+  do: Alterner les passages sur le même intrus ; l'un attire son attention pendant que les autres approchent d'un autre côté
+  note: Une fuite simulée peut attirer un poursuivant vers les oiseaux restés en réserve.
+
+step: Il commence son tour dans l'espace d'une cible et décide de rester au contact
+  do: Attaque à outrance : morsure +3 (1d4-1) et 2 serres +3 (1d3-1 chacune)
+  note: Réserver cet engagement à une cible déjà acculée ou affaiblie, car il expose ses 19 pv aux ripostes.
+
+step: Un sort réellement stocké convient mieux qu'une attaque naturelle
+  do: Lancer ce sort selon les règles d'utilisation d'un parchemin, puis déduire le sort consommé de la réserve
+  note: Choisir selon les effets du parchemin disponible ; dévorer un nouveau parchemin exige une action complexe à passer de préférence à couvert.
+
+## Repli
+
+step: Points de vie à 6 ou moins, ou intrus ayant quitté les abords du nid
+  do: Rompre le contact et gagner un toit ou un rocher en vol ; s'il est menacé au départ, privilégier une retraite
+  note: Une retraite permet jusqu'à 30 m de vol et protège la case de départ ; les autres zones menacées exigent encore de la prudence ou Acrobaties +15, avec le ralentissement correspondant.

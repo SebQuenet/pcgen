@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Gardien du Signe jaune, mort-vivant intelligent et chaotique mauvais au service d'Hastur ; FP 6, 66 pv, CA 17.
+  Au contact, à 1,50 m : deux coups +12 (1d6+6 chacun) en attaque à outrance, ou un toucher de drain entropique +11. Aura inquiétante à 9 m, DD 17.
+  Déplacement de 9 m ; vision dans le noir à 18 m ; Discrétion +12, Perception +10. Réduction des dégâts 5/magie ou argent, immunités des morts-vivants, résistance à la canalisation +2.
+
+resource: Ténèbres | 3/jour | NLS 7 ; rayon de 6 m autour d'un objet touché, durée 7 minutes
+resource: Invisibilité | 3/jour | sur lui-même uniquement ; durée 7 minutes, interrompue par une attaque
+resource: Malédiction | 1/jour | Volonté DD 17 annule
+resource: Songe | 1/jour | DD 19 ; message pendant le sommeil
+resource: Rouille | 1/jour | contact ; objets ferreux non magiques
+resource: Déformation du bois | 1/jour | portée de 12 m au NLS 7
+
+step: Une victime connue dort et la confrontation peut attendre
+  do: Employer songe pour lui annoncer sa venue et entretenir son angoisse
+  note: Ce pouvoir transmet un message ; il ne remplace pas cauchemar.
+
+step: L'affrontement approche
+  do: Choisir la nuit ou un intérieur abrité du soleil ; préparer une issue couverte
+  do: Utiliser invisibilité pour approcher avec Discrétion +12 ; conserver si possible une utilisation pour fuir
+
+step: Le terrain est faiblement éclairé et les ennemis dépendent de la lumière
+  do: Lancer ténèbres sur un objet porté avant de les approcher
+  note: Le pouvoir abaisse l'éclairage d'un cran ; sa vision dans le noir lui permet de combattre dans l'obscurité obtenue.
+
+## Ouverture
+
+step: Les adversaires entrent à 9 m
+  do: Appliquer l'aura inquiétante, Volonté DD 17
+  note: Échec : -1 aux attaques et aux sauvegardes contre la peur, dans l'aura puis 7 minutes après. Réussite : immunité 24 heures. Effet mental de peur.
+  note: Témoins du Signe jaune : -2 aux sauvegardes contre l'aura et sa malédiction.
+
+step: Une cible dangereuse se trouve à 9 m ou moins et malédiction reste disponible
+  do: Lancer malédiction à distance grâce à l'aura, Volonté DD 17 ; choisir l'effet donnant 50 % de chances de ne pouvoir agir à chaque tour
+  note: Privilégier un adversaire ayant vu le Signe jaune. Cette action met fin à invisibilité.
+
+step: Une cible vulnérable est accessible au contact
+  do: Avancer jusqu'à 9 m et porter un coup +12 (1d6+6)
+  note: Après un déplacement ordinaire, il ne porte qu'un coup ; réserver les deux coups à une attaque à outrance.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et sa CA permet les coups
+  do: Attaque à outrance : deux coups +12, chacun infligeant 1d6+6 dégâts
+  note: Concentrer les coups sur une même cible et éviter de se laisser encercler.
+
+step: Une armure rend les coups peu efficaces, ou le gardien tombe à 33 pv ou moins
+  do: Remplacer les coups par un toucher de drain entropique +11 : un niveau négatif, sans sauvegarde immédiate
+  note: Le DD 17 concerne la sauvegarde ultérieure contre la permanence du niveau négatif.
+
+step: Le drain entropique tue une créature
+  do: Faire un jet de Vigueur +8, DD 17 ; échec : destruction du gardien
+  note: Cette destruction inflige un niveau négatif aux êtres conscients à 4,50 m, Vigueur DD 17 annule. Éviter les drains mortels.
+
+step: Une armure ferreuse non magique empêche ses coups de porter
+  do: Employer rouille au contact pour diminuer de 1d6 la CA fournie par l'armure
+  note: Les objets métalliques magiques sont immunisés.
+
+step: Un archer utilise un arc en bois à 12 m ou moins
+  do: Employer déformation du bois pour rendre son arc inutilisable s'il échoue à sa sauvegarde d'objet
+
+## Repli
+
+step: Le gardien tombe à 16 pv ou moins et une issue existe
+  do: Lancer invisibilité, puis rejoindre l'abri préparé à 9 m par déplacement
+  note: Cesser d'attaquer pour conserver invisibilité ; elle ne supprime pas le bruit de sa fuite.
+
+step: La lumière naturelle du soleil l'atteint
+  do: Gagner immédiatement un abri couvert
+  note: Il est chancelant et incapable d'attaquer ; ses pouvoirs surnaturels et magiques ont 50 % de risque d'échec. Lumière du jour ne déclenche pas cette faiblesse.

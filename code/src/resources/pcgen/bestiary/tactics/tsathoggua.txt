@@ -1,0 +1,134 @@
+## Avant le combat
+
+note: Profil
+  Tsathoggua, Grand Ancien chaotique mauvais de FP 29, est une aberration de taille G, au corps de crapaud velu et au visage de chauve-souris somnolente. Son humeur peut passer de l'amabilité à l'envie de dévorer son interlocuteur.
+  Il divise les adversaires par sa présence et sa magie, puis concentre ses attaques sur une victime isolée. Morsure +42 (8d10+28 et alimentation), deux griffes +42 (5d6+28 et étreinte) ; toutes menacent sur 18–20, avec un multiplicateur de critique de x3.
+  742 pv ; CA 47, contact 30 ; guérison accélérée 25. Déplacement de 15 m, marche dans les airs permanente ; espace et allonge de 3 m. Initiative +21, Perception +47, vision lucide permanente et vision dans les ténèbres.
+
+note: Défenses
+  RD 15/épique et loyal : une arme doit réunir les deux propriétés pour l'ignorer. Résistance à la magie 40 ; résistances à l'électricité et au son de 30.
+  Immunités à l'acide, au froid, aux effets mentaux, aux effets de mort, à la paralysie, à la pétrification, aux maladies, au vieillissement, aux dégâts et diminutions de caractéristiques et à l'absorption d'énergie. Liberté de mouvement permanente.
+
+resource: Présence innommable | aura | Rayon de 90 m ; Volonté DD 38 ; 10 rounds indiqués dans le profil
+resource: Débilité accélérée | 3/jour | Action rapide ; Volonté DD 27
+resource: Mot de pouvoir étourdissant | 3/jour | Cible ayant au plus 150 pv actuels ; aucun jet de sauvegarde
+resource: Fosse affamée | 3/jour | Réflexes DD 27 ; ignore la résistance à la magie
+resource: Labyrinthe | 1/jour | Aucun jet de sauvegarde ; résistance à la magie applicable
+resource: Ennemi subconscient de groupe | 1/jour | Volonté puis Vigueur DD 31
+resource: Souhait | 1/jour | Garder en réserve pour une urgence
+resource: Pouvoirs à volonté | illimité | Dissipation suprême, porte dimensionnelle, aliénation mentale (Volonté DD 29), notamment
+resource: Sorts de niveau 9 | 7/jour partagés | Arrêt du temps ; emprisonnement (Volonté DD 31)
+resource: Sorts de niveau 8 | 8/jour partagés | Métamorphose universelle (Vigueur DD 30) ; mur prismatique (DD 30)
+resource: Sorts de niveau 7 | 8/jour partagés | Téléportation suprême ; parole du Chaos (Volonté DD 29)
+resource: Sorts de niveau 6 | 8/jour partagés | Guérison suprême ; mot de rappel
+resource: Sorts de niveau 5 | 8/jour partagés | Domination d'humanoïde (Volonté DD 27) ; mur de force
+resource: Sorts de niveau 4 | 9/jour partagés | Tentacules noirs ; morsure magique suprême
+resource: Sorts de niveau 3 | 9/jour partagés | Déplacement ; vol
+resource: Sorts de niveau 2 | 9/jour partagés | Invisibilité ; contrôle des morts-vivants (Volonté DD 24)
+resource: Sorts de niveau 1 | 9/jour partagés | Armure de mage ; rapetissement (Vigueur DD 23)
+
+step: Il dispose de quelques minutes avant l'arrivée des intrus
+  do: Lancer armure de mage, puis morsure magique suprême sur la morsure ; désigner à l'avance le sanctuaire de mot de rappel.
+  note: Armure de mage porte sa CA à 51. Morsure magique suprême donne +5 à la morsure : attaque +47, dégâts 8d10+33. Ces protections durent 29 heures ; décompter leurs emplacements.
+
+step: L'affrontement est imminent
+  do: Lancer déplacement, puis attendre à un emplacement qui permet d'observer l'approche et de séparer les assaillants par un mur.
+  note: Déplacement dure 29 rounds et impose 50 % de chances de rater les attaques concernées ; la vision lucide adverse peut le neutraliser.
+
+note: Gestion du tour
+  Choisir une action simple ou une attaque à outrance selon la situation. Débilité accélérée peut accompagner ce choix, mais consomme l'unique action rapide du tour.
+  Les sorts d'un même niveau partagent la réserve annoncée. Conserver au moins un emplacement de niveau 6 pour le repli. Utiliser les sorts connus fournis ; incantation adaptative ne donne pas accès instantanément à n'importe quel sort.
+
+## Ouverture
+
+step: Des intrus peuvent le voir et l'entendre à moins de 90 m
+  do: Appliquer la présence innommable, Volonté DD 38 ; ordonner par télépathie aux victimes affectées de le défendre contre leurs compagnons.
+  note: Les victimes le considèrent comme leur seul allié et les autres créatures comme des ennemis. Les garder dans les 90 m ; les immunités aux effets mentaux protègent contre cette influence.
+
+step: Un lanceur de sorts profanes est visible et à portée
+  do: Employer débilité accélérée, Volonté DD 27, en action rapide, puis effectuer l'action principale choisie pour ce tour.
+  note: Les utilisateurs de sorts profanes subissent le malus de -4 prévu par débilité à leur sauvegarde. Répartir les trois utilisations entre les menaces encore actives.
+
+step: Il faut se protéger ou préparer le terrain avant de subir les attaques
+  do: Lancer arrêt du temps ; employer les 1d4+1 rounds apparents à rétablir ses protections, se soigner et dresser un mur de force ou un mur prismatique pour couper le groupe.
+  note: Durant cet arrêt, il ne peut ni blesser les autres créatures ni les cibler par ses sorts. Placer les murs dans l'espace libre ; reprendre les attaques lorsque le temps normal revient.
+
+step: Plusieurs ennemis non chaotiques sont réunis à moins de 12 m
+  do: Lancer parole du Chaos, Volonté DD 29.
+  note: Au NLS 29, les effets dépendent des dés de vie : jusqu'à 19 DV, la mort est possible ; jusqu'à 24 DV, la paralysie ; jusqu'à 28 DV, l'étourdissement. Les créatures chaotiques ou de plus de 29 DV ne sont pas affectées.
+
+step: Un combattant dangereux résiste aux effets mentaux
+  do: L'envoyer dans labyrinthe, puis concentrer le combat sur ses compagnons.
+  note: L'absence de sauvegarde en fait un bon moyen d'écarter un adversaire à faible Intelligence ; la résistance à la magie reste applicable.
+
+## Rounds suivants
+
+step: Un ennemi prioritaire est à 3 m ou moins et Tsathoggua peut rester sur place
+  do: Attaquer à outrance : morsure et deux griffes, en concentrant les touches sur cette cible.
+  note: Employer les valeurs du profil, ou la morsure améliorée si sa protection est active. Chaque morsure qui inflige des dégâts déclenche l'alimentation ; une griffe peut engager gratuitement une lutte par étreinte.
+
+note: Alimentation
+  Une morsure inflige en plus une diminution permanente de 1d4 points aux six caractéristiques. Vigueur DD 44 réduit cet effet à une seule caractéristique choisie par Tsathoggua.
+  Choisir la Constitution pour achever une cible, ou sa caractéristique d'incantation pour affaiblir un lanceur de sorts.
+
+step: Une victime est déjà agrippée et risque de se libérer
+  do: Maintenir la lutte et choisir d'infliger les dégâts de morsure pour déclencher à nouveau l'alimentation.
+  note: Le maintien consomme une action simple ; ne pas lui ajouter une attaque à outrance pendant le même tour.
+
+step: Il doit se déplacer pour atteindre sa proie
+  do: Avancer de 15 m au maximum, puis employer Frappe décisive supérieure avec sa morsure : 32d10+28 avant bonus magiques, plus alimentation.
+  note: Avec morsure magique suprême active, les dégâts deviennent 32d10+33. Cette action ne comprend aucune griffe ; les dégâts supplémentaires d'alimentation ne sont pas multipliés.
+
+step: L'action rapide est libre et il choisit des attaques physiques
+  do: Activer Frappe magique pour ajouter +5 aux dégâts de ses armes jusqu'à son prochain tour.
+  note: Ce bonus ne se cumule pas avec une utilisation de débilité accélérée pendant le même tour, faute d'une seconde action rapide.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Utiliser la morsure pour infliger aussi l'alimentation ; appliquer Critique aveuglant si un critique est confirmé.
+  note: Attaques réflexes autorise jusqu'à 12 attaques d'opportunité par round si des occasions distinctes se présentent ; Frappe décisive supérieure ne s'y applique pas.
+
+step: Des protections adverses empêchent ses sorts ou ses morsures d'être décisifs
+  do: Employer dissipation suprême sur le porteur des protections les plus gênantes, puis reprendre les attaques au tour suivant.
+  note: Ce pouvoir est à volonté. Privilégier les défenses contre les effets mentaux, les illusions protectrices et les entraves à la téléportation.
+
+step: Des adversaires restent groupés au sol et résistent à sa magie directe
+  do: Ouvrir une fosse affamée sous eux, Réflexes DD 27 ; rester au-dessus du terrain grâce à marche dans les airs.
+  note: La fosse occupe 3 m sur 3 m, atteint au maximum 30 m de profondeur et écrase ses occupants pour 4d6 dégâts par round, Réflexes DD 27 pour réduire de moitié. Elle ignore la résistance à la magie, mais ne retient pas efficacement les créatures capables de voler ou de se téléporter.
+
+step: Le groupe doit être séparé ou les tireurs disposent d'une ligne de tir
+  do: Placer un mur de force ou un mur prismatique entre les renforts et la victime choisie.
+  note: Mur de force évite de dépendre d'une sauvegarde ; mur prismatique expose ceux qui le traversent aux effets de ses couches, DD 30. Les obstacles doivent laisser à Tsathoggua l'accès à sa proie.
+
+step: Une cible blessée possède au plus 150 pv actuels
+  do: Employer mot de pouvoir étourdissant, puis exploiter son incapacité à agir lors des tours suivants.
+  note: Aucun jet de sauvegarde ; vérifier sa résistance à la magie et son éventuelle immunité. Le pouvoir échoue au-dessus de 150 pv.
+
+step: Une cible isolée reste trop dangereuse pour être mordue
+  do: Tenter emprisonnement au contact, Volonté DD 31, ou métamorphose universelle, Vigueur DD 30, selon sa sauvegarde la plus faible.
+  note: Ces sorts consomment l'action simple. Privilégier une neutralisation durable plutôt que de répartir les dégâts sur plusieurs ennemis.
+
+step: Une arme identifiée comme épique et loyale inflige des dégâts importants
+  do: Tenter une destruction avec son BMO de +48 si l'objet paraît vulnérable.
+  note: Destruction supérieure peut reporter les dégâts excédentaires sur le porteur ; préférer la neutralisation du porteur si détruire l'arme demanderait trop de temps.
+
+step: Ses pv sont à 550 ou moins et il peut encore soutenir le combat
+  do: Lancer guérison suprême sur lui-même pour récupérer 150 pv ; recommencer ultérieurement si nécessaire sans dépenser sa réserve de fuite.
+  note: Ajouter séparément les 25 pv de guérison accélérée à chaque round. Si les emplacements de niveau 6 sont épuisés, souhait peut dupliquer guérison suprême.
+
+## Repli
+
+step: Ses pv passent sous 200 et les ennemis peuvent le tuer avant son prochain tour
+  do: Utiliser mot de rappel vers son sanctuaire préparé, ou téléportation suprême vers un refuge connu.
+  note: Ces seuils sont des choix tactiques. Se retirer plus tôt si les dégâts adverses dépassent ses soins ; il n'a aucun intérêt à perdre son corps pour achever un ennemi secondaire.
+
+step: Un refuge immédiat suffit et la téléportation reste possible
+  do: Employer porte dimensionnelle pour passer derrière un obstacle ou quitter la mêlée.
+  note: Il ne peut plus agir après ce pouvoir jusqu'à son prochain tour. Se soigner ensuite à l'abri et laisser agir la guérison accélérée.
+
+step: Une entrave magique empêche sa téléportation
+  do: Rompre les lignes d'attaque par un mur, puis tenter dissipation suprême sur l'entrave avant de se téléporter lors d'un tour ultérieur.
+  note: Utiliser marche dans les airs et son déplacement de 15 m pour gagner une position inaccessible aux seuls combattants terrestres.
+
+step: Il est tué malgré son repli
+  do: Résoudre son immortalité : explosion de vase infligeant 20d8 dégâts d'acide dans un rayon de 18 m ; sa reconstitution sur un autre monde prend 1d100 mois.
+  note: Cette immortalité ne le remet pas immédiatement en combat.

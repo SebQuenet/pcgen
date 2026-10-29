@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Cadrilkasta, dragonne bleue dracosire loyale mauvaise de taille Gig, est une puissante magicienne que la malédiction de paresse retient dans son nid. Elle possède 351 pv, CA 39, RM 30 et RD 20/magie ; elle est immunisée à l'électricité, à la paralysie et au sommeil.
+  Morsure +38 (4d6+16, critique 19-20), une griffe +38 (2d8+16), queue +33 (2d8+19), deux ailes +36 (2d6+9) ; allonge 6 m. Elle serre toujours le fragment de Paresse dans l'autre griffe, qui ne peut donc pas attaquer.
+  Ses principales armes à distance sont ses éclairs, son souffle électrique et ses sorts. Aura électrique à 3 m : 2d6 dégâts d'électricité ; présence terrifiante à 99 m, Volonté DD 28.
+  Déplacement terrestre 6 m, creusement 3 m, vol 37,50 m avec manœuvrabilité déplorable ; perception aveugle à 18 m et vision dans le noir à 36 m.
+
+step: Chaque jour
+  do: Lancer endurance aux énergies destructives
+  note: Sa paresse l'empêche d'accumuler les autres protections avant le combat
+
+step: La prévoyance est en place
+  do: Garder la statuette sur elle ; le déclencheur est le passage sous 150 pv et l'effet est de la rendre invisible
+
+resource: Sorts de niveaux 1, 2 et 3 | 8, 7 et 7 emplacements par jour | NLS 15 ; partager ces réserves entre attaques, contrôle et protections
+resource: Sorts de niveau 4 | 7 emplacements par jour | conserver au moins 2 emplacements pour charme-monstre, DD 19
+resource: Sorts de niveau 5 | 7 emplacements par jour | conserver 3 emplacements pour téléportation ; les sorts de niveau 1 incantés rapidement utilisent aussi ce niveau
+resource: Sorts de niveau 6 | 6 emplacements par jour | les sorts de niveau 2 incantés rapidement utilisent ce niveau
+resource: Sorts de niveau 7 | 4 emplacements par jour | conserver 1 emplacement pour convocation de monstres VII ; déplacement incanté rapidement utilise aussi ce niveau
+resource: Convocation de monstres III du fragment de Paresse | 1/jour | pouvoir distinct de la convocation de monstres VII prévue pour les soins du repli
+
+## Ouverture
+
+step: Le combat commence
+  do: Activer son souffle de tempête et faire tomber un éclair sur l'adversaire le plus proche
+  note: Elle reste dans son nid ; durant les premiers rounds, elle ne dépense pas plus qu'une action de mouvement par round
+
+step: Elle possède encore au moins 250 pv
+  do: Continuer à appeler un éclair chaque round, sans quitter son nid
+  note: Respecter cette inertie même si une préparation magique ou une attaque à outrance serait plus efficace
+
+## Rounds suivants
+
+step: Ses pv passent sous 250, mais restent au-dessus de 60
+  do: S'envoler et commencer à employer toutes ses actions ; lancer déplacement en incantation rapide au premier round de cette phase
+  note: La malédiction la rend alors fiévreuse : -2 aux jets d'attaque, de dégâts, de sauvegarde, de compétence et de caractéristique. Les valeurs d'attaque du profil précèdent ce malus ; les DD des sorts restent ceux indiqués
+
+step: Elle combat en vol
+  do: Se déplacer et lancer un sort ou utiliser son souffle électrique selon l'alignement des adversaires
+  note: Elle préfère ces passages aux attaques à outrance. Un déplacement et une action simple permettent de lancer puis se déplacer, ou l'inverse ; ils ne permettent pas de fractionner librement son vol autour d'une attaque
+
+step: Des ennemis sont regroupés ou leurs protections gênent ses éclairs
+  do: Employer rayons prismatiques sur le groupe (DD 22), lenteur sur plusieurs adversaires (Volonté DD 18), ou dissipation de la magie contre une protection gênante
+  note: Un mur de glace peut couper un passage et séparer les poursuivants ; préserver les emplacements réservés au repli
+
+step: Elle peut ajouter un sort rapide à son action principale
+  do: Après déplacement, enchaîner au fil des rounds poussière scintillante (Volonté DD 17 contre la cécité), rayon ardent, projectile magique, graisse (Réflexes DD 16), puis réduction de personne sur un humanoïde (Vigueur DD 16)
+  note: Un seul sort en incantation rapide par round. Déplacement consomme un emplacement de niveau 7 ; poussière scintillante et rayon ardent, chacun un de niveau 6 ; les trois derniers, chacun un de niveau 5
+
+step: Son mirage a pris fin après les soins, ou les PJ la rejoignent en F3
+  do: Atterrir parmi eux et effectuer des attaques à outrance avec morsure, une seule griffe, queue et deux ailes
+  note: Garder le fragment dans l'autre griffe et appliquer le malus de fièvre ; les ennemis proches subissent aussi son aura électrique
+
+## Repli
+
+step: Elle passe sous 150 pv, tout en restant au-dessus de 60 pv
+  do: Laisser la prévoyance la rendre invisible, puis lancer téléportation vers F3
+  note: Cette retraite interrompt ses attaques ; l'invisibilité sert à couvrir le lancement de téléportation
+
+step: Elle a atteint F3 et dispose de son emplacement réservé de niveau 7
+  do: Lancer convocation de monstres VII pour appeler 1d3 azatas lillendes et leur ordonner d'employer soins importants et soins légers sur elle
+  note: Attendre qu'elles aient épuisé leurs soins avant de reprendre l'offensive
+
+step: Les lillendes ont terminé les soins
+  do: Employer son pouvoir de mirage pour montrer un double d'elle-même plus haut dans le tunnel, donnant l'impression qu'elle revient lancer des sorts et souffler des éclairs ; envoyer les lillendes attaquer les PJ
+  note: Dès que le mirage cesse ou que les PJ atteignent F3, passer aux attaques à outrance décrites plus haut
+
+step: Ses pv tombent à 60 ou moins, à n'importe quel moment
+  do: Fuir immédiatement par téléportation vers F1, puis franchir le portail vers E3 dans l'ambassade de Leng
+  note: Emporter seulement les trésors portés ou tenus ; abandonner le reste en F10
+
+step: Elle traverse E3 et le bhole peut encore intervenir
+  do: Souffler un éclair dans la fosse pour réveiller et irriter le bhole, puis poursuivre sa fuite
+  note: Renoncer à cette diversion si les PJ ont déjà forcé le bhole à se retirer durablement
+
+step: Des créatures croisent sa route pendant la remontée du donjon
+  do: Employer les charmes-monstres réservés (Volonté DD 19) pour les gagner à sa cause et leur demander de retarder ses poursuivants
+
+step: Elle sort du donjon, ou revient sur le plan Matériel alors que le réacteur à abysium ne fonctionne plus
+  do: Utiliser une dernière téléportation pour gagner son ancien repaire dans les monts Kodar

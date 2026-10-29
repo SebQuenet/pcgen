@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Ranfearg, loup arctique de taille TG, gardien chaotique mauvais de Skirgaard, combat avec les autres loups. FP 9 ; 115 PV ; CA 23 ; guérison accélérée 5.
+  Morsure +17 : 3d6+13 dégâts, plus 2d6 de froid et croc-en-jambe ; allonge 3 m ; espace occupé 4,50 m ; déplacement 30 m par action de mouvement.
+  Il privilégie son souffle et les attaques coordonnées. Immunisé au froid, aux maladies, au poison et aux effets mentaux ; vulnérable au feu.
+
+resource: Porte dimensionnelle | à volonté | uniquement à l'intérieur de Skirgaard ; NLS 10
+resource: Alarme | 3/jour | avertir de l'arrivée des intrus
+resource: Déblocage | 3/jour | ouvrir un passage verrouillé
+resource: Verrou du mage | 1/jour | protéger un accès avant l'affrontement
+resource: Augure | 1/jour | consulter les présages avant une décision
+resource: Clairaudience/clairvoyance | 1/jour | surveiller à distance un lieu connu
+resource: Communion | 1/jour | obtenir des renseignements avant le combat
+resource: Renvoi | 1/jour | Volonté DD 17 ; contre une créature extraplanaire
+resource: Fermeture | 1/jour | maintenir une porte fermée
+
+step: Il a le temps de préparer les accès
+  do: Poser alarme sur une approche et garder un itinéraire de repli dans le village
+  note: Employer verrou du mage seulement sur un accès qu'il souhaite condamner ; conserver déblocage pour une issue verrouillée
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +20, son odorat et sa vision dans le noir à 18 m ; se dissimuler dans la neige si le terrain le permet
+  note: Discrétion +12 dans la neige, +6 ailleurs ; prévenir les autres loups et préparer une prise en tenaille
+
+## Ouverture
+
+step: Le souffle est disponible et peut atteindre les intrus
+  do: Se placer pour toucher plusieurs ennemis et utiliser le souffle en priorité
+  note: Le profil fourni mentionne ce souffle dans la tactique, sans donner sa portée, ses dégâts, son DD ni son délai de réutilisation ; ne pas lui attribuer de valeurs supplémentaires
+
+step: Un ennemi est accessible au contact avec l'appui d'un autre loup
+  do: Se déplacer pour le prendre en tenaille, puis le mordre et tenter le croc-en-jambe si la morsure touche
+  note: Bonus de manœuvre +21 avant modificateurs ; chercher à renverser une cible dans la zone menacée par l'autre loup
+
+## Rounds suivants
+
+step: Le souffle est de nouveau disponible
+  do: Le réutiliser dès qu'une cible utile peut être atteinte ; ajuster sa position si nécessaire
+  note: Ses alliés loups arctiques sont immunisés au froid ; leur présence favorise les attaques coordonnées
+
+step: Le souffle est indisponible
+  do: Mordre avec l'appui d'un autre loup et renouveler les tentatives de croc-en-jambe sur les cibles debout
+  note: Concentrer les attaques sur une cible commune ; réserver Attaque en puissance aux adversaires faciles à toucher
+
+step: Un ennemi renversé tente de se relever dans son allonge de 3 m
+  do: Profiter de l'attaque d'opportunité si elle est disponible
+  note: La morsure intervient avant que l'adversaire se relève ; elle ne permet pas de le renverser de nouveau pendant ce relèvement
+
+step: Un adversaire emploie le feu
+  do: Utiliser sa vitesse pour changer d'angle, chercher un couvert disponible et maintenir la pression avec les autres loups
+  note: Sa guérison accélérée rend 5 PV par round, jusqu'à son maximum de 115 PV ; elle ne justifie pas de rester exposé au feu
+
+step: Une créature extraplanaire constitue la menace principale
+  do: Envisager renvoi, Volonté DD 17, si son expulsion est plus utile qu'une attaque
+  note: Une seule utilisation par jour
+
+## Repli
+
+step: Ses PV passent sous 30, même si un autre loup vit encore
+  do: Utiliser porte dimensionnelle pour fuir vers un autre endroit de Skirgaard
+  note: Choisir une destination à l'abri des attaques ; aucune autre action après cette téléportation pendant son tour
+
+step: Tous les autres loups sont morts et ses PV passent sous 60
+  do: Utiliser immédiatement porte dimensionnelle pour quitter l'affrontement et rejoindre un autre endroit du village
+
+step: Un autre loup vit encore et Ranfearg possède au moins 30 PV
+  do: Continuer le combat avec lui
+
+step: Il a atteint un refuge dans Skirgaard
+  do: Rester hors d'atteinte et laisser sa guérison accélérée restaurer ses PV
+  note: Porte dimensionnelle reste disponible à volonté, mais ne permet pas de quitter Skirgaard

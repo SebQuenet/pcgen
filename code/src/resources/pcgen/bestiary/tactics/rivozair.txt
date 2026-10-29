@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Rivozair est une dragonne bleue adulte, loyale mauvaise, de taille TG, qui combine souffle, magie et attaques physiques.
+  Morsure +23 (2d8+13), 2 griffes +23 (2d6+9), queue +21 (2d6+13), 2 ailes +21 (1d8+4) ; allonge 3 m, espace occupé 4,50 m.
+  200 pv ; CA 37 avec armure de mage, contact 9 ; résistance à la magie 25 ; réduction des dégâts 5/magie ; résistance au feu 30 ; immunité à l'électricité, à la paralysie et au sommeil.
+  Régénération 5, neutralisée par les sorts du Bien et les armes alignées sur le Bien.
+  Déplacement terrestre 12 m, creusement 6 m, vol 60 m avec manœuvrabilité médiocre ; prévoir de larges trajectoires de retour.
+  Aura d'électricité à 1,50 m ; présence terrifiante à 54 m, DD 22. Le profil ne précise pas les dégâts de l'aura.
+
+resource: Sorts de niveau 1 | 7/jour partagés | armure de mage, protection contre le Chaos, rayon affaiblissant (DD 15), réduction de personne (DD 15) ; NLS 5
+resource: Sorts de niveau 2 | 5/jour partagés | invisibilité et image miroir ; NLS 5 ; conserver au moins une utilisation pour la fuite
+resource: Boule de feu | 3/jour | DD 17 ; pouvoir magique, NLS 16
+resource: Dissipation du Bien | 3/jour | pouvoir magique, NLS 16
+resource: Convocation | 1/jour | 1 diable barbelé, réussite automatique ; niveau 8, NLS 16
+resource: Pouvoirs d'illusion | à volonté | son imaginaire (DD 14), image mineure (DD 16), ventriloquie (DD 15) ; NLS 16
+
+step: Bien avant l'arrivée des ennemis
+  do: Lancer armure de mage sur elle-même
+  note: La CA 37 comprend déjà ce sort ; décompter une utilisation des sorts de niveau 1, sans ajouter de nouveau son bonus
+
+step: Des adversaires chaotiques sont identifiés et elle dispose du temps nécessaire
+  do: Lancer protection contre le Chaos avant l'affrontement
+  note: Ce sort consomme la même réserve que rayon affaiblissant et réduction de personne
+
+## Ouverture
+
+step: Premier round, les adversaires sont à portée du souffle
+  do: Ouvrir avec le souffle en cherchant à toucher plusieurs PJ, puis poursuivre son passage en vol si la trajectoire le permet
+  note: Attaque en vol permet de répartir le déplacement avant et après une action simple ; ne pas ajouter une attaque à outrance à ce passage
+  note: Faire jouer la présence terrifiante à 54 m, DD 22 ; la portée, les dégâts, le DD et le délai de recharge du souffle ne sont pas indiqués dans le profil fourni
+
+step: Round suivant, elle revient en décrivant une large boucle
+  do: Utiliser sa convocation pour appeler un diable barbelé et lui faire menacer les PJ pendant son approche
+  note: La convocation est distincte du souffle et d'image miroir ; elle dépense son unique utilisation quotidienne
+
+step: Round suivant, avant de se poser au milieu des PJ
+  do: Lancer image miroir, puis achever son approche et atterrir si son déplacement le permet
+  note: Garder une utilisation de niveau 2 pour invisibilité ; l'attaque à outrance attend un round où elle dispose des actions nécessaires
+
+## Rounds suivants
+
+step: Plusieurs ennemis sont à son allonge et elle peut rester en place
+  do: Activer Frappe magique, puis attaquer à outrance avec morsure +23, 2 griffes +23, queue +21 et 2 ailes +21
+  note: Frappe magique consomme son action rapide ; ses bonus sont déjà inclus dans les attaques et les dégâts du profil
+  note: Exploiter l'allonge de 3 m et l'aura d'électricité à 1,50 m pour rendre son voisinage dangereux
+
+step: Plusieurs PJ peuvent être touchés par un souffle disponible
+  do: Remplacer ses attaques de mêlée par le souffle et choisir une orientation qui évite son allié
+  note: Ne pas fixer de délai de recharge ou de valeurs de dégâts absents du profil
+
+step: Plusieurs PJ sont regroupés et le souffle n'offre pas une bonne occasion
+  do: Lancer boule de feu, DD 17, en plaçant l'explosion à l'écart du diable barbelé et, si possible, d'elle-même
+  note: Sa résistance au feu 30 ne justifie pas de s'infliger inutilement des dégâts ; chaque boule de feu dépense une des trois utilisations
+
+step: Un adversaire isolé se révèle particulièrement dangereux au corps à corps
+  do: Décoller et reprendre de la distance, en tenant compte des attaques d'opportunité éventuelles
+  note: Employer sa vitesse de vol pour préparer les sorts d'affaiblissement ; le déplacement de départ ne permet pas de lancer les deux sorts immédiatement
+
+step: Elle a pris ses distances avec cet adversaire
+  do: Lancer rayon affaiblissant sur lui ; lors d'un autre round, lancer réduction de personne s'il s'agit d'un humanoïde
+  note: Rayon affaiblissant exige une attaque de contact à distance, puis Vigueur DD 15 ; réduction de personne permet Vigueur DD 15 pour annuler
+  note: Les deux sorts dépensent la réserve commune de niveau 1 ; tenir compte de la résistance à la magie éventuelle de la cible
+
+step: La menace principale est affaiblie et Rivozair peut reprendre l'avantage
+  do: Revenir au contact, attaquer une fois si elle doit encore se déplacer, puis reprendre les attaques à outrance au round suivant
+  note: Ne pas compter sur réduction de personne contre une créature qui n'est pas humanoïde
+
+step: Des sorts du Bien ou des armes alignées sur le Bien interrompent sa régénération
+  do: Prendre de la distance et utiliser souffle ou boule de feu pour continuer à menacer les PJ
+  note: Éviter de rester exposée en comptant sur une régénération momentanément neutralisée
+
+## Repli
+
+step: Points de vie strictement sous 30
+  do: Lancer invisibilité et fuir la région en vol, avec un déplacement de 60 m lorsqu'elle utilise une action de mouvement
+  note: Dépenser l'utilisation de niveau 2 réservée à cet effet ; cesser les attaques pour conserver l'invisibilité et laisser le diable barbelé couvrir son départ s'il est encore présent
+  note: Elle peut revenir attaquer les PJ pendant la célébration du Silver Span
+
+step: Points de vie sous 30 et aucun sort de niveau 2 disponible
+  do: Fuir immédiatement en vol ; profiter d'un passage praticable pour creuser à 6 m si cela lui permet de rompre la poursuite
+  note: Sa survie prime sur une dernière attaque ; exploiter sa régénération dès qu'elle fonctionne de nouveau

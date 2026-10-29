@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Gardien gravé d'Iomédae, créature artificielle de taille M, neutre et sans intelligence, chargé de défendre le sanctuaire. 53 PV ; CA 21 ; réduction des dégâts 5/adamantium ; résistance à la magie 16 ; guérison accélérée 2 ; immunités des créatures artificielles.
+  Sous rapidité : épée longue +2 acérée +12/+12/+7 (1d8+6, critique sur 17–20), ou coups +10/+10 (1d6+4). Allonge 1,50 m ; déplacement 21 m. Son épée inflige 1d6 dégâts supplémentaires aux créatures mauvaises.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +1. Il applique sa consigne de garde sans élaborer de ruse.
+
+resource: Rapidité | 1/jour | pouvoir magique sur lui-même uniquement ; NLS 5 ; durée 5 rounds à compter de l'activation
+
+step: Le combat est imminent
+  do: Activer rapidité avant l'affrontement.
+  note: La CA, le déplacement et les attaques du profil incluent déjà rapidité ; ne pas ajouter ses bonus une seconde fois.
+
+step: Un intrus porte ou présente un symbole sacré d'Iomédae sans attaquer le gardien
+  do: L'ignorer et appliquer cette consigne pendant tout le combat.
+  note: S'il attaque le gardien, celui-ci peut désormais le prendre pour cible. Le symbole ne protège pas les autres intrus.
+
+## Ouverture
+
+step: Un intrus non épargné se trouve à plus de 1,50 m
+  do: Se rapprocher jusqu'au contact, puis porter une attaque d'épée longue +12 (1d8+6, critique sur 17–20) si un déplacement suffit.
+  note: Sous rapidité, il peut parcourir 21 m avec une action de mouvement. Si cela ne suffit pas, consacrer le round à un double déplacement, jusqu'à 42 m, pour rejoindre l'intrus dans le sanctuaire.
+
+step: Un intrus non épargné est déjà à portée au début de son tour
+  do: Effectuer une attaque à outrance à l'épée longue : +12/+12/+7, chaque touche infligeant 1d8+6 dégâts.
+  note: Ajouter 1d6 dégâts à chaque touche contre une créature mauvaise ; cette propriété ne lui donne pas de moyen de détecter les alignements.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et rapidité est active
+  do: Répéter l'attaque à outrance à l'épée longue +12/+12/+7.
+  note: Pour conserver l'attaque à outrance, se limiter au besoin à un pas de placement de 1,50 m ; après un déplacement ordinaire, il ne porte qu'une attaque.
+
+step: L'adversaire tombe ou s'éloigne
+  do: Rejoindre un autre intrus non épargné dans le sanctuaire et l'attaquer à l'épée.
+
+step: Le gardien ne peut plus utiliser son épée
+  do: Frapper avec ses coups : +10/+10 en attaque à outrance sous rapidité, ou un seul coup +10 après un déplacement ; dégâts 1d6+4.
+  note: Le supplément de 1d6 contre les créatures mauvaises est indiqué pour l'épée.
+
+step: Rapidité prend fin
+  do: Poursuivre avec les valeurs sans ce pouvoir : épée longue +11/+6 en attaque à outrance, ou un coup +9 ; déplacement 12 m ; CA 20.
+  note: Les dégâts restent identiques. Après un déplacement, une seule attaque d'épée à +11 est possible. Le pouvoir ne peut pas être renouvelé s'il a déjà été utilisé aujourd'hui.
+
+step: Le gardien a subi des dégâts et reste actif
+  do: Récupérer 2 PV au début de son tour grâce à la guérison accélérée, sans dépasser 53 PV, puis continuer à attaquer.
+  note: Appliquer la réduction des dégâts 5/adamantium et la résistance à la magie 16 lorsque l'attaque ou le sort concerné le permet.
+
+## Repli
+
+step: Des intrus non épargnés restent à combattre
+  do: Combattre jusqu'à la destruction, sans fuir ni se rendre, quel que soit le nombre de PV restants.

@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Cigale géante de petite taille, vermine sans intelligence, neutre, FP 1. CA 15 ; 15 pv.
+  Son unique attaque est une morsure +2 infligeant 1d4 dégâts, avec une allonge de 1,50 m.
+  Elle agit par instinct et ne prépare pas de tactique élaborée. Elle est immunisée aux effets mentaux.
+
+note: Mobilité et perception
+  Déplacement au sol et escalade : 6 m ; vol : 15 m, manœuvrabilité moyenne.
+  Vision dans le noir à 18 m ; Perception +0. L'obscurité ne dissimule pas les adversaires situés dans cette portée.
+
+## Ouverture
+
+step: Un adversaire la menace déjà au contact
+  do: Mordre une fois : +2, dégâts 1d4.
+
+step: Elle doit se rapprocher pour mordre
+  do: Rejoindre une position à portée au sol ou en vol, puis mordre si une seule action de déplacement suffit.
+  note: Se poser sur le sol ou un support accessible permet de combattre sans devoir rester en vol stationnaire.
+
+step: La cible est trop éloignée pour être attaquée ce round
+  do: Effectuer un double déplacement pour l'approcher, jusqu'à 30 m en vol ou 12 m au sol.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter la morsure +2, pour 1d4 dégâts, une fois par round.
+
+step: L'adversaire s'éloigne ou gagne un support surélevé
+  do: Le rejoindre en volant à 15 m ou en grimpant à 6 m, puis mordre si les actions restantes le permettent.
+  note: Choisir un trajet direct et accessible ; elle ne coordonne pas de manœuvres complexes.
+
+## Repli
+
+step: Points de vie sous 8 et voie de fuite accessible
+  do: Utiliser l'action de retraite pour s'éloigner en vol jusqu'à 30 m, en évitant de traverser d'autres cases menacées après la case de départ.
+
+step: Acculée sans possibilité de fuite
+  do: Continuer à mordre l'adversaire à portée jusqu'à pouvoir s'échapper.

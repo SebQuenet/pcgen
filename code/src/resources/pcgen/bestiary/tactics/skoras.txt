@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Skoras, rakshasa raktavarna de taille TP, loyal mauvais : un infiltrateur qui peut prendre la forme d'un objet minuscule et préfère la tromperie au combat prolongé.
+  22 pv ; CA 17, contact 15, pris au dépourvu 14 ; initiative +3. Morsure +8 (1d4-2 et poison), allonge 1,50 m.
+  Déplacement, escalade et nage : 6 m. Discrétion +17, Déguisement +16, Bluff +12, Perception +9, Psychologie +9.
+  Réduction des dégâts 5, surmontée par les attaques bonnes ou perforantes ; résistance à la magie 17. Vision dans le noir à 18 m et détection de la magie.
+
+resource: Charme-personne | 1/jour | pouvoir magique, NLS 6 ; Volonté DD 13 ; cible humanoïde
+resource: Suggestion | 1/jour | pouvoir magique, NLS 6 ; Volonté DD 15 ; instruction raisonnable comprise par la cible
+resource: Communion | 1/semaine | pouvoir magique, NLS 12 ; 6 questions
+resource: Compréhension des langages | permanent | comprendre les paroles ne permet pas de parler toutes les langues
+
+step: Il dispose de temps pour préparer une rencontre
+  do: Utiliser communion, si disponible, pour poser six questions sur les dangers attendus et les possibilités de fuite
+
+step: Il veut observer les intrus sans se révéler
+  do: Prendre la forme d'un objet de taille TP adapté au décor et rester immobile ; exploiter Déguisement +16
+  note: Sous sa forme mobile, utiliser Discrétion +17 et les abris pour se rapprocher sans attirer l'attention
+
+## Ouverture
+
+step: Un humanoïde peut être abordé avant toute menace ouverte
+  do: Utiliser charme-personne, Volonté DD 13, puis Bluff +12 pour obtenir sa confiance et éviter l'affrontement
+  note: Le charme crée une disposition amicale ; il ne permet pas de commander librement la cible
+
+step: Il peut parler à une cible qui comprend le commun, l'infernal ou le commun des profondeurs
+  do: Utiliser suggestion, Volonté DD 15, pour lui proposer de quitter les lieux par un chemin sûr ou d'aller chercher de l'aide ailleurs
+  note: Adapter le prétexte à la situation ; une instruction manifestement nuisible ne convient pas
+
+step: Le combat devient inévitable et une cible est à 1,50 m
+  do: Reprendre sa forme de combat si nécessaire, puis mordre dès qu'il peut attaquer : +8, 1d4-2 et poison
+  note: Le bloc ne précise ni le DD ni les effets du poison ; ne pas lui attribuer d'effet supplémentaire
+
+## Rounds suivants
+
+step: Une cible reste à portée et Skoras peut combattre sans être encerclé
+  do: Répéter la morsure +8 et chercher une position qui limite le nombre d'adversaires au contact
+  note: Sa réduction des dégâts peut amortir certaines attaques ; les armes perforantes et les attaques bonnes la surmontent
+
+step: Un adversaire dangereux peut encore être détourné et suggestion reste disponible
+  do: Tenter une suggestion raisonnable pour l'éloigner, Volonté DD 15
+  note: Ne pas gaspiller charme-personne comme s'il s'agissait d'une domination en plein combat
+
+step: Les ennemis sont trop nombreux ou hors de portée
+  do: Utiliser les abris, l'escalade ou la nage pour gagner une position moins exposée et chercher à rompre le contact
+  note: Il ne possède aucune attaque à distance dans ce bloc ; sa résistance à la magie ne garantit pas sa protection
+
+## Repli
+
+step: Il tombe à 7 pv ou moins, ou ne peut plus éviter plusieurs adversaires
+  do: Se désengager puis fuir vers un abri ; exploiter une paroi ou un passage aquatique si le terrain le permet
+  note: Sa vitesse est de 6 m dans chacun de ces modes de déplacement ; éviter de s'exposer à des attaques en partant
+
+step: Il a rompu la ligne de vue et peut se cacher
+  do: Utiliser Discrétion +17, puis prendre la forme d'un objet de taille TP plausible dans le décor
+  note: La métamorphose ne le rend pas invisible ; attendre d'être hors de vue pour tenter de tromper les poursuivants

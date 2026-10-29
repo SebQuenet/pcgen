@@ -1,0 +1,92 @@
+## Avant le combat
+
+note: Profil
+  Tesharat est une dragonne du magma âgée, de taille TG, chaotique neutre et très intelligente. Elle ouvre au souffle puis combat au corps à corps sous ses protections magiques.
+  237 pv, CA 33, résistance à la magie 26 ; immunité au feu, à la paralysie et au sommeil ; vulnérabilité au froid.
+  Morsure +27 (2d8+15/19-20 et 8 de feu), 2 griffes +27 (2d6+10), queue +22 (2d6+15), 2 ailes +22 (1d8+5).
+  Allonge de 3 m, de 4,50 m avec la morsure ; espace occupé de 4,50 m. Déplacement au sol de 12 m, vol de 60 m avec une manœuvrabilité médiocre.
+
+resource: Bouclier de feu chaud | constant | protection active sans préparation
+resource: Sorts de niveau 5 | 4/jour, réserve commune | domination de personne, Volonté DD 19 ; téléportation ; conserver une utilisation pour fuir
+resource: Sorts de niveau 4 | 7/jour, réserve commune | invisibilité suprême, porte dimensionnelle, charme-monstre, Volonté DD 18
+resource: Sorts de niveau 3 | 7/jour, réserve commune | déplacement, rapidité, dissipation de la magie, contact vampirique
+resource: Sorts de niveau 2 | 7/jour, réserve commune | notamment image miroir, détection de l'invisibilité et poussière scintillante, Volonté DD 16 contre l'aveuglement
+resource: Sorts de niveau 1 | 7/jour, réserve commune | notamment armure de mage et coup au but
+resource: Pouvoirs magiques offensifs | à volonté | mains brûlantes, Réflexes DD 15 ; rayon ardent ; mur de feu ; NLS 19
+resource: Science de la volonté de fer | 1/jour | relancer un jet de Volonté, avant d'en connaître le résultat ; conserver le second résultat
+
+step: Chaque jour
+  do: Lancer armure de mage
+  note: La CA 33 fournie ne comprend aucun bonus d'armure ; tenir compte du sort tant qu'il est actif
+
+step: Elle dispose de temps pour préparer l'affrontement
+  do: Lancer image miroir avant les protections de courte durée
+
+step: Le combat est imminent
+  do: Lancer déplacement et invisibilité suprême avant l'arrivée des adversaires
+  note: Ces deux protections soutiennent sa tactique de mêlée ; suivre leur durée séparément
+
+step: Elle peut encore préparer un sort après ses autres protections
+  do: Lancer contact vampirique en dernier et garder la charge pour sa première attaque naturelle réussie
+  note: Lancer ensuite un autre sort dissipe la charge conservée ; ouvrir au souffle permet de la garder pour la mêlée
+
+## Ouverture
+
+step: Premier round
+  do: Ouvrir avec le souffle en visant le plus d'adversaires possible, en priorité ceux qui menacent de l'attaquer au froid
+  note: Le bloc ne donne ni la portée, ni les dégâts, ni le DD, ni le délai de recharge du souffle ; ne pas lui attribuer de valeurs supplémentaires
+
+step: Elle attaque et des adversaires sont à 72 m ou moins
+  do: Appliquer la présence terrifiante, Volonté DD 23
+  note: Ne pas consacrer un round de lancement de sort à cette aura
+
+## Rounds suivants
+
+step: Une cible est à portée et elle peut consacrer le round à la mêlée
+  do: Attaque à outrance : morsure +27, 2 griffes +27, queue +22 et 2 ailes +22, avec les dégâts du profil
+  note: Une cible située au-delà de 3 m et jusqu'à 4,50 m n'est à portée que de la morsure ; décharger contact vampirique sur la première attaque naturelle réussie si sa charge est encore conservée
+
+step: Elle doit se déplacer pour atteindre une cible
+  do: Se déplacer puis porter une morsure avec Science de la frappe décisive
+  note: Si l'espace permet un passage en vol, utiliser Attaque en vol pour mordre puis poursuivre son déplacement ; sa manœuvrabilité médiocre impose de prévoir ses virages
+
+step: Le combat de mêlée va durer et ses protections sont encore actives
+  do: Lancer rapidité, puis reprendre les attaques à outrance aux rounds suivants
+  note: Le lancement remplace ses attaques de ce round ; ne pas sacrifier une charge de contact vampirique encore utile
+
+step: Invisibilité suprême ou déplacement arrive à expiration et les adversaires peuvent encore la menacer
+  do: Renouveler la protection nécessaire, en priorité invisibilité suprême si les ennemis ne la voient pas
+  note: Si un adversaire voit l'invisible, conserver déplacement et image miroir pour gêner ses attaques
+
+step: Plusieurs ennemis la menacent à distance ou un utilisateur de froid reste hors de portée
+  do: Élever un mur de feu pour séparer les adversaires et gêner leurs lignes de vue, puis se rapprocher de la menace prioritaire
+  note: Son immunité au feu lui permet de traverser son propre mur ; ne pas traiter le mur comme un obstacle physique infranchissable
+
+step: Un adversaire reste inaccessible en mêlée et une attaque de feu peut l'atteindre
+  do: Utiliser rayon ardent à volonté
+  note: Ne pas insister avec le feu contre un ennemi qui s'en protège efficacement
+
+step: Une protection magique ennemie empêche ses attaques d'être efficaces
+  do: Tenter une dissipation de la magie ciblée, puis reprendre la pression en mêlée
+
+step: Un humanoïde dangereux peut être retourné et il reste au moins deux sorts de niveau 5
+  do: Tenter domination de personne, Volonté DD 19, puis lui ordonner de combattre ses alliés
+  note: Garder le dernier sort de niveau 5 pour téléportation ; un ordre contraire à sa nature lui permet un nouveau jet de sauvegarde
+
+step: Un ennemi invisible échappe à ses attaques
+  do: Lancer détection de l'invisibilité ; utiliser poussière scintillante si sa position permet de le prendre dans la zone
+  note: L'aveuglement de poussière scintillante demande un jet de Volonté DD 16 ; révéler une silhouette invisible ne dépend pas de cet aveuglement
+
+## Repli
+
+step: Ses points de vie passent sous 50
+  do: Cesser l'offensive et lancer téléportation pour gagner un lieu connu et sûr
+  note: Si elle doit lancer au contact, utiliser l'incantation sur la défensive pour éviter une attaque d'opportunité ; sa concentration est de +15
+
+step: Téléportation n'est pas disponible ou une fuite locale suffit
+  do: Utiliser porte dimensionnelle pour sortir de l'affrontement et gagner un endroit hors d'atteinte
+  note: Elle ne peut plus agir après porte dimensionnelle jusqu'à son prochain tour ; choisir une arrivée qui ne demande pas de mouvement immédiat
+
+step: Elle a pu se mettre à l'abri et récupérer
+  do: Revenir chasser les survivants après avoir retrouvé ses forces et préparé ses protections
+  note: Aucun soin personnel n'est indiqué dans ce bloc ; son retour attend une récupération réelle

@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Tigre de taille M, compagnon animal mauvais, peu intelligent : il suit les ordres d'attaque et de garde de son maître. 37 pv ; CA 17, contact 14, pris au dépourvu 13.
+  Morsure +7 (1d6+2) et 2 griffes +8 (1d4+2) ; déplacement de 12 m ; allonge de 1,50 m.
+  Vision nocturne, odorat, Perception +6 et Discrétion +9 ; Réflexes +9 et esquive totale.
+
+step: Il reçoit l'ordre de garder une créature ou un lieu
+  do: Rester auprès de la créature ou du lieu gardé et attaquer les intrus qui s'en approchent.
+  note: Son odorat et sa vision nocturne l'aident à repérer une approche ; ils ne permettent pas de voir un ennemi invisible.
+
+step: Il peut attendre à couvert avant l'affrontement
+  do: Se dissimuler avec Discrétion +9, à proximité de ce qu'il garde.
+
+## Ouverture
+
+step: La cible désignée est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : morsure +7 (1d6+2) et 2 griffes +8 (1d4+2).
+
+step: La cible désignée est à plus de 1,50 m et une charge est possible
+  do: Charger en ligne droite jusqu'à 24 m et porter une griffe +10 (1d4+2).
+  note: La charge donne +2 à l'attaque et impose -2 à la CA jusqu'au début de son prochain tour. Elle ne lui permet pas d'effectuer son attaque à outrance.
+
+step: Une charge est impossible mais la cible peut être atteinte après un déplacement de 12 m
+  do: Se déplacer au contact et porter une griffe +8 (1d4+2).
+
+step: La cible reste trop éloignée pour être attaquée ce round
+  do: Se rapprocher par un double déplacement, jusqu'à 24 m, si l'ordre d'attaque le demande.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée au début de son tour
+  do: Répéter l'attaque à outrance : morsure +7 (1d6+2) et 2 griffes +8 (1d4+2), en concentrant les attaques sur la même cible.
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant l'attaque à outrance.
+
+step: La cible s'éloigne et ne peut pas être rejointe par un pas de placement
+  do: La rejoindre avec un déplacement de 12 m et porter une griffe +8 (1d4+2), ou charger si le trajet le permet.
+  note: S'il garde un lieu ou une créature, rester près de ce qu'il protège au lieu de poursuivre au loin.
+
+step: Un effet autorise un jet de Réflexes pour réduire les dégâts de moitié
+  do: Effectuer le jet de Réflexes à +9 ; en cas de réussite, appliquer l'esquive totale et ne subir aucun dégât.
+  note: En cas d'échec, il subit les dégâts normaux de l'effet.
+
+## Repli
+
+step: Son maître lui ordonne de se retirer
+  do: Rompre le combat par une retraite, jusqu'à 24 m, vers son maître ou un abri accessible.
+  note: La retraite évite les attaques d'opportunité dues à la sortie de sa case de départ, mais pas celles provoquées en quittant d'autres cases menacées.
+
+step: Aucun ordre de repli n'est donné
+  do: Poursuivre l'attaque ou la garde selon l'ordre reçu.
+  note: Aucun seuil de fuite en points de vie n'est indiqué dans le profil.

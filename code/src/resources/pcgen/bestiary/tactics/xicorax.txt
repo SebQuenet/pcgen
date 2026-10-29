@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Xicorax, méphite aérien de Petite taille et familier neutre de Morton, combat près de son maître. 27 PV, CA 21, réduction des dégâts 5/magie.
+  Deux griffes +6 (1d3+1 chacune), allonge 1,50 m ; déplacement au sol 9 m, vol 18 m avec une manœuvrabilité parfaite. Vision dans le noir à 18 m.
+
+note: Souffle
+  Les tactiques fournies mentionnent un souffle contre les assaillants, mais le bloc ne donne ni dégâts, ni portée, ni DD, ni fréquence. Ne pas lui attribuer de paramètres supplémentaires.
+
+resource: Flou | 1/heure | pouvoir magique, NLS 6
+resource: Bourrasque | 1/jour | DD 14, NLS 6
+resource: Convocation | 1/jour | niveau 2, un méphite aérien, 25 % de réussite
+
+step: Avant l'affrontement
+  do: Rester à proximité de Morton et surveiller les approches
+  note: Perception +6 ; lien empathique et communication avec son maître.
+
+step: Xicorax se trouve à l'air libre ou sur le pont de l'un des deux navires
+  do: Profiter de la guérison accélérée 2 dans ces zones venteuses
+  note: L'air libre et les ponts du Dryad's Grave et du navire des PJ comptent comme des zones venteuses ; ailleurs, cette guérison ne fonctionne pas.
+
+## Ouverture
+
+step: Premier round, si flou est disponible
+  do: Utiliser flou et rester près de Morton
+  note: Sa protection personnelle précède la tentative de convocation.
+
+step: Au tour suivant, si la convocation est disponible
+  do: Tenter de convoquer un méphite aérien pour renforcer la défense de Morton
+  note: La tentative n'a que 25 % de chances de réussir et consomme l'utilisation quotidienne même en cas d'échec.
+
+## Rounds suivants
+
+step: Un assaillant de Morton est à portée et Xicorax peut effectuer une attaque à outrance
+  do: Attaquer avec ses deux griffes +6, chacune infligeant 1d3+1 dégâts
+
+step: Xicorax doit se déplacer pour atteindre un assaillant
+  do: Voler jusqu'à lui en restant près de Morton, puis porter une seule attaque de griffe +6 (1d3+1)
+  note: Son vol parfait permet de se repositionner autour de son maître ; ne pas s'éloigner à la poursuite d'un ennemi.
+
+step: Une bourrasque peut gêner les assaillants et son utilisation quotidienne reste disponible
+  do: Diriger bourrasque vers eux (DD 14)
+
+step: Xicorax est blessé mais reste à 15 PV ou davantage
+  do: Continuer à défendre Morton en restant dans une zone venteuse
+  note: La guérison accélérée lui rend 2 PV par round dans les zones indiquées.
+
+## Repli
+
+step: Morton est tué
+  do: S'envoler dans le ciel et ne jamais revenir
+  note: Cette réaction prime sur toute autre conduite, quel que soit le nombre de PV restants.
+
+step: Xicorax tombe à moins de 15 PV et Morton est encore vivant
+  do: Fuir en volant vers le Dryad's Grave, à 18 m par déplacement
+  note: Le pont du navire permet sa guérison accélérée 2 ; ne pas retarder la fuite pour continuer à attaquer.

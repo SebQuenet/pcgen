@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Feaster Of The Heart, rejeton vampirique évolué de FP 5, mort-vivant loyal mauvais, intelligent et furtif. Il isole une victime et l'affaiblit au corps à corps.
+  Coup +7 (1d4+6 plus absorption d'énergie), allonge 1,50 m ; déplacement 9 m ; 42 PV, CA 20, contact 14, pris au dépourvu 16.
+  Discrétion +25, Perception +14, vision dans le noir à 18 m ; pattes d'araignée et forme gazeuse facilitent l'approche et le repli.
+
+resource: Guérison accélérée 2 | permanente | récupère 2 PV par round, jusqu'à 42 PV
+resource: Forme gazeuse | à volonté | transformation par une action simple ; sert à fuir, pas à porter des coups
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +25, éventuellement sur un mur ou au plafond grâce à pattes d'araignée, et laisser une cible s'isoler.
+  note: La vision dans le noir permet de surveiller jusqu'à 18 m dans l'obscurité ; elle ne rend pas le monstre invisible.
+
+step: Il choisit son emplacement
+  do: Privilégier un passage où peu d'adversaires peuvent l'attaquer ensemble et repérer une issue à l'abri du soleil et de l'eau courante.
+  note: Réduction des dégâts 5/argent, résistances au froid 10 et à l'électricité 10, résistance à la canalisation +2 et immunités des morts-vivants.
+
+## Ouverture
+
+step: Une victime vivante arrive à 1,50 m sans l'avoir découvert
+  do: Sortir de sa cachette et porter un coup +7, infligeant 1d4+6 dégâts plus absorption d'énergie.
+  note: Privilégier une cible isolée et facile à toucher pour appliquer l'absorption d'énergie.
+
+step: Il est découvert avant de pouvoir frapper
+  do: Rejoindre une cible par le chemin le moins exposé ; se déplacer de 9 m au maximum puis frapper si elle est à portée et s'il reste une action simple.
+  note: Pendant un round de surprise, choisir entre se déplacer et attaquer selon la distance.
+
+## Rounds suivants
+
+step: La victime reste au contact
+  do: Répéter le coup +7 (1d4+6 plus absorption d'énergie) chaque round, en concentrant les attaques sur la même créature vivante.
+  note: Son attaque normale comporte un seul coup ; les niveaux négatifs affaiblissent progressivement la victime.
+
+step: Plusieurs adversaires risquent de l'encercler
+  do: Faire un pas de placement de 1,50 m vers un passage étroit si cela suffit, puis frapper ; sinon, se dégager vers un mur avec pattes d'araignée.
+  note: Gagner de la hauteur peut le soustraire aux armes de mêlée, mais il doit revenir à 1,50 m d'une cible pour l'attaquer.
+
+step: Un adversaire bénéficie de camouflage au corps à corps
+  do: Continuer à frapper si la cible est repérée et à portée.
+  note: Combat en aveugle permet de relancer une fois le jet de camouflage raté en mêlée ; il ne permet pas de localiser automatiquement une cible invisible.
+
+step: Il subit des blessures mais peut encore tenir le passage
+  do: Maintenir la pression sur sa victime et appliquer la guérison accélérée de 2 PV à chaque round.
+  note: Les armes en argent contournent sa réduction des dégâts ; éviter de rester exposé à leurs porteurs.
+
+## Repli
+
+step: À 14 PV ou moins, ou si les ennemis contournent efficacement ses défenses
+  do: Prendre une forme gazeuse par une action simple, puis emprunter une ouverture accessible à la brume pour rompre le contact.
+  note: Sous cette forme, il renonce aux attaques ; chercher un abri plutôt que rester à portée des poursuivants.
+
+step: Une faiblesse vampirique menace de le détruire
+  do: Rejoindre immédiatement un abri ; ne pas traverser une zone de soleil direct ni de l'eau courante pour poursuivre une victime.
+
+step: Il a échappé aux poursuivants et dispose d'un abri sûr
+  do: Rester dissimulé et laisser sa guérison accélérée restaurer ses PV avant d'envisager une nouvelle embuscade.

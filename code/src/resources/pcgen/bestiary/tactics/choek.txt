@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Choek est une vase de taille TG, neutre et peu intelligente, qui privilégie le corps à corps. Il possède 312 PV, une CA de 5 et une vitesse de 6 m ; il occupe un espace de 4,50 m et son allonge atteint 4,50 m.
+  Attaque à outrance : 3 coups +24, chacun infligeant 2d6+13 dégâts physiques et 2d6 dégâts d'acide, critique sur 19-20, avec étreinte.
+  Sa vision aveugle porte à 18 m. Il est immunisé au froid, au feu et aux effets mentaux, et bénéficie des immunités des vases. Il parle l'androffan.
+
+resource: Confusion rapide | 3/jour | action rapide, Volonté DD 11, NLS 16
+resource: Confusion | à volonté | action simple, Volonté DD 11, NLS 16
+
+step: Des adversaires approchent sans l'avoir repéré
+  do: Profiter de sa transparence et de sa Discrétion +11 pour les laisser venir à portée de ses coups
+  note: Sa Perception est de -3 ; utiliser sa vision aveugle pour repérer les créatures à 18 m ou moins
+
+## Ouverture
+
+step: Premier round de combat
+  do: Utiliser confusion rapide sur les adversaires, puis engager le corps à corps avec les actions restantes
+  note: Volonté DD 11 ; ce pouvoir peu puissant complète ses coups et consomme la première des trois utilisations quotidiennes
+
+step: Un adversaire est déjà à 4,50 m ou moins
+  do: Porter une attaque à outrance de 3 coups +24
+  note: Après un coup réussi, utiliser l'étreinte pour tenter d'agripper une cible admissible et la retenir au contact
+
+step: Un déplacement de 6 m ou moins suffit à mettre une cible à portée
+  do: Avancer, puis porter un coup avec Frappe décisive : +24, 4d6+13 dégâts physiques et 2d6 dégâts d'acide, avec étreinte
+  note: Frappe décisive augmente les dés physiques de cette attaque unique ; le bonus fixe et les dégâts d'acide restent ceux du coup normal
+
+step: Aucun adversaire ne peut être atteint après un déplacement simple
+  do: Se rapprocher par un double déplacement, jusqu'à 12 m
+
+## Rounds suivants
+
+step: Deuxième ou troisième round, avec une utilisation de confusion rapide disponible
+  do: Utiliser confusion rapide en action rapide, puis poursuivre ses attaques ou son approche
+  note: Dépenser ainsi les trois utilisations pendant les trois premiers rounds de combat ; Volonté DD 11
+
+step: Une cible est à portée et aucune lutte ne mobilise son action simple
+  do: Répéter les 3 coups +24 ; si nécessaire, effectuer un pas de placement de 1,50 m pour conserver l'attaque à outrance
+  note: Employer Attaque en puissance contre une cible facile à toucher ; privilégier la précision contre une CA élevée
+
+step: Une victime est agrippée
+  do: Consacrer son action simple au maintien de la lutte pour la retenir et lui infliger les dégâts permis par cette manœuvre
+  note: Le maintien de la lutte remplace l'attaque à outrance de ce round
+
+step: Une cible accessible s'éloigne
+  do: Avancer de 6 m au maximum et porter un coup avec Frappe décisive dès qu'elle revient à 4,50 m ou moins
+
+step: Choek est acculé, ses ennemis sont impossibles à engager en mêlée et confusion rapide est épuisée
+  do: Utiliser confusion ordinaire en action simple, Volonté DD 11
+  note: Réserver cette solution aux situations désespérées ; autrement, chercher le corps à corps
+
+## Repli
+
+step: Les adversaires demandent une trêve, à n'importe quel moment
+  do: Cesser le combat et accepter la trêve
+  note: Choek ne garde aucune rancune
+
+step: Aucune trêve n'est demandée
+  do: Combattre jusqu'à la mort, même lorsque ses PV deviennent très faibles

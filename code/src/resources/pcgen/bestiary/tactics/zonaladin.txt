@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Zonaladin, vieux dragon de cuivre de taille TG, chaotique bon, est un combattant prudent qui ralentit ses ennemis et les harcèle depuis les colonnes du ravin.
+  Il commence à 190 pv sur un maximum de 227 ; CA 32, contact 7, RD 10/magie, RM 26 ; immunité à l'acide, à la paralysie et au sommeil.
+  Après le malus des niveaux négatifs : morsure +23 (2d8+12/19-20), 2 griffes +23 (2d6+8/19-20), 2 ailes +18 (1d8+4), queue +18 (2d6+12).
+  Allonge de 3 m, ou 4,50 m avec la morsure ; déplacement de 12 m, vol de 60 m avec manœuvrabilité médiocre ; il peut grimper sur la pierre.
+
+note: Affaiblissement initial
+  Il est fatigué et porte deux niveaux négatifs, conséquences de sa veille et des combats contre les fidèles de Lissala. Il ne peut ni courir ni charger.
+  Les diminutions de Force, de Dextérité, de pv maximaux et de DMD sont déjà intégrées : ne pas les appliquer de nouveau.
+  Appliquer encore -2 aux tests de caractéristique, attaques, manœuvres, sauvegardes et compétences. Les attaques du Profil ci-dessus incluent ce malus ; ses sauvegardes deviennent Vigueur +15, Réflexes +8 et Volonté +14. Les DD restent ceux indiqués.
+
+resource: Sorts de niveau 1 | 2 | réserve commune à tous les sorts de ce niveau, notamment bouclier et projectile magique
+resource: Sorts de niveau 2 | 2 | réserve commune, notamment invisibilité, poussière scintillante et résistance aux énergies destructives
+resource: Sorts de niveau 3 | 2 | réserve commune, notamment dissipation de la magie, héroïsme et mur de vent
+resource: Sorts de niveau 4 | 2 | réserve commune, notamment confusion et sphère d'isolement
+resource: Sorts de niveau 5 | 2 | réserve commune à débilité et toile fantasmagorique
+resource: Pouvoirs magiques | à volonté | graisse DD 16, fou rire DD 17, façonnage de la pierre, transmutation de la pierre en boue et de la boue en pierre DD 20 ; ces pouvoirs ne dépensent pas de sorts
+resource: Souffle | réutilisable après 1d4 rounds | souffle ralentissant ou ligne d'acide de 30 m, 16d6 dégâts, Réflexes DD 25 pour moitié ; les deux formes partagent le délai
+
+note: Pièges du poste de garde
+  Ses vrais pièges ont déjà été déclenchés par les Lissalans. Il a placé un piège fantôme devant la porte de la Thousandth Spire pour décourager les intrus ; ce leurre ne blesse personne.
+
+step: Il voit venir l'affrontement et dispose d'un round de préparation
+  do: Lancer bouclier avant le contact, puis se placer près d'une colonne accessible en vol ou en grimpant
+  note: Bouclier porte sa CA à 36 et consomme l'un des deux sorts de niveau 1 restants.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris ensemble
+  do: Employer le souffle ralentissant en cône pour toucher le plus grand nombre, puis gagner une colonne du ravin avec son déplacement
+  note: Il cherche d'abord à réduire la mobilité du groupe, puis à conserver une position difficile à atteindre.
+
+step: Il engage le combat
+  do: Faire jouer sa présence effrayante sur les adversaires concernés dans un rayon de 72 m, Volonté DD 24
+  note: Garder active son aura de lenteur : les créatures à 1,50 m doivent réussir Volonté DD 25 ou être ralenties pendant 1 round.
+
+## Rounds suivants
+
+step: Les adversaires restent à distance et le souffle est disponible
+  do: Depuis la colonne, souffler de l'acide sur les cibles alignées ; préférer le souffle ralentissant si plusieurs ennemis mobiles menacent de le rejoindre
+  note: Se déplacer entre les colonnes lorsque sa position devient dangereuse ; respecter le délai du souffle et sa manœuvrabilité médiocre.
+
+step: Le souffle se recharge et les ennemis se regroupent
+  do: Lancer toile fantasmagorique, Volonté DD 21, ou confusion, Volonté DD 19, pour désorganiser le groupe
+  note: Choisir un seul de ces sorts pour le round et décompter la réserve du niveau correspondant.
+
+step: Un lanceur de sorts constitue la menace principale
+  do: Tenter débilité, Volonté DD 20 ; employer plutôt dissipation de la magie si une protection ou un effet magique donne l'avantage à l'ennemi
+
+step: Des archers le harcèlent sans pouvoir le rejoindre
+  do: Interposer un mur de vent s'il peut ainsi couper leurs tirs, puis changer de perchoir
+
+step: Une menace sérieuse à distance exige une intervention au contact
+  do: Se rapprocher sans charger, puis tenter un croc-en-jambe à +31 ; désarmer à +27 si l'arme est la source du danger
+  note: Exploiter son allonge. Le désarmement provoque une attaque d'opportunité si la cible menace sa case, car il ne possède pas le don qui l'évite.
+  note: Un croc-en-jambe réussi avec son don supérieur provoque une attaque d'opportunité ; Zonaladin n'en dispose normalement que d'une par round.
+
+step: Un adversaire atteint sa colonne et reste à portée
+  do: Le mettre à terre, ou effectuer une attaque à outrance avec morsure, griffes, ailes et queue s'il peut rester sur place
+  note: L'aura de lenteur gêne ceux qui s'approchent à 1,50 m. Après un déplacement, une seule morsure avec Frappe décisive améliorée (Improved Vital Strike) inflige 6d8+12 au lieu de 2d8+12.
+
+step: Il faut neutraliser une cible sans rester en mêlée
+  do: Employer fou rire, Volonté DD 17, ou graisse, Réflexes DD 16, puis profiter d'un round suivant pour reprendre de la distance
+  note: Ces pouvoirs sont à volonté ; ils permettent d'économiser ses quelques sorts restants.
+
+## Repli
+
+step: Il tombe à 30 pv ou moins, ou ne peut plus combattre efficacement
+  do: Rompre le combat et regagner son repaire en volant à 60 m par déplacement, en utilisant les colonnes pour couper les lignes de vue
+  note: S'il est menacé au contact, employer un retrait lorsque c'est possible. Une invisibilité encore disponible peut couvrir la fuite ; elle consomme un sort de niveau 2.
+  note: Il espère se soigner au repaire et attendre la sortie des Éclaireurs de la Thousandth Spire ; son profil ne lui donne aucun sort de soins.

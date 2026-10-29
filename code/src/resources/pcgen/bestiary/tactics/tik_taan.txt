@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Tik Taan est une idole de bois neutre, une créature artificielle de taille minuscule : 11 pv, CA 14, vitesse 3 m.
+  Elle soutient Da'Tunga et évite autant que possible la mêlée. Écharde à distance +6 (1d2-4) ; morsure +2 (1d2-4), allonge 0 m.
+  Discrétion +13, ou +17 parmi le bois ; Perception +5 ; vision dans le noir à 18 m et vision nocturne. Elle comprend le polyglotte mais ne parle pas.
+
+note: Terrain et défenses
+  Dans la salle d’exposition nord, le sol dallé empêche sa régénération : elle ne récupère aucun pv par ce moyen.
+  Sur sol naturel, régénération 5. Immunités des créatures artificielles ; résistance au froid 5 et à l’électricité 5 ; vulnérabilité au feu.
+  Aura incombustible dans un rayon de 9 m.
+
+resource: Peau d’écorce | 1/jour | augmente la CA de Da'Tunga de +2
+resource: Enchevêtrement | 1/jour | DD 12 ; nécessite de la végétation
+resource: Déformation du bois | à volonté | DD 13
+resource: Détection de la faune ou de la flore | à volonté | repérage
+resource: Création d’eau, baies nourricières, forme d’arbre | 3/jour chacun | pouvoirs auxiliaires
+
+step: Prévenue de l’arrivée des intrus avant leur entrée dans la zone 7
+  do: Lancer peau d’écorce sur Da'Tunga.
+  note: Cocher l’utilisation quotidienne ; ne pas relancer ce pouvoir à l’ouverture.
+
+step: Une position discrète est disponible parmi le bois
+  do: S’y dissimuler pour soutenir Da'Tunga sans attirer les attaques.
+  note: Utiliser Discrétion +17 dans ce décor, +13 ailleurs.
+
+## Ouverture
+
+step: Peau d’écorce n’a pas été lancée avant le combat
+  do: Consacrer sa première action à peau d’écorce sur Da'Tunga, qui gagne +2 à la CA.
+
+step: Peau d’écorce est déjà active et un adversaire utilise un objet en bois
+  do: Employer déformation du bois sur cet objet pour gêner son utilisation (DD 13).
+  note: Privilégier un équipement dont dépend un adversaire menaçant Da'Tunga.
+
+step: Peau d’écorce est déjà active et de la végétation permet de gêner les intrus
+  do: Employer enchevêtrement (DD 12) pour freiner leur progression.
+  note: Choisir une zone qui épargne Da'Tunga ; les dalles seules ne fournissent aucune végétation.
+
+## Rounds suivants
+
+step: Un équipement en bois reste une cible utile
+  do: Réutiliser déformation du bois (DD 13), à raison d’une utilisation par action.
+  note: Ce pouvoir est à volonté ; privilégier le soutien à Da'Tunga.
+
+step: Aucun pouvoir de soutien n’est utile ce round et une cible est accessible à distance
+  do: Attaquer avec une écharde +6 (1d2-4).
+  note: Les dégâts sont faibles ; ne pas abandonner une position protégée pour attaquer.
+
+step: Un ennemi s’approche de l’idole
+  do: Chercher à se mettre hors de sa portée et laisser Da'Tunga faire écran.
+  note: Sa vitesse n’est que de 3 m. Éviter la mêlée ; la morsure +2 (1d2-4), d’allonge nulle, est un dernier recours.
+
+## Repli
+
+step: Tik Taan tombe à 5 pv ou moins
+  do: Reprendre immédiatement son état inanimé, dans l’espoir que l’assaillant se désintéresse d’elle.
+  note: Elle continue d’utiliser ses pouvoirs magiques et ses capacités spéciales dans cet état pour soutenir Da'Tunga.
+
+step: Tik Taan est détruite
+  do: Étourdir tous les primates, Da'Tunga compris, pendant 1 round.
+  note: La salle sombre dans un bref silence lugubre.

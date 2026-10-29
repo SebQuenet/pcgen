@@ -1,0 +1,112 @@
+## Avant le combat
+
+note: Profil
+  Eranex, dragonne d'argent adulte de nature féerique, chaotique bonne, FP 16. Intelligente et prudente, elle prépare une embuscade et cherche à survivre pour accomplir les exigences de Shyka.
+  195 pv ; CA 30, contact 10 ; déplacement 12 m, vol 60 m avec manœuvrabilité moyenne. Espace occupé 4,50 m ; allonge 3 m, ou 4,50 m avec la morsure.
+  Morsure +23 (2d8+10), 2 griffes +22 (2d6+7), 2 ailes +20 (1d8+3), coup de queue +20 (2d6+3). Ces valeurs précèdent les modifications de ses sorts et d'Attaque en puissance.
+  Sa tactique mentionne un souffle de froid, mais le bloc fourni n'en précise ni les dégâts, ni la portée, ni le DD, ni le délai entre deux souffles.
+
+note: Défenses et menaces
+  RD 5/magie et 10/fer froid ; RM 25 ; résistance à l'électricité 10. Immunités à l'acide, au froid, à la paralysie et au sommeil ; +4 aux sauvegardes contre les effets mentaux.
+  Vulnérable au feu : repérer les utilisateurs de feu et éviter de leur offrir une cible immobile à découvert.
+
+resource: Sorts de niveau 1 | 7/jour, réserve commune | protection contre le Mal, projectile magique, contact glacial (DD 17), alarme, serviteur invisible
+resource: Sorts de niveau 2 | 7/jour, réserve commune | flou, force de taureau, verrou du mage
+resource: Sorts de niveau 3 | 5/jour, réserve commune | dissipation de la magie, immobilisation de morts-vivants (DD 19)
+resource: Détection du Mal, feuille morte, nappe de brouillard | à volonté | pouvoirs magiques, NLS 17
+resource: Débilité | 1/jour | DD 21
+resource: Confusion | 1/jour | DD 20
+resource: Danse irrésistible | 1/jour | contact, DD 24
+resource: Poussière scintillante | 1/jour | DD 18
+resource: Enchevêtrement | 1/jour | DD 17
+resource: Lueurs féeriques | 1/jour | désigner les adversaires difficiles à voir
+resource: Image accomplie | 1/jour | DD 19
+resource: Double illusoire | 1/jour | dissimulation et diversion pour changer de position
+resource: Projection d'image | 1/jour | DD 23
+resource: Perturbation de morts-vivants | à volonté | sort de niveau 0, NLS 7
+
+step: Elle peut observer les intrus avant leur arrivée
+  do: Les examiner avec Perception +25 et détection du Mal ; choisir un passage qui canalise leur approche et une issue assez large pour sa fuite
+  note: Sa vision nocturne aide dans la pénombre ; ne pas lui attribuer de perception spéciale absente du bloc.
+
+step: Des intrus maléfiques menacent son repaire
+  do: Lancer protection contre le Mal sur elle-même, puis se cacher derrière un rocher ou dans une chambre reculée avec Discrétion +18 et camouflage
+  note: Attendre une occasion de frapper par surprise ; ne pas quitter sa cachette simplement pour provoquer les intrus.
+
+step: Elle dispose de rounds supplémentaires avant l'affrontement
+  do: Lancer flou ; ajouter force de taureau si une mêlée est probable, particulièrement contre des fées
+  note: Chaque sort consomme une action et un emplacement de sa réserve ; ajuster ensuite ses attaques et dégâts pour force de taureau.
+
+step: Elle veut agir sans montrer sa position réelle
+  do: Utiliser projection d'image depuis une cachette qui lui permet de voir le double ; faire parler celui-ci et lancer par lui les sorts qui le permettent
+  note: Image accomplie peut aussi détourner les intrus vers un faux passage ou une fausse présence ; l'illusion ne cause pas de dégâts réels.
+
+## Ouverture
+
+step: Elle se révèle en attaquant
+  do: Faire jouer sa présence terrifiante dans un rayon de 54 m, DD 23
+  note: Résoudre cet effet en plus de l'action offensive choisie pour le round.
+
+step: Plusieurs intrus vivants sont regroupés et exposés à son souffle
+  do: Ouvrir avec son souffle de froid ; si l'espace permet de voler, employer Attaque en vol pour se déplacer, souffler et poursuivre son déplacement
+  note: Éviter cette ouverture contre des adversaires manifestement protégés du froid.
+
+step: Des morts-vivants constituent la menace immédiate
+  do: Lancer immobilisation de morts-vivants sur les cibles admissibles, DD 19
+  note: Profiter de leur immobilisation pour se repositionner ou traiter les autres adversaires ; les attaquer peut mettre fin au sort.
+
+step: Un lanceur de sorts dangereux reste exposé
+  do: Tenter débilité sur lui, DD 21
+  note: Donner la priorité à celui qui emploie le feu ou menace de neutraliser Eranex.
+
+step: Plusieurs adversaires actifs peuvent être pris dans la même zone
+  do: Employer confusion, DD 20, si disperser leurs actions paraît plus utile que le souffle
+  note: Choisir une seule de ces actions d'ouverture selon la situation ; ces pouvoirs ne s'enchaînent pas tous dans le même round.
+
+## Rounds suivants
+
+step: Un adversaire est à portée et elle peut rester en mêlée
+  do: Porter une attaque à outrance : morsure, 2 griffes, 2 ailes et coup de queue
+  note: Concentrer les coups sur une menace dangereuse déjà affaiblie. Employer Attaque en puissance contre une cible facile à toucher ; force de taureau soutient sa mêlée contre les fées.
+
+step: Elle doit frapper puis reprendre de la distance
+  do: Employer Attaque en vol avec une morsure et Frappe décisive : +23, 4d8+10 avant ses autres modificateurs
+  note: Cette attaque unique remplace l'attaque à outrance. Choisir une trajectoire qui limite les attaques d'opportunité ; Attaque en vol ne les supprime pas.
+
+step: Un ennemi dangereux est accessible au contact et danse irrésistible reste disponible
+  do: Utiliser danse irrésistible, DD 24, pour désorganiser sa défense et ses actions
+  note: Ce pouvoir exige son propre contact ; ne pas appliquer son effet automatiquement à une morsure.
+
+step: Un adversaire dépend de protections magiques gênantes
+  do: Tenter une dissipation de la magie ciblée
+  note: Ce sort utilise son NLS de lanceuse de sorts, 7, et non le NLS 17 de ses pouvoirs magiques ; éviter d'y consacrer plusieurs rounds sans résultat.
+
+step: Des adversaires invisibles ou dissimulés échappent à ses attaques
+  do: Employer poussière scintillante, DD 18, ou lueurs féeriques selon leur position
+  note: Réserver ces utilisations uniques aux ennemis dont la dissimulation empêche réellement de combattre.
+
+step: Des poursuivants traversent une zone pourvue de végétation
+  do: Employer enchevêtrement, DD 17, puis profiter de son vol pour changer d'angle
+  note: Marche dans les sous-bois et absence de traces facilitent ses déplacements terrestres ; ne pas présumer qu'elles annulent une végétation modifiée par magie.
+
+step: Un mort-vivant très affaibli peut être achevé sans s'exposer
+  do: Employer perturbation de morts-vivants
+  note: Contre une menace encore solide, privilégier immobilisation de morts-vivants ou ses attaques physiques.
+
+step: Les ennemis restent hors de portée de ses attaques physiques
+  do: Se rapprocher en vol sous couvert du terrain ; employer projectile magique pour terminer une cible déjà blessée si l'approche est défavorable
+  note: Ne pas rester immobile à échanger des sorts de faible niveau avec un spécialiste du feu.
+
+## Repli
+
+step: Points de vie inférieurs à 30
+  do: Rompre le combat et fuir par l'issue préparée, en utilisant son vol à 60 m par action de déplacement lorsque l'espace le permet
+  note: Elle préfère survivre et préparer une riposte plutôt que mourir pour satisfaire les exigences de Shyka.
+
+step: Des poursuivants peuvent encore la prendre pour cible
+  do: Employer double illusoire s'il reste disponible ; sinon, placer une nappe de brouillard entre eux et elle avant de poursuivre la fuite
+  note: Ces pouvoirs prennent une action ; les employer seulement si cela aide davantage qu'un déplacement immédiat. Elle ne voit pas automatiquement à travers son propre brouillard.
+
+step: Elle a rompu la ligne de vue
+  do: Changer de direction, gagner une chambre reculée et se dissimuler ; utiliser absence de traces si la fuite continue à pied
+  note: Observer ensuite ses ennemis et préparer une attaque de représailles dans de meilleures conditions.

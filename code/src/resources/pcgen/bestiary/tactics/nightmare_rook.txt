@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Nightmare Rook, roc cauchemardesque colossal, chaotique mauvais, intelligent et cruel ; 252 PV, CA 30. Il disperse ses ennemis par la peur, frappe en vol et enlève les isolés.
+  Deux serres +23 (3d6+13 chacune) et morsure +23 (3d8+13), critiques sur 19–20 ; allonge 6 m, espace occupé 9 m. Vol parfait à 24 m, déplacement au sol à 6 m.
+  Réduction des dégâts 5/argent ou Bien, immunité aux illusions et simulation de mort ; sa régénération lui permet de récupérer sur son perchoir.
+
+resource: Protection contre le Bien | constant | NLS 20 ; déjà active à l'approche des intrus
+resource: Régénération 5 | permanente | récupère 5 PV par round ; les dégâts d'argent ou du Bien la suspendent pendant le round suivant
+resource: Science de la volonté de fer | 1/jour | relance un jet de Volonté avant d'en connaître le résultat ; conserve obligatoirement le second jet
+
+step: Des intrus approchent
+  do: Les observer depuis les hauteurs avec Perception +28 et choisir une proie qu'il pourra séparer du groupe
+  note: vision dans le noir à 36 m et vision nocturne ; les illusions ne le trompent pas
+
+## Ouverture
+
+step: Les ennemis entrent dans un rayon de 18 m
+  do: Faire intervenir l'aura de terreur, Volonté DD 26, et profiter de la dispersion qu'elle provoque
+  note: l'aura accompagne son approche ; elle ne lui demande pas de sacrifier sa morsure du round
+
+step: Une cible est accessible en vol
+  do: Attaque en vol : approcher, mordre avec Frappe décisive améliorée à +23 (9d8+13), puis utiliser le mouvement restant pour s'éloigner
+  note: mouvement total de 24 m ; utiliser l'allonge de 6 m pour frapper en restant à distance. Les dés supplémentaires de Frappe décisive ne sont pas multipliés sur un critique
+
+## Rounds suivants
+
+step: La peur a isolé un personnage
+  do: Le viser avec une morsure ou une serre, puis utiliser Capture (Snatch) sur une attaque réussie pour engager la lutte et le saisir
+  note: privilégier une proie de taille TG ou inférieure ; BMO de base +39, DMD 55. La saisie exige un test de lutte réussi
+
+step: Un personnage est capturé
+  do: L'emporter au-dessus de la cime des arbres pour le soustraire à l'aide de ses compagnons
+  note: pour déplacer une proie en lutte normale, consacrer une action simple au test de lutte permettant le déplacement, à demi-vitesse, soit 12 m en vol
+
+step: Il a franchi la cime des arbres avec sa proie
+  do: Gagner une autre clairière et lâcher sa victime, de préférence dans le Mire, zone G, ou le Fruiting Orchard, zone E
+  note: lâcher une créature capturée est une action libre. La nature de Thousandbreaths interdit de l'abandonner dans les bois profonds
+
+step: La victime se libère au-dessus de la forêt
+  do: Résoudre sa chute et la replacer à la lisière de la dernière clairière qu'elle a quittée
+  note: elle tombe de bien plus de 60 m ; l'étrangeté de Thousandbreaths la ramène au bord de cette clairière
+
+step: Les personnages restent groupés et il ne parvient pas à les séparer
+  do: Atterrir et enchaîner les attaques à outrance : deux serres +23 (3d6+13 chacune) et une morsure +23 (3d8+13)
+  note: Frappe décisive améliorée sert aux morsures isolées en vol ; chaque attaque d'une attaque à outrance conserve ses dégâts ordinaires
+
+step: Un effet menace de le neutraliser par un jet de Volonté
+  do: Dépenser Science de la volonté de fer si le premier jet paraît insuffisant, avant que son résultat soit annoncé
+  note: Volonté +11 ; une seule relance par jour
+
+## Repli
+
+step: Il atteint 100 PV ou moins loin du sommet de son perchoir
+  do: Rompre le combat, s'envoler vers sa flèche et y laisser agir sa régénération en fixant les intrus avec haine
+  note: s'éloigner en priorité des armes en argent et des attaques du Bien qui interrompent sa récupération
+
+step: Les personnages l'affrontent au sommet de son perchoir
+  do: Combattre jusqu'à la mort en utilisant ses attaques à outrance contre les ennemis à portée
+  note: le sommet est une aire circulaire de 27 m de diamètre ; il ne se replie plus, même à 100 PV ou moins

@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Bison mort-vivant de taille G, neutre mauvais et dépourvu d'intelligence ; 27 PV, CA 21, déplacement de 12 m par round.
+  Cornes +11 (2d6+9 plus 1d6 de froid) et coup +11 (1d8+9 plus 1d6 de froid) ; espace occupé de 3 m, allonge de 1,50 m.
+  Vision dans le noir et perception de la vie à 18 m : repérer les créatures vivantes même dans l'obscurité.
+
+note: Défenses
+  Réduction des dégâts 5/contondant ; immunité au froid et traits des morts-vivants.
+  Vulnérabilité au feu : les dégâts de feu subis augmentent de moitié. Ses 27 PV ne lui permettent pas de soutenir longtemps ces attaques.
+
+## Ouverture
+
+step: Une charge en ligne droite dégagée permet d'atteindre un ennemi, avec au moins 3 m de déplacement
+  do: Charger sur 24 m au maximum et porter un seul coup de cornes à +13 (2d6+9 plus 1d6 de froid).
+  note: La charge donne +2 à l'attaque et réduit sa CA à 19 jusqu'au début de son prochain tour ; elle ne permet pas d'ajouter le coup.
+
+step: Ennemi hors de portée et charge impossible
+  do: Avancer de 12 m au maximum, puis porter un coup de cornes +11 si l'ennemi se trouve à 1,50 m ou moins.
+  note: Si un seul déplacement ne suffit pas à atteindre l'ennemi, effectuer plutôt un double déplacement de 24 m au maximum, sans attaquer.
+
+step: Ennemi déjà à portée au début de son tour
+  do: Effectuer une attaque à outrance : cornes +11 (2d6+9 plus 1d6 de froid), puis coup +11 (1d8+9 plus 1d6 de froid).
+
+## Rounds suivants
+
+step: Un ennemi reste à 1,50 m ou moins
+  do: Répéter l'attaque à outrance avec les cornes et le coup, en concentrant les deux attaques sur la même cible tant qu'elle combat.
+  note: Chaque attaque qui touche ajoute ses propres 1d6 dégâts de froid.
+
+step: La cible s'écarte
+  do: Faire un pas de placement de 1,50 m si cela suffit à la rejoindre, puis effectuer l'attaque à outrance.
+  note: Si elle est plus loin, reprendre l'approche ou la charge décrite à l'ouverture ; après un déplacement ordinaire, ne porter qu'un coup de cornes.
+
+## Repli
+
+step: Le bison perd des PV, même sous des attaques de feu
+  do: Continuer à attaquer sans organiser de retraite ; ce mort-vivant sans intelligence ne planifie pas sa survie.
+  note: À 0 PV, il est détruit.

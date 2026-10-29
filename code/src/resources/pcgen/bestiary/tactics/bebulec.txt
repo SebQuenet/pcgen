@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Bebulec, noble éfrit loyal mauvais de taille G, FP 10, combat surtout par pouvoirs magiques de feu sous invisibilité suprême. Il possède 136 pv, une CA de 28, une CA de contact de 13 et une CA de 24 pris au dépourvu.
+  Au corps à corps : deux coups +18, chacun infligeant 1d8+6 dégâts et 1d6 de feu ; allonge de 3 m. Il ne passe à la mêlée que si les adversaires résistent manifestement au feu.
+  Déplacement au sol de 6 m, vol de 12 m avec manœuvrabilité parfaite ; vision dans le noir à 18 m. Immunisé au feu, vulnérable au froid : privilégier le vol et la distance face aux utilisateurs de froid.
+
+resource: Détection de la magie | permanent | repérage des auras magiques
+resource: Invisibilité suprême | 1/jour | sur lui-même au premier round ; NLS 15
+resource: Tempête pyroclastique | 1/jour | comme tempête de grêle, en remplaçant les dégâts de froid par des dégâts de feu
+resource: Boule de feu | 3/jour | Réflexes DD 15 pour réduire les dégâts de moitié
+resource: Mur de feu | 3/jour | DD 16 indiqué dans le bloc
+resource: Rayon ardent à incantation rapide | 3/jour | action rapide ; à utiliser en complément des autres pouvoirs
+resource: Rayon ardent | à volonté | version ordinaire en action simple
+
+step: Des intrus sont repérés avant les hostilités
+  do: Observer leur position et les auras visibles grâce à détection de la magie ; repérer les groupes à prendre dans une zone d'effet
+  note: Perception +18 et Psychologie +18 ; aucun pouvoir préparatoire ne remplace l'invisibilité suprême prévue au premier round.
+
+## Ouverture
+
+step: Premier round de combat
+  do: Lancer invisibilité suprême sur lui-même en action simple et prendre de la distance en volant, jusqu'à 12 m avec son action de mouvement
+  note: L'invisibilité suprême lui permet de continuer à attaquer sans redevenir visible ; à ce NLS, elle dure 15 rounds.
+
+step: Dès le premier round, une cible est à portée et un rayon accéléré reste disponible
+  do: Ajouter rayon ardent à incantation rapide en action rapide contre cette cible
+  note: Portée de 18 m ; trois rayons à ce NLS, chacun infligeant 4d6 dégâts de feu sur une attaque de contact à distance réussie. Une seule action rapide par round.
+
+## Rounds suivants
+
+step: Deuxième round, tempête pyroclastique encore disponible
+  do: Lancer tempête pyroclastique sur le plus grand nombre d'adversaires possible, en privilégiant ceux qui sont regroupés
+  note: Conserver les dégâts contondants de tempête de grêle ; seuls ses dégâts de froid deviennent du feu. Ce pouvoir conserve donc une composante utile contre la résistance au feu.
+
+step: Troisième round, après la tempête pyroclastique
+  do: Lancer boule de feu sur le groupe le plus dense, en épargnant d'éventuels alliés
+  note: Réflexes DD 15 ; Bebulec est lui-même immunisé aux dégâts de feu.
+
+step: Quatrième round, après la première boule de feu
+  do: Placer mur de feu pour séparer les adversaires ou barrer leur progression vers lui ; orienter le côté brûlant vers leurs positions
+  note: Exploiter son immunité au feu pour traverser le mur si cela améliore sa position.
+
+step: Un rayon accéléré reste disponible et une cible est à 18 m ou moins
+  do: Ajouter rayon ardent à incantation rapide au pouvoir du round, jusqu'à épuiser les trois utilisations quotidiennes
+  note: Compter aussi l'utilisation éventuelle du premier round ; les rayons ordinaires restent disponibles à volonté une fois les accélérés épuisés.
+
+step: Les adversaires restent sensibles au feu après cette première séquence
+  do: Employer les boules de feu restantes contre les groupes, les murs de feu restants pour gêner les déplacements, et rayon ardent ordinaire contre une cible isolée
+  note: Utiliser le vol pour éviter d'être encerclé et garder une ligne d'attaque ; un rayon ordinaire occupe l'action simple du round.
+
+step: Les adversaires résistent manifestement aux attaques de feu
+  do: Passer au corps à corps ; une fois en position, effectuer une attaque à outrance avec ses deux coups +18, chacun à 1d8+6 plus 1d6 de feu
+  note: Les dégâts physiques restent utiles. Avec son allonge de 3 m et Attaques réflexes, profiter des déplacements qui provoquent des attaques d'opportunité.
+
+## Repli
+
+step: Ses points de vie baissent, même au-dessous de la moitié de ses 136 pv
+  do: Continuer le combat jusqu'à la mort ; changer de position en vol si cela lui permet de poursuivre ses attaques
+  note: Bebulec ne fuit pas et ne fixe aucun seuil de retraite.
+
+step: Bebulec est tué
+  do: Appliquer le développement de l'aventure concernant sa transformation temporaire en esprit mort-vivant
+  note: Le bloc fourni ne donne pas les capacités de cet esprit ; ne pas lui attribuer celles d'un autre mort-vivant.

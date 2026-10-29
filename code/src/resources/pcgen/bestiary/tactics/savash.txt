@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Savash est un brimorak, démon de Petite taille, chaotique mauvais, qui tient sa position et laisse les ennemis venir à lui. Il possède 57 PV, une CA de 18 et une vitesse de 9 m.
+  Épée longue +11/+6 (1d6+3, critique 19–20, plus 1d6 de feu) ; sabot +0 (1d3+1 plus 1d6 de feu). Allonge : 1,50 m.
+  Aura d'haleine de fumée à 1,50 m, DD 17 ; sang bouillant ; arme enflammée.
+  Réduction des dégâts 5/fer froid ou Bien ; immunité au feu et à l'électricité ; résistance à l'acide 10 et au froid 10 ; résistance à la magie 16. Il reste vulnérable au froid.
+
+note: Souffle offensif
+  Les tactiques mentionnent un souffle offensif, mais la fiche fournie n'en indique ni la portée, ni les dégâts, ni le DD, ni la fréquence. Le DD 17 indiqué pour l'aura ne suffit pas à déterminer ces paramètres.
+
+resource: Dissipation de la magie | 3/jour | NLS 6
+resource: Métal brûlant | 3/jour | DD 14, NLS 6
+resource: Flammes | 3/jour | NLS 6 ; ce nombre compte les activations du pouvoir
+resource: Marche dans les airs | 1/jour | NLS 6
+resource: Boule de feu | 1/jour | DD 15, NLS 6
+resource: Téléportation suprême | 1/jour | lui-même et jusqu'à environ 22,7 kg d'objets seulement ; réservée à la fuite
+resource: Convocation | 1/jour | niveau 3 ; un brimorak ; 50 % de réussite
+
+step: Il anticipe le combat et dispose du temps nécessaire
+  do: Tenter de convoquer un brimorak pour renforcer ses subalternes
+  note: La convocation peut échouer ; ne pas compter sur ce renfort avant d'avoir résolu la tentative
+
+step: Le terrain justifie un déplacement dans les airs et il peut se préparer
+  do: Activer marche dans les airs
+  note: Ce pouvoir ne lui donne pas une vitesse de vol inscrite dans son profil ; sa vitesse de déplacement est de 9 m
+
+## Ouverture
+
+step: Les ennemis approchent sans être au contact
+  do: Tenir sa position et employer un pouvoir offensif adapté en attendant leur arrivée
+  note: Choisir une des options suivantes selon la situation ; elles ne constituent pas une séquence à exécuter dans le même round
+
+step: Plusieurs adversaires sont regroupés et à portée
+  do: Lancer boule de feu sur leur groupe, DD 15
+
+step: Des ennemis sont à portée du souffle offensif
+  do: Employer le souffle prévu par ses tactiques, une fois ses paramètres disponibles
+  note: Ne pas inventer ses dégâts ou sa fréquence à partir de l'aura d'haleine de fumée
+
+step: Une cible porte une armure ou un équipement métallique exploitable
+  do: Employer métal brûlant sur cet équipement, DD 14
+
+## Rounds suivants
+
+step: Un adversaire bénéficie d'un effet magique gênant
+  do: Tenter une dissipation de la magie avec un NLS de 6
+
+step: Les ennemis restent à distance et aucun n'est au contact
+  do: Avancer vers le PJ qui semble le plus faible, jusqu'à 9 m avec un déplacement simple ; s'il arrive à portée, effectuer une attaque d'épée longue à +11
+  note: S'il ne peut pas atteindre le contact, employer flammes lorsqu'une cible est à portée du pouvoir, ou continuer à se rapprocher
+
+step: Un ennemi est déjà à portée et Savash peut consacrer son round à attaquer
+  do: Effectuer une attaque à outrance : épée longue +11/+6 et sabot +0
+  note: Ajouter 1d6 de feu à chaque coup réussi ; l'aura d'haleine de fumée couvre les créatures à 1,50 m
+
+step: Un de ses subalternes tue un prisonnier
+  do: Ricaner en poursuivant son combat
+  note: Ce comportement accompagne ses actions ; il ne remplace pas une attaque ou un pouvoir
+
+## Repli
+
+step: Savash est réduit à 10 PV ou moins
+  do: Employer immédiatement téléportation suprême pour fuir vers un lieu connu
+  note: Ses autres ambitions priment sur ce combat ; ce pouvoir n'emporte que lui et les objets autorisés, sans ses subalternes ni un prisonnier

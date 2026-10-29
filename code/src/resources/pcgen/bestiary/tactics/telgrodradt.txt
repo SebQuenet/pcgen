@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Telgrodradt, aberration souterraine de taille G, neutre mauvaise, qui élève des morts-vivants pour s'en nourrir. Vivant malgré son aspect cadavérique : 67 pv, CA 19, contact 11 ; vision dans le noir à 18 m.
+  Deux griffes +10 (1d6+4), allonge 3 m ; morsure +9 (1d8+4 et maladie), allonge 1,50 m. Rayon d'énergie négative +7 au contact à distance (3d6), jusqu'à 18 m.
+  Déplacement 9 m, fouissement 3 m. L'énergie négative le soigne et l'énergie positive le blesse ; son propre rayon ne peut pas le prendre pour cible.
+
+resource: Malédiction de l'eau, détection des morts-vivants | à volonté | pouvoirs magiques, NLS 9
+resource: Obscurité | 3/jour | réduire l'éclairage pour exploiter sa vision dans le noir
+resource: Glas | 3/jour | toucher une créature vivante mourante ; dépend d'un jet de Volonté
+resource: Blessure modérée | 3/jour | 2d8+9 ; sur un ennemi, contact et Volonté DD 14 pour réduire de moitié ; sur lui-même, soins par affinité à l'énergie négative
+resource: Animation des morts | 1/jour | préparer des squelettes ou des zombis à partir de cadavres disponibles
+resource: Profanation | 1/jour | préparer la zone défendue par ses morts-vivants
+resource: Détection de l'invisibilité | 1/jour | repérer les adversaires invisibles
+resource: Silence | 1/jour | émanation de 6 m de rayon, durée 9 rounds
+resource: Rayon d'énergie négative | à volonté | attaque à distance ; peut aussi soigner un mort-vivant ou un autre telgrodradt
+
+step: Il dispose de temps pour préparer son repaire
+  do: Utiliser profanation dans la zone à défendre, puis animation des morts si des cadavres sont disponibles
+  note: Placer les morts-vivants qu'il contrôle devant lui, dans les accès étroits ; donner leurs consignes avant d'utiliser silence. Il ne commande pas automatiquement tous les morts-vivants rencontrés.
+
+step: Des intrus approchent
+  do: Se dissimuler dans les galeries obscures avec Furtivité +10, en gardant une voie de fuite vers un sol meuble
+  note: Perception +10 pour surveiller les accès ; réserver détection de l'invisibilité aux indices d'un adversaire invisible.
+
+## Ouverture
+
+step: Les ennemis avancent derrière leurs combattants
+  do: Rester derrière ses morts-vivants et tirer son rayon sur un adversaire vivant exposé, à 18 m ou moins
+  note: L'attaque vise la CA de contact ; éviter de tirer sur un mort-vivant ennemi, que le rayon soignerait.
+
+step: L'éclairage permet aux intrus de bien le voir
+  do: Utiliser obscurité si la baisse d'éclairage gêne effectivement leurs attaques
+  note: Ce pouvoir n'accorde aucun avantage de vision sur un ennemi qui voit lui aussi dans le noir ; ne pas le dépenser si la lumière reste suffisante.
+
+step: Un lanceur de sorts à composantes verbales devient la menace principale
+  do: Utiliser silence sur lui-même, puis chercher à maintenir le lanceur de sorts dans l'émanation de 6 m
+  note: Centré sur lui-même, silence évite de dépendre d'un jet de sauvegarde adverse. Ses propres pouvoirs magiques n'exigent pas de composantes verbales.
+
+## Rounds suivants
+
+step: Un ennemi se trouve à 3 m, mais hors de portée de morsure
+  do: Porter les deux attaques de griffes s'il peut attaquer à outrance ; après un déplacement ordinaire, ne porter qu'une attaque
+  note: Réflexes de combat autorise jusqu'à trois attaques d'opportunité par round. Employer les griffes contre les déplacements qui en provoquent dans son allonge ; un pas de 1,50 m n'en provoque pas.
+
+step: Un ennemi est à 1,50 m et il peut rester sur place
+  do: Attaque à outrance : deux griffes +10 (1d6+4 chacune), puis morsure +9 (1d8+4 et maladie)
+  note: La morsure transmet une maladie ; ne pas lui attribuer de pénalité immédiate supplémentaire pendant le combat.
+
+step: Un adversaire est facile à toucher
+  do: Activer Attaque en puissance pour privilégier les dégâts
+  note: Griffes +8 (1d6+8 chacune) et morsure +7 (1d8+8 et maladie) ; revenir aux valeurs normales si les attaques manquent trop souvent.
+
+step: La mêlée est défavorable ou une cible vivante reste hors d'allonge
+  do: Se replacer derrière ses défenseurs et continuer les rayons d'énergie négative
+  note: Combat en aveugle permet de relancer l'échec dû au camouflage en mêlée ; il ne fiabilise pas les rayons.
+
+step: Il est blessé et peut consacrer une action aux soins
+  do: Utiliser blessure modérée sur lui-même pour récupérer 2d8+9 pv
+  note: Préférer un emplacement hors d'allonge adverse pour utiliser ce pouvoir magique. En présence d'un autre telgrodradt, celui-ci peut également le soigner avec son rayon.
+
+step: Un défenseur mort-vivant contrôlé risque de tomber et protège encore un accès crucial
+  do: Employer le rayon pour le soigner plutôt que pour attaquer
+  note: Conserver cette protection permet de continuer à combattre à distance.
+
+step: Une créature vivante mourante est accessible sans s'exposer
+  do: Utiliser glas si le bénéfice attendu justifie d'abandonner les attaques de ce round
+  note: Garder la priorité aux ennemis encore capables d'agir ; glas exige le contact et peut être annulé par un jet de Volonté.
+
+## Repli
+
+step: Ses points de vie tombent à 20 ou moins, ou ses défenseurs ne retiennent plus les intrus
+  do: Se dégager derrière les morts-vivants qu'il contrôle, puis fuir par une galerie ou fouir dans un sol meuble à 3 m par déplacement
+  note: Son fouissement ne lui permet pas de traverser la roche ; il ne possède pas de perception des vibrations pour suivre les intrus à travers le sol.
+
+step: Il a atteint un abri hors d'atteinte
+  do: Dépenser les utilisations restantes de blessure modérée pour se soigner, ou rechercher les rayons d'un congénère
+  note: Ne jamais utiliser son propre rayon sur lui-même.

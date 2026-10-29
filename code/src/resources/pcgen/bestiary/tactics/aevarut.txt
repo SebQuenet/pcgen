@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Aevarut, appelé Vector dans ce scénario : extérieur inéluctable loyal neutre de taille G, FP 17, rang mythique 7. Il neutralise les adversaires par le temps et frappe les menaces prioritaires.
+  278 pv ; CA 33, contact 21 ; initiative +15. Deux coups +26, chacun infligeant 2d6+9 et l'effacement temporel ; allonge de 1,50 m malgré une occupation de 3 m.
+  Déplacement et escalade à 12 m ; aura des ravages du temps à 9 m, DD 26. Flou et vision lucide permanents ; vision dans le noir à 18 m.
+  RD 10/chaotique et épique ; résistance à la magie 31 ; régénération interrompue par le chaos ou l'horacalcum. Aucun montant de régénération n'est indiqué.
+
+resource: Pouvoir mythique | 7/jour | anomalie temporelle, correction, slipstream : 1 point chacun
+resource: Liberté de mouvement | 3/jour | une utilisation sur lui avant le combat
+resource: Rapidité | 3/jour | une utilisation sur lui et ses alliés avant le combat
+resource: Lenteur accélérée | 3/jour | Volonté DD 20 ; action rapide
+resource: Changement de plan | 3/jour | DD 24
+resource: Portail | 1/semaine | utilisé pour rejoindre la forge de Kandirion
+resource: Stase temporelle | 1/semaine | attaque de contact ; Vigueur DD 25
+resource: Téléportation suprême, localisation de créature, localisation d'objet, vision | à volonté | reconnaissance et repositionnement
+resource: Localisation suprême | 1/semaine | recherche d'une cible
+
+step: Avant de rencontrer les PJ
+  do: Utiliser vision sur chacun d'eux pour se renseigner.
+  do: Dépenser 1 point mythique pour créer, par anomalie temporelle, le simulacre de Sorrina Westyr qui tente de les détourner de leur mission.
+
+step: Après cette conversation, avant son arrivée
+  do: Lancer liberté de mouvement sur lui, rapidité sur lui et ses alliés, puis portail vers la forge de Kandirion.
+  note: Décompter ces utilisations ; appliquer les bonus de rapidité aux valeurs de base du profil.
+
+## Ouverture
+
+step: Premier round
+  do: Lancer lenteur accélérée sur les adversaires prioritaires, puis correction sur le plus lourdement cuirassé.
+  note: Correction : action de mouvement, portée 30 m, 1 point mythique ; Volonté DD 26 ou chancelant jusqu'à la fin du prochain tour de la cible. Vector gagne une action simple ou de mouvement au round suivant.
+  do: Employer l'action simple restante pour frapper un ennemi à portée ou avancer vers une menace prioritaire.
+  note: Lenteur accélérée et slipstream utilisent chacun l'action rapide ; les réserver à des rounds différents.
+
+## Rounds suivants
+
+step: Un lanceur de sorts dangereux est éloigné
+  do: Utiliser slipstream pour apparaître à son contact, puis attaquer à outrance si les actions disponibles le permettent.
+  note: Slipstream : action rapide, 1 point mythique, déplacement jusqu'à 15 m.
+
+step: La menace principale est au contact
+  do: Attaquer à outrance avec les deux coups ; ajouter le coup supplémentaire de rapidité tant qu'elle agit.
+  note: Effacement après dégâts : Volonté DD 26 ou disparition pendant 1d4 rounds ; retour au même endroit ou à la place libre la plus proche. Réussite : immunité à cet effacement pendant 24 heures.
+  do: Si la cible disparaît, diriger les attaques restantes vers un autre ennemi à portée.
+
+step: Des créatures vivantes commencent leur tour à 9 m ou moins
+  do: Appliquer les ravages du temps.
+  note: Vigueur DD 26 ou épuisement jusqu'à la sortie de l'aura ; réussite : immunité à cette aura pendant 24 heures.
+
+step: Il faut se déplacer sans pouvoir attaquer à outrance
+  do: Avancer puis porter un coup avec Science de la frappe décisive et Frappe décisive mythique ; employer Attaque éclair si un passage permet de frapper puis de se dégager.
+  note: Ne pas combiner Frappe décisive avec Attaque éclair ou une attaque à outrance.
+
+step: Un adversaire doit être neutralisé durablement
+  do: Tenter stase temporelle par contact si son utilisation hebdomadaire reste disponible.
+  note: Vigueur DD 25 ; privilégier une cible difficile à éliminer par les coups.
+
+## Repli
+
+step: Un porteur d'horacalcum menace de l'abattre
+  do: S'écarter par slipstream si l'action rapide et un point mythique restent disponibles, puis utiliser téléportation suprême vers un lieu connu.
+  note: L'horacalcum contourne sa RD et sa régénération ; ses menaces de critique sont automatiquement confirmées.
+
+step: Le combat devient intenable
+  do: Employer téléportation suprême, ou changement de plan si une fuite extraplanaire est nécessaire.
+  note: Aucun seuil de pv de repli n'est donné ; décider selon les menaces et les ressources restantes.

@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Excavateur mécanique de taille TG, FP 10, créature artificielle neutre sans intelligence ; il applique ses consignes sans initiative tactique personnelle.
+  111 points de vie ; CA 23 ; réduction des dégâts 10/adamantium ; immunité à l'acide, au feu et immunités des créatures artificielles ; vulnérabilité à l'électricité.
+  Deux coups +21 (1d8+10 et agrippement), foreuse +21 (2d6+10). Espace et allonge : 4,50 m ; déplacement au sol : 6 m ; creusement : 3 m.
+
+step: Placement avant l'arrivée des intrus
+  do: Le placer sur le passage ou dans la zone qu'il doit défendre, selon ses consignes.
+  note: Vision dans le noir à 18 m, vision nocturne et sens du métal à 36 m ; Perception +0. Le sens du métal ne doit pas être traité comme une détection universelle des ennemis.
+
+step: Un opérateur prépare la machine
+  do: Vérifier son remontage et fixer des consignes simples, notamment les cibles autorisées et les conditions d'arrêt ou de retour.
+  note: Aucun pouvoir à distance ni attaque de zone ne figure dans son profil.
+
+## Ouverture
+
+step: Une cible autorisée se trouve à 4,50 m ou moins
+  do: Effectuer une attaque à outrance : deux coups +21 (1d8+10 chacun), puis foreuse +21 (2d6+10).
+  note: Sur un coup réussi, tenter l'agrippement si la taille de la cible le permet ; la foreuse ne donne pas d'agrippement.
+
+step: La cible est hors d'allonge mais accessible au sol
+  do: Avancer de 6 m au maximum, puis porter un coup +21 si la cible est désormais à portée ; tenter l'agrippement en cas de réussite.
+  note: Après ce déplacement, il ne dispose que d'une attaque simple. Si la cible reste trop loin, poursuivre selon les consignes.
+
+step: Le trajet imposé nécessite de creuser
+  do: Progresser à 3 m par action de mouvement dans un terrain permettant le creusement.
+  note: Le profil ne précise pas qu'il traverse la roche ni qu'il laisse une galerie praticable derrière lui.
+
+## Rounds suivants
+
+step: Une cible reste à portée et aucune lutte n'est maintenue
+  do: Répéter l'attaque à outrance, en concentrant les trois attaques sur la cible désignée par les consignes.
+  note: Son allonge permet de frapper à 4,50 m sans devoir avancer jusqu'au contact immédiat.
+
+step: Une cible est agrippée et la consigne impose de la retenir
+  do: Consacrer l'action simple au maintien de la lutte ; en cas de réussite, lui infliger les dégâts d'un coup, soit 1d8+10.
+  note: Le maintien de la lutte remplace l'attaque à outrance de ce round ; ne pas ajouter gratuitement les deux coups et la foreuse.
+
+step: La consigne privilégie les dégâts et la cible agrippée reste à portée
+  do: Relâcher la prise par une action libre, puis effectuer l'attaque à outrance.
+  note: Un nouveau coup réussi peut permettre un nouvel agrippement.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup +21 (1d8+10 et agrippement).
+  note: Une seule attaque d'opportunité par round ; ses réactions rapides ne lui accordent pas d'attaques supplémentaires.
+
+## Repli
+
+step: Aucun ordre de retrait ou d'arrêt ne s'applique
+  do: Continuer à exécuter sa consigne jusqu'à sa destruction à 0 point de vie.
+  note: Aucun seuil de fuite fondé sur ses 111 points de vie ; sa vulnérabilité à l'électricité ne lui donne pas spontanément la capacité d'adapter sa tactique.
+
+step: Une consigne de retour ou de retrait s'applique
+  do: Relâcher toute prise et rejoindre le point prévu à 6 m par action de mouvement au sol, ou à 3 m en creusant si le terrain le permet.

@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Stinkeye est un jeune basilic de taille P, une créature magique neutre au comportement instinctif (Intelligence 2).
+  Morsure +7 (1d6+1), allonge de 1,50 m ; déplacement de 6 m ; 27 pv ; CA 16, contact 12, pris au dépourvu 15.
+  Perception +10, Discrétion +10 ; vision dans le noir à 18 m et vision nocturne. Combat en aveugle l'aide à mordre les adversaires dissimulés.
+
+step: Des intrus approchent sans l'avoir repéré et un couvert est disponible
+  do: Rester dissimulé derrière le couvert avec Discrétion +10 et attendre qu'une proie s'approche.
+  note: Son intelligence limitée favorise une embuscade simple et l'attaque de la cible accessible la plus proche.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m
+  do: Le mordre à +7, pour 1d6+1 dégâts.
+
+step: Un adversaire peut être atteint après un déplacement de 6 m au maximum
+  do: Avancer jusqu'à 1,50 m de lui, puis le mordre à +7, pour 1d6+1 dégâts.
+
+step: Aucun adversaire ne peut être atteint après un déplacement simple
+  do: Se rapprocher de la cible accessible la plus proche avec un double déplacement de 12 m au maximum.
+  note: Ce double déplacement ne laisse pas d'action pour mordre pendant ce tour.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter la morsure +7 (1d6+1) chaque round contre cette cible.
+
+step: La cible tombe ou s'éloigne
+  do: Se tourner vers l'adversaire accessible le plus proche ; avancer de 6 m au maximum et mordre si la cible est alors à 1,50 m.
+  note: Si un double déplacement est nécessaire, consacrer le tour à l'approche.
+
+step: Une morsure échoue à cause du camouflage de la cible
+  do: Utiliser Combat en aveugle pour relancer une fois le jet de chance d'échec dû au camouflage.
+  note: Conserver le résultat du second jet.
+
+## Repli
+
+step: Points de vie sous 7 et issue accessible
+  do: Utiliser l'action de retraite pour s'éloigner de 12 m au maximum vers un abri.
+
+step: Hors de vue des poursuivants et couvert disponible
+  do: Se dissimuler avec Discrétion +10.
+
+step: Fuite impossible
+  do: Continuer à mordre l'adversaire le plus proche à +7, pour 1d6+1 dégâts.

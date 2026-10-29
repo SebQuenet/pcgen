@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Svennarobeth est un eidolon quadrupède mâle, chaotique mauvais, de taille M, doté de six pattes. Il a 94 points de vie, une CA de 25 et une allonge de 1,50 m.
+  Morsure +14 (1d8+5 plus 1d6 de froid), coup de corne +14 (1d6+5 plus 1d6 de froid), 2 sabots +12 (1d4+2 plus 1d6 de froid).
+  Déplacement au sol et vol à 15 m, avec une bonne manœuvrabilité ; vision dans le noir à 18 m.
+
+step: Sa maîtresse lui donne des ordres
+  do: Les suivre à la lettre, y compris pour choisir ses cibles et sa position
+
+step: Il peut attendre à couvert avant l'affrontement
+  do: Se dissimuler et surveiller les approches
+  note: Discrétion +16, Perception +12 ; ne pas compter sur le vol pour rester dissimulé à découvert
+
+## Ouverture
+
+step: Il doit choisir sa cible sans instruction
+  do: Privilégier un adorateur clairement identifiable d'une divinité bonne
+  note: Il ne possède aucun pouvoir de détection des alignements
+
+step: La cible est hors de son allonge mais accessible avec un déplacement
+  do: Avancer ou voler jusqu'au contact, puis porter une morsure avec Attaque en puissance
+  note: Morsure +11, dégâts 1d8+11 plus 1d6 de froid ; après un déplacement normal, il ne porte pas son attaque à outrance
+
+step: La cible est déjà à portée au début de son tour
+  do: Porter une attaque à outrance avec Attaque en puissance
+  note: Morsure +11 (1d8+11 plus 1d6 de froid), corne +11 (1d6+11 plus 1d6 de froid), 2 sabots +9 (1d4+5 plus 1d6 de froid)
+
+## Rounds suivants
+
+step: Il peut rester au contact, éventuellement après un pas de 1,50 m
+  do: Répéter l'attaque à outrance contre la cible désignée ou l'adorateur choisi
+  note: Chaque attaque qui touche inflige son propre supplément de 1d6 de froid
+
+step: Un round entier s'est écoulé sans qu'il touche son adversaire
+  do: Abandonner Attaque en puissance contre cet adversaire pour les attaques suivantes
+  note: Reprendre les valeurs normales : morsure et corne +14, sabots +12 ; dégâts respectifs 1d8+5, 1d6+5 et 1d4+2, chacun plus 1d6 de froid
+
+step: La cible s'éloigne et reste accessible
+  do: La poursuivre au sol ou en vol, puis mordre si une attaque reste possible
+  note: Utiliser le vol pour franchir les obstacles ; Vol +20. Sans déplacement supplémentaire au-delà d'un pas de 1,50 m, conserver l'attaque à outrance
+
+## Repli
+
+step: Ses points de vie diminuent, même jusqu'à un niveau critique
+  do: Continuer le combat jusqu'à la mort
+  note: Svennarobeth ne prend pas la fuite de sa propre initiative ; il suit néanmoins à la lettre les ordres de sa maîtresse

@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Blighted Quintal, esprit putréfié mort-vivant intangible de taille M, loyal mauvais, FP 9 ; 67 pv, CA 19, contact 19. Son intelligence limitée favorise le harcèlement et l'acharnement sur une victime.
+  Toucher intangible +11 à 1,50 m : 1d4 points de dégâts de Constitution, plus bave. Vol à 12 m, manœuvrabilité bonne ; initiative +9. Puanteur dans un rayon de 9 m, DD 17, durée 10 rounds.
+  Intangibilité, réduction des dégâts 5/chaotique, résistances à l'acide, au froid et au feu de 10, résistance à la magie 14 ; immunités des morts-vivants et résistance à la canalisation +2.
+
+step: Des intrus approchent
+  do: Attendre à couvert près d'un passage, avec Discrétion +17, puis observer les cibles grâce à la vision dans le noir à 18 m et à Perception +13.
+  note: Rester à plus de 9 m des intrus pendant l'approche discrète : la puanteur peut révéler sa proximité.
+
+## Ouverture
+
+step: Des créatures vivantes entrent dans un rayon de 9 m
+  do: Appliquer automatiquement la puanteur : Vigueur DD 17 ou état fiévreux pendant 10 rounds.
+  note: Cette aura ne consomme aucune action ; une sauvegarde réussie protège de sa puanteur pendant 24 heures.
+
+step: Une victime vivante est accessible en vol
+  do: Utiliser Attaque au passage pour s'approcher, porter un toucher intangible +11, puis poursuivre le déplacement vers une position moins exposée.
+  note: Le trajet total avant et après l'attaque reste limité à 12 m. Privilégier une victime isolée ou déjà affaiblie ; chaque toucher inflige 1d4 points de dégâts de Constitution et la bave.
+
+## Rounds suivants
+
+step: La victime reste accessible
+  do: Répéter les passages sur elle pour cumuler les dégâts de Constitution ; terminer si possible à plus de 1,50 m des combattants adverses.
+  note: Attaque au passage permet une seule attaque pendant le déplacement. Mobilité apporte +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements.
+
+step: Des adversaires se regroupent autour de lui
+  do: Se dégager en volant, en traversant une cloison mince si le terrain le permet, puis revenir sur un adversaire isolé.
+  note: Exploiter l'intangibilité pour choisir les angles d'approche ; conserver autant d'ennemis que possible dans les 9 m de la puanteur lorsque cela ne l'expose pas à leurs attaques.
+
+resource: Attaques d'opportunité | 6 par round | Réflexes de combat et Dextérité 20 ; toucher intangible +11, portée 1,50 m, uniquement lorsqu'un adversaire provoque une attaque.
+
+step: Une cible résiste à la puanteur
+  do: Continuer à l'attaquer au toucher si elle reste la victime la plus vulnérable.
+  note: Le toucher inflige directement des dégâts de Constitution ; la tactique ne dépend pas de l'échec à la sauvegarde contre la puanteur.
+
+## Repli
+
+step: À 20 pv ou moins, si les ennemis continuent à le blesser efficacement
+  do: Rompre le contact, traverser une cloison mince et s'éloigner en volant à 12 m par déplacement ; utiliser le couvert pour se dissimuler à nouveau.
+  note: Ce seuil est un choix tactique pour préserver ses 67 pv initiaux. Reprendre le harcèlement seulement si une victime s'isole.

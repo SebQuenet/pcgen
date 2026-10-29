@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Rezlarabren est une dragonne de saumure adulte, de taille G, loyale neutre et intelligente. Elle protège le secret de son repaire et voue une haine particulière aux Vikings des Terres des Rois des Linnorms.
+  147 pv ; CA 27 ; réduction des dégâts 5/magie ; résistance à la magie 22 ; immunité à l'acide, à la paralysie et au sommeil.
+  Morsure +23 (2d6+15), deux griffes +23 (1d8+10 chacune), queue +18 (1d8+15), deux ailes +18 (1d6+5 chacune). Allonge de 3 m avec la morsure, de 1,50 m avec les autres attaques.
+  Déplacement au sol et nage à 18 m ; vol à 60 m, manœuvrabilité médiocre ; Vol stationnaire ; respiration aquatique. Présence terrifiante à 54 m, Volonté DD 20.
+
+resource: Sorts de niveau 3 | 5/jour au total | sphère aqueuse (DD 16), tempête de neige ; niveau de lanceur 7
+resource: Sorts de niveau 2 | 7/jour au total | invisibilité, modification d'apparence, courant de glissement ; réserve commune à ces trois sorts
+resource: Sorts de niveau 1 | 7/jour au total | notamment rayon affaiblissant (DD 14) ; réserve commune à tous ses sorts de niveau 1
+resource: Pouvoirs magiques | à volonté | contrôle de l'eau, brume de dissimulation, communication avec les animaux (poissons uniquement), respiration aquatique ; niveau de lanceur 14
+
+step: Aucun combat n'est encore engagé
+  do: Patrouiller aux abords du repaire pour intercepter les intrus avant qu'ils n'en découvrent l'emplacement
+  note: Perception +20 et Psychologie +20 ; elle cherche à repérer les menaces et leurs intentions avant de se montrer
+
+step: Un navire viking ou un tueur de dragons est repéré
+  do: Lancer invisibilité et approcher sans se faire voir
+  note: Choisir un angle permettant d'isoler une cible et conserver un accès dégagé au ciel ou à l'eau
+
+## Ouverture
+
+step: Une cible peut être séparée de ses alliés
+  do: Lancer sphère aqueuse sur elle, DD 16, pour entraver sa mobilité et désorganiser le groupe
+  note: Les lancements suivants de sorts de niveau 3 puisent dans les mêmes 5 utilisations quotidiennes
+
+step: Les soutiens ennemis peuvent être coupés du combattant de tête
+  do: Lancer tempête de neige sur les soutiens pour gêner leur progression et leur visibilité
+  note: Choisir ensuite une victime accessible hors de la zone ; consacrer un round distinct à chaque sort
+
+step: Elle porte sa première attaque
+  do: Déclencher sa présence terrifiante, Volonté DD 20 dans un rayon de 54 m, et concentrer ses attaques sur une seule victime
+  note: Elle préfère combattre en vol stationnaire ; elle se pose sur le pont d'un navire si cela lui permet d'abattre sa cible plus vite
+
+## Rounds suivants
+
+step: Sa victime est à portée et elle peut rester sur place
+  do: Effectuer une attaque à outrance : morsure +23 (2d6+15), deux griffes +23 (1d8+10), queue +18 (1d8+15), deux ailes +18 (1d6+5)
+  note: Rester sur la même cible jusqu'à sa mort, puis passer à la suivante ; toutes les attaques exigent leur allonge respective
+
+step: Elle doit se déplacer pour atteindre sa victime
+  do: Se déplacer puis porter une morsure avec Science de la frappe décisive : +23, 6d6+15 dégâts
+  note: Cette attaque unique utilise une action simple et remplace l'attaque à outrance ; seuls les dés de dégâts de l'arme sont triplés
+
+step: La cible est facile à toucher et doit être achevée rapidement
+  do: Utiliser Attaque en puissance pour augmenter les dégâts au prix de la précision
+  note: Privilégier ses attaques ordinaires contre une défense élevée
+
+step: Plusieurs ennemis l'encerclent
+  do: Rompre l'encerclement par un bref recul, en profitant de sa position en vol stationnaire, puis reprendre l'assaut contre une cible isolée
+  note: Employer un pas de placement de 1,50 m s'il suffit ; sinon se désengager pour éviter les attaques d'opportunité
+
+step: Elle ne peut pas atteindre le combattant dangereux ce round
+  do: Envisager un rayon affaiblissant pour réduire sa force avant de reprendre la mêlée
+  note: Attaque de contact à distance ; Vigueur DD 14 pour réduire l'effet ; décompter un sort de niveau 1
+
+## Repli
+
+step: 73 pv ou moins, sans Vikings des Terres des Rois des Linnorms parmi ses adversaires
+  do: Rompre le combat et regagner son repaire en volant à 60 m ou en nageant à 18 m par déplacement
+  note: Utiliser invisibilité s'il reste un sort de niveau 2, ou brume de dissimulation à volonté, pour couvrir la fuite ; sa respiration aquatique permet un repli prolongé sous l'eau
+
+step: Elle combat des Vikings des Terres des Rois des Linnorms
+  do: Continuer à combattre avec une fureur croissante, jusqu'à la mort si nécessaire
+  note: Chaque blessure attise sa rage ; le seuil de repli à 73 pv ne s'applique pas dans ce cas

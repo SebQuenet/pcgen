@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Crusher, géant des cavernes de taille G, chaotique mauvais, FP 6 : une brute maltraitée, conduite par ses dresseurs orcs. Il ne connaît que la douleur et combat jusqu'à la mort.
+  76 PV ; CA 18, contact 9 ; déplacement 9 m ; espace occupé 3 m ; allonge 3 m, ou 6 m avec ses chaînes.
+  Attaque à outrance : 2 coups +12 (1d8+6), ou 2 chaînes avec orcs +9/+4 (2d6+6), ou 2 chaînes sans orcs +11/+6 (1d8+6). Rocher +6 (1d8+6).
+  Vision dans le noir à 36 m, vision nocturne ; Perception +6. Il parle l'orc.
+
+note: Dresseurs
+  Quatre orcs l'encadrent. Ceux des bras utilisent une action de mouvement pour le suivre et une action simple pour diriger ses attaques.
+
+step: Il peut choisir son emplacement
+  do: Rester dans la pénombre et attendre les ordres des orcs
+  note: La lumière vive l'éblouit : -1 aux attaques et aux tests de Perception visuels.
+
+## Ouverture
+
+step: Au début de chaque tour, hors colère, fatigue ou épuisement
+  do: Faire un jet de Volonté DD 14 : +3, avec +2 par dresseur conscient encore attaché, jusqu'à +8 supplémentaires
+  note: Échec : 4 rounds de colère et confusion ; +2 Force et Constitution, +9 PV, +1 Volonté, -2 CA. Il ignore les dresseurs.
+
+step: Il reste dirigé et un ennemi est à 3 m ou moins
+  do: Porter ses deux coups +12 (1d8+6 chacun) en attaque à outrance, sur la cible indiquée par les orcs
+
+step: Il reste dirigé et doit avancer pour atteindre sa cible
+  do: Avancer jusqu'à 9 m, puis porter un seul coup avec Frappe décisive : +12 (2d8+6)
+  note: Frappe décisive accompagne une action d'attaque simple ; elle ne s'ajoute pas à une attaque à outrance.
+
+## Rounds suivants
+
+step: Il est en colère
+  do: Appliquer la confusion chaque round ; ses attaques se font aux chaînes, à 6 m
+  note: En colère : +1 aux attaques et dégâts de mêlée par rapport au profil.
+
+step: Il attaque avec des orcs encore attachés aux poignets
+  do: Utiliser les chaînes avec orcs : +9/+4 (2d6+6), avant les modificateurs de colère
+  note: L'orc subit les mêmes dégâts que la cible. Son cadavre tombe après 1 round ; utiliser ensuite les valeurs sans orc.
+
+step: Il peut agir et ses chaînes n'ont plus d'orcs attachés
+  do: Utiliser les chaînes sans orcs : +11/+6 (1d8+6), avant les modificateurs de colère
+
+step: Sans ordres et hors colère
+  do: Rester inactif jusqu'au déclenchement de son tempérament violent
+
+step: Il est libre d'agir et deux ennemis sont adjacents entre eux, dans son allonge, après son déplacement
+  do: Utiliser Enchaînement : une attaque, puis une seconde contre l'autre ennemi si la première touche
+  note: Sa CA baisse de 2 jusqu'à son prochain tour. Ne pas combiner avec Frappe décisive.
+
+step: Il est libre d'agir et veut briser une arme ou un bouclier à portée
+  do: Remplacer une attaque de mêlée par une destruction : BMO +15 contre le DMD adverse
+  note: Science de la destruction évite l'attaque d'opportunité de la cible ; appliquer la solidité de l'objet aux dégâts.
+
+step: Il reste dirigé, aucun adversaire n'est accessible en mêlée et un rocher est disponible
+  do: Lancer le rocher +6 (1d8+6)
+
+step: Fin des 4 rounds de colère
+  do: Retirer les bonus, dont les 9 PV ; appliquer 4 rounds de fatigue, sans nouvelle colère possible
+
+## Repli
+
+step: Ses blessures s'accumulent
+  do: Continuer à combattre jusqu'à la mort, sans chercher à fuir
+
+step: Ses PV passent sous 0 et il vit encore
+  do: Appliquer la férocité : rester conscient et combattre en étant chancelant, avec une seule action simple ou de mouvement par tour
+  note: Il perd 1 PV par round. Une attaque à outrance devient impossible.

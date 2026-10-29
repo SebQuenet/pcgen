@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Living Doldrums, extérieur élémentaire de l'Air gigantesque, neutre mauvais : un prédateur gazeux et invisible qui retourne ses victimes les unes contre les autres.
+  162 points de vie, CA 8 ; vol parfait à 18 m ; espace et allonge de 6 m. Attaque à outrance : 2 contacts hypoxiques +9 au contact, chacun infligeant 6d6 et un ralentissement.
+  RD 10/magie ; immunité à l'acide et traits des élémentaires ; résistance de 10 au froid, à l'électricité et au feu. Vulnérable aux dégâts sonores et aux vents magiques.
+
+note: Air immobile et invisibilité
+  Son aura de 72 m détourne les vents naturels et réduit d'une catégorie la manœuvrabilité des créatures ailées, gazeuses et des élémentaires de l'Air, sauf les Living Doldrums. Elle n'arrête pas les vents magiques.
+  Son invisibilité naturelle persiste pendant ses attaques ; elle ne procure que 20 % de chances de rater contre les adversaires qui ne voient pas l'invisible.
+
+resource: Détection de pensées | à volonté | Volonté DD 19 ; concentration, cône de 18 m
+resource: Désespoir foudroyant | 3/jour | action simple ; Volonté DD 21 ; cône de 9 m
+resource: Ordre assassin rapide | 3/jour | action rapide ; Volonté DD 18 ; portée 16,50 m
+resource: Ennui oppressant rapide | 3/jour | action rapide ; Volonté DD 19 ; portée 16,50 m
+resource: Paranoïa rapide | 3/jour | action rapide ; Volonté DD 19 ; portée 16,50 m
+resource: Pulsion de jalousie | 1/jour | action simple ; Volonté DD 23 ; portée 69 m
+resource: Esprit malveillant | 1/jour | action simple ; Volonté DD 21 ; portée 16,50 m ; discorde durable et indirecte
+resource: Chant de discorde | 1/jour | action simple ; Volonté DD 22 ; portée 69 m ; rayon de 6 m
+
+step: Des voyageurs approchent sans l'avoir repéré
+  do: Attendre invisible près de leur route ou au-dessus de leur navire ; laisser l'aura priver les voiles du vent naturel.
+  do: Observer avec Perception +27 et sonder les pensées avant de passer à l'attaque.
+  note: La lecture des pensées superficielles demande trois rounds d'étude ; elle ne révèle pas automatiquement les capacités d'un adversaire.
+
+step: Il peut tourmenter une victime avant le combat
+  do: Esprit malveillant sur elle, en désignant un compagnon comme objet de sa haine.
+  note: Ce pouvoir suscite des nuisances subtiles sur la durée ; il ne commande pas une attaque immédiate.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans un cône de 9 m
+  do: Désespoir foudroyant, puis ennui oppressant rapide sur un lanceur de sorts susceptible d'employer des vents magiques ou des attaques sonores.
+  note: Le désespoir impose notamment -2 aux jets de sauvegarde ; l'appliquer avant le pouvoir rapide favorise ce dernier. Rester si possible hors de portée des armes adverses.
+
+step: Sinon, plusieurs ennemis sont regroupés à distance
+  do: Chant de discorde sur le groupe, en restant à l'extérieur de la zone.
+  note: Chaque victime ayant raté Volonté DD 22 a, chaque round pendant 13 rounds, 50 % de chances d'attaquer la créature la plus proche ; les autres rounds, elle agit normalement.
+
+## Rounds suivants
+
+note: Rythme des actions
+  Choisir une action principale ci-dessous et, si utile, un seul pouvoir rapide par round. Les trois pouvoirs rapides ont chacun leur réserve de 3 utilisations par jour.
+  Exploiter l'allonge de 6 m et l'invisibilité pour limiter les ripostes ; sa CA 8 rend les échanges prolongés dangereux.
+
+step: Un combattant a pour allié le plus proche un lanceur de sorts dangereux
+  do: Ordre assassin rapide sur ce combattant.
+  note: S'il rate Volonté DD 18, il attaque cet allié en mêlée à son prochain tour, ou s'en rapproche s'il ne peut pas l'atteindre. Le monstre ne choisit pas librement la victime de l'ordre.
+
+step: Un adversaire dangereux peut encore agir librement
+  do: Ennui oppressant rapide pour lui faire perdre son tour, ou paranoïa rapide s'il est entouré d'au moins deux créatures adjacentes.
+  note: L'ennui cesse dès que la cible réussit son jet de Volonté. La paranoïa lui fait traiter tout le monde en ennemi et lui impose alors -2 notamment aux attaques et sauvegardes ; elle ne lui ordonne pas automatiquement d'attaquer ses alliés.
+
+step: Plusieurs adversaires ont résisté au chant ou restent coordonnés
+  do: Pulsion de jalousie sur eux pour leur faire désarmer ou dépouiller la créature la plus proche.
+  note: Jusqu'à 13 cibles, aucune à plus de 9 m d'une autre ; Volonté DD 23 annule, puis nouveau jet chaque round pour se libérer. Rester à distance pour que leurs compagnons soient les plus proches.
+
+step: Une cible qui respire est à 6 m ou moins et le monstre peut rester sur place
+  do: Attaque à outrance : 2 contacts hypoxiques +9 au contact, chacun pour 6d6 et ralentissement ; concentrer les attaques sur un adversaire encore actif.
+  note: S'il doit d'abord voler pour atteindre sa cible, ne porter qu'un contact avec son action simple. Les créatures qui ne respirent pas sont immunisées à ces contacts.
+
+step: Les ennemis se battent déjà entre eux
+  do: Rester invisible en retrait, changer de position en volant et laisser leurs attaques les affaiblir.
+  note: Réserver les contacts aux victimes isolées ; rester loin des créatures affectées par le chant évite de devenir leur cible la plus proche.
+
+## Repli
+
+step: Points de vie sous 40, ou vents magiques et attaques sonores menacent de l'abattre
+  do: Quitter immédiatement les zones de vent magique ; utiliser si nécessaire ennui oppressant rapide sur le poursuivant le plus dangereux, puis fuir en vol.
+  note: Un déplacement couvre 18 m ; consacrer les actions de mouvement et simple à la fuite permet de parcourir 36 m.
+
+step: Une ouverture étroite permet de semer les poursuivants
+  do: Passer sous forme gazeuse à travers une fissure ou un petit interstice et poursuivre la fuite invisible.
+  note: Son corps gazeux peut franchir ces passages, mais ne peut entrer dans l'eau ni dans un autre liquide ; fuir au-dessus de la mer, sans plonger.

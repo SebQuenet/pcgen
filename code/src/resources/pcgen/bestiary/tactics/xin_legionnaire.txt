@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Légionnaire de Xin, soldat mécanique de taille M gravé de runes, neutre et dépourvu d'intelligence ; FP 10, 97 pv, CA 22.
+  Grande hache +1 : +24/+19/+14 en attaque à outrance, 1d12+14 dégâts par coup, critique x3. Frappe décisive : une attaque à +24 infligeant 2d12+14 dégâts.
+  Déplacement 9 m ; allonge 1,50 m ; vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+note: Défenses
+  Rune de protection ; le bonus de bouclier de +4 est déjà inclus dans la CA 22. Réduction des dégâts 5/adamantium, immunités des créatures artificielles et immunité au feu.
+  Vulnérabilité à l'électricité : les dégâts d'électricité subis augmentent de 50 %.
+
+## Ouverture
+
+step: Un ennemi est déjà à portée, éventuellement après un pas de 1,50 m
+  do: Effectuer une attaque à outrance contre l'adversaire le plus proche, +24/+19/+14, pour 1d12+14 dégâts par coup, critique x3.
+
+step: L'ennemi le plus proche exige un déplacement de 9 m au maximum pour être à portée
+  do: Avancer jusqu'à 1,50 m de lui, puis porter une Frappe décisive à la grande hache, +24, pour 2d12+14 dégâts.
+  note: Il se concentre sur l'adversaire le plus proche, sans sélectionner les lanceurs de sorts ou les cibles blessées.
+
+step: L'ennemi le plus proche exige un déplacement plus long et une charge est possible
+  do: Charger sur 18 m au maximum et porter une attaque à +26, pour 1d12+14 dégâts, critique x3.
+  note: La charge réduit sa CA à 20 jusqu'au début de son prochain tour. Frappe décisive ne s'applique pas à une charge.
+
+step: Aucun ennemi n'est accessible ce round et la charge est impossible
+  do: Effectuer un double déplacement, jusqu'à 18 m, vers l'adversaire le plus proche.
+
+## Rounds suivants
+
+step: Un ennemi est à portée, éventuellement après un pas de 1,50 m
+  do: Effectuer une attaque à outrance à la grande hache, +24/+19/+14, pour 1d12+14 dégâts par coup, critique x3.
+  note: Commencer par la cible la plus proche ; si elle tombe, consacrer les attaques restantes à un autre ennemi à portée.
+
+step: Il doit se déplacer pour atteindre l'ennemi le plus proche
+  do: Avancer de 9 m au maximum et porter une Frappe décisive à +24, pour 2d12+14 dégâts, dès que la cible est à portée.
+  note: Employer Frappe décisive quand il consacre une action simple à une attaque unique ; elle ne s'ajoute ni aux attaques d'opportunité ni aux attaques à outrance. Son dé supplémentaire n'est pas multiplié sur un critique.
+
+step: La cible reste hors de portée après un déplacement simple
+  do: Charger si le trajet le permet ; sinon, effectuer un double déplacement vers elle.
+
+## Repli
+
+step: Il lui reste des points de vie
+  do: Poursuivre le combat contre l'adversaire le plus proche jusqu'à sa destruction.
+  note: Aucun seuil de repli : même gravement endommagé, il ne fuit pas.

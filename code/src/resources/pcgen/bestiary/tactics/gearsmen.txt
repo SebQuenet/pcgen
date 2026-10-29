@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Gearsmen, robot humanoïde neutre de taille M, FP 4 : une sentinelle méthodique qui préfère vider son pistolet avant de combattre à la lance.
+  Pistolet laser vétuste : +5 au toucher à distance, ou deux tirs à +3/+3 au toucher, chacun infligeant 1d8 de feu. Lance de maître : +10, 1d8+7, critique x3, plus 1d6 d'électricité.
+  42 pv ; CA 20, contact 11 ; solidité 10 ; immunités des créatures artificielles ; vulnérable aux critiques et à l'électricité. Déplacement de 6 m ; allonge de 1,50 m.
+
+resource: Pistolet laser vétuste | 5 charges | 1 charge par tir ; 2 charges pour les deux tirs semi-automatiques.
+resource: Autoréparation | 1/jour | Action complexe : récupère 24 pv sur lui-même, ou rend 4d6 pv à un autre robot touché.
+
+step: Il monte la garde
+  do: Surveiller les approches avec Perception +8, vision dans le noir à 18 m et vision nocturne ; garder le pistolet prêt.
+  note: Son apprentissage adaptatif sert déjà au maniement des armes à feu ; il ne réaffecte pas ses compétences. Ses nanites lui rendent 4 pv par heure.
+
+step: Des intrus entrent dans leur poste de l'Aurora
+  do: Leur ordonner de baisser les armes et de livrer Casandalee ; attaquer s'ils tardent à obtempérer.
+  note: Les gardes de cette rencontre restent fixés sur cette exigence et ne négocient pas davantage.
+
+## Ouverture
+
+step: Aucun ennemi ne le menace au corps à corps et il peut rester sur place
+  do: Effectuer une attaque à outrance au pistolet en mode semi-automatique : deux tirs à +3/+3 au toucher, 1d8 de feu chacun.
+  note: Dépenser 2 charges ; il en reste normalement 3.
+
+step: Il doit se déplacer pour obtenir une ligne de tir
+  do: Avancer de 6 m au maximum et tirer une fois à +5 au toucher, pour 1d8 de feu.
+  note: Ce tir dépense 1 charge ; les deux tirs exigent une attaque à outrance.
+
+step: Un ennemi le force au corps à corps
+  do: Lâcher le pistolet si nécessaire, prendre sa lance à deux mains et frapper à +10 pour 1d8+7 plus 1d6 d'électricité.
+  note: Dégainer prend une action de mouvement ; la charge électrique de la lance ne consomme aucune charge du pistolet.
+
+## Rounds suivants
+
+step: Il reste à distance avec au moins 2 charges
+  do: Répéter les deux tirs semi-automatiques et concentrer les attaques sur une cible exposée.
+  note: Avec ses 5 charges initiales, il peut normalement effectuer deux attaques à outrance, puis un dernier tir simple.
+
+step: Il reste exactement 1 charge et aucun ennemi ne le menace au contact
+  do: Tirer une fois à +5 au toucher, pour 1d8 de feu, puis préparer le passage à la lance.
+
+step: Le pistolet est vide
+  do: Prendre la lance et avancer vers un ennemi ; frapper dès qu'il est à 1,50 m.
+  note: Il se déplace de 6 m par action de mouvement ; sa lance ne lui donne aucune allonge supplémentaire.
+
+step: Il combat à la lance une cible facile à toucher
+  do: Employer Attaque en puissance : attaque à +8, dégâts de 1d8+13 plus 1d6 d'électricité.
+  note: Contre une CA élevée, conserver plutôt l'attaque normale à +10, pour 1d8+7 plus 1d6 d'électricité.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge et la lance est en main
+  do: Frapper avec la lance.
+  note: Attaques réflexes et Dextérité 13 permettent jusqu'à deux attaques d'opportunité par round, sur des occasions distinctes.
+
+step: Il lui reste 18 pv ou moins et son autoréparation quotidienne est disponible
+  do: Consacrer son tour à l'autoréparation pour récupérer 24 pv, sans dépasser 42 pv.
+  note: Cette action complexe remplace ses attaques du round ; si possible, l'effectuer pendant qu'un autre robot retient les adversaires.
+
+## Repli
+
+step: Le combat tourne à son désavantage, même après son autoréparation
+  do: Continuer à combattre jusqu'à destruction.
+  note: Aucun seuil de fuite ni reddition ; les gearsmen se battent jusqu'à être détruits.

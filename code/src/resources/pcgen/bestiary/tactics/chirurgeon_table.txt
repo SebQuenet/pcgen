@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Table chirurgicale animée de taille G, créature artificielle neutre sans intelligence, FP 9. Elle obéit à Gravvik et s'acharne sur une seule cible à la fois.
+  96 pv, CA 20, solidité 10 et immunités des créatures artificielles. Déplacement de 12 m, espace occupé de 3 m et allonge de 3 m ; vision dans le noir à 18 m et vision nocturne.
+  Deux scalpels +17 (1d6+6, critique 19–20), deux seringues +17 (1d2+3 et poison), une sangle +17 (1d3+3 non létaux et étreinte). Manœuvres de lutte +23.
+
+step: Gravvik désigne un personnage
+  do: Concentrer toutes les attaques sur ce personnage, conformément à ses ordres.
+  note: Elle ne répartit pas spontanément ses attaques entre plusieurs adversaires.
+
+## Ouverture
+
+step: La cible est à plus de 3 m
+  do: Se rapprocher, jusqu'à 12 m avec une action de mouvement ; si la cible est ensuite à portée, lui porter une attaque de seringue +17 (1d2+3 et poison).
+  note: Après ce déplacement, elle ne peut pas effectuer d'attaque à outrance pendant ce tour.
+
+step: La cible est à portée sans déplacement nécessaire
+  do: Effectuer une attaque à outrance sur elle : deux seringues pour la sédation, une sangle pour la saisir et deux scalpels pour la taillader, toutes à +17.
+
+note: Poison des seringues
+  Les seringues servent à endormir la victime. Le bloc fourni ne précise ni DD, ni fréquence, ni effets chiffrés du poison.
+
+## Rounds suivants
+
+step: La sangle touche une cible admissible à l'étreinte
+  do: Tenter immédiatement la lutte à +23, en action libre, pour la retenir.
+  note: Les dégâts de la sangle sont non létaux ; ceux des scalpels restent létaux.
+
+step: La table commence son tour en lutte avec sa victime
+  do: Consacrer son action simple au maintien de la lutte ; en cas de réussite, choisir d'infliger les dégâts d'un scalpel, soit 1d6+6.
+  note: Ce maintien ne se cumule pas avec une attaque à outrance pendant le même tour.
+
+step: La table n'est pas en lutte et sa cible reste à portée
+  do: Répéter l'attaque à outrance avec les deux seringues, la sangle et les deux scalpels sur cette même cible.
+
+step: La cible est maîtrisée ou inconsciente
+  do: Continuer à la taillader avec les scalpels tant que Gravvik ne donne pas un autre ordre.
+  note: L'inconscience de la victime n'arrête pas la machine.
+
+## Repli
+
+step: Gravvik lui ordonne de s'arrêter
+  do: Cesser le combat.
+
+step: Aucun ordre d'arrêt n'a été donné, même si Gravvik est tué
+  do: Combattre jusqu'à destruction.
+  note: Aucun seuil de points de vie ne déclenche de fuite.

@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Fluxwraith, mort-vivant incorporel de taille M, neutre mauvais, intelligent et malveillant, qui combat en déformant le temps.
+  273 PV ; CA 26, contact 26 ; initiative +13 ; vol parfait à 18 m. Toucher incorporel +28 à 1,50 m : 15d6 dégâts et décalage temporel. Aura de lenteur dans un rayon de 9 m.
+  Il cherche à isoler ses victimes, puis à les frapper ou à les figer, sans rester exposé aux ripostes du groupe.
+
+resource: Vision magique | à volonté | repérer les auras et les utilisateurs de magie
+resource: Déjà-vu | à volonté | action simple ; aucun jet de sauvegarde, résistance à la magie applicable
+resource: Rapidité | à volonté | 20 rounds ; vol à 27 m pendant l'effet
+resource: Déjà-vu à incantation rapide | 3/jour | action rapide ; mêmes effets que Déjà-vu
+resource: Immobilisation de monstre | 3/jour | Volonté DD 21 ; nouveau jet chaque round par une action complexe
+resource: Image miroir | 3/jour | protection personnelle contre les attaques ; 20 minutes
+resource: Stase temporelle | 3/jour | contact ; Vigueur DD 24 ; suspension permanente jusqu'à sa dissipation
+resource: Arrêt du temps | 1/jour | 1d4+1 rounds apparents ; DD 25 indiqué, mais aucun jet de sauvegarde
+
+step: Des intrus approchent et il dispose de temps pour se préparer
+  do: Activer Vision magique et Image miroir, puis Rapidité juste avant l'affrontement
+  note: Utiliser Perception +37, la vision dans le noir à 18 m et la perception de la vie pour surveiller les approches ; choisir un trajet de vol avec des obstacles où se dérober
+
+## Ouverture
+
+step: Il est surpris sans ses protections et plusieurs ennemis le menacent
+  do: Utiliser Arrêt du temps ; pendant les rounds apparents, activer Image miroir et Rapidité, puis se replacer
+  note: Aucune attaque ni aucun pouvoir dirigé contre une autre créature pendant cet effet ; s'il est déjà préparé, conserver cette utilisation pour le repli
+
+step: Il peut atteindre une cible sans s'exposer à tout le groupe
+  do: Approcher en vol, utiliser Déjà-vu à incantation rapide sur un adversaire, puis porter un toucher incorporel avec Attaque en vol et poursuivre le déplacement
+  note: Viser un lanceur de sorts ou un adversaire isolé ; terminer si possible à moins de 9 m des ennemis pour maintenir l'aura, en évitant leurs allonges
+  note: Attaque en vol permet un déplacement avant et après l'action simple ; elle ne supprime pas les attaques d'opportunité
+
+step: Un combattant dangereux reste inaccessible au contact
+  do: Tenter Immobilisation de monstre sur lui, Volonté DD 21, et se déplacer pour ralentir les autres avec l'aura
+  note: S'il résiste, privilégier ensuite les dégâts du toucher plutôt que dépenser toutes les utilisations sur la même cible
+
+## Rounds suivants
+
+step: Plusieurs adversaires peuvent encore agir ensemble contre lui
+  do: Répéter les passages avec Attaque en vol et le toucher incorporel ; utiliser murs et obstacles pour limiter les ripostes
+  note: L'aura impose la lenteur sans sauvegarde ; Rapidité, Liberté et Liberté de mouvement permettent d'y échapper. S'il s'éloigne à plus de 9 m d'une victime, elle cesse immédiatement d'être ralentie
+
+step: Une victime disparaît à cause du décalage temporel
+  do: Reporter immédiatement les attaques sur un autre adversaire et surveiller l'emplacement du retour
+  note: La victime peut réapparaître au même endroit après 1d4 rounds ; profiter de son absence pour affronter moins d'ennemis à la fois
+
+step: Une cible isolée reste au contact et les ripostes sont supportables
+  do: Faire une attaque à outrance de toucher incorporel ; sous Rapidité, ajouter un toucher supplémentaire
+  note: Rapidité ajoute aussi +1 aux jets d'attaque, à la CA et aux Réflexes ; une attaque à outrance interdit le passage avec Attaque en vol
+
+step: Une cible prioritaire est accessible et semble vulnérable à la stase
+  do: Remplacer le toucher offensif par Stase temporelle, avec son attaque de contact et Vigueur DD 24
+  note: Cette action ne cumule pas les 15d6 dégâts et le décalage temporel du toucher ordinaire ; une cible figée ne peut plus être blessée, il faut combattre les autres
+
+step: Il reste des utilisations rapides de Déjà-vu et une cible n'est pas déjà affectée
+  do: Utiliser une action rapide pour placer Déjà-vu, puis effectuer l'action simple prévue pour ce round
+  note: La cible choisit librement les actions de son prochain tour, puis doit les répéter au suivant contre les mêmes cibles ; si la répétition est impossible, elle devient confuse jusqu'à la fin du sort
+
+step: Ses images ont disparu et les attaques adverses deviennent dangereuses
+  do: Se mettre à couvert et renouveler Image miroir au lieu d'attaquer ce round
+
+## Repli
+
+step: Points de vie sous 70 et risque d'être détruit au prochain assaut
+  do: Utiliser Arrêt du temps s'il est encore disponible, puis s'éloigner en vol et traverser une paroi mince grâce à son intangibilité
+  note: Sinon, consacrer le round à la fuite : deux déplacements totalisent 36 m, ou 54 m sous Rapidité ; terminer dans un espace libre à l'abri des lignes de vue
+
+step: La poursuite l'empêche de s'éloigner
+  do: Utiliser Déjà-vu à incantation rapide s'il en reste une utilisation, puis poursuivre la fuite en vol
+  note: Déjà-vu ne bloque pas immédiatement le poursuivant ; chercher surtout à rompre la ligne de vue et à mettre des obstacles entre lui et ses ennemis

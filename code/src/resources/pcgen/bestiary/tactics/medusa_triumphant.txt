@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Méduse triomphante, statue métallique animée de taille TG, neutre et sans intelligence. 78 pv, CA 12, solidité 10 et immunités des créatures artificielles.
+  Deux coups +15 (2d6+10 chacun), allonge de 4,50 m ; espace occupé de 4,50 m ; déplacement de 12 m. Rayon oculaire de feu et explosion à la destruction.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5, initiative -2.
+
+note: Cible prioritaire
+  Elle s'acharne sur le personnage qui a placé l'épée dans sa poitrine. Elle ne choisit une autre cible, au hasard, que lorsque ce personnage est tué ou hors de sa capacité d'attaque.
+  Sans intelligence, elle applique cette conduite sans préparer de ruse ni coordonner ses attaques avec des alliés.
+
+resource: Rayon oculaire | 1 par round | action rapide ; attaque de contact à distance +3 ; portée 9 m ; 4d6 dégâts de feu si le rayon touche
+
+## Ouverture
+
+step: La cible prioritaire est à 4,50 m ou moins
+  do: Attaque à outrance : deux coups +15, infligeant chacun 2d6+10 dégâts.
+
+step: La cible prioritaire est au-delà de 4,50 m
+  do: Avancer vers elle de 12 m au maximum, puis porter un seul coup +15 (2d6+10) si elle est désormais à portée.
+  note: Si un déplacement ne suffit pas à permettre un coup, effectuer un double déplacement, jusqu'à 24 m, pour la rejoindre.
+
+step: La cible prioritaire est visible à 9 m ou moins, avant ou après le déplacement
+  do: Ajouter le rayon oculaire en action rapide : contact à distance +3, 4d6 dégâts de feu.
+  note: Ce rayon s'ajoute aux coups ou au déplacement ; une seule utilisation par round.
+
+## Rounds suivants
+
+step: La cible prioritaire peut encore être attaquée ou rejointe
+  do: Continuer à la poursuivre et à la frapper, en répétant les actions d'ouverture selon la distance.
+  note: Les blessures infligées par les autres personnages ne détournent pas la statue de cette cible.
+
+step: La cible prioritaire est tuée ou hors de la capacité d'attaque de la statue
+  do: Choisir au hasard une autre cible qu'elle peut attaquer et reprendre coups, poursuite et rayon oculaire contre elle.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Porter un coup +15 (2d6+10), en respectant sa priorité de cible.
+  note: Une seule attaque d'opportunité par round.
+
+## Repli
+
+step: La statue possède encore des points de vie
+  do: Combattre jusqu'à la destruction, sans fuite ni reddition.
+
+resource: Autodestruction | 1, automatique à la destruction | explosion d'éclats d'adamantium lorsque les pv tombent à 0 ou moins
+
+step: Points de vie à 0 ou moins
+  do: Infliger 4d8 dégâts tranchants à toutes les créatures dans un rayon de 6 m ; Réflexes DD 13 pour réduire les dégâts de moitié.
+  note: L'explosion est automatique ; elle ne constitue pas une action volontaire de la statue.

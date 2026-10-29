@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Vipostix, diable apostat loyal mauvais, prépare le combat par la tromperie et les pouvoirs mentaux, puis affaiblit ses victimes avec ses griffes.
+  Deux griffes +29, chacune infligeant 1d8+10 dégâts et 1d6 de diminution permanente de Sagesse ; critique sur 19–20 ; allonge de 3 m.
+  279 pv, CA 32, régénération 5, résistance à la magie 28 ; réduction des dégâts 10, surmontée par une arme à la fois bonne et en argent. Immunisé au feu et au poison ; résistance à l’acide et au froid de 10.
+  Marche et vol parfait à 9 m ; initiative +13 ; vision dans le noir à 18 m et vision dans les ténèbres ; télépathie à 30 m.
+
+resource: Blasphème | 3/jour | DD 26 ; niveau de lanceur de sorts 18
+resource: Domination de personne | 3/jour | Volonté DD 24 ; cible humanoïde
+resource: Scrutation suprême | 3/jour | Volonté DD 26
+resource: Immobilisation de monstre | 3/jour | Volonté DD 24
+resource: Voile | 3/jour | DD 25
+resource: Brume mentale | 1/jour | Volonté DD 24
+resource: Écran | 1/jour | DD 27
+resource: Téléportation suprême | à volonté | lui-même et jusqu’à 50 livres d’objets seulement
+
+step: Il connaît ses futurs adversaires et dispose de temps
+  do: Les observer avec scrutation suprême et repérer un humanoïde à dominer, les porteurs d’armes et les voies d’approche
+  note: Perception +26 et Psychologie +26 complètent ses renseignements ; une observation ne révèle pas automatiquement les défenses magiques d’une cible
+
+step: Il peut préparer le lieu de l’affrontement
+  do: Employer écran pour masquer ses préparatifs, puis mirage pour modifier l’apparence du terrain et image accomplie pour présenter un faux interlocuteur
+  note: Mirage DD 24 ; image accomplie DD 22, tous deux à volonté. Les illusions ne créent ni obstacle solide ni protection réelle contre les attaques
+
+step: Il peut approcher sous une fausse identité
+  do: Utiliser modification d’apparence à volonté ou voile, puis Bluff +30 et Diplomatie +34 pour obtenir une position favorable
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être exposés à la brume avant le contact
+  do: Lancer brume mentale, puis rester hors de portée de leurs armes
+  note: Exploiter l’affaiblissement de leur Volonté avec un autre pouvoir au round suivant ; la brume ne rend pas automatiquement toutes les cibles vulnérables
+
+step: Un humanoïde dangereux constitue la meilleure cible disponible
+  do: Lancer domination de personne et lui ordonner de gêner ses alliés ou de quitter sa position
+  note: Privilégier une cible affectée par la brume mentale ; donner des ordres simples par télépathie
+
+step: La menace prioritaire ne peut pas être dominée, mais peut être paralysée
+  do: Lancer immobilisation de monstre pour l’empêcher d’agir et préparer l’approche
+
+note: Actions
+  Choisir une seule de ces ouvertures par round. Ses pouvoirs magiques ne lui permettent pas d’enchaîner plusieurs sorts dans la même action.
+
+## Rounds suivants
+
+step: Une victime est à 3 m ou moins et un pas de 1,50 m au maximum suffit pour la rejoindre
+  do: Effectuer une attaque à outrance avec ses deux griffes +29
+  note: Concentrer les griffes sur une même victime ; la diminution de Sagesse peut aussi affaiblir sa Volonté contre les pouvoirs suivants
+
+step: Un adversaire provoque une attaque d’opportunité dans son allonge
+  do: Frapper avec une griffe et appliquer aussi la diminution permanente de Sagesse si elle touche
+  note: Attaques réflexes permet plusieurs attaques d’opportunité par round ; l’allonge seule ne donne pas une attaque gratuite contre chaque déplacement
+
+step: Un porteur d’arme représente la principale menace au contact
+  do: Tenter un désarmement à +29 si lui retirer son arme vaut mieux que les dégâts d’une griffe
+  note: Science du désarmement évite l’attaque d’opportunité normalement provoquée par cette manœuvre
+
+step: Plusieurs ennemis non maléfiques sont à portée de blasphème
+  do: Employer blasphème si leurs dés de vie permettent au pouvoir de les affecter
+  note: Avec un niveau de lanceur de sorts de 18, le pouvoir n’affecte pas les créatures de plus de 18 DV ; ne pas compter sur lui contre tous les adversaires de ce FP
+
+step: Une cible résiste au contrôle ou aucun ennemi n’est à portée des griffes
+  do: Changer de cible pour domination de personne ou immobilisation de monstre, ou voler jusqu’à 9 m pour reprendre une position favorable
+  note: Après un déplacement de plus de 1,50 m, ne pas effectuer l’attaque à outrance ; exploiter le vol parfait pour contrôler la distance
+
+## Repli
+
+step: Ses points de vie passent sous 90, ou le combat tourne nettement à son désavantage
+  do: Utiliser téléportation suprême vers un refuge connu
+  note: Il ne peut pas emmener une créature dominée avec ce pouvoir. À l’abri, laisser sa régénération restaurer 5 pv par round tant qu’elle fonctionne
+
+step: La téléportation est empêchée
+  do: Se dégager par le vol à 9 m et utiliser Expertise du combat s’il doit encore attaquer en se défendant
+  note: Chercher une position hors de portée des armes de mêlée, puis retenter la téléportation dès que possible

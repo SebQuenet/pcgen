@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Grugonoth est un gorille sanguinaire demi-fiélon de taille Très grande, chaotique mauvais, brutal et peu subtil. Il attaque tous ceux qui l'entourent, charau-ka comme aventuriers.
+  Morsure +16 (2d6+9), 2 griffes +16 (1d8+9) ; espace occupé et allonge de 4,50 m.
+  126 pv ; CA 24 ; réduction des dégâts 10/magie ; immunité au poison ; résistance 10 à l'acide, au froid, à l'électricité et au feu ; résistance à la magie 21.
+  Déplacement et escalade à 9 m ; vol à 18 m, bonne manœuvrabilité. Vision dans le noir à 18 m, vision nocturne, odorat ; Perception +23.
+
+note: Objectifs
+  Il veut d'abord retrouver et tuer la Muse radieuse, puis reprendre le pouvoir sur Saventh-Yhi. Il tient à survivre pour accomplir ces projets.
+  Ses pouvoirs magiques ont un niveau de lanceur de sorts de 12 et une concentration de +12.
+
+resource: Ténèbres | 3/jour | pouvoir magique
+resource: Poison | 3/jour | pouvoir magique, DD 14
+resource: Blasphème | 1/jour | pouvoir magique, DD 17
+resource: Contagion | 1/jour | pouvoir magique, DD 14
+resource: Profanation | 1/jour | pouvoir magique
+resource: Ténèbres infernales | 1/jour | pouvoir magique, DD 14
+
+## Ouverture
+
+step: Il vient d'être libéré de sa pétrification
+  do: Passer un round à rugir et à s'agiter, partagé entre jubilation et frustration
+  note: Dès ce round terminé, il s'en prend aux créatures proches sans distinguer charau-ka et aventuriers
+
+step: Il engage effectivement le combat et dispose encore de blasphème
+  do: Lancer blasphème (DD 17), puis passer à la mêlée dès le round suivant
+  note: Cette utilisation ouvre le combat ; il réserve ensuite ses pouvoirs magiques aux ennemis qui semblent résister aux dégâts physiques
+
+## Rounds suivants
+
+step: Une cible est à portée et il peut effectuer une attaque à outrance
+  do: Morsure +16 (2d6+9) et 2 griffes +16 (1d8+9)
+  note: Son allonge de 4,50 m lui permet de frapper sans se placer juste à côté de sa victime
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer ou escalader jusqu'à 9 m, ou voler jusqu'à 18 m, puis porter une morsure +16 (2d6+9) si la cible est à portée
+  note: Après ce déplacement, il ne porte qu'une attaque naturelle
+
+step: Ses coups touchent facilement et il veut maximiser les dégâts
+  do: Utiliser Attaque en puissance : morsure +13 (2d6+15), griffes +13 (1d8+15)
+  note: Le malus de -3 aux attaques reste en vigueur jusqu'à son prochain tour, y compris sur ses attaques d'opportunité
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Le frapper avec une morsure
+  note: Attaques réflexes lui permet jusqu'à 5 attaques d'opportunité par round, sans multiplier les attaques pour une même occasion
+
+step: Il veut écarter un adversaire plus petit que lui
+  do: Employer Coup fabuleux pour le repousser et le renverser
+  note: Cette action remplace son attaque à outrance ; elle sert à dégager un passage ou à briser une position gênante
+
+step: Un ennemi semble résister aux dégâts physiques
+  do: Employer ténèbres infernales (DD 14) contre lui, en incluant d'autres ennemis dans la zone si possible
+  note: Il reprend ses attaques naturelles lorsque celles-ci redeviennent efficaces
+
+step: Une cible résistante aux coups reste au contact et ténèbres infernales ne suffit pas
+  do: Tenter poison (DD 14), ou contagion (DD 14) si le poison semble inefficace
+  note: Ces pouvoirs exigent de toucher la cible ; il les réserve aux adversaires contre lesquels ses morsures et ses griffes sont peu efficaces
+
+## Repli
+
+step: Ses points de vie tombent sous 40
+  do: Abandonner le combat, s'envoler vers le ciel à 18 m par déplacement et gagner une ruine abandonnée ailleurs dans Saventh-Yhi
+  note: Il privilégie sa survie et ses projets contre la Muse radieuse. Il se cache pour récupérer et préparer sa prochaine action

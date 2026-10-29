@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Mederach, Extérieur de taille G, chaotique bon, arachnide d'Élysée qui préfère neutraliser ses adversaires et les ramener au bien. Il réserve sa violence aux arachnides maléfiques et aux morts-vivants sans intelligence.
+  Morsure +17 (1d8+5 et poison), 2 griffes +16 (1d6+5 chacune) ; allonge de 3 m. Ses griffes peuvent infliger des dégâts non létaux sans malus et comptent comme argent et Bien contre la réduction des dégâts.
+  114 pv ; CA 23 ; réduction des dégâts 10/mal ; résistance à la magie 20. Déplacement de 12 m, escalade de 6 m ; espace occupé de 3 m ; vision dans le noir à 18 m.
+
+resource: Détection du mal | permanent | identifier les auras en prenant le temps de les examiner
+resource: Apaisement des émotions | 3/jour | Volonté DD 16 ; concentration
+resource: Poussière scintillante | 3/jour | Volonté DD 16 contre l'aveuglement ; révèle aussi les créatures invisibles
+resource: Immobilisation de monstre | 1/jour | Volonté DD 18 ; neutralise une cible
+resource: Annulation d'enchantement | 1/jour | DD 18 indiqué dans la fiche ; incantation d'une minute
+resource: Changement de plan | à volonté | lui-même uniquement
+resource: Changement de forme | à volonté | animal de taille M ou G uniquement, comme forme bestiale II
+
+step: Des interlocuteurs risquent de prendre peur devant son apparence
+  do: Adopter une forme animale familière, puis proposer le dialogue en commun, céleste ou infernal
+  note: Diplomatie +19 et Psychologie +22 ; la présence d'une aura maléfique ne suffit pas à lui faire abandonner toute tentative de rédemption
+
+step: Un enchantement entretient le conflit et une minute de calme est disponible
+  do: Employer annulation d'enchantement pour tenter de libérer la victime avant tout affrontement
+
+step: Le combat paraît imminent
+  do: Reprendre sa forme naturelle et choisir un passage où son allonge de 3 m protège ceux qu'il défend
+  note: Perception +22 ; utiliser l'escalade pour rejoindre une position favorable si le terrain le permet
+
+## Ouverture
+
+step: Les adversaires peuvent encore être raisonnés
+  do: Lancer apaisement des émotions sur les agresseurs regroupés, puis demander une trêve
+  note: Maintenir la concentration ; toute action agressive ou tout dégât contre une créature apaisée rompt le sort pour tous ses bénéficiaires
+
+step: La négociation échoue et plusieurs adversaires sont regroupés, ou un ennemi invisible est localisé
+  do: Lancer poussière scintillante en évitant les alliés, puis se placer pour intercepter les ennemis
+  note: Choisir cette ouverture à la place d'apaisement des émotions ; aveuglement sur un échec de Volonté DD 16
+
+step: Un adversaire isolé menace immédiatement un innocent
+  do: Employer immobilisation de monstre sur lui, Volonté DD 18
+  note: Profiter de sa paralysie pour protéger la victime et obtenir une reddition
+
+## Rounds suivants
+
+step: Un adversaire susceptible de se rendre est à portée et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance avec les deux griffes +16, chacune pour 1d6+5 dégâts non létaux ; renoncer à la morsure
+  note: Continuer à proposer la reddition ; épargner les adversaires inconscients ou qui déposent les armes
+
+step: Un arachnide maléfique ou un mort-vivant sans intelligence reste à portée
+  do: Attaque à outrance : morsure +17 (1d8+5 et poison), puis deux griffes +16 (1d6+5 chacune)
+  note: Concentrer les attaques sur la même cible ; contre un mort-vivant, compter sur les dégâts plutôt que sur le poison
+
+step: Il faut rejoindre une cible située à plus de 3 m
+  do: Se déplacer de 12 m au maximum, puis porter une seule attaque : griffe non létale +16 ou morsure +17 selon l'adversaire
+  note: Un pas de placement de 1,50 m peut suffire à conserver l'attaque à outrance ; il ne se combine pas avec un déplacement ordinaire
+
+step: Plusieurs ennemis sont à portée et chacun est adjacent au précédent
+  do: Utiliser Succession d'enchaînements avec une griffe +16, non létale si possible ; poursuivre sur une nouvelle cible seulement après chaque touche
+  note: Action simple, une attaque au maximum par cible ; CA réduite à 21 jusqu'au prochain tour. Préférer l'attaque à outrance contre un ennemi unique
+
+step: Un adversaire échappe au contact ou menace de nouveau un allié
+  do: Employer une utilisation restante de poussière scintillante, ou immobilisation de monstre si elle est encore disponible
+  note: Un pouvoir magique remplace les attaques de ce tour ; choisir celui qui interrompt la menace la plus pressante
+
+## Repli
+
+step: Points de vie sous 30, ou poursuite du combat devenue inutile
+  do: Quitter si possible l'allonge ennemie par un pas de placement de 1,50 m, puis utiliser changement de plan pour rejoindre Élysée
+  note: Ce pouvoir ne transporte que lui ; s'il ne peut l'utiliser sans danger, chercher d'abord un couvert ou une position en hauteur grâce à son escalade de 6 m
+
+step: Les ennemis acceptent une trêve ou se rendent
+  do: Cesser les attaques, négocier et porter secours aux blessés avec Premiers secours +12
+  note: Chercher leur rédemption plutôt que poursuivre ou achever les vaincus

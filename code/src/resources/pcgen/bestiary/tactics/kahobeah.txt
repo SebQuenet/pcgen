@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Kahobeah, gardien élémentaire de l'air de taille G, de sous-types air et eau, neutre. Initiative +15 ; CA 21 ; 68 points de vie ; réduction des dégâts 5/— ; guérison accélérée 5.
+  Deux coups +14 (1d8+4) lors d'une attaque à outrance ; allonge de 3 m. Vol parfait et nage à 60 m par déplacement.
+  Il privilégie les attaques en vol et conserve autant d'altitude que possible entre deux passes. Il est immunisé aux maladies, aux effets mentaux et aux effets couverts par les traits des élémentaires.
+  Pouvoirs magiques : NLS 8 ; concentration +10.
+
+resource: Porte dimensionnelle | à volonté | uniquement à l'intérieur du site sacré
+resource: Alarme | 3 | par jour
+resource: Déblocage | 3 | par jour
+resource: Verrou du mage | 1 | par jour
+resource: Augure | 1 | par jour
+resource: Clairaudience/clairvoyance | 1 | par jour
+resource: Renvoi | 1 | par jour
+resource: Fermeture | 1 | par jour
+
+step: Il dispose de temps pour surveiller le sanctuaire
+  do: Poser alarme sur les accès et employer clairaudience/clairvoyance pour observer une approche suspecte
+  note: Garder une position élevée permettant de fondre sur les intrus, puis de remonter
+
+step: Une porte permet de contrôler un accès
+  do: La protéger avec verrou du mage ou la maintenir close avec fermeture
+  note: Réserver déblocage à un passage verrouillé qu'il doit emprunter
+
+## Ouverture
+
+step: Un intrus est accessible en vol
+  do: Effectuer une passe avec Attaque en vol : descendre, porter un seul coup +14 (1d8+4), puis reprendre de l'altitude avec le déplacement restant
+  note: Exploiter l'allonge de 3 m pour frapper sans entrer dans l'allonge des adversaires qui ne portent qu'à 1,50 m
+
+step: Une créature extraplanaire est identifiée et constitue la menace principale
+  do: Tenter renvoi avant de reprendre les passes aériennes
+
+## Rounds suivants
+
+step: Il peut poursuivre ses passes
+  do: Répéter Attaque en vol contre les adversaires accessibles, en terminant chaque passe aussi haut que le permettent les lieux
+  note: Attaque en vol ne supprime pas les attaques d'opportunité ; Mobilité accorde +4 à la CA contre celles provoquées par ses déplacements
+
+step: Un ennemi reste à son contact et une position stationnaire est avantageuse
+  do: Effectuer une attaque à outrance avec ses deux coups +14 (1d8+4 chacun)
+  note: Utiliser Attaques réflexes lorsque des adversaires provoquent des attaques d'opportunité dans son allonge de 3 m
+
+step: Il est encerclé ou doit gagner un abri dans le sanctuaire
+  do: Employer porte dimensionnelle pour rejoindre une position élevée ou protégée à l'intérieur du site sacré
+  note: Après porte dimensionnelle, il ne peut plus agir avant son prochain tour ; sa guérison accélérée lui rend 5 points de vie par round, jusqu'à 68
+
+step: L'eau offre un meilleur passage entre deux positions
+  do: Nager à 60 m par déplacement pour se replacer
+
+## Repli
+
+step: Moins de 20 points de vie, sans profanation tentée ni intérêt apparent pour la restauration du site
+  do: Demander une trêve et convaincre les intrus de partir
+  note: Il peut leur céder le trésor contenu dans l'autel de la salle ouverte, en K6, pour obtenir leur départ
+
+step: Les intrus ont tenté de profaner le site ou semblent vouloir le restaurer
+  do: Combattre jusqu'à sa destruction, même à moins de 20 points de vie
+  note: Cette condition prime sur la demande de trêve ; continuer les passes et les repositionnements dans le sanctuaire

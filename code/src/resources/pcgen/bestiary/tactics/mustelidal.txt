@@ -1,0 +1,91 @@
+## Avant le combat
+
+note: Profil
+  Mustelidal, agathion neutre bon de taille M, humanoïde à tête de blaireau, protecteur tenace des créatures fouisseuses bonnes ou neutres. Il recherche le corps à corps et surestime parfois sa résistance.
+  Attaque à outrance à mains nues +26/+21/+16/+11 (2d8+7, critique 19–20) ; allonge 1,50 m ; lutte +27. Ses frappes célestes peuvent infliger des dégâts non létaux sans malus et franchissent les réductions des dégâts comme des armes magiques, en fer froid, en argent et en adamantium.
+  261 PV ; CA 31 ; déplacement 9 m, creusement 6 m ; vision dans le noir à 18 m et vision nocturne. Il se soigne et remodèle le terrain plutôt que de combattre à distance.
+
+note: Défenses
+  Aura de protection à 6 m : garder les alliés proches ; contre le Mal, bonus de parade de +4 à la CA et de résistance de +4 aux sauvegardes. Ces bonus ne sont pas déjà compris dans la CA 31 ni dans les sauvegardes +15/+15/+13.
+  Régénération 5, interrompue par les armes et sorts maléfiques ; RD 10/Mal et argent, exigeant les deux propriétés pour être franchie. Immunité à l'électricité et à la pétrification ; résistance au froid 10 et au son 10.
+
+resource: Imposition des mains | 11/jour | rend 9d6 PV ; action rapide sur lui-même, action simple sur un autre, comme un paladin de niveau 18
+resource: Ramollissement de la terre et de la pierre | à volonté | terrain naturel non travaillé uniquement
+resource: Piétinement tonitruant (thunderstomp) | à volonté | tentative de croc-en-jambe à distance ; portée 21 m ; pas de jet de sauvegarde, résistance à la magie applicable
+resource: Fusion dans la pierre | 3/jour | refuge dans un bloc assez grand pour contenir son corps ; durée 180 minutes
+resource: Pluie de pierres (stone call) | 3/jour | 2d6 dégâts contondants à l'incantation, puis terrain difficile pendant 18 rounds ; aucun jet de sauvegarde ni résistance à la magie
+resource: Façonnage de la pierre | 3/jour | modifier une portion de pierre touchée pour ouvrir ou fermer un passage
+resource: Convocation de monstres V | 1/jour | uniquement un élémentaire de terre de taille G ; durée 18 rounds
+
+step: Il a le temps de reconnaître les lieux
+  do: Repérer les menaces avec Perception +23 et choisir une issue par un sol meuble ou un bloc de pierre où se réfugier
+  note: Creuser n'accorde pas la traversée libre de la roche ; Fusion dans la pierre permet de s'y cacher, pas d'en ressortir par une autre face.
+
+step: Il garde une personne
+  do: Rester entre elle et les adversaires, à moins de 6 m d'elle ; lui parler grâce à son don des langues pour préparer un déplacement commun
+  note: Il ne l'abandonne pas pour poursuivre une cible qui fuit.
+
+step: Un accès naturel permet une charge ennemie
+  do: Ramollir la terre sèche sur cet accès, puis garder un passage praticable pour ses alliés
+  note: La terre meuble réduit la vitesse de moitié et empêche course et charge ; la pierre travaillée n'est pas affectée.
+
+## Ouverture
+
+step: Plusieurs ennemis approchent et il peut consacrer sa première action à une diversion
+  do: Convoquer l'élémentaire de terre de taille G pour occuper une partie des adversaires, puis engager les autres au round suivant
+  note: S'il prévoit une retraite difficile, conserver plutôt cette unique convocation pour couvrir le repli.
+
+step: Des ennemis groupés avancent sans allié dans la zone
+  do: Pluie de pierres sur leur approche, puis se placer au bord de la zone pour les recevoir
+  note: Cylindre de 12 m de rayon et 6 m de haut ; les dégâts ne surviennent qu'une fois. Les débris gênent aussi les alliés et le mustelidal.
+
+step: Une cible prioritaire peut être atteinte sans abandonner son protégé
+  do: Avancer de 9 m au maximum et porter une frappe à mains nues +26 (2d8+7)
+  note: Choisir le porteur d'une arme maléfique ou le lanceur de sorts qui menace ses alliés ; un déplacement ordinaire ne permet pas ensuite les quatre attaques.
+
+## Rounds suivants
+
+step: Une cible est déjà à 1,50 m
+  do: Attaque à outrance, quatre frappes +26/+21/+16/+11 (2d8+7 chacune, critique 19–20)
+  note: Préférer les dégâts non létaux lorsqu'il veut capturer une créature plutôt que la tuer.
+
+step: Une cible est à 3 m et il peut accepter une défense moindre
+  do: Utiliser Lunge pour augmenter son allonge de 1,50 m pendant son tour et l'attaquer
+  note: CA réduite de 2 jusqu'à son prochain tour ; cette extension ne persiste pas pour ses attaques d'opportunité.
+
+step: Il doit frapper puis changer de position et dispose d'un trajet libre
+  do: Attaque éclair : se déplacer, porter une seule frappe +26, puis terminer son déplacement, pour un total maximal de 9 m
+  note: Parcourir au moins 3 m avant et 3 m après l'attaque ; la cible ne bénéficie pas d'attaque d'opportunité contre ce déplacement, les autres ennemis peuvent en bénéficier.
+
+step: Un adversaire au sol reste hors de portée et doit être ralenti
+  do: Piétinement tonitruant sur une cible à 21 m au maximum pour tenter de la faire tomber
+  note: Lui et sa cible doivent toucher le sol ; respecter les limites ordinaires du croc-en-jambe, notamment une cible de taille G au maximum. Cette action remplace ses frappes du round.
+
+step: Une cible accessible doit être immobilisée plutôt que frappée
+  do: Engager une lutte avec un test de BMC +27 contre son DMD
+  note: Science de la lutte évite l'attaque d'opportunité normalement provoquée par cette manœuvre ; aucune saisie gratuite n'accompagne ses frappes.
+
+step: Il a perdu au moins 40 PV et reste engagé
+  do: Dépenser une imposition des mains sur lui-même en action rapide, puis attaquer normalement
+  note: Récupérer 9d6 PV sans dépasser 261 ; conserver quelques utilisations pour son protégé et la retraite.
+
+step: Un allié au contact risque de tomber avant son prochain tour
+  do: Lui rendre 9d6 PV par imposition des mains en action simple
+  note: Le soin remplace ses attaques ; se replacer ensuite pour protéger le blessé si le déplacement le permet.
+
+## Repli
+
+step: Il tombe sous 65 PV, surtout si des attaques maléfiques interrompent sa régénération
+  do: Couvrir le départ de son protégé ; utiliser la convocation encore disponible comme diversion, puis gagner un sol meuble ou son refuge de pierre
+  note: Sans personne à protéger, rompre directement le contact. Ce seuil est une consigne tactique : sa ténacité peut le pousser à rester si une vie dépend de lui.
+
+step: Il peut se mettre hors d'atteinte
+  do: Creuser à 6 m par déplacement dans un sol approprié, ou utiliser Fusion dans la pierre dans un bloc assez grand
+  note: Façonnage de la pierre peut fermer une ouverture étroite après le passage des alliés. Attendre à couvert que la régénération rende 5 PV par round, jusqu'à 261 PV.
+
+step: Il est empoisonné et dispose d'un refuge sûr
+  do: Purge du poison en un round complet, puis rester inconscient pendant 10 minutes
+  note: Aucun réveil n'est possible pendant cette transe ; le poison cesse d'agir et disparaît au réveil, mais ses dégâts ou diminutions de caractéristiques déjà subis restent. Un poison qui le rend inconscient déclenche automatiquement la purge.
+
+step: Il est rétabli et sa mission de protection le permet
+  do: Retrouver les survivants avec Survie +23 et reprendre l'affrontement depuis une position favorable

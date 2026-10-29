@@ -1,0 +1,92 @@
+## Avant le combat
+
+note: Profil
+  Shogun Tsuneni, seigneur du vide yai de taille TG, loyal mauvais, spécialisé dans l'escrime ; FP 24, 462 pv, CA 41, résistance à la magie 35.
+  Katana +5 de rapidité +50/+45/+40/+35 (3d6+22, critique 15-20), avec une attaque supplémentaire de rapidité à +50 lors d'une attaque à outrance ; à défaut, 2 coups +43 (2d6+17).
+  Projectile du vide +28 (6d6 et absorption d'énergie) ; arc long composite +4, +32/+27/+22/+17 (3d6+21, critique x3).
+  Déplacement et vol à 12 m en armure, 18 m sans armure ; espace et allonge de 4,50 m. Vision lucide permanente, vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses permanentes
+  Régénération de 15 pv par round, interrompue par les dégâts de feu ou les sorts du Bien ; immunité au froid.
+  Bouclier de feu froid permanent : moitié des dégâts de feu, aucun sur un jet de Réflexes réussi lorsque l'attaque permet normalement de les réduire de moitié ; les coups de mêlée sans arme à allonge renvoient 1d6+15 dégâts de froid à l'assaillant.
+  Pouvoirs magiques au niveau de lanceur 22 ; concentration +29.
+
+resource: Implosion | 1/jour | Vigueur DD 26
+resource: Changement de plan | 1/jour | DD 24 contre une cible non consentante
+resource: Barrière de lames | 3/jour | Réflexes DD 23
+resource: Domination de personne | 3/jour | Volonté DD 22
+resource: Charme-monstre de groupe | 3/jour | Volonté DD 25
+resource: Cône de froid | 3/jour | Réflexes DD 22
+resource: Rayon polaire | 3/jour | attaque de contact à distance
+resource: Épée du mage | 3/jour | attaque de force autonome après son lancement
+resource: Flèches d'énergie brillante | 10 | pour les cibles vivantes protégées par une armure
+resource: Flèches en adamantium | 40 | munitions ordinaires de l'arc
+
+step: Il repère les intrus avant d'être engagé
+  do: Se rendre invisible et choisir une position permettant de voler ou de rejoindre rapidement un lanceur de sorts adverse.
+  note: Invisibilité est à volonté, personnelle, et cesse lorsqu'il attaque ; vision lucide sert à repérer les adversaires dissimulés par magie.
+
+step: Une conversation est possible avant les hostilités
+  do: Employer charme-monstre de groupe pour désamorcer l'opposition et tenter de diviser les intrus par la parole.
+  note: Le charme rend les sujets amicaux ; il ne les transforme pas en combattants obéissants.
+
+## Ouverture
+
+step: Une cible corporelle dangereuse est visible à 24 m ou moins, et Tsuneni peut rester hors de son contact
+  do: Lancer implosion sur elle : Vigueur DD 26 ou 220 dégâts.
+  note: Privilégier un lanceur de sorts susceptible d'avoir une faible Vigueur ; une même créature ne peut être ciblée qu'une fois par cette utilisation.
+
+step: L'ennemi porte de nombreuses protections magiques décisives
+  do: Préférer dissipation suprême ciblée avant d'engager cet ennemi.
+  note: Pouvoir à volonté ; il dépense son action simple et ne lance pas aussi implosion ce round.
+
+step: Un adversaire prioritaire est déjà à portée de katana
+  do: Préférer l'attaque à outrance : +50/+50/+45/+40/+35, chaque touche infligeant 3d6+22.
+  note: Concentrer les attaques sur le lanceur de sorts ou l'adversaire capable d'interrompre sa régénération.
+
+step: Son action rapide est disponible et une cible est à 54 m ou moins
+  do: Ajouter un projectile du vide +28, pour 6d6 dégâts d'énergie négative et absorption d'énergie.
+  note: Cette action rapide accompagne une attaque à outrance, un pouvoir magique ou le maintien d'implosion ; elle concurrence l'activation de la forme du vide.
+
+## Rounds suivants
+
+step: Implosion est active et une nouvelle cible corporelle est à portée
+  do: Consacrer son action simple à maintenir la concentration et cibler une autre créature, Vigueur DD 26 ou 220 dégâts.
+  note: Durée maximale de 11 rounds ; interrompre la concentration termine le pouvoir. Renoncer à son maintien si une attaque à outrance ou un repli devient prioritaire.
+
+step: Il peut atteindre une cible avec un déplacement de 12 m au plus
+  do: Avancer ou voler jusqu'à portée, puis porter une Frappe décisive améliorée au katana à +50, pour 9d6+22.
+  note: Cette attaque utilise une action simple ; rapidité ajoute son attaque seulement lors d'une attaque à outrance.
+
+step: Une cible reste dans son allonge de 4,50 m
+  do: Répéter l'attaque à outrance au katana ; employer Attaque en puissance contre une CA suffisamment faible.
+  note: Appliquer Critique ralentissant sur les critiques confirmés ; exploiter Attaques réflexes pour frapper les déplacements et les incantations qui provoquent des attaques d'opportunité, jusqu'à trois par round.
+
+step: Les combattants adverses empêchent d'atteindre leurs soutiens
+  do: Élever une barrière de lames entre les deux groupes, puis affronter les ennemis isolés.
+  note: Traverser la barrière inflige 15d6 dégâts, Réflexes DD 23 pour moitié ; elle gêne aussi les déplacements de Tsuneni.
+
+step: Un humanoïde à faible Volonté peut faire basculer le combat
+  do: Employer domination de personne, Volonté DD 22, et lui ordonner d'entraver ses alliés.
+  note: Une cible déjà menacée par Tsuneni ou ses alliés reçoit +5 à sa sauvegarde ; un ordre contraire à sa nature autorise une nouvelle sauvegarde.
+
+step: Plusieurs ennemis sont réunis dans un cône de 18 m
+  do: Employer cône de froid : 15d6 dégâts de froid, Réflexes DD 22 pour moitié.
+
+step: Une cible reste hors de portée du katana
+  do: Employer rayon polaire, ou tirer à l'arc ; choisir les flèches d'énergie brillante contre une armure, les flèches en adamantium dans les autres cas.
+  note: Les flèches d'énergie brillante ignorent armure et bouclier, mais pas l'armure naturelle ; elles ne blessent ni morts-vivants ni créatures artificielles.
+
+step: Les attaques corporelles deviennent trop dangereuses
+  do: Activer la forme du vide par une action rapide, devenir intangible et privilégier les pouvoirs magiques à distance.
+  note: Son équipement devient également intangible ; cette forme supprime les bonus d'armure et d'armure naturelle et les remplace par sa protection de parade. Ne pas conserver la CA 41 sous cette forme.
+
+## Repli
+
+step: La situation devient intenable, notamment sous 115 pv ou lorsque sa régénération est neutralisée
+  do: Employer téléportation suprême vers un refuge connu, puis attendre que la régénération rétablisse ses pv.
+  note: Pouvoir à volonté, limité à lui-même et 50 livres d'objets ; il doit tenir compte de cette limite pour son équipement.
+
+step: La téléportation ne permet pas de se soustraire à la poursuite
+  do: Employer changement de plan pour fuir si les déplacements planaires restent possibles ; sinon, utiliser le vol ou la forme du vide pour atteindre un abri.
+  note: Invisibilité à volonté aide à rompre le contact ; un effet qui bloque les déplacements planaires peut également empêcher cette fuite.

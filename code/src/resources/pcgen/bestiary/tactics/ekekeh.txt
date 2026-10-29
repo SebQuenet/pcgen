@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Ekekeh, fée aquatique de grande taille, neutre bonne, semblable à un dauphin à cornes ; intelligent, contemplatif et joueur, il privilégie la discussion si elle reste possible.
+  33 pv, CA 15 ; morsure +6 (1d8+1 plus 3d6 électricité), allonge 1,50 m ; éclair à distance ; nage à 24 m par action de mouvement.
+  RD 5/fer froid, immunité à l’électricité, résistance au froid 5 ; son bouclier bioélectrique punit les attaques de mêlée.
+
+resource: Éclair | 3/jour | NLS 5 ; ligne de 36 m, 5d6 électricité, Réflexes DD 14 pour moitié
+resource: Bouclier bioélectrique | à volonté | activation en action rapide, durée illimitée, désactivation en action libre
+resource: Main du mage | constant | manipulation de petits objets ; ne fournit aucune attaque supplémentaire
+
+step: Des étrangers approchent sans attaquer
+  do: Tenter le dialogue avec Diplomatie +10, en aquatique, en ekekeh ou en première langue
+  note: Garder un accès à l’eau ; Perception +9, perception de la vie, vision nocturne et vision dans le noir à 18 m permettent de surveiller les alentours.
+
+step: Une menace devient manifeste
+  do: Activer le bouclier bioélectrique et se placer dans l’eau si possible
+  note: Toute créature qui l’attaque avec une arme de mêlée ou une arme naturelle subit 3d6 électricité, Réflexes DD 15 pour moitié ; le déclenchement ne dépend pas d’une attaque réussie.
+
+note: Déplacement terrestre
+  La lévitation télékinétique permet de se déplacer à 6 m, à 3 m au plus au-dessus d’un sol ou d’une structure capable de porter son poids ; elle ne permet ni de longer une paroi verticale ni de survoler l’eau.
+
+## Ouverture
+
+step: Plusieurs ennemis sont alignés et aucun ne le menace au contact
+  do: Lancer éclair en évitant les alliés ; si nécessaire, nager pour obtenir une ligne dégagée avant de le lancer
+  note: Son initiative +7 favorise une attaque avant la dispersion des adversaires ; activer le bouclier en action rapide s’il est encore inactif.
+
+step: Un ennemi est à portée de morsure
+  do: Activer le bouclier s’il est inactif, puis mordre à +6 (1d8+1 plus 3d6 électricité)
+  note: Éviter de lancer éclair sous la menace d’une attaque d’opportunité.
+
+## Rounds suivants
+
+step: Une nouvelle ligne permet de toucher plusieurs ennemis sans exposer les alliés
+  do: Employer une utilisation restante d’éclair depuis une position hors de leur allonge
+
+step: Un adversaire reste au contact
+  do: Le mordre et maintenir le bouclier actif
+  note: Éviter l’encerclement : CA 15 et 33 pv ne permettent pas de subir longtemps des attaques concentrées, surtout avec des armes en fer froid.
+
+step: Les ennemis combattent depuis la rive
+  do: Rester dans l’eau, utiliser éclair si la portée le permet et changer de position à la nage
+  note: Ne rejoindre la terre ferme que si nécessaire : sa vitesse y tombe à 6 m.
+
+step: Un adversaire révèle une protection efficace contre l’électricité
+  do: Privilégier une autre cible menaçante ou préparer le repli
+  note: La morsure ne conserve que 1d8+1 dégâts physiques contre une cible immunisée à l’électricité.
+
+## Repli
+
+step: Points de vie à 10 ou moins, ou combat devenu manifestement défavorable
+  do: Se désengager puis nager vers les profondeurs, jusqu’à 48 m avec un double déplacement
+  note: Conserver le bouclier actif pendant la fuite ; un désengagement ne protège pas contre toutes les attaques d’opportunité si plusieurs ennemis barrent le passage.
+
+step: Le combat cesse ou une issue pacifique se présente
+  do: Accepter la cessation des hostilités, s’éloigner et désactiver le bouclier quand le danger est passé

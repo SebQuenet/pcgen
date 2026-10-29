@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Chitikin, vermine de taille G, neutre et sans intelligence : il combat à l’instinct, sans coordination élaborée.
+  32 pv ; CA 17 ; deux griffes +6 (1d6+4 chacune) et un dard +6 (1d6+4 et paralysie) ; allonge de 3 m.
+  Déplacement et escalade à 12 m ; vision dans le noir à 18 m ; Perception +2.
+  Immunisé aux effets mentaux ; ne peut pas être renversé ; compression pour franchir les passages étroits.
+
+step: Présence de parois praticables
+  do: Utiliser l’escalade pour rejoindre une position d’où atteindre les intrus avec son allonge de 3 m
+  note: Escalade +12 ; aucune attaque à distance
+
+## Ouverture
+
+step: Un ennemi est déjà à 3 m ou moins
+  do: Attaque à outrance : deux griffes +6 (1d6+4 chacune) et un dard +6 (1d6+4 et paralysie)
+
+step: Un ennemi est à plus de 3 m et à 15 m ou moins, avec un trajet praticable
+  do: Se déplacer de 12 m au maximum pour le mettre à portée, puis attaquer avec le dard +6 (1d6+4 et paralysie)
+  note: Après ce déplacement, il ne porte qu’une attaque ; privilégier le dard pour tenter de paralyser
+
+step: Aucun ennemi ne peut être atteint après un seul déplacement
+  do: Effectuer un double déplacement, jusqu’à 24 m, pour se rapprocher ; escalader si cela permet d’atteindre les adversaires
+
+## Rounds suivants
+
+step: Un ennemi reste à portée et le chitikin peut consacrer son round à attaquer
+  do: Répéter l’attaque à outrance avec les deux griffes et le dard
+  note: Le bloc fourni ne précise ni le DD ni la durée de la paralysie
+
+step: La cible est paralysée et un autre ennemi menace le chitikin à portée
+  do: Diriger ses attaques contre cet ennemi encore mobile
+  note: Réagir à la menace immédiate, sans choisir les cibles selon leur classe ou leurs pouvoirs
+
+step: Les ennemis quittent son allonge
+  do: Poursuivre à 12 m par déplacement ; utiliser le dard s’il peut attaquer après un seul déplacement
+  note: Compression permet d’emprunter un passage étroit ; l’escalade permet de poursuivre sur une paroi praticable
+
+## Repli
+
+step: Points de vie à 8 ou moins et voie de fuite accessible
+  do: Battre en retraite vers une paroi praticable ou un passage étroit, puis fuir grâce à l’escalade ou à compression
+  note: Déplacement et escalade à 12 m par déplacement ; double déplacement jusqu’à 24 m
+
+step: La fuite est impossible
+  do: Continuer à frapper l’ennemi à portée avec les deux griffes et le dard

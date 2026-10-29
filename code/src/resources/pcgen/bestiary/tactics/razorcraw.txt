@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Razorcraw, gargouille demi-fiélon, laisse ses gargouilles engager le combat et cherche à empoisonner une cible isolée ou prise en tenaille.
+  Double hache orque +1/+1 : +8 (1d8+5, x3 et poison) et +8 (1d8+3, x3 et poison) ; morsure +4 (1d4+2) ; cornes +4 (1d4+2 et poison).
+  47 pv ; CA 17 ; réduction des dégâts 10/magie ; immunité au poison ; résistances acide, froid, électricité et feu 10 ; résistance à la magie 17.
+  Déplacement terrestre 12 m ; vol 24 m, bonne manœuvrabilité ; allonge 1,50 m ; vision dans le noir 18 m ; initiative +7.
+
+resource: Poison de ver pourpre | 6 doses | 3 doses appliquées avant le combat, 3 en réserve ; DD et effets non précisés dans le bloc
+resource: Ténèbres | 3/jour | Pouvoir magique, NLS 5
+resource: Profanation | 1/jour | Pouvoir magique, NLS 5 ; aucun mort-vivant indiqué à soutenir
+resource: Ténèbres maudites | 1/jour | Pouvoir magique, DD 14, NLS 5
+resource: Anneau de contresorts | 1 sort emmagasiné | Cône de froid
+
+step: Les PJ ouvrent le puits de la zone 2
+  do: Enduire séparément les deux lames de la double hache et les cornes avec une dose de poison chacune
+  note: Garder les trois autres doses en réserve ; la morsure ne porte pas de poison
+
+step: Il peut attendre immobile dans un environnement pierreux
+  do: Utiliser immobilité pour se faire passer pour une statue et observer les intrus
+  note: Discrétion +17 en milieu pierreux, +13 ailleurs ; Perception +9
+
+## Ouverture
+
+step: Ses gargouilles peuvent engager les intrus
+  do: Les laisser attaquer en premier et guetter un PJ qui s'éloigne du groupe
+  note: Sa tactique privilégie l'isolement ; il laisse ses serviteurs mener l'assaut aérien
+
+step: Un PJ se sépare de ses alliés
+  do: Fondre sur lui en volant, se placer à 1,50 m et porter une attaque avec la lame à +8 infligeant 1d8+5 et le poison si elle est encore enduite
+  note: Après un déplacement, porter une seule attaque ; aucune attaque au passage ne lui permet de repartir gratuitement
+
+step: Aucun PJ ne s'isole
+  do: Rejoindre une gargouille pour prendre un combattant en tenaille et l'attaquer avec une lame empoisonnée
+  note: Choisir une position qui permette de maintenir la prise en tenaille au round suivant
+
+## Rounds suivants
+
+step: Sa cible reste à portée et une attaque à outrance est possible
+  do: Porter les deux attaques de double hache à +8, la morsure à +4 et le coup de cornes à +4
+  note: Dégâts respectifs : 1d8+5, 1d8+3, 1d4+2 et 1d4+2 ; les lames ont un critique x3
+  note: Concentrer les attaques sur la même cible, avec la prise en tenaille si possible ; suivre séparément le poison restant sur chaque lame et sur les cornes
+
+step: Sa cible rejoint ses alliés ou sort de sa portée
+  do: Se replacer avec une gargouille pour rétablir une prise en tenaille, ou rejoindre une nouvelle cible isolée
+  note: Un déplacement suivi d'une attaque ne permet pas la série complète de quatre attaques
+
+step: Plusieurs adversaires sont groupés et il peut épargner ses alliés
+  do: Employer ténèbres maudites, DD 14, à la place de ses attaques de mêlée
+  note: Une seule utilisation par jour
+
+step: Une surface n'est plus empoisonnée et il dispose d'un répit
+  do: Consacrer une dose de réserve à cette lame ou aux cornes avant de reprendre l'assaut
+  note: Ne pas compter les six doses comme six empoisonnements automatiques ; chaque surface doit encore porter du poison lors de la touche
+
+step: Une baisse de lumière peut gêner les adversaires
+  do: Employer ténèbres pour couvrir un changement de position ou préparer la fuite
+  note: Sa vision dans le noir ne lui donne pas un avantage contre un adversaire qui possède la même faculté
+
+## Repli
+
+step: Il tombe sous 15 pv et une voie de fuite paraît praticable
+  do: Rompre le combat et fuir en volant, avec un déplacement de 24 m ou un double déplacement de 48 m
+  note: S'il est menacé au contact, privilégier le retrait pour limiter les attaques d'opportunité
+
+step: Il tombe sous 15 pv et la fuite ne paraît pas possible
+  do: Se rendre
+  note: Le seuil de reddition est strictement inférieur à 15 pv

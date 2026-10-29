@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Jolanera est une morte-vivante ailée gigantesque, extraplanaire, chaotique mauvaise et très intelligente. Elle cherche à tuer vite pour alimenter un conduit d'âmes.
+  241 pv ; CA 32 ; résistance à la magie 28 ; réduction des dégâts 15/Bien et argent ; immunité au froid et traits des morts-vivants. La lumière peut la rendre fiévreuse.
+  Morsure +28, allonge 6 m : 4d12+25 dégâts, plus 4d6 de froid et absorption de magie. Déplacement au sol 9 m, vol 18 m avec une bonne manœuvrabilité ; aura de profanation sur 9 m.
+  Détection de la magie et croc magique sont constants. Ténèbres profondes, ténèbres maudites et contagion sont utilisables à volonté ; les deux derniers ont un DD de 21.
+
+resource: Convocation de 5 ombres suprêmes | 1/jour | pouvoir de convocation de niveau 7
+resource: Rapidité | 3/jour | sur elle-même et ses ombres
+resource: Confusion | 3/jour | Volonté DD 21
+resource: Ancre dimensionnelle | 3/jour | attaque de contact à distance
+resource: Dissipation suprême | 3/jour | niveau de lanceur de sorts 17
+resource: Immobilisation de monstre | 3/jour | Volonté DD 22
+resource: Cône de froid | 1/jour | Réflexes DD 22
+resource: Doigt de mort | 1/jour | Vigueur DD 24
+resource: Changement de plan | 1/jour | conserver si possible pour le repli ; DD 24 contre une cible non consentante
+
+step: Un adversaire potentiellement dangereux approche
+  do: Convoquer ses cinq ombres suprêmes, puis lancer rapidité sur elle-même et sur elles avant de se montrer
+  note: Ces préparatifs demandent des actions successives. Communiquer ses consignes aux ombres par télépathie, à 30 m au maximum.
+
+step: Un conduit d'âmes est accessible
+  do: Attirer les vivants dans sa zone avant d'engager le combat
+  note: Privilégier les victimes physiquement fragiles ou convoquées si elle estime que leurs âmes pourront alimenter le conduit.
+
+step: Elle peut choisir son approche
+  do: Se dissimuler dans la pénombre ou l'obscurité, avec Discrétion +25, et préparer une approche aérienne
+  note: Employer ténèbres profondes pour assombrir le terrain si cela permet d'atténuer la lumière qui la gêne.
+
+## Ouverture
+
+step: Un vivant fragile constitue une victime immédiate
+  do: Lancer doigt de mort sur lui, Vigueur DD 24
+  note: Chercher une mort rapide dans la zone du conduit ; employer ses ombres pour occuper l'adversaire le plus dangereux.
+
+step: Plusieurs adversaires dangereux restent regroupés et aucune victime immédiate ne s'offre à elle
+  do: Lancer confusion sur le groupe, Volonté DD 21
+  note: Profiter de leur désorganisation pour atteindre une cible vulnérable ; ne pas attendre qu'ils se dispersent pour employer ce pouvoir.
+
+step: Une cible vulnérable est déjà à portée de morsure
+  do: La mordre ; si elle peut effectuer une attaque à outrance sous rapidité, porter deux morsures à +29 chacune
+  note: Sans rapidité, sa morsure reste à +28. Une approche avec déplacement ne lui donne pas les deux morsures de l'attaque à outrance.
+
+## Rounds suivants
+
+step: Une victime est blessée ou isolée
+  do: Concentrer les morsures sur elle jusqu'à sa mort, en gardant les adversaires dans son allonge de 6 m
+  note: Envoyer les ombres harceler ensemble un adversaire dangereux ou menacer une créature vulnérable aux côtés de Jolanera.
+
+step: Un adversaire doit être neutralisé avant d'être achevé
+  do: Lancer immobilisation de monstre, Volonté DD 22
+  note: Exploiter ensuite la paralysie pour l'attaquer ; la cible peut obtenir de nouveaux jets de sauvegarde, donc agir rapidement.
+
+step: Une cible est paralysée ou maintenue sous pression, surtout dans une zone à dominante négative
+  do: Lui lancer ancre dimensionnelle lors d'un round ultérieur pour empêcher sa fuite par téléportation ou déplacement planaire
+  note: L'ancre nécessite une attaque de contact à distance ; les ombres continuent à distraire les autres adversaires.
+
+step: Des protections magiques empêchent de tuer rapidement
+  do: Employer dissipation suprême sur la cible protégée, puis reprendre les attaques
+  note: Détection de la magie et Art de la magie +30 l'aident à examiner les effets qu'elle peut identifier.
+
+step: Plusieurs ennemis peuvent être pris dans un même cône
+  do: Employer cône de froid, Réflexes DD 22, en épargnant autant que possible ses alliés
+
+step: Des ennemis restent groupés hors de portée de morsure
+  do: Employer ténèbres maudites, DD 21, et se rapprocher par les airs
+  note: Ce pouvoir est à volonté ; ajuster son choix si l'alignement des victimes réduit son efficacité.
+
+step: Au moins trois adversaires sont adjacents entre eux et à portée
+  do: Envisager Succession d'enchaînements pour en mordre plusieurs avec une action simple
+  note: Chaque nouvelle attaque exige que la précédente touche ; cette option impose un malus de 2 à la CA jusqu'à son prochain tour.
+
+step: Une cible de taille M ou inférieure est touchée par sa morsure
+  do: Employer Capture pour tenter de la saisir avec son BMO de +35, si la retenir sert une mise à mort rapide
+  note: Contre un objet dont dépend un ennemi, elle dispose aussi d'un BMO de destruction de +39 ; privilégier cette manœuvre si briser l'objet débloque le combat.
+
+## Repli
+
+step: Elle tombe à 56 pv ou moins tout en étant fiévreuse à cause de la lumière
+  do: Rompre le combat pour se regrouper ; ordonner aux ombres encore présentes de distraire les poursuivants et gagner une zone sombre par les airs
+  note: Utiliser ténèbres profondes si ce pouvoir peut atténuer l'éclairage. Sous rapidité, sa vitesse de vol atteint 27 m ; sinon, elle vole à 18 m.
+
+step: La fuite aérienne reste compromise et changement de plan est disponible
+  do: Employer changement de plan sur elle-même pour quitter les lieux et préparer son retour

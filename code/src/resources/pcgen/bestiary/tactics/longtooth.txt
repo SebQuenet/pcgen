@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Longtooth, dragon rouge juvénile de taille G, chaotique mauvais, participe au raid ; 149 pv, CA 29 avec armure de mage.
+  Morsure +22 (2d6+9, critique 19–20), 2 griffes +22 (1d8+9), ailes +16 (1d6+5), queue +16 (1d8+5). Allonge de 1,50 m, ou 3 m avec la morsure.
+  Déplacement terrestre de 12 m, vol de 60 m avec une manœuvrabilité médiocre ; perception aveugle à 18 m et vision dans la fumée.
+  Immunisé au feu, à la paralysie et au sommeil ; vulnérable au froid.
+
+resource: Sorts de niveau 1 | 6/jour au total | réserve commune à armure de mage, rayon affaiblissant et coup au but ; 5 restent après l'armure préparatoire
+resource: Pyrotechnie | à volonté | pouvoir magique, NLS 13, DD 14 ; nécessite un feu existant
+
+step: Avant de rejoindre le raid en vol
+  do: Lancer armure de mage, puis descendre vers les lieux du combat
+  note: Le bonus d'armure est déjà compris dans la CA 29 ; ne pas l'ajouter une seconde fois.
+
+## Ouverture
+
+step: Premier assaut à 36 m ou moins des ennemis
+  do: Déclencher la présence terrifiante en attaquant ou en chargeant
+  note: Volonté DD 18 ; profiter de la dispersion des adversaires pour isoler une cible.
+
+step: Un adversaire semble capable de lui infliger de lourds dégâts physiques
+  do: Lancer rayon affaiblissant sur lui avant de s'engager au contact
+  note: Privilégier un combattant dont la puissance dépend de la Force ; ce sort et une attaque à outrance demandent des rounds distincts.
+
+step: Il est contraint de combattre au corps à corps et dispose encore de sorts
+  do: Lancer coup au but pour préparer l'assaut du round suivant
+  note: Ce sort ne donne pas une attaque supplémentaire pendant le round de lancement.
+
+## Rounds suivants
+
+step: Coup au but est actif et une cible est à portée
+  do: Activer Attaque en puissance et commencer par la morsure ; poursuivre avec les autres attaques si une attaque à outrance est possible
+  note: Le bonus de coup au but ne s'applique qu'à la première attaque ; concentrer les coups sur le même adversaire.
+
+step: Un ennemi reste au contact et aucun déplacement important n'est nécessaire
+  do: Faire une attaque à outrance : morsure, deux griffes, ailes et queue
+  note: Employer Attaque en puissance contre une cible facile à toucher ; conserver les bonus d'attaque normaux si sa défense est élevée.
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Se déplacer, puis porter une morsure avec Frappe décisive
+  note: Frappe décisive s'emploie avec l'action d'attaque ; elle ne s'ajoute ni à une charge ni à une attaque à outrance.
+
+step: Un feu existant permet de gêner les tireurs ou de masquer son approche
+  do: Utiliser pyrotechnie pour produire de la fumée, puis exploiter sa vision dans la fumée
+  note: DD 14 pour les effets du pouvoir ; prévoir la gêne que la fumée peut aussi causer aux autres assaillants.
+
+step: Il doit rester sur place en vol
+  do: Utiliser Vol stationnaire pour maintenir sa position
+  note: Sa vitesse aérienne ne permet pas d'enchaîner déplacement, attaque à outrance et éloignement dans le même round.
+
+step: Une source de dégâts de froid se révèle
+  do: Chercher à neutraliser son utilisateur ou à se mettre hors de sa ligne de vue
+  note: Son immunité au feu ne protège pas contre sa vulnérabilité au froid.
+
+## Repli
+
+step: Points de vie strictement inférieurs à 50
+  do: Abandonner immédiatement le raid et fuir en vol vers Jorgenfist, où il se réfugie en zone A5 pour panser ses blessures
+  note: Utiliser sa vitesse de vol de 60 m pour prendre de la distance ; ne pas retarder la fuite pour achever une cible.

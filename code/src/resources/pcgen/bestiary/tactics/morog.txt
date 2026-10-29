@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Morog, troll mâle à deux têtes, humanoïde géant de taille G, chaotique mauvais, FP 7. Combattant de mêlée brutal : 85 PV, CA 19, déplacement de 9 m, espace occupé de 3 m et allonge de 3 m.
+  Deux cimeterres de maître : chacun +12/+7 (1d8+5, critique 18–20), accompagnés de deux morsures +6 (1d8+2).
+  Sans ses cimeterres : deux morsures +11 (1d8+5) et deux griffes +11 (1d6+5).
+
+resource: Régénération | permanente | récupère 5 PV par round ; des dégâts d'acide ou de feu interrompent la régénération pendant le round suivant
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +14, l'odorat, la vision nocturne et la vision dans le noir à 27 m ; garder ses deux cimeterres en main
+  note: Privilégier une position où son allonge permet de frapper les arrivants avant qu'ils ne soient au contact ; il parle le géant.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Faire une attaque à outrance : quatre coups de cimeterre, +12/+7 avec chaque arme, puis deux morsures +6
+  note: Concentrer les attaques sur une même cible pour la mettre hors de combat rapidement.
+
+step: Un adversaire peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer pour le placer dans son allonge de 3 m, puis porter un seul coup de cimeterre +12 (1d8+5, critique 18–20)
+  note: Après un déplacement ordinaire, il ne porte pas toute sa série d'attaques.
+
+step: Aucun adversaire n'est accessible après un seul déplacement
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour rejoindre la mêlée en utilisant les couverts disponibles
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Répéter l'attaque à outrance aux deux cimeterres et aux deux morsures ; faire au besoin un pas de placement de 1,50 m
+  note: Achever d'abord une cible blessée ; donner la priorité à un utilisateur de feu ou d'acide s'il est à portée.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts ; la désactiver contre une défense trop élevée
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter un coup de cimeterre +12 (1d8+5, critique 18–20)
+  note: Il dispose d'une seule attaque d'opportunité par round ; ses deux têtes ne lui en donnent pas davantage.
+
+step: Morog a perdu ses deux cimeterres
+  do: Combattre à outrance avec deux morsures +11 (1d8+5) et deux griffes +11 (1d6+5)
+
+step: Une cible visible à 9 m ou moins peut l'entendre, mais reste inaccessible à la mêlée
+  do: Utiliser Intimidation +10 pour la démoraliser, au prix d'une action simple
+  note: Réserver cette option aux rounds où il ne peut pas frapper ; intimider ne remplace pas avantageusement ses six attaques.
+
+## Repli
+
+step: Points de vie sous 25 et adversaires capables de lui infliger du feu ou de l'acide
+  do: Se désengager jusqu'à 18 m vers un couvert qui coupe leurs lignes d'attaque
+  note: Son allonge et sa régénération l'encouragent à insister, mais les dégâts de feu ou d'acide rendent une poursuite du combat particulièrement dangereuse.
+
+step: Morog est hors d'atteinte et ne subit plus de feu ni d'acide
+  do: Rester à couvert et laisser sa régénération restaurer ses PV, jusqu'à son maximum de 85, avant de revenir au combat
+  note: La régénération active empêche sa mort, mais il tombe inconscient sous 0 PV ; elle ne lui permet donc pas de continuer à combattre sans limite.

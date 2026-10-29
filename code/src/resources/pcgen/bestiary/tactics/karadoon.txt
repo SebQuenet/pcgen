@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Karadoon, griffon demi-fiélon de grande taille, extérieur natif neutre mauvais. Prédateur volant : 47 pv, CA 20, déplacement terrestre de 9 m et vol de 18 m, avec une bonne manœuvrabilité.
+  Morsure +10 (1d6+5) et deux serres +9 (1d6+5 chacune) en attaque à outrance ; allonge de 1,50 m. Il cherche une cible isolée qu'il peut maintenir au contact.
+
+note: Défenses
+  Réduction des dégâts 5/magie, résistance à la magie 17, immunité au poison ; résistances à l'acide, au froid, à l'électricité et au feu de 10 chacune.
+  Ces protections lui permettent d'encaisser les premières ripostes ; ses 47 pv imposent de surveiller les blessures dès que les attaques les franchissent.
+
+resource: Ténèbres | 3/jour | NLS 5 ; objet touché, rayon de 6 m, durée de 5 minutes ; abaisse l'éclairage d'un degré.
+resource: Ténèbres maudites | 1/jour | NLS 5 ; portée de 45 m, rayon de 6 m ; Volonté DD 14, résistance à la magie applicable.
+resource: Profanation | 1/jour | NLS 5 ; rayon de 6 m, durée de 10 heures ; renforce les morts-vivants, sans bonus personnel pour Karadoon.
+
+step: Il repère des intrus avant d'être engagé
+  do: Observer depuis une position en hauteur et choisir une approche vers un adversaire isolé.
+  note: Perception +17 ; vision dans le noir à 18 m et vision nocturne.
+
+step: Le lieu est normalement ou faiblement éclairé et il dispose d'un round de préparation
+  do: Lancer ténèbres sur un objet du terrain près de sa position d'embuscade.
+  note: Sa vision dans le noir lui permet de voir dans cette zone. Les ennemis sans cette vision subissent le camouflage correspondant ; en pleine lumière, ce pouvoir ne crée qu'un éclairage normal.
+
+## Ouverture
+
+step: Plusieurs adversaires sont regroupés à portée et ténèbres maudites est disponible
+  do: Lancer ténèbres maudites sur le groupe depuis une position hors de portée de mêlée.
+  note: Les créatures bonnes subissent 2d8 dégâts et sont fiévreuses pendant 1d4 rounds ; Volonté DD 14 réduit les dégâts de moitié et annule cet état. Les extérieurs bons subissent 5d6 dégâts à la place.
+  note: Les créatures neutres sur l'axe bien-mal subissent la moitié des dégâts, encore réduite de moitié sur une sauvegarde réussie, sans état fiévreux ; les créatures mauvaises sont indemnes.
+
+step: Il n'utilise pas de pouvoir ce round et une cible est accessible en un déplacement
+  do: Voler jusqu'au contact de la cible choisie, puis porter une morsure +10 (1d6+5).
+  note: Après ce déplacement, il effectue une seule attaque ; il reste au contact pour préparer l'attaque à outrance du round suivant.
+
+## Rounds suivants
+
+step: Une cible est à 1,50 m et il peut consacrer le round à ses attaques
+  do: Effectuer une attaque à outrance : morsure +10 (1d6+5), puis deux serres +9 (1d6+5 chacune), en concentrant les coups sur la même cible.
+
+step: La cible s'éloigne ou devient difficile à atteindre
+  do: Utiliser son vol de 18 m pour rejoindre un adversaire plus accessible, puis porter une morsure si une action simple reste disponible.
+  note: Un pas de placement de 1,50 m au sol permet aussi d'ajuster sa position tout en conservant l'attaque à outrance.
+
+step: Des adversaires sans vision dans le noir peuvent être attirés dans sa zone de ténèbres
+  do: Se placer dans cette zone et y poursuivre le combat au contact.
+  note: Il garde l'avantage de sa vision jusqu'à 18 m ; les ténèbres ne le protègent pas des ennemis capables d'y voir.
+
+## Repli
+
+step: Ses points de vie tombent à 15 ou moins
+  do: Rompre le contact par une retraite en vol, jusqu'à 36 m si la trajectoire le permet, puis poursuivre la fuite en altitude ou vers un obstacle qui coupe la vue.
+  note: La retraite protège seulement contre les attaques d'opportunité dues à la sortie des cases initiales ; choisir un trajet qui évite les autres ennemis.
+
+step: Il a rompu le contact, mais reste poursuivi et dispose encore de ténèbres
+  do: Si l'éclairage s'y prête, lancer ténèbres sur un objet du terrain à un passage étroit, puis poursuivre sa fuite grâce à sa vision dans le noir.
+  note: Ce détour gêne surtout les poursuivants dépourvus de vision dans le noir ; sa priorité reste de gagner de la distance en vol.

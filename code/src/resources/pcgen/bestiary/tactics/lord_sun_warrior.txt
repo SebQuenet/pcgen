@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Lord Sun-Warrior, couatl loyal bon de taille G, FP 15 : protecteur intelligent qui privilégie la négociation, puis le combat aérien et les sorts à distance.
+  230 pv, CA 28 ; immunisé aux effets mentaux. Vol à 18 m, déplacement terrestre à 6 m, allonge de 3 m ; télépathie à 30 m.
+  Morsure +26 (2d6+10, étreinte et poison), BMO de lutte +32. Ses principales frappes magiques sont éclair multiple, colonne de feu et rayon ardent ; ses sorts sont lancés au NLS 12.
+
+resource: Sorts de niveau 6 | 4/jour | réserve pour éclair multiple, Réflexes DD 22 sur la cible principale
+resource: Sorts de niveau 5 | 6/jour | réserve commune à colonne de feu, Réflexes DD 21, et souffle de vie
+resource: Sorts de niveau 4 | 7/jour | réserve commune à liberté de mouvement, charme-monstre, mission et aux sorts de niveau 2 avec Extension d'effet
+resource: Sorts de niveau 3 | 7/jour | réserve commune à cercle magique contre le Mal, immobilisation de personne, convocation de monstres III et état gazeux
+resource: Sorts de niveau 2 | 8/jour | réserve commune à poussière scintillante, rayon ardent, silence, soins modérés et splendeur de l'aigle
+resource: Sorts de niveau 1 | 8/jour | réserve commune à armure de mage, brume de dissimulation, protection contre le Chaos, coup au but et endurance aux énergies destructives
+resource: Pouvoirs magiques | à volonté | invisibilité, modification d'apparence, détection de pensées (Volonté DD 18), passage dans l'éther (NLS 18), changement de plan (Volonté DD 23 si cible réticente)
+resource: Souhait | 1/an | NLS 20 ; conserver pour une urgence exceptionnelle
+
+step: Des inconnus approchent sans hostilité manifeste
+  do: Observer avec Perception +32 et les détections d'alignement constantes ; proposer le dialogue par télépathie avec Diplomatie +29
+  note: Psychologie +32 et détection de pensées aident à évaluer leurs intentions ; une aura d'alignement ne suffit pas à justifier une attaque.
+
+step: Il dispose de temps pour se préparer
+  do: Lancer armure de mage, puis liberté de mouvement ; ajouter cercle magique contre le Mal si les ennemis le justifient
+  note: Armure de mage porte sa CA à 32 pendant 12 heures ; liberté de mouvement dure 120 minutes. Décompter chaque sort de sa réserve quotidienne.
+
+step: Le combat paraît imminent
+  do: Activer invisibilité et prendre de la hauteur avec une voie de dégagement dégagée
+  note: L'invisibilité cesse dès sa première action offensive ; les préparatifs demandent chacun leur action.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être frappés sans mettre les innocents en danger
+  do: Lancer éclair multiple sur l'adversaire prioritaire et choisir les autres ennemis à 9 m ou moins de cette cible
+  note: 12d6 d'électricité par cible ; Réflexes DD 22 pour la cible principale, DD diminué de 2 pour les secondaires, moitié des dégâts en cas de réussite. Les alliés peuvent être exclus.
+
+step: Une créature invisible ou plusieurs adversaires doivent être neutralisés avant les dégâts
+  do: Lancer poussière scintillante sur leur emplacement présumé, en évitant les alliés
+  note: Rayon de 3 m ; révèle les créatures invisibles et peut aveugler, Volonté DD 18. Les victimes aveuglées peuvent retenter leur sauvegarde à la fin de leur tour.
+
+## Rounds suivants
+
+step: Il peut garder ses distances
+  do: Utiliser Attaque en vol pour avancer, lancer un sort exigeant une action simple, puis terminer son déplacement, sur un total de 18 m
+  note: Terminer hors d'allonge des combattants ; ce don ne supprime pas les attaques d'opportunité provoquées par le déplacement ou l'incantation.
+
+step: Plusieurs ennemis restent regroupés et la zone épargne les alliés
+  do: Lancer colonne de feu dans un rayon de 3 m, surtout si l'électricité est inefficace
+  note: 12d6, Réflexes DD 21 pour moitié ; la moitié des dégâts est du feu, l'autre moitié échappe à la résistance au feu. Garder au moins un emplacement de niveau 5 pour un sauvetage.
+
+step: Une cible isolée menace ses protégés
+  do: Lancer rayon ardent et concentrer les trois rayons sur elle, à 16,50 m ou moins
+  note: Chaque rayon nécessite une attaque de contact à distance et inflige 4d6 de feu. À l'abri, Extension d'effet augmente les dégâts de moitié : emplacement de niveau 4 et action complexe, incompatible avec Attaque en vol.
+
+step: Un lanceur de sorts adverse dépend de composantes verbales
+  do: Lancer silence sur un point fixe de son emplacement, en gardant ses propres alliés lanceurs de sorts hors de la zone
+  note: Rayon de 6 m ; une zone fixe évite de cibler directement la créature, mais celle-ci peut en sortir. Le temps d'incantation est de 1 round : anticiper sa position.
+
+step: Un adversaire de taille G ou inférieure arrive à portée et peut être maîtrisé sans exposer le couatl au groupe entier
+  do: Mordre à +26, infliger 2d6+10 et le poison, puis tenter gratuitement l'étreinte à +32
+  note: Aux rounds suivants, maintenir la lutte pour immobiliser la cible ou lui infliger les dégâts de morsure. Pour une simple passe de harcèlement, renoncer à l'étreinte et terminer le déplacement.
+
+step: Un allié vient de mourir ou risque de tomber
+  do: Rejoindre l'allié et lancer souffle de vie au contact ; donner priorité au mort du round précédent
+  note: Rend 5d8+12 pv ; peut ramener une créature morte depuis 1 round au maximum si ses pv remontent au-dessus de son seuil de mort. Ne fonctionne pas contre une mort causée par un effet de mort.
+
+step: Les ennemis se rendent ou cessent le combat
+  do: Suspendre les attaques et négocier leur désarmement et la protection des innocents
+
+## Repli
+
+step: Ses points de vie passent sous 70 ou il risque d'être encerclé
+  do: Activer passage dans l'éther, puis s'éloigner à travers les obstacles pour quitter la ligne de combat
+  note: Le pouvoir dure 18 rounds et demande une action simple ; depuis l'éther, il ne peut plus frapper les adversaires matériels.
+
+step: Les poursuivants peuvent encore le menacer ou la position est perdue
+  do: Utiliser changement de plan vers un refuge connu ; emmener des alliés consentants s'ils peuvent se réunir au contact
+  note: L'arrivée manque de précision : choisir une destination où un écart ne compromet pas le sauvetage.
+
+step: Il est hors de danger immédiat
+  do: Utiliser soins modérés pour récupérer, puis réévaluer la protection des survivants avant de revenir
+  note: Chaque lancement rend 2d8+10 pv et consomme un emplacement de niveau 2.

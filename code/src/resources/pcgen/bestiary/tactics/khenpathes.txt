@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Khenpathes, goule de poussière d'os de taille P, mort-vivant neutre mauvais, FP 15, sert Hakotep avec fanatisme. Intelligent et furtif, il affaiblit ses ennemis par ses pouvoirs avant de risquer le contact.
+  178 pv ; CA 17, contact 17 ; initiative +9 ; déplacement 9 m ; vision dans le noir 18 m ; Perception +22 ; Discrétion +30 et discrétion totale.
+  Morsure +18 à 1,50 m : 1d6 dégâts, plus 1d3 de Force et paralysie. Ses armes principales sont le tourbillon d'os, la poussière funéraire et les rayons d'énergie négative à effet renforcé.
+  Corps amorphe, résistance à la canalisation +4 et immunités des morts-vivants ; sa faible CA encourage les attaques à distance et les changements de position.
+
+resource: Énergie négative à effet renforcé | 3/jour | pouvoir magique, NLS 17
+resource: Cécité/surdité | 3/jour | Vigueur DD 18
+resource: Absorption d'énergie | 1/jour | DD 25
+resource: Contact glacial | à volonté | DD 17
+resource: Rayon affaiblissant | à volonté | Vigueur DD 17
+resource: Ténèbres profondes | à volonté | contrôler la visibilité
+resource: Dissipation de la magie | à volonté | NLS 17
+
+step: Les intrus approchent
+  do: Attendre sous forme poussiéreuse et utiliser Discrétion +30 pour préparer l'embuscade
+  note: Repérer les lanceurs de sorts, les combattants puissants et les protections magiques visibles avant de choisir ses cibles.
+
+## Ouverture
+
+step: L'assaut commence sous forme poussiéreuse
+  do: Déclencher son tourbillon d'os contre les intrus
+  note: Chercher à toucher plusieurs adversaires ; c'est son attaque d'ouverture prévue.
+
+step: Le tourbillon a été utilisé
+  do: Expulser sa poussière funéraire dans la zone E17
+  note: Respecter cette succession d'attaques sans présumer qu'elles tiennent toutes dans un même round.
+
+step: La poussière funéraire a été répandue
+  do: Tirer un rayon d'énergie négative à effet renforcé sur l'adversaire vivant le plus dangereux qu'il puisse viser
+  note: Privilégier un lanceur de sorts ou un combattant qui menace directement sa position.
+
+## Rounds suivants
+
+step: Des adversaires restent exposés à ses attaques
+  do: Poursuivre avec ses pouvoirs magiques, en alternant de nouvelles expulsions de poussière funéraire et les utilisations restantes d'énergie négative à effet renforcé
+  note: Concentrer les rayons sur une cible dangereuse déjà affaiblie pour accélérer sa neutralisation.
+
+step: Une cible prioritaire reste dangereuse et l'absorption d'énergie est disponible
+  do: Employer absorption d'énergie contre elle
+  note: Garder cette utilisation pour un adversaire dont la neutralisation peut décider du combat ; DD 25 selon le profil.
+
+step: Un combattant dépendant de sa Force progresse vers lui
+  do: Employer rayon affaiblissant, puis se déplacer pour maintenir la distance
+  note: Vigueur DD 17 ; utiliser ses 9 m de déplacement pour éviter l'encerclement.
+
+step: Un adversaire dépend de sa vue et peut être pris pour cible
+  do: Tenter cécité avec cécité/surdité
+  note: Vigueur DD 18 ; décompter l'utilisation parmi les trois disponibles.
+
+step: Une protection magique identifiable gêne ses pouvoirs
+  do: Tenter une dissipation de la magie ciblée avant de reprendre ses attaques
+  note: Ce pouvoir est disponible à volonté, au NLS 17.
+
+step: Réduire l'éclairage gênerait les ennemis davantage que Khenpathes
+  do: Employer ténèbres profondes et changer de position
+  note: Sa vision dans le noir porte à 18 m ; vérifier l'éclairage obtenu avant de compter sur elle pour viser.
+
+step: Une morsure est possible et un passage reste libre
+  do: Utiliser Attaque éclair pour approcher, mordre à +18, puis poursuivre son déplacement hors du contact
+  note: Parcours total maximal de 9 m ; privilégier une cible isolée. La morsure inflige 1d6 dégâts, plus 1d3 de Force et paralysie.
+
+## Repli
+
+step: Ses points de vie baissent ou ses pouvoirs limités sont épuisés
+  do: Continuer le combat avec ses pouvoirs à volonté, sa poussière funéraire et sa morsure selon les possibilités
+  note: Khenpathes ne fuit pas et ne se rend pas. Sa dévotion à Hakotep le pousse à combattre jusqu'à sa destruction totale ; ses déplacements servent à poursuivre l'assaut.

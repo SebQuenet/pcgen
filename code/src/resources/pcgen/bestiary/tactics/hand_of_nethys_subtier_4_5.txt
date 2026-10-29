@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Main rampante géante, mort-vivant de taille M, peu intelligent ; 52 PV, CA 19.
+  Griffe +11 (1d6+7 et étreinte), lutte +14 ; déplacement de 9 m, allonge de 1,50 m.
+  Perception aveugle à 9 m, vision dans le noir à 18 m, Perception +7 ; immunités des morts-vivants.
+
+## Ouverture
+
+step: Une créature est accessible au corps à corps
+  do: Se déplacer au besoin de 9 m au maximum, puis attaquer avec la griffe +11 (1d6+7).
+  note: La créature attaquée devient sa proie ; concentrer les attaques suivantes sur elle. Cette désignation ne donne aucun bonus chiffré indiqué dans le profil.
+  note: Si la griffe touche et que la taille de la cible permet l'étreinte, tenter aussitôt une lutte gratuite à +14, sans attaque d'opportunité.
+
+step: Aucune créature ne peut être attaquée après un déplacement simple
+  do: Se rapprocher pour atteindre le corps à corps ; un double déplacement permet de parcourir 18 m.
+
+## Rounds suivants
+
+step: La proie est agrippée
+  do: Maintenir la lutte avec un test à +14 ; en cas de réussite, lui infliger les dégâts de griffe, 1d6+7.
+  note: Le maintien bénéficie du bonus de circonstances de +5 si la proie n'a pas rompu la lutte depuis le tour précédent. Maintenir et blesser prend l'action simple ; ne pas ajouter une attaque de griffe séparée.
+
+step: La proie est libre et à portée
+  do: L'attaquer avec la griffe +11 (1d6+7), puis tenter l'étreinte si elle est applicable.
+
+step: La proie s'éloigne
+  do: La poursuivre à 9 m par déplacement et reprendre les attaques dès qu'elle revient à portée de 1,50 m.
+  note: Garder la même proie tant qu'elle peut encore être combattue ; ne pas disperser les attaques entre les adversaires.
+
+## Repli
+
+step: Quel que soit son total de points de vie
+  do: Continuer le combat jusqu'à la destruction, sans chercher à fuir.

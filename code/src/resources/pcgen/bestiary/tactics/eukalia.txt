@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Eukalia, reine fongique chaotique mauvaise, est une plante extraplanaire intelligente qui privilégie l'embuscade, les enchantements et les attaques par sporopodes. Elle ne vient au contact que si nécessaire.
+  114 pv ; CA 23 ; déplacement 6 m ; allonge 1,50 m. Attaque à outrance : 2 griffes +14 (1d6+5) et 4 tentacules +12 (1d4+2 et étreinte, BMO de lutte +18).
+  RD 10/fer froid ou Bien ; RM 20 ; immunité à l'électricité et immunités des plantes ; résistance à l'acide 10 et au froid 10.
+
+resource: Voile | à volonté | sur elle-même uniquement ; Volonté DD 23 pour reconnaître l'illusion en interagissant avec elle
+resource: Détection du Bien et don des langues | constants | repérage des auras bonnes et communication
+resource: Charme-monstre | 3/jour | Volonté DD 21
+resource: Détection de pensées | 3/jour | Volonté DD 19
+resource: Suggestion | 3/jour | Volonté DD 19
+resource: Domination de personne | 1/jour | humanoïde uniquement ; Volonté DD 22
+resource: Brume mentale | 1/jour | Volonté DD 22 ; les victimes affectées subissent -10 aux tests de Sagesse et aux jets de Volonté
+resource: Lenteur | 1/jour | Volonté DD 20 ; durée 9 rounds
+resource: Sporopodes | 7 simultanément au maximum | création par une action simple, sur le sol à 18 m au plus ; chaque sporopode est immobile, CA 15, 20 pv
+
+step: Les intrus approchent de son territoire
+  do: Se dissimuler à la vue de tous grâce à voile et observer leur progression ; Déguisement +25, Bluff +19.
+  note: Détection de pensées peut l'aider à sonder leurs intentions avant l'affrontement ; télépathie à 30 m pour communiquer discrètement.
+
+step: Elle prépare le lieu de l'embuscade
+  do: Faire pousser plusieurs sporopodes le long du passage probable, parmi la végétation, et garder un relais en arrière pour fuir.
+  note: Un sporopode disparaît si elle s'en éloigne de plus de 36 m. Les dégâts infligés à un sporopode ne blessent pas Eukalia.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être ralentis avant d'atteindre son corps
+  do: Utiliser lenteur pour réduire leur mobilité et leurs possibilités d'attaque, puis se repositionner vers un sporopode sûr par une action de mouvement si nécessaire.
+  note: Volonté DD 20 ; les victimes ne disposent que d'une action simple ou de mouvement par tour et se déplacent à demi-vitesse.
+
+step: Les adversaires sont groupés et elle dispose du temps nécessaire pour préparer ses enchantements
+  do: Utiliser brume mentale sur leur position, puis exploiter ses effets lors des rounds suivants.
+  note: Volonté DD 22 ; une réussite évite l'affaiblissement. La brume ne bloque pas la vision.
+
+step: Un humanoïde dangereux constitue une meilleure cible immédiate que le groupe
+  do: Utiliser domination de personne et lui ordonner de combattre ses compagnons pour protéger Eukalia.
+  note: Volonté DD 22 ; un ordre contraire à sa nature autorise un nouveau jet avec un bonus de +2.
+
+## Rounds suivants
+
+step: Un ou plusieurs ennemis sont à 1,50 m d'un sporopode et elle peut rester en place
+  do: Effectuer une attaque à outrance en répartissant ses quatre tentacules +12 (1d4+2 et étreinte) entre les cibles accessibles par ses sporopodes.
+  note: Quatre tentacules au total, quel que soit le nombre de sporopodes ; les griffes ne frappent que près de son propre corps.
+
+step: Elle doit changer de position ou créer un relais
+  do: Rejoindre instantanément un sporopode existant par une action de mouvement ; utiliser l'action simple pour un pouvoir magique, un nouveau sporopode ou une seule attaque de tentacule.
+  note: Le déplacement entre sporopodes ne permet pas de conserver une attaque à outrance dans le même tour.
+
+step: Une cible reste disponible pour un enchantement
+  do: Employer domination de personne si elle est encore disponible sur un humanoïde, sinon suggestion pour obtenir un comportement raisonnable qui l'écarte du combat, ou charme-monstre pour gagner sa faveur.
+  note: Privilégier les victimes de brume mentale. Charme-monstre ne donne pas un contrôle direct ; une cible menacée par Eukalia ou ses alliés bénéficie de +5 à sa sauvegarde.
+
+step: Un adversaire atteint son corps et elle ne peut pas s'éloigner utilement
+  do: Combattre au contact : 2 griffes +14 (1d6+5) et 4 tentacules +12 (1d4+2 et étreinte) en attaque à outrance ; tenter l'étreinte après un tentacule qui touche, BMO +18.
+  note: Reprendre le combat à distance dès qu'un sporopode permet de se dégager.
+
+## Repli
+
+step: Points de vie à 25 ou moins
+  do: Fuir en rejoignant par une action de mouvement le sporopode le mieux placé pour échapper aux poursuivants ; utiliser ses enchantements encore disponibles pour gêner la poursuite.
+  note: Si elle doit prolonger sa fuite, créer un nouveau relais à 18 m au plus par une action simple, puis le rejoindre par une action de mouvement ; surveiller la limite de 36 m qui détruit les anciens sporopodes.

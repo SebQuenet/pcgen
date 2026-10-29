@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Nautiloïde mécanique de taille TG, créature artificielle neutre sans Intelligence, conçu pour les profondeurs et obstiné dans l'exécution de ses ordres. FP 14 ; 161 pv ; CA 31, contact 13, pris au dépourvu 26 ; initiative +9.
+  Morsure +30 (2d6+10) et 4 tentacules +25 (1d8+5 plus étreinte) ; allonge et espace occupé de 4,50 m. BMO +34, +38 en lutte ; DMD 49, impossible à renverser.
+  Nage à 12 m et déplacement terrestre à 3 m par action de mouvement. Il poursuit même à terre si ses ordres l'exigent.
+
+note: Défenses
+  RD 10/adamantium et contondant : une attaque doit remplir les deux conditions pour l'ignorer. Immunité au froid, aux dégâts de pression de l'eau et immunités des créatures artificielles.
+  La coquille dévie sans effet les sorts et effets de rayon qui le ciblent ; elle ne les renvoie pas sur leur auteur. Les autres attaques électriques restent dangereuses : dégâts multipliés par 1,5.
+
+resource: Remontage | 22 jours par remontage complet | nécessite sa clé spéciale ; il ne peut normalement pas atteindre sa propre serrure
+
+step: En attente d'intrus
+  do: Patrouiller ou garder l'emplacement prévu par ses ordres, dans l'eau.
+  note: Perception +8 ; perception aveugle et vision dans le noir à 18 m, vision nocturne. La perception aveugle permet de localiser une présence sans supprimer le camouflage.
+
+## Ouverture
+
+step: Un adversaire est au-delà de son allonge
+  do: Nager jusqu'à 12 m pour arriver à 4,50 m ou moins ; s'il reste une action simple, porter une attaque de tentacule +25 ou une morsure +30.
+  note: Choisir le tentacule pour capturer une cible de taille G ou inférieure ; choisir la morsure pour infliger davantage de dégâts immédiats.
+
+step: Un adversaire est déjà à portée et aucun déplacement important n'est nécessaire
+  do: Effectuer une attaque à outrance : morsure +30 (2d6+10) et 4 tentacules +25 (1d8+5 chacun).
+  note: Un pas de placement de 1,50 m reste possible si les conditions le permettent.
+
+step: Un tentacule touche une cible de taille G ou inférieure
+  do: Utiliser l'étreinte pour tenter immédiatement une lutte à +38 contre sa DMD, sans attaque d'opportunité.
+  note: Cette tentative est une action libre ; les dégâts du tentacule sont déjà infligés par la touche. S'il établit la prise normalement, il est lui-même en lutte et ses attaques suivantes subissent le malus de -2 de cet état.
+
+## Rounds suivants
+
+step: Une cible est à portée et il ne choisit pas de maintenir une lutte
+  do: Répéter l'attaque à outrance ; concentrer la morsure sur l'adversaire qui bloque sa mission et utiliser les tentacules contre les cibles accessibles.
+  note: Si une prise gêne cette séquence, la relâcher par une action libre avant d'attaquer.
+
+step: Une cible doit rester captive pour accomplir ses ordres
+  do: Consacrer l'action simple au maintien de la lutte : BMO +38, avec le bonus de circonstances de +5 si la prise est conservée depuis le round précédent ; sur une réussite, lui infliger les dégâts du tentacule, 1d8+5.
+  note: Le maintien remplace l'attaque à outrance de ce round.
+
+step: Il n'est pas en lutte et un adversaire provoque une attaque d'opportunité en quittant sa zone menacée
+  do: Porter une morsure +30 (2d6+10).
+  note: Une seule attaque d'opportunité par round ; ses réactions rapides n'accordent pas d'attaques d'opportunité supplémentaires.
+
+step: Les adversaires s'éloignent ou sortent de l'eau
+  do: Les poursuivre selon ses ordres, à 12 m à la nage ou 3 m à terre par action de mouvement, puis reprendre les attaques dès qu'ils sont à portée.
+  note: La profondeur et le froid ne freinent pas sa poursuite ; il ne dispose d'aucune attaque à distance.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à exécuter ses ordres et combattre jusqu'à sa destruction à 0 pv.
+  note: Aucun seuil de fuite instinctive : cette construction ne connaît pas la peur.
+
+step: Un ordre prévoit le rappel ou la fin de la poursuite
+  do: Rompre le combat et regagner le poste ou l'objectif désigné, en nageant si possible.

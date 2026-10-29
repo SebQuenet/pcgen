@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Byakhee, aberration ailée de taille M, chaotique mauvaise, serviteur d'Hastur venu des étoiles. Il fond sur une victime isolée et cherche à la retenir avec sa gueule.
+  42 pv ; CA 17 ; initiative +7. Deux griffes +7 (1d4+3 chacune), morsure +6 (1d6+3 et étreinte) ; allonge 1,50 m. Déplacement terrestre 9 m, vol 15 m avec une bonne manœuvrabilité.
+
+note: Défenses
+  Immunisé au froid, aux effets de confusion et de folie, aux coups critiques, aux attaques sournoises, à la faim et à la soif. Il ne respire pas.
+  Vision dans le noir à 18 m et vision dans toutes les ténèbres, même magiques ; il exploite l'obscurité déjà présente.
+
+resource: Affinité avec le Signe jaune | permanente | Immunité au Signe jaune ; un Signe actif visible lui procure guérison accélérée 2 et un bonus d'altération de +4 en Dextérité. Un simple symbole porté ne suffit pas.
+
+resource: Soif de sang | illimitée | Après avoir mordu une créature vivante, bonus de moral de +2 aux attaques et aux dégâts contre elle pendant 1 minute ; ce bonus s'applique aussi contre une créature qui subit un saignement.
+
+resource: Absorption de sang | chaque round de lutte | Inflige 1d2 points d'affaiblissement de Constitution à une victime agrippée en fin de tour.
+
+step: Il peut préparer son approche
+  do: Se dissimuler en hauteur ou dans l'obscurité avec Discrétion +11 ; repérer une cible éloignée de ses alliés avec Perception +11.
+  note: Préférer un espace qui laisse une voie de dégagement aérienne.
+
+step: Un Signe jaune actif est déjà présent
+  do: Choisir une position d'où il reste visible pendant le combat.
+
+## Ouverture
+
+step: La cible est accessible au cours d'un déplacement en vol
+  do: Attaque au passage : voler jusqu'à elle, donner une seule morsure +6 (1d6+3), puis poursuivre le vol si aucune étreinte n'est engagée ; limiter le trajet total à 15 m.
+  note: Le don permet de répartir le déplacement avant et après l'attaque ; quitter une case menacée peut provoquer une attaque d'opportunité.
+
+step: La morsure touche une cible de taille M ou inférieure et ses alliés sont éloignés
+  do: Tenter immédiatement l'étreinte par une action libre, sans attaque d'opportunité : BMO +10 contre le DMD adverse, bonus d'étreinte inclus ; +12 si la soif de sang s'applique.
+  note: Une prise réussie engage la lutte ; interrompre alors le passage et rester avec la victime.
+
+step: Un ennemi est déjà à portée sans déplacement nécessaire
+  do: Attaque à outrance : deux griffes +7 (1d4+3 chacune), puis morsure +6 (1d6+3) et tentative d'étreinte si la taille le permet.
+
+## Rounds suivants
+
+step: Une victime est agrippée et ses alliés ne peuvent pas intervenir efficacement
+  do: Consacrer l'action simple à maintenir la lutte et choisir de lui infliger les dégâts de morsure ; absorber son sang en fin de tour si la prise tient toujours.
+  note: Le maintien utilise BMO +10, avec le bonus de +5 si la victime n'a pas rompu la prise ; ajouter encore +2 si la soif de sang s'applique, ainsi qu'aux dégâts de morsure.
+
+step: La cible mordue est libre et reste au contact
+  do: Concentrer l'attaque à outrance sur elle : deux griffes +9 (1d4+5 chacune), puis morsure +8 (1d6+5), tant que la soif de sang s'applique.
+
+step: Plusieurs ennemis convergent sur lui
+  do: Relâcher toute étreinte et reprendre de la distance par les airs ; revenir par une attaque au passage sur une cible moins soutenue.
+  note: Ne maintenir la lutte que si elle ne l'expose pas à tout le groupe.
+
+step: Les ennemis restent groupés et aucun n'est à portée
+  do: Rester en vol, utiliser les obstacles pour limiter les tirs et attendre une séparation avant de recommencer les passages.
+
+## Repli
+
+step: Points de vie à 10 ou moins et une voie de fuite existe
+  do: Libérer la victime, puis utiliser le retrait en vol pour gagner jusqu'à 30 m et chercher un couvert.
+  note: Le retrait protège seulement la sortie de la case initiale ; éviter de traverser d'autres cases menacées.
+
+step: Un Signe jaune actif peut rester visible depuis un abri
+  do: S'y réfugier et laisser la guérison accélérée restaurer 2 pv par round avant d'envisager une nouvelle attaque.

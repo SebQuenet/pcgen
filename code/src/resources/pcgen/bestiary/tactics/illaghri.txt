@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Illaghri est une corpsespinner femelle, créature magique extraplanaire de taille énorme, neutre. Elle combat depuis les hauteurs, entrave ses proies avec ses toiles et les mord avant de se téléporter à couvert.
+  190 pv, CA 29 ; morsure +23 (2d8+7, critique 19–20, plus poison). Espace occupé et allonge : 4,50 m. Déplacement : 12 m ; escalade : 6 m.
+  Initiative +8, Perception +12, Discrétion +20 ; perception astrale, vision dans le noir à 18 m et vision nocturne.
+  Les caractéristiques chiffrées des toiles et les effets détaillés du poison ne sont pas précisés dans la fiche fournie.
+
+resource: Porte dimensionnelle accélérée | 3/jour | action rapide ; NLS 16 ; après utilisation, aucune autre action jusqu'à son prochain tour
+resource: Changement de plan | 1/jour | action simple ; elle seule ; destination limitée au plan Astral ou au plan Matériel
+
+step: Des intrus approchent
+  do: Escalader jusqu'à un point situé au-dessus de leur passage et s'y dissimuler
+  note: Escalade +17 et Discrétion +20 ; conserver le changement de plan pour la fuite
+
+## Ouverture
+
+step: Les intrus sont accessibles à ses toiles depuis son perchoir
+  do: Tirer ses toiles pour entraver autant d'adversaires que possible au fil des occasions
+  note: Privilégier les ennemis qui pourraient l'atteindre ou gêner son approche ; la fiche ne donne ni portée, ni DD, ni cadence de tir des toiles
+
+step: Elle commence son tour avec un ennemi déjà à portée de morsure
+  do: Mordre à +23 (2d8+7, critique 19–20, plus poison), en privilégiant une cible entravée
+  note: Si une riposte menace, terminer son tour par une porte dimensionnelle accélérée vers un surplomb hors de portée
+
+## Rounds suivants
+
+step: Une cible entravée est accessible par un déplacement ordinaire
+  do: S'approcher jusqu'à son allonge de 4,50 m et porter une morsure
+  note: Utiliser le sol ou les parois selon le terrain ; éviter de finir entourée
+
+step: Elle a terminé ses attaques et risque une contre-attaque
+  do: Utiliser une porte dimensionnelle accélérée pour rejoindre un point en hauteur hors de portée immédiate
+  note: Effectuer toutes ses autres actions avant cette téléportation ; elle ne peut pas se téléporter puis mordre pendant le même tour
+
+step: Aucun ennemi n'est accessible au corps à corps
+  do: Rester en hauteur et poursuivre les tirs de toile pour entraver les adversaires encore libres
+  note: Une porte dimensionnelle accélérée peut aussi la placer pour une attaque au tour suivant, mais termine ses actions du tour actuel
+
+step: Des ennemis provoquent des attaques d'opportunité dans son allonge
+  do: Les mordre en profitant d'Attaques réflexes
+  note: Jusqu'à cinq attaques d'opportunité par round, si les occasions se présentent ; une simple présence dans son allonge ne suffit pas
+
+## Repli
+
+step: Ses points de vie tombent à 20 ou moins et son changement de plan est disponible
+  do: Utiliser changement de plan pour fuir seule vers le plan Astral
+  note: Donner la priorité à cette fuite sur toute nouvelle attaque
+
+step: Ses points de vie sont à 20 ou moins et son changement de plan est déjà dépensé
+  do: Gagner un surplomb inaccessible par escalade, ou par une porte dimensionnelle accélérée s'il en reste une utilisation
+  note: Poursuivre la fuite par les parois et éviter de reprendre le combat

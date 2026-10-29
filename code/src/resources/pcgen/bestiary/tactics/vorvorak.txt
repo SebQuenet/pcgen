@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Vorvorak, créature magique neutre de taille TG, solitaire et intelligente, qui tend des embuscades dans les canaux et les marais. Il attire ses proies par des illusions et exploite l'eau pour choisir le lieu du combat.
+  123 pv ; CA 24 ; résistance à la magie 21 ; immunité au poison ; +4 aux sauvegardes contre la peur. Morsure +18 (2d6+7), 2 griffes +18 (1d8+7), coup de queue +16 (2d6+3) ; allonge de 3 m ; espace occupé de 4,50 m.
+  Déplacement et nage à 12 m, escalade à 6 m ; Discrétion +18 dans la boue ou l'eau, +10 ailleurs. Vision dans le noir à 18 m. Il comprend le commun sans pouvoir parler et retient son souffle sous l'eau.
+
+resource: Déguisement décrépi | à volonté | DD 15 de Volonté pour percer l'illusion sur un objet
+resource: Image accomplie | à volonté | DD 17 de Volonté en cas d'interaction ; concentration, puis 3 rounds
+resource: Quintessence | à volonté | DD 15 ; masque les défauts d'une créature ou d'un objet, sans les réparer ni les soigner
+resource: Contrôle de l'eau | 3/jour | élève ou abaisse une masse d'eau existante ; NLS 13
+resource: Nappe de brouillard | 3/jour | rayon de 6 m ; sans sauvegarde ; réserver une utilisation au repli
+resource: Convocation d'ombres | 3/jour | DD 18 ; reproduit une invocation de magicien ou d'ensorceleur de création ou de convocation de niveau 3 au maximum
+resource: Mirage | 1/jour | DD 19 de Volonté en cas d'interaction ; transforme l'apparence du terrain et des structures
+resource: Magie des ombres | 1/jour | DD 19 ; reproduit une évocation de magicien ou d'ensorceleur de niveau 4 au maximum
+
+step: Il peut préparer son terrain
+  do: Se cacher dans la boue ou l'eau, près d'une voie de retraite immergée ; utiliser mirage pour dissimuler l'aspect réel des abords du repaire
+  note: Marcheur des canaux lui permet d'ignorer le terrain difficile des marécages peu ou très profonds ; leurs difficultés n'augmentent pas ses DD d'Acrobaties ou de Discrétion
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Utiliser image accomplie pour placer une proie apparente ou un appât sonore près de l'eau ; attendre qu'un adversaire s'avance à portée
+  note: Déguisement décrépi peut rendre un trésor peu attirant ; quintessence peut embellir un objet servant d'appât. L'image ne constitue aucun obstacle matériel
+
+## Ouverture
+
+step: Plusieurs ennemis restent sur une berge que la montée des eaux peut atteindre
+  do: Utiliser contrôle de l'eau pour inonder leur position et les obliger à choisir entre reculer et combattre dans l'eau
+  note: Il modifie le niveau de l'eau ; ce pouvoir ne lui donne pas une attaque de vague ni une prise automatique sur les ennemis
+
+step: Plusieurs ennemis restent groupés à distance et l'inondation ne convient pas
+  do: Utiliser magie des ombres pour reproduire une boule de feu, en plaçant l'explosion de 6 m de rayon hors de sa propre position
+  note: 10d6 dégâts de feu ; Volonté DD 19 pour reconnaître l'ombre et ne subir que 20 % des dégâts, puis Réflexes DD 19 pour réduire les dégâts de moitié ; résistance à la magie applicable
+
+step: Une cible est déjà à 3 m ou moins et une attaque à outrance est possible
+  do: Morsure +18 (2d6+7), 2 griffes +18 (1d8+7) et coup de queue +16 (2d6+3), en concentrant les attaques sur la cible la plus vulnérable
+  note: Un pas de 1,50 m reste compatible avec cette attaque à outrance ; abandonner la concentration sur image accomplie pour attaquer
+
+step: Il doit se déplacer de plus de 1,50 m pour atteindre une cible
+  do: Avancer ou nager jusqu'à 12 m, puis porter une seule morsure +18 (2d6+7) si la cible est à portée
+
+## Rounds suivants
+
+step: Un ennemi demeure à portée
+  do: Répéter l'attaque à outrance ; rester près de l'eau et utiliser l'allonge de 3 m pour menacer les approches
+  note: Les déplacements qui provoquent une attaque d'opportunité permettent une morsure ; conserver les quatre attaques de son tour pour achever une cible
+
+step: Un adversaire adjacent cherche à profiter d'une prise en tenaille
+  do: Lui attribuer une attaque de mêlée de l'attaque à outrance
+  note: Flanking Foil : si l'attaque touche, cet adversaire perd son bonus de prise en tenaille contre le vorvorak et ne peut pas lui infliger d'attaque sournoise jusqu'au début du prochain tour du monstre ; ses alliés ne perdent pas automatiquement leurs avantages
+
+step: Des renforts arrivent par un passage comportant deux points d'ancrage opposés
+  do: Utiliser convocation d'ombres pour reproduire toile d'araignée et entraver leur arrivée, en gardant sa propre issue dégagée
+  note: Volonté DD 18 pour reconnaître l'ombre ; Réflexes DD 18 pour la toile. Contre une créature qui reconnaît l'illusion, la toile n'a que 20 % de chances de fonctionner ; la résistance à la magie s'applique
+
+step: Les tirs ou les sorts à distance deviennent trop dangereux
+  do: Placer une nappe de brouillard entre les tireurs et sa position, puis gagner l'eau ou changer d'angle d'approche
+  note: Le brouillard gêne aussi sa vision : camouflage à 1,50 m, camouflage total au-delà, même avec la vision dans le noir. Il ne fonctionne pas sous l'eau
+
+## Repli
+
+step: Points de vie sous 30 ou adversaires manifestement trop puissants
+  do: Utiliser la nappe de brouillard réservée pour couvrir la berge, puis rejoindre l'eau ; s'il est déjà au contact, privilégier une retraite vers l'eau avant de relancer un pouvoir
+  note: Sa confiance et son bonus contre la peur ne l'obligent pas à combattre jusqu'à la mort
+
+step: La ligne de vue est rompue
+  do: Nager à 12 m par déplacement, retenir son souffle et chercher un couvert permettant de se cacher avec Discrétion +18 ; emprunter les marécages que ses poursuivants traversent difficilement
+  note: Il peut escalader une berge à 6 m par déplacement si l'issue aquatique est bloquée

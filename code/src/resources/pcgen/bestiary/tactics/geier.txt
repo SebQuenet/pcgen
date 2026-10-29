@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Geier, grand vautour de taille G, animal d'Intelligence 2 qui recherche un repas facile. 38 pv ; CA 14.
+  Morsure +7 (1d8+7), allonge de 1,50 m ; espace occupé de 3 m. Déplacement au sol de 4,50 m, vol de 12 m avec une manœuvrabilité moyenne.
+  Vision nocturne, odorat et Perception +9 ; résistance aux maladies.
+
+step: Des proies sont repérées
+  do: Privilégier une victime isolée ou déjà affaiblie, facile à abattre pour s'en nourrir
+  note: Si plusieurs geiers sont présents, ils concentrent leurs attaques sur une seule victime
+
+## Ouverture
+
+step: La victime est accessible en un déplacement
+  do: S'approcher au sol jusqu'à 4,50 m ou en vol jusqu'à 12 m, puis porter une morsure +7 (1d8+7) si elle est à portée
+  note: La morsure exige d'être à 1,50 m ou moins de la victime
+
+step: La victime est trop éloignée pour être mordue ce round
+  do: Se rapprocher en vol ; effectuer un double déplacement si nécessaire, jusqu'à 24 m sans attaquer
+
+## Rounds suivants
+
+step: La victime est encore debout et à portée
+  do: Continuer à la mordre chaque round, avec une attaque à +7 infligeant 1d8+7 dégâts
+  note: Les autres geiers s'acharnent sur cette même victime pour la faire tomber
+
+step: La victime s'éloigne mais reste accessible
+  do: La suivre et reprendre les morsures dès qu'un déplacement permet d'arriver à portée
+
+step: La victime tombe et les adversaires continuent à la défendre
+  do: Ne pas poursuivre d'autres adversaires ; renoncer au repas s'il devient trop difficile à obtenir
+  note: Le geier cherche à se nourrir, sans stratégie élaborée ni volonté de combattre jusqu'à la mort
+
+## Repli
+
+step: Points de vie à 15 ou moins
+  do: Abandonner immédiatement la victime, prendre son envol et s'éloigner
+  note: Ce seuil concerne chaque geier individuellement ; il recherche un repas facile et ne reste pas défendre sa prise

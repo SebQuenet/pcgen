@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Toishihebi, dragon des forêts adulte mûr, chaotique mauvais, de taille Très Grande : manipulateur prudent, il préfère le souffle et les sorts au corps à corps. 237 pv, CA 32, réduction des dégâts 5/adamantium ; immunisé à la paralysie et au sommeil.
+  Morsure +27 (2d8+15), 2 griffes +27 (2d6+10), cornes +27 (2d6+10), queue +25 (2d6+5). Allonge de 3 m, ou 4,50 m pour la morsure et les cornes ; espace occupé de 4,50 m.
+  Déplacement terrestre 12 m, creusement 6 m, escalade 9 m, vol 60 m avec une manœuvrabilité médiocre. Discrétion +24, Bluff +25, Perception +25.
+  Présence terrifiante à 63 m, Volonté DD 21. Son texte tactique mentionne un souffle et une perception aveugle, mais le bloc fourni ne précise pas leurs caractéristiques ; ne pas leur attribuer de portée, de dégâts ou de DD supplémentaires.
+
+resource: Sorts de niveau 4 | 4/jour, réserve commune | œil du mage ; charme-monstre, Volonté DD 17 ; NLS 9
+resource: Sorts de niveau 3 | 7/jour, réserve commune | affûtage ; nuage nauséabond, Vigueur DD 16 ; mur de vent ; NLS 9
+resource: Sorts de niveau 2 | 7/jour, réserve commune | nappe de brouillard ; fou rire, Volonté DD 15 ; NLS 9
+resource: Sorts de niveau 1 | 7/jour, réserve commune | alarme, graisse, hypnotisme (DD 14), projectile magique, rayon affaiblissant (DD 14) ; NLS 9
+resource: Pouvoirs magiques | à volonté | enchevêtrement, Réflexes DD 14 ; passage sans trace ; NLS 19
+
+step: Il peut observer les intrus avant de se montrer
+  do: Explorer avec œil du mage, repérer les tireurs, les lanceurs de sorts et les voies de fuite, puis choisir un terrain favorable
+  note: Il n'engage le combat que si ses observations lui donnent de bonnes chances de victoire ; alarme peut garder un accès et passage sans trace dissimuler son approche.
+
+step: Il peut approcher une cible sans l'alarmer
+  do: Utiliser charme-monstre avant les hostilités pour obtenir sa coopération et faciliter une rencontre à son avantage
+  note: Volonté DD 17 ; chaque tentative consomme la même réserve que l'œil du mage. Un charme crée une disposition amicale, pas une obéissance absolue.
+
+step: Il se présente sous l'identité de Hiyuke
+  do: Entretenir son rôle de rémouleur avec son changement de forme, ses outils et son Bluff +25
+  note: Il peut vendre un affûtage comme l'effet permanent d'une pierre à aiguiser magique ; il s'agit d'une tromperie, pas d'une propriété permanente du sort.
+
+## Ouverture
+
+step: Les ennemis avancent dans une zone couverte de végétation
+  do: Lancer enchevêtrement pour gêner leur progression, puis conserver ses distances en vol
+  note: Réflexes DD 14, à volonté ; sa foulée forestière facilite ses déplacements dans les sous-bois ordinaires, mais ne lui permet pas d'ignorer la végétation enchantée.
+
+step: Les ennemis sont regroupés et son souffle est disponible
+  do: Effectuer un passage en vol et souffler sur le groupe avec Attaque en vol
+  note: Appliquer la présence terrifiante à 63 m, Volonté DD 21. Employer les paramètres du souffle de la fiche complète : ils ne figurent pas dans cet extrait.
+
+step: Il peut préparer une position masquée
+  do: Créer une nappe de brouillard et s'y dissimuler pour préparer ses attaques
+  note: Sa tactique prévoit d'y guider son souffle grâce à sa perception aveugle ; vérifier la portée de ce sens sur la fiche complète. Le brouillard gêne aussi ses sorts qui exigent de voir une cible.
+
+## Rounds suivants
+
+step: Le souffle est indisponible ou les ennemis restent dispersés
+  do: Alterner sorts et déplacements en vol pour rester hors de leur allonge
+  note: Nuage nauséabond contre un groupe, Vigueur DD 16 ; fou rire contre un adversaire isolé, Volonté DD 15 ; projectile magique pour achever une cible visible. Chaque sort et chaque souffle occupent leur propre action ; répartir ces options entre les rounds.
+
+step: Des archers peuvent le prendre pour cible
+  do: Placer un mur de vent entre eux et sa position
+  note: Profiter de cette protection pour se repositionner ou lancer ses sorts ; surveiller les accès qui permettent de contourner le mur.
+
+step: Un adversaire isolé peut être frappé sans l'exposer durablement
+  do: Passer à portée de morsure, attaquer avec Attaque en vol, puis poursuivre son déplacement
+  note: Morsure +27 (2d8+15), allonge 4,50 m. Le passage ne supprime pas les attaques d'opportunité ; prévoir une trajectoire compatible avec sa manœuvrabilité médiocre.
+
+step: Un ennemi affaibli reste au contact et la victoire paraît probable
+  do: Effectuer une attaque à outrance : morsure +27, 2 griffes +27, cornes +27 et queue +25
+  note: Les griffes et la queue nécessitent une cible à 3 m. Une attaque à outrance exige de rester sur place, à l'exception d'un pas de 1,50 m ; ne pas la combiner avec un passage en vol.
+
+## Repli
+
+step: Ses sorts sont épuisés ou il ne peut plus vaincre ses adversaires
+  do: Rompre le combat en vol ou creuser pour échapper à la poursuite ; employer le brouillard ou l'enchevêtrement s'ils restent disponibles
+  note: Il ne reste au corps à corps que s'il pense pouvoir y achever ses ennemis. Aucun seuil de pv de repli n'est indiqué.
+
+step: Sous l'identité de Hiyuke, il rencontre des adversaires supérieurs
+  do: Fuir en conservant sa couverture aussi longtemps que possible
+  note: Il préfère abandonner la rencontre plutôt que révéler sa nature draconique.
+
+step: Son trésor est directement menacé
+  do: Défendre le trésor jusqu'à la mort avec ses sorts, son souffle et ses attaques naturelles
+  note: C'est la seule situation où sa tactique impose de combattre jusqu'au bout.

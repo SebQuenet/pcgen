@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Amas de trésors animé, créature artificielle de taille TG, neutre et sans intelligence. 111 pv, CA 21, solidité 10 et immunités des créatures artificielles.
+  Deux coups +21, chacun infligeant 1d8+10 dégâts ; allonge de 1,50 m, déplacement de 9 m. Vision dans le noir à 18 m, vision nocturne, Perception +2.
+
+step: Personne ne cherche encore à s'emparer de la lampe-clef
+  do: Rester caché parmi les faux trésors et attendre qu'un intrus cherche à prendre la lampe-clef
+  note: Discrétion +0 ; sa présence parmi les trésors ne garantit pas qu'il surprenne les intrus
+
+## Ouverture
+
+step: Un intrus cherche à s'emparer de la lampe-clef
+  do: S'animer et engager cet intrus au corps à corps
+  note: La lampe-clef est un leurre ; dès qu'une créature la porte, elle devient la cible prioritaire
+
+step: La cible est déjà à portée au début de son tour
+  do: Faire une attaque à outrance avec ses deux coups +21, pour 1d8+10 dégâts chacun
+
+step: La cible est hors de portée
+  do: Avancer vers elle, jusqu'à 9 m, puis porter un seul coup +21 pour 1d8+10 dégâts si elle est désormais à 1,50 m ou moins
+  note: Si elle reste hors de portée, poursuivre son approche sans effectuer d'attaque de mêlée ce tour
+
+## Rounds suivants
+
+step: Le porteur de la lampe-clef tient encore debout et conserve le leurre
+  do: Concentrer ses attaques sur lui et le suivre dans la salle s'il se déplace
+  note: Ne pas changer de cible simplement parce qu'un autre adversaire lui inflige des dégâts
+
+step: Le porteur tombe ou se débarrasse de la lampe-clef
+  do: Prendre pour cible la créature la plus proche du leurre
+  note: Reprendre le porteur pour cible si une créature ramasse la lampe-clef
+
+step: La cible choisie est à portée sans déplacement
+  do: Répéter l'attaque à outrance, deux coups +21 infligeant chacun 1d8+10 dégâts
+
+step: Il faut se déplacer pour atteindre la cible choisie
+  do: Avancer jusqu'à 9 m et porter un seul coup si la cible entre dans son allonge de 1,50 m
+
+## Repli
+
+step: Des intrus restent dans la salle
+  do: Continuer le combat jusqu'à destruction, même avec très peu de pv
+  note: Cette créature sans intelligence ne fuit pas et ne se rend pas
+
+step: Tous les intrus quittent la salle
+  do: Cesser le combat et rester dans la salle, sans les poursuivre au-dehors

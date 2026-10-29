@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Le Cœur est un tendriculos ténébreux, extérieur de taille TG, presque sans esprit et immobile dans sa cour. Il possède 94 pv, une CA de 25 et une allonge de 4,50 m.
+  Morsure +12 (3d6+8 plus 2d6 d'acide et saisie), 2 tentacules +7 (1d8+4 et saisie) ; BMO +20 en lutte. Il est immunisé à l'acide et bénéficie des traits des plantes.
+
+resource: Régénération | permanente | 10 pv par round ; les blessures infligées par un éclat du miroir de minuit la neutralisent
+
+step: Des intrus pénètrent dans le miroir de minuit
+  do: Attendre sur place que les intrus arrivent à portée
+  note: Le Cœur sait tout ce qui se passe dans le miroir et ne peut pas être surpris. Malgré la vitesse indiquée dans son profil, il demeure immobile dans cette rencontre.
+
+note: Cécité à la lumière
+  Une exposition soudaine à une lumière vive l'aveugle pendant 1 round ; il reste ensuite ébloui tant que cette lumière persiste.
+
+## Ouverture
+
+step: Aucun adversaire à 4,50 m ou moins
+  do: Rester immobile et attendre
+  note: Il ne dispose d'aucune attaque à distance.
+
+step: Un adversaire est à portée
+  do: Effectuer une attaque à outrance : morsure +12 et 2 tentacules +7
+  note: Après chaque attaque qui touche, tenter la saisie associée avec un BMO de +20 en lutte. Choisir simplement les adversaires accessibles.
+
+## Rounds suivants
+
+step: Une victime est retenue en lutte
+  do: Maintenir la lutte et, en cas de réussite, lui infliger les dégâts d'une attaque naturelle
+  note: Le maintien utilise son action simple ; ne pas lui ajouter une attaque à outrance pendant ce même tour.
+
+step: Il est libre de ses mouvements et des ennemis restent à portée
+  do: Répéter morsure et tentacules en attaque à outrance, avec les tentatives de saisie sur les coups qui touchent
+  note: Ses tactiques restent rudimentaires : il mord et frappe, sans manœuvre élaborée.
+
+step: Les adversaires quittent son allonge ou sa cour
+  do: Cesser de les attaquer tant qu'ils restent hors de portée ; ne pas les poursuivre
+
+## Repli
+
+step: Il est blessé mais reste capable de combattre
+  do: Continuer à défendre sa cour jusqu'à sa destruction
+  note: Lié au demi-plan du miroir de minuit, il ne peut pas se replier.
+
+step: Il tombe à 0 pv ou moins alors que sa régénération fonctionne encore
+  do: Cesser toute attaque et toute entrave aux déplacements des PJ
+  note: Il lui faut alors 1d4 heures pour retrouver toutes ses capacités. Appliquer ce délai particulier, même si sa régénération rend normalement 10 pv par round.

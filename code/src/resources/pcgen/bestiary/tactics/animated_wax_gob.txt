@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Masse de cire animée de taille TG, neutre et dépourvue d'intelligence : elle combat sans ruse et s'acharne sur une cible accessible.
+  118 pv, CA 15, solidité 5 et immunités des créatures artificielles ; elle ne peut pas être renversée.
+  Déplacement de 9 m ; espace occupé et allonge de 4,50 m. Vision dans le noir à 18 m, vision nocturne ; Perception -5.
+  Coup +15 : 2d6+15 dégâts, plus 1d6 de feu et étreinte ; BMO de lutte +23, constriction.
+
+## Ouverture
+
+step: Aucun adversaire n'est à portée
+  do: Avancer vers l'adversaire le plus proche, jusqu'à 9 m, puis porter un coup s'il se trouve à 4,50 m ou moins.
+  note: Si un seul déplacement ne suffit pas, poursuivre l'approche par un second déplacement ; elle ne possède aucune attaque à distance.
+
+step: Un adversaire est déjà à 4,50 m ou moins
+  do: Porter son unique coup +15, infligeant 2d6+15 dégâts plus 1d6 de feu.
+
+step: Le coup touche une créature de taille G ou inférieure
+  do: Tenter immédiatement une étreinte par un test de lutte à +23, en action libre et sans provoquer d'attaque d'opportunité.
+  note: Un test de lutte réussi déclenche également la constriction.
+
+## Rounds suivants
+
+step: Une cible est toujours agrippée
+  do: Consacrer son action simple à maintenir la lutte et à blesser la cible ; appliquer la constriction si le test réussit.
+  note: Son BMO de lutte est de +23 ; le maintien bénéficie du bonus habituel de +5 si la cible n'a pas rompu la prise depuis le tour précédent.
+
+step: La cible échappe à la prise ou cesse de combattre
+  do: Frapper un adversaire encore actif à portée et tenter de nouveau l'étreinte après un coup réussi.
+
+step: Les adversaires s'éloignent hors de son allonge
+  do: Les poursuivre à 9 m par déplacement pour reprendre les coups et les étreintes.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup +15 et tenter l'étreinte s'il touche une cible de taille G ou inférieure.
+  note: Avec sa Dextérité de 6 et sans Attaques réflexes, elle dispose d'une seule attaque d'opportunité par round.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à frapper ou à maintenir sa prise jusqu'à sa destruction à 0 pv.
+  note: Dépourvue d'intelligence, elle ne choisit aucun seuil de fuite et n'organise aucun repli tactique.

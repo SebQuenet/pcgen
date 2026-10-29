@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Le Gardien de la tour est un golem de chair de girallon, une créature artificielle de taille G, neutre et dépourvue d'intelligence.
+  Il attaque frénétiquement tout ce qui bouge et concentre ses attaques sur un seul adversaire.
+  Quatre griffes +15 (1d4+7 chacune, plus éventration) ; allonge de 3 m ; espace occupé de 3 m.
+  Déplacement de 9 m et escalade de 9 m ; Escalade +15.
+
+note: Défenses et perception
+  79 pv ; CA 24, contact 10, pris au dépourvu 23 ; réduction des dégâts de 5/adamantium.
+  Immunités : traits des créatures artificielles et magie.
+  Vision dans le noir à 18 m, vision nocturne ; Perception +2.
+
+## Ouverture
+
+step: Une créature en mouvement est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance : quatre griffes +15 (1d4+7 chacune, plus éventration), toutes contre cette créature.
+
+step: Une créature en mouvement peut être mise à portée après un déplacement de 9 m au plus
+  do: Avancer vers elle jusqu'à la placer dans son allonge de 3 m, puis porter une seule attaque de griffe +15 (1d4+7).
+  note: Si un simple pas de 1,50 m suffit, faire ce pas et effectuer les quatre attaques de griffes contre elle.
+
+step: Aucune créature ne peut être mise à portée après un déplacement de 9 m
+  do: Consacrer le round à un double déplacement, jusqu'à 18 m, vers une créature en mouvement.
+  note: Il ne dispose d'aucune attaque à distance dans ce bloc de statistiques.
+
+## Rounds suivants
+
+step: L'adversaire choisi est toujours debout et à portée
+  do: Répéter l'attaque à outrance avec les quatre griffes, en concentrant toutes les attaques sur lui.
+  note: Les griffes s'accompagnent d'une éventration ; ses conditions et ses dégâts ne sont pas précisés dans le bloc fourni.
+
+step: L'adversaire s'éloigne
+  do: Le poursuivre pour rétablir l'allonge de 3 m ; faire un pas de 1,50 m et attaquer à outrance si cela suffit.
+  note: Après un déplacement plus long, jusqu'à 9 m, il ne porte qu'une griffe ; un double déplacement ne laisse aucune attaque.
+
+step: La cible gagne une hauteur accessible en grimpant
+  do: Utiliser l'escalade à 9 m pour la rejoindre et reprendre les attaques lorsqu'elle est à portée.
+
+step: L'adversaire est abattu
+  do: Reporter son assaut sur une autre créature en mouvement et concentrer de nouveau toutes ses attaques sur cette seule cible.
+
+## Repli
+
+step: Quels que soient ses points de vie restants
+  do: Poursuivre le combat jusqu'à sa destruction.
+  note: Il ne fuit pas et ne se rend pas.

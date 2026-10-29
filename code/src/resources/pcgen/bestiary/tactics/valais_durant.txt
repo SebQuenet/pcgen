@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Valais Durant, eidolon libre de taille M, extérieur natif loyal bon, a une apparence démoniaque mais ne souhaite tuer personne. Elle pleure et reste sur la défensive jusqu'à ce que ses aspects démoniaques prennent le contrôle.
+  45 pv ; CA 18, contact 12, prise au dépourvu 16 ; déplacement 10,50 m ; espace et allonge 1,50 m ; vision dans le noir à 18 m ; Perception +6 ; initiative +6.
+  Deux griffes +10 (1d4+4 plus 1d6 d'acide chacune) et un coup de corne +10 (1d6+4 plus 1d6 d'acide).
+  Résistance de 5 à l'acide, au froid, à l'électricité et au feu ; esquive totale : aucun dégât sur un jet de Réflexes réussi contre une attaque qui inflige normalement des dégâts réduits de moitié sur une réussite.
+
+step: Des créatures l'approchent avant tout affrontement
+  do: Rester en pleurs, sans préparer d'agression ni chercher à tuer.
+  note: Elle parle le commun et l'abyssal ; Diplomatie +9.
+
+## Ouverture
+
+step: Valais possède au moins 23 pv et ses aspects démoniaques n'ont pas pris le contrôle
+  do: Consacrer son tour à pleurer et à se défendre ; prendre l'action de défense totale.
+  note: Défense totale : action simple, bonus d'esquive de +4 à la CA jusqu'au début de son prochain tour, soit CA 22 et contact 16 ; aucune attaque d'opportunité pendant cette défense.
+
+step: Valais tombe à moins de 23 pv
+  do: Faire prendre le contrôle à ses aspects démoniaques ; dès qu'elle peut agir, attaquer toute créature à portée, sans distinguer alliés et ennemis.
+  note: Le seuil est de 22 pv ou moins. Ce changement de comportement ne donne aucune action supplémentaire ni aucun bonus aux attaques ou aux dégâts.
+
+## Rounds suivants
+
+step: Ses aspects démoniaques n'ont pas pris le contrôle
+  do: Continuer à sangloter et renouveler la défense totale à chaque tour.
+  note: Elle ne cherche ni à blesser ni à tuer les créatures présentes.
+
+step: Ses aspects démoniaques ont pris le contrôle et une créature est à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : deux griffes +10 et un coup de corne +10.
+  note: Chaque griffe inflige 1d4+4 plus 1d6 d'acide ; le coup de corne inflige 1d6+4 plus 1d6 d'acide. Un pas de placement de 1,50 m permet de se repositionner tout en conservant l'attaque à outrance.
+
+step: Ses aspects démoniaques ont pris le contrôle et aucune créature n'est à portée de mêlée
+  do: Se déplacer jusqu'à 10,50 m vers une créature visible et porter une seule attaque de corne +10 si elle arrive à portée.
+  note: Le coup de corne inflige 1d6+4 plus 1d6 d'acide. Si la cible reste trop loin, poursuivre avec un second déplacement, jusqu'à 21 m au total, sans attaquer ce tour.
+
+## Repli
+
+step: Ses aspects démoniaques ont pris le contrôle
+  do: Continuer à attaquer toute créature en vue jusqu'à être rendue inconsciente ou tuée.
+  note: Aucun repli volontaire ; le passage sous 23 pv déclenche l'agression au lieu d'une fuite.

@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Monarque ver foreur (Bore Worm Monarch), vermine souterraine de taille G, neutre, sans intelligence, guidée par une faim dévorante. FP 7 ; 78 pv ; CA 19.
+  Morsure +13 : 2d6+7 dégâts, plus 2d6 d'acide et morsure douloureuse ; allonge de 3 m, espace occupé de 3 m. Déplacement de 6 m au sol et de 12 m en creusant.
+  RD 10/perforant ; immunité à l'acide et aux effets mentaux ; impossible à faire tomber par un croc-en-jambe. Vulnérable à l'eau.
+
+step: Une créature se déplace au contact du même sol à 18 m ou moins
+  do: La repérer par perception des vibrations et creuser vers elle
+  note: Cette perception ne détecte pas une cible en vol sans contact avec le sol. Le monarque suit son instinct alimentaire.
+
+## Ouverture
+
+step: Une proie est déjà à 3 m ou moins, sans obstacle
+  do: La mordre à +13
+  note: Une victime vivante blessée doit réussir un jet de Vigueur DD 18 ou être effrayée pendant 1d6 rounds par la douleur.
+
+step: La proie est hors d'allonge
+  do: Avancer vers elle, en creusant si nécessaire ; mordre si une seule action de mouvement suffit à l'atteindre
+  note: Il traverse aussi la pierre et le métal. Si deux actions de mouvement sont nécessaires, il ne mord pas ce round.
+
+## Rounds suivants
+
+step: Une proie reste à portée
+  do: Répéter la morsure chaque round
+  note: Il ne possède qu'une attaque de morsure ; chaque nouvelle blessure peut déclencher la morsure douloureuse.
+
+step: La proie fuit au sol
+  do: La poursuivre en suivant ses vibrations ; creuser à 12 m par action de mouvement pour la rejoindre
+  note: Le sillage corrosif laisse un tunnel de 1,50 m de diamètre. Toucher ses parois inflige 1d3 dégâts d'acide ; l'acide persiste autant de rounds que la solidité du matériau traversé.
+
+step: La proie emprunte un passage étroit
+  do: La suivre grâce à compression ou creuser directement vers elle
+
+## Repli
+
+step: L'eau l'atteint ou ses points de vie tombent à 20 ou moins
+  do: S'enfouir loin du danger, à 12 m par action de mouvement, en laissant son tunnel corrosif derrière lui
+  note: Repli instinctif. Les sorts et pouvoirs du registre de l'eau infligent 50 % de dégâts supplémentaires ; contre ceux sans dégâts de points de vie, il subit un malus de -2 aux sauvegardes.

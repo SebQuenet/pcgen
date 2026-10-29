@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Antaios est un topiaire vivant neutre, une plante de taille M, déconcerté par les violences de la matinée. Il réagit simplement et frappe l'intrus le plus proche.
+  42 pv ; CA 16 ; initiative +6 ; déplacement 9 m ; allonge 1,50 m. Attaque à outrance : 2 coups +6, chacun infligeant 1d8+3 dégâts.
+  Avec Attaque en puissance : 2 coups +5, chacun infligeant 1d8+5 dégâts. Après un déplacement ordinaire, il ne porte qu'un coup.
+  RD 5/tranchant ; immunités des plantes ; vulnérabilité au feu, qui lui inflige 50 % de dégâts supplémentaires.
+
+resource: Passage sans traces | permanent | actif sans préparation
+resource: Traversée des haies | 3/jour | déplacement magique entre deux zones de broussailles ou de haies similaires, distantes de 450 m au maximum
+resource: Assimilation | sans limite quotidienne | consomme environ 0,14 m³ de végétaux buissonnants touchés par action complexe et rend 1d8 pv, sans dépasser 42 pv
+
+step: Aucun intrus détecté dans la boutique
+  do: Rester assis et silencieux jusqu'à repérer une intrusion.
+  note: Perception +6 ; vision dans le noir à 18 m et vision nocturne. Il comprend le commun et le sylvestre, mais ne parle pas.
+
+## Ouverture
+
+step: L'intrus le plus proche est déjà à 1,50 m
+  do: Utiliser Attaque en puissance et porter les deux coups à +5, pour 1d8+5 dégâts chacun.
+  note: Compter les attaques ratées pour décider ensuite de changer de cible ou d'abandonner Attaque en puissance.
+
+step: L'intrus le plus proche exige un déplacement
+  do: Avancer vers lui, jusqu'à 9 m, puis porter un coup avec Attaque en puissance s'il est à portée.
+  note: Si un seul déplacement ne suffit pas, effectuer un double déplacement, jusqu'à 18 m, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Antaios a plus de 20 pv et n'a pas encore raté deux attaques
+  do: Continuer à frapper la cible la plus proche avec Attaque en puissance ; porter deux coups s'il peut effectuer une attaque à outrance.
+
+step: Deux attaques ont raté
+  do: À son prochain tour, abandonner Attaque en puissance pour frapper à +6, avec 1d8+3 dégâts par coup, ou passer à la prochaine cible la plus proche.
+  note: Il adapte ainsi sa force ou sa cible, sans rechercher systématiquement les lanceurs de sorts ou les adversaires blessés.
+
+step: Une haie ou des ronces gênent son déplacement
+  do: Les traverser sans pénalité pour rejoindre sa cible ou des végétaux à assimiler.
+  note: Il doit commencer et terminer son tour hors de cette masse végétale.
+
+## Repli
+
+step: Antaios tombe à 20 pv ou moins, mais reste au-dessus de 10 pv
+  do: Rejoindre les végétaux buissonnants les plus proches et tenter de les assimiler pour soigner ses blessures.
+  note: L'assimilation exige le contact et une action complexe ; il doit donc consacrer un autre round au déplacement si nécessaire.
+
+step: Antaios tombe à 10 pv ou moins
+  do: Se retirer dans un coin de la boutique, puis adopter la défense totale à chaque round.
+  note: La défense totale porte sa CA à 20 ; il cesse d'attaquer et ne peut pas effectuer d'attaques d'opportunité. Ce comportement prime sur l'assimilation.

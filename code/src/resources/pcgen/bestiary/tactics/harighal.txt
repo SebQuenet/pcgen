@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Harighal, mezlan neutre, est une vase métamorphe intelligente de FP 17, illusionniste et extrêmement orgueilleuse.
+  Arme morphique +22 (2d8+10), allonge de 1,50 m ; déplacement de 12 m, escalade et nage de 6 m ; perception aveugle à 36 m.
+  195 pv, CA 38 avec ses protections, RM 25 et immunités des vases. Régénération 5, neutralisée par l'acide.
+
+resource: Rayon aveuglant | 7/jour | pouvoir d'école
+resource: Champ d'invisibilité | 15 rounds/jour | gérer la réserve de rounds
+resource: Double illusoire | 1 préparé | DD 20 ; normalement lancé avant le combat
+resource: Assassin imaginaire | 1 préparé | DD 18
+resource: Évocation d'ombres | 1 préparée | DD 19
+resource: Mur illusoire | 1 préparé | DD 18
+resource: Cauchemar | 1 préparé | DD 19 ; préparation contre un adversaire endormi, sans intérêt immédiat en mêlée
+
+step: Avant l'arrivée des intrus
+  do: Lancer armure de mage et bouclier, puis double illusoire, conformément à sa préparation indiquée
+  note: Les deux protections sont déjà comprises dans la CA 38 ; sans elles, sa CA est de 30.
+
+step: Les intrus discutent encore
+  do: Parler par l'intermédiaire du double et observer les interlocuteurs avec Psychologie +20 ; garder sa véritable position à distance du contact
+  note: Bluff +14 et Déguisement +25 servent sa mise en scène ; sa perception aveugle lui permet de suivre les créatures dans un rayon de 36 m.
+
+## Ouverture
+
+note: Sort d'ouverture mentionné
+  Sa tactique prescrit motif scintillant après les discussions, mais ce sort est absent des sorts préparés fournis. Le bloc ne donne ni son DD ni une utilisation disponible ; ne pas lui ajouter de lancement. L'ouverture ci-dessous emploie ses pouvoirs disponibles.
+
+step: Les discussions prennent fin et un combattant menace de l'atteindre
+  do: Utiliser rayon aveuglant sur ce combattant, puis se déplacer pour conserver de l'espace
+  note: Exploiter la diversion du double tant qu'elle tient ; éviter de se laisser entourer.
+
+step: Une cible dangereuse reste à distance et paraît vulnérable aux illusions
+  do: Lancer assassin imaginaire sur elle, DD 18
+  note: Choisir cette ouverture à la place du rayon ; ne pas cumuler deux actions offensives dans le même round.
+
+## Rounds suivants
+
+step: Plusieurs ennemis offrent une bonne cible à un sort offensif
+  do: Employer évocation d'ombres, DD 19, pour reproduire une évocation adaptée à leur disposition
+  note: Respecter les limites du sort ; cette préparation ne permet qu'un lancement.
+
+step: Un adversaire voyant continue de mettre la pression
+  do: Renouveler rayon aveuglant sur lui en surveillant les 7 utilisations quotidiennes
+  note: Profiter de son aveuglement pour changer de position et compliquer sa prochaine attaque.
+
+step: Sa véritable position est découverte et il lui reste des rounds de champ d'invisibilité
+  do: Activer le champ et se déplacer ; utiliser son escalade ou sa nage si le terrain s'y prête
+  note: Décompter les rounds employés sur la réserve quotidienne de 15 ; ne pas ajouter cette réserve à celle du double illusoire.
+
+step: Un passage peut être masqué et mur illusoire est encore disponible
+  do: Créer un mur illusoire, DD 18, pour dissimuler un accès ou sa nouvelle position
+  note: Le mur ne bloque pas physiquement les déplacements, les projectiles ou les sorts.
+
+step: Un ennemi arrive au contact ou ses ressources magiques sont épuisées
+  do: Frapper avec son arme morphique, +22, pour 2d8+10 dégâts
+  note: Sa portée est de 1,50 m ; privilégier un ennemi isolé et conserver une voie de déplacement.
+
+## Repli
+
+step: Ses points de vie diminuent ou un adversaire utilise de l'acide
+  do: Se repositionner pour réduire les attaques subies, concentrer ses efforts sur la source d'acide et poursuivre le combat
+  note: La régénération rend 5 pv par round tant que l'acide ne la neutralise pas. Son orgueil lui interdit la reddition : il combat jusqu'à la mort, sans fuite définitive.

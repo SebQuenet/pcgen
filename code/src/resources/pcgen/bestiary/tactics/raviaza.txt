@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Raviaza, marilith chaotique mauvaise de grande taille, FP 17 : combattante à six bras qui fait engager ses ennemis par des démons pendant qu'elle neutralise leurs lanceurs de sorts à distance.
+  264 PV ; CA 32, contact 17 ; déplacement de 12 m ; espace occupé de 3 m ; allonge de 3 m, ou 4,50 m avec les fouets.
+  Quatre dagues +1 de feu : une à +24/+19/+14/+9 et trois autres à +24 ; chacune inflige 1d6+8 plus 1d6 de feu, critique sur 17–20.
+  Deux fouets +1 de feu et impies à +23, chacun pour 1d4+8 plus 1d6 de feu ; queue à +17, pour 2d6+3 et étreinte, BMO de lutte +28.
+
+note: Défenses et perception
+  Vision lucide et aura maudite permanentes ; vision dans le noir à 18 m, Perception +31 et télépathie à 30 m.
+  Réduction des dégâts 10/fer froid et Bien ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu ; résistance à la magie 28. Elle ne peut pas être renversée par un croc-en-jambe.
+  Les bonus défensifs de l'aura sont déjà compris dans ses valeurs. Une créature bonne qui la touche au corps à corps subit 1d6 points d'affaiblissement de Force, sauf Vigueur DD 25.
+
+resource: Convocation de démons | 1/jour | Un seul choix : 1d4 hezrous à 60 %, une nalfeshnie à 35 % ou une marilith à 20 % ; Raviaza privilégie les hezrous ; un échec dépense l'utilisation.
+resource: Barrière de lames | 3/jour | DD 23 ; NLS 16.
+resource: Vol | 3/jour | Pour prendre de la hauteur ou atteindre un adversaire volant.
+resource: Télékinésie | À volonté | DD 22 pour les modes autorisant un jet de sauvegarde ; les manœuvres de combat ne permettent aucun jet de sauvegarde, mais la résistance à la magie s'applique.
+resource: Projection d'image | À volonté | Volonté DD 24 pour reconnaître l'illusion en interagissant avec elle ; durée de 16 rounds.
+resource: Téléportation suprême | À volonté | Elle-même et au plus environ 22,7 kg d'objets ; ne transporte aucun allié ni adversaire.
+
+step: Elle repère les ennemis avant qu'ils arrivent et dispose de plusieurs rounds
+  do: Utiliser vol si la hauteur lui permet de rester hors d'atteinte, puis projection d'image pour présenter un leurre aux intrus depuis une position en retrait.
+  note: Conserver une ligne d'effet vers l'image ; celle-ci est intangible et ne porte aucune attaque d'arme réelle.
+
+## Ouverture
+
+step: La convocation est disponible et les ennemis ne l'obligent pas à se défendre immédiatement au contact
+  do: Tenter de convoquer 1d4 hezrous ; s'ils répondent, leur ordonner par télépathie d'engager les ennemis et de barrer l'accès à Raviaza.
+  note: La convocation constitue sa première action offensive ; elle commence la télékinésie lors d'un tour suivant. Si la tentative échoue, elle poursuit avec ses propres moyens.
+
+step: Un lanceur de sorts est visible et elle peut rester hors de portée de ses adversaires de mêlée
+  do: Utiliser télékinésie pour l'agripper à distance pendant que les hezrous attaquent.
+  note: Résoudre la manœuvre contre le DMD de la cible avec NLS 16 et Charisme +7, soit +23 ; ne pas utiliser son BMO de lutte physique +28 et ne pas demander de sauvegarde DD 22 pour cette manœuvre.
+
+step: Les combattants adverses peuvent la rejoindre avant qu'elle neutralise leur soutien
+  do: Placer une barrière de lames entre les combattants et leurs lanceurs de sorts, puis exploiter cette séparation au tour suivant.
+  note: La traversée inflige 15d6 dégâts, Réflexes DD 23 pour moitié. Si la barrière apparaît directement sur une créature, une réussite lui permet de choisir un côté et d'éviter entièrement les dégâts.
+
+## Rounds suivants
+
+step: Le lanceur de sorts reste une cible prioritaire de la télékinésie
+  do: Consacrer son action simple à maintenir la concentration et poursuivre la lutte, jusqu'à immobiliser la cible si possible ; laisser les hezrous l'attaquer.
+  note: La concentration empêche de lancer un autre pouvoir ou de faire une attaque à outrance pendant ce tour. Raviaza peut encore se déplacer pour conserver une position sûre ; agripper un lanceur de sorts gêne son incantation sans la rendre automatiquement impossible.
+
+step: Elle doit abandonner la télékinésie pour combattre au contact
+  do: Cesser la concentration, puis privilégier une attaque à outrance si une cible est déjà à 3 m ou moins, éventuellement après un pas de 1,50 m.
+  note: Concentrer les sept attaques de dagues sur une cible vulnérable ; utiliser les deux attaques de fouets contre d'autres ennemis à 4,50 m ou moins, puis résoudre la queue contre le guerrier le plus dangereux à 3 m ou moins.
+
+step: Un adversaire armé se trouve à portée d'un fouet
+  do: Remplacer une attaque de fouet par un désarmement, ou par un croc-en-jambe si le faire tomber permet aux démons de le submerger.
+  note: Privilégier les manœuvres contre les ennemis protégés par une armure : les fouets ordinaires ne blessent pas une cible ayant un bonus d'armure d'au moins +1 ou d'armure naturelle d'au moins +3.
+  note: L'usage d'un fouet provoque des attaques d'opportunité si elle est menacée ; choisir de préférence une cible dont l'allonge ne l'atteint pas. Elle possède Science du désarmement, mais pas Science du croc-en-jambe.
+
+step: La queue touche un puissant guerrier
+  do: Tenter immédiatement l'étreinte à +28 en action libre pour le retenir dans ses anneaux.
+  note: Résoudre la queue après les attaques d'armes évite que l'état agrippé gêne ces attaques pendant ce tour. La fiche ne fournit aucun dégât de constriction supplémentaire.
+
+step: Un guerrier est déjà pris dans ses anneaux au début de son tour
+  do: Si le retenir est prioritaire, maintenir la lutte avec une action simple ; sinon, le relâcher en action libre puis reprendre une attaque à outrance, avec une nouvelle tentative d'étreinte si la queue touche.
+  note: Maintenir normalement la lutte et effectuer une attaque à outrance demandent des actions incompatibles pendant le même tour. Retenir une cible avec la seule queue sans être elle-même agrippée impose le malus de −20 de l'étreinte, soit +8 au lieu de +28.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Frapper avec une dague ; exploiter Attaques réflexes pour effectuer jusqu'à cinq attaques d'opportunité par round si des occasions distinctes se présentent.
+  note: Les fouets ne menacent pas leur zone d'allonge de 4,50 m.
+
+step: Les ennemis se regroupent ou contournent les démons
+  do: Abandonner au besoin la concentration pour créer une nouvelle barrière de lames ; séparer les ennemis et obliger leurs combattants à traverser ou à contourner l'obstacle.
+  note: Si elle doit changer de position, utiliser vol ou téléportation suprême, puis reprendre la télékinésie ou les attaques d'armes lors d'un tour suivant.
+
+## Repli
+
+step: Ses points de vie diminuent, même si la défaite devient certaine
+  do: Continuer à combattre jusqu'à la mort, en cherchant à éliminer les lanceurs de sorts puis à écraser les survivants au corps à corps.
+  note: Raviaza ne fuit pas. Ses déplacements et téléportations servent à reprendre une position d'attaque ; aucun seuil de PV ne déclenche de retraite.

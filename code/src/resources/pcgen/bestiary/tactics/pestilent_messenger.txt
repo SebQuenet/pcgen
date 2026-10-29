@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Minotaure de taille G, chaotique mauvais, vecteur de peste au service d'Urgathoa. Sa férocité s'accompagne d'un calme contemplatif ; il cherche à répandre la maladie en combattant au corps à corps.
+  69 pv ; CA 21 ; déplacement de 9 m ; espace occupé de 3 m et allonge de 3 m ; vision dans le noir à 18 m.
+  Grande hache +1 : +13/+8, 3d6+11 et maladie, critique x3 ; cornes : +7, 1d6+3 et maladie.
+
+resource: Puanteur | permanente | rayon de 6 m ; Vigueur DD 19 ou état fiévreux pendant 10 rounds ; une sauvegarde réussie immunise contre sa puanteur pendant 24 heures
+
+note: Résistances
+  Immunisé aux maladies, au poison, à la fatigue, à l'épuisement et à l'étourdissement : ces moyens ne l'arrêtent pas.
+  L'affinité avec l'énergie négative lui fait subir les effets des énergies positive et négative comme un mort-vivant ; elle ne lui permet pas de se soigner seul.
+
+step: Il entend ou voit les intrus approcher
+  do: Utiliser Perception +13 pour choisir un passage où son allonge permet d'intercepter les premiers arrivants.
+  note: Garder une issue accessible ; son aura peut affecter les créatures vivantes qui l'accompagnent.
+
+## Ouverture
+
+step: Des ennemis entrent dans les 6 m
+  do: Appliquer la puanteur et chercher à maintenir plusieurs adversaires dans ce rayon.
+  note: L'aura agit sans dépenser son action ; elle ne transmet pas à elle seule la maladie de ses attaques.
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Attaque à outrance : deux coups de grande hache +13/+8 et un coup de cornes +7.
+  note: Concentrer les attaques sur une cible dangereuse qu'il peut rapidement abattre.
+
+step: Aucun adversaire n'est à portée
+  do: Avancer de 9 m au maximum, puis porter un seul coup de grande hache +13 si une cible devient accessible à 3 m.
+  note: Utiliser les obstacles comme couvert pendant l'approche si les ennemis tirent de loin.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Rester en place ou faire un pas de 1,50 m, puis renouveler l'attaque à outrance.
+  note: Exploiter l'allonge pour menacer les déplacements ennemis ; sans Science des réflexes, il ne dispose normalement que d'une attaque d'opportunité par round.
+
+step: Une cible est facile à toucher, notamment si la puanteur l'affaiblit
+  do: Activer Attaque en puissance : grande hache +11/+6, 3d6+17 ; cornes +5, 1d6+5 ; chaque attaque conserve la maladie.
+  note: Renoncer au malus contre une défense élevée afin de toucher plus régulièrement.
+
+step: Repousser un adversaire libérerait une issue ou dégagerait un passage
+  do: Tenter une bousculade avec BMO +16 à la place de l'attaque à outrance.
+  note: Science de la bousculade évite l'attaque d'opportunité de la cible ; cette manœuvre sacrifie les dégâts et la transmission de maladie.
+
+## Repli
+
+step: Il tombe à 20 pv ou moins et une sortie reste accessible
+  do: Se retirer vers le couvert ; utiliser le désengagement pour parcourir jusqu'à 18 m si le trajet le permet.
+  note: Le désengagement protège seulement la sortie de sa case de départ ; éviter de traverser d'autres cases menacées.
+
+step: La retraite est bloquée
+  do: Combattre à la hache ou bousculer l'adversaire qui ferme l'issue.
+
+step: Il meurt
+  do: Appliquer la renaissance blafarde : son cadavre se relève en zombie pestiféré 1 round plus tard.
+  note: Asperger le corps d'eau bénite par une action simple avant ce réveil empêche la transformation ; celle-ci ne le rétablit pas avec son profil de minotaure.

@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Veldenar, créature magique neutre de taille TG du plan de l'Air, prédateur à l'affût qui attend ses proies sous invisibilité.
+  Morsure +20 (2d6+10, critique 19-20 et étreinte), coup de queue +14 (2d6+5) ; allonge et espace occupé de 4,50 m.
+  137 PV, CA 25 ; vol à 9 m, manœuvrabilité parfaite ; déplacement au sol à 6 m.
+  Immunité au froid, résistance de 10 à l'électricité ; vision à 360°, vision dans le noir à 18 m et vision nocturne.
+
+resource: Invisibilité | à volonté | sur lui-même uniquement ; action simple, cesse dès qu'il attaque
+resource: Détection de l'invisibilité | à volonté | action simple ; permet de repérer les proies invisibles
+
+step: Il peut préparer son embuscade
+  do: Activer détection de l'invisibilité, puis invisibilité au round suivant ; attendre à proximité d'un passage fréquenté par des proies.
+  note: Perception +19 et Discrétion +12 ; renouveler ses pouvoirs avant leur expiration si l'attente se prolonge.
+
+## Ouverture
+
+step: Une proie isolée est déjà dans son allonge de 4,50 m
+  do: Attaque à outrance : morsure +20 (2d6+10), puis queue +14 (2d6+5).
+  note: La première attaque bénéficie de l'invisibilité, dont le bonus de +2 au jet d'attaque ; il devient visible immédiatement après cette attaque.
+
+step: Il doit se rapprocher pour atteindre sa proie
+  do: Voler sur 9 m au maximum pour la placer dans son allonge, puis porter une seule morsure +20 (2d6+10 et étreinte).
+  note: Si cela ne suffit pas, consacrer le round au déplacement ; il ne peut pas ajouter une attaque à outrance après son mouvement.
+
+step: Sa morsure touche une créature de taille TG ou inférieure
+  do: Tenter immédiatement l'étreinte en action libre, sans attaque d'opportunité : BMO +27 contre le DMD de la cible.
+  note: Ce total comprend le bonus de +4 de l'étreinte au BMO de base de +23. Une prise réussie ne cause aucun dégât supplémentaire immédiat.
+
+## Rounds suivants
+
+step: Il tient une proie et ses alliés ne le menacent pas sérieusement
+  do: Maintenir la lutte par une action simple ; en cas de réussite, infliger les dégâts de morsure, 2d6+10.
+  note: BMO +32 pour maintenir une prise conservée depuis le round précédent, grâce au bonus de +5. La lutte ordinaire lui impose aussi l'état agrippé ; il ne cumule pas ce maintien avec une attaque à outrance.
+
+step: Il est libre et un ennemi reste à portée
+  do: Attaque à outrance, morsure puis queue ; tenter l'étreinte après une morsure réussie si cela permet d'isoler une proie.
+  note: Sa vision à 360° empêche la prise en tenaille. Rester à 4,50 m des combattants à courte allonge lorsque la position le permet.
+
+step: Une cible facile à toucher mérite des dégâts supplémentaires
+  do: Activer Attaque en puissance : morsure +17 (2d6+16), queue +11 (2d6+8).
+  note: Le malus de -3 affecte aussi les manœuvres de combat jusqu'au prochain tour ; conserver les valeurs normales si réussir l'étreinte est prioritaire.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Utiliser la morsure et tenter l'étreinte si la cible s'y prête.
+  note: Attaques réflexes permet jusqu'à 4 attaques d'opportunité par round, sur des occasions distinctes, même avant son premier tour. Tant qu'il est agrippé, il ne peut pas en porter.
+
+step: Les ennemis restent hors de portée et l'approche devient trop dangereuse
+  do: Chercher une position hors de leur allonge, puis réactiver invisibilité et se déplacer pour préparer une nouvelle approche.
+  note: Activer ce pouvoir demande une action simple et provoque des attaques d'opportunité s'il le fait dans une zone menacée.
+
+## Repli
+
+step: Il tombe à 40 PV ou moins, seuil de repli conseillé
+  do: Relâcher toute prise en action libre, puis effectuer une retraite en vol sur 18 m au maximum par une action complexe.
+  note: Éviter les autres zones menacées sur le trajet ; la retraite ne protège que le départ face aux adversaires visibles.
+
+step: Il est sorti de l'allonge de ses poursuivants
+  do: Au tour suivant, activer invisibilité et poursuivre sa fuite en vol ; cesser d'attaquer pour rester invisible.

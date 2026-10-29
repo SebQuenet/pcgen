@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Cobra d'adamantium, créature artificielle de taille M, sans intelligence. Il attaque la cible désignée par Durra ou l'adversaire le plus proche.
+  Morsure +6 (1d8+4 et poison), allonge de 1,50 m ; déplacement de 9 m.
+  51 PV ; CA 25, contact 11, pris au dépourvu 24 ; réduction des dégâts 10/- ; résistance à la magie 16.
+
+note: Défenses et perception
+  Immunités des créatures artificielles ; ne peut pas être renversé par un croc-en-jambe.
+  Vision dans le noir à 18 m, vision nocturne ; Perception +0, Discrétion +7.
+
+step: Durra désigne un adversaire
+  do: Prendre cet adversaire pour cible.
+
+step: Durra ne désigne aucun adversaire
+  do: Prendre l'adversaire le plus proche pour cible.
+
+## Ouverture
+
+step: La cible est à plus de 1,50 m
+  do: Avancer vers elle, jusqu'à 9 m avec une action de déplacement, puis effectuer une morsure si elle est à portée.
+  note: Si elle reste hors de portée, effectuer un second déplacement pour s'en rapprocher ; aucune morsure ce round.
+
+step: La cible est déjà à portée
+  do: Effectuer une morsure +6, infligeant 1d8+4 dégâts et le poison.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter la morsure +6 à chaque round.
+  note: La réduction des dégâts 10/- et la résistance à la magie 16 soutiennent ce combat d'usure.
+
+step: La cible s'éloigne
+  do: La poursuivre avec le déplacement de 9 m et mordre dès que la portée et les actions restantes le permettent.
+
+step: Durra désigne une nouvelle cible
+  do: Diriger les déplacements et les morsures contre cette cible.
+
+step: La cible est éliminée et Durra ne donne aucune nouvelle désignation
+  do: Attaquer l'adversaire encore actif le plus proche.
+
+## Repli
+
+step: Le cobra subit des dégâts, quel que soit son total de PV restant
+  do: Continuer à combattre jusqu'à sa destruction, sans chercher à fuir.

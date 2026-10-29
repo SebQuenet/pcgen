@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Gargax The Mighty, grand dracosire dragon des donjons gargantuesque et neutre, FP 17. Son intelligence et ses enchantements lui permettent de diviser les intrus avant de les écraser au corps à corps.
+  287 pv ; CA 38, contact 4 ; réduction des dégâts 20/magie ; résistance à la magie 28 ; immunité aux enchantements, à la paralysie et au sommeil.
+  Morsure +32 (4d6+19), 2 griffes +32 (2d8+13 chacune), 2 ailes +30 (2d6+6 chacune), queue +30 (2d8+19). Allonge de 4,50 m, 6 m avec la morsure ; espace occupé de 6 m.
+  Déplacement terrestre de 9 m, vol de 75 m avec une manœuvrabilité déplorable. Présence terrifiante à 108 m, Volonté DD 26.
+
+resource: Sorts d'ensorceleur | par jour : niveau 1 : 8 ; 2 : 7 ; 3 : 7 ; 4 : 7 ; 5 : 7 ; 6 : 6 ; 7 : 6 ; 8 : 4 | NLS 17 ; les sorts d'un même niveau partagent cette réserve ; garder un sort de niveau 7 pour la fuite
+resource: Domination de monstre | 3/jour | pouvoir magique, NLS 23, Volonté DD 23
+resource: Enchantements à volonté | illimité | NLS 23 ; charme-personne DD 16, charme-monstre DD 19, charme-monstre de groupe DD 23, suggestion DD 18, suggestion de groupe DD 21 ; sauvegardes de Volonté
+resource: Détection de pensées | à volonté | NLS 23, Volonté DD 17 pour lire les pensées superficielles
+
+step: Il dispose de temps pour reconnaître les intrus
+  do: Utiliser œil du mage ou yeux indiscrets pour surveiller leur approche ; exploiter Perception +40 et Psychologie +36 pour repérer les menaces et les intentions hostiles
+  note: Changement de forme, comme modification d'apparence, et Bluff +37 permettent une approche trompeuse ; reprendre la forme draconique avant de rechercher la mêlée
+
+step: Il peut préparer les accès à son repaire
+  do: Poser alarme et verrou du mage aux accès utiles ; masquer un passage ou sa position avec un mur illusoire (Volonté DD 19 en cas d'interaction)
+  note: Le mur illusoire ne bloque aucun déplacement ; conserver une issue pour son propre gabarit. Une image persistante peut simuler une menace ou une fausse route, sans infliger de dégâts
+
+step: Le combat approche
+  do: Lancer bouclier, puis vision de l'invisible et vision magique, à raison d'un sort par round disponible
+  note: Bouclier porte sa CA à 42 pendant 17 minutes ; vision de l'invisible dure 170 minutes et vision magique 17 minutes
+
+## Ouverture
+
+note: Choix des actions
+  Choisir une action simple selon la situation ; les enchaînements de sorts demandent plusieurs rounds. Déclencher la présence terrifiante lors de la première attaque, charge ou passage en vol : Volonté DD 26 dans les 108 m.
+
+step: Un abri lui permet de garder une ligne d'effet vers la salle des intrus
+  do: Lancer projection d'image et faire partir ses prochains sorts de cette image pendant qu'il reste en retrait
+  note: Durée de 17 rounds ; Volonté DD 22 pour reconnaître l'illusion en interagissant avec elle. Conserver une ligne d'effet entre Gargax et l'image ; la rompre met fin au sort. Utiliser cette projection pour ses sorts, sans lui attribuer d'attaques physiques
+
+step: Plusieurs humanoïdes sont regroupés et doivent être arrêtés immédiatement
+  do: Lancer immobilisation de personne de groupe, Volonté DD 22
+  note: Les cibles doivent être à 9 m au plus les unes des autres ; seules les créatures de type humanoïde sont concernées. Les victimes paralysées peuvent retenter leur sauvegarde à chacun de leurs tours
+
+step: Un adversaire constitue la menace principale et se trouve à 19,50 m ou moins du point d'origine du sort
+  do: Lancer dédale sur lui, puis combattre ses compagnons pendant son absence
+  note: Aucun jet de sauvegarde ; résistance à la magie applicable. La victime peut consacrer son tour à un test d'Intelligence DD 20 pour revenir ; surveiller son point de retour
+
+## Rounds suivants
+
+step: Plusieurs ennemis restent groupés et il peut consacrer un round à affaiblir leur volonté
+  do: Lancer brume mentale sur eux, Volonté DD 20 ; au round suivant, privilégier domination de monstre ou immobilisation de personne de groupe
+  note: La brume occupe un rayon de 6 m. Un échec impose un malus de 10 aux sauvegardes de Volonté et aux tests de Sagesse, jusque 2d6 rounds après la sortie ; une réussite protège de cette brume. Elle ne masque pas la vue
+
+step: Une cible utile n'est pas protégée contre les effets mentaux
+  do: Tenter domination de monstre (Volonté DD 23) et ordonner à la victime de retenir ses compagnons ; sinon, utiliser suggestion de groupe (Volonté DD 21) pour leur faire accepter un retrait présenté comme raisonnable
+  note: Un ordre contraire à la nature d'une victime dominée lui accorde une nouvelle sauvegarde avec un bonus de 2. Un charme rend amical et ne donne pas le contrôle des actions ; ne pas le traiter comme une domination
+
+step: Des protections magiques empêchent son contrôle ou renforcent dangereusement un ennemi
+  do: Lancer dissipation suprême ciblée sur cet ennemi avant de recommencer les enchantements ou de l'attaquer
+  note: Test de dissipation à +17 ; privilégier les protections effectivement identifiées grâce à Art de la magie +32
+
+step: Un ennemi vulnérable est à portée et Gargax peut rester en place
+  do: Effectuer une attaque à outrance : morsure +32 (4d6+19), 2 griffes +32 (2d8+13), 2 ailes +30 (2d6+6), queue +30 (2d8+19)
+  note: Concentrer les attaques sur une cible ; seules les attaques dont l'allonge suffit peuvent la toucher. Exploiter la morsure à 6 m pour les attaques d'opportunité
+
+step: Rester au contact l'exposerait à plusieurs combattants et l'espace permet un passage en vol
+  do: Utiliser Attaque en vol pour approcher, porter une seule morsure +32 (4d6+19), puis poursuivre son mouvement ; déplacement total maximal de 75 m
+  note: Ce passage ne donne pas d'attaque à outrance et n'empêche pas les attaques d'opportunité ; tenir compte de sa manœuvrabilité déplorable
+
+step: La magie ennemie domine le combat et ses propres enchantements ne lui sont plus utiles
+  do: Lancer zone d'antimagie, puis rechercher la mêlée aux rounds suivants
+  note: Rayon de 3 m ; elle supprime aussi sa propre magie dans la zone. Sa taille et son allonge dépassent cette zone : ne pas supposer que toutes ses parties ou tous ses adversaires sont couverts
+
+## Repli
+
+step: Ses points de vie passent sous 90, ou le groupe conserve nettement l'avantage
+  do: Utiliser téléportation suprême vers un lieu sûr connu, avec le sort de niveau 7 réservé
+  note: Ce seuil est une consigne tactique. Si sa zone d'antimagie est active, la révoquer d'abord, puis se téléporter au round suivant
+
+step: La téléportation est empêchée ou indisponible
+  do: Chercher une sortie assez large et s'éloigner en vol à 75 m par action de déplacement ; si un effet magique identifié bloque la fuite, tenter dissipation suprême
+  note: S'il doit franchir une porte sous forme humanoïde, consacrer d'abord une action au changement de forme ; ne plus utiliser alors ses attaques ni ses dimensions draconiques

@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Géant des nuages vétéran, humanoïde de taille TG, neutre mauvais, FP 13. Combattant puissant : 184 pv, CA 28, déplacement de 15 m, espace occupé et allonge de 4,50 m.
+  Morgenstern gigantesque +27/+22/+17 (4d6+24, critique 19–20) ; ou 2 coups +24 (2d6+14). Rocher +12 (2d6+21). Privilégier la morgenstern et les attaques à outrance.
+  Initiative +5 ; Perception +17, vision nocturne et odorat. Vigueur +16, Réflexes +8, Volonté +10 ; CA de contact 9 : éviter de rester exposé aux attaques de contact à distance.
+
+resource: Lévitation | à volonté | NLS 16 ; lui-même et jusqu'à 900 kg supplémentaires ; déplacement vertical, sans vol horizontal libre.
+resource: Brume de dissimulation | à volonté | NLS 16 ; brouillard autour de lui, rayon de 6 m ; gêne aussi sa propre vision.
+resource: Nappe de brouillard | 1/jour | NLS 16 ; rayon de 6 m ; masquer une ligne de tir ou couvrir un passage.
+resource: Potion de soins importants | 1 potion | À boire à couvert lorsque des soins peuvent permettre de poursuivre le combat ou la fuite.
+resource: Bonnet du libre penseur | 1/jour | Après un échec contre un effet mental, relancer le jet de sauvegarde et conserver le second résultat.
+resource: Sac à rochers | à volonté | Sortir un rocher par une action rapide ; le sac ne se vide pas.
+
+step: Les adversaires sont repérés avant l'engagement
+  do: Choisir un passage où son allonge de 4,50 m oblige les ennemis à s'exposer pour l'approcher ; garder une issue assez large pour sa taille.
+  note: Ne préparer une lévitation que si un obstacle vertical ou une position surélevée en justifie l'usage.
+
+## Ouverture
+
+step: Un ennemi visible reste hors de portée de mêlée
+  do: Sortir un rocher du sac par une action rapide, le lancer à +12 (2d6+21), puis avancer de 15 m au maximum vers une position favorable.
+  note: Viser une cible exposée ; conserver une ligne de vue pour lancer les rochers.
+
+step: Les tirs ennemis rendent l'approche trop coûteuse
+  do: Placer la nappe de brouillard entre les tireurs et lui, puis avancer à couvert de cette obstruction.
+  note: Employer la brume de dissimulation autour de lui si une protection immédiate suffit ; chaque pouvoir demande une action simple. Le brouillard ne l'empêche pas d'être pris pour cible par une attaque de zone.
+
+step: Une cible est déjà à 4,50 m ou moins et il peut rester sur place
+  do: Attaquer à outrance à la morgenstern, +27/+22/+17, pour 4d6+24 par coup.
+  note: Un pas de placement de 1,50 m reste compatible avec cette attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible dangereuse reste à portée
+  do: Concentrer les trois attaques de morgenstern sur elle jusqu'à sa neutralisation.
+  note: Contre une CA accessible, activer Attaque en puissance : malus de 4 aux attaques et bonus de 12 aux dégâts de la morgenstern tenue à deux mains, jusqu'au prochain tour.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge, surtout après un déplacement
+  do: Employer Succession d'enchaînements par une action simple : une attaque de morgenstern à +27, puis une autre après chaque touche contre un nouvel ennemi adjacent au précédent et toujours à portée.
+  note: Une seule attaque par cible ; arrêter au premier échec ou faute de cible valable. Sa CA passe à 26 jusqu'à son prochain tour. Ne pas ajouter cette séquence à une attaque à outrance.
+
+step: Un ennemi corporel plus petit que lui doit être écarté ou mis à terre
+  do: Employer Coup fabuleux par une action simple : BMO +28 contre le DMD ; sur réussite, infliger les dégâts d'un coup (2d6+14), projeter la cible de 3 m en ligne droite et la mettre à terre.
+  note: Choisir une direction qui libère le passage ou éloigne un assaillant ; cette manœuvre remplace les attaques de morgenstern du tour.
+
+step: Un adversaire bloque une issue nécessaire
+  do: Tenter une bousculade à +30 pour le repousser, ou un renversement à +30 pour traverser son emplacement.
+  note: Les dons associés évitent l'attaque d'opportunité de la cible pour ces manœuvres ; les autres ennemis peuvent toujours menacer le déplacement.
+
+step: Un ennemi quitte une case menacée ou accomplit une action qui provoque
+  do: Porter une attaque d'opportunité à la morgenstern si les conditions le permettent.
+  note: Une seule attaque d'opportunité par round ; un pas de placement de 1,50 m n'en provoque pas.
+
+step: Un rocher lui est lancé et il en perçoit l'arrivée
+  do: Utiliser réception de rochers si le projectile remplit les conditions de cette défense.
+  note: Cette capacité ne protège pas des flèches ni des rayons.
+
+step: Il doit combattre dans le brouillard
+  do: Se rapprocher prudemment des ennemis détectés par l'odorat, ou ressortir du brouillard pour retrouver une cible visible.
+  note: L'odorat ne supprime pas les chances de rater dues au camouflage ; il ne voit pas à travers sa propre brume.
+
+## Repli
+
+step: Ses pv passent sous 45 et il ne peut pas rapidement neutraliser la menace
+  do: Créer une brume de dissimulation par une action simple, puis s'éloigner de 15 m vers l'issue préparée si le passage le permet.
+  note: Le brouillard masque la retraite sans empêcher physiquement la poursuite ; éviter de traverser les zones menacées.
+
+step: Il a obtenu un couvert et sa potion est encore disponible
+  do: Boire la potion de soins importants, puis poursuivre la retraite si le rapport de force reste défavorable.
+
+step: Un obstacle vertical permet de distancer des poursuivants incapables de voler
+  do: Activer lévitation, puis monter ou descendre de 6 m par action de mouvement pour rejoindre un refuge accessible.
+  note: La lévitation ne lui permet pas de fuir librement à l'horizontale ; s'il est encore au contact, préférer d'abord se dégager.

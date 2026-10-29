@@ -1,0 +1,90 @@
+## Avant le combat
+
+note: Profil
+  Rabisu, fée de taille M, chaotique mauvaise, FP 11 : prédateur intelligent des régions désertiques, avide de sang. C'est une créature vivante malgré son aspect de goule.
+  147 PV, CA 25 ; déplacement de 12 m, vol de 18 m avec une bonne manœuvrabilité ; allonge de 1,50 m.
+  Morsure +17 (1d6+8 et absorption de sang), 4 griffes +18 (1d4+8 et étreinte). Il affaiblit une proie, l'agrippe et se nourrit pour déclencher sa frénésie.
+
+note: Défenses
+  RD 10/fer froid et magie ; immunité au feu, aux saignements et à la peur ; résistance au froid 10 et à l'électricité 10.
+  Discrétion +38, Perception +22, odorat, vision nocturne et vision dans les ténèbres : privilégier une embuscade dans l'obscurité existante.
+
+resource: Morsure magique suprême | permanent | sur lui-même ; les valeurs des attaques données incluent déjà ses améliorations
+resource: Invisibilité | à volonté | action simple ; se termine lorsqu'il attaque
+resource: Rayon affaiblissant | à volonté | action simple ; contact à distance, portée 16,50 m, Vigueur DD 19 pour réduire de moitié le malus de Force de 1d6+5 ; les applications ne se cumulent pas
+resource: Contrôle des morts-vivants | à volonté | action simple ; Volonté DD 18 lorsque applicable ; ne crée aucun mort-vivant
+resource: Charme-monstre | 3/jour | action simple ; Volonté DD 20 ; suscite l'amitié, sans imposer une obéissance absolue
+resource: Invisibilité accélérée | 3/jour | action rapide ; conserver une utilisation pour fuir
+resource: Rayon affaiblissant accéléré | 3/jour | action rapide ; mêmes effets et DD 19 que la version ordinaire
+resource: Rayon d'épuisement | 3/jour | action simple ; contact à distance, portée 16,50 m ; épuise, ou fatigue si la sauvegarde réussit
+resource: Baiser du vampire | 3/jour | action simple ; contact au corps à corps, 6d6 dégâts, sans sauvegarde ; autant de PV temporaires pendant 1 heure, dans les limites du sort
+resource: Mirage | 1/jour | modifie l'apparence du terrain et des structures ; Volonté DD 21 en cas d'interaction
+resource: Voile | 1/jour | sur lui-même uniquement ; déguise son apparence
+resource: Vagues de fatigue | 1/jour | action simple ; cône de 9 m, sans sauvegarde ; fatigue les créatures vivantes, sans aggraver une fatigue existante
+resource: Vent divin | 1/jour | forme vaporeuse pour une fuite prolongée
+
+step: Il peut préparer le lieu de l'embuscade
+  do: Employer mirage pour déguiser l'accès à sa cachette, puis attendre invisible en hauteur ou dans les ténèbres
+  note: Les obstacles créés par le mirage sont illusoires ; ils ne bloquent pas matériellement les ennemis.
+
+step: Une victime peut être abordée sans combat
+  do: Prendre une apparence rassurante avec voile, puis employer charme-monstre pour l'inciter à s'isoler
+  note: Il parle le commun, l'aklo et l'auran. Ne pas traiter le charme comme une domination ni exiger de la victime qu'elle se laisse saigner.
+
+step: Des morts-vivants sont déjà présents et accessibles
+  do: Employer contrôle des morts-vivants pour obtenir leur aide avant l'affrontement
+  note: Aucun serviteur n'est fourni automatiquement par ce pouvoir.
+
+## Ouverture
+
+step: Plusieurs adversaires vivants sont réunis dans un cône de 9 m
+  do: Lancer vagues de fatigue, puis se replacer en vol pour éviter leur encerclement
+  note: Si nécessaire, ajouter un rayon affaiblissant accéléré sur le combattant le plus dangereux ; un seul pouvoir accéléré par round.
+
+step: Le groupe est dispersé et sa cible principale est à 16,50 m ou moins
+  do: Employer rayon affaiblissant accéléré, puis rayon d'épuisement sur cette cible et garder ses distances en vol
+  note: Choisir un combattant dépendant de sa Force. Un rayon d'épuisement qui touche une cible déjà fatiguée l'épuise même si sa sauvegarde réussit.
+
+step: Une proie isolée est déjà à portée de mêlée
+  do: Attaquer à outrance avec les quatre griffes et la morsure ; tenter l'étreinte dès qu'une griffe touche
+  note: Cette ouverture remplace les ouvertures à distance. S'il doit d'abord se déplacer de plus de 1,50 m, il ne porte qu'une attaque, de préférence une griffe.
+
+## Rounds suivants
+
+step: Une proie de taille M ou inférieure est touchée par une griffe
+  do: Tenter gratuitement l'étreinte avec un BMO de +16, sans attaque d'opportunité
+  note: Une prise réussie permet l'absorption de sang en fin de tour : 1d2 dégâts de Constitution. Une simple morsure hors lutte ne remplace pas cette condition.
+
+step: Une proie est agrippée et ses alliés ne menacent pas immédiatement le rabisu
+  do: Consacrer son action simple à maintenir la lutte, lui infliger des dégâts et poursuivre l'absorption de sang en fin de tour
+  note: Employer le BMO de lutte +16 et le bonus de +5 au maintien si la victime ne s'est pas dégagée. Ne pas ajouter une attaque à outrance à cette action de maintien.
+
+step: Il vient d'absorber du sang
+  do: Appliquer sa frénésie sanguinaire pendant 1d4 rounds : effets de rapidité et guérison accélérée 5
+  note: La rapidité ajoute notamment une attaque lors d'une attaque à outrance. La guérison accélérée cesse avec la frénésie.
+
+step: Aucune proie n'est agrippée et un ennemi est à 1,50 m
+  do: Concentrer l'attaque à outrance sur la cible affaiblie ; ajouter un rayon affaiblissant accéléré contre un autre adversaire si utile
+  note: Contre une cible déjà touchée par ce rayon, rechercher surtout l'étreinte et les dégâts ; répéter le rayon ne cumule pas les malus.
+
+step: Une cible vivante a une CA élevée et le rabisu a besoin d'un surcroît de résistance
+  do: Remplacer l'attaque à outrance par baiser du vampire pour viser sa CA de contact et gagner des PV temporaires
+  note: Ces PV temporaires ne soignent pas ses blessures et ne se cumulent pas entre plusieurs utilisations du même pouvoir.
+
+step: Plusieurs ennemis convergent vers lui ou aucune cible n'est accessible
+  do: Redevenir invisible, puis changer de position en vol pour retrouver une proie isolée
+  note: L'invisibilité accélérée permet de disparaître après une attaque à outrance ; l'invisibilité ordinaire consomme son action simple. Il ne dispose pas d'Attaque en vol.
+
+step: Un ennemi utilise du sel ou protège un passage avec une ligne de sel
+  do: S'éloigner du porteur et chercher un autre passage ; survoler les surfaces saupoudrées lorsque l'espace le permet
+  note: Une poignée de sel lui inflige 1d6 dégâts ; un sol salé est un terrain difficile. Franchir une ouverture barrée de sel demande une action de mouvement et Vigueur DD 20 ; un échec bloque le passage et le rend nauséeux pendant 1 round.
+
+## Repli
+
+step: Ses PV tombent à 40 ou moins, ou les ennemis neutralisent son embuscade et menacent de l'encercler
+  do: Libérer toute proie, employer invisibilité accélérée et s'envoler vers une issue à 18 m par action de mouvement
+  note: S'il n'a plus d'invisibilité accélérée, consacrer son action simple à l'invisibilité ordinaire puis se déplacer. L'invisibilité ne rend pas le déplacement silencieux.
+
+step: Il a rompu le contact et dispose d'un abri
+  do: Employer vent divin pour poursuivre sa fuite sous forme vaporeuse, jusqu'à 180 m par round avec le vent magique
+  note: Les changements ultérieurs entre forme physique et forme vaporeuse demandent 5 rounds ; ne pas compter sur ce pouvoir pour attaquer et disparaître instantanément à répétition.

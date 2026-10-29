@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Razethka la Balafrée, dragonne des saumures de taille G, neutre mauvaise, intelligente et féroce ; elle prend plaisir à déchiqueter ses ennemis avec ses griffes.
+  114 pv ; CA 28 avec armure de mage, contact 9 ; réduction des dégâts 5/magie ; résistance à la magie 21 ; immunité à l'acide, à la paralysie et au sommeil.
+  Morsure +20 (2d6+13), 2 griffes +20 (1d8+9), queue +15 (1d8+13), 2 ailes +15 (1d6+4). Allonge de 1,50 m, ou 3 m avec la morsure.
+  Déplacement terrestre et nage à 18 m ; vol à 60 m, manœuvrabilité médiocre ; respiration aquatique.
+
+resource: Sorts de niveau 1 | 7/jour, dont 1 déjà utilisé | Armure de mage, projectile magique, rayon affaiblissant (DD 13), couleurs dansantes (DD 13).
+resource: Sorts de niveau 2 | 5/jour, dont 1 déjà utilisé | Invisibilité, force de taureau ; réserve commune aux deux sorts.
+resource: Élixirs de souffle de dragon des saumures | Nombre non précisé | Souffle infligeant 10d6 dégâts d'acide ; portée et DD non précisés dans le bloc fourni.
+resource: Brume de dissimulation | À volonté | Pouvoir magique ; la brume gêne également la vision de Razethka.
+
+step: Avant l'arrivée des intrus
+  do: Avoir armure de mage et invisibilité actives, comme prévu dans ses préparatifs.
+  note: La CA donnée inclut déjà armure de mage ; sans ce sort, elle tombe à 24. L'invisibilité cesse lorsqu'elle attaque.
+
+step: Un élixir est disponible et elle peut préparer son embuscade
+  do: Boire un élixir avant l'affrontement pour disposer de son souffle lors de l'ouverture.
+
+## Ouverture
+
+step: Les PJ entrent dans la salle et ne l'ont pas encore débusquée
+  do: Rester invisible et attendre, si possible, que tous soient entrés avant d'attaquer.
+  note: Chercher une position permettant de toucher plusieurs intrus avec le souffle de l'élixir.
+
+step: Les intrus sont en position et le souffle de l'élixir est prêt
+  do: Déclencher le souffle pour infliger 10d6 dégâts d'acide, puis se rapprocher si un déplacement reste possible.
+  note: Le souffle révèle sa présence et met fin à l'invisibilité ; il ne permet pas d'enchaîner une attaque à outrance dans le même round.
+
+step: Elle doit engager le combat sans souffle prêt
+  do: Si un ennemi est déjà à 1,50 m, attaquer à outrance ; sinon, avancer et porter une morsure avec Frappe décisive dès qu'une cible est à 3 m.
+  note: Frappe décisive porte les dégâts de la morsure à 4d6+13, pour une seule attaque +20 effectuée avec l'action d'attaque.
+
+## Rounds suivants
+
+step: Un adversaire est à 1,50 m au début de son tour
+  do: Privilégier l'attaque à outrance : morsure +20 (2d6+13), 2 griffes +20 (1d8+9), queue +15 (1d8+13), 2 ailes +15 (1d6+4).
+  note: Concentrer ses attaques sur une cible pour l'abattre ; ses griffes restent au cœur de sa manière de combattre.
+
+step: Elle doit se déplacer pour atteindre une cible
+  do: Se rapprocher au sol, à la nage ou en vol selon le terrain, puis utiliser Frappe décisive avec la morsure à 3 m ou moins.
+  note: Un pas de 1,50 m peut suffire à mettre une cible à portée des griffes tout en conservant l'attaque à outrance.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts de ses attaques naturelles.
+  note: Contre une défense élevée, privilégier la précision afin de conserver l'efficacité de ses nombreuses attaques.
+
+step: Aucun ennemi ne peut être attaqué ce round et elle peut préparer la mêlée
+  do: Lancer force de taureau, puis avancer si possible.
+  note: Le sort accorde +4 en Force pendant 5 minutes ; il consomme un emplacement de niveau 2 et ses bonus ne sont pas inclus dans les attaques du profil.
+
+step: Une cible reste hors d'atteinte de ses attaques naturelles mais à portée de sort
+  do: Lancer projectile magique : trois projectiles infligeant chacun 1d4+1 dégâts, de préférence sur la même cible.
+
+step: Des tirs l'empêchent de rejoindre ses adversaires
+  do: Créer une brume de dissimulation pour couvrir son approche, puis chercher le contact.
+  note: Elle ne dispose d'aucune capacité indiquée lui permettant de voir à travers cette brume.
+
+## Repli
+
+step: Ses points de vie diminuent, même près de 0
+  do: Continuer le combat jusqu'à la mort.
+  note: Razethka ne fuit pas ; ses déplacements et ses protections servent à poursuivre le combat.

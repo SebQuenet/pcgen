@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Nuage de bionanites, nuée de constructs infimes, neutre, FP 7. 71 pv, CA 22 ; immunité aux dégâts des armes et immunités des constructs ; résistance au feu 10.
+  Attaque de nuée : 3d6 dégâts, distraction et faiblesse. Occupe un espace de 3 m de côté, allonge 0 m ; vol à 12 m, manœuvrabilité parfaite.
+  Son objectif est de neutraliser les « androïdes défectueux » : il considère ainsi tout humanoïde rencontré, y compris les androïdes mutants du vaisseau.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +20, perception aveugle à 18 m, vision dans le noir à 18 m et vision nocturne
+  note: Dès qu'il remarque un humanoïde, le nuage se porte vers lui pour le neutraliser
+
+## Ouverture
+
+step: Un humanoïde conscient est accessible
+  do: Voler jusqu'à lui et entrer dans son espace pour lui infliger les dégâts de nuée, avec distraction et faiblesse
+  note: L'attaque de nuée inflige automatiquement ses dégâts aux créatures dont elle occupe l'espace à la fin de son déplacement ; aucun jet d'attaque n'est nécessaire
+
+step: Plusieurs humanoïdes conscients sont regroupés
+  do: Placer le nuage pour en recouvrir plusieurs à la fois
+  note: Chaque cible recouverte subit 3d6 dégâts, avec distraction et faiblesse ; éviter les cases contenant déjà un adversaire inconscient
+
+## Rounds suivants
+
+step: Des adversaires conscients restent dans sa zone
+  do: Continuer à les envelopper pour renouveler les dégâts de nuée et les effets de distraction et de faiblesse
+  note: Son immunité aux dégâts des armes lui permet de maintenir le contact malgré les coups ordinaires
+
+step: Une cible consciente sort du nuage
+  do: La suivre en volant, ou rejoindre d'autres humanoïdes conscients proches, dans les limites de poursuite
+
+step: Un adversaire devient inconscient par les dégâts ou un empoisonnement
+  do: Cesser de lui infliger des dégâts et déplacer le nuage vers les adversaires encore conscients
+  note: Ne pas rester sur une victime inconsciente pour continuer à toucher ses voisins
+
+## Repli
+
+step: Le nuage perd des points de vie
+  do: Continuer le combat jusqu'à sa destruction
+  note: Aucun seuil de pv ne provoque sa fuite
+
+step: Le piège de la salle n'est pas désarmé et les fuyards s'éloignent de l'Aurora
+  do: Arrêter la poursuite à 15 m de l'Aurora
+
+step: Le piège de la salle est désarmé
+  do: Poursuivre les humanoïdes conscients dans tout le complexe
+  note: La limite de poursuite de 15 m ne s'applique alors plus

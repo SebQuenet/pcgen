@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Le Cavalier noir est un dullahan loyal mauvais, mort-vivant de FP 12, qui privilégie les charges à cheval et les attaques à outrance à pied.
+  142 PV, CA 27, résistance à la magie 22, guérison accélérée 5 et résistance au renvoi +4 ; immunités des morts-vivants.
+  Fléau d'échine +17/+12/+7 (1d8+7, critique 19-20, plus 1d6 de froid) et hachette +2 à +17/+12 (1d6+7, critique 19-20/x3, plus 1d6 de froid).
+  Déplacement à pied : 6 m ; allonge : 1,50 m ; vision aveugle : 18 m ; initiative +7.
+
+resource: Têtes coupées | 3 | réservées au lancer de tête contre les groupes ou les adversaires à distance
+resource: Marche dans les airs et don des langues | permanents | pouvoirs déjà actifs
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +21 et sa vision aveugle à 18 m ; choisir un espace permettant une charge et un passage au-delà de la cible
+  note: Sa marche dans les airs lui permet de se déplacer au-dessus du sol ; le bloc ne précise pas que sa monture en bénéficie.
+
+## Ouverture
+
+step: Il dispose d'une monture et d'une ligne de charge dégagée
+  do: Charger une cible au fléau d'échine avec Charge dévastatrice, puis poursuivre le déplacement grâce à Attaque au galop si le trajet le permet
+  note: Charge dévastatrice double les dégâts de l'arme ; le supplément de 1d6 de froid ne se multiplie pas. Respecter la trajectoire rectiligne de la charge.
+
+step: Il attaque ou charge près d'ennemis
+  do: Appliquer sa présence terrifiante aux ennemis concernés dans un rayon de 9 m, Volonté DD 22
+
+step: Il commence le combat à pied, hors de portée de mêlée
+  do: Avancer vers une cible pour l'engager à 1,50 m ; utiliser marche dans les airs pour franchir un obstacle si nécessaire
+  note: Sa vitesse à pied est de 6 m ; garder une position permettant une attaque à outrance au round suivant.
+
+## Rounds suivants
+
+step: Il est monté et peut préparer une nouvelle charge
+  do: Reprendre une trajectoire dégagée et répéter les charges au fléau avec Charge dévastatrice et Attaque au galop
+
+step: Une attaque touche sa monture
+  do: Utiliser Combat monté : tenter un jet d'Équitation à +13 pour annuler le coup
+  note: Une fois par round ; le résultat doit dépasser le jet d'attaque adverse.
+
+step: Il est à pied et un adversaire reste à portée
+  do: Faire une attaque à outrance : trois coups de fléau à +17/+12/+7 et deux coups de hachette à +17/+12
+  note: Se limiter à un pas de placement de 1,50 m si un ajustement suffit ; un déplacement ordinaire empêche cette attaque à outrance.
+
+step: Les ennemis se regroupent ou cherchent à rester à distance
+  do: Employer le lancer de tête en utilisant les têtes coupées disponibles
+  note: Ce pouvoir est mentionné dans ses tactiques, mais le bloc fourni ne précise ni sa portée, ni son jet d'attaque, ni ses effets ; ne pas lui attribuer de dégâts ou de DD supplémentaires.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 1,50 m
+  do: Le frapper avec le fléau d'échine
+  note: Attaques réflexes permet jusqu'à quatre attaques d'opportunité par round avec sa Dextérité de 17, dans les limites habituelles des occasions disponibles.
+
+step: Il est blessé et toujours actif
+  do: Récupérer 5 PV par round grâce à la guérison accélérée, puis poursuivre l'offensive
+  note: Ne pas dépasser son maximum de 142 PV.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à combattre jusqu'à sa destruction, sans fuir ni se rendre
+  note: Il ne craint pas la mort et n'a aucun seuil de repli.
+
+step: Il est détruit
+  do: Faire se désagréger son corps et l'enfoncer dans le sol ; laisser seulement son armure et son équipement
+  note: Sa monture meurt aussitôt et disparaît.

@@ -1,0 +1,87 @@
+## Avant le combat
+
+note: Profil
+  Hishandura, asura de taille G, loyal mauvais, combattant solitaire qui combine une pluie de coups et des pouvoirs de zone. 207 PV, CA 30 ; déplacement de 15 m, espace et allonge de 3 m.
+  Quatre dagues coup-de-poing +1 : sept attaques par attaque à outrance, plus une morsure ; autre possibilité, quatre coups et une morsure sans les dagues. Les dagues menacent un critique sur 19–20, multiplicateur x3.
+
+note: Défenses et perception
+  Régénération 10 ; les armes et les sorts du Bien la suspendent pendant le round suivant. Réduction des dégâts 10/Bien, résistance à la magie 26, résistances à l'acide et à l'électricité de 10 ; immunité aux poisons, maladies et malédictions.
+  Perception +29, vision dans le noir à 18 m, odorat ; sa vue traverse le feu, le brouillard et la fumée. Sa propre immunité au poison lui permet de combattre dans sa nuée mortelle.
+
+resource: Forme gazeuse | à volonté | déplacement discret et passage par les interstices
+resource: Éclair multiple | 3/jour | Réflexes DD 22
+resource: Nuée mortelle | 3/jour | Vigueur DD 21 ; poison
+resource: Cône de froid | 3/jour | Réflexes DD 21
+resource: Porte dimensionnelle | 3/jour | conserver une utilisation pour le repli
+resource: Serpent de feu | 3/jour | Réflexes DD 21
+resource: Dissipation suprême | 3/jour | niveau de lanceur de sorts 18
+resource: Mur de feu | 3/jour | séparer les adversaires et barrer une approche
+resource: Contrôle de l'eau | 1/jour | exploiter une étendue d'eau existante
+resource: Contrôle du climat | 1/jour | préparation à longue échéance
+resource: Cri suprême | 1/jour | Vigueur DD 24
+resource: Convocation | 1/jour | niveau 6 ; 40 % de réussite ; 1d3 aghasuras
+
+step: Il est averti de l'approche des intrus et dispose de temps
+  do: Tenter la convocation avant l'affrontement ; si elle réussit, placer les aghasuras pour gêner l'approche et les voies de fuite adverses.
+  note: L'échec consomme aussi l'utilisation quotidienne. Ne pas compter sur des renforts garantis.
+
+step: Le terrain comporte du brouillard ou de la fumée
+  do: S'y placer pour observer l'approche et choisir sa cible sans subir cette gêne visuelle.
+  note: Contrôle du climat peut préparer du brouillard si les conditions locales et la saison le permettent, mais demande une longue préparation ; ce pouvoir ne sert pas d'ouverture immédiate.
+
+## Ouverture
+
+step: Plusieurs adversaires entrent dans un cône de 18 m
+  do: Utiliser cri suprême, Vigueur DD 24, pour infliger des dégâts et étourdir les cibles qui ratent leur sauvegarde.
+  note: Orienter le cône pour épargner les éventuels aghasuras.
+
+step: Les ennemis restent regroupés à distance et ne sont pas immunisés au poison
+  do: Placer une nuée mortelle sur eux, Vigueur DD 21, puis les laisser choisir entre subir le poison et quitter leur formation.
+  note: La nuée masque la vue adverse, mais pas celle du hishandura ; elle se déplace en s'éloignant de son point de lancement et descend vers les points bas. Tenir les alliés hors de sa trajectoire.
+
+step: Une cible isolée se trouve déjà à 3 m ou moins
+  do: Effectuer immédiatement une attaque à outrance aux dagues et à la morsure.
+  note: S'il faut approcher de plus de 1,50 m, se déplacer puis porter une seule attaque ; ne pas accorder une attaque à outrance après un déplacement normal.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans nécessiter plus d'un pas de 1,50 m
+  do: Concentrer l'attaque à outrance sur elle : dague principale +23/+18/+13/+8, dégâts 1d6+8 ; trois autres dagues +23, dégâts 1d6+4 chacune ; morsure +19, dégâts 2d6+3.
+  note: Sur critique confirmé, le don Staggering Critical rend la cible chancelante pendant 1d4+1 rounds, ou 1 round si elle réussit Vigueur DD 28, calculé avec le bonus de base à l'attaque de +18. Critique focalisé ajoute +4 à la confirmation.
+
+step: Il combat sans ses dagues
+  do: Employer l'autre attaque à outrance : morsure +24, dégâts 2d6+7, et quatre coups +24, dégâts 1d6+7 chacun.
+  note: Choisir cette routine ou celle des dagues ; ne pas additionner les quatre coups aux attaques d'armes.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts ; y renoncer si les attaques ratent trop souvent.
+
+step: Des ennemis provoquent des attaques d'opportunité dans son allonge de 3 m
+  do: Exploiter Réflexes en combat pour porter jusqu'à quatre attaques d'opportunité par round, selon les occasions offertes.
+  note: Garder les adversaires dans son allonge oblige ceux qui veulent s'éloigner à surveiller leurs déplacements.
+
+step: Une protection magique identifiée contrarie ses attaques ou ses pouvoirs
+  do: Lancer dissipation suprême sur le bénéficiaire avant de reprendre l'offensive.
+  note: Employer Sapience magique +19 pour reconnaître les sorts observés ; ne pas supposer qu'il connaît automatiquement toutes les protections adverses.
+
+step: Plusieurs ennemis restent hors de portée de mêlée
+  do: Employer éclair multiple contre des cibles dispersées, cône de froid contre un groupe dans un cône de 18 m, ou serpent de feu pour atteindre plusieurs cibles en contournant ses alliés.
+  note: Respectivement Réflexes DD 22, DD 21 et DD 21 ; changer d'élément si une résistance devient manifeste.
+
+step: Les adversaires cherchent à l'encercler ou à soutenir la cible qu'il attaque
+  do: Dresser un mur de feu entre eux pour isoler une partie du groupe, puis maintenir la pression sur la cible accessible.
+  note: Sa vue traverse le feu, mais il ne possède aucune résistance au feu : éviter de traverser son propre mur et de toucher ses alliés avec ses pouvoirs.
+
+step: Une cible prioritaire est inaccessible ou il doit quitter un encerclement
+  do: Utiliser porte dimensionnelle pour rejoindre une position offrant une bonne approche au round suivant.
+  note: Après cette téléportation, il ne peut plus agir avant son prochain tour. Garder si possible une utilisation pour fuir.
+
+## Repli
+
+step: Il tombe sous 60 PV, ou les attaques du Bien empêchent sa régénération tandis que le combat tourne mal
+  do: Utiliser porte dimensionnelle pour gagner un emplacement connu hors de portée immédiate des poursuivants.
+  note: La téléportation met fin à ses actions jusqu'à son prochain tour ; choisir un abri qui lui laisse le temps de récupérer.
+
+step: Il est à l'abri mais reste poursuivi
+  do: Prendre forme gazeuse pour franchir une fissure ou un passage trop étroit, puis attendre que sa régénération rétablisse ses PV avant de revenir à sa forme normale.
+  note: La forme gazeuse empêche ses attaques physiques ; son vol est limité à 3 m. L'employer pour traverser un obstacle, pas pour distancer un poursuivant en terrain ouvert.

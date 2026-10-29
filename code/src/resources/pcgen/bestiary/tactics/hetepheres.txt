@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Hetepheres est une sphinge neutre, de taille G, intelligente et observatrice ; FP 6, 68 pv, CA 19, initiative +5.
+  Au contact : deux griffes +12, chacune pour 1d8+5 dégâts lors d'une attaque à outrance ; une seule griffe après un déplacement normal.
+  Déplacement au sol de 12 m, vol de 15 m avec une manœuvrabilité médiocre ; espace occupé de 3 m, allonge de 1,50 m.
+  Vision dans le noir à 18 m, vision nocturne, Perception +17. Compréhension des langages, détection de la magie, lecture de la magie et détection de l'invisibilité sont constantes.
+
+resource: Clairaudience/clairvoyance | 3/jour | NLS 8 ; reconnaissance à distance
+resource: Dissipation de la magie | 1/jour | NLS 8 ; réserver à une protection magique gênante
+resource: Localisation d'objet | 1/jour | NLS 8 ; recherche d'un objet
+resource: Mythes et légendes | 1/jour | NLS 8 ; renseignement avant la rencontre
+resource: Symboles | 1/semaine au total | Choisir un seul effet : terreur DD 20, douleur DD 19, persuasion DD 20, sommeil DD 19 ou étourdissement DD 21 ; durée maximale d'une semaine
+
+step: Elle dispose de temps pour observer les intrus
+  do: Employer clairaudience/clairvoyance pour surveiller un lieu approprié et préparer son placement
+  note: Détection de la magie aide à repérer les protections avant l'affrontement ; détection de l'invisibilité lui permet de voir les créatures invisibles dans son champ de vision
+
+step: Son utilisation hebdomadaire de symbole est disponible et elle peut préparer le terrain
+  do: Tracer à l'avance un symbole d'étourdissement, DD 21, sur un passage que les intrus devront emprunter ; définir son déclencheur
+  note: Cette préparation consomme l'unique utilisation hebdomadaire, commune aux cinq effets ; ne pas supposer qu'un symbole existe si elle n'a pas pu le préparer
+
+## Ouverture
+
+step: Un symbole préparé peut intercepter les adversaires
+  do: Les laisser entrer dans sa zone d'effet, puis approcher une cible affectée
+  note: Exploiter l'étourdissement pour préparer une attaque à outrance au tour suivant
+
+step: Une protection magique empêche de menacer efficacement la cible prioritaire
+  do: Lancer dissipation de la magie sur cette protection, de préférence depuis une position hors de portée de mêlée
+  note: Test de dissipation à 1d20+8 ; elle ne dispose que d'une utilisation quotidienne
+
+step: Un adversaire est accessible avec un déplacement au sol de 12 m au maximum
+  do: Avancer et porter une griffe +12, pour 1d8+5 dégâts
+  note: Chercher une cible isolée et un emplacement où peu d'ennemis peuvent l'entourer
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : deux griffes +12, chacune pour 1d8+5 dégâts
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter les deux griffes à outrance et concentrer les attaques sur le même adversaire jusqu'à sa mise hors de combat
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant l'attaque à outrance
+
+step: La cible s'éloigne hors de son allonge
+  do: La rejoindre et porter une seule griffe si elle est accessible ; sinon se rapprocher en utilisant le terrain
+  note: Son allonge de 1,50 m ne lui permet pas de frapper plus loin malgré sa grande taille
+
+step: Un obstacle ou un encerclement rend le combat au sol défavorable
+  do: Utiliser son vol de 15 m pour gagner une position accessible et reprendre le combat au sol
+  note: Sa manœuvrabilité médiocre impose de prévoir de l'espace pour les virages ; éviter de compter sur un vol stationnaire
+
+## Repli
+
+step: Elle tombe à 20 pv ou moins, ou ne peut plus atteindre efficacement ses ennemis
+  do: Se désengager par une action de retraite, puis utiliser le vol pour rejoindre une issue ou un abri
+  note: La retraite permet jusqu'à 24 m au sol ; elle ne protège des attaques d'opportunité que pour le départ de sa position initiale. Le seuil de 20 pv est un choix tactique
+
+step: Un poursuivant dépend d'un effet magique et sa dissipation est encore disponible
+  do: Depuis une position hors de portée, tenter de dissiper cet effet pour faciliter sa fuite

@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Kurshu l’Immortelle est une Extérieure de taille G, loyale mauvaise, intelligente et mobile : elle privilégie les pouvoirs à distance et prend les Extérieurs pour cibles prioritaires.
+  214 pv ; CA 28, contact 17 ; allonge et espace occupé de 3 m ; déplacement terrestre de 9 m, vol de 18 m avec manœuvrabilité moyenne.
+  Attaque à outrance : 2 coups +18, chacun infligeant 1d6+5 dégâts et une diminution permanente de 1d4 points d’Intelligence ; queue +13, 1d8+2 et étreinte, lutte +24.
+  Régénération 5 désactivée par l’acide ; RD 10/fer froid et magie ; résistance de 30 au froid, à l’électricité, au feu et au son ; RM 24.
+  Perception +22 ; perception aveugle à 18 m, vision dans le noir à 36 m, vision nocturne et odorat ; télépathie à 30 m.
+
+step: Elle croit être cachée à l’arrivée des intrus
+  do: Lancer déplacement avant de se révéler.
+  note: Décompter cette utilisation des trois disponibles pour la journée.
+
+note: État initial
+  Un souhait limité a déjà été utilisé aujourd’hui : il en reste deux.
+  Les trois niveaux négatifs dus au jeûne sont déjà intégrés aux valeurs fournies ; ne pas les appliquer une seconde fois.
+  La faiblesse séparation divine est indiquée, mais ses effets ne sont pas détaillés dans ce bloc.
+
+resource: Déplacement | 3/jour | Réduire ce total si lancé avant le combat.
+resource: Boule de feu | 3/jour | Réflexes DD 20.
+resource: Éclair | 3/jour | Réflexes DD 20.
+resource: Projectile magique | 3/jour | Pour achever une cible à distance.
+resource: Lenteur | 3/jour | Volonté DD 20.
+resource: Nuage nauséabond | 3/jour | Vigueur DD 20.
+resource: Immobilisation de personne | 3/jour | Volonté DD 20 ; cible humanoïde.
+resource: Dissipation de la magie | 3/jour | Contre une protection ou un effet magique gênant.
+resource: Soins importants | 3/jour | Pour se soigner en cours de combat.
+resource: Baiser du vampire | 3/jour | Attaque de contact au corps à corps.
+resource: Téléportation suprême | 3/jour | Elle seule, avec au maximum 50 livres d’objets.
+resource: Changement de plan | 3/jour | Usage offensif : contact, puis Volonté DD 24.
+resource: Souhait limité | 2 restantes aujourd’hui | Réserver à un effet adapté à la situation, dans les limites du sort.
+
+## Ouverture
+
+step: Plusieurs intrus sont regroupés et peuvent être atteints à distance
+  do: Choisir boule de feu pour un groupe compact ou éclair pour des ennemis alignés ; privilégier un placement qui touche les Extérieurs.
+  note: Réflexes DD 20 ; choisir un seul de ces pouvoirs pour cette action.
+
+step: Les combattants adverses menacent de l’encercler
+  do: Ouvrir avec lenteur, Volonté DD 20, puis exploiter le vol pour maintenir la distance.
+  note: Si le placement s’y prête davantage, utiliser nuage nauséabond, Vigueur DD 20, pour gêner leur progression.
+
+step: Un humanoïde particulièrement dangereux constitue une cible isolée
+  do: Tenter immobilisation de personne, Volonté DD 20.
+  note: Ce pouvoir ne permet pas de paralyser n’importe quel Extérieur : respecter la restriction aux humanoïdes.
+
+## Rounds suivants
+
+step: Elle conserve de l’espace pour manœuvrer
+  do: Se déplacer au sol ou en vol, puis utiliser un pouvoir à distance ; continuer de viser les Extérieurs en priorité.
+  note: Alterner dégâts et contrôle selon le placement et les résistances observées ; utiliser projectile magique pour achever une cible blessée.
+
+step: Un Extérieur meurt et son cadavre devient accessible
+  do: Rejoindre le cadavre et se nourrir dès que possible pour retrouver sa force perdue.
+  note: C’est une priorité explicite de Kurshu ; le bloc ne précise ni la durée de cette alimentation ni les valeurs à recalculer ensuite.
+
+step: Une protection magique empêche ses attaques d’être efficaces
+  do: Tenter dissipation de la magie, puis reprendre ses attaques lors des actions suivantes.
+  note: Ses pouvoirs magiques ont un niveau de lanceur de sorts de 12 et une concentration de +19.
+
+step: Un adversaire reste au contact et elle peut consacrer son tour à attaquer
+  do: Effectuer l’attaque à outrance : deux coups +18 et une queue +13.
+  note: Chaque coup diminue durablement l’Intelligence ; sur une queue réussie, exploiter l’étreinte avec lutte +24 si immobiliser cette cible vaut la perte de mobilité.
+
+step: Elle doit se déplacer avant de frapper
+  do: Porter un seul coup +18 après le déplacement, ou utiliser baiser du vampire si elle recherche des points de vie temporaires.
+  note: Son allonge de 3 m et Attaques réflexes permettent aussi de punir les ouvertures adverses ; elle ne possède pas de don permettant une attaque à outrance après un déplacement normal.
+
+step: Un adversaire au contact doit être écarté du combat
+  do: Envisager changement de plan offensif : réussir le contact, puis faire jouer la Volonté DD 24.
+
+## Repli
+
+step: Ses points de vie baissent et elle peut encore agir
+  do: Se repositionner en vol ou par téléportation suprême, puis utiliser soins importants lors d’une action disponible et laisser agir la régénération.
+  note: Si l’acide a neutralisé la régénération, compter sur les soins et chercher une position moins exposée à cette attaque.
+
+step: La défaite approche
+  do: Continuer le combat jusqu’à la mort, en utilisant les pouvoirs encore disponibles et les coups qui diminuent l’Intelligence.
+  note: Kurshu combat à contrecœur jusqu’à la mort ; ses déplacements et téléportations servent à poursuivre le combat, sans organiser de fuite définitive.

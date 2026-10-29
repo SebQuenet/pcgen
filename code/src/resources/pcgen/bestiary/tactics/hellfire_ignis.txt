@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Hellfire Ignis, fée du feu de taille P, neutre mauvaise, FP 3 : un incendiaire cruel qui utilise les flammes et la confusion pour isoler ses victimes.
+  27 pv, CA 16, réduction des dégâts 5/fer froid, immunité au feu et vulnérabilité au froid ; déplacement de 9 m, allonge de 1,50 m.
+  Morsure +8 (1d4+2) et 2 griffes +8 (1d3+2 plus brûlure) ; pyrotechnie pour aveugler ou masquer les déplacements.
+
+resource: Pyrotechnie | 3/jour | action simple, NLS 3, DD 12 ; nécessite un foyer existant
+resource: Étincelle | à volonté | action simple, portée 9 m, Vigueur DD 10 pour un objet ; enflamme un objet combustible de taille I, non porté et sans surveillance
+resource: Illumination | à volonté | action simple, portée 9 m, Vigueur DD 10 ; une créature éblouie pendant 1 minute, sans cumul
+
+step: Il peut préparer une embuscade
+  do: Choisir un couvert près de combustibles et repérer les intrus avec Perception +8 ; se dissimuler avec Discrétion +17.
+  note: Sa vision nocturne facilite l'approche dans la pénombre.
+
+step: Son odeur risque de révéler sa cachette
+  do: Supprimer son odeur de soufre par une action rapide avant l'approche.
+  note: Essence de soufre : suppression pendant 1 minute au maximum ; sinon, malus de -2 en Discrétion dans les endroits dépourvus de soufre.
+
+step: Aucun foyer exploitable n'existe et il dispose de temps
+  do: Utiliser étincelle sur un petit combustible sans surveillance à 9 m ou moins, puis laisser le feu prendre avant l'arrivée des ennemis.
+  note: Préparer aussi une issue ; étincelle ne met pas directement le feu à une créature ou à son équipement porté.
+
+## Ouverture
+
+step: Plusieurs ennemis voient un foyer à 36 m ou moins d'eux, et l'ignis se trouve à plus de 36 m de ce foyer
+  do: Utiliser pyrotechnie en feux d'artifice, puis avancer vers une victime isolée.
+  note: Volonté DD 12 ou aveuglement pendant 1d4+1 rounds ; portée du pouvoir 156 m. Les alliés exposés sont également concernés.
+
+step: Un foyer permet de couper la vue entre les ennemis
+  do: Utiliser pyrotechnie en fumée, puis se déplacer le long du bord du nuage pour approcher une cible séparée du groupe.
+  note: Fumée sur 6 m autour du foyer pendant 3 rounds ; toute vision est bloquée. Vigueur DD 12 ou -4 en Force et Dextérité, jusqu'à 1d4+1 rounds après la sortie ou la dissipation. L'ignis subit aussi ces effets s'il entre dans le nuage.
+
+step: Une cible peut être atteinte avec un déplacement de 9 m au plus
+  do: Approcher et porter une seule attaque de griffe +8 (1d3+2 plus brûlure).
+  note: Privilégier une victime isolée ou aveuglée ; garder les pouvoirs magiques pour les moments où aucun adversaire ne le menace au contact.
+
+## Rounds suivants
+
+step: Une cible reste à 1,50 m et il peut consacrer son round aux attaques
+  do: Attaque à outrance : morsure +8 (1d4+2) et 2 griffes +8 (1d3+2 plus brûlure).
+  note: S'il doit se déplacer de plus de 1,50 m, se limiter à une attaque après le déplacement.
+
+step: Une cible adjacente tente de s'éloigner par un pas de 1,50 m
+  do: Utiliser Step Up pour la suivre de 1,50 m par une action immédiate et rester adjacent.
+  note: Il renonce alors au pas de placement de son prochain tour et réduit de 1,50 m son prochain déplacement ; ce suivi ne donne aucune attaque gratuite.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Porter une attaque de griffe +8 pour infliger aussi la brûlure.
+  note: Attaques réflexes autorise jusqu'à 6 attaques d'opportunité par round, même pris au dépourvu ; une seule attaque par occasion.
+
+step: Aucune attaque au contact n'est possible, mais une cible visible est à 9 m ou moins
+  do: Utiliser illumination sur un adversaire qui n'est pas déjà ébloui, puis chercher un couvert.
+  note: Vigueur DD 10 annule ; l'effet éblouit, sans aveugler.
+
+## Repli
+
+step: Points de vie à 9 ou moins, ou un ennemi exploite efficacement le froid ou le fer froid
+  do: Se désengager par une retraite, jusqu'à 18 m si le terrain le permet, en privilégiant une issue à travers les flammes existantes.
+  note: Son immunité protège du feu, mais pas de la fumée ni de l'effondrement d'un bâtiment.
+
+step: Il a rompu le contact et dispose encore de pyrotechnie et d'un foyer
+  do: Créer un écran de fumée entre lui et les poursuivants, puis gagner un couvert et se cacher avec Discrétion +17.
+  note: Rester hors du nuage ; le feu non magique servant de source à pyrotechnie s'éteint, sauf si le foyer dépasse un cube de 6 m de côté, auquel cas il n'est éteint qu'en partie.

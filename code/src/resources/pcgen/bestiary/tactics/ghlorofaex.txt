@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Ghlorofaex, très vieux dragon bleu loyal mauvais de taille Gigantesque, combine souffle électrique, magie de protection et attaques naturelles dévastatrices. Il prépare sa mêlée, puis reprend de la hauteur lorsqu'il est blessé.
+  275 pv ; CA 37 ; réduction des dégâts 15/magie ; résistance à la magie 28 ; immunité à l'électricité, au sommeil et à la paralysie magiques ; résistance au froid 30.
+  Morsure +29 (6d6+11, critique 19-20), 2 griffes +29 (2d8+11), 2 ailes +24 (2d6+5), coup de queue +24 (2d8+5). Allonge de 4,50 m, ou 6 m avec la morsure ; espace occupé de 6 m.
+  Déplacement au sol de 12 m, creusement de 6 m et vol de 75 m, de manœuvrabilité déplorable. Perception +29 ; perception aveugle à 18 m et vision dans le noir à 36 m.
+
+resource: Sorts de niveau 5 | 4/jour | réserve commune à métamorphose funeste (DD 19) et mur de force
+resource: Sorts de niveau 4 | 7/jour | réserve commune à œil magique, charme-monstre (DD 18) et porte dimensionnelle
+resource: Sorts de niveau 3 | 7/jour | réserve commune à dissipation de la magie, déplacement, rapidité et lenteur (DD 17)
+resource: Sorts de niveau 2 | 7/jour | réserve commune à flèche acide, fou rire (DD 16), invisibilité, résistance aux énergies destructives et rayon ardent
+resource: Sorts de niveau 1 | 7/jour | réserve commune à alarme, charme-personne (DD 15), graisse (DD 15), projectile magique et réduction de personne (DD 15)
+resource: Pouvoirs magiques | à volonté | terrain hallucinatoire (DD 18), son imaginaire (DD 14), image mineure (DD 16), ventriloquie (DD 15) ; NLS 22
+
+step: Il dispose de temps pour surveiller ses accès
+  do: Poser alarme sur les passages menant à son repos et observer les intrus avec œil magique, depuis un endroit protégé
+  note: Ses sorts sont lancés au NLS 11 ; chaque lancement consomme une utilisation de la réserve de son niveau
+
+step: Les intrus ne l'ont pas encore localisé
+  do: Employer terrain hallucinatoire pour tromper sur les lieux, puis image mineure, son imaginaire ou ventriloquie pour détourner leur attention et favoriser leur alignement
+  note: Les illusions trompent les sens ; elles ne créent aucun obstacle matériel. Son imitation des sons et Bluff +29 peuvent renforcer la ruse
+
+## Ouverture
+
+step: Au moins deux adversaires peuvent être pris dans une même ligne
+  do: Ouvrir par le souffle électrique, en se plaçant en vol pour toucher plusieurs cibles
+  note: Effectuer le déplacement avant ou après le souffle ; il ne possède pas Attaque en vol permettant de partager ce déplacement autour d'une action simple
+
+step: Le premier souffle est passé, ou aucun alignement intéressant ne se présente
+  do: Lancer déplacement, puis rapidité au round suivant, avant de s'engager au corps à corps
+  note: Déplacement impose 50 % de chances de rater aux attaques concernées ; rapidité et déplacement durent chacun 11 rounds. Ces deux sorts consomment deux utilisations de niveau 3
+
+step: Il commence à attaquer et des ennemis sont à 81 m ou moins
+  do: Déclencher sa présence terrifiante pour disperser les adversaires sensibles à la peur
+  note: Volonté DD 25 ; cette présence accompagne son attaque sans remplacer le souffle ou les autres actions offensives
+
+step: Ses protections sont actives et plusieurs ennemis sont regroupés sous lui
+  do: Tenter d'en écraser le plus possible, puis engager les survivants en mêlée
+  note: L'écrasement vise les créatures de taille Moyenne ou inférieure ; réserver les attaques naturelles aux adversaires trop grands ou dispersés
+
+## Rounds suivants
+
+step: Il lui reste au moins 150 pv et un adversaire est à portée
+  do: Faire une attaque à outrance avec la morsure, les deux griffes, les deux ailes et la queue ; concentrer les attaques sur une cible dangereuse jusqu'à sa chute
+  note: Sous rapidité, ajouter une morsure lors de l'attaque à outrance et appliquer +1 aux jets d'attaque, à la CA et aux Réflexes. L'aura inflige 1d6 dégâts d'électricité aux créatures exposées à 3 m ou moins
+
+step: Il doit se déplacer pour atteindre une cible et ne peut pas faire d'attaque à outrance
+  do: Se placer à portée de morsure et utiliser Frappe décisive pour une morsure à +29 infligeant 12d6+11 dégâts
+  note: Cette attaque utilise une action simple ; elle ne s'ajoute pas à une charge ni à une attaque à outrance. Appliquer le bonus de rapidité s'il est actif
+
+step: Une protection magique ennemie neutralise son souffle ou gêne ses attaques
+  do: Tenter une dissipation de la magie ciblée avant de reprendre l'assaut
+  note: Le test de dissipation est limité à +10 malgré son NLS 11 ; ce sort utilise la même réserve que ses protections et lenteur
+
+step: Plusieurs adversaires le menacent simultanément ou une cible doit être isolée
+  do: Lancer lenteur sur les ennemis menaçants (Volonté DD 17), ou placer un mur de force pour séparer leurs lignes de tir et leurs combattants
+  note: Le mur peut aussi gêner ses propres attaques ; ménager une position permettant de combattre les ennemis restés de son côté
+
+step: Ses points de vie passent sous 150, tout en restant à 100 ou plus
+  do: Reprendre l'air et combattre avec le souffle électrique et ses sorts à distance, en évitant de revenir à portée des combattants au sol
+  note: Chercher de nouveaux alignements pour le souffle et respecter sa recharge entre deux utilisations
+
+step: Le souffle est indisponible ou les ennemis restent dispersés pendant le combat aérien
+  do: Employer rayon ardent contre une cible exposée, flèche acide pour la harceler ou projectile magique pour achever un ennemi blessé ; tenter métamorphose funeste (Vigueur DD 19) contre une cible à faible Vigueur
+  note: Conserver une utilisation de niveau 4 pour porte dimensionnelle ; éviter de dépenser toute sa réserve de niveau 3 tant que ses protections peuvent devoir être renouvelées
+
+## Repli
+
+step: Ses points de vie passent sous 100
+  do: Abandonner immédiatement le combat et fuir en vol ; si la poursuite ou les obstacles l'empêchent de se dégager, utiliser porte dimensionnelle vers un refuge connu ou une destination correctement évaluée
+  note: Après porte dimensionnelle, il ne peut plus agir jusqu'à son prochain tour. Sa survie prime sur une dernière attaque
+
+step: Il a échappé aux poursuivants
+  do: Se mettre à l'abri et préparer une éventuelle revanche
+  note: Il peut revenir attaquer les mêmes adversaires ultérieurement, à la discrétion du meneur

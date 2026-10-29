@@ -1,0 +1,95 @@
+## Avant le combat
+
+note: Profil
+  Melazmera, vieille dragonne umbrale chaotique mauvaise, FP 18, taille Gigantesque, 298 PV et CA 32. Prédatrice dominante de Colyphyr, elle sous-estime les intrus et commence volontiers par ses sorts de niveau 1.
+  Morsure +27 (4d6+15), 2 griffes +27 (2d8+10), 2 ailes +22 et queue +22 (2d8+5). Elle privilégie son souffle d'ombre pour affaiblir ses adversaires.
+  Déplacement au sol 12 m, vol 75 m avec une manœuvrabilité déplorable ; espace occupé 6 m, allonge 6 m, ou 9 m avec la morsure. Perception +30, perception aveugle à 18 m et vision dans le noir à 36 m.
+
+note: Défenses
+  RD 10/Loi et magie, résistance à la magie 29, résistance au feu 15 ; immunité au froid, aux effets de mort, à l'absorption d'énergie, à la paralysie et au sommeil. Ses attaques physiques affectent normalement les créatures intangibles.
+  Son affinité à l'énergie négative permet aux sorts de blessures de la soigner ; l'énergie positive lui nuit. Les sorts de soins et guérison suprême ne constituent donc pas des soins personnels adaptés.
+
+resource: Sorts de niveau 1 | 8/jour | réserve commune : alarme, projectile magique, rayon affaiblissant, bouclier, protection contre la Loi
+resource: Sorts de niveau 2 | 8/jour | réserve commune : simulacre de vie, blessures modérées, localisation d'objet, modification d'apparence, soins modérés
+resource: Sorts de niveau 3 | 7/jour | réserve commune : dissipation de la magie, boule de feu, image accomplie, suggestion
+resource: Sorts de niveau 4 | 7/jour | réserve commune : porte dimensionnelle, renvoi, blessures graves, soins importants
+resource: Sorts de niveau 5 | 7/jour | réserve commune : mirage, téléportation, changement de plan, colonne de feu
+resource: Sorts de niveau 6 | 7/jour | réserve commune : barrière de lames, suggestion de groupe, guérison suprême
+resource: Sorts de niveau 7 | 4/jour | réserve commune : destruction, mot de pouvoir aveuglant
+resource: Pouvoirs magiques | à volonté | ténèbres, projection d'image, traversée des ombres, contact vampirique ; NLS 21
+
+step: Chaque jour dans son repaire
+  do: Lancer mirage pour donner au trésor l'apparence d'un tas de gravats contre la paroi nord de la caverne, puis alarme en mode mental pour le surveiller
+  note: Décompter ces préparatifs des réserves quotidiennes correspondantes ; mirage est une illusion, pas un obstacle matériel
+
+step: À chaque lever de lune
+  do: Lancer simulacre de vie sur elle-même
+  note: Les PV temporaires absorbent les blessures avant ses PV réels ; ne pas les confondre avec une restauration de ses 298 PV
+
+step: Elle découvre qu'un objet manque à son trésor
+  do: Lancer localisation d'objet pour orienter la recherche de l'objet volé
+
+## Ouverture
+
+step: Elle porte encore son catoblépas partiellement dévoré lorsque le combat commence
+  do: Consacrer sa première action à lancer le cadavre sur les intrus : attaque à distance +12, dégâts 2d8+10
+  note: Le cadavre produit un nuage de gaz toxique de 3 m de rayon pendant 1d4 rounds, équivalent au souffle d'un catoblépas ; le DD et les effets détaillés du poison ne figurent pas dans le bloc fourni
+
+step: Elle attaque ou charge et des ennemis sont à portée de son aura
+  do: Déclencher sa présence terrifiante dans un rayon de 72 m : Volonté DD 26, durée 10 rounds
+  note: Appliquer les conditions habituelles de la présence terrifiante ; elle peut accompagner l'attaque sans remplacer l'action offensive
+
+step: Plusieurs intrus peuvent être pris dans son souffle
+  do: Employer le souffle sous sa forme de souffle d'ombre pour les affaiblir avant de s'approcher
+  note: Le bloc mentionne cette tactique sans donner la portée, le DD, les effets chiffrés ou les limites d'utilisation du souffle ; ne pas lui attribuer de valeurs supplémentaires
+
+step: Les intrus restent à distance et ne lui paraissent pas encore menaçants
+  do: Lancer projectile magique, ou rayon affaiblissant sur un combattant puissant physiquement, Vigueur DD 17
+  note: Son arrogance explique ce recours initial aux sorts de niveau 1 ; elle ne commence pas systématiquement par ses sorts les plus puissants
+
+## Rounds suivants
+
+step: Ses adversaires la touchent facilement
+  do: Consacrer une action à lancer bouclier sur elle-même
+  note: Le bonus de bouclier de +4 porte sa CA de 32 à 36 tant que le sort agit
+
+step: Un ennemi est à portée et elle peut rester sur place
+  do: Effectuer une attaque à outrance avec morsure, deux griffes, deux ailes et queue ; concentrer les attaques sur un adversaire affaibli
+  note: Activer Frappe magique par une action rapide pour ajouter +4 aux dégâts de ses attaques pendant ce round
+
+step: Elle doit se déplacer pour atteindre une cible
+  do: Se rapprocher puis effectuer une morsure avec Science de la frappe décisive : +27, 12d6+15 dégâts avant Frappe magique
+  note: Cette attaque unique utilise une action simple ; elle ne se combine pas avec l'attaque à outrance. Son allonge de morsure de 9 m permet de menacer une cible avant que celle-ci arrive au contact
+
+step: Les intrus résistent à ses premières attaques et restent groupés
+  do: Employer boule de feu, Réflexes DD 19, ou colonne de feu, Réflexes DD 21 ; utiliser barrière de lames, Réflexes DD 22, pour couper leur progression ou les séparer
+  note: Éviter de gaspiller ces sorts contre des protections énergétiques manifestes ; dissipation de la magie peut supprimer un effet gênant
+
+step: Un adversaire dangereux doit être neutralisé rapidement
+  do: Employer destruction, Vigueur DD 23, ou mot de pouvoir aveuglant sur une cible ayant 200 PV ou moins
+  note: Suggestion de groupe, Volonté DD 22, peut éloigner plusieurs intrus si l'ordre proposé leur paraît raisonnable
+
+step: Ses PV réels passent sous 150 tout en restant à 75 ou plus
+  do: Interrompre l'offensive pour lancer blessures graves sur elle-même et récupérer 3d8+15 PV ; renouveler si la pression le permet
+  note: La tactique fournie prescrit guérison suprême à ce seuil, mais cela contredit son affinité à l'énergie négative. Blessures graves utilise un sort qu'elle possède et respecte cette défense
+
+step: Elle peut toucher un adversaire sans devoir récupérer immédiatement des PV réels
+  do: Employer contact vampirique pour lui infliger des dégâts et obtenir des PV temporaires
+  note: Ces PV temporaires ne restaurent pas les PV perdus et ne repoussent pas les seuils de soins ou de fuite
+
+## Repli
+
+step: Ses PV réels passent sous 75
+  do: Lancer téléportation pour gagner un endroit connu plus haut dans la montagne
+  note: Conserver une utilisation de niveau 5 pour cette fuite tant qu'elle reste possible
+
+step: Elle a échappé aux poursuivants
+  do: Se lancer blessures graves puis blessures modérées jusqu'à retrouver 298 PV, dans la limite des sorts encore disponibles
+  note: Blessures graves rend 3d8+15 PV ; blessures modérées rend 2d8+10 PV. Ses pouvoirs magiques à volonté ne lui fournissent pas une guérison permanente illimitée
+
+step: Elle est rétablie et peut reprendre le combat depuis la corniche opposée à l'entrée
+  do: Se poser sur cette corniche et utiliser projection d'image pour faire apparaître son double à l'entrée de la zone J2 ; lancer ses sorts offensifs depuis l'image
+  note: Maintenir une ligne d'effet entre elle et l'image. L'image sert de point d'origine aux sorts autorisés par le pouvoir ; elle ne porte pas réellement ses attaques naturelles ni son souffle
+
+step: La reprise du combat par projection d'image est impossible
+  do: Combattre jusqu'à la mort

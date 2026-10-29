@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Seryzilian est une dragonne noire grand dracosire, gigantesque, chaotique mauvaise et intelligente (FP 19). Elle combat depuis les eaux troubles et les terrains marécageux, en alternant magie, embuscades et attaques naturelles.
+  377 pv ; CA 41 ; réduction des dégâts 20/magie ; résistance à la magie 30 ; immunité à l'acide, à la paralysie et au sommeil. Perception +39, Discrétion +22.
+  Morsure +36 (4d6+13 et 6d6 d'acide), 2 griffes +35 (2d8+13), queue +33 (2d8+6), 2 ailes +33 (2d6+6). Allonge de 4,50 m, ou 6 m avec la morsure.
+  Déplacement terrestre et nage à 18 m ; vol à 75 m, manœuvrabilité déplorable. Elle respire sous l'eau et traverse aisément les marais.
+
+resource: Sorts de niveau 7 | 4/jour, réserve commune | doigt de mort (DD 22), projection d'image (DD 22)
+resource: Sorts de niveau 6 | 6/jour, réserve commune | brouillard acide, désintégration (DD 21), vision lucide
+resource: Sorts de niveau 5 | 7/jour, réserve commune | notamment mur de force et transmutation de la pierre en boue
+resource: Sorts de niveau 4 | 7/jour, réserve commune | notamment tentacules noirs et porte dimensionnelle ; garder un emplacement pour le repli
+resource: Sorts de niveau 3 | 7/jour, réserve commune | rapidité, déplacement, lenteur (DD 18), dissipation de la magie
+resource: Sorts de niveau 2 | 7/jour, réserve commune | notamment invisibilité et poussière scintillante (DD 17)
+resource: Sorts de niveau 1 | 8/jour, réserve commune | notamment alarme et armure de mage
+resource: Ténèbres | à volonté | rayon de 36 m
+resource: Fléau d'insectes | à volonté | pouvoir magique de niveau de lanceur 26
+resource: Charme sur les reptiles | 3/jour | DD 23
+
+step: Elle apprend que ses serviteurs sont menacés
+  do: Rejoindre les profondeurs d'Adderpool et observer les intrus depuis l'eau trouble
+  do: Lancer armure de mage ; lancer rapidité et déplacement à l'approche de son intervention
+  do: Utiliser son pouvoir de bassin d'acide pour contaminer discrètement la surface de l'eau
+  note: Les préparatifs consomment les réserves de sorts indiquées ; surveiller la durée des protections avant d'émerger.
+
+## Ouverture
+
+step: Lesaul et ses fidèles tiennent encore face aux intrus
+  do: Rester dissimulée sous l'eau et attendre
+  note: Elle ne se montre que lorsque le combat tourne contre eux.
+
+step: Le combat tourne contre Lesaul et ses fidèles
+  do: Émerger près d'une cible isolée, en gardant un accès aux eaux profondes
+  note: Sa présence terrifiante porte à 108 m, Volonté DD 27 ; l'appliquer lorsqu'elle attaque ou passe en vol à proximité.
+
+step: Plusieurs adversaires peuvent se soutenir mutuellement
+  do: Lancer mur de force pour isoler une partie du groupe, ou lenteur sur plusieurs adversaires (Volonté DD 18)
+  note: Choisir un seul de ces sorts pour cette action ; ménager un passage pour ses propres attaques.
+
+step: Une cible isolée est déjà à portée de toutes ses attaques
+  do: Effectuer une attaque à outrance avec morsure, deux griffes, queue et deux ailes
+  note: Rapidité permet une attaque supplémentaire avec une arme naturelle lors de l'attaque à outrance ; privilégier la morsure.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée sans qu'elle doive se déplacer
+  do: Répéter l'attaque à outrance et concentrer les attaques sur cette cible
+  note: Si elle doit se déplacer pour mordre, employer Frappe décisive supérieure avec cette attaque unique ; en vol, utiliser Attaque en vol pour poursuivre son déplacement après l'attaque.
+
+step: Les ennemis prennent l'avantage au contact ou encerclent sa position
+  do: Consacrer une action aux ténèbres, puis gagner les eaux profondes si son déplacement le permet
+  note: L'effet des ténèbres dépend de l'éclairage et des sens adverses ; l'eau trouble et les changements de position complètent la diversion.
+
+step: Une nouvelle position permettrait de surprendre un adversaire ou d'échapper à une situation dangereuse
+  do: Utiliser porte dimensionnelle pour rejoindre un autre point du bassin ou une position favorable
+  note: Après la téléportation, elle ne peut plus agir avant son prochain tour.
+
+step: Les adversaires restent sur un terrain rocheux favorable à leurs déplacements
+  do: Lancer transmutation de la pierre en boue sur de la roche naturelle non taillée, puis chercher à les attirer dans cette zone
+  note: Exploiter sa mobilité dans les marais ; ne pas transformer un sol auquel le sort ne s'applique pas.
+
+step: Des poursuivants se regroupent dans un passage
+  do: Placer un brouillard acide entre eux et elle, ou des tentacules noirs sur leur position
+  note: Ces sorts servent à ralentir et séparer les ennemis pendant qu'elle change d'angle ; le brouillard gêne aussi ses propres attaques à travers la zone.
+
+step: Une protection magique identifiée neutralise ses attaques ou l'acide
+  do: Tenter une dissipation de la magie ciblée avant de reprendre l'offensive
+
+step: Un adversaire dangereux semble vulnérable aux effets exigeant de la Vigueur
+  do: Lancer doigt de mort sur lui (Vigueur DD 22)
+  note: Réserver ce sort aux cibles prioritaires plutôt que de multiplier les changements de cible au corps à corps.
+
+step: Une créature invisible ou une illusion empêche de choisir une cible fiable
+  do: Lancer vision lucide, puis reprendre l'offensive au tour suivant
+
+## Repli
+
+step: 188 pv ou moins, alors qu'elle combat hors de son repaire
+  do: Rompre le combat et rejoindre son repaire par les eaux profondes ; utiliser porte dimensionnelle si nécessaire
+  do: Appeler sa guenaude verte et ses alliés reptiliens à l'aide
+  note: Elle se replie dès qu'elle passe sous la moitié de ses 377 pv.
+
+step: Les ennemis la poursuivent jusque dans son repaire
+  do: Combattre jusqu'à la mort, avec l'aide de ses alliés et les ressources restantes

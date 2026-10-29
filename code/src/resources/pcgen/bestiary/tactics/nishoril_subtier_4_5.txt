@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Nishoril est une jeune merrow d'eau salée, de taille G, affamée et mauvaise. Elle a 59 pv et une CA de 20 ; elle se déplace à 12 m sur terre comme à la nage et respire dans l'air comme dans l'eau.
+  Elle occupe un espace de 3 m et possède une allonge de 3 m. Ses deux griffes attaquent à +10 et infligent chacune 1d6+5 dégâts avec agrippement ; son bonus de lutte est de +15.
+  Elle concentre ses attaques sur l'adversaire qui paraît le plus faible, puis passe au suivant.
+
+resource: Javelot | 1 | Attaque à distance +9, dégâts 1d8+5.
+
+step: Tout le groupe n'est pas encore entré
+  do: Rester embusquée dans la chambre au sud de la zone 3a et attendre le dernier intrus.
+  note: Discrétion +4, ou +8 dans l'eau ; vision nocturne et Perception +7.
+
+## Ouverture
+
+step: Le groupe entier est dans la chambre
+  do: Sortir de l'embuscade et se placer sur la voie de sortie pour barrer le passage. Choisir l'adversaire qui semble le plus faible.
+  note: Son allonge de 3 m lui permet de menacer les intrus sans devoir se placer juste à côté d'eux.
+
+step: La cible est à portée et une attaque à outrance est possible
+  do: Porter les deux attaques de griffes à +10, chacune pour 1d6+5 dégâts, sur cette même cible.
+
+step: Un déplacement suffit pour mettre la cible à portée
+  do: Avancer de 12 m au maximum, puis utiliser Frappe décisive avec une griffe à +10 pour 2d6+5 dégâts et agrippement.
+  note: Frappe décisive s'utilise sur une attaque unique effectuée avec l'action d'attaque, pas sur une attaque à outrance, une charge ou une attaque d'opportunité.
+
+## Rounds suivants
+
+step: Une griffe touche
+  do: Tenter immédiatement l'agrippement avec un test de lutte à +15 pour retenir la proie.
+  note: La tentative liée à la griffe est une action libre et ne provoque pas d'attaque d'opportunité.
+
+step: Elle tient une proie en lutte au début de son tour
+  do: Maintenir la lutte et, si le test réussit, infliger les dégâts d'une griffe, soit 1d6+5.
+  note: Consacrer son action simple au maintien ; ne pas ajouter une attaque à outrance à ce tour.
+
+step: Elle est libre de ses mouvements et sa cible tient encore debout
+  do: Continuer à l'attaquer avec les deux griffes si une attaque à outrance est possible ; sinon, se rapprocher et porter une Frappe décisive.
+  note: Rester sur la voie de sortie autant que possible. Ne changer de proie qu'une fois la précédente neutralisée.
+
+step: La cible paraît facile à toucher et Nishoril utilise ses griffes hors d'une lutte
+  do: Utiliser Attaque en puissance : griffes à +8 pour 1d6+9 dégâts chacune, ou Frappe décisive à +8 pour 2d6+9 dégâts.
+  note: Renoncer à ce don si ses attaques manquent trop souvent.
+
+step: Aucune cible n'est accessible en mêlée et le javelot est encore disponible
+  do: Lancer le javelot à +9 pour 1d8+5 dégâts sur l'adversaire le plus faible, puis reprendre les griffes dès que possible.
+
+## Repli
+
+step: Ses points de vie diminuent, même jusqu'à quelques pv
+  do: Poursuivre le combat jusqu'à la mort.
+  note: Nishoril n'a pas fait de bon repas depuis longtemps ; elle ne fuit pas et ne se rend pas.

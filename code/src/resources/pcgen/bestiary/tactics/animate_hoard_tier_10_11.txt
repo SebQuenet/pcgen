@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Amas de trésors animé de taille TG, créature artificielle sans intelligence chargée de garder la lampe-clef. 137 PV, CA 21, solidité 10 et immunités des créatures artificielles.
+  Deux coups +21, chacun infligeant 1d8+10 dégâts avec saisie ; étouffement des victimes agrippées et piétinement. BMO +25, DMD 33.
+  Déplacement de 9 m ; allonge de 1,50 m ; vision dans le noir à 18 m et vision nocturne.
+
+step: Les intrus n'ont pas encore tenté de prendre la lampe-clef
+  do: Rester dissimulé parmi les faux trésors et attendre qu'un intrus cherche à s'emparer de la lampe-clef.
+
+## Ouverture
+
+step: Une créature s'empare de la lampe-clef et se trouve hors de portée
+  do: Sortir des faux trésors et avancer vers le porteur, jusqu'à 9 m avec une action de mouvement ; porter un coup +21 si la cible est alors à 1,50 m ou moins.
+  note: Donner la priorité au porteur de la lampe-clef.
+
+step: Le porteur de la lampe-clef est déjà à portée et une attaque à outrance est possible
+  do: Porter les deux coups +21 contre lui, pour 1d8+10 dégâts chacun ; tenter de le saisir après un coup réussi.
+
+## Rounds suivants
+
+step: Le porteur de la lampe-clef est agrippé
+  do: Maintenir la lutte et employer l'étouffement contre lui.
+
+step: Le porteur de la lampe-clef reste libre
+  do: Le rejoindre s'il s'éloigne ; continuer les coups et les tentatives de saisie pour pouvoir l'étouffer.
+  note: Effectuer deux coups lors d'une attaque à outrance ; un seul après une action de mouvement.
+
+step: La lampe-clef tombe au sol ou son porteur perd connaissance
+  do: Piétiner les créatures présentes dans la salle, en cherchant à les faire sortir de la chambre.
+  note: Répéter le piétinement tant que les intrus restent dans la salle.
+
+step: Une autre créature porte la lampe-clef
+  do: Concentrer à nouveau les coups, la saisie et l'étouffement sur ce porteur.
+
+## Repli
+
+step: Des intrus restent dans la chambre
+  do: Combattre jusqu'à la destruction, sans seuil de fuite lié aux points de vie.
+
+step: Tous les intrus quittent la chambre
+  do: Cesser le combat et rester dans la chambre.

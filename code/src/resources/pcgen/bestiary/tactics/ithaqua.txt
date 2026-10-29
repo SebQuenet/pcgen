@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Ithaqua, Grand Ancien chaotique mauvais de taille gigantesque, règne sur le froid et les vents. FP 28 ; 688 pv ; CA 46 ; guérison accélérée 25.
+  À outrance : 2 coups +46 (4d6+18, critique 19–20, étreinte) ou 4 souffles de vent +38 (8d6, critique 19–20, projection). Espace et allonge : 6 m ; déplacement : 18 m ; marche dans les airs permanente.
+  Présence indicible à 90 m, DD 36 ; vision lucide permanente et vision dans la neige. Il exploite les tempêtes, auxquelles il est immunisé, pour isoler ses victimes.
+  RD 15/épique et loyal ; RM 39 ; résistance à l'électricité et au son 30 ; immunité au froid et aux effets mentaux. Sa vulnérabilité au feu rend les incendiaires prioritaires.
+
+resource: Convocation | 3/jour | 2d4 wendigos, réussite automatique ; pouvoir de niveau 9
+resource: Débilité accélérée | 3/jour | action rapide ; Volonté DD 25
+resource: Bourrasque accélérée | 3/jour | action rapide ; Vigueur DD 22
+resource: Exigence | 3/jour | Volonté DD 28
+resource: Tempête vengeresse | 1/jour | DD 29 ; nécessite de maintenir la concentration
+resource: Cyclone | 1/jour | Réflexes DD 28
+resource: Téléportation interplanétaire | 1/jour | régions arctiques uniquement ; conserver une utilisation pour fuir
+resource: Pouvoirs à volonté | illimité | contrôle du climat, contrôle des vents, porte dimensionnelle, rêve, bourrasque DD 22, tempête de grêle, cauchemar DD 25, vent de murmures, marche du vent DD 36
+
+step: Il choisit le lieu de l'affrontement
+  do: Rester au nord du cercle arctique et préparer une tempête de neige avec contrôle du climat longtemps avant l'arrivée des intrus
+  note: au sud du cercle arctique, ou sur un monde dépourvu de nord magnétique, il est chancelant
+
+step: Les intrus approchent et il dispose du temps nécessaire
+  do: Convoquer 2d4 wendigos et les répartir pour menacer les ennemis isolés ; transmettre ses instructions par télépathie à 30 m
+  note: utiliser sa vision dans la neige et Perception +45 pour surveiller l'approche
+
+## Ouverture
+
+note: Actions du round
+  Choisir une action principale selon la situation ; une débilité accélérée ou une bourrasque accélérée peut l'accompagner, avec une seule action rapide par round.
+  Une attaque à outrance demande de rester sur place, hormis un pas de 1,50 m.
+
+step: Un lanceur de sorts profanes est identifié
+  do: Lui lancer débilité accélérée, Volonté DD 25, puis effectuer l'action principale adaptée à la distance
+  note: viser d'abord celui qui emploie le feu ; les utilisateurs de sorts profanes subissent le malus de sauvegarde propre à débilité
+
+step: Les ennemis sont visibles à distance et il peut rester immobile
+  do: Attaque à outrance avec 4 souffles de vent +38 (8d6 chacun, critique 19–20 et projection), concentrés sur la menace principale
+
+step: Plusieurs ennemis sont regroupés et une tempête peut les atteindre durablement
+  do: Lancer tempête vengeresse, DD 29, pour désorganiser leur position
+  note: cette ouverture remplace les souffles de vent ; rester dans la tempête grâce à son immunité
+
+step: Une cible vulnérable est déjà à son allonge de 6 m
+  do: Attaque à outrance avec 2 coups +46 (4d6+18 chacun, critique 19–20) ; tenter l'étreinte après une touche
+  note: BMO +54 ; privilégier une cible isolée plutôt qu'un adversaire entouré de soutiens
+
+## Rounds suivants
+
+step: Une créature est exposée à sa présence indicible à 90 m
+  do: Résoudre la présence indicible, Volonté DD 36
+  note: l'échec retire résistance et immunité au froid et donne la vulnérabilité au froid pendant 24 heures ; sans protection initiale contre le froid, la victime subit aussi –4 à la CA, aux attaques à distance, à l'initiative, aux Réflexes et aux compétences de Dextérité pendant 24 heures
+
+step: Il maintient tempête vengeresse et les ennemis restent dans sa zone
+  do: Consacrer son action simple à la concentration pour laisser progresser la tempête
+  note: s'ils quittent la zone, abandonner la concentration et reprendre les attaques ou changer de position
+
+step: Plusieurs adversaires vulnérables au froid restent regroupés
+  do: Lancer tempête de grêle à volonté ; réserver cyclone, Réflexes DD 28, pour les disperser si cela devient plus utile
+
+step: Les adversaires restent à distance et offrent une cible claire
+  do: Répéter les 4 souffles de vent à outrance ; concentrer les attaques pour éliminer une menace à la fois
+
+step: Une victime est agrippée et ses alliés ne peuvent pas intervenir immédiatement
+  do: Au round suivant, tenter de l'immobiliser en lutte avec son BMO +54 ; après réussite, employer marche du vent lors d'une action ultérieure pour l'emporter, Volonté DD 36
+  note: la concentration de ce pouvoir réussit automatiquement sur la victime immobilisée ; elle peut redevenir solide par un nouveau jet de Volonté DD 36 chaque round, puis tombe si elle ne peut pas voler
+
+step: Il doit changer de cible ou rompre un encerclement
+  do: Employer porte dimensionnelle pour rejoindre une position dégagée, puis reprendre l'offensive au round suivant
+  note: après porte dimensionnelle, aucune autre action n'est possible avant son prochain tour
+
+step: Une bourrasque peut repousser un adversaire gênant
+  do: Employer bourrasque accélérée, Vigueur DD 22, puis attaquer ; sinon conserver l'action rapide pour débilité accélérée
+
+## Repli
+
+step: Ses pv passent sous 200, ou le feu menace de l'abattre avant son prochain tour
+  do: Utiliser téléportation interplanétaire vers une autre région arctique
+  note: ce seuil est une consigne tactique ; sa guérison accélérée lui rend 25 pv par round jusqu'à son maximum de 688
+
+step: La téléportation interplanétaire est déjà dépensée
+  do: Rompre le contact par porte dimensionnelle ; une fois à l'abri, employer marche du vent pour s'éloigner
+  note: laisser les wendigos déjà convoqués gêner la poursuite et ne revenir qu'après récupération

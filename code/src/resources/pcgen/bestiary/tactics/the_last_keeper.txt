@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Cyclope squelettique de Grande taille, mort-vivant sans Intelligence, FP 5 ; 56 PV, CA 17.
+  Deux griffes +11 (1d6+5 chacune) en attaque à outrance ; une seule griffe après un déplacement.
+  Espace occupé : 3 m ; allonge : 3 m ; déplacement en cuirasse : 6 m par action de mouvement.
+
+note: Défenses et perception
+  RD 5/contondant ; immunité au froid et traits des morts-vivants.
+  Vision dans le noir à 18 m ; Perception +8 ; initiative +4.
+
+note: Comportement
+  Sans Intelligence, il suit une conduite simple : attaquer l'adversaire accessible le plus proche et poursuivre le combat sans évaluer les risques.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux griffes +11, chacune infligeant 1d6+5 dégâts.
+
+step: L'adversaire est hors de son allonge, mais peut être atteint après un déplacement de 6 m ou moins
+  do: Avancer jusqu'à le placer dans son allonge de 3 m, puis porter une seule attaque de griffe +11 (1d6+5).
+  note: Il peut frapper à 3 m ; inutile d'avancer jusqu'à une case adjacente.
+
+step: Aucun adversaire ne peut être frappé après un déplacement simple
+  do: Se rapprocher par un double déplacement, jusqu'à 12 m.
+  note: Ce double déplacement ne laisse pas d'action pour attaquer pendant ce tour.
+
+## Rounds suivants
+
+step: Un adversaire reste dans son allonge au début de son tour
+  do: Répéter l'attaque à outrance : deux griffes +11 (1d6+5 chacune).
+  note: Concentrer les deux attaques sur la même cible tant qu'elle tient ; si elle tombe, diriger la seconde contre un autre adversaire à portée.
+
+step: Un adversaire quitte une case menacée en provoquant une attaque d'opportunité
+  do: Porter une attaque de griffe +11 (1d6+5).
+  note: Une seule attaque d'opportunité par round ; un pas de placement de 1,50 m n'en provoque pas.
+
+step: Aucun adversaire ne reste dans son allonge
+  do: Rejoindre le plus proche selon les mêmes déplacements qu'à l'ouverture, puis frapper si une action simple reste disponible.
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à attaquer sans battre en retraite.
+  note: Ce mort-vivant sans Intelligence ne choisit pas de seuil de fuite ; à 0 PV, il est détruit.

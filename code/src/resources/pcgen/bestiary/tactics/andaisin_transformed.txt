@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Andaisin transformée, fille d'Urgathoa, est une morte-vivante de grande taille, intelligente et fanatique : 115 pv, CA 21, initiative +7.
+  Grande griffe +16 (2d6+9, critique x4 et maladie), griffe +16 (1d8+9) ; espace occupé et allonge de 3 m ; vol parfait à 12 m par round.
+  Vision dans le noir à 18 m ; aura de profanation de 6 m ; résistance à la canalisation +4 et immunités des morts-vivants.
+
+note: Transformation
+  Tous les effets magiques qui l'affectaient prennent fin ; son équipement reste au sol parmi ses anciens restes.
+  Elle dispose uniquement des sorts préparés de sa nouvelle forme, au niveau de lanceur de sorts 6. Elle commence cette phase sans les protections de sa forme vivante.
+
+resource: Sorts de niveau 3 | 1 par sort | cécité/surdité (DD 16), contagion (DD 16), dissipation de la magie, panoplie magique
+resource: Sorts de niveau 2 | 1 par sort | glas funèbre (DD 15), immobilisation de personne (DD 15), résistance aux énergies destructives, cacophonie (DD 15), arme spirituelle
+resource: Sorts de niveau 1 | 1 par sort | frayeur (DD 14), injonction (DD 14), brume de dissimulation, sanctuaire (DD 14), bouclier de la foi
+resource: Sorts de niveau 0 | à volonté | saignement (DD 13), assistance divine, lumière, stabilisation
+resource: Profanation | constant | centrée sur elle, rayon de 6 m
+
+## Ouverture
+
+step: Premier round, si les PJ ne l'encerclent pas immédiatement
+  do: Lancer bouclier de la foi sur elle-même, puis profiter du vol pour conserver ses distances si l'espace le permet.
+  note: Bonus de parade de +3 pendant 6 minutes : CA 24, contact 15.
+
+step: Les PJ l'encerclent immédiatement
+  do: Combattre à la griffe ; si une cible est déjà dans son allonge, effectuer une attaque à outrance avec la grande griffe et la griffe.
+  note: Elle privilégie alors la mêlée aux sorts à distance.
+
+## Rounds suivants
+
+note: Choix des actions
+  Tant qu'elle reste à distance, choisir un seul des sorts suivants par round, selon la menace et les sorts encore disponibles.
+
+step: Un soigneur ou un lanceur de sorts vivant constitue la principale menace
+  do: Lancer cécité/surdité pour l'aveugler, Vigueur DD 16.
+  note: La cécité peut durablement neutraliser ses attaques et ses sorts exigeant de voir leur cible.
+
+step: Un adversaire bénéficie de protections magiques manifestes
+  do: Lancer dissipation de la magie ciblée sur lui avant de poursuivre ses attaques.
+
+step: Un combattant humanoïde menace de la rejoindre
+  do: Lancer immobilisation de personne, Volonté DD 15, puis attaquer la cible si elle reste paralysée.
+  note: La victime peut tenter un nouveau jet à son tour, au prix d'une action complexe.
+
+step: Plusieurs PJ sont regroupés
+  do: Lancer cacophonie à 12 m au maximum, dans un rayon de 3 m, en évitant de s'inclure dans la zone.
+  note: Chaque créature subit 1d8 dégâts sonores ; Vigueur DD 15 pour éviter l'étourdissement pendant 1 round.
+
+step: Un adversaire fragile reste hors de sa portée de mêlée
+  do: Lancer arme spirituelle sur lui et laisser l'arme poursuivre cette cible pendant qu'elle utilise ses autres actions.
+
+step: Il faut faire perdre une action à un ennemi proche
+  do: Lancer injonction pour lui ordonner de se jeter à terre, Volonté DD 14.
+  note: Exploiter ensuite sa position à terre ou l'attaque d'opportunité provoquée lorsqu'il se relève dans son allonge.
+
+step: Une cible reste à 3 m ou moins et Andaisin peut rester sur place
+  do: Attaque à outrance : grande griffe +16 (2d6+9, x4 et maladie), puis griffe +16 (1d8+9), en concentrant les coups sur une cible vulnérable.
+  note: Employer Attaque en puissance contre une cible facile à toucher ; conserver sa précision contre une CA élevée.
+
+step: Elle doit se déplacer pour atteindre sa cible
+  do: Voler jusqu'à 12 m, puis porter une seule grande griffe avec Frappe décisive : +16, 4d6+9 et maladie.
+  note: Les dés supplémentaires de Frappe décisive ne sont pas multipliés sur un critique. Cette option ne se combine pas avec une charge ou une attaque à outrance.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Frapper avec la grande griffe.
+  note: Attaques réflexes permet jusqu'à 4 attaques d'opportunité par round, y compris prise au dépourvu ; un même déplacement n'en provoque pas plusieurs de sa part.
+
+step: Des attaques élémentaires répétées deviennent la menace principale
+  do: Si elle peut lancer un sort sans abandonner une mêlée favorable, utiliser résistance aux énergies destructives contre l'énergie observée.
+
+## Repli
+
+step: Quel que soit son total de points de vie
+  do: Poursuivre le combat jusqu'à sa destruction.
+  note: Aucun seuil de fuite ni reddition ; ses déplacements en vol servent à poursuivre les PJ ou à continuer ses attaques.

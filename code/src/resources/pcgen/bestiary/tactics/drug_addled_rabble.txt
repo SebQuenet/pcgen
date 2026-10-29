@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Foule humaine sous l'emprise de drogues, chaotique neutre, traitée comme une seule troupe : 65 pv, CA 18, initiative +3 et Perception +15.
+  Déplacement de 9 m ; espace occupé de 6 m de côté ; allonge de 1,50 m. Son attaque de troupe inflige automatiquement 3d6+4 dégâts à chaque créature dans son espace ou à portée à la fin de son déplacement, sans jet d'attaque.
+
+step: Des adversaires approchent
+  do: Les repérer avec Perception +15 et se placer pour atteindre plusieurs ennemis ensemble.
+  note: Garder une voie de sortie ; la foule ne dispose ici d'aucune attaque à distance décrite.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être atteints
+  do: Avancer de 9 m au maximum et terminer le déplacement à 1,50 m du plus grand nombre possible ; appliquer les 3d6+4 dégâts de troupe à chacun.
+  note: Préférer le contact depuis des cases libres : traverser les cases ennemies expose la troupe aux attaques d'opportunité.
+
+step: Les ennemis restent hors de portée
+  do: Se rapprocher, jusqu'à 18 m avec deux actions de mouvement si nécessaire, en utilisant les obstacles disponibles comme couvert.
+
+## Rounds suivants
+
+step: Plusieurs adversaires restent au contact
+  do: Maintenir leur présence dans l'espace de la troupe ou à 1,50 m ; continuer à leur infliger les dégâts de troupe chaque round.
+  note: La perte de pv ne diminue pas les dégâts de la foule.
+
+step: Un ennemi provoque une attaque d'opportunité à portée
+  do: Lui infliger automatiquement 3d6+4 dégâts.
+
+resource: Attaques d'opportunité | 4 par round | Réflexes de combat et Dextérité 16 ; une seule attaque par occasion.
+
+step: Un adversaire utilise des effets de zone
+  do: Se rapprocher de lui si possible et chercher un couvert pour limiter son exposition.
+  note: Les effets de zone infligent 50 % de dégâts supplémentaires à une troupe.
+
+## Repli
+
+step: Le combat devient défavorable et une issue reste accessible
+  do: Battre en retraite par le passage le moins exposé, à 9 m par action de mouvement.
+
+step: Les points de vie atteignent 0
+  do: Disperser la foule ; la troupe cesse de combattre comme une unité.

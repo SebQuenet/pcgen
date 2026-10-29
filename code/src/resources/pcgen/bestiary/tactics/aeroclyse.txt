@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Aeroclyse, cyclope chaotique neutre de taille G, aveugle et épuisé. Il frappe à mains nues et tente d'agripper ses ennemis ; BMO +10, +12 en bousculade. Aucune arme n'est fournie dans ce profil.
+  65 pv au maximum, mais seulement 10 pv actuellement ; CA 10. Déplacement 4,50 m, espace occupé et allonge de 3 m. Ses valeurs tiennent déjà compte de son état.
+  Ses tests et activités fondés sur la vue échouent automatiquement. Sa vision nocturne ne compense pas sa cécité ; Perception +11 sert notamment à écouter.
+
+resource: Éclair d'intuition | 1/jour | action immédiate ; choisir le résultat exact d'un de ses propres jets avant de le lancer
+
+step: Il est encore entravé
+  do: Attendre d'être libéré ; déterminer s'il accueille ses libérateurs en alliés ou s'il est enragé
+  note: La libération ne supprime ni sa cécité ni son épuisement.
+
+step: Les PJ sont ses alliés et lui procurent une arme
+  do: Accepter leur guidage verbal pour se déplacer et savoir où frapper
+  note: Il parle le commun, le cyclope et le géant. Employer les caractéristiques de l'arme réellement reçue.
+
+## Ouverture
+
+step: Il est enragé après sa libération
+  do: Donner des coups de poing ou tenter une lutte contre un ennemi repéré à portée
+  note: Ces tentatives peuvent provoquer des attaques d'opportunité ; il accepte ce risque malgré ses 10 pv actuels.
+
+step: Il est amical, armé et guidé par les PJ
+  do: Suivre leurs indications jusqu'à portée de l'ennemi, puis attaquer avec l'arme reçue
+  note: Le guidage indique une position, mais ne supprime pas les 50 % de chances de rater dus au camouflage total des adversaires.
+
+step: Il n'est ni enragé ni armé et guidé par des alliés
+  do: Tenir sa position et se défendre contre ceux qui l'attaquent
+  note: Il ne poursuit pas au hasard des adversaires qu'il ne peut pas voir.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et sa position est connue
+  do: Continuer les coups ou les tentatives de lutte ; employer une attaque à outrance si aucun déplacement n'est nécessaire
+  note: La cécité conserve ses 50 % de chances de rater. Il ne peut pas porter d'attaques d'opportunité contre des ennemis qu'il ne voit pas.
+
+step: La cible s'est déplacée et sa position est incertaine
+  do: Écouter ou suivre les indications d'un allié avant de frapper une case désignée
+  note: Aucun sens spécial ne lui permet de localiser automatiquement ses ennemis. L'épuisement interdit de courir et de charger.
+
+step: Un adversaire repéré lui barre le passage
+  do: Tenter une bousculade avec son BMO de +12 pour le repousser
+  note: Science de la bousculade évite l'attaque d'opportunité de la cible pour cette manœuvre ; la cécité reste un obstacle pour la toucher.
+
+step: Il dispose d'une arme et plusieurs ennemis repérés sont à portée, chacun adjacent au précédent
+  do: Envisager Enchaînement ou Succession d'enchaînements pour les frapper successivement
+  note: Chaque attaque doit toucher pour poursuivre la série ; chaque cible doit être différente. Il subit les chances de rater de la cécité et une pénalité de 2 à la CA jusqu'à son prochain tour.
+
+step: Un jet de sauvegarde décisif menace de le neutraliser
+  do: Utiliser son éclair d'intuition encore disponible pour choisir un résultat de 20 avant le jet
+  note: Il peut aussi réserver ce pouvoir à une attaque cruciale ; choisir le résultat du jet d'attaque ne supprime pas le jet séparé des chances de rater.
+
+step: Sa vue est restaurée
+  do: Prendre volontiers la tête du combat, avec ou sans arme appropriée
+  note: Si l'épuisement persiste, conserver ses limitations. Si la cécité et l'épuisement sont tous deux guéris, utiliser le profil du cyclope du Bestiaire, page 52, comme indiqué dans ses statistiques de base.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à combattre jusqu'à la mort, sans chercher à fuir
+  note: Il commence déjà à 10 pv ; aucun seuil de repli ne modifie son moral.
+
+step: Ses points de vie passent sous 0
+  do: Continuer grâce à la férocité, avec une seule action simple ou de mouvement par round
+  note: Il reste conscient mais chancelant et perd 1 pv par round. Avec sa Constitution de 15, il meurt à -15 pv.

@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Anwigasi est un couatl loyal bon de taille G : privilégier la discussion, la protection des innocents et la capture lorsque ces options restent possibles.
+  150 pv, CA 25 ; déplacement au sol de 6 m, vol de 18 m ; allonge de 1,50 m. Morsure +17 (1d8+9, étreinte et venin), lutte +23.
+  RD 10/magie, résistance à la magie 24 ; résistances à l'acide, au froid et à l'électricité de 10 ; immunité aux maladies. Il préfère combattre en vol et contrôler les adversaires à distance.
+
+resource: Sorts de niveau 1 | 7/jour | réserve commune, notamment armure de mage et charme-personne (DD 18)
+resource: Sorts de niveau 2 | 7/jour | réserve commune, notamment apaisement des émotions (DD 19), rayon ardent et silence (DD 17)
+resource: Sorts de niveau 3 | 7/jour | réserve commune, notamment rapidité et dissipation de la magie
+resource: Sorts de niveau 4 | 7/jour | réserve commune, notamment liberté de mouvement et sphère d'isolement (DD 19)
+resource: Sorts de niveau 5 | 5/jour | réserve commune entre immobilisation de monstre (DD 22) et œil indiscret
+resource: Sorts de niveau 6 | 3/jour | vision lucide
+resource: Pouvoirs à volonté | à volonté | détection de pensées (DD 16), invisibilité, passage dans l'éther et changement de plan (DD 21)
+resource: Protection contre le Mal | 3/jour | pouvoir magique
+resource: Pouvoirs quotidiens | 1/jour chacun | aide, bénédiction, soins importants, châtiment sacré (DD 18), parole sacrée (DD 21), neutralisation du poison et guérison des maladies
+
+step: Il peut observer les intrus avant leur arrivée
+  do: Employer sa boule de cristal ou œil indiscret pour reconnaître les approches ; observer ensuite sous invisibilité si nécessaire
+  note: Perception +24, Psychologie +24 ; vision dans le noir à 18 m. Ses détections d'alignement sont constantes ; détection de pensées permet d'approfondir l'observation, avec Volonté DD 16 pour résister à la lecture des pensées superficielles
+
+step: Une confrontation paraît probable
+  do: Lancer armure de mage à l'avance, puis aide si le danger est proche
+  note: Armure de mage porte sa CA à 29. Employer la télépathie à 30 m pour coordonner les alliés et proposer une issue pacifique
+
+step: Il soupçonne des illusions ou des entraves magiques
+  do: Préparer vision lucide contre les tromperies ; liberté de mouvement si la lutte ou l'immobilisation menace sa mobilité
+  note: Choisir ces protections selon les menaces observées pour conserver ses emplacements
+
+## Ouverture
+
+step: Les adversaires hésitent et une négociation reste possible
+  do: Proposer une trêve par télépathie ; si les émotions empêchent toute discussion, lancer apaisement des émotions (Volonté DD 19)
+  note: Demander aux alliés de suspendre leurs attaques afin de laisser une chance à l'apaisement
+
+step: Le combat commence et un adversaire concentre la menace
+  do: Depuis les airs, lancer immobilisation de monstre sur lui (Volonté DD 22)
+  note: Rester au-delà de l'allonge adverse ; faire surveiller le prisonnier et demander sa reddition dès qu'il peut répondre
+
+step: Le combat commence et plusieurs alliés doivent tenir le front
+  do: Choisir rapidité comme première action de soutien, puis prendre une position aérienne permettant de surveiller le combat
+  note: Cette ouverture remplace l'immobilisation du premier round ; elle convient lorsque renforcer plusieurs combattants est plus urgent que neutraliser une seule cible
+
+## Rounds suivants
+
+step: Un adversaire dangereux reste libre
+  do: Tenter immobilisation de monstre (Volonté DD 22), ou sphère d'isolement (Réflexes DD 19) pour l'écarter temporairement du combat
+  note: Changer de cible ou de méthode après une résistance ; conserver des sorts pour protéger les alliés
+
+step: Un effet magique ennemi empêche le contrôle ou menace les alliés
+  do: Employer dissipation de la magie sur cet effet ; contre un lanceur de sorts, envisager silence sur sa position ou sur lui (Volonté DD 17 s'il est directement ciblé)
+  note: Un adversaire peut sortir d'une zone de silence fixe ; ne pas enfermer les lanceurs alliés dans cette zone
+
+step: Les ennemis restent à distance et la force est nécessaire
+  do: Employer rayon ardent ; contre un groupe de créatures mauvaises, envisager châtiment sacré (DD 18)
+  note: Choisir la zone pour épargner les alliés et les innocents ; ne pas compter sur les dégâts sacrés contre les créatures bonnes
+
+step: Un ennemi isolé atteint le contact ou doit être retenu
+  do: Mordre à +17 (1d8+9, étreinte et venin), puis tenter l'étreinte avec lutte +23
+  note: La lutte sert à retenir la cible pendant que les alliés sécurisent les lieux. Éviter de s'immobiliser au milieu de plusieurs adversaires ; ne pas renouveler les morsures sur un prisonnier maîtrisé
+
+step: Un allié tombe ou le venin met un captif en danger
+  do: Employer soins importants sur un blessé prioritaire, stabilisation sur un mourant si nécessaire, ou neutralisation du poison sur le captif
+  note: Soins importants et neutralisation du poison ne sont disponibles qu'une fois par jour chacun
+
+## Repli
+
+step: Il tombe à 50 pv ou moins, ou risque d'être encerclé sans pouvoir protéger les siens
+  do: Employer passage dans l'éther pour se soustraire au combat, puis chercher une position de retour sûre
+  note: Prévenir les alliés par télépathie avant le départ ; le passage dans l'éther ne les emporte pas avec lui. Depuis l'éther, il ne peut pas attaquer normalement les adversaires restés sur le plan matériel
+
+step: Le combat est perdu ou le retour sur place serait trop dangereux
+  do: Employer changement de plan pour quitter la zone ; emmener les compagnons consentants qui peuvent être réunis pour le départ
+  note: S'il peut rester sur place sans danger immédiat, utiliser plutôt le vol et l'invisibilité pour gagner un abri et garder les survivants sous surveillance

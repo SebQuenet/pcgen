@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Zythrustianax, vieille dragonne noire de taille Très Grande, chaotique mauvaise, FP 14 ; 225 pv, CA 32, résistance à la magie 25, immunité à l'acide, à la paralysie magique et au sommeil.
+  Elle défend l'accès au Mausolée, se délecte du carnage et compte sur la récompense promise par Charvion.
+  Morsure +26 (2d8+13), 2 griffes +25 (2d6+9 chacune), 2 ailes +23 (1d8+4 chacune), queue +23 (2d6+13). Allonge de 3 m, ou 4,50 m avec la morsure ; espace occupé de 4,50 m.
+  Déplacement terrestre de 9 m, vol de 60 m avec une manœuvrabilité médiocre ; respiration aquatique, Natation +30. Aucun déplacement de nage particulier n'est indiqué.
+  Perception +29, Discrétion +19, perception aveugle à 18 m, vision dans le noir à 36 m.
+
+resource: Sorts de niveau 1 | 7/jour au total | alarme, armure de mage, projectile magique, brume de dissimulation, coup au but ; NLS 7
+resource: Sorts de niveau 2 | 7/jour au total | flou, poussière scintillante (DD 15), invisibilité ; NLS 7
+resource: Sorts de niveau 3 | 5/jour au total | dissipation de la magie, lenteur (DD 16) ; NLS 7
+resource: Pouvoirs magiques | à volonté | ténèbres, croissance végétale ; NLS 18
+
+step: Elle dispose de temps avant l'arrivée des intrus
+  do: Lancer armure de mage, puis flou à l'approche du combat.
+  note: Armure de mage dure 7 heures et porte sa CA à 36 ; flou dure 7 minutes et impose 20 % de chances de rater les attaques concernées. Décompter ces sorts de leurs réserves respectives.
+
+step: Une végétation appropriée borde l'accès au Mausolée
+  do: Utiliser croissance végétale pour gêner l'approche des intrus, puis se placer de manière à intervenir en vol.
+  note: Préserver un espace suffisant pour ses virages ; sa manœuvrabilité médiocre rend les passages étroits et le vol stationnaire peu fiables.
+
+## Ouverture
+
+step: Elle peut attaquer les aventuriers du palier 10–11
+  do: Voler vers la plus grande concentration d'adversaires et utiliser son souffle en cherchant à toucher le plus de cibles possible.
+  note: C'est son ouverture prescrite. Le profil fourni mentionne le souffle sans donner sa forme, sa portée, ses dégâts, son DD ni son délai de recharge ; consulter ces valeurs dans le bloc complet avant de le résoudre.
+  note: Attaque en vol permet de placer son action simple au cours du déplacement ; elle peut poursuivre son passage après le souffle, dans la limite de son déplacement.
+
+step: Le souffle ne permet pas une ouverture efficace et plusieurs ennemis sont regroupés
+  do: Lancer lenteur sur plusieurs adversaires (Volonté DD 16), ou poussière scintillante pour tenter de les aveugler (Volonté DD 15).
+  note: Donner la priorité aux combattants capables de la retenir au contact et aux adversaires qui menacent l'entrée du Mausolée.
+
+## Rounds suivants
+
+step: Plusieurs adversaires peuvent être atteints par un même sort
+  do: Privilégier lenteur ou poussière scintillante pour affecter le plus de cibles possible.
+  note: Elle recherche les regroupements, conformément à sa tactique officielle ; les emplacements sont partagés entre les sorts d'un même niveau.
+
+step: Elle commence son tour à portée de plusieurs ennemis et peut rester au contact
+  do: Effectuer une attaque à outrance : morsure +26 (2d8+13), 2 griffes +25 (2d6+9), 2 ailes +23 (1d8+4), queue +23 (2d6+13).
+  note: Répartir les attaques entre les ennemis à portée pour exploiter leur concentration, ou achever d'abord celui qui risque de franchir l'entrée. Une attaque à outrance ne se combine pas avec un déplacement normal.
+
+step: Rester au contact l'exposerait à trop de ripostes
+  do: Effectuer un passage avec Attaque en vol et une morsure utilisant Science de la frappe décisive : +26, 6d8+13 dégâts.
+  note: Cette attaque unique emploie une action simple ; elle remplace l'attaque à outrance. Exploiter l'allonge de morsure de 4,50 m, sans supposer qu'Attaque en vol supprime les attaques d'opportunité.
+
+step: Une protection magique adverse contrarie nettement ses attaques
+  do: Tenter une dissipation de la magie ciblée, avec un test de dissipation à +7, puis reprendre les attaques ou les sorts contre les groupes.
+
+step: Le souffle est de nouveau disponible et plusieurs ennemis peuvent être touchés
+  do: Se replacer en vol et souffler de nouveau.
+  note: Respecter le délai de recharge et les autres valeurs du bloc complet ; aucune valeur ne figure dans le profil fourni.
+
+## Repli
+
+step: Elle est gravement blessée ou sérieusement débordée par le nombre
+  do: Rompre le combat et s'enfuir en vol, à 60 m par déplacement.
+  note: Elle ne compte pas mourir pour la cause d'un humain. Si nécessaire, consacrer d'abord une action à invisibilité, puis se déplacer et cesser les attaques pour conserver le sort.
+
+step: Il devient évident que Charvion, le Mangeur d'os, ne pourra pas payer la récompense promise
+  do: Abandonner la défense du Mausolée et s'envoler, même si elle pourrait poursuivre le combat.

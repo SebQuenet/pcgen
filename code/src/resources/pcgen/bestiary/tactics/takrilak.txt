@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Takrilak, démon nabasu avancé, chaotique mauvais, intelligent et mobile. Il affaiblit les adversaires à distance avant de concentrer ses attaques sur une cible isolée.
+  293 PV ; CA 31, contact 14 ; Vigueur, Réflexes et Volonté +28 ; résistance à la magie 28.
+  Attaque à outrance : morsure +34 (1d8+6) et 2 griffes +34 (1d6+6). Allonge 1,50 m ; déplacement terrestre 9 m, vol 18 m.
+  Réduction des dégâts 10/fer froid ou Bien ; immunité à l'électricité, au poison, à la paralysie et aux effets de mort ; résistance de 10 à l'acide, au froid et au feu.
+
+resource: Ténèbres profondes, téléportation suprême, télékinésie | à volonté | NLS 27 ; télékinésie DD 19 ; téléportation limitée à lui-même et à ses objets, dans la limite de charge autorisée
+resource: Énervation | 3/jour | rayon contre la CA de contact ; inflige 1d4 niveaux négatifs sans jet de sauvegarde
+resource: Silence | 3/jour | Volonté DD 16 si une créature est directement ciblée
+resource: Contact vampirique | 3/jour | attaque de contact au corps à corps ; procure des PV temporaires
+resource: Immobilisation de personne de groupe | 1/jour | Volonté DD 21 ; affecte uniquement les humanoïdes
+resource: Régénération | 1/jour | restaure des PV et les membres perdus
+resource: Convocation | 1/jour | choisir 1 nabasu ou 1d4 babaus ; 30 % de réussite dans les deux cas
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Les observer depuis la pénombre et choisir une position permettant de s'envoler ou de rompre le contact
+  note: Perception +42 ; Furtivité +34, portée à +42 dans la pénombre ; vision dans le noir à 18 m.
+
+step: Le combat est imminent et il dispose de temps pour se préparer
+  do: Tenter de convoquer 1d4 babaus et les placer entre lui et les intrus si la convocation réussit
+  note: Une tentative consomme l'unique utilisation, même en cas d'échec. Sa télépathie porte à 30 m.
+
+## Ouverture
+
+step: Plusieurs humanoïdes sont regroupés
+  do: Lancer immobilisation de personne de groupe, puis se déplacer pour approcher une cible immobilisée sans s'exposer à tous ses alliés
+  note: Volonté DD 21 ; les créatures d'un autre type sont insensibles à ce pouvoir.
+
+step: Un lanceur de sorts identifiable constitue la menace principale
+  do: Lancer silence sur lui, ou sur un point fixe près de lui pour couvrir sa position
+  note: Une créature directement ciblée bénéficie de Volonté DD 16. Une zone fixe peut être quittée ; silence gêne les sorts à composante verbale.
+
+step: Les ennemis sont dispersés ou peu susceptibles de succomber à l'immobilisation
+  do: Tirer une énervation sur le combattant ou le lanceur de sorts le plus dangereux, puis garder ses distances grâce au vol
+  note: Choisir une seule de ces ouvertures selon la situation ; chaque pouvoir remplace ses attaques du round.
+
+## Rounds suivants
+
+step: Une cible est déjà à portée au début de son tour
+  do: Effectuer l'attaque à outrance : morsure +34 (1d8+6), puis 2 griffes +34 (1d6+6), sur la même cible
+  note: Privilégier un adversaire isolé, affaibli par énervation ou immobilisé. Réserver Attaque en puissance aux cibles faciles à toucher.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer ou voler jusqu'à elle, puis porter une morsure +34 (1d8+6)
+  note: Un déplacement ordinaire ne permet pas de porter ses trois attaques ce round.
+
+step: Un ennemi dangereux reste hors de portée de ses attaques naturelles
+  do: Poursuivre l'affaiblissement par énervation, ou utiliser télékinésie pour tenter de le désarmer ou de le renverser
+  note: Télékinésie DD 19 lorsqu'un jet de sauvegarde s'applique ; conserver assez de distance pour éviter l'encerclement.
+
+step: Un adversaire accessible au contact permet de gagner un sursis
+  do: Remplacer ses attaques naturelles par contact vampirique
+  note: Les PV temporaires absorbent les dégâts à venir ; plusieurs utilisations ne cumulent pas leurs PV temporaires.
+
+step: Il peut préparer un écran sans avoir besoin de voir à travers
+  do: Utiliser ténèbres profondes pour gêner les tirs et masquer un changement de position
+  note: L'effet dépend de l'éclairage initial. Sa vision dans le noir ne perce pas l'obscurité surnaturelle produite par ce pouvoir.
+
+step: Il est blessé et bénéficie d'un répit
+  do: Utiliser régénération avant de reprendre l'offensive
+  note: Garder la trace de cette utilisation quotidienne ; ce pouvoir ne lui donne pas une régénération permanente.
+
+## Repli
+
+step: Ses PV tombent à 75 ou moins, ou il ne peut plus soutenir le combat
+  do: Utiliser téléportation suprême vers un lieu connu et sûr
+  note: Il part seul avec ses objets autorisés ; les créatures convoquées peuvent continuer à occuper les poursuivants.
+
+step: La téléportation est empêchée
+  do: S'enfuir en vol, à 18 m par déplacement, et utiliser les obstacles pour rompre les lignes de vue
+  note: Employer régénération à l'abri si son utilisation reste disponible.

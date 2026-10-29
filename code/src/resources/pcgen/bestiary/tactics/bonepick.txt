@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Bonepick est un wikkawak solitaire, humanoïde gobelinoïde de taille M, chaotique mauvais, qui s'acharne sur les adversaires paraissant les plus faibles. FP 4 ; 39 pv ; CA 19, contact 13, pris au dépourvu 16 ; résistance au froid 5.
+  Croc d'ogre +9 (1d10+7, x3), allonge 1,50 m ; javeline +7 (1d6+5). Déplacement de 9 m ; vision dans le noir à 18 m ; odorat ; Perception +12 ; Discrétion +16 ; Intimidation +12.
+
+resource: Passage sans trace | à volonté | lui-même uniquement ; NLS 4
+
+resource: Extinction des feux | 3/jour | pouvoir magique ; NLS 4 ; concentration +5
+
+resource: Javelines | 3 | une javeline dépensée par lancer
+
+step: Il peut préparer son approche
+  do: Activer passage sans trace et approcher à couvert avec Discrétion +16 ; repérer les intrus avec Perception +12 et son odorat.
+  note: Passage sans trace dissimule ses traces, sans le rendre invisible. Préférer un emplacement sombre d'où il peut atteindre les ennemis les moins protégés.
+
+## Ouverture
+
+step: Les intrus portent des torches, des lanternes ou d'autres flammes
+  do: Utiliser extinction des feux pour éteindre leurs flammes, puis employer son déplacement pour se rapprocher d'une cible paraissant faible.
+  note: Le pouvoir prend une action simple : il ne frappe pas au croc dans le même tour. Il éteint les feux ordinaires ; une lumière magique sans flamme ne disparaît pas automatiquement.
+
+step: L'éclairage est déjà éteint ou ne peut pas être supprimé par ce pouvoir
+  do: Se déplacer jusqu'à 9 m pour atteindre une cible vulnérable, puis porter un coup de croc d'ogre +9 (1d10+7, x3) si elle est à portée.
+  note: Dans l'obscurité, exploiter sa vision dans le noir à 18 m contre les ennemis privés de vue.
+
+## Rounds suivants
+
+step: Une cible paraissant faible est à portée de mêlée
+  do: Concentrer les coups de croc d'ogre sur elle ; continuer sur cette cible tant qu'elle tient debout.
+  note: Une seule attaque de croc par action simple ; sa fiche ne donne aucune attaque supplémentaire.
+
+step: Il veut augmenter les dégâts contre une cible facile à toucher
+  do: Activer Attaque en puissance : croc d'ogre +7 (1d10+13, x3), manié à deux mains.
+  note: Revenir à +9 (1d10+7) contre une cible difficile à toucher ; le choix vaut jusqu'à son prochain tour.
+
+step: Un adversaire à 9 m ou moins peut clairement le voir et l'entendre
+  do: Alterner les tours d'attaque avec une action simple pour démoraliser cet adversaire par Intimidation +12.
+  note: Une réussite rend la cible secouée. Ce test remplace l'attaque du tour ; conserver l'avantage de l'obscurité si personne ne peut le voir.
+
+step: Les ennemis rallument leurs flammes et il reste une utilisation d'extinction des feux
+  do: Éteindre de nouveau leurs flammes, puis se replacer vers sa cible prioritaire.
+  note: Décompter chaque utilisation parmi les trois disponibles pour la journée.
+
+step: Aucun ennemi ne peut être atteint au corps à corps ce tour et une cible est visible
+  do: Avancer et lancer une javeline +7 (1d6+5) si la distance le permet, puis chercher à rejoindre la mêlée.
+  note: Décompter les trois javelines ; appliquer les malus de portée nécessaires.
+
+step: Une case de terrain difficile gêne son déplacement
+  do: Utiliser Déplacement aisé pour ignorer 1,50 m de terrain difficile pendant son mouvement.
+  note: Ce don ne lui permet pas de traverser tout un terrain difficile sans ralentir.
+
+## Repli
+
+step: Ses points de vie diminuent, même au bord de la mort
+  do: Poursuivre le combat jusqu'à la mort.
+  note: Solitaire par nature, Bonepick ne cherche pas l'aide des trolls des glaces et ne fuit pas.

@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Monture squelettique, cheval lourd mort-vivant de taille G, sans intelligence. Elle suit les ordres reçus sans élaborer de tactique personnelle.
+  Morsure +5 (1d4+5), 2 sabots +0 (1d6+2 chacun) ; déplacement de 15 m ; allonge de 1,50 m ; espace occupé de 3 m.
+  Initiative +9 ; CA 17, contact 13, pris au dépourvu 13 ; 9 points de vie ; réduction des dégâts 5/contondant ; immunité au froid et traits des morts-vivants.
+
+step: Un ordre lui impose de garder un lieu ou de porter un cavalier
+  do: Rester à son poste ou suivre les indications du cavalier jusqu'à recevoir l'ordre d'attaquer.
+  note: Vision dans le noir à 18 m ; Perception +0. Sa barde de mailles brisée est déjà comprise dans sa CA.
+
+## Ouverture
+
+step: Une cible désignée est à plus de 1,50 m
+  do: Avancer de 15 m au maximum pour la mettre à portée, puis porter une morsure +5 (1d4+5) si elle est accessible.
+  note: Si un seul déplacement ne suffit pas, poursuivre l'approche par un second déplacement, sans attaquer ce round.
+
+step: Une cible désignée est déjà à portée
+  do: Effectuer une attaque à outrance : morsure +5 (1d4+5) et 2 sabots +0 (1d6+2 chacun).
+  note: Si elle est montée, ces attaques exigent que le cavalier la dirige au combat ; ses actions de déplacement restent communes avec celles du cavalier.
+
+## Rounds suivants
+
+step: L'adversaire reste à 1,50 m ou moins
+  do: Répéter l'attaque à outrance avec la morsure et les deux sabots.
+
+step: L'adversaire n'est accessible qu'après un pas de 1,50 m
+  do: Faire un pas de placement de 1,50 m, puis effectuer l'attaque à outrance.
+  note: Ce pas suppose un terrain qui le permet et aucun autre déplacement pendant le round.
+
+step: L'adversaire s'éloigne davantage et l'ordre d'attaque reste valable
+  do: Le rejoindre avec son déplacement de 15 m, puis mordre ; consacrer les deux actions au déplacement si nécessaire.
+  note: Elle poursuit selon ses ordres, sans choisir ses cibles en fonction de leurs armes ou de leurs défenses.
+
+## Repli
+
+step: Aucun ordre de retraite n'est donné
+  do: Continuer à exécuter les ordres jusqu'à sa destruction à 0 point de vie.
+  note: Sans intelligence et immunisée aux effets mentaux par ses traits de mort-vivant, elle ne fuit pas par peur ou pour préserver ses 9 points de vie.
+
+step: Un ordre lui impose de se retirer ou son cavalier la fait repartir
+  do: Rompre le combat et s'éloigner avec son déplacement de 15 m ; utiliser l'action de retraite si les conditions le permettent, jusqu'à 30 m.
+  note: Lors d'une retraite, seule la case de départ échappe aux attaques d'opportunité liées au déplacement ; quitter ensuite une autre case menacée peut en provoquer.

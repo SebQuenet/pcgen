@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Avinash, naga royal de taille Très Grande, loyal mauvais, FP 13 : manipulateur prudent qui cherche à diviser les adversaires avant de risquer sa vie.
+  171 pv ; CA 28 ; déplacement 12 m ; espace et allonge 4,50 m. Attaque à outrance : 5 morsures +17, chacune infligeant 2d6+6 et un saignement dont la valeur n'est pas précisée.
+  Lanceur de sorts de NLS 11, concentration +16 ; vision dans le noir à 18 m et détection de l'invisibilité permanente. Il ne peut pas être renversé.
+
+resource: Sorts de niveau 1 | 8/jour | réserve commune à armure de mage, bouclier, projectile magique et aux autres sorts connus de ce niveau
+resource: Sorts de niveau 2 | 7/jour | réserve commune à invisibilité, immobilisation de personne, rayon ardent et discours captivant
+resource: Sorts de niveau 3 | 7/jour | réserve commune à suggestion, lenteur, dissipation de la magie et clignotement
+resource: Sorts de niveau 4 | 7/jour | réserve commune à charme-monstre, porte dimensionnelle et œil du mage ; garder une utilisation pour fuir
+resource: Sorts de niveau 5 | 5/jour | réserve commune à débilité et télékinésie
+resource: Détection de l'invisibilité | permanent | NLS 9 ; repérer les adversaires invisibles
+
+step: Il échange avec les intrus avant les hostilités
+  do: Exploiter Bluff +22, Diplomatie +22 et Psychologie +27 pour gagner du temps et identifier combattants et lanceurs de sorts
+  note: Son changement de forme lui permet de prendre les apparences humanoïdes indiquées dans le profil ; il ne lui donne pas leurs pouvoirs.
+
+## Ouverture
+
+step: Premier round, s'il est attaqué
+  do: Lancer invisibilité, puis s'éloigner des assaillants avec son déplacement de 12 m si le passage le permet
+  note: Lancer sur la défensive si nécessaire ; devenir invisible ne permet pas de traverser les ennemis ni les obstacles.
+
+step: Round suivant, encore invisible
+  do: Lancer armure de mage et continuer à prendre de la distance
+  note: CA 32 ; ce sort défensif conserve l'invisibilité.
+
+step: Round suivant, armure de mage active
+  do: Lancer bouclier et rester hors de portée des combattants
+  note: CA 36 avec les deux protections ; bouclier protège aussi contre projectile magique. Ces protections demandent chacune un round distinct.
+
+step: Protections en place, un combattant adverse est à portée
+  do: Lancer charme-monstre sur lui, Volonté DD 19, ou suggestion, Volonté DD 18, pour le détacher du groupe
+  note: Proposer avec suggestion une conduite raisonnable, comme se retirer pour aller chercher du renfort. Charme-monstre crée une attitude amicale, sans imposer d'attaquer ses alliés ; une cible actuellement menacée par Avinash ou ses alliés reçoit +5 à sa sauvegarde contre le charme.
+  note: Ce sort hostile met fin à l'invisibilité ; ne pas enchaîner deux sorts dans le même round.
+
+## Rounds suivants
+
+step: Un lanceur de sorts manifeste reste dangereux
+  do: Le viser avec débilité, Volonté DD 20, en priorité s'il pratique la magie profane
+  note: Un lanceur de sorts profanes subit un malus de 4 à cette sauvegarde.
+  note: La tactique fournie mentionne aussi un double regard contre les lanceurs de sorts, mais n'en donne ni les effets, ni la portée, ni le DD ; ces paramètres ne peuvent pas être déduits de ce profil.
+
+step: Plusieurs adversaires se rapprochent
+  do: Lancer lenteur, Volonté DD 18, puis se déplacer pour maintenir la distance
+  note: Les cibles qui échouent sont limitées à une action de mouvement ou une action simple par round ; exploiter ce répit pour éviter l'encerclement.
+
+step: Un effet magique adverse compromet ses enchantements ou sa sécurité
+  do: Tenter une dissipation de la magie ciblée sur cet effet
+  note: Test de dissipation : 1d20+10 ; le bonus de ce sort est plafonné à +10 malgré son NLS 11.
+
+step: Un adversaire reste dans son allonge et Avinash peut consacrer son tour à la mêlée
+  do: Effectuer l'attaque à outrance de 5 morsures +17, chacune à 2d6+6 et saignement
+  note: Après un déplacement ordinaire, il ne porte qu'une morsure. Exploiter son allonge de 4,50 m et Attaques réflexes pour les attaques d'opportunité ; au maximum 5 par round, une seule par occasion.
+
+step: Un ennemi adjacent provoque une attaque d'opportunité par son déplacement
+  do: Utiliser son don Immobilisation (Stand Still) pour tenter de l'arrêter avec un test de manœuvre à +21 contre son DMD
+  note: Cette tentative remplace l'attaque d'opportunité et ne fonctionne que sur une case adjacente, pas sur toute l'allonge de 4,50 m.
+
+step: Les enchantements échouent ou la cible y est insensible
+  do: Employer rayon ardent contre une cible exposée, ou projectile magique pour des dégâts directs
+  note: Au NLS 11, rayon ardent produit 3 rayons de 4d6 de feu, avec un jet d'attaque de contact à distance par rayon ; projectile magique produit 5 projectiles de 1d4+1 chacun.
+
+## Repli
+
+step: Points de vie strictement inférieurs à 40
+  do: Fuir immédiatement avec porte dimensionnelle vers un endroit sûr connu
+  note: La fuite prime sur les attaques et les tentatives de manipulation ; après porte dimensionnelle, aucune autre action avant son prochain tour.
+
+step: Porte dimensionnelle indisponible
+  do: Lancer invisibilité si possible et s'éloigner de 12 m avec son action de mouvement ; poursuivre la fuite les rounds suivants
+  note: Éviter les actions hostiles qui rompraient l'invisibilité ; si les sorts de fuite sont épuisés, utiliser le terrain et le déplacement pour rompre le contact.

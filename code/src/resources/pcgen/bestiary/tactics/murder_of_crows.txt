@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Nuée animale neutre de corbeaux de taille TP, particulièrement agressive : 27 pv, CA 14, initiative +6.
+  Attaque de nuée : 2d6 dégâts automatiques, distraction et griffures aux yeux. Elle occupe un espace de 3 m de côté, sans allonge ; elle doit recouvrir les cases de ses victimes.
+  Vol à 12 m par déplacement, manœuvrabilité moyenne ; déplacement au sol de 1,50 m. Vision nocturne, odorat, Perception +11.
+
+note: Défenses
+  Les armes tranchantes et perforantes infligent la moitié des dégâts. Les armes contondantes restent efficaces.
+  Traits des nuées : immunité aux coups critiques, à la prise en tenaille et aux sorts ou effets visant un nombre déterminé de créatures ; les effets de zone infligent 50 % de dégâts supplémentaires.
+
+step: Aucun intrus dans le bâtiment ou la cour voisine
+  do: Rester auprès des carcasses dont les corbeaux se nourrissent.
+  note: La rencontre décrite comporte quatre nuées ; les spriggans évitent ce bâtiment.
+
+## Ouverture
+
+step: Un intrus entre dans le bâtiment ou la cour
+  do: Faire décoller les quatre nuées et les lancer sur les intrus, en volant jusqu'à recouvrir leurs cases.
+  note: Entrer dans une case occupée par un ennemi provoque une attaque d'opportunité. Les nuées ne portent pas elles-mêmes d'attaques d'opportunité.
+
+step: Une nuée termine son déplacement sur des créatures
+  do: Infliger automatiquement 2d6 dégâts à chaque créature dans son espace, sans jet d'attaque.
+  note: Chaque créature vivante blessée doit réussir un jet de Vigueur DD 13 contre la distraction ou être nauséeuse pendant 1 round.
+  note: Chaque créature vivante blessée doit aussi réussir un jet de Réflexes DD 13 contre les griffures aux yeux ou être aveuglée pendant 1d4 jours, sauf guérison de la cécité.
+
+## Rounds suivants
+
+step: Des intrus restent accessibles
+  do: Maintenir les nuées sur leurs cases ou les déplacer pour suivre leurs mouvements ; appliquer à nouveau les dégâts de nuée et les deux sauvegardes aux créatures vivantes blessées.
+  note: Les corbeaux attaquent avec une agressivité animale ; ils ne préparent pas de manœuvres complexes.
+
+step: Les intrus quittent la cour et restent à découvert
+  do: Les poursuivre en vol et revenir recouvrir leurs cases dès que possible.
+
+step: Une nuée perd des points de vie mais reste au-dessus de 0 pv
+  do: Continuer à attaquer avec les mêmes dégâts et les mêmes DD.
+
+## Repli
+
+step: Les corbeaux sont blessés
+  do: Combattre jusqu'à la mort, sans seuil de fuite.
+  note: À 0 pv ou moins, la nuée se disperse.
+
+step: Les intrus trouvent refuge dans un autre bâtiment
+  do: Cesser la poursuite.

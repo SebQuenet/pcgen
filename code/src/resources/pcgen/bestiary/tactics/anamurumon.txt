@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Anamurumon est un oni yai du vent de taille TG, loyal mauvais, qui refuse d'abandonner ses ambitions sur le Trône de Jade. Il possède 230 pv, une CA de 32 et une allonge de 4,50 m.
+  Ikarikurusai, son bâton à trois sections +3 électrique : +33/+28/+23/+18, dégâts 3d8+21, critique 19–20, plus 1d6 d'électricité ; à défaut, 2 coups à +30, dégâts 2d6+12 chacun.
+  Son troisième œil projette un projectile électrique : +21 au contact à distance, dégâts 4d6 d'électricité et surdité. La fiche ne précise ni sa portée, ni son type d'action, ni les modalités de la surdité.
+  Déplacement terrestre 12 m ; vol 18 m, bonne manœuvrabilité. Régénération 5 interrompue par l'acide ou le feu ; résistance à la magie 27, résistance à l'électricité 10 et au son 5 ; vulnérabilité aux armes royales.
+
+resource: Manteau de vents et vol | permanents | pouvoirs actifs avant l'engagement ; niveau de lanceur de sorts 16
+resource: Invisibilité personnelle et forme gazeuse | à volonté | moyens de se dégager et de récupérer
+resource: Ténèbres et lévitation | à volonté | vision dans le noir à 18 m
+resource: Cri rapide | 3/jour | DD 19 ; action rapide
+resource: Mur de vent | 3/jour | interposer le mur face aux tirs adverses
+resource: Contrôle du climat | 3/jour | réservé à une préparation suffisamment longue
+resource: Éclair multiple | 1/jour | DD 21
+resource: Cyclone | 1/jour | DD 23
+
+step: Un combat se prépare
+  do: S'assurer que le manteau de vents est actif et conserver assez d'espace pour prendre son envol.
+  note: Repérer les porteurs d'armes royales ; leur désarmement devient prioritaire dès qu'ils sont à portée.
+
+## Ouverture
+
+step: Il se présente sous une forme humanoïde d'emprunt
+  do: Reprendre sa véritable forme pour impressionner les adversaires.
+  note: S'il choisit de démoraliser un ennemi, utiliser Intimidation +32 et y consacrer une action simple ; la révélation de sa forme ne démoralise pas automatiquement.
+
+step: Plusieurs adversaires peuvent être frappés par l'électricité
+  do: Lancer éclair multiple, DD 21, et ajouter un cri rapide, DD 19, si des ennemis sont dans sa zone.
+  note: Réserver cette ouverture aux cibles qui ne montrent pas de protection efficace contre l'électricité.
+
+step: Le placement ennemi favorise un cyclone
+  do: Choisir cyclone, DD 23, comme ouverture à la place d'éclair multiple ; ajouter un cri rapide, DD 19, si sa zone atteint des adversaires.
+  note: Chercher à désorganiser le groupe et à préparer les projections de ses passages en vol.
+
+## Rounds suivants
+
+step: Un adversaire brandit une arme royale à portée
+  do: Tenter de le désarmer, avec un bonus de manœuvre de +36 pour la première attaque.
+  note: Le désarmement remplace une attaque de mêlée ; les tentatives effectuées avec les attaques itératives subissent leurs malus correspondants.
+
+step: Une cible reste à portée sans qu'il ait besoin de se déplacer
+  do: Porter l'attaque à outrance d'Ikarikurusai : +33/+28/+23/+18, chaque touche infligeant 3d8+21 plus 1d6 d'électricité.
+  note: Exploiter son allonge de 4,50 m et Attaques réflexes contre les déplacements qui provoquent des attaques d'opportunité.
+
+step: Une cible se prête au tir du troisième œil
+  do: Employer le projectile électrique, +21 au contact à distance, pour infliger 4d6 d'électricité et la surdité.
+  note: Ne pas supposer que ce tir s'ajoute gratuitement à une attaque à outrance : son type d'action n'est pas donné.
+
+step: Plusieurs ennemis sont dans la zone du cri et il lui reste des utilisations
+  do: Ajouter un cri rapide, DD 19, à son action principale.
+  note: Un seul cri rapide par round ; tenir le compte des 3 utilisations quotidiennes.
+
+step: Il est encerclé
+  do: S'envoler pour se dégager, puis lancer invisibilité sur lui-même.
+  note: Le décollage peut provoquer des attaques d'opportunité ; l'invisibilité prend fin lorsqu'il attaque.
+
+step: Il peut attaquer depuis les airs une créature plus petite que lui
+  do: Effectuer une Attaque en vol avec Coup fabuleux ; si le placement le permet, projeter la victime vers le cyclone encore actif.
+  note: Utiliser le déplacement restant pour reprendre de la distance après le passage ; ce passage ne permet pas l'attaque à outrance du bâton.
+
+step: Des archers continuent de le menacer
+  do: Interposer un mur de vent, puis changer de position en vol.
+
+## Repli
+
+step: Ses points de vie tombent sous 100
+  do: Lancer invisibilité ou forme gazeuse, se mettre à l'abri et laisser sa régénération lui rendre 5 pv par round.
+  note: Éviter en priorité les sources d'acide et de feu, qui interrompent cette récupération. Sous invisibilité, cesser d'attaquer pendant le repli pour conserver sa dissimulation.
+
+step: Il dispose d'un abri et de temps pour récupérer
+  do: Attendre de retrouver ses forces, jusqu'à 230 pv si possible, puis revenir au combat avec ses pouvoirs encore disponibles.
+  note: Ce repli est temporaire : Anamurumon refuse de renoncer au Trône de Jade et combat jusqu'à la mort s'il ne peut plus se dégager.

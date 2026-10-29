@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Grig Fiddler, fée neutre de taille TP : 23 pv, CA 17, RD 5/fer froid et RM 20. Il privilégie le contrôle du terrain et le tir en restant mobile.
+  Arc long +8 (1d4-2, x3), épée courte +2 (1d3-2, 19-20). Déplacement au sol de 9 m, vol de 12 m avec une manœuvrabilité moyenne ; allonge de 0 m.
+  Discrétion +20, Vol +16, Représentation (cordes) +15. Le bloc ne décrit aucun effet de combat du violon : ne lui attribuer ni effet ni DD supplémentaire.
+
+resource: Déguisement | 3/jour | NLS 9
+resource: Enchevêtrement | 3/jour | DD 15, NLS 9 ; nécessite de la végétation
+resource: Invisibilité | 3/jour | Sur lui-même uniquement, NLS 9 ; réserver une utilisation pour le repli
+resource: Pyrotechnie | 3/jour | DD 16, NLS 9 ; nécessite un feu existant
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler derrière un couvert et choisir une position permettant de s'éloigner en vol
+  note: Repérer la végétation utilisable et les feux déjà présents avant de choisir son premier pouvoir
+
+step: Il doit observer les intrus de plus près
+  do: Utiliser invisibilité sur lui-même, puis se déplacer discrètement
+  note: Une attaque ou un pouvoir offensif met fin à cette invisibilité
+
+step: Une fausse apparence peut faciliter l'approche
+  do: Utiliser déguisement avant de se montrer
+
+## Ouverture
+
+step: Plusieurs ennemis traversent une zone de végétation
+  do: Lancer enchevêtrement sur leur passage (Réflexes DD 15), puis gagner une position de tir en vol
+  note: Garder ses distances avec les ennemis qui échappent à l'entrave
+
+step: Les ennemis sont regroupés près d'un feu et aucune végétation n'est exploitable
+  do: Utiliser les feux d'artifice de pyrotechnie pour tenter de les aveugler (Vigueur DD 16)
+  note: Choisir une position qui évite de s'exposer lui-même à l'effet
+
+step: Aucun pouvoir de contrôle n'est applicable
+  do: Tirer une flèche à l'arc long sur une cible exposée (+8, 1d4-2, x3)
+
+## Rounds suivants
+
+step: Les adversaires restent entravés ou à distance
+  do: Continuer le tir à l'arc et se déplacer en vol pour conserver une voie de fuite
+  note: Ses dégâts sont faibles ; privilégier une cible déjà blessée ou gênée par ses pouvoirs
+
+step: Des ennemis contournent la zone entravée par un autre passage végétalisé
+  do: Utiliser une nouvelle charge d'enchevêtrement (Réflexes DD 15) pour ralentir leur approche
+
+step: Un adversaire arrive au contact
+  do: Effectuer une retraite en vol pour reprendre ses distances ; recommencer à tirer au round suivant si la situation le permet
+  note: L'épée courte reste un dernier recours : son allonge de 0 m l'oblige à entrer dans la case adverse pour frapper
+
+## Repli
+
+step: Il tombe à 7 pv ou moins et aucun ennemi ne le menace au contact
+  do: Se rendre invisible, puis s'éloigner en vol jusqu'à 12 m et poursuivre sa fuite aux rounds suivants
+  note: Cesser les attaques pour conserver l'invisibilité
+
+step: Il doit fuir alors qu'un ennemi le menace au contact
+  do: Effectuer une retraite en vol, puis utiliser invisibilité au round suivant si une charge reste disponible
+
+step: Invisibilité est épuisée et un feu permet de couvrir la fuite
+  do: Utiliser la fumée de pyrotechnie pour masquer sa retraite, puis s'éloigner en vol

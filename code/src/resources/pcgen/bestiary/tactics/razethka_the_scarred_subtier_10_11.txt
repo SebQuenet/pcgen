@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Razethka la Balafrée, dragon de saumure adulte mûr de taille G, neutre mauvais, FP 12. Brutale, elle recherche le corps à corps et prend plaisir à déchirer ses adversaires avec ses griffes.
+  168 pv ; CA 34, contact 9 ; résistance à la magie 23 ; réduction des dégâts 10/magie ; immunité à l'acide, à la paralysie et au sommeil.
+  Morsure +26 (2d6+16), 2 griffes +26 (1d8+11 chacune), queue +21 (1d8+16), 2 ailes +21 (1d6+5 chacune).
+  Espace occupé : 3 m ; allonge : 1,50 m, ou 3 m avec la morsure. Déplacement et nage : 18 m ; vol : 60 m, manœuvrabilité médiocre ; respiration aquatique.
+
+resource: Élixirs de souffle de dragon de saumure | 2 flacons au total | Un souffle par flacon ; ligne de 9 m, 10d6 dégâts d'acide, Réflexes DD 16 pour moitié ; utilisable dans l'heure suivant l'ingestion
+resource: Sorts de niveau 1 | 6 emplacements restants | Sur les 7 quotidiens, 1 a servi à armure de mage
+resource: Sorts de niveau 3 | 7 emplacements | Notamment hâte ; réserve partagée avec ses autres sorts de ce niveau
+resource: Sorts de niveau 4 | 3 emplacements restants | Sur les 4 quotidiens, 1 a servi à invisibilité suprême
+
+step: Avant l'arrivée des intrus
+  do: Avoir déjà lancé armure de mage et invisibilité suprême, conformément à ses préparatifs
+  note: La CA 34 inclut armure de mage ; sans ce sort, CA 30. Invisibilité suprême persiste pendant les attaques ; sa durée totale est de 9 rounds, dont il faut retrancher ceux écoulés avant le combat.
+
+step: Elle dispose d'un instant supplémentaire pour préparer son embuscade
+  do: Boire un premier élixir afin de disposer du souffle dès l'ouverture
+  note: Cette ingestion consomme l'un des deux flacons ; elle ne fournit aucun souffle supplémentaire après son unique utilisation.
+
+note: Souffle
+  Le bloc ne chiffre aucun souffle naturel. Les souffles chiffrés de ce plan utilisent exclusivement les deux élixirs de son équipement.
+
+## Ouverture
+
+step: Les intrus sont entrés dans la salle et plusieurs peuvent être alignés
+  do: Depuis sa position invisible, souffler avec l'élixir préparé : ligne de 9 m, 10d6 dégâts d'acide, Réflexes DD 16 pour moitié
+  note: Attendre si possible l'entrée de tout le groupe avant de déclencher l'embuscade. Si aucun élixir n'a été bu, son ingestion prend une action simple ; souffler lors d'un tour ultérieur, également par une action simple.
+
+step: Elle lance son premier assaut
+  do: Résoudre sa présence terrifiante sur les adversaires concernés à 63 m ou moins, Volonté DD 21
+  note: Profiter de la peur pour atteindre un adversaire isolé, sans abandonner son goût pour la mêlée.
+
+## Rounds suivants
+
+step: Un adversaire est à portée de ses griffes et elle peut rester sur place
+  do: Attaque à outrance : morsure +26 (2d6+16), 2 griffes +26 (1d8+11), queue +21 (1d8+16), 2 ailes +21 (1d6+5)
+  note: Les bonus indiqués sont ceux du bloc, avant les modificateurs de situation ou de sorts. Concentrer les attaques sur une même cible jusqu'à sa chute ; préférer un pas de 1,50 m à un déplacement qui empêcherait l'attaque à outrance.
+
+step: Elle doit se déplacer pour atteindre sa cible
+  do: Se rapprocher, puis porter une morsure avec Science de la frappe décisive
+  note: Ce don accompagne une attaque unique ; il ne s'ajoute pas à l'attaque à outrance. La morsure peut atteindre une cible à 3 m, mais les griffes exigent 1,50 m.
+
+step: Aucun ennemi ne peut être attaqué ce tour et le combat se prolonge
+  do: Lancer hâte sur elle-même, puis gagner une position permettant une attaque à outrance au tour suivant
+  note: Ne pas retarder une attaque à outrance déjà possible pour multiplier les préparatifs.
+
+step: Invisibilité suprême prend fin et les adversaires peinent à combattre une cible invisible
+  do: Relancer invisibilité suprême avec un emplacement de niveau 4 restant, puis reprendre les attaques au contact
+
+step: Plusieurs adversaires offrent une nouvelle ligne de tir et il reste un élixir
+  do: Profiter d'un tour sans bonne attaque de mêlée pour boire le second flacon ; utiliser ensuite son souffle de 9 m pour 10d6 dégâts d'acide, Réflexes DD 16 pour moitié
+  note: L'ingestion et le souffle demandent deux actions simples distinctes. Après ce souffle, les deux élixirs sont épuisés.
+
+step: Une poussée peut jeter un ennemi dans une eau accessible ou libérer un passage utile
+  do: Envisager une bousculade avec son BMO de +30, puis exploiter sa nage à 18 m et sa respiration aquatique
+  note: Choisir cette manœuvre seulement si le placement obtenu vaut la perte de ses attaques ordinaires ; ne pas supposer la présence d'eau si le terrain n'en offre pas.
+
+## Repli
+
+step: Ses points de vie diminuent, même lorsqu'elle est proche de 0 pv
+  do: Continuer à combattre jusqu'à la mort
+  note: Aucun seuil de fuite : Razethka ne se rend pas et n'abandonne pas le combat. Ses déplacements servent à poursuivre ou à reprendre l'assaut.

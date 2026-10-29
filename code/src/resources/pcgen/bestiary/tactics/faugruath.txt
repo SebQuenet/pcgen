@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Faugruath est un diable écorcheur de taille G, loyal mauvais : 147 pv, CA 25, déplacement de 12 m et allonge de 3 m.
+  Attaque à outrance : morsure +20 (2d6+7) et deux griffes +21 (1d8+7, critique 19–20). Il concentre ses attaques sur une même victime.
+  Réduction des dégâts 10/Bien, immunité au feu et au poison, résistance à l'acide et au froid de 10, résistance à la magie 22.
+
+resource: Téléportation suprême | à volonté | NLS 12 ; lui-même et jusqu'à 50 livres d'objets, sans autre créature
+resource: Rayon ardent | à volonté | NLS 12 ; trois rayons, chacun à +15 au contact à distance et infligeant 4d6 de feu ; portée 16,50 m
+resource: Agonie hurlante | 1/jour | DD 15 ; NLS 12
+resource: Mur de feu | 1/jour | NLS 12
+
+step: Il repère les intrus avant d'être découvert
+  do: Observer depuis un couvert ou des ténèbres déjà présentes, avec Discrétion +15 et Perception +25 ; exploiter sa détection du Bien constante pour examiner les auras accessibles.
+  note: Il voit dans les ténèbres, y compris magiques, mais ne dispose d'aucun pouvoir pour en créer. Il peut communiquer par télépathie à 30 m.
+
+## Ouverture
+
+step: Plusieurs adversaires approchent et aucun ne le menace encore au corps à corps
+  do: Placer un mur de feu entre une partie du groupe et ses compagnons pour isoler une victime et compliquer l'arrivée des renforts.
+  note: Le mur peut être traversé : il inflige des dégâts, sans immobiliser les ennemis. Faugruath peut lui-même traverser les flammes grâce à son immunité.
+
+step: Il n'utilise pas le mur et une cible est à 16,50 m ou moins, sans ennemi le menaçant au contact
+  do: Lancer rayon ardent et concentrer les trois rayons sur un adversaire exposé, de préférence un lanceur de sorts.
+
+step: Une victime est déjà à 3 m ou moins au début de son tour
+  do: Effectuer une attaque à outrance avec la morsure et les deux griffes.
+
+## Rounds suivants
+
+step: Une victime reste à portée au début de son tour
+  do: Répéter l'attaque à outrance ; utiliser si nécessaire un pas de placement de 1,50 m pour conserver une bonne position.
+  note: Profiter de l'allonge de 3 m pour menacer les approches. Un déplacement ordinaire empêche l'attaque à outrance ce tour-ci.
+
+step: La victime paraît facile à toucher
+  do: Activer Attaque en puissance : morsure +16 (2d6+15), deux griffes +17 (1d8+15, critique 19–20).
+  note: Renoncer à cette option contre une défense élevée pour préserver les chances de toucher.
+
+step: Il doit avancer et peut atteindre deux ennemis adjacents l'un à l'autre
+  do: Avancer de 12 m au maximum et utiliser Enchaînement avec une griffe +21 ; si la première attaque touche, attaquer le second ennemi également à portée de 3 m.
+  note: Enchaînement remplace l'attaque à outrance et réduit sa CA à 23 jusqu'à son prochain tour.
+
+step: Plusieurs ennemis sont à portée d'Agonie hurlante et il peut consacrer un tour à les affaiblir
+  do: Utiliser Agonie hurlante (DD 15), puis reprendre ses attaques aux tours suivants.
+
+step: Aucun ennemi n'est à portée de mêlée
+  do: Répéter rayon ardent sur une cible à 16,50 m ou moins ; sinon, se rapprocher ou se téléporter vers une position connue permettant de reprendre le combat.
+  note: Une téléportation consomme son action simple : il attaque au tour suivant.
+
+## Repli
+
+step: Points de vie sous 40, ou combat devenu manifestement défavorable
+  do: Utiliser téléportation suprême pour rejoindre un lieu connu à l'écart du combat.
+  note: Si un pas de placement de 1,50 m suffit à sortir de l'allonge ennemie, le faire avant d'utiliser ce pouvoir afin d'éviter une attaque d'opportunité.

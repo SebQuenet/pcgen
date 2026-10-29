@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Eloko, spriggan de taille P, humanoïde gnome chaotique mauvais ; cruel dans l'attaque, mais lâche lorsque sa vie est menacée.
+  22 pv ; CA 17, contact 15, pris au dépourvu 13 ; déplacement de 6 m ; vision nocturne, Perception +7, Discrétion +15.
+  Hallebarde de maître +5 (1d8-1, critique x3) ; dague lancée +8 (1d3-1, critique 19-20). Allonge indiquée : 1,50 m.
+  Altération de taille pour prendre une taille terrifiante ; Réflexes de combat pour multiplier les attaques d'opportunité lorsque les adversaires s'exposent.
+
+resource: Dagues | 4 | armes disponibles pour les attaques à distance
+resource: Illumination (flare) | à volonté | DD 10 ; NLS 4
+resource: Effroi (scare) | à volonté | DD 12 ; NLS 4
+resource: Fracassement (shatter) | à volonté | DD 12 ; NLS 4
+
+step: Des intrus approchent des buissons où il peut se cacher
+  do: Se dissimuler avec Discrétion +15 et les observer avec Perception +7.
+  note: Préparer une irruption soudaine depuis la végétation.
+
+## Ouverture
+
+step: Les intrus arrivent à proximité de sa cachette
+  do: Surgir des buissons et utiliser son altération de taille pour prendre une taille terrifiante.
+  note: Cette apparition cherche à surprendre et à impressionner ; elle ne remplace pas l'utilisation d'effroi.
+
+step: Il peut agir et les ennemis restent hors de sa portée de mêlée
+  do: Utiliser effroi (DD 12) sur une cible admissible pour tenter de désorganiser le groupe.
+
+step: Il peut attaquer un ennemi au contact
+  do: Frapper sans merci avec sa hallebarde de maître.
+  note: Le profil fourni donne +5 à l'attaque et 1d8-1 dégâts ; aucun profil chiffré de sa forme agrandie n'est fourni.
+
+## Rounds suivants
+
+step: Il lui reste au moins 5 pv et une victime tombe inconsciente
+  do: Interrompre ses attaques contre les combattants et commencer à dévorer la victime.
+  note: Cette pulsion le détourne du combat même si des ennemis sont encore debout ; aucun soin ni attaque de morsure n'est indiqué.
+
+step: Aucune victime inconsciente ne le détourne et un adversaire est au contact
+  do: Continuer à attaquer à la hallebarde et profiter des occasions offertes avec Réflexes de combat.
+
+step: Un adversaire reste hors de sa portée de mêlée
+  do: Lancer une dague avec le bonus de +8, ou renouveler effroi (DD 12) sur une cible admissible.
+  note: Décompter les dagues lancées ; il n'en possède que quatre.
+
+step: Un objet adverse peut être affecté par fracassement
+  do: Utiliser fracassement (DD 12) si détruire cet objet peut gêner immédiatement l'ennemi.
+
+step: Il cherche à gêner un adversaire avec son pouvoir mineur
+  do: Utiliser illumination (DD 10).
+  note: Son DD est faible ; privilégier la hallebarde lorsqu'une attaque est possible.
+
+## Repli
+
+step: Ses points de vie passent sous 5
+  do: Abandonner le combat et toute victime pour fuir vers les buissons.
+  note: Son déplacement est de 6 m ; chercher à rompre la ligne de vue puis à se cacher avec Discrétion +15.

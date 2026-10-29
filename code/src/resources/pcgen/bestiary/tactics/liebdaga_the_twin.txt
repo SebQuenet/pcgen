@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Liebdaga le Jumeau, duc diantrefosse affaibli, extérieur de taille G, loyal mauvais, FP 12. Intelligent et prisonnier, il cherche à écraser les intrus par le feu et ses attaques naturelles.
+  137 pv, CA 28, guérison accélérée 5 ; déplacement au sol de 12 m, espace et allonge de 3 m.
+  Morsure +15 (4d6+8, poison et maladie), 2 griffes +15 (2d8+8 chacune), queue +15 (2d8+8 et étreinte), 2 ailes +10 (2d6+4 chacune).
+  Réduction des dégâts 10/Bien ou argent ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10 ; résistance à la magie 22.
+
+note: Affaiblissement
+  Ses niveaux négatifs et son état chancelant limitent son efficacité. Normalement, il ne dispose que d'une action simple ou de mouvement par round.
+  La tactique indiquée lui permet de consacrer un round à rassembler ses pensées pour effectuer une attaque à outrance au round suivant.
+
+resource: Scrutation suprême | à volonté | NLS 11, Volonté DD 20
+resource: Boule de feu | 1/jour | NLS 11, Réflexes DD 16
+resource: Dissipation suprême | 1/jour | NLS 11
+resource: Rayon ardent | 1/jour | NLS 11
+resource: Mur de feu | 1/jour | NLS 11
+
+step: Il peut observer les intrus avant leur arrivée
+  do: Employer scrutation suprême pour étudier leur groupe et préparer le choix de ses cibles.
+  note: Vision dans le noir à 18 m, vision dans les ténèbres et Perception +16 ; télépathie à 30 m pour communiquer avec les intrus.
+
+## Ouverture
+
+step: Premier round de combat
+  do: Lancer boule de feu sur le groupe d'intrus le plus dense, Réflexes DD 16.
+  note: C'est son ouverture prévue ; l'utilisation quotidienne est ensuite dépensée. Son immunité au feu lui permet de s'inclure dans la zone si nécessaire.
+
+step: Deuxième round de combat
+  do: Consacrer le round à rassembler ses pensées afin de préparer une attaque à outrance au troisième round.
+  note: Son allonge de 3 m lui permet de menacer les ennemis qui viennent l'affronter pendant cette préparation.
+
+## Rounds suivants
+
+step: Troisième round, un ennemi se trouve à 3 m ou moins
+  do: Effectuer l'attaque à outrance préparée : 2 griffes +15, morsure +15, queue +15 et 2 ailes +10.
+  note: Concentrer les attaques sur un adversaire accessible pour l'abattre ; la morsure ajoute poison et maladie.
+
+step: La queue touche une cible qu'il peut saisir
+  do: Tenter l'étreinte avec un BMO de +17 pour retenir cette cible au contact.
+  note: Son DMD est de 31.
+
+step: Le combat de mêlée se prolonge
+  do: Répéter le cycle : un round de concentration, puis une attaque à outrance au round suivant si une cible reste à portée.
+  note: La guérison accélérée lui rend 5 pv par round, sans dépasser ses 137 pv.
+
+step: Une seule attaque est possible et un ennemi est à portée
+  do: Employer Science de la frappe décisive (Improved Vital Strike) avec la morsure : +15, 12d6+8, plus poison et maladie.
+  note: Cette attaque demande une action simple ; elle constitue une solution immédiate lorsqu'il ne peut pas effectuer d'attaque à outrance.
+
+step: Il doit rejoindre une cible accessible au sol
+  do: Consacrer son action au déplacement, jusqu'à 12 m, pour placer la cible dans son allonge de 3 m.
+  note: Tenir compte de l'état chancelant : ce déplacement ne s'accompagne pas d'une attaque simple dans le même round.
+
+step: Il ne peut pas engager les adversaires en mêlée et dispose encore de pouvoirs quotidiens
+  do: Employer rayon ardent contre une cible exposée, mur de feu pour couper une approche ou séparer le groupe, ou dissipation suprême contre une protection magique gênante.
+  note: Choisir un seul pouvoir pour le round et décompter son utilisation ; il réserve ces pouvoirs aux ennemis qu'il ne peut pas atteindre au corps à corps.
+
+## Repli
+
+step: Il demeure emprisonné ou lié à la zone F37
+  do: Combattre jusqu'à la mort, en poursuivant son cycle de concentration et d'attaques ou en dépensant ses pouvoirs encore disponibles.
+  note: Aucun seuil de points de vie ne déclenche de fuite : sa captivité lui impose de tenir jusqu'au bout.

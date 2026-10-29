@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Chortov, diable loyal mauvais de taille Très grande, brute porcine furieuse asservie par son armure. Il tient les passages pour ses maîtres et écrase les intrus.
+  125 pv ; CA 21 ; déplacement 12 m ; espace et allonge 4,50 m. Fourche +16/+11 (3d6+12 et colère), morsure +11 (2d6+4) ; ou 2 coups +16 (1d8+8 et colère), morsure +11 (2d6+8).
+  Réduction des dégâts 5, surmontée par une arme à la fois bonne et perforante ; immunité au feu et au poison ; résistances acide 10 et froid 10. Volonté +2 : les effets mentaux sont son point faible.
+
+note: Feu corrompu
+  Les feux dans un rayon de 15 m et ses pouvoirs de feu produisent des flammes infernales : moitié dégâts de feu, moitié énergie maléfique échappant à la résistance au feu. Éviter de prendre ses alliés dans les flammes.
+
+resource: Mains brûlantes | à volonté | NLS 9, Réflexes DD 13
+resource: Lueurs féeriques | à volonté | contre l'invisibilité et certaines dissimulations
+resource: Pyrotechnie | à volonté | exige une source de feu
+resource: Porte dimensionnelle | 3/jour | réserver si possible une utilisation au repli
+resource: Boule de feu | 3/jour | NLS 9, Réflexes DD 15
+resource: Mur de feu | 1/jour | séparer les adversaires
+resource: Convocation de diables | 1/jour | niveau 4, 3 diables barbus, 40 % de réussite
+
+step: Des ennemis approchent et il dispose d'un délai
+  do: Tenter la convocation ; si elle réussit, placer les diables barbus sur les flancs du passage qu'il défend
+  note: Il mise sur sa masse et son allonge ; Perception -1 ne favorise pas les embuscades complexes
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés à distance
+  do: Boule de feu sur leur groupe, en épargnant ses alliés
+  note: Réflexes DD 15 ; les flammes corrompues restent utiles contre une résistance au feu
+
+step: Une cible peut être atteinte après un déplacement de 12 m au plus
+  do: Avancer jusqu'à portée de 4,50 m, puis Frappe décisive à la fourche : +16, 6d6+12 et colère
+  note: Cette attaque remplace l'attaque à outrance du round
+
+step: Un ennemi est déjà à portée et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance à la fourche et à la morsure
+  note: Après une blessure de fourche ou de coup, colère : sauvegarde DD 17 ou confusion et rage pendant 1 minute ; nouveau jet chaque round. Effet mental
+
+## Rounds suivants
+
+step: Il peut rester à portée de sa cible
+  do: Répéter l'attaque à outrance ; employer les deux coups et la morsure s'il perd sa fourche
+  note: Activer Attaque en puissance contre une faible CA ; privilégier la précision contre une défense élevée, pour infliger la colère
+
+step: Il doit se déplacer et deux ennemis sont adjacents entre eux dans son allonge
+  do: Avancer, puis Enchaînement : fourche +16 sur le premier ; s'il est touché, fourche +16 sur le second
+  note: CA réduite à 19 jusqu'à son prochain tour ; une seule attaque supplémentaire
+
+step: Un adversaire corporel de taille Grande ou inférieure bloque le passage
+  do: Coup fabuleux, manœuvre +20 contre la DMD : infliger les dégâts du coup, projeter de 3 m et mettre à terre si la manœuvre réussit
+  note: Action simple ; choisir une direction qui dégage le passage ou éloigne le protecteur d'une cible fragile
+
+step: Le groupe se disperse ou cherche à le contourner
+  do: Mur de feu entre les combattants avancés et leurs soutiens, puis attaquer les cibles isolées aux rounds suivants
+
+step: Les adversaires restent hors de portée
+  do: Employer les boules de feu restantes ; si nécessaire, porte dimensionnelle pour gagner une position proche des tireurs
+  note: Après porte dimensionnelle, aucune autre action avant son prochain tour
+
+step: Plusieurs ennemis proches peuvent être pris dans un même cône
+  do: Mains brûlantes, Réflexes DD 13, si cela paraît plus utile qu'une attaque de mêlée
+
+step: La position d'un ennemi invisible est localisée
+  do: Lueurs féeriques sur sa position pour neutraliser l'avantage de son invisibilité
+
+## Repli
+
+step: Points de vie sous 30 et ordres compatibles avec une retraite
+  do: Porte dimensionnelle vers un abri connu ; laisser les diables barbus survivants couvrir le départ
+
+step: Les portes dimensionnelles sont épuisées et un foyer est disponible
+  do: Pyrotechnie pour créer un écran de fumée, puis s'éloigner à 12 m par déplacement
+  note: La fumée gêne également sa propre vision
+
+step: Son maître lui ordonne de tenir
+  do: Continuer à défendre le passage et concentrer ses attaques sur ceux qui avancent
+
+step: Son asservissement infernal est rompu
+  do: Appliquer la confusion pendant 1d6 minutes
+  note: Dissipation réussie contre DD 25 ou destruction de l'armure : solidité 13, 45 pv. L'armure détruite se reforme après ce délai

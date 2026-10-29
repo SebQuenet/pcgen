@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Lodo est un petit homoncule, une créature artificielle neutre mauvaise : 32 pv, CA 14. Il considère les PJ comme des intrus et les soupçonne d'avoir tué Hunclay.
+  Morsure +6 (1d6+1 et poison), coup de corne +6 (1d6+1) ; allonge de 1,50 m. Vol à 15 m, déplacement au sol à 6 m ; Attaque en vol.
+  Vision dans le noir à 18 m, vision nocturne, Perception +3 ; immunités des créatures artificielles. Il comprend le commun mais ne peut pas parler.
+
+resource: Baguette d'éclair | 5 charges | Utilisation d'objets magiques +3 ; Lodo ne fait qu'une tentative d'activation avant de passer aux morsures
+
+step: Les intrus approchent du télescope sans déclencher le piège
+  do: Attendre le déclenchement du piège du siège pour attaquer
+
+## Ouverture
+
+step: Quelqu'un déclenche le piège du siège du télescope
+  do: Engager immédiatement le combat et tenter d'activer la baguette d'éclair avec Utilisation d'objets magiques +3
+  note: Cette tentative est de pure forme ; qu'elle réussisse ou échoue, passer aux morsures dès le round suivant.
+
+## Rounds suivants
+
+step: Lodo peut atteindre un intrus en vol
+  do: Fondre sur lui, porter une morsure +6 (1d6+1 et poison), puis poursuivre le déplacement grâce à Attaque en vol
+  note: Répartir les 15 m de déplacement entre l'approche et l'éloignement. Ce déplacement peut provoquer des attaques d'opportunité.
+
+step: Lodo reste au contact et peut consacrer son round aux attaques
+  do: Porter une attaque à outrance : morsure +6 (1d6+1 et poison) et coup de corne +6 (1d6+1)
+  note: Le profil fourni ne précise ni le DD ni les effets du poison.
+
+step: Un adversaire se trouve hors de portée ce round
+  do: Se rapprocher en volant à 15 m, ou au sol à 6 m si le passage l'impose, pour reprendre les morsures
+
+## Repli
+
+step: Les PJ quittent la pièce ou tentent de fuir
+  do: Les poursuivre dans tout le manoir et reprendre les attaques dès qu'ils sont à portée
+
+step: Lodo est blessé, même grièvement
+  do: Continuer à combattre jusqu'à la destruction ; il ne se replie pas volontairement

@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Nuragla, guenaude des fosses loyale mauvaise, affaiblit ses ennemis par la magie avant de les achever au trident. 171 pv, CA 28, initiative +9 ; déplacement de 12 m, allonge de 1,50 m, vision dans le noir à 18 m.
+  Attaque à outrance : trident +2 impie +25/+20/+15/+10 (2d6+7) et griffe +18 (1d8+2), ou deux griffes +23 (1d8+5).
+  RD 10/fer froid et magie, résistance à la magie 24 ; immunité au feu et au poison. Aura d'affliction à 9 m, DD 23, 18 rounds.
+
+resource: Sorts de niveau 5 | 4/jour | réserve commune à cône de froid et vagues de fatigue
+resource: Sorts de niveau 4 | 7/jour | réserve commune à désespoir accablant, énergie négative et mur de feu
+resource: Sorts de niveau 3 | 7/jour | réserve commune à boule de feu, éclair, rayon d'épuisement et toucher du vampire
+resource: Sorts de niveau 2 | 7/jour | réserve commune à flou, nappe de brouillard, poussière scintillante, rayon ardent et toile d'araignée
+resource: Sorts de niveau 1 | 7/jour | réserve commune aux sorts de ce niveau, dont graisse, projectile magique et rayon affaiblissant
+
+step: Elle peut se préparer sans être attaquée
+  do: Lancer flou avant de s'exposer ; choisir une position permettant de surveiller les approches et l'escalier vers D6
+  note: Elle conserve de l'espace pour lancer ses sorts avant le corps à corps.
+
+## Ouverture
+
+step: Toutes les guêpes infernales de la rencontre ont été libérées
+  do: Commencer l'affaiblissement magique ; si plusieurs adversaires sont à portée, lancer désespoir accablant, Volonté DD 18
+  note: Un échec impose un malus de -2 aux attaques, sauvegardes, tests de caractéristique et de compétence, ainsi qu'aux dégâts d'armes.
+
+step: Le groupe offre une bonne cible au round suivant
+  do: Lancer boule de feu sur des ennemis regroupés ou éclair sur des ennemis alignés, Réflexes DD 18
+  note: Chaque sort inflige 10d6 dégâts, réduits de moitié sur une sauvegarde réussie ; choisir celui qui atteint le plus d'ennemis.
+
+step: Les combattants menacent de l'encercler avant qu'elle ait pu les affaiblir
+  do: Donner priorité à mur de feu pour couper leur approche et diviser le groupe
+  note: Son immunité au feu lui permet de traverser son propre mur.
+
+## Rounds suivants
+
+step: Plusieurs combattants restent dangereux et peuvent être pris dans le même cône
+  do: Lancer vagues de fatigue pour les fatiguer, sans jet de sauvegarde
+  note: La fatigue réduit leur Force et leur Dextérité de 2 et empêche course et charge ; ce sort ne transforme pas la fatigue existante en épuisement.
+
+step: Les ennemis restent groupés et les dégâts de froid sont utiles
+  do: Lancer cône de froid, Réflexes DD 20, pour 11d6 dégâts, moitié en cas de réussite
+
+step: Un adversaire isolé doit être affaibli davantage
+  do: Lancer énergie négative pour lui infliger 1d4 niveaux négatifs sur une attaque de contact à distance réussie
+  note: Aucun jet de sauvegarde ; tenir compte de la résistance à la magie et des protections contre les niveaux négatifs.
+
+step: Une cible affaiblie est à portée de mêlée
+  do: Passer au trident ; si elle peut rester sur place ou se contenter d'un pas de 1,50 m, utiliser l'attaque à outrance
+  note: Après un déplacement ordinaire, elle ne porte qu'une attaque de trident à +25. Privilégier une cible bonne pour exploiter la propriété impie de l'arme.
+
+step: Un ennemi affaibli se tient au bord de l'escalier vers D6
+  do: Tenter une bousculade, BMO +23 contre sa DMD, pour le pousser dans l'escalier
+  note: Sans Science de la bousculade, la manœuvre provoque une attaque d'opportunité de la cible. Appliquer ensuite les conséquences prévues pour l'escalier et la zone D6.
+
+## Repli
+
+step: Points de vie strictement inférieurs à 80
+  do: Chercher immédiatement à fuir ; si elle est au contact, utiliser un retrait pour se dégager, puis profiter de son déplacement de 12 m
+  note: Si elle dispose d'un round à distance, placer un mur de feu entre elle et ses poursuivants ou une nappe de brouillard pour masquer sa fuite. Elle ne possède ni vol ni téléportation dans ce profil.

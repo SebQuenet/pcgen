@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Elder Cordulegaster, daemon aquatique de taille G, neutre mauvais, FP 7 : prédateur embusqué des eaux douces et du Styx, devenu intelligent en absorbant les souvenirs du fleuve.
+  85 pv, CA 20 ; morsure +14 (2d6+9, étreinte et traction), allonge 4,50 m ; coup de queue +9 (1d8+3), allonge 3 m. BMO +20 en lutte.
+  Nage à 9 m, propulsion à 18 m ; déplacement terrestre à 3 m. Il combat depuis l'eau pour capturer une victime et l'isoler.
+
+note: Défenses
+  Vision à 360 degrés : impossible à prendre en tenaille. Vision dans le noir à 18 m, Perception +16.
+  Immunisé contre l'acide, les maladies, le poison, les effets de mort et les eaux du Styx ; résistance de 10 au froid, à l'électricité et au feu.
+
+resource: Vol de soins (healing thief) | à volonté | contact ; DD 13 indiqué au profil ; NLS 9
+resource: Orbe aqueux (aqueous orb) | 3/jour | Réflexes DD 13 ; durée 9 rounds
+resource: Torrent hydraulique (hydraulic torrent) | 3/jour | ligne de 18 m ; bousculade magique +11 contre le DMD, sans sauvegarde
+resource: Confusion | 1/jour | Volonté DD 14 ; rayon de 4,50 m ; durée 9 rounds
+resource: Convocation | 1/jour | 1 cordulegaster ordinaire ; 50 % de réussite ; pouvoir de niveau 3
+
+step: Les intrus approchent de la rive
+  do: Se dissimuler sous l'eau ou dans les marais avec Discrétion +13 et attendre qu'une cible s'avance à 4,50 m.
+  note: Prévoir un passage dégagé pour une fuite par propulsion ; éviter une poursuite sur la terre ferme.
+
+step: Il repère plusieurs adversaires avant d'être découvert
+  do: Tenter la convocation avant leur arrivée au contact.
+  note: En cas de réussite, coordonner l'embuscade avec le cordulegaster par télépathie à 30 m ; conserver une autre ouverture si la tentative échoue.
+
+## Ouverture
+
+step: Une victime isolée est à portée de morsure
+  do: Mordre à +14 et, si la morsure touche une cible admissible à l'étreinte, tenter gratuitement la lutte à +20 ; utiliser la traction pour la rapprocher.
+  note: Viser un adversaire éloigné de ses soutiens, de préférence près d'une berge où il pourra être entraîné dans l'eau.
+
+step: Plusieurs ennemis sont regroupés hors du contact
+  do: Lancer confusion sur leur groupe, en excluant le cordulegaster convoqué de la zone.
+  note: Volonté DD 14 ; laisser les victimes désorientées se gêner et attaquer en priorité ceux qui ont résisté.
+
+## Rounds suivants
+
+step: Une victime est agrippée
+  do: Maintenir la lutte par une action simple ; choisir de la déplacer vers l'eau profonde plutôt que de rester exposé aux attaques de ses alliés.
+  note: Le maintien bénéficie de +5 si la victime ne s'est pas libérée. Un déplacement en lutte se fait à la moitié de sa vitesse ; une destination dangereuse lui donne une tentative gratuite pour se dégager avec +4.
+
+step: Aucun adversaire n'est agrippé et une cible reste à 3 m ou moins
+  do: Attaque à outrance : morsure +14 (2d6+9) et queue +9 (1d8+3) ; tenter l'étreinte sur la morsure.
+  note: À plus de 3 m et jusqu'à 4,50 m, seule la morsure porte ; après un déplacement ordinaire, se limiter à une attaque.
+
+step: Un ennemi blessé reçoit régulièrement des soins
+  do: Lui appliquer vol de soins par une attaque de contact au corps à corps, puis rester à 13,50 m ou moins.
+  note: Le sort ne prévoit pas de sauvegarde malgré le DD indiqué au profil. Pendant 9 rounds au maximum, chaque soin magique ou surnaturel rend la moitié des pv à la cible et l'autre moitié au cordulegaster, arrondies à l'inférieur ; l'effet cesse après 45 pv volés ou si la distance est dépassée.
+
+step: Une cible reste sur la berge ou cherche à rejoindre ses alliés
+  do: Employer orbe aqueux pour l'englober et la déplacer vers une position isolée.
+  note: Sphère de 3 m de diamètre, dirigée de 9 m par action de mouvement : Réflexes DD 13 annule 2d6 dégâts non létaux ; après un échec, un second jet évite l'engloutissement. Une cible engloutie est enchevêtrée, subit 2d6 dégâts non létaux par round et peut refaire son jet chaque round pour sortir.
+  note: Diriger l'orbe laisse une action simple pour mordre ou utiliser un autre pouvoir, mais empêche l'attaque à outrance ce round.
+
+step: Plusieurs ennemis s'alignent et peuvent être repoussés vers l'eau ou loin de leur soutien
+  do: Se placer de façon à lancer torrent hydraulique dans leur axe.
+  note: Ligne de 18 m ; un même jet de bousculade à +11 est comparé au DMD de chaque cible. Le torrent pousse en s'éloignant du lanceur et s'arrête sur un obstacle qu'il ne peut franchir ; ne pas le traiter comme une attaque infligeant des dégâts.
+
+## Repli
+
+step: Points de vie sous 25 et capture devenue trop dangereuse
+  do: Relâcher la victime, puis utiliser la propulsion pour fuir de 18 m en ligne droite sous l'eau, vers un passage dégagé.
+  note: La propulsion demande une action complexe et ne provoque pas d'attaque d'opportunité ; elle occupe le round entier. Si un cordulegaster a été convoqué, lui demander par télépathie de retenir les poursuivants.
+
+step: Les adversaires refusent de s'approcher de l'eau
+  do: Rompre le contact, rester immergé et chercher une autre embuscade au lieu de les poursuivre à 3 m par round.

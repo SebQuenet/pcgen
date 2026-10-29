@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Ylleshka, marilith championne 4, démon chaotique mauvais de taille G, FP 22 : orgueilleuse, elle préfère vaincre seule. 396 pv, CA 41, initiative +12 ; déplacement terrestre de 12 m, espace et allonge de 3 m.
+  Attaque à outrance : épée longue +1 en mithral de défense +23/+18/+13/+8 (2d6+8, critique 17–20), onze autres épées +23 (2d6+4, critique 17–20), puis queue +17 (2d6+3 et étreinte).
+  Vision à 360°, vision dans le noir à 18 m, vision lucide permanente, Perception +31 et télépathie à 30 m : elle surveille les approches et repère les leurres.
+
+note: Défenses
+  Aura maudite permanente, DD 26 ; réduction des dégâts 10/fer froid et bien, résistance à la magie 28. Immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu.
+  Vigueur +30, Réflexes +18, Volonté +13 : éviter de laisser les lanceurs de sorts agir librement, surtout ceux qui menacent sa volonté.
+
+resource: Projection d'image | à volonté | DD 25, NLS 16
+resource: Télékinésie | à volonté | DD 23 pour les modes autorisant une sauvegarde, NLS 16
+resource: Téléportation suprême | à volonté | elle-même et 25 kg d'objets seulement ; sa cuirasse doit rester sur place
+resource: Barrière de lames | 3/jour | DD 24, NLS 16
+resource: Vol | 3/jour | NLS 16
+resource: Convocation | 1/jour | une marilith, 20 % ; un nalfeshnie, 35 % ; ou 1d4 hezrous, 60 %
+
+step: Les intrus approchent sans l'avoir encore atteinte
+  do: Rester à l'abri dans son repaire et établir une projection d'image pour les affronter à distance
+  note: Maintenir la ligne d'effet nécessaire entre elle et l'image ; celle-ci sert de relais à ses pouvoirs magiques, pas à ses attaques d'épée
+
+## Ouverture
+
+step: Les intrus commencent dans la Cage cramoisie
+  do: Depuis sa projection, lancer une barrière de lames pour couper leurs déplacements, puis en ajouter lors des rounds suivants tant qu'il reste des utilisations
+  note: DD 24 ; placer les barrières pour rendre dangereuse la progression vers la salle du trône
+
+step: Les intrus entrent dans la salle du trône alors qu'elle agit encore par projection
+  do: Employer télékinésie pour les repousser à travers les barrières de lames ou dans les bassins de lave accessibles
+  note: Choisir le mode de télékinésie adapté ; les manœuvres de combat du pouvoir ne se résolvent pas par une sauvegarde contre le DD 23
+
+step: Les intrus atteignent directement Ylleshka dans son repaire
+  do: Lancer vol au premier round de cette confrontation, puis préparer l'engagement à portée de ses épées
+  note: Décompter une utilisation de vol ; le pouvoir ne lui accorde pas immédiatement une attaque à outrance supplémentaire
+
+## Rounds suivants
+
+step: Une projection est détruite et les intrus n'ont pas encore atteint son repaire
+  do: Créer une nouvelle projection d'image, puis reprendre les barrières et la télékinésie selon la position des ennemis
+  note: Les projections sont renouvelables à volonté ; les trois barrières de lames restent une réserve commune à toute la rencontre
+
+step: Elle combat en personne et plusieurs adversaires sont encore debout
+  do: Exploiter ses pouvoirs de mobilité de champion pour se repositionner et porter ses nombreuses attaques ; concentrer les épées sur une cible vulnérable à portée
+  note: Privilégier l'attaque à outrance dès que possible : quinze attaques d'épée et une attaque de queue. Utiliser son allonge de 3 m et ses attaques d'opportunité pour gêner les déplacements proches
+
+step: Sa queue saisit une cible alors que d'autres ennemis combattent encore
+  do: Profiter de l'étreinte pendant son tour, puis relâcher la cible dès la fin de ce tour
+  note: Conserver sa mobilité ; ne pas rester immobilisée à broyer un seul adversaire pendant que les autres agissent
+
+step: Une seule cible reste debout et sa queue l'a saisie
+  do: Maintenir la lutte et poursuivre la constriction jusqu'à l'écraser
+  note: Réserver cet acharnement au dernier adversaire ; aucun dégât de constriction chiffré n'est fourni ici
+
+step: Les attaques ennemies la touchent trop souvent
+  do: Transférer les bonus de ses épées de défense vers sa CA, au prix des bonus correspondants à l'attaque et aux dégâts
+  note: Ajuster les valeurs effectivement utilisées ; ne pas ajouter ces bonus défensifs sans réduire ceux des armes concernées
+
+step: Elle pourrait convoquer des renforts
+  do: Continuer normalement à combattre seule
+  note: Son orgueil la conduit à presque toujours réserver la convocation à des services mineurs ; ce recours reste exceptionnel et sa réussite n'est pas garantie
+
+## Repli
+
+step: Ses points de vie tombent sous 50
+  do: Utiliser téléportation suprême vers la zone L ou la zone I pour recruter de l'aide et réunir les clefs nécessaires à sa sortie de la prison
+  note: Abandonner la cuirasse pour respecter la limite de transport ; sans elle, transférer systématiquement tous les bonus de défense de ses épées vers sa CA
+
+step: Elle découvre que Svendack ou Plorig-Stagul a été vaincu
+  do: Se téléporter juste à l'intérieur des Portes gémissantes
+  note: Si les deux ont été détruits, fuir pour abandonner son poste et chercher un nouveau seigneur
+
+step: Elle reste prisonnière et ne peut mener sa fuite à bien
+  do: Se téléporter en zone P et préparer un dernier combat aux côtés du Héraut du Labyrinthe d'ivoire

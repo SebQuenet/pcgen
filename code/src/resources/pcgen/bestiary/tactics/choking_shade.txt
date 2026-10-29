@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Ombre suffocante (Choking Shade), mort-vivant intangible de taille M, neutre mauvais, FP 5. Esprit haineux d'une victime d'asphyxie, elle attaque les vivants sans négocier.
+  52 pv ; CA 18, contact 18 ; initiative +8. Deux contacts intangibles +9 contre la CA de contact, chacun infligeant 2d6 dégâts d'énergie négative et le désespoir ; allonge 1,50 m.
+  Vol à 12 m par déplacement, manœuvrabilité parfaite ; vision dans le noir à 18 m.
+
+note: Défenses
+  Intangible ; immunités des morts-vivants ; résistance à la canalisation +2.
+
+resource: Désespoir | permanent | aura de 9 m, Volonté DD 18 ; rend secoué dans l'aura ; effet mental de peur, sans cumul avec les autres effets de peur
+
+step: Des vivants approchent
+  do: Les repérer avec Perception +12 et approcher à couvert avec Discrétion +14, à l'abri du vent
+  note: Son intelligence limitée favorise une attaque directe dès qu'une victime est accessible.
+
+## Ouverture
+
+step: Une victime est accessible avec un déplacement de 12 m
+  do: Voler au contact et porter une seule attaque de contact intangible +9, pour 2d6 dégâts d'énergie négative et désespoir
+  note: Inclure autant d'adversaires que possible dans les 9 m de l'aura ; chaque contact réussi impose aussi un jet contre le désespoir, Volonté DD 18.
+
+step: Une victime est déjà à portée sans déplacement
+  do: Effectuer une attaque à outrance avec les deux contacts intangibles +9
+
+## Rounds suivants
+
+step: Une créature vivante adjacente subit un effet de peur
+  do: Entrer dans ses poumons par une action simple de poussière sépulcrale ; Vigueur DD 16 annule
+  note: L'hôte ne respire ni ne parle ; appliquer les délais normaux de rétention du souffle puis d'asphyxie.
+
+step: L'ombre occupe les poumons d'une victime
+  do: Y prolonger l'asphyxie
+  note: Expulsion par une action simple de l'hôte et Vigueur DD 16, ou immédiatement lorsque l'hôte ne subit plus aucun effet de peur.
+
+step: Aucune victime adjacente n'est effrayée, ou l'ombre vient d'être expulsée
+  do: Répéter les deux contacts à outrance si une cible est à portée ; sinon voler jusqu'à une victime et porter un seul contact
+
+step: Un humanoïde meurt de cette asphyxie
+  do: Faire apparaître une nouvelle ombre suffocante après 1d4 rounds
+
+## Repli
+
+step: L'ombre est blessée
+  do: Poursuivre l'assaut jusqu'à la destruction, sans seuil de fuite fondé sur ses points de vie
+  note: Sa haine des vivants l'emporte sur la prudence.
+
+step: Un vent violent l'expose
+  do: Chercher un abri en volant et poursuivre l'attaque depuis cet abri si possible
+  note: Pour les effets du vent, la traiter comme une créature corporelle de taille TP.

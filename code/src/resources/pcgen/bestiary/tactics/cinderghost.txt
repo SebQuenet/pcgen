@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Cinderghost, mort-vivant incorporel du plan du Feu, de taille M et neutre mauvais ; 85 PV, CA 20, contact 20. Prédateur intelligent et malveillant, il traque les vivants et attend qu'ils dorment ou baissent leur garde.
+  Toucher incorporel +11 contre la CA de contact, à 1,50 m : 1d8 dégâts et dessiccation. Vol à 24 m par déplacement, manœuvrabilité parfaite ; vision dans le noir à 18 m.
+  Immunisé au feu et doté des immunités des morts-vivants ; résistance à la canalisation +2. Le froid lui inflige 50 % de dégâts supplémentaires.
+
+resource: Feu purificateur | permanent en milieu riche en cendres | guérison accélérée 5 ; aucun soin par ce pouvoir hors de ce milieu
+resource: Toucher desséchant | à chaque toucher réussi | Vigueur DD 19 ou 1d8 dégâts de Constitution, en plus des dégâts du toucher
+resource: Attaques réflexes | jusqu'à 5 attaques d'opportunité par round | toucher incorporel et dessiccation ; seulement lorsqu'une occasion se présente
+
+step: Des vivants approchent
+  do: Les observer avec Perception +14 et les suivre discrètement avec Discrétion +16, en privilégiant un terrain couvert de cendres.
+  note: Repérer une paroi mince ou un obstacle permettant de se mettre à couvert et de préparer un repli.
+
+## Ouverture
+
+step: Une proie endormie, inattentive ou isolée est accessible
+  do: Approcher en vol et porter un toucher incorporel +11 sur cette proie ; appliquer la dessiccation si le toucher réussit.
+  note: Exploiter la surprise si elle est acquise ; pendant un round de surprise ordinaire, choisir entre se déplacer et attaquer.
+
+step: Aucune surprise et une cible est à 24 m ou moins
+  do: Rejoindre une case à 1,50 m d'une cible vivante, de préférence peu robuste, puis porter un toucher incorporel.
+  note: Contourner les obstacles grâce au vol et traverser les parois minces grâce à l'intangibilité pour éviter la ligne des combattants.
+
+step: Toutes les cibles sont trop éloignées pour un déplacement suivi d'une attaque
+  do: Effectuer un double déplacement en vol, jusqu'à 48 m, pour approcher à couvert.
+
+## Rounds suivants
+
+step: La victime est toujours à portée
+  do: Répéter le toucher incorporel +11 et la dessiccation sur la même victime jusqu'à sa chute.
+  note: Une seule attaque pendant son tour ; les dégâts de Constitution successifs s'accumulent.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Porter un toucher incorporel +11, avec dessiccation en cas de réussite.
+  note: Profiter des déplacements imprudents et des incantations exposées ; une même occasion ne donne pas plusieurs attaques contre la même cible.
+
+step: La cible bénéficie d'un camouflage en mêlée
+  do: Utiliser Combat aveugle pour relancer une fois le jet de chance d'échec du toucher s'il échoue.
+
+step: Plusieurs ennemis concentrent leurs attaques ou le froid devient menaçant
+  do: Rompre le contact et utiliser les obstacles pour couper les lignes de vue ; chercher une cible isolée lors de l'approche suivante.
+  note: Rester autant que possible dans les cendres pour récupérer 5 PV par round.
+
+## Repli
+
+step: Points de vie à 30 ou moins, ou attaques de froid répétées
+  do: Effectuer un retrait en vol, jusqu'à 48 m, vers un abri riche en cendres ; utiliser une paroi mince pour couper la poursuite.
+  note: Le retrait protège seulement la sortie de la case de départ contre les attaques d'opportunité ; choisir une trajectoire évitant les autres ennemis.
+
+step: Hors d'atteinte dans un milieu riche en cendres
+  do: Attendre que la guérison accélérée ramène ses points de vie à 85 avant de reprendre la traque.

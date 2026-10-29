@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Fmughwa, scarabée bombardier géant de taille gigantesque, est une vermine neutre sans intelligence. Il attaque instinctivement la cible vivante la plus proche, en ignorant les créatures enduites de compost spécial.
+  Morsure +18 (6d6+18) ; allonge 6 m ; espace occupé 6 m. 147 points de vie ; CA 21, contact 6, pris au dépourvu 21.
+  Déplacement au sol 6 m ; vol 6 m, manœuvrabilité médiocre, Vol -10. Vision dans le noir à 18 m ; Perception +0 ; initiative +0.
+  Immunité aux effets mentaux ; Vigueur +15, Réflexes +4, Volonté +4.
+
+step: Des créatures sont enduites du compost spécial
+  do: Les ignorer lors du choix de la cible, même si elles sont les plus proches
+
+## Ouverture
+
+step: La cible vivante non enduite de compost spécial la plus proche est à 6 m ou moins
+  do: Lui infliger une morsure +18 (6d6+18)
+
+step: La cible vivante non enduite de compost spécial la plus proche est à plus de 6 m
+  do: Avancer vers elle de 6 m au maximum, puis effectuer une morsure +18 (6d6+18) si elle est désormais à portée
+  note: Si elle reste hors de portée, consacrer aussi l'action restante au déplacement pour s'en rapprocher, soit jusqu'à 12 m au total
+
+## Rounds suivants
+
+step: Une autre créature vivante non enduite de compost spécial devient la plus proche
+  do: La prendre immédiatement pour cible
+  note: Le choix de la cible reste instinctif ; il ne privilégie aucun rôle dans le groupe
+
+step: La cible vivante admissible la plus proche est à portée de son allonge de 6 m
+  do: Effectuer une morsure +18 (6d6+18) contre elle à chaque round
+
+step: La cible vivante admissible la plus proche est hors de portée
+  do: La poursuivre à 6 m par déplacement ; mordre si un seul déplacement suffit à la mettre à portée, sinon effectuer un double déplacement de 12 m au maximum
+  note: Il peut voler à 6 m par déplacement si le trajet l'exige ; tenir compte de sa manœuvrabilité médiocre et de son modificateur de Vol de -10
+
+## Repli
+
+step: Fmughwa est blessé, même grièvement
+  do: Poursuivre ses attaques contre la cible vivante non enduite de compost spécial la plus proche et combattre jusqu'à la mort

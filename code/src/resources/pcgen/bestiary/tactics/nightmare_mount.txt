@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Monture cauchemardesque morte-vivante de taille G, squelette sanglant intelligent et neutre mauvais. 76 pv, CA 19, initiative +7.
+  Morsure +10 (1d6+5) et 2 sabots +5 (1d6+2 plus 1d4 de feu chacun). Allonge de 1,50 m, espace occupé de 3 m.
+  Déplacement au sol de 9 m, vol de 18 m avec une bonne manœuvrabilité ; Vol +12. Vision dans le noir à 18 m, Perception +10.
+
+resource: Changement de plan | 1/jour | NLS 6 ; lui-même et un seul cavalier uniquement
+
+step: Des intrus approchent
+  do: Repérer leur position et choisir une voie d'approche dégagée, par les airs si le terrain gêne les déplacements au sol
+  note: Son intelligence lui permet de choisir une cible isolée et accessible ; il comprend l'abyssal et l'infernal.
+
+step: Un trajet planaire est nécessaire avant l'affrontement
+  do: Utiliser changement de plan pour se transporter avec son éventuel cavalier
+  note: Ce pouvoir ne transporte pas le reste du groupe.
+
+## Ouverture
+
+step: Un adversaire est déjà à portée
+  do: Effectuer une attaque à outrance : morsure +10 et deux sabots +5
+  note: Concentrer les trois attaques sur une même cible pour profiter des dégâts de feu des sabots.
+
+step: Aucun adversaire n'est à portée
+  do: Rejoindre une cible accessible, jusqu'à 9 m au sol ou 18 m en vol, puis porter une morsure +10 si elle est à portée
+  note: Après ce déplacement, il ne porte qu'une attaque ; il doit rester au contact pour utiliser ses trois attaques au round suivant.
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Répéter l'attaque à outrance jusqu'à la mettre hors de combat
+  note: Un pas de placement de 1,50 m permet de se replacer tout en conservant l'attaque à outrance.
+
+step: La cible tombe ou devient inaccessible
+  do: Choisir un autre adversaire accessible ; utiliser le vol pour franchir les obstacles, puis mordre après l'approche
+  note: Privilégier une cible dont les armes ne sont pas contondantes ; sa réduction des dégâts de 5/contondant amortit leurs coups.
+
+step: Il a perdu des points de vie
+  do: Appliquer sa guérison accélérée de 4 pv par round, jusqu'au maximum de 76 pv, et poursuivre le combat
+  note: Il est immunisé au froid et possède les immunités des morts-vivants. Contre les créatures bonnes, sa CA passe à 21 et ses jets de sauvegarde gagnent +2 ; sa résistance à la canalisation est de +4.
+
+## Repli
+
+step: Il lui reste au moins 1 pv
+  do: Continuer à combattre jusqu'à être réduit à 0 pv
+  note: Sa morale ne prévoit aucune fuite volontaire ; il ne réserve pas changement de plan pour s'échapper.
+
+step: Il est réduit à 0 pv
+  do: Cesser le combat et appliquer son aptitude impérissable
+  note: S'il n'est pas détruit de manière appropriée, il se reconstitue 1 heure plus tard.

@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Khardajeen, aberration neutre mauvaise des profondeurs, intelligente et muette, attirée par les vestiges antiques. Son corps liquide flotte parmi des plaques de pierre et de métal.
+  210 pv, CA 29 ; initiative +11. Vol parfait à 18 m, déplacement terrestre à 6 m. Il privilégie ses rayons de gemmes : +23 au contact à distance, 6d6, critique sur 19-20, portée 36 m. Au contact : 4 tentacules +19, chacun 1d8+4, allonge 1,50 m.
+
+resource: Vision lucide | permanente | repérer les créatures invisibles et déjouer les illusions ; vision dans le noir à 36 m
+resource: Gemmes manifestées | à volonté | quatre emplacements, une seule gemme de chaque couleur ; manifester une gemme ou la révoquer demande une action rapide ; durée indéfinie
+resource: Gemme blanche nacrée | tant que manifestée | guérison accélérée 5 ; résistance 10 aux énergies correspondant aux gemmes offensives actuellement manifestées
+resource: Gemme lavande pâle | un sort absorbé, puis recharge de 1d4 rounds | action immédiate, sort de niveau 6 ou moins ; pendant la recharge, aucune absorption ni révocation
+
+step: Il peut se préparer
+  do: Manifester successivement une gemme blanche nacrée, une lavande pâle, une verte et une topaze, sur quatre rounds ; attendre en hauteur dans une zone obscure
+  note: Verte : acide ; topaze : électricité ; bleue : froid ; rouge : feu. Chacune permet un rayon de 6d6. Cette préparation fournit deux rayons et deux protections.
+
+step: Les intrus dépendent de la vision dans le noir
+  do: Choisir un emplacement sombre, avec une ligne de tir et un passage de fuite
+  note: L'adaptation à la vision dans le noir leur impose 50 % de chances de le rater ; la vision ordinaire ou un autre mode de détection ignore cette protection.
+
+## Ouverture
+
+step: Une cible dangereuse est à portée et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance : deux rayons +23 contre sa CA de contact, un d'acide et un d'électricité, chacun à 6d6 ; concentrer les tirs sur elle
+  note: La maîtrise des rayons autorise un tir par gemme offensive, jusqu'à quatre ; un tentacule qui tire ne frappe pas en mêlée pendant le même round. Les rayons ne provoquent pas d'attaque d'opportunité.
+
+step: Il faut se déplacer pour obtenir une ligne de tir ou échapper aux combattants
+  do: Voler jusqu'à 18 m puis tirer un seul rayon sur une cible à 36 m ou moins
+  note: Tir à bout portant ajoute +1 à l'attaque et aux dégâts à 9 m ou moins ; profiter de cette distance si elle laisse assez d'espace pour éviter la mêlée.
+
+## Rounds suivants
+
+step: Il conserve une position sûre
+  do: Répéter les tirs concentrés ; changer de cible si ses résistances rendent les deux énergies inefficaces
+  note: Identifier les menaces avec Perception +29, Connaissances des mystères +27 et Art de la magie +27, sans présumer connaître toutes leurs défenses.
+
+step: Un sort de niveau 6 ou moins le menace et la lavande pâle est disponible
+  do: L'absorber par une action immédiate
+  note: Cette action consomme l'action rapide de son prochain tour ; tenir compte de ce coût avant de modifier ses gemmes.
+
+step: Une énergie se révèle inefficace ou une autre défense devient nécessaire
+  do: Révoquer la gemme devenue inutile par une action rapide ; lors d'un tour ultérieur disposant d'une action rapide, manifester une autre couleur à sa place
+  note: Rose poussiéreuse : +4 d'intuition à la CA ; orange : +1d6 aux dégâts de chaque rayon. Ces soutiens occupent chacun un emplacement et réduisent donc le nombre de rayons disponibles.
+
+step: Un ennemi le rejoint au contact et il peut tenir sa position
+  do: Attaque à outrance : deux rayons sur la cible prioritaire et deux tentacules +19 contre l'adversaire à 1,50 m, chacun pour 1d8+4
+  note: Réserver les frappes aux deux tentacules qui n'ont pas tiré ; si la mêlée devient dangereuse, privilégier le déplacement en vol et un seul rayon.
+
+step: Une gemme est détruite ou dissipée
+  do: Combattre avec les autres et rétablir en priorité la blanche nacrée si elle manque
+  note: Chaque gemme a une CA de 22, 25 pv et une solidité de 10 ; après destruction, attendre un round avant de la reformer. Pour la dissipation, elles comptent comme des effets de niveau 6, NLS 14.
+
+## Repli
+
+step: Ses points de vie passent sous 70 ou les ennemis peuvent le rattraper et l'abattre
+  do: Rompre le combat par une retraite en vol, jusqu'à 36 m avec l'action de retraite ; gagner un coude de galerie ou un obstacle qui coupe les lignes de tir
+  note: Conserver la blanche nacrée pour récupérer 5 pv par round et la lavande pâle pour absorber un sort de poursuite ; la retraite ne protège que la sortie de la case initiale contre les attaques d'opportunité.
+
+step: Il a échappé aux poursuivants
+  do: Rester hors de vue et laisser la guérison accélérée le ramener jusqu'à 210 pv avant une nouvelle confrontation
+  note: Il ne respire pas ; un passage sans air ne l'empêche pas de poursuivre sa fuite.

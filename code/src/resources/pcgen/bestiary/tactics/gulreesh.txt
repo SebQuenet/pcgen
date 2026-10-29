@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Gulreesh est un otyugh neutre de taille Gig, peu mobile, qui préfère laisser ses adversaires venir à lui. 175 pv, CA 28 ; déplacement de 6 m ; espace occupé de 6 m.
+  Morsure +20 (3d6+14 et maladie), 2 tentacules +19 (2d6+7 et étreinte) ; BMO +32 en lutte. Allonge de 6 m, ou 7,50 m avec les tentacules.
+  Vision dans le noir à 18 m, odorat, Perception +23 ; Discrétion +3 dans son repaire. Immunisé aux maladies ; parle le commun.
+
+step: Des visiteurs veulent lui parler
+  do: Refuser de discuter tant qu'ils restent à plus de 6 m, puis les laisser négocier à portée de morsure
+  note: s'ils le mettent en colère, cette proximité lui permet de les menacer immédiatement sans se déplacer
+
+## Ouverture
+
+resource: Attaques d'opportunité | 2 par round | Attaques réflexes permet de les effectuer même pris au dépourvu
+
+step: Un adversaire provoque une attaque d'opportunité, même avant le premier tour de Gulreesh
+  do: Employer la morsure si la cible est à 6 m ou moins ; sinon, employer un tentacule jusqu'à 7,50 m
+  note: agir avant Gulreesh ne provoque pas en soi d'attaque d'opportunité ; il faut une action ou un déplacement qui en provoque normalement
+
+step: Au premier tour, un ennemi est à 6 m ou moins
+  do: Rester sur place et effectuer une attaque à outrance : morsure +20 et 2 tentacules +19
+  note: chaque tentacule qui touche peut déclencher une tentative d'étreinte à +32
+
+step: Les ennemis sont à plus de 6 m, mais à portée des tentacules
+  do: Effectuer les deux attaques de tentacule +19 ; réserver la morsure aux cibles qui s'approchent
+
+## Rounds suivants
+
+step: Des ennemis restent à portée
+  do: Continuer les attaques à outrance sans se déplacer ; répartir les attaques selon les cibles accessibles
+  note: privilégier toujours la morsure pour les attaques d'opportunité, sauf si seul un tentacule peut atteindre la cible
+
+step: Un pas de 1,50 m suffit pour placer une cible à portée
+  do: Faire ce pas de placement, puis effectuer une attaque à outrance
+
+step: Une cible échappe de peu à son allonge et Gulreesh veut rester sur place
+  do: Employer Attaque en allonge pour augmenter son allonge de 1,50 m pendant son tour : morsure à 7,50 m, tentacules à 9 m
+  note: sa CA passe à 26 jusqu'à son prochain tour ; cette allonge supplémentaire ne s'applique pas à ses attaques d'opportunité hors de son tour
+
+step: Un tentacule saisit une créature alors que plusieurs ennemis l'affrontent
+  do: Relâcher rapidement la prise pour pouvoir continuer à combattre les autres adversaires
+  note: ses tactiques mentionnent une constriction avant le relâchement, mais le profil fourni n'en donne aucun dégât ; ne pas ajouter de dégâts de constriction
+
+step: Aucun ennemi n'est accessible, même avec Attaque en allonge
+  do: Si nécessaire, se déplacer de 6 m au maximum pour rejoindre une cible, puis porter une seule attaque si elle est à portée
+  note: préférer la morsure à 6 m ou moins ; employer un tentacule si la cible n'est accessible qu'à 7,50 m
+
+## Repli
+
+step: Les adversaires l'ont attaqué sans provocation
+  do: Combattre jusqu'à la mort
+
+step: Les adversaires ont tenté de négocier avant le combat et Gulreesh tombe à 40 pv ou moins
+  do: Se rendre, cesser ses attaques et accepter de les aider

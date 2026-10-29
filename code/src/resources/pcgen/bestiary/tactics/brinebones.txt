@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Brinebones, ancien dragon de bronze devenu squelette gigantesque, mort-vivant aquatique sans intelligence, garde les accès aux grottes marines. FP 13 ; 150 PV.
+  Morsure +21 (4d6+15), 2 griffes +21 (2d8+10), queue +16 (2d8+15), 2 ailes +16 (2d6+5) ; chaque attaque ajoute 1d6 d'électricité.
+  Déplacement terrestre 12 m, nage 18 m ; espace occupé 6 m ; allonge 6 m, ou 9 m avec la morsure ; vision dans le noir à 18 m.
+
+note: Défenses
+  CA 20 ; réduction des dégâts 5/contondant ; immunité à l'électricité et traits des morts-vivants ; résistance à la canalisation +4 ; aura d'électricité.
+
+resource: Guérison accélérée | 10 PV par round | jusqu'au maximum de 150 PV
+
+step: Aucun intrus n'est présent
+  do: Maintenir sa garde aux approches des grottes marines.
+  note: Son absence d'intelligence impose un comportement direct, sans ruse ni préparation élaborée.
+
+## Ouverture
+
+step: Plusieurs ennemis sont massés sur l'une des deux plages de la caverne
+  do: Employer l'écrasement pour immobiliser le plus grand nombre possible d'adversaires.
+  note: Cette tactique figure dans son comportement de combat ; les dégâts et le DD de l'écrasement ne sont pas précisés dans le profil fourni.
+
+step: Les intrus sont hors d'allonge mais peuvent être atteints après un déplacement
+  do: Avancer de 12 m au maximum, ou nager de 18 m au maximum, puis mordre un ennemi à 9 m ou moins.
+  note: Après ce déplacement, porter une seule attaque de morsure +21, infligeant 4d6+15 et 1d6 d'électricité.
+
+step: Plusieurs ennemis sont déjà à portée et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance et répartir les six attaques naturelles entre autant d'adversaires que possible.
+  note: Seule la morsure atteint les cibles situées à plus de 6 m, jusqu'à 9 m.
+
+## Rounds suivants
+
+step: Les adversaires restent à portée
+  do: Répéter l'attaque à outrance : une morsure, deux griffes, un coup de queue et deux coups d'ailes, en touchant le plus d'ennemis possible.
+  note: Chaque attaque qui touche inflige aussi ses 1d6 d'électricité ; ne pas concentrer systématiquement toutes les attaques sur une seule cible.
+
+step: Un groupe se rassemble sur une plage
+  do: Reprendre la tactique d'écrasement pour immobiliser plusieurs ennemis.
+
+step: Les adversaires s'éloignent hors d'allonge
+  do: Les rejoindre à terre ou à la nage, puis mordre dès qu'une cible est à portée.
+  note: Un déplacement supérieur à 1,50 m empêche l'attaque à outrance ce round.
+
+step: Brinebones a perdu des PV et n'est pas détruit
+  do: Récupérer 10 PV par round grâce à la guérison accélérée, sans dépasser 150 PV.
+
+## Repli
+
+step: Ses PV diminuent, même très bas
+  do: Continuer le combat jusqu'à destruction ; ne pas fuir.
+
+step: Brinebones est détruit
+  do: Résoudre sa mort foudroyante : 10d6 d'électricité, Réflexes DD 22 pour réduire les dégâts de moitié.
+  note: Le rayon de cette décharge n'est pas précisé dans le profil fourni.
+
+step: La destruction n'a pas été causée par de l'énergie positive
+  do: Se reformer 1 heure plus tard grâce à sa capacité deathless, puis reprendre sa garde éternelle des accès aux grottes marines.
+
+step: La destruction a été causée par de l'énergie positive
+  do: Rester détruit ; la reformation ne se produit pas.

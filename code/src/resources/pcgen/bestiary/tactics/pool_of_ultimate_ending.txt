@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Pool Of Ultimate Ending, vase de cristal colossale, aquatique et mythique, sans intelligence : 376 pv, CA 26.
+  Deux coups +23, chacun infligeant 4d8+28 dégâts et une paralysie ; allonge de 18 m, espace occupé de 9 m.
+  Vision aveugle à 18 m ; déplacement de 3 m au sol, nage de 9 m par round.
+  Immunités à l'acide, au froid, au feu et celles des vases ; RD 10/épique, RM 26.
+
+resource: Aura maudite | permanente | pouvoir magique constant, NLS 16, DD 13
+
+step: Des créatures pénètrent dans la salle
+  do: Distinguer instinctivement les Extérieurs chaotiques mauvais des autres intrus ; ignorer les premiers
+  note: Cette distinction est instinctive malgré son absence d'intelligence.
+
+## Ouverture
+
+step: Un intrus autre qu'un Extérieur chaotique mauvais est à portée, à 18 m ou moins de la surface acide
+  do: Attaquer à outrance avec les pseudopodes : deux coups +23, chacun pour 4d8+28 dégâts et paralysie
+  note: La fiche ne précise ni le DD ni la durée de la paralysie.
+  note: Les pseudopodes sont décrits comme acides, mais aucun dégât d'acide supplémentaire n'est indiqué pour les coups.
+
+step: Un déplacement dans le bassin permet d'atteindre un intrus
+  do: Nager jusqu'à 9 m, puis porter un seul coup +23 si la cible est désormais à portée
+  note: Après un déplacement normal, il ne porte pas ses deux coups d'attaque à outrance.
+
+## Rounds suivants
+
+step: Des intrus autres que des Extérieurs chaotiques mauvais restent à portée
+  do: Répéter l'attaque à outrance chaque round, avec deux coups +23 et paralysie ; se déplacer dans le bassin si nécessaire pour continuer ses assauts
+  note: Après un déplacement normal, limiter l'attaque à un seul coup. La vase combat avec fureur, par instinct.
+
+step: La vase est blessée et sa régénération fonctionne
+  do: Récupérer 15 pv au début de son tour, sans dépasser 376 pv
+  note: Des dégâts infligés par un sort du Bien ou une arme bonne interrompent la régénération au round suivant.
+
+## Repli
+
+step: Ses points de vie diminuent, même dangereusement
+  do: Continuer à attaquer jusqu'à la mort
+  note: Aucun seuil de fuite. Ses assauts cessent contre les intrus qui restent à plus de 18 m de la surface acide.

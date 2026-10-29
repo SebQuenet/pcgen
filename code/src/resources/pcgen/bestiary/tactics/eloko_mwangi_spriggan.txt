@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Eloko, spriggan mwangi de taille P, humanoïde (gnome) chaotique mauvais : prédateur embusqué, féroce mais lâche, qui abandonne ses ennemis pour dévorer une victime inconsciente.
+  Profil de taille P : 22 pv, CA 17, déplacement de 6 m, allonge de 1,50 m ; hallebarde de maître +5 (1d8-1, x3), dague lancée +8 (1d3-1, 19-20).
+  Furtivité +15, Perception +7 et vision nocturne ; changement de taille pour combattre sous une forme gigantesque, Attaques réflexes pour exploiter les ouvertures adverses.
+
+resource: Changement de taille | à volonté | action simple ; passage entre les tailles P et G, avec adaptation de l'équipement ; pouvoirs magiques raciaux indisponibles en taille G
+resource: Pouvoirs magiques | à volonté | illumination (DD 10), effroi (DD 12), fracassement (DD 12) ; NLS 4, concentration +4
+resource: Dagues | 4 | projectiles disponibles ; les attaques indiquées dans le profil correspondent à la taille P
+resource: Cloche d'eloko | 5 utilisations au total ; une seule cloche | action simple ; créatures qui l'entendent à 18 m, maximum 24 DV : Volonté DD 14 ou recherche de la source pendant 7 rounds à leur vitesse normale ; nouveau jet si le trajet mène au danger ; la cloche se désagrège après sa cinquième utilisation
+
+step: Des voyageurs approchent
+  do: Les suivre discrètement et attendre leur campement nocturne ; se dissimuler dans les buissons avec Furtivité +15
+  note: Préparer l'embuscade assez près pour surgir lorsque les victimes s'éloignent du camp
+
+step: Les victimes sont à portée de la cloche
+  do: Le porteur fait sonner l'unique cloche depuis la végétation pour attirer les voyageurs vers l'embuscade
+  note: L'effet est une coercition mentale ; suivre les utilisations restantes de l'objet
+
+## Ouverture
+
+step: Une victime entre dans l'embuscade
+  do: Surgir des buissons et grandir immédiatement grâce au changement de taille
+  note: La transformation utilise l'action simple ; porter le premier coup lors d'une action ultérieure, sans cumuler transformation et attaque dans cette même action
+
+step: Une cible est accessible après la transformation
+  do: L'attaquer sans merci à la hallebarde ; concentrer les coups sur une victime isolée pour la faire tomber rapidement
+  note: L'arme grandit avec l'eloko ; appliquer les modifications du changement de taille avant de résoudre ses attaques
+
+## Rounds suivants
+
+step: Une victime tombe inconsciente
+  do: Interrompre le combat contre les adversaires encore debout, rejoindre la victime et commencer à la dévorer
+  note: Cette voracité détourne immédiatement l'eloko du combat ; elle ne lui rend aucun point de vie
+
+step: Aucun adversaire n'est inconscient et une cible reste à portée
+  do: Continuer les attaques à la hallebarde et exploiter les attaques d'opportunité permises par Attaques réflexes
+  note: Surveiller les déplacements et les actions qui provoquent dans sa zone menacée
+
+step: Il est encore de taille P et ne peut pas engager au contact
+  do: Lancer une dague sur une cible proche, ou utiliser effroi pour disperser un adversaire de moins de 6 DV (Volonté DD 12)
+  note: Une attaque ou un pouvoir par action simple ; effroi ne remplace pas la croissance immédiate lorsque l'embuscade se déclenche
+
+step: Il est de taille P et un pouvoir utilitaire offre une ouverture
+  do: Employer illumination pour éblouir un adversaire (Vigueur DD 10), ou fracassement contre un objet non magique admissible (DD 12 si un jet s'applique)
+  note: Ces options restent secondaires ; sous sa grande forme, il poursuit le combat à la hallebarde
+
+## Repli
+
+step: Points de vie strictement sous 5
+  do: Abandonner immédiatement le combat et le repas ; prendre la fuite vers la végétation, en utilisant la retraite si nécessaire pour se dégager
+  note: Une fois hors de vue et à couvert, se cacher ; la lâcheté l'emporte sur sa faim

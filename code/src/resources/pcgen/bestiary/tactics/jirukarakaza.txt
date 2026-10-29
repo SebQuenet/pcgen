@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Jirukarakaza, grand dracosire du monde souterrain, dragon gigantesque loyal mauvais, FP 19. Intelligent et patient, il sépare ses adversaires par la pierre et écrase les plus dangereux avant de livrer une mêlée prolongée.
+  377 pv ; CA 41, contact 4 ; réduction des dégâts 20/magie ; résistance à la magie 30 ; immunité au feu, au sommeil et à la paralysie magiques ; vulnérabilité au froid.
+  Morsure +37 (4d6+14, critique 19-20), 2 griffes +38 (2d8+14, critique 19-20), encornement +36 (2d8+14), queue +31 (2d8+7). Allonge 4,50 m, ou 6 m avec la morsure ; espace occupé 6 m.
+  Déplacement terrestre 12 m, creusement 18 m, vol 75 m avec manœuvrabilité déplorable ; vision dans le noir à 18 m et vision dans la fumée.
+
+resource: Pouvoirs magiques | à volonté | NLS 26 ; entrechoquement de rochers, répulsion du métal et de la pierre, ramollissement de la terre et de la pierre, pierres acérées (DD 20), façonnage de la pierre, mur de pierre
+resource: Sorts de niveau 8 | 4/jour | réserve commune à cri suprême (DD 25) et mur de lave
+resource: Sorts de niveau 7 | 6/jour | réserve commune à boule de feu à retardement (DD 24), rempart et inversion de la gravité
+resource: Sorts de niveaux 4, 5 et 6 | 7/jour par niveau | notamment brouillard solide et énergie négative au niveau 4, vagues de fatigue et passe-muraille au niveau 5
+resource: Sorts de niveau 3 | 7/jour | notamment déplacement, lenteur et boule de feu (DD 20) ; réserve commune
+resource: Sorts de niveaux 1 et 2 | 8/jour par niveau | notamment coup au but au niveau 1, flèche acide et rayon ardent au niveau 2
+
+step: Il dispose de temps pour préparer le terrain
+  do: Façonner les accès avec mur de pierre et façonnage de la pierre ; poser des pierres acérées sur les passages que les intrus devront emprunter
+  note: Garder un espace adapté à son gabarit et une issue ; pierres acérées blesse les créatures qui traversent la zone, puis impose Réflexes DD 20 pour éviter une réduction de vitesse
+
+step: Le combat approche
+  do: Lancer protection contre le Bien, puis déplacement juste avant l'affrontement, à raison d'un sort par round
+  note: Déplacement dure 17 rounds et impose 50 % de risque d'échec aux attaques concernées ; protection contre le Bien dure 17 minutes
+
+## Ouverture
+
+note: Choix du premier round
+  Choisir une seule des actions principales ci-dessous selon la menace ; ses sorts et ses pouvoirs magiques ne s'ajoutent pas à une attaque à outrance.
+
+step: Il attaque ou charge pour la première fois
+  do: Déclencher sa présence terrifiante dans un rayon de 108 m, en action libre
+  note: Volonté DD 29 ; cet effet accompagne son attaque sans remplacer son action principale
+
+step: Un lanceur de sorts utilisant le froid est visible et hors de sa portée de mêlée
+  do: Le viser avec entrechoquement de rochers, en orientant les rochers pour toucher aussi ses voisins
+  note: Attaque de contact à distance ; 20d6 dégâts contondants et cible à terre si elle touche, avec ensevelissement en cas d'échec en Réflexes. Ce pouvoir ignore la résistance à la magie
+
+step: Plusieurs ennemis tiennent dans un cône de 18 m
+  do: Lancer cri suprême pour endommager le groupe et lui faire perdre des actions
+  note: 10d6 dégâts sonores, étourdissement pendant 1 round et surdité pendant 4d6 rounds ; Vigueur DD 25 annule l'étourdissement et réduit de moitié dégâts et durée de surdité
+
+step: Le groupe est dispersé et peut l'encercler
+  do: Dresser un mur de pierre ancré à la roche pour séparer les combattants de leurs soutiens, en gardant une cible accessible
+
+## Rounds suivants
+
+step: Une cible prioritaire reste visible à distance
+  do: Répéter entrechoquement de rochers, en priorité contre les utilisateurs de froid et les soigneurs
+  note: Même si l'attaque manque, les chutes de pierres infligent 10d6 dégâts et renversent la cible ; Réflexes réduit ces dégâts de moitié et évite la chute. Surveiller la trajectoire pour ne pas se frapper lui-même
+
+step: Plusieurs ennemis sont à portée de ses attaques naturelles sans déplacement important
+  do: Faire une attaque à outrance et concentrer morsure, griffes, encornement et queue sur la menace la plus dangereuse
+  note: Un pas de 1,50 m reste possible ; répartir les attaques seulement lorsqu'une cible tombe. Employer Attaque en puissance contre une cible facile à toucher
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer, puis porter une morsure avec Science de la frappe décisive : 12d6+14 dégâts sur une touche normale
+  note: Cette attaque unique demande une action simple et remplace l'attaque à outrance ; elle ne se combine pas avec une charge
+
+step: Une cible reste juste au-delà de son allonge
+  do: Employer Attaque en extension pour gagner 1,50 m d'allonge pendant son tour
+  note: Sa CA subit un malus de 2 jusqu'à son prochain tour ; réserver ce choix aux occasions où atteindre la cible vaut cette exposition
+
+step: Les combattants convergent sur lui et les soutiens restent en retrait
+  do: Placer un brouillard solide sur les combattants pour ralentir leur approche, ou utiliser vagues de fatigue sur ceux qui approchent dans un cône de 9 m
+  note: Vagues de fatigue ne permet aucun jet de sauvegarde ; le brouillard réduit aussi sa propre visibilité, car sa vision dans la fumée ne lui permet pas de voir à travers ce brouillard
+
+step: Des ennemis regroupés résistent à ses attaques physiques et ne sont pas protégés du feu
+  do: Employer boule de feu à retardement avec explosion immédiate, Réflexes DD 24, ou placer un mur de lave sur leur route
+  note: Les dégâts de feu lui sont inoffensifs ; décompter chaque lancement de niveau 8, car cri suprême et mur de lave partagent les mêmes quatre utilisations quotidiennes
+
+## Repli
+
+step: Points de vie sous 100, ou attaques de froid répétées qu'il ne peut interrompre
+  do: Interposer un mur de pierre pour couper les lignes de vue, puis gagner une issue avec son déplacement disponible
+  note: Se désengager avant de fuir si des adversaires le menacent ; sa faible CA de contact rend les rayons particulièrement dangereux
+
+step: Une voie de fuite est ouverte
+  do: S'enfouir dans la terre meuble à 18 m par déplacement, ou s'éloigner en vol à 75 m par déplacement si l'espace le permet
+  note: Le creusement ne lui permet pas de traverser librement la roche ; privilégier une issue déjà praticable et employer passe-muraille seulement si nécessaire

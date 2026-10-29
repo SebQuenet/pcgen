@@ -1,0 +1,91 @@
+## Avant le combat
+
+note: Profil
+  Larve des Dieux extérieurs, aberration de taille G, chaotique neutre, FP 15. Musicienne monstrueuse de la cour d'Azathoth, elle cherche à transformer les mortels plutôt qu'à comprendre leur peur.
+  207 pv ; CA 32, contact 17 ; initiative +12. Vol parfait à 18 m, déplacement terrestre à 6 m ; espace occupé de 3 m, allonge de 4,50 m.
+  Attaque à outrance : huit tentacules +19, chacun infligeant 1d6+2 et le poison. Ses chants neutralisent les groupes ; ses pouvoirs magiques désorganisent les survivants.
+
+note: Défenses
+  Régénération 10, neutralisée pendant 1 round par les sorts et effets loyaux ; réduction des dégâts 10/Loi ; résistance à la magie 26 ; corps amorphe.
+  Immunité au froid, au feu et aux dégâts sonores ; résistance à l'acide 10 et à l'électricité 10. Elle privilégie les adversaires capables de contourner ces protections.
+  Vision dans le noir à 18 m et vision dans les ténèbres ; télépathie à 30 m. Elle n'a pas besoin de respirer.
+
+resource: Ancre dimensionnelle | à volonté | rayon de contact à distance ; interdit les déplacements dimensionnels de la cible
+resource: Convocation d'instrument | à volonté | fournit les flûtes nécessaires à son chant
+resource: Téléportation | à volonté | elle-même uniquement
+resource: Marteau du Chaos | 5/jour | Volonté DD 20 ; privilégier les ennemis loyaux
+resource: Dissipation de la magie | 5/jour | retirer une protection ou un effet gênant
+resource: Cercle magique contre la Loi | 5/jour | protection contre les créatures loyales
+resource: Contrôle de créature convoquée | 3/jour | Volonté DD 20 ; prendre une créature convoquée à son invocateur
+resource: Chant assourdissant | 3/jour | trois projectiles ; attaques de contact à distance ; aucun jet de sauvegarde ni résistance à la magie
+resource: Chant de discorde | 3/jour | Volonté DD 21 ; pousse les victimes à attaquer les créatures les plus proches
+resource: Convocation de monstres VIII | 1/jour | renfort temporaire pour occuper les adversaires
+resource: Parole du Chaos | 1/jour | Volonté DD 23 ; créatures non chaotiques dans un rayon de 12 m ; effets selon leurs DV
+
+step: Une confrontation se prépare
+  do: Convoquer un instrument ; lors d'une autre action simple, établir un cercle magique contre la Loi si des adversaires loyaux sont attendus.
+  note: Choisir une position aérienne permettant de rester mobile et de menacer les approches avec son allonge.
+
+step: L'affrontement est imminent et des renforts seront utiles
+  do: Utiliser convocation de monstres VIII et placer le renfort entre elle et les ennemis.
+  note: Ne pas dépenser cette utilisation longtemps avant l'arrivée des adversaires.
+
+## Ouverture
+
+note: Actions
+  Choisir l'ouverture adaptée : les actions simples proposées ne se cumulent pas dans le même round. Les pouvoirs magiques ont un NLS de 15 ; concentration +21 pour les utiliser sur la défensive si nécessaire.
+
+step: Plusieurs adversaires sont à 9 m ou moins
+  do: Commencer le chant démentiel par une action simple, en se plaçant en vol pour englober le groupe.
+  note: Chaque créature dans ce rayon doit réussir Volonté DD 25 ou danser comme sous danse irrésistible tant que le chant continue. Une réussite immunise contre ce chant pendant 24 heures.
+
+step: Le groupe reste hors du rayon du chant, avec plusieurs cibles proches les unes des autres
+  do: Lancer chant de discorde, Volonté DD 21, puis exploiter la confusion du groupe pour se rapprocher ou rester à distance.
+
+step: Plusieurs adversaires non chaotiques de 14 DV ou moins sont à 12 m ou moins
+  do: Privilégier parole du Chaos pour les étourdir et ouvrir une fenêtre d'action.
+  note: Volonté DD 23 annule l'étourdissement. À 15 DV, seule la surdité s'applique ; au-delà de 15 DV, aucun effet. Les créatures de 10 DV ou moins risquent aussi la confusion, celles de 5 DV ou moins la mort.
+
+## Rounds suivants
+
+step: Le chant démentiel est actif
+  do: Le maintenir par une action libre et rester assez près des victimes pour les garder dans son rayon de 9 m.
+  note: Une victime sortie du rayon agit normalement ; si elle y rentre, elle doit refaire son jet. Les effets sonores de la larve fonctionnent même dans le silence magique, le vide et contre les créatures sourdes.
+
+step: Des adversaires subissent encore le chant démentiel
+  do: Employer libération de la chair, une action simple qui ne coupe pas le chant, sur toutes les victimes actuellement affectées.
+  note: Vigueur DD 25 ou transformation en bête du Chaos sous son contrôle ; effet sonore de métamorphose. Éviter d'inclure ses propres renforts dans le chant.
+
+step: Une cible dangereuse reste à portée des tentacules et la transformation ne convient pas
+  do: Faire une attaque à outrance avec les huit tentacules +19, en concentrant les coups sur cette cible.
+  note: Poison de blessure : Vigueur DD 25 ; diminution permanente de 1d4 en Dextérité et de 1d4 en Sagesse, une fois par round pendant 6 rounds ; guérison après deux sauvegardes consécutives réussies.
+  note: Après un déplacement ordinaire, elle ne peut porter qu'une attaque de tentacule avec son action simple. Un pas de placement de 1,50 m permet de conserver l'attaque à outrance.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Le frapper d'un tentacule empoisonné.
+  note: Attaques réflexes et Dextérité 26 permettent jusqu'à neuf attaques d'opportunité par round, sur des occasions distinctes ; traverser plusieurs cases menacées ne multiplie pas les attaques pour un même déplacement.
+
+step: Les adversaires résistent aux effets mentaux ou possèdent une forte résistance à la magie
+  do: Employer chant assourdissant à 18 m ou moins ; concentrer les trois projectiles sur la menace prioritaire.
+  note: Chaque projectile qui touche inflige 3d10 dégâts sonores et assourdit pendant 1d6 rounds ; ni sauvegarde ni résistance à la magie.
+
+step: Un groupe de créatures loyales offre une bonne cible
+  do: Lancer marteau du Chaos, Volonté DD 20, en évitant ses alliés.
+
+step: Une protection magique empêche ses chants ou une créature convoquée ennemie menace sa position
+  do: Choisir dissipation de la magie contre la protection, ou contrôle de créature convoquée contre le renfort, Volonté DD 20.
+  note: La prise de contrôle ne prolonge pas la durée de la convocation adverse.
+
+step: Un adversaire important utilise des déplacements dimensionnels
+  do: Le viser avec ancre dimensionnelle, puis le maintenir sous pression avec les chants ou les tentacules.
+  note: Le rayon exige une attaque de contact à distance ; ce pouvoir ne crée pas une zone interdisant toute téléportation.
+
+## Repli
+
+step: Points de vie sous 50, ou régénération neutralisée alors que les ennemis peuvent l'achever
+  do: Utiliser téléportation vers un lieu connu et sûr ; lancer le pouvoir sur la défensive si elle est menacée.
+  note: La téléportation n'emporte ni ses renforts ni les victimes transformées. À couvert, récupérer grâce à la régénération avant d'envisager un retour.
+
+step: Un effet interdit sa téléportation
+  do: Tenter de dissiper cet effet ; sinon, fuir en vol à 18 m par déplacement en utilisant le terrain pour rompre les lignes d'attaque.
+  note: Le vol stellaire sert aux voyages dans l'espace ; il ne remplace pas sa vitesse de combat.

@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Jiraku, sous sa forme de kami dosojin, est un extérieur de taille M lié aux routes et aux sentiers. Elle bombarde les adversaires à distance avec appel de magma (DD 16), puis frappe au contact.
+  Tetsubo +1 en adamantium : +13/+8 en attaque à outrance, 1d10+4, critique x4 ; sinon, deux coups +11, 1d6+2 chacun. Allonge : 1,50 m.
+  67 pv ; CA 19, contact 12 ; initiative +6. Vitesse 12 m avec grande foulée, 9 m sans ce pouvoir.
+
+note: Défenses
+  Réduction des dégâts 5/fer froid ; guérison accélérée 3. Résistance à l'acide, à l'électricité et au feu : 10 chacune.
+  Immunité aux saignements, aux effets mentaux, à la pétrification et à la métamorphose.
+
+resource: Appel de magma | constant | DD 16
+resource: Dissipation de la magie | 3/jour | NLS 9
+resource: Grande foulée | 3/jour, dont 1 déjà utilisée | vitesse portée à 12 m
+resource: Passage sans trace | 3/jour, dont 1 déjà utilisée | actif au début du combat
+resource: Mur de vent | 3/jour, dont 1 déjà utilisée | le mur déjà dressé dure encore 3 rounds au début du combat
+
+step: Préparation du combat
+  do: Lancer grande foulée et passage sans trace avant l'affrontement.
+  note: Le mur de vent est déjà en place ; ne lui compter que 3 rounds de durée restante.
+
+## Ouverture
+
+step: Jiraku a vu un PJ résister au rayon ardent de Ngon Le lors de l'embuscade des nagajis
+  do: Commencer par dissipation de la magie sur ce PJ pour tenter de supprimer sa protection magique.
+  note: Réserver cette priorité aux adversaires qu'elle a effectivement vus résister au rayon ; suivre les utilisations dépensées.
+
+step: Aucune cible prioritaire pour dissipation, ou dissipation déjà effectuée
+  do: Commencer le bombardement avec appel de magma, DD 16.
+  note: Continuer à distance jusqu'à ce qu'un PJ s'approche assez pour permettre une attaque à outrance au tetsubo.
+
+## Rounds suivants
+
+step: Aucun adversaire à portée d'attaque à outrance
+  do: Répéter appel de magma, DD 16.
+  note: Si elle doit se déplacer, sa vitesse est de 12 m grâce à grande foulée. Le mur de vent initial expire après ses 3 rounds restants.
+
+step: Un adversaire est à 1,50 m, ou peut être atteint par un pas de placement de 1,50 m
+  do: Effectuer une attaque à outrance au tetsubo +1 en adamantium : +13/+8, 1d10+4 par coup, critique x4.
+  note: Deux attaques exigent l'attaque à outrance ; après un déplacement ordinaire, ne porter qu'un coup à +13.
+
+step: Elle est désarmée et un adversaire est au contact
+  do: Utiliser ses deux coups en attaque à outrance : +11 chacun, 1d6+2 chacun.
+
+step: Elle a perdu des points de vie et conserve sa forme de kami
+  do: Appliquer sa guérison accélérée de 3 pv au début de son tour, sans dépasser 67 pv.
+  note: Dès que le seuil de transformation est atteint, appliquer immédiatement la transformation sans attendre cette guérison.
+
+## Repli
+
+step: Jiraku est neutralisée, par exemple paralysée ou immobilisée en lutte, ou tombe à 22 pv ou moins
+  do: Sa forme de pierre s'effrite et elle se transforme immédiatement en oni.
+  do: Dans le cadre de cette transformation, elle peut se téléporter jusqu'à 9 m par une action immédiate ; choisir une position hors du contact des adversaires si possible.
+  note: Son tetsubo se téléporte avec elle, sauf si elle a été désarmée. Poursuivre avec le profil de sa forme d'oni ; ses caractéristiques ne sont pas fournies ici.

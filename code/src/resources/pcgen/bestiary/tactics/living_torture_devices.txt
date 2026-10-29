@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Appareil de torture animé de taille M, neutre et sans intelligence. 36 pv, CA 14, solidité 5 et immunités des créatures artificielles.
+  Deux coups +5 (1d6+2 chacun, plus étreinte) ; bonus de lutte +9. Allonge de 1,50 m ; déplacement de 9 m par round.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5.
+
+note: Comportement
+  Il suit une conduite simple : atteindre l'adversaire le plus proche, le frapper et l'agripper. Il ne prépare pas de combinaison tactique complexe.
+
+## Ouverture
+
+step: Un adversaire est déjà dans son allonge de 1,50 m
+  do: Effectuer une attaque à outrance : deux coups +5, infligeant chacun 1d6+2 dégâts.
+
+step: Un adversaire peut être atteint après un déplacement de 9 m au maximum
+  do: S'approcher jusqu'au contact et porter un seul coup +5 (1d6+2 plus étreinte).
+
+step: Aucun adversaire ne peut être atteint après un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, vers le plus proche.
+
+step: Un coup touche une cible de taille M ou inférieure
+  do: Tenter immédiatement une étreinte par une manœuvre de lutte à +9, en action libre.
+  note: Cette tentative ne provoque pas d'attaque d'opportunité. Appliquer aussi cette étreinte aux coups des rounds suivants.
+
+## Rounds suivants
+
+step: Une cible est agrippée
+  do: Consacrer son action simple au maintien de la lutte ; sur réussite, lui infliger les dégâts d'un coup, soit 1d6+2.
+  note: Le bonus de lutte de base est +9 ; le maintien bénéficie du bonus habituel de +5 si la cible ne s'est pas libérée. Ces dégâts résultent du maintien de la prise.
+
+step: Aucune cible n'est agrippée et un adversaire est dans son allonge
+  do: Effectuer une attaque à outrance avec ses deux coups +5 et tenter l'étreinte après un coup réussi.
+
+step: Sa cible s'est éloignée
+  do: La rejoindre avec son déplacement de 9 m et porter un coup si elle devient accessible ; sinon, poursuivre par un double déplacement jusqu'à 18 m.
+
+## Repli
+
+step: Il possède encore au moins 1 pv
+  do: Continuer à frapper ou à maintenir sa prise, même très endommagé.
+  note: Sans intelligence, il ne décide pas spontanément de fuir. À 0 pv, il est détruit.

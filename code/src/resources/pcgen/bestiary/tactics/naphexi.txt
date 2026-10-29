@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Naphexi, dragon noir vénérable transformé en créature fongique de taille TG, est cruelle, paresseuse et fanatique. Elle préfère entraver ses victimes, puis les tuer avec ses nuages ou sa mare d'acide.
+  297 pv, CA 39, réduction des dégâts 15/magie, résistance à la magie 28. Immunisée à l'acide, aux maladies, au poison, aux effets mentaux, à la paralysie, à la métamorphose, au sommeil et à l'étourdissement.
+  Morsure +34 (2d8+19 et 4d6 d'acide), 2 griffes +33 (2d6+13), queue +31 (2d6+19), 2 ailes +31 (1d8+6). Allonge de 3 m, ou 4,50 m avec la morsure.
+  Déplacement et nage à 15 m ; vol à 57 m, de manœuvrabilité médiocre. Elle respire sous l'eau.
+
+resource: Sorts de niveau 5 | 4/jour partagés | brume mortelle et immobilisation de monstre, DD 19
+resource: Sorts de niveau 4 | 7/jour partagés | tentacules noirs et contagion ; contagion DD 18
+resource: Sorts de niveau 3 | 7/jour partagés | notamment dissipation de la magie, nuage nauséabond DD 17 et immobilisation de personne DD 17
+resource: Sorts de niveau 2 | 7/jour partagés | notamment flou, invisibilité et toile d'araignée DD 16
+resource: Sorts de niveau 1 | 7/jour partagés | notamment graisse, projectile magique et brume de dissimulation
+resource: Pouvoirs magiques | à volonté | ténèbres, fléau d'insectes, croissance végétale ; NLS 22
+resource: Corruption de l'eau | 1/jour | pouvoir magique
+
+step: Des intrus approchent et elle dispose de quelques rounds
+  do: Lancer flou, puis invisibilité, et se placer à distance de la voie d'approche
+  note: Ces deux sorts puisent dans la même réserve de niveau 2. Ses sorts d'ensorceleur ont un NLS de 11.
+
+step: Elle choisit où attendre les intrus
+  do: Privilégier une position proche de l'eau et un espace permettant ses passages en vol
+  note: Garder une voie de fuite vers le Pestilent Palace ; elle tient au corps qu'elle vient de transformer à l'image de son dieu.
+
+## Ouverture
+
+step: Premier survol ou première attaque
+  do: Faire intervenir la présence terrifiante sur les adversaires concernés, dans un rayon de 90 m, Volonté DD 25
+
+step: Plusieurs ennemis sont regroupés au sol
+  do: Lancer tentacules noirs sur leur position pour les agripper et gêner leur progression
+  note: Préparer une brume mortelle ou une mare d'acide pour le round suivant ; les tentacules ne rendent pas leurs victimes sans défense.
+
+step: Une cible dangereuse et sensible à la paralysie est isolée
+  do: Lancer immobilisation de monstre sur elle, Volonté DD 19
+  note: Cette option remplace les tentacules noirs et consomme une des quatre utilisations de niveau 5, également nécessaires à brume mortelle.
+
+## Rounds suivants
+
+step: Des victimes restent prises dans les tentacules ou sous immobilisation
+  do: Au round suivant, placer brume mortelle sur elles, Vigueur DD 19, ou employer la mare d'acide de son souffle
+  note: Choisir l'acide contre les créatures immunisées au poison. Naphexi recherche cette combinaison pour tuer avec le moins d'effort possible.
+
+step: Les ennemis échappent à ses premières entraves
+  do: Replacer les tentacules noirs sur leur nouvelle position ou employer toile d'araignée, Réflexes DD 16, si le terrain permet de l'ancrer
+  note: Nuage nauséabond, Vigueur DD 17, peut neutraliser les adversaires sensibles au poison et leur faire perdre des actions.
+
+step: Un effet magique empêche une entrave ou protège une cible prioritaire
+  do: Tenter une dissipation de la magie ciblée, puis reprendre les entraves ou l'attaque au round suivant
+  note: Éviter de répéter immobilisation sur une créature manifestement immunisée.
+
+step: Elle doit combattre au contact mais conserve de l'espace pour voler
+  do: Effectuer une Attaque en vol avec sa morsure +34, puis poursuivre son déplacement pour s'éloigner
+  note: Employer Frappe décisive supérieure pour cette morsure unique : 8d8+19 et 4d6 d'acide. Le déplacement total du passage ne dépasse pas 57 m et peut provoquer des attaques d'opportunité.
+
+step: Elle peut se poser au milieu des ennemis et les garder à portée
+  do: Se poser ; si elle doit se déplacer pour atteindre les cibles, ne donner qu'une morsure ce round-ci
+  note: Une attaque à outrance exige de disposer du round nécessaire ; elle ne la réalise pas après un déplacement ordinaire.
+
+step: Elle commence son tour au contact et peut consacrer le round aux attaques
+  do: Attaque à outrance : morsure +34, 2 griffes +33, queue +31 et 2 ailes +31
+  note: Alterner ces attaques à outrance avec les passages en vol selon l'espace disponible et la pression adverse. Son immunité à l'acide et au poison lui permet d'affronter ses victimes dans ses propres zones dangereuses.
+
+## Repli
+
+step: Première confrontation et points de vie strictement sous 50
+  do: Rompre le combat et fuir vers le Pestilent Palace, en volant ou en empruntant une voie aquatique
+  note: Utiliser la distance et, une fois hors du contact, invisibilité ou brume de dissimulation pour compliquer la poursuite.
+
+step: Elle a fui et les PJ entrent dans les Deeper Reaches
+  do: Reprendre le harcèlement par ses entraves, ses zones dangereuses et ses passages en vol
+  note: Elle ne bat pas en retraite une seconde fois et poursuit alors le combat jusqu'à la mort.

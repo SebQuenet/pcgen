@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Petit extérieur qlippoth chaotique mauvais, le cythnigot couinant attaque sans distinguer aventuriers et villageois. Il possède 32 pv et une CA de 12.
+  Morsure +9 (1d8+4 et spores), allonge de 1,50 m ; déplacement au sol de 12 m, vol constant de 18 m par round, avec une bonne manœuvrabilité.
+  Réduction des dégâts 5/fer froid ou loyal ; immunité au froid, au poison et aux effets mentaux ; résistance à l'acide 10 et au feu 10.
+
+resource: Détection de la Loi et détection de la magie | constantes | pouvoirs magiques, NLS 6
+resource: Ramollissement de la terre et de la pierre | 1/jour | pouvoir magique, NLS 6
+resource: Distorsion du bois | 1/jour | pouvoir magique, NLS 6
+resource: Communion | 1/semaine | six questions, NLS 6
+
+step: Il a le temps de repérer les créatures présentes
+  do: Observer avec Perception +7 et sa vision dans le noir à 18 m ; utiliser ses détections pour repérer les auras.
+  note: Ces renseignements ne changent pas sa cible initiale : il attaque la créature la plus proche.
+
+step: Il peut préparer un passage sur un sol adapté avant le combat
+  do: Employer ramollissement de la terre et de la pierre pour gêner les déplacements au sol, puis survoler la zone.
+
+## Ouverture
+
+step: Aucune créature ne l'a encore attaqué
+  do: Se diriger vers la créature la plus proche, aventurier ou villageois, et la mordre dès qu'il peut l'atteindre.
+  note: Employer le vol pour franchir les obstacles ; sa morsure est son unique attaque de mêlée.
+
+step: Une créature l'attaque avant sa première morsure
+  do: Prendre pour cible l'adversaire qui semble capable de lui infliger le plus de dégâts et chercher à le mordre.
+
+## Rounds suivants
+
+step: Il n'a toujours subi aucune attaque
+  do: Continuer à attaquer la créature la plus proche ; se déplacer si nécessaire pour la rejoindre.
+  note: Il ne protège pas les villageois et ne privilégie pas les aventuriers.
+
+step: Des créatures l'ont attaqué
+  do: Concentrer ses morsures sur l'adversaire qui semble pouvoir lui infliger le plus de dégâts ; le rejoindre au sol ou en vol.
+  note: Tenir compte des attaques réellement dangereuses malgré ses immunités, ses résistances et sa réduction des dégâts.
+
+step: Sa cible est au contact
+  do: Mordre à +9 pour 1d8+4 dégâts et les spores.
+  note: Ne pas consacrer ses rounds à des préparatifs tant qu'une cible peut être attaquée.
+
+## Repli
+
+step: Points de vie strictement inférieurs à 11
+  do: S'enfuir en volant vers les marais du sud, à 18 m par déplacement ; effectuer un double déplacement de 36 m si la voie est libre.
+  note: Le repli devient prioritaire dès qu'il lui reste 10 pv ou moins.

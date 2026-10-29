@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Igramalash, géant inversé mythique de taille Gigantesque, chaotique mauvais, FP 21, rang mythique 7. Son long emprisonnement l'a rendu fou et désorienté : il se jette sur les ennemis les plus proches et privilégie les attaques physiques.
+  Morsure +27 (4d8+13, critique 19-20), 2 griffes +27 (2d8+13, critique 19-20, plus 1d6 d'énergie chacune), 4 tentacules +22 (2d6+6 et agrippement), langue +22 (1d8+6 et agrippement).
+  Espace occupé et allonge : 6 m ; déplacement : 9 m. Marche dans les airs permanente pour atteindre les adversaires en hauteur.
+
+note: Défenses et perception
+  404 PV, CA 37, contact 11 ; guérison accélérée de 4 PV par round. Réduction des dégâts 15/Bien et épique ; résistance au froid 15, au feu 15 et à l'électricité 10 ; résistance à la magie 26.
+  Perception +27, vision aveugle et vision dans le noir à 18 m. Aura de terreur à 18 m, DD 25 ; souffle de fumée dans un rayon de 3 m.
+
+note: Double initiative
+  Lancer l'initiative avec +14. Igramalash dispose de deux tours complets par round : au résultat obtenu, puis à ce résultat moins 20.
+  La guérison accélérée et les durées exprimées en rounds ne se comptent qu'une fois par round, au premier tour.
+
+resource: Puissance mythique | 7/jour | réserve commune ; montée en puissance de +1d10 sur un jet de d20, en action immédiate après connaissance du résultat
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 22,5 kg d'objets seulement
+resource: Téléportation suprême rapide | 3/jour | action rapide ; mêmes limites de transport
+resource: Marteau du Chaos | à volonté | DD 17
+resource: Dissipation de la magie | 3/jour | niveau de lanceur de sorts 20
+resource: Télékinésie | 3/jour | DD 18
+resource: Régénération | 3/jour | niveau de lanceur de sorts 20
+resource: Tentacules noirs | 1/jour | niveau de lanceur de sorts 20
+resource: Absorption d'énergie | 1/jour | niveau de lanceur de sorts 20
+resource: Implosion | 1/jour | Vigueur DD 22
+
+## Ouverture
+
+step: Les ennemis entrent dans les 18 m de son aura
+  do: Appliquer l'aura de terreur, DD 25
+  note: cette aura accompagne son approche et ne remplace pas ses attaques
+
+step: L'ennemi le plus proche est accessible avec un déplacement de 9 m
+  do: Avancer jusqu'à le placer dans son allonge de 6 m, puis porter une morsure
+  note: s'il utilise Frappe décisive mythique, la réserver à cette attaque unique en action simple ; un déplacement ordinaire ne permet pas une attaque à outrance
+
+step: Un ennemi est déjà dans son allonge au début de son tour
+  do: Attaquer à outrance avec la morsure, les deux griffes, les quatre tentacules et la langue
+  note: concentrer les attaques sur les adversaires les plus proches ; tenter l'agrippement gratuit lorsqu'un tentacule ou la langue touche une cible de taille inférieure
+
+step: Aucun ennemi ne peut être atteint en mêlée et une destination sûre permet de le rejoindre
+  do: Utiliser téléportation suprême rapide pour arriver à portée, puis attaquer à outrance
+  note: la téléportation sert à reprendre le combat physique ; elle ne transporte aucun adversaire agrippé
+
+## Rounds suivants
+
+step: Un adversaire reste dans son allonge
+  do: Répéter l'attaque à outrance à chacun de ses deux tours
+  note: un pas de placement de 1,50 m permet d'ajuster sa position tout en conservant l'attaque à outrance ; s'il doit avancer davantage, revenir à une attaque unique après déplacement
+
+step: Une attaque échoue et une montée en puissance peut encore la faire réussir
+  do: Dépenser une utilisation de puissance mythique pour ajouter 1d10 au résultat du jet d'attaque
+  note: il cherche ainsi à corriger ses échecs ; respecter la limite des actions immédiates, sans ajouter un dé à chaque attaque d'une même série
+  note: une action immédiate prise hors de son tour consomme l'action rapide de son prochain tour ; en tenir compte avant une téléportation rapide
+
+step: Un tentacule ou la langue retient un adversaire
+  do: Maintenir la lutte si cela empêche la cible de fuir, ou relâcher la prise pour reprendre ses attaques
+  note: choisir entre les actions nécessaires à la lutte et l'attaque à outrance ; l'agrippement ne donne pas une action supplémentaire pour maintenir la prise
+
+step: Un critique est confirmé avec une attaque appropriée
+  do: Appliquer Critique aveuglant
+  note: contre une cible facile à toucher, envisager Attaque en puissance mythique ; appliquer ses modifications aux jets et aux dégâts avant de résoudre les attaques
+
+step: Aucun ennemi n'est accessible en mêlée et plusieurs adversaires restent groupés
+  do: Employer marteau du Chaos, DD 17, ou tentacules noirs pour gêner leurs déplacements
+  note: ces pouvoirs ne deviennent sa solution que faute de cible disponible pour ses attaques physiques
+
+step: Aucun ennemi n'est accessible en mêlée et une cible isolée reste à portée de ses pouvoirs
+  do: Employer implosion, Vigueur DD 22, ou absorption d'énergie
+  note: implosion demande de la concentration pour poursuivre ses effets ; revenir aux attaques physiques dès qu'un adversaire devient accessible
+
+step: Un obstacle magique empêche toute attaque de mêlée
+  do: Tenter dissipation de la magie ; employer télékinésie, DD 18, si déplacer une cible permet de rétablir le contact
+
+step: Il est blessé et aucun ennemi n'est accessible en mêlée
+  do: Employer régénération si le temps d'incantation lui laisse une occasion de se soigner
+  note: la guérison accélérée rend 4 PV par round, jusqu'au maximum de 404 PV ; ses deux tours ne doublent pas ce soin
+
+## Repli
+
+step: Ses points de vie baissent, même jusqu'au seuil de la mort
+  do: Continuer à combattre jusqu'à la mort
+  note: poursuivre les adversaires qui s'éloignent, par déplacement, marche dans les airs ou téléportation ; son obstination reste dirigée vers l'ennemi le plus proche

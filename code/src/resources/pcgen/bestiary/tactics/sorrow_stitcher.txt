@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Sorrow Stitcher, fée de taille M, chaotique mauvaise, intelligente et cruelle. Elle affaiblit les intrus par le désespoir avant de les approcher avec ses instruments de couture.
+  90 pv ; CA 22, contact 16 ; déplacement 9 m ; allonge 1,50 m. Ciseaux +12/+7 (1d6+1, critique 19–20) ; aiguille +6 contre la CA de contact, porteuse de la malédiction hollow heart.
+  Réduction des dégâts 5, surmontée par une arme à la fois en fer froid et perforante.
+
+resource: Désespoir foudroyant | à volonté | Volonté DD 19 ; cône de 9 m ; durée 8 minutes
+resource: Chagrin accablant | 3/jour | Volonté DD 20 ; une créature à 13,50 m au plus ; durée maximale 8 rounds
+resource: Rayon d'épuisement | 3/jour | attaque de contact à distance ; portée 13,50 m ; Vigueur partielle ; durée 8 minutes
+resource: Convocation d'ombres | 3/jour | imite une invocation de magicien ou d'ensorceleur de niveau 3 au plus, de création ou de convocation
+resource: Pas d'ombre | 3/jour | déplacement instantané entre deux zones de pénombre ou d'obscurité, jusqu'à 54 m
+
+step: Les intrus ne l'ont pas encore repérée
+  do: Se dissimuler avec Discrétion +20 près d'un passage où plusieurs ennemis pourront entrer dans son cône de 9 m
+  note: sa vision nocturne facilite l'observation en faible lumière ; repérer une autre zone sombre pour la fuite et conserver au moins un pas d'ombre
+
+## Ouverture
+
+step: Plusieurs ennemis sont dans un même cône de 9 m
+  do: Utiliser désespoir foudroyant, puis se déplacer pour rester hors de leur allonge
+  note: un échec à Volonté DD 19 impose −2 aux attaques, dégâts d'armes, sauvegardes et tests ; ce malus aux sauvegardes prépare le chagrin accablant du round suivant
+
+step: Une seule menace prioritaire est à 13,50 m ou moins
+  do: Utiliser chagrin accablant sur le lanceur de sorts ou le combattant dont l'intervention serait la plus dangereuse
+  note: Volonté DD 20 ; la victime ne peut agir, subit −2 à la CA et perd son bonus de Dextérité à la CA ; elle retente sa sauvegarde chaque round
+
+## Rounds suivants
+
+step: Une cible est neutralisée par le chagrin et les autres restent à distance
+  do: S'approcher de cette cible et attaquer avec l'aiguille contre sa CA de contact ; profiter ensuite des ouvertures pour la frapper aux ciseaux
+  note: l'aiguille porte la malédiction hollow heart ; ne pas traiter le chagrin comme une paralysie permettant un coup de grâce
+
+step: Un adversaire reste au contact et elle peut consacrer son round aux attaques
+  do: Porter les deux attaques de ciseaux à +12 et +7, chacune pour 1d6+1 dégâts
+  note: après un déplacement supérieur à un pas de 1,50 m, se limiter normalement à une attaque de ciseaux à +12
+
+step: Un combattant mobile menace de la rejoindre
+  do: Tirer un rayon d'épuisement sur lui, puis maintenir la distance
+  note: sur une touche, l'échec à Vigueur épuise la cible ; une réussite la fatigue seulement. Une cible déjà fatiguée devient épuisée ; ne pas gaspiller de rayon sur une cible déjà épuisée
+
+step: Plusieurs adversaires avancent ensemble ou résistent aux effets mentaux
+  do: Utiliser convocation d'ombres pour reproduire une toile d'araignée entre des points d'ancrage et gêner leur progression
+  note: l'interaction permet une sauvegarde de Volonté pour reconnaître l'illusion ; les sauvegardes normales du sort imité s'appliquent aussi. Contre qui reconnaît l'illusion, l'entrave n'a que 20 % de chances de fonctionner
+
+step: Un ennemi encore indemne de désespoir offre une bonne cible
+  do: Réutiliser désespoir foudroyant si le cône peut l'atteindre sans exposer inutilement la fée
+  note: plusieurs utilisations ne cumulent pas leurs malus ; contre une même cible résistante, changer de moyen d'attaque
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Frapper avec les ciseaux à +12 grâce à Attaques réflexes
+  note: éviter de lancer un pouvoir magique sous la menace ; se dégager d'un pas de 1,50 m si cela suffit, sinon utiliser l'incantation sur la défensive avec Magie de guerre
+
+## Repli
+
+step: Points de vie sous 30, ou plusieurs adversaires l'encerclent avec des armes qui surmontent sa réduction des dégâts
+  do: Utiliser le pas d'ombre conservé pour gagner une zone de pénombre ou d'obscurité à 54 m au plus, puis se dissimuler
+  note: le point de départ doit lui aussi être dans la pénombre ou l'obscurité ; le pouvoir employé au contact peut provoquer une attaque d'opportunité
+
+step: Aucun pas d'ombre utilisable
+  do: Faire une retraite pour s'éloigner jusqu'à 18 m, puis chercher un abri où se cacher
+  note: la retraite protège seulement la sortie de sa case de départ contre les attaques d'opportunité ; choisir un trajet qui évite l'allonge des autres ennemis

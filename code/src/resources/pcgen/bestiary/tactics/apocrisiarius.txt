@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Apocrisiarius, kyton loyal mauvais de taille M, intelligent et méthodique, qui recherche les vérités douloureuses et interroge ses prisonniers.
+  Deux lancettes : attaque à outrance +14/+9 (1d4+7) et +14 (1d4+5), critiques 19–20/x3 ; allonge 1,50 m. Déplacement 12 m ; initiative +9 ; vision dans le noir à 18 m.
+  85 pv ; CA 19, contact 16 ; régénération 3, interrompue par les sorts du Bien et les armes bonnes ou en argent ; réduction des dégâts 5/argent ou Bien ; résistance à la magie 18.
+  Immunisé au froid et au poison ; vulnérable à l'électricité, dont les dégâts sont augmentés de moitié.
+
+resource: Courroux de l'ordre | 1/jour | NLS 7, Volonté DD 16 ; portée 51 m, cube de 9 m de côté
+resource: Empoisonnement | 3/jour | contact sur une créature vivante, Vigueur DD 16
+resource: Soins modérés | 3/jour | rend 2d8+7 pv par utilisation
+resource: Changement de plan | 1/jour | lui seul, entre le plan Matériel et le plan de l'Ombre
+
+step: Une discussion précède les hostilités
+  do: Questionner les intrus à moins de 9 m et chercher leurs intentions avec Psychologie +12 ; négocier ou intimider avec Diplomatie +14 ou Intimidation +14
+  note: son aura de vérité constante impose Volonté DD 14 pour pouvoir mentir dans cette zone ; elle n'oblige personne à répondre. Lui-même ne peut jamais mentir, mais peut taire une information ou refuser de répondre.
+
+step: Il prépare une rencontre avec des interlocuteurs dont il ignore la langue
+  do: Utiliser don des langues si nécessaire
+  note: 3/jour, durée 70 minutes ; ce pouvoir facilite la discussion sans forcer l'obéissance.
+
+step: Il prévoit une issue de secours
+  do: Conserver changement de plan pour le repli
+  note: si ce pouvoir a servi à venir aujourd'hui, son utilisation quotidienne est déjà dépensée.
+
+## Ouverture
+
+step: Plusieurs ennemis non loyaux sont regroupés et il peut agir sans être menacé au contact
+  do: Lancer courroux de l'ordre sur leur groupe, en privilégiant les adversaires chaotiques
+  note: 3d8 dégâts aux chaotiques, ou 7d6 aux extérieurs chaotiques, et hébétement pendant 1 round ; Volonté DD 16 réduit les dégâts de moitié et annule l'hébétement. Les neutres sur l'axe Loi–Chaos subissent la moitié des dégâts, encore réduite de moitié sur une sauvegarde réussie, sans hébétement ; les loyaux sont épargnés.
+
+step: Un adversaire est déjà à portée des lancettes et aucun pouvoir n'offre de meilleur avantage
+  do: Faire une attaque à outrance avec les deux lancettes
+  note: trois attaques au total : +14 et +9 à 1d4+7, puis +14 à 1d4+5 ; les bonus de maîtrise des lancettes sont déjà compris.
+
+step: Un adversaire isolé se trouve à portée d'un déplacement de 12 m
+  do: Avancer au contact et porter une seule attaque de lancette à +14, pour 1d4+7 dégâts, critique 19–20/x3
+  note: privilégier une cible accessible qui menace sa régénération ou utilise l'électricité ; ce déplacement ne permet pas une attaque à outrance.
+
+## Rounds suivants
+
+step: Il peut rester au contact sans s'exposer à une menace prioritaire
+  do: Répéter l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m pour garder la cible à portée
+  note: concentrer les blessures sur un adversaire plutôt que disperser les attaques.
+
+step: Une cible vivante paraît peu résistante au poison et il peut employer un pouvoir sans subir d'attaque d'opportunité
+  do: Utiliser empoisonnement et effectuer une attaque de contact au corps à corps
+  note: Vigueur DD 16 annule ; en cas d'échec, le poison inflige 1d3 dégâts de Constitution par round pendant au plus 6 rounds. Une sauvegarde réussie lors d'un round suivant annule les dégâts de ce round et met fin au poison ; les lancettes ne transmettent pas ce pouvoir.
+
+step: Il a perdu au moins 20 pv et peut se mettre à couvert
+  do: Rompre la ligne de tir, puis utiliser soins modérés si la pression ennemie dépasse sa régénération
+  note: chaque utilisation demande une action simple ; la régénération rend 3 pv par round lorsqu'elle fonctionne. Une attaque qui la neutralise la supprime pendant le round suivant.
+
+step: Il perd une lancette
+  do: En retirer une nouvelle de sa chair par une action de mouvement
+  note: sa maîtrise en fait une dague coup-de-poing magique adaptée à ses attaques ; cette action ne permet pas d'ajouter une attaque à outrance au même tour.
+
+step: Une victime qu'il veut interroger est mourante et la situation lui laisse une action disponible
+  do: Employer stabilisation à volonté pour la garder en vie
+  note: il peut ensuite employer soins modérés si nécessaire ; préserver un prisonnier consomme du temps et éventuellement ses soins.
+
+## Repli
+
+step: Ses pv tombent sous 25, ou l'électricité et les armes neutralisant sa régénération rendent la poursuite du combat trop dangereuse
+  do: Se dégager du contact, puis utiliser changement de plan dès qu'il peut le faire sans s'exposer
+  note: depuis le plan Matériel, rejoindre le plan de l'Ombre ; depuis le plan de l'Ombre, rejoindre le plan Matériel. Le pouvoir n'emporte aucun allié ni prisonnier.
+
+step: Changement de plan est déjà dépensé
+  do: Utiliser une retraite pour quitter la mêlée, jusqu'à 24 m, puis chercher un couvert ou un passage qui limite la poursuite
+  note: une fois hors d'atteinte, employer les soins restants et laisser agir la régénération ; la retraite ne protège des attaques d'opportunité que dans la case de départ.

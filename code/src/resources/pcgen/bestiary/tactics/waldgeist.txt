@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Waldgeist, mort-vivant incorporel de taille P, neutre mauvais, esprit de gnome hostile aux intrus de sa forêt.
+  Toucher incorporel +15 contre la CA de contact, à 1,50 m : 6d8 d'énergie négative et lignification. Déplacement de 9 m ; initiative +9.
+  104 pv, CA 21, résistance à la magie 19 ; immunités des morts-vivants.
+
+resource: Enchevêtrement | 3/jour | pouvoir magique, NLS 8, Réflexes DD 16 ; rayon de 12 m, durée de 8 minutes
+resource: Croissance végétale | 1/jour | pouvoir magique, NLS 8 ; épaissit la végétation existante, sans sauvegarde
+resource: Possession d'arbre | 1/minute | action simple ; arbre non magique de taille G au maximum
+
+step: Intrus approchant dans les sous-bois
+  do: Se dissimuler avec Discrétion +17 et surveiller avec Perception +19 ; vision dans le noir et vision à travers la végétation à 18 m.
+  note: Préférer un terrain boisé où plusieurs adversaires devront se rapprocher pour l'atteindre.
+
+step: Il dispose d'un round de préparation et la végétation est suffisamment dense
+  do: Utiliser croissance végétale sur les accès, avant de lancer enchevêtrement ; conserver une voie dégagée pour canaliser les intrus.
+  note: Dans les fourrés affectés, la vitesse des créatures est réduite à 1,50 m, ou à 3 m pour celles de taille G ou supérieure.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés dans la végétation et aucun ne le menace au contact
+  do: Lancer enchevêtrement sur leur position, puis se rapprocher d'un arbre ou d'une cible isolée.
+  note: Réflexes DD 16 ou état enchevêtré ; toute la zone devient un terrain difficile. Ce pouvoir exige des plantes présentes.
+
+step: Un ennemi vivant est déjà à 1,50 m
+  do: Porter un toucher incorporel +15 pour 6d8 d'énergie négative et lignification.
+  note: Lignification : vivant non végétal blessé, 1d4 dégâts de Dextérité sans sauvegarde ; à 0, transformation permanente en arbre.
+
+## Rounds suivants
+
+step: Des intrus sont à portée des branches d'un arbre utilisable
+  do: Posséder l'arbre ; frapper avec ses branches dès le round suivant.
+  note: Arbre immobile ; aucun toucher, pouvoir ou parole du waldgeist pendant la possession.
+
+step: Il combat sous sa forme incorporelle
+  do: Concentrer les touchers +15 sur une même cible vivante non végétale, surtout si sa Dextérité a déjà diminué.
+  note: Rester au contact d'une cible isolée ; exploiter l'intangibilité pour traverser les obstacles lors des déplacements.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Porter un toucher incorporel +15 avec lignification.
+  note: Attaques réflexes permet jusqu'à 6 attaques d'opportunité par round ; respecter les occasions qui les déclenchent.
+
+step: Des adversaires quittent la première zone et des utilisations restent disponibles
+  do: Relancer enchevêtrement sur leur nouvel itinéraire pour séparer le groupe.
+  note: Les créatures restant dans la zone refont leur sauvegarde à la fin du tour du waldgeist ; celles qui y entrent la font immédiatement.
+
+step: Une créature frappe du bois à 4,50 m ou moins
+  do: Volonté DD 20 ; échec : rejoindre le frappeur tant qu'il continue, quitte à sortir de l'arbre.
+  note: Nouveau jet à chaque attaque ou effet nuisible reçu ; libre une fois adjacent. Après le premier jet, immunité aux nouveaux appels du même frappeur pendant 24 heures.
+
+## Repli
+
+step: L'arbre possédé est près d'être détruit ou les ennemis restent hors de sa portée
+  do: Quitter l'arbre pour une case adjacente favorable.
+  note: Sortie volontaire : action libre provoquant des attaques d'opportunité. Arbre détruit : expulsion.
+
+step: Points de vie sous 30 et les intrus peuvent encore le blesser efficacement
+  do: Reculer vers les sous-bois à 9 m par déplacement ; utiliser un enchevêtrement restant pour freiner la poursuite.
+
+step: Une poursuite ou un effet risque de l'éloigner de la forêt
+  do: Rompre la poursuite et revenir vers les arbres.
+  note: Destruction au-delà de 15 m de la lisière ; +4 aux sauvegardes contre les effets l'expulsant de sa forêt.

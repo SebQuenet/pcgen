@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Pulsepounder, robot de sécurité de taille G, variante de golem à canon, neutre et intelligent. Il défend l'accès à C18 et combat jusqu'à sa destruction.
+  CA 31, contact 16 ; 235 pv au total, dont 75 de champ de force ; RD 15/adamantium ; immunités des créatures artificielles.
+  Deux coups +29, chacun à 2d10+10, critique sur 19–20 ; canon laser intégré +26 contre la CA de contact, 6d6+7 de feu, critique sur 19–20.
+  Déplacement de 9 m ; espace et allonge de 3 m ; vision dans le noir à 18 m, vision nocturne, Perception +25.
+
+resource: Champ de force | 75 pv inclus dans les 235 pv | Absorbe les dégâts en premier ; immunité aux critiques tant qu'il fonctionne ; récupère 15 pv par round ; désactivé pendant 24 heures s'il tombe à 0.
+
+step: En attente à son poste
+  do: Se placer sur le passage vers C18, avec une ligne de tir sur les arrivants et l'accès couvert par son allonge de 3 m.
+  note: Il cherche à interdire l'entrée ; il ne quitte pas son secteur pour poursuivre des intrus dans le reste du pont.
+
+## Ouverture
+
+step: Plusieurs intrus peuvent être pris dans une même explosion sans toucher ses alliés
+  do: Employer le mode explosif du canon en action simple : viser un point à 90 m au maximum ; explosion de 6 m de rayon, 10d6 de feu, Réflexes DD 20 pour moitié.
+  note: Aucun jet d'attaque ; une ligne d'effet est nécessaire. Un obstacle solide rencontré fait exploser le tir à cet endroit. Frappe décisive ne s'applique pas à ce mode.
+
+step: Une cible isolée est visible et accessible au canon
+  do: Tirer avec Frappe décisive en action simple : +26 contre la CA de contact, 12d6+7 de feu ; portée de 90 m.
+  note: Privilégier l'intrus qui tente de franchir le poste. Le canon ne provoque pas d'attaque d'opportunité, même au contact.
+
+step: Un adversaire est déjà à 3 m ou moins et le robot peut effectuer une attaque à outrance
+  do: Porter ses deux coups +29, 2d10+10 chacun, pour multiplier les occasions de critique.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée de mêlée
+  do: Répéter les deux coups ; contre une CA facile à toucher, employer Attaque en puissance : deux coups +23, 2d10+22 chacun.
+  note: Contre une CA élevée, conserver +29 afin de favoriser les touches et les critiques.
+
+step: Un coup de mêlée menace un critique
+  do: Ajouter +4 au jet de confirmation grâce à Critical Focus ; si le critique est confirmé, déclencher Blasting Critical pour tirer gratuitement au canon sur cette même cible, +26 au contact, 6d6+7 de feu.
+  note: Ce tir supplémentaire utilise les dégâts ordinaires du canon, sans Frappe décisive.
+
+step: Un critique est confirmé avec un coup ou le canon
+  do: Appliquer Staggering Critical : la cible est chancelante pendant 1d4+1 rounds ; Vigueur DD 30 réduit la durée à 1 round.
+  note: Une cible chancelante ne peut plus cumuler déplacement et action simple ; concentrer la pression sur elle si elle menace l'accès.
+
+step: Il doit se déplacer pour intercepter un intrus
+  do: Avancer jusqu'à 9 m, puis porter un seul coup avec Frappe décisive : +29, 4d10+10 ; ou tirer avec Frappe décisive si la cible reste hors d'allonge.
+  note: Avec Attaque en puissance, le coup devient +23, 4d10+22. Frappe décisive accompagne une attaque simple, jamais les deux coups d'une attaque à outrance.
+
+step: Les intrus restent à distance ou se regroupent de nouveau
+  do: Garder le passage sous son contrôle ; répéter le tir avec Frappe décisive sur une cible isolée ou l'explosion contre un groupe.
+  note: Deadly Aim n'ajoute aucun dégât aux attaques de contact ; ne pas l'activer pour le laser.
+
+step: Une surface métallique offre un meilleur accès ou la gravité disparaît
+  do: Utiliser le pas magnétique pour marcher sur le métal en apesanteur ; en gravité normale, escalader le métal avec Escalade +20 si cela aide à intercepter les intrus.
+  note: Le bonus du pas magnétique est déjà compris dans Escalade +20 sur le métal.
+
+step: Un intrus franchit le poste et entre dans C18
+  do: Le poursuivre dans C18 et concentrer les attaques sur lui pour maintenir la défense de cette zone.
+
+## Repli
+
+step: Le champ de force est épuisé ou les points de vie deviennent faibles
+  do: Continuer à défendre l'accès et combattre jusqu'à destruction.
+  note: Aucun seuil de fuite ; la perte du champ de force ne change pas sa mission.
+
+step: Les intrus se retirent vers le reste du pont
+  do: Cesser la poursuite et reprendre la garde de l'accès à C18.

@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Tokikokito est une oni atamahuta de taille G, loyale mauvaise, qui combine assauts brutaux, pouvoirs magiques et soutien de son partenaire.
+  Pelle de moine : +20/+20/+15/+10 à outrance, 1d8+10 par coup ; javeline +14, 1d8+7. Allonge de 3 m, espace occupé de 3 m ; déplacement de 9 m, vol de 12 m avec une bonne manœuvrabilité.
+  147 pv, CA 25, réduction des dégâts 10/adamantium, résistance à la magie 22 ; régénération 5 neutralisée par l'acide ou le feu.
+  Perception +24, vision dans le noir à 18 m, vision nocturne et détection de l'invisibilité permanente.
+
+resource: Potions de vol | 2 | à boire avant l'affrontement
+resource: Peau de pierre | 1/jour | préparation défensive ; NLS 11
+resource: Rapidité | 3/jour | accélérer Tokikokito et son partenaire
+resource: Boule de feu | 3/jour | Réflexes DD 16 ; NLS 11
+resource: Tentacules noirs | 1/jour | entraver les défenseurs ; NLS 11
+resource: Mur de feu | 1/jour | gêner les déplacements et séparer les défenseurs ; NLS 11
+resource: Contact glacial | 3/jour | DD 14 ; NLS 11
+resource: Décharge électrique | 3/jour | pouvoir de contact ; NLS 11
+resource: Porte dimensionnelle | 3/jour | repositionnement ; NLS 11
+resource: Rage | 3/jour | à déclencher à 75 pv ou moins
+resource: Javelines | 5 | attaque à distance +14, 1d8+7
+
+step: L'affrontement approche
+  do: Boire une potion de vol et utiliser peau de pierre avant d'entrer en combat
+  note: Si son partenaire est présent, préparer l'assaut depuis une position dominant la cour.
+
+## Ouverture
+
+step: Premier round de combat
+  do: Lancer rapidité sur elle et son partenaire s'il est présent et à portée
+  note: Consacrer ce round à la préparation de l'assaut.
+
+step: Après la préparation, son partenaire descend dans la cour
+  do: Rester en hauteur et lancer boule de feu, tentacules noirs ou mur de feu pour gêner les défenseurs
+  note: Boule de feu contre les ennemis regroupés sans toucher son partenaire ; tentacules noirs sur un passage ou un groupe encore éloigné de lui ; mur de feu pour isoler une partie des défenseurs.
+
+step: C'est à elle de rejoindre la cour
+  do: Descendre en charge sur un ennemi accessible et porter une attaque de pelle de moine
+  note: Échelonner les descentes : un oni rejoint la mêlée pendant que l'autre soutient encore depuis les hauteurs. La charge ne donne pas l'attaque à outrance.
+
+## Rounds suivants
+
+step: Les deux oni sont dans la cour et un ennemi est à portée
+  do: Attaquer l'adversaire le plus proche à la pelle de moine ; effectuer une attaque à outrance si elle peut rester sur place
+  note: La routine fournie est +20/+20/+15/+10, 1d8+10 par coup, avant les modificateurs des pouvoirs actifs et des dons employés.
+
+step: Elle doit se déplacer pour atteindre sa cible
+  do: Avancer puis employer Frappe décisive sur une seule attaque de pelle de moine
+  note: Garder les ennemis dans son allonge de 3 m ; utiliser le vol pour franchir les obstacles.
+
+step: Un adversaire puissant dépend de son arme
+  do: Tenter de briser cette arme avec sa manœuvre de destruction à +24
+  note: Destruction améliorée permet cette tentative sans attaque d'opportunité de la cible ; sa propre DMD est de 35 contre la destruction.
+
+step: Un pouvoir de contact peut renforcer son assaut
+  do: Canaliser contact glacial ou décharge électrique par sa pelle de moine grâce à sa capacité de frappe magique
+  note: Décompter l'utilisation du pouvoir choisi ; contact glacial a un DD de 14.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge
+  do: Envisager Enchaînement pour frapper deux adversaires ; employer Attaque en puissance quand la cible est assez facile à toucher
+  note: Enchaînement remplace l'attaque à outrance ; son second coup dépend de la réussite du premier.
+
+step: Avant la rage, un obstacle l'empêche de rejoindre un adversaire
+  do: Employer porte dimensionnelle pour retrouver une position d'assaut
+  note: Elle ne peut plus agir après l'utilisation de porte dimensionnelle pendant ce tour.
+
+step: Aucun adversaire n'est accessible en mêlée et elle conserve sa liberté d'utiliser ses pouvoirs
+  do: Employer ses pouvoirs de zone restants ; à défaut, lancer une javeline
+  note: Éviter de placer les zones dangereuses sur son partenaire.
+
+## Repli
+
+step: Tokikokito tombe à 75 pv ou moins
+  do: Lancer rage sur elle et son partenaire, puis poursuivre sauvagement les attaques physiques
+  note: Elle combat ensuite jusqu'à la mort. Porte dimensionnelle sert au repositionnement avant cette phase ; sa tactique ne prévoit aucune fuite.

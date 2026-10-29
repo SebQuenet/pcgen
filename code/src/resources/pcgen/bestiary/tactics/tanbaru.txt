@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Tanbaru, oni spirituel de taille TP, loyal mauvais, dirige des sculptures de fer en restant invisible. Il privilégie ces intermédiaires et ses pouvoirs magiques.
+  37 pv, CA 18, guérison accélérée 2 ; déplacement au sol 3 m, vol 9 m avec une bonne manœuvrabilité ; vision dans le noir à 18 m.
+  Morsure +11 (1d4) et coup de corne +11 (1d4 et poison) ; allonge 0 m. Initiative +8, Discrétion +20, Vol +20.
+
+resource: Détection de la magie | constant | NLS 8
+resource: Invisibilité | à volonté | sur lui-même uniquement
+resource: Injonction | 3/jour | Volonté DD 14
+resource: Cri perçant (ear-piercing scream) | 3/jour | Vigueur DD 14
+resource: Confusion partielle (lesser confusion) | 3/jour | Volonté DD 14
+resource: Brume de dissimulation | 3/jour | masque les lignes de vue
+resource: Sommeil profond | 1/jour | Volonté DD 16
+resource: Dissipation de la magie | 1/jour | NLS 8
+resource: Image miroir | 1/jour | protection personnelle
+resource: Ténèbres | 1/jour | gêne les adversaires dépendant de la lumière
+resource: Image permanente | déjà dépensée cette semaine | lancée plus tôt dans la semaine, indisponible pendant ces combats
+
+step: Avant l'arrivée des PJ
+  do: Utiliser invisibilité et se fixer au visage d'une des deux sculptures de fer spécialement conçues pour être animées sous sa direction
+  note: Ces sculptures sont prévues par la rencontre ; ne pas étendre cette faculté à d'autres statues
+
+## Ouverture
+
+step: Premier combat, les sentinelles duergars combattent encore
+  do: Animer et diriger la sculpture à laquelle il est fixé pour attaquer les PJ
+  note: Diriger les attaques de cette sculpture ne rompt pas son invisibilité ; il n'utilise aucun de ses propres pouvoirs offensifs pendant ce combat
+
+step: Second combat, les PJ viennent de refuser son aide
+  do: Les invectiver en tien et engager le combat avec toute sculpture utilisable encore intacte
+  note: Après les sculptures, il emploie ses propres pouvoirs offensifs ; les utilisations déjà dépensées ne sont pas renouvelées
+
+## Rounds suivants
+
+step: Premier combat, la sculpture dirigée est détruite et l'autre reste utilisable
+  do: Voler jusqu'à l'autre sculpture, s'y fixer et la diriger à son tour
+  note: Rester invisible pendant le transfert et continuer à laisser la sculpture porter les attaques
+
+step: Second combat, une sculpture utilisable subsiste
+  do: Continuer à la faire combattre ; rejoindre l'autre si la première est détruite et que l'autre reste intacte
+
+step: Second combat, il doit désormais combattre personnellement et image miroir est disponible
+  do: Consacrer une action à image miroir avant de s'exposer davantage
+  note: Ses pouvoirs magiques sont de NLS 8, avec concentration +11
+
+step: Second combat, plusieurs adversaires peuvent être pris dans sommeil profond
+  do: Utiliser sommeil profond, Volonté DD 16
+  note: Un pouvoir offensif rompt son invisibilité ; il accepte désormais de se dévoiler
+
+step: Second combat, un adversaire actif doit être neutralisé
+  do: Utiliser injonction ou confusion partielle, Volonté DD 14, selon la situation
+  note: Choisir un seul pouvoir à son tour ; privilégier les adversaires qui peuvent l'atteindre en vol
+
+step: Second combat, il veut blesser directement une cible
+  do: Utiliser cri perçant, Vigueur DD 14, tant qu'il lui reste des utilisations
+
+step: Second combat, une protection magique adverse gêne ses attaques
+  do: Tenter dissipation de la magie sur cette protection
+
+step: Second combat, il subit une forte pression
+  do: Consacrer une action à brume de dissimulation ou à ténèbres si cela peut gêner les PJ, puis se repositionner en vol à son tour suivant
+  note: Sa guérison accélérée lui rend 2 pv par round ; il reste engagé dans le combat
+
+step: Second combat, les pouvoirs utiles sont épuisés et une cible partage déjà sa case
+  do: Porter une attaque à outrance avec morsure +11 (1d4) et coup de corne +11 (1d4 et poison)
+  note: Son allonge de 0 m l'oblige à entrer dans la case adverse pour attaquer au corps à corps ; les effets et le DD du poison ne sont pas précisés dans le profil fourni
+
+## Repli
+
+step: Premier combat, les deux sculptures utilisables sont détruites mais les duergars combattent encore
+  do: Voler invisiblement au-dessus de la mêlée et attendre la fin du combat
+
+step: Les PJ ont vaincu les sentinelles duergars
+  do: Mettre fin à son invisibilité et tenter de parlementer ; proposer son aide pour se déplacer dans la forteresse
+  note: Il cesse alors les hostilités, même s'il lui reste une sculpture utilisable
+
+step: Les PJ acceptent son offre
+  do: Poursuivre les pourparlers sans reprendre le combat
+
+step: Les PJ refusent son offre
+  do: Entrer dans une rage soudaine et déclencher le second combat décrit ci-dessus
+  note: Pendant ce second combat, Tanbaru se bat jusqu'à la mort ; aucun seuil de pv ne provoque sa fuite

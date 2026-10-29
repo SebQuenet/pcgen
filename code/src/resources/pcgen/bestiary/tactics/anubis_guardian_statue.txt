@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Statue gardienne d'Anubis, objet animé en pierre de taille M, neutre et sans intelligence. Elle combat au corps à corps : khopesh de maître +6 (1d8+2, critique 19-20) ou coup +5 (1d6+3).
+  36 pv ; CA 16, contact 10 ; solidité 8 ; immunités des créatures artificielles. Déplacement de 9 m ; allonge de 1,50 m.
+
+note: Vigilance
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5. Ne pas lui attribuer une vigilance ou une capacité d'anticipation supérieures à celles de son profil.
+
+note: Défaut hanté
+  L'esprit qui la hante la rend sensible aux dégâts d'énergie positive comme une créature morte-vivante et permet de la repérer par détection des morts-vivants.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Frapper au khopesh de maître : +6, 1d8+2 dégâts, critique sur 19-20.
+
+step: Aucun adversaire n'est à portée de mêlée
+  do: Avancer vers l'adversaire accessible le plus proche, jusqu'à 9 m, puis frapper au khopesh si la cible est à portée.
+  note: Si un seul déplacement ne suffit pas, consacrer une seconde action de mouvement à l'approche, jusqu'à 18 m au total, sans attaquer ce round.
+
+## Rounds suivants
+
+step: L'adversaire reste au contact
+  do: Continuer à le frapper au khopesh, sans disperser les attaques entre plusieurs cibles.
+  note: Sa solidité 8 lui permet de soutenir un échange de coups ; appliquer cette défense aux dégâts qui ne la contournent pas.
+
+step: Le khopesh est perdu ou inutilisable
+  do: Utiliser le coup : +5, 1d6+3 dégâts.
+  note: Le profil présente le khopesh et le coup comme deux options alternatives ; ne pas les additionner dans une même séquence d'attaques.
+
+step: La cible s'éloigne
+  do: Avancer pour rétablir le contact, puis attaquer si une action simple reste disponible.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 1,50 m
+  do: Porter une attaque de khopesh, ou un coup si l'arme est inutilisable.
+  note: Une seule attaque d'opportunité par round.
+
+## Repli
+
+step: La statue est endommagée mais possède encore des points de vie
+  do: Continuer le combat sans repli volontaire ; elle ne prend pas de décision de fuite fondée sur ses blessures.
+
+step: Points de vie à 0
+  do: La statue est détruite ; elle cesse de combattre.

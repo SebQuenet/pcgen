@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Yrldak, norn de taille G, loyale neutre, cherche à retrouver ses sœurs après sa renaissance. Elle préfère obtenir de l'aide plutôt que risquer sa quête dans un combat inutile.
+  Cisailles +17/+12, 1d8+12, critique sur 15–20 et absorption d'énergie ; toucher +7 avec absorption d'énergie. Allonge de 3 m ; déplacement de 9 m en armure ; 138 points de vie, CA 24.
+  Régénération 5 interrompue par le fer froid ; réduction des dégâts 10/fer froid ; immunité au froid ; résistances acide, électricité et feu 15 ; résistance à la magie 21.
+
+resource: Labyrinthe | 1/jour | portée 15 m ; aucun jet de sauvegarde ; résistance à la magie applicable
+resource: Moment de prescience | 1/jour | durée 10 heures ou jusqu'à utilisation ; bonus d'intuition de +10 sur un seul jet admissible
+resource: Assassin imaginaire | 1/jour | portée 60 m ; Volonté DD 19, puis Vigueur DD 19
+resource: Malédiction, divination, dissipation suprême, marche des vents | à volonté | NLS 10 ; marche des vents sur elle seule
+resource: Protection contre la mort, don des langues, vision lucide | constants | protections et perceptions déjà disponibles
+
+step: Elle dispose du temps nécessaire avant une rencontre dangereuse
+  do: Consulter divination sur la conduite à tenir, puis activer moment de prescience
+  note: Garder son bonus pour une sauvegarde décisive ; l'utiliser avant de lancer le dé. Divination conseille sur une action envisagée sans révéler automatiquement les capacités des adversaires.
+
+step: Des inconnus l'approchent sans l'attaquer
+  do: Parler grâce au don des langues et proposer une aide réciproque pour retrouver ses sœurs
+  note: Vision lucide aide à déjouer les illusions ; Perception +19 et Psychologie +19 guident sa prudence.
+
+## Ouverture
+
+step: Plusieurs ennemis attaquent et leur combattant le plus dangereux est à 15 m ou moins
+  do: L'écarter avec labyrinthe, en priorité s'il manie du fer froid
+  note: La victime peut tenter chaque round un test d'Intelligence DD 20, au prix d'une action complexe, pour revenir ; le labyrinthe dure au maximum 10 minutes. Yrldak attaque les autres pendant cette absence.
+
+step: Les protections magiques visibles d'un adversaire gênent ses attaques
+  do: Employer dissipation suprême avant de l'affronter
+  note: Test de dissipation à +10 ; jusqu'à deux sorts dissipés sur une cible. Viser notamment une protection contre la mort identifiée, qui empêcherait l'absorption d'énergie.
+
+step: Un ennemi est déjà à portée et aucune neutralisation urgente ne s'impose
+  do: Attaque à outrance aux cisailles, +17/+12, en concentrant les coups sur une cible
+
+## Rounds suivants
+
+step: Une cible reste à 3 m ou moins
+  do: Maintenir la pression par les deux attaques de cisailles ; employer un pas de 1,50 m si nécessaire pour conserver cette attaque à outrance
+  note: Si elle doit effectuer un déplacement normal, elle ne porte qu'une attaque à +17. Le toucher +7 avec absorption d'énergie offre une solution contre une armure difficile à percer.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Frapper aux cisailles à +17
+  note: Attaques réflexes autorise jusqu'à deux attaques d'opportunité par round ; une simple entrée dans son allonge ne suffit pas à en provoquer une.
+
+step: Un adversaire tenace peut être touché sans exposer Yrldak à une riposte dangereuse
+  do: Employer malédiction au contact, Volonté DD 18, pour infliger un malus de –4 aux attaques, sauvegardes et tests de caractéristique ou de compétence
+  note: Cette préparation rend ses attaques et son assassin imaginaire plus dangereux aux rounds suivants.
+
+step: Une cible vivante paraît vulnérable à la peur, surtout après une malédiction
+  do: Employer assassin imaginaire
+  note: Volonté DD 19 annule ; sinon Vigueur DD 19 évite la mort mais laisse subir 3d6 dégâts. Choisir une autre tactique contre une immunité à la peur connue.
+
+step: Elle veut employer un pouvoir magique alors qu'un ennemi la menace
+  do: Sortir de son allonge si possible ; sinon utiliser le pouvoir sur la défensive
+  note: Concentration +15 ; un pouvoir magique utilisé sans cette précaution provoque une attaque d'opportunité.
+
+## Repli
+
+step: Points de vie sous 45, ou blessures répétées au fer froid
+  do: Rompre le contact par une retraite ; employer labyrinthe sur le poursuivant principal si cette utilisation reste disponible
+  note: Préserver sa vie pour retrouver ses sœurs. Le fer froid contourne sa réduction des dégâts et suspend sa régénération pendant le round suivant les dégâts.
+
+step: Elle a obtenu une marge suffisante pour s'échapper
+  do: Employer marche des vents sur elle-même et fuir sous forme de vapeur
+  note: Prévoir 5 rounds pour passer en vapeur ; ce pouvoir ne remplace pas une retraite immédiate au contact. Le vent permet ensuite de parcourir jusqu'à 180 m par round. Une fois à l'abri et la régénération rétablie, elle récupère 5 points de vie par round.

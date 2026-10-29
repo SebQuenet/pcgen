@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Jarpr est un troll des montagnes de taille TG, chaotique neutre : 207 pv, CA 29, allonge et espace occupé de 4,50 m.
+  Morsure +24 (2d10+13), deux griffes +24 (2d6+13) ; rochers +13/+8/+3 (2d8+19). Il combine sa force, son allonge et ses pouvoirs sur la pierre pour diviser les ennemis.
+  Déplacement terrestre et escalade à 12 m ; creusement à 3 m. Vision dans le noir à 18 m, vision nocturne, odorat et Perception +15.
+
+note: Défenses et faiblesses
+  Régénération 10 : il récupère 10 pv au début de son tour ; des dégâts de feu ou d'acide suppriment cette récupération au round suivant et permettent alors de le tuer normalement.
+  Les dégâts sonores sont augmentés de moitié. Après avoir identifié ces menaces, il cherche à atteindre leur source ou à se mettre à couvert.
+  Obstination : après un échec contre un charme ou une coercition, nouveau jet de Volonté au round suivant pour mettre fin à l'effet. Son bonus de Volonté reste +15.
+
+resource: Façonnage de la pierre | à volonté | pouvoir magique, NLS 14 ; remodelage limité de pierre existante
+resource: Pierres acérées | 3/jour | pouvoir magique, Réflexes DD 13 ; durée 14 heures
+resource: Pierres commères | 3/jour | pouvoir magique ; interroger la pierre sur ce qu'elle a observé
+resource: Tremblement de terre | 1/jour | pouvoir magique, DD 17 ; rayon de 24 m, effets selon le terrain
+resource: Pétrification | 1/jour | pouvoir magique, Vigueur DD 15 annule
+resource: Convocation de monstres VIII | 1/jour | pouvoir magique ; élémentaire de Terre uniquement, durée 14 rounds
+resource: Volonté de fer supérieure | 1/jour | relancer un jet de Volonté avant d'en connaître le résultat ; conserver le second jet
+
+step: Il a le temps d'examiner les lieux
+  do: Utiliser Pierres commères pour repérer les passages récents ; choisir un passage étroit qu'il peut défendre avec son allonge, avec des rochers disponibles et une issue accessible.
+  note: Façonnage de la pierre peut aménager un petit obstacle ou une ouverture dans la pierre existante, dans les limites du volume du pouvoir.
+
+step: Des ennemis approchent par un sol rocheux et il dispose d'un round de préparation
+  do: Placer Pierres acérées sur leur trajet en conservant un chemin libre pour lui-même.
+  note: La zone impose une vitesse réduite de moitié et inflige 1d8 dégâts par tranche de 1,50 m parcourue. Après des dégâts, Réflexes DD 13 évite la blessure qui prolonge le ralentissement ; ce jet n'annule pas les dégâts. Jarpr doit aussi éviter cette zone.
+
+## Ouverture
+
+step: Les adversaires sont encore hors de portée de mêlée
+  do: Utiliser Convocation de monstres VIII pour faire apparaître un élémentaire de Terre noble entre les ennemis et lui.
+  note: Le pouvoir demande une action simple ; l'élémentaire agit immédiatement contre ses adversaires. Si la convocation a été préparée juste avant le combat, passer directement à une autre option.
+
+step: Les ennemis sont groupés dans une zone dont il peut rester éloigné
+  do: Envisager Tremblement de terre pour les immobiliser pendant la secousse et exploiter les effondrements ou fissures permis par le terrain.
+  note: Garder Jarpr et son chemin de repli hors de la zone et des effondrements. Cette ouverture remplace la convocation pour ce round ; chaque pouvoir magique utilise sa propre action simple.
+
+step: Un adversaire est déjà à 4,50 m ou moins
+  do: Faire une attaque à outrance : morsure +24 (2d10+13) et deux griffes +24 (2d6+13), en concentrant les coups sur une cible.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement important
+  do: Répéter l'attaque à outrance ; utiliser Attaque en puissance si la cible est facile à toucher.
+  note: Avec Attaque en puissance, les trois attaques passent à +20 ; morsure 2d10+21 et chaque griffe 2d6+21.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer jusqu'à 12 m puis porter une morsure avec Frappe décisive supérieure : +24, 6d10+13.
+  note: Avec Attaque en puissance : +20, 6d10+21. Cette attaque unique utilise une action simple.
+
+step: Un ennemi corporel de taille G ou inférieure bloque une issue ou longe les pierres acérées
+  do: Utiliser Coup fabuleux, en action simple : manœuvre à +28 contre son DMD, pour le projeter de 3 m et le mettre à terre.
+  note: Choisir une direction qui dégage la retraite ou repousse la cible vers le terrain dangereux.
+
+step: Un adversaire dangereux, apparemment moins robuste, reste hors de mêlée
+  do: Tenter Pétrification sur lui, Vigueur DD 15 annule ; viser en priorité une source identifiée de feu, d'acide ou de dégâts sonores.
+
+step: Les adversaires restent à distance et les pouvoirs appropriés sont épuisés ou peu utiles
+  do: Lancer un rocher +13 (2d8+19), ou trois rochers à +13/+8/+3 s'il peut consacrer une attaque à outrance aux lancers.
+  note: Extraction rapide permet d'enchaîner les projectiles disponibles. Contre une cible facile à toucher, Visée mortelle donne +9/+4/-1 et 2d8+27 par rocher.
+
+step: Un rocher est lancé sur lui et il peut l'intercepter
+  do: Utiliser la réception de rochers pour tenter de l'attraper.
+
+## Repli
+
+step: Ses pv passent sous 60, ou le feu et l'acide empêchent durablement sa régénération
+  do: Rompre le contact et gagner un couvert ; escalader à 12 m ou creuser à 3 m dans un terrain meuble approprié pour quitter les lignes de tir.
+  note: Utiliser si nécessaire l'action de retraite pour s'éloigner. La vitesse de creusement ne permet pas de traverser la roche pleine.
+
+step: Les poursuivants approchent encore et il peut consacrer un round à les ralentir
+  do: Placer une nouvelle zone de Pierres acérées sur leur trajet rocheux ; employer Façonnage de la pierre si une petite ouverture peut être refermée dans les limites du pouvoir.
+
+step: Il est à couvert et ne subit plus de feu ni d'acide
+  do: Rester hors d'atteinte pour récupérer grâce à la régénération 10, jusqu'à un maximum de 207 pv.

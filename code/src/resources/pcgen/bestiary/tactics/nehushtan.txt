@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Créature magique de taille TP, neutre bonne : privilégier la protection et l’évitement du combat. 19 pv, CA 18 ; déplacement 9 m, escalade 4,50 m.
+  Morsure +3 (1d3-2 et poison). Allonge 0 m : il doit entrer dans l’espace de sa cible pour mordre, ce qui l’expose aux attaques d’opportunité.
+  Discrétion +17, Perception +8, Escalade +11, Acrobaties +6 ; vision dans le noir à 18 m et vision nocturne. Immunisé aux maladies et aux poisons.
+
+note: Capacités non détaillées
+  Le profil mentionne un poison et une peau curative sans en donner les règles : ne leur attribuer aucun DD, dégât ou effet de guérison supplémentaire.
+
+resource: Diagnostic des maladies | à volonté | NLS 3
+resource: Communication avec les animaux | à volonté | serpents uniquement ; ne permet pas de les commander
+resource: Hypnotisme | 3/jour | Volonté DD 12
+resource: Soulagement des malaises (remove sickness) | 3/jour | soutien aux alliés affectés
+resource: Sanctuaire | 3/jour | Volonté DD 12
+resource: Neutralisation du poison | 1/jour | à réserver à un allié empoisonné
+resource: Guérison des maladies | 1/jour | à réserver à un allié malade
+
+step: Une menace approche sans l’avoir repéré
+  do: Rester caché sous un couvert et repérer une issue ou un support escaladable
+  note: Il comprend le commun mais ne parle pas ; il peut communiquer avec les serpents grâce à son pouvoir.
+
+step: Un allié présente des symptômes avant l’affrontement
+  do: Employer diagnostic des maladies, puis le pouvoir de soutien approprié si nécessaire
+  note: Conserver les utilisations quotidiennes restantes pour les besoins réels ; ses immunités rendent ces soins inutiles sur lui-même.
+
+## Ouverture
+
+step: Les adversaires ne sont pas encore engagés dans un combat
+  do: Tenter hypnotisme pour fasciner une cible et permettre l’évitement de l’affrontement, puis rejoindre un abri
+  note: DD 12 ; une menace manifeste peut interrompre la fascination. Ne pas compter sur ce pouvoir pour neutraliser durablement un combattant.
+
+step: Le combat devient inévitable et il est encore hors de l’allonge ennemie
+  do: Activer sanctuaire, puis se placer à couvert ou auprès d’un allié à secourir
+  note: Sanctuaire protège les déplacements et les soins ; attaquer met fin à sa protection. Les attaques de zone restent dangereuses.
+
+step: Il doit mordre pour défendre sa vie ou un allié
+  do: Entrer dans l’espace d’un adversaire isolé et porter une morsure +3
+  note: Souplesse du serpent améliore sa défense contre les attaques d’opportunité provoquées par ses déplacements ; elle ne les supprime pas.
+
+## Rounds suivants
+
+step: Il est sous sanctuaire et peut encore aider
+  do: Se déplacer vers un allié accessible et employer le pouvoir de soutien adapté, sans attaquer
+  note: Éviter de lancer ses pouvoirs dans une zone menacée : leur utilisation peut provoquer une attaque d’opportunité.
+
+step: Il reste engagé et doit poursuivre le combat
+  do: Mordre une fois par round tant que la cible partage son espace ; profiter d’un allié proche pour limiter son exposition
+  note: Ses faibles dégâts et ses 19 pv rendent les échanges prolongés défavorables. Ne pas gaspiller une action à relancer sanctuaire pour attaquer aussitôt.
+
+step: Une issue se libère ou l’adversaire cesse les hostilités
+  do: Rompre l’engagement et gagner un couvert ; utiliser l’escalade si le terrain permet de sortir de portée
+
+## Repli
+
+step: Il tombe à 9 pv ou moins, ou plusieurs adversaires peuvent l’attaquer
+  do: Employer l’action de retraite pour gagner un abri, puis se cacher dès que le couvert le permet
+  note: La retraite ne protège pas de toutes les attaques d’opportunité du trajet ; choisir une sortie qui évite les autres ennemis.
+
+step: Il peut agir hors de l’allonge ennemie et dispose encore de sanctuaire
+  do: Activer sanctuaire et poursuivre la fuite sans mordre
+  note: Rejoindre un refuge par un passage étroit ou une paroi escaladable ; ne pas revenir au contact une fois la menace écartée.

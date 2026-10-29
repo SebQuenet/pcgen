@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Aeteperax, dragon vert jeune adulte de taille TG, loyal mauvais, combat depuis les airs avant d'écraser ses adversaires au contact. Il possède 149 PV et une CA de 28, armure de mage comprise.
+  Ses armes principales sont son souffle acide et sa morsure +18 (2d8+10, critique 19-20). À outrance : morsure, 2 griffes +18 (2d6+7 chacune), queue +13 (2d6+10) et 2 ailes +13 (1d8+3 chacune).
+  Déplacement terrestre et nage : 12 m ; vol : 60 m, manœuvrabilité médiocre. Allonge : 3 m, ou 4,50 m avec la morsure.
+  Réduction des dégâts 5/magie, résistance à la magie 22 ; immunité à l'acide, à la paralysie et au sommeil. Il respire sous l'eau et traverse les sous-bois sans être gêné.
+
+resource: Sorts de niveau 1 | 6 par jour, réserve commune | armure de mage, graisse, rayon affaiblissant ; NLS 3
+resource: Bâton d'illusion | 2 charges restantes | à réserver à image miroir avant la mêlée
+resource: Enchevêtrement | à volonté | DD 13, NLS 13
+resource: Charme-personne | à volonté | DD 13, NLS 13
+resource: Appel de grioths | 3 par jour | NLS 13 ; ne pas supposer de nombre ou de profil de renforts absent du bloc
+
+step: Avant l'arrivée des intrus
+  do: Lancer armure de mage
+  note: La CA 28 inclut déjà son bonus de +4 ; dépenser un des six sorts de niveau 1, sans ajouter une seconde fois ce bonus.
+
+step: Il peut choisir sa position
+  do: Se poster sur une corniche permettant d'approcher le groupe en vol et de rejoindre ensuite une autre corniche
+  note: Avec sa manœuvrabilité médiocre, privilégier des points où se poser pour lancer ses sorts.
+
+## Ouverture
+
+step: Le combat commence
+  do: Descendre en vol et utiliser le souffle pour prendre le plus d'adversaires possible dans sa zone
+  note: Le bloc fourni ne précise pas les dimensions, les dégâts, le DD ni le délai de recharge du souffle ; employer les valeurs de la fiche complète.
+  note: Présence terrifiante dans un rayon de 45 m, DD 20, lors de son attaque ou de son passage en vol au-dessus des intrus.
+
+## Rounds suivants
+
+step: Pendant les premiers rounds, les adversaires sont encore en contrebas
+  do: Passer d'une corniche à l'autre et employer ses sorts ou enchevêtrement pour affaiblir le groupe
+  note: Prévoir le déplacement et un seul sort ou pouvoir magique par tour ; il n'a pas de capacité indiquée permettant d'attaquer au milieu d'un déplacement en vol puis de poursuivre ce même déplacement.
+
+step: Plusieurs adversaires se trouvent dans une zone de végétation
+  do: Lancer enchevêtrement, DD 13, pour gêner leurs déplacements
+  note: Exploiter la végétation présente ; ce pouvoir ne justifie pas d'en faire apparaître sur une corniche nue.
+
+step: Un combattant approche ou un passage étroit canalise les intrus
+  do: Lancer graisse sur le sol pour compliquer leur progression
+  note: Chaque lancement puise dans les sorts de niveau 1 encore disponibles.
+
+step: Un adversaire puissant dépend de sa force physique
+  do: Lancer rayon affaiblissant sur lui avant d'engager la mêlée
+  note: DD 13 ; ce sort utilise la même réserve que graisse et armure de mage.
+
+step: Le souffle est de nouveau disponible et plusieurs adversaires peuvent être pris ensemble
+  do: Rechercher un angle permettant de les atteindre avec le souffle
+  note: Éviter de sacrifier une attaque à outrance contre une cible dangereuse pour un souffle qui n'atteindrait qu'un adversaire secondaire.
+
+step: Il se prépare à descendre au contact
+  do: Utiliser le bâton pour lancer image miroir, puis déposer le bâton en lieu sûr avant de plonger vers les adversaires
+  note: Les deux charges restantes sont destinées à cette protection ; ne pas prévoir image persistante ou double illusoire en plus.
+
+step: Il rejoint une cible sans pouvoir effectuer une attaque à outrance
+  do: Se déplacer jusqu'à portée de morsure, puis porter une morsure avec Science de la frappe décisive : +18, 6d8+10
+  note: Cette attaque simple constitue sa première attaque de mêlée. Elle ne se combine ni avec une charge ni avec une attaque à outrance.
+
+step: Des adversaires restent à portée au début de son tour
+  do: Effectuer une attaque à outrance : morsure +18, 2 griffes +18, queue +13 et 2 ailes +13
+  note: Répartir les attaques entre plusieurs cibles. Les griffes, les ailes et la queue ont une allonge de 3 m ; la morsure atteint 4,50 m.
+
+step: Un adversaire se révèle particulièrement dangereux
+  do: Concentrer sur lui toutes les attaques qu'il peut porter
+  note: Conserver la frappe décisive pour les tours où le déplacement empêche l'attaque à outrance.
+
+## Repli
+
+step: Ses points de vie tombent sous 40
+  do: Gagner la zone G8 et commencer à rassembler ses livres et son trésor
+  note: Il comprend le danger, mais son obsession pour ses biens retarde sa fuite. Rima s'est cachée dans la grotte ; il rugit de rage s'il ne la voit pas.
+
+step: Les intrus mettent plus de 5 minutes à le rejoindre
+  do: Trouver et tuer Rima, puis fuir la région avec l'essentiel du trésor enveloppé dans la peau de chimère et serré contre sa poitrine
+
+step: Les intrus le rejoignent avant ce délai et il a déjà trouvé Rima
+  do: La prendre en otage et proposer de la rendre vivante s'ils le laissent partir avec son trésor
+
+step: Les intrus tentent de le tuer pendant la prise d'otage
+  do: Relancer l'initiative ; à son tour, lâcher Rima et utiliser le souffle contre les intrus
+  note: Respecter la disponibilité effective du souffle. Dès cet instant, Aeteperax s'obstine et combat jusqu'à la mort.

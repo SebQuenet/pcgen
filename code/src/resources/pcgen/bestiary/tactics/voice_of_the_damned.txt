@@ -1,0 +1,90 @@
+## Avant le combat
+
+note: Profil
+  Voice Of The Damned, extérieur natif de taille G, neutre mauvais, FP 25 : un adversaire extrêmement intelligent qui combine symboles, terreur et mobilité aérienne pour diviser les intrus.
+  565 PV, CA 43 ; déplacement 18 m, vol 54 m parfait ; espace et allonge 3 m. Attaque à outrance : 2 griffes +42 (1d6+14), 4 coups +42 (1d6+14, critique 19-20), 2 ailes +40 (1d8+7). Sous forme d'essaim : 8d6 et distraction.
+  Présence terrifiante à 30 m, Volonté DD 32 ; pouvoirs magiques au NLS 25. Il préfère neutraliser plusieurs ennemis avant d'exposer son corps aux combattants.
+
+note: Défenses
+  Régénération 25, interrompue par les attaques déifiques ou mythiques ; RD 20 à franchir par une attaque épique, bonne et en argent. RM 36 ; résistances acide, électricité et feu 25.
+  Immunisé notamment au froid, au son, aux effets mentaux et de mort, aux poisons et aux diminutions ou absorptions de caractéristiques. Liberté de mouvement, vision lucide et aura maudite sont déjà actives ; conserver le DD 26 de cette aura.
+
+resource: Faux-semblant | 3/jour | diversion et invisibilité pour changer de position
+resource: Symbole d'aliénation mentale | 3/jour | Volonté DD 26
+resource: Symbole de faiblesse | 3/jour | Vigueur DD 25
+resource: Symbole de mort accéléré | 1/jour | action rapide, Vigueur DD 26
+resource: Convocation | 1/jour | niveau 9, réussite 100 % ; un balor, un oléthrodaemon ou un diable des fosses
+resource: Ennemi subconscient de groupe | 1/jour | Volonté puis Vigueur, DD 27
+
+note: Maître des symboles
+  Ses symboles demandent une action simple, sauf le symbole de mort accéléré, et peuvent flotter dans l'air sans support. Préparer des runes visibles avec un déclencheur précis, par exemple lorsqu'un intrus les regarde ; leur zone s'étend à 18 m.
+  Donner par télépathie le mot de passe des runes à son allié convoqué. Une sauvegarde réussie ne se relance pas chaque round si la cible demeure dans la zone.
+
+step: Il repère les intrus avant leur arrivée
+  do: Observer avec Perception +44, détection du Bien et vision lucide ; utiliser mirage et image persistante pour suggérer des accès menant à ses symboles de terreur, Volonté DD 24
+  note: Les illusions servent à orienter les déplacements ; les runes doivent rester visibles pour fonctionner.
+
+step: Le combat est imminent et il dispose du temps nécessaire
+  do: Convoquer un diable des fosses pour occuper les combattants ; prendre de la hauteur et conserver un passage de fuite
+  note: La convocation consomme son unique utilisation quotidienne, quel que soit le choix de créature. La télépathie porte à 90 m.
+
+## Ouverture
+
+note: Choisir son action
+  Prendre l'option adaptée à la situation : une seule action simple par round. Le symbole de mort accéléré peut s'y ajouter comme action rapide ; une attaque à outrance demande le round complet.
+
+step: Il n'a pas encore convoqué d'allié et peut rester hors du contact
+  do: Commencer la convocation depuis une position protégée
+  note: Elle demande 1 round et s'achève au début de son tour suivant ; il ne lance pas un autre pouvoir en action simple pendant cette incantation.
+
+step: Plusieurs ennemis non mauvais de 20 DV ou moins sont à 12 m ou moins
+  do: Lancer blasphème pour les paralyser et les affaiblir, puis exploiter leur incapacité à agir
+  note: Au NLS 25, les effets dépendent des DV et du jet de Volonté ; les créatures de plus de 25 DV sont épargnées. Même une sauvegarde réussie ne supprime pas entièrement la paralysie des cibles de 20 DV ou moins.
+
+step: Plusieurs ennemis sensibles à la peur sont regroupés, à 9 m au plus les uns des autres
+  do: Utiliser ennemi subconscient de groupe, DD 27, en ciblant notamment les lanceurs de sorts
+  note: Chaque cible tente Volonté pour dissiper l'illusion, puis Vigueur si elle y croit. Un échec aux deux jets la tue ; réussir seulement Vigueur laisse notamment la cible étourdie 1 round.
+
+step: Un ennemi déjà blessé à 150 PV ou moins peut voir une nouvelle rune
+  do: Inscrire un symbole de mort accéléré bien en vue, avec un déclenchement à la vue, Vigueur DD 26
+  note: Le symbole dispose d'un total de 150 PV de victimes ; il examine d'abord les créatures les plus proches et ignore celles qui dépassent le total restant. Il ne tue pas automatiquement une cible et n'affecte pas les créatures immunisées aux effets de mort.
+
+## Rounds suivants
+
+step: Des protections magiques empêchent ses pouvoirs de neutraliser les adversaires
+  do: Employer dissipation suprême sur la cible prioritaire, puis exploiter les protections effectivement dissipées au round suivant
+  note: Privilégier les défenses contre la peur, les effets mentaux ou la mort selon le pouvoir envisagé ; ne pas insister sur une immunité naturelle.
+
+step: Des ennemis restent groupés et vulnérables aux effets mentaux
+  do: Placer un symbole d'aliénation mentale visible, Volonté DD 26 ; employer ensuite symbole de terreur à volonté, Volonté DD 24, pour disperser les survivants
+  note: Les symboles contrôlent une zone fixe : attirer les adversaires vers elle plutôt que poursuivre les fuyards au contact.
+
+step: Les combattants physiques dominent l'affrontement
+  do: Placer un symbole de faiblesse sur leur trajet, Vigueur DD 25, puis laisser l'allié convoqué retenir ceux qui résistent
+  note: Cette option vise leur Force ; elle est inutile contre une cible immunisée aux diminutions de caractéristiques.
+
+step: Une cible dangereuse reste à 3 m ou moins et il peut demeurer sur place
+  do: Faire l'attaque à outrance complète et concentrer les huit attaques sur cette cible
+  note: Appliquer Critique ralentissant sur un critique confirmé. Attaque en puissance convient aux cibles faciles à toucher ; garder les bonus d'attaque normaux contre les meilleures CA.
+
+step: Un adversaire terrestre peut être renversé dans son allonge
+  do: Tenter un croc-en-jambe à +48 ; exploiter la chute avec les attaques d'opportunité permises par Croc-en-jambe supérieur
+  note: Réflexes de combat permet plusieurs attaques d'opportunité ; surveiller aussi les déplacements et les incantations qui en provoquent dans son allonge de 3 m.
+
+step: Il doit frapper tout en restant mobile
+  do: Utiliser Attaque en vol sur un trajet total de 54 m au plus et porter un seul coup avec Frappe décisive supérieure : +42, 4d6+14
+  note: Continuer le déplacement après le coup pour sortir du contact ; cette manœuvre ne donne pas les huit attaques d'une attaque à outrance et n'empêche pas les attaques d'opportunité adverses.
+
+step: Les armes constituent la menace principale et les attaques de zone sont rares
+  do: Se désincarner en action libre, occuper l'espace d'une cible sous forme d'essaim et infliger 8d6 plus distraction ; continuer à utiliser ses pouvoirs magiques
+  note: Cette forme conserve ses défenses et l'immunité aux dégâts des armes propre aux essaims de créatures infimes ; elle perd griffes, coups et ailes. Les dégâts de zone sont augmentés de moitié ; reprendre sa forme normale demande une action complexe et au moins 1 PV.
+
+## Repli
+
+step: Ses PV passent sous 150 ou sa régénération est neutralisée et les ennemis peuvent l'achever
+  do: Utiliser téléportation suprême vers un refuge connu du même plan ; laisser l'allié convoqué occuper la poursuite
+  note: Ce seuil est un choix de prudence. Si la téléportation est empêchée, gagner de la distance en volant à 54 m ; faux-semblant peut masquer ce déplacement s'il lui reste une utilisation.
+
+step: Il a rompu le contact et sa régénération fonctionne
+  do: Attendre à couvert pour récupérer 25 PV par round, jusqu'à approcher de ses 565 PV, puis réévaluer le combat
+  note: Pour reprendre l'avantage, préparer de nouveaux symboles de terreur à volonté et attaquer depuis une autre position ; conserver le compte des pouvoirs quotidiens déjà dépensés.

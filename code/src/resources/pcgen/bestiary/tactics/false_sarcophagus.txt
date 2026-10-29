@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Faux sarcophage, objet animé de taille M, neutre et sans intelligence ; FP 3, 36 PV, CA 14, solidité 5 et immunités des créatures artificielles. Vulnérable au froid.
+  Morsure +5 (1d6+2 et étreinte), coup +5 (1d6+2) ; lutte +9 ; engloutissement. Déplacement de 6 m, espace et allonge de 1,50 m.
+
+note: Repérage
+  Vision dans le noir à 18 m et vision nocturne ; Perception −5. Ne pas lui prêter une détection automatique des intrus ni des décisions tactiques élaborées.
+
+## Ouverture
+
+step: Un adversaire est hors de son allonge
+  do: Avancer de 6 m au maximum vers lui ; s'il arrive à portée avec ce déplacement, effectuer une morsure +5 (1d6+2).
+  note: S'il doit consacrer tout son tour au déplacement, il ne porte pas d'attaque ce round.
+
+step: Un adversaire est déjà à 1,50 m ou moins et il peut effectuer une attaque à outrance
+  do: Effectuer une morsure +5 et un coup +5, chacun infligeant 1d6+2 dégâts.
+  note: Résoudre le coup avant la morsure pour tenter ensuite l'étreinte.
+
+step: Une morsure touche une cible que son étreinte peut saisir
+  do: Tenter immédiatement une lutte gratuite à +9 contre la DMD de la cible.
+  note: L'étreinte sert à retenir la proie dans sa bouche et à préparer l'engloutissement.
+
+## Rounds suivants
+
+step: Il commence son tour avec une proie dans sa bouche et sa taille permet l'engloutissement
+  do: Tenter la manœuvre de lutte permettant de l'engloutir.
+  note: Le bloc ne précise ni les dégâts internes ni les valeurs nécessaires pour se libérer en découpant la paroi ; ces valeurs ne peuvent pas être déduites des seules attaques indiquées.
+
+step: Une proie reste agrippée et ne peut pas être engloutie
+  do: Maintenir la lutte ; sur réussite, choisir de lui infliger les dégâts de morsure, soit 1d6+2.
+  note: Maintenir la lutte consomme son action simple ; il ne fait pas aussi une attaque à outrance.
+
+step: Aucune proie n'est agrippée dans sa bouche
+  do: Reprendre morsure et coup à outrance si un adversaire est à portée ; sinon, avancer pour le rejoindre.
+  note: Après chaque morsure réussie, tenter de nouveau l'étreinte si la cible peut être saisie.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à attaquer selon la même routine, sans retraite dictée par la peur.
+  note: Sans intelligence, il n'organise pas de fuite ni de changement de stratégie pour éviter le froid. À 0 PV, il est détruit.

@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Vriskirsa, naga aquatique femelle de taille G, neutre, FP 7 ; collectionneuse de reliques, elle accueille volontiers les visiteurs polis et défend son refuge si on la menace.
+  76 pv ; CA 20, contact 15, prise au dépourvu 14 ; initiative +6 ; vision dans le noir à 18 m, Perception +17, Discrétion +16.
+  Morsure +10 (2d6+5 plus poison), coup de queue +5 (1d8+2) ; espace occupé 3 m, allonge 1,50 m. Amphibie ; déplacement terrestre 9 m, nage 15 m.
+  Lance ses sorts comme un ensorceleur de niveau 7 ; concentration +11. Elle privilégie ses protections, ses projectiles magiques et la mobilité dans l'eau.
+
+resource: Sorts de niveau 1 | 7/jour au total | compréhension des langages, retraite expéditive, projectile magique, coup au but et bouclier de vagues partagent cette réserve
+resource: Sorts de niveau 2 | 7/jour au total | modification d'apparence, invisibilité et image miroir partagent cette réserve
+resource: Sorts de niveau 3 | 5/jour au total | dissipation de la magie et respiration aquatique partagent cette réserve
+resource: Sorts de niveau 0 | à volonté | notamment aspersion acide, détection de la magie et hébétement, ce dernier avec Volonté DD 14
+
+step: Des visiteurs se présentent sans hostilité
+  do: Parler en commun ou en aquatique et leur demander de respecter son refuge et ses reliques
+  note: Elle ne déclenche pas un combat contre des invités courtois ; sa haine des sahuagin peut favoriser une entente.
+
+step: Elle repère une menace et dispose d'un round de préparation
+  do: Lancer image miroir, puis gagner une position dans l'eau avec une voie de fuite
+  note: Le sort crée 1d4+2 doubles et dure 7 minutes ; conserver au moins une utilisation de niveau 2 pour une invisibilité de repli.
+
+## Ouverture
+
+step: Le combat commence sans image miroir active
+  do: Lancer image miroir et se déplacer vers l'eau si le trajet ne l'expose pas inutilement
+  note: Chaque round, choisir entre lancer un sort et effectuer une attaque à outrance.
+
+step: Elle est déjà protégée et voit une cible à distance
+  do: Lancer projectile magique sur un adversaire dangereux ou déjà blessé, puis se déplacer pour garder ses distances
+  note: Quatre projectiles, chacun infligeant 1d4+1 dégâts de force sans jet d'attaque ni sauvegarde ; portée 51 m, résistance à la magie applicable. Le sort bouclier les arrête.
+
+## Rounds suivants
+
+step: Une protection magique visible empêche ses attaques de porter
+  do: Tenter une dissipation de la magie ciblée sur l'adversaire protégé
+  note: Jet de dissipation à +7 ; DD égal à 11 + le niveau de lanceur de l'effet. La dissipation ciblée ne retire pas automatiquement toutes les protections.
+
+step: Elle peut garder ses distances sans abandonner une position sûre
+  do: Continuer les projectiles magiques sur la même cible et utiliser sa nage de 15 m pour éviter l'encerclement
+  note: L'eau favorise ses déplacements, mais ne rend pas automatiquement les attaques ennemies inoffensives ; elle doit conserver une ligne d'effet pour ses sorts.
+
+step: Un ennemi est à 1,50 m et elle peut rester sur place
+  do: Effectuer une attaque à outrance : morsure +10 (2d6+5 plus poison), puis coup de queue +5 (1d8+2)
+  note: Un pas de placement de 1,50 m reste possible si le terrain le permet. Après un déplacement ordinaire, elle ne porte qu'une morsure avec son action simple.
+
+step: Elle doit lancer un sort alors qu'un ennemi la menace
+  do: Chercher d'abord à sortir de l'allonge par un pas de placement ; sinon lancer sur la défensive
+  note: Magie de guerre porte sa concentration à +15 pour lancer sur la défensive ; DD 17, 19 ou 21 pour un sort de niveau 1, 2 ou 3.
+
+step: Une attaque physique ou de feu menace de lui infliger des dégâts
+  do: Lancer bouclier de vagues en action immédiate
+  note: Réduction des dégâts 3/— et résistance au feu 3 contre une seule attaque ; durée maximale 1 round. Cette action consomme aussi son action rapide du tour suivant si elle est utilisée hors de son tour.
+
+step: Les sorts de niveau 1 doivent être économisés et elle reste à distance
+  do: Utiliser aspersion acide sur une cible exposée à 10,50 m ou moins
+  note: Attaque de contact à distance +11, 1d3 dégâts d'acide ; elle préfère se mettre à couvert si ce faible dégât ne change pas l'issue du combat.
+
+## Repli
+
+step: Ses points de vie passent sous 25 ou plusieurs ennemis la menacent sans issue favorable
+  do: Lancer invisibilité dès qu'elle peut le faire sans s'exposer, puis fuir à la nage vers une sortie accessible
+  note: L'invisibilité dure 7 minutes et cesse si elle attaque. Un déplacement de nage couvre 15 m, un double déplacement 30 m ; l'eau peut laisser deviner ses mouvements.
+
+step: Elle doit fuir par la terre ferme
+  do: Lancer retraite expéditive si elle dispose du temps nécessaire, puis gagner une sortie
+  note: Pendant 7 minutes, sa vitesse terrestre passe à 18 m ; sa vitesse de nage reste de 15 m. Si elle est encore menacée au contact, utiliser un retrait pour s'éloigner.

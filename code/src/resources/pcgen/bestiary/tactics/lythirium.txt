@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Lythirium, grand loup végétal neutre bon, gardien des forêts. Il avertit les intrus et ne tue que pour répondre à une attaque.
+  136 pv, CA 26 ; déplacement 12 m, allonge 3 m. Cornes +21 (2d8+9 et croissance envahissante), morsure +21 (2d8+9).
+  Immunités des plantes, résistance au froid 10 ; vulnérabilité au feu : dégâts de feu augmentés de moitié.
+
+resource: Communication avec les plantes | permanent | recueillir des renseignements auprès de la végétation
+resource: Détection du Mal | à volonté | examiner les présences suspectes avant de décider de son attitude
+resource: Contrôle des plantes | 3/jour | Volonté DD 16 ; NLS 13 ; créatures végétales seulement, jusqu'à 26 DV au total
+resource: Voyage par les arbres | 1/jour | NLS 13 ; réserver de préférence au repli
+resource: Mur d'épines | 1/jour | NLS 13 ; portée 69 m, durée 130 minutes ; aucun jet de sauvegarde
+
+step: Des intrus ne se montrent pas hostiles
+  do: Les interpeller en commun ou en sylvestre et leur demander de respecter la forêt ; employer Diplomatie +10 pour éviter le combat
+  note: Détection du Mal renseigne sur les auras ; elle ne remplace pas l'observation des actes des intrus.
+
+step: Un affrontement devient probable
+  do: Choisir des sous-bois épais et repérer un arbre vivant assez gros pour servir d'issue ; surveiller avec Perception +22, l'odorat et la vision dans le noir à 18 m
+  note: Son déplacement verdoyant traverse sans ralentissement ni dégâts les broussailles et les épines, même manipulées magiquement.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent se soutenir et le mur est disponible
+  do: Créer le mur d'épines pour séparer les combattants de leurs soutiens, en englobant si possible une menace utilisant le feu
+  note: Le lythirium traverse son propre mur librement. Les ennemis pris dedans subissent les dégâts initiaux ; rester immobiles évite les dégâts supplémentaires dus au déplacement.
+
+step: Une créature végétale hostile constitue la principale menace
+  do: Employer Contrôle des plantes sur elle, Volonté DD 16, puis lui demander de cesser le combat
+  note: Le pouvoir rend les sujets amicaux ; un ordre inhabituel exige un test opposé de Charisme. Il n'anime pas les arbres ordinaires.
+
+step: Une cible est accessible en parcourant au plus 12 m et n'est pas adjacente au début du tour
+  do: Employer Attaque éclair : avancer d'au moins 3 m, porter un coup de cornes +21, puis utiliser le déplacement restant pour revenir dans les épines
+  note: Cette action complexe donne une seule attaque. La cible ne peut pas porter d'attaque d'opportunité contre ce déplacement ; les autres ennemis le peuvent.
+
+## Rounds suivants
+
+step: Un adversaire demeure à 3 m ou moins et rester sur place est avantageux
+  do: Faire une attaque à outrance : cornes +21 (2d8+9 et croissance envahissante), puis morsure +21 (2d8+9)
+  note: Croissance envahissante : Réflexes DD 22 ; échec, enchevêtrement pendant 1d4 rounds et saignement de 1d6 ; réussite, aucun enchevêtrement et saignement réduit à 1d3.
+
+step: La cible est facile à toucher
+  do: Activer Attaque en puissance avant les jets : cornes et morsure passent à +17 et infligent chacune 2d8+17
+  note: Contre une forte CA, conserver +21 pour appliquer plus sûrement la croissance envahissante.
+
+step: Les ennemis cherchent à l'encercler ou restent hors de son allonge
+  do: Reprendre les attaques éclair dès que leurs conditions sont réunies ; exploiter le mur et les fourrés pour isoler une cible
+  note: Éviter les espaces dégagés face aux attaques à distance, surtout celles de feu.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Frapper avec les cornes pour appliquer la croissance envahissante
+  note: Attaques réflexes autorise jusqu'à 5 attaques d'opportunité par round, même pris au dépourvu, à condition de disposer d'occasions distinctes.
+
+step: Un adversaire le frappe à mains nues, avec une arme naturelle, ou maintient une lutte contre lui
+  do: Appliquer son corps épineux : 2d8 dégâts perforants et exposition à la croissance envahissante
+  note: En lutte, appliquer cet effet au début de chaque round où l'adversaire maintient sa prise.
+
+## Repli
+
+step: Les pv tombent à 40 ou moins, ou le feu rend la position intenable
+  do: Gagner les fourrés ; si le pouvoir est disponible, activer Voyage par les arbres et entrer dans l'arbre repéré, puis consacrer une action complexe au transport vers un autre arbre
+  note: Les deux arbres doivent être vivants, de même espèce et d'une circonférence au moins égale à la sienne. Quitter un arbre met fin au pouvoir ; éviter un arbre menacé d'abattage ou d'incendie.
+
+step: Aucun arbre utilisable n'est accessible
+  do: Se retirer à travers la végétation ; un repli par double déplacement permet de parcourir 24 m. Si le mur reste disponible, le dresser entre les poursuivants et lui avant de poursuivre la fuite au round suivant
+
+step: Les intrus cessent leurs attaques et renoncent à menacer la forêt
+  do: Les laisser se retirer et mettre fin au combat

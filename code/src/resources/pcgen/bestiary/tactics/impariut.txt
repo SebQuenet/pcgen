@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Impariut, inévitable loyal neutre de taille M, conseiller des dirigeants et correcteur des abus de pouvoir. Il cherche d'abord à réformer le souverain ; il réserve l'exécution aux dirigeants qu'il juge irrécupérables.
+  Épée longue +1 en mithral +18/+13/+8 (1d8+6, critique 19-20), avec un coup secondaire +12 (1d8+2), ou deux coups +17 (1d8+5). Déplacement 9 m ; allonge 1,50 m.
+  134 PV, CA 24, RD 10/chaotique, RM 21 ; régénération 5, interrompue temporairement par les dégâts chaotiques. Vision dans le noir à 18 m, vision nocturne, Perception +23.
+
+resource: Détection du mensonge | à volonté | Volonté DD 19 ; exige de la concentration
+resource: Dissipation de la magie | à volonté | NLS 12 ; dissipation ciblée à 66 m, test 1d20+12 contre DD 11 + NLS de l'effet
+resource: Immobilisation de monstre | 3/jour | Volonté DD 20 ; portée 66 m ; durée maximale 12 rounds
+resource: Invisibilité | 3/jour | sur lui-même, jusqu'à 12 minutes ; cesse s'il attaque
+resource: Projectile magique | 3/jour | portée 66 m ; cinq projectiles de 1d4+1, sans jet de sauvegarde, soumis à la RM
+resource: Porte dimensionnelle | 3/jour | portée 264 m ; conserver si possible une utilisation pour le repli
+resource: Marque de la justice | 3/jour | contact ; 10 minutes sur une créature consentante ou entravée
+resource: Vision lucide | 1/jour | durée 12 minutes ; portée de vision 36 m
+resource: Changement de plan | 1/jour | lui-même et, éventuellement, des compagnons consentants uniquement
+
+step: Il peut préparer son intervention
+  do: Prendre l'apparence d'un humanoïde de taille P ou M et observer la cour avec Déguisement +17 et Psychologie +23
+  note: Il étudie les responsabilités du dirigeant avant de se dévoiler ; il repère aussi une destination dégagée pour sa porte dimensionnelle.
+
+step: Le dirigeant accepte une audience
+  do: Exposer les griefs, proposer une réforme avec Diplomatie +20 et employer détection du mensonge pour vérifier les réponses
+  note: Il préfère un accord qui préserve l'ordre à une bataille au milieu des sujets.
+
+step: Une confrontation devient probable
+  do: Activer vision lucide si des illusions ou des adversaires invisibles sont suspectés ; employer invisibilité pour choisir sa position si une approche discrète est nécessaire
+  note: Ces préparatifs consomment leurs utilisations quotidiennes ; il reprend sa véritable forme avant d'engager la mêlée.
+
+## Ouverture
+
+step: La cible prioritaire est visible à 66 m ou moins et n'est pas au contact
+  do: Lancer immobilisation de monstre sur le dirigeant visé ou sur le défenseur qui empêche de l'atteindre
+  note: Sur un échec de Volonté DD 20, la cible est paralysée ; lui proposer de se rendre plutôt que frapper ses proches.
+
+step: Un adversaire est déjà à 1,50 m et le combat est inévitable
+  do: Faire une attaque à outrance à l'épée +18/+13/+8 et au coup secondaire +12
+  note: S'il doit se déplacer de plus de 1,50 m pour atteindre sa cible, avancer puis porter une seule attaque d'épée +18.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter l'attaque à outrance ; sans épée, employer les deux coups +17
+  note: Contre une cible facile à toucher, Attaque en puissance donne à l'épée +14/+9/+4 pour 1d8+14, et au coup secondaire +8 pour 1d8+6.
+
+step: Il veut écarter un garde ou retirer un insigne de pouvoir sans tuer
+  do: Consacrer une action simple à un repositionnement ou à une subtilisation, BMO +19 contre le DMD adverse
+  note: Repositionner pour dégager un passage ; subtiliser une couronne ou un objet accessible, jamais une arme tenue. Ces manœuvres améliorées ne provoquent pas d'attaque d'opportunité de leur cible.
+
+step: Une protection magique identifiée empêche d'atteindre ou de neutraliser la cible
+  do: Employer dissipation de la magie sur cet effet
+  note: Une dissipation réussie retire un seul sort ; il ne dissipe pas toutes les protections à la fois.
+
+step: Une cible importante résiste à la mêlée ou tente de fuir
+  do: Employer une nouvelle immobilisation de monstre si elle peut être affectée et s'il reste des utilisations
+  note: Une cible paralysée peut tenter un nouveau jet de Volonté DD 20 à chacun de ses tours, au prix d'une action complexe.
+
+step: Une cible visible reste hors de portée de mêlée mais à 66 m ou moins
+  do: Concentrer les cinq projectiles magiques sur elle, pour 5d4+5 dégâts de force
+  note: Préférer cette option contre un adversaire difficile à toucher ; un sort de bouclier bloque les projectiles.
+
+step: Il doit franchir un obstacle pour poursuivre sa mission
+  do: Employer porte dimensionnelle vers une position dégagée près de la cible
+  note: Il ne peut plus agir avant son prochain tour après l'arrivée ; éviter une destination où plusieurs adversaires pourraient l'encercler.
+
+## Repli
+
+step: Ses PV passent sous 40, ou des attaques chaotiques menacent de le mettre hors de combat
+  do: Utiliser porte dimensionnelle pour gagner un abri hors d'atteinte
+  note: À couvert, sa régénération lui rend 5 PV par round lorsqu'elle fonctionne ; les armes chaotiques traversent sa RD et les dégâts chaotiques interrompent sa régénération pendant le round suivant.
+
+step: La poursuite continue après sa téléportation
+  do: À son tour suivant, employer invisibilité pour quitter les lieux, ou changement de plan pour abandonner le terrain
+  note: Changement de plan ne permet pas d'emporter de force le dirigeant ni un prisonnier non consentant.
+
+step: L'adversaire se rend et la zone est sécurisée
+  do: Cesser les attaques ; si une sanction conditionnelle convient à sa mission, imposer une marque de la justice à une cible consentante ou entravée
+  note: Définir précisément le comportement interdit ; les 10 minutes nécessaires imposent de traiter cette sanction après le combat.

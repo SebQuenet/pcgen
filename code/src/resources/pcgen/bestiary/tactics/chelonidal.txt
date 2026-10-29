@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Chelonidal, agathion amphibie neutre bon de taille M, FP 7 : un gardien de Nirvana qui tient une position et protège ses compagnons.
+  85 pv ; CA 22, contact 22 ; déplacement 6 m, nage 12 m ; allonge 1,50 m.
+  Trident +2 en fer froid +13/+8 (1d8+5) et morsure +9 (1d6+3), ou morsure seule +14 (1d6+5) ; trident lancé +13 (1d8+4).
+  RD 10/Mal et argent ; immunité au froid, à l'électricité et à la pétrification ; résistance au son 10 ; résistance à la magie 18.
+
+resource: Imposition des mains | 7/jour | rend 4d6 pv et dissipe fatigue et épuisement ; action rapide sur lui-même, simple sur une autre créature touchée
+resource: Protection d'autrui | 3/jour | durée 9 heures ; rester à 13,50 m au plus du bénéficiaire
+resource: Ancre dimensionnelle | 3/jour | rayon de contact à distance ; bloque les déplacements extradimensionnels pendant 9 minutes
+resource: Porte dimensionnelle, torrent hydraulique, création d'eau | à volonté | NLS 9 ; concentration +12
+
+step: Des intrus approchent du poste gardé
+  do: Les observer avec Perception +14 et détection de l'invisibilité permanente ; leur demander leurs intentions avec Diplomatie +15 avant d'engager le combat
+  note: Il communique avec toute créature douée de langage, ainsi qu'avec les animaux ; son rôle est de protéger.
+
+step: Un affrontement est prévisible et un allié vulnérable doit rester auprès de lui
+  do: Lancer protection d'autrui sur cet allié, puis tenir un passage avec les compagnons adjacents
+  note: Le bénéficiaire gagne +1 de parade à la CA et +1 de résistance aux sauvegardes ; le chelonidal reçoit la moitié de ses dégâts aux pv.
+  note: Rempart accorde au chelonidal et aux alliés adjacents +4 de moral aux sauvegardes et au DMD contre les déplacements forcés ; ne pas ajouter une seconde fois le +4 déjà indiqué aux sauvegardes du chelonidal.
+
+## Ouverture
+
+step: Plusieurs adversaires sont alignés et peuvent être repoussés sans menacer les protégés
+  do: Utiliser torrent hydraulique sur une ligne de 18 m pour les éloigner du passage
+  note: Une seule manœuvre de bousculade à +12 contre leurs DMD ; aucun jet de sauvegarde, résistance à la magie applicable. Le torrent s'arrête sur un obstacle qu'il ne peut repousser.
+
+step: Un adversaire menace de contourner la défense par téléportation
+  do: Utiliser ancre dimensionnelle sur lui
+  note: Ce pouvoir empêche les déplacements extradimensionnels, sans bloquer la marche ni la nage.
+
+step: Un adversaire est déjà à 1,50 m et aucune protection urgente n'est nécessaire
+  do: Attaquer à outrance avec le trident +13/+8 (1d8+5) et la morsure +9 (1d6+3)
+
+## Rounds suivants
+
+step: Le passage tient et un ennemi reste au contact
+  do: Répéter l'attaque à outrance en restant près des alliés
+  note: Attaques réflexes permet jusqu'à trois attaques d'opportunité par round ; son allonge reste de 1,50 m.
+
+step: Il doit marcher pour atteindre sa cible
+  do: Avancer de 6 m au plus, puis porter un coup de trident avec Frappe décisive, +13 (2d8+5)
+  note: Frappe décisive accompagne une attaque simple, pas une charge ni une attaque à outrance.
+
+step: Il est entièrement immergé et peut quitter momentanément sa position
+  do: Exploiter Attaque éclair pour nager, mordre à +14 (1d6+5), puis s'éloigner, sur un trajet total de 12 m au plus
+  note: Mobilité sous-marine accorde Esquive, Souplesse du serpent et Attaque éclair ; prévoir au moins 1,50 m avant et après le coup. Ne pas combiner avec Frappe décisive.
+
+step: Ses pv descendent sous 45 et il lui reste des soins
+  do: Utiliser imposition des mains sur lui-même en action rapide, puis agir normalement
+
+step: Un allié adjacent va tomber à 0 pv ou moins
+  do: Dépenser une imposition des mains en action immédiate grâce à Rempart pour le soigner de 4d6 pv
+  note: Le chelonidal devient chancelant pendant 1 round ; cette action consomme aussi son action rapide du prochain tour.
+
+step: Des tirs ou une attaque venant d'une direction précise menacent les protégés
+  do: Consacrer une action simple à dresser sa carapace comme abri total le long d'un bord de sa case
+  note: Cet abri protège aussi les autres derrière ce bord. Sa carapace empêche la prise en tenaille et réduit de moitié les dégâts des attaques qui en bénéficieraient.
+
+## Repli
+
+step: Ses pv descendent sous 25 et les protégés peuvent être évacués
+  do: Utiliser porte dimensionnelle vers un refuge connu, jusqu'à 228 m, avec jusqu'à trois compagnons consentants de taille M ou inférieure en contact
+  note: Après ce pouvoir, aucune autre action avant son prochain tour ; se soigner avant le départ si son action rapide est disponible.
+
+step: Il doit encore couvrir une évacuation ou attendre la relève
+  do: Tenir le passage avec sa carapace et ses soins ; repousser les poursuivants par torrent hydraulique quand la ligne est dégagée
+  note: Il organise le départ des protégés avant de quitter son poste et cesse de poursuivre dès que leur sécurité est assurée.

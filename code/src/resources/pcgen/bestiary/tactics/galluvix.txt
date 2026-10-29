@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Galluvix, créature magique neutre de taille TP, au corps de coq et à la tête de renard. Intelligent et furtif, il préfère tromper les gardiens, pousser un cri défensif et fuir.
+  16 pv ; CA 14 ; initiative +6. Morsure +3 (1d6-2), allonge 0 m ; cri sonique en cône de 4,50 m, Réflexes DD 13 pour réduire les dégâts de moitié.
+  Déplacement terrestre 9 m ; vol 6 m, manœuvrabilité déplorable. Discrétion +18, Bluff +6, Déguisement +6 ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Cri sonique | 3/jour | NLS 3 ; durée 3 rounds ; jusqu'à trois cônes successifs de 4d4, 2d4 puis 1d4 dégâts soniques ; chaque cône exige une action simple ; Réflexes DD 13, moitié
+resource: Déplacement flou | 3/jour | durée 3 minutes ; 20 % de chances de rater les attaques concernées par le flou
+resource: Apaisement des animaux | 3/jour | portée 9 m ; Volonté DD 12 ; durée 3 minutes ; jusqu'à 2d4+3 DV d'animaux
+resource: Son imaginaire, main du mage, ouverture/fermeture | à volonté | DD 11 pour son imaginaire et ouverture/fermeture ; NLS 3
+resource: Œuf du farceur | 1/semaine | voyage d'une heure dans le Premier Monde ; un seul œuf à la fois, utilisable comme une potion en le brisant, périmé après une semaine
+
+step: Une approche discrète est possible
+  do: Prendre l'apparence d'une poule ou d'un renard avec changement de forme, selon forme bestiale II ; avancer à couvert avec Discrétion.
+  note: Son imaginaire détourne l'attention ; ouverture/fermeture manipule une ouverture non verrouillée, sans forcer une serrure ; main du mage déplace de petits objets.
+
+step: Un animal garde le passage
+  do: Employer apaisement des animaux, puis passer sans le menacer.
+  note: Cibles d'Intelligence 1 ou 2, de même espèce, espacées de 9 m au maximum ; une menace rompt l'effet sur l'animal concerné.
+
+step: Il anticipe une poursuite
+  do: Activer déplacement flou avant de s'exposer et repérer une sortie terrestre.
+  note: Le flou agit pendant un déplacement d'au moins 3 m et cesse à son terme ; parcourir au moins deux fois sa vitesse le maintient jusqu'au début du tour suivant.
+
+## Ouverture
+
+step: Il est découvert et une menace approche
+  do: Activer cri sonique à distance de sécurité, puis s'éloigner vers une issue avec son action de mouvement.
+  note: L'activation et l'émission d'un cône demandent chacune une action simple ; ne pas les cumuler dans le même tour.
+
+step: Une fuite immédiate est possible
+  do: Partir directement, avec un double déplacement terrestre jusqu'à 18 m si le terrain le permet.
+
+## Rounds suivants
+
+step: Cri sonique est actif et un poursuivant entre dans son cône de 4,50 m
+  do: Émettre le prochain cône disponible avec une action simple, puis continuer à s'éloigner.
+  note: Respecter l'ordre 4d4, 2d4, 1d4 et la durée de 3 rounds depuis l'activation ; ne pas prolonger le combat pour achever la série.
+
+step: Les poursuivants restent hors de portée du cri
+  do: Continuer à fuir ; gagner un couvert avant de tenter de se cacher avec Discrétion +18.
+
+step: Un obstacle exige un bref envol
+  do: Voler jusqu'à 6 m vers un appui solide.
+  note: Dérive : chaque action de mouvement en vol doit finir posé ou perché ; aucun vol stationnaire.
+
+step: Il est acculé et ses cris sont indisponibles
+  do: Mordre à +3 (1d6-2) uniquement si la fuite est impossible.
+  note: Son allonge de 0 m l'oblige à entrer dans l'espace adverse pour mordre, ce qui peut provoquer une attaque d'opportunité.
+
+## Repli
+
+step: Il subit une blessure ou affronte une opposition sérieuse, même avec ses 16 pv
+  do: Rompre le combat ; privilégier le double déplacement terrestre sous déplacement flou, puis une cachette.
+  note: Sous 8 pv, abandonner toute tentative de défendre sa prise et chercher la sortie la plus proche.
+
+step: Il peut consacrer un round entier à disparaître et son pouvoir hebdomadaire reste disponible
+  do: Utiliser œuf du farceur pour partir dans le Premier Monde et choisir un œuf de soins légers.
+  note: Le voyage échoue si le déplacement extradimensionnel est bloqué ; il revient une heure plus tard à son point de départ ou dans l'espace libre le plus proche.

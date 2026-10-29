@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Mudmen : élémentaires de boue sans intelligence, neutres, de taille M ; chacun a 19 pv, CA 13 et une vitesse de 3 m.
+  Deux coups +4, chacun à 1d4+2 ; bombe de boue +2 au contact à distance, infligeant 1d4 points de dégâts de Dextérité ; enveloppement avec BMC +8.
+  RD 5/magie ; immunités des élémentaires et aux effets mentaux. Vision dans le noir à 18 m.
+
+step: Aucun intrus dans la mare
+  do: Attendre dissimulé dans la boue, Discrétion +16
+  note: perception des vibrations dans toute la mare ; aucune préparation élaborée
+
+note: Vulnérabilité magique
+  Dissipation de la magie : 1d6 dégâts par niveau de lanceur, Vigueur pour moitié. Transmutation de la boue en pierre : mêmes dégâts et état chancelant jusqu'à trouver une nouvelle mare.
+
+resource: Enveloppement | 1 par minute | action simple ; cible de taille M ou inférieure à 3 m au plus
+
+## Ouverture
+
+step: Un intrus entre dans la mare
+  do: Prendre forme humanoïde par une action simple
+
+step: Au tour suivant, une cible admissible est à 3 m au plus
+  do: Enveloppement : contact à distance +2, puis BMC +8 contre son DMD pour l'agripper, sans attaque d'opportunité
+
+step: La cible est trop éloignée ou trop grande pour l'enveloppement
+  do: Avancer vers elle et lancer une bombe de boue +2 au contact à distance
+  note: facteur de portée de 3 m ; dégâts de Dextérité, sans jet de sauvegarde
+
+## Rounds suivants
+
+step: Une victime est enveloppée
+  do: Maintenir la prise chaque round par un test de BMC +8, en action libre
+  note: victime aveuglée, obligée de retenir son souffle ou de suffoquer ; maintien réussi : 1d4+3 dégâts
+
+step: L'enveloppement échoue à établir une prise
+  do: Tomber dans une case adjacente ; subir l'état chancelant pendant 1 round
+
+step: Enveloppement indisponible, ennemi hors de portée des coups
+  do: Continuer les bombes sur la même cible et avancer dans la mare
+  note: Dextérité entièrement perdue par les bombes : victime consciente mais immobilisée ; se libérer exige une action complexe et un test de Force DD 25
+
+step: Ennemi à 1,50 m, sans prise en cours
+  do: Attaque à outrance : deux coups +4, chacun à 1d4+2 ; après un déplacement ordinaire, un seul coup
+
+## Repli
+
+step: Des intrus restent dans la mare, même si ses pv sont bas
+  do: Continuer à les attaquer jusqu'à destruction
+
+step: Les intrus quittent la mare
+  do: Rester dans la mare et cesser la poursuite
+  note: impossible d'en quitter volontairement les limites ; expulsé de force, il devient chancelant

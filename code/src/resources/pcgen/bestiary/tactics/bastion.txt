@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Bastion, robot-golem de noqual de taille TG, loyal mauvais, FP 18, défend le centre de contrôle du secteur de sécurité. Il ne s'adresse jamais aux intrus et ne quitte pas cette salle pour les poursuivre.
+  Corps à corps : 4 coups +31, chacun à 2d8+8, critique 19-20, avec destruction des sorts. Allonge de 4,50 m ; espace occupé de 4,50 m.
+  Distance : 2 fusils gravitationnels intégrés +30 contre la CA de contact, chacun à 4d6 de force, critique 19-20.
+  Déplacement de 12 m ; initiative +11 ; Perception +28 ; vision dans le noir à 18 m et vision nocturne.
+  292 pv ; CA 33, contact 15, pris au dépourvu 26 ; réduction des dégâts 15/adamantium.
+
+resource: Champ de force | 90 pv | réserve supplémentaire aux 292 pv de Bastion
+
+note: Protections et faiblesses
+  Aura de magie entravée à 18 m, absorption des sorts, immunité à la magie et immunités des créatures artificielles.
+  Vigueur +8, Réflexes +17, Volonté +10 ; bonus supplémentaire de +8 contre les sorts et les pouvoirs magiques ou surnaturels.
+  Vulnérable aux coups critiques et à l'électricité : les ennemis qui exploitent ces faiblesses sont des cibles prioritaires.
+
+step: Des intrus approchent
+  do: Se placer entre les accès et le centre de contrôle, en conservant une ligne de tir vers les intrus.
+  note: Rester dans la salle ; sa mission détermine son placement.
+
+## Ouverture
+
+step: Un ennemi est à portée de ses coups, à 4,50 m ou moins
+  do: Effectuer une attaque à outrance : 4 coups +31, chacun à 2d8+8 avec destruction des sorts.
+  note: Concentrer les attaques sur une menace prioritaire ou sur l'adversaire qui tente d'atteindre les commandes.
+
+step: Aucun ennemi n'est à portée de mêlée et une cible est visible
+  do: Effectuer une attaque à outrance avec les deux fusils : 2 tirs +30 contre la CA de contact, chacun à 4d6 de force.
+  note: Viser d'abord un utilisateur d'électricité ; les tirs contre la CA de contact permettent aussi de menacer les adversaires lourdement cuirassés.
+
+## Rounds suivants
+
+step: Une cible reste à portée de mêlée
+  do: Répéter les quatre coups en concentrant les dégâts pour éliminer une menace.
+  note: Préserver autant que possible sa position entre les intrus et le centre de contrôle.
+
+step: Un déplacement est nécessaire pour atteindre une cible dans la salle
+  do: Avancer de 12 m au maximum, puis porter un seul coup +31 avec Science de la frappe décisive, pour 6d8+8 et destruction des sorts.
+  note: Cette attaque remplace l'attaque à outrance ; elle ne donne pas quatre coups après le déplacement.
+
+step: Les adversaires restent hors de son allonge
+  do: Continuer les attaques à outrance avec les deux fusils, tant qu'une ligne de tir existe.
+  note: Garder les ennemis dans son aura de 18 m lorsque le placement le permet, sans abandonner la défense du centre.
+
+## Repli
+
+step: Les intrus quittent la salle
+  do: Rester dans le centre de contrôle et cesser toute poursuite au seuil.
+
+step: Bastion est gravement endommagé ou son champ de force est épuisé
+  do: Continuer à défendre le centre de contrôle jusqu'à sa destruction.
+  note: Aucun seuil de fuite : Bastion combat jusqu'au bout.

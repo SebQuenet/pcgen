@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Quetzutrhul, dévoreur d'intellect mutant de taille P, chaotique mauvais, très intelligent et extrêmement furtif : Discrétion +34, initiative +17, vision aveugle à 18 m et déplacement de 12 m.
+  Au contact, à 1,50 m : dague +1 de retour +19/+14 (1d3+1, critique 19–20) et 4 griffes +16 (1d4). Dague lancée +19 (1d3+1, critique 19–20).
+  107 PV, CA 28, guérison accélérée 5, RM 23 ; RD 10/adamantium et 10/magie. Immunisé au feu et aux effets mentaux ; résistance 20 au froid, à l'électricité et au son.
+  Il ne parle pas ; sa télépathie porte à 30 m.
+
+resource: Détection de la magie | permanent | repérer les auras avant de choisir son approche
+resource: Invisibilité, rapetissement | à volonté | rapetissement sur lui-même uniquement
+resource: Confusion | à volonté | une seule cible, Volonté DD 15
+resource: Hébétement de monstre | à volonté | Volonté DD 12, sans limite de DV
+resource: Blessure grave | à volonté | contact, Vigueur DD 14
+resource: Soins modérés | 3/jour | conserver des utilisations pour récupérer à couvert
+resource: Globe d'invulnérabilité | 3/jour | préparer cette défense si des lanceurs de sorts sont repérés
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Devenir invisible, puis les observer depuis une cachette avec Discrétion +34 et Perception +19
+  note: Choisir une voie de fuite et une cible isolée ; sa vision aveugle lui permet de suivre les créatures à 18 m.
+
+step: Des lanceurs de sorts sont identifiés et le combat paraît imminent
+  do: Activer globe d'invulnérabilité avant de se montrer
+  note: Préparer ses pouvoirs sur des rounds distincts ; il ne dispose d'aucune action supplémentaire explicitement décrite.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent encore s'entraider
+  do: Depuis sa position dissimulée, lancer confusion sur celui qui paraît le moins résistant mentalement, de préférence au milieu de ses alliés
+  note: Volonté DD 15 ; une seule cible. Prévoir que cette attaque révèle sa présence et met fin à son invisibilité.
+
+step: Une cible isolée est déjà à portée et une attaque physique paraît plus efficace
+  do: Faire une attaque à outrance avec la dague +19/+14 et les 4 griffes +16
+  note: Cette ouverture remplace confusion. S'il doit effectuer un déplacement normal pour atteindre la cible, se limiter à une attaque de dague +19.
+
+## Rounds suivants
+
+step: Un adversaire résiste à confusion et reste une menace prioritaire
+  do: Retenter confusion si aucun assaut physique avantageux ne se présente
+  note: Éviter de gaspiller ce pouvoir sur une créature manifestement immunisée aux effets mentaux ; ses DD restent modestes pour ce niveau de combat.
+
+step: Une cible reste au contact et il peut consacrer son round aux attaques
+  do: Répéter l'attaque à outrance, dague +19/+14 et 4 griffes +16
+  note: Concentrer les attaques sur une même cible ; éviter de se laisser encercler malgré sa CA 28.
+
+step: Une cible vivante au contact est difficile à blesser avec ses armes
+  do: Employer blessure grave à la place des attaques d'armes
+  note: Attaque de contact ; Vigueur DD 14. Ce pouvoir prend son action d'attaque du round.
+
+step: Il faut empêcher brièvement un adversaire d'agir
+  do: Tenter hébétement de monstre, Volonté DD 12
+  note: L'absence de limite de DV permet de viser un adversaire puissant, mais le faible DD rend cette option incertaine.
+
+step: Un adversaire reste hors de portée de mêlée et il peut tenir sa position
+  do: Lancer la dague de retour, attaque +19 avant les éventuels malus de distance
+  note: Attendre son retour avant de compter à nouveau sur cette arme ; elle ne permet pas une série de lancers immédiats.
+
+step: Une protection contre le Mal est identifiée
+  do: Privilégier un autre adversaire et garder sa voie de fuite accessible
+  note: Cette magie correspond à une faiblesse explicite de Quetzutrhul.
+
+## Repli
+
+step: Ses PV tombent à 35 ou moins, ou plusieurs ennemis l'enferment au contact
+  do: Se retirer vers la voie de fuite ; employer le désengagement si nécessaire, puis invisibilité au round suivant
+  note: S'il peut déjà utiliser invisibilité sans s'exposer, devenir invisible puis se déplacer de 12 m pendant ce round.
+
+step: Il a rompu le contact
+  do: Se cacher, employer soins modérés selon les utilisations restantes et laisser agir sa guérison accélérée de 5 PV par round
+  note: Utiliser rapetissement sur lui-même si une taille réduite facilite sa dissimulation ; ne revenir au combat qu'après avoir récupéré et retrouvé l'avantage de la surprise.

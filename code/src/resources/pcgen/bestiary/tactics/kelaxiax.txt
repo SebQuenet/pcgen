@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Kelaxiax est un diablotin loyal mauvais, de taille TP, qui soutient Tiarise en évitant de s'exposer. Il manipule ses adversaires et n'attaque directement que pour la protéger ou sur son ordre.
+  Dard +10 (1d4 et poison), allonge 0 m ; vol à 15 m, manœuvrabilité parfaite ; déplacement au sol à 6 m. Discrétion +17, Perception +15, vision dans le noir à 18 m.
+  39 pv, CA 23, guérison accélérée 2 ; réduction des dégâts 5/bien ou argent, résistance à la magie 16 ; immunité au feu et au poison, résistance à l'acide 10 et au froid 10.
+
+resource: Invisibilité sur lui-même | à volonté | NLS 6 ; une attaque met fin à l'effet
+resource: Suggestion | 1/jour | Volonté DD 14, NLS 6
+resource: Détection du Bien et détection de la magie | constantes | NLS 6
+resource: Augure | 1/jour | NLS 6
+resource: Communion | 1/semaine | 6 questions, NLS 12
+
+step: Avant l'arrivée des adversaires
+  do: Se rendre invisible et se percher sur l'épaule de Tiarise
+  note: Il conserve cette position tant qu'aucune intervention ne l'oblige à se déplacer.
+
+step: Tiarise prépare une action et dispose du temps nécessaire
+  do: Employer augure pour en évaluer les conséquences immédiates ; réserver communion aux renseignements utiles à sa préparation
+  note: Ces pouvoirs servent à préparer la rencontre ; ils ne remplacent pas ses actions de soutien pendant le combat.
+
+## Ouverture
+
+step: Aucun PJ n'a encore blessé Tiarise
+  do: Rester invisible sur son épaule et observer les adversaires
+  note: Il évite de révéler sa présence par une attaque prématurée.
+
+step: Le premier PJ inflige des dégâts à Tiarise et suggestion est disponible
+  do: Lancer suggestion sur ce PJ : lui suggérer de se mettre à genoux pour implorer le pardon de Tiarise après cette agression
+  note: Volonté DD 14 pour résister. Cette utilisation offensive met fin à son invisibilité ; il devra la rétablir lors d'une action ultérieure.
+
+## Rounds suivants
+
+step: Il est visible et aucune intervention urgente n'est nécessaire
+  do: Relancer invisibilité sur lui-même et reprendre sa position auprès de Tiarise
+  note: Il ne peut pas se rendre invisible et piquer avec la même action simple.
+
+step: Un ennemi agrippe Tiarise
+  do: Piquer cet ennemi avec son dard +10, pour 1d4 dégâts et le poison
+  note: Son allonge est de 0 m : il doit occuper la case de sa cible pour la piquer. La piqûre met fin à son invisibilité.
+
+step: Tiarise lui ordonne de transmettre un sort de contact
+  do: Recevoir le sort, puis rejoindre la cible et le délivrer, de préférence en étant invisible jusqu'au contact
+  note: Respecter les actions nécessaires au déplacement et à l'attaque de contact. Un contact offensif met fin à l'invisibilité ; employer les effets du sort transmis par Tiarise.
+
+step: Aucun ennemi n'agrippe Tiarise et aucun sort de contact ne lui est confié
+  do: Rester invisible auprès de Tiarise et éviter la mêlée
+  note: Sa guérison accélérée lui rend 2 pv par round ; il n'a pas besoin d'attaquer pour continuer à soutenir Tiarise par sa présence.
+
+## Repli
+
+step: Tiarise est tuée
+  do: Fuir en volant à 15 m par déplacement, rétablir l'invisibilité dès que possible et se cacher
+  note: Employer Discrétion +17 et, une fois à couvert, changer éventuellement de forme en rat ou en corbeau pour se dissimuler. Il espère éviter les PJ pour le reste de son existence.

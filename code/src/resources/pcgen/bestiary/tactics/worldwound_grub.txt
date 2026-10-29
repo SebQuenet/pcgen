@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Worldwound Grub, bête magique gigantesque, chaotique mauvaise, FP 16 ; 262 pv, CA 30. Ce prédateur intelligent privilégie ses morsures à ses pouvoirs magiques.
+  Deux morsures +25, chacune infligeant 6d6+18 dégâts, critique sur 19–20, avec poison et étreinte ; allonge de 6 m, espace occupé de 6 m.
+  Déplacement au sol et à la nage : 9 m. Vision dans le noir à 18 m, vision nocturne et perception des vibrations à 36 m ; Perception +18.
+
+note: Défenses
+  Réduction des dégâts 10/fer froid ; immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu.
+  Vigueur +21, Réflexes +5, Volonté +7 : les effets visant les Réflexes ou la Volonté sont ses principales faiblesses.
+
+resource: Ténèbres | 1/jour | pouvoir magique, NLS 16
+resource: Tremblement de terre | 1/jour | pouvoir magique, NLS 16
+resource: Téléportation suprême | 1/jour | lui-même et 22,7 kg d'objets seulement ; NLS 16
+resource: Plaie d'insectes | 1/jour | pouvoir magique, NLS 16
+resource: Vomissement de nuée | 1/jour | pouvoir magique, NLS 16
+resource: Relance de Volonté | 1/jour | Volonté de fer supérieure ; conserver le second résultat, même s'il est moins bon
+resource: Relance de Réflexes | 1/jour | Réflexes surhumains supérieurs ; conserver le second résultat, même s'il est moins bon
+
+step: Des adversaires approchent
+  do: Repérer ceux qui touchent le même sol ou la même masse d'eau grâce aux vibrations, puis se placer pour les atteindre avec son allonge de 6 m.
+  note: Il garde généralement ses pouvoirs magiques en réserve et cherche le combat à coups de morsures.
+
+## Ouverture
+
+step: Un adversaire est déjà à 6 m ou moins
+  do: Effectuer une attaque à outrance avec les deux morsures +25, chacune pour 6d6+18 dégâts plus poison.
+  note: Après une morsure réussie contre une cible de taille TG ou inférieure, tenter gratuitement l'étreinte ; le BMO de base indiqué est de +33.
+
+step: Il faut se déplacer pour atteindre une cible
+  do: Avancer ou nager jusqu'à 9 m, puis, si la cible est à portée de 6 m, porter une morsure +25 avec Frappe décisive pour 12d6+18 dégâts plus poison et étreinte.
+  note: Frappe décisive s'emploie avec une attaque simple ; elle n'augmente pas les dégâts des deux morsures d'une attaque à outrance.
+
+note: Poison
+  Le bloc fourni ne donne ni DD, ni fréquence, ni effets du poison. Appliquer uniquement les données de poison dont dispose le meneur, sans lui attribuer d'effet supplémentaire.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et le monstre n'entretient pas de lutte
+  do: Répéter les deux morsures en attaque à outrance et tenter l'étreinte après une morsure réussie contre une cible de taille admissible.
+  note: Exploiter l'allonge de 6 m pour mordre sans devoir venir au contact immédiat de la cible.
+
+step: Une victime est tenue en lutte
+  do: Maintenir la lutte et choisir d'infliger les dégâts d'une morsure en cas de réussite.
+  note: Maintenir la lutte consomme une action simple ; ne pas y ajouter automatiquement les deux morsures de l'attaque à outrance. Aucune capacité d'engloutissement n'est indiquée.
+
+step: Les adversaires se déplacent hors de son allonge
+  do: Les suivre au sol ou à la nage, à 9 m par déplacement ; employer Frappe décisive si une seule morsure est possible après le déplacement.
+
+step: Un jet de Volonté ou de Réflexes échoue contre un effet dangereux
+  do: Dépenser la relance quotidienne correspondante si elle est encore disponible.
+  note: Le second résultat remplace le premier, même s'il est moins bon.
+
+## Repli
+
+step: Un adversaire demeure en vol hors de portée et l'eau permet de plonger
+  do: Plonger en profondeur, à 9 m par déplacement, pour éviter ce combat.
+  note: C'est sa réponse habituelle à un ennemi volant inaccessible ; il ne privilégie pas ses pouvoirs magiques pour le poursuivre.
+
+step: Ses points de vie diminuent et des ennemis restent accessibles
+  do: Continuer à combattre jusqu'à la mort.
+  note: Aucun seuil de points de vie ne déclenche une fuite.

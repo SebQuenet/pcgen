@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Xiangnuer est une dragonne des profondeurs âgée, loyale mauvaise, de taille TG et de FP 14. Intelligente et cupide, elle cherche avant tout à enrichir son trésor.
+  225 pv ; CA 33, contact 7 ; RD 10/magie ; résistance à la magie 25. Immunisée au feu, à la paralysie et au sommeil ; vulnérable au froid.
+  Morsure +27 (2d8+10/19-20), 2 griffes +27 (2d6+10/19-20), coup de corne +26 (2d6+10), coup de queue +21 (2d6+5).
+  Espace occupé : 4,50 m ; allonge : 3 m, ou 4,50 m avec la morsure. Déplacement terrestre 12 m, creusement 15 m, vol 60 m avec une manœuvrabilité déplorable.
+
+resource: Pouvoirs magiques de pierre | à volonté | Mur de pierre, pierres acérées, façonnage de la pierre, ramollissement de la terre et de la pierre ; NLS 18, concentration +22.
+resource: Sorts de niveau 4 | 5/jour au total | Réserve commune à énergie négative et brouillard dense ; NLS 9.
+resource: Sorts de niveau 3 | 7/jour au total | Réserve commune à déplacement, boule de feu (DD 17) et rage ; NLS 9.
+resource: Sorts de niveau 2 | 7/jour au total | Notamment rayon ardent et flèche acide ; NLS 9.
+resource: Sorts de niveau 1 | 7/jour au total | Notamment projectile magique, coup au but et rayon affaiblissant (DD 15) ; NLS 9.
+
+step: Avant de rejoindre le palier en creusant
+  do: Réprimer sa présence terrifiante et lancer détection de la magie, puis déplacement avant de remonter.
+  note: Déplacement dure 9 rounds et impose 50 % de chances de rater les attaques qui la visent ; décompter sa durée dès le lancement.
+
+## Ouverture
+
+step: Les intrus engagent le combat
+  do: Cesser de réprimer la présence terrifiante et utiliser mur de pierre pour séparer le groupe.
+  note: Présence terrifiante dans un rayon de 72 m, Volonté DD 23. Placer le mur pour isoler un adversaire des soigneurs et des autres soutiens, en prenant appui sur la pierre existante.
+  note: Le mur et le souffle s'emploient lors de tours successifs ; ils ne constituent pas une seule action.
+
+step: Au tour suivant, une cible ou plusieurs adversaires sont exposés
+  do: Employer son souffle, conformément à ses tactiques indiquées.
+  note: Le bloc fourni ne donne ni la forme, ni la portée, ni les dégâts, ni le DD, ni le délai de réutilisation du souffle. Ces paramètres doivent être vérifiés sur une fiche officielle complète avant de le résoudre.
+
+## Rounds suivants
+
+step: Un ennemi isolé est à portée au début de son tour
+  do: Effectuer une attaque à outrance : morsure, deux griffes, coup de corne et coup de queue ; concentrer les attaques sur cet adversaire.
+  note: Employer Attaque en puissance généreusement : morsure +22 (2d8+20/19-20), griffes +22 (2d6+20/19-20), corne +21 (2d6+20), queue +16 (2d6+10).
+  note: Revenir aux bonus ordinaires si les attaques manquent trop souvent. Les griffes, la corne et la queue ne portent qu'à 3 m ; la morsure porte à 4,50 m.
+
+step: Une cible exige un déplacement pour être atteinte
+  do: Avancer et porter une seule attaque, de préférence la morsure, puis chercher à commencer le tour suivant au contact.
+  note: Son don d'allonge permet d'augmenter l'allonge de 1,50 m pendant son tour, au prix de 2 points de CA jusqu'au début du suivant ; l'utiliser si cela permet de porter ses attaques sans se déplacer.
+
+step: Les adversaires contournent le mur ou rejoignent leur allié
+  do: Utiliser un nouveau mur de pierre pour couper les renforts et conserver un combat favorable contre une partie du groupe.
+  note: Chaque pouvoir magique remplace les attaques de ce tour ; privilégier le corps à corps quand une cible vulnérable est déjà accessible.
+
+step: Un groupe de renforts reste à distance et menace de la submerger
+  do: Placer brouillard dense sur leur passage pour ralentir leur progression, puis combattre les ennemis restés accessibles.
+  note: Ce sort consomme la réserve de niveau 4 ; garder ses propres cibles hors du brouillard pour pouvoir les attaquer efficacement.
+
+step: Un adversaire particulièrement dangereux reste hors de portée de mêlée
+  do: Employer énergie négative pour lui infliger 1d4 niveaux négatifs avec un rayon nécessitant une attaque de contact à distance.
+  note: Aucun jet de sauvegarde ; la résistance à la magie s'applique. Ce sort partage ses 5 emplacements quotidiens avec brouillard dense.
+
+step: Déplacement expire et le combat reste disputé
+  do: Relancer déplacement si la protection justifie de consacrer son tour à un sort.
+  note: Face aux attaques de froid, chercher rapidement le contact avec leur auteur ou couper sa ligne de vue avec un mur de pierre.
+
+## Repli
+
+step: Ses points de vie passent sous 60
+  do: Abandonner le combat et s'enfuir en volant à pleine vitesse ; rechercher un endroit dans l'ombre, puis creuser profondément dans le mont Rond.
+  note: Sa vitesse de vol est de 60 m par déplacement et sa vitesse de creusement de 15 m par déplacement. Tenir compte de sa manœuvrabilité déplorable pour choisir une trajectoire de fuite dégagée.
+  note: Elle renonce au butin immédiat pour survivre ; un mur de pierre peut couper les poursuivants si elle doit gagner du temps avant de décoller ou de creuser.

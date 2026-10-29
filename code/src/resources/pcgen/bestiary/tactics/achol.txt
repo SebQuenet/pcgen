@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Achol, couatl de taille G, gardien divin à l'âme brisée, FP 13. Malgré son alignement loyal bon, la torture et la corruption de Dagon le poussent à défendre le sanctuaire et à attaquer les intrus dès qu'il les perçoit.
+  Contact torturant +17 : 2d6 dégâts, plus 1d6 dégâts de Dextérité et convulsions ; ou morsure +17 : 1d8+9, étreinte et poison. Allonge : 1,50 m ; lutte +23.
+  174 pv ; CA 26 ; guérison accélérée 5 ; réduction des dégâts 5/—. Immunisé aux maladies, au poison et aux effets mentaux ; résistance 5 à l'acide, au froid, à l'électricité, au feu et au son.
+  Déplacement terrestre 6 m, vol 15 m avec bonne manœuvrabilité, nage 9 m ; amphibie. Il privilégie le vol ou l'eau plutôt que le sol.
+
+note: Gardien prisonnier
+  Il rôde dans l'air de la caverne ou sous la surface du bassin. Il reste dans le sanctuaire et à l'intérieur du cercle de terre salée qui le délimite : franchir cette limite déclenche les effets néfastes de son lien au site sacré.
+
+resource: Sorts de niveau 1 | 8/jour au total | réserve commune, notamment bouclier, graisse, projectile magique et coup au but
+resource: Sorts de niveau 2 | 7/jour au total | réserve commune : cécité/surdité, soins modérés, rayon ardent, silence
+resource: Sorts de niveau 3 | 7/jour au total | réserve commune : dissipation de la magie, éclair, lenteur
+resource: Sorts de niveau 4 | 5/jour au total | réserve commune : charme-monstre et ténèbres maudites
+resource: Invisibilité et porte dimensionnelle | à volonté | porte dimensionnelle uniquement à l'intérieur du site sacré
+resource: Alarme | 3/jour | avertissement sur les accès
+resource: Renvoi | 1/jour | Volonté DD 20
+
+step: Une période calme permet de surveiller les accès
+  do: Poser alarme sur un passage et observer depuis l'eau ou les airs, avec Perception +29
+
+step: Il peut se préparer avant l'arrivée des intrus
+  do: Lancer bouclier, puis invisibilité si le temps le permet
+  note: Bouclier porte sa CA à 30 pendant 9 minutes ; chaque préparation prend son action. Une attaque met fin à l'invisibilité.
+
+## Ouverture
+
+step: Plusieurs adversaires approchent ensemble sans être au contact
+  do: Lancer lenteur sur les assaillants les plus dangereux, Volonté DD 18
+  note: Réduire leurs actions facilite le maintien à distance et limite leurs attaques à outrance.
+
+step: Des adversaires bons sont regroupés et une attaque de zone paraît préférable
+  do: Lancer ténèbres maudites, Volonté DD 19
+  note: Ses détections d'alignement peuvent guider ce choix si elles lui ont déjà fourni l'information ; les créatures mauvaises sont épargnées par ce sort.
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Porter un contact torturant +17, infligeant 2d6 dégâts plus 1d6 dégâts de Dextérité et convulsions
+
+## Rounds suivants
+
+step: Il peut maintenir les combattants à distance
+  do: Se déplacer en vol ou à la nage et lancer ses sorts depuis une position difficile à atteindre
+  note: Garder assez d'espace pour son corps de 3 m ; son allonge reste de 1,50 m.
+
+step: Plusieurs ennemis sont alignés
+  do: Lancer éclair, Réflexes DD 18
+
+step: Un lanceur de sorts dépend de composantes verbales
+  do: Placer silence sur un point fixe près de lui pour le contraindre à se déplacer
+  note: Sur une créature non consentante, silence autorise un jet de Volonté DD 17 ; éviter de s'enfermer lui-même dans la zone.
+
+step: Une protection magique adverse empêche ses attaques d'être efficaces
+  do: Tenter une dissipation de la magie ciblée avant de reprendre l'offensive
+
+step: Une cible isolée doit être immobilisée au contact
+  do: Mordre à +17, pour 1d8+9 dégâts plus poison, puis tenter l'étreinte à +23 si la morsure touche
+  note: Privilégier autrement le contact torturant pour affaiblir la Dextérité ; choisir l'une des deux attaques.
+
+step: Un adversaire dangereux reste hors de sa portée de mêlée
+  do: Tenter cécité, Vigueur DD 17, ou employer projectile magique pour des dégâts directs
+
+step: Un intrus extraplanaire constitue la menace principale
+  do: Utiliser renvoi, Volonté DD 20
+
+## Repli
+
+step: Ses pv tombent sous 50 et il peut encore rompre le contact
+  do: Utiliser porte dimensionnelle vers une position abritée à l'intérieur du site sacré
+  note: Ce seuil est un choix tactique. Après porte dimensionnelle, il ne peut plus agir jusqu'à son prochain tour.
+
+step: Il bénéficie d'un répit après son déplacement
+  do: Lancer invisibilité, puis soins modérés aux rounds suivants si nécessaire ; laisser également agir la guérison accélérée de 5 pv par round
+  note: Il reprend la défense du sanctuaire après récupération. Il ne poursuit pas les fuyards au-delà du cercle de terre salée et n'utilise pas changement de plan pour abandonner son site.

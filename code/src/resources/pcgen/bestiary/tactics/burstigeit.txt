@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Burstigeit, bête magique neutre de grande taille des souterrains, guidée par l'instinct. 30 pv ; CA 17 ; cornes +7 (1d8+6).
+  Déplacement de 9 m, escalade de 6 m ; espace occupé de 3 m et allonge de 1,50 m. Vision dans le noir à 18 m, vision nocturne, odorat ; Perception +8.
+  Résistance au froid 5 et au feu 5 ; bonus de +2 aux sauvegardes contre le poison, les sorts et les pouvoirs magiques.
+
+resource: Ant haul, sur lui-même | 1/jour | NLS 3 ; triple sa capacité de charge pendant 6 heures
+
+step: Il doit transporter une lourde charge avant la rencontre
+  do: Utiliser ant haul sur lui-même
+
+step: Des intrus approchent
+  do: Les repérer dans l'obscurité avec ses sens ; rester dans un passage où il dispose de ses 3 m d'espace
+  note: Choisir une position ombragée ; sa sensibilité à la lumière le gêne en plein soleil ou dans un sort de lumière du jour
+
+## Ouverture
+
+step: Un adversaire est visible entre 3 et 18 m, avec une trajectoire de charge droite et dégagée
+  do: Charger et porter un coup de cornes +9 (1d8+6)
+  note: La charge abaisse sa CA à 15 jusqu'au début de son prochain tour ; elle ne lui confère aucune attaque supplémentaire
+
+step: Un adversaire est déjà à portée de ses cornes
+  do: Donner un coup de cornes +7 (1d8+6)
+
+step: La charge est impossible et aucun adversaire n'est à portée
+  do: Avancer jusqu'à 9 m vers l'adversaire accessible le plus proche, puis donner un coup de cornes s'il arrive à portée
+  note: Employer son escalade à 6 m pour franchir une paroi praticable lorsque le sol est bloqué
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m ou moins
+  do: Répéter le coup de cornes +7 (1d8+6)
+  note: Sous l'effet de sa sensibilité à la lumière, appliquer un malus de -1 aux attaques et aux tests de Perception fondés sur la vue
+
+step: L'adversaire s'éloigne ou le terrain gêne l'approche
+  do: Le rejoindre en marchant ou en grimpant, puis frapper si une action simple reste disponible
+  note: Ses dons lui permettent de traiter jusqu'à 6 m de terrain difficile par round comme du terrain normal ; les autres obstacles et les limites de la charge s'appliquent toujours
+
+## Repli
+
+step: Il lui reste de 1 à 9 pv et une issue est accessible
+  do: Effectuer un retrait vers l'obscurité, jusqu'à 18 m sur sol libre ; privilégier une issue que son escalade rend accessible
+  note: Le retrait évite les attaques d'opportunité dues au départ de sa position initiale ; traverser ensuite une autre zone menacée reste dangereux
+
+step: Il est à 0 pv ou moins
+  do: Consacrer son unique action à s'éloigner si une issue est proche, ou à frapper des cornes si l'adversaire lui barre le passage
+  note: Il est chancelant : une action simple ou de mouvement par tour. À 0 pv, une action simple lui fait perdre 1 pv ; à pv négatifs, la férocité le maintient conscient mais il perd 1 pv par round. Il meurt à -15 pv

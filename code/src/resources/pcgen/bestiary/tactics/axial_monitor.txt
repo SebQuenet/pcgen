@@ -1,0 +1,109 @@
+## Avant le combat
+
+note: Profil
+  Axial Monitor, gardien d'Axis loyal neutre, extérieur de taille G, FP 15. Il exige la reddition et préfère capturer ; face aux protéens, il emploie immédiatement la force létale.
+  210 pv, CA 30, RM 26 ; déplacement de 9 m en armure. Espace occupé de 3 m ; allonge de 3 m, portée à 4,50 m avec la coutille et le tentacule.
+  Gourdin +1 miséricordieux +26/+21/+16/+11 (2d8+10), coutille +1 axiomatique +26 (2d8+10, critique x3), tentacule avec étreinte et coup de masse. Ses immobilisations préparent une arrestation.
+
+note: Défenses
+  RD 10/chaotique ; régénération 5, suspendue par les dégâts chaotiques ou magiques. Une arme magique non chaotique ne suffit pas à ignorer sa RD.
+  Immunisé aux maladies, à l'électricité et aux effets mentaux ; résistance au froid 10 et au feu 10. Il craint surtout les attaques qui passent sa RD et empêchent sa régénération.
+
+resource: Vision lucide | permanent | repérer les illusions et les créatures invisibles
+resource: Détection du Chaos | à volonté | identifier les auras chaotiques, sans les confondre avec une preuve de culpabilité
+resource: Vol supérieur | à volonté | sur lui-même ; vol à 9 m en armure, durée de 20 heures
+resource: Détection des pensées | 3/jour | Volonté DD 15
+resource: Communication à distance | 3/jour | prévenir un interlocuteur connu ou demander du soutien
+resource: Annulation d'enchantement | 1/jour | libérer une victime d'un enchantement avant l'affrontement si nécessaire
+
+step: Une intervention est prévisible
+  do: Activer vol supérieur et examiner les lieux avec vision lucide, Perception +41 et vision aveugle à 9 m.
+  note: Sa vision dans le noir porte à 27 m ; il choisit un passage où son allonge permet de contenir les suspects.
+
+step: Des suspects peuvent encore se rendre
+  do: Annoncer l'arrestation et exiger qu'ils déposent leurs armes ; employer Diplomatie +26 ou Intimidation +26 selon leur réaction.
+  note: Psychologie +31 aide à repérer une fausse reddition ; détection des pensées peut compléter l'enquête, mais ne remplace pas une preuve.
+
+## Ouverture
+
+resource: Immobilisation de monstre de groupe | 1/jour | Volonté DD 22 ; cibles vivantes, distantes les unes des autres de 9 m au maximum
+resource: Immobilisation de monstre | 3/jour | Volonté DD 18 ; une cible vivante
+resource: Ancre dimensionnelle | 3/jour | rayon, attaque de contact à distance ; empêcher les déplacements extradimensionnels
+resource: Décret | 1/jour | Volonté DD 20 ; créatures non loyales dans un rayon de 12 m autour de lui
+
+step: Plusieurs adversaires vivants refusent la reddition et sont assez regroupés
+  do: Lancer immobilisation de monstre de groupe, puis avancer pour barrer la fuite aux résistants.
+  note: Les victimes peuvent refaire leur sauvegarde à leur tour, au prix d'une action complexe ; ne pas considérer la capture comme acquise.
+
+step: Une seule menace doit être arrêtée
+  do: Employer immobilisation de monstre sur le combattant le plus dangereux ou celui qui tente de fuir.
+  note: Contre une cible immunisée à la paralysie ou aux effets mentaux, passer aux armes et aux manœuvres.
+
+step: Un suspect manifeste une capacité de téléportation et risque de s'échapper
+  do: Lui tirer une ancre dimensionnelle avant de chercher à l'immobiliser au round suivant.
+  note: Ce pouvoir remplace l'immobilisation ou l'attaque du round ; il ne bloque pas une fuite ordinaire.
+
+step: Des protéens ou d'autres menaces justifiant la force létale sont à moins de 12 m
+  do: Employer décret si ses effets n'atteignent aucun innocent non loyal.
+  note: Au NLS 20, les effets sont cumulatifs : surdité jusqu'à 20 DV, état chancelant jusqu'à 19 DV, paralysie jusqu'à 15 DV, mort jusqu'à 10 DV. Volonté DD 20 atténue ou annule ces effets ; au-delà de 20 DV, aucun effet.
+
+## Rounds suivants
+
+resource: Courroux de l'ordre | 3/jour | Volonté DD 17 ; explosion dans un cube de 9 m de côté
+resource: Dissipation du Chaos | 3/jour | Volonté DD 18 pour renvoyer une créature extraplanaire chaotique au contact
+
+step: Un suspect à capturer est à portée et le moniteur peut rester sur place
+  do: Attaque à outrance au gourdin +26/+21/+16/+11 (2d8+10), tentacule +20 (1d6+3 et étreinte), coup de masse +20 (2d6+3, plus masse énergisée).
+  note: La propriété miséricordieuse du gourdin ajoute 1d6 et rend ses dégâts non létaux. Pour épargner une victime déjà très blessée, omettre les attaques naturelles létales.
+
+step: Une cible dangereuse exige des attaques plus fiables et la force létale est justifiée
+  do: Choisir l'autre attaque à outrance : coutille +26 (2d8+10, x3), gourdin +26 (2d8+10), tentacule +25 (1d6+3 et étreinte), coup de masse +25 (2d6+3, plus masse énergisée).
+  note: La coutille axiomatique ajoute 2d6 contre les créatures chaotiques ; répartir les attaques uniquement entre des cibles à portée de chaque arme.
+
+step: Il prépare un coup de masse contre une menace à combattre par la force
+  do: En action rapide, donner à sa masse énergisée une seule propriété pour 1 round : axiomatique, feu, froid, spectrale ou tonnerre, selon la cible.
+  note: Ce renforcement accompagne les attaques du round ; choisir axiomatique contre le Chaos ou spectrale contre une créature intangible.
+
+step: Le tentacule touche une cible de taille M ou inférieure
+  do: Tenter l'étreinte avec BMO +31 ; aux rounds suivants, maintenir la lutte puis immobiliser la cible.
+  note: La lutte occupe ses actions et gêne sa défense : éviter de s'y engager pendant que plusieurs ennemis libres peuvent le frapper.
+
+step: Une arme ennemie menace sa régénération, ou un adversaire doit être arrêté sans être tué
+  do: Remplacer une attaque de mêlée appropriée par un désarmement ou un croc-en-jambe, BMO +29 contre le DMD adverse.
+  note: Ces manœuvres bénéficient de ses dons d'amélioration ; un croc-en-jambe ne fonctionne pas sur un adversaire trop grand ou impossible à faire tomber.
+
+step: Il doit se déplacer avant de frapper
+  do: Avancer de 9 m au maximum, puis porter une seule attaque avec une arme à portée.
+  note: Un pas de placement de 1,50 m permet encore une attaque à outrance ; un déplacement ordinaire ne le permet pas.
+
+step: Des ennemis chaotiques restent groupés hors de sa mêlée et la force létale est nécessaire
+  do: Lancer courroux de l'ordre : 5d8 contre les chaotiques, ou 10d6 contre les extérieurs chaotiques, et hébétement pendant 1 round.
+  note: Volonté DD 17 réduit les dégâts de moitié et annule l'hébétement. Les créatures neutres sur l'axe Loi-Chaos prennent la moitié des dégâts sans hébétement ; les loyales sont épargnées.
+
+step: Un extérieur chaotique doit être renvoyé plutôt que capturé
+  do: Activer dissipation du Chaos, puis tenter le renvoi au round suivant par une attaque de contact en mêlée.
+  note: Volonté DD 18 annule le renvoi ; c'est une option distincte de l'ancre dimensionnelle destinée à empêcher une évasion.
+
+step: Plusieurs ennemis faibles sont adjacents les uns aux autres et à portée
+  do: Employer Enchaînement ou Succession d'enchaînements pour les frapper successivement.
+  note: Chaque attaque doit toucher pour poursuivre la chaîne ; ces dons remplacent l'attaque à outrance et imposent un malus de 2 à la CA jusqu'au prochain tour.
+
+step: La défense devient prioritaire pendant qu'il contient les derniers résistants
+  do: Employer Expertise du combat pour échanger de la précision contre de la CA ; réserver Attaque en puissance aux cibles faciles à toucher.
+  note: Ces choix modifient les bonus d'attaque indiqués ; ne pas cumuler leurs malus machinalement.
+
+## Repli
+
+resource: Porte dimensionnelle | 3/jour | portée de 360 m ; conserver si possible une utilisation pour le repli
+
+step: Points de vie sous 60, avec des ennemis encore capables d'infliger régulièrement des dégâts magiques ou chaotiques
+  do: Utiliser porte dimensionnelle vers un lieu sûr connu, puis laisser sa régénération restaurer 5 pv par round lorsqu'elle reprend.
+  note: Après porte dimensionnelle, aucune autre action avant son prochain tour. Un captif conscient et récalcitrant ne peut pas être emporté comme passager consentant.
+
+step: Porte dimensionnelle est inutilisable et une issue aérienne existe
+  do: Se dégager puis fuir grâce au vol supérieur déjà actif, à 9 m par déplacement en armure.
+  note: Une fois à l'abri, employer communication à distance pour signaler les fugitifs et demander une nouvelle intervention.
+
+step: Les adversaires se rendent ou sont neutralisés
+  do: Cesser les coups, désarmer les prisonniers et organiser leur transfert pour interrogatoire.
+  note: Il cherche à rétablir l'ordre et à ramener des captifs ; il n'achève pas les suspects vaincus, sauf les protéens qu'il combat sans merci.

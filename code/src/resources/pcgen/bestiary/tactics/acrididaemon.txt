@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Acrididaemon, extérieur de taille G, neutre mauvais, serviteur du Cavalier de la Famine dont le bas du corps est une nuée de criquets. Il ravage les ressources et fait durer la faim de ses victimes.
+  200 pv, CA 28, initiative +10 ; déplacement terrestre de 9 m, vol de 18 m. Il privilégie flétrissure et sirocco à distance, puis achève les ennemis affaiblis.
+  Morsure +20 (2d6+5, critique 19–20) à 1,50 m ; deux griffes +20 (1d8+5 chacune) à 3 m.
+
+note: Défenses et placement
+  Immunisé contre l'acide, les effets de mort, les maladies et le poison ; résistance au froid, à l'électricité et au feu de 10 ; résistance à la magie de 25.
+  Corps semblable à une nuée : 50 % de chances de ramener un critique ou une attaque sournoise à des dégâts normaux ; dégâts des effets de zone et des armes à aspersion augmentés de 50 %. Éviter les zones dangereuses, même avec ses résistances.
+
+resource: Flétrissure | 1/jour | NLS 14 ; 14d6 dégâts, Vigueur DD 23 pour réduire de moitié
+resource: Sirocco | 3/jour | NLS 14 ; Vigueur DD 21 ; durée de 14 rounds
+resource: Nuée grouillante | 3/jour | chauves-souris, rats ou araignées ; concentration + 2 rounds ; sans contrôle des cibles
+resource: Festin de cendres | à volonté | Vigueur DD 17 ; portée de 18 m ; durée de 28 jours
+resource: Putréfaction de la nourriture et de l'eau | à volonté | portée de 3 m ; sabotage des réserves
+resource: Téléportation suprême | à volonté | lui-même et 50 livres d'objets seulement ; destination sur le même plan
+
+step: Des intrus approchent
+  do: Les observer depuis un couvert avec Discrétion +21 et Perception +23 ; choisir une position de tir et une destination de fuite connue
+  note: vision dans le noir à 18 m, détection du Bien, détection de la magie et détection de l'invisibilité permanentes ; les détections demandent leur observation habituelle
+
+step: Il peut harceler ses victimes avant l'affrontement
+  do: Lors de passages distincts, souiller leurs vivres et leur eau ou lancer festin de cendres, puis s'éloigner
+  note: festin de cendres provoque une famine prolongée ; son intérêt est l'usure, sans dégâts immédiats garantis
+
+step: D'autres acrididaemons sont présents
+  do: Coordonner les cibles par télépathie à 30 m et espacer les positions pour limiter les effets de zone ennemis
+
+## Ouverture
+
+step: Plusieurs ennemis vivants sont visibles et distants de 18 m au maximum les uns des autres
+  do: Lancer flétrissure sur ces ennemis depuis les airs, en restant hors de leur allonge
+  note: portée de 288 m ; choisir les cibles sans toucher ses alliés ; les créatures végétales et les élémentaires de l'eau subissent 14d8 au lieu de 14d6
+
+step: Flétrissure est conservée ou indisponible et plusieurs adversaires occupent une même zone
+  do: Lancer sirocco sur leur position, depuis l'extérieur du cylindre
+  note: portée de 72 m ; cylindre de 6 m de rayon et 18 m de haut ; 4d6+14 dégâts de feu par round, Vigueur DD 21 pour réduire de moitié et éviter la chute à terre
+  note: toute cible blessée devient fatiguée, ou épuisée si elle était déjà fatiguée ; maintenir sa propre position hors de cette zone
+
+## Rounds suivants
+
+step: Des ennemis restent dans le sirocco
+  do: Les laisser subir la zone et attaquer à distance avec flétrissure si elle reste disponible et peut toucher plusieurs cibles
+  note: une nouvelle exposition peut faire passer les victimes de la fatigue à l'épuisement ; ne pas dépenser un autre sirocco sur la même position sans nécessité
+
+step: Les ennemis quittent la zone et une utilisation de sirocco reste disponible
+  do: Placer un nouveau sirocco sur leur regroupement ou leur passage obligé, puis garder ses distances en vol
+
+step: Une cible isolée à 18 m ou moins mérite d'être harcelée
+  do: Invoquer une nuée grouillante directement sur sa position, en restant éloigné de la nuée
+  note: elle attaque les créatures présentes, puis poursuit les plus proches ; l'acrididaemon ne peut lui donner d'ordres
+
+step: Une nuée invoquée gêne efficacement un ennemi
+  do: Consacrer son action simple à maintenir la concentration et se déplacer en vol si nécessaire
+  note: après l'arrêt de la concentration, la nuée reste encore 2 rounds ; reprendre alors les autres pouvoirs ou les attaques
+
+step: Une cible affaiblie est accessible sans exposer le daemon à tout le groupe
+  do: Se rapprocher et porter une griffe +20 ; au round suivant, si la cible est à 1,50 m, effectuer une attaque à outrance avec morsure et deux griffes
+  note: un pas de placement de 1,50 m reste compatible avec l'attaque à outrance ; à 3 m, seules les griffes portent
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Frapper avec une griffe +20 à 3 m, ou avec la morsure à 1,50 m
+  note: Attaques réflexes permet jusqu'à 7 attaques d'opportunité par round, sur des occasions distinctes, même pris au dépourvu
+
+## Repli
+
+step: Points de vie sous 50, ou les effets de zone ennemis menacent de l'abattre
+  do: Utiliser téléportation suprême vers la destination sûre préparée
+  note: ce pouvoir ne permet d'emporter aucun allié ni prisonnier, et ne permet pas de rejoindre un autre plan
+
+step: La téléportation est empêchée
+  do: Se retirer en vol, à 18 m par action de déplacement, en recherchant un couvert contre les lanceurs de sorts
+  note: privilégier l'action de retraite pour quitter la mêlée ; cette protection contre les attaques d'opportunité ne concerne que l'espace de départ et les adversaires visibles

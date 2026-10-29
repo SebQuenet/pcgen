@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Mingorc, géant des cendres mort-vivant de taille G, loyal mauvais, doté de 105 points de vie et d'une CA de 29. Il attend au centre de la salle, plongé dans une torpeur.
+  Attaque à outrance : 2 coups à +24, chacun infligeant 2d6+15 dégâts et une maladie. Allonge et espace occupé : 3 m ; déplacement : 12 m ; initiative : +9.
+  Vision dans le noir à 18 m, vision nocturne et Perception +20.
+
+note: Défenses
+  Réduction des dégâts 10/magie et tranchant : une arme doit être à la fois magique et tranchante pour l'ignorer.
+  Immunité au froid, à l'électricité, aux projectiles magiques et immunités des morts-vivants ; résistance au feu 10 ; résistance à la canalisation +4.
+
+step: Des intrus entrent dans son champ de vision sans l'attaquer
+  do: Rester immobile pendant 2 rounds, puis sortir de sa torpeur et attaquer.
+
+## Ouverture
+
+step: Les intrus l'attaquent avant la fin des 2 rounds
+  do: Leur accorder automatiquement un round de surprise, puis faire réagir Mingorc normalement.
+  note: Cette attaque interrompt son attente ; il n'achève pas les 2 rounds de torpeur.
+
+step: Mingorc peut agir et un ennemi est à 3 m ou moins
+  do: Effectuer une attaque à outrance avec ses 2 coups à +24, pour 2d6+15 dégâts et une maladie par coup réussi.
+  note: Concentrer les deux coups sur la même cible pour l'abattre rapidement.
+
+step: Aucun ennemi n'est à portée de ses coups
+  do: Avancer de 12 m au maximum vers la cible accessible la plus proche ; donner un seul coup si elle entre dans son allonge de 3 m.
+  note: Si nécessaire, consacrer le round à un double déplacement de 24 m pour rejoindre les fuyards.
+
+## Rounds suivants
+
+step: Une cible reste à portée au début de son tour
+  do: Répéter l'attaque à outrance ; si un pas de 1,50 m suffit à la suivre, faire ce pas puis porter les deux coups.
+
+step: Il privilégie les dégâts contre une cible facile à toucher
+  do: Utiliser Attaque en puissance : ses coups passent à +21 et infligent chacun 2d6+21 dégâts, plus la maladie.
+  note: Conserver les attaques à +24 contre une cible difficile à toucher.
+
+step: Au moins trois ennemis forment une chaîne de cibles adjacentes dans son allonge de 3 m
+  do: Utiliser Succession d'enchaînements : porter un coup à +24, puis, à chaque réussite, un coup contre une nouvelle cible adjacente à la précédente et à portée.
+  note: Une seule attaque par cible ; un échec arrête la chaîne. Cette action remplace les deux coups habituels et réduit sa CA à 27 jusqu'à son prochain tour.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup avec les modificateurs en vigueur.
+  note: Sans Réflexes de combat, il ne dispose que d'une attaque d'opportunité par round.
+
+## Repli
+
+step: Les adversaires prennent la fuite dans le donjon
+  do: Les poursuivre à travers toute la structure et reprendre ses attaques dès qu'ils sont à portée.
+
+step: Les adversaires quittent la structure
+  do: Cesser la poursuite à la limite du bâtiment ; Mingorc n'en sort jamais.
+
+step: Ses points de vie diminuent, même près de 0
+  do: Continuer le combat jusqu'à sa destruction, sans retraite volontaire.

@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Vexenion, qlippoth chaotique mauvais de taille G, masse de chair amorphe et affamée qui chasse en embuscade depuis les hauteurs.
+  76 pv ; CA 19 ; initiative +8. Quatre tentacules +11, chacun infligeant 1d6+3 et permettant une étreinte ; allonge de 3 m, espace occupé de 3 m.
+  Déplacement et escalade à 9 m ; lenteur pour désorganiser le groupe, flèche acide contre les adversaires hors d'atteinte.
+
+resource: Lenteur | 1/jour | pouvoir magique, NLS 6, Volonté DD 16
+resource: Flèche acide | 3/jour | pouvoir magique, NLS 6
+resource: Détection de l'invisibilité | permanent | complète sa vision dans le noir à 18 m
+
+note: Défenses
+  RD 5/fer froid ou armes loyales ; résistance à la magie 17 ; immunité à l'acide, au froid, au poison et aux effets mentaux ; résistance à l'électricité 10 et au feu 10.
+  Sa vision à 360° empêche la prise en tenaille ; son corps amorphe l'immunise aux coups critiques et aux dégâts de précision. Il ne peut pas être renversé par un croc-en-jambe.
+
+step: Des proies approchent sans l'avoir repéré
+  do: Se dissimuler en hauteur, sur une branche ou une colonne accessible par escalade, avec Furtivité +11 ; surveiller les approches avec Perception +12
+  note: Choisir un emplacement permettant de menacer une proie à 3 m et offrant une voie de fuite par escalade.
+
+note: Forme pierreuse
+  Une minute de concentration donne +6 d'armure naturelle supplémentaire et une RD 10/contondant, mais interdit tout déplacement et toute action physique.
+  Cette immobilité gêne l'embuscade : s'il est surpris ainsi, il lui faut une action de round complet pour sortir de sa coque, puis il reste chancelant pendant 1 round.
+
+## Ouverture
+
+step: Plusieurs adversaires sont visibles et il peut utiliser un pouvoir sans subir d'attaque d'opportunité
+  do: Lancer lenteur sur les adversaires regroupés, en privilégiant les combattants capables de le rejoindre ; Volonté DD 16
+  note: Profiter de leur mobilité réduite pour garder l'avantage du terrain et choisir sa première victime.
+
+step: Une proie est déjà à portée de ses tentacules et il peut agir pendant un round complet
+  do: Attaque à outrance avec ses quatre tentacules +11, chacun pour 1d6+3 ; tenter gratuitement une étreinte à +16 après une touche contre une cible de taille G ou inférieure
+  note: Concentrer les coups sur une proie isolée ou peu protégée. Une étreinte réussie engage aussi Vexenion dans la lutte et modifie ses attaques restantes.
+
+step: Il doit se déplacer pour atteindre une proie
+  do: Avancer ou escalader jusqu'à mettre la cible à 3 m, puis porter une attaque de tentacule avec Frappe décisive : +11, 2d6+3 et étreinte
+  note: Frappe décisive accompagne une attaque simple ; elle ne s'ajoute pas à l'attaque à outrance.
+
+## Rounds suivants
+
+note: Polyvalence tentaculaire
+  Au début de son tour, une action rapide permet d'affecter des tentacules au déplacement ou à la défense pour ce round, chacun retirant une attaque de tentacule disponible.
+  Chaque tentacule affecté au déplacement ajoute 1,50 m aux vitesses terrestre et d'escalade ; chaque tentacule affecté à la défense donne +1 d'esquive à la CA.
+
+step: Il peut rester sur place et frapper sans être engagé dans une lutte
+  do: Garder les quatre tentacules pour l'attaque à outrance et concentrer les blessures sur la même cible
+  note: Son allonge de 3 m permet de menacer les approches et de porter des attaques d'opportunité contre les déplacements qui en provoquent.
+
+step: Il tient une proie vulnérable et ses alliés ne peuvent pas le submerger
+  do: Maintenir la lutte par une action simple, avec BMO +16 et le bonus de +5 au maintien si la prise a persisté ; infliger les dégâts du tentacule grâce à l'étreinte
+  note: Consacrer ce tour au maintien de la prise. Si la lutte l'expose à trop d'attaques, relâcher la victime par une action libre et reprendre ses déplacements.
+
+step: Il subit une forte pression au corps à corps
+  do: Affecter deux tentacules à la défense en action rapide, puis attaquer avec les deux autres
+  note: CA 21 pendant 1 round ; deux attaques de tentacule disponibles. Privilégier ce choix contre les ennemis qui touchent facilement sa CA 19.
+
+step: Les adversaires restent hors de portée ou occupent une position difficile à rejoindre
+  do: Utiliser flèche acide depuis un emplacement hors de leur allonge, puis se déplacer vers un couvert ou une meilleure position
+  note: Affecter au besoin des tentacules au déplacement avant d'utiliser le pouvoir ; surveiller les trois utilisations quotidiennes.
+
+## Repli
+
+step: Ses points de vie passent sous 20 ou les ennemis surmontent ses défenses et l'encerclent
+  do: Relâcher toute prise, affecter les quatre tentacules au déplacement en action rapide et battre en retraite vers une paroi ou un passage étroit
+  note: Vitesses terrestre et d'escalade à 15 m ; aucune attaque de tentacule disponible ce round. Utiliser l'action de retraite si les adversaires le menacent encore.
+
+step: Un passage étroit peut couper la poursuite
+  do: Exploiter compression pour s'y faufiler et rompre la ligne de vue, puis se cacher
+  note: Son corps peut traverser un passage mesurant le quart de son espace normal sans se serrer, ou le huitième en se serrant.
+
+step: Il a rompu la poursuite et dispose d'une minute à couvert
+  do: Adopter éventuellement sa forme pierreuse pour se dissimuler parmi les rochers et attendre le départ des intrus
+  note: Cette forme ne rend aucun point de vie et impose toujours une sortie lente avant de reprendre la chasse.

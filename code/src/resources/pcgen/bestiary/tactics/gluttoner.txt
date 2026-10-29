@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Gluttoner, nécrocraft de taille G, mort-vivant neutre mauvais et sans intelligence, assemblé surtout à partir de zombies. Il suit des ordres simples et combat par force brute.
+  147 pv ; CA 22, contact 10 ; réduction des dégâts 5/tranchant ; immunités des morts-vivants. Déplacement de 9 m ; vision dans le noir à 18 m ; espace occupé de 3 m.
+  Morsure +17 (1d8+7 et maladie), deux griffes +17 (1d6+7 et paralysie chacune), griffe allongée +17 (1d6+7 et paralysie). Allonge de 3 m, ou 4,50 m avec la griffe allongée.
+
+step: Blessé, avec un cadavre de taille M ou supérieure à disposition et une heure sans interruption
+  do: Cannibaliser le cadavre pour réparer son corps, sans dépasser 147 pv.
+  note: Un cadavre de mort-vivant rend 5 pv, plus 5 pv par catégorie de taille au-dessus de M ; un autre cadavre rend un cinquième de cette quantité. Toute interruption oblige à recommencer l'heure de consommation.
+
+## Ouverture
+
+step: Un ennemi est hors de portée
+  do: Avancer de 9 m au maximum vers lui ; effectuer une seule attaque si une cible devient accessible, avec la griffe allongée jusqu'à 4,50 m.
+  note: Approcher à 3 m si possible pour exposer la cible à la puanteur et préparer les quatre attaques du round suivant. Si aucune cible n'est accessible, effectuer un double déplacement, jusqu'à 18 m.
+
+step: Un ennemi est déjà à 3 m ou moins, éventuellement après un pas de 1,50 m
+  do: Effectuer une attaque à outrance : morsure, deux griffes et griffe allongée, toutes à +17.
+  note: Un déplacement supérieur au pas de 1,50 m empêche cette attaque à outrance pendant le même tour.
+
+step: Une créature vivante entre dans le rayon de 3 m de la puanteur
+  do: Faire effectuer un jet de Vigueur DD 19 ; en cas d'échec, elle est fiévreuse pendant 1d6+4 minutes.
+  note: L'état fiévreux impose notamment un malus de -2 aux attaques, aux dégâts d'armes et aux sauvegardes, ce qui facilite les paralysies. Une sauvegarde réussie immunise contre cette puanteur pendant 24 heures.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée des quatre attaques
+  do: Répéter l'attaque à outrance : morsure +17 (1d8+7 et maladie), deux griffes +17 et griffe allongée +17 (1d6+7 et paralysie chacune).
+  note: Les trois griffes multiplient les occasions de paralyser. Continuer à frapper sans élaborer de manœuvre complexe ; la maladie de la morsure ne remplace pas les dégâts immédiats.
+
+step: Seule la griffe allongée atteint un adversaire à 4,50 m
+  do: Faire un pas de 1,50 m vers lui si cela permet l'attaque à outrance ; sinon, porter une seule attaque de griffe allongée à +17.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter une attaque de griffe à +17, avec paralysie ; employer la griffe allongée jusqu'à 4,50 m.
+  note: Une seule attaque d'opportunité par round. L'allonge ne permet pas de frapper automatiquement chaque créature qui s'approche.
+
+step: Les ennemis s'éloignent et ses ordres autorisent la poursuite
+  do: Les suivre à pied, puis reprendre les griffes et la morsure dès qu'ils sont accessibles.
+  note: Cannibaliser demande une heure ininterrompue et ne permet aucune guérison pendant le combat.
+
+## Repli
+
+step: Ses points de vie diminuent et aucun ordre de retraite n'est donné
+  do: Continuer le combat jusqu'à sa destruction à 0 pv.
+  note: Sans intelligence, il ne décide pas d'une retraite à un seuil de points de vie.
+
+step: Son maître lui ordonne de se retirer
+  do: Suivre cet ordre simple en s'éloignant à pied ; utiliser le retrait si nécessaire pour quitter le contact, jusqu'à 18 m.
+  note: Le retrait protège uniquement le départ de sa case initiale contre les attaques d'opportunité ordinaires.

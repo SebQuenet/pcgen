@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Hérécite d'Asmodéus, mort-vivant loyal mauvais de taille M, FP 9 : un gardien intelligent qui mêle tromperie, feu et attaques contre la foi des prêtres adverses.
+  Masse d'armes lourde +2 impie +19/+14 (1d8+10, critique 19-20), accompagnée d'un coup +12 (1d8+5), ou deux coups +17 (1d8+8 chacun) ; toutes ces attaques portent la frappe voleuse de foi. La masse inflige aussi +2d6 aux créatures bonnes.
+  138 pv ; CA 24, contact 19 ; déplacement de 12 m, allonge de 1,50 m ; initiative +8. Vision dans le noir à 18 m, détection du Bien et détection de l'invisibilité constantes.
+  Réduction des dégâts 10/Bien, résistance à la magie 20, ou 24 contre les sorts divins ; résistance à la canalisation +6 et immunités des morts-vivants.
+
+resource: Confusion | 1/jour | Volonté DD 19 ; durée 10 rounds
+resource: Boule de feu | 1/jour | 10d6 de feu ; Réflexes DD 18, moitié
+resource: Mur de feu | 1/jour | aucun jet de sauvegarde ; concentration puis 10 rounds
+resource: Antidétection | 1/jour | protection de 10 heures
+resource: Invisibilité | 3/jour | 10 minutes au maximum ; cesse dès qu'il attaque
+resource: Flammes | 3/jour | 1d6+5 de feu par attaque de contact ; projection jusqu'à 36 m
+resource: Ténèbres maudites | 3/jour | Volonté DD 19 ; rayon de 6 m
+resource: Mains brûlantes | à volonté | cône de 4,50 m ; 5d4 de feu ; Réflexes DD 16, moitié
+resource: Déguisement | à volonté | modifier son apparence pour préparer une embuscade
+resource: Volonté de fer supérieure | 1/jour | relancer un jet de Volonté ; conserver le second résultat
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Lancer antidétection sur lui-même, puis employer déguisement et Bluff +17 pour se présenter comme une silhouette inoffensive et laisser approcher les cibles.
+  note: Perception +20 et détection de l'invisibilité servent à repérer les éclaireurs ; consacrer les rounds d'observation nécessaires à la détection du Bien pour identifier les auras.
+
+step: Une attaque est imminente et il peut se préparer sans être vu
+  do: Activer invisibilité et se placer pour atteindre plusieurs adversaires avec confusion ; garder si possible une utilisation pour le repli.
+
+step: Il appartient déjà à une cabale de deux à cinq hérécites
+  do: Coordonner les positions par télépathie et rester dans le territoire du rituel.
+  note: Cabale active : +4 à l'initiative et à la Perception, guérison accélérée 10. La sortie d'un seul membre du territoire supprime les bénéfices communs pour tous.
+
+note: Aura de profanation
+  Rayon de 9 m : les morts-vivants alliés gagnent +2 aux attaques, dégâts et sauvegardes. Les bénéfices personnels de l'hérécite sont déjà inclus dans ses statistiques.
+
+## Ouverture
+
+step: Plusieurs adversaires sont regroupés dans un rayon de 4,50 m et peuvent subir les effets mentaux
+  do: Lancer confusion sur le groupe, à une portée maximale de 60 m, puis rester à distance des victimes.
+  note: Volonté DD 19 annule. Ne pas attaquer immédiatement les victimes confuses : une victime attaquée riposte contre son agresseur à son prochain tour.
+
+step: Confusion est indisponible ou inadaptée et plusieurs ennemis bons sont regroupés
+  do: Lancer ténèbres maudites sur eux, à une portée maximale de 60 m.
+  note: Créatures bonnes : 5d8 et état fiévreux pendant 1d4 rounds ; extérieurs bons : 10d6 à la place. Volonté DD 19 réduit les dégâts de moitié et annule l'état fiévreux. Les créatures neutres prennent la moitié des dégâts, encore réduite de moitié sur une sauvegarde réussie ; les créatures mauvaises sont épargnées.
+
+step: Un lanceur de sorts divins non mauvais est déjà à portée de mêlée
+  do: Privilégier l'attaque à outrance à la masse et au coup secondaire contre lui.
+  note: Chaque touche impose Volonté DD 21 ou interdit les sorts divins pendant 1 round. Dès que la cible réussit cette sauvegarde, elle devient immunisée aux frappes voleuses de foi de cet hérécite pendant 24 heures.
+
+## Rounds suivants
+
+step: Un prêtre vulnérable à la frappe voleuse de foi reste accessible
+  do: Le maintenir au contact et répéter l'attaque à outrance ; après un déplacement supérieur à 1,50 m, porter une seule attaque de masse à +19.
+  note: S'il est désarmé, employer ses deux coups +17 lors d'une attaque à outrance.
+
+step: Des adversaires non confus se regroupent loin de ses alliés et de lui-même
+  do: Employer boule de feu, rayon de 6 m, jusqu'à 240 m de portée ; préférer ténèbres maudites contre un groupe bon mêlé à ses alliés mauvais.
+
+step: Il faut isoler les combattants des soutiens ou barrer un passage
+  do: Placer mur de feu entre les deux groupes, face brûlante vers les ennemis, sans s'inclure dans les flammes.
+  note: Traverser le mur inflige 2d6+10 de feu, sans sauvegarde ; sa chaleur atteint 6 m du côté choisi. Le mur est franchissable. Il inflige des dégâts doublés aux morts-vivants : l'hérécite et sa cabale restent du côté sûr.
+
+step: Plusieurs adversaires proches peuvent être pris dans un cône sans toucher ses alliés
+  do: Employer mains brûlantes ; contre une seule cible au contact, préférer les attaques physiques.
+
+step: Un ennemi reste hors d'atteinte et les pouvoirs de zone seraient gaspillés
+  do: Activer flammes, puis projeter les flammes par des attaques de contact à distance jusqu'à 36 m.
+  note: Chaque attaque consomme une minute de la durée initiale de 10 minutes ; la création des flammes prend une action simple.
+
+step: Il doit employer un pouvoir magique alors qu'un ennemi le menace
+  do: L'utiliser sur la défensive, ou s'écarter de 1,50 m si cela suffit à sortir de la zone menacée avant de l'utiliser.
+  note: Concentration +15 ; Magie de guerre ajoute +4 au test d'utilisation sur la défensive.
+
+## Repli
+
+step: Moins de 35 pv et une retraite permet encore de défendre son territoire
+  do: Employer invisibilité, sur la défensive si nécessaire, puis gagner un abri à 12 m par déplacement ; si mur de feu reste disponible, le placer lors d'un autre round entre lui et les poursuivants.
+  note: Éviter toute attaque pendant la fuite pour conserver invisibilité.
+
+step: La cabale est encore active et il peut se mettre à couvert dans son territoire
+  do: Se retirer derrière les autres membres et laisser agir la guérison accélérée 10 avant de revenir combattre.
+
+step: Aucune retraite utile n'est possible
+  do: Tenir la position et concentrer ses attaques sur un lanceur divin non mauvais ou une créature bonne vulnérable à sa masse impie.
+
+step: Il est détruit à 0 pv
+  do: Appliquer automatiquement la libération d'hérésie dans un rayon de 9 m : 3d6 d'énergie négative, Réflexes DD 21 pour réduire de moitié.
+  note: Toute créature non mauvaise blessée doit aussi réussir Volonté DD 21 ou subir la frappe voleuse de foi. Cette explosion accompagne sa destruction ; il ne peut pas la déclencher volontairement.

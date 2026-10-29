@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Fungal Shambler, tertre errant fongique de taille G, plante neutre mauvaise de FP 13. Prédateur lent qui compte sur l'embuscade dans les feuilles mortes et les champignons du Fangwood corrompu.
+  195 PV, CA 26 ; déplacement de 3 m par round, espace occupé de 3 m et allonge de 3 m. Attaque à outrance : 4 coups +19, chacun infligeant 2d6+7 dégâts, critique sur 19–20, avec étreinte.
+  Immunisé contre les maladies et l'électricité, avec les immunités des plantes ; résistance au feu 10. Vision dans le noir à 18 m et vision nocturne.
+
+resource: Nuage de spores | non précisé | À réserver aux proies qui tentent de fuir ; le bloc fourni ne précise ni portée, ni DD, ni durée, ni nombre d'utilisations.
+
+step: Les proies ne l'ont pas encore repéré
+  do: Rester dissimulé parmi les feuilles mortes et les pousses fongiques, puis attendre qu'une proie arrive à 3 m ou moins.
+  note: Discrétion +19 dans les forêts et les marais, +11 ailleurs ; sa lenteur rend une approche à découvert peu favorable.
+
+## Ouverture
+
+step: Une proie surprise se trouve à 3 m ou moins
+  do: Porter un seul coup +19, infligeant 2d6+7 dégâts ; sur une touche, tenter immédiatement l'étreinte contre une cible de taille M ou inférieure.
+  note: L'étreinte permet d'engager gratuitement la lutte sans provoquer d'attaque d'opportunité. Le round de surprise ne permet pas les quatre coups de l'attaque à outrance.
+
+step: Le combat commence sans surprise et une cible est déjà à portée
+  do: Porter les quatre coups +19 et tenter l'étreinte après une touche pour empêcher la proie de s'éloigner.
+
+## Rounds suivants
+
+step: Une cible reste à portée et il n'a pas besoin de se déplacer
+  do: Effectuer une attaque à outrance avec ses quatre coups ; concentrer les attaques sur une proie blessée pour l'abattre.
+  note: Un pas de placement de 1,50 m reste possible avant l'attaque à outrance.
+
+step: Il tient une proie et veut avant tout empêcher sa fuite
+  do: Consacrer son action simple à maintenir la lutte et infliger les dégâts d'un coup sur une réussite.
+  note: Maintenir la lutte consomme l'action nécessaire à l'attaque à outrance ; choisir entre retenir la victime et la relâcher pour reprendre les quatre coups.
+
+step: Une cible facile à toucher reste à portée
+  do: Activer Attaque en puissance : coups +15, chacun infligeant 2d6+15 dégâts.
+  note: Revenir aux coups +19 contre une défense élevée pour favoriser les touches et les tentatives d'étreinte.
+
+step: Après un déplacement, plusieurs ennemis adjacents entre eux sont à portée
+  do: Employer Enchaînement, puis Succession d'enchaînements tant que les coups touchent, pour frapper successivement des cibles différentes à portée.
+  note: Cette action simple remplace l'attaque à outrance et réduit sa CA à 24 jusqu'à son prochain tour.
+
+step: Une proie tente de fuir
+  do: Libérer le nuage de spores pour tenter de freiner sa fuite, conformément à sa tactique décrite ; avancer ensuite selon les actions encore disponibles.
+  note: Porter une attaque d'opportunité si la fuite en provoque une dans son allonge de 3 m, puis tenter l'étreinte sur une touche. Son déplacement de 3 m ne lui permet pas de rattraper aisément une proie rapide.
+
+## Repli
+
+step: Ses points de vie diminuent, même très fortement
+  do: Continuer à frapper et à retenir les proies jusqu'à sa destruction.
+  note: Il ne se replie pas ; aucun seuil de points de vie ne déclenche de fuite.

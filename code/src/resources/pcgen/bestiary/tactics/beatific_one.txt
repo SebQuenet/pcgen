@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Sulukta, Beatific One, est une asura loyale mauvaise qui méprise ses adversaires et protège son sanctuaire jusqu'à la mort. Elle cherche à les humilier en les désarmant et en les renversant, puis les frappe à mains nues.
+  93 pv ; CA 26, contact 20 ; initiative +7 ; déplacement 18 m ; allonge 1,50 m ; vision dans le noir 18 m.
+  Déluge de coups +16/+16/+11/+11/+6 (1d10+6) ; frappes à mains nues +18/+13/+8 (1d10+6).
+  Avec ses armes : lance de maître +18/+13/+8 (1d8+9, x3), kukri de maître +18 (1d4+3, critique 18-20), épée du temple de maître +18 (1d8+3).
+  Croc-en-jambe et désarmement : BMO +19 contre la DMD adverse ; lutte +19. Sa propre DMD est de 37, ou 39 contre ces trois manœuvres.
+
+note: Défenses
+  RD 10/Bien ; RM 20 ; résistances à l'acide 10 et à l'électricité 10 ; immunité aux malédictions, aux maladies et au poison.
+  Réflexes +14 et esquive extraordinaire ; Volonté +14, avec +2 contre les enchantements ; Vigueur +6.
+
+resource: Flou | 3/jour | dissimulation, 20 % de chances de rater les attaques contre elle
+resource: Arme magique | 3/jour | une arme par utilisation ; les statistiques fournies ne comprennent pas ce pouvoir
+resource: Cécité/surdité | 3/jour | Vigueur DD 16 ; privilégier la cécité
+resource: Motif hypnotique | 3/jour | Volonté DD 16 ; fascination
+resource: Lévitation | 3/jour | franchir un obstacle vertical
+resource: Immobilisation de personne | 1/jour | Volonté DD 17 ; cible humanoïde
+resource: Porte dimensionnelle | 1/jour | repositionnement dans le sanctuaire
+resource: Convocation | 1/jour | niveau 3 ; une autre Beatific One ; 40 % de réussite
+resource: Déguisement, feuille morte, détection de l'invisibilité, ventriloquie | à volonté | pouvoirs magiques de NLS 6 ; concentration +10
+
+step: Elle apprend l'arrivée d'intrus
+  do: Lancer flou sur elle-même, puis arme magique sur ses armes, une utilisation par arme, selon le temps disponible.
+  note: Sur une arme de maître, arme magique conserve le bonus d'attaque indiqué et ajoute +1 aux dégâts : lance 1d8+10, kukri 1d4+4, épée du temple 1d8+4.
+
+step: Elle dispose encore de temps avant le contact
+  do: Activer détection de l'invisibilité et tenter la convocation d'une autre Beatific One pour défendre le sanctuaire.
+  note: Vérifier les 40 % de réussite avant de compter sur ce renfort ; communiquer par télépathie à 30 m pour coordonner la défense.
+
+## Ouverture
+
+step: Un combattant armé peut être atteint avec un déplacement de 18 m au plus
+  do: Se rapprocher et tenter un désarmement à BMO +19, de préférence contre l'arme la plus dangereuse pour elle.
+  note: Un désarmement réussi à mains nues permet de prendre l'arme ; Sulukta aime ensuite la retourner contre son propriétaire. Employer les caractéristiques de cette arme pour résoudre ses attaques.
+
+step: L'adversaire proche est difficile à désarmer ou combat déjà sans arme
+  do: Tenter un croc-en-jambe à BMO +19, puis préparer les frappes à mains nues des rounds suivants.
+  note: Choisir une cible qui peut être renversée et dont la DMD semble accessible.
+
+step: Un humanoïde dangereux reste à distance et aucun adversaire ne la menace au contact
+  do: Employer immobilisation de personne, Volonté DD 17, pour l'empêcher de rejoindre la mêlée.
+  note: Si la cible résiste ou n'est pas humanoïde, envisager cécité, Vigueur DD 16, lors d'un round ultérieur.
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m et elle peut consacrer le round à attaquer
+  do: Effectuer le déluge de coups +16/+16/+11/+11/+6, chaque touche infligeant 1d10+6.
+  note: Privilégier les ennemis déjà désarmés ou à terre. Les valeurs indiquées supposent qu'elle n'emploie pas Attaque en puissance.
+
+step: Une arme ennemie reste menaçante ou une cible peut être mise à terre
+  do: Remplacer une attaque de mêlée par un désarmement ou un croc-en-jambe, puis poursuivre les attaques restantes si elle effectue une attaque à outrance.
+  note: Le BMO +19 correspond à une manœuvre au meilleur bonus ; appliquer les pénalités d'attaques successives si elle remplace une attaque ultérieure.
+
+step: Un ennemi à terre tente de se relever dans son allonge
+  do: Porter une frappe à mains nues en attaque d'opportunité, si elle en dispose encore.
+  note: Le relever ne donne pas automatiquement une nouvelle tentative de croc-en-jambe réussie.
+
+step: Rester au contact l'exposerait aux attaques de plusieurs ennemis
+  do: Employer Attaque éclair : avancer, porter une seule attaque de mêlée, puis poursuivre le déplacement, dans la limite totale de 18 m.
+  note: Cette tactique remplace le déluge de coups ; seul l'adversaire visé ne peut pas porter d'attaque d'opportunité provoquée par ce déplacement.
+
+step: Un archer la prend pour cible et elle garde une main libre
+  do: Utiliser Parade de projectiles pour écarter un projectile admissible, ou Interception de projectiles pour le saisir.
+  note: Un seul projectile par round ; elle doit percevoir l'attaque et ne pas être prise au dépourvu.
+
+step: Plusieurs adversaires peu aguerris sont groupés et elle peut employer un pouvoir sans être menacée
+  do: Utiliser motif hypnotique, Volonté DD 16, puis se concentrer sur les ennemis restés actifs.
+  note: Éviter de menacer directement les créatures fascinées pour conserver l'effet aussi longtemps que possible.
+
+step: Un intrus contourne la défense ou devient inaccessible par un déplacement ordinaire
+  do: Employer porte dimensionnelle pour rejoindre une position qui lui barre l'accès au sanctuaire.
+  note: Après la téléportation, elle ne peut plus agir jusqu'à son prochain tour.
+
+## Repli
+
+step: Ses points de vie diminuent, même jusqu'à une situation désespérée
+  do: Continuer à défendre le sanctuaire et combattre jusqu'à la mort.
+  note: Son serment exclut la fuite ; ses déplacements et sa porte dimensionnelle servent à poursuivre la défense.

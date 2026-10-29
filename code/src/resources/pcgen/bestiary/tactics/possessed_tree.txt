@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Arbre possédé de taille G, créature artificielle neutre et sans Intelligence ; 52 pv, CA 14, solidité 5 et immunités des créatures artificielles ; vulnérable au feu.
+  Deux coups +9 (2d6+6 et étreinte), avec saisie et constriction ; allonge de 4,50 m et espace occupé de 3 m.
+  Immobile : vitesse de 0 m. Vision dans le noir à 18 m, vision nocturne et Perception -5.
+
+step: Aucun adversaire à portée
+  do: Rester sur place et attendre qu'une cible entre dans son allonge.
+  note: Il ne peut ni poursuivre une cible ni se repositionner pour préparer une embuscade.
+
+## Ouverture
+
+step: Un adversaire se trouve à 4,50 m ou moins au début de son tour
+  do: Effectuer une attaque à outrance avec ses deux coups +9, chacun infligeant 2d6+6 dégâts ; tenter l'étreinte après un coup réussi.
+  note: Choisir une cible accessible et la retenir pour exploiter la constriction.
+
+step: Tous les adversaires restent au-delà de 4,50 m
+  do: Attendre sur place.
+  note: Il ne possède aucune attaque à distance et ne peut pas réduire la distance.
+
+## Rounds suivants
+
+step: Une victime est agrippée
+  do: Consacrer son action simple à maintenir la lutte et appliquer la constriction lorsque le test de lutte réussit.
+  note: Le profil ne précise pas les dégâts de constriction. Maintenir la lutte ne permet pas d'effectuer aussi l'attaque à outrance de deux coups.
+
+step: La victime se libère, ou aucune victime n'est agrippée, mais un adversaire reste à portée
+  do: Reprendre l'attaque à outrance avec les deux coups +9 et tenter de nouveau l'étreinte après une touche.
+
+step: Les adversaires quittent son allonge
+  do: Rester sur place jusqu'à ce qu'une cible revienne à portée.
+
+## Repli
+
+step: Ses points de vie baissent, même sous des attaques de feu
+  do: Continuer à frapper et à retenir les adversaires à portée jusqu'à sa destruction à 0 pv.
+  note: Sa vitesse de 0 m interdit tout repli ; sans Intelligence, il n'élabore aucun plan de fuite.

@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Cadathiel le Zélote, ange cassisien de taille P, neutre bon, FP 2. Il cherche à obtenir des aveux et à interrompre les violences grâce à ses pouvoirs mentaux.
+  13 pv ; CA 14 ; vol à 18 m, manœuvrabilité parfaite. Repentir forcé neutralise une cible admissible ; confession exige une réponse sincère ou inflige une sanction. Coup à -1 (1d3-4), allonge de 1,50 m : une attaque de dernier recours.
+  RD 5/fer froid ou Mal ; immunité à l'acide, au froid et à la pétrification ; résistance de 10 à l'électricité et au feu. Sa Volonté de +0 rend les attaques mentales dangereuses.
+
+resource: Confession | 1/jour | NLS 3 ; action simple ; portée 9 m ; Volonté DD 12, partiel ; résistance à la magie applicable ; effet mental et dépendant du langage
+resource: Repentir forcé | 1/jour | NLS 3 ; action simple ; portée 9 m ; durée 3 rounds ; Volonté DD 14 annule ; résistance à la magie applicable ; effet mental et d'émotion
+resource: Communion | 1/semaine | six questions ; NLS 12
+resource: Détection du Chaos, du Mal, du Bien et de la Loi | à volonté | activer séparément et se concentrer pour examiner les auras
+
+step: Il peut observer avant de se montrer
+  do: Examiner les lieux depuis un couvert, avec Perception +7 et Discrétion +8 ; repérer une sortie aérienne et utiliser les détections pertinentes si le temps le permet
+  note: vision dans le noir à 18 m et vision nocturne ; une absence d'aura détectée ne garantit pas l'innocence. Sa mémoire parfaite conserve les paroles et les faits observés.
+
+step: Une menace importante justifie la consultation et communion est disponible
+  do: Employer communion avant l'affrontement pour poser six questions auxquelles répondre par oui ou non, sur les dangers et les possibilités de repli
+
+step: Un affrontement contre le Mal se prépare
+  do: Garder son aura de protection mineure active ; si elle est éteinte, consacrer 1 minute de concentration à la rétablir avant le combat
+  note: dans un rayon de 1,50 m, elle protège Cadathiel et un seul autre bénéficiaire : +2 de parade à la CA contre les ennemis mauvais, soit CA 16 pour lui, et +2 de résistance aux sauvegardes contre les effets mauvais ou les sorts de créatures mauvaises.
+  note: l'aura disparaît dès qu'une créature mauvaise touche Cadathiel ou qu'il rate une sauvegarde contre une source mauvaise.
+
+## Ouverture
+
+step: Les interlocuteurs acceptent encore de parler
+  do: Exiger la cessation des violences et proposer une reddition avec Diplomatie +4, en restant en vol hors de portée de mêlée
+  note: don des langues permet de communiquer avec toute créature possédant un langage ; Psychologie +7 aide à apprécier ses intentions.
+
+step: Le combat commence et un adversaire mauvais sans le sous-type Mal se trouve à 9 m ou moins
+  do: Lancer repentir forcé sur le plus dangereux de ces adversaires, depuis une position hors de son allonge
+  note: sur un échec de Volonté DD 14, la cible tombe à terre et confesse ses fautes pendant 3 rounds. Le pouvoir prend fin immédiatement si elle est attaquée ou si Cadathiel quitte son champ de vision.
+
+step: Repentir forcé ne convient pas et confession est disponible contre un agresseur à 9 m ou moins
+  do: Lancer confession et poser une question précise sur ses actes ou ses intentions, dans une langue qu'il comprend
+  note: à sa prochaine action, la cible doit répondre sincèrement dans cette langue ou subir 1d6 dégâts et être fiévreuse pendant 2d4 rounds. Volonté DD 12 réduit les dégâts de moitié et annule l'état fiévreux ; répondre sincèrement évite la sanction.
+
+## Rounds suivants
+
+step: Une cible subit encore repentir forcé
+  do: Rester visible pour elle, écouter ses aveux et demander aux éventuels alliés de diriger leurs attaques ailleurs
+  note: profiter de ces rounds pour négocier une reddition ou permettre aux personnes menacées de s'éloigner ; garder ses distances avec les ennemis encore actifs.
+
+step: Confession est encore disponible et un autre agresseur peut être interrogé
+  do: Employer confession sur cet adversaire, en restant à 9 m ou moins et hors de son allonge
+  note: réserver repentir forcé aux créatures mauvaises dépourvues du sous-type Mal ; les immunités aux effets mentaux empêchent ces deux pouvoirs d'agir.
+
+step: Ses pouvoirs quotidiens sont épuisés ou inadaptés
+  do: Rester mobile en vol, surveiller les adversaires et continuer à réclamer leur reddition ; si un allié est présent, lui apporter l'aura à 1,50 m lorsque cette position reste sûre
+  note: choisir une position abritée des tirs ; ses 13 pv et sa faible attaque ne permettent pas un échange prolongé.
+
+step: Un ennemi arrive au contact
+  do: Se dégager en vol ; si une attaque reste nécessaire pour défendre quelqu'un, porter un coup à -1 (1d3-4)
+  note: lorsque le résultat des dégâts est inférieur à 1, le coup inflige 1 point de dégâts non létaux. Un déplacement de 1,50 m peut permettre de sortir de l'allonge sans provoquer d'attaque d'opportunité avant d'utiliser un pouvoir.
+
+## Repli
+
+step: Il tombe à 6 pv ou moins, ou un ennemi menace de l'abattre malgré ses défenses
+  do: Rompre le contact en volant vers le couvert repéré ; utiliser le retrait si cela permet de quitter la mêlée, jusqu'à 36 m avec un double déplacement
+  note: le retrait protège seulement la case de départ contre les attaques d'opportunité des adversaires visibles ; éviter les autres zones menacées et les lignes de tir.
+
+step: Il a atteint un abri
+  do: Rester à couvert et transmettre fidèlement les événements grâce à sa mémoire parfaite ; rétablir son aura par 1 minute de concentration si elle a disparu
+  note: connaissance de la direction reste active pour l'orienter pendant sa fuite.

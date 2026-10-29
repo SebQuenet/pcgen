@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Thastrakna, démon de l'ombre colossal, chaotique mauvais et intelligent : 350 pv, CA 10, RM 29. Son intangibilité et son allonge protègent mieux que son armure.
+  Morsure +16 au contact (6d6 plus 4d6 de froid), deux griffes +16 au contact (4d6 plus 4d6 de froid chacune). Espace et allonge de 9 m ; vol parfait à 12 m ; vision dans le noir à 18 m ; télépathie à 30 m.
+  RD 10/fer froid ou Bien ; immunité au froid, à l'électricité et au poison ; résistance à l'acide 10 et au feu 10. Il cherche à isoler une victime pour lui infliger ses trois attaques.
+
+resource: Ténèbres profondes | à volonté | NLS 18
+resource: Terreur | à volonté | Volonté DD 19, NLS 18
+resource: Téléportation suprême | à volonté | lui-même uniquement, NLS 18
+resource: Télékinésie | à volonté | DD 20 lorsque le mode utilisé autorise une sauvegarde, NLS 18
+resource: Convocation d'ombres | 3/jour | DD 19, NLS 18
+resource: Évocation d'ombres | 3/jour | DD 20, NLS 18
+resource: Possession avec Extension de durée | 1/jour | Volonté DD 20, NLS 18
+resource: Convocation de démon | 1/jour | un démon de l'ombre, 50 % de réussite, niveau 3
+
+step: Il peut choisir le terrain
+  do: Attendre à l'abri du soleil et de la lumière vive, en vol, avec une route de fuite connue par téléportation suprême
+  note: Perception +33 pour repérer les intrus ; Discrétion +10 seulement, malgré sa nature d'ombre.
+
+step: L'arrivée des intrus est certaine et il dispose d'un round de préparation
+  do: Tenter la convocation d'un démon de l'ombre et, en cas de réussite, lui demander par télépathie de menacer un autre côté du groupe
+  note: Une tentative consomme l'utilisation quotidienne, même si elle échoue ; le démon appelé conserve ses propres caractéristiques.
+
+step: Il veut préparer une possession et dispose d'un réceptacle approprié
+  do: Mettre sa forme à l'abri, utiliser possession avec Extension de durée, puis tenter de prendre un hôte depuis le réceptacle, par une action complexe et contre Volonté DD 20
+  note: Cette préparation remplace son embuscade sous forme démoniaque. Garder le réceptacle et sa forme en sécurité ; une cible qui résiste ne peut plus être possédée par cette même utilisation.
+  note: Dans un hôte, appliquer les règles de possession ; les attaques naturelles et les 350 pv de sa forme démoniaque ne deviennent pas ceux de l'hôte.
+
+## Ouverture
+
+step: Plusieurs adversaires vulnérables à la peur tiennent dans un cône de 9 m
+  do: Utiliser terreur, Volonté DD 19, pour disperser le groupe avant de choisir une victime isolée
+  note: Un échec rend la cible paniquée ; une réussite la laisse secouée pendant 1 round. Ne pas insister contre une immunité constatée.
+
+step: Une cible prioritaire est déjà à 9 m ou moins et aucune dispersion n'est nécessaire
+  do: Faire une attaque à outrance : une morsure +16 au contact et deux griffes +16 au contact, en concentrant les coups sur la même cible
+  note: Chaque attaque ajoute 4d6 de froid ; privilégier un adversaire sans protection contre cet élément, surtout s'il peut menacer son intangibilité.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Utiliser Attaque en vol : se déplacer, porter une seule morsure +16 au contact, puis poursuivre le déplacement, dans la limite de 12 m au total
+  note: Cette approche ne permet pas les trois attaques ; Attaque en vol ne supprime pas les attaques d'opportunité provoquées par son déplacement.
+
+## Rounds suivants
+
+step: Une victime reste à portée et il peut soutenir la riposte
+  do: Répéter l'attaque à outrance, en restant à distance des adversaires dont l'allonge est inférieure à 9 m
+  note: Achever d'abord la cible isolée ou celle dont les armes et pouvoirs neutralisent le mieux ses défenses.
+
+step: Des adversaires provoquent des attaques d'opportunité dans son allonge
+  do: Exploiter Réflexes de combat pour porter jusqu'à quatre attaques d'opportunité par round, avec une griffe +16 au contact
+  note: Surveiller les déplacements et les incantations qui provoquent ; une cible bénéficiant d'un camouflage total ne permet pas cette riposte.
+
+step: Un adversaire dangereux reste hors de portée ou protège les autres
+  do: Employer télékinésie pour le désarmer, ou une poussée violente pour l'éloigner du groupe si sa masse le permet
+  note: Le désarmement se résout comme une manœuvre contre la DMD ; la projection d'une créature autorise Volonté DD 20. Choisir un seul mode par utilisation.
+
+step: Il faut ralentir les renforts ou séparer les combattants
+  do: Utiliser convocation d'ombres pour imiter une toile d'araignée, à condition que le terrain offre des points d'ancrage
+  note: DD 19 ; l'effet est partiellement réel. Un adversaire qui reconnaît l'illusion peut encore subir ses effets, avec les limites du sort.
+
+step: Plusieurs ennemis restent groupés et le froid de ses attaques est peu efficace
+  do: Utiliser évocation d'ombres pour imiter une boule de feu, en choisissant une zone qui épargne ses alliés
+  note: DD 20 pour les sauvegardes correspondantes ; une incrédulité réussie réduit la réalité de l'effet, sans l'annuler automatiquement.
+
+step: Il doit gêner la poursuite ou diminuer l'efficacité des tireurs
+  do: Utiliser ténèbres profondes, puis changer de position en vol et exploiter les obstacles que son intangibilité lui permet de traverser
+  note: Sa vision dans le noir ne perce pas l'obscurité surnaturelle. Combat en aveugle permet de relancer un échec dû au camouflage en mêlée, sans lui révéler automatiquement la position d'une cible.
+
+## Repli
+
+step: Il est exposé au soleil naturel ou à une lumière vive
+  do: Cesser l'offensive et utiliser téléportation suprême vers un refuge sombre connu ; si la téléportation est empêchée, gagner immédiatement un abri
+  note: Sous cette lumière, il ne peut pas attaquer et ne dispose que d'une action simple ou d'une action de mouvement par round.
+
+step: Les ennemis percent régulièrement ses défenses et il ne peut plus isoler de victime
+  do: Utiliser téléportation suprême pour rompre le combat avant d'être détruit
+  note: Le pouvoir ne transporte que Thastrakna ; le démon éventuellement convoqué doit assurer sa propre sécurité.
+
+step: Il combat dans un hôte et celui-ci risque de mourir
+  do: Revenir au réceptacle tant qu'il est à portée, puis regagner sa propre forme avant de fuir
+  note: Ne pas poursuivre un adversaire au point de perdre la possibilité de rejoindre le réceptacle et sa forme.

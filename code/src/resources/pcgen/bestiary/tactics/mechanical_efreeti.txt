@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Éfrit mécanique de taille TP, construction d'horlogerie neutre et sans intelligence ; il exécute les consignes reçues sans élaborer de stratégie.
+  5 pv ; CA 18, contact 16, pris au dépourvu 14 ; réduction des dégâts 10/adamantium ; immunités des créatures artificielles ; vulnérabilité à l'électricité.
+  Coup +1 (1d3-2 plus brûlure) ; déplacement de 9 m ; allonge de 0 m : il doit entrer dans l'espace de sa cible pour la frapper.
+  Initiative +6 ; vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+note: Brûlure
+  Le profil mentionne une brûlure ajoutée au coup, sans donner ses dégâts, sa durée ni son DD ; ne pas lui attribuer de valeurs supplémentaires.
+
+step: Avant son activation
+  do: Faire remonter son mécanisme et lui assigner une consigne simple de garde ou d'attaque.
+  note: Le profil ne précise pas la durée de fonctionnement entre deux remontages.
+
+## Ouverture
+
+step: Une cible désignée est accessible avec un déplacement de 9 m
+  do: Avancer jusque dans son espace, puis porter un coup +1 (1d3-2 plus brûlure).
+  note: Entrer dans l'espace d'un adversaire provoque normalement une attaque d'opportunité ; sa réduction des dégâts peut absorber les dégâts physiques si l'arme n'est pas en adamantium.
+
+step: La cible est trop éloignée pour être frappée ce round
+  do: Avancer vers elle ; un double déplacement permet de parcourir jusqu'à 18 m sans attaquer.
+  note: Il ne possède ni attaque à distance ni vitesse de vol.
+
+## Rounds suivants
+
+step: La cible reste dans son espace
+  do: Répéter son unique coup +1 (1d3-2 plus brûlure) à chaque round.
+  note: Son allonge de 0 m ne lui permet pas de menacer les cases voisines ni de porter des attaques d'opportunité.
+
+step: La cible sort de son espace
+  do: La suivre selon sa consigne et entrer de nouveau dans son espace pour l'attaquer, si la distance le permet.
+  note: Un pas de placement de 1,50 m permet d'entrer dans son espace sans provoquer d'attaque d'opportunité, si les conditions de ce pas sont réunies.
+
+step: Il subit une attaque électrique
+  do: Appliquer sa vulnérabilité : augmenter de moitié les dégâts d'électricité subis.
+  note: La réduction des dégâts 10/adamantium ne réduit pas les dégâts d'électricité ; avec 5 pv, une seule attaque peut le détruire.
+
+## Repli
+
+step: Aucune consigne de retrait n'a été donnée
+  do: Poursuivre l'exécution de son ordre tant qu'il fonctionne, jusqu'à sa destruction à 0 pv.
+  note: Sans intelligence, il n'improvise pas de fuite en fonction de ses blessures.
+
+step: Une consigne de retrait prévue se déclenche
+  do: Rejoindre le point fixé à 9 m par déplacement, ou 18 m par double déplacement.
+  note: Il ne dispose d'aucun pouvoir de fuite particulier.

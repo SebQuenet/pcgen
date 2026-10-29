@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Karg est un jeune troll des rochers, brutal et peu rusé. Il combat au corps à corps : deux griffes +11 (1d4+5 chacune) et une morsure +10 (1d6+5).
+  66 points de vie ; CA 20 ; déplacement de 9 m ; allonge de 1,50 m. Régénération 5, interrompue par l'acide ou les dégâts sonores ; vulnérabilité à la pétrification au soleil.
+
+step: Il peut choisir où attendre les intrus
+  do: Rester à l'abri du soleil et près d'un passage qui oblige les ennemis à venir au contact.
+  note: Sa vision nocturne facilite la surveillance sous une lumière faible ; elle ne lui permet pas de voir dans l'obscurité totale.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Porter une attaque à outrance : deux griffes +11 (1d4+5 chacune) et une morsure +10 (1d6+5), en concentrant les attaques sur une même cible.
+
+step: Un ennemi est accessible par une charge en ligne droite, à l'abri du soleil
+  do: Charger sur 18 m au maximum et porter une seule griffe +13 (1d4+5).
+  note: La charge abaisse sa CA à 18 jusqu'au début de son prochain tour.
+
+step: Il doit contourner un obstacle ou ne peut pas charger
+  do: Avancer de 9 m au maximum, puis porter une seule griffe +11 (1d4+5) si un ennemi est à 1,50 m ou moins.
+  note: Sans attaque à distance, il cherche à atteindre le contact ou à se mettre à couvert.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Continuer les attaques à outrance sur cette cible ; effectuer au besoin un pas de 1,50 m avant d'attaquer.
+  note: Un déplacement plus long empêche l'attaque à outrance : il ne porte alors qu'une attaque après son déplacement.
+
+step: Il touche facilement son adversaire
+  do: Employer Attaque en puissance : deux griffes +9 (1d4+9 chacune) et une morsure +8 (1d6+9) lors d'une attaque à outrance.
+  note: S'il manque trop souvent, revenir aux bonus et dégâts ordinaires.
+
+step: Un adversaire utilise de l'acide ou des attaques sonores
+  do: Chercher à l'atteindre en priorité si cela ne l'expose pas au soleil.
+  note: Ces dégâts interrompent sa régénération pendant 1 round. Sinon, il récupère 5 points de vie au début de son tour, sans dépasser 66.
+
+## Repli
+
+step: Il tombe à 20 points de vie ou moins et peut encore fuir
+  do: Se retirer vers un abri sans soleil ; utiliser l'action de retraite si le chemin le permet, pour parcourir jusqu'à 18 m.
+  note: Rester hors d'atteinte le temps de récupérer grâce à la régénération, surtout face à l'acide ou aux attaques sonores.
+
+step: La poursuite ou la fuite l'obligerait à entrer au soleil
+  do: Rester à l'abri et chercher un autre passage ; si aucune issue sûre n'existe, combattre au contact.

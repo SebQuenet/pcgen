@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Tidewretch, ancienne dryade devenue morte-vivante, neutre mauvaise, qui traque ses victimes sur les berges et les côtes.
+  76 pv ; CA 19, contact 13 ; initiative +6 ; Perception +12 ; vision dans le noir à 18 m.
+  Deux griffes +10, chacune infligeant 1d6+3 et parasites ; allonge de 1,50 m. Déplacement et nage à 9 m.
+  RD 10/tranchant, résistance à la canalisation +4 et immunités des morts-vivants : elle préfère affronter les armes qui ne contournent pas sa réduction des dégâts.
+
+resource: Enchevêtrement | à volonté | Réflexes DD 16 ; exige de la végétation
+resource: Forme d'arbre | à volonté | arbre mort uniquement
+resource: Façonnage du bois | à volonté | DD 16 ; transforme du bois existant
+resource: Orbe aqueux | 3/jour | Réflexes DD 17 ; NLS 9
+resource: Désespoir foudroyant | 3/jour | Volonté DD 17 ; cône de 9 m
+resource: Énergie négative (enervation) | 3/jour | rayon de contact à distance ; aucun jet de sauvegarde
+resource: Flétrissement végétal (blight) | 1/jour | Vigueur DD 18 ; cible végétale au contact
+
+step: Elle prépare son terrain de chasse
+  do: Dissimuler son bois flotté lié parmi les débris ou sous l'eau, puis choisir une embuscade près d'une issue aquatique
+  note: Rester à 270 m au plus de ce bois ; elle peut l'emporter s'il est transportable. Sa survie dépend de sa préservation.
+
+step: Elle attend des intrus
+  do: Prendre la forme d'un arbre mort et surveiller leur approche
+  note: Reprendre sa forme normale avant d'utiliser ses griffes.
+
+step: Des vermines ou une nuée sont déjà présentes
+  do: Employer son empathie avec les vermines pour tenter de les diriger vers le passage des intrus
+  note: Cette influence dépend d'un test ; elle ne crée ni n'invoque de vermines.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans un cône de 9 m
+  do: Désespoir foudroyant, Volonté DD 17
+  note: Pendant 9 minutes, les victimes subissent un malus de -2 aux attaques, sauvegardes, tests de caractéristique et de compétence, ainsi qu'aux dégâts d'armes ; les pouvoirs suivants deviennent plus difficiles à résister.
+
+step: Les ennemis approchent à distance dans une zone végétalisée
+  do: Enchevêtrement, Réflexes DD 16, sur leur voie d'approche ; rester hors de la zone
+  note: Profiter du ralentissement pour choisir une cible isolée au round suivant.
+
+step: Une menace isolée approche sans végétation exploitable
+  do: Orbe aqueux, Réflexes DD 17, pour la séparer de ses alliés
+  note: Un premier échec inflige 2d6 dégâts non létaux ; un second échec engloutit une créature de taille G ou inférieure.
+
+step: Un adversaire est déjà à portée de griffe
+  do: Attaque à outrance : deux griffes +10, chacune pour 1d6+3 et parasites
+
+## Rounds suivants
+
+step: Un ennemi vivant dangereux est à 13,50 m ou moins et elle peut utiliser un pouvoir sans s'exposer
+  do: Énergie négative : contact à distance +8, infligeant 1d4 niveaux négatifs temporaires
+  note: Aucun jet de sauvegarde ; résistance à la magie applicable. Concentrer les utilisations sur une même menace si elle reste dangereuse.
+
+step: Un orbe aqueux est actif
+  do: Le diriger par une action de mouvement, jusqu'à 9 m, pour éloigner les captifs de leurs alliés ou intercepter une autre cible
+  note: Durée 9 rounds ; les captifs peuvent retenter Réflexes DD 17 chaque round. Elle conserve son action simple pour un autre pouvoir ou une griffe, mais ne peut pas effectuer d'attaque à outrance ce tour-ci.
+
+step: Un adversaire reste au contact et aucun pouvoir n'est prioritaire
+  do: Deux griffes en attaque à outrance ; après un déplacement normal, une seule griffe
+  note: La première attaque de mêlée réussie du round couvre sa cible de parasites et la rend chancelante, sans sauvegarde indiquée. La victime peut consacrer une action simple à les enlever.
+
+step: Un adversaire chancelant reste accessible
+  do: Maintenir la pression au contact et renouveler les parasites après leur élimination
+  note: La victime doit choisir entre agir avec cette limitation et consacrer son action simple à se débarrasser des parasites.
+
+step: Une créature végétale l'affronte au contact
+  do: Flétrissement végétal : 9d6 dégâts, Vigueur DD 18 pour moitié
+
+step: Une cible échappe au contrôle initial
+  do: Réutiliser enchevêtrement si la végétation s'y prête, ou un orbe aqueux disponible ; conserver une voie vers l'eau
+  note: Chaque pouvoir demande son action simple ; choisir celui qui empêche le mieux l'encerclement.
+
+## Repli
+
+step: Ses points de vie tombent sous 25, ou plusieurs armes tranchantes la prennent à partie
+  do: Rompre le contact par une retraite vers l'eau, puis nager à couvert ; utiliser ensuite enchevêtrement ou un orbe disponible contre les poursuivants
+  note: Une action de déplacement permet de nager de 9 m. Suivre une route qui reste à 270 m au plus du bois lié.
+
+step: Les intrus découvrent ou menacent son bois flotté
+  do: Intercepter la menace et récupérer le bois si elle peut l'emporter, puis fuir avec lui
+  note: Dépasser la limite la rend immédiatement chancelante et réduit de 2 ses attaques, dégâts, tests de caractéristique et de compétence, ainsi que les DD de ses pouvoirs.

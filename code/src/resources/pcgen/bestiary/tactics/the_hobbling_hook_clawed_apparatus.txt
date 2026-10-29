@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Appareil animé en fer de taille G, neutre et sans intelligence. Il combat par des gestes simples et répétés, sans élaborer de ruse.
+  Deux coups +9, chacun infligeant 1d8+6 dégâts ; allonge de 3 m ; espace occupé de 3 m ; déplacement de 9 m par round.
+  52 pv ; CA 16, contact 8, pris au dépourvu 16 ; solidité 10 ; immunités des créatures artificielles.
+  Initiative -1 ; Perception -5 ; vision dans le noir à 18 m et vision nocturne.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance : deux coups +9, chacun pour 1d8+6 dégâts.
+  note: Son allonge lui permet de frapper sans devoir se placer dans une case adjacente à la cible.
+
+step: Aucun adversaire à portée, mais un déplacement de 9 m au plus permet d'en atteindre un
+  do: Avancer jusqu'à placer la cible dans son allonge de 3 m, puis porter un seul coup +9 pour 1d8+6 dégâts.
+  note: Après ce déplacement, il ne dispose pas de ses deux attaques.
+
+step: Aucun adversaire ne peut être atteint après un déplacement de 9 m
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance avec les deux coups +9 pour 1d8+6 dégâts chacun.
+  note: Si le premier coup abat la cible, diriger le second contre un autre adversaire à portée.
+
+step: Un pas de 1,50 m suffit pour remettre une cible à portée
+  do: Faire ce pas, puis effectuer l'attaque à outrance avec les deux coups.
+
+step: Il faut se déplacer de plus de 1,50 m pour atteindre une cible
+  do: Avancer de 9 m au plus et porter un seul coup si une cible devient accessible ; sinon, employer un double déplacement pour se rapprocher.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter un coup +9 pour 1d8+6 dégâts.
+  note: Une seule attaque d'opportunité par round ; le simple fait d'entrer dans son allonge ne la provoque pas.
+
+## Repli
+
+step: L'appareil perd des points de vie
+  do: Continuer à frapper ou à avancer vers les adversaires accessibles.
+  note: Sans intelligence, il ne choisit pas de fuir pour préserver son existence ; aucun seuil de repli volontaire.
+
+step: Ses points de vie atteignent 0
+  do: Cesser toute action : l'appareil est détruit.

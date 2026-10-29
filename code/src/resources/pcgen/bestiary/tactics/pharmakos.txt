@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Pharmakos, aberration aquatique gigantesque, neutre mauvaise, solitaire et peu intelligente : il impose un combat de proximité par sa masse et ses attaques douloureuses.
+  232 pv ; CA 30, contact 5 ; allonge 6 m et espace occupé de 6 m. Deux griffes +24 chacune (3d6+16, critique 19–20) et morsure +24 (2d6+16), toutes accompagnées de douleur.
+  Déplacement terrestre 9 m, nage 12 m ; amphibie, sans besoin de respirer et capable de compression.
+
+resource: Marche dans les airs | constant | permet de rejoindre les adversaires en hauteur ; ce déplacement suit les règles de marche dans les airs, sans vitesse de vol
+resource: Détection de l'invisibilité | constant | repère visuellement les ennemis invisibles dans les limites de ce pouvoir
+
+step: Des intrus approchent
+  do: Les repérer avec sa vision dans le noir à 18 m, sa perception des vibrations à 36 m et sa Perception +9 ; se placer sur leur passage pour exploiter son allonge de 6 m.
+  note: La perception des vibrations exige un contact avec le même sol ou, pour cette créature aquatique, avec la même étendue d'eau ; elle ne révèle pas les ennemis en plein vol.
+
+note: Résistance
+  RD 10/magie et tranchant : une attaque doit réunir ces deux propriétés pour la contourner. Résistance à la magie 26 et résistance au froid 10.
+  Immunité à l'acide, aux effets de mort, aux effets mentaux, à la douleur, à la paralysie et au poison. Il peut tenir le passage malgré ces attaques, mais reste exposé aux autres dégâts.
+
+## Ouverture
+
+step: Un ennemi est déjà à 6 m ou moins
+  do: Effectuer une attaque à outrance : deux griffes +24 et une morsure +24 contre la menace la plus proche.
+  note: Concentrer les touches sur une même cible pour cumuler les dégâts et la douleur ; les griffes menacent un critique sur 19–20.
+
+step: Aucun ennemi n'est à portée, mais un déplacement suffit à en atteindre un
+  do: Avancer de 9 m au maximum, ou nager de 12 m au maximum, puis porter une seule griffe +24 dès que la cible entre dans son allonge de 6 m.
+  note: Une attaque à outrance n'est pas possible après ce déplacement.
+
+step: Les ennemis restent trop loin pour être frappés ce round
+  do: Se rapprocher à couvert si le terrain le permet ; employer marche dans les airs contre les adversaires en hauteur.
+  note: Le profil fourni ne lui donne aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance, en ne faisant au besoin qu'un pas de placement de 1,50 m.
+  note: Privilégier la cible déjà blessée et éviter les déplacements qui feraient perdre les trois attaques.
+
+step: La cible est facile à toucher
+  do: Activer Attaque en puissance : deux griffes +20 (3d6+24 chacune) et morsure +20 (2d6+24), toujours avec douleur.
+  note: Revenir aux attaques +24 contre une défense élevée ; Attaque en puissance échange 4 points d'attaque contre 8 points de dégâts par attaque naturelle ici.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter une griffe +24, ou +20 si Attaque en puissance est active.
+  note: Il ne possède pas Attaques réflexes : une seule attaque d'opportunité par round. Entrer dans son allonge ne suffit pas, à lui seul, à en provoquer une.
+
+step: Repousser un ennemi ouvre un passage ou permet de le pousser dans l'eau
+  do: Tenter une bousculade à +34 à la place d'une attaque simple, en acceptant de renoncer à l'attaque à outrance.
+  note: Réserver cette manœuvre aux positions où le déplacement de l'ennemi apporte un avantage concret ; Bousculade améliorée évite l'attaque d'opportunité de la cible pour cette manœuvre.
+
+step: Une cible quitte sa portée ou prend de la hauteur
+  do: La poursuivre par le sol, l'eau ou marche dans les airs, puis porter une griffe si une action simple reste disponible.
+  note: Sa grande allonge permet parfois de frapper sans rejoindre exactement la position adverse.
+
+## Repli
+
+step: Ses blessures deviennent critiques et une issue est accessible
+  do: Rompre le contact et gagner un obstacle qui coupe les lignes de vue ; privilégier l'eau si elle gêne davantage ses poursuivants, ou un passage accessible grâce à compression.
+  note: La nage à 12 m et l'absence de respiration permettent une fuite prolongée sous l'eau. Un double déplacement atteint 24 m en nage, mais ne constitue pas l'action de retraite et peut provoquer des attaques d'opportunité.
+
+step: Toute fuite est impossible
+  do: Rester au contact et concentrer ses trois attaques sur l'adversaire le plus proche pour tenter de dégager une issue.
+  note: Le profil ne lui accorde ni régénération, ni soins, ni téléportation pour se sauver.

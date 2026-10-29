@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Olujimi, angazhani de grande taille, bête magique chaotique mauvaise, FP 9. Combattant brutal à quatre bras, avec 114 pv et une CA de 24 ; espace et allonge de 3 m ; déplacement et escalade de 12 m.
+  Attaque à outrance armée : hache de lancer +1, +16/+11/+6 (1d8+6), deux haches de lancer de maître +16 (1d8+5 chacune), morsure +11 (1d8+2).
+  Attaque à outrance naturelle : morsure +16 (1d8+5) et trois griffes +16 (1d6+5 chacune). Au lancer : hache +1 à +16 (1d8+6), haches de maître à +16 (1d8+5).
+  Réduction des dégâts 10/fer froid ou Bien ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu ; résistance à la magie 20.
+
+resource: Domination de monstre | 3/jour | Volonté DD 21 ; NLS 14
+resource: Terreur | 3/jour | Volonté DD 16 ; NLS 14
+resource: Porte dimensionnelle, dissipation de la magie, ténèbres profondes | à volonté | NLS 14 ; concentration +16
+resource: Détection de l'invisibilité | constant | active dès le début du combat
+resource: Haches de lancer de maître | 7 | chaque hache lancée quitte son équipement jusqu'à récupération ; la hache +1 est conservée pour la mêlée
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +11, l'odorat, la vision nocturne, la vision dans le noir à 18 m et la détection de l'invisibilité.
+  note: Utiliser son escalade pour gagner une position d'approche ou de repli si le terrain s'y prête.
+
+## Ouverture
+
+step: Les ennemis sont encore à distance
+  do: Lancer ses haches de maître sur des cibles différentes, à +16 pour 1d8+5 dégâts chacune.
+  note: Lancer plusieurs haches exige une attaque à outrance ; s'il doit se déplacer de plus de 1,50 m, se limiter à un lancer.
+
+step: Il peut ensuite atteindre d'autres adversaires
+  do: Se ruer sur eux en rugissant et engager la mêlée avec sa hache magique.
+  note: Un déplacement suivi d'une attaque ne donne qu'une attaque de hache +16 (1d8+6). Réserver l'attaque à outrance aux rounds où il peut rester sur place ou faire un pas de 1,50 m.
+
+## Rounds suivants
+
+step: Plusieurs ennemis sont à portée et il conserve ses armes
+  do: Utiliser l'attaque à outrance armée ; répartir les coups selon les adversaires à son allonge de 3 m.
+  note: Conserver ses haches en main tant qu'il n'a pas fait tomber un ennemi sous 0 pv.
+
+step: Un de ses coups fait tomber un adversaire sous 0 pv
+  do: Abandonner son bouclier et ses armes, emporté par sa soif de sang ; poursuivre le combat avec morsure et griffes.
+  note: Sa CA passe à 22 après l'abandon du bouclier +1. Aux rounds suivants, utiliser morsure +16 (1d8+5) et trois griffes +16 (1d6+5 chacune).
+
+step: Un lanceur de sorts devient particulièrement gênant, ou une cible reste inaccessible en mêlée
+  do: Consacrer son action à domination de monstre, Volonté DD 21, ou à terreur, Volonté DD 16, selon la cible et les utilisations restantes.
+  note: Réserver prioritairement ces pouvoirs à ces adversaires ; leur activation remplace ses attaques du round.
+
+step: Une domination réussit
+  do: Ordonner à la victime de jeter ses armes, de se mettre à genoux et de lui rendre hommage.
+  note: Exploiter cette soumission pour concentrer ses attaques sur les adversaires encore actifs.
+
+step: Une protection magique ennemie empêche ses attaques d'être efficaces
+  do: Tenter une dissipation de la magie ciblée, avec un test de dissipation à +10.
+  note: Cette action remplace ses attaques du round ; reprendre ensuite la mêlée.
+
+step: Deux ennemis sont adjacents entre eux et à portée, mais une seule attaque est possible
+  do: Employer Enchaînement : après une première attaque réussie, attaquer le second avec le même bonus.
+  note: Enchaînement exige une action simple et impose un malus de 2 à la CA jusqu'à son prochain tour.
+
+step: Des adversaires provoquent des attaques d'opportunité dans son allonge de 3 m
+  do: Profiter d'Attaques réflexes pour effectuer jusqu'à quatre attaques d'opportunité par round.
+  note: Choisir la hache magique tant qu'il la tient, puis une attaque naturelle après l'abandon des armes.
+
+step: Une cible est facile à toucher et il veut augmenter ses dégâts de mêlée
+  do: Activer Attaque en puissance : malus de 4 aux jets d'attaque ; bonus de 8 aux dégâts de ses haches, ou de sa morsure et de ses griffes lorsqu'il combat entièrement avec ses armes naturelles.
+  note: La morsure secondaire de la routine armée ne reçoit qu'un bonus de 4 aux dégâts. Les bonus d'attaque du profil sont donnés avant ces modifications.
+
+## Repli
+
+step: Ses points de vie descendent sous 40 lors du premier affrontement
+  do: Utiliser porte dimensionnelle pour s'échapper et chercher Akkituk.
+  note: Il ne peut plus entreprendre d'action après cette téléportation jusqu'à son prochain tour.
+
+step: Il retrouve Akkituk
+  do: Lui ordonner d'appliquer l'onguent de pierre à la statue du démon-singe, puis tenter domination de monstre sur celui-ci pour l'envoyer contre les PJ.
+  note: Cette tentative exige une utilisation restante de domination de monstre, Volonté DD 21.
+
+step: La domination du démon-singe échoue ou n'est plus disponible
+  do: Tenter d'attirer le démon-singe vers les PJ pour les obliger à l'affronter.
+
+step: Olujimi revient combattre les PJ
+  do: Combattre jusqu'à la mort.

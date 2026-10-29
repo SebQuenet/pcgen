@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Quarrygeist, gearghost de taille P, mort-vivant chaotique mauvais, intelligent et expert en pièges. Il utilise les fosses et la télékinésie pour faire tomber les intrus, puis réarme les dangers qu'ils viennent de franchir.
+  88 pv, CA 20, réduction des dégâts 5/—, résistance à la canalisation +4 et immunités des morts-vivants. Vol à 12 m, manœuvrabilité parfaite ; vision dans le noir à 18 m ; initiative +7.
+  Deux coups +9, chacun infligeant 1d6+1, allonge 1,50 m. Ses pouvoirs à distance sont préférables à une mêlée prolongée.
+
+resource: Création de fosse | 3/jour | Réflexes DD 15 ; NLS 9 ; durée 10 rounds
+resource: Télékinésie | à volonté | NLS 9 ; concentration pour maintenir les manœuvres, au maximum 9 rounds
+resource: Détection de la magie, excavation rapide | à volonté | NLS 9
+resource: Création de piège | 1/semaine | un piège de FP 4 maximum, sans coût, matériaux ni test
+
+step: Il dispose de temps pour préparer le terrain
+  do: Utiliser création de piège pour garnir un passage obligé, puis entretenir et réarmer les pièges existants.
+  note: Artisanat (pièges) +19, Sabotage +12. Ne pas improviser de nouveaux pièges chaque round avec le pouvoir hebdomadaire.
+
+step: Le sol contient de la terre, de la poussière ou du sable
+  do: Préparer avec excavation rapide des trous de 1,50 m de côté et de profondeur, qui gênent les déplacements au sol pendant qu'il les survole.
+  note: Le pouvoir n'affecte pas la roche solide et ne permet pas de creuser des tunnels.
+
+step: Des intrus approchent
+  do: Se dissimuler derrière un couvert avec Discrétion +26 et observer avec Perception +15 ; attendre qu'ils s'engagent près des pièges.
+  note: Il vole, mais ne possède pas d'intangibilité et doit contourner les obstacles solides.
+
+## Ouverture
+
+step: Un ou plusieurs adversaires au sol occupent une zone de 3 m sur 3 m
+  do: Créer une fosse sous eux, à une distance maximale de 57 m, puis se déplacer en vol pour rester hors de leur allonge.
+  note: Réflexes DD 15 pour gagner une case libre voisine ; fosse de 9 m de profondeur, chute de 3d6 dégâts. Privilégier un combattant dangereux ou une position qui sépare le groupe.
+
+step: Un intrus est déjà placé devant une fosse ou un piège
+  do: Utiliser télékinésie pour une bousculade qui le pousse dans le danger, plutôt que dépenser une création de fosse supplémentaire.
+  note: La manœuvre utilise le NLS 9 et le Charisme +3 ; elle ne provoque pas d'attaque d'opportunité et n'autorise pas de sauvegarde, mais la résistance à la magie s'applique.
+
+## Rounds suivants
+
+step: Un ennemi reste près du bord d'une fosse
+  do: Maintenir télékinésie par une action simple et tenter une nouvelle bousculade pour le faire tomber.
+  note: Une bousculade réussie jusque dans la fosse n'accorde pas de nouveau jet de Réflexes. Un ennemi qui termine son tour sur une case adjacente fait Réflexes DD 15 avec un bonus de +2 pour ne pas glisser.
+
+step: Un piège vient de fonctionner et peut être réarmé
+  do: Le réarmer avec resetter, puis employer l'action simple pour pousser une cible vers son déclencheur par télékinésie.
+  note: Réarmement manuel ou par réparation : action de mouvement. Réarmement automatique plus lent qu'instantané : action libre. Réarmer et se déplacer se disputent donc parfois l'action de mouvement.
+
+step: Une fosse retient déjà un adversaire
+  do: Concentrer les attaques et les pièges sur ses compagnons restés en surface ; garder les autres utilisations de création de fosse pour bloquer un secours ou une approche.
+  note: Après 10 rounds, le fond remonte et rend les prisonniers à la surface en 1 round ; anticiper leur retour.
+
+step: Les ennemis évitent les pièges et des pierres ou outils libres sont disponibles
+  do: Les projeter par télékinésie sur une cible exposée, en utilisant uniquement les objets réellement présents.
+  note: Une projection violente termine cette télékinésie ; il peut en utiliser une nouvelle au round suivant.
+
+step: Il doit attaquer au contact tout en restant mobile
+  do: Avec Attaque en vol, approcher, porter un seul coup +9 pour 1d6+1, puis poursuivre le déplacement dans la limite de 12 m.
+  note: Ce déplacement peut provoquer des attaques d'opportunité. Les deux coups exigent une attaque à outrance ; les réserver à un ennemi isolé si rester au contact est acceptable.
+
+## Repli
+
+step: Moins de 30 pv et les ennemis peuvent désormais l'atteindre régulièrement
+  do: Décrocher en vol vers les passages piégés ; se retirer du contact avant d'utiliser un pouvoir et placer, s'il lui en reste une, une fosse entre lui et les poursuivants.
+  note: Vol à 12 m par action de mouvement ; utiliser le couvert pour pouvoir se cacher de nouveau. La réduction des dégâts ne soigne pas ses blessures.
+
+step: Il est détruit
+  do: Appliquer sa reconstitution après 2d6 jours si les conditions de destruction définitive ne sont pas réunies.
+  note: La destruction définitive exige de verser de l'eau bénite sur ses restes dans une zone de sanctification et de désamorcer ou détruire tous les pièges dans un rayon de 30 m autour des restes.

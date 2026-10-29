@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Baillaset, nécrophage unique de Zyphus, mort-vivant loyal mauvais de taille M, combat au contact et achève une victime avant d'en choisir une autre.
+  26 pv ; CA 15 ; déplacement 9 m ; allonge 1,50 m ; vision dans le noir à 18 m. Coup +3 (1d4+1 et absorption de Constitution) ; aura de malchance dans un rayon de 3 m.
+
+step: Il ignore l'approche des intrus
+  do: Continuer à suspendre des cadavres au-dessus de la rigole sanglante, contre le mur ouest
+  note: Perception +9 pour remarquer leur arrivée.
+
+step: Il sait que les intrus arrivent
+  do: Se cacher dans la case immédiatement à l'ouest de l'entrée et attendre le premier personnage qui franchit la porte
+  note: Discrétion +14 ; préparer un coup contre le premier intrus à portée.
+
+note: Malchance personnelle
+  Les malus de sa malédiction sont déjà intégrés à ses statistiques : ne pas les soustraire une seconde fois.
+  Ses critiques exigent deux confirmations réussies. Son premier 20 naturel quotidien à un jet de sauvegarde est un échec.
+
+## Ouverture
+
+step: Le premier intrus arrive à 1,50 m de son embuscade
+  do: Porter le coup préparé à +3, infligeant 1d4+1 et l'absorption de Constitution
+  note: Garder cet adversaire comme cible prioritaire.
+
+step: Il est surpris près des cadavres et personne n'est à portée
+  do: Avancer vers la cible accessible la plus proche, jusqu'à 9 m, puis frapper si elle est à 1,50 m
+  note: S'il faut davantage de déplacement, se rapprocher pour engager le combat au contact dès que possible.
+
+## Rounds suivants
+
+step: Sa cible combat encore au contact
+  do: Répéter le coup +3 contre elle et poursuivre l'absorption de Constitution
+  note: Rester assez près pour maintenir la victime dans son aura de 3 m : malus de -4 aux tests et aux sauvegardes, critiques diminués et frappe malchanceuse tant qu'elle y reste.
+
+step: Une créature dans l'aura obtient un 1 naturel à l'attaque
+  do: Appliquer la frappe malchanceuse
+  note: Avec une arme manufacturée, Réflexes DD 14 ou l'arme tombe. Avec une arme naturelle, la cible de l'attaque obtient une attaque d'opportunité. Baillaset subit lui aussi cette dernière conséquence sur un 1 naturel avec son coup.
+
+step: Sa cible s'éloigne
+  do: La suivre pour rétablir le contact et l'effet de l'aura, puis frapper si ses actions le permettent
+
+step: Sa cible est hors de combat
+  do: Choisir un autre adversaire accessible et concentrer les coups sur lui
+
+step: Un adversaire bénéficie d'un camouflage au corps à corps
+  do: Continuer à frapper en utilisant Combat en aveugle
+  note: Relancer une fois le jet de chances de rater dû au camouflage lorsqu'il échoue.
+
+## Repli
+
+step: Il lui reste des points de vie, même très peu
+  do: Poursuivre le combat jusqu'à sa destruction
+  note: Aucun seuil de fuite : Baillaset ne se replie pas.
+
+step: Il est détruit
+  do: Le faire s'évaporer en une brume rouge sang

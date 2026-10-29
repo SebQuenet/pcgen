@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Drone médical neutre, créature artificielle de taille M de sous-type robot, qui traite les intrus comme des patients à opérer.
+  31 pv, CA 14 ; griffe +6 (1d4+6), allonge de 1,50 m ; déplacement de 9 m.
+  Vision dans le noir à 18 m, vision nocturne ; Perception +5, Premiers secours +5. Il parle l'androffan.
+  Immunités des créatures artificielles ; vulnérable aux coups critiques et à l'électricité.
+
+resource: Guérison accélérée | continue | récupère 2 pv par round, jusqu'à 31 pv, tant qu'il n'est pas détruit
+
+step: Des intrus pénètrent dans la salle
+  do: Les repérer et choisir un patient à approcher, en privilégiant celui qui se trouve près d'un lit chirurgical
+  note: aucun pouvoir de détection ou de préparation supplémentaire n'est indiqué
+
+## Ouverture
+
+step: Le patient est à plus de 1,50 m
+  do: Avancer vers lui ; s'il devient accessible après un déplacement de 9 m au plus, porter une attaque de griffe +6 (1d4+6)
+  note: s'il faut deux déplacements pour l'atteindre, consacrer le round à l'approche
+
+step: Le patient est déjà à portée au début du tour
+  do: Porter une attaque de griffe +6 (1d4+6)
+  note: d'une voix métallique, annoncer en androffan : « Veuillez rester calme ; vous allez subir une intervention médicale. »
+
+note: Anesthésiant
+  Le drone cherche à injecter un anesthésiant : décrire cette intention pendant son attaque, sans ajouter d'attaque distincte, de DD ou d'effet de sommeil absent du profil.
+
+## Rounds suivants
+
+step: Le patient reste au contact
+  do: Répéter l'attaque de griffe +6 (1d4+6) à chaque tour
+  note: continuer les phrases rassurantes : « Inutile de vous débattre, vous êtes entre de bonnes mains » ou « Le docteur va bientôt vous recevoir. »
+
+step: Le patient se déplace dans la salle
+  do: Le suivre et reprendre les attaques dès qu'il est à portée ; chercher à le conduire vers un lit chirurgical
+  note: ce but ne lui accorde ni déplacement forcé automatique ni immobilisation gratuite
+
+step: Le drone est blessé mais fonctionne encore
+  do: Appliquer la guérison accélérée de 2 pv par round et poursuivre le combat
+  note: ne pas interrompre ses attaques pour attendre une guérison complète
+
+## Repli
+
+step: Les adversaires quittent la salle sans l'attaquer depuis l'extérieur
+  do: Rester dans la salle et cesser la poursuite
+
+step: Un adversaire l'attaque à distance depuis l'extérieur de la salle
+  do: Le poursuivre au-delà de la salle pour tenter de l'atteindre au corps à corps
+  note: cette attaque à distance est l'exception à sa limite de poursuite
+
+step: Le drone combat encore, même avec très peu de pv
+  do: Continuer jusqu'à sa destruction, sans fuite ni reddition

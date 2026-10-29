@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Wereraptor, humanoïde humain métamorphe de taille M, loyal neutre ; les valeurs données sont celles de sa forme hybride.
+  30 pv, CA 18 ; réduction des dégâts 10/argent. Déplacement au sol de 9 m, vol de 24 m avec une manœuvrabilité moyenne ; allonge de 1,50 m.
+  Au contact, lance courte de maître +7 (1d6+3), morsure +1 (1d4+1 et malédiction de lycanthropie) et une serre +1 (1d4+1) ; ou morsure +6 (1d4+1 et malédiction de lycanthropie) et deux serres +6 (1d4+1 chacune).
+  À distance, arc court composite de maître +7 (1d6+2, critique x3).
+
+resource: Flèches | 20 | une flèche par tir
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Privilégier un terrain montagneux et un perchoir offrant une ligne de tir ainsi qu'une voie de fuite aérienne
+  note: terrain de prédilection : montagnes +2 ; ne pas se laisser enfermer dans un passage qui empêche de déployer ses ailes
+
+step: Les adversaires ne l'ont pas encore repéré
+  do: Observer depuis un couvert avec Discrétion +9 ; chercher les ennemis isolés et les armes en argent visibles
+  note: Perception +11, vision crépusculaire et odorat aident à déceler une approche ; rester sous forme hybride pour employer les attaques indiquées
+
+## Ouverture
+
+step: Les ennemis sont à distance
+  do: Tirer une flèche sur une cible exposée depuis son perchoir ; changer de position si le couvert devient insuffisant
+  note: Tir à bout portant ajoute +1 à l'attaque et aux dégâts à 9 m ou moins : le tir passe alors à +8 pour 1d6+3 dégâts
+
+step: Il doit se déplacer pour engager une cible au contact
+  do: S'approcher, puis porter une seule attaque de lance courte +7 (1d6+3), ou une morsure +6 (1d4+1 et malédiction de lycanthropie)
+  note: un déplacement ordinaire ne permet pas d'enchaîner toutes ses attaques ; après une approche en vol suivie d'une attaque, il reste au contact
+
+step: Un adversaire commence déjà à portée de mêlée
+  do: Effectuer une attaque à outrance avec morsure +6 et deux serres +6, pour multiplier les chances de toucher
+  note: chaque attaque inflige 1d4+1 ; seule la morsure transmet la malédiction de lycanthropie
+
+## Rounds suivants
+
+step: Une cible reste au contact et il peut consacrer son tour à l'attaque
+  do: Répéter l'attaque à outrance avec morsure et deux serres ; concentrer les trois attaques sur le même adversaire
+  note: s'il conserve sa lance en main pour frapper avec elle, employer à la place lance courte +7, morsure +1 et une serre +1
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 1,50 m
+  do: Exploiter Réflexes de combat pour frapper les adversaires qui s'exposent ; employer la lance courte si elle est prête
+  note: il peut effectuer plusieurs attaques d'opportunité dans le round, mais cela n'allonge pas sa portée et ne crée pas d'occasion à lui seul
+
+step: Les ennemis restent hors d'atteinte ou rendent la mêlée défavorable
+  do: Gagner un autre perchoir par le vol, puis reprendre les tirs quand il dispose d'une ligne de vue
+  note: éviter de tirer au contact ; surveiller les flèches restantes et privilégier les cibles sans couvert
+
+step: Un porteur d'arme en argent arrive au contact
+  do: Se dégager et chercher une position d'où il peut reprendre le combat à distance
+  note: l'argent contourne sa réduction des dégâts ; celle-ci ne remplace pas un couvert contre les tirs ou les sorts
+
+## Repli
+
+step: Il tombe à 10 pv ou moins, ou les armes en argent rendent le combat trop dangereux
+  do: Rompre le contact, puis fuir en volant vers un relief ou un couvert qui coupe les lignes de vue
+  note: s'il est menacé au contact, utiliser un retrait pour partir ; sa vitesse de vol de 24 m facilite ensuite la séparation avec les poursuivants au sol
+
+step: Le vol est impraticable
+  do: Se retirer au sol à travers le couvert disponible, avec une vitesse de 9 m, puis se dissimuler dès que les ennemis le perdent de vue

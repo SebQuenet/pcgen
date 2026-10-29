@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Robot de maintien de l'ordre neutre, de taille M ; 72 pv, CA 21, solidité 10, immunités des créatures artificielles. Il cherche à neutraliser ses adversaires par des dégâts non létaux.
+  Marteau de guerre de maître +18/+13 (1d8+9 non létaux, critique x3, plus 1d6 non létaux) ; pistolet paralysant intégré +10 au contact à distance (1d8 non létaux), ou deux tirs semi-automatiques +8/+8.
+  Déplacement de 9 m ; allonge de 1,50 m. Vision dans le noir à 18 m, vision nocturne, Perception +13. Il parle l'androffan.
+
+note: Points faibles
+  Vulnérable à l'électricité et aux coups critiques malgré sa nature artificielle ; sa solidité 10 ne suffit pas à le protéger de toutes les attaques.
+
+## Ouverture
+
+step: Un adversaire est repéré hors de portée de mêlée
+  do: Avancer directement vers lui, jusqu'à 9 m avec une action de mouvement ; s'il arrive à 1,50 m, frapper au marteau à +18.
+  note: Une attaque après un déplacement inflige 1d8+9 plus 1d6 dégâts non létaux ; elle ne donne pas la seconde attaque à +13.
+
+step: Un adversaire est déjà à portée et aucune action de mouvement n'est nécessaire
+  do: Effectuer une attaque à outrance : marteau +18/+13 et deux tirs semi-automatiques du pistolet paralysant à +3/+3 au contact à distance.
+  note: Les tirs infligent chacun 1d8 dégâts non létaux. Leur malus de -5 comme attaques secondaires est déjà appliqué ici aux valeurs +8/+8 du profil.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée de mêlée
+  do: Répéter l'attaque à outrance au marteau +18/+13 et au pistolet en mode semi-automatique +3/+3 au contact à distance.
+  note: Chaque coup de marteau inflige 1d8+9 plus 1d6 dégâts non létaux, avec un critique x3 pour le marteau ; chaque tir inflige 1d8 dégâts non létaux. Tirer au contact peut provoquer des attaques d'opportunité.
+
+step: La cible est neutralisée ou s'éloigne hors de son allonge
+  do: Avancer directement vers un adversaire encore actif ; s'il est accessible après un déplacement de 9 m au plus, porter une attaque de marteau à +18.
+  note: Donner la priorité au corps à corps et continuer à infliger des dégâts non létaux.
+
+step: Aucun adversaire n'est accessible au marteau ce round
+  do: Poursuivre l'approche ; si une action simple reste disponible et qu'une cible est à portée du pistolet, effectuer un tir à +10 au contact à distance.
+  note: La portée du pistolet n'est pas précisée dans ce profil ; ne pas lui attribuer de portée ou d'effet de paralysie supplémentaire.
+
+## Repli
+
+step: Quels que soient ses points de vie restants
+  do: Continuer à combattre jusqu'à sa destruction.
+  note: Il ne fuit pas, même face à l'électricité ou à des attaques capables de lui infliger des coups critiques.

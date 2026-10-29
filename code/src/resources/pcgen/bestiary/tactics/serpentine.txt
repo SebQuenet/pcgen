@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Serpentine, eidolon extérieur extraplanaire de taille G, chaotique mauvais. Avec 9 points de vie et une CA de 13, il cherche à saisir une cible isolée et évite de se laisser encercler.
+  Morsure +4 (1d6+1 et étreinte), coup de queue -1 (1d6 et étreinte). Il occupe un espace de 3 m et possède une allonge de 3 m.
+  Déplacement au sol et escalade à 6 m ; vision dans le noir à 18 m. Ses évolutions de bras ne lui donnent aucune attaque supplémentaire dans ce profil.
+
+step: Il peut choisir sa position
+  do: Se placer près d'une paroi praticable ou d'un passage assez large pour son corps, afin de limiter les directions d'approche et de conserver une voie de repli par escalade
+
+step: Les adversaires approchent dans l'obscurité
+  do: Les observer grâce à sa vision dans le noir et les laisser entrer dans son allonge de 3 m
+  note: La vision dans le noir ne le dissimule pas ; il profite seulement de sa capacité à voir sans lumière.
+
+## Ouverture
+
+step: Une cible est déjà à 3 m ou moins et il peut rester sur place
+  do: Attaque à outrance : morsure +4 (1d6+1 et étreinte), puis coup de queue -1 (1d6 et étreinte)
+  note: Concentrer les attaques sur une cible isolée ou déjà blessée ; la morsure est son attaque la plus fiable.
+
+step: Une cible devient accessible après un déplacement de 6 m au maximum
+  do: Avancer pour la placer dans son allonge de 3 m, puis porter une morsure +4 (1d6+1 et étreinte)
+  note: Après ce déplacement, il ne porte pas également son coup de queue.
+
+step: Une morsure ou un coup de queue touche
+  do: Tenter immédiatement la prise en lutte permise par l'étreinte
+  note: Choisir une proie dont les alliés ne peuvent pas facilement l'encercler pendant qu'il la retient.
+
+## Rounds suivants
+
+step: Il tient une cible en lutte et les autres ennemis restent éloignés
+  do: Maintenir la lutte et, en cas de réussite, infliger les dégâts de morsure, soit 1d6+1
+  note: Consacrer son action au maintien de la prise ; il ne bénéficie pas en plus d'une attaque à outrance.
+
+step: Il est libre et une cible reste dans son allonge
+  do: Répéter l'attaque à outrance, morsure +4 et coup de queue -1, puis tenter l'étreinte si une attaque touche
+
+step: Sa cible s'éloigne et il doit se déplacer pour la rejoindre
+  do: La suivre jusqu'à 6 m, puis mordre si elle se trouve à 3 m ou moins
+  note: Garder un accès à la paroi ou au passage de repli au lieu de poursuivre au milieu du groupe.
+
+step: Plusieurs ennemis se rapprochent de sa prise
+  do: Relâcher la cible et se repositionner vers une paroi ou un passage qui limite l'encerclement
+  note: Avec seulement 9 points de vie, retenir un adversaire devient peu rentable si les autres peuvent le frapper librement.
+
+## Repli
+
+step: Il lui reste 4 points de vie ou moins, ou plusieurs ennemis peuvent le frapper ensemble
+  do: Relâcher toute prise et utiliser le retrait pour gagner sa voie de fuite, en privilégiant l'escalade si elle éloigne les poursuivants
+  note: Sa vitesse est de 6 m au sol comme en escalade ; choisir un trajet praticable pour une créature occupant 3 m.

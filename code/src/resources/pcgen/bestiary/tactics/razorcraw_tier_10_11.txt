@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Razorcraw, gargouille demi-fiélonne de taille M, neutre mauvaise, laisse ses gargouilles engager le combat et cherche une victime isolée.
+  Double hache orque : lame principale +8 (1d8+5, x3, plus 1d10 d'électricité et poison), seconde lame +8 (1d8+3, x3 et poison) ; morsure +4 (1d4+2) ; cornes +4 (1d4+2 et poison).
+  47 PV ; CA 17, contact 12 ; initiative +7. Déplacement terrestre 12 m, vol 24 m avec une bonne manœuvrabilité ; allonge 1,50 m ; vision dans le noir à 18 m.
+  Réduction des dégâts 10/magie ; immunité au poison ; résistances à l'acide, au froid, à l'électricité et au feu 10 ; résistance à la magie 17.
+
+resource: Venin de ver pourpre | 6 doses au départ | 3 appliquées avant le combat, 3 gardées en réserve ; aucun DD de poison n'est indiqué dans ce profil
+resource: Ténèbres | 3/jour | NLS 5 ; utile pour une approche ou une fuite seulement si la baisse d'éclairage gêne les ennemis
+resource: Ténèbres maudites | 1/jour | NLS 5, Volonté DD 14 ; viser les ennemis regroupés, surtout ceux d'alignement bon
+resource: Profanation | 1/jour | NLS 5 ; aucun mort-vivant n'est indiqué pour profiter de ce pouvoir
+resource: Anneau de contresorts | 1 déclenchement avant recharge | cône de froid stocké ; contre automatiquement ce sort lorsqu'il affecte Razorcraw
+
+step: Les PJ ouvrent le puits de la zone 2
+  do: Appliquer une dose de venin sur chacune des deux lames de la double hache et une troisième sur les cornes.
+  note: Garder les trois doses restantes en réserve ; ne pas empoisonner la morsure.
+
+step: Les intrus n'ont pas encore repéré Razorcraw
+  do: Rester immobile comme une statue grâce à immobilité, de préférence dans un environnement pierreux, et observer leur progression.
+  note: Discrétion +13, ou +17 dans les zones pierreuses ; Perception +9.
+
+## Ouverture
+
+step: Les gargouilles peuvent engager les intrus
+  do: Les laisser mener l'attaque et attendre qu'un PJ s'éloigne de ses compagnons.
+  note: Razorcraw préfère exploiter leur assaut ; il ne s'expose pas le premier.
+
+step: Un PJ se retrouve isolé, hors du soutien immédiat de ses alliés
+  do: Fondre sur lui en volant, terminer à portée de mêlée et frapper avec la lame principale empoisonnée.
+  note: Après un déplacement, porter une seule attaque ; il ne dispose pas d'Attaque en vol pour frapper puis repartir dans le même mouvement.
+
+step: Aucun PJ ne s'isole
+  do: Rejoindre une gargouille pour prendre un combattant en tenaille et le frapper avec la double hache.
+  note: La tenaille ajoute +2 aux jets d'attaque de mêlée lorsque les positions le permettent.
+
+## Rounds suivants
+
+step: La cible reste au contact et aucune approche importante n'est nécessaire
+  do: Faire une attaque à outrance : deux attaques de hache à +8, morsure à +4 et cornes à +4 ; conserver la tenaille si possible.
+  note: Un pas de 1,50 m reste compatible avec cette attaque à outrance. Les lames et les cornes transmettent le poison tant que leur enduit est actif ; suivre chaque surface séparément.
+
+step: La cible rejoint ses alliés ou sort de portée
+  do: Chercher de nouveau un adversaire isolé ; à défaut, rétablir une tenaille avec une gargouille contre un combattant.
+  note: Privilégier les occasions de placer les attaques empoisonnées, sans compter sur une attaque à outrance après un déplacement normal.
+
+step: Des ennemis restent regroupés et aucune attaque contre une cible isolée ou prise en tenaille n'est possible
+  do: Employer ténèbres maudites si le groupe constitue une cible favorable, puis revenir au combat en coopération avec les gargouilles.
+  note: Volonté DD 14 ; ce pouvoir dépend de l'alignement des victimes et ne remplace pas sa recherche d'une cible vulnérable.
+
+step: Un enduit a été utilisé et Razorcraw dispose d'un répit à l'abri des attaques
+  do: Dépenser une dose de réserve pour réempoisonner une lame ou les cornes.
+  note: L'application demande une action simple ; ne pas supposer que les six doses permettent d'empoisonner toutes les attaques pendant tout le combat.
+
+## Repli
+
+step: Points de vie sous 15 et une voie de fuite paraît praticable
+  do: Rompre le combat et fuir par les airs, en utilisant son vol de 24 m pour gagner de la distance.
+  note: Si une attaque d'opportunité menace le départ, se désengager lorsque la situation le permet ; ténèbres peut couvrir la fuite si l'éclairage s'y prête.
+
+step: Points de vie sous 15 et aucune fuite ne paraît possible
+  do: Se rendre et cesser les attaques.

@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Malignant Nolly, pixie femelle corrompue, petite fée chaotique mauvaise, cherche à infecter et à tuer. 34 PV, CA 20 ; vol à 18 m, déplacement au sol à 6 m.
+  Arc long de maître +9 (1d6, x3), flèches spéciales incapacitantes ou infectieuses ; projection d’épine +7 (1d3) ; dague de poing +8 (1d3, x3).
+  Elle privilégie le tir à distance sous invisibilité. Discrétion +18, Perception +11 ; vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses
+  RD 10/fer froid et bien ; résistance au froid 10 et à l’électricité 10 ; résistance à la magie 15.
+  Immunité aux maladies, à la paralysie, au poison et à la métamorphose. Loin du Fléau du Fangwood central, sa régénération fongique ne fonctionne pas.
+
+resource: Bouclier | 1/jour | sur elle-même avant le combat ; CA portée à 24
+resource: Enchevêtrement | 1/jour | DD 15
+resource: Confusion mineure | 1/jour | DD 15
+resource: Dissipation de la magie | 1/jour | NLS 8
+resource: Image permanente | 1/jour | DD 20 ; éléments visuels et sonores seulement
+resource: Détection des pensées | 1/jour | DD 16
+resource: Lumières dansantes | 1/jour | diversion visuelle
+resource: Baguette de collet | 14 charges | Utilisation d’objets magiques +11
+resource: Potion de soins modérés | 1 | à boire si elle est blessée
+resource: Flèches de maître | 20 | munitions de l’arc long
+
+step: Elle peut préparer les lieux
+  do: Tenter d’utiliser la baguette de collet sur les voies d’approche ; employer, si nécessaire, image permanente ou lumières dansantes pour attirer l’attention vers le cadavre infesté.
+  note: Ces préparatifs sont facultatifs ; les illusions ne produisent aucun obstacle matériel.
+
+step: Avant de tirer sur le cadavre
+  do: Lancer bouclier sur elle-même, rester invisible et choisir une position de tir à distance, accessible en vol.
+
+## Ouverture
+
+step: Round de surprise, les intrus sont près du cadavre infesté
+  do: Tirer une seule flèche sur le cadavre pour déclencher l’explosion d’asticots putréfacteurs.
+  note: C’est son ouverture prévue ; l’explosion provient du cadavre infesté.
+
+step: Le piège du cadavre ne peut pas être déclenché
+  do: Tirer à l’arc sur une cible exposée, en privilégiant une flèche infectieuse si personne n’est encore contaminé.
+
+## Rounds suivants
+
+step: Elle peut maintenir ses distances
+  do: Continuer les tirs à l’arc tout en restant invisible ; se déplacer en vol entre les tirs pour éviter le contact.
+  note: Chercher à infecter au moins une victime ; employer aussi les flèches incapacitantes pour neutraliser les adversaires encore dangereux.
+
+step: Plusieurs ennemis traversent une zone de végétation propice
+  do: Employer enchevêtrement, DD 15, pour gêner leur approche, puis reprendre les tirs à distance aux rounds suivants.
+
+step: Un adversaire menace de la rejoindre
+  do: S’éloigner en vol ; si cela ne suffit pas, tenter confusion mineure sur lui, DD 15.
+  note: Préférer la distance à un échange de coups avec ses 34 PV.
+
+step: Un effet magique adverse compromet ses tirs ou sa sécurité
+  do: Tenter dissipation de la magie avec son NLS 8, puis reprendre le harcèlement.
+
+step: Elle est blessée et dispose d’un répit
+  do: Boire sa potion de soins modérés, puis reprendre le combat.
+
+step: Elle n’a plus de flèches
+  do: Employer projection d’épine +7 (1d3) ; réserver la dague de poing +8 (1d3, x3) au contact inévitable.
+
+## Repli
+
+step: Ses points de vie deviennent critiques
+  do: Continuer à combattre jusqu’à la mort ; utiliser le vol et l’invisibilité pour poursuivre ses attaques à distance.
+  note: Elle ne compte sur aucune récupération par régénération fongique dans cette rencontre.
+
+step: Les adversaires s’enfuient et au moins une victime a été infectée
+  do: Les laisser partir sans les poursuivre.
+
+step: Les adversaires s’enfuient sans qu’aucune victime ait été infectée
+  do: Les poursuivre en vol et continuer à employer ses flèches infectieuses jusqu’à contaminer au moins une victime.

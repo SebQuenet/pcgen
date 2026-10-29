@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Nairoth, nightwalker de taille TG, mort-vivant chaotique mauvais du feu, intelligent et puissant ; 241 PV, CA 31, résistance à la magie 27.
+  Deux griffes +27, chacune infligeant 3d6+14 dégâts, plus 3d6 de feu et 4d6 de froid ; critique 19–20. Allonge et espace occupé : 4,50 m ; déplacement : 12 m.
+  Immunisé au froid, au feu et aux effets couverts par les traits des morts-vivants ; RD 15/Bien et argent, ainsi que RD 5/–. Les deux RD ne s'additionnent pas.
+  Aura de profanation à 9 m ; aversion à la lumière. Il privilégie les ténèbres et peut marcher dans les airs grâce à son pouvoir constant.
+
+note: Pouvoirs permanents
+  Marche dans les airs, détection de la magie et croc magique sont constants ; les attaques indiquées sont celles du profil fourni.
+  Vision dans le noir à 18 m, vision nocturne et perception des ténèbres ; télépathie à 30 m.
+
+resource: Ténèbres profondes, dissipation suprême, ténèbres maudites, contagion | à volonté | ténèbres maudites et contagion : DD 19
+resource: Ténèbres maudites à incantation rapide | 3/jour | action rapide, Volonté DD 19
+resource: Rapidité | 3/jour | améliore ses déplacements et ses attaques
+resource: Confusion | 3/jour | Volonté DD 19
+resource: Immobilisation de monstre | 3/jour | Volonté DD 20
+resource: Invisibilité | 3/jour | repositionnement ou repli
+resource: Cône de froid | 1/jour | Réflexes DD 20
+resource: Doigt de mort | 1/jour | Vigueur DD 22
+resource: Changement de plan | 1/jour | DD 22 contre une cible non consentante
+resource: Convocation | 1/jour | pouvoir de niveau 7, appelle 4 ombres suprêmes
+
+step: Les adversaires approchent du cyclone de feu
+  do: Rester à l'intérieur du cyclone jusqu'à l'ouverture du combat
+  note: Son immunité au feu lui permet d'y demeurer ; le cyclone appartient à la rencontre et n'est pas un pouvoir qu'il peut créer.
+
+## Ouverture
+
+step: Premier round, depuis l'intérieur du cyclone de feu
+  do: Utiliser ténèbres profondes, puis ténèbres maudites à incantation rapide sur les adversaires regroupés, Volonté DD 19
+  note: Ténèbres profondes utilise son action simple ; la version rapide de ténèbres maudites utilise son action rapide et dépense une des 3 utilisations quotidiennes.
+
+step: Deuxième round
+  do: Utiliser rapidité sur lui-même, puis sortir du cyclone avec son déplacement pour prendre position
+  note: Exploiter son allonge de 4,50 m et marche dans les airs pour choisir l'approche ; ce round ne laisse pas d'action simple pour une attaque ou un autre pouvoir.
+
+## Rounds suivants
+
+step: Ses PV tombent à 120 ou moins et la convocation est encore disponible
+  do: Donner priorité à la convocation des 4 ombres suprêmes
+  note: Ce seuil appelle des renforts ; Nairoth poursuit le combat avec leur soutien.
+
+step: Plusieurs ennemis peuvent être pris dans le même cône et cône de froid reste disponible
+  do: Se placer pour les atteindre ensemble, puis utiliser cône de froid, Réflexes DD 20
+  note: Éviter de gaspiller son unique utilisation sur une cible isolée si un groupe peut être visé.
+
+step: Un lanceur de sorts a montré qu'il pouvait franchir sa résistance à la magie et doigt de mort reste disponible
+  do: Viser ce lanceur avec doigt de mort, Vigueur DD 22
+  note: C'est la cible prioritaire de ce pouvoir ; ne pas le dépenser au hasard avant d'avoir identifié cette menace.
+
+step: Un ennemi est à portée de ses griffes et il peut rester sur place
+  do: Faire une attaque à outrance avec ses deux griffes ; sous rapidité, ajouter une attaque de griffe et appliquer les bonus du sort
+  note: Chaque griffe utilise les dégâts du profil, avec les dégâts de feu et de froid à chaque coup réussi.
+
+step: Il doit se déplacer avant de frapper
+  do: Effectuer une seule attaque avec Frappe décisive supérieure
+  note: La griffe inflige alors 12d6+14 dégâts, plus 3d6 de feu et 4d6 de froid ; les dégâts élémentaires ne sont pas multipliés par ce don. Ce don ne s'applique pas à une attaque à outrance.
+
+step: Les protections magiques adverses empêchent ses attaques ou ses pouvoirs d'être efficaces
+  do: Utiliser dissipation suprême sur les protections identifiées
+  note: Son niveau de lanceur de sorts est de 16 ; il peut renouveler ce pouvoir à volonté.
+
+step: Les pouvoirs offensifs prioritaires sont épuisés ou sans bonne cible
+  do: Utiliser confusion sur plusieurs adversaires, Volonté DD 19, ou immobilisation de monstre sur une menace isolée, Volonté DD 20
+  note: Choisir un seul de ces pouvoirs par round ; conserver les griffes pour les ennemis qui arrivent à portée.
+
+step: Son action rapide est libre et des adversaires sont bien regroupés
+  do: Ajouter ténèbres maudites à incantation rapide, Volonté DD 19, tant qu'il reste des utilisations
+  note: Sans version rapide disponible, ténèbres maudites à volonté remplace son attaque ou son autre pouvoir du round.
+
+step: Une lumière gênante ou une dissipation a supprimé ses ténèbres
+  do: Renouveler ténèbres profondes si cela permet de rétablir des conditions favorables
+  note: Tenir compte de son aversion à la lumière ; renouveler le pouvoir consomme son action simple.
+
+## Repli
+
+step: La défaite devient imminente et changement de plan est encore disponible
+  do: Utiliser changement de plan sur lui-même pour quitter le combat
+  note: Aucun seuil de fuite n'est précisé dans les tactiques fournies ; 120 PV ou moins déclenche la convocation, pas automatiquement le repli.
+
+step: Il doit se dégager et changement de plan n'est plus disponible
+  do: Utiliser invisibilité, puis s'éloigner avec son déplacement en exploitant marche dans les airs et les ténèbres
+  note: S'il attaque après être devenu invisible, l'invisibilité prend fin ; ses ombres déjà convoquées peuvent maintenir la pression pendant sa retraite.

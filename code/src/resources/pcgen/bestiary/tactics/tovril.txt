@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Tovril est un quasit familier chaotique mauvais de taille TP : 24 pv, CA 20, vision dans le noir à 18 m. Il privilégie la discrétion et les attaques contre une cible isolée.
+  Attaque à outrance : 2 griffes +9 (1d3-1 chacune) et morsure +9 (1d4-1). Allonge de 0 m : il doit entrer dans l'espace de sa cible pour la frapper.
+  Déplacement terrestre de 6 m ; vol de 15 m, manœuvrabilité parfaite. Discrétion +16, Perception +7.
+  Guérison accélérée 2 ; réduction des dégâts 5, surmontée par le fer froid ou le Bien. Immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu.
+
+resource: Invisibilité sur lui-même | à volonté | permet l'approche et le décrochage ; une attaque rompt l'effet
+resource: Détection du Bien, détection de la magie | à volonté | repérage avant l'engagement
+resource: Frayeur | 1/jour | rayon de 9 m ; DD non indiqué dans le profil fourni
+resource: Communion | 1/semaine | six questions ; à employer avant une rencontre si des renseignements sont nécessaires
+
+step: Il peut préparer son approche
+  do: Devenir invisible, puis observer les intrus depuis les airs ou un abri pour choisir une cible isolée et un chemin de fuite
+  note: Employer les détections si le temps le permet ; elles ne donnent pas automatiquement les capacités précises des adversaires
+
+step: Il doit dissimuler sa nature avant l'arrivée des intrus
+  do: Prendre la forme d'une chauve-souris ou d'un mille-pattes de taille P
+  note: Le profil ne fournit pas d'attaques propres à ces formes ; préparer les attaques de griffes et de morsure sous sa forme de quasit
+
+## Ouverture
+
+step: Plusieurs adversaires sont dans un rayon de 9 m et Frayeur est disponible
+  do: Utiliser Frayeur, puis s'éloigner en vol avec son déplacement si celui-ci reste disponible
+  note: Ce pouvoir offensif rompt son invisibilité ; éviter de finir le round au milieu des ennemis
+
+step: Il est invisible et une cible isolée est accessible
+  do: Entrer en vol dans l'espace de cette cible ; s'il a utilisé une action de déplacement, porter une seule griffe +9 (1d3-1)
+  note: L'attaque révèle sa présence et rompt l'invisibilité ; choisir une cible dont les alliés ne peuvent pas immédiatement l'encercler
+
+## Rounds suivants
+
+step: Il commence son tour dans l'espace d'une cible et peut rester exposé
+  do: Attaque à outrance : 2 griffes +9 (1d3-1 chacune), puis morsure +9 (1d4-1)
+  note: Ses dégâts sont modestes ; concentrer les attaques sur une cible déjà blessée
+
+step: Plusieurs ennemis peuvent le frapper ou sa cible résiste trop bien
+  do: Utiliser Invisibilité, puis quitter la mêlée en vol et gagner un abri ou de la hauteur
+  note: L'invisibilité permet de se déplacer sans provoquer d'attaque d'opportunité de la part d'un adversaire qui ne le voit pas ; elle ne protège pas contre les attaques de zone
+
+step: Il a pu rompre le contact et reste blessé
+  do: Attendre à couvert pendant que sa guérison accélérée lui rend 2 pv par round, puis rechercher une nouvelle occasion d'approcher invisible
+  note: Son profil ne lui donne aucune attaque à distance ; rester en hauteur sert à observer, récupérer ou fuir
+
+## Repli
+
+step: Il tombe à 8 pv ou moins, ou les ennemis surmontent régulièrement ses défenses
+  do: Devenir invisible, puis fuir en vol à 15 m par déplacement en utilisant les obstacles pour couper les lignes de vue
+  note: S'il est déjà invisible, consacrer ses deux actions de déplacement au vol pour parcourir 30 m ; récupérer ensuite 2 pv par round dans un refuge

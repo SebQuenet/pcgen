@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Madazar est un eidolon bipède de taille G, loyal neutre, taillé pour le combat au corps à corps : 76 PV, CA 26, initiative +8.
+  Attaque à outrance : 2 griffes +17, chacune infligeant 1d6+8 plus 1d6 de feu ; son évolution de déchirement récompense deux griffes qui touchent la même cible.
+  Déplacement de 9 m ; espace occupé de 3 m et allonge de 3 m ; vision dans le noir à 18 m. Il parle l'ignan.
+  Immunisé au feu ; grâce à l'esquive totale, un jet de Réflexes réussi contre une attaque permettant de réduire les dégâts de moitié annule ces dégâts.
+
+resource: Attaques d'opportunité | 5 par round | Attaques réflexes et Dextérité 18 ; une griffe par occasion, dans son allonge de 3 m
+
+step: Il peut choisir sa position avant l'affrontement
+  do: Se placer dans un passage assez large pour sa taille, entre les adversaires et son invocateur s'il est présent.
+  note: Perception +12 pour repérer une approche ; son allonge lui permet de menacer les ennemis avant qu'ils arrivent au contact immédiat.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance : 2 griffes +17, chacune pour 1d6+8 plus 1d6 de feu, sur la même cible.
+  note: Concentrer les deux griffes permet de déclencher le déchirement si elles touchent toutes les deux.
+
+step: Un adversaire peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à le placer dans son allonge de 3 m, puis porter une seule griffe +17, pour 1d6+8 plus 1d6 de feu.
+  note: Un déplacement ordinaire ne laisse pas le temps de porter les deux griffes.
+
+step: Aucun adversaire ne peut être atteint ce round avec un déplacement et une attaque
+  do: Se rapprocher à couvert si possible ; consacrer au besoin son tour à deux déplacements, pour avancer de 18 m.
+  note: Il ne dispose d'aucune attaque à distance indiquée.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Répéter l'attaque à outrance avec les deux griffes sur cette cible ; appliquer le déchirement lorsque les deux touchent.
+  note: Si un pas de placement de 1,50 m suffit à garder la cible à portée, le préférer à un déplacement qui empêcherait l'attaque à outrance.
+
+step: Une cible semble facile à toucher
+  do: Activer Attaque en puissance : les deux griffes passent à +14 et infligent chacune 1d6+14 plus 1d6 de feu.
+  note: Garder les attaques à +17 contre une défense élevée : toucher avec les deux griffes favorise le déchirement. Le choix d'Attaque en puissance s'applique jusqu'à son prochain tour, y compris aux attaques d'opportunité.
+
+step: Un ennemi provoque une attaque d'opportunité dans les 3 m
+  do: Porter une griffe, en conservant les éventuels modificateurs d'Attaque en puissance.
+  note: Exploiter notamment les déplacements imprudents et les incantations qui provoquent une attaque ; respecter la limite de cinq attaques d'opportunité par round.
+
+step: Un adversaire résiste au feu ou y est immunisé
+  do: Continuer à le frapper avec les griffes et à rechercher le déchirement, ou concentrer les attaques sur une cible plus vulnérable si elle est à portée.
+  note: La résistance au feu ne supprime pas les dégâts physiques des griffes.
+
+## Repli
+
+step: Ses points de vie tombent à 19 ou moins et le repli reste possible
+  do: Se désengager vers son invocateur ou un abri, jusqu'à 18 m si le passage est libre.
+  note: Lors d'un désengagement, seule la case de départ est protégée des attaques d'opportunité ; traverser ensuite d'autres cases menacées reste dangereux.
+
+step: Le repli est bloqué
+  do: Concentrer ses deux griffes sur l'adversaire qui ferme le passage, puis profiter de la première ouverture pour partir.

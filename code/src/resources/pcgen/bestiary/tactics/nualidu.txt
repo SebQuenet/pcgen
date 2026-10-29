@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Nualidu, azata aquatique chaotique bon, FP 5 : protecteur des eaux naturelles, ennemi des pollueurs et des esclavagistes. Il change volontiers de cible et préfère déplacer ses ennemis à soutenir une mêlée immobile.
+  51 pv, CA 18 ; deux coups +10 (1d6+4 chacun) à outrance ; cascade +9 au contact à distance (3d6 contondants).
+  Déplacement terrestre 12 m, nage 9 m, propulsion aquatique 45 m ; allonge 1,50 m. Perception +11, vision dans le noir à 18 m.
+
+note: Défenses
+  RD 5/fer froid ou Mal ; immunité à l'électricité et à la pétrification ; résistance au froid 10 et au feu 10.
+  Corps aqueux : 25 % de chances d'annuler les dégâts supplémentaires d'un critique ou d'une attaque sournoise, en conservant les dégâts normaux.
+
+resource: Sillage (slipstream) | 3/jour | NLS 5 ; durée 50 minutes ; sur terrain plat, déplacement terrestre porté à 15 m ; nage portée à 15 m
+resource: Contrôle de l'eau | 1/jour | modifie le niveau d'une eau existante pendant 50 minutes
+resource: Torrent hydraulique | 1/jour | ligne de 18 m ; bousculade avec BMC +7, un seul jet appliqué aux cibles ; aucun jet de sauvegarde, résistance à la magie applicable
+resource: Poussée hydraulique | à volonté | une cible à 10,50 m maximum ; bousculade avec BMC +7 ; aucun jet de sauvegarde, résistance à la magie applicable
+resource: Création d'eau et purification de l'eau | à volonté | pouvoirs utilitaires ; la purification ne concerne que l'eau
+
+step: Il peut préparer l'affrontement
+  do: Lancer sillage sur lui-même et choisir une position près de l'eau, avec une voie de fuite aquatique dégagée
+  note: Observer les accès et les positions adverses ; utiliser sa parole universelle pour avertir les intrus et comprendre leurs intentions
+
+## Ouverture
+
+step: Une berge occupée peut être inondée utilement
+  do: Contrôle de l'eau pour relever le niveau et submerger les appuis des adversaires
+  note: Il exploite ensuite sa nage ; ce pouvoir ne crée pas d'eau sur un terrain sec
+
+step: Plusieurs ennemis sont alignés
+  do: Torrent hydraulique pour les repousser vers l'eau ou dégager un passage, en évitant ses alliés
+  note: Le torrent s'arrête devant un obstacle qu'il ne peut repousser ; il ne cause pas directement de dégâts
+
+step: Une cible isolée se trouve à 24 m ou moins
+  do: Cascade, en action de round complet : attaque de contact à distance +9, 3d6 dégâts contondants
+  note: Réflexes DD 16 ou la cible perd ses attaques d'opportunité pendant 1 round. Il peut apparaître dans la case libre la plus proche adjacente à elle, comme par porte dimensionnelle ; réserver ce déplacement à une position avantageuse
+
+## Rounds suivants
+
+step: Un ennemi peut être repoussé dans l'eau ou éloigné d'un allié
+  do: Poussée hydraulique, puis déplacement vers une position moins exposée
+  note: La bousculade se résout contre la DMD ; elle ne met pas automatiquement la cible à terre et n'inflige pas directement de dégâts
+
+step: Un adversaire reste à portée de mêlée sans l'exposer à l'encerclement
+  do: Attaque à outrance : deux coups +10, chacun pour 1d6+4 dégâts
+  note: Après un déplacement ordinaire, un seul coup ; la cascade consomme elle aussi le round complet
+
+step: La mêlée devient défavorable ou une autre cible est plus accessible
+  do: Changer de position par la nage ou viser une autre cible avec la cascade
+  note: Acrobatie +12 pour éviter les attaques d'opportunité ; Mobilité donne +4 à la CA contre celles provoquées par son déplacement
+
+## Repli
+
+step: Ses blessures deviennent préoccupantes ou le combat l'ennuie
+  do: Rejoindre l'eau, puis utiliser la propulsion pour s'éloigner de 45 m en ligne droite
+  note: La propulsion est une action de round complet, effectuée en nageant à reculons, sans provoquer d'attaques d'opportunité ; à terre, profiter de sa vitesse pour gagner une issue

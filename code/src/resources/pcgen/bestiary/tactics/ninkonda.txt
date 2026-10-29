@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Ninkonda, ange loyal bon de taille G, FP 17, 270 pv : il cherche à protéger et à faire respecter la justice. Diplomatie +28 et Psychologie +31 lui permettent de tenter une résolution pacifique.
+  Au contact, deux gantelets cloutés +4 axiomatiques : +28/+23/+18/+13 (1d6+12) et +28/+23/+18 (1d6+8), critique 19–20. À distance, quatre dards +4 axiomatiques +27 (1d6+12 chacun). Les armes axiomatiques ajoutent 2d6 contre les créatures chaotiques.
+  Déplacement 12 m, vol 18 m avec bonne manœuvrabilité ; espace et allonge de 3 m. Perception aveugle à 36 m, vision dans le noir à 18 m, vision nocturne et vision lucide constante.
+  CA 32, 36 contre le Mal ; jets de sauvegarde +4 contre le Mal ; RD 10/Mal, RM 28 et renvoi des rayons. Immunisé à l’acide, au froid, à la pétrification et au poison ; résistance de 10 à l’électricité et au feu.
+
+resource: Annulation d’enchantement | 5/jour | NLS 20
+resource: Porte dimensionnelle | 5/jour | NLS 20 ; aucune autre action après son utilisation jusqu’au prochain tour
+resource: Liberté de mouvement | 5/jour | NLS 20 ; durée 200 minutes
+resource: Changement de plan | 3/jour | lui-même et cibles consentantes uniquement
+resource: Localisation suprême | 1/jour | recherche préalable d’une créature ou d’un objet
+
+step: Une confrontation paraît évitable
+  do: Parler aux intrus et confronter leurs déclarations à son discernement des mensonges constant
+  note: Ce pouvoir ne lit pas les pensées ; une parole mensongère ne suffit pas à justifier une attaque
+
+step: Un combat risque d’impliquer entraves, paralysie ou lutte
+  do: Activer liberté de mouvement avant l’engagement
+  note: Sa longue durée permet de conserver le bénéfice pendant la confrontation
+
+step: Un allié subit un enchantement avant l’affrontement
+  do: Tenter une annulation d’enchantement si le temps le permet
+  note: L’incantation demande 1 minute ; ne pas la traiter comme une dissipation utilisable en une action au milieu du combat
+
+## Ouverture
+
+step: Un adversaire dangereux est déjà à 3 m ou moins
+  do: Porter une attaque à outrance avec les deux gantelets, soit sept attaques
+  note: À danger comparable, privilégier une cible chaotique pour profiter des dégâts axiomatiques
+
+step: Un adversaire est accessible après un déplacement
+  do: Avancer de 12 m au maximum ou voler de 18 m au maximum, puis porter une attaque de gantelet +28 (1d6+12)
+  note: Un déplacement ordinaire ne permet pas d’enchaîner les sept attaques de l’attaque à outrance
+
+step: Les ennemis restent hors de son allonge
+  do: Employer les dards ; s’il peut effectuer une attaque à outrance à distance, lancer les quatre à +27 (1d6+12 chacun)
+  note: Utiliser le vol pour gagner une position permettant ensuite le contact
+
+## Rounds suivants
+
+step: La cible reste dans son allonge
+  do: Répéter l’attaque à outrance aux gantelets ; utiliser au besoin un pas de 1,50 m pour ajuster sa position
+  note: Concentrer les attaques sur une menace que la mise hors de combat protégerait immédiatement les alliés
+
+step: Un adversaire provoque une attaque d’opportunité dans son allonge de 3 m
+  do: Frapper au gantelet à +28 (1d6+12)
+  note: Attaques réflexes et Dextérité 19 permettent jusqu’à cinq attaques d’opportunité par round, sans multiplier les attaques pour une même occasion
+
+step: Un projectile physique le vise et il conserve une main libre
+  do: Utiliser Parade de projectiles si ses conditions sont réunies
+  note: Une fois par round ; il doit percevoir l’attaque et ne pas être pris au dépourvu
+
+step: Un obstacle ou la position ennemie empêche d’atteindre une menace prioritaire
+  do: Employer porte dimensionnelle pour rejoindre une position favorable, puis attendre son prochain tour pour attaquer
+  note: Éviter d’apparaître isolé au milieu de plusieurs ennemis capables de riposter immédiatement
+
+## Repli
+
+step: À 90 pv ou moins, si sa mission permet de se retirer
+  do: Utiliser porte dimensionnelle pour gagner un abri ; sinon, se désengager puis exploiter son vol à 18 m
+  note: Un déplacement en vol ordinaire n’empêche pas les attaques d’opportunité
+
+step: La retraite locale ne suffit plus ou des alliés consentants doivent être évacués
+  do: Utiliser changement de plan pour quitter le champ de bataille avec les compagnons consentants qu’il peut emmener
+  note: Ce pouvoir ne permet pas de bannir un ennemi récalcitrant ; il ne garantit pas une arrivée à un point précis du plan choisi

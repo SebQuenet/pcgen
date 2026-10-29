@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Skulgrym, nabasu mâle chaotique mauvais, FP 11 : démon intelligent qui affaiblit les intrus, frappe au contact et revient après s'être soigné. 163 PV, CA 25, résistance à la magie 22.
+  Hache d'armes +2 vicieuse +23/+18 (1d8+8, critique x3, plus 2d6), morsure +16 (1d6+3), griffe +16 (1d4+3) ; allonge de 1,50 m. Chaque coup de hache vicieuse réussi lui inflige aussi 1d6 dégâts.
+  Déplacement de 9 m, vol de 18 m ; vision dans le noir à 18 m, Perception +29, Discrétion +21 ou +29 dans la pénombre ; télépathie à 30 m.
+  Réduction des dégâts 10/fer froid ou Bien ; immunité aux effets de mort, à l'électricité, à la paralysie et au poison ; résistance 10 à l'acide, au froid et au feu.
+
+resource: Ténèbres profondes | à volonté | masquer sa retraite ; sa vision dans le noir ne suffit pas à voir dans des ténèbres surnaturelles
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,5 kg d'objets ; aucun allié transporté
+resource: Télékinésie | à volonté | DD 19 ; déplacer des objets ou gêner les adversaires à distance
+resource: Énergie négative | 3/jour | rayon d'affaiblissement par niveaux négatifs
+resource: Silence | 3/jour | DD 16 ; à centrer sur sa hache
+resource: Contact vampirique | 3/jour | attaque de contact qui procure des PV temporaires ; ceux-ci ne soignent pas les PV perdus
+resource: Immobilisation de personnes de groupe | 1/jour | Volonté DD 21 ; cibles humanoïdes
+resource: Régénération | 1/jour | soin à utiliser après s'être téléporté hors du combat
+resource: Convocation de démons | 1/jour | niveau 4, 30 % de réussite ; 1 nabasu ou 1d4 babaus
+
+step: Il peut attendre les intrus dans la pénombre
+  do: Se dissimuler et choisir une approche qui lui permette de rejoindre les adversaires peu protégés
+  note: Il privilégie ces adversaires pour son regard voleur de vie, car il les croit plus vulnérables.
+
+step: Il peut préparer une attaque de contact avant le combat
+  do: Préparer contact vampirique et conserver la charge pour la décharger sur un ennemi
+  note: Il ne se frappe pas lui-même. Activer ensuite un autre pouvoir magique fait perdre cette charge ; ne pas la préparer s'il compte commencer par silence.
+
+## Ouverture
+
+step: Il suit son ouverture habituelle
+  do: Au premier round, lancer silence sur sa hache, puis se rapprocher des lanceurs de sorts ennemis
+  note: Le silence se déplace avec l'arme et gêne les sorts à composante verbale. Ses propres pouvoirs magiques restent utilisables.
+
+step: Au round suivant, plusieurs humanoïdes sont des cibles valables
+  do: Lancer immobilisation de personnes de groupe, Volonté DD 21
+  note: Employer le pouvoir effectivement disponible dans le profil ; il ne dispose pas d'une immobilisation de personne distincte à volonté.
+
+step: Il a conservé une charge de contact vampirique et un ennemi est déjà à portée
+  do: Décharger ce contact avant d'activer un autre pouvoir, puis effectuer l'ouverture par silence et immobilisation aux rounds suivants
+  note: Décompter l'utilisation dès la préparation du contact, sans en dépenser une seconde pour le porter.
+
+## Rounds suivants
+
+step: Un adversaire légèrement protégé est visible
+  do: Concentrer sur lui le regard voleur de vie
+  note: Le profil fourni ne précise ni la portée ni le DD de ce regard ; ne pas lui attribuer de valeurs supplémentaires.
+
+step: Une cible est à 1,50 m et il peut consacrer son round aux attaques
+  do: Attaque à outrance : hache +23/+18, morsure +16 et griffe +16
+  note: Privilégier les cibles immobilisées ou les lanceurs de sorts pris dans le silence ; surveiller les blessures que lui inflige sa hache vicieuse.
+
+step: Il doit rejoindre une cible ou changer d'adversaire
+  do: Se déplacer au sol ou en vol, puis porter une seule attaque de hache s'il lui reste son action simple
+  note: Réserver l'attaque à outrance aux rounds où il n'a pas à effectuer un déplacement important.
+
+step: Il veut obtenir des PV temporaires et peut atteindre une cible au contact
+  do: Utiliser contact vampirique, puis reprendre les attaques de hache aux rounds suivants
+  note: Garder le compte des trois utilisations, y compris une éventuelle préparation avant le combat.
+
+step: Un ennemi dangereux reste à distance et une utilisation est disponible
+  do: Employer énergie négative pour l'affaiblir avant de l'affronter au contact
+
+step: L'approche directe l'expose trop ou un obstacle peut gêner les intrus
+  do: Employer télékinésie pour manipuler les objets présents ou tenter une manœuvre adaptée
+  note: DD 19 lorsqu'un jet de sauvegarde est applicable ; choisir un effet permis par le pouvoir.
+
+## Repli
+
+step: Moins de 25 PV et plus aucun pouvoir de soin disponible
+  do: Se téléporter immédiatement en sécurité et abandonner ce combat
+  note: Cette fuite définitive prime sur toute tentative de retour ; il peut chercher une vengeance ultérieure.
+
+step: Moins de 50 PV et il peut encore se soigner
+  do: Lancer ténèbres profondes, puis tenter de convoquer 1d4 babaus si sa convocation quotidienne reste disponible
+  note: Ces pouvoirs demandent des actions successives. La convocation n'a que 30 % de chances de réussir ; ne pas attendre des renforts après un échec.
+
+step: Les ténèbres sont établies et la tentative de convocation est résolue, ou rester devient trop dangereux
+  do: Utiliser téléportation suprême pour quitter la crypte et gagner un refuge, puis y lancer régénération si elle reste disponible
+  note: Les démons éventuellement convoqués couvrent son départ. S'il risque de tomber avant d'achever la séquence, se téléporter sans attendre.
+
+step: Il s'est soigné et peut reprendre l'affrontement
+  do: Attendre quelques rounds, se téléporter dans la zone J3, puis préparer contact vampirique si une utilisation reste disponible et revenir discrètement dans la salle
+  note: Utiliser la pénombre pour l'approche et décharger le contact avant un autre pouvoir magique. Régénération et convocation ne sont disponibles qu'une fois par jour ; les retours ne rétablissent aucune utilisation dépensée.
+
+step: Après un retour, ses PV redescendent sous 50
+  do: Reprendre la séquence de repli en utilisant seulement les ressources restantes
+  note: Ne pas prolonger indéfiniment ce cycle après épuisement des soins ; sous 25 PV sans soin disponible, fuir définitivement.

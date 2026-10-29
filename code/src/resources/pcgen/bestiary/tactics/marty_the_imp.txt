@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Marty est un diablotin familier de taille TP, loyal mauvais, intelligent et discret. Il dispose de 108 pv et d’une CA de 24 ; son total de pv correspond à la moitié du total combiné des trois sorcières.
+  Dard +11 (1d4 et poison), allonge 0 m : il doit entrer dans l’espace de sa cible pour la piquer. Il se déplace de 6 m au sol ou de 15 m en vol, avec une manœuvrabilité parfaite.
+  Réduction des dégâts 5/Bien ou argent ; immunité au feu et au poison ; résistance à l’acide 10 et au froid 10. Il voit dans les ténèbres et possède une vision dans le noir à 18 m.
+
+resource: Invisibilité | à volonté | soi uniquement, NLS 6
+resource: Suggestion | 1/jour | Volonté DD 15, NLS 6
+resource: Augure | 1/jour | NLS 6
+resource: Communion | 1/semaine | six questions, NLS 12
+resource: Détection du Bien et détection de la magie | constantes | repérage des auras
+resource: Changement de forme | à volonté | sanglier, araignée géante, requin ou vautour ; forme bestiale I
+
+step: Il peut observer les intrus avant leur arrivée
+  do: Se rendre invisible et reconnaître les lieux en vol, avec Perception +11 et Discrétion +13 ; repérer une sortie et les positions ennemies.
+  note: Les détections l’aident à examiner les auras ; elles ne révèlent pas automatiquement les intentions ni toutes les capacités des intrus.
+
+step: Il dispose de temps pour préparer une confrontation
+  do: Employer augure pour évaluer une approche envisagée ; réserver communion aux renseignements préparatoires, avec des questions auxquelles on peut répondre par oui ou non.
+
+step: Une apparence animale facilite la reconnaissance
+  do: Prendre l’une de ses quatre formes pour observer ou se déplacer sans afficher son apparence de diable.
+  note: Revenir à sa forme de diablotin avant d’utiliser le dard décrit dans ce profil.
+
+## Ouverture
+
+step: Un adversaire comprend sa langue et peut l’entendre, et suggestion est disponible
+  do: Lui suggérer d’aller vérifier une issue voisine, en présentant cette vérification comme une précaution raisonnable ; Volonté DD 15.
+  note: Il parle le commun et l’infernal. Une suggestion dirigée contre un ennemi met fin à son invisibilité ; elle ne permet pas d’imposer une action manifestement nuisible.
+
+step: Une cible isolée est accessible et il est invisible
+  do: S’approcher en vol, entrer dans son espace et porter une attaque de dard +11, pour 1d4 dégâts et poison.
+  note: L’attaque met fin à l’invisibilité. Son allonge nulle l’oblige à s’exposer au contact ; choisir une cible éloignée des autres combattants.
+
+## Rounds suivants
+
+step: La cible reste isolée et les échanges lui sont favorables
+  do: Rester dans son espace et renouveler le dard +11 chaque round.
+  note: Le profil ne précise ni le DD ni les effets du poison.
+
+step: Plusieurs ennemis convergent ou une arme en argent ou alignée sur le Bien le blesse
+  do: Se retirer en vol vers une zone dégagée, puis réactiver l’invisibilité au round suivant si les conditions le permettent.
+  note: Entrer dans l’espace d’un ennemi en étant visible peut provoquer une attaque d’opportunité. Acrobaties +9 peut servir à tenter d’éviter les attaques d’opportunité lors d’un déplacement menacé.
+
+step: Il a rompu le contact et peut employer son pouvoir sans être menacé
+  do: Se rendre invisible, puis se déplacer en vol jusqu’à 15 m pour changer d’angle et chercher une autre cible isolée.
+  note: L’invisibilité ne le rend pas silencieux ; continuer à utiliser Discrétion +13.
+
+## Repli
+
+step: Ses pv tombent à 27 ou moins, ou les ennemis rendent toute approche trop dangereuse
+  do: Abandonner les attaques, se retirer en vol, puis se rendre invisible dès qu’il peut le faire sans s’exposer inutilement.
+  note: Privilégier une issue en hauteur et poursuivre la fuite par déplacements de 15 m en vol ; sa manœuvrabilité parfaite lui permet de rester en vol stationnaire pour observer depuis un refuge.

@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Sjohvor, dragon blanc gigantesque, chaotique mauvais, intelligent et cruel, préfère combattre en vol et isoler une proie avant de la saisir.
+  362 pv ; CA 40 ; réduction des dégâts 20/magie ; résistance à la magie 29 ; immunité au froid, à la paralysie et au sommeil ; vulnérabilité au feu.
+  Morsure +34 (4d6+19, critique 19–20), 2 griffes +34 (2d8+13 chacune, critique 19–20), queue +32 (2d8+6), 2 ailes +32 (2d6+6 chacune).
+  Allonge 4,50 m, ou 6 m avec la morsure ; aura de froid à 3 m, 2d6 dégâts de froid ; présence terrifiante à 108 m, Volonté DD 26.
+  Vol 75 m, manœuvrabilité déplorable ; marche et nage 18 m ; creusement 9 m. Il se déplace sur la glace et voit à travers la neige.
+
+resource: Sorts de niveau 1 | 7/jour partagés | notamment alarme, armure de mage, bouclier et coup au but
+resource: Sorts de niveau 2 | 7/jour partagés | notamment résistance aux énergies destructives, image miroir et poussière scintillante, Volonté DD 16
+resource: Sorts de niveau 3 | 7/jour partagés | notamment rapidité, déplacement, protection contre les énergies destructives et rayon d'épuisement, Vigueur DD 17
+resource: Sorts de niveau 4 | 7/jour partagés | notamment porte dimensionnelle, invisibilité suprême et bouclier de feu
+resource: Sorts de niveau 5 | 6/jour partagés | mur de force, immobilisation de monstre, Volonté DD 19, et brume mentale, Volonté DD 19
+resource: Sorts de niveau 6 | 4/jour partagés | champ d'antimagie et éclair multiple, Réflexes DD 20
+resource: Pouvoirs magiques | à volonté | contrôle du climat, nappe de brouillard, bourrasque, Vigueur DD 16, et mur de glace ; NLS 25
+
+step: Chaque jour, au repaire
+  do: Lancer alarme sur les entrées de sa caverne
+
+step: Une attaque est annoncée et il dispose de quelques rounds
+  do: Lancer successivement résistance aux énergies destructives contre le feu, armure de mage, image miroir et bouclier
+  note: chaque sort demande son propre round ; au NLS 13, la résistance au feu absorbe 30 points par attaque, mais ne supprime pas sa vulnérabilité au feu
+
+## Ouverture
+
+step: Il dispose d'espace pour voler
+  do: Prendre l'air et engager le combat depuis une position permettant de poursuivre son déplacement après une attaque en vol
+  note: appliquer la présence terrifiante aux ennemis concernés à 108 m, Volonté DD 26 ; sa manœuvrabilité déplorable impose de prévoir ses trajectoires
+
+step: Les ennemis restent groupés
+  do: Les séparer par un mur de force ou un mur de glace ; employer une nappe de brouillard pour masquer une approche ou couper les lignes de vue
+  note: choisir un seul de ces pouvoirs pour cette action ; sa vision dans la neige ne lui permet pas de voir à travers le brouillard
+
+step: Une cible de taille M ou inférieure est isolée et accessible
+  do: Effectuer une attaque en vol avec la morsure ou une griffe et tenter de la saisir grâce au don Capture
+  note: sur une attaque réussie, Capture permet d'engager une lutte sans attaque d'opportunité ; BMO +42 contre la DMD de la cible. Emporter la victime seulement si les règles de lutte et de déplacement le permettent
+
+## Rounds suivants
+
+step: Plusieurs ennemis peuvent être pris dans son souffle et celui-ci est disponible
+  do: Employer le souffle, puis reprendre les attaques physiques pendant son indisponibilité
+  note: le bloc fourni mentionne le souffle mais ne donne ni ses dégâts, ni sa portée, ni son DD, ni son délai de recharge
+
+step: Une victime saisie reste à sa merci
+  do: Maintenir la lutte et concentrer ses attaques sur elle, à l'écart de ses compagnons
+  note: ne pas annoncer simultanément une attaque à outrance et une action pour maintenir ou déplacer une prise
+
+step: Il est au sol et ses ennemis restent à portée
+  do: Effectuer une attaque à outrance : morsure, deux griffes, queue et deux ailes, avec les valeurs du profil
+  note: exploiter son allonge et son aura de froid ; préférer le souffle quand il est disponible et peut atteindre plusieurs adversaires
+
+step: Une cible dangereuse échappe à ses attaques physiques
+  do: Tenter immobilisation de monstre, Volonté DD 19, ou employer éclair multiple contre plusieurs cibles, Réflexes DD 20
+  note: choisir selon les défenses observées ; ces sorts consomment les réserves communes de leurs niveaux respectifs
+
+step: Il doit traverser une zone exposée pour reprendre l'avantage
+  do: Lancer invisibilité suprême ou déplacement, puis reprendre ses attaques lors des rounds suivants
+
+step: La magie adverse domine le combat et il peut imposer le corps à corps
+  do: Lancer champ d'antimagie, puis combattre physiquement aux rounds suivants
+  note: le champ neutralise également ses propres sorts, pouvoirs magiques et pouvoirs surnaturels, dont le souffle et l'aura de froid ; il renonce donc à ses protections magiques et à ses murs actifs dans la zone
+
+## Repli
+
+step: Les adversaires sont particulièrement puissants
+  do: Appeler Thragandor à participer à sa défense
+  note: aucun pouvoir de communication à longue distance n'est indiqué ; l'appel doit pouvoir être entendu ou transmis
+
+step: Hors de son repaire, ses points de vie passent sous 181
+  do: Appeler les harpies ou les centaures alliés les plus proches, puis profiter de leur intervention pour fuir vers son repaire
+  note: employer son vol à 75 m ou une porte dimensionnelle vers un lieu connu pour se dégager ; après porte dimensionnelle, il ne peut plus agir jusqu'à son prochain tour
+
+step: Il est acculé dans son repaire
+  do: Combattre jusqu'à la mort pour protéger son trésor

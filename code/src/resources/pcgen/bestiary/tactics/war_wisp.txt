@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  War Wisp, feu follet de guerre, aberration de l'air de taille P, neutre mauvaise, FP 8. Intelligent et trompeur, il attire les intrus dans les glyphes et les pièges de la salle, auxquels il est immunisé.
+  60 pv ; CA 27, contact 27, pris au dépourvu 16 ; initiative +14. Vol parfait à 15 m ; allonge de 1,50 m. Décharge électrique au contact +19, ou +19/+14 en attaque à outrance, infligeant chacune 3d8 dégâts d'électricité.
+  Perception +21, vision dans le noir à 18 m et Discrétion +28 : il repère les intrus et choisit son angle d'approche avant de se montrer.
+
+note: Immunité à la magie
+  Il est immunisé aux sorts et pouvoirs magiques autorisant la résistance à la magie, sauf projectile magique et dédale. Sa CA élevée le protège aussi des attaques de contact.
+
+resource: Invisibilité naturelle | à volonté | Éteindre sa lueur demande une action de mouvement ; il devient invisible comme avec le sort invisibilité. Attaquer met fin à cette invisibilité.
+resource: Se nourrir de la peur | permanent sous condition | À 4,50 m ou moins d'une créature mourante ou soumise à un effet de peur, il bénéficie de guérison accélérée 5, sans dépasser 60 pv.
+
+step: Des intrus approchent
+  do: Attendre invisible près d'un passage piégé, puis laisser voir sa lueur au-delà du danger pour inciter les intrus à avancer
+  note: Il parle le commun et l'aklo ; Bluff +13 lui permet d'appuyer son leurre par des paroles trompeuses. Il compte sur une poursuite volontaire pour faire déclencher les pièges.
+
+## Ouverture
+
+step: Un intrus suit sa lueur
+  do: Reculer en volant au-delà des glyphes et des pièges, en restant assez proche pour entretenir la poursuite
+  note: Son immunité lui permet de traverser les zones dangereuses de cette salle. Utiliser les effets et les DD propres aux pièges du scénario.
+
+step: Un intrus s'isole ou refuse de suivre le leurre
+  do: Approcher à 1,50 m et porter une décharge +19 au contact, pour 3d8 dégâts d'électricité
+  note: Privilégier une cible isolée ou déjà blessée. S'il attaque depuis l'invisibilité, il redevient visible après cette attaque.
+
+## Rounds suivants
+
+step: Il peut frapper puis attirer une poursuite vers les pièges
+  do: Utiliser Attaque en vol : approcher, porter une décharge +19 au contact, puis terminer son déplacement derrière une zone piégée ; déplacement total maximal de 15 m
+  note: Ce don permet une seule attaque pendant le déplacement et ne supprime pas les attaques d'opportunité. Choisir une trajectoire qui limite les ennemis capables de le frapper.
+
+step: Une cible reste à 1,50 m et il peut rester sur place sans s'exposer dangereusement
+  do: Effectuer une attaque à outrance : deux décharges de contact, +19 puis +14, infligeant chacune 3d8 dégâts d'électricité
+  note: Cette option consomme son action complexe ; il ne la combine pas avec Attaque en vol ni avec l'activation de son invisibilité.
+
+step: Il est blessé et une créature mourante ou affectée par la peur est proche
+  do: Rester à 4,50 m ou moins de cette créature pour récupérer 5 pv par round, en utilisant le vol et les pièges pour tenir ses alliés à distance
+  note: Se nourrir de la peur ne provoque pas lui-même la peur ; il exploite un état déjà présent.
+
+step: Les adversaires se regroupent ou préparent des attaques contre son passage
+  do: Consacrer une action de mouvement à devenir invisible, puis une seconde à changer de position en volant jusqu'à 15 m
+  note: Reprendre ensuite le leurre depuis un autre côté de la salle, ou attendre qu'une cible se sépare du groupe.
+
+## Repli
+
+step: Les adversaires le mettent en danger au contact
+  do: Devenir invisible avec une action de mouvement, puis voler jusqu'à 15 m vers une zone piégée qui décourage la poursuite
+  note: Cette manœuvre demande de renoncer à attaquer pendant ce tour. S'il reste repéré, son déplacement peut encore provoquer des attaques d'opportunité.
+
+step: Une créature mourante ou effrayée reste accessible après son repli
+  do: Se maintenir invisible à 4,50 m ou moins d'elle pour récupérer des pv avant de reprendre ses attaques et ses leurres

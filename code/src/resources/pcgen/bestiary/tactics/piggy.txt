@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Piggy est un sanglier compagnon animal de taille M, dressé pour attaquer et éructer du feu grâce à ses courges.
+  38 PV, CA 20 ; déplacement 12 m ; allonge 1,50 m. Coup de défenses +7 (1d8+6).
+  Vision nocturne, odorat et Perception +6 pour repérer les intrus.
+
+resource: Courges de rot enflammé | 3 | une consommée avant le combat, puis une nouvelle pour chaque nouveau souffle
+
+step: Des ennuis approchent, notamment des gobelins
+  do: Avaler une courge de rot enflammé avant leur arrivée au contact.
+
+## Ouverture
+
+step: Les gobelins approchent et la première courge a été avalée
+  do: Se précipiter à leur rencontre et éructer du feu sur eux.
+  note: Après ce souffle, attendre 1d4 rounds avant d'avaler une nouvelle courge et de recommencer.
+
+## Rounds suivants
+
+step: Le délai de 1d4 rounds est écoulé et il reste une courge
+  do: Avaler une nouvelle courge et éructer de nouveau du feu sur les gobelins.
+  note: Décompter la courge consommée et déterminer un nouveau délai de 1d4 rounds après le souffle.
+
+step: Entre deux souffles
+  do: Choisir un gobelin au hasard et l'attaquer avec les défenses +7 (1d8+6), en se rapprochant à 1,50 m si nécessaire.
+
+step: Les trois courges ont été consommées
+  do: Continuer à attaquer les gobelins au hasard avec les défenses +7 (1d8+6).
+
+## Repli
+
+step: 0 PV ou moins
+  do: Tenter de fuir vers la ferme Munchmeat, s'il est encore capable de se déplacer.

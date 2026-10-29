@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Nochlean, fée solitaire de taille M, chaotique mauvaise, FP 3 : un ravisseur rusé qui choisit les proies isolées et combat lorsqu'il se croit avantagé.
+  27 pv, CA 15, initiative +8 ; deux griffes +6 (2d6 chacune et étreinte), allonge 1,50 m ; BMO de lutte +10, DMD 16.
+  Déplacement 9 m ; Discrétion +12, Perception +13 ; vision dans le noir à 18 m et vision nocturne. RD 5/fer froid ; dégâts sonores augmentés de moitié.
+
+resource: Sommeil | 3/jour | Volonté DD 13 ; portée 45 m, rayon 3 m, 4 DV de créatures au total, durée 5 minutes
+resource: Pattes d'araignée | 3/jour | sur lui-même uniquement ; durée 50 minutes, escalade à 6 m
+resource: Ventriloquie | 3/jour | Volonté DD 13 pour reconnaître l'illusion en interagissant ; portée 10,50 m, durée 5 minutes
+resource: Porte dimensionnelle | 1/jour | téléportation jusqu'à 180 m ; réserver cette utilisation à la fuite
+resource: Main du mage | à volonté | déplacer de petits objets non magiques pour distraire une cible
+resource: Ouverture/fermeture | à volonté | ouvrir ou fermer une porte ou une fenêtre légère, libre de tout blocage
+
+step: Il repère des victimes potentielles
+  do: Observer à couvert, repérer les passages et une cachette de repli ; approcher avec Discrétion +12
+  note: Son odorat ne détecte que les enfants humanoïdes et les animaux immatures. Il ne permet pas de repérer leurs protecteurs adultes.
+
+step: Un arbre, un mur ou un plafond facilite l'approche
+  do: Activer pattes d'araignée avant de se montrer, puis gagner une position dissimulée
+
+## Ouverture
+
+step: Plusieurs adversaires restent groupés et surveillent les lieux
+  do: Depuis sa cachette, employer ventriloquie pour attirer un curieux à l'écart avec une voix trompeuse
+  note: Bluff +10 soutient la ruse ; la voix illusoire ne contraint personne à la suivre.
+
+step: Des adversaires de faible puissance peuvent être endormis
+  do: Employer sommeil avant le contact, puis approcher la proie isolée
+  note: Volonté DD 13 ; les plus faibles DV sont affectés d'abord, dans la limite de 4 DV au total. Une créature de plus de 4 DV échappe entièrement à ce pouvoir.
+
+step: Une proie isolée est accessible au corps à corps
+  do: Avancer et porter une griffe +6 (2d6), puis tenter gratuitement l'étreinte à +10 si elle touche
+  note: L'étreinte fonctionne sur une cible de taille M ou inférieure et ne provoque pas d'attaque d'opportunité.
+
+## Rounds suivants
+
+step: La proie reste au contact et aucune lutte n'est engagée
+  do: Attaquer à outrance avec les deux griffes +6 (2d6 chacune), en recherchant l'étreinte
+  note: Rester près d'un couvert et concentrer les attaques sur la même cible.
+
+step: Une proie est agrippée et ses alliés restent éloignés
+  do: Consacrer l'action simple à maintenir la lutte ; infliger les dégâts de griffe ou déplacer la proie vers une cachette
+  note: BMO +10 ; bonus de +5 pour maintenir une prise si la cible ne s'est pas libérée. Un déplacement en lutte est limité à 4,50 m.
+
+step: Les protecteurs arrivent au contact ou menacent de l'encercler
+  do: Relâcher la prise et se dégager ; utiliser les hauteurs si pattes d'araignée est déjà actif
+  note: Sa RD 5/fer froid amortit les armes ordinaires, mais ses 27 pv ne permettent pas un échange prolongé contre tout un groupe.
+
+## Repli
+
+note: Sensibilité à la musique
+  À 6 m, une créature peut employer Représentation pour l'affecter : Volonté +5 contre un DD égal au résultat du test.
+  Clavier : fiévreux ; percussions : secoué ; chant : rage comme le sort ; cordes : chancelant ; vents : confus. L'effet dure tant que la musique persiste ; seul celui du meilleur test s'applique si plusieurs réussissent.
+
+step: De la musique retentit
+  do: Fuir dès que l'état subi lui permet de choisir ses actions ; employer porte dimensionnelle si le passage est bloqué
+  note: Appliquer les effets de la musique avant de décider de son action, particulièrement la confusion ou la rage.
+
+step: Points de vie sous 10, encerclement ou attaques au fer froid ou sonores
+  do: Utiliser porte dimensionnelle vers un emplacement libre connu, jusqu'à 180 m ; abandonner la proie si nécessaire
+  note: Aucune autre action n'est possible après la téléportation jusqu'à son prochain tour. Une victime consciente qui refuse le transport ne peut pas être emportée par ce pouvoir.
+
+step: Porte dimensionnelle est déjà dépensée
+  do: Se désengager vers les fourrés ou les hauteurs accessibles avec pattes d'araignée, puis se cacher une fois hors de vue

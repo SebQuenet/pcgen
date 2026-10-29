@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Karg, troll des roches géant de taille TG, chaotique mauvais : une brute peu intelligente qui écrase ses adversaires au corps à corps.
+  94 pv, CA 20 ; morsure +12 (2d6+9), 2 griffes +13 (1d8+9). Allonge de 4,50 m, espace occupé de 4,50 m de côté ; déplacement de 9 m.
+  Vision nocturne, Perception +6 ; Vigueur +14, Réflexes +2, Volonté +3.
+
+resource: Régénération 5 | permanente | récupère 5 pv par round, jusqu'à 94 pv ; les dégâts d'acide ou sonores interrompent la régénération au round suivant
+
+step: Il peut choisir sa position
+  do: Rester à l'abri de la lumière du soleil et attendre les intrus dans un endroit où son allonge gêne leur progression.
+  note: La lumière solaire peut le pétrifier ; ne pas poursuivre un ennemi au soleil.
+
+## Ouverture
+
+step: Un ennemi est déjà à 4,50 m ou moins
+  do: Attaque à outrance : 2 griffes +13 (1d8+9 chacune) et morsure +12 (2d6+9), concentrées sur la même cible.
+
+step: Un ennemi peut être atteint après un déplacement de 9 m au plus
+  do: Avancer pour le placer dans son allonge, puis porter une seule griffe +13 (1d8+9).
+  note: Garder si possible la cible à 4,50 m pour l'obliger à traverser sa zone menacée avant de venir au contact.
+
+step: Aucun ennemi ne peut être atteint ce round
+  do: Se rapprocher à couvert du soleil ; effectuer un double déplacement de 18 m au plus si nécessaire.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Répéter l'attaque à outrance et achever la cible blessée avant d'en choisir une autre.
+  note: Limiter les déplacements pour conserver ses trois attaques.
+
+step: Il touche facilement sa cible
+  do: Activer Attaque en puissance avant les attaques : 2 griffes +11 (1d8+13 chacune), morsure +10 (2d6+13).
+  note: Le malus de -2 aux attaques dure jusqu'à son prochain tour ; abandonner ce choix au tour suivant si les coups manquent trop souvent.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter une griffe ; une seule attaque d'opportunité par round.
+
+step: Un adversaire lui inflige des dégâts d'acide ou sonores
+  do: L'attaquer en priorité s'il est accessible, sans abandonner une attaque à outrance utile pour une poursuite incertaine.
+
+## Repli
+
+step: Il est gravement blessé et l'acide ou les dégâts sonores empêchent sa récupération
+  do: Rompre le combat vers un abri hors des lignes de tir, toujours à l'abri du soleil.
+
+step: Il a échappé aux attaques
+  do: Rester à couvert et laisser sa régénération restaurer ses pv dès qu'elle fonctionne de nouveau.

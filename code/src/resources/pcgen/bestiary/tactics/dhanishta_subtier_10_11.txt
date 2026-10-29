@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Dhanishta est une naga spirituelle de taille G, chaotique neutre, qui combat surtout par ses sorts de feu après s'être protégée. Elle possède 114 points de vie et une CA de 24 avant ses sorts préparatoires.
+  Morsure +12 (2d6+6 et poison) ; déplacement de 12 m, nage de 6 m ; espace occupé de 3 m et allonge de 1,50 m ; vision dans le noir à 18 m.
+
+resource: Sorts de niveau 4 | 4/jour | réserve commune à liberté de mouvement et mur de feu
+resource: Sorts de niveau 3 | 7/jour | réserve commune à déplacement, rapidité et boule de feu ; boule de feu DD 17
+resource: Sorts de niveau 2 | 7/jour | réserve commune à grâce féline, invisibilité, rayon ardent et nuée grouillante
+resource: Sorts de niveau 1 | 7/jour | réserve commune à charme-personne, soins légers, faveur divine, projectile magique et bouclier de la foi ; charme-personne DD 14
+
+step: En route vers la place de Nibung, si elle peut se préparer
+  do: Lancer liberté de mouvement, grâce féline et bouclier de la foi sur elle-même
+  note: Ces sorts ne sont pas inclus dans ses statistiques fournies. Dépenser un emplacement de niveau 4, un de niveau 2 et un de niveau 1.
+
+## Ouverture
+
+step: Premier round
+  do: Lancer invisibilité sur elle-même et se déplacer pour éviter le contact
+
+step: Deuxième round
+  do: Lancer déplacement sur elle-même
+  note: Elle reste invisible tant qu'elle n'attaque pas.
+
+step: Troisième round
+  do: Lancer rapidité sur elle-même et profiter de sa mobilité pour choisir sa position
+
+step: Quatrième round
+  do: Lancer mur de feu pour séparer les PJ et gêner leur regroupement
+  note: Cette attaque la rend visible ; placer le côté brûlant vers les adversaires.
+
+## Rounds suivants
+
+step: Plusieurs PJ peuvent être pris dans la même explosion
+  do: Lancer boule de feu sur eux (DD 17), en évitant de se prendre dans la zone
+
+step: Une cible est isolée ou une boule de feu serait mal placée
+  do: Lancer rayon ardent sur cette cible
+  note: Alterner les sorts de feu selon la position des PJ, en conservant ses distances et en utilisant le mur pour les séparer.
+
+step: Un adversaire arrive au contact
+  do: Se dégager si possible pour continuer ses sorts ; sinon, mordre à +12 (2d6+6 et poison)
+  note: Ses valeurs d'attaque fournies précèdent les effets de ses sorts. Incantation de combat l'aide si elle doit lancer un sort sur la défensive.
+
+step: Il reste des emplacements de niveau 2
+  do: En conserver un pour une invisibilité de fuite
+
+## Repli
+
+step: Points de vie strictement inférieurs à 30
+  do: Lancer invisibilité sur elle-même, puis fuir Nibung
+  note: Cesser les attaques pour conserver l'invisibilité et employer son déplacement pour s'éloigner ; si elle ne peut plus lancer invisibilité, fuir dès que possible.

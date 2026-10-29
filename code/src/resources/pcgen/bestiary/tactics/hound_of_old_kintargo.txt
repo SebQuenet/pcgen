@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Molosse de guerre nessien de taille G, loyal mauvais, FP 12 : 173 pv, CA 26, déplacement de 12 m, espace occupé de 3 m et allonge de 1,50 m.
+  Morsure +22, critique sur 19–20 : 9d6+12 dégâts plus 2d6 de feu avec Frappe décisive supérieure. Ces dégâts incluent déjà le don ; une morsure ordinaire inflige 3d6+12 plus 2d6 de feu.
+  Immunisé au feu, vulnérable au froid ; il combat jusqu'à la mort.
+
+resource: Marche dans les airs | permanent | permet de se déplacer dans les airs comme sur un sol solide
+resource: Détection de l'invisibilité | permanent | voit les créatures invisibles
+resource: Porte dimensionnelle | à volonté | NLS 12 ; aucun autre acte après la téléportation avant son prochain tour
+
+note: Aura de faim
+  Rayon de 9 m. Le profil fourni ne précise ni ses effets ni son DD.
+
+step: Des intrus approchent
+  do: Surveiller les accès avec Perception +16, la vision dans le noir à 18 m et l'odorat
+  note: la détection de l'invisibilité permanente aide à choisir une cible même si elle est invisible
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m ou peut être rejoint avec un déplacement de 12 m
+  do: Si nécessaire, s'approcher, puis porter une morsure avec Frappe décisive supérieure : +22, 9d6+12 plus 2d6 de feu
+  note: c'est une seule attaque ; ne pas multiplier à nouveau les dés indiqués dans le profil
+
+step: Un passage étroit impose de se faufiler, et une position assez vaste est accessible au-delà
+  do: Utiliser porte dimensionnelle pour se placer dans cet espace, près d'un adversaire
+  note: privilégier ce pouvoir dans les couloirs exigus, notamment sous les Lucky Bones ; la morsure attend le prochain tour
+
+step: Un obstacle ou une différence de hauteur empêche d'approcher par le sol
+  do: Utiliser marche dans les airs pour rejoindre une position permettant de mordre à 1,50 m
+  note: s'il faut plutôt une téléportation pour atteindre cette position, utiliser porte dimensionnelle et attendre le prochain tour pour attaquer
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter la morsure avec Frappe décisive supérieure : +22, 9d6+12 plus 2d6 de feu
+  note: concentrer les morsures sur la même cible tant qu'elle représente une menace accessible
+
+step: La cible s'éloigne mais reste accessible avec un déplacement de 12 m
+  do: La suivre, puis utiliser Frappe décisive supérieure
+  note: ce don accompagne une attaque simple après un déplacement ; il ne s'ajoute pas à une charge
+
+step: Une cible devient inaccessible ou un couloir bloque la poursuite
+  do: Se replacer avec porte dimensionnelle vers un espace où sa taille permet de combattre
+  note: aucune attaque pendant le reste de ce tour ; reprendre les morsures au suivant
+
+step: Une attaque d'opportunité est déclenchée à portée
+  do: Porter une morsure ordinaire à +22, pour 3d6+12 plus 2d6 de feu
+  note: Frappe décisive supérieure ne s'applique pas aux attaques d'opportunité
+
+step: Un adversaire lui inflige des dégâts de froid
+  do: Chercher à l'atteindre et à le mordre s'il est accessible
+  note: sa vulnérabilité au froid rend cette menace prioritaire ; son immunité au feu lui permet en revanche d'ignorer les dégâts de feu
+
+## Repli
+
+step: Les points de vie deviennent faibles
+  do: Continuer à combattre jusqu'à la mort
+  note: porte dimensionnelle sert à reprendre une position d'attaque, sans seuil de pv déclenchant une fuite

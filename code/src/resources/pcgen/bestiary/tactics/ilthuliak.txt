@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Ilthuliak, dracosire noir femelle de taille TG, chaotique mauvaise, FP 17 : 324 PV, CA 48 avec ses protections, réduction des dégâts 20/magie, résistance à la magie 28 et immunité à l'acide.
+  Morsure +34 (2d8+18), 2 griffes +34 (2d6+12), 2 ailes +32 (1d8+6), coup de queue +32 (2d6+18). Allonge de 3 m, ou 4,50 m avec la morsure.
+  Elle ouvre au souffle, harcèle depuis les airs avec ses sorts, puis atterrit pour se déchaîner au corps à corps. Déplacement terrestre et nage à 18 m ; vol à 60 m, manœuvrabilité médiocre.
+
+resource: Sorts de niveau 1 | 7/jour | 2 emplacements consacrés aux protections avant le combat ; 5 restants
+resource: Sorts de niveau 2 | 7/jour | 1 emplacement consacré à l'invisibilité avant le combat ; 6 restants
+resource: Sorts de niveau 3 | 7/jour | notamment rapidité et dissipation de la magie
+resource: Sorts de niveau 4 | 7/jour | notamment rapetissement de groupe, DD 18
+resource: Sorts de niveau 5 | 6/jour | notamment mur de force
+resource: Sorts de niveau 6 | 4/jour | brouillard acide et pétrification, DD 20 ; réserve commune
+resource: Souffle | réutilisable après recharge | dégâts, portée, DD et délai de recharge absents du bloc fourni
+
+step: Elle prépare son attaque
+  do: Lancer sur elle-même armure de mage, puis bouclier, puis invisibilité, dans cet ordre
+  note: la CA 48 donnée inclut déjà armure de mage et bouclier ; ne pas ajouter une seconde fois leurs bonus
+
+step: Elle approche des intrus
+  do: Profiter de l'invisibilité pour choisir une position permettant de prendre plusieurs adversaires dans son souffle
+  note: perception aveugle à 18 m, vision dans le noir à 36 m ; elle respire sous l'eau et peut approcher à la nage si le terrain s'y prête
+
+## Ouverture
+
+step: Les adversaires sont à portée du souffle
+  do: Ouvrir le combat avec le souffle en visant le plus grand nombre de cibles possible
+  note: cette attaque met fin à l'invisibilité ; appliquer la présence terrifiante aux adversaires concernés dans un rayon de 99 m, Volonté DD 31
+
+step: Le souffle vient d'être utilisé
+  do: Gagner les airs et poursuivre le combat en survolant les adversaires au sol
+  note: le vol a une manœuvrabilité médiocre ; prévoir des trajectoires de passage et de retour pour les attaques suivantes
+
+## Rounds suivants
+
+step: Le souffle se recharge et plusieurs ennemis restent groupés au sol
+  do: Consacrer un round à lancer brouillard acide sur leur position pour les ralentir et les exposer à ses effets
+  note: elle est immunisée à l'acide ; le brouillard gêne aussi sa propre vision, choisir les cibles des sorts suivants en conséquence
+
+step: Le souffle se recharge et des humanoïdes constituent des cibles intéressantes
+  do: Lancer rapetissement de groupe depuis les airs, Vigueur DD 18
+  note: ce sort affecte les humanoïdes ; sélectionner les combattants dont la réduction de taille affaiblira les attaques
+
+step: Le souffle se recharge et une cible dangereuse est visible
+  do: Tenter de la neutraliser avec pétrification, Vigueur DD 20
+  note: privilégier une cible paraissant peu résistante plutôt qu'un adversaire manifestement robuste ; chaque lancement consomme la même réserve que brouillard acide
+
+step: Le souffle est de nouveau disponible
+  do: Lancer rapidité sur elle-même, puis, au round suivant, descendre et atterrir au milieu des adversaires avant de souffler à nouveau
+  note: l'atterrissage et le souffle précèdent les rounds de mêlée ; ne pas ajouter d'attaque à outrance à ce même tour
+
+step: Au round suivant l'atterrissage, des adversaires sont à son allonge
+  do: Effectuer l'attaque à outrance : morsure, 2 griffes, 2 ailes et coup de queue ; concentrer les attaques sur une cible dangereuse accessible
+  note: sous rapidité, ajouter +1 aux jets d'attaque et une morsure supplémentaire lors de l'attaque à outrance ; les valeurs du profil sont celles sans rapidité
+
+step: Une protection magique adverse compromet ses attaques
+  do: Consacrer un round à une dissipation de la magie ciblée, ou dresser un mur de force pour séparer les adversaires
+  note: choisir une seule de ces actions selon la menace ; conserver l'accès aux cibles qu'elle veut ensuite attaquer
+
+step: Après plusieurs rounds de mêlée
+  do: Reprendre les airs, lancer de nouveau quelques sorts, puis revenir au souffle et au corps à corps selon sa recharge
+  note: s'envoler depuis la mêlée peut provoquer des attaques d'opportunité
+
+## Repli
+
+step: Ses points de vie diminuent, même jusqu'à une blessure mortelle
+  do: Poursuivre le combat jusqu'à la mort
+  note: ses envols servent à poursuivre l'assaut ; aucun seuil de PV ne déclenche une fuite

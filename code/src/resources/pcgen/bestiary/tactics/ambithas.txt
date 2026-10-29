@@ -1,0 +1,107 @@
+## Avant le combat
+
+note: Profil
+  Ambithas, archon des portails loyal bon, combine la magie de magicien de NLS 17 avec une puissante mêlée. Il sépare les adversaires, neutralise leurs lanceurs de sorts et affronte ensuite les menaces isolées.
+  Épée à deux mains +3 planaire +30/+25/+20/+15 (2d6+18, critique 17–20), deux ailes +22 (1d4+5 chacune) ; allonge 1,50 m. Déplacement terrestre 6 m, vol 27 m par round.
+  263 pv, CA 33, RM 28, RD 10/Mal ; régénération 10, neutralisée par les armes et effets maléfiques. Immunisé à l'électricité, à la peur et à la pétrification.
+
+resource: Sorts préparés de niveaux 1 à 9 | 1 par sort, sauf immobilisation de monstre : 2 | chaque lancement, même avant le combat, dépense la préparation correspondante
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,5 kg d'objets ; aucun passager
+resource: Ancre dimensionnelle, renvoi, malédiction, détection du Mal | à volonté chacun | renvoi DD 18 ; malédiction DD 17
+resource: Contact calcifiant | 3/jour | Vigueur DD 18 contre le ralentissement
+resource: Glyphe de garde | 3/jour | DD 17 ; un glyphe sur ses ailes ne se déclenche que sous forme de statue
+resource: Changement de plan | 3/jour | DD 19 contre une cible non consentante
+resource: Portail | 1/jour | conserver de préférence pour ouvrir un passage entre les plans
+
+step: Il dispose de plusieurs minutes avant l'arrivée des adversaires
+  do: Lancer simulacre de vie et, si une surveillance magique est à craindre, détection de la scrutation
+  note: simulacre de vie ajoute 1d10+10 pv temporaires pendant 17 heures ; ne pas les confondre avec ses 263 pv
+
+step: Il garde un passage et peut préparer une embuscade
+  do: Inscrire sur ses ailes un glyphe de garde explosif électrique, puis attendre sous forme de statue
+  note: prévoir 10 minutes pour le glyphe ; explosion de 5d8, Réflexes DD 17 pour moitié. Ses propres défenses l'immunisent à l'électricité ; choisir un déclencheur qui épargne les innocents
+
+step: L'affrontement devient imminent et il dispose de quelques rounds
+  do: Lancer successivement vision magique suprême, renvoi des sorts, bouclier et image miroir, selon le temps disponible
+  note: ces sorts durent assez longtemps pour être lancés avant l'engagement ; bouclier ajoute +4 à la CA, image miroir crée 1d4+5 doubles, au maximum 8
+
+note: Observation
+  Vision lucide et antidétection sont constantes. Utiliser Perception +26, Psychologie +26 et vision magique suprême pour repérer les menaces réelles et leurs protections ; une illusion visuelle ne doit pas lui faire gaspiller ses meilleures ressources.
+
+## Ouverture
+
+step: Les intrus peuvent encore être arrêtés sans violence
+  do: Les sommer de cesser les hostilités et de déposer leurs armes ; employer son don des langues pour se faire comprendre
+  note: la détection du Mal renseigne sur les auras ; elle ne justifie pas à elle seule une attaque
+
+step: Le combat commence et ses défenses ou son placement sont insuffisants
+  do: Lancer arrêt du temps ; consacrer ses 1d4+1 rounds à ses protections manquantes et à son placement, puis à un mur de force ou un mur prismatique séparant les ennemis
+  note: une action simple par round apparent. Ne pas attaquer ni cibler les autres créatures pendant l'arrêt ; placer les murs dans des espaces libres. Les effets de zone persistants ne les affectent qu'à la reprise du temps
+
+step: Le groupe ennemi peut être divisé et arrêt du temps n'est pas utilisé
+  do: Lancer mur de force pour isoler le combattant le plus dangereux, ou mur prismatique pour condamner un passage
+  note: mur prismatique DD 23 ; laisser Ambithas du côté de la cible qu'il veut affronter et préserver une issue pour les innocents
+
+step: Un lanceur de sorts arcanes est exposé
+  do: Lancer débilité sur lui, Volonté DD 20
+  note: les créatures capables de lancer des sorts profanes subissent un malus de –4 à ce jet de sauvegarde
+
+step: Des ennemis hostiles arrivent à 9 m ou moins
+  do: Appliquer l'aura de menace, Volonté DD 22
+  note: en cas d'échec, –2 aux attaques, à la CA et aux sauvegardes pendant 10 rounds, ou jusqu'à ce que la victime touche Ambithas. Une créature qui résiste ou brise l'effet y échappe ensuite pendant 24 heures
+
+## Rounds suivants
+
+step: Une protection magique empêche de neutraliser la cible prioritaire
+  do: Employer dissipation suprême ciblée, puis dissipation de la magie si nécessaire lors d'un round ultérieur
+  note: tests de dissipation à +17 pour la première, +10 pour la seconde ; ne pas gaspiller ses sorts offensifs sur une immunité identifiée
+
+step: Un adversaire extraplanaire peut être expulsé
+  do: Employer renvoi, Volonté DD 18
+  note: ne pas lui imposer préalablement ancre dimensionnelle : celle-ci empêcherait aussi son renvoi
+
+step: Un adversaire doit rester sur place plutôt qu'être renvoyé
+  do: Employer ancre dimensionnelle par une attaque de contact à distance, puis le contenir avec les murs encore disponibles
+  note: l'ancre empêche les déplacements extradimensionnels ; elle n'immobilise pas physiquement la cible
+
+step: Une cible vivante et dangereuse reste accessible à ses enchantements
+  do: Lancer immobilisation de monstre, Volonté DD 20 ; utiliser la seconde préparation sur une autre menace ou après un premier échec
+  note: la victime peut tenter une nouvelle sauvegarde à chaque tour pour mettre fin à la paralysie. Contre des mortels qui se rendent, préférer la capture à l'exécution
+
+step: Plusieurs ennemis restent exposés et les barrières ne coupent pas la ligne d'effet
+  do: Lancer chaîne d'éclairs, Réflexes DD 21 pour moitié
+  note: 17d6 sur la cible principale ; les cibles secondaires subissent la moitié des dégâts de base. Choisir les cibles pour épargner les alliés et les innocents
+
+step: Une seule menace est à portée et il peut rester sur place
+  do: Attaque à outrance : quatre coups d'épée +30/+25/+20/+15 et deux attaques d'ailes +22
+  note: conserver les dégâts du profil ; ne pas ajouter cette attaque à outrance à un lancement de sort ou à un déplacement dépassant un pas de 1,50 m
+
+step: Plusieurs adversaires l'entourent à portée de son épée
+  do: Employer Attaque en rotation : une attaque d'épée +30 contre chaque adversaire à portée
+  note: cette action remplace toutes ses attaques du round, y compris les ailes. Lunge peut porter son allonge à 3 m pendant son tour, au prix de –2 à la CA jusqu'au tour suivant
+
+step: Le contact prolongé est trop dangereux
+  do: Reprendre de la distance en volant et combattre par magie ; si les ennemis veulent se rapprocher, lancer répulsion, Volonté DD 21
+  note: pour harceler au sol, Attaque éclair permet un déplacement, un seul coup et la suite du déplacement ; elle ne donne pas une attaque à outrance
+
+step: Un adversaire à faible Dextérité doit être neutralisé au contact
+  do: Activer contact calcifiant et porter au plus un toucher calcifiant par round pendant ses 17 rounds de durée
+  note: chaque toucher réussi inflige 1d4 dégâts de Dextérité ; Vigueur DD 18 annule seulement le ralentissement d'un round. À 0 Dextérité, la cible est pétrifiée ; réserver ce moyen aux menaces qui exigent cette neutralisation
+
+## Repli
+
+step: Ses pv tombent sous 65, ou des attaques maléfiques empêchent sa régénération de le maintenir en état
+  do: Employer téléportation suprême vers un refuge connu ; si elle est déjà disponible, une barrière peut couvrir un repli commencé plus tôt
+  note: la téléportation prend une action simple ; il ne lance pas aussi un mur ce round. Il ne peut emporter aucun allié avec ce pouvoir
+
+step: Un effet bloque les voyages extradimensionnels
+  do: Se dégager par le vol, à 27 m par round, et chercher un couvert ; tenter une dissipation adaptée sur l'effet qui le retient
+  note: changement de plan et portail ne contournent pas une interdiction qui bloque également ces modes de voyage
+
+step: Il faut évacuer des alliés vers un autre plan et les voyages planaires sont possibles
+  do: Employer portail, ou changement de plan avec des compagnons consentants réunis au contact
+  note: changement de plan n'assure pas une arrivée précise ; portail permet aux autres de franchir eux-mêmes le passage
+
+step: Il a atteint un refuge et sa régénération fonctionne de nouveau
+  do: Récupérer 10 pv par round et réévaluer la défense du passage avant de revenir
+  note: le repli ne restitue ni les sorts préparés dépensés ni les utilisations quotidiennes de ses pouvoirs

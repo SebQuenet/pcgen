@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Wrong One, myceloïde mutant, aberration de taille M, neutre mauvaise. Il accable les intrus de remords puis les déchire de ses longs bras.
+  52 PV, CA 18 ; déplacement de 9 m ; allonge de 3 m ; deux griffes +8, chacune infligeant 1d6+5 dégâts et un saignement de 1d4.
+
+note: Défenses
+  Guérison accélérée 2 : récupérer 2 PV au début de son tour, sans dépasser 52 PV.
+  Réduction des dégâts 5/tranchant ; résistance au froid 10, au feu 10 et au son 10 ; immunité à la vérole pourpre.
+
+note: Repérage
+  Perception +6, vision dans le noir à 18 m, vision nocturne, odorat et perception des vibrations à 6 m pour les créatures en contact avec le même sol.
+  Télépathie à 18 m, limitée aux myceloïdes et aux créatures atteintes de vérole pourpre.
+
+resource: Aspect du remords | 3/jour | pouvoir magique, action simple, NLS 6, portée 12 m, une créature vivante visible, Volonté DD 14 partiel, résistance à la magie applicable
+
+## Ouverture
+
+step: Un intrus est visible à 12 m ou moins, sans adversaire à portée de griffes
+  do: Utiliser aspect du remords, de préférence sur une victime déjà atteinte de vérole pourpre.
+  note: Sa peau imite grossièrement la cible ; le pouvoir fonctionne comme le sort terrible remorse. Une victime atteinte de vérole pourpre subit un malus de -2 à ses sauvegardes contre ce pouvoir ; le DD reste 14.
+  note: Pendant 6 rounds au maximum, la cible fait chaque round un jet de Volonté : sur un échec, elle s'inflige 1d8 dégâts plus son propre modificateur de Force. Une réussite la rend chancelante et lui impose -2 à la CA pendant 1 round, puis le sort prend fin.
+
+step: Un adversaire est à 3 m ou moins
+  do: Attaquer avec les griffes ; effectuer une attaque à outrance de deux griffes +8 s'il peut rester sur place ou se contenter d'un pas de 1,50 m.
+  note: Après un déplacement ordinaire, une seule attaque de griffe +8 ; chaque touche inflige 1d6+5 dégâts et le saignement.
+
+## Rounds suivants
+
+step: Un adversaire reste dans son allonge de 3 m
+  do: Poursuivre les attaques à outrance de deux griffes, en profitant du malus de CA d'une cible qui vient de résister à l'aspect du remords.
+  note: Les saignements de ses griffes ne se cumulent pas : appliquer 1d4 dégâts par round au début du tour de la victime jusqu'à leur arrêt.
+
+step: Aucun adversaire n'est à portée de griffes et il reste une utilisation du pouvoir
+  do: Utiliser aspect du remords sur un intrus visible à 12 m ou moins qui n'en subit pas déjà les effets ; privilégier encore les malades de la vérole pourpre.
+
+step: Aucune cible ne peut subir le pouvoir, ou ses trois utilisations sont épuisées
+  do: Avancer jusqu'à 9 m pour placer un adversaire dans son allonge de 3 m ; porter une griffe si une action simple reste disponible.
+
+## Repli
+
+step: Ses points de vie diminuent, même dangereusement
+  do: Continuer à combattre jusqu'à la mort.
+  note: Sa guérison accélérée soutient le combat ; aucun seuil de PV ne déclenche une fuite.
+
+step: Mam ou Pap lui ordonne de cesser le combat
+  do: Arrêter immédiatement de combattre.

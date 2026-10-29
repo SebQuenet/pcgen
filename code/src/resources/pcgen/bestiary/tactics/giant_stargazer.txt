@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Giant Stargazer, poisson prédateur aquatique de taille M, qui chasse à l'affût. 37 PV, CA 17 ; nage à 9 m par round.
+  Morsure +8 : 1d6+3 dégâts, plus 1d6 d'électricité et prise. Allonge de 1,50 m, portée à 3 m avec gulp.
+  Épines venimeuses défensives ; résistance à l'électricité 10 ; vision nocturne. Discrétion +9, ou +19 lorsqu'il est enfoui.
+
+step: Un fond meuble permet de se cacher
+  do: S'enfouir sur place et attendre qu'une proie passe à portée
+  note: utiliser Discrétion +19 lorsqu'il est enfoui ; il ne dispose pas d'une vitesse de creusement
+
+step: Une proie approche
+  do: Rester immobile et la surveiller avec Perception +5
+  note: privilégier une proie isolée, accessible dans l'eau
+
+## Ouverture
+
+step: Une proie entre à 3 m ou moins
+  do: Mordre avec gulp, puis tenter la prise si la morsure touche
+  note: la morsure inflige aussi 1d6 dégâts d'électricité ; profiter de la surprise si la proie ne l'a pas repéré
+
+step: Il est découvert avant que la proie soit à portée
+  do: Nager jusqu'à portée et porter une morsure si une attaque reste possible
+  note: son initiative de +8 favorise une réaction rapide ; sa seule vitesse indiquée est la nage
+
+## Rounds suivants
+
+step: La proie est toujours agrippée
+  do: Maintenir la lutte et choisir d'infliger les dégâts de morsure en cas de réussite
+  note: concentrer ses efforts sur cette proie ; la prise ne permet pas de maintenir automatiquement la lutte
+
+step: La proie se libère mais reste à portée
+  do: Mordre de nouveau et tenter de rétablir la prise si l'attaque touche
+
+step: La proie fuit dans l'eau et reste accessible
+  do: La poursuivre à la nage, puis mordre dès qu'une attaque est possible
+  note: utiliser l'allonge de 3 m avec gulp pour atteindre une proie hors de l'allonge normale
+
+step: La proie devient inaccessible hors de l'eau
+  do: Rester immergé et reprendre l'affût près du fond
+
+## Repli
+
+step: Points de vie à 9 ou moins
+  do: Relâcher toute proie et s'éloigner à la nage vers un abri, à 9 m par déplacement
+  note: s'il est au contact, utiliser le retrait pour limiter les attaques d'opportunité pendant la fuite
+
+step: Il atteint un fond meuble hors de vue des poursuivants
+  do: S'enfouir et se dissimuler avec Discrétion +19

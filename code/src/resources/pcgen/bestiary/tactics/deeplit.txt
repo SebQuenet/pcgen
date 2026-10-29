@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Deeplit, mort-vivant souterrain neutre mauvais, de taille M, issu d'un égaré des profondeurs ; il recherche la lumière et rêve de revoir le soleil.
+  Pic de guerre lourd de maître +13 (1d6+10, critique x4) ; pierre lancée +7 (1d4+7). Il privilégie le contact et son aura de lumière blafarde, de 6 m de rayon, DD 16.
+  52 pv ; CA 19, contact 12 ; déplacement de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m.
+
+note: Défenses et faiblesse
+  Immunisé contre la cécité et doté des immunités des morts-vivants. Les illusions de type mirage (pattern) l'affectent malgré son immunité aux effets mentaux ; Volonté +8.
+  Il comprend le nain et le commun des profondeurs, mais ne peut pas parler.
+
+resource: Absorption de lumière | à volonté | action simple ; nécessite des sources lumineuses à 6 m ou moins
+
+step: Des intrus approchent dans une galerie
+  do: Les repérer avec Perception +13 et occuper un passage qui limite les adversaires pouvant l'entourer
+  note: Sa tête éclaire faiblement à 6 m : il ne peut pas compter sur une obscurité totale pour passer inaperçu.
+
+## Ouverture
+
+step: Une source lumineuse est à 6 m ou moins
+  do: Absorber les lumières par une action simple ; effectuer un unique test de Charisme +3 contre chaque source
+  note: DD 10 pour torches et lanternes ordinaires, DD 11 pour une source alchimique, DD 10 + niveau du sort pour une lumière magique ; les sources affectées s'éteignent.
+
+step: Une lumière d'intensité au moins normale vient d'être absorbée et des ennemis sont dans un cône de 4,50 m
+  do: Régurgiter immédiatement la lumière par une action libre : 2d6 dégâts de feu et cécité pendant 1d6 rounds
+  note: Réflexes DD 16 : dégâts réduits de moitié et éblouissement au lieu de cécité. Les deeplits sont immunisés à ce pouvoir ; cette action simple ne laisse pas d'attaque au pic ce tour.
+
+step: Aucune lumière exploitable et un ennemi est accessible après un déplacement de 6 m au plus
+  do: Avancer puis frapper au pic de guerre lourd +13 (1d6+10, x4)
+
+step: Le contact reste inaccessible
+  do: Avancer vers un couvert et lancer une pierre +7 (1d4+7), si une cible est visible
+
+## Rounds suivants
+
+step: Des vivants sont dans l'aura de 6 m
+  do: Appliquer la lumière blafarde : Vigueur DD 16 ou fatigue pendant 1 heure
+  note: Une sauvegarde réussie protège contre l'aura de ce deeplit pendant 24 heures.
+
+step: Une lumière d'intensité au moins normale vient d'être absorbée, sans cible intéressante pour le cône
+  do: Avaler immédiatement la lumière par une action libre
+  note: L'aura émet alors une lumière vive pendant 1d6 rounds ; cela ne rend pas de points de vie.
+
+step: Deux ennemis sont adjacents entre eux et tous deux à 1,50 m ou moins
+  do: Utiliser Enchaînement par une action simple ; attaquer d'abord le plus facile à toucher, puis le second au même bonus si la première attaque touche
+  note: Une seule attaque supplémentaire ; CA réduite à 17 jusqu'au prochain tour.
+
+step: Une cible au contact est facile à toucher
+  do: Employer Attaque en puissance avec le pic tenu à deux mains : +11 (1d6+16, x4)
+  note: Contre une forte CA, conserver plutôt +13 (1d6+10).
+
+step: Briser une arme ou un bouclier affaiblirait nettement l'adversaire
+  do: Remplacer l'attaque par une destruction d'objet, BMO +14 contre la DMD adverse
+  note: Science de la destruction évite l'attaque d'opportunité de la cible ; appliquer la solidité de l'objet aux dégâts.
+
+step: Une seule cible reste au contact
+  do: Concentrer les coups de pic sur elle ; réutiliser l'absorption si une nouvelle lumière permet un cône avantageux
+
+## Repli
+
+step: Moins de 13 pv et une galerie offre une issue
+  do: Se retirer par une action de retraite, jusqu'à 12 m, vers un coude ou un passage étroit
+  note: Son déplacement de 6 m rend la fuite difficile ; si l'issue est coupée, tenir le passage et continuer à frapper au pic.

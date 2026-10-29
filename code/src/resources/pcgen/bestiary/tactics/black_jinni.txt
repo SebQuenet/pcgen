@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Black Jinni, génie maudit des déserts chauds, extérieur de taille G, chaotique mauvais et haineux envers les intrus. FP 15 ; 230 pv ; CA 30, contact 16 ; initiative +10.
+  Falchion +1 conducteur +29/+24/+19/+14 (2d6+13, critique 15-20, plus 1d10 d'électricité) et cornes +22 (2d8+4), en attaque à outrance.
+  Sans arme : 2 griffes +27 (2d6+8 chacune) et cornes +27 (2d8+8). Espace et allonge : 3 m ; déplacement terrestre 12 m, vol 18 m de manœuvrabilité moyenne ; vision dans le noir 18 m.
+
+resource: Nuage obscurcissant | permanent | camouflage : 20 % de chances de rater les attaques contre lui ; supprimé tant qu'un vent fort ou plus puissant persiste
+resource: Liberté de mouvement | permanente | permet de traverser les entraves couvertes par cet effet et d'échapper aux prises
+resource: Immunités | permanentes | électricité et feu
+
+step: Une tempête ou des nuages offrent une approche discrète
+  do: Se placer en embuscade avec Discrétion +33, puis attendre qu'une cible vulnérable se sépare des combattants les plus solides.
+  note: Hors de ces conditions, Discrétion +25. Stormwalk lui permet d'ignorer les effets des tempêtes naturelles ou surnaturelles jusqu'à la force d'un ouragan ; un vent fort peut néanmoins supprimer son nuage personnel.
+
+step: Il prépare son terrain
+  do: Choisir un passage où son allonge de 3 m gêne l'approche, avec une sortie dégagée pour s'envoler.
+  note: Préférer les trajectoires aériennes simples : Vol +4 rend le vol stationnaire et les manœuvres difficiles peu fiables.
+
+## Ouverture
+
+step: Une cible fragile est accessible après un déplacement
+  do: Avancer de 12 m au plus, ou voler de 18 m au plus, puis porter une seule attaque de falchion +29, à 3 m de la cible.
+  note: Chercher en priorité un lanceur de sorts ou un ennemi isolé ; Volonté +10 est son jet de sauvegarde le plus faible.
+
+step: Une cible est déjà à portée sans déplacement important
+  do: Effectuer l'attaque à outrance : quatre coups de falchion +29/+24/+19/+14, puis les cornes +22.
+  note: Un pas de placement de 1,50 m peut suffire à conserver l'allonge et cette séquence ; se poser avant de privilégier les attaques à outrance.
+
+## Rounds suivants
+
+resource: Attaques d'opportunité | 7 par round au maximum | Attaques réflexes, y compris pris au dépourvu ; une occasion valable reste nécessaire
+
+step: La cible reste à portée
+  do: Concentrer l'attaque à outrance sur elle jusqu'à la mettre hors de combat, puis reporter les attaques restantes sur un autre adversaire à portée.
+  note: Critique 15-20 au falchion ; Critical Focus donne +4 à la confirmation. Bleeding Critical ajoute 2d6 de saignement par round au tour de la victime ; plusieurs applications se cumulent. Des soins magiques ou un test de Premiers secours DD 15 arrêtent ce saignement.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Frapper au falchion +29, notamment lorsqu'il quitte une case menacée ou lance un sort sans protection appropriée.
+  note: Un simple pas de placement de 1,50 m ne provoque pas ; une même traversée ne fournit pas plusieurs attaques contre le même adversaire.
+
+step: Les ripostes au contact deviennent trop dangereuses et une cible non adjacente est accessible au sol
+  do: Employer Attaque éclair : parcourir au moins 3 m avant un unique coup de falchion +29, puis poursuivre le déplacement pour terminer hors de l'allonge adverse ; déplacement total limité à 12 m.
+  note: Cette action complexe remplace l'attaque à outrance. La cible ne reçoit aucune attaque d'opportunité contre ce déplacement ; les autres ennemis peuvent en recevoir. Souplesse du serpent ajoute alors +4 à la CA contre les attaques d'opportunité provoquées par son déplacement.
+
+step: Il perd son falchion
+  do: Passer aux deux griffes +27 et aux cornes +27 en attaque à outrance, avec les dégâts indiqués dans le profil.
+
+step: Un prêtre ou paladin commence une récitation sacrée dangereuse
+  do: En faire la cible prioritaire s'il peut l'abattre rapidement ; sinon rompre le combat.
+  note: Un prêtre ou paladin d'une divinité bonne ou loyale peut consacrer une action simple à un test opposé de Connaissances (religion), contre son bonus de +24. Si le récitant gagne, le jinni fait Vigueur +18 contre DD 20 : destruction immédiate en cas d'échec, 5d6 dégâts même en cas de réussite.
+
+## Repli
+
+step: Points de vie sous 60, ou récitant impossible à neutraliser rapidement
+  do: Utiliser l'action de retraite pour quitter la mêlée, puis gagner un abri par le vol ; un déplacement aérien simple couvre 18 m, un double déplacement 36 m.
+  note: La retraite protège le départ de la case initiale, pas la traversée d'autres cases menacées. Chercher ensuite la poussière ou les nuages pour se dissimuler avec Discrétion +33.

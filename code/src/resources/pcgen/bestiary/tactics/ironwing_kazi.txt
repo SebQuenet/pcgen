@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Ironwing Kazi, griffonne mythique de grande taille, neutre bonne, privilégie les piqués et le harcèlement des lanceurs de sorts et des tireurs. Elle a juré de protéger Vlasko.
+  Morsure +1 : +17 (1d6+8) ; deux serres +1 : +16 chacune (1d6+8, critique 18–20). Allonge 1,50 m ; espace occupé 3 m.
+  144 pv ; CA 26, contact 13, prise au dépourvu 22 ; réduction des dégâts 5/épique ; résistance au feu 30. Déplacement au sol 9 m, vol 24 m avec manœuvrabilité moyenne.
+  Perception +14 ; vision dans le noir et vision à travers la végétation à 18 m, vision nocturne et odorat. Elle comprend le commun, mais ne peut pas parler.
+
+resource: Détection du Mal | constant | pouvoir magique, niveau de lanceur de sorts 9
+
+step: Préparatifs quotidiens avec Vlasko
+  do: Bénéficier de morsure magique suprême, que Vlasko lance chaque jour.
+  note: Les bonus de +1 à la morsure et aux serres figurent déjà dans les attaques indiquées.
+
+step: Vlasko et Kazi s'apprêtent à combattre
+  do: Recevoir de Vlasko liberté de mouvement et résistance aux énergies destructives contre le feu.
+  note: La résistance au feu indiquée est de 30. Ces sorts sont lancés par Vlasko.
+
+## Ouverture
+
+step: Un lanceur de sorts ou un tireur est accessible en vol
+  do: Fondre sur lui en piqué avec Attaque en vol : se déplacer, porter une morsure +17 (1d6+8), puis poursuivre le déplacement pour s'éloigner de la mêlée.
+  note: Répartir le déplacement avant et après l'attaque dans la limite du mouvement disponible. Attaque en vol permet ici une seule attaque et ne supprime pas les attaques d'opportunité provoquées par le déplacement.
+
+step: La cible prioritaire est hors d'atteinte ce round
+  do: Se rapprocher en vol et chercher un angle d'approche dégagé pour le prochain passage.
+  note: Éviter de se poser au milieu des combattants adverses ; rester en position de rejoindre Vlasko.
+
+## Rounds suivants
+
+step: Le harcèlement reste possible
+  do: Répéter les passages avec Attaque en vol, en privilégiant les lanceurs de sorts et les tireurs ; terminer les passages hors de leur portée de mêlée lorsque le terrain le permet.
+
+step: Kazi dispose d'un avantage tactique et une cible est déjà à portée
+  do: Rester au contact et effectuer une attaque à outrance : morsure +17 (1d6+8) et deux serres +16 (1d6+8 chacune, critique 18–20).
+  note: Une approche avec un déplacement ordinaire ne permet pas d'ajouter cette attaque à outrance au même round.
+
+step: Abattre un lanceur de sorts exige une manœuvre désespérée
+  do: Se poser pour l'engager au contact, puis utiliser ses trois attaques dès qu'une attaque à outrance devient possible.
+  note: Elle accepte ce risque malgré sa préférence pour les attaques suivies d'un dégagement.
+
+## Repli
+
+step: Vlasko tombe à 20 pv ou moins
+  do: Rompre le combat et se replier avec Vlasko pour le protéger, en utilisant le vol lorsque cela permet de rester auprès de lui.
+  note: Ce seuil concerne les points de vie de Vlasko, pas ceux de Kazi. Ne pas prolonger la poursuite d'un adversaire au détriment de son serment.
+
+step: Vlasko reste au-dessus de 20 pv
+  do: Poursuivre le combat, même si Kazi est grièvement blessée.
+  note: Presque sans peur, elle est prête à combattre jusqu'à la mort ; aucun seuil de repli lié à ses propres points de vie n'est indiqué.

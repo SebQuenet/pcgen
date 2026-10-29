@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Tig-0, robot directeur de taille G, neutre et intelligent, se consacre avant tout à sa mission. 91 pv ; CA 21 ; initiative −4.
+  Deux coups +14 (1d8+4 chacun) et un tentacule +14 (1d10+4 et étreinte) ; fusil laser intégré +14 (2d6 de feu).
+  Déplacement à 12 m ; escalade à 9 m. Allonge de 1,50 m, portée à 3 m avec le tentacule ; espace occupé de 3 m.
+
+note: Défenses
+  Solidité 8 ; résistances au froid 10 et au feu 10 ; immunités des créatures artificielles.
+  Vulnérable aux coups critiques et à l'électricité.
+
+step: Avant toute agression
+  do: Poursuivre sa mission sans préparation de combat particulière
+  note: Tig-0 ne s'attend pas à être attaqué par d'autres « robots » et se trouve rarement préparé à combattre
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m et aucune approche n'est nécessaire
+  do: Effectuer une attaque à outrance avec les deux coups et le tentacule sur le même adversaire
+  note: Tenter l'étreinte si le tentacule touche ; Tig-0 cherche à saisir puis à démonter un adversaire à la fois
+
+step: Un adversaire est à 3 m, hors de portée des coups
+  do: Attaquer avec le tentacule et tenter l'étreinte en cas de touche
+  note: Seul le tentacule bénéficie de cette allonge
+
+step: Les adversaires combattent à distance
+  do: Tirer avec le fusil laser intégré, +14, pour 2d6 de dégâts de feu
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et Tig-0 n'est pas en lutte
+  do: Répéter les attaques à outrance sur une seule cible et chercher à la saisir avec le tentacule
+  note: Garder la même cible tant qu'elle peut être combattue ; passer à la suivante une fois celle-ci neutralisée
+
+step: Un adversaire est saisi
+  do: Maintenir la lutte pour lui infliger les dégâts du tentacule, 1d10+4
+  note: Le maintien de la lutte consomme une action simple ; ne pas lui ajouter une attaque à outrance dans le même round
+
+step: Les adversaires restent à distance
+  do: Continuer les tirs de fusil laser intégré
+
+step: Occasionnellement, un assaillant attire son attention
+  do: Tenter d'utiliser sa capacité « override » sur cet assaillant
+  note: Cette tentative a vraisemblablement peu d'effet sur ses attaquants
+
+## Repli
+
+step: Points de vie strictement sous 30 et Tig-0 se trouve hors de la zone B2
+  do: Rompre le combat et fuir vers la zone B2 pour achever sa mission avant sa destruction
+  note: Utiliser son déplacement de 12 m et, si le trajet l'exige, son escalade de 9 m
+
+step: Tig-0 se trouve dans la zone B2
+  do: Combattre jusqu'à sa destruction, même sous 30 pv
+
+step: Les assaillants prennent la fuite
+  do: Les laisser partir et poursuivre sa mission
+  note: Tig-0 ne poursuit jamais les attaquants en fuite

@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Gardien gravé de Nethys, créature artificielle de taille M, neutre et dépourvue d'intelligence. Il défend le temple sans tactique élaborée.
+  53 pv ; CA 21, contact 13, pris au dépourvu 18 ; réduction des dégâts 5/adamantium ; résistance à la magie 16 ; guérison accélérée 2 ; immunités des créatures artificielles.
+  Sous rapidité : déplacement de 21 m ; allonge de 1,50 m ; bâton +1 acéré +11/+11/+6 (1d6+5, critique 19–20), ou 2 coups +10/+10 (1d6+4).
+  Vision dans le noir à 18 m et vision nocturne ; Perception +1.
+
+resource: Rapidité | 1/jour | uniquement sur lui-même, NLS 6
+
+step: Avant d'attaquer, si rapidité est disponible
+  do: Utiliser rapidité sur lui-même.
+  note: Les valeurs principales du profil comprennent déjà les effets de rapidité.
+
+## Ouverture
+
+step: Un intrus se trouve à plus de 1,50 m
+  do: Avancer vers lui, jusqu'à 21 m sous rapidité, puis porter une attaque de bâton +11 (1d6+5, critique 19–20) si une cible est à portée.
+  note: Un déplacement de plus de 1,50 m empêche l'attaque à outrance ce round ; s'il ne peut pas atteindre l'ennemi, continuer à s'en approcher dans le temple.
+
+step: Un intrus est déjà à portée au début de son tour
+  do: Effectuer une attaque à outrance au bâton : +11/+11/+6, chaque attaque infligeant 1d6+5 dégâts, critique 19–20.
+
+## Rounds suivants
+
+step: Un intrus reste à portée
+  do: Répéter l'attaque à outrance au bâton.
+  note: Il se contente de frapper les intrus, sans ruse ni coordination élaborée.
+
+step: Il combat sans son bâton
+  do: Utiliser ses coups : +10/+10 en attaque à outrance sous rapidité, pour 1d6+4 dégâts par coup ; une seule attaque +10 après un déplacement.
+
+step: Une cible fuit à l'intérieur du Sanctuaire
+  do: La poursuivre et reprendre les attaques dès qu'elle est à portée.
+  note: Il poursuit les fuyards dans tout le Sanctuaire, sans sortir de l'enceinte du temple.
+
+step: Rapidité prend fin
+  do: Utiliser ses valeurs de base : déplacement de 12 m ; bâton +10/+5 en attaque à outrance, ou un coup +9.
+  note: CA 20, contact 12, pris au dépourvu 18 ; Réflexes +6. Les dégâts restent identiques. Après un déplacement, une seule attaque de bâton +10 ou un coup +9.
+
+note: Récupération
+  La guérison accélérée rend 2 pv par round tant qu'il n'est pas détruit, sans dépasser 53 pv. Il continue de combattre pendant cette récupération.
+
+## Repli
+
+step: Il subit des dégâts et des intrus restent dans le temple
+  do: Combattre jusqu'à sa destruction, sans chercher à fuir.
+
+step: Les intrus quittent le temple
+  do: Cesser les attaques et interrompre la poursuite à la sortie.
+  note: Il ne quitte jamais l'enceinte du temple.

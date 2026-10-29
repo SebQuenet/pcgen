@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Camisole de force animée, créature artificielle de taille M, neutre et sans intelligence. 36 pv ; CA 9 ; immunités des créatures artificielles.
+  Deux coups +5, chacun infligeant 1d6+2 dégâts et permettant une saisie ; constriction pour broyer une victime agrippée. Allonge de 1,50 m.
+  Déplacement au sol de 9 m ; vol de 12 m, avec une manœuvrabilité déplorable. Vision dans le noir à 18 m et vision nocturne ; Perception -5.
+
+## Ouverture
+
+step: Une cible est hors de son allonge de 1,50 m
+  do: Avancer vers elle au sol, ou voler pour franchir un obstacle, puis porter un coup +5 si un seul déplacement suffit à l'atteindre
+  note: Un double déplacement ne laisse pas d'action pour attaquer ce round.
+
+step: Une cible est déjà à portée et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance avec les deux coups +5, infligeant chacun 1d6+2 dégâts
+
+step: Un coup touche
+  do: Tenter immédiatement la saisie pour engager une lutte, puis appliquer la constriction si le test de lutte réussit
+  note: La saisie prolonge le coup qui a touché ; elle ne remplace pas cette attaque.
+
+## Rounds suivants
+
+step: Une victime est agrippée
+  do: Consacrer son action simple à maintenir la lutte et appliquer la constriction sur un test réussi
+  note: Chercher à infliger des dégâts à la victime ; maintenir la lutte consomme l'action qui servirait à effectuer une attaque à outrance.
+
+step: La victime s'est libérée et reste à portée
+  do: Reprendre les deux coups +5 en attaque à outrance et tenter une nouvelle saisie dès qu'un coup touche
+
+step: Aucune cible n'est à portée
+  do: Se rapprocher de la cible accessible la plus proche, puis reprendre les coups et la saisie
+  note: Employer des déplacements simples ; son absence d'intelligence ne permet pas de tactique élaborée.
+
+## Repli
+
+step: Il lui reste au moins 1 pv
+  do: Continuer à frapper ou à maintenir la lutte, sans repli volontaire
+  note: Sans intelligence, elle ne choisit pas un seuil de retraite ; à 0 pv, cette créature artificielle est détruite.

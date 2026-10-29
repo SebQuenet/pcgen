@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Proto-Shoggoth, vase aquatique de taille TG, CN, FP 16 : prédateur rudimentaire qui saisit ses proies pour les entraîner sous l'eau, les comprimer ou les absorber.
+  228 PV, CA 31 ; quatre coups +26, chacun à 2d6+10, critique sur 19–20 et étreinte ; BMC de lutte +34. Espace et allonge : 4,50 m.
+  Déplacement et nage : 15 m ; escalade : 9 m. Amphibie, il chasse aussi bien sous l'eau que sur la berge.
+
+resource: Guérison accélérée | permanente | récupère 10 PV par round
+resource: Défenses | permanentes | RD 10/— ; résistance à l'acide, à l'électricité et au feu 20 ; RM 27 ; immunités au froid, au son, à la cécité, à la surdité et aux effets de charme, avec les traits des vases
+
+step: Aucune proie à portée
+  do: Rester sous la surface de l'aqueduc et attendre qu'une créature approche du bord
+  note: Perception +32, odorat, perception des vibrations à 18 m, vision dans le noir à 36 m et vision nocturne ; sa vision à 360° empêche la prise en tenaille. Il peut attaquer même les urdefhans qui le nourrissent.
+
+## Ouverture
+
+step: Une créature approche du bord et se trouve à 4,50 m ou moins
+  do: Porter quatre coups si une attaque à outrance est possible ; après une touche, tenter l'étreinte avec un BMC de +34
+  note: Chercher à capturer une proie pour l'entraîner dans l'aqueduc.
+
+step: Il doit se rapprocher pour atteindre une proie
+  do: Nager ou avancer jusqu'à 15 m, puis porter un coup +26 avec tentative d'étreinte en cas de touche
+
+## Rounds suivants
+
+step: Une proie est saisie près du bord
+  do: Maintenir la lutte et la déplacer dans l'eau, puis la retenir sous la surface
+  note: Constriction : 3d6+10 dégâts lors d'un test de lutte réussi. Une victime incapable de respirer sous l'eau risque aussi la noyade.
+
+step: Il commence son tour en lutte avec une proie
+  do: Tenter de l'absorber
+  note: L'absorption fonctionne comme engloutissement : 4d6+15 dégâts contondants et 6d6 d'acide par round à l'intérieur ; CA interne 19, 22 PV pour se frayer une sortie. Une évasion ne laisse aucune ouverture aux autres victimes.
+
+resource: Cacophonie démentielle | à volonté | action libre ; rayon de 18 m ; Volonté DD 22 ou confusion pendant 1d6 rounds, avec 1d6 dégâts de Sagesse par round affecté ; réussite : immunité à cette cacophonie pendant 24 heures ; effet sonore mental
+
+step: Il est blessé mais possède encore plus de 60 PV
+  do: Grimper hors de l'aqueduc, puis déclencher sa cacophonie démentielle avant de piétiner les survivants
+  note: Escalade à 9 m ; Réflexes DD 32 pour réduire de moitié les 2d6+15 dégâts du piétinement. Il peut tenter d'absorber les créatures piétinées.
+
+step: Des adversaires restent à portée et le piétinement est peu utile
+  do: Porter quatre coups +26, saisir les victimes touchées et poursuivre l'absorption aux tours suivants
+  note: Utiliser son allonge et Attaques réflexes contre les déplacements qui provoquent des attaques d'opportunité.
+
+step: Une proie fuit et il possède encore plus de 60 PV
+  do: La poursuivre dans les taudis jusqu'aux rampes menant à A3
+  note: Il peut faire s'effondrer des masures de dalles en A1 pour tenter de bloquer sa fuite.
+
+## Repli
+
+step: 60 PV ou moins
+  do: Abandonner la poursuite et regagner immédiatement l'eau, puis nager hors d'atteinte à 15 m par déplacement
+  note: Sa guérison accélérée lui rend 10 PV par round pendant la fuite.

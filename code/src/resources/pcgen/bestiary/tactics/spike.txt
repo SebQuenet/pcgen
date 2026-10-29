@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Spike est un furet géant de taille M, animal neutre (FP 2), avec 19 pv et une CA de 15.
+  Morsure +2 (1d6 et saignement), 2 griffes +2 (1d4 chacune) ; allonge de 1,50 m.
+  Déplacement de 12 m, escalade de 6 m ; vision nocturne et odorat.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +8 et l'odorat.
+  note: Discrétion +10 s'il reste caché ; Escalade +8 pour franchir un obstacle accessible.
+
+## Ouverture
+
+step: Guffy ne participe pas au combat
+  do: Prendre pour cible le gobelin le plus proche.
+
+step: Guffy rejoint le combat
+  do: Concentrer ses attaques sur l'adversaire que sa maîtresse attaque.
+
+step: La cible est hors de portée
+  do: Avancer vers elle de 12 m au maximum, puis porter une morsure +2 (1d6 et saignement) si elle se trouve à 1,50 m ou moins.
+
+step: La cible est déjà à portée et Spike peut effectuer une attaque à outrance
+  do: Porter une morsure +2 (1d6 et saignement) et 2 attaques de griffes +2 (1d4 chacune).
+
+## Rounds suivants
+
+step: Guffy combat
+  do: Continuer à viser l'adversaire qu'elle attaque ; changer de cible avec elle.
+
+step: Guffy ne combat pas
+  do: Attaquer le gobelin le plus proche.
+
+step: La cible reste à portée
+  do: Répéter l'attaque à outrance : morsure +2 (1d6 et saignement), 2 griffes +2 (1d4 chacune).
+
+step: La cible s'éloigne
+  do: La rejoindre avec son déplacement de 12 m, puis mordre si elle est à portée et qu'une attaque reste possible.
+  note: Si le trajet exige d'escalader, utiliser sa vitesse d'escalade de 6 m.
+
+## Repli
+
+step: Moins de 6 pv et Guffy est absente
+  do: Fuir pour retrouver Guffy.
+  note: Déplacement de 12 m, escalade de 6 m ; Survie +6 pour suivre une piste à l'odorat.
+
+step: Guffy est présente
+  do: Combattre jusqu'à la mort, même avec moins de 6 pv.

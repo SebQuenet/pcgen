@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Moukadeem, marid noble chaotique mauvais et psychotique, FP 11 : 147 pv, CA 23. Il attaque violemment, déchaînant le froid tant qu'il peut utiliser ses pouvoirs à l'abri de la mêlée.
+  Trident de maître +20/+15/+10 (2d6+9) ou deux coups +19 (2d6+6 chacun), en attaque à outrance ; allonge de 3 m, espace occupé de 3 m.
+  Déplacement de 6 m, nage de 18 m ; vision dans le noir à 18 m, Perception +19. Pouvoirs magiques au NLS 20, concentration +23.
+
+resource: Détection de l'invisibilité | 3/jour | une utilisation pour la préparation
+resource: Brume de dissimulation | 5/jour | une utilisation pour la préparation
+resource: Cône de froid | 3/jour | cône de 18 m ; 15d6 de froid, Réflexes DD 18 pour réduire de moitié
+resource: Tempête de grêle | 3/jour | rayon de 6 m ; 3d6 contondants et 2d6 de froid, sans sauvegarde ; terrain difficile pendant 20 rounds
+resource: Nuée d'élémentaires | 1/jour | élémentaires de l'Eau uniquement ; activation de 10 minutes
+resource: Souhait | 0 disponible | utilisation annuelle déjà dépensée
+
+step: La porte secrète de sa chambre s'ouvre
+  do: Utiliser détection de l'invisibilité, puis brume de dissimulation autour de lui, si le délai avant l'engagement le permet.
+  note: Ces deux pouvoirs demandent chacun une action simple ; poursuivre cette préparation à ses tours si les PJ entrent immédiatement.
+  note: La brume est immobile, de rayon 6 m. Elle gêne aussi Moukadeem : camouflage à 1,50 m, camouflage total au-delà. Détection de l'invisibilité ne permet pas de voir à travers.
+
+## Ouverture
+
+step: Plusieurs PJ sont regroupés à 18 m ou moins et il peut utiliser un pouvoir sans être menacé
+  do: Gagner au besoin le bord de la brume pour repérer les cibles, puis lancer cône de froid sur le plus grand nombre.
+  note: Un seul pouvoir offensif par tour ; choisir un angle qui ne le touche pas.
+
+step: Les PJ restent au-delà du cône ou se regroupent dans une autre zone accessible
+  do: Lancer tempête de grêle sur leur position pour les blesser et ralentir leur progression.
+  note: Les dégâts ne sont infligés qu'à l'apparition de la grêle ; rester hors de sa propre zone.
+
+step: Un PJ l'engage déjà en mêlée
+  do: Passer aux attaques physiques ; porter un coup de trident +20 (2d6+9) s'il doit se déplacer, ou une attaque à outrance s'il peut rester sur place.
+
+## Rounds suivants
+
+step: Il dispose toujours d'espace pour utiliser ses pouvoirs sans danger
+  do: Répéter cône de froid sur les groupes, puis tempête de grêle selon leur position et les utilisations restantes.
+  note: Se déplacer dans la salle pour conserver cet espace ; sa brume ne suit pas ses déplacements.
+
+step: Les PJ lui laissent exceptionnellement 10 minutes sans interrompre son activation
+  do: Utiliser nuée d'élémentaires et envoyer les créatures de l'Eau contre les intrus.
+  note: Ce pouvoir ne fournit pas de renforts en un round : 2d4 élémentaires de taille G apparaissent à son achèvement ; les vagues suivantes arrivent 10 puis 20 minutes plus tard.
+
+step: Un adversaire reste à portée de mêlée
+  do: Attaque à outrance au trident +20/+15/+10 (2d6+9 par touche), ou deux coups +19 (2d6+6 chacun).
+  note: Choisir l'une des deux routines. Avec Attaques réflexes et son allonge de 3 m, saisir les attaques d'opportunité offertes par les ennemis qu'il voit.
+
+step: Les PJ évitent délibérément d'infliger des dégâts létaux à Zahra ou tentent de soigner sa folie
+  do: Faire chaque round un test de Psychologie +19 contre DD 20, jusqu'à réussite.
+  note: Cette prise de conscience change sa cible prioritaire dès qu'il réussit le test.
+
+step: Il a compris que les PJ veulent Zahra vivante
+  do: Attaquer Zahra pour la tuer, avec son trident s'il peut l'atteindre, ou un pouvoir offensif disponible si elle reste à distance.
+  note: Il exploite ainsi la volonté des PJ de la protéger ; il ne se contente plus de combattre ceux qui le menacent.
+
+## Repli
+
+step: Ses points de vie baissent, même près de la mort
+  do: Continuer à combattre jusqu'à la mort.
+  note: L'ancre dimensionnelle l'empêche de fuir le caveau des lanternes ; changement de plan ne constitue pas une issue. Aucun seuil de repli.

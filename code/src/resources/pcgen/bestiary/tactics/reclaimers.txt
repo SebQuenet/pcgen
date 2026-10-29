@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Les Reclaimers sont un unique golem de bric-à-brac amélioré, neutre et sans intelligence, qui démonte tout ce qu'il rencontre pour en récupérer les pièces. FP 6 ; 69 pv ; CA 20 ; déplacement de 9 m.
+  Il combat habituellement en nuée : 2d6 dégâts automatiques et maladie. Sous forme humanoïde : 2 coups +17, chacun infligeant 1d6+8 dégâts et la maladie, avec une allonge de 1,50 m.
+  Réduction des dégâts 5/adamantium ; immunités des créatures artificielles et immunité aux sorts et pouvoirs magiques autorisant la résistance à la magie, sous réserve des exceptions propres au golem.
+
+resource: Discorporation | à volonté | action simple pour devenir une nuée ; action complexe pour reprendre sa forme humanoïde
+resource: Réparation par les déchets | conditionnelle | guérison accélérée 2 dans une forte concentration de débris, notamment l'espace occupé par un autre golem de bric-à-brac désagrégé
+
+step: Avant l'arrivée des intrus
+  do: Commencer déjà sous forme de nuée et conserver normalement cette forme.
+  note: La nuée occupe un espace de 3 m de côté, avec une allonge de 0 m ; ses éléments sont de taille TP. Elle doit occuper les cases de ses victimes pour les blesser.
+
+## Ouverture
+
+step: Des intrus sont accessibles
+  do: Avancer vers eux, à 9 m par déplacement, et envahir leurs cases.
+  note: À la fin du déplacement, chaque créature dont elle occupe l'espace subit 2d6 dégâts et est exposée à la maladie, sans jet d'attaque. La nuée n'utilise pas les coups +17.
+
+step: Les intrus restent hors d'atteinte
+  do: Continuer à avancer vers eux ; utiliser un double déplacement de 18 m si nécessaire.
+  note: Aucun moyen d'attaque à distance.
+
+## Rounds suivants
+
+step: Une ou plusieurs victimes restent à portée de déplacement
+  do: Rester en nuée et continuer à les recouvrir pour infliger les dégâts de nuée chaque round ; englober plusieurs victimes voisines lorsque leur position le permet.
+  note: Les armes tranchantes et perforantes lui infligent des dégâts réduits de moitié. Les effets de zone auxquels elle n'est pas immunisée lui infligent 50 % de dégâts supplémentaires.
+
+step: Un personnage lance un morceau conséquent d'automate aux Reclaimers
+  do: Se détourner vers cette pièce et rester sur place pendant 2 rounds pour la démonter.
+
+step: Le golem combat sous forme humanoïde
+  do: Si une cible est à 1,50 m, effectuer une attaque à outrance avec ses 2 coups +17, chacun à 1d6+8 et maladie ; sinon, avancer puis porter un seul coup.
+  note: Revenir en nuée demande une action simple ; reprendre la forme humanoïde demande une action complexe.
+
+note: Maladie
+  Le tétanos exige un jet de Vigueur DD 14. Son incubation de 1d6 jours signifie qu'il n'affaiblit pas immédiatement les victimes pendant le combat.
+  Dans le Sanctuaire, la magie des lieux empêche les Reclaimers de transmettre la maladie.
+
+step: Le combat se déroule au milieu de nombreux débris
+  do: Appliquer la guérison accélérée 2 à chaque round, sans dépasser 69 pv.
+  note: Sa propre forme de nuée ne suffit pas à déclencher cette réparation.
+
+## Repli
+
+step: Les points de vie diminuent
+  do: Poursuivre mécaniquement le démantèlement des cibles jusqu'à destruction à 0 pv ; aucun seuil de fuite.
+
+note: Remplacement
+  La destruction de cette nuée entraîne la création d'un remplacement en L14 après 24 heures. Arrêter la Crèche de fer est nécessaire pour supprimer durablement les Reclaimers.

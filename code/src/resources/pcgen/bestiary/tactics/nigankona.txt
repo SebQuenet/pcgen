@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Nigankona, oni yai du feu de taille G, neutre mauvais, FP 15 : un assiégeant qui déloge les défenseurs par le feu avant de les écraser au corps à corps.
+  Tetsubo des titans +29/+24/+19/+14 (2d8+18, critique x4) ; à défaut, deux coups +26 (1d10+15). Projectile enflammé +19 au contact à distance (4d6 de feu et embrasement).
+  229 pv ; CA 29, contact 12 ; résistance à la magie 26. Déplacement terrestre 9 m, vol 12 m avec bonne manœuvrabilité ; allonge 3 m.
+
+note: Défenses
+  Immunité au feu ; vulnérabilité au froid. Régénération de 5 pv par round, interrompue pendant un round par des dégâts d'acide ou de froid.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +23. Repérer les sorties de la forteresse et les ennemis capables d'utiliser le froid ou l'acide.
+
+resource: Bouclier de feu | 3/jour | version chaude uniquement ; protection d'ouverture
+resource: Nuage incendiaire | 1/jour | DD 20 ; déloger les défenseurs
+resource: Mur de feu | 3/jour | isoler les combattants au contact
+resource: Boule de feu | 3/jour | DD 15 ; frapper des ennemis regroupés
+resource: Charme-monstre | 3/jour | Volonté DD 16
+resource: Sommeil profond | 3/jour | Volonté DD 15
+resource: Rayon ardent | à volonté | attaque magique à distance
+resource: Invisibilité | à volonté | lui-même uniquement
+resource: Ténèbres | à volonté | obscurcir une zone
+resource: Vol | constant | déplacement aérien de 12 m
+
+step: Approche encore discrète
+  do: Utiliser l'invisibilité pour gagner une position permettant de surveiller les sorties et d'atteindre les remparts
+  note: Garder les utilisations de nuage incendiaire et de mur de feu pour l'assaut
+
+## Ouverture
+
+step: Premier round de combat
+  do: Activer bouclier de feu, version chaude
+  note: Ce bouclier blesse les assaillants qui le frappent au contact et réduit les dégâts de froid, sa principale faiblesse
+
+step: Deuxième round, les défenseurs occupent encore la forteresse
+  do: Lancer nuage incendiaire sur leur position pour les forcer à quitter leurs abris ; Réflexes DD 20
+  note: Nigankona est immunisé aux dégâts de feu du nuage, mais sa fumée gêne aussi sa vision
+
+## Rounds suivants
+
+step: Le nuage pousse les défenseurs vers une sortie
+  do: Préparer un projectile enflammé ou un rayon ardent, déclenché dès qu'un adversaire sort à découvert et devient visible
+  note: Le projectile enflammé attaque à +19 contre la CA de contact et inflige 4d6 de feu plus embrasement ; préparer cette attaque demande une nouvelle action à chaque round
+
+step: Personne ne sort pour l'affronter
+  do: Frapper les murs avec le tetsubo des titans jusqu'à ouvrir une brèche
+  note: L'arme inflige des dégâts triplés aux murs ; cette propriété ne triple pas les dégâts contre les créatures
+
+step: Des ennemis acceptent le corps à corps et leurs soutiens restent en retrait
+  do: Lancer mur de feu pour couper les lanceurs de sorts ou les tireurs de leurs alliés, puis concentrer les coups sur les combattants accessibles
+  note: Le mur gêne les lignes de vue et punit son franchissement ; il ne constitue pas une barrière physique infranchissable
+
+step: Une cible est à 3 m ou moins et Nigankona peut rester sur place
+  do: Effectuer une attaque à outrance au tetsubo, +29/+24/+19/+14, chaque coup infligeant 2d8+18 dégâts, critique x4
+  note: Privilégier un ennemi déjà blessé ; profiter de l'allonge et d'Attaques réflexes pour punir les déplacements ou les incantations qui provoquent une attaque d'opportunité
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer ou voler, puis porter un seul coup de tetsubo avec Frappe décisive, +29 (4d8+18)
+  note: Ce déplacement ne permet pas l'attaque à outrance ; employer le vol pour rejoindre un rempart ou contourner un obstacle
+
+step: Plusieurs ennemis sont groupés hors de portée de mêlée
+  do: Employer boule de feu, Réflexes DD 15, si son explosion peut toucher plusieurs adversaires
+  note: Contre une cible isolée, préférer les projectiles enflammés ou rayon ardent afin de conserver les utilisations quotidiennes
+
+## Repli
+
+step: Nigankona tombe à 100 pv ou moins
+  do: Prendre sa forme de fumée pour gêner ses assaillants pendant que sa régénération lui rend 5 pv par round
+  note: Les dégâts d'acide ou de froid interrompent la régénération pendant un round ; chercher à échapper à ces attaques pendant cette récupération
+
+step: Il peut reprendre l'assaut
+  do: Reprendre sa forme normale et renouveler ses attaques, en réactivant bouclier de feu si nécessaire et s'il lui reste une utilisation
+  note: Ce répit sert à récupérer, sans abandonner le combat ; Nigankona se bat jusqu'à la mort, car il considère l'échec comme impossible

@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Aishwarya, naga gardienne adolescente, loyale neutre, FP 9 : intelligente, égoïste et déterminée à vaincre pour gagner du pouvoir. Elle privilégie les sorts offensifs sous invisibilité.
+  90 pv ; CA 23, contact 16 ; déplacement 12 m ; vision dans le noir à 18 m. De taille G, elle occupe 3 m et son allonge est de 1,50 m.
+  Morsure +11 (2d6+4 et poison) ; crachat +15 contre la CA de contact (poison). Le profil ne précise ni les effets du poison ni la portée du crachat.
+  Lanceuse de sorts de niveau 8 : éclair (DD 17) et rayon ardent sont ses principales attaques.
+
+resource: Sorts de niveau 4 | 4/jour | invisibilité suprême
+resource: Sorts de niveau 3 | 6/jour | réserve commune à éclair et dissipation de la magie ; épuiser cette réserve déclenche la fuite
+resource: Sorts de niveau 2 | 7/jour | réserve commune à rayon ardent, détection de pensées et détection de l'invisibilité
+resource: Sorts de niveau 1 | 7/jour | réserve commune à soins légers, faveur divine, repli expéditif, armure de mage et projectile magique
+
+step: Elle descend vers la place principale et peut se préparer
+  do: Lancer armure de mage et repli expéditif sur elle-même
+  note: Armure de mage porte sa CA à 27 pendant 8 heures ; sa CA de contact reste 16. Repli expéditif porte son déplacement à 21 m pendant 8 minutes.
+  note: Ces deux sorts ne sont pas inclus dans le profil fourni. Dépenser deux sorts de niveau 1 ; il en reste cinq si la réserve était pleine.
+
+step: Les PJ l'affrontent avant cette préparation
+  do: Utiliser la CA 23 et le déplacement de 12 m tant que les sorts correspondants ne sont pas actifs
+
+## Ouverture
+
+step: Premier round de combat
+  do: Lancer invisibilité suprême sur elle-même, puis se déplacer pour obtenir un angle de tir et garder ses distances
+  note: Le sort dure 8 rounds et lui permet d'attaquer sans redevenir visible. Repérer un trajet de fuite pendant ce déplacement.
+
+## Rounds suivants
+
+step: Plusieurs ennemis peuvent être pris dans une même ligne sans toucher ses alliés
+  do: Lancer éclair sur cette ligne, jusqu'à 36 m
+  note: 8d6 dégâts d'électricité ; Réflexes DD 17 pour réduire les dégâts de moitié. Se déplacer pour chercher un nouvel alignement après l'attaque.
+
+step: Une cible prioritaire est à 13,50 m ou moins et aucun alignement intéressant ne se présente
+  do: Lancer rayon ardent et concentrer les deux rayons sur elle
+  note: Deux attaques à distance contre la CA de contact, bonus de base +15 ; chaque rayon inflige 4d6 dégâts de feu, sans jet de sauvegarde.
+
+step: Un effet magique adverse empêche ses attaques d'être efficaces
+  do: Envisager une dissipation de la magie ciblée, puis reprendre éclair ou rayon ardent
+  note: Test de dissipation à +8. Ce sort consomme la même réserve qu'éclair : surveiller le nombre de sorts de niveau 3 restants.
+
+step: Un ennemi la menace au contact
+  do: Se dégager sous invisibilité pour reprendre ses attaques à distance ; si elle doit incanter sous la menace, le faire sur la défensive
+  note: Concentration +16 sur la défensive grâce à Magie de guerre. Si elle ne peut pas employer ses sorts utilement, utiliser sa morsure +11 (2d6+4 et poison).
+
+step: Invisibilité suprême arrive à expiration et le combat reste favorable
+  do: Renouveler le sort en dépensant une utilisation de niveau 4, puis changer de position
+
+step: Un allié est blessé
+  do: Poursuivre ses attaques et préserver ses propres chances de victoire
+  note: Aishwarya ne soigne pas ses alliés.
+
+## Repli
+
+step: Ses points de vie passent sous 30, ou elle n'a plus aucun sort de niveau 3 disponible
+  do: Abandonner immédiatement l'offensive et fuir ; profiter d'invisibilité suprême si elle est encore active
+  note: Avec repli expéditif actif, déplacement de 21 m, soit 42 m avec deux déplacements ; sinon, 12 m, soit 24 m avec deux déplacements.
+  note: Si nécessaire et si ses réserves le permettent, renouveler invisibilité suprême ou repli expéditif pour couvrir la fuite. Elle espère reformer sa bande et s'en prendre à Dhanishta dans les jours ou semaines à venir.

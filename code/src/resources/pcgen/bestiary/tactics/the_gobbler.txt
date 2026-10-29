@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  The Gobbler est un objet animé de taille G, une créature artificielle mauvaise et sans intelligence : 52 pv, CA 17, initiative −1.
+  Morsure +9 (1d8+6 et étreinte), coup +9 (1d6+6) ; lutte +15. Il cherche à saisir une victime dans sa gueule, puis à l'engloutir.
+  Déplacement de 6 m ; espace et allonge de 3 m ; vision dans le noir à 18 m et vision nocturne. Perception −5 : il détecte mal les intrus discrets.
+
+note: Défenses
+  Solidité 10, résistance au feu 5 et immunités des créatures artificielles. Il est vulnérable au froid et blessé par l'énergie positive.
+  Ses défenses mentales sont celles d'une créature artificielle ; sa Volonté de −4 reste faible contre les effets auxquels il n'est pas immunisé.
+
+## Ouverture
+
+step: Une cible est au-delà de son allonge de 3 m
+  do: Avancer vers la cible accessible la plus proche, à 6 m par déplacement, puis mordre si elle est à portée et qu'il lui reste son action d'attaque.
+  note: Après un déplacement ordinaire, il ne porte qu'une attaque ; privilégier la morsure pour déclencher l'étreinte.
+
+step: Une cible est déjà à portée et il peut attaquer à outrance
+  do: Porter le coup +9 (1d6+6), puis la morsure +9 (1d8+6).
+  note: Résoudre le coup avant la morsure permet de le porter avant une éventuelle lutte.
+
+step: La morsure touche une cible admissible à l'étreinte
+  do: Tenter immédiatement la prise avec un test de lutte à +15.
+  note: L'étreinte accompagne la morsure ; elle prépare l'engloutissement.
+
+## Rounds suivants
+
+step: Une victime est agrippée dans sa gueule au début de son tour
+  do: Tenter de l'engloutir avec son pouvoir d'engloutissement.
+  note: Employer la manœuvre de lutte requise par ce pouvoir ; son bonus de lutte de base est de +15.
+
+step: Une victime est engloutie et un autre adversaire est à portée
+  do: Reprendre les coups et les morsures contre l'adversaire accessible, puis tenter l'étreinte sur une morsure réussie.
+
+step: La prise échoue ou la victime se libère avant d'être engloutie
+  do: Recommencer les attaques de contact ; à outrance, porter le coup puis la morsure, et retenter l'étreinte si la morsure touche.
+
+step: Les adversaires restent hors de portée
+  do: Les poursuivre à 6 m par déplacement jusqu'à pouvoir mordre.
+  note: Il ne possède aucune attaque à distance ; son allonge de 3 m lui permet de menacer les adversaires sans être adjacent.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à attaquer et à tenter d'engloutir jusqu'à sa destruction à 0 pv.
+  note: Sans intelligence, il n'organise pas de retraite tactique et ne change pas spontanément de plan pour préserver ses 52 pv.

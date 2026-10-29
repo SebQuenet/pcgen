@@ -1,0 +1,101 @@
+## Avant le combat
+
+note: Profil
+  Zedoran, grand dracosire vert colossal, loyal mauvais, FP 20 : 391 pv, CA 37, réduction des dégâts 20/magie, résistance à la magie 31 ; immunisé contre le sommeil et la paralysie.
+  Morsure +33 (4d8+21, critique 19–20), deux griffes +33 (4d6+14 chacune, critique 19–20), queue +31 (4d6+21), deux ailes +31 (2d8+7 chacune). Allonge de 6 m, ou 9 m avec la morsure ; espace occupé de 9 m.
+  Déplacement terrestre et nage à 12 m ; vol à 75 m, manœuvrabilité déplorable. Il respire sous l'eau. Présence terrifiante à 108 m, Volonté DD 29.
+  Son intelligence favorise la préparation, les serviteurs dominés et les attaques à distance avant d'accepter un échange de coups.
+
+resource: Sorts de niveau 8 | 4/jour | réserve commune, notamment flétrissure et métamorphose universelle, DD 24
+resource: Sorts de niveau 7 | 6/jour | réserve commune, notamment convocation de monstres VII
+resource: Sorts de niveau 6 | 7/jour | réserve commune : désintégration DD 22, image permanente DD 22, vision lucide
+resource: Sorts de niveau 5 | 7/jour | réserve commune, notamment métamorphose funeste DD 21 et téléportation
+resource: Sorts de niveau 4 | 7/jour | réserve commune, notamment tentacules noirs et porte dimensionnelle
+resource: Sorts de niveau 3 | 7/jour | réserve commune : clignotement, dissipation de la magie, rapidité, éclair DD 19
+resource: Sorts de niveau 2 | 8/jour | réserve commune, notamment image miroir, détection de l'invisibilité et détection de pensées DD 18
+resource: Sorts de niveau 1 | 8/jour | réserve commune, notamment bouclier et projectile magique
+resource: Manipulation des humanoïdes | à volonté | charme-personne DD 17, suggestion DD 18, domination DD 21 ; NLS 27
+resource: Pouvoirs végétaux | à volonté | enchevêtrement DD 17, contrôle des plantes DD 20, croissance végétale ; NLS 27
+
+step: Il peut préparer le terrain
+  do: Utiliser croissance végétale pour ralentir les approches ; conserver un passage praticable vers l'eau ou un espace permettant le vol
+  do: Installer une image permanente pour tromper les intrus sur sa position ou sur un passage
+  note: Une illusion ne constitue pas un obstacle matériel. Sa foulée forestière ne garantit pas le passage à travers une végétation manipulée magiquement.
+
+step: Des humanoïdes sont accessibles avant l'affrontement
+  do: Tenter charme-personne, suggestion ou domination, une cible à la fois, pour obtenir des renseignements et des gardes
+  note: Employer seulement les serviteurs effectivement acquis ; leurs protections et leurs jets de sauvegarde peuvent déjouer ces pouvoirs.
+
+step: L'arrivée des ennemis est imminente
+  do: Lancer vision lucide, bouclier et image miroir pendant des rounds distincts ; garder rapidité pour le dernier round de préparation
+  note: Les sorts sont lancés au NLS 17. Bouclier augmente sa CA de 4 ; image miroir absorbe certaines attaques. Conserver une utilisation de téléportation et une de porte dimensionnelle pour le repli.
+
+step: Il dispose encore d'un round complet avant le contact
+  do: Lancer convocation de monstres VII pour ajouter un obstacle entre les intrus et lui
+  note: L'incantation dure 1 round et l'invocation reste temporaire ; ne pas tenter cette préparation sous des attaques qui risquent de l'interrompre.
+
+## Ouverture
+
+step: Il attaque ou survole les intrus
+  do: Appliquer la présence terrifiante à 108 m, Volonté DD 29
+  note: Exploiter les ennemis effrayés pour disperser la formation ; ne pas compter sur la peur contre ceux qui y résistent.
+
+step: Plusieurs ennemis vivants sont regroupés
+  do: Lancer flétrissure, Vigueur DD 24, en sélectionnant les adversaires sans toucher ses serviteurs
+  note: C'est son ouverture de dégâts à distance ; ne pas gaspiller cette réserve sur des créatures qui ne sont pas vivantes.
+
+step: Un humanoïde dangereux est isolé et paraît vulnérable à la domination
+  do: Tenter domination, Volonté DD 21, puis employer la cible asservie pour gêner ses anciens alliés
+  note: Choisir cette ouverture à la place de flétrissure. Ce pouvoir ne permet pas de dominer une créature d'un autre type.
+
+step: Des combattants terrestres avancent en formation serrée
+  do: Placer tentacules noirs sur leur trajet pour les retenir et séparer les combattants des lanceurs de sorts
+  note: Éviter ses propres serviteurs ; rester hors de portée pendant qu'ils se dégagent.
+
+step: Un ennemi est déjà à 6 m ou moins et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance avec morsure, deux griffes, queue et deux ailes
+  note: Si rapidité est active, ajouter une morsure. Les bonus du profil sont donnés sans rapidité ni Attaque en puissance.
+
+## Rounds suivants
+
+step: Il peut conserver ses distances dans un espace assez vaste
+  do: Utiliser Attaque en vol pour se déplacer et lancer un sort à action simple, ou porter une seule morsure, puis poursuivre son déplacement
+  note: Un passage en vol ne donne pas une attaque à outrance. Tenir compte de sa manœuvrabilité déplorable ; utiliser Wingover pour changer de direction lorsque nécessaire.
+
+step: Les ennemis restent groupés
+  do: Réutiliser flétrissure tant que sa réserve de niveau 8 le permet ; employer éclair si plusieurs cibles s'alignent, Réflexes DD 19
+  note: Choisir un seul sort par round ; surveiller les alliés pris dans la ligne de l'éclair.
+
+step: Une cible isolée doit être neutralisée
+  do: Tenter métamorphose funeste, DD 21, ou désintégration, DD 22, selon la menace
+  note: Désintégration exige une attaque de contact à distance. Préférer les attaques physiques ou un autre adversaire si les sauvegardes et la résistance à la magie rendent ses sorts inefficaces.
+
+step: Une protection magique empêche ses attaques ou favorise nettement l'adversaire
+  do: Tenter une dissipation de la magie ciblée, puis reprendre l'offensive au round suivant
+  note: Une dissipation n'assure pas la suppression de toutes les protections ; ne pas y consacrer plusieurs rounds sans résultat utile.
+
+step: Les ennemis arrivent par une zone de végétation
+  do: Employer enchevêtrement, Réflexes DD 17, pour ralentir les retardataires pendant qu'il attaque les cibles avancées
+  note: Le DD est faible pour ce niveau d'adversité ; ce pouvoir sert surtout à gêner une approche et ne remplace pas ses attaques principales.
+
+step: Une cible reste à portée de toutes ses attaques
+  do: Concentrer son attaque à outrance sur l'adversaire le plus dangereux ou déjà blessé
+  note: Exploiter les critiques de morsure et de griffes avec Critique sanglant. Employer Attaque en puissance contre les CA faciles à toucher ; la désactiver si les attaques manquent trop souvent.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Se repositionner et porter une seule morsure si elle est à portée ; sinon consacrer son action à un sort
+  note: Sa morsure atteint à 9 m ; les griffes, les ailes et la queue exigent une cible à 6 m ou moins.
+
+## Repli
+
+step: Il tombe à 120 pv ou moins, ou subit une pression qu'il ne peut plus contenir
+  do: Utiliser téléportation vers un refuge connu
+  note: Le seuil de 120 pv est une décision tactique. La réserve de niveau 5 doit conserver une utilisation ; l'évacuation passe avant une dernière attaque.
+
+step: Il est encerclé et doit d'abord sortir du contact
+  do: Employer porte dimensionnelle pour gagner un emplacement dégagé ou une issue accessible
+  note: Il ne peut plus agir après ce sort pendant son tour ; effectuer la téléportation ou poursuivre la fuite au round suivant.
+
+step: Le déplacement magique est indisponible
+  do: S'envoler vers un espace dégagé à 75 m, ou gagner l'eau et plonger à 12 m par déplacement
+  note: Il respire sous l'eau. Faire couvrir sa fuite par les serviteurs encore présents et éviter de revenir au contact avec ses poursuivants.

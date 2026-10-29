@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Neferekhu, morte-vivante de taille TP, est une tête momifiée enfermée dans une cage dorée. Haineuse, elle combat surtout par ses sorts à distance et son regard haineux à 9 m (DD 16).
+  52 pv ; CA 18, contact 14 ; morsure +9 (1d6 et malédiction), allonge 0 m. Seule, elle roule à 1,50 m par déplacement ; vision dans le noir à 18 m.
+  Traits des morts-vivants ; résistance à la canalisation +4.
+
+resource: Sorts de niveau 3 | 4/jour au total | réserve commune à cécité/surdité et blessure grave, DD 18
+resource: Sorts de niveau 2 | 6/jour au total | réserve commune à carreau de peur et immobilisation de personne, DD 16, et blessure modérée, DD 17
+resource: Sorts de niveau 1 | 7/jour au total | réserve commune à imprécation et ordre assassin, DD 15, et anathème, blessure légère et rayon de fièvre, DD 16
+
+step: Ses gardiens squelettiques sont présents
+  do: Leur ordonner d'engager les lanceurs de sorts adverses ; faire porter sa cage par l'un d'eux pour entrer dans le combat
+  note: Une créature de taille P ou supérieure peut la porter dans sa case sans pénalité.
+
+## Ouverture
+
+note: Priorités
+  Une seule incantation par round ; choisir l'ouverture selon les cibles disponibles.
+
+step: Des vivants entrent à 9 m
+  do: Appliquer le regard haineux avant de résoudre les attaques et les sorts concernés
+  note: Volonté DD 16 annule ; sinon, chaque vivant lance deux fois ses jets d'attaque, de sauvegarde et de compétence et conserve le pire résultat.
+
+step: Un adversaire dangereux dépend de sa vue, à 48 m ou moins
+  do: Cécité/surdité, option cécité, sur cette cible ; Vigueur DD 18 annule
+  note: Privilégier une cible encore capable d'agir plutôt qu'un ennemi déjà neutralisé.
+
+step: Un jeune guerrier en pleine santé se trouve à 12 m ou moins, près de ses alliés
+  do: Ordre assassin ; Volonté DD 15 annule
+  note: À son prochain tour, il attaque au corps à corps son allié le plus proche, en se déplaçant si nécessaire ; effet de 1 round.
+
+## Rounds suivants
+
+step: Un humanoïde menaçant reste libre d'agir, à 48 m ou moins
+  do: Immobilisation de personne ; Volonté DD 16 annule
+  note: Paralysie pendant 6 rounds au maximum ; la cible peut retenter sa sauvegarde chaque round, par une action complexe.
+
+step: Une cible bonne reste à 12 m ou moins
+  do: Carreau de peur, attaque de contact à distance +9 ; 3d8 dégâts, Volonté DD 16 pour réduire de moitié
+  note: Contre un extérieur bon, 6d6 dégâts et état fiévreux pendant 1 round ; sauvegarde réussie annule aussi cet état. Dégâts réduits de moitié contre une cible ni bonne ni mauvaise ; aucun effet contre une cible mauvaise.
+
+step: Une cible encore valide doit être affaiblie, à 12 m ou moins
+  do: Rayon de fièvre, attaque de contact à distance +9 ; Vigueur DD 16 annule
+  note: État fiévreux pendant 6 minutes : malus de -2 aux attaques, dégâts d'armes, sauvegardes et tests de compétence et de caractéristique.
+
+step: Plusieurs ennemis restent dangereux
+  do: Répartir cécité, immobilisation et ordre assassin entre eux ; maintenir les gardiens au contact des lanceurs de sorts
+  note: Profiter du regard haineux pour rendre leurs sauvegardes plus difficiles ; décompter chaque sort de la réserve commune de son niveau.
+
+step: Le porteur utilise sa cage comme fléau improvisé et touche
+  do: Effectuer la morsure gratuite +9 (1d6 et malédiction)
+  note: Malédiction : Volonté DD 16 ou -4 aux attaques, sauvegardes et tests de caractéristique et de compétence, jusqu'à sa levée.
+  note: Lorsqu'elle est maniée ainsi, seules les manœuvres de désarmement ou de destruction contre le porteur permettent de l'attaquer ; ses incantations subissent les mouvements violents.
+
+step: Elle est posée au sol et un ennemi arrive au contact
+  do: Privilégier une incantation sur la défensive ; mordre seulement si la cible occupe sa case
+  note: Concentration +13 sur la défensive grâce à Magie de guerre ; sa morsure n'atteint pas les cases voisines.
+
+## Repli
+
+step: Ses points de vie diminuent ou ses gardiens sont détruits
+  do: Continuer à lancer ses sorts, puis mordre si une cible est accessible, jusqu'à sa destruction
+  note: Neferekhu désire l'oubli de la mort ; aucun seuil de fuite, aucune reddition volontaire.

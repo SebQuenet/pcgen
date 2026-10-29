@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Argwyn, glaistig corrompue, fée de la terre chaotique mauvaise, FP 23, rang mythique 10. Intelligente et mobile, elle privilégie les attaques à distance et le contrôle des adversaires.
+  472 pv, CA 47 ; régénération 30 contrariée par l'air ; RD 15/fer froid et épique, RM 34 et résistances élémentaires de 30.
+  Explosion végétale +38 (20d6+44, 19-20/x3 et maléfice), explosion de terre +38 (10d6+34, 19-20/x3 et maléfice) ; lame de terre +23 au contact (10d6+34, 19-20/x3 et maléfice), allonge 1,50 m.
+  Déplacement, creusement et escalade à 18 m ; nage dans la terre. Perception des vibrations à 36 m, vision dans le noir à 18 m ; aura d'extase à 9 m, DD 34.
+
+resource: Liberté de mouvement et passage sans traces | permanents | actifs dès le début de la rencontre
+resource: Confusion | à volonté | pouvoir magique, NLS 25
+resource: Voie végétale | à volonté | déplacement par les plantes, sous réserve de végétaux appropriés
+resource: Heurt de pierres | 3/jour | DD 31
+resource: Pétrification | 3/jour | DD 28
+resource: Glissement de terrain | 3/jour | préparation du terrain
+resource: Convocation d'alliés naturels IX | 3/jour | renforts temporaires
+
+step: Elle choisit le lieu de l'affrontement
+  do: Privilégier un terrain naturel où elle peut s'enfoncer dans la terre, changer d'angle d'attaque et rejoindre une plante permettant une fuite par voie végétale
+  note: Rester au sol pour préserver ses défenses liées à la terre ; éviter les positions où un adversaire pourrait la maintenir dans les airs
+
+step: Les intrus sont repérés avant le combat
+  do: Se dissimuler avec Discrétion +47 et observer avec Perception +39 ; identifier les utilisateurs d'attaques d'air et les lanceurs de sorts
+  note: La perception des vibrations signale les déplacements au sol ; émerger avec une ligne de vue et une ligne d'effet avant de viser
+
+step: Elle dispose de préparatifs prolongés
+  do: Employer glissement de terrain pour aménager les approches et conserver un passage de retraite
+
+step: L'affrontement est imminent et elle dispose du temps d'invocation
+  do: Utiliser convocation d'alliés naturels IX pour placer des renforts entre elle et les combattants adverses
+  note: Faire engager les ennemis par les créatures convoquées pendant qu'elle conserve une position de tir
+
+## Ouverture
+
+step: Un adversaire capable d'exploiter sa faiblesse à l'air est identifié
+  do: Le viser en priorité avec l'explosion végétale +38 (20d6+44, 19-20/x3 et maléfice)
+  note: Son initiative +27 lui permet de chercher à neutraliser cette menace avant qu'elle compromette sa régénération
+
+step: Plusieurs ennemis sont groupés autour d'une cible dangereuse
+  do: Ouvrir avec heurt de pierres sur cette cible, DD 31
+  note: Choisir cette ouverture à la place du tir lorsque le placement adverse rend le pouvoir plus rentable
+
+step: Plusieurs ennemis restent groupés et semblent sensibles aux effets mentaux
+  do: Employer confusion pour désorganiser leur attaque
+  note: Ce pouvoir est à volonté ; son utilisation occupe l'action consacrée à l'attaque de ce tour
+
+step: Des ennemis approchent et elle peut rester hors de leur allonge
+  do: Les laisser entrer dans son aura de 9 m, DD 34, puis tirer sur la menace encore capable d'agir
+  note: Garder une issue vers la terre plutôt que de se laisser encercler
+
+## Rounds suivants
+
+step: Elle dispose d'une ligne de tir
+  do: Concentrer les explosions végétales +38 sur le même adversaire jusqu'à sa neutralisation ; appliquer le maléfice associé aux touches
+  note: Priorité aux attaques d'air, puis aux lanceurs de sorts et aux ennemis qui menacent sa retraite. L'explosion végétale inflige davantage de dégâts que l'explosion de terre
+
+step: Une cible dangereuse paraît peu résistante physiquement
+  do: Tenter pétrification, Vigueur DD 28
+  note: Changer de méthode si la cible résiste aisément ; conserver les utilisations restantes pour un adversaire plus vulnérable
+
+step: Les combattants adverses se rapprochent ou tentent de l'encercler
+  do: Se déplacer de 18 m pour rétablir une distance de tir ; au besoin, passer dans la terre et ressortir par un autre accès
+  note: Alterner les positions d'où elle tire ; utiliser les renforts pour gêner la poursuite
+
+step: Un ennemi reste au contact et le dégagement est impossible
+  do: Frapper avec la lame de terre +23 (10d6+34, 19-20/x3 et maléfice)
+  note: Son allonge est de 1,50 m ; chercher une occasion de reprendre le combat à distance
+
+step: Les premiers renforts ont disparu et les ennemis continuent à la presser
+  do: Utiliser une nouvelle convocation d'alliés naturels IX si elle peut achever l'invocation sans être interrompue
+
+step: Elle subit des blessures mais conserve une position sûre au sol
+  do: Faire durer l'affrontement en utilisant le terrain et ses déplacements
+  note: Appliquer la régénération de 30 pv par round tant qu'elle n'est pas supprimée ; ses résistances de 30 favorisent les échanges prolongés contre les attaques élémentaires
+
+## Repli
+
+step: Ses points de vie tombent à 118 ou moins, ou l'ennemi parvient à supprimer durablement sa régénération
+  do: Rompre la ligne de vue en s'enfonçant dans la terre à 18 m par déplacement ; laisser les créatures convoquées retarder la poursuite
+  note: Rechercher une position au sol hors d'atteinte afin de récupérer ses points de vie
+
+step: Une plante appropriée est accessible et la poursuite continue
+  do: Utiliser voie végétale pour quitter le champ de bataille
+  note: Préférer cette fuite à un nouvel échange si les adversaires contrôlent les sorties de terre

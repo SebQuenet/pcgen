@@ -1,0 +1,89 @@
+## Avant le combat
+
+note: Profil
+  Moschabbatt, dragon du magma vénérable de taille TG, chaotique neutre, FP 17, défend jalousement son trésor et les secrets des nains. Il préfère combattre au-dessus du lac de lave, dissiper les protections adverses, aveugler les tireurs et employer le froid, puis l'électricité et l'acide.
+  310 PV ; CA 40 avant sorts ; réduction des dégâts 15/magie ; résistance à la magie 28 ; immunité au feu, à la paralysie et au sommeil ; vulnérabilité au froid.
+  Morsure +32, 2d8+16 et 10 de feu ; 2 griffes +32, 2d6+11 chacune ; queue +30, 2d6+16 ; 2 ailes +30, 1d8+5 chacune. Morsure et griffes : critique 19-20. Allonge 3 m, ou 4,50 m avec la morsure.
+  Déplacement terrestre 12 m ; vol 60 m, manœuvrabilité médiocre. Sorts au NLS 15 ; pouvoirs magiques au NLS 23.
+
+resource: Sorts de niveau 1 | 8/jour | réserve commune, notamment armure de mage et bouclier
+resource: Sorts de niveau 2 | 8/jour | réserve commune, notamment invisibilité et poussière scintillante
+resource: Sorts de niveau 3 | 8/jour | réserve commune, notamment dissipation de la magie, lenteur et mur de vent
+resource: Sorts de niveau 4 | 7/jour | réserve commune, notamment porte dimensionnelle et ancre dimensionnelle
+resource: Sorts de niveau 5 | 7/jour | réserve commune, notamment cône de froid, mur de force et téléportation ; garder un emplacement pour le repli
+resource: Sorts de niveau 6 | 7/jour | réserve commune à éclair multiple, frappe de glace et sphère glaciale
+resource: Sorts de niveau 7 | 5/jour | réserve commune à éruption caustique, mot de pouvoir aveuglant et dissipation de la magie à incantation rapide
+resource: Boule de feu à retardement | 3/jour | pouvoir magique, Réflexes DD 25, 20d6 de feu
+resource: Mains brûlantes, rayon ardent, mur de feu | à volonté | pouvoirs magiques ; mains brûlantes : Réflexes DD 20
+resource: Bouclier de feu chaud | permanent | riposte de feu au contact ; réduit de moitié les dégâts de froid, ou les annule sur un jet de Réflexes réussi normalement prévu pour les réduire de moitié ; appliquer aussi sa vulnérabilité au froid
+
+step: Avant tout combat
+  do: Lancer armure de mage et choisir une position permettant de combattre au-dessus de la lave
+  note: armure de mage dure 15 heures et ajoute +4 à la CA indiquée
+
+step: Danger annoncé
+  do: Ajouter bouclier, puis invisibilité s'il n'a pas encore été repéré
+  note: bouclier dure 15 minutes et ajoute encore +4 à la CA ; invisibilité dure 15 minutes au maximum et cesse lorsqu'il attaque
+
+note: Protection contre le froid
+  Les consignes mentionnent résistance aux énergies destructives contre le froid, mais ce sort ne figure pas parmi les sorts connus et aucun objet ne le fournit dans le bloc. Ne pas lui attribuer de résistance supplémentaire ; tenir compte du bouclier de feu chaud permanent.
+
+## Ouverture
+
+step: Un adversaire dépend d'un sort de vol ou d'une protection magique contre le feu au-dessus de la lave
+  do: Dissipation de la magie ciblée, de préférence à incantation rapide, sur l'effet identifié le plus utile à supprimer
+  note: test de dissipation 1d20+15 contre 11 + NLS de l'effet ; une dissipation ne retire qu'un sort. La version rapide consomme une action rapide et un emplacement de niveau 7 ; elle laisse l'action simple disponible pour un autre sort
+  note: enlever le vol peut provoquer une chute ; enlever une résistance ou une protection contre le feu expose à la lave et aux pouvoirs de feu. Ne pas supposer que la dissipation réussit automatiquement ou retire une immunité naturelle
+
+step: Un tireur ou un lanceur de sorts dangereux se trouve à 18 m ou moins
+  do: Mot de pouvoir aveuglant sur lui, notamment après une dissipation rapide
+  note: aucun jet de sauvegarde, mais résistance à la magie applicable ; aucun effet au-dessus de 200 PV actuels. Cécité pendant 1d4+1 rounds à 101-200 PV, 1d4+1 minutes à 51-100 PV, permanente à 50 PV ou moins
+
+step: Il effectue sa première attaque et des ennemis sont à 90 m ou moins
+  do: Déclencher sa présence terrifiante
+  note: Volonté DD 28 ; appliquer les limites normales de cette aura, sans lui consacrer l'action simple du round
+
+## Rounds suivants
+
+step: Plusieurs adversaires peuvent être pris dans une même zone de froid
+  do: Lancer cône de froid dans un cône de 18 m, ou sphère glaciale si leur position favorise une attaque à distance
+  note: 15d6 de froid ; Réflexes DD 23 pour cône de froid, DD 24 pour sphère glaciale, pour réduire les dégâts de moitié. Se placer pour éviter d'être pris dans ses propres zones
+
+step: Des ennemis sont alignés dans une ligne de 9 m et son action rapide est disponible
+  do: Ajouter frappe de glace en action rapide, avant ou après son action simple ou son attaque à outrance
+  note: 15d6 de froid, Réflexes DD 24 pour moitié ; ne pas utiliser aussi une dissipation rapide pendant ce round
+
+step: Les ennemis se dispersent ou résistent au froid
+  do: Passer à éclair multiple, en visant d'abord la cible la plus dangereuse
+  note: Réflexes DD 24 ; poursuivre les dissipations ciblées si des protections ou des sorts de vol restent déterminants
+
+step: Plusieurs ennemis se trouvent à 9 m ou moins et l'acide devient préférable
+  do: Lancer éruption caustique, une explosion de 9 m de rayon centrée sur lui
+  note: 15d6 d'acide, Réflexes DD 24 pour moitié, sans résistance à la magie ; les victimes qui ratent leur sauvegarde subissent encore 7d6 d'acide à chacun de ses deux tours suivants, sauf si l'acide est éliminé
+
+step: Un groupe a perdu ses protections contre le feu
+  do: Employer boule de feu à retardement avec explosion immédiate, ou mur de feu pour barrer un passage et gêner les renforts
+  note: privilégier les pouvoirs magiques pour économiser les emplacements de sorts nécessaires aux dissipations et au repli
+
+step: Les combattants menacent de l'encercler ou un lanceur de sorts exploite sa vulnérabilité au froid
+  do: Interposer mur de force pour séparer les adversaires, puis changer de position
+  note: lenteur, Volonté DD 20, peut réduire la pression de plusieurs combattants ; mur de vent gêne les flèches et carreaux ordinaires
+
+step: Un ennemi reste à portée et Moschabbatt peut consacrer son round à la mêlée
+  do: Attaque à outrance avec morsure, deux griffes, queue et deux ailes
+  note: à plus de 3 m et jusqu'à 4,50 m, seule sa morsure porte ; les 10 dégâts de feu de surchauffe s'ajoutent déjà à cette morsure
+
+step: Il doit se déplacer tout en frappant un ennemi isolé
+  do: Utiliser Attaque en vol pour placer une morsure pendant son déplacement, puis poursuivre sa trajectoire
+  note: Frappe décisive permet une morsure à 4d8+16 et 10 de feu avec cette action d'attaque ; elle ne s'applique pas à l'attaque à outrance. Prévoir des trajectoires dégagées adaptées à son vol médiocre
+
+## Repli
+
+step: Points de vie à 62 ou moins, sans menace sur la Hache des seigneurs nains
+  do: Proposer de parlementer et négocier l'arrêt du combat
+  note: ce seuil correspond à 20 % de ses 310 PV ; garder une téléportation disponible si les pourparlers échouent
+
+step: Points de vie à 62 ou moins et adversaires venus chercher la Hache des seigneurs nains
+  do: Rejoindre sa chambre forte par téléportation ou porte dimensionnelle, puis revenir défendre l'artefact jusqu'à la mort
+  note: après porte dimensionnelle, aucune autre action n'est possible avant son prochain tour ; prévoir aussi le moyen de revenir
+  note: ses consignes prévoient une guérison dans la chambre forte, mais aucun sort connu ni objet fourni ne permet de la produire. Ne pas restaurer de PV sans ressource effectivement définie pour cette rencontre

@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Dhirgiska est une hydre des miasmes de taille TG, neutre, à douze têtes. D'intelligence animale, elle défend férocement son repaire dans des ruines inondées.
+  Douze morsures +14 (1d8+4 et poison) en attaque à outrance ; allonge de 4,50 m ; espace occupé de 6 m. Déplacement et nage à 6 m ; Natation +21.
+  138 PV, CA 22, réduction des dégâts 10/fer froid ; immunité aux maladies et aux poisons. Elle gagne à prolonger le combat au contact.
+
+resource: Guérison accélérée | chaque round | récupère 12 PV sur le corps ; cette guérison ne restaure pas les têtes tranchées
+resource: Poison des morsures | chaque morsure qui blesse | Vigueur DD 21 ; 1d3 points de dégâts de Force par round pendant 6 rounds et état fiévreux pendant 1 minute ; guérison après 2 sauvegardes consécutives réussies
+
+step: Des intrus approchent du repaire
+  do: Les repérer par l'odorat et Perception +12, puis attendre près de l'eau, là où ses cous peuvent atteindre les arrivants.
+  note: Vision dans le noir à 18 m et vision nocturne ; l'odorat aide à détecter les intrus sans supprimer les difficultés pour les localiser précisément.
+
+## Ouverture
+
+step: Un intrus est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance : douze morsures +14, chacune infligeant 1d8+4 et le poison.
+  note: Concentrer les morsures sur la proie la plus proche ; si elle tombe, diriger les morsures restantes sur une autre cible à portée.
+
+step: Aucun intrus n'est à portée
+  do: Avancer ou nager de 6 m au maximum, puis porter une morsure si une cible devient accessible à 4,50 m.
+  note: Conserver autant que possible une position près de l'eau pour pouvoir y entraîner une proie ou s'y retirer.
+
+## Rounds suivants
+
+step: Une proie reste à portée
+  do: Rester sur place et renouveler l'attaque à outrance avec toutes les têtes disponibles.
+  note: Une tête tranchée retire sa morsure jusqu'à sa repousse. Poursuivre les morsures sur la proie déjà affaiblie par le venin.
+
+step: Une morsure touche une proie qu'elle peut saisir
+  do: Utiliser Snatch pour tenter gratuitement une lutte, comme avec étreinte ; employer le BMO +18 et les modificateurs applicables à l'étreinte.
+  note: Privilégier une proie isolée. La maintenir pour l'empêcher de s'éloigner ; si elle est de taille TP ou inférieure, une lutte maintenue avec succès lui inflige automatiquement les dégâts de morsure grâce à Snatch.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Le mordre à +14, pour 1d8+4 et le poison.
+  note: Attaques réflexes permet jusqu'à trois attaques d'opportunité par round avec sa Dextérité de 14, y compris lorsqu'elle est prise au dépourvu ; une même occasion n'en donne qu'une.
+
+step: Un adversaire tranche une tête, lui inflige un saignement au corps à corps ou confirme un critique avec une arme perforante ou tranchante de corps à corps
+  do: Résoudre immédiatement la projection de sang venimeux sur cet adversaire : Vigueur DD 21 ou subir le poison comme après une morsure.
+  note: Cette réaction est automatique et ne consomme pas son action du round.
+
+step: Une tête est tranchée
+  do: Continuer à attaquer avec les autres têtes et faire repousser deux têtes après 1d4 rounds, dans la limite de vingt-quatre têtes.
+  note: Chaque tête possède 12 PV ; sa section inflige aussi 12 points de dégâts au corps. Au moins 5 points de dégâts de feu ou d'acide au moignon avant la repousse empêchent celle-ci. La guérison accélérée suit le nombre de têtes, avec un minimum de 12.
+
+## Repli
+
+step: Ses PV passent sous 35 et les ennemis continuent à la blesser plus vite qu'elle ne guérit
+  do: Se désengager vers l'eau, puis nager vers les cavernes de son repaire ; utiliser une retraite si elle peut ainsi éviter les attaques d'opportunité du départ.
+  note: Ce seuil est un repère de conduite pour le MJ. Sa nage vaut 6 m par déplacement ; une retraite permet jusqu'à 12 m si le passage le permet.
+
+step: Elle a rompu le contact
+  do: Rester à couvert et laisser sa guérison accélérée restaurer ses PV, jusqu'au maximum de 138, puis défendre de nouveau son repaire si les intrus insistent.
+  note: Elle reste une bête territoriale : elle abandonne la poursuite de proies qui quittent son domaine.

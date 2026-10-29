@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Brextur, diable ukobach de taille P, loyal mauvais, défend son repaire en restant caché parmi les panaches de feu. Discrétion +16, initiative +8 ; 37 pv, CA 17 ; déplacement de 9 m.
+  Braise à distance +10 (1d6 de feu). Au contact, tisonnier +5 (1d6-1 plus 1d4 de feu) ou deux griffes +5 (1d3-1 plus 1d4 de feu chacune) ; allonge de 1,50 m.
+  Il anime les panaches en petits élémentaires du Feu et utilise Saut de feu pour circuler entre les flammes.
+
+note: Défenses
+  Immunité au feu et au poison ; résistance à l'acide 10 et au froid 10 ; réduction des dégâts 5/Bien ou argent ; résistance à la magie 15.
+  Vision dans le noir à 18 m et vision dans les ténèbres : l'obscurité lui permet de surveiller les intrus sans lumière.
+
+resource: Huile | 5 flacons | réserve de combustible
+
+step: Des intrus approchent du repaire
+  do: Se cacher à proximité des panaches de feu avec Discrétion +16 et observer leur progression
+  note: conserver l'accès aux panaches pour pouvoir se déplacer avec Saut de feu
+
+## Ouverture
+
+step: Brextur est encore caché
+  do: Animer un panache de feu en petit élémentaire du Feu et le faire attaquer les intrus
+  note: rester dissimulé pendant que l'élémentaire engage le groupe
+
+step: Brextur est repéré et un adversaire reste à distance
+  do: Attaquer avec une braise +10 (1d6 de feu)
+  note: il reste défendre son repaire et utilise les panaches pour se repositionner avec Saut de feu
+
+step: Un adversaire arrive au contact
+  do: Frapper au tisonnier +5 (1d6-1 plus 1d4 de feu), ou porter deux attaques de griffes +5 chacune lors d'une attaque à outrance
+  note: chaque griffe inflige 1d3-1 plus 1d4 de feu ; après un déplacement ordinaire, une seule attaque de mêlée
+
+## Rounds suivants
+
+step: Brextur demeure caché
+  do: Poursuivre la même tactique en animant les panaches de feu pour envoyer des petits élémentaires du Feu contre les intrus
+  note: privilégier cette tactique tant que sa présence reste indétectée
+
+step: Brextur est découvert et les ennemis tentent de l'encercler
+  do: Utiliser Saut de feu pour passer d'un panache à l'autre et retrouver une position moins exposée
+  note: son immunité au feu lui permet de profiter des flammes du repaire
+
+step: Une cible reste à distance
+  do: Privilégier la braise +10 (1d6 de feu), plus précise que ses attaques de mêlée
+
+step: Le contact persiste et Brextur peut effectuer une attaque à outrance
+  do: Utiliser ses deux griffes +5 (1d3-1 plus 1d4 de feu chacune)
+
+## Repli
+
+step: Points de vie sous 10
+  do: Se rendre sans condition et supplier les intrus de lui laisser la vie
+  note: maudire « l'Héritière et ses laquais pour être venus à Kantaria » ; il cesse de défendre son repaire

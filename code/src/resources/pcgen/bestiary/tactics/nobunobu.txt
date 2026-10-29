@@ -1,0 +1,87 @@
+## Avant le combat
+
+note: Profil
+  Nobunobu est un atamahuta, un oni géant à deux têtes, loyal mauvais, FP 11. Il associe force physique, pouvoirs magiques et combat coordonné avec son partenaire.
+  147 pv ; CA 25, contact 10 ; RD 10/adamantium ; résistance à la magie 22 ; régénération 5, interrompue par l'acide ou le feu.
+  Pelle de moine +20/+20/+15/+10 à outrance, 1d8+10 par coup ; allonge 3 m. Ces valeurs précèdent les modifications de rapidité, de rage ou d'Attaque en puissance.
+  Déplacement terrestre 9 m ; vol 12 m, bonne manœuvrabilité ; espace occupé 3 m. Javelot +14, 1d8+7.
+  Perception +24 ; vision dans le noir à 18 m, vision nocturne et détection de l'invisibilité permanente.
+
+resource: Potions de vol | 2 | boire une potion avant le combat ; garder la seconde en réserve
+resource: Peau de pierre | 1/jour | protection à activer avant le combat ; RD 10/adamantium, absorption maximale de 110 points de dégâts
+resource: Rapidité | 3/jour | pouvoir magique, NLS 11
+resource: Boule de feu | 3/jour | 10d6 de feu ; Réflexes DD 16 pour réduire de moitié
+resource: Tentacules noirs | 1/jour | immobiliser les défenseurs par la lutte ; aucun jet de sauvegarde
+resource: Mur de feu | 1/jour | couper les déplacements et séparer les défenseurs
+resource: Poigne électrique | 3/jour | pouvoir de contact à transmettre par l'arme
+resource: Contact glacial | 3/jour | pouvoir de contact ; DD 14
+resource: Porte dimensionnelle | 3/jour | repositionnement tactique
+resource: Rage | 3/jour | à réserver au seuil de 75 pv ou moins
+resource: Javelots | 5 | solution de secours à distance
+
+step: Il a le temps de se préparer
+  do: Boire une potion de vol, puis activer peau de pierre avant d'entrer au combat.
+  note: Appliquer la RD 10/adamantium une seule fois ; ne pas additionner deux réductions identiques.
+
+step: Les intrus approchent de la cour
+  do: Se placer en hauteur avec son partenaire et repérer les cibles avec Perception +24 et détection de l'invisibilité.
+  note: Prévoir des zones de bombardement qui laisseront son partenaire descendre sans traverser ses propres effets.
+
+## Ouverture
+
+step: Premier round de combat
+  do: Activer rapidité en incluant son partenaire, puis utiliser le déplacement disponible pour préparer la descente ou garder une bonne ligne de tir.
+  note: Cette activation occupe l'action simple ; ne pas lui ajouter une charge ou un autre pouvoir magique pendant ce tour.
+  note: Rapidité dure 11 rounds et accorde notamment +1 aux attaques et à la CA, ainsi qu'une attaque supplémentaire lors d'une attaque à outrance.
+
+step: Après rapidité, son partenaire assure le soutien depuis les hauteurs
+  do: Descendre dans la cour sur l'ennemi accessible le plus proche ; traiter cette descente comme une charge, conformément à sa tactique.
+  note: La charge donne une seule attaque de pelle de moine ; elle ne permet pas une attaque à outrance.
+
+step: Son partenaire est déjà descendu et Nobunobu reste au-dessus
+  do: Lancer boule de feu sur des ennemis regroupés, tentacules noirs sur les défenseurs à immobiliser, ou mur de feu pour diviser leurs forces.
+  note: Choisir un seul pouvoir pour ce tour et préserver le partenaire des zones dangereuses. Nobunobu descend à son tour au round suivant.
+
+## Rounds suivants
+
+step: Les deux oni sont dans la cour et un adversaire est à portée
+  do: Attaquer l'ennemi le plus proche à la pelle de moine ; privilégier l'attaque à outrance si aucun déplacement important n'est nécessaire.
+  note: Utiliser l'allonge de 3 m pour menacer les approches. Ajouter l'attaque de rapidité seulement pendant une attaque à outrance.
+
+step: Il veut transmettre un pouvoir de contact par son arme
+  do: Activer poigne électrique ou contact glacial et le transmettre par la pelle de moine grâce à frappe magique.
+  note: L'activation permet une attaque de mêlée gratuite au meilleur bonus ; si elle touche, appliquer les dégâts de l'arme et l'effet du pouvoir.
+  note: Cette attaque ne s'ajoute pas à une attaque à outrance durant le même tour. Boule de feu, tentacules noirs et mur de feu ne sont pas des pouvoirs de contact.
+
+step: Il active un pouvoir magique à portée d'un ennemi
+  do: Lancer sur la défensive si nécessaire pour éviter l'attaque d'opportunité.
+  note: Concentration +14, avec +4 supplémentaire d'Incantation de guerre pour lancer sur la défensive. S'il provoque une attaque d'opportunité en lançant, sa seconde tête lui donne +4 à la CA contre cette attaque.
+
+step: Un combattant puissant dépend de son arme
+  do: Tenter une destruction de cette arme avec son BMO de +24, en remplaçant une attaque de mêlée.
+  note: Science de la destruction évite l'attaque d'opportunité de la cible ; résoudre la manœuvre contre son DMD, puis appliquer la solidité de l'arme.
+
+step: Il doit se déplacer avant de frapper
+  do: Rejoindre une cible et porter une attaque avec Frappe décisive.
+  note: Frappe décisive double les dés de dégâts de l'arme, pas les bonus fixes ; elle ne s'applique ni à une charge ni à une attaque à outrance.
+
+step: Une cible est facile à toucher
+  do: Envisager Attaque en puissance pour augmenter les dégâts de ses coups.
+  note: Désactiver ce choix si la baisse de précision empêche de toucher régulièrement.
+
+step: Une cible prioritaire est inaccessible par un déplacement ordinaire
+  do: Utiliser porte dimensionnelle pour gagner une position d'attaque utile au tour suivant.
+  note: Après ce pouvoir, il ne peut plus agir jusqu'à son prochain tour ; ne pas enchaîner avec une attaque immédiate.
+
+step: Aucun ennemi n'est accessible au contact et ses pouvoirs doivent être conservés
+  do: Lancer un javelot, puis chercher une voie d'approche en vol.
+
+## Repli
+
+step: Nobunobu tombe à 75 pv ou moins
+  do: Activer rage sur lui-même et sur son partenaire s'il est à portée, puis poursuivre le combat au corps à corps.
+  note: Il s'agit du pouvoir magique rage, pas d'une capacité de barbare. Cette activation remplace ses attaques de ce tour.
+
+step: Après avoir déclenché rage
+  do: Combattre sauvagement jusqu'à la mort, en frappant les ennemis les plus proches et en brisant les armes menaçantes.
+  note: Il ne fuit pas ; porte dimensionnelle reste un outil de placement avant cette phase. Sa régénération rend les blessures moins décisives, mais l'acide et le feu l'interrompent.

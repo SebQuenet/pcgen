@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Excavateur mécanique neutre de taille M, serviteur sans intelligence modifié pour le forage. Il applique des consignes simples et combat au contact.
+  Foreuse +6 (1d6+6, critique x3), allonge 1,50 m ; déplacement 9 m ; initiative +6 ; CA 16 ; 31 pv ; guérison accélérée 2.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +0. Immunités des créatures artificielles ; vulnérabilité à l'électricité, qui lui inflige 50 % de dégâts supplémentaires.
+
+resource: Guérison accélérée | permanente | récupère 2 pv au début de son tour, jusqu'à un maximum de 31 pv
+resource: Réparation mécanique | à volonté | action simple, sans attaque d'opportunité ; rend 1d10 pv à lui-même ou à une créature mécanique adjacente
+
+step: Préparation par son contrôleur
+  do: Le remonter avec sa clef et lui donner une consigne précise : cible à attaquer, zone à défendre et éventuelle condition de rappel
+  note: Sans intelligence, il ne prépare pas de ruse et ne choisit pas spontanément une stratégie contre les lanceurs de sorts.
+
+## Ouverture
+
+step: Ennemi désigné accessible avec un déplacement de 9 m au plus
+  do: Avancer jusqu'à 1,50 m de la cible, puis porter une attaque de foreuse +6 (1d6+6, critique x3)
+
+step: Ennemi déjà à portée
+  do: Attaquer immédiatement avec la foreuse
+
+step: Ennemi trop éloigné pour avancer et attaquer
+  do: Effectuer un double déplacement, jusqu'à 18 m, vers la cible autorisée par ses consignes
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Cible toujours à portée et aucune réparation prioritaire
+  do: Répéter l'attaque de foreuse chaque round
+  note: Il ne porte qu'une attaque par tour ; rester immobile ne lui donne pas d'attaque supplémentaire.
+
+step: Il lui reste 15 pv ou moins et ses consignes permettent l'entretien
+  do: Consacrer son action simple à se réparer de 1d10 pv, puis reprendre les attaques quand son état le permet
+  note: Les 2 pv de guérison accélérée s'ajoutent à cette réparation ; se réparer remplace l'attaque du tour.
+
+step: Une créature mécanique alliée adjacente est endommagée et sa consigne privilégie son soutien
+  do: Lui rendre 1d10 pv par réparation mécanique au lieu d'attaquer
+
+step: La cible sort de son allonge
+  do: Avancer pour rétablir le contact et attaquer si une action simple reste disponible
+  note: Respecter les limites de la zone ou de la poursuite fixées par ses ordres.
+
+## Repli
+
+step: Aucun ordre de rappel ou de préservation
+  do: Continuer à exécuter sa consigne, même gravement endommagé
+  note: Il ne fuit pas par peur. À 0 pv, il est détruit ; sa guérison accélérée ne le réactive pas.
+
+step: Sa condition de rappel est remplie
+  do: Se désengager vers le point prévu ; une retraite permet de parcourir jusqu'à 18 m
+  note: Une fois hors de danger, cumuler réparation mécanique et guérison accélérée jusqu'à retrouver 31 pv.

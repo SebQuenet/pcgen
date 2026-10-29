@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Zorka, kikimora de taille M, fée chaotique neutre, préfère éviter tout combat et entraver ses agresseurs pour pouvoir fuir.
+  68 PV ; CA 22, contact 17 ; réduction des dégâts 5/fer froid ; résistance à la magie 17 ; initiative +10 ; déplacement de 9 m.
+  Deux griffes +10, chacune à 1d4+3 dégâts, allonge de 1,50 m. Ses armes principales restent le sommeil profond, la douleur, le bris des armes et les illusions.
+
+resource: Invisibilité | à volonté | elle-même uniquement ; durée de 8 minutes
+resource: Sommeil profond | 3/jour | Volonté DD 20 ; portée de 13,50 m ; rayon de 3 m ; jusqu'à 10 DV au total
+resource: Douleur aiguë | 3/jour | pain strike ; Vigueur DD 20 ; portée de 13,50 m ; une créature vivante
+resource: Bris d'objet | 3/jour | break ; Vigueur DD 18 annule ; portée de 13,50 m ; un objet de taille M ou inférieure
+resource: Charme-animal | 3/jour | Volonté DD 18 ; réservé aux animaux
+resource: Image accomplie | 1/jour | major image ; Volonté DD 20 pour reconnaître l'illusion en interagissant avec elle
+resource: Convocation de nuées | 1/jour | portée de 13,50 m ; concentration puis 2 rounds ; conserver pour couvrir la fuite
+
+step: Des intrus approchent sans l'avoir repérée
+  do: Utiliser invisibilité et observer discrètement ; garder un accès à la pièce contenant le signe de sa cachette extradimensionnelle.
+  note: Discrétion +17, Perception +15 ; Diplomatie +18 et Bluff +18 permettent de tenter d'éviter l'affrontement.
+
+## Ouverture
+
+step: Les agresseurs sont regroupés et peuvent être endormis
+  do: Utiliser sommeil profond sur eux pour dégager une possibilité de fuite.
+  note: Affecter d'abord les créatures ayant le moins de DV, dans la limite de 10 DV cumulés ; une créature de plus de 10 DV ne peut pas être endormie ainsi.
+
+step: Un adversaire vivant résiste au sommeil ou représente la menace immédiate
+  do: Utiliser douleur aiguë sur lui, de préférence s'il paraît peu robuste.
+  note: Vigueur DD 20 annule ; sinon, 1d6 dégâts non létaux par round et état fiévreux pendant 8 rounds.
+
+## Rounds suivants
+
+step: Une arme ennemie menace de lui barrer la retraite
+  do: Utiliser bris d'objet sur cette arme, en priorité une arme en fer froid.
+  note: Vigueur DD 18 annule ; un échec donne l'état brisé. Une nouvelle utilisation sur un objet déjà brisé le détruit si le jet échoue.
+
+step: Les poursuivants restent déterminés
+  do: Créer avec image accomplie l'illusion d'un ennemi plus redoutable, placé entre eux et sa voie de fuite.
+  note: L'illusion détourne leur attention sans infliger de dégâts ; elle dure tant que Zorka se concentre, puis 3 rounds.
+
+step: Un nouvel agresseur peut encore être neutralisé
+  do: Employer une autre utilisation de sommeil profond ou de douleur aiguë, selon la cible ; choisir un seul de ces pouvoirs à son tour.
+  note: Une attaque directe, notamment sommeil profond ou douleur aiguë contre un ennemi, met fin à son invisibilité.
+
+step: Un ennemi l'atteint au contact
+  do: Chercher à se dégager ; utiliser ses griffes seulement si elle doit se défendre sans pouvoir partir.
+  note: Si elle reste sur place pour une attaque à outrance, effectuer deux attaques de griffes +10, à 1d4+3 dégâts chacune.
+
+## Repli
+
+step: Une possibilité de fuite sûre se présente
+  do: Quitter le combat sans attendre ; réutiliser invisibilité si cela facilite sa disparition.
+
+step: Zorka tombe à 20 PV ou moins
+  do: Utiliser convocation de nuées sur les poursuivants pour couvrir sa retraite, puis rejoindre la pièce contenant le signe de sa cachette dès que possible.
+  note: La nuée attaque les créatures dans son espace puis poursuit la plus proche ; Zorka ne contrôle ni ses cibles ni ses déplacements. Elle disparaît 2 rounds après la fin de la concentration.
+
+step: Zorka se trouve dans la pièce contenant son signe
+  do: Entrer dans sa cachette extradimensionnelle par une action simple.
+  note: Elle seule peut y entrer ; depuis cet abri, elle peut observer la pièce à travers le signe.

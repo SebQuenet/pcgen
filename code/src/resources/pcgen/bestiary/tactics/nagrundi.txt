@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Nagrundi, troll mâle à deux têtes, humanoïde géant de taille G, chaotique mauvais et d'une stupidité téméraire. Il privilégie l'adversaire qui paraît le plus imposant.
+  103 pv ; CA 21, contact 9 ; déplacement 9 m ; espace et allonge de 3 m.
+  Attaque à outrance : 2 griffes +13 (1d6+8) et 2 morsures +13 (1d8+8). Aucun éventrement indiqué.
+  Vision dans le noir à 27 m, vision nocturne, odorat ; Perception +14. Il parle le géant.
+
+resource: Régénération 5 | permanente | récupère 5 pv au début de son tour ; des dégâts d'acide ou de feu suspendent cette régénération pendant 1 round
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +14, son odorat et ses sens adaptés à l'obscurité
+  note: aucune préparation magique ni attaque à distance n'est disponible
+
+## Ouverture
+
+step: Premier round, un ennemi peut le voir et l'entendre à 9 m ou moins
+  do: Démoraliser une seule cible avec Intimidation +6, puis avancer jusqu'à 9 m vers l'adversaire qui paraît le plus imposant
+  note: démoraliser utilise son action simple ; il ne porte donc aucune attaque ce round. S'il doit d'abord s'approcher pour intimider, effectuer le déplacement avant le test
+
+step: Premier round, aucun ennemi ne peut être intimidé
+  do: Avancer vers le plus imposant ; s'il arrive à portée avec un seul déplacement, porter une griffe +13 (1d6+8)
+  note: après un déplacement ordinaire, il ne peut pas effectuer ses quatre attaques
+
+## Rounds suivants
+
+step: L'adversaire choisi est à 3 m ou moins et aucun déplacement important n'est nécessaire
+  do: Effectuer une attaque à outrance avec les deux griffes et les deux morsures
+  note: un pas de placement de 1,50 m permet de conserver l'attaque à outrance
+
+step: La cible est hors de portée
+  do: Avancer jusqu'à 9 m et porter une seule griffe si elle entre dans son allonge de 3 m
+
+step: Plusieurs adversaires sont voisins et dans son allonge
+  do: Utiliser Succession d'enchaînements : porter une griffe, puis, après chaque coup réussi, attaquer un autre adversaire adjacent au précédent et toujours à portée
+  note: chaque cible ne peut être attaquée qu'une fois ; un échec arrête la chaîne. Cette action simple remplace l'attaque à outrance et réduit sa CA à 19 jusqu'à son prochain tour
+
+step: Il cherche à écraser une cible facile à toucher
+  do: Activer Attaque en puissance : griffes +11 (1d6+12), morsures +11 (1d8+12)
+  note: ces valeurs remplacent les valeurs habituelles ; le choix s'applique jusqu'à son prochain tour
+
+## Repli
+
+step: Blessé, même grièvement, ou exposé à l'acide ou au feu
+  do: Continuer à combattre jusqu'à la mort, en rugissant sa défiance avec ses deux têtes
+  note: sa stupidité et sa peur du châtiment de Nyrissa excluent toute retraite volontaire ; aucun seuil de pv ne déclenche de fuite

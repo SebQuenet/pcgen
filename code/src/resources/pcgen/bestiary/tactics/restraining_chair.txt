@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Chaise de contention, objet animé de taille P, sans intelligence. Deux coups +3 (1d3 chacun et étreinte), constriction ; BMO +5 en lutte.
+  CA 16, 21 pv, solidité 5 et immunités des créatures artificielles. Déplacement de 9 m ; allonge de 1,50 m.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5.
+
+step: Ni Black ni son simulacre ne sont menacés
+  do: Attendre le déclenchement de sa programmation.
+
+## Ouverture
+
+step: Black ou son simulacre est menacé
+  do: Attaquer l'ennemi le plus proche.
+  note: La chaise suit sa programmation, sans choisir une cible selon sa faiblesse ou son rôle.
+
+step: L'ennemi le plus proche est à plus de 1,50 m
+  do: Avancer vers lui, jusqu'à 9 m avec une action de mouvement ; porter un coup +3 (1d3 et étreinte) s'il est alors à portée.
+
+step: L'ennemi le plus proche est déjà à portée et aucune action de mouvement n'est nécessaire
+  do: Effectuer une attaque à outrance avec les deux coups +3 (1d3 chacun et étreinte).
+
+step: Un coup touche une cible que l'étreinte permet de saisir
+  do: Tenter immédiatement de l'agripper avec l'étreinte, BMO +5 en lutte ; appliquer la constriction si la prise réussit.
+
+## Rounds suivants
+
+step: Une cible est agrippée
+  do: Consacrer l'action simple au maintien de la lutte ; sur une réussite, infliger les dégâts de lutte et la constriction.
+  note: Garder la victime agrippée tant qu'elle reste une menace.
+
+step: La prise échoue ou la cible se libère
+  do: Reprendre les coups contre l'ennemi le plus proche et tenter de nouveau l'étreinte après une touche.
+  note: Deux coups lors d'une attaque à outrance ; un seul après une action de mouvement.
+
+step: Aucun ennemi n'est à portée
+  do: Se rapprocher de l'ennemi le plus proche pour reprendre les coups, l'étreinte et la constriction.
+
+## Repli
+
+step: Il reste une menace dans le bureau
+  do: Continuer à combattre jusqu'à la destruction, sans seuil de repli.
+
+step: Il ne reste plus de menace dans le bureau
+  do: Cesser le combat conformément à la programmation de Black.

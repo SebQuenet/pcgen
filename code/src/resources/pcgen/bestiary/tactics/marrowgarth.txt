@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Marrowgarth, dragonne rouge adulte devenue ravener, est une morte-vivante chaotique mauvaise de taille TG, FP 16. Intelligente et féroce, elle concentre ses attaques sur un adversaire à la fois et tient à préserver son existence.
+  210 PV ; CA 36, contact 11 ; RD 5/Bien ; RM 25 ; résistance à la canalisation +4. Immunisée au feu et aux effets couverts par les traits des morts-vivants ; vulnérable au froid.
+  Morsure +27 (2d8+18), 2 griffes +27 (2d6+12), queue +25 (2d6+18), 2 ailes +25 (1d8+6) ; toutes menacent un critique sur 19–20.
+  Espace occupé : 4,50 m ; allonge : 3 m, ou 4,50 m avec la morsure. Déplacement terrestre 12 m ; vol 60 m, manœuvrabilité médiocre.
+  Aura de feu à 1,50 m : 1d6 dégâts. Présence terrifiante à 54 m, Volonté DD 24, associée à sa terreur paralysante.
+
+resource: Protection d'âmes | 31 PV | réserve distincte de ses 210 PV
+resource: Sorts d'ensorceleur | réserve non précisée | NLS 10 ; concentration +16
+resource: Détection de la magie, pyrotechnie, suggestion | à volonté | NLS 17 ; concentration +23 ; pyrotechnie DD 16, suggestion DD 17
+
+step: Elle peut se préparer avant d'engager les intrus
+  do: Lancer simulacre de vie et bouclier avant le combat.
+  note: Simulacre de vie apporte 1d10+10 PV temporaires pendant 10 heures. Bouclier dure 10 minutes ; son bonus de +4 est déjà compris dans la CA 36.
+
+step: Elle a repéré les adversaires et dispose encore de temps
+  do: Choisir une approche qui laisse de la place pour voler ; lancer rapidité juste avant l'engagement si le moment de l'attaque est certain.
+  note: Rapidité dure 10 rounds : éviter de gaspiller sa durée en attendant les intrus.
+
+step: Des adversaires invisibles sont soupçonnés
+  do: Lancer détection de l'invisibilité avant de s'exposer.
+  note: Sa perception aveugle porte à 36 m et aide à localiser une présence ; elle ne remplace pas la vision nécessaire pour attaquer précisément.
+
+## Ouverture
+
+step: Premier round, elle n'est pas sous rapidité et peut différer son assaut
+  do: Lancer rapidité sur elle-même et se placer pour menacer une cible isolée au round suivant.
+  note: Le sort donne +1 aux attaques, à la CA et aux Réflexes, et une attaque supplémentaire avec une arme naturelle lors d'une attaque à outrance.
+
+step: Elle peut agir offensivement et plusieurs ennemis tiennent dans un cône de 9 m
+  do: Lancer vagues de fatigue, en visant surtout les combattants qui devront la poursuivre.
+  note: Aucun jet de sauvegarde ; la résistance à la magie s'applique. La fatigue empêche de courir ou de charger ; relancer ce sort sur des cibles déjà fatiguées ne les épuise pas.
+
+step: Plusieurs ennemis sont alignés et elle peut les atteindre sans s'exposer au contact
+  do: Lancer éclair sur la ligne la plus avantageuse.
+  note: Ligne de 36 m ; 10d6 dégâts d'électricité, Réflexes DD 19 pour réduire de moitié.
+
+step: Un adversaire est déjà à portée de toutes ses armes naturelles
+  do: Faire immédiatement une attaque à outrance et concentrer les six attaques sur lui.
+  note: Déclencher la présence terrifiante lors de l'attaque ; appliquer Volonté DD 24 et la terreur paralysante aux créatures concernées. L'aura de feu reste une menace supplémentaire à 1,50 m.
+
+## Rounds suivants
+
+step: Une cible reste à 3 m ou moins et elle peut consacrer son round à l'attaquer
+  do: Répéter l'attaque à outrance : morsure, deux griffes, queue et deux ailes, sur le même adversaire tant qu'il tient debout.
+  note: Sous rapidité, ajouter une morsure et appliquer le bonus de +1 aux jets d'attaque. À 4,50 m, seule la morsure dispose de l'allonge nécessaire.
+
+step: Elle doit se déplacer pour atteindre une cible
+  do: Utiliser une attaque simple avec la morsure et Frappe décisive supérieure : +27, 6d8+18, avant les modificateurs de rapidité.
+  note: Cette frappe remplace l'attaque à outrance et ne s'ajoute pas à une charge. Attaque en vol permet de placer cette action simple pendant un déplacement aérien, puis de poursuivre le mouvement.
+
+step: Un lanceur de sorts emploie le froid ou gêne fortement sa mobilité
+  do: En faire sa cible prioritaire ; dissiper une protection décisive avec dissipation de la magie, ou l'attaquer dès qu'il est accessible.
+  note: Dissipation de la magie utilise un test à +10. Éviter de rester exposée aux attaques de froid pendant qu'elle s'acharne sur une autre cible.
+
+step: Des sorts de niveau 1 à 3 constituent la principale menace et elle peut tenir sa position
+  do: Lancer globe d'invulnérabilité partielle, puis combattre depuis sa zone de protection.
+  note: Le globe est immobile ; il faut choisir entre défendre cette position et poursuivre un ennemi.
+
+step: Une source de feu est disponible et les attaques à distance deviennent dangereuses
+  do: Employer pyrotechnie pour produire de la fumée et changer de position à couvert.
+  note: Sa vision dans la fumée lui permet de conserver l'avantage visuel. Prévoir une trajectoire simple pour son vol peu maniable.
+
+step: Un adversaire doit franchir un passage étroit pour l'atteindre
+  do: Poser graisse sur son trajet, puis exploiter le retard pour se replacer ou attaquer une autre cible.
+  note: Réflexes DD 17 ; ne pas gaspiller cette action contre un ennemi qui peut contourner facilement la zone ou voler.
+
+## Repli
+
+step: Ses PV tombent à 50 ou moins
+  do: Abandonner le combat et fuir par les airs, à 60 m par déplacement, en choisissant une trajectoire dégagée.
+  note: Elle refuse de sacrifier son existence pour achever un adversaire ; ne pas attendre que sa protection d'âmes soit épuisée.
+
+step: Le vol ne permet pas de rompre le contact ou sa fuite est bloquée
+  do: Lancer porte dimensionnelle vers un emplacement sûr, à 240 m au maximum.
+  note: Garder la possibilité de lancer ce sort pour le repli. Elle ne peut plus entreprendre d'autre action après son utilisation jusqu'à son prochain tour.
+
+step: Elle a échappé aux poursuivants
+  do: Se dissimuler, au besoin avec invisibilité, et quitter la zone d'affrontement.
+  note: Elle continue ensuite de hanter le Virlych et de dévorer des âmes jusqu'à avoir retrouvé ses forces.

@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Typhilipede, extérieur loyal mauvais de très petite taille, prédateur souterrain des Enfers au corps segmenté et aux ailes de chauve-souris. Il recherche la lumière pour s'en nourrir et mord ses proies dans l'obscurité.
+  19 pv ; CA 14 ; initiative +6. Morsure +7 (1d3+1 et poison) ; allonge 0 m : il doit entrer dans l'espace de sa cible pour la mordre.
+  Déplacement au sol et vol à 9 m ; manœuvrabilité médiocre, Vol +8. Discrétion +16, Perception +7 ; vision dans le noir à 36 m et vision dans les ténèbres, même magiques. Immunisé au feu et au poison ; vulnérable à la lumière vive.
+
+resource: Aura d'ombre | à volonté | rayon de 3 m ; camouflage pour toutes les créatures dans l'aura contre les attaquants dépourvus de vision nocturne ou de vision dans le noir ; suppression ou réactivation par action rapide
+
+resource: Lumivore | à volonté | action simple ; éteint toutes les sources lumineuses ordinaires à 4,50 m ; chaque source consommée accorde 1 pv temporaire, maximum 10, pendant 1 heure ; sans effet sur les lumières magiques
+
+resource: Poison de morsure | à chaque morsure réussie | blessure ; Vigueur DD 12 ; 1d4 dégâts de Constitution par round pendant 6 rounds ; guérison après 2 sauvegardes consécutives réussies
+
+step: Des intrus approchent
+  do: Attendre dans l'obscurité, dissimulé grâce à Discrétion +16, avec l'aura d'ombre active.
+
+step: Plusieurs typhilipedes chassent ensemble
+  do: Utiliser les passages du terrain pour isoler une proie, puis converger sur elle.
+
+## Ouverture
+
+step: Des torches ou lanternes se trouvent à 4,50 m ou moins
+  do: Consacrer l'action simple à Lumivore pour les éteindre et gagner les pv temporaires correspondants.
+  note: Un déplacement peut précéder cette action ; aucune morsure le même tour avec cette action simple.
+
+step: La cible est déjà dans l'obscurité et accessible à 9 m ou moins
+  do: Rejoindre son espace et porter une morsure +7 (1d3+1 et poison).
+  note: L'approche et l'entrée dans l'espace adverse peuvent provoquer des attaques d'opportunité ; sa petite taille ne lui permet pas de les ignorer.
+
+## Rounds suivants
+
+step: La cible reste dans son espace
+  do: La mordre de nouveau à chaque round pour poursuivre l'empoisonnement.
+
+step: La cible s'éloigne
+  do: La suivre au sol ou en vol, puis mordre si elle est accessible avec un seul déplacement.
+  note: Il ne possède aucune attaque à distance ; ne pas ajouter de morsure après un double déplacement.
+
+step: Une source lumineuse ordinaire est rallumée à 4,50 m ou moins
+  do: Employer de nouveau Lumivore si cette lumière permet aux adversaires de le repérer ou de combattre efficacement.
+  note: L'aura camoufle aussi les ennemis contre certains attaquants ; elle ne gêne pas sa propre vision dans les ténèbres.
+
+## Repli
+
+step: Une lumière vive l'aveugle
+  do: Rechercher immédiatement un passage obscur et s'y déplacer dès qu'il peut s'orienter.
+
+step: Il est affaibli mais ses congénères combattent encore
+  do: Continuer à mordre pour détourner les attaques vers lui et favoriser la survie du groupe.
+
+step: Il survit à de graves blessures et peut quitter le combat
+  do: Se retirer dans l'obscurité, au sol ou en vol à 9 m par déplacement, puis se dissimuler.

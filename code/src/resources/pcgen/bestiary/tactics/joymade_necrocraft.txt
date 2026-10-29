@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Joymade Necrocraft, mort-vivant de taille TG, neutre mauvais et sans intelligence : une brute qui exécute des consignes simples. FP 7, 75 pv, CA 20.
+  Trois griffes +15, chacune infligeant 1d8+10 dégâts ; allonge de 4,50 m, espace occupé de 4,50 m de côté. Déplacement de 9 m ; vision dans le noir à 18 m.
+  Son armure d'os est déjà comprise dans sa CA. Il possède les immunités des morts-vivants.
+
+step: Il a reçu l'ordre de garder un passage
+  do: Attendre au poste indiqué et frapper les intrus dès qu'ils entrent à portée.
+  note: Son allonge lui permet de combattre avant que les adversaires à courte allonge arrivent au contact ; sa Perception reste de +0.
+
+resource: Cannibalisation | selon les cadavres disponibles | 1 heure ininterrompue par cadavre de taille M ou supérieure, doté d'une anatomie discernable.
+
+step: Il est blessé et dispose d'un cadavre avant le combat
+  do: Consommer le cadavre pour réparer son corps, sans dépasser 75 pv.
+  note: Un cadavre de mort-vivant rend 5 pv en taille M, puis 5 pv supplémentaires par catégorie au-dessus de M ; un autre cadavre ne rend qu'un cinquième de ce total. Toute interruption oblige à recommencer l'heure entière.
+
+## Ouverture
+
+step: Une cible est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance : trois griffes +15, chacune pour 1d8+10 dégâts.
+
+step: Aucune cible n'est à portée, mais un déplacement de 9 m suffit pour en atteindre une
+  do: Avancer jusqu'à placer la cible à portée, puis porter une seule griffe +15, pour 1d8+10 dégâts.
+  note: Il n'a pas besoin de se placer contre la cible : son allonge atteint 4,50 m.
+
+step: Les ennemis sont encore trop éloignés
+  do: Faire un double déplacement, jusqu'à 18 m, vers la cible désignée par ses ordres ou, à défaut, vers l'ennemi le plus proche.
+  note: Ce double déplacement ne lui laisse pas d'attaque pendant son tour.
+
+## Rounds suivants
+
+step: Sa cible reste à portée
+  do: Répéter les trois griffes à outrance sur elle ; si elle tombe, diriger les attaques restantes contre un autre ennemi à portée.
+
+step: Un pas de 1,50 m suffit pour retrouver une cible à portée
+  do: Faire ce pas, si le terrain le permet, puis porter les trois griffes à outrance.
+
+step: Il doit avancer davantage pour atteindre une cible
+  do: Se déplacer jusqu'à 9 m et porter une seule griffe ; faire un double déplacement si cela reste insuffisant.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Porter une griffe +15, pour 1d8+10 dégâts.
+  note: Une seule attaque d'opportunité par round ; un pas de 1,50 m n'en provoque pas.
+
+## Repli
+
+step: Ses points de vie diminuent sans ordre de retraite
+  do: Continuer à attaquer jusqu'à sa destruction à 0 pv.
+  note: Sans intelligence, il ne choisit pas de lui-même un seuil de fuite et ne suspend pas le combat pour se réparer.
+
+step: Il reçoit un ordre de repli
+  do: Rejoindre l'endroit indiqué à 9 m par déplacement, ou jusqu'à 18 m avec un double déplacement.
+
+step: Le combat est terminé et il reste blessé près d'un cadavre utilisable
+  do: Employer la cannibalisation pendant une heure ininterrompue pour récupérer des pv.

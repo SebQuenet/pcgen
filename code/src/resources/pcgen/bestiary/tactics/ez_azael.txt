@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Ez-Azael, extérieur natif loyal bon de taille G, privilégie la protection des innocents et combat les agresseurs.
+  168 PV, CA 28 ; déplacement de 12 m, espace occupé de 3 m et allonge de 1,50 m.
+  Corps à corps : coup +25 (2d6+10) et 2 sabots +20 (1d8+5 chacun, plus saignement). Les trois attaques demandent une attaque à outrance.
+  RD 10/fer froid et Mal : une arme doit réunir ces deux propriétés pour l'ignorer. Immunité au feu, au poison et aux effets de mort ; résistance 10 à l'acide, au froid et à l'électricité ; résistance à la magie 23.
+
+resource: Châtiment sacré | 3/jour | NLS 16, Volonté DD 17, résistance à la magie applicable
+resource: Rejet du Mal | 3/jour | NLS 16, Volonté DD 21 pour le renvoi planaire
+resource: Rejet du Chaos | 3/jour | NLS 16, Volonté DD 21 pour le renvoi planaire
+resource: Annulation d'enchantement | 3/jour | incantation de 1 minute ; à réserver aux périodes de répit
+resource: Protection contre le Mal | à volonté | durée de 16 minutes
+resource: Orientation | 3/jour | recherche d'un itinéraire vers une destination précise ; aucune téléportation
+resource: Pénitence | 1/jour | rédemption hors combat
+
+step: Une rencontre potentiellement hostile se prépare
+  do: Observer avec Perception +23 et vision lucide permanente ; employer détection du Mal si le temps le permet, puis apprécier les intentions avec Psychologie +23
+  note: Vision dans le noir à 18 m et odorat complètent ses sens. Vision lucide déjoue notamment l'invisibilité ; elle ne permet pas de voir à travers les murs.
+
+step: Il dispose d'un round avant l'affrontement
+  do: Lancer protection contre le Mal sur lui-même
+  note: Contre les créatures mauvaises, +2 de parade à la CA et +2 de résistance aux sauvegardes ; sa CA passe à 30 contre leurs attaques.
+
+## Ouverture
+
+step: Plusieurs agresseurs mauvais sont regroupés
+  do: Lancer châtiment sacré sur leur position, depuis une distance sûre
+  note: Portée de 78 m, explosion de 6 m de rayon ; 5d8 dégâts aux créatures mauvaises, ou 10d6 aux extérieurs mauvais, et aveuglement pendant 1 round. Volonté DD 17 réduit les dégâts de moitié et annule l'aveuglement.
+  note: Les créatures bonnes sont indemnes ; les créatures neutres subissent la moitié des dégâts, encore divisée par deux sur sauvegarde réussie, sans aveuglement. Éviter de toucher des innocents neutres.
+
+step: Une cible isolée peut être atteinte après un déplacement de 12 m au plus
+  do: Avancer jusqu'à 1,50 m de la cible et porter un coup +25 (2d6+10)
+  note: Un déplacement ordinaire suivi d'une attaque ne permet pas d'ajouter les deux sabots.
+
+step: Un ennemi est déjà à portée et aucun pouvoir prioritaire n'est nécessaire
+  do: Attaque à outrance : coup +25 et deux sabots +20 ; concentrer les attaques sur la menace la plus dangereuse
+
+## Rounds suivants
+
+step: Il peut rester au contact sans être encerclé
+  do: Répéter l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m
+  note: Les sabots provoquent un saignement ; sa valeur n'est pas précisée dans le bloc fourni.
+
+step: L'adversaire est facile à toucher
+  do: Employer Attaque en puissance : coup +20 (2d6+20), deux sabots +15 (1d8+10 chacun, plus saignement)
+  note: Conserver les valeurs normales contre une CA élevée.
+
+step: Une cible non adjacente peut être frappée puis distancée
+  do: Employer Attaque éclair : parcourir au moins 3 m avant le coup, frapper une fois, puis poursuivre le déplacement, pour un total maximal de 12 m
+  note: Action complexe ; la cible attaquée ne peut pas porter d'attaque d'opportunité contre ce déplacement. Les autres ennemis le peuvent encore ; Souplesse du serpent donne +4 à la CA contre leurs attaques d'opportunité dues au déplacement.
+
+step: Après un déplacement, deux ennemis sont adjacents entre eux et tous deux à portée
+  do: Employer Enchaînement avec le coup +25 ; si le premier touche, frapper le second au même bonus
+  note: Deux coups au maximum ; malus de 2 à la CA jusqu'au prochain tour. Préférer l'attaque à outrance lorsqu'aucun déplacement n'est nécessaire.
+
+step: Un extérieur mauvais ou chaotique venu d'un autre plan domine le combat
+  do: Activer rejet du Mal ou rejet du Chaos selon son alignement ; tenter ensuite un contact au corps à corps pour le renvoyer sur son plan d'origine
+  note: Volonté DD 21 annule le renvoi, et la résistance à la magie s'applique. Avant sa décharge, le pouvoir accorde +4 de parade à la CA contre l'alignement concerné ; ce bonus ne se cumule pas avec celui de protection contre le Mal.
+
+step: Des ennemis restent groupés hors de portée
+  do: Réutiliser châtiment sacré tant qu'il reste des utilisations, puis chercher un accès au corps à corps à couvert
+
+## Repli
+
+step: Ses PV tombent à 42 ou moins et personne ne dépend de sa présence immédiate
+  do: Se désengager avec une retraite pouvant couvrir 24 m, puis gagner un abri
+  note: Seule la sortie des cases initialement occupées est protégée des attaques d'opportunité par la retraite ; éviter de traverser d'autres zones menacées.
+
+step: Des innocents doivent encore être évacués
+  do: Couvrir leur départ, puis se retirer dès qu'ils sont hors de danger
+
+step: Il a rompu le contact et doit rejoindre un refuge connu
+  do: Employer orientation pour trouver le chemin si nécessaire ; réserver annulation d'enchantement aux effets persistants après la fuite
+  note: Orientation demande 3 rounds d'incantation : ne pas la lancer sous les coups.

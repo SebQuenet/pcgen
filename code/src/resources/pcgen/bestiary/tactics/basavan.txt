@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Basavan, humanoïde monstrueux de très grande taille, neutre bon, FP 15 : gardien pacifique des forêts et des montagnes, qui défend la faune et la flore contre les braconniers.
+  230 pv ; CA 30, contact 12 ; déplacement 12 m ; espace et allonge 4,50 m. Bâton +25/+20/+15/+10 (2d6+10), ou 2 coups +25 (2d6+7) ; rocher +23 (2d6+7).
+  Résistances au froid 20 et au feu 20 ; Réflexes +16, Volonté +18 ; vision dans le noir à 18 m, Perception +27. Pouvoirs magiques de NLS 20, concentration +23.
+
+resource: Peau de pierre | 3/jour | RD 10/adamantium ; 200 minutes ou 150 points de dégâts absorbés
+resource: Sens de la forêt | 3/jour | Volonté DD 17 annule ; résistance à la magie applicable ; surveillance d'une cible proche de végétaux
+resource: Boue apaisante | 3/jour | terrain difficile pendant 20 rounds ; rend 1 pv par round aux créatures qui y commencent leur tour
+resource: Façonnage de la pierre | 3/jour | modifier une pierre existante pour préparer un passage ou un obstacle
+resource: Communion avec la nature | 1/jour | reconnaissance du territoire naturel avant l'affrontement
+resource: Transmutation de la pierre en boue | 1/jour | transformer un sol rocheux naturel non travaillé pour entraver les ennemis
+resource: Voyage par les arbres | 1/jour | fuite entre arbres vivants de même essence, chacun assez gros pour contenir le basavan
+resource: Réparation | à volonté | entretien des objets ; aucun soin aux créatures vivantes
+resource: Réparation intégrale | 3/jour | restaurer les objets endommagés entre les affrontements
+
+step: Des intrus pénètrent sur son territoire
+  do: Les observer et leur demander de partir en commun, géant, sylvestre ou terreux ; laisser une issue aux voyageurs égarés.
+  note: Il intervient contre les agresseurs de son domaine ; il accepte une retraite ou une reddition.
+
+step: Il doit localiser une menace avant de l'intercepter
+  do: Reconnaître les lieux avec Communion avec la nature, puis employer Sens de la forêt sur une cible identifiable par ses traces ou son apparence.
+  note: Sens de la forêt dure 20 minutes et exige une plante ou un champignon vivant à 3 m au plus de la cible ; il permet notamment d'écouter les conversations proches.
+
+step: Le combat devient probable
+  do: Activer Peau de pierre et choisir une position près de broussailles naturelles ou d'un étranglement ; repérer les arbres utilisables pour le repli.
+  note: En forêt, il voit à travers le feuillage jusqu'à 18 m, mais les troncs restent opaques ; en terrain montagneux ou vallonné, il perçoit les vibrations à 18 m.
+
+## Ouverture
+
+step: Plusieurs ennemis terrestres approchent sur un sol rocheux naturel non travaillé
+  do: Utiliser Transmutation de la pierre en boue sous leur progression, en restant sur un bord ferme pour les frapper à 4,50 m.
+  note: Les créatures engluées se déplacent à 1,50 m et subissent −2 aux attaques et à la CA ; éviter cette dépense contre des ennemis volants ou capables de se libérer aisément.
+
+step: Les ennemis restent hors de son allonge
+  do: Lancer un rocher à +23 (2d6+7), puis utiliser son déplacement pour garder un obstacle entre lui et les combattants de mêlée.
+
+step: Un ennemi est déjà à portée et aucune préparation n'a été possible
+  do: Frapper au bâton ; activer plutôt Peau de pierre si plusieurs combattants vont l'encercler et qu'il peut employer son pouvoir sans s'exposer dangereusement.
+  note: Les pouvoirs magiques provoquent des attaques d'opportunité s'ils ne sont pas utilisés sur la défensive.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge sans nécessiter de déplacement important
+  do: Effectuer l'attaque à outrance au bâton, +25/+20/+15/+10, chaque touche infligeant 2d6+10.
+  note: Un pas de 1,50 m reste compatible avec cette attaque si le terrain le permet ; après un déplacement ordinaire, il ne porte qu'une attaque simple.
+
+step: Une cible est facile à toucher et doit être neutralisée rapidement
+  do: Employer Attaque en puissance avec le bâton tenu à deux mains : +19/+14/+9/+4, dégâts 2d6+28 par touche.
+  note: Le malus de −6 affecte aussi ses attaques d'opportunité et ses manœuvres jusqu'à son prochain tour ; conserver la précision contre une forte CA.
+
+step: Deux ennemis adjacents sont à portée après son déplacement
+  do: Employer Enchaînement : une attaque au bâton à +25, puis une seconde à +25 contre l'autre ennemi si la première touche.
+  note: Cette action simple remplace l'attaque à outrance et réduit sa CA à 28 jusqu'à son prochain tour.
+
+step: Un adversaire peut être repoussé à travers du terrain difficile naturel
+  do: Tenter une bousculade à +31 contre sa DMD pour l'éloigner des animaux ou l'enfoncer dans les broussailles.
+  note: Bristling Bull Rush ajoute 1d4 dégâts par tranche de 1,50 m parcourue dans ce terrain ; les créatures insensibles à ce terrain y échappent. La boue créée magiquement ne fournit pas ce bonus.
+
+step: Un ennemi corporel plus petit bloque son passage ou menace un protégé
+  do: Employer Coup fabuleux comme action simple, manœuvre à +29 contre la DMD : 2d6+7 dégâts, projection de 3 m et cible à terre en cas de réussite.
+  note: Choisir une direction qui sépare les adversaires sans mettre ses protégés en danger.
+
+step: Un ennemi provoque une attaque d'opportunité dans les 4,50 m de son allonge
+  do: Frapper au bâton ; Réflexes de combat autorise jusqu'à 5 attaques d'opportunité par round, selon les occasions offertes.
+
+step: Il doit changer de position ou subit un jet de rocher
+  do: Traverser jusqu'à 6 m de terrain difficile par round sans surcoût grâce à ses dons de déplacement ; tenter d'intercepter un rocher menaçant avec Réflexes +16, une fois par round.
+  note: Son aptitude de marcheur sauvage facilite les trajets à travers le territoire ; elle ne supprime pas toutes les entraves tactiques.
+
+## Repli
+
+step: Points de vie sous 60 et ses protégés peuvent être mis à l'abri
+  do: Se désengager vers un arbre adapté ; activer Voyage par les arbres à couvert et gagner un autre arbre vivant de même essence.
+  note: Le transport demande un round complet ; prévoir ce délai au lieu d'attendre d'être encerclé.
+
+step: Aucun arbre adapté n'est disponible ou le pouvoir a déjà été utilisé
+  do: Effectuer une retraite jusqu'à 24 m sur terrain dégagé ; utiliser ensuite Façonnage de la pierre pour barrer un passage, si la roche présente le permet.
+
+step: Il a rompu le contact et dispose d'un lieu sûr
+  do: Créer une Boue apaisante sur de la terre, du sable, de la poussière ou de l'eau, puis s'y reposer.
+  note: Le soin reste de 1 pv par round pendant 20 rounds ; il profite également aux ennemis qui atteignent la boue. Le basavan cesse la poursuite des intrus qui abandonnent leurs déprédations.

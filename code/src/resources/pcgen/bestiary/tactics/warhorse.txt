@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Cheval de guerre de grande taille, animal neutre (FP 2), protégé par une barde de cuir clouté. 24 pv ; CA 18, contact 13, pris au dépourvu 14.
+  Deux sabots +6 au corps à corps, chacun infligeant 1d4+5 dégâts. Déplacement de 15 m ; espace occupé de 3 m et allonge de 1,50 m.
+  Perception +8 et vision nocturne ; Intelligence 2 : privilégier des réactions simples aux menaces immédiates.
+
+step: Une menace approche
+  do: Surveiller les alentours avec Perception +8 ; s'il est monté, suivre les indications de son cavalier.
+  note: Sa vision nocturne l'aide sous une faible lumière, mais ne lui permet pas de voir dans l'obscurité totale.
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance avec les deux sabots +6, pour 1d4+5 dégâts chacun.
+
+step: Un ennemi se trouve entre 3 m et 30 m, avec un trajet de charge rectiligne, dégagé et sans terrain difficile
+  do: Charger et porter une seule attaque de sabot +8, pour 1d4+5 dégâts.
+  note: La charge réduit sa CA à 16 jusqu'au début de son prochain tour.
+
+step: La charge est impossible, mais un déplacement de 15 m permet d'atteindre l'ennemi
+  do: Avancer au contact et porter une seule attaque de sabot +6, pour 1d4+5 dégâts.
+
+step: Aucun ennemi ne peut être atteint ce round
+  do: Se rapprocher par un déplacement de 15 m, ou un double déplacement de 30 m si nécessaire.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et aucun déplacement n'est nécessaire
+  do: Répéter l'attaque à outrance avec les deux sabots +6, pour 1d4+5 dégâts chacun.
+
+step: Un pas de 1,50 m suffit pour retrouver une cible à portée
+  do: Faire ce pas, puis effectuer l'attaque à outrance avec les deux sabots.
+  note: Ce pas est possible si le terrain le permet et si le cheval n'effectue aucun autre déplacement pendant son tour.
+
+step: L'adversaire s'éloigne davantage
+  do: Avancer jusqu'à 15 m et porter un seul coup de sabot +6 si la cible devient accessible ; charger à nouveau si les conditions le permettent.
+  note: Après un déplacement ordinaire ou une charge, il ne porte pas ses deux attaques de sabot.
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou cavalier qui dirige la retraite
+  do: Se dégager par une action de retraite, jusqu'à 30 m, vers un espace libre.
+  note: La retraite protège contre les attaques d'opportunité dues au départ de sa position initiale ; traverser ensuite d'autres zones menacées reste dangereux.
+
+step: Le contact est rompu et la poursuite continue
+  do: Continuer à s'éloigner en utilisant sa vitesse de 15 m, ou un double déplacement de 30 m.

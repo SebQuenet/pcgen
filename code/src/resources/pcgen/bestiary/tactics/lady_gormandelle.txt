@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Lady Gormandelle est une nixie de petite taille, une fée aquatique malveillante et hautaine qui se croit invincible. Elle privilégie le charme et le tir depuis une position élevée au-dessus de l'eau.
+  Arbalète légère +7 (1d6, critique 19–20) ; morsure +7 (1d4), allonge 1,50 m. Déplacement de 6 m au sol et de 9 m à la nage ; amphibie.
+  13 PV, CA 18 ; réduction des dégâts 5/fer froid ; résistance à la magie 12.
+
+resource: Charme-personne | 3/jour | Volonté DD 17 ; NLS 6
+resource: Respiration aquatique | 1/jour | NLS 12
+
+step: Une position élevée au-dessus de l'eau est accessible
+  do: S'y installer avec l'arbalète chargée, à distance des combattants de mêlée
+  note: Elle n'a pas de vitesse de vol ; cette position dépend des appuis disponibles dans le décor.
+
+## Ouverture
+
+step: Un lanceur de sorts ou un combattant à distance humanoïde peut être pris pour cible
+  do: Utiliser charme-personne sur lui, Volonté DD 17
+  note: Chercher à décourager les adversaires capables de la menacer depuis leur position.
+
+step: Aucune cible ne convient au charme
+  do: Tirer à l'arbalète légère sur un lanceur de sorts ou un combattant à distance : +7, dégâts 1d6, critique 19–20
+
+## Rounds suivants
+
+step: Elle vient d'utiliser charme-personne
+  do: Tirer à l'arbalète sur une autre menace, en priorité un lanceur de sorts ou un tireur
+  note: Rester en hauteur au-dessus de l'eau et éviter d'attaquer la cible charmée.
+
+step: Elle vient de tirer et dispose encore de charme-personne
+  do: Recharger l'arbalète avec une action de mouvement, puis utiliser charme-personne sur un humanoïde menaçant
+  note: Alterner ainsi charme et tirs tant que des cibles appropriées et des utilisations restent disponibles.
+
+step: Les charmes sont épuisés ou sans cible appropriée
+  do: Recharger avec une action de mouvement et tirer chaque round sur les menaces à distance
+
+step: Un ennemi l'engage au contact et elle ne peut garder ses distances
+  do: Mordre : +7, dégâts 1d4
+
+## Repli
+
+step: Elle est encore capable de combattre, même grièvement blessée
+  do: Poursuivre le combat jusqu'à être mise hors de combat
+  note: Son orgueil exclut une retraite volontaire ; aucun seuil de PV ne déclenche sa fuite.

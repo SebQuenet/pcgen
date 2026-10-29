@@ -1,0 +1,87 @@
+## Avant le combat
+
+note: Profil
+  Hykariut, inévitable de taille G, loyal neutre, chargé de briser les insurrections et de neutraliser leurs meneurs. Il cherche normalement à soumettre les émeutiers en les épargnant.
+  Marteau de guerre +1 axiomatique +28/+23/+18/+13 (2d6+9, critique 19–20/x3), avec 2d6 supplémentaires contre les créatures chaotiques ; allonge 3 m, déplacement 12 m.
+  280 PV, CA 33, réduction des dégâts 15/chaotique et régénération 10. Ses pouvoirs magiques ont un NLS de 20 et une concentration de +28.
+
+note: Défenses constantes
+  Détection du Chaos et vision lucide servent à reconnaître les adversaires et à déjouer les illusions ; Perception +30 et Psychologie +30.
+  Bouclier de la Loi : ses bonus sont déjà compris dans les valeurs défensives. Résistance à la magie 25 contre les sorts chaotiques et les sorts lancés par des créatures chaotiques ; un assaillant chaotique qui le touche en mêlée est ralenti, sauf réussite en Volonté DD 26.
+  Unimpeachable empêche les créatures chaotiques de désarmer ou de briser l'arme qu'il manie.
+
+resource: Discours captivant | à volonté | Volonté DD 20 ; avant les hostilités
+resource: Courroux de l'ordre | à volonté | Volonté DD 22
+resource: Marque de la justice | à volonté | incantation de 10 minutes ; prisonnier maîtrisé ou consentant
+resource: Injonction suprême | 3/jour | Volonté DD 23
+resource: Dissipation suprême | 3/jour | test de dissipation à +20
+resource: Dissipation du Chaos | 3/jour | notamment pour renvoyer un extraplanaire chaotique au contact
+resource: Vol | 3/jour | durée 20 minutes ; vitesse de vol 18 m
+resource: Porte dimensionnelle | 3/jour | portée 360 m ; réserver une utilisation au repli
+resource: Changement de plan | 3/jour | DD 23 contre une cible non consentante ; également utilisable pour partir
+resource: Décret | 1/jour | Volonté DD 25 ; rayon de 12 m centré sur lui
+
+step: La foule peut encore entendre raison
+  do: Exiger sa dispersion avec Diplomatie +21 ; employer Discours captivant pour obtenir son attention avant toute violence
+  note: Il communique grâce à truespeech. Discours captivant demande 1 round d'incantation et cesse d'être une solution lorsque le combat éclate.
+
+step: Il prévoit des adversaires volants ou doit franchir un obstacle
+  do: Activer Vol avant l'engagement si le temps le permet
+
+note: Force mesurée
+  Judicious permet les attaques d'arme non létales sans pénalité et le Courroux de l'ordre non létal. Pour Décret, il peut traiter les créatures trop faibles comme ayant au moins 11 DV, évitant ainsi l'effet mortel.
+  Il réserve normalement les coups létaux aux meneurs qui poursuivent une révolte dangereuse malgré ses sommations.
+
+## Ouverture
+
+step: Plusieurs ennemis non loyaux de 20 DV ou moins sont à 12 m ou moins
+  do: Lancer Décret, en utilisant Judicious pour épargner les plus faibles
+  note: Volonté DD 25. À 20 DV : surdité ; à 19 DV ou moins : également chancelant ; à 15 DV ou moins : également paralysie. Au-delà de 20 DV, aucun effet. Les créatures loyales sont épargnées.
+  note: Un jet réussi annule la surdité, réduit l'état chancelant à 1d4 rounds et la paralysie à 1 round ; ces deux derniers effets ne sont donc pas entièrement annulés.
+
+step: Les ennemis restent groupés hors de son allonge et Décret n'est pas approprié
+  do: Lancer Injonction suprême avec l'ordre de fuir pour disperser la foule, ou de s'arrêter pour immobiliser des adversaires à capturer
+  note: Portée 22,50 m ; jusqu'à 20 créatures, séparées les unes des autres de 9 m au maximum, reçoivent le même ordre. Volonté DD 23 ; nouveau jet à chaque tour après le premier, durée maximale 20 rounds.
+
+step: Un meneur armé l'engage immédiatement au contact
+  do: Le désarmer à +33 à la place de sa première attaque, puis poursuivre avec les attaques restantes si une attaque à outrance est possible
+  note: Le désarmement supérieur projette l'arme à 4,50 m dans une direction aléatoire ; il privilégie l'arme chaotique qui menace sa régénération.
+
+## Rounds suivants
+
+step: Des adversaires chaotiques restent regroupés
+  do: Employer Courroux de l'ordre sur un cube de 9 m de côté, à 90 m au maximum, en choisissant des dégâts non létaux contre les émeutiers
+  note: 5d8 dégâts aux chaotiques, ou 10d6 aux extérieurs chaotiques, et hébétement pendant 1 round ; Volonté DD 22 réduit les dégâts de moitié et annule l'hébétement. Les neutres sur l'axe Loi–Chaos subissent la moitié des dégâts, encore divisée par deux sur un jet réussi, sans hébétement ; les loyaux sont indemnes.
+
+step: Une cible prioritaire reste à portée et il peut consacrer son tour à la mêlée
+  do: Attaque à outrance au marteau, +28/+23/+18/+13, en restant si possible à 3 m de la cible ; employer un pas de 1,50 m pour conserver cette position
+  note: Chaque coup inflige 2d6+9, plus 2d6 contre une créature chaotique. Sur un critique confirmé, Coup désarmant permet aussi de désarmer si le jet de confirmation dépasse la DMD adverse.
+  note: Employer Attaque en puissance contre une cible facile à toucher ; privilégier la précision lorsqu'un désarmement est décisif.
+
+step: Plusieurs adversaires sont à portée et adjacents les uns aux autres, mais une attaque à outrance est impossible
+  do: Utiliser Succession d'enchaînements comme action simple : une attaque à plein bonus, puis une attaque contre une nouvelle cible adjacente à la précédente après chaque réussite
+  note: Chaque cible doit rester dans son allonge ; chaque créature ne peut être frappée qu'une fois. La série s'arrête au premier échec et sa CA diminue de 2 jusqu'à son prochain tour.
+
+step: Une protection magique empêche de maîtriser le meneur
+  do: Consacrer une action simple à Dissipation suprême ciblée, puis reprendre les attaques ou les injonctions au tour suivant
+
+step: Un extraplanaire chaotique constitue la menace principale
+  do: Employer Dissipation du Chaos pour tenter de le renvoyer par une attaque de contact au corps à corps
+
+step: La cible fuit ou attaque depuis les airs
+  do: La poursuivre grâce à Vol ; employer Porte dimensionnelle seulement si un repositionnement décisif justifie la dépense
+  note: Après Porte dimensionnelle, il ne peut plus agir jusqu'à son prochain tour : aucune attaque immédiate à l'arrivée.
+
+step: Des adversaires se rendent ou sont neutralisés
+  do: Cesser de les frapper et exiger leur soumission ; imposer ensuite une Marque de la justice à un prisonnier maîtrisé si sa mission l'exige
+  note: La marque demande 10 minutes ; elle ne remplace pas une action offensive pendant le combat.
+
+## Repli
+
+step: Ses PV passent sous 70, surtout si une arme chaotique le blesse régulièrement
+  do: Utiliser Porte dimensionnelle pour gagner un abri hors de vue, puis laisser sa régénération agir
+  note: Il récupère 10 PV par round ; les dégâts chaotiques suppriment sa régénération pendant le round suivant. Les armes chaotiques contournent également sa réduction des dégâts.
+
+step: Il ne peut pas se soustraire durablement aux attaques ou le combat compromet sa mission
+  do: Utiliser Changement de plan sur lui-même pour quitter les lieux et reprendre sa mission ultérieurement
+  note: Ce pouvoir ne fournit pas une arrivée précise ; il ne sert pas à se repositionner exactement dans la même bataille.

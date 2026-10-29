@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Rosace animée de taille M, créature artificielle sans intelligence : 36 pv, CA 18, solidité 5 et immunités des créatures artificielles.
+  Au contact : trois coups +7, chacun infligeant 1d6+4 dégâts ; allonge de 1,50 m. Déplacement de 9 m.
+  Vision dans le noir à 18 m et vision nocturne. Elle concentre ses attaques sur une seule créature à la fois.
+
+step: Avant le début du combat
+  do: Rester sur son perchoir, prête à bondir sur une créature.
+
+## Ouverture
+
+step: Une créature peut être atteinte depuis le perchoir
+  do: Bondir sur elle : attaque de contact à distance infligeant 3d3 dégâts.
+  note: La rosace compte sur sa solidité 5 pour résister aux dégâts qu'elle subit elle-même lors de la chute.
+
+## Rounds suivants
+
+step: La cible est à portée et une attaque à outrance est possible
+  do: Porter les trois coups +7 contre cette seule cible, pour 1d6+4 dégâts par coup.
+
+step: La cible est hors de portée de mêlée
+  do: Avancer vers elle, jusqu'à 9 m avec une action de mouvement ; si elle est alors à 1,50 m ou moins, porter un seul coup +7, pour 1d6+4 dégâts.
+  note: Après un déplacement avec une action de mouvement, ne pas utiliser les trois coups de l'attaque à outrance.
+
+step: La cible est vaincue
+  do: Choisir une autre créature accessible et concentrer les coups sur elle.
+
+## Repli
+
+step: La rosace est encore en état de combattre
+  do: Poursuivre les attaques contre sa cible, même blessée.
+  note: Aucun repli n'est prévu dans les tactiques fournies.

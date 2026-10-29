@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Arantaros, dragon bleu ancien mort-vivant, loyal mauvais, FP 20. Intelligent et mobile, il prépare ses protections puis cherche à imposer une attaque à outrance.
+  324 pv, CA 41 ; morsure +35 (4d6+21, 19–20), 2 griffes +34 (2d8+14), queue +32 (2d8+21), 2 ailes +32 (2d6+7).
+  Allonge de 4,50 m, ou 6 m avec la morsure ; espace occupé de 6 m. Déplacement terrestre de 12 m, creusement de 6 m, vol de 75 m avec une manœuvrabilité déplorable et le don Vol stationnaire.
+  Immunité à l'électricité et traits des morts-vivants ; réduction des dégâts 15/Bien, résistance à la magie 31, résistance au renvoi +4. Sa CA de contact de 9 l'incite à surveiller les utilisateurs de rayons.
+
+resource: Défense d'âme | 24 pv | réserve distincte des 324 pv
+resource: Aura électrique | permanente | rayon de 3 m, 2d6 dégâts d'électricité
+resource: Présence terrifiante | selon son déclenchement | portée de 90 m, DD 30
+resource: Pouvoirs magiques | à volonté | son imaginaire DD 18, terrain hallucinatoire DD 22, image mineure DD 20, voile et ventriloquie ; NLS 24
+resource: Incantation alchimique | utilisations non précisées | sorts connus au NLS 16, concentration +24 ; aucun stock de potions ni quota quotidien n'est indiqué
+
+step: Des intrus approchent et il dispose de temps
+  do: Observer leurs déplacements avec œil du mage ; employer vision lucide pour examiner les approches suspectes
+  note: Perception +42, perception aveugle à 36 m et vision dans le noir à 72 m facilitent la surveillance du repaire
+
+step: Il peut préparer le terrain
+  do: Employer terrain hallucinatoire et image mineure pour masquer une approche ou faire croire à un passage sûr ; détourner l'attention avec son imaginaire et ventriloquie
+  note: Les illusions ne créent aucun obstacle matériel ; conserver une véritable voie de fuite par les airs ou dans un terrain qu'il peut creuser
+
+step: Le combat est prévisible et ses ressources permettent des protections
+  do: Préparer bouclier, peau d'écorce et héroïsme ; ajouter liberté de mouvement contre les entraves
+  note: Réserver rapidité, déplacement et invisibilité suprême à l'approche immédiate du combat, en consacrant à chaque sort le temps nécessaire
+
+## Ouverture
+
+step: Il peut encore se protéger avant d'être engagé
+  do: Activer rapidité et invisibilité suprême si disponibles, puis choisir son angle d'approche
+  note: Déplacement fournit une autre protection contre les attaques ; adapter le choix aux moyens de détection observés chez les intrus
+
+step: Une cible prioritaire est accessible en un déplacement
+  do: Voler jusqu'à portée de morsure et attaquer à +35, pour 4d6+21 dégâts, critique sur 19–20
+  note: Viser d'abord un lanceur de sorts ou un ennemi isolé ; exploiter l'allonge de 6 m. Résoudre la présence terrifiante contre les adversaires concernés dans les 90 m
+
+step: Une cible est déjà à portée au début de son tour
+  do: Effectuer une attaque à outrance avec morsure, deux griffes, queue et deux ailes
+  note: Pour employer toutes ces attaques contre la même cible, elle doit être dans l'allonge de 4,50 m ; appliquer les bonus des protections actives aux valeurs de base du profil
+
+## Rounds suivants
+
+step: Une cible vulnérable reste à portée
+  do: Répéter l'attaque à outrance et concentrer les attaques sur elle
+  note: Sous rapidité, ajouter une morsure à l'attaque à outrance et appliquer les bonus du sort
+
+step: Des adversaires combattent à moins de 3 m
+  do: Maintenir la pression au contact pour les exposer à l'aura électrique
+  note: L'aura inflige 2d6 dégâts d'électricité ; Arantaros est lui-même immunisé à l'électricité. Tenir également compte de son aura de peur accablante, dont les paramètres ne sont pas détaillés dans la fiche
+
+step: Les ennemis se dispersent ou le concentrent sous leurs attaques
+  do: Changer de position par le vol et rejoindre une cible isolée ; employer le vol stationnaire lorsqu'il doit tenir une position aérienne
+  note: Un déplacement lui fait normalement renoncer à l'attaque à outrance de ce tour ; privilégier alors la morsure à longue allonge
+
+step: Un adversaire contourne ses défenses ou menace de l'immobiliser
+  do: Rétablir une protection disponible, notamment invisibilité suprême, déplacement ou liberté de mouvement selon la menace
+  note: Consacrer une action au sort réduit son offensive du round ; exploiter auparavant la distance ou un couvert réel si possible
+
+## Repli
+
+step: Ses pv tombent à 80 ou moins, ou ses défenses ne lui permettent plus de soutenir le combat
+  do: Rompre l'engagement et gagner une sortie par le vol, à 75 m par déplacement ; utiliser invisibilité suprême si elle est disponible
+  note: Préférer un trajet qui limite les attaques pendant son départ ; sa manœuvrabilité déplorable impose d'anticiper les virages
+
+step: La sortie aérienne est bloquée et le sol se prête au creusement
+  do: S'enfouir à 6 m par déplacement et chercher une autre issue
+  note: Utiliser les illusions encore actives pour détourner les poursuivants ; ne pas s'arrêter au contact pour prolonger un échange défavorable

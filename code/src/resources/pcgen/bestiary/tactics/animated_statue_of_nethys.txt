@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Statue de pierre animée de taille M, créature artificielle neutre et dépourvue d'Intelligence. 36 pv ; CA 14, contact 10, pris au dépourvu 12.
+  Deux coups +5 (1d6+3 chacun) en attaque à outrance ; allonge de 1,50 m ; déplacement de 9 m.
+
+note: Défenses et perception
+  Solidité 8 ; immunités des créatures artificielles. Tenir compte de la solidité avant de retirer des points de vie.
+  Vision dans le noir à 18 m, vision nocturne ; Perception -5, initiative +0.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : deux coups +5, infligeant chacun 1d6+3 dégâts.
+
+step: Un déplacement de 9 m suffit pour atteindre un adversaire
+  do: Avancer jusqu'au contact et porter un seul coup +5 (1d6+3).
+  note: Un déplacement ordinaire ne permet pas de porter les deux coups ce tour.
+
+step: Aucun adversaire ne peut être atteint avec un seul déplacement
+  do: Effectuer deux déplacements, jusqu'à 18 m au total, pour se rapprocher d'un adversaire accessible.
+  note: Aucun coup ce tour ; la statue ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance, deux coups +5 (1d6+3 chacun).
+
+step: Un pas de placement suffit pour retrouver le contact et le terrain le permet
+  do: Faire un pas de placement de 1,50 m, puis porter les deux coups +5 (1d6+3 chacun).
+
+step: La cible s'éloigne davantage ou tombe hors de combat
+  do: Se rapprocher d'un adversaire encore actif ; porter un seul coup après un déplacement, ou consacrer le tour à deux déplacements si nécessaire.
+  note: Appliquer une conduite simple et répétitive, cohérente avec son absence d'Intelligence.
+
+## Repli
+
+step: La statue perd des points de vie
+  do: Poursuivre le combat sans fuite volontaire.
+  note: Elle ne prévoit aucun repli tactique ; à 0 pv, elle est détruite.

@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Alfashti, jeune naga gardienne de taille M, chaotique mauvaise, souffre d'une psychose paranoïaque. Elle privilégie ses sorts offensifs et combat jusqu'à la mort tant qu'elle n'est pas guérie.
+  90 pv ; CA 29, contact 18 ; déplacement 12 m ; vision dans le noir 18 m ; Perception +23 ; Discrétion +23.
+  Attaques de base : morsure +12, 1d8+4 et poison, allonge 1,50 m ; crachat +17 au contact à distance, poison. Sorts d'ensorceleur de niveau de lanceur 9, notamment éclair et projectile magique.
+
+resource: Sorts de niveau 4 | 5/jour | réserve commune à puissance divine et invisibilité suprême
+resource: Sorts de niveau 3 | 7/jour | réserve commune à éclair (DD 17), dissipation de la magie et soins importants
+resource: Sorts de niveau 2 | 7/jour | réserve commune à détection des pensées (DD 16), restauration partielle, rayon ardent et détection de l'invisibilité
+resource: Sorts de niveau 1 | 7/jour, dont 1 déjà dépensé | réserve commune à armure de mage, projectile magique, faveur divine, repli expéditif et soins légers
+
+step: Chaque jour
+  do: Lancer armure de mage
+  note: La protection est déjà comprise dans la CA 29 ; ne pas l'ajouter une seconde fois
+
+step: Les intrus sont repérés avant l'engagement
+  do: Lancer puissance divine en prévision du combat
+  note: Appliquer ses bonus tant que le sort est actif ; les attaques du profil ci-dessus donnent les valeurs de base
+
+## Ouverture
+
+step: Premier round de combat
+  do: Lancer invisibilité suprême avant toute attaque offensive
+  note: Si elle est menacée au contact, lancer sur la défensive ; Incantation de combat porte alors sa concentration à +17
+
+step: Invisibilité suprême lancée et déplacement encore disponible
+  do: Se décaler pour garder les adversaires à distance et préparer une ligne d'éclair
+  note: Son déplacement est de 12 m ; ses attaques ne mettent pas fin à l'invisibilité suprême
+
+## Rounds suivants
+
+step: Plusieurs ennemis peuvent être pris dans une même ligne
+  do: Lancer éclair, Réflexes DD 17 pour réduire les dégâts de moitié
+  note: Privilégier l'électricité : Alfashti suppose que les intrus se sont protégés du feu à cause du magma environnant
+
+step: Aucune ligne d'éclair intéressante, ou une cible doit être achevée
+  do: Lancer projectile magique sur l'adversaire choisi
+  note: Alterner avec éclair selon la disposition des ennemis et les emplacements encore disponibles
+
+step: Un adversaire invisible gêne ses attaques
+  do: Lancer détection de l'invisibilité avant de reprendre l'offensive
+
+step: Une protection magique adverse réduit nettement l'efficacité de ses sorts
+  do: Tenter une dissipation de la magie sur cette protection
+
+step: Un ennemi impose la mêlée ou les sorts offensifs doivent être économisés
+  do: Mordre au contact, ou utiliser le crachat empoisonné à distance
+  note: La morsure et le crachat sont des solutions de remplacement ; elle préfère ses attaques magiques. Le profil ne précise pas le DD ni les effets détaillés du poison
+
+step: Elle est blessée et peut consacrer un round à se soigner
+  do: Lancer soins importants, puis reprendre ses attaques
+  note: Ce soin dépense la même réserve que les éclairs et les dissipations
+
+step: Invisibilité suprême expire et le combat continue
+  do: La relancer si un emplacement de niveau 4 reste disponible
+  note: Puissance divine et invisibilité suprême puisent dans les mêmes 5 emplacements quotidiens
+
+## Repli
+
+step: La psychose persiste, quels que soient ses points de vie
+  do: Continuer le combat jusqu'à la mort
+  note: Aucun seuil de fuite ; ses déplacements servent à poursuivre le combat à distance
+
+step: Sa psychose est guérie
+  do: Cesser immédiatement toute hostilité et se rendre

@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Wretchghost, mort-vivant intangible de taille M, chaotique mauvais, FP 5 : un spectre famélique qui cherche à transmettre sa dépendance à l'opium.
+  52 pv ; CA 16, contact 16, pris au dépourvu 12 ; initiative +7. Vol à 9 m par déplacement, manœuvrabilité parfaite.
+  Attaque à outrance : 2 contacts intangibles +9 contre la CA de contact, chacun infligeant 2d6 dégâts et pouvant provoquer une dépendance. Allonge de 1,50 m, portée à 3 m contre les dépendants à l'opium.
+  Vision dans le noir à 18 m ; Perception +16 ; Vol +22. Résistance à la canalisation +2 et immunités des morts-vivants.
+
+resource: Hurlement tourmenté | 1/jour | action simple ; rayon de 12 m ; Volonté DD 16 annule ; chancelant pendant 1d4+1 rounds ; effet sonore, mental et de terreur
+resource: Rayon d'épuisement | 1/jour | NLS 5 ; contact à distance ; Vigueur DD 15
+resource: Contact de débilité | 1/jour | NLS 5 ; contact au corps à corps
+resource: Attaques d'opportunité | 4/round | Attaques réflexes ; une seule attaque par occasion
+
+step: Des vivants approchent
+  do: Les repérer avec Perception +16 et attendre près d'une paroi permettant une approche à couvert, puis surgir à portée utile.
+  note: Son déplacement intangible permet de traverser une paroi ; il n'a pas besoin d'une porte pour approcher.
+
+step: De l'opium se trouve à 6 m ou moins
+  do: Appliquer la frénésie vorace tant que cette proximité dure : vol à 12 m, attaques +11, CA 12.
+  note: La frénésie se déclenche automatiquement ; elle expose davantage le spectre aux ripostes.
+
+## Ouverture
+
+step: Plusieurs adversaires sont à 12 m ou moins et le hurlement est disponible
+  do: Émettre le hurlement tourmenté pour limiter leurs actions, puis se déplacer vers une cible isolée.
+  note: Le hurlement et les contacts demandent des actions distinctes ; aucune attaque à outrance pendant ce tour.
+
+step: Une cible isolée reste à distance et le hurlement serait peu utile
+  do: Lancer rayon d'épuisement sur un combattant mobile, avant de l'approcher.
+  note: Une réussite au jet de Vigueur laisse la cible fatiguée ; un échec l'épuise. Ne pas dépenser ce pouvoir sur une cible déjà épuisée.
+
+step: Une cible est déjà à portée et l'attaque immédiate est préférable
+  do: Faire une attaque à outrance avec les deux contacts +9, ou +11 en frénésie.
+  note: Après un déplacement ordinaire, effectuer un seul contact ; un pas de placement de 1,50 m permet de conserver l'attaque à outrance.
+
+## Rounds suivants
+
+step: Une victime subit les dégâts d'un contact
+  do: Faire jouer Vigueur DD 16 contre la dépendance à l'opium.
+  note: Une nouvelle dépendance inflige aussitôt les dégâts de la drogue, sans ses bénéfices ; le spectre gagne +2 aux attaques, compétences et sauvegardes pendant 1 round.
+
+step: Un adversaire devient dépendant à l'opium
+  do: Exploiter l'allonge de 3 m pour le frapper et menacer ses déplacements.
+  note: Ses armes et sorts affectent désormais le spectre comme s'il était tangible. Les contacts restent dommageables, mais ne renouvellent pas les effets de dépendance.
+
+step: Une cible non dépendante reste accessible
+  do: Concentrer les deux contacts sur elle pour provoquer une nouvelle dépendance.
+  note: Durant le bonus temporaire de dépendance, les contacts passent à +11, ou +13 si la frénésie s'applique aussi.
+
+step: Un lanceur de sorts est au contact et contact de débilité est disponible
+  do: Employer contact de débilité pour diminuer ses caractéristiques mentales, puis reprendre les contacts offensifs au tour suivant.
+  note: Ce pouvoir remplace les attaques du tour ; il n'ajoute pas les dégâts ni la dépendance des contacts intangibles.
+
+step: Un adversaire provoque une attaque d'opportunité dans l'allonge appropriée
+  do: Porter un contact intangible, en respectant la limite de quatre attaques d'opportunité par round.
+  note: L'allonge de 3 m concerne uniquement les dépendants à l'opium ; elle reste de 1,50 m contre les autres.
+
+## Repli
+
+step: Points de vie à 13 ou moins, ou dépendant à l'opium capable de le détruire rapidement
+  do: Se désengager, puis traverser une paroi pour rompre le contact et fuir en volant à 9 m par déplacement, ou 12 m sous frénésie.
+  note: Une retraite permet de quitter la case initiale sans attaque d'opportunité ; s'éloigner de l'opium met fin à la frénésie et rétablit la CA 16.

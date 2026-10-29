@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Rajambari, mastodonte squelettique de taille TG, mort-vivant neutre mauvais, sans intelligence et servile, enchaîné à un pilier du Gésier.
+  Défenses +22 (2d8+14), coup +22 (2d6+14) ; allonge de 4,50 m, espace occupé de 4,50 m ; vitesse de 12 m.
+  63 PV, CA 17, contact 12, pris au dépourvu 13 ; RD 5/contondant ; immunité au froid et traits des morts-vivants.
+  Initiative +8 ; vision dans le noir à 18 m, Perception +0.
+
+step: Personne ne tente d'endommager les mastodontes ni la structure du Gésier
+  do: Rester passif auprès de son pilier
+  note: La simple présence des intrus ne déclenche pas le combat.
+
+## Ouverture
+
+step: Une créature tente d'endommager un mastodonte ou la structure du Gésier
+  do: Engager le combat pour défendre le Gésier, même si la tentative ne cause aucun dégât
+  note: Chaque mastodonte peut s'éloigner de son pilier de 4,50 m au maximum ; sa chaîne impose cette limite malgré sa vitesse de 12 m.
+
+step: Une cible est déjà dans son allonge au début de son tour
+  do: Faire une attaque à outrance : défenses +22 (2d8+14) et coup +22 (2d6+14)
+
+step: Une cible peut être atteinte après un déplacement autorisé par la chaîne
+  do: Avancer pour la mettre dans son allonge de 4,50 m, puis porter une attaque de défenses +22 (2d8+14)
+  note: Après ce déplacement, il ne porte qu'une attaque.
+
+## Rounds suivants
+
+step: Un intrus reste dans son allonge au début de son tour
+  do: Répéter l'attaque à outrance : défenses +22 (2d8+14) et coup +22 (2d6+14)
+
+step: La cible s'éloigne mais reste accessible dans les limites de la chaîne
+  do: Se déplacer pour la remettre à portée, puis attaquer avec les défenses +22 (2d8+14)
+
+step: Aucun intrus ne peut être atteint depuis la zone accessible
+  do: Rester près du pilier et attendre qu'un intrus redevienne accessible
+  note: Il ne dispose d'aucune attaque à distance et ne peut poursuivre au-delà de la limite de sa chaîne.
+
+note: Chaînes et salles supérieures
+  Les chaînes bougent et secouent les salles situées au-dessus pendant le combat.
+  Tant que les engrenages restent verrouillés, les salles tremblent mais ne changent pas de configuration.
+
+## Repli
+
+step: Il lui reste des points de vie
+  do: Continuer à défendre le Gésier jusqu'à sa destruction, sans fuir ni se rendre
+
+step: Au moins deux mastodontes squelettiques sont détruits
+  do: Garder les salles du labyrinthe supérieur bloquées dans leur configuration actuelle
+  note: Les mastodontes survivants ne sont plus assez forts pour faire tourner les salles ; ils continuent néanmoins à combattre jusqu'à leur destruction.

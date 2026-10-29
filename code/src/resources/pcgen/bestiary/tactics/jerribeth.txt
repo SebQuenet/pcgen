@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Jerribeth, glabrezu mythique femelle de taille TG, FP 14, est une manipulatrice qui privilégie les pouvoirs à distance et les attaques suivies d'un déplacement. Bluff +31 ; vision lucide constante.
+  206 pv, CA 30 ; déplacement de 12 m, avec marche dans les airs ; espace occupé et allonge de 4,50 m.
+  Sceptre de la vipère +20/+15/+10 (1d8+14 et poison), morsure +20 (1d8+6), griffe +20 (1d6+6), deux pinces +20 (2d8+6 chacune, critique sur 19–20).
+  RD 10/épique et Bien ; RM 27 ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu.
+
+resource: Marche dans les airs, force du taureau, splendeur de l'aigle | 1 chacun | sorts préparés, à lancer avant le combat
+resource: Mot de pouvoir étourdissant | 1/jour | réservé en priorité au soigneur adverse
+resource: Destruction | 1 | sort préparé, DD 25
+resource: Guérison suprême | 1 | sort préparé, réservée à Jerribeth sous 75 pv
+resource: Scrutation suprême | 1 | sort préparé, DD 25
+resource: Confusion, marteau du Chaos | à volonté | DD 22
+resource: Inversion de la gravité | à volonté | DD 25
+resource: Dissipation de la magie, image miroir | à volonté | pouvoirs magiques, NLS 14
+resource: Téléportation suprême | à volonté | elle-même et au plus 22,7 kg d'objets
+resource: Invocation | 1/jour | un glabrezu, 20 % de réussite, ou 1d2 vrocks, 50 % ; choisir une seule option
+
+step: Elle peut préparer la rencontre
+  do: Lancer marche dans les airs, force du taureau et splendeur de l'aigle sur elle-même
+  note: Exploiter sa forme humanoïde, son changement de forme et son Bluff pour dissimuler sa nature jusqu'à l'affrontement.
+
+## Ouverture
+
+step: Le combat commence
+  do: Reprendre sa forme véritable par une action immédiate, puis utiliser mot de pouvoir étourdissant sur un soigneur du groupe
+  note: Ses vêtements précieux sont détruits lorsqu'elle reprend sa forme véritable.
+
+step: Elle peut se déplacer après son pouvoir
+  do: Prendre de la distance grâce à marche dans les airs et à son déplacement de 12 m
+  note: Chercher une position qui oblige les combattants adverses à se déplacer pour l'atteindre.
+
+## Rounds suivants
+
+step: Elle tombe sous 75 pv et dispose encore de guérison suprême
+  do: Lancer guérison suprême sur elle-même en priorité
+  note: Une fois ce sort utilisé, surveiller le seuil de fuite de 50 pv.
+
+step: Les adversaires restent à distance et plusieurs peuvent être affectés
+  do: Utiliser confusion ou marteau du Chaos, DD 22, selon leur position ; employer inversion de la gravité, DD 25, pour perturber leur approche
+  note: Choisir un seul de ces pouvoirs par round, puis ajuster sa position si possible.
+
+step: Une protection magique adverse compromet ses attaques ou son contrôle
+  do: Employer dissipation de la magie sur cette protection
+
+step: Une cible dangereuse justifie de dépenser son sort offensif préparé
+  do: Lancer destruction, DD 25
+
+step: Elle dispose d'un round pour tenter d'obtenir des renforts
+  do: Tenter son invocation quotidienne, de préférence 1d2 vrocks pour les 50 % de réussite
+  note: L'échec consomme aussi cette utilisation ; adapter la suite au résultat de l'invocation.
+
+step: Elle s'engage pour la première fois au corps à corps
+  do: Lancer image miroir avant de commencer ses attaques de mêlée
+
+step: Un paladin, un rôdeur ou un autre spécialiste du combat contre les démons la menace en mêlée
+  do: Porter une seule attaque avec le sceptre de la vipère en utilisant Attaque en puissance, puis s'éloigner avec son déplacement disponible
+  note: Exploiter son allonge de 4,50 m pour frapper à distance ; sortir d'une case menacée peut provoquer une attaque d'opportunité. Le but est d'obliger l'ennemi à se déplacer avant de riposter.
+
+step: Un adversaire moins dangereux reste à portée et elle peut consacrer tout son tour aux attaques
+  do: Effectuer l'attaque à outrance indiquée dans le profil : trois attaques de sceptre, une morsure, une griffe et deux pinces
+  note: Reprendre ses pouvoirs à distance dès que rester au contact l'expose à une attaque à outrance dangereuse.
+
+## Repli
+
+step: Elle tombe sous 50 pv après avoir déjà utilisé guérison suprême
+  do: Utiliser téléportation suprême pour gagner un lieu sûr
+  note: Elle ne revient pas immédiatement. Elle prépare une vengeance ultérieure, probablement après avoir rejoint Hepzamirah dans les îles de Minuit, dans les Abysses.

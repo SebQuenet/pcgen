@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Ours-hibou géant de Shokuran, bête magique neutre de taille TG, à l'intelligence animale. 67 PV ; CA 20, contact 10, pris au dépourvu 18 ; initiative +6.
+  Morsure +11 (2d6+8) et 2 griffes +11 (1d8+8 chacune, plus saisie) ; BMO +15, +19 en lutte.
+  Déplacement 9 m ; espace occupé 4,50 m ; allonge 3 m. Perception +14, vision dans le noir à 18 m et vision nocturne.
+
+## Ouverture
+
+step: Un ennemi est repéré
+  do: Choisir une cible et s'acharner sur elle jusqu'à ce qu'elle tombe.
+
+step: La cible est à plus de 3 m
+  do: Avancer vers elle jusqu'à 9 m ; si elle est alors à portée, porter une seule attaque de griffe +11 (1d8+8 plus saisie).
+  note: Si elle reste hors de portée, continuer à l'approcher avec une seconde action de déplacement, jusqu'à 9 m supplémentaires.
+
+step: La cible est déjà à portée sans déplacement nécessaire
+  do: Effectuer une attaque à outrance : morsure +11 (2d6+8) et 2 griffes +11 (1d8+8 chacune, plus saisie).
+
+note: Saisie
+  Chaque griffe qui touche une cible de taille G ou inférieure permet une tentative de lutte gratuite à +19, sans attaque d'opportunité.
+
+## Rounds suivants
+
+step: La cible choisie tient encore debout et n'est pas agrippée
+  do: Répéter l'attaque à outrance si elle est à portée ; sinon, la poursuivre et porter une griffe si le déplacement permet de l'atteindre.
+  note: Continuer les tentatives de saisie après les griffes qui touchent ; garder la même cible malgré les autres adversaires.
+
+step: La cible choisie est agrippée
+  do: Maintenir la lutte et choisir de lui infliger les dégâts d'une griffe (1d8+8).
+
+step: La cible choisie tombe
+  do: Passer à l'adversaire le plus proche et reprendre la même séquence d'approche, d'attaques et de saisie.
+
+## Repli
+
+step: Quel que soit le nombre de PV restants
+  do: Combattre jusqu'à la mort.

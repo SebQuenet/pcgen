@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Lémure invoqué, diable de taille M, loyal mauvais et sans intelligence. 17 pv, CA 14 ; déplacement de 6 m ; allonge de 1,50 m.
+  Deux griffes +4, chacune infligeant 1d4+2 dégâts lors d'une attaque à outrance. Après un déplacement normal, une seule griffe +4.
+
+note: Défenses
+  RD 5/bien ou argent ; immunité au feu, au poison et aux effets mentaux ; résistance à l'acide 10 et au froid 10.
+  Vision dans le noir à 18 m et vision dans les ténèbres, même magiques. Aucune préparation particulière.
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de ses griffes
+  do: Effectuer une attaque à outrance : deux griffes +4, chacune pour 1d4+2 dégâts.
+
+step: Aucun ennemi n'est à portée
+  do: Avancer vers l'ennemi le plus proche, jusqu'à 6 m, puis porter une seule attaque de griffe +4 s'il arrive à 1,50 m de lui.
+  note: Si ce déplacement ne suffit pas, effectuer un double déplacement, jusqu'à 12 m au total, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Répéter les attaques à outrance avec les deux griffes.
+  note: Il peut effectuer un pas de 1,50 m et conserver ses deux attaques s'il ne fait aucun autre déplacement pendant son tour.
+
+step: Sa cible s'éloigne ou tombe
+  do: Rejoindre l'ennemi le plus proche et reprendre les attaques ; une seule griffe après un déplacement normal.
+  note: S'il ne peut pas atteindre un adversaire avec un déplacement de 6 m, poursuivre avec un double déplacement.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à combattre sans chercher à fuir, jusqu'à sa destruction ou à la fin de l'invocation.

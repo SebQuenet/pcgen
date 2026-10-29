@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Quocwel, omnipathe invincible, est une aberration aquatique gigantesque, loyale mauvaise, FP 24. Son Intelligence 34 favorise la préparation et la domination des adversaires plutôt qu'un échange de coups prolongé.
+  488 pv, CA 38, guérison accélérée 10 ; nage à 30 m par action de mouvement, déplacement terrestre de 4,50 m. Espace occupé et allonge : 6 m ; télépathie à 90 m ; vision dans le noir à 18 m.
+  Morsure à triple mâchoire +29 (3d6+12, critique 19–20, plus mucus) et coup de queue +26 (3d6+6 plus mucus). Ses armes principales restent les dominations et les sorts psychiques.
+
+note: Défenses
+  RD 10/épique, RM 29 ; immunité à l'électricité et aux effets mentaux ; résistances acide 15, froid 20, feu 15. Armure de mage, détection de la magie et don des langues sont constants ; le bonus d'armure est déjà compris dans la CA.
+
+resource: Domination | à volonté | domination de personne, Volonté DD 24 ; humanoïdes seulement, portée 22,50 m
+resource: Domination rapide | 3/jour | domination de personne en action rapide, Volonté DD 24 ; portée 22,50 m
+resource: Domination de monstre | 3/jour | Volonté DD 28 ; permet de viser une créature non humanoïde
+resource: Brume mentale | 3/jour | Volonté DD 24 ; rayon de 6 m, affaiblit les sauvegardes de Volonté
+resource: Œil du mage | 3/jour | reconnaissance à distance, sans exposer Quocwel
+resource: Mirage | 3/jour | mirage arcana, Volonté DD 24 pour dévoiler l'illusion après interaction
+resource: Voile | 1/jour | Volonté DD 25 pour dévoiler le déguisement après interaction
+resource: Sorts psychiques de niveau 7 | 6/jour, réserve commune | fouet de l'ego V, DD 29, ou téléportation suprême ; garder un emplacement pour fuir
+resource: Sorts psychiques de niveau 6 | 8/jour, réserve commune | poussée mentale VI, DD 28, ou image permanente, DD 28 ; les autres sorts de ce niveau partagent cette réserve
+resource: Sorts psychiques de niveau 4 | 9/jour, réserve commune | présence écrasante, DD 26, et détection de la scrutation ; les autres sorts de ce niveau partagent cette réserve
+resource: Sorts psychiques de niveau 3 | 9/jour, réserve commune | impulsion synaptique et synesthésie, DD 25 ; les autres sorts de ce niveau partagent cette réserve
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Lancer détection de la scrutation et reconnaître leur approche avec œil du mage ; choisir une position dans l'eau avec une voie de fuite suffisamment large pour son corps
+  note: Perception +39 et Art de la magie +46 servent à repérer les menaces et à identifier les sorts observables ; détection des pensées à volonté, Volonté DD 21, peut compléter les renseignements
+
+step: Il peut préparer le terrain
+  do: Employer mirage pour dissimuler la configuration des lieux, ou image permanente pour placer un leurre immobile près d'une approche défavorable aux intrus
+  note: Ces illusions ne créent aucun obstacle matériel ; l'image permanente ne se déplace que lorsque Quocwel se concentre sur elle
+
+step: Des créatures sont déjà sous sa domination
+  do: Leur ordonner de surveiller les accès et de s'interposer pendant qu'il reste à distance dans l'eau
+  note: Préparer leurs consignes avant le combat ; donner un nouvel ordre ou modifier un ordre de domination demande une action de mouvement
+
+## Ouverture
+
+note: Choix de l'ouverture
+  Choisir une seule des actions principales ci-dessous selon la situation. Une domination rapide peut s'y ajouter, une fois par round, si une cible humanoïde est disponible.
+
+step: Plusieurs adversaires sont à 75 m ou moins, groupés à 9 m au plus les uns des autres
+  do: Présence écrasante sur les ennemis accessibles, Volonté DD 26
+  note: Un échec les laisse sans défense ; une réussite initiale les rend chancelants pendant 1 round. Une victime peut consacrer une action complexe à un nouveau jet pour se libérer
+
+step: Les intrus approchent encore par un passage terrestre prévisible
+  do: Placer brume mentale sur leur passage, Volonté DD 24, puis tenter une domination rapide sur un humanoïde exposé
+  note: Un échec contre la brume inflige –10 aux jets de Volonté et aux tests de Sagesse, tant que la cible y reste puis pendant 2d6 rounds ; la brume ne gêne pas sensiblement la vision
+
+step: Une seule créature dangereuse doit être neutralisée
+  do: Domination de monstre, Volonté DD 28 ; réserver domination de personne, DD 24, aux humanoïdes
+  note: Chercher un combattant capable de gêner les autres intrus ; les ordres contraires à sa nature autorisent un nouveau jet avec +2, et les ordres manifestement suicidaires échouent
+
+## Rounds suivants
+
+step: Une cible sensible aux effets mentaux reste dangereuse à 18 m ou moins
+  do: Poussée mentale VI, Volonté DD 28
+  note: Au NLS 15, inflige 15d8 dégâts ; une réussite réduit les dégâts de moitié. Un échec rend aussi la cible épuisée et étourdie pendant 1 round
+
+step: Un adversaire résiste aux premières dominations mais reste sensible aux effets mentaux, à 18 m ou moins
+  do: Fouet de l'ego V, Volonté DD 29, en choisissant la Sagesse ; tenter ensuite une domination rapide si la cible est humanoïde
+  note: Malus de –10 en Sagesse pendant 15 rounds et état chancelant pendant 1d10 rounds sur un échec ; une réussite supprime l'état chancelant et limite le malus à 1 round. Préserver l'emplacement réservé à la fuite
+
+step: Plusieurs ennemis arrivent à 9 m ou moins et les serviteurs peuvent rester hors de la zone
+  do: Impulsion synaptique, Volonté DD 25, pour étourdir pendant 1 round toutes les créatures affectées autour de lui
+  note: Le sort ne distingue pas les alliés des ennemis ; Quocwel est lui-même immunisé aux effets mentaux
+
+step: Un lanceur de sorts sensible aux effets mentaux reste actif à 18 m ou moins
+  do: Synesthésie, Volonté DD 25
+  note: Pendant 15 rounds, vitesse réduite de moitié, 20 % de chances de rater les attaques, –4 à la CA et aux Réflexes ; lancer un sort exige un test de concentration DD 25 + niveau du sort
+
+step: Un adversaire immunisé aux effets mentaux est à portée, ou une attaque physique devient préférable
+  do: S'il peut rester sur place, effectuer une attaque à outrance : morsure +29 puis queue +26 ; après un déplacement ordinaire, porter seulement la morsure
+  note: Utiliser l'allonge de 6 m et Attaques réflexes pour mordre les ennemis qui provoquent des attaques d'opportunité
+
+step: Les ennemis concentrent leurs attaques sur lui
+  do: Rompre le contact en nageant vers un couvert réel et laisser les créatures dominées gêner la poursuite ; reprendre les sorts depuis une position moins exposée
+  note: La nage permet 30 m par action de mouvement ; la guérison accélérée rend 10 pv par round, jusqu'au maximum de 488 pv
+
+## Repli
+
+step: Ses pv tombent sous 150, ou il risque d'être neutralisé avant son prochain tour
+  do: Téléportation suprême vers un refuge aquatique connu sur le même plan, avec l'emplacement de niveau 7 conservé
+  note: Ce seuil est un choix de prudence ; ne pas attendre que la guérison accélérée compense les dégâts de plusieurs adversaires
+
+step: La téléportation est empêchée ou aucun emplacement de niveau 7 ne reste
+  do: Se replier par l'eau, jusqu'à 60 m avec deux actions de mouvement ; ordonner aux créatures dominées de couvrir sa fuite s'il peut consacrer une action de mouvement à cet ordre
+  note: Donner cet ordre ne laisse qu'une action de mouvement pour nager, soit 30 m ce round. Exploiter les couverts réels et les passages connus pour interrompre la poursuite

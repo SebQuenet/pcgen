@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Duchess, diablotin femelle de taille TP, est une familière loyale mauvaise liée à Aglorn. Elle harcèle les ennemis de son maître en alternant invisibilité et piqûres empoisonnées.
+  Dard +9 (1d4 et poison) ; allonge 0 m ; vol à 15 m, manœuvrabilité parfaite ; déplacement au sol à 6 m.
+  30 PV, CA 22, guérison accélérée 2 ; réduction des dégâts 5/Bien ou argent ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10 ; esquive extraordinaire.
+  Perception +13, vision dans le noir à 18 m et vision dans les ténèbres ; détection du Bien et détection de la magie constantes.
+
+resource: Invisibilité | à volonté | sur elle seule ; prend fin lorsqu'elle attaque
+resource: Suggestion | 1/jour | Volonté DD 15 ; NLS 6
+resource: Augure | 1/jour | NLS 6
+resource: Communion | 1/semaine | 6 questions ; NLS 12
+
+step: Elle dispose du temps nécessaire pour préparer la défense d'Aglorn
+  do: Employer augure pour évaluer une décision imminente ; réserver communion aux renseignements utiles à la protection de son maître
+
+step: Des intrus approchent
+  do: Devenir invisible et observer leurs déplacements depuis les airs
+  note: Son vol lui permet de choisir son approche et de rester hors de portée des armes de mêlée avant de frapper
+
+## Ouverture
+
+step: Teenoch est présent et allié aux PJ
+  do: S'envoler vers Teenoch pour combattre le démon
+  note: Sa distraction prend le pas sur son soutien à Aglorn contre les PJ
+
+step: Elle concentre ses attaques sur les PJ et reste visible
+  do: Activer invisibilité, puis voler vers un adversaire déjà occupé par les créatures convoquées alliées
+  note: Duchess ne convoque aucune créature elle-même
+
+step: Elle est invisible et peut atteindre une cible engagée par les alliés d'Aglorn
+  do: Entrer dans la case de la cible et porter une attaque de dard +9, infligeant 1d4 dégâts et le poison
+  note: Son allonge de 0 m impose cette proximité. Elle ne menace pas les cases voisines et ne peut donc pas fournir de prise en tenaille
+
+## Rounds suivants
+
+step: Elle redevient visible après une piqûre
+  do: Au tour suivant, réactiver invisibilité et se repositionner en vol pour préparer une nouvelle attaque
+  note: Alterner les tours d'approche invisible et les piqûres ; privilégier les cibles occupées par les créatures convoquées
+
+step: Un adversaire peut être convaincu de quitter le combat
+  do: Employer suggestion pour lui présenter une retraite à l'abri comme une décision raisonnable, Volonté DD 15
+  note: Dépenser cette unique utilisation si écarter cet adversaire aide davantage Aglorn qu'une piqûre
+
+step: Elle est blessée et Aglorn vit encore
+  do: Rester invisible à l'écart de la mêlée, à proximité du combat, pour récupérer avant de reprendre son harcèlement
+  note: Guérison accélérée 2 : elle récupère 2 PV par round
+
+## Repli
+
+step: Aglorn est vivant
+  do: Rester pour défendre son maître, même si le combat tourne mal
+  note: Duchess est inexorablement liée à Aglorn et ne peut l'abandonner de son vivant
+
+step: Aglorn meurt
+  do: Devenir invisible dès que possible, puis fuir en vol à 15 m par déplacement
+  note: La mort de son maître déclenche sa fuite, quels que soient ses PV restants

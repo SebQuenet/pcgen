@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Bouclier de Hakotep : golem d'argile évolué, gardien protecteur de taille G, neutre et sans intelligence ; FP 13. Il exécute les ordres de Hakotep.
+  127 pv, CA 28, guérison accélérée 5 ; RD 10/adamantium et contondant ; immunités de créature artificielle et immunité à la magie.
+  Déplacement 6 m ; espace occupé 3 m et allonge 3 m. Attaque à outrance : 2 coups +21, chacun infligeant 2d10+9 et une blessure maudite.
+
+resource: Rapidité | 1/jour | action libre après au moins 1 round de combat ; durée 3 rounds
+resource: Protection d'autrui | 1/jour | NLS 18 ; activation par Hakotep, action simple, à 30 m ou moins du gardien
+resource: Sort stocké : boneshatter | 1/jour, si chargé | NLS 18 ; libération sur ordre ; DD non indiqué dans le profil fourni
+
+step: Les quatre Boucliers accompagnent Hakotep
+  do: En placer deux adjacents à Hakotep et réserver les deux autres à l'avance contre les ennemis.
+  note: Garde impose un malus de -2 aux attaques contre Hakotep lorsqu'un gardien chargé de le défendre lui est adjacent.
+
+step: Hakotep veut partager les dégâts qu'il subira
+  do: Lui faire activer protection d'autrui avant l'engagement, si possible.
+  note: Le gardien reçoit la moitié des dégâts destinés au maître ; ce transfert ignore ses défenses et n'accorde aucun bonus de CA ou de sauvegarde à Hakotep.
+
+## Ouverture
+
+step: Le Bouclier fait partie des deux gardes rapprochés
+  do: Rester adjacent à Hakotep et frapper les ennemis à portée sans abandonner la garde.
+
+step: Le Bouclier fait partie des deux assaillants
+  do: Avancer vers les ennemis désignés à 6 m ; si une cible se trouve ensuite à 3 m ou moins, porter un coup +21, pour 2d10+9 et blessure maudite.
+  note: S'il doit consacrer ses deux actions au déplacement, il avance de 12 m sans attaquer. Il ne déclenche pas encore rapidité avant d'avoir combattu au moins 1 round.
+
+step: Une cible est déjà à portée et aucun déplacement important n'est nécessaire
+  do: Effectuer l'attaque à outrance : 2 coups +21, chacun pour 2d10+9 et blessure maudite.
+
+## Rounds suivants
+
+step: Au moins 1 round de combat s'est écoulé et rapidité reste disponible
+  do: Activer rapidité en action libre, dès que possible.
+  note: Pendant 3 rounds : déplacement 12 m, CA 29, Réflexes +6 ; attaque à outrance de 3 coups +22, chacun pour 2d10+9 et blessure maudite.
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance ; ajuster la position par un pas de 1,50 m si nécessaire.
+  note: Les blessures maudites ne guérissent pas naturellement ; tout soin magique exige un test de niveau de lanceur de sorts DD 26 pour agir.
+
+step: Hakotep est en difficulté et ordonne de libérer boneshatter
+  do: Consacrer une action simple au sort stocké contre l'ennemi désigné, à 21 m ou moins, s'il possède un squelette ou une carapace rigide.
+  note: 15d6 dégâts et épuisement pendant 18 minutes ; Vigueur réussie : demi-dégâts et fatigue à la place. Résistance à la magie applicable ; aucune nouvelle utilisation sans sort stocké disponible.
+
+step: Un gardien adjacent à Hakotep est détruit et un autre peut le remplacer
+  do: Sur ordre de Hakotep, faire revenir l'un des assaillants pour prendre la place vacante et reprendre la garde.
+
+step: Le Bouclier est endommagé mais encore actif
+  do: Récupérer 5 pv par round, jusqu'à 127 pv, tout en poursuivant ses ordres.
+  note: À 9 m ou moins du porteur de son amulette, contrôle l'empêche de devenir berserk.
+
+## Repli
+
+step: Les points de vie diminuent, quelle que soit leur valeur
+  do: Continuer à protéger Hakotep ou à attaquer selon ses ordres ; combattre jusqu'à la destruction.
+
+step: Hakotep ordonne un changement de position
+  do: Le suivre ou rejoindre le poste indiqué ; utiliser localisation du maître pour retrouver le porteur de l'amulette sur le même plan.
+  note: Aucun seuil de fuite : un retour auprès de Hakotep sert à rétablir sa protection.

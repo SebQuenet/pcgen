@@ -1,0 +1,88 @@
+## Avant le combat
+
+note: Profil
+  Vigliv, norne gardienne divine, fée de taille G, chaotique neutre, FP 19. Elle préfère éviter le combat et neutraliser les intrus ; elle ne recourt à ses pouvoirs meurtriers qu'après avoir subi plus de 100 points de dégâts.
+  270 PV, CA 35, contact 23, RM 29 ; déplacement de 16,50 m, allonge de 3 m. Cisailles +21/+21/+16 en attaque à outrance, chacune infligeant 1d8+12 dégâts, critique sur 15–20, plus absorption d'énergie ; ou contact +16 avec absorption d'énergie.
+  Initiative +22, Perception +37 ; jamais surprise ni prise au dépourvu. Vision à 360°, perception aveugle à 36 m, vision dans le noir à 18 m et vision nocturne ; vision lucide et vision magique supérieure permanentes.
+
+note: Défenses
+  RD 15/fer froid ; guérison accélérée 5 et régénération 10, cette dernière étant interrompue par le fer froid. Immunité au froid, aux maladies, au poison et aux effets mentaux ; résistance de 30 à l'acide, à l'électricité et au feu.
+  Protection contre la mort, prémonition, esprit impénétrable, vision lucide et vision magique supérieure sont permanents ; don des langues lui permet de négocier avec les visiteurs.
+
+resource: Moment de prescience | 1/jour | à lancer avant de se montrer
+resource: Répulsion | 1/jour | Volonté DD 29
+resource: Labyrinthe | 1/jour | sans jet de sauvegarde ; résistance à la magie applicable
+resource: Arrêt du temps | 1/jour | se préparer et se replacer sans attaquer les adversaires
+resource: Assassin imaginaire à incantation rapide | 1/jour | action rapide ; Volonté puis Vigueur DD 26
+resource: Mot de pouvoir mortel | 1/jour | cible ayant au plus 100 PV actuels ; sans jet de sauvegarde
+resource: Ennemi subconscient | 1/jour | Volonté puis Vigueur DD 31
+resource: Malédiction et dissipation suprême | à volonté | malédiction au contact, Volonté DD 26 ; NLS 18
+resource: Porte dimensionnelle et voyage par les arbres | à volonté | porte dimensionnelle limitée au Chaudron de Grand-Mère
+resource: Interdiction | 1/jour | DD 28 ; préparation du refuge
+resource: Défense magique | 1/jour | DD 28 ; préparation du refuge
+
+step: Avant de se révéler aux visiteurs de la grotte
+  do: Activer moment de prescience, puis engager la conversation en gardant une issue vers le sorbier ou ses jeunes pousses.
+  note: Garder le bonus de prescience pour un jet décisif, notamment une sauvegarde qui permettrait d'éviter l'immobilisation ou la capture.
+
+## Ouverture
+
+step: Les visiteurs menacent Vigliv, mais elle peut encore éviter l'affrontement
+  do: Chercher un accord ; s'ils attaquent, appliquer immédiatement le repli dès qu'une voie de fuite est disponible.
+  note: Elle ne cherche pas à ouvrir le combat par une exécution.
+
+step: Le combat est imposé et plusieurs adversaires veulent venir au contact
+  do: Activer répulsion pour tenir les assaillants à distance, puis se déplacer vers une issue.
+  note: Volonté DD 29 ; surveiller ceux qui réussissent leur sauvegarde et peuvent franchir la protection.
+
+step: Un adversaire domine le combat ou bloque la fuite
+  do: Utiliser labyrinthe pour l'écarter temporairement, puis exploiter son absence pour partir.
+  note: Aucun jet de sauvegarde initial ; vérifier la résistance à la magie. Cette utilisation remplace répulsion pour ce round.
+
+## Rounds suivants
+
+step: Elle doit gagner du temps pour se préparer ou atteindre une issue
+  do: Utiliser arrêt du temps ; pendant les rounds obtenus, se repositionner et activer répulsion si elle est encore disponible.
+  note: Elle ne peut ni attaquer ni affecter directement ses ennemis pendant l'arrêt du temps ; réserver malédiction, labyrinthe et les pouvoirs meurtriers à la reprise du temps.
+
+step: Elle n'a pas encore subi plus de 100 points de dégâts et un ennemi reste au contact
+  do: Employer malédiction pour l'affaiblir, avec Volonté DD 26, puis profiter d'une occasion de fuite.
+  note: Privilégier la neutralisation ; ne pas dépenser assassin imaginaire, mot de pouvoir mortel ou ennemi subconscient à ce stade.
+
+step: Une protection magique identifiée empêche de neutraliser un ennemi
+  do: Employer dissipation suprême sur cette protection, puis reprendre la neutralisation au round suivant.
+  note: Vision magique supérieure aide à choisir la protection à dissiper ; NLS 18.
+
+step: Vigliv a subi plus de 100 points de dégâts au cours de l'affrontement
+  do: Passer aux moyens meurtriers si elle doit encore combattre ; lancer assassin imaginaire à incantation rapide sur une cible vulnérable, puis consacrer son action simple à un autre pouvoir approprié.
+  note: Volonté DD 26 pour rejeter l'illusion, puis Vigueur DD 26 contre son effet mortel. Cette utilisation rapide n'est disponible qu'une fois par jour dans ce profil.
+
+step: Après ce seuil, une cible a au plus 100 PV actuels
+  do: Utiliser mot de pouvoir mortel pour l'éliminer, en priorité si elle empêche la fuite.
+  note: Aucun jet de sauvegarde ; une cible au-dessus de 100 PV n'est pas affectée. Tenir compte de la résistance à la magie et des protections contre la mort.
+
+step: Après ce seuil, plusieurs ennemis peuvent être pris ensemble
+  do: Utiliser ennemi subconscient sur les adversaires vulnérables aux illusions et à la peur.
+  note: Volonté puis Vigueur DD 31 ; éviter de gaspiller ce pouvoir sur des créatures immunisées aux effets mentaux.
+
+step: Après ce seuil, elle peut employer son pouvoir de coupe du fil du destin
+  do: Utiliser snip thread contre un adversaire qui la menace ou entrave sa fuite.
+  note: Le profil fourni ne précise pas les dégâts, le DD, la portée ni la fréquence de ce pouvoir ; ne pas lui attribuer de valeurs supplémentaires.
+
+step: Un ennemi est à 3 m ou moins et elle choisit de combattre aux cisailles
+  do: Si elle peut consacrer son round à l'attaque, effectuer les trois attaques à +21/+21/+16 ; après un déplacement ordinaire, n'effectuer qu'une attaque à +21.
+  note: Chaque coup inflige 1d8+12 dégâts plus absorption d'énergie. Utiliser les attaques d'opportunité permises par Attaques réflexes lorsque des ennemis les provoquent dans son allonge.
+
+## Repli
+
+step: Une échappatoire existe, quel que soit son total de PV
+  do: Employer porte dimensionnelle vers un lieu sûr du Chaudron de Grand-Mère, ou voyage par les arbres pour rejoindre une jeune pousse de son sorbier.
+  note: Porte dimensionnelle ne fonctionne qu'à l'intérieur du Chaudron de Grand-Mère ; elle ne peut plus agir après son utilisation jusqu'à son prochain tour.
+
+step: Elle a rompu le contact avec les assaillants
+  do: Récupérer grâce à sa guérison accélérée et à sa régénération ; préparer sa revanche et protéger son refuge par interdiction et défense magique si le temps le permet.
+  note: La destruction du sorbier ne la blesse pas, mais elle cherchera vraisemblablement à se venger de ses responsables.
+
+step: Toute fuite est impossible et elle est acculée
+  do: Combattre jusqu'au bout ; après plus de 100 points de dégâts subis, chercher à couper les fils du destin du plus grand nombre possible d'adversaires, en utilisant aussi ses pouvoirs meurtriers encore disponibles.
+  note: Elle ne se rend pas lorsqu'elle est contrainte de livrer ce dernier combat.

@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Bozhithar, démon hala de taille M, chaotique mauvais, FP 5, au service de Pazuzu. Il affaiblit ses adversaires à distance avec ses vents et ses averses de grêle, puis achève le moins protégé au corps à corps.
+  51 pv ; CA 18, contact 14, pris au dépourvu 14 ; initiative +4. Morsure +11 (1d6+4) et 2 griffes +11 (1d4+4), allonge 1,50 m.
+  Déplacement au sol 9 m ; vol 18 m, manœuvrabilité parfaite, Vol +21. Vision dans le noir 18 m ; Perception +11 ; télépathie 30 m.
+
+note: Défenses
+  Réduction des dégâts 5/fer froid ou Bien ; immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu 10 ; résistance à la magie 16.
+  Aura de vent de tempête et vent vengeur. Vigueur +7, Réflexes +8, Volonté +3 : les effets visant sa Volonté constituent son point faible.
+
+resource: Altération des vents | à volonté | DD 14 ; NLS 5, concentration +8
+resource: Bourrasque | 3/jour | DD 15 ; réserve distincte de celle de rivière de vent
+resource: Rivière de vent | 3/jour | DD 17
+resource: Contrôle des vents | 1/jour | DD 18
+
+step: Il repère les intrus avant d'être engagé
+  do: Prendre une position en vol, hors de leur allonge, avec une voie dégagée pour se déplacer et orienter ses vents vers eux
+  note: Observer les protections adverses pour identifier la cible la moins cuirassée ; ne pas engager immédiatement la mêlée
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans le même axe
+  do: Utiliser rivière de vent (DD 17) pour gêner leur progression et les maintenir à distance ; se déplacer en vol pour éviter leur contact
+  note: Consommer une seule utilisation de rivière de vent ; conserver les autres pour les nouvelles approches
+
+step: Une approche immédiate se prête mieux à une bourrasque
+  do: Utiliser bourrasque (DD 15) vers les assaillants et exploiter son déplacement en vol pour garder ses distances
+  note: Choisir ce pouvoir à la place de rivière de vent pour ce round
+
+## Rounds suivants
+
+step: Les premiers rounds continuent et une averse de grêle est possible
+  do: Consacrer son attaque à distance à une averse de grêle pour affaiblir les adversaires avant d'approcher
+  note: Alterner les averses et les pouvoirs de vent selon les possibilités ; chaque pouvoir ou averse occupe son propre tour d'action
+
+step: Les adversaires se rapprochent encore pendant cette phase
+  do: Reprendre de la distance en vol et employer rivière de vent (DD 17) ou bourrasque (DD 15), selon les utilisations restantes
+  note: Garder contrôle des vents (DD 18) pour une situation où modifier les vents du champ de bataille sert effectivement à empêcher leur approche
+
+step: Quelques rounds ont passé et la cible la moins protégée est accessible
+  do: Fondre sur elle ; après un déplacement ordinaire, porter une morsure +11 (1d6+4)
+  note: Avec Attaque en vol, il peut répartir son déplacement avant et après cette unique attaque ; ce don ne lui accorde pas une attaque à outrance ni une immunité aux attaques d'opportunité
+
+step: La cible reste à son contact et il peut consacrer son round à attaquer
+  do: Attaque à outrance : morsure +11 (1d6+4) et 2 griffes +11 (1d4+4)
+  note: Si un repositionnement de 1,50 m suffit, effectuer ce pas pour garder la cible à portée de toutes ses attaques
+
+step: La cible est hors d'atteinte ou des combattants l'empêchent de l'achever
+  do: Se replacer en vol vers un adversaire peu protégé ; reprendre une attaque isolée après le déplacement, puis l'attaque à outrance dès qu'il peut rester au contact
+
+## Repli
+
+step: Ses points de vie baissent, même lorsqu'il approche de la mort
+  do: Continuer à combattre jusqu'à la mort
+  note: Bozhithar refuse de s'exposer à la colère de Pazuzu en échouant à sa mission. Ses déplacements pour maintenir la distance ou changer de cible servent le combat ; il ne fuit pas et ne se rend pas

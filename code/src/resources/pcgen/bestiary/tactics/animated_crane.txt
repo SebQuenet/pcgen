@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Grue animée de taille G, créature artificielle sans intelligence et immobile. 68 pv, CA 18, solidité 15 ; immunités des créatures artificielles.
+  Coup de pince +12 (4d6+9 et étreinte) ; BMO +18 en lutte. Allonge de 9 m ; espace occupé de 3 m.
+  Vision dans le noir à 18 m et vision nocturne ; Perception -5.
+
+note: Terrain
+  Le vide donne sur la zone F23, située 9 m plus bas : la grue y lâche les créatures qu'elle saisit.
+
+## Ouverture
+
+step: Un adversaire se trouve dans son allonge de 9 m
+  do: Frapper avec la pince au bout de la flèche : +12, dégâts 4d6+9.
+  note: La pince peut atteindre un adversaire n'importe où dans cette allonge, sans déplacer la grue.
+
+step: Le coup touche
+  do: Tenter l'étreinte avec un BMO de +18 en lutte.
+
+step: L'étreinte réussit
+  do: Faire pivoter la flèche au-dessus du vide et lâcher la victime dans la zone F23, 9 m plus bas.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter le coup de pince, tenter l'étreinte après chaque coup réussi et précipiter toute victime saisie dans la zone F23.
+
+step: Tous les adversaires sont à plus de 9 m
+  do: Rester sur place et attendre qu'un adversaire revienne à portée.
+  note: La grue est immobile et ne dispose d'aucune attaque à distance.
+
+## Repli
+
+step: La grue est encore en état de combattre
+  do: Continuer à attaquer tout adversaire à portée jusqu'à sa destruction, à 0 pv.
+  note: Aucun repli : elle reste fixée à son emplacement et ne se rend pas.

@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Merlucent, aberration aquatique de taille M, chaotique neutre, qui privilégie les combats dans l'eau et les attaques depuis une cachette.
+  26 pv, CA 16, initiative +7 ; trois tentacules +6 (1d4+1 et poison), allonge de 4,50 m avec les tentacules.
+  Nage à 12 m par round, déplacement terrestre de 4,50 m ; vision dans le noir à 18 m, Perception +7, Discrétion +10 ; résistance au froid 5.
+
+resource: Détection de la magie | permanent | repérer les auras magiques pendant l'observation des intrus
+resource: Retardement du poison | 3/jour | NLS 4 ; retarde les effets d'un poison sans le neutraliser
+resource: Lumière | 3/jour | NLS 4 ; éclairer un objet si nécessaire
+resource: Poison des tentacules | à chaque touche | DD et effets non précisés dans le bloc fourni
+
+step: Des intrus approchent
+  do: Se dissimuler dans l'eau avec Discrétion +10 et observer avec Perception +7 avant de choisir une cible isolée
+  note: sa chair est transparente ; aucun bonus supplémentaire ni invisibilité ne sont chiffrés dans le bloc
+
+step: D'autres merlucents sont présents à 9 m ou moins
+  do: Coordonner l'embuscade par télépathie et choisir ensemble la cible à encercler
+  note: conserver une voie de fuite vers l'eau profonde
+
+## Ouverture
+
+step: Une cible est à 4,50 m ou moins et une action simple seulement est disponible
+  do: Porter une attaque de tentacule +6 (1d4+1 et poison)
+
+step: Une cible est à 4,50 m ou moins et une attaque à outrance est possible
+  do: Frapper avec les trois tentacules +6 (1d4+1 et poison chacun)
+  note: concentrer les attaques sur une cible isolée ; rester si possible hors de son allonge
+
+step: Aucune cible n'est à portée des tentacules
+  do: Nager jusqu'à 12 m pour placer une cible à 4,50 m ou moins, puis porter une seule attaque de tentacule
+  note: si ce déplacement ne suffit pas, poursuivre l'approche à couvert sans attaquer
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement important
+  do: Continuer les attaques à outrance avec les trois tentacules
+  note: un pas de placement de 1,50 m permet d'ajuster la distance tout en conservant l'attaque à outrance
+
+step: La cible s'éloigne ou des ennemis l'encerclent
+  do: Se repositionner à la nage, puis attaquer une fois si une cible reste à portée
+  note: après un déplacement supérieur à 1,50 m, ne pas effectuer les trois attaques
+
+step: Un poison le menace et il dispose d'un moment pour utiliser son pouvoir
+  do: Utiliser retardement du poison sur lui-même
+  note: ce pouvoir ne rend aucun point de vie
+
+step: Les adversaires restent hors de l'eau et hors de portée
+  do: Rester immergé et chercher une autre position d'approche
+  note: il ne possède aucune attaque à distance ; sa vitesse terrestre de 4,50 m rend une poursuite sur la berge défavorable
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou combat manifestement perdu
+  do: Rompre le combat et fuir vers l'eau profonde en nageant à 12 m par déplacement
+  note: utiliser l'action de retraite lorsque cela permet de quitter une case menacée ; rejoindre ensuite une cachette
+
+step: La fuite impose de traverser la portée des ennemis
+  do: Choisir une trajectoire qui évite leurs cases menacées et avertir les autres merlucents par télépathie s'ils sont à 9 m ou moins

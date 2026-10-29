@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Chen est un scarabée de taille M, une vermine neutre dressée pour attaquer, défendre, garder, chercher et revenir au rappel.
+  60 pv, CA 24 ; morsure +11 (1d8+7), ou deux morsures +11/+6 lors d'une attaque à outrance. Allonge de 1,50 m.
+  Déplacement au sol de 6 m ; vol de 6 m, manœuvrabilité médiocre, Vol -2 ; vision dans le noir à 18 m.
+  Sans Intelligence, il suit ses tours appris et les instructions de son maître.
+
+step: Son maître lui ordonne de défendre ou de garder
+  do: Rester près de la créature à défendre ou sur le lieu à garder, en position pour mordre un assaillant.
+
+step: Des broussailles naturelles offrent une voie d'approche
+  do: Emprunter ce passage grâce à déplacement facilité, sans ralentissement ni dégâts dus à cette végétation.
+  note: Cette aptitude ne permet pas de traverser sans gêne une végétation manipulée magiquement pour entraver le déplacement.
+
+## Ouverture
+
+step: La cible désignée peut être atteinte avec un déplacement de 6 m au plus
+  do: Avancer jusqu'à 1,50 m de la cible et porter une morsure +11 (1d8+7).
+  note: Le tour d'attaque appris permet de lui désigner n'importe quel type de cible.
+
+step: La cible est déjà à portée au début de son tour
+  do: Effectuer une attaque à outrance, deux morsures +11/+6, chacune infligeant 1d8+7 dégâts.
+
+step: La cible est trop éloignée pour être mordue ce round
+  do: Se rapprocher au sol ; effectuer un double déplacement de 12 m si nécessaire.
+  note: Réserver le vol au franchissement d'un obstacle ; son aptitude Vol à -2 rend les manœuvres difficiles peu fiables.
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Répéter les deux morsures +11/+6 ; si nécessaire, faire un pas de placement de 1,50 m avant l'attaque à outrance.
+
+step: Un allié possédant aussi Outflank peut prendre la même cible en tenaille
+  do: Sur ordre, gagner la position de tenaille et maintenir cette position pour mordre.
+  note: Le bonus de tenaille devient +4 au lieu de +2 : les morsures passent à +15/+10. Le déplacement nécessaire peut limiter ce round à une seule morsure.
+
+step: Chen doit résister à une manœuvre près d'un allié possédant aussi Coordinated Defense
+  do: Rester adjacent à cet allié si cela reste compatible avec son ordre.
+  note: Bonus de +2 au DMD, ou +4 si l'adversaire est plus grand que Chen et cet allié ; DMD de base 23, 31 contre le croc-en-jambe.
+
+step: Chen est agrippé et un allié adjacent possède aussi Coordinated Maneuvers
+  do: Tenter de se libérer avec son BMO de +11, augmenté de +4 pour cette tentative.
+  note: Le bonus de ce don est normalement de +2 aux autres tests de manœuvre lorsque cet allié est adjacent.
+
+step: Une attaque autorise un jet de Réflexes pour réduire les dégâts de moitié
+  do: Effectuer le jet de Réflexes à +8 et appliquer esquive totale en cas de réussite.
+  note: Une réussite annule alors les dégâts ; un échec les laisse entiers.
+
+## Repli
+
+step: Son maître ordonne le rappel
+  do: Revenir vers lui au sol ; quitter le combat par une retraite si Chen est menacé au contact.
+  note: Une retraite permet de parcourir jusqu'à 12 m et protège seulement la sortie de la case de départ contre les attaques d'opportunité.
+
+step: Chen est grièvement blessé et son maître peut encore le diriger
+  do: Faire ordonner le rappel et le ramener derrière les alliés ou un obstacle.
+  note: Aucun seuil de fuite automatique n'est indiqué ; son repli repose ici sur ses ordres appris.

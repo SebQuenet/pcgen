@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Anhana, petite fée chaotique bonne des forêts, bienveillante : elle cherche à arrêter les agresseurs plutôt qu'à les tuer.
+  Cisailles +7 (1d8+1, critique 19–20), allonge 1,50 m ; sommeil profond, enchevêtrement et fou rire pour neutraliser à distance.
+  27 pv, CA 15, RD 5/fer froid ; déplacement 9 m ; vision nocturne, Perception +12, Discrétion +15.
+
+resource: Sommeil profond | 3/jour | Volonté DD 17 ; portée 10,50 m ; rayon 3 m ; jusqu'à 10 DV cumulés ; durée 5 minutes
+resource: Enchevêtrement | 3/jour | Réflexes DD 15 ; portée 180 m ; végétation dans un rayon de 12 m ; durée 5 minutes
+resource: Fou rire | 3/jour | Volonté DD 16 ; portée 10,50 m ; une créature ; durée maximale 5 rounds
+resource: Corps épineux | 1/jour | personnel ; durée 5 rounds
+resource: Son imaginaire | à volonté | diversion sonore ; aucune image
+resource: Communication avec les animaux | permanent | dialogue avec les animaux
+
+step: Des étrangers approchent sans manifester d'hostilité
+  do: Leur parler à bonne distance et tenter une conciliation avec Diplomatie +12 ; apprécier leurs intentions avec Psychologie +12
+
+step: Des ennemis de la forêt sont repérés
+  do: Se dissimuler derrière un couvert avec Discrétion +15, près d'une zone végétalisée et d'une issue dégagée
+  note: interroger les animaux présents peut renseigner sur les intrus
+
+step: Au moins quatre anhanas peuvent préparer la rencontre près d'une eau douce
+  do: Utiliser ensemble communication avec l'eau pour se renseigner sur les événements locaux ou survenus en amont
+  note: une fois par jour ; nécessite une étendue d'eau au moins aussi grande qu'une anhana
+
+## Ouverture
+
+step: Un contact physique paraît imminent
+  do: Activer corps épineux avant le contact, puis gagner de la distance si possible
+  note: elle redoute d'être touchée ; ce pouvoir demande une action, ce n'est pas une réaction gratuite
+
+step: Les ennemis avancent dans la végétation et le contact n'est pas imminent
+  do: Lancer enchevêtrement sur leur progression en restant hors de la zone
+  note: Réflexes DD 15 ou enchevêtré ; toute la zone devient un terrain difficile, y compris pour elle
+
+step: Des adversaires regroupés sont à 10,50 m ou moins et peuvent être endormis
+  do: Si elle n'a pas déjà utilisé un pouvoir ce tour, lancer sommeil profond sur le groupe
+  note: Volonté DD 17 ; affecte d'abord les plus faibles en DV, jusqu'à 10 DV cumulés ; éviter d'inclure ses alliées
+
+## Rounds suivants
+
+step: Des ennemis restent libres à portée de sommeil profond
+  do: Endormir ceux qui peuvent encore poursuivre ou attaquer ; rester derrière les couverts
+  note: les blessures ou une action d'un allié peuvent réveiller un dormeur ; elle ne frappe pas les ennemis déjà endormis
+
+step: Un adversaire isolé échappe au sommeil ou dépasse sa limite de DV
+  do: Tenter fou rire pour le faire tomber à terre et lui interdire d'agir
+  note: Volonté DD 16 ; une créature autre qu'une fée reçoit +4 au jet ; Intelligence 2 ou moins : aucun effet
+  note: à son prochain tour, la cible peut consacrer un round complet à un second jet pour mettre fin au rire
+
+step: Les ennemis tentent de sortir de la végétation animée
+  do: Contourner la zone et maintenir la séparation ; placer un autre enchevêtrement sur leur trajet si nécessaire
+  note: les créatures restant dans la zone retentent Réflexes DD 15 à la fin de son tour ; s'en libérer demande une action de mouvement et Force ou Évasion DD 15
+
+step: Le corps épineux est actif et un adversaire la frappe au corps à corps
+  do: Appliquer les dégâts des épines et chercher une issue
+  note: chaque coup reçu inflige 1d6+5 dégâts perforants à l'attaquant, sauf avec une arme à allonge ; une lutte réussie contre elle inflige 2d6+5 à l'assaillant
+
+step: Le corps à corps est inévitable et elle peut encore se défendre
+  do: Porter une attaque de cisailles +7 (1d8+1, critique 19–20), puis s'écarter si possible
+  note: corps épineux n'ajoute pas de dégâts aux cisailles ; privilégier la fuite dès qu'une ouverture apparaît
+
+## Repli
+
+step: Points de vie à 9 ou moins, ou ennemis impossibles à contenir
+  do: Rompre le combat ; employer un enchevêtrement restant pour retarder la poursuite, puis quitter les lieux par un passage hors de sa zone
+  note: le fer froid ignore sa RD 5 ; elle n'attend pas d'être encerclée pour partir
+
+step: Un adversaire la menace et elle doit partir immédiatement
+  do: Utiliser l'action de retraite vers un couvert, jusqu'à 18 m en terrain dégagé ; se cacher une fois hors de vue
+
+step: Les poursuivants ont perdu sa trace
+  do: Utiliser son imaginaire depuis un couvert pour suggérer des bruits de fuite ailleurs, puis s'éloigner

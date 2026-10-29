@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Coryphae, fée de taille M, neutre mauvaise ; danseuse et protectrice des cours féeriques qui désorganise ses ennemis par ses enchantements.
+  65 pv, CA 16, réduction des dégâts 5/fer froid ; déplacement 9 m, allonge 1,50 m. Deux griffes +7, chacune pour 1d4+2 dégâts ; domination, suggestion et confusion partielle pour neutraliser les adversaires.
+
+note: Manœuvres élégantes
+  Plus de 1,50 m parcouru dans le round : +5 aux attaques et au BMC, +5 d'esquive à la CA. Hors lutte, cela donne une griffe +12, BMC +15 et CA 21 ; un pas de 1,50 m ne suffit pas.
+
+resource: Pas léger | permanent | ignore le terrain difficile lors des déplacements
+resource: Domination de personne | 1/jour | Volonté DD 19, humanoïde à 15 m ou moins, incantation de 1 round
+resource: Suggestion | 3/jour | action simple, Volonté DD 17, portée 60 m ; la cible doit comprendre la langue employée
+resource: Son imaginaire à incantation rapide | 3/jour | action rapide, Volonté DD 15 pour reconnaître l'illusion en interagissant avec elle
+resource: Pouvoirs à volonté | illimité | charme-personne et confusion partielle, Volonté DD 16, portée 15 m ; lumières dansantes et son imaginaire, ce dernier DD 15
+
+step: Les adversaires ne l'ont pas encore repérée
+  do: Se placer à couvert avec Discrétion +18 ; employer lumières dansantes ou son imaginaire pour attirer leur attention vers un passage choisi
+  note: Vision dans le noir à 18 m, vision nocturne et Perception +14 ; les illusions n'imposent pas automatiquement de détour ni de pénalité
+
+step: Un humanoïde peut être abordé sans hostilité immédiate
+  do: Tenter charme-personne pour faciliter l'approche, puis une suggestion plausible si la cible comprend l'aklo ou le commun des profondeurs
+  note: Le charme rend amical sans donner le contrôle ; une cible déjà menacée par la coryphae ou ses alliés reçoit +5 à sa sauvegarde contre le charme
+
+## Ouverture
+
+step: Un humanoïde décisif est à portée et la coryphae peut rester protégée pendant l'incantation
+  do: Commencer domination de personne ; après son achèvement au début du tour suivant, ordonner à la victime de contenir ses compagnons
+  note: Une instruction contraire à sa nature permet une nouvelle sauvegarde à +2 ; choisir de préférence des ordres auxquels la victime résistera moins
+
+step: Une cible accessible peut être séparée du groupe
+  do: Danse enchanteresse, action complexe : parcourir jusqu'à 9 m et tenter une manœuvre contre une cible à 1,50 m du trajet ; avancer de plus de 1,50 m avant le test
+  note: Réussite : un partenaire unique, tous deux en lutte. Le déplacement provoque des attaques d'opportunité, la manœuvre non
+
+## Rounds suivants
+
+step: La coryphae conserve son partenaire
+  do: Entretenir la lutte ; sur un test réussi, entraîner le partenaire jusqu'à 9 m à l'écart du groupe
+  note: En fin de tour : 2d6 dégâts non létaux au partenaire ; Volonté DD 15 ou 1d3 dégâts de Sagesse
+  note: Cut in with care : partenaire acquis, chaque attaque contre la coryphae a 50 % de chances de le viser jusqu'au début de son prochain tour
+
+step: Un ennemi supplémentaire menace pendant la danse
+  do: Ajouter éventuellement un son imaginaire rapide pour simuler des renforts ou un bruit dans un autre passage
+  note: L'entretien de la lutte et un enchantement en action simple ne se cumulent pas dans le même tour
+
+step: Aucun partenaire n'est retenu ou la cible résiste aux manœuvres
+  do: Se déplacer de plus de 1,50 m puis lancer suggestion pour éloigner un adversaire comprenant sa langue, ou confusion partielle pour perturber une cible pendant 1 round
+  note: Choisir un ordre plausible pour suggestion ; les cibles immunisées aux effets mentaux exigent une autre approche
+
+step: Le corps à corps est inévitable et les enchantements ne conviennent pas
+  do: Se déplacer puis porter une griffe ; si elle reste sur place, effectuer une attaque à outrance avec ses deux griffes +7
+  note: Acrobaties +18 pour éviter les attaques d'opportunité en se déplaçant ; sinon Souplesse du serpent donne +4 à la CA contre celles provoquées par le mouvement. Esquive totale annule les dégâts sur une sauvegarde de Réflexes réussie contre un effet qui les réduit normalement de moitié
+
+## Repli
+
+step: Les pv tombent à 20 ou moins, ou plusieurs ennemis au fer froid l'encerclent
+  do: Relâcher gratuitement le partenaire éventuel, puis effectuer une retraite jusqu'à 18 m vers un couvert ; ordonner à une victime déjà dominée de couvrir la fuite
+  note: La retraite protège seulement la case de départ contre les attaques d'opportunité. Rompre la ligne de vue avant de tenter de se cacher avec Discrétion +18

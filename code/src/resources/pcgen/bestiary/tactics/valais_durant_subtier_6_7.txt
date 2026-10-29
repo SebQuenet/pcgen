@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Valais Durant est un eidolon libéré, extérieur natif de taille M et loyal bon. Malgré son apparence démoniaque, elle ne veut tuer personne. Elle possède 75 pv et une CA de 25.
+  Attaque à outrance : 2 griffes +14, encornement +14 et morsure +14 ; chaque attaque inflige 1d6+4 dégâts plus 1d6 d’acide.
+  Déplacement : 10,50 m ; allonge : 1,50 m ; vision dans le noir : 18 m.
+
+note: Défenses
+  Immunité à l’électricité ; résistance de 5 à l’acide, au froid et au feu.
+  Esquive totale : un jet de Réflexes réussi annule les dégâts des effets qui permettent normalement de les réduire de moitié par ce jet.
+
+## Ouverture
+
+step: Valais possède encore au moins 38 pv
+  do: Sangloter et se mettre en défense totale, sans attaquer.
+  note: Elle reste uniquement sur la défensive, même si on l’agresse ; son apparence ne traduit pas ses intentions.
+
+step: Valais tombe sous 38 pv
+  do: Laisser ses aspects démoniaques prendre le contrôle ; à sa prochaine occasion d’agir, attaquer toute créature en vue.
+  note: Le basculement se produit à 37 pv ou moins. Elle cesse alors de chercher à épargner les autres.
+
+## Rounds suivants
+
+step: Le seuil de 38 pv n’a pas été franchi
+  do: Continuer à sangloter et renouveler la défense totale à chaque tour.
+  note: Ne pas exploiter ses attaques naturelles tant que ses aspects démoniaques n’ont pas pris le contrôle.
+
+step: Ses aspects démoniaques contrôlent Valais et une créature est à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : 2 griffes, un encornement et une morsure, tous à +14 et infligeant chacun 1d6+4 plus 1d6 d’acide.
+  note: Elle attaque sans distinguer alliés et adversaires.
+
+step: Ses aspects démoniaques contrôlent Valais et les créatures visibles sont hors de portée
+  do: Se déplacer vers une créature, jusqu’à 10,50 m, puis porter une seule attaque naturelle si elle est désormais à portée.
+  note: Si un déplacement ne suffit pas, utiliser un double déplacement, jusqu’à 21 m, pour se rapprocher. Aucun déplacement normal ne permet d’enchaîner les quatre attaques ce tour-ci.
+
+## Repli
+
+step: Ses aspects démoniaques ont pris le contrôle
+  do: Poursuivre les attaques sans chercher à fuir, jusqu’à être rendue inconsciente ou tuée.
+  note: La baisse des points de vie déclenche sa violence ; elle ne provoque aucun repli.

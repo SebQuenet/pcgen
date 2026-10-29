@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Procyal, agathion neutre bon, intelligent et habile à tromper : il privilégie la négociation, les enchantements et les coups bas pour neutraliser ses adversaires.
+  95 pv, CA 20 ; déplacement de 9 m, allonge de 1,50 m, vision dans le noir à 18 m. Épée courte +1 : +12/+7 (1d6+2, critique 19–20) ; ou deux griffes +11 (1d4+1 chacune).
+  Sale coup +15 ; Bluff et Déguisement +20, Discrétion +15. Immunisé à l'électricité et à la pétrification ; résistance au froid 10 et au son 10.
+
+resource: Apaisement des émotions | à volonté | Volonté DD 15 ; concentration
+resource: Suggestion | à volonté | Volonté DD 16
+resource: Charme-monstre | 3/jour | Volonté DD 17
+resource: Dissipation de la magie | 3/jour | NLS 10
+resource: Porte dimensionnelle | 3/jour | Lui-même et ses objets seulement ; réserver une utilisation au repli
+resource: Héroïsme | 3/jour | Bonus de moral de +2 aux attaques, sauvegardes et tests de compétence pendant 100 minutes
+resource: Invisibilité | 3/jour | Jusqu'à 10 minutes ; cesse s'il attaque
+resource: Convocation d'ombres | 3/jour | Volonté DD 17 pour reconnaître l'illusion
+resource: Domination de personne | 1/jour | Humanoïde seulement ; Volonté DD 18
+resource: Allié spirituel | 1/jour | Durée de 10 rounds
+
+step: Une confrontation paraît probable
+  do: Lancer héroïsme sur lui-même, puis chercher un couvert et une voie de fuite
+  note: Les bonus d'héroïsme s'ajoutent aux valeurs d'attaque et de compétence indiquées dans le profil.
+
+step: Il peut observer les intrus sans se montrer
+  do: Employer invisibilité et sa Discrétion pour repérer les combattants dangereux et les lanceurs de sorts
+  note: Il ne dispose ni de vol ni d'attaque à distance avec son équipement indiqué.
+
+## Ouverture
+
+step: Les adversaires peuvent encore être raisonnés
+  do: Employer apaisement des émotions, DD 15, puis négocier avec Diplomatie +16
+  note: Maintenir la concentration ; toute agression ou blessure contre une créature apaisée rompt l'effet pour tous les sujets. Les alliés doivent suspendre leurs attaques.
+
+step: Un affrontement est inévitable et une cible peut être détournée du combat
+  do: Employer suggestion, DD 16, avec une consigne raisonnable qui l'éloigne de l'affrontement
+  note: Une suggestion manifestement suicidaire échoue. Charme-monstre, DD 17, peut faciliter une discussion, mais ne donne pas le contrôle de la cible.
+
+step: Un humanoïde représente la menace principale
+  do: Employer domination de personne, DD 18, et lui ordonner de cesser le combat ou de s'écarter
+  note: Réserver ce pouvoir à une cible dont la neutralisation change réellement l'issue du combat.
+
+## Rounds suivants
+
+step: Les ennemis bénéficient de protections magiques décisives
+  do: Tenter une dissipation ciblée sur le plus dangereux
+  note: Test de dissipation à +10 ; Pénétration des sorts ne donne aucun bonus à ce test.
+
+step: Le combat se prolonge et il peut agir à distance du contact
+  do: Lancer allié spirituel et le diriger contre l'adversaire prioritaire, puis reprendre les enchantements
+  note: Les pouvoirs magiques sont de NLS 10 ; Pénétration des sorts porte à +12 ses tests pour franchir une résistance à la magie.
+
+step: Il faut une diversion ou un renfort
+  do: Employer convocation d'ombres pour imiter une convocation de monstres III et faire apparaître un renfort quasi réel
+  note: DD 17 pour reconnaître l'illusion ; ce renfort reste soumis aux limites de convocation d'ombres et n'est pas aussi robuste qu'une véritable créature convoquée.
+
+step: Un adversaire dangereux arrive à 1,50 m
+  do: Tenter un sale coup à +15 pour l'aveugler ou l'enchevêtrer, selon ce que la situation permet
+  note: Action simple, sans attaque d'opportunité grâce à Science du sale coup. Sale coup supérieur porte la durée à 1d4 rounds, plus 1 round par tranche de 5 points au-dessus du DMD ; retirer l'effet exige une action simple.
+
+step: Une cible affaiblie reste au contact et il peut consacrer son tour à frapper
+  do: Attaque à outrance à l'épée courte, +12/+7, ou avec les deux griffes, +11 chacune
+  note: Après un déplacement de plus de 1,50 m, il ne porte normalement qu'une attaque. S'il doit tenir sous les coups, Expertise du combat permet d'échanger de la précision contre de la CA.
+
+## Repli
+
+step: Il tombe à 30 pv ou moins, ou ses moyens de contrôle échouent
+  do: Employer porte dimensionnelle pour rejoindre un endroit sûr, à 240 m au maximum
+  note: Il ne peut transporter aucune autre créature avec ce pouvoir et ne peut plus agir avant son prochain tour.
+
+step: Porte dimensionnelle est épuisée et il peut rompre le contact
+  do: Employer invisibilité, puis gagner un couvert et s'éloigner à 9 m par déplacement
+  note: S'il est menacé au corps à corps, lancer le pouvoir sur la défensive pour éviter l'attaque d'opportunité ; concentration +13. Ne plus attaquer pendant la fuite.

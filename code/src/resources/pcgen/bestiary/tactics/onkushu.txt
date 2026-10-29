@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Onkushu, extérieur de feu de taille G, chaotique bon, FP 13 ; bienveillant et allié des anges, mais redoutable lorsqu'on le pousse au combat.
+  172 pv, CA 28 ; déplacement au sol de 9 m, vol de 18 m avec une bonne manœuvrabilité ; espace et allonge de 3 m.
+  Attaque à outrance : 2 coups +22 (2d6+7 plus embrasement), 2 ailes +16 (1d6+3). Il combine son allonge, l'Attaque en vol et ses pouvoirs de feu pour protéger ses alliés et choisir ses engagements.
+
+note: Défenses
+  Réduction des dégâts 10/Mal, immunité au feu, résistance à l'électricité 10 et résistance à la magie 24. Son corps amorphe le protège des coups critiques et des attaques sournoises.
+  Le froid lui inflige 50 % de dégâts supplémentaires : les adversaires qui l'utilisent deviennent prioritaires.
+  Son aura protectrice couvre un rayon de 6 m : contre les créatures mauvaises, +4 de parade à la CA et +4 de résistance aux sauvegardes, soit CA 32 pour lui. Elle agit aussi comme un cercle magique contre le Mal et un globe d'invulnérabilité partielle.
+
+resource: Invisibilité sur lui-même | à volonté | NLS 12 ; prend fin lorsqu'il attaque
+resource: Détection du Mal | à volonté | repérage des auras mauvaises par concentration
+resource: Détection du mensonge | à volonté | Volonté DD 19
+resource: Délivrance des malédictions, guérison des maladies, regain d'assurance | à volonté chacun | soutien aux alliés ; ne rendent pas de points de vie
+resource: Souffle de feu | 3/jour | chaque activation permet jusqu'à trois souffles en 12 rounds ; cône de 4,50 m, dégâts de feu successifs de 4d6, 2d6 puis 1d6 ; Réflexes DD 17, moitié
+resource: Regard brûlant | 3/jour | durée de 12 rounds ; une cible à 9 m, Vigueur DD 17 annule 1d6 de feu ; si elle subit les dégâts, Réflexes DD 17 ou elle prend feu
+resource: Serpent de feu | 1/jour | 12d6 de feu, Réflexes DD 20 pour moitié ; trajet de 12 cases contiguës de 1,50 m, à 18 m au maximum
+
+step: Des inconnus approchent sans hostilité manifeste
+  do: Leur parler, observer leurs intentions avec Psychologie +21 et employer Détection du Mal ; utiliser Détection du mensonge si leurs explications semblent douteuses.
+  note: Sa bienveillance favorise la discussion ; une aura mauvaise ne suffit pas à justifier une attaque immédiate.
+
+step: Le combat paraît imminent et quelques rounds de préparation sont disponibles
+  do: Activer Souffle de feu, puis Invisibilité sur lui-même ; gagner une position aérienne avec une voie de dégagement.
+  note: Le souffle préparé ne dure que 12 rounds. Son activation et chaque expiration demandent des actions simples distinctes.
+
+step: Des alliés doivent être protégés
+  do: Les placer dans les 6 m de son aura ; employer Regain d'assurance avant l'engagement si nécessaire.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être reliés par un trajet de feu sans toucher d'alliés
+  do: Utiliser Serpent de feu en dessinant son trajet entre les ennemis ; exploiter l'Attaque en vol pour se déplacer avant et après cette action simple, dans la limite de 18 m au total.
+  note: Privilégier les lanceurs de sorts et les utilisateurs de froid. Le serpent est instantané et ne laisse aucune barrière persistante.
+
+step: Des ennemis sont regroupés à 4,50 m ou moins et Souffle de feu est déjà actif
+  do: Exhaler le premier cône de 4d6 de feu, Réflexes DD 17 pour moitié, puis se replacer en vol.
+  note: Écarter les alliés du cône ; une attaque met fin à son invisibilité.
+
+step: Une cible isolée est accessible et aucune attaque de zone n'est avantageuse
+  do: Effectuer une Attaque en vol avec un seul coup +22 (2d6+7 plus embrasement), porté à 3 m, puis poursuivre son déplacement.
+  note: L'Attaque en vol ne permet pas l'attaque à outrance et n'annule pas les attaques d'opportunité ; éviter de traverser l'allonge adverse.
+
+## Rounds suivants
+
+step: Une cible dangereuse reste à portée et il peut tenir sa position
+  do: Effectuer l'attaque à outrance : 2 coups +22 (2d6+7 plus embrasement), puis 2 ailes +16 (1d6+3).
+  note: Contre une CA faible, employer Attaque en puissance : coups +18 (2d6+15 plus embrasement), ailes +12 (1d6+7).
+
+step: Rester au contact l'exposerait à plusieurs attaques ou à un utilisateur de froid
+  do: Reprendre les passages en vol ; concentrer ses coups sur l'adversaire le plus menaçant et finir son mouvement hors de son allonge si possible.
+
+step: Un adversaire résiste au feu ou y est immunisé
+  do: Employer ses coups et ses ailes pour leurs dégâts physiques ; conserver les pouvoirs de feu pour d'autres cibles.
+
+step: Plusieurs ennemis restent groupés et un souffle est disponible
+  do: Utiliser une expiration du Souffle de feu actif si elle peut toucher plusieurs cibles ; sinon privilégier ses attaques physiques.
+  note: Les deuxième et troisième expirations ne causent que 2d6 puis 1d6 de feu. Réactiver le pouvoir consomme une nouvelle utilisation quotidienne et une action simple.
+
+step: Une cible vulnérable au feu reste inaccessible au contact, à 9 m ou moins
+  do: Si le combat s'y prête, activer Regard brûlant puis, lors d'un round suivant, diriger le regard sur elle par une action simple.
+  note: Ce pouvoir n'est pas une attaque de regard automatique et ne s'ajoute pas gratuitement aux attaques physiques ; éviter de l'employer sur une cible déjà en feu.
+
+step: Un ennemi menace un allié et le repousser dégagerait une issue
+  do: Tenter une bousculade à +25 contre son DMD, en choisissant une direction qui éloigne la menace de l'allié.
+  note: Science de la bousculade évite l'attaque d'opportunité de la cible ; cette manœuvre remplace son action offensive du round.
+
+step: Un adversaire peut être dissuadé de poursuivre le combat
+  do: Employer Intimidation +30 pour le démoraliser par une action simple, à 9 m ou moins s'il peut le voir et l'entendre ; exiger qu'il cesse les hostilités.
+  note: La démoralisation rend la cible secouée ; elle ne la force ni à fuir ni à se rendre.
+
+## Repli
+
+step: Points de vie sous 50 ou attaques de froid répétées qui rendent la position intenable
+  do: Rompre le contact par un retrait en vol, jusqu'à 36 m si la trajectoire le permet ; une fois hors de portée immédiate, lancer Invisibilité sur lui-même puis poursuivre sa fuite.
+  note: Le retrait protège seulement le départ de sa case initiale des attaques d'opportunité. S'il est déjà hors de l'allonge adverse, il peut devenir invisible puis voler de 18 m dans le même round.
+
+step: Les alliés peuvent se replier avec lui
+  do: Couvrir leur départ avec sa présence et son aura, puis les rejoindre en vol ; rejoindre un couvert pour échapper aux attaques à distance.
+  note: Il ne dispose d'aucun pouvoir de téléportation ni de soin des points de vie dans ce profil.

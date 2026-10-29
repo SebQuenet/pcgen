@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Grizzly possédé de taille G, rendu furieux et territorial par l'esprit du général Chiang Zhen. Animal peu intelligent, il combat au corps à corps.
+  52 pv ; CA 20, contact 12, pris au dépourvu 17. Déplacement de 12 m ; espace occupé de 3 m ; allonge de 1,50 m.
+  Deux griffes +9 (1d6+7 chacune, plus étreinte) et morsure +9 (1d6+7) ; BMO de lutte +15. Vision nocturne et odorat.
+
+note: Cible prioritaire
+  Il attaque l'adversaire qui lui a infligé des dégâts en dernier. Cette priorité s'applique à chaque tour, même si elle l'oblige à changer de cible.
+  Avant d'avoir subi des dégâts, prendre pour cible un intrus proche et accessible dans le domaine en ruine.
+
+## Ouverture
+
+step: La cible est à plus de 1,50 m
+  do: Avancer vers elle, jusqu'à 12 m, puis porter une attaque de griffe +9 (1d6+7) si elle est à portée.
+  note: Si un déplacement ne suffit pas, consacrer le tour à se rapprocher ; un double déplacement couvre jusqu'à 24 m.
+
+step: La cible est déjà à portée sans déplacement nécessaire
+  do: Faire une attaque à outrance : deux griffes +9 (1d6+7 chacune) et une morsure +9 (1d6+7).
+
+step: Une griffe touche
+  do: Tenter immédiatement une étreinte par un test de lutte avec un BMO de +15, sans action supplémentaire.
+  note: En cas de réussite, l'ours et sa victime sont en lutte ; appliquer les modificateurs de cet état aux éventuelles attaques restantes.
+
+## Rounds suivants
+
+step: La victime agrippée est toujours le dernier adversaire à lui avoir infligé des dégâts
+  do: Maintenir la lutte et, si le test réussit, infliger les dégâts d'une griffe, soit 1d6+7.
+
+step: Un autre adversaire lui a infligé les derniers dégâts
+  do: Relâcher une éventuelle prise et attaquer ce nouvel adversaire ; se déplacer si nécessaire et porter une griffe, ou faire une attaque à outrance s'il est déjà à portée.
+
+step: Il n'est pas en lutte et sa cible reste au contact
+  do: Répéter l'attaque à outrance et tenter l'étreinte dès qu'une griffe touche.
+
+step: Sa cible s'éloigne mais reste dans le domaine
+  do: La poursuivre et reprendre les attaques de griffe dès qu'elle est à portée.
+
+## Repli
+
+step: Des adversaires restent dans le domaine en ruine
+  do: Continuer à combattre jusqu'à être vaincu, même avec très peu de points de vie.
+  note: La fureur territoriale imposée par l'esprit ne prévoit aucun seuil de fuite.
+
+step: Tous les adversaires quittent le domaine en ruine
+  do: Cesser le combat et rester dans le domaine, sans les poursuivre au-delà.

@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Zoathrias, traqueur obscur affaibli, humanoïde de taille M, chaotique neutre. Combattant d'embuscade : 27 PV, CA 16, déplacement de 9 m, allonge de 1,50 m.
+  Deux épées courtes : +6/+6 à l'attaque à outrance, 1d6 chacune, critique 19-20 ; poison sur les lames enduites. Discrétion +8, Perception +8, Acrobaties +9.
+  Il voit dans les ténèbres, mais souffre de cécité à la lumière : privilégier les endroits sombres.
+
+resource: Enduit noir | 6 doses | une dose par application sur une lame ; compter les préparatifs dans ce total ; effets et DD non précisés dans le profil
+resource: Ténèbres profondes | à volonté | pouvoir magique, NLS 6
+resource: Nappe de brouillard | à volonté | pouvoir magique, NLS 6
+resource: Détection de la magie | à volonté | pouvoir magique, NLS 6
+
+step: Il a le temps de se préparer
+  do: Empoisonner une épée, puis utiliser ténèbres profondes ; se dissimuler et laisser les ennemis approcher
+  note: Son utilisation du poison lui permet de manipuler ses doses sans risque de s'empoisonner accidentellement
+
+## Ouverture
+
+step: Une cible qui ne le voit pas est accessible en un déplacement
+  do: S'approcher de 9 m au maximum et porter une attaque d'épée courte +6, infligeant 1d6 et le poison si la lame est enduite
+  note: Chercher à surprendre une cible privée de son bonus de Dextérité ; aucun dégât d'attaque sournoise n'est indiqué
+
+step: Une cible est déjà à portée de 1,50 m
+  do: Faire une attaque à outrance avec les deux épées, +6/+6, pour 1d6 chacune et le poison des lames enduites
+
+## Rounds suivants
+
+step: Il peut rester au contact sans perdre l'avantage des ténèbres
+  do: Continuer les attaques à outrance contre un adversaire qui ne le voit pas
+
+step: Il est repéré ou risque d'être encerclé
+  do: Se retirer vers les ténèbres pour se dissimuler à nouveau ; utiliser un retrait si nécessaire pour quitter le contact
+  note: Alterner les approches, les coups et les retraits ; son profil ne lui permet pas de partager librement un déplacement avant et après une attaque
+
+step: Les ennemis le suivent à vue malgré les ténèbres
+  do: Utiliser nappe de brouillard pour masquer sa retraite et changer de position
+  note: Sa vision dans les ténèbres ne perce pas le brouillard ; éviter d'y poursuivre une cible à l'aveugle
+
+step: Aucun adversaire ne le menace et il reste du poison
+  do: Réenduire une épée avant de repartir à l'attaque
+  note: Chaque nouvelle application dépense une des six doses ; ne pas réempoisonner une lame au contact d'un ennemi
+
+## Repli
+
+step: Il lui reste au moins 5 PV
+  do: Se repositionner pour reprendre ses embuscades ; continuer le combat jusqu'à la mort
+
+step: Il lui reste de 1 à 4 PV
+  do: Se jeter sur l'adversaire le plus proche ; charger si possible, puis tenter une lutte avec un BMO de +4 dès qu'une action simple est disponible
+  note: La lutte ne s'ajoute pas gratuitement à l'attaque de charge. Il espère entraîner autant d'ennemis que possible dans l'explosion de sa mort, dont les dégâts, le rayon et le DD ne sont pas fournis ici

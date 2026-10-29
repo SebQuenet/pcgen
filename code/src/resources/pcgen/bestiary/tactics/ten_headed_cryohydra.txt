@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Cryohydre à dix têtes, créature magique de taille TG, neutre : 115 PV, CA 24, initiative +7. Elle submerge ses proies sous dix morsures +13, infligeant chacune 2d6+5 dégâts.
+  Allonge de 3 m ; espace occupé de 4,50 m ; déplacement et nage de 6 m. Immunisée au froid, elle subit 50 % de dégâts supplémentaires du feu.
+
+resource: Guérison accélérée | permanente | récupère 10 PV au début de son tour, sans dépasser 115 PV
+resource: Attaques réflexes | 4 attaques d'opportunité par round | une morsure +13 par occasion, même prise au dépourvu
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +17, l'odorat, la vision nocturne et la vision dans le noir à 18 m.
+  note: Si le terrain le permet, se placer près de l'eau ou dans un passage que son corps et son allonge permettent de contrôler.
+
+## Ouverture
+
+step: Un ennemi est à 3 m ou moins
+  do: Effectuer une attaque à outrance : dix morsures +13, chacune à 2d6+5 dégâts, tant que ses dix têtes sont présentes.
+  note: Concentrer les morsures sur une proie accessible jusqu'à sa chute, puis diriger les suivantes contre une autre cible à portée.
+
+step: La cible est à plus de 3 m et au plus à 9 m
+  do: Avancer ou nager de 6 m au maximum pour l'amener à portée, puis donner une seule morsure +13, à 2d6+5 dégâts.
+  note: Un déplacement ordinaire ne permet pas d'effectuer les dix morsures de l'attaque à outrance.
+
+step: Aucun ennemi ne peut être atteint après un déplacement de 6 m
+  do: Se rapprocher par un double déplacement, jusqu'à 12 m, pour menacer les adversaires au round suivant.
+
+## Rounds suivants
+
+step: Une proie reste à portée
+  do: Répéter l'attaque à outrance avec toutes les têtes disponibles.
+  note: Si nécessaire, effectuer seulement un pas de placement de 1,50 m pour conserver l'attaque à outrance.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Le mordre à +13 pour 2d6+5 dégâts, dans la limite des quatre attaques d'opportunité du round.
+  note: Utiliser cette menace pour punir les déplacements imprudents et les incantations exposées.
+
+step: Une tête est tranchée
+  do: Retirer sa morsure des attaques disponibles et suivre la repousse : deux têtes la remplacent après 1d4 rounds, jusqu'à vingt têtes au total.
+  note: Au moins 5 points de dégâts de feu ou d'acide appliqués au moignon avant la repousse empêchent celle-ci ; les effets de zone peuvent aussi cautériser les moignons.
+
+step: Un adversaire utilise le feu
+  do: S'il est accessible, concentrer les morsures sur lui ; sinon, chercher un couvert ou gagner l'eau si elle offre un abri.
+  note: La guérison accélérée reste utile, mais sa vulnérabilité rend les échanges prolongés avec cette menace dangereux.
+
+## Repli
+
+step: Ses PV tombent sous 30 et les ennemis continuent à lui infliger de lourdes blessures
+  do: Rompre le contact par une retraite, jusqu'à 12 m, de préférence vers l'eau si elle est accessible.
+  note: Se soustraire aux attaques pour laisser agir la guérison accélérée ; ce seuil est un choix tactique pour le meneur.
+
+step: Toute fuite est bloquée
+  do: Rester au contact et concentrer toutes les morsures disponibles sur l'adversaire qui barre le passage.

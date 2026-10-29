@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Davik Nettles, mort-vivant mauvais de taille M, cherche à faire tuer le Seigneur Cerf pour assouvir sa vengeance.
+  34 PV, CA 15 ; corsèque +1 : +7 (2d4+5, x3), ou coup : +6 (1d6+4). Puanteur : DD 16, durée 1 minute.
+  Déplacement et nage : 9 m ; vision dans le noir : 18 m. Immunité au feu et traits des morts-vivants ; guérison accélérée 5.
+
+resource: Marche sur l'onde | constant | permet de se déplacer à la surface de l'eau
+resource: Cauchemar | 1/jour | DD 19 ; harcèlement d'une cible endormie, à préparer hors combat
+
+note: Regard effrayant
+  Sa tactique mentionne un regard effrayant pour désorganiser les ennemis, mais ce bloc n'en fournit ni l'effet, ni la portée, ni le DD. Ne pas lui attribuer de paramètres inventés.
+
+step: Les PJ approchent
+  do: Leur demander de tuer le Seigneur Cerf ; rester près de la rivière pour pouvoir y retourner
+  note: Davik veut obtenir leur aide pour sa vengeance.
+
+## Ouverture
+
+step: Les PJ attaquent Davik
+  do: Riposter avec la corsèque +1, +7 (2d4+5, x3), dès qu'une cible est à portée
+  note: Continuer à réclamer la mort du Seigneur Cerf pendant le combat ; laisser aux PJ la possibilité de cesser leurs attaques.
+
+step: Aucun adversaire n'est à portée
+  do: Se rapprocher par un déplacement de 9 m au maximum, sur terre, en nageant ou avec marche sur l'onde, puis attaquer si possible
+  note: Utiliser la rivière pour choisir son approche ; il ne possède aucune attaque à distance indiquée.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Porter une attaque de corsèque +1 par round, +7 (2d4+5, x3)
+  note: S'il ne peut pas utiliser sa corsèque, employer son coup : +6 (1d6+4).
+
+step: La cible paraît facile à toucher
+  do: Utiliser Attaque en puissance avec la corsèque : +6 (2d4+8, x3)
+  note: Revenir à +7 (2d4+5, x3) si la perte de précision compromet ses touches.
+
+step: Les adversaires cherchent à l'entourer
+  do: Se déplacer vers la rivière pour limiter les directions d'approche et gêner leur encerclement
+  note: Appliquer sa puanteur aux créatures exposées : DD 16, durée 1 minute ; sa portée n'est pas précisée dans ce bloc.
+
+step: Davik a perdu des PV et reste en état de combattre
+  do: Récupérer 5 PV par round grâce à la guérison accélérée, sans dépasser 34 PV
+  note: Continuer à combattre et à répéter sa demande.
+
+## Repli
+
+step: Les PJ cessent leurs attaques et acceptent de tuer le Seigneur Cerf
+  do: Cesser immédiatement ses attaques, acquiescer et disparaître dans la rivière
+
+step: Le combat se poursuit sans accord
+  do: Combattre jusqu'à sa destruction
+  note: Davik ne fuit pas en raison de ses blessures ; aucun seuil de PV ne déclenche de retraite.

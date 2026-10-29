@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Les Larmes de sainte Ilnea sont un élémentaire de l'eau de taille TG, demi-céleste, loyal bon, FP 14. Elles défendent leur bassin et combattent jusqu'à la mort.
+  200 pv ; CA 31, contact 21, pris au dépourvu 22 ; Vigueur +20, Réflexes +22, Volonté +10.
+  Deux coups +26, chacun à 4d8+12, critique sur 19–20 ; espace et allonge de 4,50 m.
+  Déplacement terrestre de 6 m, vol de 12 m avec une bonne manœuvrabilité, nage de 27 m ; vision dans le noir à 18 m, Perception +20.
+  Réduction des dégâts 10/– ; résistance à l'acide, au froid et à l'électricité de 10 ; résistance à la magie 25 ; immunité aux maladies et traits des élémentaires.
+  Pouvoirs magiques au niveau de lanceur de sorts 16 ; concentration +17. Comprennent l'aquatique et le céleste.
+
+resource: Détection du Mal | 1/jour | repérer les auras mauvaises avant d'attaquer
+resource: Parole sacrée | 1/jour | DD 18
+resource: Aura sacrée | 3/jour | DD 19
+resource: Châtiment sacré à incantation rapide | 1/jour | DD 15 ; action rapide
+resource: Soins importants | 1/jour | soin personnel possible pendant le combat
+
+step: Des intrus approchent du bassin
+  do: Les observer et rester à proximité de l'eau, en conservant une position permettant d'exploiter l'allonge de 4,50 m.
+  note: Leur seule présence ne justifie pas une attaque ; vérifier leur nature si la situation tourne à l'affrontement.
+
+## Ouverture
+
+step: Un affrontement paraît imminent, mais les Larmes n'ont pas été attaquées
+  do: Utiliser détection du Mal pour vérifier si les adversaires sont mauvais avant d'engager le combat.
+  note: Cette détection n'est disponible qu'une fois par jour ; ne pas la renouveler gratuitement à chaque rencontre.
+
+step: Les Larmes ont été attaquées et parole sacrée est disponible
+  do: À leur premier tour, utiliser parole sacrée contre les assaillants à portée, DD 18.
+  note: Se défendre même si les assaillants n'ont pas été reconnus comme mauvais. Parole sacrée affecte les créatures non bonnes ; ses effets ne constituent donc pas une preuve de leur malveillance.
+
+step: Le combat est engagé et l'ouverture par parole sacrée est résolue ou indisponible
+  do: Lancer aura sacrée, DD 19, puis châtiment sacré à incantation rapide, DD 15, sur les ennemis regroupés ; se déplacer ensuite pour les menacer au corps à corps.
+  note: Aura sacrée utilise l'action simple, châtiment sacré l'action rapide et l'approche l'action de mouvement ; les coups attendent le tour suivant.
+  note: Les bonus de même type ne se cumulent pas ; ne pas ajouter automatiquement le bonus de parade d'aura sacrée au bonus de parade de +4 déjà compris dans la CA 31.
+
+## Rounds suivants
+
+step: Un ennemi se trouve à 4,50 m ou moins et aucun déplacement important n'est nécessaire
+  do: Effectuer une attaque à outrance avec deux coups +26, chacun à 4d8+12, critique sur 19–20.
+  note: Un pas de 1,50 m permet d'ajuster la position tout en conservant les deux attaques.
+
+step: La cible est facile à toucher et il faut accroître les dégâts
+  do: Employer Attaque en puissance : deux coups +21, chacun à 4d8+22, critique sur 19–20, lors d'une attaque à outrance.
+  note: Revenir aux attaques +26 contre une défense élevée ; toucher reste prioritaire.
+
+step: Un adversaire se déplace ou agit imprudemment dans l'allonge
+  do: Exploiter les attaques d'opportunité avec les coups et Attaques réflexes.
+  note: L'allonge de 4,50 m couvre les abords du bassin ; n'accorder une attaque d'opportunité que si l'action adverse en provoque une.
+
+step: Un adversaire reste hors d'allonge, dans la zone défendue
+  do: Approcher par la nage à 27 m, par le vol à 12 m ou au sol à 6 m, selon le terrain ; porter un seul coup +26 si l'approche utilise une action de mouvement.
+  note: Ne pas effectuer les deux coups après un déplacement ordinaire.
+
+step: Repousser un adversaire vers le bassin ou dégager ses abords offre un avantage immédiat
+  do: Tenter une bousculade avec un bonus de +32 contre son DMD, en respectant les limites de taille de la manœuvre.
+  note: Cette manœuvre remplace l'offensive habituelle ; la réserver aux positions où le déplacement forcé vaut la perte des coups.
+
+step: Les Larmes sont blessées et disposent d'un tour où elles ne peuvent pas frapper efficacement
+  do: Utiliser soins importants sur elles-mêmes si ce pouvoir reste disponible, puis reprendre le combat.
+  note: Les soins ne modifient pas leur détermination à défendre le bassin jusqu'à la mort.
+
+## Repli
+
+step: Les adversaires s'éloignent à plus de 9 m des bords extérieurs du bassin
+  do: Cesser la poursuite et revenir défendre le bassin.
+  note: Cette limite s'applique aussi aux déplacements en vol ; ne pas la dépasser pour achever un fuyard.
+
+step: Les adversaires restent dans la zone défendue, quels que soient les pv restants
+  do: Continuer à combattre jusqu'à la mort.
+  note: Aucun seuil de pv ne déclenche une fuite ou une reddition.

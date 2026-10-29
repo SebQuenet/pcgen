@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Tyrannosaure taxidermique, mort-vivant NE de taille Gigantesque, sans intelligence ; 81 pv, CA 13, initiative +6.
+  Morsure +22 (2d8+26), avec les dégâts de morsure puissante déjà inclus ; espace occupé et allonge de 6 m ; déplacement de 12 m.
+
+note: Défenses et détection
+  RD 5/contondant ; immunité au froid et traits des morts-vivants.
+  Vision nocturne et odorat ; Perception +0. Son absence d'intelligence appelle un comportement simple, sans préparation tactique élaborée.
+
+## Ouverture
+
+step: Un ennemi est à portée de morsure, à 6 m ou moins
+  do: Le mordre à +22, pour 2d8+26 dégâts.
+  note: Son allonge lui permet d'attaquer sans venir au contact immédiat.
+
+step: Aucun ennemi n'est à portée, mais l'un peut être atteint après un déplacement de 12 m ou moins
+  do: Avancer jusqu'à placer cet ennemi dans son allonge, puis le mordre.
+  note: Choisir une cible accessible et un passage assez large pour son espace de 6 m.
+
+step: Aucun ennemi ne peut être mordu après un déplacement simple
+  do: Effectuer un double déplacement, jusqu'à 24 m, vers l'ennemi accessible le plus proche.
+  note: Ce double déplacement ne laisse pas d'action pour mordre pendant ce tour.
+
+## Rounds suivants
+
+step: La cible est toujours à portée
+  do: Répéter la morsure +22 (2d8+26) à chaque tour.
+  note: Son attaque à outrance ne donne qu'une morsure ; il peut se déplacer puis mordre sans perdre d'attaque supplémentaire.
+
+step: La cible s'éloigne ou tombe
+  do: Se rapprocher de la cible encore accessible, ou se tourner vers l'ennemi accessible le plus proche, puis mordre si un déplacement simple suffit.
+  note: Si nécessaire, consacrer le tour à un double déplacement pour poursuivre.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 6 m
+  do: Porter une morsure +22 (2d8+26).
+  note: Une seule attaque d'opportunité par round ; un déplacement prudent peut éviter de la provoquer.
+
+## Repli
+
+step: Il lui reste au moins 1 pv
+  do: Poursuivre les attaques sans repli volontaire lié aux blessures.
+  note: Ce mort-vivant sans intelligence ne prend pas de décision de survie élaborée.
+
+step: Ses points de vie atteignent 0
+  do: Le considérer comme détruit.

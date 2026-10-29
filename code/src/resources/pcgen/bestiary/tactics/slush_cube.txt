@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Slush Cube, cube gélatineux de taille G, neutre et dénué d'intelligence : il avance sur ses proies sans élaborer de stratégie. 58 pv, CA 9 ; déplacement de 4,50 m, espace de 3 m et allonge de 1,50 m.
+  Coup +4 : 1d6+3 dégâts, plus 1d6 d'acide et 1d6 de froid. Enveloppement, paralysie et froid engourdissant complètent son attaque.
+  Vision aveugle à 18 m ; transparence ; immunité au froid, à l'électricité et immunités des vases. Il ne peut pas subir de croc-en-jambe.
+
+step: Aucune proie à proximité immédiate
+  do: Rester immobile ou avancer lentement à la recherche de nourriture
+  note: Sa transparence peut laisser une créature s'approcher sans le remarquer ; il ne prépare ni piège ni diversion.
+
+## Ouverture
+
+step: Une créature entre dans le cube sans l'avoir remarqué
+  do: L'envelopper automatiquement
+
+step: Une ou plusieurs proies de taille G ou inférieure sont sur son passage
+  do: Avancer sur elles et utiliser l'enveloppement comme action simple
+  note: Il englobe les créatures que son volume peut contenir. Il ne porte aucun coup pendant un round où il utilise l'enveloppement.
+  note: Une cible qui porte une attaque d'opportunité contre lui renonce au jet de Réflexes permettant d'éviter l'enveloppement.
+
+step: Une proie est à 1,50 m et il n'utilise pas l'enveloppement ce round
+  do: Porter un coup +4, infligeant 1d6+3 dégâts plus 1d6 d'acide et 1d6 de froid
+  note: Résoudre également les capacités de paralysie et de froid engourdissant lorsqu'elles s'appliquent.
+
+## Rounds suivants
+
+step: Une proie paralysée est sur son passage
+  do: L'envelopper automatiquement en avançant sur elle
+  note: La paralysie empêche la proie d'éviter son absorption.
+
+step: Une proie est enveloppée
+  do: La garder dans sa masse et poursuivre sa digestion
+  note: L'enveloppement l'immobilise en lutte, l'expose à l'acide et à la paralysie et lui fait courir un risque de suffocation tant qu'elle ne s'est pas libérée.
+
+step: D'autres proies restent accessibles
+  do: Continuer à avancer sur elles pour les envelopper ; sinon, frapper une cible à portée
+  note: Il suit les proies proches sans distinguer les rôles du groupe ni chercher à exploiter leurs faiblesses.
+
+step: Les adversaires restent au-delà de son allonge
+  do: Se rapprocher au sol, à 4,50 m par action de mouvement
+  note: Il ne possède aucune attaque à distance ; sa lenteur permet aux adversaires mobiles de maintenir leurs distances.
+
+## Repli
+
+step: Il subit des blessures, même importantes
+  do: Continuer à frapper ou à envelopper jusqu'à sa destruction
+  note: Dénué d'intelligence, il ne prévoit aucun seuil de repli ni retraite organisée.
+
+step: Toutes les proies quittent la portée de sa vision aveugle de 18 m
+  do: Reprendre son errance à la recherche de nourriture

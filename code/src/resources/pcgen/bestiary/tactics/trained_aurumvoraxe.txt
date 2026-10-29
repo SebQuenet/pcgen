@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Aurumvorax dressé, bête magique de taille M, FP 12, d'intelligence animale : il cherche le contact et s'acharne sur une seule proie.
+  161 pv ; CA 26, contact 14 ; initiative +7. Morsure +21 (1d8+7 et étreinte), quatre griffes +21 (1d6+7 et étreinte) ; allonge 1,50 m ; BMO de lutte +29.
+  Déplacement de 9 m, creusement de 3 m ; vision dans le noir à 18 m, vision nocturne et odorat.
+
+resource: Volonté de fer supérieure | 1/jour | Relancer un jet de Volonté (+7) avant d'en connaître l'issue ; conserver le second résultat, même inférieur.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +14 et l'odorat ; attendre à couvert si le terrain le permet, avec Discrétion +13.
+  note: Privilégier une approche courte vers la proie la plus proche ; son intelligence de 2 appelle un comportement simple et obstiné.
+
+note: Défenses
+  RD 10/perforant ou tranchant : retirer 10 aux dégâts des attaques physiques qui ne passent pas cette RD. Immunité au poison ; résistance au feu 10.
+  Sa CA de contact 14 et sa Volonté +7 sont ses défenses les plus faciles à attaquer ; réserver la relance de Volonté à un jet important pour rester capable de combattre.
+
+## Ouverture
+
+step: Atteindre une proie exige d'avancer de plus de 1,50 m, mais de 9 m au maximum
+  do: Avancer jusqu'à 1,50 m de la proie et porter une morsure +21, pour 1d8+7 dégâts.
+  note: Sur une morsure réussie contre une cible de taille M ou inférieure, tenter l'étreinte en action libre : BMO +29 contre le DMD, sans attaque d'opportunité.
+
+step: Une proie est déjà à portée, éventuellement après un pas de 1,50 m
+  do: Faire une attaque à outrance : une morsure et quatre griffes, chacune à +21 ; concentrer les attaques sur la même cible.
+  note: Chaque morsure ou griffe qui touche permet de tenter l'étreinte contre une cible de taille M ou inférieure. Une fois lui-même en lutte, appliquer le malus de -2 aux attaques restantes.
+
+step: Aucune proie ne peut être atteinte après un déplacement de 9 m
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m, en profitant des couverts disponibles.
+
+## Rounds suivants
+
+step: Une proie reste retenue par son étreinte
+  do: Maintenir la lutte par une action simple, avec son BMO +29 et le bonus de circonstances de +5 si la proie n'a pas rompu la prise.
+  note: Chaque maintien réussi inflige automatiquement les dégâts de l'attaque qui a établi la prise : 1d8+7 pour la morsure, 1d6+7 pour une griffe. Le maintien occupe l'action simple du round.
+
+step: Il est libre de toute lutte et une cible reste au contact
+  do: Répéter l'attaque à outrance, morsure et quatre griffes, en restant sur la même proie jusqu'à sa chute.
+  note: Contre une cible trop grande pour l'étreinte, concentrer simplement les cinq attaques.
+
+step: Une attaque menace un critique
+  do: Ajouter le bonus de +4 de son don au jet de confirmation.
+  note: Sur un critique confirmé, Critique sanglant ajoute 2d6 dégâts de saignement à chaque tour de la victime. Les saignements de ce don se cumulent entre eux ; des soins appropriés peuvent les arrêter.
+
+step: La proie se libère ou tombe hors de combat
+  do: La rejoindre si elle reste accessible ; sinon, attaquer l'adversaire le plus proche, avec une seule morsure après un déplacement ou l'attaque à outrance s'il est déjà au contact.
+
+## Repli
+
+step: Moins de 40 pv et une issue est accessible
+  do: Lâcher sa prise en action libre et battre en retraite ; utiliser le creusement à 3 m par déplacement si le sol est meuble, ou fuir à terre.
+  note: Une retraite complète permet jusqu'à 18 m à terre ; seule la case de départ bénéficie de sa protection contre les attaques d'opportunité.
+
+step: Acculé ou encore engagé malgré des pv négatifs
+  do: Continuer à mordre ou à maintenir une prise tant que la férocité le permet.
+  note: Sous 0 pv, il reste conscient mais chancelant : une seule action simple ou de mouvement par round. Il perd 1 pv par round et meurt à -22 pv.

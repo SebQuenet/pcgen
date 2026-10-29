@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Kigyo, oni aquatique métamorphe loyal mauvais, cruel et manipulateur, qui aime voir ses victimes se noyer.
+  66 pv ; CA 19 ; trident de maître +13/+8 au contact ou +11 au lancer, 1d8+4 dégâts ; allonge 1,50 m.
+  Amphibie ; nage à 15 m, déplacement terrestre de 1,50 m ; vision dans le noir à 18 m et vision nocturne.
+  Régénération 5, interrompue par l'électricité ou les sorts du Bien ; immunité au froid ; résistance à la magie 17.
+
+resource: Invisibilité | à volonté | lui-même uniquement ; disparaît lorsqu'il attaque
+resource: Charme-personne | 3/jour | Volonté DD 13 ; humanoïdes uniquement
+resource: Discours captivant | 3/jour | Volonté DD 14 ; les auditeurs doivent comprendre sa langue
+resource: Poussée hydraulique | 3/jour | bousculade magique à +10 ; portée 13,50 m ; aucun jet de sauvegarde
+resource: Liberté de mouvement | 1/jour | lui-même uniquement ; durée 80 minutes
+
+step: Il peut approcher sans déclencher les hostilités
+  do: Prendre l'apparence d'un humanoïde de taille P ou M et jouer le naufragé blessé ; Bluff +12 pour attirer une victime près de l'eau.
+  note: Il parle seulement l'aquatique et l'infernal ; sa métamorphose ne lui donne pas d'autre langue.
+
+step: Une victime humanoïde peut être abordée paisiblement
+  do: Employer charme-personne, Volonté DD 13, puis tenter de la convaincre de le suivre vers un endroit isolé près de l'eau.
+  note: Le charme crée une attitude amicale ; il ne permet pas d'imposer une noyade ni de commander comme une domination. Une cible déjà menacée bénéficie de +5 à sa sauvegarde.
+
+step: Plusieurs auditeurs comprennent sa langue et acceptent de l'écouter
+  do: Utiliser discours captivant pour détourner leur attention pendant un échange préalable au combat.
+  note: Prévoir un round entier de discours initial ; continuer à parler pour entretenir l'effet. Les créatures de 4 DV ou plus, ou de Sagesse 16 ou plus, restent conscientes de leur environnement ; une attaque contre un auditeur met fin au sort.
+
+step: Un affrontement est imminent
+  do: Activer liberté de mouvement, puis invisibilité ; se placer sous l'eau, sur le trajet d'une cible isolée.
+  note: Discrétion +12 et Perception +11 ; privilégier une approche qui conserve un chemin de fuite aquatique.
+
+## Ouverture
+
+step: Une cible isolée est accessible dans l'eau, sans être adjacente au début du tour
+  do: Attaque éclair : nager au moins 3 m avant de frapper une fois au trident à +13, pour 1d8+4 dégâts, puis poursuivre son déplacement.
+  note: Le déplacement total ne dépasse pas 15 m. La cible attaquée ne peut pas lui porter d'attaque d'opportunité pendant cette manœuvre ; les autres ennemis le peuvent. L'attaque met fin à l'invisibilité.
+
+step: Un adversaire est déjà au contact
+  do: Attaque à outrance au trident, +13/+8, 1d8+4 dégâts par coup.
+
+step: Un ennemi sur la berge peut être repoussé vers l'eau
+  do: Se placer pour que la poussée l'éloigne du kigyo vers l'eau, puis utiliser poussée hydraulique, bousculade à +10 contre son DMD.
+  note: La poussée repousse la cible ; elle ne l'attire pas vers le kigyo et n'inflige pas de dégâts par elle-même. La résistance à la magie s'applique.
+
+## Rounds suivants
+
+step: Il peut harceler une cible sans commencer son tour à son contact
+  do: Répéter attaque éclair dans l'eau, une frappe à +13 suivie d'un éloignement ; viser les adversaires séparés de leurs alliés.
+  note: Souplesse du serpent accorde +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements auprès des autres ennemis.
+
+step: Une cible reste au contact et l'échange lui est favorable
+  do: Privilégier les deux coups de trident à +13/+8 plutôt que de se déplacer.
+
+step: Une victime déjà immergée et isolée risque de manquer d'air
+  do: Libérer ses mains, puis tenter une lutte à +15 contre son DMD ; aux rounds suivants, consacrer son action simple à maintenir la prise pour l'empêcher de remonter.
+  note: Lutteur sous-marin ajoute +4 au BMO de lutte dès que lui ou sa cible est au moins partiellement sous l'eau. Il n'a pas Science de la lutte : engager la prise provoque une attaque d'opportunité. La noyade suit les règles normales d'apnée.
+
+step: Une cible vulnérable est à distance et perdre momentanément son arme est acceptable
+  do: Lancer son trident à +11, 1d8+4 dégâts ; sous l'eau, son facteur de portée est de 6 m grâce à maîtrise du trident.
+  note: Il ne possède qu'un trident ; prévoir de le récupérer avant de reprendre les attaques avec cette arme.
+
+step: Les ennemis utilisent l'électricité ou des sorts du Bien
+  do: Éviter leurs lignes d'attaque et concentrer ses frappes sur la source de ces effets si elle est isolée.
+  note: Un effet qui blesse le kigyo et neutralise sa régénération l'empêche de récupérer ses 5 pv au round suivant ; les dégâts ordinaires ne suffisent pas à l'achever tant que sa régénération fonctionne.
+
+## Repli
+
+step: Ses points de vie tombent sous 20, ou sa régénération est neutralisée et il risque d'être achevé
+  do: Rompre le contact vers l'eau profonde ; utiliser un retrait pour nager jusqu'à 30 m si le passage le permet.
+  note: Le retrait ne protège que le départ de sa case initiale contre les ennemis visibles. Éviter de traverser d'autres cases menacées.
+
+step: Il a atteint une position où il peut employer un pouvoir sans être frappé
+  do: Redevenir invisible, puis continuer à s'éloigner sous l'eau ; employer liberté de mouvement si elle est encore disponible et que des entraves bloquent la fuite.
+  note: Laisser la régénération restaurer 5 pv par round dès qu'elle fonctionne à nouveau ; préparer une nouvelle embuscade après récupération.

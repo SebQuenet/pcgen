@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Tireur pâle, mort-vivant de taille M, neutre mauvais, FP 10. Embusqué patient, il privilégie les cibles lointaines et évite le corps à corps.
+  Fusil +1 Mosin-Nagant M1891 à lunette : +18/+13/+8, 1d10+6 dégâts, critique 19–20/×4 ; tir de l’étranger pour un coup dévastateur à longue distance.
+  127 pv ; CA 23, contact 19 ; déplacement de 9 m ; vision dans le noir à 18 m ; Perception +22, Discrétion +23, initiative +9.
+  RD 10/contondant et magie : une arme doit réunir les deux propriétés pour la franchir ; RM 21 ; résistance à la canalisation +4 ; immunités des morts-vivants.
+
+resource: Chance de l’étranger | permanent | +3 de chance déjà compris dans la CA ; aucune chance d’incident de tir avec une arme à feu
+resource: Tir de l’étranger | à volonté | action complexe ; un seul tir contre la CA de contact, quelle que soit la distance ; +6d6 dégâts ; critique automatiquement confirmé si le tir touche et menace un critique
+
+step: Il peut choisir sa position
+  do: Se dissimuler derrière un couvert avec une longue ligne de tir et une voie de dégagement ; surveiller les approches avec Perception +22.
+  note: La lunette sert au tir lointain ; rester hors de portée des combattants de mêlée aussi longtemps que possible.
+
+## Ouverture
+
+step: Une cible est exposée à très longue portée et il dispose de son round complet
+  do: Employer le tir de l’étranger : attaque +18 contre la CA de contact, 1d10+6 plus 6d6 dégâts, avant les modificateurs de portée et de couvert.
+  note: Privilégier une menace capable de riposter à distance. Ce pouvoir conserve les malus de portée ; les 6d6 supplémentaires ne sont pas multipliés en cas de critique.
+
+step: Il ne dispose que d’une action simple, notamment pendant un round de surprise
+  do: Tirer une fois au fusil à +18, pour 1d10+6 dégâts, avant les modificateurs de situation.
+
+## Rounds suivants
+
+step: Les ennemis restent à très longue portée
+  do: Répéter le tir de l’étranger sur une cible visible ; achever une cible déjà blessée si elle reste dangereuse.
+  note: Ce tir occupe le round complet ; il ne se combine pas avec une salve de Tir rapide.
+
+step: Les ennemis se rapprochent et il peut effectuer une attaque à outrance
+  do: Employer Tir rapide : quatre tirs à +16/+16/+11/+6, chacun pour 1d10+6 dégâts, avant les modificateurs de situation.
+  note: Ajouter Visée mortelle lorsque les attaques visent la CA normale : +13/+13/+8/+3, chacun pour 1d10+12 dégâts. Visée mortelle ne procure aucun bonus de dégâts aux attaques de contact.
+
+step: La cible se trouve à 9 m ou moins
+  do: Ajouter Tir à bout portant : +1 aux attaques et +1 aux dégâts du fusil.
+  note: Tir de précision supprime le malus de −4 pour tirer sur un adversaire engagé en mêlée ; il ne supprime pas le couvert.
+
+step: Un ennemi arrive à 3 m ou moins
+  do: Faire appliquer l’aura de terreur, Volonté DD 21 ; conserver une distance de tir dès que possible.
+  note: Si un pas de placement de 1,50 m suffit à quitter la zone menacée, l’effectuer avant de tirer. Sinon, se désengager et retrouver un couvert.
+
+## Repli
+
+step: Sa position devient dangereuse et une issue reste accessible
+  do: Quitter le poste à couvert, à 9 m par déplacement, puis reprendre le harcèlement depuis une nouvelle ligne de tir.
+
+step: Il est acculé
+  do: Combattre jusqu’à la destruction ; exploiter l’aura de terreur et continuer à tirer dès qu’une cible se présente.
+  note: Aucun seuil de points de vie ne déclenche une reddition ; il se bat jusqu’à la mort s’il est coincé.
