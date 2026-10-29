@@ -23,6 +23,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import pcgen.base.formula.Formula;
 import pcgen.base.util.NamedFormula;
@@ -50,6 +51,10 @@ public final class KitGear extends BaseKit
 	private Integer maxCost;
 	private CDOMReference<Equipment> equip;
 	private List<EqModRef> mods;
+	private static final Set<String> HAND_LOCATIONS = Set.of(Constants.EQUIP_LOCATION_PRIMARY,
+		Constants.EQUIP_LOCATION_SECONDARY, Constants.EQUIP_LOCATION_BOTH, Constants.EQUIP_LOCATION_DOUBLE,
+		Constants.EQUIP_LOCATION_TWOWEAPONS, Constants.EQUIP_LOCATION_UNARMED);
+
 	private String theLocationStr = null;
 	private Boolean sizeToPC;
 	private CDOMSingleRef<SizeAdjustment> size;
@@ -412,7 +417,7 @@ public final class KitGear extends BaseKit
 			&& !theLocation.equalsIgnoreCase(Constants.EQUIP_LOCATION_EQUIPPED))
 		{
 			theTarget = EquipmentUtilities.findEquipmentByBaseKey(aPC.getEquipmentMasterList(), theLocation);
-			if (theTarget == null)
+			if (theTarget == null && !isEquipLocation(theLocation))
 			{
 				theLocation = Constants.EQUIP_LOCATION_CARRIED;
 			}
@@ -526,5 +531,14 @@ public final class KitGear extends BaseKit
 	public List<EqModRef> getEqMods()
 	{
 		return Collections.unmodifiableList(mods);
+	}
+
+	/**
+	 * A location naming where on the body an item goes (a hand, or a slot such as Shield), rather
+	 * than a container.
+	 */
+	private static boolean isEquipLocation(String location)
+	{
+		return HAND_LOCATIONS.contains(location) || Globals.getEquipSlotByName(location) != null;
 	}
 }
