@@ -31,7 +31,8 @@ from catalog import readings  # noqa: E402
 from generate_summon_portraits import draw_with_codex, portrait_name  # noqa: E402
 
 REPOSITORY = Path(__file__).resolve().parent.parent
-PCGEN_BESTIARIES = REPOSITORY / "data/pathfinder/paizo/roleplaying_game"
+PATHFINDER_DATA = REPOSITORY / "data/pathfinder"
+PCGEN_BESTIARIES = PATHFINDER_DATA / "paizo/roleplaying_game"
 PCFINDER_CREATURES = REPOSITORY.parent / "pcfinder/apps/pcfinder-csr/static-data/creatures.json"
 NATIVE_PAWNS = REPOSITORY.parent / "pcfinder-images/bestiary"
 PAWNS = REPOSITORY / "code/src/resources/pcgen/bestiary/pawns"
@@ -63,9 +64,10 @@ class Creature:
 
 
 def read_pcgen_races():
-    """The races of PCGen's bestiary books, from their *_races.lst files."""
+    """The races of PCGen's bestiary books, and those imported from Combat Manager into any book."""
     creatures = []
-    for races_file in sorted(PCGEN_BESTIARIES.glob("*bestiary*/*_races.lst")):
+    races_files = set(PCGEN_BESTIARIES.glob("*bestiary*/*_races.lst")) | set(PATHFINDER_DATA.rglob("*_cm_races.lst"))
+    for races_file in sorted(races_files):
         source = "the Pathfinder Bestiary"
         for line in races_file.read_text(encoding="utf-8").splitlines():
             fields = line.split("\t")
@@ -76,7 +78,8 @@ def read_pcgen_races():
             tokens = dict(field.split(":", 1) for field in fields[1:] if ":" in field)
             subtypes = tokens.get("RACESUBTYPE", "").replace("|", ", ")
             creature_type = tokens.get("RACETYPE", "") + (f" ({subtypes})" if subtypes else "")
-            creatures.append(Creature(fields[0].strip(), SIZE_NAMES.get(tokens.get("SIZE", ""), ""), creature_type, source))
+            creatures.append(Creature(fields[0].strip(), SIZE_NAMES.get(tokens.get("SIZE", ""), ""), creature_type,
+                                      tokens.get("SOURCELONG", source)))
     return creatures
 
 
@@ -172,7 +175,8 @@ def main():
     for stem in selected:
         if (NATIVE_PAWNS / f"{stem}.png").exists() and not (PAWNS / f"{stem}.jpg").exists():
             store_reduced(NATIVE_PAWNS / f"{stem}.png", PAWNS / f"{stem}.jpg")
-    missing = [stem for stem in selected if arguments.force or not (NATIVE_PAWNS / f"{stem}.png").exists()]
+    missing = [stem for stem in selected if arguments.force
+               or not ((NATIVE_PAWNS / f"{stem}.png").exists() or (PAWNS / f"{stem}.jpg").exists())]
     missing = missing[:arguments.limit]
     print(f"{len(missing)} pawns to draw out of {len(selected)}", flush=True)
     if arguments.dry_run:
