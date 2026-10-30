@@ -18,12 +18,22 @@
 package pcgen.gui2.gametable;
 
 import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.SwingUtilities;
 
 import pcgen.core.gametable.TabletopOutcome;
 import pcgen.core.gametable.TabletopTransfer;
@@ -31,12 +41,47 @@ import pcgen.core.gametable.TabletopUpload;
 import pcgen.system.LanguageBundle;
 
 /**
- * What the game master does with an image: save it on this computer, or send it to Tabletop Simulator.
+ * What the game master does with an image: look at it full size, save it on this computer, or send it to Tabletop
+ * Simulator.
  */
 final class ImageActions
 {
+	private static final double SCREEN_SHARE = 0.8;
 	private ImageActions()
 	{
+	}
+
+	/**
+	 * Shows the image at its own size, in a window of its own.
+	 *
+	 * @param parent the component the window opens over.
+	 * @param title  the window's title.
+	 * @param bytes  the image's content.
+	 */
+	static void view(Component parent, String title, byte[] bytes)
+	{
+		BufferedImage picture;
+		try
+		{
+			picture = ImageIO.read(new ByteArrayInputStream(bytes));
+		}
+		catch (IOException unreadable)
+		{
+			picture = null;
+		}
+		if (picture == null)
+		{
+			JOptionPane.showMessageDialog(parent, LanguageBundle.getString("in_gametable_imageUnreadable"),
+				title, JOptionPane.WARNING_MESSAGE);
+			return;
+		}
+		JDialog viewer = new JDialog(SwingUtilities.getWindowAncestor(parent), title);
+		viewer.add(new JScrollPane(new JLabel(new ImageIcon(picture))));
+		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+		viewer.setSize((int) Math.min(picture.getWidth() + 40, screen.width * SCREEN_SHARE),
+			(int) Math.min(picture.getHeight() + 60, screen.height * SCREEN_SHARE));
+		viewer.setLocationRelativeTo(parent);
+		viewer.setVisible(true);
 	}
 
 	/**

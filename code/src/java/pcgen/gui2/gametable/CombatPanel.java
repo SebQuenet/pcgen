@@ -163,6 +163,7 @@ final class CombatPanel extends JPanel
 			}
 		});
 		sheet.addHyperlinkListener(GameTablePanel::browse);
+		sheet.addHyperlinkListener(PawnButtons.enlarging(this, this::targetPawn));
 		JPanel right = new JPanel(new BorderLayout());
 		right.add(new JScrollPane(sheet), BorderLayout.CENTER);
 		JPanel sheetButtons = new JPanel(new FlowLayout(FlowLayout.LEFT));

@@ -104,6 +104,7 @@ final class BestiaryPanel extends JPanel
 		browser = new CatalogBrowser(preferences);
 		preview.setEditable(false);
 		preview.addHyperlinkListener(GameTablePanel::browse);
+		preview.addHyperlinkListener(PawnButtons.enlarging(this, this::pickedPawn));
 		browser.onSelection(this::showPreview);
 
 		JPanel right = new JPanel(new BorderLayout());
@@ -235,7 +236,8 @@ final class BestiaryPanel extends JPanel
 			{
 				case ForgeOutcome.Built<SheetPreview> built ->
 				{
-					preview.setText(SheetHtml.preview(built.value().sheet(), BestiaryPawn.of(entry.recipe().source()),
+					preview.setText(SheetHtml.preview(entry.name(), originOf(entry), built.value().sheet(),
+						BestiaryPawn.of(entry.recipe().source()),
 						TacticsHtml.of(built.value().monster())));
 					// Browsing the bestiary builds thousands of creatures: each is let go once shown
 					MonsterForge.release(built.value().monster());
@@ -244,6 +246,16 @@ final class BestiaryPanel extends JPanel
 			}
 			preview.setCaretPosition(0);
 		}));
+	}
+
+	/** What the entry is built from, followed by the book it comes from when that says more. */
+	private static String originOf(CatalogEntry entry)
+	{
+		String builtFrom = RetouchDialog.sourceText(entry.recipe().source());
+		return entry.facts().value(CatalogField.SOURCE_BOOK)
+			.flatMap(book -> book instanceof FieldValue.Text text && !text.value().isBlank() ? Optional.of(text.value())
+				: Optional.empty())
+			.map(book -> builtFrom + " — " + book).orElse(builtFrom);
 	}
 
 	private List<EncounterMonster> chosenMonsters(List<CatalogEntry> entries, int number)

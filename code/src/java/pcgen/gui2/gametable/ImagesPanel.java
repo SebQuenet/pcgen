@@ -18,11 +18,7 @@
 package pcgen.gui2.gametable;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -30,21 +26,16 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
-import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
-import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
-import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import pcgen.core.gametable.ImageCategory;
@@ -57,7 +48,6 @@ import pcgen.system.LanguageBundle;
  */
 final class ImagesPanel extends JPanel
 {
-	private static final double SCREEN_SHARE = 0.8;
 	private static final String[] IMAGE_EXTENSIONS = {"png", "jpg", "jpeg", "gif", "bmp"};
 
 	private final GameTablePanel table;
@@ -179,28 +169,7 @@ final class ImagesPanel extends JPanel
 
 	private void view(ScenarioImage image)
 	{
-		BufferedImage picture;
-		try
-		{
-			picture = ImageIO.read(new ByteArrayInputStream(image.bytes()));
-		}
-		catch (IOException unreadable)
-		{
-			picture = null;
-		}
-		if (picture == null)
-		{
-			JOptionPane.showMessageDialog(this, LanguageBundle.getString("in_gametable_imageUnreadable"),
-				image.name(), JOptionPane.WARNING_MESSAGE);
-			return;
-		}
-		JDialog viewer = new JDialog(SwingUtilities.getWindowAncestor(this), image.name());
-		viewer.add(new JScrollPane(new JLabel(new ImageIcon(picture))));
-		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
-		viewer.setSize((int) Math.min(picture.getWidth() + 40, screen.width * SCREEN_SHARE),
-			(int) Math.min(picture.getHeight() + 60, screen.height * SCREEN_SHARE));
-		viewer.setLocationRelativeTo(this);
-		viewer.setVisible(true);
+		ImageActions.view(this, image.name(), image.bytes());
 	}
 
 	private void save(ScenarioImage image)

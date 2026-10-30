@@ -55,6 +55,9 @@ final class SheetHtml
 	/** Where a link to drop a spell cast points; the spell's name follows. */
 	static final String DROP_SPELL_LINK = "dropSpell:";
 
+	/** Where the link of a creature's pawn points, to show it larger. */
+	static final String PAWN_LINK = "pawn:";
+
 	private static final String BODY = "<html><body style='font-family:sans-serif;font-size:14pt;margin:6px'>";
 	private static final String END = "</body></html>";
 	static final String MUTED = "#6b5a48";
@@ -69,15 +72,19 @@ final class SheetHtml
 	}
 
 	/**
+	 * @param name    the monster's name, as the bestiary lists it.
+	 * @param origin  what it is built from and the book it comes from.
 	 * @param sheet   a monster's sheet, before it enters an encounter.
 	 * @param pawn    its pawn; empty when none was drawn for it.
 	 * @param tactics how to play it, as {@link TacticsHtml} writes it; empty when it has no tactical sheet.
-	 * @return its stat block, its pawn and its tactics, without any fight state.
+	 * @return its name, its stat block, its pawn and its tactics, without any fight state.
 	 */
-	static String preview(MonsterSheet sheet, Optional<BestiaryPawn> pawn, String tactics)
+	static String preview(String name, String origin, MonsterSheet sheet, Optional<BestiaryPawn> pawn, String tactics)
 	{
 		StringBuilder html = new StringBuilder(BODY);
-		html.append("<table width='100%' cellspacing='0' cellpadding='0'><tr><td align='right' valign='bottom' style='color:")
+		html.append("<table width='100%' cellspacing='0' cellpadding='0'><tr><td valign='top'><div style='font-size:22pt'><b>")
+			.append(escape(name)).append("</b></div><div style='font-size:11pt;color:").append(MUTED).append("'><i>")
+			.append(escape(origin)).append("</i></div></td><td align='right' valign='bottom' style='color:")
 			.append(MUTED).append("'>").append(LanguageBundle.getString("in_gametable_challengeRating")).append(" <b>")
 			.append(escape(sheet.challengeRating())).append("</b></td>");
 		pawnCell(html, pawn);
@@ -155,12 +162,13 @@ final class SheetHtml
 		return html;
 	}
 
-	/** The creature's pawn, at the right end of the sheet's first row. */
+	/** The creature's pawn, at the right end of the sheet's first row; a click on it shows it larger. */
 	private static void pawnCell(StringBuilder html, Optional<BestiaryPawn> pawn)
 	{
 		pawn.ifPresent(found -> html.append("<td align='right' width='").append(PAWN_WIDTH + PAWN_MARGIN)
-			.append("'><img src='").append(escape(found.location().toExternalForm())).append("' width='").append(PAWN_WIDTH)
-			.append("' height='").append(PAWN_HEIGHT).append("'></td>"));
+			.append("'><a href='").append(PAWN_LINK).append("'><img border='0' src='")
+			.append(escape(found.location().toExternalForm())).append("' width='").append(PAWN_WIDTH)
+			.append("' height='").append(PAWN_HEIGHT).append("'></a></td>"));
 	}
 
 	/** The numbers asked for every round, in large type. */
