@@ -50,7 +50,8 @@ public final class DirectFacts
 	/** The category of a race players choose. */
 	public static final String PLAYER_RACE = "Player race";
 
-	private static final FactKey<?> IS_PC = FactKey.valueOf("IsPC");
+	/** The fact marking a race players choose; the game mode defines it when its sources load. */
+	private static final String IS_PC = "IsPC";
 
 	private DirectFacts()
 	{
@@ -64,9 +65,7 @@ public final class DirectFacts
 	{
 		Map<CatalogField, FieldValue> facts = common(race.getLocalizedName(), sourceOf(race), "race",
 			new MonsterSource.BestiaryRace(race.getKeyName()));
-		Object isPlayerRace = race.getResolved(IS_PC);
-		facts.put(CatalogField.CATEGORY, new FieldValue.Text(
-			isPlayerRace != null && Boolean.parseBoolean(isPlayerRace.toString()) ? PLAYER_RACE : MONSTER));
+		facts.put(CatalogField.CATEGORY, new FieldValue.Text(isPlayerRace(race) ? PLAYER_RACE : MONSTER));
 		RaceType type = race.get(ObjectKey.RACETYPE);
 		if (type != null)
 		{
@@ -125,6 +124,12 @@ public final class DirectFacts
 		facts.put(CatalogField.ORIGIN, new FieldValue.Text(origin));
 		facts.put(CatalogField.HAS_PAWN, new FieldValue.Flag(BestiaryPawn.of(source).isPresent()));
 		return facts;
+	}
+
+	private static boolean isPlayerRace(Race race)
+	{
+		return FactKey.getAllConstants().stream().filter(key -> IS_PC.equals(key.toString())).findFirst()
+			.map(race::getResolved).map(isPc -> Boolean.parseBoolean(isPc.toString())).orElse(false);
 	}
 
 	private static String sourceOf(CDOMObject object)
