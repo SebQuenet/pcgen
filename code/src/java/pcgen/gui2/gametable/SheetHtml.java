@@ -20,13 +20,18 @@ package pcgen.gui2.gametable;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.stream.Collectors;
 
+import pcgen.core.character.SpellInfo;
 import pcgen.core.conjurations.CreatureAttack;
 import pcgen.core.conjurations.CreatureStats;
 import pcgen.core.conjurations.SpecialAbilities;
+import pcgen.core.gametable.AbilityScore;
 import pcgen.core.gametable.BestiaryPawn;
 import pcgen.core.gametable.CastSpell;
 import pcgen.core.gametable.Combat;
@@ -34,6 +39,7 @@ import pcgen.core.gametable.Combatant;
 import pcgen.core.gametable.Condition;
 import pcgen.core.gametable.FeintDefense;
 import pcgen.core.gametable.Health;
+import pcgen.core.gametable.MonsterRepertoire;
 import pcgen.core.gametable.MonsterSheet;
 import pcgen.core.gametable.PlayerGlance;
 import pcgen.system.LanguageBundle;
@@ -63,6 +69,8 @@ final class SheetHtml
 	static final String MUTED = "#6b5a48";
 	private static final String FIGURE_BACKGROUND = "#f1ebe1";
 	private static final String SECTION_BACKGROUND = "#7a2b1d";
+	private static final String CONSTANT = "Constant";
+	private static final String DAY = "Day";
 	private static final int PAWN_WIDTH = 100;
 	private static final int PAWN_HEIGHT = 150;
 	private static final int PAWN_MARGIN = 8;
@@ -82,13 +90,15 @@ final class SheetHtml
 	static String preview(String name, String origin, MonsterSheet sheet, Optional<BestiaryPawn> pawn, String tactics)
 	{
 		StringBuilder html = new StringBuilder(BODY);
-		html.append("<table width='100%' cellspacing='0' cellpadding='0'><tr><td valign='top'><div style='font-size:22pt'><b>")
-			.append(escape(name)).append("</b></div><div style='font-size:11pt;color:").append(MUTED).append("'><i>")
-			.append(escape(origin)).append("</i></div></td><td align='right' valign='bottom' style='color:")
-			.append(MUTED).append("'>").append(LanguageBundle.getString("in_gametable_challengeRating")).append(" <b>")
-			.append(escape(sheet.challengeRating())).append("</b></td>");
-		pawnCell(html, pawn);
-		html.append("</tr></table>");
+		html.append("<table width='100%' cellspacing='0' cellpadding='0'><tr><td colspan='2' valign='top'>")
+			.append("<div style='font-size:22pt'><b>").append(escape(name)).append("</b></div><div style='font-size:11pt;color:")
+			.append(MUTED).append("'><i>").append(escape(origin)).append("</i></div></td>");
+		pawnCell(html, pawn, 2);
+		html.append("</tr><tr><td valign='bottom' style='font-size:11pt;color:").append(MUTED).append("'>")
+			.append(String.join(" &nbsp;·&nbsp; ", sheet.abilityScores().stream().map(SheetHtml::scoreOf).toList()))
+			.append("</td><td align='right' valign='bottom' style='color:").append(MUTED).append("'>")
+			.append(LanguageBundle.getString("in_gametable_challengeRating")).append(" <b>")
+			.append(escape(sheet.challengeRating())).append("</b></td></tr></table>");
 		figures(html, String.valueOf(sheet.stats().maximumHitPoints()), sheet);
 		statBlock(html, sheet);
 		html.append(tactics);
@@ -165,7 +175,12 @@ final class SheetHtml
 	/** The creature's pawn, at the right end of the sheet's first row; a click on it shows it larger. */
 	private static void pawnCell(StringBuilder html, Optional<BestiaryPawn> pawn)
 	{
-		pawn.ifPresent(found -> html.append("<td align='right' width='").append(PAWN_WIDTH + PAWN_MARGIN)
+		pawnCell(html, pawn, 1);
+	}
+
+	private static void pawnCell(StringBuilder html, Optional<BestiaryPawn> pawn, int rows)
+	{
+		pawn.ifPresent(found -> html.append("<td align='right' rowspan='").append(rows).append("' width='").append(PAWN_WIDTH + PAWN_MARGIN)
 			.append("'><a href='").append(PAWN_LINK).append("'><img border='0' src='")
 			.append(escape(found.location().toExternalForm())).append("' width='").append(PAWN_WIDTH)
 			.append("' height='").append(PAWN_HEIGHT).append("'></a></td>"));
@@ -223,6 +238,8 @@ final class SheetHtml
 	{
 		CreatureStats stats = sheet.stats();
 		SpecialAbilities abilities = sheet.abilities();
+		// Defense and offense side by side, so the whole sheet reads without scrolling
+		html.append("<table width='100%' cellspacing='0' cellpadding='0'><tr><td width='50%' valign='top'>");
 		html.append("<table width='100%' cellspacing='0' cellpadding='3'>");
 		section(html, "in_gametable_sectionDefense");
 		html.append("</table>");
@@ -230,6 +247,8 @@ final class SheetHtml
 		html.append("<table width='100%' cellspacing='0' cellpadding='3'>");
 		row(html, "in_gametable_combatManeuverDefense", String.valueOf(stats.combatManeuverDefense()));
 		listRow(html, "in_gametable_specialDefenses", abilities.defenses());
+		html.append("</table></td><td width='50%' valign='top'>");
+		html.append("<table width='100%' cellspacing='0' cellpadding='3'>");
 		section(html, "in_gametable_sectionOffense");
 		row(html, "in_gametable_speed", stats.speed());
 		row(html, "in_gametable_combatManeuverBonus", stats.combatManeuverBonus());
@@ -237,6 +256,10 @@ final class SheetHtml
 		attacks(html, stats.attacks());
 		html.append("<table width='100%' cellspacing='0' cellpadding='3'>");
 		listRow(html, "in_gametable_specialAttacks", abilities.attacks());
+		html.append("</table></td></tr></table>");
+		html.append("<table width='100%' cellspacing='0' cellpadding='3'>");
+		skills(html, sheet.skills());
+		spells(html, sheet.spells());
 		if (!abilities.qualities().isEmpty())
 		{
 			section(html, "in_gametable_specialQualities");
@@ -253,6 +276,74 @@ final class SheetHtml
 		}
 		html.append("</table>");
 		references(html, sheet.references());
+	}
+
+	private static void skills(StringBuilder html, List<MonsterRepertoire.SkillTotal> skills)
+	{
+		if (skills.isEmpty())
+		{
+			return;
+		}
+		section(html, "in_gametable_skillsSection");
+		html.append("<tr><td colspan='2'>").append(String.join(", ", skills.stream()
+			.map(skill -> escape(skill.name()) + " " + signed(skill.total())).toList())).append("</td></tr>");
+	}
+
+	/** Each caster's spells, a line per level for a class and a line per frequency for a race's spell-like abilities. */
+	private static void spells(StringBuilder html, List<MonsterRepertoire.CasterSpells> casters)
+	{
+		if (casters.isEmpty())
+		{
+			return;
+		}
+		section(html, "in_gametable_spellsSection");
+		for (MonsterRepertoire.CasterSpells caster : casters)
+		{
+			Map<String, List<String>> lines = switch (caster)
+			{
+				case MonsterRepertoire.CasterSpells.Innate innate -> innate.spells().stream().collect(Collectors.groupingBy(
+					SheetHtml::frequencyOf, LinkedHashMap::new, Collectors.mapping(spell -> escape(spell.name()), Collectors.toList())));
+				case MonsterRepertoire.CasterSpells.Levelled levelled -> levelled.spells().stream().collect(Collectors.groupingBy(
+					spell -> String.valueOf(spell.level()), LinkedHashMap::new, Collectors.mapping(
+						spell -> escape(spell.name()) + (spell.times() > 1 ? " ×" + spell.times() : ""), Collectors.toList())));
+			};
+			html.append("<tr><td valign='top' width='35%' style='color:").append(MUTED).append("'><b>")
+				.append(escape(caster.caster())).append("</b></td><td>");
+			html.append(String.join("<br>", lines.entrySet().stream()
+				.map(line -> (line.getKey().isEmpty() ? "" : "<i>" + escape(line.getKey()) + "</i> : ")
+					+ String.join(", ", line.getValue())).toList()));
+			html.append("</td></tr>");
+		}
+	}
+
+	private static String frequencyOf(MonsterRepertoire.InnateSpell spell)
+	{
+		if (CONSTANT.equals(spell.timeUnit()))
+		{
+			return LanguageBundle.getString("in_gametable_constant");
+		}
+		if (spell.times() == SpellInfo.TIMES_AT_WILL)
+		{
+			return LanguageBundle.getString("in_gametable_atWill");
+		}
+		if (spell.times() <= 0)
+		{
+			// The data left the frequency to a variable they never set
+			return "";
+		}
+		return DAY.equals(spell.timeUnit()) ? LanguageBundle.getFormattedString("in_gametable_perDay", spell.times())
+			: spell.times() + "/" + spell.timeUnit();
+	}
+
+	/** The ability's short name and the creature's score, a dash when it has none. */
+	private static String scoreOf(AbilityScore ability)
+	{
+		return escape(ability.abbreviation()) + " <b>" + (ability.score().isPresent() ? ability.score().getAsInt() : "—") + "</b>";
+	}
+
+	private static String signed(int number)
+	{
+		return number >= 0 ? "+" + number : String.valueOf(number);
 	}
 
 	/** The three saves side by side, each under its name. */

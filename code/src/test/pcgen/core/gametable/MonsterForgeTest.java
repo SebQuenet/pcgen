@@ -26,8 +26,10 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import pcgen.core.PlayerCharacter;
+import pcgen.core.character.SpellInfo;
 import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.BestiarySources;
 import pcgen.core.conjurations.BonusSourceKey;
@@ -227,5 +229,41 @@ class MonsterForgeTest
 		PlayerCharacter drow = forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Drow Noble")));
 
 		assertEquals(2, drow.getDomainCount());
+	}
+
+	@Test
+	void aDriderListsItsClimbOfTwentyTwoFirst()
+	{
+		MonsterSheet drider = sheets.sheet(forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Drider"))));
+
+		assertEquals(22, drider.skills().getFirst().total());
+	}
+
+	@Test
+	void aDriderCastsDarknessAtWill()
+	{
+		MonsterSheet drider = sheets.sheet(forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Drider"))));
+
+		assertTrue(drider.spells().stream().flatMap(caster -> caster instanceof MonsterRepertoire.CasterSpells.Innate innate
+			? innate.spells().stream() : Stream.empty())
+			.anyMatch(spell -> spell.name().equals("Darkness") && spell.times() == SpellInfo.TIMES_AT_WILL));
+	}
+
+	@Test
+	void aDrowNobleShowsTheSpellsHerClericPreparedRatherThanEveryOneSheKnows()
+	{
+		MonsterSheet drow = sheets.sheet(forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Drow Noble"))));
+
+		assertEquals(List.of(10), drow.spells().stream().flatMap(caster -> caster instanceof MonsterRepertoire.CasterSpells.Levelled
+			levelled ? Stream.of(levelled.spells().size()) : Stream.empty()).toList());
+	}
+
+	@Test
+	void aDriderHasTheSixScoresOfItsStatBlock()
+	{
+		MonsterSheet drider = sheets.sheet(forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Drider"))));
+
+		assertEquals(List.of(OptionalInt.of(15), OptionalInt.of(15), OptionalInt.of(18), OptionalInt.of(15), OptionalInt.of(16),
+			OptionalInt.of(16)), drider.abilityScores().stream().map(AbilityScore::score).toList());
 	}
 }

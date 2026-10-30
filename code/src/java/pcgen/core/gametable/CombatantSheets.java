@@ -65,6 +65,7 @@ public final class CombatantSheets
 	private static final String HUMANOID = "Humanoid";
 	private static final String SENSE_MOTIVE = "SKILL.Sense Motive";
 	private static final String FEATS = "ABILITYALLLIST.FEAT.VISIBLE";
+	private static final int ABBREVIATION_LENGTH = 3;
 
 	private final SummonedCreatureBuilder reader;
 
@@ -91,9 +92,23 @@ public final class CombatantSheets
 	 */
 	public MonsterSheet sheet(PlayerCharacter monster)
 	{
-		return new MonsterSheet(stats(monster), challengeRating(monster),
+		return new MonsterSheet(stats(monster), challengeRating(monster), abilityScoresOf(monster),
 			SummonedCreatureBuilder.specialAbilitiesOf(monster), SpecialAbilities.split(token(monster, FEATS)),
-			feint(monster), referencesOf(monster.getRace()));
+			MonsterRepertoire.skillsOf(monster), MonsterRepertoire.spellsOf(monster), feint(monster), referencesOf(monster.getRace()));
+	}
+
+	private static List<AbilityScore> abilityScoresOf(PlayerCharacter monster)
+	{
+		return Globals.getContext().getReferenceContext().getSortkeySortedCDOMObjects(PCStat.class).stream()
+			.map(stat -> new AbilityScore(abbreviationOf(stat), monster.isNonAbility(stat) ? OptionalInt.empty()
+				: OptionalInt.of(monster.getTotalStatFor(stat)))).toList();
+	}
+
+	/** The first three letters of the ability's name in the user's language: Str, or For in French. */
+	private static String abbreviationOf(PCStat stat)
+	{
+		String name = stat.getLocalizedName();
+		return name.length() <= ABBREVIATION_LENGTH ? name : name.substring(0, ABBREVIATION_LENGTH);
 	}
 
 	private static List<FirstResultSearch.Link> referencesOf(Race race)

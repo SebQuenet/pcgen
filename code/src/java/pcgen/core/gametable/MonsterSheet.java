@@ -28,17 +28,25 @@ import pcgen.util.FirstResultSearch;
  *
  * @param stats           its numbers under its conditions
  * @param challengeRating its challenge rating as PCGen writes it
+ * @param abilityScores   its six ability scores, Strength first
  * @param abilities       its special abilities, sorted as a stat block sorts them
  * @param feats           its feats, those its race grants included
+ * @param skills          the skills it has ranks in, the best check first
+ * @param spells          the spells of each of its casters, its race's spell-like abilities included
  * @param feint           what a Bluff check must reach to feint it
  * @param references      where its race is described on the rules sites, empty when it has none
  */
-public record MonsterSheet(CreatureStats stats, String challengeRating, SpecialAbilities abilities,
-	List<String> feats, FeintDefense feint, List<FirstResultSearch.Link> references)
+public record MonsterSheet(CreatureStats stats, String challengeRating, List<AbilityScore> abilityScores,
+	SpecialAbilities abilities,
+	List<String> feats, List<MonsterRepertoire.SkillTotal> skills, List<MonsterRepertoire.CasterSpells> spells,
+	FeintDefense feint, List<FirstResultSearch.Link> references)
 {
 	public MonsterSheet
 	{
+		abilityScores = List.copyOf(abilityScores);
 		feats = List.copyOf(feats);
+		skills = List.copyOf(skills);
+		spells = List.copyOf(spells);
 		references = List.copyOf(references);
 	}
 }
