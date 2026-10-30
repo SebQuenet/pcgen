@@ -131,6 +131,9 @@ tasks.register("bestiaryIndex", JavaExec) {
     args project.findProperty('bestiarySources') ?: 'characters/tous-les-monstres.pcg',
         'code/src/resources/pcgen/bestiary/index.json',
         'Zirnakaynin', 'Dungeons of Golarion', 'Andoran - Birthplace of Freedom',
+        // The books Zirnakaynin's kits take their abilities from
+        'Melee Tactics Toolbox', 'Magic Tactics Toolbox', 'Ranged Tactics Toolbox', 'Inner Sea Combat',
+        'Inner Sea Magic', 'Blood of Shadows',
         'Curse of the Crimson Throne - Chapter 1 - Edge of Anarchy (Conversion)',
         'Curse of the Crimson Throne - Chapter 2 - Seven Days to the Grave (Conversion)',
         'Rise of the Runelords Adventure Path', 'Second Darkness, Chapter 1 - Shadow in the Sky (Conversion)',
