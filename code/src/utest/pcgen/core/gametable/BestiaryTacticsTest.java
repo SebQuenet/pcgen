@@ -47,6 +47,12 @@ class BestiaryTacticsTest
 	}
 
 	@Test
+	void aRaceKeyedApartFromItsNameIsPlayedByThePlanNamedAfterItsKey()
+	{
+		assertTrue(BestiaryTactics.of("Div (Aghash)").isPresent());
+	}
+
+	@Test
 	void aRaceWithoutPlanHasNone()
 	{
 		assertEquals(Optional.empty(), BestiaryTactics.of("Unknown Race"));

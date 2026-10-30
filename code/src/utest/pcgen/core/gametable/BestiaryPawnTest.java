@@ -37,6 +37,14 @@ class BestiaryPawnTest
 	}
 
 	@Test
+	void aRaceKeyedApartFromItsNameIsShownByThePawnNamedAfterItsKey()
+	{
+		Optional<BestiaryPawn> pawn = BestiaryPawn.of(new MonsterSource.BestiaryRace("Div (Aghash)"));
+
+		assertEquals(Optional.of("div_aghash.jpg"), pawn.map(BestiaryPawn::fileName));
+	}
+
+	@Test
 	void aMonsterBuiltFromACharacterIsShownByThePawnNamedAfterItsFile()
 	{
 		Optional<BestiaryPawn> pawn = BestiaryPawn.of(new MonsterSource.CharacterFile("/npcs/Bestiary/Aboleth.pcg"));

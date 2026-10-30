@@ -78,7 +78,7 @@ def read_pcgen_races():
             tokens = dict(field.split(":", 1) for field in fields[1:] if ":" in field)
             subtypes = tokens.get("RACESUBTYPE", "").replace("|", ", ")
             creature_type = tokens.get("RACETYPE", "") + (f" ({subtypes})" if subtypes else "")
-            creatures.append(Creature(fields[0].strip(), SIZE_NAMES.get(tokens.get("SIZE", ""), ""), creature_type,
+            creatures.append(Creature(tokens.get("KEY", fields[0]).strip(), SIZE_NAMES.get(tokens.get("SIZE", ""), ""), creature_type,
                                       tokens.get("SOURCELONG", source)))
     return creatures
 
