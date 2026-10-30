@@ -475,7 +475,7 @@ final class CombatPanel extends JPanel
 			null, choices, choices[0]);
 		if (choice == 0)
 		{
-			BestiaryPanel.pickRace(this).ifPresent(monster -> table.inBackground(
+			table.bestiary().pick(this).ifPresent(monster -> table.inBackground(
 				() -> table.session().addMonsters(monster.name(), monster.recipe(), monster.count()),
 				table::reportProblems));
 		}

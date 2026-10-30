@@ -290,7 +290,7 @@ final class EncountersPanel extends JPanel
 		{
 			return;
 		}
-		BestiaryPanel.pickRace(this).ifPresent(this::addToSelected);
+		table.bestiary().pick(this).ifPresent(this::addToSelected);
 	}
 
 	private void addFromFile()

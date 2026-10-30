@@ -84,9 +84,12 @@ Trois sources donnent le même objet, un personnage PCGen dont PCGen calcule les
 - une race du bestiaire, avec ou sans gabarits, construite comme le fait déjà
   `pcgen.core.conjurations.SummonedCreatureBuilder` (race, kit, gabarits, PV moyens) ;
 - un `.pcg` construit par le MJ dans PCGen, seul ou avec l'IA ;
-- un PNJ importé de Combat Manager par `scripts/combat_manager/import_npcs.py`, qui est un `.pcg`.
+- un PNJ importé de Combat Manager par `scripts/combat_manager/import_npcs.py`, qui est un `.pcg` ;
+- un kit de PNJ d'un livre (`TYPE` contenant `NPC`), appliqué à un personnage vierge.
 
-L'onglet **Bestiaire** cherche une race par son nom et l'ajoute à une rencontre.
+L'onglet **Bestiaire** liste les races, les kits de PNJ, les `.pcg` des dossiers de PNJ et les
+créatures uniques du scénario, et les filtre sur toute valeur de leur fiche : voir
+`2026-10-30-bestiaire-filtrable-design.md`.
 
 **Retouches** : ajouter des DV raciaux, appliquer ou retirer un gabarit. Les gabarits demandés
 existent dans les données : *Advanced Creature* (évolué), *Celestial Creature*, *Fiendish

@@ -56,6 +56,7 @@ public record BestiaryPawn(String fileName, URL location)
 		{
 			case MonsterSource.BestiaryRace race -> race.raceKey();
 			case MonsterSource.CharacterFile file -> characterName(file.path());
+			case MonsterSource.NpcKit kit -> kit.kitKey();
 		};
 		String fileName = PathfinderSummonPortraits.fileNameOf(name);
 		return Optional.ofNullable(BestiaryPawn.class.getResource(DIRECTORY + fileName))

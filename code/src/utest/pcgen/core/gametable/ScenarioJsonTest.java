@@ -119,6 +119,42 @@ class ScenarioJsonTest
 	}
 
 	@Test
+	void anEncounterMonsterBuiltFromAKitComesBack()
+	{
+		MonsterRecipe captain = MonsterRecipe.of(new MonsterSource.NpcKit("Black Claw Elite")).withHitDice(1);
+		Scenario scenario = Scenario.empty().withEncounters(List.of(Encounter.named("Kobold warren")
+			.withMonster(new EncounterMonster("Black Claw Elite", captain, 2))));
+
+		ScenarioReading reading = ScenarioJson.read(ScenarioJson.write(scenario));
+
+		assertEquals(captain, ((ScenarioReading.Read) reading).scenario().encounters().getFirst().monsters().getFirst().recipe());
+	}
+
+	@Test
+	void aUniqueCreatureComesBack()
+	{
+		UniqueCreature sombreCroc = new UniqueCreature("Sombre-croc", MonsterRecipe.of(new MonsterSource.BestiaryRace("Wolf"))
+			.withTemplate("Advanced Creature").withHitDice(2));
+		Scenario scenario = Scenario.empty().withUniques(List.of(sombreCroc));
+
+		ScenarioReading reading = ScenarioJson.read(ScenarioJson.write(scenario));
+
+		assertEquals(List.of(sombreCroc), ((ScenarioReading.Read) reading).scenario().uniques());
+	}
+
+	@Test
+	void aScenarioWithoutUniquesOpensWithNone() throws JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+		ObjectNode saved = (ObjectNode) mapper.readTree(ScenarioJson.write(prepared()));
+		saved.remove("uniques");
+
+		Scenario read = ((ScenarioReading.Read) ScenarioJson.read(mapper.writeValueAsString(saved))).scenario();
+
+		assertEquals(List.of(), read.uniques());
+	}
+
+	@Test
 	void textThatIsNotJsonIsUnreadable()
 	{
 		assertInstanceOf(ScenarioReading.Unreadable.class, ScenarioJson.read("not a scenario"));

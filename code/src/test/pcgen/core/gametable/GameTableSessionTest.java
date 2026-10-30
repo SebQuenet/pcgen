@@ -25,6 +25,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Random;
@@ -196,6 +197,51 @@ class GameTableSessionTest
 
 		assertEquals(List.of(new MonsterSource.CharacterFile(saved.getAbsolutePath()), maximum),
 			List.of(named("Wolf 1").recipe().orElseThrow().source(), named("Wolf 1").health().orElseThrow().maximum()));
+	}
+
+	@Test
+	void aSavedUniqueOpensAsTheSameMonster() throws IOException
+	{
+		MonsterRecipe sombreCroc = WOLF.withTemplate("Advanced Creature").withHitDice(2);
+		File saved = Files.createTempFile("sombre-croc", ".pcg").toFile();
+		saved.deleteOnExit();
+
+		session.saveRecipe(sombreCroc, "Sombre-croc", saved, SettingsHandler.getGameAsProperty().get(),
+			List.copyOf(BestiarySources.campaigns()));
+
+		assertEquals(maximumHitPoints(sombreCroc), maximumHitPoints(MonsterRecipe.of(new MonsterSource.CharacterFile(
+			saved.getAbsolutePath()))));
+	}
+
+	@Test
+	void aWolfMayBecomeAnAdvancedCreature()
+	{
+		Map<String, String> compatible = switch (session.compatibleTemplates(WOLF))
+		{
+			case ForgeOutcome.Built<Map<String, String>> built -> built.value();
+			case ForgeOutcome.Failed<Map<String, String>> failed -> Map.of();
+		};
+
+		assertTrue(compatible.containsValue("Advanced Creature"), compatible.toString());
+	}
+
+	@Test
+	void aUniqueCreatureIsKeptInTheScenario()
+	{
+		UniqueCreature sombreCroc = new UniqueCreature("Sombre-croc", WOLF.withTemplate("Advanced Creature"));
+
+		session.addUnique(sombreCroc);
+
+		assertEquals(List.of(sombreCroc), session.scenario().uniques());
+	}
+
+	private int maximumHitPoints(MonsterRecipe recipe)
+	{
+		return switch (session.previewSheet(recipe))
+		{
+			case ForgeOutcome.Built<SheetPreview> built -> built.value().sheet().stats().maximumHitPoints();
+			case ForgeOutcome.Failed<SheetPreview> failed -> -1;
+		};
 	}
 
 	@Test

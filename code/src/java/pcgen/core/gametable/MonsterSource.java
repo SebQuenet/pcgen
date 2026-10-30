@@ -20,8 +20,8 @@ package pcgen.core.gametable;
 import java.util.Objects;
 
 /**
- * Where a monster comes from: a race of the loaded bestiary, or a character file the
- * game master built.
+ * Where a monster comes from: a race of the loaded bestiary, a character file the
+ * game master built, or a book's NPC kit.
  */
 public sealed interface MonsterSource
 {
@@ -49,6 +49,20 @@ public sealed interface MonsterSource
 			if (Objects.requireNonNull(path).isBlank())
 			{
 				throw new IllegalArgumentException("A monster built as a character names its file");
+			}
+		}
+	}
+
+	/**
+	 * @param kitKey the key of an NPC kit of the loaded sources. Never blank.
+	 */
+	record NpcKit(String kitKey) implements MonsterSource
+	{
+		public NpcKit
+		{
+			if (Objects.requireNonNull(kitKey).isBlank())
+			{
+				throw new IllegalArgumentException("A monster built from a kit names its kit");
 			}
 		}
 	}

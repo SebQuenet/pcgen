@@ -34,7 +34,7 @@ import java.util.stream.Stream;
  * @param images     the scenario's illustrations and general maps, in the order they are shown
  */
 public record Scenario(String gameMode, List<String> campaigns, List<PartyMember> party, List<Encounter> encounters,
-	Combat combat, List<LootBlock> loot, List<ScenarioImage> images)
+	Combat combat, List<LootBlock> loot, List<ScenarioImage> images, List<UniqueCreature> uniques)
 {
 	/** The extension of a scenario file. */
 	public static final String FILE_EXTENSION = "pcgtable";
@@ -48,6 +48,16 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 		Objects.requireNonNull(combat);
 		loot = List.copyOf(loot);
 		images = List.copyOf(images);
+		uniques = List.copyOf(uniques);
+	}
+
+	/**
+	 * A scenario without unique creatures, as scenarios were before the bestiary kept any.
+	 */
+	public Scenario(String gameMode, List<String> campaigns, List<PartyMember> party, List<Encounter> encounters,
+		Combat combat, List<LootBlock> loot, List<ScenarioImage> images)
+	{
+		this(gameMode, campaigns, party, encounters, combat, loot, images, List.of());
 	}
 
 	/**
@@ -60,27 +70,27 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 
 	public Scenario withSources(String newGameMode, List<String> newCampaigns)
 	{
-		return new Scenario(newGameMode, newCampaigns, party, encounters, combat, loot, images);
+		return new Scenario(newGameMode, newCampaigns, party, encounters, combat, loot, images, uniques);
 	}
 
 	public Scenario withParty(List<PartyMember> newParty)
 	{
-		return new Scenario(gameMode, campaigns, newParty, encounters, combat, loot, images);
+		return new Scenario(gameMode, campaigns, newParty, encounters, combat, loot, images, uniques);
 	}
 
 	public Scenario withEncounters(List<Encounter> newEncounters)
 	{
-		return new Scenario(gameMode, campaigns, party, newEncounters, combat, loot, images);
+		return new Scenario(gameMode, campaigns, party, newEncounters, combat, loot, images, uniques);
 	}
 
 	public Scenario withCombat(Combat newCombat)
 	{
-		return new Scenario(gameMode, campaigns, party, encounters, newCombat, loot, images);
+		return new Scenario(gameMode, campaigns, party, encounters, newCombat, loot, images, uniques);
 	}
 
 	public Scenario withLoot(List<LootBlock> newLoot)
 	{
-		return new Scenario(gameMode, campaigns, party, encounters, combat, newLoot, images);
+		return new Scenario(gameMode, campaigns, party, encounters, combat, newLoot, images, uniques);
 	}
 
 	/**
@@ -93,7 +103,12 @@ public record Scenario(String gameMode, List<String> campaigns, List<PartyMember
 
 	public Scenario withImages(List<ScenarioImage> newImages)
 	{
-		return new Scenario(gameMode, campaigns, party, encounters, combat, loot, newImages);
+		return new Scenario(gameMode, campaigns, party, encounters, combat, loot, newImages, uniques);
+	}
+
+	public Scenario withUniques(List<UniqueCreature> newUniques)
+	{
+		return new Scenario(gameMode, campaigns, party, encounters, combat, loot, images, newUniques);
 	}
 
 	/**

@@ -87,6 +87,18 @@ public abstract class AbstractStorageFacet<T extends PCGenIdentifier>
 	 */
 
 	/**
+	 * Drops everything every facet holds for a resource that is gone for good, such as a monster built only to be
+	 * read. Its listeners refer back to it, so the weak keys of the cache would otherwise never let it go.
+	 *
+	 * @param id the PCGenIdentifier of a resource no longer used
+	 */
+	public static void forgetAll(PCGenIdentifier id)
+	{
+		Objects.requireNonNull(id, "PCGenIdentifier cannot be null in forgetAll");
+		CACHE.removeAll(id);
+	}
+
+	/**
 	 * Removes the information from the cache for a given resource and facet (as
 	 * identified by the Class)
 	 * 

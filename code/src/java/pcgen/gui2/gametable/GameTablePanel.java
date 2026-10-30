@@ -98,6 +98,12 @@ public final class GameTablePanel extends JPanel
 		tabs.addTab(LanguageBundle.getString("in_gametable_encounters"), encountersPanel);
 		tabs.addTab(LanguageBundle.getString("in_gametable_combat"), combatPanel);
 		tabs.addTab(LanguageBundle.getString("in_gametable_bestiary"), bestiaryPanel);
+		tabs.addChangeListener(event -> {
+			if (tabs.getSelectedComponent() == bestiaryPanel)
+			{
+				bestiaryPanel.refreshCatalog();
+			}
+		});
 		add(toolBar(), BorderLayout.NORTH);
 		add(tabs, BorderLayout.CENTER);
 		session.addListener(() -> SwingUtilities.invokeLater(this::refresh));
@@ -122,6 +128,11 @@ public final class GameTablePanel extends JPanel
 	PCGenFrame frame()
 	{
 		return frame;
+	}
+
+	BestiaryPanel bestiary()
+	{
+		return bestiaryPanel;
 	}
 
 	EncountersPanel encounters()
@@ -194,13 +205,13 @@ public final class GameTablePanel extends JPanel
 		if (dataSet == null)
 		{
 			session.dropSources();
-			bestiaryPanel.refreshSources();
+			bestiaryPanel.refreshSources(List.of());
 			return;
 		}
 		List<Campaign> campaigns = ListFacades.wrap(dataSet.getCampaigns());
 		List<String> keys = campaigns.stream().map(Campaign::getKeyName).toList();
 		String gameMode = dataSet.getGameMode().getName();
-		bestiaryPanel.refreshSources();
+		bestiaryPanel.refreshSources(campaigns);
 		// Building a monster may ask the data's questions off the event thread: the first answers are taken
 		HeadlessUIDelegate choices = new HeadlessUIDelegate();
 		choices.setAutoChoose(true);

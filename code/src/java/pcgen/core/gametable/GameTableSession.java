@@ -24,6 +24,7 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -41,12 +42,14 @@ import java.util.stream.Stream;
 import pcgen.cdom.enumeration.ObjectKey;
 import pcgen.core.Campaign;
 import pcgen.core.GameMode;
+import pcgen.core.Globals;
 import pcgen.core.PCTemplate;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.conjurations.AppliedBonus;
 import pcgen.core.conjurations.BonusSourceKey;
 import pcgen.core.conjurations.CreatureStats;
 import pcgen.core.conjurations.SummonedCreatureBuilder;
+import pcgen.core.prereq.PrereqHandler;
 import pcgen.facade.core.BonusChoice;
 import pcgen.io.PCGIOHandler;
 import pcgen.system.LanguageBundle;
@@ -239,6 +242,71 @@ public final class GameTableSession
 	{
 		scenario = scenario.withEncounters(encounters);
 		changed();
+	}
+
+	/**
+	 * @param recipe how a monster is built.
+	 * @return the templates of the loaded sources whose prerequisites the built monster meets, by name; or why it
+	 *         cannot be built.
+	 */
+	public synchronized ForgeOutcome<Map<String, String>> compatibleTemplates(MonsterRecipe recipe)
+	{
+		return switch (forge(recipe))
+		{
+			case ForgedMonster.Forged built ->
+			{
+				Map<String, String> compatible = new LinkedHashMap<>();
+				CombatantSheets.templates().forEach((name, key) -> {
+					PCTemplate template = Globals.getContext().getReferenceContext()
+						.silentlyGetConstructedCDOMObject(PCTemplate.class, key);
+					if (template != null && PrereqHandler.passesAll(template, built.character(), template))
+					{
+						compatible.put(name, key);
+					}
+				});
+				yield new ForgeOutcome.Built<>(compatible);
+			}
+			case ForgedMonster.Missing missing -> new ForgeOutcome.Failed<>(missing.reason());
+		};
+	}
+
+	/**
+	 * Keeps a unique creature in the scenario, in place of one of the same name.
+	 *
+	 * @param unique the creature the game master made unique.
+	 */
+	public synchronized void addUnique(UniqueCreature unique)
+	{
+		List<UniqueCreature> kept = new ArrayList<>(scenario.uniques());
+		kept.removeIf(found -> found.name().equals(unique.name()));
+		kept.add(unique);
+		scenario = scenario.withUniques(kept);
+		changed();
+	}
+
+	/**
+	 * Builds a monster and saves it as a character file, to use it from one scenario to the next.
+	 *
+	 * @param recipe    how the monster is built.
+	 * @param name      the name it is saved under.
+	 * @param target    the character file to write.
+	 * @param gameMode  the game mode of the loaded sources.
+	 * @param campaigns the loaded sources.
+	 * @return why it could not be saved; empty once saved.
+	 */
+	public synchronized Optional<String> saveRecipe(MonsterRecipe recipe, String name, File target, GameMode gameMode,
+		List<Campaign> campaigns)
+	{
+		return switch (forge(recipe))
+		{
+			case ForgedMonster.Forged built ->
+			{
+				built.character().setName(name);
+				new PCGIOHandler().write(built.character(), gameMode, campaigns, target);
+				yield Optional.empty();
+			}
+			case ForgedMonster.Missing missing -> Optional.of(missing.reason());
+		};
 	}
 
 	/**

@@ -60,10 +60,11 @@ public final class GameTableOperations
 	private static final String RECIPE_SCHEMA = """
 		{
 			"type": "object",
-			"description": "How to build a monster: a race of the loaded sources or a character file, then the game master's touch",
+			"description": "How to build a monster: a race of the loaded sources, a character file or an NPC kit, then the game master's touch",
 			"properties": {
 				"race": { "type": "string", "description": "Key of a race of the loaded sources, such as 'Wolf'" },
 				"character_file": { "type": "string", "description": "Path of a .pcg file holding the monster" },
+				"kit": { "type": "string", "description": "Key of an NPC kit of the loaded sources, such as 'Black Claw Elite'" },
 				"added_templates": { "type": "array", "items": { "type": "string" },
 					"description": "Keys of templates to lay on it, such as 'Advanced Creature' or 'Mythic Simple Template ~ Agile'" },
 				"removed_templates": { "type": "array", "items": { "type": "string" },
@@ -111,6 +112,7 @@ public final class GameTableOperations
 	private static RecipeRequest recipe(Arguments recipe)
 	{
 		return new RecipeRequest(recipe.optionalString("race", null), recipe.optionalString("character_file", null),
+			recipe.optionalString("kit", null),
 			recipe.optionalStringList("added_templates"), recipe.optionalStringList("removed_templates"),
 			recipe.optionalInt("added_hit_dice", 0));
 	}

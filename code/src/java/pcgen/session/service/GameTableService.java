@@ -30,6 +30,7 @@ import java.util.Locale;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 import pcgen.core.Campaign;
 import pcgen.core.bonus.IntRange;
@@ -91,8 +92,8 @@ public final class GameTableService
 	private static final String CARRIED = "carried";
 	private static final String CATEGORY = "category";
 
-	/** How a caller describes a monster: a race or a character file, then the game master's touch. */
-	public record RecipeRequest(String race, String characterFile, List<String> addedTemplates,
+	/** How a caller describes a monster: a race, a character file or an NPC kit, then the game master's touch. */
+	public record RecipeRequest(String race, String characterFile, String kit, List<String> addedTemplates,
 		List<String> removedTemplates, int addedHitDice)
 	{
 	}
@@ -765,17 +766,30 @@ public final class GameTableService
 	{
 		boolean hasRace = request.race() != null && !request.race().isBlank();
 		boolean hasFile = request.characterFile() != null && !request.characterFile().isBlank();
-		if (hasRace == hasFile)
+		boolean hasKit = request.kit() != null && !request.kit().isBlank();
+		if (Stream.of(hasRace, hasFile, hasKit).filter(Boolean::booleanValue).count() != 1)
 		{
 			return ServiceResult.failure(new ServiceError.InvalidArgument("recipe",
-				"names either a race or a character file"));
+				"names one of a race, a character file or a kit"));
 		}
 		if (request.addedHitDice() < 0)
 		{
 			return ServiceResult.failure(new ServiceError.InvalidArgument("added_hit_dice", "cannot be negative"));
 		}
-		MonsterRecipe recipe = MonsterRecipe.of(hasRace ? new MonsterSource.BestiaryRace(request.race().strip())
-			: new MonsterSource.CharacterFile(request.characterFile().strip()));
+		MonsterSource source;
+		if (hasRace)
+		{
+			source = new MonsterSource.BestiaryRace(request.race().strip());
+		}
+		else if (hasFile)
+		{
+			source = new MonsterSource.CharacterFile(request.characterFile().strip());
+		}
+		else
+		{
+			source = new MonsterSource.NpcKit(request.kit().strip());
+		}
+		MonsterRecipe recipe = MonsterRecipe.of(source);
 		for (String template : request.addedTemplates())
 		{
 			recipe = recipe.withTemplate(template);
@@ -880,9 +894,11 @@ public final class GameTableService
 	{
 		return switch (recipe.source())
 		{
-			case MonsterSource.BestiaryRace race -> new RecipeEntry(race.raceKey(), null, recipe.addedTemplates(),
+			case MonsterSource.BestiaryRace race -> new RecipeEntry(race.raceKey(), null, null, recipe.addedTemplates(),
 				recipe.removedTemplates(), recipe.addedHitDice());
-			case MonsterSource.CharacterFile file -> new RecipeEntry(null, file.path(), recipe.addedTemplates(),
+			case MonsterSource.CharacterFile file -> new RecipeEntry(null, file.path(), null, recipe.addedTemplates(),
+				recipe.removedTemplates(), recipe.addedHitDice());
+			case MonsterSource.NpcKit kit -> new RecipeEntry(null, null, kit.kitKey(), recipe.addedTemplates(),
 				recipe.removedTemplates(), recipe.addedHitDice());
 		};
 	}

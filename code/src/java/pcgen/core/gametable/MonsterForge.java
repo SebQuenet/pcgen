@@ -24,18 +24,22 @@ import java.util.List;
 import pcgen.cdom.base.Constants;
 import pcgen.cdom.content.LevelCommandFactory;
 import pcgen.cdom.enumeration.ObjectKey;
+import pcgen.cdom.facet.base.AbstractStorageFacet;
 import pcgen.core.Campaign;
 import pcgen.core.Globals;
+import pcgen.core.Kit;
 import pcgen.core.PCTemplate;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.Race;
 import pcgen.core.SettingsHandler;
+import pcgen.core.character.EquipSet;
 import pcgen.core.conjurations.SummonTemplate;
 import pcgen.core.conjurations.SummonedCreatureBuilder;
 import pcgen.facade.core.UIDelegate;
 import pcgen.io.PCGIOHandler;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.system.LanguageBundle;
+import pcgen.util.Logging;
 import pcgen.util.chooser.ChooserFactory;
 
 /**
@@ -86,17 +90,48 @@ public final class MonsterForge
 		}
 		synchronized (FORGE_LOCK)
 		{
-			ForgedMonster started = switch (recipe.source())
+			try
 			{
-				case MonsterSource.BestiaryRace race -> fromRace(data, race.raceKey(), recipe.addedTemplates());
-				case MonsterSource.CharacterFile file -> fromFile(data, file.path(), recipe.addedTemplates());
-			};
-			if (started instanceof ForgedMonster.Forged forged)
-			{
-				return touched(forged.character(), data, recipe);
+				ForgedMonster started = switch (recipe.source())
+				{
+					case MonsterSource.BestiaryRace race -> fromRace(data, race.raceKey(), recipe.addedTemplates());
+					case MonsterSource.CharacterFile file -> fromFile(data, file.path(), recipe.addedTemplates());
+					case MonsterSource.NpcKit kit -> fromKit(data, kit.kitKey(), recipe.addedTemplates());
+				};
+				if (started instanceof ForgedMonster.Forged forged)
+				{
+					return touched(forged.character(), data, recipe);
+				}
+				return started;
 			}
-			return started;
+			catch (RuntimeException failure)
+			{
+				// Data that require what the loaded sources lack make PCGen throw mid-build
+				Logging.errorPrint("Building " + nameOf(recipe.source()) + " failed", failure);
+				return new ForgedMonster.Missing(LanguageBundle.getFormattedString("in_gametable_buildFailed",
+					nameOf(recipe.source()), failure.getMessage()));
+			}
 		}
+	}
+
+	/**
+	 * Lets go of a monster built only to be read.
+	 *
+	 * @param monster a monster this forge built, no longer used.
+	 */
+	public static void release(PlayerCharacter monster)
+	{
+		AbstractStorageFacet.forgetAll(monster.getCharID());
+	}
+
+	private static String nameOf(MonsterSource source)
+	{
+		return switch (source)
+		{
+			case MonsterSource.BestiaryRace race -> race.raceKey();
+			case MonsterSource.CharacterFile file -> file.path();
+			case MonsterSource.NpcKit kit -> kit.kitKey();
+		};
 	}
 
 	private ForgedMonster fromRace(AbstractReferenceContext data, String raceKey, List<String> templates)
@@ -108,6 +143,39 @@ public final class MonsterForge
 		PlayerCharacter monster = builder.build(new SummonTemplate(raceKey, templates, 0), false);
 		BestiaryTactics.of(raceKey).ifPresent(monster::setTacticalPlan);
 		return new ForgedMonster.Forged(monster);
+	}
+
+	private ForgedMonster fromKit(AbstractReferenceContext data, String kitKey, List<String> templates)
+	{
+		Kit kit = data.silentlyGetConstructedCDOMObject(Kit.class, kitKey);
+		if (kit == null)
+		{
+			return new ForgedMonster.Missing(LanguageBundle.getFormattedString("in_gametable_missingKit", kitKey));
+		}
+		UIDelegate previousChoices = ChooserFactory.getDelegate();
+		int previousHitPointRule = SettingsHandler.getHPRollMethod();
+		ChooserFactory.setDelegate(choices);
+		// An NPC takes the average of its hit dice, as the books print them
+		SettingsHandler.setHPRollMethod(Constants.HP_AVERAGE);
+		try
+		{
+			PlayerCharacter npc = new PlayerCharacter(campaigns);
+			Globals.getPCList().remove(npc);
+			// A kit's gear needs a set to be equipped in, or the NPC goes unarmed
+			npc.addEquipSet(new EquipSet(EquipSet.DEFAULT_SET_PATH, kitKey));
+			npc.setCalcEquipSetId(EquipSet.DEFAULT_SET_PATH);
+			Kit.applyKit(kit, npc);
+			for (String template : templates)
+			{
+				npc.addTemplate(data.silentlyGetConstructedCDOMObject(PCTemplate.class, template));
+			}
+			return new ForgedMonster.Forged(npc);
+		}
+		finally
+		{
+			SettingsHandler.setHPRollMethod(previousHitPointRule);
+			ChooserFactory.setDelegate(previousChoices);
+		}
 	}
 
 	private ForgedMonster fromFile(AbstractReferenceContext data, String path, List<String> templates)

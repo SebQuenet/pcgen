@@ -122,6 +122,21 @@ tasks.register("exportTranslationSources", JavaExec) {
         '--out', project.findProperty('out') ?: "${buildDir}/translation"
 }
 
+tasks.register("bestiaryIndex", JavaExec) {
+    description = 'Compute the delivered index of the bestiary races and NPC kits (-PbestiarySources=<character file naming the sources>)'
+    group = 'application'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass.set('pcgen.core.gametable.catalog.BestiaryIndexWriter')
+    maxHeapSize = '8g'
+    args project.findProperty('bestiarySources') ?: 'characters/tous-les-monstres.pcg',
+        'code/src/resources/pcgen/bestiary/index.json',
+        'Zirnakaynin', 'Dungeons of Golarion', 'Andoran - Birthplace of Freedom',
+        'Curse of the Crimson Throne - Chapter 1 - Edge of Anarchy (Conversion)',
+        'Curse of the Crimson Throne - Chapter 2 - Seven Days to the Grave (Conversion)',
+        'Rise of the Runelords Adventure Path', 'Second Darkness, Chapter 1 - Shadow in the Sky (Conversion)',
+        'Skull and Shackles (The Wormwood Mutiny)'
+}
+
 tasks.register("runServer", JavaExec) {
     description = 'Run the PCGen HTTP server on the loopback address (default port 8420)'
     group = 'application'

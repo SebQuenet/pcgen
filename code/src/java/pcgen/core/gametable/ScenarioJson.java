@@ -79,6 +79,13 @@ public final class ScenarioJson
 		writeCombat(root.putObject("combat"), scenario.combat());
 		writeLoot(root.putArray("loot"), scenario.loot());
 		writeImages(root.putArray("images"), scenario.images());
+		ArrayNode uniques = root.putArray("uniques");
+		for (UniqueCreature unique : scenario.uniques())
+		{
+			ObjectNode node = uniques.addObject();
+			node.put("name", unique.name());
+			writeRecipe(node.putObject("recipe"), unique.recipe());
+		}
 		try
 		{
 			return MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(root);
@@ -107,7 +114,9 @@ public final class ScenarioJson
 			List<Encounter> encounters = list(root, "encounters", ScenarioJson::readEncounter);
 			Scenario scenario = new Scenario(text(root, "gameMode"), list(root, "campaigns", JsonNode::asText), party,
 				encounters, readCombat(required(root, "combat")),
-				root.has("loot") ? list(root, "loot", ScenarioJson::readLootBlock) : List.of(), readImages(root));
+				root.has("loot") ? list(root, "loot", ScenarioJson::readLootBlock) : List.of(), readImages(root),
+				root.has("uniques") ? list(root, "uniques", node -> new UniqueCreature(text(node, "name"),
+					readRecipe(required(node, "recipe")))) : List.of());
 			return new ScenarioReading.Read(scenario);
 		}
 		catch (JsonProcessingException | IllegalArgumentException | IllegalStateException badContent)
@@ -129,6 +138,7 @@ public final class ScenarioJson
 		{
 			case MonsterSource.BestiaryRace race -> node.put("race", race.raceKey());
 			case MonsterSource.CharacterFile file -> node.put("file", file.path());
+			case MonsterSource.NpcKit kit -> node.put("kit", kit.kitKey());
 		}
 		strings(node.putArray("addedTemplates"), recipe.addedTemplates());
 		strings(node.putArray("removedTemplates"), recipe.removedTemplates());
@@ -146,9 +156,13 @@ public final class ScenarioJson
 		{
 			source = new MonsterSource.CharacterFile(text(node, "file"));
 		}
+		else if (node.has("kit"))
+		{
+			source = new MonsterSource.NpcKit(text(node, "kit"));
+		}
 		else
 		{
-			throw new IllegalArgumentException("A monster comes from a race or a character file");
+			throw new IllegalArgumentException("A monster comes from a race, a character file or a kit");
 		}
 		return new MonsterRecipe(source, list(node, "addedTemplates", JsonNode::asText),
 			list(node, "removedTemplates", JsonNode::asText), required(node, "addedHitDice").asInt());

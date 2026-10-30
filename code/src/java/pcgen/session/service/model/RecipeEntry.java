@@ -22,13 +22,14 @@ import java.util.List;
 /**
  * How a monster of the game table is built.
  *
- * @param race             the key of its race in the loaded sources, null when built from a character file
- * @param characterFile    the character file it is read from, null when built from a race
+ * @param race             the key of its race in the loaded sources, null when built otherwise
+ * @param characterFile    the character file it is read from, null when built otherwise
+ * @param kit              the key of the NPC kit it is built from, null when built otherwise
  * @param addedTemplates   the keys of the templates laid on it
  * @param removedTemplates the keys of the templates taken off it
  * @param addedHitDice     the hit dice added to its race's
  */
-public record RecipeEntry(String race, String characterFile, List<String> addedTemplates, List<String> removedTemplates,
+public record RecipeEntry(String race, String characterFile, String kit, List<String> addedTemplates, List<String> removedTemplates,
 	int addedHitDice)
 {
 }
