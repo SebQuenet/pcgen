@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Sentinelle de marbre, gardien thassilonien neutre de taille P, peu intelligent, qui suit des consignes simples et immobilise les intrus en attendant les gardes.
+  43 pv ; CA 20, contact 14, pris au dépourvu 17 ; initiative +7. Deux griffes +12 (1d4+5 chacune), allonge 1,50 m ; éclair paralysant +10 au contact à distance.
+  Déplacement 12 m ; escalade 6 m, Escalade +13. Vision dans le noir à 18 m, vision nocturne ; Perception +6, Discrétion +10.
+  Immunité à l'acide et traits des créatures artificielles. L'immunité à la magie bloque les sorts et pouvoirs magiques autorisant la résistance à la magie, sauf ceux du registre de force.
+
+resource: Détection de la magie | constant | NLS 2 ; repère les auras, sans révéler automatiquement une créature invisible
+resource: Éclair paralysant | à volonté | action simple ; portée maximale 9 m ; contact à distance +10 ; Vigueur DD 12 ou paralysie pendant 1d6 rounds
+
+step: En attente à son poste
+  do: Rester immobile grâce à freeze pour passer pour une sculpture, en surveillant l'accès confié à sa garde
+  note: Elle comprend le thassilonien mais ne parle pas ; ses décisions restent simples et liées à ses ordres.
+
+step: Un intrus est repéré
+  do: Déclencher l'alerte : signal sonore audible à 150 m ou avertissement mental à la créature liée située à 1 584 m au maximum
+  note: L'avertissement mental réveille le destinataire endormi ; il faut ensuite retenir l'intrus jusqu'à l'arrivée des gardes.
+
+## Ouverture
+
+step: Un intrus se trouve à 9 m ou moins, hors de sa portée de mêlée
+  do: Tirer un éclair paralysant sur lui
+  note: Privilégier celui qui franchit le passage gardé ; ce tir immobilise sans infliger de dégâts.
+
+step: Les intrus sont à plus de 9 m
+  do: Avancer de 12 m au maximum pour placer le premier intrus à portée, puis tirer un éclair paralysant
+  note: Ne pas abandonner le poste si les consignes imposent de garder un accès précis.
+
+step: Un ennemi est déjà à 1,50 m
+  do: Effectuer une attaque à outrance avec les deux griffes +12, chacune pour 1d4+5 dégâts
+  note: Si elle doit d'abord avancer de plus de 1,50 m, elle ne porte qu'une attaque de griffe après son déplacement.
+
+## Rounds suivants
+
+step: Un intrus reste mobile à portée de l'éclair et aucun ennemi ne la menace au contact
+  do: Tirer de nouveau un éclair paralysant ; changer de cible dès qu'un intrus est immobilisé
+  note: La paralysie est temporaire ; surveiller les victimes et viser de nouveau celles qui reprennent leurs mouvements.
+
+step: Le terrain permet de grimper hors de portée des armes de mêlée
+  do: Escalader un mur ou un support à 6 m par déplacement, puis tirer si une cible reste à 9 m ou moins
+  note: Conserver une ligne de vue et une ligne d'effet ; utiliser les griffes si un ennemi parvient au contact.
+
+step: Un ennemi la maintient au contact
+  do: Répéter les attaques à outrance avec les deux griffes
+  note: Tirer au contact expose aux attaques d'opportunité ; les griffes permettent de tenir le passage sans ce risque.
+
+step: Plusieurs sentinelles gardent le même accès
+  do: Répartir les éclairs entre les intrus encore mobiles ; faire attaquer aux griffes les sentinelles déjà au contact
+  note: Employer des réactions de groupe simples, compatibles avec leur Intelligence de 1.
+
+## Repli
+
+step: Ses points de vie diminuent mais ses ordres restent les mêmes
+  do: Continuer à garder le poste et à retenir les intrus, jusqu'à sa destruction à 0 pv
+  note: Aucun seuil de fuite n'est indiqué ; la sentinelle ne reçoit pas un instinct de survie supplémentaire.
+
+step: Une consigne prévoit le retour à un poste ou l'arrêt de la poursuite
+  do: Revenir au poste à 12 m par déplacement, ou à 6 m en escalade, et reprendre la surveillance
+  note: Le repli dépend des ordres reçus.

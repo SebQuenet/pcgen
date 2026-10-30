@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Larve de phalène hélicoïdale, vermine souterraine de taille G, sans intelligence : elle combat par instinct. 55 pv, CA 18.
+  Morsure +9 : 1d8+3 dégâts, plus 1d6 d'acide et étreinte. Déplacement de 3 m ; espace occupé de 3 m et allonge de 1,50 m.
+  Perception aveugle à 18 m ; immunités des vermines, notamment aux effets mentaux.
+
+step: Une présence approche sous terre
+  do: Attendre qu'elle soit assez proche pour l'atteindre avec sa morsure.
+  note: La perception aveugle permet de repérer une présence sans la voir, mais ne supprime pas le camouflage lors d'une attaque.
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m ou moins
+  do: Porter une morsure +9, infligeant 1d8+3 dégâts plus 1d6 d'acide.
+  note: Si la morsure touche une cible de taille M ou inférieure, tenter immédiatement une lutte gratuite grâce à l'étreinte, sans provoquer d'attaque d'opportunité.
+
+step: Aucun adversaire n'est à portée de morsure
+  do: Avancer de 3 m au maximum vers le plus proche et mordre s'il arrive à portée ; sinon, utiliser un double déplacement pour parcourir jusqu'à 6 m.
+  note: Sa faible vitesse favorise le combat dans un passage où les adversaires doivent s'approcher.
+
+## Rounds suivants
+
+step: Une proie est retenue par l'étreinte
+  do: Utiliser son action simple pour maintenir la lutte ; sur réussite, infliger les dégâts de la morsure, soit 1d8+3 plus 1d6 d'acide.
+  note: Garder la même proie tant qu'elle résiste ; aucune constriction ni attaque supplémentaire n'est indiquée.
+
+step: La proie s'est libérée et reste à portée
+  do: La mordre de nouveau et tenter l'étreinte si la morsure touche.
+
+step: La proie est hors de combat ou hors d'atteinte
+  do: Mordre l'adversaire le plus proche à portée ; à défaut, avancer de 3 m et attaquer si possible, ou parcourir jusqu'à 6 m par un double déplacement.
+  note: En nid de 2 à 5 individus, chaque larve réagit aux proies proches sans coordination élaborée.
+
+## Repli
+
+step: À 13 pv ou moins, si un passage de fuite est accessible
+  do: Relâcher toute proie retenue et utiliser une retraite pour s'éloigner jusqu'à 6 m vers un abri souterrain.
+  note: Seuil de fuite proposé pour le meneur : la larve fuit par instinct. Elle ne dispose d'aucun déplacement de creusement.
+
+step: Aucune issue n'est accessible
+  do: Continuer à mordre et à retenir une proie à portée.

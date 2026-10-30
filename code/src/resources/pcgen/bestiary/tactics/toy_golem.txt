@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Golem de jouets, assemblage de 300 jouets mécaniques, créature artificielle de taille M, neutre et sans intelligence ; FP 5, 53 pv, CA 21.
+  Au contact : deux coups +10, chacun infligeant 1d6+4 dégâts et transmettant une maladie ; allonge de 1,50 m, déplacement de 9 m.
+  Il applique sa consigne de garde sans élaborer de stratégie complexe. Vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses
+  Réduction des dégâts 5/adamantium et immunités des créatures artificielles. Son immunité à la magie concerne les sorts et pouvoirs magiques autorisant la résistance à la magie, avec les exceptions propres au golem de rebuts.
+  Vulnérabilité à l'électricité : augmenter de moitié les dégâts électriques qui l'affectent effectivement ; cette faiblesse ne supprime pas son immunité à la magie.
+
+resource: Réparation mécanique | permanente sous condition | guérison accélérée 2 dans une zone riche en pièces mécaniques ; maximum 53 pv
+resource: Désassemblage | à volonté | action simple pour devenir une nuée de pièces de taille TP ; action complexe pour reprendre sa forme assemblée
+
+step: Les intrus entrent dans la salle des jouets
+  do: Attendre désassemblé parmi les jouets épars, dont les composants se remontent mutuellement
+  note: Perception DD 25 pour remarquer leurs petits mouvements ; il attend que les intrus gagnent le centre de la pièce.
+
+## Ouverture
+
+step: Les intrus atteignent le centre de la salle
+  do: Se réassembler en une action complexe pour les repousser
+  note: Cette transformation occupe son tour ; elle ne lui accorde pas d'attaque gratuite.
+
+step: Il est assemblé et une cible se trouve à 1,50 m
+  do: Attaque à outrance : deux coups +10, chacun pour 1d6+4 dégâts et maladie
+
+step: Une cible exige un déplacement de plus de 1,50 m
+  do: Avancer de 9 m au maximum, puis porter un seul coup +10 si elle devient accessible
+  note: Si elle reste hors de portée, effectuer un double déplacement, jusqu'à 18 m, dans les limites de la salle.
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Répéter les deux coups ; au besoin, faire un pas de placement de 1,50 m pour conserver l'attaque à outrance
+  note: Tétanos : Vigueur DD 13, incubation de 1d6 jours, puis 1d4 dégâts de Dextérité par jour ; aucun affaiblissement immédiat pendant ce combat.
+
+step: Plusieurs intrus sont assez rapprochés pour être couverts par la nuée
+  do: Se désassembler en une action simple, puis se déplacer sur leurs cases
+  note: La nuée occupe 3 m de côté, avec une allonge de 0 m. À la fin de son déplacement, chaque créature dont elle occupe la case subit automatiquement 1d6 dégâts et la maladie ; elle perd ses coups sous cette forme.
+
+step: Les cibles se dispersent alors qu'il est désassemblé
+  do: Reprendre sa forme assemblée en une action complexe, puis reprendre les coups aux tours suivants
+
+step: Il est endommagé dans une zone riche en pièces mécaniques
+  do: Appliquer la guérison accélérée 2 chaque round et poursuivre son attaque
+  note: Cette réparation fonctionne aussi pendant le combat, sans action consacrée aux soins.
+
+## Repli
+
+step: Ses points de vie diminuent mais des intrus restent dans la salle
+  do: Continuer à défendre la pièce jusqu'à leur départ ou sa destruction
+  note: Aucun seuil de fuite fondé sur la peur ; à 0 pv, cette créature artificielle est détruite.
+
+step: Les intrus quittent la salle
+  do: Cesser la poursuite au seuil, récupérer grâce aux pièces mécaniques, puis se désassembler pour attendre leur retour
+  note: Il ne poursuit pas les intrus hors de cette pièce.

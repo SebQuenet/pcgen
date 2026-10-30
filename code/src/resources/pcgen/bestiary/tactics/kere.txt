@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Kere, psychopompe neutre de FP 10, gardien des sépultures. Intelligent et discret, il dispose de 114 pv, d'une CA de 22 et d'une résistance à la magie de 21.
+  Deux griffes +17, chacune à 1d4+3 plus 1d6 de froid, à 1,50 m ; linceul +17 portant une peur contagieuse, avec une allonge de 4,50 m. Déplacement au sol et vol parfait à 9 m.
+  Réduction des dégâts 10/adamantium ; résistance au froid et à l'électricité de 10 ; immunité aux effets de mort, aux maladies et aux poisons.
+
+resource: Invisibilité suprême | à volonté | durée de 11 rounds par utilisation
+resource: Rayon de lumière | à volonté | attaque de contact à distance ; 5d8 contre une créature vivante ordinaire
+resource: Vagues de fatigue | 3/jour | cône de 9 m ; pas de jet de sauvegarde
+resource: Nappe de brouillard | 3/jour | gêne aussi la vision du kere
+resource: Chien de garde de mage | 3/jour | garde un emplacement fixe
+resource: Mirage | 3/jour | Volonté DD 19 pour reconnaître l'illusion en interagissant avec elle
+resource: Portail | 1/jour | voyage planaire uniquement, vers l'Ossuaire ou le plan Matériel
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Les observer à couvert avec Discrétion +24 et Perception +24 ; rester à proximité des tombes auxquelles il est lié
+  note: Vision dans le noir à 18 m, vision nocturne et perception des esprits complètent sa surveillance
+
+step: Il dispose de temps pour préparer les lieux
+  do: Placer un chien de garde de mage sur un passage important et employer mirage pour masquer les accès réels ou suggérer un faux itinéraire
+  note: Les illusions modifient les apparences ; elles ne créent aucun obstacle matériel
+
+step: Le combat devient imminent
+  do: Activer invisibilité suprême, puis se placer en vol pour choisir l'angle d'approche
+  note: Ses attaques ne mettent pas fin à cette invisibilité ; préparer les autres effets avant elle pour conserver sa courte durée
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans un même cône de 9 m
+  do: Lancer vagues de fatigue en visant surtout les combattants physiques
+  note: La fatigue impose un malus de 2 en Force et en Dextérité et interdit course et charge ; tenir compte de la résistance à la magie des cibles
+
+step: Une cible dangereuse reste isolée ou hors du cône
+  do: Lancer rayon de lumière depuis les airs, sous invisibilité suprême
+  note: Cette attaque vise la CA de contact ; elle inflige davantage de dégâts aux morts-vivants, selon leur nature
+
+step: Une cible est déjà à portée du linceul
+  do: Porter une attaque de linceul +17 depuis une distance maximale de 4,50 m
+  note: La peur contagieuse accompagne cette attaque ; son DD et ses effets détaillés ne sont pas fournis dans le profil
+
+## Rounds suivants
+
+step: Il peut garder ses adversaires à distance
+  do: Alterner déplacement en vol et rayon de lumière, en exploitant l'invisibilité pour changer de position
+  note: Un déplacement normal et une utilisation de pouvoir magique peuvent se faire dans le même round ; surveiller la durée de l'invisibilité
+
+step: Un adversaire est à 1,50 m au début de son tour et il choisit de rester au contact
+  do: Effectuer une attaque à outrance : deux griffes +17 et un linceul +17
+  note: Cette attaque à outrance demande une action complexe ; seul un pas de placement de 1,50 m permet de se repositionner sans y renoncer
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Frapper au linceul jusqu'à 4,50 m
+  note: Attaques réflexes et Dextérité 21 permettent jusqu'à six attaques d'opportunité par round, sans multiplier les attaques contre une même occasion
+
+step: De nouvelles cibles non fatiguées se regroupent
+  do: Employer une nouvelle utilisation de vagues de fatigue
+  note: Répéter ce pouvoir sur une cible déjà fatiguée ne la rend pas épuisée
+
+step: L'invisibilité touche à sa fin et le combat continue
+  do: Consacrer une action simple à renouveler invisibilité suprême, puis se déplacer en vol
+
+step: Les attaques ennemies deviennent trop précises ou une arme en adamantium menace ses défenses
+  do: Créer une nappe de brouillard pour couper les lignes de vue, puis changer de position
+  note: Sa vision dans le noir ne traverse pas le brouillard ; éviter de compter sur celui-ci pour viser ses rayons
+
+## Repli
+
+step: Il tombe à 38 pv ou moins, ou ne peut plus tenir sa position
+  do: Se retirer en vol sous invisibilité suprême, à 9 m par déplacement ; effectuer un double déplacement de 18 m s'il ne lance aucun pouvoir ce round
+  note: Privilégier un refuge proche des sépultures auxquelles il est lié
+
+step: La retraite locale est coupée et portail reste disponible
+  do: Ouvrir un portail vers l'Ossuaire, ou vers le plan Matériel s'il se trouve déjà dans l'Ossuaire, puis le franchir
+  note: Cette utilisation sert uniquement au voyage planaire ; elle ne permet pas d'appeler de renforts

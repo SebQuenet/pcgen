@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Skulleton, mort-vivant intelligent de taille TP, neutre mauvais : un crâne aux fausses gemmes qui imite une demi-liche pour effrayer les pillards. Solitaire, il garde les souterrains.
+  26 pv, CA 14 ; morsure +5 (1d3-2 et maladie), allonge 0 m ; poussière et Démonstration intimidante. Vol parfait à 3 m par action de mouvement ; vision dans le noir à 18 m.
+
+resource: Poussière | 2/jour | action simple ; rayon de 3 m autour de lui ; Vigueur DD 14 ou nausée pendant 6 rounds ; nuage présent 2 rounds, dispersable par le vent
+
+step: Des intrus approchent
+  do: Rester immobile parmi ses ossements et sa poussière, en laissant les pillards approcher du crâne
+  note: Discrétion +16, Perception +11 ; il comprend le commun mais ne peut pas parler
+
+## Ouverture
+
+step: Un vivant le touche ou plusieurs intrus sont à 3 m ou moins
+  do: Libérer la poussière, puis utiliser son mouvement pour s'élever et faire face aux intrus
+  note: Les victimes nauséeuses ne peuvent ni attaquer ni lancer de sorts ; elles conservent une action de mouvement par tour
+
+step: Au round suivant, des intrus restent visibles à 9 m ou moins
+  do: Consacrer une action complexe à Démonstration intimidante : Intimidation +12 pour démoraliser tous les ennemis dans ce rayon qui le voient
+  note: Les victimes démoralisées sont ébranlées ; cette intimidation ne les oblige pas à fuir
+
+## Rounds suivants
+
+step: Une victime nauséeuse reste accessible
+  do: Voler jusque dans sa case et la mordre à +5, puis répéter la morsure tant qu'elle reste accessible
+  note: Son allonge de 0 m impose d'entrer dans la case adverse ; privilégier les victimes incapables de porter des attaques d'opportunité
+
+step: Une morsure blesse un vivant
+  do: Appliquer la maladie : fièvre des marais, Vigueur DD 12
+  note: Incubation de 1d3 jours ; aucun affaiblissement immédiat à exploiter pendant ce combat
+
+step: Des adversaires encore capables de combattre reviennent à 3 m ou moins et une utilisation reste disponible
+  do: Employer la seconde poussière pour neutraliser ces adversaires avant de reprendre les morsures
+  note: Privilégier plusieurs cibles encore indemnes de nausée
+
+## Repli
+
+step: Points de vie sous 8 et ennemis toujours capables de combattre
+  do: Rompre le contact par une retraite en vol, jusqu'à 6 m avec une action complexe, vers un passage ou un abri proche
+  note: Sa faible vitesse limite la fuite ; utiliser les obstacles et la hauteur pour se soustraire aux attaques

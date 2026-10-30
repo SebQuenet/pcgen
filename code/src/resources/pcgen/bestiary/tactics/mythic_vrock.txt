@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Vrock mythique, démon de taille G, chaotique mauvais, FP 11, rang mythique 4 ; prédateur volant intelligent qui cherche à isoler une victime puis à la déchiqueter.
+  152 pv, CA 27 ; allonge de 3 m, déplacement terrestre de 9 m et vol de 15 m, manœuvrabilité moyenne ; vision dans le noir à 18 m.
+  Attaque à outrance : morsure +14 (1d8+6 et saignement), 2 griffes +14 (2d6+6 et saignement), 2 serres +14 (1d6+6 et saignement).
+  RD 10/épique et bien, immunité à l'électricité et au poison, résistance de 10 à l'acide, au froid et au feu ; résistance à la magie 22. Sa Volonté de +6 est son jet de sauvegarde le plus faible.
+
+resource: Héroïsme | 1/jour | bonus de moral de +2 aux attaques, sauvegardes et tests de compétence ; durée de 120 minutes
+resource: Image miroir | 1/jour | protection à préparer peu avant le contact ; durée de 12 minutes
+resource: Convocation | 1/jour | 35 % de chances de convoquer 1 vrock ; pouvoir de niveau 3
+resource: Télékinésie | à volonté | DD 18 lorsqu'un jet de sauvegarde est applicable ; NLS 12
+resource: Téléportation suprême | à volonté | lui-même et au plus 50 livres d'objets ; aucun allié transporté
+
+step: Il prévoit un affrontement
+  do: Lancer héroïsme, puis image miroir lorsque les ennemis approchent.
+  note: Sous héroïsme, ses cinq attaques passent à +16 ; les dégâts restent inchangés.
+
+step: Il dispose du temps nécessaire avant l'arrivée des ennemis
+  do: Tenter la convocation, puis répartir les angles d'approche avec le vrock convoqué si elle réussit.
+  note: La convocation peut échouer ; ne pas bâtir toute l'embuscade sur sa réussite. Utiliser sa télépathie à 30 m pour coordonner ses alliés.
+
+## Ouverture
+
+step: Les adversaires sont encore hors de portée
+  do: Approcher en vol en exploitant les obstacles, et chercher une cible isolée ou peu protégée.
+  note: Avec une manœuvrabilité moyenne, éviter les approches qui exigent un vol stationnaire ou des virages trop serrés.
+
+step: Un adversaire exposé peut être atteint par un déplacement
+  do: Se placer à 3 m et porter une attaque de griffe +14 (2d6+6 et saignement), ou +16 sous héroïsme.
+  note: Un déplacement ordinaire ne permet pas les cinq attaques de l'attaque à outrance. Exploiter l'allonge pour menacer la cible tout en restant hors de son allonge si elle est plus courte.
+
+step: Les ennemis sont inaccessibles au corps à corps et des objets peuvent être projetés
+  do: Employer télékinésie pour projeter ces objets vers une cible vulnérable.
+  note: Une seule télékinésie est utilisée dans le round ; si le pouvoir est maintenu par concentration, il concurrence les actions offensives suivantes.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement important
+  do: Effectuer l'attaque à outrance : morsure, deux griffes et deux serres, toutes à +14, ou +16 sous héroïsme.
+  note: Concentrer les attaques sur une même victime. Les attaques infligent aussi un saignement, dont la valeur n'est pas précisée dans ce bloc.
+
+step: La cible est facile à toucher
+  do: Utiliser Attaque en puissance : attaques à +11, morsure à 1d8+12, griffes à 2d6+12 et serres à 1d6+12, plus saignement.
+  note: Sous héroïsme, ces attaques sont à +13. Renoncer à ce compromis contre une CA élevée.
+
+step: Plusieurs adversaires sont adjacents entre eux et à portée de 3 m
+  do: Employer Enchaînement mythique pour répartir des coups entre ces cibles si cette option est plus avantageuse que l'attaque à outrance.
+  note: Privilégier les ennemis déjà blessés ; conserver l'attaque à outrance lorsqu'il faut abattre une cible prioritaire.
+
+step: Un ennemi provoque une attaque d'opportunité
+  do: Exploiter ses réflexes de combat mythiques et son allonge pour le frapper.
+  note: Une attaque d'opportunité ne donne pas droit à toute la série d'attaques naturelles.
+
+step: Au sol, un ennemi provoque une attaque d'opportunité en traversant une case adjacente
+  do: Utiliser Immobilisation à la place de cette attaque : test de manœuvre offensive à +16 contre sa DMD pour interrompre son déplacement.
+  note: Cette option aide à retenir une victime près du vrock ; elle exige une occasion valide d'attaque d'opportunité.
+
+## Repli
+
+step: Points de vie sous 40, ou combat devenu clairement défavorable
+  do: Chercher à rompre le contact par le vol, puis utiliser téléportation suprême vers un lieu connu dès qu'il peut le faire à l'abri des attaques d'opportunité.
+  note: S'il doit se retirer pour sortir de la mêlée, réserver la téléportation à un round ultérieur. Ce seuil est un choix tactique, pas une capacité spéciale.
+
+step: Un allié couvre sa fuite
+  do: Lui transmettre ses intentions par télépathie et se téléporter seul avec son équipement autorisé.
+  note: Téléportation suprême ne permet pas d'emporter le vrock convoqué ni un autre compagnon.

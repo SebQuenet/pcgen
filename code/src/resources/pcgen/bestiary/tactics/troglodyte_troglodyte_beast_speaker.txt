@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Troglodyte Beast-Speaker, humanoïde reptilien chaotique mauvais des souterrains, FP 3 ; 35 pv, CA 16.
+  Attaque à outrance : morsure +3 et deux griffes +3 (1d4 chacune), ou massue de maître +4 (1d6), morsure –2 et une griffe –2 (1d4 chacune). Javeline +3 (1d6) à distance.
+  Déplacement à 9 m, escalade à 6 m ; vision dans le noir à 27 m.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se placer dans l'obscurité, près d'une paroi escaladable et d'un passage de fuite
+  note: sa vision dans le noir lui permet de repérer les intrus jusqu'à 27 m sans éclairage
+
+## Ouverture
+
+step: L'ennemi reste à distance et une javeline est disponible
+  do: Lancer une javeline +3 (1d6), en conservant un accès au passage de fuite
+
+step: Il doit se déplacer pour atteindre un ennemi
+  do: Avancer jusqu'à 9 m et porter une seule attaque de massue de maître +4 (1d6) si la cible est au contact
+  note: après ce déplacement, il ne porte pas toute sa série de morsure et de griffes
+
+step: Un ennemi est déjà au contact sans déplacement nécessaire
+  do: Libérer ses deux mains et attaquer à outrance avec morsure +3 et deux griffes +3 (1d4 chacune)
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Répéter l'attaque à outrance de morsure et de deux griffes sur cette cible
+  note: conserver les deux mains libres pour disposer des deux attaques de griffes
+
+step: Les ennemis refusent le corps à corps
+  do: Utiliser les javelines encore disponibles ; sinon, chercher une approche à couvert pour rejoindre une cible isolée
+
+step: Une paroi permet d'échapper à plusieurs adversaires
+  do: Profiter d'une séparation avec les ennemis pour grimper à 6 m par déplacement et changer de position
+
+## Repli
+
+step: Points de vie sous 12
+  do: Rompre le combat et gagner le passage de fuite ; utiliser une retraite pour quitter le contact si le trajet le permet
+  note: fuir dans l'obscurité à 9 m par déplacement, ou escalader à 6 m par déplacement si une paroi offre une échappatoire

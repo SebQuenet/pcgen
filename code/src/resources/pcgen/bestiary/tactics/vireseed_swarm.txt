@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Vireseed Swarm, nuée végétale neutre de graines infimes, sans intelligence ; 51 pv, CA 19.
+  Attaque de nuée : 2d6 dégâts plus infestation, sans jet d'attaque, sur les créatures dont elle occupe l'espace.
+  Espace de 3 m de côté, allonge nulle ; vol à 9 m par déplacement, manœuvrabilité parfaite ; déplacement au sol à 1,50 m.
+  Perception aveugle à 18 m ; immunité aux dégâts d'armes et immunités des plantes ; vulnérabilité au feu.
+
+step: Présence détectée à 18 m ou moins
+  do: Se rapprocher instinctivement en volant pour entrer dans l'espace d'une créature.
+  note: Elle agit sans préparation élaborée ni choix tactique fondé sur l'équipement des adversaires.
+
+## Ouverture
+
+step: Une créature est accessible en un déplacement de 9 m
+  do: Voler dans son espace et terminer le déplacement en la recouvrant ; infliger 2d6 dégâts plus infestation.
+  note: La nuée doit occuper l'espace de sa cible ; rester dans une case voisine ne suffit pas.
+
+step: La cible est plus éloignée
+  do: Consacrer ses actions au rapprochement en vol ; effectuer un double déplacement jusqu'à 18 m si nécessaire.
+  note: Elle ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une ou plusieurs créatures restent dans son espace
+  do: Rester sur elles et appliquer les dégâts de nuée chaque round, avec l'infestation.
+  note: Chaque créature recouverte subit 2d6 dégâts ; il ne s'agit pas d'une attaque distincte à lancer contre chacune.
+
+step: Les créatures quittent son espace
+  do: Suivre instinctivement la plus proche en volant à 9 m par déplacement, puis la recouvrir de nouveau.
+  note: Son espace de 3 m de côté peut englober plusieurs adversaires proches sans qu'elle organise une manœuvre d'encerclement.
+
+step: Les adversaires frappent avec des armes
+  do: Poursuivre l'attaque de nuée.
+  note: Les dégâts d'armes ne réduisent pas ses 51 pv ; les dégâts de feu sont augmentés de 50 % par sa vulnérabilité.
+
+## Repli
+
+note: Comportement
+  Aucun seuil de retraite n'est indiqué. Jouer une poursuite instinctive tant qu'une cible reste accessible, sans repli organisé ni négociation.
+
+step: La nuée tombe à 0 pv
+  do: La disperser ; elle cesse de combattre.

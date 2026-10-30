@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Géant des sables, humanoïde de taille TG, neutre mauvais, prédateur brutal des déserts chauds. Il privilégie l'épée à deux mains, soutenue par un poing de sable.
+  218 pv ; CA 24, contact 9 ; déplacement 12 m ; espace et allonge 4,50 m. Épée à deux mains +24/+19/+14 (4d6+16), ou deux coups +23 (2d6+11) ; rocher +14 (2d6+16), facteur de portée 36 m.
+  Vision nocturne, odorat et Perception +27 ; Vigueur +17, Réflexes +7, Volonté +9. Il encaisse au premier rang, mais évite de laisser les tireurs et les lanceurs de sorts agir librement.
+
+resource: Poing de sable | 1/jour | dure 19 rounds ; coup +26 (1d8+10), Vigueur DD 29 ou étourdi pendant 1 round ; CA 20, contact 8, pris au dépourvu 20 ; 69 pv ; BMO +26, DMD 36
+resource: Ramollissement de la terre et de la pierre | 2/jour | pouvoir magique, NLS 19
+resource: Glissement de terrain | 2/jour | pouvoir magique, NLS 19 ; préparation du terrain, pas une attaque immédiate
+resource: Tremblement de terre | 1/jour | pouvoir magique, NLS 19
+
+step: Il dispose de temps pour préparer le lieu du combat
+  do: Employer glissement de terrain pour aménager la terre ou le sable et rendre l'approche favorable à son allonge
+  note: Conserver du sable disponible près du passage choisi pour former le poing ; garder une voie de sortie praticable. Ce pouvoir ne déplace pas instantanément les adversaires et ne façonne pas la roche.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +27 et l'odorat ; se placer là où son allonge et le futur poing pourront couvrir la même zone
+  note: L'odorat aide à repérer une présence ; il ne permet pas de voir une cible cachée.
+
+## Ouverture
+
+step: Du sable est disponible et le poing pourra atteindre un adversaire
+  do: Former le poing dans le sable à 12 m au plus, par une action de mouvement, puis lui désigner une cible par une seconde action de mouvement
+  note: Le bras reste fixé à son emplacement ; son espace est de 4,50 m et son allonge de 6 m. Viser une cible dangereuse qui restera dans sa portée.
+  note: Le poing attaque ensuite automatiquement cette cible au tour du géant, sans concentration ; chaque coup impose Vigueur DD 29 ou un étourdissement de 1 round. Ces deux actions de mouvement occupent ce premier tour.
+
+step: Le poing ne peut pas servir et plusieurs ennemis sont regroupés sur un terrain favorable au séisme
+  do: Lancer tremblement de terre avant d'engager la mêlée
+  note: Exploiter les chutes, fissures ou effondrements propres au terrain ; tenir ses alliés et sa voie de sortie à l'écart de la zone.
+
+step: Aucun pouvoir de contrôle ne présente d'avantage immédiat
+  do: Avancer pour placer un ennemi dans son allonge de 4,50 m, puis porter un coup d'épée +24 (4d6+16)
+  note: Frappe décisive permet de porter ce coup unique à 8d6+16 lors d'une action d'attaque ; elle ne s'applique pas à une attaque à outrance.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée de l'épée
+  do: Faire une attaque à outrance à l'épée +24/+19/+14 (4d6+16 par coup), en concentrant les coups sur la cible étourdie par le poing si elle est accessible
+  note: Garder le poing actif ; changer sa cible ou sa tactique demande seulement une action libre après l'ordre initial. Il ne peut pas poursuivre un ennemi qui quitte son allonge.
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Se déplacer jusqu'à 12 m puis effectuer une attaque avec Frappe décisive, épée +24 (8d6+16)
+  note: Chercher à ramener le combat près du poing plutôt qu'à abandonner son soutien.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge
+  do: Employer Succession d'enchaînements pour porter un coup d'épée contre chacun, en poursuivant seulement tant que les attaques touchent
+  note: Chaque cible ne peut être frappée qu'une fois par cette action ; la CA du géant baisse de 2 jusqu'à son prochain tour. Préférer l'attaque à outrance lorsqu'un adversaire doit être abattu rapidement.
+
+step: Le sol naturel permet de ralentir une approche ou une poursuite
+  do: Employer ramollissement de la terre et de la pierre sur le passage ennemi, tout en conservant son propre appui
+  note: La terre humide devient boue, la terre sèche sable meuble et la pierre naturelle non travaillée argile ; choisir cet usage selon le terrain, sans supposer qu'il immobilise automatiquement les cibles.
+
+step: Un ennemi reste inaccessible en mêlée
+  do: Lancer un rocher +14 (2d6+16), facteur de portée 36 m, si un projectile est disponible
+  note: Préférer l'épée dès que le contact devient possible. Utiliser réception de rochers contre les projectiles admissibles qui le visent.
+
+step: Il est privé de son épée
+  do: Faire deux coups +23 (2d6+11 chacun) en attaque à outrance
+
+## Repli
+
+step: Il tombe sous 55 pv et le combat tourne à son désavantage
+  do: Se désengager puis reculer vers sa voie de sortie ; laisser le poing frapper un poursuivant qui reste dans son allonge
+  note: Ce seuil est un choix tactique du meneur. Le poing reste immobile : il couvre un passage, sans accompagner le géant.
+
+step: Une poursuite menace de le rattraper
+  do: Si une utilisation reste disponible, ralentir le passage avec ramollissement de la terre et de la pierre, ou employer tremblement de terre si le terrain permet de couper la poursuite
+  note: Ne pas compter sur glissement de terrain pour ouvrir une fuite en plein combat ; son emploi demande une préparation prolongée.

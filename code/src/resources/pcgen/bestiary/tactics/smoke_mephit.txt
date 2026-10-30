@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Méphite de fumée, extérieur de taille M, neutre, des sous-types air, extraplanaire et feu ; 16 pv, CA 17, initiative +6.
+  Deux griffes +3 (1d3 chacune) ; souffle en cône de suie noire de 4,50 m (1d4 de feu, DD 12 pour demi-dégâts).
+  Vol à 15 m, manœuvrabilité parfaite ; marche à 9 m ; vision dans le noir à 18 m. RD 5/magie, immunité au feu et vulnérabilité au froid.
+
+resource: Flou | 1/heure | pouvoir magique, NLS 6
+resource: Ember storm | 1/jour | pouvoir magique, NLS 6 ; effets non précisés dans le profil fourni
+resource: Convocation | 1/jour | niveau 2 ; un méphite de fumée, 25 % de réussite
+
+step: Intrus repérés avant qu'ils ne l'engagent
+  do: Se dissimuler près d'un passage permettant de prendre son envol ; utiliser Discrétion +8 et Perception +4 pour choisir son moment
+
+step: Combat imminent et temps de préparation disponible
+  do: Activer flou, puis tenter la convocation avant de s'exposer
+  note: La convocation peut échouer ; ne compter sur le renfort qu'une fois celui-ci apparu
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent tenir dans le cône de 4,50 m
+  do: Se placer en vol pour les prendre dans le souffle, puis souffler : 1d4 de feu, DD 12 pour demi-dégâts
+  note: Profiter de la portée du cône pour rester, si possible, hors de leur allonge
+
+step: Un ennemi est déjà au contact et aucun déplacement n'est nécessaire
+  do: Faire une attaque à outrance avec ses deux griffes +3, pour 1d3 chacune
+
+step: Aucun ennemi n'est à portée et flou n'est pas encore actif
+  do: Activer flou et utiliser son déplacement en vol pour gagner une position favorable
+
+## Rounds suivants
+
+step: Le souffle est disponible et plusieurs ennemis sont à portée
+  do: Réorienter son cône pour toucher le plus de cibles possible, puis souffler
+  note: Le profil ne précise ni la fréquence ni le délai de récupération du souffle
+
+step: Le souffle est indisponible et un ennemi reste au contact
+  do: Employer ses deux griffes en attaque à outrance s'il peut rester sur place
+  note: Après un déplacement ordinaire, ne porter qu'une attaque de griffe +3 (1d3)
+
+step: Les ennemis se dispersent ou concentrent leurs attaques sur lui
+  do: Utiliser son vol pour gagner de la hauteur ou rejoindre un couvert, en évitant de quitter une case menacée sans précaution
+  note: Sa RD 5/magie aide contre les armes non magiques ; ses 16 pv ne permettent pas de soutenir longtemps les échanges
+
+step: Un adversaire emploie le froid
+  do: S'éloigner de lui et chercher un obstacle pour couper sa ligne de vue
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou attaques de froid répétées
+  do: Se désengager puis fuir en vol, à 15 m par déplacement, vers un abri en hauteur
+  note: Utiliser flou s'il est disponible et peut encore protéger la fuite ; rechercher un couvert pour se cacher avec Discrétion +8
+
+step: Un adversaire le retient en lutte
+  do: Tenter de se libérer avec Évasion +8, puis reprendre son envol dès que possible

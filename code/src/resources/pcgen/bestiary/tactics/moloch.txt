@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Moloch, archidiable loyal mauvais de taille TG, combine une mêlée dévastatrice, le feu et le contrôle du champ de bataille. Il possède 731 pv, une CA de 47 et une allonge de 4,50 m ; il se déplace de 12 m et marche dans les airs.
+  Goreletch +46/+41/+36/+31 (3d6+18, 19-20/x4), Ramithaine +46/+41 (3d6+18, 17-20/x3), morsure +42 (2d6+7, étreinte et brûlure), cornes +42 (2d6+7 et brûlure).
+  Présence terrifiante à 36 m, DD 38 ; fournaise infernale à 3 m. Son allonge lui permet de frapper avant que les adversaires arrivent au contact immédiat.
+
+note: Défenses
+  Régénération 30, interrompue par les attaques déifiques ou mythiques ; résistance à la magie 40 et fortification 50 %. Sa réduction des dégâts de 20 exige des attaques à la fois épiques, bonnes et en argent.
+  Immunité au feu, au poison, à la pétrification, aux effets de mort, au charme, à la coercition, aux dégâts et diminutions de caractéristiques et à l'absorption d'énergie ; résistances à l'acide et au froid de 30.
+  Marche dans les airs, détection du Bien et du Chaos, esprit impénétrable, bouclier de la Loi (DD 29) et vision lucide sont constants. Il voit dans les ténèbres et à travers les brumes.
+
+resource: Barrière de lames accélérée | 3/jour | DD 27 ; action rapide
+resource: Tempête de feu à effet augmenté | 3/jour | DD 29
+resource: Charme-monstre de groupe | 3/jour | DD 29
+resource: Immobilisation de personnes de groupe | 3/jour | DD 28 ; humanoïdes seulement
+resource: Invocation de diables | 3/jour | préparer des renforts avant l'affrontement si possible
+resource: Nuée de météores | 1/jour | DD 30
+resource: Arrêt du temps | 1/jour | préparer le terrain et se repositionner
+resource: Souhait | 1/jour | réserver à une urgence, dans les limites du sort
+
+step: Il repère les intrus avant l'affrontement
+  do: Les observer avec vision lucide et les détections constantes ; identifier les protections visibles et les adversaires qui peuvent réellement menacer sa régénération.
+  do: Invoquer des diables si le délai le permet ; leur donner par télépathie des consignes pour gêner l'approche et séparer les ennemis.
+  note: Télépathie à 90 m ; aucun type ni nombre de diables invoqués n'est précisé ici.
+
+## Ouverture
+
+step: Le terrain lui est défavorable et il dispose encore d'arrêt du temps
+  do: Utiliser arrêt du temps ; se placer dans les airs ou derrière un passage resserré et dresser des murs de feu sur les voies d'approche libres.
+  note: Pendant l'arrêt du temps, préparer sa position sans attaquer directement les autres créatures ; les effets sur celles-ci attendent la reprise du temps.
+
+step: Les adversaires sont séparables au premier round disponible pour attaquer
+  do: Placer une barrière de lames accélérée entre les combattants et leurs soutiens, en conservant une voie vers sa cible prioritaire.
+  note: Cette action rapide peut accompagner une attaque à outrance ou un autre pouvoir utilisable par une action simple ; une seule action rapide par round.
+
+step: Plusieurs humanoïdes restent groupés et peuvent être paralysés
+  do: Utiliser immobilisation de personnes de groupe, DD 28, puis préparer l'assaut sur les cibles immobilisées au round suivant.
+
+step: Plusieurs ennemis vulnérables au feu restent accessibles à distance
+  do: Utiliser une tempête de feu à effet augmenté, DD 29 ; réserver nuée de météores, DD 30, à une occasion décisive.
+  note: Éviter de consacrer ses attaques de feu aux adversaires qui ont montré une immunité à cet élément.
+
+step: Une cible prioritaire est déjà à 4,50 m ou moins et il peut consacrer le round à la mêlée
+  do: Effectuer l'attaque à outrance avec Goreletch, Ramithaine, la morsure et les cornes ; concentrer les coups sur cette cible.
+  note: Faire résoudre la présence terrifiante contre les ennemis concernés dans les 36 m, DD 38.
+
+## Rounds suivants
+
+step: Un ennemi dangereux reste à portée
+  do: Maintenir les attaques à outrance ; employer un pas de placement de 1,50 m si cela suffit à garder la cible dans son allonge.
+  note: Profiter des critiques et des dons de combat associés ; une morsure réussie permet de tenter l'étreinte contre une cible admissible.
+
+step: Les protections magiques adverses neutralisent ses attaques
+  do: Consacrer une action simple à dissipation suprême sur la cible prioritaire, puis reprendre l'offensive au round suivant.
+  note: Dissipation suprême est utilisable à volonté ; son niveau de lanceur de sorts est de 29.
+
+step: Les ennemis se regroupent ou les soutiens rejoignent la mêlée
+  do: Dépenser une nouvelle barrière de lames accélérée pour les séparer ; utiliser tempête de feu à effet augmenté contre un groupe vulnérable, ou immobilisation de personnes de groupe contre des humanoïdes.
+  note: Décompter séparément les trois utilisations quotidiennes de chaque pouvoir.
+
+step: Un humanoïde semble vulnérable au contrôle mental
+  do: Tenter domination, DD 26, pour le retourner contre ses alliés ; préférer charme-monstre de groupe, DD 29, si plusieurs cibles peuvent être influencées.
+  note: Domination est utilisable à volonté ; le charme ne garantit pas que les victimes attaquent leurs compagnons.
+
+step: Plusieurs adversaires non loyaux sont assez faibles pour subir les effets de parole de la Loi
+  do: Utiliser parole de la Loi ; déterminer les effets selon leurs dés de vie et son niveau de lanceur de sorts de 29.
+  note: Le DD 28 concerne le renvoi des extraplanaires ; ne pas appliquer indistinctement ce jet aux autres effets du pouvoir.
+
+step: Une cible importante reste hors d'atteinte
+  do: Se rapprocher avec marche dans les airs, ou utiliser téléportation suprême vers une position appropriée ; reprendre les attaques au round suivant.
+  note: Une téléportation ne lui donne pas une attaque à outrance supplémentaire dans le même round.
+
+step: Il est désarmé
+  do: Utiliser son pouvoir de rappel des armes pour récupérer Goreletch ou Ramithaine.
+
+## Repli
+
+step: Ses points de vie passent sous 220, ou une menace déifique ou mythique rend sa position intenable
+  do: Si une utilisation subsiste, placer une barrière de lames accélérée pour gêner la poursuite ; utiliser téléportation suprême vers un refuge connu.
+  do: Faire couvrir le départ par les diables encore présents, en leur transmettant ses ordres par télépathie.
+
+step: Il est à l'abri et sa régénération fonctionne
+  do: Récupérer 30 pv par round avant de reprendre l'offensive ; observer à nouveau les protections des ennemis et préparer une nouvelle approche.

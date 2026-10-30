@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Petite fée souterraine neutre, fragile : 7 points de vie, CA 14, réduction des dégâts 2/fer froid.
+  Dague +5 (1d3-1, critique 19-20), dard +4 (1d3-1) ; attaque sournoise +1d6 lorsque ses conditions sont réunies.
+  Déplacement au sol 12 m, escalade 6 m ; allonge 1,50 m. Discrétion +13, Acrobaties +7, Escalade +11.
+
+resource: Anathème (doom) | 1/jour | NLS 2 ; Volonté DD 11 ; rend une cible secouée
+resource: Prestidigitation | à volonté | NLS 2 ; effets mineurs, sans dégâts
+
+step: Des intrus approchent
+  do: Se dissimuler dans les souterrains avec Discrétion +13 et préparer une embuscade
+  note: Vision dans le noir à 27 m, vision nocturne, odorat et Perception +5 ; l'odorat ne permet pas à lui seul de voir une cible
+
+step: Le passage est exposé au plein soleil ou à une lumière magique équivalente
+  do: Choisir un autre poste dans l'obscurité
+  note: Sa sensibilité à la lumière le rend ébloui dans ces conditions
+
+## Ouverture
+
+step: Une cible privée de son bonus de Dextérité à la CA est au contact
+  do: Frapper à la dague +5, pour 1d3-1 plus 1d6 d'attaque sournoise
+
+step: Une cible privée de son bonus de Dextérité à la CA est hors du contact, à 9 m ou moins
+  do: Lancer un dard +4, pour 1d3-1 plus 1d6 d'attaque sournoise
+  note: Il doit voir la cible sans camouflage ; une attaque révèle normalement sa position
+
+step: Aucune attaque sournoise n'est possible et un adversaire dangereux approche
+  do: Lancer anathème sur cet adversaire, depuis une position hors de son allonge
+  note: Volonté DD 11 ; cette action remplace son attaque du round
+
+## Rounds suivants
+
+step: Un autre pestie ou un allié combat déjà au contact
+  do: Se placer en tenaille avec lui, puis attaquer à la dague +5 pour 1d3-1 plus 1d6
+  note: La prise en tenaille ajoute +2 au jet d'attaque, soit +7 ; éviter de traverser les cases menacées, ou utiliser Acrobaties +7 à demi-vitesse
+
+step: Il reste seul et ne peut pas placer d'attaque sournoise
+  do: Garder ses distances et lancer des dards +4 pour 1d3-1, tant qu'il lui en reste
+  note: Ne pas ajouter les dégâts sournois à une attaque ordinaire ; à distance, ils exigent une cible à 9 m ou moins, privée de son bonus de Dextérité à la CA et sans camouflage
+
+step: Un adversaire le rejoint au contact et aucune fuite immédiate n'est nécessaire
+  do: Attaquer à la dague +5 pour 1d3-1, en cherchant une occasion de tenaille
+  note: Avec seulement 7 points de vie, sa réduction des dégâts ne justifie pas un échange prolongé
+
+## Repli
+
+step: Points de vie à 3 ou moins, ou combat au contact devenu trop dangereux
+  do: Utiliser l'action de retraite pour gagner un passage permettant de rompre le contact
+  note: Son déplacement de base est de 12 m au sol ; privilégier une issue déjà repérée
+
+step: Une paroi offre une issue hors de l'allonge adverse
+  do: Grimper à 6 m par déplacement, puis se dissimuler après avoir rompu la ligne de vue
+  note: Escalade +11 et Discrétion +13 ; il ne peut pas simplement se cacher sous le regard de ses poursuivants

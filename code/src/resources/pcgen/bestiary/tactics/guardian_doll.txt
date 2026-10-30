@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Poupée de garde d'Irrisen, créature artificielle intelligente de taille TP, neutre mauvaise, employée comme sentinelle et espionne. Elle se fait passer pour un jouet inanimé avant de frapper.
+  Dague de poupée +10 à 1,50 m : 1d2-1, critique 19-20, plus 1d6 de froid ; chaque coup impose Vigueur DD 12 ou paralysie pendant 1d4 rounds. Déplacement de 9 m ; initiative +7.
+  22 pv, CA 16, RD 5/magie, RM 14 ; immunité au froid et traits des créatures artificielles. Vulnérable au feu et sensible aux effets mentaux.
+
+resource: Rayon de givre | à volonté | contact à distance +9, 1d3 de froid, portée 10,50 m
+resource: Alarme | 3/jour | surveillance des accès, durée 8 heures
+resource: Charme-personne | 3/jour | Volonté DD 11, un humanoïde, portée 10,50 m, durée 4 heures
+resource: Chute de température | 1/jour | Vigueur DD 12, portée 10,50 m, rayon 1,50 m, durée 2 rounds
+resource: Lévitation | 1/jour | sur elle-même, durée 4 minutes ; déplacement vertical de 6 m par action de mouvement
+resource: Lumière, manipulation à distance, ouverture/fermeture, prestidigitation | 3/jour chacun | utilitaires ; conserver ouverture/fermeture pour les portes légères non bloquées
+
+step: Elle prépare son poste de garde
+  do: Poser alarme sur un accès, puis rester immobile parmi des objets ou se cacher derrière un couvert avec Discrétion +15
+  note: Vision dans le noir à 18 m, vision nocturne et Perception +5 ; elle observe avant de révéler sa nature
+
+step: Un humanoïde isolé peut être abordé sans menace
+  do: Tenter charme-personne, puis lui demander des renseignements ou de patienter à l'écart
+  note: Le charme rend amical sans imposer l'obéissance ; une cible menacée par la poupée ou ses alliés reçoit +5 au jet de sauvegarde
+
+## Ouverture
+
+step: Plusieurs intrus sont regroupés dans un rayon de 1,50 m et à portée
+  do: Lancer chute de température sur eux depuis son couvert
+  note: 2d6 de froid initiaux ; Vigueur DD 12 évite d'être chancelant pendant 1 round, sans réduire ces dégâts initiaux
+
+step: Un intrus est déjà à 1,50 m et aucune attaque de zone n'est préférable
+  do: Frapper avec la dague de poupée, en privilégiant un lanceur de sorts ou un ennemi isolé susceptible d'être paralysé
+
+step: Un adversaire reste à distance et chute de température n'est pas avantageuse
+  do: Lancer rayon de givre s'il est à 10,50 m ou moins ; sinon, gagner un couvert plus proche
+
+## Rounds suivants
+
+step: Un ennemi reste au contact
+  do: Porter une attaque de dague par round pour renouveler la menace de paralysie
+  note: Si une victime est paralysée, profiter de son immobilité pour attaquer un autre ennemi encore dangereux, particulièrement celui qui emploie du feu
+
+step: Chute de température est encore active
+  do: Combattre près de la zone pour gêner l'approche des intrus et profiter de son immunité au froid
+  note: Au début du tour de la poupée, les créatures dans la zone subissent 1d6 de froid, Vigueur DD 12 pour moitié ; ces dégâts ne rendent pas chancelant
+
+step: Le contact est trop dangereux et un couvert permet de combattre à distance
+  do: S'écarter hors des cases menacées, puis utiliser rayon de givre lors des tours où elle peut tirer sans s'exposer
+  note: Sa RD protège contre les armes non magiques ; elle recherche le couvert contre le feu et les effets mentaux malgré sa RM 14
+
+## Repli
+
+step: Moins de 8 pv ou menace de feu impossible à neutraliser
+  do: Se désengager vers un couvert ; déplacement normal de 9 m par action de mouvement, jusqu'à 18 m pendant un désengagement complet
+  note: Une porte légère non bloquée peut être refermée avec ouverture/fermeture lors d'un tour ultérieur pour couper la ligne de vue
+
+step: Une issue en hauteur existe et lévitation est disponible
+  do: Lancer lévitation, monter hors d'allonge, puis rejoindre un rebord en prenant appui sur une paroi si le terrain le permet
+  note: Lévitation ne permet aucun déplacement horizontal libre ; une fois dissimulée, la poupée préserve son focaliseur d'âme plutôt que de reprendre un échange de tirs
+
+note: Focaliseur d'âme
+  Un focaliseur intact permet de construire ultérieurement un autre corps conservant sa personnalité et ses souvenirs ; il ne répare pas la poupée et ne la ranime pas pendant le combat.

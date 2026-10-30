@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Ver des tunnels, créature magique souterraine de taille TG, neutre et d’intelligence animale. Il combat au contact et s’acharne sur une proie à la fois.
+  112 pv ; CA 16 ; morsure +14 (2d6+9 et étreinte) ; déchirement d’armure. Allonge de 3 m ; espace occupé de 4,50 m ; marche et creusement à 6 m.
+
+note: Repérage
+  Perception +15 ; perception des vibrations à 18 m pour repérer les mouvements transmis par le sol ; vision dans le noir à 18 m et vision nocturne.
+
+step: Des mouvements annoncent l’arrivée de proies
+  do: Attendre sous terre, à proximité d’un passage permettant à son corps de 4,50 m de se déployer.
+  note: Son comportement reste instinctif : attendre le passage d’une proie puis se jeter sur elle.
+
+## Ouverture
+
+step: Une proie peut être atteinte après un déplacement de 6 m au plus
+  do: Émerger, s’approcher à 3 m ou moins et porter une morsure +14 (2d6+9), puis tenter l’étreinte si la morsure touche.
+  note: Privilégier une proie accessible au sol ; émerger avant de porter l’attaque.
+
+step: Aucune proie n’est encore accessible à la morsure
+  do: Se rapprocher en creusant à 6 m par action de mouvement, en suivant les vibrations tant que la proie reste dans leur portée de 18 m.
+
+## Rounds suivants
+
+step: Une proie est tenue par l’étreinte
+  do: Chercher à maintenir la lutte et choisir d’infliger les dégâts de morsure (2d6+9) lorsque le maintien réussit.
+  note: Consacrer son action simple au maintien de la lutte et rester concentré sur cette proie.
+
+step: La proie s’est libérée et reste à 3 m ou moins
+  do: La mordre de nouveau à +14 et tenter de rétablir l’étreinte si l’attaque touche.
+
+step: La proie s’éloigne ou tombe hors de combat
+  do: Avancer vers la créature accessible la plus proche et reprendre les morsures ; creuser si cela permet de rejoindre une proie au sol.
+  note: Limiter le déplacement à 6 m pour pouvoir encore porter une morsure pendant le même tour.
+
+## Repli
+
+step: Points de vie à 28 ou moins et une voie de fuite souterraine est accessible
+  do: Relâcher une éventuelle prise et s’enfoncer dans le sol ; consacrer ses actions au creusement pour s’éloigner, jusqu’à 12 m avec deux actions de mouvement.
+
+step: La fuite est impossible
+  do: Continuer à mordre l’adversaire le plus proche et tenter l’étreinte.

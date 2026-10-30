@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Red Jester, bouffon mort-vivant solitaire, chaotique neutre, qui disperse ses adversaires par la peur avant d'accabler ceux qui résistent.
+  67 pv ; CA 24, contact 14 ; initiative +8 ; déplacement 9 m ; vision dans le noir 18 m ; allonge 1,50 m.
+  Masse d'armes légère +2 de l'hilarité +17 (1d6+4 et hilarité), ou deux coups +13 (1d4+2 chacun) ; cartes du bouffon +15 au contact à distance, portée 6 m.
+  Réduction des dégâts 10/magie, résistance à la magie 21, résistance à la canalisation +4 et immunités des morts-vivants.
+
+resource: Rire de terreur | à volonté | action libre ; créatures qui l'entendent dans un rayon de 18 m : Volonté DD 22 ou panique pendant 2d4 rounds ; réussite ou échec, immunité à son rire pendant un jour
+resource: Cartes du bouffon | 1 carte par round | action simple ; attaque de contact à distance +15 jusqu'à 6 m ; une touche applique immédiatement l'effet d'un tirage d'un jeu de cartes merveilleuses
+resource: Hilarité | à chaque touche de la masse | Volonté DD 20 ou chute au sol, incapable d'agir ou de se déplacer pendant 1d3 rounds ; la victime n'est pas sans défense
+
+step: Intrus repérés avant l'affrontement
+  do: Observer avec Perception +15 et approcher discrètement avec Discrétion +17 pour placer plusieurs adversaires à moins de 18 m
+  note: Garder une voie de déplacement libre pour ses passes à la masse et un éventuel repli
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent entendre son rire à 18 m ou moins
+  do: Déclencher le rire de terreur en action libre, puis choisir l'attaque correspondant à la distance
+  note: Privilégier ensuite les adversaires qui restent capables de combattre ; les fuyards dispersent déjà le groupe
+
+step: Un adversaire résiste à la peur et reste hors de la mêlée, à 6 m ou moins
+  do: Lui lancer une carte du bouffon, +15 au contact à distance
+  note: Résoudre le tirage normalement ; ses effets peuvent aussi avantager la cible
+
+step: Un adversaire est au contact
+  do: Frapper avec la masse +17 pour infliger 1d6+4 et tenter de le neutraliser par l'hilarité
+
+## Rounds suivants
+
+step: Une cible isolée est accessible sans commencer le round à son contact
+  do: Employer Attaque éclair : avancer d'au moins 3 m, porter un unique coup de masse, puis se dégager, sans dépasser 9 m de déplacement total
+  note: Cette action occupe le round ; la cible ne porte pas d'attaque d'opportunité contre ce déplacement, mais les autres ennemis peuvent le faire
+
+step: Un adversaire capable d'agir reste à distance, à 6 m ou moins
+  do: Relancer une carte, une seule par round, en gardant ses distances avec les combattants de mêlée
+
+step: Un adversaire reste au contact et la masse est disponible
+  do: Continuer les coups de masse +17 (1d6+4 et hilarité), en visant d'abord un ennemi encore capable d'agir
+
+step: La masse est indisponible et un adversaire reste au contact
+  do: Effectuer une attaque à outrance avec les deux coups +13, chacun pour 1d4+2
+  note: Ces coups ne déclenchent pas l'hilarité
+
+step: De nouveaux adversaires arrivent et peuvent entendre le bouffon
+  do: Réutiliser le rire de terreur pour les disperser
+  note: Les cibles déjà exposées restent immunisées pendant un jour, même si elles avaient raté leur sauvegarde
+
+step: Pendant tout l'affrontement
+  do: Ponctuer ses attaques de plaisanteries, de rires et d'énigmes
+  note: Ces paroles n'imposent aucun effet supplémentaire
+
+## Repli
+
+step: Points de vie sous 20 et une issue reste praticable
+  do: Profiter des ennemis paniqués ou immobilisés par l'hilarité pour rompre le contact ; utiliser le retrait si nécessaire, puis s'éloigner vers un couvert
+  note: Sa vitesse est de 9 m ; ne pas compter sur un nouveau rire pour arrêter les poursuivants déjà immunisés

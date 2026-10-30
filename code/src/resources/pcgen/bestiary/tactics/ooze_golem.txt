@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Golem de vase de taille G, sans intelligence, employé comme gardien. Ses tactiques sont rudimentaires : avancer et marteler l'intrus jusqu'à sa destruction.
+  85 pv ; CA 20 ; déplacement de 6 m ; espace occupé et allonge de 3 m. Attaque à outrance : 2 coups +15, chacun infligeant 2d8+6 dégâts plus 1d6 d'acide.
+  RD 10/contondant ; corps amorphe ; immunités de créature artificielle et de vase. Vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+step: Il garde un lieu selon les ordres de son créateur
+  do: Rester au poste assigné et attaquer les intrus dès qu'ils remplissent les conditions fixées par ces ordres
+  note: Il ne prépare pas de ruse et ne choisit pas ses victimes selon leur profession ou leurs faiblesses supposées.
+
+## Ouverture
+
+step: Un intrus est déjà à portée de son allonge de 3 m
+  do: Attaquer à outrance avec les deux coups +15, de préférence contre la même cible
+  note: Chaque coup réussi ajoute 1d6 dégâts d'acide aux 2d8+6 dégâts du coup.
+
+step: Aucun intrus n'est à portée
+  do: Avancer de 6 m au maximum vers l'intrus le plus proche autorisé par ses ordres, puis porter un seul coup +15 si celui-ci est désormais à 3 m ou moins
+  note: Si un déplacement ne suffit pas, effectuer un double déplacement de 12 m au maximum, sans attaquer ce round.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter les deux coups en attaque à outrance jusqu'à ce qu'elle tombe ou sorte de portée
+  note: Un pas de 1,50 m permet de se replacer tout en conservant les deux attaques.
+
+step: La cible se dérobe
+  do: La suivre si ses ordres le permettent ; après un déplacement supérieur à 1,50 m, ne porter qu'un seul coup
+  note: Il ne dispose d'aucune attaque à distance ; face à un ennemi inaccessible, continuer à tenir le poste assigné.
+
+step: Un adversaire le frappe à mains nues ou avec une attaque naturelle
+  do: Appliquer à l'assaillant 1d6 dégâts d'acide
+  note: Cet acide n'attaque que la chair ; il ne dissout pas les armes ou les armures.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre le combat jusqu'à la destruction, sans retraite spontanée
+  note: Ce gardien sans intelligence n'adopte pas de seuil de fuite.
+
+step: Ses points de vie atteignent 0 ou moins
+  do: Appliquer les affres de la mort : son corps s'effondre en une mare acide couvrant un carré de 3 m de côté
+  note: Toute créature touchant la mare subit 2d6 dégâts d'acide par round pendant 1d3 rounds, sans jet de sauvegarde. La mare subsiste 10 rounds, soit 1 minute, puis se disperse.

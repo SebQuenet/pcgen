@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Gutlslug, aberration de taille M des souterrains, prédateur peu intelligent ; 19 pv, CA 17.
+  Attaque de mêlée +6 (1d6+2, saisie et drain sanguin de 1d4 points de Constitution) ; attaque sournoise +2d6 quand la cible est privée de son bonus de Dextérité à la CA ou prise en tenaille.
+  Vol à 15 m par déplacement, manœuvrabilité parfaite ; déplacement au sol à 6 m ; allonge de 1,50 m. Perception aveugle à 9 m, Perception +7, Discrétion +9.
+
+step: Une proie approche
+  do: Se dissimuler à couvert et attendre qu'elle entre dans les 9 m de sa perception aveugle
+  note: Préférer une proie isolée ou en retrait, accessible en un déplacement en vol
+
+## Ouverture
+
+step: Une proie est accessible
+  do: Voler jusqu'à portée de mêlée et porter une attaque +6 (1d6+2) ; tenter la saisie si l'attaque touche
+  note: Ajouter 2d6 de dégâts sournois si la cible est privée de son bonus de Dextérité à la CA ; une approche discrète doit effectivement empêcher la cible de le repérer
+
+step: Plusieurs gutlslugs attaquent ensemble
+  do: Approcher une même victime par des côtés opposés pour la prendre en tenaille
+  note: La tenaille permet d'appliquer les 2d6 de dégâts sournois aux attaques qui remplissent ses conditions
+
+## Rounds suivants
+
+step: Il tient une victime dans sa prise
+  do: Maintenir la lutte pour poursuivre le drain sanguin
+  note: Le drain inflige 1d4 points de dégâts de Constitution lorsqu'un test de lutte réussit ; ne pas ajouter les dégâts sournois au drain seul
+
+step: La victime échappe à sa prise ou la saisie échoue
+  do: Porter une nouvelle attaque de mêlée +6 (1d6+2) et tenter de la saisir à nouveau si le coup touche
+  note: Les dégâts sournois exigent toujours une cible privée de son bonus de Dextérité à la CA ou prise en tenaille
+
+step: Aucune proie n'est à portée
+  do: Se rapprocher en vol d'une victime accessible, en utilisant les couverts disponibles
+  note: Son attaque exige d'arriver à 1,50 m ; il ne dispose d'aucune attaque à distance indiquée
+
+## Repli
+
+step: Points de vie à 6 ou moins
+  do: Relâcher sa prise et fuir en vol vers un passage ou un couvert, à 15 m par déplacement
+  note: Chercher à rompre le contact plutôt qu'à poursuivre une victime entourée de défenseurs

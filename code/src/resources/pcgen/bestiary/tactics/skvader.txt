@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Skvader, bête magique neutre de taille TP, mêlant lièvre et tétras. Herbivore nerveux, généralement docile, il devient dangereux lorsqu'il est acculé.
+  6 points de vie ; CA 14 ; morsure +5 (1d3-1 et fixation). Une morsure réussie agrippe automatiquement la cible et inflige ensuite les dégâts de morsure chaque round.
+  Déplacement au sol et vol à 12 m ; manœuvrabilité médiocre. Discrétion +14 ; vision dans le noir à 18 m et vision nocturne.
+
+step: Une menace approche sans l'avoir repéré
+  do: Rester immobile dans la végétation et utiliser Discrétion +14 pour échapper à son attention
+
+step: Le danger se rapproche et une issue reste libre
+  do: Détaler vers un couvert ou un terrier existant ; utiliser le vol pour franchir un obstacle si nécessaire
+  note: Il cherche d'abord à fuir ; son vol médiocre favorise les trajets simples
+
+## Ouverture
+
+step: Il est acculé
+  do: Pousser un cri strident pour alerter les autres skvaders des environs
+  note: Les congénères présents accourent à son aide ; leur arrivée dépend de leur distance réelle
+
+step: Le combat est inévitable et un adversaire est accessible
+  do: Choisir une seule menace, rejoindre son espace et porter une morsure +5 (1d3-1 et fixation)
+  note: Son allonge est de 0 m : il doit entrer dans l'espace adverse pour mordre, ce qui peut provoquer une attaque d'opportunité
+
+## Rounds suivants
+
+step: Il est fixé à sa cible
+  do: Rester accroché à cette même cible et lui infliger automatiquement 1d3-1 dégâts de morsure par round
+  note: La fixation lui fait perdre son bonus de Dextérité à la CA ; sa CA tombe à 12. Ne pas relancer une attaque pour ces dégâts automatiques
+
+step: Sa morsure a échoué ou la cible l'a décroché
+  do: Si la fuite reste impossible, revenir dans l'espace de la même menace et tenter une nouvelle morsure +5
+
+step: D'autres skvaders rejoignent le combat
+  do: Faire approcher chaque skvader d'une menace accessible pour tenter de s'y fixer
+  note: Chacun conserve ensuite sa prise plutôt que de changer constamment de cible
+
+## Repli
+
+step: Une issue se libère, ou ses points de vie tombent à 3 ou moins
+  do: Abandonner sa prise s'il est fixé, puis fuir vers le couvert ou un terrier existant, au sol ou en vol à 12 m par déplacement
+  note: Privilégier une retraite au sol si elle est praticable ; éviter les manœuvres aériennes serrées

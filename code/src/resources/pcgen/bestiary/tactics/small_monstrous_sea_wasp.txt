@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Petite guêpe de mer monstrueuse, méduse venimeuse des eaux chaudes, de taille P ; vermine aquatique sans Intelligence, qui chasse par instinct. 5 pv, CA 12 ; nage à 12 m par round, allonge de 1,50 m.
+  Tentacule +2 (1d4-3 et poison) ; enchevêtrement par les tentacules, BMO -4. Sa transparence favorise l'embuscade ; sa propulsion lui permet de fuir rapidement.
+
+step: En attente d'une proie dans l'eau
+  do: Rester immergée et laisser une proie s'approcher des tentacules
+  note: Transparence : Perception DD 20 pour la repérer dans l'eau. Discrétion +15 ; la transparence ne garantit pas la surprise.
+
+step: Une créature entre en contact avec l'eau à 18 m ou moins
+  do: Détecter automatiquement sa présence grâce au sens de l'eau
+  note: Vision dans le noir à 18 m ; Perception +4.
+
+## Ouverture
+
+step: Une proie est à plus de 1,50 m
+  do: Nager vers la proie la plus proche, jusqu'à 12 m, puis frapper d'un tentacule si elle arrive à portée
+  note: Si elle reste hors de portée, poursuivre l'approche dans l'eau.
+
+step: Une proie est déjà à 1,50 m ou moins
+  do: Frapper avec le tentacule +2 (1d4-3 et poison)
+  note: Poison par blessure : Vigueur DD 11 ; fréquence 1 fois par round pendant 1d4 rounds ; effet 1d2 points de dégâts de Constitution ; guérison après 1 sauvegarde réussie.
+
+## Rounds suivants
+
+step: Une proie plus petite d'une ou deux catégories de taille est à portée et aucun enchevêtrement n'est maintenu
+  do: Tenter de l'agripper avec les tentacules par un test de BMO -4
+  note: L'enchevêtrement exige un test réussi ; une attaque de tentacule ordinaire ne l'applique pas automatiquement.
+
+step: Une proie est retenue par l'enchevêtrement
+  do: Maintenir la prise pour lui infliger les dégâts de tentacule et l'exposer au poison chaque round
+  note: La victime bénéficie toujours de ses sauvegardes contre le poison, Vigueur DD 11. La guêpe de mer ne peut pas attaquer d'autres créatures tant qu'elle maintient cet enchevêtrement.
+
+step: Aucune proie n'est retenue et l'enchevêtrement ne convient pas à sa taille ou échoue
+  do: Continuer les attaques de tentacule +2 contre une proie à portée
+  note: Les dégâts physiques sont faibles ; chaque blessure permet d'exposer la cible au poison. Si elle s'éloigne, la suivre à la nage dans l'eau.
+
+## Repli
+
+step: Réduite à 2 pv ou moins et disposant d'une trajectoire de fuite dégagée dans l'eau
+  do: Relâcher toute proie retenue et fuir par propulsion vers l'arrière, jusqu'à 48 m en ligne droite
+  note: La propulsion prend une action complexe, s'utilise une fois par round et ne provoque pas d'attaques d'opportunité ; elle ne permet pas de frapper pendant cette action.
+
+step: La fuite doit se poursuivre
+  do: Réutiliser la propulsion si une ligne droite est disponible, ou nager à 12 m par round pour changer de direction

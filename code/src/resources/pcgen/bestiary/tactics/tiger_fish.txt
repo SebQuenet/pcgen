@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Poisson-tigre (Tiger Fish), animal aquatique de taille M, neutre, des rivières et marais chauds. FP 1 ; 16 points de vie ; CA 13.
+  Morsure +4 (1d6+3), allonge de 1,50 m ; nage à 15 m par déplacement. Prédateur d'intelligence animale, il attaque une proie accessible dans l'eau.
+
+step: Une proie entre dans son secteur
+  do: La repérer avec Perception +8, puis s'approcher à la nage.
+  note: Vision nocturne ; Discrétion +6 si les conditions permettent de se cacher. Il reste dans l'eau et utilise les couverts disponibles.
+
+## Ouverture
+
+step: Une proie est à 1,50 m ou moins
+  do: Porter une morsure +4 (1d6+3).
+
+step: Une proie dans l'eau est hors de portée
+  do: Nager jusqu'à 15 m vers elle, puis la mordre si elle est désormais à portée.
+  note: Si un seul déplacement ne suffit pas, consacrer le round à deux déplacements de nage, pour un total maximal de 30 m.
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter la morsure +4 (1d6+3) chaque round, en restant au contact dans l'eau.
+
+step: La proie s'éloigne à la nage
+  do: La poursuivre avec un déplacement de nage de 15 m au maximum, puis mordre si elle est à portée.
+  note: Natation +17 pour les tests imposés par le courant ou les obstacles aquatiques.
+
+step: La proie rejoint la berge et devient inaccessible depuis l'eau
+  do: Rester dans l'eau ; chercher une autre proie accessible ou s'éloigner.
+
+## Repli
+
+step: Points de vie sous 8
+  do: Rompre le combat et se retirer à la nage vers une zone d'eau libre ou un couvert aquatique.
+  note: L'action de retraite permet de parcourir jusqu'à 30 m ; il ne poursuit plus sa proie.

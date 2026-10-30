@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Vepar est un démon aquatique de taille G, chaotique mauvais, FP 21 : 363 pv, CA 37, initiative +12. Intelligent et mobile dans l'eau, il laisse ses alliés retenir les ennemis pendant qu'il emploie ses pouvoirs.
+  Trident +2 : +35/+30/+25/+20, dégâts 2d6+13, critique 19–20 ; ou deux griffes +33, chacune à 1d8+11 plus toucher hypothermique. Les effets du toucher hypothermique ne sont pas précisés dans ce profil.
+  Allonge 3 m ; déplacement terrestre 6 m, nage 18 m ; amphibie. Vision dans le noir 18 m, Perception +45, télépathie 30 m.
+  Réduction des dégâts 15/fer froid et Bien, résistance à la magie 32 ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu. Son aura maudite est constante.
+
+resource: Aura maudite | constante | DD 27 ; conserver ses protections actives
+resource: Pouvoirs à volonté | illimitées | NLS 20 ; blasphème DD 26, contrôle des vents DD 24, terreur DD 23, dissipation suprême, contrôle de l'eau, contrôle du climat, détection du Bien, détection de la Loi, métamorphose sur lui-même, respiration aquatique sur autrui DD 22, téléportation suprême
+resource: Tempête de grêle | 1/jour | utilisable en action rapide grâce à son don ; cette accélération ne donne aucune utilisation supplémentaire
+resource: Implosion | 1/jour | Vigueur DD 28 ; concentration, au maximum quatre rounds et quatre cibles distinctes
+resource: Convocation | 1/jour | niveau 9, réussite 100 % ; 2d6 shrroths, 1d4 hezrous, 1d2 nalfeshnees, 1d2 mariliths ou 1 balor
+
+step: Il peut préparer le terrain
+  do: Choisir une étendue profonde et utiliser contrôle de l'eau pour en modifier le niveau ; préparer le climat bien avant l'arrivée des intrus
+  note: Le changement météorologique n'est pas immédiat. Garder un accès à l'eau et une destination de téléportation connue sur le même plan.
+
+step: Des intrus approchent et il dispose du temps nécessaire
+  do: Utiliser détection du Bien et détection de la Loi pour reconnaître leurs auras, puis convoquer un balor si un renfort est nécessaire
+  note: Placer les démons présents entre les intrus et lui ; coordonner leurs positions par télépathie. Les compagnons d'une troupe sont distincts de la convocation quotidienne.
+
+## Ouverture
+
+note: Choix de l'action
+  Choisir l'ouverture adaptée à la situation : un seul pouvoir principal dans le round. La tempête de grêle accélérée peut s'y ajouter en action rapide.
+
+step: Les protections magiques adverses empêchent ses pouvoirs de fonctionner
+  do: Employer dissipation suprême sur l'adversaire dont les protections gênent le plus son attaque
+  note: Reprendre ensuite l'offensive ; ne pas gaspiller implosion sur une cible manifestement protégée contre elle.
+
+step: Plusieurs ennemis non mauvais sont à 12 m ou moins
+  do: Lancer blasphème, DD 26 ; ajouter la tempête de grêle accélérée si elle peut frapper plusieurs ennemis sans gêner ses alliés
+  note: Blasphème dépend du NLS 20 : les créatures de plus de 20 dés de vie ne sont pas affectées. Les démons alliés, mauvais, ne sont pas des cibles de ce pouvoir.
+
+step: Une cible vivante et corporelle particulièrement dangereuse est visible à 22,50 m ou moins
+  do: Déclencher implosion sur elle, Vigueur DD 28
+  note: Privilégier un ennemi dont la Vigueur paraît faible ; se placer à couvert derrière ses alliés avant d'engager la concentration.
+
+## Rounds suivants
+
+step: Implosion est active et il peut poursuivre sa concentration
+  do: Consacrer son action principale à maintenir le pouvoir et choisir une nouvelle cible à portée, Vigueur DD 28
+  note: Compter le round initial dans la limite de quatre rounds. Une même créature ne peut être visée qu'une fois par cette utilisation, même si elle réussit son jet.
+
+step: Plusieurs ennemis vulnérables à blasphème restent proches
+  do: Répéter blasphème, DD 26, tant que leurs dés de vie permettent un effet utile
+  note: Ce pouvoir est à volonté ; ne pas préférer automatiquement la mêlée à une nouvelle attaque contre plusieurs adversaires.
+
+step: Un ennemi est à portée du trident et Vepar peut consacrer tout son round aux attaques
+  do: Attaque à outrance au trident +2 : +35/+30/+25/+20, dégâts 2d6+13 par touche, critique 19–20
+  note: Exploiter l'allonge de 3 m. Les deux griffes constituent une autre routine d'attaque, avec le toucher hypothermique, dont les effets doivent être disponibles avant de l'appliquer.
+
+step: Il doit avancer pour frapper deux adversaires adjacents l'un à l'autre
+  do: Se déplacer puis utiliser Enchaînement au trident : une attaque +35, puis une attaque contre le second si la première touche et que les deux sont à portée
+  note: Enchaînement remplace l'attaque à outrance et impose un malus de 2 à la CA jusqu'à son prochain tour.
+
+step: Des adversaires se regroupent devant lui à courte distance
+  do: Employer terreur dans un cône de 9 m, Volonté DD 23, pour disperser leur formation
+
+step: Les ennemis restent sur la rive ou dominent le combat depuis les airs
+  do: Rejoindre l'eau profonde ; employer contrôle de l'eau contre leurs accès et contrôle des vents au-dessus de la surface contre les volants ou les tirs
+  note: Contrôle des vents a un DD de 24. Utiliser ses 18 m de nage pour changer d'angle et obliger les intrus à se déplacer.
+
+## Repli
+
+step: Ses points de vie tombent à 90 ou moins sur 363, ou il risque d'être neutralisé avant son prochain tour
+  do: Abandonner sa concentration si nécessaire et utiliser téléportation suprême vers son refuge connu sur le même plan
+  note: Ce pouvoir emporte seulement Vepar et au plus 22,7 kg d'objets ; il n'évacue pas ses alliés. Leur ordonner de couvrir son départ par télépathie.
+
+step: La téléportation est empêchée
+  do: Plonger et s'éloigner à la nage, à 18 m par déplacement, en cherchant un obstacle qui coupe les lignes de vue
+  note: Employer dissipation suprême si une entrave magique dissipable interdit la fuite ; tenter à nouveau la téléportation dès que possible.

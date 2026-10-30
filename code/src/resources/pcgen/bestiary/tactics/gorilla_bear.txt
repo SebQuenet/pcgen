@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Gorilla Bear, créature magique de taille G des forêts chaudes, neutre et d'intelligence animale ; FP 5, 42 pv, CA 16.
+  Deux griffes +8 (1d8+5 et étreinte), morsure +8 (1d8+5), constriction (1d8+5).
+  Déplacement de 9 m ; espace occupé de 3 m et allonge de 1,50 m.
+
+step: Une présence approche
+  do: Repérer la proie avec Perception +9 et l'odorat, puis s'approcher à couvert de la végétation
+  note: Vision dans le noir à 18 m et vision nocturne ; aucune attaque à distance.
+
+## Ouverture
+
+step: Un adversaire est accessible après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à 1,50 m et porter une attaque de griffe +8 (1d8+5 et étreinte)
+  note: Après un déplacement supérieur à un pas de 1,50 m, il ne porte pas ses trois attaques ce round.
+
+step: Un adversaire est déjà à portée, éventuellement après un pas de 1,50 m
+  do: Faire une attaque à outrance avec les deux griffes +8 et la morsure +8, chacune infligeant 1d8+5
+
+step: Une griffe touche une créature de taille M ou inférieure
+  do: Tenter immédiatement l'étreinte pour engager une lutte sans provoquer d'attaque d'opportunité
+  note: Une étreinte réussie inflige aussi les dégâts de constriction, soit 1d8+5.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et choisir de lui infliger les dégâts d'une griffe, soit 1d8+5
+  note: Chaque test de lutte réussi pour maintenir la prise ajoute la constriction, soit 1d8+5 supplémentaires ; maintenir la lutte remplace l'attaque à outrance.
+
+step: La proie se libère et reste à portée
+  do: Reprendre les attaques à outrance et tenter de l'agripper de nouveau dès qu'une griffe touche
+
+step: Aucun adversaire n'est à portée
+  do: Se rapprocher de la cible accessible la plus proche et porter une griffe si le déplacement le permet
+  note: Escalade +11 et Natation +11 peuvent aider à franchir un obstacle ; il ne possède ni vitesse d'escalade ni vitesse de nage indiquée.
+
+## Repli
+
+step: Points de vie à 14 ou moins et une voie de fuite est ouverte
+  do: Relâcher toute proie et utiliser le retrait pour s'éloigner vers la végétation, jusqu'à 18 m si le terrain le permet
+  note: Le retrait protège seulement la sortie de la case de départ contre les attaques d'opportunité des adversaires visibles.
+
+step: La fuite est bloquée
+  do: Attaquer l'adversaire qui barre le passage, puis se retirer dès qu'une issue se présente

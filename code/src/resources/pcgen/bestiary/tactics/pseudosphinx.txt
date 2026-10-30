@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Pseudosphinx, créature magique neutre et solitaire des déserts chauds, au corps de chat, aux ailes de faucon et à la tête de singe. 16 PV, CA 15 ; déplacement 6 m, vol 9 m par round, manœuvrabilité moyenne.
+  Morsure +2 (1d3-3), 2 griffes +2 (1d2-3) ; allonge 0 m. Privilégier mains brûlantes et frayeur : ses attaques physiques sont faibles et exigent d'entrer dans l'espace adverse.
+  Réduction des dégâts 5/magie et résistance à la magie 13 ; ces protections permettent de supporter quelques attaques, sans justifier un combat prolongé.
+
+resource: Mains brûlantes | 3/jour | NLS 5 ; cône de 4,50 m ; 5d4 dégâts de feu, Réflexes DD 12 pour moitié
+resource: Frayeur | 3/jour | NLS 5 ; portée 10,50 m ; une créature vivante de 5 DV ou moins ; Volonté DD 12, effrayée 1d4 rounds en cas d'échec, secouée 1 round en cas de réussite
+resource: Disparition | 3/jour | invisibilité pendant 5 rounds au maximum ; prend fin dès qu'il attaque, y compris avec un pouvoir offensif
+resource: Identification | 3/jour | examiner les propriétés d'objets magiques hors du combat
+resource: Détection de la magie et détection des passages secrets | à volonté | reconnaissance et recherche d'une issue ; aucun dégât
+resource: Compréhension des langages | permanent | comprendre les paroles entendues et les textes touchés ; ne permet pas de parler toutes les langues
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +11 et surveiller leurs intentions avec Psychologie +5 ; garder une issue accessible en vol.
+  note: Vision dans le noir à 18 m et vision nocturne ; il parle le commun et le sphinx et peut tenter de parlementer.
+
+step: Il dispose de temps pour explorer les lieux
+  do: Chercher les passages secrets et repérer les auras magiques avant de choisir sa position.
+  note: Garder au moins une utilisation de disparition pour le repli.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans un cône de 4,50 m
+  do: Utiliser mains brûlantes depuis une position hors de leur allonge, puis employer son déplacement pour s'éloigner en vol si possible.
+  note: Une seule utilisation de pouvoir magique par action simple ; il ne lance pas disparition dans le même round.
+
+step: Un adversaire vivant de 5 DV ou moins menace de l'approcher, à 10,50 m ou moins
+  do: Utiliser frayeur sur cet adversaire, puis se déplacer en vol pour conserver ses distances.
+  note: Les créatures de 6 DV ou plus et celles immunisées contre la peur ne sont pas des cibles utiles.
+
+step: Aucune cible intéressante n'est encore à portée
+  do: Rester hors de l'allonge ennemie ; si une approche exposée est nécessaire, utiliser disparition, puis se déplacer vers une position favorable.
+  note: Attendre un round ultérieur pour attaquer ; garder une utilisation de disparition en réserve.
+
+## Rounds suivants
+
+step: Une utilisation de mains brûlantes reste disponible et une cible est à portée
+  do: Rechercher un angle qui touche plusieurs ennemis, utiliser mains brûlantes, puis se dégager en vol avec le déplacement restant.
+  note: Ne pas traverser inutilement les espaces menacés ; il ne possède pas d'attaque en vol lui permettant de répartir librement son déplacement avant et après l'attaque.
+
+step: Un poursuivant sensible à la peur reste dangereux
+  do: Utiliser frayeur pour l'écarter et gagner de la distance pendant sa fuite.
+  note: Ne pas gaspiller une utilisation sur une cible déjà en fuite ou manifestement immunisée.
+
+step: Un ennemi occupe déjà son espace et toute fuite est impossible
+  do: En dernier recours, effectuer une attaque à outrance : morsure +2 (1d3-3) et deux griffes +2 (1d2-3).
+  note: Sans attaque à outrance, une seule attaque naturelle ; entrer dans l'espace adverse peut provoquer une attaque d'opportunité. Éviter d'activer un pouvoir magique sous la menace sans précaution.
+
+## Repli
+
+step: PV à 8 ou moins, ou pouvoirs offensifs épuisés sans victoire proche
+  do: Utiliser disparition depuis une position sûre, puis s'éloigner en vol à 9 m avec son action de mouvement ; aux rounds suivants, consacrer ses deux actions de mouvement à fuir, jusqu'à 18 m par round.
+  note: Cesser toute attaque pour conserver l'invisibilité ; rejoindre un abri avant la fin des 5 rounds. La réduction des dégâts est contournée par les attaques magiques.
+
+step: Disparition est épuisée ou un ennemi menace son activation
+  do: Se retirer en vol pour sortir du contact, puis continuer à fuir ; utiliser frayeur sur un poursuivant admissible seulement depuis une position sûre.
+  note: Si l'invisibilité n'est plus disponible, employer l'action de retraite pour limiter les attaques d'opportunité en quittant le contact.

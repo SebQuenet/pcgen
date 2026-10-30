@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Thermite soldat, vermine extraplanaire de feu de taille M, sans Intelligence, qui combat au contact. 37 points de vie ; CA 19 ; déplacement de 9 m.
+  Morsure +6, allonge de 1,50 m : 1d8+4 dégâts plus 2d6 de feu, avec embrasement (1d6 de feu, DD 15).
+  Immunisé au feu et aux effets mentaux ; vulnérable au froid. Aucun tir ni sort indiqué.
+
+note: Perception
+  Vision dans le noir à 18 m, perception des vibrations à 18 m et sens du feu ; Perception +0.
+  Son absence d'Intelligence appelle un comportement instinctif, sans feinte ni plan complexe.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m ou moins
+  do: Le mordre avec un bonus de +6.
+  note: Sur une touche, infliger 1d8+4 dégâts plus 2d6 de feu et résoudre l'embrasement (1d6 de feu, DD 15).
+
+step: Un ennemi peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à portée de morsure, puis attaquer.
+
+step: Aucun ennemi ne peut être atteint après un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour se rapprocher.
+  note: Ce round est consacré au déplacement ; aucune morsure après le double déplacement.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter la morsure +6 chaque round, avec ses dégâts de feu et son embrasement.
+  note: L'embrasement ne demande pas d'action distincte ; ne pas lui attribuer de durée absente du bloc fourni.
+
+step: La cible tombe ou quitte sa portée
+  do: Se tourner vers un autre adversaire accessible ou avancer jusqu'à 9 m pour retrouver le contact, puis mordre si possible.
+
+step: Aucun adversaire n'est accessible avec un seul déplacement
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m.
+
+## Repli
+
+step: Ses points de vie diminuent mais il peut encore combattre
+  do: Poursuivre les morsures selon son comportement instinctif.
+  note: Aucun seuil de fuite ni comportement de retraite particulier n'est fourni ; ne pas lui prêter un repli tactique élaboré.
+
+resource: Spasmes d'agonie | à la mort | capacité indiquée, mais portée, dégâts et éventuel DD absents du bloc fourni ; ne pas inventer ces paramètres.

@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Arbre sorcier, plante de taille TG, chaotique mauvaise et intelligente, FP 10. Il affaiblit les groupes en manipulant leurs membres humanoïdes, puis frappe avec ses quatre vrilles.
+  127 pv ; CA 23 ; quatre vrilles +18, chacune infligeant 1d8+8 et permettant une étreinte. Allonge et espace occupé : 4,50 m ; déplacement : 6 m.
+  Réduction des dégâts 10/magie ; résistances au feu et à l’électricité 10 ; résistance à la magie 21 ; immunités des plantes. Sa lenteur rend la poursuite peu avantageuse.
+
+resource: Charme-personne | 5/jour | pouvoir magique, action simple, Volonté DD 15 ; NLS 15, concentration +19
+resource: Domination de personne | 2/jour | pouvoir magique, action simple, Volonté DD 19 ; NLS 15, concentration +19
+
+step: Des intrus approchent sans avoir engagé le combat
+  do: Les observer avec Perception +19 et Psychologie +16 ; parler pour identifier un humanoïde influençable et les combattants les plus dangereux.
+  note: Bluff +14 et Diplomatie +14 permettent de préparer une approche trompeuse ; aucune discrétion surnaturelle n’est indiquée.
+
+step: Un humanoïde peut être approché avant les hostilités
+  do: Employer charme-personne pour obtenir sa confiance et l’inciter à approcher à portée des vrilles.
+  note: Le charme rend la cible amicale, sans en faire un esclave ; il ne permet pas d’exiger qu’elle attaque ses compagnons. Les menaces de l’arbre ou de ses alliés donnent à la cible un bonus de +5 à sa sauvegarde.
+
+## Ouverture
+
+step: Un humanoïde dangereux reste hors de portée des vrilles
+  do: Employer domination de personne, Volonté DD 19, de préférence sur un combattant capable de retenir ses compagnons.
+  note: En cas de réussite, lui ordonner de bloquer leur progression ou de combattre à la défense de l’arbre. Les deux pouvoirs mentaux ciblent uniquement les humanoïdes.
+
+step: Un ennemi est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance avec les quatre vrilles +18, chacune pour 1d8+8 ; tenter une étreinte après une touche contre une cible de taille G ou inférieure, avec lutte +25.
+  note: Privilégier une cible vulnérable ou isolée. L’étreinte ne confère aucune constriction et ne produit pas de dégâts supplémentaires automatiques.
+
+## Rounds suivants
+
+step: Des ennemis restent à portée et l’arbre ne maintient pas de lutte
+  do: Répéter les quatre attaques de vrilles ; si nécessaire, faire un pas de placement de 1,50 m pour conserver une attaque à outrance.
+  note: Contre une défense facile à toucher, Attaque en puissance donne quatre vrilles +15, chacune pour 1d8+14.
+
+step: Une victime est agrippée et son immobilisation est prioritaire
+  do: Consacrer une action simple au maintien de la lutte, avec le bonus de maintien applicable ; sur réussite, choisir de lui infliger les dégâts d’une vrille.
+  note: Cette action remplace l’attaque à outrance du round. Relâcher la victime si la lutte empêche de répondre à une menace plus pressante.
+
+step: La première domination a échoué ou une seconde cible humanoïde mérite d’être contrôlée
+  do: Dépenser la seconde domination de personne depuis une position où l’emploi du pouvoir n’expose pas inutilement aux attaques d’opportunité.
+  note: Une cible dominée peut résister aux ordres contraires à sa nature avec une nouvelle sauvegarde à +2 ; elle refuse les ordres manifestement suicidaires.
+
+step: Les adversaires restent hors de portée
+  do: Faire agir les créatures dominées ; avancer de 6 m si cela permet ensuite de frapper avec une vrille.
+  note: Après un déplacement normal, une seule attaque est possible. Éviter une poursuite prolongée contre des ennemis plus rapides.
+
+## Repli
+
+step: Les points de vie tombent sous 32 et le combat tourne à son désavantage
+  do: Relâcher toute prise et utiliser le retrait pour parcourir jusqu’à 12 m vers un couvert accessible ; ordonner aux éventuels dominés de retenir les poursuivants.
+  note: Le retrait protège seulement contre les attaques d’opportunité liées à la case de départ ; la lenteur de l’arbre rend ses serviteurs précieux pour couvrir sa fuite.
+
+step: Aucune fuite praticable n’existe
+  do: Concentrer les quatre vrilles sur l’adversaire qui bloque le passage ; employer une domination restante si un humanoïde peut ouvrir une issue.

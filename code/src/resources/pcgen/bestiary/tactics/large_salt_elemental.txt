@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire de sel de taille G, neutre, à l'intelligence limitée ; il privilégie le corps à corps et les ennemis regroupés.
+  45 PV, CA 17, réduction des dégâts 5/— ; immunités liées aux traits des élémentaires et vulnérabilité à l'eau.
+  Deux griffes +9, chacune infligeant 1d8+4 dégâts tranchants et un empoisonnement au sel (DD 15, durée 9 rounds).
+  Déplacement de 6 m ; espace occupé de 3 m et allonge de 3 m ; vision dans le noir à 18 m.
+
+resource: Aura de déshydratation | permanente | rayon de 3 m, DD 15, 1d8
+resource: Empoisonnement au sel | chaque griffe qui touche | DD 15, durée 9 rounds
+
+step: Le terrain permet de choisir sa position
+  do: Occuper un passage sec où plusieurs adversaires devront approcher à moins de 3 m
+  note: Éviter les points d'eau et garder un passage sec pour une éventuelle retraite
+
+## Ouverture
+
+step: Aucun ennemi n'est à portée des griffes
+  do: Avancer de 6 m au maximum vers l'ennemi le plus proche ; porter une seule attaque de griffe +9 s'il devient accessible à 3 m
+  note: Si cette approche ne suffit pas, un double déplacement permet de parcourir 12 m, sans attaque ce round
+
+step: Un ennemi est déjà à portée sans déplacement nécessaire
+  do: Effectuer une attaque à outrance avec les deux griffes +9, chacune pour 1d8+4 dégâts et empoisonnement au sel
+  note: Maintenir les adversaires dans le rayon de 3 m de l'aura de déshydratation
+
+## Rounds suivants
+
+step: Une seule cible est à portée, éventuellement après un pas de 1,50 m
+  do: Effectuer une attaque à outrance avec les deux griffes ; concentrer les coups sur cette cible
+  note: Un déplacement ordinaire impose de se limiter à une seule attaque de griffe
+
+step: Plusieurs ennemis sont adjacents entre eux et à portée de 3 m
+  do: Utiliser Enchaînement supérieur avec une griffe ; après chaque coup qui touche, attaquer un autre ennemi adjacent au précédent et toujours à portée
+  note: Cette action remplace l'attaque à outrance ; chaque cible ne peut être frappée qu'une fois par cet enchaînement. La CA tombe à 15 jusqu'au prochain tour de l'élémentaire
+
+step: La cible paraît facile à toucher
+  do: Activer Attaque en puissance : chaque griffe passe à +7 et inflige 1d8+8 dégâts, plus l'empoisonnement au sel
+  note: Conserver les attaques normales contre une cible difficile à toucher ; Attaque en puissance peut aussi s'appliquer à Enchaînement supérieur
+
+step: Les adversaires se dispersent hors de l'aura
+  do: Poursuivre le plus proche et se replacer pour ramener plusieurs ennemis à moins de 3 m
+  note: Privilégier les trajets secs ; ne pas poursuivre une cible dans l'eau
+
+## Repli
+
+step: PV à 15 ou moins, ou exposition imminente à l'eau
+  do: Utiliser l'action de retraite pour gagner un passage sec, jusqu'à 12 m de déplacement
+  note: La réduction des dégâts 5/— aide à supporter les coups pendant le désengagement ; elle ne justifie pas de rester exposé à l'eau
+
+step: Toute retraite est coupée
+  do: Continuer à frapper la cible qui bloque le passage ; utiliser les deux griffes contre un seul obstacle ou Enchaînement supérieur contre plusieurs ennemis adjacents

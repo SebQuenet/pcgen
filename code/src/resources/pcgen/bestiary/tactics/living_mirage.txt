@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Mirage vivant, vase neutre de taille gigantesque, gazeuse et dépourvue d'intelligence. Il agit par réactions simples, sans coordination ni plan élaboré.
+  Attaque de contact +5 (8d6 et dessiccation), allonge de 6 m ; espace occupé de 6 m. Vol à 6 m par round, manœuvrabilité parfaite.
+  114 pv, CA 6 ; invisibilité naturelle, réduction des dégâts 10/magie, résistance au froid 10 et au feu 10 ; immunité aux effets sonores et immunités des vases. Vulnérable au vent.
+
+step: Aucune créature n'est localisée
+  do: Rester dissimulé par son invisibilité naturelle, sans préparer de piège ni de diversion
+  note: Perception -5 : ne pas lui attribuer une détection automatique des adversaires
+
+## Ouverture
+
+step: Une créature est localisée à 6 m ou moins
+  do: Porter une attaque de contact +5, infligeant 8d6 et la dessiccation
+  note: Son allonge permet d'attaquer sans venir au contact immédiat de la cible
+
+step: La créature localisée est hors de portée
+  do: Avancer en vol de 6 m au maximum, puis attaquer si elle se trouve désormais dans son allonge de 6 m
+  note: Si un déplacement simple ne suffit pas, effectuer un double déplacement de 12 m sans attaquer ce round
+
+## Rounds suivants
+
+step: Un adversaire reste dans son allonge
+  do: Répéter l'attaque de contact +5 (8d6 et dessiccation) chaque round
+  note: Le profil ne donne qu'une attaque de contact ; ne pas multiplier les attaques contre plusieurs cibles
+
+step: La cible sort de son allonge
+  do: La suivre en vol et reprendre les attaques dès qu'elle revient à 6 m ou moins
+  note: Sa vitesse de 6 m limite la poursuite ; il ne possède aucune attaque à distance indiquée
+
+step: Le mirage subit des attaques
+  do: Poursuivre ses attaques en appliquant son invisibilité naturelle, sa réduction des dégâts, ses résistances et ses immunités
+  note: Sa CA 6 le rend facile à toucher si l'adversaire parvient à le localiser ; sa nature gazeuse ne lui confère pas de défense supplémentaire chiffrée dans ce profil
+
+## Repli
+
+note: Absence de retraite organisée
+  Aucun seuil de fuite n'est indiqué. Dépourvu d'intelligence, le mirage ne prépare ni retraite tactique ni revanche ; le vent reste une faiblesse à prendre en compte.
+
+step: Il est blessé et un adversaire reste accessible
+  do: Continuer les attaques de contact tant qu'il peut agir

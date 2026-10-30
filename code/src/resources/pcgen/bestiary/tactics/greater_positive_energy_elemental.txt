@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire supérieur d'énergie positive, extérieur neutre de taille TG, solitaire : 123 pv, CA 26, réduction des dégâts 10/— et immunités élémentaires.
+  Vol à 18 m par round, bonne manœuvrabilité ; espace et allonge de 4,50 m ; initiative +13. Attaque à outrance : 2 coups +21, chacun infligeant 2d8+5 dégâts physiques et 2d8 d'énergie positive.
+
+note: Énergie positive
+  Les 2d8 supplémentaires blessent morts-vivants et créatures d'énergie négative, mais soignent les vivants. L'excédent devient des pv temporaires durant 1 minute ; atteindre le double des pv normaux impose Vigueur DD 20 ou l'explosion de la cible.
+
+note: Aura de 12 m
+  Aucun dégât automatique. Pouvoirs de classe positifs : niveau effectif +2 ; négatifs : −2. Sorts positifs maximisés ; sorts négatifs : concentration DD 15 + niveau du sort, sinon perdus. Sa propre canalisation reste inchangée.
+
+resource: Canalisation d'énergie positive | 5/jour | action simple ; rayon de 9 m ; 7d6 ; blesser les morts-vivants, Volonté DD 18 pour moitié, ou soigner les vivants, lui compris
+resource: Éclair aveuglant | à volonté, intervalle de 1d4 rounds | rayon de 3 m ; qui voit l'éclair : Vigueur DD 20 ou aveuglement pendant 1d10 rounds
+
+step: Aucune menace immédiate
+  do: Garder ses distances ; il combat rarement, sauf contre un élémentaire d'énergie négative qu'il attaque à vue
+
+## Ouverture
+
+step: Plusieurs morts-vivants sont dans un rayon de 9 m
+  do: Canaliser pour les blesser de 7d6, Volonté DD 18 pour moitié
+
+step: Des adversaires capables de voir sont à 3 m ou moins
+  do: Déclencher l'éclair aveuglant avant d'engager la mêlée
+
+step: Il doit rejoindre une cible
+  do: Utiliser Attaque en vol : se déplacer, porter un seul coup +21 à 4,50 m, puis poursuivre son déplacement, dans la limite de 18 m
+  note: Privilégier l'élémentaire d'énergie négative ; éviter de terminer à portée des armes adverses.
+
+## Rounds suivants
+
+step: Une cible reste à 4,50 m ou moins et il peut rester sur place
+  do: Attaque à outrance, 2 coups +21, chacun à 2d8+5 plus 2d8 d'énergie positive
+  note: Contre un vivant, appliquer les dégâts physiques puis le soin positif ; surveiller les pv temporaires et le seuil d'explosion.
+
+step: Rester au contact l'exposerait à plusieurs attaques
+  do: Utiliser Attaque éclair : approcher, porter un seul coup, puis s'éloigner ; déplacement total maximal de 18 m
+  note: La cible de cette attaque ne peut pas lui porter d'attaque d'opportunité pendant ce déplacement.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Frapper d'un coup +21 ; Attaques réflexes permet jusqu'à 10 attaques d'opportunité par round, selon les occasions
+
+step: L'éclair est de nouveau disponible et un ennemi voyant se trouve à 3 m ou moins
+  do: Réutiliser l'éclair aveuglant
+
+step: Il a perdu au moins 30 pv et dispose encore d'une canalisation
+  do: S'écarter des vivants hostiles à plus de 9 m, puis canaliser pour récupérer 7d6 pv
+  note: Cette canalisation soigne aussi les vivants présents ; choisir le soin ou les dégâts aux morts-vivants à chaque utilisation.
+
+## Repli
+
+step: Ses pv passent sous 30 et une fuite est possible
+  do: Se retirer en vol, jusqu'à 36 m avec l'action de retraite ; une fois à distance, employer une canalisation restante pour se soigner
+
+step: Il est tué
+  do: Résoudre les spasmes d'agonie dans un rayon de 12 m : 6d8 d'énergie positive, Réflexes DD 20 pour moitié contre les dégâts
+  note: Les vivants sont soignés, avec les règles d'excédent et d'explosion ; tous font Vigueur DD 20 ou sont aveuglés pendant 1d10 rounds.

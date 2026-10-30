@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Cultiste humaine de Magnimar, prêtresse d'Ashava de niveau 3, chaotique bonne. Elle privilégie la neutralisation d'un adversaire et le soutien de ses compagnons.
+  20 pv ; CA 14, contact 13, prise au dépourvu 11 ; déplacement de 9 m ; allonge de 1,50 m.
+  Écharpe à lames de maître +5 (1d6+1), dague +4 (1d4+1, critique 19-20), arbalète légère +4 (1d8, critique 19-20).
+
+resource: Sorts de niveau 2 | 1 de chaque | cécité/surdité, Vigueur DD 15 ; restauration partielle
+resource: Sorts de niveau 1 | 1 de chaque | injonction, Volonté DD 14 ; détection des morts-vivants ; lueurs féeriques ; arme magique
+resource: Orisons | à volonté | détection de la magie, assistance divine, lumière, purification de nourriture et d'eau
+resource: Toucher des ténèbres | 6/jour | attaque de contact au corps à corps ; pendant 1 round, la cible subit 20 % de chances de rater ses attaques contre les autres créatures
+resource: Toucher du Bien | 6/jour | contact ; bonus d'aptitude de +1 aux attaques, sauvegardes et tests de caractéristique ou de compétence pendant 1 round
+resource: Potion de soins légers | 1 | rend 1d8+1 pv
+resource: Carreaux d'arbalète | 20 | un carreau par tir
+
+step: Une discussion reste possible
+  do: Chercher à désamorcer l'affrontement avec Diplomatie +6, en commun ou en varisien
+
+step: Le combat est imminent et elle dispose d'un round de préparation
+  do: Lancer arme magique sur son écharpe à lames
+  note: Pendant 3 minutes, l'attaque reste à +5 et les dégâts passent à 1d6+2 ; le bonus d'attaque ne se cumule pas avec celui de l'arme de maître
+
+step: Elle soupçonne la présence de morts-vivants avant l'affrontement
+  do: Utiliser détection des morts-vivants pour examiner les lieux
+  note: Injonction et cécité/surdité exigent une cible vivante
+
+## Ouverture
+
+step: Un adversaire vivant dangereux est visible à 39 m ou moins
+  do: Lancer cécité/surdité en choisissant la cécité, de préférence sur un tireur ou un lanceur de sorts
+  note: Vigueur DD 15 annule ; privilégier une cible qui semble peu robuste. La cécité persiste jusqu'à ce qu'elle soit dissipée ou que la prêtresse mette fin au sort
+
+step: Un adversaire se dissimule par invisibilité, flou ou déplacement et sa position est repérée
+  do: Donner priorité aux lueurs féeriques sur sa position, dans une explosion de 1,50 m de rayon
+  note: Aucun jet de sauvegarde ; résistance à la magie applicable. Pendant 3 minutes, les créatures touchées perdent le camouflage procuré par ces effets
+
+step: Un ennemi vivant approche à 9 m ou moins et comprend le commun ou le varisien
+  do: Si la neutralisation immédiate prime, lancer injonction pour lui ordonner de s'immobiliser
+  note: Volonté DD 14 annule ; en cas d'échec, il reste sur place et ne peut agir pendant 1 round, sans être sans défense
+
+## Rounds suivants
+
+step: Elle peut rester à distance après avoir employé ses sorts prioritaires
+  do: Tirer à l'arbalète légère +4 (1d8, critique 19-20), puis recharger
+  note: La recharge demande une action de mouvement ; tirer et recharger sur ce tour ne laisse normalement qu'un pas de 1,50 m pour se déplacer
+
+step: Un ennemi arrive au contact
+  do: Attaquer avec l'écharpe à lames +5 (1d6+1, ou 1d6+2 sous arme magique)
+  note: La dague +4 (1d4+1, critique 19-20) sert de solution de secours si l'écharpe est indisponible
+
+step: Un combattant au contact menace surtout ses alliés
+  do: Remplacer son attaque d'arme par un toucher des ténèbres contre lui
+  note: L'effet dure seulement 1 round ; il gêne ses attaques, sans créer de zone d'obscurité
+
+step: Un allié adjacent peut mieux exploiter son prochain tour qu'elle
+  do: Lui accorder un toucher du Bien au lieu d'attaquer
+  note: Le bonus de +1 dure 1 round ; il ne s'ajoute ni aux dégâts ni à la CA
+
+step: Elle doit lancer un sort alors qu'un ennemi la menace
+  do: Faire d'abord un pas de 1,50 m si cela suffit à sortir de toutes les allonges adverses
+  note: Si elle reste menacée, lancer sur la défensive exige un test de concentration +6, DD 17 pour un sort de niveau 1 ou DD 19 pour un sort de niveau 2
+
+## Repli
+
+step: Ses points de vie tombent à 7 ou moins, ou ses alliés sont débordés
+  do: Se désengager par une retraite pouvant atteindre 18 m, vers un couvert ou derrière ses compagnons
+  note: La retraite protège seulement la sortie de la case initiale. Souplesse du serpent porte sa CA à 18 contre les attaques d'opportunité provoquées par ses déplacements, sans les supprimer
+
+step: Elle est blessée et peut se soigner hors de portée immédiate
+  do: Boire sa potion de soins légers, puis poursuivre le repli
+  note: Boire prend une action simple ; ne pas s'arrêter au contact pour le faire
+
+step: Le groupe a gagné un endroit sûr
+  do: Employer restauration partielle sur un allié souffrant de fatigue ou de dégâts de caractéristique ; proposer une trêve si les poursuivants acceptent de parler
+  note: Restauration partielle demande 3 rounds d'incantation et ne rend pas de pv

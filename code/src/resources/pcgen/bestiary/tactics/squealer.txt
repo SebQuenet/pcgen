@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Le Squealer est une grande créature magique des forêts tempérées, un prédateur instinctif qui combat au contact. Il possède 114 points de vie et une CA de 17.
+  Attaque à outrance : 2 griffes +17 (1d6+6, critique 19–20) et morsure +17 (1d8+6 et étreinte). Deux griffes qui touchent la même cible déclenchent une éventration infligeant 1d6+12 dégâts supplémentaires.
+  Pattes arrière : 2 griffes +17 (1d6+6, critique 19–20) utilisables contre une proie déjà agrippée au début de son tour.
+  Déplacement au sol de 12 m, escalade de 9 m ; espace occupé de 3 m et allonge de 1,50 m. Vision dans le noir à 18 m et vision nocturne.
+
+step: Des proies approchent en forêt
+  do: Se dissimuler dans la végétation avec Discrétion +16 et attendre qu'une proie s'écarte du groupe.
+  note: Hors des forêts, sa Discrétion tombe à +4 ; Perception +10 pour repérer les intrus.
+
+step: Les proies restent à distance
+  do: Utiliser son imitation sonore pour tenter de les attirer vers sa cachette.
+  note: Cette faculté ne force personne à approcher et ne constitue pas une attaque sonore.
+
+step: Un arbre permet de préparer une embuscade
+  do: Grimper pour attendre à couvert ou contourner les proies, puis rejoindre une position permettant le contact.
+  note: Escalade +20 ; sa position en hauteur n'augmente pas son allonge.
+
+## Ouverture
+
+step: Une proie est accessible après un déplacement
+  do: S'approcher et porter une morsure +17 (1d8+6), puis tenter l'étreinte si elle touche une cible admissible.
+  note: L'étreinte permet une tentative de lutte gratuite après la morsure ; elle ne garantit pas la saisie. Par défaut, elle fonctionne contre une créature de taille M ou inférieure.
+
+step: Une proie est déjà à portée sans déplacement important
+  do: Effectuer une attaque à outrance sur elle : deux griffes et une morsure ; appliquer l'éventration si les deux griffes touchent, puis tenter l'étreinte si la morsure touche.
+  note: Il ne dispose pas de bond : une charge ou un déplacement ordinaire ne permet pas de porter toute cette série d'attaques. Les pattes arrière ne s'ajoutent pas au tour où il commence la lutte.
+
+## Rounds suivants
+
+step: Il commence son tour en agrippant une proie
+  do: Tenter de maintenir la lutte, choisir de lui infliger les dégâts de morsure en cas de réussite et utiliser les deux attaques de pattes arrière contre elle.
+  note: Pattes arrière : 2 griffes +17 (1d6+6, critique 19–20). Ne pas ajouter automatiquement une attaque à outrance à l'action qui maintient la lutte.
+
+step: Aucune proie n'est agrippée et un ennemi reste à portée
+  do: Concentrer les deux griffes et la morsure sur le même ennemi pour rechercher l'éventration et une nouvelle étreinte.
+  note: Éviter de répartir les griffes entre plusieurs cibles : l'éventration exige que les deux touchent la même créature.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts des attaques au contact.
+  note: Contre une cible difficile à atteindre, conserver les attaques à +17 pour favoriser les deux touches nécessaires à l'éventration.
+
+step: Deux ennemis adjacents entre eux sont à portée et une attaque à outrance est impossible
+  do: Utiliser Enchaînement avec une griffe : si la première attaque touche, porter une seconde attaque contre l'autre ennemi.
+  note: Enchaînement demande une action simple et réduit la CA de 2 jusqu'au prochain tour ; il ne fournit pas deux griffes contre une même cible pour l'éventration.
+
+step: Un ennemi échappe au contact
+  do: Le poursuivre à 12 m au sol ou à 9 m en escalade, puis mordre si une action d'attaque reste disponible.
+  note: Il ne possède aucune attaque à distance ; utiliser les arbres et le couvert pour rejoindre sa proie.
+
+## Repli
+
+step: Ses points de vie tombent sous 30 et la proie résiste encore
+  do: Abandonner la lutte et se dégager, puis gagner le couvert de la forêt ou grimper hors de portée des poursuivants.
+  note: Ce seuil est un choix tactique du meneur. Utiliser le retrait si possible ; une retraite précipitée au contact peut provoquer des attaques d'opportunité.
+
+step: Les poursuivants perdent sa trace
+  do: Se dissimuler dans la forêt avec Discrétion +16 et cesser le combat.

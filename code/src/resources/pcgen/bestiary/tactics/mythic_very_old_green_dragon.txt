@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Dragon vert mythique très vieux, loyal mauvais, de taille gigantesque ; FP 20, rang mythique 8. Prédateur forestier intelligent, il prépare une embuscade et sépare les intrus avant de risquer la mêlée.
+  342 pv, guérison accélérée 5, CA 41, RM 31, RD 15/épique et magie ; immunités à l'acide, au poison, à la paralysie et au sommeil. Sa CA de contact de 5 rend dangereux les adversaires qui la visent.
+  Morsure +30 (4d6+19, critique 18-20, étreinte), 2 griffes +30 (2d8+13, critique 18-20), queue +28 (2d8+19), 2 ailes +28 (2d6+6). Allonge 4,50 m, ou 6 m avec la morsure ; espace occupé de 6 m.
+  Déplacement terrestre et nage 12 m, vol 75 m avec une manoeuvrabilité déplorable ; respiration aquatique. Présence terrifiante à 81 m, Volonté DD 26.
+
+resource: Sorts de niveau 1 | 8/jour | réserve commune, notamment bouclier, image silencieuse et ventriloquie ; illusions DD 17
+resource: Sorts de niveau 2 | 8/jour | réserve commune, notamment image miroir, détection de l'invisibilité et détection des pensées, DD 18
+resource: Sorts de niveau 3 | 7/jour | réserve commune à déplacement, rapidité et dissipation de la magie
+resource: Sorts de niveau 4 | 7/jour | réserve commune à porte dimensionnelle, tempête de grêle et scrutation, DD 20
+resource: Sorts de niveau 5 | 5/jour | réserve commune à métamorphose et téléportation ; conserver au moins un emplacement pour fuir
+resource: Pouvoirs magiques | à volonté | oeil du mage, charme-personne DD 17, enchevêtrement DD 17, croissance végétale, suggestion DD 19 ; NLS 21
+
+step: Des intrus approchent et il dispose de temps
+  do: Reconnaître leurs positions avec oeil du mage ; utiliser scrutation sur une cible connue si une surveillance lointaine est nécessaire
+  do: Choisir une zone naturelle où se cacher avec camouflage et Discrétion +11, près d'une voie de fuite aérienne ou aquatique
+  note: Perception +32, perception aveugle à 18 m et vision dans le noir à 36 m ; exploiter sa vision de la végétation pour surveiller les approches
+
+step: Il peut préparer le terrain
+  do: Lancer croissance végétale pour ralentir l'approche et conserver un passage assez large pour lui, ou prévoir de survoler les plantes
+  do: Attirer un éclaireur à l'écart avec une image silencieuse ou une voix déplacée par ventriloquie
+  note: Le déplacement facilité concerne les broussailles ordinaires ; ne pas supposer qu'il ignore une végétation rendue gênante par magie
+
+step: Une conversation peut isoler une victime avant les hostilités
+  do: Tenter charme-personne sur un humanoïde, Volonté DD 17, ou suggestion, Volonté DD 19, pour lui proposer un détour plausible
+  note: Le charme crée une disposition amicale, sans donner un contrôle absolu ; éviter les demandes manifestement suicidaires
+
+step: Le combat devient imminent
+  do: Lancer un sort par round : bouclier, image miroir et détection de l'invisibilité ; terminer par déplacement puis rapidité au plus près de l'engagement
+  note: Les sorts sont lancés au NLS 11. Déplacement et rapidité durent chacun 11 rounds ; bouclier porte sa CA à 45, ou 46 avec rapidité
+
+## Ouverture
+
+step: Les intrus entrent dans son secteur préparé
+  do: Déclencher la présence terrifiante en attaquant ou en chargeant, Volonté DD 26 ; concentrer l'offensive sur un lanceur de sorts ou une cible isolée
+  note: Cette présence accompagne l'action ; ce n'est pas un sort à lancer à la place de son attaque
+
+step: Plusieurs ennemis restent groupés dans la végétation, hors de sa mêlée
+  do: Utiliser enchevêtrement, Réflexes DD 17, puis profiter des voies laissées libres pour approcher une victime séparée de ses alliés
+  note: Choisir plutôt tempête de grêle si ralentir et blesser immédiatement le groupe est plus utile ; son NLS 11 risque toutefois d'échouer contre une forte résistance à la magie
+
+step: Il doit s'approcher sans rester au milieu du groupe
+  do: Effectuer une attaque en vol : se déplacer, porter une seule morsure à 6 m, puis poursuivre son mouvement vers un espace dégagé
+  note: Attaque en vol ne donne pas une attaque à outrance et ne supprime pas les attaques d'opportunité ; prévoir une trajectoire simple avec sa manoeuvrabilité déplorable
+
+## Rounds suivants
+
+step: Une cible prioritaire est à portée et il peut rester sur place
+  do: Faire une attaque à outrance : morsure, deux griffes, queue et deux ailes, en concentrant les coups sur cette cible
+  note: Les bonus du profil sont ceux sans améliorations ; rapidité ajoute +1 aux attaques et une morsure supplémentaire lors d'une attaque à outrance
+  note: Employer Attaque en puissance contre une cible facile à toucher ; appliquer Coup critique aveuglant lorsqu'un critique est confirmé
+
+step: La morsure touche une cible d'une catégorie de taille inférieure à la sienne ou plus petite
+  do: Tenter l'étreinte gratuite avec son BMO de lutte de +42 si immobiliser cette victime vaut le risque de rester engagé
+  note: Il subit lui aussi les contraintes d'une lutte ordinaire ; renoncer à la prise ou la relâcher si les autres ennemis peuvent le cerner
+
+step: Il faut continuer à se déplacer ou les combattants ennemis se regroupent sur lui
+  do: Reprendre les passages avec Attaque en vol, en visant les personnages isolés ; utiliser les obstacles naturels pour gêner les poursuivants
+  note: Un déplacement ordinaire ne permet pas de conserver toute sa séquence d'attaques naturelles ; réserver l'attaque à outrance aux rounds où il peut la réaliser
+
+step: Une protection magique rend sa cible difficile à atteindre ou neutralise son avantage
+  do: Tenter une dissipation de la magie ciblée, puis reprendre les attaques physiques au round suivant
+  note: Le test de dissipation est limité à +10 pour ce sort ; ne pas gaspiller plusieurs rounds contre des protections trop puissantes
+
+step: Des adversaires restent hors de portée ou tentent de le contourner
+  do: Repositionner le combat par croissance végétale ou enchevêtrement ; lancer tempête de grêle sur des ennemis regroupés si cela permet de les retenir
+  note: Choisir entre contrôle, sort offensif et attaque : chacun consomme son action ; les pouvoirs à volonté ne donnent pas d'actions supplémentaires
+
+step: Ses protections arrivent à expiration et le combat reste favorable
+  do: Renouveler déplacement ou image miroir depuis une position protégée, puis rapidité si une nouvelle attaque à outrance est probable
+  note: Sa guérison accélérée rend 5 pv par round, jusqu'à 342 pv ; sa résistance à la magie et sa réduction des dégâts ne suffisent pas à absorber une concentration d'attaques
+
+## Repli
+
+step: Ses points de vie passent sous 100, ou les ennemis menacent de l'abattre avant son prochain tour
+  do: Relâcher toute prise et lancer téléportation vers un refuge connu ; partir plus tôt si ses protections sont dissipées et que les attaques adverses traversent ses défenses
+  note: Ce seuil est une décision tactique. Téléportation utilise un emplacement de niveau 5 et reste soumise à la familiarité du lieu ; elle n'est pas une réaction immédiate
+
+step: La téléportation est indisponible et une autre sortie reste possible
+  do: Utiliser porte dimensionnelle pour franchir un obstacle et sortir de vue ; à défaut, fuir en vol à 75 m ou plonger et nager à 12 m
+  note: Après porte dimensionnelle, aucune autre action avant son prochain tour. Sous l'eau, il respire sans limite ; hors de portée, laisser la guérison accélérée réparer ses blessures avant d'envisager une nouvelle embuscade

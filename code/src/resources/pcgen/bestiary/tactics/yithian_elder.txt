@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Yithian Elder, aberration de grande taille, loyal neutre, FP 13 : intelligence exceptionnelle, observation et contrôle mental avant l'affrontement direct.
+  Fusil à foudre +16 contre la CA de contact, 10d12 d'électricité ; deux pinces +21, chacune 2d8+12, critique x3 ; allonge de 3 m.
+  180 PV, CA 27, guérison accélérée 5 ; réduction des dégâts 10/magie ; résistances à l'acide, au froid et au feu de 10. Déplacement de 6 m, escalade de 3 m.
+
+resource: Magie psychique | 22 PE par jour | réserve commune ; NLS 19, concentration +27
+resource: Hypercognition | 2 PE | analyse et tests de connaissances
+resource: Forteresse intellectuelle III | 6 PE | défense contre peur, émotions et dégâts mentaux
+resource: Barrière mentale V | 6 PE | défense physique brève
+resource: Bouclier de pensées V | 6 PE | défense mentale durable
+resource: Échange mental majeur | 9 PE | Volonté DD 29
+resource: Sonde mentale | 4 PE | Volonté DD 24 ; interroger un prisonnier
+resource: Vision à distance | 5 PE | reconnaissance préalable
+resource: Pouvoirs magiques | à volonté | détection des pensées DD 18, immobilisation de monstre DD 21, modification de mémoire DD 21, projection astrale sur lui-même
+
+step: Les intrus sont repérés avant l'affrontement
+  do: Observer avec Perception +32 et détection des pensées ; communiquer par télépathie jusqu'à 30 m pour cerner leurs intentions ou négocier.
+  note: Vision à 360°, perception aveugle et vision dans le noir à 18 m ; il ne peut pas être pris en tenaille. La perception aveugle localise une présence sans supprimer son camouflage.
+
+step: Le terrain permet de choisir sa position
+  do: Garder une ligne de tir dégagée et une retraite accessible ; utiliser l'escalade pour atteindre une position difficile à charger.
+  note: Sa lenteur rend une poursuite défavorable ; préparer le terrain vaut mieux que compter sur sa vitesse.
+
+step: Un affrontement mental paraît imminent
+  do: Activer bouclier de pensées V pour 6 PE juste avant le combat.
+  note: Pendant 19 rounds, +8 aux sauvegardes de Volonté contre les effets mentaux et protection contre la lecture des pensées ; le sort cesse dès qu'une telle sauvegarde échoue. Il reste 16 PE si la réserve était intacte.
+
+## Ouverture
+
+step: Une cible prioritaire est exposée et aucun ennemi ne le menace au corps à corps
+  do: Tirer au fusil à foudre sur le lanceur de sorts ou l'adversaire le plus dangereux : +16 contre la CA de contact, 10d12 d'électricité.
+  note: Éviter une cible dont la protection contre l'électricité est connue ; concentrer les tirs plutôt que répartir les dégâts.
+
+step: Un combattant menace de le rejoindre ou doit être capturé vivant
+  do: Employer immobilisation de monstre sur lui, Volonté DD 21, puis se déplacer vers une meilleure position si nécessaire.
+  note: Choisir cette action à la place du tir ; la cible peut tenter une nouvelle sauvegarde chaque round, avec une action complexe.
+
+## Rounds suivants
+
+step: Les ennemis restent hors de son allonge
+  do: Continuer les tirs sur la même cible ; changer de position selon les couverts et les approches ennemies.
+
+step: Un adversaire reste à 3 m ou moins et il peut consacrer le round à attaquer
+  do: Faire une attaque à outrance avec les deux pinces +21, chacune infligeant 2d8+12, critique x3.
+  note: Exploiter son allonge pour porter les attaques d'opportunité permises par les déplacements ennemis.
+
+step: Il doit se déplacer avant de frapper avec une pince
+  do: Employer Frappe décisive sur son unique attaque : +21, 4d8+12.
+  note: Les dés supplémentaires de ce don ne sont pas multipliés sur un critique.
+
+step: Une salve d'attaques physiques menace de l'abattre et il reste au moins 6 PE
+  do: Activer barrière mentale V en action immédiate.
+  note: Pendant 1 round, bonus de bouclier de +8 à la CA et 50 % de chances d'annuler les dégâts supplémentaires d'un critique ou d'une attaque sournoise.
+
+step: Une attaque de peur, d'émotion ou infligeant des dégâts mentaux menace sa position
+  do: Employer forteresse intellectuelle III en action immédiate pour 6 PE si cette défense est préférable.
+  note: Pendant 1 round, dans un rayon de 6 m, elle supprime peur et émotions et réduit de moitié les dégâts des effets mentaux. Une seule action immédiate est disponible avant son prochain tour.
+
+step: L'électricité est inefficace ou un adversaire doit être neutralisé
+  do: Revenir à immobilisation de monstre, Volonté DD 21, ou aux pinces selon la distance.
+  note: Les immobilisations à volonté économisent les PE ; conserver une défense de 6 PE tant que possible.
+
+## Repli
+
+step: Les PV passent sous 60 ou la position devient intenable
+  do: Se retirer vers un couvert, jusqu'à 12 m sur terrain dégagé avec l'action de retraite ; emprunter une voie d'escalade si elle gêne les poursuivants.
+  note: Si le chemin est libre mais qu'un poursuivant approche, l'immobiliser puis se déplacer de 6 m. La guérison accélérée rend 5 PV par round une fois à l'abri.
+
+step: Une fuite par transfert mental est envisagée
+  do: Réserver échange mental majeur et projection mentale à une opération préparée hors de la mêlée.
+  note: L'échange majeur demande 1 minute et vise normalement un autre yithian ; la projection mentale exige son dispositif spécial. La projection astrale laisse le corps physique derrière elle.
+
+step: Il a obtenu un prisonnier et peut agir sans menace immédiate
+  do: Utiliser sonde mentale pour 4 PE, Volonté DD 24, puis modification de mémoire, Volonté DD 21, pour brouiller un souvenir précis de la rencontre.

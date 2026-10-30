@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Phantasm, mort-vivant incorporel chaotique mauvais, intelligent et malveillant, qui cherche à détruire les créatures bonnes en s'emparant de leur corps.
+  114 pv ; CA 18, contact 18 ; initiative +9. Vol parfait à 18 m par déplacement ; vision dans le noir à 18 m.
+  Contact incorporel +17 à 1,50 m : 1d6+2 dégâts et absorption d'énergie, 1 niveau négatif ; DD 19 pour empêcher sa permanence. La possession constitue son attaque prioritaire.
+
+resource: Possession | 1 tentative par round | contact incorporel réussi, puis Volonté DD 21 ; fonctionne sur une créature du plan Matériel, sans réceptacle
+resource: Auras | permanentes | aura de profanation à 3 m ; aura contre nature à 9 m
+
+step: Des intrus approchent
+  do: Les observer depuis un endroit sombre et abrité, avec Discrétion +20 et Perception +21 ; repérer une cible accessible et une issue par une cloison mince
+  note: Ses auras peuvent trahir sa proximité ; il n'est pas invisible.
+
+## Ouverture
+
+step: Une cible vivante est accessible avec un déplacement
+  do: Voler jusqu'à 1,50 m d'elle et tenter la possession par un contact incorporel +17
+  note: Privilégier un adversaire isolé ou dont la résistance mentale paraît faible ; aucun pouvoir ne lui révèle les sauvegardes ennemies.
+
+step: La cible résiste à la possession
+  do: Choisir un autre adversaire pour la prochaine tentative
+  note: Une réussite au jet de Volonté initial immunise cette cible contre sa possession pendant une journée.
+
+## Rounds suivants
+
+step: Il possède un hôte
+  do: Contrôler ses mouvements et le retourner contre ses compagnons
+  note: L'hôte subit automatiquement 1 niveau négatif par round et peut tenter chaque round Volonté DD 19 pour expulser le phantasm.
+
+step: L'hôte meurt ou le phantasm est expulsé
+  do: Chercher un nouvel hôte et tenter de le posséder dès qu'une attaque de contact est possible
+  note: Après une expulsion réussie par l'hôte, attendre 1 minute avant de tenter de posséder à nouveau ce même hôte.
+
+step: Aucune cible accessible ne peut être possédée
+  do: Porter un contact incorporel +17 par round contre une créature vivante pour cumuler les niveaux négatifs
+  note: Chaque contact inflige 1d6+2 dégâts et 1 niveau négatif ; le DD 19 ne permet pas d'annuler immédiatement ce niveau négatif.
+
+step: Plusieurs adversaires l'entourent alors qu'il est sans hôte
+  do: Se déplacer vers une cible isolée, en utilisant le vol et les obstacles pour réduire le nombre d'assaillants au contact
+  note: Un déplacement suivi d'une attaque termine son mouvement ; il ne dispose pas d'Attaque en vol.
+
+## Repli
+
+step: Moins de 30 pv, sans hôte, et les ennemis continuent à le blesser
+  do: Consacrer son tour à fuir en vol, traverser une cloison mince grâce à son incorporealité et rompre la ligne de vue
+  note: Sa vitesse de vol est de 18 m par déplacement ; il cherche ensuite à se dissimuler avec Discrétion +20.
+
+note: Référence
+  Possession et comportement décrits dans Tome of Horrors Complete, reproduits sur https://www.d20pfsrd.com/bestiary/monster-listings/undead/phantasm/

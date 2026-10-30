@@ -1,0 +1,93 @@
+## Avant le combat
+
+note: Profil
+  Oitos, kyton loyal mauvais de FP 11, séducteur patient qui attire des victimes choisies pour enrichir sa collection de squelettes dorés. 149 PV ; CA 25, contact 15, pris au dépourvu 20.
+  Deux griffes +17, chacune à 1d6+11 plus 2d6 de froid, critique sur 19–20 ; lanières animées +17, à 2d4+11 plus 2d6 de froid. Allonge de 1,50 m, ou 3 m avec les lanières.
+  Marche à 12 m ; vol constant à 18 m, bonne manœuvrabilité. Il voit dans les ténèbres, y compris magiques ; son regard peut rendre nauséeux à 9 m.
+
+note: Défenses
+  Régénération 5, neutralisée par les armes et sorts du Bien ; immunité au froid ; résistance à la magie 22.
+  Réduction des dégâts 10, surmontée par une attaque à la fois contondante et en argent, ou à la fois contondante et alignée sur le Bien.
+
+resource: Vol | constant | déplacement aérien à 18 m
+resource: Ténèbres profondes | à volonté | préparer un couvert qu'il peut lui-même traverser en voyant
+resource: Charme-monstre | 3/jour | Volonté DD 19
+resource: Ancre dimensionnelle | 3/jour | rayon de contact à distance contre une cible susceptible de fuir entre les plans ou par téléportation
+resource: Mauvais œil | 1/jour | Vigueur DD 21 ; effets selon les DV de la victime
+resource: Convocation de monstres V | 1/jour | créatures mauvaises uniquement
+resource: Marche des ombres | 3/jour | déplacement entre les rencontres et fuite une fois à couvert
+resource: Changement de plan | à volonté | plans Matériel, de l'Ombre ou mauvais ; créatures loyales uniquement
+
+step: Une victime peut être abordée sans hostilité
+  do: L'attirer à l'écart par des promesses et Charme-monstre, puis choisir un lieu favorable au vol et aux ténèbres
+  note: Bluff et Diplomatie +21 ; le charme rend la victime amicale, sans lui imposer de combattre ses compagnons ni d'accepter une mise à mort.
+
+step: Il prépare une embuscade contre des ennemis gênés par l'obscurité
+  do: Employer Ténèbres profondes sur un objet et se placer en hauteur, près d'un passage vers ses proies
+  note: L'obscurité obtenue dépend de l'éclairage initial. Une créature qui ne peut pas voir l'oitos ne subit pas son regard : choisir entre cet avantage défensif et la nausée.
+
+step: Le combat est imminent et il dispose de temps pour se préparer
+  do: Convoquer des créatures mauvaises pour occuper les combattants pendant qu'il approche une cible vulnérable
+  note: Employer les renforts pendant la durée de l'invocation ; leur présence ne donne pas aux alliés la capacité de voir dans ses ténèbres.
+
+## Ouverture
+
+note: Regard déstabilisant
+  Au début du tour d'une créature qui peut croiser son regard à 9 m ou moins, appliquer le regard : Volonté DD 21 ou nausée pendant 1 round. C'est un effet mental de terreur.
+  Une victime nauséeuse ne dispose que d'une action de mouvement. Le regard agit sans dépenser l'action simple de l'oitos ; les cibles peuvent éviter de le regarder selon les règles des regards.
+
+note: Choix de l'action
+  Choisir l'une des ouvertures ci-dessous selon la menace. Lancer un pouvoir magique et effectuer une attaque à outrance demandent des actions distinctes.
+
+step: Une cible prioritaire reste à distance et peut subir Mauvais œil
+  do: Employer Mauvais œil sur elle, puis utiliser le vol pour approcher ou conserver une position protégée
+  note: Vigueur DD 21 ; les créatures de 10 DV ou plus deviennent fiévreuses en cas d'échec. Réserver les effets de panique ou de coma aux catégories de DV prévues par le sort.
+
+step: La capture d'un adversaire capable de fuite magique est prioritaire
+  do: Tirer une Ancre dimensionnelle sur lui avant de le poursuivre
+  note: Cette action remplace Mauvais œil ou l'attaque du round ; elle ne bloque pas les déplacements ordinaires.
+
+step: Une proie est déjà à 1,50 m et l'oitos peut rester sur place
+  do: Effectuer une attaque à outrance avec les deux griffes et les lanières
+  note: Privilégier une cible isolée ou nauséeuse pour multiplier les occasions de critique.
+
+## Rounds suivants
+
+step: Une cible reste à portée des trois attaques
+  do: Répéter l'attaque à outrance ; ajuster sa position par un pas de 1,50 m si nécessaire
+  note: Les griffes menacent un critique sur 19–20 ; les lanières sur 20. Confirmer le critique avant de déclencher les Os dorés.
+
+step: Une attaque confirme un critique
+  do: Faire effectuer à la victime un jet de Vigueur DD 21 contre les Os dorés
+  note: En cas d'échec, lueurs féeriques permanentes et Constitution réduite de 4 ; cette réduction ne se cumule pas avec elle-même. Il s'agit d'une malédiction.
+  note: Au début de chacun de ses tours, la victime maudite doit réussir Vigueur DD 21 ou devenir définitivement aveugle. Ces jets suivent les tours de la victime, sans action supplémentaire de l'oitos.
+
+step: Il doit se déplacer pour atteindre sa proie
+  do: Voler jusqu'à une position permettant une attaque de lanières à 3 m, puis porter cette seule attaque
+  note: Un déplacement ordinaire laisse une attaque simple ; réserver les trois attaques aux rounds où il peut effectuer une attaque à outrance.
+
+step: Mauvais œil est encore actif et une nouvelle cible mérite d'être affaiblie
+  do: Consacrer l'action de mouvement au choix de cette cible, puis employer l'action simple pour une attaque ou un autre pouvoir
+  note: Vigueur DD 21 ; ce round ne permet pas une attaque à outrance.
+
+step: Un combattant terrestre au contact doit être immobilisé sur place
+  do: Remplacer une attaque de corps à corps par un croc-en-jambe, puis employer les éventuelles attaques restantes contre la cible à terre
+  note: Science du croc-en-jambe évite l'attaque d'opportunité normalement provoquée par cette manœuvre et accorde son bonus de +2 au BMO de base +17.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Frapper avec les lanières jusqu'à 3 m
+  note: Attaques réflexes permet jusqu'à six attaques d'opportunité par round, uniquement lorsque les circonstances les autorisent.
+
+step: La pression physique devient dangereuse mais une retraite immédiate n'est pas nécessaire
+  do: Employer Expertise du combat pendant ses attaques de mêlée
+  note: Avec un BBA de +13, échanger un malus de 4 aux attaques de mêlée et manœuvres offensives contre un bonus d'esquive de +4 à la CA.
+
+## Repli
+
+step: Points de vie sous 45, ou attaques du Bien empêchant durablement sa régénération
+  do: Employer Changement de plan sur lui-même pour rejoindre le plan de l'Ombre ou un plan mauvais
+  note: Voyageur des ténèbres assure une arrivée exacte vers ces destinations. S'il lance ce pouvoir en étant menacé, le faire sur la défensive : concentration +16, DD 25.
+
+step: Une ancre dimensionnelle ou un effet similaire empêche sa fuite planaire
+  do: Prendre de la distance en volant à 18 m, utiliser les obstacles et les ténèbres, puis attendre la fin de l'entrave à couvert
+  note: La régénération rend 5 PV par round lorsqu'elle fonctionne. Marche des ombres reste également bloquée par une ancre dimensionnelle ; il ne peut pas s'en servir pour contourner cette entrave.

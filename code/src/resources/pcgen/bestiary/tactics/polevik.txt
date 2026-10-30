@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Polevik, petite fée neutre mauvaise, solitaire et méfiante, qui défend son jardin de champignons dans les grottes ou les marais.
+  60 pv, CA 17 ; réduction des dégâts 5/fer froid ; immunité aux maladies, au poison, à la nausée et à l'état fiévreux. Déplacement : 6 m.
+  Vesses-de-loup +9 à distance (1d6 et maladie) ; morsure +8 (1d6+3), allonge 1,50 m. Il privilégie l'embuscade et les lancers.
+
+resource: Vesses-de-loup | à volonté | repoussent immédiatement ; cueillir et lancer demande une action simple, sans attaque d'opportunité ; portée 6 m
+resource: Communication avec les plantes | constant | champignons et moisissures uniquement
+
+step: Intrus repérés
+  do: Se dissimuler près d'un couvert et préparer une voie de fuite ; Discrétion +19, ou +23 dans les grottes et les marais
+  note: Perception +12 ; vision dans le noir à 18 m et vision nocturne. Interroger les champignons peut renseigner sur les alentours.
+
+step: Préparation possible dans son jardin
+  do: Préparer ses objets alchimiques avant l'affrontement, avec Artisanat (alchimie) +17
+  note: L'alchimie fongique dispense du coût des matières premières pour les objets de DD de fabrication 25 ou moins ; elle ne fournit pas instantanément des objets pendant le combat. Employer seulement le stock fixé par le MJ.
+
+## Ouverture
+
+step: Une cible est visible à 6 m ou moins
+  do: Lancer une vesse-de-loup depuis le couvert
+  note: Tir à bout portant ajoute +1 à l'attaque et aux dégâts à 9 m ou moins : ici, +10 et 1d6+1, plus maladie.
+
+step: Des champignons dangereux sont déjà présents dans le repaire
+  do: Attaquer puis reculer par un passage sûr pour inciter les intrus à traverser ces dangers
+  note: Cette tactique dépend du terrain préparé par le MJ ; communiquer avec les champignons ne permet pas de les commander.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Continuer les lancers et se déplacer vers un couvert si nécessaire ; concentrer les dégâts sur un adversaire vulnérable
+  note: Tir de précision évite le malus de tir contre une cible engagée en mêlée.
+
+note: Maladie
+  Une blessure expose à la maladie : Vigueur DD 18 ; incubation 1 minute, puis 1d6 points de dégâts de Dextérité, fréquence 1/jour ; guérison après deux sauvegardes consécutives réussies.
+  Ne pas compter sur cet affaiblissement pendant les premiers rounds.
+
+step: Un ennemi arrive au contact
+  do: Faire un pas de placement de 1,50 m puis lancer si cela permet de garder ses distances ; sinon lancer sur place ou mordre à +8 (1d6+3)
+  note: Le lancer spécial ne provoque pas d'attaque d'opportunité, même au contact.
+
+step: Des provisions non magiques entrent dans l'aura de 9 m
+  do: Appliquer l'aura putréfiante automatiquement
+  note: Nourriture et liquides abandonnés se gâtent ; ceux qui sont portés bénéficient d'un jet de sauvegarde DD 18. L'aura n'inflige ni dégâts ni nausée aux combattants.
+
+## Repli
+
+step: Moins de 20 pv ou fuite menacée par un encerclement
+  do: Utiliser l'action de retraite pour parcourir jusqu'à 12 m si le terrain le permet, vers un passage connu et un couvert
+  note: Les armes en fer froid contournent sa réduction des dégâts ; s'éloigner en priorité de leurs porteurs.
+
+step: Un couvert permet de rompre la ligne de vue
+  do: Se cacher avec Discrétion +19, ou +23 dans les grottes et les marais, puis quitter la zone du combat
+  note: Sa vitesse de 6 m rend une poursuite à découvert défavorable ; privilégier les détours et les cachettes du repaire.

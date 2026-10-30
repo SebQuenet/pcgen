@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Ombre mineure, mort-vivant intangible de taille M, chaotique mauvais, peu intelligent. 6 points de vie ; CA 14, contact 14 ; vol à 12 m, bonne manœuvrabilité.
+  Contact intangible +2 contre la CA de contact, allonge 1,50 m : inflige 1 point de dégât à la Force d'une créature vivante, sans dégâts aux points de vie.
+  Vision dans le noir à 18 m ; Perception +8 ; Discrétion +6. Résistance à la canalisation +1 ; immunités des morts-vivants.
+
+step: Elle peut choisir son lieu d'embuscade
+  do: Se placer dans une zone moins éclairée qu'une lumière vive et attendre qu'une créature vivante approche.
+  note: Fusion avec les ombres lui donne un camouflage : 20 % de chances que les attaques la ratent. Ce pouvoir ne la rend pas invisible et ne fonctionne pas en lumière vive.
+
+## Ouverture
+
+step: Une créature vivante peut être approchée avec un déplacement de 12 m
+  do: Voler jusqu'à 1,50 m de la cible et porter un contact intangible +2, pour 1 point de dégât à la Force.
+  note: Privilégier une cible isolée accessible depuis les ombres ; si elle est déjà au contact, attaquer sans se déplacer.
+
+step: Aucune créature vivante n'est accessible au contact après un déplacement
+  do: Se rapprocher en vol en empruntant les zones sombres ; utiliser deux déplacements de 12 m si nécessaire, sans attaquer ce round.
+
+## Rounds suivants
+
+step: La cible vivante reste au contact
+  do: Répéter le contact intangible +2 chaque round et concentrer les attaques sur cette cible.
+  note: Chaque contact réussi inflige encore 1 point de dégât à la Force. Ces dégâts affaiblissent notamment les attaques fondées sur la Force.
+
+step: La cible s'éloigne
+  do: La suivre en vol et attaquer si un seul déplacement suffit à revenir à portée de 1,50 m.
+  note: Éviter de poursuivre en lumière vive si une autre créature vivante reste accessible dans les ombres.
+
+step: La cible est hors de combat ou n'est pas vivante
+  do: Reporter les attaques sur une autre créature vivante accessible.
+  note: Son contact n'affaiblit que les créatures vivantes. Une ombre mineure ne crée jamais de rejetons.
+
+## Repli
+
+step: Points de vie à 2 ou moins et une issue est accessible
+  do: Fuir en vol vers une zone sombre, avec deux déplacements de 12 m si elle renonce à attaquer.
+  note: Rechercher le camouflage de fusion avec les ombres et s'éloigner des adversaires capables de la blesser.

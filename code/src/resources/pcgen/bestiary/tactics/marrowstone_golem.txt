@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Marrowstone Golem : créature artificielle neutre de taille G, sans intelligence, qui exécute des consignes simples et garde les souterrains.
+  85 pv ; CA 21 ; réduction des dégâts 10/adamantium ; immunités des créatures artificielles et immunité à la magie.
+  Deux coups +14, chacun infligeant 2d6+5 dégâts physiques plus 2d6 d'énergie négative ; allonge 3 m ; espace occupé 3 m ; déplacement 9 m.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+resource: Champ nécrotique | permanent | rayon de 9 m ; morts-vivants : bonus de résistance de +2 aux sauvegardes, DD des pouvoirs extraordinaires et surnaturels augmentés de 2, résistance à la canalisation +4 ; goules et blêmes : +2 aux attaques et aux dégâts d'armes ; dégâts d'énergie positive réduits de moitié dans l'aura.
+
+step: Il reçoit l'ordre de garder un passage
+  do: Rester au poste désigné et frapper les intrus qui entrent à portée.
+  note: Ses décisions suivent ses ordres ; il ne prépare pas de ruse de sa propre initiative.
+
+step: Des morts-vivants alliés sont présents
+  do: Sur ordre, tenir une position à moins de 9 m d'eux pour les soutenir avec son champ nécrotique.
+
+## Ouverture
+
+step: Un intrus est déjà à 3 m ou moins
+  do: Attaque à outrance : deux coups +14, chacun pour 2d6+5 plus 2d6 d'énergie négative.
+
+step: L'intrus est hors d'allonge, mais accessible après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à 3 m de lui, puis donner un seul coup +14.
+
+step: Aucun intrus n'est accessible après un seul déplacement
+  do: Si ses ordres autorisent la poursuite, avancer jusqu'à 18 m par un double déplacement ; sinon, tenir le passage.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter les deux coups à outrance ; effectuer au besoin un pas de 1,50 m pour conserver l'allonge.
+
+step: La cible sort de portée
+  do: La rejoindre et donner un coup si un déplacement suffit ; doubler le déplacement si nécessaire et si ses ordres le permettent.
+  note: Il ne dispose d'aucune attaque à distance.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Donner un coup +14 ; au maximum une attaque d'opportunité par round.
+
+step: Un sort ou pouvoir magique le prend pour cible
+  do: Appliquer son immunité aux sorts et pouvoirs magiques autorisant la résistance à la magie, sous réserve de ses exceptions.
+  note: Transmutation de la pierre en boue le ralentit pendant 2d6 rounds sans sauvegarde.
+
+step: Il échoue à sa sauvegarde contre une attaque magique infligeant des dégâts d'énergie positive
+  do: Ne subir aucun dégât de cette attaque ; supprimer le champ nécrotique, la création de rejetons et les 2d6 d'énergie négative des coups pendant 1d4 rounds.
+  note: Continuer à frapper pour 2d6+5 dégâts physiques par coup pendant cette durée.
+
+step: Un effet capable de soigner les morts-vivants l'affecte
+  do: Récupérer la moitié des soins prévus, sans dépasser 85 pv.
+
+note: Victimes humanoïdes
+  Un humanoïde tué par lui se relève après 24 heures en goule libre, ou en blême dès quatre niveaux de classe ; 25 % de chances de conserver ses niveaux. Aucun renfort immédiat.
+
+## Repli
+
+step: Ses points de vie diminuent sans nouvel ordre
+  do: Poursuivre sa consigne jusqu'à sa destruction à 0 pv.
+  note: Aucun seuil de fuite spontané.
+
+step: Il reçoit un ordre de repli
+  do: Quitter le combat selon cet ordre, à 9 m par déplacement ou 18 m par double déplacement.

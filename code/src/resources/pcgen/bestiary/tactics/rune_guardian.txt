@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Gardien runique, créature artificielle neutre de taille TP, intelligente et muette ; comprend le thassilonien. Il combat surtout par pouvoirs magiques, en restant en vol.
+  11 PV, CA 14, résistance à la magie 12, guérison accélérée 1 ; immunités des créatures artificielles. Vol à 18 m, manœuvrabilité parfaite ; initiative +6.
+  Coup +2 (1d2-2), allonge 1,50 m : attaque de dernier recours. Ses principales armes sont couleurs dansantes, mains brûlantes et sommeil, tous DD 12.
+
+resource: Couleurs dansantes | à volonté | Volonté DD 12 ; cône de 4,50 m
+resource: Mains brûlantes | à volonté | 3d4 dégâts de feu ; Réflexes DD 12 pour moitié ; cône de 4,50 m
+resource: Sommeil | à volonté | Volonté DD 12 ; portée 39 m ; rayon de 3 m ; jusqu'à 4 DV au total
+resource: Rayon affaiblissant | à volonté | attaque de contact à distance ; Vigueur DD 12 pour réduire de moitié le malus de Force
+resource: Rapetissement | à volonté | un humanoïde ; Vigueur DD 12 annule
+resource: Fermeture | à volonté | maintient une porte fermée pendant 3 minutes
+resource: Convocation de monstres I | à volonté | une créature de la liste I pendant 3 rounds ; NLS 3
+
+step: Les intrus ne l'ont pas encore repéré
+  do: Se dissimuler en hauteur si le terrain le permet, avec Discrétion +12, et observer leur approche
+  note: Perception +3, vision dans le noir à 18 m et vision nocturne ; aucun éclairage nécessaire pour surveiller dans cette limite
+
+step: Une porte fermée permet de retarder l'approche
+  do: Employer fermeture pour gagner du temps et choisir une position hors de portée des armes de mêlée
+  note: Le pouvoir maintient une porte fermée ; il ne crée pas de barrière dans une ouverture vide
+
+## Ouverture
+
+step: Plusieurs intrus peuvent être pris dans un cône de 4,50 m
+  do: Se placer en vol puis employer couleurs dansantes, Volonté DD 12
+  note: Priorité aux adversaires de 2 DV ou moins, qui peuvent perdre connaissance ; rester hors de leur allonge si possible
+
+step: Les intrus restent loin et peuvent être endormis
+  do: Employer sommeil depuis une position protégée, Volonté DD 12
+  note: Incantation de 1 round ; affecte d'abord les plus faibles en DV, jusqu'à 4 DV au total. Les créatures de plus de 4 DV sont hors de sa capacité
+
+step: Aucun groupe ne se prête à ces pouvoirs et le gardien peut préparer une attaque sans être interrompu
+  do: Employer convocation de monstres I pour faire apparaître une créature entre les intrus et lui
+  note: Incantation de 1 round ; la créature attaque ses ennemis d'elle-même. Le gardien muet ne lui donne pas d'ordres verbaux
+
+## Rounds suivants
+
+step: Des ennemis encore actifs sont à portée d'un cône de 4,50 m
+  do: Employer mains brûlantes pour infliger 3d4 dégâts de feu, Réflexes DD 12 pour moitié
+  note: Épargner les créatures convoquées et les ennemis sous sommeil, que les blessures réveilleraient ; renouveler couleurs dansantes si neutraliser plusieurs ennemis reste préférable
+
+step: Un combattant puissant approche sans pouvoir être pris dans un cône
+  do: Employer rayon affaiblissant à 9 m ou moins, puis conserver ses distances en vol
+  note: Sur une attaque de contact à distance réussie, malus de Force de 1d6+1 pendant 3 rounds ; Vigueur DD 12 pour moitié. Les applications successives ne se cumulent pas
+
+step: Un humanoïde dangereux en mêlée reste menaçant et le gardien dispose d'un round protégé
+  do: Employer rapetissement à 9 m ou moins, Vigueur DD 12
+  note: Incantation de 1 round ; réduit sa taille et les dégâts de ses armes pendant 3 minutes, mais améliore sa Dextérité et sa CA. Inutilisable sur le gardien lui-même, qui est une créature artificielle
+
+step: La créature convoquée disparaît et les intrus restent éloignés
+  do: Renouveler convocation de monstres I si un round d'incantation peut être tenu sans danger
+  note: Chaque convocation ne dure que 3 rounds ; ne pas la lancer longtemps avant l'arrivée des ennemis
+
+step: Un ennemi arrive au contact
+  do: Sortir de son allonge avant d'employer un pouvoir ; si nécessaire, consacrer le round à une retraite en vol
+  note: Le vol parfait n'annule pas les attaques d'opportunité ; éviter de lancer un pouvoir sous la menace d'une arme. N'employer le coup +2 que faute de meilleure option
+
+## Repli
+
+step: Points de vie à 4 ou moins
+  do: Rompre le contact en volant vers un abri ; profiter des 18 m de déplacement pour creuser la distance
+  note: Si une porte peut être refermée derrière lui, employer fermeture au round suivant pour ralentir les poursuivants
+
+step: Le gardien a réussi à se mettre à couvert
+  do: Attendre que la guérison accélérée lui rende 1 PV par round, puis reprendre une position de défense
+  note: Depuis 4 PV, il lui faut 7 rounds sans nouveaux dégâts pour retrouver ses 11 PV ; à 0 PV, il est détruit

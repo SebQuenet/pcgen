@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Spartolos, mort-vivant de taille M, neutre mauvais, issu d'un guerrier aguerri. Il combat avec méthode et excelle avec d'autres spartoi.
+  76 pv ; CA 21 ; lance +10 (1d8+4, x3) ou 2 griffes +10 (1d4+4 chacune). Déplacement de 9 m ; allonge de 1,50 m ; initiative +6.
+  RD 10/contondant, immunité au froid et traits des morts-vivants ; résistance à la magie 17. Vision dans le noir à 18 m ; Perception +13. Il comprend le commun mais ne parle pas.
+
+resource: Disjonction | à volonté | Une action de mouvement pour s'effondrer en ossements et équipement ; une autre pour se reconstituer, même si ses morceaux ont été dispersés. Discrétion +16 sous cette forme.
+
+step: Il peut préparer une embuscade
+  do: Se disjoindre parmi des ossements ou des débris et attendre que les intrus approchent
+  note: cette forme dissimule sa présence ; elle ne le soigne pas
+
+step: D'autres spartoi sont présents
+  do: Préparer des positions permettant de prendre une cible en tenaille, en restant si possible à 3 m les uns des autres
+  note: résistance unie réduit les dégâts de canalisation d'énergie de 5, plus 5 par autre spartolos situé à 3 m ou moins, jusqu'à un minimum de 0 dégât
+
+## Ouverture
+
+step: Il commence le combat disjoint
+  do: Consacrer une action de mouvement à se reconstituer
+  note: pendant un tour normal, il peut ensuite frapper à la lance si une cible est à 1,50 m, ou avancer de 9 m ; pendant un round de surprise, la reconstitution consomme son unique action
+
+step: Il est déjà reconstitué et une cible est accessible en un déplacement
+  do: Avancer de 9 m au maximum, puis attaquer à la lance ; choisir en priorité un adversaire que son compagnon menace de l'autre côté
+  note: allié mortel donne un bonus de tenaille de +4 avec un autre spartolos, soit une attaque à +14 au lieu de +10
+
+## Rounds suivants
+
+step: Il combat avec d'autres spartoi
+  do: Concentrer les attaques sur la même cible et conserver la tenaille, en utilisant un pas de 1,50 m lorsque cela suffit
+  note: maintenir autant que possible la proximité de 3 m pour la résistance unie ; face à une canalisation, viser en priorité son utilisateur accessible
+
+step: Un adversaire utilise une arme contondante
+  do: Tenter de désarmer cette arme avec la lance, par une manœuvre à +12 contre le DMD adverse
+  note: Science du désarmement apporte +2 au BMO et évite l'attaque d'opportunité provoquée par cette manœuvre ; priver la cible de son arme préserve sa RD
+
+step: Une cible reste au contact
+  do: Continuer les attaques à la lance ; s'il a perdu sa lance, effectuer une attaque à outrance avec ses deux griffes +10, ou une seule griffe après un déplacement
+  note: appliquer le bonus de +4 si la tenaille est assurée par un autre spartolos
+
+step: Il doit tenir une position sous les coups
+  do: Activer Expertise du combat en attaquant au corps à corps
+  note: CA 23 et malus de -2 aux attaques et aux manœuvres jusqu'à son prochain tour ; renoncer à ce compromis lorsqu'il faut abattre rapidement une cible
+
+## Repli
+
+step: Aucun ordre de retraite ne lui est donné
+  do: Tenir sa mission jusqu'à la destruction, même avec peu de points de vie
+  note: les spartoi ne connaissent pas la peur et servent la volonté de leur maître
+
+step: Son maître lui ordonne de se retirer
+  do: Utiliser le désengagement pour quitter le contact, puis rejoindre un couvert avec ses compagnons ; une fois hors de vue, se disjoindre pour se cacher
+  note: rester à 3 m des autres spartoi si une canalisation menace encore la troupe

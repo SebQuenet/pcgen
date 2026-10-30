@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Méduse monstrueuse de taille G, vermine aquatique sans intelligence : 13 pv, CA 12, nage à 3 m par round. Elle agit par instinct.
+  Tentacules +3, dégâts 1d6 plus poison et étreinte ; allonge de 3 m, espace occupé de 3 m. Sa transparence favorise l'attente immobile dans l'eau.
+
+step: Elle est immobile dans l'eau
+  do: Attendre qu'une proie entre à portée des tentacules
+  note: La remarquer exige un test de Perception DD 20. Si elle se déplace ou attaque, elle perd ce bénéfice jusqu'au round suivant.
+
+step: Une créature ou un objet touche la même masse d'eau à 18 m ou moins
+  do: Prendre en compte sa présence grâce au sens de l'eau
+  note: Cette détection est automatique ; elle ne dépend pas de sa Perception +0.
+
+## Ouverture
+
+step: Une proie se trouve à 3 m ou moins
+  do: Frapper avec les tentacules +3 pour 1d6 dégâts, plus poison ; si l'attaque touche, tenter l'étreinte sur une cible de taille M ou inférieure
+  note: L'étreinte permet une tentative de lutte gratuite après l'attaque réussie ; la prise n'est pas automatique.
+
+step: Une proie dans l'eau est accessible après un déplacement de 3 m
+  do: Nager jusqu'à portée et porter une attaque de tentacules
+  note: Ce déplacement fait perdre le bénéfice de transparence jusqu'au round suivant.
+
+## Rounds suivants
+
+step: Une cible est maintenue dans les tentacules
+  do: Tenter de maintenir la lutte ; sur une réussite, choisir d'infliger les dégâts des tentacules
+  note: La méduse s'en tient à cette proie tant que la prise tient ; elle ne coordonne aucune manœuvre élaborée.
+
+step: La prise échoue ou la cible se libère
+  do: Attaquer de nouveau une proie à portée avec les tentacules et tenter l'étreinte si l'attaque touche
+
+step: Les tentacules infligent une blessure empoisonnée
+  do: Faire effectuer un jet de Vigueur DD 13 contre le poison
+  note: Effet : 1d6 dégâts de Dextérité ; fréquence : une fois par minute pendant 6 minutes ; guérison : 2 sauvegardes consécutives réussies. Respecter cette fréquence pendant le suivi de l'empoisonnement.
+
+step: Aucune proie n'est accessible
+  do: Rester immobile dans l'eau et attendre une nouvelle approche
+  note: Appliquer de nouveau la transparence lorsqu'elle en remplit les conditions.
+
+## Repli
+
+resource: Jet | 1 par round | action complexe ; recul rectiligne de 12 m, sans provoquer d'attaque d'opportunité
+
+step: Elle fuit instinctivement et dispose d'une trajectoire dégagée vers l'arrière
+  do: Utiliser le jet pour s'éloigner de 12 m en ligne droite
+  note: Le jet occupe tout le round. Le déplacement supprime le bénéfice de transparence jusqu'au round suivant.
+
+step: Elle s'est éloignée de la menace
+  do: S'immobiliser dans l'eau pour bénéficier à nouveau de la transparence

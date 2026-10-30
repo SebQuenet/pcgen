@@ -1,0 +1,89 @@
+## Avant le combat
+
+note: Profil
+  Pit Hag, humanoïde monstrueux extraplanaire de taille M, chaotique mauvais, FP 13. Combattante résistante qui affaiblit ses ennemis par ses sorts avant de les déchirer au contact.
+  171 pv ; CA 28, contact 16, prise au dépourvu 22 ; initiative +9 ; déplacement 12 m ; allonge 1,50 m. Fourche +23 (2d6+7) ou deux griffes +23 (1d8+5 chacune) ; si les deux griffes touchent la même cible, éventration (1d8+5 supplémentaires).
+  Réduction des dégâts 10/fer froid ; immunités au feu et au poison ; résistance à la magie 24. Vision dans le noir à 18 m. Sorts au niveau de lanceur 11.
+
+note: Aura d'affliction
+  Rayon de 9 m. Le profil fourni ne précise ni ses effets ni son DD ; ne pas lui attribuer de malus supplémentaire sans ces règles.
+
+resource: Sorts de niveau 5 | 4/jour | réserve commune à cône de froid et vagues de fatigue ; un sort de niveau 1 à incantation rapide consomme aussi un de ces emplacements
+resource: Sorts de niveau 4 | 7/jour | réserve commune à malédiction, désespoir écrasant et énervation
+resource: Sorts de niveau 3 | 7/jour | réserve commune à boule de feu, éclair, rayon d'épuisement et contact vampirique
+resource: Sorts de niveau 2 | 7/jour | réserve commune à flou, contrôle des morts-vivants, flèche acide, rayon ardent et toile d'araignée
+resource: Sorts de niveau 1 | 7/jour | réserve commune à mains brûlantes, charme-personne, graisse, projectile magique et rayon affaiblissant
+resource: Sorts de niveau 0 | à volonté | notamment détection de la magie et son imaginaire
+
+step: Elle entend les intrus arriver et dispose d'un round de préparation
+  do: Lancer flou, puis se placer près d'un couvert et d'une voie de sortie
+  note: flou dure 11 minutes et impose 20 % de chances de rater les attaques qui la visent ; anticiper ce sort évite de consacrer l'ouverture à sa défense
+
+step: Les intrus ne l'ont pas encore repérée
+  do: Utiliser Discrétion +26 et la vision dans le noir pour choisir une position d'embuscade à distance du premier combattant
+  note: elle marche à 12 m ; elle ne dispose ici d'aucun vol ni d'aucune téléportation
+
+step: Deux à quatre érinyes l'accompagnent déjà
+  do: Leur faire occuper les approches et garder une issue ; choisir ses zones de sorts pour les épargner
+  note: leur présence dépend de la rencontre ; ce profil ne donne aucun pouvoir permettant de les invoquer
+
+## Ouverture
+
+note: Choix de l'ouverture
+  Choisir une seule des actions suivantes selon la position adverse. Un sort ordinaire et une attaque à outrance ne se combinent pas dans le même round.
+
+step: Plusieurs adversaires peuvent être pris dans un cône de 9 m
+  do: Lancer vagues de fatigue pour fatiguer les cibles vivantes sans jet de sauvegarde
+  note: la fatigue réduit Force et Dextérité de 2 et empêche course et charge ; répéter ce sort ne transforme pas la fatigue en épuisement
+
+step: Les ennemis approchent par un passage muni de points d'ancrage opposés
+  do: Lancer toile d'araignée dans le passage pour entraver leur progression, Réflexes DD 16
+  note: rester du côté dégagé pour lancer ses sorts ; les fils exigent des supports et brûlent au contact du feu
+
+step: Un combattant dangereux reste isolé à distance
+  do: Lancer rayon d'épuisement sur lui, attaque de contact à distance, Vigueur DD 18
+  note: sur un échec il est épuisé ; sur une réussite il est fatigué. Une cible déjà fatiguée devient épuisée même si elle réussit ce jet
+
+step: Plusieurs ennemis sont regroupés et il faut infliger des dégâts immédiatement
+  do: Lancer cône de froid dans un cône de 18 m, 11d6 dégâts de froid, Réflexes DD 20 pour réduire de moitié
+  note: choisir boule de feu à la place si le groupe est plus éloigné et que le feu paraît efficace ; 10d6 dégâts de feu, Réflexes DD 18 pour réduire de moitié
+
+## Rounds suivants
+
+step: Un lanceur de sorts ou un adversaire puissant demeure une menace prioritaire
+  do: Lancer énervation sur cette cible, attaque de contact à distance infligeant 1d4 niveaux négatifs à une créature vivante
+  note: aucun jet de sauvegarde ; ces niveaux pénalisent notamment attaques et sauvegardes, ce qui prépare les sorts suivants
+
+step: Plusieurs ennemis restent proches les uns des autres dans un cône de 9 m
+  do: Lancer désespoir écrasant, Volonté DD 18
+  note: un échec impose un malus de moral de 2 aux attaques, sauvegardes, tests de caractéristique et de compétence, ainsi qu'aux dégâts d'armes ; profiter ensuite des sauvegardes diminuées
+
+step: Les ennemis sont entravés ou alignés et elle peut les atteindre sans toucher ses alliées
+  do: Exploiter leur position avec cône de froid, boule de feu ou éclair selon la zone et les résistances observées
+  note: éclair inflige 10d6 dégâts d'électricité sur une ligne de 36 m, Réflexes DD 18 pour réduire de moitié ; une boule de feu peut détruire la toile qui retenait les cibles
+
+step: Un adversaire reste au contact et elle peut consacrer le round entier à ses attaques
+  do: Effectuer une attaque à outrance avec ses deux griffes +23, 1d8+5 chacune, sur la même cible pour déclencher l'éventration
+  note: si elle doit d'abord se déplacer de plus de 1,50 m, porter seulement une attaque, par exemple la fourche +23 pour 2d6+7 ; la fourche n'accorde aucune allonge supplémentaire
+
+step: Un adversaire au contact résiste trop bien aux dégâts immédiats
+  do: Lancer malédiction et réussir une attaque de contact au corps à corps ; choisir le malus de 4 aux attaques, sauvegardes et tests, Volonté DD 19 pour annuler
+  note: lancer un sort sous la menace peut provoquer une attaque d'opportunité ; préférer un pas de placement de 1,50 m si cela suffit à sortir de l'allonge ennemie, ou lancer sur la défensive avec Magie de guerre
+
+step: Elle a perdu des pv et une cible vivante est accessible au contact
+  do: Utiliser contact vampirique, attaque de contact au corps à corps, pour infliger 5d6 dégâts sans sauvegarde et gagner des pv temporaires
+  note: ces pv temporaires durent au maximum 1 heure et ne soignent pas ses blessures ; plusieurs applications ne les cumulent pas
+
+step: Une cible est presque vaincue et un emplacement de niveau 5 reste disponible
+  do: Ajouter projectile magique à incantation rapide en action rapide, puis accomplir normalement son action principale
+  note: cinq projectiles infligent au total 5d4+5 dégâts de force sans sauvegarde ; cet usage du don Incantation rapide consomme un emplacement de niveau 5
+
+## Repli
+
+step: Elle tombe sous 45 pv et les ennemis conservent l'avantage
+  do: Profiter d'un obstacle, ou d'une toile d'araignée déjà en place, pour rompre le contact et gagner la sortie
+  note: choisir un désengagement si elle est menacée, jusqu'à 24 m ; seule la sortie de la case initiale bénéficie de la protection du désengagement
+
+step: Les poursuivants se rapprochent après le désengagement
+  do: À un round ultérieur, lancer graisse sur leur passage, Réflexes DD 15, ou toile d'araignée si des ancrages conviennent ; poursuivre son déplacement de 12 m
+  note: renouveler flou s'il a expiré et si elle dispose d'un round ; les érinyes présentes peuvent couvrir la retraite

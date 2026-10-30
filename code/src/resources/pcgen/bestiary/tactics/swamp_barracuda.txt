@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Barracuda des marais, animal aquatique amphibie de taille M, prédateur à l'intelligence rudimentaire ; 18 pv, CA 14, initiative +6.
+  Morsure +6 (1d6+3) et coup de queue +1 (1d6+1) ; allonge de 1,50 m. Nage à 18 m par déplacement, se déplace à 3 m sur terre.
+  Perception +9, odorat aiguisé et vision nocturne ; Discrétion +11 dans l'eau, +7 ailleurs ; Natation +11.
+
+step: Une proie approche de l'eau
+  do: Rester immergé et se dissimuler pour la laisser approcher à portée de morsure.
+  note: Utiliser l'odorat et la Perception pour repérer les proies ; privilégier celles qui entrent dans l'eau ou restent au bord.
+
+## Ouverture
+
+step: Une proie est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : morsure +6 (1d6+3), puis coup de queue +1 (1d6+1).
+
+step: Une proie est accessible après un déplacement de nage de 18 m au maximum
+  do: Se rapprocher à la nage et porter une morsure +6 (1d6+3).
+  note: Après un déplacement de plus de 1,50 m, ne pas ajouter le coup de queue à cette attaque.
+
+## Rounds suivants
+
+step: La proie reste au contact
+  do: Répéter l'attaque à outrance, morsure et coup de queue, sur cette proie.
+  note: Il ne possède aucune capacité pour saisir une victime ou l'entraîner automatiquement sous l'eau.
+
+step: La proie s'éloigne dans l'eau
+  do: La poursuivre à la nage ; mordre si un seul déplacement suffit à revenir au contact.
+
+step: La proie reste sur la berge
+  do: Mordre depuis l'eau si elle est à portée ; sinon, rester dans l'eau et guetter son retour au bord.
+  note: Son déplacement terrestre de 3 m rend une poursuite sur la terre ferme peu efficace ; amphibie, il peut toutefois y respirer.
+
+## Repli
+
+step: Points de vie à 6 ou moins
+  do: Abandonner la proie et fuir à la nage vers l'eau profonde ou un couvert aquatique.
+  note: Privilégier une retraite pour quitter le contact ; une fois à couvert, se dissimuler avec Discrétion +11 dans l'eau.

@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Scarabée bleu-noir de la taille d'une vache, vermine de taille G sans intelligence, neutre, FP 6. Dans les déserts d'Osirion, il dévore les dépouilles des tombeaux.
+  67 pv ; CA 20, contact 10, pris au dépourvu 19. Morsure +11 (1d8+9 plus rongement), allonge 1,50 m ; espace occupé 3 m.
+  Déplacement terrestre 12 m, escalade 6 m, vol 6 m de manœuvrabilité moyenne ; vision dans le noir à 18 m, Perception +0.
+
+note: Défenses
+  Immunisé contre les effets de mort, les maladies, les effets mentaux et la paralysie. Ces immunités n'exigent aucune action.
+
+step: Des intrus approchent de ses lieux de nourrissage
+  do: Le jouer occupé à dévorer les dépouilles, puis réagissant à une présence proche ou à une agression.
+  note: Il agit par instinct ; il ne prépare ni piège ni coordination avec d'autres scarabées.
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m ou moins
+  do: Porter une morsure +11, infligeant 1d8+9 dégâts plus rongement.
+
+step: Aucun adversaire n'est à portée de morsure
+  do: Avancer vers la cible accessible la plus proche, jusqu'à 12 m au sol, puis mordre si elle est à portée.
+  note: Si un déplacement ne suffit pas, poursuivre l'approche ; il ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter la morsure chaque round.
+  note: Rongement inflige automatiquement 1 point d'affaiblissement de Force à chaque morsure réussie, ou 2 si la cible n'a ni bonus d'armure ni bonus d'armure naturelle à la CA ; aucun jet de sauvegarde.
+  note: Les armures lourdes, une armure naturelle de +10 ou plus, l'immunité aux coups critiques ou l'absence de chair protègent du rongement, mais pas des dégâts ordinaires de la morsure.
+
+step: La cible s'éloigne ou un obstacle bloque l'approche
+  do: La suivre au sol ; escalader une paroi à 6 m par déplacement ou voler à 6 m par déplacement si cela permet de la rejoindre.
+  note: Escalade +14 ; Vol -1. Privilégier les trajets simples, sans manœuvres aériennes délicates.
+
+step: Plusieurs scarabées sont présents
+  do: Faire avancer et mordre chacun selon les cibles accessibles.
+  note: Un groupe de 3 à 9 individus reste composé de créatures distinctes, chacune occupant 3 m ; ce ne sont pas les règles d'une nuée.
+
+## Repli
+
+note: Instinct de survie
+  Aucun seuil de fuite n'est indiqué. Ne pas lui prêter de retraite coordonnée ou de calcul tactique élaboré.
+
+step: Il fuit instinctivement un danger immédiat
+  do: Emprunter une issue libre à 12 m par déplacement au sol, ou gagner une paroi ou les airs à 6 m par déplacement.
+  note: Ses déplacements restent ses seuls moyens de fuite ; il ne dispose d'aucun pouvoir pour dissimuler son départ.

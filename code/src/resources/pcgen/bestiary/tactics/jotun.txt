@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Jotun, humanoïde géant du froid de taille G, chaotique mauvais et intelligent, adapté aux montagnes froides. 152 points de vie, CA 23 ; déplacement de 12 m, allonge de 3 m.
+  Grande hache de maître +22/+17/+12 (3d6+15), ou deux coups +21 (1d6+10 chacun) ; rocher +11 (1d8+15), facteur de portée de 36 m.
+  Immunisé au froid ; les dégâts de feu qu'il subit sont augmentés de moitié. Vision nocturne, Perception +15, Discrétion +6, ou +12 dans la neige.
+
+resource: Modification d'apparence | 3/jour | pouvoir magique, NLS 16 ; prendre une forme humanoïde de taille P ou M
+resource: Agrandissement | 1/jour | sur lui-même uniquement, NLS 16 ; durée de 16 minutes
+resource: Image accomplie | 1/jour | NLS 16, Volonté DD 14 pour démasquer l'illusion en interagissant avec elle ; concentration, puis 3 rounds
+resource: Rapetissement | 1/jour | sur lui-même uniquement, NLS 16 ; durée de 16 minutes
+
+step: Il repère les intrus avant d'être découvert
+  do: Se dissimuler dans la neige près d'un passage étroit, avec sa hache prête et des rochers à portée de main
+  note: Choisir un emplacement où son allonge permet de frapper ceux qui s'approchent, tout en limitant les possibilités de l'encercler.
+
+step: Une approche sous déguisement facilite l'embuscade
+  do: Employer modification d'apparence pour prendre l'aspect d'un humanoïde de taille M, puis retrouver sa forme naturelle avant l'affrontement
+
+step: Le combat est imminent et le passage permet une taille TG
+  do: Utiliser agrandissement avant l'arrivée des ennemis
+  note: Il occupe alors un espace de 4,50 m et son allonge atteint 4,50 m ; sa CA devient 21. Sa grande hache conserve +22/+17/+12 et inflige 4d6+16.
+
+## Ouverture
+
+step: Les ennemis restent à distance et une diversion peut les attirer vers l'embuscade
+  do: Créer avec image accomplie un faux jotun qui s'expose, les provoque en commun ou en géant et semble reculer vers le passage choisi
+  note: Maintenir la concentration tant que la diversion est utile. L'illusion n'inflige aucun dégât ; il cesse de la maintenir pour passer à l'attaque.
+
+step: Une cible est visible mais hors de portée de sa hache
+  do: Lancer un rocher, puis se placer pour accueillir l'approche ennemie
+  note: Rocher +11 (1d8+15) dans sa forme naturelle ; privilégier un ennemi qui utilise le feu. Appliquer les pénalités de distance au-delà du premier facteur de portée de 36 m.
+
+step: Une cible est à portée et il peut rester sur place
+  do: Porter une attaque à outrance à la grande hache
+  note: Dans sa forme naturelle : +22/+17/+12, 3d6+15 par coup. S'il doit d'abord se déplacer, il ne porte qu'une attaque à +22.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée de sa hache
+  do: Répéter l'attaque à outrance, en concentrant ses coups sur une même cible jusqu'à sa chute
+  note: Menacer les cases de son allonge et saisir une attaque d'opportunité si l'ennemi en provoque une ; il ne dispose normalement que d'une attaque d'opportunité par round.
+
+step: La cible semble facile à toucher
+  do: Activer Attaque en puissance pour augmenter les dégâts de la grande hache
+  note: Dans sa forme naturelle : +18/+13/+8, 3d6+27 ; sous agrandissement : +18/+13/+8, 4d6+28. Renoncer à ce compromis si les coups manquent trop souvent.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge
+  do: Utiliser Succession d'enchaînements pour passer d'une cible touchée à la suivante
+  note: Action simple : commencer au meilleur bonus d'attaque, puis poursuivre seulement après chaque réussite, sans frapper deux fois la même cible. Sa CA baisse de 2 jusqu'à son prochain tour ; préférer l'attaque à outrance contre une cible unique.
+
+step: Une arme ennemie constitue un obstacle plus pressant que son porteur
+  do: Tenter une destruction avec sa hache grâce à Science de la destruction
+  note: Réserver cette manœuvre à un objet accessible ; tenir compte de sa solidité et de ses points de vie. Détruire une arme ne neutralise pas les sorts de son propriétaire.
+
+step: Il est privé de sa hache
+  do: Employer ses deux coups +21 (1d6+10 chacun) en attaque à outrance dans sa forme naturelle
+
+step: Des adversaires lancent des rochers sur lui
+  do: Utiliser réception de rochers si les conditions de cette défense sont réunies
+  note: Cette capacité ne protège pas contre les flèches ni contre les sorts.
+
+## Repli
+
+step: Ses points de vie tombent sous 50, ou des attaques de feu répétées rendent sa position intenable
+  do: Se retirer vers un passage couvert, jusqu'à 24 m par round sur terrain dégagé, puis rompre la ligne de vue
+  note: L'action de retraite protège seulement la sortie de sa case de départ contre les attaques d'opportunité ; surveiller les autres ennemis qui menacent son trajet.
+
+step: Un adversaire bloque le passage de fuite
+  do: Tenter un renversement avec Science du renversement pour franchir sa position et poursuivre le déplacement
+  note: Cette manœuvre peut échouer ; il ne traverse pas automatiquement l'adversaire.
+
+step: Un passage trop étroit empêche la fuite
+  do: Mettre fin à agrandissement s'il est actif ; employer ensuite rapetissement si une taille M permet de passer
+  note: Les effets magiques qui augmentent ou réduisent la taille ne se cumulent pas. Une fois hors de vue, se dissimuler dans la neige pour échapper aux poursuivants ; Discrétion +12 dans sa forme naturelle.

@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Maître de bataille kobold, petit humanoïde reptilien loyal mauvais. Combattant de mêlée armé d'une lance d'arçon +1, qui menace à 3 m mais ne frappe pas un ennemi adjacent avec cette arme.
+  57 points de vie ; CA 23, contact 12, pris au dépourvu 22 ; initiative +5. Déplacement de 6 m ; vision dans le noir à 18 m ; résistance à l'électricité 5.
+  Les bonus d'attaque et les dégâts de la lance ne sont pas précisés dans le profil fourni.
+
+step: Un passage étroit est disponible
+  do: Se placer pour frapper à 3 m et limiter les possibilités de contournement
+  note: Garder derrière soi une case libre permettant un pas de placement de 1,50 m.
+
+step: Le terrain est obscur
+  do: Surveiller les approches grâce à la vision dans le noir à 18 m
+
+## Ouverture
+
+step: Un ennemi se trouve à 3 m
+  do: Effectuer une attaque à outrance avec la lance d'arçon +1
+  note: Le bonus de base à l'attaque de +7 permet deux attaques lors d'une attaque à outrance ; la seconde subit un malus de 5 par rapport à la première.
+
+step: Un ennemi se trouve au-delà de 3 m et à 9 m au plus, avec un chemin accessible
+  do: Avancer de 6 m au maximum pour placer cet ennemi à 3 m, puis porter une attaque de lance
+
+step: Les ennemis restent plus loin
+  do: Progresser à couvert vers une position permettant de les recevoir à portée de lance
+  note: Le profil fourni ne donne aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un ennemi reste à 3 m
+  do: Répéter l'attaque à outrance et concentrer les coups sur ce même adversaire
+
+step: Un ennemi est adjacent et une case de recul est libre
+  do: Faire un pas de placement de 1,50 m pour remettre cet ennemi à 3 m, puis effectuer une attaque à outrance avec la lance
+  note: Ce pas ne provoque pas d'attaque d'opportunité et suppose de ne pas avoir effectué d'autre déplacement pendant le tour.
+
+step: Un ennemi adjacent empêche le recul immédiat
+  do: Se dégager vers un espace permettant de rétablir la portée de la lance ; utiliser la retraite si le trajet permet de sortir de la menace ennemie
+  note: Un déplacement ordinaire hors d'une case menacée peut provoquer une attaque d'opportunité. La retraite protège seulement la sortie de la case de départ.
+
+step: Il subit des dégâts d'électricité
+  do: Réduire de 5 les dégâts d'électricité de chaque attaque reçue
+
+## Repli
+
+step: Points de vie à 14 ou moins
+  do: Utiliser la retraite pour rejoindre un passage étroit ou un couvert, jusqu'à 12 m sur un terrain qui le permet
+  note: Privilégier un itinéraire connu et obscur ; sa vision dans le noir porte à 18 m.
+
+step: La fuite est impossible
+  do: Garder l'adversaire à 3 m et poursuivre les attaques de lance, en reculant par pas de placement dès qu'une case se libère

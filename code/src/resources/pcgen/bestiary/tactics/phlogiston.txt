@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Phlogiston, plante solitaire de taille M des forêts tempérées, sans intelligence et immobile. 26 pv, CA 16 ; résistance au feu 10 et immunités des plantes.
+  Quatre vrilles +6, chacune infligeant 1d6+3 dégâts, avec une allonge de 3 m. Projectile de feu à distance ; explosion à la mort.
+
+note: Attente instinctive
+  Cet arbuste aux feuilles vert argenté reste dormant jusqu'à l'approche d'une proie. Son odeur de cannelle, perceptible à 9 m, attire surtout les animaux ; elle n'impose aucun déplacement aux personnages.
+  Sa vision aveugle porte à 18 m. Sa vitesse de 0 m lui interdit de se repositionner ou de poursuivre une cible.
+
+resource: Projectile de feu | 1 fois tous les 1d4 rounds | Action simple ; ligne de 12 m maximum ; 2d6 dégâts de feu à chaque créature touchée, Réflexes DD 14 pour moitié.
+
+## Ouverture
+
+step: Une proie est à 3 m ou moins et une attaque à outrance est possible
+  do: Frapper avec les quatre vrilles +6, pour 1d6+3 dégâts chacune.
+
+step: Une proie est à plus de 3 m et à 12 m ou moins
+  do: Lancer le projectile de feu dans sa direction.
+  note: Résoudre les dégâts sur toutes les créatures dans la ligne ; déterminer le délai de 1d4 rounds avant le prochain projectile.
+
+step: Les proies restent à plus de 12 m
+  do: Attendre qu'elles entrent à portée.
+
+## Rounds suivants
+
+step: Une proie reste à portée des vrilles
+  do: Répéter l'attaque à outrance de quatre vrilles contre elle.
+  note: Le projectile exige une action simple ; ne pas l'ajouter à l'attaque à outrance. Les vrilles ne donnent ni étreinte automatique ni constriction.
+
+step: Aucune proie n'est à portée des vrilles, mais une cible est à 12 m ou moins et le projectile est disponible
+  do: Tirer un nouveau projectile de feu, puis déterminer son prochain délai de 1d4 rounds.
+
+step: Le projectile est indisponible et aucune proie n'est à portée des vrilles
+  do: Rester sur place jusqu'à ce qu'une attaque redevienne possible.
+  note: La résistance au feu absorbe les 10 premiers points de chaque attaque de feu subie ; elle ne donne pas une immunité au feu.
+
+## Repli
+
+step: Ses points de vie diminuent, mais restent supérieurs à 0
+  do: Continuer à attaquer toute proie à portée.
+  note: Sans intelligence et immobile, il ne fuit pas et ne se rend pas.
+
+step: Ses points de vie tombent à 0 ou moins
+  do: Déclencher automatiquement les spasmes de mort : explosion infligeant 4d6 dégâts de feu à toutes les créatures dans un rayon de 3 m.
+  note: Réflexes DD 14 pour réduire les dégâts de moitié ; cette explosion ne consomme aucune action et ne se déclenche pas volontairement.

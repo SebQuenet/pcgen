@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Valeany, fée de taille M des forêts tempérées, chaotique neutre, FP 3. Elle privilégie les enchantements et le contrôle du terrain ; ses 22 pv rendent une mêlée prolongée dangereuse.
+  CA 18, contact 15, prise au dépourvu 13 ; réduction des dégâts 5/fer froid ; déplacement de 9 m, allonge de 1,50 m ; vision nocturne, Perception +9, Discrétion +11.
+  Dague de maître +7 (1d4, critique 19–20), contact +6 (marque) ou attaque à mains nues +6 (1d3 et étreinte). Son enlacement affaiblit une victime immobilisée en lutte.
+
+resource: Enchevêtrement | 3/jour | Réflexes DD 15 ; végétation nécessaire
+resource: Hypnose | 3/jour | Volonté DD 15 ; affecte au total 2d4 dés de vie
+resource: Suggestion | 3/jour | Volonté DD 17 ; consigne raisonnable comprise par la cible
+resource: Appel de la foudre | 1/jour | Réflexes DD 17 ; NLS 6, jusqu'à 6 éclairs
+resource: Porte dimensionnelle | 1/jour | conserver pour le repli ; DD 18 indiqué dans la fiche
+resource: Lame de feu | 1/jour | attaque de contact de mêlée +2 ; 1d8+3 dégâts de feu
+resource: Immobilisation de personne | 1/jour | humanoïde uniquement ; Volonté DD 17
+resource: Convocation d'alliés naturels III | 1/jour | NLS 6 ; durée de 6 rounds
+resource: Forme d'arbre | 1/jour | camouflage immobile avant la rencontre ou après la fuite
+
+step: Des intrus approchent sans attaquer
+  do: Les observer à couvert, puis employer Diplomatie +11 ou Bluff +11 pour les détourner de son refuge
+  note: Elle parle le commun et le sylvestre ; une suggestion peut appuyer une demande de quitter les lieux si la cible la comprend.
+
+step: Elle prépare son terrain
+  do: Choisir un couvert à proximité de végétation et repérer une destination de fuite
+  note: Forme d'arbre permet de se dissimuler ; il faut reprendre sa forme pour se déplacer et combattre normalement.
+
+## Ouverture
+
+step: Plusieurs ennemis avancent dans la végétation
+  do: Utiliser enchevêtrement, Réflexes DD 15, en restant hors de la zone
+  note: La zone devient un terrain difficile même pour ceux qui réussissent leur sauvegarde ; la valeany n'a aucune immunité indiquée à cet effet.
+
+step: Un humanoïde dangereux est isolé et menace de l'atteindre
+  do: Utiliser immobilisation de personne, Volonté DD 17, puis gagner du couvert si son déplacement reste disponible
+  note: La cible peut tenter une nouvelle sauvegarde à chacun de ses tours ; ne pas supposer la paralysie acquise pour toute la rencontre.
+
+step: Un adversaire peut comprendre une consigne raisonnable
+  do: Employer suggestion, Volonté DD 17, pour lui faire quitter la forêt par un chemin sûr
+  note: Ne pas exiger de suicide ni considérer ce pouvoir comme une domination ; choisir cette ouverture à la place d'un autre pouvoir.
+
+## Rounds suivants
+
+step: Les adversaires sont ralentis et elle peut rester à distance
+  do: Utiliser appel de la foudre, puis rappeler un éclair par action simple aux rounds suivants
+  note: Chaque éclair inflige 3d6 dégâts d'électricité, Réflexes DD 17 pour réduire de moitié ; une seule utilisation fournit jusqu'à 6 éclairs.
+
+step: Elle a besoin d'un allié pour occuper un poursuivant
+  do: Utiliser convocation d'alliés naturels III et faire attaquer l'ennemi par la créature invoquée
+  note: Profiter de ces 6 rounds pour se déplacer vers une issue ; éviter de placer un animal invoqué près d'un ennemi marqué.
+
+step: Un ennemi isolé et affaibli reste à portée de 1,50 m
+  do: Attaquer à mains nues +6 (1d3 et étreinte), puis tenter de l'immobiliser en lutte aux rounds suivants
+  note: L'enlacement inflige 1d4 dégâts de Force par round d'immobilisation maintenue. Avec le BMO +0 fourni, réserver cette option aux prises favorables et renoncer si ses alliés interviennent.
+
+step: Elle doit se défendre au contact sans engager une lutte
+  do: Frapper avec la dague de maître +7 (1d4, critique 19–20), ou avec lame de feu si elle est déjà active
+  note: Activer lame de feu prend une action simple ; l'attaque vient lors d'une action ultérieure. La réduction des dégâts ne protège pas contre les armes en fer froid.
+
+step: Elle peut marquer un agresseur sans compromettre sa fuite
+  do: Effectuer une attaque de contact +6 pour appliquer la marque
+  note: Les animaux évitent ensuite les abords de la cible à 9 m et paniquent s'ils y sont contraints ; la marque n'inflige pas de dégâts et n'immobilise pas l'ennemi.
+
+step: Quelques adversaires cessent les hostilités et aucune menace immédiate ne les distrait
+  do: Tenter hypnose, Volonté DD 15, pour les fasciner et reprendre ses distances
+  note: Les créatures déjà engagées au combat gagnent +2 à leur sauvegarde ; une menace peut rompre la fascination.
+
+## Repli
+
+step: Ses points de vie tombent à 10 ou moins, ou plusieurs ennemis la prennent au contact
+  do: Utiliser porte dimensionnelle vers un endroit sûr, jusqu'à 192 m
+  note: Elle ne peut plus agir après cette téléportation jusqu'à son prochain tour ; ne pas ajouter une attaque, un déplacement ou forme d'arbre après son arrivée.
+
+step: Porte dimensionnelle est déjà dépensée
+  do: Couper la poursuite par enchevêtrement ou suggestion, puis fuir à 9 m par déplacement en utilisant les couverts
+  note: Si elle est au contact, se dégager prudemment avant de lancer un pouvoir qui l'exposerait aux attaques d'opportunité.
+
+step: Elle a rompu la ligne de vue
+  do: Se cacher avec Discrétion +11 ; employer forme d'arbre si ce pouvoir reste disponible et si elle peut s'immobiliser à l'abri des regards

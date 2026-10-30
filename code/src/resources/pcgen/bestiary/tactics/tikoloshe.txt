@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Tikoloshe, petit mort-vivant aquatique chaotique mauvais, cruel et sournois, qui tend des embuscades près des cours d'eau tropicaux.
+  Au contact, à 1,50 m : morsure +6 (1d4+2) et 2 coups +6 (1d3+2) en attaque à outrance. Déplacement terrestre de 6 m, nage de 9 m.
+  26 pv, CA 15 ; réduction des dégâts 5/tranchant, résistance au feu 10, résistance à la canalisation +2 et immunités des morts-vivants.
+
+note: Repérage
+  Aveugle, il localise précisément les créatures par vision aveugle à 9 m ; sa perception aveugle à 18 m signale les présences sans supprimer leur camouflage.
+  Ses sens reposent sur l'ouïe. Perception +12 ; au-delà de 18 m, les créatures bénéficient d'un camouflage total contre lui.
+
+resource: Invisibilité | 3/jour | action simple ; NLS 4, durée maximale de 4 minutes ; prend fin dès qu'il attaque
+resource: Waverider | 3/jour | action rapide ; nage jusqu'à 9 m sans provoquer d'attaque d'opportunité
+
+step: Une embuscade près de l'eau est possible
+  do: Se cacher avec Discrétion +13 et attendre qu'une victime s'écarte de ses compagnons ou entre dans l'eau
+  note: dans une eau profonde d'au moins 0,60 m, sa diffusion aquatique lui procure un camouflage donnant 20 % de chances de rater contre lui ; cet avantage disparaît en eau moins profonde ou à terre
+
+step: Il doit approcher à découvert
+  do: Activer invisibilité avant de s'approcher, puis rejoindre une position d'attaque près de l'eau
+  note: conserver si possible une utilisation pour la fuite ; l'invisibilité ne lui permet pas de traverser les obstacles
+
+## Ouverture
+
+step: Round de surprise, une victime est à portée
+  do: Porter une morsure +6 (1d4+2)
+  note: cette attaque met fin à son invisibilité ; il ne dispose pas d'une attaque à outrance pendant un round de surprise ordinaire
+
+step: Premier tour complet, une victime dans l'eau est à portée après une nage de 9 m au maximum
+  do: Utiliser Waverider si nécessaire pour arriver au contact, puis effectuer morsure +6 (1d4+2) et 2 coups +6 (1d3+2)
+  note: le déplacement en action rapide laisse son action complexe disponible pour l'attaque à outrance
+
+step: Sur terre, une victime exige un déplacement de 6 m au maximum
+  do: Avancer et porter une morsure +6 (1d4+2)
+  note: après un déplacement ordinaire, il ne porte qu'une attaque ; chercher un affrontement près de l'eau
+
+## Rounds suivants
+
+step: Une victime reste au contact
+  do: Répéter l'attaque à outrance : morsure +6 (1d4+2) et 2 coups +6 (1d3+2)
+  note: concentrer les attaques sur une victime isolée ou déjà blessée ; rester dans une eau assez profonde pour conserver la diffusion aquatique
+
+step: La victime s'éloigne en nageant et Waverider reste disponible
+  do: La rejoindre par Waverider, puis effectuer une attaque à outrance
+  note: garder si possible une utilisation de Waverider pour se dégager ; une seule action rapide par tour
+
+step: Plusieurs tikoloshes combattent ensemble
+  do: Encercler une même cible dans l'eau et la prendre en tenaille pour la submerger d'attaques
+  note: chacun utilise ses propres attaques et ressources ; aucun entraînement sous l'eau n'est automatique
+
+step: Les adversaires restent hors de l'eau et couvrent la berge
+  do: Se dissimuler dans l'eau et chercher un autre angle d'approche
+  note: il ne possède aucune attaque à distance ; éviter de traverser un terrain découvert sous les tirs
+
+## Repli
+
+step: Il est seul face à une résistance organisée, ou ses points de vie tombent à 8 ou moins
+  do: Utiliser Waverider pour nager jusqu'à 9 m sans attaque d'opportunité, puis activer invisibilité si une utilisation reste disponible et poursuivre la fuite en nageant
+  note: l'action rapide de Waverider et l'action simple d'invisibilité permettent encore un déplacement de nage de 9 m ; privilégier une voie d'eau assez profonde pour conserver son camouflage
+
+step: Waverider est épuisé et un adversaire le menace au contact
+  do: Se désengager vers l'eau par une retraite, puis utiliser invisibilité au tour suivant si possible
+  note: la retraite protège seulement la sortie de sa case initiale ; éviter de traverser d'autres cases menacées
+
+step: Toute fuite est impossible
+  do: Parler en commun ou en polyglotte et proposer un service contre sa survie
+  note: sa promesse sert à gagner du temps ; tenter de disparaître dès qu'une ouverture se présente

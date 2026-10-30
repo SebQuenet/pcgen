@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Troll des égouts, humanoïde géant de taille M, chaotique mauvais, brutal et peu intelligent. Il tend ses embuscades dans les passages souterrains obscurs.
+  19 PV, CA 14 ; déplacement de 9 m. Morsure +3 (1d6+1) à 1,50 m et 2 griffes +3 (1d4+1) jusqu'à 3 m.
+  Régénération 2, neutralisée par l'acide ou le feu ; compression pour se faufiler dans les passages étroits.
+
+step: Des intrus approchent sous terre
+  do: Se dissimuler dans l'obscurité avec Discrétion +9 et attendre qu'une cible approche à portée des griffes
+  note: vision dans le noir à 18 m, vision nocturne et odorat ; Perception +4. L'odorat aide à repérer une présence sans permettre de voir une cible cachée.
+
+step: Une lumière vive éclaire le passage
+  do: Rester à couvert et chercher un accès sombre
+  note: aveuglement à la lumière : une exposition soudaine à une lumière vive l'aveugle pendant 1 round ; il reste ébloui tant qu'il y demeure.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m et il peut agir sans se déplacer
+  do: Attaque à outrance : morsure +3 (1d6+1) et 2 griffes +3 (1d4+1)
+
+step: Un ennemi est à plus de 1,50 m et jusqu'à 3 m, sans déplacement nécessaire
+  do: Attaque à outrance avec les 2 griffes +3 (1d4+1 chacune)
+  note: la morsure ne porte qu'à 1,50 m.
+
+step: Aucun ennemi n'est à portée
+  do: Avancer depuis sa cachette, jusqu'à 9 m, puis porter une griffe +3 (1d4+1) si une cible se trouve à 3 m ou moins
+  note: Initiative +6 ; après un déplacement normal, il ne porte qu'une attaque. Si personne n'est encore à portée, poursuivre l'approche à l'abri des lumières vives.
+
+## Rounds suivants
+
+step: Un ennemi reste à 1,50 m
+  do: Répéter l'attaque à outrance avec la morsure et les 2 griffes sur la même cible
+
+step: Un ennemi reste à plus de 1,50 m et jusqu'à 3 m
+  do: Frapper avec les 2 griffes ; si possible, faire un pas de placement de 1,50 m pour ajouter la morsure à l'attaque à outrance
+
+step: Un adversaire quitte une case qu'il menace sans se protéger
+  do: Porter une attaque d'opportunité avec une griffe +3 (1d4+1)
+  note: ses griffes menacent jusqu'à 3 m ; il ne dispose que d'une attaque d'opportunité par round.
+
+step: Il est blessé sans avoir subi d'acide ni de feu
+  do: Continuer à attaquer en profitant de sa régénération
+  note: il récupère 2 PV par round. Des dégâts d'acide ou de feu suppriment sa régénération pendant le round suivant ; pendant cette interruption, il peut mourir normalement.
+
+## Repli
+
+step: Ses PV tombent à 6 ou moins, ou un ennemi lui inflige des dégâts d'acide ou de feu
+  do: Rompre le combat vers un passage sombre et étroit ; utiliser le désengagement si nécessaire pour éviter les attaques d'opportunité
+  note: compression facilite le passage dans les espaces exigus ; Escalade +9 permet de tenter une fuite par une paroi accessible, sans vitesse d'escalade particulière.
+
+step: Il a échappé aux poursuivants
+  do: Se cacher sous terre avec Discrétion +9 et attendre que sa régénération restaure ses PV
+  note: éviter toute nouvelle exposition à l'acide ou au feu pendant la récupération.

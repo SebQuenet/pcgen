@@ -1,0 +1,94 @@
+## Avant le combat
+
+note: Profil
+  Obcisidaemon, daemon NM de taille gigantesque, FP 19 : il recherche l'extermination des mortels et ravage le terrain plutôt que de livrer un duel honorable.
+  319 pv, CA 34 ; espace et allonge de 6 m ; déplacement de 9 m, vol de 18 m par round, manœuvrabilité moyenne.
+  Hallebarde +1 impie +28/+23/+18/+13, 4d8+13, critique 19–20/×3 et capture d'âme ; morsure +21, 2d8+4. L'arme impie ajoute 2d6 dégâts contre les créatures bonnes.
+  Ses nuages divisent le groupe ; son allonge et ses attaques à outrance achèvent les cibles isolées.
+
+note: Défenses et perceptions
+  RD 15/Bien et argent : les deux propriétés sont nécessaires pour la franchir. RM 30 ; immunité à l'acide, aux effets de mort, aux maladies et au poison ; résistance 30 au froid, à l'électricité et au feu.
+  Vision dans le noir à 18 m, perception de la mort, vision lucide et aura maudite constantes, cette dernière DD 25. Les bonus défensifs de l'aura sont déjà compris dans le profil.
+  La vision lucide révèle les illusions et l'invisibilité, mais ne permet pas de voir à travers ses nuages.
+
+resource: Nuage mortel | à volonté | action simple, Vigueur DD 22
+resource: Nuage mortel rapide | 3/jour | action rapide, Vigueur DD 22
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,5 kg d'objets
+resource: Destruction | 3/jour | action simple, Vigueur DD 24
+resource: Tempête de feu | 3/jour | action simple, Réflexes DD 25
+resource: Nuage incendiaire | 3/jour | action simple, Réflexes DD 25
+resource: Renvoi des sorts | 3/jour | protection contre les sorts ciblés susceptibles d'être renvoyés
+resource: Immobilisation de personne de groupe | 1/jour | action simple, Volonté DD 24 ; humanoïdes uniquement
+resource: Nuée de météores | 1/jour | action simple, Réflexes DD 26
+resource: Convocation | 1/jour | niveau 9 ; un purrodaemon, 50 % de réussite
+
+step: Le combat est prévisible et il dispose de temps
+  do: Activer renvoi des sorts, puis tenter la convocation du purrodaemon avant l'arrivée des adversaires
+  note: Une tentative ratée dépense l'utilisation quotidienne. Si l'allié apparaît, coordonner son placement par télépathie à 30 m pour couvrir un flanc.
+
+step: Il choisit son terrain
+  do: Privilégier un espace assez large pour ses 6 m d'envergure au sol et assez haut pour voler ; repérer les passages où ses nuages couperont la retraite
+  note: Perception +30 et Psychologie +30 servent à repérer l'approche et les feintes ; perception de la mort aide à reconnaître les victimes déjà affaiblies.
+
+## Ouverture
+
+note: Enchaînement
+  Choisir l'ouverture adaptée. Un nuage mortel rapide peut accompagner une action simple ou une attaque à outrance, dans la limite d'une action rapide par round.
+  Résoudre d'abord les pouvoirs exigeant de voir leurs cibles, puis poser le nuage qui pourrait les masquer.
+
+step: Plusieurs humanoïdes sont visibles et aucun n'est à plus de 9 m d'un autre
+  do: Immobilisation de personne de groupe, Volonté DD 24 ; puis nuage mortel rapide sur les victimes si elles sont sensibles au poison
+  note: Les humanoïdes paralysés peuvent retenter leur sauvegarde à leur tour. Se rapprocher pour exploiter la paralysie avant qu'ils se libèrent.
+
+step: Le groupe est à distance et offre une bonne cible aux attaques de zone
+  do: Nuée de météores, Réflexes DD 26 ; répartir les explosions pour toucher les menaces prioritaires, ou les concentrer sur le noyau du groupe
+  note: Employer plutôt tempête de feu, Réflexes DD 25, si sa zone modulable permet de frapper les ennemis en épargnant le purrodaemon.
+
+step: Un ennemi dangereux est déjà à portée de mêlée
+  do: Attaque à outrance : quatre coups de hallebarde +28/+23/+18/+13, puis morsure +21
+  note: Ajouter un nuage mortel rapide derrière les combattants pour atteindre leurs soutiens sans masquer la cible des attaques.
+
+## Rounds suivants
+
+step: Une cible vulnérable reste dans son allonge de 6 m
+  do: Rester en place et concentrer l'attaque à outrance sur elle ; privilégier les soigneurs accessibles et les adversaires déjà blessés
+  note: Sur un critique confirmé, Critique sanglant ajoute 2d6 dégâts de saignement par round, cumulables. Don pour les critiques donne +4 au jet de confirmation.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer de 9 m ou voler de 18 m, puis porter une unique Frappe décisive supérieure à la hallebarde : +28, 16d8+13
+  note: Cette attaque remplace l'attaque à outrance. Les dégâts impies s'ajoutent une seule fois ; les dés supplémentaires de Frappe décisive ne sont pas multipliés sur un critique.
+
+step: La cible est facile à toucher et les dégâts comptent davantage que la précision
+  do: Activer Attaque en puissance : malus de 6 aux attaques, bonus de 18 aux dégâts de hallebarde
+  note: Hallebarde +22/+17/+12/+7, 4d8+31 ; morsure secondaire +15, 2d8+10. Avec Frappe décisive supérieure : +22, 16d8+31. Le choix dure jusqu'à son prochain tour.
+
+step: Une arme ennemie franchit sa réduction des dégâts et menace sa survie
+  do: Remplacer une attaque de mêlée par une destruction de cette arme, BMO +38 avant les éventuels modificateurs d'Attaque en puissance et d'attaques itératives
+  note: Tenir compte de la solidité de l'objet. Destruction suprême transmet au porteur les dégâts excédentaires lorsque l'arme est détruite ; ses bonus sont déjà compris dans le BMO +38.
+
+step: Les adversaires restent groupés ou bloquent un passage
+  do: Poser un nuage mortel sur les ennemis sensibles au poison ; employer nuage incendiaire, Réflexes DD 25, contre ceux qui résistent au poison mais pas au feu
+  note: Nuage mortel inflige aux créatures de plus de 6 DV 1d4 dégâts de Constitution par round, Vigueur DD 22 pour réduire de moitié ; les créatures de 6 DV ou moins risquent la mort selon leurs DV.
+  note: Les nuages masquent aussi sa propre vue. Les placer pour séparer les ennemis, puis attaquer ceux qui en sortent ; suivre leur déplacement naturel et leur dispersion par le vent.
+
+step: Une cible isolée semble avoir une Vigueur faible et reste à moins de 22,5 m
+  do: Destruction, Vigueur DD 24 : 200 dégâts en cas d'échec, 10d6 en cas de réussite
+  note: Éviter les créatures immunisées aux effets de mort. Si le pouvoir tue, il consume le corps sans détruire l'équipement.
+
+step: Un humanoïde paralysé est accessible et aucun ennemi ne peut efficacement punir l'ouverture
+  do: Porter un coup de grâce à la hallebarde, en une action complexe
+  note: Le coup de grâce provoque des attaques d'opportunité ; s'il est trop risqué, préférer les attaques ordinaires contre la cible sans défense.
+
+step: La hallebarde tue une créature ou une mort survient à proximité
+  do: Appliquer la capture d'âme de la hallebarde ; pour une mort dans l'aura de terre brûlée de 18 m, appliquer cette aura, Vigueur DD 28
+  note: Terre brûlée consume les cadavres concernés ; elle n'inflige pas automatiquement de dégâts aux créatures encore vivantes.
+
+## Repli
+
+step: Ses points de vie passent sous 80, ou les adversaires neutralisent ses défenses et peuvent l'achever rapidement
+  do: Utiliser téléportation suprême vers un lieu connu hors du combat
+  note: Il n'emporte aucune autre créature ; la limite de 22,5 kg d'objets impose de vérifier le poids de ce qu'il transporte.
+
+step: La téléportation est empêchée
+  do: Placer un nuage mortel rapide pour gêner la poursuite s'il lui en reste, puis fuir en vol ; faire couvrir sa retraite par le purrodaemon s'il est présent
+  note: Un déplacement de vol parcourt 18 m ; un double déplacement, 36 m. Utiliser la hauteur et les obstacles pour rompre les lignes de vue.

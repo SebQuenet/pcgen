@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Ogre destructeur, grand humanoïde chaotique mauvais, brutal et peu subtil. Il combat à l'épée à deux mains +1 et lance des javelines +9/+4 (1d8+7) lorsque ses ennemis restent à distance.
+  107 points de vie ; CA 24, contact 10 ; déplacement de 9 m. Vision dans le noir à 18 m et vision nocturne.
+  Réduction des dégâts 5/bien ; résistances au froid 10 et au feu 10 ; résistance à la magie 10 ; immunité aux maladies.
+
+step: Il peut choisir où attendre les intrus
+  do: Se poster derrière un couvert, près d'un passage permettant de rejoindre rapidement l'ennemi à l'épée
+  note: Dans l'obscurité, sa vision dans le noir lui permet de repérer les adversaires jusqu'à 18 m.
+
+## Ouverture
+
+step: Un ennemi est accessible avec un déplacement de 9 m
+  do: Avancer et porter une attaque à l'épée à deux mains +1
+  note: Privilégier une cible isolée ou peu protégée, sans traverser inutilement les positions ennemies.
+
+step: Une cible est accessible par une charge en ligne droite dégagée
+  do: Charger jusqu'à 18 m et porter une attaque à l'épée à deux mains +1
+  note: La charge donne +2 à l'attaque et impose -2 à la CA jusqu'au début de son prochain tour.
+
+step: Aucun ennemi n'est accessible en mêlée
+  do: Lancer une javeline à +9, puis se rapprocher de 9 m vers un couvert ou vers la cible
+  note: Appliquer les malus de distance nécessaires ; le nombre de javelines disponibles n'est pas indiqué.
+
+## Rounds suivants
+
+step: Une cible reste à portée de l'épée sans nécessiter de déplacement important
+  do: Faire une attaque à outrance à l'épée à deux mains +1
+  note: Si nécessaire, effectuer un pas de placement de 1,50 m pour conserver la cible à portée. Les bonus d'attaque et les dégâts de l'épée ne sont pas précisés dans le bloc fourni.
+
+step: La cible s'éloigne au-delà de sa portée
+  do: La poursuivre de 9 m et porter une attaque à l'épée si elle redevient accessible
+  note: Éviter de se laisser encercler ; sa CA de contact 10 et son jet de Réflexes +6 rendent les attaques de contact et les effets de zone préoccupants.
+
+step: Il doit rester à distance et dispose encore de javelines
+  do: Faire une attaque à outrance avec deux lancers de javeline, à +9 puis +4, chacun infligeant 1d8+7 dégâts
+  note: Cette séquence exige de pouvoir avoir les javelines en main au moment de chaque lancer ; sans cela, lancer une seule javeline à +9.
+
+step: Plusieurs ennemis lui infligent des dégâts
+  do: Concentrer ses attaques sur l'adversaire qui le blesse le plus efficacement
+  note: La réduction des dégâts retire 5 points aux dégâts des armes qui ne sont pas bonnes. Les résistances retirent 10 points aux dégâts de froid et de feu ; elles ne protègent pas des autres énergies.
+
+## Repli
+
+step: Points de vie sous 27 et aucun adversaire ne semble près de tomber
+  do: Se retirer vers un couvert ou un passage qui limite les poursuivants
+  note: Ce seuil est un choix tactique pour le meneur ; aucun comportement de fuite obligatoire n'est indiqué dans le bloc.
+
+step: Un ennemi menace sa position au moment de fuir
+  do: Utiliser l'action de retraite pour parcourir jusqu'à 18 m
+  note: La case de départ ne provoque pas d'attaque d'opportunité de la part des ennemis qu'il voit ; les autres cases traversées peuvent en provoquer.

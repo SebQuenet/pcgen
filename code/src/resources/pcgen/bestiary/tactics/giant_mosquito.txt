@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Moustique géant, vermine de taille M, neutre et sans intelligence, des marais tempérés ou tropicaux ; 60 pv, CA 19.
+  Morsure +10 (1d8+6, saignement, maladie et étreinte), allonge 1,50 m ; BMO de lutte +14.
+  Vol à 18 m, manœuvrabilité bonne ; déplacement terrestre à 6 m ; vision dans le noir à 18 m, odorat et Perception +9.
+  Immunisé aux effets mentaux. Le profil ne précise ni les dégâts de saignement ni les paramètres de la maladie.
+
+step: Une proie est repérée
+  do: Se diriger en vol vers la proie accessible la plus proche
+  note: Il agit par instinct ; même à plusieurs, les moustiques ne préparent pas de manœuvres coordonnées
+
+## Ouverture
+
+step: Un déplacement de 18 m au plus permet d'atteindre une proie
+  do: Voler jusqu'à portée de morsure et attaquer à +10
+  note: Sur une morsure réussie contre une cible de taille M ou inférieure, tenter gratuitement l'étreinte avec un BMO de +14
+
+step: La proie reste trop éloignée
+  do: Se rapprocher en vol, avec un double déplacement jusqu'à 36 m si nécessaire
+
+## Rounds suivants
+
+step: La proie est agrippée
+  do: Maintenir la lutte et, sur une réussite, infliger les dégâts de morsure, soit 1d8+6
+  note: BMO de lutte +14 ; le maintien bénéficie de +5 supplémentaires si la proie ne s'est pas dégagée
+
+step: La proie s'est dégagée ou l'étreinte a échoué
+  do: Revenir à portée si nécessaire, mordre à +10 et tenter de nouveau l'étreinte sur une morsure réussie
+
+step: La proie est morte ou devenue inaccessible
+  do: Se tourner vers une autre proie accessible et reprendre les morsures
+
+## Repli
+
+step: Points de vie à 15 ou moins et une voie de fuite existe
+  do: Relâcher la proie et se retirer en vol, jusqu'à 36 m, vers un endroit hors de portée des poursuivants
+  note: Ce repli relève de la survie instinctive ; il ne prépare ni diversion ni revanche
+
+step: La fuite est impossible
+  do: Continuer à mordre ou à maintenir la lutte contre l'adversaire au contact

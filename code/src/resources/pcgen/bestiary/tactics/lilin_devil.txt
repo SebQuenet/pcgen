@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Diable lilin, extérieur loyal mauvais de taille M, manipulateur qui combat par charme-monstre (Volonté DD 22), suggestion (Volonté DD 21) et créatures invoquées. Aucune attaque physique n'est indiquée dans ce profil.
+  73 pv ; CA 20, contact 13, pris au dépourvu 17 ; réduction des dégâts 10/argent ; résistance à la magie 17. Immunisé au feu et au poison ; résistance à l'acide 10 et au froid 10.
+  Marche à 9 m, vol à 15 m avec manœuvrabilité moyenne ; vision dans le noir à 18 m ; télépathie à 30 m. Il cherche à maintenir des serviteurs entre les adversaires et lui.
+
+resource: Charme-monstre | à volonté | Volonté DD 22 ; crée une attitude amicale, sans donner un contrôle absolu
+resource: Suggestion | à volonté | Volonté DD 21 ; la consigne doit paraître raisonnable et être comprise
+resource: Protection contre le Bien | à volonté | protection personnelle à préparer avant l'affrontement
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 50 livres d'objets seulement
+resource: Animation des morts | 3/jour | nécessite des cadavres utilisables
+resource: Aura maudite | 1/jour | DD 26 ; durée de 9 rounds au niveau de lanceur de sorts 9
+resource: Convocation | 1/jour | niveau 3 ; 50 % de réussite ; 2d10 lémures, ou 1d4 diables barbus ou hellstokers, ou 1 chat d'enfer
+
+step: Des cadavres utilisables sont disponibles avant l'arrivée des ennemis
+  do: Employer animation des morts pour préparer des serviteurs, puis les placer sur les voies d'approche
+  note: Ce pouvoir ne fournit pas de cadavres et ne permet pas de créer une armée sans limite de contrôle.
+
+step: Une rencontre hostile devient probable
+  do: Activer protection contre le Bien et repérer un lieu de repli connu pour téléportation suprême
+  note: Réserver aura maudite à l'imminence du combat : ses 9 rounds passent vite.
+
+step: Il peut parler à une cible avant toute menace ouverte
+  do: Employer Bluff +18 ou Diplomatie +19 pour gagner du temps, puis tenter charme-monstre sur une cible isolée
+  note: Chercher un intermédiaire favorable ou obtenir son retrait ; un personnage charmé ne devient pas un esclave et conserve ses autres amitiés.
+
+## Ouverture
+
+step: Le combat commence et la convocation est disponible
+  do: Tenter de convoquer 1d4 diables barbus ou hellstokers pour former un écran ; choisir les 2d10 lémures si le nombre de corps compte davantage
+  note: Une seule tentative quotidienne, avec 50 % de réussite. En cas d'échec, poursuivre le plan sans renforts.
+
+step: L'affrontement se prolonge et aura maudite est disponible
+  do: Activer aura maudite dès le prochain round disponible, en incluant les serviteurs proches si possible
+  note: Ses bonus de protection ne s'additionnent pas aux bonus de même type de protection contre le Bien.
+
+step: Ses protections sont en place et une cible peut comprendre une consigne plausible
+  do: Lancer suggestion pour lui faire quitter la bataille et attendre à l'abri, en appuyant la demande sur un danger réel
+  note: Choisir de préférence un adversaire blessé ou hésitant ; une demande manifestement nuisible ne fonctionne pas.
+
+## Rounds suivants
+
+step: Des serviteurs retiennent les adversaires
+  do: Se déplacer en vol pour garder de la distance et continuer à lancer suggestion, une cible à la fois
+  note: Les serviteurs occupent le passage ; le lilin cherche surtout à retirer des combattants de l'affrontement.
+
+step: Un adversaire n'est menacé ni par le lilin ni par ses alliés
+  do: Tenter charme-monstre, puis lui demander de rester à l'écart ou de servir de médiateur
+  note: Une cible actuellement menacée par le lilin ou ses alliés reçoit +5 à son jet de sauvegarde contre le charme. Une attaque du lilin ou de ses alliés contre la cible charmée rompt le charme.
+
+step: Une cible résiste à une influence mentale
+  do: Changer de cible ou présenter une autre suggestion adaptée à la situation
+  note: Les pouvoirs sont à volonté, mais chaque tentative consomme du temps ; éviter de s'acharner sur un adversaire manifestement protégé contre les influences mentales.
+
+step: Un ennemi franchit l'écran de serviteurs ou lui interdit de conserver ses distances
+  do: Utiliser téléportation suprême pour rejoindre une position connue, hors de son contact, puis reprendre les influences mentales au round suivant
+  note: Le vol et la téléportation servent à préserver sa liberté de mouvement ; aucune attaque de mêlée n'est fournie pour soutenir un duel.
+
+## Repli
+
+step: Ses points de vie passent sous 25, ou ses influences échouent pendant que ses serviteurs sont débordés
+  do: Utiliser téléportation suprême vers le refuge préparé et laisser les serviteurs couvrir sa disparition
+  note: La téléportation n'emporte aucun compagnon : elle transporte seulement le lilin et jusqu'à 50 livres d'objets.

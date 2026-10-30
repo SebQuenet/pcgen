@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Sylvanien de foudre, plante de taille TG, neutre mauvais, qui attaque les humanoïdes à vue et privilégie les porteurs de haches. Il ressemble à un arbre mort couvert de mousse.
+  138 pv ; CA 22, contact 7 ; déplacement de 12 m ; espace et allonge de 4,50 m. Attaque à outrance : 2 coups +16, chacun pour 2d8+9 dégâts ; éclairs et tempêtes à distance, NLS 12.
+  RD 10/tranchant, résistance au feu 10, immunité à l'électricité et immunités des plantes. Les armes tranchantes constituent sa principale menace en mêlée.
+
+resource: Éclairs multiples | 1/jour | 12d6 d'électricité par cible ; Réflexes DD 19, DD diminué de 2 pour les cibles secondaires, toutes à 9 m au plus de la cible principale
+resource: Appel de la tempête | 3/jour | durée 12 minutes ; jusqu'à 12 éclairs par utilisation, un par round ; 5d6 d'électricité, 5d10 dehors par temps orageux ; Réflexes DD 18, demi-dégâts
+resource: Éclair | 3/jour | ligne de 36 m ; 10d6 d'électricité ; Réflexes DD 16, demi-dégâts
+resource: Protection contre les énergies destructives | 3/jour | absorbe jusqu'à 120 dégâts de l'énergie choisie ; durée maximale 2 heures
+resource: Morsure magique suprême | à volonté | sur lui-même uniquement ; durée 12 heures
+resource: Lueurs féeriques | à volonté | révèle les silhouettes et neutralise le camouflage dû à l'obscurité, au flou ou à l'invisibilité
+resource: Agrandissement | à volonté | la cible normale du sort est un humanoïde ; ne pas présumer qu'il peut agrandir son propre corps de plante
+
+step: Il peut préparer une embuscade
+  do: Se dissimuler parmi les arbres avec Discrétion +14 en forêt et attendre que les intrus offrent plusieurs cibles
+  note: ailleurs, sa Discrétion n'est que de -2 ; choisir un emplacement assez dégagé pour ses 4,50 m d'espace
+
+step: Il dispose d'un moment avant l'arrivée des intrus
+  do: Utiliser Morsure magique suprême pour donner +1 à toutes ses armes naturelles
+  note: ses deux coups passent à +17, chacun pour 2d8+10 dégâts
+
+step: Une menace élémentaire est identifiée avant l'affrontement
+  do: Utiliser Protection contre les énergies destructives contre cette énergie ; choisir le feu face à des incendiaires
+
+## Ouverture
+
+step: Au moins trois ennemis sont à distance et plusieurs se trouvent à 9 m de la cible principale
+  do: Lancer Éclairs multiples sur le groupe, en choisissant comme cible principale un adversaire dangereux
+
+step: Les ennemis sont encore à distance après l'ouverture, ou ils sont trop peu nombreux pour justifier Éclairs multiples
+  do: Activer Appel de la tempête pour disposer d'éclairs pendant les rounds suivants
+  note: chaque éclair ultérieur demande une action simple ; ce pouvoir ne crée pas à lui seul un temps orageux
+
+step: Un porteur d'arme tranchante est accessible en ligne droite sur un trajet dégagé
+  do: Charger dès qu'il choisit de passer en mêlée et porter un seul coup
+  note: la charge et les pouvoirs magiques occupent des tours distincts ; une charge ne donne pas les deux coups de l'attaque à outrance
+
+## Rounds suivants
+
+step: Un ennemi reste dans son allonge de 4,50 m
+  do: Effectuer une attaque à outrance avec ses deux coups, en concentrant les attaques sur le porteur d'arme tranchante
+  note: contre une cible facile à toucher, Attaque en puissance impose -3 aux attaques et ajoute +6 dégâts par coup ; avec Morsure magique suprême, cela donne deux coups +14 pour 2d8+16 chacun
+
+step: Une arme tranchante menace de contourner sa réduction des dégâts
+  do: Tenter de détruire cette arme à la place d'un coup ; poursuivre par une attaque à outrance de destruction si nécessaire
+  note: BMC +20, avec +4 supplémentaires grâce aux deux dons de destruction, sans attaque d'opportunité provoquée ; respecter la solidité de l'objet. Les dégâts contre les objets sont doublés lors d'une attaque à outrance ; Destruction suprême transmet au porteur les dégâts excédant ceux nécessaires à la destruction
+
+step: Il doit se déplacer et deux ennemis adjacents deviennent accessibles dans son allonge
+  do: Avancer puis utiliser Enchaînement : un coup, puis un second contre l'autre ennemi si le premier touche
+  note: une action simple ; CA réduite de 2 jusqu'à son prochain tour
+
+step: Plusieurs ennemis s'alignent à distance
+  do: Utiliser Éclair plutôt qu'un coup isolé ; inclure un sylvanien de foudre allié blessé dans la ligne si sa position le permet
+
+step: Un adversaire bénéficie d'invisibilité ou de flou et sa position est repérée
+  do: Utiliser Lueurs féeriques sur sa zone avant de reprendre les attaques
+
+step: Il est blessé et la tempête est encore active
+  do: Consacrer son action simple à faire tomber un éclair sur lui-même si le soin est plus utile qu'une attaque
+  note: guérison électrique : il récupère 1 pv par tranche de 3 dégâts électriques qu'il aurait subis ; l'excédent au-delà de 138 pv devient des pv temporaires pendant 2 heures. Ce soin remplace l'attaque à outrance du tour
+
+step: Les ennemis restent hors de sa mêlée
+  do: Appeler un éclair sur une cible vulnérable ou avancer de 12 m tout en utilisant Éclair
+  note: rester hors de l'allonge ennemie pour utiliser ses pouvoirs magiques sans provoquer d'attaque d'opportunité
+
+## Repli
+
+step: Points de vie sous 35 et les soins électriques ne compensent plus les blessures
+  do: Effectuer une retraite jusqu'à 24 m si le terrain le permet, en interposant les troncs entre lui et ses poursuivants
+  note: la retraite protège seulement le départ de sa position initiale contre les attaques d'opportunité ; éviter de traverser d'autres zones menacées
+
+step: Il a rompu le contact et Appel de la tempête reste actif
+  do: Continuer à s'éloigner de 12 m et consacrer son action simple à se soigner avec un éclair ; se dissimuler une fois hors de vue

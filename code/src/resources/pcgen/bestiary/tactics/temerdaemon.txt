@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Temerdaemon, extérieur de taille G, neutre mauvais, FP 14 : il provoque des accidents mortels puis massacre les survivants.
+  Faulx +1 : +23/+18/+13/+8, 2d4+8, critique 19–20/×4 ; deux griffes +16, 1d4+2 chacune. Toutes ces attaques infligent aussi la confusion.
+  195 PV, CA 29 ; déplacement de 9 m, marche dans les airs constante ; allonge de 3 m, aura de 9 m, vision dans le noir à 18 m.
+  Pouvoirs magiques au NLS 15, concentration +20 ; télépathie à 30 m.
+
+note: Défenses
+  Réduction des dégâts 10/Bien et argent : une arme doit remplir les deux conditions pour la franchir. Résistance à la magie 25.
+  Immunité à l'acide, aux effets de mort, aux maladies et au poison ; résistance 10 au froid, à l'électricité et au feu.
+
+resource: Désintégration | 3/jour | Vigueur DD 21
+resource: Dissipation suprême | 3/jour | dissipation au NLS 15
+resource: Mur illusoire | 3/jour | Volonté DD 19 en cas d'interaction
+resource: Suggestion | 3/jour | Volonté DD 18
+resource: Convocation | 1/jour | un temerdaemon, 30 % de réussite
+resource: Pouvoirs à volonté | illimité | malédiction DD 19, mise à mort DD 17, forme gazeuse, passe-muraille, façonnage de la pierre, télékinésie DD 20
+
+step: Il peut choisir le terrain
+  do: Privilégier une passerelle, un escalier endommagé ou les abords d'une fosse ; utiliser façonnage de la pierre sur un appui accessible et mur illusoire pour masquer un danger existant.
+  note: Le mur est une illusion : il laisse passer les créatures. Les dégâts d'une chute ou d'un effondrement dépendent du terrain réel.
+
+step: Des intrus hésitent encore à s'engager
+  do: Employer Bluff +25 ou suggestion pour leur proposer un détour apparemment sûr vers la zone dangereuse.
+  note: Une suggestion doit paraître raisonnable ; adapter le prétexte aux lieux.
+
+step: Un affrontement sérieux est imminent et il dispose d'un round complet
+  do: Tenter sa convocation avant de s'exposer, puis coordonner l'allié éventuel par télépathie.
+  note: L'échec consomme l'utilisation quotidienne ; préparer la suite sans compter sur ce renfort.
+
+## Ouverture
+
+note: Malédiction du faucheur
+  Aura de 9 m, DD 23, 10 rounds. Les échecs deviennent dangereux : un 1 naturel à l'attaque fait rejouer l'attaque contre soi-même ou un allié, à chances égales.
+  Les risques d'échec des sorts profanes dus à l'armure doublent ; un 1 naturel pour lancer sur la défensive provoque un incident magique.
+  Les compétences qui sanctionnent normalement un échec d'au moins 5 appliquent cette sanction à tout échec.
+
+step: Une protection magique empêche de menacer efficacement la cible prioritaire
+  do: Ouvrir par dissipation suprême sur cette cible, puis se déplacer pour placer les adversaires dans l'aura sans se laisser encercler.
+  note: Choisir cette ouverture à la place d'une attaque pendant ce round.
+
+step: Aucun effet magique prioritaire et un ennemi est accessible
+  do: Avancer jusqu'à 3 m de lui, en marchant dans les airs au-dessus des obstacles si nécessaire, puis porter une attaque de faulx +23.
+  note: S'il est déjà à portée, commencer directement par l'attaque à outrance décrite ci-dessous.
+
+## Rounds suivants
+
+step: Une cible est à portée et il peut rester sur place ou se limiter à un pas de 1,50 m
+  do: Attaque à outrance : quatre coups de faulx +23/+18/+13/+8 et deux griffes +16 ; concentrer les coups sur une menace encore lucide.
+  note: Chaque coup impose Volonté DD 23 ou confusion pendant 1 round ; les durées se cumulent à chaque sauvegarde ratée. Cet effet est mental.
+  note: Critique aveuglant sur un critique confirmé : Vigueur DD 27 ou cécité permanente ; réussite : éblouissement pendant 1d4 rounds. Applicable aux cibles qui voient avec un ou deux yeux ; son don Critical Focus accorde +4 aux jets de confirmation.
+
+step: Un combattant terrestre bloque un passage dangereux
+  do: Envisager un croc-en-jambe +25 contre sa DMD à la place de la première attaque, puis poursuivre les attaques restantes contre la cible à terre.
+  note: Le croc-en-jambe ne provoque pas d'attaque d'opportunité grâce à Science du croc-en-jambe ; une chute dans une fosse dépend de la position réelle.
+
+step: Une cible importante reste hors de portée
+  do: Utiliser désintégration : rayon de contact à distance +22, puis Vigueur DD 21 ; 30d6 dégâts, ou 5d6 si la sauvegarde réussit.
+  note: Employer télékinésie à la place si projeter une créature ou des objets peut exploiter un danger du terrain ; Volonté DD 20 pour résister à la projection d'une créature.
+
+step: Un adversaire isolé résiste longtemps et ses alliés ne peuvent intervenir immédiatement
+  do: Envisager malédiction au contact, Volonté DD 19, pour lui infliger un malus de 4 aux sauvegardes avant de reprendre les coups qui rendent confus.
+  note: Ce pouvoir prend une action simple ; privilégier l'attaque à outrance quand ses dégâts peuvent terminer le combat.
+
+step: Une créature vivante agonise à portée de contact et les menaces immédiates sont maîtrisées
+  do: Utiliser mise à mort, Volonté DD 17, pour l'achever et obtenir les bénéfices du pouvoir.
+
+## Repli
+
+step: Il tombe sous 50 PV ou ses défenses ne suffisent plus à contenir les adversaires
+  do: Gagner un couvert, puis utiliser passe-muraille dans une paroi appropriée ; exploiter marche dans les airs pour franchir les fosses et les passages détruits.
+  note: Son déplacement reste de 9 m ; prévoir le trajet avant de quitter la mêlée. Un pouvoir magique utilisé sous la menace peut provoquer une attaque d'opportunité.
+
+step: Une fissure permet de rompre la poursuite
+  do: Prendre une forme gazeuse et s'échapper par les interstices.
+  note: Le vol sous cette forme est limité à 3 m : choisir une issue que les poursuivants ne peuvent emprunter.

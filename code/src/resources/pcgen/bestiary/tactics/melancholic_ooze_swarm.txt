@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Essaim de vases mélancoliques, neutre et dépourvu d'intelligence, qui recherche instinctivement les fluides des êtres vivants dans les souterrains pollués.
+  17 PV ; CA 7 ; initiative –5. Attaque d'essaim : 1 point de dégâts automatique, plus viscosité ; ses globules collants peuvent immobiliser leurs victimes par paralysie.
+  Déplacement terrestre de 3 m par action de mouvement ; vision aveugle à 18 m. Il occupe un carré de 3 m de côté et son allonge est de 0 m : il doit recouvrir ses proies.
+
+note: Défenses
+  Résistance à l'électricité 5 ; vulnérabilité à l'acide, qui lui inflige 50 % de dégâts supplémentaires.
+  Les armes tranchantes et perforantes lui infligent la moitié de leurs dégâts ; les armes contondantes infligent leurs dégâts normaux. Les effets de zone lui infligent 50 % de dégâts supplémentaires.
+  Appliquer les immunités des vases et des essaims, notamment aux effets mentaux, aux coups critiques et aux effets visant un nombre déterminé de créatures.
+
+step: Une créature devient perceptible dans les 18 m
+  do: Faire ramper l'essaim vers la proie la plus proche, sans préparation ni coordination élaborée.
+  note: Sa vision aveugle lui permet de poursuivre dans l'obscurité ; elle ne traverse pas les obstacles solides.
+
+## Ouverture
+
+step: Aucune proie ne peut encore être recouverte
+  do: Avancer vers la plus proche ; effectuer un double déplacement de 6 m si nécessaire.
+
+step: Une proie peut être recouverte
+  do: Entrer dans son espace ; si plusieurs proies sont voisines, en recouvrir autant que son espace le permet.
+  note: Entrer dans l'espace adverse provoque les attaques d'opportunité habituelles. L'essaim ne porte lui-même aucune attaque d'opportunité.
+
+step: L'essaim termine son déplacement sur une ou plusieurs créatures
+  do: Infliger automatiquement 1 point de dégâts à chacune, sans jet d'attaque, puis appliquer la viscosité aux victimes de taille P ou supérieure : Réflexes DD 15 ou enchevêtrement.
+  note: L'enchevêtrement persiste jusqu'au retrait des globules et réduit notamment la vitesse de moitié.
+
+## Rounds suivants
+
+step: Une créature vivante commence son tour encore couverte de globules
+  do: Appliquer le mucus paralysant : Vigueur DD 15 ou paralysie pendant 1 round ; renouveler ce jet à chaque début de tour tant que les globules restent présents.
+  note: Cet effet mental n'affecte pas les créatures immunisées au poison. Quitter l'espace de l'essaim ne retire pas les globules.
+
+step: Une créature vivante subit les dégâts de l'essaim
+  do: Appliquer distraction : Vigueur DD 15 ou nausée pendant 1 round.
+
+step: Une proie reste à portée de déplacement
+  do: Rester sur elle ou la suivre pour renouveler les dégâts automatiques et la viscosité à chaque round.
+  note: Une proie ralentie ou paralysée reste plus facilement sous l'essaim ; celui-ci continue instinctivement à la recouvrir.
+
+step: Une victime cherche à retirer les globules
+  do: Permettre leur retrait par une action complexe si elle peut agir ; tout dégât d'acide subi par cette victime détruit immédiatement les globules.
+  note: Une paralysie empêche cette action ; la nausée ne laisse normalement qu'une action de mouvement.
+
+## Repli
+
+step: L'essaim est blessé mais possède encore des PV
+  do: Continuer à recouvrir les proies accessibles ; son absence d'intelligence ne justifie aucun seuil de retraite calculé.
+
+step: Toutes les proies s'éloignent
+  do: Poursuivre celles qu'il perçoit encore, à sa vitesse terrestre ; cesser la poursuite dirigée lorsqu'il ne peut plus les percevoir.
+
+step: Les PV tombent à 0 ou moins
+  do: Disperser l'essaim ; il cesse de combattre.

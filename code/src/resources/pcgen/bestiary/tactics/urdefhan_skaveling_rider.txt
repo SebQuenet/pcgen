@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Urdefhan, cavalier de skaveling, extérieur de taille M, neutre mauvais, FP 10. Combattant armé d'une épée rhoka +1 et d'un arc court composite +1 ; 92 pv, CA 22, contact 13, pris au dépourvu 19.
+  Déplacement à pied de 9 m ; vision dans le noir à 36 m.
+
+note: Défenses
+  Réduction des dégâts 5, annulée par une arme bonne ou en argent ; résistance à l'acide 10 ; résistance à la magie 21.
+  Immunité aux effets de mort, aux maladies, à la peur et à l'absorption de niveaux. Vigueur +12, Réflexes +9, Volonté +6 : les effets mentaux autres que la peur restent une menace.
+
+step: Il peut choisir sa position
+  do: Se placer près d'un couvert, avec une voie de repli, et préparer l'arc si les ennemis doivent encore approcher
+  note: Dans l'obscurité, surveiller les approches jusqu'à 36 m ; cet avantage dépend de la vision des adversaires
+
+## Ouverture
+
+step: Les ennemis sont à distance et aucun ne le menace au corps à corps
+  do: Tirer avec l'arc court composite +1 sur une cible exposée, en privilégiant un lanceur de sorts repéré
+  note: S'il peut rester sur place, effectuer une attaque à outrance ; s'il doit gagner un couvert, se déplacer puis tirer
+
+step: Un ennemi arrive au contact
+  do: Lâcher l'arc si nécessaire, dégainer l'épée rhoka +1 et porter une attaque
+  note: Dégainer consomme une action de mouvement ; ne pas ajouter une attaque à outrance à ce changement d'arme
+
+## Rounds suivants
+
+step: Il commence son tour au contact, épée en main
+  do: Effectuer une attaque à outrance avec l'épée rhoka +1, en concentrant ses coups sur le même adversaire
+  note: Un pas de placement de 1,50 m peut permettre de conserver l'attaque à outrance tout en évitant une position de tenaille
+
+step: Une cible vulnérable peut être atteinte après un déplacement de 9 m au maximum
+  do: Avancer et porter une seule attaque à l'épée, si le trajet permet de l'atteindre sans traverser les positions ennemies
+  note: Privilégier une cible isolée ou déjà blessée ; éviter de s'enfoncer au milieu du groupe
+
+step: Les ennemis restent à distance et l'arc est disponible
+  do: Continuer les tirs depuis le couvert ; changer de position si les adversaires l'encerclent
+  note: Sa réduction des dégâts aide contre certaines armes, mais ne réduit pas les dégâts d'une arme bonne ou en argent
+
+## Repli
+
+step: Ses points de vie tombent sous 30 et une voie de sortie reste accessible
+  do: Se désengager s'il est au contact, puis fuir par la voie préparée ; sinon, utiliser un double déplacement jusqu'à 18 m vers un couvert
+  note: Le désengagement peut permettre de parcourir jusqu'à 18 m ; seule la case de départ cesse d'être considérée comme menacée pour ce déplacement
+
+step: Aucune sortie praticable ne subsiste
+  do: Concentrer les attaques à l'épée sur l'adversaire qui bloque le passage, puis saisir la première possibilité de désengagement

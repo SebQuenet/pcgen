@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Crocodile momifié, mort-vivant de grande taille et d'intelligence animale, qui combat seul et cherche à saisir sa proie.
+  Morsure +5 (1d8+4 et étreinte), coup de queue +0 (1d12+2) ; allonge de 1,50 m, espace occupé de 3 m.
+  19 pv, CA 14, réduction des dégâts 2/— et immunités des morts-vivants ; déplacement de 6 m, nage de 9 m.
+
+step: De l'eau permet de dissimuler son approche
+  do: Attendre immergé près du passage des intrus, puis approcher à la nage
+  note: Discrétion +12 dans l'eau, +4 ailleurs ; Perception +8 et vision dans le noir à 18 m
+
+## Ouverture
+
+step: Une proie est accessible après un déplacement
+  do: Se rapprocher et porter une morsure +5 (1d8+4)
+  note: Privilégier une proie de taille M ou inférieure pour pouvoir la saisir avec étreinte
+
+step: Une proie est déjà à portée sans déplacement nécessaire
+  do: Effectuer une attaque à outrance : morsure +5 (1d8+4), puis coup de queue +0 (1d12+2)
+
+step: La morsure touche une proie de taille M ou inférieure
+  do: Tenter immédiatement de l'agripper avec étreinte
+  note: Cette tentative de lutte est une action libre qui ne provoque pas d'attaque d'opportunité ; appliquer les modificateurs de lutte aux attaques restantes si la prise réussit
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte ; sur un test réussi, infliger les dégâts de morsure, soit 1d8+4
+  note: Maintenir la prise consomme son action simple ; il concentre ses efforts sur cette proie
+
+step: La proie échappe à la prise mais reste à portée
+  do: Reprendre les attaques à outrance et tenter une nouvelle étreinte si la morsure touche
+
+step: Aucun adversaire n'est à portée
+  do: Poursuivre la proie la plus proche, à 6 m par déplacement à terre ou 9 m à la nage ; mordre dès qu'une action simple reste disponible
+  note: À terre, recourir au sprint pour rattraper une proie qui s'éloigne
+
+## Repli
+
+step: Des adversaires restent accessibles
+  do: Continuer à mordre et à agripper jusqu'à destruction
+  note: Aucun seuil de fuite n'est indiqué ; ses 19 pv et sa réduction des dégâts 2/— déterminent sa résistance
+
+step: Les adversaires deviennent inaccessibles
+  do: Cesser la poursuite et rester à l'affût dans les ruines, dans l'eau si elle est disponible

@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Homme-miroir, créature artificielle intelligente, neutre mauvaise, FP 5. Il prépare ses engagements et privilégie les adversaires isolés.
+  Épée longue +1 : +10/+5, 1d8+4, critique 19-20 ; dagues lancées : +12/+7, 1d4+3, critique 19-20. Allonge 1,50 m ; déplacement 9 m.
+  53 points de vie ; CA 18, contact 17 ; réduction des dégâts 5/contondant ; guérison accélérée 2.
+
+resource: Dagues | 4 | une dague par attaque à distance ; deux pour une attaque à outrance
+resource: Détection de la magie | à volonté | pouvoir magique, NLS 10
+resource: Lumière | à volonté | pouvoir magique, NLS 10
+
+step: Il peut observer les intrus avant de se révéler
+  do: Se dissimuler avec Discrétion +10 et observer avec Perception +12 ; employer détection de la magie si le temps le permet
+  note: vision aveugle et vision dans le noir à 18 m ; vision nocturne. Détecter la magie ne révèle pas les pouvoirs exacts des adversaires
+
+step: Un allié ou son maître se trouve à 30 m ou moins
+  do: Transmettre par télépathie la position des intrus et coordonner l'engagement
+  note: il comprend le commun, le géant, le hallit et le skald, mais ne peut pas parler
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de mêlée
+  do: Attaque à outrance à l'épée longue +1 : +10 puis +5, chacune pour 1d8+4, critique 19-20
+  note: privilégier une cible peu protégée ou un adversaire qui emploie des effets mentaux
+
+step: Une cible vulnérable est accessible avec un déplacement de 9 m
+  do: Se déplacer jusqu'au contact et porter une seule attaque d'épée à +10
+  note: après ce déplacement, il ne bénéficie pas de sa seconde attaque à +5
+
+step: Le contact est inaccessible ou exposerait son flanc à plusieurs ennemis
+  do: Rester près d'un couvert et lancer une dague à +12 sur une cible à courte distance
+  note: dégainer une dague est une action libre grâce à Arme en main ; conserver le compte des quatre dagues
+
+## Rounds suivants
+
+step: Il peut rester au contact sans déplacement supérieur à 1,50 m
+  do: Répéter l'attaque à outrance à l'épée, +10/+5 ; faire un pas de placement de 1,50 m si nécessaire
+  note: concentrer les attaques sur le même adversaire pour le mettre hors de combat
+
+step: Il reste à distance et possède au moins deux dagues
+  do: Sans se déplacer de plus de 1,50 m, lancer deux dagues en attaque à outrance, à +12 puis +7
+  note: chaque dague inflige 1d4+3, critique 19-20 ; appliquer les pénalités de portée habituelles
+
+step: Un adversaire emploie une arme contondante ou des effets mentaux
+  do: Le viser en priorité s'il est accessible ; sinon, utiliser le terrain pour limiter son accès au combat
+  note: les armes contondantes traversent sa réduction des dégâts. Malgré ses traits de créature artificielle, il est vulnérable aux effets mentaux ; Volonté +4
+
+step: Un nouveau round commence et il n'est pas détruit
+  do: Récupérer 2 points de vie, sans dépasser 53
+  note: sa réduction des dégâts retire 5 points aux dégâts d'armes qui ne sont pas contondantes. Il est immunisé à la cécité, aux attaques de regard et aux illusions de la sous-école des mirages
+
+## Repli
+
+step: Il tombe à 15 points de vie ou moins et une issue reste accessible
+  do: Faire retraite vers un couvert ou un passage qui limite la poursuite ; prévenir les alliés à portée de télépathie
+  note: choisir une action de retraite pour quitter le contact ; son déplacement de base est de 9 m
+
+step: Il a échappé aux poursuivants
+  do: Rester dissimulé et laisser sa guérison accélérée restaurer ses points de vie avant un nouvel engagement
+  note: cette guérison ne le relève pas une fois détruit ; à 0 point de vie, une créature artificielle est détruite

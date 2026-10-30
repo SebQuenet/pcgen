@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Narval, animal de taille G, neutre, des océans froids. 30 points de vie, CA 16 ; nage à 24 m par round.
+  Morsure +7 (1d8+7), allonge de 3 m.
+  Vision aveugle à 36 m, vision nocturne et Perception +12 ; Natation +20.
+
+note: Respiration
+  Il retient son souffle pour plonger et doit revenir en surface pour respirer.
+
+step: Une menace approche
+  do: Rester dans l'eau et conserver une voie de fuite vers le large
+  note: Sa vision aveugle lui permet de repérer les créatures dans un rayon de 36 m, même dans l'obscurité
+
+## Ouverture
+
+step: Une cible est à portée de morsure
+  do: Mordre à +7, pour 1d8+7 dégâts
+
+step: Une cible peut être atteinte après au plus 24 m de nage
+  do: Nager jusqu'à placer la cible à 3 m ou moins, puis mordre
+
+step: La cible est trop éloignée pour être mordue ce round
+  do: Se rapprocher en nageant si le combat est nécessaire
+  note: Un double déplacement permet de parcourir 48 m, mais ne laisse pas d'action pour mordre ce round
+
+## Rounds suivants
+
+step: La cible reste à 3 m ou moins
+  do: Répéter la morsure +7 (1d8+7) à chaque round
+  note: Privilégier la menace immédiate ; il ne dispose que d'une morsure par attaque à outrance
+
+step: La cible s'écarte
+  do: La suivre avec un déplacement de nage de 24 m au maximum, puis mordre si elle est à portée
+
+step: Aucun adversaire n'est accessible depuis l'eau
+  do: Rester dans son élément et s'éloigner si les attaques continuent
+
+## Repli
+
+step: Points de vie sous 10, ou fuite préférable face à plusieurs adversaires
+  do: Rompre le combat et gagner les eaux profondes, jusqu'à 48 m avec un double déplacement
+  note: Un déplacement qui quitte une case menacée peut provoquer une attaque d'opportunité
+
+step: Il doit reprendre son souffle pendant la fuite
+  do: Revenir respirer en surface en poursuivant son éloignement

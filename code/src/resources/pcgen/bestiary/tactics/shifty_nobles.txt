@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Noble humaine de Magnimar, aristocrate 2/roublarde 1, loyale neutre, qui privilégie la ruse et les échanges sociaux. Avec 13 pv et une CA de 13, elle supporte mal un affrontement prolongé.
+  Dague de maître au contact +1 ou lancée +4 (1d4−1, critique 19–20) ; allonge 1,50 m ; déplacement 9 m.
+
+resource: Potion de soins légers | 1 | à boire à couvert lorsqu'elle est blessée
+resource: Bâtons éclairants | 2 | pour éclairer une issue ou un passage obscur
+resource: Dague de maître | 1 | seule arme indiquée ; une fois lancée, elle doit être récupérée pour resservir
+
+step: Une confrontation se prépare
+  do: Chercher une issue et tenter de désamorcer la situation par la Diplomatie +8 ou le Bluff +12
+  note: Perception +9 et Psychologie +8 l'aident à repérer les menaces et à évaluer les intentions adverses
+
+step: Elle peut éviter d'être repérée
+  do: Utiliser Discrétion +8 en profitant des abris disponibles pour contourner le danger
+
+## Ouverture
+
+step: Un adversaire bloque la fuite à distance
+  do: Lancer la dague de maître +4 (1d4−1, critique 19–20), puis se déplacer vers une issue accessible
+  note: Ne lancer sa seule arme que si cela peut faciliter sa fuite ; elle reste désarmée tant qu'elle ne l'a pas récupérée
+
+step: Un adversaire est déjà au contact et aucune issue n'est accessible
+  do: Attaquer à la dague de maître +1 (1d4−1, critique 19–20)
+  note: Chercher à dégager un passage ; ses faibles dégâts rendent un duel prolongé défavorable
+
+## Rounds suivants
+
+step: Une voie de sortie devient accessible
+  do: Se retirer du corps à corps et gagner un abri
+  note: Son déplacement est de 9 m ; privilégier un trajet qui évite de passer près d'autres ennemis
+
+step: Elle reste acculée et tient encore sa dague
+  do: Continuer les attaques au contact tout en cherchant à négocier une cessation du combat
+  note: Son Bluff +12 peut soutenir un mensonge crédible ; il ne contraint pas l'adversaire à la croire ni à cesser ses attaques
+
+step: Elle est blessée et dispose d'un abri sans ennemi au contact
+  do: Boire sa potion de soins légers si cela lui permet de poursuivre sa fuite
+
+## Repli
+
+step: Elle tombe à 6 pv ou moins, ou rencontre une résistance supérieure
+  do: Donner la priorité à la fuite ; abandonner une dague lancée si la récupérer l'expose
+
+step: La fuite est impossible
+  do: Demander grâce ou négocier sa reddition avec Diplomatie +8
+  note: Préserver sa vie passe avant la poursuite d'un combat qu'elle ne peut soutenir

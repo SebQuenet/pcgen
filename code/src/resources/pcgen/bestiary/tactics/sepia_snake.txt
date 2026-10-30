@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Sepia Snake, bête magique neutre de taille TG, prédateur solitaire volant sans ailes. 114 pv, CA 21, réduction des dégâts 10/magie.
+  Morsure +17 (1d8+7 et étreinte), dard caudal +18 (1d8+3 et poison), constriction (1d8+10) ; regard et cocon pour neutraliser les proies.
+  Déplacement terrestre 12 m, vol 15 m avec bonne manœuvrabilité ; espace occupé 4,50 m, allonge 3 m.
+
+resource: Cocon | 3 par jour | portée 6 m ; Réflexes DD 20 pour éviter la toile
+
+step: Des intrus approchent
+  do: Attendre à couvert, si possible en hauteur, puis repérer une proie isolée
+  note: Discrétion +12, Perception +9, vision dans le noir à 36 m et vision nocturne ; privilégier un espace permettant de voler
+
+## Ouverture
+
+step: Les adversaires découvrent le serpent
+  do: Rester en vol et présenter son regard aux adversaires les plus dangereux
+  note: Regard : Volonté DD 20 ; un échec impose un malus de -4 aux jets d'attaque, aux dégâts des armes et aux tests de caractéristique et de compétence
+
+step: Une cible de taille M ou inférieure est à 6 m ou moins et un cocon reste disponible
+  do: Cracher un cocon sur elle pour la retirer du combat
+  note: Après l'échec aux Réflexes DD 20, elle est entièrement enveloppée ; Vigueur DD 20 ou animation suspendue pendant 1d4+12 jours. Une victime entièrement enveloppée dépend d'une aide extérieure pour se libérer
+
+## Rounds suivants
+
+step: Une proie reste libre et un passage aérien est possible
+  do: Utiliser Attaque en vol : approcher, porter une seule attaque de dard +18 (1d8+3 et poison), puis poursuivre le déplacement, dans la limite de 15 m au total
+  note: Profiter de l'allonge de 3 m ; ce don ne supprime pas les attaques d'opportunité dues au déplacement
+
+step: Le dard blesse une cible
+  do: Appliquer le poison puis laisser agir ses effets
+  note: Vigueur DD 20 ; fréquence 1 fois par round pendant 6 rounds ; paralysie et 1d2 points de dégâts de Dextérité ; une sauvegarde réussie guérit le poison
+
+step: Une proie isolée est à portée et le serpent peut rester au contact
+  do: Faire une attaque à outrance : morsure +17 et dard +18 ; tenter l'étreinte si la morsure touche
+  note: Infliger la constriction, 1d8+10, sur un test de lutte réussi ; empoisonner en priorité une proie déjà immobilisée
+
+step: Une autre cible menace le serpent et un cocon reste disponible
+  do: Employer le cocon pour réduire le nombre d'assaillants
+  note: Une taille supérieure à M exige une projection supplémentaire par catégorie de taille ; privilégier les petites proies pour économiser les utilisations
+
+## Repli
+
+step: Les points de vie passent sous 30 ou plusieurs adversaires l'enferment au contact
+  do: Abandonner la lutte et fuir en vol, à 15 m par déplacement, vers une issue dégagée
+  note: Utiliser le désengagement si nécessaire pour quitter une zone menacée ; chercher ensuite un couvert pour rompre la poursuite

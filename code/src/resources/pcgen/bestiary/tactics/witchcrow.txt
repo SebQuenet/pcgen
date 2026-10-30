@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Witchcrow, corbeau magique de taille P, chaotique mauvais, intelligent et cupide ; il privilégie le vol d'objets magiques aux affrontements prolongés.
+  32 PV, CA 15, résistance au froid 5 ; déplacement au sol 6 m, vol 18 m avec une bonne manœuvrabilité ; vision dans le noir à 18 m.
+  Deux serres +7 (1d6+1 chacune) en attaque à outrance ; une seule serre lors d'une attaque au passage. Allonge 1,50 m ; manœuvre de subtilisation +7 contre le DMD.
+
+resource: Détection de la magie | permanent | repérer les auras en se concentrant ; communication avec les animaux également permanente, limitée aux oiseaux
+resource: Perception des indices | 3/jour | pendant 50 minutes, +5 en Perception et en Psychologie, soit +14 et +11
+resource: Disparition | 3/jour | invisibilité pendant 5 rounds au maximum ; une attaque met fin à l'effet
+resource: Ventriloquie | 3/jour | projeter sa voix à 10,50 m au maximum pendant 5 minutes ; Volonté DD 14 pour reconnaître l'illusion en interagissant avec elle
+resource: Mauvais présage | 1/jour | portée 10,50 m ; les deux prochains jets de d20 de la cible se font deux fois en conservant le moins favorable ; durée maximale 5 rounds, aucun jet de sauvegarde
+resource: Image miroir | 1/jour | 1d4+1 doubles pendant 5 minutes ; protège contre les attaques ciblées, pas contre les effets de zone
+
+step: Des voyageurs approchent
+  do: Les observer depuis un perchoir dissimulé avec Discrétion +15 ; utiliser perception des indices et chercher leurs objets magiques avec détection de la magie
+  note: Privilégier les lanceurs de sorts et les petits objets accessibles ; les oiseaux ordinaires peuvent fournir des renseignements, sans être sous son contrôle
+
+step: Il veut détourner l'attention avant son approche
+  do: Utiliser ventriloquie pour faire venir sa voix d'un autre endroit et tenter d'attirer les regards loin de son perchoir
+  note: La voix ne contraint personne à se déplacer
+
+step: Une confrontation paraît imminente et il dispose d'un round de préparation
+  do: Activer image miroir avant de quitter son abri
+
+## Ouverture
+
+step: Il peut préparer une approche discrète
+  do: Activer disparition, puis se rapprocher en volant tout en restant hors de l'allonge adverse
+  note: Garder une utilisation de disparition pour emporter le butin ou rompre le combat
+
+step: Il est déjà invisible et un objet convoité est accessible
+  do: Au round suivant, effectuer une attaque au passage : approcher à 1,50 m, tenter une subtilisation à +7 contre le DMD, puis poursuivre son vol ; trajet total de 18 m au maximum
+  note: Choisir une bourse ou un petit objet facile à détacher ; éviter les objets tenus en main ou solidement fixés. La subtilisation remplace l'attaque de serre
+
+step: Il doit combattre un adversaire dangereux plutôt que voler
+  do: Lancer mauvais présage à 10,50 m ou moins, puis gagner une position hors de sa portée de mêlée
+  note: Cette ouverture remplace la subtilisation de ce round
+
+## Rounds suivants
+
+step: Le butin reste accessible et une nouvelle tentative paraît favorable
+  do: Recommencer une subtilisation au passage, en choisissant une trajectoire qui évite les autres combattants
+  note: Science de la subtilisation empêche l'attaque d'opportunité due à la manœuvre ; le déplacement peut encore en provoquer
+
+step: Aucun objet ne peut être dérobé et une cible est isolée
+  do: La harceler au passage avec une serre +7 (1d6+1), puis s'éloigner dans la limite des 18 m de déplacement
+  note: Ne pas rester entre plusieurs ennemis ; une attaque au passage ne permet pas les deux serres
+
+step: Un ennemi affaibli reste au contact et terminer le combat paraît préférable
+  do: Effectuer une attaque à outrance avec les deux serres +7, chacune infligeant 1d6+1
+  note: Si la défense prime, utiliser Expertise du combat : CA 17 et serres +5 jusqu'à son prochain tour
+
+## Repli
+
+step: Un objet magique a été dérobé, ou ses PV tombent à 10 ou moins
+  do: Emporter le butin, utiliser disparition si elle reste disponible, puis s'éloigner en volant vers un couvert
+  note: Avec disparition, il conserve un déplacement de 18 m ce round ; aux rounds suivants, un double déplacement permet de parcourir 36 m sans attaquer
+
+resource: Apportation | 1/jour en groupe suffisamment nombreux | rituel collectif de 1 minute sans interruption ; cercle de téléportation visible, NLS 17, actif pendant 1 minute
+
+step: Une grande bande est réunie et dispose d'une minute à l'abri des poursuivants
+  do: Préparer ensemble l'apportation pour quitter les lieux
+  note: Réserver ce rituel à une retraite préparée après avoir rompu le contact

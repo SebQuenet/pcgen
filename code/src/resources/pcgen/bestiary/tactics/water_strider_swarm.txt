@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Nuée de minuscules insectes aquatiques, neutre et dépourvue d'intelligence, qui attaque instinctivement ce qui trouble la surface de son eau. FP 1 ; 9 pv ; CA 18.
+  Attaque d'essaim : 1d6 dégâts automatiques, plus absorption de sang et distraction. Espace de 3 m ; allonge de 0 m : elle doit occuper l'espace des victimes.
+  Déplacement de 9 m à la surface de l'eau, nage de 6 m, déplacement terrestre de 3 m par bonds. Immunisée aux dégâts des armes et aux effets mentaux.
+
+step: L'eau est encore calme
+  do: Rester à la surface, près de la berge, jusqu'à ce qu'une créature perturbe l'eau
+  note: Perception +6 ; vision dans le noir à 18 m ; perception des vibrations à 9 m
+
+## Ouverture
+
+step: Une créature trouble la surface
+  do: Glisser vers elle à 9 m par action de mouvement et terminer le déplacement dans son espace
+  note: Aucun jet d'attaque : chaque créature dont l'espace est occupé à la fin du déplacement subit les dégâts d'essaim et ses effets associés
+
+step: Plusieurs créatures sont réunies au bord de l'eau
+  do: Recouvrir les victimes proches les unes des autres avec l'espace de la nuée
+  note: Son comportement reste instinctif ; elle se jette sur les perturbations sans sélectionner un adversaire selon son équipement ou sa profession
+
+## Rounds suivants
+
+step: Une victime reste dans l'espace de la nuée
+  do: Rester sur elle et poursuivre les dégâts d'essaim, l'absorption de sang et la distraction
+  note: Les coups d'armes ne la blessent pas ; elle continue à attaquer malgré ces coups
+
+step: La victime se déplace dans l'eau ou le long de la berge
+  do: La suivre à la surface et terminer de nouveau le déplacement dans son espace
+  note: Privilégier le trajet sur l'eau ; sur la terre ferme, les bonds ne permettent qu'un déplacement de 3 m par action de mouvement
+
+note: Vulnérabilité de l'essaim
+  Les effets de zone lui infligent 50 % de dégâts supplémentaires. Avec seulement 9 pv, une seule attaque de zone peut disperser la nuée.
+
+## Repli
+
+step: Les proies quittent la berge et deviennent inaccessibles
+  do: Abandonner la poursuite et rester à la surface de l'eau
+  note: La nuée ne prépare ni retraite organisée ni embuscade de revanche
+
+step: Les points de vie tombent à 0
+  do: Disperser la nuée ; elle cesse de combattre

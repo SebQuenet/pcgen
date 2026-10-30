@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Hutijin, diable de taille G, loyal mauvais, FP 22 : un combattant très intelligent qui neutralise ses adversaires avant de les achever au trident.
+  297 pv ; CA 43, contact 25 ; RD 20/Bien et argent ; RM 33 ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10.
+  Marche à 15 m, vol à 30 m ; espace et allonge de 3 m. Trident +4 impie de feu intense +39/+34/+29/+24, 2d6+17 et 1d6 de feu, critique 19-20 ; la propriété impie ajoute 2d6 contre les créatures bonnes. Filet de capture +28 pour engager la lutte.
+
+resource: Guérison suprême | 2/jour | rend 150 pv, sans dépasser 297 pv
+resource: Invocation de diables | 2/jour | niveau 9, réussite 100 % ; 2d10 lémures, 2d4 diables des glaces ou érinyes, 1d4 diables barbelés ou 1d2 diantrefosses
+resource: Boule de feu rapide | 3/jour | action rapide, 10d6 de feu, Réflexes DD 22 pour moitié
+resource: Nuée de météores | 1/jour | DD 28
+resource: Symbole de persuasion | 1/jour | Volonté DD 25 ; préparer avant le combat si le terrain s'y prête
+
+step: Les intrus peuvent être observés avant leur arrivée
+  do: Employer scrutation suprême, Volonté DD 26, pour repérer leurs protections et leurs combattants les plus dangereux
+  note: Détection du Bien, détection de la magie et détection de l'invisibilité sont constantes ; Perception +37 et Art de la magie +33 aident à choisir les cibles.
+
+step: Il dispose du temps nécessaire pour préparer sa défense
+  do: Invoquer de préférence 1d2 diantrefosses ; choisir les diables des glaces ou les érinyes si davantage de combattants sont nécessaires
+  note: Positionner les alliés entre lui et les assaillants et leur transmettre ses priorités par télépathie à 30 m. Réserver la seconde invocation aux renforts si la première suffit.
+
+step: Le combat est imminent
+  do: Lancer aura maudite, puis invisibilité suprême, et prendre une position qui laisse une voie de fuite aérienne
+  note: Chaque protection dure 20 rounds au NLS 20 ; l'invisibilité suprême persiste lorsqu'il attaque.
+
+## Ouverture
+
+step: Plusieurs adversaires vivants peuvent être paralysés
+  do: Lancer immobilisation de monstre de groupe, Volonté DD 28, en visant d'abord les lanceurs de sorts et les porteurs d'armes capables de franchir sa RD
+  note: Portée 90 m ; les cibles choisies doivent être à 9 m au plus les unes des autres. Une victime peut retenter son jet à chaque tour, au prix d'une action complexe.
+
+step: Une cible prioritaire possède 150 pv ou moins et peut être étourdie
+  do: Employer mot de pouvoir étourdissant plutôt que l'immobilisation si sa Volonté paraît trop solide
+  note: Aucun jet de sauvegarde ; la RM s'applique. Durée : 4d4 rounds à 50 pv ou moins, 2d4 entre 51 et 100 pv, 1d4 entre 101 et 150 pv.
+
+step: Plusieurs ennemis non mauvais de 20 DV ou moins sont à 12 m ou moins
+  do: Choisir blasphème, Volonté DD 26, si ses effets sont plus utiles que l'immobilisation
+  note: Au NLS 20, les effets cumulatifs sont hébétement jusqu'à 20 DV, affaiblissement jusqu'à 19 DV, paralysie jusqu'à 15 DV et mort jusqu'à 10 DV ; la sauvegarde réduit ou annule les effets. Les créatures de plus de 20 DV sont immunisées.
+
+step: Des ennemis regroupés restent vulnérables au feu
+  do: Ajouter une boule de feu rapide à l'action choisie pour ce round
+  note: Une seule boule de feu rapide par round ; elle peut accompagner un autre pouvoir magique ou une attaque à outrance. Ses alliés diables immunisés au feu peuvent rester dans la zone.
+
+## Rounds suivants
+
+step: Une cible prioritaire est à portée du trident sans déplacement important
+  do: Effectuer une attaque à outrance, +39/+34/+29/+24, en concentrant les coups sur elle
+  note: Exploiter l'allonge de 3 m et les alliés pour éviter l'encerclement. Employer Attaque en puissance lorsque la cible est facile à toucher, notamment si elle est paralysée.
+
+step: Une victime paralysée est accessible sans s'exposer aux autres ennemis
+  do: Se placer à côté d'elle, puis porter un coup de grâce au trident au round suivant si elle reste sans défense
+  note: Le coup de grâce exige une action complexe et provoque des attaques d'opportunité ; une simple créature étourdie ne permet pas ce coup de grâce.
+
+step: Il doit se déplacer avant de frapper
+  do: Se déplacer, puis utiliser Science de la frappe décisive pour une attaque de trident +39 infligeant 6d6+17 et 1d6 de feu, plus les dégâts impies éventuels
+  note: Les dés supplémentaires de frappe décisive concernent les dégâts de base de l'arme ; cette option ne se combine pas avec une charge ou une attaque à outrance.
+
+step: Les protections adverses empêchent ses pouvoirs de contrôle ou ses attaques de fonctionner
+  do: Employer dissipation suprême ciblée sur l'adversaire protégé, puis reprendre le contrôle ou les attaques au round suivant
+  note: Le test de dissipation est de 1d20+20 ; privilégier les protections identifiées par Art de la magie.
+
+step: Les ennemis résistent au contrôle mental et restent à distance
+  do: Employer nuée de météores, DD 28, contre les cibles vulnérables au feu ; sinon utiliser les attaques du trident ou faire intervenir les diables invoqués
+  note: Garder cette utilisation unique pour une occasion où plusieurs ennemis peuvent être atteints.
+
+step: Il faut séparer les combattants de leurs soutiens
+  do: Dresser un mur de feu entre eux, puis exploiter son immunité au feu pour traverser la zone dangereuse et changer de cible
+  note: Le mur inflige des dégâts mais ne constitue pas une barrière solide ; un ennemi peut le traverser.
+
+step: Une cible proche échappe à l'immobilisation ou résiste aux effets mentaux
+  do: Employer le filet de capture à +28 pour l'engager en lutte et permettre aux alliés de concentrer leurs attaques
+  note: Choisir cette option pour retenir un adversaire précis ; ne pas abandonner une attaque à outrance efficace sans avantage tactique.
+
+step: Ses pv tombent à 147 ou moins et il peut encore tenir la position
+  do: Lancer guérison suprême sur lui-même pour récupérer 150 pv
+  note: Se dégager de la portée ennemie si nécessaire avant d'employer le pouvoir. Chaque utilisation consomme son action simple ; conserver la seconde pour une nouvelle blessure grave si possible.
+
+## Repli
+
+step: Ses pv tombent sous 75 et la victoire devient improbable, ou ses soins sont épuisés et les ennemis franchissent régulièrement sa RD
+  do: Employer téléportation suprême vers un lieu sûr déjà connu
+  note: Ce pouvoir n'emporte que lui et jusqu'à environ 22,7 kg d'objets ; il ne transporte pas ses alliés. Ordonner aux diables de couvrir son départ par télépathie.
+
+step: La téléportation est empêchée
+  do: Rompre le contact par le vol à 30 m, profiter de l'invisibilité suprême et placer un mur de feu sur le trajet des poursuivants lorsque l'action le permet
+  note: Employer une guérison suprême restante dès qu'il dispose d'un répit, puis retenter la téléportation une fois sorti de la zone qui la bloque.

@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Gnoll flind, humanoïde de taille M, neutre mauvais, plus robuste et plus rusé qu'un gnoll ordinaire ; meneur de chasse qui privilégie l'embuscade et le nombre.
+  30 pv ; CA 17, contact 12, pris au dépourvu 15 ; initiative +6 ; déplacement de 9 m ; vision dans le noir à 18 m.
+  Flindbar +6 (1d8+6, critique x2), utilisable pour désarmer ou faire un croc-en-jambe ; arc long composite +5 (1d8+4, critique x3).
+
+resource: Flèches | 20 | Une flèche dépensée par tir à l'arc long composite.
+
+step: Le terrain permet une embuscade
+  do: Attendre à couvert, de préférence dans l'obscurité, en gardant une voie de fuite libre.
+  note: Sa vision dans le noir lui permet de repérer les adversaires à 18 m sans lumière ; elle ne le rend pas invisible.
+
+step: Des gnolls ou des hyènes l'accompagnent
+  do: Répartir les alliés pour attaquer une même victime depuis plusieurs directions et préparer une prise en tenaille.
+  note: Il accepte un combat à forces proches, mais préfère conserver l'avantage du nombre.
+
+## Ouverture
+
+step: Les ennemis sont encore éloignés et aucun ne le menace au contact
+  do: Tirer une flèche sur une cible exposée et isolée, à +5 pour 1d8+4 dégâts.
+  note: Privilégier une cible qui n'est pas déjà engagée en mêlée avec ses alliés.
+
+step: Une cible est au contact ou peut être atteinte après un déplacement de 9 m au plus
+  do: Prendre la flindbar, avancer si nécessaire et porter une attaque à +6 pour 1d8+6 dégâts.
+  note: Dégainer peut accompagner le déplacement ; lâcher l'arc si nécessaire. Chercher une position de prise en tenaille sans traverser les cases menacées.
+
+## Rounds suivants
+
+step: Une victime peut être prise en tenaille avec un allié
+  do: Se placer de l'autre côté de la victime et concentrer les coups de flindbar sur elle.
+  note: La prise en tenaille donne +2 aux attaques de mêlée, soit +8 pour les coups ordinaires ; les dégâts restent de 1d8+6.
+
+step: Un adversaire dépend de son arme et ne peut pas riposter par une attaque d'opportunité
+  do: Remplacer le coup de flindbar par un désarmement contre son DMD.
+  note: BMO +7, avec +2 supplémentaires pour la propriété désarmement de la flindbar. Cette manœuvre ne cause pas les dégâts d'un coup ordinaire.
+
+step: Une cible peut être renversée et ne peut pas riposter par une attaque d'opportunité
+  do: Remplacer le coup par un croc-en-jambe à la flindbar, BMO +7 contre le DMD, pour offrir une cible à terre aux alliés.
+  note: Désarmement et croc-en-jambe ne sont pas automatiques après une touche. Sans protection contre la riposte, préférer les dégâts ordinaires.
+
+step: Aucun adversaire n'est accessible au corps à corps
+  do: Reprendre les tirs à l'arc depuis un couvert si l'arme est disponible et s'il reste des flèches.
+
+## Repli
+
+step: Il tombe à 10 pv ou moins, ou ses alliés sont mis en déroute
+  do: Utiliser l'action de retraite pour rejoindre un couvert, jusqu'à 18 m si le passage est libre ; demander aux alliés encore présents de couvrir sa fuite.
+  note: Ce seuil est un choix tactique. Chercher à rompre le contact pour préparer une nouvelle embuscade.

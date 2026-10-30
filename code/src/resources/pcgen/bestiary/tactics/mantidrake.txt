@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Mantidrake, créature magique de taille G, loyale mauvaise, FP 9 ; 94 points de vie, CA 19.
+  Morsure +15 et deux griffes +15, chacune à 1d8+7 ; six pointes +11, chacune à 1d6+7 ; souffle à 5d8, DD 19.
+  Marche à 9 m, vol à 15 m avec une manœuvrabilité déplorable ; allonge de 1,50 m. Immunisé à la paralysie et au sommeil ; l'immunité d'énergie n'est pas détaillée dans le bloc fourni.
+
+resource: Souffle | fréquence non précisée | 5d8 dégâts, DD 19 ; énergie, forme, portée et conditions de réutilisation non précisées dans le bloc fourni.
+resource: Pointes | réserve non précisée | Salve de six pointes +11, 1d6+7 chacune ; portée et renouvellement de la réserve non précisés dans le bloc fourni.
+
+step: Il peut choisir son terrain
+  do: Se placer en hauteur, près d'un espace dégagé permettant de longs passages en vol et des virages larges.
+  note: Vol -4 : éviter de bâtir sa tactique sur le vol stationnaire ou des manœuvres serrées.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +14, la vision dans le noir à 18 m, la vision nocturne et l'odorat ; chercher une cible isolée ou exposée.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans la zone du souffle et celui-ci est disponible
+  do: Utiliser le souffle pour infliger 5d8 dégâts, DD 19.
+  note: Respecter la zone et la portée propres à sa version ; ces paramètres ne sont pas fournis ici.
+
+step: Les ennemis restent à distance et sont à portée des pointes
+  do: Lancer une salve de six pointes +11, 1d6+7 chacune, en concentrant les tirs sur un adversaire dangereux et exposé.
+
+step: Une cible isolée est accessible par un passage en vol
+  do: Utiliser Attaque en vol pour avancer, porter une morsure +15 à 1d8+7, puis poursuivre le déplacement ; parcourir au total au plus 15 m.
+  note: Ce passage permet une seule attaque naturelle ; il ne supprime pas les attaques d'opportunité éventuelles.
+
+## Rounds suivants
+
+step: Il peut combattre à distance
+  do: Continuer les salves tant que des pointes restent disponibles ; changer de position si les ennemis trouvent un couvert ou concentrent leurs tirs.
+  note: Si une attaque à outrance est nécessaire pour la salve, consacrer ce round aux tirs et se déplacer lors d'un autre round.
+
+step: Le souffle est de nouveau disponible et plusieurs ennemis sont dans sa zone
+  do: Souffler à nouveau, en évitant un éventuel partenaire.
+  note: Ne pas lui attribuer de délai de recharge ni d'utilisations supplémentaires sans les précisions manquantes.
+
+step: Un adversaire est au contact et rester sur place ne l'expose pas à être encerclé
+  do: Faire une attaque à outrance : morsure +15 et deux griffes +15, chacune à 1d8+7, sur la même cible.
+
+step: Une cible a une défense assez faible pour justifier Attaque en puissance
+  do: Activer Attaque en puissance : morsure et griffes passent à +12 et infligent chacune 1d8+13.
+  note: Revenir aux attaques normales si les coups manquent trop souvent.
+
+step: Plusieurs adversaires menacent de l'encercler
+  do: Reprendre de la distance par un trajet dégagé ; privilégier ensuite les passages avec une seule morsure ou les attaques à distance.
+  note: Sa faible manœuvrabilité rend les espaces étroits défavorables.
+
+## Repli
+
+step: Points de vie sous 25, ou impossibilité de menacer efficacement les ennemis
+  do: Rompre le combat et fuir en vol par une issue dégagée, à 15 m par déplacement ; chercher un relief qui coupe les lignes de tir.
+  note: Éviter les virages brusques et les passages étroits pendant la fuite.

@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Lamproie terrestre, créature magique de petite taille, guidée par des instincts simples : mordre, se fixer et boire le sang de sa proie.
+  5 pv ; CA 16 ; déplacement de 12 m ; morsure +3 (1d3-1 et fixation), allonge de 1,50 m ; drainage sanguin de 1d4 points de Constitution.
+
+step: Une proie approche
+  do: Attendre à couvert, en utilisant Discrétion +6, pour la laisser venir à portée d'une courte approche
+  note: Perception +5 ; vision dans le noir à 18 m et vision nocturne. Elle peut chasser dans les bois comme sous terre.
+
+## Ouverture
+
+step: Une proie est à portée de morsure, immédiatement ou après un déplacement de 12 m au plus
+  do: Mordre à +3 (1d3-1 et fixation) pour s'accrocher à elle
+  note: Choisir une proie accessible ; ses instincts ne justifient pas un choix fondé sur les capacités ou la classe des adversaires.
+
+step: La proie est encore trop loin
+  do: Se rapprocher en profitant du couvert disponible, à 12 m par déplacement
+
+## Rounds suivants
+
+step: Elle est fixée à une proie
+  do: Rester accrochée et poursuivre le drainage sanguin : 1d4 points de Constitution
+  note: Garder cette proie tant qu'elle peut s'en nourrir ; le drainage est son principal danger malgré les faibles dégâts de sa morsure.
+
+step: Elle n'est pas fixée et une proie est à portée
+  do: Répéter la morsure +3 (1d3-1 et fixation) pour s'accrocher de nouveau
+
+step: Elle est détachée et sa proie s'éloigne
+  do: La suivre à 12 m par déplacement et mordre dès qu'elle revient à portée de 1,50 m
+
+## Repli
+
+step: À 2 pv ou moins, si elle est détachée
+  do: Fuir vers le couvert le plus proche ; au contact d'un ennemi, utiliser le retrait pour parcourir jusqu'à 24 m
+  note: Si elle reste fixée, elle continue à se nourrir ; elle ne prépare ni diversion ni retraite coordonnée.

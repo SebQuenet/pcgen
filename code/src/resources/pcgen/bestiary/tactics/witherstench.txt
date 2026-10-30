@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Witherstench, créature magique de taille P, d'intelligence animale, vivant dans les forêts tempérées et rencontrée en meutes de 3 à 12 individus.
+  13 points de vie, CA 14 ; déplacement de 6 m ; allonge de 1,50 m. Attaque à outrance : 2 griffes +5, chacune infligeant 1d4-1 dégâts.
+  Vision dans le noir à 18 m, vision nocturne et Perception +5 pour repérer les intrus.
+
+resource: Puanteur | permanente | DD 12 ; rayon de 9 m ; effet tant que la créature exposée reste dans le rayon, puis pendant 1 round après sa sortie
+
+step: Des intrus sont repérés
+  do: Approcher avec la meute, si elle est présente, en utilisant les arbres et les couverts disponibles.
+  note: Son intelligence limitée conduit à une chasse simple : approche, encerclement instinctif et attaques de griffes.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : 2 griffes +5, chacune pour 1d4-1 dégâts.
+  note: La puanteur agit sans action particulière ; appliquer son DD 12 aux créatures exposées.
+
+step: Rejoindre un adversaire au contact demande au plus 6 m de déplacement
+  do: Avancer puis porter une seule attaque de griffe +5, pour 1d4-1 dégâts.
+
+step: Aucun adversaire ne peut être atteint après un déplacement de 6 m
+  do: Se rapprocher ; deux déplacements permettent de parcourir jusqu'à 12 m sur terrain dégagé, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter l'attaque à outrance avec les deux griffes.
+
+step: Un autre membre de la meute engage la même proie
+  do: Chercher une position de tenaille, puis concentrer les griffes sur cette proie.
+  note: Un pas de placement de 1,50 m permet de conserver l'attaque à outrance ; après un déplacement ordinaire, ne porter qu'une griffe.
+
+step: La proie s'éloigne
+  do: La suivre si elle reste accessible, en respectant le déplacement de 6 m et la limite d'une griffe après déplacement.
+  note: La puanteur continue d'affecter une créature exposée pendant 1 round après sa sortie du rayon de 9 m.
+
+## Repli
+
+step: Points de vie à 4 ou moins, ou isolé face à plusieurs adversaires
+  do: Utiliser l'action de retraite pour rejoindre le couvert forestier ou les autres membres de la meute, jusqu'à 12 m sur terrain dégagé.
+  note: Continuer à s'éloigner si les poursuivants restent menaçants ; il ne possède aucun moyen de fuite spécial.

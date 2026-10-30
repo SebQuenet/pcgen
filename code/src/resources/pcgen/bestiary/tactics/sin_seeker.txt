@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Sin Seeker, bête magique neutre de taille TP : un porcelet ailé sans yeux, spécialisé dans la détection des mensonges et le pistage. Il recherche la protection de créatures plus fortes.
+  16 pv, CA 14 ; morsure +3 (1d3-2), allonge 0 m. Vol à 15 m et déplacement au sol à 6 m ; son principal moyen offensif est confession.
+  Vision aveugle à 15 m, odorat, Perception +9 et Psychologie +10 ; immunité aux regards, effets et illusions visuels, ainsi qu'aux attaques reposant sur la vue.
+
+resource: Détection d'alignement | constant | détection du Bien, du Mal, de la Loi ou du Chaos ; une seule détection active à la fois
+resource: Compréhension des langages | à volonté | comprendre les propos entendus ; ne permet pas de parler toutes les langues
+resource: Confession | 3/jour | portée 9 m ; Volonté DD 14, effet partiel ; NLS 3
+resource: Zone de vérité | 3/jour | portée 9 m, rayon 6 m, durée 3 minutes ; Volonté DD 14 annule
+resource: Recherche de pensées | 1/jour | rayon 12 m ; concentration, jusqu'à 3 minutes ; Volonté DD 15 annule
+resource: Pistage d'aura | 1/jour | suivre une piste d'alignement avec Survie +5
+
+step: Des inconnus approchent
+  do: Les repérer avec ses sens et examiner leur alignement ; rester près d'un protecteur s'il en possède un.
+  note: Il communique en commun ou par télépathie à 9 m ; son alignement neutre ne le pousse pas à attaquer automatiquement les créatures mauvaises.
+
+step: Il peut interroger les suspects sans danger immédiat
+  do: Utiliser recherche de pensées et poser des questions orientées, en maintenant sa concentration.
+  note: Le pouvoir indique qui pense au sujet choisi ; il ne révèle pas le contenu exact des pensées. Employer Psychologie +10 pour apprécier les réponses.
+
+## Ouverture
+
+step: Un protecteur est présent et un adversaire comprenant sa question se trouve à 9 m ou moins
+  do: Utiliser confession sur cet adversaire, demander par exemple « Qui vous envoie ? », puis se déplacer en vol vers un abri hors de portée de mêlée.
+  note: À sa prochaine action, la cible doit répondre sincèrement ou subir 1d6 dégâts et être fiévreuse pendant 2d4 rounds. Volonté DD 14 réduit les dégâts de moitié et annule l'état fiévreux ; une réponse sincère évite ces effets.
+
+step: Il est seul devant des adversaires déterminés à combattre
+  do: Prendre la fuite en vol dès l'ouverture.
+
+## Rounds suivants
+
+step: Il peut encore agir à distance sous la protection d'un allié
+  do: Réutiliser confession avec une question utile sur un adversaire à 9 m ou moins, puis se déplacer vers un couvert ; respecter les trois utilisations quotidiennes.
+  note: Une cible qui répond sincèrement échappe aux dégâts ; ce pouvoir ne garantit donc pas de neutraliser un combattant.
+
+step: Un suspect reste à 3 m ou moins
+  do: Appliquer l'aura d'honnêteté pendant les échanges.
+  note: Bluff, Escamotage et Évasion subissent un malus de -2 ; Volonté DD 13 résiste pour chaque utilisation de ces compétences. L'aura affecte aussi les alliés présents.
+
+step: Un adversaire accepte de parlementer ou se rend
+  do: Poser zone de vérité sur le lieu de l'entretien et reprendre les questions depuis une position protégée.
+  note: Les créatures qui échouent à Volonté DD 14 ne peuvent mentir délibérément dans la zone ; elles peuvent se taire, éluder ou quitter la zone.
+
+step: Il est acculé et toute fuite est impossible
+  do: Mordre à +3 (1d3-2) uniquement pour se défendre.
+  note: Avec son allonge de 0 m, il doit entrer dans l'espace adverse pour mordre et s'expose aux attaques d'opportunité.
+
+## Repli
+
+step: Points de vie à 8 ou moins, protecteur hors de combat ou poursuite trop dangereuse
+  do: Se retirer en vol vers un refuge ou son protecteur ; utiliser l'action de retraite pour quitter une mêlée si nécessaire.
+  note: Son vol permet un déplacement de 15 m par action de mouvement ; ses immunités visuelles ne le protègent pas des armes ni des autres sorts.
+
+step: Le danger est passé et une cible a fui
+  do: Employer pistage d'aura si une piste d'alignement exploitable est présente ; avancer avec Survie +5 en restant accompagné si possible.

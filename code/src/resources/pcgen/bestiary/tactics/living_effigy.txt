@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Effigie vivante, immense créature artificielle de pierre, neutre et intelligente, qui veille sur sa communauté. Elle cherche d'abord à apaiser les intrus, puis les affaiblit et les disperse par ses pouvoirs sonores et émotionnels.
+  95 pv ; CA 20 ; réduction des dégâts 10/adamantium. Coup +13 (2d8+7, critique 19-20), allonge de 1,50 m malgré une occupation de 4,50 m. Cacophonie à volonté pour étourdir ; tambours tonitruants pour renverser les assaillants proches.
+  Aucun déplacement terrestre ; vol parfait à 3 m. Perception +19, vision dans le noir à 18 m et vision nocturne. Elle conserve les immunités des créatures artificielles, sauf celle aux effets mentaux.
+
+resource: Détection de pensées | à volonté | Volonté DD 15 ; observer les intentions avant d'agir
+resource: Apaisement des émotions | 3/jour | Volonté DD 15 ; concentration, jusqu'à 10 rounds
+resource: Désespoir foudroyant | 3/jour | Volonté DD 17 ; cône de 9 m
+resource: Cacophonie à effet augmenté | 3/jour | Vigueur DD 15 ; dégâts multipliés par 1,5, étourdissement inchangé
+resource: Tambours tonitruants | 3/jour | Vigueur DD 16 ; cône de 4,50 m
+resource: Espoir | 3/jour | soutien de défenseurs vivants, pendant 10 minutes
+resource: Terreur | 1/jour | Volonté DD 17 ; cône de 9 m
+
+step: Des visiteurs approchent sans hostilité manifeste
+  do: Rester immobile sous l'apparence d'une statue et observer ; employer détection de pensées pour sonder leurs intentions, en prenant le temps de se concentrer.
+  note: Statue : Perception DD 25 pour reconnaître qu'elle est animée. Si elle engage le combat depuis cette posture, son bonus de +6 porte son initiative à +4.
+
+step: Une querelle menace de dégénérer
+  do: Apaisement des émotions sur les créatures réunies dans une zone de 6 m de rayon ; parler en commun ou en géant pour obtenir leur départ.
+  note: Maintenir la concentration chaque round. Une agression ou des dégâts contre une créature apaisée rompent le pouvoir pour toutes les créatures apaisées ; ce pouvoir ne permet pas de donner des ordres.
+
+step: Des défenseurs vivants sont présents et l'attaque est imminente
+  do: Leur accorder espoir avant le combat.
+  note: Bonus de moral de +2 aux attaques, dégâts d'armes, sauvegardes et tests. L'effigie ne se prend pas elle-même pour cible : ce pouvoir vise des créatures vivantes.
+
+## Ouverture
+
+step: Le combat devient inévitable et plusieurs ennemis sont dans un cône de 9 m
+  do: Désespoir foudroyant pour affaiblir le groupe avant les attaques sonores.
+  note: Volonté DD 17 annule ; sinon, malus de -2 aux attaques, dégâts d'armes, sauvegardes et tests pendant 10 minutes.
+
+step: Les ennemis sont regroupés à distance, ou résistent aux effets mentaux
+  do: Cacophonie à effet augmenté, centrée à 15 m au plus, dans une zone de 3 m de rayon qui épargne les alliés.
+  note: Infliger 1d8 points de dégâts sonores multipliés par 1,5, arrondis à l'inférieur ; Vigueur DD 15 évite seulement l'étourdissement d'un round. Une créature sourde subit les dégâts mais pas l'étourdissement.
+
+step: Un adversaire est déjà au contact et menace l'utilisation d'un pouvoir
+  do: Donner un coup +13 (2d8+7, critique 19-20), ou faire un pas de 1,50 m si cela permet d'utiliser un pouvoir hors de toute allonge ennemie.
+  note: Les pouvoirs magiques provoquent des attaques d'opportunité ; l'effigie n'a qu'un seul coup par attaque à outrance.
+
+## Rounds suivants
+
+step: Plusieurs ennemis proches peuvent être pris dans un cône de 4,50 m
+  do: Tambours tonitruants, en évitant les défenseurs alliés.
+  note: 5d8 dégâts sonores et cibles à terre ; Vigueur DD 16 réduit les dégâts de moitié et évite la chute.
+
+step: Des adversaires restent regroupés à portée de cacophonie
+  do: Répéter cacophonie pour tenter de les étourdir ; employer les utilisations à effet augmenté restantes si les dégâts peuvent achever une cible.
+  note: La version ordinaire est à volonté et inflige 1d8 dégâts sonores, avec le même jet de Vigueur DD 15 contre l'étourdissement. Viser en priorité les lanceurs de sorts et les adversaires déjà affaiblis par désespoir foudroyant.
+
+step: Un ennemi isolé ou à terre reste à 1,50 m
+  do: Le frapper avec le coup ; profiter des attaques d'opportunité qu'il provoque, notamment en se relevant.
+  note: Ne pas poursuivre les fuyards : son vol à 3 m favorise la défense d'une position et les attaques à distance.
+
+step: Il faut disperser les assaillants ou dégager une voie de sortie
+  do: Terreur sur le plus grand nombre d'ennemis vivants dans un cône de 9 m.
+  note: Volonté DD 17 ; échec : paniqués pendant 10 rounds ; réussite : secoués pendant 1 round. Ne pas poursuivre avec apaisement des émotions, qui supprimerait temporairement la peur.
+
+## Repli
+
+step: Moins de 30 pv et les assaillants poursuivent leur attaque
+  do: Brume de dissimulation à volonté, puis s'écarter en vol des créatures encore assez proches pour la voir.
+  note: Le nuage immobile a un rayon et une hauteur de 6 m ; il gêne aussi sa propre vision. À 1,50 m, il ne donne qu'un camouflage : un observateur aussi proche peut encore empêcher le départ par veilleur silencieux.
+
+step: Aucune créature d'Intelligence supérieure à 2 située à 45 m ou moins ne peut la voir
+  do: Au round où cette condition est remplie, utiliser veilleur silencieux, par une action simple, pour se téléporter seule vers un refuge de sa communauté.
+  note: Ce pouvoir fonctionne comme téléportation suprême sur elle-même ; la brume ou un obstacle doivent effectivement cacher l'effigie à tous les observateurs concernés.
+
+step: Un observateur empêche toujours la téléportation
+  do: Chercher un obstacle qui coupe sa vue, ou employer terreur si elle est encore disponible ; continuer à défendre l'accès par ses pouvoirs sonores.
+  note: Son vol lent ne lui permet pas de distancer normalement des poursuivants ; elle doit d'abord échapper aux regards.

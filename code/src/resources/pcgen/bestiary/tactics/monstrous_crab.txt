@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Crabe monstrueux, vermine aquatique de taille M, sans intelligence, omnivore ; 19 pv, CA 16.
+  Deux pinces +4, chacune infligeant 1d4+2 dégâts avec étreinte ; constriction par les pinces : 1d4+2 dégâts sur un test de lutte réussi. BMO +0, DMD 15.
+  Déplacement terrestre : 9 m ; nage : 6 m ; allonge : 1,50 m. Vision dans le noir à 18 m, Perception +4, Natation +10.
+
+note: Dépendance à l'eau
+  Il peut rester hors de l'eau pendant 14 heures ; au-delà, il risque de suffoquer comme s'il se noyait.
+  Ses réactions restent simples : approcher une proie accessible, la saisir et la broyer.
+
+step: Une proie approche de son habitat aquatique
+  do: Rester dans l'eau et attendre qu'elle soit assez proche pour l'atteindre.
+
+## Ouverture
+
+step: La cible se trouve à plus de 1,50 m
+  do: S'approcher, jusqu'à 6 m à la nage ou 9 m sur terre ; si elle est alors à portée, attaquer avec une pince +4, pour 1d4+2 dégâts avec étreinte.
+  note: Après un déplacement, il ne porte qu'une attaque de pince avec son action simple.
+
+step: La cible est déjà à portée et aucun déplacement n'est nécessaire
+  do: Faire une attaque à outrance avec les deux pinces +4, chacune pour 1d4+2 dégâts avec étreinte.
+
+step: Une pince touche une cible qu'il peut agripper
+  do: Tenter l'étreinte ; si le test de lutte réussit, infliger immédiatement 1d4+2 dégâts de constriction.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte pour la blesser avec une pince : 1d4+2 dégâts, auxquels s'ajoutent 1d4+2 dégâts de constriction si le test réussit.
+  note: La constriction dépend d'un test de lutte réussi ; elle ne se déclenche pas automatiquement au début du round.
+
+step: La proie s'est libérée et reste à portée
+  do: Reprendre les attaques à outrance avec les deux pinces et tenter de la saisir à nouveau.
+
+step: Aucune proie n'est à portée
+  do: Rejoindre la proie accessible la plus proche et attaquer avec une pince si le déplacement permet de l'atteindre.
+
+## Repli
+
+step: Points de vie à 5 ou moins et fuite possible
+  do: Lâcher sa prise et chercher à s'éloigner des assaillants ; rejoindre l'eau s'il est sur la berge, puis fuir à la nage à 6 m par déplacement.
+
+step: Il approche de sa limite de 14 heures hors de l'eau
+  do: Abandonner la poursuite terrestre et regagner l'eau.

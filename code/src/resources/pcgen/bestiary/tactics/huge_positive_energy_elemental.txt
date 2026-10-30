@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire d'énergie positive de taille TG, neutre, venu du plan de l'Énergie positive ; sphère lumineuse, généralement peu combative, mais hostile aux élémentaires d'énergie négative.
+  95 pv ; CA 21 ; réduction des dégâts 10/— ; immunités élémentaires. Initiative +12 ; vision dans le noir à 18 m ; Perception +13.
+  Vol à 18 m, bonne manœuvrabilité ; espace et allonge de 4,50 m. Attaque à outrance : 2 coups +17, chacun infligeant 2d6+4 dégâts physiques et apportant 2d6 d'énergie positive.
+
+resource: Canalisation d'énergie positive | 5/jour | 5d6 ; Volonté DD 17 pour réduire de moitié les dégâts aux morts-vivants ; rayon de 9 m
+resource: Éclair aveuglant | Une fois tous les 1d4 rounds | rayon de 3 m ; Vigueur DD 19 ou cécité pendant 1d10 rounds pour qui voit l'éclair
+
+step: Aucun élémentaire d'énergie négative ne le menace et personne ne l'attaque
+  do: Rester à distance ; ne pas provoquer de combat
+
+note: Aura de 9 m
+  Les pouvoirs de classe d'énergie positive fonctionnent à +2 niveaux, ceux d'énergie négative à −2 niveaux ; les sorts positifs sont maximisés. Les sorts négatifs exigent Concentration DD 15 + niveau du sort, sinon ils sont perdus.
+  Sa propre canalisation ne bénéficie pas de cette aura.
+
+## Ouverture
+
+step: Un élémentaire d'énergie négative est présent
+  do: L'attaquer en priorité ; voler jusqu'à portée et porter un coup +17 si une attaque à outrance est impossible
+
+step: Plusieurs morts-vivants sont dans un rayon de 9 m
+  do: Canaliser pour leur infliger 5d6 dégâts, Volonté DD 17 pour moitié
+  note: Choisir les dégâts aux morts-vivants ou les soins aux vivants à chaque canalisation ; une utilisation ne produit pas les deux effets
+
+step: Des adversaires qui voient l'éclair sont à 3 m ou moins
+  do: Déclencher l'éclair aveuglant, puis exploiter leur cécité aux rounds suivants
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et l'élémentaire peut rester sur place
+  do: Porter ses deux coups +17 en attaque à outrance ; concentrer les attaques sur une même cible
+  note: Les 2d6 positifs blessent les morts-vivants et les créatures d'énergie négative, mais soignent les vivants ; les dégâts physiques restent applicables
+
+step: Une cible vivante reçoit de l'énergie positive au-delà de son maximum de pv
+  do: Comptabiliser l'excédent en pv temporaires, qui disparaissent après 1 minute
+  note: À deux fois ses pv normaux, elle doit réussir Vigueur DD 19 ou exploser
+
+step: Rester au contact l'exposerait à plusieurs attaques
+  do: Employer Attaque en vol pour avancer, porter un seul coup +17 et poursuivre son déplacement, dans la limite de 18 m
+  note: Exploiter l'allonge de 4,50 m ; éviter de traverser les zones menacées, car Attaque en vol ne supprime pas les attaques d'opportunité
+
+step: L'éclair est de nouveau disponible et des ennemis le voient à 3 m ou moins
+  do: Déclencher un nouvel éclair aveuglant
+
+## Repli
+
+step: Moins de 30 pv et une voie de fuite aérienne existe
+  do: S'éloigner en vol à 18 m par déplacement ; chercher à rompre le contact
+
+step: Blessé, avec une canalisation restante et les adversaires vivants à plus de 9 m
+  do: Canaliser pour récupérer 5d6 pv ; décompter une utilisation du même total de 5 par jour
+  note: Les soins positifs le guérissent aussi ; canaliser près d'ennemis vivants les soigne également
+
+step: L'élémentaire est tué
+  do: Résoudre son explosion finale dans un rayon de 9 m : 5d8 dégâts positifs aux morts-vivants et créatures d'énergie négative, Réflexes DD 19 pour moitié
+  note: Les vivants reçoivent ces 5d8 en soins, avec les règles de surcharge précédentes ; tous doivent réussir Vigueur DD 19 ou être aveuglés pendant 1d10 rounds

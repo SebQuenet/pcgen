@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Koala, animal neutre de petite taille, guidé par des réactions simples (Int 1). Très fragile : 5 pv, CA 11.
+  Deux griffes +1 (1d3-2 chacune) en attaque à outrance ; portée de 1,50 m. Déplacement au sol et escalade : 6 m par action de déplacement.
+
+step: Une surface escaladable permet de rester hors de portée
+  do: Se tenir en hauteur et éviter les créatures menaçantes
+  note: Escalade +6 ; Perception +3 et vision en faible luminosité pour repérer les approches
+
+## Ouverture
+
+step: Une menace approche et une voie de fuite est accessible
+  do: S'éloigner, en grimpant si cela permet de se mettre hors de portée
+
+step: Un adversaire est à 1,50 m et le koala est acculé
+  do: Faire une attaque à outrance avec ses deux griffes +1 (1d3-2 chacune)
+
+## Rounds suivants
+
+step: L'adversaire reste au contact et aucune fuite n'est possible
+  do: Répéter l'attaque à outrance avec les deux griffes
+
+step: Un déplacement est nécessaire avant de frapper
+  do: Se déplacer de 6 m au plus, puis porter une seule attaque de griffe +1 (1d3-2)
+  note: Réserver cette approche à un adversaire qui bloque la fuite ; ne pas poursuivre un ennemi qui s'éloigne
+
+step: L'adversaire reste hors de portée
+  do: Garder ses distances ou gagner une hauteur accessible
+  note: Le koala ne possède aucune attaque à distance
+
+## Repli
+
+step: Points de vie sous 5 ou une voie de fuite se libère
+  do: Abandonner le combat et rejoindre une surface escaladable ou s'éloigner au sol
+  note: Au contact, utiliser l'action de retrait si le passage est libre : jusqu'à 12 m, sans provoquer d'attaque d'opportunité en quittant la case de départ
+
+step: La fuite reste impossible
+  do: Continuer à se défendre avec les griffes jusqu'à pouvoir s'échapper

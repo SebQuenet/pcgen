@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Obambo, mort-vivant incorporel de taille M, loyal mauvais, FP 13 : esprit forestier rusé, amer et perfide, qui conserve son goût des récits.
+  175 pv, CA 21 ; déplacement et vol parfait à 9 m ; vision dans le noir à 18 m ; résistance à la canalisation +4.
+  Contact incorporel +16 contre la CA de contact, allonge 1,50 m : diminution permanente de 1d6 points d'Intelligence et hébétement pendant 1 round. Vigueur DD 24 annule l'hébétement et réduit de moitié la diminution.
+  Il sépare les intrus par la végétation, puis harcèle une cible isolée avec ses attaques en vol.
+
+resource: Enchevêtrement | à volonté | Réflexes DD 18
+resource: Brume de dissimulation | à volonté | masque aussi sa propre vision
+resource: Terrain hallucinatoire | 3/jour | Volonté DD 21 en cas d'interaction
+resource: Croissance d'épines | 3/jour | Réflexes DD 20 contre le ralentissement
+resource: Empire végétal | 3/jour | Volonté DD 21
+resource: Vermine géante | 3/jour | exige des vermines ordinaires présentes
+resource: Lueurs arc-en-ciel | 3/jour | Volonté DD 21 ; maximum 24 DV affectés
+resource: Voyage par les arbres | 3/jour | conserver une utilisation pour fuir
+resource: Animation des plantes | 1/jour | animation offensive pendant 14 rounds
+resource: Mort rampante | 1/jour | poison et distraction : Vigueur DD 24 ; durée 14 rounds
+
+step: Il peut préparer les lieux
+  do: Couvrir une voie d'approche de croissance d'épines, puis employer terrain hallucinatoire pour donner au terrain naturel un aspect trompeur
+  note: Les épines infligent 1d4 dégâts par 1,50 m parcouru à pied ; après une blessure, Réflexes DD 20 ou vitesse terrestre réduite de moitié. L'illusion ne modifie pas les obstacles réels.
+
+step: Des plantes monstrueuses l'accompagnent
+  do: Placer les attrape-mouches géants ou les tertres errants entre les intrus et lui ; garder un couloir libre pour ces alliés
+  note: Empire végétal peut rendre d'autres créatures végétales amicales ; les ordres inhabituels exigent un test opposé de Charisme, et aucun ordre suicidaire n'est accepté.
+
+## Ouverture
+
+step: Les intrus avancent dans une zone végétalisée
+  do: Enchevêtrement sur leur groupe, puis se déplacer en vol pour garder les combattants à distance
+  note: Commencer le contrôle du terrain avant d'approcher ; choisir une seule action offensive par round parmi les possibilités suivantes.
+
+step: Plusieurs adversaires sont regroupés et accessibles aux nuées
+  do: Mort rampante : faire apparaître les quatre nuées adjacentes les unes aux autres, sur les positions ennemies
+  note: Chaque nuée possède 60 pv et inflige 4d6 dégâts ; les dégâts de plusieurs nuées ne se cumulent pas sur une même victime. Poison et distraction : Vigueur DD 24.
+
+step: Un adversaire isolé peut être atteint sans traverser toute la ligne ennemie
+  do: Attaque en vol : approcher, porter un contact incorporel +16, puis poursuivre le déplacement pour s'éloigner, dans une limite totale de 9 m
+  note: Privilégier un lanceur de sorts ou une cible semblant peu résistante en Vigueur. Attaque en vol ne supprime pas les attaques d'opportunité.
+
+## Rounds suivants
+
+step: Une cible a déjà subi une diminution d'Intelligence
+  do: Répéter les contacts sur cette cible pour entretenir la pression et tenter de l'hébéter de nouveau
+  note: Chaque diminution réussie lui accorde 5 pv temporaires cumulatifs. Une victime réduite à Intelligence 0 risque d'être transformée en vermine de taille Minuscule, Vigueur DD 24 pour annuler cette transformation.
+
+step: Les nuées doivent poursuivre des ennemis déplacés
+  do: Consacrer son action simple à diriger les nuées vers des cibles situées à 30 m au plus de lui
+  note: Cette direction remplace son attaque ou un autre pouvoir magique ce round ; au-delà de 30 m, les nuées restent sur place.
+
+step: Il faut davantage d'assaillants pour occuper les défenseurs
+  do: Animation des plantes sur des végétaux ordinaires disponibles, ou vermine géante sur des vermines présentes
+  note: Animation des plantes permet ici d'animer quatre plantes de taille G, deux de taille TG ou une de taille Gig ; désigner les adversaires qu'elles doivent attaquer.
+
+step: Des ennemis encore éloignés peuvent être fascinés sans menace immédiate
+  do: Lueurs arc-en-ciel pour retenir une partie du groupe et l'écarter des autres
+  note: Les créatures ayant le moins de DV sont affectées d'abord. Une menace évidente rompt la fascination ; éviter de combiner cette diversion avec des attaques contre les fascinés.
+
+step: Un adversaire adjacent recule de 1,50 m pour lancer un sort
+  do: Le suivre de 1,50 m avec le don permettant de poursuivre un pas de placement, en action immédiate
+  note: Ce déplacement réduit de 1,50 m son mouvement au prochain tour et empêche alors son propre pas de placement.
+
+step: Il doit toucher une cible à 3 m sans avancer
+  do: Augmenter son allonge de 1,50 m pour ce tour grâce à son don, puis porter le contact
+  note: Sa CA baisse de 2 jusqu'à son prochain tour ; éviter cette option si plusieurs ennemis peuvent riposter.
+
+## Repli
+
+step: Points de vie sous 45, ou les attaques ennemies menacent de le détruire rapidement
+  do: Si nécessaire, créer une brume de dissimulation, puis gagner en vol un abri derrière un obstacle solide
+  note: Il exploite son état incorporel pour franchir les obstacles ; la brume gêne également sa vision et ne lui permet pas de viser à travers elle.
+
+step: Un arbre vivant assez large est accessible et Voyage par les arbres reste disponible
+  do: Activer Voyage par les arbres, entrer dans l'arbre, puis consacrer un round entier au passage vers un autre arbre vivant de la même espèce à portée
+  note: Prévoir ce repli avant d'être encerclé ; le transport entre arbres exige un round entier.
+
+step: Il est détruit
+  do: Faire revenir l'esprit après 2d4 jours grâce à sa reconstitution
+  note: Des rites funéraires appropriés sur ses restes ou sur le lieu de sa mort empêchent ce retour.

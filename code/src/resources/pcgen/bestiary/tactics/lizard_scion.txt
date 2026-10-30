@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Lizard Scion, humanoïde reptilien de taille G des marais tempérés, FP 5. Combattant de mêlée : 45 pv, CA 17, espace occupé de 3 m et allonge de 3 m.
+  Trident de maître +9 (2d6+3) et morsure +5 (1d8+1), ou deux griffes +7 (1d6+3 chacune) et morsure +5 (1d8+1). Javeline de maître +5 (1d8+3).
+  Déplacement et nage à 9 m ; Natation +14, Perception +5. Il peut retenir son souffle pour s'immerger.
+
+resource: Javelines de maître | 2 | chaque lancer consomme une javeline disponible
+
+step: Il choisit le lieu de l'affrontement
+  do: Se placer près d'un passage resserré ou d'une berge, avec un accès à l'eau pour se déplacer ou se replier.
+  note: Son allonge permet d'engager un ennemi à 3 m ; il n'a pas besoin de venir à 1,50 m.
+
+step: Il combat avec des hommes-lézards
+  do: Tenir le premier rang et leur indiquer en draconique la cible à concentrer.
+  note: Laisser aux alliés des accès au corps à corps sans bloquer son propre passage vers l'eau.
+
+## Ouverture
+
+step: Aucun ennemi ne le menace et aucune cible ne peut être atteinte en mêlée ce round
+  do: Lancer une javeline de maître +5 (1d8+3), puis avancer ou nager jusqu'à 9 m pour préparer le contact.
+  note: Tenir compte des malus de distance ; conserver le trident pour la mêlée.
+
+step: Une cible exige un déplacement de 9 m ou moins pour entrer dans son allonge
+  do: Se déplacer jusqu'à la placer à 3 m, puis porter une seule attaque de trident +9 (2d6+3).
+  note: Un déplacement ordinaire ne permet pas d'ajouter la morsure ni de faire une attaque à outrance.
+
+step: Une cible est déjà dans son allonge et il peut rester sur place
+  do: Faire une attaque à outrance au trident +9 (2d6+3), puis à la morsure +5 (1d8+1).
+
+## Rounds suivants
+
+step: Deux ennemis sont adjacents entre eux et tous deux dans son allonge
+  do: Utiliser Enchaînement : frapper le premier au trident +9 (2d6+3), puis, si l'attaque touche, frapper le second avec le même bonus.
+  note: Enchaînement prend une action simple et remplace l'attaque à outrance ; aucune morsure supplémentaire. Sa CA tombe à 15 jusqu'à son prochain tour.
+
+step: Une seule cible reste à portée et il peut rester sur place
+  do: Répéter l'attaque à outrance au trident et à la morsure ; au besoin, effectuer seulement un pas de 1,50 m pour se replacer.
+
+step: La cible paraît facile à toucher et il veut augmenter les dégâts
+  do: Activer Attaque en puissance pour ses attaques de mêlée jusqu'à son prochain tour.
+  note: Avec le trident tenu à une main : trident +7 (2d6+7) et morsure +3 (1d8+3). Ce choix fonctionne aussi avec Enchaînement.
+
+step: Il n'a plus son trident et la cible est à portée
+  do: Faire une attaque à outrance avec deux griffes +7 (1d6+3 chacune) et la morsure +5 (1d8+1), sans Attaque en puissance.
+
+step: La cible s'éloigne hors de son allonge
+  do: La poursuivre sur 9 m au maximum et porter une seule attaque de trident si elle devient accessible.
+  note: Utiliser les attaques d'opportunité permises lorsqu'un adversaire quitte une case menacée ; il ne dispose d'aucun don permettant d'en multiplier le nombre.
+
+## Repli
+
+step: Points de vie à 15 ou moins et une voie de fuite reste ouverte
+  do: Utiliser l'action de retraite vers l'eau ou un passage dégagé, puis s'éloigner à la nage en retenant son souffle si nécessaire.
+  note: Une action de retraite permet de parcourir jusqu'à 18 m ; seule la case de départ bénéficie de sa protection contre les attaques d'opportunité. Préférer un trajet qui évite les autres cases menacées.

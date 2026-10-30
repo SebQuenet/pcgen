@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Vermine de taille TG, solitaire des forêts tempérées, dépourvue d'intelligence : ses réactions restent instinctives.
+  58 pv ; CA 17 ; déplacement 12 m par round ; espace et allonge de 4,50 m ; vision dans le noir à 18 m.
+  Morsure +8 et dard +8, chacun infligeant 2d6+4 dégâts plus poison ; épines défensives ; immunité aux effets mentaux.
+
+note: Poison et épines
+  Le bloc fourni ne précise ni les effets et le DD du poison, ni les effets des épines ; ne pas leur attribuer de valeurs supplémentaires.
+
+step: Une présence approche
+  do: La repérer avec Perception +4 et la vision dans le noir, puis réagir à la proie ou à la menace la plus proche.
+  note: Il ne prépare ni piège ni manœuvre coordonnée.
+
+## Ouverture
+
+step: Un adversaire est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance : morsure +8 et dard +8 sur cet adversaire, chacun pour 2d6+4 dégâts plus poison.
+
+step: Un adversaire est hors d'allonge mais accessible après un déplacement de 12 m ou moins
+  do: Avancer jusqu'à le placer à portée de 4,50 m, puis porter une morsure +8 pour 2d6+4 dégâts plus poison.
+  note: Après ce déplacement, il ne peut pas enchaîner sa morsure et son dard en attaque à outrance.
+
+step: Aucun adversaire n'est accessible après un déplacement de 12 m
+  do: Se rapprocher de la cible la plus proche, par un double déplacement allant jusqu'à 24 m si le terrain le permet.
+
+## Rounds suivants
+
+step: La cible est toujours à portée
+  do: Rester sur place et répéter l'attaque à outrance, morsure et dard, sur la même cible tant qu'elle reste active.
+  note: Chaque attaque qui touche inflige ses dégâts et expose au poison ; aucun effet chiffré du poison n'est fourni.
+
+step: La cible tombe ou devient inaccessible
+  do: Attaquer l'adversaire actif le plus proche ; s'il faut se déplacer de plus de 1,50 m, avancer puis ne porter qu'une morsure.
+  note: Un pas de placement de 1,50 m permet de conserver l'attaque à outrance si le terrain l'autorise et qu'il suffit à mettre la nouvelle cible à portée.
+
+step: Les adversaires restent hors d'allonge
+  do: Les poursuivre au sol à 12 m par déplacement tant qu'un passage praticable existe.
+  note: Il ne possède aucune attaque à distance ; Escalade +8 permet de tenter une ascension, mais ne lui donne pas de vitesse d'escalade.
+
+## Repli
+
+step: Points de vie à 14 ou moins et une issue est accessible
+  do: Fuir instinctivement en s'éloignant des agresseurs, jusqu'à 24 m par round en double déplacement si le terrain le permet.
+  note: Ce seuil est un choix de conduite pour le meneur, pas une capacité du monstre ; son déplacement de fuite peut provoquer des attaques d'opportunité.
+
+step: Acculé sans issue praticable
+  do: Continuer à mordre et à frapper du dard l'adversaire le plus proche, jusqu'à pouvoir fuir ou être abattu.

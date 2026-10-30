@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Robot observateur TP, neutre et intelligent, conçu pour la reconnaissance : il privilégie la surveillance et la transmission des informations.
+  Pistolet neutralisant intégré +7 (1d8 non létaux) ; chalumeau laser intégré +6 au contact (1d10 de feu, allonge 1,50 m) ; 2 griffes +6 (1d2+1 chacune, allonge 0 m).
+  16 pv ; CA 18, contact 14, dépourvu de Dextérité 16 ; solidité 5 ; immunités des créatures artificielles ; vulnérable aux critiques et à l'électricité.
+  Vol à 18 m, manœuvrabilité parfaite ; déplacement terrestre à 6 m ; vision dans le noir à 18 m, vision nocturne et vision à 360°.
+
+step: Zone à surveiller
+  do: Se placer en hauteur sous camouflage et observer avec Perception +15 ; rester discret tant que sa mission ne demande pas d'intervenir.
+  note: Le camouflage ajoute +8 à Discrétion, soit +19 au total, et procure un camouflage contre les créatures situées à plus de 1,50 m. Il ne rend pas invisible.
+
+step: Un autre robot observateur ou un récepteur compatible est disponible
+  do: Transmettre ce qu'il voit et entend pour signaler les intrus.
+  note: Transmission jusqu'à environ 1 600 m ; enregistrement possible de 12 heures d'images et de sons. Les obstacles suffisamment épais peuvent bloquer le signal.
+
+## Ouverture
+
+step: Il doit neutraliser un intrus et peut rester hors de son allonge
+  do: Tirer une fois avec le pistolet neutralisant +7, pour 1d8 non létaux ; utiliser le vol pour conserver une position dégagée et difficile d'accès.
+  note: Facteur de portée de 6 m ; privilégier une cible dans ce premier facteur et rester à plus de 1,50 m pour profiter du camouflage.
+
+step: Un adversaire se trouve à 1,50 m et le combat rapproché est nécessaire
+  do: Attaquer avec le chalumeau laser +6 contre la CA de contact, pour 1d10 de feu.
+  note: Les griffes exigent d'entrer dans l'espace de la cible ; le chalumeau permet de frapper depuis une case adjacente.
+
+## Rounds suivants
+
+step: Il dispose encore d'une ligne de tir sûre
+  do: Répéter les tirs neutralisants et se déplacer en vol si nécessaire pour maintenir la distance ; continuer à transmettre les observations si une liaison existe.
+  note: Un déplacement et un tir par round ; ses 16 pv ne lui permettent pas de soutenir longtemps les attaques adverses malgré sa solidité 5.
+
+step: Le pistolet neutralisant inflige un coup critique
+  do: Tenter immédiatement le croc-en-jambe gratuit avec un BMO de +13.
+  note: Cette manœuvre ne provoque pas d'attaque d'opportunité ; profiter ensuite de la chute pour conserver ses distances.
+
+step: La cible résiste aux dégâts non létaux et reste accessible au contact
+  do: Employer le chalumeau laser ; éviter de s'engager si cela l'expose à plusieurs adversaires.
+  note: Les créatures invisibles ne peuvent pas être blessées par le chalumeau.
+
+step: Il est coincé dans l'espace d'un adversaire et doit combattre
+  do: Porter ses deux attaques de griffes +6, chacune pour 1d2+1, lors d'une attaque à outrance.
+
+## Repli
+
+step: 8 pv ou moins, ou une attaque électrique menace sa survie
+  do: Se retirer en vol vers un couvert ou une issue ; utiliser l'action de retraite pour parcourir jusqu'à 36 m si le trajet le permet.
+  note: La retraite protège de l'attaque d'opportunité liée au départ de sa case initiale, pas de toutes celles du trajet. Reprendre la surveillance discrète une fois à l'abri.
+
+step: Une barrière matérielle ou une entrave bloque la fuite
+  do: La découper avec le chalumeau si le temps disponible le permet.
+  note: Utilisé comme outil, le chalumeau ignore jusqu'à 20 points de solidité ; ses dégâts contre les objets ne sont pas divisés par deux, sauf résistance particulière au feu.

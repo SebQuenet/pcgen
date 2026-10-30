@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Gunpowder Ooze, vase de poudre à canon de taille G, neutre, FP 14 : prédateur solitaire sans intelligence, qui attaque instinctivement les créatures à proximité.
+  230 pv ; CA 9 ; déplacement et escalade à 6 m ; espace et allonge de 3 m.
+  Coup +23 (2d6+13, étreinte et résidus de poudre) ; projection +14 contre la CA de contact (4d6+7 et résidus de poudre).
+  Immunisée au froid et dotée des immunités des vases ; vulnérable au feu. Sa scission peut multiplier les adversaires.
+
+resource: Projection de poudre | 1 tous les 1d4 rounds | portée de 54 m sans facteur de portée
+
+step: Aucune proie à proximité
+  do: Rester sur place ou ramper dans son environnement jusqu'à rencontrer une créature.
+  note: Intelligence absente et Perception -5 : aucune préparation tactique élaborée.
+
+## Ouverture
+
+step: Une proie est à portée de projection
+  do: Projeter sa poudre sur elle, puis avancer de 6 m vers le contact si nécessaire.
+  note: Projection en action rapide ; elle peut accompagner le déplacement et le coup de ce round.
+
+step: Une proie est à 3 m ou moins
+  do: Donner un coup +23, puis tenter gratuitement l'étreinte à +29 si le coup touche une cible de taille M ou inférieure.
+  note: Après un coup ou une projection réussie, Réflexes DD 27 pour éviter les résidus de poudre.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et choisir de lui infliger les dégâts du coup, 2d6+13.
+  note: Bonus de lutte +29, auquel s'ajoute le bonus habituel de +5 pour maintenir une prise déjà établie.
+
+step: Aucune proie n'est agrippée
+  do: Frapper une cible dans son allonge ; sinon, avancer ou escalader à 6 m pour la rejoindre.
+
+step: La projection est de nouveau disponible
+  do: Tirer sur une proie à portée, en plus des autres actions permises ce round.
+
+step: Une créature couverte de résidus utilise une arme à feu, manie une arme infligeant du feu, subit du feu ou rencontre une étincelle
+  do: Faire exploser les résidus : 5d6 dégâts de feu sur elle ; moitié sur les créatures adjacentes, encore réduite de moitié sur Réflexes DD 27 réussi.
+  note: Une seule couche par cible ; persistance de 24 heures, jusqu'à ignition ou lavage à l'eau et au savon pendant au moins une heure.
+
+step: La vase subit du feu ou les dégâts d'un tir d'arme à feu
+  do: Déclencher sa combustion : 10d6 dégâts de feu en cône de 9 m vers la source, Réflexes DD 27 pour moitié.
+  note: Sans direction identifiable, utiliser une explosion de 4,50 m de rayon. La combustion déclenche aussi la scission.
+
+step: Une attaque tranchante ou le feu déclenche la scission
+  do: Si la vase a au moins 46 pv, créer deux copies ayant chacune la moitié de ses pv actuels, arrondie à l'inférieur ; chacune poursuit ses attaques instinctives.
+  note: Sous 46 pv, elle ne peut plus se diviser. Appliquer aussi sa vulnérabilité au feu.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à attaquer jusqu'à destruction.
+  note: Sans intelligence, elle n'organise aucune retraite et ne possède aucun seuil de fuite.

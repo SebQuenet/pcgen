@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Gray Goo, nuage de nanites gris argenté de Numérie : créature artificielle neutre, essaim de taille Infime, peu intelligent, qui démantèle la matière sur son passage.
+  123 pv ; CA 29 ; vol parfait à 15 m ; espace de 3 m de côté, allonge nulle. Attaque d'essaim : 6d6 dégâts automatiques, démantèlement et distraction.
+  Immunisé aux dégâts des armes et doté des immunités des créatures artificielles. Vision dans le noir à 18 m, vision nocturne ; Perception +13.
+
+resource: Dispersion | à volonté | action immédiate ; Discrétion +42 au lieu de +32 ; reformation en 2 rounds
+
+step: Des intrus approchent sans avoir repéré l'essaim
+  do: Rester dispersé et se dissimuler, même à découvert ; commencer à se reformer avant leur arrivée au contact.
+  note: Dispersé, il ne cause aucun dégât et ne peut employer ses autres pouvoirs spéciaux. Il comprend le commun, mais ne parle pas.
+
+## Ouverture
+
+step: L'essaim est reformé et une cible est accessible
+  do: Voler dans l'espace des adversaires ; terminer le déplacement en recouvrant autant de cibles que possible dans ses 3 m de côté.
+  note: Chaque créature recouverte subit 6d6 dégâts sans jet d'attaque. Entrer dans une case ennemie provoque normalement des attaques d'opportunité ; les armes ne lui infligent aucun dégât.
+
+step: Une créature subit les dégâts de l'essaim
+  do: Appliquer démantèlement : Réflexes DD 19 ou une pièce d'équipement déterminée aléatoirement subit autant de dégâts, selon les règles des objets exposés sur un 1 naturel au jet de sauvegarde.
+  note: Distraction : une créature vivante blessée fait un jet de Vigueur DD 21 ou devient nauséeuse pendant 1 round.
+
+## Rounds suivants
+
+step: Les adversaires restent groupés ou tentent de s'éloigner
+  do: Maintenir le contact ou les suivre en vol pour les recouvrir à nouveau ; privilégier les regroupements et les lanceurs de sorts déjà pris dans l'essaim.
+  note: L'essaim ne porte pas d'attaques d'opportunité. Les objets sans surveillance dans son espace peuvent aussi subir ses dégâts s'il choisit de les démanteler.
+
+step: Un effet de zone menace l'essaim
+  do: Utiliser dispersion en action immédiate, puis s'éloigner de la source du danger.
+  note: Sous forme compacte, les dégâts de zone sont majorés de 50 %. Dispersé, il perd cette vulnérabilité, mais subit toujours les dégâts normaux et cesse d'attaquer.
+
+step: Le danger de zone a cessé et l'essaim peut revenir au contact
+  do: Consacrer 2 rounds à se reformer, puis reprendre les attaques d'essaim.
+
+## Repli
+
+step: À 30 pv ou moins, si les adversaires continuent à lui infliger des dégâts
+  do: Se disperser, se dissimuler avec Discrétion +42 et fuir en vol à 15 m par déplacement, en profitant des obstacles et des ouvertures accessibles aux nanites.
+  note: La dispersion ne restaure aucun point de vie. À 0 pv, l'essaim est détruit ; il doit rompre le combat avant ce seuil.

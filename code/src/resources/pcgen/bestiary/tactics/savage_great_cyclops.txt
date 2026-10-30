@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Grand cyclope sauvage, géant de taille TG, barbare 6, chaotique mauvais et solitaire. Cette brute peu subtile pousse des cris de guerre et cherche à écraser ses ennemis au corps à corps.
+  En rage : 368 pv, CA 25 ; déplacement de 18 m, espace et allonge de 4,50 m. Massue de maître +35/+30/+25/+20 (3d8+25), avec un coup de corne +33 (1d8+8) ; ou corne +33 (1d8+17) et deux coups +33 (2d6+17). Rocher +18 (2d6+19).
+
+resource: Rage | 23 rounds par jour | activation libre ; les valeurs de combat indiquées comprennent déjà la rage
+resource: Éclair de brutalité | 1 par jour | action rapide ; double les zones de critique jusqu'au début de son prochain tour, soit 19–20 pour ses attaques ; une recharge quotidienne à 0 pv ou moins s'il reste conscient grâce à Dur à cuire
+
+step: Il repère des intrus avant de les affronter
+  do: Les surveiller avec Perception +23 et se préparer à les rejoindre par le chemin le plus direct
+  note: Hors rage : 322 pv et CA 27 ; garder la rage pour l'affrontement.
+
+## Ouverture
+
+step: Le combat commence
+  do: Entrer en rage par une action libre, puis foncer sur l'adversaire accessible le plus proche
+  note: Ne pas ajouter une seconde fois les bonus de rage aux attaques, aux dégâts ou aux pv du profil.
+
+step: Une cible devient accessible après un déplacement de 18 m au maximum
+  do: Avancer jusqu'à la placer dans son allonge de 4,50 m, puis porter une Frappe décisive à la massue, +35 (6d8+25)
+  note: Cette attaque utilise une action simple ; elle convient après un déplacement.
+
+step: La cible exige une charge et une ligne droite dégagée permet de l'atteindre
+  do: Charger sur 36 m au maximum et donner un coup de massue +37 (3d8+25)
+  note: La charge abaisse sa CA à 23 jusqu'à son prochain tour. Frappe décisive ne se combine pas avec la charge.
+
+step: La mêlée reste inaccessible et un rocher est disponible
+  do: Lancer le rocher sur une cible visible, +18 (2d6+19), puis chercher à réduire la distance dès que possible
+
+## Rounds suivants
+
+step: Un ennemi est déjà dans son allonge au début de son tour
+  do: Déclencher l'Éclair de brutalité s'il est disponible, puis effectuer l'attaque à outrance à la massue et à la corne
+  note: Concentrer les attaques sur une même cible jusqu'à sa chute ; un pas de 1,50 m permet de se replacer tout en conservant l'attaque à outrance.
+
+step: La cible paraît facile à toucher
+  do: Activer Attaque en puissance avant d'attaquer
+  note: Massue +30/+25/+20/+15 (3d8+40), corne secondaire +28 (1d8+13). Pour une Frappe décisive à la massue : +30 (6d8+40). Renoncer au don contre une défense trop élevée.
+
+step: Un critique est menacé
+  do: Ajouter le bonus de +4 de Don pour les critiques au jet de confirmation
+  note: Un critique confirmé inflige aussi Critique étourdissant : cible chancelante pendant 1d4+1 rounds ; Vigueur DD 28 réduit la durée à 1 round.
+
+step: Il doit se déplacer et deux ennemis adjacents entre eux sont dans son allonge à l'arrivée
+  do: Utiliser Enchaînement à la massue : une attaque +35 (3d8+25), puis une seconde au même bonus contre l'autre ennemi si la première touche
+  note: Cette action simple remplace Frappe décisive ; sa CA tombe à 23 jusqu'à son prochain tour.
+
+step: Un ennemi corporel de taille G ou inférieure bloque un passage à dégager
+  do: Employer Coup fabuleux par une action simple, avec un test de manœuvre contre sa DMD
+  note: En cas de réussite, infliger les dégâts d'un coup, 2d6+17, projeter la cible de 3 m en ligne droite en l'éloignant et la jeter à terre.
+
+step: Sa massue est perdue ou inutilisable
+  do: Effectuer l'attaque à outrance naturelle : corne +33 (1d8+17) et deux coups +33 (2d6+17)
+
+## Repli
+
+step: Il est acculé et peut encore frapper
+  do: Continuer l'assaut plutôt que chercher une retraite organisée
+  note: Maintenir la rage ; sa fin retire 46 pv et peut le tuer immédiatement.
+
+step: Ses pv deviennent négatifs sans atteindre −33 pendant la rage
+  do: Choisir de rester conscient grâce à Dur à cuire ; si une cible est à portée, réutiliser l'Éclair de brutalité rechargé et porter une Frappe décisive
+  note: Il est chancelant : une seule action simple ou de mouvement par tour. Une attaque lui coûte ensuite 1 pv ; aucune attaque à outrance. À −33 pv en rage, il meurt.

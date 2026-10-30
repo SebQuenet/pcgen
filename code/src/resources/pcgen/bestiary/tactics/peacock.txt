@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Paon, animal neutre de petite taille, très fragile : 4 pv, CA 12. Il se défend avec ses deux serres +2, chacune infligeant 1d3-2 dégâts ; allonge de 1,50 m.
+  Déplacement au sol de 6 m ; vol de 12 m, avec manœuvrabilité déplorable et dérive ; compétence Vol -1. Vision nocturne, Perception -2.
+
+note: Comportement
+  Avec une Intelligence de 1, il réagit simplement à la menace : fuir si une issue est libre, frapper s'il est acculé.
+
+## Ouverture
+
+step: Menace repérée à distance et passage libre
+  do: S'éloigner au sol, à 6 m par déplacement, en direction d'un endroit hors d'atteinte.
+
+step: Adversaire à 1,50 m ou moins et fuite impossible
+  do: Effectuer une attaque à outrance avec les deux serres +2, chacune pour 1d3-2 dégâts.
+  note: Les deux attaques demandent une attaque à outrance ; après un déplacement normal, il ne peut donner qu'un seul coup de serre.
+
+## Rounds suivants
+
+step: Toujours acculé, avec un adversaire à portée
+  do: Répéter l'attaque à outrance avec les deux serres +2, chacune pour 1d3-2 dégâts.
+
+step: Un déplacement est nécessaire pour atteindre l'unique adversaire qui bloque la sortie
+  do: Avancer de 6 m au maximum et porter un seul coup de serre +2, pour 1d3-2 dégâts, si l'adversaire arrive à portée.
+  note: Ne pas poursuivre un adversaire qui libère le passage ; profiter de l'ouverture pour fuir.
+
+## Repli
+
+step: Une issue se libère, ou les points de vie tombent à 3 ou moins
+  do: Se désengager dès qu'un passage existe, jusqu'à 12 m au sol, puis continuer à s'éloigner.
+  note: Le désengagement protège le départ de sa première case ; un trajet passant près d'autres ennemis reste dangereux.
+
+step: Un appui hors d'atteinte est accessible par un bref vol
+  do: Gagner cet appui avec un déplacement en vol de 12 m au maximum et s'y poser.
+  note: Privilégier un trajet simple ; avec Vol -1 et une manœuvrabilité déplorable, éviter le vol stationnaire et les virages serrés.

@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Uggoth, aberration de taille M, chaotique mauvaise, intelligente et manipulatrice des souterrains. 67 pv ; CA 22 ; résistance à la magie 19 ; réduction des dégâts 10/fer froid.
+  Au contact : 2 griffes +10 (1d4+4) et 4 tentacules +10 (1d6+4 et étreinte). Allonge 1,50 m ; marche et nage à 9 m ; respiration aquatique ; vision dans le noir à 18 m.
+  Ses charmes et suggestions servent à désorganiser les intrus avant une attaque à outrance ou à préserver une voie de fuite dans l'eau.
+
+resource: Détection de la magie | permanent | NLS 12
+resource: Charme-personne | à volonté | Volonté DD 16 ; humanoïdes
+resource: Détection des pensées | à volonté | Volonté DD 17
+resource: Motif hypnotique | à volonté | Volonté DD 17
+resource: Suggestion | à volonté | Volonté DD 18
+resource: Charme-monstre | 1/jour | Volonté DD 20
+resource: Suggestion de groupe | 1/jour | Volonté DD 21
+resource: Changement de plan | 1/jour | DD 22 si employé contre une cible réticente ; à conserver pour sa fuite
+
+note: Pouvoirs non détaillés
+  Poussée mentale et renvoi des sorts sont mentionnés sans règles d'application. Ne pas leur attribuer de dégâts, de portée, de DD ni de déclenchement automatique à partir de ce seul bloc.
+
+step: Des intrus sont repérés avant les hostilités
+  do: Activer détection des pensées pour sonder leurs intentions ; observer leur équipement avec la détection de la magie permanente
+  note: Perception +16, Psychologie +13 et Art de la magie +12 aident à choisir les interlocuteurs et les menaces prioritaires ; les pensées ne sont pas forcément accessibles si la cible réussit son jet.
+
+step: Il peut parler à un intrus sans être attaqué
+  do: Tenter charme-personne sur un humanoïde isolé, puis proposer de laisser les autres en arrière ou de rebrousser chemin
+  note: Il parle l'aquatique, le commun, le draconique et le commun des profondeurs. Un charme rend amical ; il ne donne pas le contrôle des actions de la cible.
+
+step: Un bassin ou un passage immergé est accessible
+  do: Se placer près de l'eau et repérer un trajet de repli submergé
+  note: Sa nage à 9 m et sa respiration aquatique favorisent une poursuite sous l'eau ; elles ne garantissent aucun avantage contre des adversaires aussi bons nageurs.
+
+## Ouverture
+
+step: Plusieurs ennemis comprennent sa langue et les hostilités peuvent encore être évitées
+  do: Employer suggestion de groupe, Volonté DD 21, pour leur proposer de quitter ce passage dangereux et de chercher une autre route
+  note: Formuler une conduite raisonnable ; ce pouvoir ne permet pas d'imposer un ordre manifestement nuisible. Cette action dépense l'unique utilisation quotidienne.
+
+step: Le groupe hésite encore et suggestion de groupe n'est pas employée
+  do: Lancer motif hypnotique, Volonté DD 17, pour fasciner les intrus sensibles à l'effet et gagner du temps
+  note: La fascination est fragile face aux menaces ; ne pas compter dessus pour retenir des victimes pendant une attaque. Le motif ne garantit pas d'affecter tout le groupe.
+
+step: Un ennemi est déjà à 1,50 m et Uggoth peut rester sur place
+  do: Porter une attaque à outrance : 2 griffes +10 et 4 tentacules +10 ; tenter l'étreinte après une touche de tentacule
+  note: L'attaque à outrance exige de consacrer le round aux attaques ; un déplacement ordinaire ne permet ensuite qu'une attaque simple.
+
+note: Choix d'ouverture
+  Choisir une seule de ces actions selon la situation ; les pouvoirs magiques ne s'enchaînent pas tous pendant le même round.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et personne ne le force à se déplacer
+  do: Répéter l'attaque à outrance, de préférence sur une cible isolée ou déjà affaiblie
+  note: Concentrer les coups permet d'exploiter ses six attaques ; l'étreinte exige une manœuvre réussie et n'immobilise pas automatiquement une cible touchée.
+
+step: Une cible est agrippée et l'eau est proche
+  do: Tenter de déplacer la lutte vers l'eau, puis maintenir la prise si la position reste favorable
+  note: Tout déplacement d'une cible agrippée exige la manœuvre appropriée ; ne pas lui accorder automatiquement sa nage à 9 m en traînant un adversaire.
+
+step: Un ennemi isolé peut comprendre une proposition et Uggoth dispose d'un round pour agir
+  do: Employer suggestion, Volonté DD 18, pour lui proposer de se retirer ou d'aller chercher du renfort loin du combat
+  note: Adapter la proposition à une conduite plausible pour cette cible. Répéter un pouvoir consomme de nouvelles actions, même lorsqu'il est utilisable à volonté.
+
+step: Un adversaire se prête mieux à une approche amicale qu'à une lutte prolongée
+  do: Employer charme-personne sur un humanoïde, Volonté DD 16, ou charme-monstre sur une autre créature, Volonté DD 20
+  note: Réserver charme-monstre à une cible importante ; un charme ne garantit ni l'arrêt du combat ni une attaque contre les anciens alliés.
+
+step: Les ennemis restent hors de portée et disposent d'attaques à distance efficaces
+  do: Gagner un couvert ou l'eau et les obliger à changer de position pour continuer l'affrontement
+  note: Il ne possède aucune attaque à distance chiffrée dans ce bloc. Sa réduction des dégâts ne protège pas de toutes les attaques, et sa résistance à la magie peut être franchie.
+
+## Repli
+
+step: Ses points de vie tombent à 20 ou moins, ou le combat tourne clairement à son désavantage
+  do: Rejoindre le passage immergé repéré et fuir à la nage, à 9 m par déplacement
+  note: Utiliser sa respiration aquatique pour prolonger la fuite sous l'eau ; éviter de s'attarder au contact pour lancer un pouvoir.
+
+step: La fuite physique est coupée ou les poursuivants peuvent le rattraper
+  do: Employer changement de plan sur lui-même pour quitter les lieux, si son utilisation quotidienne reste disponible
+  note: Ce choix consomme sa ressource de fuite majeure ; le DD 22 concerne une cible réticente et n'est pas un jet à lui imposer pour son propre départ.

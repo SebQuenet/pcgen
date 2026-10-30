@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Ragewight, mort-vivant chaotique mauvais de taille M, combattant de mêlée qui affaiblit ses victimes par absorption d'énergie. Sous fureur sauvage : 82 pv, CA 18, déplacement de 12 m, allonge de 1,50 m.
+  Épée à deux mains +12/+7 (2d6+6, critique 17–20, plus absorption d'énergie) et morsure +7 (1d4+2, plus absorption d'énergie) ; javelot +10 (1d6+4).
+  Vision dans le noir à 18 m, Perception +15 et Discrétion +20 ; immunités des morts-vivants et bonus de moral de +4 aux sauvegardes contre les sorts, pouvoirs surnaturels et pouvoirs magiques.
+
+note: Fureur sauvage
+  Les valeurs principales du plan correspondent à cet état. Hors fureur : 49 pv, CA 19 et épée à deux mains de maître +9/+4 (2d6+1, critique 17–20, plus absorption d'énergie).
+
+resource: Javelot | 1 | attaque à distance +10, 1d6+4 dégâts
+
+step: Les intrus ne l'ont pas encore repéré
+  do: Se dissimuler derrière un couvert et les laisser approcher à distance de mêlée, en surveillant leur progression avec Perception +15
+  note: L'obscurité permet de voir jusqu'à 18 m grâce à la vision dans le noir ; elle ne le cache pas aux adversaires qui disposent du même sens
+
+step: Des cairn wights l'accompagnent
+  do: Répartir les alliés pour prendre les intrus en tenaille et gêner leur retraite
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m et aucun déplacement important n'est nécessaire
+  do: Faire une attaque à outrance : deux coups d'épée +12/+7, puis une morsure +7
+  note: Chaque attaque de mêlée réussie applique l'absorption d'énergie indiquée dans le profil
+
+step: Une cible est accessible avec un déplacement de 12 m au maximum
+  do: Avancer jusqu'au contact et porter un seul coup d'épée +12 (2d6+6, plus absorption d'énergie)
+  note: Après un déplacement normal, il ne dispose pas de l'attaque à outrance ni de la morsure supplémentaire
+
+step: Le contact reste impossible ce round et la cible est visible
+  do: Lancer son javelot si la ligne de tir est dégagée, puis avancer vers un accès à la mêlée
+  note: Appliquer les modificateurs de distance et de couvert ; ce javelot ne porte pas d'absorption d'énergie
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance à l'épée et à la morsure ; concentrer les attaques sur une même cible pour l'abattre et cumuler l'absorption d'énergie
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant l'attaque à outrance, si aucun autre déplacement n'est effectué
+
+step: La cible paraît facile à toucher et les dégâts priment
+  do: Activer Attaque en puissance et employer Focalisation furieuse sur le premier coup d'épée du round
+  note: Sous fureur, l'attaque à outrance devient épée +12/+4 (2d6+15, plus absorption d'énergie) et morsure +4 (1d4+5, plus absorption d'énergie)
+
+step: Plusieurs ennemis sont adjacents entre eux et à portée
+  do: Employer Succession d'enchaînements : après chaque coup d'épée réussi, attaquer un autre ennemi à portée, adjacent à celui qui vient d'être touché
+  note: Cette action remplace l'attaque à outrance ; chaque ennemi ne peut être attaqué qu'une fois et un échec interrompt la succession. La CA baisse de 2 jusqu'au prochain tour
+
+step: Une cible se trouve à plus de 1,50 m mais à 3 m au maximum
+  do: Déclarer Allonge avant les attaques pour la frapper sans avancer
+  note: L'allonge augmente de 1,50 m pendant son tour seulement ; la CA baisse de 2 jusqu'au prochain tour. Cette pénalité se cumule avec celle de Succession d'enchaînements
+
+## Repli
+
+step: Sous 20 pv, si une voie de sortie existe
+  do: Effectuer une retraite jusqu'à 24 m vers un couvert ou un passage que les alliés peuvent tenir
+  note: La retraite protège du départ de la première case seulement ; éviter de traverser les autres cases menacées
+
+step: Aucune retraite n'est praticable
+  do: Concentrer l'épée et la morsure sur l'adversaire qui bloque la sortie, puis profiter de la première ouverture pour s'éloigner

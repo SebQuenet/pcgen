@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Spriggan normal, petite fée chaotique mauvaise : 22 pv, CA 19, déplacement de 6 m, vision nocturne. Il privilégie l'embuscade et les attaques sournoises plutôt que les échanges prolongés.
+  Épée courte +7 (1d4-1, 19-20), hallebarde +3 (1d8-1, x3), ou arbalète lourde +7 (1d8, 19-20) ; attaque sournoise +2d6. Allonge de 1,50 m avec ses armes de mêlée.
+
+resource: Illumination | à volonté | NLS 4, Vigueur DD 10 ; éblouit la cible
+resource: Effroi | à volonté | NLS 4, Volonté DD 12 ; inefficace contre les créatures de 6 DV ou plus
+resource: Fracassement | à volonté | NLS 4, DD 12 ; destruction d'objets selon leur nature, leur poids et leur éventuel jet de sauvegarde
+
+step: Des intrus approchent
+  do: Se cacher derrière un couvert avec Discrétion +16, arbalète prête, et surveiller avec Perception +10
+  note: Préparer une issue ; sa vitesse de 6 m rend une poursuite à découvert défavorable.
+
+step: Plusieurs spriggans sont présents
+  do: Se répartir autour du passage pour pouvoir prendre une même cible en tenaille
+  note: Ils peuvent se coordonner en gnome.
+
+## Ouverture
+
+step: Une cible qui ne le voit pas se trouve à 9 m ou moins
+  do: Tirer à l'arbalète lourde +7, pour 1d8+2d6 si la cible est privée de son bonus de Dextérité à la CA
+  note: Au-delà de 9 m, le tir ne bénéficie pas de l'attaque sournoise.
+
+step: Une cible est déjà au contact et permet une attaque sournoise
+  do: Frapper à l'épée courte +7, pour 1d4-1+2d6
+  note: Privilégier l'épée courte, plus précise que la hallebarde ; ces armes constituent des options distinctes.
+
+step: Un adversaire de 5 DV ou moins menace de le submerger, et le spriggan peut utiliser un pouvoir sans s'exposer
+  do: Lancer effroi sur cet adversaire, Volonté DD 12, pour le faire fuir
+  note: Une sauvegarde réussie laisse la cible secouée pendant 1 round ; les immunités à la terreur ou aux effets mentaux s'appliquent.
+
+## Rounds suivants
+
+step: Un allié peut l'aider à prendre une cible en tenaille
+  do: Se placer à l'opposé de cet allié et attaquer à l'épée courte, avec les 2d6 d'attaque sournoise
+  note: Se déplacer prudemment ; un pas de 1,50 m suffit parfois à obtenir la position sans provoquer d'attaque d'opportunité.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 1,50 m
+  do: Frapper avec l'arme de mêlée tenue
+  note: Attaques réflexes autorise jusqu'à 5 attaques d'opportunité par round, même pris au dépourvu ; chaque attaque exige une occasion valable.
+
+step: Il reste à distance et dispose d'un round à couvert
+  do: Recharger l'arbalète lourde, puis reprendre les tirs au round suivant
+  note: Le rechargement exige une action complexe et provoque des attaques d'opportunité ; au contact, passer à l'épée courte.
+
+step: Détruire un objet non magique exposé ouvrirait une issue ou affaiblirait nettement un adversaire
+  do: Employer fracassement, DD 12 lorsqu'une sauvegarde s'applique
+  note: Choisir un objet admissible à portée et assez léger pour le pouvoir ; un objet porté peut bénéficier du jet de sauvegarde de son porteur.
+
+step: Il peut gêner un attaquant à distance sans s'exposer et aucune attaque avantageuse n'est possible
+  do: Employer illumination, Vigueur DD 10
+  note: L'éblouissement impose un malus de -1 aux jets d'attaque ; ce pouvoir ne permet pas une attaque sournoise à lui seul.
+
+## Repli
+
+step: Points de vie à 7 ou moins, ou encerclement imminent
+  do: Effectuer une retraite vers une issue libre, jusqu'à 12 m, puis rompre la ligne de vue et se cacher avec Discrétion +16
+  note: La retraite protège seulement la case de départ contre les attaques d'opportunité ; éviter de traverser d'autres cases menacées.
+
+step: Un poursuivant vulnérable à effroi bloque encore la fuite et reste à distance
+  do: Lancer effroi, Volonté DD 12, puis profiter du passage dégagé pour s'éloigner

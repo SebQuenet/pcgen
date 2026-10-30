@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Thorny, créature végétale neutre de taille M, peu intelligente et rapide : 12 m par déplacement, 26 pv, CA 16.
+  Morsure +4 (1d6+1, poison et croc-en-jambe), allonge 1,50 m ; bouquet d'épines +6 (1d3 par épine, critique 19-20, poison).
+  Peau épineuse ; RD 5/tranchant ou contondant ; immunité à l'électricité et immunités des plantes.
+
+step: Des intrus approchent
+  do: Les laisser venir à portée de ses attaques avant de s'exposer
+  note: vision dans le noir à 18 m et vision nocturne ; Perception -1, donc ne pas compter sur un repérage précoce
+
+## Ouverture
+
+step: Un ennemi est à portée des épines, sans adversaire au contact
+  do: Tirer un bouquet d'épines sur la cible la plus accessible
+  note: à 9 m ou moins, Tir à bout portant donne +1 à l'attaque et aux dégâts ; le jet d'attaque passe à +7
+
+step: Un ennemi est déjà à 1,50 m
+  do: Mordre à +4 pour infliger 1d6+1 dégâts, appliquer le poison et tenter le croc-en-jambe
+  note: BMO +4 ; chercher à mettre la cible à terre pour faciliter les morsures suivantes
+
+## Rounds suivants
+
+step: Une cible mordue est à terre et reste à portée
+  do: Continuer à la mordre
+  note: le bonus de +4 contre une cible à terre porte l'attaque de morsure à +8 ; éviter les épines, qui subissent un malus contre cette cible
+
+step: La cible à terre tente de se relever à portée
+  do: Profiter de l'attaque d'opportunité avec une morsure
+  note: cette attaque intervient avant qu'elle soit debout ; ne pas compter sur le croc-en-jambe pour interrompre son relèvement
+
+step: L'adversaire reste debout au contact
+  do: Répéter morsure, poison et croc-en-jambe
+  note: privilégier la morsure au tir lorsqu'un ennemi menace Thorny au corps à corps
+
+step: Aucun adversaire ne le menace au contact
+  do: Se déplacer jusqu'à 12 m si nécessaire, puis tirer sur une cible à portée ; préférer une position à 9 m ou moins si elle reste sûre
+  note: Tir de précision évite le malus de tir dans une mêlée ; il peut viser un ennemi engagé contre un allié
+
+step: Les ennemis utilisent des attaques perforantes ou de l'électricité
+  do: Maintenir la pression tant que ses points de vie le permettent
+  note: la RD réduit de 5 les dégâts des armes qui ne la contournent pas ; les armes tranchantes ou contondantes la contournent, et l'électricité ne lui inflige aucun dégât
+
+## Repli
+
+step: Points de vie à 8 ou moins et une issue est accessible
+  do: Prendre l'action de retraite pour parcourir jusqu'à 24 m et gagner un passage libre
+  note: seule la case de départ est protégée contre les attaques d'opportunité par cette action ; éviter de traverser d'autres cases menacées
+
+step: La fuite est bloquée
+  do: Mordre l'adversaire qui ferme le passage et tenter de le faire tomber, puis se retirer dès qu'une issue se libère

@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Squelette humain mythique de taille M, mort-vivant neutre mauvais sans intelligence. Combattant de mêlée : 17 pv, CA 15, initiative +7.
+  Attaque à outrance : 2 cimeterres +3 (1d6+2 chacun, critique 18–20), ou 2 griffes +3 (1d4+2 chacune).
+  Déplacement 9 m ; allonge 1,50 m ; vision dans le noir à 18 m.
+
+note: Défenses
+  RD 5/contondant : retrancher 5 aux dégâts physiques de chaque attaque qui ne contourne pas cette réduction.
+  Immunité au froid et traits des morts-vivants ; résistance à la canalisation +2.
+
+step: Un poste ou une consigne lui a été assigné
+  do: Attendre dans le secteur à garder et appliquer les ordres simples reçus
+  note: Son absence d'intelligence ne lui permet pas d'élaborer une ruse ou un plan complexe
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m
+  do: Attaque à outrance avec les deux cimeterres : deux attaques à +3, chacune pour 1d6+2 dégâts
+
+step: Un déplacement de 9 m suffit pour atteindre le contact
+  do: Avancer jusqu'à 1,50 m de l'ennemi et porter une seule attaque de cimeterre à +3 (1d6+2, critique 18–20)
+  note: Un déplacement ordinaire ne permet pas d'effectuer ensuite les deux attaques de l'attaque à outrance
+
+step: Aucun ennemi n'est accessible après un déplacement de 9 m
+  do: Faire un double déplacement, jusqu'à 18 m, vers la cible autorisée la plus proche
+  note: Aucune attaque pendant ce round ; aucune attaque à distance n'est indiquée
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Répéter l'attaque à outrance aux deux cimeterres contre elle
+
+step: Les deux cimeterres sont indisponibles
+  do: Employer les griffes : deux attaques à +3 (1d4+2 chacune) en attaque à outrance, ou une seule après un déplacement
+  note: Les griffes constituent l'autre routine d'attaque ; ne pas les ajouter aux deux attaques de cimeterre
+
+step: La cible tombe ou devient inaccessible
+  do: Se tourner vers l'ennemi accessible le plus proche, dans les limites des consignes reçues
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Porter une attaque de cimeterre à +3, ou de griffe si les armes sont indisponibles
+
+## Repli
+
+step: Le squelette est blessé mais possède encore des points de vie
+  do: Continuer à combattre sans repli spontané
+  note: Sans intelligence et immunisé à la peur par ses traits de mort-vivant, il ne choisit pas une retraite pour sauver sa vie
+
+step: Ses points de vie atteignent 0
+  do: Cesser toute action : le squelette est détruit

@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Thundershrike, créature magique de taille TG, neutre et intelligente, des montagnes tempérées ; solitaire ou en couple. 136 pv, CA 19.
+  Deux griffes +19 (1d8+8 chacune), morsure +20 (2d6+8) ; allonge de 3 m. Vol à 21 m, manœuvrabilité moyenne ; déplacement terrestre à 6 m.
+  Il combine éclairs à distance et passages mordants en vol ; sa Volonté +1 le rend vulnérable aux attaques mentales.
+
+resource: Éclair | 2/jour | NLS 13 ; ligne de 36 m ; 10d6 dégâts d'électricité, Réflexes DD 16 pour moitié
+resource: Bourrasque | À volonté | ligne de 18 m, durée 1 round ; Vigueur DD 15 annule les effets sur les créatures
+resource: Contrôle du climat | 1/jour | préparation météorologique ; durée 4d12 heures
+
+step: Les adversaires ne l'ont pas encore engagé
+  do: Les observer depuis les hauteurs avec Perception +17 et repérer une trajectoire de passage dégagée
+  note: Vision dans le noir à 18 m et vision nocturne ; privilégier l'espace aérien aux passages étroits
+
+step: Il dispose d'au moins vingt minutes avant l'affrontement
+  do: Employer contrôle du climat pour gêner l'approche ennemie avec une météo adaptée à la saison et au climat local
+  note: Dix minutes d'incantation, puis dix minutes avant manifestation ; choisir des conditions compatibles avec son propre vol. Il règle les tendances météorologiques, sans choisir où tombe la foudre
+
+## Ouverture
+
+step: Plusieurs ennemis sont alignés à moins de 36 m
+  do: Se placer en vol hors de leur allonge, puis lancer éclair à travers le plus grand nombre
+  note: Éviter d'inclure un éventuel partenaire dans la ligne
+
+step: Les ennemis sont dispersés et une cible est accessible en un passage
+  do: Utiliser Attaque en vol pour approcher, porter une morsure avec Frappe décisive à +20 (4d6+8), puis poursuivre son déplacement
+  note: Le déplacement total du passage reste limité à 21 m ; profiter de l'allonge de 3 m contre les adversaires à allonge courte. Ce passage utilise une attaque simple
+
+## Rounds suivants
+
+step: Une nouvelle ligne permet de toucher plusieurs ennemis et il reste un éclair
+  do: Se replacer et utiliser le second éclair, Réflexes DD 16 pour moitié
+
+step: Rester au contact l'exposerait à plusieurs combattants
+  do: Répéter les passages avec morsure et Frappe décisive, en visant un ennemi isolé ou un lanceur de sorts accessible
+  note: Wingover permet un demi-tour de 180 degrés une fois par round sans test de Vol ; Attaque en vol laisse possibles les attaques d'opportunité
+
+step: Une cible reste à portée et le contact est favorable
+  do: Effectuer une attaque à outrance : deux griffes +19 (1d8+8 chacune) et une morsure +20 (2d6+8)
+  note: Vol stationnaire permet de rester sur place sans test de Vol ; réserver Frappe décisive aux attaques simples
+
+step: La cible est facile à toucher et les dégâts priment sur la précision
+  do: Activer Attaque en puissance avant les attaques : malus de 4 au toucher, bonus de 8 aux dégâts de chaque griffe et de la morsure
+  note: Avec Frappe décisive, la morsure passe à +16 (4d6+16)
+
+step: Une proie isolée peut être immobilisée sans subir l'assaut du groupe
+  do: Après une griffe ou une morsure réussie, tenter la lutte gratuite permise par Capture (Snatch)
+  note: La prise exige un test de lutte réussi ; son maintien demande une action simple. Une proie de taille P ou inférieure peut subir les dégâts d'écrasement du don sur un test réussi
+
+step: Des poursuivants de petite taille ou volants s'approchent dans une même direction
+  do: Utiliser bourrasque sur leur axe d'approche, puis se déplacer à l'écart
+  note: Vigueur DD 15 ; les effets du vent dépendent de leur taille et de leur mode de déplacement
+
+## Repli
+
+step: Ses points de vie passent sous 34 ou il ne peut plus éviter une mêlée défavorable
+  do: Relâcher toute proie et se retirer en vol derrière un relief qui coupe les lignes de vue
+  note: Une action de retraite permet jusqu'à 42 m de déplacement ; seule la position initiale bénéficie de sa protection contre les attaques d'opportunité
+
+step: Des poursuivants continuent la chasse
+  do: Si bourrasque peut les freiner, l'utiliser puis voler sur 21 m ; sinon poursuivre la fuite par deux déplacements, jusqu'à 42 m par round

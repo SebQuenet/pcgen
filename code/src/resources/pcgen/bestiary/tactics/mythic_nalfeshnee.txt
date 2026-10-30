@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Nalfeshnie mythique, démon chaotique mauvais de taille TG, FP 17, rang mythique 7. Intelligent et manipulateur, il neutralise les lanceurs de sorts avant de déchiqueter les adversaires isolés.
+  Morsure +28 (3d8+15, critique 18–20), 2 griffes +28 (2d6+15 chacune, critique 19–20, plus vol). Allonge et espace occupé : 4,50 m ; déplacement 9 m, vol 12 m de manœuvrabilité médiocre.
+  287 pv, guérison accélérée 5, CA 36, contact 13 ; RD 10/épique et Bien, RM 28. Immunisé au feu, à l'électricité et au poison ; résistance à l'acide 10 et au froid 10.
+
+resource: Perception magique | constant | vision lucide, détection des pensées (Volonté DD 19), aura maudite (DD 25)
+resource: Pouvoirs magiques | à volonté | débilité, lenteur, dissipation suprême, appel de la foudre, téléportation suprême, glissement de terrain, façonnage de la pierre, pierres commères ; NLS 12, concentration +19
+resource: Scrutation | 3/jour | observer les adversaires avant l'affrontement
+resource: Contact avec les plans | 1/jour | rechercher des renseignements avant le combat
+resource: Convocation | 1/jour | choisir 1d4 vrocks à 50 %, 1d4 hezrous à 40 %, ou 1 nalfeshnie à 20 % ; une seule tentative
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Employer scrutation et pierres commères pour reconnaître leurs moyens et leurs itinéraires ; préparer les accès avec glissement de terrain et façonnage de la pierre
+  note: canaliser leur approche vers un passage qu'il peut tenir avec son allonge ; conserver un espace suffisant pour son corps de 4,50 m et une destination de téléportation connue
+
+step: L'affrontement paraît imminent
+  do: Tenter la convocation de 1d4 vrocks, puis placer les démons obtenus entre les intrus et lui
+  note: les diriger par télépathie à 30 m ; s'il accompagne déjà un hezrou et des vrocks, coordonner aussi ces alliés
+
+step: Les intrus approchent sous invisibilité ou déguisement illusoire
+  do: Les examiner avec vision lucide et détection des pensées avant de choisir sa première cible
+  note: ces perceptions ne lui donnent pas connaissance des capacités qu'il n'a pas observées
+
+## Ouverture
+
+step: Un lanceur de sorts profanes est identifié et accessible
+  do: Débilité sur lui, Volonté DD 22
+  note: un lanceur de sorts profanes subit −4 à ce jet ; en cas d'échec, Intelligence et Charisme tombent à 1 et il ne peut plus lancer de sorts
+
+step: Plusieurs combattants approchent ensemble et aucun mage ne constitue une cible prioritaire
+  do: Lenteur sur les adversaires regroupés, Volonté DD 20
+  note: réduire leurs déplacements et empêcher leurs attaques à outrance ; rester derrière les alliés ou au-delà de leur allonge
+
+step: Une protection magique adverse empêche son attaque principale
+  do: Dissipation suprême ciblée sur son bénéficiaire
+  note: consacrer cette action à ouvrir une faille avant d'engager ; choisir une seule de ces ouvertures selon la situation
+
+## Rounds suivants
+
+step: Une cible dangereuse se trouve dans son allonge de 4,50 m
+  do: Attaque à outrance : morsure +28 et 2 griffes +28, en concentrant les trois attaques sur elle
+  note: privilégier un ennemi ralenti ou privé de soutien ; conserver sa position pour répéter l'attaque à outrance et menacer les déplacements adverses
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Avancer de 9 m au maximum et porter une morsure +28 si la cible devient accessible
+  note: un déplacement ordinaire ne laisse pas d'attaque à outrance ; réserver Attaque en puissance mythique aux ennemis qu'il touche facilement
+
+step: Les adversaires s'appuient encore sur leurs sorts
+  do: Employer à nouveau débilité contre un lanceur de sorts, ou dissipation suprême contre une protection décisive
+  note: choisir le pouvoir qui menace le plus directement leur stratégie ; ces pouvoirs sont à volonté, mais remplacent ses attaques du round
+
+step: Un adversaire bon le touche en mêlée
+  do: Appliquer la riposte de l'aura maudite : Vigueur DD 25 ou 1d6 points d'affaiblissement de Force
+  note: cet effet accompagne le coup adverse et ne consomme pas son action ; le bonus de parade de l'aura figure déjà dans la CA 36
+
+step: Les ennemis restent à distance et leurs défenses mentales résistent
+  do: Employer appel de la foudre, Réflexes DD 20 pour réduire les dégâts de moitié
+  note: chaque éclair inflige 3d6 dégâts d'électricité, ou 3d10 dehors sous un temps orageux ; faire tomber un nouvel éclair demande une action simple, au maximum dix par activation
+
+step: Il est encerclé ou exposé à trop d'attaques
+  do: Téléportation suprême vers un emplacement connu qui le sépare des combattants et lui rend l'initiative du placement
+  note: cette téléportation occupe son action simple ; reprendre ses attaques au round suivant, en laissant les démons alliés fixer les poursuivants
+
+## Repli
+
+step: Points de vie sous 75, ou risque d'être abattu avant son prochain tour
+  do: Téléportation suprême vers un refuge connu sur le même plan
+  note: il ne transporte que lui-même et jusqu'à environ 22,5 kg d'objets ; ses alliés doivent assurer leur propre fuite
+
+step: La téléportation est empêchée
+  do: Chercher une issue au sol à 9 m ou en vol à 12 m, pendant que les alliés retardent les poursuivants
+  note: sa manœuvrabilité médiocre impose de privilégier une trajectoire dégagée ; retenter la téléportation dès que l'empêchement cesse
+
+step: Il a rompu le contact
+  do: Rester à l'abri et récupérer 5 pv par round grâce à la guérison accélérée
+  note: n'envisager une nouvelle attaque qu'après récupération et reconnaissance par scrutation

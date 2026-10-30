@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Yaenit, démon chaotique mauvais de taille M, brutal et cruel, protecteur des prêtresses de Lamashtu et de leur progéniture.
+  76 PV, CA 19 ; déplacement de 12 m, allonge de 1,50 m. Cimeterre à deux mains de maître +14/+9 (2d4+7, critique 18–20), morsure +8 (1d6+2).
+  Il cherche le corps à corps, où son aura hallucinatoire affaiblit la résistance à ses pouvoirs mentaux.
+
+note: Défenses et repérage
+  Réduction des dégâts 5/fer froid ou Bien ; immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10 chacune.
+  Vision dans le noir à 18 m, détection de l'invisibilité constante, Perception +10 et Discrétion +11.
+
+resource: Immobilisation de personne | 3/jour | Volonté DD 16 ; humanoïdes uniquement ; NLS 8
+resource: Contact vampirique | 3/jour | contact au corps à corps ; 4d6 dégâts et PV temporaires ; NLS 8
+resource: Convocation | 1/jour | 40 % de chances de convoquer un yaenit ; équivalent à un sort de niveau 3
+resource: Ténèbres | à volonté | abaisse l'éclairage dans un rayon de 6 m
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,5 kg d'objets ; aucun autre combattant
+
+step: Il dispose d'au moins un round pour préparer une attaque difficile
+  do: Tenter la convocation avant de s'exposer ; si elle réussit, préparer une prise en tenaille avec le second yaenit
+  note: La convocation demande 1 round ; un échec consomme l'utilisation quotidienne
+
+step: Un couvert permet de préparer une embuscade
+  do: Se dissimuler ; employer ténèbres si la baisse d'éclairage gêne les adversaires, puis les attendre à proximité
+  note: Ténèbres ne gêne pas la vision dans le noir ; la détection de l'invisibilité reste active
+
+## Ouverture
+
+note: Aura hallucinatoire
+  À l'entrée dans le rayon de 6 m, Volonté DD 17 ; en cas d'échec, malus de −2 aux sauvegardes de Volonté, aux tests de niveau de lanceur de sorts et aux compétences fondées sur l'Intelligence ou la Sagesse.
+  Le malus dure dans l'aura et pendant 1d4−1 rounds après en être sorti. Effet mental ; après cette exposition, aucun nouveau jet contre l'aura du même yaenit pendant 24 heures, que le premier soit réussi ou raté.
+
+step: Un humanoïde dangereux peut être placé dans l'aura sans s'exposer à toute la mêlée
+  do: Avancer pour l'amener à 6 m ou moins, puis lancer immobilisation de personne sur lui, Volonté DD 16
+  note: Un échec contre l'aura impose −2 à ce jet de Volonté ; privilégier une cible isolée que le yaenit pourra ensuite atteindre
+
+step: Il choisit d'engager directement un ennemi accessible en un déplacement
+  do: Avancer de 12 m au maximum et porter un seul coup de cimeterre à deux mains +14 (2d4+7)
+  note: Après ce déplacement, il ne dispose pas de son attaque à outrance
+
+## Rounds suivants
+
+step: Un ennemi est déjà à portée et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance : cimeterre à deux mains +14/+9 (2d4+7), puis morsure +8 (1d6+2)
+  note: Concentrer les attaques sur une même victime ; avec un allié, chercher la prise en tenaille
+
+step: L'adversaire est facile à toucher
+  do: Employer Attaque en puissance avec le cimeterre à deux mains
+  note: Le cimeterre passe à +11/+6 pour 2d4+16 ; si la morsure suit dans la même attaque à outrance, elle passe à +5 pour 1d6+5
+
+step: Deux ennemis adjacents entre eux sont tous deux à portée, mais une attaque à outrance est impossible
+  do: Employer Enchaînement avec le cimeterre : une attaque +14, puis une seconde +14 contre l'autre ennemi si la première touche
+  note: Action simple ; CA réduite de 2 jusqu'au prochain tour. Préférer l'attaque à outrance si elle est possible
+
+step: Une cible reste paralysée au contact et ses alliés ne peuvent pas intervenir
+  do: Porter un coup de grâce au cimeterre à deux mains
+  note: Action complexe provoquant des attaques d'opportunité ; la cible peut tenter un nouveau jet contre immobilisation de personne à son tour en dépensant une action complexe
+
+step: Il a perdu des PV et veut amortir les prochaines blessures
+  do: Employer contact vampirique sur une créature vivante accessible : attaque de contact au corps à corps +13, dégâts 4d6
+  note: Les PV temporaires correspondent aux dégâts effectivement infligés, sans dépasser les PV actuels de la victime +10 ; ils durent 1 heure et ne soignent pas ses blessures. Cette action remplace son attaque à outrance
+
+step: Un humanoïde libre menace de rompre le combat ou d'aider une victime
+  do: Dépenser une autre immobilisation de personne, de préférence sur une cible encore affectée par l'aura
+  note: Conserver les attaques physiques contre les créatures que ce pouvoir ne peut pas paralyser
+
+## Repli
+
+step: Ses PV tombent sous 20, ou il ne peut plus tenir face aux armes qui traversent sa réduction des dégâts
+  do: Faire un pas de 1,50 m pour sortir de l'allonge ennemie si possible, puis utiliser téléportation suprême vers un lieu sûr connu
+  note: Ce pouvoir provoque des attaques d'opportunité s'il reste menacé ; ses PV temporaires ne restaurent pas ses 76 PV. Il ne peut emporter ni allié ni prisonnier

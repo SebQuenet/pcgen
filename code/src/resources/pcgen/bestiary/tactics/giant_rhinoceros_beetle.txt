@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Scarabée rhinocéros géant, vermine de taille G des forêts chaudes, sans Intelligence : il combat par instinct. 85 pv, CA 20, déplacement de 6 m, vision dans le noir à 18 m.
+  Coup de corne +12 (2d6+6), allonge de 3 m ; morsure +12 (2d6+6), allonge de 1,50 m. Piétinement : 1d8+9 dégâts, Réflexes DD 21 pour réduire de moitié.
+
+step: Des intrus approchent
+  do: Réagir à leur présence sans préparer d'embuscade ni coordonner de manœuvre
+  note: Perception +0 ; aucune attaque à distance.
+
+## Ouverture
+
+step: Plusieurs ennemis de taille M ou inférieure peuvent être écrasés sur son trajet
+  do: Piétiner en une action complexe, en parcourant au maximum 12 m et en passant entièrement sur l'espace des cibles
+  note: Chaque cible subit 1d8+9 dégâts. Elle peut porter une attaque d'opportunité avec un malus de -4 ; si elle y renonce, elle peut tenter Réflexes DD 21 pour réduire les dégâts de moitié.
+
+step: Un ennemi est déjà à 1,50 m ou moins et aucun piétinement n'est entrepris
+  do: Attaque à outrance : coup de corne +12 (2d6+6) et morsure +12 (2d6+6)
+
+step: L'ennemi le plus proche est à plus de 1,50 m, mais à 3 m ou moins
+  do: Donner un coup de corne +12 (2d6+6)
+  note: Un pas de placement de 1,50 m peut permettre d'ajouter la morsure dans une attaque à outrance si la place est libre.
+
+step: Aucun ennemi n'est à portée
+  do: Avancer de 6 m au maximum, puis donner un coup de corne si une cible est désormais à 3 m ou moins
+  note: Si cela ne suffit pas, effectuer un double déplacement jusqu'à 12 m pour se rapprocher, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Plusieurs ennemis plus petits restent sur un trajet praticable
+  do: Répéter le piétinement si le trajet permet de passer entièrement sur leurs espaces
+  note: Une même créature ne subit les dégâts de piétinement qu'une fois par round. Cette action ne se combine pas avec les attaques de corne et de morsure.
+
+step: Un ennemi reste à 1,50 m ou moins
+  do: Poursuivre l'attaque à outrance avec la corne et la morsure
+
+step: Un ennemi reste entre 1,50 m et 3 m
+  do: Le frapper avec la corne ; faire un pas de placement de 1,50 m si cela permet de porter aussi la morsure
+  note: Après un déplacement ordinaire, une seule attaque est possible ; après un simple pas de placement, l'attaque à outrance reste possible.
+
+step: Les ennemis reculent hors de portée
+  do: Se rapprocher de l'ennemi accessible le plus proche et reprendre les attaques dès que la distance le permet
+
+## Repli
+
+step: Le scarabée est blessé et des ennemis restent proches
+  do: Continuer à frapper ou à piétiner par instinct
+  note: Sa nature de vermine sans Intelligence ne se prête pas à une retraite coordonnée ; aucun seuil de fuite en points de vie n'est fourni.

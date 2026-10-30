@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Xiomorn, gardien des voûtes loyal neutre, extérieur de taille M lié à la terre, très intelligent et mobile. Il sépare les intrus par la pierre puis concentre ses attaques sur une cible isolée.
+  200 pv, CA 28, résistance à la magie 25, guérison accélérée 5 ; réduction des dégâts 10, surmontée par une arme à la fois en adamantium et contondante.
+  Attaque à outrance : 4 griffes +24, chacune infligeant 2d4+6 dégâts plus cristallisation, critique sur 19–20 ; allonge de 1,50 m. Marche et escalade à 12 m.
+  Vision dans le noir à 18 m, perception des vibrations à 36 m, Perception +23 ; télépathie à 90 m.
+
+resource: Pouvoirs à volonté | à volonté | dissipation de la magie, téléportation suprême, fracassement (DD 19), statue, façonnage de la pierre, pierres commères ; NLS 16
+resource: Command stone | 3/jour | DD 26
+resource: Transmutation de la chair en pierre | 3/jour | Vigueur DD 23
+resource: Pierres acérées | 3/jour | DD 21
+resource: Mur de pierre | 3/jour | séparer les adversaires et fermer les passages
+resource: Convocation de monstres VII | 1/jour | élémentaires de terre uniquement
+resource: Symbole de scrutation | 1/jour | surveillance d'un accès préparé
+
+step: Il dispose de temps pour préparer un terrain de pierre
+  do: Utiliser façonnage de la pierre pour aménager un passage étroit et une position accessible par escalade ; choisir une destination connue pour une téléportation de repli
+  note: Son escalade lui permet de changer de niveau ; elle ne lui permet pas de traverser la roche.
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Les observer depuis une position dissimulée avec Discrétion +27 ; utiliser pierres commères pour interroger la pierre sur leurs passages
+  note: La perception des vibrations repère les créatures en mouvement au contact du même sol ; elle ne remplace pas la vue pour viser un pouvoir.
+
+step: Le combat est imminent et il peut agir sans être interrompu
+  do: Convoquer des élémentaires de terre et les placer sur l'accès principal
+  note: Déclencher cette préparation peu avant l'affrontement, car la convocation est temporaire.
+
+## Ouverture
+
+step: Plusieurs intrus avancent ensemble dans un passage de pierre
+  do: Poser pierres acérées sur leur voie d'approche, en conservant un accès praticable pour lui-même
+  note: Le terrain dangereux doit ralentir leur progression et faciliter leur séparation ; DD 21 pour l'effet du pouvoir.
+
+step: Le groupe peut être coupé en deux sur un support de pierre
+  do: Dresser un mur de pierre entre les combattants de première ligne et leurs soutiens
+  note: Placer le mur dans un espace libre, relié à la pierre existante ; chercher à isoler une cible plutôt qu'à enfermer tout le groupe avec lui.
+
+step: Une cible isolée est visible et paraît peu résistante aux effets physiques
+  do: Employer transmutation de la chair en pierre sur elle, Vigueur DD 23
+  note: Choisir cette ouverture si la séparation du groupe est déjà suffisante ; chaque pouvoir demande sa propre action.
+
+step: Un adversaire commence le combat à portée de ses griffes
+  do: Faire une attaque à outrance : 4 griffes +24, 2d4+6 dégâts plus cristallisation chacune
+
+## Rounds suivants
+
+step: Une cible isolée reste à 1,50 m ou moins
+  do: Concentrer les quatre griffes sur elle pour multiplier les touches et les applications de cristallisation
+  note: Conserver sa position permet l'attaque à outrance ; un déplacement ordinaire ne permet ensuite qu'une seule attaque.
+
+step: Il doit frapper sans rester entouré
+  do: Utiliser Attaque éclair pour se déplacer, porter une griffe +24 puis terminer son déplacement hors du contact
+  note: Le déplacement total reste limité à 12 m et l'attaque est unique ; la cible de cette attaque ne peut pas lui porter d'attaque d'opportunité pendant ce mouvement.
+
+step: Une protection magique empêche ses griffes ou sa pétrification d'être efficaces
+  do: Tenter une dissipation de la magie ciblée sur l'adversaire protégé
+  note: Employer ce round pour ouvrir une possibilité d'attaque au round suivant ou pour les élémentaires déjà convoqués.
+
+step: Les adversaires se regroupent ou contournent ses obstacles
+  do: Employer un autre mur de pierre pour les séparer, ou replacer des pierres acérées sur leur nouvel itinéraire
+  note: Éviter de bloquer ses propres attaques et celles de ses élémentaires ; ne pas gaspiller plusieurs usages sur un passage qu'ils ont abandonné.
+
+step: Un ennemi quitte une case menacée ou accomplit une action qui provoque
+  do: Porter une attaque d'opportunité avec une griffe
+  note: Attaques réflexes permet plusieurs attaques d'opportunité par round, uniquement lorsqu'une occasion se présente.
+
+## Repli
+
+step: Il tombe à 50 pv ou moins, ou les ennemis neutralisent durablement son contrôle du terrain
+  do: Utiliser téléportation suprême vers la destination de repli connue
+  note: Ce pouvoir transporte uniquement le xiomorn et jusqu'à 50 livres d'objets ; il n'emporte aucun allié.
+
+step: La téléportation est empêchée
+  do: Fermer la poursuite avec un mur de pierre si un usage reste disponible, puis gagner un passage ou une hauteur par escalade à 12 m
+  note: Chaque pouvoir et chaque déplacement doivent respecter leurs actions ; chercher d'abord une occasion de rompre le contact.
+
+step: Il a atteint une position sûre
+  do: Rester à couvert et laisser sa guérison accélérée rendre 5 pv par round, jusqu'à son maximum de 200 pv

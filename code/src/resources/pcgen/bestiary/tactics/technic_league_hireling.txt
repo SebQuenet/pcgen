@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Mercenaire humain de la Ligue technique, roublard 4, CN, habitué aux ruines de Numérie. Il exploite le terrain et ses consommables pour compenser sa fragilité.
+  25 PV ; CA 18, contact 14 ; déplacement 9 m ; allonge 1,50 m. Dague au contact +4 ou lancée +7, dégâts 1d4+1, critique 19–20.
+  Réflexes +9 et esquive totale ; esquive instinctive ; sens des pièges +1. Volonté +1 : éviter de rester exposé aux lanceurs de sorts.
+
+resource: Potions de soins légers | 2 | à boire à couvert pour récupérer des PV
+resource: Potion de retardement du poison | 1 | retarde les effets du poison sans le neutraliser
+resource: Antitoxine | 1 | protection préventive contre le poison
+resource: Acide | 2 | projectiles à impact destinés aux attaques de contact à distance
+resource: Feu grégeois | 1 | projectile à impact pour incendier une cible
+resource: Bâtons fumigènes | 2 | écran de fumée pour gêner les tirs et couvrir un déplacement
+
+step: Il peut reconnaître les lieux
+  do: Observer avec Perception +8 et avancer avec Discrétion +11 ; repérer un couvert et une issue avant de s'engager.
+  note: Préparer si nécessaire une corde et un grappin sur une voie d'évacuation ; il dispose de 30 m de corde de soie et d'un matériel d'escalade.
+
+step: Des pièges ou des dispositifs barrent son passage
+  do: Utiliser sa recherche des pièges et Désamorçage +15, ou +14 contre les dispositifs électroniques.
+  note: Son talent de détection des pièges lui permet de remarquer les pièges proches ; privilégier un itinéraire reconnu.
+
+step: Une exposition au poison est prévisible
+  do: Prendre l'antitoxine avant l'exposition ; réserver la potion de retardement du poison à une menace avérée.
+
+## Ouverture
+
+step: Il bénéficie d'un couvert et peut attaquer à distance
+  do: Lancer le feu grégeois sur une cible isolée, de préférence à 3 m ou moins ; employer plutôt une fiole d'acide si l'incendie paraît inefficace.
+  note: Éviter les alliés éventuels dans la zone d'éclaboussures. Garder sa dague pour se défendre au contact.
+
+step: Un adversaire l'engage immédiatement au contact
+  do: Attaquer avec la dague +4, pour 1d4+1 dégâts, puis chercher à rejoindre un couvert.
+  note: Il ne possède qu'une dague : la lancer le prive de son arme de mêlée tant qu'il ne l'a pas récupérée.
+
+## Rounds suivants
+
+step: Une cible reste accessible à distance sans ennemi au contact
+  do: Lancer une fiole d'acide, puis changer de position vers un couvert avec son déplacement de 9 m.
+  note: Limiter chaque round à un lancer ; rester près d'une issue.
+
+step: Un ennemi bloque son déplacement
+  do: Utiliser Acrobaties +11 pour tenter de franchir la zone menacée sans attaque d'opportunité, en acceptant une progression ralentie.
+  note: Exploiter les corniches avec son talent de marche sur les rebords ; une escalade éventuelle repose sur Escalade +8.
+
+step: Il est blessé et dispose d'un couvert qui le protège réellement
+  do: Boire une potion de soins légers ; consacrer un round ultérieur à une seconde potion si nécessaire.
+
+## Repli
+
+step: Il tombe à 8 PV ou moins, ou plusieurs ennemis le prennent au contact
+  do: Faire retraite vers l'issue préparée, jusqu'à 18 m si le passage le permet.
+  note: La retraite protège seulement la première case quittée contre les attaques d'opportunité ; éviter de traverser d'autres zones menacées.
+
+step: Des poursuivants peuvent encore le viser
+  do: Allumer un bâton fumigène, puis profiter de la fumée et du terrain pour rompre le contact visuel et se cacher avec Discrétion +11.
+  note: Le fumigène et une potion exigent des actions distinctes ; employer les soins après avoir gagné un abri.

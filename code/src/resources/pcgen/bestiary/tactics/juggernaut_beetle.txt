@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Juggernaut Beetle, scarabée magique de taille TG des souterrains, neutre et d'intelligence animale. Il combat par assauts directs et coups de mandibules.
+  210 pv, CA 29 ; déplacement de 9 m, espace de 4,50 m et allonge de 3 m. Morsure +28 (4d10+15, critique 19-20) ; Frappe décisive améliorée contre une cible, Succession d'enchaînements contre plusieurs ennemis regroupés.
+  Immunisé contre l'acide et les effets mentaux, sauf ceux des duergars grâce à son esprit sélectif ; ceux-ci peuvent le dresser et le contrôler comme un animal.
+
+step: Il peut choisir son terrain
+  do: Rester dans une galerie sombre assez large pour son corps et laisser les adversaires approcher
+  note: vision dans le noir à 36 m et vision nocturne ; la lumière vive l'éblouit et lui impose un malus de -1 aux attaques et aux tests visuels de Perception
+
+step: Un duergar le dirige
+  do: Suivre ses ordres simples de déplacement et d'attaque
+  note: sans dresseur, privilégier la menace accessible la plus proche plutôt que des manœuvres complexes
+
+## Ouverture
+
+step: Une cible est à portée ou peut être atteinte après un déplacement de 9 m au plus
+  do: Avancer si nécessaire, puis porter une morsure avec Frappe décisive améliorée : +28, 12d10+15 dégâts
+  note: action simple d'attaque ; les dés supplémentaires ne sont pas multipliés sur un critique
+
+step: Une cible reste trop loin pour cette approche, mais une charge est possible
+  do: Charger en ligne droite sur 18 m au plus, puis mordre à +30 pour 4d10+15 dégâts
+  note: CA 27 jusqu'au prochain tour ; la charge ne se combine pas avec Frappe décisive améliorée
+
+step: Aucune cible ne peut être attaquée ce round
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m, en privilégiant les zones sombres
+
+## Rounds suivants
+
+step: Plusieurs ennemis sont à portée et adjacents les uns aux autres
+  do: Utiliser Succession d'enchaînements : morsure +28 pour 4d10+15 dégâts, puis une autre morsure sur un ennemi adjacent au précédent si le coup touche
+  note: chaque cible doit rester dans l'allonge de 3 m ; poursuivre jusqu'à un échec ou épuisement des cibles, sans frapper deux fois la même créature. CA 27 jusqu'au prochain tour ; aucune Frappe décisive sur ces attaques
+
+step: Une seule cible est accessible, ou les adversaires sont dispersés
+  do: Répéter Frappe décisive améliorée : morsure +28 pour 12d10+15 dégâts ; avancer de 9 m au plus si nécessaire avant l'attaque
+
+step: La cible est facile à toucher, notamment si elle est étourdie
+  do: Activer Attaque en puissance avant d'attaquer : morsure +22 pour 4d10+33 dégâts, ou +22 pour 12d10+33 avec Frappe décisive améliorée
+  note: le malus de -6 aux attaques et aux manœuvres dure jusqu'au prochain tour ; conserver la précision contre une cible difficile à toucher
+
+step: Une morsure menace un critique sur 19-20
+  do: Confirmer avec le bonus de +4 de Don pour les critiques, puis appliquer Critique étourdissant si le critique est confirmé
+  note: Vigueur DD 30 ; échec : étourdi pendant 1d4 rounds, réussite : chancelant pendant 1d4 rounds. Les critiques suivants prolongent la durée
+
+step: Un adversaire corporel de taille G ou inférieure bloque le passage
+  do: Choisir Coup fabuleux à la place de la morsure décisive : manœuvre à +32 contre son DMD, sans Attaque en puissance ce round
+  note: sur une réussite, projeter la cible de 3 m en ligne droite en l'éloignant et la faire tomber à terre ; si elle heurte un obstacle, elle et l'obstacle subissent chacun 1d6 dégâts supplémentaires
+
+step: Une simple poussée suffit à ouvrir le passage
+  do: Utiliser une bousculade à +34 contre le DMD adverse, sans Attaque en puissance
+  note: ce don évite l'attaque d'opportunité de la cible pour la bousculade ; pousser de 1,50 m, plus 1,50 m par tranche de 5 points au-dessus de son DMD
+
+## Repli
+
+step: Le duergar qui le dirige ordonne le retrait
+  do: Se désengager vers une galerie sombre, jusqu'à 18 m si le terrain le permet
+  note: l'action de retraite protège seulement la sortie de la case de départ contre les attaques d'opportunité des adversaires visibles
+
+step: Sans dresseur, il est gravement blessé et une issue est accessible
+  do: Rompre le combat par une retraite vers l'obscurité, jusqu'à 18 m, puis continuer à s'éloigner
+
+step: La fuite est bloquée
+  do: Repousser l'obstacle vivant par Coup fabuleux ou bousculade, puis gagner le passage avec son déplacement disponible

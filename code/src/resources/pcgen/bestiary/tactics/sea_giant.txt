@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Géant des mers de taille G, chaotique neutre, intelligent et amphibie ; 142 pv, CA 23. Il défend son domaine depuis l'eau et peut combattre aussi bien immergé qu'à la surface.
+  Deux coups +20 (1d8+10 chacun) en attaque à outrance ; allonge de 3 m. Rocher +13 (1d8+15), facteur de portée de 36 m.
+  Déplacement terrestre de 12 m, nage de 9 m ; vision dans le noir à 18 m, vision nocturne et Perception +19.
+
+resource: Liberté de mouvement | constant | lui permet de combattre et de se déplacer normalement sous l'eau, et de résister aux entraves couvertes par ce pouvoir
+resource: Contrôle de l'eau | 5/jour | NLS 15 ; préparer le terrain aquatique et gêner les embarcations
+
+step: Des intrus approchent de son domaine
+  do: Les observer depuis l'eau et choisir un point d'interception proche des profondeurs
+  note: Prévoir des rochers disponibles s'il compte combattre à distance ; il ne les crée pas.
+
+step: Il prépare une attaque contre un navire
+  do: Employer contrôle de l'eau pour perturber les eaux autour de la coque et masquer son approche immergée
+  note: Sa tactique décrite consiste à frapper la coque depuis l'eau, puis à élargir la brèche.
+
+## Ouverture
+
+step: Des tireurs ou des servants d'engins de siège sont exposés à la surface
+  do: Lancer un rocher sur la menace à distance la plus dangereuse
+  note: Privilégier les cibles dans le premier facteur de portée de 36 m ; rejoindre l'abri de l'eau si les tirs deviennent trop nourris.
+
+step: Il atteint une coque sans avoir été repéré
+  do: Frapper la coque avec ses coups pour ouvrir une brèche
+  note: Rester immergé ; sa liberté de mouvement lui permet de frapper normalement sous l'eau.
+
+step: Un adversaire est déjà à portée de 3 m
+  do: Faire une attaque à outrance avec ses deux coups +20 (1d8+10 chacun)
+
+step: Il doit se déplacer pour atteindre un adversaire
+  do: Avancer ou nager jusqu'à portée, puis porter un seul coup +20 (1d8+10)
+
+## Rounds suivants
+
+step: Plusieurs adversaires vivants l'entourent sous l'eau
+  do: Activer sa pression écrasante pour exploiter leur proximité
+  note: Ce pouvoir sert au combat immergé ; reprendre les coups aux rounds suivants.
+
+step: Un adversaire reste à portée
+  do: Concentrer ses deux coups sur la même cible pour l'abattre rapidement
+  note: Employer Attaque en puissance contre une cible facile à toucher ; conserver sa précision contre une défense élevée.
+
+step: Deux adversaires sont adjacents entre eux et tous deux à portée
+  do: Envisager Enchaînement pour frapper le second si le premier coup touche
+  note: Cette action remplace l'attaque à outrance et réduit sa CA de 2 jusqu'à son prochain tour ; préférer les deux coups contre une cible prioritaire.
+
+step: Les ennemis refusent d'entrer dans l'eau
+  do: Continuer les jets de rochers depuis la surface ou poursuivre la destruction de leur embarcation
+  note: Utiliser contrôle de l'eau si une modification du niveau peut gêner leur navigation ou leur accès à la berge.
+
+step: Un rocher le prend pour cible et il dispose des mains nécessaires
+  do: Tenter de le réceptionner avec réception de rochers
+
+## Repli
+
+step: Ses points de vie passent sous 40 et aucun adversaire ne peut être rapidement neutralisé
+  do: Se désengager vers les profondeurs, puis nager à 9 m par déplacement
+  note: Si une menace contrôle encore son départ, consacrer son tour au désengagement ; utiliser ensuite le relief sous-marin pour rompre la ligne de vue.
+
+step: Une embarcation poursuit sa fuite et il lui reste contrôle de l'eau
+  do: Modifier le niveau de l'eau pour gêner sa progression, puis poursuivre la retraite immergée

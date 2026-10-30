@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Osirionologue, humain neutre, barde archéologue de niveau 8 : un érudit de l'Osirion antique qui privilégie ses recherches et sa survie. Seul, il gêne l'adversaire avant de combattre ; en expédition, il renforce ses compagnons.
+  71 PV, CA 19, déplacement de 9 m. Rapière +1 : +11/+6, 1d6+2, critique 18–20 ; arc court composite de maître : +10/+5, 1d6+1, critique x3 ; fouet de maître : +10/+5, 1d3+1 non létaux.
+  Esquive totale et esquive instinctive l'aident à survivre aux embuscades et aux pièges ; elles ne justifient pas de rester encerclé.
+
+resource: Sorts de niveau 3 | 3/jour au total | réserve commune à espoir, rapidité et dissipation de la magie ; NLS 8
+resource: Sorts de niveau 2 | 5/jour au total | réserve commune à poussière scintillante, soins modérés, localisation d'objet et main chapardeuse
+resource: Sorts de niveau 1 | 5/jour au total | réserve commune notamment à graisse et charme-personne ; DD 14 pour ces deux sorts
+resource: Flèches | 20 | arc court composite de maître
+resource: Élixir de souffle enflammé | 1 fiole | après ingestion, jusqu'à 3 souffles sur une cible à 7,50 m maximum ; 4d6 de feu, Réflexes DD 13 pour moitié ; souffles inutilisés perdus après 1 heure
+
+step: Il peut reconnaître les lieux avant l'affrontement
+  do: Examiner les passages avec Perception +14 et préparer une retraite par un itinéraire dégagé ; désamorcer les pièges qui bloquent cet itinéraire avec Désamorçage +15
+  note: Il exploite les couverts et les passages étroits disponibles, sans disposer de pièges à poser.
+
+step: Le combat est probable dans les prochaines minutes
+  do: Lancer espoir sur lui-même et ses compagnons présents
+  note: Pendant 8 minutes, bonus de moral de +2 aux attaques, dégâts d'armes, sauvegardes, tests de compétence et de caractéristique ; dépenser une utilisation de niveau 3.
+
+step: Un affrontement dangereux est imminent et il dispose encore d'un moment
+  do: Boire l'élixir de souffle enflammé avant l'engagement
+  note: Garder les potions de soins importants et d'invisibilité accessibles pour le repli.
+
+## Ouverture
+
+step: Ses compagnons peuvent attaquer et aucun ennemi ne l'oblige à se dégager immédiatement
+  do: Lancer rapidité sur lui-même et les compagnons à portée, puis gagner un couvert avec son déplacement
+  note: Durée de 8 rounds ; déplacement porté à 18 m, +1 aux attaques, à la CA et aux Réflexes, une attaque supplémentaire au meilleur bonus lors d'une attaque à outrance. Ce sort consomme la même réserve qu'espoir.
+
+step: Plusieurs adversaires sont regroupés et les aveugler serait plus urgent que renforcer l'expédition
+  do: Lancer poussière scintillante sur eux, en épargnant ses alliés
+  note: Rayon de 3 m, portée de 54 m ; Volonté DD 15 contre l'aveuglement, nouvelle sauvegarde à la fin de chaque tour des victimes. La poussière révèle aussi les silhouettes invisibles ; durée de 8 rounds.
+
+step: Un adversaire menace de le rejoindre par un passage étroit
+  do: Lancer graisse sur un carré de sol de 3 m de côté entre eux, à 13,50 m maximum, puis reculer
+  note: Réflexes DD 14 pour éviter la chute ; conserver un passage sûr pour ses compagnons et sa propre fuite.
+
+## Rounds suivants
+
+note: Choix du round
+  Choisir l'action adaptée à la menace ; lancer un sort, souffler du feu et attaquer sont des options concurrentes. Une attaque à outrance demande de rester sur place, hormis un pas de 1,50 m.
+
+step: Les ennemis restent à distance et aucun sort de contrôle n'est nécessaire
+  do: Tirer à l'arc depuis un couvert ; effectuer deux tirs +10/+5 s'il peut attaquer à outrance, ou un tir +10 après un déplacement
+  note: Avec espoir et rapidité actifs, l'attaque à outrance devient +13/+13/+8, pour 1d6+3 par flèche.
+
+step: Un ennemi isolé arrive au contact et le combat reste favorable
+  do: Employer la rapière ; rechercher une prise en tenaille avec un compagnon disponible
+  note: Attaque à outrance +11/+6, 1d6+2 ; avec espoir et rapidité, +14/+14/+9, 1d6+4, avant les éventuels bonus de tenaille. S'il doit se déplacer, il ne porte qu'une attaque.
+
+step: Un adversaire vulnérable au feu se trouve à 7,50 m ou moins et l'élixir a été bu
+  do: Dépenser un souffle pour lui infliger 4d6 de feu, Réflexes DD 13 pour moitié
+  note: Le souffle touche une seule cible ; il ne balaie pas un groupe et ne demande pas de jet d'attaque.
+
+step: Un effet magique ennemi compromet le combat et il reste une utilisation de niveau 3
+  do: Tenter une dissipation de la magie ciblée sur cet effet
+  note: Test de dissipation à +8 ; après espoir et rapidité, il ne reste normalement qu'une utilisation de cette réserve.
+
+step: Un ennemi dangereux échappe au contrôle initial
+  do: Employer poussière scintillante s'il peut être aveuglé, ou graisse pour gêner son approche
+  note: Préserver au moins une utilisation de niveau 2 pour des soins si l'affrontement se prolonge.
+
+step: Ses PV tombent entre 25 et 35 et il peut se soigner sans s'exposer
+  do: Lancer soins modérés sur lui-même pour récupérer 2d8+8 PV
+  note: Chercher d'abord un couvert ou la protection d'un compagnon ; s'il doit lancer sur la défensive, Magie de guerre porte sa concentration à +15.
+
+## Repli
+
+resource: Potion d'invisibilité | 1 | la réserver à la fuite ; une attaque rompt l'invisibilité
+resource: Potion de soins importants | 1 | se soigner une fois à couvert, sans dépenser les sorts restants
+
+step: PV à 24 ou moins, ou expédition débordée
+  do: Rompre l'engagement par une retraite vers l'itinéraire préparé, jusqu'à 18 m, ou 36 m si rapidité est encore active
+  note: La retraite protège seulement la sortie de la case de départ contre les attaques d'opportunité ; éviter de traverser d'autres zones menacées.
+
+step: Il dispose d'un moment à l'abri des attaques immédiates et reste poursuivi
+  do: Sortir et boire sa potion d'invisibilité ; reprendre la fuite au round suivant sans attaquer
+  note: Utiliser les angles et les couverts pour brouiller sa direction ; l'invisibilité ne supprime ni les bruits ni les traces.
+
+step: Il a obtenu un répit mais reste blessé
+  do: Boire la potion de soins importants, puis poursuivre sa retraite
+  note: Il peut négocier si une issue pacifique préserve sa vie et ses recherches ; il ne sacrifie pas sa survie aux intérêts de ses alliés.

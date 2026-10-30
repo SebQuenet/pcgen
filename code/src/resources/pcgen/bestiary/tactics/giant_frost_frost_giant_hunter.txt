@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Géant du froid chasseur, humanoïde de taille G, chaotique mauvais, des montagnes froides. FP 11 ; 170 points de vie ; CA 27, contact 12, pris au dépourvu 25.
+  Lance +1 au corps à corps ; rocher +13 à distance (1d8+16,5). Déplacement de 12 m ; vision nocturne ; immunité au froid.
+  Vigueur +18 ; Réflexes +9 ; Volonté +9. Sa force et sa résistance favorisent un affrontement physique prolongé.
+
+step: Des rochers offrent un couvert et une vue sur les approches
+  do: Choisir une position permettant de lancer des pierres et de rejoindre les ennemis ; repérer un passage de repli derrière les obstacles
+  note: Garder des rochers accessibles pour utiliser son attaque à distance
+
+## Ouverture
+
+step: Aucun ennemi n'est à portée de lance
+  do: Lancer un rocher sur une cible visible et peu protégée, à +13, pour 1d8+16,5 dégâts
+  note: Profiter du couvert disponible pendant que les adversaires approchent
+
+step: Un ennemi est déjà à portée de lance
+  do: Attaquer à outrance avec la lance +1
+
+## Rounds suivants
+
+step: Un adversaire reste à portée de lance au début de son tour
+  do: Attaquer à outrance avec la lance +1 ; concentrer les coups sur le même adversaire jusqu'à le mettre hors de combat
+  note: Éviter les déplacements inutiles qui empêcheraient l'attaque à outrance
+
+step: Un adversaire peut être atteint après un déplacement de 12 m au plus
+  do: Avancer jusqu'à pouvoir le frapper, puis porter une attaque avec la lance +1
+  note: Privilégier une cible isolée pour limiter le nombre d'ennemis pouvant l'encercler
+
+step: Les adversaires restent trop loin pour être frappés après un déplacement
+  do: Continuer les jets de rochers contre une cible exposée ; changer de position si les ennemis se mettent à couvert
+
+step: Un adversaire utilise des attaques qui infligent uniquement des dégâts de froid
+  do: Exploiter son immunité pour concentrer ses attaques sur les ennemis capables de le blesser
+  note: L'immunité au froid ne protège pas des autres dégâts ni des effets supplémentaires d'une attaque
+
+## Repli
+
+step: Points de vie sous 40 et une voie de fuite reste accessible
+  do: Se retirer derrière les reliefs rocheux ; utiliser le désengagement s'il est menacé au corps à corps
+  note: Sa vitesse de déplacement est de 12 m ; utiliser les obstacles pour couper les lignes de tir des poursuivants
+
+step: La fuite est impossible
+  do: Combattre avec la lance +1 et concentrer les attaques sur l'adversaire qui bloque le passage

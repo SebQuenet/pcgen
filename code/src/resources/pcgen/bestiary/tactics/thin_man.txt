@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Thin Man, fée de taille M, chaotique neutre, des plaines chaudes de Nuat. Prédateur discret, il guette les proies isolées dans les champs de canne et se réfugie dans ses étroits terriers.
+  38 pv, CA 17, initiative +7 ; immunité au poison. Deux griffes +8 (1d4+4 et 1d4 de saignement), allonge 3 m ; morsure +7 (1d6+4), allonge 1,50 m.
+  Déplacement terrestre 9 m, creusement 6 m ; compression pour franchir les passages étroits.
+
+resource: Disparition (Vanish) | 1/jour | action de mouvement, uniquement s'il bénéficie déjà d'un camouflage ; durée 7 rounds ; Discrétion +20 et possibilité de se cacher à la vue de tous sans abri, camouflage ni ombre ; toute attaque met fin à l'effet
+
+step: Il peut choisir le lieu de l'embuscade
+  do: Se cacher dans les cannes près d'un accès à ses terriers et laisser une cible s'éloigner de ses compagnons
+  note: Discrétion +25 dans les champs de canne, +13 ailleurs ; Perception +10 et vision nocturne pour surveiller l'approche.
+
+## Ouverture
+
+step: Une cible isolée est accessible après un déplacement
+  do: Approcher jusqu'à 3 m et porter une seule attaque de griffe +8 (1d4+4 et 1d4 de saignement)
+  note: Après un déplacement ordinaire, il ne dispose pas d'une attaque à outrance. Garder Disparition pour la fuite.
+
+step: Il commence son tour avec une cible à 1,50 m, sans devoir se déplacer
+  do: Attaque à outrance : deux griffes +8 (1d4+4 et 1d4 de saignement chacune) et morsure +7 (1d6+4)
+
+## Rounds suivants
+
+step: La cible reste à 3 m et il peut rester sur place
+  do: Attaque à outrance avec les deux griffes +8
+  note: La morsure n'atteint pas cette distance. Les saignements identiques ne s'additionnent pas : conserver 1d4 par round pour cette victime.
+
+step: La cible est à 1,50 m et le combat reste favorable
+  do: Répéter les deux griffes et la morsure en attaque à outrance
+
+step: Des renforts arrivent ou plusieurs ennemis cherchent à l'entourer
+  do: Rompre le contact et rejoindre les cannes ou un terrier ; laisser le saignement affaiblir la victime
+  note: Privilégier les passages étroits grâce à compression ; ne reprendre l'attaque que si une proie se retrouve isolée.
+
+## Repli
+
+step: Points de vie à 12 ou moins, ou combat devenu trop dangereux
+  do: Gagner un camouflage, puis activer Disparition dès qu'une action de mouvement le permet et fuir vers les terriers
+  note: Sous Disparition, Discrétion +33, ou +45 dans les champs de canne. Ne plus attaquer pour conserver l'effet pendant ses 7 rounds.
+
+step: Disparition est déjà utilisée ou aucun camouflage n'est accessible
+  do: Se retirer vers un sol meuble et creuser à une vitesse de 6 m pour échapper aux poursuivants
+  note: Utiliser les galeries étroites et compression ; le creusement ne permet pas de traverser la roche.

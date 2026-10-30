@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Panda, animal neutre de taille M des jungles tempérées ou chaudes, solitaire ou en couple. FP 2 ; 19 pv ; CA 13.
+  Morsure +5 (1d6+6) et 2 griffes +5 (1d3+3 chacune) ; allonge de 1,50 m ; déplacement de 9 m.
+  Sa morsure puissante est son attaque la plus dangereuse ; ses dégâts sont déjà compris dans les valeurs indiquées.
+
+step: Une présence approche
+  do: Repérer la menace avec Perception +7 avant de réagir
+  note: sa vision nocturne l'aide dans la pénombre ; elle ne lui permet pas de voir dans l'obscurité totale
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Faire une attaque à outrance : morsure +5 (1d6+6) et 2 griffes +5 (1d3+3 chacune)
+
+step: Un adversaire peut être atteint après un déplacement de 9 m ou moins
+  do: Avancer jusqu'au contact et porter une morsure +5 (1d6+6)
+  note: après ce déplacement, il ne porte qu'une attaque ; privilégier la morsure pour ses dégâts
+
+step: Aucun adversaire ne peut être atteint après un seul déplacement
+  do: Se rapprocher, jusqu'à 18 m avec deux actions de déplacement, si le combat est inévitable
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance avec la morsure et les deux griffes
+  note: concentrer les attaques sur l'adversaire qui le menace directement
+
+step: Un pas de placement de 1,50 m suffit pour atteindre un adversaire
+  do: Faire ce pas puis une attaque à outrance
+  note: ce pas exige un terrain qui le permet ; il remplace tout autre déplacement du round
+
+step: Un adversaire s'éloigne davantage
+  do: Avancer jusqu'à 9 m et mordre s'il revient à portée
+  note: il ne possède aucune attaque à distance
+
+## Repli
+
+step: Points de vie sous 7 et une voie de fuite est libre
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 18 m vers un abri
+  note: ce seuil est un repère de conduite pour le meneur ; il ne déclenche aucune capacité particulière
+
+step: La fuite exige de franchir un obstacle à escalader
+  do: Tenter l'escalade avec Escalade +11 si cet obstacle offre une issue
+  note: il n'a pas de vitesse d'escalade ; ne pas lui accorder ses 9 m de déplacement terrestre en grimpant
+
+step: Il est acculé sans issue
+  do: Mordre et griffer l'adversaire au contact jusqu'à pouvoir s'échapper

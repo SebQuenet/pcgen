@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Taer, humanoïde monstrueux des montagnes froides, de taille M et d'alignement neutre ; 25 PV, CA 17, déplacement de 15 m par round.
+  Au contact à 1,50 m : deux coups +6 (1d4+3 chacun) et une morsure +6 (1d4+3). À distance : épieu +5 (1d6+3).
+  Puanteur dans un rayon de 3 m ; immunité au froid, vulnérabilité au feu.
+
+resource: Épieux | 2 | un épieu dépensé par lancer
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +9, l'odorat et la vision dans le noir à 18 m ; se dissimuler derrière les reliefs avec Discrétion +6.
+  note: Escalade +8 permet d'emprunter des passages rocheux ; il ne possède pas de vitesse d'escalade.
+
+## Ouverture
+
+step: Une cible peut être atteinte avec un déplacement de 15 m au maximum
+  do: Avancer au contact et porter un seul coup +6 (1d4+3).
+  note: Après ce déplacement, il ne peut pas effectuer ses trois attaques.
+
+step: La cible reste hors de portée de mêlée
+  do: Avancer à couvert et lancer un épieu +5 (1d6+3) si la ligne de tir le permet.
+  note: Conserver l'autre épieu si le tir est trop difficile ; rechercher le contact pour exploiter ses trois attaques.
+
+step: Une créature se trouve à 3 m ou moins
+  do: Appliquer la puanteur : Vigueur DD 13 ou état fiévreux pendant 10 rounds.
+  note: L'aura émane de son corps et ne demande aucune action ; elle ne distingue pas les ennemis des alliés.
+
+## Rounds suivants
+
+step: Un adversaire est déjà à portée et aucun déplacement important n'est nécessaire
+  do: Effectuer une attaque à outrance : deux coups +6 et une morsure +6, chacun infligeant 1d4+3 dégâts.
+  note: Concentrer les trois attaques sur une même cible, de préférence déjà fiévreuse ou blessée.
+
+step: La cible s'écarte
+  do: Si un pas de 1,50 m suffit, le faire puis attaquer à outrance ; sinon, se déplacer pour la rejoindre et ne porter qu'un seul coup +6 (1d4+3).
+
+step: Des adversaires restent à distance
+  do: Utiliser les reliefs pour approcher ; lancer le dernier épieu si le contact reste impossible et qu'une cible est exposée.
+
+step: Un adversaire emploie le feu
+  do: Quitter sa ligne de tir en utilisant les rochers et chercher une cible moins dangereuse à portée.
+  note: Son immunité au froid ne protège pas du feu, auquel il est vulnérable.
+
+## Repli
+
+step: Points de vie sous 8, ou attaques de feu répétées sans possibilité de riposte
+  do: Utiliser l'action de retraite pour rompre le contact, puis fuir derrière les reliefs à la première occasion.
+  note: Privilégier un passage rocheux où Escalade +8 peut compliquer la poursuite ; tenir compte du risque d'échec avant de grimper.

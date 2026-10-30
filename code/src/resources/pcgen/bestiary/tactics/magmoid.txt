@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Magmoid, extérieur de terre et de feu de taille G, solitaire et peu intelligent : 75 pv, CA 22, déplacement de 12 m et vision aveugle à 18 m.
+  Coup +11 (2d6+2 et 2d6 de feu), avec une allonge de 0 m ; jet de magma en ligne de 12 m ; aura ardente à 3 m (1d6 de feu, Vigueur DD 17 pour résister).
+  Réduction des dégâts 10/perforant, immunité au feu et traits élémentaires ; vulnérabilité au froid. Dispose aussi de combustion et de fonte des armes (Vigueur DD 17).
+  Comprend l'ignan et le terreux, mais ne peut pas parler ; privilégier une conduite simple, fondée sur la proximité des ennemis.
+
+resource: Jet de magma | Réutilisable tous les 1d4 rounds | Ligne de 12 m, 2d6 de feu ; Réflexes DD 17 pour moitié.
+
+step: Des intrus sont repérés
+  do: Se rapprocher pour les placer dans son aura, en utilisant sa vision aveugle à 18 m pour les localiser
+  note: Perception +14 ; la vision aveugle ne permet pas de voir à travers les obstacles solides
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans une ligne de 12 m
+  do: Se déplacer si nécessaire, puis projeter le jet de magma sur cette ligne
+  note: Infliger 2d6 de feu, Réflexes DD 17 pour moitié ; lancer 1d4 pour déterminer le délai avant la prochaine utilisation
+
+step: Aucune ligne avantageuse et une cible est accessible avec un déplacement de 12 m
+  do: Entrer dans l'espace de la cible et porter un coup +11, pour 2d6+2 et 2d6 de feu
+  note: Avec son allonge de 0 m, il doit entrer dans l'espace adverse pour frapper ; cette entrée peut provoquer une attaque d'opportunité
+
+## Rounds suivants
+
+step: Des adversaires se trouvent à 3 m ou moins
+  do: Appliquer l'aura ardente : 1d6 de feu, Vigueur DD 17 pour résister
+  note: Chercher à garder plusieurs ennemis dans ce rayon ; l'aura accompagne ses autres attaques
+
+step: Le jet de magma est disponible et plusieurs ennemis sont alignés
+  do: Réutiliser le jet de magma, puis déterminer à nouveau sa recharge avec 1d4
+
+step: Le jet de magma se recharge ou aucune ligne intéressante ne se présente
+  do: Frapper la cible dans son espace avec son coup +11, pour 2d6+2 et 2d6 de feu
+  note: Combustion et fonte des armes restent à prendre en compte ; le bloc ne précise pas leurs modalités complètes
+
+step: Sa cible s'éloigne
+  do: La poursuivre à 12 m par déplacement pour rétablir la proximité nécessaire à ses attaques
+  note: Privilégier une cible proche et vulnérable au feu ; éviter de disperser ses déplacements entre plusieurs ennemis
+
+## Repli
+
+step: Points de vie sous 20 ou attaques de froid répétées
+  do: S'éloigner à 12 m par déplacement et chercher un obstacle qui coupe les attaques à distance
+  note: S'il existe un passage enflammé praticable, l'emprunter grâce à son immunité au feu

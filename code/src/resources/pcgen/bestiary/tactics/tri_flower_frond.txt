@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Tri-flower Frond, plante de taille M des forêts chaudes, sans intelligence et immobile ; 13 pv, CA 13, allonge de 1,50 m.
+  Attaque à outrance : 4 vrilles +3, chacune infligeant 1d2+2 dégâts et exposant au pollen soporifique, Vigueur DD 13.
+  Sa fleur jaune sécrète un acide digestif ; sa fleur rouge draine la Constitution des proies endormies ou sans défense.
+  Vision aveugle à 9 m, vision nocturne et immunités des plantes. Elle réagit instinctivement aux proies à sa portée.
+
+step: La plante est inactive
+  do: Rester dissimulée parmi la végétation et attendre qu'une proie entre dans son allonge de 1,50 m
+  note: Son camouflage exige un test de Perception DD 20 pour l'identifier avant le combat ; Survie ou Connaissances (nature) peuvent remplacer Perception.
+
+## Ouverture
+
+step: Un adversaire éveillé entre à portée
+  do: Effectuer une attaque à outrance avec les 4 vrilles +3, chacune pour 1d2+2 dégâts et pollen soporifique
+  note: Chaque vrille qui touche impose Vigueur DD 13 ; un échec plonge la victime dans un sommeil profond, semblable à un coma, pendant 1d4 heures. Les immunités au poison s'appliquent, celles aux effets de sommeil ne s'appliquent pas.
+
+step: Aucun adversaire n'est à 1,50 m ou moins
+  do: Rester sur place et attendre une cible à portée
+  note: Sa vitesse de déplacement est nulle ; sa vision aveugle à 9 m ne lui permet pas d'attaquer à cette distance.
+
+## Rounds suivants
+
+step: Une proie endormie est à portée et n'est pas encore couverte de sève acide
+  do: Incliner la fleur jaune sur elle pour l'arroser de sève digestive
+  note: La chair exposée subit 1d6 dégâts d'acide par round jusqu'à ce que la sève soit retirée.
+
+step: Une proie endormie est déjà couverte de sève, ou une autre proie sans défense est à portée
+  do: Percer la victime avec la vrille acérée de la fleur rouge et drainer ses fluides
+  note: Le drainage inflige 1d4 dégâts de Constitution par round et la victime devient agrippée.
+
+step: Un adversaire à portée est à terre mais reste éveillé et capable d'agir
+  do: L'arroser de sève avec la fleur jaune s'il n'en est pas déjà couvert
+  note: L'acide fonctionne aussi sur les cibles à terre ; le drainage exige une cible endormie ou sans défense.
+
+step: Aucune proie endormie ou sans défense n'est à portée, mais une cible éveillée est debout ou déjà couverte de sève
+  do: Répéter l'attaque à outrance des 4 vrilles pour provoquer le sommeil
+
+note: Réveil des victimes
+  Un test de Premiers secours DD 20 après une minute permet de réveiller une victime avant la fin du sommeil.
+
+## Repli
+
+step: La plante est blessée ou ses proies quittent son allonge
+  do: Rester sur place ; continuer à attaquer les cibles à portée, sinon attendre
+  note: Elle ne peut ni fuir ni poursuivre : sa vitesse de déplacement est nulle, même à quelques points de vie.

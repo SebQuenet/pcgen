@@ -1,0 +1,114 @@
+## Avant le combat
+
+note: Profil
+  L'Oinodaemon, extérieur daemon de taille G, neutre mauvais, est un souverain calculateur qui combine magie divine, renforts et domination du terrain avant d'écraser les survivants.
+  857 PV ; CA 60, contact 40 ; initiative +16 ; déplacement de 12 m ; espace et allonge de 3 m. Attaque à outrance : 2 coups +61, chacun à 2d6+12, critique 19–20, plus maladie.
+  Ses armes décisives sont son regard immobilisant, blasphème, implosion, absorption d'énergie et ses murs. Sorts et pouvoirs magiques au NLS 37.
+  RD 25/Bien, RM 48 ; immunité à l'acide, aux effets de mort, aux maladies et au poison ; résistance 10 au froid, à l'électricité et au feu. Sa Volonté de +20 reste son jet de sauvegarde le plus vulnérable.
+
+resource: Convocation de daemons | 3/jour | réussite 100 % ; daemons non uniques, total maximal de 49 DV par utilisation
+resource: Dissipation suprême, téléportation suprême, changement de forme | à volonté | NLS 37 ; téléportation limitée à lui-même et 50 livres d'objets
+resource: Mur de force, mur de feu, mur de glace | 3/jour chacun | mur de glace DD 24 ; NLS 37
+resource: Mur de feu rapide, mur de glace rapide | 3/jour chacun | action rapide ; consomme aussi une utilisation du pouvoir correspondant
+resource: Débilité, suggestion de groupe | 3/jour chacun | Volonté DD 25 et DD 26 respectivement
+resource: Aura destructrice | 37 rounds/jour | rayon de 9 m ; bonus de moral de +18 aux dégâts des attaques contre les créatures dans l'aura, Oinodaemon compris ; menaces de critique automatiquement confirmées
+resource: Châtiment destructeur | 12/jour | +18 aux dégâts d'une attaque de mêlée, annoncé avant l'attaque ; ne se cumule pas avec le bonus de moral de l'aura
+resource: Toucher hémorragique, toucher du Mal | 12/jour chacun | attaques de contact ; durée de 18 rounds
+resource: Faux du Mal | 8/jour | renforcement d'une arme touchée pendant 18 rounds
+resource: Annulation, globe d'invulnérabilité partielle | 1/jour chacun | annulation par attaque de contact, comme un sceptre d'annulation
+resource: Blasphème | 2 préparés | Volonté DD 26 ; rayon de 12 m ; effets selon les DV et l'alignement
+resource: Absorption d'énergie | 3 préparés | rayon de contact à distance ; 2d4 niveaux négatifs ; Vigueur DD 28 après 24 heures pour chaque niveau
+resource: Implosion | 1 préparé | Vigueur DD 28 ; concentration, au maximum 18 rounds ; une cible différente par round
+resource: Barrière de lames | 2 préparées | Réflexes DD 25
+resource: Mise à mal, désintégration | 1 préparé chacun | Vigueur DD 25 et DD 26 respectivement
+resource: Blessure critique de groupe, blessure grave de groupe | 2 préparées chacune | Volonté DD 27 et DD 26 respectivement
+resource: Aura maudite, protection contre la mort, puissance divine | 1 préparé chacun | protections et renforcement à lancer avant l'engagement
+resource: Ancre dimensionnelle, rappel, sanctuaire | 1 préparé chacun | préserver rappel pour la fuite ; sanctuaire Volonté DD 20
+
+step: Des intrus approchent
+  do: Les observer avec Perception +61, détection de la magie, détection du Bien, détection des pensées et vision de l'invisible ; identifier les lanceurs de sorts et les porteurs d'armes du Bien.
+  note: Vision dans le noir à 18 m ; détection des pensées DD 22. La télépathie à 30 m permet de coordonner les serviteurs sans parler.
+
+step: Il dispose d'un délai avant l'affrontement
+  do: Convoquer des daemons pour un total maximal de 49 DV ; placer ces renforts et les éventuels 2 à 8 cacodaemons entre les intrus et lui.
+  do: Lancer protection contre la mort, puis aura maudite et puissance divine lorsque le combat devient imminent, à raison d'un sort par round.
+  note: Protection contre la mort dure 37 minutes ; les deux autres sorts durent 37 rounds. Appliquer les bonus des sorts actifs aux valeurs de base du profil.
+
+step: Le lieu de combat est choisi à l'avance
+  do: Prévoir des passages étroits où un mur séparera l'avant-garde de ses soutiens ; choisir le sanctuaire de destination de rappel.
+  note: Éviter de verrouiller sa propre retraite avec zone d'antimagie ou interdiction.
+
+## Ouverture
+
+step: Plusieurs adversaires non mauvais se trouvent à 12 m ou moins
+  do: Lancer blasphème en priorité, puis dresser un mur de glace rapide pour couper les renforts si une utilisation reste disponible.
+  note: À NLS 37, les cibles de 27 DV ou moins risquent la mort ; celles de 32 DV ou moins la paralysie. Volonté DD 26 atténue les effets ; les créatures de plus de 37 DV échappent au sort.
+
+step: Les ennemis restent dispersés ou hors de portée de blasphème
+  do: Ériger un mur de force entre le combattant de tête et les soigneurs ou lanceurs de sorts ; laisser les daemons retenir les adversaires accessibles.
+  note: Garder une ouverture et une ligne d'effet vers la cible choisie. Un mur de force coupe aussi ses propres attaques et sorts dirigés à travers lui.
+
+step: Les protections magiques adverses neutralisent ses attaques principales
+  do: Employer dissipation suprême sur la cible prioritaire avant de dépenser absorption d'énergie ou mise à mal.
+  note: Viser particulièrement protection contre la mort et les défenses qui empêchent ses renforts d'atteindre la cible.
+
+## Rounds suivants
+
+step: Des créatures vivantes le voient à 9 m ou moins
+  do: Exploiter le regard immobilisant tout en poursuivant ses autres actions ; rester à 9 m ou moins des victimes qu'il veut maintenir prisonnières.
+  note: Volonté DD 46 ou immobilisation ; à partir de 24 DV, nouveau jet chaque round. En dessous, seuls sa libération volontaire, souhait ou miracle rompent l'effet tant qu'il reste à portée et en vie. Aucun maintien par concentration.
+
+step: Un lanceur de sorts profane demeure dangereux
+  do: Tenter débilité, Volonté DD 25 ; si ses protections l'arrêtent, revenir à dissipation suprême ou l'isoler avec un mur.
+
+step: Une cible vivante est accessible et dépourvue de protection contre l'énergie négative
+  do: Lancer absorption d'énergie, puis exploiter les niveaux négatifs pour faciliter les attaques suivantes.
+  note: L'atteinte exige un rayon de contact à distance et reste soumise à la RM ; aucun jet immédiat n'annule les niveaux négatifs. Le DD 28 concerne leur persistance après 24 heures.
+
+step: Plusieurs cibles corporelles restent exposées et ses serviteurs peuvent le protéger
+  do: Lancer implosion sur l'adversaire à la Vigueur la plus faible, puis consacrer son action simple de chaque round à la concentration sur une nouvelle cible.
+  note: Portée de 34,50 m ; 370 dégâts, Vigueur DD 28 annule, RM applicable. Chaque créature ne peut être ciblée qu'une fois par lancement. Interrompre la concentration pour agir autrement met fin au sort.
+
+step: Un adversaire isolé arrive à 3 m ou moins
+  do: Effectuer l'attaque à outrance avec ses deux coups +61, 2d6+12 chacun et maladie ; concentrer les coups sur la même cible.
+  note: Si puissance divine est active, appliquer son bonus de chance de +6 aux attaques et aux dégâts et ajouter une attaque au bonus maximal lors de l'attaque à outrance.
+  note: La peste daémoniaque demande Vigueur DD 47 ; incubation d'un jour. Elle punit les survivants, sans affaiblissement immédiat à attendre pendant ce combat.
+
+step: Il doit se déplacer avant de frapper
+  do: Avancer de 12 m au maximum puis porter un seul coup avec Science de la frappe décisive : +61, 6d6+12 et maladie, avant les modificateurs actifs.
+  note: Réserver cette option à l'attaque simple ; elle ne multiplie pas les dégâts des deux coups d'une attaque à outrance.
+
+step: Les serviteurs attaquent davantage que les ennemis dans un rayon de 9 m
+  do: Activer l'aura destructrice pour accélérer l'élimination des cibles encerclées.
+  note: Le bonus et les critiques confirmés profitent aussi aux attaques adverses contre lui et ses alliés dans l'aura. La suspendre si les armes du Bien commencent à le déborder ; employer alors châtiment destructeur sur un coup prioritaire.
+
+step: Un combattant fragile au contact doit être neutralisé immédiatement
+  do: Préférer mise à mal, Vigueur DD 25, ou toucher du Mal avant la salve suivante de ses alliés.
+  note: Toucher du Mal rend la victime fiévreuse pendant 18 rounds et lui donne un alignement bon pour les sorts du registre du Mal ; cette préparation peut rendre blasphème pertinent contre une cible mauvaise.
+
+step: Des ennemis franchissent son allonge ou lancent des sorts sans précaution au contact
+  do: Exploiter les attaques d'opportunité permises par Attaques réflexes, en donnant priorité aux lanceurs de sorts et aux porteurs d'armes du Bien.
+
+step: Plusieurs adversaires blessés restent groupés
+  do: Employer blessure critique de groupe, Volonté DD 27, puis blessure grave de groupe, Volonté DD 26, selon les sorts restants.
+
+step: Les adversaires contournent les murs ou les renforts sont submergés
+  do: Fermer un accès avec barrière de lames, Réflexes DD 25, ou un mur rapide ; utiliser une nouvelle convocation si un round de répit le permet.
+  note: Les utilisations rapides et ordinaires de mur de feu ou de glace partagent les trois utilisations quotidiennes de chaque mur ; une seule action rapide par round.
+
+step: Une cible essentielle tente de s'échapper par téléportation
+  do: L'atteindre avec ancre dimensionnelle par une attaque de contact à distance, puis envoyer les daemons la poursuivre.
+
+## Repli
+
+step: Points de vie sous 215, ou ses défenses ne contiennent plus les attaques adverses
+  do: Quitter l'affrontement par téléportation suprême vers un refuge connu sur le même plan ; utiliser rappel vers le sanctuaire préparé si nécessaire.
+  note: Téléportation suprême emporte seulement l'Oinodaemon et ses objets dans la limite indiquée ; les serviteurs couvrent sa fuite par leurs propres moyens.
+
+step: Un effet empêche son déplacement extradimensionnel
+  do: Tenter dissipation suprême sur l'effet dissipable ; si les ennemis menacent de l'abattre avant sa prochaine action, dresser d'abord un mur de glace rapide.
+  do: Au round suivant, se téléporter dès que l'entrave a disparu ; sinon, se dégager à 12 m par déplacement derrière ses renforts.
+
+step: La magie de fuite reste inutilisable et les poursuites continuent
+  do: Lancer sanctuaire, Volonté DD 20, puis cesser les attaques et chercher un couvert derrière les obstacles ou les serviteurs.
+  note: Son immortalité ne fournit ici ni régénération chiffrée ni guérison à employer pendant le combat ; il se retire avant de miser sa survie sur ce seul pouvoir.

@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Gorgosaurus, animal de taille Très Grande, prédateur des plaines et rivages chauds ; solitaire ou en groupe de 2 à 4. Il combat par instinct et concentre ses efforts sur une proie accessible.
+  105 pv, CA 19 ; déplacement de 12 m, espace occupé et allonge de 4,50 m. Morsure puissante +15 (3d6+14, critique sur 19–20), avec étreinte ; engloutissement (2d6+7 par round).
+
+step: Une proie approche
+  do: La repérer avec Perception +30, l'odorat et la vision nocturne ; s'approcher pour pouvoir la saisir avec la gueule
+  note: la vision nocturne aide dans la pénombre ; elle ne permet pas de voir dans l'obscurité totale
+
+## Ouverture
+
+step: Une proie se trouve à 4,50 m ou moins
+  do: Mordre à +15 (3d6+14) et, si la morsure touche, tenter l'étreinte sur une cible de taille adaptée
+  note: choisir de préférence une proie isolée ou déjà blessée, qu'il pourra engloutir
+
+step: Aucune proie n'est à portée
+  do: Avancer de 12 m au maximum avec une action de déplacement, puis mordre si une cible est désormais à portée
+  note: sans attaque à distance, il doit réduire l'écart pour menacer ses adversaires
+
+## Rounds suivants
+
+step: Il commence son tour avec une proie agrippée dans la gueule
+  do: Tenter un nouveau test de lutte pour engloutir cette proie si sa taille le permet
+  note: une proie engloutie libère sa gueule pour les morsures suivantes
+
+step: Une proie est engloutie
+  do: Appliquer les 2d6+7 dégâts d'engloutissement à chaque round ; utiliser la morsure contre un autre adversaire accessible
+  note: l'intérieur a une CA de 15 et 10 pv pour permettre à la proie de se tailler une issue
+
+step: Aucune proie n'est agrippée et un adversaire reste accessible
+  do: Répéter la morsure et tenter de nouveau l'étreinte ; suivre une proie qui se dégage
+  note: son attaque à outrance ne comporte qu'une morsure ; se déplacer avant de mordre ne lui fait donc perdre aucune attaque
+
+## Repli
+
+step: Points de vie à 26 ou moins et aucune proie maîtrisée
+  do: Abandonner la chasse et s'éloigner des assaillants, à 12 m par action de déplacement
+
+step: Points de vie négatifs, mais encore vivant grâce à Dur à cuire
+  do: Choisir de rester conscient et consacrer son action à se déplacer pour fuir
+  note: Dur à cuire ne le rend pas invulnérable ; avec Constitution 16, il meurt à −16 pv

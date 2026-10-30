@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Shenzuzhou, mort-vivant de taille G, neutre mauvais, FP 12 : un géant décapité au visage déformé sur le torse, brutal et peu intelligent. Il obéit au détenteur de sa tête ; livré à lui-même, il recherche celles de ses victimes.
+  127 pv, CA 27 ; déplacement de 9 m, espace et allonge de 3 m. Deux haches d'armes +1 : +18/+13/+8 et +18/+13, chacune à 2d6+10 dégâts, critique x3.
+  Aura de terreur sur 9 m, DD 22 ; ténèbres à volonté et brume mortelle une fois par jour. Sa force est de multiplier les coups sur une même cible.
+  RD 5/magie, RM 23, résistance à la canalisation +4 et immunités des morts-vivants, notamment au poison. Vision dans le noir à 18 m et perception de la vie.
+
+resource: Ténèbres | à volonté | pouvoir magique, action simple, NLS 8 ; objet touché, rayon de 6 m, durée de 8 minutes
+resource: Brume mortelle | 1/jour | pouvoir magique, action simple, NLS 8 ; portée de 54 m, rayon et hauteur de 6 m, durée de 8 minutes ; Vigueur DD 18, résistance à la magie inapplicable
+
+step: Il peut préparer l'affrontement dans une zone normalement éclairée ou peu éclairée
+  do: Lancer ténèbres sur une de ses haches et attendre les vivants dans la zone assombrie
+  note: Le pouvoir réduit l'éclairage d'un degré ; sa vision dans le noir lui permet d'en profiter. En pleine lumière vive, la zone reste normalement éclairée.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +13 et sa perception de la vie ; choisir une position où ils devront entrer dans son allonge
+  note: Il comprend le géant mais ne peut pas parler ; ses préparatifs restent simples.
+
+## Ouverture
+
+step: Plusieurs ennemis vivants sont regroupés et la brume mortelle est disponible
+  do: Lancer brume mortelle sur eux, puis avancer jusqu'à 9 m vers le bord du nuage
+  note: Il est immunisé à son poison. Les vivants de 7 DV ou plus subissent 1d4 points d'affaiblissement de Constitution par round dans le nuage, réduits de moitié sur Vigueur DD 18.
+  note: Les vivants de 3 DV ou moins meurent sans sauvegarde ; ceux de 4 à 6 DV meurent sur un échec à Vigueur DD 18. Le nuage s'éloigne du point de lancement de 3 m par round et descend dans les creux.
+
+step: La brume serait peu utile et un adversaire est déjà à portée
+  do: Attaquer à outrance avec les deux haches : +18/+13/+8 et +18/+13, pour 2d6+10 dégâts par coup
+  note: Appliquer l'aura de terreur, Volonté DD 22, aux adversaires exposés dans son rayon de 9 m.
+
+step: La brume serait peu utile et aucune cible n'est à portée
+  do: Avancer de 9 m au maximum et donner un seul coup de hache si une cible entre dans son allonge de 3 m
+  note: Faire jouer l'aura de terreur dès que les adversaires y sont exposés.
+
+## Rounds suivants
+
+step: Une cible reste à portée, éventuellement après un pas de placement de 1,50 m
+  do: Concentrer les cinq attaques sur elle, en faisant frapper les deux mains avant de changer de cible
+  note: Si les deux haches touchent le même adversaire dans le round, ajouter 1d10+13 dégâts grâce à Two-Weapon Rend, une seule fois par round.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance pendant l'attaque à outrance
+  note: Hache principale +14/+9/+4, dégâts 2d6+18 ; hache secondaire +14/+9, dégâts 2d6+14. Conserver les valeurs ordinaires contre une forte CA.
+
+step: Il doit se déplacer et plusieurs ennemis sont adjacents les uns aux autres dans son allonge
+  do: Après le déplacement, utiliser Great Cleave pour frapper une chaîne d'adversaires
+  note: Chaque coup réussi autorise un coup contre un autre ennemi adjacent au précédent et à portée ; arrêter au premier échec, une seule attaque par cible. Sa CA passe à 25 jusqu'à son prochain tour.
+
+step: La brume mortelle est encore active
+  do: Attaquer les ennemis près de sa lisière et suivre ceux qui tentent d'en sortir
+  note: Le gaz gêne aussi la vision du shenzuzhou ; sa vision dans le noir ne traverse pas le brouillard. Privilégier les cibles proches plutôt que des coups aveugles à travers le nuage.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Donner un coup de hache
+  note: Une seule attaque d'opportunité par round ; Réflexes surhumains n'en accorde pas davantage.
+
+## Repli
+
+step: Il reçoit l'ordre de tenir sa position ou reste livré à sa chasse aux têtes
+  do: Continuer le combat jusqu'à la destruction, en concentrant ses haches sur la victime la plus proche
+  note: Aucun seuil de fuite obligatoire ; cette conduite privilégie son acharnement et ses consignes.
+
+step: Le détenteur de sa tête lui ordonne de se retirer
+  do: Rompre le combat par une retraite, jusqu'à 18 m si le passage est libre, en gagnant la zone de ténèbres ou en laissant la brume mortelle entre lui et les poursuivants
+  note: La retraite protège seulement la sortie des cases initiales menacées ; les autres cases traversées peuvent encore provoquer des attaques d'opportunité.

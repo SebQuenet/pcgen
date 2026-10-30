@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Robot chirurgien neutre, intelligent, de taille M, FP 14 : une mante métallique obsédée par l'étude des corps, capable de capturer des sujets pour ses expériences.
+  254 pv au total, dont 75 de champ de force ; CA 27, contact 17 ; solidité 10. Déplacement 9 m, vol 18 m avec une bonne manœuvrabilité ; allonge 1,50 m.
+  Au contact : 2 griffes +25 (1d6+6 et étreinte), 4 scalpels +25 (1d6+6, critique 19–20), seringue +25 (1d4+6, critique 19–20 et injection). À distance : laser chirurgical intégré +25 au contact (1d6 de feu, critique 19–20).
+
+resource: Champ de force | 75 pv | Absorbe les dégâts en premier, confère l'immunité aux critiques et récupère 15 pv par round ; à 0 pv, reste inactif pendant 24 heures.
+resource: Injections pharmaceutiques | 10 doses par jour au total | Une attaque de seringue réussie permet d'administrer une dose ; privilégier le zortaphen pour capturer un sujet vivant.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +22, la vision nocturne et la vision dans le noir à 18 m ; choisir un adversaire isolé et une voie de dégagement aérienne.
+  note: Ses optiques supérieures voient les créatures invisibles. Le laser ne blesse cependant pas une créature invisible : prévoir les instruments de mêlée contre elle.
+
+note: Limites médicales
+  Premiers secours +27 et maître chirurgien servent aux interventions prolongées ; même une opération mineure prend 5 minutes. Ne pas les traiter comme des soins instantanés en combat.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m
+  do: Attaque à outrance : 2 griffes, 4 scalpels et seringue, tous à +25 ; concentrer les attaques sur cette cible.
+  note: Après une griffe qui touche une cible de taille M ou inférieure, tenter gratuitement l'étreinte ; injecter du zortaphen si la seringue touche et qu'une dose reste disponible.
+
+step: Une cible peut être atteinte après un déplacement
+  do: Avancer de 9 m au sol ou voler de 18 m au maximum, puis porter une seule griffe +25 avec Frappe décisive : 2d6+6 et tentative d'étreinte si elle touche.
+  note: Cette attaque simple remplace l'attaque à outrance ; les autres instruments attendent le round suivant.
+
+step: Le contact immédiat est impossible ou trop dangereux
+  do: Se placer en vol et tirer une fois au laser +25 contre la CA de contact ; employer Frappe décisive pour infliger 2d6 de feu.
+  note: Privilégier un adversaire visible à forte armure ; le feu est peu utile contre une cible qui y résiste.
+
+## Rounds suivants
+
+step: Une cible reste au contact et le robot est libre de ses mouvements
+  do: Répéter l'attaque à outrance pour multiplier les touches et les occasions de critique.
+  note: Scalpels, seringue et laser menacent sur 19–20, comme indiqué ; les griffes sur 20. Ajouter +4 aux jets de confirmation des critiques.
+
+step: Un critique est confirmé contre une cible dont la vue peut être atteinte
+  do: Choisir Critique aveuglant : Vigueur DD 28 ou cécité permanente ; en cas de réussite, éblouissement pendant 1d4 rounds.
+  note: Le don ne fonctionne normalement pas contre les créatures sans vision oculaire ou possédant plus de deux yeux.
+
+step: Un critique perforant ou tranchant touche une cible qui peut saigner et qu'il n'est pas utile d'aveugler
+  do: Choisir Critique sanglant : 2d6 de saignement par round, cumulables avec les applications précédentes de ce don.
+  note: Premiers secours DD 15 ou des soins magiques arrêtent ce saignement. Choisir un seul don de critique par critique confirmé ; le laser de feu ne déclenche pas Critique sanglant.
+
+step: Une cible est agrippée
+  do: Consacrer l'action simple au maintien de la lutte ; en cas de réussite, immobiliser la victime ou lui infliger les dégâts autorisés par la lutte.
+  note: BMO de base +24, avec +4 pour l'étreinte et +5 au maintien si la prise n'a pas été rompue. Le maintien ne donne pas une attaque à outrance supplémentaire.
+
+step: Une injection de zortaphen a été administrée
+  do: Continuer à contenir la victime et attendre l'effet : Vigueur DD 15 ou inconscience pendant 1 heure, après un délai de 1d6 rounds.
+  note: C'est un effet de poison et de sommeil ; les dégâts ne réveillent pas la victime. Une fois le sujet inconscient, reporter les attaques sur ses compagnons plutôt que gaspiller les doses.
+
+step: Un ennemi utilise l'électricité ou menace de détruire rapidement le champ de force
+  do: Exploiter le vol et les obstacles pour limiter son exposition ; tirer au laser quand le contact devient trop risqué.
+  note: L'électricité inflige 150 % des dégâts normaux. Après extinction du champ, un critique infligeant des dégâts supplémentaires impose Vigueur DD 15 : étourdi 1 round en cas d'échec, chancelant 1 round en cas de réussite.
+
+## Repli
+
+step: Champ de force détruit et moins de 50 pv restants, avec une voie de fuite praticable
+  do: Relâcher toute prise et se désengager en vol, jusqu'à 36 m sur un double déplacement, vers un couvert ou une sortie hors de portée.
+  note: Ce seuil est un choix tactique de préservation. Un champ éteint ne revient pas pendant ce combat ; ses soins chirurgicaux ne constituent pas une réparation rapide de son châssis.
+
+step: Le robot ne peut pas se replier
+  do: Concentrer ses instruments sur l'adversaire qui bloque la sortie, privilégier l'aveuglement sur un critique, puis repartir dès qu'une ouverture apparaît.

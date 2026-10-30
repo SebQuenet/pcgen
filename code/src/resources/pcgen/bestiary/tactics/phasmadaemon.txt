@@ -1,0 +1,88 @@
+## Avant le combat
+
+note: Profil
+  Phasmadaemon, daemon de taille G, FP 17, neutre mauvais : un manipulateur intelligent qui tue par la terreur et les illusions avant de déchiqueter les survivants. Il dispose de 264 pv, d'une CA de 32 et d'une résistance à la magie de 28.
+  Morsure +30 (3d8+8, critique 19–20, étreinte), 2 griffes +30 (2d6+8 chacune), queue +25 (2d6+4). Allonge de 3 m ; déplacement de 9 m, vol de 12 m avec une bonne manœuvrabilité.
+  Présence terrifiante à 18 m, Volonté DD 27. Vision lucide et perception de la mort constantes ; vision dans le noir à 18 m. Il cherche les victimes vulnérables et distingue les leurres magiques.
+
+resource: Téléportation suprême | à volonté | lui-même et au plus 25 kg d'objets ; aucun autre combattant transporté
+resource: Image persistante | à volonté | Volonté DD 21 pour reconnaître l'illusion
+resource: Convocation d'ombres suprême | 3/jour | Volonté DD 23 pour reconnaître l'illusion ; autres jets éventuels selon le sort reproduit
+resource: Magie des ombres suprême | 3/jour | Volonté DD 24 pour reconnaître l'illusion ; autres jets éventuels selon le sort reproduit
+resource: Mirage | 3/jour | Volonté DD 21 pour reconnaître l'illusion
+resource: Cauchemar | 3/jour | Volonté DD 21
+resource: Image permanente | 3/jour | Volonté DD 22 pour reconnaître l'illusion
+resource: Assassin imaginaire accéléré | 3/jour | action rapide ; Volonté puis Vigueur DD 20
+resource: Double illusoire | 1/jour | invisibilité suprême et double ; Volonté DD 22 pour reconnaître le double
+resource: Convocation | 1/jour | 50 % de réussite ; 1 temerdaemon ou 1d3 suspiridaemons
+resource: Symbole de terreur | 1/jour | Volonté DD 22
+resource: Ennemi subconscient | 1/jour | Volonté puis Vigueur DD 25
+
+step: Il peut préparer les lieux
+  do: Masquer les chemins et les obstacles réels par mirage ; disposer une image permanente ou persistante pour attirer les intrus vers une position exposée
+  note: Les faux murs ne bloquent pas les attaques ni les déplacements. Il se dissimule avec Discrétion +29 et utilise son vol pour choisir son angle d'approche.
+
+step: Il attend une attaque dans son repaire
+  do: Placer un symbole de terreur visible sur l'accès prévu et tenter sa convocation avant l'arrivée des ennemis
+  note: Choisir un temerdaemon pour interposer un allié entre lui et le groupe, ou les suspiridaemons pour occuper plusieurs positions. Décompter ces utilisations dès la préparation.
+
+step: Il traque une victime connue qui dort
+  do: Employer cauchemar pour troubler son sommeil avant la confrontation
+  note: Ce pouvoir prépare une chasse ; il ne remplace pas une attaque contre un adversaire éveillé.
+
+## Ouverture
+
+step: Les ennemis entrent dans les 18 m et il attaque
+  do: Déclencher sa présence terrifiante en action libre
+  note: Volonté DD 27 ; les adversaires de moins de 23 DV sont affectés. Ceux de 5 DV ou plus sont secoués en cas d'échec ; une sauvegarde réussie immunise contre cette présence pendant 24 heures. L'état secoué inflige notamment un malus de 2 aux sauvegardes.
+
+step: Plusieurs adversaires sensibles à la peur sont à portée et visibles
+  do: Lancer ennemi subconscient sur eux en action simple
+  note: Chaque cible tente Volonté DD 25 pour reconnaître le fantasme, puis Vigueur DD 25 si elle échoue. Un second échec la tue ; une Vigueur réussie laisse 3d6 dégâts, un étourdissement de 1 round et 1d4 points de dégâts de Force.
+
+step: Il peut encore utiliser une action rapide et repère une cible sensible à la peur
+  do: Ajouter un assassin imaginaire accéléré sur un survivant, de préférence déjà secoué
+  note: Volonté DD 20, puis Vigueur DD 20 en cas d'échec ; mort si les deux jets échouent, sinon 3d6 dégâts si seule la Vigueur réussit. Une seule utilisation accélérée par round, compatible avec un autre pouvoir ou une attaque à outrance.
+
+step: Il est immédiatement exposé à une forte riposte
+  do: Choisir double illusoire comme action simple de ce round, puis se déplacer en vol sous invisibilité suprême
+  note: Son double détourne l'attention ; l'invisibilité de sa véritable silhouette persiste pendant ses attaques. Les adversaires capables de voir l'invisible peuvent toujours le repérer.
+
+## Rounds suivants
+
+note: Horreur tangible
+  Ses convocations d'ombres suprêmes et sa magie des ombres suprême restent réelles à 80 % même pour une créature qui reconnaît l'illusion. Un effet dommageable inflige alors 80 % de ses dégâts ; un effet non dommageable conserve 80 % de chances de fonctionner contre elle. Les autres sauvegardes du sort reproduit restent applicables.
+
+step: Les adversaires résistent à la peur ou restent groupés
+  do: Employer une convocation d'ombres suprême pour reproduire des tentacules noirs, ou une magie des ombres suprême pour reproduire un mur de force et séparer le groupe
+  note: Choisir une seule de ces actions simples dans le round. Il exploite les obstacles pour concentrer ses attaques sur une victime et retarder les autres.
+
+step: Une cible est déjà dans son allonge et il peut consacrer tout le round à attaquer
+  do: Attaquer à outrance : morsure +30, deux griffes +30, queue +25
+  note: Sur une morsure réussie contre une cible de taille M ou inférieure, tenter gratuitement l'étreinte avec un BMO de +36. Il privilégie un lanceur de sorts isolé que la lutte gênera.
+
+step: Il doit se déplacer avant de mordre
+  do: Se déplacer de 9 m au sol ou de 12 m en vol, puis porter une morsure avec Frappe décisive supérieure : +30, 12d8+8 dégâts et étreinte
+  note: Cette frappe utilise son action simple ; elle ne s'ajoute ni à une charge ni à une attaque à outrance.
+
+step: Il tient une victime et veut l'empêcher d'agir
+  do: Consacrer son action simple au maintien de la lutte pour lui infliger les dégâts de morsure ou l'immobiliser
+  note: Le maintien exige un nouveau test de lutte. Il relâche sa prise si elle l'expose aux attaques concentrées des autres ennemis.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Le mordre pour punir son déplacement ou son action imprudente
+  note: Attaques réflexes permet jusqu'à 8 attaques d'opportunité par round, chacune exigeant une occasion valable ; Frappe décisive supérieure ne s'y applique pas.
+
+step: L'adversaire est trop dangereux au contact
+  do: Se téléporter vers une autre position, puis reprendre les illusions et les attaques à distance au round suivant
+  note: Il peut encore ajouter un assassin imaginaire accéléré ce round s'il lui reste une utilisation et son action rapide.
+
+## Repli
+
+step: Ses points de vie tombent à 66 ou moins, ou ses ennemis neutralisent ses principales attaques
+  do: Relâcher toute victime et employer téléportation suprême pour rejoindre un refuge connu
+  note: Il fuit seul ; il ne peut pas emporter une victime ou un allié avec ce pouvoir.
+
+step: La téléportation est empêchée
+  do: Employer double illusoire s'il est encore disponible, puis gagner un couvert en volant à 12 m par déplacement
+  note: Il utilise compression pour passer par une ouverture étroite adaptée et cherche à rompre le contact avant une nouvelle tentative de téléportation.

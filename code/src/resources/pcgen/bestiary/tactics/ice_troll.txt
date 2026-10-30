@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Troll des glaces, grand humanoïde géant chaotique mauvais : 45 pv, CA 17, déplacement de 9 m, espace et allonge de 3 m. Immunisé au froid, vulnérable au feu : les dégâts de feu sont augmentés de moitié.
+  Avec sa hache d'armes : hache +7 (2d6+4), morsure +2 (1d6+2) et griffe +2 (1d4+2). Sans la hache : morsure +7 (1d6+4) et 2 griffes +7 (1d4+4).
+  Vision dans le noir à 18 m, vision nocturne, Perception +9. Il parle le géant.
+
+resource: Régénération 5 | permanente | Rend 5 pv par round ; des dégâts d'acide ou de feu la neutralisent pendant 1 round.
+
+step: Des intrus approchent
+  do: Les guetter avec Perception +9 et choisir un passage où son allonge de 3 m lui permet de les frapper avant qu'ils arrivent au contact.
+  note: L'obscurité lui convient grâce à sa vision dans le noir ; elle ne le dissimule pas aux ennemis qui possèdent le même sens.
+
+step: Il combat avec d'autres trolls des glaces
+  do: Se coordonner en géant pour approcher par plusieurs côtés et prendre les adversaires en tenaille lorsque le terrain le permet.
+
+## Ouverture
+
+step: Un ennemi peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à le placer dans son allonge de 3 m, puis porter un seul coup de hache +7 (2d6+4).
+  note: Après ce déplacement, il ne peut pas ajouter la morsure et la griffe d'une attaque à outrance.
+
+step: Un ennemi est déjà dans son allonge et il n'a pas besoin de se déplacer
+  do: Faire une attaque à outrance : hache +7 (2d6+4), morsure +2 (1d6+2) et griffe +2 (1d4+2).
+
+step: Aucun ennemi n'est accessible ce round avec un déplacement et une attaque
+  do: Se rapprocher en utilisant les abris disponibles ; un double déplacement permet de parcourir jusqu'à 18 m sans attaquer.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Concentrer les attaques à outrance sur elle pour l'abattre rapidement.
+
+step: Les attaques secondaires touchent difficilement une cible bien protégée
+  do: Lâcher la hache et passer aux attaques naturelles : morsure +7 (1d6+4) et 2 griffes +7 (1d4+4) en attaque à outrance.
+  note: Les trois attaques ont alors le même bonus de +7 ; récupérer la hache abandonnée exige une action de mouvement et peut provoquer une attaque d'opportunité.
+
+step: Une cible sort de portée
+  do: Avancer de 9 m au maximum et porter une seule attaque : hache +7 (2d6+4) s'il la tient encore, sinon morsure +7 (1d6+4).
+
+step: Un adversaire emploie du feu ou de l'acide
+  do: Le prendre pour cible prioritaire s'il est accessible ; sinon, chercher un abri contre ses attaques.
+  note: Le feu exploite sa vulnérabilité et bloque aussi sa régénération ; l'acide bloque la régénération sans bénéficier de cette vulnérabilité.
+
+## Repli
+
+step: Il tombe à 15 pv ou moins, ou subit régulièrement du feu ou de l'acide sans pouvoir atteindre leur source
+  do: Utiliser l'action de retraite pour parcourir jusqu'à 18 m vers un passage ou un abri qui coupe les attaques ennemies.
+  note: La retraite ne protège des attaques d'opportunité que pour la première case quittée ; éviter de traverser ensuite l'allonge d'autres adversaires.
+
+step: Il a rompu le contact
+  do: Rester à l'abri et laisser sa régénération restaurer ses points de vie avant d'envisager de revenir.
+  note: Tant que le feu ou l'acide neutralise sa régénération, il ne récupère pas ses 5 pv par round et peut mourir normalement.

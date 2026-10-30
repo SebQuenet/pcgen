@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Pyrolisk, petite créature magique du feu, neutre mauvaise, semblable à un coq aux ailes de chauve-souris. Féroce et peu intelligent, il compte sur ses pouvoirs plutôt que sur sa force.
+  22 pv, CA 14 ; morsure +8 (1d4-2), allonge 1,50 m ; regard de conflagration et pyrotechnie. Vol à 18 m, manœuvrabilité médiocre ; marche à 6 m.
+  Immunisé contre le feu, vulnérable au froid ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Regard de conflagration | à volonté | portée 9 m ; 4d8 dégâts de feu, Vigueur DD 12 pour réduire de moitié ; une sauvegarde réussie immunise contre le regard de ce pyrolisk pendant un jour ; aucune brûlure persistante
+resource: Pyrotechnie | 1 fois par round | exige un feu ordinaire existant ; version feux d'artifice uniquement ; Volonté DD 12 ou aveuglement pendant 1d4+1 rounds
+
+step: Des intrus approchent
+  do: Les surveiller avec Perception +9 et attendre dissimulé avec Discrétion +11, si le terrain le permet
+  note: Préférer un perchoir et un espace dégagé pour décoller ; son vol médiocre rend les manœuvres serrées difficiles.
+
+## Ouverture
+
+step: Un feu ordinaire est visible des adversaires
+  do: Utiliser pyrotechnie pour aveugler les créatures qui voient le feu à 36 m ou moins de celui-ci
+  note: Le feu utilisé s'éteint. Fermer les yeux pendant l'éclair : son immunité au feu ne protège pas de l'aveuglement.
+
+step: Aucun feu utilisable n'est présent
+  do: S'approcher à 9 m ou moins et diriger activement son regard de conflagration sur un adversaire qui peut le voir, par une action simple
+  note: Les flammes de son regard s'éteignent aussitôt ; elles ne fournissent pas de feu durable pour pyrotechnie.
+
+## Rounds suivants
+
+step: Un ennemi voit encore le pyrolisk et n'a pas réussi sa sauvegarde contre son regard
+  do: Privilégier cet ennemi pour le regard actif ; rester à 9 m ou moins, si possible hors de portée de ses armes
+  note: Le regard s'applique aussi au début du tour des ennemis qui le voient à portée. Une créature aveuglée ne peut pas croiser son regard.
+
+step: Un autre feu ordinaire peut aveugler des adversaires encore voyants
+  do: Réutiliser pyrotechnie à la place du regard actif
+  note: Ne pas compter sur une source déjà éteinte.
+
+step: Un ennemi arrive au contact, ou toutes les cibles sont aveuglées ou immunisées contre son regard
+  do: Mordre à +8 (1d4-2), en privilégiant une cible aveuglée accessible
+  note: S'il doit changer de position, utiliser son déplacement ou décoller ; il ne peut pas combiner librement déplacement, attaque et nouveau déplacement.
+
+## Repli
+
+step: Le pyrolisk est blessé, même grièvement
+  do: Continuer le combat jusqu'à sa mort ou celle de ses adversaires
+  note: Son comportement décrit est acharné ; aucun seuil de fuite en points de vie.

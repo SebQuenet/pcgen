@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Yarahkut, inévitable de taille G, loyal neutre, chargé de confisquer ou de détruire les objets magiques et technologiques trop dangereux pour leurs détenteurs. Il cherche d'abord l'objet, puis neutralise ceux qui empêchent sa saisie.
+  187 pv ; CA 29, contact 15 ; résistance à la magie 25 ; régénération 10, interrompue par les dégâts chaotiques. Déplacement 9 m, vol 18 m ; allonge 3 m.
+  Attaque à outrance : 2 griffes +21 (2d6+7), 2 coups +21 (1d6+7), 2 ailes +21 (1d6+7). Désarmement et subtilisation à +27.
+
+note: Repérage
+  Vision magique et vision lucide sont constantes : repérer les auras et déjouer les déguisements illusoires avant de choisir sa cible. La vision à 360 degrés empêche la prise en tenaille.
+  L'aura de dysfonctionnement couvre 30 m : les armes mécaniques à projectiles ont 20 % de chances de ne pas tirer à chaque attaque ; leur valeur d'incident de tir augmente de 2 si elles en possèdent une.
+
+resource: Métal brûlant et métal gelé | à volonté | Volonté DD 16 ; chacun impose progressivement ses effets pendant plusieurs rounds
+resource: Localisation d'objet | 3/jour | retrouver un objet déjà identifié
+resource: Modification de mémoire | 3/jour | Volonté DD 18 ; à réserver à une cible maîtrisée
+resource: Rouille | 3/jour | contact ; objets en fer ou alliage ferreux non magiques
+resource: Mur de force | 3/jour | séparer les adversaires et couvrir le repli
+resource: Désintégration | 1/jour | rayon, attaque de contact à distance ; Vigueur DD 20
+resource: Débilité | 1/jour | neutraliser les capacités mentales d'un lanceur de sorts
+resource: Marque de la justice | 1/jour | sanction sur un prisonnier ou une cible consentante
+resource: Quête mineure | 1/semaine | Volonté DD 18 ; seulement sur une créature de 7 DV ou moins
+
+step: L'objet recherché est dissimulé ou son porteur n'est pas localisé
+  do: Employer localisation d'objet, puis approcher en gardant une voie de sortie aérienne
+  note: Préparer une confiscation ciblée ; ne pas gaspiller les pouvoirs quotidiens sur des adversaires sans rapport avec la mission.
+
+step: Le détenteur accepte de parler
+  do: Exiger la remise de l'objet avec Diplomatie +16 ou Intimidation +16
+  note: La langue universelle permet de transmettre ses exigences sans obstacle linguistique.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent soutenir le porteur de l'objet
+  do: Placer un mur de force entre le porteur et ses soutiens, en laissant le yarahkut du côté de sa cible
+  note: Isoler en priorité le combattant qui inflige des dégâts chaotiques ; conserver si possible une utilisation pour fuir.
+
+step: Un lanceur de sorts constitue la menace principale et reste accessible
+  do: Employer débilité, puis se rapprocher au round suivant si la menace est neutralisée
+
+step: La cible tient une arme dangereuse et se trouve à 3 m ou moins
+  do: Tenter un désarmement à +27 contre son DMD
+  note: Le désarmement supérieur projette l'arme à 4,50 m de son porteur dans une direction aléatoire. Cette manœuvre ne provoque pas d'attaque d'opportunité.
+
+step: Aucun ennemi n'est à portée et une approche directe serait trop exposée
+  do: Rester en vol et employer métal brûlant ou métal gelé sur l'équipement métallique d'un adversaire, à 18 m ou moins, Volonté DD 16
+  note: Les dégâts montent progressivement ; ce pouvoir ne force pas immédiatement la cible à lâcher son équipement.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans nécessiter de déplacement supérieur à 1,50 m
+  do: Effectuer l'attaque à outrance avec les six attaques naturelles
+  note: Concentrer les attaques sur l'obstacle principal à la confiscation ; un déplacement normal empêche cette attaque à outrance.
+
+step: L'objet recherché est accessible sur la cible, sans être tenu en main ni solidement fixé
+  do: Grâce à Subtilisation rapide, remplacer une attaque de mêlée de l'attaque à outrance par une subtilisation à +27 contre le DMD
+  note: Ne pas cumuler cette manœuvre avec les six attaques intactes. Une arme tenue demande un désarmement ; un objet rangé hors d'accès ne peut pas être subtilisé ainsi.
+
+step: Un ennemi tente de récupérer son arme ou traverse une case menacée en provoquant une attaque d'opportunité
+  do: Exploiter l'allonge de 3 m et Attaques réflexes pour le frapper
+  note: Le yarahkut peut effectuer plusieurs attaques d'opportunité dans le round, mais pas plusieurs pour une même occasion.
+
+step: La mêlée concentrée devient défavorable
+  do: Employer Attaque en vol pour approcher, porter une seule attaque ou tenter un désarmement, puis poursuivre son déplacement aérien
+  note: Le déplacement total reste limité à 18 m ; ce don ne supprime pas les attaques d'opportunité provoquées par le mouvement.
+
+step: Un objet ferreux non magique doit être détruit plutôt que saisi
+  do: Employer rouille au contact
+  note: Les objets magiques sont immunisés ; viser une arme tenue expose à une attaque d'opportunité.
+
+step: Une menace doit être éliminée à distance ou un objet dangereux peut être sacrifié
+  do: Employer désintégration, Vigueur DD 20 ; sur une créature, le rayon inflige 30d6 dégâts, ou 5d6 si elle réussit sa sauvegarde
+  note: Garder cet usage unique pour une cible prioritaire ; les objets portés ou magiques peuvent bénéficier d'une sauvegarde.
+
+step: Le détenteur est maîtrisé et le combat est terminé
+  do: Confisquer l'objet, puis employer modification de mémoire, Volonté DD 18, pour effacer les souvenirs pertinents dans les limites du pouvoir
+  note: Réserver marque de la justice ou quête mineure à une sanction préparée hors de la mêlée ; la modification de mémoire n'efface pas à elle seule toute une expertise technique.
+
+## Repli
+
+step: Les pv passent sous 60, ou les dégâts chaotiques et la pression ennemie rendent la destruction probable
+  do: Placer un mur de force pour couper les poursuivants, puis s'éloigner en vol dès le même round si le mouvement reste disponible
+  note: Emporter l'objet déjà confisqué. Le yarahkut préfère survivre afin de préparer une nouvelle intervention.
+
+step: Il peut rompre le contact sans subir de nouvelles attaques
+  do: Se mettre à couvert et laisser la régénération restaurer 10 pv par round
+  note: Après des dégâts chaotiques, la régénération cesse de fonctionner pendant le round suivant. Il reprend ses distances avant de revenir ; il ne dispose d'aucune téléportation.

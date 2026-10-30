@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Démon mallor, extérieur de taille G, chaotique mauvais, FP 13 : combattant robuste et intelligent, avec 217 pv et une CA de 29. Déplacement de 12 m ; vision dans le noir à 18 m ; télépathie à 30 m.
+  Pique +1 anarchique +22/+17/+12 (2d6+13, critique x3, plus poison), ou deux griffes +21 (1d6+8 plus poison). Il privilégie la pique pour ses dégâts et ses attaques successives.
+  Réduction des dégâts 10/Bien, résistance à la magie 24, immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10. Sa Volonté de +7 est sa sauvegarde la plus faible.
+
+resource: Aura maudite | à volonté | DD 23 ; NLS 12
+resource: Dissipation suprême | à volonté | NLS 12
+resource: Téléportation suprême | à volonté | lui-même et 50 livres d'objets seulement ; NLS 12
+resource: Mains brûlantes | à volonté | DD 16 ; NLS 12
+resource: Idiotie | 3/jour | attaque de contact ; NLS 12
+resource: Rayon ardent | 1/jour | trois rayons ; NLS 12
+resource: Convocation de démons | 1/jour | 1d4 hezrous ou vrocks, ou 1 mallor ; réussite 35 %
+resource: Convocation de vipères | 1/jour | 1d6 vipères fiélonnes de taille G ou 1d3 de taille TG ; réussite 50 %
+
+note: Capacités non détaillées
+  Le poison, le regard de terreur et les liquides immondes sont indiqués sans leurs règles complètes. Ne leur attribuer ni DD, ni portée, ni effet inventé ; appliquer le poison aux attaques indiquées lorsque ses règles sont disponibles.
+
+step: Il prévoit un affrontement imminent
+  do: Activer aura maudite avant de s'exposer.
+  note: Si cette préparation manque, lui consacrer un tour avant de s'engager durablement au contact.
+
+step: Il dispose encore du temps nécessaire avant l'arrivée des ennemis
+  do: Tenter une convocation, puis placer les créatures obtenues sur les voies d'approche.
+  note: Choisir les démons pour renforcer la ligne de combat, ou les vipères pour multiplier les menaces. Chaque convocation peut échouer ; ne compter que sur les créatures effectivement apparues.
+
+## Ouverture
+
+step: Une protection magique ennemie compromet ses attaques
+  do: Employer dissipation suprême sur son bénéficiaire avant d'avancer au contact.
+  note: Consacrer ce tour à affaiblir la défense adverse ; attaquer au tour suivant si la situation le permet.
+
+step: Une cible dangereuse reste à distance et aucune dissipation n'est prioritaire
+  do: Employer rayon ardent et concentrer les trois rayons sur cette cible.
+  note: Privilégier un ennemi difficile à rejoindre ; conserver cette utilisation si le contact est immédiatement accessible.
+
+step: Une cible est accessible en une avance de 12 m au plus
+  do: Avancer et porter une seule attaque de pique à +22.
+  note: Se placer pour menacer un passage et permettre aux éventuels alliés convoqués de prendre l'ennemi en tenaille.
+
+step: Un adversaire est déjà à portée au début de son tour
+  do: Effectuer une attaque à outrance avec la pique : +22/+17/+12, chacune à 2d6+13 plus poison.
+
+## Rounds suivants
+
+step: Il peut rester sur place et frapper une cible à portée
+  do: Répéter l'attaque à outrance à la pique ; concentrer les attaques sur une cible jusqu'à sa chute.
+  note: Éviter les déplacements inutiles qui lui feraient perdre ses attaques successives. Les griffes constituent son alternative si la pique devient inutilisable.
+
+step: Plusieurs ennemis sont adjacents les uns aux autres et à portée
+  do: Employer Succession d'enchaînements pour frapper plusieurs adversaires, en poursuivant seulement après une attaque réussie.
+  note: Choisir cette action à la place de l'attaque à outrance lorsqu'il peut atteindre davantage de cibles ; accepter la baisse de CA de 2 jusqu'à son prochain tour.
+
+step: Il touche régulièrement un adversaire peu protégé
+  do: Employer Attaque en puissance pour augmenter les dégâts de ses attaques de pique.
+  note: Renoncer à ce compromis si les attaques manquent trop souvent.
+
+step: Un lanceur de sorts est à portée de contact et ses sorts pèsent sur le combat
+  do: Tenter idiotie sur lui, dans la limite des trois utilisations quotidiennes.
+  note: Cette action remplace ses attaques d'armes du tour ; la réserver à une cible dont l'affaiblissement vaut cette perte de dégâts immédiats.
+
+step: Plusieurs adversaires fragiles sont regroupés dans un cône de 4,50 m
+  do: Employer mains brûlantes, DD 16.
+  note: Préférer la pique contre un adversaire isolé ou résistant au feu ; éviter d'englober ses alliés.
+
+step: Un nouvel effet magique donne un avantage décisif aux ennemis
+  do: Consacrer un tour à dissipation suprême, puis reprendre la pression au contact.
+
+## Repli
+
+step: Ses points de vie tombent à 60 ou moins, ou il ne peut plus tenir le combat
+  do: Employer téléportation suprême vers un lieu connu à l'écart des ennemis.
+  note: Ce pouvoir n'emporte aucune autre créature. Les alliés convoqués encore présents peuvent occuper les adversaires pendant son départ.
+
+step: Il ne peut pas employer sa téléportation
+  do: Se désengager par une retraite et chercher un couvert ou un passage étroit.
+  note: Sa vitesse normale est de 12 m ; une retraite complète permet jusqu'à 24 m si le terrain et les règles de déplacement le permettent.

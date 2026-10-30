@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Petit barracuda, animal aquatique prédateur au corps fuselé et aux dents tranchantes. Rapide et agressif, il chasse en couple, en meute ou en banc.
+  4 PV, CA 14 ; morsure +4 (1d4-1), allonge de 1,50 m ; nage à 21 m par déplacement.
+  Vision nocturne, Perception +5 et Natation +11. Son intelligence animale limite ses tactiques à la poursuite, à la morsure et à la fuite.
+
+step: Une proie entre dans son environnement aquatique
+  do: La repérer avec Perception +5, puis s'en approcher à la nage.
+
+## Ouverture
+
+step: La proie est à portée après un déplacement de 21 m au maximum
+  do: Nager jusqu'à elle, puis porter une morsure +4 (1d4-1).
+
+step: La proie est déjà à 1,50 m ou moins
+  do: Porter une morsure +4 (1d4-1).
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter la morsure +4 (1d4-1) à chaque round.
+
+step: La proie s'éloigne dans l'eau
+  do: La poursuivre à la nage ; mordre si un seul déplacement de 21 m suffit à revenir à portée.
+  note: Deux déplacements permettent de parcourir 42 m, mais occupent alors le round sans morsure.
+
+step: Plusieurs barracudas participent à la chasse
+  do: Converger sur la même proie accessible et la mordre chacun à son tour.
+  note: Leur comportement reste celui d'animaux prédateurs, sans coordination complexe.
+
+step: Il cherche à rompre le contact avant une nouvelle approche
+  do: Consacrer un round à une retraite à la nage, jusqu'à 42 m, puis revenir lors d'un round ultérieur si la proie reste accessible.
+  note: La retraite utilise le round entier ; seule la case de départ est protégée contre les attaques d'opportunité des adversaires visibles.
+
+## Repli
+
+step: Il lui reste 2 PV ou moins
+  do: Utiliser la retraite pour fuir à la nage jusqu'à 42 m vers une zone hors d'atteinte, puis continuer à s'éloigner si la menace le poursuit.

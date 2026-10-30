@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Ubue, humanoïde géant de taille G, chaotique neutre, à trois têtes et trois bras ; 19 pv, CA 18, allonge de 3 m.
+  À outrance : trois gourdins +5 (1d8+3 chacun), ou trois coups +4 (1d6+3 chacun). À distance : trois gourdins lancés +1 (1d6+3 chacun).
+  Chaque tête contrôle un bras : ses trois armes ne lui imposent aucun malus d'attaque ou de dégâts. Sa vision à 360 degrés le rend immunisé à la prise en tenaille.
+
+resource: Gourdins | 3 | un par main ; chaque gourdin lancé doit être récupéré avant de pouvoir être réutilisé
+
+step: Au début de la rencontre
+  do: Tirer 1d100 ; sur 01–15, les têtes se disputent pour toute la rencontre
+  note: La dispute impose −2 aux attaques, aux jets de Réflexes et à la CA : CA 16, Réflexes −2, gourdins de mêlée +3, coups +2 et gourdins lancés −1.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +8 et la vision nocturne ; chercher une position permettant de les frapper à 3 m
+  note: Garder les gourdins en main pour profiter des trois attaques dès que possible.
+
+## Ouverture
+
+step: Une cible est déjà à portée de mêlée
+  do: Faire une attaque à outrance avec les trois gourdins +5 (1d8+3 chacun), en concentrant les coups sur une même cible
+  note: Un pas de placement de 1,50 m reste possible avant cette attaque à outrance.
+
+step: Il faut se déplacer de plus de 1,50 m pour atteindre une cible
+  do: Avancer jusqu'à portée de 3 m et porter une seule attaque de gourdin +5 (1d8+3), si une action simple reste disponible
+  note: Un déplacement ordinaire ne permet pas d'enchaîner les trois attaques ce round.
+
+step: Aucune cible ne peut être atteinte en mêlée ce round, mais un tir est possible
+  do: Lancer un gourdin +1 (1d6+3), ou les trois lors d'une attaque à outrance sans déplacement ordinaire
+  note: Tenir compte des malus de portée ; lancer les trois gourdins laisse l'ubue sans arme en main.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance ; conserver une distance de 3 m si un pas de placement suffit
+  note: Profiter de l'allonge pour porter une attaque d'opportunité lorsqu'un adversaire provoque en traversant la zone menacée.
+
+step: Une cible semble facile à toucher
+  do: Activer Attaque en puissance avant les attaques : gourdins +4 (1d8+5 chacun)
+  note: Le choix dure jusqu'au prochain tour. Si les têtes se disputent, les gourdins passent à +2 ; contre une défense élevée, garder la précision normale.
+
+step: Les adversaires cherchent à l'encercler
+  do: Continuer à concentrer les attaques sur une cible accessible
+  note: La prise en tenaille ne leur donne aucun avantage contre lui ; éviter toutefois de s'exposer inutilement à plusieurs attaquants.
+
+step: Les trois gourdins sont perdus ou hors d'atteinte
+  do: Employer les trois coups +4 (1d6+3 chacun) lors d'une attaque à outrance, ou un seul après un déplacement ordinaire
+  note: Appliquer le malus de dispute si nécessaire ; ne pas récupérer une arme si cela expose inutilement l'ubue.
+
+## Repli
+
+step: Points de vie à 6 ou moins et une voie de fuite existe
+  do: Se retirer vers un abri en utilisant l'action de retraite pour limiter les attaques d'opportunité
+  note: Ce seuil est un choix tactique ; l'ubue ne dispose d'aucun soin indiqué dans son profil.
+
+step: La fuite est impossible
+  do: Frapper à outrance l'adversaire qui bloque la sortie, puis profiter d'une ouverture pour partir

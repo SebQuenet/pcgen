@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Pouding blanc, vase gigantesque solitaire et sans intelligence des plaines froides et des souterrains. 94 PV, CA 3 ; il cherche instinctivement le contact.
+  Coup +7 : 2d6+4 dégâts, plus 2d6 d'acide et étreinte. Constriction : 2d6+4 dégâts, plus 2d6 d'acide. Son corps possède aussi la corrosion.
+  Perception aveugle à 18 m ; déplacement et escalade à 6 m ; espace occupé de 4,50 m et allonge de 3 m. Résistance au froid 5 et immunités des vases.
+
+step: Aucune proie à proximité
+  do: Rester immobile en profitant du camouflage, jusqu'à détecter une créature par perception aveugle
+  note: Son absence d'intelligence impose un comportement instinctif, sans préparation ni coordination
+
+step: Une surface doit être escaladée pour atteindre une proie
+  do: Utiliser l'escalade à 6 m et la succion pour adhérer au support
+
+## Ouverture
+
+step: Une proie est détectée à plus de 3 m
+  do: Avancer vers elle à 6 m par déplacement pour l'amener à portée du coup
+  note: La perception aveugle permet de la repérer jusqu'à 18 m, même dans l'obscurité
+
+step: Une proie se trouve à 3 m ou moins
+  do: Porter un coup +7, infligeant 2d6+4 dégâts plus 2d6 d'acide ; tenter l'étreinte si le coup touche
+  note: Une manœuvre de lutte réussie déclenche aussi la constriction, pour 2d6+4 dégâts plus 2d6 d'acide
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte pour continuer à la broyer et à la dissoudre
+  note: Chaque manœuvre de lutte réussie déclenche la constriction : 2d6+4 dégâts plus 2d6 d'acide
+
+step: Aucune proie n'est agrippée
+  do: Frapper une créature à portée avec le coup +7 et tenter à nouveau l'étreinte ; avancer vers la plus proche si nécessaire
+
+step: Une attaque perforante ou tranchante déclenche la scission
+  do: À leur tour, faire attaquer chaque fragment contre une proie à sa portée, ou le faire avancer vers la plus proche
+  note: Respecter le seuil de 10 PV indiqué pour la scission ; les fragments agissent sans coordination
+
+## Repli
+
+step: Le pouding est blessé et perçoit encore une proie
+  do: Continuer à frapper ou à maintenir la lutte, jusqu'à destruction
+  note: Aucun seuil de PV ne provoque de retraite organisée chez cette vase sans intelligence
+
+step: Plus aucune proie n'est détectée à 18 m
+  do: Cesser la poursuite et reprendre son immobilité camouflée

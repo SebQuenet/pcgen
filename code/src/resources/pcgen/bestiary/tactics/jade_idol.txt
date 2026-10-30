@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Idole de jade, créature artificielle neutre de taille Min, patiente et capable de se faire passer pour une statuette. Initiative +7 ; 22 PV ; CA 20 ; déplacement 3 m.
+  Souffle de jade empoisonné ; éclat à distance +10 (1d2-3) ; deux coups +5 (1d2-3 chacun). Allonge 0 m : elle doit entrer dans la case ennemie pour frapper au corps à corps.
+  RD 5, contournée seulement par une arme à la fois magique et contondante ; immunités au froid, au feu, à l'électricité et immunités des créatures artificielles.
+
+resource: Souffle de jade | une fois tous les 1d4 rounds | action simple ; une cible à 15 m ; touche automatiquement ; poison inhalé, Vigueur DD 14 ; 1d4 Dex par round pendant 6 rounds ; guérison après deux sauvegardes consécutives réussies ; pétrification à 0 Dex
+resource: Air vicié | permanent | rayon de 9 m ; toutes les créatures subissent -2 aux sauvegardes contre le poison tant qu'elles restent dans l'aura
+resource: Détection du poison et retardement du poison | à volonté | NLS 7 ; retardement par contact, durée 7 heures
+resource: Passage sans trace | 3/jour | NLS 7 ; durée 7 heures ; facilite une approche ou une fuite sans empreintes
+resource: Convocation de monstres I | 3/jour | vipère uniquement ; durée 7 rounds
+resource: Poison | 1/jour | contact ; Vigueur DD 16 ; 1d3 Con par round pendant 6 rounds ; une sauvegarde réussie met fin au poison
+resource: Coup au but | 1/jour | +20 au prochain jet d'attaque effectué avant la fin du round suivant
+resource: Neutralisation du poison | 1/jour | NLS 7 ; secours par contact pour un allié empoisonné
+
+step: Les intrus n'ont pas encore identifié l'idole
+  do: Rester immobile parmi les objets précieux et attendre qu'une victime approche à 9 m
+  note: Inanimée, elle ressemble à une statuette ordinaire ; ses pouvoirs discrets permettent une Perception DD 25 au round suivant. Un déplacement ou une attaque manifeste révèle sa nature.
+
+step: Elle doit rejoindre sa cache avant l'arrivée des intrus
+  do: Utiliser passage sans trace et Discrétion +19, avec +4 supplémentaires parmi des objets en jade
+  note: Vision dans le noir à 18 m, vision nocturne et Perception +5 pour surveiller l'approche.
+
+step: Un allié doit la porter dans une zone empoisonnée
+  do: Lui appliquer retardement du poison avant l'embuscade
+  note: Le partage des pouvoirs permet aussi de lui accorder détection du poison à 1,50 m.
+
+## Ouverture
+
+step: Une cible vivante qui respire est à 15 m ou moins
+  do: Souffle de jade sur la cible la plus vulnérable au poison, de préférence à 9 m ou moins
+  note: Appliquer le malus de l'aura sans modifier le DD 14 ; noter le délai de 1d4 rounds avant le prochain souffle.
+
+step: La cible est hors de portée du souffle ou une diversion est nécessaire
+  do: Convoquer une vipère près de l'ennemi et lui faire attaquer une cible dans les 9 m de l'idole
+  note: Le venin de la vipère profite du malus de l'aura ; l'idole reste en retrait.
+
+## Rounds suivants
+
+step: Le souffle est de nouveau disponible et une cible peut être empoisonnée
+  do: Réutiliser le souffle, en priorité sur une victime déjà affaiblie en Dextérité
+  note: Suivre les sauvegardes et les expositions répétées selon les règles des poisons.
+
+step: Le souffle se recharge et une convocation est encore disponible
+  do: Convoquer une autre vipère pour harceler les adversaires pendant que le poison agit
+
+step: Un animal ou une vermine venimeuse s'approche à 3 m de l'idole ou de son porteur
+  do: Appliquer l'affinité avec le venin : Volonté DD 14 ou charme pendant 10 minutes
+  note: Une sauvegarde réussie protège cette créature contre cette même idole pendant 24 heures.
+
+step: Une cible vulnérable au poison arrive au contact et le souffle est indisponible
+  do: Si elle dispose du temps nécessaire, lancer coup au but, puis poison au round suivant par une attaque de contact au corps à corps
+  note: Le contact est à +5, ou +25 avec coup au but ; entrer dans la case ennemie expose l'idole aux attaques d'opportunité. Le poison reste à DD 16, avec -2 à la sauvegarde dans l'aura.
+
+step: Les pouvoirs offensifs utiles sont épuisés ou l'adversaire est immunisé au poison
+  do: Tirer un éclat +10 ; ne tenter les deux coups +5 en attaque à outrance que si l'ennemi partage déjà sa case
+  note: Les dégâts de 1d2-3 sont dérisoires ; privilégier la survie et l'action des vipères.
+
+step: Un allié important est empoisonné
+  do: Employer retardement du poison par contact ; réserver neutralisation du poison au traitement du poison déjà présent
+  note: Ces pouvoirs ne rendent aucun PV à l'idole.
+
+## Repli
+
+step: Elle tombe à 7 PV ou moins et aucune consigne ne lui impose de tenir sa position
+  do: Profiter des vipères pour gagner un couvert à 3 m par action de mouvement, puis se cacher avec Discrétion
+  note: Passage sans trace efface les traces, mais ne la rend pas invisible ; sa lenteur exige une cache proche.
+
+step: La fuite est impossible
+  do: Rester à portée de souffle et continuer à empoisonner les assaillants jusqu'à sa destruction
+  note: Elle est détruite à 0 PV ; ne pas lui accorder de guérison ou de téléportation.

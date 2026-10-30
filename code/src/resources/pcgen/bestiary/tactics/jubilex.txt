@@ -1,0 +1,105 @@
+## Avant le combat
+
+note: Profil
+  Jubilex est un démon chaotique mauvais de taille G, intelligent et très résistant : 553 pv, CA 43, contact 30, pris au dépourvu 38. Déplacement de 9 m ; espace et allonge de 3 m.
+  Coup +42 : 2d6+22, critique 19–20, plus 4d6 d’acide et étreinte. Constriction : 2d6+22 plus 4d6 d’acide sur un test de lutte réussi.
+  Crachat acide en ligne de 6 m : 4d6 d’acide et 1d6 de dégâts de Constitution, Vigueur DD 38. Ses sorts servent à diviser les adversaires, supprimer leurs protections et éliminer les cibles isolées.
+  RD 20/fer froid et Bien, RM 34 ; immunités à l’acide, au froid, à l’électricité et traits des vases ; résistance au feu 10. Vision dans le noir à 18 m, vision lucide et aura maudite constantes, cette dernière au DD 25.
+
+resource: Crachat acide | 1/minute | ligne de 6 m ; Vigueur DD 38
+resource: Invocation de démons | 1/jour | réussite 100 % ; choisir 4d10 dretches, 2d4 démons des vases mineurs, 1d4 démons des vases majeurs, 2 nalfeshnies ou 1 balor
+resource: Invocation de vases | 1/jour | réussite 100 % ; total de 54 DV de vases
+resource: Cercle de froid | 100 rounds/jour | rayon de 3 m ; 5d6 de froid, Vigueur DD 24 pour réduire de moitié
+
+step: Plusieurs rounds de préparation sont disponibles
+  do: Lancer protection contre la mort, puis vol sur lui-même ; utiliser invisibilité pour choisir sa position d’engagement
+  note: Ces préparatifs prennent des actions distinctes. Ses pouvoirs magiques ont un NLS de 23 ; ses sorts préparés ont un NLS de 20.
+
+step: L’arrivée des ennemis est imminente
+  do: Invoquer un balor ou les démons des vases, puis les 54 DV de vases si le temps le permet ; placer ces renforts sur les voies d’approche
+  note: Les deux invocations ont chacune leur utilisation quotidienne. Si sa troupe habituelle est présente, lui faire tenir les passages ; communiquer par télépathie à 30 m.
+
+step: Les intrus dépendent de leur vision ordinaire
+  do: Préparer des ténèbres profondes dans la zone d’affrontement et exploiter sa vision lucide pour choisir ses cibles
+
+## Ouverture
+
+note: Choix du premier round
+  Choisir l’action adaptée à la position des ennemis. Les sorts, pouvoirs magiques, attaques et crachats proposés ci-dessous occupent des rounds distincts.
+
+step: Plusieurs ennemis sont alignés à moins de 6 m
+  do: Utiliser le crachat acide sur le plus grand nombre possible, en évitant ses alliés
+  note: Le DD 38 en fait une priorité contre les adversaires qui ne sont pas immunisés à l’acide et aux dégâts de Constitution.
+
+step: Le groupe reste compact à distance
+  do: Lancer flétrissure sur les adversaires, Vigueur DD 27 pour réduire les dégâts de moitié
+  note: Choisir les cibles pour épargner ses alliés ; cette préparation n’est disponible qu’une fois.
+
+step: Les protections magiques rendent ses attaques inefficaces
+  do: Employer dissipation suprême sur la cible prioritaire, notamment pour supprimer sa protection contre l’acide ou ses défenses contre les sorts
+  note: Ce pouvoir est utilisable à volonté, mais consomme son action du round.
+
+step: Il manque de renforts et les ennemis peuvent être retenus à distance
+  do: Employer une invocation quotidienne encore disponible, puis laisser les créatures invoquées engager les intrus
+
+step: Un adversaire dangereux est déjà à portée de son allonge de 3 m
+  do: Porter son coup +42 et tenter l’étreinte si la cible est de taille G ou inférieure
+  note: Appliquer la constriction seulement si le test de lutte réussit ; le coup seul ne garantit pas la saisie.
+
+## Rounds suivants
+
+resource: Destruction | 2 préparations | Vigueur DD 26
+resource: Absorption d’énergie | 1 préparation | attaque de contact à distance ; DD 28 pour éviter que les niveaux négatifs deviennent permanents
+resource: Mise à mal | 2 préparations | attaque de contact ; Volonté DD 25 pour réduire les dégâts de moitié
+resource: Blasphème | 1/jour comme pouvoir et 1 préparation | DD 24 pour le pouvoir, DD 26 pour le sort préparé
+resource: Guérison suprême | 1 préparation | soin personnel ou d’un allié vivant
+resource: Guérison suprême de groupe | 1 préparation | soin de Jubilex et de ses alliés vivants à portée
+resource: Miracle | 1 préparation | garder en réserve pour reproduire guérison suprême si les autres soins sont épuisés
+
+step: Les ennemis se soutiennent et concentrent leurs attaques
+  do: Dresser un mur d’acide pour couper leurs lignes d’approche, ou un mur de pierre pour séparer physiquement une partie du groupe
+  note: Le mur d’acide inflige des dégâts à la traversée ; il ne constitue pas un obstacle solide. Jubilex est immunisé à son acide. Le mur de pierre consomme son unique préparation.
+
+step: Un ennemi isolé présente une Vigueur faible
+  do: Lancer destruction, Vigueur DD 26 ; conserver la seconde préparation pour une autre menace si la première suffit
+
+step: Un adversaire résiste aux sorts à sauvegarde mais reste exposé à un rayon
+  do: Lancer absorption d’énergie par une attaque de contact à distance
+  note: Les niveaux négatifs initiaux ne donnent pas de sauvegarde ; le DD 28 intervient après 24 heures pour déterminer leur permanence.
+
+step: Une cible mobile échappe au contact et paraît vulnérable aux enchantements
+  do: Employer immobilisation de monstre, Volonté DD 22, puis l’approcher ou faire intervenir ses alliés au round suivant
+  note: Ce pouvoir est à volonté ; changer de tactique si la cible résiste régulièrement ou est immunisée.
+
+step: Des adversaires non mauvais sont regroupés près de lui
+  do: Employer blasphème si leurs DV permettent des effets utiles ; commencer par le pouvoir au NLS 23
+  note: Les effets dépendent des DV et de l’alignement. Éviter d’inclure ses propres vases non mauvaises dans la zone ; le sort préparé utilise le NLS 20 et le DD 26.
+
+step: Une cible reste accessible au contact
+  do: Répéter le coup et l’étreinte ; si une prise est déjà établie, entretenir la lutte et appliquer la constriction sur une réussite
+  note: Il ne dispose que d’un coup dans sa routine de mêlée. Contre une cible au contact qui résiste à l’acide, envisager mise à mal, Volonté DD 25.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge
+  do: Exploiter Enchaînement ou Succession d’enchaînements pour répartir ses coups ; utiliser Attaques réflexes lorsqu’un ennemi provoque une attaque d’opportunité
+  note: Les enchaînements exigent des touches successives et abaissent sa CA de 2 jusqu’à son prochain tour. Ils ne permettent pas de répéter les coups sur une même cible.
+
+step: Plusieurs ennemis restent dans un rayon de 3 m et résistent à l’acide
+  do: Employer le cercle de froid, 5d6 de froid, Vigueur DD 24 pour réduire de moitié
+  note: Décompter les rounds d’utilisation et tenir les alliés vulnérables au froid hors de la zone.
+
+step: Une minute s’est écoulée depuis le dernier crachat
+  do: Réutiliser le crachat acide dès qu’une ligne de 6 m permet de toucher une cible prioritaire ou plusieurs ennemis
+
+step: Ses points de vie tombent à 300 ou moins et le combat reste gagnable
+  do: Lancer guérison suprême ; préférer guérison suprême de groupe si plusieurs alliés vivants sont également blessés
+  note: Se ménager ce round de soin derrière les renforts ou un obstacle ; ces deux sorts ne sont préparés qu’une fois chacun. Si les deux sont épuisés, miracle peut reproduire guérison suprême.
+
+## Repli
+
+step: Ses points de vie tombent à 150 ou moins après ses soins, ou ses défenses ne lui permettent plus de tenir
+  do: Ordonner aux survivants de couvrir son départ, puis utiliser téléportation sans erreur vers un refuge connu
+  note: Ce pouvoir à volonté transporte seulement Jubilex et jusqu’à 50 livres d’objets ; il n’évacue pas ses alliés.
+
+step: Un effet empêche la téléportation
+  do: Tenter de le supprimer par dissipation suprême s’il est dissipable ; sinon, se déplacer sous vol et placer un mur entre lui et les poursuivants pour quitter la zone qui le retient
+  note: Employer invisibilité dès qu’un round de répit le permet, puis se téléporter une fois l’entrave levée.

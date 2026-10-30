@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Quipper, poisson d'eau douce de taille infime aux dents tranchantes, qui chasse en banc dans les eaux froides et tempérées. Il possède 4 points de vie, une CA de 20 et nage à 9 m par round.
+  Morsure +10 (1d2-2), allonge de 0 m : il doit entrer dans la case de sa proie pour la mordre. La frénésie renforce ses attaques et lui donne une morsure supplémentaire lors d'une attaque à outrance.
+
+note: Repérage
+  Vision nocturne et Perception +8. Sous l'eau, son odorat développé détecte les créatures à 27 m et le sang jusqu'à 150 m.
+  Il chasse en banc de 5 à 50 individus ou en grand banc de 50 à 100 individus ; plusieurs poissons peuvent converger sur une même proie immergée.
+
+resource: Frénésie | 1 par rencontre | dure 1 minute, soit 10 rounds ; morsure +11, CA 21, Réflexes +5, nage à 12 m ; une attaque supplémentaire à bonus maximal lors d'une attaque à outrance
+
+step: Du sang est détecté dans l'eau
+  do: Déclencher automatiquement la frénésie chez tous les quippers situés à 27 m ou moins du quipper qui détecte le sang.
+  note: La détection du sang peut se faire jusqu'à 150 m ; le rayon de propagation de la frénésie reste de 27 m.
+
+## Ouverture
+
+step: Une proie immergée est accessible en un déplacement
+  do: Nager jusque dans sa case, puis porter une morsure +10 (1d2-2), ou +11 en frénésie.
+  note: Déplacement maximal de 9 m, ou 12 m en frénésie. Entrer dans la case de la proie expose le quipper aux attaques d'opportunité applicables.
+
+step: Une proie est repérée plus loin dans l'eau
+  do: Se rapprocher à la nage, avec un double déplacement jusqu'à 18 m, ou 24 m en frénésie, si nécessaire.
+  note: Un double déplacement ne laisse pas d'action pour mordre ce round.
+
+step: Les adversaires restent hors de l'eau
+  do: Rester dans l'eau et attendre qu'une proie immergée soit accessible.
+
+## Rounds suivants
+
+step: La frénésie est active et une proie occupe sa case
+  do: Effectuer une attaque à outrance avec deux morsures +11, chacune infligeant 1d2-2 dégâts.
+  note: Rester sur la proie permet de profiter de la morsure supplémentaire ; un déplacement ordinaire suivi d'une attaque ne donne qu'une morsure.
+
+step: La frénésie est inactive et une proie occupe sa case
+  do: Porter une morsure +10 (1d2-2).
+
+step: La proie s'éloigne dans l'eau
+  do: La poursuivre à 9 m par déplacement, ou 12 m en frénésie, et la mordre si une action d'attaque reste disponible après avoir rejoint sa case.
+
+step: La proie meurt et un autre adversaire immergé est accessible
+  do: Rejoindre sa case et poursuivre les morsures avec le banc.
+
+step: La frénésie dure depuis 10 rounds
+  do: Retirer les bonus de frénésie et la morsure supplémentaire.
+  note: Cette capacité ne peut plus se déclencher pendant la rencontre.
+
+## Repli
+
+step: La frénésie est active et des adversaires sont encore vivants
+  do: Continuer à attaquer jusqu'à la mort des adversaires ou du quipper, sans repli lié aux points de vie.
+
+step: Hors frénésie, le quipper est menacé sans pouvoir atteindre de proie
+  do: Rompre le contact et s'éloigner à la nage, à 9 m par déplacement.

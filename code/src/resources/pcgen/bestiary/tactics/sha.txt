@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Sha, bête magique canine des déserts chauds, loyale mauvaise, qui harcèle ses proies pour propager sa maladie avant de disparaître.
+  45 pv ; CA 17, contact 14 ; déplacement 12 m ; allonge 1,50 m.
+  Morsure +10 (2d6+6, maladie et croc-en-jambe) ; BMO +10. Il poursuit les petits déplacements adverses et multiplie les morsures d'opportunité.
+
+resource: Tempête de sable | 1/jour | action complexe ; rayon de 30 m centré sur le sha ; durée 6 minutes
+resource: Attaques d'opportunité | 5/round | grâce à Combat Reflexes ; une morsure par occasion distincte, même pris au dépourvu
+
+step: Les proies ne l'ont pas encore repéré
+  do: Approcher à couvert avec Discrétion +10 et choisir un adversaire accessible à l'écart du groupe
+  note: Perception +7 ; vision dans le noir à 18 m, vision nocturne et vision claire dans les tempêtes de sable naturelles ou créées par un sha
+
+step: Plusieurs shas chassent ensemble
+  do: Répartir les approches pour prendre les proies en tenaille et atteindre plusieurs victimes
+  note: Il comprend l'infernal mais ne parle pas
+
+## Ouverture
+
+step: L'approche est exposée et la tempête est disponible
+  do: Créer la tempête de sable pour couvrir l'approche
+  note: Cette action occupe tout son tour ; il voit clairement dans le sable, mais cette vision ne supprime pas les effets du vent ni les difficultés du terrain
+
+step: Une cible peut être atteinte avec un déplacement de 12 m
+  do: Avancer jusqu'à 1,50 m et porter une morsure +10 (2d6+6, maladie et croc-en-jambe)
+  note: Sur une morsure réussie, tenter gratuitement le croc-en-jambe avec BMO +10 contre le DMD adverse, sans provoquer d'attaque d'opportunité
+
+## Rounds suivants
+
+step: Une victime déjà mordue reste au contact
+  do: Mordre une autre cible accessible sans s'exposer inutilement, sinon continuer à mordre la victime présente
+  note: La maladie agit après incubation ; il cherche à contaminer plusieurs ennemis plutôt qu'à attendre un effet immédiat
+
+step: Un adversaire adjacent fait un pas de placement de 1,50 m pour s'éloigner
+  do: Utiliser Step Up et Following Step pour le suivre en action immédiate, sur 3 m au maximum, en terminant adjacent
+  note: Ce déplacement conserve son mouvement et son pas de placement au tour suivant ; la morsure attend une attaque normale ou une occasion qui la provoque
+
+step: Une cible menacée se relève, lance un sort sans défense ou quitte une case menacée en provoquant une attaque
+  do: Porter une morsure d'opportunité +10 et appliquer maladie et croc-en-jambe lorsque la cible peut être renversée
+  note: Lors d'un relèvement, l'attaque est résolue alors que la victime est encore à terre ; elle ne permet pas de la renverser à nouveau pour empêcher son relèvement
+
+## Repli
+
+step: Plusieurs ennemis ont été mordus et le groupe se réorganise, ou les points de vie passent sous 15
+  do: Rompre le combat par un retrait sur 24 m au maximum, puis utiliser le sable et les couverts pour se cacher avec Discrétion +10
+  note: Adapter la distance au terrain ; le retrait protège seulement la case de départ contre les attaques d'opportunité

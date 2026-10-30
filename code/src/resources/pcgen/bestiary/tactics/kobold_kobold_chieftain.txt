@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Chef kobold de petite taille, loyal mauvais, qui combat à la rapière +1. Ses 72 pv et sa CA 26 lui permettent de tenir au contact, mais sa Volonté +2 le rend vulnérable aux effets mentaux.
+  Déplacement de 9 m ; vision dans le noir à 18 m. Il cherche un combat contre un seul adversaire à la fois, avec une voie de retraite accessible.
+
+step: Il peut choisir sa position
+  do: Se placer près d'un passage étroit ou d'un couvert pour limiter les directions d'attaque et repérer un chemin de fuite.
+  note: Dans l'obscurité, sa vision dans le noir lui permet de surveiller les approches jusqu'à 18 m.
+
+step: Des alliés sont présents
+  do: Les placer de façon à pouvoir prendre un intrus en tenaille sans s'isoler du reste du groupe.
+
+## Ouverture
+
+step: Un ennemi est accessible après un déplacement d'au plus 9 m
+  do: Rejoindre cet ennemi et porter une attaque à la rapière +1, en recherchant une tenaille si un allié est déjà au contact.
+  note: Choisir de préférence une cible isolée ou déjà engagée, sans traverser les zones menacées par d'autres ennemis.
+
+step: Les ennemis sont encore trop loin pour être frappés
+  do: Gagner un couvert ou tenir le passage choisi et préparer une attaque à la rapière contre le premier ennemi qui vient à portée.
+  note: L'équipement fourni ne comprend aucune arme à distance.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et sa position est favorable
+  do: Effectuer une attaque à outrance à la rapière +1 contre lui.
+  note: Concentrer les coups sur la même cible pour réduire le nombre d'adversaires actifs.
+
+step: Un pas de 1,50 m permet d'obtenir une tenaille ou de réduire le nombre d'ennemis au contact
+  do: Faire ce pas, puis poursuivre l'attaque à outrance si une cible reste à portée.
+
+step: Plusieurs ennemis le menacent et il ne peut pas retrouver une position sûre par un simple pas
+  do: Se retirer vers un passage plus étroit ou vers ses alliés.
+  note: Sa CA de contact 15 et sa Volonté +2 justifient de rompre le contact avec un adversaire qui exploite ces défenses.
+
+## Repli
+
+step: Points de vie sous 24, ou encerclement imminent
+  do: Utiliser l'action de retraite pour suivre le chemin de fuite repéré, jusqu'à 18 m si le terrain le permet.
+  note: La retraite protège seulement contre les attaques d'opportunité dues au départ de sa case initiale ; éviter de traverser d'autres cases menacées.
+
+step: La fuite est momentanément bloquée
+  do: Se mettre en défense totale et chercher une ouverture pour se retirer au round suivant.

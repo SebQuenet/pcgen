@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Dragon blanc juvénile mythique, prédateur solitaire des montagnes froides, chaotique mauvais. Sa faim et sa férocité sont tempérées par une intelligence humaine.
+  124 PV, CA 26, réduction des dégâts 5/épique ; immunisé au froid, à la paralysie et au sommeil, vulnérable au feu.
+  Morsure +15 (1d8+9), 2 griffes +15 (1d6+6), 2 ailes +10 (1d4+3) ; allonge de 1,50 m.
+  Déplacement terrestre et nage à 18 m, creusement à 9 m, vol à 45 m avec une manœuvrabilité moyenne, par action de déplacement.
+
+resource: Nappe de brouillard | constant | pouvoir magique, NLS 9 ; gêne aussi la vue du dragon
+resource: Façonnage de la glace | à volonté | modèle la glace ou la neige existante, comme façonnage de la pierre ; NLS 9
+
+step: Il peut préparer le terrain
+  do: Choisir une zone glacée avec des obstacles qui coupent les lignes de tir ; modeler une cache et une issue dans la glace ou la neige, en plusieurs utilisations si nécessaire
+  note: La marche sur la glace lui permet de franchir les surfaces glacées sans pénalité et d'en escalader les parois.
+
+step: Des intrus approchent
+  do: Se cacher avec Discrétion +14 et observer avec Perception +15 ; attendre qu'une cible s'écarte du groupe
+  note: Vision dans le noir à 36 m, vision nocturne et vision dans la neige. La neige ne pénalise pas sa Perception ; cela ne lui permet pas de voir à travers le brouillard.
+
+## Ouverture
+
+step: Une cible isolée est accessible en vol
+  do: Utiliser Attaque en vol : approcher, porter une morsure avec Frappe décisive mythique, puis poursuivre le mouvement vers un couvert ; déplacement total maximal de 45 m
+  note: Morsure +15, 2d8+18 avec Frappe décisive mythique. Cette attaque unique remplace l'attaque à outrance ; Attaque en vol n'empêche pas les attaques d'opportunité.
+
+step: Une cible est déjà à 1,50 m et il peut rester sur place
+  do: Faire une attaque à outrance : morsure +15 (1d8+9), 2 griffes +15 (1d6+6), 2 ailes +10 (1d4+3)
+  note: Concentrer les attaques sur une cible vulnérable ; donner la priorité à un adversaire qui emploie le feu s'il est accessible.
+
+## Rounds suivants
+
+step: La cible reste au contact sans que ses alliés puissent encercler le dragon
+  do: Répéter l'attaque à outrance ; ajuster sa position par un pas de 1,50 m si nécessaire
+  note: Contre une cible facile à toucher, employer Attaque en puissance mythique pour augmenter les dégâts au prix de la précision.
+
+step: Le groupe se rassemble ou menace de l'encercler
+  do: Reprendre les passages avec Attaque en vol et une seule morsure avec Frappe décisive mythique ; exploiter les obstacles et les parois glacées pour disperser la poursuite
+  note: Éviter de rester immobile au-dessus des ennemis ; privilégier une trajectoire de vol dégagée.
+
+step: Le brouillard sépare le dragon de ses adversaires
+  do: Repérer leur position par perception aveugle à 18 m, puis approcher une cible isolée
+  note: La perception aveugle localise sans supprimer le camouflage : dans le brouillard, 20 % d'échec à 1,50 m, 50 % au-delà. La nappe ne bloque pas les déplacements et ne cause aucun dégât.
+
+step: Une arme perforante ou tranchante blesse le dragon
+  do: Appliquer le sang draconique : l'assaillant subit 1d4 dégâts de froid, doublés si son attaque était un coup critique
+  note: Une arme à allonge protège son utilisateur de cette projection. Ce sang n'ajoute aucun dégât de froid aux attaques naturelles du dragon.
+
+## Repli
+
+step: Points de vie sous 40, ou attaques de feu répétées qu'il ne parvient pas à interrompre
+  do: Faire une retraite vers une issue, puis s'éloigner en vol à 45 m par déplacement ; si le ciel est dangereux, s'enfouir dans la neige à 9 m ou nager à 18 m par déplacement
+  note: Utiliser les obstacles et le brouillard pour rompre la poursuite ; sa réduction des dégâts ne protège pas du feu.

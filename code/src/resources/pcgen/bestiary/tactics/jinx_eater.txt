@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Jinx Eater, tengu mâle, roublard charlatan de niveau 3, chaotique neutre ; FP 2. Manipulateur solitaire, il privilégie la ruse, les tirs à couvert et la fuite.
+  20 pv ; CA 16, contact 13, pris au dépourvu 13 ; initiative +7 ; déplacement de 9 m ; allonge de 1,50 m ; vision nocturne.
+  Rapière de maître +6 (1d6-1, critique 18-20) ; arbalète légère de maître +6 (1d8, critique 19-20).
+  Discrétion +11, Perception +10, Bluff +7, Psychologie +8, Évasion +9. Ses mensonges servent à éviter ou à détourner l'affrontement.
+
+resource: Carreaux d'arbalète | 20 | un carreau par tir
+resource: Potions de soins légers | 2 | se soigner une fois à couvert
+resource: Potion d'invisibilité | 1 | couvrir une fuite ; attaquer met fin à l'invisibilité
+resource: Bâtons fumigènes | 2 | masquer les lignes de vue pour décrocher
+resource: Sacoche immobilisante | 1 | tenter de ralentir un adversaire qui approche
+resource: Feu grégeois | 1 | attaque de zone limitée contre des ennemis rapprochés
+resource: Pierre à tonnerre | 1 | tenter d'assourdir des poursuivants
+resource: Antitoxine | 1 | à boire avant une exposition prévisible au poison
+
+step: Il peut préparer le terrain
+  do: Charger l'arbalète, repérer un couvert et un chemin de fuite, puis se dissimuler avec Discrétion +11.
+  note: Perception +10 et vision nocturne l'aident à surveiller les approches ; il ne voit pas dans l'obscurité totale.
+
+step: Une conversation reste possible
+  do: Employer Bluff +7 ou Diplomatie +7 pour désamorcer la rencontre, détourner les soupçons ou obtenir le temps de s'éloigner.
+  note: Ses mensonges ne contraignent pas magiquement ses interlocuteurs.
+
+## Ouverture
+
+step: Les ennemis sont à distance et le combat devient inévitable
+  do: Tirer à l'arbalète depuis son couvert sur un ennemi exposé, puis gagner une meilleure position si nécessaire.
+  note: Il privilégie les cibles peu protégées et conserve une issue derrière lui.
+
+step: Un adversaire rapide menace de le rejoindre
+  do: Lancer la sacoche immobilisante pour tenter de ralentir cet adversaire, puis prendre de la distance si ses actions restantes le permettent.
+
+step: Un ennemi est déjà au contact
+  do: Dégainer la rapière et frapper à +6 s'il peut le faire sans s'exposer inutilement ; sinon, se désengager vers son issue.
+  note: Sa rapière inflige peu de dégâts : il évite un échange prolongé avec un combattant de mêlée.
+
+## Rounds suivants
+
+step: Il peut tirer sans ennemi adjacent
+  do: Recharger l'arbalète puis tirer à +6, en restant à couvert.
+  note: Recharger demande une action de mouvement ; s'il doit aussi parcourir 9 m, consacrer le round à recharger et à se déplacer.
+
+step: Plusieurs ennemis sont assez rapprochés pour subir les éclaboussures
+  do: Envisager le feu grégeois, en visant une cible accessible sans s'approcher du corps à corps.
+  note: Le lancer remplace son attaque de ce round ; il ne dispose que d'une fiole.
+
+step: Un ennemi maintient le contact et une issue reste accessible
+  do: Faire un pas de placement de 1,50 m si cela suffit à sortir de son allonge ; sinon, privilégier le désengagement.
+  note: Il ne recharge pas son arbalète à portée d'un adversaire capable de le frapper.
+
+step: Il subit un effet autorisant un jet de Réflexes pour réduire les dégâts de moitié
+  do: Appliquer esquive totale : aucun dégât si son jet de Réflexes +6 réussit.
+
+## Repli
+
+step: Ses points de vie tombent à 8 ou moins, ou plusieurs ennemis l'encerclent
+  do: Chercher à rompre le contact, puis utiliser un bâton fumigène pour masquer sa fuite dès qu'il peut le faire sans s'exposer.
+  note: Activer le bâton et se déplacer consomment leurs actions normales ; la fumée gêne aussi sa propre vision.
+
+step: Il a rompu le contact mais reste poursuivi
+  do: Boire la potion d'invisibilité, puis fuir vers l'issue préparée et se dissimuler avec Discrétion +11.
+  note: Ne plus attaquer pendant la fuite ; l'invisibilité ne supprime ni ses bruits ni ses traces.
+
+step: Des poursuivants restent groupés derrière lui et il peut lancer sans danger
+  do: Employer la pierre à tonnerre pour tenter de les assourdir, ou la sacoche immobilisante si elle reste disponible pour ralentir le plus proche.
+  note: Garder ses distances avec le point d'impact de la pierre.
+
+step: Il est à couvert, blessé et momentanément hors d'atteinte
+  do: Boire une potion de soins légers, puis reprendre sa fuite ; utiliser la seconde seulement si nécessaire.

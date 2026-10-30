@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Cavalière blanche (White Rider), fée de taille M, loyale neutre, calme et diplomate au service de Baba Yaga, sans être miséricordieuse. Elle privilégie l'arc et les pouvoirs de contrôle.
+  Arc long composite +2 à recherche +18/+13 (1d8+7, critique 19–20/x3) ; épée longue +1 +14/+9 (1d8+6, critique 19–20/x2). Aura aveuglante dans un rayon de 9 m, Vigueur DD 23.
+  136 pv ; CA 27, contact 17 ; RD 10/fer froid ; RM 22 ; immunité au froid et au poison. Déplacement à pied de 9 m ; allonge de 1,50 m.
+
+resource: Tempête de grêle | 5/jour | 3d6 contondants et 2d6 de froid, sans sauvegarde ; terrain difficile pendant 11 rounds
+resource: Flèches de l'aube | 5/jour | jusqu'à 50 projectiles pendant 110 minutes ; la moitié des dégâts échappe à la RD, +1d6 contre les morts-vivants et les créatures blessées par le soleil
+resource: Charme-monstre | 3/jour | Volonté DD 19 ; rend amical, sans donner le contrôle des actes
+resource: Cône de froid | 3/jour | cône de 18 m, 11d6 de froid ; Réflexes DD 20 pour moitié
+resource: Suggestion de groupe | 1/jour | Volonté DD 21 ; consigne raisonnable, comprise par les cibles
+resource: Détection de pensées | à volonté | Volonté DD 17 ; demande de la concentration
+resource: Zone de vérité | à volonté | Volonté DD 17 ; interdit les mensonges délibérés, sans obliger à répondre
+resource: Contact glacial | à volonté | contact, 1d6 d'énergie négative et 1 point de Force ; Vigueur DD 16 annule la perte de Force
+
+step: Une confrontation se prépare
+  do: Conjurer sa monture et se mettre en selle avant l'engagement ; repérer une voie dégagée pour tirer et se retirer.
+  note: À pied, elle se déplace de 9 m. Équitation +26 et Combat monté permettent de tenter d'éviter une attaque contre sa monture une fois par round.
+
+step: Elle dispose du temps de préparer ses munitions
+  do: Utiliser Flèches de l'aube sur un lot de flèches avant le combat.
+  note: Décompter cette utilisation des cinq disponibles ; cet effet n'ajoute pas 1d6 contre tous les adversaires.
+
+step: Les intrus acceptent de parler
+  do: Évaluer leurs intentions par Diplomatie +23 et Psychologie +24 ; employer Détection de pensées ou Zone de vérité si nécessaire.
+  note: Vision de l'invisibilité est constante ; Perception +24 et télépathie à 18 m. Charme-monstre peut faciliter un entretien avant toute menace ; une cible menacée par elle reçoit +5 à sa sauvegarde.
+
+## Ouverture
+
+step: Des ennemis entrent dans un rayon de 9 m
+  do: Activer l'aura de lumière aveuglante par une action libre.
+  note: Vigueur DD 23 ou cécité permanente ; une réussite protège cette créature contre l'aura pendant 24 heures. L'aura peut accompagner l'action principale du round.
+
+step: Plusieurs adversaires peuvent comprendre une consigne raisonnable
+  do: Employer Suggestion de groupe pour leur proposer de quitter les lieux et d'aller avertir leurs alliés du danger.
+  note: Volonté DD 21 ; éviter tout ordre manifestement suicidaire. Ne pas attaquer les créatures affectées : cela met fin au sort pour elles.
+
+step: Elle choisit de combattre et plusieurs ennemis sont regroupés
+  do: Ouvrir avec Tempête de grêle pour blesser le groupe et ralentir son approche.
+  note: Le cylindre a un rayon de 6 m ; la grêle cesse après les dégâts initiaux, le terrain difficile subsiste. Si le groupe est déjà dans un cône de 18 m et vulnérable au froid, préférer Cône de froid.
+
+step: Une cible isolée est exposée à ses flèches
+  do: Tirer à l'arc sur le lanceur de sorts ou l'adversaire à distance le plus dangereux.
+  note: Après un déplacement à pied supérieur à 1,50 m, un seul tir à +18 ; sans ce déplacement, choisir l'attaque à outrance décrite ci-dessous.
+
+## Rounds suivants
+
+step: Elle peut consacrer son round aux tirs
+  do: Effectuer une attaque à outrance avec Tir rapide : +16/+16/+11, chaque flèche infligeant 1d8+7.
+  note: Feu nourri ajoute une seconde flèche au premier jet ; les dégâts de critique ne s'appliquent qu'à l'une de ces deux flèches. À 9 m ou moins, Tir à bout portant porte les attaques à +17/+17/+12 et les dégâts à 1d8+8. Tir de précision évite le malus pour tirer sur une cible en mêlée.
+
+step: Une cible bénéficie d'un camouflage
+  do: La viser avec l'arc à recherche si sa case est connue.
+  note: La propriété annule les chances de rater dues au camouflage ; elle ne traverse pas les abris et ne révèle pas une position inconnue.
+
+step: Plusieurs ennemis restent groupés ou tentent de l'encercler
+  do: Employer Cône de froid s'ils sont vulnérables au froid ; sinon, Tempête de grêle conserve ses dégâts contondants et gêne les déplacements.
+  note: Un pouvoir magique remplace les tirs du round. Éviter de lancer ces pouvoirs au contact d'un ennemi capable de porter une attaque d'opportunité.
+
+step: Un adversaire arrive au contact
+  do: Faire un pas de placement de 1,50 m pour reprendre les tirs si cela suffit à sortir de sa zone de menace ; sinon, se dégager ou tirer l'épée.
+  note: Si elle commence son tour l'épée en main et reste sur place, attaque à outrance +14/+9, 1d8+6. L'aura menace les nouveaux arrivants, mais pas ceux qui ont déjà réussi leur sauvegarde.
+
+## Repli
+
+step: Ses points de vie tombent à 40 ou moins, ou sa position devient intenable
+  do: Rompre le contact et se retirer sur sa monture ; si elle est à pied, utiliser le retrait pour parcourir jusqu'à 18 m en terrain dégagé.
+  note: Le retrait protège seulement contre les attaques d'opportunité dues au départ de la première case. Face au fer froid, sa RD ne réduit pas les dégâts.
+
+step: Des poursuivants bloquent une voie de sortie
+  do: Si elle peut consacrer un round à les gêner sans être submergée, placer une Tempête de grêle sur leur trajet, puis repartir au round suivant.
+  note: Garder l'aura active contre les poursuivants encore susceptibles d'être aveuglés ; exploiter le terrain difficile pour creuser l'écart.

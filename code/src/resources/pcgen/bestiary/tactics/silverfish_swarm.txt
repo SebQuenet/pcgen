@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Nuée de lépismes de taille infime, vermine sans intelligence : 105 pv, CA 24, déplacement de 9 m. Elle occupe un espace de 3 m de côté et possède une allonge de 0 m.
+  Attaque de nuée : 3d6 dégâts plus 3d6 dégâts d'acide, sans jet d'attaque ; distraction : Vigueur DD 20 ou nausée pendant 1 round pour les créatures vivantes blessées.
+  Immunisée aux dégâts des armes et aux effets mentaux ; vision dans le noir à 18 m et odorat.
+
+step: Une créature est repérée
+  do: Se diriger vers la créature la plus proche, sans préparer d'embuscade ni coordonner de manœuvres.
+
+## Ouverture
+
+step: Une cible est accessible avec un déplacement de 9 m
+  do: Entrer dans son espace pour lui infliger les dégâts de nuée et d'acide ; appliquer la distraction.
+  note: La nuée doit occuper l'espace de sa victime pour la blesser. Chaque créature recouverte subit les dégâts.
+
+step: La cible est plus éloignée
+  do: Avancer vers elle ; effectuer un double déplacement, jusqu'à 18 m, si nécessaire pour la rejoindre.
+
+## Rounds suivants
+
+step: Une ou plusieurs victimes restent dans son espace
+  do: Les recouvrir et leur infliger de nouveau 3d6 dégâts plus 3d6 dégâts d'acide à chaque round.
+  note: Faire renouveler le jet de Vigueur DD 20 contre la distraction à chaque round où une créature vivante subit les dégâts de nuée.
+
+step: Les victimes quittent son espace
+  do: Suivre la créature accessible la plus proche et entrer de nouveau dans son espace.
+  note: La nausée limite les actions de la victime, mais ne l'empêche pas de se déplacer pour échapper à la nuée.
+
+## Repli
+
+step: La nuée perd des points de vie et des victimes restent accessibles
+  do: Continuer l'assaut instinctivement, sans organiser de retraite selon un seuil de points de vie.
+  note: Les armes ne lui infligent aucun dégât ; les attaques de zone lui infligent 50 % de dégâts supplémentaires.

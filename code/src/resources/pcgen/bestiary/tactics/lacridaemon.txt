@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Lacridaemon, extérieur daemon de taille M, neutre mauvais, FP 3. Prédateur discret : Discrétion +10, initiative +7, déplacement de 12 m, allonge de 1,50 m ; 30 pv, CA 15.
+  Au contact, attaque à outrance : morsure +5 (1d4+1, plus 1d4 de froid et poison) et 2 griffes +6 (1d4+1, plus 1d4 de froid chacune).
+  Il affaiblit un adversaire par ses pouvoirs avant de le déchirer. Aura de pleurs sur 30 m, vision dans le noir à 18 m et télépathie à 30 m.
+
+note: Défenses
+  Réduction des dégâts 5/bien ou argent ; résistance à la magie 14 ; résistances à l'électricité et au feu de 10.
+  Immunité à l'acide, au froid, aux effets de mort, aux maladies et au poison. Ces protections favorisent les échanges courts ; ses 30 pv ne permettent pas de rester encerclé.
+
+resource: Détection du Bien, détection de la magie, passage sans trace | constants | Repérage et approche ; passage sans trace ne le rend ni invisible ni silencieux.
+resource: Chagrin accablant (overwhelming grief) | 3/jour | Volonté DD 15 ; neutraliser temporairement un adversaire.
+resource: Téléportation | 3/jour | Lui-même et jusqu'à 50 livres d'objets seulement ; conserver une utilisation pour fuir.
+resource: Immobilisation de personne | 1/jour | Volonté DD 14 ; ne vise qu'un humanoïde.
+resource: Invisibilité | 1/jour | Préparer une embuscade ou couvrir une fuite ; une attaque met fin à l'invisibilité.
+resource: Collet (snare) | 1/jour | Préparer un piège sur un passage probable.
+resource: Convocation | 1/jour | Pouvoir de niveau 3 ; un lacridaemon, avec 50 % de chances de réussite.
+
+step: Il peut préparer le terrain avant l'arrivée des ennemis
+  do: Placer un collet sur leur passage probable et choisir une position cachée à proximité.
+  note: Repérer une destination connue pour une téléportation de repli.
+
+step: Une rencontre dangereuse est imminente et il dispose de temps
+  do: Tenter la convocation avant le combat, puis utiliser l'invisibilité pour se placer si nécessaire.
+  note: Ce sont des actions successives. Sur un échec de convocation, poursuivre seul ; sur une réussite, coordonner l'embuscade par télépathie.
+
+## Ouverture
+
+step: Un adversaire dangereux est visible et à portée de son pouvoir
+  do: Lancer chagrin accablant sur lui (Volonté DD 15), en gardant autant que possible ses distances avec les autres ennemis.
+  note: Choisir de préférence une cible encore libre d'agir ; neutraliser plusieurs adversaires exige plusieurs rounds.
+
+step: Un humanoïde isolé offre une meilleure occasion
+  do: Lancer immobilisation de personne sur lui (Volonté DD 14).
+  note: Cette option remplace le chagrin de ce round ; ne pas gaspiller ce pouvoir sur une créature d'un autre type.
+
+step: Une victime est déjà à 1,50 m et l'engagement est favorable
+  do: Attaque à outrance : morsure +5 et deux griffes +6.
+  note: Appliquer le froid à chaque attaque qui touche et le poison à la morsure.
+
+## Rounds suivants
+
+step: Une cible vulnérable est à portée de déplacement, mais hors de son allonge
+  do: S'approcher avec son déplacement de 12 m et porter une seule griffe +6 (1d4+1, plus 1d4 de froid).
+  note: Après ce déplacement, il ne peut pas effectuer son attaque à outrance ce round.
+
+step: Une victime reste au contact au début de son tour
+  do: Attaque à outrance, avec un pas de 1,50 m si nécessaire pour ajuster sa position.
+  note: Concentrer les attaques sur une même victime ; avec un autre lacridaemon, rechercher une prise en tenaille.
+
+step: Un adversaire neutralisé retrouve sa liberté et menace le combat
+  do: Employer une nouvelle utilisation de chagrin accablant (Volonté DD 15), si le lacridaemon peut lancer son pouvoir sans s'exposer inutilement.
+  note: Éviter de relancer ce pouvoir sur une cible déjà neutralisée tant qu'un autre ennemi reste dangereux.
+
+step: Plusieurs ennemis l'encerclent ou un porteur d'arme bonne ou en argent le prend pour cible
+  do: Chercher une sortie et cesser de privilégier l'attaque à outrance ; se replier si le groupe conserve l'avantage.
+  note: Une arme bonne ou en argent traverse sa réduction des dégâts.
+
+## Repli
+
+step: Points de vie à 10 ou moins, ou combat devenu nettement défavorable
+  do: Si possible, faire un pas de 1,50 m hors de l'allonge ennemie, puis utiliser téléportation vers la destination connue.
+  note: Le pouvoir n'emporte aucun allié. La téléportation peut provoquer une attaque d'opportunité s'il reste menacé.
+
+step: Téléportation épuisée ou inutilisable
+  do: Utiliser l'invisibilité si elle reste disponible, puis fuir ; sinon, effectuer un retrait pour quitter le contact.
+  note: Avec son déplacement de 12 m, un retrait permet normalement de parcourir jusqu'à 24 m. Chercher ensuite un couvert et se cacher avec Discrétion +10.

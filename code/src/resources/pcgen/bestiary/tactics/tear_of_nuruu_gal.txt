@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  La Larme de Nuruu'gal est une vase de feu de taille P, peu intelligente, dotée de 62 pv. Son coup +7 inflige 1d6+3 dégâts, avec brûlure et étreinte ; son allonge est de 1,50 m et son bonus de lutte de +8.
+  Elle dispose de flammes à volonté et de lumière brûlante 3 fois par jour, avec une attaque de contact à distance de -1. Ses pouvoirs magiques ont un NLS de 5.
+  Sa CA de 6 la rend facile à toucher ; elle compte sur sa RD 5/—, sa RM 17, son immunité au feu et les immunités des vases. Le froid est sa principale faiblesse.
+  Elle se déplace et escalade à 3 m ; sa vision aveugle porte à 18 m et sa télépathie à 30 m.
+
+resource: Lumière brûlante | 3/jour | attaque de contact à distance -1
+resource: Flammes | à volonté | attaque de contact à distance -1 pour une flamme lancée
+resource: Détection de pensées | à volonté | Volonté DD 7
+
+step: Elle peut choisir son emplacement
+  do: Attendre près d'un passage étroit ou d'un obstacle qui oblige les intrus à approcher à 1,50 m.
+  note: Sa faible vitesse et son initiative de -5 rendent une poursuite en terrain ouvert peu favorable.
+
+step: Une présence suspecte est repérée avant l'affrontement
+  do: Utiliser détection de pensées pour tenter de préciser ses intentions, puis préparer flammes si le combat paraît imminent.
+  note: Le DD 7 rend la lecture des pensées peu fiable ; une résistance à ce pouvoir ne signifie pas que la zone est vide.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m
+  do: Frapper avec le coup +7, infligeant 1d6+3 dégâts et la brûlure ; tenter l'étreinte à +8 si la taille de la cible le permet.
+  note: Le contact est son meilleur moyen de toucher ; privilégier une cible isolée plutôt que s'exposer au milieu du groupe.
+
+step: Aucun ennemi ne la menace au corps à corps et une cible est repérée à distance
+  do: Utiliser lumière brûlante contre cette cible, puis avancer de 3 m vers un passage où elle pourra combattre au contact.
+  note: Chaque rayon demande une attaque de contact à distance à -1 ; ne pas compter sur un tir pour arrêter à lui seul un adversaire.
+
+## Rounds suivants
+
+step: Une cible est agrippée
+  do: Tenter de maintenir la lutte à +8 pour lui infliger les dégâts du coup.
+  note: L'étreinte ne fournit ici aucun effet de constriction ni de symbiose décrit ; s'en tenir aux attaques et à la lutte.
+
+step: Une cible reste à portée et aucune lutte n'est engagée
+  do: Répéter le coup +7 avec brûlure et tenter une nouvelle étreinte lorsque la cible peut être saisie.
+
+step: Les adversaires restent hors de portée et aucun ne la menace
+  do: Employer les utilisations restantes de lumière brûlante, puis lancer les flammes préparées ; réactiver flammes si nécessaire.
+  note: Rester près des obstacles ; sa vitesse de 3 m ne permet pas de rattraper facilement un adversaire mobile.
+
+step: Un adversaire vient de lui infliger des dégâts de froid
+  do: Le viser en priorité s'il est accessible ; sinon, chercher un obstacle qui coupe sa ligne de tir.
+  note: L'immunité au feu ne protège pas du froid, auquel elle est vulnérable.
+
+## Repli
+
+step: Ses pv tombent à 15 ou moins, ou le froid continue de la frapper sans qu'elle puisse atteindre son assaillant
+  do: Abandonner la lutte éventuelle et gagner l'abri le plus proche ; escalader à 3 m si le terrain permet de quitter la portée des poursuivants.
+  note: Sa lenteur impose de chercher un refuge proche ; une longue fuite à découvert l'expose aux tirs.

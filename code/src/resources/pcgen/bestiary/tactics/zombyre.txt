@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Zombyre, mort-vivant aquatique et extraplanaire, neutre mauvais, peu intelligent : 37 PV, CA 15.
+  Coup +6 (1d8+3 et agrippement), morsure +6 (1d6+3 et maladie) ; allonge de 1,50 m.
+  Marche à 6 m, nage à 18 m ; vision dans le noir à 18 m ; aura de nausée dans un rayon de 3 m, DD 14.
+  Il comprend le commun sans pouvoir parler. Résistance au feu 20, vulnérabilité à l’électricité, immunités des morts-vivants et aux effets du Styx.
+
+note: Chancelant
+  Chaque round, il choisit entre une action de mouvement et une action simple. Il ne peut pas effectuer d’attaque à outrance, ni se déplacer normalement puis attaquer dans le même round.
+
+step: Des intrus approchent de l’eau
+  do: Rester dans l’eau, près de leur passage, et les laisser venir à portée.
+  note: Sa nage lui permet de se placer beaucoup plus vite que sa marche ; il privilégie un combat dans son élément.
+
+## Ouverture
+
+step: Aucun ennemi à portée de 1,50 m
+  do: Nager jusqu’à 18 m pour se rapprocher de la cible accessible la plus proche.
+  note: Sur terre, avancer jusqu’à 6 m. Ce déplacement consomme son action du round ; son aura concerne les ennemis qui se trouvent à 3 m ou moins.
+
+step: Un ennemi est à portée de 1,50 m
+  do: Porter un coup +6, infligeant 1d8+3 dégâts, puis tenter l’agrippement associé si le coup touche.
+  note: L’agrippement associé au coup ne lui permet pas d’ajouter une morsure ce round.
+
+resource: Aura de nausée | permanente | rayon de 3 m, DD 14
+
+## Rounds suivants
+
+step: Une victime est agrippée
+  do: Consacrer son action simple à maintenir la lutte et, sur une réussite, la déplacer avec lui vers l’eau profonde si le terrain le permet.
+  note: Le déplacement d’une victime en lutte nécessite une manœuvre réussie ; il ne l’entraîne pas automatiquement après chaque coup.
+
+step: Un ennemi est au contact sans être agrippé
+  do: Répéter le coup pour tenter de l’agripper ; choisir une morsure +6, infligeant 1d6+3 dégâts et exposant la cible à sa maladie, si l’objectif est de le contaminer.
+  note: Une seule de ces attaques pendant son tour. Le bloc ne précise ni le DD ni les effets de la maladie.
+
+step: La cible paraît facile à toucher
+  do: Utiliser Attaque en puissance : coup +5 (1d8+5) ou morsure +5 (1d6+5).
+  note: Conserver les attaques normales contre une cible difficile à toucher.
+
+step: L’ennemi rompt le contact
+  do: Consacrer le round à le rejoindre, en nageant dès que possible.
+  note: Rester près des adversaires permet de les maintenir dans le rayon de 3 m de l’aura ; celle-ci n’immobilise personne.
+
+## Repli
+
+step: À 9 PV ou moins, ou sous des attaques électriques répétées, si une fuite est possible
+  do: Lâcher toute victime agrippée et nager jusqu’à 18 m par round vers les profondeurs ou le Styx accessible.
+  note: Ses immunités aux effets du Styx favorisent cette voie de fuite. Aucun soin chiffré n’est fourni pour sa guérison stygienne.
+
+step: Aucune fuite accessible
+  do: Continuer à porter un coup ou une morsure par round contre l’ennemi à portée.

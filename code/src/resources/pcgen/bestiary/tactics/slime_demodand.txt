@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Démodand visqueux, extérieur chaotique mauvais de taille M, FP 13 ; cruel et intelligent, il affaiblit ses victimes avant de les déchirer au contact.
+  136 pv, CA 28 ; deux griffes +22 (1d6+8 plus 1d6 d'acide chacune), morsure +21 (1d8+8 plus 1d6 d'acide) ; allonge 1,50 m.
+  Déplacement terrestre 12 m, vol 15 m par round, manœuvrabilité moyenne ; vision dans le noir à 36 m.
+
+note: Défenses
+  Réduction des dégâts 10, surmontée par une arme à la fois bonne et magique ; résistance à la magie 24.
+  Immunité à l'acide, au poison et aux effets mentaux ; résistance au froid 10 et au feu 10.
+
+resource: Pouvoirs magiques à volonté | illimité | détection du Bien, détection de la magie, détection des pensées (Volonté DD 16), terreur (Volonté DD 18), état gazeux, invisibilité personnelle, cercle magique contre le Bien, détection de l'invisibilité, don des langues ; NLS 13
+resource: Brouillard acide | 3/jour | isoler des adversaires et leur infliger des dégâts d'acide
+resource: Dissipation de la magie | 3/jour | retirer une protection ou un renforcement gênant
+resource: Nappe de brouillard | 3/jour | masquer une approche ou un repli
+resource: Rayon affaiblissant | 3/jour | affaiblir le combattant physiquement le plus dangereux
+resource: Convocation | 1/jour | une tentative : 1d4 démodands goudronneux avec 50 % de réussite, ou un démodand visqueux avec 20 % ; équivalent à un sort de niveau 6
+
+step: Il dispose de quelques rounds avant l'affrontement
+  do: Activer successivement cercle magique contre le Bien, détection de l'invisibilité et invisibilité personnelle.
+  note: Observer à couvert avec Perception +22 ; utiliser les détections pour repérer les adversaires et leurs protections, sans supposer qu'elles révèlent tout instantanément.
+
+step: Un combat difficile est imminent et il peut préparer des renforts
+  do: Tenter de convoquer 1d4 démodands goudronneux pour multiplier les adversaires au contact.
+  note: La tentative consomme l'unique utilisation quotidienne même en cas d'échec.
+
+## Ouverture
+
+step: Le combattant ennemi le plus puissant est visible et hors de sa portée de mêlée
+  do: Ouvrir avec rayon affaiblissant, puis se placer pour engager une cible isolée.
+  note: Cette attaque met fin à son invisibilité ; ne pas ajouter une attaque à outrance au même round.
+
+step: Plusieurs adversaires peuvent être pris dans le même cône
+  do: Choisir terreur à la place du rayon affaiblissant pour disperser le groupe, Volonté DD 18.
+  note: Exploiter la séparation pour attaquer ceux qui restent ; une sauvegarde réussie réduit l'effet à secoué pendant 1 round.
+
+step: Les adversaires restent groupés à distance et se soutiennent
+  do: Placer un brouillard acide sur une partie du groupe et garder une cible accessible hors du nuage.
+  note: Il est immunisé aux dégâts d'acide, mais subit lui aussi les restrictions de déplacement et de vision du brouillard.
+
+## Rounds suivants
+
+step: Une cible est à 1,50 m et une attaque à outrance est possible
+  do: Concentrer les deux griffes +22 et la morsure +21 sur elle.
+  note: Enslime : si les trois attaques naturelles touchent la même cible dans le round, ajouter 1d6 de dégâts d'acide.
+
+step: Des ennemis vivants sont exposés à sa puanteur
+  do: Appliquer l'aura de puanteur, Vigueur DD 21 ; état fiévreux pendant 2d6 rounds en cas d'échec.
+  note: L'état fiévreux pénalise notamment les attaques et les sauvegardes ; il ne prive pas la victime de ses actions. Une sauvegarde réussie immunise contre cette puanteur pendant 24 heures.
+
+step: Un adversaire le frappe à mains nues ou avec une arme naturelle
+  do: Infliger 1d6 de dégâts d'acide à l'attaquant pour chaque attaque qui touche, grâce à sa peau visqueuse.
+
+step: Il doit avancer pour atteindre plusieurs ennemis adjacents entre eux
+  do: Après le déplacement, envisager Enchaînement ou Succession d'enchaînements plutôt qu'une seule attaque.
+  note: Chaque nouvelle attaque exige que la précédente touche ; aucune cible ne peut être frappée deux fois par cet enchaînement. Sa CA baisse de 2 jusqu'à son prochain tour.
+
+step: Une cible facile à toucher doit être achevée rapidement
+  do: Employer Attaque en puissance : griffes +18 (1d6+16 plus 1d6 d'acide), morsure +17 (1d8+16 plus 1d6 d'acide).
+  note: Contre une forte CA, conserver les bonus normaux pour favoriser les trois touches nécessaires à enslime.
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Consacrer son action à dissipation de la magie sur cette protection, puis reprendre la mêlée au round suivant.
+
+## Repli
+
+step: Ses points de vie tombent à 40 ou moins, ou ses défenses sont régulièrement contournées
+  do: Rompre le contact et rejoindre un couvert en volant à 15 m par déplacement.
+  note: Utiliser le retrait si nécessaire pour limiter les attaques d'opportunité ; laisser les renforts déjà présents retenir les poursuivants.
+
+step: Il peut masquer sa fuite sans rester au contact
+  do: Lancer nappe de brouillard, puis invisibilité personnelle à un round ultérieur et s'éloigner par les airs.
+  note: Les poursuivants capables de voir l'invisible restent dangereux ; changer de direction derrière un obstacle.
+
+step: Une ouverture étroite permet d'échapper aux poursuivants
+  do: Prendre un état gazeux et se glisser par cette ouverture.
+  note: Cette forme impose un vol lent de 3 m ; la réserver aux passages inaccessibles à sa forme normale.

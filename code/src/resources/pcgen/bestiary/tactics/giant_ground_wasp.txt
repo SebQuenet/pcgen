@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Guêpe terrestre géante, vermine de petite taille des déserts chauds, sans intelligence. Elle agit par instinct, seule ou au sein d'une colonie de 2 à 20 individus.
+  39 points de vie, CA 17 ; morsure +7 (1d6+2), dard +7 (1d4+2 et poison). Allonge : 1,50 m. Immunité aux effets mentaux.
+  Déplacement terrestre : 6 m ; creusement : 3 m ; vol : 12 m, manœuvrabilité moyenne. Vision dans le noir : 18 m ; Perception +4.
+
+resource: Poison du dard | À chaque blessure infligée par le dard | Le bloc fourni ne précise ni le DD, ni les effets, ni la fréquence du poison.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +4 et se préparer à attaquer la cible accessible la plus proche.
+  note: Son comportement reste instinctif ; elle ne distingue pas les rôles tactiques des adversaires.
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : morsure +7 (1d6+2) et dard +7 (1d4+2 et poison).
+
+step: Une cible peut être rejointe en un déplacement
+  do: Avancer jusqu'au contact, au sol jusqu'à 6 m ou en vol jusqu'à 12 m, puis porter une attaque de dard +7 (1d4+2 et poison).
+  note: Après ce déplacement, elle ne porte qu'une seule attaque naturelle.
+
+step: Aucun adversaire n'est accessible en un déplacement
+  do: Se rapprocher en vol ; un double déplacement permet de parcourir jusqu'à 24 m sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter l'attaque à outrance, avec la morsure et le dard aux bonus et dégâts indiqués.
+  note: Chaque nouvelle blessure de dard applique le poison selon ses règles, à compléter depuis la source puisque le bloc fourni les omet.
+
+step: La cible s'éloigne
+  do: La poursuivre au sol ou en vol, puis utiliser le dard si elle reste accessible après un seul déplacement.
+  note: Pour attaquer à outrance, limiter le déplacement à un pas de 1,50 m sur un terrain qui l'autorise.
+
+step: Plusieurs guêpes combattent ensemble
+  do: Faire attaquer à chacune un adversaire accessible, avec morsure et dard si elle peut rester sur place.
+  note: Elles ne mettent pas en place de coordination élaborée.
+
+## Repli
+
+step: La fuite devient nécessaire et un sol meuble est accessible
+  do: Rompre le contact par un retrait, puis s'enfouir à 3 m par round dès que possible.
+  note: Le retrait et l'enfouissement peuvent demander des rounds distincts ; le creusement sert à quitter le combat.
+
+step: La fuite devient nécessaire sans possibilité de creuser
+  do: Se retirer en vol, puis s'éloigner à 12 m par déplacement.

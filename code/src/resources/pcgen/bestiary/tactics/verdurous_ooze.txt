@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Verdurous Ooze, vase verdoyante solitaire de taille M, neutre et sans intelligence ; 85 PV, CA 5. Elle attend les proies plutôt que de préparer une attaque.
+  Coup +9 à 1,50 m : 1d6+4 dégâts contondants et 1d6 d'acide, avec étreinte ; BMO de lutte +13. Déplacement : 6 m ; vision aveugle et perception des vibrations à 18 m.
+  Ses auras endorment les proies à 9 m et animent la végétation à 4,50 m.
+
+note: Défenses
+  Immunité à l'acide, au feu, aux effets mentaux et aux dégâts tranchants et perforants ; traits des vases. Impossible de lui faire un croc-en-jambe.
+  Sa CA très basse laisse passer les coups ; ses immunités et sa division assurent sa résistance.
+
+step: Dans une forêt ou une plaine
+  do: Rester immobile parmi les herbes et les racines ; Discrétion +16 dans ces milieux, contre -4 ailleurs.
+  note: Son aspect végétal dissimule un prédateur qui détecte les créatures de passage sans dépendre de la vue.
+
+## Ouverture
+
+step: Une créature vivante non végétale arrive à 9 m ou moins
+  do: Appliquer automatiquement l'aura de sommeil : Volonté DD 20 ou sommeil pendant 9 rounds.
+  note: Sommeil non magique ; les créatures immunisées au poison y sont immunisées. Réussite ou échec, une même créature ne subit plus cette aura de cette vase pendant 24 heures.
+
+step: Des adversaires se trouvent dans la végétation à 4,50 m ou moins
+  do: Appliquer l'aura d'animation : les plantes produisent un effet d'enchevêtrement, Réflexes DD 20 ; la zone devient un terrain difficile.
+  note: Cet effet est automatique et incontrôlé ; après dissipation, il revient en 1d4 rounds. La vase ne choisit pas ses victimes.
+
+step: Une proie endormie ou proche est accessible
+  do: Avancer vers elle, puis porter un coup si elle est à 1,50 m ; sur une touche contre une cible de taille M ou inférieure, tenter gratuitement l'étreinte à +13, sans attaque d'opportunité.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte pour lui infliger à nouveau les dégâts du coup, soit 1d6+4 et 1d6 d'acide.
+
+step: Aucune proie n'est agrippée
+  do: Continuer à frapper la proie accessible ; si nécessaire, ramper vers une victime endormie ou entravée, puis recommencer coup et étreinte.
+  note: Les auras continuent sans action ; ne pas imposer un nouveau jet de sommeil chaque round à une cible déjà exposée.
+
+step: Une attaque tranchante ou perforante infligerait au moins 10 dégâts et la vase a plus de 15 PV
+  do: Annuler ces dégâts et remplacer la vase par deux vases identiques, chacune avec la moitié de ses PV actuels, arrondie à l'inférieur.
+  note: Les dégâts de plusieurs attaques ne se cumulent pas pour déclencher la division. À 15 PV ou moins, aucune nouvelle division ; l'immunité demeure. Chaque moitié poursuit son alimentation sans coordination.
+
+## Repli
+
+step: Même grièvement blessée
+  do: Continuer à attaquer ou à dévorer la proie accessible, sans retraite organisée ; mourir à 0 PV.
+  note: Cette vase sans intelligence ne négocie pas et ne prépare aucune fuite.

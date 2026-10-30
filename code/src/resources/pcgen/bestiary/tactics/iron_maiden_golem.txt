@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Golem de vierge de fer, créature artificielle neutre de taille G, sans Intelligence. Il broie ses adversaires et cherche à capturer une victime pour alimenter son corps creux.
+  96 pv ; CA 25, contact 9 ; deux coups +19, chacun à 2d10+8 avec saisie. Allonge et espace occupé : 3 m ; déplacement : 6 m ; vision dans le noir : 18 m.
+
+note: Défenses
+  Réduction des dégâts 15/adamantium, immunités des créatures artificielles et immunité aux sorts autorisant la résistance à la magie. La rouille l'affecte normalement.
+
+step: Il garde un passage selon ses consignes
+  do: Attendre à portée de ses coups et engager les intrus qui franchissent sa zone de garde
+  note: Sans hôte identifié, employer les caractéristiques fournies ; ne lui attribuer aucun don ni pouvoir de classe supplémentaire.
+
+## Ouverture
+
+step: Un adversaire est à 3 m ou moins
+  do: Attaque à outrance : deux coups +19, chacun à 2d10+8 avec saisie
+  note: Privilégier un humanoïde vivant de taille M si son compartiment est vide, pour préparer son enfermement. La saisie ne vaut pas enfermement automatique.
+
+step: Aucun adversaire n'est à portée
+  do: Avancer de 6 m au maximum et porter un seul coup +19 si une cible devient accessible à 3 m
+
+## Rounds suivants
+
+step: Une victime vivante de taille M a été placée dans son compartiment
+  do: Fermer le couvercle et poursuivre le combat contre les autres intrus
+  note: Les lames infligent 50 dégâts perforants par round. Le verrou magique permet une ouverture par Force DD 34 ou dissipation de la magie ; déblocage échoue.
+
+step: La victime enfermée meurt
+  do: Appliquer Hôte animé au round suivant, puis Vol d'essence
+  note: Le zombie enfermé fournit 10 pv temporaires et ses capacités non magiques admissibles ; conserver les caractéristiques du golem et respecter les prérequis des dons. Aucun sort acquis. Le zombie reste protégé dans le compartiment fermé.
+
+step: Des adversaires restent à portée
+  do: Répéter les deux coups ; rechercher une saisie si le compartiment est encore vide
+  note: Si la cible ne peut pas y entrer, continuer à la frapper.
+
+step: Une attaque magique électrique ou de feu le touche
+  do: Appliquer ses réactions magiques particulières
+  note: Électricité : lenteur pendant 3 rounds, sans sauvegarde. Feu : annule la lenteur et rend 1 pv par tranche de 3 dégâts ; l'excédent devient temporaire.
+
+## Repli
+
+step: Ses points de vie diminuent, sans ordre de retrait
+  do: Continuer à exécuter ses consignes jusqu'à sa destruction
+  note: Aucun seuil de fuite fondé sur la peur pour cette créature sans Intelligence.
+
+step: Ses consignes prévoient un retrait
+  do: Revenir au poste désigné à 6 m par déplacement, en conservant son hôte enfermé

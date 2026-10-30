@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Stalk Beetle, coléoptère de taille M des déserts chauds du Rahadoum ; vermine sans Intelligence, qui agit par instinct.
+  22 pv, CA 16 ; morsure +6 (1d6+4), allonge 1,50 m. Aucun poison ni attaque à distance.
+  Déplacement 9 m, creusement 3 m, escalade 6 m ; Escalade +11, vision dans le noir à 18 m, Perception +0.
+  Immunisé aux effets mentaux ; DMD 17, 25 contre le croc-en-jambe.
+
+step: Le terrain offre du sable ou un sol meuble
+  do: Utiliser le creusement pour s'abriter avant l'approche des adversaires
+  note: Il ne possède aucun sens lui permettant de localiser une cible à travers le sol ; il doit revenir en surface pour la repérer.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m ou moins
+  do: Mordre : +6 au toucher, 1d6+4 dégâts
+
+step: Un ennemi repéré est hors de portée
+  do: Avancer de 9 m au maximum, puis mordre si la cible est à portée
+  note: Son comportement reste direct et instinctif ; il ne coordonne pas de manœuvre complexe.
+
+## Rounds suivants
+
+step: Un ennemi reste au contact
+  do: Répéter la morsure +6 (1d6+4) chaque round
+  note: Il ne dispose que d'une attaque de morsure ; aucune saisie automatique ni attaque supplémentaire.
+
+step: La cible s'éloigne
+  do: La poursuivre au sol et mordre dès qu'un déplacement suffit à revenir à portée
+  note: S'il consacre deux déplacements à la poursuite, il parcourt jusqu'à 18 m au sol et ne mord pas ce round.
+
+step: Un obstacle sépare le coléoptère de sa cible
+  do: Grimper à 6 m ou creuser à 3 m dans un sol meuble pour contourner l'obstacle
+  note: Revenir en surface pour retrouver une cible perdue de vue ; le creusement ne permet pas de traverser la roche.
+
+## Repli
+
+step: Seuil de repli conseillé : 5 pv ou moins
+  do: Chercher un abri en creusant dans un sol meuble, ou grimper hors de portée si le terrain le permet
+  note: Ce repli est instinctif. S'il ne peut pas se dégager, continuer à mordre l'adversaire au contact.

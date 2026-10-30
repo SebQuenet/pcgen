@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Sonechard, général démoniaque d'Orcus, commande démons et morts-vivants ; intelligent et ambitieux, il sacrifie ses serviteurs pour préserver sa vie.
+  385 pv ; CA 46, contact 24 ; réduction des dégâts 20/fer froid et Bien ; résistance à la magie 32. Immunisé à l'électricité et au poison ; résistances acide, froid et feu 10.
+  Pic lourd +4 impie et sanglant +39/+34/+29/+24 (1d8+17, 19-20/x4, plus 1 point de saignement par coup) ; contre une cible bonne, ajouter les 2d6 dégâts de la propriété impie. Sans son arme : 2 griffes +34 (1d8+13).
+  Allonge 3 m ; marche 12 m, vol 24 m par déplacement, bonne manœuvrabilité. Puanteur à 6 m : Vigueur DD 32 ou nausée pendant 10 rounds. Aura maudite constante, DD 27 ; pouvoirs magiques au NLS 20.
+
+resource: Invocation de démons | 1/jour | réussite 100 % ; choisir notamment 1 balor ou 1 marilith
+resource: Invocation de morts-vivants | 1/jour | réussite 100 % ; choisir notamment 2d4 spectres ou 4d10 squelettes ou zombies ; utilisation distincte de l'invocation de démons
+resource: Destruction | 1/jour | Vigueur DD 26, effet partiel en cas de réussite
+resource: Boule de feu | 3/jour | Réflexes DD 22, demi-dégâts
+resource: Création de mort-vivant dominant | 3/jour | préparation de serviteurs avant la bataille
+
+step: Il dispose de temps et de cadavres avant l'arrivée des intrus
+  do: Préparer le terrain avec profanation, puis animation des morts ; employer création de mort-vivant ou création de mort-vivant dominant pour préparer d'autres serviteurs
+  note: Maître des morts-vivants permet d'animer jusqu'à 50 DV par utilisation, ou 100 DV avec profanation ; contrôler les créatures créées avant de compter sur leur obéissance
+
+step: Des serviteurs sont déjà présents
+  do: Placer squelettes et zombies sur les accès, conserver les autres morts-vivants sur les flancs et garder une voie d'envol
+  note: Commander les serviteurs verbalement ; sa télépathie porte à 30 m pour les créatures capables de comprendre une langue
+
+step: Les intrus approchent et il peut encore observer sans s'exposer
+  do: Employer détection de la magie et détection du Bien pour repérer les protections et les adversaires bons ; préparer ses invocations si l'affrontement est imminent
+  note: Ces détections demandent du temps et de la concentration ; elles ne révèlent pas instantanément toutes les défenses adverses
+
+## Ouverture
+
+step: Les renforts n'ont pas été invoqués et les serviteurs peuvent contenir l'assaut
+  do: Invoquer un balor ou une marilith ; lors d'un autre round disponible, employer l'invocation de morts-vivants pour renforcer les flancs ou barrer les accès
+  note: Chaque pouvoir ne permet qu'un choix dans sa liste ; les deux invocations ne constituent pas une seule action
+
+step: Une protection magique empêche ses attaques ou ses serviteurs d'être efficaces
+  do: Dissipation suprême ciblée sur le bénéficiaire, puis laisser les serviteurs exploiter la brèche
+  note: Pouvoir à volonté ; test de dissipation au NLS 20, sans garantie de supprimer tous les effets
+
+step: Plusieurs ennemis non mauvais de 20 DV ou moins se trouvent à 12 m ou moins
+  do: Blasphème, Volonté DD 26, pour briser leur assaut pendant que les serviteurs les pressent
+  note: Au NLS 20, les effets dépendent des DV : hébétement jusqu'à 20 DV, affaiblissement jusqu'à 19, paralysie jusqu'à 15 et mort jusqu'à 10 ; au-delà de 20 DV, aucun effet
+
+step: Une cible prioritaire est accessible et aucune neutralisation magique n'est plus urgente
+  do: Voler ou marcher jusqu'à portée de 3 m, puis porter une attaque de pic à +39
+  note: Chercher le soigneur ou le lanceur de sorts isolé ; l'approche expose aussi les créatures proches à sa puanteur. Un déplacement ordinaire ne permet pas ensuite les quatre attaques du pic
+
+## Rounds suivants
+
+step: Des créatures vivantes sont exposées à sa puanteur dans un rayon de 6 m
+  do: Faire résoudre Vigueur DD 32 ; profiter des 10 rounds de nausée pour concentrer les attaques sur les victimes
+  note: La puanteur agit sans action. Une sauvegarde réussie protège contre cette puanteur pendant 24 heures ; les créatures immunisées au poison n'en subissent pas l'effet
+
+step: Une cible reste à portée de 3 m au début de son tour
+  do: Attaque à outrance au pic : +39/+34/+29/+24, en concentrant les coups sur le même adversaire
+  note: Accumuler le saignement de l'arme et exploiter ses critiques 19-20/x4 ; employer Attaque en puissance contre une défense facile à toucher, en appliquant ses modificateurs aux valeurs indiquées
+
+step: Un adversaire bon le touche en mêlée
+  do: Résoudre la riposte de l'aura maudite : Vigueur DD 27 ou 1d6 points d'affaiblissement de Force pour l'attaquant
+  note: Cet effet ne dépense pas son action ; il rend les échanges prolongés défavorables aux combattants bons
+
+step: Un ennemi paraît assez blessé pour avoir au plus 150 pv actuels
+  do: Mot de pouvoir étourdissant à volonté, puis faire attaquer cette cible par les serviteurs ; la frapper lui-même au round suivant si elle reste accessible
+  note: Aucun jet de sauvegarde, résistance à la magie applicable ; 101 à 150 pv : 1d4 rounds, 51 à 100 : 2d4 rounds, 50 ou moins : 4d4 rounds. Au-dessus de 150 pv, aucun effet ; Sonechard doit estimer les blessures
+
+step: Un adversaire vivant dangereux semble vulnérable aux effets de mort
+  do: Employer destruction, Vigueur DD 26, pour tenter de l'éliminer avant qu'il ne rétablisse son groupe
+  note: Réserver cette unique utilisation à une cible importante ; une sauvegarde réussie réduit l'effet aux dégâts prévus par le sort
+
+step: Les ennemis évitent le contact ou menacent ses flancs
+  do: Élever un mur de feu pour couper une approche, ou employer télékinésie, Volonté DD 24 lorsque le mode choisi l'autorise, pour gêner une cible ; rester en vol derrière les serviteurs
+  note: Ces pouvoirs sont à volonté. Contre des ennemis regroupés et exposés, employer ténèbres maudites, Volonté DD 23, ou une boule de feu, Réflexes DD 22, sans englober ses propres troupes vulnérables
+
+step: Des morts-vivants ennemis interviennent
+  do: Employer contrôle des morts-vivants pour tenter de les retourner contre leurs alliés, plutôt que de gaspiller les coups du pic sur eux
+  note: Ne compter sur leur aide qu'après résolution du contrôle
+
+## Repli
+
+step: Ses points de vie passent sous 100, ou les ennemis traversent régulièrement ses défenses
+  do: Employer téléportation suprême vers un lieu connu et sûr, en abandonnant les serviteurs qui couvrent sa fuite
+  note: Pouvoir à volonté, limité à lui-même et à environ 22,7 kg d'objets ; il ne peut pas emporter ses alliés
+
+step: La téléportation est empêchée
+  do: Voler vers une issue, à 24 m par déplacement, en laissant les serviteurs retenir les poursuivants ; placer un mur de feu si cela permet de couper la poursuite
+  note: Si un effet magique identifiable bloque son départ, tenter dissipation suprême depuis une position protégée, puis renouveler la téléportation dès que possible

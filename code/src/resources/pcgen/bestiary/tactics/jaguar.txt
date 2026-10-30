@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Jaguar solitaire des forêts chaudes, animal de taille M ; 26 pv, CA 15, allonge de 1,50 m.
+  Deux griffes +7 (1d4+4 chacune), morsure +8 (1d8+4 et agrippement), bond et éventration : deux griffes +7 (1d4+4 chacune).
+  Déplacement terrestre de 12 m, escalade et nage de 6 m ; vision nocturne, odorat, Perception +9.
+
+step: Une proie approche sans l'avoir repéré
+  do: Se dissimuler dans les hautes herbes ou les broussailles épaisses et attendre une occasion de bondir sur une cible isolée
+  note: Discrétion +11, portée à +15 dans les broussailles épaisses et les hautes herbes ; utiliser l'odorat et Perception +9 pour suivre la proie
+
+step: Le terrain permet une approche à couvert
+  do: Se rapprocher en restant dissimulé ; utiliser au besoin l'escalade ou la nage pour atteindre une position favorable
+  note: Escalade +16 et Natation +16 ; garder une voie de fuite vers les arbres, les fourrés ou l'eau
+
+## Ouverture
+
+step: La proie est accessible par une charge en ligne droite et sans obstacle
+  do: Charger avec bond et porter la morsure, les deux griffes et les deux griffes d'éventration
+  note: La charge exige au moins 3 m de déplacement et permet jusqu'à 24 m sur terre ; elle donne +2 aux jets d'attaque et réduit la CA à 13 jusqu'au prochain tour
+
+step: La proie est déjà à 1,50 m et aucune charge n'est nécessaire
+  do: Porter une attaque à outrance avec la morsure +8 et les deux griffes +7
+  note: L'éventration ne s'ajoute pas automatiquement à cette attaque ; elle intervient lors d'un bond ou quand le jaguar commence son tour en lutte
+
+step: Une morsure touche
+  do: Tenter d'agripper gratuitement la proie grâce à l'agrippement
+  note: Cette tentative ne provoque pas d'attaque d'opportunité
+
+## Rounds suivants
+
+step: Le jaguar commence son tour en lutte avec sa proie
+  do: Tenter de maintenir la prise ; en cas de réussite, infliger les dégâts de morsure, et utiliser les deux griffes d'éventration +7 (1d4+4 chacune)
+  note: Les attaques d'éventration sont supplémentaires ; elles ne permettent pas une nouvelle attaque à outrance complète pendant le maintien de la lutte
+
+step: La prise a échoué ou la proie s'est libérée, mais elle reste à 1,50 m
+  do: Reprendre les attaques à outrance avec la morsure et les deux griffes ; tenter de nouveau l'agrippement si la morsure touche
+
+step: La proie s'éloigne et une nouvelle charge est possible
+  do: La rejoindre avec bond pour répéter l'attaque à outrance et les deux attaques d'éventration
+
+step: Aucun bond n'est possible et la proie est hors de portée
+  do: Se déplacer pour l'atteindre et porter une seule morsure si une action simple reste disponible
+  note: Un déplacement ordinaire ne permet pas de porter une attaque à outrance ce tour-ci
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou proie trop bien défendue
+  do: Abandonner la chasse et se retirer vers les fourrés, un arbre ou l'eau ; utiliser l'action de retraite si elle permet de quitter le contact
+  note: Fuir à 12 m sur terre, ou progresser à 6 m en escalade ou à la nage ; une fois hors de vue, se dissimuler à nouveau

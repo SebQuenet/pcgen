@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Golem momie, créature artificielle de taille M, neutre et dépourvue d'intelligence ; il applique les consignes reçues. 64 points de vie, CA 20, déplacement de 6 m, allonge de 1,50 m.
+  Deux coups +13, chacun infligeant 1d8+5 dégâts avec étreinte ; lutte +17. Vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+note: Protections
+  Réduction des dégâts de 10, surmontée par une attaque à la fois magique et perforante, ou à la fois magique et tranchante. Immunité à la magie et traits des créatures artificielles.
+
+step: En attente d'intrus
+  do: Rester au poste assigné et appliquer les conditions d'attaque fixées par ses consignes.
+  note: Sans intelligence, il ne prépare pas de ruse et n'évalue pas les capacités de ses adversaires.
+
+## Ouverture
+
+step: Un ennemi désigné par ses consignes est à plus de 7,50 m
+  do: Avancer vers lui, avec un double déplacement allant jusqu'à 12 m si nécessaire.
+  note: Un double déplacement ne lui laisse pas d'attaque ce round.
+
+step: Un ennemi est hors de portée, mais à 7,50 m ou moins
+  do: Avancer de 6 m au maximum pour arriver à portée de 1,50 m, puis porter un seul coup +13 infligeant 1d8+5 dégâts.
+  note: Si le coup touche, tenter immédiatement l'étreinte avec un jet de lutte à +17.
+
+step: Un ennemi est déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance avec ses deux coups +13, chacun infligeant 1d8+5 dégâts.
+  note: Tenter l'étreinte à +17 dès qu'un coup touche ; une seule victime saisie suffit à l'occuper.
+
+## Rounds suivants
+
+step: Une victime est prise dans son étreinte
+  do: Maintenir la lutte et, si le jet réussit, infliger les dégâts d'un coup, soit 1d8+5.
+  note: Utiliser son bonus de lutte de +17, augmenté du bonus de +5 au maintien si la victime ne s'est pas libérée depuis le round précédent.
+
+step: Aucune victime n'est saisie et un ennemi est à portée
+  do: Reprendre l'attaque à outrance avec deux coups +13 et tenter l'étreinte sur un coup réussi.
+
+step: Sa victime se libère et s'éloigne
+  do: La rejoindre si ses consignes l'exigent ; après un déplacement simple, porter un seul coup si elle est à portée.
+  note: Respecter les limites du poste ou de la zone à défendre prévues par ses consignes.
+
+## Repli
+
+step: Aucun ordre de repli ne s'applique
+  do: Continuer à combattre jusqu'à sa destruction, à 0 point de vie.
+  note: Il ne choisit pas de fuir parce que ses points de vie diminuent.
+
+step: Ses consignes imposent un repli
+  do: Rejoindre l'emplacement prévu, à 6 m par déplacement, en abandonnant toute lutte en cours.

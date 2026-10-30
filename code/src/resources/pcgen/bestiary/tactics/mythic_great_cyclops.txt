@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Grand cyclope mythique, géant de taille TG, chaotique mauvais, dominé par des visions de rage et de destruction. Il écrase ses adversaires avec une force démesurée.
+  Grande massue de maître +25/+20/+15 (3d8+21), corne +24 (1d8+14) ; rocher +12 (2d6+21). Espace et allonge de 4,50 m ; déplacement de 10,50 m.
+  243 pv, CA 32, réduction des dégâts 10/épique ; immunité au feu et à l'électricité. Perception +22, vision nocturne et vision dans les ténèbres, même magiques.
+
+resource: Chaîne d'éclairs | 1/jour | pouvoir magique, action simple, NLS 12, Réflexes DD 17 pour la cible principale
+resource: Éclair de brutalité | 1/jour | action rapide ; double la zone de critique de ses armes, de sa corne et de ses rochers jusqu'au début de son prochain tour ; se recharge une fois par jour lorsqu'il atteint 0 pv ou moins en restant conscient grâce à Dur à cuire
+
+step: Il peut choisir son terrain
+  do: Attendre dans un passage assez large pour son gabarit, où son allonge oblige les ennemis à s'approcher sous ses coups
+  note: L'obscurité existante l'avantage contre les adversaires qui n'y voient pas ; il ne dispose d'aucun pouvoir pour la créer
+
+note: Volonté de fer mythique
+  Pour ses sauvegardes de Volonté +14 contre un sort, un pouvoir magique ou surnaturel de source non mythique, lancer deux fois et conserver le meilleur résultat
+
+## Ouverture
+
+step: Plusieurs ennemis sont encore à distance et proches les uns des autres
+  do: Utiliser chaîne d'éclairs sur une cible centrale et choisir les autres ennemis situés à 9 m ou moins de celle-ci comme cibles secondaires
+  note: Privilégier une cible principale dangereuse et éviter les adversaires manifestement immunisés à l'électricité
+
+step: Il peut atteindre un adversaire avec un déplacement
+  do: Avancer de 10,50 m au maximum pour placer la cible dans son allonge de 4,50 m, puis porter un coup de massue +25 (3d8+21)
+  note: S'il commence déjà à portée, appliquer directement l'attaque à outrance des rounds suivants
+
+step: Il attaque et des ennemis le voient à 9 m ou moins
+  do: Activer gratuitement sa présence terrifiante ; Volonté DD 19 pour les adversaires ayant moins de 17 DV
+  note: Un échec les rend secoués, ou paniqués avec 4 DV ou moins, pendant 5d6 rounds ; une sauvegarde réussie les immunise à cette présence pendant 24 heures
+
+## Rounds suivants
+
+step: Une cible dangereuse reste à portée sans déplacement supérieur à un pas de 1,50 m
+  do: Déclencher l'éclair de brutalité s'il est disponible, puis attaquer à outrance : massue +25/+20/+15 (3d8+21) et corne +24 (1d8+14)
+  note: Concentrer les coups sur la même cible jusqu'à sa chute. Son don Mythic Critical Focus confirme automatiquement les menaces de critique contre les adversaires non mythiques
+  note: Réserver Attaque en puissance aux cibles faciles à toucher ; ses modificateurs doivent alors être appliqués aux valeurs indiquées
+
+step: Il doit se déplacer et deux ennemis sont ensuite dans son allonge
+  do: Utiliser Enchaînement mythique en action simple : massue +25 sur le premier ; s'il est touché, massue +25 sur le second
+  note: Les deux cibles peuvent ne pas être adjacentes entre elles ; il subit un malus de 2 à la CA jusqu'à son prochain tour
+
+step: Un adversaire corporel plus petit que lui bloque un passage ou se tient près d'un obstacle
+  do: Utiliser Coup fabuleux en action simple, BMO +28 contre le DMD, pour le projeter de 3 m et le mettre à terre
+  note: Choisir une direction qui dégage le passage ou heurte un obstacle ; une collision inflige 1d6 dégâts supplémentaires à la cible et à l'obstacle
+
+step: Les ennemis restent hors d'atteinte
+  do: Lancer un rocher +12 (2d6+21) s'il en dispose, ou avancer pour retrouver le corps à corps
+  note: Ne pas gaspiller plusieurs rounds à poursuivre un adversaire inaccessible si une autre cible est à portée
+
+## Repli
+
+step: Sous 60 pv, il ne parvient plus à menacer ses ennemis
+  do: Se retirer vers un couvert ou les ténèbres en utilisant l'action de retraite si le chemin le permet
+  note: Il ne possède ni soin ni moyen de fuite magique ; privilégier une issue assez large pour son gabarit
+
+step: À 0 pv ou moins, il reste conscient et une cible est encore à portée
+  do: Employer l'éclair de brutalité rechargé et porter un dernier coup de massue en action simple
+  note: À pv négatifs, Dur à cuire le limite à une action de mouvement ou une action simple par tour ; une action simple lui coûte ensuite 1 pv. Il meurt à -25 pv

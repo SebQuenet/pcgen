@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Vase de pierre de taille TG, neutre et dépourvue d'intelligence, qui combat par instinct. Elle encaisse avec 126 pv, mais sa CA de 3 la rend facile à toucher.
+  Coup +11 : 2d6+3 dégâts, plus 1d6 d'acide, étreinte et toucher pétrifiant. Constriction : 2d6+4 dégâts, plus 1d6 d'acide.
+  Déplacement et escalade : 6 m par round ; espace occupé : 4,50 m ; allonge : 3 m ; vision aveugle : 18 m.
+
+note: Défenses
+  Immunité au feu et aux effets mentaux, ainsi que les immunités propres aux vases. Elle ne cherche pas à esquiver les coups.
+  Le bloc mentionne des vulnérabilités raciales sans en préciser les effets : aucune faiblesse supplémentaire ne peut en être déduite.
+
+step: Elle est immobile sur une surface de pierre
+  do: Utiliser sa discrétion pour rester inaperçue jusqu'à l'approche d'une proie
+  note: Discrétion -3 sur une surface de pierre, contre -13 ailleurs ; elle ne prépare pas d'embuscade élaborée.
+
+step: Une créature entre dans les 18 m de sa vision aveugle
+  do: Réagir à sa présence et se diriger vers elle dès qu'un chemin le permet
+  note: Perception -5 ; sa vision aveugle ne lui permet pas de percevoir à travers les obstacles solides.
+
+## Ouverture
+
+step: Une proie est à plus de 3 m
+  do: Avancer de 6 m au maximum et porter un coup si la proie entre dans son allonge
+  note: Si un déplacement simple ne suffit pas, poursuivre ; elle ne dispose d'aucune attaque à distance.
+
+step: Une proie est à 3 m ou moins
+  do: Porter un coup +11, infliger 2d6+3 plus 1d6 d'acide et appliquer le toucher pétrifiant ; tenter l'étreinte si le coup touche
+  note: Le bloc ne fournit ni DD ni modalités pour le toucher pétrifiant ; ne pas lui attribuer une pétrification automatique.
+
+## Rounds suivants
+
+step: Elle tient une proie en lutte
+  do: Maintenir la lutte et appliquer la constriction à chaque test de lutte réussi : 2d6+4 plus 1d6 d'acide
+  note: BMO indiqué : +13. Elle continue instinctivement à écraser sa proie ; elle ne négocie pas et ne choisit pas ses victimes selon leur rôle.
+
+step: Sa proie se libère et reste dans son allonge
+  do: Porter un nouveau coup et tenter de la saisir à nouveau
+
+step: Sa proie s'éloigne hors de son allonge
+  do: La poursuivre à 6 m par déplacement ; emprunter les surfaces escaladables si cela permet de la rejoindre
+  note: Escalade +11 ; elle ne peut pas accélérer pour suivre une cible plus rapide indéfiniment.
+
+step: Une attaque de feu la frappe
+  do: Appliquer son immunité au feu et vérifier l'application de sa scission
+  note: Le bloc indique scission liée au feu et 10 pv, sans fournir les modalités de division ou de répartition des pv.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à frapper ou à maintenir son étreinte tant qu'une proie reste accessible
+  note: Aucun seuil de fuite : dépourvue d'intelligence, elle n'organise pas de retraite tactique, même près de 0 pv.
+
+step: Aucune proie n'est plus accessible ni repérée
+  do: Cesser la poursuite et reprendre son déplacement instinctif dans le milieu souterrain

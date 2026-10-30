@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Ioun Wyrd, créature artificielle neutre de taille TP, formée de pierres et de gemmes en suspension. Avec 5 pv et une CA de 15, il évite les échanges de coups.
+  Seule attaque : coup +0 (1d4-3), allonge 0 m ; il doit entrer dans l'espace adverse pour frapper. Vol à 9 m, manœuvrabilité moyenne, Vol +10 ; vision aveugle à 9 m, Perception +2.
+  Il possède les immunités des créatures artificielles. Son Intelligence de 3 favorise les consignes simples ; il comprend le commun mais ne parle pas.
+
+resource: Affinité ioun | permanent | À 1 DV, il peut intégrer une pierre ioun ; il ne bénéficie pas de ses effets. Une créature en qui il a confiance peut remplacer cette pierre.
+resource: Partage des iouns | permanent | S'il est familier, son maître bénéficie des pierres intégrées tant qu'il reste à 9 m ou moins ; appliquer uniquement les effets des pierres réellement présentes.
+
+step: Il accompagne un maître
+  do: Rester à l'abri près de lui, à 9 m ou moins pour maintenir le partage des iouns.
+  note: Son utilité principale est le soutien ; ses pierres ne renforcent pas ses propres attaques ni sa défense.
+
+step: Il est seul et repère une menace
+  do: Garder ses distances en volant et préserver une voie de fuite.
+
+## Ouverture
+
+step: L'ennemi ne peut pas encore l'atteindre
+  do: Rester hors de son allonge, en hauteur si les lieux le permettent ; le suivre avec sa vision aveugle tant qu'il est à 9 m ou moins.
+  note: Il ne dispose d'aucune attaque à distance ; inutile d'approcher pour infliger ses faibles dégâts.
+
+step: Il doit combattre et peut rejoindre une cible en un déplacement de 9 m
+  do: Entrer dans l'espace de la cible et porter un coup +0 (1d4-3).
+  note: Cette entrée peut provoquer une attaque d'opportunité. Choisir une cible isolée et éviter de traverser d'autres espaces menacés.
+
+## Rounds suivants
+
+step: La cible occupe toujours le même espace et le combat reste nécessaire
+  do: Porter un coup +0 (1d4-3), puis rester sur place si aucune fuite sûre n'est possible.
+  note: Son allonge de 0 m ne lui permet pas d'attaquer une cible dans une case voisine.
+
+step: La cible s'éloigne ou un autre adversaire approche
+  do: Renoncer à la poursuite et reprendre de la distance en volant.
+  note: S'il accompagne son maître, chercher un abri à 9 m ou moins de celui-ci pour conserver le partage des iouns.
+
+## Repli
+
+step: Points de vie inférieurs à 5, ou possibilité de quitter un combat défavorable
+  do: Effectuer une retraite en vol, jusqu'à 18 m sur le round, vers un passage dégagé ou un abri en hauteur.
+  note: La retraite protège la sortie de l'espace de départ ; éviter ensuite les autres espaces menacés. Avec seulement 5 pv, il se replie dès la première blessure s'il le peut.
+
+step: Son maître se replie
+  do: Le suivre en volant à 9 m par déplacement ; rester à 9 m ou moins de lui lorsque le trajet le permet.

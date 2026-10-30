@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Monarque stellaire, immense papillon magique chaotique bon, émissaire de Desna et protecteur des voyageurs et des dormeurs. Il préfère neutraliser les agresseurs et défendre ses protégés.
+  114 pv ; CA 22 ; vol à 24 m, déplacement terrestre à 9 m. Deux griffes +14 (1d8+4 et étreinte), allonge 1,50 m ; queue +14 (2d6+4 non létaux), allonge 4,50 m. Ses pouvoirs de sommeil et ses lueurs stellaires lui permettent de combattre sans tuer.
+
+resource: Bouclier entropique | constant | 20 % de chances de rater pour les attaques à distance qui nécessitent un jet d'attaque
+resource: Sommeil profond | 3/jour | Volonté DD 17 ; portée 16,50 m ; rayon 3 m ; jusqu'à 10 DV au total ; durée 12 minutes
+resource: Lueurs stellaires errantes | 3/jour | Volonté DD 18 ; portée initiale 16,50 m ; durée 12 rounds
+resource: Manteau de rêves | 1/jour | Volonté DD 20 ; émanation à 1,50 m autour de lui ; durée 12 rounds
+resource: Rêve | 3/jour | transmettre un message à une créature connue pendant son sommeil
+resource: Lumières dansantes et sommeil réparateur | à volonté | baliser un chemin et favoriser la récupération pendant un repos complet
+
+step: Des voyageurs alliés dorment à proximité
+  do: Veiller à moins de 9 m d'eux et utiliser sommeil réparateur avant leur repos
+  note: Son aura de gardien des rêves accorde protection contre le Mal et sanctuaire aux dormeurs ; attaquer l'un d'eux exige un jet de Volonté DD 15. Elle protège aussi les ennemis endormis dans ce rayon.
+
+step: Une menace approche
+  do: Repérer les agresseurs avec Perception +16 et se placer dans un espace permettant le vol, entre eux et les protégés
+  note: Il comprend le commun mais ne parle pas ; sa télépathie exige le contact. Sa vision dans le noir porte à 18 m et il voit dans la pénombre.
+
+## Ouverture
+
+step: Un adversaire dangereux est à 16,50 m ou moins
+  do: Utiliser lueurs stellaires errantes sur lui, en privilégiant un lanceur de sorts ou un ennemi proche de ses compagnons
+  note: Sur un échec à Volonté DD 18, la cible est hébétée pendant 1 round et recommence son jet à chaque tour. Les lueurs la rendent visible malgré le camouflage ; dès qu'elle réussit, elles passent à un nouvel ennemi situé à 9 m ou moins, si possible.
+
+step: Des adversaires de faible puissance sont regroupés et il peut agir à l'abri
+  do: Utiliser sommeil profond sur une zone de 3 m de rayon, sans y inclure ses alliés
+  note: Volonté DD 17 ; le pouvoir affecte d'abord les créatures ayant le moins de DV, jusqu'à 10 DV au total. Une créature de plus de 10 DV ne peut pas être endormie ainsi.
+
+step: Plusieurs ennemis vivants vont engager le corps à corps
+  do: Activer manteau de rêves avant leur arrivée au contact, si possible à couvert
+  note: Toute autre créature vivante qui commence son tour ou termine son déplacement à 1,50 m de lui doit réussir Volonté DD 20 ou dormir 1 minute. Le jet se répète à chaque déclenchement, même après une réussite ; éloigner ses alliés de cette zone.
+
+## Rounds suivants
+
+step: Il peut harceler un ennemi sans abandonner ses protégés
+  do: Employer Attaque en vol pour approcher, porter un coup de queue +14 à 4,50 m, puis poursuivre son déplacement ; mouvement total de 24 m au maximum
+  note: Infliger 2d6+4 dégâts non létaux. Cette passe comporte une seule attaque ; Attaque en vol ne supprime pas les attaques d'opportunité.
+
+step: Un agresseur reste à 1,50 m et doit être retenu
+  do: Effectuer une attaque à outrance : deux griffes +14 et une queue +14 ; après une griffe réussie, tenter l'étreinte avec BMO +22 contre une cible de taille G ou inférieure
+  note: Les griffes infligent chacune 1d8+4 dégâts létaux ; réserver cette option aux menaces sérieuses. Si l'étreinte réussit, consacrer les actions nécessaires à maintenir la lutte plutôt que poursuivre les passes aériennes.
+
+step: Un ennemi reste à proximité sous manteau de rêves
+  do: Maintenir la pression sur les adversaires éveillés et laisser agir le sommeil
+  note: Une blessure ou une action simple d'un compagnon peut réveiller un dormeur. Épargner les ennemis endormis et empêcher les autres de les rejoindre ; son aura les protège également tant qu'ils restent à 9 m ou moins.
+
+step: Une cible résiste au sommeil ou possède trop de DV pour sommeil profond
+  do: Privilégier les lueurs stellaires errantes et les coups de queue ; réserver les utilisations restantes de sommeil profond aux cibles admissibles
+  note: Les lueurs n'ont pas la limite de 10 DV, mais restent un effet mental. Elles passent seulement à des ennemis et ne peuvent revenir sur une créature qui a déjà réussi son jet contre cette utilisation.
+
+step: Il subit des tirs, des sorts ou une morsure
+  do: Exploiter sa mobilité et appliquer ses défenses : RD 5/argent, immunité au froid, résistance à la magie 20 et bouclier entropique
+  note: Une créature qui le mord ou mange sa chair risque de devenir fiévreuse pendant 1d4 rounds, Vigueur DD 20 pour annuler, et subit aussi les effets d'une dose d'arsenic. Ses propres griffes et sa queue ne transmettent pas ce poison.
+
+## Repli
+
+step: Ses pv passent sous 35 ou ses protégés peuvent quitter le danger
+  do: Rompre le combat et gagner un abri par le vol à 24 m ; utiliser deux déplacements, soit 48 m, si aucune autre action n'est nécessaire
+  note: Prendre de la hauteur pour sortir de l'allonge adverse ; préférer une retraite prudente si le départ immédiat l'expose à plusieurs attaques d'opportunité.
+
+step: Un poursuivant menace encore l'évacuation
+  do: Employer une utilisation restante de lueurs stellaires errantes pour le ralentir, puis reprendre la fuite
+  note: Il ne se perd jamais. Son vol stellaire permet les voyages spatiaux, sans fournir de téléportation ni de vitesse de combat supplémentaire.

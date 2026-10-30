@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Écureuil, animal forestier de taille minuscule, solitaire ou en paire. Avec 3 pv et une CA de 18, il cherche surtout à échapper aux menaces.
+  Morsure +8 (1d2-4), allonge de 0 m ; déplacement au sol et escalade à 6 m. Vision nocturne, Perception +1.
+
+step: Une menace approche
+  do: Se rapprocher d'un arbre accessible pour pouvoir y grimper.
+  note: Escalade +16 ; son principal avantage est de pouvoir gagner un refuge en hauteur.
+
+## Ouverture
+
+step: Une voie de fuite est libre
+  do: S'éloigner au sol ou grimper à un arbre, à 6 m par action de mouvement.
+
+step: Il est acculé et ne peut pas fuir
+  do: Mordre l'adversaire à +8 (1d2-4).
+  note: Son allonge de 0 m l'oblige à entrer dans l'espace de sa cible pour la mordre.
+
+## Rounds suivants
+
+step: Une issue devient accessible
+  do: Cesser de mordre et gagner un tronc ou une branche hors de portée de l'adversaire.
+
+step: Il reste acculé
+  do: Continuer à mordre, une attaque par round, jusqu'à pouvoir s'échapper.
+  note: Il n'a aucune attaque à distance ; il ne peut pas attaquer une cible depuis une branche hors de son contact.
+
+## Repli
+
+step: Il a perdu au moins 1 pv, ou l'adversaire le poursuit
+  do: Privilégier la fuite dès qu'un passage se libère et continuer à grimper si la menace reste au pied de l'arbre.
+  note: Avec seulement 3 pv au départ, il ne prolonge pas volontairement l'affrontement.

@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Grand Defender, créature artificielle extraplanaire de taille TG, loyale bonne, héraut de Torag animé par des héros nains. Il combat en protecteur intelligent et tient le passage vers ceux qu'il défend.
+  Marteau de guerre +27/+22/+17/+12 (3d6+11, critique x3) ; allonge de 4,50 m ; espace occupé de 4,50 m ; déplacement de 9 m.
+  157 PV, CA 32, contact 7 ; réduction des dégâts 15/adamantium ; immunités de créature artificielle et à la magie. Vision dans le noir à 18 m, vision nocturne et Perception +20.
+
+resource: Adaptation ablative | à volonté | action simple ; change son métal et sa réduction des dégâts
+resource: Attaque d'opportunité | 1 par round | Attaques réflexes permet d'agir même pris au dépourvu ; sa Dextérité 9 ne donne aucune attaque supplémentaire
+
+step: Il peut choisir sa position
+  do: Occuper un passage assez large pour lui, entre les ennemis et son objectif ; garder les voies d'approche dans son allonge de 4,50 m.
+  note: Garder son bouclier en main pour conserver le bonus de +5 déjà inclus dans sa CA ; éviter de s'exposer inutilement aux attaques de contact.
+
+step: Le métal nécessaire contre l'ennemi est connu avant l'affrontement
+  do: Employer l'adaptation ablative pour prendre la forme appropriée : fer froid contre une réduction des dégâts vaincue par le fer froid, mithral contre celle vaincue par l'argent.
+  note: Fer froid : RD 15/fer froid et attaques assimilées au fer froid ; mithral : RD 15/argent et attaques assimilées à l'argent ; fer : retour à la RD 15/adamantium. Il reste de taille TG.
+
+## Ouverture
+
+step: Un ennemi menace directement les personnes ou le lieu protégés
+  do: Se déplacer de 9 m au maximum pour l'intercepter, puis donner un coup de marteau à +27 (3d6+11, x3) s'il est à 4,50 m ou moins.
+  note: Choisir une position qui force les autres assaillants à passer dans sa zone menacée.
+
+step: Les ennemis doivent venir à lui et aucun n'est encore à portée
+  do: Tenir sa position et préparer un coup de marteau contre le premier ennemi qui entre à 4,50 m.
+  note: Entrer dans son allonge ne provoque pas à lui seul une attaque d'opportunité ; l'attaque préparée utilise son action simple.
+
+step: Une cible est déjà à portée sans déplacement nécessaire
+  do: Effectuer une attaque à outrance au marteau, +27/+22/+17/+12, chaque coup infligeant 3d6+11, critique x3.
+  note: Concentrer les coups sur l'adversaire qui menace le plus directement son objectif ; un pas de 1,50 m reste compatible avec cette attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible prioritaire reste dans son allonge
+  do: Continuer les attaques à outrance ; employer Attaque en puissance si la cible est assez facile à toucher.
+  note: Avec Attaque en puissance, les attaques deviennent +22/+17/+12/+7 et infligent 3d6+21 chacune, critique x3 ; le malus persiste jusqu'à son prochain tour et affecte aussi ses attaques d'opportunité et ses manœuvres.
+
+step: Plusieurs ennemis à portée forment une chaîne de cibles adjacentes, surtout après un déplacement
+  do: Employer Succession d'enchaînements comme action simple : frapper à +27, puis, après chaque coup réussi, une nouvelle cible adjacente à la précédente et située dans son allonge.
+  note: Une seule attaque par cible ; arrêter au premier échec ou faute de nouvelle cible admissible. Sa CA tombe à 30 jusqu'à son prochain tour. Préférer l'attaque à outrance pour abattre une menace unique.
+
+step: Un ennemi provoque une attaque d'opportunité à 4,50 m ou moins
+  do: Porter un coup de marteau à +27, en réservant si possible cette unique réaction au combattant qui tente de franchir sa ligne ou au lanceur de sorts exposé.
+  note: Ne pas dépenser une deuxième attaque d'opportunité dans le même round, même contre une autre cible.
+
+step: Un ennemi provoque une attaque d'opportunité en se déplaçant dans une case adjacente à son corps
+  do: Si bloquer le passage prime sur les dégâts, remplacer le coup par Immobilisation : test de BMO +31 contre le DMD de la cible ; en cas de réussite, elle ne peut plus se déplacer pendant ce tour.
+  note: Ce don exige une case adjacente, à 1,50 m ; il ne s'applique pas à toute son allonge de 4,50 m. Il consomme la même attaque d'opportunité que le coup de marteau.
+
+step: Repousser une cible dégagerait un allié ou l'éloignerait de l'objectif
+  do: Consacrer une action simple à une bousculade, BMO +33 grâce à Science de la bousculade, contre une créature au plus d'une catégorie de taille supérieure.
+  note: Cette manœuvre ne provoque pas d'attaque d'opportunité de la cible ; elle remplace les coups du tour et ne lui accorde pas d'attaque gratuite sur l'adversaire repoussé.
+
+step: Une arme ennemie en adamantium traverse sa réduction des dégâts
+  do: Si le répit le permet, consacrer une action simple à l'adaptation ablative et choisir le fer froid ou le mithral pour changer le matériau requis contre sa RD 15.
+  note: Choisir une matière que les ennemis ne semblent pas posséder. Cette transformation ne restaure pas ses PV pendant le combat.
+
+## Repli
+
+step: Son objectif reste menacé, même à moins de 40 PV
+  do: Tenir la ligne et couvrir les personnes protégées ; conserver les attaques à outrance tant qu'elles empêchent l'ennemi de passer.
+  note: Il ne poursuit pas un fuyard si cela ouvre le passage aux autres assaillants.
+
+step: Son objectif est en sécurité et il tombe à moins de 40 PV
+  do: Se retirer vers un abri par une retraite, jusqu'à 18 m si le terrain le permet.
+  note: Seule sa case de départ est protégée contre les attaques d'opportunité des ennemis visibles ; choisir un trajet qui évite leurs autres cases menacées.
+
+step: Il atteint 0 PV
+  do: Le laisser inerte sur place.
+  note: Après 1d4 heures sans subir de nouveaux dégâts, son adaptation ablative le réanime avec 78 PV ; ce retour ne lui permet pas de reprendre le combat immédiatement.

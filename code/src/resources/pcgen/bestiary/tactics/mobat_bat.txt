@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Mobat, grande chauve-souris magique malveillante des forêts et collines chaudes, qui chasse de nuit, seule ou en colonie de 2 à 8.
+  34 PV, CA 15 ; morsure +8 (1d8+4), allonge de 1,50 m ; cri sonique ; Attaque en vol.
+  Vol à 12 m, bonne manœuvrabilité ; déplacement au sol à 6 m ; espace occupé de 3 m.
+
+resource: Cri sonique | à volonté | action simple ; rayon de 6 m ; Volonté DD 15 ou étourdi pendant 1d3 rounds ; effet sonique mental ; les autres mobats sont épargnés ; toute créature exposée devient immunisée au cri de ce mobat pendant 24 heures, que son jet réussisse ou échoue
+
+step: Une proie approche
+  do: La repérer avec Perception +10 et l'approcher discrètement, avec Discrétion +5, en gardant une trajectoire de vol dégagée.
+  note: perception aveugle à 36 m, vision dans le noir à 18 m et vision nocturne ; la perception aveugle ne supprime pas le camouflage d'une cible invisible.
+
+## Ouverture
+
+step: Une cible est accessible en vol
+  do: Effectuer un passage avec Attaque en vol : approcher à 1,50 m, mordre à +8 (1d8+4), puis poursuivre le déplacement, dans la limite de 12 m au total.
+  note: choisir une cible isolée ; Attaque en vol n'empêche pas les attaques d'opportunité provoquées par le déplacement.
+
+## Rounds suivants
+
+step: La proie survit et des ennemis non encore exposés sont à 6 m ou moins
+  do: Pousser le cri sonique pour les étourdir, puis utiliser le déplacement disponible pour prendre de la distance.
+  note: le cri et la morsure demandent chacun une action simple ; les employer sur des rounds distincts.
+
+step: Un ennemi est étourdi
+  do: Le prendre pour cible d'un nouveau passage avec morsure, en évitant les autres combattants.
+  note: une créature étourdie ne peut pas porter d'attaque d'opportunité.
+
+step: Les adversaires présents sont immunisés au cri
+  do: Continuer les passages avec morsure contre la cible la plus vulnérable, sans répéter le cri sur ces mêmes ennemis.
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou passages devenus trop dangereux
+  do: Battre en retraite en vol, jusqu'à 24 m pour un round entièrement consacré à la retraite, vers les arbres ou le relief qui coupent les lignes de vue.
+  note: privilégier une trajectoire qui évite les allonges ennemies ; la retraite ne protège des attaques d'opportunité que dans l'espace de départ.

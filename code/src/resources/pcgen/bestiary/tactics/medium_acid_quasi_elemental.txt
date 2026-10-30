@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Quasi-élémentaire d'acide de taille M, extérieur neutre, solitaire et peu intelligent, originaire du quasi-plan de l'Acide. 22 pv, CA 18, initiative +5.
+  Coup +4 au contact, allonge de 1,50 m : 1d4+1 dégâts contondants et 1d4 dégâts d'acide. Ses vapeurs empoisonnées menacent les créatures à 1,50 m.
+  Déplacement terrestre de 6 m, nage de 24 m ; vision dans le noir à 18 m. Immunisé contre l'acide et doté des traits des élémentaires ; vulnérable à l'eau.
+
+step: Des intrus approchent
+  do: Se tenir sur un passage sec et étroit pour les recevoir au contact ; utiliser Discrétion +7 si le terrain permet de se cacher
+  note: Perception +6 ; il ne dispose d'aucune attaque à distance
+
+step: Le terrain comporte de l'eau
+  do: Rester à l'écart des flaques, des ruisseaux et des bassins d'eau
+  note: sa vitesse de nage ne le protège pas de sa vulnérabilité à l'eau ; un bassin d'acide accessible lui permet en revanche de profiter de sa nage et de son immunité
+
+## Ouverture
+
+step: Un adversaire est accessible au contact après un déplacement
+  do: Avancer de 6 m au maximum puis porter un coup +4, pour 1d4+1 dégâts contondants et 1d4 dégâts d'acide
+  note: chercher le contact avec la cible la plus proche pour l'exposer aussi aux vapeurs
+
+step: Les adversaires restent trop loin
+  do: Se rapprocher par un passage sec, jusqu'à 12 m avec un double déplacement
+  note: aucune attaque de coup après ce double déplacement
+
+step: Une créature se trouve à 1,50 m ou moins
+  do: Appliquer les vapeurs chaque round : Vigueur DD 13 ou 1 point d'affaiblissement de Constitution
+  note: il s'agit d'un poison ; dès que la créature s'éloigne à plus de 1,50 m, elle cesse d'être exposée, sans dégâts différés
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter le coup +4 et maintenir la pression des vapeurs
+  note: une créature qui le frappe à mains nues ou avec une arme naturelle subit 1d4 dégâts d'acide ; cet effet est automatique et ne consomme pas son attaque
+
+step: Une cible cherche à sortir des vapeurs
+  do: La suivre sur sol sec pour revenir à 1,50 m, puis frapper si les actions restantes le permettent
+  note: ne pas la poursuivre dans l'eau
+
+step: Une flamme gêne son approche
+  do: La toucher pour éteindre un feu non magique de taille G ou inférieure, notamment une torche, une lanterne ou un feu de camp
+  note: contre un feu magique, il peut tenter une suppression comme dissipation de la magie, avec un niveau de lanceur de sorts de 3 ; il ne possède aucune immunité au feu
+
+step: Un adversaire lui verse de l'eau dessus
+  do: Appliquer la réaction puis chercher à quitter la portée du porteur d'eau
+  note: il subit 1d4 dégâts de feu par gallon versé, soit environ 3,8 litres ; toutes les créatures à 1,50 m doivent réussir Réflexes DD 15 ou subir autant de dégâts
+  note: les attaques fondées sur l'eau infligent 50 % de dégâts supplémentaires
+
+## Repli
+
+step: Points de vie à 7 ou moins, ou eau utilisée à répétition contre lui
+  do: Rompre le contact et gagner un abri sec, par un double déplacement de 12 m si nécessaire
+  note: s'il peut rejoindre un bassin d'acide, s'y replier en profitant de sa nage à 24 m par déplacement ; éviter toute retraite dans l'eau

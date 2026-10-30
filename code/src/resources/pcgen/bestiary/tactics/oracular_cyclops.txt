@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Cyclope oraculaire, humanoïde géant de taille G, neutre mauvais, qui prévoit les dangers et frappe lourdement plutôt que de lancer des sorts offensifs.
+  91 pv ; CA 21, contact 14, pris au dépourvu 20 ; déplacement de 9 m ; espace et allonge de 3 m.
+  Grande hache de maître +15/+10 (3d6+7, critique x3) ; arbalète lourde +10 (2d8, critique 19-20/x2). Perception +20 et vision nocturne.
+
+note: Prescience protectrice
+  Son bonus d'intuition de +4 est permanent et déjà compris dans les CA indiquées.
+
+resource: Divination | 3/jour | pouvoir magique, NLS 10 ; conseils concernant une action prévue dans les sept jours
+resource: Augure | 1/jour | pouvoir magique, NLS 10 ; présage sur les conséquences d'une action dans les trente prochaines minutes
+resource: Éclair de prescience supérieur | 1/jour | action immédiate ; choisir le résultat exact d'un dé avant de le lancer pour une de ses propres actions
+resource: Partage de l'éclair supérieur | 1/semaine | permet d'employer l'éclair quotidien pour une autre créature visible à 9 m ou moins
+
+step: Il peut préparer la rencontre
+  do: Consulter divination sur son projet de défense, puis augure sur l'opportunité d'affronter les intrus maintenant ; choisir sa position selon les réponses
+  note: Ces présages donnent des indications, pas une connaissance certaine de tous les événements futurs.
+
+step: L'approche des intrus est repérée
+  do: Se placer près d'un passage où son allonge de 3 m gêne l'approche ; garder une sortie et préparer l'arme adaptée à la distance
+  note: Psychologie +17 aide à juger leurs intentions.
+
+## Ouverture
+
+step: Les ennemis restent hors de portée et l'arbalète est déjà chargée
+  do: Tirer sur une cible dégagée à +10 (2d8, 19-20/x2), puis passer à la grande hache quand ils approchent
+  note: Recharger l'arbalète lourde exige une action complexe ; privilégier ensuite la mêlée si elle devient accessible.
+
+step: Une cible est accessible après un déplacement de 9 m au plus
+  do: Avancer pour l'avoir dans son allonge de 3 m et porter une attaque de hache à +15 (3d6+7, x3)
+  note: S'il est déjà à portée, employer directement l'attaque à outrance ou l'enchaînement des rounds suivants.
+
+## Rounds suivants
+
+step: Un jet de sauvegarde risque de le mettre hors de combat et l'éclair est disponible
+  do: Dépenser l'éclair en action immédiate avant le jet et choisir 20
+  note: Cette priorité défensive remplace l'emploi offensif du pouvoir.
+
+step: Une cible prioritaire reste à portée
+  do: Attaque à outrance à la hache, +15/+10 (3d6+7, x3), éventuellement après un pas de 1,50 m
+  note: Contre une défense facile à toucher, activer Attaque en puissance : +12/+7, dégâts 3d6+16 ; ses effets persistent jusqu'au prochain tour.
+
+step: Une frappe décisive peut abattre l'adversaire principal et l'éclair est disponible
+  do: Choisir 20 avant le jet d'attaque de hache, de préférence avec Attaque en puissance
+  note: Ce 20 touche automatiquement et menace un critique ; effectuer séparément la confirmation du critique x3.
+
+step: Plusieurs ennemis forment une chaîne de cibles adjacentes dans son allonge de 3 m
+  do: Succession d'enchaînements, action simple : une attaque à +15 par cible, en passant à la suivante après chaque coup réussi
+  note: Chaque nouvelle cible doit être adjacente à la précédente ; une seule attaque par créature. Un échec arrête la chaîne ; CA 19 jusqu'au prochain tour. Avec Attaque en puissance : +12, dégâts 3d6+16.
+
+step: Un ennemi provoque dans les 3 m qu'il menace avec sa hache
+  do: Porter une attaque d'opportunité ; Attaques réflexes permet deux attaques d'opportunité par round, même pris au dépourvu
+  note: Exploiter les déplacements qui quittent une case menacée et les incantations qui provoquent ; entrer simplement dans l'allonge ne suffit pas.
+
+step: Une cible de mêlée bénéficie d'un camouflage
+  do: Appliquer Combat en aveugle pour relancer une fois le jet de risque d'échec dû au camouflage
+
+step: Un ennemi adjacent bloque une position importante ou peut être poussé vers un danger présent
+  do: Bousculade en action simple, BMO +18 grâce à Science de la bousculade, sans provoquer d'attaque d'opportunité de la cible
+  note: Employer cette manœuvre à la place des attaques, lorsque déplacer la cible vaut davantage que les dégâts.
+
+step: Un allié visible à 9 m ou moins tirerait davantage profit d'un résultat choisi
+  do: Employer pour lui l'éclair supérieur si les disponibilités quotidienne et hebdomadaire le permettent
+  note: Ce partage utilise l'éclair du jour ; il ne fournit pas une seconde utilisation.
+
+## Repli
+
+step: Ses points de vie passent sous 30 et une sortie est accessible
+  do: Se retirer vers un couvert par l'action de retraite, jusqu'à 18 m sur terrain dégagé
+  note: Seule la case de départ cesse normalement d'être menacée ; choisir un trajet qui évite les autres ennemis.
+
+step: La sortie est bloquée par un ennemi adjacent
+  do: Tenter une bousculade pour ouvrir le passage, puis se déplacer si la voie est libre
+  note: Le déplacement peut encore provoquer ; s'il ne peut fuir, concentrer ses coups de hache sur le bloqueur.

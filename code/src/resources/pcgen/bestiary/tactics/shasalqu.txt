@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Shasalqu, petite créature magique neutre des déserts chauds, à l'intelligence animale. Ce lézard recherche la chaleur et piège ses proies dans son aura glaciale avant de les frapper.
+  30 pv ; CA 15 ; initiative +6 ; déplacement de 9 m. Coup de queue +8 à 1,50 m : 1d8+4 dégâts plus 1d6 de froid. Aura de froid piégeant dans un rayon de 3 m, DD 14.
+
+note: Défenses
+  Immunité au feu et résistance au froid 10. Absorption de chaleur : chaque tranche de 3 dégâts de feu qu'il aurait subis lui donne 1 pv temporaire, conservé pendant 1 heure.
+  Chair glaciale : toute créature qui le touche avec une attaque naturelle ou une attaque à mains nues subit 1d6 dégâts de froid.
+
+step: Des proies approchent sans l'avoir repéré
+  do: Rester immobile et dissimulé parmi les rochers, puis attendre qu'une proie s'approche ; Discrétion +10.
+  note: Couvert de boue, un shasalqu immobile peut être pris pour un caillou. Perception +6, vision dans le noir à 18 m et vision nocturne permettent de surveiller les alentours.
+
+## Ouverture
+
+step: Une proie est accessible avec un déplacement de 9 m au maximum
+  do: Avancer jusqu'à 1,50 m et donner un coup de queue +8, pour 1d8+4 dégâts plus 1d6 de froid.
+  note: Se placer, si possible, à 3 m ou moins de plusieurs adversaires pour les exposer à l'aura.
+
+step: Les adversaires sont trop éloignés pour avancer et frapper
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour approcher une proie et l'inclure si possible dans l'aura.
+  note: Aucun coup de queue ce tour après ce double déplacement.
+
+step: Une créature commence son tour à 3 m ou moins
+  do: Appliquer automatiquement le froid piégeant : Vigueur DD 14 ; en cas d'échec, 1d6 dégâts de froid et état enchevêtré. Une réussite annule les deux effets.
+  note: Entrer dans l'aura ne déclenche pas immédiatement cet effet. L'enchevêtrement dure tant que la victime reste dans l'aura, puis 1 round après sa sortie. Une immunité ou une résistance au froid qui annule tous les dégâts empêche aussi l'enchevêtrement.
+
+## Rounds suivants
+
+step: Une proie reste au contact
+  do: Répéter le coup de queue +8 chaque round et conserver la proie dans l'aura.
+  note: Réappliquer le froid piégeant au début du tour de chaque créature exposée. Une victime enchevêtrée se déplace à demi-vitesse et ne peut ni courir ni charger.
+
+step: Un adversaire adjacent fait un pas de placement de 1,50 m pour s'éloigner
+  do: Utiliser S'avancer en action immédiate pour le suivre de 1,50 m et terminer adjacent à lui.
+  note: Au prochain tour du shasalqu, aucun pas de placement ; s'il se déplace, déduire 1,50 m de son déplacement. Ce don ne donne aucune attaque supplémentaire.
+
+step: La proie sort de portée du coup de queue
+  do: La suivre avec un déplacement de 9 m au maximum, puis frapper si elle est de nouveau à 1,50 m.
+  note: Contre une créature protégée du froid, les dégâts physiques du coup de queue restent utilisables.
+
+## Repli
+
+step: Points de vie sous 8 et une issue accessible
+  do: Faire retraite vers un abri, jusqu'à 18 m sur terrain dégagé, puis chercher à se dissimuler avec Discrétion +10.
+  note: Ce seuil est un choix tactique pour préserver ce prédateur animal.
+
+step: Le shasalqu meurt
+  do: Maintenir son aura de froid piégeant dans un rayon de 3 m autour du cadavre pendant 1 heure.

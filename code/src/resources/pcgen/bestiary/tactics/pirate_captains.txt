@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Capitaine pirate humain, guerrier 5/roublard 1, taillé pour le duel à la rapière et le combat avec son équipage. 41 pv, CA 17, déplacement de 9 m et allonge de 1,50 m.
+  Rapière +1 : +10 (1d6+6, critique 18–20) ; arbalète légère de maître : +7 (1d8, critique 19–20). Initiative +5.
+  Volonté +0 et bonus de +1 contre la terreur : éviter de s'exposer inutilement aux pouvoirs mentaux.
+
+resource: Potions de soins modérés | 2 | boire une potion demande une action simple et provoque une attaque d'opportunité
+resource: Carreaux | 20 | un carreau par tir d'arbalète
+
+step: Le combat se prépare
+  do: Charger l'arbalète et garder les potions accessibles ; repérer un abri et une voie de repli.
+
+step: Un équipage l'accompagne
+  do: Placer les marins et les officiers pour protéger ses flancs et permettre des prises en tenaille.
+  note: Ces alliés ne sont disponibles que si la rencontre les prévoit.
+
+## Ouverture
+
+step: Aucun adversaire n'est accessible au corps à corps
+  do: Tirer à l'arbalète sur une cible dégagée, puis chercher un abri ou préparer l'approche.
+  note: Éviter de tirer au contact ; le rechargement demande une action de mouvement et provoque une attaque d'opportunité.
+
+step: Un adversaire est accessible après un déplacement de 9 m au plus
+  do: Avancer et porter une attaque de rapière à +10, pour 1d6+6 dégâts.
+  note: Si un allié le permet, chercher la prise en tenaille pour obtenir +2 à l'attaque.
+
+## Rounds suivants
+
+step: L'adversaire reste au contact
+  do: Porter une attaque de rapière par round ; utiliser un pas de placement de 1,50 m pour améliorer sa position.
+  note: Privilégier les cibles déjà engagées par l'équipage, sans s'isoler au milieu des ennemis.
+
+step: La cible est facile à toucher
+  do: Activer Attaque en puissance : rapière +8, dégâts 1d6+10.
+  note: Revenir à +10 et 1d6+6 contre une défense élevée.
+
+step: Un ennemi provoque une attaque d'opportunité à portée de rapière
+  do: Le frapper avec la rapière.
+  note: Réflexes de combat permet jusqu'à deux attaques d'opportunité par round, y compris avant d'avoir agi ; un même déplacement ennemi n'en provoque qu'une.
+
+step: Les adversaires restent hors de portée
+  do: Recharger et tirer depuis un abri, ou avancer derrière les alliés pour retrouver le corps à corps.
+
+## Repli
+
+step: Points de vie à 13 ou moins
+  do: Se mettre à couvert ou derrière les alliés, puis boire une potion de soins modérés si cela ne l'expose pas à une attaque d'opportunité.
+  note: Si une simple séparation ne suffit pas, utiliser l'action de retraite pour quitter le contact avant de se soigner.
+
+step: Les soins ne suffisent pas ou l'équipage est débordé
+  do: Fuir par la voie repérée et demander aux alliés encore présents de couvrir son départ.
+  note: Natation +10 peut servir si la fuite impose de passer à l'eau ; il ne possède aucune vitesse de nage.

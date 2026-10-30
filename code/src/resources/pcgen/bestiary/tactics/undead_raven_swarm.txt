@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Nuée de corbeaux morts-vivants de taille TP, neutre mauvaise, FP 9 ; intelligence animale (Int 2). Elle combat en enveloppant ses victimes et en les harcelant du bec et des griffes.
+  91 pv, CA 16 ; attaque de nuée : 3d6 dégâts, plus maladie et griffures aux yeux. Elle occupe un espace de 3 m de côté et son allonge est de 0 m.
+  Vol à 12 m par action de mouvement, manœuvrabilité moyenne ; déplacement au sol à 3 m. Elle privilégie le vol pour atteindre ses proies.
+
+step: Des créatures approchent
+  do: Les repérer avec Perception +15, la vision dans le noir à 18 m et l'odorat
+  note: Son intelligence limitée conduit à une chasse directe ; elle ne prépare pas de manœuvre complexe.
+
+## Ouverture
+
+step: Une victime est accessible
+  do: Voler jusque dans son espace et y terminer son tour ; recouvrir plusieurs adversaires proches si leur position le permet
+  note: Les dégâts de nuée s'appliquent automatiquement à la fin du déplacement, à chaque créature dont elle occupe l'espace ; aucun jet d'attaque n'est nécessaire.
+
+step: La victime est à plus de 12 m
+  do: Consacrer au besoin ses deux actions de mouvement à l'approche, jusqu'à 24 m en vol, pour finir sur elle
+  note: L'allonge de 0 m impose de partager son espace ; rester à côté ne suffit pas à lui infliger les dégâts de nuée.
+
+## Rounds suivants
+
+step: Une ou plusieurs victimes restent dans son espace
+  do: Continuer à les envelopper pour leur infliger 3d6 dégâts par round, plus maladie et griffures aux yeux
+  note: Les DD et les effets détaillés de la maladie et des griffures aux yeux ne sont pas indiqués dans le bloc fourni.
+
+step: Les adversaires se dispersent
+  do: Suivre en vol une victime accessible et terminer chaque déplacement sur elle ; englober d'autres adversaires lorsqu'ils se rapprochent
+  note: Ne pas répartir les corbeaux en plusieurs nuées indépendantes : cette créature conserve ses caractéristiques de nuée unique.
+
+step: Une victime s'éloigne au sol
+  do: La poursuivre en vol à 12 m par action de mouvement
+  note: Éviter de poursuivre au sol, où sa vitesse tombe à 3 m.
+
+## Repli
+
+step: La nuée perd des points de vie mais peut encore atteindre une victime
+  do: Poursuivre l'assaut sans seuil de repli automatique
+  note: Jouer son acharnement avec des décisions simples ; à 0 pv, ce mort-vivant est détruit.
+
+step: Toutes les victimes deviennent inaccessibles
+  do: Quitter leur position en vol et chercher une autre proie avec ses sens

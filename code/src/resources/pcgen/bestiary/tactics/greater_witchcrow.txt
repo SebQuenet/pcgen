@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Greater Witchcrow, bête magique de taille P, chaotique mauvaise, intelligente et cupide ; il privilégie le vol d'objets magiques et les attaques en passant.
+  32 pv, CA 15, résistance au froid 5 ; vol à 18 m, bonne manœuvrabilité, déplacement au sol à 6 m ; vision dans le noir à 18 m.
+  Deux serres +7 chacune (1d6+1) en attaque à outrance ; une seule serre lors d'un passage. Allonge 1,50 m ; manœuvre de subtilisation +7 contre le DMD.
+
+resource: Perception des indices | 3/jour | 50 minutes ; Perception +14 et Psychologie +11 pendant l'effet
+resource: Disparition | 3/jour | invisibilité pendant 5 rounds au maximum ; une attaque la termine
+resource: Ventriloquie | 3/jour | 5 minutes ; voix déportée jusqu'à 10,50 m ; Volonté DD 14 pour reconnaître l'illusion en interagissant avec elle
+resource: Mauvais présage | 1/jour | portée 10,50 m ; aucun jet de sauvegarde, résistance à la magie applicable ; les deux prochains jets de d20 sont lancés deux fois en gardant le pire résultat, pendant 5 rounds au maximum
+resource: Image miroir | 1/jour | 1d4+1 doubles pendant 5 minutes ; protège contre les attaques ciblées, pas contre les effets de zone
+
+step: Des voyageurs approchent
+  do: Observer depuis un couvert avec Discrétion +15 et utiliser la détection de la magie constante pour repérer les objets convoités
+  note: Sa communication constante avec les oiseaux permet de recueillir des renseignements, sans les asservir.
+
+step: Il peut préparer son approche
+  do: Activer perception des indices, puis image miroir juste avant de s'exposer ; réserver au moins une disparition pour fuir
+  note: Chaque pouvoir demande une action simple ; les employer successivement.
+
+## Ouverture
+
+step: Il approche sans avoir été repéré
+  do: Activer disparition, puis gagner en vol une position permettant d'atteindre un porteur d'objet magique au round suivant
+  note: Préférer un objet accessible sur un adversaire isolé ; éviter les passages au milieu de plusieurs combattants.
+
+step: Une cible porte un objet accessible et le trajet permet de repartir
+  do: Attaque en vol : approcher à 1,50 m, tenter une subtilisation à +7 contre le DMD, puis poursuivre le mouvement ; déplacement total maximal 18 m
+  note: Choisir une bourse ou une pochette accessible ; un objet tenu en main ne peut pas être subtilisé par cette manœuvre. Un objet simplement attaché augmente le DMD de 5 ; un objet solidement fixé est inaccessible.
+  note: Science de la subtilisation évite l'attaque d'opportunité provoquée par la manœuvre ; quitter une case menacée peut toujours en provoquer une. La manœuvre offensive met fin à disparition.
+
+step: Il est découvert sans image miroir active
+  do: Activer image miroir à l'écart des allonges ennemies, puis gagner un couvert en vol
+
+## Rounds suivants
+
+step: Un adversaire dangereux peut compromettre le prochain passage
+  do: Lui infliger mauvais présage depuis une position hors de son allonge, puis poursuivre le vol
+  note: Ce round est consacré au pouvoir et au déplacement ; le passage offensif attend le suivant.
+
+step: Le vol reste possible et une cible est isolée
+  do: Revenir par un autre angle : subtilisation d'un objet accessible ou une serre +7 (1d6+1), puis repartir grâce à Attaque en vol
+  note: Une seule action simple pendant le déplacement ; choisir entre le pouvoir, la manœuvre et la serre.
+
+step: Un ennemi vulnérable reste au contact et ses alliés sont éloignés
+  do: Attaque à outrance avec les deux serres +7 (1d6+1 chacune)
+  note: Si rester exposé est nécessaire, Expertise du combat donne CA 17 et ramène les attaques à +5 jusqu'au prochain tour.
+
+step: Les ennemis surveillent son approche
+  do: Depuis un couvert, utiliser ventriloquie pour faire entendre sa voix sur un autre flanc, puis se repositionner
+  note: La diversion ne contraint personne à se déplacer ; attendre une véritable ouverture avant de revenir.
+
+## Repli
+
+step: Un objet convoité est pris, ou ses points de vie tombent à 10 ou moins
+  do: Rompre le combat et gagner un couvert en vol ; jusqu'à 36 m avec un double déplacement
+  note: Privilégier un trajet hors des allonges ; si une retraite complète est nécessaire, seule la case de départ cesse d'être menacée pour ce déplacement.
+
+step: Il est hors des allonges mais encore poursuivi
+  do: Utiliser la disparition conservée et poursuivre sa fuite en vol jusqu'à 18 m ce round
+  note: Cesser toute attaque et se cacher avant la fin des 5 rounds.
+
+resource: Apportation | 1/jour, collective | un rassemblement assez nombreux, par exemple 13 à 30 individus, peut ouvrir un cercle de téléportation de NLS 17 après 1 minute de rituel ininterrompu ; cercle visible pendant 1 minute
+
+step: Un rassemblement suffisant dispose d'une minute entière à l'abri
+  do: Accomplir ensemble le rituel d'apportation pour quitter les lieux
+  note: Ce rituel aérien est bruyant ; il exige une préparation collective et ne permet pas une fuite immédiate en plein combat.

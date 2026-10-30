@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Gardien gnoll de taille M, chaotique mauvais, doté de 89 points de vie et d’une CA de 22 ; ses armes principales sont un arc long composite +1 et un cimeterre +1.
+  Il se déplace de 6 m et voit dans le noir à 18 m. Il cherche une position de tir favorable, puis utilise son cimeterre lorsque le combat se rapproche.
+
+step: Il peut choisir sa position
+  do: Préparer son arc à couvert, avec une ligne de tir dégagée et un chemin de repli accessible.
+  note: Sa vitesse de 6 m rend une poursuite ou une fuite en terrain découvert peu avantageuse.
+
+step: Les ennemis approchent dans l’obscurité
+  do: Les observer avec sa vision dans le noir et attendre qu’une cible soit nettement visible avant de tirer.
+  note: Sa vision dans le noir porte à 18 m ; elle ne lui permet pas de voir au-delà dans l’obscurité.
+
+## Ouverture
+
+step: Une cible est visible et aucun ennemi ne menace son tir
+  do: Tirer avec l’arc long composite +1 ; effectuer une attaque à outrance s’il peut rester sur place.
+  note: Privilégier un ennemi exposé ou déjà blessé et concentrer les tirs sur lui.
+
+step: Un ennemi arrive au contact
+  do: Passer au cimeterre +1 et frapper dès que ses actions disponibles le permettent.
+  note: Éviter de tirer à l’arc sous la menace d’un adversaire, car cela provoque une attaque d’opportunité.
+
+## Rounds suivants
+
+step: Il conserve une ligne de tir sans être menacé
+  do: Continuer les attaques à outrance à l’arc contre la même cible jusqu’à sa mise hors de combat.
+  note: Si la cible se met à couvert, choisir un autre ennemi exposé ou se déplacer pour retrouver une ligne de tir, puis effectuer un seul tir.
+
+step: Un pas de placement suffit à sortir de la zone menacée
+  do: Faire un pas de placement de 1,50 m, puis tirer à l’arc en attaque à outrance.
+  note: Ce choix exige que sa nouvelle position ne soit menacée par aucun ennemi et qu’il n’effectue aucun autre déplacement durant le round.
+
+step: Il combat au cimeterre et peut rester sur place
+  do: Effectuer une attaque à outrance contre un adversaire à portée ; achever en priorité un ennemi déjà blessé.
+
+step: Plusieurs ennemis risquent de l’encercler
+  do: Rejoindre un passage étroit ou un obstacle qui limite les accès à sa position, si le terrain le permet.
+  note: Éviter de se laisser prendre en tenaille ; un déplacement exposé peut provoquer des attaques d’opportunité.
+
+## Repli
+
+step: Points de vie à 22 ou moins, ou position devenue intenable
+  do: Utiliser une retraite pour rompre le contact et rejoindre un couvert ou un passage qui gêne les poursuivants.
+  note: Une retraite permet de parcourir jusqu’à 12 m ; seule la case de départ cesse d’être considérée comme menacée par les ennemis qu’il voit. Le reste du trajet doit donc éviter leurs zones menacées.
+
+step: Il a rompu le contact
+  do: Poursuivre le repli en profitant du terrain ; ne reprendre le tir que depuis une position où les ennemis ne peuvent pas immédiatement l’engager.

@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Golem-poupée de sorcière, créature artificielle de taille G, neutre et sans intelligence, vouée à une cible programmée. Il poursuit ses ordres sans négocier.
+  107 pv ; CA 25, contact 9 ; réduction des dégâts 10/adamantium. Déplacement 9 m ; espace occupé 3 m ; allonge 3 m ; vision dans le noir à 18 m et vision nocturne.
+  Attaque à outrance : 2 coups +21, chacun à 2d10+8, ou aiguille +21/+16/+11, chaque touche à 2d6+12, critique sur 19–20.
+
+step: Ordre de rechercher sa cible
+  do: La localiser infailliblement grâce à son pouvoir de recherche, puis marcher vers elle.
+  note: Une seule cible programmée ; aucun lien possible avec un autre adversaire.
+
+note: Défenses magiques
+  Immunité aux sorts et pouvoirs magiques autorisant la résistance à la magie ; +4 aux sauvegardes contre les effets de sa cible qui passent cette immunité, même sans lien.
+  Confusion le ralentit pendant 2d6 rounds sans sauvegarde ; réparation lui rend 2d6 pv.
+
+## Ouverture
+
+step: Cible à plus de 3 m
+  do: Avancer de 9 m au maximum et donner un coup +21 (2d10+8) si elle devient accessible ; sinon, effectuer un double déplacement de 18 m vers elle.
+  note: Après un déplacement normal, une seule attaque ; aucune attaque après le double déplacement.
+
+step: Cible déjà à portée, sans déplacement nécessaire
+  do: Effectuer une attaque à outrance avec les deux coups +21 ; employer plutôt l'aiguille contre une cible facile à toucher pour multiplier les tentatives de lien.
+
+step: Une attaque touche la cible programmée et le lien reste à établir
+  do: Tenter le lien de poupée : Vigueur DD 19 pour résister ; recommencer sur les touches suivantes si nécessaire.
+
+## Rounds suivants
+
+step: Lien établi et cible à portée
+  do: Concentrer les attaques sur elle ; ajouter 1d8 de dégâts à chaque touche.
+  note: Préférer les deux coups contre une forte CA ; l'aiguille fournit trois attaques contre une faible CA. Ces attaques à outrance exigent de rester sur place ou un simple pas de 1,50 m.
+
+step: Un autre ennemi fait obstacle
+  do: Le frapper avec les coups ou l'aiguille, en gardant la cible liée à 18 m au maximum.
+  note: À cette distance, les dégâts provenant d'une autre source que la cible sont partagés : moitié au golem, moitié à la cible, après ses défenses. Aucun transfert si aucun dégât ne passe. Les attaques de la cible blessent seulement le golem ; il ne s'attaque jamais lui-même.
+
+step: La cible s'éloigne
+  do: La poursuivre à 9 m par déplacement pour retrouver l'allonge de 3 m ; préserver autant que possible la distance de 18 m du partage des dégâts.
+
+step: Confusion l'a ralenti
+  do: Consacrer son action disponible à une attaque si la cible est à portée, sinon à un déplacement vers elle.
+
+## Repli
+
+step: Ses points de vie diminuent et la cible vit encore
+  do: Continuer l'assaut sans seuil de fuite ; à 0 pv, il est détruit.
+
+step: La cible meurt
+  do: Cesser de la poursuivre et appliquer les ordres restants du créateur.
+  note: Le lien cesse à la mort de la cible, à la destruction du golem ou lors de sa reprogrammation.

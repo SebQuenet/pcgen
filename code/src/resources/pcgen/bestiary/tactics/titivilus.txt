@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Titivilus, diable loyal mauvais de FP 20, est un manipulateur volant : il désorganise les adversaires avant d'engager une cible isolée. 275 pv, CA 41, contact 28 ; marche à 15 m, vol à 18 m, allonge 1,50 m.
+  Épée longue +3 en argent et sanglante : +29/+24/+19/+14, 1d8+10, critique 19-20, plus 1 saignement. Autre attaque : contact de terreur +26 contre la CA de contact, Volonté DD 32, effet de terreur au NLS 20.
+  RD 15/Bien et argent, RM 31 ; immunité au feu et au poison, résistance à l'acide 10 et au froid 10. Il voit dans les ténèbres et coordonne ses alliés par télépathie à 30 m.
+
+resource: Convocation de diables | 2/jour | Réussite 100 % ; au choix, 4d10 lémures ou nupperibos, 1d4 diables osseux ou érinyes, 1d2 diables cornus, ou 1 diantrefosse
+resource: Confusion rapide | 3/jour | Action rapide, Volonté DD 25 ; confusion reste utilisable à volonté en action simple
+resource: Débilité | 1/jour | Volonté DD 26 ; priorité à un lanceur de sorts profanes
+resource: Symbole de douleur | 1/jour | Vigueur DD 26 ; préparation de 10 minutes
+resource: Symbole de sommeil | 1/jour | Volonté DD 26 ; préparation de 10 minutes ; seulement les créatures de 10 DV ou moins
+resource: Pouvoirs magiques courants | À volonté | NLS 20 ; notamment invisibilité suprême, aura maudite, dissipation de la magie, téléportation suprême, confusion et désespoir foudroyant
+
+step: Il peut préparer le terrain
+  do: Installer un symbole de douleur sur un passage que les intrus devront regarder ou franchir ; exempter sa suite lors de la création
+  note: Dans un rayon de 18 m, un échec impose -4 aux attaques et aux tests de compétence et de caractéristique ; ce malus persiste une heure après la sortie de la zone. Réserver le symbole de sommeil aux adversaires de 10 DV ou moins.
+
+step: Une attaque est attendue
+  do: Convoquer un diantrefosse et placer les alliés entre les intrus et lui ; garder la seconde convocation en réserve
+  note: Les créatures convoquées restent une heure. Une suite déjà présente de 2 à 4 érinyes ou diables barbus reçoit les mêmes consignes.
+
+step: Le combat est imminent
+  do: Lancer aura maudite sur lui et ses alliés réunis à 6 m, puis invisibilité suprême sur lui, lors d'actions successives
+  note: Ces deux protections durent chacune 20 rounds. L'aura donne +4 de parade à la CA et +4 de résistance aux sauvegardes, sans cumul avec des bonus de même type ; sa RM 25 ne remplace pas la RM 31 de Titivilus. Une créature bonne qui touche un bénéficiaire en mêlée subit 1d6 dégâts de Force, Vigueur DD 29 annule.
+
+## Ouverture
+
+note: Choix des actions
+  Chaque round, choisir une action simple parmi les étapes applicables. Une confusion rapide peut l'accompagner, une seule fois par round, tant que ses trois utilisations ne sont pas épuisées.
+
+step: Il commence son premier tour sans invisibilité suprême
+  do: Activer invisibilité suprême et prendre de la hauteur ; ajouter une confusion rapide si plusieurs ennemis sont groupés
+  note: Il reste invisible lorsqu'il attaque ; éviter de se placer à portée des armes adverses.
+
+step: Il est déjà protégé et plusieurs ennemis sont regroupés
+  do: Lancer confusion rapide sur une zone de 4,50 m de rayon, Volonté DD 25, en épargnant sa suite
+  note: Portée 90 m, durée 20 rounds. Conserver son action simple pour la menace prioritaire décrite ci-dessous.
+
+step: Un lanceur de sorts profanes constitue la menace principale
+  do: Lui lancer débilité, Volonté DD 26
+  note: La cible subit -4 à sa sauvegarde si elle peut lancer des sorts profanes. En cas d'échec, Intelligence et Charisme tombent à 1 et elle ne peut plus lancer de sorts.
+
+step: Aucun lanceur de sorts prioritaire, mais des protections gênent ses pouvoirs
+  do: Tenter une dissipation de la magie ciblée sur l'adversaire qui résiste grâce à ses sorts
+  note: Le test de dissipation reste plafonné à +10 malgré son NLS 20.
+
+## Rounds suivants
+
+step: Plusieurs ennemis restent lucides et vulnérables aux effets mentaux
+  do: Relancer confusion sur les cibles encore indemnes ; employer une utilisation rapide disponible pour garder son action simple
+  note: Laisser les victimes confuses près de leurs compagnons et attaquer les ennemis lucides : frapper une victime confuse la pousse à riposter contre son agresseur.
+
+step: Plusieurs adversaires se présentent dans un cône de 9 m
+  do: Employer désespoir foudroyant, Volonté DD 25
+  note: Un échec impose -2 aux attaques, sauvegardes, dégâts d'arme et tests de compétence et de caractéristique ; exploiter ensuite ce malus avec confusion ou le contact de terreur.
+
+step: Un combattant dangereux atteint le contact et peut subir la peur
+  do: Employer le contact de terreur +26, Volonté DD 32
+  note: Cette attaque remplace l'attaque à l'épée ; elle vise à faire fuir une menace, sans produire de cône de terreur.
+
+step: Une cible isolée se trouve déjà à 1,50 m
+  do: Attaque à outrance à l'épée, +29/+24/+19/+14, 1d8+10 plus 1 saignement par touche
+  note: Profiter de l'invisibilité suprême et concentrer les coups. Une confusion rapide reste possible pendant ce round.
+
+step: Il doit se déplacer pour atteindre une cible isolée
+  do: Avancer ou voler jusqu'à elle, puis porter une attaque avec Frappe décisive : +29, 2d8+10 plus 1 saignement
+  note: Réserver l'attaque à outrance aux rounds où il peut rester sur place ou se contenter d'un pas de 1,50 m.
+
+step: Les adversaires ignorent ses effets mentaux ou ses alliés sont débordés
+  do: Employer la seconde convocation pour obtenir un diantrefosse supplémentaire, puis combattre avec l'épée derrière ses renforts
+  note: Donner ses ordres par télépathie à 30 m ; maintenir ses alliés hors des zones de confusion.
+
+step: Son invisibilité est dissipée et les attaques se concentrent sur lui
+  do: Rétablir invisibilité suprême et se déplacer en vol pour quitter la position repérée
+  note: Si les adversaires voient les créatures invisibles, privilégier la distance et les alliés interposés.
+
+## Repli
+
+step: Ses pv tombent sous 90, ou la prochaine offensive risque de le tuer
+  do: Employer téléportation suprême vers un refuge connu du même plan
+  note: Ce pouvoir emporte seulement Titivilus et jusqu'à environ 22,7 kg d'objets ; sa suite couvre son départ et ne voyage pas avec lui.
+
+step: La téléportation est empêchée
+  do: Reculer en vol à 18 m par déplacement derrière ses alliés ; employer confusion rapide pour gêner les poursuivants si elle reste disponible
+  note: Sortir de la zone qui bloque le voyage avant de retenter téléportation suprême ; renouveler invisibilité suprême si nécessaire.

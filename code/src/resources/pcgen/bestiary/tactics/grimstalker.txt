@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Grimstalker, fée de taille M, neutre mauvaise, mobile et discrète ; 52 pv, CA 18, réduction des dégâts 5/fer froid.
+  Deux griffes +9, chacune à 1d4+1 plus poison ; allonge de 1,50 m. Le profil ne précise ni les effets ni le DD du poison.
+  Déplacement au sol de 12 m, escalade de 6 m ; vision nocturne, Perception +12, Discrétion +18, ou +26 en forêt.
+
+resource: Contrôle des plantes | 3/jour | pouvoir magique, NLS 8, DD 21
+resource: Forme d'arbre | 3/jour | pouvoir magique, NLS 8
+
+step: Il peut préparer une embuscade en forêt
+  do: Se dissimuler près du passage des intrus et repérer une voie de fuite accessible en escalade.
+  note: Forme d'arbre permet de se camoufler ; reprendre sa forme normale avant de se déplacer ou d'attaquer.
+
+step: Une liane meurtrière est présente
+  do: La placer sous contrôle des plantes avant l'affrontement si les circonstances le permettent, puis préparer une position pour prendre un ennemi en tenaille avec elle.
+  note: Ce pouvoir commande une créature végétale ; il ne crée aucune liane.
+
+## Ouverture
+
+step: La liane meurtrière présente n'est pas encore contrôlée
+  do: Utiliser contrôle des plantes sur elle, DD 21, puis diriger ses attaques contre les intrus.
+  note: Consacrer cette action au contrôle ; attendre une occasion ultérieure pour porter les deux griffes.
+
+step: Un ennemi est accessible et la liane peut le menacer
+  do: Se placer de l'autre côté de cet ennemi pour le prendre en tenaille, puis porter une griffe +9 si le déplacement laisse une action d'attaque.
+  note: Une tenaille valide ajoute +2 aux jets d'attaque des griffes.
+
+step: Un ennemi est déjà à portée et aucune approche n'est nécessaire
+  do: Effectuer une attaque à outrance avec les deux griffes +9, chacune à 1d4+1 plus poison.
+
+## Rounds suivants
+
+step: Il combat aux côtés de la liane contrôlée
+  do: Continuer à diriger ses attaques et conserver une position de tenaille contre la même cible.
+  note: Exploiter la présence de la liane pour multiplier les attaques sur un adversaire exposé.
+
+step: Un ennemi reste à portée
+  do: Privilégier l'attaque à outrance avec les deux griffes ; n'effectuer qu'un pas de 1,50 m si cela suffit à ajuster sa position.
+
+step: Il doit rejoindre une autre cible
+  do: Se déplacer jusqu'à elle, puis porter une seule griffe si une action d'attaque reste disponible.
+
+step: Un adversaire provoque une attaque d'opportunité à portée
+  do: Porter une griffe +9, à 1d4+1 plus poison.
+  note: Réflexes de combat et sa Dextérité permettent jusqu'à six attaques d'opportunité par round, si des occasions distinctes se présentent.
+
+## Repli
+
+step: Points de vie sous 11
+  do: Rompre le combat et fuir en grimpant aux murs, à 6 m par déplacement d'escalade.
+  note: Dans la tour décrite, sortir par le trou du toit et rejoindre la Dancing Lady en G8.
+
+step: Un ennemi le menace au moment de fuir
+  do: Employer le désengagement si le trajet le permet, puis poursuivre l'ascension vers l'issue.
+  note: La réduction des dégâts 5/fer froid peut amortir les coups subis ; elle ne justifie pas de prolonger le combat sous ce seuil.

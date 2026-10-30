@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Ancienne druidesse humaine devenue morte-vivante, la siabrae contrôle le terrain et frappe depuis la terre. 178 pv, CA 27 ; déplacement de 6 m en armure, creusement et glissement dans la terre à 9 m ; vision dans le noir et perception des vibrations à 18 m.
+  Bâton +2 de défense +13/+8 (1d6+3) ; coup de cornes +11 (1d8+1 et pétrification, DD 23). Ces valeurs sont celles du profil, avant les sorts de préparation.
+  RD 10/adamantium et contondant, résistance à l'acide 20, immunité au feu et au poison, traits des morts-vivants et résistance à la canalisation +4. Ses Réflexes +5 sont son point faible.
+
+resource: Fléchette d'acide | 10/jour | 1d6+7 dégâts d'acide
+resource: Sorts rapides | 1 lancement de chaque | peau d'écorce, enchevêtrement DD 18, contagion DD 20 ; un seul sort rapide par round
+resource: Enchevêtrement ordinaire | 2 lancements | Réflexes DD 18 ; exige de la végétation
+resource: Principaux sorts de contrôle | 1 lancement de chaque | coquille antivie, mur de pierre, transmutation de la pierre en boue, pierres acérées DD 21
+resource: Principaux sorts offensifs | 1 lancement de chaque | tempête de feu DD 24, mort rampante DD 24, métamorphose funeste DD 22
+resource: Dissipations | 1 lancement de chaque | dissipation de la magie, dissipation suprême
+
+step: Elle peut préparer la rencontre
+  do: Lancer grande foulée à durée étendue, morsure magique suprême à durée étendue sur les cornes et liberté de mouvement
+  note: Réserver force de taureau à durée étendue à une attaque imminente ; employer peau d'écorce rapide avant l'affrontement si elle en a le temps
+
+step: Les accès empruntent de la pierre naturelle
+  do: Préparer un passage avec pierres acérées et garder un accès à la terre pour changer de position
+  note: Un sort utilisé pendant ces préparatifs est déjà dépensé ; conserver mur de pierre pour séparer les intrus pendant le combat
+
+step: Elle repère les intrus avant d'être découverte
+  do: Les suivre grâce à Perception +32 et à la perception des vibrations, en profitant de Discrétion +22 et du glissement dans la terre
+  note: La perception des vibrations détecte les créatures en contact avec le sol ; elle ne donne pas une ligne de vue permettant de lancer des sorts à travers la roche
+
+## Ouverture
+
+step: Des adversaires vivants menacent de l'engager au contact
+  do: Lancer coquille antivie ; ajouter peau d'écorce rapide si elle ne l'a pas encore utilisée
+  note: Garder les combattants vivants hors de portée et lancer ses sorts depuis cette protection ; ne pas pousser la coquille contre eux, ce qui la fait céder. Elle n'arrête pas les morts-vivants ni les créatures artificielles
+
+step: Les ennemis sont regroupés et ne menacent pas immédiatement le contact
+  do: Lancer tempête de feu sur le groupe ; ajouter enchevêtrement rapide si la végétation s'y prête et si aucun autre sort rapide n'est lancé ce round
+  note: Tempête de feu : Réflexes DD 24. Son immunité au feu lui permet d'inclure sa propre position dans la zone
+
+step: Le groupe avance en colonne ou présente un adversaire isolable
+  do: Utiliser mur de pierre pour couper les renforts ou séparer les combattants de leurs soutiens
+  note: Exploiter ensuite le passage qu'elle peut traverser par glissement dans la terre ; garder un emplacement dégagé pour voir et cibler ses ennemis
+
+## Rounds suivants
+
+step: Les adversaires doivent franchir une zone de pierre naturelle non travaillée
+  do: Utiliser transmutation de la pierre en boue pour ralentir leur progression, ou pierres acérées si ce sort reste disponible
+  note: Pierres acérées inflige ses dégâts au déplacement ; Réflexes DD 21 contre les blessures qui ralentissent. Ne pas transmuter le sol qui porte déjà ses pierres acérées
+
+step: Un adversaire particulièrement dangereux reste exposé
+  do: Lancer métamorphose funeste sur lui, DD 22
+  note: Viser en priorité une cible dont la Vigueur paraît faible ; éviter de gaspiller ce sort sur une créature immunisée à la métamorphose
+
+step: Des protections magiques empêchent ses attaques ou neutralisent son terrain
+  do: Employer dissipation suprême sur l'adversaire prioritaire ; garder dissipation de la magie pour une autre protection gênante
+
+step: Plusieurs ennemis restent accessibles après la première attaque de zone
+  do: Lancer mort rampante, DD 24, puis diriger les nuées contre les cibles proches
+  note: Profiter du désordre pour changer de position ; éviter les cibles manifestement immunisées au poison quand d'autres sont disponibles
+
+step: Une cible vivante parvient au contact sans être arrêtée par la coquille
+  do: Si elle peut rester sur place, faire une attaque à outrance au bâton et aux cornes ; sinon privilégier un coup de cornes pour menacer de pétrification
+  note: Les cornes associées aux attaques de bâton sont une attaque naturelle secondaire : appliquer le malus correspondant. Contagion rapide, DD 20, peut compléter un round au contact, mais la maladie ne neutralise pas immédiatement l'ennemi
+
+step: Les sorts décisifs sont épuisés et elle peut garder ses distances
+  do: Employer les fléchettes d'acide contre une cible accessible ; utiliser appel de la foudre ou les sphères de feu préparées si la situation permet de les exploiter
+  note: Appel de la foudre : DD 20 ; sphère de feu : DD 19, deux préparations. Sortir de la terre pour obtenir la ligne de vue nécessaire
+
+## Repli
+
+step: Elle tombe sous 50 pv, ou ses protections ne contiennent plus les adversaires
+  do: Rompre le contact et s'enfoncer dans la terre ou la pierre à 9 m par déplacement ; rejoindre une position abritée
+  note: Un mouvement pour quitter une case menacée peut provoquer une attaque d'opportunité. Employer un pas de placement avant de s'enfoncer si la configuration le permet
+
+step: Elle dispose encore de sorts pour couvrir sa fuite
+  do: Fermer le passage avec mur de pierre, ou masquer sa retraite avec nappe de brouillard ou brume de dissimulation
+  note: Depuis l'abri du sol, suivre les poursuivants par les vibrations et ressortir ailleurs. Elle ne dispose d'aucun sort de soin préparé pour restaurer ses pv

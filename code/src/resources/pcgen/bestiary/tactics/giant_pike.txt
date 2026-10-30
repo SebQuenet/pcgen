@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Brochet géant, animal aquatique de taille G, prédateur d'embuscade à l'intelligence rudimentaire. 39 pv, CA 16, initiative +8 ; nage à 18 m par déplacement, allonge de 1,50 m.
+  Morsure +7 (1d8+3 et étreinte), engloutissement (1d4 dégâts d'acide par round ; intérieur : CA 11, 3 pv).
+  Vision nocturne, odorat, Perception +14 ; vision à 360° et immunité à la prise en tenaille.
+
+step: Aucune proie à portée
+  do: Rester dans l'eau et attendre une proie isolée, à couvert si le terrain le permet
+  note: Utiliser ses sens pour repérer les mouvements alentour ; aucun bonus chiffré d'embuscade n'est précisé dans le profil fourni
+
+## Ouverture
+
+step: Une proie est dans l'eau à 1,50 m ou moins
+  do: Mordre à +7 pour infliger 1d8+3 dégâts, puis tenter l'étreinte si la morsure touche
+  note: Concentrer l'attaque sur une proie accessible et isolée
+
+step: Une proie est plus loin dans l'eau
+  do: Nager jusqu'à 18 m pour l'approcher, puis mordre si elle se trouve à portée
+  note: Si elle reste hors de portée après ce déplacement, poursuivre l'approche sans attaquer
+
+## Rounds suivants
+
+step: Une proie est encore agrippée dans sa gueule au début de son tour
+  do: Tenter de l'engloutir si sa taille le permet
+  note: L'engloutissement doit réussir avant d'appliquer les dégâts d'acide
+
+note: Digestion
+  Une proie engloutie subit 1d4 dégâts d'acide par round. La CA 11 et les 3 pv indiqués concernent l'intérieur du brochet.
+
+step: Aucune proie n'est agrippée dans sa gueule
+  do: Mordre de nouveau une proie à portée et tenter l'étreinte après une touche
+  note: Poursuivre la même cible tant qu'elle reste accessible ; s'approcher à la nage si nécessaire
+
+## Repli
+
+step: Points de vie à 10 ou moins
+  do: Relâcher toute proie encore agrippée et s'éloigner à la nage, à 18 m par déplacement, vers une zone qui le dissimule
+  note: Rester dans l'eau ; une proie déjà engloutie continue de subir les dégâts d'acide

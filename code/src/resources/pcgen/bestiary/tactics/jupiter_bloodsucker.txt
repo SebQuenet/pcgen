@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Jupiter Bloodsucker, plante vampire de taille M des forêts tempérées, neutre et sans intelligence ; 30 pv, CA 15.
+  Six feuilles-lianes +4, chacune infligeant 1d6+1 dégâts avec étreinte et absorption de sang : 1 point de Constitution par feuille qui draine. Elle peut aussi étouffer une victime agrippée.
+  Déplacement de 1,50 m ; allonge de 1,50 m. Perception aveugle et détection du sang à 18 m ; immunités des plantes et vulnérabilité au feu.
+
+step: Aucune proie à portée
+  do: Rester parmi la végétation et attendre qu'une créature s'approche.
+  note: Son aspect de plante ordinaire favorise une rencontre au contact ; elle ne prépare pas de ruse élaborée.
+
+step: Une créature vivante pourvue de sang entre dans les 18 m
+  do: Réagir à sa présence grâce à la détection du sang.
+  note: Détecter une proie ne permet pas de l'attaquer au-delà de l'allonge de 1,50 m.
+
+## Ouverture
+
+step: Une proie est à 1,50 m ou moins au début de son tour
+  do: Faire une attaque à outrance avec les six feuilles-lianes +4, en concentrant les attaques sur cette proie.
+  note: Chaque touche inflige 1d6+1 dégâts et permet une tentative d'étreinte ; une touche seule ne garantit pas la saisie.
+
+step: Une proie est juste hors de portée
+  do: Faire un pas de placement de 1,50 m si cela suffit à l'atteindre, puis porter les six attaques.
+  note: Si un déplacement ordinaire est nécessaire, avancer de 1,50 m et ne porter qu'une attaque de feuille si la proie devient accessible.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Entretenir la lutte et continuer à absorber son sang avec les feuilles fixées.
+  note: Compter 1 point de dégâts de Constitution par feuille qui draine ; ce sont des dégâts de caractéristique, en plus des blessures des feuilles.
+
+step: Une proie agrippée peut être étouffée
+  do: Tenter de couvrir son nez et sa bouche avec une feuille, par un test de lutte.
+  note: Étouffement accorde au test un bonus de +2 par feuille déjà fixée à cette proie au début du tour. La victime doit retenir son souffle ou commencer à suffoquer ; la feuille qui l'étouffe ne draine pas de sang.
+
+step: La proie se libère et reste à portée
+  do: Reprendre les attaques de feuilles et tenter de l'agripper de nouveau.
+
+step: Les adversaires restent hors de portée
+  do: Avancer vers une proie détectée si elle est accessible, à 1,50 m par déplacement.
+  note: Elle ne possède aucune attaque à distance ; sa lenteur permet aux adversaires mobiles de garder leurs distances.
+
+## Repli
+
+step: La plante est blessée ou exposée au feu
+  do: Continuer instinctivement à saisir et à vider de son sang une proie accessible.
+  note: Sans intelligence, elle n'organise pas de retraite selon ses points de vie. Sa vulnérabilité au feu reste exploitable pendant qu'elle s'acharne sur sa victime.
+
+step: Les proies quittent sa zone de détection
+  do: Cesser la poursuite faute de cible détectée et attendre une nouvelle proie.

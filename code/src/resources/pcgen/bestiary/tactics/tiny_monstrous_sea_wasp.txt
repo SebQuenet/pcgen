@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Minuscule méduse presque transparente des eaux chaudes, vermine aquatique sans intelligence qui agit par instinct. 4 pv, CA 13 ; nage à 9 m par round.
+  Tentacule +3 (1d3-5 et poison), allonge 0 m ; ses touches enchevêtrent les victimes et son venin affaiblit leur Constitution.
+  Vision dans le noir et perception aquatique à 18 m ; Perception +4, Discrétion +19.
+
+step: Une créature approche dans l'eau
+  do: Attendre à proximité de son passage, les tentacules déployés, en réagissant aux vibrations de l'eau
+  note: Transparence : un test de Perception DD 15 est nécessaire pour la remarquer dans l'eau.
+
+## Ouverture
+
+step: Une créature ne l'a pas remarquée et entre en contact avec elle
+  do: Déclencher automatiquement une attaque de tentacule +3 (1d3-5 et poison)
+  note: Le contact déclenche l'attaque ; résoudre ensuite les effets d'une touche.
+
+step: Une proie est proche sans toucher les tentacules
+  do: Nager jusqu'à son espace et attaquer avec le tentacule +3
+  note: Son allonge de 0 m impose d'entrer dans l'espace de la cible ; cette entrée peut provoquer une attaque d'opportunité.
+
+step: Le tentacule touche une créature
+  do: Enchevêtrer la victime et appliquer le poison de blessure
+  note: La victime peut se libérer par un test d'Évasion DD 10 ou de Force DD 10.
+  note: Poison : Vigueur DD 10 ; fréquence 1/round pendant 4 rounds ; chaque échec inflige 1 point d'affaiblissement temporaire de Constitution ; une sauvegarde réussie suffit à guérir le poison.
+
+## Rounds suivants
+
+step: Une victime reste dans son espace
+  do: Répéter l'attaque de tentacule +3 (1d3-5 et poison)
+  note: Chaque nouvelle touche enchevêtre la victime et l'expose de nouveau au poison.
+
+step: La victime s'éloigne et la méduse n'est pas menacée
+  do: La suivre à la nage, jusqu'à 9 m avec une action de mouvement, puis attaquer si elle atteint son espace
+  note: L'enchevêtrement gêne la victime ; il ne l'attache pas à la méduse.
+
+step: Le poison agit encore
+  do: Résoudre la sauvegarde de Vigueur DD 10 à chaque round jusqu'à une réussite ou la fin des 4 rounds
+  note: Le poison déjà inoculé continue d'agir après la séparation des deux créatures.
+
+## Repli
+
+resource: Jet | 1/round | action complexe ; déplacement de 18 m en arrière, en ligne droite, sans provoquer d'attaques d'opportunité
+
+step: Elle est blessée ou directement menacée
+  do: Utiliser le jet pour s'éloigner de 18 m en ligne droite dans l'eau
+  note: Avec seulement 4 pv, elle fuit instinctivement dès qu'elle survit à une blessure ; choisir une direction dégagée.
+
+step: Elle est saisie et ne peut pas s'éloigner
+  do: Tenter de se dégager avec Évasion +11, puis utiliser le jet dès qu'elle est libre et dispose d'une action complexe

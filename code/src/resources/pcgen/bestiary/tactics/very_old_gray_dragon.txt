@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Très vieux dragon gris, dragon de taille TG, neutre mauvais et solitaire des côtes chaudes. Intelligent, il combine magie défensive, souffle et attaques en vol avant d'écraser un adversaire isolé au contact.
+  237 pv, CA 36, RM 25 ; immunité à la paralysie et au sommeil. Déplacement terrestre 18 m, vol 60 m de manœuvrabilité moyenne, nage 12 m.
+  Souffle en ligne de 30 m : 18d6 de feu, Réflexes DD 25 pour moitié. Présence terrifiante à 81 m, Volonté DD 22.
+  Attaque à outrance : 2 griffes +27 (2d6+10), morsure +28 (2d8+15, critique 19–20), 2 ailes +25 (1d8+5), queue +25 (2d6+15). Allonge 3 m, ou 4,50 m avec la morsure ; espace occupé 4,50 m.
+
+resource: Sorts de niveau 5 | 4/jour partagés | brume mortelle (DD 18), télékinésie ; NLS 11
+resource: Sorts de niveau 4 | 6/jour partagés | porte dimensionnelle, invisibilité suprême, scrutation (DD 17)
+resource: Sorts de niveau 3 | 7/jour partagés | dissipation de la magie, état gazeux, protection contre les énergies destructives, rayon d'épuisement (DD 16)
+resource: Sorts de niveau 2 | 7/jour partagés | flou, splendeur de l'aigle, bourrasque (DD 15), localisation d'objet, image miroir
+resource: Sorts de niveau 1 | 7/jour partagés | mains brûlantes (DD 14), projectile magique, protection contre le Bien, brume de dissimulation, bouclier
+
+step: Des intrus approchent et il dispose de plusieurs rounds
+  do: Lancer bouclier puis image miroir, à raison d'un sort par round ; ajouter protection contre les énergies destructives si une énergie ennemie a été identifiée.
+  note: Décompter ces sorts des réserves quotidiennes. Préserver au moins un emplacement de niveau 4 pour porte dimensionnelle.
+
+step: Le combat est imminent
+  do: Lancer invisibilité suprême, puis prendre une position permettant une ligne de souffle sur plusieurs adversaires.
+  note: Au NLS 11, invisibilité suprême dure 11 rounds : la lancer au dernier moment. Elle permet de rester invisible en attaquant.
+
+## Ouverture
+
+step: Il attaque ou survole les adversaires
+  do: Faire résoudre la présence terrifiante contre les créatures concernées à 81 m ou moins, Volonté DD 22.
+  note: La présence accompagne son offensive ; elle ne remplace pas son attaque ou son sort du round.
+
+step: Plusieurs ennemis sont alignés dans les 30 m
+  do: Souffler sur la ligne la plus rentable : 18d6 de feu, Réflexes DD 25 pour moitié.
+  note: Avec Attaque en vol, effectuer une partie du déplacement, souffler, puis poursuivre le vol en restant dans la limite des 60 m du round.
+
+step: Le groupe reste rassemblé au sol et aucune ligne de souffle intéressante ne se présente
+  do: Lancer brume mortelle sur sa position, Vigueur DD 18 selon les effets du sort.
+  note: Tenir compte des dés de vie des victimes pour résoudre le sort. Rester hors du nuage : le dragon ne possède aucune immunité au poison indiquée.
+
+step: Un adversaire est déjà à portée et il peut consacrer son round à la mêlée
+  do: Effectuer l'attaque à outrance, en concentrant les six attaques sur une cible dangereuse ou déjà blessée.
+  note: Une cible située au-delà de 3 m et jusqu'à 4,50 m n'est accessible qu'à la morsure.
+
+## Rounds suivants
+
+step: Le souffle est disponible et plusieurs cibles peuvent être alignées
+  do: Reprendre une trajectoire d'attaque en vol et utiliser le souffle.
+  note: Un passage avec Attaque en vol permet une action simple pendant le déplacement ; il ne permet pas une attaque à outrance.
+
+step: Les ennemis se dispersent ou tentent de l'encercler
+  do: Exploiter le vol pour changer d'angle, puis attaquer par une morsure pendant un passage si le souffle n'est pas disponible.
+  note: Utiliser l'allonge de 4,50 m de la morsure pour limiter l'exposition aux adversaires de faible allonge. Attaque en vol ne supprime pas les attaques d'opportunité.
+
+step: Une cible isolée peut être combattue sans subir l'assaut de tout le groupe
+  do: Rester à portée et effectuer une attaque à outrance ; employer Attaque en puissance contre une cible facile à toucher.
+  note: Contre une forte CA, privilégier les bonus d'attaque normaux. Une attaque à outrance exige de limiter le déplacement au pas de placement de 1,50 m.
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée, mais une attaque à outrance est impossible
+  do: Employer Enchaînement avec la morsure : si la première attaque touche, porter la seconde contre l'autre ennemi.
+  note: Cette action simple impose un malus de −2 à la CA jusqu'au prochain tour ; l'éviter lorsqu'il subit déjà de nombreuses attaques.
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Consacrer un round à dissipation de la magie sur l'adversaire protégé ou sur un effet identifié.
+  note: Employer son NLS 11 pour le test de dissipation ; conserver les sorts de niveau 4 nécessaires au repli.
+
+step: Un combattant mobile le poursuit ou menace de verrouiller sa position
+  do: Lancer rayon d'épuisement : attaque de contact à distance +17, Vigueur DD 16 pour réduire l'effet.
+  note: Exploiter ensuite la mobilité réduite de la cible pour remettre de la distance ou choisir un autre adversaire.
+
+step: Il doit défendre une position et un adversaire dépend d'une arme tenue
+  do: Envisager télékinésie pour tenter un désarmement à distance, puis maintenir le sort seulement si son effet justifie les actions de concentration.
+
+step: Ses défenses disparaissent et les attaques ennemies deviennent trop efficaces
+  do: Se dégager, puis renouveler image miroir ou invisibilité suprême selon les emplacements restants.
+  note: Chaque sort prend son action propre ; ne pas cumuler renouvellement, souffle et attaque à outrance pendant le même tour.
+
+## Repli
+
+step: Points de vie à 70 ou moins, ou risque d'être abattu avant son prochain tour
+  do: Lancer porte dimensionnelle vers un emplacement sûr, choisi pour rompre le contact et la poursuite immédiate.
+  note: Après porte dimensionnelle, aucune autre action avant son prochain tour. Au tour suivant, poursuivre la fuite par le vol ou la nage selon les poursuivants.
+
+step: Aucun emplacement de niveau 4 ne reste
+  do: Rompre le contact par le vol à 60 m par déplacement ; utiliser la nage à 12 m par déplacement si l'eau offre une meilleure issue.
+  note: Si nécessaire, consacrer d'abord un round à brume de dissimulation pour masquer le départ ; elle gêne aussi sa propre vision. Tenir compte des attaques d'opportunité lors du décrochage.
+
+step: Une ouverture étroite permet d'échapper à des poursuivants qui bloquent les autres issues
+  do: Lancer état gazeux et franchir l'ouverture, puis reprendre sa forme lorsque la fuite est assurée.
+  note: Cette forme impose les limitations de déplacement et d'action du sort ; la choisir pour franchir l'obstacle, sans compter sur la vitesse de vol habituelle.

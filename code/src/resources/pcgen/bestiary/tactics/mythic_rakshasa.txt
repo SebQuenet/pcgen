@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Rakshasa mythique, extérieur métamorphe loyal mauvais, manipulateur qui préfère diviser ses adversaires avant de les affronter. FP 12, rang mythique 5 ; 165 pv, CA 35, contact 21 ; initiative +14, déplacement 12 m, allonge 1,50 m.
+  Kukri +1 : +16/+11, 1d4+6, critique 15–20 ; morsure +5, 1d6+3 ; griffe +10, 1d4+5. Ses enchantements isolent une cible, ses illusions le protègent et éclair frappe les ennemis alignés.
+  RD 15/épique et Bien et perforant : les trois propriétés sont nécessaires pour la franchir ; résistance à la magie 27. L'esquive télépathique fournit les +5 d'intuition déjà inclus dans sa CA ; retirer ce bonus contre une créature sans esprit ou dont l'esprit est illisible.
+
+resource: Sorts de niveau 1 | 8/jour | réserve commune, notamment armure de mage, bouclier, projectile magique et charme-personne
+resource: Sorts de niveau 2 | 7/jour | réserve commune, notamment image miroir, invisibilité, image mineure et flèche acide
+resource: Sorts de niveau 3 | 7/jour | réserve commune pour éclair, suggestion et toucher du vampire
+resource: Sorts de niveau 4 | 5/jour | réserve commune pour charme-monstre et porte dimensionnelle ; conserver au moins une utilisation pour fuir
+
+step: Il peut approcher sans révéler sa nature
+  do: Prendre une forme humanoïde et employer Déguisement +26, Bluff +22 et Psychologie +14 pour identifier les rivalités et séparer les intrus.
+  note: Charme-personne sur un humanoïde isolé, Volonté DD 16, ou charme-monstre, Volonté DD 19, à 12 m maximum. Le charme crée une relation amicale ; il ne permet pas de commander automatiquement une attaque contre les compagnons de la cible.
+
+step: Un affrontement devient probable
+  do: Lancer armure de mage à l'avance, puis bouclier et image miroir juste avant le combat, chacun à son tour.
+  note: Armure de mage dure 7 heures ; bouclier et image miroir durent 7 minutes. Les deux premiers sorts portent la CA à 43 ; image miroir crée 1d4+2 doubles. Décompter ces préparatifs des réserves quotidiennes.
+
+step: Il choisit le terrain
+  do: Garder une issue dégagée et repérer un lieu sûr pour porte dimensionnelle ; se dissimuler sous invisibilité si une embuscade est possible.
+  note: Vision dans le noir à 18 m, odorat et Perception +14 l'aident à surveiller les approches. Une image silencieuse peut masquer sa position ou simuler un obstacle, mais ne bloque pas physiquement le passage.
+
+## Ouverture
+
+step: Il est surpris sans protection et les ennemis approchent
+  do: Lancer image miroir et se déplacer pour éviter l'encerclement.
+  note: S'il est menacé, faire d'abord un pas de 1,50 m vers une case hors d'allonge lorsque le terrain le permet ; sinon lancer sur la défensive, concentration +12.
+
+step: Il est protégé et un adversaire à 12 m comprend sa langue
+  do: Lancer suggestion, Volonté DD 18, pour lui faire quitter momentanément l'affrontement sous un prétexte crédible.
+  note: Formuler une conduite raisonnable, par exemple aller chercher des renforts ; une instruction manifestement suicidaire échoue. Privilégier une cible dont l'hésitation ou la crédulité a été observée.
+
+step: Il est protégé et plusieurs ennemis sont alignés
+  do: Privilégier éclair : ligne de 36 m, 7d6 dégâts d'électricité, Réflexes DD 18 pour moitié.
+  note: Se déplacer avant le lancement pour prendre plusieurs adversaires dans la ligne sans toucher ses alliés éventuels.
+
+## Rounds suivants
+
+step: Les adversaires restent dispersés à distance
+  do: Garder ses distances et concentrer projectile magique sur un adversaire blessé : quatre projectiles infligeant chacun 1d4+1.
+  note: Contre une cible résistante à la magie, envisager flèche acide : attaque de contact à distance, 2d4 dégâts d'acide à l'impact puis pendant les deux rounds suivants, sans résistance à la magie.
+
+step: Un adversaire isolé et vulnérable est au contact
+  do: Faire une attaque à outrance : kukri +16/+11, morsure +5 et griffe +10, avec les dégâts du profil.
+  note: Un pas de 1,50 m reste compatible avec l'attaque à outrance ; un déplacement ordinaire ne laisse qu'une attaque de kukri à +16. Concentrer les coups sur la même cible.
+
+step: Les attaques physiques deviennent dangereuses mais il peut encore tenir
+  do: Lors d'une attaque de mêlée, employer Expertise du combat mythique : malus de −3 aux attaques et bonus d'esquive de +5 à la CA jusqu'à son prochain tour.
+  note: La CA passe à 40, ou 48 avec armure de mage et bouclier ; le kukri attaque alors à +13/+8. Renoncer à cette option si elle empêche de toucher sa cible.
+
+step: Une cible vivante au contact est facile à toucher
+  do: Employer toucher du vampire : attaque de contact au corps à corps, 3d6 dégâts, sans jet de sauvegarde.
+  note: Les dégâts infligés procurent autant de pv temporaires, pendant 1 heure ; ils ne restaurent pas ses pv perdus. La résistance à la magie s'applique.
+
+step: Ses doubles sont détruits ou il risque l'encerclement
+  do: Renouveler image miroir depuis une position sûre ; employer invisibilité pour se déplacer et rompre le contact visuel.
+  note: L'invisibilité ordinaire cesse dès qu'il attaque, y compris avec un sort offensif. Éviter de gaspiller les enchantements contre une cible manifestement immunisée.
+
+## Repli
+
+step: Ses pv tombent à 55 ou moins, ou ses protections ne suffisent plus
+  do: Lancer porte dimensionnelle vers le refuge choisi, à 204 m maximum.
+  note: Il ne peut plus agir avant son prochain tour après ce sort. S'il est menacé, faire d'abord un pas de 1,50 m hors d'allonge si possible, ou lancer sur la défensive, concentration +12 contre DD 23.
+
+step: Il a atteint un refuge ou ne peut plus utiliser porte dimensionnelle
+  do: Se soustraire aux regards par invisibilité, puis prendre une autre forme humanoïde hors de vue ; utiliser Discrétion +18 pour échapper aux recherches.
+  note: Sans téléportation disponible, quitter d'abord la mêlée par un retrait et chercher un couvert. Il privilégie sa survie afin de reprendre plus tard ses manipulations.

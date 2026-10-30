@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Petit humanoïde gobelinoïde des souterrains, chaotique mauvais, qui privilégie les embuscades et les attaques sournoises. 8 pv ; CA 15 ; déplacement de 9 m ; vision dans le noir à 18 m ; Discrétion +11.
+  Épée courte +4 (1d6+1), allonge de 1,50 m ; épieu lancé +4 (1d4+1). Attaque sournoise : +1d6 contre une cible prise au dépourvu ou en tenaille.
+
+resource: Flou | 1/jour | NLS 1 ; durée de 1 minute ; 20 % de chances que les attaques contre lui échouent
+
+step: Des intrus approchent dans les souterrains
+  do: Se cacher derrière un obstacle ou dans l'obscurité et attendre une cible vulnérable
+  note: Discrétion +11 ; l'obscurité seule ne le cache pas d'un adversaire capable de voir dans le noir
+
+step: Des alliés sont présents
+  do: Répartir les assaillants pour pouvoir attaquer une même cible depuis des côtés opposés et la prendre en tenaille
+
+step: Le combat est imminent et flou est disponible
+  do: Activer flou avant de sortir de sa cachette
+  note: Sa courte durée impose d'attendre l'approche effective des intrus
+
+## Ouverture
+
+step: Une cible prise au dépourvu est à 1,50 m
+  do: Frapper à l'épée courte +4, pour 1d6+1 et 1d6 d'attaque sournoise
+
+step: Une cible prise au dépourvu peut être atteinte par un lancer
+  do: Lancer l'épieu +4, pour 1d4+1 et 1d6 d'attaque sournoise
+  note: L'attaque sournoise à distance exige une cible à 9 m ou moins ; appliquer les malus de portée du lancer
+
+step: Les ennemis sont déjà sur leurs gardes
+  do: Rejoindre un allié pour prendre une cible en tenaille, puis frapper si ses actions le permettent
+
+## Rounds suivants
+
+step: Une cible est prise en tenaille
+  do: L'attaquer à l'épée courte +4, pour 1d6+1 et 1d6 d'attaque sournoise
+
+step: Aucune attaque sournoise n'est possible
+  do: Chercher une position de tenaille avec un allié ; à défaut, frapper à l'épée courte pour 1d6+1
+  note: Éviter les déplacements qui l'exposent inutilement aux attaques d'opportunité
+
+step: Il est exposé soudainement à une lumière vive
+  do: Chercher immédiatement un abri hors de la zone éclairée
+  note: Il est aveuglé pendant 1 round, puis ébloui tant qu'il reste exposé à cette lumière
+
+## Repli
+
+step: Il lui reste 4 pv ou moins, ou ses alliés sont mis en déroute
+  do: Se désengager vers un passage sombre ou un couvert ; utiliser la retraite si un ennemi le menace au contact
+  note: Si flou est encore disponible, l'activer avant la fuite lorsque cela lui laisse le temps de se déplacer

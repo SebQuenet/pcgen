@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Vorin, aberration chaotique mauvaise de très grande taille des marais, peu intelligente, qui encaisse et combat au contact. 178 pv ; CA 18, contact 12, pris au dépourvu 14 ; initiative +8.
+  Dard +20 (2d6+9 et poison), morsure +19 (2d6+9) ; crachat +15 (poison). Allonge 3 m ; espace occupé 4,50 m ; déplacement terrestre 12 m.
+  Réduction des dégâts 15, surmontée par les armes tranchantes ou perforantes ; immunité à l'acide ; résistance au feu 10.
+
+note: Poison et crachat
+  Le bloc ne précise ni la portée du crachat, ni le DD, les effets ou la fréquence du poison, ni les éventuelles limites d'emploi du crachat. Ces paramètres doivent venir de la description complète de ces capacités.
+
+step: Des intrus approchent du marais
+  do: Se dissimuler dans l'eau et attendre qu'une proie approche à 3 m.
+  note: Discrétion +21 dans l'eau, +13 ailleurs ; Perception +13 ; vision dans le noir à 18 m. La respiration aquatique permet de rester immergé, mais aucune vitesse de nage n'est indiquée.
+
+## Ouverture
+
+step: Une proie est déjà à 3 m ou moins et aucune approche n'est nécessaire
+  do: Faire une attaque à outrance avec le dard +20 et la morsure +19 contre cette proie.
+  note: Le dard inflige 2d6+9 et expose au poison ; la morsure inflige 2d6+9. Concentrer les attaques sur une seule cible.
+
+step: Il faut avancer pour atteindre une proie
+  do: S'approcher avec une action de mouvement, puis porter un coup de dard +20 si la proie est désormais à 3 m ou moins.
+  note: Après ce déplacement, il ne peut pas ajouter la morsure par une attaque à outrance. Le terrain marécageux peut réduire la distance parcourue.
+
+step: Aucune proie n'est accessible au corps à corps, mais une cible est à portée du crachat
+  do: Cracher sur cette cible avec l'attaque à distance +15 pour l'exposer au poison.
+  note: Appliquer la portée et les modalités de cette capacité dès qu'elles sont disponibles ; aucune distance n'est fournie ici.
+
+## Rounds suivants
+
+step: Une proie reste dans son allonge
+  do: Répéter l'attaque à outrance, dard puis morsure, jusqu'à l'abattre ; passer ensuite à la proie accessible la plus proche.
+  note: Sa faible intelligence favorise l'acharnement au contact et les réactions simples aux menaces immédiates.
+
+step: La cible est facile à toucher et il privilégie les dégâts
+  do: Activer Attaque en puissance pour ses attaques de mêlée : dard +16 (2d6+17 et poison), morsure +15 (2d6+17).
+  note: Le malus de -4 aux attaques et le bonus de +8 aux dégâts s'appliquent jusqu'à son prochain tour. Revenir aux bonus normaux contre une cible difficile à toucher.
+
+step: Deux ennemis sont adjacents entre eux et tous deux à 3 m ou moins, sans possibilité d'attaque à outrance
+  do: Utiliser Enchaînement avec le dard : attaquer le premier, puis le second si le premier coup touche.
+  note: Enchaînement demande une action simple et impose -2 à la CA jusqu'au prochain tour, soit CA 16. Il ne s'ajoute pas à une attaque à outrance.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup de dard pour infliger ses dégâts et exposer au poison.
+  note: Une seule attaque d'opportunité par round ; appliquer Attaque en puissance si elle est encore active.
+
+## Repli
+
+step: Points de vie sous 45 et possibilité de rompre le contact
+  do: Se retirer vers l'eau et les couverts du marais ; utiliser l'action de retraite si elle permet d'échapper à l'ennemi immédiat.
+  note: La retraite évite les attaques d'opportunité liées à la case de départ, mais pas celles que peuvent provoquer les autres cases traversées.
+
+step: Hors de vue après le repli
+  do: Se dissimuler dans l'eau avec Discrétion +21 et rester immergé grâce à la respiration aquatique.
+  note: Il ne dispose d'aucun moyen de guérison indiqué ; s'il est acculé, reprendre les attaques de dard et de morsure.

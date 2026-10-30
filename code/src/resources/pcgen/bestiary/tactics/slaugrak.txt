@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Slaugrak, extérieur de taille G, chaotique mauvais, mutant troglodyte marqué par les Abysses. Solitaire et peu intelligent, il cherche surtout à tuer et dévorer des proies vivantes.
+  68 pv ; CA 19 ; déplacement 9 m ; espace et allonge 3 m. Morsure +13, 1d10+5, critique 19-20, plus 1d6 d'acide et morsure corruptrice ; deux griffes +12, 1d6+5 chacune.
+  RD 10/fer froid ou Bien ; immunité à l'acide et au poison ; résistance 10 au froid, à l'électricité et au feu. Vision dans le noir à 36 m et vision dans les ténèbres, même magiques.
+
+resource: Ténèbres profondes | 1/jour | NLS 8 ; objet touché ; rayon 18 m ; durée 80 minutes
+resource: Lenteur | 1/jour | NLS 8 ; Volonté DD 15 annule ; portée 13,50 m ; jusqu'à 8 cibles, distantes entre elles de 9 m au maximum ; durée 8 rounds
+resource: Ténèbres maudites | 1/jour | NLS 8 ; Volonté DD 16, effet partiel ; portée 54 m ; rayon 6 m
+
+step: Des intrus approchent dans les souterrains
+  do: Attendre dans une zone rocailleuse et sombre, hors de la lumière solaire ; Discrétion +12 dans les rochers, +8 ailleurs
+  note: Il prépare une embuscade simple, sans manœuvre élaborée ni coordination avec des alliés.
+
+step: Il a le temps de se préparer et la pénombre peut gêner les intrus
+  do: Utiliser ténèbres profondes sur une pierre gardée près de lui
+  note: L'éclairage baisse de deux crans ; dans une zone initialement peu éclairée ou obscure, même la vision dans le noir adverse devient insuffisante. Lui continue de voir.
+
+## Ouverture
+
+step: Plusieurs ennemis avancent à portée de lenteur, sans être encore à portée de morsure
+  do: Lancer lenteur sur les assaillants visibles, en privilégiant les combattants qui approchent
+  note: Les victimes ratant Volonté DD 15 sont chancelantes, se déplacent à demi-vitesse et subissent -1 aux attaques, à la CA et aux Réflexes. Chaque pouvoir magique demande une action simple ; il ne mord pas dans le même round.
+
+step: Les ennemis restent groupés à distance et lenteur serait peu utile
+  do: Lancer ténèbres maudites pour englober le plus de cibles possible
+  note: Les créatures bonnes subissent 4d8 dégâts et deviennent fiévreuses pendant 1d4 rounds ; les extérieurs bons subissent 8d6. Volonté DD 16 réduit les dégâts de moitié et annule l'état fiévreux. Les créatures neutres subissent la moitié des dégâts, encore réduite de moitié sur une sauvegarde réussie, sans devenir fiévreuses ; les mauvaises sont épargnées.
+
+step: Une proie est accessible et aucun pouvoir n'est utilisé ce round
+  do: Avancer de 9 m au maximum pour la placer dans son allonge de 3 m, puis porter une morsure
+  note: Choisir une proie vivante proche ; après un déplacement supérieur à un pas de 1,50 m, il ne peut pas ajouter les deux griffes.
+
+## Rounds suivants
+
+step: Une créature vivante entre dans les 9 m de son aura
+  do: Appliquer automatiquement la puanteur : Vigueur DD 17 ou état fiévreux pendant 10 rounds
+  note: Une sauvegarde réussie protège contre cette même puanteur pendant 24 heures. Les créatures immunisées au poison ou possédant la puanteur sont épargnées.
+
+step: Une proie reste dans son allonge de 3 m
+  do: Faire une attaque à outrance : morsure +13 et deux griffes +12, concentrées sur cette proie
+  note: Se limiter à un pas de placement de 1,50 m pour conserver les trois attaques ; mordre lors des attaques d'opportunité permises par son allonge.
+
+step: Une créature vivante subit les dégâts d'acide de la morsure
+  do: Appliquer la morsure corruptrice : Vigueur DD 17 ou saignement de 2 points de Constitution par round
+  note: Les créatures dépourvues de sang et d'organes internes sont immunisées à ce saignement. Les morsures répétées ne cumulent pas plusieurs saignements identiques.
+
+step: Une proie sort de son allonge
+  do: La poursuivre dans les souterrains et chercher une nouvelle morsure ; employer lenteur si elle reste disponible et peut empêcher sa fuite
+  note: Garder le combat dans l'obscurité ; ne pas poursuivre une proie jusque sous le soleil.
+
+## Repli
+
+step: La lumière solaire l'atteint
+  do: Regagner immédiatement une zone souterraine abritée, avec une action de déplacement de 9 m au maximum
+  note: Sous le soleil, il est chancelant et ne peut pas attaquer. Un simple sort de lumière du jour ne déclenche pas cette faiblesse.
+
+step: Ses pv deviennent négatifs et aucune fuite sûre ne s'offre à lui
+  do: Utiliser Dur à cuire pour rester conscient et porter une seule morsure par round contre une proie à portée
+  note: Il est chancelant : une action simple ou de mouvement par round. Une action simple lui coûte 1 pv après sa résolution ; il meurt à -17 pv. S'il peut s'éloigner vers l'obscurité, choisir le déplacement, qui ne lui coûte pas ce pv supplémentaire.

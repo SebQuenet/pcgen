@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Zelishkar, extérieur daemon de feu de taille G, neutre mauvais, est un combattant intelligent qui combine bombardement magique et mêlée. Il possède 396 pv, une CA de 39 et une résistance à la magie de 32.
+  À outrance : 2 griffes +35 (1d10+11 plus 2d6 de feu, critique 19–20) et morsure +34 (1d8+11 plus 2d6 de feu). Espace et allonge : 3 m. Déplacement terrestre : 9 m ; vol parfait : 18 m.
+  Ses armes principales à distance sont la tempête de feu amplifiée, les flammes contagieuses rapides, le nuage incendiaire et le sirocco. Niveau de lanceur de sorts : 24 ; concentration +30.
+
+note: Protections et perception
+  Flou permanent : 20 % de chances de rater. Vision lucide et aura impie permanentes ; DD 24 pour les effets de cette aura. Vision dans le noir à 18 m, odorat, Perception +33 et télépathie à 90 m.
+  Immunités : feu, acide, affaiblissements de caractéristiques, charme et coercition, effets de mort, maladies et poison. Résistances : froid 30 et électricité 30. Sa vulnérabilité au froid subsiste malgré sa résistance : surveiller les utilisateurs de froid.
+
+resource: Tempête de feu amplifiée | 3/jour | DD 24 ; dégâts amplifiés
+resource: Nuage incendiaire | 3/jour | DD 24
+resource: Flammes contagieuses rapides | 3/jour | pouvoir utilisé en action rapide
+resource: Sirocco | 3/jour | DD 22
+resource: Convocation | 1/jour | niveau 9 ; réussite 100 % ; 2 élémentaires du Feu nobles fiélons ou un daemon de 20 DV au plus
+resource: Autres pouvoirs magiques | À volonté | invectives brûlantes DD 18, dissipation du Bien DD 21, bouclier de feu, charme-monstre de groupe DD 24 limité aux créatures du sous-type feu
+
+step: Un combat est imminent et il dispose du temps nécessaire
+  do: Convoquer les deux élémentaires du Feu nobles fiélons et les placer sur les voies d'approche ; préparer un bouclier de feu dans sa version qui protège du froid
+  note: Ses protections permanentes sont déjà actives. La protection du bouclier de feu ne supprime pas sa vulnérabilité au froid.
+
+step: Des créatures du sous-type feu peuvent être abordées avant les hostilités
+  do: Tenter charme-monstre de groupe, DD 24, pour obtenir leur coopération
+  note: Ce pouvoir ne cible que les créatures du sous-type feu ; un charme ne donne pas le contrôle absolu de leurs actions.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et une tempête de feu est disponible
+  do: Lancer une tempête de feu amplifiée, DD 24, en couvrant le plus d'adversaires possible ; ajouter des flammes contagieuses rapides dans le même round si une utilisation reste disponible
+  note: Choisir une position aérienne qui garde les cibles en vue et permet aux créatures convoquées d'intercepter les combattants.
+
+step: Les ennemis tiennent un passage ou une position difficile à contourner
+  do: Placer un nuage incendiaire, DD 24, sur leur position ou leur voie d'approche
+  note: Exploiter le nuage pour les faire sortir de leur formation ; rester en lisière pour conserver une vue sur les cibles. La vision lucide ne permet pas de voir à travers la fumée.
+
+step: Un adversaire arrive immédiatement au contact
+  do: S'il est déjà à portée de 3 m au début du tour, effectuer l'attaque à outrance ; sinon, se déplacer puis porter une seule attaque de griffe
+  note: Privilégier le lanceur de sorts utilisant le froid ou un ennemi que les dégâts physiques peuvent achever.
+
+## Rounds suivants
+
+step: Les ennemis se regroupent de nouveau
+  do: Relancer une tempête de feu amplifiée tant qu'il en reste ; ajouter des flammes contagieuses rapides si elles sont encore disponibles
+  note: Le pouvoir rapide accompagne une autre action du tour ; il ne remplace pas la tempête de feu ou l'attaque à outrance.
+
+step: Des adversaires restent dans une zone qu'il veut leur faire abandonner
+  do: Utiliser sirocco, DD 22, pour les fatiguer et les forcer à se déplacer ; lors d'un autre round, employer le nuage incendiaire pour fermer une autre approche si la situation le justifie
+  note: Préférer ces zones aux attaques de mêlée lorsqu'elles peuvent gêner plusieurs ennemis à la fois.
+
+step: Une cible est à portée et il peut rester sur place
+  do: Effectuer 2 griffes +35 et une morsure +34 ; faire au besoin un pas de 1,50 m avant l'attaque à outrance
+  note: Utiliser Attaque en puissance contre une cible facile à toucher. Exploiter l'allonge de 3 m et Attaques réflexes pour multiplier les attaques d'opportunité lorsque les ennemis en provoquent.
+
+step: Une cible importante résiste au feu ou se protège efficacement contre ses zones
+  do: Concentrer les attaques physiques sur elle et faire intervenir les créatures convoquées ; utiliser le vol pour rejoindre une cible isolée
+  note: Une résistance au feu réduit l'intérêt des pouvoirs incendiaires et des dégâts de feu ajoutés aux attaques, mais ne supprime pas les dégâts physiques des griffes et de la morsure.
+
+step: Plusieurs ennemis proches peuvent être intimidés
+  do: Employer les invectives brûlantes avec Intimidation +33
+  note: Les invectives visent les ennemis à 9 m ; le DD 18 sert à éviter de prendre feu. Réserver cette action aux situations où démoraliser plusieurs cibles vaut mieux qu'une attaque ou une zone plus puissante.
+
+step: Un extérieur bon constitue une menace accessible au contact
+  do: Envisager dissipation du Bien, DD 21, pour tenter de le renvoyer
+  note: Ce pouvoir n'est pas une dissipation générale des protections magiques adverses.
+
+## Repli
+
+step: Points de vie sous 132, ou attaques de froid menaçant de l'abattre rapidement
+  do: Se retirer en vol vers un couvert solide, à 18 m par déplacement ; utiliser l'action de retraite si nécessaire et faire couvrir le départ par les créatures convoquées
+  note: Le vol parfait permet de choisir une issue verticale. Éviter les autres cases menacées sur le trajet : la retraite ne protège pas de toutes les attaques d'opportunité.
+
+step: Les poursuivants peuvent encore le rejoindre et un nuage incendiaire reste disponible
+  do: Placer le nuage entre eux et lui, puis s'éloigner en vol avec son action de mouvement
+  note: Le nuage coupe les lignes de vue mais ne constitue pas un obstacle matériel. Zelishkar ne dispose d'aucun pouvoir de téléportation dans ce profil.

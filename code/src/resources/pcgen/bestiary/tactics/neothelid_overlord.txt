@@ -1,0 +1,88 @@
+## Avant le combat
+
+note: Profil
+  Neothelid Overlord, aberration gigantesque chaotique mauvaise, FP 20 : un tyran souterrain à deux têtes, très intelligent, qui brise la coordination adverse avant de saisir ses victimes.
+  400 PV ; CA 34, contact 6 ; RD 15/fer froid ; résistance à la magie 31 ; +4 aux sauvegardes contre les sorts psychiques.
+  Six langues +32, chacune à 3d6+12, critique 19–20 et étreinte ; allonge et espace occupé de 6 m ; BMO de lutte +44.
+  Marche à 9 m, vol permanent à 18 m ; vision aveugle et télépathie à 30 m. Ses armes principales sont l'aura de folie, les manipulations mentales, la tempête télékinétique et les langues.
+
+note: Conscience divisée
+  Il lance deux fois ses sauvegardes de Volonté et conserve le meilleur résultat.
+  Chaque round, son second esprit peut accomplir une action purement mentale simple ou de mouvement en dépensant son action rapide ; un sort ou pouvoir ainsi utilisé doit être de niveau 5 au maximum.
+  Cela permet notamment insinuation du ça IV, télékinésie ou téléportation, en plus de son action normale. Cette action rapide concurrence la suggestion de groupe rapide ; il doit choisir.
+
+resource: Magie psychique | 27 PE/jour | réserve commune à tous les pouvoirs psychiques ci-dessous ; NLS 20, concentration +27
+resource: Exigence d'offrande (demand offering) | 2 PE | Volonté DD 19 ; seulement sur une cible adjacente, à 1,50 m
+resource: Fouet de l'ego V (ego whip V) | 6 PE | Volonté DD 23 ; action simple
+resource: Insinuation du ça IV (id insinuation IV) | 5 PE | Volonté DD 22 ; jusqu'à quatre cibles à 22,50 m ; concentration + 1 round
+resource: Douleur de groupe (mass inflict pain) | 6 PE | Volonté DD 23 ; action simple
+resource: Poussée mentale VI (mind thrust VI) | 6 PE | Volonté DD 23 ; une cible à 22,50 m ; action simple
+resource: Écrasement psychique V (psychic crush V) | 9 PE | Volonté puis, si nécessaire, Vigueur DD 26 ; une cible à 22,50 m ; action simple
+resource: Tempête télékinétique (telekinetic storm) | 9 PE | Vigueur DD 26 ; rayon de 12 m centré sur lui ; action simple
+resource: Suggestion de groupe rapide | 3/jour | action rapide, Volonté DD 23 ; aucune dépense de PE
+resource: Pouvoirs magiques ordinaires | à volonté | charme-monstre de groupe DD 25, suggestion de groupe DD 23, poison DD 20, détection des pensées DD 19, clairaudience/clairvoyance, télékinésie et téléportation
+
+step: Il peut préparer l'arrivée des intrus
+  do: Observer les accès par clairaudience/clairvoyance ; exploiter détection des pensées pour préparer ses exigences et repérer les intentions hostiles
+  do: Avant les hostilités, employer charme-monstre de groupe pour obtenir des interlocuteurs favorables, puis suggestion de groupe pour faire repartir ou séparer les visiteurs
+  note: Le charme ne donne pas un contrôle absolu. Une suggestion doit paraître raisonnable ; demander un suicide ou une trahison manifestement fatale ne convient pas.
+
+step: Des serviteurs sont déjà présents
+  do: Les disposer sur les accès et garder une voie de fuite vers un lieu familier pour sa téléportation
+  note: Son aura peut être suspendue ou réactivée par une action libre ; préserver ainsi ses propres auxiliaires tant que l'affrontement n'a pas commencé.
+
+## Ouverture
+
+step: Les ennemis entrent à 18 m
+  do: Activer l'aura de folie et rester en vol, si la hauteur du passage le permet
+  note: Chaque créature saine d'esprit dans l'aura fait Volonté DD 33 chaque round ; échec : confusion pendant 1 round. Cinq échecs consécutifs entraînent une folie permanente.
+
+step: Plusieurs adversaires restent coordonnés et sont à 22,50 m ou moins
+  do: Lancer insinuation du ça IV avec le second esprit, en action rapide, sur quatre cibles au maximum
+  do: Employer l'action simple pour douleur de groupe si plusieurs combattants restent menaçants, ou poussée mentale VI sur le lanceur de sorts le plus dangereux
+  note: Insinuation coûte 5 PE. Choisir le comportement de confusion du premier round ; favoriser l'attaque de la créature la plus proche lorsque celle-ci est un allié de la victime. Les rounds suivants, choisir entre deux tirages par victime.
+  note: Douleur coûte 6 PE et impose −4 aux attaques, tests de compétence et de caractéristique pendant 20 rounds ; une sauvegarde réussie réduit la durée à 1 round. Poussée coûte 6 PE : 20d8 dégâts, moitié sur sauvegarde réussie ; échec : épuisement et étourdissement pendant 1 round.
+
+step: Une séparation paraît plausible et il privilégie l'économie de PE
+  do: Employer une suggestion de groupe rapide, DD 23, pour faire reculer les ennemis vers une position apparemment plus sûre ; garder l'action simple pour une attaque ou un autre pouvoir
+  note: Cette ouverture remplace l'utilisation rapide du second esprit pendant ce round.
+
+## Rounds suivants
+
+step: Insinuation du ça IV neutralise encore plusieurs ennemis
+  do: Entretenir la concentration avec le second esprit, en action rapide, et consacrer l'action normale aux langues ou à un pouvoir offensif
+  note: L'entretien ne coûte pas de PE supplémentaires. Une autre action rapide interrompt cet entretien si l'action simple n'est pas consacrée à la concentration ; l'effet persiste alors encore 1 round.
+
+step: Plusieurs ennemis sont à 12 m ou moins et les serviteurs sont hors de la zone
+  do: Déclencher tempête télékinétique, 9 PE, pour infliger 20d6 dégâts de force et hébéter et étourdir pendant 1 round
+  note: Vigueur DD 26 : moitié des dégâts et aucun de ces deux états. Cette attaque convient aussi aux ennemis immunisés aux effets mentaux ; elle peut atteindre ses serviteurs présents dans la zone.
+
+step: Une cible prioritaire est blessée et sensible aux effets mentaux
+  do: Utiliser écrasement psychique V, 9 PE, de préférence contre une cible sous la moitié de ses PV maximaux
+  note: Sous ce seuil, elle subit −2 à sa Volonté DD 26 et, si elle échoue, tombe à −1 PV sans sauvegarde de Vigueur. Sinon, l'échec de Volonté est suivi de Vigueur DD 26 ; échouer aux deux la réduit à −1 PV. Une sauvegarde réussie inflige 11d6+20 dégâts, sans la réduire sous −1 PV.
+
+step: Un lanceur de sorts résiste encore et il reste au moins 6 PE
+  do: Choisir fouet de l'ego V sur sa caractéristique d'incantation, ou poussée mentale VI pour tenter de l'étourdir immédiatement
+  note: Fouet impose −10 à l'Intelligence, la Sagesse ou le Charisme pendant 20 rounds et rend chancelant pendant 1d10 rounds ; Volonté DD 23 réussie : malus pendant 1 round seulement, sans état chancelant.
+
+step: Un adversaire est déjà dans son allonge de 6 m
+  do: Effectuer une attaque à outrance avec les six langues +32 et concentrer les coups sur une cible dangereuse ; tenter l'étreinte après une touche, avec BMO +44
+  note: Après un déplacement ordinaire, il ne porte qu'une attaque de langue. Une lutte engagée lui impose aussi ses contraintes ; ne pas saisir une cible sans intérêt au détriment de sa mobilité.
+
+step: Un porteur de fer froid menace sa position et son action rapide est disponible
+  do: Utiliser télékinésie avec le second esprit pour tenter de le désarmer à distance, puis conserver son action normale pour attaquer
+  note: La télékinésie ne consomme pas de PE. Contre une cible adjacente, exigence d'offrande offre une autre possibilité pour 2 PE et Volonté DD 19, mais l'objet remis est déterminé au hasard si elle en tient plusieurs.
+
+step: Les PE deviennent insuffisants ou les ennemis résistent aux pouvoirs mentaux
+  do: Privilégier les langues, la télékinésie et le déplacement en vol ; garder les ennemis sensibles dans l'aura sans s'exposer inutilement aux armes de fer froid
+  note: Déduire chaque coût de la réserve commune : insinuation IV puis douleur de groupe dépensent 11 PE et laissent 16 PE. Les pouvoirs à volonté et la téléportation restent disponibles à 0 PE.
+
+## Repli
+
+step: Ses PV tombent à 100 ou moins, ou les ennemis peuvent l'achever rapidement
+  do: Rompre une éventuelle lutte, puis se téléporter vers un lieu familier ; utiliser le second esprit en action rapide si cela est possible
+  note: Téléportation est à volonté et ne consomme pas de PE. Si la téléportation est empêchée, voler à 18 m par mouvement vers une issue et ordonner aux serviteurs présents de couvrir la fuite.
+
+step: Un ennemi se téléporte depuis un point situé à 18 m ou moins
+  do: Mémoriser la destination grâce au pistage de téléportation ; ne poursuivre que si son état et le rapport de forces le permettent
+  note: Cette connaissance dure 1 minute et correspond à un lieu aperçu une fois ; elle ne révèle pas les dangers sur place et ne supprime pas les risques de sa propre téléportation.

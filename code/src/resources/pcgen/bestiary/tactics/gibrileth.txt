@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Gibrileth, démon chaotique mauvais de taille G, 137 pv, CA 25. Il contrôle la mêlée avec son fouet et ses crocs-en-jambe, et disperse les groupes avec ses pouvoirs magiques.
+  Fouet-scorpion +1 : +18/+13/+8, 1d6+8, critique 18–20, plus maladie ; allonge de 6 m. Morsure +12 : 1d8+3 plus maladie, à 3 m.
+  Tumeur lancée +14 : 2d6 d'acide plus maladie. Vol à 12 m, bonne manœuvrabilité ; déplacement au sol de 3 m.
+  Corps amorphe, RD 10/Bien, RM 22 ; immunité à l'acide, aux maladies, à l'électricité et au poison ; résistance au froid 10 et au feu 10.
+
+resource: Contagion | à volonté | DD 17
+resource: Graisse | à volonté | DD 14
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 22,5 kg d'objets seulement
+resource: Ténèbres maudites | à volonté | DD 17
+resource: Nuage nauséabond | 3/jour | DD 16
+resource: Convocation | 1/jour | niveau 4, un gibrileth, 35 % de réussite
+resource: Vagues de fatigue | 1/jour | épuiser la ressource seulement si plusieurs adversaires peuvent être atteints
+
+step: Il repère des intrus avant qu'ils ne l'atteignent
+  do: Gagner en volant une position qui permet de tenir les combattants à 6 m et de conserver une issue dégagée.
+  note: Vision dans le noir à 18 m, odorat et Perception +25 pour repérer l'approche ; télépathie à 30 m pour coordonner d'éventuels congénères.
+
+step: Un affrontement est imminent et il dispose du temps nécessaire
+  do: Tenter sa convocation avant l'engagement.
+  note: La réussite n'est que de 35 % ; organiser la défense avec l'allié seulement si celui-ci apparaît.
+
+## Ouverture
+
+note: Choix du premier round
+  Choisir le pouvoir qui gêne le plus la disposition adverse ; les autres options attendent les rounds suivants.
+
+step: Plusieurs adversaires peuvent être pris dans les vagues
+  do: Lancer vagues de fatigue, puis exploiter leur fatigue pour contrôler la distance.
+
+step: Des lanceurs de sorts ou des tireurs sont regroupés en arrière
+  do: Placer un nuage nauséabond sur leur position, DD 16.
+  note: Garder les cibles de mêlée à l'extérieur du nuage afin de les voir et de les menacer au fouet.
+
+step: Des ennemis bons sont regroupés et aucun contrôle de zone n'est prioritaire
+  do: Lancer ténèbres maudites sur le groupe, DD 17.
+
+step: Un combattant peut l'atteindre immédiatement
+  do: Tenter un croc-en-jambe au fouet, bonus de manœuvre +23, sur une cible susceptible d'être renversée.
+  note: Croc-en-jambe supérieur fait provoquer une attaque d'opportunité à la cible renversée ; en profiter avec le fouet.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée du fouet sans imposer de déplacement
+  do: Attaquer à outrance avec le fouet +18/+13/+8 ; ajouter la morsure +12 si la cible est à 3 m ou moins.
+  note: Privilégier les ennemis déjà à terre ; les touches de fouet et de morsure transmettent aussi une maladie.
+
+step: Une cible debout peut être renversée
+  do: Employer le croc-en-jambe pour la mettre à terre, puis profiter des attaques d'opportunité qu'elle provoque.
+  note: Attaques réflexes permet jusqu'à cinq attaques d'opportunité par round, à raison d'une seule par occasion. Se relever en provoque une ; cette attaque intervient avant que la cible soit debout.
+
+step: Plusieurs combattants empruntent le même passage
+  do: Poser graisse sur leur voie d'approche, DD 14, puis tenir le bord de la zone avec l'allonge du fouet.
+  note: Rester en vol pour éviter de dépendre du sol glissant.
+
+step: Les ennemis se regroupent après avoir quitté le premier nuage
+  do: Dépenser un autre nuage nauséabond, DD 16, si cela gêne plusieurs adversaires ; sinon employer ténèbres maudites, DD 17, contre les cibles appropriées.
+
+step: Il doit se déplacer et une cible reste accessible à distance
+  do: Se repositionner en volant et lancer une tumeur +14, pour 2d6 d'acide plus maladie.
+  note: Son déplacement au sol de 3 m le rend peu apte à poursuivre à pied ; préférer le vol pour retrouver une position favorable.
+
+step: Un adversaire résiste aux crocs-en-jambe ou menace sérieusement ses défenses
+  do: Changer de cible ou de position ; employer ses pouvoirs de zone pour gêner les soutiens adverses.
+  note: Éviter de consacrer plusieurs rounds à renverser une cible qui s'y prête mal.
+
+## Repli
+
+step: Ses points de vie tombent sous 40, ou il ne peut plus contrôler la distance
+  do: Utiliser téléportation suprême vers un lieu connu hors du combat.
+  note: Ce pouvoir n'emporte aucune autre créature ; le gibrileth abandonne ses alliés si nécessaire.
+
+step: Il doit d'abord quitter une position qui l'expose aux attaques d'opportunité
+  do: Se dégager en volant, puis se téléporter dès qu'il peut employer son pouvoir sans s'exposer.
+  note: Un nuage nauséabond encore disponible peut gêner les poursuivants si la situation lui laisse le temps de le lancer.

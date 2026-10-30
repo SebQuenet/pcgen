@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Terry Demodand, extérieur chaotique mauvais de taille M, FP 10 ; 104 pv, CA 27. Il encaisse au contact et vole pour choisir ses engagements.
+  Attaque à outrance : 2 griffes +19 (1d6+7 et étreinte), morsure +18 (1d8+7) ; allonge 1,50 m. Déplacement terrestre 12 m, vol 18 m de manœuvrabilité moyenne ; vision dans le noir à 36 m.
+  RD 10/Bien et magie : il faut réunir ces deux propriétés pour la surmonter. RM 21 ; immunités à l'acide, au poison et aux effets mentaux ; résistances au froid 10 et au feu 10.
+
+note: Capacités non détaillées
+  Le profil mentionne adhérence et rage sans préciser leurs effets. Ne pas leur attribuer de dégâts, de bonus ou de DD supplémentaires à partir de ces seules données.
+
+resource: Pouvoirs magiques à volonté | à volonté | NLS 11 ; détection du Bien, détection de la magie, détection des pensées (DD 15), terreur (DD 17), état gazeux, invisibilité sur lui-même uniquement, cercle magique contre le Bien, détection de l'invisibilité, don des langues
+resource: Dissipation de la magie | 3/jour | NLS 11
+resource: Nappe de brouillard | 3/jour | NLS 11
+resource: Rayon affaiblissant | 3/jour | NLS 11
+resource: Marteau du Chaos | 1/jour | DD 17, NLS 11
+resource: Convocation | 1/jour | 40 % de chances de convoquer 1d2 demodands de même espèce ; un échec dépense l'utilisation
+
+step: Des intrus approchent et il peut se préparer
+  do: Activer cercle magique contre le Bien et détection de l'invisibilité, puis devenir invisible.
+  note: Observer avec Perception +19 ; utiliser les détections du Bien, de la magie et des pensées pour choisir une cible et repérer les protections.
+
+step: Il prévoit un combat difficile et dispose du temps nécessaire
+  do: Tenter la convocation avant l'engagement.
+  note: Si elle réussit, placer les renforts pour menacer plusieurs adversaires et soutenir son assaut.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés devant lui
+  do: Utiliser terreur (DD 17), puis poursuivre un adversaire isolé lors des rounds suivants.
+  note: Ne pas gaspiller ce pouvoir sur des créatures manifestement immunisées à la peur.
+
+step: Une cible vulnérable est accessible
+  do: Approcher sous invisibilité, en volant si le terrain l'exige, puis porter une griffe si un déplacement a été nécessaire.
+  note: Son invisibilité cesse lorsqu'il attaque ; il ne peut pas cumuler un déplacement ordinaire et son attaque à outrance.
+
+step: Un combattant puissant bloque l'accès aux autres ennemis
+  do: Employer rayon affaiblissant pour réduire sa force avant le contact.
+
+## Rounds suivants
+
+step: Une cible reste à 1,50 m et il peut consacrer son round aux attaques
+  do: Porter les deux griffes +19 et la morsure +18 ; tenter l'étreinte après une griffe qui touche si immobiliser cette cible sert le combat.
+  note: Le BMO fourni est +2 : ne pas supposer une étreinte fiable contre un adversaire difficile à saisir.
+
+step: Une protection magique observée empêche ses attaques d'être efficaces
+  do: Tenter dissipation de la magie sur cette protection, puis reprendre l'assaut au round suivant.
+
+step: Plusieurs ennemis identifiés comme loyaux sont regroupés
+  do: Utiliser marteau du Chaos (DD 17) en épargnant autant que possible ses éventuels alliés.
+
+step: Les adversaires se regroupent de nouveau et restent sensibles à la peur
+  do: Réutiliser terreur (DD 17) pour disperser le groupe et isoler une cible.
+  note: Ce pouvoir est à volonté, mais son utilisation remplace les attaques de ce tour.
+
+step: Une cible s'éloigne ou le terrain gêne la mêlée
+  do: La rejoindre par les airs, à 18 m par déplacement, puis attaquer selon les actions restantes.
+  note: Sa manœuvrabilité est moyenne : prévoir de l'espace pour tourner ; le vol ne lui donne pas la capacité de rester automatiquement immobile dans les airs.
+
+## Repli
+
+step: Ses points de vie tombent à 30 ou moins, ou ses attaques ne permettent plus de gagner
+  do: Créer une nappe de brouillard pour masquer la fuite, puis se dégager lors des tours suivants et prendre de la distance par les airs.
+  note: Le brouillard gêne aussi sa propre vision et ne supprime pas les dangers d'un déplacement au contact.
+
+step: Il a rompu le contact
+  do: Devenir invisible pour poursuivre la fuite ; utiliser état gazeux si un passage étroit offre une issue.
+  note: Ne pas compter sur l'état gazeux pour distancer rapidement des poursuivants ; privilégier le vol normal lorsque la voie est libre.

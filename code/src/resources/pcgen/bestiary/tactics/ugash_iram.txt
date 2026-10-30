@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Ugash-Iram est une bête magique aquatique colossale, intelligente et malveillante, de FP 15. Il domine une proie, puis immobilise les autres avec ses tentacules.
+  Tentacules +20 (6d6+11 et étreinte), en une seule attaque ; allonge et espace occupé de 9 m ; BMO +40 en lutte, DMD 50. Il ne peut pas subir de croc-en-jambe.
+  229 pv, CA 28, contact 6 ; réduction des dégâts 10/fer froid ; résistance à l'acide 10 et au froid 10. Sa Volonté +10 et sa faible CA de contact rendent les lanceurs de sorts prioritaires.
+  Nage à 18 m, déplacement terrestre à 1,50 m ; propulsion aquatique à 96 m. Vision dans le noir à 36 m, vision nocturne et vision dans les ténèbres ; Perception +20 ; télépathie à 30 m.
+
+resource: Contact défigurant | à volonté | toucher, Volonté DD 17 annule ; malus de -2 aux jets de sauvegarde, pendant 15 jours
+resource: Malédiction | 3/jour | toucher, Volonté DD 18 annule ; choisir 50 % de chances de ne pas agir à chaque tour
+resource: Liberté de mouvement | 3/jour | sur lui-même, durée 150 minutes ; protège contre la lutte et les entraves magiques
+resource: Protection contre les énergies destructives | 3/jour | une énergie choisie par utilisation ; absorbe 120 points de dégâts, durée maximale 150 minutes
+resource: Domination de monstre | 1/jour | une créature à 18 m au plus, Volonté DD 24 annule ; durée 15 jours
+resource: Rage | 1/jour | +2 en Force et Constitution, +1 en Volonté, -2 à la CA ; empêche l'utilisation des autres pouvoirs magiques pendant son effet
+
+step: Il repère des intrus avant leur arrivée
+  do: Rester immergé, profiter des ténèbres existantes et lancer liberté de mouvement sur lui-même
+  note: Garder derrière lui une trajectoire aquatique rectiligne assez large pour sa fuite ; sa Discrétion -8 favorise l'attente à distance plutôt qu'une approche furtive au contact
+
+step: Une attaque élémentaire est prévisible
+  do: Lancer protection contre les énergies destructives contre l'énergie attendue, en priorité celle que ses résistances naturelles ne couvrent pas
+
+## Ouverture
+
+step: Une cible dangereuse est visible à 18 m ou moins, et il peut lancer sans être interrompu
+  do: Employer domination de monstre sur un combattant qui paraît vulnérable au contrôle mental ; lui ordonner de retenir ses compagnons
+  note: Volonté DD 24 ; un ordre contraire à la nature de la victime autorise un nouveau jet avec un bonus de +2. Ne pas ordonner d'acte manifestement suicidaire
+
+step: La domination a été tentée, ou un adversaire impose immédiatement la mêlée
+  do: Nager pour placer une cible isolée dans son allonge de 9 m, puis attaquer avec les tentacules +20 (6d6+11)
+  note: Sur une touche, tenter gratuitement l'étreinte à +40 ; choisir de préférence un lanceur de sorts ou un porteur d'arme en fer froid
+
+## Rounds suivants
+
+step: Une victime reste agrippée
+  do: Consacrer son action simple au maintien de la lutte ; sur une réussite, infliger les dégâts des tentacules ou déplacer la prise vers l'eau profonde
+  note: BMO de lutte +40, avec le bonus de +5 au maintien si la prise n'a pas été rompue. Le déplacement avec la victime est limité à la moitié de sa vitesse ; un placement dangereux lui accorde une tentative gratuite pour se libérer avec un bonus de +4
+
+step: Il est libre de ses mouvements et plusieurs ennemis provoquent des attaques d'opportunité
+  do: Exploiter l'allonge de 9 m et Attaques réflexes pour frapper ceux qui se déplacent imprudemment ou lancent leurs sorts à portée
+  note: Jusqu'à cinq attaques d'opportunité par round, une par occasion. Pour arrêter un déplacement provoquant une attaque dans une case adjacente, utiliser Stand Still avec un test de manœuvre à +36 ; ce don ne couvre pas toute son allonge
+
+step: Un adversaire dépend d'une arme dangereuse
+  do: Tenter un désarmement avec Science du désarmement et Désarmement supérieur, puis rester entre l'adversaire et son arme
+
+step: Deux ennemis sont adjacents l'un à l'autre et tous deux dans son allonge
+  do: Employer Enchaînement : une première attaque, puis une seconde contre l'autre ennemi si la première touche
+  note: Action simple ; malus de -2 à la CA jusqu'à son prochain tour
+
+step: Une cible est facile à toucher et doit tomber rapidement
+  do: Employer Attaque en puissance avec les tentacules : +15 au toucher, 6d6+21 dégâts, avant les autres modificateurs
+  note: Si une attaque de mêlée réduit la cible à -1 pv ou moins, appliquer Deadly Finish : Vigueur DD 15 + dégâts infligés, ou mort
+
+step: Une cible durable reste à portée de toucher et l'affaiblir vaut mieux qu'infliger des dégâts immédiats
+  do: Employer malédiction, Volonté DD 18, pour lui donner 50 % de chances de perdre ses actions à chaque tour
+  note: Si les trois utilisations sont épuisées, contact défigurant, Volonté DD 17, peut imposer -2 aux sauvegardes pour faciliter les pouvoirs ultérieurs ; chaque pouvoir remplace l'attaque du tour
+
+step: Il a déjà utilisé les pouvoirs nécessaires et veut conclure au corps à corps
+  do: Lancer rage sur lui-même, puis reprendre les tentacules dès le tour suivant
+  note: Sans maintenir la concentration, l'effet persiste 15 rounds ; il renonce pendant ce temps à ses autres pouvoirs magiques
+
+## Repli
+
+step: Points de vie sous 60, ou impossibilité de neutraliser les principales menaces
+  do: Relâcher toute prise, puis utiliser la propulsion pour reculer de 96 m en ligne droite sous l'eau
+  note: La propulsion prend un round complet et ne provoque pas d'attaque d'opportunité. Choisir une trajectoire dégagée ; s'il faut d'abord se repositionner, nager à 18 m et conserver ses pouvoirs défensifs
+
+step: Une victime dominée peut encore intervenir
+  do: Lui ordonner de bloquer la poursuite pendant qu'il gagne les profondeurs

@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Tyran troglodyte chaotique mauvais, combattant robuste et intelligent : 135 pv, CA 24, déplacement de 6 m et vision dans le noir à 27 m.
+  Hache d'armes +1 au contact ; javelot +10/+5 à distance (1d6+5). Son bloc ne précise pas les bonus d'attaque ni les dégâts de la hache.
+  Vigueur +17, Réflexes +6, Volonté +10 : il supporte mieux les attaques contre sa vigueur que les effets exigeant une esquive.
+
+step: Il peut choisir son terrain
+  do: Prendre position dans un passage étroit ou près d'un angle, avec une voie de sortie derrière lui
+  note: Il cherche à limiter le nombre d'adversaires capables de l'attaquer au contact et à disposer d'un abri contre les tirs.
+
+step: Les intrus approchent dans l'obscurité
+  do: Les observer grâce à sa vision dans le noir, jusqu'à 27 m, et attendre qu'une cible s'avance à portée
+  note: L'obscurité ne lui donne un avantage que contre des ennemis qui y voient moins bien que lui.
+
+## Ouverture
+
+step: Un ennemi est déjà au contact
+  do: Effectuer une attaque à outrance avec la hache d'armes +1
+
+step: Un ennemi peut être rejoint avec un déplacement de 6 m
+  do: Avancer jusqu'au contact et porter une attaque de hache d'armes +1
+  note: Privilégier une cible isolée sans s'avancer au milieu du groupe.
+
+step: Les ennemis restent plus loin
+  do: Lancer un javelot à +10 (1d6+5), puis se replacer à couvert si nécessaire
+  note: Tenir compte des malus de distance applicables ; son déplacement lent favorise l'attente dans un passage défendable.
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Continuer les attaques à outrance à la hache d'armes +1 et concentrer les coups sur le même adversaire
+  note: Employer au besoin un pas de placement de 1,50 m pour conserver une position favorable sans renoncer à l'attaque à outrance.
+
+step: Plusieurs adversaires cherchent à l'encercler
+  do: Rejoindre un passage étroit ou un angle pour réduire les directions d'attaque
+  note: S'il doit quitter une case menacée, préférer un désengagement lorsque rester sur place risque de le faire submerger.
+
+step: Personne ne vient au contact
+  do: Lancer un javelot à +10 (1d6+5) tant qu'il lui en reste, en conservant son abri
+  note: Ne pas poursuivre à découvert un adversaire capable de maintenir ses distances.
+
+## Repli
+
+step: Points de vie sous 35, ou position devenue intenable
+  do: Effectuer un désengagement vers la voie de sortie, jusqu'à 12 m, puis couper la ligne de vue à un embranchement
+  note: Ce seuil est un choix tactique. Sa vitesse limite ses chances de distancer des poursuivants ; les angles et passages étroits sont essentiels à sa fuite.

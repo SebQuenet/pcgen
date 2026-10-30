@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Kokogiak, créature magique de taille TG, neutre mauvaise : un prédateur polaire intelligent et cruel, semblable à un ours blanc à dix pattes et au cou démesuré. Il attire une proie isolée avant de la déchiqueter sous couvert de brouillard.
+  172 pv, CA 25 ; immunisé contre le froid et les illusions. Morsure +23 (2d6+10 et traction), allonge 6 m ; six griffes +24 (2d6+10, critique 19–20), allonge 3 m. Espace occupé : 4,50 m.
+  Déplacement terrestre 12 m ; creusement, escalade et nage 6 m. Perception +18, vision dans le noir à 18 m et vision nocturne ; Discrétion +11, ou +19 dans la neige ou la glace.
+
+resource: Nappe de brouillard | à volonté | pouvoir magique, NLS 15 ; masque la vue, rayon de 6 m
+resource: Ventriloquie | à volonté | pouvoir magique, NLS 15 ; Volonté DD 14 pour reconnaître l'illusion en cas d'interaction
+resource: Image majeure | 3/jour | pouvoir magique, NLS 15 ; Volonté DD 16 pour reconnaître l'illusion en cas d'interaction
+resource: Brouillard dense | 3/jour | pouvoir magique, NLS 15 ; rayon de 6 m, durée 15 minutes ; aucun jet de sauvegarde
+
+step: Il peut choisir le terrain de l'embuscade
+  do: Se dissimuler dans la neige près d'un passage étroit, d'une berge ou d'un relief qu'il peut gravir ; préparer une issue par creusement ou par l'eau
+  note: Il traverse neige et glace sans les pénalités habituelles, peut marcher sur une croûte de neige ou une glace mince sans la rompre et choisir de ne laisser aucune trace.
+
+step: Des voyageurs passent sans l'avoir repéré
+  do: Imiter une voix déjà entendue ou des appels au secours pour attirer un retardataire ; utiliser ventriloquie pour déporter le son vers l'embuscade
+  note: L'imitation repose sur Bluff +18 opposé à Psychologie. Une image majeure peut représenter la personne en détresse ; l'entretenir par concentration jusqu'à l'approche de la proie, puis profiter des 3 rounds de persistance.
+
+## Ouverture
+
+step: La proie approche et il peut préparer son couvert avant l'engagement
+  do: Créer une nappe de brouillard sur la zone d'attaque, puis laisser la cible entrer à portée de morsure
+  note: Sa vision perçante traverse ses propres nappes de brouillard et brouillards denses. La neige ne pénalise pas non plus sa Perception.
+
+step: Plusieurs ennemis avancent ensemble et restent hors de sa portée
+  do: Placer un brouillard dense sur les renforts ou les tireurs, en laissant la victime choisie à l'extérieur ; s'approcher de celle-ci au cours du même round si possible
+  note: Dans ce brouillard, la vitesse est réduite de moitié, les attaques et dégâts de mêlée subissent –2, les pas de placement de 1,50 m sont impossibles et les armes à distance deviennent inefficaces. Ces entraves affectent aussi le kokogiak s'il entre dans la zone ; sa vision seule les ignore.
+
+step: Une cible est déjà à portée et aucune longue approche n'est nécessaire
+  do: Faire une attaque à outrance : morsure d'abord, puis six griffes contre les adversaires à portée de 3 m
+  note: Après une morsure réussie, tenter la traction avec BMO +27 contre la DMD pour rapprocher la victime ; si elle arrive à portée des griffes, concentrer celles-ci sur elle.
+
+## Rounds suivants
+
+step: Une victime reste à portée de 3 m
+  do: Maintenir l'attaque à outrance sur elle ; privilégier une cible blessée ou séparée de ses alliés
+  note: Les sept attaques sont son meilleur moyen d'abattre rapidement un adversaire. Un pas de placement de 1,50 m peut préserver cette attaque à outrance hors du brouillard dense.
+
+step: Il doit se déplacer avant de frapper
+  do: Avancer puis utiliser Science de la frappe décisive avec une griffe +24 (6d6+10), ou avec la morsure +23 (6d6+10 et traction) si la cible reste entre 3 m et 6 m
+  note: Cette frappe utilise une action d'attaque simple ; elle ne s'ajoute ni à une attaque à outrance ni à une charge.
+
+step: Un coup critique est confirmé
+  do: Appliquer Critique handicapant : la victime est chancelante pendant 1d4+1 rounds, ou 1 round si elle réussit Vigueur DD 25
+  note: Don pour les critiques ajoute +4 aux jets de confirmation ; les griffes menacent sur 19–20. Profiter du handicap pour achever la cible avant qu'elle puisse se dégager efficacement.
+
+step: Les attaques touchent facilement la cible choisie
+  do: Activer Attaque en puissance : morsure +19 et griffes +20, dégâts 2d6+18 par attaque
+  note: Avec Science de la frappe décisive, les dégâts deviennent 6d6+18. Renoncer à Attaque en puissance si ses malus empêchent de toucher régulièrement.
+
+step: Les adversaires contournent le brouillard ou rétablissent leurs lignes de tir
+  do: Renouveler la nappe de brouillard ou dépenser un autre brouillard dense pour couper leurs renforts ; reprendre ensuite les attaques sur une cible isolée
+  note: L'emploi d'un pouvoir magique remplace son attaque de ce round ; le faire hors des allonges ennemies pour éviter les attaques d'opportunité.
+
+## Repli
+
+step: Points de vie à 43 ou moins, ou combat devenu défavorable
+  do: Se désengager vers l'issue préparée ; une fois hors de portée des ennemis, interposer une nappe de brouillard ou un brouillard dense s'il en reste
+  note: Privilégier une retraite à couvert plutôt qu'un nouveau round d'attaques à outrance.
+
+step: Il a rompu le contact
+  do: Fuir à travers la neige sans laisser de traces, creuser dans un terrain meuble, escalader une paroi ou nager selon l'issue disponible
+  note: Ses vitesses sont de 12 m sur terre et de 6 m dans les autres modes. Sous l'eau, il doit remonter respirer ; la nage ne lui donne pas la respiration aquatique.

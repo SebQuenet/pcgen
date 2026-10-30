@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Poisson-globe, animal aquatique neutre de très petite taille des côtes chaudes. Avec 6 pv et une CA de 14, il cherche surtout à échapper aux prédateurs.
+  Aucune attaque active n'est indiquée dans son profil ; il possède des épines défensives. Il nage à 6 m par déplacement et son allonge est de 0 m.
+
+step: Aucune menace immédiate
+  do: Rester dans l'eau et surveiller les alentours
+  note: Perception +5 et vision nocturne pour repérer les approches
+
+## Ouverture
+
+step: Un adversaire s'approche
+  do: Nager à l'opposé de la menace en empruntant une voie d'eau libre
+
+step: Un adversaire est déjà au contact
+  do: Chercher à rompre le contact pour s'enfuir à la nage
+  note: Les épines sont sa défense spéciale ; leur effet n'est pas détaillé dans le profil fourni
+
+## Rounds suivants
+
+step: L'adversaire le poursuit
+  do: Continuer à nager pour augmenter la distance, à 6 m par déplacement
+
+step: La fuite est bloquée
+  do: Chercher une ouverture dans l'eau et l'emprunter dès qu'elle devient accessible
+  note: Son Intelligence de 1 ne justifie ni feinte élaborée ni coordination tactique avec un banc
+
+## Repli
+
+step: Une voie de fuite est accessible
+  do: Quitter le combat à la nage sans chercher à contre-attaquer
+
+step: Points de vie à 3 ou moins
+  do: Consacrer ses actions à s'éloigner de la menace en restant dans l'eau
+  note: Aucune vitesse terrestre n'est indiquée ; une fuite sur la berge n'est pas une option

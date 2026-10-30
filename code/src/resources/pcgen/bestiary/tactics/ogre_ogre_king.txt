@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Roi ogre chaotique mauvais, de taille G, brutal et peu intelligent. Il combat au cimeterre à deux mains +1 ; aucun bonus d'attaque ni dégât n'est précisé dans le profil fourni.
+  180 pv, CA 28, CA de contact 10 ; déplacement de 9 m. Vision dans le noir à 18 m et vision nocturne ; immunité à la fatigue.
+
+resource: Réduction des dégâts | réserve de 120 points | RD 10/adamantium ; décompter de la réserve les dégâts effectivement absorbés, jusqu'à épuisement
+
+step: Il repère les intrus avant d'être engagé
+  do: Se placer près d'un couvert disponible et attendre de pouvoir atteindre un adversaire au corps à corps
+  note: Dans l'obscurité, sa vision dans le noir lui permet de repérer les ennemis jusqu'à 18 m.
+
+## Ouverture
+
+step: Un ennemi est déjà à portée du cimeterre
+  do: Effectuer une attaque à outrance au cimeterre à deux mains +1
+
+step: Un ennemi peut être atteint avec un déplacement de 9 m au plus
+  do: Avancer à portée et porter une attaque au cimeterre
+
+step: Aucun ennemi ne peut être atteint avec un déplacement de 9 m
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m, en utilisant les couverts disponibles
+  note: Le profil fourni ne donne aucune attaque à distance.
+
+## Rounds suivants
+
+step: Sa cible reste à portée
+  do: Continuer les attaques à outrance au cimeterre et concentrer ses coups sur le même adversaire jusqu'à sa chute
+  note: Privilégier un ennemi déjà blessé si plusieurs cibles sont accessibles sans déplacement.
+
+step: Sa cible s'éloigne
+  do: La suivre et porter une attaque si un déplacement de 9 m suffit à revenir à portée ; sinon, avancer vers l'ennemi accessible le plus proche
+
+note: Résistance
+  Appliquer la RD aux attaques concernées tant que sa réserve subsiste. Les armes en adamantium la traversent.
+  Sa CA de contact n'est que de 10 : contre un adversaire qui l'atteint facilement par des attaques de contact à distance, chercher un couvert pendant l'approche.
+
+## Repli
+
+step: Ses points de vie passent sous 45 et l'adversaire tient encore
+  do: Se désengager par une retraite vers un couvert ou une issue accessible, jusqu'à 18 m si le terrain le permet
+  note: La retraite protège seulement la sortie de la première case contre les attaques d'opportunité ; éviter de traverser la zone menacée d'autres ennemis.
+
+step: Aucune issue n'est accessible
+  do: Poursuivre les attaques au cimeterre sur l'adversaire qui bloque la fuite

@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Lightning Bladder, vase souterraine solitaire de taille M, neutre et sans intelligence. Sa membrane bleutée et acide laisse voir des éclairs internes.
+  50 points de vie, CA 5, initiative -5 ; coup +6 à 1,50 m, infligeant 1d6+4 dégâts plus 1d6 d'acide ; décharge électrique lorsque sa membrane est percée.
+  Perception aveugle à 18 m ; déplacement de 3 m au sol et nage de 9 m par action de mouvement. Immunité au froid, à l'électricité et au feu ; traits des vases.
+
+step: Une créature entre dans les 18 m de sa perception aveugle
+  do: Réagir à sa présence et se rapprocher instinctivement, en nageant si la rencontre se déroule dans l'eau.
+  note: Son absence d'intelligence exclut les préparatifs élaborés, les feintes et le choix réfléchi d'une cible selon son équipement.
+
+## Ouverture
+
+step: L'adversaire détecté est à plus de 1,50 m
+  do: Avancer vers lui, jusqu'à 9 m dans l'eau ou 3 m au sol avec une action de mouvement ; s'il reste hors de portée, poursuivre l'approche.
+
+step: Un adversaire est à portée et une action simple reste disponible
+  do: Porter un coup +6, infligeant 1d6+4 dégâts plus 1d6 d'acide.
+  note: Elle attaque en affaissant sa masse contre sa victime.
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m ou moins
+  do: Répéter son unique coup +6 à chaque round, avec les mêmes dégâts physiques et acides.
+  note: L'armure ou les vêtements de la victime subissent les mêmes dégâts d'acide, sauf réussite d'un jet de Réflexes DD 20 du porteur.
+
+step: Une arme en bois ou en métal frappe la vase
+  do: Appliquer 1d6 dégâts d'acide à l'arme, sauf réussite d'un jet de Réflexes DD 20 de son utilisateur.
+
+step: Une attaque avec une arme perforante ou tranchante touche la vase
+  do: Compter une nouvelle ouverture dans sa membrane.
+  note: Chaque ouverture émet un éclair à chacun des rounds suivants : 2d6 dégâts d'électricité sur un adversaire déterminé au hasard, Réflexes DD 15 pour réduire de moitié. Ces décharges accompagnent ses attaques ; la vase ne choisit pas leur cible.
+
+step: L'adversaire quitte sa portée
+  do: Se rapprocher à nouveau tant qu'il reste détectable, puis reprendre les coups dès que possible.
+  note: Sa lenteur au sol limite la poursuite ; dans l'eau, utiliser sa nage de 9 m par action de mouvement.
+
+## Repli
+
+step: La vase est blessée mais un adversaire reste détectable
+  do: Poursuivre le contact et les attaques, sans organiser de retraite.
+  note: Aucun seuil de points de vie ne déclenche un repli tactique chez cette créature sans intelligence.
+
+step: Les adversaires échappent à sa perception aveugle
+  do: Cesser la poursuite ciblée faute de pouvoir les localiser.

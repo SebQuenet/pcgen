@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Grimslake, aberration extraplanaire de taille G, chaotique mauvaise, semblable à un asticot à longue queue. Charognard des champs de bataille abyssaux, il apprécie particulièrement les humanoïdes vivants.
+  Morsure +12 (2d6+7 et étreinte), dard +12 (1d6+7 et étreinte) ; lutte +18 ; allonge et espace occupé de 3 m.
+  68 PV, CA 19, guérison accélérée 5 ; résistance à l'acide 10 et au feu 10, immunité aux maladies. Marche, creusement et escalade à 6 m par action de mouvement ; Escalade +26.
+
+resource: Glas | 3/jour | contact ; Volonté DD 12 annule ; cible vivante à −1 PV ou moins
+resource: Rayon d'épuisement | 3/jour | contact à distance ; portée 12 m ; Vigueur DD 13, effet partiel ; durée 6 minutes
+resource: Lenteur | 1/jour | portée 12 m ; jusqu'à 6 cibles, aucune à plus de 9 m d'une autre ; Volonté DD 13 annule ; durée 6 rounds
+
+step: Des intrus approchent
+  do: Attendre à couvert près d'un sol meuble où creuser, puis choisir une proie isolée
+  note: Perception +13, vision dans le noir à 18 m et perception des vibrations à 9 m pour repérer les créatures en contact avec le sol
+
+step: Une créature vivante mourante est déjà accessible avant l'affrontement
+  do: Employer glas sur elle pour se renforcer
+  note: Si elle rate son jet, elle meurt ; le Grimslake gagne 1d8 PV temporaires, +2 en Force et +1 au niveau de lanceur de sorts pendant 10 minutes par DV de la victime. Tenir compte de ces bonus tant qu'ils durent
+
+## Ouverture
+
+step: Plusieurs adversaires sont à portée et le Grimslake peut employer un pouvoir sans s'exposer aux attaques d'opportunité
+  do: Lenteur sur le plus grand nombre, en privilégiant les combattants capables de multiplier leurs attaques
+  note: Les victimes ne disposent que d'une action simple ou de mouvement par tour ; vitesse divisée par deux, −1 aux attaques, à la CA et aux Réflexes
+
+step: Une seule menace domine et reste hors de portée de mêlée, à 12 m ou moins
+  do: Rayon d'épuisement sur elle, puis avancer vers la proie choisie si le terrain le permet
+  note: Il faut toucher la CA de contact à distance. Un échec en Vigueur épuise la cible ; une réussite la fatigue seulement
+
+step: Une proie est déjà à 3 m ou moins et aucune entrave magique n'est prioritaire
+  do: Attaque à outrance : morsure +12 (2d6+7) et dard +12 (1d6+7), avec tentative d'étreinte gratuite sur une touche
+  note: L'étreinte utilise la lutte à +18 contre le DMD ; elle fonctionne sur les créatures de taille G ou inférieure
+
+step: La proie nécessite un déplacement pour être atteinte
+  do: Avancer jusqu'à portée de 3 m et porter une morsure +12, puis tenter l'étreinte si elle touche
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Consacrer l'action simple à maintenir la lutte et lui infliger les dégâts de l'attaque qui l'a saisie
+  note: Lutte +18, avec le bonus de +5 pour maintenir une prise non rompue ; concentrer les efforts sur cette victime
+
+step: Aucune proie n'est agrippée et un adversaire reste à portée
+  do: Répéter morsure et dard en attaque à outrance ; tenter de saisir le même adversaire pour l'empêcher de se dégager
+
+step: Un ennemi adjacent effectue un pas de placement de 1,50 m
+  do: Employer Step Up pour le suivre de 1,50 m en action immédiate et rester adjacent
+  note: Ce déplacement empêche son propre pas de placement au prochain tour et réduit de 1,50 m le déplacement de ce tour
+
+step: Un adversaire dangereux reste à distance et une utilisation de rayon est disponible
+  do: Employer rayon d'épuisement hors de l'allonge ennemie ; viser en priorité une cible déjà fatiguée
+  note: Une cible déjà fatiguée devient épuisée même si elle réussit son jet ; ne pas gaspiller le rayon sur une cible déjà épuisée
+
+step: Un ennemi attaque avec une arme naturelle, à mains nues ou avec une arme légère
+  do: Appliquer les écailles tranchantes à chaque attaque concernée
+  note: Réflexes DD 15 ou l'assaillant subit 1d4 dégâts tranchants ; cette défense ne demande pas d'action
+
+step: Une victime vivante tombe à −1 PV ou moins et les autres ennemis ne menacent pas immédiatement le Grimslake
+  do: Employer glas au contact pour l'achever et obtenir ses bonus
+
+## Repli
+
+step: Les PV tombent sous 20 et les adversaires peuvent encore le submerger
+  do: Relâcher sa prise et se retirer vers un sol meuble ; creuser à 6 m par action de mouvement pour se mettre hors d'atteinte
+  note: Si creuser est impossible, gagner une paroi et grimper à 6 m par action de mouvement ; privilégier une retraite qui limite les attaques d'opportunité
+
+step: Le Grimslake a rompu le contact
+  do: Rester à couvert pendant que sa guérison accélérée lui rend 5 PV par round, jusqu'à un maximum de 68 PV
+  note: Ne revenir vers les proies que si elles se sont dispersées et qu'une nouvelle attaque paraît favorable

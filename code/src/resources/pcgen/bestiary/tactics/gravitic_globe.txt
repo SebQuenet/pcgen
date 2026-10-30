@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Globe gravitationnel, créature artificielle de taille G, neutre et sans intelligence : une sphère d’adamantium représentant Golarion, enveloppée de flammes magiques.
+  140 pv, CA 18, solidité 20 ; coup +29 (3d6+15 et brûlure), allonge 1,50 m ; déplacement terrestre de 9 m et espace occupé de 3 m.
+  Son aura de magnétisme porte à 9 m (DD 20). Il combat par des réactions simples, selon ses consignes de gardien.
+
+note: Défenses
+  Appliquer la solidité 20 et les immunités des créatures artificielles ; les attaques avec armes ou projectiles métalliques ont aussi 20 % de chances de le manquer.
+  DMD 40 ; impossible de lui faire un croc-en-jambe. Vision dans le noir à 18 m, vision nocturne ; Perception -5.
+
+step: Il garde la bibliothèque décrite dans Tombs of Golarion
+  do: Rester sur son piédestal jusqu’à la tentative de vol qui l’active pour protéger la collection.
+
+resource: Magnétisme | permanent | aura de 9 m, Réflexes DD 20 ; une manœuvre magnétique par round en action rapide, sans attaque d’opportunité
+
+## Ouverture
+
+step: Un intrus entre dans l’aura et son corps ou son armure est métallique
+  do: Faire effectuer un jet de Réflexes DD 20 ; en cas d’échec, le repousser de 1,50 m et terminer son déplacement.
+
+step: Un intrus peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer jusqu’à 1,50 m et porter un coup +29 (3d6+15 et brûlure).
+  note: Sa grande taille ne lui donne pas une allonge supérieure à 1,50 m.
+
+step: Aucun intrus ne peut être atteint ce round
+  do: Avancer vers le plus proche, jusqu’à 18 m avec un double déplacement.
+  note: S’il entre à portée du magnétisme, une manœuvre en action rapide reste possible.
+
+## Rounds suivants
+
+step: Une créature métallique ou en armure métallique commence son tour dans l’aura
+  do: Faire effectuer un jet de Réflexes DD 20 ; en cas d’échec, elle tombe à terre.
+  note: Pour ces créatures, se relever dans l’aura demande une action simple.
+
+step: Une cible métallique ou portant du métal se trouve dans l’aura
+  do: En action rapide, tenter un croc-en-jambe magnétique avec le BMO +31, puis frapper si elle est à portée.
+  note: Une seule manœuvre magnétique par round ; choisir plutôt l’attraction pour rapprocher une cible éloignée.
+
+step: Une arme métallique menace le globe dans l’aura
+  do: Si l’action rapide est disponible, tenter un désarmement magnétique avec le BMO +31.
+
+step: Un adversaire reste à 1,50 m
+  do: Répéter le coup +29 (3d6+15 et brûlure), en frappant la cible à terre si elle est accessible.
+  note: Il ne possède qu’un coup ; son bonus de base à l’attaque ne lui accorde pas de coups naturels supplémentaires.
+
+step: Tous les adversaires s’éloignent du contact
+  do: Avancer de 9 m et frapper si possible ; sinon, poursuivre par un double déplacement de 18 m, selon ses consignes.
+
+## Repli
+
+step: Ses points de vie diminuent, même fortement
+  do: Continuer à défendre ce qu’il garde jusqu’à sa destruction à 0 pv.
+  note: Sans intelligence, il n’adopte pas spontanément un seuil de fuite ; un ordre de son contrôleur peut mettre fin au combat.

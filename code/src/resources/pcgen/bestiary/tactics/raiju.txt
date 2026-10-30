@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Raiju, extérieur de l'air de taille P, FP 5, chaotique neutre : nerveux et peu intelligent, il s'agite sous l'orage et fuit quand il se sent dépassé.
+  51 PV, CA 19 ; immunité à l'électricité. Déplacement au sol de 12 m, vol de 18 m avec une bonne manœuvrabilité ; allonge de 1,50 m.
+  Deux griffes +8 (1d3+1 plus 1d6 d'électricité chacune), coup de queue +3 (1d4 plus 1d6 d'électricité) ; appel de la foudre à distance.
+
+resource: Appel de la foudre | 3/jour | NLS 5 ; chaque utilisation permet 5 éclairs en 5 minutes, à 45 m ; Réflexes DD 13, demi-dégâts
+resource: Contrôle du climat | 1/jour | Orage uniquement ; 10 minutes d'incantation puis 10 minutes avant son apparition
+resource: Corps électrique | 6 rounds/jour hors orage | Transformation en action immédiate ; durée illimitée pendant un orage
+
+step: Temps calme et aucune menace immédiate
+  do: Rester sous la forme d'un petit animal local de taille P, par exemple un chat ou une belette ; observer avec Perception +9.
+  note: Sa couleur pâle et ses marques évoquant des éclairs peuvent trahir sa nature.
+
+step: Un affrontement est prévisible au moins 20 minutes à l'avance, et le climat et la saison permettent un orage
+  do: Employer contrôle du climat à l'abri, puis attendre l'orage avant de s'exposer.
+  note: L'orage favorise son corps électrique et ses éclairs ; ce pouvoir ne permet pas de choisir où frappe la foudre naturelle.
+
+## Ouverture
+
+step: Une cible est visible à 45 m ou moins et le raiju peut rester hors de portée de mêlée
+  do: Se placer en hauteur grâce au vol, puis commencer appel de la foudre, dont l'incantation prend 1 round.
+  note: À son achèvement, frapper une cible exposée : 3d6 d'électricité, ou 3d10 dehors par temps orageux ; Réflexes DD 13 pour moitié.
+
+step: Un ennemi est déjà à portée de ses griffes
+  do: Faire une attaque à outrance : deux griffes +8 et un coup de queue +3.
+  note: S'il doit se déplacer pour atteindre l'ennemi, porter seulement une griffe +8 après ce déplacement.
+
+## Rounds suivants
+
+step: Appel de la foudre est actif et des éclairs restent disponibles
+  do: Consacrer une action simple à un éclair, puis se déplacer en vol pour maintenir la distance ; viser de préférence le même adversaire déjà blessé.
+  note: Un seul éclair par round ; il frappe une case de 1,50 m de côté et sa verticale sur 9 m. Les éclairs suivants ne dépensent pas de nouvelle utilisation quotidienne.
+
+step: Les ennemis le pressent ou l'orage lui permet de rester électrique sans limite
+  do: Activer corps électrique en action immédiate ; traverser les cases ennemies en se déplaçant vers un espace dégagé.
+  note: Chaque créature traversée fait Réflexes DD 17 ou subit 2d6 d'électricité ; même effet pour une attaque naturelle ou à mains nues qui le touche sous cette forme.
+  note: Incorporel, il ignore les armes non magiques et ne subit que la moitié des dégâts des sources corporelles magiques ; les effets de force restent dangereux.
+
+step: Il est corporel et une cible demeure à 1,50 m
+  do: Répéter l'attaque à outrance ; profiter des occasions offertes par un déplacement ou une action imprudente de l'ennemi.
+  note: Attaques réflexes autorise jusqu'à 5 attaques d'opportunité par round, uniquement si des occasions distinctes se présentent.
+
+step: Les 5 éclairs sont épuisés ou leur durée est terminée, mais des utilisations restent disponibles
+  do: Recommencer appel de la foudre depuis une position éloignée ; sinon, combattre avec ses griffes ou rompre le contact.
+  note: Hors orage, économiser les rounds de corps électrique pour les moments dangereux et garder si possible 2 rounds pour fuir.
+
+## Repli
+
+step: PV à 17 ou moins, ou adversaires manifestement trop dangereux
+  do: Se retirer en vol ; si nécessaire, utiliser corps électrique pour traverser les ennemis qui bloquent la fuite.
+  note: Une retraite permet de parcourir jusqu'à 36 m en vol sur un round complet ; seule la case de départ bénéficie de sa protection contre les attaques d'opportunité.
+
+step: Hors orage, le corps électrique va arriver à sa limite quotidienne
+  do: Gagner un espace libre avant la fin de l'effet, puis poursuivre la fuite en vol à 18 m par déplacement.

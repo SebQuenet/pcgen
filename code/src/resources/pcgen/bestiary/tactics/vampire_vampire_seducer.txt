@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Vampire séducteur, mort-vivant intelligent et mauvais, qui cherche à isoler sa proie pour l'user au contact.
+  61 PV ; CA 25, contact 15, pris au dépourvu 20 ; initiative +8 ; déplacement de 9 m ; vision dans le noir à 18 m.
+  Coup +7 (1d4+4 et absorption d'énergie).
+
+note: Défenses
+  Réduction des dégâts 10/magie et argent : une arme doit réunir les deux propriétés pour la contourner.
+  Résistance au froid 10 et à l'électricité 10 ; immunités des morts-vivants.
+  Vigueur +7, Réflexes +10, Volonté +5.
+
+step: Il peut choisir le terrain
+  do: Se placer près d'un angle ou dans un passage étroit pour limiter le nombre d'adversaires capables de l'attaquer ensemble
+  note: dans l'obscurité, sa vision dans le noir lui permet de repérer les ennemis jusqu'à 18 m
+
+## Ouverture
+
+step: Une cible isolée est accessible en un déplacement
+  do: Avancer de 9 m au plus et porter un coup +7 dès qu'elle est à portée de mêlée
+  note: choisir de préférence une cible facile à toucher pour appliquer l'absorption d'énergie
+
+step: Les ennemis restent hors de portée
+  do: Se rapprocher en utilisant les angles et les obstacles comme couvert
+  note: il ne dispose d'aucune attaque à distance dans ce profil
+
+## Rounds suivants
+
+step: Sa cible reste au contact
+  do: Répéter le coup +7 (1d4+4 et absorption d'énergie) et concentrer les attaques sur elle
+  note: sa CA et sa réduction des dégâts favorisent un échange prolongé contre des armes qui ne contournent pas sa protection
+
+step: Plusieurs ennemis l'entourent
+  do: Faire un pas de placement de 1,50 m vers un passage ou un obstacle, puis frapper une cible encore à portée
+  note: chercher à empêcher la prise en tenaille et à réduire le nombre d'assaillants au contact
+
+step: Un lanceur de sorts est accessible
+  do: Le prendre pour cible si cela permet de le menacer sans s'exposer aux attaques de plusieurs autres ennemis
+  note: son jet de Volonté +5 est son jet de sauvegarde le plus faible
+
+## Repli
+
+step: Ses points de vie tombent à 20 ou moins
+  do: Utiliser le désengagement pour quitter la mêlée, puis gagner un couvert et poursuivre la fuite
+  note: le désengagement permet de parcourir jusqu'à 18 m ; ensuite, son déplacement normal est de 9 m
+
+step: Un poursuivant bloque la sortie
+  do: Chercher un autre passage ; s'il est acculé, concentrer ses coups sur cet adversaire pour ouvrir une issue

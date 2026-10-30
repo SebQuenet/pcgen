@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Danseuse thriae, humanoïde monstrueux de taille M, loyale neutre ; 60 pv, CA 19, initiative +7. Elle combine enchantements, vol et combat à la coutille.
+  Coutille de maître +13/+8 (1d10+6, critique x3), dard +10 (1d8+2 et poison). Marche à 9 m, vol à 18 m avec une bonne manœuvrabilité ; vision dans le noir à 18 m.
+  Immunisée contre le poison et les effets sonores ; résistance à l'acide 10 ; bonus de +4 aux sauvegardes contre les effets mentaux.
+
+resource: Détection des passages secrets | permanent | Repérer les accès dissimulés ; aucun pouvoir pour les ouvrir automatiquement.
+resource: Berceuse | à volonté | Volonté DD 13 ; portée 54 m, rayon 3 m ; malus de -5 en Perception et de -2 aux sauvegardes de Volonté contre le sommeil.
+resource: Apaisement des émotions | 3/jour | Volonté DD 15 ; portée 54 m, rayon 6 m ; concentration, au maximum 8 rounds.
+resource: Charme-personne | 3/jour | Volonté DD 14 ; un humanoïde à 13,50 m maximum ; durée 8 heures.
+resource: Hypnose | 3/jour | Volonté DD 14 ; portée 13,50 m ; affecte 2d4 DV au total, en commençant par les plus faibles.
+resource: Sommeil profond | 1/jour | Volonté DD 16 ; portée 13,50 m ; jusqu'à 10 DV au total dans un rayon de 3 m, les plus faibles d'abord ; durée 8 minutes.
+resource: Suggestion | 1/jour | Volonté DD 15 ; une créature vivante à 13,50 m maximum, comprenant sa langue ; durée maximale 8 heures.
+
+step: Des visiteurs sont repérés sans hostilité immédiate
+  do: Garder une issue aérienne dégagée et parlementer avec Diplomatie +11 ; utiliser charme-personne sur un interlocuteur humanoïde si nécessaire.
+  note: La cible charmée devient amicale, sans être contrôlée ; elle reçoit +5 à sa sauvegarde si la danseuse ou ses alliés la menacent déjà.
+
+step: Des intrus peu puissants peuvent être détournés sans combat
+  do: Employer hypnose, puis demander une action brève et raisonnable, comme attendre à l'écart.
+  note: Une menace peut rompre la fascination ; en combat, les cibles gagnent +2 à leur sauvegarde. Privilégier ce pouvoir avant les hostilités.
+
+## Ouverture
+
+step: Elle peut préparer son attaque sans subir immédiatement la mêlée
+  do: Utiliser berceuse sur les adversaires regroupés, puis sommeil profond au round suivant s'ils restent à portée.
+  note: Après l'arrêt de la concentration, berceuse persiste 8 rounds ; son malus de -2 facilite le sommeil sans modifier le DD 16.
+
+step: Le combat commence et une cible vulnérable au sommeil est à portée
+  do: Employer directement sommeil profond depuis une position protégée si attendre un round serait trop dangereux.
+  note: Le plafond est de 10 DV pour l'ensemble des victimes ; une créature dépassant ce total ne peut pas être endormie. Ne pas réveiller les victimes en leur infligeant des dégâts tant que d'autres adversaires combattent.
+
+step: Le principal danger échappe au sommeil et comprend le commun ou le thriae
+  do: Employer suggestion pour lui faire quitter l'affrontement sous un prétexte raisonnable, par exemple aller chercher des renforts.
+  note: Adapter la demande à la situation ; une action manifestement nuisible à la cible fait échouer le pouvoir.
+
+## Rounds suivants
+
+step: Un adversaire peut être maintenu à 3 m
+  do: Se placer à cette distance et attaquer à la coutille ; si aucun déplacement autre qu'un pas de 1,50 m n'est nécessaire, porter les deux attaques +13/+8.
+  note: La coutille est une arme à allonge : elle frappe à 3 m, mais pas une cible adjacente. Après un déplacement ordinaire, porter une seule attaque à +13.
+
+step: Un adversaire est adjacent
+  do: Faire un pas de 1,50 m pour retrouver l'allonge de la coutille, si une case libre le permet ; sinon utiliser le dard +10 (1d8+2 et poison).
+  note: Lors d'une attaque à outrance, le dard peut aussi viser un ennemi adjacent tandis que la coutille frappe un autre ennemi à 3 m. Le profil fourni ne précise ni le DD ni les effets du poison.
+
+step: Un ennemi provoque une attaque d'opportunité dans une zone menacée
+  do: Frapper à la coutille à 3 m ou au dard à 1,50 m.
+  note: Attaques réflexes permet jusqu'à 4 attaques d'opportunité par round ; un même déplacement ne procure pas plusieurs occasions contre la même créature.
+
+step: Plusieurs danseuses combattent ensemble
+  do: Répartir les cibles des enchantements et concentrer les attaques sur les adversaires encore actifs ; garder les victimes endormies hors de la mêlée.
+  note: Une danseuse peut préparer berceuse pendant qu'une autre emploie sommeil profond ; chacune suit ses propres utilisations quotidiennes.
+
+step: Les ennemis résistent aux enchantements ou menacent de l'encercler
+  do: Rejoindre en vol une position moins exposée, puis reprendre le combat à la coutille contre une cible isolée.
+  note: Le vol permet de changer de position ; elle ne peut pas se déplacer de 18 m, frapper, puis repartir dans le même tour.
+
+## Repli
+
+step: Ses points de vie tombent sous 20 ou elle ne peut plus contenir les assaillants
+  do: Prendre la fuite en vol ; si elle est au contact et que le trajet est libre, utiliser l'action de retraite, jusqu'à 36 m.
+  note: La retraite protège la case de départ contre les attaques d'opportunité, mais pas les autres cases menacées traversées.
+
+step: Des poursuivants restent menaçants et apaisement des émotions est disponible
+  do: Depuis une position hors de leur allonge, les viser avec apaisement des émotions, puis s'éloigner de 18 m par action de mouvement en maintenant la concentration aux rounds suivants.
+  note: Les créatures ayant raté leur sauvegarde ne peuvent plus entreprendre d'actions violentes. Toute agression contre une créature apaisée rompt l'effet pour toutes ; les alliés doivent également cesser de les attaquer.

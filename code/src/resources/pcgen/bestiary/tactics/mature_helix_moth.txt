@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Papillon-hélice adulte (Mature Helix Moth), vermine volante de taille TG, neutre et sans Intelligence ; FP 10, 120 pv, CA 23, contact 10, pris au dépourvu 21.
+  Morsure +15 (2d8+5 et 1d8 d'acide, plus étreinte) ; dard caudal +15 (2d6+2 et poison). Espace occupé : 4,50 m ; allonge : 3 m.
+  Vol à 18 m, manœuvrabilité bonne ; déplacement terrestre à 6 m. Vision dans le noir et perception des vibrations à 18 m ; Perception +0.
+  Prédateur instinctif des forêts tempérées, généralement solitaire, parfois en couple ; plutôt passif hors chasse, agressif lorsqu'il cherche une proie.
+
+resource: Bourdonnement | à volonté | action libre en vol ; action de mouvement au sol ; audible à 18 m, effet à 9 m
+
+note: Effet du bourdonnement
+  Toute créature qui l'entend dans les 9 m, sauf les autres papillons-hélices, fait un jet de Volonté DD 21. Échec : malus de circonstances de -4 aux attaques, tests et sauvegardes pendant 1 minute.
+  Après chaque minute, nouveau jet si elle reste à portée et l'entend encore ; un échec prolonge l'effet d'une minute. Une réussite immunise contre ce papillon pendant un jour.
+
+resource: Poison du dard | chaque blessure infligée par le dard | Vigueur DD 21 ; fréquence 1/round pendant 6 rounds ; affaiblissement de Force de 1d4 ; guérison après 2 sauvegardes consécutives réussies
+
+step: Une proie est repérée
+  do: Prendre l'air et se rapprocher en conservant assez de place pour son envergure.
+  note: Au sol, la perception des vibrations détecte les créatures en contact avec la même surface ; en vol, se fier à la vue.
+
+## Ouverture
+
+step: Les adversaires sont à 9 m ou moins
+  do: Activer le bourdonnement en vol, si possible hors de leur allonge, avant de porter une attaque.
+  note: Le malus peut ainsi gêner leurs attaques et leur sauvegarde contre le poison.
+
+step: Une proie est accessible après un déplacement aérien de 18 m ou moins
+  do: Approcher à 3 m et porter une morsure +15 ; si elle touche une cible de taille G ou inférieure, tenter l'étreinte gratuite.
+  note: Après ce déplacement, une seule attaque est disponible ; le dard attend le round suivant.
+
+step: Une proie est déjà à portée sans déplacement nécessaire
+  do: Faire une attaque à outrance : morsure +15 et dard +15.
+
+## Rounds suivants
+
+step: Aucune proie n'est agrippée et une cible reste à portée
+  do: Répéter morsure et dard à outrance dès que sa position le permet, en gardant le bourdonnement actif.
+  note: Rester en vol ; si un vol stationnaire est nécessaire, résoudre le test de Vol correspondant.
+
+step: Une proie est agrippée
+  do: Consacrer l'action simple au maintien de la lutte et, en cas de réussite, lui infliger les dégâts de morsure.
+  note: Le BMO de base est de +19. Ce maintien remplace l'attaque à outrance ; ne pas ajouter automatiquement le dard.
+
+step: La proie s'écarte ou se dégage
+  do: La suivre en vol et mordre après le déplacement si elle redevient accessible ; conserver les ennemis dans les 9 m du bourdonnement lorsque possible.
+  note: Une sauvegarde réussie protège contre ce bourdonnement pendant un jour ; ne pas redemander un jet à chaque round.
+
+step: Il doit combattre au sol
+  do: Choisir entre une attaque à outrance et une action de mouvement pour bourdonner suivie d'une seule attaque.
+
+## Repli
+
+step: Points de vie à 30 ou moins et proie encore dangereuse
+  do: Lâcher toute prise et utiliser l'action de retraite pour fuir en vol, jusqu'à 36 m si le trajet le permet.
+  note: La retraite ne protège des attaques d'opportunité que pour la case de départ ; choisir un trajet qui évite les autres zones menacées.
+
+step: La proie est tuée et les alentours sont sûrs
+  do: Rapporter la carcasse au repaire pour la dévorer.

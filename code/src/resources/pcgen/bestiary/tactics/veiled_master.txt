@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Maître voilé, aberration aquatique de taille G, loyale mauvaise, FP 14. Manipulateur très intelligent, il privilégie les illusions, la domination et un terrain aquatique préparé.
+  200 pv ; CA 30, contact 15 ; initiative +10. Déplacement terrestre 3 m, nage 24 m ; vision dans le noir à 36 m.
+  Morsure +17, 2d6+6 et consommation de mémoire et vase, allonge 3 m ; 2 griffes +17, 1d6+6 et vase, allonge 6 m.
+  4 tentacules +12 au contact, chacun 2d6 d'électricité et lance mentale, allonge 6 m ; nuage de mucus dans un rayon de 9 m.
+  Immunité à l'électricité et aux effets mentaux ; résistance au froid 20 ; résistance à la magie 25. L'armure de mage constante est déjà comprise dans sa CA.
+
+resource: Domination de personne rapide | 3/jour | action rapide ; Volonté DD 21 ; humanoïdes seulement
+resource: Domination de monstre | 3/jour | action simple ; Volonté DD 25
+resource: Suggestion de groupe | 3/jour | action simple ; Volonté DD 22
+resource: Mission | 3/jour | préparer ses agents avant l'affrontement
+resource: Sorts d'ensorceleur | 8/8/7/7/6/4 par jour | emplacements des niveaux 1/2/3/4/5/6 ; NLS 12 ; réserver un emplacement de niveau 5 pour téléportation
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se placer dans une étendue d'eau profonde, avec plusieurs directions de fuite ; utiliser mur illusoire et mirage pour dissimuler les accès et sa position.
+  do: Placer les éventuels serviteurs entre lui et les intrus, puis préparer une image programmée pour attirer leur attention vers une fausse position.
+  note: Ses illusions et ses dominations de personne ordinaires sont utilisables à volonté ; préserver ses ressources quotidiennes pendant les préparatifs.
+
+step: Il doit approcher les intrus avant de révéler sa présence
+  do: Prendre une forme de taille P ou M et employer voile pour entretenir le déguisement ; sonder les pensées accessibles avec détection de pensées, DD 18.
+  note: Retrouver sa forme naturelle avant de compter sur sa morsure, ses griffes et ses quatre tentacules.
+
+step: Il dispose du temps et des composantes nécessaires pour préparer son repaire
+  do: Installer des symboles de persuasion, DD 23, de douleur, DD 22, ou de ralentissement, DD 21, sur les accès que les intrus devront emprunter.
+  note: Définir leurs déclencheurs et accorder les serviteurs aux symboles avant le combat ; décompter les emplacements employés.
+
+step: Les intrus approchent sans avoir localisé son corps
+  do: Employer projection d'image pour les observer, leur parler et diriger ses sorts depuis une position trompeuse.
+  note: Conserver une ligne d'effet entre son corps et l'image ; maintenir le corps à couvert dans l'eau.
+
+## Ouverture
+
+step: Un humanoïde dangereux est une cible accessible
+  do: Domination de personne rapide, Volonté DD 21, puis une action simple de contrôle sur une autre cible.
+  note: Donner au dominé un ordre bref : protéger le maître ou bloquer un passage. Un ordre contraire à sa nature peut lui accorder un nouveau jet de sauvegarde.
+
+step: Plusieurs ennemis peuvent encore être détournés du combat
+  do: Suggestion de groupe, Volonté DD 22, avec une consigne plausible adaptée aux illusions du repaire, par exemple quitter une zone présentée comme dangereuse.
+  note: Cette action simple peut suivre la domination rapide du même round ; éviter les suggestions manifestement suicidaires.
+
+step: Une cible décisive échappe à domination de personne, notamment parce qu'elle n'est pas humanoïde
+  do: Domination de monstre, Volonté DD 25, sur le combattant ou le lanceur de sorts dont le contrôle ferait basculer l'affrontement.
+  note: Privilégier une cible sensible aux effets mentaux ; conserver les autres utilisations pour les résistances et les ruptures de contrôle.
+
+step: Les ennemis commencent déjà à portée et il peut rester sur place
+  do: Combiner une domination de personne rapide avec une attaque à outrance, en utilisant les attaques dont l'allonge atteint chaque cible.
+  note: À 3 m ou moins, il peut employer morsure, deux griffes et quatre tentacules ; au-delà de 3 m et jusqu'à 6 m, seules les griffes et les tentacules atteignent.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée sans imposer de déplacement important
+  do: Répéter l'attaque à outrance ; concentrer les tentacules au contact sur une cible difficile à toucher avec les griffes et la morsure.
+  note: Un pas de 1,50 m permet d'ajuster sa position tout en conservant l'attaque à outrance. Appliquer les effets supplémentaires associés aux attaques qui touchent.
+
+step: Il reste des humanoïdes libres et aucune attaque à outrance avantageuse n'est possible
+  do: Employer domination de personne à volonté, Volonté DD 21 ; changer de cible si les résistances répétées rendent une autre prise plus intéressante.
+  note: Garder les dominations rapides restantes pour les rounds où il souhaite aussi attaquer à outrance ou lancer un autre pouvoir.
+
+step: Les effets mentaux échouent ou la cible y est immunisée
+  do: Exploiter les attaques naturelles ; si la cible reste hors d'atteinte, tenter cécité, Vigueur DD 18, ou rayon affaiblissant, DD 17.
+  note: Cécité utilise un emplacement de niveau 2 ; rayon affaiblissant utilise un emplacement de niveau 1 et demande une attaque de contact à distance.
+
+step: Les adversaires refusent l'eau ou concentrent leurs attaques sur son corps
+  do: Se déplacer sous l'eau à sa vitesse de nage de 24 m pour changer d'angle ; employer invisibilité pour faciliter un repositionnement et les illusions pour présenter une fausse menace.
+  note: Un déplacement ordinaire empêche l'attaque à outrance ce round ; une action offensive met fin à son invisibilité.
+
+step: Il est encerclé ou un passage vers l'eau est coupé
+  do: Utiliser porte dimensionnelle, emplacement de niveau 4, vers une position aquatique connue et dégagée.
+  note: Après porte dimensionnelle, il ne peut plus agir avant son prochain tour ; effectuer toute action rapide souhaitée avant le sort.
+
+## Repli
+
+step: Ses points de vie tombent à 60 ou moins, ou il ne parvient plus à empêcher les ennemis de l'encercler
+  do: Utiliser téléportation, emplacement de niveau 5 conservé, vers un refuge bien connu.
+  note: Faire couvrir la fuite par les serviteurs encore disponibles ; choisir une destination familière pour limiter les risques du sort.
+
+step: Téléportation est indisponible
+  do: Gagner l'eau profonde avec porte dimensionnelle si possible, puis rompre le contact à la nage ; employer invisibilité si une occasion de la lancer se présente.
+  note: Sur terre, sa vitesse de 3 m rend une fuite à découvert difficile ; privilégier les issues aquatiques préparées.

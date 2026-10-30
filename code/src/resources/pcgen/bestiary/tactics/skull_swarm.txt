@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Nuée de crânes morts-vivants de taille TP, neutre mauvaise et sans intelligence ; 9 pv, CA 14.
+  Attaque d'essaim : 1d6 dégâts automatiques aux créatures dont elle occupe l'espace, sans jet d'attaque. Espace de 3 m de côté, allonge de 0 m.
+  Vol à 12 m par déplacement, manœuvrabilité parfaite ; vision dans le noir à 18 m. Immunité aux dégâts des armes et immunités des morts-vivants.
+
+note: Comportement
+  Aucune préparation élaborée ni coordination tactique : la nuée se porte vers les créatures qu'elle perçoit.
+
+## Ouverture
+
+step: Une cible est accessible en un déplacement
+  do: Voler dans son espace et y terminer le déplacement pour lui infliger 1d6 dégâts d'essaim.
+  note: Si plusieurs adversaires sont regroupés, occuper leurs cases avec l'espace de 3 m de la nuée pour les toucher ensemble.
+
+step: Les adversaires sont à plus de 12 m
+  do: Effectuer un double déplacement en vol, jusqu'à 24 m, pour les rejoindre.
+  note: L'attaque d'essaim ne demande pas d'action d'attaque ; elle inflige ses dégâts si la nuée termine son déplacement sur une cible.
+
+## Rounds suivants
+
+step: Des adversaires restent dans son espace
+  do: Maintenir le contact et infliger 1d6 dégâts d'essaim par round à chaque créature recouverte.
+
+step: Les adversaires quittent son espace
+  do: Les poursuivre en vol et terminer le déplacement dans leurs cases pour reprendre les dégâts d'essaim.
+  note: La nuée doit occuper l'espace d'une cible : son allonge de 0 m ne lui permet pas de frapper une créature simplement adjacente.
+
+## Repli
+
+step: La nuée perd des points de vie
+  do: Continuer d'assaillir les créatures à portée jusqu'à sa destruction.
+  note: Sans intelligence, elle n'organise pas de retraite. À 0 pv, elle est détruite.

@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Phasme géant, vermine de grande taille, neutre et sans intelligence ; ses réactions restent instinctives.
+  60 pv ; CA 17 ; deux coups +10 (1d6+5 chacun) lors d'une attaque à outrance ; allonge de 3 m.
+  Déplacement de 9 m ; espace occupé de 3 m ; vision dans le noir à 18 m ; immunité aux effets mentaux.
+
+step: Des broussailles offrent un couvert
+  do: S'y dissimuler et laisser une créature approcher à portée des coups
+  note: Discrétion +14 dans les broussailles, +6 ailleurs ; aucun pouvoir ne rend le phasme invisible.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins à son tour
+  do: Effectuer une attaque à outrance : deux coups +10, infligeant chacun 1d6+5 dégâts
+
+step: Un adversaire est hors d'allonge, mais à 12 m ou moins
+  do: Avancer de 9 m au maximum pour l'amener à portée, puis porter un seul coup +10 (1d6+5)
+  note: Un déplacement ordinaire ne permet pas de porter les deux coups ce round.
+
+step: Aucun adversaire n'est accessible ce round
+  do: S'approcher à couvert si le terrain le permet
+  note: Le phasme ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Continuer les attaques à outrance, deux coups +10 (1d6+5 chacun), contre la menace immédiate
+  note: Si nécessaire, faire un pas de 1,50 m pour conserver une cible à portée tout en gardant les deux attaques.
+
+step: La cible s'éloigne au-delà de 3 m
+  do: La suivre à 9 m par déplacement et porter un seul coup si elle redevient accessible
+
+step: Un adversaire provoque une attaque d'opportunité à 3 m ou moins
+  do: Porter un coup +10 (1d6+5)
+  note: Une seule attaque d'opportunité par round ; les deux coups de l'attaque à outrance ne s'appliquent pas ici.
+
+## Repli
+
+step: Grièvement blessé, avec une issue accessible
+  do: Utiliser l'action de retraite pour rejoindre un couvert, jusqu'à 18 m sur terrain dégagé
+  note: Une fois hors de vue, profiter des broussailles pour se dissimuler avec Discrétion +14.
+
+step: Acculé ou rattrapé
+  do: Reprendre les coups contre l'adversaire à portée

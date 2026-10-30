@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Petite créature magique loyale mauvaise, semblable à une chauve-souris, qui harcèle ses adversaires depuis les airs. 16 pv, CA 19 ; dard caudal +7 (1d4), allonge de 1,50 m.
+  Son hurlement continu désoriente les ennemis et gêne les lanceurs de sorts. Vol à 9 m, manœuvrabilité médiocre ; déplacement au sol à 1,50 m.
+
+resource: Hurlement (Sur) | à volonté | action libre ; rayon de 18 m ; entièrement neutralisé par le sort silence
+
+step: Des intrus approchent
+  do: Se dissimuler sur un point élevé avec Discrétion +11 et attendre qu'ils entrent dans la portée du hurlement
+  note: Perception +4 ; vision dans le noir à 18 m et vision nocturne. Préférer un espace offrant des trajectoires de vol dégagées.
+
+## Ouverture
+
+step: Des ennemis capables de l'entendre sont à 18 m ou moins
+  do: Déclencher le hurlement en action libre : Vigueur DD 12 ou hébétement pendant 1 round
+  note: Le hurlement affecte toutes les créatures qui l'entendent dans ce rayon. Les paroles ordinaires deviennent inaudibles ; lancer un sort exige un test de concentration de DD 15 + niveau du sort.
+
+step: Une cible hébétée peut être atteinte avec un déplacement en vol
+  do: S'approcher à 1,50 m et attaquer avec le dard caudal +7 (1d4)
+  note: Préférer un lanceur de sorts ou un adversaire isolé ; éviter de terminer le déplacement au milieu de plusieurs combattants.
+
+## Rounds suivants
+
+step: Des ennemis restent à portée du hurlement
+  do: Maintenir le hurlement pour prolonger la perturbation et gêner leurs incantations
+  note: L'hébétement ne dure que 1 round ; ne pas considérer une cible comme durablement neutralisée.
+
+step: Une cible reste hébétée au contact
+  do: La frapper avec le dard caudal +7 (1d4)
+  note: Le dard inflige uniquement les dégâts indiqués ; aucun poison n'est mentionné.
+
+step: Un adversaire dangereux peut riposter au contact
+  do: S'éloigner en vol vers un espace dégagé, en gardant si possible les lanceurs de sorts dans le rayon de 18 m
+  note: Quitter une case menacée peut provoquer une attaque d'opportunité. Sa manœuvrabilité médiocre ne lui permet pas de compter sur un vol stationnaire facile.
+
+step: Un effet de silence neutralise le hurlement
+  do: Sortir de la zone silencieuse si possible, puis reprendre le hurlement
+  note: Si le silence le suit ou si sortir l'expose trop, privilégier le repli : son dard seul inflige peu de dégâts.
+
+## Repli
+
+step: Points de vie sous 8, ou hurlement neutralisé sans possibilité de le rétablir
+  do: Fuir en vol vers un passage dégagé, à 9 m par déplacement, et chercher un abri en hauteur
+  note: Maintenir le hurlement pendant la fuite s'il fonctionne encore ; éviter une fuite au sol, limitée à 1,50 m par déplacement.

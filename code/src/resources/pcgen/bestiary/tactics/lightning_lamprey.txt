@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Lamproie foudroyante, petite créature magique sans intelligence, neutre, qui attaque instinctivement. 25 pv ; CA 12, contact 12, prise au dépourvu 11.
+  Morsure +4 au contact (1d2 plus 1d6 d'électricité), allonge de 1,50 m ; vol à 9 m, manœuvrabilité bonne ; déplacement au sol à 1,50 m.
+  Vision aveugle à 9 m ; Perception +0 ; immunité aux effets mentaux. Solitaire ou en banc de 2 à 20 individus.
+
+step: Des nuages offrent une cachette
+  do: S'y dissimuler et attendre qu'une créature approche à portée de détection
+  note: Discrétion +13 dans les nuages, +5 ailleurs ; la vision aveugle porte à 9 m
+
+## Ouverture
+
+step: Une proie est détectée et accessible en vol
+  do: Voler vers la créature la plus proche, jusqu'à 9 m, puis la mordre si elle est à 1,50 m ou moins
+  note: Une seule morsure +4, infligeant 1d2 plus 1d6 d'électricité en cas de réussite
+
+step: La proie est trop éloignée pour être mordue après un déplacement
+  do: Effectuer un double déplacement en vol, jusqu'à 18 m, pour s'approcher
+  note: Ce double déplacement ne permet pas de mordre pendant le même tour
+
+## Rounds suivants
+
+step: Une proie reste à portée de morsure
+  do: La mordre à chaque round
+  note: La morsure n'accorde ni fixation à la cible, ni agrippement, ni absorption de sang ; elle inflige seulement les dégâts indiqués
+
+step: La proie s'éloigne
+  do: La suivre en vol et mordre dès qu'un déplacement de 9 m au plus permet de revenir à portée
+  note: Si elle doit quitter une case menacée, ce déplacement peut provoquer une attaque d'opportunité
+
+step: Plusieurs lamproies combattent ensemble
+  do: Faire approcher chacune d'une proie accessible et utiliser sa morsure
+  note: Elles agissent par instinct, sans élaborer de manœuvre concertée
+
+## Repli
+
+step: Elle tombe à 6 pv ou moins et peut encore fuir
+  do: Se désengager en vol vers une zone libre, jusqu'à 18 m, de préférence dans des nuages proches
+  note: Seuil de fuite proposé pour le meneur ; le désengagement protège seulement la case de départ contre les attaques d'opportunité liées au déplacement
+
+step: La fuite est impossible
+  do: Continuer à mordre la créature la plus proche à portée

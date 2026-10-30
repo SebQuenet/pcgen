@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Rust-Risen, mort-vivant chaotique mauvais de taille M, cadavre greffé de machines rouillées, peu intelligent mais capable d'embuscades simples.
+  19 pv ; CA 15, contact 11, pris au dépourvu 14 ; initiative +5. Déplacement 9 m ; allonge 1,50 m ; vision dans le noir à 18 m.
+  Foreuse de bras +5 (1d6+3) et mâchoire métallique +5 (1d6+3). Ces deux greffes sont ses seules augmentations ; il possède les immunités des morts-vivants.
+
+step: Des vivants approchent sans l'avoir repéré
+  do: Se cacher près d'un passage et attendre qu'une proie s'approche, avec Discrétion +5 et Perception +7.
+  note: Il recherche les objets technologiques et les sources d'électricité ; une épave ou un laboratoire lui convient comme lieu d'affût.
+
+resource: Absorption d'électricité | passive, sans limite d'utilisations | Aucun dégât électrique subi ; chaque tranche de 4 points de dégâts évités donne 1 pv temporaire, pour un maximum de 28 pv temporaires, pendant 1 heure. Une seule attaque électrique infligeant plus de 38 points de dégâts avant absorption le détruit.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m
+  do: Effectuer une attaque à outrance : foreuse +5 (1d6+3), puis mâchoire +5 (1d6+3), sur la même cible.
+
+step: Une proie peut être atteinte avec un déplacement de 9 m
+  do: Avancer au contact et porter une seule attaque de foreuse +5 (1d6+3).
+  note: Après un déplacement ordinaire, il ne peut pas utiliser ses deux attaques dans le même round.
+
+step: Aucun ennemi ne peut être atteint ce round
+  do: Effectuer un double déplacement, jusqu'à 18 m, vers la proie la plus proche en profitant des obstacles pour se couvrir.
+
+## Rounds suivants
+
+step: Début de chaque round de combat, dès le premier
+  do: Vérifier le dysfonctionnement : 1 % au premier round, 2 % au deuxième, puis 1 % supplémentaire par round.
+  note: Une panne impose pendant 1d4 minutes un malus de -2 aux attaques, sauvegardes, tests de compétence et de caractéristique. Les attaques passent à +3 ; les dégâts restent inchangés. Le risque revient à 0 % après 1 minute hors combat.
+
+step: La cible reste au contact
+  do: Répéter l'attaque à outrance, foreuse puis mâchoire ; concentrer les coups sur elle jusqu'à sa chute.
+
+step: La cible paraît facile à toucher et aucune panne ne gêne ses attaques
+  do: Activer Attaque en puissance pour les deux attaques : foreuse +4 (1d6+5) et mâchoire +4 (1d6+5).
+  note: Revenir aux attaques normales si les coups manquent régulièrement.
+
+step: La cible s'éloigne
+  do: La suivre ; si un pas de 1,50 m suffit, conserver l'attaque à outrance. Sinon, se déplacer et n'utiliser que la foreuse.
+
+## Repli
+
+step: Points de vie à 5 ou moins et issue accessible
+  do: Utiliser l'action de retraite pour parcourir jusqu'à 18 m vers un abri, de préférence près d'une source électrique déjà connue.
+  note: Les pv temporaires de l'absorption protègent contre de nouveaux coups ; ils ne réparent pas les blessures.
+
+step: Aucune fuite praticable
+  do: Continuer à frapper l'adversaire au contact avec la foreuse et la mâchoire.

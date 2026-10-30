@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Petit élémentaire de sel neutre, formé de cristaux blancs et gris, originaire du plan de la Terre. Peu intelligent, il suit une tactique simple de proximité.
+  5 pv, CA 16 ; déplacement de 6 m ; allonge de 1,50 m. Griffe +3, dégâts 1d4+1 et empoisonnement salin ; aura de déshydratation dans un rayon de 3 m.
+  Vision dans le noir à 18 m ; Perception +4, Discrétion +8 ; immunités des traits élémentaires.
+
+step: Il peut choisir son terrain
+  do: Attendre dans un endroit sec, près d'un passage qui oblige les intrus à approcher à 3 m ou moins
+  note: Éviter les points d'eau ; utiliser sa Discrétion +8 si le terrain permet de se cacher
+
+note: Vulnérabilité à l'eau
+  Les attaques et effets à base d'eau lui infligent 50 % de dégâts supplémentaires. Un gallon d'eau jeté sur lui inflige 1d6 dégâts : avec seulement 5 pv, une seule aspersion peut l'abattre.
+
+## Ouverture
+
+step: Un adversaire vivant est accessible
+  do: Avancer de 6 m au maximum pour arriver à 1,50 m, puis porter une attaque de griffe +3, pour 1d4+1 dégâts
+  note: Une cible touchée doit réussir un jet de Vigueur DD 10 ou être fiévreuse pendant 4 rounds à cause des cristaux de sel dans la blessure
+
+step: Aucun adversaire n'est à portée après un déplacement
+  do: Se rapprocher par le chemin sec le plus court, en cherchant à placer une créature vivante dans le rayon de 3 m de l'aura
+  note: Il ne possède aucune attaque à distance
+
+## Rounds suivants
+
+step: Des créatures vivantes sont à 3 m ou moins
+  do: Appliquer l'aura de déshydratation chaque round à chacune de ces créatures
+  note: Vigueur DD 10 ou 1d4 dégâts non létaux ; l'aura fonctionne aussi pendant qu'il se déplace ou attaque
+
+step: Un adversaire reste à 1,50 m
+  do: Répéter l'attaque de griffe +3, pour 1d4+1 dégâts et empoisonnement salin
+  note: Privilégier les touches pour imposer l'état fiévreux ; chaque nouvelle touche impose un jet de Vigueur DD 10
+
+step: Sa cible s'éloigne
+  do: La suivre à 6 m par déplacement pour maintenir la pression de l'aura, puis reprendre les coups de griffe dès qu'elle est accessible
+  note: Ne pas la poursuivre dans l'eau
+
+## Repli
+
+step: Il tombe à 2 pv ou moins, ou un adversaire l'attaque avec de l'eau
+  do: Se désengager s'il est au contact et gagner un abri sec ; utiliser ensuite ses déplacements de 6 m pour s'éloigner
+  note: Sa faible vitesse rend la fuite difficile ; chercher un obstacle qui coupe les attaques plutôt qu'une longue poursuite à découvert

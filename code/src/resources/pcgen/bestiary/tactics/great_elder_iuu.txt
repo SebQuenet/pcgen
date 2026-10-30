@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Great Elder Iuu, héraut de Minderhal, est un ancien géant de pierre loyal mauvais, de taille G et de FP 15. Tacticien expérimenté, il protège les siens et exploite le terrain plutôt que de les sacrifier inutilement.
+  216 pv ; CA 30, contact 13 ; RD 10/adamantium ; immunité à la peur. Déplacement 9 m ; espace et allonge 3 m ; vision dans le noir à 36 m.
+  Marteau de guerre +3 en adamantium corrosif : +27/+22/+17/+12, 2d6+12, critique x3, plus 1d6 d'acide. Rochers en adamantium : +19/+14/+9/+4, 1d8+9 ; facteur de portée 60 m.
+
+resource: Pouvoirs à volonté | illimitées | Fusion dans la pierre, façonnage de la pierre ; NLS 16, concentration +19
+resource: Pouvoirs utilisables 5 fois par jour | 5 chacun | Force de taureau, soins importants (DD 16), négation de l'invisibilité, lévitation
+resource: Pouvoirs utilisables 3 fois par jour | 3 chacun | Porte dimensionnelle, dissipation de la magie, vol, tourbillon de gravier, neutralisation du poison, courroux de l'ordre (DD 17), pierres acérées (DD 17)
+resource: Pouvoirs utilisables 1 fois par jour | 1 chacun | Souffle de vie, fabrication, pierres commères, peau de pierre, mur de pierre
+resource: Invocation de rochers | illimitées | Action rapide : trois rochers en adamantium ; les projectiles lancés disparaissent à la fin du tour, ceux lâchés autrement disparaissent aussitôt
+
+step: Il peut préparer le terrain
+  do: Choisir un passage rocheux étroit ; façonner la pierre pour aménager un couvert et conserver une issue
+  note: Discrétion +25 en terrain rocheux ; Perception +21. Pierres commères peut renseigner sur les passages récents avant l'affrontement.
+
+step: Une attaque est imminente et plusieurs rounds sont disponibles
+  do: Lancer force de taureau, puis vol si la hauteur offre un avantage ; chacun dure 16 minutes
+  note: Force de taureau donne +4 en Force, donc +2 aux attaques et aux dégâts des attaques indiquées. Peau de pierre sert surtout à protéger un allié : sa RD ne se cumule pas avec celle d'Iuu.
+
+step: Des géants alliés l'accompagnent
+  do: Les placer à couvert, avec des lignes de tir dégagées ; garder les plus exposés dans son aura de courage de 6 m
+  note: Les alliés dans l'aura gagnent +4 de moral aux sauvegardes contre la peur tant qu'Iuu est conscient.
+
+## Ouverture
+
+note: Choix de l'action
+  Chaque condition propose une ouverture alternative. Un pouvoir magique prend normalement une action simple ; il ne cumule pas deux sorts et une attaque à outrance dans le même round.
+
+step: Les adversaires doivent encore traverser une zone de pierre pour l'atteindre
+  do: Lancer pierres acérées sur leur chemin, en laissant un passage sûr à ses alliés
+  note: Déplacement au sol à demi-vitesse et 1d8 perforants par tranche de 1,50 m parcourue ; Réflexes DD 17 évite la blessure qui réduit ensuite la vitesse de moitié, pas les dégâts du déplacement. Ses géants doivent aussi éviter la zone.
+
+step: Plusieurs ennemis sont groupés et aucun allié ne serait pris dans la zone
+  do: Lancer tourbillon de gravier sur eux, dans un cylindre de 6 m de rayon et 12 m de haut
+  note: 5d6 contondants une seule fois, sans sauvegarde, résistance à la magie applicable ; terrain difficile pendant 16 rounds. Les créatures autres que les géants de pierre subissent aussi -4 en Perception ; Iuu compte comme un géant de pierre.
+
+step: Les ennemis sont déjà à portée du marteau
+  do: Faire une attaque à outrance contre la menace la plus dangereuse ; privilégier un ennemi déjà blessé
+  note: Son allonge de 3 m lui permet de frapper au-delà d'un allié placé devant lui et de menacer les approches.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement important
+  do: Répéter les quatre attaques de marteau ; utiliser au besoin un pas de 1,50 m pour conserver l'attaque à outrance
+  note: Contre une CA abordable, Attaque en puissance échange -5 à l'attaque contre +10 dégâts avec le marteau tenu à une main. Contre deux ennemis adjacents entre eux et à portée, Enchaînement permet une attaque sur le second si la première touche, mais impose -2 à la CA jusqu'au prochain tour.
+
+step: Les ennemis restent hors de portée du marteau
+  do: Invoquer des rochers en action rapide et les lancer, en visant les lanceurs de sorts ou les ennemis déjà ralentis
+  note: Une invocation ne fournit que trois projectiles : +19/+14/+9 ; ajouter l'attaque à +4 seulement si un quatrième rocher est disponible. Tir à bout portant donne +1 à l'attaque et aux dégâts dans les 9 m ; Tir de précision évite le malus pour une cible engagée en mêlée.
+
+step: Un adversaire invisible menace le groupe
+  do: Lancer négation de l'invisibilité, qui supprime les effets d'invisibilité dans un rayon de 24 m autour d'Iuu
+  note: Combat en aveugle permet aussi de relancer le jet de camouflage raté lors d'une attaque de mêlée.
+
+step: Une protection magique adverse empêche ses attaques d'être efficaces
+  do: Tenter une dissipation ciblée avant de reprendre les attaques
+  note: Le bonus du test de dissipation est plafonné à +10 malgré son NLS 16.
+
+step: Des ennemis chaotiques sont groupés
+  do: Employer courroux de l'ordre si cela peut interrompre leur offensive sans exposer ses alliés non loyaux
+  note: 5d8 dégâts aux créatures chaotiques, ou 10d6 aux Extérieurs chaotiques, et hébétement pendant 1 round ; Volonté DD 17 réduit les dégâts de moitié et annule l'hébétement. Les créatures loyales sont épargnées.
+
+step: Un géant allié vient de mourir depuis un round au plus et reste accessible
+  do: Le toucher avec souffle de vie, qui rend 5d8+16 pv et peut le ramener à la vie
+  note: La résurrection exige que les soins ramènent ses pv au-dessus du seuil de mort ; elle échoue contre les effets de mort. Iuu ne peut pas employer ce pouvoir sur lui-même après sa mort.
+
+step: Lui-même ou un allié est blessé et dispose d'un répit à couvert
+  do: Employer soins importants, 3d8+15 pv par utilisation ; neutralisation du poison si un poison actif menace un allié
+  note: Conserver de préférence une utilisation de porte dimensionnelle pour évacuer les survivants.
+
+## Repli
+
+step: Il tombe sous 54 pv et poursuivre le combat ne sert plus sa mission
+  do: Se désengager par porte dimensionnelle vers un lieu sûr, en emmenant si possible les géants consentants à son contact
+  note: Ce seuil est une consigne tactique. Porte dimensionnelle met fin à ses actions du tour ; il se soigne au round suivant.
+
+step: Une retraite collective reste possible et le mur de pierre est disponible
+  do: Fermer la poursuite avec un mur ancré à la pierre existante, puis rejoindre les alliés par vol ou porte dimensionnelle lors d'un round ultérieur
+  note: Fusion dans la pierre offre aussi un refuge dans une masse rocheuse assez grande ; elle ne permet pas de circuler librement à travers le roc.
+
+step: Mourir sur place protège les géants de pierre ou accomplit la volonté de Minderhal
+  do: Tenir le passage au marteau et couvrir l'évacuation des siens
+  note: Iuu ne craint pas la mort ; son repli vise à préserver ses alliés et sa mission.

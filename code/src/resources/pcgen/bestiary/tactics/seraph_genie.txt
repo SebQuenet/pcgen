@@ -1,0 +1,92 @@
+## Avant le combat
+
+note: Profil
+  Génie séraphin, Extérieur de feu de taille G, neutre bon, intelligent et mobile ; 95 pv, CA 20. Il cherche à protéger ses alliés et à neutraliser les menaces.
+  Cimeterre de maître +14/+9 (1d8+4 plus 1d6 de feu par coup), ou deux coups +13 (1d8+4 plus 1d6 de feu chacun) ; allonge de 3 m.
+  Déplacement au sol de 12 m, vol de 9 m avec manœuvrabilité parfaite ; vision dans le noir à 18 m, télépathie à 30 m. Immunité au feu, vulnérabilité au froid.
+
+resource: Détection du Mal, détection de la magie | constantes | repérage des auras ; ne révèlent pas instantanément toutes les intentions ni tous les pouvoirs
+resource: Lame de feu, flammes, pyrotechnie | à volonté | pyrotechnie DD 15 ; nécessite un feu existant
+resource: Changement de plan | à volonté | cibles consentantes seulement ; plans élémentaires, plan Astral ou plan Matériel
+resource: Boule de feu | 3/jour | DD 16
+resource: Pilier de feu | 3/jour | DD 18
+resource: Invisibilité | 3/jour | lui-même uniquement
+resource: Détection de l'invisibilité | 3/jour | repérer les adversaires invisibles
+resource: Mur de feu | 3/jour | séparer les ennemis et gêner leur progression
+resource: Tempête de feu | 1/jour | DD 21
+resource: Souhait | 1/jour | uniquement pour les non-génies
+
+note: Pouvoirs non détaillés
+  La fiche mentionne une explosion de feu et la chaleur sans en donner les règles. Ne pas inventer de zone, de dégâts supplémentaires ou de DD ; les attaques de mêlée incluent déjà les dégâts de feu indiqués.
+
+step: Des créatures peuvent être raisonnées
+  do: Tenter une discussion avec Diplomatie +16, par la parole ou la télépathie
+  note: Psychologie +15 aide à apprécier leurs intentions ; une aura mauvaise ne suffit pas à justifier une attaque.
+
+step: Un affrontement est imminent
+  do: Prendre une position en vol offrant une vue dégagée et une distance suffisante des combattants au sol
+  note: Éviter de s'exposer aux attaques de froid ; prévoir une destination autorisée pour un changement de plan de secours.
+
+step: Un adversaire invisible est soupçonné avant l'engagement
+  do: Activer détection de l'invisibilité
+
+## Ouverture
+
+step: Plusieurs ennemis dangereux peuvent être touchés sans atteindre les alliés
+  do: Lancer tempête de feu, DD 21, si la menace justifie l'unique utilisation ; sinon boule de feu, DD 16
+  note: Choisir un seul pouvoir pour cette action ; rester en vol et à distance de la mêlée.
+
+step: Les adversaires arrivent par un passage resserré ou peuvent être séparés
+  do: Dresser un mur de feu pour isoler une partie du groupe ou couvrir les alliés
+  note: Orienter la chaleur vers les ennemis et laisser une issue aux créatures que le génie protège.
+
+step: Une cible prioritaire est isolée ou les ennemis résistent au feu
+  do: Employer pilier de feu, DD 18, en plaçant sa zone sans toucher les alliés
+  note: Une partie de ses dégâts est d'origine divine ; ne pas compter uniquement sur les attaques de feu contre une cible qui y résiste.
+
+step: Un ennemi menace déjà le génie au contact
+  do: S'il peut rester sur place, effectuer une attaque à outrance au cimeterre ou avec ses deux coups ; sinon se dégager vers une position en vol
+  note: Une attaque à outrance ne se combine pas avec un déplacement normal.
+
+## Rounds suivants
+
+step: Les ennemis restent groupés et les alliés sont hors de la zone
+  do: Continuer avec boule de feu ou pilier de feu selon les utilisations restantes
+  note: Éviter de gaspiller les pouvoirs de feu sur une cible qui s'y montre insensible.
+
+step: Un combattant tente de contourner le mur de feu
+  do: Se replacer en vol pour maintenir l'obstacle entre lui et les poursuivants
+  note: Son immunité au feu lui permet de traverser son propre mur sans subir ses dégâts de feu.
+
+step: Une cible vulnérable est à portée de son allonge de 3 m
+  do: Effectuer une attaque à outrance si aucun déplacement important n'est nécessaire
+  note: Employer Attaque en puissance contre une cible facile à toucher ; profiter d'Attaques réflexes lorsque les ennemis provoquent des attaques d'opportunité.
+
+step: Il doit lancer un pouvoir magique alors qu'un ennemi le menace
+  do: Se mettre hors de portée si possible ; sinon tenter de l'utiliser sur la défensive
+  note: Magie de guerre aide aux tests de concentration concernés ; un échec peut faire perdre l'action.
+
+step: Les pouvoirs quotidiens doivent être économisés
+  do: Utiliser flammes à distance, ou pyrotechnie sur un feu existant pour gêner la vue des ennemis, DD 15
+  note: Le nuage ou l'éclat peut aussi gêner les alliés ; choisir l'effet selon leurs positions.
+
+step: Un adversaire disparaît par invisibilité pendant le combat
+  do: Consacrer une action à détection de l'invisibilité avant de reprendre ses attaques
+
+## Repli
+
+step: Points de vie sous 30, ou attaques de froid mettant sa survie en danger
+  do: Utiliser changement de plan sur lui-même vers un plan autorisé où il peut survivre, de préférence le plan du Feu
+  note: Ce pouvoir ne permet pas d'exiler un ennemi non consentant ; s'il est menacé, se dégager ou tenter l'utilisation sur la défensive.
+
+step: Il doit couvrir le départ de ses alliés avant de partir
+  do: Placer un mur de feu s'il en reste, puis consacrer les tours suivants à la mise à l'abri et au départ
+  note: Changement de plan peut emmener des alliés consentants dans les limites du sort ; leur destination doit aussi leur être supportable.
+
+step: Il doit échapper aux regards pour se repositionner
+  do: Utiliser invisibilité sur lui-même, puis s'éloigner en vol avant de changer de plan à un tour ultérieur
+  note: Une attaque met fin à cette invisibilité ; elle ne protège pas contre les attaques de zone.
+
+step: Un allié non génie ne peut être sauvé par les moyens précédents
+  do: Envisager souhait à son bénéfice, si l'utilisation quotidienne est disponible et si l'effet demandé entre dans les possibilités du sort
+  note: Ne pas traiter souhait comme une victoire automatique ni comme un pouvoir utilisable pour le génie lui-même.

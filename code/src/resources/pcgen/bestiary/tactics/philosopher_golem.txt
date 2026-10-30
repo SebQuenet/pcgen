@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Golem philosophe, créature artificielle intelligente, neutre et de taille G. Il sépare les adversaires par ses sorts, puis tient le passage au corps à corps.
+  112 pv ; CA 20, contact 9 ; réduction des dégâts 10/adamantium ; immunité à la magie et traits des créatures artificielles.
+  Deux coups +19 (2d6+5 chacun) en attaque à outrance, ou tige de platine +19/+14 (1d8+5). Privilégier les coups pour leurs dégâts.
+  Déplacement de 9 m ; espace occupé et allonge de 3 m ; vision dans le noir à 18 m ; Perception +14. Sorts au NLS 7.
+
+resource: Sorts de niveau 3 | 4/jour | réserve commune à éclair et tempête de neige
+resource: Sorts de niveau 2 | 7/jour | réserve commune à sphère de feu, invisibilité et toile d'araignée
+resource: Sorts de niveau 1 | 7/jour | réserve commune à mains brûlantes, charme-personne, détection des passages secrets, rayon affaiblissant et coup au but
+resource: Sorts de niveau 0 | à volonté | notamment détection de la magie ; aucun soin disponible
+
+step: Il peut choisir le terrain
+  do: Se placer dans un passage assez large pour ses 3 m d'espace, avec une issue derrière lui ; repérer les points d'ancrage possibles d'une toile d'araignée
+  note: Garder les adversaires devant lui pour limiter l'encerclement et exploiter son allonge.
+
+step: Les intrus approchent et il dispose d'un round de préparation
+  do: Lancer invisibilité sur lui-même, puis se placer pour intercepter leur progression
+  note: Durée 7 minutes ; une attaque ou un sort offensif met fin à l'invisibilité. Conserver au moins un emplacement de niveau 2 pour un éventuel repli.
+
+## Ouverture
+
+step: Plusieurs ennemis sont alignés
+  do: Lancer éclair sur leur ligne : 7d6 dégâts d'électricité, Réflexes DD 15 pour réduire de moitié, ligne de 36 m
+  note: Chercher à toucher plusieurs cibles avec un seul emplacement ; garder si possible un sort de niveau 3 pour couvrir le repli.
+
+step: Les ennemis ne sont pas alignés et des ancrages solides opposés sont disponibles
+  do: Lancer toile d'araignée pour retenir une partie du groupe, puis avancer jusqu'au passage à défendre sans entrer dans la toile
+  note: Rayon de 6 m ; Réflexes DD 14 ou agrippé. La zone est un terrain difficile et fournit un abri selon l'épaisseur de toile traversée ; elle gêne aussi le golem.
+
+step: Les ennemis restent groupés à distance, sans bonne ligne d'éclair ni ancrages pour la toile
+  do: Lancer tempête de neige sur les tireurs et les lanceurs de sorts, en laissant hors de la zone les combattants qu'il veut affronter
+  note: Rayon de 12 m, durée 7 rounds, aucun jet de sauvegarde. Elle bloque toute vision, y compris celle du golem ; rester à l'extérieur et combattre les ennemis visibles.
+
+step: Un adversaire est déjà à portée et aucun sort de zone n'offre un meilleur résultat
+  do: Effectuer une attaque à outrance : deux coups +19, 2d6+5 chacun
+  note: S'il doit d'abord se déplacer de plus de 1,50 m, porter un seul coup après son déplacement.
+
+## Rounds suivants
+
+step: Une cible reste à portée de 3 m
+  do: Concentrer les deux coups sur elle jusqu'à la mettre hors de combat
+  note: Privilégier un ennemi capable de franchir sa réduction des dégâts. Exploiter les attaques d'opportunité provoquées dans son allonge, normalement une par round.
+
+step: Un puissant combattant approche, encore hors de la mêlée
+  do: Lancer rayon affaiblissant à 12 m au plus : attaque de contact à distance +14, malus de Force de 1d6+3 pendant 7 rounds
+  note: Vigueur DD 13 pour réduire le malus de moitié ; plusieurs rayons ne cumulent pas leurs malus.
+
+step: Une cible distante reste visible et aucun meilleur éclair n'est possible
+  do: Lancer sphère de feu, puis la diriger sur cette cible : 3d6 dégâts de feu, Réflexes DD 14 pour annuler
+  note: Durée 7 rounds ; déplacer la sphère de 9 m au plus demande une action de mouvement. Les rounds suivants, cela laisse une action simple pour un sort ou un seul coup, mais pas une attaque à outrance.
+
+step: La toile retient encore des adversaires
+  do: Combattre les ennemis libres et garder les prisonniers séparés du reste du groupe
+  note: Le feu brûle la toile et libère progressivement le passage ; éclair peut aussi enflammer ses fils. Éviter ces sorts dans la toile tant que l'obstacle reste utile.
+
+step: Plusieurs ennemis sont regroupés à moins de 4,50 m et ses sorts supérieurs doivent être économisés
+  do: Lancer mains brûlantes : cône de 4,50 m, 5d4 dégâts de feu, Réflexes DD 13 pour réduire de moitié
+  note: Pour lancer un sort sous la menace, se dégager d'un pas de 1,50 m si cela suffit ; sinon lancer sur la défensive, avec l'aide d'Incantation de combat.
+
+## Repli
+
+step: Ses points de vie passent sous 30 et une issue est accessible
+  do: Lancer invisibilité, puis s'éloigner de 9 m sans attaquer
+  note: Sous la menace, se dégager ou lancer sur la défensive. L'invisibilité dure 7 minutes mais ne masque ni les bruits ni les traces ; changer de direction dès que possible.
+
+step: Il doit couvrir sa fuite et dispose encore d'un sort de niveau 3
+  do: Placer une tempête de neige entre lui et les poursuivants, puis partir par l'issue dégagée
+  note: Garder sa propre trajectoire hors de la zone glissante ; la tempête coupe également sa vision.
+
+step: La retraite est impossible
+  do: Tenir le passage et concentrer ses coups sur l'adversaire le plus dangereux
+  note: Il ne dispose d'aucune régénération ni capacité de réparation indiquée ; sa réduction des dégâts reste sa principale défense contre les armes.

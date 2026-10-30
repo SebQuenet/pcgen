@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Thought Harvester Robot, robot récolteur de pensées neutre de FP 10 ; cette créature artificielle intelligente prélève des souvenirs et les rapporte à ses supérieurs.
+  Griffe +19 (1d6+6 et étreinte), deux injecteurs de nanites intégrés +19 (1d4+6 et récolte de pensées chacun) ; fusil sonique intégré +15 au contact à distance (3d6 soniques).
+  131 PV, plus un champ de force de 40 PV ; CA 23, contact 13. Déplacement de 9 m ; allonge de 1,50 m ; vision dans le noir à 18 m et vision nocturne.
+  Solidité 10 ; résistances à l'acide, au froid et au feu de 10 ; immunités des créatures artificielles. Vulnérable à l'électricité et, sans son champ, aux coups critiques.
+
+resource: Champ de force | 40 PV | Absorbe les dégâts en premier ; guérison accélérée 10 et immunité aux critiques tant qu'il subsiste. À 0 PV, il reste désactivé pendant 24 heures.
+
+resource: Fusil sonique intégré | 1 rafale par round | Ligne de 45 m ; jet distinct par créature, avec un malus de -2 à l'attaque.
+
+resource: Récolte de pensées | À chaque touche d'injecteur sur une créature vivante | Volonté DD 17 annule la copie ; sinon, Vigueur DD 17 ou diminution permanente de 1d4 Intelligence, sans descendre sous 1. Créatures sans esprit ou d'Intelligence 1 immunisées.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +19 et identifier la cible dont les souvenirs intéressent sa mission
+  note: Choisir une approche qui évite de s'exposer inutilement à plusieurs adversaires ; garder une issue praticable à pied.
+
+## Ouverture
+
+step: Des ennemis restent à distance
+  do: Tirer au fusil sonique ; choisir une ligne traversant plusieurs ennemis si possible
+  note: Résoudre chaque attaque au contact à distance à +13 après le malus de rafale, ou +14 contre une cible à 9 m ou moins grâce à Tir à bout portant ; dégâts de 3d6 soniques.
+
+step: La cible recherchée peut être atteinte avec un déplacement de 9 m
+  do: Se déplacer jusqu'à 1,50 m d'elle et porter une seule attaque d'injecteur +19 pour récolter ses pensées
+  note: Après ce déplacement, il ne peut pas effectuer son attaque à outrance.
+
+step: Une cible est déjà à portée au début de son tour
+  do: Effectuer une attaque à outrance avec la griffe et les deux injecteurs, chacun à +19
+  note: Après une touche de griffe, tenter l'étreinte pour retenir la cible ; chaque injecteur qui touche déclenche sa propre récolte.
+
+## Rounds suivants
+
+step: La cible recherchée reste à portée
+  do: Répéter l'attaque à outrance et concentrer les injecteurs sur elle
+  note: Chaque récolte copie un événement ou obtient les réponses véridiques à six questions ; elle ne domine pas la victime.
+
+step: Une cible agrippée doit absolument être empêchée de fuir
+  do: Consacrer son action au maintien de la lutte
+  note: Ce maintien remplace l'attaque à outrance. Si les injections deviennent prioritaires, relâcher la prise par une action libre avant de reprendre ses attaques.
+
+step: Un adversaire emploie de l'électricité ou perce régulièrement ses défenses
+  do: Concentrer les attaques sur lui s'il est accessible ; sinon, tirer sur lui et chercher un couvert
+  note: Éviter de traverser plusieurs zones menacées ; Souplesse du serpent améliore sa CA de 4 contre les attaques d'opportunité provoquées par son déplacement.
+
+step: Le champ est endommagé mais possède encore des PV
+  do: Profiter d'un couvert pour laisser sa guérison accélérée restaurer le champ tout en poursuivant le tir si une ligne reste disponible
+  note: Cette récupération ne répare pas les 131 PV du robot.
+
+step: La cible recherchée est morte depuis moins de 24 heures et son cerveau est intact
+  do: Prélever encore 1d4 souvenirs sur le cadavre si la situation permet de s'y attarder
+
+## Repli
+
+step: Les renseignements recherchés sont récoltés
+  do: Quitter le combat avec les sphères mémorielles ; utiliser un désengagement jusqu'à 18 m si un ennemi le menace au contact
+  note: Sa mission privilégie le retour des souvenirs recueillis.
+
+step: Le champ est épuisé et les PV du robot passent sous 33
+  do: Rompre le contact par un désengagement jusqu'à 18 m et chercher un couvert ; tirer lors des tours suivants si nécessaire pour contenir la poursuite
+  note: Le champ détruit ne revient pas pendant ce combat ; éviter tout nouvel échange prolongé.

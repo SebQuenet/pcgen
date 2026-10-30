@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Tendrul, aberration aquatique de grande taille, neutre mauvaise, prédateur amphibie peu intelligent des eaux tempérées et chaudes. Il préfère saisir une proie isolée près du rivage et l'entraîner sous l'eau.
+  76 pv ; CA 21, contact 12, pris au dépourvu 18. Morsure +10 (1d8+5 et étreinte), coup de queue +5 (1d6+2), constriction (1d8+5). Allonge 1,50 m ; espace occupé 3 m.
+  Déplacement terrestre 3 m ; Natation +16 ; vision dans le noir à 18 m, odorat développé et Perception +11. Amphibie, il peut poursuivre une victime sur la berge.
+
+resource: Volonté de fer supérieure | 1/jour | relancer un jet de Volonté avant d'en connaître le résultat ; conserver le second jet, même moins bon
+
+step: Des proies approchent du rivage
+  do: Se tapir dans la vase ou le sable peu profond et attendre qu'une victime arrive à portée de morsure
+  note: privilégier une proie isolée ; ce camouflage ne lui donne aucune vitesse de creusement
+
+## Ouverture
+
+step: Une proie est à 1,50 m ou moins et le tendrul peut attaquer à outrance
+  do: Porter la morsure +10 (1d8+5), puis le coup de queue +5 (1d6+2) si la situation le permet
+  note: après une morsure réussie, tenter immédiatement l'étreinte par un test de lutte ; une réussite déclenche aussi la constriction (1d8+5)
+
+step: Il doit se déplacer pour atteindre sa proie
+  do: Avancer puis porter une seule morsure ; tenter l'étreinte si elle touche
+  note: à terre, son déplacement de 3 m impose de laisser approcher les victimes plutôt que de les poursuivre longtemps
+
+## Rounds suivants
+
+step: Une victime est saisie près de l'eau
+  do: Maintenir la lutte et choisir de déplacer la victime vers l'eau, à la moitié de la vitesse applicable
+  note: BMO fourni +13 ; chaque test de lutte réussi déclenche la constriction (1d8+5). Ce déplacement remplace l'option d'infliger les dégâts de morsure pendant le maintien
+
+step: La victime saisie est immergée
+  do: Maintenir la lutte, puis l'immobiliser sous l'eau pour tenter de la noyer
+  note: maintenir ensuite l'immobilisation ; appliquer la constriction sur les tests réussis. Une victime capable de respirer sous l'eau ne se noie pas
+
+step: Il garde une victime en lutte sans chercher à la déplacer ou à l'immobiliser
+  do: Maintenir la prise en choisissant les dégâts de morsure (1d8+5), auxquels s'ajoute la constriction (1d8+5) sur réussite
+  note: le maintien de la lutte ne constitue pas une attaque à outrance
+
+step: Aucune victime n'est saisie et un ennemi reste au contact
+  do: Répéter morsure et coup de queue à outrance ; tenter de nouveau l'étreinte après une morsure réussie
+  note: grincement de dents : un 20 naturel à la morsure suivi d'une confirmation du critique inflige des dégâts triplés ; la constriction reste distincte
+
+step: La proie est facile à toucher et il privilégie les dégâts
+  do: Activer Attaque en puissance : morsure +8 (1d8+9), coup de queue +3 (1d6+4)
+  note: le malus de -2 touche aussi les tests de manœuvre ; éviter ce choix quand réussir l'étreinte ou maintenir la lutte est prioritaire
+
+## Repli
+
+step: Points de vie sous 20 et plusieurs ennemis encore capables de le frapper
+  do: Relâcher la victime si elle gêne la fuite et se retirer vers l'eau ou un abri rocheux
+  note: utiliser le désengagement si nécessaire ; son déplacement terrestre de 3 m rend le repli difficile loin du rivage

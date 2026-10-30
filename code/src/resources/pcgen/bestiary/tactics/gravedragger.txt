@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Gravedragger, extérieur de taille G, neutre mauvais, FP 15 : héraut de Zyphus, meurtrier sournois qui recherche une mort soudaine et abandonne volontiers un combat prolongé.
+  Pic de guerre lourd +2 : +24/+19/+14/+9 au corps à corps, 1d8+7, critique 19–20/x4 ; allonge 3 m. Au lancer : +23, 1d8+2, critique 19–20/x4.
+  195 pv, CA 29, guérison accélérée 5 ; RD 10/fer froid et magie, résistance au froid 30 et au feu 30, RM 26, immunité à la peur. Déplacement 15 m, vol 9 m.
+
+resource: Invisibilité | à volonté | lui-même uniquement ; cesse lorsqu'il attaque
+resource: Porte dimensionnelle | à volonté | lui-même uniquement ; aucune autre action après son utilisation pendant ce tour
+resource: Invisibilité suprême | 3/jour | lui-même uniquement ; 17 rounds, persiste pendant ses attaques
+resource: Malédiction | 3/jour | contact ; Volonté DD 18 annule
+resource: Bourrasque | 3/jour | DD 16 ; utile pour disperser un brouillard ou des gaz
+resource: Tempête de grêle | 3/jour | aucun jet de sauvegarde
+resource: Exécution | 3/jour | contact ; Vigueur DD 19 réduit les dégâts
+resource: Animation des morts | 1/jour | nécessite des cadavres appropriés
+resource: Éclair multiple | 1/jour | Réflexes DD 20 pour réduire les dégâts de moitié
+resource: Télékinésie | 1/jour | DD 19 lorsqu'un jet de sauvegarde s'applique
+
+step: Il peut observer ses futures victimes
+  do: Approcher sous invisibilité et choisir une cible isolée, de préférence vulnérable aux attaques de contact ; repérer aussi un refuge pour sa fuite.
+  note: Perception +23, odorat, vision dans le noir à 18 m et vision dans les ténèbres ; Discrétion +20. Ses ricanements peuvent trahir sa présence.
+
+step: Il dispose de cadavres avant l'arrivée des ennemis
+  do: Utiliser animation des morts pour préparer des squelettes ou zombies et les placer sur le chemin des intrus.
+
+step: L'embuscade est imminente
+  do: Activer invisibilité suprême à couvert avant d'approcher à moins de 9 m des victimes.
+  note: Prévoir une action simple par pouvoir magique ; une préparation impossible avant le combat occupe son premier tour.
+
+## Ouverture
+
+step: Les adversaires entrent dans un rayon de 9 m
+  do: Exploiter l'aura de malchance pour placer sa première attaque ou son premier pouvoir offensif.
+  note: Dans cette aura, les créatures affectées lancent deux d20 et gardent le moins bon pour chaque jet. Effet mental ; les fidèles de Zyphus et les bénéficiaires d'un bonus de chance y sont immunisés.
+  note: Lorsqu'il attaque et que sa présence est perceptible, appliquer aussi sa présence terrifiante à 9 m : Volonté DD 22, selon les règles de cette aptitude.
+
+step: Une victime vivante accessible paraît peu résistante physiquement
+  do: Lancer exécution par une attaque de contact au corps à corps.
+  note: Inflige 12d6+17 dégâts ; une réussite en Vigueur DD 19 réduit les dégâts à 3d6+17. Ce pouvoir ne garantit pas une mort instantanée.
+
+step: Plusieurs ennemis sont des cibles valables pour l'électricité
+  do: Choisir éclair multiple comme première attaque, en visant d'abord la menace principale.
+  note: Réflexes DD 20 ; conserver cette utilisation si une seule cible est exposée.
+
+## Rounds suivants
+
+step: Une cible reste à son allonge et une attaque à outrance est possible
+  do: Porter les quatre attaques de pic à +24/+19/+14/+9, en concentrant les coups sur une même victime.
+  note: Réflexes de combat permet jusqu'à cinq attaques d'opportunité par round si des occasions distinctes se présentent ; surveiller les déplacements dans son allonge de 3 m.
+
+step: Il doit se déplacer avant de frapper
+  do: Se déplacer puis utiliser Frappe décisive : une attaque de pic à +24, infligeant 2d8+7.
+  note: Frappe décisive accompagne l'action d'attaque simple ; elle ne s'ajoute ni à une charge ni à une attaque à outrance.
+
+step: Une cible dangereuse risque de prolonger le combat
+  do: Tenter malédiction au contact : choisir le malus de -4 aux attaques, sauvegardes et tests, puis exploiter cet affaiblissement au tour suivant.
+  note: Volonté DD 18 annule ; privilégier une cible déjà soumise à l'aura de malchance.
+
+step: Un ennemi au contact doit être neutralisé brièvement
+  do: Tenter une sale manoeuvre pour l'aveugler, avec un BMO de +25 contre son DMD.
+  note: Cette manoeuvre occupe une action simple ; elle remplace l'offensive de ce tour.
+
+step: Le terrain offre une chute et la cible peut être déplacée par télékinésie
+  do: Utiliser la poussée violente de télékinésie pour la projeter vers le vide ; Volonté DD 19 annule pour une créature non consentante.
+  note: Respecter les limites de poids et de déplacement du pouvoir ; cette tentative consomme son utilisation quotidienne.
+
+step: Les poursuivants se regroupent dans un passage
+  do: Placer tempête de grêle sur leur trajet pour les blesser et ralentir leur progression, puis se désengager au tour suivant.
+  note: 3d6 dégâts contondants et 2d6 de froid, sans sauvegarde ; la zone devient un terrain difficile pendant le round de grêle.
+
+## Repli
+
+step: Après un ou deux rounds d'attaque, aucune victime ne tombe
+  do: Rompre l'embuscade par porte dimensionnelle vers le refuge préparé.
+  note: Il préfère rechercher une nouvelle occasion de mort soudaine plutôt que soutenir un duel.
+
+step: Ses pv descendent sous 65 ou les ennemis peuvent le submerger
+  do: Utiliser immédiatement porte dimensionnelle pour quitter le combat ; au tour suivant, reprendre invisibilité et s'éloigner.
+  note: Choisir si possible une destination hors de portée immédiate des poursuivants. À l'abri, récupérer 5 pv par round grâce à sa guérison accélérée.

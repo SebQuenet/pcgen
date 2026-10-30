@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Greruor, démon de taille G à l'allure de grenouille massive, brutal et avide de combat, mais capable de coordonner ses attaques.
+  115 pv, CA 27 ; déplacement 12 m ; allonge naturelle 3 m. Ranseur +16/+11 (2d6+10, x3), morsure +16 (2d6+7) ou langue +16 avec étreinte ; crachat d'acide qui s'enflamme ensuite.
+  RD 10/Bien, RM 21 ; immunité à l'électricité et au poison ; résistances acide, froid et feu 10. Sa Volonté +5 le rend vulnérable aux attaques mentales.
+
+resource: Blasphème | 2/jour | DD 21, NLS 10
+resource: Convocation | 1/jour | 1 greruor, 35 % de réussite
+resource: Crachat d'acide et de feu | 1 fois tous les 1d4 rounds | ligne de 9 m ; Réflexes DD 21
+resource: Pouvoirs à volonté | illimité | confusion DD 18, immobilisation de personne DD 16, ténèbres profondes, détection du Bien, fracassement DD 15
+
+step: Il dispose de temps avant l'affrontement
+  do: Repérer les intrus avec Perception +27, vision dans le noir à 18 m et détection de l'invisibilité permanente ; employer détection du Bien pour reconnaître les auras bonnes
+  note: La détection de l'invisibilité ne permet pas de voir à travers les obstacles.
+
+step: Un combat difficile est imminent et la convocation reste disponible
+  do: Tenter de convoquer un second greruor avant d'engager les ennemis
+  note: Avec un congénère présent, coordonner les cibles par télépathie à 30 m ; l'un saisit une victime, l'autre la frappe au ranseur.
+
+## Ouverture
+
+step: Plusieurs ennemis non mauvais de 10 DV ou moins sont à 12 m ou moins
+  do: Employer blasphème, Volonté DD 21
+  note: À NLS 10, les cibles de 10 DV sont hébétées ; celles de 9 DV ou moins sont aussi affaiblies, celles de 5 DV ou moins également paralysées. Le jet de sauvegarde atténue ou annule ces effets ; au-delà de 10 DV, le pouvoir est sans effet.
+
+step: À défaut, plusieurs ennemis sont alignés à portée du crachat
+  do: Cracher sur une ligne de 9 m en évitant les alliés : 4d4 dégâts d'acide, Réflexes DD 21 pour moitié
+  note: En cas d'échec au jet, la victime prend feu au prochain tour du greruor et subit 1d6 dégâts de feu par round jusqu'à extinction.
+
+step: Sinon, un ennemi peut être atteint au ranseur après un déplacement
+  do: Avancer et porter une attaque de ranseur +16, pour 2d6+10 dégâts
+  note: Arme à allonge : pour ce démon de taille G, le ranseur frappe à 4,50 m ou 6 m ; à 3 m ou moins, choisir la morsure ou la langue.
+
+## Rounds suivants
+
+step: Une cible reste à portée du ranseur sans nécessiter de déplacement important
+  do: Attaque à outrance au ranseur +16/+11, chaque coup infligeant 2d6+10 dégâts, critique x3
+  note: Un pas de placement de 1,50 m permet de conserver l'attaque à outrance. Contre une CA modérée, employer Attaque en puissance.
+
+step: Un ennemi arrive à 3 m ou moins
+  do: Mordre à +16 pour 2d6+7 dégâts, ou attaquer avec la langue à +16 pour tenter une étreinte
+  note: Privilégier l'étreinte si un autre greruor peut exploiter la prise ; seul, préférer la morsure pour infliger immédiatement des dégâts.
+
+step: Le crachat est de nouveau disponible et une ligne touche plusieurs adversaires
+  do: Réutiliser le crachat d'acide et de feu
+  note: Suivre le délai de 1d4 rounds entre deux utilisations ; les brûlures imposent aux victimes de consacrer des efforts à leur extinction.
+
+step: Un humanoïde dangereux reste libre et paraît vulnérable aux attaques mentales
+  do: Employer immobilisation de personne, Volonté DD 16, puis concentrer les attaques sur lui s'il est paralysé
+  note: Ce pouvoir cible un humanoïde ; il ne neutralise pas indifféremment toutes les créatures.
+
+step: Les adversaires prennent l'avantage ou menacent de l'encercler
+  do: Employer confusion sur leur groupe, Volonté DD 18, puis profiter de leur désorganisation pour changer de position
+  note: Au round suivant, fracassement peut détruire un objet solide non magique utile à l'ennemi, Volonté DD 15 ; choisir un équipement exposé plutôt qu'une arme magique.
+
+step: Une utilisation de blasphème reste disponible et plusieurs cibles sensibles sont réunies
+  do: Employer le second blasphème pour reprendre l'initiative
+  note: Épargner cette utilisation si les adversaires sont mauvais ou dépassent 10 DV.
+
+## Repli
+
+step: Points de vie sous 30 et aucune victoire rapide ne se dessine
+  do: Employer confusion pour désorganiser les poursuivants, puis se retirer vers un passage défendable à 12 m par déplacement
+  note: Préférer le désengagement pour quitter une mêlée sans s'exposer inutilement ; utiliser Escalade +20 si une paroi offre une issue praticable.
+
+step: Une poursuite dépend de la vue et les ténèbres peuvent masquer sa sortie
+  do: Employer ténèbres profondes, puis gagner le couvert en suivant une issue déjà repérée
+  note: Sa vision dans le noir et sa détection de l'invisibilité ne percent pas les ténèbres surnaturelles ; il doit lui aussi tenir compte de cette perte de visibilité.

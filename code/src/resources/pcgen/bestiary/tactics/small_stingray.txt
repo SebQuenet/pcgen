@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Petite raie pastenague, animal aquatique des eaux chaudes, au corps aplati et à la queue munie d'un aiguillon venimeux. Elle attaque à l'affût et fuit les menaces.
+  4 points de vie ; CA 13 ; dard +3 (1d3 et venin), allonge de 1,50 m ; nage à 9 m par déplacement.
+
+step: Fond sableux disponible
+  do: S'enfouir dans le sable pour se camoufler et attendre qu'une proie approche.
+
+step: Une créature approche dans l'eau
+  do: La repérer grâce à la perception des vibrations à 30 m, à l'odorat et à la vision nocturne ; attendre qu'elle entre à portée du dard.
+  note: Perception +5.
+
+## Ouverture
+
+step: Une proie ou une menace se trouve à 1,50 m ou moins
+  do: Frapper avec le dard +3, pour 1d3 dégâts et inoculation du venin en cas de blessure.
+
+resource: Venin | à chaque blessure de dard | Vigueur DD 13 ; fréquence : 1/round pendant 4 rounds ; effet : affaiblissement de 1d2 Dextérité et de 1 Constitution ; guérison : 1 sauvegarde réussie.
+
+## Rounds suivants
+
+step: La proie reste à portée et la raie n'est pas menacée
+  do: Porter une nouvelle attaque de dard +3 (1d3 et venin).
+
+step: Une cible subit encore le venin
+  do: Résoudre les sauvegardes de Vigueur DD 13 à la fréquence indiquée, jusqu'à guérison ou fin de la durée.
+  note: Le venin continue d'agir même si la raie s'éloigne ; elle n'a aucune action à dépenser pour l'entretenir.
+
+## Repli
+
+step: La raie est blessée ou reste menacée après avoir piqué
+  do: Utiliser un retrait pour s'éloigner en nageant et gagner un fond sableux où se cacher.
+  note: Sa vitesse de nage est de 9 m ; avec seulement 4 points de vie, elle cherche rapidement à échapper au danger.

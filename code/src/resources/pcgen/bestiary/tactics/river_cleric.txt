@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Prêtresse fluviale humaine de Wadjet, niveau 4, loyale bonne : elle protège et guide les voyageurs des rivières d'Osirion.
+  25 pv, CA 15, déplacement 9 m. Masse d'armes légère de maître +6 (1d6+2), javeline de maître +6 (1d6+2) ; glaçon à distance contre la CA de contact +5 (1d6+2 de froid), portée 9 m.
+  Elle privilégie l'apaisement, le soutien et la protection des voyageurs ; elle garde une voie de sortie vers la berge ou son embarcation.
+
+resource: Sorts de niveau 1 | 1 chacun par jour | bénédiction, regain d'assurance, sanctuaire (DD 13), bouclier de la foi, convocation de monstres I
+resource: Sorts de niveau 2 | 1 chacun par jour | aide, apaisement des émotions (DD 14), endurance aux éléments partagée, nappe de brouillard
+resource: Glaçon | 5 par jour | action simple ; attaque de contact à distance, portée 9 m, 1d6+2 de froid
+resource: Contact résistant | 5 par jour | action simple au toucher ; transfère son bonus de résistance de +1 aux sauvegardes à un allié pendant 1 minute
+
+step: Une attaque est prévisible et elle dispose de quelques rounds
+  do: Lancer bouclier de la foi sur elle-même, puis aide sur le compagnon qui tiendra le front, ou sur elle-même si elle est seule
+  note: Un sort par round ; durée 4 minutes chacun. Bouclier de la foi porte sa CA à 17 ; aide donne 1d8+4 pv temporaires et +1 de moral aux attaques et aux sauvegardes contre la peur.
+
+step: Des compagnons doivent combattre et un round de préparation reste disponible
+  do: Lancer bénédiction en les regroupant à 15 m ou moins d'elle
+  note: Pendant 4 minutes, +1 de moral aux attaques et aux sauvegardes contre la peur ; ce bonus ne se cumule pas avec celui d'aide.
+
+## Ouverture
+
+step: Les agresseurs sont regroupés et une interruption des violences peut sauver les voyageurs
+  do: Lancer apaisement des émotions sur une zone de 6 m de rayon, puis maintenir sa concentration et proposer de cesser le combat
+  note: Volonté DD 14 annule ; concentration, au plus 4 rounds. Les créatures affectées ne peuvent agir violemment ; toute agression ou blessure contre l'une d'elles rompt le sort pour toutes. Ses compagnons doivent retenir leurs coups.
+
+step: Le combat est inévitable et elle peut incanter un round entier à l'abri
+  do: Lancer convocation de monstres I pour faire apparaître un chien céleste sur la terre ferme, entre les agresseurs et les voyageurs
+  note: Incantation de 1 round ; la créature apparaît au début de son tour suivant et combat pendant 4 rounds. Ne pas commencer cette incantation sous les coups.
+
+step: Un assaillant visible est à 9 m ou moins et elle doit immédiatement infliger des dégâts
+  do: Tirer un glaçon, puis se déplacer pour conserver ses distances
+  note: Privilégier une cible en armure dont la CA de contact est faible ; éviter le tir au contact d'un ennemi.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et aucun compagnon n'a besoin d'une aide urgente
+  do: Continuer les glaçons tant qu'il reste des utilisations ; lancer sa javeline si le froid est inefficace ou les glaçons épuisés
+  note: Javeline +6 (1d6+2), facteur de portée 9 m ; elle n'en possède qu'une. Ajouter +1 aux attaques si aide ou bénédiction est active.
+
+step: Un ennemi atteint le contact et elle ne peut se dégager sans exposer un voyageur
+  do: Frapper avec sa masse d'armes légère +6 (1d6+2), en profitant du soutien de ses compagnons
+  note: Allonge 1,50 m ; ajouter +1 à l'attaque sous aide ou bénédiction. Si elle peut reprendre de la distance, préférer un pas de placement de 1,50 m avant d'incanter.
+
+step: Un compagnon est neutralisé par la peur
+  do: Lancer regain d'assurance pour réprimer l'effet de peur
+  note: Peut affecter deux créatures, à portée de 10,50 m et distantes d'au plus 9 m l'une de l'autre ; accorde aussi +4 de moral contre la peur pendant 10 minutes.
+
+step: Un allié au contact risque un effet exigeant une sauvegarde et elle peut lui consacrer son action
+  do: Employer contact résistant sur lui s'il ne dispose pas déjà d'un bonus de résistance équivalent ou supérieur
+  note: Elle perd alors son propre bonus de résistance pendant 1 minute : Vigueur +4, Réflexes +3, Volonté +6 durant cette période.
+
+step: Un compagnon agonise et elle peut le secourir sans s'exposer directement
+  do: Lancer stabilisation à 10,50 m ou moins
+  note: À volonté ; arrête la perte de pv sans rendre de pv ni remettre le blessé en état de combattre.
+
+## Repli
+
+resource: Nappe de brouillard | 1 par jour | rayon 6 m, durée 40 minutes ; ressource déjà comptée parmi les sorts de niveau 2
+resource: Sanctuaire | 1 par jour | Volonté DD 13, durée 4 rounds ; ressource déjà comptée parmi les sorts de niveau 1
+resource: Plume magique, bateau-cygne | 1 | crée une embarcation pour 1 jour, déplacement sur l'eau 18 m
+
+step: Elle tombe à 8 pv ou moins, ou les voyageurs risquent d'être submergés
+  do: Lancer nappe de brouillard pour masquer le passage vers la sortie, puis entraîner les compagnons vers un lieu sûr
+  note: Le brouillard masque aussi sa propre vue : au-delà de 1,50 m, les créatures bénéficient d'un camouflage total. Un vent fort peut le disperser en 1 round.
+
+step: Un poursuivant menace directement sa fuite et sanctuaire reste disponible
+  do: Lancer sanctuaire sur elle-même, puis continuer le repli sans attaquer
+  note: Un adversaire doit réussir Volonté DD 13 pour l'attaquer directement ; un échec l'en empêche pour la durée du sort. Les effets de zone restent dangereux ; toute attaque de la prêtresse rompt sa protection.
+
+step: Elle atteint une rivière navigable et doit évacuer ses compagnons
+  do: Activer la plume de bateau-cygne, faire embarquer les voyageurs et s'éloigner sur l'eau
+  note: Consacrer un round distinct à l'activation si elle vient de lancer un sort. Utiliser Profession (marin) +9 pour les manœuvres nécessaires.

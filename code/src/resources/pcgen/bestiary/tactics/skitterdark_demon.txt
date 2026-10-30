@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Skitterdark Demon, démon de taille TP, chaotique mauvais, agressif et féroce, qui préfère combattre en vol et s'acharner sur les créatures bonnes. 34 pv, CA 19 ; vol à 12 m, marche à 6 m ; vision dans le noir à 18 m.
+  Attaque à outrance : 2 griffes +9 (1d3-1 chacune) et morsure +9 (1d4-1). Griffes profanes : chaque griffe inflige aussi 1d6 dégâts profanes à une créature d'alignement bon. Allonge de 0 m : il doit entrer dans l'espace adverse pour frapper.
+
+resource: Détection du Bien, détection de la magie | À volonté | NLS 5 ; employer les détections séparément, en prenant le temps de se concentrer
+resource: Immobilisation de personne | 1/jour | Action simple ; portée 45 m ; un humanoïde ; Volonté DD 13 annule ; paralysie pendant 5 rounds au maximum, nouveau jet à chaque tour par une action complexe
+resource: Effroi | 1/jour | Action simple ; portée 45 m ; une seule créature vivante de moins de 6 DV au NLS 5 ; Volonté DD 13 ; effrayée pendant 5 rounds en cas d'échec, secouée pendant 1 round en cas de réussite
+
+step: Des adversaires approchent sans l'avoir repéré
+  do: Se dissimuler en hauteur avec Discrétion +18 ; observer avec Perception +8 et chercher les auras de Bien ou de magie avant d'attaquer
+  note: Une absence d'aura de Bien ne prouve pas qu'une créature n'est pas bonne.
+
+step: Plusieurs skitterdarks participent au combat
+  do: Préparer une attaque concentrée sur une même cible, de préférence bonne et isolée
+  note: Regroupement permet à quatre skitterdarks d'occuper normalement une même case de 1,50 m de côté ; cela ne leur donne pas les propriétés d'une nuée.
+
+## Ouverture
+
+step: Un humanoïde dangereux est à portée et immobilisation de personne est disponible
+  do: Lancer immobilisation de personne sur lui depuis les airs, puis se rapprocher si cela ne l'expose pas inutilement
+  note: Le pouvoir et le déplacement consomment ce tour ; aucune attaque à outrance en plus. Les autres skitterdarks peuvent profiter de la paralysie.
+
+step: Sinon, un adversaire vivant de moins de 6 DV protège la cible choisie
+  do: Employer effroi pour le faire fuir et ouvrir le passage aux autres démons
+
+step: Il choisit d'engager directement une cible
+  do: Voler jusque dans son espace et porter une seule griffe +9 (1d3-1, plus 1d6 profane si elle est bonne)
+  note: Entrer dans l'espace adverse provoque normalement une attaque d'opportunité ; tenter Acrobaties +10 pour l'éviter si le déplacement réduit suffit.
+
+## Rounds suivants
+
+step: La cible reste dans son espace et il peut lui consacrer son tour
+  do: Se maintenir en vol stationnaire avec Vol +18 et effectuer l'attaque à outrance : deux griffes et une morsure
+  note: Concentrer les attaques du groupe sur la même victime, surtout si elle est bonne ou paralysée.
+
+step: La cible s'éloigne
+  do: La suivre en vol et porter une seule griffe après le déplacement ; rejoindre de préférence une victime bonne ou isolée
+
+step: Les ennemis se regroupent ou révèlent une arme en fer froid
+  do: Espacer les skitterdarks et changer d'angle d'approche pour éviter les attaques de zone et le porteur de l'arme
+  note: RD 5/fer froid, immunité à l'électricité et au poison, résistances acide 10, froid 10 et feu 10, résistance à la magie 14 : ces défenses soutiennent son agressivité, sans garantir sa survie.
+
+## Repli
+
+step: Points de vie sous 10 et aucun avantage décisif immédiat
+  do: Effectuer une retraite en vol, jusqu'à 24 m, vers une hauteur ou un abri qui coupe les lignes de vue
+
+step: Un poursuivant reste à portée et effroi n'a pas encore été utilisé
+  do: S'il est vivant et possède moins de 6 DV, employer effroi sur lui, puis poursuivre la fuite avec un déplacement en vol de 12 m

@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Wind Yai, oni de taille gigantesque, loyal mauvais, brutal et dominateur. Il combat en volant et impose la distance avant d'écraser une cible isolée.
+  230 pv ; CA 31, contact 11 ; résistance à la magie 27 ; résistance au son 5 ; régénération 5, neutralisée temporairement par l'acide ou le feu.
+  Déplacement terrestre 12 m, vol 18 m avec bonne manœuvrabilité ; espace et allonge de 4,50 m. Vision dans le noir à 18 m.
+  Morgenstern de maître +32/+27/+22/+17, 3d6+12 ; ou deux coups +30, 2d6+12 chacun. Projectile électrique +21 au contact à distance, 4d6 d'électricité et surdité.
+
+resource: Vol et manteau de vents | constants | les attaques à distance contre lui subissent un malus de −4 grâce au manteau
+resource: Invisibilité personnelle, ténèbres, forme gazeuse, lévitation | à volonté | pouvoirs utilitaires et de fuite
+resource: Contrôle du climat | 3/jour | préparer une météo adaptée au climat et à la saison ; ses changements demandent 10 minutes pour se manifester
+resource: Cri accéléré | 3/jour | action rapide, cône de 9 m ; 5d6 de son et surdité pendant 2d6 rounds ; Vigueur DD 19 réduit les dégâts de moitié et annule la surdité
+resource: Mur de vent | 3/jour | durée 16 rounds ; dévie les flèches et carreaux qui le traversent
+resource: Chaîne d'éclairs | 1/jour | Réflexes DD 21 ; attaque électrique de groupe
+resource: Cyclone | 1/jour | Réflexes DD 23 ; durée 16 rounds ; déplacement du cyclone de 18 m par round
+
+step: Il repère les intrus avant d'être découvert
+  do: Se rendre invisible, gagner une position en hauteur et observer leurs armes et leurs déplacements
+  note: Garder le vol et le manteau de vents actifs ; choisir un espace assez vaste pour sa taille et une issue aérienne.
+
+step: Il dispose d'une longue préparation en extérieur
+  do: Utiliser contrôle du climat pour gêner l'approche et les tirs ennemis
+  note: Ce pouvoir prépare le terrain ; il ne permet pas de diriger chaque éclair ni de déclencher instantanément une tempête.
+
+## Ouverture
+
+step: Plusieurs ennemis sont proches les uns des autres
+  do: Depuis les airs, lancer chaîne d'éclairs sur une cible centrale et choisir les autres ennemis à 9 m au plus de celle-ci comme cibles secondaires
+  note: Éviter les adversaires manifestement protégés contre l'électricité. Cette attaque met fin à son invisibilité.
+
+step: Des archers constituent la menace principale
+  do: Interposer un mur de vent avant de poursuivre l'offensive
+  note: Le mur n'arrête pas les ennemis terrestres qui viennent au contact.
+
+step: Plusieurs adversaires entrent dans un cône de 9 m
+  do: Employer cri accéléré, puis utiliser son action simple pour attaquer ou lancer un autre pouvoir
+  note: Le cri rend sourd, sans étourdir. Il occupe l'action rapide du round.
+
+## Rounds suivants
+
+step: Les combattants de mêlée ne peuvent pas l'atteindre
+  do: Rester en vol et tirer son projectile électrique sur un lanceur de sorts ou un ennemi vulnérable à l'électricité
+  note: Le projectile utilise une action rapide ; choisir entre lui et cri accéléré à chaque round. Conserver son déplacement pour maintenir la distance.
+
+step: Plusieurs ennemis doivent être séparés ou retenus
+  do: Créer un cyclone et le faire traverser leurs positions
+  note: Les créatures de taille grande ou inférieure risquent 3d6 dégâts, Réflexes DD 23 annule. Une victime de taille moyenne ou inférieure qui échoue doit réussir un second jet ou être emportée, puis subir 1d8 dégâts par round.
+  note: Diriger son déplacement ou modifier son trajet programmé demande une action simple ; programmer un trajet simple permet ensuite d'employer cette action autrement.
+
+step: Une cible accessible se trouve déjà à 4,50 m ou moins
+  do: Faire une attaque à outrance avec la morgenstern, en concentrant les coups sur elle ; ajouter un projectile électrique ou un cri accéléré si utile
+  note: S'il doit effectuer un déplacement supérieur à un pas de 1,50 m, porter une seule attaque de morgenstern. Employer Attaque en puissance surtout contre une CA modeste.
+
+step: Plusieurs ennemis adjacents entre eux restent dans son allonge
+  do: Employer Enchaînement ou sa version supérieure pour répartir les coups
+  note: Ce choix remplace l'attaque à outrance et réduit sa CA de 2 jusqu'à son prochain tour ; préférer l'attaque à outrance pour abattre une cible prioritaire.
+
+step: Un adversaire plus petit que lui bloque une issue ou se tient près d'un bord
+  do: Employer Coup fabuleux, BMO +34 contre le DMD, pour le projeter de 3 m et le mettre à terre
+  note: Cette manœuvre prend une action simple ; elle sert à dégager l'espace ou à exploiter le terrain.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Frapper avec la morgenstern
+  note: Réflexes de combat permet jusqu'à quatre attaques d'opportunité par round, lorsque des occasions distinctes se présentent.
+
+## Repli
+
+step: Ses pv passent sous 60, ou l'acide et le feu empêchent une récupération efficace
+  do: Rompre le contact, prendre de la hauteur et utiliser invisibilité avant de s'éloigner en vol
+  note: Si nécessaire, consacrer un round à une retraite pour limiter les attaques d'opportunité, puis devenir invisible au round suivant. Cesser les attaques pour conserver l'invisibilité.
+
+step: Une ouverture étroite offre un refuge inaccessible aux poursuivants
+  do: Prendre forme gazeuse et passer par cette ouverture
+  note: Cette forme ralentit sa fuite ; l'employer pour franchir un obstacle plutôt que pour distancer les ennemis.
+
+step: Il a rompu la poursuite
+  do: Se dissimuler et laisser la régénération restaurer 5 pv par round lorsqu'elle fonctionne
+  note: Des dégâts d'acide ou de feu suspendent la régénération pendant le round suivant. Attendre sa récupération avant d'envisager une nouvelle attaque.

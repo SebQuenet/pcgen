@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Gardien de Set, créature artificielle de taille G, neutre et sans intelligence, chargée de protéger un sanctuaire ou un tombeau. Il applique ses consignes sans élaborer de stratégie complexe.
+  151 pv ; CA 29 ; réduction des dégâts 15/adamantium ; immunité au feu et immunités des créatures artificielles.
+  Deux coups à +30, chacun infligeant 2d12+9 dégâts, critique sur 18–20, multiplicateur ×2. Allonge et espace occupé : 3 m ; déplacement : 12 m. Vision dans le noir à 18 m et vision nocturne.
+
+step: Aucun intrus ne déclenche ses consignes de défense
+  do: Rester immobile comme une statue grâce à immobilité, près du passage ou du bien à garder.
+  note: Son apparence peut le faire prendre pour un mort-vivant ; il reste une créature artificielle.
+
+resource: Trompette du destin | 1 fois tous les 3 rounds | action libre ; explosion sonique dans un rayon de 6 m ; autres gardiens de Set immunisés.
+
+resource: Conduit élémentaire, rubis | à chaque absorption de feu | décharge automatique au round suivant, en action libre.
+
+## Ouverture
+
+step: Un intrus se trouve à 6 m ou moins et la trompette est disponible
+  do: Émettre la trompette du destin avant de porter ses coups.
+  note: Toutes les créatures dans le rayon subissent 2d8+2 dégâts et sont étourdies pendant 1 round ; Vigueur DD 21 réduit les dégâts de moitié et annule l'étourdissement.
+
+step: Un intrus est déjà à portée de ses coups
+  do: Faire une attaque à outrance : deux coups à +30, de préférence sur la même cible.
+  note: Coups puissants : si les deux coups touchent cette cible, elle est chancelante pendant 1d4+1 rounds, sauf réussite d'un jet de Vigueur DD 21.
+
+step: Aucun intrus n'est à portée de mêlée
+  do: Avancer de 12 m au maximum vers l'intrus désigné par ses consignes, puis porter un seul coup à +30 s'il arrive à portée.
+  note: Après un déplacement normal, il ne porte pas ses deux coups. Si nécessaire, un double déplacement lui permet de parcourir 24 m sans attaquer.
+
+## Rounds suivants
+
+step: Il a absorbé des dégâts de feu au round précédent
+  do: Libérer la décharge du conduit élémentaire dans un rayon de 6 m, en action libre.
+  note: Elle inflige des dégâts de feu égaux à 150 % des dégâts absorbés ; Réflexes DD 21 pour moitié. Les gardiens de Set liés au feu ne subissent ni ne réabsorbent cette décharge.
+
+step: La trompette est de nouveau disponible et un intrus est à 6 m ou moins
+  do: Réutiliser la trompette, puis accomplir normalement ses autres actions.
+  note: Après une utilisation au round 1, elle redevient disponible au round 4, puis au round 7.
+
+step: Une cible reste à portée
+  do: Répéter les deux coups sur elle pour provoquer les coups puissants ; faire au besoin un pas de placement de 1,50 m pour conserver l'attaque à outrance.
+
+step: Les intrus s'éloignent de sa portée
+  do: Se déplacer et porter un coup dès que possible, en restant fidèle à la zone et aux objectifs que ses consignes lui imposent.
+
+step: Une faiblesse impie entre en jeu
+  do: Appliquer ses effets avant de déterminer les actions disponibles du gardien.
+  note: Une canalisation d'énergie positive contre les morts-vivants le ralentit pendant 1 round par tranche de 3d6 canalisés, au minimum 1 round. Rappel à la vie le paralyse pendant 1d4 rounds.
+  note: Pour les effets infligeant davantage de dégâts aux morts-vivants, le traiter comme un mort-vivant.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à défendre son poste, sans fuite motivée par la peur ou les blessures, sauf consigne explicite de son créateur.
+
+step: Il atteint 0 pv
+  do: Le détruire et cesser ses attaques.
+  note: Une décharge de feu déjà déclenchée par une absorption se produit encore au round suivant, même après sa destruction.

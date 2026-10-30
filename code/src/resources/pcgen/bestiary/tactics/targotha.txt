@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Targotha, aberration de taille TG, neutre, prédateur d'embuscade des mares de goudron de Numérie ; Intelligence 2, 253 PV, CA 28.
+  Morsure +25 (3d6+11), nageoires tranchantes +25 (2d6+11, critique 17–20), queue +20 (2d8+16 et bousculade) ; allonge 4,50 m.
+  Décharge électrique +15 au contact à distance (12d6 et étourdissement). Nage à 15 m par déplacement, mais rampe à seulement 3 m sur terre.
+
+note: Défenses
+  Immunisé à l'électricité, au feu et au poison ; résistance à l'acide 20 et au froid 20. Sa vision à 360° empêche la prise en tenaille et son mucus le rend impossible à agripper.
+  Perception +16, perception aveugle à 36 m et vision dans le noir à 18 m. La perception aveugle localise les proies dans les fluides opaques, mais ne supprime pas leur camouflage total.
+
+step: Une proie approche de la mare
+  do: Attendre immergé près du bord et laisser la proie entrer à portée de ses attaques
+  note: Prédateur patient, il n'a pas besoin de respirer et peut rester à l'affût pendant des semaines ; son mucus facilite ses déplacements dans le goudron et le pétrole.
+
+## Ouverture
+
+step: Une proie est déjà à 4,50 m ou moins et aucune approche n'est nécessaire
+  do: Attaque à outrance : morsure +25, nageoires +25 et queue +20 sur la proie la plus proche
+  note: Il agit par instinct de chasse et concentre ses coups sur une proie accessible.
+
+step: Il doit se déplacer pour atteindre une proie
+  do: Nager jusqu'à portée puis porter une morsure avec Science de la frappe décisive : +25, 9d6+11
+  note: Cette attaque unique utilise une action simple après le déplacement ; elle ne s'ajoute pas à une attaque à outrance.
+
+step: Une proie reste hors d'allonge et la décharge est disponible
+  do: Décharge +15 au contact à distance pour infliger 12d6 dégâts d'électricité et tenter de l'étourdir, puis se rapprocher si possible
+  note: Portée de 72 m, réduite à 9 m dans le pétrole ou le goudron ; cette capacité ne fonctionne pas dans l'eau. L'étourdissement dure 1d4 rounds, Vigueur DD 28 l'annule.
+
+resource: Décharge électrique | Une fois tous les 1d4+1 rounds | Noter sa prochaine disponibilité après chaque utilisation.
+
+## Rounds suivants
+
+step: Une proie reste à portée au début du tour
+  do: Répéter l'attaque à outrance, en privilégiant une proie étourdie ou déjà blessée
+  note: Les nageoires menacent un critique sur 17–20 ; appliquer son don de critique rendant la victime chancelante lorsqu'un critique est confirmé.
+
+step: La queue touche une proie qu'il peut repousser vers la mare
+  do: Tenter la bousculade gratuite à +29 pour la pousser dans le goudron ou l'éloigner de ses alliés
+  note: Cette bousculade ne provoque pas d'attaque d'opportunité ; le targotha ne se déplace pas avec la victime. Se placer du bon côté avant de frapper.
+
+step: Il doit frapper puis reprendre de la distance dans la mare
+  do: Utiliser Attaque éclair : nager, porter une seule attaque de nageoires +25, puis poursuivre son déplacement, dans la limite de 15 m au total
+  note: Choisir une cible qui n'est pas adjacente au début du tour et parcourir au moins 1,50 m avant et après l'attaque. La cible ne peut pas lui porter d'attaque d'opportunité pour ce déplacement ; Science de la frappe décisive ne se combine pas avec Attaque éclair.
+
+step: Une proie bénéficie d'un camouflage au corps à corps
+  do: Utiliser Combattre en aveugle pour relancer une fois le jet de camouflage raté de chaque attaque de mêlée
+  note: Rester près d'une proie localisée plutôt que gaspiller des attaques à distance dans le goudron opaque.
+
+step: Les proies s'éloignent sur la terre ferme
+  do: Employer la décharge lorsqu'elle est disponible et attendre près de la berge
+  note: Il peut ramper hors de sa mare pour un repas proche, mais sa vitesse terrestre de 3 m rend une longue poursuite peu efficace.
+
+## Repli
+
+step: Points de vie à 60 ou moins et proie encore capable de se défendre
+  do: Se retirer vers le fond de la mare, jusqu'à 30 m avec un double déplacement de nage
+  note: Utiliser l'opacité du goudron pour rompre le contact visuel et rester immergé sans remonter respirer ; il cherche à survivre, sans organiser de revanche.

@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Stunjelly, vase souterraine solitaire de taille G, sans intelligence : elle capture et digère les créatures qui passent à sa portée. 42 PV, CA 9 ; déplacement de 3 m, espace occupé de 3 m et allonge de 1,50 m ; perception aveugle à 18 m.
+  Coup +3 : 1d6+1 dégâts, plus 1d6 d'acide et paralysie pendant 3d6 rounds si la cible rate son jet de Vigueur DD 18. Engloutissement : Réflexes DD 13, 1d6 d'acide et paralysie. Corrosion ; camouflage ; immunités des vases.
+
+step: Aucune proie au contact
+  do: Rester immobile contre la pierre, où son camouflage lui donne l'apparence d'une portion de mur ; attendre qu'une créature approche.
+  note: Son comportement reste instinctif : aucune coordination ni sélection réfléchie des adversaires.
+
+## Ouverture
+
+step: Une créature arrive à 1,50 m ou moins
+  do: La frapper avec son coup +3 pour tenter de la paralyser immédiatement.
+  note: Appliquer les dégâts physiques et l'acide même si la cible réussit son jet de Vigueur DD 18 contre la paralysie.
+
+step: Découverte, avec une proie détectée hors de son allonge
+  do: Avancer vers elle à 3 m par déplacement ; donner un coup si elle devient accessible et qu'une action simple reste disponible.
+
+## Rounds suivants
+
+step: Une victime paralysée est accessible
+  do: Consacrer l'action simple à l'engloutissement en avançant sur elle.
+  note: Une victime paralysée échoue automatiquement au jet de Réflexes DD 13. L'engloutissement exclut toute autre attaque durant ce round.
+
+step: Plusieurs proies sont sur son passage et peuvent être recouvertes
+  do: Employer l'engloutissement pour les capturer ensemble.
+  note: Chaque cible peut porter une attaque d'opportunité, mais renonce alors à son jet de sauvegarde ; sinon, Réflexes DD 13 pour éviter l'engloutissement. Ne pas ajouter de coup ce round.
+
+step: Une créature est engloutie
+  do: Lui appliquer l'acide et la paralysie de l'engloutissement à chaque round où elle reste prisonnière.
+  note: Acide : 1d6 ; paralysie : Vigueur DD 18 ou 3d6 rounds. La corrosion impose un malus de -4 aux jets de Réflexes protégeant ses vêtements et son armure contre l'acide ; le métal et la pierre ne sont pas dissous.
+
+step: Une proie libre reste au contact et aucun engloutissement n'est entrepris ce round
+  do: Répéter le coup +3, puis engloutir la victime au round suivant si elle est paralysée.
+
+## Repli
+
+step: Ses points de vie diminuent, même fortement
+  do: Continuer à frapper ou à engloutir les proies accessibles jusqu'à destruction.
+  note: Cette vase sans intelligence n'organise pas de retraite et ne négocie pas ; sa faible vitesse rend la poursuite des fuyards difficile.

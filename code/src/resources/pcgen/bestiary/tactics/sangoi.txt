@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Sangoi, fée de taille P, neutre mauvaise, prédateur nocturne qui recherche le sang des humanoïdes. Il privilégie l'embuscade et le harcèlement.
+  82 pv ; CA 21 ; réduction des dégâts 5/fer froid ; déplacement de 9 m ; allonge de 1,50 m ; initiative +10.
+  Morsure +12 (1d4+1 et 1d4 de saignement), deux griffes +12 (1d3+1 et 1d4 de saignement chacune). À outrance, il porte ces trois attaques ; avec Attaque éclair, une seule.
+
+resource: Invisibilité | 3/jour | sur lui-même uniquement ; une attaque met fin à l'effet
+resource: Collet | 3/jour | DD 17 ; préparer les pièges avant l'affrontement
+resource: Détection des pensées | à volonté | Volonté DD 16 ; reconnaissance et choix d'une victime
+resource: Transe animale | 3/jour | Volonté DD 16 ; fascine des animaux, exige de maintenir la concentration
+resource: Domination d'animal | 1/jour | Volonté DD 17 ; ne fonctionne pas sur les humanoïdes
+resource: Contrôle du climat | 1/jour | préparer les conditions longtemps avant l'embuscade
+resource: Communication avec les morts | 1/jour | Volonté DD 17 ; renseignements avant la chasse
+
+step: Il peut préparer son terrain
+  do: Poser des collets dans les passages étroits et sur les voies de poursuite ; choisir un couvert et une issue à l'ombre.
+  note: Éviter le soleil direct : il devient translucide, avec 20 % de chances de rater contre lui, mais aussi fatigué et pénalisé de 10 en Déguisement.
+
+step: Des victimes approchent
+  do: Les observer avec Discrétion +24 et Perception +15 ; prendre une forme d'animal terrestre ou d'humanoïde de taille P ou M pour approcher sans alerter.
+  note: Déguisement +18, Bluff +18 et don des langues facilitent la tromperie ; retrouver sa forme naturelle avant d'utiliser la morsure et les griffes indiquées.
+
+step: Il cherche une proie cachée ou déjà blessée
+  do: Écouter son cœur : perception aveugle à 9 m, vision aveugle à 1,50 m ; vision aveugle jusqu'à 9 m contre les créatures qui saignent.
+  note: Ce sens ne repère pas les créatures dépourvues de cœur. Ses dissimulations aux animaux et aux morts-vivants sont constantes, sur lui seul ; elles ne le cachent pas aux humanoïdes.
+
+step: Un animal peut servir d'auxiliaire
+  do: Tenter domination d'animal avant l'attaque, puis lui faire menacer la victime ou barrer sa retraite.
+  note: La transe animale sert plutôt à neutraliser un animal gênant ; elle mobilise sa concentration.
+
+## Ouverture
+
+step: La victime est isolée et il dispose d'une approche discrète
+  do: Utiliser invisibilité, approcher, puis frapper avec la morsure pour déclencher le saignement.
+  note: Si Attaque éclair est possible, parcourir au moins 3 m avant et 3 m après la frappe, dans la limite de 9 m au total ; la cible ne peut pas lui porter d'attaque d'opportunité pour ce déplacement.
+
+step: Il commence déjà à portée d'une victime isolée
+  do: Si elle le voit clairement, feinter avec Bluff +18 en action rapide, puis attaquer à outrance : morsure et deux griffes.
+  note: Une feinte réussie prive la cible de son bonus de Dextérité à la CA contre la prochaine attaque de mêlée du sangoi.
+
+## Rounds suivants
+
+step: Une victime saigne et peut être poursuivie sans affronter tout le groupe
+  do: La harceler avec Attaque éclair, puis regagner un couvert ; l'attirer vers les collets.
+  note: Le saignement inflige 1d4 dégâts par round ; les saignements identiques des trois attaques ne se cumulent pas.
+
+step: Un allié permet de prendre la cible en tenaille
+  do: Se placer de part et d'autre de la victime, puis concentrer les attaques sur elle.
+  note: Son regard de côté lui donne un camouflage contre les créatures qu'il prend en tenaille : 20 % de chances de rater contre lui.
+
+step: La cible reste seule au contact et ne peut pas recevoir rapidement du renfort
+  do: Répéter la feinte en action rapide si elle le voit clairement, puis l'attaque à outrance.
+  note: Face à plusieurs adversaires, privilégier les déplacements ; Souplesse du serpent protège contre les attaques d'opportunité dues au mouvement, sans les supprimer.
+
+step: Une cible reste inaccessible au corps à corps
+  do: Chercher une meilleure approche ; si un lancer est utile, lancer sa dague +12 (1d3+1, critique 19-20).
+  note: Il ne possède qu'une dague ; ce lancer n'inflige pas de saignement.
+
+## Repli
+
+step: Ses points de vie passent sous 25, ou plusieurs ennemis l'encerclent
+  do: Rompre le contact, utiliser une invisibilité restante depuis une position sûre, puis fuir à 9 m par déplacement en passant derrière ses collets.
+  note: Garder si possible une utilisation d'invisibilité pour cette fuite ; une fois hors de vue, changer de forme et se cacher avec Discrétion +24.
+
+step: Il ne dispose plus d'invisibilité
+  do: Effectuer un retrait vers les couverts et l'ombre ; laisser les saignements affaiblir les poursuivants.
+  note: Éviter de s'attarder face à une arme en fer froid, qui contourne sa réduction des dégâts.

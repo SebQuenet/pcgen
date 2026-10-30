@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Rampeur visqueux mature, aberration neutre de taille G, guidée par l'instinct (Int 1). PV 19 ; CA 17.
+  Quatre tentacules +3 (1d4+2 et paralysie), allonge 3 m ; morsure +3 (1d6+2), allonge 1,50 m. Espace occupé : 3 m.
+  Déplacement au sol : 9 m ; escalade : 4,50 m, Escalade +14. Vision dans le noir à 18 m, odorat, Perception +10.
+
+resource: Paralysie | à chaque attaque de tentacule réussie | Vigueur DD 13 ou paralysie pendant 2d4 rounds
+
+step: Des proies approchent
+  do: Les repérer grâce à Perception +10, à la vision dans le noir et à l'odorat ; les laisser approcher à portée des tentacules si elles viennent vers lui
+  note: Son intelligence très faible favorise une embuscade simple et des réactions instinctives
+
+step: Une paroi offre un accès aux proies ou un abri
+  do: L'escalader à 4,50 m par déplacement pour se placer à portée ou attendre à couvert
+
+## Ouverture
+
+step: Une proie est à plus de 3 m
+  do: Avancer de 9 m au maximum ; si une proie est alors à 3 m ou moins, porter une seule attaque de tentacule +3
+  note: Un déplacement normal suivi d'une attaque ne permet pas d'utiliser les quatre tentacules et la morsure
+
+step: Une proie est déjà à 3 m ou moins au début de son tour
+  do: Faire une attaque à outrance avec les quatre tentacules +3 ; ajouter la morsure +3 si une proie est à 1,50 m ou moins
+  note: Chaque tentacule qui touche inflige 1d4+2 et impose son propre jet de Vigueur DD 13 contre la paralysie
+
+## Rounds suivants
+
+step: Une proie encore mobile reste à portée
+  do: Répéter l'attaque à outrance ; concentrer les tentacules sur cette proie jusqu'à la paralyser
+  note: Un pas de placement de 1,50 m peut permettre d'approcher pour mordre tout en conservant l'attaque à outrance
+
+step: Une proie est paralysée et une autre reste à portée
+  do: Porter les attaques de tentacule contre la proie encore mobile ; mordre une proie à 1,50 m ou moins, y compris celle qui est paralysée
+
+step: Aucune proie ne reste à portée
+  do: Se rapprocher au sol ou par escalade et porter un tentacule si une proie devient accessible à 3 m ou moins
+
+resource: Attaques réflexes | jusqu'à 3 attaques d'opportunité par round | une attaque de tentacule +3 par occasion, avec dégâts et paralysie habituels
+
+step: Une créature provoque une attaque d'opportunité dans l'allonge de 3 m
+  do: La frapper avec un tentacule pour tenter de la paralyser
+  note: Une même occasion ne donne qu'une attaque ; entrer simplement dans l'allonge ne provoque pas à lui seul
+
+## Repli
+
+step: PV à 6 ou moins et une voie de fuite est accessible
+  do: Utiliser l'action de retraite pour rejoindre un abri, jusqu'à 18 m au sol ou 9 m en escalade ; emprunter une paroi si elle permet de distancer les poursuivants
+  note: Sa fuite reste instinctive ; il utilise le terrain disponible sans élaborer de diversion
+
+step: La fuite est impossible
+  do: Continuer à frapper la menace la plus proche avec les tentacules et la morsure selon leur allonge

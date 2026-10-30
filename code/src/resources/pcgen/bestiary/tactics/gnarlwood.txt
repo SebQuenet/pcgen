@@ -1,0 +1,88 @@
+## Avant le combat
+
+note: Profil
+  Gnarlwood, plante de taille TG, neutre mauvaise, qui combat en forêt en encaissant les coups et en concentrant ses griffes sur une victime.
+  147 pv, CA 24 ; déplacement de 9 m ; espace et allonge de 4,50 m. Attaque à outrance : 4 griffes +18, chacune pour 2d6+9 ; éventration après deux griffes touchant la même cible, pour 4d6+13 supplémentaires.
+  RD 10/tranchant et Bien : une arme doit réunir les deux propriétés pour la franchir. Résistance à la magie 22, immunités des plantes, vision nocturne et aura impie de 6 m. Le feu lui inflige 50 % de dégâts supplémentaires.
+
+resource: Animation des morts | 3/jour | préparer des squelettes ou zombies à partir de cadavres disponibles ; NLS 14
+resource: Flétrissement végétal | 3/jour | Vigueur DD 18 ; vise les plantes, pas les autres créatures vivantes
+resource: Désespoir foudroyant | 3/jour | cône de 9 m ; Volonté DD 17 annule ; durée 14 minutes
+resource: Profanation | 3/jour | renforce les morts-vivants dans une zone de 6 m de rayon
+resource: Glas | 3/jour | contact sur une créature vivante à -1 pv ou moins ; Volonté DD 15 annule
+resource: Détection du Bien et détection du Mal | 3/jour chacune | reconnaître les alignements en prenant le temps de se concentrer
+resource: Protection contre le Bien | 3/jour | protection personnelle ; durée 14 minutes
+resource: Sanctification maléfique | 3/jour | préparation durable d'un site ; ne donne pas accès à des sorts supplémentaires
+resource: Rejet du Bien | 1/jour | DD 18 ; protection contre les attaques des créatures bonnes et renvoi possible d'une créature extraplanaire bonne
+resource: Exécution | 1/jour | attaque de contact au corps à corps ; Vigueur DD 18 ; 12d6+14 dégâts, ou 3d6+14 si le jet réussit
+resource: Ténèbres maudites | 1/jour | portée 72 m, rayon de 6 m ; Volonté DD 17 réduit les effets
+resource: Blasphème | 1/semaine | rayon de 12 m autour de lui ; NLS 14, Volonté DD 20 réduit ou annule les effets
+
+step: Des intrus approchent dans la forêt
+  do: Se cacher derrière la végétation avec Discrétion +18 en forêt et les surveiller avec Perception +17
+  note: Choisir un passage qui laisse son corps de 4,50 m manœuvrer et offre du couvert contre les attaques à distance.
+
+step: Il dispose de morts-vivants et de temps pour préparer le terrain
+  do: Les placer en avant dans une zone de profanation, en gardant un passage pour avancer et frapper par-dessus leur ligne avec son allonge
+  note: Animation des morts prépare les renforts avant l'affrontement ; les morts-vivants ne sont présents que si la rencontre ou les cadavres disponibles le permettent.
+
+step: Des adversaires bons sont identifiés avant le contact
+  do: Activer protection contre le Bien avant de se montrer
+  note: Le bonus de parade à la CA et le bonus de résistance aux sauvegardes sont de +2 contre les créatures bonnes ; des bonus de même type ne se cumulent pas.
+
+## Ouverture
+
+step: Plusieurs ennemis non mauvais se trouvent à 12 m ou moins et blasphème est disponible
+  do: Déclencher blasphème avant d'engager les griffes
+  note: À NLS 14, les cibles de 14 DV ou moins peuvent être hébétées 1 round ; à 13 DV ou moins s'ajoute une réduction de Force de 2d6 pendant 2d4 rounds, à 9 DV ou moins la paralysie, à 4 DV ou moins la mort. Volonté DD 20 annule l'hébétement, réduit de moitié la réduction de Force, limite la paralysie à 1 round et remplace la mort par 3d6+14 dégâts. Au-delà de 14 DV, aucun effet.
+
+step: Blasphème est indisponible ou inadapté et plusieurs ennemis sont regroupés à moins de 9 m
+  do: Lancer désespoir foudroyant sur le plus grand nombre, puis préparer l'engagement au round suivant
+  note: Volonté DD 17 annule ; les victimes subissent -2 aux attaques, sauvegardes, tests de caractéristique et de compétence, ainsi qu'aux dégâts d'armes. Éviter les alliés sensibles au cône.
+
+step: Des ennemis bons restent groupés hors de portée des griffes et du cône
+  do: Lancer ténèbres maudites sur eux, puis avancer vers un couvert
+  note: 5d8 dégâts aux créatures bonnes, ou 10d6 aux Extérieurs bons, et état fiévreux pendant 1d4 rounds ; Volonté DD 17 réduit les dégâts de moitié et annule cet état. Les créatures neutres subissent la moitié des dégâts, encore réduite de moitié sur un jet réussi ; les mauvaises sont épargnées.
+
+step: Une victime est déjà à portée et aucun pouvoir de zone ne promet un meilleur résultat
+  do: Attaque à outrance avec les quatre griffes sur cette victime pour déclencher l'éventration
+
+## Rounds suivants
+
+step: Une cible dangereuse reste à 4,50 m ou moins
+  do: Répéter l'attaque à outrance, en concentrant au moins deux griffes sur elle ; privilégier le porteur de feu ou d'une arme capable de franchir la RD
+  note: Un pas de 1,50 m permet de se replacer tout en gardant l'attaque à outrance. L'éventration ne s'applique qu'une fois par round.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance avec les griffes : quatre attaques à +15, chacune pour 2d6+15
+  note: L'éventration reste à 4d6+13 ; conserver les attaques à +18 contre une CA élevée.
+
+step: Il doit avancer pour atteindre un ennemi
+  do: Avancer jusqu'à 9 m et porter une griffe ; si deux ennemis sont adjacents et à portée, envisager Enchaînement
+  note: Enchaînement permet une seconde attaque contre l'autre ennemi si la première touche, mais réduit sa CA de 2 jusqu'à son prochain tour. Un déplacement ordinaire ne permet pas les quatre griffes.
+
+step: Un ennemi traverse son allonge en quittant une case menacée sans protection
+  do: Porter une attaque d'opportunité avec une griffe
+  note: Il ne dispose que d'une attaque d'opportunité par round.
+
+step: Une créature vivante à faible Vigueur est difficile à blesser avec les griffes
+  do: Employer exécution au contact, de préférence après désespoir foudroyant
+  note: Cette action remplace l'attaque à outrance ; le pouvoir peut provoquer une attaque d'opportunité s'il est utilisé dans une zone menacée sans utilisation défensive réussie.
+
+step: Une plante ennemie se tient hors d'allonge
+  do: Employer flétrissement végétal sur elle
+  note: À NLS 14, une créature végétale subit 14d6 dégâts, réduits de moitié sur Vigueur DD 18.
+
+step: Une créature vivante agonise à portée et ses alliés ne peuvent pas profiter de cette pause
+  do: Employer glas pour l'achever et se renforcer
+  note: Sur un échec à Volonté DD 15, elle meurt ; il gagne 1d8 pv temporaires, +2 en Force par bonus d'altération et +1 au NLS. La durée est de 10 minutes par DV de la victime ; adapter les attaques et effets dépendants de ces valeurs.
+
+## Repli
+
+step: Points de vie sous 40, ou attaques de feu répétées qu'il ne peut interrompre
+  do: Se désengager vers un couvert forestier, jusqu'à 18 m sur terrain dégagé ; ordonner aux morts-vivants présents de gêner la poursuite
+  note: Tenir compte du terrain difficile. Une fois la ligne de vue rompue et un couvert atteint, tenter de se cacher avec Discrétion +18 en forêt.
+
+step: Le repli est bloqué par des adversaires bons
+  do: Si elle reste disponible, employer rejet du Bien pour bénéficier de +4 de parade à la CA contre eux, puis chercher une nouvelle issue
+  note: Ce bonus remplace celui de protection contre le Bien. Si le pouvoir sert à renvoyer au contact une créature extraplanaire bonne, Volonté DD 18 annule le renvoi et le pouvoir prend fin.

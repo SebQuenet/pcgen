@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Créature artificielle colossale, neutre et sans intelligence : 256 pv, CA 34, CA de contact 2, RD 15/adamantium. Immunités : traits des créatures artificielles, feu et magie.
+  Deux coups +43, chacun à 4d8+19 dégâts ; allonge de 9 m, espace occupé de 9 m et déplacement de 12 m. Vision dans le noir à 18 m et vision nocturne.
+
+note: Pouvoirs non détaillés
+  Le profil mentionne un souffle et une réflexion de lumière, sans en donner les règles. Ne leur attribuer aucun effet, dégâts, DD, portée ou fréquence supplémentaires ; les conditions exactes de l'immunité à la magie ne sont pas précisées non plus.
+
+step: Il a reçu l'ordre de garder un passage
+  do: Occuper le passage et laisser son allonge couvrir les accès
+  note: Suivre les consignes reçues ; son absence d'intelligence ne permet pas de lui prêter une stratégie improvisée complexe.
+
+## Ouverture
+
+step: Un intrus visé par ses consignes est déjà à 9 m ou moins
+  do: Effectuer une attaque à outrance : deux coups +43, chacun à 4d8+19 dégâts
+  note: Il peut frapper avec son allonge sans venir au contact immédiat.
+
+step: L'intrus est hors d'allonge, mais un déplacement suffit pour l'atteindre
+  do: Avancer de 12 m au maximum, puis porter un seul coup +43, pour 4d8+19 dégâts
+  note: Un déplacement ordinaire suivi d'une attaque ne permet pas de porter les deux coups.
+
+step: Aucun intrus n'est accessible après un déplacement
+  do: Si ses consignes autorisent la poursuite, effectuer un double déplacement de 24 m au maximum vers l'intrus
+  note: S'il doit garder un emplacement, conserver sa position lorsque poursuivre ferait abandonner cet emplacement.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée sans nécessiter de déplacement
+  do: Répéter les deux coups +43, chacun à 4d8+19 dégâts
+  note: Concentrer les coups sur la cible désignée par ses ordres ; si elle tombe au premier coup, diriger le second vers un autre adversaire à portée.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup +43, pour 4d8+19 dégâts
+  note: Une seule attaque d'opportunité par round ; entrer dans son allonge ne suffit pas, à lui seul, à en provoquer une.
+
+step: Les adversaires reculent hors de portée
+  do: Avancer et porter un coup si ses consignes permettent de les suivre ; sinon, maintenir la garde
+  note: La RD réduit de 15 les dégâts des attaques physiques qu'elle couvre, sauf si elles la surmontent avec de l'adamantium. La CA de contact de 2 reste un point faible contre les attaques de contact capables de l'affecter.
+
+## Repli
+
+step: Ses points de vie diminuent, sans ordre de retraite
+  do: Continuer à exécuter ses consignes jusqu'à sa destruction à 0 pv
+  note: Aucun seuil de fuite ni instinct de conservation n'est indiqué pour cet automate sans intelligence.
+
+step: Une consigne prévoit son retour ou son retrait
+  do: Rejoindre l'emplacement prescrit à 12 m par déplacement, ou 24 m en double déplacement

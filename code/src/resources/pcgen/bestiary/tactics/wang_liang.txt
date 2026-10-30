@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Wang Liang, extérieur de taille M, loyal mauvais ; 26 pv, CA 15, initiative +6. Déplacement de 9 m ; allonge de 1,50 m ; vision dans le noir à 18 m.
+  Morsure +6 (1d6+1 et poison), 2 griffes +6 (1d4+1 et poison). Il cherche le contact pour multiplier les attaques empoisonnées.
+  Réduction des dégâts 5/argent, résistance au feu 5, immunité au poison ; Vigueur +2, Réflexes +6, Volonté +6.
+
+resource: Détection du Bien | à volonté | pouvoir magique, NLS 4
+resource: Ténèbres | 3/jour | pouvoir magique, NLS 4
+resource: Malédiction de l'eau | 3/jour | pouvoir magique, NLS 4, DD 12
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Observer avec Perception +9 et utiliser détection du Bien si le temps permet de se concentrer
+  note: Détecter le Bien renseigne sur les auras ; cela ne révèle pas les capacités de combat des intrus.
+
+step: Il peut préparer le terrain et l'éclairage s'y prête
+  do: Utiliser ténèbres sur un objet du décor et attendre à proximité, dans un passage qui limite le nombre d'ennemis au contact
+  note: Ténèbres réduit l'éclairage ; en pleine lumière, ce pouvoir ne suffit pas à créer de l'obscurité. Sa vision dans le noir lui permet de voir dans l'obscurité produite, mais les ennemis possédant cette vision y voient aussi.
+
+step: Il appartient à une troupe de 3 à 7 individus
+  do: Répartir les approches pour prendre une même cible en tenaille, sans bloquer les accès des autres Wang Liang
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Attaque à outrance : morsure +6 (1d6+1 et poison), 2 griffes +6 (1d4+1 et poison)
+  note: Les caractéristiques du poison ne sont pas précisées : ne pas lui attribuer de DD, d'effet ou de durée supplémentaires.
+
+step: Aucun ennemi n'est au contact, mais une cible est accessible en un déplacement
+  do: Avancer de 9 m au maximum et porter une morsure +6 (1d6+1 et poison)
+  note: Après ce déplacement, il ne porte qu'une attaque naturelle, pas les trois.
+
+step: Les ennemis restent à distance et une baisse de l'éclairage peut gêner leurs tirs
+  do: Utiliser ténèbres si nécessaire, puis se déplacer vers un couvert ou un passage permettant d'approcher
+  note: Ce pouvoir consomme son action simple ; il ne mord pas pendant le même tour.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance sur elle ; utiliser au besoin un pas de placement de 1,50 m pour améliorer sa position
+  note: Concentrer morsure et griffes sur une même cible donne trois occasions de lui infliger le poison.
+
+step: Plusieurs ennemis cherchent à l'encercler
+  do: Rejoindre un passage étroit ou un obstacle qui protège un flanc ; si un déplacement est nécessaire, se contenter d'une morsure lorsque la cible est à portée
+  note: Sa réduction des dégâts amortit les armes qui ne la surmontent pas, mais ses 26 pv et sa CA 15 ne permettent pas un échange prolongé contre tout un groupe.
+
+step: L'adversaire utilise une arme en argent
+  do: Éviter de rester seul à son contact ; chercher une autre cible ou profiter d'un allié pour le prendre en tenaille
+  note: Une arme en argent surmonte sa réduction des dégâts.
+
+step: Les adversaires voient dans le noir ou l'éclairage rend ténèbres inefficace
+  do: Conserver les utilisations restantes et privilégier le couvert, le placement et les attaques naturelles
+  note: Malédiction de l'eau ne remplace pas une attaque à distance ; ne pas lui attribuer d'effet offensif direct sur une créature.
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou combat devenu manifestement défavorable
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 18 m vers un couvert ou une issue
+  note: La retraite protège seulement la sortie de la case de départ contre les attaques d'opportunité ; choisir un trajet qui évite les autres cases menacées.
+
+step: Il a rompu le contact et les poursuivants dépendent de la vue ordinaire
+  do: Utiliser ténèbres s'il lui reste une utilisation et si l'éclairage permet de masquer sa fuite, puis poursuivre son déplacement
+  note: Garder ses distances : sa vitesse de 9 m ne garantit pas qu'il puisse distancer les poursuivants.

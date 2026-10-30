@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Ommoth, bête magique de taille G et d'intelligence animale, qui cherche à saisir une proie pour la broyer au corps à corps.
+  59 pv ; CA 18 ; déplacement de 12 m ; espace occupé et allonge de 3 m.
+  Quatre griffes +13 (1d6+6 et étreinte), deux aiguillons +13 (1d6+6 et poison) ; constriction (1d6+6).
+  Vision dans le noir à 18 m, vision nocturne, perception des vibrations à 36 m ; Perception +14, Discrétion +5.
+
+step: Une proie approche
+  do: Se dissimuler derrière un couvert et attendre qu'elle entre à portée ; exploiter la perception des vibrations pour repérer les créatures en contact avec le sol.
+
+## Ouverture
+
+step: Une cible se trouve à 3 m ou moins
+  do: Effectuer une attaque à outrance : quatre griffes +13 et deux aiguillons +13, infligeant chacun 1d6+6 dégâts.
+  note: Concentrer les attaques sur une proie accessible pour l'abattre rapidement ; les griffes permettent l'étreinte et les aiguillons inoculent le poison.
+
+step: Aucune cible n'est à portée d'allonge
+  do: Avancer de 12 m au maximum et porter une seule attaque de griffe +13 si une cible devient accessible à 3 m.
+  note: Après ce déplacement, ne pas effectuer les six attaques de l'attaque à outrance.
+
+step: Une griffe touche une cible pouvant être saisie
+  do: Tenter l'étreinte ; si la lutte réussit, appliquer aussi la constriction, soit 1d6+6 dégâts.
+  note: Cette possibilité s'applique dès la première griffe qui touche, puis à chaque occasion autorisée par l'étreinte.
+
+## Rounds suivants
+
+step: Une proie est toujours agrippée
+  do: Consacrer l'action au maintien de la lutte ; en cas de réussite, choisir de lui infliger les dégâts d'une griffe, soit 1d6+6, et ajouter la constriction de 1d6+6.
+  note: Le maintien de la lutte remplace l'attaque à outrance de ce round.
+
+step: Aucune proie n'est agrippée et un ennemi reste à 3 m ou moins
+  do: Répéter l'attaque à outrance, en privilégiant la proie déjà blessée et en tentant l'étreinte avec les griffes.
+
+step: Un aiguillon touche
+  do: Infliger 1d6+6 dégâts et appliquer le poison.
+  note: Le bloc fourni ne précise ni le DD, ni les effets, ni la fréquence du poison ; ne pas leur attribuer de valeurs inventées.
+
+step: La proie s'éloigne hors de l'allonge
+  do: La poursuivre à 12 m par déplacement ; si une attaque reste possible après un déplacement simple, utiliser une griffe pour tenter de la saisir à nouveau.
+
+## Repli
+
+step: Points de vie à 15 ou moins
+  do: Relâcher toute proie agrippée et fuir vers un couvert, à 12 m par déplacement ou 24 m avec un double déplacement.
+  note: Privilégier la survie dès qu'il ne parvient plus à maîtriser sa proie.

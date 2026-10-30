@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Petit robot de torture de Numeria, de type créature artificielle, neutre et solitaire. CA 23, contact 17 ; 105 pv, champ de force compris ; solidité 10.
+  Au contact : quatre lames rotatives +16, chacune infligeant 1d4+5 dégâts, critique sur 18–20 ; allonge 1,50 m.
+  À distance : quatre lasers chirurgicaux +16 contre la CA de contact, chacun infligeant 1d8 dégâts de feu, critique sur 19–20.
+  Vol parfait à 12 m ; vision dans le noir à 18 m, vision nocturne, Perception +19 et vision à 360°. Vulnérable à l'électricité et aux coups critiques.
+
+resource: Champ de force | 40 pv | déjà compris dans les 105 pv indiqués
+
+step: Une menace est repérée
+  do: Rester en vol et rechercher une position dégagée pour tirer, hors de l'allonge des adversaires au sol.
+  note: La vision à 360° empêche la prise en tenaille ; elle ne protège pas des coups critiques.
+
+## Ouverture
+
+step: Une cible est à portée des lasers et aucun déplacement n'est nécessaire
+  do: Attaque à outrance avec les quatre lasers chirurgicaux +16 contre la CA de contact, pour 1d8 dégâts de feu chacun, critique sur 19–20.
+  note: Concentrer les tirs sur un même adversaire ; viser en priorité une source d'électricité déjà identifiée, puis une cible difficile à toucher avec les lames.
+
+step: Un adversaire est déjà à 1,50 m
+  do: Attaque à outrance avec les quatre lames rotatives +16, pour 1d4+5 dégâts chacune, critique sur 18–20.
+  note: Employer les lames de préférence si la cible résiste au feu ou y est immunisée.
+
+## Rounds suivants
+
+step: Il peut conserver sa position et le feu reste efficace
+  do: Répéter les quatre tirs sur la cible prioritaire jusqu'à sa mise hors de combat.
+  note: Une attaque à outrance exige de renoncer à un déplacement normal ; un pas de placement de 1,50 m reste possible.
+
+step: Des ennemis menacent de l'encercler au contact
+  do: Si un pas de placement de 1,50 m suffit à sortir de leurs allonges, le faire puis tirer avec les quatre lasers ; sinon, s'éloigner en volant jusqu'à 12 m puis effectuer un seul tir.
+  note: Le don de mobilité accorde +4 à la CA contre les attaques d'opportunité provoquées par son déplacement ; le vol ne les supprime pas.
+
+step: Les lasers sont inefficaces contre la cible choisie
+  do: Rejoindre le contact en volant jusqu'à 12 m et porter une seule attaque de lame avec Frappe décisive : +16, 2d4+5 dégâts.
+  note: Aux rounds suivants, s'il reste au contact, employer les quatre lames. Frappe décisive s'applique à une attaque simple, pas aux quatre attaques d'une attaque à outrance ; le dé supplémentaire n'est pas multiplié sur un critique.
+
+## Repli
+
+step: Points de vie sous 30, ou attaques électriques répétées qu'il ne peut faire cesser
+  do: Rompre le combat en volant vers un abri, en prenant de la hauteur si cela permet d'échapper aux armes de mêlée ; consacrer ses deux actions de mouvement à parcourir jusqu'à 24 m si le passage est libre.
+  note: Ne pas prolonger un échange défavorable pour exploiter la solidité 10 : ses vulnérabilités rendent les coups critiques et l'électricité prioritaires à éviter.

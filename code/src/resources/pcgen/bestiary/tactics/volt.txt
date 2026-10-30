@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Volt, petite aberration volante et agressive des souterrains, qui se fixe à une proie pour lui boire le sang. 16 PV, CA 16 ; vol à 9 m par déplacement, bonne manœuvrabilité.
+  Morsure +6 (1d4 et fixation), coup de queue +1 (1d4 et décharge) ; succion de sang : 1d4 points de Constitution par round de fixation.
+  Vision dans le noir à 18 m, Perception +7, Vol +9 ; immunité à l'électricité.
+
+step: Des créatures approchent dans les cavernes
+  do: Repérer la proie accessible la plus proche et se préparer à fondre sur elle
+  note: Il préfère les cavernes humides et agit par instinct ; il cherche à se nourrir.
+
+## Ouverture
+
+step: Une proie peut être atteinte avec un déplacement de 9 m
+  do: Voler jusqu'à portée de morsure, à 1,50 m, puis mordre à +6 pour infliger 1d4 dégâts et se fixer
+  note: Après ce déplacement, il ne porte pas aussi son coup de queue.
+
+step: Une proie est déjà à portée de 1,50 m au début du tour
+  do: Faire une attaque à outrance : morsure +6, puis coup de queue +1
+  note: Une morsure réussie le fixe à la victime ; fixé, il bénéficie d'un bonus de +4 pour frapper cette victime avec sa queue.
+
+step: Aucune proie n'est accessible avec un déplacement de 9 m
+  do: Se rapprocher en volant ; consacrer deux déplacements à couvrir jusqu'à 18 m si nécessaire
+
+## Rounds suivants
+
+step: Il reste fixé à une victime vivante
+  do: Poursuivre la succion de sang, infligeant 1d4 points de Constitution par round, et frapper la victime avec la queue
+  note: La décharge ajoute 2d4 dégâts non létaux lorsque la queue touche. Sa CA tombe à 13 pendant la fixation ; ses adversaires peuvent toujours le frapper.
+
+step: La victime l'arrache ou échappe à sa fixation
+  do: Revenir à portée et mordre à nouveau ; s'il commence déjà au contact, faire une attaque à outrance
+
+step: La victime meurt
+  do: Se détacher et chercher une nouvelle proie accessible
+
+## Repli
+
+step: Il est blessé mais reste fixé à une victime vivante
+  do: Garder sa prise et poursuivre la succion et les coups de queue jusqu'à sa mort ou celle de sa proie
+  note: Son acharnement ne prévoit pas de seuil de PV déclenchant une fuite.

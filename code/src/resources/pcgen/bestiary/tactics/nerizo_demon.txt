@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Démon nerizo, extérieur chaotique mauvais de taille M : 125 pv, CA 22, déplacement de 12 m, allonge de 1,50 m.
+  Au contact : deux griffes +16 (1d6+6 chacune) et un dard +16 (1d8+6 et poison). Le DD et les effets du poison ne sont pas précisés dans le profil fourni.
+  À courte distance : crachat acide en ligne de 3 m, 4d6 dégâts d'acide, Réflexes DD 22 pour réduire de moitié.
+  Discrétion +21, Perception +19 et vision dans le noir à 18 m : il peut préparer une embuscade avant de s'engager au contact.
+
+note: Défenses
+  Réduction des dégâts 10/bien, résistance à la magie 20, immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu.
+  Il peut soutenir une mêlée prolongée tant que les ennemis ne contournent pas ces protections. Sa sauvegarde de Volonté +7 reste sa plus faible sauvegarde.
+
+resource: Ténèbres et détection du Bien | à volonté | pouvoirs magiques, NLS 12
+resource: Téléportation suprême | à volonté | NLS 12 ; lui-même et jusqu'à 50 livres d'objets seulement
+resource: Confusion | 1/jour | Volonté DD 17, NLS 12
+resource: Invocation | 1/jour | niveau 4 ; 35 % de réussite ; au choix, 2d10 dretches ou 1 nerizo
+resource: Crachat acide | réutilisable après 1d4+1 rounds | ligne de 3 m ; 4d6 acide ; Réflexes DD 22, moitié
+
+step: Il repère les intrus avant d'être découvert
+  do: Observer depuis une cachette et utiliser détection du Bien si le temps le permet
+  note: Identifier les auras bonnes aide à choisir ses cibles ; cela ne révèle pas quelles armes peuvent franchir sa réduction des dégâts.
+
+step: Un combat sérieux est imminent et il dispose du temps nécessaire
+  do: Tenter l'invocation avant le contact : un nerizo pour renforcer la mêlée, ou 2d10 dretches pour multiplier les menaces
+  note: Une tentative ratée consomme l'utilisation quotidienne ; ne pas compter sur les renforts avant leur arrivée.
+
+step: Les adversaires dépendent de l'éclairage et le terrain permet une embuscade
+  do: Préparer ténèbres sur un objet du terrain et attendre à proximité
+  note: L'intérêt dépend de l'éclairage initial et de la vision adverse ; sa vision dans le noir fonctionne à 18 m.
+
+## Ouverture
+
+step: Plusieurs adversaires sont assez proches pour être affectés ensemble et confusion est disponible
+  do: Lancer confusion sur leur regroupement, en évitant les alliés
+  note: Volonté DD 17 ; exploiter ensuite les occasions créées par leurs comportements, sans supposer qu'ils s'attaquent forcément entre eux.
+
+step: Confusion n'est pas prioritaire et au moins deux ennemis peuvent être alignés dans les 3 m du crachat
+  do: Se déplacer de 12 m au plus pour obtenir l'alignement, puis cracher l'acide
+  note: Réflexes DD 22 pour moitié ; éviter de traverser un allié avec la ligne et noter le délai de 1d4+1 rounds avant le prochain crachat.
+
+step: Une cible est déjà à 1,50 m et aucun pouvoir n'offre de meilleur avantage
+  do: Faire une attaque à outrance : deux griffes +16 et un dard +16
+  note: Concentrer les trois attaques sur une cible vulnérable pour retirer rapidement un adversaire du combat.
+
+step: Une cible est accessible après un déplacement de 12 m au plus
+  do: Avancer au contact et porter une seule attaque de dard +16, pour 1d8+6 et poison
+  note: Un déplacement ordinaire ne permet pas de porter ensuite les trois attaques naturelles.
+
+## Rounds suivants
+
+step: Une cible reste au contact et il peut consacrer son round à l'attaquer
+  do: Répéter l'attaque à outrance avec les deux griffes et le dard
+  note: Un pas de 1,50 m peut permettre de rester au contact ou de changer de cible tout en conservant l'attaque à outrance.
+
+step: Ses attaques touchent facilement la cible choisie
+  do: Utiliser Attaque en puissance : griffes +13 (1d6+12 chacune), dard +13 (1d8+12 et poison)
+  note: Renoncer à ce don si la baisse de précision compromet trop les touches.
+
+step: Après un déplacement, deux ennemis adjacents l'un à l'autre se trouvent tous deux à 1,50 m
+  do: Utiliser Enchaînement avec une griffe contre le premier ; s'il est touché, attaquer le second avec la même griffe
+  note: Cette action remplace l'attaque unique après déplacement ; sa CA baisse à 20 jusqu'à son prochain tour. Préférer l'attaque à outrance lorsqu'elle est possible.
+
+step: Le crachat est de nouveau disponible et plusieurs ennemis peuvent être pris dans sa ligne de 3 m
+  do: Cracher l'acide à la place des attaques de mêlée
+  note: Réserver de préférence cette action aux regroupements ; contre une seule cible facile à toucher, les trois attaques naturelles sont généralement plus rentables.
+
+step: Une cible importante est inaccessible par un déplacement normal et il connaît un emplacement d'arrivée approprié
+  do: Utiliser téléportation suprême pour s'en rapprocher, puis préparer l'attaque du round suivant
+  note: La téléportation consomme son action simple ; elle ne permet pas une attaque à outrance le même round et n'emporte aucun allié.
+
+## Repli
+
+step: Ses points de vie tombent à 35 ou moins, ou ses défenses ne lui permettent plus de tenir la mêlée
+  do: Si un pas de 1,50 m suffit à sortir des allonges ennemies, le faire, puis utiliser téléportation suprême vers un lieu connu hors du combat
+  note: S'il reste menacé, utiliser le pouvoir sur la défensive pour éviter une attaque d'opportunité ; l'échec du test de concentration fait échouer cette tentative.
+
+step: Des alliés restent engagés lorsqu'il se replie
+  do: Partir seul par téléportation suprême et laisser les autres démons couvrir son départ
+  note: Il ne possède aucun soin indiqué ; ne pas revenir au combat en comptant sur une récupération immédiate de ses points de vie.

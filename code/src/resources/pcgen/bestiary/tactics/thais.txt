@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Thais, extérieur de taille G, chaotique bon, FP 15 : combattante mobile qui protège ses alliés et frappe à la hallebarde.
+  195 pv ; CA 32, contact 25 ; initiative +12. Hallebarde +2 anarchique et acérée +25/+20/+15/+10, dégâts 2d8+12, critique x3 ; espace et allonge de 3 m.
+  Déplacement terrestre de 15 m, vol de 24 m avec bonne manœuvrabilité ; aura de bravoure de 9 m ; vision dans le noir à 18 m.
+  RD 15/Loi, RM 26 ; immunités à l'électricité, à la peur et à la pétrification ; résistances au froid et au feu de 10 ; esquive extraordinaire et instinct de conservation.
+
+resource: Liberté de mouvement, héroïsme suprême, coup au but | à volonté | NLS 15 ; concentration +22
+resource: Annulation d'enchantement | 3/jour | libérer une victime d'un enchantement ou d'une transformation admissible
+resource: Déplacement | 3/jour | protection contre les attaques ; à préparer juste avant l'engagement
+resource: Dissipation suprême | 3/jour | supprimer les protections ou effets magiques adverses
+resource: Changement de plan | 3/jour | Thais et cibles consentantes uniquement ; conserver une utilisation pour le repli
+resource: Cri | 3/jour | cône de 9 m ; Vigueur DD 21
+resource: Allié majeur d'outreplan | 1/jour | un seul azata bralani ou ghaele
+resource: Sanctification | 1/jour | préparation d'un lieu défendu, si elle dispose du temps nécessaire
+resource: Parole du Chaos | 1/jour | DD 24 ; effets dépendant des DV des créatures affectées
+
+step: Elle peut préparer le combat
+  do: Activer liberté de mouvement et héroïsme suprême sur elle-même ; renouveler ces protections si elles expirent
+  do: Lancer déplacement lorsque l'affrontement devient imminent
+  note: Ces préparatifs prennent des actions distinctes ; si elle est surprise, les répartir sur ses premiers rounds selon la menace
+
+step: Des alliés doivent tenir une position
+  do: Leur accorder liberté de mouvement et héroïsme suprême si le temps le permet ; prévoir une position où son aura de bravoure reste à 9 m des défenseurs
+
+step: Une bataille difficile est prévisible
+  do: Appeler un bralani ou un ghaele avec allié majeur d'outreplan et convenir de son aide avant l'engagement
+  note: L'appel ne garantit pas un serviteur gratuit ni une présence déjà acquise ; régler les conditions de son assistance
+
+## Ouverture
+
+step: Plusieurs ennemis non chaotiques sont regroupés à 12 m ou moins, sans allié non chaotique exposé
+  do: Employer parole du Chaos avant de les engager
+  note: À NLS 15, les effets ordinaires visent les créatures non chaotiques de 15 DV au plus qui entendent la parole ; éviter de dépenser l'unique utilisation contre des ennemis trop puissants
+
+step: Une protection magique ennemie empêche une attaque efficace
+  do: Employer dissipation suprême sur la menace prioritaire, puis se placer pour l'engager au round suivant
+
+step: Aucun pouvoir de zone n'offre un meilleur avantage
+  do: Voler jusqu'à portée de hallebarde et porter une attaque à +25 ; choisir en priorité une menace contre ses alliés
+  note: Attaque en vol permet de poursuivre le déplacement après cette attaque, dans la limite de 24 m au total ; elle n'accorde pas l'attaque à outrance ni l'immunité aux attaques d'opportunité
+
+## Rounds suivants
+
+step: Une cible importante reste à portée et Thais peut tenir sa position
+  do: Porter une attaque à outrance de hallebarde à +25/+20/+15/+10, pour 2d8+12 par coup, avant les modificateurs des pouvoirs actifs
+  note: La propriété anarchique ajoute 2d6 dégâts contre les créatures loyales ; privilégier ces cibles lorsqu'elles présentent une menace comparable
+
+step: Un ennemi se déplace dans son allonge ou y accomplit une action qui provoque
+  do: Exploiter les attaques d'opportunité de la hallebarde grâce à Attaques réflexes
+  note: Son allonge naturelle est de 3 m ; ne pas lui attribuer une attaque gratuite pour chaque déplacement qui ne provoque pas
+
+step: L'adversaire domine la mêlée ou tente de l'encercler
+  do: Alterner approche en vol, coup de hallebarde et éloignement avec Attaque en vol ; utiliser les obstacles et la hauteur pour limiter les ripostes
+  note: Souplesse du serpent améliore sa CA contre les attaques d'opportunité provoquées par son déplacement ; Acrobaties +28 peut aider à traverser une zone menacée
+
+step: Plusieurs ennemis se présentent dans un cône de 9 m dégagé d'alliés
+  do: Employer cri, Vigueur DD 21, puis reprendre une position favorable à la hallebarde
+
+step: Une attaque unique doit absolument toucher
+  do: Préparer coup au but, puis porter cette attaque avant l'expiration de son effet
+  note: Le pouvoir consomme une action simple et ne favorise qu'une attaque ; ne pas le relancer systématiquement au détriment de l'attaque à outrance
+
+step: Une protection essentielle est dissipée ou un allié est entravé
+  do: Renouveler déplacement ou liberté de mouvement selon le danger ; réserver annulation d'enchantement aux effets qu'elle peut effectivement briser lorsque le temps le permet
+
+## Repli
+
+step: Ses pv tombent sous 50, ou la poursuite du combat compromet le sauvetage de ses alliés
+  do: Rompre l'engagement en volant à 24 m et rejoindre les alliés à évacuer
+  note: Se retirer par un trajet qui limite les attaques d'opportunité ; la RD 15/Loi ne la protège pas contre une arme loyale
+
+step: La fuite ordinaire ne suffit pas et une utilisation de changement de plan reste disponible
+  do: Employer changement de plan sur elle-même et les alliés consentants qu'elle peut réunir au contact
+  note: Ce pouvoir ne permet pas d'expulser un ennemi récalcitrant ; Thais ne dispose d'aucun pouvoir de soins personnel indiqué dans ce profil

@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Poisson-chat électrique géant, animal aquatique de taille G, neutre et territorial ; 75 PV, CA 19. Il défend son domaine par une décharge électrique, puis mord et engloutit ses proies.
+  Morsure +11 (1d8+6 et étreinte), allonge 1,50 m ; engloutissement (1d8+4 d'acide par round, intérieur CA 14, 7 PV). Nage à 12 m ; vision nocturne, perception des vibrations à 18 m, Perception +16.
+
+resource: Décharge électrique | une fois tous les 1d4 rounds | rayon de 3 m ; 2d6 dégâts d'électricité ; les créatures vivantes sont aussi étourdies pendant 1 round ; Réflexes DD 20 pour réduire les dégâts de moitié et éviter l'étourdissement
+
+step: En attente de nourriture
+  do: Rester immergé dans une fosse du lit du cours d'eau ou sous un tronc tombé, la gueule tournée vers l'amont
+  note: Il préfère les eaux sombres, troubles et lentes ou stagnantes ; il chasse la nuit et repère les mouvements avec sa perception des vibrations.
+
+## Ouverture
+
+step: Un intrus menaçant entre dans le rayon de 3 m et la décharge est disponible
+  do: Déclencher une décharge électrique pour le décourager
+  note: Si l'intrus se retire, rester dans son territoire ; sinon, passer à la morsure lors d'une action ultérieure.
+
+step: L'intrus persiste et une morsure est possible à 1,50 m
+  do: Mordre à +11 pour 1d8+6 dégâts, puis tenter l'étreinte si la morsure touche
+  note: Privilégier une proie de taille M ou inférieure, qu'il pourra engloutir.
+
+step: La proie reste dans l'eau hors de portée de morsure
+  do: Nager vers elle, jusqu'à 12 m avec un déplacement, puis mordre si elle est à portée
+
+## Rounds suivants
+
+step: Le tour commence avec une proie de taille M ou inférieure agrippée dans la gueule
+  do: Tenter de l'engloutir en réussissant le test de lutte nécessaire
+  note: Une proie engloutie subit 1d8+4 dégâts d'acide par round ; elle peut se tailler une issue en infligeant 7 points de dégâts à l'intérieur, de CA 14.
+
+step: La décharge est de nouveau disponible et des adversaires sont dans son rayon de 3 m
+  do: Déclencher une nouvelle décharge si aucune proie n'est prête à être engloutie
+  note: Respecter l'intervalle de 1d4 rounds entre deux décharges ; l'effet atteint tout ce qui est dans la zone.
+
+step: Aucune proie n'est agrippée et la décharge n'est pas utilisable
+  do: Revenir au contact d'une proie accessible, puis mordre et tenter l'étreinte
+
+step: Les adversaires restent sur la berge, hors d'allonge
+  do: Rester immergé et attendre qu'une cible revienne à portée
+
+## Repli
+
+step: Les intrus abandonnent son territoire
+  do: Cesser la poursuite et regagner son abri immergé
+
+step: Gravement blessé et incapable de maîtriser une proie
+  do: Rompre le contact et gagner une fosse ou un abri sous l'eau, avec une nage de 12 m par déplacement
+  note: Son comportement reste celui d'un animal territorial ; le repli vise à survivre et à retrouver un abri.

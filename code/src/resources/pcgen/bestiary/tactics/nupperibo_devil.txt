@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Diable nupperibo, extérieur de taille M, loyal mauvais, sans intelligence ; 5 pv, CA 12. Il comprend l'infernal mais ne peut pas parler.
+  Lance +1 (1d6) ou deux griffes +1 chacune (1d4) ; allonge de 1,50 m ; déplacement de 6 m par round.
+
+note: Sens et défenses
+  Vision dans le noir et vision aveugle à 18 m : il peut combattre une cible proche sans la voir.
+  Réduction des dégâts 5/Bien ou argent ; immunité au feu, au poison et aux effets mentaux ; résistance à l'acide 10 et au froid 10.
+
+step: Il reçoit un ordre simple en infernal
+  do: Suivre cet ordre et attendre ou avancer dans la direction indiquée
+  note: Sans intelligence, il ne prépare pas de ruse ni de stratégie complexe ; une horde compte de 20 à 100 individus.
+
+## Ouverture
+
+step: Un ennemi est à plus de 6 m
+  do: Avancer vers lui, jusqu'à 12 m avec un double déplacement
+  note: Après un double déplacement, il ne porte pas d'attaque pendant ce tour.
+
+step: Un ennemi est à plus de 1,50 m et peut être rejoint avec un déplacement de 6 m
+  do: Avancer au contact et porter une attaque de lance +1 (1d6), ou une seule griffe +1 (1d4) s'il combat sans lance
+
+step: Un ennemi est déjà à portée et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance avec deux griffes +1 chacune (1d4), ou une attaque de lance +1 (1d6) s'il garde son arme en main
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Répéter l'attaque à outrance avec les deux griffes, ou frapper avec la lance s'il la tient toujours
+  note: Ses deux griffes demandent une attaque à outrance ; après un déplacement ordinaire, il ne porte qu'une attaque.
+
+step: La cible s'éloigne ou tombe
+  do: Rejoindre la cible désignée par son maître, ou l'ennemi le plus proche qu'il perçoit, puis attaquer si son déplacement le permet
+  note: Sa réduction des dégâts et ses résistances sont ses principales protections ; avec seulement 5 pv, une attaque qui les dépasse peut l'abattre rapidement.
+
+## Repli
+
+step: Il est blessé sans recevoir d'ordre de repli
+  do: Continuer à exécuter son ordre ou à attaquer au contact
+  note: Ne pas lui faire élaborer une retraite en fonction de ses points de vie : il est sans intelligence.
+
+step: Il reçoit un ordre simple de repli en infernal
+  do: Revenir dans la direction indiquée, à 6 m par déplacement ou jusqu'à 12 m avec un double déplacement

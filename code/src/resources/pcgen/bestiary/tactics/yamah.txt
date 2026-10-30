@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Yamah, azata de taille M, chaotique bon, mobile et capable de soutenir ses alliés. 52 PV, CA 19 ; déplacement au sol de 9 m, vol de 30 m avec une manœuvrabilité parfaite.
+  Couteau-étoile +2 boomerang : au corps à corps +14/+9 en attaque à outrance, ou un lancer à +14 ; dégâts 1d4+5, critique x3. Allonge de 1,50 m.
+  Réduction des dégâts 5/fer froid ou Mal ; immunité à l'électricité et à la pétrification ; résistance au froid 10 et au feu 10.
+
+resource: Détection du Mal et détection de la magie | constantes | examiner les auras en prenant le temps de se concentrer
+resource: Invisibilité | 3/jour | NLS 6 ; prend fin s'il attaque
+resource: Soins modérés | 3/jour | NLS 6 ; soigne 2d8+6 PV au toucher
+resource: Charme-personne | 1/jour | Volonté DD 16 ; cible humanoïde
+resource: Délivrance de la paralysie | 1/jour | NLS 6 ; libérer un allié paralysé
+
+step: Des créatures sont repérées avant les hostilités
+  do: Observer avec Perception +12, détection du Mal et détection de la magie ; tenter le dialogue grâce au don des langues avant de choisir ses adversaires
+  note: Vision dans le noir à 18 m et vision nocturne ; une aura magique ne révèle pas à elle seule les intentions d'une créature.
+
+step: Un humanoïde peut encore être convaincu sans violence
+  do: Envisager charme-personne, Volonté DD 16, puis négocier
+  note: Le charme rend la cible amicale ; il ne permet pas de lui imposer des ordres suicidaires ni de contrôler ses actions.
+
+step: Un affrontement est imminent et une approche discrète est utile
+  do: Utiliser invisibilité, puis gagner en volant une position avec une ligne de tir et une voie de dégagement
+  note: Discrétion +15 ; préparer l'attaque sans engager inutilement les alliés.
+
+## Ouverture
+
+step: Un ennemi peut être attaqué à distance
+  do: Se placer en vol, puis lancer le couteau-étoile à +14, pour 1d4+5 dégâts, critique x3
+  note: À 9 m ou moins, Tir à bout portant porte ces valeurs à +15 et 1d4+6. Tir de précision évite le malus habituel pour tirer sur un ennemi engagé en mêlée.
+  note: Le lancer met fin à l'invisibilité. Rester dans la case du lancer jusqu'au retour de l'arme, juste avant le tour suivant, pour pouvoir la rattraper.
+
+step: Un ennemi est déjà à portée et rester au contact est acceptable
+  do: Effectuer une attaque à outrance au couteau-étoile, +14/+9, chaque touche infligeant 1d4+5 dégâts, critique x3
+  note: Après un déplacement ordinaire, ne porter qu'une attaque à +14 ; le vol ne permet pas de combiner librement déplacement et attaque à outrance.
+
+## Rounds suivants
+
+step: Le combat à distance reste favorable
+  do: Récupérer le couteau-étoile, changer de position si nécessaire, puis effectuer un nouveau lancer
+  note: Exploiter le vol pour rester hors de l'allonge adverse ; une seule arme boomerang ne permet pas d'enchaîner plusieurs lancers avant son retour.
+
+step: La cible a une faible CA et les dégâts supplémentaires sont utiles
+  do: Employer Tir mortel au lancer : attaque +12, dégâts 1d4+9 ; à 9 m ou moins, attaque +13 et dégâts 1d4+10
+  note: Renoncer à Tir mortel contre une cible difficile à toucher.
+
+step: Un adversaire reste au contact sans mettre le yamah en péril
+  do: Répéter l'attaque à outrance à +14/+9
+  note: Privilégier le dégagement si l'adversaire utilise une arme en fer froid ou mauvaise, qui contourne sa réduction des dégâts.
+
+step: Le yamah ou un allié a besoin de soins et une accalmie permet d'agir
+  do: Se placer à l'abri des attaques de contact, puis utiliser soins modérés sur lui-même ou au toucher sur l'allié
+  note: Partager les trois utilisations entre soutien et survie ; ne pas compter sur une guérison illimitée.
+
+step: Un allié est paralysé
+  do: Utiliser délivrance de la paralysie dès qu'une position permet de lancer le pouvoir sans exposition excessive
+
+## Repli
+
+step: PV à 18 ou moins, ou combat devenu manifestement défavorable
+  do: Rompre le contact par une retraite en vol ; une fois dégagé, utiliser invisibilité et poursuivre la fuite à couvert
+  note: Le vol permet un déplacement de 30 m ; une retraite peut atteindre 60 m. Seule la case de départ cesse d'être menacée pour les attaques d'opportunité pendant une retraite.
+
+step: Hors d'atteinte et des soins restent disponibles
+  do: Utiliser soins modérés pour récupérer, puis aider les alliés à se mettre à l'abri
+  note: Si le couteau-étoile vient d'être lancé, attendre son retour avant de partir lorsque cela reste supportable ; sinon, privilégier la survie.

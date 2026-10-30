@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Humanoïde lupin, guerrier à l'allure de loup, loyal mauvais ; 22 PV, CA 16, déplacement de 9 m.
+  Épée longue +5 (1d8+2) et morsure +5 (1d6+2) au contact, à 1,50 m ; arc long +4 (1d8, critique x3).
+  Vision dans le noir à 18 m, odorat, Perception +6 ; il peut combattre seul ou avec des compagnons de chasse.
+
+resource: Flèches | 20 | une flèche dépensée par tir à l'arc long
+
+step: Il cherche des intrus ou une proie
+  do: Repérer les approches avec Perception +6 et suivre les traces avec Survie +5, ou +9 pour le pistage à l'odorat
+  note: Une odeur aide à retrouver une cible ; elle ne permet pas de la voir à travers un obstacle.
+
+step: Il peut préparer sa position
+  do: Choisir un couvert et tenter de rester discret avec Discrétion +3 ; préparer l'arc si l'approche ennemie est dégagée, l'épée si le contact est imminent
+  note: Si des alliés sont présents, répartir les approches pour pouvoir prendre un adversaire en tenaille.
+
+note: Haine
+  Contre les humanoïdes du sous-type gnoll ou métamorphe, ajouter +1 aux jets d'attaque : épée et morsure +6, arc +5.
+  Privilégier ces ennemis lorsqu'ils sont accessibles sans s'exposer inutilement.
+
+## Ouverture
+
+step: Une cible est à distance et l'arc est prêt
+  do: Tirer à l'arc long +4 (1d8, critique x3), en utilisant le couvert disponible
+  note: Éviter de tirer depuis une case menacée au contact.
+
+step: Une cible est déjà à 1,50 m et l'épée est prête
+  do: Effectuer une attaque à outrance : épée longue +5 (1d8+2) et morsure +5 (1d6+2)
+
+step: Il peut atteindre une cible après un déplacement de 9 m au maximum
+  do: Laisser tomber l'arc s'il le tient, avancer en dégainant l'épée, puis porter une seule attaque d'épée +5 (1d8+2)
+  note: Un déplacement de plus de 1,50 m empêche de cumuler l'épée et la morsure par une attaque à outrance ce round.
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Répéter l'attaque à outrance à l'épée et à la morsure ; utiliser au besoin un pas de placement de 1,50 m
+  note: Avec un allié déjà engagé, rechercher une tenaille pour obtenir +2 aux attaques de mêlée, sans traverser inutilement les cases menacées.
+
+step: Il doit avancer et ne pourra porter qu'un coup contre une cible peu protégée
+  do: Utiliser Attaque en puissance sur l'attaque d'épée : +4 au toucher, 1d8+4 dégâts
+  note: Contre une cible difficile à toucher, conserver l'attaque normale à +5 ; la haine ajoute toujours +1 contre les humanoïdes concernés.
+
+step: L'ennemi reste inaccessible au contact et des flèches sont disponibles
+  do: Continuer les tirs à l'arc depuis une position protégée, en consacrant les actions nécessaires au changement d'arme
+
+## Repli
+
+step: Il tombe à 7 PV ou moins et dispose d'une issue
+  do: Effectuer un retrait jusqu'à 18 m vers un couvert ou ses alliés
+  note: Le retrait protège seulement la première case quittée des attaques d'opportunité ; choisir un trajet qui évite les autres ennemis.

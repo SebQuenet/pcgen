@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Démon de taille G, chaotique mauvais, qui use ses victimes par les saignements et le drainage de Constitution. 92 pv ; CA 23 ; vol à 18 m, déplacement au sol à 6 m ; allonge de 1,50 m.
+  Deux griffes +13 (2d4+6 et 1d4 de saignement), morsure +13 (2d6+6 et drainage de sang, 1d4 de Constitution).
+  RD 10/Bien, RM 21 ; immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu.
+
+resource: Invocation | 1/jour | 35 % de réussite ; 2d8 dretches ou 1 démon stirge
+resource: Ténèbres, dissipation de la magie, détection de l'invisibilité | À volonté | NLS 10
+resource: Télékinésie | À volonté | DD 17 ; NLS 10
+resource: Téléportation suprême | À volonté | Lui-même et jusqu'à 50 livres d'objets uniquement ; NLS 10
+
+step: Il repère des intrus avant d'être engagé
+  do: Activer détection de l'invisibilité et observer depuis les airs ; choisir une victime isolée ou facile à atteindre
+  note: Perception +21 ; vision dans le noir à 18 m ; télépathie à 30 m pour coordonner d'éventuels alliés
+
+step: Il peut préparer une embuscade sans être attaqué
+  do: Tenter l'invocation ; préférer un autre démon stirge pour concentrer les attaques, ou des dretches pour occuper plusieurs adversaires
+  note: L'utilisation quotidienne est dépensée même si l'invocation échoue
+
+step: Une baisse de luminosité gênerait les intrus
+  do: Employer ténèbres sur un objet proche du lieu d'embuscade
+  note: Sa vision dans le noir lui permet de combattre dans l'obscurité à 18 m ; éviter cette préparation si elle avertit les intrus sans le favoriser
+
+## Ouverture
+
+step: Des adversaires entrent à portée des auras
+  do: Appliquer le bourdonnement à 18 m (DD 20) et l'aura de peur à 6 m (DD 16)
+  note: Ces auras accompagnent son approche ; leurs effets précis ne sont pas détaillés dans le bloc fourni
+
+step: Une cible vulnérable est accessible avec un déplacement en vol
+  do: Se déplacer jusqu'au contact et porter une morsure +13 pour infliger 2d6+6 et le drainage de sang
+  note: Après ce déplacement, il ne porte qu'une attaque ; privilégier une position où les autres ennemis ne peuvent pas facilement l'entourer
+
+step: Aucun contact favorable n'est possible ce round
+  do: Rester en vol et employer télékinésie pour projeter une cible loin de ses protecteurs (DD 17)
+
+## Rounds suivants
+
+step: Sa victime reste à portée sans déplacement important
+  do: Attaque à outrance : deux griffes +13 et une morsure +13 ; concentrer les trois attaques sur elle
+  note: Les griffes infligent chacune 2d4+6 et un saignement de 1d4 ; la morsure inflige 2d6+6 et draine 1d4 de Constitution. Un pas de 1,50 m reste compatible avec cette attaque à outrance
+
+step: Deux ennemis sont adjacents entre eux et à portée, mais il doit avancer pour les atteindre
+  do: Après son déplacement, employer Enchaînement pour tenter de frapper le second si la première attaque touche
+  note: Enchaînement réduit sa CA de 2 jusqu'à son prochain tour ; préférer l'attaque à outrance sur une victime déjà au contact
+
+step: Un effet magique identifiable empêche d'atteindre ou de blesser la cible
+  do: Consacrer son action à dissipation de la magie sur cet effet ou sur son bénéficiaire
+
+step: Une cible facile à toucher résiste encore à ses attaques
+  do: Employer Attaque en puissance pour augmenter les dégâts
+  note: Contre une défense élevée, conserver son bonus d'attaque pour favoriser les touches et leurs effets de saignement ou de drainage
+
+step: Les ennemis se regroupent autour de lui et rendent le contact défavorable
+  do: Utiliser téléportation suprême pour gagner une position dégagée, puis reprendre l'approche lors d'un round ultérieur
+  note: Dans un camouflage qui gêne ses attaques de mêlée, appliquer Combat en aveugle
+
+## Repli
+
+step: Ses points de vie tombent sous 30, ou il ne peut plus soutenir le corps à corps
+  do: Utiliser téléportation suprême vers un lieu connu hors du combat
+  note: Il ne peut pas emporter ses alliés avec ce pouvoir ; si la téléportation est empêchée, chercher une issue par les airs à 18 m par déplacement

@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Crocodile marin, animal de taille G, neutre, FP 3. Prédateur instinctif des océans tropicaux ; 30 pv, CA 14.
+  Morsure +7 (1d8+7 et étreinte), allonge de 3 m ; BMO +13 en lutte, DMD 20.
+  Déplacement terrestre de 4,50 m, nage de 15 m ; Natation +13, Perception +11, vision nocturne et apnée. Initiative +5.
+
+step: Une proie approche de l'eau
+  do: Attendre dans l'eau, près de la rive, et surveiller son approche avec Perception +11
+  note: L'apnée permet de patienter immergé ; privilégier une proie isolée et accessible depuis l'eau
+
+## Ouverture
+
+step: Une proie est à 3 m ou moins
+  do: Mordre à +7 pour 1d8+7 dégâts ; sur une proie de taille M ou inférieure touchée, tenter l'étreinte avec un BMO de +13
+  note: Chercher à immobiliser la proie au bord de l'eau ou dans l'eau
+
+step: Aucune proie n'est à portée, mais un déplacement suffit à l'atteindre
+  do: Nager jusqu'à 15 m ou avancer jusqu'à 4,50 m sur terre, puis mordre si la proie se trouve à 3 m ou moins
+  note: Privilégier une approche par l'eau, où sa mobilité est supérieure
+
+## Rounds suivants
+
+step: Une proie est agrippée près de la rive
+  do: Maintenir la lutte et choisir le déplacement pour entraîner la proie vers l'eau
+  note: Son BMO de lutte est de +13 ; déplacer une proie agrippée exige de réussir l'action de lutte correspondante
+
+step: Une proie est agrippée dans l'eau
+  do: Maintenir la lutte et choisir d'infliger les dégâts de morsure, soit 1d8+7
+  note: L'apnée lui permet de poursuivre la lutte sous la surface
+
+step: La proie se libère ou aucune prise n'est établie
+  do: Mordre de nouveau et tenter l'étreinte sur une cible de taille M ou inférieure
+
+step: Les adversaires s'éloignent sur la terre ferme
+  do: Rester près de l'eau et attendre une nouvelle occasion de mordre
+  note: Sa vitesse terrestre de 4,50 m rend une poursuite prolongée peu favorable
+
+## Repli
+
+step: Points de vie à 10 ou moins, avec une voie de fuite aquatique
+  do: Relâcher toute proie agrippée et fuir à la nage vers une eau plus profonde
+  note: Utiliser sa nage de 15 m et son apnée pour s'éloigner sous la surface
+
+step: Points de vie à 10 ou moins, sans accès immédiat à l'eau
+  do: Se diriger vers l'eau par le trajet le plus court ; mordre si un adversaire bloque le passage

@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Inder, extérieur élémentaire de feu de taille TG, neutre, très intelligent ; 500 pv, CA 34, réduction des dégâts 15/–, résistance à la magie 34, immunité au feu et vulnérabilité au froid.
+  Deux coups à +51, chacun infligeant 4d6+12 et brûlure (4d6, DD 37) ; allonge de 4,50 m, déplacement de 18 m. Aura de chaleur brûlante à 9 m, DD 37.
+  Vision dans le noir à 18 m, Perception +50, télépathie à 30 m ; pouvoirs magiques au NLS 20.
+
+resource: Détection de la magie | à volonté | repérer les auras magiques avant l'engagement
+resource: Invocation | 1/jour | niveau 9, réussite 100 % ; choisir 1d2 élémentaires de feu anciens, 1d4 élémentaires de feu supérieurs, 1d4 éfrits ou 4 à 8 salamandres
+
+step: Il repère les intrus avant qu'ils attaquent
+  do: Examiner leurs auras avec détection de la magie et choisir une position qui oblige les assaillants à traverser son allonge.
+  note: Une aura détectée ne révèle pas automatiquement la nature exacte d'une protection.
+
+step: Un affrontement est imminent et l'invocation reste disponible
+  do: Invoquer un seul des groupes proposés, puis répartir les renforts aux accès et sur les flancs.
+  note: S'il accompagne déjà des élémentaires, coordonner leurs positions par télépathie ; éviter de les concentrer tous au même endroit face aux attaques de froid.
+
+## Ouverture
+
+note: Choix du premier round
+  Les options suivantes sont alternatives. Une téléportation ou un pouvoir offensif ne s'ajoute pas gratuitement à une attaque à outrance.
+
+resource: Tempête de feu | 3/jour | DD 25
+resource: Boule de feu | 3/jour | DD 20
+resource: Colonne de feu | 3/jour | DD 22
+resource: Mur de feu | 3/jour | séparer les adversaires ou fermer un passage
+resource: Nuage incendiaire | 1/jour | DD 25
+
+step: Plusieurs adversaires sont regroupés à distance et paraissent sensibles au feu
+  do: Ouvrir avec tempête de feu ; conserver boule de feu pour les regroupements moins menaçants.
+  note: Éviter de dépenser les pouvoirs de feu contre des cibles dont l'immunité est manifeste.
+
+step: Les intrus arrivent par un passage étroit ou sur plusieurs axes
+  do: Poser un mur de feu pour couper leur formation, puis tenir le passage restant avec son allonge.
+
+step: Un adversaire dangereux est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance : deux coups à +51, chacun pour 4d6+12 et brûlure (4d6, DD 37).
+  note: Donner la priorité à une source de froid identifiée ; les dégâts physiques restent utiles contre un ennemi protégé du feu.
+
+step: Il n'a aucun soutien et peut consacrer son ouverture à obtenir des renforts
+  do: Employer l'invocation si elle n'a pas déjà été utilisée.
+
+## Rounds suivants
+
+resource: Dissipation de la magie | à volonté | tenter de retirer une protection magique gênante
+resource: Rayon ardent | à volonté | attaque de contact à distance +51
+resource: Métal brûlant | à volonté | DD 19
+resource: Commandement des élémentaires de feu | selon la capacité | DD 37 ; les modalités détaillées ne figurent pas dans le bloc fourni
+
+step: Une cible prioritaire reste à portée
+  do: Répéter les deux coups ; employer Attaque en puissance contre les cibles faciles à toucher.
+  note: Maintenir les adversaires dans les 9 m de l'aura autant que possible. Garder ses attaques d'opportunité pour les déplacements et les actions qui en provoquent dans son allonge, grâce à Attaques réflexes.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer jusqu'à 18 m, puis porter un coup avec Science de la frappe décisive : +51, 12d6+12 et brûlure (4d6, DD 37).
+  note: Cette frappe unique remplace les deux coups de l'attaque à outrance ; la brûlure n'est pas multipliée.
+
+step: Plusieurs adversaires l'entourent à portée
+  do: Employer Attaque en rotation pour porter un coup contre chacun, au lieu de concentrer ses deux coups sur une seule cible.
+
+step: Une protection magique identifiée neutralise ses flammes
+  do: Tenter une dissipation ciblée si retirer cette protection peut changer le combat ; sinon, concentrer les coups physiques sur la cible.
+  note: La dissipation peut échouer ; ne pas y consacrer tous ses rounds pendant qu'un utilisateur de froid reste libre d'agir.
+
+step: Les adversaires refusent la mêlée
+  do: Employer rayon ardent contre une cible isolée, ou un pouvoir de zone encore disponible contre un regroupement.
+  note: Métal brûlant peut mettre sous pression un porteur d'équipement métallique sensible au feu, mais son DD 19 en fait une option secondaire.
+
+step: Les ennemis doivent traverser une zone précise pour l'atteindre
+  do: Placer le nuage incendiaire sur cette zone, puis conserver une position qui menace leur sortie.
+
+## Repli
+
+resource: Téléportation suprême | à volonté | lui-même et au plus 50 livres d'objets ; aucun allié transporté
+
+step: Ses pv tombent sous 150, ou des attaques de froid répétées rendent la position intenable
+  do: Employer téléportation suprême vers un refuge connu.
+  note: Ne pas attendre que ses 500 pv soient presque épuisés ; ses résistances ne compensent pas sa vulnérabilité au froid.
+
+step: Une première téléportation échoue et il peut encore agir
+  do: Rompre le contact en profitant de son déplacement de 18 m et des obstacles disponibles ; tenter de nouveau la téléportation dès que possible.
+  note: Un mur de feu peut gêner la poursuite lors d'un round distinct, si une utilisation reste disponible.

@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Slorath, créature magique gigantesque du froid, chaotique mauvaise et solitaire des collines et montagnes froides. Intelligent, il combine paralysie, pouvoirs de zone et morsure pour tenir les ennemis à distance.
+  250 pv ; CA 25, contact 9 ; résistance à la magie 32 ; immunité au froid, vulnérabilité au feu.
+  Morsure +26 (2d8+15), allonge 4,50 m ; rayon paralysant +20 ; regard paralysant. Espace occupé : 6 m ; déplacement 9 m, fouissement 3 m ; vision dans le noir 18 m.
+
+resource: Tempête glaciaire | 1/jour | NLS 12 ; tempête de météores infligeant des dégâts de froid ; DD 21 pour demi-dégâts
+resource: Cône de froid | 3/jour | NLS 12 ; DD 17
+resource: Sphère glaciale | 3/jour | NLS 12 ; DD 18 pour demi-dégâts
+resource: Tempête de grêle | 3/jour | NLS 12
+
+step: Intrus repérés avant le combat
+  do: Se dissimuler dans le terrain arctique et choisir une position avec une issue vers un sol qu'il peut fouir
+  note: Discrétion +24 en milieu arctique, +14 ailleurs ; ne pas supposer qu'il peut traverser n'importe quelle roche ou glace
+
+note: Paralysie et accélération
+  Le bloc ne donne ni portée, ni DD, ni durée pour la paralysie : ne pas inventer ces valeurs pour le regard ou le rayon.
+  Le pouvoir magique pouvant être accéléré n'est pas précisé ; ce plan ne prévoit donc aucune utilisation accélérée.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et une attaque de zone est possible
+  do: Lancer tempête glaciaire sur le plus grand nombre de cibles, en privilégiant un groupe comprenant un utilisateur de feu identifié
+  note: DD 21 pour demi-dégâts ; choisir cette ouverture à la place du rayon ou de la morsure
+
+step: Une cible dangereuse doit être arrêtée et l'ouverture de zone n'est pas retenue
+  do: Tenter le rayon paralysant +20 sur cette cible, si elle est à portée du pouvoir
+  note: Privilégier un utilisateur de feu identifié ou un combattant capable de bloquer sa retraite
+
+step: Un ennemi se trouve déjà à 4,50 m ou moins et la priorité est de le blesser
+  do: Mordre à +26, pour 2d8+15 dégâts
+  note: Exploiter l'allonge sans avancer inutilement au milieu des adversaires
+
+## Rounds suivants
+
+step: Plusieurs ennemis peuvent être pris dans un même cône
+  do: Utiliser cône de froid, DD 17
+  note: Se placer pour toucher plusieurs adversaires ; décompter les 3 utilisations quotidiennes
+
+step: Les ennemis restent regroupés à distance
+  do: Utiliser sphère glaciale, DD 18 pour demi-dégâts, ou tempête de grêle selon leur position
+  note: Chaque pouvoir dispose de ses propres 3 utilisations quotidiennes
+
+step: Un adversaire prioritaire reste mobile et la paralysie peut l'atteindre
+  do: Tenter le rayon paralysant +20, ou exploiter le regard paralysant dans les conditions propres à ce pouvoir
+  note: Éviter de consacrer de nouvelles tentatives à une cible déjà paralysée
+
+step: Un ennemi est à portée de morsure
+  do: Mordre à +26, pour 2d8+15 dégâts ; privilégier une cible paralysée ou déjà blessée
+  note: Si les attaques de froid se révèlent inefficaces, privilégier la morsure
+
+step: Un adversaire plus petit bloque une position utile ou l'issue choisie
+  do: Employer Coup fabuleux pour le repousser et dégager le passage
+  note: Cette manœuvre remplace l'attaque ou le pouvoir offensif du tour
+
+## Repli
+
+step: Points de vie sous 65, ou attaques de feu répétées qu'il ne parvient pas à interrompre
+  do: Rompre le contact et rejoindre l'issue préparée ; s'enfouir si le terrain le permet
+  note: Déplacement terrestre 9 m, fouissement 3 m par déplacement ; tenir compte des attaques d'opportunité lors du désengagement

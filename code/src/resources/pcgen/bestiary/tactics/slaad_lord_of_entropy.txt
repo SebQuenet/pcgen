@@ -1,0 +1,103 @@
+## Avant le combat
+
+note: Profil
+  Seigneur slaad de l'entropie, Extérieur chaotique neutre de taille G, FP 29 : combattant très intelligent qui combine une résistance exceptionnelle, une faux meurtrière et des pouvoirs magiques de NLS 29.
+  888 PV ; CA 53, contact 26, pris au dépourvu 45 ; RD 25/magie et Loi ; RM 40 ; résistance 10 à l'acide, au froid, à l'électricité, au feu et au son. Marche à 12 m ; espace et allonge de 3 m.
+  Faux +5 anarchique +66/+61/+56/+51, 2d6+24, critique 19-20/x4, plus « death stroke ». La propriété anarchique ajoute 2d6 contre les créatures loyales ; le bloc fourni ne détaille pas « death stroke ».
+  Ses attaques à outrance constituent son principal moyen de tuer ; parole du Chaos désorganise les groupes et les mots de pouvoir achèvent ou aveuglent les cibles déjà affaiblies.
+
+resource: Convocation de slaads | 3/jour | niveau 9, réussite 100 % ; par utilisation, 3 rouges, bleus ou verts, ou 2 gris ou funestes
+resource: Mot de pouvoir aveuglant | 3/jour | aucune sauvegarde, RM applicable ; peut être accéléré, sans utilisation quotidienne supplémentaire
+resource: Boule de feu accélérée | 3/jour | action rapide, Réflexes DD 21 pour demi-dégâts ; boule de feu ordinaire à volonté
+resource: Image silencieuse | 3/jour | Volonté DD 19 pour percer l'illusion après interaction ; concentration
+resource: Parole du Chaos | 2/jour | Volonté DD 25, RM applicable
+resource: Cercle de mort | 2/jour | Vigueur DD 24 ; aucune créature de 9 DV ou plus n'est affectée
+resource: Contrôle des morts-vivants | 2/jour | utilisable uniquement sur le plan Matériel
+resource: Manteau du Chaos | 1/jour | durée 29 rounds ; confusion des assaillants loyaux, Volonté DD 26
+resource: Doigt de mort | 1/jour | Vigueur DD 25, RM applicable
+resource: Mot de pouvoir mortel | 1/jour | cible vivante à 100 PV ou moins ; aucune sauvegarde, RM applicable
+resource: Tempête vengeresse | 1/jour | DD 27 ; concentration, au maximum 10 rounds
+
+step: Il dispose de plusieurs rounds de préparation
+  do: Activer vol et, pour approcher sans être vu, invisibilité sur lui-même ; convoquer de préférence deux slaads funestes pour renforcer sa troupe.
+  note: Vol dure 29 minutes et permet normalement un déplacement de 18 m ; invisibilité cesse lorsqu'il attaque. Les préparatifs et convocations successifs prennent chacun leur temps d'activation.
+
+step: L'affrontement est imminent
+  do: Activer manteau du Chaos en incluant les alliés présents à 6 m ou moins, puis prendre position pour recevoir les assaillants à portée de faux.
+  note: Le manteau accorde +4 de parade à la CA et +4 de résistance aux sauvegardes, sans cumul avec des bonus de même type. Sa RM personnelle reste 40. Un ennemi loyal qui touche un bénéficiaire au corps à corps risque la confusion pendant 1 round, Volonté DD 26 pour annuler.
+
+step: Il peut parler aux intrus avant les hostilités
+  do: Tenter charme-monstre de groupe, Volonté DD 26, puis demander aux créatures charmées de rester à l'écart du conflit ; communiquer par télépathie à 30 m.
+  note: Le charme rend amical, sans donner un contrôle absolu. Une cible menacée par lui ou ses alliés gagne +5 à sa sauvegarde ; une menace contre une créature charmée rompt son charme.
+
+step: Il observe les approches
+  do: Exploiter Perception +64, détection de la magie et détection de l'invisibilité constantes pour choisir son angle d'engagement ; transmettre ses consignes aux slaads présents.
+  note: Sa vision dans le noir porte à 18 m. Détection de l'invisibilité ne lui permet pas de voir à travers les obstacles ni les ténèbres surnaturelles.
+
+## Ouverture
+
+step: Plusieurs ennemis non chaotiques se trouvent à 12 m ou moins
+  do: Employer parole du Chaos comme action simple ; si une autre cible visible à 28,50 m ou moins paraît avoir au maximum 200 PV, ajouter mot de pouvoir aveuglant accéléré en action rapide.
+  note: À NLS 29, les effets cumulatifs sont assourdissement à 29 DV ou moins, étourdissement à 28 DV ou moins, confusion à 24 DV ou moins et mort à 19 DV ou moins. Au-delà de 29 DV, aucun effet ; les créatures chaotiques sont épargnées.
+  note: Une seule sauvegarde de Volonté DD 25 annule assourdissement, étourdissement et mort ; elle réduit la confusion à 1 round. Une cible sauvée de la mort subit néanmoins 3d6+25 dégâts. Dans les Limbes, les extraplanaires non chaotiques affectés risquent aussi le bannissement, avec une sauvegarde de Volonté à -4.
+
+step: Une cible dangereuse est déjà à portée de faux et parole du Chaos serait peu utile
+  do: Faire une attaque à outrance, faux +66/+61/+56/+51 ; concentrer les coups sur un lanceur de sorts accessible ou le porteur d'une arme capable de franchir sa RD.
+  note: Ajouter un mot de pouvoir aveuglant accéléré avant les attaques si la cible paraît être à 200 PV ou moins. Une seule action rapide est possible dans le round : choisir entre ce mot et une boule de feu accélérée.
+
+step: Les ennemis sont éloignés et ses renforts ne sont pas encore présents
+  do: Convoquer deux slaads funestes depuis une position protégée, puis les envoyer engager les adversaires pendant qu'il se rapproche sous vol.
+  note: Une convocation remplace son action offensive principale ; elle ne s'ajoute pas gratuitement à une attaque à outrance.
+
+## Rounds suivants
+
+step: Il peut rester au contact de sa cible
+  do: Répéter l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m pour conserver une cible à portée sans perdre ses quatre attaques.
+  note: Contre une CA accessible, Attaque en puissance donne +53/+48/+43/+38 et 2d6+63 par coup avec la faux tenue à deux mains. Conserver les bonus normaux contre une défense trop élevée.
+
+step: Il confirme un critique
+  do: Appliquer simultanément Critique sanglant et Critique handicapant grâce à Maîtrise du critique.
+  note: Le saignement inflige 2d6 par round et se cumule avec les autres applications de ce don. Le déplacement choisi est réduit de moitié pendant 1 minute ; Vigueur DD 58 réduit cette durée à 1d4 rounds. Contre un adversaire volant, handicaper le vol.
+
+step: Une cible intéressante exige un déplacement supérieur à 1,50 m
+  do: Se déplacer puis employer Science de la frappe décisive : une seule attaque de faux à +66, infligeant 6d6+24, plus les dégâts anarchiques éventuels.
+  note: Cette option utilise une action d'attaque simple ; elle ne fournit ni attaque à outrance ni frappe décisive pendant une charge.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Frapper à la faux, en privilégiant les déplacements imprudents et les incantations non défensives.
+  note: Attaques réflexes permet jusqu'à 9 attaques d'opportunité par round, pour des occasions distinctes ; cela ne donne pas d'attaques gratuites contre un ennemi immobile.
+
+step: Un ennemi vivant paraît réduit à 100 PV ou moins et reste à 28,50 m ou moins
+  do: Employer mot de pouvoir mortel pour le supprimer, surtout s'il s'agit du soigneur ou d'un lanceur de sorts difficile à atteindre.
+  note: Le seuil porte sur les PV actuels ; au-dessus de 100 PV, le pouvoir échoue. Il ne connaît pas automatiquement les PV exacts de ses ennemis.
+
+step: Une cible dangereuse paraît avoir entre 101 et 200 PV et reste visible à 28,50 m ou moins
+  do: Employer mot de pouvoir aveuglant accéléré, puis utiliser son action principale pour frapper ou lancer un autre pouvoir.
+  note: Aucune sauvegarde, mais la RM et les immunités pertinentes s'appliquent. Décompter chaque emploi du total de 3 utilisations quotidiennes, accélérées ou ordinaires.
+
+step: Une cible à faible Vigueur est hors de portée de faux, mais à 28,50 m ou moins
+  do: Employer doigt de mort : 290 dégâts, Vigueur DD 25 pour réduire à 3d6+29.
+  note: Réserver cet emploi à une cible susceptible de rater sa sauvegarde et dépourvue de protection contre les effets de mort.
+
+step: Plusieurs ennemis sont groupés sans allié dans une explosion de 6 m de rayon
+  do: Ajouter une boule de feu accélérée à son action principale : 10d6 de feu, Réflexes DD 21 pour moitié.
+  note: Les dégâts plafonnent à 10d6 malgré son NLS 29. Si ses actions rapides sont épuisées, préférer généralement la faux à une boule de feu ordinaire.
+
+step: Il doit disperser des assaillants plutôt que leur infliger des dégâts
+  do: Employer terreur en cône de 9 m, Volonté DD 22 ; contre des ennemis loyaux groupés, envisager marteau du Chaos, Volonté DD 22.
+  note: Une nouvelle parole du Chaos reste prioritaire si plusieurs cibles non chaotiques peuvent être neutralisées. Cercle de mort sert uniquement à éliminer des auxiliaires vivants de 8 DV ou moins, Vigueur DD 24.
+
+step: Une bataille à distance lui permet de rester protégé plusieurs rounds
+  do: Déclencher tempête vengeresse sur la zone ennemie, puis maintenir sa concentration au lieu de chercher une attaque à outrance.
+  note: L'activation prend 1 round ; le nuage couvre un rayon de 108 m. Au troisième round de l'effet, diriger les six éclairs de 10d6 sur six cibles différentes au maximum, Réflexes DD 27 pour moitié.
+  note: À partir du cinquième round, la tempête empêche les attaques à distance et impose aux incantations dans la zone un test de concentration de DD 27 + niveau du sort. Rester hors de la zone pour préserver sa propre visibilité.
+
+## Repli
+
+step: Il tombe à 222 PV ou moins, ou risque d'être abattu avant son prochain tour
+  do: Employer changement de plan sur lui-même pour quitter le combat ; rejoindre les Limbes s'il se trouve ailleurs, ou un autre plan s'il combat déjà dans les Limbes.
+  note: Le pouvoir est utilisable à volonté et ne demande aucune sauvegarde lorsqu'il est volontaire. S'il est menacé, un pas de 1,50 m hors d'allonge ou une activation sur la défensive peut éviter une attaque d'opportunité.
+
+step: Le voyage planaire est empêché
+  do: Se dégager sous vol pendant que les slaads encore présents couvrent sa fuite ; employer invisibilité à son prochain tour si les poursuivants peuvent être trompés.
+  note: Utiliser les obstacles pour rompre les lignes de vue. Les ténèbres profondes peuvent gêner une poursuite, mais leur obscurité surnaturelle gêne aussi sa propre vision ; elles ne lui donnent pas un avantage visuel automatique.

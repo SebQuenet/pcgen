@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Nightskitter, mort-vivant extraplanaire de taille TG, chaotique mauvais, FP 12. Prédateur intelligent qui privilégie l'obscurité, les embuscades et les attaques mobiles.
+  Morsure +21 (4d8+16, critique 19–20, plus 4d6 de froid et poison) ; allonge et espace occupé de 4,50 m. Déplacement et escalade à 9 m.
+  157 points de vie, CA 28, résistance à la magie 23, réduction des dégâts 15 surmontée seulement par une arme à la fois bonne et en argent ; immunité au froid et traits des morts-vivants. La lumière vive le désavantage.
+
+resource: Détection de la magie et morsure magique | constantes | leurs effets sont déjà disponibles ; conserver les valeurs de la morsure indiquées
+resource: Ténèbres profondes | à volonté | préparer un terrain sombre et rétablir l'obscurité si nécessaire
+resource: Ténèbres maudites | à volonté | Volonté DD 18 ; privilégier les adversaires bons
+resource: Contagion | 3/jour | Vigueur DD 18 ; attaque de contact, à réserver aux occasions favorables
+resource: Dissipation suprême | 3/jour | NLS 12 ; retirer les protections ou un éclairage magique gênant
+resource: Invisibilité | 3/jour | préparer l'embuscade ou masquer une retraite ; une attaque la dissipe
+resource: Marche dans les airs | 1/jour | accéder à une position élevée ou franchir un passage sans appui
+resource: Cône de froid | 1/jour | Réflexes DD 19 ; cône de 18 m
+resource: Rapidité | 1/jour | 12 rounds ; à employer quand l'engagement devient imminent
+resource: Immobilisation de monstre | 1/jour | Volonté DD 19
+resource: Changement de plan | 1/jour | garder une issue de secours ; DD 21 contre une cible non consentante
+resource: Convocation | 1/jour | pouvoir de niveau 5 ; une ombre supérieure
+
+step: Il peut préparer le lieu de l'affrontement
+  do: Choisir une zone sombre avec des parois à escalader et une voie de retrait ; utiliser ténèbres profondes avant l'arrivée des intrus
+  note: Sens des ténèbres à 9 m, vision dans le noir à 18 m ; éviter de poursuivre une cible hors de ses capacités de perception
+
+step: Les intrus approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +15 et invisibilité ; observer avec Perception +22 et détection de la magie
+  note: Art de la magie +29 dans la pénombre et l'obscurité pour reconnaître les sorts observés ; identifier les protections utiles à dissiper
+
+step: Il dispose du temps nécessaire avant l'engagement
+  do: Convoquer l'ombre supérieure dans l'obscurité ; utiliser marche dans les airs si le terrain le justifie, puis rapidité juste avant le combat
+  note: L'aura profanatrice porte à 9 m, DD 21 ; ne pas ajouter une seconde fois ses avantages aux valeurs du Nightskitter
+
+## Ouverture
+
+step: Plusieurs adversaires sont alignés dans un cône de 18 m
+  do: Employer cône de froid, Réflexes DD 19, puis se déplacer vers une position sombre qui limite les ripostes
+  note: Sinon, employer ténèbres maudites sur les adversaires bons regroupés, Volonté DD 18
+
+step: Un adversaire isolé constitue la principale menace
+  do: Tenter immobilisation de monstre, Volonté DD 19, ou dissipation suprême si ses protections empêchent une attaque efficace
+  note: Choisir une seule de ces actions pour ce round ; ne pas cumuler plusieurs pouvoirs magiques et une morsure
+
+step: Une cible vulnérable est accessible à la morsure
+  do: L'attaquer depuis l'invisibilité, en restant si possible à 4,50 m pour l'obliger à s'approcher avant de riposter
+  note: La morsure inflige aussi le froid et le poison indiqués ; l'invisibilité prend fin avec l'attaque
+
+## Rounds suivants
+
+step: Une cible non adjacente au début du tour peut être atteinte par un trajet dégagé
+  do: Utiliser Attaque éclair : parcourir au moins 3 m avant la morsure, puis employer le déplacement restant pour gagner une position sûre
+  note: Le trajet total reste limité à sa vitesse ; la cible de cette attaque ne bénéficie pas d'attaque d'opportunité contre ce déplacement, mais les autres ennemis le peuvent
+
+step: Une cible reste à portée et il peut tenir sa position
+  do: Mordre ; si rapidité est active, faire une attaque à outrance pour obtenir deux morsures
+  note: Rapidité donne +1 aux jets d'attaque ; réserver Attaque en puissance aux cibles faciles à toucher
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Le mordre grâce à Attaques réflexes
+  note: Avec sa Dextérité de 21, il peut effectuer jusqu'à six attaques d'opportunité par round, si les occasions se présentent
+
+step: Les ennemis restent hors de portée ou se regroupent
+  do: Répéter ténèbres maudites, Volonté DD 18, en privilégiant les cibles bonnes ; se déplacer pour conserver un angle d'attaque et un accès à l'obscurité
+  note: Faire harceler les adversaires isolés par l'ombre supérieure si elle est présente ; communiquer par télépathie à 30 m
+
+step: Un éclairage magique ou une protection compromet sa tactique
+  do: Employer dissipation suprême sur l'effet gênant, puis reprendre les attaques depuis les ténèbres
+  note: Chaque utilisation consomme son action du round ; les ennemis peuvent profiter de cette interruption
+
+step: Une victime peut être touchée sans sacrifier une meilleure occasion d'attaque
+  do: Envisager contagion, Vigueur DD 18, pour laisser une maladie à un survivant
+  note: Ne pas compter sur cette maladie pour neutraliser immédiatement un combattant
+
+## Repli
+
+step: Points de vie sous 40, ou exposition durable à une lumière vive
+  do: Rompre le contact par l'escalade ou marche dans les airs si elle est active ; lancer invisibilité dès qu'il peut le faire sans s'exposer
+  note: Rejoindre un abri sombre ; l'invisibilité ne supprime pas son aversion à la lumière
+
+step: La retraite reste bloquée ou les poursuivants le rejoignent
+  do: Employer changement de plan sur lui-même pour quitter l'affrontement
+  note: Conserver cette utilisation tant qu'une fuite ordinaire demeure possible

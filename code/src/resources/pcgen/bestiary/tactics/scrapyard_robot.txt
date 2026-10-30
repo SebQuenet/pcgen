@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Robot de récupération solitaire des ruines de Numérie, assemblé de pièces défectueuses ; créature artificielle neutre de taille M, peu intelligente, capable de suivre des ordres simples.
+  42 pv, CA 14, solidité 5 ; scie rotative +8 (2d4+4, critique x3) ou coup +7 (1d4+4). Allonge 1,50 m ; déplacement 9 m.
+  Vision dans le noir à 18 m, vision nocturne, Perception +5 ; comprend le commun et le hallit.
+
+note: Action limitée
+  Toujours chancelant : une seule action simple ou de mouvement par round. Pour avancer et frapper dans le même round, il doit charger ; cette charge est limitée à 9 m.
+
+resource: Réparation | selon les carcasses disponibles | 8 heures de travail ininterrompu rendent 10 pv et suppriment une panne due à son démantèlement ; consomme toutes les pièces récupérables d'un robot de taille M
+
+step: Il dispose de temps et d'une carcasse de robot avant l'arrivée des intrus
+  do: Réparer les dégâts et une panne par période de 8 heures, sans dépasser 42 pv.
+  note: Chaque catégorie de taille au-dessus de M fournit une période supplémentaire ; chaque catégorie en dessous double le nombre de carcasses nécessaires.
+
+step: Il a reçu une consigne de garde
+  do: Rester près du passage ou de l'objet désigné et attaquer les intrus selon cet ordre simple.
+
+## Ouverture
+
+step: Une cible est au contact, à 1,50 m
+  do: Porter une seule attaque de scie rotative +8 (2d4+4, critique x3).
+  note: Le coup et la scie sont des options alternatives.
+
+step: Une cible peut être atteinte par une charge en ligne droite, sans obstacle
+  do: Charger sur au moins 3 m et au plus 9 m de déplacement, puis frapper avec la scie à +10 (2d4+4, critique x3).
+  note: La charge réduit sa CA à 12 jusqu'au début de son prochain tour.
+
+step: Aucune cible n'est à portée et la charge est impossible
+  do: Consacrer son action à avancer de 9 m au maximum vers l'adversaire le plus proche.
+  note: Il attend le round suivant pour attaquer ; il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: La scie fonctionne et une cible reste à portée
+  do: Répéter une attaque de scie par round, en conservant la même cible tant qu'elle reste accessible.
+
+step: La cible semble facile à toucher
+  do: Employer Attaque en puissance : scie +6 (2d4+10, critique x3), ou +8 en charge.
+  note: Le malus de -2 aux attaques dure jusqu'au prochain tour ; les dégâts gagnent +6 puisque ces attaques appliquent une fois et demie le bonus de Force.
+
+step: Une attaque ou un effet lui retire au moins 11 pv après application de ses défenses
+  do: Déterminer la panne par 1d6 et adapter immédiatement son comportement.
+  note: Un résultat correspondant à un composant déjà endommagé n'ajoute aucun effet.
+  note: 1, unité centrale : il devient confus ; appliquer cet état au lieu du plan normal.
+  note: 2, blindage : son armure naturelle baisse de 3, donc sa CA passe à 11, ou 9 pendant une charge.
+  note: 3, noyau : son coup inflige aussi 1d6 d'électricité ; les assaillants qui le frappent avec une arme naturelle, à mains nues ou avec une arme métallique subissent 1d6 d'électricité. Il s'arrête dans 1d4+1 rounds.
+  note: 4, scie : cette attaque devient inutilisable ; passer au coup +7 (1d4+4).
+  note: 5, servomoteurs : déplacement et charge limités à 4,50 m ; DMD contre le croc-en-jambe réduit de 20 à 12.
+  note: 6, capteurs : il devient aveugle ; appliquer les effets de cet état à ses déplacements et attaques.
+
+step: Le noyau est endommagé et un ennemi reste au contact
+  do: Privilégier le coup +7 (1d4+4 plus 1d6 d'électricité) jusqu'à l'arrêt du robot.
+  note: Cette décharge provient de la panne ; il ne peut pas la déclencher volontairement.
+
+step: Il subit des dégâts supplémentaires dus à un critique
+  do: Effectuer un jet de Vigueur +1, DD 15 ; sur un échec, il est étourdi pendant 1 round et ne peut pas agir.
+  note: Sur une réussite, il est chancelant pendant 1 round, ce qu'il est déjà en permanence. Les attaques électriques lui infligent 150 % des dégâts normaux.
+
+## Repli
+
+step: Sa consigne de combat reste en vigueur
+  do: Continuer à l'exécuter avec les composants encore utilisables, sans seuil de fuite automatique.
+  note: À 0 pv, cette créature artificielle est détruite.
+
+step: Il reçoit un ordre de repli ou le combat cesse alors qu'il peut encore se déplacer
+  do: Rejoindre une carcasse disponible et reprendre les réparations une fois hors de danger.
+  note: Réparer exige 8 heures sans interruption ; aucune réparation n'est possible pendant l'affrontement. Un noyau déjà endommagé s'arrête avant la fin de ce travail.

@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Greater Boneneedle, vermine de taille M des souterrains, sans intelligence : jouer des réactions instinctives de prédateur.
+  42 points de vie, CA 17 ; morsure +6 (1d6+1 et poison), allonge de 1,50 m. Immunisé aux effets mentaux.
+  Déplacement de 9 m, escalade de 6 m ; vision dans le noir à 18 m et vision nocturne. Aversion à la lumière du jour.
+
+step: Une proie approche dans un passage obscur
+  do: Rester dissimulé et attendre qu'elle s'approche à portée de morsure
+  note: Discrétion +9, Perception +5 ; les parois accessibles permettent aussi de se poster en hauteur grâce à Escalade +11
+
+## Ouverture
+
+step: Une proie se trouve à 1,50 m ou moins
+  do: Mordre : +6, 1d6+1 dégâts et poison
+  note: Le profil ne précise ni le DD ni les effets du poison ; ne pas lui attribuer de conséquences supplémentaires
+
+step: Une proie est accessible après un déplacement
+  do: Avancer jusqu'à 9 m ou grimper jusqu'à 6 m, puis mordre si elle est à portée
+  note: Depuis une paroi, respecter l'allonge de 1,50 m ; aucune attaque à distance n'est disponible
+
+step: La proie reste trop éloignée pour être mordue ce round
+  do: Consacrer le round à deux déplacements, jusqu'à 18 m au sol ou 12 m en escalade, pour s'en rapprocher
+
+## Rounds suivants
+
+step: La proie reste au contact
+  do: Répéter la morsure à chaque round
+  note: La morsure est son unique attaque ; aucune capacité spéciale supplémentaire n'est indiquée
+
+step: La proie s'éloigne
+  do: La suivre au sol ou par une paroi accessible, puis mordre dès que le déplacement permet de l'atteindre
+  note: Privilégier instinctivement une proie accessible ; ne pas lui prêter de coordination élaborée avec d'autres boneneedles
+
+## Repli
+
+step: La lumière du jour atteint sa position
+  do: Rejoindre un passage obscur ou une zone souterraine abritée, en utilisant l'escalade si elle offre une issue
+  note: L'aversion à la lumière du jour motive ce retrait ; le profil ne donne aucun malus chiffré
+
+step: Une proie reste au contact pendant le retrait
+  do: Mordre si elle bloque l'accès à l'obscurité, puis poursuivre le déplacement vers l'abri dès qu'un passage se libère

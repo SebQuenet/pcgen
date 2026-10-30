@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Mockingfey, fée de taille TP chaotique neutre, au corps de perroquet et à la tête humanoïde ; farceur curieux qui caricature les visiteurs.
+  13 pv, CA 15 ; vol à 18 m, bonne manœuvrabilité ; déplacement au sol à 6 m. Deux serres +6 (1d4-1 chacune) en attaque à outrance ; allonge de 0 m.
+  Il privilégie le harcèlement aérien et l'hébétement ; ses serres l'obligent à entrer dans l'espace de sa cible.
+
+resource: Hébétement | à volonté | action simple, portée 9 m, Volonté DD 11 annule ; un humanoïde de 4 DV ou moins perd ses actions pendant 1 round ; après avoir été affecté, il est immunisé contre ce sort pendant 1 minute
+resource: Imitation (mock) | à volonté | action simple ; prend l'apparence d'une créature visible, en version miniature si nécessaire, sans changer réellement de taille ; Volonté DD 12 pour reconnaître l'illusion en interagissant avec elle
+
+step: Des voyageurs approchent
+  do: Les observer depuis les arbres, avec Perception +7 ; rester dissimulé derrière le feuillage avec Discrétion +16
+  note: choisir un perchoir et un trajet de fuite entre les branches
+
+step: Les visiteurs ne sont pas hostiles
+  do: Imiter l'apparence et les gestes de l'un d'eux, en jacassant un charabia moqueur
+  note: l'imitation peut durer indéfiniment ; elle ne confère ni attaques ni pouvoirs du modèle
+
+## Ouverture
+
+step: Un humanoïde potentiellement sensible devient hostile
+  do: Utiliser Attaque en vol pour s'approcher à 9 m, lancer hébétement, puis terminer son déplacement vers un perchoir hors de portée de mêlée
+  note: le trajet total ne dépasse pas 18 m ; cette action simple remplace l'attaque de serres
+
+step: Aucun adversaire ne peut être affecté par hébétement
+  do: Garder de la hauteur et chercher une occasion d'attaquer sans subir de riposte ; abandonner l'affrontement si elle ne se présente pas
+
+## Rounds suivants
+
+step: Un humanoïde sensible n'est pas encore immunisé
+  do: Recommencer le passage avec hébétement, puis reprendre de la distance
+  note: changer de cible après un hébétement réussi ; une sauvegarde réussie ne donne pas l'immunité d'une minute
+
+step: Une cible isolée ne peut pas porter d'attaque d'opportunité
+  do: Entrer dans son espace en vol, porter une seule attaque de serre +6 (1d4-1), puis poursuivre le déplacement
+  note: Attaque en vol ne supprime pas les attaques d'opportunité ; éviter ce passage contre un adversaire capable de riposter
+
+step: Déjà dans l'espace d'une cible et rester au contact présente peu de risques
+  do: Effectuer une attaque à outrance avec les deux serres +6 (1d4-1 chacune)
+  note: cette attaque à outrance ne se combine pas avec un passage d'Attaque en vol
+
+step: Plusieurs mockingfeys combattent ensemble
+  do: Se disperser dans les arbres et viser des humanoïdes différents avec hébétement
+  note: une cible déjà affectée reste immunisée au sort des autres mockingfeys pendant 1 minute
+
+## Repli
+
+step: Points de vie à 6 ou moins, ou poursuite trop dangereuse
+  do: Rompre le combat et fuir en volant entre les arbres, à 18 m par action de mouvement
+  note: si le départ expose à des attaques d'opportunité, utiliser la retraite ; se dissimuler avec Discrétion +16 une fois hors de vue

@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Dracosire gris de taille TG, neutre mauvais, solitaire des côtes chaudes : un combattant résistant et un lanceur de sorts intelligent, de NLS 15. Il affaiblit et sépare ses adversaires avant de concentrer ses attaques sur une cible isolée.
+  310 pv ; CA 41, contact 7 ; résistance à la magie 27 ; immunité au sommeil et à la paralysie. Sa faible CA de contact l'incite à neutraliser rapidement les spécialistes des rayons.
+  Morsure +34 (2d8+18, critique 19–20), 2 griffes +33 (2d6+12), 2 ailes +31 (1d8+6), queue +31 (2d6+18). Allonge de 3 m, ou 4,50 m avec la morsure ; espace occupé de 4,50 m.
+  Souffle de feu en ligne de 30 m : 22d6 dégâts, Réflexes DD 28 pour moitié. Présence terrifiante à 99 m, Volonté DD 25.
+  Déplacement de 18 m au sol, vol de 60 m avec manœuvrabilité moyenne, nage de 12 m par action de mouvement. Les valeurs d'attaque indiquées sont celles du profil, avant les bonus des sorts.
+
+resource: Sorts de niveau 7 | 4/jour | réserve commune à mot de pouvoir aveuglant et vagues d'épuisement
+resource: Sorts de niveau 6 | 6/jour | réserve commune à pétrification, héroïsme suprême et excavation
+resource: Sorts de niveau 5 | 6/jour | réserve commune à brume mortelle, télékinésie, transmutation de la pierre en boue et mur de pierre
+resource: Sorts de niveau 4 | 7/jour | réserve commune à porte dimensionnelle, invisibilité suprême, scrutation et peau de pierre ; conserver au moins une utilisation pour fuir
+resource: Sorts de niveau 3 | 7/jour | réserve commune à dissipation de la magie, état gazeux, protection contre les énergies destructives et rayon d'épuisement
+resource: Sorts de niveau 2 | 7/jour | réserve commune à flou, splendeur de l'aigle, bourrasque, localisation d'objet et image miroir
+resource: Sorts de niveau 1 | 7/jour | réserve commune à mains brûlantes, projectile magique, protection contre le Bien, brume de dissimulation et bouclier
+
+step: Il peut choisir le terrain
+  do: Attendre près d'une côte rocheuse, avec un espace dégagé pour voler et un refuge connu assez vaste pour l'accueillir
+  note: Exploiter les passages étroits pour aligner les intrus dans son souffle ; garder une voie de sortie aérienne ou aquatique.
+
+step: Il dispose de plusieurs rounds de préparation
+  do: Lancer successivement héroïsme suprême, bouclier et image miroir ; ajouter protection contre les énergies destructives si une énergie ennemie est identifiée
+  note: Chaque sort demande son propre round. Ajouter peau de pierre seulement s'il possède sa composante matérielle ; décompter toutes ces incantations des réserves communes.
+
+step: L'affrontement est imminent
+  do: Lancer invisibilité suprême juste avant de se montrer, puis approcher par les airs
+  note: Au NLS 15, elle dure 15 rounds et persiste pendant ses attaques ; éviter de gaspiller cette durée en attente.
+
+## Ouverture
+
+note: Choix du premier tour
+  Choisir une seule des actions principales ci-dessous selon la position des intrus. Un souffle, un sort et une attaque à outrance occupent chacun leur propre tour.
+
+step: Au moins deux ennemis peuvent être pris dans une ligne de 30 m
+  do: Utiliser Attaque en vol pour se placer, souffler, puis poursuivre son déplacement hors de leur portée de mêlée
+  note: Le trajet total reste limité à 60 m ; ce don ne protège pas des attaques d'opportunité. Lors de son assaut, appliquer la présence terrifiante aux créatures concernées à 99 m, Volonté DD 25.
+
+step: Les ennemis sont groupés dans un cône de 18 m, sans bon alignement pour le souffle
+  do: Lancer vagues d'épuisement, puis profiter du vol pour conserver la distance
+  note: Aucun jet de sauvegarde, mais la résistance à la magie s'applique. L'épuisement ralentit les créatures vivantes et affaiblit leurs attaques ; le relancer sur des cibles déjà épuisées ne sert à rien.
+
+step: Une cible prioritaire à 18 m ou moins paraît avoir 200 pv actuels ou moins
+  do: Lancer mot de pouvoir aveuglant sur un lanceur de sorts ou un tireur dangereux
+  note: Aucun jet de sauvegarde, mais résistance à la magie applicable. Au-dessus de 200 pv actuels, le sort échoue ; l'aveuglement dure davantage sur une cible déjà blessée.
+
+## Rounds suivants
+
+step: Une cible isolée est à 3 m ou moins et il peut rester sur place
+  do: Effectuer une attaque à outrance : morsure, deux griffes, deux ailes et queue ; concentrer les coups sur le même adversaire
+  note: Une attaque à outrance exige le round complet ; seul un pas de 1,50 m permet de se replacer sans la perdre. Activer Attaque en puissance contre une cible facile à toucher, et y renoncer contre une CA élevée.
+
+step: Il doit rester mobile ou la cible n'est accessible qu'à sa morsure
+  do: Effectuer une morsure avec Frappe décisive : +34, 4d8+18, éventuellement au cours d'une Attaque en vol
+  note: Utiliser l'allonge de 4,50 m pour rester hors de la portée des armes courtes. Frappe décisive accompagne cette attaque unique, pas une attaque à outrance ni une charge.
+
+step: Le groupe se disperse ou protège son lanceur de sorts
+  do: Créer un mur de pierre ancré à la roche pour couper les lignes de vue et séparer une cible de ses alliés
+  note: Garder une issue pour lui-même et choisir un côté du mur depuis lequel il pourra reprendre l'offensive au tour suivant.
+
+step: Les ennemis évitent le contact et occupent une zone basse à terre
+  do: Lancer brume mortelle dans leur position, puis contourner le nuage en volant
+  note: Vigueur DD 18 ; privilégier les créatures sensibles au poison. Le nuage dérive en s'éloignant du dragon ; ne pas s'y exposer et tenir compte du vent.
+
+step: Une protection magique identifiable rend ses attaques inefficaces
+  do: Tenter une dissipation de la magie ciblée sur cette protection avant de reprendre le souffle ou la mêlée
+  note: Une résistance au feu rend le souffle moins rentable ; changer d'attaque si la dissipation échoue.
+
+step: Un adversaire isolé semble faible en Vigueur
+  do: Tenter pétrification, Vigueur DD 20, pour l'éliminer du combat
+  note: Contre un combattant encore frais, rayon d'épuisement offre une autre option : attaque de contact à distance +20, Vigueur DD 17 ; même une sauvegarde réussie inflige la fatigue si la cible y est sensible.
+
+step: Le souffle est de nouveau disponible et plusieurs ennemis se réalignent
+  do: Reprendre de la distance par les airs et souffler sur leur ligne plutôt que poursuivre une cible résistante au feu
+  note: Le profil ne précise pas le délai de recharge du souffle ; vérifier sa disponibilité avant de le réutiliser.
+
+## Repli
+
+step: Ses points de vie passent sous 80, ou il ne peut plus contenir les assaillants
+  do: Lancer porte dimensionnelle vers son refuge connu, à 300 m au maximum
+  note: Réserver une utilisation de niveau 4 à cette fuite. Après la téléportation, aucune autre action n'est possible avant son prochain tour.
+
+step: La téléportation est indisponible et une sortie reste accessible
+  do: Rompre le contact par un retrait, puis fuir par les airs ; employer la nage si l'eau offre une meilleure couverture
+  note: Utiliser son vol de 60 m par action de mouvement pour distancer les poursuivants. Si un obstacle rocheux coupe leur vue, le contourner et poursuivre la fuite sans revenir défendre le trésor.

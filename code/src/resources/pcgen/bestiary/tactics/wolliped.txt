@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Wolliped entraîné au combat, grand animal neutre : 30 pv, CA 15. Il combat au contact avec un coup de cornes +6 (1d8+6).
+  Vitesse 15 m ; espace occupé 3 m ; allonge 1,50 m. Sa vision nocturne et son odorat l'aident à repérer les menaces.
+  Il privilégie les réactions simples : foncer, encorner et repousser ce qui lui barre le passage.
+
+step: Une menace approche
+  do: S'orienter vers elle et conserver assez d'espace pour avancer
+  note: Perception +6 ; il ne dispose d'aucune attaque à distance
+
+## Ouverture
+
+step: Un ennemi est accessible en ligne droite, à une distance permettant une charge
+  do: Charger et porter un coup de cornes +8 (1d8+6)
+  note: Charge sur 3 m à 30 m, sans obstacle ni terrain difficile ; CA 13 jusqu'au début de son prochain tour
+
+step: Un ennemi est déjà à portée
+  do: Porter un coup de cornes +6 (1d8+6)
+
+step: Aucun ennemi ne peut être chargé
+  do: Avancer de 15 m au maximum et encorner si une cible devient accessible
+
+## Rounds suivants
+
+step: L'ennemi reste au contact
+  do: Porter un coup de cornes à chaque round
+  note: Avec une seule attaque naturelle, une attaque à outrance ne donne aucun coup supplémentaire
+
+step: La cible est facile à toucher
+  do: Utiliser Attaque en puissance : cornes +5 (1d8+9), ou +7 (1d8+9) en charge
+  note: Le bonus de dégâts tient compte de son unique attaque naturelle, qui ajoute déjà une fois et demie sa Force
+
+step: Un adversaire bloque le passage et peut être repoussé
+  do: Remplacer l'attaque par une bousculade, BMO +10 contre le DMD adverse
+  note: Bousculade améliorée évite l'attaque d'opportunité de la cible ; une réussite la repousse de 1,50 m, plus 1,50 m par tranche de 5 au-dessus de son DMD. Cette manœuvre ne cause aucun dégât
+
+## Repli
+
+step: Points de vie à 10 ou moins et une issue est libre
+  do: Se retirer vers un espace dégagé, jusqu'à 30 m avec l'action de retraite
+  note: Seule la première case quittée est protégée des attaques d'opportunité par cette action
+
+step: La fuite est impossible
+  do: Encorner l'adversaire qui ferme le passage, ou le bousculer pour ouvrir une issue

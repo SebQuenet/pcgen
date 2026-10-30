@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Suijin, kami aquatique neutre de taille G, FP 14 : une grande carpe serpentine aux écailles irisées, gardienne d'un petit plan d'eau. Patient et généralement bienveillant, il cherche à protéger son domaine et à chasser les profanateurs.
+  207 pv, CA 30 ; morsure +24 (2d8+7, critique 19–20), allonge 4,50 m ; queue +19 (1d8+3 et étreinte), allonge 3 m. BMO +30 en lutte.
+  Déplacement terrestre 9 m, vol parfait 18 m, nage 18 m ; liberté de mouvement permanente. Guérison accélérée 7 tant qu'il reste à 36 m ou moins du plan d'eau qu'il protège.
+  RD 10/fer froid et Mal, RI 25 ; résistances acide, électricité et feu 10 ; immunité aux saignements, aux effets mentaux, à la pétrification et aux métamorphoses.
+
+resource: Sphère aqueuse | 3/jour | action simple, Réflexes DD 17, NLS 18
+resource: Télékinésie rapide | 3/jour | action rapide, Volonté DD 19 contre la projection d'une créature, RI applicable
+resource: Dissipation suprême, contrôle de l'eau, création d'eau, modification de mémoire, sillage | à volonté | NLS 18 ; modification de mémoire : Volonté DD 18
+resource: Annulation d'enchantement | 1/jour | incantation de 1 minute ; à réserver aux périodes sans combat
+
+step: Il surveille son domaine sans menace immédiate
+  do: Rester fusionné avec son plan d'eau et observer les alentours avec Perception +27
+  note: Fusionner ou émerger demande une action simple. Pendant la fusion, il observe mais ne peut ni communiquer, ni attaquer, ni employer ses pouvoirs.
+
+step: Des intrus menacent son domaine
+  do: Émerger s'il est fusionné, puis leur demander de partir par télépathie à 30 m, en privilégiant Diplomatie +22
+  note: Il laisse repartir ceux qui cessent de menacer le plan d'eau ; il ne traite pas chaque visiteur comme une proie.
+
+step: Il dispose de temps avant l'affrontement
+  do: Lancer sillage sur lui-même, puis contrôle de l'eau pour inonder une voie d'approche basse si le terrain s'y prête
+  note: Sillage dure 180 minutes et porte sa nage à 24 m. Contrôle de l'eau modifie le niveau de l'eau ; choisir un aménagement qui gêne les intrus sans mettre les innocents en danger.
+
+## Ouverture
+
+step: Un adversaire dépend de protections magiques visibles ou déjà identifiées
+  do: Employer dissipation suprême ciblée sur cet adversaire avant de l'engager
+  note: Jet de dissipation +18 ; priorité aux effets qui empêchent de le contenir ou lui permettent d'attaquer sans s'exposer.
+
+step: Plusieurs ennemis sont regroupés au sol, sans priorité de dissipation
+  do: Créer une sphère aqueuse sur leur trajet pour les neutraliser et les séparer
+  note: Diamètre 3 m, portée 84 m, durée 18 rounds. Réflexes DD 17 annule les 2d6 dégâts non létaux ; une cible de taille G ou inférieure qui échoue doit réussir un second Réflexes DD 17 ou être engloutie.
+
+step: Un agresseur peut être éloigné immédiatement du plan d'eau
+  do: Ajouter une télékinésie rapide pour le projeter vers une zone dégagée, puis effectuer normalement son action simple ou son attaque à outrance
+  note: Volonté DD 19 annule. Respecter la masse totale maximale de 170 kg environ ; choisir la projection instantanée pour éviter d'avoir à maintenir une concentration aux rounds suivants.
+
+step: Un adversaire est déjà à 3 m ou moins et aucun pouvoir n'est prioritaire
+  do: Attaque à outrance : morsure +24 et queue +19 sur la menace principale
+  note: Si la queue touche une cible de taille M ou inférieure, tenter gratuitement l'étreinte avec BMO +30.
+
+## Rounds suivants
+
+step: La sphère aqueuse peut encore contenir des combattants
+  do: La diriger de 9 m au maximum par une action de mouvement, puis mordre un ennemi à portée ou employer dissipation suprême par une action simple
+  note: La sphère peut contenir une créature G ou quatre M. Les captifs sont enchevêtrés, doivent retenir leur souffle et subissent 2d6 dégâts non létaux au début de leur tour ; Réflexes DD 17 chaque round pour sortir. Ils bénéficient d'un abri contre les attaques extérieures.
+
+step: Il tient un adversaire avec sa queue
+  do: Maintenir la lutte avec BMO +30 et chercher à l'immobiliser plutôt qu'à le tuer
+  note: Maintenir la lutte consomme son action simple. Relâcher une créature qui se rend et ne menace plus le domaine.
+
+step: Il peut rester au contact sans subir une riposte excessive
+  do: Répéter morsure et queue à outrance, en concentrant les attaques sur le même agresseur
+  note: Une cible entre 3 m et 4,50 m ne peut être atteinte que par la morsure ; la queue exige de s'approcher à 3 m.
+
+step: Les adversaires le dominent au contact
+  do: Exploiter son vol et Attaque en vol pour approcher, mordre une fois, puis poursuivre son déplacement hors de leur allonge
+  note: Répartir au maximum 18 m de vol entre l'approche et l'éloignement. Ce déplacement peut provoquer des attaques d'opportunité ; Souplesse du serpent accorde +4 à la CA contre celles provoquées par le déplacement.
+
+step: Un ennemi provoque une attaque d'opportunité
+  do: Mordre à portée ; contre un déplacement dans une case adjacente, envisager Immobilisation à la place des dégâts
+  note: Attaques réflexes permet jusqu'à trois attaques d'opportunité par round. Immobilisation utilise BMO +26 contre le DMD et ne s'étend pas à toute l'allonge de la morsure.
+
+## Repli
+
+step: Ses points de vie passent sous 60 ou plusieurs ennemis peuvent l'abattre rapidement
+  do: Effectuer un retrait vers une partie abritée de son plan d'eau, en nageant ou en volant ; fusionner avec son domaine au tour suivant si les conditions le permettent
+  note: Nage 18 m, ou 24 m avec sillage ; vol 18 m. Rester à 36 m ou moins du domaine pour récupérer 7 pv par round. Une fois fusionné, il ne peut plus agir jusqu'à son émergence.
+
+step: Les intrus se retirent ou acceptent de respecter le domaine
+  do: Cesser les attaques et les laisser partir ; interrompre l'emploi offensif de ses pouvoirs
+  note: Sa priorité reste la protection du plan d'eau. Il ne poursuit pas des fuyards au prix de l'abandon de son domaine.

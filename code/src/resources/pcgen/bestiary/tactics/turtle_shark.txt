@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Turtle-shark, créature magique aquatique de taille TG, peu intelligente (Int 2), qui combat par instinct. 63 pv, CA 21.
+  Morsure +13 (2d6+8 et étreinte), coup +12 (1d8+8) ; allonge de 3 m, espace occupé de 4,50 m.
+  Nage à 12 m par déplacement, marche à 3 m ; amphibie. Vision dans le noir à 18 m, vision nocturne, Perception +9.
+  Peut faire chavirer une embarcation et engloutir une proie maintenue dans sa gueule.
+
+step: Des proies approchent de l'eau
+  do: Rester dans l'eau et les laisser entrer à portée ; éviter une poursuite sur la terre ferme
+
+## Ouverture
+
+step: Les proies se trouvent dans une embarcation à portée
+  do: Tenter de faire chavirer l'embarcation pour mettre ses occupants à l'eau
+
+step: Une proie est accessible après un déplacement
+  do: Nager jusqu'à portée et porter une morsure +13 (2d6+8), puis tenter l'étreinte si elle touche
+  note: Privilégier une cible isolée dans l'eau ; aucune attaque à distance n'est indiquée
+
+step: Une proie est déjà à portée sans déplacement
+  do: Faire une attaque à outrance : morsure +13 (2d6+8 et étreinte), puis coup +12 (1d8+8)
+
+## Rounds suivants
+
+step: Une proie commence le tour maintenue dans sa gueule et sa taille permet de l'engloutir
+  do: Tenter de l'engloutir par un nouveau test de lutte
+  note: L'engloutissement inflige chaque round 1d8+8 dégâts et 1d6 dégâts d'acide ; intérieur CA 15, 6 pv pour s'ouvrir une issue
+
+step: Une proie est déjà engloutie et d'autres ennemis restent à portée
+  do: Attaquer les ennemis extérieurs avec la morsure et le coup si une attaque à outrance est possible
+  note: Les dégâts d'engloutissement continuent chaque round sur la proie avalée
+
+step: La morsure n'a pas permis de maintenir une proie
+  do: Continuer les morsures pour obtenir une étreinte ; ajouter le coup lors des attaques à outrance
+
+step: Une cible paraît facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts
+  note: Malus de 2 aux attaques et bonus de 4 aux dégâts : morsure +11 (2d6+12), coup +10 (1d8+12)
+
+step: Deux ennemis sont adjacents entre eux et à portée, sans possibilité d'attaque à outrance
+  do: Utiliser Enchaînement avec la morsure ; si la première attaque touche, attaquer le second ennemi
+  note: Enchaînement impose un malus de 2 à la CA jusqu'au prochain tour
+
+## Repli
+
+step: Points de vie sous 16 et une voie de fuite aquatique est libre
+  do: Rompre le combat et nager vers les profondeurs, à 12 m par déplacement
+  note: Sur la terre ferme, gagner l'eau au plus vite ; sa marche est limitée à 3 m par déplacement

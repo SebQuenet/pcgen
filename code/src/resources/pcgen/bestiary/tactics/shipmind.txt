@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Shipmind, vase de taille TG, chaotique mauvaise et très intelligente, qui pilote un vaisseau du Dominion du Noir depuis une cuve organique immobile. FP 13 ; 161 PV ; initiative +13 ; CA 27, contact 17.
+  Allonge de 4,50 m ; attaque à outrance : 3 coups +20, chacun infligeant 1d8+12 dégâts, avec perturbation mentale et étreinte. Éclair de plasma +17 contre la CA de contact, 10d6 dégâts, critique sur 19–20.
+  RD 10/—, RM 24 ; immunités aux dégâts contondants, au feu, à l'électricité, aux charmes et immunités des vases. Le froid lui inflige 50 % de dégâts supplémentaires : ses utilisateurs sont prioritaires.
+
+resource: Contact d'idiotie rapide | 3/jour | action rapide ; attaque de contact ; aucun jet de sauvegarde ; malus de 1d6 à l'Intelligence, la Sagesse et le Charisme, minimum 1, pendant 130 minutes
+resource: Confusion | 1/jour | action simple ; Volonté DD 19 ; rayon de 4,50 m ; durée 13 rounds
+resource: Désespoir foudroyant | 1/jour | action simple ; cône de 9 m ; Volonté DD 19 ; durée 13 minutes
+resource: Télékinésie | à volonté | action simple ; Volonté DD 20 lorsque le mode employé autorise une sauvegarde
+resource: Discours captivant et communication à distance | à volonté | Volonté DD 17 pour discours captivant
+
+step: Il est relié à son vaisseau
+  do: Observer par son interface les intrus à bord ou jusqu'à 27 m de la coque extérieure, en se concentrant ; leur parler par les parois pour connaître leurs intentions.
+  note: En maintenant cette surveillance, il peut activer en action rapide les pièges ou systèmes déjà présents dans la zone observée. La concentration occupe son action simple.
+
+step: Des intrus acceptent de l'écouter avant les hostilités
+  do: Employer discours captivant pour gagner du temps ; prévenir un interlocuteur connu par communication à distance si nécessaire.
+  note: Discours captivant exige un round de parole et cesse si l'auditoire subit une action ouvertement hostile. Il ne permet pas de donner des ordres aux intrus.
+
+step: Les ennemis approchent de sa cuve
+  do: Rester dans son contenant ; repérer les cibles par perception aveugle à 18 m et exploiter ses détections constantes du Bien, de la Loi et de la magie.
+  note: Sa télépathie porte à 18 m. Dans sa cuve, sa vitesse est de 0 m : il laisse venir les ennemis.
+
+## Ouverture
+
+step: Plusieurs adversaires sont regroupés à plus de 9 m
+  do: Lancer confusion sur le plus grand nombre, Volonté DD 19.
+  note: Privilégier ensuite les ennemis restés lucides ; attaquer une victime confuse l'incite à riposter contre lui.
+
+step: Plusieurs adversaires sont déjà dans un cône de 9 m
+  do: Ouvrir plutôt par désespoir foudroyant, Volonté DD 19 ; réserver confusion au round suivant.
+  note: Les victimes subissent un malus de 2 aux attaques, sauvegardes, tests de caractéristique et de compétence, ainsi qu'aux dégâts d'armes. Leur résistance à confusion devient plus faible.
+
+step: Une seule menace est exposée à distance
+  do: Tirer un éclair de plasma sur elle, en priorité si elle emploie le froid : +17 contre la CA de contact, 10d6 dégâts, moitié feu et moitié électricité.
+  note: Un éclair demande une action simple ; portée maximale 90 m, sans facteur de portée.
+
+## Rounds suivants
+
+step: Un lanceur de sorts est à portée de contact et une utilisation rapide reste disponible
+  do: Employer contact d'idiotie en action rapide, puis effectuer l'attaque à outrance ou l'action simple choisie pour ce round.
+  note: Aucun jet de sauvegarde ; la RM s'applique. Le malus peut empêcher l'emploi des sorts les plus élevés. Une seule action rapide par round, également partagée avec l'interface du vaisseau.
+
+step: Un ennemi est à 4,50 m ou moins et il peut consacrer son tour à frapper
+  do: Porter les 3 coups +20 ; concentrer les attaques sur le lanceur de froid ou sur une cible déjà affaiblie mentalement. Tenter l'étreinte gratuite après un coup réussi sur une cible de taille G ou inférieure.
+  note: Perturbation mentale : chaque coup impose Volonté DD 22 ou 1d4 dégâts d'Intelligence ; ne pas ajouter une seconde fois ces dégâts. Une créature qui le touche volontairement à mains nues, par attaque naturelle ou de contact subit aussi cet effet.
+
+step: Il retient une cible dangereuse par étreinte
+  do: Choisir entre maintenir la lutte par une action simple et la relâcher pour retrouver ses trois coups.
+  note: Maintenir la lutte ne permet pas simultanément une attaque à outrance. L'étreinte ne rend pas automatiquement la victime incapable de lancer des sorts.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Donner un coup +20 avec perturbation mentale et étreinte éventuelle.
+  note: Attaques réflexes permet jusqu'à 10 attaques d'opportunité par round, chacune devant être provoquée.
+
+step: Les adversaires restent hors d'allonge
+  do: Répéter les éclairs de plasma ; employer plutôt télékinésie pour désarmer une menace ou la bousculer lorsque cela gêne davantage son attaque.
+  note: Les manœuvres de télékinésie n'accordent pas de sauvegarde, mais la RM s'applique. Maintenir ce mode exige sa concentration et remplace donc le tir de plasma du round.
+
+## Repli
+
+step: Il tombe sous 40 PV et une issue protégée est accessible
+  do: Profiter des ennemis confus ou d'un obstacle pour quitter sa cuve et gagner un abri, à 3 m par action de déplacement.
+  note: Hors de la cuve, sa CA tombe à 17. Après une heure dehors, il gagne un niveau négatif au début de chaque heure suivante : chercher rapidement un contenant approprié.
+
+step: Aucune fuite praticable ne compense la perte de sa cuve
+  do: Rester dans son contenant, abattre d'abord les utilisateurs de froid et continuer à frapper ou à tirer jusqu'à élimination de la menace.

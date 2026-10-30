@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Petit animal neutre des collines ou plaines tempérées ; 9 pv, CA 13, déplacement de 9 m.
+  Coup de cornes +3 (1d4+1), allonge de 1,50 m ; sa seule attaque est au corps à corps.
+  Vision nocturne, Perception +4 ; solitaire, en couple ou en troupeau de 3 à 12.
+
+step: Une menace approche
+  do: Repérer le danger avec Perception +4 et garder une direction dégagée pour fuir.
+  note: Son intelligence animale limite ses choix à des réactions simples : fuir ou se défendre à coups de cornes.
+
+## Ouverture
+
+step: Un adversaire le menace à 1,50 m ou moins
+  do: Donner un coup de cornes +3 (1d4+1).
+
+step: Il doit se défendre contre un adversaire plus éloigné
+  do: Avancer de 9 m au maximum, puis donner un coup de cornes si la cible est à portée de 1,50 m.
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et la fuite ne s'impose pas
+  do: Répéter le coup de cornes +3 (1d4+1) chaque round.
+
+step: Il est agrippé
+  do: Tenter de se libérer avec un test d'Évasion +8 contre le DMD de l'adversaire.
+  note: Cette tentative prend une action simple ; une fois libre, utiliser son déplacement pour s'éloigner si possible.
+
+note: Résistance aux crocs-en-jambe
+  Son DMD est de 17 contre les crocs-en-jambe, contre 13 normalement ; cela ne lui donne aucune attaque supplémentaire.
+
+## Repli
+
+step: Il tombe à 4 pv ou moins, ou peut échapper à une menace trop dangereuse
+  do: Rompre le combat et fuir vers un espace dégagé ; utiliser la retraite pour parcourir jusqu'à 18 m.
+  note: La retraite évite les attaques d'opportunité dues au départ de sa case initiale, mais pas celles des autres cases traversées.
+
+step: La fuite est impossible
+  do: Continuer à donner des coups de cornes à l'adversaire à portée ; tenter Évasion +8 s'il est agrippé.

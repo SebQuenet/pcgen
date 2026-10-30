@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Guenaude des tempêtes, humanoïde monstrueux de taille M, chaotique mauvaise, FP 7. Elle sépare ses victimes par les vents puis les harcèle depuis les airs.
+  85 pv ; CA 21, contact 13 ; résistance à la magie 18 ; immunité à l'électricité. Déplacement terrestre 9 m, vol 18 m avec une bonne manœuvrabilité ; allonge 1,50 m.
+  Morsure +13 (1d6+3 plus 1d6 d'électricité) et deux griffes +13 (1d4+3 plus 1d6 d'électricité chacune). Éclair et contrôle du terrain complètent ses attaques.
+
+resource: Invisibilité | 3/jour | 10 minutes ; cesse dès qu'elle attaque ; conserver si possible une utilisation pour fuir
+resource: Éclair | 3/jour | ligne de 36 m ; 10d6 d'électricité ; Réflexes DD 16, moitié
+resource: Rivière de vent | 3/jour | ligne de 36 m, large de 1,50 m ; 10 rounds ; Vigueur DD 17
+resource: Tempête de neige | 3/jour | cylindre de 12 m de rayon et 6 m de haut ; 10 rounds ; aucun jet de sauvegarde, aucune résistance à la magie
+resource: Contrôle des vents | 1/jour | rayon maximal 120 m, hauteur 12 m ; 100 minutes ; Vigueur DD 18 contre les effets du vent
+resource: Bourrasque | à volonté | ligne de 18 m ; 1 round ; Vigueur DD 15 ; gêne la progression et les tirs
+
+step: Elle repère des intrus avant d'être découverte
+  do: Observer depuis les hauteurs avec Perception +14 et Discrétion +15 ; lancer invisibilité à l'approche du combat et choisir une trajectoire qui évite les combattants de mêlée.
+  note: Vision dans le noir à 18 m. Son odorat ne repère que les enfants humanoïdes et les jeunes animaux.
+
+step: Le terrain est exposé et les adversaires comptent sur leurs tirs ou leur vol
+  do: Préparer contrôle des vents avant de se rendre invisible ; augmenter la force du vent de trois catégories au maximum et orienter le souffle contre leur progression.
+  note: Storm rider la fait compter comme une créature de taille TG pour les effets du vent ; appliquer néanmoins les modificateurs de vent à ses tests de Vol +17.
+
+## Ouverture
+
+step: Au moins deux ennemis peuvent être pris dans une même ligne
+  do: Se placer en vol et lancer éclair, puis poursuivre son déplacement grâce à Attaque en vol, dans la limite de 18 m au total.
+  note: L'attaque met fin à son invisibilité ; terminer hors de portée des armes de mêlée.
+
+step: Les ennemis sont dispersés et leurs tireurs ou lanceurs de sorts la menacent
+  do: Placer tempête de neige sur ces adversaires pour couper leur vue et séparer le groupe ; rester à l'extérieur et guetter ceux qui en sortent.
+  note: La neige bloque aussi sa propre vision, même dans le noir. Au sol, avancer à demi-vitesse demande Acrobaties DD 10 ; un échec immobilise pour le round, un échec d'au moins 5 fait tomber.
+
+## Rounds suivants
+
+step: Plusieurs adversaires se trouvent encore alignés
+  do: Utiliser les éclairs restants en se repositionnant par les airs ; privilégier les cibles qui ont déjà subi des dégâts.
+
+step: Un passage étroit canalise les ennemis ou une cible doit être tenue à distance
+  do: Lancer rivière de vent dans leur axe de progression et attaquer depuis un autre angle pendant que le courant persiste.
+  note: À l'apparition, 4d6 dégâts non létaux et chute ; Vigueur DD 17 réduit de moitié et évite la chute. Au début du tour dans le courant, échec au même jet : 2d6 non létaux, recul de 6 m et chute ; réussite : seulement 1d6 non létaux. L'orientation reste fixe.
+
+step: Une cible isolée est accessible sans traverser les lignes ennemies
+  do: Effectuer une attaque en vol avec Frappe décisive : une morsure +13 infligeant 2d6+3 plus 1d6 d'électricité, puis s'éloigner ; déplacement total maximal 18 m.
+  note: Souplesse du serpent porte sa CA à 25 contre les attaques d'opportunité provoquées par son déplacement. Choisir sa trajectoire en conséquence.
+
+step: Un ennemi affaibli est déjà à portée et ses alliés ne peuvent pas intervenir
+  do: Rester au contact pour une attaque à outrance : morsure +13 et deux griffes +13, avec les dégâts du profil.
+  note: Réserver Frappe décisive aux attaques uniques ; l'attaque à outrance occupe son round et ne permet qu'un pas de placement de 1,50 m.
+
+step: Les pouvoirs quotidiens offensifs sont épuisés et il faut empêcher une poursuite immédiate
+  do: Employer bourrasque contre les poursuivants, surtout ceux de petite taille, puis reprendre de la distance en vol.
+
+## Repli
+
+step: Ses points de vie tombent à 25 ou moins, ou plusieurs ennemis peuvent la coincer
+  do: Lancer invisibilité et s'éloigner en vol de 18 m, en évitant les espaces occupés ; aux rounds suivants, effectuer des doubles déplacements jusqu'à 36 m.
+  note: Cesser d'attaquer pour conserver l'invisibilité.
+
+step: Elle ne dispose plus d'invisibilité
+  do: Placer une tempête de neige restante entre elle et les poursuivants, puis s'éloigner en vol ; si elle est encerclée au contact, effectuer un retrait vers les airs dès que possible.

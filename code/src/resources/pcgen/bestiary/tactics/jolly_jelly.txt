@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Jolly Jelly, vase neutre de taille M, sans intelligence : FP 5, 63 pv, CA 10. Son comportement de combat reste simple, sans ruse ni coordination.
+  Au contact, attaque à outrance de 3 coups +6, chacun infligeant 1d6+2 dégâts ; allonge de 1,50 m. Déplacement de 9 m et vision aveugle à 18 m.
+  Immunité au feu et immunités propres aux vases ; initiative −5 et Réflexes −3 : elle résiste grâce à ses pv et à ses immunités.
+
+note: Aura et phéromones
+  Aura de morosité dans un rayon de 9 m, DD 14 ; attaque spéciale de phéromones.
+  Leurs effets et leurs modalités ne sont pas précisés dans le bloc fourni : ne leur attribuer aucun malus, dégât ou contrôle supplémentaire.
+
+step: Une créature entre dans les 18 m de sa vision aveugle
+  do: La repérer et se tourner vers elle ; suivre la cible la plus proche sans élaborer de manœuvre complexe.
+  note: Ne pas lui faire détecter une cible au-delà de 18 m grâce à ce sens.
+
+## Ouverture
+
+step: La cible est à plus de 10,50 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour se rapprocher du contact.
+  note: Aucun coup pendant ce double déplacement ; l'aura couvre les créatures situées à 9 m ou moins.
+
+step: La cible est à plus de 1,50 m et à 10,50 m ou moins
+  do: Avancer de 9 m au maximum pour la placer dans son allonge, puis porter un seul coup +6, pour 1d6+2 dégâts.
+  note: Un déplacement ordinaire ne permet pas de porter les trois coups de l'attaque à outrance.
+
+step: La cible est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : 3 coups +6, chacun pour 1d6+2 dégâts.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Rester au contact et répéter les 3 coups +6 de l'attaque à outrance.
+  note: Concentrer simplement les coups sur la créature au contact, sans chercher à reconnaître les rôles ou les faiblesses des adversaires.
+
+step: Un pas de placement de 1,50 m suffit pour retrouver le contact
+  do: Faire ce pas, puis porter les 3 coups de l'attaque à outrance.
+  note: Ce pas suppose qu'elle n'effectue aucun autre déplacement pendant le round et que le terrain le permet.
+
+step: La cible s'éloigne davantage
+  do: La suivre à 9 m par déplacement ; porter un seul coup si un déplacement suffit, ou effectuer un double déplacement pour se rapprocher.
+
+step: Elle subit des attaques de feu
+  do: Continuer son approche ou ses coups au contact.
+  note: Son immunité annule les dégâts de feu ; elle ne lui confère aucune protection contre les autres types de dégâts.
+
+## Repli
+
+step: Ses pv diminuent et elle peut encore agir
+  do: Continuer à attaquer au contact ou à poursuivre une cible repérée.
+  note: Aucun seuil de fuite n'est indiqué. Son absence d'intelligence ne justifie pas un repli tactique organisé.
+
+step: Aucune cible n'est plus repérée dans les 18 m
+  do: Cesser la poursuite dirigée, faute de cible localisée.
+  note: Ne pas lui faire suivre à distance une cible que sa vision aveugle ne détecte plus.

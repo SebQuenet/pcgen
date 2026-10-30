@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Tizheruk, créature magique de grande taille, neutre, prédateur solitaire ou en couple des rivières et marais tempérés. Intelligence 2 ; 52 pv ; CA 18.
+  Morsure +12 (2d6+10 et étreinte), allonge 3 m ; ou langue +12 (étreinte et traction), allonge 6 m. Choisir une seule de ces attaques.
+  Lutte +17 ; nage à 12 m par déplacement, déplacement terrestre à 3 m. Discrétion +14 dans l'eau, +6 ailleurs ; Perception +7 ; vision dans le noir à 18 m et vision nocturne.
+
+step: Une proie approche de la berge
+  do: Se dissimuler dans l'eau et attendre qu'une cible s'avance à portée de langue
+  note: privilégier une proie isolée, près de l'eau ; éviter de poursuivre sur terre
+
+## Ouverture
+
+step: Une cible se trouve à plus de 3 m et à 6 m ou moins
+  do: Attaquer avec la langue +12, tenter l'étreinte avec la lutte +17 et tirer la victime vers soi
+  note: la langue n'inflige aucun dégât indiqué ; son intérêt est la capture et la traction
+
+step: Une cible se trouve à 3 m ou moins
+  do: Mordre à +12 pour 2d6+10 dégâts et tenter l'étreinte avec la lutte +17
+  note: rester dans l'eau autant que possible
+
+## Rounds suivants
+
+step: Une victime est agrippée à portée de morsure
+  do: Maintenir la lutte à +17 pour lui infliger les dégâts de morsure, 2d6+10
+  note: concentrer les attaques sur cette proie tant que les autres adversaires ne menacent pas sérieusement le tizheruk
+
+step: Une victime agrippée peut être entraînée dans l'eau
+  do: Utiliser la lutte pour déplacer la victime vers l'eau ou l'éloigner de la berge
+  note: privilégier la capture d'une seule proie ; ne pas compter sur la vitesse normale de nage pendant le déplacement en lutte
+
+step: La victime se libère
+  do: Mordre si elle reste à 3 m ou moins ; employer la langue si elle est à plus de 3 m et à 6 m ou moins
+
+step: Aucune cible n'est à portée
+  do: Se rapprocher à la nage en restant dans l'eau ; attendre une nouvelle occasion si les adversaires s'éloignent sur terre
+
+## Repli
+
+step: Points de vie à 13 ou moins, ou attaques adverses trop dangereuses
+  do: Relâcher la proie et fuir à la nage, à 12 m par déplacement, vers un abri aquatique
+  note: chercher ensuite à se dissimuler avec Discrétion +14 dans l'eau ; utiliser compression si un passage étroit permet d'échapper aux poursuivants

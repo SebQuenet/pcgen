@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Mystique orc, humanoïde de taille M chaotique mauvais : 20 pv, CA 15. Il privilégie le combat à la hache d'armes.
+  Hache d'armes +5 (1d8+3, critique ×3) ; javeline +1 (1d6+3). Déplacement de 6 m ; vision dans le noir à 18 m.
+
+step: Il peut choisir sa position
+  do: Privilégier un passage étroit pour limiter les adversaires au contact et garder une voie de repli.
+  note: Dans l'obscurité, sa vision dans le noir lui permet de surveiller les approches jusqu'à 18 m.
+
+## Ouverture
+
+step: Un ennemi est déjà au contact
+  do: Frapper avec la hache d'armes à +5 (1d8+3, critique ×3).
+
+step: Aucun ennemi n'est au contact, mais une cible peut être rejointe avec un déplacement de 6 m au plus
+  do: Avancer jusqu'à elle, puis attaquer avec la hache d'armes.
+
+step: Une cible est à portée de javeline, mais ne peut pas être rejointe avec un déplacement de 6 m
+  do: Lancer une javeline à +1 (1d6+3), puis avancer de 6 m au maximum vers une position favorable au combat rapproché.
+  note: La javeline sert à entamer l'approche ; son attaque à la hache est plus précise.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Porter une attaque de hache d'armes par round ; concentrer les coups sur la même cible tant qu'elle reste accessible.
+
+step: Sa cible tombe ou s'éloigne
+  do: Rejoindre un autre adversaire avec un déplacement de 6 m au plus et attaquer s'il arrive au contact.
+
+step: Un pas de 1,50 m suffit pour éviter l'encerclement
+  do: Faire ce pas vers un obstacle ou un passage étroit, puis attaquer à la hache si une cible reste au contact.
+  note: Ce pas remplace son déplacement du round.
+
+## Repli
+
+step: Points de vie à 5 ou moins, ou combat manifestement perdu
+  do: Utiliser une action de retraite pour s'éloigner jusqu'à 12 m vers un abri ou des alliés accessibles.
+  note: La retraite évite les attaques d'opportunité dues au départ de sa case initiale ; traverser ensuite une autre zone menacée reste dangereux.
+
+step: La fuite est bloquée
+  do: Frapper à la hache l'adversaire qui ferme la sortie, puis se retirer dès qu'un passage s'ouvre.

@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Oozeanderthal, mort-vivant de taille M sans intelligence, couvert de vase toxique. Il attaque les créatures vivantes sans élaborer de tactique complexe. 22 pv, CA 12.
+  Deux griffes +5, chacune infligeant 1d6+4 dégâts et exposant la victime à la vase toxique ; allonge de 1,50 m. Déplacement de 9 m, vision dans le noir à 18 m.
+
+note: Enveloppe de vase
+  Sa couche de vase lui confère l'immunité à l'électricité et aux tentatives de renvoi des morts-vivants. Les armes qui le frappent se couvrent de vase.
+
+## Ouverture
+
+step: Une créature vivante est déjà à 1,50 m
+  do: Effectuer une attaque à outrance avec les deux griffes +5, chacune pour 1d6+4 dégâts et vase toxique.
+
+step: Une créature vivante peut être mise à portée avec un déplacement de 9 m au maximum
+  do: Avancer au contact et porter une seule attaque de griffe +5, pour 1d6+4 dégâts et vase toxique.
+  note: Après ce déplacement, il ne porte pas ses deux attaques de griffes.
+
+step: Aucune créature vivante ne peut être attaquée après un seul déplacement
+  do: Se rapprocher de la plus proche par un double déplacement, jusqu'à 18 m.
+
+## Rounds suivants
+
+step: Une créature vivante reste à portée
+  do: Répéter l'attaque à outrance avec les deux griffes +5.
+  note: Chaque griffe qui touche impose un jet de Vigueur DD 15 ; un échec rend la victime nauséeuse pendant 1d4 rounds. Résoudre le jet pour chaque touche.
+
+step: La victime est nauséeuse et reste au contact
+  do: Continuer à la frapper avec les griffes, sans chercher à répartir méthodiquement la vase entre les adversaires.
+
+step: La cible s'éloigne
+  do: La suivre ; si un pas de 1,50 m suffit, effectuer ce pas puis attaquer avec les deux griffes. Si un déplacement plus long est nécessaire, avancer de 9 m au maximum puis porter une seule griffe si la cible est à portée.
+  note: Si elle reste hors de portée, poursuivre par un double déplacement au lieu d'attaquer.
+
+## Repli
+
+step: Ses points de vie diminuent, même près de la destruction
+  do: Poursuivre les attaques contre les vivants jusqu'à sa destruction ; ce mort-vivant sans intelligence ne décide pas de fuir pour se préserver.

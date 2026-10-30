@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire d'énergie négative de taille M, extraplanaire et neutre, originaire du plan de l'Énergie négative. 30 pv, CA 19, réduction des dégâts 5/— et immunités des élémentaires.
+  Coup +9, portée 1,50 m : 1d6+1 dégâts physiques, plus 1d6 dégâts d'énergie négative et un niveau négatif contre les vivants. Vol à 18 m, manœuvrabilité bonne ; initiative +9.
+
+resource: Aura d'énergie négative | permanente | rayon de 6 m ; les canalisations d'énergie négative fonctionnent comme si leur utilisateur avait 2 niveaux de plus ; les sorts utilisant cette énergie sont maximisés sans emplacement de niveau supérieur
+
+note: Effets de l'énergie négative
+  L'aura n'inflige pas de dégâts par elle-même. Elle renforce aussi les pouvoirs des ennemis présents dans son rayon.
+  Le 1d6 d'énergie négative du coup soigne les morts-vivants et les créatures d'énergie négative ; les dégâts physiques du coup subsistent. Tout excédent de soins devient des pv temporaires pendant 1 minute.
+
+step: Des intrus approchent
+  do: Se dissimuler et observer avant de fondre sur une créature vivante accessible
+  note: Discrétion +12, Perception +7 ; vision dans le noir à 18 m. Choisir une approche aérienne dégagée.
+
+## Ouverture
+
+step: Une créature vivante est à portée de déplacement
+  do: Voler jusqu'à 1,50 m d'elle, sur un trajet de 18 m au maximum, puis porter un coup +9
+  note: Privilégier une cible isolée pour éviter de s'exposer à plusieurs combattants au contact.
+
+step: Aucune cible vivante n'est accessible ce round
+  do: Se rapprocher en volant, en utilisant la hauteur et les obstacles disponibles pour limiter les attaques adverses
+  note: Il ne possède aucune attaque à distance ; rester à 6 m d'un ennemi ne lui inflige aucun dégât.
+
+## Rounds suivants
+
+step: La cible vivante reste au contact
+  do: Répéter le coup +9 chaque round et concentrer les attaques sur elle
+  note: Chaque coup réussi inflige un niveau négatif, cumulable avec les précédents. Aucun jet de sauvegarde immédiat n'annule ce niveau ; le DD de Vigueur pour le supprimer est de 14.
+
+step: La cible s'éloigne ou tombe
+  do: La poursuivre en vol ou rejoindre une autre cible vivante accessible, puis frapper si une action simple reste disponible
+  note: Son vol ne lui permet pas de repartir après son attaque sans disposer encore d'une action de déplacement.
+
+step: Plusieurs adversaires l'entourent
+  do: Gagner une position où moins d'ennemis peuvent le frapper, en volant si nécessaire
+  note: Souplesse du serpent accorde +4 à la CA contre les attaques d'opportunité provoquées par son déplacement ; elle ne les empêche pas.
+
+## Repli
+
+step: Points de vie à 10 ou moins et voie de fuite accessible
+  do: Effectuer une retraite en vol, jusqu'à 36 m sur un trajet dégagé, pour gagner de la hauteur ou un abri
+  note: La retraite protège le départ de la case initiale contre les attaques d'opportunité des ennemis visibles ; traverser d'autres cases menacées reste dangereux.
+
+step: Fuite impossible
+  do: Continuer à frapper une créature vivante, en restant si possible à moins de 6 m de plusieurs ennemis vivants
+  note: Son explosion finale ne se déclenche que lorsqu'il est tué ; il ne peut pas l'activer volontairement.
+
+resource: Explosion à la mort | une fois, lorsqu'il est tué | rayon de 6 m ; les vivants subissent 2d8 dégâts d'énergie négative, Réflexes DD 14 pour réduire de moitié ; les morts-vivants et les créatures d'énergie négative sont soignés du même montant

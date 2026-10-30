@@ -1,0 +1,91 @@
+## Avant le combat
+
+note: Profil
+  Katpaskir, démon chaotique mauvais de taille M, FP 18 : un prédateur intelligent qui déforme les distances et frappe en se téléportant. Il possède 304 pv, une CA de 31 et une RM de 29.
+  Attaque à outrance : 2 griffes +31 (2d6+10, critique 19–20) et 4 serres +31 (1d8+10), allonge de 1,50 m. Il concentre ses six attaques sur une cible vulnérable.
+  Déplacement de 12 m, fouissement de 6 m, vol de 18 m ; vision dans le noir à 18 m, détection de l'invisibilité et liberté de mouvement permanentes.
+  RD 10/fer froid et loyal ; immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu. Ses pouvoirs magiques ont un NLS de 20 et une concentration de +26.
+
+note: Distorsion des distances
+  Dans un rayon de 9 m, les autres créatures comptent les distances doubles, notamment pour se déplacer et déterminer les portées. Le katpaskir agit normalement ; ses renforts subissent aussi cette distorsion.
+  Au début de son tour dans l'aura, chaque autre créature tente Volonté DD 26 ou subit lenteur pendant 1 round. Liberté de mouvement protège de cette lenteur, mais pas des distances doublées.
+
+resource: Pouvoirs permanents | permanent | liberté de mouvement, détection de l'invisibilité
+resource: Pouvoirs à volonté | illimité | scintillement, porte dimensionnelle, ancre dimensionnelle, téléportation suprême, changement de plan (Volonté DD 23)
+resource: Bannissement | 3/jour | Volonté DD 23, RM applicable
+resource: Désintégration à effet augmenté | 3/jour | rayon de contact à distance +26, Vigueur DD 22, RM applicable
+resource: Labyrinthe | 3/jour | aucun jet de sauvegarde, RM applicable
+resource: Portail | 1/jour | passage planaire ou appel de créatures
+resource: Convocation de démons | 1/jour | pouvoir de niveau 7 ; 50 % de réussite pour 1d4 nuées de fourmis légionnaires fiélons
+resource: Convocation de monstres IX | 1/jour | renforts choisis dans les listes autorisées par le sort
+
+step: Une perturbation planaire révèle l'approche d'intrus
+  do: Exploiter son sens des distorsions pour préparer une interception
+  note: Il détecte les effets de conjuration dans un rayon de 1 584 m, avec direction et distance approximative. Une téléportation lui permet d'observer son origine ou sa destination dans ce rayon par clairaudience/clairvoyance, en action immédiate.
+
+step: Il dispose de plusieurs rounds de préparation
+  do: Employer portail pour appeler un démon d'au plus 20 DV et lui ordonner de participer au combat ; consacrer des rounds distincts aux autres convocations utiles
+  note: Placer les renforts de manière à occuper les combattants pendant qu'il attaque les soutiens. Une tentative de convocation de nuées échouée consomme tout de même son utilisation quotidienne.
+
+step: Le contact est imminent et les attaques physiques constituent la menace principale
+  do: Activer scintillement avant de se montrer
+  note: Durée de 20 rounds ; les attaques physiques ordinaires contre lui ont 50 % de chances de manquer, mais ses propres attaques ont aussi 20 % de chances de manquer et ses sorts risquent d'échouer lorsqu'il devient éthéré.
+
+## Ouverture
+
+step: Un combattant dangereux protège les lanceurs de sorts
+  do: Lancer labyrinthe sur ce protecteur, puis profiter des rounds suivants pour atteindre les soutiens
+  note: Le sort retire une cible sans sauvegarde, sous réserve de sa RM. Pour sortir, elle doit réussir un test d'Intelligence DD 20 au prix d'une action complexe ; le labyrinthe dure au maximum 10 minutes.
+
+step: Une cible vulnérable est accessible et aucun adversaire ne doit d'abord être neutralisé
+  do: Utiliser Dimensional Dervish : porte dimensionnelle en action rapide pendant une attaque à outrance, puis déchirer la cible avec ses six attaques
+  note: Répartir jusqu'à 24 m de téléportation en utilisant sa vitesse terrestre, par sauts d'au moins 1,50 m avant, entre et après les attaques. Garder assez de distance disponible pour terminer à une position favorable.
+  note: Avec Dimensional Savant, attaquer depuis deux côtés opposés permet de se prendre lui-même comme partenaire de prise en tenaille ; les attaques qui en bénéficient gagnent +2. Ce bénéfice persiste jusqu'au début de son prochain tour.
+
+step: Il est surpris, sans renforts, et plusieurs adversaires peuvent l'encercler
+  do: Consacrer son premier tour à portail ou à convocation de monstres IX, puis engager au round suivant
+  note: Ces pouvoirs ne s'ajoutent pas gratuitement à son attaque à outrance.
+
+## Rounds suivants
+
+step: Il peut continuer à attaquer une cible vulnérable
+  do: Répéter l'attaque à outrance avec Dimensional Dervish ; achever cette cible avant de passer à la suivante
+  note: Terminer dans les 9 m des ennemis à gêner par l'aura, tout en évitant de rester entouré de plusieurs combattants. Une téléportation finale après la dernière attaque permet de quitter le contact.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance sur les attaques naturelles
+  note: Avec son BBA de +21, appliquer −6 aux attaques et +12 aux dégâts : griffes +25 (2d6+22) et serres +25 (1d8+22), avant les autres modificateurs.
+
+step: Une arme ou un objet tenu représente une menace décisive
+  do: Remplacer une attaque de mêlée par destruction, BMO +35 contre le DMD du porteur
+  note: Tenir compte de la solidité de l'objet ; avec Destruction supérieure, les dégâts excédant ceux nécessaires pour le détruire peuvent atteindre son porteur.
+
+step: Une cible fragile à faible Vigueur reste à distance, ou un obstacle bloque l'accès
+  do: Utiliser désintégration à effet augmenté
+  note: Contre une créature, toucher à distance +26, puis Vigueur DD 22 : 40d6 multipliés par 1,5 en cas d'échec, 5d6 multipliés par 1,5 en cas de réussite. Le rayon peut aussi supprimer une section d'obstacle, notamment un mur de force.
+
+step: Des adversaires extraplanaires constituent la menace principale
+  do: Employer bannissement, Volonté DD 23, pour les renvoyer sur leur plan d'origine
+  note: Ne pas gaspiller ce pouvoir contre des créatures natives du plan où se déroule le combat.
+
+step: Un ennemi tente de rejoindre ou de quitter les 9 m autour de lui par téléportation
+  do: Appliquer la perturbation de téléportation
+  note: Test de NLS DD 29 ; sur un échec, annuler l'effet ou en détourner l'arrivée vers une case inoccupée dans les 36 m. Choisir une arrivée qui isole l'ennemi.
+
+step: Un adversaire doit absolument rester sur place malgré ses moyens de fuite planaire
+  do: Lancer ancre dimensionnelle, attaque de contact à distance +26
+  note: Pas de sauvegarde, mais RM applicable ; ce verrouillage durable complète la perturbation de téléportation au prix d'une action consacrée au pouvoir.
+
+step: Ses téléportations sont empêchées
+  do: Exploiter son vol pour changer d'angle ou son fouissement dans un sol approprié ; employer les pouvoirs offensifs à distance lorsqu'il ne peut atteindre une cible
+  note: Le fouissement ne lui donne pas la capacité de traverser la roche. Sa liberté de mouvement lui permet de se dégager des entraves qu'elle neutralise.
+
+## Repli
+
+step: Points de vie sous 76, ou risque d'être abattu avant son prochain tour
+  do: Utiliser téléportation suprême vers un lieu connu et sûr ; choisir changement de plan s'il doit abandonner le plan actuel
+  note: Téléportation suprême ne transporte que lui et au plus 25 kg d'objets. Les renforts encore présents peuvent continuer à occuper les poursuivants.
+
+step: Une ancre dimensionnelle ou un autre effet interdit sa fuite magique
+  do: Se dégager par le vol à 18 m ou le fouissement à 6 m par action de mouvement, en utilisant les obstacles pour couper les lignes de vue
+  note: Une fois la fuite planaire redevenue possible, se téléporter sans attendre d'être acculé.

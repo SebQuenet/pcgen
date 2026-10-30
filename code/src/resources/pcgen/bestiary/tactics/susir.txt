@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Susir, Extérieur élémentaire de l'Air de taille TG, neutre, FP 23. Il combine une grande résistance et une mobilité aérienne exceptionnelle : 500 pv, CA 35, réduction des dégâts 15/–, résistance à la magie 34 et traits des élémentaires.
+  Vol parfait à 36 m par déplacement ; espace occupé et allonge de 4,50 m. Attaque à outrance : 2 coups +53, chacun infligeant 4d6+14 dégâts. Tourbillon DD 44 ; commandement des élémentaires de l'Air DD 36.
+  Il préfère un espace ouvert où il peut choisir ses approches et atteindre les adversaires en retrait. Vision dans le noir à 18 m, Perception +49 et télépathie à 30 m.
+
+resource: Convocation | 1/jour | niveau 9, réussite 100 % ; au choix, 1d2 élémentaires de l'Air anciens, 1d4 élémentaires de l'Air nobles, 1d4 djinns ou 4 à 8 traqueurs invisibles
+resource: Éclair multiple | 3/jour | DD 22 ; niveau de lanceur de sorts 20
+resource: Contrôle du climat | 3/jour | préparer les conditions météorologiques avant l'affrontement si le temps le permet
+resource: Mur de vent | 3/jour | DD 19
+resource: Contrôle des vents | à volonté | DD 21
+resource: Détection de la magie et dissipation de la magie | à volonté | niveau de lanceur de sorts 20
+resource: Bourrasque | à volonté | DD 18
+resource: Brume de dissimulation | à volonté | masque aussi sa propre vision
+resource: Téléportation suprême | à volonté | lui-même et 50 livres d'objets seulement
+
+step: Des adversaires approchent et il dispose du temps nécessaire
+  do: Préparer le terrain avec contrôle des vents ; employer contrôle du climat seulement si l'affrontement laisse le temps à ce pouvoir d'agir
+  note: Choisir des vents qui gênent les approches et les tirs adverses ; tenir compte de leur effet sur ses propres auxiliaires
+
+step: Il peut convoquer ses renforts avant l'engagement
+  do: Employer sa convocation, en privilégiant les élémentaires de l'Air pour soutenir le combat aérien
+  note: Une seule option de convocation ; ne pas cumuler les quatre groupes proposés
+
+step: Des auxiliaires sont présents
+  do: Leur assigner des cibles par télépathie et les répartir sur plusieurs directions d'approche
+  note: Une escorte éventuelle de 2 à 4 élémentaires de l'Air nobles s'ajoute seulement si la rencontre la prévoit
+
+## Ouverture
+
+step: Plusieurs ennemis sont visibles et peuvent être atteints par les arcs de l'éclair
+  do: Lancer éclair multiple, DD 22, depuis une position aérienne ; choisir le lanceur de sorts ou l'adversaire le plus menaçant comme cible principale
+  note: Rester hors de portée de mêlée lorsque le terrain le permet et préserver les auxiliaires du choix des cibles
+
+step: Un élémentaire de l'Air hostile représente une menace immédiate
+  do: Tenter de le commander, DD 36, plutôt que de consacrer ses coups à le détruire
+  note: Ce pouvoir vise les élémentaires de l'Air ; la présence d'un djinn ou d'un traqueur invisible ne suffit pas à le rendre applicable
+
+step: Les tirs d'arcs et d'arbalètes constituent la menace principale
+  do: Interposer un mur de vent avant de poursuivre l'approche
+  note: Ce mur ne protège pas de tous les sorts ou de tous les projectiles
+
+## Rounds suivants
+
+step: Plusieurs adversaires restent groupés sur son trajet
+  do: Passer en tourbillon, DD 44, et exploiter son vol pour traverser leurs positions
+  note: Le bloc fourni ne détaille pas les dimensions, la durée ni les dégâts du tourbillon ; ne pas lui attribuer de valeurs supplémentaires
+
+step: Une cible prioritaire est à 4,50 m ou moins et rester sur place est avantageux
+  do: Hors forme de tourbillon, effectuer une attaque à outrance : 2 coups +53, chacun pour 4d6+14 dégâts
+  note: Concentrer les deux coups sur la même cible pour l'éliminer rapidement ; profiter de l'allonge et d'Attaques réflexes contre les déplacements qui provoquent des attaques d'opportunité
+
+step: Une cible isolée est accessible mais le contact prolongé serait dangereux
+  do: Utiliser Attaque en vol pour approcher, porter un coup +53 pour 4d6+14 dégâts, puis poursuivre le déplacement, dans la limite totale de 36 m
+  note: Cette passe ne donne pas les deux coups de l'attaque à outrance et ne supprime pas à elle seule les attaques d'opportunité dues au déplacement
+
+step: Plusieurs ennemis entourent Susir à portée de ses coups
+  do: Employer le don Attaque en rotation pour porter un coup contre chacun des adversaires à portée
+  note: Cette action remplace l'attaque à outrance ; elle est distincte du pouvoir de tourbillon
+
+step: Des protections magiques empêchent d'atteindre une cible décisive
+  do: Employer dissipation de la magie sur l'effet gênant, puis reprendre l'offensive au round suivant
+  note: Choisir un effet dont la suppression ouvre réellement une occasion aux auxiliaires ou à ses propres attaques
+
+step: Le groupe reste à distance et plusieurs cibles sont encore exposées
+  do: Réutiliser éclair multiple jusqu'à épuisement des 3 utilisations ; sinon, modifier les vents pour gêner les approches et les tirs
+  note: Si ses renforts n'ont pas encore été convoqués, consacrer une action à leur arrivée lorsque leur intervention peut changer le combat
+
+## Repli
+
+step: Points de vie sous 125, ou risque immédiat d'être neutralisé
+  do: Employer téléportation suprême vers un lieu connu et sûr
+  note: Ce seuil est une consigne tactique. La téléportation n'emporte pas ses auxiliaires ; leur ordonner séparément de couvrir sa fuite
+
+step: La téléportation est empêchée
+  do: S'éloigner en vol à 36 m par déplacement, en cherchant un couvert qui coupe les lignes de vue
+  note: Si nécessaire, consacrer une action à brume de dissimulation ou à un mur de vent pour gêner les poursuivants avant de repartir ; la brume gêne aussi sa propre vision

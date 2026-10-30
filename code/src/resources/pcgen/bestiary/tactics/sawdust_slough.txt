@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Sawdust Slough, plante de taille G, neutre et sans intelligence : une masse de sciure et de copeaux animés, attirée par les bruits et les vibrations du travail du bois.
+  57 pv, CA 12, RD 5/—, corps amorphe et immunités des plantes ; vulnérable au feu.
+  Coup +7 (1d6+6), allonge 1,50 m ; aura de poussière suffocante à 1,50 m, Vigueur DD 18.
+  Occupe 3 m de côté ; marche et escalade à 6 m, Escalade +12 ; perception des vibrations à 18 m et vision nocturne.
+
+step: Bruits de hache, de scie ou autres vibrations repérables
+  do: Se diriger vers leur origine, poussé par son instinct destructeur
+  note: La perception des vibrations repère les créatures en contact avec la même surface dans un rayon de 18 m ; sa Perception ordinaire est de −5
+
+## Ouverture
+
+step: Une cible repérée est hors de son allonge
+  do: Avancer vers elle, puis porter un coup +7 (1d6+6) si un déplacement de 6 m suffit à arriver à 1,50 m
+  note: Si elle reste trop loin, poursuivre par un second déplacement de 6 m
+
+step: Une cible est déjà à 1,50 m ou moins
+  do: Porter un coup +7 (1d6+6) et rester au contact
+
+## Rounds suivants
+
+step: Une créature commence son tour dans une case adjacente
+  do: Appliquer la poussière suffocante : elle révèle les créatures invisibles et rend les victimes éblouies au contact, puis pendant 1d3 rounds après leur éloignement
+  note: Une créature qui respire devient aussi fiévreuse pour la même durée, sauf réussite d'un jet de Vigueur DD 18 ; retenir son souffle avant l'exposition protège de cet effet tant que l'apnée dure
+
+step: Une cible reste au contact
+  do: Répéter le coup +7 (1d6+6), sans élaborer de manœuvre complexe
+
+step: La cible s'éloigne ou grimpe sur un obstacle accessible
+  do: La suivre à 6 m par déplacement, au sol ou en escalade, et frapper dès qu'elle est à portée
+  note: Son allonge reste de 1,50 m malgré sa taille G
+
+step: Il subit des dégâts de feu
+  do: Augmenter ces dégâts de moitié ; chaque créature adjacente fait un jet de Réflexes DD 18 ou subit des dégâts de feu égaux à la moitié de ceux qu'il a subis
+  note: Sa poussière brûle : l'aura cesse de fonctionner jusqu'à la fin de son prochain tour ; il continue à donner des coups
+
+## Repli
+
+step: Il est blessé et une cible reste accessible
+  do: Poursuivre l'assaut jusqu'à sa destruction
+  note: Dépourvu d'intelligence, il n'organise aucun repli et n'adopte pas de seuil de fuite en points de vie

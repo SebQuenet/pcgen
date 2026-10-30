@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Ulkreth, démon chaotique mauvais gigantesque, serviteur de Xoveron voué à la destruction des bâtiments et des civilisations. Brutal et peu subtil, il préfère vite les coups au bombardement.
+  229 pv ; CA 30, contact 6 ; espace et allonge de 6 m. Attaque à outrance : coup de corne +23 (2d8+10 plus 1d6 perforants) et 4 coups +24 (2d6+10, critique 19–20, plus 1d6 perforants). À distance : 4 rochers +14 (3d6+10 chacun).
+  Déplacement de 9 m, escalade de 6 m, vol de 15 m avec une manœuvrabilité déplorable. Vision dans le noir et perception des vibrations à 18 m ; Perception +30.
+  RD 10/fer froid et Bien ; immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10. Réflexes +5 et CA de contact 6 : les attaques de zone et les rayons sont des menaces sérieuses.
+
+resource: Glissement de terrain | 3/jour | préparation du sol meuble
+resource: Tremblement de terre | 1/jour | à réserver aux ennemis au sol ou aux structures
+resource: Convocation | 1/jour | niveau 5 ; 1 ulkreth ou 1 omox ; réussite de 40 %
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,5 kg d'objets
+resource: Fracassement | à volonté | DD 14 ; objets non magiques
+
+step: Il dispose de temps avant l'arrivée des ennemis
+  do: Employer glissement de terrain pour modeler des talus ou des fossés et canaliser l'approche vers son allonge de 6 m.
+  note: Ce pouvoir déplace lentement la terre meuble ; il sert à préparer le champ de bataille, pas à ensevelir des adversaires pendant la mêlée.
+
+step: Des constructions occupent le champ de bataille
+  do: Utiliser Connaissances en ingénierie +18 pour repérer les éléments porteurs et choisir où provoquer des destructions.
+  note: Prévoir une position hors des effondrements et réunir des rochers si le terrain en fournit.
+
+step: Le combat est imminent et il peut préparer du renfort
+  do: Tenter la convocation d'un ulkreth et lui faire aborder les adversaires par un autre côté.
+  note: Une seule tentative quotidienne, avec 40 % de réussite ; un échec consomme cette tentative. L'omox est l'autre choix possible.
+
+## Ouverture
+
+step: Les ennemis sont au sol dans une zone propice aux effondrements
+  do: Déclencher tremblement de terre sur leur position, en restant hors de la zone dangereuse.
+  note: Les effets dépendent du terrain ; privilégier un bâtiment, une falaise ou un plafond susceptible de s'effondrer. Il subit lui aussi les dangers du terrain s'il s'y expose.
+
+step: Les ennemis restent hors de son allonge et des rochers sont prêts
+  do: Lancer les 4 rochers +14, chacun infligeant 3d6+10, avec une attaque à outrance.
+  note: Concentrer les tirs sur une cible exposée ; cette salve occupe son tour d'attaque, elle ne s'ajoute pas à une charge.
+
+step: Une cible vulnérable est accessible par une charge
+  do: Charger et porter un seul coup, en privilégiant un adversaire peu protégé.
+  note: Charge à travers permet une manœuvre de renversement contre un seul adversaire sur le trajet ; BMO de renversement +35, avant les modificateurs de circonstance. Un échec arrête la charge devant cet obstacle.
+
+step: Un adversaire est déjà à 6 m ou moins et il peut rester sur place
+  do: Porter l'attaque à outrance complète : coup de corne et 4 coups, en concentrant les attaques sur la même victime.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Continuer les attaques à outrance, avec au besoin un pas de 1,50 m pour conserver une bonne position.
+  note: Privilégier le combattant dont l'arme traverse sa RD ou l'ennemi déjà blessé ; conserver son allonge pour menacer les déplacements et les incantations proches.
+
+step: La cible est facile à toucher
+  do: Activer Attaque en puissance avant les attaques de mêlée : coup de corne +18 (2d8+20 plus 1d6 perforants) et 4 coups +19 (2d6+20, critique 19–20, plus 1d6 perforants).
+  note: Le malus de −5 affecte aussi ses manœuvres et dure jusqu'à son prochain tour. Garder les bonus normaux contre une défense élevée ou pour une manœuvre décisive.
+
+step: Une arme, une armure ou un bouclier ennemi mérite d'être détruit
+  do: Remplacer une attaque de mêlée par une destruction d'objet, BMO +35 sans Attaque en puissance, en tenant compte de la solidité de l'objet.
+  note: Destruction supérieure transmet au porteur les dégâts excédentaires lorsque l'objet est détruit. Viser d'abord l'arme qui menace ses défenses.
+
+step: Il confirme un critique de mêlée contre un ennemi armé
+  do: Appliquer Sundering Strike : si le jet de confirmation dépasse aussi le DMD de l'adversaire, infliger séparément les dégâts normaux à son arme comme pour une destruction d'objet.
+  note: Cet effet s'ajoute au critique et ne provoque pas d'attaque d'opportunité ; les coups menacent un critique sur 19–20.
+
+step: Un renversement fait tomber un adversaire
+  do: Exploiter l'attaque d'opportunité provoquée par Renversement supérieur, s'il peut encore en porter une.
+  note: Le renversement met à terre si son résultat dépasse le DMD d'au moins 5 ; il ne cause pas de dégâts de piétinement.
+
+step: Une cible non magique utile peut être brisée à distance
+  do: Employer fracassement sur un objet précis, comme une arme non magique ou un élément fragile ; Volonté DD 14 si un jet de sauvegarde s'applique.
+  note: Choisir cette action seulement si détruire l'objet vaut mieux qu'une attaque ; le pouvoir ne détruit pas les armes magiques.
+
+step: Les ennemis se dispersent ou le harcèlent hors de portée
+  do: Utiliser téléportation suprême pour rejoindre une position connue près d'une cible isolée, ou avancer et porter un seul coup si cela suffit.
+  note: La téléportation consomme son action simple ; préparer l'attaque à outrance du tour suivant. Il ne transporte pas de créature avec ce pouvoir.
+
+step: Un adversaire lui lance un rocher
+  do: Tenter de l'intercepter grâce à réception de rochers si ses mains le permettent.
+
+## Repli
+
+step: Ses points de vie passent sous 60 et les ennemis gardent l'avantage
+  do: Employer téléportation suprême vers un endroit connu hors du combat.
+  note: Ce seuil est un choix tactique : sa soif de destruction peut le pousser à insister, mais il ne possède aucun soin dans ce profil.
+
+step: La téléportation est empêchée
+  do: Rompre le contact puis chercher une issue par le vol à 15 m ou l'escalade à 6 m, selon le terrain.
+  note: Sa manœuvrabilité déplorable rend le vol peu adapté aux espaces exigus ; utiliser les obstacles pour couper les lignes de tir.

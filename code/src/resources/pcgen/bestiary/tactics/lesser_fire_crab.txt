@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Petit crabe de feu extraplanaire, vermine sans intelligence qui saisit et brûle les créatures proches. 4 points de vie ; CA 14.
+  Deux pinces +3, chacune infligeant 1d2 dégâts plus 1d4 de feu avec étreinte ; constriction : 1d2 dégâts contondants plus 1d4 de feu lors du maintien de la lutte.
+  Marche et nage à 6 m ; allonge de 1,50 m. Immunité au feu ; vulnérabilité au froid.
+
+note: Repérage
+  Vision dans le noir à 18 m ; perception des vibrations à 18 m ; Perception +4.
+
+## Ouverture
+
+step: Une créature repérée est hors de portée des pinces
+  do: S'en approcher en marchant ou en nageant, jusqu'à 6 m avec une action de mouvement, puis porter une attaque de pince +3 si elle est à 1,50 m ou moins.
+  note: Il ne possède aucune attaque à distance.
+
+step: Une créature est déjà à 1,50 m ou moins et aucune approche n'est nécessaire
+  do: Faire une attaque à outrance avec les deux pinces +3 ; chaque touche inflige 1d2 dégâts plus 1d4 de feu.
+
+step: Une pince touche une créature qu'il peut saisir
+  do: Tenter immédiatement une lutte par étreinte, en action libre et sans provoquer d'attaque d'opportunité.
+  note: BMO indiqué : −1 ; DMD 11.
+
+## Rounds suivants
+
+step: Une créature est retenue en lutte
+  do: Consacrer une action simple à maintenir la lutte ; en cas de réussite, appliquer la constriction : 1d2 dégâts contondants plus 1d4 de feu.
+  note: La constriction ne s'applique pas si le maintien échoue.
+
+step: Aucune créature n'est retenue et une cible est au contact
+  do: Reprendre l'attaque à outrance avec les deux pinces et tenter l'étreinte après une touche.
+
+step: Une cible s'éloigne hors de portée
+  do: La suivre à 6 m par action de mouvement, sur terre ou à la nage, puis attaquer d'une pince si une action simple reste disponible.
+
+step: Une attaque naturelle ou à mains nues touche le crabe
+  do: Infliger automatiquement 1d4 dégâts de feu à l'attaquant grâce à la chaleur.
+  note: Cet effet se déclenche à chaque touche de ce type ; il ne s'applique pas automatiquement aux attaques avec une arme manufacturée.
+
+## Repli
+
+note: Instinct
+  Aucun seuil de fuite n'est indiqué. Sans intelligence, il poursuit son comportement instinctif : saisir et brûler une créature proche, sans organiser de retraite tactique.
+  Ses 4 points de vie le rendent fragile ; il est immunisé contre le feu et vulnérable au froid.

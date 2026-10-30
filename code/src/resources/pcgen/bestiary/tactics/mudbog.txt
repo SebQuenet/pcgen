@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Mudbog, vase de taille G des marais, sans intelligence. 31 pv, CA 4 ; résistance au feu 10 et immunités des vases.
+  Aucune attaque ordinaire indiquée ; enveloppement infligeant 1d6 dégâts contondants et 1d6 dégâts d'acide.
+  Vision aveugle à 18 m ; déplacement de 3 m ; espace occupé de 3 m et allonge de 0 m.
+
+step: Dans la boue du marais
+  do: Rester immobile et profiter du camouflage pour laisser une proie approcher
+  note: Discrétion +3 dans les marais, contre -9 ailleurs ; ne pas compter sur une approche discrète à découvert.
+
+## Ouverture
+
+step: Une proie arrive à portée d'enveloppement
+  do: L'envelopper pour lui infliger 1d6 dégâts contondants et 1d6 dégâts d'acide
+  note: Avec une allonge de 0 m et aucune attaque ordinaire indiquée, il doit englober sa proie dans son propre espace.
+
+step: Une proie est détectée à moins de 18 m mais reste trop loin
+  do: Avancer vers elle de 3 m par déplacement pour tenter de l'envelopper
+  note: Son initiative de -5 et sa lenteur favorisent une embuscade à très courte distance.
+
+## Rounds suivants
+
+step: Une proie reste enveloppée
+  do: Poursuivre l'enveloppement et appliquer ses dégâts contondants et acides
+  note: Le bloc associe une CA de 4 et 6 pv à l'enveloppement ; conserver les 31 pv pour le mudbog lui-même.
+
+step: Aucune proie n'est enveloppée et une créature reste accessible
+  do: Se déplacer vers la créature la plus proche et tenter de l'envelopper
+  note: Sa CA de 4 le rend très facile à toucher ; il ne dispose d'aucune attaque à distance indiquée.
+
+## Repli
+
+step: Le mudbog est blessé et une proie reste accessible
+  do: Continuer à tenter de l'envelopper
+  note: Sans intelligence, il ne prépare pas de retraite organisée ; ne pas lui attribuer de seuil de fuite calculé.

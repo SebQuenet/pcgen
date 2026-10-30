@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Requin-marteau, animal aquatique de taille G, prédateur instinctif d'Intelligence 1 ; 30 pv, CA 18, initiative +7.
+  Morsure +7 (1d8+7), allonge de 1,50 m ; nage à 18 m ; espace occupé de 3 m.
+  Perception +10, perception aveugle à 9 m et odorat aiguisé : il repère ses proies dans l'eau sans élaborer de tactique complexe.
+
+step: Une proie entre dans son voisinage
+  do: La repérer avec ses sens et s'en approcher à la nage en restant dans l'eau.
+  note: La perception aveugle aide à localiser une créature à 9 m, mais ne supprime pas les effets du camouflage sur ses attaques.
+
+## Ouverture
+
+step: Une proie est déjà à 1,50 m ou moins
+  do: Mordre à +7, pour 1d8+7 dégâts.
+
+step: Une proie peut être atteinte avec un déplacement de 18 m ou moins
+  do: Nager jusqu'à portée de morsure, puis mordre à +7, pour 1d8+7 dégâts.
+
+step: Aucune proie n'est accessible après un seul déplacement
+  do: Consacrer le round à se rapprocher à la nage.
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter la morsure +7 (1d8+7) chaque round.
+  note: Il ne dispose que d'une attaque de morsure ; son bloc ne lui donne ni saisie ni attaque supplémentaire.
+
+step: La proie s'éloigne dans l'eau
+  do: La poursuivre à la nage ; mordre si un déplacement de 18 m suffit à revenir à 1,50 m.
+
+step: Plusieurs proies sont accessibles
+  do: Continuer à mordre la proie au contact ; si elle devient inaccessible, poursuivre la plus proche.
+
+step: La proie quitte l'eau et devient hors d'atteinte
+  do: Rester dans l'eau et chercher une autre proie accessible.
+
+## Repli
+
+step: Points de vie sous 10
+  do: Effectuer un retrait à la nage, jusqu'à 36 m, vers les eaux libres ou plus profondes.
+  note: Seuil de repli proposé pour le meneur ; il s'agit d'un choix de comportement, pas d'une capacité spéciale.

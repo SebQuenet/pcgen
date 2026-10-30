@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Grande raie, animal aquatique neutre des eaux chaudes ; 68 pv, CA 14. Elle combat par instinct et nage à 9 m par round.
+  Dard +11 (1d8+6 et poison), coup d’aile +9 (1d6+3). Espace occupé : 3 m ; allonge : 1,50 m.
+  Vision nocturne, odorat, perception des vibrations à 30 m ; Perception +11, Discrétion +3, Natation +14.
+
+step: Présence d’intrus dans l’eau
+  do: Repérer leur approche avec ses sens et rester immergée
+  note: Son intelligence de 1 appelle une réaction simple : attaquer une créature proche ou fuir une menace trop forte
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m ou moins
+  do: Attaque à outrance : dard +11 (1d8+6 et poison), puis coup d’aile +9 (1d6+3)
+  note: Le profil ne précise ni le DD, ni les effets, ni la fréquence du poison ; ne pas leur attribuer de valeurs supplémentaires
+
+step: Une cible est plus éloignée dans l’eau
+  do: Nager jusqu’à 9 m vers elle ; si elle est alors à 1,50 m ou moins, porter une attaque de dard +11 (1d8+6 et poison)
+  note: Après ce déplacement, elle ne porte pas également le coup d’aile
+
+## Rounds suivants
+
+step: La cible reste à portée et aucun déplacement n’est nécessaire
+  do: Répéter l’attaque à outrance avec le dard et le coup d’aile
+
+step: La cible s’éloigne dans l’eau
+  do: La suivre à la nage jusqu’à 9 m, puis attaquer au dard si elle revient à portée de 1,50 m
+
+step: Les adversaires restent hors de l’eau et hors de portée
+  do: Rester immergée et s’éloigner si elle subit des attaques
+  note: Elle ne dispose d’aucune attaque à distance ni d’une vitesse de déplacement terrestre indiquée
+
+## Repli
+
+step: Points de vie à 20 ou moins
+  do: Rompre le combat et gagner une eau libre de poursuivants ; consacrer ses deux actions de mouvement à nager jusqu’à 18 m
+  note: Ce départ peut provoquer des attaques d’opportunité si elle quitte une zone menacée

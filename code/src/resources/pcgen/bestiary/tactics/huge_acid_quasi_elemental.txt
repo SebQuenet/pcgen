@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Quasi-élémentaire d'acide de taille TG, neutre et solitaire ; combattant peu intelligent qui préfère son bassin d'acide.
+  76 pv ; CA 20 ; réduction des dégâts 5/— ; immunité à l'acide et traits élémentaires.
+  Deux coups +11, chacun infligeant 1d8+5 dégâts plus 1d8 d'acide ; espace occupé et allonge de 4,50 m. Vapeurs toxiques à 1,50 m, Vigueur DD 18.
+  Marche à 6 m ; nage à 24 m uniquement dans l'acide, jamais dans l'eau. Vision dans le noir à 18 m ; Perception +11 ; initiative +8.
+
+step: Un bassin d'acide est disponible
+  do: Attendre dans le bassin, près d'une berge accessible à son allonge
+  note: Au repos, il ressemble à une flaque verdâtre ; sa Discrétion reste de +7.
+
+## Ouverture
+
+step: Une cible est déjà à 4,50 m ou moins
+  do: Attaque à outrance : deux coups +11, chacun pour 1d8+5 plus 1d8 d'acide
+  note: Concentrer les coups sur une même cible pour l'abattre rapidement.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer jusqu'à 6 m sur terre ou nager jusqu'à 24 m dans l'acide, puis porter un seul coup +11
+  note: Si possible, terminer à 1,50 m d'un adversaire qui respire pour l'exposer aux vapeurs.
+
+step: Des créatures respirent à 1,50 m ou moins
+  do: Appliquer les vapeurs, poison inhalé : Vigueur DD 18 chaque round ou 1 point de dégâts de Constitution
+  note: L'exposition cesse hors de l'aura ; ce pouvoir est passif.
+
+## Rounds suivants
+
+step: Une cible reste à portée et aucun déplacement important n'est nécessaire
+  do: Répéter les deux coups en attaque à outrance ; ajuster sa position par un pas de 1,50 m si nécessaire
+  note: Contre une cible facile à toucher, employer Attaque en puissance : coups +8, chacun pour 1d8+11 plus 1d8 d'acide, jusqu'au prochain tour.
+
+step: Après un déplacement, deux ennemis sont adjacents entre eux et tous deux à portée
+  do: Employer Enchaînement : un coup +11 ; s'il touche, un second coup +11 contre l'autre ennemi
+  note: Action simple remplaçant l'attaque habituelle ; une seule attaque supplémentaire, et CA réduite à 18 jusqu'au prochain tour.
+
+step: Une proie isolée se tient près du bassin
+  do: Tenter de l'agripper par une manœuvre de lutte, BMO +15 contre son DMD
+  note: La tentative utilise une action simple et provoque une attaque d'opportunité ; aucun coup ne donne de prise automatique.
+
+step: Une proie est déjà agrippée au début de son tour
+  do: Maintenir la lutte par une action simple, puis choisir de déplacer la proie vers l'acide, jusqu'à 3 m sur terre ou 12 m dans l'acide
+  note: Placer la victime dans le bassin lui accorde une tentative immédiate de se libérer avec un bonus de +4 ; la manœuvre ne garantit donc pas l'immersion.
+
+step: Un adversaire le frappe à mains nues ou avec une arme naturelle
+  do: Lui infliger 1d8 dégâts d'acide par attaque qui touche
+
+step: Une flamme accessible gêne son approche
+  do: Éteindre au contact une flamme non magique de taille G ou inférieure ; contre un feu magique, tenter une dissipation de la magie, niveau de lanceur 8
+  note: Exploiter ensuite sa vision dans le noir.
+
+## Repli
+
+step: Points de vie sous 20, ou projections d'eau répétées
+  do: Rompre le combat et gagner une partie éloignée du bassin d'acide ; nager à 24 m par déplacement
+  note: Sur terre, regagner le bassin à 6 m par déplacement. Choisir la retraite si nécessaire pour quitter la mêlée. Éviter l'eau : elle provoque une réaction dangereuse.

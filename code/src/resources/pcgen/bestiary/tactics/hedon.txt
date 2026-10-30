@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Hedon, fée de taille M, chaotique mauvaise, des forêts tempérées. Il affaiblit et sépare ses ennemis par magie avant de saisir une proie isolée.
+  16 pv ; CA 14 ; réduction des dégâts 5/fer froid ; déplacement 9 m ; allonge 1,50 m ; vision nocturne.
+  Deux griffes +2, chacune pour 1d4+1 et étreinte ; pattes arrière : deux griffes supplémentaires, chacune pour 1d6+1, contre une victime déjà agrippée au début de son tour.
+
+resource: Détection du Bien | constant | repérer les auras du Bien en se concentrant
+resource: Communication avec les animaux | constant | converser avec les animaux, sans les contrôler
+resource: Enchevêtrement | 3/jour | Réflexes DD 13 ; végétation dans un rayon de 12 m ; durée 3 minutes
+resource: Métal brûlant | 3/jour | Volonté DD 14, annule ; portée 9 m ; durée 7 rounds
+resource: Effroi | 3/jour | Volonté DD 14, partiel ; portée 39 m ; une créature vivante de 5 DV au plus
+resource: Fracassement | 3/jour | DD 14 ; portée 9 m
+resource: Décharge électrique | 3/jour | contact au corps à corps +2 ; 3d6 d'électricité ; aucun jet de sauvegarde
+resource: Collet | 1/jour | préparer le piège avant l'affrontement ; persiste jusqu'au déclenchement ou à sa destruction
+
+step: Il peut choisir le terrain
+  do: Se dissimuler derrière la végétation avec Discrétion +8, surveiller avec Perception +8 et garder un chemin de fuite hors de la future zone d'enchevêtrement
+  note: sa réduction des dégâts favorise les échanges contre les armes ordinaires ; ses 16 pv imposent de craindre le fer froid et les sorts offensifs
+
+step: Il dispose de temps et d'une liane souple ou d'une corde
+  do: Consacrer 3 rounds à préparer un collet sur le passage probable des intrus
+  note: attacher le collet à un arbre souple et solide, si disponible, pour soulever la victime et lui infliger 1d6 dégâts ; sinon, le piège l'enchevêtre sans dégâts
+
+## Ouverture
+
+step: Plusieurs ennemis traversent une zone de végétation
+  do: Lancer enchevêtrement pour ralentir le groupe et séparer les premiers arrivants de leurs alliés
+  note: Réflexes DD 13 pour éviter l'état enchevêtré ; toute la zone devient un terrain difficile. Le Hedon reste à l'extérieur : il n'est pas immunisé à son pouvoir
+
+step: Une menace de 5 DV au plus reste libre, à 39 m ou moins
+  do: Employer effroi pour la faire fuir pendant qu'il se place face à une autre cible
+  note: Volonté DD 14 ; effrayée pendant 3 rounds en cas d'échec, secouée pendant 1 round en cas de réussite ; les créatures de 6 DV ou plus sont immunisées
+
+step: Une cible isolée se trouve déjà à 1,50 m
+  do: Attaquer à outrance avec les deux griffes +2, chacune pour 1d4+1 ; tenter gratuitement l'étreinte sur une touche contre une créature de taille M ou inférieure
+  note: après un déplacement ordinaire, il ne porte qu'une attaque de griffe ; l'étreinte ne déclenche pas encore les attaques de pattes arrière ce tour-ci
+
+## Rounds suivants
+
+step: Un ennemi porte une armure métallique à 9 m ou moins et le Hedon peut lancer sans être menacé
+  do: Employer métal brûlant sur son équipement, puis maintenir ses distances pendant que la chaleur augmente
+  note: Volonté DD 14 annule ; dégâts de feu aux rounds du sort : aucun au premier, 1d4 au deuxième, 2d4 du troisième au cinquième, 1d4 au sixième, aucun au septième. L'effet continue sans concentration
+
+step: Une arme non magique, notamment en fer froid, menace sa survie à 9 m ou moins
+  do: Employer fracassement sur cette arme si son poids ne dépasse pas 13,5 kg
+  note: Volonté DD 14 annule pour un objet porté ; cette utilisation ne détruit pas les armes magiques
+
+step: Une cible cuirassée est accessible et aucun ennemi ne menace sa position actuelle
+  do: Activer décharge électrique, puis avancer jusqu'au contact et tenter de toucher la cible
+  note: attaque de contact +2, avec un bonus supplémentaire de +3 contre une cible portant une armure ou une arme métallique, ou faite de métal ; 3d6 d'électricité
+
+step: Il commence son tour avec une victime agrippée
+  do: Tenter de maintenir la lutte pour infliger les dégâts d'une griffe, et effectuer les deux attaques gratuites de pattes arrière, chacune pour 1d6+1
+  note: BMO de base +0 ; l'étreinte apporte son bonus de +4 aux tests pour engager ou maintenir la lutte. Abandonner la prise si les alliés de la victime l'encerclent
+
+step: Il n'a aucune prise et une proie reste isolée au contact
+  do: Répéter l'attaque à outrance de deux griffes et les tentatives d'étreinte
+  note: en bande de 2 à 5, concentrer les griffes sur une même proie pendant qu'un autre Hedon gêne ses renforts par magie
+
+## Repli
+
+step: Points de vie sous 8, ou plusieurs ennemis peuvent le frapper au contact
+  do: Relâcher toute victime, puis faire une retraite jusqu'à 18 m en terrain dégagé vers les arbres et un couvert
+  note: le terrain difficile réduit cette distance ; éviter de traverser sa propre zone d'enchevêtrement
+
+step: Il est hors de portée de mêlée mais des poursuivants approchent encore
+  do: Consacrer un round à enchevêtrement sur la végétation derrière lui, ou à effroi sur un poursuivant admissible, puis se déplacer jusqu'à 9 m hors de la zone
+  note: utiliser une charge restante ; une fois la ligne de vue coupée et un couvert atteint, se cacher avec Discrétion +8

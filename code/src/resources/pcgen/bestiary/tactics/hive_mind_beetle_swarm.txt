@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Nuée de coléoptères à esprit collectif, bête magique loyale neutre, intelligente et prédatrice ; 170 pv, CA 25. Elle étourdit et électrocute ses proies pour les cuire avant de les manger.
+  Nuée : 8d6 dégâts d'électricité automatiques aux créatures dont elle occupe l'espace en fin de déplacement ; distraction : Vigueur DD 24 ou nausée pendant 1 round. Espace de 3 m de côté, allonge nulle ; vol parfait à 9 m, marche à 1,50 m.
+  Immunité à l'électricité et aux dégâts d'armes ; esquive réflexe déjà comprise dans la CA. Les effets de zone infligent 50 % de dégâts supplémentaires ; les effets mentaux peuvent atteindre son esprit collectif.
+
+resource: Magie psychique | 15 PE par jour | réserve commune à tous les sorts, NLS 14, concentration +16 ; chaque coût indiqué se déduit de cette réserve
+resource: Écho de pensée (thought echo) | constant | masque ses pensées superficielles ; la nuée ne parle pas
+resource: Poigne électrique (shocking grasp) | à volonté | pouvoir au toucher, distinct des dégâts automatiques de nuée
+
+step: Des proies approchent
+  do: Les repérer avec Perception +28 et vision dans le noir à 18 m ; préparer une approche en vol vers les créatures regroupées
+  note: Une créature manifestement immunisée à l'électricité intéresse peu la nuée comme nourriture ; elle l'ignore généralement tant qu'elle ne la provoque pas
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans un rayon de 9 m autour de la nuée
+  do: Approcher en vol, puis lancer impulsion synaptique supérieure (greater synaptic pulse), 5 PE, Volonté DD 18
+  note: Échec : étourdissement pendant 1d4 rounds ; réussite : état fiévreux pendant 1 round. La zone affecte toutes les créatures, y compris les autres nuées de la colonie
+
+step: Les ennemis sont alignés et hors de portée immédiate de la nuée
+  do: Lancer éclair (lightning bolt), 3 PE : ligne de 36 m, 10d6 dégâts d'électricité, Réflexes DD 19 pour moitié
+  note: Choisir cette ouverture à la place de l'impulsion si l'alignement permet de toucher plusieurs proies sans s'exposer
+
+step: Une proie est accessible par un déplacement de 9 m
+  do: Terminer le déplacement sur elle, en couvrant plusieurs ennemis si possible, pour infliger les dégâts de nuée et la distraction
+  note: Attaque en vol permet de lancer un sort au milieu du déplacement, puis de finir sur la proie ; le trajet total reste limité à 9 m. Un simple survol sans terminer sur elle ne lui inflige pas les dégâts de nuée
+
+## Rounds suivants
+
+step: Une proie étourdie ou un lanceur de sorts reste accessible
+  do: Maintenir la nuée sur elle ou la rejoindre ; privilégier les adversaires capables de produire des dégâts de zone
+  note: Les dégâts de nuée ne demandent aucune action simple : elle peut aussi lancer un sort. Elle ne porte pas d'attaque d'opportunité et n'empêche pas physiquement une proie de sortir de son espace
+
+step: Une cible dangereuse résiste à l'électricité et reste à 18 m ou moins ; la nuée a plus de 85 pv
+  do: Employer poussée mentale IV (mind thrust IV), 4 PE : 14d8 dégâts, Volonté DD 16 pour moitié
+  note: En cas d'échec, la cible est aussi fatiguée pendant 1 round ; choisir une créature sensible aux effets mentaux
+
+step: Un adversaire isolé doit être désorganisé ; la nuée a plus de 85 pv
+  do: Lancer brouillage synaptique (synaptic scramble), 4 PE, portée 72 m, Volonté DD 17 annule
+  note: Pendant 14 rounds, il ne peut plus communiquer efficacement ni entreprendre d'action complexe ; ses actions simples et de mouvement sont déterminées par la table du sort. Ses composantes verbales restent possibles
+
+step: Une proie très affaiblie reste à 18 m ou moins ; la nuée a plus de 85 pv
+  do: Employer explosion de tête (explode head), 5 PE, sur une créature vivante corporelle qui mourrait de la perte de sa tête
+  note: À 20 pv ou moins, elle meurt sans sauvegarde ; sinon, 14d6 dégâts, Vigueur DD 18 pour moitié. Si les dégâts la rendent hors de combat ou mourante, elle meurt et sa tête explose ; les créatures à 3 m subissent 2d6 dégâts tranchants, Réflexes DD 18 annule
+
+step: Un effet mental menace la nuée ; elle a plus de 85 pv et au moins 5 PE
+  do: Utiliser bouclier de pensée IV (thought shield IV) en action immédiate : +8 de circonstance aux sauvegardes de Volonté contre les effets mentaux pendant 1 round
+  note: Garder cette dépense pour une menace sérieuse ; elle réduit d'autant les PE disponibles pour l'offensive
+
+step: Les PE sont épuisés ou insuffisants pour l'option choisie
+  do: Poursuivre avec le vol, les dégâts automatiques de nuée et la distraction
+
+## Repli
+
+step: Les attaques de zone menacent de faire tomber la nuée à 85 pv ou moins
+  do: Rompre le combat en vol et chercher un couvert qui coupe la ligne d'effet ; parcourir 18 m par double déplacement si nécessaire
+  note: Elle évalue les risques tant que son intelligence collective fonctionne ; ses immunités ne justifient pas de rester dans une zone dangereuse
+
+step: Points de vie à 85 ou moins
+  do: Cesser toute utilisation de magie psychique et privilégier la fuite en vol ; si elle est acculée, recouvrir l'adversaire le plus proche
+  note: Nerfs exposés : Intelligence réduite à 9 et perte de la capacité à lancer des sorts, même s'il reste des PE
+
+step: Points de vie à 42 ou moins
+  do: Jouer une fuite ou une agression instinctive, sans combinaison tactique ni utilisation d'Attaque en vol
+  note: La nuée devient effectivement dénuée d'intelligence et ne conserve que les dons apportant un bonus statique. Ses dégâts de nuée restent de 8d6 ; à 0 pv, elle se disperse

@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Golem de noqual, créature artificielle neutre de taille TG, sans intelligence : il applique des consignes simples et frappe les intrus désignés.
+  202 pv, CA 32, RD 15/adamantium ; déplacement de 12 m, espace et allonge de 4,50 m.
+  Attaque à outrance : 2 coups +36, chacun infligeant 4d8+19 dégâts, critique sur 19–20, plus destruction de sort.
+  Sa présence entrave les incantations dans un rayon de 18 m ; les sorts absorbés le réparent et accélèrent ses attaques.
+
+step: Une consigne de garde lui a été donnée
+  do: Attendre au passage ou devant l'accès à défendre, puis attaquer les intrus conformément à cette consigne
+  note: vision dans le noir à 18 m et vision nocturne ; Perception +0. Il ne conçoit ni ruse ni embuscade élaborée.
+
+resource: Magie entravée | permanente | Dans un rayon de 18 m, lancer un sort exige un test de concentration DD 25 + niveau du sort ; un échec fait absorber le sort au golem.
+resource: Immunité à la magie | permanente | Absorbe les sorts et pouvoirs magiques autorisant la résistance à la magie, sous réserve de ses exceptions ; bonus de +8 aux sauvegardes contre sorts, pouvoirs magiques et pouvoirs surnaturels.
+
+## Ouverture
+
+step: Un intrus désigné est à plus de 4,50 m
+  do: Avancer jusqu'à le placer dans son allonge ; porter un seul coup +36 si un déplacement de 12 m suffit
+  note: se rapprocher étend aussi la pression de son aura aux lanceurs de sorts. Un déplacement suivi d'une attaque ne permet pas ses deux coups.
+
+step: Un intrus désigné est déjà à portée
+  do: Porter ses deux coups +36 en attaque à outrance
+  note: chaque coup qui touche déclenche une dissipation de la magie ciblée, NLS 18 ; absorber les sorts ainsi dissipés.
+
+## Rounds suivants
+
+step: La cible reste dans son allonge
+  do: Répéter l'attaque à outrance jusqu'à sa mise hors de combat, puis passer au prochain intrus désigné
+  note: conserver sa position de garde si poursuivre contredit les ordres reçus.
+
+step: Un sort est absorbé par l'aura, l'immunité ou la destruction de sort
+  do: Récupérer 5 pv par niveau du sort absorbé et appliquer rapidité pendant 1 round par niveau
+  note: au-delà de 202 pv, transformer l'excédent de soins en pv temporaires. L'absorption est automatique et ne consomme aucune attaque.
+
+step: Il bénéficie de rapidité et peut attaquer à outrance
+  do: Porter trois coups +37, chacun infligeant 4d8+19 dégâts et déclenchant destruction de sort s'il touche
+  note: rapidité porte aussi son déplacement à 21 m, sa CA à 33 et ses Réflexes à +11 ; suivre la durée de cet effet.
+
+step: Une attaque magique lui inflige des dégâts d'électricité
+  do: Annuler sa rapidité s'il en bénéficie ; sinon, appliquer lenteur pendant 3 rounds, sans sauvegarde
+  note: sous lenteur, une seule action simple ou de mouvement par round : un seul coup s'il attaque, déplacement réduit à 6 m et malus habituels de lenteur.
+
+step: Il subit une disjonction
+  do: Le faire chanceler et suspendre son aura de magie entravée pendant 1d4 rounds
+  note: pendant cet intervalle, il dispose d'une seule action simple ou de mouvement par round.
+
+step: La cible demeure hors d'atteinte
+  do: La suivre par un chemin praticable si les ordres le permettent ; sinon, garder l'accès confié
+  note: il ne dispose d'aucune attaque à distance, ni de vol.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à exécuter ses ordres jusqu'à sa destruction à 0 pv
+  note: sans intelligence, il ne choisit pas une retraite par peur ; les sorts absorbés peuvent encore le réparer.
+
+step: Une consigne explicite impose un repli
+  do: Rejoindre le point prévu en marchant, selon son déplacement actuel

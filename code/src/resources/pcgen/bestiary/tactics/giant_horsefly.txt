@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Taon géant de taille G, vermine sans intelligence : 26 pv, CA 15. Il agit par instinct et cherche une proie dont boire le sang.
+  Morsure +6 (1d6+6 et saisie) ; drainage sanguin : 1d4 points de Constitution sur une proie agrippée.
+  Vol à 18 m, manœuvrabilité bonne ; marche à 6 m. Espace occupé : 3 m ; allonge : 1,50 m.
+
+note: Repérage
+  Vision dans le noir à 18 m, perception des vibrations à 18 m, Perception +5. Les vibrations ne lui permettent de repérer une proie que s'ils sont en contact avec le même sol.
+  Il fréquente les forêts et les marais tempérés ou chauds. Son immunité aux effets mentaux empêche de le détourner par ces effets.
+
+step: Une proie est repérée
+  do: Se diriger vers la proie accessible la plus proche, en privilégiant instinctivement celle qui est séparée des autres.
+
+## Ouverture
+
+step: Une proie peut être atteinte après un déplacement en vol de 18 m au maximum
+  do: Voler jusqu'à 1,50 m de la proie et porter une morsure +6 (1d6+6 et saisie).
+
+step: La proie est encore trop éloignée
+  do: Réduire la distance en volant ; consacrer le round au déplacement si nécessaire, jusqu'à 36 m avec un double déplacement.
+
+step: La morsure touche une proie de taille M ou inférieure
+  do: Tenter immédiatement de l'agripper grâce à la saisie.
+  note: La saisie permet cette tentative sans action supplémentaire ; le taon cherche à immobiliser sa nourriture.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et poursuivre le drainage sanguin : 1d4 points de Constitution.
+  note: Rester fixé sur cette proie tant qu'elle peut le nourrir ; ne pas répartir les attaques entre plusieurs adversaires.
+
+step: La proie se libère et reste à portée
+  do: Mordre de nouveau à +6 (1d6+6) et tenter une nouvelle saisie si sa taille le permet.
+
+step: La proie s'éloigne ou devient inaccessible
+  do: La rejoindre en vol et mordre si le déplacement laisse une action d'attaque ; sinon, se rapprocher d'une autre proie accessible.
+
+## Repli
+
+step: Points de vie à 6 ou moins
+  do: Relâcher la proie éventuelle et effectuer un retrait en vol, jusqu'à 36 m, vers les arbres ou la végétation du marais.
+  note: Cette fuite est un réflexe de survie ; le taon ne coordonne pas de retraite et ne prépare pas de revanche.

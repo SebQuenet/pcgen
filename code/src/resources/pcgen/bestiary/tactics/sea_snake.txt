@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Serpent marin, animal neutre de taille P, qui réagit par instinct et privilégie l'eau.
+  Morsure +4 (1d4-1 plus poison), allonge 1,50 m ; 11 pv, CA 14.
+  Nage 12 m, déplacement au sol et escalade 6 m par action de déplacement ; peut retenir son souffle.
+
+step: Une menace approche
+  do: Rester dissimulé dans un abri proche de l'eau et surveiller les mouvements
+  note: Discrétion +14, Perception +9 et vision nocturne ; il ne prépare pas de manœuvre complexe
+
+## Ouverture
+
+step: Une menace arrive à 1,50 m ou moins et le combat devient inévitable
+  do: Mordre immédiatement, à +4, pour 1d4-1 dégâts plus poison
+
+step: La cible est accessible après un déplacement dans l'eau
+  do: Nager jusqu'à 12 m pour arriver à portée, puis mordre
+  note: Privilégier la cible la plus proche ; aucune attaque à distance
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter la morsure à chaque round
+  note: Le bloc fourni ne précise ni le DD, ni la fréquence, ni les effets du poison ; ne pas leur attribuer de valeurs
+
+step: La cible s'éloigne mais reste accessible après un déplacement
+  do: La rejoindre à la nage, puis mordre si elle se trouve à 1,50 m ou moins
+  note: Sur une surface à gravir, utiliser l'escalade à 6 m et Escalade +7 ; dans l'eau, Natation +7
+
+## Repli
+
+step: Points de vie à 5 ou moins, ou fuite possible face à plusieurs assaillants
+  do: Rompre le contact et gagner un abri dans l'eau
+  note: Au contact, se désengager pour parcourir jusqu'à 24 m à la nage ; la case de départ ne provoque pas d'attaque d'opportunité, mais traverser d'autres cases menacées peut en provoquer
+
+step: Hors de portée immédiate des adversaires
+  do: Continuer à s'éloigner à la nage et se cacher dès qu'un couvert le permet

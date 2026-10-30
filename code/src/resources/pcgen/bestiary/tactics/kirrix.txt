@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Kirrix, créature magique de grande taille, neutre ; ce rongeur à six pattes garde les galeries des hommes-rats et couvre leur évacuation.
+  34 points de vie, CA 14 ; morsure +7 (1d8+6), allonge de 1,50 m malgré un espace occupé de 3 m.
+  Déplacement de 9 m, escalade de 6 m, creusement de 3 m ; compression ; immunité aux maladies et hébergement d'agents pathogènes.
+  Intelligence 5 : privilégier des réactions simples de garde et de prédation. Il comprend le commun, mais ne parle pas.
+
+step: Des intrus approchent
+  do: Guetter les odeurs et les bruits depuis une galerie offrant une issue latérale
+  note: Perception +9, odorat, vision dans le noir à 18 m et vision nocturne ; perception aveugle à 3 m pour remarquer une présence proche, sans supprimer les risques de rater une cible invisible
+
+step: Un terrier doit être défendu
+  do: Occuper un passage pour retarder les intrus pendant que les hommes-rats évacuent
+  note: Garder un accès à une galerie étroite utilisable grâce à compression
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m ou moins
+  do: Mordre à +7 pour 1d8+6 dégâts
+
+step: Une cible peut être atteinte après un déplacement de 9 m ou moins
+  do: Avancer jusqu'à portée de morsure et attaquer
+  note: Initiative +6 ; chercher à engager un adversaire avant qu'il franchisse le passage gardé
+
+step: Les adversaires restent hors de portée
+  do: Se rapprocher par une galerie abritée ou une paroi accessible, en conservant une voie de fuite
+  note: Escalade +12 ; le creusement à 3 m permet de traverser un sol meuble, sans permettre de percer la roche
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter la morsure +7 (1d8+6), en concentrant les attaques sur une même cible accessible
+
+step: Plusieurs kirrix combattent ensemble
+  do: Se placer de part et d'autre d'une cible pour la prendre en tenaille et obtenir +2 à la morsure
+  note: Ne pas abandonner le passage si cela ouvre la route aux intrus
+
+step: Un adversaire tente de passer à proximité
+  do: Conserver le barrage et utiliser une attaque d'opportunité de morsure si son déplacement en provoque une
+  note: L'allonge reste de 1,50 m ; sa grande taille ne lui permet pas de mordre à 3 m
+
+## Repli
+
+step: Points de vie sous 10, ou évacuation des alliés terminée
+  do: Faire retraite vers une galerie latérale, puis gagner un passage étroit grâce à compression
+  note: Selon le terrain, poursuivre la fuite au sol à 9 m, en escalade à 6 m ou par creusement à 3 m ; éviter de rester exposé aux tirs avec une CA de 14

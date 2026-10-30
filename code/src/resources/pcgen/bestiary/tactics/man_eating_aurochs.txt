@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Aurochs anthropophage, bête magique de taille G, chaotique mauvaise, à l'intelligence rudimentaire. Il cherche à coincer une proie pour la mordre et l'encorner.
+  31 PV ; CA 15 ; réduction des dégâts 5/tranchant. Morsure +8 (1d8+6) et coup de cornes +8 (1d8+6).
+  Déplacement de 12 m ; espace occupé de 3 m ; allonge de 1,50 m.
+
+step: Une proie reste à localiser
+  do: Utiliser l'odorat et Perception +11 pour la repérer, puis Survie +4 pour suivre ses traces.
+  note: Vision dans le noir à 18 m et vision nocturne ; il peut poursuivre la chasse dans l'obscurité.
+
+step: Les proies discutent à proximité
+  do: Écouter leurs intentions et choisir une cible séparée des autres.
+  note: Il comprend le commun et l'abyssal, mais ne peut pas parler.
+
+## Ouverture
+
+step: Une proie peut être atteinte par une charge en ligne droite dégagée
+  do: Charger et porter un seul coup de cornes à +10 (1d8+6).
+  note: La charge exige au moins 3 m de déplacement et permet de parcourir jusqu'à 24 m ; sa CA tombe à 13 jusqu'au début de son prochain tour.
+
+step: La charge est impossible, mais un déplacement de 12 m suffit pour arriver au contact
+  do: S'approcher à 1,50 m et porter une morsure à +8 (1d8+6).
+
+step: Une proie est déjà à 1,50 m au début de son tour
+  do: Effectuer une attaque à outrance : morsure +8 (1d8+6) et coup de cornes +8 (1d8+6).
+
+## Rounds suivants
+
+step: La même proie reste à portée
+  do: Répéter l'attaque à outrance sur elle jusqu'à ce qu'elle tombe.
+  note: Un pas de placement de 1,50 m reste compatible avec cette attaque à outrance.
+
+step: La proie s'éloigne
+  do: La poursuivre ; charger si les conditions le permettent, sinon avancer de 12 m et mordre si elle devient accessible.
+  note: Après un déplacement supérieur à un pas de placement, il ne porte qu'une seule attaque ce tour.
+
+step: Plusieurs adversaires sont accessibles
+  do: Concentrer les attaques sur une cible blessée ou isolée ; à défaut, choisir celle qui ne manie pas d'arme tranchante.
+  note: Sa réduction des dégâts retire 5 points aux dégâts de chaque attaque physique qui ne la surmonte pas avec des dégâts tranchants.
+
+## Repli
+
+step: Il lui reste 7 PV ou moins et une issue est libre
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 24 m vers un passage dégagé.
+  note: La retraite protège contre les attaques d'opportunité dues au départ de sa position initiale ; les déplacements suivants peuvent encore en provoquer.
+
+step: Il ne peut pas s'échapper
+  do: Concentrer morsure et cornes sur l'adversaire qui bloque l'issue, puis se retirer dès que le passage est libre.

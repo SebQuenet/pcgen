@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Bourdon géant ouvrier de taille G, vermine neutre sans intelligence : 32 points de vie, CA 15, immunité aux effets mentaux.
+  Dard +6 au contact, dégâts 1d8+6 plus poison ; allonge de 1,50 m et espace occupé de 3 m.
+  Vol à 18 m par round, manœuvrabilité bonne ; déplacement au sol à 6 m.
+
+note: Poison
+  Le profil fourni ne précise ni le DD, ni les effets, ni la fréquence du poison : ne pas leur attribuer de valeurs supplémentaires.
+
+step: Une présence approche
+  do: Repérer les intrus avec Perception +5, la vision dans le noir à 18 m et la perception des vibrations à 18 m.
+  note: La perception des vibrations exige un contact avec la même surface que la créature détectée.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Porter une attaque de dard +6, infligeant 1d8+6 dégâts plus poison.
+
+step: Un déplacement de 18 m ou moins permet de rejoindre un ennemi
+  do: Voler jusqu'à portée de dard, puis attaquer à +6 pour 1d8+6 dégâts plus poison.
+  note: Privilégier une cible proche et accessible ; son absence d'intelligence ne permet pas de lui prêter une sélection tactique élaborée.
+
+step: Aucun ennemi ne peut être rejoint avec un seul déplacement
+  do: Se rapprocher en vol ; un double déplacement permet de parcourir jusqu'à 36 m sans attaquer.
+
+## Rounds suivants
+
+step: L'adversaire reste à portée
+  do: Répéter l'attaque de dard chaque round.
+  note: Le profil ne donne qu'une attaque de dard ; ne pas ajouter de morsure, de prises ou d'attaques supplémentaires.
+
+step: L'adversaire s'éloigne
+  do: Le suivre en vol et porter un coup de dard si un déplacement de 18 m au maximum suffit à retrouver la portée.
+
+step: Plusieurs ouvrières combattent ensemble
+  do: Faire approcher chaque ouvrière d'une cible accessible, en respectant son espace de 3 m.
+  note: Chacune agit instinctivement ; leur présence en groupe ne leur confère aucune capacité de commandement.
+
+## Repli
+
+step: Le meneur déclenche une fuite instinctive
+  do: Utiliser la retraite pour s'éloigner en vol jusqu'à 36 m, sans attaquer ce round.
+  note: La retraite protège du départ de l'espace initial, mais pas des attaques d'opportunité provoquées ensuite en traversant d'autres espaces menacés. Le profil ne fixe aucun seuil de points de vie pour fuir.

@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Golem de suif de taille M, artificiel sans intelligence, neutre ; 75 pv, CA 18. Il combat au contact avec deux coups +13, chacun infligeant 2d8+3 dégâts et permettant une saisie.
+  Déplacement de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m et vision nocturne. BMO +36, DMD 59.
+  RD 10/adamantium et contondant : une arme doit réunir ces deux propriétés pour ignorer cette réduction. Immunité au froid et traits des créatures artificielles ; vulnérabilité au feu.
+
+step: Une consigne de garde lui a été donnée
+  do: Rester au poste désigné et attaquer les créatures répondant aux critères de cette consigne
+  note: Son absence d'intelligence commande un comportement simple et répétitif, sans sélection savante des adversaires.
+
+## Ouverture
+
+step: Une cible désignée est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux coups +13, chacun pour 2d8+3 dégâts ; tenter une saisie après un coup réussi
+  note: La saisie lui permet de retenir un adversaire au contact.
+
+step: La cible est hors de portée
+  do: Avancer de 6 m au maximum, puis porter un seul coup +13 si la cible est désormais à portée ; tenter une saisie si le coup touche
+  note: Si aucun ennemi n'est accessible après ce déplacement, consacrer aussi l'action restante au déplacement, jusqu'à 12 m au total pour le round.
+
+## Rounds suivants
+
+step: Il tient un adversaire en lutte
+  do: Consacrer son action simple au maintien de la lutte ; en cas de réussite, infliger les dégâts d'un coup, soit 2d8+3
+  note: Utiliser son BMO +36 comme valeur de base des manœuvres. Maintenir la lutte occupe l'action nécessaire à une attaque à outrance.
+
+step: Il ne tient personne et un adversaire est au contact
+  do: Reprendre les deux coups +13 et les tentatives de saisie après les coups réussis
+
+step: Sa cible se dégage et s'éloigne
+  do: La poursuivre à 6 m par déplacement, dans les limites de sa consigne ; reprendre les coups dès qu'elle est à portée
+
+note: Chimisorption
+  Le profil mentionne chemisorb sans en fournir les règles. Aucun effet, dégât ou DD supplémentaire ne peut être fixé à partir de ces seules données.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à exécuter sa consigne, même face au feu, jusqu'à sa destruction à 0 pv
+  note: Aucun seuil de fuite spontanée : ce golem sans intelligence ne choisit pas de préserver sa vie.
+
+step: Une consigne applicable lui impose de se retirer
+  do: Rejoindre le point prévu à 6 m par déplacement, ou 12 m par round s'il consacre ses deux actions au déplacement

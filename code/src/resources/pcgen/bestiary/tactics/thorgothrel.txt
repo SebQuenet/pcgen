@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Thorgothrel, vase de taille G, loyale mauvaise et intelligente : un expérimentateur extraterrestre arrogant qui cherche à faire régresser ses victimes.
+  Deux coups +11 (1d6+6 et saignement d'Intelligence), allonge 3 m ; rayon de force +5 au contact à distance (10d6 de force).
+  CA 21 ; 100 pv au total, dont 40 de champ de force. Déplacement 6 m ; vision aveugle et télépathie à 30 m.
+  Immunités au froid, à l'électricité et aux effets mentaux ; traits des vases ; résistance à l'acide 10. Il ne respire pas.
+
+resource: Champ de force | 40 pv | absorbe les dégâts avant les pv corporels ; guérison accélérée 10 tant qu'il reste actif
+resource: Rayon de force | selon les pv du champ | action simple ; coûte 5 pv au champ, qui doit en avoir au moins 5 ; portée 30 m
+
+step: Des intrus sont repérés
+  do: Les surveiller avec Perception +11 et la vision aveugle ; choisir une position permettant de tirer et de reculer sans être encerclé.
+  note: Sa télépathie permet de s'adresser aux intrus, sans les commander ni les asservir.
+
+## Ouverture
+
+step: Aucun ennemi ne le menace en mêlée, une cible est à 30 m ou moins et le champ possède plus de 5 pv
+  do: Tirer un rayon de force sur le lanceur de sorts ou le tireur le plus dangereux ; utiliser le déplacement disponible pour maintenir la distance.
+  note: Un seul rayon par action simple ; éviter de vider volontairement le champ.
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Faire une attaque à outrance : deux coups +11, chacun infligeant 1d6+6 et le saignement d'Intelligence.
+  note: S'il doit se déplacer de plus de 1,50 m pour atteindre sa cible, ne porter qu'un coup après le déplacement.
+
+## Rounds suivants
+
+step: Le champ reste actif et les ennemis restent à distance
+  do: Répéter le rayon de force en concentrant les tirs sur une même menace ; ménager les pv du champ lorsqu'il approche de l'épuisement.
+  note: Les tirs et les dégâts reçus puisent dans la même réserve ; la guérison accélérée du champ ne soigne pas son corps.
+
+step: Un ennemi reste à portée de ses coups
+  do: Répéter les deux coups à outrance ; exploiter l'allonge de 3 m pour frapper les ennemis qui s'approchent et provoquent une attaque d'opportunité.
+  note: Le saignement inflige 1 point d'Intelligence par round, sans cumul avec lui-même. Dès 4 points d'Intelligence perdus à cause du thorgothrel, la victime gagne +2 en Force par altération.
+
+step: Le champ tombe à 0 pv
+  do: Donner priorité à sa réactivation : action complexe, Sabotage +8 contre DD 15 ; recommencer en cas d'échec.
+  note: Une réussite rend 1 pv au champ, puis sa guérison accélérée peut le reconstituer.
+
+step: Le champ est inactif dans une atmosphère respirable
+  do: Appliquer immédiatement la sublimation à chaque début de tour : le thorgothrel perd 1d4 points de Constitution ; réactiver le champ au plus vite.
+  note: Brume toxique dans un rayon de 6 m : créatures vivantes de 6 DV ou moins, Vigueur DD 17 ou mort ; au-delà, 1d4 points de Constitution par round, Vigueur DD 17 pour réduire de moitié.
+
+## Repli
+
+step: Ses points de vie passent sous 30 et son champ est actif
+  do: Se retirer vers un couvert ; employer le retrait pour parcourir jusqu'à 12 m si le passage le permet.
+  note: Une fois à l'abri, laisser le champ récupérer avant de reprendre le combat.
+
+step: Le champ est inactif et la fuite ne permet pas d'échapper aux attaques
+  do: Tenter de réactiver le champ sur place ; reprendre le repli dès qu'il fonctionne.
+  note: La sublimation le détruit aussi : ne pas sacrifier volontairement le champ pour produire la brume.

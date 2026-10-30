@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Seigneur momifié humain, prêtre de niveau 9, loyal mauvais, FP 10. Ancien despote cruel, il veut soumettre les vivants et conserver son pouvoir.
+  103 pv ; CA 24, contact 14 ; réduction des dégâts 10/— ; immunité au froid, à l'électricité et immunités des morts-vivants ; résistance à la canalisation +4.
+  Déplacement de 9 m ; vision dans le noir à 18 m ; allonge de 1,50 m. Lance +1 : +12/+7, 1d8+8, critique x3 ; sinon coup +11, 1d6+7. Les deux transmettent la pourriture de momie insidieuse.
+  Il combine son aura de désespoir majeur à 9 m, ses sorts de contrôle et une lance renforcée par ses sorts.
+
+resource: Sorts préparés | 1 utilisation par sort indiqué | NLS 9 ; concentration +14, +18 pour lancer sur la défensive grâce à Magie de guerre
+resource: Yeux des ténèbres | 4 rounds/jour | permet de voir même dans les ténèbres magiques ; décompter chaque round employé
+resource: Toucher des ténèbres | 8/jour | attaque de contact au corps à corps ; la cible subit 20 % de chances de rater ses attaques pendant 4 rounds
+resource: Toucher du Mal | 8/jour | attaque de contact au corps à corps ; rend la cible fiévreuse pendant 4 rounds
+resource: Parchemin d'arme spirituelle | 1 | consommé à l'utilisation ; employer les caractéristiques du parchemin
+resource: Parchemin de convocation de monstres III | 1 | consommé à l'utilisation ; employer les caractéristiques du parchemin
+
+step: Les intrus sont repérés assez tôt
+  do: Lancer panoplie magique sur sa cuirasse, puis force de taureau et protection contre le Bien sur lui-même, chacun lors d'un round distinct
+  note: Panoplie magique dure 9 heures et confère +2 d'altération à l'armure ; les deux autres sorts durent 9 minutes. Force de taureau donne +4 en Force. La protection vise surtout les adversaires bons ; son bonus de parade ne se cumule pas avec celui de l'anneau.
+
+step: Le contact est imminent et il dispose encore d'un round
+  do: Lancer puissance divine
+  note: Pendant 9 rounds, +3 de chance aux attaques et aux dégâts d'arme, 9 pv temporaires et une attaque supplémentaire au meilleur bonus lors d'une attaque à outrance. Faveur divine offre aussi +3 de chance aux attaques et dégâts ; conserver ce sort pour après, car ces bonus ne se cumulent pas.
+
+step: Une cour de momies l'accompagne effectivement
+  do: Placer les serviteurs entre les intrus et lui, en gardant un passage pour atteindre une cible isolée ou se retirer
+  note: Exploiter leur présence pour lancer ses sorts à couvert ; une rencontre solitaire ne lui donne aucun serviteur supplémentaire.
+
+## Ouverture
+
+step: Des ennemis le voient à 9 m ou moins
+  do: Résoudre immédiatement le désespoir majeur, Volonté DD 19, puis choisir son action du round
+  note: Échec : paralysie de peur pendant 1d4 rounds, puis état secoué pendant 1d4 rounds. Réussite ou échec, chaque créature est ensuite immunisée à cette même aura pendant 24 heures. Se montrer avant d'obscurcir le terrain.
+
+step: Il n'a pas pu se préparer et peut éviter la mêlée pendant un round
+  do: Lancer puissance divine, puis avancer pour menacer les ennemis encore capables d'agir
+  note: Les conditions suivantes sont des choix selon la situation ; lancer un seul sort à action simple par round.
+
+step: Un humanoïde dangereux reste mobile et visible
+  do: Lancer immobilisation de personne, Volonté DD 18, pour l'empêcher d'aider ses alliés
+  note: La cible peut consacrer une action complexe à une nouvelle sauvegarde à chacun de ses tours ; ce sort ne fonctionne que sur les humanoïdes.
+
+step: Un lanceur de sorts reste à distance et les serviteurs peuvent le protéger
+  do: Lancer silence sur un point près de cet adversaire, en restant lui-même hors de la zone
+  note: Incantation de 1 round ; émanation de 6 m de rayon pendant 9 rounds. Un point fixe ne donne pas de sauvegarde, mais l'adversaire peut quitter la zone ; cibler directement une créature lui accorde Volonté DD 17.
+
+## Rounds suivants
+
+step: Un adversaire est à 1,50 m et il peut rester sur place
+  do: Attaque à outrance à la lance, +12/+7 avant les bonus des sorts ; ajouter l'attaque supplémentaire de puissance divine si le sort est actif
+  note: Appliquer les bonus effectivement actifs aux attaques et dégâts. Après un déplacement supérieur à un pas de 1,50 m, ne porter qu'une attaque avec son action simple.
+
+step: Une cible vivante à faible Vigueur est accessible au contact
+  do: Lancer exécution, attaque de contact puis Vigueur DD 21
+  note: Inflige 12d6+9 dégâts, ou 3d6+9 si la sauvegarde réussit. Préférer une cible déjà blessée ; se décaler de 1,50 m hors de la menace adverse ou lancer sur la défensive.
+
+step: Un combattant résiste à la peur et monopolise la mêlée
+  do: Employer malédiction par une attaque de contact, Volonté DD 19, pour lui imposer −4 aux attaques, sauvegardes, tests de caractéristique et de compétence
+  note: Autre choix : toucher du Mal pour le rendre fiévreux, ou toucher des ténèbres pour gêner ses attaques pendant 4 rounds. Chaque toucher demande sa propre action et remplace l'attaque à la lance de ce round.
+
+step: Une cible prioritaire reste hors de portée de la lance
+  do: Employer crachat venimeux à 13,50 m ou moins, avec une attaque de contact à distance
+  note: Une touche aveugle pendant 1 round ; Vigueur DD 19 pour résister au poison. Le parchemin d'arme spirituelle offre une autre manière de harceler une cible à distance.
+
+step: Les archers ou plusieurs combattants prennent l'avantage et l'aura a déjà été résolue
+  do: Lancer ténèbres profondes sur un objet, puis activer les yeux des ténèbres lors d'un round suivant pour les engagements décisifs
+  note: Le sort abaisse l'éclairage de deux degrés dans un rayon de 18 m ; dans une zone initialement peu éclairée ou obscure, il produit des ténèbres impénétrables à la vision dans le noir ordinaire. Ses propres yeux ne fonctionnent que 4 rounds par jour. Combat en aveugle aide ensuite en mêlée, sans lui permettre de voir.
+
+note: Pourriture insidieuse
+  Les blessures de lance et de coup peuvent transmettre cette malédiction et maladie, Vigueur DD 19. Incubation de 1 minute, puis 2d4 dégâts de Constitution et 2d4 de Charisme par jour : elle menace surtout après le combat.
+  Les soins magiques sur un malade exigent un test de NLS DD 20. Il faut lever la malédiction puis soigner la maladie ; le seigneur compte sur cette menace pour punir ceux qui s'échappent.
+
+## Repli
+
+step: Ses points de vie passent sous 30 et une issue est accessible
+  do: Lancer sanctuaire, puis se retirer derrière ses serviteurs ou un obstacle ; utiliser les ténèbres déjà en place pour rompre la ligne de vue
+  note: Volonté DD 16 pour l'attaquer directement sous sanctuaire ; les attaques de zone restent possibles. Le sort dure 9 rounds et prend fin s'il attaque. Après l'incantation, se déplacer de 9 m ; au round suivant, une retraite permet de parcourir jusqu'à 18 m si le passage est libre.
+
+step: La fuite est impossible
+  do: Tenir un passage étroit et concentrer ses dernières attaques sur l'adversaire le plus affaibli
+  note: Sa réduction des dégâts ralentit les armes, mais ne réduit pas les dégâts d'énergie. La reconstitution ne le soigne pas pendant le combat.
+
+note: Reconstitution
+  Un jour après sa destruction, son corps commence à se reconstruire ; le processus prend 1d10 jours, puis il revient dans son tombeau avec tous ses points de vie.
+  Pour empêcher ce retour, ses restes doivent recevoir consécration, sanctification puis dissipation du Mal, dans cet ordre et lors de rounds consécutifs. Ses ennemis peuvent ainsi transformer une victoire provisoire en destruction définitive.

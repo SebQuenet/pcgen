@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Screaming Skull : crâne artificiel de taille TP, neutre, sans intelligence et immobile ; 33 pv. Gardien qui suit ses consignes.
+  Cacophonie, folie au toucher et projectile magique à volonté ; aucune attaque physique, allonge de 0 m, déplacement de 0 m.
+  RD 5/adamantium ; immunité à la magie et traits des créatures artificielles. Vision dans le noir à 18 m, vision nocturne ; Perception +0, initiative -5.
+
+resource: Projectile magique | à volonté | NLS 6 ; action simple ; portée 48 m ; 3 projectiles de 1d4+1 dégâts de force chacun ; aucun jet d'attaque ni sauvegarde ; résistance à la magie applicable
+
+step: Aucun intrus détecté
+  do: Rester silencieux à son poste
+
+## Ouverture
+
+step: Mouvement perçu à 12 m ou moins
+  do: Déclencher la cacophonie par une action libre
+  note: Toute créature qui entend le cri à 18 m ou moins : Volonté DD 13 ; échec : 1d6 dégâts sonores par round dans la zone pendant le cri.
+  note: Pour incanter dans la zone, concentration DD 10 + dégâts sonores subis.
+  note: Cri audible à 300 m ; au premier cri, faire un jet supplémentaire de rencontre aléatoire.
+
+step: Un intrus est visible et à portée
+  do: Lancer projectile magique sur lui, les trois projectiles sur la même cible
+  note: Cette action simple peut accompagner le déclenchement du cri ; couvert total ou camouflage total empêchent le ciblage.
+
+## Rounds suivants
+
+step: La cacophonie est déclenchée
+  do: Crier pendant 1d4 rounds, puis observer un round de silence
+  note: Recommencer le cycle si une créature reste ou entre à 12 m ou moins.
+
+step: Un intrus reste visible à portée
+  do: Répéter projectile magique chaque round, y compris pendant le round de silence
+
+step: Contact direct avec le crâne
+  do: Folie : Volonté DD 13 ou aliénation mentale, NLS 6
+  note: Inclut les attaques naturelles et à mains nues, sans s'étendre aux armes manufacturées.
+
+## Repli
+
+step: Le combat tourne mal
+  do: Continuer jusqu'à destruction ou départ des intrus ; aucun repli possible
+  note: À 0 pv, le crâne est détruit.

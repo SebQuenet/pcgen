@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Garde d'élite du pharaon d'Osirion, humain guerrier 6, loyal neutre, revenu à la vie pour servir son souverain. Sa priorité est la protection de la personne escortée.
+  49 pv ; CA 21, contact 11, pris au dépourvu 20 ; déplacement 6 m ; allonge 1,50 m.
+  Khopesh +1 : +11/+6, 1d8+5, critique 19-20 ; arbalète lourde : +8, 1d10, critique 19-20. Croc-en-jambe : BMO +13 contre le DMD adverse.
+
+resource: Potion de force de taureau | 1 | +4 en Force ; pendant son effet, khopesh +13/+8, dégâts 1d8+7 et BMO de croc-en-jambe +15
+resource: Potion de soins modérés | 1 | soigne 2d8+3 pv
+resource: Carreaux d'arbalète lourde | 10 | un carreau par tir ; rechargement par une action complexe
+resource: Attaques d'opportunité | 3 par round | réserve commune aux attaques et à Bodyguard ; utilisables même pris au dépourvu grâce à Combat Reflexes
+
+step: Il assure une escorte ou combat avec d'autres gardes
+  do: Rester adjacent à la personne protégée, entre elle et les assaillants ; répartir les autres gardes autour d'elle.
+  note: Perception +6 pour repérer une menace ; conserver le khopesh et le bouclier prêts si une attaque au contact paraît probable.
+
+step: Une attaque est imminente et il dispose du temps nécessaire
+  do: Boire la potion de force de taureau avant de dégainer, puis prendre position auprès du protégé.
+  note: Boire demande une action simple ; éviter de le faire dans l'allonge ennemie.
+
+step: Une confrontation peut encore être désamorcée
+  do: Exiger que les intrus reculent en faisant valoir son autorité.
+  note: Intimidation +8, ou +10 contre les Osiriens grâce au titre « the Constant ».
+
+## Ouverture
+
+step: Les ennemis restent à distance et son protégé ne risque pas d'être rejoint immédiatement
+  do: Si l'arbalète est déjà chargée et le bouclier rangé, tirer sur une menace dégagée : +8, 1d10, critique 19-20.
+  note: L'arbalète lourde exige deux mains ; ne pas compter le bonus de bouclier à la CA lorsqu'il est rangé. Ne pas s'attarder à recharger si l'ennemi approche.
+
+step: L'ennemi approche alors qu'il tient l'arbalète
+  do: Lâcher l'arbalète, dégainer le khopesh et équiper le bouclier avant le contact.
+  note: Sans déplacement, dégainer et équiper le bouclier prennent chacun une action de mouvement ; consacrer ce tour à se préparer si nécessaire.
+
+step: Un assaillant susceptible d'être renversé arrive à 1,50 m
+  do: Tenter un croc-en-jambe à +13 contre son DMD, en priorité contre celui qui menace le protégé.
+  note: Improved Trip évite l'attaque d'opportunité provoquée par la manœuvre. Une réussite déclenche les attaques d'opportunité des gardes qui menacent la cible grâce à Greater Trip, dans leurs réserves respectives.
+
+## Rounds suivants
+
+step: Une cible debout reste au contact et il peut effectuer une attaque à outrance
+  do: Remplacer la première attaque par un croc-en-jambe à +13 ; en cas de réussite, porter son attaque d'opportunité au khopesh à +11, puis la seconde attaque normale à +6.
+  note: Une cible à terre subit un malus de 4 à la CA contre les attaques de mêlée. Contre une cible déjà à terre ou impossible à renverser, frapper directement à +11/+6.
+
+step: Un allié adjacent est attaqué et le garde menace l'assaillant
+  do: Utiliser Bodyguard : dépenser une attaque d'opportunité pour aider à sa défense, avec un jet d'attaque contre une CA de 10.
+  note: En cas de réussite, l'allié gagne +2 à la CA contre cette attaque. Garder des utilisations disponibles pour protéger la personne escortée.
+
+step: Une attaque touche malgré l'aide apportée au protégé adjacent
+  do: Utiliser In Harm's Way en action immédiate pour encaisser l'attaque à sa place.
+  note: Il reçoit tous les dégâts et effets associés ; cette interception consomme son action immédiate et donc l'action rapide de son prochain tour.
+
+step: Un adversaire à portée se relève ou provoque une autre attaque d'opportunité
+  do: Le frapper au khopesh si une utilisation reste disponible.
+  note: L'attaque contre celui qui se relève intervient alors qu'il est encore à terre ; ne pas tenter de le renverser à nouveau à cet instant.
+
+step: Il doit tenir sous des attaques soutenues
+  do: Activer Combat Expertise lorsqu'il attaque en mêlée : CA 23, attaques au khopesh +9/+4 et croc-en-jambe +11.
+  note: Le bonus d'esquive de +2 et le malus de 2 aux attaques et manœuvres durent jusqu'à son prochain tour. Ajouter les bonus de force de taureau si la potion agit encore.
+
+## Repli
+
+step: Il tombe à 15 pv ou moins et un autre garde peut assurer la protection
+  do: Passer derrière ses alliés, puis boire la potion de soins modérés hors de l'allonge ennemie avant de reprendre sa place.
+  note: Prévoir une main libre et les actions nécessaires pour ranger son arme, sortir la potion et la boire.
+
+step: La personne escortée doit être évacuée
+  do: Couvrir son départ en restant entre elle et les poursuivants ; reculer avec elle et renverser ceux qui arrivent au contact.
+  note: Son déplacement est de 6 m ; une retraite par une action complexe permet jusqu'à 12 m si le terrain le permet.
+
+step: Aucun repli ne permet de sauver le protégé
+  do: Tenir la position et continuer à intercepter les coups, même au risque d'y laisser sa vie.

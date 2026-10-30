@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Marsh Jelly, aberration neutre de taille M des marais tempérés, semblable à une méduse volante ; intelligence rudimentaire, comportement de prédateur.
+  32 pv, CA 16 ; quatre tentacules +6, chacun infligeant 1d6+3 et un poison ; allonge de 1,50 m. Vol à 9 m, manœuvrabilité moyenne ; déplacement au sol à 1,50 m.
+  Réduction des dégâts 5/perforant ou tranchant ; lueur désorientante quand elle est blessée, explosion acide à sa mort.
+
+resource: Poison des tentacules | à chaque blessure | Vigueur DD 14 ; fréquence 1/round pendant 4 rounds ; affaiblissement temporaire de 1d2 Dextérité ; guérison après 2 sauvegardes consécutives réussies
+
+step: Une proie approche dans le marais
+  do: La repérer avec Perception +10, l'odorat et la vision dans le noir à 18 m ; approcher à couvert avec Discrétion +7
+  note: Elle chasse seule ou en groupe de 2 à 5 ; privilégier une petite proie ou un voyageur isolé.
+
+## Ouverture
+
+step: La proie est accessible en un déplacement de vol
+  do: Descendre depuis les airs jusqu'à 1,50 m de la cible, puis porter une attaque de tentacule +6, pour 1d6+3 et poison
+  note: Après un déplacement, elle ne porte qu'une attaque de tentacule.
+
+step: La proie est déjà à portée sans déplacement
+  do: Attaque à outrance : quatre tentacules +6, chacun pour 1d6+3 et poison
+
+## Rounds suivants
+
+step: Elle subit ses premiers dégâts
+  do: Déclencher automatiquement sa lueur verte pulsante et poursuivre l'attaque
+  note: Les créatures qui la regardent doivent réussir Volonté DD 14 ou être éblouies pendant 1d4 rounds ; aucune action d'activation.
+
+step: La proie reste à portée
+  do: Répéter l'attaque à outrance avec les quatre tentacules, en concentrant les coups sur cette proie
+  note: Faire appliquer les effets du poison à leur fréquence ; la baisse de Dextérité facilite les attaques suivantes.
+
+step: La proie s'éloigne
+  do: La suivre en volant à 9 m par déplacement et porter une attaque simple si elle revient à portée
+  note: Ses déplacements au sol sont trop lents pour une poursuite ; elle cherche le contact par les airs.
+
+## Repli
+
+step: Points de vie à 8 ou moins et une fuite reste possible
+  do: Se retirer en vol vers les roseaux ou un couvert proche, jusqu'à 18 m avec une action de retraite
+  note: Ce seuil sert de repère au meneur pour jouer son instinct de survie.
+
+step: Elle est tuée
+  do: Appliquer immédiatement les spasmes d'agonie : explosion infligeant 2d6 dégâts d'acide à tout ce qui se trouve dans un rayon de 3 m
+  note: Réflexes DD 14 pour réduire les dégâts de moitié ; cette explosion est automatique, sans décision tactique.

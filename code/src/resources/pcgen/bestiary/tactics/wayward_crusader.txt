@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Croisé humain loyal bon, paladin d’Iomédae de niveau 5 : 42 pv, CA 20, déplacement à pied de 6 m. Immunisé contre la peur et les maladies ; aura de courage sur 3 m.
+  Épée longue de maître en fer froid +9 (1d8+3, critique 19–20) ; lance d’arçon de maître +9 (1d8+4, critique x3) ; javeline +4 (1d6+3). Il privilégie les charges montées quand sa monture liée et le terrain le permettent.
+
+resource: Imposition des mains | 5/jour | 2d6 pv ; action rapide sur lui-même, action simple sur autrui ; sa miséricorde supprime aussi l’état fiévreux du bénéficiaire
+resource: Bénédiction d’arme | 1 | sort préparé, NLS 2 ; durée 2 minutes
+resource: Restauration partielle | 1 | sort préparé, NLS 2 ; incantation de 3 rounds
+resource: Détection du Mal | à volonté | pouvoir magique, NLS 5
+resource: Baguette de soins légers | 9 charges | soins à conserver autant que possible pour les pauses et l’après-combat
+resource: Javelines | 4 | attaques à distance +4, 1d6+3 ; facteur de portée de 9 m
+resource: Eau bénite | 2 fioles | utile contre les morts-vivants et les extérieurs mauvais
+
+step: Des inconnus approchent sans attaquer
+  do: Chercher une issue pacifique avec Diplomatie +11 et employer Détection du Mal si leurs intentions semblent suspectes
+  note: Une aura mauvaise ne suffit pas, à elle seule, à justifier une attaque.
+
+step: Un affrontement contre une créature mauvaise est imminent
+  do: Lancer Bénédiction d’arme sur la lance d’arçon si une charge montée est possible, sinon sur l’épée longue
+  note: Préparer ce sort avant le contact pour conserver son premier round d’attaque.
+
+step: Il souffre de fatigue ou d’un affaiblissement de caractéristique et dispose de temps
+  do: Employer Restauration partielle avant le combat
+  note: Ses 3 rounds d’incantation rendent ce sort difficile à utiliser sous les coups.
+
+## Ouverture
+
+step: Il est monté et dispose d’une trajectoire de charge dégagée
+  do: Charger à la lance d’arçon : attaque +11, dégâts 3d8+12 grâce à Charge dévastatrice ; employer Attaque au galop pour poursuivre le déplacement si la trajectoire le permet
+  note: La charge exige au moins 3 m de déplacement et réduit sa CA à 18 jusqu’à son prochain tour. La vitesse de la monture détermine la distance parcourue.
+
+step: Il est à pied et l’ennemi est accessible au corps à corps
+  do: Avancer avec l’épée longue et le bouclier, puis porter une attaque +9 pour 1d8+3 dégâts si la cible est à portée de 1,50 m
+  note: S’il doit consacrer tout son tour à se rapprocher, garder le bouclier en place et éviter de s’exposer inutilement aux tirs.
+
+step: L’ennemi reste à distance et le contact immédiat est impossible
+  do: Lancer une javeline sur une cible exposée, de préférence à 9 m ou moins
+  note: Il ne possède que quatre javelines ; son faible bonus de tir favorise un rapprochement dès que possible.
+
+## Rounds suivants
+
+step: Il reste monté et peut préparer une nouvelle trajectoire de charge
+  do: Reprendre de la distance, puis renouveler la charge à la lance lorsque les conditions sont réunies
+  note: Le triple des dégâts dépend d’une charge montée ; une attaque ordinaire de lance reste à +9 pour 1d8+4.
+
+step: La mêlée est serrée ou sa monture n’est pas disponible
+  do: Combattre à l’épée longue et au bouclier, avec une attaque +9 par round
+  note: Privilégier l’adversaire qui menace directement un allié ou une personne à protéger ; rester à moins de 3 m des alliés qui bénéficient de son aura de courage lorsque c’est possible.
+
+step: Ses points de vie sont à 28 ou moins et il lui reste une imposition des mains
+  do: Se soigner de 2d6 pv par une action rapide, puis poursuivre ses attaques ou son déplacement
+  note: Répéter les rounds suivants si nécessaire, sans dépasser les cinq utilisations quotidiennes.
+
+step: Sa monture est touchée par une attaque et il peut encore employer Combat monté ce round
+  do: Tenter un test d’Équitation +4 pour annuler le coup
+  note: Une tentative par round ; le résultat doit dépasser le jet d’attaque adverse. Ce faible bonus rend la protection incertaine.
+
+step: Un allié au contact est grièvement blessé ou fiévreux
+  do: Lui consacrer une imposition des mains si cela évite sa chute ou lui permet de continuer à agir
+  note: Sur autrui, le soin prend une action simple et remplace donc généralement l’attaque du round.
+
+## Repli
+
+step: Ses points de vie tombent à 14 ou moins et la position ne peut plus être tenue
+  do: Employer une imposition des mains sur lui-même si possible, puis se désengager vers un abri ou des alliés
+  note: À pied et sur terrain dégagé, un désengagement permet de parcourir jusqu’à 12 m. Seule la case de départ est protégée contre les attaques d’opportunité liées au déplacement.
+
+step: Il a rompu le contact
+  do: Employer la baguette de soins légers pour récupérer avant de reprendre le combat ou de poursuivre le repli
+  note: S’il doit couvrir des personnes vulnérables, organiser leur départ avant de quitter sa position.

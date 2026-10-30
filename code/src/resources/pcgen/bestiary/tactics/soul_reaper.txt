@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Le Soul Reaper est un mort-vivant de taille G, neutre mauvais, solitaire et silencieux, qui hait les vivants et emprisonne leurs âmes dans sa faux.
+  Combattant résistant : 231 pv, CA 29, réduction des dégâts 15/argent et magie, résistance à la magie 26, résistance à la canalisation +4 et immunités des morts-vivants.
+  Faux +1 : +25/+20/+15/+10, 2d6+13, critique sur 19–20 ; allonge de 3 m, déplacement de 12 m. Ses critiques déclenchent la capture d'âme.
+  Vision dans le noir à 18 m, détection de l'invisibilité permanente, Perception +30 et initiative +8.
+
+resource: Profanation | à volonté | NLS 22
+resource: Ténèbres maudites | à volonté | Volonté DD 19
+resource: Cécité/surdité | 1/jour | Vigueur DD 17 ; une utilisation commune aux deux effets
+resource: Symbole de douleur | 1/jour | Vigueur DD 20
+resource: Aura maudite | 1/jour | durée de 22 rounds ; Vigueur DD 23 contre son effet de riposte
+
+step: Il peut préparer le lieu de l'affrontement
+  do: Profaner une zone de 6 m de rayon où il compte recevoir les ennemis
+  note: Dans cette zone, ajouter +1 de bonus de profanation aux attaques, aux dégâts et aux sauvegardes ; ses pv restent à 231.
+
+step: Les intrus doivent emprunter un passage prévisible
+  do: Inscrire un symbole de douleur sur une surface visible et fixe, déclenché lorsque les intrus le voient
+  note: Les victimes qui ratent leur sauvegarde subissent −4 aux attaques, aux tests de compétence et de caractéristique. Combattre près du symbole, dont le rayon est de 18 m.
+
+## Ouverture
+
+step: Premier round, aura maudite encore disponible
+  do: Activer aura maudite sur lui-même, puis avancer de 12 m au maximum pour préparer la mêlée
+  note: L'aura accorde +4 de parade à la CA et +4 de résistance aux sauvegardes. Un adversaire bon qui le touche en mêlée subit 1d6 dégâts de Force, sauf Vigueur DD 23 réussie.
+
+step: Round suivant, un lanceur de sorts ennemi est identifié
+  do: Employer surdité sur lui, puis poursuivre l'approche
+  note: Vigueur DD 17 annule ; la surdité impose 20 % d'échec aux sorts à composante verbale.
+
+step: Aucun lanceur de sorts prioritaire, mais un combattant se détache du groupe
+  do: Employer plutôt cécité sur cet adversaire, puis approcher
+  note: Vigueur DD 17 annule ; choisir entre cécité et surdité, sans dépenser deux fois l'utilisation quotidienne.
+
+step: Un adversaire invisible est accessible
+  do: Le prendre pour cible grâce à la détection de l'invisibilité
+  note: Il vise volontiers ces ennemis avant les autres.
+
+## Rounds suivants
+
+step: Une cible est à 3 m ou moins et il peut rester sur place
+  do: Attaque à outrance à la faux : +25/+20/+15/+10, chaque coup infligeant 2d6+13
+  note: Frapper l'adversaire le plus proche ; un pas de placement de 1,50 m permet de conserver l'attaque à outrance. Ajouter les bonus de profanation si applicables.
+
+step: Un critique à la faux est confirmé
+  do: Appliquer la capture d'âme : Vigueur DD 26 ou âme emprisonnée dans la faux et corps effondré
+  note: Si la sauvegarde réussit, infliger tout de même 3d6 dégâts supplémentaires. Son don de critique accorde +4 au jet de confirmation.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer de 12 m au maximum, puis utiliser Frappe décisive : une attaque à +25 infligeant 4d6+13
+  note: Cette action remplace l'attaque à outrance ; seuls les dés supplémentaires de Frappe décisive ne sont pas multipliés sur un critique.
+
+step: Plusieurs ennemis adjacents entre eux sont à portée de faux
+  do: Envisager Succession d'enchaînements pour frapper successivement des cibles différentes après chaque touche
+  note: Chaque nouvelle cible doit être adjacente à la précédente et dans son allonge ; une seule attaque par cible, et −2 à la CA jusqu'au prochain tour.
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts de la faux tenue à deux mains
+  note: Contre une CA élevée, préserver la précision pour multiplier les touches et les occasions de critique.
+
+step: Les ennemis restent hors de portée ou se regroupent à distance
+  do: Employer ténèbres maudites sur une zone de 6 m de rayon, puis se rapprocher
+  note: Les créatures bonnes subissent 5d8 dégâts et sont fiévreuses pendant 1d4 rounds ; Volonté DD 19 réduit les dégâts de moitié et annule cet état. Les créatures neutres subissent la moitié des dégâts, sans état fiévreux ; les mauvaises sont indemnes.
+
+step: Il est désarmé et sa faux se trouve à 30 m ou moins
+  do: La rappeler dans ses mains par une action de mouvement, puis porter une attaque si une cible est à portée
+  note: Un adversaire qui tient la faux doit réussir un test de Force DD 26 pour empêcher son retour.
+
+## Repli
+
+step: Sous 58 pv, si poursuivre le combat condamnerait sa chasse et qu'une issue existe
+  do: Se désengager par une retraite, jusqu'à 24 m, puis chercher un couvert pour rompre la poursuite
+  note: Seule la position de départ est protégée des attaques d'opportunité lors d'une retraite ; choisir un trajet qui évite les autres zones menacées.
+
+step: La retraite est impossible
+  do: Tenir un passage avec son allonge de 3 m et concentrer les attaques à outrance sur l'ennemi le plus proche

@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Golem de cordes de taille M, créature artificielle neutre sans intelligence. Il suit sa consigne de garde et attaque les intrus les plus proches.
+  53 pv ; CA 17, contact 10 ; déplacement de 9 m ; allonge de 1,50 m. Deux coups +9 (2d6+3 et étreinte) ; BMO +13 en lutte, DMD 19.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +0. Réduction des dégâts 5/adamantium et tranchant : une attaque doit réunir ces deux propriétés pour l'ignorer.
+  Traits des créatures artificielles et immunité à la magie ; vulnérabilité au feu.
+
+step: Des intrus entrent dans la salle gardée
+  do: Attendre de pouvoir atteindre la cible la plus proche, sans quitter la salle
+  note: Il ne prépare ni ruse ni sélection réfléchie des adversaires.
+
+## Ouverture
+
+step: La cible la plus proche est à plus de 1,50 m
+  do: Avancer vers elle, jusqu'à 9 m avec une action de mouvement ; porter un coup +9 (2d6+3 et étreinte) si elle devient accessible
+  note: Après un déplacement ordinaire, il ne porte qu'un coup.
+
+step: La cible la plus proche est déjà à portée
+  do: Attaque à outrance : deux coups +9 (2d6+3 et étreinte) ; tenter l'étreinte à BMO +13 après un coup réussi
+  note: Si deux adversaires sont aussi proches, répartir les coups entre eux. Il ne peut agripper qu'une seule victime à la fois.
+
+## Rounds suivants
+
+step: Aucune victime n'est agrippée
+  do: Attaquer la cible la plus proche à chaque round ; si deux cibles sont à égale distance, alterner les coups entre elles
+  note: Rester dans la salle et chercher le contact ; aucune attaque à distance n'est indiquée.
+
+step: Une victime est agrippée et un autre adversaire est à portée
+  do: Continuer à serrer et à étrangler la victime ; utiliser le second coup contre l'adversaire à portée
+  note: Ne pas tenter d'agripper ce second adversaire. Le bloc fourni ne précise ni dégâts de constriction ni DD ou délai d'étranglement : ne pas en ajouter.
+
+step: Une victime est agrippée et aucun autre adversaire n'est à portée
+  do: Continuer à serrer et à étrangler la victime ; diriger aussi le second coup contre elle
+  note: Conserver cette victime tant qu'elle reste agrippée.
+
+## Repli
+
+step: Le golem subit des dégâts, même près de 0 pv
+  do: Continuer à combattre jusqu'à sa destruction
+  note: Il ne fuit pas, y compris face au feu.
+
+step: Les adversaires quittent la salle
+  do: Cesser la poursuite à la limite de la salle et y rester en garde

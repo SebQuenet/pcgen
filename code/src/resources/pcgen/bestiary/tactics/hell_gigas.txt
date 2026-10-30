@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Hell Gigas, géant de taille Gig, loyal mauvais, très intelligent. Il combine contrôle du terrain, tirs de rochers et coups de corsèque pour empêcher ses adversaires de l'encercler.
+  237 pv ; CA 29 ; déplacement 18 m ; espace occupé 6 m ; allonge indiquée 6 m ; vision dans le noir 18 m ; Perception +29.
+  Corsèque de maître +24/+19/+14 (4d6+19) ; rocher +14 (2d6+19 plus 6d6 de feu).
+  Immunité au feu ; réduction des dégâts 10/chaotique ; résistance de 10 à l'acide, au froid, à l'électricité et au son.
+
+resource: Déguisement | à volonté | modifie son apparence, sans réduire réellement son gabarit
+resource: Lévitation | à volonté | déplacement vertical, sans vol horizontal autonome
+resource: Image accomplie | à volonté | Volonté DD 15 pour reconnaître l'illusion en interagissant avec elle ; demande de la concentration
+resource: Pyrotechnie | à volonté | nécessite un feu existant
+resource: Animation des morts | 3/jour | nécessite des cadavres appropriés
+resource: Dissipation de la magie | 3/jour | niveau de lanceur de sorts 15
+resource: Ténèbres maudites | 3/jour | Volonté DD 16 ; privilégier les adversaires bons
+resource: Mur de feu | 3/jour | niveau de lanceur de sorts 15 ; son immunité lui permet de traverser les flammes
+
+step: Il peut choisir son terrain
+  do: Occuper une zone assez vaste pour son gabarit, avec des rochers disponibles et un passage qui limite l'arrivée simultanée des ennemis
+  note: Garder une voie de sortie praticable à son déplacement de 18 m
+
+step: Des cadavres appropriés sont disponibles avant l'affrontement
+  do: Employer animation des morts et placer les morts-vivants obtenus sur les accès secondaires
+  note: Leur confier l'interception des adversaires qui cherchent à le contourner
+
+step: Les intrus approchent et il a le temps de préparer une diversion
+  do: Entretenir une image accomplie pour montrer une fausse menace ou masquer sa position
+  note: Cesser la concentration lorsqu'il faut attaquer ou employer un autre pouvoir ; ne pas supposer l'illusion entretenue pendant ses attaques
+
+## Ouverture
+
+step: Plusieurs ennemis approchent ensemble et sont encore hors de portée de mêlée
+  do: Placer un mur de feu pour séparer le groupe ou rendre coûteux l'accès à sa position
+  note: Choisir un tracé qu'il pourra lui-même traverser pour changer de côté
+
+step: Plusieurs adversaires bons sont groupés et les séparer présente peu d'intérêt
+  do: Préférer ténèbres maudites au mur de feu, avec Volonté DD 16
+  note: Ce pouvoir est moins intéressant contre des ennemis neutres et sans effet sur les créatures mauvaises
+
+step: Une cible isolée reste à distance
+  do: Lui lancer un rocher, +14, pour 2d6+19 plus 6d6 de feu
+  note: Privilégier une cible facile à toucher et sensible au feu
+
+step: Un ennemi est déjà à portée de corsèque
+  do: Effectuer une attaque à outrance, +24/+19/+14, chaque touche infligeant 4d6+19
+  note: S'il doit d'abord se déplacer, porter une seule attaque à +24 après son déplacement
+
+## Rounds suivants
+
+step: Une cible dangereuse reste à portée et il peut rester sur place
+  do: Concentrer l'attaque à outrance de corsèque sur elle
+  note: Employer Attaque en puissance contre une cible facile à toucher ; conserver sa précision contre une CA élevée
+
+step: Des ennemis se déplacent dans sa zone menacée
+  do: Exploiter Réflexes de combat pour effectuer les attaques d'opportunité effectivement provoquées
+  note: Préserver son espace de manœuvre et éviter de se laisser entourer
+
+step: Un effet magique identifiable protège fortement une cible ou gêne son combat
+  do: Tenter une dissipation de la magie ciblée, puis reprendre les attaques lors d'un round suivant
+  note: Réserver les trois utilisations aux effets dont la suppression change réellement l'affrontement
+
+step: Les adversaires contournent son mur de feu ou cherchent à le coincer
+  do: Traverser les flammes pour retrouver une position favorable, puis reprendre les tirs ou la mêlée selon la distance
+  note: Son immunité au feu rend cette traversée sans danger lié aux flammes
+
+step: Des tireurs dominent l'échange et un foyer est disponible
+  do: Employer la fumée de pyrotechnie pour gêner leurs lignes de vue, puis changer de position
+  note: La fumée peut aussi gêner ses propres perceptions ; son immunité au feu ne l'en protège pas
+
+step: Un adversaire lui lance un rocher
+  do: Tenter de l'intercepter avec réception de rochers
+
+## Repli
+
+step: Ses points de vie passent sous 60 et il peut encore ouvrir une voie de sortie
+  do: Placer un mur de feu entre les poursuivants et lui s'il lui reste une utilisation, puis se retirer aux rounds suivants à 18 m par déplacement
+  note: Faire couvrir son départ par ses morts-vivants s'il en dispose encore
+
+step: Des poursuivants surtout dangereux au corps à corps lui coupent la retraite au sol
+  do: Employer lévitation pour gagner une hauteur hors de leur portée, si l'espace le permet
+  note: Cette solution ne l'abrite pas des tirs et ne lui permet pas de fuir horizontalement dans les airs

@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Kobold jappeur de petite taille, loyal mauvais, FP 7. Il combat avec un arc court +1 à distance et une épée courte +1 au contact.
+  Il possède 31 pv et une CA de 22, mais sa Vigueur de +0 le rend vulnérable. Déplacement de 9 m ; vision dans le noir à 18 m.
+
+step: Il peut choisir sa position
+  do: Se placer à couvert avec une ligne de tir et une issue accessible, en gardant les ennemis à distance.
+  note: Dans l'obscurité, rester à 18 m au plus des cibles pour les voir avec sa vision dans le noir.
+
+## Ouverture
+
+step: Un ennemi est visible et aucun adversaire ne le menace au contact
+  do: Tirer à l'arc court +1 sur une cible exposée ; se déplacer vers un couvert si sa position est vulnérable.
+
+step: Un ennemi le menace déjà au contact
+  do: Utiliser l'épée courte +1 si aucun recul sûr ne permet de reprendre le tir.
+  note: Éviter de tirer dans une zone menacée, où le tir peut provoquer une attaque d'opportunité.
+
+## Rounds suivants
+
+step: Sa position permet de tirer sans être menacé
+  do: Effectuer une attaque à outrance à l'arc court +1, en concentrant les tirs sur la même cible tant qu'elle reste exposée.
+
+step: Un ennemi approche de sa position
+  do: Se déplacer jusqu'à 9 m vers une position qui maintient la distance, puis tirer si une cible reste visible.
+  note: Conserver une voie de fuite ; éviter de se laisser enfermer dans un cul-de-sac.
+
+step: Un pas de placement de 1,50 m suffit à sortir de toute zone menacée
+  do: Faire ce pas, puis tirer à l'arc court +1.
+  note: Ce pas remplace son déplacement du round ; ne pas y ajouter un déplacement de 9 m.
+
+step: Il doit rester au contact
+  do: Combattre à l'épée courte +1 ; effectuer une attaque à outrance s'il n'a pas besoin de se déplacer.
+  note: Avec un BMO de +4, préférer ses attaques ordinaires aux manœuvres offensives.
+
+## Repli
+
+step: Points de vie sous 11, ou plusieurs ennemis menacent de l'encercler
+  do: Utiliser l'action de retraite pour parcourir jusqu'à 18 m vers une issue ou un couvert qui coupe la ligne de vue.
+  note: Avec seulement 31 pv au départ, ne pas attendre d'être acculé pour fuir.
+
+step: Les ennemis poursuivent
+  do: Continuer à s'éloigner en utilisant les obstacles disponibles ; ne reprendre le tir qu'une fois la distance rétablie.

@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Thoxel, démon chaotique mauvais de taille M, qui sème la discorde entre compagnons et préfère trahir plutôt que mourir pour ses alliés.
+  51 pv ; CA 20 ; déplacement 6 m ; allonge 1,50 m. Double lame de maître +10/+10/+7 (1d8+6, critique 19-20) en attaque à outrance ; arc long composite +8/+3 (1d8+4, x3) en attaque à outrance.
+  Aura d'insolence à 1,50 m, DD 15 ; pouvoirs qui retournent les adversaires contre leurs compagnons.
+
+resource: Ordre assassin | 3/jour | Volonté DD 13 ; une cible ; durée 1 round
+resource: Confusion mineure | à volonté | Volonté DD 13 ; une cible ; durée 1 round
+resource: Modification d'apparence | à volonté | prendre une apparence humanoïde pour approcher sous un déguisement
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,7 kg d'objets ; aucune autre créature
+
+step: Il peut approcher sans être immédiatement attaqué
+  do: Utiliser modification d'apparence pour se mêler aux soldats ; employer Bluff +11 et Déguisement +8 pour entretenir la couverture
+  note: Dénigrer les chefs et attiser la méfiance ; ce travail de sape ne donne aucun contrôle magique supplémentaire.
+
+step: Il dispose de temps pour observer les intrus
+  do: Repérer les combattants qui restent près de leurs compagnons et choisir un lieu sûr connu pour une éventuelle téléportation
+  note: Perception +13, vision dans le noir à 18 m ; télépathie à 30 m pour coordonner des complices présents.
+
+note: Défenses
+  Immunisé à l'électricité et au poison ; résistances acide 10, froid 10 et feu 10.
+  Sa Volonté +2 le rend vulnérable aux effets mentaux ; éviter de s'exposer inutilement aux lanceurs de sorts.
+
+## Ouverture
+
+step: Aucun ennemi au contact et un combattant ennemi est proche d'un compagnon, à 12 m ou moins
+  do: Utiliser ordre assassin sur ce combattant, de préférence celui dont une attaque ferait le plus de dégâts à son compagnon
+  note: Volonté DD 13 annule ; au prochain tour de la cible, elle cherche à attaquer son allié le plus proche. Lancer le pouvoir depuis une position hors de l'allonge ennemie.
+
+step: Un ennemi est déjà à 1,50 m
+  do: Porter l'attaque à outrance avec la double lame : +10/+10/+7, chaque coup infligeant 1d8+6, critique 19-20
+  note: L'aura d'insolence est passive ; elle ne consomme pas l'action utilisée pour attaquer.
+
+step: Les ennemis restent à plus de 12 m et une ligne de tir est libre
+  do: Tirer à l'arc long composite : +8/+3 (1d8+4, x3) s'il reste sur place ; un seul tir s'il se déplace
+  note: Profiter de leur approche pour tirer ; ne pas compter sur sa vitesse de 6 m pour distancer des poursuivants rapides.
+
+step: L'approche à pied est bloquée et une position accessible permet un meilleur engagement
+  do: Utiliser téléportation suprême pour se replacer
+  note: La téléportation consomme son action simple ; l'attaque attend le tour suivant.
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Concentrer les trois attaques de double lame sur elle ; utiliser au besoin un pas de placement de 1,50 m pour conserver le contact
+  note: Un déplacement ordinaire empêche l'attaque à outrance ; après une telle approche, porter un seul coup.
+
+step: Plusieurs ennemis peuvent être maintenus dans l'aura sans l'encercler
+  do: Se placer à 1,50 m de plusieurs adversaires pour gêner leur coopération
+  note: Aura d'insolence : Volonté DD 15. Un échec empêche notamment de prendre en tenaille, d'aider ses compagnons et de bénéficier normalement de leurs effets favorables.
+  note: L'effet dure au contact puis 1d4 rounds après ; une sauvegarde réussie immunise contre l'aura de ce thoxel pendant 24 heures.
+
+step: Aucun ennemi au contact et il reste un ordre assassin
+  do: Relancer ordre assassin sur un adversaire proche de ses alliés, à 12 m ou moins
+  note: Décompter chaque utilisation, même si la cible réussit sa sauvegarde ; choisir une autre cible si la première résiste régulièrement.
+
+step: Les ordres assassins sont épuisés ou aucune cible ne peut utilement frapper un allié
+  do: Utiliser confusion mineure sur un adversaire à 12 m ou moins, ou tirer à l'arc si les dégâts sont plus utiles
+  note: Confusion mineure impose la confusion pendant 1 round sur un échec de Volonté DD 13 ; elle ne garantit ni une attaque contre un allié ni la perte du tour.
+
+step: Il veut utiliser un pouvoir alors qu'un ennemi le menace
+  do: Chercher d'abord un pas de placement de 1,50 m qui le mette hors de toute allonge ennemie
+  note: Ses pouvoirs magiques provoquent des attaques d'opportunité lorsqu'ils sont utilisés sans précaution ; ils remplacent ses attaques du round.
+
+## Repli
+
+step: Points de vie à 20 ou moins, ou combat manifestement perdu
+  do: Sortir si possible de l'allonge ennemie par un pas de placement de 1,50 m, puis utiliser téléportation suprême vers le refuge choisi
+  note: S'il ne peut pas sortir des allonges par ce pas, privilégier une retraite pour se dégager avant de se téléporter au tour suivant. Abandonner du matériel si nécessaire pour respecter la limite d'objets transportés.
+
+step: Il a atteint un lieu sûr
+  do: Rompre le combat et reprendre une apparence humanoïde avant toute nouvelle infiltration
+  note: Il ne possède aucun pouvoir de soin dans ce profil ; sa téléportation ne restaure pas ses points de vie.

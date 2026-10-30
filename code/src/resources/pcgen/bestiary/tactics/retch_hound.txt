@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Retch Hound, créature magique de taille M, neutre mauvaise, des forêts et marais tempérés. Il chasse seul, en paire ou en meute de 3 à 6 individus.
+  22 pv, CA 17 ; déplacement de 12 m ; vision dans le noir à 18 m et odorat.
+  Morsure +5 (1d6+2 et croc-en-jambe), allonge de 1,50 m ; souffle acide en cône de 3 m ; puanteur (DD 13, 10 rounds).
+
+step: Une proie est à repérer ou à suivre
+  do: La chercher avec Perception +12, puis suivre sa piste avec Survie +6, ou +10 par l'odorat
+  note: Son intelligence de 5 favorise une chasse simple : repérer, approcher et mordre.
+
+resource: Souffle | Réutilisable tous les 8+1d4 rounds | Cône de 3 m ; 2d6 dégâts d'acide et nausée pendant 1d3 rounds ; Réflexes DD 13 pour réduire les dégâts de moitié et éviter la nausée.
+
+## Ouverture
+
+step: Le souffle est disponible et un ennemi peut être atteint par son cône de 3 m
+  do: Souffler en cherchant à toucher plusieurs adversaires sans atteindre les autres membres de la meute
+  note: Si nécessaire, se déplacer d'abord, dans la limite de 12 m, pour orienter le cône.
+
+step: Aucun ennemi ne peut être pris dans le souffle ce round
+  do: Approcher la proie la plus accessible ; si elle est à 1,50 m après un déplacement de 12 m au plus, la mordre à +5 (1d6+2 et croc-en-jambe)
+
+## Rounds suivants
+
+step: Une morsure touche
+  do: Tenter immédiatement le croc-en-jambe gratuit avec un BMO de +5
+  note: Renverser la proie facilite les morsures suivantes et celles des autres membres de la meute.
+
+step: Le souffle est indisponible et une proie est au contact
+  do: Mordre, en privilégiant un ennemi à terre ou nauséeux
+  note: La puanteur expose les adversaires concernés à un jet de Vigueur DD 13 ; un échec les rend malades pendant 10 rounds.
+
+step: Le délai de 8+1d4 rounds est écoulé et le cône peut atteindre un ennemi
+  do: Réutiliser le souffle, en privilégiant plusieurs cibles ou une proie encore capable de riposter
+  note: Après chaque utilisation, tirer un nouveau délai de recharge.
+
+step: La proie s'éloigne et le souffle ne peut pas l'atteindre
+  do: La poursuivre avec son déplacement de 12 m, puis mordre si elle devient accessible ce round
+
+## Repli
+
+step: Il reste 7 pv ou moins et la proie peut encore se défendre
+  do: Rompre le combat par une retraite, puis s'éloigner vers le couvert de la forêt ou du marais
+  note: Une retraite permet de parcourir jusqu'à 24 m ; seule la case de départ bénéficie de la protection contre les attaques d'opportunité prévue par cette action.

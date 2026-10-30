@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Cheval rhianna, animal de grande taille, neutre et docile des plaines tempérées. Il privilégie la fuite et se défend s'il est acculé.
+  16 pv ; CA 14 ; déplacement de 18 m. Il occupe un espace de 3 m et possède une allonge de 1,50 m.
+  Attaque à outrance : deux sabots à -1 chacun, infligeant chacun 1d4+1 dégâts. Après un déplacement, un seul coup de sabot.
+
+step: Une menace approche
+  do: Repérer le danger avec Perception +6, l'odorat et la vision nocturne ; garder une voie de fuite dégagée.
+  note: Son intelligence animale favorise les réactions simples : s'éloigner du danger ou frapper ce qui le bloque.
+
+## Ouverture
+
+step: Une voie de fuite est libre et aucun adversaire ne le menace au contact
+  do: S'éloigner immédiatement ; deux déplacements permettent de parcourir jusqu'à 36 m.
+
+step: Il est acculé avec un adversaire à 1,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux sabots, à -1 chacun pour 1d4+1 dégâts chacun.
+
+step: Il doit se déplacer pour atteindre un adversaire qui lui barre la sortie
+  do: Avancer du minimum nécessaire, dans la limite de 18 m, puis donner un seul coup de sabot à -1 pour 1d4+1 dégâts.
+
+## Rounds suivants
+
+step: Il reste bloqué au contact
+  do: Répéter les deux coups de sabot contre l'adversaire qui l'empêche de fuir.
+  note: Sa faible précision rend les échanges prolongés peu favorables ; chercher une ouverture pour partir.
+
+step: Un passage se libère
+  do: Abandonner l'affrontement et emprunter ce passage.
+  note: Privilégier le terrain dégagé pour profiter de son déplacement de 18 m.
+
+## Repli
+
+step: Une issue est disponible alors qu'un adversaire le menace au contact
+  do: Utiliser l'action de retraite pour parcourir jusqu'à 36 m vers un espace dégagé.
+  note: La case de départ est protégée contre les attaques d'opportunité lors d'une retraite ; les autres cases traversées peuvent encore l'exposer.
+
+step: Ses points de vie tombent à 8 ou moins
+  do: Chercher à rompre le contact dès qu'un passage le permet ; s'il reste acculé, frapper pour se dégager.
+
+step: Il a rompu le contact
+  do: Continuer à fuir ; courir si une ligne droite dégagée le permet, sinon utiliser deux déplacements jusqu'à 36 m.

@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Khala, dragon femelle de taille G, chaotique mauvais, solitaire et cruel, au corps serpentin et aux trois têtes. Très intelligente, elle préfère voler et isoler ses victimes.
+  261 pv, CA 31 ; déplacement terrestre 9 m, vol 27 m avec bonne manœuvrabilité ; allonge 3 m. Attaque à outrance : 3 morsures +27 (2d10+10, critique 19–20, plus maladie) et queue +25 (2d8+10 et étreinte).
+  Immunisée au froid, aux maladies, à la paralysie et au sommeil ; résistance acide 10 et électricité 10 ; vulnérable au feu. Ses pouvoirs magiques fonctionnent au NLS 16.
+
+resource: Bouclier de feu, version froide uniquement | 3/jour | protection contre le feu et riposte de froid au contact ; durée 16 rounds
+resource: Tempête de grêle renforcée | 3/jour | dégâts de grêle augmentés de moitié ; aucun jet de sauvegarde ; terrain difficile
+resource: Nuage incendiaire de froid | 3/jour | 6d6 de froid par round, Réflexes DD 25 pour moitié ; rayon 6 m, hauteur 6 m ; durée 16 rounds
+resource: Suggestion | 3/jour | Volonté DD 20 annule ; instruction raisonnable, comprise par la cible
+resource: Contrôle du climat | 1/jour | préparation du terrain selon le climat et la saison ; changement météorologique progressif
+resource: Rayon polaire | 1/jour | attaque de contact à distance ; 16d6 de froid et diminution permanente de Dextérité de 1d4 ; aucun jet de sauvegarde
+
+step: Les intrus approchent sans l'avoir repérée
+  do: Observer depuis un couvert avec Perception +30 et Discrétion +23 ; repérer les utilisateurs de feu et une voie de fuite aérienne
+  note: Vision dans le noir à 18 m et vision nocturne ; ni le brouillard ni un nuage magique ne deviennent transparents pour elle.
+
+step: Elle dispose d'une longue préparation et combat dehors
+  do: Utiliser contrôle du climat pour accentuer le froid hivernal et éprouver les intrus avant leur arrivée
+  note: Préparer ce pouvoir en amont ; éviter les vents qui gêneraient son vol ou disperseraient ses nuages.
+
+step: L'affrontement est imminent
+  do: Activer le bouclier froid, puis gagner une position aérienne qui laisse les ennemis à distance
+  note: Le bouclier réduit les dégâts de feu et inflige du froid aux assaillants qui la frappent au contact ; sa vulnérabilité au feu reste à prendre en compte.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et sensibles au froid
+  do: Placer le nuage de froid sur eux, puis se décaler en vol pour éviter leur riposte
+  note: Réflexes DD 25 chaque round pour réduire les dégâts de moitié. Le nuage gêne aussi sa propre vision : rester sur son bord plutôt que tirer au travers.
+
+step: Les ennemis progressent ensemble dans un passage ou possèdent une protection contre le froid
+  do: Préférer une tempête de grêle renforcée pour les blesser et ralentir leur approche
+  note: Infliger une seule fois 3d6 contondants et 2d6 de froid, augmentés de moitié ; le terrain reste difficile pendant 16 rounds. La composante contondante reste utile contre une cible immunisée au froid.
+
+step: Un utilisateur de feu dangereux est isolé et visible
+  do: Employer le rayon polaire sur lui, puis s'éloigner en vol
+  note: Réserver cette unique utilisation à une cible prioritaire sans protection manifeste contre le froid.
+
+## Rounds suivants
+
+step: Les ennemis restent groupés ou tentent de franchir la zone de grêle
+  do: Exploiter leur lenteur avec un nuage de froid, ou renouveler la grêle sur leur nouvel emplacement
+  note: Le nuage dérive de 3 m par round en s'éloignant du point où elle l'a créé ; ne pas le traiter comme une zone fixe.
+
+step: Elle veut frapper sans rester entourée
+  do: Avec Attaque en vol, parcourir jusqu'à 27 m en plaçant une morsure ou un pouvoir magique au cours du déplacement
+  note: Une seule action simple pendant ce passage ; les trois morsures et la queue exigent une attaque à outrance. Le don ne supprime pas les attaques d'opportunité.
+
+step: Une cible isolée se trouve à portée et la riposte collective est limitée
+  do: Se placer à 3 m et concentrer les trois morsures et la queue sur cette cible lors d'une attaque à outrance
+  note: Profiter de l'allonge contre les ennemis qui doivent s'approcher. Employer Attaque en puissance contre une défense facile à toucher ; privilégier la précision contre une forte CA.
+
+step: La queue touche une cible de taille M ou inférieure
+  do: Tenter l'étreinte gratuite avec BMO de lutte +33 pour immobiliser un adversaire dont les mouvements sont décisifs
+  note: Maintenir ensuite la lutte demande une action simple selon les règles normales ; choisir entre cette immobilisation et une nouvelle attaque à outrance.
+
+step: Une morsure obtient un critique confirmé
+  do: Privilégier Critique étourdissant pour neutraliser la cible ; choisir Critique déstabilisant si l'étourdissement est inopérant
+  note: Appliquer un seul de ces deux dons par critique. Les morsures transmettent aussi une maladie, sans compter sur un affaiblissement immédiat pour gagner l'échange.
+
+step: Un adversaire comprend sa langue et peut être détourné du combat
+  do: Utiliser suggestion pour lui proposer une retraite prudente afin de faire soigner ses blessures
+  note: Volonté DD 20 ; présenter l'ordre comme raisonnable. Ne pas compter sur ce pouvoir pour imposer une action manifestement suicidaire.
+
+## Repli
+
+step: Ses points de vie passent sous 65, ou les attaques de feu menacent de l'abattre rapidement
+  do: Relâcher une éventuelle prise, se désengager et fuir en vol à 27 m par déplacement ; employer un double déplacement si la voie est libre
+  note: Ce seuil est une décision tactique. Chercher un couvert ou rompre la ligne de vue avant de reprendre de la distance.
+
+step: Des poursuivants lui ferment encore la retraite et elle dispose d'un pouvoir de zone
+  do: Placer un nuage de froid ou une tempête de grêle sur leur trajet, puis poursuivre la fuite avec son déplacement
+  note: Le nuage masque la vue des deux camps ; la grêle ralentit les poursuivants terrestres. Renouveler le bouclier froid s'il a expiré et que le feu reste la menace principale.

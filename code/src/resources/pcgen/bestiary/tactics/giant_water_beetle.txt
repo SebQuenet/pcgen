@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Coléoptère aquatique géant, vermine de taille M des eaux douces, sans intelligence. Il combat par instinct : morsure +5 (1d8+3), allonge de 1,50 m ; 30 pv, CA 16.
+  Nage à 18 m par round et marche à 3 m. Dépendant de l'eau, il privilégie le combat immergé ; son nuage d'encre facilite la fuite. Immunisé aux effets mentaux.
+
+step: Une proie approche dans l'eau
+  do: Rester immergé et tenter de se dissimuler avant de l'approcher
+  note: Discrétion +5 sous l'eau ; Perception +4 sous l'eau ; vision dans le noir et perception aquatique à 18 m
+
+## Ouverture
+
+step: Une cible est à 1,50 m ou moins
+  do: Mordre à +5 pour 1d8+3 dégâts
+
+step: Une cible dans l'eau peut être atteinte avec un déplacement
+  do: Nager jusqu'à elle, sur un maximum de 18 m, puis mordre à +5 (1d8+3) une fois à portée
+
+step: La cible est trop éloignée pour être mordue ce round
+  do: Se rapprocher à la nage en restant dans l'eau
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Continuer à la mordre à +5 (1d8+3) chaque round
+
+step: La cible s'éloigne dans l'eau
+  do: La suivre à la nage et reprendre les morsures dès qu'elle est à portée
+
+step: La cible rejoint la terre ferme
+  do: Rester dans l'eau et mordre seulement si elle demeure à portée depuis l'eau
+  note: Sa marche à 3 m et sa dépendance à l'eau rendent une poursuite terrestre défavorable
+
+## Repli
+
+step: Il ne reste que 10 pv ou moins
+  do: Utiliser le nuage d'encre sous l'eau pour couvrir le repli, puis s'éloigner à la nage vers une zone plus profonde
+  note: Nage à 18 m par déplacement ; aucune attaque à distance pour couvrir sa fuite
+
+step: Le coléoptère se retrouve hors de l'eau
+  do: Rejoindre l'eau au plus court, à 3 m par déplacement, puis s'éloigner à la nage

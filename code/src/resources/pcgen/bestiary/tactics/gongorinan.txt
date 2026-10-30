@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Gongorinan, qlippoth de taille M, chaotique mauvais, intelligent et mobile. Il neutralise les adversaires dangereux par métamorphose, puis exploite ses nombreuses attaques au contact.
+  Cimeterre +1 : +18/+13/+8, 1d6+7, critique sur 15–20 ; griffe +15, 1d8+3 et saignement ; pince +15, 1d6+3 et étreinte ; dard +15, 1d4+3 et poison. Allonge : 1,50 m.
+  137 pv, CA 27, RD 10/loyal, résistance à la magie 22 ; immunités à l'acide, au froid, aux effets mentaux et aux métamorphoses ; résistances électricité 10 et feu 10.
+  Déplacement et escalade : 12 m ; marche dans les airs et liberté de mouvement constantes. Vision dans le noir à 18 m ; vision à 360°, empêchant la prise en tenaille.
+
+resource: Statue | à volonté | NLS 11 ; déguisement en rocher +27 sous cette forme
+resource: Protection contre la Loi | 3/jour | NLS 11 ; durée 11 minutes
+resource: Métamorphose funeste | 3/jour | DD 20 ; NLS 11
+resource: Rapetissement de groupe | 1/jour | DD 19 ; uniquement les humanoïdes
+resource: Métamorphose universelle | 1/jour | DD 23 ; NLS 11
+resource: Porte dimensionnelle | 1/jour | NLS 11 ; à conserver pour le repli
+
+step: Il peut préparer une embuscade dans un secteur rocheux
+  do: Choisir un emplacement proche du passage des intrus et prendre la forme d'un rocher avec statue.
+  note: Hors de cette forme, sa Discrétion atteint +28 parmi les rochers. Repérer aussi un passage ou un surplomb pour sa fuite.
+
+step: Des ennemis loyaux sont identifiés et leur arrivée est imminente
+  do: Lancer protection contre la Loi sur lui-même avant de se dissimuler.
+  note: Contre les créatures loyales, le sort donne +2 de parade à la CA et +2 de résistance aux sauvegardes ; ne pas appliquer ces bonus contre tous les ennemis.
+
+## Ouverture
+
+step: Un intrus arrive à 1,50 m de son embuscade sans l'avoir repéré
+  do: Quitter statue par une action libre et attaquer au cimeterre pendant le round de surprise.
+  note: Une attaque à outrance exige un tour normal ; le round de surprise ne permet qu'une action simple ou de mouvement.
+
+step: À son premier tour normal, aucun ennemi ne le menace au contact
+  do: Utiliser métamorphose universelle sur l'adversaire le plus dangereux à portée, DD 23, pour le transformer en petit animal peu dangereux.
+  note: Privilégier un adversaire dont la Vigueur paraît faible. La transformation dépend d'une sauvegarde et peut être arrêtée par la résistance à la magie.
+
+step: À son premier tour normal, un ennemi est déjà à 1,50 m
+  do: Faire une attaque à outrance : les trois attaques de cimeterre, puis la griffe, la pince et le dard.
+  note: Concentrer les attaques sur une même cible pour la mettre rapidement hors de combat.
+
+## Rounds suivants
+
+step: Une cible dangereuse reste à distance et il peut utiliser un pouvoir sans être menacé
+  do: Employer métamorphose funeste, DD 20, sur cette cible ; changer de victime après une transformation réussie.
+  note: Éviter de dépenser plusieurs utilisations sur un adversaire manifestement immunisé ou très résistant à ces pouvoirs.
+
+step: Plusieurs humanoïdes misent sur leur Force et les dégâts de leurs armes
+  do: Envisager rapetissement de groupe, DD 19, pour réduire leur Force et les dégâts de leurs armes.
+  note: Ce choix donne aussi aux victimes des avantages de Dextérité et de taille ; préférer une métamorphose individuelle contre une menace prioritaire.
+
+step: Un adversaire est au contact et il peut rester sur place
+  do: Répéter l'attaque à outrance, avec au besoin un pas de placement de 1,50 m.
+  note: Activer Attaque en puissance contre une cible facile à toucher ; la désactiver si les attaques manquent trop souvent. Exploiter l'étreinte de la pince pour retenir une victime lorsque cela vaut mieux que rester libre de ses mouvements.
+
+step: Les ennemis l'encerclent ou une cible vulnérable reste hors de portée
+  do: Utiliser l'escalade ou la marche dans les airs pour changer d'angle et atteindre une position favorable.
+  note: Un déplacement normal suivi d'une attaque ne permet qu'une attaque de cimeterre. La vision à 360° empêche la prise en tenaille, mais pas les attaques multiples des ennemis.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Frapper au cimeterre et exploiter Attaques réflexes si plusieurs occasions se présentent.
+  note: Sa forte Dextérité lui permet plusieurs attaques d'opportunité, mais son allonge reste de 1,50 m.
+
+## Repli
+
+step: Il tombe à 35 pv ou moins, ou le combat devient manifestement perdu
+  do: Utiliser porte dimensionnelle pour rejoindre le passage sûr repéré avant le combat, jusqu'à 252 m.
+  note: Après ce pouvoir, il ne peut plus agir avant son prochain tour ; choisir immédiatement une destination qui le met à couvert.
+
+step: Porte dimensionnelle a déjà été utilisée
+  do: Se désengager, puis fuir par les parois ou dans les airs à 12 m par action de mouvement, en cherchant un obstacle qui coupe la poursuite.
+  note: Une fois hors de vue, reprendre la forme d'un rocher avec statue pour se dissimuler.

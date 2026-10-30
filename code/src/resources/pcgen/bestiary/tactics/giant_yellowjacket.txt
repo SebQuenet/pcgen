@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Guêpe géante de taille G, vermine sans Intelligence : 39 pv, CA 14. Elle combat par instinct.
+  Dard +7 (1d4+4 et poison) ou morsure +7 (1d3+4) : une seule de ces attaques à la fois.
+  Vol à 18 m par déplacement, manœuvrabilité bonne ; marche à 6 m. Espace occupé : 3 m ; allonge : 1,50 m.
+  Vision dans le noir à 18 m, Perception +9 ; immunité aux effets mentaux.
+
+note: Capacités non détaillées
+  Le profil ne précise ni le DD, ni les effets, ni la durée du poison. La qualité phéromones est mentionnée sans fonctionnement : ne pas lui attribuer de bénéfice chiffré ni d'appel automatique de renforts.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +9 et la vision dans le noir, puis se rapprocher en vol.
+  note: Privilégier une cible proche et accessible, sans élaborer de manœuvre complexe.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Porter un coup de dard +7, pour 1d4+4 dégâts et le poison.
+
+step: Un ennemi peut être atteint avec un déplacement de 18 m en vol
+  do: Voler jusqu'à portée de mêlée, puis porter un coup de dard +7.
+  note: Terminer le déplacement à 1,50 m ou moins de la cible ; conserver assez de place pour son espace de 3 m.
+
+step: Aucun ennemi ne peut être atteint avec un seul déplacement
+  do: Se rapprocher en vol, jusqu'à 36 m avec deux déplacements.
+  note: Deux déplacements ne laissent pas d'action pour attaquer ce round.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter le coup de dard +7 à chaque round.
+  note: Le dard inflige davantage de dégâts que la morsure et ajoute le poison. Ne pas cumuler dard et morsure.
+
+step: La cible s'éloigne ou tombe
+  do: Rejoindre la cible encore active la plus proche en volant, puis la piquer si un seul déplacement suffit.
+  note: Le vol permet de franchir les obstacles au sol ; aucun pouvoir indiqué ne permet d'attaquer puis de repartir sans respecter les actions disponibles et les attaques d'opportunité.
+
+## Repli
+
+step: Points de vie sous 10 et une voie de fuite est ouverte
+  do: Prendre un retrait en vol et s'éloigner jusqu'à 36 m vers une zone hors de portée.
+  note: Ce seuil est un choix de conduite instinctive pour le meneur. Le retrait protège seulement le départ de la case initiale contre les attaques d'opportunité ; éviter de traverser d'autres zones menacées.
+
+step: La fuite est impossible
+  do: Continuer à piquer l'adversaire le plus proche.

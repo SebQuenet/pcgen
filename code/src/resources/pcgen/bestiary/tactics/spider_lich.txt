@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Araignée-liche de taille G, morte-vivante chaotique mauvaise, intelligente : elle bloque les passages et affaiblit les intrus par ses sorts avant de les mordre. 102 PV, CA 19 ; déplacement et escalade à 12 m, allonge de 3 m.
+  Morsure +11, 2d8+3 et paralysie et poison ; projection de toile +11 à distance, DD 19, 12 PV. Aura de terreur dans un rayon de 18 m, DD 19 ; sorts au NLS 12.
+  RD 15, franchie seulement par une arme à la fois magique et contondante ; immunités au froid, à l'électricité et celles des morts-vivants ; résistance à la canalisation +4.
+
+resource: Sorts de niveau 6 | 3/jour au total | éclair multiple, DD 19
+resource: Sorts de niveau 5 | 5/jour au total | brume mortelle et domination, DD 18 ; réserve partagée
+resource: Sorts de niveau 4 | 6/jour au total | malédiction et désespoir foudroyant, DD 17 ; énergie négative ; réserve partagée
+resource: Sorts de niveau 3 | 7/jour au total | boule de feu et lenteur, DD 16 ; rapidité, rage ; réserve partagée
+resource: Sorts de niveau 2 | 7/jour au total | flou, ténèbres, détection de l'invisibilité, modification d'apparence et toile d'araignée, DD 15 ; réserve partagée
+resource: Sorts de niveau 1 | 7/jour au total | bouclier, coup au but, saut, mains brûlantes et rayon affaiblissant, DD 14 ; réserve partagée
+
+step: Elle peut choisir son terrain
+  do: Se dissimuler contre une paroi, près d'un passage étroit, avec une issue accessible en escalade
+  note: Discrétion +18, Perception +21 ; vision dans le noir et perception des vibrations à 18 m. Les vibrations exigent que la cible touche la même surface.
+
+step: Les intrus approchent et elle dispose de plusieurs rounds
+  do: Lancer bouclier, puis flou ; ajouter détection de l'invisibilité si nécessaire, un sort par round
+  note: Bouclier porte sa CA à 23 ; flou impose 20 % de chances de rater. Décompter ces sorts des réserves quotidiennes.
+
+step: Deux à quatre spectres ou âmes-en-peine l'accompagnent
+  do: Les placer près des accès et des lanceurs de sorts adverses pour gêner l'approche pendant qu'elle prépare ses sorts
+
+## Ouverture
+
+step: Les ennemis entrent dans les 18 m de son aura
+  do: Résoudre l'aura de terreur, DD 19, sans y consacrer son action de lancement de sort
+
+step: Plusieurs ennemis sont proches les uns des autres et visibles
+  do: Lancer éclair multiple sur la menace principale et choisir les autres intrus comme cibles secondaires
+  note: 12d6 d'électricité ; Réflexes DD 19 pour réduire de moitié sur la cible principale, DD 17 sur les cibles secondaires situées à 9 m au plus de celle-ci.
+
+step: Un humanoïde dangereux est isolé et paraît vulnérable aux attaques mentales
+  do: Préférer domination, Volonté DD 18, puis lui ordonner de bloquer le passage à ses compagnons
+  note: Le lancement demande 1 round complet ; choisir cette ouverture seulement si elle peut rester protégée jusque-là.
+
+step: Les combattants adverses menacent de l'encercler immédiatement
+  do: Préférer lenteur sur les assaillants, Volonté DD 16, puis se déplacer pour conserver un passage étroit devant elle
+
+## Rounds suivants
+
+step: Une cible prioritaire reste libre à distance
+  do: Projeter sa toile naturelle à +11 pour l'entraver, puis attaquer une autre menace au round suivant
+  note: DD 19, toile à 12 PV ; distinguer cette attaque du sort toile d'araignée, DD 15, qui consomme un emplacement de niveau 2 et nécessite des points d'ancrage.
+
+step: Des adversaires sont retenus dans un passage ou une toile
+  do: Lancer brume mortelle sur leur position au round suivant, puis surveiller les sorties depuis le bord du nuage
+  note: Vigueur DD 18 ; contre les créatures de plus de 6 DV, 1d4 de Constitution par round, moitié sur réussite. Le nuage avance de 3 m par round en s'éloignant du point de lancement ; elle est immunisée au poison, mais le nuage gêne aussi sa vue.
+
+step: Un adversaire vivant résiste aux sorts autorisant une sauvegarde
+  do: Lancer énergie négative sur lui : contact à distance +11, 1d4 niveaux négatifs, sans sauvegarde
+  note: Ce sort affaiblit aussi ses attaques et ses sauvegardes ; privilégier ensuite domination ou lenteur si la cible demeure dangereuse.
+
+step: Les ennemis se regroupent hors des toiles et loin de ses alliés
+  do: Relancer éclair multiple si disponible, ou boule de feu, 10d6 de feu, Réflexes DD 16 pour moitié
+  note: Le feu brûle les toiles ; l'utiliser quand leur destruction ne libère pas une menace qu'elle voulait maintenir immobilisée.
+
+step: Elle doit tenir le passage au corps à corps
+  do: Mordre à 3 m d'allonge, +11 pour 2d8+3 et paralysie et poison ; concentrer les morsures sur une cible encore capable d'agir
+  note: Les DD et les effets détaillés de la paralysie et du poison ne sont pas précisés dans la fiche fournie.
+
+step: La mêlée doit durer plusieurs rounds
+  do: Lancer rapidité sur elle et ses alliés présents, puis effectuer des attaques à outrance aux rounds suivants
+  note: Pendant 12 rounds, elle peut porter deux morsures à +12 lors d'une attaque à outrance ; sa vitesse passe à 21 m. Rapidité ne permet pas de lancer un second sort dans le round.
+
+## Repli
+
+step: Ses PV passent sous 30 ou des armes magiques contondantes menacent de l'abattre
+  do: Se désengager, puis gagner une paroi et fuir en escalade à 12 m, ou 21 m sous rapidité
+  note: Si elle peut agir sans s'exposer, consacrer un round à toile d'araignée entre des ancrages pour ralentir les poursuivants ; laisser ses compagnons éventuels couvrir sa retraite.
+
+step: Son corps est détruit
+  do: Prévoir son retour ultérieur grâce à la reconstitution
+  note: Cette faculté ne restaure pas ses PV pendant le combat ; la fiche ne précise pas son délai.

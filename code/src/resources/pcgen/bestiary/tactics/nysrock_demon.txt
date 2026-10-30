@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Nysrock Demon, démon de grande taille, chaotique mauvais, FP 13 : combattant résistant et intelligent qui affaiblit ses ennemis par magie avant de les saisir et de les broyer. 202 pv, CA 25.
+  Morsure +22 (2d6+7 et étreinte), dard +22 (2d4+7 et poison), constriction (2d6+10) ; crachat +16 (poison). Déplacement de 12 m, espace occupé de 3 m, allonge de 1,50 m.
+  RD 10/fer froid et Bien, résistance à la magie 24 ; immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu. Ses défenses permettent de tenir le contact pendant que ses alliés se placent.
+
+resource: Dissipation suprême | à volonté | NLS 18
+resource: Téléportation suprême | à volonté | lui-même et au plus 50 livres d'objets ; aucun passager
+resource: Ténèbres maudites | à volonté | Volonté DD 18, NLS 18
+resource: Blasphème | 3/jour | Volonté DD 21, NLS 18
+resource: Marteau du chaos | 3/jour | Volonté DD 18, NLS 18
+resource: Convocation de démons | 1/jour | niveau 4 ; 35 % de réussite ; 2d4 babaus ou 1 nysrock
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +34 et la vision dans le noir à 18 m ; se tenir à couvert avec Discrétion +16 si le terrain le permet
+  note: Observer leurs protections et leurs armes avant de choisir entre magie et mêlée ; Art de la magie +21 aide à identifier les sorts observés.
+
+step: Il dispose d'un répit juste avant l'affrontement
+  do: Tenter la convocation de 2d4 babaus pour multiplier les alliés, ou d'un nysrock pour renforcer la ligne de combat
+  note: La tentative consomme l'unique utilisation quotidienne, même en cas d'échec ; ne pas compter sur des renforts garantis.
+
+step: D'autres démons sont présents
+  do: Coordonner leur placement par télépathie à 30 m ; préparer une attaque sur le même adversaire et éviter d'être encerclé
+
+## Ouverture
+
+step: Plusieurs ennemis non mauvais se trouvent à 12 m ou moins
+  do: Utiliser Blasphème en priorité, Volonté DD 21
+  note: Le NLS est de 18 ; les créatures de plus de 18 DV sont immunisées à ce sort. Il peut neutraliser plusieurs adversaires avant la mêlée.
+
+step: Les ennemis restent groupés au-delà de 12 m
+  do: Utiliser Ténèbres maudites sur les ennemis bons, ou Marteau du chaos sur les ennemis loyaux, Volonté DD 18
+  note: Choisir selon les alignements qu'il a pu reconnaître ; ces pouvoirs épargnent ses alliés démons chaotiques mauvais.
+
+step: Une protection magique empêche de saisir ou d'atteindre la cible prioritaire
+  do: Employer Dissipation suprême sur cette protection avant d'engager la cible
+  note: Cette utilisation remplace son attaque du round ; les pouvoirs magiques ne s'ajoutent pas gratuitement aux attaques naturelles.
+
+step: Aucun pouvoir n'offre d'avantage décisif et un ennemi est accessible
+  do: Avancer de 12 m au maximum et mordre à +22 (2d6+7), puis tenter l'étreinte si la morsure touche
+  note: S'il commence déjà à portée et peut attaquer à outrance, ajouter le dard +22 (2d4+7 et poison).
+
+## Rounds suivants
+
+step: Une victime est saisie
+  do: Maintenir la lutte et exploiter la constriction de 2d6+10 lors des tests de lutte réussis
+  note: Concentrer la pression sur cette victime ; les alliés peuvent empêcher ses compagnons de venir la secourir.
+
+step: Aucun adversaire n'est saisi et une cible reste à 1,50 m
+  do: Attaquer à outrance : morsure +22 (2d6+7 et étreinte) et dard +22 (2d4+7 et poison)
+  note: Privilégier une cible isolée ou affaiblie. Réserver Attaque en puissance aux cibles faciles à toucher ; les valeurs ci-dessus sont celles des attaques sans ce don.
+
+step: Plusieurs ennemis non mauvais se regroupent à 12 m ou moins et Blasphème reste disponible
+  do: Réutiliser Blasphème, Volonté DD 21, si cela neutralise davantage d'ennemis qu'une attaque au contact
+
+step: Un lanceur de sorts renforce un adversaire dangereux
+  do: Dissipation suprême sur les effets gênants ; reprendre ensuite les attaques sur la cible privée de protection
+
+step: Les ennemis restent hors de mêlée
+  do: Répéter Ténèbres maudites contre les cibles non mauvaises ; réserver Marteau du chaos aux groupes non chaotiques, surtout loyaux
+  note: Les cibles neutres subissent des effets réduits ; ne pas gaspiller ces pouvoirs sur des ennemis dont l'alignement les protège.
+
+step: Une cible isolée se trouve à portée du crachat
+  do: Crachat +16 pour tenter de l'empoisonner
+  note: Le bloc fourni ne précise ni la portée du crachat ni le DD, les effets ou la fréquence du poison ; ne pas leur attribuer de valeurs inventées.
+
+step: Il est encerclé ou une cible importante est inaccessible
+  do: Téléportation suprême vers un emplacement dégagé ou près d'une cible isolée ; reprendre l'offensive au round suivant
+  note: Son allonge reste de 1,50 m malgré sa grande taille ; il doit se placer au contact pour mordre ou piquer.
+
+## Repli
+
+step: Points de vie sous 50, ou ses défenses ne suffisent plus à contenir les ennemis
+  do: Relâcher toute victime et utiliser Téléportation suprême vers un refuge connu sur le même plan
+  note: Il ne peut emporter aucun allié ni prisonnier, et ce pouvoir ne permet pas de changer de plan.
+
+step: Un effet magique dissipable bloque sa téléportation
+  do: Tenter Dissipation suprême sur cet effet, puis se téléporter au round suivant si la voie est libre
+
+step: La fuite magique reste impossible
+  do: Reculer vers une issue praticable ; consacrer le round au déplacement pour parcourir jusqu'à 24 m si le terrain le permet
+  note: S'appuyer sur les démons encore présents pour gêner la poursuite, en les coordonnant par télépathie à 30 m.

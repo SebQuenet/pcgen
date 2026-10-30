@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Parchemin gardien, créature artificielle neutre de très petite taille, FP 3 ; 27 pv, CA 15. Intelligence limitée ; comprend le commun sans pouvoir parler.
+  Attaque tranchante +9 : 1d4+3 dégâts, plus 1d2 de saignement et étreinte ; BMO de lutte +9. Allonge de 0 m : il doit entrer dans la case de sa cible pour la frapper.
+  Vol parfait à 12 m par round ; déplacement au sol à 3 m. Vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses
+  Réduction des dégâts 5/magie ; immunité aux dégâts contondants, d'écrasement et de chute, ainsi que les immunités des créatures artificielles.
+  Vulnérable au feu et sensible aux effets mentaux malgré son type ; ses jets de Volonté et de Vigueur ne sont que de +1.
+
+step: Une consigne de garde lui a été donnée
+  do: Rester près de la zone ou de l'objet à protéger et attaquer les intrus conformément à cette consigne
+  note: Privilégier des réactions simples ; il ne dispose ni de sorts ni d'attaque à distance
+
+## Ouverture
+
+step: Un intrus est accessible en vol
+  do: Utiliser Attaque en vol pour entrer dans sa case, porter une attaque tranchante +9, puis utiliser le déplacement restant pour s'éloigner
+  note: Le trajet total reste limité à 12 m. Attaque en vol ne supprime pas les attaques d'opportunité ; l'entrée dans la case ennemie peut également en provoquer une
+
+step: L'attaque touche une cible au moins une catégorie de taille plus petite que lui et il choisit de rester au contact
+  do: Tenter l'étreinte avec son BMO de lutte de +9, en action libre, au lieu de poursuivre son vol
+  note: L'étreinte ne permet pas de saisir les aventuriers de taille Petite ou Moyenne avec ce profil
+
+## Rounds suivants
+
+step: Il ne retient aucune cible
+  do: Répéter les passages avec Attaque en vol, en privilégiant une cible accessible qui ne saigne pas encore
+  note: Chaque coup inflige 1d4+3 dégâts et un saignement de 1d2 ; les saignements identiques ne se cumulent pas
+
+step: Une cible saigne déjà
+  do: La laisser saigner pendant qu'il se replace en vol ou attaque un autre intrus accessible
+  note: Le saignement inflige ses dégâts au début du tour de la victime jusqu'à ce qu'il soit arrêté
+
+step: Une cible est maintenue en lutte
+  do: Consacrer son action au maintien de la lutte et, en cas de réussite, choisir d'infliger 1d4+3 dégâts
+  note: Il ne peut pas effectuer en même temps un passage avec Attaque en vol
+
+step: Un ennemi emploie du feu
+  do: S'écarter de lui en vol et, si la consigne de garde le permet, passer derrière un obstacle avant de revenir attaquer
+  note: Son immunité aux dégâts contondants et sa réduction des dégâts ne le protègent pas du feu
+
+## Repli
+
+step: Sa consigne exige de tenir la position
+  do: Continuer à défendre la zone jusqu'à sa destruction à 0 pv
+
+step: Le repli est permis et ses pv tombent à 6 ou moins
+  do: Relâcher toute cible saisie et fuir en vol vers un abri, à 12 m par action de déplacement
+  note: Ce seuil est un choix tactique ; aucun pouvoir de fuite, de réparation ou de soin ne figure dans son profil

@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Kytha, démon chaotique mauvais de taille M, solide combattant de contact : 112 pv, CA 23, déplacement de 12 m et allonge de 1,50 m.
+  Attaque à outrance : 2 griffes +16 (1d6+7), morsure +16 (1d8+10, critique 19-20) et langue +16 (1d6+7 plus poison). Le DD et les effets du poison ne sont pas précisés.
+  Il immobilise les humanoïdes, affaiblit les cibles dangereuses puis concentre ses attaques sur un adversaire à la fois.
+
+note: Défenses
+  Réduction des dégâts 10/fer froid ou Bien ; résistance à la magie 20. Immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu.
+  Vision dans le noir à 18 m ; Combat en aveugle aide ses attaques de mêlée contre les cibles dissimulées, sans lui permettre de voir dans les ténèbres surnaturelles.
+
+resource: Ténèbres profondes | à volonté | pouvoir magique, action simple
+resource: Téléportation suprême | à volonté | pouvoir magique, action simple ; lui-même et 22,5 kg d'objets seulement
+resource: Énergie négative | 3 | par jour ; rayon de contact à distance +12, portée 13,50 m ; 1d4 niveaux négatifs, sans sauvegarde
+resource: Silence | 3 | par jour ; Volonté DD 15 si lancé sur une créature non consentante
+resource: Immobilisation de personne de groupe | 1 | par jour ; humanoïdes uniquement, Volonté DD 20
+resource: Convocation de démons | 1 | par jour ; soit 1 kytha avec 40 % de réussite, soit 1d2 babaus avec 30 % de réussite
+
+step: Il repère les adversaires avant d'être engagé
+  do: Se dissimuler avec Discrétion +15, identifier les humanoïdes et les lanceurs de sorts, puis choisir un passage où peu d'ennemis pourront l'entourer.
+  note: Perception +22 ; avec des alliés, coordonner les cibles par télépathie à 30 m.
+
+step: Il dispose du temps nécessaire pour une convocation
+  do: Tenter de convoquer un kytha avant le contact et lui faire prendre un autre côté de la cible choisie.
+  note: Une seule tentative quotidienne ; prévoir de combattre seul si elle échoue.
+
+## Ouverture
+
+step: Plusieurs humanoïdes sont visibles et à portée du pouvoir
+  do: Lancer Immobilisation de personne de groupe, Volonté DD 20, en visant d'abord les adversaires qui bloquent l'accès aux lanceurs de sorts.
+  note: Les cibles doivent être à 9 m au plus les unes des autres. Un humanoïde immobilisé peut consacrer une action complexe à un nouveau jet de Volonté à son tour.
+
+step: Un lanceur de sorts peut être gêné sans employer l'immobilisation
+  do: Lancer Silence sur un point fixe près de lui pour gêner ses sorts à composante verbale.
+  note: Sur un point fixe, aucune sauvegarde ; la cible peut sortir de la zone. Sur le lanceur lui-même, Volonté DD 15 annule. Le kytha peut utiliser ses pouvoirs magiques dans le silence.
+
+step: Un ennemi est déjà à 1,50 m et aucun contrôle n'est prioritaire
+  do: Effectuer l'attaque à outrance avec les deux griffes, la morsure et la langue.
+
+## Rounds suivants
+
+step: Un ennemi dangereux reste à distance, à 13,50 m ou moins
+  do: Lancer Énergie négative sur lui, contact à distance +12, pour infliger 1d4 niveaux négatifs.
+  note: Réserver les trois utilisations aux adversaires encore actifs qui menacent le plus le kytha ; chaque utilisation prend une action simple.
+
+step: Une cible prioritaire est au contact
+  do: Répéter l'attaque à outrance ; un pas de placement de 1,50 m permet de conserver toutes les attaques si cela suffit à la rejoindre.
+  note: Employer Attaque en puissance contre une cible facile à toucher ; privilégier la précision contre une CA élevée.
+
+step: Il doit parcourir plus de 1,50 m pour atteindre sa cible
+  do: Avancer de 12 m au maximum, puis porter une morsure avec Frappe décisive : +16, 2d8+10 dégâts.
+  note: Frappe décisive accompagne cette attaque simple ; elle ne s'ajoute pas à l'attaque à outrance.
+
+step: Les contrôles ont été employés et les ennemis dépendent de leur vue
+  do: Lancer Ténèbres profondes sur un objet porté pour gêner leurs attaques, puis reprendre la mêlée au round suivant.
+  note: Dans les ténèbres surnaturelles, sa propre vision dans le noir ne suffit pas. Combat en aveugle lui permet de relancer une fois le jet de camouflage raté en mêlée ; il doit toujours repérer ses cibles et ne peut viser par un pouvoir celles qu'il ne voit pas.
+
+## Repli
+
+step: Ses points de vie tombent à 28 ou moins, ou ses défenses ne lui permettent plus de tenir
+  do: Faire un pas de placement de 1,50 m si cela suffit à sortir des allonges ennemies, puis utiliser Téléportation suprême vers un refuge connu.
+  note: La téléportation ne transporte ni alliés ni prisonniers ; conserver seulement les objets autorisés par sa limite de 22,5 kg.
+
+step: La téléportation est empêchée
+  do: Utiliser l'action de retraite pour parcourir jusqu'à 24 m et gagner un couvert, puis retenter la téléportation dès que possible.

@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Ikelos, Extérieur chaotique mauvais et intangible, né des cauchemars, qui tourmente ses proies et se nourrit de leur peur. FP 7 ; 67 pv ; CA 18, contact 18 ; initiative +8.
+  Vol parfait à 9 m ; allonge de 1,50 m ; deux griffes intangibles +13 contre la CA de contact, chacune infligeant 2d6 dégâts. Son aura affaiblit les adversaires et rend ses griffes plus meurtrières.
+
+note: Déphasage onirique
+  Il est normalement invisible. Une créature fatiguée ou bénéficiant de détection de l'invisibilité le voit avec un camouflage partiel ; ses griffes lui infligent chacune 3d6 dégâts.
+  Une créature épuisée ou bénéficiant de vision lucide le voit clairement, sans ce camouflage ; ses griffes lui infligent chacune 4d6 dégâts.
+
+resource: Aura de léthargie | à volonté | rayon de 9 m ; Vigueur DD 17 : fatigue, puis épuisement si une créature déjà fatiguée échoue ; effets jusqu'à 10 rounds après la sortie de l'aura ; suppression ou réactivation par action libre ; les ikelos y sont immunisés
+resource: Regard effrayant | permanent | à 9 m, une créature qui croise son regard doit réussir Volonté DD 17 ou être paralysée de peur pendant 1 round ; effet mental de peur et de paralysie ; réussite : immunité au regard de cet ikelos pendant 24 heures
+resource: Se nourrir de la peur | conditionnel | guérison accélérée 5 tant qu'une créature agonisante ou soumise à un effet de peur se trouve à 4,50 m ou moins ; seule source de soins possible
+
+step: Il peut observer ses proies sans combattre
+  do: Approcher discrètement avec Discrétion +18 ; repérer les isolés et les insomniaques grâce à Perception +15 et à la vision dans le noir à 18 m
+  note: Télépathie à 30 m pour distiller des menaces et des murmures ; ces paroles ne provoquent pas automatiquement un effet de peur.
+
+step: Plusieurs ikelos chassent ensemble
+  do: Se répartir autour des proies et coordonner leur approche par télépathie pour gêner les issues
+
+## Ouverture
+
+step: Les adversaires menacent l'ikelos
+  do: Réactiver l'aura si elle était supprimée et voler à moins de 9 m des cibles prioritaires
+  note: La fatigue leur permet de le voir et donc de subir son regard ; elle augmente aussi les dégâts de ses griffes contre elles.
+
+step: Une proie est déjà à 1,50 m
+  do: Attaque à outrance avec les deux griffes +13 ; viser de préférence une cible fatiguée, épuisée ou paralysée
+
+step: Il doit se déplacer pour atteindre une proie
+  do: Voler jusqu'au contact, puis porter une seule griffe +13
+  note: Il ne peut pas cumuler ce déplacement avec ses deux attaques de griffes.
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Poursuivre avec les deux griffes +13 en attaque à outrance, en adaptant leurs dégâts au déphasage onirique
+  note: Concentrer les coups sur une proie vulnérable plutôt que disperser les blessures ; privilégier aussi les lanceurs de sorts capables de le voir.
+
+step: Une créature subit la peur ou agonise
+  do: Rester à 4,50 m ou moins pour bénéficier de la guérison accélérée 5, tant que cette position reste tenable
+  note: Une simple inquiétude ne suffit pas : il faut un effet de peur ou une créature agonisante. La fatigue seule ne le soigne pas.
+
+step: Une cible qui le voit et l'entend résiste au regard, et il a besoin de soins
+  do: Consacrer une action simple à la démoraliser avec Intimidation +15 ; rester à 4,50 m ou moins si elle devient secouée
+  note: Cette action remplace son attaque ; un adversaire immunisé à la peur ne peut pas être démoralisé.
+
+step: Il risque d'être encerclé
+  do: Changer de position en volant ou franchir une paroi assez mince pour son déplacement intangible ; conserver si possible les proies dans l'aura
+  note: Souplesse du serpent améliore sa CA contre les attaques d'opportunité provoquées par son déplacement ; elle ne les supprime pas.
+
+## Repli
+
+step: Points de vie sous 20, ou dégâts subis supérieurs aux soins disponibles
+  do: Rompre le contact et fuir en volant, jusqu'à 18 m avec deux déplacements ; traverser une paroi mince ou gagner de la hauteur pour couper la poursuite
+
+step: Il a échappé aux poursuivants mais reste blessé
+  do: Chercher une proie isolée dont la peur pourra le nourrir avant de revenir
+  note: Ni le repos ni les soins ordinaires ne lui rendent de points de vie ; éviter un nouvel affrontement sans source de guérison.

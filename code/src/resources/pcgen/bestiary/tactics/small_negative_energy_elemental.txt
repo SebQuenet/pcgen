@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Petit élémentaire d'énergie négative, neutre, originaire du plan de l'Énergie négative ; masse d'énergie sombre, peu intelligente, généralement solitaire.
+  13 pv, CA 18, initiative +7 ; vol à 18 m par round, manœuvrabilité bonne ; vision dans le noir à 18 m, Perception +5, Discrétion +12.
+  Coup +6 à 1,50 m : 1d4 dégâts physiques et 1d4 dégâts d'énergie négative aux créatures vivantes. Aura d'énergie négative à 3 m ; explosion à sa mort.
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +12 et observer leur approche avant de choisir une cible vivante accessible en vol
+
+step: Des alliés utilisent l'énergie négative
+  do: Se placer à 3 m ou moins de ces alliés pour leur faire bénéficier de son aura
+  note: Dans l'aura, les aptitudes de classe utilisant l'énergie négative fonctionnent comme si leur utilisateur avait 2 niveaux de plus ; les sorts et pouvoirs magiques d'énergie négative sont maximisés sans emplacement supérieur. L'aura ne renforce pas ses propres pouvoirs et ne se cumule pas avec celle d'autres élémentaires d'énergie négative.
+
+## Ouverture
+
+step: Une créature vivante est accessible avec un déplacement en vol de 18 m au plus
+  do: Voler à portée de 1,50 m et porter un coup +6, infligeant 1d4 dégâts physiques et 1d4 dégâts d'énergie négative
+  note: Privilégier une cible isolée pour limiter le nombre d'adversaires pouvant riposter au contact.
+
+step: Aucun ennemi n'est accessible ce round
+  do: Se rapprocher en vol en utilisant les obstacles disponibles pour couvrir son approche
+  note: Il ne possède aucune attaque à distance ; son aura n'inflige pas de dégâts par sa seule présence.
+
+## Rounds suivants
+
+step: Une cible vivante reste au contact
+  do: Continuer à la frapper avec son coup +6
+  note: Il ne dispose que d'un coup par attaque ; il n'a aucune capacité permettant de frapper au milieu d'un déplacement en vol puis de poursuivre ce déplacement.
+
+step: Plusieurs adversaires menacent de l'encercler
+  do: Utiliser le vol pour rejoindre une position moins exposée ; si nécessaire, consacrer le round à une retraite pour quitter le contact
+
+step: La cible est un mort-vivant ou une créature fondée sur l'énergie négative
+  do: Chercher plutôt une cible vivante
+  note: Le supplément de 1d4 d'énergie négative soigne cette créature ; les dégâts physiques du coup restent distincts.
+
+## Repli
+
+step: Il lui reste 4 pv ou moins et une voie de fuite existe
+  do: Effectuer une retraite en vol, jusqu'à 36 m, pour quitter le combat
+  note: Sa faible réserve de 13 pv favorise un repli précoce ; son explosion exige sa mort et ne se déclenche pas volontairement.
+
+step: Il est tué
+  do: Résoudre son explosion d'énergie négative dans un rayon de 3 m
+  note: Les créatures vivantes subissent 1d8 dégâts d'énergie négative, Réflexes DD 12. Les morts-vivants et les créatures fondées sur l'énergie négative récupèrent à la place autant de points de vie.

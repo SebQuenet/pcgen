@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Guêpe belliqueuse (Warmonger Wasp), créature artificielle extraplanaire de taille G, chaotique mauvaise, à l’intelligence rudimentaire. 85 pv, CA 21 ; déplacement au sol et en vol de 9 m, manœuvrabilité bonne ; allonge de 3 m.
+  Morsure +15 (1d8+4), 2 griffes +15 (1d6+4 chacune), dard +15 (1d6+4, critique sur 19–20 et poison). Immunité à l’électricité et traits des créatures artificielles.
+
+resource: Guérison accélérée | permanente | récupère 5 pv par round, jusqu’à 85 pv
+
+note: Poison
+  Le profil indique du poison sur le dard, mais ne fournit ni DD, ni effets, ni fréquence ; ne pas leur attribuer de valeurs inventées.
+
+step: Des intrus approchent sans l’avoir repérée
+  do: Rester dissimulée derrière un obstacle et attendre qu’une cible soit accessible en un déplacement
+  note: Discrétion +13, Perception +13 ; vision dans le noir à 18 m et vision nocturne. Initiative +10.
+
+## Ouverture
+
+step: Une cible est déjà à portée de son allonge de 3 m
+  do: Porter une attaque à outrance : morsure, deux griffes et dard, toutes à +15
+  note: Concentrer les quatre attaques sur la même cible.
+
+step: Une cible peut être atteinte après un déplacement de 9 m ou moins
+  do: S’approcher au sol ou en vol, puis porter une seule attaque de dard +15
+  note: Exploiter l’allonge de 3 m pour attaquer sans devoir se placer juste à côté de la cible. Un déplacement ordinaire ne permet pas ensuite les quatre attaques.
+
+step: Aucune cible n’est accessible après un déplacement simple
+  do: Se rapprocher en utilisant les obstacles pour limiter son exposition ; un double déplacement couvre jusqu’à 18 m
+  note: Elle ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter l’attaque à outrance sur elle jusqu’à ce qu’elle tombe ou devienne inaccessible
+  note: Le dard ajoute le poison et menace un critique sur 19–20 ; ne pas répartir les attaques sans nécessité.
+
+step: Un pas de 1,50 m suffit à remettre une cible à portée
+  do: Effectuer ce pas, puis porter l’attaque à outrance
+
+step: Il faut parcourir davantage pour atteindre une cible
+  do: Se déplacer, en volant si cela permet de franchir un obstacle, puis attaquer une fois avec le dard
+
+step: Un ennemi provoque une attaque d’opportunité dans son allonge de 3 m
+  do: Porter une attaque de dard +15
+  note: Une seule attaque d’opportunité par round ; elle ne possède pas Attaques réflexes.
+
+## Repli
+
+step: Points de vie à 25 ou moins et une voie de fuite est disponible
+  do: Utiliser un retrait au sol ou en vol, jusqu’à 18 m, vers un obstacle qui coupe les attaques ennemies
+  note: Le retrait ne protège pas tout le trajet contre les attaques d’opportunité.
+
+step: Elle a réussi à se mettre à l’abri
+  do: Rester hors d’atteinte pendant que la guérison accélérée restaure ses points de vie ; reprendre l’attaque à partir de 55 pv si les ennemis sont encore présents
+  note: Passer de 25 à 55 pv demande 6 rounds sans nouveaux dégâts. À 0 pv, une créature artificielle est détruite ; la guérison accélérée ne la relève pas.

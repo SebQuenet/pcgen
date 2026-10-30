@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Gigas Clam, bête magique aquatique de taille TG, CN, FP 11 ; mollusque prédateur qui attend généralement ses proies sur les fonds sédimentaires.
+  Morsure +20 (2d6+9, critique 19–20), 2 coups de siphon +20 (1d8+9 et étreinte) ; dard de siphon +11 (2d6+9, critique 19–20 et poison). Allonge et espace occupé : 4,50 m.
+  149 PV, CA 26 ; RD 10/magie et tranchant, franchie seulement par une attaque à la fois magique et tranchante ; immunité aux maladies et au poison.
+  Nage à 18 m, déplacement terrestre à 6 m ; propulsion par jet à 90 m. Vision dans le noir à 18 m, vision nocturne, Perception +13.
+
+resource: Réflexes surhumains améliorés | 1/jour | relancer un jet de Réflexes raté et conserver le second résultat
+
+step: Des proies approchent du fond
+  do: Rester immobile et les laisser entrer dans son allonge de 4,50 m
+  note: Préserver une trajectoire d'eau libre pour une éventuelle fuite par propulsion ; son apparence de mollusque ordinaire peut rendre les plongeurs imprudents.
+
+## Ouverture
+
+step: Une proie est déjà à 4,50 m ou moins et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : morsure +20 (2d6+9, critique 19–20) et 2 coups +20 (1d8+9 et étreinte)
+  note: Sur un coup réussi contre une cible de taille G ou inférieure, tenter gratuitement une lutte à +28 grâce à l'étreinte, sans provoquer d'attaque d'opportunité.
+
+step: Une proie est accessible après un déplacement
+  do: Nager jusqu'à 18 m, puis porter une morsure avec Frappe décisive : +20 (4d6+9, critique 19–20)
+  note: Frappe décisive s'emploie sur cette attaque simple ; elle ne s'ajoute pas à l'attaque à outrance.
+
+step: Une proie reste hors d'allonge et offre une ligne de tir
+  do: Tirer un dard de siphon +11 (2d6+9, critique 19–20 et poison)
+  note: À 9 m ou moins, Tir à bout portant donne +12 et 2d6+10 dégâts. Tir de précision évite le malus pour tirer sur une cible engagée en mêlée.
+  note: Les effets du poison et son DD ne sont pas précisés dans le bloc fourni.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Consacrer une action simple à maintenir la lutte et, sur réussite, lui infliger les dégâts d'un coup : 1d8+9
+  note: BMO de lutte +28 ; bonus de circonstances de +5 pour maintenir la prise si la cible ne s'est pas libérée. Garder la proie dans l'eau.
+
+step: Aucune proie n'est agrippée et un adversaire reste à portée
+  do: Répéter l'attaque à outrance et tenter l'étreinte sur les coups réussis
+  note: Concentrer les attaques sur une même proie pour l'abattre rapidement.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Porter un coup +20 (1d8+9) et tenter l'étreinte s'il touche une cible de taille G ou inférieure
+  note: Avec Dextérité 10, une seule attaque d'opportunité par round ; Attaques réflexes permet aussi de la porter en étant pris au dépourvu.
+
+step: Les adversaires s'éloignent
+  do: Les suivre à la nage et mordre avec Frappe décisive si une cible devient accessible ; sinon, employer le dard depuis une position de tir dégagée
+
+## Repli
+
+step: Points de vie sous 30 et une trajectoire de fuite est libre
+  do: Relâcher toute prise, puis consacrer une action complexe à se propulser par jet jusqu'à 90 m en ligne droite dans l'eau
+  note: Ce seuil est un choix tactique ; le jet occupe le round et ne permet pas d'attaquer en même temps.
+
+step: La trajectoire du jet est bloquée
+  do: Nager vers l'eau libre à 18 m par déplacement, puis utiliser le jet dès qu'une ligne droite se dégage

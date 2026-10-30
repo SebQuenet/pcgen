@@ -1,0 +1,103 @@
+## Avant le combat
+
+note: Profil
+  Grand dracosire gris, dragon aquatique neutre mauvais des côtes chaudes, solitaire et très intelligent. Il combine magie de contrôle, souffle et assauts aériens pour isoler une proie avant de l'achever au contact.
+  362 PV ; CA 42, contact 5 ; résistance à la magie 29 ; immunité au sommeil et à la paralysie. Déplacement terrestre 18 m, vol 75 m de manœuvrabilité moyenne, nage 12 m ; espace occupé 6 m.
+  Morsure +35 (2d8+19, critique 19–20), 2 griffes +34 (2d6+13), 2 ailes +32 (2d6+6), queue +32 (2d8+19). Allonge 4,50 m, ou 6 m avec la morsure.
+  Souffle de feu en ligne de 36 m, 24d6, Réflexes DD 30 pour moitié ; présence terrifiante à 108 m, Volonté DD 27. Lanceur de sorts de niveau 17.
+
+note: Gestion des sorts
+  Les utilisations indiquées ci-dessous sont des emplacements partagés entre tous les sorts du même niveau. Décompter les préparatifs et conserver au moins un emplacement de niveau 4 pour le repli.
+  Les valeurs du profil sont celles du bloc, avant les bonus des sorts de préparation.
+
+resource: Souffle de feu | renouvelable après 1d4 rounds | une action simple ; ligne de 36 m, 24d6, Réflexes DD 30 pour moitié
+resource: Sorts de niveau 8 | 4/jour | moment de prescience et flétrissure, réserve commune
+resource: Sorts de niveau 7 | 6/jour | vagues d'épuisement, mot de pouvoir aveuglant et souhait limité, réserve commune
+resource: Sorts de niveau 6 | 6/jour | héroïsme suprême, pétrification et glissement de terrain, réserve commune
+resource: Sorts de niveau 5 | 7/jour | notamment mur de pierre, brume mortelle et télékinésie, réserve commune
+resource: Sorts de niveau 4 | 7/jour | porte dimensionnelle, invisibilité suprême, scrutation et peau de pierre, réserve commune
+resource: Sorts de niveau 3 | 7/jour | notamment dissipation de la magie et protection contre les énergies destructives, réserve commune
+resource: Sorts de niveau 2 | 7/jour | notamment image miroir et flou, réserve commune
+resource: Sorts de niveau 1 | 8/jour | notamment bouclier et brume de dissimulation, réserve commune
+
+step: Il choisit le lieu de l'affrontement
+  do: Se poster près d'une falaise ou d'une côte rocheuse, avec un dégagement pour voler et une issue vers l'eau
+  note: Son vol permet de changer rapidement d'angle ; sa CA de contact de 5 rend les échanges prolongés avec des lanceurs de rayons dangereux.
+
+step: Il dispose de plusieurs rounds de préparation
+  do: Lancer successivement moment de prescience, héroïsme suprême, bouclier et image miroir
+  note: Moment de prescience dure 17 heures ; garder son bonus de +17 pour un jet de sauvegarde décisif, à déclarer avant le jet. Son utilisation ne demande aucune action et décharge le sort.
+  note: Héroïsme suprême dure 17 minutes : +4 aux attaques, sauvegardes et compétences, immunité à la peur et 17 PV temporaires. Bouclier donne +4 de bouclier à la CA pendant 17 minutes ; image miroir crée 1d4+5 doubles, maximum 8, pendant 17 minutes.
+
+step: Il possède la poussière de diamant nécessaire
+  do: Ajouter peau de pierre avant l'affrontement
+  note: Consommer 250 po de composante ; réduction des dégâts 10/adamantium, jusqu'à 150 points absorbés, pendant au plus 170 minutes.
+
+step: L'assaut est imminent et les ennemis ne semblent pas voir l'invisible
+  do: Lancer invisibilité suprême juste avant de s'approcher
+  note: Durée 17 rounds ; les attaques ne mettent pas fin au sort.
+
+## Ouverture
+
+note: Choix de l'assaut
+  Choisir l'une des ouvertures suivantes selon la disposition des ennemis. Souffler ou lancer un sort consomme l'action simple du round.
+
+step: Il effectue sa première attaque en étant visible des ennemis
+  do: Activer sa présence terrifiante en action libre avec l'attaque
+  note: À 108 m, les adversaires ayant moins de 25 DV font un jet de Volonté DD 27 : échec, secoués pendant 5d6 rounds ; ceux de 4 DV ou moins sont paniqués. Une réussite immunise à sa présence pendant 24 heures.
+
+step: Au moins deux ennemis peuvent être pris dans une ligne de 36 m
+  do: Effectuer une attaque en vol : se déplacer, souffler au meilleur angle, puis terminer le déplacement hors de leur portée de mêlée
+  note: Le déplacement total reste limité à 75 m ; Réflexes DD 30 pour réduire les 24d6 de feu de moitié. Choisir une trajectoire qui évite les allonges adverses.
+
+step: Plusieurs combattants vivants approchent dans un cône de 18 m
+  do: Lancer vagues d'épuisement pour réduire leur capacité à le poursuivre et à le frapper
+  note: Aucun jet de sauvegarde ; résistance à la magie applicable. L'épuisement impose −6 en Force et Dextérité, réduit la vitesse de moitié et empêche la course et la charge.
+
+step: Les ennemis restent à distance ou se protègent efficacement du feu
+  do: Lancer flétrissure sur les créatures vivantes regroupées
+  note: Portée 324 m ; aucune paire de cibles ne doit être séparée de plus de 18 m. Infliger 17d6 dégâts, Vigueur DD 23 pour moitié ; résistance à la magie applicable.
+
+## Rounds suivants
+
+step: Le souffle est rechargé et plusieurs cibles sont de nouveau alignées
+  do: Reprendre de l'altitude ou changer de côté, puis souffler lors d'un passage
+  note: Décompter la recharge de 1d4 rounds après chaque souffle ; privilégier les cibles dépourvues de protection contre le feu.
+
+step: Une proie isolée est déjà dans son allonge et il peut rester sur place
+  do: Effectuer une attaque à outrance : morsure, deux griffes, deux ailes et queue sur cette proie
+  note: Employer les bonus et dégâts du profil, avec +4 aux attaques si héroïsme suprême est actif. Réserver Attaque en puissance aux adversaires faciles à toucher ; concentrer les attaques pour éliminer une cible.
+
+step: Rester au contact l'exposerait à plusieurs attaques à outrance
+  do: Employer Attaque en vol avec une morsure utilisant Science de la frappe décisive, puis poursuivre le déplacement
+  note: Une seule morsure +35, ou +39 avec héroïsme suprême, inflige 6d8+19. Le déplacement total est de 75 m au maximum ; ce passage peut provoquer des attaques d'opportunité. Exploiter l'allonge de 6 m.
+
+step: Un adversaire dangereux et blessé possède au plus 200 PV et se trouve à 19,50 m ou moins
+  do: Lancer mot de pouvoir aveuglant, en priorité sur un combattant qui menace de l'immobiliser ou sur un lanceur de sorts
+  note: Aucun jet de sauvegarde, résistance à la magie applicable. Cécité pendant 1d4+1 rounds à 101–200 PV, 1d4+1 minutes à 51–100 PV, permanente à 50 PV ou moins.
+
+step: Une cible isolée paraît vulnérable aux effets de Vigueur
+  do: Lancer pétrification pour la retirer du combat
+  note: Vigueur DD 21 annule ; résistance à la magie applicable. Préférer flétrissure si plusieurs cibles peuvent être atteintes.
+
+step: Les soigneurs ou lanceurs de sorts soutiennent encore les combattants de première ligne
+  do: Dresser un mur de pierre entre les deux groupes, sur un support rocheux existant
+  note: Couper les lignes de vue et les déplacements sans enfermer directement une créature ; exploiter ensuite son vol pour attaquer le groupe isolé.
+
+step: Des ennemis sont coincés dans un passage au sol et ne peuvent pas quitter rapidement la zone
+  do: Au round suivant la séparation, lancer brume mortelle sur leur position et rester hors du nuage
+  note: Contre les créatures vivantes de 7 DV ou plus, 1d4 dégâts de Constitution par round d'exposition, Vigueur DD 20 pour moitié ; aucune résistance à la magie. Le nuage est emporté par le vent, s'éloigne du dragon et descend vers les points bas.
+
+step: Une protection magique identifiée neutralise ses attaques les plus efficaces
+  do: Tenter une dissipation de la magie ciblée sur cette protection depuis une position dégagée
+  note: Le test de dissipation est limité à 1d20+10 malgré son niveau de lanceur de sorts de 17 ; si la protection résiste, changer de moyen d'attaque.
+
+## Repli
+
+step: Ses PV tombent sous 90 ou il risque d'être abattu au prochain assaut
+  do: Lancer porte dimensionnelle vers un refuge connu, jusqu'à 324 m
+  note: Après la téléportation, aucune autre action avant son prochain tour ; reprendre alors la fuite en vol ou à la nage. Utiliser moment de prescience, s'il reste actif, sur une sauvegarde qui conditionne sa survie.
+
+step: La téléportation est impossible ou les emplacements de niveau 4 sont épuisés
+  do: Couper la poursuite avec un mur de pierre si possible, puis s'éloigner en vol à 75 m par déplacement
+  note: Si l'eau offre un meilleur couvert, plonger et nager à 12 m par déplacement. Rechercher un obstacle solide qui coupe la ligne de vue des poursuivants.

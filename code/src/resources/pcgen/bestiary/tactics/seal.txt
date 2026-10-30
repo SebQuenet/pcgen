@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Phoque, petit animal marin neutre : 4 pv, CA 13, initiative +5 ; morsure +1 (1d4), allonge de 1,50 m.
+  Il se déplace de 3 m sur terre et nage à 18 m par action de mouvement ; il privilégie l'eau pour se déplacer et fuir.
+  Perception +9, vision nocturne, Natation +8 ; il peut retenir son souffle et ne peut pas être renversé.
+
+step: Une menace approche
+  do: Repérer le danger avec Perception +9 et gagner l'eau si la voie est libre
+  note: Son intelligence animale ne lui permet pas de préparer des manœuvres complexes.
+
+## Ouverture
+
+step: Un adversaire le menace à 1,50 m et bloque sa fuite
+  do: Mordre cet adversaire : attaque +1, dégâts 1d4
+
+step: Aucun adversaire ne lui barre l'accès à l'eau
+  do: Se déplacer vers l'eau, puis nager pour s'éloigner de la menace
+  note: Il ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Il reste acculé au contact
+  do: Répéter sa morsure +1 (1d4) contre l'adversaire qui l'empêche de fuir
+  note: Il ne dispose ni d'une prise ni d'une attaque permettant d'entraîner automatiquement sa cible sous l'eau.
+
+step: Une voie de fuite se libère
+  do: Cesser le combat et gagner l'eau ; utiliser sa nage de 18 m pour prendre de la distance
+
+## Repli
+
+step: Il est blessé, avec 3 pv ou moins, et peut encore agir
+  do: Se retirer dès que possible ; au contact, effectuer un retrait pour s'éloigner jusqu'à 6 m sur terre ou 36 m à la nage
+  note: Le retrait évite les attaques d'opportunité pour la case de départ ; traverser d'autres cases menacées peut encore en provoquer.
+
+step: Il atteint l'eau et peut s'éloigner
+  do: Plonger, retenir son souffle et continuer à nager loin des assaillants
+  note: Il doit remonter respirer ; il ne respire pas sous l'eau.

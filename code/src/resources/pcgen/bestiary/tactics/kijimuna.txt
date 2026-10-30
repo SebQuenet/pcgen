@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Kijimuna, petit humanoïde gobelinoïde chaotique neutre, pêcheur et farceur des forêts et des côtes. Il privilégie une embuscade sur une cible isolée.
+  19 points de vie, CA 15 ; déplacement de 9 m ; vision dans le noir à 18 m ; Discrétion +14.
+  Lance +4 au contact (1d6+1, critique x3), allonge de 1,50 m ; filet +6 au toucher à distance, sans dégâts.
+
+resource: Filet | 1 | le préparer plié ; portée maximale de 3 m ; utilisable contre une cible de taille TP, P ou M
+resource: Lances | 3 | armes de contact ; garder une lance disponible après le lancer du filet
+
+step: Des intrus approchent
+  do: Se dissimuler derrière la végétation ou un obstacle avec Discrétion +14 ; attendre qu'une cible s'écarte de ses compagnons.
+  note: Choisir un emplacement offrant un chemin de fuite ; l'obscurité peut favoriser son approche grâce à sa vision dans le noir.
+
+## Ouverture
+
+step: Une cible isolée de taille adaptée se trouve à 3 m
+  do: Lancer le filet, attaque de contact à distance +6, en visant de préférence un combattant qui cherche à le rejoindre.
+  note: Une cible touchée est enchevêtrée : vitesse réduite de moitié, -2 aux attaques, -4 en Dextérité ; elle ne peut ni courir ni charger.
+
+step: Un ennemi est déjà au contact, ou sa taille empêche l'emploi du filet
+  do: Employer la lance à 1,50 m, attaque +4, dégâts 1d6+1, critique x3.
+  note: Sa lance ne permet pas d'attaquer à 3 m.
+
+## Rounds suivants
+
+step: La cible est prise dans le filet et ses alliés restent éloignés
+  do: Lâcher la corde du filet pour libérer ses mains, sortir une lance, puis attaquer au contact dès que la distance le permet.
+  note: Le filet continue d'enchevêtrer la cible sans être tenu. Sortir la lance et se rapprocher peuvent retarder l'attaque au round suivant.
+
+step: Un adversaire reste au contact
+  do: Porter une attaque de lance par round ; si des alliés kijimunas sont présents, chercher une prise en tenaille.
+  note: Exploiter la gêne du filet sans supposer que la victime est immobilisée ou incapable de riposter.
+
+step: Le filet manque sa cible ou plusieurs ennemis convergent
+  do: Passer à la lance si un duel reste possible ; sinon, se replier vers le couvert préparé.
+  note: Il ne possède qu'un filet ; éviter de s'exposer pour le récupérer pendant le combat.
+
+## Repli
+
+step: Points de vie à 6 ou moins, ou risque d'encerclement
+  do: Effectuer une retraite pour quitter le contact, puis rompre la ligne de vue derrière le terrain et se cacher avec Discrétion +14.
+  note: Il abandonne le filet si nécessaire. Une retraite permet jusqu'à 18 m de déplacement sur terrain dégagé.
+
+step: Une pieuvre lui est présentée
+  do: Fuir en criant ; s'il est acculé, attaquer la pieuvre à la lance pour ouvrir une issue.
+  note: Sa peur des pieuvres guide son comportement sans lui imposer de condition de peur chiffrée.

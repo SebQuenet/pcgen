@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Petromin, animal de taille TP, neutre, des falaises désertiques ; il chasse surtout de gros insectes et privilégie la fuite devant une menace supérieure.
+  4 pv ; CA 14, contact 14, pris au dépourvu 12. Morsure +4 (1d3-4), allonge 0 m : il doit entrer dans l'espace de sa cible pour la mordre.
+  Déplacement au sol et escalade : 6 m ; vol : 12 m, manœuvrabilité médiocre. Discrétion +14, Perception +5, Escalade +4 ; vision nocturne.
+
+note: Vol plané
+  Il ne peut ni rester en vol stationnaire ni monter selon un angle supérieur à 45 degrés. Il doit terminer chacun de ses tours au sol : prévoir un lieu d'atterrissage avant chaque envol.
+
+step: Il peut attendre une proie sans être menacé
+  do: Rester sur une hauteur et observer les alentours avec Perception +5.
+  note: Sa lumière naturelle, comparable à une bougie et de couleur contrôlable, attire les gros insectes dont il se nourrit.
+
+step: Une menace approche
+  do: Éteindre sa lumière par une action rapide et se cacher derrière le relief avec Discrétion +14.
+  note: Il est invisible aux créatures qui utilisent uniquement la vision dans le noir ; les autres moyens de détection peuvent le repérer.
+
+## Ouverture
+
+step: Une petite proie accessible se trouve à portée d'un déplacement
+  do: Planer vers elle, se poser dans son espace et porter une morsure +4 (1d3-4).
+  note: Le déplacement en vol est limité à 12 m par action de mouvement. Entrer dans l'espace d'un adversaire peut provoquer une attaque d'opportunité ; il ne dispose d'aucune attaque à distance.
+
+step: Une créature plus dangereuse le menace et une issue reste libre
+  do: Rejoindre un abri au sol ou en planant, en terminant son tour au sol.
+
+step: Il est acculé et doit se défendre
+  do: Entrer dans l'espace de l'assaillant si nécessaire et tenter une morsure +4 (1d3-4).
+
+## Rounds suivants
+
+step: Sa proie résiste encore sans le mettre en danger
+  do: Rester dans son espace et porter une morsure +4 (1d3-4) par round.
+  note: Il ne possède qu'une attaque de morsure ; aucune capacité ne lui permet de frapper puis de poursuivre son vol dans la même action.
+
+step: La proie s'éloigne
+  do: La suivre seulement si elle reste accessible et si un atterrissage est possible ce tour-ci ; sinon abandonner la poursuite.
+
+step: Il dispose d'un répit et d'une paroi accessible
+  do: Grimper vers un abri ou une hauteur à 6 m par action de mouvement, avec Escalade +4 si un test est nécessaire.
+  note: Une nouvelle attaque planée exige toujours de terminer le tour au sol.
+
+## Repli
+
+step: Il tombe à 3 pv ou moins, ou rencontre un adversaire manifestement trop dangereux
+  do: Faire retraite vers un abri ; planer si le trajet permet de se poser avant la fin du tour, sinon fuir au sol.
+  note: Avec seulement 4 pv au maximum, il abandonne rapidement un affrontement qui le blesse.
+
+step: Il a rompu le contact
+  do: Garder sa lumière éteinte, utiliser le relief pour se cacher avec Discrétion +14 et cesser le combat.

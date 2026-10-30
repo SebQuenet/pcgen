@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Shedu Stone Idol, immense idole de pierre animée, créature artificielle neutre et sans intelligence, liée à un site. Gardien de mêlée : 128 pv, CA 27, réduction des dégâts 20/adamantium, immunité à la magie et traits des créatures artificielles.
+  Cornes +23 (2d8+9) et 2 sabots +23 (1d8+9 chacun) ; piétinement (4d6+13, DD 27). Espace occupé de 4,50 m, allonge de 3 m ; déplacement au sol de 9 m et vol de 18 m, manœuvrabilité moyenne.
+  Aura de terreur dans un rayon de 6 m, DD 13 ; vision dans le noir à 18 m, vision nocturne et vision lucide constante.
+
+resource: Vision lucide | constante | NLS 16
+
+step: En attente sur le site auquel il est lié
+  do: Garder l'accès ou la zone désignée par ses consignes, en occupant un passage assez large pour son corps
+  note: Sans intelligence, il applique ses consignes ; il ne prépare ni ruse ni embuscade élaborée.
+
+## Ouverture
+
+step: Des intrus pénètrent à moins de 6 m
+  do: Appliquer l'aura de terreur, DD 13
+  note: Maintenir la pression sur les intrus qui restent dans la zone gardée ; ne pas abandonner le site pour poursuivre ceux qui fuient.
+
+step: Plusieurs adversaires de taille G ou inférieure sont regroupés sur son trajet
+  do: Les piétiner pour infliger 4d6+13 dégâts à chacun, Réflexes DD 27 pour réduire les dégâts de moitié
+  note: Le piétinement vise les créatures plus petites que lui ; ne pas l'utiliser contre une créature de sa taille ou plus grande.
+
+step: Une cible est déjà à 3 m ou moins
+  do: Attaque à outrance : cornes +23 (2d8+9) et 2 sabots +23 (1d8+9 chacun)
+
+step: Aucun ennemi n'est à portée de mêlée
+  do: Avancer au sol ou voler pour rejoindre un intrus accessible, puis porter une attaque de cornes +23 (2d8+9) si la cible est à portée
+  note: Après un déplacement ordinaire, ne porter qu'une attaque ; le vol permet de franchir un obstacle ou d'atteindre un adversaire en hauteur.
+
+## Rounds suivants
+
+step: Une cible reste à portée, éventuellement après un pas de 1,50 m
+  do: Répéter l'attaque à outrance, en concentrant les trois attaques sur elle tant qu'elle menace la zone gardée
+  note: Exploiter son allonge de 3 m pour frapper sans devoir avancer au contact immédiat.
+
+step: Plusieurs intrus plus petits se regroupent de nouveau
+  do: Répéter le piétinement si le trajet reste dans les limites du site gardé
+  note: Face à une cible isolée déjà à portée, privilégier les trois attaques de mêlée.
+
+step: Un adversaire utilise une arme en adamantium
+  do: Le frapper s'il est accessible et menace la zone gardée
+  note: Cette arme contourne sa réduction des dégâts 20/adamantium.
+
+step: Un adversaire reste en hauteur dans le site
+  do: Le rejoindre en vol si l'espace le permet, puis utiliser les cornes ou l'attaque à outrance selon le déplacement nécessaire
+  note: Avec Vol -5 et une manœuvrabilité moyenne, éviter de fonder la tactique sur le vol stationnaire ou les virages serrés. Il n'a aucune attaque à distance.
+
+## Repli
+
+step: Ses points de vie deviennent faibles
+  do: Continuer à défendre le site selon ses consignes ; aucun seuil de fuite spontané
+  note: Cette créature sans intelligence ne choisit pas une retraite par instinct de survie. Elle possède le rajeunissement, mais reste soumise à son lien au site.
+
+step: Les intrus quittent le site auquel il est lié
+  do: Cesser la poursuite à la limite du site et reprendre sa garde

@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Kyton cantor, extérieur de taille P, loyal mauvais, FP 9 : il cherche à neutraliser les esprits avant de déchirer une victime isolée.
+  105 pv ; CA 24, contact 16 ; initiative +9 ; déplacement 9 m ; vision dans le noir à 18 m ; Discrétion +22.
+  Attaque à outrance : 2 griffes +16 (1d3+2, agrippement et toucher persistant), morsure +16 (1d4+2). Chant de fascination à 30 m, Volonté DD 18.
+  RD 10/argent ou Bien, immunité au froid, résistance à la magie 20 : il supporte mieux les armes ordinaires, mais évite de s'exposer aux armes qui franchissent sa RD.
+
+resource: Chant de l'Ailleurs | à volonté | action standard pour commencer ; effet sonique, mental et de coercition ; Volonté DD 18
+resource: Détection de pensées | à volonté | Volonté DD 15 ; pensées superficielles après observation et concentration
+resource: Lumières dansantes et son imaginaire | à volonté | diversion ; son imaginaire, Volonté DD 13 pour déjouer l'illusion en interagissant avec elle
+resource: Lévitation | 3/jour | sur lui-même pour gagner de la hauteur ; durée 10 minutes
+resource: Localisation de créature | 3/jour | repérer une proie admissible au sort ; ne remplace pas une ligne de vue pour attaquer
+resource: Télékinésie | 3/jour | NLS 10 ; Volonté DD 18 lorsque le mode choisi autorise ce jet
+resource: Porte dimensionnelle | 1/jour | téléportation jusqu'à 240 m ; aucune autre action après son utilisation durant ce tour
+resource: Détection du mensonge | 1/jour | Volonté DD 17 ; préparer un interrogatoire
+resource: Modification de mémoire | 1/jour | Volonté DD 17 ; jusqu'à 5 minutes de souvenirs ; demande du calme et du temps
+resource: Changement de plan | 1/jour | conserver une issue vers un autre plan
+
+step: Il peut observer les intrus avant de se montrer
+  do: Se cacher à couvert ; employer détection de pensées pour chercher leurs intentions et des lumières dansantes ou des sons imaginaires pour détourner leur attention
+  note: Ces diversions ne créent ni obstacle réel ni ordre irrésistible ; il prépare une position d'où son chant sera audible.
+
+step: Les adversaires semblent surtout dangereux au corps à corps
+  do: Activer lévitation avant leur arrivée et monter hors de leur allonge, en restant à moins de 30 m des auditeurs visés
+  note: Monter ou descendre de 6 m au maximum demande une action de mouvement ; la lévitation ne lui donne pas de déplacement horizontal libre.
+
+## Ouverture
+
+step: Plusieurs intrus sont à 30 m ou moins et aucune menace manifeste ne les empêche de se laisser fasciner
+  do: Commencer le Chant de l'Ailleurs, en restant à distance
+  note: Tous les non-kytons qui l'entendent font Volonté DD 18 ; un échec les fascine tant qu'il chante, puis pendant 1d4 rounds. Ses éventuels alliés non-kytons sont également concernés.
+
+step: Le combat est déjà engagé ou les ennemis résistent au chant
+  do: Employer télékinésie pour désarmer le porteur d'une arme dangereuse ou renverser un adversaire qui approche
+  note: Ces manœuvres se résolvent contre le DMD, sans jet de Volonté ; la résistance à la magie s'applique. Leur maintien exige de la concentration et concurrence ses autres actions standard.
+
+step: Un ennemi l'a déjà rejoint au contact
+  do: Effectuer l'attaque à outrance s'il peut rester sur place ; sinon, se déplacer puis porter une seule attaque de griffe
+  note: Chaque griffe qui touche impose Volonté DD 18 contre le toucher persistant.
+
+## Rounds suivants
+
+step: Des ennemis restent fascinés et personne ne les menace
+  do: Continuer à chanter et laisser ses éventuels partenaires kytons se placer sans menace manifeste
+  note: Une approche hostile autorise un nouveau jet ; une menace évidente rompt automatiquement la fascination. Un allié peut réveiller une victime par une action standard. La fascination ne permet pas de commander les victimes.
+
+step: Une cible a échoué contre le toucher persistant
+  do: Concentrer sur elle les griffes et la morsure ; si elle s'éloigne, envisager une projection par télékinésie, Volonté DD 18
+  note: Pendant 1 minute, elle subit -2 à tous ses jets de Volonté et est prise au dépourvu contre ce cantor. Les touches successives ne cumulent pas le malus ; ce toucher est un effet mental.
+
+step: Une griffe touche une créature de taille P ou inférieure et l'immobiliser est utile
+  do: Tenter gratuitement l'agrippement, sans attaque d'opportunité, avec BMO +15 en lutte
+  note: Maintenir ensuite la prise demande une action standard ; choisir entre cette immobilisation et une nouvelle attaque à outrance. L'agrippement ne fonctionne pas sur une cible de taille M ou supérieure.
+
+step: Le contact devient défavorable ou les effets mentaux échouent
+  do: Reprendre de la distance à 9 m par déplacement et employer les utilisations restantes de télékinésie pour gêner les poursuivants
+  note: Privilégier les manœuvres sans jet de Volonté contre les esprits résistants ; éviter d'utiliser ses pouvoirs magiques au contact si cela expose à une attaque d'opportunité.
+
+## Repli
+
+step: Ses points de vie passent sous 30, ou plusieurs ennemis franchissent régulièrement sa RD
+  do: Utiliser porte dimensionnelle pour gagner un emplacement connu hors d'atteinte ; au tour suivant, quitter la zone ou employer changement de plan
+  note: Le seuil de 30 pv est un choix tactique ; il ne possède aucun soin ni régénération dans ce profil.
+
+step: Porte dimensionnelle a déjà été utilisée et il risque d'être achevé
+  do: Employer changement de plan pour fuir, de préférence vers le plan de l'Ombre
+  note: Il abandonne une prise éventuelle avant de partir ; il ne cherche pas à emporter un prisonnier hostile pendant cette fuite.
+
+step: Il est hors de danger et garde une victime isolée sous contrôle matériel
+  do: Envisager modification de mémoire pour brouiller les souvenirs de la rencontre, puis relâcher ou abandonner la victime selon ses intérêts
+  note: Volonté DD 17 ; la préparation des souvenirs demande une concentration pouvant durer plusieurs minutes. Ce pouvoir n'est pas une défense d'urgence pendant la fuite.

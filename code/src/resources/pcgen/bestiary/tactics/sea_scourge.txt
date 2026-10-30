@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Sea Scourge, vase aquatique de grande taille, neutre et sans intelligence, qui agit par instinct. 76 pv, CA 7 ; vision aveugle à 18 m.
+  Deux coups +12, chacun infligeant 1d6+7 dégâts et 1d4 dégâts d'acide, avec étreinte ; BMO de lutte +18. Espace occupé et allonge : 3 m.
+  Amphibie ; nage à 6 m, déplacement au sol et escalade à 3 m. Informe, immunisée contre l'acide et dotée des traits des vases.
+
+step: Une créature entre dans les 18 m de sa vision aveugle
+  do: Se diriger instinctivement vers la créature la plus proche
+  note: Sa perception ne dépend pas de la lumière ; elle ne prépare pas de manœuvre concertée avec d'autres vases.
+
+## Ouverture
+
+step: Une cible est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux coups +12
+  note: Chaque coup réussi inflige 1d6+7 dégâts et 1d4 dégâts d'acide.
+
+step: Un déplacement suffit à mettre une cible à portée
+  do: Avancer de 6 m au maximum à la nage, ou de 3 m au sol ou en escalade, puis porter un seul coup +12
+
+step: La cible reste hors de portée après un déplacement
+  do: Consacrer le round à deux déplacements vers elle, jusqu'à 12 m à la nage ou 6 m au sol ou en escalade
+
+step: Un coup touche une cible de taille M ou inférieure
+  do: Tenter immédiatement une étreinte avec un test de lutte à +18, sans action supplémentaire
+  note: La prise initiale n'ajoute pas de dégâts à ceux du coup.
+
+## Rounds suivants
+
+step: Une cible reste agrippée au début de son tour
+  do: Utiliser son action simple pour maintenir la lutte et, en cas de réussite, infliger les dégâts du coup qui a établi la prise, avec son acide
+  note: Le test utilise le BMO de lutte +18, avec le bonus normal de +5 si la cible n'a pas rompu la prise. Ce maintien occupe l'action simple du round.
+
+step: Aucune cible n'est agrippée et une créature est à portée
+  do: Répéter les deux coups +12 en attaque à outrance et tenter l'étreinte après chaque touche admissible
+
+step: La proie s'éloigne
+  do: La suivre avec ses déplacements, puis reprendre les coups dès qu'elle revient dans son allonge de 3 m
+  note: Son amphibie et son escalade lui permettent de poursuivre hors de l'eau ; sa vitesse y tombe à 3 m.
+
+## Repli
+
+step: Ses points de vie diminuent et une proie reste accessible
+  do: Continuer instinctivement les coups et les prises
+  note: Aucun seuil de fuite raisonné ; cette vase sans intelligence poursuit le combat jusqu'à sa destruction ou jusqu'à ce qu'elle perde sa proie.

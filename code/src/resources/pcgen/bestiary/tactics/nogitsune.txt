@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Nogitsune, oni métamorphe à tête de renarde, solitaire et malveillante, qui privilégie l'infiltration et l'assassinat. Elle traque sous sa forme naturelle et exploite les murs pour isoler ses victimes.
+  80 pv ; CA 21 ; régénération 5 interrompue par l'acide ou le feu ; résistance à la magie 18 ; esquive totale. Déplacement et escalade à 15 m ; allonge de 1,50 m.
+  Morsure +14 (1d6+4), deux griffes +14 (1d4+2 et poison si enduites) ; dards de maître +15/+10 (1d4+4 et poison si enduits). Attaque éclair permet une seule attaque de mêlée au cours d'un déplacement.
+
+resource: Whinnis bleu | 5 doses | poison de blessure ; Vigueur DD 14 ; effet initial : 1 point de Constitution ; effet secondaire : inconscience pendant 1d3 heures ; fréquence : 1/round pendant 2 rounds ; guérison : 1 sauvegarde réussie
+resource: Dards de maître | 4 | suivre les projectiles dépensés ; préparer les dards avant de lancer plusieurs attaques
+resource: Déplacement | 1/jour | action simple ; 7 rounds ; 50 % de chances de rater les attaques contre elle
+resource: Rapidité | 1/jour | action simple ; 7 rounds ; déplacement et escalade à 24 m ; +1 aux attaques, à la CA et aux Réflexes ; une attaque supplémentaire lors d'une attaque à outrance
+resource: Marche des ombres | 1/jour | action simple ; réserver à la fuite ; départ possible seulement dans une zone de lumière faible
+resource: Détection de pensées | constant | Volonté DD 16 contre la lecture des pensées superficielles ; nécessite de la concentration
+resource: Brume de dissimulation, saut, feuille morte | à volonté | brume pour masquer ses mouvements, saut pour franchir les obstacles, feuille morte pour quitter une hauteur
+
+step: Repérage possible avant l'embuscade
+  do: Prendre une apparence d'humanoïde ou d'animal de taille P ou M ; observer les lieux et sonder discrètement les pensées pour identifier une victime isolable
+  note: Prévoir une issue par escalade et une zone de pénombre pour marche des ombres ; reprendre sa forme naturelle à couvert avant d'attaquer
+
+step: Préparation du poison
+  do: Enduire les deux griffes et trois dards avec les cinq doses de whinnis bleu
+  note: Le quatrième dard reste sans poison ; ses enduits ne constituent pas une réserve illimitée. L'utilisation du poison ne risque pas de l'empoisonner elle-même
+
+step: L'assaut est imminent et elle dispose de deux rounds à couvert
+  do: Activer déplacement, puis rapidité, et attaquer avant l'expiration des effets
+  note: Chaque pouvoir demande une action simple ; compter séparément leurs 7 rounds
+
+## Ouverture
+
+step: Une cible isolée est accessible
+  do: Employer Attaque éclair : approcher, porter une griffe empoisonnée à 1,50 m, puis poursuivre le déplacement vers un abri
+  note: Ne pas dépasser 15 m de déplacement total, ou 24 m sous rapidité ; cette attaque ne provoque pas d'attaque d'opportunité de la cible, mais les autres adversaires restent dangereux
+
+step: La cible reste hors de portée de mêlée
+  do: Se déplacer vers un angle favorable et lancer un dard empoisonné à +15, de préférence à 6 m ou moins
+  note: Après un déplacement, lancer un seul dard ; choisir en priorité un adversaire isolé ou un utilisateur identifié de feu ou d'acide
+
+step: Elle est découverte sans préparation et subit des attaques physiques
+  do: Activer déplacement depuis une position protégée, puis chercher une cible accessible
+
+## Rounds suivants
+
+step: Un adversaire reste seul au contact et ses alliés ne peuvent pas intervenir immédiatement
+  do: Porter une attaque à outrance : morsure +14 et deux griffes +14 ; sous rapidité, ajouter +1 aux attaques et une morsure supplémentaire
+  note: Employer les griffes encore empoisonnées ; ne rester sur place que si l'échange lui est favorable
+
+step: Plusieurs ennemis peuvent la prendre au contact
+  do: Reprendre les attaques éclair et utiliser les murs, les obstacles et Acrobaties +17 pour limiter les ripostes
+  note: Souplesse du serpent améliore sa défense contre les attaques d'opportunité dues au déplacement ; escalade ne permet pas de traverser un plafond sans prises
+
+step: Elle veut déstabiliser une cible sans masquer sa propre vue
+  do: Limiter son déplacement total du round à 7,50 m et utiliser diversion mobile pour feinter avec Bluff +14 en action rapide, puis porter une attaque de mêlée
+  note: Une feinte réussie prive la cible de son bonus de Dextérité contre sa prochaine attaque de mêlée ; elle ne permet pas une attaque à outrance après déplacement
+
+step: Les tirs ou les renforts rendent sa position dangereuse
+  do: Limiter son déplacement total du round à 7,50 m et utiliser diversion mobile pour produire brume de dissimulation en action rapide
+  note: Le nuage reste en place et gêne aussi sa propre vision ; au-delà de 1,50 m, elle ne voit pas ses cibles à travers la brume. Rejoindre ensuite une autre position
+
+step: Une victime succombe au poison et la zone est sûre
+  do: Achever la victime à la morsure ; si ses compagnons approchent, se dégager et les laisser s'occuper d'elle
+  note: Elle préfère tuer une proie rendue impuissante, mais évite de s'immobiliser au milieu du groupe
+
+## Repli
+
+step: Points de vie sous 25, encerclement imminent ou attaques répétées de feu ou d'acide
+  do: Rompre la ligne de vue avec la brume, gagner une hauteur par escalade et rejoindre la pénombre ; utiliser marche des ombres dès que son départ est possible
+  note: Pour combiner déplacement et brume en action rapide, rester à 7,50 m de déplacement total ce round ; la brume ne fournit pas à elle seule la pénombre nécessaire à marche des ombres
+
+step: Marche des ombres est indisponible ou la lumière empêche son utilisation
+  do: Fuir par les murs et les toits à 15 m par déplacement, ou 24 m sous rapidité ; utiliser feuille morte si une chute permet d'échapper aux poursuivants
+
+step: Elle a échappé à la poursuite
+  do: Se cacher et laisser agir sa régénération avant de changer d'apparence pour quitter les lieux
+  note: Elle récupère 5 pv par round ; des dégâts d'acide ou de feu suspendent sa régénération pendant le round suivant

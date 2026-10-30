@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Marilith mythique, démon chaotique mauvais de grande taille, FP 21, rang mythique 8. Combattante intelligente à six épées, elle cherche à isoler une victime et à multiplier les coups plutôt qu'à poursuivre tout le groupe.
+  344 PV, CA 40, contact 17 ; guérison accélérée 5 ; déplacement 12 m ; espace et allonge 3 m. Vision dans le noir à 18 m, vision lucide permanente et Perception +31.
+  Attaque à outrance : épée longue +2 à +28/+23/+18/+13, 2d6+12 ; cinq autres épées longues +2 à +28, 2d6+7 chacune ; critiques sur 16-20, avec poison. Coup de queue +20, 2d6+5 et étreinte, BMC de lutte +31.
+  Réduction des dégâts 10, surmontée par une arme à la fois en fer froid, épique et bonne ; résistance à la magie 32 ; immunité au froid, au feu, à l'électricité et au poison ; résistance à l'acide 10.
+
+resource: Vision lucide et aura maudite | permanentes | aura DD 26 ; les bonus défensifs sont déjà compris dans les valeurs du bloc
+resource: Téléportation suprême | à volonté | elle-même et jusqu'à 22,5 kg d'objets ; aucun allié transporté
+resource: Projection d'image | à volonté | Volonté DD 25 pour reconnaître l'illusion après interaction ; conserver une ligne d'effet avec l'image
+resource: Télékinésie | à volonté | DD 23 selon l'utilisation ; permet notamment des manœuvres à distance
+resource: Barrière de lames | 3/jour | Réflexes DD 24 ; 15d6 dégâts lors d'une traversée, moitié sur réussite
+resource: Vol | 3/jour | pour atteindre les adversaires en hauteur ou éviter un terrain défavorable
+resource: Guérison suprême | 3/jour | elle-même uniquement ; rend jusqu'à 150 PV par utilisation
+resource: Invocation de démons | 1/jour | un seul choix : 1 marilith, 20 % ; 1 nalfeshnie, 35 % ; ou 1d4 hezrous, 60 %
+
+step: Les intrus sont repérés avant l'affrontement
+  do: Observer avec vision lucide, repérer les lanceurs de sorts et choisir un passage où son allonge de 3 m gênera les déplacements.
+  do: Si le temps le permet, tenter l'invocation de 1d4 hezrous pour obtenir des renforts avec la meilleure chance de réussite.
+  note: En cas d'échec, l'utilisation quotidienne est dépensée ; elle ne tente pas ensuite un autre choix.
+
+step: Elle dispose déjà d'alliés
+  do: Les répartir pour occuper les combattants pendant qu'elle attaque une cible moins protégée ; transmettre les ordres par télépathie à 30 m.
+
+step: Elle peut éprouver les réactions des intrus sans engager son corps
+  do: Faire paraître une projection d'image et parler par son intermédiaire pour attirer leur attention sur une fausse position.
+  note: L'image ne porte pas ses attaques d'épée ; toute rupture de la ligne d'effet met fin à la projection.
+
+## Ouverture
+
+step: Les combattants ennemis et leurs soutiens peuvent être séparés
+  do: Placer une barrière de lames entre eux, puis chercher à combattre du côté de la cible la plus vulnérable.
+  note: Si la barrière apparaît directement sur une créature, un jet de Réflexes DD 24 réussi évite tous les dégâts et lui permet de choisir son côté. Une traversée ultérieure n'accorde que la réduction de moitié.
+
+step: Aucun ennemi n'est à portée et une position avantageuse est accessible
+  do: Se déplacer jusqu'à 12 m pour approcher, puis porter une seule attaque d'épée si une cible est à 3 m ou moins.
+  note: Si le passage est trop dangereux, employer plutôt téléportation suprême pour se placer près d'un soutien isolé ; l'attaque attend le round suivant.
+
+step: Une cible prioritaire est déjà à 3 m ou moins
+  do: Effectuer l'attaque à outrance : neuf attaques d'épée et un coup de queue ; concentrer les épées sur elle jusqu'à sa chute.
+  note: Un pas de 1,50 m peut ajuster sa position sans sacrifier l'attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Répéter l'attaque à outrance et changer de victime seulement lorsque la première est neutralisée ou qu'une menace plus urgente apparaît.
+  note: Les critiques favorisent les saignements grâce à son don mythique. Le poison figure sur les épées, mais son DD et ses effets ne sont pas précisés dans le bloc fourni.
+
+step: Le coup de queue touche une cible pouvant être agrippée
+  do: Tenter l'étreinte avec son BMC de lutte +31 pour gêner sa fuite.
+  note: Maintenir ensuite la lutte demande une action simple ; préférer les attaques à outrance si immobiliser cette victime n'est pas décisif.
+
+step: Un adversaire dépend d'une arme particulièrement dangereuse
+  do: Remplacer une attaque de mêlée par un désarmement, BMC +29 ; employer télékinésie si le désarmement doit être tenté à distance.
+  note: Le désarmement par télékinésie suit les règles du pouvoir et n'utilise pas son BMC de mêlée +29.
+
+step: Des adversaires provoquent des attaques d'opportunité dans son allonge de 3 m
+  do: Utiliser Attaques réflexes pour les frapper, en priorité ceux qui tentent de gagner les arrières ou de lancer un sort sans se protéger.
+
+step: Une cible demeure hors de portée ou le groupe se rassemble de nouveau
+  do: Employer vol pour atteindre une cible aérienne, ou une nouvelle barrière de lames pour couper les renforts et les voies de passage.
+  note: Choisir une seule action simple adaptée à la situation ; ces pouvoirs remplacent l'attaque à outrance du round.
+
+step: Ses PV tombent à 170 ou moins et une guérison suprême reste disponible
+  do: Lancer guérison suprême sur elle-même dès qu'elle peut le faire sans subir une interruption probable, puis reprendre la pression au round suivant.
+  note: La guérison accélérée rend aussi 5 PV par round ; elle ne remplace pas un soin immédiat face à des dégâts importants.
+
+## Repli
+
+step: Ses PV tombent sous 85, ou les ennemis menacent de l'abattre avant son prochain tour
+  do: Utiliser téléportation suprême vers un lieu sûr connu ; si elle est au contact, tenter d'abord un pas de 1,50 m pour sortir des allonges ennemies lorsque c'est possible.
+  note: Elle privilégie la fuite immédiate à un soin insuffisant pour tenir jusqu'au prochain tour. La téléportation n'emporte pas ses alliés.
+
+step: Elle a atteint un refuge
+  do: Employer les guérisons suprêmes restantes et laisser agir la guérison accélérée avant d'envisager une nouvelle attaque.

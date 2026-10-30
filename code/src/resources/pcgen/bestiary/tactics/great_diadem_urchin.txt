@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Great Diadem Urchin, oursin aquatique de taille M, neutre et sans intelligence, qui attaque instinctivement les créatures proches.
+  57 PV, CA 20 ; trois épines +9 en attaque à outrance, chacune infligeant 1d8+5 plus poison ; allonge de 1,50 m.
+  Amphibie ; déplacement au sol de 3 m. Sa régénération lui permet de soutenir un combat prolongé au contact.
+
+note: Défenses
+  Vision à 360° : impossible à prendre en tenaille. Immunité aux effets mentaux.
+  Stabilité : DMD 23 contre la bousculade et le croc-en-jambe ; DMD 15 autrement.
+
+resource: Régénération 3 | permanente | Récupère 3 PV par round ; les dégâts de feu ou d'acide interrompent cette récupération pendant le round suivant.
+
+step: Une créature approche
+  do: La repérer avec sa vision nocturne, son odorat et sa perception des vibrations à 9 m.
+  note: La perception des vibrations exige un contact avec la même surface ; elle ne détecte pas automatiquement une créature qui nage au-dessus du fond.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : trois épines +9, chacune pour 1d8+5 plus poison.
+
+step: Un ennemi est accessible après un déplacement de 3 m au maximum
+  do: Ramper jusqu'à portée de 1,50 m, puis porter une seule attaque d'épine +9, pour 1d8+5 plus poison.
+  note: Un déplacement ordinaire ne permet pas de porter les trois attaques ce round.
+
+step: La créature repérée reste plus loin
+  do: Avancer vers elle au sol, jusqu'à 6 m avec un double déplacement.
+  note: Le bloc ne donne aucune vitesse de nage ; utiliser son déplacement au sol sur le fond ou sur la côte.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance avec les trois épines, en frappant la menace immédiate.
+  note: Le poison accompagne chaque épine qui blesse ; son DD et ses effets ne sont pas précisés dans le bloc fourni.
+
+step: Un adversaire se décale de 1,50 m et reste accessible par un pas de placement
+  do: Faire un pas de placement de 1,50 m, puis porter les trois attaques d'épine.
+
+step: Tous les adversaires quittent son allonge
+  do: Reprendre l'approche à 3 m par action de mouvement ; porter une seule attaque si un déplacement suffit à retrouver le contact.
+
+step: Il subit des dégâts de feu ou d'acide
+  do: Suspendre sa régénération pendant le round suivant et continuer les attaques de contact tant qu'il peut agir.
+  note: La régénération ne confère aucune résistance au feu ou à l'acide.
+
+## Repli
+
+step: Ses PV diminuent mais il peut encore agir
+  do: Continuer à frapper les créatures à portée, sans organiser de retraite.
+  note: Sans intelligence, il ne choisit pas de seuil de PV pour préparer une fuite ; sa lenteur limite toute poursuite.
+
+step: Les adversaires s'éloignent et le contact est rompu
+  do: Laisser la régénération restaurer ses PV, jusqu'à 57, dès qu'elle fonctionne de nouveau.

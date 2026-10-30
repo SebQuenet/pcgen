@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  L'Immured, ou emmuré, est un mort-vivant de taille M, neutre mauvais, né d'une mort par suffocation. Peu intelligent, il préfère les lieux clos et obscurs.
+  26 pv, CA 16 ; déplacement de 9 m ; vision dans le noir à 18 m ; Perception +6, Discrétion +5. Il comprend le commun mais ne parle pas.
+  Coup +6 (1d4+4), allonge de 1,50 m ; entraînement +8. Sa tactique consiste à isoler une victime et à l'épuiser dans son aura d'essoufflement.
+
+resource: Aura d'essoufflement | permanente | rayon de 3 m, DD 14 indiqué au profil ; éteint les feux non magiques ; les créatures qui respirent doivent retenir leur souffle ou suffoquer
+resource: Faille | à volonté | action rapide ; mur non magique, ouverture de 1,50 m, épaisseur maximale de 0,60 m ; durée de 2 rounds
+resource: Saisie | à chaque coup non létal réussi | dégâts non létaux sans malus d'attaque ; tentative gratuite d'entraînement à +8
+
+step: Des intrus approchent
+  do: Les attendre dans l'obscurité, près d'un mur utilisable pour une faille ; privilégier un passage étroit.
+  note: Son aura ne se désactive pas ; les lumières non magiques s'éteignent dès qu'elles entrent dans ses 3 m.
+
+## Ouverture
+
+step: Une victime passe près du mur derrière lequel il attend
+  do: Ouvrir une faille par action rapide, puis frapper à travers si la victime est à portée de 1,50 m.
+  note: La membrane bloque la vue des autres créatures ; l'emmuré voit, attaque et traverse librement.
+
+step: Aucun mur ne permet l'embuscade
+  do: Avancer jusqu'au contact d'une cible qui respire, puis porter un coup +6 (1d4+4 non létaux).
+  note: Avec 9 m de déplacement, il privilégie une victime qu'il peut atteindre et frapper dans le même round.
+
+step: Son coup inflige des dégâts non létaux
+  do: Tenter aussitôt l'entraînement à +8 contre le DMD de la victime ; reculer avec elle vers la faille ou un passage étroit.
+  note: L'entraînement remplace ici la dispersion des attaques : il cherche à séparer cette victime de ses alliés.
+
+## Rounds suivants
+
+step: La victime respire et reste au contact
+  do: Répéter le coup non létal et l'entraînement gratuit ; la garder dans les 3 m de l'aura.
+  note: Chaque point de dégâts non létaux infligé dans l'aura retire un round à la réserve de souffle d'une victime en apnée.
+
+step: Une faille permet d'isoler davantage la victime
+  do: La tirer à travers, puis continuer à la frapper depuis la pièce voisine.
+  note: Les autres créatures traversent en terrain difficile. Après 2 rounds, la faille se ferme et repousse ses occupants vers l'espace libre le plus proche ; elle ne les emmure pas automatiquement.
+
+step: La cible ne respire pas ou résiste aux dégâts non létaux
+  do: Porter des coups létaux +6 (1d4+4), ou choisir une autre victime qui respire si elle est accessible.
+
+step: La victime tente de sortir de l'aura
+  do: La suivre et reprendre les coups et l'entraînement dès qu'elle revient au contact.
+  note: Il compte sur les dégâts et l'isolement pour écourter l'apnée ; l'aura seule ne provoque pas une asphyxie immédiate.
+
+## Repli
+
+step: Points de vie sous 8 et un mur approprié est accessible
+  do: Ouvrir une faille et se retirer dans une autre pièce de son lieu de mort ; laisser l'ouverture se refermer.
+  note: Les poursuivants peuvent traverser avant sa fermeture ; ce passage ne garantit pas sa fuite.
+
+step: Les intrus quittent son tombeau ou son bâtiment
+  do: Renoncer à une poursuite prolongée et rester près du lieu auquel il est lié.
+  note: Chaque heure passée au-dehors lui inflige 1d6 dégâts, impossibles à soigner avant son retour ; le lien ne lui interdit pas matériellement de sortir.

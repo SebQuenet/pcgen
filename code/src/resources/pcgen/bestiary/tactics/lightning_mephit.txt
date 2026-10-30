@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Méphite de foudre, extérieur neutre de taille M lié à l’air et à l’électricité ; 16 pv, CA 17. Vol parfait à 18 m, marche à 9 m ; vision dans le noir à 18 m.
+  Deux griffes +3, chacune infligeant 1d4 plus 1d4 d’électricité ; allonge de 1,50 m. Souffle électrique en cône de 4,50 m, éclair et décharge électrique.
+  Immunité à l’électricité et réduction des dégâts 5/magie ; vulnérabilité à l’eau. Favoriser les positions aériennes sèches et éviter le contact prolongé.
+
+resource: Souffle électrique | fréquence non précisée | cône de 4,50 m ; 1d8 d’électricité ; DD 13 pour moitié
+resource: Décharge électrique | 1/heure | pouvoir magique, NLS 6
+resource: Éclair | 1/jour | pouvoir magique, NLS 6
+resource: Convocation | 1/jour | niveau 2 ; un méphite de foudre, 25 % de réussite
+
+step: Adversaires repérés avant le combat
+  do: Se placer en hauteur, à couvert si possible, avec une issue de fuite sèche ; utiliser Discrétion +9 pour préparer l’approche.
+  note: Repérer les groupes serrés et les adversaires alignés pour ses attaques électriques.
+
+step: Combat imminent et temps de préparation disponible
+  do: Tenter la convocation avant d’engager les adversaires.
+  note: L’allié est incertain ; un échec consomme l’unique tentative quotidienne.
+
+## Ouverture
+
+step: Éclair disponible et plusieurs ennemis alignés
+  do: Lancer éclair depuis une position aérienne permettant de toucher plusieurs adversaires.
+  note: Éviter de faire passer la ligne par des alliés qui ne sont pas immunisés à l’électricité.
+
+step: Pas de ligne avantageuse pour éclair, mais plusieurs ennemis dans un cône de 4,50 m
+  do: Employer le souffle électrique : 1d8 d’électricité, DD 13 pour moitié.
+  note: Approcher par les airs pour orienter le cône sans rester encerclé au sol.
+
+step: Un seul ennemi au contact et aucune attaque de zone avantageuse
+  do: Employer décharge électrique si elle est disponible.
+  note: Ce pouvoir ne s’ajoute pas à une attaque à outrance de griffes dans le même round.
+
+## Rounds suivants
+
+step: Éclair encore disponible et une nouvelle ligne permet de toucher plusieurs ennemis
+  do: Se placer en vol puis lancer éclair.
+
+step: Souffle disponible et plusieurs ennemis à portée du cône
+  do: Orienter le cône de 4,50 m pour toucher le plus d’ennemis possible sans atteindre les alliés vulnérables à l’électricité.
+  note: Aucune fréquence ni recharge du souffle n’est indiquée dans le bloc fourni.
+
+step: Ennemi à 1,50 m et aucun déplacement nécessaire
+  do: Attaquer à outrance avec les deux griffes +3 ; chacune inflige 1d4 plus 1d4 d’électricité.
+  note: Privilégier un adversaire isolé ; ses 16 pv ne permettent pas de soutenir longtemps les attaques de plusieurs ennemis.
+
+step: Pouvoirs indisponibles ou ennemis trop dispersés
+  do: Utiliser le vol pour approcher un ennemi isolé ; après un déplacement, porter une seule attaque de griffe +3 si la cible est à portée.
+  note: La réduction des dégâts 5/magie aide contre les attaques physiques non magiques ; elle ne justifie pas de rester encerclé.
+
+## Repli
+
+step: Points de vie à 5 ou moins, ou exposition imminente à l’eau
+  do: Se retirer en vol vers une issue sèche, puis prendre de la distance ; vitesse de vol 18 m.
+  note: Éviter les passages où l’ennemi peut l’asperger ou le rabattre dans l’eau. Il ne dispose d’aucun soin dans ce bloc.

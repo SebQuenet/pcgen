@@ -1,0 +1,95 @@
+## Avant le combat
+
+note: Profil
+  Vavakia, démon saurien de taille TG, FP 18, chaotique mauvais : un conquérant intelligent qui recherche les âmes vivantes et la destruction.
+  297 pv, CA 35 ; déplacement de 13,50 m, vol de 18 m. Allonge naturelle de 4,50 m, portée de la corsèque jusqu'à 9 m.
+  Corsèque +1 impie +28/+23/+18/+13 (3d6+17, x3), ou morsure +27 (3d6+11 et blessure fumante), 2 griffes +27 (1d8+11), queue +22 (2d8+5 et étourdissement).
+  Il affaiblit les adversaires par énergie négative, contrôle les approches à la corsèque et mord les vivants qui franchissent cette distance.
+
+note: Défenses permanentes
+  Vision lucide et aura maudite sont déjà actives ; les bonus de l'aura sont compris dans la CA et les sauvegardes fournies.
+  RD 15/fer froid et Bien, RM 29 ; immunité au feu, à l'électricité et au poison ; résistance à l'acide et au froid de 10.
+  Une créature bonne qui le touche en mêlée subit un affaiblissement temporaire de Force de 1d6 points, sauf réussite de Vigueur DD 24.
+
+resource: Énergie négative | à volonté | action simple ; rayon de contact à distance, portée 21 m, 1d4 niveaux négatifs, sans sauvegarde ; RM applicable
+resource: Énergie négative à incantation rapide | 3/jour | action rapide, une utilisation maximum par round
+resource: Blasphème | 3/jour | action simple ; rayon de 12 m centré sur lui, Volonté DD 23, NLS 18
+resource: Mot de pouvoir étourdissant | 3/jour | action simple ; portée 21 m ; DD 24 indiqué dans le profil, mais ce pouvoir ne permet aucune sauvegarde ; RM applicable
+resource: Télékinésie | à volonté | action simple ; DD 21 selon le mode employé ; les effets maintenus demandent de se concentrer
+resource: Téléportation suprême | à volonté | action simple ; lui-même, son armure portée et au plus 22,5 kg d'autres objets ; aucun passager
+resource: Tremblement de terre | 1/jour | action simple ; zone de 24 m de rayon, effets selon le terrain
+resource: Convocation | 1/jour | choisir 1 marilith avec 40 % de réussite ou 1d3 nalfeshnies avec 60 % ; un seul essai
+resource: Relance de Volonté | 1/jour | Science de la volonté de fer ; relancer avant de connaître le résultat et conserver le second jet
+
+step: Il repère les intrus avant qu'ils arrivent
+  do: Les observer avec Perception +34 et vision lucide ; choisir un espace permettant le vol et l'emploi de son allonge
+  note: repérer une destination de téléportation sûre sur le même plan
+
+step: Il a le temps d'appeler du renfort
+  do: Tenter la convocation des nalfeshnies pour sa meilleure probabilité de réussite ; choisir plutôt la marilith si un seul puissant combattant convient mieux
+  note: les renforts restent une heure ; ils ne peuvent pas utiliser leur propre convocation
+
+step: Il commande déjà une bande de démons
+  do: Répartir les alliés pour fermer les issues et menacer les arrières ; coordonner les attaques par télépathie à 30 m
+
+## Ouverture
+
+note: Présence terrifiante
+  La déclencher gratuitement lors de sa première attaque : rayon de 18 m, Volonté DD 25, seulement contre les adversaires de moins de 18 DV ; une sauvegarde réussie immunise pendant 24 heures.
+
+step: Une cible vivante dangereuse est visible à 21 m ou moins
+  do: Utiliser énergie négative à incantation rapide avant l'action principale
+  note: privilégier un lanceur de sorts ou un adversaire que les niveaux négatifs rendront plus vulnérable ; conserver les utilisations suivantes pour les rounds utiles
+
+step: Plusieurs ennemis non mauvais de 18 DV ou moins sont réunis à 12 m ou moins
+  do: Lancer blasphème comme action principale
+  note: à 18 DV, hébétement ; à 17 DV ou moins, affaiblissement supplémentaire ; à 13 DV ou moins, paralysie supplémentaire ; à 8 DV ou moins, mort supplémentaire. Volonté DD 23 atténue ou annule ces effets ; au-delà de 18 DV, aucun effet
+
+step: Un adversaire décisif semble réduit à 150 pv ou moins et le blasphème serait peu utile
+  do: Lancer mot de pouvoir étourdissant comme action principale
+  note: 101 à 150 pv : 1d4 rounds ; 51 à 100 pv : 2d4 rounds ; 50 pv ou moins : 4d4 rounds. Aucun effet au-dessus de 150 pv ; choisir d'après les blessures observées
+
+step: Aucun pouvoir de contrôle ne présente une bonne cible
+  do: Avancer ou voler pour placer un ennemi à plus de 4,50 m et jusqu'à 9 m, puis porter une frappe décisive supérieure à la corsèque, +28, pour 12d6+17 dégâts
+  note: cette attaque utilise l'action simple ; les dés supplémentaires de l'arme impie restent de 2d6 contre une créature bonne
+
+## Rounds suivants
+
+step: Une cible reste dans la portée de la corsèque sans déplacement nécessaire
+  do: Attaque à outrance à la corsèque, +28/+23/+18/+13, en concentrant les coups sur la même cible
+  note: ajouter 2d6 dégâts impies par coup contre une créature bonne ; employer Attaque en puissance contre une CA accessible. Garder l'attaque d'opportunité pour un ennemi qui traverse la zone menacée
+
+step: Un vivant est arrivé à 4,50 m ou moins
+  do: Attaque à outrance naturelle : morsure +27, 2 griffes +27, queue +22 ; diriger la queue contre l'adversaire dont l'étourdissement gênera le plus le groupe
+  note: la morsure inflige 2 niveaux négatifs et rend la victime fiévreuse tant que ces niveaux persistent ; les créatures non vivantes sont immunisées à cet effet. Vigueur DD 25 sert à retirer les niveaux après 24 heures, pas à empêcher la morsure
+  note: queue : Vigueur DD 30 ou étourdissement pendant 1 round ; sur un critique, 1d4 rounds en cas d'échec, 1 round même en cas de réussite
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Se déplacer puis utiliser frappe décisive supérieure : corsèque +28 pour 12d6+17, ou morsure +27 pour 12d6+11 et blessure fumante
+  note: une seule attaque ; cette frappe ne s'ajoute ni à une charge ni à une attaque à outrance. Déclencher sa présence terrifiante lors d'une attaque : rayon de 18 m, Volonté DD 25, seulement contre moins de 18 DV
+
+step: Une utilisation rapide reste disponible et une cible vivante n'est pas protégée contre les niveaux négatifs
+  do: Ajouter énergie négative à incantation rapide à l'attaque ou au pouvoir principal du round
+  note: si la cible reste inaccessible à la mêlée, employer plutôt énergie négative en action simple ; la version ordinaire reste utilisable à volonté
+
+step: Un ennemi corporel plus petit bloque le passage
+  do: Remplacer l'attaque à outrance par Coup fabuleux, manœuvre à +31 contre le DMD, pour le projeter de 3 m et le mettre à terre
+  note: une bousculade à +33 peut aussi ouvrir un passage ; choisir ces manœuvres pour gagner de l'espace plutôt que pour maximiser les dégâts
+
+step: Un ennemi dangereux reste à distance ou possède une arme particulièrement menaçante
+  do: Employer télékinésie pour tenter un désarmement, ou une projection violente si des projectiles sont disponibles
+  note: utiliser les niveaux négatifs et l'étourdissement dès qu'une meilleure occasion apparaît ; maintenir télékinésie consomme l'action simple
+
+step: Les ennemis dépendent du sol, d'un bâtiment ou d'un passage fragile
+  do: Prendre son envol, puis lancer tremblement de terre pour désorganiser leur position ou provoquer un effondrement
+  note: choisir une zone éloignée des alliés au sol ; appliquer les effets propres au terrain, sans traiter le pouvoir comme une simple explosion
+
+## Repli
+
+step: Ses points de vie passent sous 75, ou les ennemis neutralisent ses défenses et menacent de l'abattre
+  do: Utiliser téléportation suprême vers la destination sûre choisie auparavant
+  note: seuil tactique de repli ; il abandonne ses alliés si nécessaire et ne peut emporter aucune autre créature
+
+step: La téléportation est empêchée
+  do: Se dégager vers les airs et fuir à 18 m par déplacement ; ordonner aux alliés encore présents de gêner la poursuite
+  note: si un poursuivant blessé peut l'arrêter, employer mot de pouvoir étourdissant avant de se déplacer

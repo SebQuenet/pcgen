@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Spyglass Archon, espion céleste loyal bon de FP 3 : il privilégie l'observation discrète, respecte les lois et cherche à rapporter ses renseignements.
+  Épée longue de maître +5 (1d8+2, critique 19–20), épée courte de maître +5 (1d6+1, critique 19–20) ; arc court +6 (1d6, x3). Marche et vol à 12 m ; allonge 1,50 m.
+  26 PV, CA 15, réduction des dégâts 5/Mal, résistance à la magie 14 ; immunité à l'électricité et à la pétrification. Sa protection ne justifie pas une mêlée prolongée contre plusieurs ennemis.
+
+resource: Sens aiguisés | 3/jour | action rapide ; pendant 4 rounds, vision dans le noir à 36 m au lieu de 18 m, Perception +13 au lieu de +7 et perception aveugle à 4,50 m
+resource: Ténèbres | 3/jour | rayon de 6 m autour d'un objet touché ; 4 minutes ; abaisse l'éclairage d'un degré
+resource: Bouclier entropique | 3/jour | 4 minutes ; 20 % d'échec des attaques à distance dirigées contre lui qui nécessitent un jet d'attaque
+resource: Alignement indétectable | 3/jour | dissimule son alignement pendant 24 heures
+resource: Aide | à volonté | 4 minutes ; 1d8+4 PV temporaires et bonus de moral de +1 aux attaques et aux sauvegardes contre la terreur
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,5 kg d'objets ; destination sur le même plan
+
+step: Mission d'observation en cours
+  do: Utiliser Discrétion +12, le vol et les couverts pour surveiller les suspects ; garder une destination de téléportation sûre en mémoire
+  note: Détection du Mal est constante ; alignement indétectable protège sa couverture. Message permet de communiquer discrètement avec un partenaire à portée.
+
+step: Un affrontement devient probable et il dispose de quelques rounds
+  do: Lancer aide sur lui-même, puis bouclier entropique si des tirs sont à craindre ; chaque pouvoir prend une action simple distincte
+  note: Aide porte ses attaques à +6 aux épées et +7 à l'arc ; ses PV temporaires ne se cumulent pas entre plusieurs utilisations.
+
+note: Protection constante
+  Le cercle magique contre le Mal protège dans un rayon de 3 m : bonus de parade de +2 à la CA et de résistance de +2 aux sauvegardes contre les attaques et effets provenant de créatures mauvaises.
+
+## Ouverture
+
+step: L'ennemi dépend de la lumière et ne voit pas dans le noir
+  do: Depuis un couvert, lancer ténèbres sur un objet transporté, puis approcher en volant ; réserver l'attaque au round suivant
+  note: Choisir un éclairage initial normal ou plus faible : en pleine lumière, le sort ne crée pas de pénombre. Sa vision dans le noir conserve son efficacité dans ces ténèbres.
+
+step: L'ennemi est éloigné ou la mêlée serait défavorable
+  do: Tirer à l'arc court +6 depuis une position surélevée, puis se déplacer jusqu'à 12 m pour maintenir la distance
+  note: Ajouter +1 à l'attaque si aide est actif ; conserver une ligne de tir et un couvert exploitable.
+
+step: Une cible isolée est accessible au contact
+  do: Approcher et porter une seule attaque d'épée longue +5 (1d8+2)
+  note: À 6 m, les ennemis hostiles subissent l'aura de menace : Volonté DD 13 ou malus de −2 aux attaques, à la CA et aux sauvegardes pendant 24 heures, ou jusqu'à ce qu'ils touchent cet archon. Réussir le jet ou rompre l'effet immunise contre cette aura pendant 24 heures.
+
+## Rounds suivants
+
+step: Il commence son tour au contact et peut rester sur place
+  do: Attaque à outrance : épée longue +5 (1d8+2) et épée courte +5 (1d6+1), en concentrant les coups sur la même cible
+  note: Ajouter +1 aux deux attaques sous aide ; seul un pas de placement de 1,50 m permet de se déplacer tout en conservant cette attaque à outrance.
+
+step: Une cible tente de se cacher ou une présence invisible est soupçonnée à proximité
+  do: Activer sens aiguisés en action rapide, puis poursuivre l'attaque ou le déplacement adapté
+  note: La perception aveugle situe une créature à 4,50 m ; elle ne supprime pas le camouflage total d'un ennemi invisible.
+
+step: Les ennemis voient dans le noir ou se regroupent pour l'encercler
+  do: Reprendre de la distance et exploiter le vol pour tirer ; si la mêlée bloque sa sortie, se téléporter vers un poste sûr
+  note: Une téléportation prend une action simple : il attaque au tour suivant. Au contact, utiliser les pouvoirs magiques sur la défensive pour éviter les attaques d'opportunité ; concentration +3.
+
+## Repli
+
+step: PV réels à 8 ou moins, mission compromise ou opposition trop forte
+  do: Se téléporter vers la destination sûre sur le même plan et conserver les renseignements recueillis
+  note: Il part seul avec son équipement dans la limite autorisée ; cette téléportation ne transporte ni compagnon ni prisonnier et ne permet pas de changer de plan.
+
+step: Téléportation empêchée
+  do: Se désengager puis fuir en volant, jusqu'à 24 m avec une double action de mouvement ; utiliser les obstacles pour couper les lignes de tir
+  note: Renouveler aide une fois à couvert peut fournir des PV temporaires ; ce pouvoir ne soigne pas les blessures.

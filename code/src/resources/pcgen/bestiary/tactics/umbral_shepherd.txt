@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Umbral Shepherd, extérieur intangible loyal mauvais, parasite intelligent voué à Zon-Kuthon. Il préfère prendre un hôte et le remplacer avant sa mort.
+  39 pv ; CA 14, contact 14 ; initiative +6. Sous sa forme propre : vol parfait à 9 m, vision dans le noir à 18 m, toucher +8 à 1,50 m pour toucher d'ombre ou possession.
+
+resource: Possession | À volonté | Toucher réussi, Volonté DD 15 ou possession comme possession d'âme ; possible depuis un hôte. Si l'hôte meurt pendant la possession, le berger meurt aussi.
+resource: Toucher d'ombre | À volonté | Toucher réussi, 1d4 points d'affaiblissement temporaire de Constitution ; Vigueur DD 15 pour réduire de moitié. Utilisable dans un hôte.
+
+step: Il est hors du plan de l'Ombre sans hôte
+  do: Chercher immédiatement un corps à posséder
+  note: Chaque round passé ainsi lui inflige 1d6 dégâts ; rester simplement dans l'obscurité ne le protège pas.
+
+step: Il prépare une embuscade sous sa forme propre
+  do: Se dissimuler dans un lieu sombre, avec Discrétion +11, près d'un passage étroit
+  note: La lumière vive l'éblouit ; son intangibilité et son vol concernent sa forme propre, pas automatiquement son hôte.
+
+## Ouverture
+
+step: Un adversaire accessible semble peu résolu
+  do: S'approcher et tenter la possession par un toucher, en privilégiant une cible susceptible d'échouer en Volonté
+  note: Sous sa forme propre, avancer de 9 m au maximum avant le toucher +8 ; choisir la possession ou le toucher d'ombre pour cette attaque.
+
+step: Il dispose déjà d'un hôte
+  do: Approcher sous couvert d'une conversation, avec Bluff +10, puis toucher un adversaire par surprise si les circonstances le permettent
+  note: Les yeux entièrement noirs de l'hôte peuvent trahir le parasite.
+
+## Rounds suivants
+
+step: L'hôte est encore solide
+  do: Garder ce corps et utiliser le toucher d'ombre contre l'ennemi au contact
+  note: Concentrer les atteintes à la Constitution sur une même victime ; employer les déplacements du corps possédé.
+
+step: Une cible résiste à la possession
+  do: Changer de cible ou l'affaiblir au toucher d'ombre
+  note: Une bonne Volonté n'assure aucune protection contre le jet de Vigueur du toucher d'ombre.
+
+step: Un adversaire menace de tuer son hôte
+  do: Tenter de passer directement dans un nouvel hôte par un toucher réussi et une possession
+  note: Ne pas sacrifier le corps qu'il occupe tant qu'il y demeure.
+
+## Repli
+
+step: Son hôte est proche de la mort
+  do: Le quitter avant le coup fatal, de préférence en possédant une créature voisine
+  note: Sans transfert réussi, sortir demande une action simple et le fait apparaître dans une case adjacente.
+
+step: Sous sa forme propre, il tombe à 13 pv ou moins
+  do: Fuir en volant à 9 m par déplacement, à travers une paroi mince si elle offre un passage sûr
+  note: Hors du plan de l'Ombre, chercher aussitôt un nouvel hôte pour arrêter les dégâts de 1d6 par round.

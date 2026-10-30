@@ -1,0 +1,93 @@
+## Avant le combat
+
+note: Profil
+  Maphistal, démon de Grande taille, chaotique mauvais, très intelligent : il fait écran avec ses serviteurs, neutralise les adversaires dangereux par ses pouvoirs, puis écrase une cible isolée.
+  330 PV ; CA 39, contact 24 ; allonge 3 m ; déplacement 12 m, vol 24 m avec une bonne manœuvrabilité ; initiative +11.
+  Masse d'armes lourde +3 impie et écrasante : +35/+30/+25/+20, 2d6+16 plus « bone knit ». Autre attaque à outrance : 2 griffes +32, 1d6+13 chacune, et morsure +32, 1d8+13 plus maladie.
+  RD 20/fer froid et Bien ; RM 32 ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu. Réflexes +13 est sa sauvegarde la plus faible.
+  Les effets de « bone knit » et de la maladie ne sont pas détaillés dans la fiche fournie ; aucun effet chiffré supplémentaire n'est présumé ici.
+
+resource: Aura maudite | constante | DD 26 ; déjà présente à l'entrée en combat
+resource: Convocation de démons | 1/jour | réussite 100 % ; choisir 4d10 dretches, 1d4 hezrous, 1 nalfeshnie, 1 glabrezu, 1 marilith ou 1 balor
+resource: Convocation de morts-vivants | 1/jour | réussite 100 % ; choisir 3d10 zombies ou squelettes, 2d6 goules, 2d4 blêmes, 1d6 âmes-en-peine, 1d6 nécrophages ou 1d4 spectres
+resource: Création de mort-vivant dominant | 3/jour | préparation de renforts avec des cadavres disponibles ; leur création ne garantit pas leur contrôle
+resource: Tempête de feu | 1/jour | Réflexes DD 26, demi-dégâts ; NLS 20
+resource: Cercle de mort | 1/jour | Vigueur DD 24 ; réservé aux créatures vivantes de 8 DV ou moins
+resource: Pouvoirs magiques courants | à volonté | blasphème DD 25, mot de pouvoir étourdissant, dissipation suprême, télékinésie DD 23, suggestion DD 21, ténèbres maudites DD 22, téléportation suprême ; NLS 20
+
+step: Il dispose de temps et de cadavres avant l'arrivée des intrus
+  do: Préparer le terrain par profanation et sanctification maléfique ; employer animation des morts et les pouvoirs de création de morts-vivants pour constituer sa garde
+  note: Placer uniquement les serviteurs effectivement contrôlés ou alliés dans les passages, entre lui et les futurs assaillants.
+
+step: Une attaque est imminente et il peut préparer ses renforts
+  do: Convoquer un balor, puis utiliser séparément la convocation de morts-vivants pour renforcer l'écran de serviteurs
+  note: Choisir les nombreux squelettes ou zombies pour occuper les accès ; ne pas compter sur ces faibles troupes pour vaincre seules des adversaires de son niveau.
+
+step: Des intrus sont repérés
+  do: Observer avec Perception +42, détection de la magie et détection du Bien ; identifier les protections avec Art de la magie +30
+  note: Vision dans le noir à 18 m ; télépathie à 30 m pour coordonner ses alliés. Garder une voie dégagée vers une position de repli connue.
+
+## Ouverture
+
+note: Choix du premier round
+  Choisir l'action qui répond à la menace immédiate. Les pouvoirs et l'attaque à outrance décrits ci-dessous sont des options de rounds distincts.
+
+step: Il n'a pas encore de renforts et ses serviteurs peuvent retenir les ennemis
+  do: Employer sa convocation de démons pour appeler un balor ; rester derrière l'écran pendant l'appel
+  note: La convocation de morts-vivants peut suivre lors d'un autre round si davantage d'obstacles sont nécessaires.
+
+step: Une protection magique identifiée empêche sa principale attaque
+  do: Employer dissipation suprême sur l'adversaire protégé avant de concentrer les attaques sur lui
+  note: Donner priorité aux protections qui rendent le mot de pouvoir ou les attaques de ses alliés inefficaces.
+
+step: Un lanceur de sorts dangereux paraît déjà suffisamment blessé
+  do: Employer mot de pouvoir étourdissant à 22,50 m ou moins, puis faire concentrer les attaques alliées sur cette cible
+  note: Le pouvoir n'affecte que les cibles ayant actuellement 150 PV ou moins ; aucun jet de sauvegarde, mais la RM s'applique. Maphistal estime leur état d'après les blessures observées.
+
+step: Plusieurs ennemis non mauvais de 20 DV ou moins se trouvent à 12 m ou moins
+  do: Employer blasphème, Volonté DD 25
+  note: Au NLS 20, les effets dépendent des DV : hébétement à 20 DV, affaiblissement supplémentaire à 19 DV ou moins, paralysie supplémentaire à 15 DV ou moins. Les créatures de plus de 20 DV sont insensibles à ce pouvoir.
+
+step: Les adversaires restent groupés à distance et aucune neutralisation immédiate n'est préférable
+  do: Déclencher tempête de feu en dessinant la zone pour atteindre les ennemis et épargner ses alliés
+  note: 20d6 dégâts de feu, Réflexes DD 26 pour réduire de moitié ; sa résistance au feu 10 ne lui permet pas de traverser impunément sa propre attaque.
+
+## Rounds suivants
+
+step: Une cible prioritaire est à portée sans qu'un déplacement important soit nécessaire
+  do: Effectuer l'attaque à outrance à la masse : +35/+30/+25/+20, 2d6+16 plus « bone knit » par coup
+  note: Concentrer les coups sur le même adversaire, de préférence étourdi ou isolé. Un pas de 1,50 m permet d'ajuster sa position tout en conservant l'attaque à outrance.
+
+step: Sa masse est indisponible
+  do: Employer les 2 griffes +32 et la morsure +32 en attaque à outrance
+  note: Ne pas ajouter ces attaques à la séquence de quatre coups de masse donnée comme option distincte par la fiche.
+
+step: Un adversaire contourne les serviteurs ou tente de quitter sa zone menacée
+  do: Exploiter son allonge de 3 m et Attaques réflexes pour effectuer les attaques d'opportunité effectivement provoquées
+  note: Garder les accès aux lanceurs de sorts alliés ou aux renforts ; un simple pas de placement de 1,50 m ne provoque pas d'attaque d'opportunité.
+
+step: Les adversaires évitent le contact ou menacent de l'encercler
+  do: Prendre de la hauteur avec son vol à 24 m et continuer par télékinésie ou ténèbres maudites
+  note: Télékinésie sert à désorganiser une cible ou à projeter des objets ; DD 23 lorsqu'une sauvegarde est permise. Ténèbres maudites, Volonté DD 22, vise surtout les ennemis bons sans toucher ses alliés mauvais.
+
+step: Une cible dangereuse descend vraisemblablement sous le seuil du mot de pouvoir
+  do: Réutiliser mot de pouvoir étourdissant, puis revenir à la masse lors d'un round ultérieur si la cible reste accessible
+  note: Le pouvoir est à volonté ; changer de cible si une immunité mentale ou une protection identifiée le rend inopérant.
+
+step: Des renforts vivants nombreux et manifestement faibles arrivent
+  do: Employer cercle de mort, Vigueur DD 24, si son utilisation est encore disponible
+  note: Aucune créature de 9 DV ou plus n'est affectée ; ce pouvoir ne constitue pas une ouverture contre des héros de haut niveau.
+
+step: Un adversaire isolé peut accepter une proposition plausible
+  do: Employer suggestion, Volonté DD 21, pour l'inciter à quitter le combat sous un prétexte crédible
+  note: Réserver cette option aux situations où la demande peut sembler raisonnable ; privilégier les autres pouvoirs contre les combattants résolus.
+
+## Repli
+
+step: Ses PV tombent à 100 ou moins, ou les ennemis traversent ses défenses et détruisent son écran
+  do: Employer téléportation suprême vers une destination connue pour quitter le combat ; ordonner par télépathie aux alliés restants de couvrir son départ
+  note: Cette téléportation est à volonté, mais transporte seulement Maphistal et 22,5 kg d'objets ; aucun serviteur ne l'accompagne grâce à ce pouvoir.
+
+step: Un effet empêche sa téléportation
+  do: Se dégager en volant, puis tenter de dissiper l'effet avec dissipation suprême dès qu'il peut consacrer un round à cette action
+  note: Utiliser le terrain et les alliés encore présents pour gagner ce répit ; reprendre téléportation suprême dès que le blocage a disparu.

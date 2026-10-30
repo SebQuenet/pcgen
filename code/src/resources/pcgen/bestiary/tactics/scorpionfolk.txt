@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Scorpionfolk, humanoïde monstrueux de grande taille, loyal mauvais, adapté aux déserts chauds. Combattant de mêlée : 59 pv, CA 16, résistance à la magie 16 et résistance au poison.
+  Cimeterre à deux mains de maître +11/+6 (2d6+6) et dard +5 (1d6+2 et poison), ou deux pinces +10 (1d6+4 chacune) et dard +10 (1d6+2 et poison).
+  Arc court composite de maître +8/+3 (1d8+4). Déplacement de 12 m ; espace occupé de 3 m, mais allonge de seulement 1,50 m.
+
+resource: Flèches | 30 | une flèche par attaque à l'arc
+
+step: Des ennemis approchent
+  do: Surveiller les alentours avec Perception +14, la vision dans le noir à 18 m et la perception des vibrations à 18 m.
+  note: Les vibrations permettent de repérer les créatures en contact avec le même sol ; elles ne révèlent pas une créature en vol.
+
+## Ouverture
+
+step: Une cible peut être atteinte après un déplacement de 12 m au maximum
+  do: Avancer jusqu'à 1,50 m et porter un seul coup de cimeterre à deux mains +11 (2d6+6).
+  note: Après ce déplacement, il ne peut pas ajouter son second coup de cimeterre ni son dard.
+
+step: Les ennemis restent trop loin pour engager la mêlée
+  do: Tirer à l'arc : +8/+3 (1d8+4) s'il reste sur place, ou une seule attaque +8 s'il se déplace.
+
+## Rounds suivants
+
+step: Une cible reste au contact et il peut effectuer une attaque à outrance
+  do: Enchaîner les deux coups de cimeterre +11/+6 (2d6+6), puis le dard +5 (1d6+2 et poison).
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant cette attaque à outrance.
+
+step: Il combat sans son cimeterre et peut effectuer une attaque à outrance
+  do: Porter deux attaques de pinces +10 (1d6+4 chacune), puis un coup de dard +10 (1d6+2 et poison).
+  note: Cette combinaison rend le dard plus précis. Le bloc ne précise ni le DD ni les effets du poison.
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée de 1,50 m
+  do: Utiliser Enchaînement au cimeterre : attaquer le premier et, si le coup touche, attaquer le second.
+  note: Cette action simple remplace l'attaque à outrance ; elle réduit sa CA de 2 jusqu'à son prochain tour.
+
+step: La cible semble facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts du cimeterre à deux mains.
+  note: Privilégier la précision contre une défense élevée, particulièrement pour tenter d'appliquer le poison du dard.
+
+## Repli
+
+step: Points de vie à 15 ou moins et une voie de fuite est accessible
+  do: Effectuer une retraite pour s'éloigner jusqu'à 24 m, puis continuer à fuir avec sa vitesse de 12 m.
+  note: Choisir un trajet qui évite de traverser les zones menacées par d'autres adversaires.
+
+step: La fuite est impossible
+  do: Concentrer ses attaques sur l'adversaire qui bloque la sortie, puis se retirer dès qu'un passage se libère.

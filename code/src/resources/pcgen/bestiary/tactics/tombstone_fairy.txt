@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Tombstone Fairy, petite fée neutre mauvaise des cimetières, rusée et prompte à fuir. 82 PV ; CA 18 ; initiative +8 ; déplacement terrestre de 6 m.
+  Elle combat surtout par ténèbres infernales, suggestion et dissipation de la magie. Sa dague +12 (1d3-1), à 1,50 m, reste un dernier recours.
+  Réduction des dégâts 10, surmontée par une arme à la fois bonne et en fer froid ; résistance à la magie 20. Sa Volonté +5 invite à éviter les échanges de sorts prolongés.
+
+resource: Ténèbres infernales | 1/jour | Volonté DD 19 ; portée 75 m ; rayon 6 m
+resource: Suggestion | 1/jour | Volonté DD 18 ; portée 18 m ; une créature vivante comprenant sa langue
+resource: Dissipation de la magie | 3/jour | NLS 15 ; portée 75 m ; dissipation ciblée d'un effet, test 1d20+15 contre DD 11 + NLS adverse
+resource: Protection contre le Bien | 3/jour | durée 15 minutes ; +2 de parade à la CA et +2 de résistance aux sauvegardes contre les créatures bonnes
+resource: Protection contre la mort | 3/jour | durée 15 minutes ; +4 de moral aux sauvegardes contre les effets de mort ; immunité à l'énergie négative et à l'absorption d'énergie
+resource: Autres pouvoirs magiques | 3/jour chacun | lumières dansantes, perception de la mort, profanation, détection du Chaos, du Mal, de la Loi et des pensées ; pensées : Volonté DD 17
+resource: Danse macabre | 1/nuit | rituel de 10 minutes ; rappelle à la vie une créature mauvaise morte depuis au plus 15 jours, avec corps présent et âme disponible
+
+step: Des intrus approchent sans l'avoir repérée
+  do: Observer depuis un couvert avec Perception +25 et Discrétion +26 ; repérer un passage de fuite entre les tombes ou les mausolées
+  note: Elle utilise sa vision nocturne, sans pouvoir voir dans l'obscurité totale.
+
+step: Elle dispose de plusieurs rounds avant l'affrontement
+  do: Activer protection contre le Bien, puis protection contre la mort au round suivant si elle redoute des attaques de mort ou d'énergie négative
+  note: Les détections peuvent renseigner ses choix si elle a le temps de les utiliser et de se concentrer avant le combat.
+
+note: Danse macabre
+  Ce rituel prépare des marchés avec des criminels ressuscités ; il ne fournit aucun renfort immédiat pendant un combat.
+  Elle peut conserver un seul linceul contenant une part d'âme pour faire pression sur son débiteur. Cela ne lui donne pas de contrôle mental sur lui.
+
+## Ouverture
+
+step: Plusieurs adversaires bons peuvent être pris dans la même zone
+  do: Lancer ténèbres infernales sur leur regroupement, puis se déplacer vers un couvert à 6 m au plus
+  note: Créatures bonnes : 5d8 dégâts et état fiévreux pendant 1d4 rounds ; Volonté DD 19 réduit les dégâts de moitié et annule cet état. Extérieurs bons : 10d6 dégâts à la place.
+  note: Créatures neutres : moitié des dégâts, sans état fiévreux, puis encore moitié sur sauvegarde réussie ; créatures mauvaises épargnées.
+
+step: Le groupe est dispersé et un poursuivant à 18 m ou moins comprend le commun, l'elfique ou le sylvestre
+  do: Employer suggestion pour lui proposer une conduite plausible qui l'éloigne, par exemple aller chercher des renforts pendant que ses compagnons surveillent le cimetière
+  note: Volonté DD 18 annule ; la demande doit paraître raisonnable et ne pas être manifestement dangereuse. Choisir cette ouverture à la place de ténèbres infernales.
+
+## Rounds suivants
+
+step: Une magie adverse soutient la poursuite ou bloque une issue
+  do: Employer dissipation de la magie sur le poursuivant ou sur un effet précisément identifié, puis se déplacer vers la sortie
+  note: Une utilisation ne retire qu'un sort ; privilégier un avantage qui empêche réellement sa fuite.
+
+step: Son pouvoir quotidien encore disponible peut ouvrir une voie de fuite
+  do: Utiliser suggestion sur un poursuivant isolé, ou ténèbres infernales sur des ennemis bons regroupés, selon la situation
+  note: Un seul pouvoir magique par round ; compter les utilisations déjà dépensées. Elle n'a aucun pouvoir de soin indiqué.
+
+step: Un ennemi est au contact et une issue reste accessible
+  do: Privilégier le désengagement ; si un pouvoir est indispensable, faire un pas de placement de 1,50 m avant de l'utiliser lorsque cela suffit à quitter toutes les zones menacées
+  note: À défaut, l'utilisation sur la défensive profite d'Incantation en combat ; un échec fait perdre le pouvoir engagé.
+
+## Repli
+
+step: Une issue est ouverte, même s'il lui reste beaucoup de PV
+  do: Fuir sans attendre un seuil de blessures ; au contact, utiliser l'action de retraite pour parcourir jusqu'à 12 m sur terrain dégagé
+  note: La retraite protège du départ depuis la case initiale, pas des autres cases menacées traversées. Une fois hors de vue, se cacher avec Discrétion +26.
+
+step: Elle est acculée sans issue
+  do: Dépenser ses pouvoirs offensifs restants si leur emploi est possible, puis frapper à la dague +12 (1d3-1)
+  note: Acculée, elle combat jusqu'à la mort ; elle reprend la fuite dès qu'un passage se libère.

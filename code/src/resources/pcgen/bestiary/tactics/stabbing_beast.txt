@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Stabbing Beast, extérieur métamorphe de taille M, neutre mauvais : assassin discret et très mobile, avec 225 pv, CA 35, initiative +16 et déplacement de 15 m.
+  Deux épées courtes +1 : principale +20/+15/+10/+5 (1d6+4, critique 17–20 et saignement), secondaire +20 (1d6+2, critique 17–20 et saignement). Dard +22 (1d6+5, saignement et poison) ; jet de poison +30 contre la CA de contact, provoquant la cécité.
+  Espace et allonge : 1,50 m. Discrétion +39, Perception +27, vision dans les ténèbres et détection de l'invisibilité permanente : il cherche à repérer sa proie avant d'être découvert.
+
+note: Défenses
+  Vision à 360° : il ne peut pas être pris en tenaille. RD 10, contournée par une arme à la fois bonne et magique ; RM 26 ; immunité au poison.
+  Résistance à l'acide 30, au froid 10, à l'électricité 10 et au feu 10 ; bonus de +4 aux sauvegardes contre les effets mentaux.
+
+resource: Invisibilité | 3/jour | préparer l'approche ou couvrir un déplacement ; prend fin lorsqu'il attaque
+resource: Convocation | 3/jour | un scorpion de l'effondrement fiélon, réussite automatique, pouvoir de niveau 6
+resource: Téléportation suprême | 3/jour | lui-même et au plus 22,7 kg d'objets ; réserver une utilisation pour quitter les lieux
+resource: Suggestion | 3/jour | Volonté DD 15
+resource: Modification de mémoire | 3/jour | Volonté DD 16
+resource: Faux alibi | 3/jour | DD 15 ; utile pour dissimuler son implication
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Observer depuis une cachette, choisir une victime isolée et conserver un passage permettant d'exploiter ses 15 m de déplacement
+  note: Privilégier l'obscurité déjà présente ; il voit dans les ténèbres, mais ne possède aucun pouvoir pour en créer
+
+step: Il dispose de temps avant l'attaque
+  do: Préparer ses deux lames avec affûtage si nécessaire, puis utiliser invisibilité pour approcher
+  note: La plage de critique indiquée est déjà 17–20 ; ne pas l'améliorer une seconde fois avec affûtage
+
+step: Une attaque imminente peut être préparée sans dévoiler sa position
+  do: Utiliser coup au but, à volonté, puis attaquer au tour suivant avant l'expiration du pouvoir
+  note: Le bonus de +20 ne concerne qu'un seul jet d'attaque ; ce pouvoir ne renforce pas toute une attaque à outrance
+
+## Ouverture
+
+step: La victime est surprise et déjà à portée
+  do: Porter une attaque de dard +22 pour infliger dégâts, saignement et poison
+  note: Pendant un round de surprise ordinaire, il ne dispose que d'une action simple ou de mouvement ; aucune attaque à outrance gratuite
+
+step: L'ennemi est prêt et plusieurs adversaires peuvent converger sur lui
+  do: Convoquer le scorpion fiélon avant de s'engager, si le temps nécessaire à la convocation est disponible
+  note: Utiliser cet allié pour occuper les combattants de première ligne ; communiquer par télépathie à 30 m
+
+step: Une cible dangereuse reste hors de portée de mêlée
+  do: Viser ses yeux avec le jet de poison +30 contre la CA de contact
+  note: Chercher à l'aveugler avant de s'approcher ; le DD et la durée de cette cécité ne sont pas précisés dans le bloc fourni
+
+step: Une cible est à portée et il dispose de son round entier
+  do: Attaque à outrance : quatre coups de l'épée principale, un de l'épée secondaire et un coup de dard
+  note: Concentrer les attaques sur la même victime pour la neutraliser rapidement
+
+## Rounds suivants
+
+step: La victime reste au contact et l'échange lui est favorable
+  do: Poursuivre l'attaque à outrance, en ne se déplaçant que par un pas de placement de 1,50 m si nécessaire
+  note: Un déplacement ordinaire empêche cette séquence complète ; ne pas cumuler automatiquement plusieurs saignements identiques
+
+step: Une cible conserve une forte CA grâce à sa Dextérité
+  do: Feinter avec Bluff +22 en action de mouvement, puis porter une attaque simple de dard
+  note: Feinte supérieure lui retire son bonus de Dextérité à la CA jusqu'au début du prochain tour de la Bête ; le scorpion convoqué peut aussi en profiter
+
+step: Rester au contact l'exposerait à plusieurs attaques à outrance
+  do: Utiliser Attaque éclair pour approcher, porter une seule attaque de dard puis s'éloigner, dans la limite de 15 m de déplacement total
+  note: La cible de cette attaque ne peut pas effectuer d'attaque d'opportunité contre ce déplacement ; les autres ennemis le peuvent encore
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Le frapper au dard, en exploitant Attaques réflexes pour répondre à plusieurs occasions distinctes
+  note: Son allonge de 1,50 m ne lui permet pas de contrôler à elle seule un large passage
+
+step: Une victime aveuglée ou affaiblie peut être isolée
+  do: La poursuivre en évitant de se laisser encercler, puis reprendre les attaques au contact
+  note: Privilégier ses armes et son poison naturel ; le pouvoir poison à volonté exige une attaque de contact et un jet de Vigueur DD 16
+
+step: Un adversaire se prête à une diversion verbale crédible
+  do: Tenter suggestion, Volonté DD 15, pour lui faire quitter momentanément une position gênante
+  note: Le pouvoir prend une action et remplace ses attaques du tour ; il ne permet pas d'imposer un ordre manifestement suicidaire
+
+## Repli
+
+step: La mission est accomplie ou poursuivre le combat ne présente plus d'intérêt
+  do: Utiliser téléportation suprême pour rejoindre un lieu connu
+  note: Partir avant d'être empêché d'utiliser ses pouvoirs ; la téléportation n'emporte pas ses alliés
+
+step: La téléportation est indisponible et une retraite devient nécessaire
+  do: Se désengager, puis exploiter son déplacement de 15 m ; utiliser une invisibilité restante une fois hors de portée immédiate
+  note: L'invisibilité ne protège pas contre un ennemi capable de la voir ; chercher ensuite un couvert pour se cacher avec Discrétion +39

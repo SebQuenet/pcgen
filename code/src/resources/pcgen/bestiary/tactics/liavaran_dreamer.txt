@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Le rêveur de Liavara est une aberration neutre de taille G, semblable à une méduse dorée aérienne. Habituellement somnolent, il dérive le long des lignes telluriques et réagit violemment aux agressions.
+  104 pv, CA 19 ; vol à 12 m, bonne manœuvrabilité ; espace et allonge de 3 m. Deux coups +13 (1d6+5 et étreinte) en attaque à outrance ; pouvoirs mentaux pour désorganiser les adversaires avant la mêlée.
+
+note: Défenses et repérage
+  Perception +18, perception aveugle à 36 m et vision dans le noir à 18 m. La perception aveugle ne supprime pas les chances de rater une cible qu'il ne voit pas.
+  Corps amorphe : immunité aux coups critiques et aux dégâts de précision. Régénération de 2 pv par round ; des dégâts d'acide la suspendent pendant le round suivant.
+  Pensées berçantes : quiconque le cible par lecture des pensées, contrôle mental ou télépathie doit réussir un jet de Volonté DD 17 ou être fasciné pendant 1d4+1 rounds. Cette défense est passive ; elle ne fascine pas tous les ennemis alentour.
+
+resource: Blocage mental (mental block) | 3/jour | action simple ; portée 15 m ; une créature ; Volonté DD 14 annule ; résistance à la magie ; durée maximale 11 rounds
+resource: Synesthésie (synesthesia) | 3/jour | action simple ; portée 15 m ; une créature vivante ; Volonté DD 15 annule ; résistance à la magie ; durée 11 rounds
+resource: Insinuation du ça IV (id insinuation IV) | 1/jour | action simple ; portée 15 m ; jusqu'à quatre créatures ; Volonté DD 17 annule ; résistance à la magie ; concentration + 1 round
+
+step: Personne ne l'attaque ni ne perturbe sa dérive
+  do: Continuer à suivre la ligne tellurique plutôt que provoquer un combat.
+  note: Il connaît toujours la direction et la distance de la ligne la plus proche. Passer une journée à plus de 1 600 m environ d'une ligne lui inflige 1 point de dégâts de Sagesse ; cette dépendance ne l'affaiblit pas instantanément en combat.
+
+note: Références
+  Occult Bestiary, p. 31 : https://www.aonprd.com/MonsterDisplay.aspx?ItemName=Liavaran%20Dreamer
+  Pouvoirs : https://www.aonprd.com/SpellDisplay.aspx?ItemName=Mental%20Block ; https://www.aonprd.com/SpellDisplay.aspx?ItemName=Synesthesia ; https://www.aonprd.com/SpellDisplay.aspx?ItemName=Id%20Insinuation%20IV
+
+## Ouverture
+
+note: Choix de l'ouverture
+  Choisir une seule des actions suivantes selon la situation. Un pouvoir et une attaque à outrance ne se cumulent pas dans le même round.
+
+step: Plusieurs adversaires sont visibles à 15 m ou moins, et il n'est pas en fureur
+  do: Utiliser insinuation du ça IV, en restant à distance des combattants.
+  note: Au premier round, choisir le résultat de confusion de chaque cible ayant raté son jet. Choisir l'attaque de la créature la plus proche lorsque celle-ci est un de ses compagnons ; sinon, le bavardage incohérent lui fait perdre son action. Le rêveur choisit le résultat, pas les détails de son exécution.
+
+step: Un lanceur de sorts menace le rêveur et la confusion serait peu utile
+  do: Utiliser blocage mental sur ce lanceur, à 15 m ou moins, tant que la fureur n'est pas déclenchée.
+  note: La cible perd temporairement l'accès à ses rangs de compétence, sorts connus et préparés, et capacités ou dons activables. Elle retente Volonté DD 14 à la fin de chacun de ses tours pour mettre fin à l'effet.
+
+step: Le combat commence à portée de ses coups et une attaque physique est préférable
+  do: Faire une attaque à outrance avec ses deux coups ; s'il doit d'abord se déplacer, avancer en vol puis porter un seul coup.
+  note: Sur un coup réussi contre une créature de taille M ou inférieure, tenter gratuitement l'étreinte : BMC +18, bonus d'étreinte compris, sans attaque d'opportunité.
+
+## Rounds suivants
+
+step: Plusieurs ennemis sont encore confus et il peut rester à distance
+  do: Consacrer son action simple à maintenir insinuation du ça IV et utiliser son déplacement pour s'éloigner des ennemis restés lucides.
+  note: Après le premier round, chaque cible lance deux fois son résultat de confusion et le rêveur choisit lequel appliquer. S'il cesse de se concentrer pour attaquer ou utiliser un autre pouvoir, l'effet persiste encore 1 round.
+
+step: Un combattant vivant le poursuit et le rêveur peut encore utiliser ses pouvoirs
+  do: Lancer synesthésie sur ce poursuivant, puis s'écarter en vol si possible.
+  note: Sur un échec à Volonté DD 15, la vitesse de la cible est réduite de moitié ; elle subit 20 % de chances de rater ses attaques, et un malus de -4 à la CA, aux compétences et aux Réflexes. Pour lancer un sort, elle doit réussir un test de concentration DD 15 + niveau du sort.
+
+step: Un adversaire reste à portée et aucun pouvoir n'est plus avantageux
+  do: Enchaîner les attaques à outrance ; contre une cible facile à toucher, employer Attaque en puissance : deux coups +10, chacun pour 1d6+11.
+  note: Pour frapper une cible à 4,50 m sans avancer, employer Allonge avant les attaques : l'allonge augmente jusqu'à la fin de son tour, mais sa CA tombe à 17 jusqu'à son prochain tour. Son allonge habituelle reste de 3 m pour les attaques d'opportunité hors de son tour.
+
+step: Il tient une cible en lutte
+  do: Maintenir la lutte par une action simple et choisir d'infliger les dégâts d'un coup sur une réussite, ou relâcher gratuitement la prise pour reprendre ses deux coups.
+  note: Le maintien bénéficie de +5 si la cible n'a pas rompu la prise. Utiliser les dégâts de coup applicables à son état actuel.
+
+step: Ses points de vie tombent à 52 ou moins
+  do: Déclencher la fureur atavique et privilégier les coups au corps à corps pendant 10 rounds.
+  note: Bonus de +2 aux attaques, dégâts de mêlée et sauvegardes : deux coups +15 (1d6+7), ou +12 (1d6+13) avec Attaque en puissance ; Vigueur +10, Réflexes +7, Volonté +15. Les coups infligent simultanément des dégâts contondants, perforants et tranchants, et menacent un critique sur 18-20.
+  note: Il ne peut plus utiliser ses pouvoirs magiques pendant cette fureur. Elle dure 1 minute, puis il est fatigué pendant 1 heure ; la régénération ne met pas fin prématurément à la fureur.
+
+## Repli
+
+step: Il est à 25 pv ou moins et reste menacé, notamment par de l'acide
+  do: Relâcher toute prise, puis se retirer en vol vers la ligne tellurique la plus proche : retraite jusqu'à 24 m si le trajet le permet.
+  note: La retraite protège seulement contre les attaques d'opportunité dues au départ de sa case initiale. La fureur interdit les pouvoirs, mais ne l'oblige pas mécaniquement à combattre jusqu'à la mort.
+
+step: La fureur s'achève alors que le combat continue
+  do: Profiter d'une ouverture pour quitter la mêlée et reprendre sa dérive, en laissant la régénération restaurer ses pv hors d'atteinte.
+  note: Fatigué, il subit -2 en Force et en Dextérité et ne peut ni courir ni charger. Si l'acide continue à le toucher, chercher d'abord à rompre le contact.

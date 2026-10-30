@@ -1,0 +1,91 @@
+## Avant le combat
+
+note: Profil
+  Hag Nymph, fée de taille M, chaotique mauvaise des forêts tempérées et froides ; 75 pv, CA 25, déplacement terrestre de 9 m.
+  Elle privilégie ses sorts : éclair pour les dégâts, métamorphose funeste et cécité pour neutraliser une cible, invisibilité suprême pour se protéger. Au contact : 2 griffes +11, chacune à 1d6+2, allonge de 1,50 m ; attaques de contact des sorts et pouvoirs +10.
+  Réduction des dégâts 10/fer froid, résistances au froid 10 et au feu 10, résistance à la magie 21. Sa Volonté de -4 rend les lanceurs de sorts mentaux particulièrement dangereux.
+
+resource: Pouvoirs permanents | permanent | détection du Bien, détection de la magie
+resource: Pouvoirs à volonté | à volonté | modification d'apparence ; blessure légère, Volonté DD 16 pour réduire les dégâts de moitié
+resource: Blessure grave | 3/jour | contact +10, 3d8+10 dégâts, Volonté DD 18 pour moitié
+resource: Métamorphose funeste | 1/jour | Vigueur DD 20, puis Volonté DD 20 si la transformation réussit
+resource: Convocation | 1/jour | 50 % de réussite ; 1d3 démons d'ombre ; pouvoir de niveau 7
+resource: Sorts de niveau 5 | 4/jour | forme bestiale III
+resource: Sorts de niveau 4 | 6/jour | réserve commune à malédiction et invisibilité suprême
+resource: Sorts de niveau 3 | 7/jour | réserve commune à vol, rapidité et éclair
+resource: Sorts de niveau 2 | 7/jour | réserve commune à cécité/surdité, nappe de brouillard, baiser de la goule et pattes d'araignée
+resource: Sorts de niveau 1 | 8/jour | réserve commune à frayeur, charme-personne, contact glacial, déguisement et rayon affaiblissant
+
+step: Des intrus approchent sans l'avoir repérée
+  do: Observer à couvert avec Perception +16 et Discrétion +18 ; profiter des détections permanentes pour repérer les auras accessibles
+  note: Vision dans le noir à 18 m et vision nocturne ; les détections ne révèlent pas automatiquement tous les ennemis ni leurs capacités exactes
+
+step: Elle peut parler aux intrus avant les hostilités
+  do: Prendre une apparence humanoïde avec modification d'apparence et employer Bluff +18 pour obtenir une position favorable
+  note: Charme-personne, Volonté DD 16, peut faciliter une approche contre un humanoïde ; il ne donne pas le contrôle de ses actes
+
+step: L'affrontement est imminent et elle dispose de quelques rounds
+  do: Lancer vol, puis invisibilité suprême au dernier moment, un sort par round
+  note: Vol dure 10 minutes et permet de voler à 18 m ; invisibilité suprême dure 10 rounds et persiste pendant ses attaques. Garder une utilisation de niveau 4 pour le repli
+
+## Ouverture
+
+step: Elle est à couvert et dispose d'un round avant que les ennemis l'atteignent
+  do: Tenter la convocation des démons d'ombre pour disposer d'alliés qui occupent les assaillants
+  note: Un échec consomme l'unique utilisation quotidienne ; ne pas fonder toute la défense sur sa réussite
+
+step: Plusieurs ennemis peuvent être pris dans une même ligne
+  do: Se placer pour lancer éclair : ligne de 36 m, 10d6 dégâts d'électricité, Réflexes DD 18 pour moitié
+  note: Éviter les éventuels alliés ; conserver de la distance en volant si vol est actif
+
+step: Une cible dangereuse paraît peu résistante physiquement et la métamorphose est disponible
+  do: Lancer métamorphose funeste sur elle, Vigueur DD 20, pour la transformer en petit animal inoffensif
+  note: La seconde sauvegarde de Volonté DD 20 détermine notamment si elle conserve son esprit et ses capacités magiques ; ne pas considérer la transformation comme une mort automatique
+
+step: Elle est surprise sans protection magique
+  do: Lancer invisibilité suprême dès qu'elle peut le faire sans s'exposer inutilement, puis prendre de la distance
+  note: Chaque lancement occupe son propre round ; elle ne combine pas cette protection avec un sort offensif dans la même action
+
+## Rounds suivants
+
+step: Des ennemis restent alignés
+  do: Relancer éclair et changer de position pour obliger les survivants à se disperser
+  note: Les éclairs, vol et rapidité consomment la même réserve de niveau 3
+
+step: Un archer ou un combattant menace sa position
+  do: Lancer cécité/surdité en choisissant la cécité, Vigueur DD 17
+  note: Privilégier une cible qui semble avoir une faible Vigueur ; une créature aveugle reste capable d'agir
+
+step: Un combattant puissant s'approche sans offrir de bonne cible à éclair
+  do: Lancer rayon affaiblissant, contact à distance +10 ; 1d6+5 de malus à la Force, Vigueur DD 16 pour réduire le malus de moitié
+  note: Ne pas cumuler plusieurs rayons affaiblissants sur la même cible ; seul le malus le plus élevé s'applique
+
+step: Un adversaire isolé est à portée de contact et elle peut lancer sans danger excessif
+  do: Employer malédiction, contact +10 et Volonté DD 19, en choisissant 50 % de chances de ne pas agir à chaque tour
+  note: Au contact d'un ennemi menaçant, lancer sur la défensive si nécessaire ; Magie de guerre aide ses tests de concentration
+
+step: Elle doit infliger des dégâts au contact
+  do: Employer blessure grave, contact +10, 3d8+10 dégâts, Volonté DD 18 pour moitié ; si elle économise ses pouvoirs, porter ses deux griffes en attaque à outrance
+  note: Les deux griffes exigent une attaque à outrance ; après un déplacement normal, elle ne porte qu'une griffe +11, à 1d6+2
+
+step: Des démons convoqués combattent et la pression ennemie lui laisse un round
+  do: Lancer rapidité sur elle-même et les alliés à portée pour améliorer leurs déplacements et leurs attaques
+  note: Rapidité dure 10 rounds ; son attaque supplémentaire exige une attaque à outrance. Sans alliés, privilégier ses sorts offensifs
+
+step: L'invisibilité suprême expire alors que les ennemis restent dangereux
+  do: La renouveler si la réserve de niveau 4 le permet, puis reprendre les attaques aux rounds suivants
+  note: L'invisibilité ne supprime pas le bruit ; exploiter aussi le couvert et la mobilité
+
+## Repli
+
+step: Ses points de vie passent sous 25, ou une menace mentale la met en danger
+  do: Rompre le contact sous invisibilité suprême et fuir avec vol, à 18 m par déplacement ; si nécessaire, consacrer un round à rétablir la protection manquante
+  note: Donner la priorité à la fuite face au fer froid ou à des attaques qui contournent ses défenses ; les éventuels démons encore présents peuvent retenir les poursuivants
+
+step: La poursuite reste possible et elle peut encore lancer un sort
+  do: Placer une nappe de brouillard entre les poursuivants et sa trajectoire, puis changer de direction au round suivant
+  note: Le brouillard gêne aussi sa propre vision ; il sert à masquer le départ, sans lui permettre de viser à travers
+
+step: Vol est indisponible mais elle conserve un sort de niveau 5
+  do: Employer forme bestiale III pour prendre une forme animale volante adaptée au passage, puis s'éloigner
+  note: Prévoir la transformation après avoir rompu le contact ; ne pas compter sur les griffes ni sur le lancement de sorts sous une forme animale

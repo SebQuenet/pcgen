@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Shaitan, génie de la Terre loyal neutre de taille G : 85 pv, CA 20, immunité à l'électricité. Il façonne le terrain pour séparer ses adversaires et choisir ses combats.
+  Allonge 3 m ; attaque à outrance : 2 coups +13 (2d6+5) ou cimeterre de maître +14/+9 (1d8+7, critique 18–20). Après un déplacement, une seule attaque.
+  Déplacement et escalade 6 m ; creusement 18 m. Glissement dans la pierre pour traverser la matière minérale sans ouvrir de tunnel ; vision dans le noir et perception des vibrations à 18 m, télépathie à 30 m.
+
+resource: Poussière scintillante à incantation rapide | 3/jour | action rapide ; Volonté DD 14 contre l'aveuglement ; révèle aussi les créatures invisibles
+resource: Peau de pierre | 3/jour | réduction des dégâts 10/adamantium ; absorbe au maximum 90 points de dégâts par utilisation ; durée 90 minutes
+resource: Mur de pierre | 3/jour | séparer les ennemis et bloquer les lignes de vue ; le mur doit prendre appui sur de la pierre existante
+resource: Rouille | 3/jour | contact contre un équipement métallique non magique ; inefficace sur le métal magique
+resource: Pierres commères | 3/jour | interroger la pierre avant l'arrivée des intrus
+resource: Transmutation de la pierre en boue | 1/jour | transformer de la roche naturelle, non magique et non travaillée pour entraver les déplacements
+resource: Transmutation de la boue en pierre | 1/jour | solidifier une zone boueuse
+resource: Pouvoirs à volonté | illimité | fusion dans la pierre, changement de plan, ramollissement de la terre et de la pierre, façonnage de la pierre, voile sur lui-même uniquement ; NLS 9
+
+step: Il peut préparer l'affrontement
+  do: Activer peau de pierre et choisir un passage rocheux où ses murs pourront diviser le groupe
+  note: Utiliser pierres commères pour reconnaître les lieux ; conserver une issue accessible par glissement dans la pierre
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés ou une présence invisible est repérée
+  do: Lancer poussière scintillante en action rapide, en évitant ses éventuels alliés
+  note: L'aveuglement autorise un nouveau jet de Volonté DD 14 à la fin de chaque tour de la victime ; la poussière dure 9 rounds
+
+step: Les combattants protègent leurs lanceurs de sorts
+  do: Dresser un mur de pierre pour séparer les deux groupes et couper les tirs ou les sorts à vue
+  note: Il peut utiliser poussière scintillante rapide et mur de pierre dans le même round ; il doit sortir de la pierre pour viser ses adversaires
+
+step: Une cible isolée est déjà à portée de son allonge
+  do: Après une éventuelle poussière scintillante rapide, effectuer une attaque à outrance avec ses deux coups ou son cimeterre
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Poursuivre les attaques à outrance ; privilégier une victime aveuglée ou séparée de ses soutiens
+  note: Employer Attaque en puissance contre une cible facile à toucher ; conserver la précision contre une forte CA
+
+step: Plusieurs ennemis risquent de l'encercler
+  do: Traverser la pierre pour changer de position, puis utiliser un nouveau mur afin de retrouver un adversaire isolé
+  note: Un déplacement ne permet pas de porter ensuite une attaque à outrance ; la perception des vibrations repère les créatures au contact du même sol, pas les ennemis en vol
+
+step: Une bousculade peut exposer un ennemi aux alliés du shaitan ou l'éloigner d'un passage
+  do: Utiliser ses dons de bousculade pour repousser la cible dans cette direction
+  note: Bousculade supérieure permet aux alliés qui menacent la cible de profiter de son déplacement pour porter des attaques d'opportunité
+
+step: Un combattant dépend d'une arme ou d'une armure métallique non magique
+  do: Utiliser rouille si détruire cet équipement apporte davantage qu'une attaque
+  note: Éviter d'utiliser un pouvoir magique sous la menace adverse ; si nécessaire, lancer sur la défensive avec Magie de guerre
+
+step: Des poursuivants traversent une zone de roche naturelle appropriée
+  do: Transformer la pierre en boue pour ralentir leur progression, puis contourner la zone par la pierre intacte
+  note: Réserver ramollissement et façonnage de la pierre aux matériaux qu'ils peuvent affecter ; ne pas supposer qu'ils ouvrent une brèche dans toute fortification
+
+## Repli
+
+step: Points de vie sous 25, ou adversaires capables de le submerger
+  do: Couper la poursuite avec un mur de pierre si possible, puis s'enfoncer dans la roche à 18 m par déplacement
+  note: Ce seuil est un choix tactique ; il privilégie sa survie lorsque ses protections ne suffisent plus
+
+step: Il dispose d'un round à l'abri et veut quitter les lieux
+  do: Utiliser changement de plan pour regagner le plan de la Terre
+  note: Ce pouvoir ne transporte que des cibles consentantes ; il ne permet pas de bannir un ennemi récalcitrant

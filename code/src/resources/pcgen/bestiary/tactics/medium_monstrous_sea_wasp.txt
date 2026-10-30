@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Guêpe de mer monstrueuse de taille M : méduse translucide des eaux chaudes, vermine aquatique sans intelligence, peu agressive et guidée par ses instincts alimentaires. FP 1 ; 5 pv ; CA 12.
+  Tentacule +1 (1d6-3 et poison), allonge 1,50 m ; enlacement ; nage à 15 m par round ; propulsion à réaction pour fuir.
+
+step: Aucune proie au contact
+  do: Dériver dans l'eau, tentacules déployés, en attendant qu'une proie les approche
+  note: Sa transparence la rend difficile à repérer ; Discrétion +11. Elle ne prépare ni piège ni attaque coordonnée.
+
+step: Une créature entre dans l'eau à proximité
+  do: Repérer sa position avec le sens aquatique à 18 m et attendre son approche
+  note: Vision dans le noir à 18 m ; Perception +4. Détecter une créature ne déclenche pas une poursuite systématique.
+
+## Ouverture
+
+step: Une créature arrive à 1,50 m dans l'eau
+  do: Frapper avec le tentacule +1 (1d6-3 et poison)
+  note: Une seule attaque de tentacule ; le poison accompagne la blessure, sans action supplémentaire.
+
+step: Une petite proie de taille TP touche les tentacules
+  do: Tenter de l'enlacer avec un test de BMO à -3 contre son DMD
+  note: L'enlacement est une option distincte de la simple attaque de tentacule ; ne pas accorder de capture automatique sur une touche.
+
+## Rounds suivants
+
+step: Une proie reste enlacée
+  do: Maintenir la prise pour lui infliger les dégâts du tentacule et l'exposer de nouveau au poison chaque round
+  note: La victime conserve son jet de sauvegarde contre le poison. La méduse ne peut attaquer aucune autre créature tant qu'elle maintient cet enlacement.
+
+step: Aucun enlacement en cours et un adversaire reste à portée
+  do: Répéter l'attaque de tentacule +1 contre la créature au contact
+
+step: Les adversaires quittent l'eau ou s'éloignent des tentacules
+  do: Rester dans l'eau et reprendre la dérive si elle n'est plus menacée
+  note: Son comportement alimentaire ne justifie pas une chasse prolongée ni une sortie sur la berge.
+
+## Repli
+
+step: Blessée et encore capable d'agir, sans proie retenue
+  do: Se propulser en arrière jusqu'à 60 m en ligne droite, en une action complexe
+  note: La propulsion à réaction ne provoque pas d'attaque d'opportunité. Avec seulement 5 pv, déclencher ce réflexe dès une blessure si la méduse survit.

@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Sentinelle de navire : créature artificielle de taille G, neutre et sans intelligence, liée à un bâtiment et à son capitaine. Elle défend l'équipage selon ses ordres.
+  68 pv ; CA 20, contact 14, prise au dépourvu 15 ; initiative +9. Déplacement et nage à 9 m ; espace et allonge de 3 m.
+  Lance de maître +11/+6 (2d6+6, x3), lance lancée +12 (2d6+4, x3), ou 2 coups +10 (1d6+4 chacun) ; toutes ces attaques infligent une blessure salée.
+  RD 5/tranchant ou perforant ; immunités des créatures artificielles ; vulnérabilité au feu : dégâts de feu augmentés de moitié.
+
+step: Le navire n'est pas menacé
+  do: Rester à la proue comme figure de proue, jusqu'au mot d'activation prononcé par le capitaine.
+
+note: Détection
+  À bord d'un navire, sa perception des vibrations porte à 30 m et repère les créatures en contact avec le bâtiment ou avec un objet qui le touche ; elle ne repère pas ainsi une créature en vol.
+  Vision dans le noir à 18 m, vision nocturne et Perception +6.
+
+resource: Lance de maître | 1 | Une lance lancée doit être récupérée avant de pouvoir être réutilisée.
+
+## Ouverture
+
+step: Le capitaine désigne une cible
+  do: Attaquer cette cible en priorité ; autrement, s'en prendre aux intrus vivants en épargnant l'équipage reconnu.
+
+step: Un intrus est déjà à portée de mêlée
+  do: Attaque à outrance à la lance, +11/+6 (2d6+6 par coup, x3 et blessure salée).
+
+step: Un intrus peut être atteint après un déplacement
+  do: Avancer de 9 m au maximum pour le placer dans l'allonge de 3 m, puis porter une seule attaque de lance à +11.
+
+step: La cible reste inaccessible en mêlée et un lancer est possible
+  do: Lancer la lance à +12 (2d6+4, x3 et blessure salée).
+  note: Ce choix laisse la sentinelle sans lance ; elle poursuit alors avec ses coups.
+
+## Rounds suivants
+
+step: Une cible reste à portée et la lance est en main
+  do: Rester en place et répéter l'attaque à outrance à +11/+6 ; se limiter à un pas de placement de 1,50 m si nécessaire.
+
+step: La lance a été lancée ou perdue
+  do: Employer les 2 coups à +10 (1d6+4 chacun et blessure salée) en attaque à outrance, ou un seul coup après un déplacement.
+
+step: Une créature vivante subit des dégâts d'une attaque
+  do: Appliquer blessure salée : Vigueur DD 16 ou malus de -1 aux jets d'attaque et de dégâts pendant 1 round.
+  note: Un coup critique ajoute 3d6 dégâts de déshydratation aux dégâts de l'attaque.
+
+step: La cible s'éloigne
+  do: La rejoindre à pied ou à la nage, à 9 m par déplacement, dans les limites des ordres du capitaine.
+  note: Après ce déplacement, porter une seule attaque si elle est à portée.
+
+## Repli
+
+step: Aucun ordre de repli n'est donné
+  do: Continuer à défendre le navire et l'équipage jusqu'à la destruction à 0 pv.
+  note: Cette créature sans intelligence ne choisit pas un seuil de fuite selon ses blessures.
+
+step: Le capitaine ordonne le repli
+  do: Rejoindre la position désignée à pied ou à la nage, à 9 m par déplacement.

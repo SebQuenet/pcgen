@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Vase putride (Putrid Ooze), FP 11 : vase solitaire de taille TG, neutre et sans intelligence, qui attaque par instinct pour se nourrir.
+  172 PV, CA 7 ; réduction des dégâts 10/— ; résistance au feu 20 et à l'électricité 20 ; immunités des vases.
+  Coup +20 (6d6+16 plus 2d6 d'acide et étreinte) ; projection +8 (10d6 d'acide) ; BMO de lutte +28.
+  Vision aveugle à 18 m ; allonge de 3 m ; espace occupé de 4,50 m. Déplacement et nage à 9 m, escalade à 6 m ; Escalade +19, Natation +19.
+
+step: Une créature entre dans les 18 m de sa vision aveugle
+  do: Se diriger vers la proie la plus proche, sans préparation élaborée.
+  note: Initiative −1 et Perception −5 ; ne pas lui prêter une coordination ou une sélection réfléchie des cibles.
+
+## Ouverture
+
+step: Une proie est déjà à 3 m ou moins
+  do: Porter un coup à +20, infligeant 6d6+16 dégâts plus 2d6 d'acide.
+  note: Si le coup touche une cible de taille Grande ou inférieure, tenter immédiatement l'étreinte avec un test de lutte à +28, sans attaque d'opportunité.
+
+step: La proie est hors d'allonge
+  do: Avancer de 9 m au maximum ; porter un coup si elle devient accessible, sinon utiliser la projection à +8 si elle est à portée, pour 10d6 dégâts d'acide.
+  note: Le déplacement et l'attaque constituent son tour ; le coup et la projection sont des choix alternatifs.
+
+## Rounds suivants
+
+step: Une proie reste agrippée
+  do: Maintenir la lutte et choisir de lui infliger les dégâts du coup, soit 6d6+16 plus 2d6 d'acide.
+  note: Employer son BMO de lutte de +28, avec le bonus de +5 au maintien si la victime ne s'est pas libérée ; consacrer son action simple au maintien.
+
+step: La proie se libère ou aucune proie n'est agrippée
+  do: Frapper de nouveau une cible à portée avec le coup et tenter l'étreinte après une réussite.
+
+step: Une proie reste à distance
+  do: Continuer à avancer vers elle ; projeter de la vase à +8 pour 10d6 dégâts d'acide lorsqu'elle est à portée et qu'aucun coup n'est possible.
+  note: Si aucune attaque n'est possible après un déplacement, un double déplacement permet de parcourir 18 m sur terre ou à la nage.
+
+step: Le trajet vers la proie traverse de l'eau ou une paroi à escalader
+  do: Nager à 9 m ou grimper à 6 m par déplacement pour poursuivre l'approche.
+  note: Suivre un trajet accessible sans organiser de piège ni chercher délibérément à séparer les adversaires.
+
+## Repli
+
+step: La vase subit de lourds dégâts
+  do: Continuer à frapper ou à maintenir sa prise jusqu'à sa destruction.
+  note: Son absence d'intelligence ne justifie aucun seuil de PV déclenchant une retraite organisée.
+
+step: Plus aucune proie n'est perçue
+  do: Cesser les attaques et reprendre son errance.

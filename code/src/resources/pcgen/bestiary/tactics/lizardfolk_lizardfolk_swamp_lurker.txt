@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Homme-lézard des marais tempérés, combattant robuste : 87 pv, CA 21, Perception +12 et initiative +5.
+  Au contact : 2 griffes +13 (1d6+4), morsure +7 (1d4+2) et coup de queue +7 (1d4+2). À distance : arc long composite +1.
+  Marche et nage à 9 m par round. Sa Volonté +3 constitue sa défense la plus faible.
+
+step: Il peut choisir sa position
+  do: Se placer près d'une berge avec un accès dégagé à l'eau pour pouvoir changer de position ou fuir à la nage
+  note: Sa vitesse de nage lui permet d'exploiter les passages aquatiques du marais ; aucune capacité de respiration aquatique n'est indiquée.
+
+step: Un affrontement au contact est imminent
+  do: Garder les mains libres pour employer ses deux griffes
+
+## Ouverture
+
+step: Les ennemis sont à distance et il dispose d'une ligne de tir
+  do: Tirer avec l'arc long composite +1 depuis la berge
+
+step: Il doit se déplacer pour atteindre un adversaire
+  do: S'approcher de 9 m au maximum et porter une seule attaque de griffe +13 (1d6+4) si la cible est au contact
+  note: S'il tenait l'arc, il doit libérer la main nécessaire avant d'attaquer.
+
+step: Un ennemi est déjà au contact et ses mains sont libres
+  do: Effectuer une attaque à outrance : 2 griffes +13 (1d6+4 chacune), morsure +7 (1d4+2) et coup de queue +7 (1d4+2)
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter l'attaque à outrance en concentrant les attaques sur la même cible jusqu'à sa chute
+  note: Les griffes ont le meilleur bonus d'attaque et infligent les dégâts les plus élevés ; la morsure et la queue complètent la séquence.
+
+step: Un déplacement de 1,50 m suffit pour garder une cible au contact
+  do: Faire un pas de placement de 1,50 m, puis effectuer l'attaque à outrance
+  note: Ce pas exige un terrain qui le permette ; dans une case de terrain difficile, rester en place ou accepter de se déplacer et de limiter ses attaques.
+
+step: La cible s'éloigne davantage
+  do: La rejoindre par le trajet praticable le plus court, à pied ou à la nage, puis porter une seule griffe si une action d'attaque reste disponible
+
+step: Les ennemis restent hors de portée et poursuivre l'exposerait inutilement
+  do: Reprendre l'arc depuis une position permettant de tirer et garder l'accès à l'eau
+
+## Repli
+
+step: Points de vie sous 25 et aucun avantage immédiat ne permet de terminer le combat
+  do: Se désengager vers l'eau, puis s'éloigner à la nage à 9 m par déplacement
+  note: S'il est menacé au contact, utiliser l'action de retraite lorsque le trajet le permet ; elle peut couvrir jusqu'à 18 m et seule la case de départ est protégée contre les attaques d'opportunité.
+
+step: Les poursuivants continuent à tirer depuis la berge
+  do: Gagner un passage aquatique qui coupe leur ligne de vue et poursuivre la fuite

@@ -1,0 +1,90 @@
+## Avant le combat
+
+note: Profil
+  Shachath, démon chaotique mauvais de FP 11, manipulateur à deux visages qui cherche à détruire la foi des mortels. Il isole les croyants par la tromperie, puis combat invisible ou depuis les airs.
+  148 pv ; CA 25, contact 18 ; initiative +11. Épée longue +1 : +19/+14/+9, 1d8+8, critique 19–20 ; deux griffes +14, 1d4+3 chacune ; allonge 1,50 m.
+  Déplacement 9 m, vol 15 m de manœuvrabilité moyenne ; vision dans le noir 18 m ; vision à 360° empêchant la prise en tenaille ; télépathie 30 m.
+  Réduction des dégâts 10/fer froid ou Bien ; résistance à la magie 22 ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu.
+
+resource: Détection du Bien et fausse aura | constants | repérage des auras bonnes et dissimulation d'aura
+resource: Détection des pensées | à volonté | Volonté DD 17
+resource: Télékinésie | à volonté | DD 20 pour résister à la projection violente ; manœuvres de combat possibles
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,7 kg d'objets ; aucun passager
+resource: Invisibilité suprême | 3/jour | durée 13 rounds ; les attaques ne la dissipent pas
+resource: Image accomplie | 3/jour | Volonté DD 18 pour incrédulité en cas d'interaction
+resource: Suggestion | 3/jour | Volonté DD 18
+resource: Marteau du Chaos | 3/jour | Volonté DD 19, effets partiels en cas de réussite
+resource: Blasphème | 1/jour | Volonté DD 22, effets partiels ; NLS 13
+resource: Scrutation | 1/jour | Volonté DD 19
+resource: Convocation | 1/jour | niveau 4 ; une succube ou un incube ; réussite 65 %
+resource: Profanation | 3/jour | préparation d'un lieu, surtout utile en présence de morts-vivants
+resource: Sanctification maléfique | 1/semaine | un seul effet actif à la fois
+
+step: Il peut observer les adversaires avant de se dévoiler
+  do: Prendre une forme humanoïde de taille M ou G, approcher par le mensonge et identifier les croyants avec détection du Bien, détection des pensées et Psychologie +19.
+  note: Bluff +23, Déguisement +14, Discrétion +21 et Perception +27 servent à préparer l'embuscade. Magie subtile : un jet de sauvegarde réussi ne révèle pas le ciblage d'un effet sans manifestation physique évidente.
+
+step: Il peut dérober un objet personnel à sa cible
+  do: Utiliser Escamotage +18 pour tenter de prendre un objet qu'elle porte habituellement, de préférence son symbole sacré.
+  note: Preneur de trophées augmente de 2 les DD des pouvoirs ciblant le propriétaire, ou de 4 avec son symbole sacré. Un seul trophée à la fois ; les DD indiqués ici sont les valeurs de base.
+
+step: Il connaît l'arrivée des intrus et dispose de temps
+  do: Tenter la convocation d'un allié démoniaque à couvert, puis activer invisibilité suprême juste avant le contact.
+  note: La convocation demande 1 round ; ne pas compter sur sa réussite. Donner les consignes par télépathie et placer l'allié entre les intrus et lui.
+
+## Ouverture
+
+note: Choix de l'action
+  Chaque étape propose une option selon la situation ; un pouvoir magique demande normalement une action simple. Ne pas enchaîner plusieurs de ces pouvoirs pendant le même tour.
+
+step: Le combat commence sans invisibilité active
+  do: Activer invisibilité suprême et gagner une position aérienne hors de l'allonge adverse.
+  note: Le vol n'empêche pas les attaques à distance ni les effets de zone ; rechercher aussi un couvert.
+
+step: Plusieurs ennemis non mauvais sont à 12 m ou moins
+  do: Lancer blasphème, en priorité pour neutraliser les adversaires avant la mêlée.
+  note: Volonté DD 22, résistance à la magie applicable. Avec son NLS 13, les cibles de 13 DV ou moins risquent l'hébétement, celles de 12 DV ou moins aussi l'affaiblissement, celles de 8 DV ou moins aussi la paralysie ; au-delà de 13 DV, aucun effet. Une sauvegarde réussie réduit ou annule les effets.
+
+step: Les ennemis restent groupés à distance et comprennent des créatures loyales
+  do: Placer un marteau du Chaos pour toucher les adversaires loyaux en priorité.
+  note: Volonté DD 19 ; les créatures chaotiques sont épargnées. Les créatures neutres sur l'axe Loi-Chaos subissent moins de dégâts ; le ralentissement vise les créatures loyales.
+
+step: Une cible peut être séparée du groupe par une consigne plausible
+  do: Lui suggérer d'aller chercher du secours ou de se mettre à couvert loin de ses compagnons, Volonté DD 18.
+  note: Adapter la consigne à ses pensées et à ses motivations ; une suggestion manifestement suicidaire échoue.
+
+## Rounds suivants
+
+step: Une cible vulnérable est à portée et une attaque à outrance est possible
+  do: Concentrer l'épée longue +1, +19/+14/+9 pour 1d8+8, et les deux griffes +14 pour 1d4+3 chacune sur le même adversaire, de préférence un lanceur de sorts isolé.
+  note: Une attaque à outrance exige de rester en place, sauf un pas de placement de 1,50 m. Invisibilité suprême reste active pendant les attaques.
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Se déplacer jusqu'à 9 m au sol ou 15 m en vol, puis porter une seule attaque d'épée à +19, pour 1d8+8.
+  note: Éviter de terminer au milieu de plusieurs combattants capables de le repérer.
+
+step: L'adversaire possède une arme dangereuse ou le contact devient défavorable
+  do: Utiliser télékinésie pour tenter un désarmement ou une bousculade à distance ; employer la projection violente si une cible ou des objets appropriés sont disponibles.
+  note: Les manœuvres utilisent leurs jets opposés à la DMD ; le DD 20 concerne la résistance d'une créature ou d'un objet tenu à la projection violente. Les modes maintenus demandent de la concentration.
+
+step: Il doit détourner les poursuivants ou diviser leurs attaques
+  do: Créer une image accomplie représentant sa silhouette ou des renforts, puis profiter de l'hésitation pour changer de position.
+  note: L'illusion ne cause aucun dégât réel ; Volonté DD 18 pour incrédulité après interaction. La maintenir demande de la concentration et concurrence ses autres actions.
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Exploiter Réflexes de combat avec l'épée longue, surtout contre un lanceur de sorts imprudent.
+  note: Jusqu'à huit attaques d'opportunité par round, mais une seule pour une même occasion ; ce don n'augmente pas son allonge.
+
+step: L'invisibilité expire et l'affrontement reste favorable
+  do: Dépenser une nouvelle utilisation d'invisibilité suprême depuis une position protégée.
+  note: Préférer les attaques concentrées sur une victime aux échanges prolongés avec tout le groupe.
+
+## Repli
+
+step: Ses points de vie tombent sous 45, ou les ennemis le repèrent et percent régulièrement ses défenses
+  do: Utiliser téléportation suprême vers un refuge connu dès qu'il peut agir.
+  note: Ce seuil est un choix tactique. Sa téléportation n'emporte ni allié ni prisonnier ; il privilégie sa survie.
+
+step: La téléportation est empêchée
+  do: Voler vers une sortie à 15 m par déplacement, en utilisant l'invisibilité encore disponible pour compliquer la poursuite.
+  note: Les illusions peuvent détourner les poursuivants, mais leur création consomme l'action simple du tour.

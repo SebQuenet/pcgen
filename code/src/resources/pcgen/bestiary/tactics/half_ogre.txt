@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Demi-ogre, humanoïde de taille M de sous-type géant, chaotique mauvais. Combattant de mêlée : 13 PV, CA 15.
+  Espadon +5 (2d6+4, critique 19–20), allonge de 1,50 m ; lance longue +4 (1d8+4, critique x3), allonge de 3 m.
+  Vision dans le noir à 18 m ; Escalade +8. Il privilégie l'espadon pour infliger de lourds dégâts.
+
+step: Il peut préparer sa position
+  do: Se placer dans un passage étroit, lance longue en main, et garder l'espadon accessible.
+  note: Dans l'obscurité, sa vision dans le noir lui permet de repérer les adversaires jusqu'à 18 m.
+
+## Ouverture
+
+step: Un ennemi est à 3 m et la lance longue est en main
+  do: Porter une attaque de lance longue à +4 (1d8+4, critique x3).
+  note: La lance longue ne permet pas d'attaquer un adversaire adjacent.
+
+step: Un ennemi est à 1,50 m
+  do: Attaquer à l'espadon à +5 (2d6+4, critique 19–20).
+  note: S'il tient encore la lance longue, la lâcher et consacrer une action de mouvement à dégainer l'espadon avant de frapper.
+
+step: Aucun ennemi n'est à portée
+  do: Avancer vers une cible accessible ; avec l'espadon en main, frapper si elle se trouve à 1,50 m après le déplacement.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer à frapper à l'espadon, une attaque à +5 par round ; concentrer les coups sur une même cible tant qu'elle reste accessible.
+
+step: Un ennemi quitte une case menacée par sa lance longue
+  do: Porter une attaque d'opportunité à la lance longue si ce mouvement en provoque une.
+  note: Il dispose d'une seule attaque d'opportunité par round ; un pas de placement de 1,50 m n'en provoque pas.
+
+step: Un allié combat la même cible
+  do: Chercher une position de prise en tenaille avec l'espadon, si le déplacement ne l'expose pas inutilement.
+  note: La prise en tenaille ajoute +2 au jet d'attaque.
+
+## Repli
+
+step: Il lui reste 4 PV ou moins et une issue est accessible
+  do: Utiliser l'action de retraite pour rompre le contact et rejoindre un abri ou ses alliés.
+  note: La retraite protège du départ de la case initiale, mais les autres cases traversées peuvent encore provoquer des attaques d'opportunité.
+
+step: Toute fuite est bloquée
+  do: Frapper à l'espadon l'adversaire qui barre la sortie, puis tenter de s'échapper dès qu'un passage s'ouvre.

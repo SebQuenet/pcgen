@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Mudman, élémentaire de boue de taille M, sans intelligence, qui attaque les créatures vivantes troublant sa mare. 15 pv, CA 12 ; déplacement de 3 m par round.
+  Coup +4 au contact à 1,50 m (1d4+3) ; bombe de boue, contact à distance +3 (1d4 dégâts de Dextérité) ; engloutissement qui aveugle et fait suffoquer.
+  Réduction des dégâts 5/magie et immunités des élémentaires ; les armes magiques ignorent cette réduction.
+
+resource: Engloutissement | 1 par minute | action simple ; cible de taille M ou inférieure à 3 m ou moins
+
+step: Il attend dans sa mare de boue
+  do: Rester immergé et dissimulé avec Discrétion +16
+  note: perception des vibrations à 36 m ; vision dans le noir à 18 m. Les vibrations signalent les créatures en contact avec le sol.
+
+## Ouverture
+
+step: Une créature vivante entre dans la mare
+  do: Prendre sa forme humanoïde par une action simple
+  note: cette transformation consomme son action simple ; l'attaque attend une action disponible ultérieure.
+
+step: Il a pris forme et une cible de taille M ou inférieure se trouve à 3 m ou moins
+  do: Tenter l'engloutissement : contact à distance +3, puis test de lutte au BMO +4 si l'attaque touche
+  note: le BMO de base est +0, augmenté du bonus racial de +4 pour cette tentative. Une réussite aveugle la cible et provoque sa suffocation.
+
+step: L'engloutissement est indisponible ou aucune cible admissible n'est à portée
+  do: Lancer une bombe de boue, contact à distance +3, sur l'intrus le plus proche
+  note: facteur de portée de 3 m ; appliquer les malus de distance au-delà. Une touche inflige 1d4 dégâts de Dextérité à mesure que la boue durcit.
+
+## Rounds suivants
+
+step: Une cible est engloutie et la lutte continue
+  do: Consacrer son action simple au maintien de la lutte
+  note: chaque round où la lutte est maintenue inflige 1d4+3 dégâts d'écrasement ; la cible reste aveuglée et soumise à la suffocation. Respecter les délais de suffocation, sans mort immédiate.
+
+step: Il est libre et une cible peut encore être engluée
+  do: Répéter les bombes de boue sur la même cible tant qu'elle reste à portée
+  note: cumuler les dégâts de Dextérité ; lorsque leur total atteint le score de Dextérité de la cible, celle-ci est immobilisée jusqu'à être libérée. Un test de Force DD 20, par une action complexe, enlève toute la boue accumulée.
+
+step: Il est libre, l'engloutissement est de nouveau disponible et une cible admissible se trouve à 3 m ou moins
+  do: Tenter de nouveau l'engloutissement
+  note: attendre une minute entre deux utilisations, même si la tentative précédente a échoué.
+
+step: Un adversaire est au contact et il n'utilise pas l'engloutissement
+  do: Frapper d'un coup +4, pour 1d4+3 dégâts
+  note: sa lenteur favorise les attaques contre les intrus restés près de la mare ; il ne dispose d'aucune vitesse de nage indiquée.
+
+## Repli
+
+step: Les intrus restent dans son domaine
+  do: Poursuivre les attaques tant qu'il peut agir
+  note: son absence d'intelligence ne justifie ni seuil de fuite calculé ni choix tactique fondé sur les capacités des lanceurs de sorts.
+
+step: Il subit une dissipation de la magie
+  do: Effectuer un jet de Vigueur à +5 pour réduire de moitié les dégâts
+  note: il subit 1d6 dégâts par niveau de lanceur de sorts ; le DD dépend du sort adverse et n'est pas indiqué ici. Cette vulnérabilité peut rapidement épuiser ses 15 pv.

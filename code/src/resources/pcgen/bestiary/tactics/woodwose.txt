@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Woodwose, fée mauvaise des forêts tempérées, gardien cruel qui privilégie ses sorts pour piéger les intrus. Il cherche volontiers à abattre les druides.
+  127 pv ; CA 24 ; réduction des dégâts 10/fer froid ; déplacement de 9 m ; allonge de 1,50 m.
+  Gourdin +11 (1d6+3) ou, en attaque à outrance, deux coups +11 (1d6+3 chacun) ; épines défensives.
+
+note: Défenses particulières
+  Les armes entièrement en bois et les effets magiques fondés sur le bois ne l'affectent pas, notamment le mur d'épines. Les pointes métalliques des flèches et des lances le blessent normalement, sous réserve de sa réduction des dégâts.
+  Les créatures végétales ne l'attaquent pas volontairement, sauf contrainte magique ; les attaquer, lui ou ses alliés, rompt ce pacifisme.
+
+resource: Enchevêtrement | à volonté | Réflexes DD 15 ; pouvoir de NLS 17
+resource: Passage sans trace, gourdin magique, communication avec les plantes, façonnage du bois | à volonté | pouvoirs de NLS 17
+resource: Mur d'épines | 3/jour | sans jet de sauvegarde ; pouvoir de NLS 17
+resource: Voyage par les plantes | 3/jour | conserver au moins une utilisation pour fuir
+resource: Flétrissement végétal | 3/jour | Vigueur DD 19 ; cible végétale touchée
+resource: Forme d'arbre | 1/jour | camouflage avant l'affrontement
+resource: Sorts préparés | 1 chacun | peau d'écorce, fléau d'insectes, vermine géante, rouille, métal brûlant, lueur féerique ; NLS 9
+
+step: Il choisit son terrain
+  do: Se dissimuler en forêt avec Discrétion +21, utiliser passage sans trace et interroger les plantes sur les intrus
+  note: Son sens végétal localise automatiquement ce qui touche la végétation dans un rayon de 18 m ; il ne lui donne pas la vision des cibles.
+  do: Repérer un arbre vivant de taille M ou supérieure, accessible pour voyage par les plantes
+
+step: Il dispose de quelques rounds avant l'arrivée des ennemis
+  do: Lancer peau d'écorce sur lui-même, puis gourdin magique sur son gourdin
+  note: Peau d'écorce porte sa CA à 28 pendant 90 minutes ; gourdin magique donne une attaque +12 (2d6+4) pendant 17 minutes.
+  do: Activer ses épines par une action libre ; employer forme d'arbre si une embuscade immobile est possible
+  note: Quitter la forme d'arbre avant d'agir contre les intrus.
+
+## Ouverture
+
+step: Plusieurs ennemis approchent ensemble
+  do: Créer un mur d'épines sur une partie du groupe pour emprisonner des adversaires et séparer leurs soutiens
+  note: Il peut traverser cette barrière grâce à son immunité au bois ; il évite de s'exposer simultanément à tous les combattants.
+
+step: Le mur ne permet pas de séparer le groupe ou doit être économisé
+  do: Lancer enchevêtrement sur la végétation sous les ennemis, Réflexes DD 15, puis rester hors de cette zone
+  note: Maintenir la distance et réserver le contact aux adversaires isolés.
+
+step: Un adversaire atteint immédiatement le contact
+  do: Activer les épines si nécessaire, puis frapper au gourdin magique ; sans préparation, utiliser les deux coups si une attaque à outrance est possible
+  note: Les épines infligent 1d6 perforants par round de contact ou de lutte, ainsi qu'à chaque attaque naturelle ou à mains nues contre lui ; elles ne sont pas des projectiles.
+
+## Rounds suivants
+
+step: Des ennemis sont retenus et il peut consacrer un round entier à l'incantation
+  do: Lancer fléau d'insectes sur leur position, sans inclure sa propre case
+  note: Au NLS 9, les trois nuées de guêpes forment une zone continue et restent immobiles ; elles ne poursuivent pas les fuyards.
+
+step: Un combattant en armure métallique reste dangereux à distance
+  do: Lancer métal brûlant sur son équipement, Volonté DD 15, puis employer ses rounds suivants à maintenir les obstacles
+  note: Les dégâts augmentent progressivement ; ce sort ne neutralise pas immédiatement la cible.
+
+step: Une arme en fer froid non magique menace sa survie au contact
+  do: Employer rouille sur cette arme, DD 17, si le risque d'une attaque d'opportunité reste acceptable
+  note: Il doit toucher volontairement l'arme ; les objets magiques sont immunisés.
+
+step: Un ennemi invisible est localisé par le sens végétal
+  do: Placer lueur féerique sur sa position pour le rendre visible
+
+step: Des insectes ou arachnides appropriés sont présents et il dispose d'un répit
+  do: Lancer vermine géante sur eux et les envoyer contre les ennemis accessibles
+  note: Ce sort transforme une vermine existante ; il n'en crée pas.
+
+step: Une créature végétale contrainte magiquement l'attaque
+  do: Employer flétrissement végétal au toucher, Vigueur DD 19 pour réduire les dégâts de moitié
+  note: Les dégâts sont plafonnés à 15d6 ; ce pouvoir ne blesse pas les adversaires non végétaux.
+
+step: Un ennemi isolé reste au contact
+  do: Frapper au gourdin magique ou porter les deux coups en attaque à outrance si le gourdin n'est pas enchanté
+  note: S'appuyer sur sa réduction des dégâts et ses épines ; traverser son mur pour changer de côté si les renforts ennemis arrivent.
+
+## Repli
+
+step: Ses points de vie passent sous 35, ou plusieurs armes en fer froid rendent le contact trop dangereux
+  do: Rejoindre l'arbre prévu et utiliser voyage par les plantes pour ressortir loin du combat par un végétal vivant de même espèce
+  note: Un mur d'épines restant peut couvrir l'approche de l'arbre si la situation lui laisse un round supplémentaire.
+
+step: Voyage par les plantes est épuisé ou aucun végétal adapté n'est accessible
+  do: Interposer un mur d'épines ou un enchevêtrement, puis gagner le couvert à 9 m par déplacement
+  note: Utiliser passage sans trace et Discrétion une fois hors de vue ; forme d'arbre ne sert de cachette que si les poursuivants ont perdu sa position.

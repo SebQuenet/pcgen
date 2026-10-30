@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Nilbog, petit gobelinoïde neutre mauvais, indiscernable d'un gobelin ordinaire. Il privilégie l'embuscade et le surnombre, puis s'approche pour semer la confusion.
+  5 pv ; CA 15, contact 12, pris au dépourvu 14 ; déplacement 9 m. Morgenstern +1 (1d6), allonge 1,50 m ; javeline +2 (1d4).
+
+resource: Inversion spatio-temporelle | permanente | Aura de 6 m de rayon ; Volonté DD 11 ou confusion, comme le sort, NLS 4. Elle affecte aussi les alliés dans la zone.
+resource: Inversion des dégâts | permanente | Les attaques qui devraient le blesser lui rendent autant de pv. Le surplus devient des pv temporaires, jusqu'à un total maximal de 10 pv. Seuls les effets curatifs le blessent, du montant qu'ils devraient soigner.
+
+step: Il peut préparer une embuscade
+  do: Se cacher près du passage des intrus avec Discrétion +9 ; observer avec Perception +5 et vision dans le noir à 18 m.
+  note: Prévoir un chemin de fuite ; garder les éventuels alliés hors du rayon de 6 m de son aura.
+
+## Ouverture
+
+step: Des ennemis approchent de sa cachette
+  do: Les laisser entrer dans son aura, ou avancer jusqu'à 9 m pour placer plusieurs adversaires dans son rayon de 6 m.
+  note: L'aura agit sans action ; résoudre Volonté DD 11 pour les créatures exposées.
+
+step: Un ennemi est à 1,50 m
+  do: Frapper à la morgenstern +1 (1d6).
+
+step: Aucun ennemi n'est au contact après son déplacement
+  do: Lancer une javeline +2 (1d4), s'il en dispose encore.
+
+## Rounds suivants
+
+step: Les adversaires continuent à l'attaquer avec des armes
+  do: Maintenir les ennemis dans son aura et frapper une cible accessible à la morgenstern.
+  note: Appliquer l'inversion des dégâts à chaque attaque qui devrait le blesser ; ne pas dépasser 10 pv au total.
+
+step: Un adversaire tente de lui appliquer des soins
+  do: S'écarter de lui et attaquer à la javeline si possible, tout en gardant les autres ennemis dans son aura.
+  note: Éviter de s'immobiliser au contact de cet adversaire : les soins constituent sa faiblesse décisive.
+
+## Repli
+
+step: Il tombe à 2 pv ou moins, ou ne peut plus éviter les effets curatifs
+  do: Se désengager, puis fuir par le chemin préparé ; gagner un couvert et se cacher avec Discrétion +9 dès que possible.
+  note: Son déplacement est de 9 m ; une retraite ne couvre que le double avec un round entier disponible. Son aura reste active pendant la fuite.

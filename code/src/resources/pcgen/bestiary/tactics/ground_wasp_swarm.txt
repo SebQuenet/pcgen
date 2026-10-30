@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Nuée de guêpes fouisseuses, vermine de taille infime, neutre et sans intelligence (FP 2). Elle possède 13 pv et une CA de 19.
+  Attaque de nuée : 1d6 dégâts, avec distraction et poison. Elle occupe un espace de 3 m de côté et doit recouvrir ses victimes, son allonge étant de 0 m.
+
+note: Déplacements et détection
+  Vol à 9 m, avec une bonne manœuvrabilité ; fouissement à 3 m ; déplacement au sol à 1,50 m.
+  Vision dans le noir à 18 m, perception des vibrations à 4,50 m et Perception +8.
+
+note: Défenses
+  Traits des nuées ; immunité aux dégâts des armes et aux effets mentaux.
+  Ses réactions sont instinctives : elle ne prépare ni feinte ni manœuvre coordonnée.
+
+## Ouverture
+
+step: Un intrus est accessible en surface
+  do: Voler jusque dans son espace, jusqu'à 9 m par déplacement, et terminer le déplacement en le recouvrant.
+  note: Les dégâts de nuée s'appliquent automatiquement, sans jet d'attaque ; ajouter distraction et poison.
+
+step: La nuée est sous terre et perçoit un intrus par ses vibrations
+  do: Rejoindre la surface par fouissement, à 3 m par déplacement, puis gagner l'espace de l'intrus dès que possible.
+  note: La perception des vibrations porte à 4,50 m ; elle ne permet pas de repérer ainsi une créature qui ne touche pas le sol.
+
+## Rounds suivants
+
+step: Des adversaires restent dans son espace
+  do: Maintenir le contact pour leur infliger les dégâts de nuée chaque round, avec distraction et poison.
+  note: Si plusieurs adversaires proches peuvent être recouverts dans son espace de 3 m de côté, chacun subit l'attaque de nuée.
+
+step: Un adversaire sort de son espace
+  do: Le suivre en volant à 9 m par déplacement et terminer de nouveau sur son emplacement.
+  note: Au sol, elle n'avance que de 1,50 m ; son vol est son moyen le plus rapide de maintenir le contact.
+
+step: Des adversaires tentent de la frapper avec des armes
+  do: Poursuivre les piqûres sans rompre le contact.
+  note: Son immunité aux dégâts des armes protège la nuée, indépendamment de sa CA.
+
+## Repli
+
+step: La nuée perd des points de vie
+  do: Continuer instinctivement à attaquer les intrus accessibles.
+  note: Aucun seuil de fuite n'est indiqué ; ne pas lui attribuer de retraite organisée ni de calcul tactique fondé sur ses 13 pv.

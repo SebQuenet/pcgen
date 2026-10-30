@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Golem de masques, créature artificielle neutre de taille M, gardien lié aux ordres de son créateur. 42 pv ; CA 17 ; initiative +7.
+  Deux coups +8 (1d8+4 chacun) en attaque à outrance ; allonge 1,50 m ; déplacement 12 m. Il privilégie ses masques pour neutraliser les intrus.
+  RD 5/contondant ; immunités des créatures artificielles et à la magie autorisant la résistance à la magie ; vulnérabilité au son.
+
+resource: Détection de l'invisibilité | permanent | NLS 4
+resource: Masques de contrôle | 4 masques | retirés : retour immédiat et réutilisation ; détruits : 1 renouvelé par jour
+resource: Forme de nuée | 1/jour | action simple ; durée maximale 4 minutes
+
+step: En attente dans la zone à protéger
+  do: Rester immobile comme une statue jusqu'au déclenchement prévu par ses instructions
+  note: Perception +5 ; vision dans le noir à 18 m et vision nocturne.
+
+## Ouverture
+
+step: Un puissant combattant humanoïde menace le golem
+  do: Poser un masque d'obéissance sur lui : action simple, portée 9 m, BMO +8 contre son DMD, sans attaque d'opportunité
+  note: Volonté DD 13 chaque round ; échec : domination pendant 1 round. Lui faire attaquer ses alliés.
+
+step: Les adversaires humanoïdes restent à distance
+  do: Poser un masque de solitude sur un tireur à 9 m ou moins, selon la même manœuvre
+  note: Il ne peut plus parler, respirer ni entendre ; appliquer les règles de suffocation.
+
+## Rounds suivants
+
+step: Une cible porte encore un masque
+  do: Maintenir la pression sur les autres intrus
+  note: Retrait par manœuvre contre DMD 21 ; solidité 5, 5 pv ; la moitié des dégâts infligés au masque touche son porteur à la place.
+
+step: Plusieurs intrus se regroupent et des masques restent disponibles
+  do: Prendre la forme de nuée et recouvrir leurs cases ; vol 18 m, manœuvrabilité moyenne
+  note: Nuée de créatures TP : dégâts 1d6, distraction DD 12 ; chaque victime blessée peut subir une pose de masque en action libre.
+  note: Cette forme conserve les pv actuels ; aucune RD supplémentaire.
+
+step: Les masques échouent, sont épuisés ou les cibles ne sont pas humanoïdes
+  do: Sous forme humanoïde, frapper au contact : deux coups +8 (1d8+4 chacun) en attaque à outrance
+  note: Si la cible exige un déplacement supérieur à 1,50 m, avancer de 12 m au maximum puis porter un seul coup +8.
+
+step: Un sort de graisse empêche de poser de nouveaux masques
+  do: Employer ses coups sous forme humanoïde
+  note: Les masques déjà posés restent actifs.
+
+## Repli
+
+step: Le golem subit de lourds dégâts
+  do: Continuer à défendre la zone assignée jusqu'à sa destruction
+  note: Aucun seuil de fuite ; la protection du lieu prime sur sa survie.

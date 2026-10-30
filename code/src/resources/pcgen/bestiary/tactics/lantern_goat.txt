@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Bouc à lanterne, mort-vivant solitaire des montagnes, chaotique mauvais : 68 PV, CA 19, initiative +8. Il cherche une victime isolée et disperse les groupes par la peur.
+  Coup de tête +10 (1d6+1), deux sabots +10 (1d4+1 chacun) ; allonge 1,50 m ; déplacement 9 m. Vision dans le noir et perception de la vie à 18 m ; immunités des morts-vivants.
+
+resource: Lueur de terreur | à volonté | action libre ; toute créature voyant la lumière à 18 m ou moins : Volonté DD 17 ou paniquée pendant 1d4+4 rounds ; réussite : immunité à cette lueur pendant un jour
+
+step: Des voyageurs approchent
+  do: Repérer les vivants avec sa perception de la vie ; privilégier un voyageur séparé de ses compagnons
+  note: Perception +11, Discrétion +9 ; sa lumière visible peut révéler sa présence
+
+note: Référence des pouvoirs
+  Description du Tome of Horrors Complete reproduite dans [Lantern Goat, d20PFSRD](https://www.d20pfsrd.com/bestiary/monster-listings/undead/lantern-goat/).
+
+## Ouverture
+
+step: Plusieurs ennemis voient la lanterne à 18 m ou moins
+  do: Activer la lueur de terreur, puis se concentrer sur une victime isolée par la panique
+
+step: Une victime est accessible avec un déplacement de 9 m au plus
+  do: Avancer au contact et donner un coup de tête +10 (1d6+1)
+  note: Après ce déplacement, ne pas ajouter les deux sabots
+
+## Rounds suivants
+
+step: Une victime reste à portée sans déplacement, ou après un pas de 1,50 m
+  do: Attaque à outrance : un coup de tête +10 (1d6+1) et deux sabots +10 (1d4+1 chacun)
+
+step: La victime fuit
+  do: La poursuivre si elle reste isolée ; après un déplacement, donner seulement un coup de tête si elle est à portée
+
+step: Un nouvel adversaire voit la lanterne à 18 m ou moins
+  do: Réactiver la lueur de terreur en action libre
+  note: Respecter l'immunité d'un jour des adversaires ayant réussi leur sauvegarde
+
+step: Un vivant tombe sous 0 PV à 18 m ou moins
+  do: Résoudre la capture d'âme : Volonté DD 17, augmenté de 1 par PV sous 0 ; sur un échec, son âme rejoint la lanterne
+  note: À -3 PV, DD 20. L'âme est digérée en une heure ; cela ne soigne pas le bouc
+
+## Repli
+
+step: Moins de 20 PV et plusieurs ennemis encore capables de combattre
+  do: S'éloigner vers un abri du terrain, à 9 m par déplacement ; utiliser la lueur contre les poursuivants encore vulnérables
+  note: Si une âme est capturée, privilégier la fuite pour laisser sa digestion s'achever

@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Quasi-élémentaire d'acide supérieur, extérieur élémentaire neutre de taille TG, peu intelligent, qui combat au corps à corps. 95 pv, CA 21, RD 10/- ; immunité à l'acide et traits des élémentaires ; vulnérabilité à l'eau.
+  Deux coups +14, chacun infligeant 1d8+6 dégâts plus 1d8 d'acide ; allonge et espace occupé de 4,50 m. Fumées à 1,50 m, Vigueur DD 19.
+  Déplacement de 6 m, nage de 24 m par round ; vision dans le noir à 18 m, Perception +13. Il comprend l'aquan.
+
+step: Il peut choisir où attendre les intrus
+  do: Se placer sur un terrain sec, près d'un passage où plusieurs adversaires devront entrer dans son allonge
+  note: Une étendue d'acide déjà présente peut lui servir de voie d'approche ou de fuite grâce à son immunité et à sa nage
+
+step: Des intrus approchent dans l'obscurité
+  do: Les repérer avec sa vision dans le noir à 18 m et sa Perception +13 ; attendre qu'ils entrent à portée
+
+## Ouverture
+
+step: Un ennemi se trouve déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux coups +14, chacun pour 1d8+6 plus 1d8 d'acide
+  note: Concentrer les deux attaques sur le même adversaire pour l'abattre rapidement
+
+step: Aucun ennemi n'est à portée
+  do: Avancer de 6 m au plus ; si une cible entre dans son allonge de 4,50 m, lui porter un seul coup +14
+  note: Éviter les trajets qui traversent de l'eau ; sa vitesse de nage ne supprime pas sa vulnérabilité
+
+## Rounds suivants
+
+step: Au moins trois ennemis à portée forment une chaîne de voisins adjacents
+  do: Utiliser Succession d'enchaînements en commençant par la cible la plus facile à toucher
+  note: Après chaque coup réussi, attaquer un autre ennemi adjacent au précédent et toujours dans son allonge ; chaque cible ne peut être frappée qu'une fois. La chaîne s'arrête au premier échec ; sa CA baisse de 2 jusqu'à son prochain tour
+
+step: Une ou deux cibles restent à portée
+  do: Privilégier ses deux coups en attaque à outrance ; poursuivre l'adversaire déjà blessé
+  note: Un pas de placement de 1,50 m peut suffire à conserver la portée sans renoncer aux deux attaques
+
+step: Un adversaire se trouve à 1,50 m ou moins
+  do: Résoudre son aura de fumées, Vigueur DD 19
+  note: Conserver la pression au contact avec les coups ; les dégâts d'acide de chaque coup s'ajoutent aux dégâts physiques
+
+step: Une cible est facile à toucher
+  do: Envisager Attaque en puissance pour augmenter les dégâts de ses coups
+  note: Conserver son bonus d'attaque normal contre une défense élevée, surtout lorsqu'un coup manqué interromprait ses enchaînements
+
+## Repli
+
+step: Points de vie sous 25, ou les adversaires exploitent sa vulnérabilité à l'eau
+  do: Se retirer vers un passage sec ou une étendue d'acide accessible ; utiliser sa nage à 24 m par round dans cette dernière
+  note: S'il doit quitter une mêlée, privilégier le désengagement ; garder les poursuivants dans son allonge de 4,50 m quand le terrain le permet

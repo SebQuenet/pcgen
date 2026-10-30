@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Faucon solaire, créature magique de taille TP, loyale neutre : 39 pv, CA 17. Il chasse ou réagit à une provocation.
+  Deux serres +11 en attaque à outrance, chacune infligeant 1d3 dégâts plus 1d6 de feu et brûlure ; allonge de 0 m : il doit entrer dans l'espace de sa cible.
+  Vol à 18 m, bonne manœuvrabilité, Vol +15 ; déplacement au sol à 3 m. Immunisé contre le feu, vulnérable au froid.
+
+resource: Aura de radiance | à volonté | rayon de 3 m ; Vigueur DD 15 chaque round dans l'aura ou fatigue ; activation ou suppression par une action libre
+
+step: Une proie ou un intrus approche
+  do: Observer depuis les airs ou un perchoir élevé, avec Perception +15, puis choisir une cible isolée.
+  note: Vision dans le noir à 18 m et vision nocturne ; privilégier un espace permettant de reprendre de l'altitude après une attaque.
+
+## Ouverture
+
+step: La cible est plus grande que lui
+  do: Activer la radiance et effectuer des passages à 3 m au plus de la cible pour la fatiguer avant de frapper.
+  note: Rester hors de son allonge lorsque la hauteur le permet ; l'aura impose Vigueur DD 15 chaque round d'exposition.
+
+step: Une approche au contact est possible
+  do: Utiliser Attaque en vol : entrer dans l'espace de la cible, porter une seule attaque de serre +11, puis poursuivre le déplacement pour s'éloigner.
+  note: Répartir les 18 m de déplacement avant et après l'attaque. Attaque en vol ne supprime pas les attaques d'opportunité, notamment celle que peut provoquer l'entrée dans l'espace adverse.
+
+## Rounds suivants
+
+step: La cible reste dangereuse au contact
+  do: Répéter les passages avec Attaque en vol, une serre +11 par passage, et finir le déplacement hors de son allonge.
+  note: Chaque touche inflige 1d3 dégâts plus 1d6 de feu et brûlure ; éviter les trajectoires exposées à plusieurs adversaires.
+
+step: La cible brûle déjà et peut encore riposter
+  do: S'éloigner pendant que la brûlure agit ; revenir lorsque la cible devient plus facile à attaquer.
+
+step: Il commence son tour dans l'espace d'une cible et peut y rester sans danger excessif
+  do: Porter une attaque à outrance avec ses deux serres +11.
+  note: Chaque serre inflige séparément 1d3 dégâts plus 1d6 de feu et brûlure ; cette attaque à outrance ne se combine pas avec le déplacement d'Attaque en vol.
+
+## Repli
+
+step: 13 pv ou moins, ou une attaque de froid révèle sa vulnérabilité
+  do: Rompre le contact et fuir en volant vers un abri élevé ; consacrer ses deux actions au déplacement si nécessaire, jusqu'à 36 m.
+
+step: Ses attaques de feu restent sans effet sur la cible
+  do: Abandonner cette proie et s'éloigner par les airs.

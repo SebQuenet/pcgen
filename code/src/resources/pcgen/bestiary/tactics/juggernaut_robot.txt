@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Robot juggernaut, sentinelle mécanique neutre et intelligente de taille Gigantesque. Il écrase les intrus au corps à corps et vise à distance leur CA de contact.
+  Deux coups +29, chacun infligeant 2d6+13 et 1d6 d'électricité, critique sur 19–20 ; deux fusils laser lourds intégrés +16 au contact, chacun infligeant 4d10 de feu.
+  Déplacement de 15 m ; espace et allonge de 6 m. 245 pv, CA 26, CA de contact 6 ; solidité 10 ; résistances au froid, à l'électricité et au feu de 20. Malgré sa résistance, l'électricité reste une faiblesse à prendre au sérieux.
+
+resource: Champ de force | 75 pv | inclus dans les 245 pv ; dégâts absorbés en premier ; guérison accélérée 10 ; immunité aux critiques tant qu'actif ; à 0 pv, extinction pour 24 heures
+resource: Atomiseur | 1 tous les 3 rounds | action complexe ; rayon au contact, 15d6 ; Vigueur DD 21 : 5d6
+resource: Impulsion électromagnétique | 1 par jour | action simple ; rayon de 6 m, traverse les champs de force ; robots autres que lui-même et porteurs d'implants cybernétiques : 6d6 d'électricité, Réflexes DD 21 pour moitié ; objets technologiques : perte de 1d6 charges, Réflexes DD 21 annule
+
+step: Des intrus approchent du passage à défendre
+  do: Surveiller avec Perception +24, vision nocturne et vision dans le noir à 18 m ; occuper un espace assez large pour son gabarit
+  note: Préférer une ligne de tir dégagée et un emplacement où son allonge de 6 m oblige les assaillants à s'exposer pour approcher
+
+## Ouverture
+
+step: Les ennemis restent hors de son allonge
+  do: Sans déplacement, tirer avec les deux lasers ; sinon, avancer de 15 m au maximum et effectuer un seul tir
+  note: Concentrer les tirs sur un ennemi qui utilise l'électricité dès que cette menace est identifiée ; Tir de précision permet de viser une cible engagée en mêlée sans le malus habituel
+
+step: Une cible est déjà à 6 m ou moins
+  do: Attaque à outrance combinée : deux coups et deux tirs laser
+
+step: Plusieurs adversaires technologiques sont dans le rayon de l'impulsion
+  do: Déclencher l'impulsion à la place des attaques ordinaires
+
+## Rounds suivants
+
+step: Plusieurs ennemis sont alignés
+  do: Employer les rafales laser en lignes de 45 m : +14 au contact par créature, 4d10 de feu, sans bonus de dégâts des dons
+
+step: Un adversaire dangereux au corps à corps peut être étourdi
+  do: Activer Assaut étourdissant avant les attaques ; les coups passent à +24, dégâts inchangés
+  note: Chaque coup réussi impose Vigueur DD 30 ou étourdit pendant 1 round ; le malus de −5 affecte aussi les manœuvres jusqu'au prochain tour
+
+step: Une arme ennemie inflige de lourds dégâts électriques
+  do: Tenter une destruction avec BMO +39 contre son DMD, en remplacement d'une attaque de mêlée
+
+step: Un combattant plus petit bloque l'accès à une cible prioritaire
+  do: Employer Coup fabuleux en action simple : BMO +37 contre le DMD, dégâts d'un coup, projection de 3 m et chute à terre
+  note: Choisir une direction qui dégage le passage ou rapproche la victime d'un obstacle ; ne pas ajouter cette manœuvre gratuitement à l'attaque à outrance
+
+step: Une cible résiste au feu et l'atomiseur est disponible
+  do: Employer l'atomiseur, en remplacement de toute l'attaque à outrance
+
+step: Plusieurs adversaires plus petits encombrent sa trajectoire
+  do: Piétinement vicieux : 6d6+19, Réflexes DD 33 pour moitié si la victime renonce à son attaque d'opportunité
+
+step: Une cible devient invisible
+  do: La repérer avec le système de visée et privilégier les coups ; les lasers ne la blessent pas
+
+note: Choix des dons
+  Contre une CA basse, Attaque en puissance donne des coups à +23 pour 2d6+25 et 1d6 d'électricité ; éviter de cumuler ce malus avec Assaut étourdissant contre une cible difficile à toucher.
+  Visée mortelle n'ajoute pas de dégâts aux attaques de contact des lasers.
+
+## Repli
+
+step: Le champ de force s'effondre
+  do: Prioriser les utilisateurs d'électricité et les combattants capables de critiques ; conserver les ennemis à la limite de son allonge
+  note: Le champ ne revient pas pendant ce combat ; le robot devient exposé à sa vulnérabilité aux critiques
+
+step: Sa mission impose de tenir le passage
+  do: Continuer à combattre sur place jusqu'à destruction plutôt que laisser les intrus passer
+
+step: Un repli est compatible avec sa mission
+  do: Gagner un abri solide à 15 m par round, avec un seul tir laser après un déplacement ordinaire ; éviter les lignes de tir des utilisateurs d'électricité

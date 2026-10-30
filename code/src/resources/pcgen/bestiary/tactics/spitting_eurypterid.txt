@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Euryptéride cracheur, vermine aquatique gargantuesque, neutre et sans intelligence ; prédateur solitaire qui combat par instinct. 184 pv, CA 26.
+  Deux pinces +20 (1d8+12 chacune), allonge de 6 m ; dard +20 (2d6+12 et poison), allonge de 9 m. Il occupe un espace de 6 m de côté.
+  Amphibie ; nage à 12 m, déplacement terrestre de 3 m. Vision nocturne, perception des vibrations à 9 m, Perception +1 ; immunité aux effets mentaux.
+
+step: Une proie approche dans l'eau ou sur la rive
+  do: Rester dans l'eau et réagir dès que la proie est repérée à portée de ses attaques
+  note: Son absence d'intelligence exclut les ruses élaborées et la coordination tactique.
+
+## Ouverture
+
+step: Une cible est à 6 m ou moins et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : deux pinces +20 (1d8+12 chacune) et un dard +20 (2d6+12 et poison)
+
+step: Une cible est à plus de 6 m et à 9 m ou moins
+  do: Porter une attaque de dard +20 (2d6+12 et poison)
+  note: Les pinces ne peuvent pas encore l'atteindre.
+
+step: Toutes les cibles sont à plus de 9 m
+  do: Nager jusqu'à 12 m pour approcher la plus proche, puis porter une attaque de dard si elle entre dans son allonge de 9 m
+  note: Après ce déplacement, il ne dispose pas d'une attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible reste à portée des pinces
+  do: Répéter l'attaque à outrance avec les deux pinces et le dard, de préférence contre la même proie
+  note: S'il doit se déplacer pour la rejoindre, limiter ses attaques à un seul coup de dard après son déplacement.
+
+step: La cible reste entre 6 m et 9 m
+  do: Continuer à la frapper du dard ; si elle se rapproche à 6 m ou moins, employer les trois attaques au prochain tour sans déplacement
+
+step: Le dard blesse une cible
+  do: Appliquer le poison associé à cette blessure
+  note: Le profil fourni ne précise ni le DD, ni les effets, ni la fréquence du poison ; ne pas leur attribuer de valeurs inventées.
+
+step: Les adversaires restent sur la berge
+  do: Les attaquer depuis l'eau avec les pinces à 6 m ou le dard à 9 m, tant qu'ils sont accessibles
+  note: Sur terre, sa vitesse de 3 m rend la poursuite peu efficace.
+
+## Repli
+
+step: Points de vie à 46 ou moins et une voie de fuite aquatique est libre
+  do: Rompre le combat par instinct de survie et gagner l'eau profonde à la nage, à 12 m par déplacement
+  note: Employer le désengagement si nécessaire pour quitter le contact ; il consacre alors son tour à la fuite.
+
+step: La fuite est impossible
+  do: Continuer à frapper l'adversaire le plus proche avec les attaques à portée

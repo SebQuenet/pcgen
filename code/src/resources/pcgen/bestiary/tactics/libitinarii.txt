@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Libitinarii, kyton loyal mauvais du plan de l’Ombre, tortionnaire au corps de glace. Il privilégie les attaques à distance et peut transformer une victime en statue gelée.
+  184 pv ; CA 28, contact 17 ; initiative +11 ; déplacement 9 m ; vision dans le noir à 18 m.
+  À distance : 4 glaçons +23, chacun infligeant 1d8+6 et 2d6 de froid, critique 19–20/×3 ; facteur de portée 6 m.
+  Au contact : 2 griffes +22, chacune infligeant 2d6+6 et 2d6 de froid, et 2 chaînes +22, chacune infligeant 1d8+6.
+
+note: Défenses
+  Réduction des dégâts 10/Bien ou argent ; résistance à la magie 24 ; régénération 5, interrompue par les armes bonnes ou en argent et les sorts du Bien.
+  Immunité au froid et aux sorts du registre du froid ; la glace ordinaire ou magique ne gêne pas ses déplacements.
+  Vulnérabilité au feu : dégâts augmentés de moitié. Le feu seul ne supprime pas sa régénération.
+
+resource: Marche dans les airs | constant | permet de prendre de la hauteur et de circuler au-dessus des combattants terrestres
+resource: Gel parfait | 3/jour | attaque de contact ; 2d6 de froid et 2d6 de dégâts magiques d’alignement mauvais ; Vigueur DD 24 ou pétrification par gel
+resource: Cône de froid | 3/jour | Réflexes DD 18
+resource: Tempête de grêle | 3/jour | dégâts de zone et gêne des déplacements ennemis
+resource: Porte dimensionnelle | 3/jour | repositionnement ou fuite
+resource: Rayon polaire | 1/jour | attaque de froid contre une cible unique
+resource: Changement de plan | à volonté | lui-même seulement, du plan Matériel vers le plan de l’Ombre uniquement
+
+step: Des intrus approchent
+  do: Se dissimuler avec Discrétion +26, observer avec Perception +29 et repérer les utilisateurs de feu ainsi que les armes capables de neutraliser ses défenses
+  note: Adapter les priorités aux capacités effectivement observées ; il ne connaît pas automatiquement les protections ni les sauvegardes des adversaires
+
+step: Il peut choisir sa position
+  do: Utiliser marche dans les airs pour gagner une position élevée, avec une ligne de tir et une voie de repli ; privilégier la glace si le terrain en comporte
+  note: Chercher à rester à 6 m de sa cible pour les glaçons, hors de portée de ses attaques de mêlée si possible
+
+## Ouverture
+
+note: Rythme du combat
+  Choisir une ouverture selon la situation : une attaque à outrance, un pouvoir magique ou Gel parfait occupent des actions distinctes.
+  Son regard déstabilisant menace les adversaires à 9 m : Volonté DD 21 ou chancelants pendant 1 round. Il accompagne ses autres moyens d’attaque.
+
+step: Un utilisateur de feu est exposé et il peut rester sur place
+  do: Attaque à outrance avec 4 glaçons +23 sur cet adversaire
+  note: Concentrer les tirs pour faire tomber la menace prioritaire ; Tir de précision facilite les tirs sur un ennemi engagé en mêlée
+
+step: Plusieurs ennemis avancent groupés
+  do: Employer tempête de grêle pour les blesser et gêner leur progression
+  note: Exploiter ensuite leur approche ralentie pour maintenir la distance
+
+step: Plusieurs ennemis sont déjà réunis dans un cône accessible
+  do: Employer cône de froid, Réflexes DD 18
+  note: Préférer les glaçons si une seule cible dangereuse est exposée ou si les ennemis ont révélé une protection contre le froid
+
+## Rounds suivants
+
+step: Il dispose d’une ligne de tir et n’a pas besoin de se déplacer
+  do: Répéter l’attaque à outrance avec 4 glaçons, en concentrant les tirs sur l’ennemi prioritaire
+  note: Prélever jusqu’à 4 glaçons par round est une action libre ; ils se renouvellent automatiquement tant que sa régénération n’est pas supprimée
+
+step: Un adversaire dangereux reste à distance et semble sensible au froid
+  do: Dépenser rayon polaire pour concentrer son attaque magique sur lui
+  note: Réserver cette utilisation unique à une cible dont la neutralisation changera le combat
+
+step: Une cible à la Vigueur apparemment faible se trouve au contact
+  do: Employer Gel parfait par une attaque de contact ; infliger 2d6 de froid et 2d6 de dégâts magiques mauvais, puis demander Vigueur DD 24
+  note: En cas d’échec, la victime devient une statue inerte et sans esprit ; seul annulation d’enchantement inverse cette transformation. Cette attaque remplace l’attaque à outrance du round
+
+step: Un ennemi au contact résiste au gel ou les utilisations de Gel parfait sont épuisées
+  do: S’il peut soutenir la mêlée, effectuer une attaque à outrance avec les 2 griffes et les 2 chaînes
+  note: Exploiter Attaques réflexes pour punir les occasions provoquées autour de lui
+
+step: Les ennemis l’encerclent ou un utilisateur de feu obtient une bonne position
+  do: Employer porte dimensionnelle pour retrouver une position élevée ou protégée et une ligne de tir
+  note: Reprendre les attaques au round suivant ; conserver si possible une utilisation pour le repli
+
+step: Ses blessures s’accumulent et il peut rompre le contact
+  do: Se mettre à couvert ou hors d’atteinte et laisser la régénération rendre 5 pv par round tant qu’elle fonctionne
+  note: Si elle est supprimée, cesser de compter sur le renouvellement des glaçons et privilégier les pouvoirs encore disponibles ou la fuite
+
+## Repli
+
+step: Il tombe à 46 pv ou moins, ou ne peut plus contenir les attaques de feu et les moyens de supprimer sa régénération, sur le plan Matériel
+  do: Employer changement de plan pour fuir seul vers le plan de l’Ombre
+  note: Ce pouvoir ne permet aucun autre trajet planaire
+
+step: Le repli est nécessaire depuis un autre plan, ou changement de plan est inutilisable
+  do: Employer porte dimensionnelle vers un abri, puis s’éloigner avec marche dans les airs et récupérer grâce à la régénération
+  note: Sans porte dimensionnelle disponible, chercher immédiatement un couvert et une voie de fuite hors de portée des poursuivants

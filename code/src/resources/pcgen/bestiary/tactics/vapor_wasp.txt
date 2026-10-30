@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Vapor Wasp, guêpe géante de taille G, créature magique neutre des forêts tempérées, qui défend surtout son nid. 47 pv, CA 14 ; dard +8 (1d8+6 et poison), allonge de 1,50 m.
+  Vol à 18 m, bonne manœuvrabilité ; marche à 6 m. Attaque en vol permet de piquer pendant un déplacement. Résistance au feu 5 ; spasmes d'agonie DD 16 ; forme vaporeuse.
+
+resource: Forme vaporeuse | 1 heure par jour, fractionnable | transformation en action libre, comme forme gazeuse, NLS 5
+
+step: Des intrus approchent à moins de 30 m du nid sans l'attaquer
+  do: Les surveiller et les harceler en volant autour d'eux, sans engager systématiquement le combat
+  note: Perception +11, vision dans le noir à 18 m et vision nocturne ; elle laisse généralement repartir les visiteurs qui ne menacent pas le nid
+
+## Ouverture
+
+step: Elle est attaquée ou le nid est menacé, et une cible est accessible en vol
+  do: S'approcher à 1,50 m, porter un coup de dard +8 (1d8+6 et poison), puis poursuivre son déplacement pour s'éloigner
+  note: Attaque en vol : le trajet total avant et après la piqûre ne dépasse pas 18 m ; ce don ne protège pas des attaques d'opportunité
+
+step: Aucun ennemi n'est accessible avec un déplacement de 18 m et une piqûre
+  do: Se rapprocher en volant, en gardant de la hauteur et en utilisant les arbres comme couvert lorsque le terrain le permet
+  note: Elle n'a aucune attaque à distance
+
+## Rounds suivants
+
+step: Elle peut continuer ses passages sans traverser plusieurs zones menacées
+  do: Répéter les piqûres en vol sur un adversaire exposé, puis terminer le déplacement hors de sa portée de mêlée
+  note: Privilégier les trajets dégagés ; sa CA 14 rend les échanges prolongés au contact dangereux
+
+step: Une cible paraît facile à toucher
+  do: Employer Attaque en puissance : dard +6 (1d8+12 et poison)
+  note: Contre une défense solide, conserver le dard +8 pour augmenter les chances d'inoculer le poison
+
+step: Plusieurs guêpes défendent le même nid
+  do: Attaquer les intrus qui menacent directement le nid et prendre une cible en tenaille lorsque leur position le permet
+  note: Chaque guêpe conserve ses propres déplacements et sa propre attaque de dard
+
+## Repli
+
+step: Les intrus cessent de menacer le nid et s'éloignent
+  do: Interrompre la poursuite et revenir garder le nid
+
+step: Elle est isolée, le nid est hors de danger et ses points de vie tombent sous 12
+  do: S'éloigner en volant ; si une issue étroite offre un refuge, prendre sa forme vaporeuse et s'y glisser
+  note: Sous forme gazeuse, elle ne peut pas piquer et son vol passe à 3 m ; conserver sa forme solide pour une fuite rapide en terrain ouvert
+
+step: Le nid reste directement menacé
+  do: Continuer à piquer les assaillants avec acharnement
+
+step: Elle est tuée
+  do: Déclencher ses spasmes d'agonie : son corps éclate en un nuage nauséabond de 3 m de rayon, comme un nuage nauséabond de NLS 5
+  note: Vigueur DD 16 ou nausée tant que la victime reste dans le nuage, puis pendant 1d4+1 rounds après sa sortie ; un jet réussi doit être renouvelé chaque round passé dans le nuage

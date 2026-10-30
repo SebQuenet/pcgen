@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Storm Aurochs, aurochs des tempêtes : bête magique de taille TG, CN, grégaire et territoriale, prompte à attaquer les individus armés qui approchent.
+  126 pv ; CA 23, contact 11, pris au dépourvu 20. Coup de cornes +20 (2d8+15), allonge de 4,50 m ; espace occupé de 4,50 m ; déplacement de 15 m.
+  RD 5/magie ; immunité à l'électricité et au son ; résistance à la magie 20. Intelligence limitée : il défend son espace par la force et des manœuvres simples.
+
+resource: Marche dans les airs | permanent | NLS 12 ; marche sur l'air à 15 m par action de mouvement ; montée ou descente à demi-vitesse, avec une pente maximale de 45 degrés
+
+step: Des intrus approchent du troupeau ou de son territoire
+  do: Les repérer avec Perception +21, l'odorat, la vision nocturne et la vision dans le noir à 18 m ; se tourner vers la menace la plus proche.
+  note: Garder une voie dégagée pour avancer et une issue vers le ciel ouvert ; il comprend l'auran, mais ne parle pas.
+
+## Ouverture
+
+step: Une charge en ligne droite dégagée permet d'atteindre un ennemi
+  do: Charger sur 3 à 30 m et porter un coup de cornes à +22 (2d8+15), en s'arrêtant dès que son allonge permet l'attaque.
+  note: La CA descend à 21 jusqu'à son prochain tour. Une charge effectuée à altitude constante profite de sa vitesse normale.
+
+step: La charge est impossible et un déplacement de 15 m suffit pour atteindre sa cible
+  do: Avancer, puis donner un coup de cornes à +20 (2d8+15) dès que l'ennemi est à 4,50 m ou moins.
+  note: Après un déplacement supérieur à 1,50 m, Comme le vent accorde 20 % de camouflage contre les attaques à distance pendant 1 round.
+
+step: Aucun ennemi ne peut encore être atteint
+  do: Faire un double déplacement, jusqu'à 30 m à altitude constante, pour se rapprocher ; utiliser la marche dans les airs pour contourner les obstacles au sol.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée des cornes
+  do: Porter un coup de cornes à +20 (2d8+15) et conserver son allonge pour menacer ses approches.
+  note: Son attaque naturelle unique donne un seul coup de cornes lors de son tour.
+
+step: Les cornes touchent facilement la cible
+  do: Employer Attaque en puissance : cornes +16 (2d8+27), ou +18 lors d'une charge.
+  note: Le malus de -4 aux attaques et aux manœuvres de combat dure jusqu'à son prochain tour ; revenir à l'attaque normale si les coups manquent souvent.
+
+step: Repousser un adversaire permet de dégager un passage ou d'écarter une menace du troupeau
+  do: Remplacer l'attaque par une bousculade à +26 contre le DMD adverse, sans Attaque en puissance.
+  note: Science de la bousculade évite l'attaque d'opportunité de la cible. La repousser de 1,50 m, plus 1,50 m par tranche de 5 points au-dessus de son DMD ; cette manœuvre ne cause aucun dégât.
+
+step: Les ennemis utilisent surtout des tirs et un trajet sûr permet de les approcher
+  do: Se déplacer d'au moins 3 m avant d'attaquer pour bénéficier de Comme le vent.
+  note: Choisir un trajet qui évite les attaques d'opportunité ; son allonge facilite une attaque après déplacement.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Donner un coup de cornes, avec les modificateurs encore actifs.
+  note: Une seule attaque d'opportunité par round.
+
+## Repli
+
+step: Points de vie sous 32 et possibilité de s'échapper
+  do: Prendre une action de retraite, jusqu'à 30 m à altitude constante, vers le ciel ouvert ou le troupeau ; gagner ensuite de la hauteur par marche dans les airs si cela éloigne les poursuivants.
+  note: Le seuil de 32 pv est un choix tactique pour le meneur. La retraite protège le départ ; traverser ensuite d'autres cases menacées peut provoquer des attaques d'opportunité. Comme le vent protège contre les tirs après le déplacement.
+
+step: La fuite est bloquée
+  do: Tenter une bousculade à +26 pour ouvrir le passage, puis se retirer dès qu'une voie se libère.

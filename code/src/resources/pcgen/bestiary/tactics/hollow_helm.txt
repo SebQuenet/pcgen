@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Hollow Helm, heaume animé mort-vivant de taille minuscule, sans intelligence. Il attend immobile puis attaque directement les intrus.
+  9 PV ; CA 16, contact 13, pris au dépourvu 15 ; coup +4 (1d4+1), allonge 1,50 m.
+  Déplacement au sol 6 m ; vol 9 m, manœuvrabilité parfaite ; vision dans le noir à 18 m ; Perception +5, Discrétion +12.
+
+step: Aucun ennemi ne l'a encore découvert
+  do: Rester immobile grâce à freeze pour passer pour un heaume ordinaire et attendre qu'un intrus approche
+  note: Il comprend le commun mais ne parle pas ; son absence d'intelligence exclut les ruses élaborées.
+
+## Ouverture
+
+step: Un intrus se trouve à 1,50 m ou moins
+  do: Porter un coup +4 (1d4+1)
+  note: S'il bénéficie d'un round de surprise, employer son action pour ce coup.
+
+step: Un intrus est hors de son allonge
+  do: Voler vers lui à 9 m par action de mouvement et porter un coup +4 (1d4+1) si une seule action de mouvement suffit à le mettre à portée
+  note: Si deux actions de mouvement sont nécessaires, avancer jusqu'à 18 m en vol sans attaquer ce round ; pendant un round de surprise, se limiter à une action de mouvement.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Porter chaque round son unique coup +4 (1d4+1)
+  note: Il n'a ni attaque à distance ni attaque supplémentaire.
+
+step: Aucun ennemi ne reste à portée
+  do: Poursuivre directement l'ennemi le plus proche en vol et reprendre les coups dès qu'il est à 1,50 m
+  note: Employer le vol pour franchir les obstacles au sol ; il peut rester en vol stationnaire grâce à sa manœuvrabilité parfaite.
+
+note: Défenses
+  Appliquer les immunités des morts-vivants et la résistance à la canalisation +2 aux jets de sauvegarde contre la canalisation d'énergie.
+  Il ne peut pas être renversé par un croc-en-jambe.
+
+## Repli
+
+step: Il est blessé
+  do: Continuer à attaquer jusqu'à sa destruction
+  note: Sans intelligence, il n'organise pas de retraite pour préserver ses 9 PV ; à 0 PV, il est détruit.

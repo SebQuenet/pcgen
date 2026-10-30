@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Chef gobelin de taille M, combattant à 89 pv et CA 22, avec une initiative de +7.
+  Arc long composite +14/+9 (1d8+5, ×3) ; horsechopper +1 en mêlée, dont les bonus d'attaque et les dégâts ne sont pas précisés.
+  Déplacement de 9 m ; vision dans le noir à 18 m.
+
+step: Il peut choisir sa position
+  do: Se placer avec une ligne de tir dégagée et une voie de repli accessible
+  note: privilégier un couvert disponible ; dans l'obscurité, repérer les adversaires à 18 m grâce à la vision dans le noir
+
+## Ouverture
+
+step: Un ennemi est visible et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance à l'arc long composite, avec deux tirs à +14 puis +9
+  note: concentrer les deux flèches sur la même cible pour tenter de l'abattre rapidement
+
+step: Il doit se déplacer pour obtenir une ligne de tir
+  do: Se déplacer de 9 m au maximum, puis effectuer un seul tir à +14
+
+step: Un ennemi impose le combat de mêlée
+  do: Prendre le horsechopper +1 et combattre avec cette arme
+  note: changer d'arme peut empêcher une attaque à outrance ce round
+
+## Rounds suivants
+
+step: Il peut continuer à tirer sans être menacé en mêlée
+  do: Répéter les deux tirs à +14/+9 sur la cible déjà blessée
+  note: chaque flèche inflige 1d8+5 dégâts ; multiplicateur de critique ×3
+
+step: Un pas de 1,50 m suffit à sortir de la zone menacée et à conserver une ligne de tir
+  do: Faire ce pas, puis effectuer les deux tirs à l'arc
+  note: vérifier qu'aucun autre ennemi ne menace sa nouvelle position
+
+step: Il est engagé en mêlée avec le horsechopper +1 en main
+  do: Attaquer avec cette arme ; privilégier une attaque à outrance s'il peut rester sur place
+
+## Repli
+
+step: Points de vie à 25 ou moins et combat défavorable
+  do: Rompre le combat et emprunter la voie de repli prévue, en utilisant les couverts disponibles
+  note: sa vitesse est de 9 m par déplacement ; éviter de s'arrêter pour tirer si cela permet aux poursuivants de le rejoindre

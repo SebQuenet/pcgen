@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Vase de mercure (Mercury Ooze), vase neutre de taille G, sans intelligence ; 47 pv, CA 5.
+  Coup +4 (2d4+4, empoisonnement au mercure et étreinte) ; BMO de lutte +10 ; allonge de 1,50 m ; espace occupé de 3 m.
+  Perception aveugle à 18 m ; déplacement de 3 m au sol, escalade de 6 m ; Escalade +10.
+  Immunités des vases ; ne peut pas être renversée.
+
+note: Empoisonnement au mercure
+  Le coup transmet cet empoisonnement. Le bloc fourni ne précise ni son DD, ni ses effets, ni sa durée.
+
+step: Elle traverse le sol couvert de verre brisé de la zone B7
+  do: Avancer sans être gênée par les éclats de verre
+  note: Cette particularité lui permet de poursuivre une proie à travers cette zone sans ralentissement dû au verre.
+
+## Ouverture
+
+step: Une créature est perçue à 18 m ou moins, mais reste hors de portée
+  do: Se rapprocher avec son déplacement de 3 m au sol ou de 6 m en escalade sur une surface accessible
+  note: Son absence d'intelligence exclut les embuscades élaborées et la sélection réfléchie des cibles.
+
+step: Une créature se trouve à 1,50 m ou moins et la vase peut attaquer
+  do: Porter un coup +4, infligeant 2d4+4 dégâts et l'empoisonnement au mercure
+  do: Si le coup touche, tenter immédiatement l'étreinte avec un BMO de lutte de +10
+
+## Rounds suivants
+
+step: Une proie reste agrippée
+  do: Tenter de maintenir la lutte et choisir d'infliger les dégâts du coup, soit 2d4+4
+  note: Le BMO de lutte indiqué est de +10 ; appliquer les modificateurs habituels du maintien. Aucune constriction n'est indiquée.
+
+step: Aucune proie n'est agrippée et une créature est à portée
+  do: Répéter le coup +4, avec empoisonnement au mercure et tentative d'étreinte en cas de réussite
+
+step: Les créatures s'éloignent hors de son allonge
+  do: Avancer vers une proie encore perçue, puis reprendre les coups dès qu'elle est à portée
+  note: Sa perception aveugle porte à 18 m ; son déplacement au sol reste de 3 m.
+
+## Repli
+
+step: La vase perd des points de vie
+  do: Poursuivre les coups et les tentatives de lutte tant qu'elle peut agir
+  note: Aucun seuil de repli n'est indiqué. Sans intelligence, elle n'organise pas de retraite tactique.

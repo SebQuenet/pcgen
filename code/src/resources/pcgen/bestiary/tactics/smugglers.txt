@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Contrebandiers humains de taille M, seuls, par deux ou en équipe de 3 à 5. Chacun possède 20 PV, une CA de 15 et une initiative de +6 ; déplacement de 9 m, allonge de 1,50 m.
+  Cimeterre de maître +3 (1d6, critique 18–20), matraque +4 (1d6 non létaux), arc court +4 (1d6, x3). Leur attaque sournoise ajoute +2d6 contre une cible privée de son bonus de Dextérité à la CA ou prise en tenaille au corps à corps.
+  Discrétion +8 et déplacement furtif rapide permettent de se déplacer discrètement à leur vitesse normale. Perception +7 pour surveiller les approches ; Bluff, Diplomatie et Intimidation +9 pour négocier ou tromper.
+
+resource: Potion de splendeur de l'aigle | 1 par contrebandier | +4 d'amélioration au Charisme ; augmente notamment Bluff, Diplomatie et Intimidation de +2 pendant l'effet
+resource: Potions d'invisibilité | 2 par contrebandier | l'invisibilité cesse dès que le buveur attaque ; conserver si possible une potion pour fuir
+resource: Flèches | 20 par contrebandier | munitions de l'arc court
+
+step: Une discussion peut éviter le combat
+  do: Négocier avec Diplomatie ou mentir avec Bluff ; boire auparavant la potion de splendeur de l'aigle si la confrontation est prévisible et laisse le temps de se préparer.
+  note: Ces compétences ne contraignent pas un ennemi à accepter un accord.
+
+step: Le combat paraît inévitable et les adversaires ne les menacent pas encore
+  do: Se dissimuler, repérer une issue et répartir les complices pour préparer une prise en tenaille ; boire une potion d'invisibilité si elle facilite l'approche.
+  note: Boire une potion prend une action simple ; préparer cela avant d'être au contact.
+
+## Ouverture
+
+step: Une cible à 9 m ou moins est privée de son bonus de Dextérité à la CA
+  do: Tirer une flèche à +4, pour 1d6+2d6 dégâts grâce à l'attaque sournoise.
+  note: L'attaque sournoise à distance exige une cible à 9 m ou moins ; une cible simplement occupée par un complice ne suffit pas.
+
+step: Un contrebandier invisible peut atteindre un adversaire au corps à corps
+  do: S'approcher jusqu'à 1,50 m et porter une attaque de cimeterre +3, pour 1d6+2d6 dégâts si la cible est privée de son bonus de Dextérité contre cette attaque.
+  note: L'attaque met fin à l'invisibilité ; préparer une prise en tenaille avec un complice pour les tours suivants.
+
+step: Aucune attaque sournoise n'est possible immédiatement
+  do: Rejoindre un complice pour prendre un adversaire en tenaille, puis attaquer au cimeterre si une action simple reste disponible ; sinon tirer à l'arc depuis une position protégée.
+
+## Rounds suivants
+
+step: Un adversaire est pris en tenaille au corps à corps
+  do: Porter une attaque de cimeterre à +5 en comptant le bonus de tenaille de +2, pour 1d6+2d6 dégâts.
+  note: Maintenir les deux complices sur des côtés opposés de la cible ; éviter de s'exposer inutilement aux attaques d'opportunité en se repositionnant.
+
+step: Ils veulent assommer une cible vulnérable à l'attaque sournoise
+  do: Utiliser la matraque +4, ou +6 avec la tenaille, pour 1d6+2d6 dégâts non létaux.
+  note: La matraque permet d'appliquer l'attaque sournoise en dégâts non létaux sans pénalité.
+
+step: Un contrebandier est seul au contact et peut survivre jusqu'à son prochain tour
+  do: Feinter avec Bluff +9 par une action simple, puis attaquer au corps à corps au tour suivant si la feinte réussit.
+  note: Sans feinte améliorée, il ne peut pas feinter et attaquer avec ses seules actions ordinaires du même tour ; une feinte réussie prive la cible de son bonus de Dextérité contre sa prochaine attaque de corps à corps, avant la fin de son tour suivant.
+
+step: Une cible reste inaccessible au corps à corps
+  do: Tirer à l'arc court +4 et utiliser le mouvement pour chercher un couvert ou une meilleure approche.
+  note: Ajouter +2d6 seulement si les conditions de l'attaque sournoise sont réunies ; ne pas tirer au contact d'un ennemi qui peut porter une attaque d'opportunité.
+
+## Repli
+
+step: Le combat tourne à leur désavantage ou les complices ne peuvent plus se soutenir
+  do: Rompre le contact par une action de retraite vers l'issue repérée, jusqu'à 18 m si le terrain le permet.
+  note: La retraite protège seulement la sortie de la première case contre les attaques d'opportunité liées au déplacement ; éviter de traverser d'autres cases menacées.
+
+step: Un contrebandier hors de portée immédiate possède encore une potion d'invisibilité
+  do: Boire la potion, puis s'éloigner de 9 m et chercher à se cacher ; poursuivre la fuite aux rounds suivants.
+  note: Ne plus attaquer pour conserver l'invisibilité ; utiliser Discrétion +8 et le déplacement furtif rapide pour quitter les lieux.

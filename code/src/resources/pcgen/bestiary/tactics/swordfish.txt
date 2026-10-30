@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Espadon, animal aquatique de taille G, neutre, rencontré seul ou en couple dans les océans. Son Intelligence de 1 impose un comportement instinctif.
+  22 pv ; CA 14 ; coup de rostre +5 (1d8+3) ; espace et allonge de 3 m ; nage à 21 m par déplacement.
+  Perception +10 et vision nocturne pour repérer une proie ou une menace ; Natation +18. Il reste dans l'eau.
+
+step: Une proie ou une menace est repérée
+  do: Approcher dans l'eau en conservant une trajectoire dégagée pour attaquer ou fuir
+
+## Ouverture
+
+step: Une cible est à portée de son allonge de 3 m
+  do: Porter un coup de rostre +5 (1d8+3)
+
+step: Une cible hors de portée est accessible par une charge en ligne droite dégagée
+  do: Charger avec un déplacement de 3 m à 42 m et porter un coup de rostre +7 (1d8+3)
+  note: La charge abaisse sa CA à 12 jusqu'au début de son prochain tour.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Porter un coup de rostre +5 (1d8+3) à chaque round, en profitant de son allonge de 3 m
+  note: Il ne possède qu'une attaque naturelle ; une attaque à outrance n'ajoute aucun coup.
+
+step: La cible s'éloigne dans l'eau
+  do: Nager jusqu'à 21 m pour la rejoindre, puis porter un coup de rostre si elle est à portée
+  note: Si un seul déplacement ne suffit pas, consacrer le round à nager jusqu'à 42 m pour se rapprocher.
+
+## Repli
+
+step: Points de vie à 7 ou moins
+  do: Effectuer une retraite vers l'eau libre, en nageant jusqu'à 42 m pour rompre le combat
+  note: La retraite évite les attaques d'opportunité liées au départ de sa position initiale, mais pas celles provoquées plus loin sur le trajet.
+
+step: La cible quitte l'eau et devient inaccessible
+  do: Abandonner la poursuite et regagner l'océan

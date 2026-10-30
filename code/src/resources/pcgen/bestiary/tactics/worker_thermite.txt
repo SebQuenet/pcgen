@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Thermite ouvrier, vermine extraplanaire de taille M et de sous-type feu, dépourvue d'intelligence. Il entretient le nid près des sources de chaleur et sert la reine.
+  16 PV, CA 18 ; déplacement de 9 m par round ; allonge de 1,50 m.
+  Morsure +3 : 1d6+1 dégâts physiques et 1d6 de feu, plus embrasement (Réflexes DD 12).
+  Chaleur : toucher l'ouvrier ou être touché par lui inflige automatiquement 1d6 dégâts de feu.
+  Immunisé au feu et aux effets mentaux ; vulnérable au froid.
+
+note: Repérage
+  Vision dans le noir et perception des vibrations à 18 m ; Perception +0.
+  Perception du feu : repère et localise toute source de feu au moins aussi importante qu'une torche à 60 m, et en perçoit l'intensité.
+  Une flamme détectée indique une source de chaleur ; elle ne révèle pas à elle seule la nature de son porteur.
+
+step: Plusieurs ouvriers sont présents près du nid
+  do: Les faire réagir ensemble aux intrus qui menacent la colonie, en avançant vers ceux qui sont accessibles
+  note: groupes de 2 à 8 ou équipes de 9 à 16 ; chaque ouvrier agit individuellement avec sa morsure et sa chaleur
+
+## Ouverture
+
+step: Un intrus est repéré au-delà de 1,50 m
+  do: Avancer vers lui, jusqu'à 9 m avec un déplacement, puis mordre s'il est à portée
+  note: s'il faut deux déplacements pour approcher, consacrer ce round à parcourir jusqu'à 18 m
+
+step: Un intrus est déjà à portée de 1,50 m
+  do: Mordre à +3 pour 1d6+1 dégâts physiques et 1d6 de feu
+  note: la cible touchée fait un jet de Réflexes DD 12 ; en cas d'échec, elle prend feu
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Continuer à le mordre une fois par round, même s'il brûle déjà
+  note: l'embrasement inflige 1d6 dégâts de feu par round jusqu'à extinction ; il se poursuit sans nouvelle morsure
+
+step: La cible tombe ou devient inaccessible
+  do: Se déplacer vers un autre intrus accessible et le mordre si le déplacement permet de l'atteindre
+  note: les ouvriers proches peuvent assaillir le même adversaire et multiplier les morsures
+
+step: Une créature touche directement l'ouvrier
+  do: Appliquer automatiquement les 1d6 dégâts de feu de sa chaleur au contact
+  note: la simple proximité à 1,50 m ne constitue pas un contact ; les dégâts de feu de la morsure figurent déjà dans son attaque
+
+step: L'ouvrier subit des dégâts de froid
+  do: Appliquer sa vulnérabilité au froid : dégâts augmentés de moitié
+  note: son absence d'intelligence ne justifie pas une manœuvre élaborée contre l'utilisateur du froid
+
+## Repli
+
+step: L'ouvrier est blessé et des intrus restent au contact du nid
+  do: Continuer à mordre tant qu'il peut agir
+  note: aucun seuil de fuite n'est indiqué ; ses 16 PV et son absence d'intelligence conduisent à une défense simple de la colonie
+
+step: Les intrus se retirent et ne menacent plus la colonie
+  do: Cesser l'assaut et reprendre l'entretien du nid près de sa source de chaleur

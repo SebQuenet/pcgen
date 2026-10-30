@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Gardien sépulcral, créature artificielle de taille M, sans intelligence, vouée à la protection d'une sépulture. Il combat seul et reste dans le secteur qui lui est assigné.
+  75 pv ; CA 21 ; déplacement de 9 m ; allonge de 1,50 m. Dread est sa seule attaque spéciale indiquée ; aucune attaque ordinaire n'est détaillée dans le bloc fourni.
+  Réduction des dégâts 10/adamantium ; immunités au froid, au feu et liées aux créatures artificielles ; résistances à l'acide 10 et à l'électricité 10 ; résistance à la magie 19.
+
+note: Capacités non détaillées
+  Le bloc ne précise ni les effets, ni la portée, ni le DD de dread. Ne pas lui attribuer de mécanique chiffrée à partir de ce seul nom.
+  Aucun bonus d'attaque ni dégât d'arme ou d'attaque naturelle n'est fourni.
+
+step: En attente d'intrus
+  do: Garder l'accès à la sépulture, immobile et silencieux.
+  note: Vision dans le noir à 18 m et vision nocturne ; Perception +0. Il ne prépare pas de ruse élaborée.
+
+## Ouverture
+
+step: Un intrus pénètre dans le secteur protégé
+  do: S'interposer sur son chemin et avancer vers lui à 9 m par action de mouvement, jusqu'au contact à 1,50 m.
+  note: Rester dans les limites du secteur assigné.
+
+step: Un intrus au contact cherche à passer
+  do: Tenter une lutte avec le BMO +17 pour le retenir.
+  note: Cette manœuvre ordinaire provoque une attaque d'opportunité ; aucun don ou pouvoir du bloc ne la supprime.
+
+## Rounds suivants
+
+step: Un intrus est agrippé
+  do: Consacrer l'action simple au maintien de la lutte pour l'empêcher de progresser vers la sépulture.
+  note: Ne pas ajouter de dégâts de constriction ou de maladie : ces capacités ne figurent pas dans le bloc fourni.
+
+step: L'intrus échappe à la lutte ou contourne le gardien
+  do: Revenir au contact et tenter de le retenir tant qu'il menace la sépulture.
+
+step: Des adversaires restent à distance dans le secteur protégé
+  do: Avancer vers eux sans abandonner l'accès à défendre.
+  note: Le bloc ne fournit aucune attaque à distance. Ses protections sont passives et ne demandent aucune action.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à défendre la sépulture jusqu'à sa destruction, sans seuil de fuite.
+
+step: Les intrus quittent le secteur assigné
+  do: Cesser la poursuite et reprendre la garde de la sépulture.
+  note: Il ne quitte pas sa zone pour achever un fuyard.

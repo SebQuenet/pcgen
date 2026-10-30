@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Nothosaurus, animal aquatique de taille G, neutre, qui privilégie une proie isolée dans l'eau. 76 points de vie, CA 17.
+  Morsure +12 (2d6+9 et étreinte), allonge de 1,50 m ; nage à 12 m et déplacement terrestre à 3 m par action de mouvement.
+  Attaque en passant à la nage (Swim-By Attack) pour mordre pendant son déplacement ; apnée pour les approches immergées.
+
+resource: Accélération (speed surge) | non précisé | effet et fréquence non détaillés dans le profil fourni
+
+step: Une proie approche de l'eau
+  do: Se dissimuler dans l'eau avec Discrétion +11 et attendre qu'elle soit accessible à la morsure
+  note: Perception +13, odorat et vision crépusculaire pour repérer les intrus ; Discrétion seulement +3 hors de l'eau.
+
+## Ouverture
+
+step: Une proie isolée est accessible en nageant
+  do: Nager jusqu'à elle et porter une morsure +12 à 1,50 m, grâce à Attaque en passant à la nage
+  note: Le déplacement total avant et après la morsure reste limité à 12 m.
+
+step: La morsure touche une cible de taille M ou inférieure
+  do: Tenter immédiatement l'étreinte ; si elle réussit, rester auprès de la proie pour la retenir
+  note: La saisie exige un test de lutte réussi ; elle ne déplace pas automatiquement la victime.
+
+step: La cible échappe à l'étreinte ou la morsure manque
+  do: Employer le déplacement restant pour s'éloigner des autres adversaires
+
+## Rounds suivants
+
+step: La proie est toujours agrippée
+  do: Maintenir la lutte pour lui infliger les dégâts de morsure, 2d6+9
+  note: Si ses alliés approchent, choisir plutôt de la déplacer vers l'eau profonde après un maintien réussi, à la moitié de la vitesse de nage.
+
+step: Aucune proie n'est agrippée
+  do: Recommencer les passes à la nage contre la cible isolée ou blessée la plus accessible
+  note: Chaque passe comporte une seule morsure ; les déplacements peuvent provoquer des attaques d'opportunité.
+
+step: Les adversaires restent sur la terre ferme
+  do: Rester dans l'eau et guetter une cible au bord plutôt que poursuivre à 3 m par déplacement
+
+## Repli
+
+step: Points de vie sous 25 ou adversaires trop nombreux au contact
+  do: Relâcher toute prise et battre en retraite dans l'eau, jusqu'à 24 m avec l'action de retraite
+  note: Chercher ensuite un couvert pour se dissimuler ; conserver un accès à la surface pour respirer.

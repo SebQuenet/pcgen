@@ -1,0 +1,94 @@
+## Avant le combat
+
+note: Profil
+  Veranallia, azata de taille G, chaotique bonne, FP 20 : une puissante lanceuse de sorts divins qui maîtrise la végétation et protège ses alliés. Elle isole les menaces avant de les affronter et épargne les innocents.
+  372 pv, CA 36, RM 31, réduction des dégâts 15/fer froid et Mal ; immunisée à l'électricité et à la pétrification, résistance au froid 10 et au feu 10.
+  Déplacement de 15 m et marche dans les airs ; espace occupé de 3 m, allonge de 1,50 m avec la faucille et de 3 m avec les lianes.
+  Attaque à outrance : faucille +3 de froid intense +35/+30/+25/+20, 1d8+12 et 1d6 de froid ; quatre lianes +32, 1d8+9 et étreinte. Menace de critique sur 19-20 pour les deux.
+
+resource: Pouvoirs permanents | permanent | marche dans les airs, détection des animaux ou des plantes, détection du Mal, aura sacrée DD 27, communication avec les plantes, vision lucide
+resource: Pouvoirs à volonté | illimité | flétrissement DD 24, soins importants, rapetissement des plantes, enchevêtrement DD 20, croissance végétale
+resource: Mur d'épines accéléré | 3/jour | action rapide ; NLS 20
+resource: Autres pouvoirs limités | 3/jour chacun | animation des plantes, éveil, contrôle des plantes DD 27, bosquet de repos, répulsion du métal et de la pierre
+resource: Régénération et tertre | 1/jour chacun | préparer les auxiliaires végétaux avant l'affrontement ; régénération n'est pas une guérison automatique permanente
+resource: Sorts préparés | 1 utilisation de chaque sort indiqué | NLS 20, concentration +28 ; les pouvoirs magiques utilisent concentration +29
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +35, perception des vibrations à 18 m, détection du Mal et vision lucide ; communiquer avant de combattre si une solution pacifique reste possible
+  note: Diplomatie +36 et don des langues permettent de négocier ; elle n'a pas besoin de traiter tout intrus comme un ennemi
+
+step: Elle dispose de plusieurs rounds de préparation
+  do: Lancer liberté de mouvement et peau d'écorce ; utiliser croissance végétale sur la végétation existante pour ralentir les voies d'approche
+  note: Elle se place au-dessus du terrain encombré grâce à marche dans les airs ; elle ne possède pas de vitesse de vol
+
+step: Les adversaires sont surtout des combattants vivants que coquille antivie peut arrêter
+  do: Préparer coquille antivie avant leur arrivée et combattre à distance derrière sa barrière de 3 m
+  note: L'incantation prend 1 round. La coquille laisse passer notamment les Extérieurs, les morts-vivants et les créatures artificielles ; avancer pour la pousser contre une créature qu'elle exclut la fait disparaître
+
+step: Le combat est imminent
+  do: Lancer faveur divine si elle prévoit la mêlée ; conserver mot de rappel vers un sanctuaire préalablement désigné
+  note: L'aura sacrée est déjà active ; ne pas ajouter une seconde fois ses bonus aux valeurs du bloc. Référence de l'aura : https://legacy.aonprd.com/coreRulebook/spells/holyAura.html
+
+## Ouverture
+
+step: Les adversaires peuvent être séparés
+  do: Utiliser mur d'épines accéléré en action rapide pour couper les renforts ou enfermer un combattant, puis employer l'action simple pour l'une des options suivantes
+  note: Garder une ligne d'effet vers la cible du sort offensif. Le mur n'accorde ni sauvegarde ni résistance à la magie ; elle n'est pas elle-même capable de le traverser librement. Référence : https://legacy.aonprd.com/coreRulebook/spells/wallOfThorns.html
+
+step: Une menace corporelle prioritaire est visible à 22,50 m ou moins
+  do: Lancer implosion sur elle : Vigueur DD 27 ou 200 points de dégâts, sous réserve de sa résistance à la magie
+  note: Privilégier un lanceur de sorts fragile ou une cible déjà blessée ; une créature incorporelle ou gazeuse est insensible. Référence : https://legacy.aonprd.com/coreRulebook/spells/implosion.html
+
+step: Plusieurs adversaires terrestres sans moyen de vol sont regroupés
+  do: Choisir inversion de gravité à la place d'implosion pour les soustraire au combat au sol ; rester hors de leur portée et traiter les ennemis encore libres
+
+step: Elle cherche à neutraliser des adversaires sans les tuer
+  do: Choisir injonction suprême, ordre de tomber au sol, Volonté DD 23 ; barrer ensuite leur progression avec la végétation
+  note: Une seule action simple offensive par round ; ces ouvertures sont des alternatives
+
+## Rounds suivants
+
+step: Implosion reste active et d'autres cibles corporelles sont à portée
+  do: Maintenir la concentration avec son action simple et viser une nouvelle créature chaque round, Vigueur DD 27 ou 200 points de dégâts
+  note: Jusqu'à 10 rounds au total, jamais deux fois la même créature avec cette incantation ; interrompre la concentration met fin au sort. Ne lancer aucun autre sort pendant son maintien. Référence : https://legacy.aonprd.com/coreRulebook/spells/implosion.html
+
+step: Un ennemi échappe au contrôle grâce à ses protections magiques
+  do: Abandonner au besoin implosion et lancer dissipation suprême sur la protection déterminante ; utiliser ensuite les murs restants pour isoler la cible
+
+step: Plusieurs ennemis restent regroupés et aucun allié ne risque d'être pris dans la zone
+  do: Employer explosion de lumière, Réflexes DD 26, ou tempête de feu, Réflexes DD 25, selon leurs vulnérabilités ; préférer châtiment sacré, Volonté DD 22, contre des ennemis mauvais mêlés à des alliés bons
+  note: Conserver les grands effets de zone pour les occasions utiles ; éviter de détruire inutilement le terrain ou de blesser des innocents
+
+step: La végétation peut encore retenir les combattants ennemis
+  do: Employer enchevêtrement à volonté, Réflexes DD 20 ; animer les plantes disponibles ou contrôler des créatures végétales hostiles, Volonté DD 27
+  note: Si elle ne maintient aucune concentration, répulsion du métal et de la pierre peut aussi tenir à distance les adversaires lourdement équipés
+
+step: Une cible atteint sa mêlée et elle peut rester sur place
+  do: Effectuer l'attaque à outrance avec la faucille et les quatre lianes ; tenter l'étreinte gratuite sur une liane qui touche une cible de taille admissible
+  note: À 3 m, seules les lianes portent. Elle renonce à la coquille antivie avant d'avancer au contact d'une créature que celle-ci exclut ; un déplacement ordinaire ne permet pas de conserver l'attaque à outrance
+
+step: Un adversaire dépend d'une arme particulièrement dangereuse
+  do: Remplacer sa meilleure attaque par un désarmement à +38, en priorité contre une arme capable de franchir sa réduction des dégâts
+  note: Désarmement supérieur permet d'exposer la cible désarmée aux attaques d'opportunité. Son don de critique peut aussi rendre fiévreuse une cible sur un critique confirmé
+
+step: Une créature mauvaise réussit une attaque de mêlée contre elle
+  do: Appliquer l'aura sacrée : l'assaillant doit réussir Vigueur DD 27 ou devenir aveugle
+  note: Cet effet ne consomme pas son action. Référence : https://legacy.aonprd.com/coreRulebook/spells/holyAura.html
+
+step: Ses points de vie passent sous 190 et elle peut encore tenir la position
+  do: Rompre la concentration éventuelle et lancer guérison sur elle-même pour récupérer 150 pv ; préférer guérison suprême si plusieurs alliés sont aussi gravement blessés, jusqu'à 200 pv par cible
+  note: Chaque sort n'est préparé qu'une fois ; soins importants à volonté sert surtout après la bataille ou pendant une accalmie
+
+step: Un allié à portée de contact vient de mourir depuis moins d'un round
+  do: Employer souffle de vie immédiatement si elle peut l'atteindre sans sacrifier les survivants
+  note: Résurrection suprême et renaissance relèvent de l'après-combat ; elles ne ramènent pas immédiatement un combattant dans l'affrontement
+
+## Repli
+
+step: Ses points de vie passent sous 90 après épuisement des grandes guérisons, ou la position ne peut plus être tenue
+  do: Interposer un dernier mur d'épines accéléré s'il en reste, puis lancer mot de rappel vers son sanctuaire
+  note: Ne pas attendre le dernier round possible ; un verrou dimensionnel actif à son emplacement empêcherait ce départ
+
+step: La téléportation est bloquée ou mot de rappel a déjà été utilisé
+  do: Se dégager en marchant dans les airs, avec un déplacement de 15 m par action de mouvement, et dresser les obstacles végétaux encore disponibles pour ralentir la poursuite
+  note: Une fois à couvert, employer soins importants à volonté ; reprendre la négociation si la menace contre ses protégés cesse

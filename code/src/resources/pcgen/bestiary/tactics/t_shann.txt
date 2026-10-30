@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  T'shann, aberration souterraine solitaire de taille P, neutre et d'intelligence animale. Cette limace fouisseuse se nourrit de minéraux et se défend lorsqu'on l'attaque.
+  22 pv, CA 11 ; coup +4 (1d4), allonge 1,50 m ; jet acide et aura de pensées étrangères. Marche et fouissement à 1,50 m ; vision dans le noir à 18 m.
+
+step: Aucune menace directe
+  do: Rester enfoui dans la terre ou la roche et poursuivre son alimentation
+  note: Perception +8 et Discrétion +6 ; il ne prépare pas d'embuscade élaborée.
+
+## Ouverture
+
+step: Un adversaire d'Intelligence supérieure à 5 entre à 9 m ou moins
+  do: Appliquer l'aura : Volonté DD 13 ou confusion
+  note: La confusion cesse lorsque la victime s'éloigne à plus de 9 m ; l'aura ne demande aucune action.
+
+step: Cet adversaire s'approche à 3 m ou moins
+  do: Demander un autre jet de Volonté DD 13 ; échec : affaiblissement de 1d4 points d'Intelligence
+  note: L'Intelligence revient immédiatement à sa valeur normale au-delà de 3 m. Pour les créatures psioniques, doubler les deux rayons de l'aura.
+
+step: Il est attaqué et un agresseur se trouve à 3 m ou moins
+  do: À son tour, émettre son jet acide autour de lui
+  note: Toutes les créatures dans ce rayon subissent 1d4 dégâts d'acide, puis 1 dégât par round pendant 1d4 rounds ; Réflexes DD 13 pour réduire les dégâts de moitié.
+
+## Rounds suivants
+
+step: Des agresseurs restent à 3 m ou moins
+  do: Employer de nouveau le jet acide tant qu'il doit se défendre
+
+step: L'acide semble inefficace contre un adversaire à 1,50 m
+  do: Frapper cet adversaire avec son coup +4 (1d4)
+
+step: Les agresseurs restent à distance
+  do: Chercher à regagner son terrier plutôt que de les poursuivre à sa très faible vitesse
+
+## Repli
+
+step: Points de vie à 7 ou moins et possibilité de s'enfouir
+  do: S'enfoncer dans la terre ou la roche à 1,50 m par déplacement
+
+step: Les adversaires cessent de l'attaquer
+  do: Rester à couvert et reprendre son alimentation sans les poursuivre

@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Chaque gladiateur shoanti est un humain barbare de niveau 3, chaotique neutre, spécialisé dans les coups puissants au corps à corps.
+  En rage : 34 PV, CA 15 ; brise-terre de maître à deux mains +8 (2d6+6, x3), ou gantelet à pointes +7 (1d4+6). Déplacement de 9 m ; allonge de 1,50 m.
+  Hors rage : 28 PV, CA 17 ; brise-terre +6 (2d6+3, x3), gantelet +5 (1d4+3). Les valeurs principales du profil comprennent déjà la rage.
+
+resource: Rage | 9 rounds par jour | activation par action libre ; conserver les rounds pour le contact
+
+step: Le combat est imminent
+  do: Garder le brise-terre en main et repérer les adversaires avec Perception +8 ; attendre de pouvoir engager avant de déclencher la rage.
+
+## Ouverture
+
+step: Un ennemi peut être atteint par une charge sur un trajet dégagé
+  do: Entrer en rage et charger sur 18 m au plus ; porter un coup de brise-terre +10 (2d6+6, x3).
+  note: Avec Attaque en puissance, le coup passe à +9 (2d6+9, x3). La charge abaisse la CA à 13 jusqu'au prochain tour.
+
+step: La charge est impossible, mais un déplacement de 9 m au plus permet d'atteindre le contact
+  do: Entrer en rage, avancer et frapper au brise-terre +8 (2d6+6, x3).
+
+step: Aucun ennemi ne peut encore être atteint
+  do: Avancer jusqu'à 18 m avec un double déplacement et garder la rage pour le prochain engagement.
+
+## Rounds suivants
+
+step: Un seul adversaire est à portée
+  do: Concentrer les coups de brise-terre sur lui ; utiliser Attaque en puissance contre une cible facile à toucher, à +7 (2d6+9, x3) en rage.
+  note: Contre une défense élevée, conserver l'attaque normale à +8 (2d6+6, x3). Il ne dispose que d'une attaque ordinaire par round.
+
+step: Deux ennemis sont adjacents l'un à l'autre et tous deux à 1,50 m ou moins
+  do: Utiliser Enchaînement par une action simple ; frapper le premier au brise-terre, puis le second au même bonus si le premier coup touche.
+  note: Deux attaques au maximum ; CA 13 en rage jusqu'au prochain tour. Attaque en puissance peut s'appliquer aux deux coups, à +7 (2d6+9, x3).
+
+step: Repousser un adversaire permet de dégager un passage ou de l'écarter d'une position utile
+  do: Remplacer le coup par une bousculade, avec un test de BMO +9 en rage grâce à Science de la bousculade.
+  note: Cette manœuvre ne provoque pas d'attaque d'opportunité de la cible ; elle ne s'ajoute pas à un coup de brise-terre.
+
+step: Le brise-terre est perdu ou inutilisable
+  do: Attaquer avec le gantelet à pointes +7 (1d4+6) en rage.
+
+## Repli
+
+step: Les PV tombent sous 10 ou la réserve de rage approche de l'épuisement
+  do: Chercher une sortie et effectuer une retraite sur 18 m au plus si le passage est libre.
+  note: Lors d'une retraite, seule la case de départ est protégée des attaques d'opportunité des ennemis visibles ; éviter de traverser d'autres cases menacées.
+
+step: Le gladiateur peut interrompre sa rage hors de portée
+  do: Mettre fin à la rage et poursuivre le repli.
+  note: La fin de la rage retire 6 PV actuels et maximaux ; à 6 PV ou moins, elle le laisse à 0 PV ou moins. Il devient fatigué pendant deux fois le nombre de rounds passés en rage et ne peut reprendre sa rage tant que cette fatigue dure.

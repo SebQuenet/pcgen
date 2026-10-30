@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Diablotin esprit gardien, extérieur loyal mauvais de taille TP, lié au destin d'un mortel qu'il protège. Il privilégie le soutien de son protégé, la ruse et les attaques à distance.
+  Aiguillon +11 (1d4+1 et poison) ; allonge 0 m. Appel de la foudre et suggestion, DD 19 ; invisibilité sur lui-même à volonté.
+  32 pv, CA 20 ; vol parfait à 15 m, déplacement au sol à 6 m. Guérison accélérée 2, RD 5/Bien ou argent, RM 15 ; immunité au feu et au poison, résistance à l'acide 10 et au froid 10.
+
+resource: Invisibilité | à volonté | sur lui-même uniquement ; durée 6 minutes ; une attaque met fin à l'effet
+resource: Assistance | à volonté | au toucher ; +1 d'aptitude à un seul jet d'attaque, de sauvegarde ou de compétence dans la minute
+resource: Augure | 1/jour | évaluer les conséquences favorables ou défavorables d'une action prévue dans les 30 prochaines minutes
+resource: Protection contre le Chaos | 1/jour | au toucher, durée 6 minutes ; +2 de parade à la CA et +2 de résistance aux sauvegardes contre les créatures chaotiques
+resource: Gardien du destin | 1/jour | action simple, une autre créature à 9 m ou moins ; pendant 1 round, elle lance deux fois chaque attaque et chaque sauvegarde et garde le meilleur résultat
+resource: Suggestion | 1/jour | Volonté DD 19 annule ; portée 12 m ; instruction raisonnable comprise par une créature vivante
+resource: Appel de la foudre | 1/jour | NLS 6 ; jusqu'à 6 éclairs en 6 minutes, portée 48 m ; 3d6 d'électricité, Réflexes DD 19 pour moitié
+
+step: Il peut reconnaître les lieux avant l'affrontement
+  do: Se rendre invisible, repérer les approches et les issues en volant, puis transmettre ses observations au protégé dans une langue commune
+  note: Perception +10 ; détection du Bien et de la magie constantes. Il voit dans les ténèbres, même magiques, mais ne peut pas en créer.
+
+step: Une approche discrète sous une apparence animale est préférable
+  do: Prendre la forme d'un rat ou d'un corbeau pour observer les adversaires et les accès
+  note: Changement de forme selon forme bestiale I ; cette apparence sert à la reconnaissance.
+
+step: Un combat contre des créatures chaotiques est imminent
+  do: Lancer protection contre le Chaos sur le protégé, puis assistance juste avant l'engagement
+  note: Ces préparatifs demandent chacun leur action ; les bonus de même type ne se cumulent pas.
+
+## Ouverture
+
+step: Le protégé doit affronter une attaque décisive ou un effet dangereux
+  do: Rester invisible et activer Gardien du destin sur lui depuis une position à 9 m ou moins
+  note: Choisir le round où ses attaques ou ses sauvegardes comptent le plus ; cette action remplace l'offensive du diablotin ce round.
+
+step: Un adversaire comprend sa langue et peut être écarté par une consigne plausible
+  do: Utiliser suggestion pour lui proposer de se retirer chercher des renforts si la situation rend ce conseil raisonnable
+  note: Volonté DD 19 ; une consigne manifestement nuisible échoue. Ce pouvoir offensif met fin à l'invisibilité.
+
+step: Il peut engager un combat à distance sans urgence de soutien
+  do: Activer appel de la foudre et frapper l'adversaire qui menace le plus son protégé, en restant en vol hors de sa portée de mêlée
+  note: Chaque éclair touche une case de 1,50 m et la ligne verticale de 9 m au-dessus ; éviter d'y inclure un allié. Les dégâts passent à 3d10 dehors par temps orageux ; le pouvoir fonctionne aussi à l'intérieur, mais pas sous l'eau.
+
+## Rounds suivants
+
+step: Appel de la foudre est actif et il reste des éclairs
+  do: Consacrer une action simple à un nouvel éclair, au maximum un par round, et se déplacer en vol pour garder une ligne de vue sur la cible
+  note: Il peut interrompre cette cadence pour soutenir son protégé ; les éclairs restants restent disponibles jusqu'à la fin du pouvoir.
+
+step: Une cible isolée ou affaiblie peut être piquée sans l'exposer à plusieurs ennemis
+  do: Approcher sous invisibilité, entrer dans l'espace de la cible et porter un coup d'aiguillon +11, pour 1d4+1 et poison
+  note: L'attaque le rend visible. Son allonge de 0 m impose d'entrer dans l'espace adverse ; s'il est repéré, ce déplacement peut provoquer une attaque d'opportunité. Souplesse du serpent donne +4 à la CA contre les attaques d'opportunité dues au déplacement.
+
+step: Il est exposé après une attaque et ne peut pas éliminer rapidement sa cible
+  do: Au round suivant, se rendre invisible puis s'éloigner en vol pour reprendre une position de soutien
+  note: Il ne dispose pas d'Attaque éclair : ne pas enchaîner gratuitement approche, aiguillon et retraite dans le même round.
+
+step: Ses pouvoirs offensifs quotidiens sont épuisés ou inefficaces
+  do: Rester invisible près du protégé, lui donner assistance au toucher et surveiller les ennemis qui approchent
+  note: Protéger son protégé passe avant la poursuite d'un adversaire en fuite.
+
+## Repli
+
+step: Ses points de vie tombent à 8 ou moins, ou des armes en argent ou alignées sur le Bien le mettent en danger
+  do: Se rendre invisible et gagner un couvert en volant à 15 m par déplacement ; avertir son protégé et accompagner sa retraite
+  note: La guérison accélérée rend 2 pv par round, jusqu'à 32 pv. Attendre à couvert avant de revenir au soutien.
+
+step: Le protégé est encore poursuivi pendant le repli
+  do: Garder le contact avec lui et employer Gardien du destin s'il reste disponible ; s'il peut retarder un poursuivant par suggestion, y consacrer un autre round
+  note: Choisir une action simple par round ; ne pas abandonner le protégé pour poursuivre un ennemi.

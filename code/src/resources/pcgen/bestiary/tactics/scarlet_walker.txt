@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Scarlet Walker, extérieur loyal mauvais de taille TG, intelligent et mobile : 168 PV, CA 28, allonge de 9 m, déplacement et escalade de 12 m.
+  Attaque à outrance : 2 griffes +23 (2d6+7, critique 19–20, saignement) et tentacules +18 (4d6+3, saignement et paralysie). Ses pouvoirs mentaux désorganisent les adversaires avant qu'il les frappe à distance d'allonge.
+
+note: Défenses
+  Guérison accélérée 10, résistance à la magie 23, esquive totale ; immunité à l'acide, au froid et au poison. Vulnérable à l'électricité : repérer en priorité les adversaires qui en utilisent.
+  Le bloc ne donne ni les dégâts du saignement, ni le DD et la durée de la paralysie.
+
+resource: Marche dans les airs et détection de pensées | permanentes | NLS 12
+resource: Communication à distance | à volonté | NLS 12
+resource: Confusion | 3/jour | action simple, Volonté DD 19
+resource: Exigence | 3/jour | message assorti d'une suggestion, Volonté DD 23
+resource: Confusion partielle rapide | 3/jour | action rapide, Volonté DD 16
+resource: Débilité | 1/jour | action simple, Volonté DD 20
+resource: Aliénation mentale | 1/jour | action simple, Volonté DD 22
+resource: Vision lucide | 1/jour | NLS 12
+
+step: Intrus repérés avant l'affrontement
+  do: Observer avec Perception +24, le sens du sang, la vision dans le noir à 18 m et la détection de pensées ; se dissimuler avec Discrétion +20 si le terrain le permet
+  note: Préférer une position surélevée ou un passage qui permette d'exploiter son allonge de 9 m.
+
+step: Des illusions ou des adversaires invisibles sont soupçonnés
+  do: Activer vision lucide avant de s'exposer
+
+step: Une cible connue peut être influencée avant son arrivée
+  do: Employer exigence pour lui suggérer une action plausible qui l'isole ou retarde son groupe
+  note: Si des alliés sont présents, coordonner leurs positions par télépathie à 90 m ; communication à distance permet de transmettre des renseignements plus loin.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés
+  do: Lancer confusion sur le groupe, Volonté DD 19, en restant hors de leur portée de mêlée
+  note: Éviter de frapper immédiatement les victimes confuses : une attaque peut les pousser à riposter contre lui.
+
+step: Un lanceur de sorts dangereux est isolé
+  do: Employer débilité, Volonté DD 20 ; préférer aliénation mentale, Volonté DD 22, contre une autre menace isolée
+  note: Choisir un seul de ces pouvoirs avec son action simple.
+
+step: Un ennemi est déjà dans son allonge de 9 m
+  do: Faire une attaque à outrance avec les deux griffes et les tentacules
+  note: Ajouter confusion partielle rapide, Volonté DD 16, sur une autre menace si cela peut perturber son prochain tour.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans qu'il ait besoin de se déplacer
+  do: Attaquer à outrance ; diriger les tentacules vers la menace à paralyser, puis les griffes vers la cible la plus vulnérable
+  note: Employer Attaque en puissance contre une cible facile à toucher.
+
+step: Il doit frapper tout en conservant ses distances
+  do: Utiliser Attaque éclair : se déplacer, porter une attaque de griffe, puis poursuivre son déplacement, pour un total maximal de 12 m
+  note: Une seule attaque ; le déplacement ne provoque pas d'attaque d'opportunité de la cible de ce don. Exploiter son allonge pour finir hors de portée adverse.
+
+step: Des ennemis provoquent des attaques d'opportunité dans son allonge
+  do: Les frapper avec une griffe +23
+  note: Attaques réflexes permet jusqu'à 10 attaques d'opportunité par round, si des occasions distinctes se présentent.
+
+step: Les adversaires se regroupent ou une nouvelle menace intervient
+  do: Dépenser une nouvelle confusion sur le groupe, ou aliénation mentale sur une cible isolée, si ces pouvoirs restent disponibles
+  note: Confusion partielle rapide peut accompagner un pouvoir en action simple ou une attaque à outrance.
+
+step: Un utilisateur d'électricité le prend pour cible
+  do: Chercher un couvert ; employer marche dans les airs, l'escalade ou compression pour changer d'angle et rendre son approche difficile
+
+## Repli
+
+step: PV à 42 ou moins, ou dégâts électriques impossibles à contenir
+  do: Rompre le combat par une retraite, puis gagner une hauteur ou un passage étroit avec marche dans les airs, l'escalade et compression
+  note: La retraite protège seulement la sortie de la case initiale ; son grand déplacement et son allonge aident à éviter de traverser les zones menacées.
+
+step: Il a réussi à se mettre hors d'atteinte
+  do: Rester à couvert et récupérer 10 PV par round grâce à la guérison accélérée
+  note: Prévenir d'éventuels alliés par télépathie ou communication à distance avant d'envisager une nouvelle attaque.

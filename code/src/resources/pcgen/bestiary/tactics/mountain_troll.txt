@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Troll des montagnes, humanoïde géant de taille TG, FP 14, chaotique neutre ; territorial et patient, mais brutal lorsqu'il défend son territoire ou ses alliés.
+  207 PV, CA 29 ; morsure +24 (2d10+13), deux griffes +24 (2d6+13), allonge 4,50 m ; rochers +13/+8/+3 (2d8+19).
+  Déplacement et escalade à 12 m, creusement à 3 m ; vision dans le noir à 18 m, vision nocturne, odorat, Perception +15.
+
+resource: Façonnage de la pierre | à volonté | modifier une quantité limitée de pierre touchée
+resource: Pierres acérées | 3/jour | Réflexes DD 13 ; durée 14 heures
+resource: Communion avec les pierres | 3/jour | interroger les pierres sur les passages et ce qu'elles dissimulent
+resource: Tremblement de terre | 1/jour | DD 17 ; effets selon le terrain
+resource: Pétrification | 1/jour | Vigueur DD 15 annule
+resource: Convocation de monstres VIII | 1/jour | élémentaire de la Terre uniquement ; durée 14 rounds
+resource: Relance de Volonté | 1/jour | relancer avant de connaître le résultat ; conserver le second jet
+
+step: Des intrus approchent sans manifester d'hostilité
+  do: Se retirer pour les observer depuis un ravin ou une grotte peu profonde ; laisser passer ceux qui traversent simplement son territoire
+  note: Il peut parler en géant et accepter un échange respectueux ; il devient agressif si les intrus s'installent ou menacent ses protégés
+
+step: Une attaque se prépare et il dispose de temps
+  do: Interroger les pierres, puis préparer les abords rocheux avec pierres acérées ; garder un passage libre pour lui et ses alliés
+  note: Communion avec les pierres demande 10 minutes ; pierres acérées ralentit les déplacements à pied et inflige 1d8 dégâts par 1,50 m parcouru ; Réflexes DD 13 évite la blessure qui réduit ensuite la vitesse
+
+step: Il choisit sa position défensive
+  do: Se placer en hauteur avec des rochers à portée de main ; utiliser façonnage de la pierre pour aménager une ouverture de tir ou gêner un passage étroit
+  note: Garder assez d'espace pour son corps et une issue vers une paroi à escalader
+
+## Ouverture
+
+step: Les ennemis sont groupés sous une voûte ou au pied d'une falaise, hors de la zone de ses alliés
+  do: Déclencher tremblement de terre depuis une position extérieure à la zone
+  note: DD 17 ; exploiter l'effondrement ou l'éboulement selon le terrain ; le rayon de 24 m peut également menacer le troll
+
+step: Les ennemis sont encore éloignés et il peut rester à couvert pendant l'invocation
+  do: Convoquer un élémentaire de la Terre pour intercepter leur avance
+  note: L'invocation demande 1 round et s'achève au début du tour suivant ; le troll attend que l'ennemi approche plutôt que de quitter son terrain favorable
+
+step: Les ennemis restent à distance et aucune ouverture magique n'est préférable
+  do: Lancer des rochers ; s'il reste sur place, effectuer les trois attaques +13/+8/+3 (2d8+19 chacune)
+  note: Concentrer les tirs sur un utilisateur de feu, d'acide ou d'attaques sonores repéré ; garder les pierres acérées entre lui et les combattants
+
+step: Un ennemi est déjà à portée de son allonge
+  do: Attaque à outrance : morsure +24 (2d10+13) et deux griffes +24 (2d6+13)
+  note: Une attaque à outrance exige de rester sur place, hormis un pas de 1,50 m
+
+## Rounds suivants
+
+step: Un adversaire reste à portée de 4,50 m
+  do: Répéter l'attaque à outrance, en concentrant les trois attaques sur la menace la plus dangereuse
+  note: Contre une cible facile à toucher, attaque en puissance donne +20 aux trois attaques, morsure 2d10+21 et griffes 2d6+21 chacune
+
+step: Il doit se déplacer avant de frapper
+  do: Avancer puis utiliser science de la frappe décisive avec la morsure : +24, 6d10+13
+  note: Cette attaque unique remplace l'attaque à outrance ; elle s'emploie avec l'action d'attaque, pas pendant une charge
+
+step: Une créature corporelle plus petite que lui bloque un passage ou se tient près d'un danger
+  do: Employer coup fabuleux : manœuvre de combat à +28 contre la DMD ; sur réussite, la projeter de 3 m en ligne droite et la jeter à terre
+  note: Choisir une direction vers les pierres acérées ou un bord de falaise ; cette manœuvre utilise une action simple
+
+step: Une cible semble peu résistante physiquement et reste hors de sa mêlée
+  do: Tenter pétrification, Vigueur DD 15
+  note: Réserver cette unique tentative à une cible vulnérable ; contre un combattant robuste, privilégier les rochers ou les attaques naturelles
+
+step: Des ennemis contournent le terrain préparé
+  do: Poser une nouvelle zone de pierres acérées sur leur approche rocheuse, puis reprendre les tirs depuis le côté dégagé
+  note: Utiliser ses pouvoirs hors de portée des attaques adverses lorsque possible ; il subit lui aussi les pierres acérées s'il les traverse à pied
+
+step: Il subit des blessures ou des attaques de rochers
+  do: Profiter de la régénération 10 à chaque round et tenter d'intercepter les rochers avec réception de rochers
+  note: Le feu ou l'acide suspend sa régénération pendant 1 round ; les dégâts sonores sont augmentés de moitié
+
+step: Il rate un jet contre un charme ou une coercition
+  do: Au round suivant, effectuer le nouveau jet de sauvegarde accordé par obstination pour mettre fin à l'effet
+  note: Son bonus de Volonté reste +15 ; le bonus racial d'obstination est déjà inclus
+
+## Repli
+
+step: Moins de 50 PV, ou le feu et l'acide empêchent durablement sa régénération
+  do: Se désengager vers un couvert rocheux, puis escalader à 12 m ou creuser à 3 m dans un sol meuble pour rompre la poursuite
+  note: Chercher d'abord à échapper aux utilisateurs de feu, d'acide et d'attaques sonores ; un élémentaire encore présent peut retenir les poursuivants
+
+step: Il a rompu le contact
+  do: Rester à couvert pour récupérer 10 PV par round dès que la régénération fonctionne ; gêner la poursuite avec façonnage de la pierre si le passage s'y prête
+  note: Si les intrus quittent son territoire et cessent de menacer ses alliés, les laisser partir

@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Rune vivante, aberration de taille M, neutre mauvaise, FP 13 : un prédateur intelligent qui se dissimule parmi les inscriptions pour tendre des embuscades.
+  153 pv ; CA 28, contact 28, prise au dépourvu 16 ; initiative +15. Contact de glyphe +24 au contact, 3d8 dégâts d'électricité ; pièges magiques inscrits et Attaque éclair.
+  Déplacement et escalade à 15 m ; vision aveugle et perception des vibrations à 18 m ; Perception +27, Discrétion +35. Allonge de 0 m : elle doit entrer dans la case de sa victime pour la toucher.
+
+note: Défenses et limites
+  Bidimensionnelle, elle suit les surfaces solides, y compris murs et plafonds. Les attaques non magiques ne lui infligent aucun dégât ; les armes magiques ne lui infligent que la moitié des dégâts. Amorphe, elle ignore les coups critiques et les attaques sournoises.
+  Immunisée au saignement, aux maladies, à la paralysie, au poison, à l'étourdissement et aux sorts ou pouvoirs magiques autorisant la résistance à la magie. Projectile magique, dédale et les sorts sonores l'affectent normalement ; effacement lui inflige 6d6 dégâts.
+  Les dégâts sonores sont augmentés de moitié. Elle ne peut ni agripper ni faire de croc-en-jambe, et ne peut subir ces manœuvres.
+
+resource: Runes explosives | 3/jour | Lecture déclenchante ; 6d6 dégâts de force ; aucun jet pour le lecteur, Réflexes DD 18 pour réduire de moitié les dégâts des autres créatures à 1,50 m
+resource: Glyphe de garde suprême | 3/jour | Version explosive au NLS 12 : 6d8 dégâts, Réflexes DD 21 pour réduire de moitié ; choisir le froid, le feu ou l'acide
+resource: Sceau du serpent sépia | 3/jour | Lecture volontaire d'un texte d'au moins 25 mots ; Réflexes DD 18 ou stase dans un champ ambré
+resource: Écriture illusoire | À volonté | Volonté DD 18 ; suggestion simple prédéfinie pour les lecteurs non autorisés
+resource: Marque magique | À volonté | Ajouter des inscriptions servant de décor à son camouflage
+resource: Télékinésie | À volonté | Force soutenue uniquement, DD 20 ; déplacement d'un objet à 6 m par round, concentration, jusqu'à 12 rounds
+
+step: Elle dispose de temps avant l'arrivée des intrus
+  do: Piéger des écrits susceptibles d'être lus avec des runes explosives ou un sceau du serpent sépia ; protéger des passages distincts par des glyphes de garde suprêmes
+  note: Décompter séparément les trois utilisations quotidiennes de chaque pouvoir ; un glyphe se déclenche au passage ou à l'ouverture selon les conditions fixées, les deux autres pièges exigent une lecture
+
+step: Le terrain de l'embuscade est prêt
+  do: Se camoufler dans les inscriptions près d'un piège, avec Discrétion +35 ; repérer un itinéraire de fuite sur les murs
+  note: Employer l'écriture illusoire pour suggérer de suivre un passage piégé ; les marques et textes ne créent pas d'illusions de créatures ou de terrain
+
+## Ouverture
+
+step: Un intrus entre dans sa case sans l'avoir remarquée
+  do: Appliquer le contact de camouflage : touche automatique, 3d8 dégâts d'électricité
+  note: Ce bénéfice dépend de son camouflage et de l'entrée de la victime dans sa case
+
+step: Un piège vient de se déclencher ou son camouflage est percé
+  do: Profiter de son initiative +15 pour viser un adversaire isolé, de préférence capable d'infliger des dégâts sonores
+  note: Une victime enfermée par le serpent sépia reste vulnérable aux dégâts ; combattre d'abord ses compagnons encore actifs
+
+## Rounds suivants
+
+step: Une cible non adjacente au début du tour est accessible après au moins 3 m de déplacement
+  do: Attaque éclair, action complexe : entrer dans la case de la cible, porter un contact de glyphe +24 pour 3d8 dégâts d'électricité, puis poursuivre vers un mur ou un abri ; déplacement total maximal de 15 m
+  note: La cible de l'Attaque éclair ne peut pas porter d'attaque d'opportunité contre ce déplacement ; Mobilité donne +4 à la CA contre celles provoquées par le déplacement auprès d'autres ennemis
+
+step: Elle partage déjà la case d'une cible et ne peut préparer une Attaque éclair
+  do: Porter un contact de glyphe +24, puis se déplacer si nécessaire pour retrouver une position favorable
+  note: Ce déplacement ordinaire peut provoquer des attaques d'opportunité ; son allonge de 0 m ne menace pas les cases voisines
+
+step: Les ennemis restent hors d'atteinte ou résistent à l'électricité
+  do: Rejoindre les surfaces qui conduisent vers eux, ou se retirer derrière un passage déjà piégé pour les inciter à poursuivre
+  note: Utiliser la télékinésie pour manipuler une porte ou un objet libre si cela améliore sa position ; maintenir ce pouvoir demande sa concentration et empêche de porter simultanément son attaque habituelle
+
+## Repli
+
+step: Ses pv tombent sous 50, ou des attaques sonores menacent de l'abattre
+  do: Gagner un mur puis une issue à 15 m par déplacement ; utiliser compression pour emprunter un passage étroit et rompre la ligne de vue
+  note: Rester sur des surfaces solides reliées ; retrouver un couvert avant de se camoufler à nouveau
+
+step: Une discontinuité du terrain coupe la fuite et un livre ou autre support mobile est disponible
+  do: Se glisser sur ce support et le déplacer par télékinésie à 6 m par round vers une surface sûre
+  note: Maintenir la concentration pendant le transport ; ce moyen exige un objet présent et ne lui donne pas de vitesse de vol

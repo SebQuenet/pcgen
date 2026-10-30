@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Herne, humanoïde monstrueux de taille M, chaotique neutre : chasseur des forêts aux bois de cerf, qui privilégie l'embuscade et le tir à distance. 68 PV, CA 20 ; déplacement de 9 m.
+  Arc long composite de maître +13/+8 (1d8+4, critique x3) ; au contact, faucille +12/+7 (1d6+4) et coup de bois +7 (1d6+2), allonge de 1,50 m.
+  Réduction des dégâts 10/magie ; résistances au froid 10 et à l'électricité 10. Vision dans le noir à 18 m, vision nocturne et odorat.
+
+resource: Grand pas | 3/jour | action simple ; durée 8 heures ; déplacement porté à 12 m
+resource: Lueurs féeriques | 3/jour | action simple ; durée 8 minutes ; aucun jet de sauvegarde
+resource: Liberté de mouvement | 1/jour | action simple ; durée 80 minutes
+resource: Communication avec les animaux | constant | permet de recueillir des renseignements, sans imposer l'obéissance
+resource: Flèches | 20 | une flèche dépensée par attaque à l'arc
+
+step: Il peut préparer une chasse
+  do: Activer grand pas, repérer une position dissimulée derrière les arbres et reconnaître une voie de fuite.
+  note: En forêt, Discrétion +14, Perception +16 et Survie +14 ; le terrain difficile ralentit toujours ses déplacements ordinaires.
+
+step: Des animaux locaux peuvent l'informer
+  do: Les interroger sur les intrus et leurs déplacements, puis choisir le lieu de l'embuscade.
+
+## Ouverture
+
+step: Une cible est visible et ne le menace pas au corps à corps
+  do: Ouvrir le feu depuis sa cachette sur une cible exposée ; une seule flèche pendant un round de surprise ou après un déplacement, deux avec une attaque à outrance.
+  note: Privilégier une cible peu protégée et concentrer les tirs sur elle jusqu'à la neutraliser.
+
+step: Une cible invisible ou protégée par un effet de camouflage est localisée
+  do: Employer lueurs féeriques sur son emplacement, puis tirer au round suivant.
+  note: Le halo neutralise le camouflage dû à l'obscurité, à l'invisibilité, au flou ou au déplacement ; il ne supprime pas l'abri offert par un arbre.
+
+## Rounds suivants
+
+step: Il peut rester en place hors de portée de mêlée
+  do: Faire une attaque à outrance à l'arc : deux flèches à +13/+8, chacune pour 1d8+4 dégâts.
+  note: À 9 m ou moins, Tir à bout portant porte ces valeurs à +14/+9 et 1d8+5. Tir de précision évite le malus de tir sur une cible engagée en mêlée.
+
+step: La cible est assez facile à toucher pour accepter un malus
+  do: Activer Viser avant les tirs : malus de 3 aux attaques à distance, bonus de 6 aux dégâts jusqu'au prochain tour.
+  note: Au-delà de 9 m, cela donne +10/+5 et 1d8+10 ; à 9 m ou moins, +11/+6 et 1d8+11.
+
+step: Un adversaire se rapproche
+  do: Se déplacer pour conserver de la distance, puis tirer une seule flèche avec le meilleur bonus applicable.
+  note: Si un pas de 1,50 m suffit à sortir de toutes les allonges ennemies, le faire puis tirer deux flèches à outrance.
+
+step: Il ne peut éviter le corps à corps et tient encore son arc
+  do: Lâcher l'arc, dégainer la faucille par une action de mouvement et porter une attaque de faucille à +12 (1d6+4).
+
+step: Il commence son tour au contact, faucille en main
+  do: Faire une attaque à outrance : faucille +12/+7 (1d6+4), puis coup de bois +7 (1d6+2).
+
+step: Un effet entrave ses mouvements et il peut encore agir
+  do: Activer liberté de mouvement pour retrouver sa mobilité, puis reprendre ses distances dès que possible.
+  note: Le pouvoir facilite aussi la fuite face aux prises ; l'activer à l'avance si cette menace est évidente.
+
+## Repli
+
+step: Il tombe à 20 PV ou moins, ou ne peut plus maintenir une position favorable
+  do: Rompre le combat ; au contact, utiliser le retrait si une voie est libre, puis gagner les arbres et rompre la ligne de vue avant de se cacher.
+  note: Grand pas porte le déplacement à 12 m et le retrait à 24 m en terrain dégagé ; sans ce pouvoir, ces distances sont de 9 m et 18 m.

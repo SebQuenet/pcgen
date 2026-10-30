@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Vampire sauvage chaotique mauvais, mort-vivant taillé pour la mêlée. Son arme principale est une grande hache +1 ; concentrer ses coups sur une même cible.
+  136 pv ; CA 21, contact 14, pris au dépourvu 16 ; initiative +8. Déplacement de 12 m ; vision dans le noir à 18 m.
+
+note: Défenses
+  RD 10/magie et argent ; RD 1/— ; résistance au froid 10 et à l’électricité 10 ; immunités des morts-vivants.
+  Une arme doit être à la fois magique et en argent pour franchir sa RD 10.
+
+step: Il peut choisir le terrain
+  do: Se poster près d’un passage étroit pour limiter le nombre d’ennemis capables de l’entourer
+  note: Privilégier l’obscurité si les intrus y voient moins bien que lui, en restant dans les 18 m de sa vision dans le noir
+
+## Ouverture
+
+step: Une cible est accessible avec un déplacement de 12 m au plus
+  do: La rejoindre et porter une attaque de grande hache +1
+  note: Privilégier un adversaire isolé ou déjà blessé, sans s’exposer inutilement aux autres combattants
+
+step: Tous les ennemis sont plus éloignés
+  do: Avancer vers un couvert ou un passage resserré pour préparer le contact
+
+## Rounds suivants
+
+step: Sa cible reste à portée de mêlée
+  do: Effectuer une attaque à outrance avec la grande hache +1
+  note: Garder la même cible tant qu’elle constitue une menace et reste accessible
+
+step: Un adversaire équipé d’une arme magique en argent le menace
+  do: Concentrer ses attaques sur cet adversaire s’il est accessible
+  note: Cette arme franchit sa principale réduction des dégâts
+
+step: Plusieurs adversaires cherchent à l’encercler
+  do: Revenir vers un passage étroit ou un obstacle qui protège un flanc, puis reprendre les attaques
+
+## Repli
+
+step: Points de vie à 34 ou moins et une issue reste accessible
+  do: Utiliser l’action de retraite pour quitter la mêlée, puis gagner un couvert et rompre la ligne de vue
+  note: Sa vitesse de déplacement est de 12 m ; choisir une issue que les ennemis ne bloquent pas
+
+step: Toute retraite est bloquée
+  do: Se placer dans le passage le plus étroit accessible et frapper à la grande hache +1 l’ennemi qui ferme l’issue

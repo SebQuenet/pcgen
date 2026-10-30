@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Gelée moutarde, vase de taille G, neutre et intelligente, qui chasse seule dans les marais tempérés et privilégie l'embuscade. 105 PV, CA 17 ; déplacement de 9 m ; espace occupé de 3 m, allonge de 1,50 m.
+  Coup de pseudopode +9 (2d4+3 plus 1d4 d'acide), constriction (2d4+3 plus 1d4 d'acide) et aura de poison à 3 m, DD 21. Elle cherche à maintenir ses proies près d'elle pour les ralentir et les frapper.
+
+note: Défenses
+  Réduction des dégâts 5/magie, résistance au froid 10 et résistance à la magie 18. Immunisée aux attaques de regard, à la paralysie, au poison, à la métamorphose, au sommeil, à l'étourdissement et aux effets visuels.
+
+resource: Aura de poison | permanente | rayon de 3 m ; Vigueur DD 21 chaque round d'exposition ; échec : ralentissement comme le sort, pendant l'exposition et 1d4 rounds après la sortie
+resource: Division | à volonté si plus de 10 PV | action simple ; deux gelées identiques ayant chacune la moitié des PV actuels, arrondie à l'inférieur ; déplacement de chacune porté à 12 m
+resource: Absorption d'énergie | permanente | immunité à l'électricité et aux projectiles magiques ; les dégâts évités deviennent des PV temporaires pendant 1 heure
+
+step: Des intrus approchent
+  do: Se dissimuler près d'un passage resserré avec Discrétion +9 et attendre qu'une proie entre dans l'aura
+  note: Perception +19 et vision aveugle à 18 m permettent de repérer l'approche sans dépendre de la lumière. Son odeur de moutarde peut toutefois la trahir à 6 m.
+
+## Ouverture
+
+step: Une proie peut être atteinte avec un déplacement de 9 m
+  do: Avancer pour placer autant d'ennemis que possible dans l'aura, puis porter une Frappe décisive au contact : +9, 4d4+3 plus 1d4 d'acide
+  note: Frappe décisive accompagne une action d'attaque simple ; elle ne double ni le bonus fixe ni les dégâts d'acide et ne s'ajoute pas à une charge.
+
+step: Plusieurs ennemis menacent de la contourner et elle dispose d'un round pour se préparer
+  do: Se diviser, puis déplacer les deux gelées pour couvrir les accès et exposer les adversaires à leurs auras
+  note: À 105 PV, chaque gelée commence avec 52 PV. La division consomme l'action simple ; elle ne donne pas d'attaque immédiate gratuite.
+
+## Rounds suivants
+
+step: Une seule cible reste au contact
+  do: Répéter Frappe décisive et ajuster sa position par un pas de 1,50 m pour garder la cible dans l'aura
+  note: Contre une cible facile à toucher, activer Attaque en puissance pour augmenter les dégâts, en acceptant le malus au jet d'attaque.
+
+step: Deux adversaires sont adjacents entre eux et tous deux dans son allonge de 1,50 m
+  do: Utiliser Enchaînement : un coup de pseudopode +9, puis un second contre l'autre adversaire si le premier touche ; chaque coup inflige 2d4+3 plus 1d4 d'acide
+  note: Enchaînement consomme l'action simple et impose -2 à la CA jusqu'au prochain tour, soit CA 15. Choisir cette action à la place de Frappe décisive.
+
+step: Une proie isolée paraît facile à saisir
+  do: Tenter une lutte avec BMO +10 ; chaque test de lutte réussi déclenche la constriction, pour 2d4+3 plus 1d4 d'acide
+  note: Engager la lutte consomme l'action simple et provoque une attaque d'opportunité. Un coup de pseudopode réussi ne permet pas de saisir gratuitement ; aux rounds suivants, consacrer l'action simple au maintien de la prise.
+
+step: Les ennemis reculent pour attaquer à distance
+  do: Poursuivre la proie la plus proche à 9 m par déplacement, ou 12 m pour une gelée divisée, afin de rétablir le contact et l'exposition au poison
+  note: Si deux gelées combattent, les espacer pour éviter qu'une même zone d'effet les frappe toutes les deux.
+
+step: Un adversaire utilise l'électricité ou projectile magique
+  do: Appliquer l'absorption d'énergie et profiter des PV temporaires pour maintenir la pression
+  note: Ces PV sont temporaires ; ils ne restaurent pas les PV perdus. L'acide de la gelée attaque la chair, sans lui donner de pouvoir de destruction des armes ou des armures.
+
+## Repli
+
+step: Ses PV passent sous 30 et les adversaires gardent l'avantage
+  do: Se retirer vers un passage qui coupe les lignes de tir ; si elle est encore entière et possède plus de 10 PV, se diviser avant de fuir à 12 m par déplacement
+  note: Chaque moitié conserve seulement la moitié des PV actuels, arrondie à l'inférieur. À 10 PV ou moins, la division est impossible ; fuir à 9 m si elle est encore entière.
+
+step: Un poursuivant s'isole pendant la retraite
+  do: Si le rapport de forces redevient favorable, attendre qu'il entre dans l'aura puis se retourner pour le frapper
+  note: Cette créature intelligente peut feindre la fuite pour attirer une proie trop confiante.

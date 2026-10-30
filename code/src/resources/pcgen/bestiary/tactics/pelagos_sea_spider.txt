@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Pelagos Sea Spider, bête magique aquatique de taille TG, neutre et solitaire, très intelligente. FP 15 ; 230 points de vie ; CA 28 ; initiative +8.
+  Nage à 27 m ; espace occupé de 4,50 m ; allonge de 3 m. Morsure +26 (2d8+7, poison et étreinte), quatre coups +25 (2d6+7 chacun) ; engloutissement.
+  Résistance à l'acide 10, au froid 10 et au feu 10. Elle combine attaques de zone et capture d'une proie isolée.
+
+resource: Cône de froid | 3/jour | pouvoir magique, NLS 20, Réflexes DD 19
+resource: Éclair | 3/jour | pouvoir magique, NLS 20, Réflexes DD 17 ; affecte un rayon de 9 m autour du pelagos
+resource: Nuage nauséabond | 1/jour | pouvoir magique, NLS 20, Vigueur DD 17
+
+step: Des intrus approchent dans l'eau
+  do: Les surveiller avec Perception +31, la vision dans le noir et le sens aquatique à 18 m ; attendre qu'ils s'approchent avant de révéler sa position
+  note: Discrétion +17, ou +25 lorsqu'elle flotte à la surface ; vision nocturne également disponible
+
+step: Elle peut choisir le lieu du combat
+  do: Rester dans une zone d'eau profonde où sa nage à 27 m permet d'approcher les ennemis et de rompre le contact
+  note: Garder un passage dégagé vers les profondeurs pour le repli
+
+## Ouverture
+
+step: Plusieurs adversaires se trouvent dans un rayon de 9 m autour d'elle
+  do: Utiliser éclair pour les frapper ensemble, Réflexes DD 17
+  note: Ce pouvoir affecte la zone autour d'elle ; ne pas le traiter comme un éclair en ligne
+
+step: Plusieurs adversaires peuvent être pris dans un même cône et restent hors de son rayon d'éclair
+  do: Se placer pour lancer cône de froid sur le plus grand nombre, Réflexes DD 19
+  note: Lancer un seul pouvoir magique pendant ce tour
+
+step: Une cible isolée exige une approche et aucun tir de zone n'est avantageux
+  do: Utiliser Attaque en nage pour approcher, porter une morsure +26 et poursuivre son déplacement si elle ne maintient aucune prise
+  note: Répartir les 27 m de déplacement avant et après cette attaque ; cette manœuvre ne permet pas une attaque à outrance
+
+step: Un adversaire est déjà à 3 m ou moins et aucune attaque de zone n'est avantageuse
+  do: Porter une attaque à outrance : morsure +26 et quatre coups +25, en concentrant les attaques sur cette cible
+  note: Si la morsure touche une cible admissible, tenter l'étreinte pour préparer son engloutissement
+
+## Rounds suivants
+
+step: Une créature de taille G ou inférieure est agrippée dans sa gueule au début de son tour
+  do: Tenter de l'engloutir avec un nouveau test de lutte
+  note: Une victime engloutie subit chaque round 2d6+7 dégâts plus 1d8 dégâts d'acide ; l'intérieur a une CA de 18 et 23 points de vie
+
+step: Elle est libre de lutter et un adversaire reste à portée
+  do: Répéter l'attaque à outrance, morsure et quatre coups ; privilégier une cible qu'elle peut engloutir
+  note: La morsure transmet un poison, mais ses effets et son DD ne sont pas précisés dans le bloc fourni
+
+step: Les adversaires se regroupent et elle dispose encore d'un pouvoir offensif
+  do: Consacrer son tour à éclair si plusieurs ennemis sont à 9 m ou moins, sinon à cône de froid si leur placement s'y prête
+  note: Décompter séparément les trois utilisations quotidiennes de chaque pouvoir
+
+step: Des adversaires restent sur un pont de navire ou dans une autre zone à l'air libre
+  do: Placer nuage nauséabond sur leur position, Vigueur DD 17, puis exploiter leur dispersion aux tours suivants
+  note: Réserver ce nuage à une zone aérienne ; ne pas compter sur lui comme écran sous-marin
+
+step: Des ennemis provoquent des attaques d'opportunité dans son allonge de 3 m
+  do: Exploiter Attaques réflexes pour les frapper, en privilégiant la morsure
+  note: Son allonge lui permet de menacer les abords sans devoir poursuivre chaque adversaire
+
+## Repli
+
+step: Ses points de vie tombent à 60 ou moins et le combat tourne à son désavantage
+  do: Abandonner toute prise qui gêne sa fuite et effectuer un retrait vers les profondeurs, jusqu'à 54 m en nageant deux fois sa vitesse
+  note: Ce seuil est un choix tactique ; elle conserve sa mobilité pour échapper aux poursuivants
+
+step: Des poursuivants continuent à la menacer après le retrait
+  do: Continuer à creuser l'écart dans l'eau ; si elle doit interrompre sa fuite pour combattre, utiliser un éclair restant lorsqu'ils sont regroupés à 9 m ou moins
+  note: Garder le nuage nauséabond pour gêner des poursuivants à l'air libre si son utilisation quotidienne reste disponible

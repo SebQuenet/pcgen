@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Troll des marais, grand humanoïde géant chaotique mauvais ; 38 pv, CA 16. Il privilégie le corps à corps dans son marécage.
+  Morsure +6 (2d6+4), deux griffes +6 (1d6+4 chacune) ; allonge de 3 m. Si ses deux griffes touchent la même cible, déchirement : 1d6+6 dégâts supplémentaires.
+  Déplacement et nage à 9 m ; vision dans le noir à 18 m, vision nocturne et odorat.
+
+step: Des intrus approchent du marécage
+  do: Les repérer avec ses sens, puis se cacher dans la végétation pour les laisser approcher à portée de ses attaques
+  note: Perception +3 ; Discrétion +8 dans les marais ou les zones boisées, +4 ailleurs.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Rester près d'un passage dans l'eau et d'une végétation où se dissimuler
+  note: Sa dépendance au marais l'incite à rester dans cet environnement ; Natation +12 pour emprunter les passages aquatiques.
+
+## Ouverture
+
+step: Un ennemi est déjà à 3 m ou moins au début de son tour
+  do: Attaque à outrance sur cet ennemi : morsure et deux griffes
+  note: Concentrer les deux griffes sur la même cible pour déclencher le déchirement si elles touchent toutes les deux.
+
+step: Aucun ennemi n'est à portée au début de son tour
+  do: Avancer ou nager jusqu'à 9 m vers la cible la plus accessible, puis porter une morsure si elle se trouve à 3 m ou moins
+  note: Après ce déplacement, il ne porte qu'une attaque ; la morsure inflige 2d6+4 dégâts.
+
+## Rounds suivants
+
+step: Sa cible reste à portée sans nécessiter de déplacement
+  do: Répéter l'attaque à outrance, en concentrant morsure et griffes sur elle
+  note: Le déchirement ajoute 1d6+6 dégâts lorsque les deux griffes touchent cette cible.
+
+step: Un pas de 1,50 m suffit pour remettre une cible à portée
+  do: Faire ce pas, puis porter une attaque à outrance
+  note: Ce pas permet de conserver ses trois attaques s'il n'effectue aucun autre déplacement pendant le round.
+
+step: Il doit se déplacer davantage pour atteindre un ennemi
+  do: Marcher ou nager jusqu'à 9 m, puis mordre une cible à portée
+  note: Privilégier un adversaire accessible dans l'eau si cela lui permet de reprendre le corps à corps rapidement.
+
+## Repli
+
+step: Il tombe à 10 pv ou moins et peut encore fuir
+  do: Rompre le combat et gagner un passage aquatique ou la végétation du marais
+  note: Nage à 9 m ; une fois hors de vue, utiliser Discrétion +8 dans le marais pour échapper aux poursuivants.
+
+step: Les ennemis quittent le marécage
+  do: Abandonner la poursuite et regagner son terrain familier

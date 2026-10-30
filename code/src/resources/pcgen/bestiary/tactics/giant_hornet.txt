@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Frelon géant de taille G, vermine sans Intelligence : 45 pv, CA 15. Il combat par instinct et attaque au contact.
+  Morsure +9 (1d3+5) et dard +9 (1d4+5 plus poison) ; allonge de 1,50 m, espace occupé de 3 m.
+  Vol à 18 m par round, manœuvrabilité bonne ; marche à 6 m. Vision dans le noir à 18 m, Perception +9.
+
+step: Une présence approche
+  do: Repérer les intrus avec Perception +9 et utiliser la vision dans le noir si nécessaire
+  note: Son absence d'Intelligence conduit à une réaction instinctive, sans feinte ni coordination élaborée.
+
+## Ouverture
+
+step: Un ennemi est accessible avec un déplacement en vol de 18 m au maximum
+  do: Voler jusqu'à portée et porter une attaque de dard +9 (1d4+5 plus poison)
+  note: Une approche nécessitant une action de mouvement ne permet pas d'ajouter la morsure ce round.
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : morsure +9 (1d3+5) et dard +9 (1d4+5 plus poison)
+
+step: Aucun ennemi n'est accessible avec un seul déplacement
+  do: Se rapprocher en vol ; consacrer si nécessaire les deux actions au déplacement, jusqu'à 36 m
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter l'attaque à outrance avec morsure et dard
+  note: Continuer à piquer ; aucun quota d'utilisations du poison n'est indiqué. Ses DD et effets ne sont pas précisés dans le bloc fourni.
+
+step: Un pas de 1,50 m suffit pour retrouver la portée
+  do: Faire ce pas, puis effectuer l'attaque à outrance
+
+step: La cible s'éloigne de plus de 1,50 m
+  do: La rejoindre en vol, puis attaquer au dard si une action simple reste disponible
+  note: Après un déplacement et une attaque, il reste au contact ; aucune capacité ne lui permet d'enchaîner gratuitement une fuite en vol.
+
+step: La cible devient inaccessible
+  do: Attaquer un autre ennemi accessible ou se rapprocher par un passage dégagé
+  note: Ne pas inventer d'effet de combat pour la qualité phéromone, dont le fonctionnement n'est pas fourni.
+
+## Repli
+
+step: Points de vie à 11 ou moins et voie de fuite disponible
+  do: Effectuer une retraite en vol, jusqu'à 36 m, pour s'éloigner des ennemis
+  note: La retraite protège le départ de sa position initiale ; quitter ensuite d'autres positions menacées peut provoquer des attaques d'opportunité.
+
+step: La fuite est impossible
+  do: Continuer à mordre et à piquer l'ennemi à portée

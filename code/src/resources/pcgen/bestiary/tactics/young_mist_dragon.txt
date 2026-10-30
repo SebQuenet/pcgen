@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Jeune dragon des brumes, neutre et intelligent, FP 7 ; 95 pv, CA 21. Déplacement terrestre 12 m, vol 60 m avec manœuvrabilité médiocre, nage 6 m ; respiration aquatique et vision dans la brume.
+  Morsure +14 (2d6+7), portée 3 m ; deux griffes +14 (1d8+5 chacune), deux ailes +12 (1d6+2 chacune), coup de queue +12 (1d8+7), portée 1,50 m pour ces autres attaques.
+  Souffle en cône : 3d6 de feu et cécité, Vigueur DD 18. Immunisé au feu, à la paralysie et au sommeil ; vulnérable au froid.
+
+resource: Souffle | fréquence non précisée | la fiche ne donne ni longueur du cône, ni durée de la cécité, ni délai entre deux souffles
+resource: Création d'eau | à volonté | pouvoir magique, NLS 10
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Privilégier une zone de brume naturelle près de l'eau, avec une voie d'envol dégagée
+  note: sa vision dans la brume facilite le repérage ; création d'eau ne lui donne pas le pouvoir de créer du brouillard
+
+step: Des intrus approchent
+  do: Les observer avec Perception +20 et Psychologie +20 ; repérer les armes à longue portée et les utilisateurs de froid dès qu'ils se révèlent
+  note: Diplomatie +16 lui permet de tenter une négociation si le combat ne sert pas ses intérêts
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans le cône
+  do: Se placer pour les atteindre avec le souffle, en privilégiant ceux qui menacent sa mobilité ou emploient du froid
+  note: 3d6 de feu et cécité, Vigueur DD 18 ; la fiche ne précise pas les effets d'une sauvegarde réussie
+
+step: Une cible isolée est accessible en vol
+  do: Utiliser Attaque en vol pour approcher, porter une morsure à 3 m, puis poursuivre son déplacement vers un espace dégagé
+  note: ce passage permet une attaque simple ; tenir compte des attaques d'opportunité si sa trajectoire traverse une zone menacée
+
+## Rounds suivants
+
+step: Un ennemi reste à portée et le dragon peut consacrer son round à attaquer
+  do: Effectuer une attaque à outrance : morsure, deux griffes, deux ailes et coup de queue
+  note: toutes les attaques exigent une cible à 1,50 m, sauf la morsure qui porte à 3 m ; un déplacement autre qu'un pas de 1,50 m empêche cette attaque à outrance
+
+step: Rester au contact l'expose à plusieurs adversaires ou à des attaques de froid
+  do: Reprendre les passages avec morsure grâce à Attaque en vol, en concentrant ses attaques sur une cible isolée
+  note: prévoir de l'espace pour ses virages ; utiliser Wingover pour changer brusquement de direction ou Vol stationnaire pour s'immobiliser en l'air
+
+step: Des adversaires ont été aveuglés
+  do: Profiter de leur difficulté à le localiser pour changer d'angle et attaquer une cible séparée du groupe
+  note: ne pas supposer que la cécité neutralise leurs attaques ou leurs sorts
+
+step: Le souffle est de nouveau disponible et plusieurs ennemis sont regroupés
+  do: Les prendre dans un nouveau cône, puis exploiter sa mobilité au round suivant
+
+## Repli
+
+step: Ses points de vie tombent sous 30, ou le froid menace de l'abattre rapidement
+  do: Rompre le combat ; utiliser une retraite si nécessaire, puis s'éloigner en vol à 60 m par déplacement
+  note: privilégier une trajectoire dégagée et la brume naturelle pour compliquer la poursuite
+
+step: Une fuite aérienne est trop exposée et une eau profonde est accessible
+  do: Plonger et gagner un abri immergé en nageant à 6 m par déplacement
+  note: sa respiration aquatique lui permet de rester immergé ; choisir cette voie pour son couvert, car sa nage est bien plus lente que son vol

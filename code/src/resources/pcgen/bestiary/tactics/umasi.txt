@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Umasi, humanoïde monstrueux de taille M des jungles tropicales, chaotique neutre ; 42 PV, CA 18, déplacement de 12 m et allonge de 1,50 m.
+  Au contact : dague +7 (1d4+4, critique 19-20) et deux frappes à mains nues +7 (1d3+2 non létaux chacune). À distance : arc court +7 (1d6, critique x3).
+  Vision dans le noir à 18 m, Perception +12, Discrétion +11 ; immunité aux maladies et aux soins, +2 aux sauvegardes contre le poison.
+
+resource: Flèches | 20 | une flèche par attaque à l'arc court
+
+step: Des adversaires approchent sans l'avoir repéré
+  do: Se dissimuler dans la végétation et les observer avant de choisir une cible accessible.
+  note: Utiliser Discrétion +11 et Perception +12 ; prévoir un chemin de fuite praticable à pied.
+
+## Ouverture
+
+step: L'adversaire reste hors de portée de mêlée
+  do: Tirer à l'arc court +7 sur une cible peu protégée, si la ligne de tir est dégagée.
+  note: Exploiter les couverts disponibles ; ne pas tirer à l'arc lorsqu'un ennemi menace directement l'umasi au contact.
+
+step: Il peut atteindre sa cible avec un déplacement de 12 m
+  do: S'approcher et porter une attaque de dague +7, ou une frappe à mains nues +7 s'il veut capturer la cible.
+  note: Après ce déplacement, il ne dispose pas de son attaque à outrance.
+
+step: Une cible est déjà à portée de 1,50 m au début de son tour
+  do: Faire une attaque à outrance : dague +7 et deux frappes à mains nues +7.
+  note: Les frappes à mains nues infligent des dégâts non létaux ; les comptabiliser séparément des blessures de la dague.
+
+## Rounds suivants
+
+step: La même cible reste au contact
+  do: Répéter l'attaque à outrance sur elle pour cumuler blessures et dégâts non létaux.
+  note: Un simple pas de 1,50 m permet d'ajuster sa position tout en conservant l'attaque à outrance.
+
+step: Il cherche à prendre une cible vivante
+  do: Utiliser uniquement ses deux frappes à mains nues lors de l'attaque à outrance et cesser de la frapper dès qu'elle est inconsciente.
+  note: Les dégâts non létaux rendent la cible inconsciente lorsqu'ils dépassent ses PV actuels.
+
+step: La cible tombe ou s'éloigne
+  do: Reporter ses attaques sur un adversaire accessible ; s'il faut se déplacer de plus de 1,50 m, ne porter qu'une attaque après le déplacement.
+
+step: Plusieurs ennemis menacent de l'encercler
+  do: Rejoindre un passage où moins d'adversaires peuvent l'atteindre simultanément, puis reprendre le combat au contact.
+  note: Sa vitesse de 12 m facilite le changement de position ; sa CA 18 et ses 42 PV ne justifient pas de rester encerclé.
+
+## Repli
+
+step: PV à 14 ou moins, ou combat devenu manifestement défavorable
+  do: Utiliser l'action de retraite pour s'éloigner, jusqu'à 24 m si le terrain le permet, puis se dissimuler dans la végétation.
+  note: La retraite évite les attaques d'opportunité liées au départ de sa case initiale ; le reste du trajet doit éviter les cases menacées.
+
+step: Il a rompu le contact
+  do: Poursuivre sa fuite en utilisant Discrétion +11 dès qu'il bénéficie d'un couvert ou d'une dissimulation suffisante.
+  note: Son immunité aux soins interdit de compter sur une guérison pour revenir immédiatement au combat.

@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Haunt, mort-vivant intangible de taille M, neutre, FP 4 ; 32 pv, CA 15. Esprit lié à une tâche inachevée, il recherche un corps pour l'accomplir et n'attaque que les humanoïdes.
+  Contact intangible +5 contre la CA de contact, à 1,50 m : 1d4 de froid et 1d3 points de dégâts de Dextérité. Il concentre ses touches sur une victime pour préparer sa possession.
+  Déplacement terrestre de 6 m ; vol de 9 m, manœuvrabilité parfaite ; vision dans le noir à 18 m. Immunité à la canalisation d'énergie et immunités des morts-vivants.
+
+resource: Malveillance | 1 fois par round | Cible adjacente sur le plan Matériel, Dextérité à 0 ; Volonté DD 14 ; une réussite immunise contre sa malveillance pendant 24 heures.
+
+step: Aucun humanoïde vivant à portée
+  do: Surveiller les approches avec Perception +10 et se dissimuler avec Discrétion +10
+  note: Sans hôte, il reste dans un rayon de 18 m autour du lieu de sa mort.
+
+step: Il se présente sous forme de globe lumineux
+  do: Reprendre sa forme humanoïde translucide par une action simple avant d'engager le combat
+  note: Le globe conserve le contact de froid, mais interdit les dégâts de Dextérité et la malveillance.
+
+## Ouverture
+
+step: Un humanoïde vivant peut être atteint
+  do: Voler jusqu'au contact et porter une touche intangible +5, pour 1d4 de froid et 1d3 points de dégâts de Dextérité
+  note: Choisir une victime accessible et isolée ; conserver cette cible pour amener sa Dextérité à 0.
+
+step: Un humanoïde adjacent a déjà une Dextérité de 0
+  do: Employer immédiatement la malveillance, Volonté DD 14
+
+## Rounds suivants
+
+step: La victime conserve une Dextérité supérieure à 0
+  do: Répéter le contact intangible +5 chaque round et la suivre en vol dans les limites du lieu hanté
+  note: Répartir les touches retarde l'obtention d'un hôte ; éviter d'achever volontairement la victime destinée à la possession.
+
+step: La Dextérité de la victime atteint 0
+  do: Cesser les touches et consacrer l'action suivante à la malveillance depuis une case adjacente, Volonté DD 14
+
+step: La victime résiste à la malveillance
+  do: Chercher un autre humanoïde vivant à affaiblir
+  note: Respecter ses 24 heures d'immunité à cette possession.
+
+step: La possession réussit
+  do: Partir accomplir la tâche inachevée ; employer les capacités de l'hôte si ses compagnons attaquent
+  note: La Dextérité de l'hôte revient temporairement à sa valeur normale. Cet hôte permet de quitter le lieu hanté ; à sa libération, sa Dextérité retombe à 0.
+
+note: Étranglement
+  Ce pouvoir exige un alignement opposé à celui de l'esprit sur l'axe Bien/Mal ou Loi/Chaos. Ce Haunt étant neutre sur les deux axes, cette condition n'est pas remplie : ne pas ajouter d'étranglement à ses attaques.
+
+## Repli
+
+step: Sans hôte, il tombe à 8 pv ou moins
+  do: Rompre le contact en volant à 9 m et chercher un couvert inaccessible aux corps matériels, dans son rayon de 18 m
+
+step: Il occupe un hôte menacé
+  do: Utiliser ses moyens de déplacement et de défense pour préserver ce corps et poursuivre sa tâche
+  note: Immobilisation de personne peut l'expulser s'il rate son jet de Volonté ; les sorts de dissipation du Mal, du Bien, de la Loi ou du Chaos adaptés à son alignement constituent sa vulnérabilité particulière.
+
+step: Il est détruit ou sa tâche est accomplie
+  do: En cas de destruction ordinaire, tenir compte de sa reconstitution ; si sa tâche est accomplie, faire disparaître définitivement l'esprit
+  note: Les sorts de dissipation précités peuvent empêcher sa reconstitution s'ils le détruisent ; ne pas lui attribuer une fuite par téléportation ou changement de plan.

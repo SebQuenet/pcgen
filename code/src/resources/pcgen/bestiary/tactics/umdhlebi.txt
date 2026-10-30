@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Umdhlebi, plante carnivore gigantesque et solitaire des jungles, d'alignement neutre ; FP 12, 178 pv, CA 27. Son aspect d'arbre mort sert à tendre une embuscade.
+  Deux coups +21, chacun infligeant 3d8+10 dégâts, critique 19-20, avec étreinte ; allonge de 4,50 m, espace occupé de 4,50 m. BMO de lutte +28.
+  Déplacement de 3 m ; perception des vibrations à 18 m, Perception +12. Sa lenteur favorise l'attente plutôt que la poursuite.
+  Traits des plantes ; RD 10 surmontée par les armes magiques tranchantes ou contondantes ; faiblesse au feu.
+
+resource: Murmure impérieux | à volonté | action simple ; humanoïde à 9 m ; Volonté DD 20, ou DD 25 si la cible est agrippée ; une réussite immunise contre ce même umdhlebi pendant 24 heures
+
+resource: Vrilles frémissantes | 8 vrilles | au maximum deux coups par round ; il peut encore porter ces deux coups si au moins deux vrilles restent libres malgré les prises des autres
+
+step: Il choisit son terrain de chasse
+  do: S'installer près d'un passage dans la jungle, mêlé au feuillage ; laisser les objets de ses victimes au pied du tronc pour attirer les curieux.
+  note: La végétation alentour fait courir un risque d'incendie à ceux qui voudraient le brûler ; elle ne lui confère aucune résistance au feu.
+
+step: Des pas sont détectés
+  do: Rester immobile et laisser approcher les intrus, sans supposer que son apparence lui garantit la surprise.
+  note: Sol traître : toutes les cases dans les 1,50 m autour de son espace sont un terrain difficile ; cela ralentit les déplacements, sans immobiliser ni infliger de dégâts.
+
+## Ouverture
+
+step: Un humanoïde est à 9 m ou moins, mais hors de portée des coups
+  do: Utiliser le murmure impérieux pour lui suggérer d'approcher et de s'allonger au pied du tronc ; Volonté DD 20.
+  note: Cette suggestion impose seulement cette approche et cette position ; elle ne permet pas de commander d'autres actions. Choisir une autre cible si la première réussit sa sauvegarde.
+
+step: Une proie est à 4,50 m ou moins et une attaque à outrance est possible
+  do: Porter deux coups +21, chacun à 3d8+10, et tenter l'étreinte après chaque coup qui touche avec un test de lutte à +28.
+  note: Privilégier une proie isolée ou déjà à terre. L'étreinte accompagne le coup sans remplacer la seconde attaque.
+
+step: Une cible reste entre 4,50 m et 6 m
+  do: Employer le don Lunge pour porter l'allonge à 6 m pendant son tour et frapper ; accepter une CA réduite à 25 jusqu'au prochain tour.
+  note: Si un déplacement de 1,50 m suffit et est légal, préférer ce pas de placement pour conserver sa CA et son attaque à outrance.
+
+## Rounds suivants
+
+step: Une proie agrippée doit être achevée
+  do: Consacrer une action simple au maintien de la lutte ; employer le BMO +28 et le bonus de +5 au maintien si la prise n'a pas été rompue. Choisir d'infliger les dégâts du coup ; la constriction ajoute 3d8+10 sur un test de lutte réussi.
+  note: Le maintien consomme l'action simple : il ne s'ajoute pas gratuitement à une attaque à outrance. Conserver deux vrilles libres pour pouvoir encore frapper lorsque les actions le permettent.
+
+step: Il choisit de frapper les adversaires encore libres
+  do: Porter deux coups avec les vrilles disponibles et chercher de nouvelles étreintes, en priorité contre l'adversaire qui emploie le feu ou une arme capable de franchir sa RD.
+  note: Contre une cible facile à toucher, Attaque en puissance donne deux coups +17 infligeant chacun 3d8+18 ; conserver +21 contre une forte CA.
+
+step: Un humanoïde agrippé résiste encore et n'est pas immunisé au murmure
+  do: Consacrer son action simple au murmure impérieux contre lui, avec Volonté DD 25, pour l'inciter à s'allonger au pied du tronc.
+  note: Ce choix remplace le maintien offensif ou les coups de ce tour ; le murmure n'inflige aucun dégât et ne rend pas la cible inconsciente.
+
+step: Les adversaires restent au-delà de son allonge
+  do: Rester dans le couvert et tenter d'attirer un humanoïde à portée du murmure ; se déplacer seulement pour rejoindre un abri proche ou couper un passage.
+  note: Il ne dispose d'aucune attaque à distance ; sa vitesse de 3 m rend la poursuite en terrain ouvert défavorable.
+
+## Repli
+
+step: Le feu menace de le détruire ou le combat tourne nettement à son désavantage
+  do: Abandonner la chasse et se déplacer vers le couvert le plus proche à 3 m par action de mouvement ; lâcher les prises qui empêchent sa fuite.
+  note: Ses 178 pv ne constituent pas une réserve renouvelable : aucun soin ni régénération n'est indiqué. Aucun seuil de fuite fixe n'est imposé ; décider selon le danger et la distance de l'abri.
+
+step: La fuite est impossible
+  do: Concentrer les coups et l'étreinte sur la menace la plus dangereuse ; employer le murmure contre un humanoïde encore réceptif pour l'attirer près du tronc.
+  note: Les victimes attirées peuvent gêner les tirs selon leurs positions, mais ne lui donnent aucune protection automatique contre le feu.

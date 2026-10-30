@@ -1,0 +1,35 @@
+## Avant le combat
+
+note: Profil
+  Nuée de vases de taille TP, neutre et dépourvue d'intelligence ; 7 PV, CA 7. Attaque de nuée : 1 point de dégâts plus effet visqueux, sans jet d'attaque.
+  Occupe un espace de 3 m de côté ; allonge de 0 m. Vision aveugle à 18 m ; déplacement, escalade et nage à 3 m.
+  Résistance au feu 5, vulnérabilité au froid ; immunités des vases et des nuées.
+
+step: Aucune proie à portée de ses sens
+  do: Rester dans son milieu souterrain, sans préparer de tactique élaborée.
+
+## Ouverture
+
+step: Une proie est repérée à 18 m ou moins
+  do: Se diriger vers elle ; avancer de 3 m, ou effectuer un double déplacement de 6 m si nécessaire.
+  note: Grimper ou nager à la même vitesse si le terrain l'exige.
+
+step: Son déplacement permet d'atteindre une proie
+  do: Entrer dans l'espace de la proie et y terminer son déplacement pour infliger automatiquement 1 point de dégâts plus l'effet visqueux.
+  note: L'allonge de 0 m impose de recouvrir la cible ; être seulement à côté ne suffit pas. Entrer dans son espace provoque les attaques d'opportunité habituelles.
+
+## Rounds suivants
+
+step: Une ou plusieurs proies se trouvent encore dans son espace
+  do: Rester sur elles pour infliger les dégâts de nuée à chaque round, avec l'effet visqueux.
+  note: Toutes les créatures recouvertes subissent l'attaque ; ne pas effectuer de jets d'attaque individuels.
+
+step: Les proies quittent son espace
+  do: Poursuivre une proie encore détectable à 3 m par déplacement et tenter de la recouvrir à nouveau.
+  note: Ses faibles vitesses limitent la poursuite ; elle ne coordonne pas de manœuvre ni de choix de cible élaboré.
+
+## Repli
+
+step: Elle perd des points de vie mais une proie reste détectable
+  do: Continuer à l'assaillir sans organiser de retraite.
+  note: Dépourvue d'intelligence, elle ne réserve aucune capacité pour fuir ; à 0 PV, la nuée se disperse.

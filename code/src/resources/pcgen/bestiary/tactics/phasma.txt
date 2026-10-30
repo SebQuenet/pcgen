@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Phasma, mort-vivant intangible chaotique mauvais, solitaire et agressif, qui hait les vivants, surtout les lanceurs de sorts profanes.
+  123 PV ; CA 20, contact 20 ; initiative +9 ; vol parfait à 12 m ; vision dans le noir à 18 m.
+  Contact intangible +14, allonge 1,50 m : 1d6 dégâts et diminution permanente de 1d6 points de Sagesse. Il affaiblit ainsi la Volonté avant d'employer sa fantasmagorie.
+  Intangibilité, immunités des morts-vivants et résistance à la canalisation +4 lui permettent de soutenir le combat.
+
+resource: Détection du Bien | à volonté | NLS 13
+resource: Fantasmagorie | 2/jour | action simple ; rayon de 9 m ; Volonté DD 21, puis Vigueur DD 21
+resource: Blasphème | 1/jour | action simple ; rayon de 12 m ; Volonté DD 22 ; NLS 13
+resource: Aura maudite | 1/jour | action simple ; durée de 13 rounds ; DD 22
+resource: Dissipation de la magie | 3/jour | action simple ; NLS 13, bonus de dissipation plafonné à +10
+resource: Protection contre le Mal | 3/jour | action simple ; durée de 13 minutes
+resource: Protection contre le Bien à incantation rapide | 3/jour | action rapide ; durée de 13 minutes
+
+step: Des intrus approchent sans l'avoir engagé
+  do: Observer avec Perception +23 et employer détection du Bien pour repérer les auras accessibles
+  note: La détection demande de la concentration ; elle ne révèle pas instantanément tous les alignements.
+
+step: Le combat est imminent et il dispose d'un round de préparation
+  do: Activer aura maudite pour renforcer ses sauvegardes et sa résistance aux sorts du Bien
+  note: Son bonus de parade de +4 ne s'ajoute pas au bonus de parade de +5 déjà compris dans sa CA 20.
+
+## Ouverture
+
+step: Une première cible vivante est accessible
+  do: Voler au contact et porter une attaque de contact intangible +14, en privilégiant un lanceur de sorts profanes
+  note: Chaque contact réussi lui donne aussi 5 PV temporaires ; ces gains issus du même pouvoir ne se cumulent pas.
+
+step: Un adversaire bon le menace et l'aura maudite n'est pas active
+  do: Ajouter protection contre le Bien à incantation rapide à son tour d'attaque
+  note: Cette action rapide laisse son action simple disponible ; le bonus de parade ne relève pas sa CA actuelle.
+
+## Rounds suivants
+
+step: Plusieurs ennemis vivants restent capables de combattre
+  do: Poursuivre les contacts, en changeant de victime pour diminuer la Sagesse de plusieurs adversaires
+  note: Attaque en vol permet de répartir ses 12 m de déplacement avant et après une unique action simple ; elle ne supprime pas les attaques d'opportunité.
+
+step: Plusieurs ennemis affaiblis se trouvent à 9 m ou moins
+  do: Utiliser fantasmagorie à la place du contact
+  note: Chaque créature affectée fait Volonté DD 21 ; une réussite l'immunise contre cette fantasmagorie pendant 24 heures. Après un échec, Vigueur DD 21 : mort en cas d'échec, 6d6 dégâts en cas de réussite.
+
+step: Une seconde fantasmagorie pourrait encore atteindre des victimes non immunisées
+  do: Se replacer en vol pour inclure ces victimes dans les 9 m, puis utiliser la seconde activation
+  note: Éviter de gaspiller cette utilisation sur les créatures ayant réussi leur premier jet de Volonté.
+
+step: Plusieurs adversaires non mauvais sont regroupés à 12 m ou moins
+  do: Employer blasphème si son interruption du groupe vaut mieux qu'un contact ou une fantasmagorie
+  note: À NLS 13, les effets cumulés sont hébétement jusqu'à 13 DV, affaiblissement jusqu'à 12 DV, paralysie jusqu'à 8 DV et mort jusqu'à 3 DV. Volonté DD 22 atténue ou annule ces effets ; au-delà de 13 DV, aucune conséquence.
+
+step: Une protection magique identifiée compromet ses attaques ou sa fantasmagorie
+  do: Tenter une dissipation ciblée avant de reprendre l'offensive
+  note: Test de dissipation : 1d20+10 contre DD 11 + NLS de l'effet.
+
+step: Des adversaires mauvais le prennent pour cible et il n'a pas d'aura maudite active
+  do: Employer protection contre le Mal si cette défense justifie de sacrifier une attaque
+
+## Repli
+
+step: Moins de 30 PV et des ennemis capables de l'atteindre efficacement restent actifs
+  do: Rompre le contact en volant à 12 m, ou consacrer le round au double déplacement pour parcourir 24 m
+  note: Traverser une paroi grâce à l'intangibilité si son épaisseur le permet ; il doit rester adjacent à la surface extérieure de l'objet. Son vol parfait permet aussi une retraite verticale.

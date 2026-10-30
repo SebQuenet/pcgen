@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Nothosaure, grand reptile aquatique neutre, animal instinctif ; 57 PV, CA 18. Il chasse dans l'eau et gagne la terre pour dormir et se reproduire.
+  Morsure +10 (1d8+6), coup de queue +7 (1d8+3) ; allonge de 3 m. Déplacement terrestre de 6 m, nage de 12 m par action de déplacement.
+
+resource: Sprint | 1 fois par minute | vitesse terrestre portée à 12 m pendant 1 round
+
+step: Des créatures approchent
+  do: Les repérer avec Perception +11 et rester près de l'eau
+  note: Sa vision nocturne facilite la surveillance sous une faible lumière ; il est plus vulnérable à terre.
+
+## Ouverture
+
+step: Surpris à terre et menacé
+  do: Utiliser sprint pour regagner l'eau : jusqu'à 12 m avec une action de déplacement, ou 24 m avec un double déplacement
+  note: Privilégier le retour à l'eau plutôt qu'une poursuite sur la berge.
+
+step: Une cible menaçante est dans l'eau, accessible en un déplacement
+  do: Nager jusqu'à 12 m pour la placer dans son allonge de 3 m, puis mordre à +10 (1d8+6)
+  note: Choisir l'adversaire le plus proche, sans tactique complexe.
+
+step: Une cible est déjà à portée et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : morsure +10 (1d8+6) et coup de queue +7 (1d8+3)
+
+## Rounds suivants
+
+step: L'adversaire reste dans son allonge de 3 m
+  do: Répéter l'attaque à outrance avec la morsure et le coup de queue
+  note: Concentrer les deux attaques sur la même menace tant qu'elle reste à portée.
+
+step: L'adversaire s'éloigne dans l'eau mais reste accessible en un déplacement
+  do: Le suivre à la nage, jusqu'à 12 m, puis porter une morsure +10 (1d8+6)
+  note: Après ce déplacement, choisir la morsure ; il ne peut pas enchaîner les deux attaques.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter une morsure +10 (1d8+6)
+  note: Une seule attaque d'opportunité par round.
+
+step: Les adversaires restent hors d'atteinte sur la berge
+  do: S'éloigner à la nage vers une eau plus profonde
+  note: Il ne dispose d'aucune attaque à distance et ne poursuit pas longuement à terre.
+
+## Repli
+
+step: Points de vie à 15 ou moins, ou fuite nécessaire pour échapper à plusieurs assaillants
+  do: Rompre le combat et gagner l'eau libre ; utiliser le retrait si possible, jusqu'à 24 m à la nage
+  note: Le retrait protège seulement la sortie de la case initiale contre les attaques d'opportunité des ennemis visibles.
+
+step: La fuite commence à terre
+  do: Employer sprint s'il est disponible pour rejoindre l'eau, puis continuer à la nage
+  note: Sans sprint, sa vitesse terrestre reste de 6 m ; ne pas réutiliser sprint avant qu'une minute se soit écoulée.

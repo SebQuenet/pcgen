@@ -1,0 +1,97 @@
+## Avant le combat
+
+note: Profil
+  Dragon rouge mythique gigantesque, solitaire, chaotique mauvais, FP 25, rang mythique 10. Cruel et arrogant, mais assez intelligent pour isoler ses victimes et protéger sa retraite.
+  Morsure +40 (4d6+25, critique 18-20), 2 griffes +40 (2d8+17, critique 19-20), 2 ailes +38 (2d6+8), queue +38 (2d8+25). Morsure et griffes ajoutent saignement et étreinte ; lutte +52.
+  Espace occupé 6 m ; allonge 4,50 m, ou 6 m avec la morsure. Déplacement 12 m, vol 75 m de manœuvrabilité déplorable : privilégier les trajectoires dégagées.
+  518 pv, CA 50, CA de contact 4, guérison accélérée 5, RD 20/épique et magie, RM 36, fortification 50 %. Immunisé au feu, à la paralysie et au sommeil ; vulnérable au froid.
+  Aura de feu à 3 m, 2d6 dégâts de feu ; présence terrifiante à 99 m, Volonté DD 30. Vision aveugle à 18 m, vision dans le noir à 36 m, vision dans la fumée et vision aux rayons X.
+
+resource: Sorts de niveaux 1, 2 et 3 | 8/jour par niveau | Réserves distinctes ; NLS 17, concentration +24
+resource: Sorts de niveaux 4, 5, 6 et 7 | 7/jour par niveau | Réserves distinctes ; conserver un emplacement de niveau 5 pour téléportation
+resource: Sorts de niveau 8 | 4/jour | Peuvent notamment servir à une invisibilité suprême à incantation rapide
+resource: Pouvoirs magiques | à volonté | NLS 27, concentration +34 ; détection de la magie, orientation, pyrotechnie DD 19, suggestion DD 20, mur de feu
+resource: Incantation rapide | selon les emplacements disponibles | Action rapide ; emplacement supérieur de 4 niveaux : coup au but au niveau 5, rapidité au niveau 7, invisibilité suprême au niveau 8
+resource: Volonté de fer supérieure | 1/jour | Relancer un jet de Volonté avant d'en connaître le résultat ; conserver le second jet
+
+step: Il surveille son repaire
+  do: Placer alarme sur les accès ; observer les intrus avec Perception +35 et détection de la magie avant de se montrer
+  note: Repérer les lanceurs de sorts et les menaces capables d'exploiter sa vulnérabilité au froid ou sa faible CA de contact.
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Lancer résistance aux énergies destructives contre le froid, détection de l'invisibilité, bouclier et renvoi des sorts
+  note: La résistance au froid vaut 30 ; bouclier ajoute +4 à la CA. Décompter chaque sort de sa réserve de niveau.
+
+step: Le combat commencera dans quelques rounds
+  do: Ajouter bouclier de feu dans sa version chaude, puis invisibilité suprême ; lancer rapidité juste avant l'engagement si le temps le permet
+  note: Le bouclier chaud réduit les dégâts de froid et inflige 1d6+15 dégâts de feu aux assaillants qui le frappent au corps à corps, sauf avec une arme à allonge. Ces protections de courte durée durent 17 rounds.
+
+step: Il dispose d'au moins dix minutes et du focaliseur requis pour prévoyance
+  do: Associer prévoyance à téléportation vers un refuge connu, avec le déclencheur simple : ses pv passent sous 130
+  note: Prévoir le refuge et le déclencheur dès l'incantation ; une seule prévoyance peut être active.
+
+## Ouverture
+
+step: Il attaque ou survole les intrus pour la première fois
+  do: Résoudre la présence terrifiante sur les adversaires concernés dans un rayon de 99 m, Volonté DD 30
+  note: Exploiter les mouvements de panique pour attaquer une cible séparée du groupe.
+
+step: Plusieurs ennemis se soutiennent et un mur peut les séparer
+  do: Lancer mur de force entre les combattants et leurs soutiens, en restant du côté de la victime choisie ; utiliser rapidité à incantation rapide si elle n'est pas déjà active
+  note: Le mur bloque aussi ses propres attaques et sorts qui doivent le traverser ; choisir sa position avant de le dresser.
+
+step: Une cible prioritaire est déjà à portée de toutes ses attaques
+  do: Faire une attaque à outrance en concentrant morsure, griffes, ailes et queue sur cette cible
+  note: Si nécessaire, lancer d'abord rapidité à incantation rapide, ou invisibilité suprême à incantation rapide si les ennemis ne peuvent pas la percer ; une seule de ces actions rapides dans le round.
+
+step: Il doit se déplacer pour atteindre une cible isolée
+  do: S'approcher puis porter une morsure avec Frappe décisive supérieure : +40, 16d6+25, plus saignement et étreinte
+  note: Il s'agit d'une attaque simple après un déplacement, pas d'une attaque à outrance. Frappe décisive supérieure ne s'applique pas à une charge.
+
+## Rounds suivants
+
+step: Début de chacun de ses tours
+  do: Récupérer 5 pv grâce à la guérison accélérée, sans dépasser 518 ; infliger 2d6 dégâts de feu aux créatures à 3 m ou moins
+  note: Les adversaires à l'extrémité de son allonge peuvent rester hors de l'aura.
+
+step: Une cible dangereuse reste accessible au corps à corps
+  do: Répéter l'attaque à outrance ; concentrer les attaques jusqu'à mettre hors combat le lanceur de froid, le soigneur ou l'adversaire le moins protégé
+  note: Utiliser Attaque en puissance mythique contre une CA facile à toucher ; appliquer Critique ralentissant sur les critiques confirmés. Les bonus d'attaque et dégâts du profil sont ceux du bloc, avant les sorts et les dons activés.
+
+step: Une morsure ou une griffe touche une cible de taille inférieure à la sienne qu'il veut immobiliser
+  do: Tenter gratuitement l'étreinte avec lutte +52 ; au tour suivant, maintenir la prise pour infliger des dégâts si cela empêche une cible prioritaire d'agir efficacement
+  note: La lutte limite aussi ses propres actions et déplacements ; renoncer à la prise si elle l'expose au reste du groupe.
+
+step: Il ne peut porter qu'une seule attaque et la cible est difficile à toucher
+  do: Lancer coup au but à incantation rapide, puis porter une morsure avec Frappe décisive supérieure
+  note: Le bonus de +20 de coup au but ne bénéficie qu'à cette attaque ; dépenser un emplacement de niveau 5 et l'action rapide du round.
+
+step: Les protections adverses empêchent de blesser une cible prioritaire
+  do: Lancer dissipation suprême ciblée, puis reprendre les attaques au tour suivant
+  note: NLS 17 pour la dissipation ; viser notamment les protections défensives et les effets qui permettent aux ennemis de le poursuivre.
+
+step: Les ennemis restent groupés à distance ou refusent son terrain
+  do: Interposer un mur de feu pour gêner leurs déplacements et leur vision ; s'ils sont peu protégés contre la magie mentale, tenter aliénation mentale sur un soutien, Volonté DD 24
+  note: Mur de feu est utilisable à volonté. Si une source de feu est disponible, pyrotechnie peut produire une fumée qu'il voit parfaitement ; le DD de ce pouvoir est 19.
+
+step: Une cible à faible Volonté échappe au corps à corps
+  do: Employer suggestion, Volonté DD 20, pour lui proposer une conduite plausible qui la sépare de ses alliés ; préférer terreur, Volonté DD 21, si plusieurs ennemis peuvent être pris dans le cône
+  note: Ne pas insister contre les immunités mentales ou lorsque les DD se révèlent insuffisants ; revenir aux murs et aux attaques physiques.
+
+step: La magie ennemie domine et il peut atteindre le lanceur sans ses propres protections
+  do: Envisager zone d'antimagie, puis poursuivre au corps à corps avec ses attaques naturelles
+  note: La zone neutralise également ses sorts et ses pouvoirs magiques ou surnaturels ; l'utiliser seulement si cet échange lui est favorable, puis la dissiper volontairement avant toute téléportation.
+
+## Repli
+
+step: Ses pv passent sous 130
+  do: Laisser agir la prévoyance si elle est active ; sinon lancer téléportation vers un refuge connu dès que possible
+  note: Ne pas attendre que la guérison accélérée compense une attaque à outrance ennemie ; quitter d'abord une éventuelle zone d'antimagie ou y mettre fin.
+
+step: La téléportation est empêchée ou indisponible
+  do: Utiliser invisibilité suprême à incantation rapide si possible, puis battre en retraite par les airs ; interposer un mur de force si cela coupe la poursuite
+  note: Son vol permet un déplacement de 75 m, ou deux déplacements de 75 m s'il consacre ses deux actions au mouvement. Lancer le mur consomme l'action simple et ne laisse qu'un déplacement ordinaire ce tour-là.
+
+step: Il est hors d'atteinte
+  do: Rester à couvert et laisser la guérison accélérée restaurer ses pv ; renouveler ses protections avant d'envisager une revanche
+  note: Sa cruauté favorise les représailles contre un adversaire isolé plutôt qu'un retour immédiat contre le groupe encore prêt à combattre.

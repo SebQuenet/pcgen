@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Commando gobelin, petit humanoïde gobelinoïde, neutre mauvais : 24 pv, CA 20, initiative +8. Déplacement de 9 m ; vision dans le noir à 18 m.
+  Arme d'hast de maître (horsechopper) +7, 1d8+1 dégâts, critique x3 ; arc court composite de maître +9, 1d4+1 dégâts, critique x3.
+
+step: Il peut choisir sa position
+  do: Préparer son arc derrière un couvert, avec une ligne de tir dégagée et un chemin de repli
+  note: Dans l'obscurité, sa vision dans le noir lui permet de repérer les ennemis jusqu'à 18 m
+
+## Ouverture
+
+step: Un ennemi est visible et ne le menace pas en mêlée
+  do: Tirer une flèche avec l'arc court composite de maître, +9, 1d4+1 dégâts, critique x3
+  note: Choisir une cible exposée ; son attaque à distance est plus précise que son attaque de mêlée
+
+step: Son arme d'hast est prête et un ennemi est à sa portée
+  do: Frapper avec l'arme d'hast de maître, +7, 1d8+1 dégâts, critique x3
+
+## Rounds suivants
+
+step: Il peut continuer à tirer sans être menacé en mêlée
+  do: Concentrer ses tirs sur la même cible jusqu'à ce qu'elle tombe ou se mette à couvert
+  note: Une seule attaque par round ; aucun tir supplémentaire n'est indiqué
+
+step: Un ennemi se rapproche et un passage reste libre
+  do: Se déplacer jusqu'à 9 m vers un autre couvert, puis tirer une flèche si la cible reste visible
+  note: Conserver une issue et éviter de se laisser encercler
+
+step: Le combat rapproché devient inévitable alors qu'il tient son arc
+  do: Lâcher l'arc, dégainer l'arme d'hast avec une action de mouvement et frapper si un ennemi est à portée
+  note: Ne pas tirer à l'arc sous la menace d'une attaque de mêlée
+
+step: Il combat déjà avec son arme d'hast
+  do: Porter une attaque à +7 par round contre un ennemi à portée
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou risque imminent d'encerclement
+  do: Utiliser l'action de retraite pour rejoindre un abri par un passage libre, jusqu'à 18 m si le terrain le permet
+  note: Partir avant que plusieurs ennemis puissent lui couper la route

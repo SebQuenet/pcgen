@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Essaim de mégapiranhas, animaux aquatiques de taille TP, d'intelligence très limitée. 76 pv, CA 17 ; nage à 12 m par round ; espace de 3 m et allonge de 0 m.
+  L'essaim inflige 2d6 dégâts, plus saignement et distraction, aux créatures dont il occupe l'espace à la fin de son déplacement.
+  Perception aveugle à 9 m, odorat développé ; Perception +6, Discrétion +18. Il attaque les créatures dans l'eau et les poursuit dans toute la zone C.
+
+step: Aucune créature dans l'eau
+  do: Rester dans l'eau et repérer les créatures grâce à ses sens
+  note: Il ne dispose d'aucune vitesse terrestre ni d'attaque à distance.
+
+## Ouverture
+
+step: Une créature se trouve dans l'eau à portée de nage
+  do: Nager jusqu'à elle et terminer son déplacement en occupant son espace pour lui infliger les dégâts d'essaim
+  note: L'attaque d'essaim ne demande pas de jet d'attaque ; appliquer 2d6 dégâts, plus saignement et distraction.
+
+step: Plusieurs créatures sont proches dans l'eau
+  do: Se placer pour englober plusieurs créatures dans son espace de 3 m
+  note: Chaque créature ainsi englobée subit l'attaque d'essaim.
+
+## Rounds suivants
+
+step: Des créatures restent dans l'eau
+  do: Continuer à les entourer et terminer chaque déplacement sur leur espace pour renouveler l'attaque d'essaim
+  note: Le profil fourni ne précise ni la valeur du saignement ni le DD de distraction.
+
+step: Les créatures s'éloignent à la nage
+  do: Les poursuivre à 12 m par déplacement dans toute la zone C, puis les englober dès qu'elles sont accessibles
+  note: L'essaim suit les créatures présentes dans l'eau sans élaborer de stratégie complexe.
+
+step: Une créature rejoint la terre ferme
+  do: Rester dans l'eau et attaquer les créatures qui y sont encore accessibles
+
+## Repli
+
+step: Tant qu'il reste des créatures à combattre dans l'eau
+  do: Combattre jusqu'à la destruction de l'essaim, même lorsque ses points de vie sont très bas
+  note: Aucun seuil de repli ; les mégapiranhas combattent jusqu'à la mort.

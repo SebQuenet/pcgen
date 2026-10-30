@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Helicoprion, requin de taille G, animal aquatique neutre des océans tempérés. Il combat comme un prédateur, en privilégiant une proie isolée ou blessée.
+  Morsure +12 (1d8+10 et 1d4 de saignement) ; allonge de 1,50 m ; espace occupé de 3 m. Nage à 18 m par action de déplacement ; 68 pv ; CA 19 ; initiative +8.
+  Perception +12, perception aveugle à 9 m et odorat aiguisé : il cherche ses proies dans l'eau, même lorsque la visibilité est mauvaise.
+
+step: Une proie est repérée
+  do: S'approcher dans l'eau et privilégier une cible séparée de ses alliés, en gardant accès à l'eau profonde.
+  note: Il ne dispose d'aucune vitesse terrestre ; toute approche et toute poursuite se font à la nage.
+
+## Ouverture
+
+step: La proie est accessible en un déplacement
+  do: Nager jusqu'à 1,50 m de la cible, puis porter une morsure +12 (1d8+10 et 1d4 de saignement).
+
+step: La proie est trop éloignée pour être mordue ce round
+  do: Se rapprocher à la nage ; effectuer un double déplacement, jusqu'à 36 m, si nécessaire.
+  note: Après un double déplacement, il ne porte pas de morsure ce round.
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Porter une morsure par round et concentrer les attaques sur cette même proie.
+  note: Le saignement continue de blesser la cible tant qu'il n'est pas arrêté ; plusieurs morsures ne cumulent pas leurs saignements.
+
+step: La cible s'éloigne dans l'eau
+  do: La poursuivre à la nage et mordre dès qu'un seul déplacement suffit à la rejoindre.
+
+step: La cible sort de l'eau
+  do: Rester immergé et chercher une autre proie accessible.
+
+## Repli
+
+step: À 17 pv ou moins, si la proie résiste encore
+  do: Rompre le combat et rejoindre l'eau profonde ; utiliser l'action de retraite à la nage, jusqu'à 36 m, s'il est menacé au contact.
+  note: Ce seuil est un choix de conduite pour le meneur : le prédateur abandonne une chasse devenue trop coûteuse.

@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Soul Nibbler, bête magique de taille TP, neutre et d'intelligence animale ; 5 pv, CA 15.
+  Morsure +5 (1d3-4 et absorption d'énergie : 1 niveau négatif). Ses dégâts physiques sont faibles ; le danger vient des niveaux négatifs répétés.
+  Marche et escalade à 4,50 m par déplacement ; allonge nulle : il doit entrer dans la case de sa cible pour la mordre.
+
+resource: Absorption d'énergie | illimitée | Chaque morsure réussie inflige 1 niveau négatif ; Vigueur DD 10 après 24 heures pour éliminer ce niveau.
+
+step: Des créatures approchent
+  do: Rester dissimulé dans un abri ou sur une paroi accessible ; observer et flairer avant de s'approcher
+  note: Discrétion +10, Perception +5, odorat, vision dans le noir à 18 m et vision nocturne ; Escalade +10.
+
+step: Plusieurs Soul Nibblers sont présents
+  do: Les faire approcher depuis leurs cachettes, selon la proximité des proies
+  note: L'organisation habituelle réunit 10 à 20 individus ; leur intelligence animale ne justifie pas de manœuvres complexes.
+
+## Ouverture
+
+step: Une proie accessible est à 4,50 m ou moins
+  do: Se déplacer jusque dans sa case et porter une morsure +5
+  note: Entrer dans la case d'un adversaire provoque normalement une attaque d'opportunité ; privilégier une proie qui ne peut pas riposter ainsi.
+
+step: Aucune proie n'est accessible en un déplacement
+  do: Progresser à couvert, en escaladant si le terrain s'y prête, jusqu'à pouvoir approcher
+  note: Il ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: La proie reste dans sa case
+  do: Répéter la morsure chaque round
+  note: Chaque nouvelle morsure réussie ajoute 1 niveau négatif ; le jet de Vigueur intervient après 24 heures.
+
+step: La proie s'éloigne
+  do: La suivre si elle reste accessible, puis mordre si une action d'attaque est encore disponible
+  note: Son allonge nulle ne lui permet pas de porter une attaque d'opportunité lorsqu'elle part.
+
+step: Il subit un sort de nécromancie
+  do: Appliquer son immunité aux sorts de nécromancie
+
+## Repli
+
+step: Points de vie à 2 ou moins et une issue est accessible
+  do: Utiliser l'action de retraite pour rejoindre un abri ou escalader une paroi, jusqu'à 9 m
+  note: Avec seulement 5 pv au maximum, une nouvelle attaque peut le tuer.
+
+step: Aucun passage ne permet la fuite
+  do: Mordre l'adversaire accessible le plus proche

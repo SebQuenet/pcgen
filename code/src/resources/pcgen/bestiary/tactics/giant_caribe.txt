@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Caribe géant, piranha marin de taille M : animal aquatique neutre, prédateur instinctif qui chasse en banc de 5 à 30 individus.
+  13 pv, CA 14 ; morsure +4 (1d6+1), allonge de 1,50 m ; nage à 12 m. Le sang déclenche sa frénésie.
+
+step: Une proie entre dans l'eau
+  do: La repérer avec Perception +10, la vision nocturne et l'odorat développé, puis s'approcher avec le banc.
+  note: Sous l'eau, son odorat détecte les créatures à 27 m et le sang jusqu'à 150 m.
+
+resource: Frénésie | 1 par rencontre | Déclenchée par le sang dans l'eau ; durée de 1 minute, soit 10 rounds.
+
+## Ouverture
+
+step: Une proie est accessible dans l'eau, sans sang détecté
+  do: Nager jusqu'à portée et mordre à +4 (1d6+1).
+  note: Faire converger les membres du banc sur une même proie pour obtenir une première blessure.
+
+step: Du sang est détecté dans l'eau
+  do: Déclencher la frénésie ; les autres caribes géants dans un rayon de 27 m entrent également en frénésie.
+  note: Pendant cet état, morsure +5, CA 15, Réflexes +6 et nage à 15 m ; les dégâts restent de 1d6+1.
+
+## Rounds suivants
+
+step: En frénésie, une proie est à portée au début du tour
+  do: Effectuer une attaque à outrance : deux morsures à +5, chacune infligeant 1d6+1 dégâts.
+  note: La morsure supplémentaire exige une attaque à outrance.
+
+step: La proie s'éloigne dans l'eau
+  do: La poursuivre à la nage, puis porter une seule morsure si le déplacement permet encore une attaque.
+  note: Nage à 15 m et morsure +5 pendant la frénésie ; sinon, nage à 12 m et morsure +4.
+
+step: La frénésie est terminée et une proie reste accessible
+  do: Reprendre les morsures à +4 (1d6+1), une par round.
+  note: La frénésie ne peut plus se déclencher pendant cette rencontre.
+
+## Repli
+
+step: La frénésie est active et des adversaires restent accessibles
+  do: Continuer à les mordre jusqu'à leur mort ou à celle du caribe.
+
+step: Hors frénésie, le caribe est grièvement blessé
+  do: S'éloigner à la nage à 12 m, en quittant la portée des adversaires.
+
+step: Les proies ont quitté l'eau et sont hors de portée
+  do: Rester dans l'eau ; abandonner la poursuite si aucune proie n'est accessible.

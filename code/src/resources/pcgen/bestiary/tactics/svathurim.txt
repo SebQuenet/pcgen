@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Svathurim, humanoïde monstrueux du froid de taille TG, chaotique mauvais ; FP 11, 147 pv, CA 26. Combattant rapide qui ouvre les lignes ennemies par ses charges et ses passages en force.
+  Lance de maître +22/+17/+12 (3d6+13, x3), allonge de 6 m ; cornes +21 (2d6+9) et 2 sabots +16 (1d8+4), allonge de 3 m. Arc long composite de maître +16/+11/+6 (3d6+9, x3).
+  Déplacement de 15 m ; espace occupé de 4,50 m. Immunisé contre le froid, vulnérable au feu : les dégâts de feu subis augmentent de moitié.
+
+resource: Flèches | 40 | une par attaque à l'arc
+
+note: Course céleste — skyrunner
+  Pendant une charge, une course ou un double déplacement, il peut marcher dans l'air comme avec marche dans les airs ; monter ou descendre reste soumis aux limites de ce sort.
+  À la fin de chaque round d'utilisation, test de Constitution +5, DD 14, puis +2 par round consécutif ; un échec le fatigue pendant 1 minute. Revenir au sol ramène le DD à 14 sans supprimer la fatigue ou l'épuisement.
+  Réserver ce pouvoir aux franchissements utiles et revenir au sol rapidement ; la fatigue interdit de courir et de charger.
+
+step: Les ennemis approchent
+  do: Les repérer avec Perception +19 et la vision dans le noir à 18 m ; choisir un espace assez large pour sa carrure et une ligne de charge dégagée
+  note: Garder une issue de repli. Si des alliés sont présents, leur laisser tenir le front pendant qu'il menace un flanc.
+
+## Ouverture
+
+step: Une cible prioritaire est accessible par une charge
+  do: Charger le tireur, le lanceur de sorts ou le porteur de feu accessible, avec au plus 30 m de déplacement ; porter une seule attaque de lance à +24, pour 3d6+13 dégâts
+  note: S'arrêter dès que la lance atteint la cible ; CA 24 jusqu'au prochain tour. La charge ne donne pas d'attaque à outrance.
+
+step: Une créature barre la ligne de charge vers la cible choisie
+  do: Utiliser Charge Through pour tenter gratuitement un passage en force contre cet unique obstacle, puis poursuivre la charge si la manœuvre réussit
+  note: BMO de passage en force +29, avec le bonus de charge de +2. L'obstacle ne peut pas simplement s'écarter ; si la manœuvre échoue, la charge s'arrête juste devant lui.
+  note: Si le résultat dépasse sa DMD d'au moins 5, il tombe à terre et provoque des attaques d'opportunité grâce à Greater Overrun ; le svathurim reste limité à une attaque d'opportunité par round.
+
+step: La charge est impossible et les adversaires restent à distance
+  do: Tirer à l'arc ; s'il reste immobile, effectuer les trois attaques à +16/+11/+6, sinon se déplacer puis tirer une seule flèche à +16
+  note: Viser de préférence une cible qui n'est pas engagée en mêlée pour éviter le malus de tir dans la mêlée.
+
+## Rounds suivants
+
+step: Une cible reste dans la zone de frappe de la lance, à 4,50 m ou 6 m
+  do: Effectuer une attaque à outrance à la lance, +22/+17/+12, chaque coup infligeant 3d6+13 dégâts
+  note: Garder cette distance et frapper les ennemis qui quittent une case menacée sans précaution, dans la limite d'une attaque d'opportunité par round.
+
+step: Un adversaire est trop proche pour la lance, à 3 m ou moins
+  do: Employer les cornes +21 (2d6+9) et les deux sabots +16 (1d8+4 chacun) lors d'une attaque à outrance
+  note: Si un pas de placement de 1,50 m suffit à remettre la cible à portée de lance, préférer ce pas puis les trois attaques de lance.
+
+step: Les attaques touchent facilement et aucune manœuvre décisive n'est nécessaire
+  do: Activer Attaque en puissance pour augmenter les dégâts de mêlée
+  note: Le malus est de −4 aux attaques et aux manœuvres jusqu'au prochain tour ; laisser ce don inactif pour privilégier la précision d'un passage en force ou d'une bousculade.
+
+step: Un ennemi peut être repoussé vers une mauvaise position ou hors d'un passage
+  do: Tenter une bousculade à +27 en action simple, sans provoquer d'attaque d'opportunité de sa part
+  note: Choisir cette manœuvre quand déplacer l'adversaire vaut davantage qu'une attaque à outrance.
+
+step: Une cible hésitante est à 9 m ou moins, le voit et l'entend, mais reste difficile à atteindre
+  do: La démoraliser avec Intimidation +25 en action simple, puis profiter de son état secoué pour poursuivre l'assaut
+  note: Intimidation ne remplace pas une attaque par une action gratuite et ne force pas la cible à fuir.
+
+step: Un obstacle ou un vide empêche d'atteindre une cible autrement accessible
+  do: Utiliser skyrunner pendant une charge ou un double déplacement pour franchir l'obstacle, puis chercher à retrouver le sol
+  note: Ne pas rester en l'air pour tirer ou effectuer une attaque à outrance ; ce pouvoir dépend des modes de déplacement indiqués.
+
+## Repli
+
+step: Points de vie sous 40, ou feu ennemi impossible à contenir
+  do: Rompre le contact par une retraite pouvant atteindre 30 m, puis utiliser sa vitesse pour rejoindre un abri ou des alliés
+  note: La retraite protège seulement la sortie de sa case de départ ; choisir un trajet évitant les autres cases menacées.
+
+step: Il est dégagé mais des poursuivants lui ferment la route terrestre
+  do: Employer un double déplacement avec skyrunner pour franchir un vide ou contourner l'obstacle par les airs, puis revenir au sol
+  note: Continuer les tests de Constitution ; s'il est fatigué, abandonner les charges et la course et privilégier le double déplacement.

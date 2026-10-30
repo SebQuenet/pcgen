@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Vieux dragon gris, dragon aquatique de taille TG, neutre mauvais, solitaire des côtes chaudes. Intelligent et mobile, il combine souffle de feu, magie défensive et attaques naturelles.
+  212 pv, CA 33, CA de contact 8, résistance à la magie 24 ; immunisé contre le sommeil et la paralysie. Sa protection contre les attaques de contact repose surtout sur ses sorts.
+  Morsure +25 (2d8+13, critique 19–20), 2 griffes +24 (2d6+9 chacune), 2 ailes +22 (1d8+4 chacune), coup de queue +22 (2d6+13).
+  Espace occupé : 4,50 m ; allonge : 3 m, ou 4,50 m avec la morsure. Marche à 18 m, vol à 60 m de manœuvrabilité moyenne, nage à 12 m.
+  Souffle : ligne de 30 m, 16d6 de feu, Réflexes DD 24 pour moitié. Présence terrifiante : rayon de 72 m, Volonté DD 21. Niveau de lanceur de sorts : 9.
+
+resource: Souffle de feu | recharge non précisée dans le bloc | ne le réutiliser que lorsqu'il est disponible
+resource: Sorts de niveau 4 | 4/jour au total | porte dimensionnelle, invisibilité suprême ; réserver un lancement pour la fuite
+resource: Sorts de niveau 3 | 7/jour au total | dissipation de la magie, forme gazeuse, protection contre les énergies destructives
+resource: Sorts de niveau 2 | 7/jour au total | flou, splendeur de l'aigle, localisation d'objet, image miroir
+resource: Sorts de niveau 1 | 7/jour au total | mains brûlantes (DD 14), projectile magique, protection contre le Bien, brume de dissimulation, bouclier
+resource: Sorts de niveau 0 | à volonté | notamment détection de la magie ; conserver les autres tours de magie pour leur utilité
+
+step: Il repère des intrus avant d'être engagé
+  do: Observer depuis un couvert et choisir un trajet de vol qui permette d'aligner plusieurs ennemis ; garder une issue vers le large ou un abri connu
+  note: Utiliser Perception +28 et Psychologie +28 pour apprécier la situation ; ne pas supposer une embuscade réussie avec seulement Discrétion +12
+
+step: Plusieurs rounds de préparation sont disponibles
+  do: Lancer bouclier, puis image miroir ; ajouter flou si les ennemis peuvent facilement le prendre pour cible
+  note: Chaque sort demande un lancement distinct. Contre une énergie identifiée chez l'ennemi, consacrer un autre lancement à protection contre les énergies destructives ; aucune immunité au feu n'est indiquée
+
+step: L'engagement est imminent
+  do: Lancer invisibilité suprême juste avant de s'exposer
+  note: Sa durée est de 9 rounds ; les attaques ne la dissipent pas. Ne pas la lancer longtemps avant l'arrivée des adversaires
+
+## Ouverture
+
+step: Il attaque ou survole des adversaires dans un rayon de 72 m
+  do: Appliquer la présence terrifiante, Volonté DD 21
+  note: Exploiter la dispersion provoquée par la peur sans compter sur l'échec de tous les adversaires
+
+step: Le souffle est disponible et plusieurs ennemis peuvent être alignés
+  do: Faire une attaque en vol et souffler pendant le déplacement : ligne de 30 m, 16d6 de feu, Réflexes DD 24 pour moitié ; poursuivre le vol vers une position favorable
+  note: Attaque en vol permet cette action simple pendant le déplacement, sans permettre une attaque à outrance. Éviter les allonges ennemies : ce don ne supprime pas les attaques d'opportunité
+
+step: Le souffle ne présente pas de bonne cible et un adversaire est isolé
+  do: Effectuer un passage avec une morsure à 4,50 m, puis poursuivre le déplacement
+  note: Privilégier une cible qui ne peut pas facilement riposter à cette distance ; éviter de finir le passage entouré
+
+step: Il a été surpris sans préparation et reste hors du contact
+  do: Consacrer son action simple à image miroir, ou à invisibilité suprême si cette protection permet aussi de se replacer
+  note: Rejoindre une position favorable avec son déplacement ; reporter souffle ou morsure au round suivant
+
+## Rounds suivants
+
+step: Une cible prioritaire est à 3 m ou moins et il peut rester sur place
+  do: Porter l'attaque à outrance : morsure, deux griffes, deux ailes et coup de queue, avec les bonus et dégâts du profil
+  note: Concentrer les coups sur une cible pour la neutraliser. Un pas de placement de 1,50 m reste possible ; un déplacement ordinaire empêche cette attaque à outrance
+
+step: L'armure adverse est facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts des attaques naturelles
+  note: Y renoncer si les attaques manquent trop souvent ; les bonus du profil sont ceux sans cette option
+
+step: Les adversaires se regroupent et le souffle est de nouveau disponible
+  do: Reprendre de la distance ou un angle de vol permettant une nouvelle ligne de 30 m, puis souffler si l'action simple est encore disponible
+  note: Viser plusieurs cibles ; ne pas insister sur le feu contre une protection qui a manifestement absorbé les premières flammes
+
+step: Un sort ennemi empêche ses attaques d'être efficaces
+  do: Tenter dissipation de la magie sur cette protection
+  note: Cette action remplace son souffle ou ses attaques du round ; privilégier une protection déterminante, comme une défense contre le feu ou un effet qui empêche le contact
+
+step: Une cible blessée reste hors de portée et le souffle est indisponible ou inefficace
+  do: Employer projectile magique si la cible n'a pas manifesté de protection contre ce sort
+  note: Ne pas dépenser de lancement en mains brûlantes quand le souffle peut atteindre les mêmes ennemis dans de meilleures conditions
+
+step: Ses protections disparaissent et les attaques de contact deviennent dangereuses
+  do: Rompre le contact par le mouvement ou un passage en vol ; renouveler image miroir ou invisibilité suprême une fois hors des allonges menaçantes
+  note: Choisir une protection adaptée aux attaques observées et conserver le dernier lancement de niveau 4 pour porte dimensionnelle
+
+## Repli
+
+step: Il tombe à 70 pv ou moins, ou risque d'être abattu avant son prochain tour
+  do: Utiliser porte dimensionnelle vers un abri connu ou une position hors d'atteinte
+  note: Il ne peut plus entreprendre d'autre action après ce sort pendant ce tour ; poursuivre la fuite au round suivant
+
+step: Porte dimensionnelle n'est plus disponible
+  do: Fuir en vol à 60 m par déplacement, ou gagner l'eau et nager à 12 m par déplacement si cette route échappe mieux aux poursuivants
+  note: Si un lancement de niveau 1 reste disponible, brume de dissimulation peut masquer son départ ; son incantation consomme l'action simple du round
+
+step: Il est à couvert et une fissure offre une sortie inaccessible à sa taille normale
+  do: Prendre une forme gazeuse et s'échapper par l'ouverture
+  note: Réserver cette solution à une fuite discrète par un passage étroit ; sa lenteur convient mal à une poursuite à découvert

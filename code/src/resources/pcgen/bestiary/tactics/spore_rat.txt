@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Rat à spores, petite plante fongique d'intelligence animale, au comportement défensif. 13 pv, CA 16 ; vision nocturne, Perception +8.
+  Morsure +6 (1d4-2 et spores), au contact à 1,50 m ; une créature vivante mordue doit réussir un jet de Vigueur DD 11 ou être nauséeuse pendant 1 round.
+  Déplacement au sol et escalade à 6 m ; Escalade +12. Son nuage de spores affaiblit les adversaires proches et facilite sa fuite.
+
+resource: Nuage de spores | 2/jour | rayon de 1,50 m ; dure 1 round ; créatures adjacentes : Vigueur DD 11 ou 1d4 points d'affaiblissement temporaire de Force
+
+step: Une menace est repérée avant le contact
+  do: Se tenir près d'une voie de fuite, notamment d'une paroi qu'il peut escalader.
+  note: Il cherche à échapper à la menace ; son intelligence de 2 ne justifie pas de manœuvres complexes.
+
+## Ouverture
+
+step: Un adversaire arrive à son contact et un nuage est disponible
+  do: Libérer un nuage de spores pour décourager l'approche.
+  note: Chaque créature adjacente doit réussir un jet de Vigueur DD 11 ou subir 1d4 points d'affaiblissement temporaire de Force ; le nuage dure 1 round.
+
+step: Il est acculé au contact et ne libère pas de nuage ce round
+  do: Mordre l'adversaire qui lui barre le passage : +6, dégâts 1d4-2 et spores.
+  note: Si la cible est vivante, Vigueur DD 11 annule la nausée ; en cas d'échec, elle est nauséeuse pendant 1 round.
+
+## Rounds suivants
+
+step: Il reste acculé et un nuage est encore disponible
+  do: Libérer le nuage pour affaiblir les créatures adjacentes.
+  note: Le nuage n'inflige pas la nausée ; celle-ci provient uniquement des spores de la morsure.
+
+step: Il reste acculé sans utiliser de nuage
+  do: Continuer à mordre l'adversaire au contact qui empêche sa fuite.
+  note: Chaque morsure contre une créature vivante impose un nouveau jet de Vigueur DD 11 contre 1 round de nausée.
+
+## Repli
+
+step: Une voie de fuite est accessible, quels que soient ses points de vie restants
+  do: Rompre le combat ; se retirer prudemment s'il est menacé, puis fuir au sol ou escalader à 6 m par action de déplacement.
+  note: Il dispose de 13 pv et cherche à survivre dès qu'il le peut, sans attendre un seuil de blessures.
+
+step: Un adversaire nauséeux lui laisse une issue
+  do: Profiter du round de nausée pour s'éloigner et gagner une paroi accessible.
+  note: La nausée ne paralyse pas la cible ; elle peut encore effectuer une action de mouvement.

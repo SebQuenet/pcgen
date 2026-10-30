@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Hala, démon des tempêtes chaotique mauvais, solitaire, cupide et pillard ; éclaireur de Pazuzu qui préfère harceler depuis les airs.
+  37 pv, CA 18 ; vol à 18 m par round, manœuvrabilité parfaite ; déplacement au sol à 9 m. Allonge de 1,50 m ; 2 griffes +9 (1d4+3 chacune), morsure +9 (1d6+3).
+  Il contrôle les déplacements avec ses vents, puis fond sur une cible isolée.
+
+note: Défenses
+  RD 10/fer froid ou Bien ; immunité à l’électricité et au poison ; résistance de 10 à l’acide, au froid et au feu ; résistance à la magie 15.
+  Son aura le protège des autres effets de vent et agit comme un mur de vent contre les projectiles et les gaz : les flèches et carreaux ordinaires sont déviés, les autres armes à distance subissent les limites de ce sort.
+  Volonté +1 : se méfier des lanceurs de sorts capables de le contrôler.
+
+resource: Modification des vents | à volonté | DD 13 ; préparation de 1 minute, zone fixe de 3 m de rayon, durée 5 heures ; modifie d’un cran les vents naturels faibles ou modérés, sans agir sur les vents magiques
+resource: Bourrasque | 3/jour | Vigueur DD 14 ; ligne de 18 m, durée 1 round
+resource: Rivière de vent | 3/jour | Vigueur DD 16 ; ligne de 36 m, diamètre de 1,50 m, durée 5 rounds
+resource: Contrôle des vents | 1/jour | Vigueur DD 17 ; rayon maximal de 60 m, hauteur de 12 m, durée 50 minutes ; au NLS 5, changement de force limité à un cran
+resource: Convocation | 1/jour | 40 % de chances de convoquer 1 hala ; prévoir le combat même en cas d’échec
+
+step: Intrus repérés avant l’affrontement
+  do: Observer depuis les hauteurs en utilisant Discrétion +12 et Perception +8, puis choisir un passage où les ennemis devront s’aligner.
+  note: Vision dans le noir à 18 m ; télépathie à 30 m pour coordonner un éventuel hala convoqué.
+
+step: Combat difficile imminent et temps de préparation disponible
+  do: Tenter la convocation, puis employer contrôle des vents si renforcer le vent existant gêne effectivement les intrus.
+  note: Orienter le vent contre leur progression ; l’aura protège le hala de ses propres vents. Chaque pouvoir demande une action distincte.
+
+## Ouverture
+
+step: Plusieurs adversaires sont alignés
+  do: Lancer rivière de vent sur leur axe de progression, depuis les airs et hors de leur allonge.
+  note: À l’apparition, 4d6 dégâts non létaux et cibles à terre ; Vigueur DD 16 réduit les dégâts de moitié et évite la chute. La ligne garde sa position et sa direction pendant 5 rounds.
+
+step: Aucun alignement intéressant, mais une cible vulnérable est accessible
+  do: Effectuer une attaque en vol : approcher, porter une morsure +9 (1d6+3), puis poursuivre le déplacement pour reprendre de la hauteur, dans la limite de 18 m au total.
+  note: Une seule attaque pendant ce passage ; ce don ne supprime pas les attaques d’opportunité. Éviter les ennemis à grande allonge.
+
+## Rounds suivants
+
+step: Un ennemi commence son tour dans la rivière de vent
+  do: Appliquer Vigueur DD 16 : en cas d’échec, déplacement de 6 m dans le sens du vent, 2d6 dégâts non létaux et chute à terre ; en cas de réussite, seulement 1d6 dégâts non létaux.
+  note: Cet effet persiste sans nouvelle action du hala ; il peut harceler ailleurs. Les créatures du sous-type air et celles sous liberté de mouvement ne sont pas affectées.
+
+step: Les ennemis sortent de la ligne et se regroupent ailleurs
+  do: Se repositionner en vol et dépenser une nouvelle rivière de vent seulement si elle touche plusieurs cibles ou ferme un passage utile.
+
+step: Un poursuivant approche ou des adversaires dépendent de leurs torches
+  do: Employer bourrasque pour gêner l’approche, renverser les petites créatures ou éteindre les flammes non protégées, puis s’éloigner en vol.
+  note: Vigueur DD 14 ; la bourrasque dure 1 round et n’inflige pas directement de dégâts à un humanoïde de taille moyenne.
+
+step: Une cible isolée est déjà au contact et ses alliés ne peuvent pas intervenir
+  do: Effectuer une attaque à outrance : 2 griffes +9 (1d4+3 chacune) et morsure +9 (1d6+3).
+  note: Rester sur place pour ces trois attaques ; reprendre les passages avec une seule morsure si plusieurs ennemis menacent de l’encercler.
+
+step: Le hala subit les dégâts d’un coup critique
+  do: Déclencher automatiquement le vent vengeur vers l’auteur du critique, sur une ligne de 18 m, comme une bourrasque.
+  note: La décharge électrique impose Réflexes DD 14 ou 3d6 dégâts d’électricité aux créatures dans la zone ou qui y entrent. Ce déclenchement ne dépense aucune bourrasque quotidienne ; un attaquant au-delà de 18 m reste hors de portée.
+
+## Repli
+
+step: Points de vie sous 12, ou adversaire capable de neutraliser ses défenses
+  do: Rompre le contact et fuir par les airs ; employer l’action de retraite si nécessaire pour quitter une case menacée.
+  note: Un double déplacement en vol permet de parcourir 36 m ; lancer un pouvoir et se déplacer limite normalement le déplacement du round à 18 m.
+
+step: Un dragon ou un aigle prend le hala pour cible
+  do: Privilégier immédiatement la distance et chercher un refuge qui coupe la poursuite aérienne.
+  note: Ces créatures gagnent +2 aux jets d’attaque et de dégâts contre lui ; sa haine ne justifie pas de leur offrir un duel prolongé.

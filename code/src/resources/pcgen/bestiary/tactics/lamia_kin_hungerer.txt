@@ -1,0 +1,97 @@
+## Avant le combat
+
+note: Profil
+  Hungerer, humanoïde monstrueux de taille TG apparenté aux lamies, chaotique mauvais ; FP 15, 220 PV, CA 31, CA de contact 10.
+  Morsure +29 : 2d8+10, critique 19–20/×4, plus 2d6 d'acide et diminution permanente de 2 points de Sagesse. Deux griffes +29 : chacune 1d8+10 et diminution permanente de 2 points de Sagesse.
+  Espace et allonge de 4,50 m ; déplacement terrestre de 3 m, vol permanent de 18 m avec une bonne manœuvrabilité. Privilégier les approches aériennes pour amener ses trois attaques sur une même proie.
+  Puanteur dans un rayon de 9 m : Vigueur DD 25 ou état fiévreux. Vision dans le noir à 27 m, vision nocturne et Perception +28 pour repérer les intrus.
+
+note: Défenses
+  Réduction des dégâts 10, surmontée par une attaque à la fois perforante et en fer froid ; immunité à l'acide et au poison ; résistances à l'électricité 10 et au feu 10 ; résistance à la magie 26.
+  Il ne peut pas être renversé. Sa CA de contact 10 invite à neutraliser rapidement les lanceurs de sorts qui l'attaquent au contact magique.
+
+resource: Vol | permanent | 18 m par déplacement, bonne manœuvrabilité
+resource: Graisse | à volonté | Réflexes DD 15
+resource: Image accomplie | à volonté | Volonté DD 17 en cas d'interaction ; maintenir l'illusion demande de se concentrer
+resource: Ventriloquie | à volonté | Volonté DD 15
+resource: Charme-monstre | 3/jour | Volonté DD 18
+resource: Bourrasque | 3/jour | Vigueur DD 16
+resource: Nuage nauséabond à incantation rapide | 3/jour | action rapide, Vigueur DD 17 ; rayon de 6 m
+resource: Suggestion | 3/jour | Volonté DD 17 ; la cible doit comprendre la proposition
+resource: Sommeil profond | 1/jour | Volonté DD 17 ; affecte au maximum 10 DV de créatures
+resource: Charme-monstre de groupe | 1/jour | Volonté DD 22 ; au maximum 30 DV au total, ou une créature sans limite de DV
+resource: Image miroir | 1/jour | protection contre les attaques qui exigent un jet d'attaque
+
+step: Intrus repérés avant qu'ils atteignent sa position
+  do: Choisir un espace permettant de voler et utiliser image accomplie ou ventriloquie pour attirer une proie à l'écart de ses compagnons.
+  note: Ces leurres ne constituent pas des obstacles physiques ; son odeur peut révéler sa proximité à 9 m.
+
+step: Une victime peut être approchée sans hostilité immédiate
+  do: Employer charme-monstre, puis une suggestion raisonnable pour l'inciter à s'écarter du groupe ou à patienter ailleurs.
+  note: Le charme rend amical ; il ne permet pas d'ordonner automatiquement d'attaquer ses compagnons. Épargner la victime charmée pour conserver cet avantage.
+
+step: Un combat paraît imminent et il dispose d'un moment de préparation
+  do: Activer image miroir, puis se placer en vol à proximité de la zone où il compte engager les intrus.
+  note: Éviter de gaspiller cette protection longtemps avant l'arrivée des ennemis.
+
+## Ouverture
+
+step: Plusieurs ennemis sont réunis et peuvent encore être abordés avant les premières attaques
+  do: Employer charme-monstre de groupe, Volonté DD 22, en choisissant les cibles dans la limite de 30 DV et en respectant un écart maximal de 9 m entre elles.
+  note: Choisir cette ouverture à la place d'une attaque immédiate ; une créature déjà menacée par lui ou ses alliés bénéficie du bonus de sauvegarde du charme.
+
+step: Le combat est engagé et plusieurs ennemis respirent dans une même zone
+  do: Déployer un nuage nauséabond en action rapide sur les tireurs ou lanceurs de sorts, Vigueur DD 17, puis engager une proie accessible.
+  note: Les victimes qui échouent sont nauséeuses ; son immunité au poison le protège du gaz. Le brouillard gêne aussi sa propre vision : chercher une cible visible au bord du nuage plutôt que frapper à l'aveugle.
+
+step: Une proie est déjà à 4,50 m ou moins, sans déplacement autre qu'un pas de 1,50 m
+  do: Effectuer une attaque à outrance : morsure et deux griffes, toutes à +29, de préférence sur la même cible.
+  note: Trois touches retirent au total 6 points de Sagesse en plus des dégâts ; cette diminution fragilise ensuite les sauvegardes de Volonté.
+
+step: Il doit se déplacer pour atteindre sa première victime
+  do: Voler jusqu'à 18 m, puis porter une morsure avec Frappe décisive : +29, 4d8+10 plus 2d6 d'acide et diminution permanente de 2 points de Sagesse.
+  note: Il s'agit d'un déplacement suivi d'une attaque simple ; il ne peut pas y ajouter les deux griffes d'une attaque à outrance.
+
+## Rounds suivants
+
+step: Une proie reste à portée
+  do: Répéter l'attaque à outrance et concentrer les touches sur la victime déjà blessée ou affaiblie en Sagesse.
+  note: Conserver autant que possible la distance de 4,50 m contre les adversaires dont l'allonge est moindre. Utiliser la morsure pour une attaque d'opportunité provoquée ; il n'en possède normalement qu'une par round.
+
+step: La cible est facile à toucher
+  do: Activer Attaque en puissance pour échanger de la précision contre des dégâts supplémentaires.
+  note: Face à une CA élevée, conserver les attaques à +29 : chaque touche reste précieuse pour diminuer la Sagesse.
+
+step: Un critique est confirmé
+  do: Appliquer le multiplicateur de la morsure si elle a porté le coup, puis l'effet du don Staggering Critical pour faire chanceler la victime.
+  note: Critical Focus ajoute +4 au jet de confirmation. Le multiplicateur ×4 de la morsure ne multiplie ni les 2d6 d'acide ni la diminution de Sagesse.
+
+step: Une victime affaiblie en Sagesse peut être neutralisée sans abandonner une attaque à outrance décisive
+  do: Employer suggestion, Volonté DD 17, pour lui proposer une retraite ou une mise à l'abri présentée comme raisonnable.
+  note: Donner la proposition en commun, en abyssal, en géant ou en thassilonien selon ce qu'elle comprend. Éviter les instructions manifestement suicidaires.
+
+step: Les ennemis se regroupent ou de nouveaux lanceurs de sorts restent à distance
+  do: Employer une nouvelle utilisation du nuage nauséabond rapide, puis attaquer normalement si une cible reste à portée.
+  note: Ne lancer qu'un pouvoir rapide par round et tenir le compte des trois utilisations quotidiennes. Les créatures immunisées au poison ne sont pas neutralisées par le gaz.
+
+step: Un passage au sol canalise les poursuivants
+  do: Lancer graisse, Réflexes DD 15, sur leur trajet, puis exploiter le vol pour rester libre de ses déplacements.
+  note: Cette action remplace son attaque du round ; privilégier cette option pour séparer les ennemis plutôt que lorsqu'une attaque à outrance est possible.
+
+step: Des adversaires faibles totalisant au plus 10 DV offrent une occasion utile
+  do: Employer sommeil profond, Volonté DD 17, pour les retirer du combat.
+  note: Réserver ce pouvoir aux petites créatures d'accompagnement ; il ne permet pas d'endormir un adversaire de plus de 10 DV.
+
+step: Un brouillard bloque une ligne de vue dont il a besoin
+  do: Employer bourrasque pour dégager cette ligne, en évitant de dissiper un nuage qui neutralise encore des ennemis.
+  note: Bourrasque peut également gêner de petits adversaires ; Vigueur DD 16 lorsque le sort exige une sauvegarde.
+
+## Repli
+
+step: Il risque d'être abattu avant sa prochaine attaque et une issue aérienne reste accessible
+  do: Utiliser un dernier nuage nauséabond rapide pour gêner les poursuivants, puis effectuer un retrait en vol vers une position hors de leur portée.
+  note: Son vol de 18 m par déplacement permet un retrait allant jusqu'à 36 m ; seule la case de départ bénéficie de la protection du retrait contre les attaques d'opportunité. Choisir une trajectoire qui évite les autres zones menacées.
+
+step: La poursuite continue après qu'il a rompu le contact
+  do: Mettre des obstacles entre lui et les poursuivants ; employer graisse sur leur passage ou un leurre d'image accomplie depuis une position sûre.
+  note: Ces pouvoirs demandent une action et ralentissent sa fuite. Il ne dispose d'aucun soin dans ce profil : une nouvelle attaque ne rétablit pas ses PV.

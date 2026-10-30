@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Héraut de Tsathogga, aberration chaotique mauvaise de taille TG, FP 15 ; 231 pv, CA 27. Prédateur massif des marais chauds, il immobilise ses proies avant de les engloutir.
+  Morsure +21 (2d6+7 et étreinte), 10 tentacules +20 (1d8+3 et paralysie), langue +20 (1d6+3 et étreinte).
+  Allonge de 3 m, ou 9 m avec la langue ; espace occupé de 4,50 m. Marche et nage à 9 m ; vision dans le noir à 18 m.
+
+note: Défenses
+  Réduction des dégâts 10/bien ; résistance au son 15. CA de contact 11 : les attaques de contact restent un point faible malgré sa résistance physique.
+
+note: Capacités non détaillées
+  Le rugissement (bellow) et la faiblesse bloated sont mentionnés sans leurs règles. Ne leur attribuer aucun effet sans disposer de leur description.
+
+step: Des intrus approchent du marais
+  do: Se dissimuler derrière la végétation ou un obstacle, près d'un passage étroit et d'une voie de fuite aquatique
+  note: Discrétion +15 et Perception +34 ; chercher une position permettant de saisir un intrus avec la langue avant que tout le groupe puisse l'entourer
+
+## Ouverture
+
+step: Un adversaire se trouve déjà à 3 m ou moins et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance avec la morsure, les 10 tentacules et la langue
+  note: Concentrer les tentacules sur les adversaires encore capables d'agir ; leur paralysie dure 1d6+4 rounds, DD 26
+
+step: Aucun adversaire n'est à 3 m, mais une cible se trouve à 9 m ou moins
+  do: Attaquer avec la langue +20 (1d6+3 et étreinte), en privilégiant une cible isolée
+  note: Cette allonge permet d'engager une proie avant qu'elle atteigne les tentacules
+
+step: Tous les adversaires sont à plus de 9 m
+  do: Avancer ou nager vers le plus proche en utilisant les obstacles du marais ; attaquer avec la langue si la cible devient accessible après le déplacement
+  note: Après un déplacement ordinaire, porter une seule attaque ; réserver l'attaque à outrance aux tours où il peut rester en place
+
+## Rounds suivants
+
+step: Des adversaires actifs restent à portée des tentacules
+  do: Répéter l'attaque à outrance et répartir les tentacules pour chercher à paralyser les menaces les plus proches
+  note: Dès qu'une cible est paralysée, consacrer les attaques encore disponibles aux ennemis capables de riposter
+
+step: Une proie est agrippée par la morsure et peut être engloutie
+  do: Tenter de l'engloutir
+  note: Engloutissement : 2d6+7 dégâts plus 2d6 dégâts d'acide ; intérieur de CA 18 et 23 pv
+
+step: Une proie est agrippée par la langue
+  do: Exploiter l'étreinte pour la retenir et chercher à la mettre à portée de la morsure et des tentacules
+  note: Ne pas traiter une prise par la langue comme une proie déjà tenue dans la gueule pour l'engloutissement
+
+step: Les adversaires se dispersent ou se dégagent
+  do: Poursuivre une seule cible accessible, en marchant ou en nageant, puis reprendre les attaques à outrance dès que possible
+  note: Éviter de multiplier les déplacements lorsque plusieurs ennemis sont déjà à portée : ses nombreuses attaques font sa force
+
+## Repli
+
+step: Points de vie à 60 ou moins et aucun adversaire ne paraît pouvoir être rapidement neutralisé
+  do: Se retirer vers l'eau et nager derrière la végétation ou un obstacle pour couper les lignes de vue
+  note: Nage à 9 m ; utiliser Discrétion +15 une fois à couvert
+
+step: Un poursuivant bloque la fuite
+  do: Chercher à le paralyser avec les tentacules, puis reprendre le repli dès qu'un passage se libère

@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Golem esquif, créature artificielle extraplanaire neutre de taille TG, sans intelligence : 122 pv, CA 21. Il encaisse les attaques et combat aussi dans l'eau.
+  Bâton +23/+18/+13, 2d6+15 dégâts par coup et paralysie pendant 2d4 rounds, DD 17. Allonge de 3 m ; espace occupé de 4,50 m.
+  Souffle électrique en cône de 9 m : 7d6 dégâts, Réflexes DD 17 pour réduire de moitié, cinq fois par jour.
+  Déplacement terrestre de 12 m, nage de 15 m ; vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses
+  Réduction des dégâts 10/adamantium, résistance au feu 20, immunité à la magie et immunités des créatures artificielles.
+
+resource: Souffle électrique | 5/jour | cône de 9 m, 7d6 électricité, Réflexes DD 17 pour moitié
+resource: Passe-muraille | 1/jour | pouvoir magique, NLS 15
+resource: Convocation | 1/jour | niveau 8, 35 % de chances de convoquer 1d4 charonadaemons, NLS 15
+
+step: Il a reçu une consigne de garde près de l'eau
+  do: Occuper l'accès à défendre et laisser les intrus entrer dans son allonge de 3 m.
+  note: Son absence d'intelligence appelle des consignes simples et des réactions répétitives.
+
+note: Homme à la mer
+  Le bloc mentionne « man overboard » sans préciser son déclencheur ni ses effets.
+
+## Ouverture
+
+step: Plusieurs ennemis sont dans un même cône de 9 m
+  do: Utiliser le souffle électrique pour les toucher ensemble.
+  note: Cette utilisation consomme une des cinq charges quotidiennes.
+
+step: Les ennemis sont encore hors de portée du souffle et la convocation est disponible
+  do: Tenter de convoquer 1d4 charonadaemons.
+  note: La tentative n'a que 35 % de chances de réussir ; un échec consomme aussi l'unique utilisation quotidienne.
+
+step: Un ennemi est à portée du bâton et le golem n'a pas encore utilisé son action du round
+  do: Porter une attaque de bâton à +23 ; effectuer l'attaque à outrance +23/+18/+13 si aucun déplacement n'est nécessaire.
+  note: Chaque coup inflige 2d6+15 dégâts et peut paralyser pendant 2d4 rounds, DD 17.
+
+step: Aucun ennemi n'est à portée et son ordre impose de les intercepter
+  do: Avancer de 12 m au maximum, ou nager de 15 m au maximum, puis frapper à +23 si une cible entre dans son allonge.
+
+## Rounds suivants
+
+step: Plusieurs ennemis restent groupés dans le cône et il reste des utilisations du souffle
+  do: Réutiliser le souffle électrique.
+  note: Compter chaque utilisation ; le bloc n'indique aucun délai de recharge entre deux souffles.
+
+step: Un ennemi reste à portée et le golem n'utilise pas le souffle ce round
+  do: Répéter l'attaque à outrance au bâton, +23/+18/+13, pour 2d6+15 dégâts par coup et paralysie, DD 17.
+  note: S'il doit se déplacer pour atteindre sa cible, limiter le bâton à une attaque à +23 après le déplacement.
+
+step: Un adversaire paralysé reste à portée
+  do: Continuer à le frapper conformément à la consigne d'attaque.
+  note: La paralysie dure 2d4 rounds ; elle ne supprime pas la nécessité de résoudre les attaques et les dégâts.
+
+step: Un mur empêche d'atteindre l'objectif assigné et passe-muraille est disponible
+  do: Utiliser passe-muraille pour ouvrir un passage, puis reprendre la progression au round suivant.
+  note: Décompter l'unique utilisation quotidienne de ce pouvoir.
+
+## Repli
+
+step: Aucune consigne de retrait ne s'applique
+  do: Continuer à défendre le passage ou à attaquer jusqu'à sa destruction.
+  note: La perte de points de vie ne déclenche pas à elle seule une fuite chez ce golem sans intelligence.
+
+step: Une consigne de retrait s'applique
+  do: Gagner l'itinéraire prévu ; utiliser la nage à 15 m par déplacement si cet itinéraire passe par l'eau.
+  note: Si un mur bloque la retraite et que passe-muraille reste disponible, consacrer une action à ouvrir le passage.

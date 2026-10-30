@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Géant des volcans, humanoïde de taille TG, chaotique neutre, FP 14 : combattant massif et courageux, 201 pv, CA 29, déplacement de 12 m.
+  Pique gargantuesque +24/+19/+14 (4d6+16, critique x3) ; sinon deux coups +24 (2d6+11 chacun). Rocher +15 (2d6+16 plus 1d6 de feu), facteur de portée de 36 m.
+  Allonge naturelle de 4,50 m ; la pique frappe de 6 à 9 m, mais pas à 4,50 m ou moins. Immunité au feu, vulnérabilité au froid.
+
+resource: Souffle sulfureux | 3/jour | cône de 9 m ; Vigueur DD 26 ou malus de -4 aux jets d'attaque, tests et jets de sauvegarde pendant 10 rounds
+resource: Façonnage de la pierre | 1/jour | niveau de lanceur de sorts 20 ; remodèle la pierre existante au toucher
+
+step: Il défend une caverne et dispose de temps
+  do: Choisir un passage où son espace de 4,50 m lui permet de combattre, avec des rochers disponibles et une paroi protégeant un flanc
+  note: Si nécessaire, employer façonnage de la pierre pour modifier localement un obstacle rocheux ; conserver cette utilisation si le terrain convient déjà
+
+step: Des intrus approchent sans attaquer
+  do: Les interpeller en géant ou en igné, puis surveiller leur réaction avec Perception +18
+  note: Généralement pacifique, il peut entrer dans une colère brutale pour une offense réelle ou supposée ; marcher sur son ombre, qu'il considère comme son âme, est une provocation particulièrement grave
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans le cône de 9 m
+  do: Se déplacer si nécessaire, de 12 m au maximum, puis ouvrir le combat avec le souffle sulfureux
+  note: Viser les combattants et les lanceurs de sorts ensemble ; le souffle provoque des quintes de toux et une gêne respiratoire ; appliquer le malus indiqué, sans ajouter de dégâts
+
+step: Les ennemis restent hors de portée du souffle et de la pique
+  do: Lancer un rocher +15 (2d6+16 plus 1d6 de feu), en visant d'abord une menace à distance ou un utilisateur de froid repéré
+  note: Privilégier les cibles à 36 m ou moins pour éviter les malus de distance
+
+step: Une cible est déjà entre 6 et 9 m et le souffle n'est pas avantageux
+  do: Effectuer une attaque à outrance à la pique, +24/+19/+14, pour 4d6+16 par coup
+  note: Si un déplacement est nécessaire, avancer puis porter une seule attaque +24 avec Frappe décisive, pour 8d6+16
+
+## Rounds suivants
+
+step: Une cible reste à portée de pique
+  do: Concentrer l'attaque à outrance sur elle ; privilégier un adversaire affaibli par le souffle
+  note: Contre une CA facile à toucher, activer Attaque en puissance : +20/+15/+10, dégâts 4d6+28 par coup. Renoncer à ce don si les attaques manquent trop souvent
+
+step: Un adversaire s'approche à 4,50 m ou moins
+  do: Faire un pas de placement de 1,50 m si cela rétablit la portée de pique ; sinon libérer les mains et effectuer les deux coups +24, pour 2d6+11 chacun
+  note: La pique ne frappe pas dans cette zone proche ; les deux coups remplacent son attaque à la pique
+
+step: Un adversaire corporel plus petit que lui bloque sa position
+  do: Employer Coup fabuleux en action simple, avec un test de manœuvre à +28 contre le DMD adverse, pour le projeter de 3 m et le jeter à terre
+  note: Choisir une direction qui dégage le passage ou sépare la cible de ses alliés
+
+step: Plusieurs ennemis de taille G ou inférieure encombrent son trajet
+  do: Piétiner en action complexe en traversant leurs espaces : 2d6+16 dégâts, une seule fois par cible dans le round
+  note: Chaque cible choisit une attaque d'opportunité à -4, ou un jet de Réflexes DD 31 pour réduire les dégâts de moitié ; terminer sur un emplacement libre
+
+step: Des ennemis encore indemnes du souffle se regroupent
+  do: Dépenser une nouvelle utilisation pour les affaiblir avant de reprendre la mêlée au round suivant
+  note: Éviter de gaspiller les trois utilisations sur des cibles déjà pénalisées
+
+step: Un ennemi emploie le froid
+  do: Le prendre pour cible prioritaire à la pique ou au rocher, et utiliser les parois pour limiter ses lignes de tir
+  note: Le froid inflige 50 % de dégâts supplémentaires ; l'immunité au feu permet au géant de tenir dans un feu existant sans subir ses dégâts
+
+step: Un rocher lui est lancé
+  do: Tenter de le réceptionner avec son aptitude de réception de rochers, si les conditions de celle-ci sont remplies
+
+## Repli
+
+note: Ténacité
+  Ces géants sont des guerriers féroces qui ne reculent normalement devant aucun adversaire. Ne pas fixer de seuil de fuite automatique : même blessé, il tient le passage et poursuit le combat.
+
+step: Ses pv passent entre -1 et -22
+  do: Choisir immédiatement de rester conscient grâce à Dur à cuire ; porter une seule attaque avec Frappe décisive si une cible est à portée, ou effectuer un déplacement
+  note: Il est stabilisé et chancelant : une seule action simple ou de mouvement par round, sans attaque à outrance ni piétinement. Une action simple lui coûte 1 pv après sa résolution ; il meurt à -23 pv

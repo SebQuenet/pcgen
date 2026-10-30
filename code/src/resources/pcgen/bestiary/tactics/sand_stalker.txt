@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Sand Stalker, araignée prédatrice de taille G des déserts chauds, agressive et portée aux embuscades. 45 pv, CA 16, initiative +7.
+  Morsure +9 (1d8+6 et poison), allonge 1,50 m ; déplacement 15 m, fouissement 9 m ; perception des vibrations à 18 m, Perception +9.
+
+resource: Attraction | tant que le vent souffle sur ses pattes antérieures | son hypnotique dans un rayon de 30 m ; Volonté DD 15 ; effet sonore et mental
+resource: Poison | à chaque morsure qui blesse | Vigueur DD 18 ; fréquence 1/round pendant 4 rounds ; paralysie et 1 point d'affaiblissement de Force ; guérison après 1 sauvegarde réussie
+
+step: Du sable permet de préparer une embuscade
+  do: S'enfouir juste sous la surface, les pattes antérieures exposées au vent pour attirer les proies
+  note: Discrétion +18 dans le sable, +14 ailleurs ; repérer les déplacements au sol grâce aux vibrations à 18 m
+
+## Ouverture
+
+step: Une proie entend l'attraction et rate sa sauvegarde
+  do: La laisser approcher directement, puis la mordre à 1,50 m
+  note: L'attraction dure tant que le vent souffle sur les pattes ; la victime peut seulement se défendre pendant l'approche et ne résiste plus aux attaques une fois au contact
+
+step: L'attraction échoue ou le vent manque
+  do: Approcher à couvert du sable ; au premier round normal, sortir à portée et porter une morsure si un déplacement suffit
+  note: Une sauvegarde réussie contre l'attraction protège de ce même Sand Stalker pendant une journée
+
+## Rounds suivants
+
+step: Une proie reste à portée
+  do: Répéter la morsure +9 et appliquer le poison à chaque blessure
+  note: Il ne possède qu'une attaque de morsure par attaque à outrance
+
+step: Une proie fuit et reste accessible
+  do: La poursuivre à 15 m par déplacement et mordre dès que possible
+
+step: Le vent entretient l'attraction
+  do: Rester en embuscade et attaquer les victimes qui arrivent au contact
+  note: Un trajet dangereux autorise une seconde sauvegarde ; un contre-chant permet aussi une nouvelle sauvegarde
+
+## Repli
+
+step: Points de vie sous 15 ou proie devenue trop dangereuse
+  do: Utiliser la retraite pour quitter le contact et s'enfouir dans le sable
+  note: Fouissement 9 m ; sans sol meuble, fuir en surface grâce au déplacement de 15 m

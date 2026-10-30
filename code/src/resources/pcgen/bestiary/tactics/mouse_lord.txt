@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Le Seigneur des souris est un extérieur natif métamorphe de taille M, neutre, intelligent et très mobile. Il possède 127 pv, une CA de 31 et une résistance à la magie de 24.
+  Sa dague de venin +4 de rapidité frappe à +26/+26/+21/+16 en attaque à outrance : 1d4+7 dégâts, critique 19–20 ; poison DD 24.
+  Il se déplace à 12 m et escalade à 9 m ; son allonge est de 1,50 m. Il combine confusion, déplacement et invocation de rongeurs pour préparer ses attaques au contact.
+  Sa réduction des dégâts de 15 exige une arme à la fois magique et en fer froid pour être surmontée. Il est immunisé aux effets mentaux et aux psioniques ; il possède aussi immortalité et passivisme des rongeurs.
+
+resource: Détection du Mal et détection du Bien | constantes | Complètent sa Perception +26, sa vision nocturne et sa vision dans le noir à 36 m.
+resource: Déplacement | à volonté | Protection à préparer avant de s'exposer.
+resource: Confusion | à volonté | DD 18.
+resource: Invocation | 2/jour | Réussite 100 % : 10d10 rats ou souris, 2d8 rats sanguinaires, 1d4 rats-garous ou 1d4+1 nuées de rats.
+resource: Morsure magique suprême | 2/jour | DD 17 ; à réserver aux attaques naturelles de ses auxiliaires.
+resource: Forme éthérée | 2/jour | Pour se dégager ou changer de position.
+resource: Projection astrale | 1/jour | À réserver à une expédition préparée avant le combat.
+resource: Téléportation suprême | 1/jour | Lui-même et jusqu'à 22,7 kg d'objets uniquement.
+
+step: Il peut reconnaître les lieux avant l'arrivée des adversaires
+  do: Observer discrètement sous forme humaine ou de souris et repérer une issue ainsi qu'un accès en hauteur
+  note: Discrétion +29, Acrobaties +34 et Escalade +30 favorisent une approche depuis une position choisie ; sa télépathie porte à 30 m.
+
+step: Le combat paraît imminent
+  do: Activer déplacement avant de se montrer
+
+step: Il dispose encore de temps pour préparer des auxiliaires
+  do: Invoquer des rongeurs, puis employer morsure magique suprême sur une attaque naturelle d'un auxiliaire destiné au contact
+  note: Choisir les nuées contre des adversaires regroupés ou les rats-garous pour multiplier les combattants ; garder une utilisation d'invocation si le combat risque de durer.
+
+## Ouverture
+
+step: Plusieurs adversaires sont regroupés et ses auxiliaires sont hors de la zone visée
+  do: Lancer confusion sur le groupe, DD 18
+  note: Profiter de leur désorganisation pour choisir sa prochaine cible ; ne pas compter sur l'échec de tous les jets de sauvegarde.
+
+step: Les adversaires sont dispersés et aucun auxiliaire n'est encore présent
+  do: Employer invocation pour les occuper avant d'aller au contact
+  note: Rester à distance pendant cette préparation et diriger les auxiliaires par télépathie lorsqu'ils peuvent comprendre ses instructions.
+
+step: Un adversaire est déjà à 1,50 m et déplacement est actif
+  do: Effectuer l'attaque à outrance à la dague, +26/+26/+21/+16
+  note: Concentrer les coups sur une seule cible pour réduire rapidement le nombre d'adversaires.
+
+## Rounds suivants
+
+step: Une cible isolée reste à portée et il peut tenir sa position
+  do: Répéter l'attaque à outrance à la dague
+  note: Favoriser les ennemis que ses auxiliaires lui permettent de prendre en tenaille.
+
+step: Il doit rejoindre une nouvelle cible
+  do: Se déplacer jusqu'à 12 m puis porter une seule attaque de dague à +26
+  note: Un déplacement important empêche l'attaque à outrance ; employer Acrobaties pour traverser une zone menacée si nécessaire.
+
+step: Des adversaires encore coordonnés se regroupent
+  do: Relancer confusion, DD 18, en évitant ses auxiliaires
+  note: Changer de cible si les premières tentatives restent sans effet.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Frapper à la dague et exploiter Réflexes de combat si plusieurs occasions se présentent
+
+step: Déplacement cesse alors qu'il reste exposé
+  do: Réactiver déplacement avant de reprendre ses attaques
+
+step: Il est encerclé ou privé d'une bonne ligne de repli
+  do: Employer forme éthérée pour se dégager et rejoindre une position favorable
+  note: Reprendre une forme matérielle depuis une position où il pourra isoler une cible ou rejoindre une sortie.
+
+## Repli
+
+step: Ses points de vie passent sous 40, ou les adversaires surmontent ses défenses et gardent l'avantage
+  do: Employer téléportation suprême pour gagner un refuge connu
+  note: Ce pouvoir n'emporte que lui-même et les objets autorisés ; ses créatures invoquées restent sur place.
+
+step: Téléportation suprême est déjà utilisée
+  do: Employer une utilisation restante de forme éthérée pour quitter la mêlée
+
+step: Ses moyens magiques de fuite sont épuisés
+  do: Gagner une issue en se déplaçant à 12 m ou en escaladant à 9 m, puis se dissimuler dès qu'il échappe aux regards
+  note: Exploiter Discrétion +29 et sa forme de souris lorsque le terrain permet de rompre la poursuite.

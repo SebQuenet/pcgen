@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Récupératrice de fluides numériens, humaine alchimiste 7, FP 6, chaotique neutre et solitaire. Dépendante de sa marchandise, elle soupçonne les étrangers de vouloir lui voler ses sources et ses réserves.
+  56 pv, CA 16, déplacement de 9 m. Elle privilégie les bombes de feu ou d'acide et les dards empoisonnés +7 (1d4 plus poison) ; sa lance de maître +6 (1d8, critique x3) sert en dernier recours.
+  Les valeurs d'attaque et de défense ci-dessus précèdent les effets de ses préparations.
+
+resource: Bombes | 11/jour | 4d6+4 dégâts de feu ou d'acide ; attaque de contact à distance ; facteur de portée de 6 m ; éclaboussures de 8 dégâts à 1,50 m, Réflexes DD 17 pour moitié
+resource: Extraits préparés | 1 de chaque formule indiquée | NLS 7 ; boire un extrait demande une action simple
+resource: Mutagène | 1 dose préparée | +4 Dextérité, -2 Sagesse et +2 armure naturelle pendant 70 minutes
+resource: Amélioration des potions | 4/jour | Une potion bue fonctionne au NLS 7
+resource: Dards empoisonnés | 6 | Venin de guêpe géante : blessure, Vigueur DD 18 ; affaiblissement de Dextérité de 1d2, chaque round pendant 6 rounds ; une sauvegarde réussie guérit
+resource: Poisons de réserve | 4 doses de venin de guêpe géante ; 2 doses d'huile de taggit | Application du venin sur une arme en action rapide ; l'huile de taggit est un poison ingéré
+resource: Projectiles alchimiques | 2 fioles d'acide ; 2 feux grégeois | Réserve lorsque les bombes manquent
+resource: Potions | 1 soins modérés ; 1 retardement du poison ; 1 restauration partielle ; 1 guérison des maladies | Décompter chaque potion effectivement consommée
+
+note: Dernière dose
+  À la rencontre, 50 % de chances qu'elle ait bu du fluide numérien 1d4 heures auparavant : appliquer les effets et effets secondaires officiels correspondants. Sa réserve transportée reste présente.
+  Si cette dose lui a infligé des affaiblissements de caractéristiques, elle a employé allocation alchimique puis sa potion de restauration partielle pour les soigner en conservant la potion ; décompter alors cet extrait avant le combat.
+
+step: Elle dispose de plusieurs rounds avant l'affrontement
+  do: Boire successivement simulacre de vie, héroïsme, son mutagène de Dextérité et peau d'écorce, à raison d'une préparation par round
+  note: Simulacre de vie donne 1d10+7 pv temporaires ; héroïsme donne +2 aux attaques, sauvegardes et compétences ; peau d'écorce donne +3 d'amélioration à l'armure naturelle.
+
+step: L'affrontement devient imminent
+  do: Boire bouclier, puis œil du bombardier au dernier round disponible ; se placer à distance avec un couvert et une issue
+  note: Bouclier donne +4 à la CA pendant 7 minutes. Œil du bombardier dure 7 rounds : +1 aux attaques avec armes de jet et +3 m au facteur de portée, soit 9 m pour les bombes.
+
+## Ouverture
+
+step: Plusieurs ennemis sont groupés et elle peut lancer sans être menacée au corps à corps
+  do: Lancer une bombe sur une cible centrale pour atteindre ses voisins par les éclaboussures
+  note: Préférer l'acide contre une cible dangereuse : un impact direct inflige encore 1d6 dégâts d'acide un round plus tard. Employer le feu contre une résistance à l'acide constatée.
+
+step: Elle est surprise et dispose d'un espace pour reculer
+  do: S'éloigner des combattants puis boire son mutagène s'il reste disponible ; commencer les lancers au round suivant
+  note: Une bombe ou un extrait occupe l'action simple du round ; elle conserve son action de mouvement pour se placer.
+
+## Rounds suivants
+
+step: Des bombes restent et elle peut maintenir ses distances
+  do: Lancer une bombe par round et se déplacer pour garder les ennemis hors du corps à corps
+  note: Rechercher une distance de 6 à 9 m selon les préparations actives. Tir à bout portant ajoute +1 à l'attaque et aux dégâts directs à 9 m ou moins.
+
+step: Les éclaboussures risquent de la toucher ou d'endommager une réserve qu'elle protège
+  do: Exclure jusqu'à quatre cases grâce aux bombes précises
+  note: Cette protection ne fonctionne pas si la bombe manque sa cible et dévie.
+
+step: Elle veut conserver ses bombes contre une cible vulnérable au poison
+  do: Lancer un dard enduit de venin et laisser agir l'affaiblissement de Dextérité
+  note: Les six dards sont déjà empoisonnés ; les quatre doses supplémentaires peuvent réenduire une arme grâce à l'empoisonnement rapide.
+
+step: Un combattant arrive au contact
+  do: Faire un pas de placement de 1,50 m si cela suffit pour lancer sans être menacée ; sinon se désengager vers une issue
+  note: Si elle reste acculée, employer la lance +6 plutôt que provoquer une attaque d'opportunité en préparant une bombe.
+
+step: Elle est blessée mais dispose d'un round à couvert
+  do: Boire soins légers pour récupérer 1d8+5 pv, ou sa potion de soins modérés avec amélioration des potions pour récupérer 2d8+7 pv
+  note: Si allocation alchimique reste disponible et qu'elle dispose de deux rounds, boire cet extrait puis la potion au round suivant ; la recracher dans son flacon pour la conserver.
+
+## Repli
+
+step: Ses points de vie tombent à 20 ou moins, ou elle risque d'être encerclée
+  do: Rompre le contact puis boire invisibilité si l'extrait reste disponible ; s'éloigner sans attaquer
+  note: L'invisibilité dure jusqu'à 7 minutes mais une attaque y met fin. Elle cherche à sauver sa vie et ses fluides.
+
+step: Une voie de fuite est ouverte
+  do: Boire repli expéditif s'il reste disponible et fuir à 18 m par action de mouvement
+  note: L'effet dure 7 minutes ; consommer cet extrait et invisibilité demande deux rounds distincts.

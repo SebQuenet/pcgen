@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Yamabushi tengu, oni de taille M, loyal mauvais, voleur et manipulateur des montagnes. Il préfère les embuscades dans les lieux abrités ou dans l'obscurité aux affrontements à découvert.
+  57 PV ; CA 18, contact 14 ; résistance à la magie 16 ; régénération 2, interrompue par le feu ou l'acide. Initiative +8 ; déplacement au sol et vol à 9 m, manœuvrabilité moyenne.
+  Kusarigama +1 : +10/+5, 1d6+4, critique x3 ; morsure +3, 1d4+1. Arc long composite : +10/+5, 1d8+2, critique x3. Allonge de 1,50 m.
+
+resource: Porte dimensionnelle | 3/jour | conserver au moins une utilisation pour fuir
+resource: Fou rire | 3/jour | Volonté DD 15
+resource: Rayon affaiblissant | 3/jour | Vigueur DD 14, effet réduit de moitié
+resource: Rayon ardent | 3/jour | un rayon, 4d6 de feu, sans sauvegarde
+resource: Flou | 1/jour | 5 minutes, 20 % de chances de rater les attaques contre lui
+resource: Poussière scintillante | 1/jour | Volonté DD 15 contre l'aveuglement
+resource: Flèches | 20 | une flèche par attaque à l'arc
+
+step: Il prépare une embuscade
+  do: Reprendre sa forme ailée, repérer un perchoir abrité et une issue, puis se dissimuler avec Discrétion +13
+  note: Perception +15, vision dans le noir à 18 m, vision nocturne et détection de l'invisibilité constante permettent de surveiller les approches.
+
+step: Il peut tromper les intrus avant d'attaquer
+  do: Prendre une forme d'humanoïde de taille M et jouer un rôle avec Bluff +12 et Déguisement +12 ; utiliser la ventriloquie constante pour faire venir une voix d'une autre direction
+  note: Ventriloquie : Volonté DD 14 pour dissiper l'illusion en cas d'interaction. Ce pouvoir déplace sa voix ; il ne domine personne.
+
+step: Le combat est imminent et il dispose d'un round de préparation
+  do: Activer flou avant l'affrontement
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris ensemble sans toucher ses alliés
+  do: Lancer poussière scintillante, à 45 m au plus, dans un rayon de 3 m
+  note: Aveuglement pendant 5 rounds, Volonté DD 15 pour l'éviter puis nouvelle sauvegarde à la fin de chaque tour des victimes aveuglées. La poussière révèle aussi les silhouettes invisibles, sans sauvegarde contre cet effet.
+
+step: Une cible isolée à 10,50 m ou moins paraît vulnérable aux effets mentaux
+  do: À défaut d'une bonne cible pour poussière scintillante, lancer fou rire pour la faire tomber à terre et lui interdire d'agir
+  note: Volonté DD 15 ; une créature d'un autre type qu'extérieur reçoit +4 à sa sauvegarde. Durée maximale de 5 rounds ; la victime peut consacrer son tour suivant à une seconde sauvegarde. Éviter les créatures immunisées aux effets mentaux.
+
+step: Les ennemis sont trop éloignés pour ces pouvoirs
+  do: Tirer à l'arc depuis un perchoir ; rester hors de portée de leurs armes de mêlée
+
+## Rounds suivants
+
+step: Un combattant puissant à 10,50 m ou moins menace de le rejoindre
+  do: Utiliser rayon affaiblissant, attaque de contact à distance +10
+  note: Malus de Force de 1d6+2 pendant 5 rounds, réduit de moitié par Vigueur DD 14 ; ne se cumule pas avec lui-même et ne réduit pas la Force sous 1.
+
+step: Une cible dangereuse ou blessée reste à 10,50 m ou moins
+  do: Utiliser rayon ardent, attaque de contact à distance +10, pour infliger 4d6 de feu
+  note: Un seul rayon par utilisation au niveau de lanceur 5.
+
+step: Il peut tirer sans se déplacer
+  do: Faire une attaque à outrance à l'arc, +10/+5
+  note: S'il doit se déplacer pour retrouver un abri ou une ligne de tir, ne tirer qu'une fois à +10.
+
+step: Un adversaire affaibli ou isolé est déjà au contact
+  do: Faire une attaque à outrance : kusarigama +10/+5 et morsure +3
+  note: Après un déplacement ordinaire, ne porter qu'une attaque de kusarigama à +10. Attaques réflexes permet jusqu'à cinq attaques d'opportunité par round, si des occasions distinctes se présentent dans son allonge de 1,50 m.
+
+step: Plusieurs adversaires l'encerclent ou un lanceur de sorts emploie des motifs
+  do: Rompre l'encerclement par porte dimensionnelle vers un emplacement abrité, si deux utilisations au moins lui restent
+  note: Après la téléportation, aucune autre action avant son prochain tour. Il subit un malus de 2 aux sauvegardes contre les illusions de la branche des motifs.
+
+## Repli
+
+step: Ses PV tombent à 18 ou moins, ou le feu et l'acide rendent la position intenable
+  do: Utiliser la porte dimensionnelle réservée pour rejoindre un refuge connu à 180 m au plus
+  note: Choisir un endroit où il peut attendre son prochain tour sans être exposé.
+
+step: Il n'a plus de porte dimensionnelle
+  do: Se retirer en volant vers un passage ou un perchoir inaccessible aux poursuivants terrestres ; utiliser les obstacles pour couper les lignes de tir
+  note: Vol à 9 m par action de mouvement ; éviter une fuite prolongée à découvert.
+
+step: Il a atteint un abri
+  do: Se cacher et laisser la régénération restaurer 2 PV par round
+  note: Des dégâts de feu ou d'acide suppriment sa régénération pendant le round suivant ; rester hors d'atteinte de ces attaques avant de récupérer.

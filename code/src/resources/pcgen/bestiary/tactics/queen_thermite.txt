@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Reine thermite, vermine extraplanaire de taille G du plan élémentaire du Feu, sans intelligence, qui défend instinctivement son nid. 67 pv, CA 20 ; déplacement de 9 m par round, allonge de 1,50 m.
+  Morsure +9 : 2d6+6 dégâts physiques et 2d6 de feu, plus brûlure (1d6, Réflexes DD 17). Immunisée au feu et aux effets mentaux, vulnérable au froid ; explosion automatique à 0 pv ou moins.
+
+step: Le nid est intact et personne ne le menace
+  do: Rester auprès de la couvée ; laisser les intrus tranquilles tant qu'ils ne menacent pas la colonie
+  note: Si la colonie est présente, les soldats défendent naturellement la reine et les jeunes, et les ouvriers participent à la défense ; la reine ne leur donne pas d'ordres tactiques.
+
+step: Des intrus approchent
+  do: Repérer les créatures au sol par perception des vibrations à 18 m et voir dans l'obscurité à 18 m
+  note: Son sens du feu localise toute flamme au moins aussi importante qu'une torche à 60 m et en perçoit l'intensité ; il ne localise pas automatiquement une créature sans flamme.
+
+note: Références
+  Description et pouvoirs : Tome of Horrors Complete, entrée « Thermite, Queen », reproduite sur https://www.d20pfsrd.com/bestiary/monster-listings/vermin/thermite-queen/.
+  Règle de brûlure : https://pathfinder.d20srd.org/bestiary/universalMonsterRules.html.
+
+## Ouverture
+
+step: Un intrus menace la reine ou la couvée à 1,50 m ou moins
+  do: Mordre cet intrus à +9, pour 2d6+6 dégâts physiques et 2d6 de feu, plus brûlure
+
+step: L'intrus menaçant le nid est hors de portée
+  do: Avancer de 9 m au plus vers lui et mordre s'il est alors à portée
+  note: Rester près de la couvée ; elle ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un ennemi reste au contact
+  do: Répéter la morsure chaque round contre l'intrus qui menace directement la reine ou les jeunes
+  note: Après une morsure réussie, Réflexes DD 17 ou la cible prend feu : 1d6 dégâts de feu au début de chacun de ses tours pendant 1d4 rounds. Elle peut tenter un nouveau jet par une action complexe ; se jeter au sol et rouler donne +4 à ce jet.
+
+step: L'adversaire immédiat tombe et un autre intrus menace encore le nid
+  do: Se tourner vers cette nouvelle menace et la mordre dès qu'elle est à portée
+  note: Jouer une défense instinctive de la colonie, sans feinte, négociation ni sélection savante des cibles.
+
+## Repli
+
+step: Les intrus abandonnent le nid et la couvée est hors de danger
+  do: Rester dans le nid et cesser la poursuite
+
+step: La reine est acculée ou les jeunes restent menacés
+  do: Continuer à mordre tant qu'elle peut agir
+  note: Aucun seuil de fuite n'est indiqué ; sa défense peut se poursuivre jusqu'à l'explosion.
+
+step: Ses points de vie tombent à 0 ou moins
+  do: Déclencher immédiatement les soubresauts mortels : explosion de feu dans un rayon de 12 m, 8d8 dégâts de feu ; Réflexes DD 17 pour réduire les dégâts de moitié
+  note: Cette explosion est automatique ; elle ne choisit ni son moment ni ses victimes.

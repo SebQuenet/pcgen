@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Onyx Deer, cerf d'onyx : créature magique neutre de taille G, généralement paisible, qui combat pour se défendre ou protéger son troupeau. 59 points de vie, CA 17, initiative +6 ; immunité à la pétrification.
+  Au contact : coup de bois +10 (1d8+4), morsure +10 (1d8+4), deux sabots +5 (1d8+2 chacun). Déplacement de 12 m ; espace occupé de 3 m de côté, allonge de 1,50 m.
+
+resource: Brame | 2/jour | rayon de 30 m ; créatures capables de l'entendre ; Volonté DD 14
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +14, l'odorat, la vision nocturne et la vision dans le noir à 18 m
+  note: Il comprend le sylvestre, mais ne parle pas.
+
+step: Le troupeau est menacé
+  do: Se placer entre les agresseurs et les jeunes
+
+## Ouverture
+
+step: Les agresseurs sont à 30 m ou moins et peuvent l'entendre
+  do: Bramer pour les dissuader d'approcher
+  note: Échec au jet de Volonté DD 14 : secoué dans la zone, puis pendant 2d4 rounds après l'avoir quittée. Une réussite immunise contre le brame de ce cerf pendant 24 heures. Les cerfs d'onyx y sont immunisés.
+  note: Être secoué n'oblige pas à fuir ; le brame consomme son action simple.
+
+step: Les agresseurs sont au-delà de 30 m
+  do: Rester devant le troupeau et attendre leur approche
+
+## Rounds suivants
+
+step: Un agresseur est à 1,50 m ou moins au début du tour
+  do: Attaque à outrance : morsure +10 (1d8+4), bois +10 (1d8+4), deux sabots +5 (1d8+2 chacun)
+  note: Contre une cible vivante, chaque morsure impose Vigueur DD 18 ; échec : 1d4 points d'affaiblissement de Constitution. À Constitution 3 ou moins, la victime devient une statue d'onyx.
+
+step: Un agresseur peut être rejoint avec un déplacement de 12 m
+  do: Avancer et porter une seule morsure +10 (1d8+4)
+  note: Privilégier l'agresseur qui menace directement les jeunes ; mordre de nouveau cette cible tant qu'elle reste dangereuse.
+
+step: De nouveaux agresseurs approchent et il reste un brame
+  do: Bramer s'ils sont dans les 30 m
+  note: Garder cette utilisation si les seules cibles sont déjà secouées ou immunisées.
+
+## Repli
+
+step: Points de vie sous 20 et aucun jeune n'est directement menacé
+  do: Se retirer vers la forêt, jusqu'à 24 m avec une action de retraite
+
+step: Les jeunes restent menacés
+  do: Tenir sa position et combattre jusqu'à la mort pour les défendre
+
+step: Les agresseurs abandonnent
+  do: Cesser le combat et rejoindre le troupeau

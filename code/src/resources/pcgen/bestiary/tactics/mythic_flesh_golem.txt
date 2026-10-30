@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Golem de chair mythique, créature artificielle neutre de taille G, doté d'une intelligence rudimentaire et parcouru d'arcs électriques. Il cherche un affrontement direct pour écraser une même cible sous ses deux coups.
+  Deux coups +16, chacun infligeant 2d8+6 dégâts physiques et 1d10 dégâts d'électricité ; deux coups réussis sur le même adversaire dans un round ajoutent 2d10 dégâts d'électricité.
+  145 pv ; CA 23, contact 8 ; déplacement de 9 m ; espace et allonge de 3 m ; vision dans le noir à 18 m et vision nocturne ; Perception +10.
+
+note: Défenses
+  RD 5/adamantium et épique ; immunités des créatures artificielles. Son immunité à la magie concerne les sorts et pouvoirs magiques autorisant la résistance à la magie.
+  Une attaque magique mythique de feu ou de froid le ralentit pendant 2d6 rounds, sans sauvegarde. Une attaque magique électrique extérieure annule son ralentissement et lui rend 1 pv par tranche de 3 dégâts normalement infligés ; l'excédent devient des pv temporaires. Ses propres attaques électriques ne peuvent pas le soigner.
+
+resource: Guérison accélérée | permanente | Récupère 5 pv par round, jusqu'à 145 pv, tant qu'il n'est pas détruit.
+
+step: Des intrus approchent
+  do: Se placer dans un passage où son corps et son allonge gênent leur progression ; attendre qu'ils viennent à portée.
+  note: Il privilégie un obstacle simple et une cible accessible, sans élaborer de ruse complexe.
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Faire une attaque à outrance et diriger les deux coups contre cet adversaire.
+  note: Réunir les deux touches sur une seule cible déclenche les 2d10 dégâts électriques supplémentaires.
+
+step: Il doit avancer pour atteindre un adversaire
+  do: Se déplacer de 9 m au maximum puis porter un seul coup si une cible est à portée ; sinon, avancer deux fois pour couvrir jusqu'à 18 m.
+  note: Un déplacement ordinaire ne permet pas de porter ensuite les deux coups de l'attaque à outrance.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter les deux coups sur elle ; utiliser au besoin un pas de 1,50 m pour conserver l'attaque à outrance.
+  note: Achever une cible blessée évite de disperser les dégâts et favorise les décharges supplémentaires.
+
+step: Une cible est facile à toucher
+  do: Employer Attaque en puissance mythique pour augmenter les dégâts physiques.
+  note: Sans autre modification, les coups passent à +13 et infligent chacun 2d8+15 dégâts physiques, plus l'électricité. Contre une CA élevée, conserver +16 pour favoriser les deux touches.
+
+step: Deux ennemis sont adjacents entre eux et tous deux dans son allonge, et il ne peut pas faire d'attaque à outrance
+  do: Employer Enchaînement : frapper le premier, puis le second si la première attaque touche.
+  note: Cette action simple impose un malus de 2 à la CA jusqu'au prochain tour ; elle répartit les coups et ne déclenche donc pas à elle seule la décharge sur une même cible.
+
+step: Une cible bénéficie d'un camouflage en mêlée
+  do: Continuer à la frapper en appliquant Combat en aveugle.
+  note: Relancer une fois le jet de camouflage raté pour chaque attaque de mêlée concernée.
+
+step: Il est ralenti par une attaque mythique de feu ou de froid
+  do: S'il est déjà à portée, porter un seul coup ; sinon, consacrer son action disponible à se rapprocher.
+  note: Sous ralentissement, il ne peut pas enchaîner déplacement et attaque, ni faire d'attaque à outrance.
+
+## Repli
+
+step: Ses points de vie diminuent mais un ennemi reste à portée
+  do: Maintenir la pression au corps à corps et appliquer la guérison accélérée à chaque round.
+  note: Aucun seuil de fuite automatique ; à 0 pv, une créature artificielle est détruite.
+
+step: Les ennemis rompent le combat et restent hors d'atteinte
+  do: Revenir à une position défendable et laisser la guérison accélérée restaurer ses blessures avant un nouvel engagement.

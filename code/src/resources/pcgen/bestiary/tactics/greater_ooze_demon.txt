@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Démon des vases supérieur, Extérieur chaotique mauvais de taille G, FP 11 : un combattant de première ligne intelligent, avec 135 pv et une CA de 23.
+  Coup +16 (1d6+10 plus 1d4 d’acide et étreinte), ou morsure +17 (1d6+7 plus 1d4 d’acide) et 2 griffes +16 (1d4+7 plus 1d4 d’acide chacune).
+  Déplacement de 9 m, allonge de 3 m, vision dans le noir à 18 m, Perception +22 et télépathie à 30 m.
+  RD 10/Bien, RM 22, immunités à l’acide et à l’électricité, traits des vases, résistances au froid et au feu de 10. Réflexes +3 : éviter de rester groupé sous les attaques de zone.
+
+resource: Convocation | 1/jour | NLS 12, niveau 7 ; 35 % de réussite pour convoquer au choix 2d4 démons des vases inférieurs ou 1 démon des vases supérieur.
+resource: Vomi acide | Une utilisation tous les 1d4 rounds | Ligne de 12 m, 4d6 dégâts d’acide ; Réflexes DD 23 pour réduire de moitié.
+
+step: Des ennemis approchent et il dispose de temps pour se préparer
+  do: Tenter la convocation avant le contact ; choisir un démon supérieur pour renforcer la première ligne, ou les démons inférieurs pour multiplier les directions d’attaque.
+  note: La réussite reste limitée à 35 % ; prévoir de combattre seul en cas d’échec.
+
+step: Il peut choisir son terrain
+  do: Occuper un passage où son allonge de 3 m gêne l’approche et où plusieurs ennemis peuvent se retrouver alignés devant lui.
+  note: Coordonner ses alliés par télépathie à 30 m et les placer hors de la future ligne d’acide.
+
+## Ouverture
+
+step: Plusieurs adversaires sont alignés à 12 m ou moins
+  do: Vomir de l’acide sur la ligne la plus fournie : 4d6 dégâts d’acide, Réflexes DD 23 pour moitié.
+  note: Déterminer la recharge de 1d4 rounds après chaque utilisation.
+
+step: Les ennemis sont encore éloignés et la convocation est disponible
+  do: Tenter la convocation avant qu’ils puissent concentrer leurs attaques sur lui.
+
+step: Il doit avancer pour atteindre un adversaire
+  do: Avancer de 9 m au maximum, puis porter un coup +16 si une cible se trouve à son allonge de 3 m ; exploiter l’étreinte en cas de réussite.
+  note: Contre une cible qu’il ne cherche pas à saisir, préférer la morsure +17.
+
+## Rounds suivants
+
+step: Une cible est à portée et aucun déplacement important n’est nécessaire
+  do: Attaquer à outrance avec la morsure +17 et les 2 griffes +16 ; chaque attaque inflige aussi 1d4 dégâts d’acide.
+  note: Pour tenter une étreinte, choisir à la place le coup +16 ; ne pas l’ajouter à la séquence morsure et griffes.
+
+step: Une cible saisie constitue la menace principale
+  do: Entretenir la lutte pour la retenir pendant que ses alliés s’occupent des autres adversaires.
+
+step: Le vomi est rechargé et plusieurs ennemis s’alignent de nouveau
+  do: Réutiliser la ligne d’acide de 12 m en évitant ses alliés non immunisés à l’acide.
+  note: Privilégier la mêlée contre une cible isolée ou manifestement protégée contre l’acide.
+
+step: Des alliés peuvent encore manœuvrer autour de la même cible
+  do: Leur indiquer par télépathie de prendre l’adversaire à revers ; concentrer les attaques pour abattre une cible à la fois.
+
+## Repli
+
+step: Il tombe à 35 pv ou moins et les adversaires restent capables de le vaincre
+  do: Rompre le contact par une retraite et gagner un passage qui limite la poursuite, avec un déplacement de 9 m ; demander aux alliés encore présents de couvrir son départ.
+  note: Il ne dispose d’aucun pouvoir de téléportation indiqué ; conserver une issue praticable avant d’être encerclé.
+
+step: Il est acculé et ne peut plus fuir
+  do: Employer le vomi acide dès sa recharge contre les poursuivants alignés, puis concentrer ses attaques de mêlée sur celui qui bloque la sortie.

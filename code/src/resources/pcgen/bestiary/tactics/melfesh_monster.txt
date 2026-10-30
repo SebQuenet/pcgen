@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Monstre de Melfesh, plante extraplanaire intelligente et solitaire, neutre mauvaise, FP 6 ; 67 pv, CA 21. Il privilégie le combat aérien : vol parfait à 18 m, déplacement au sol à 9 m.
+  Deux coups +10 (1d6+4 chacun), allonge de 1,50 m ; rayon ardent à volonté pour frapper à distance ; épouvante pour disperser les adversaires vulnérables.
+
+note: Défenses et vigilance
+  Régénération 5, interrompue par les dégâts d'acide pendant le round suivant ; résistances au feu 10 et à l'électricité 10 ; immunité au poison et immunités des plantes.
+  Perception +16, vision nocturne, détection de l'invisibilité permanente et vision à 360° : il surveille les approches et ne peut pas être pris en tenaille.
+
+resource: Rayon ardent | à volonté | action simple, NLS 8 ; deux rayons, chacun +8 au contact à distance et 4d6 de feu ; portée 13,50 m ; à 9 m ou moins, Tir à bout portant porte chaque rayon à +9 et 4d6+1
+resource: Épouvante | à volonté | action simple, Volonté DD 15 ; jusqu'à deux créatures vivantes de moins de 6 DV, à 54 m maximum et à 9 m au plus l'une de l'autre ; effrayées 8 rounds, ou secouées 1 round si le jet réussit
+resource: Flou | 3/jour | action simple ; 20 % de chances d'échec des attaques contre lui pendant 8 minutes
+resource: Antidétection | 3/jour | action simple ; protection contre les divinations pendant 8 heures
+
+step: Il peut préparer son approche
+  do: Se dissimuler avec Discrétion +14 et choisir un espace qui lui laisse une voie de fuite aérienne
+  note: Il utilise son vol pour approcher sans laisser de traces de pas ; il doit toujours se cacher pour échapper aux regards.
+
+step: Il redoute une recherche par divination
+  do: Activer antidétection sur lui-même
+
+step: Des ennemis approchent et le combat paraît imminent
+  do: Activer flou avant de se montrer
+
+## Ouverture
+
+step: Pris au dépourvu sans flou actif
+  do: Activer flou et se déplacer en vol pour rester hors de portée des armes de mêlée
+  note: Cette action simple remplace son attaque du round.
+
+step: Des adversaires manifestement faibles risquent de l'encercler
+  do: Employer épouvante sur deux cibles admissibles pour les disperser
+  note: Les créatures de 6 DV ou plus et celles immunisées contre la peur ou les effets mentaux ne sont pas affectées.
+
+step: Une cible est à portée et aucune défense urgente ne s'impose
+  do: Concentrer les deux rayons ardents sur l'adversaire le plus dangereux, en priorité celui qui emploie de l'acide
+  note: Se placer si possible à 9 m ou moins pour Tir à bout portant, tout en restant hors de son allonge.
+
+## Rounds suivants
+
+step: Il dispose d'une trajectoire dégagée
+  do: Utiliser Attaque en vol pour approcher, lancer rayon ardent, puis terminer le déplacement à couvert ou hors de portée de mêlée
+  note: Le déplacement total reste limité à 18 m ; ce don autorise une action simple pendant le mouvement, sans supprimer les attaques d'opportunité.
+
+step: Un ennemi résiste visiblement au feu
+  do: Diriger les rayons vers une autre menace ; contre une cible vulnérable à la peur, employer épouvante pour l'écarter
+
+step: Un adversaire résistant au feu reste au contact et il choisit de tenir sa position
+  do: Faire une attaque à outrance avec ses deux coups +10, chacun pour 1d6+4 dégâts
+  note: Après un déplacement supérieur à 1,50 m, il ne porte qu'un coup avec une action simple.
+
+step: Flou a expiré ou a été dissipé et les attaques adverses restent dangereuses
+  do: Dépenser une utilisation restante pour réactiver flou
+
+## Repli
+
+step: Ses points de vie tombent sous 20 ou des attaques acides répétées empêchent sa régénération
+  do: Rompre le contact et fuir en vol vers un couvert ; se retirer s'il doit quitter une zone menacée, ou effectuer un double déplacement de 36 m si la voie est libre
+  note: La retraite protège uniquement la case de départ contre les attaques d'opportunité ; éviter de traverser d'autres zones menacées.
+
+step: Il a échappé aux poursuivants
+  do: Se cacher avec Discrétion +14 et laisser sa régénération restaurer 5 pv par round, jusqu'à 67 pv
+  note: Après des dégâts d'acide, la régénération reste inactive pendant le round suivant ; attendre à l'abri qu'elle reprenne.

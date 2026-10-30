@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Woundwyrm, dragon adulte solitaire de taille TG, chaotique mauvais, originaire de la Plaie du Monde. Intelligent, il choisit une victime et concentre ses attaques sur elle.
+  225 pv ; CA 30, contact 10 ; RD 10/Bien ou Loi ; RM 26. Perception +22 et vision aveugle à 18 m.
+  Morsure +26 (2d8+10), 2 griffes +26 (2d6+10), queue +21 (2d8+5), 2 ailes +21 (1d8+5). Allonge de 3 m, ou 4,50 m avec la morsure ; espace occupé de 4,50 m.
+  Vol à 18 m ; marche, creusement et nage à 9 m par action de mouvement.
+
+note: Défenses
+  Immunisé à l'acide, au poison, aux illusions, aux attaques de regard, aux effets visuels, aux métamorphoses, à la paralysie magique et au sommeil magique.
+  Il peut combattre dans l'obscurité grâce à sa vision aveugle, mais doit garder ses victimes dans les 18 m pour les localiser ainsi.
+
+resource: Bouclier entropique | permanent | 20 % de chances d'échec pour les attaques à distance nécessitant un jet d'attaque contre lui
+resource: Liberté de mouvement | permanent | facilite ses déplacements malgré les entraves magiques et lui permet de réussir automatiquement les tests pour échapper à une lutte
+resource: Métamorphose universelle | 1/jour | action simple ; NLS 18 ; Vigueur DD 23 annule ; résistance à la magie applicable
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Attendre près d'un espace où voler et d'un sol meuble permettant de creuser ; repérer les intrus avec Perception +22 et sa vision aveugle
+  note: Privilégier une approche qui mène directement à un adversaire isolé ; conserver une issue assez large pour sa taille.
+
+## Ouverture
+
+step: Une cible dangereuse est repérée à 18 m ou moins, sans le menacer au corps à corps
+  do: Utiliser Métamorphose universelle pour transformer cette cible en petit animal inoffensif, puis se déplacer pour aborder les autres par le flanc
+  note: Choisir de préférence un lanceur de sorts dont la Vigueur semble faible ; Vigueur DD 23 annule. Cette utilisation remplace ses attaques du round.
+
+step: Il choisit d'attaquer immédiatement et une victime est accessible en vol
+  do: Effectuer une Attaque en vol : avancer, porter une morsure +26 (2d8+10) à 4,50 m, puis poursuivre son déplacement
+  note: Le déplacement total ne dépasse pas 18 m. Passer hors de l'allonge adverse autant que possible ; ce don ne supprime pas les attaques d'opportunité dues au déplacement.
+
+step: Une victime est déjà à 3 m ou moins sans déplacement nécessaire
+  do: Effectuer immédiatement une attaque à outrance avec la morsure, les deux griffes, la queue et les deux ailes
+  note: Concentrer les six attaques sur une cible vulnérable plutôt que répartir les dégâts.
+
+## Rounds suivants
+
+step: Une cible reste à portée de toutes ses attaques
+  do: Répéter l'attaque à outrance : morsure +26 (2d8+10), 2 griffes +26 (2d6+10), queue +21 (2d8+5), 2 ailes +21 (1d8+5)
+  note: Un pas de placement de 1,50 m peut suffire à retrouver la portée sans renoncer à l'attaque à outrance. À 4,50 m, seule la morsure atteint la cible.
+
+step: Ses attaques touchent facilement la victime
+  do: Activer Attaque en puissance avant les jets d'attaque pour accroître les dégâts
+  note: Avec son BBA de +18, appliquer -5 aux attaques, +10 aux dégâts de morsure et de griffes, +5 aux dégâts de queue et d'ailes ; les valeurs précédentes sont données sans ce don.
+
+step: Une attaque menace un coup critique
+  do: Ajouter le bonus de +4 de Critique focalisé au jet de confirmation ; sur un critique confirmé, privilégier Critique étourdissant
+  note: Critique étourdissant impose Vigueur DD 28 : étourdi pendant 1d4 rounds en cas d'échec, chancelant pendant 1d4 rounds en cas de réussite.
+  note: Contre une cible immunisée à l'étourdissement, choisir plutôt Critique chancelant : Vigueur DD 28, chancelant pendant 1d4+1 rounds en cas d'échec, 1 round en cas de réussite. Un seul de ces deux dons s'applique à chaque critique.
+
+step: Une proie de taille P ou inférieure est isolée et une morsure ou une griffe la touche
+  do: Utiliser le don Capture pour tenter d'engager une lutte sans attaque d'opportunité
+  note: Aux rounds suivants, maintenir la lutte par une action simple et un test réussi pour infliger les dégâts de la morsure ou de la griffe qui la retient. Privilégier les attaques à outrance si les alliés de la proie peuvent l'encercler.
+
+step: Les adversaires se regroupent pour l'encercler ou lui opposent un combattant trop résistant
+  do: Reprendre les passages en vol avec une seule morsure par passage et viser un adversaire moins protégé
+  note: Profiter de l'allonge de 4,50 m et du vol à 18 m pour limiter les ripostes ; conserver ses victimes dans sa vision aveugle si elles doivent être localisées sans la vue.
+
+step: Métamorphose universelle reste disponible et un ennemi empêche de prendre l'avantage
+  do: Rompre le contact, puis utiliser le pouvoir au round suivant depuis une position hors de l'allonge ennemie
+  note: Vigueur DD 23 annule ; une seule utilisation quotidienne, sans nouvelle tentative une fois dépensée.
+
+## Repli
+
+step: Points de vie sous 60, ou adversaires capables de percer régulièrement ses défenses
+  do: Abandonner une éventuelle proie agrippée, puis se désengager et gagner les airs pour s'éloigner à 18 m par action de mouvement
+  note: Employer l'action de retraite si elle évite une riposte dangereuse ; elle protège seulement la sortie de l'espace de départ.
+
+step: La poursuite aérienne reste dangereuse et un sol meuble est accessible
+  do: Creuser à 9 m par action de mouvement pour rompre le contact et poursuivre la fuite sous terre
+  note: Choisir de la terre ou un matériau meuble ; sa vitesse de creusement ne lui permet pas de traverser la roche compacte.

@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Golem de magnésium, artificiel neutre de taille M, sans intelligence : 64 pv, CA 18, déplacement de 9 m par round.
+  Au contact, deux coups +10, chacun infligeant 2d6+2 dégâts et 1d4 points d'affaiblissement de Dextérité ; allonge de 1,50 m.
+  Réduction des dégâts 10/adamantium ; immunités liées aux traits des artificiels et immunité à la magie ; vulnérabilité à la rouille.
+
+note: Détection
+  Vision dans le noir à 18 m, vision nocturne ; Perception +0.
+
+step: Une consigne de garde lui a été donnée
+  do: Rester au poste assigné et attaquer les intrus conformément aux ordres reçus
+  note: Son absence d'intelligence impose un comportement simple, sans ruse ni préparation élaborée
+
+## Ouverture
+
+step: Un ennemi est hors de son allonge
+  do: Avancer vers lui, jusqu'à 9 m avec une action de mouvement ; porter un seul coup +10 si la cible devient accessible à 1,50 m
+  note: Chaque coup inflige 2d6+2 dégâts et 1d4 points d'affaiblissement de Dextérité ; il ne possède aucune attaque à distance
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux coups +10
+
+note: Aura de malaise
+  L'aura s'étend à 3 m : DD 16, état fiévreux pendant 1d4 minutes. Tenir compte de cet effet dès que les adversaires s'exposent à l'aura, sans lui consacrer une attaque.
+
+## Rounds suivants
+
+step: Sa cible reste au contact
+  do: Continuer les attaques à outrance, deux coups +10 contre cette cible
+  note: Les coups successifs cumulent les affaiblissements de Dextérité ; conserver la pression au corps à corps
+
+step: Un pas de 1,50 m suffit pour retrouver le contact
+  do: Faire ce pas, puis effectuer l'attaque à outrance avec les deux coups
+
+step: Sa cible s'éloigne davantage et ses ordres permettent de la poursuivre
+  do: La suivre ; après une action de mouvement, porter un seul coup si elle est à portée
+  note: Chercher à ramener la cible dans son allonge et dans son aura de 3 m
+
+## Repli
+
+step: Aucun ordre ne prévoit de retraite
+  do: Continuer le combat jusqu'à la destruction, à 0 pv
+  note: Il ne décide pas d'une fuite en fonction de ses blessures
+
+step: Une consigne impose un retour au poste ou un repli
+  do: Rejoindre l'emplacement indiqué, à 9 m par action de mouvement, conformément à cette consigne

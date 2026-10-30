@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Nuée d'araignées écarlates, vermine sans intelligence des forêts tempérées ; 13 points de vie, CA 20. Elle attaque et poursuit ses proies par instinct.
+  Elle occupe un espace de 3 m sur 3 m, avec une allonge de 0 m ; déplacement au sol et escalade à 3 m. Vision dans le noir à 18 m, Perception +4, Discrétion +22, Escalade +10.
+  Attaque de nuée : 1d6 dégâts automatiques aux créatures dont elle occupe l'espace, plus maladie ; morsures douloureuses et distraction aggravent le contact.
+  Immunisée aux dégâts des armes et aux effets mentaux. Les effets de zone lui infligent 50 % de dégâts supplémentaires.
+
+step: Une proie approche dans la végétation
+  do: Rester dissimulée jusqu'à pouvoir gagner l'espace de la proie, en utilisant Discrétion +22.
+  note: Elle peut aussi se tenir sur un tronc grâce à sa vitesse d'escalade ; elle ne vole pas et ne dispose d'aucun bond spécial.
+
+## Ouverture
+
+step: Une proie est accessible
+  do: Entrer dans son espace ; si plusieurs proies sont regroupées, les recouvrir avec l'espace de 3 m sur 3 m de la nuée.
+  note: À la fin du déplacement, chaque créature dont elle occupe l'espace subit 1d6 dégâts de nuée, sans jet d'attaque.
+
+step: Une créature subit les dégâts de la nuée
+  do: Appliquer les morsures douloureuses : la créature est fiévreuse pendant 1 round, sans jet de sauvegarde.
+  note: Faire aussi un jet de Vigueur DD 11 contre la fièvre écarlate, transmise par blessure. La maladie ne provoque aucun affaiblissement immédiat.
+
+## Rounds suivants
+
+step: Une créature vivante commence son tour dans l'espace de la nuée
+  do: Faire un jet de Vigueur DD 11 contre la distraction ; en cas d'échec, elle est nauséeuse pendant 1 round.
+  note: Cet effet s'ajoute à l'état fiévreux des morsures douloureuses ; les deux effets ont des déclencheurs distincts.
+
+step: Les proies restent accessibles
+  do: Continuer à occuper leur espace ou les suivre à 3 m par déplacement, au sol ou en escalade ; renouveler les dégâts de nuée et leurs effets.
+  note: Elle doit recouvrir une créature pour la blesser ; son allonge de 0 m ne lui permet pas d'attaquer une cible simplement adjacente.
+
+step: Une créature a contracté la fièvre écarlate
+  do: Après une incubation de 1d3 jours, appliquer la maladie à une fréquence de 1 fois par jour : Vigueur DD 11 ou affaiblissement de 1d4 points de Force.
+  note: Deux jets de sauvegarde consécutifs réussis guérissent la maladie ; cet effet concerne généralement les jours suivant le combat.
+
+## Repli
+
+step: Points de vie à 3 ou moins et une issue est accessible
+  do: Fuir instinctivement dans la végétation ou grimper sur un tronc, à 3 m par déplacement.
+  note: Sans intelligence, elle n'organise ni diversion ni retraite coordonnée ; elle cherche simplement à échapper à ce qui la blesse.

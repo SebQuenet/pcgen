@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Nirento, végétal neutre de taille G à l'intelligence rudimentaire, rencontré dans les forêts ou les plaines chaudes. Il retient ses adversaires avec ses lianes et les fait tomber.
+  42 pv, CA 17 ; deux lianes +7, chacune infligeant 1d6+4 dégâts avec étreinte et croc-en-jambe ; allonge de 4,50 m, espace occupé de 3 m et déplacement de 3 m.
+  Réduction des dégâts de 5/tranchant ; immunité au son et immunités des végétaux.
+
+step: Des intrus approchent
+  do: Rester près de la végétation et attendre qu'une cible entre dans l'allonge de ses lianes.
+  note: Vision aveugle à 18 m, vision nocturne et Perception +7 ; son déplacement lent favorise l'attente.
+
+## Ouverture
+
+step: Un adversaire est à 4,50 m ou moins
+  do: Attaque à outrance avec les deux lianes +7, en visant d'abord la cible la plus proche.
+  note: Chaque liane qui touche inflige 1d6+4 dégâts et permet une tentative gratuite de croc-en-jambe et d'étreinte, sans attaque d'opportunité. Résoudre le croc-en-jambe avant l'étreinte.
+
+step: Une liane touche une cible qui peut être renversée
+  do: Tenter le croc-en-jambe avec le BMO +8 contre le DMD adverse.
+  note: En cas d'échec, le nirento ne peut pas être renversé en retour par cette tentative.
+
+step: Une liane touche une cible de taille G ou inférieure
+  do: Tenter l'étreinte avec le BMO de lutte +12 contre le DMD adverse.
+  note: Une prise réussie place aussi le nirento en lutte ; il ne peut alors plus effectuer d'attaques d'opportunité.
+
+step: Aucun adversaire n'est à portée
+  do: Attendre si les ennemis avancent ; sinon, se déplacer de 3 m vers la cible la plus proche et donner un seul coup de liane si elle devient accessible.
+
+## Rounds suivants
+
+step: Une cible est toujours agrippée au début du tour
+  do: Consacrer une action simple au maintien de la lutte ; un test réussi inflige les dégâts de la liane qui a établi la prise, soit 1d6+4.
+  note: BMO de lutte +12 ; le maintien bénéficie du bonus habituel de +5 si la cible ne s'est pas libérée. Cette action ne se cumule pas avec une attaque à outrance.
+
+step: Le nirento n'est pas en lutte et un adversaire reste à portée
+  do: Répéter l'attaque à outrance avec les deux lianes, en privilégiant une cible déjà à terre ; renouveler croc-en-jambe et étreinte lorsque leurs conditions sont remplies.
+
+step: Un adversaire provoque une attaque d'opportunité dans les 4,50 m et le nirento n'est pas en lutte
+  do: Frapper avec une liane +7, pour 1d6+4 dégâts, puis appliquer croc-en-jambe et étreinte si possible.
+  note: Attaques réflexes permet jusqu'à trois attaques d'opportunité par round, même pris au dépourvu. Se relever ou quitter une case menacée peut en provoquer ; entrer simplement dans l'allonge n'en provoque pas.
+
+## Repli
+
+step: Points de vie sous 10 et couvert accessible
+  do: Lâcher toute prise et utiliser le retrait pour parcourir jusqu'à 6 m vers le couvert.
+  note: Sa vitesse de base de 3 m limite fortement ses chances de distancer ses poursuivants.
+
+step: La fuite est bloquée
+  do: Frapper l'adversaire le plus proche et tenter de le renverser ou de l'agripper.

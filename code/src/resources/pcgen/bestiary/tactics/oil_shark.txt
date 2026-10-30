@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Requin huileux, créature magique aquatique de taille TG, native de la mer de Feu ; prédateur d'instinct, d'intelligence animale, qui combat dans son élément.
+  85 pv ; CA 19 ; réduction des dégâts 5/— ; immunité au feu et vulnérabilité au froid. Nage à 18 m par round ; espace occupé de 4,50 m et allonge de 3 m.
+  Morsure +14 (2d6+9) ; Frappe décisive porte les dégâts de cette morsure à 4d6+9 lors d'une action d'attaque. Attaque en puissance permet une morsure +11 (2d6+18), ou 4d6+18 avec Frappe décisive.
+
+step: Une proie approche dans son milieu
+  do: La repérer à l'odorat, puis se rapprocher en nageant
+  note: odorat aiguisé à 54 m ; perception aveugle à 9 m. Ces sens facilitent le repérage, mais ne suppriment pas les chances de rater dues au camouflage
+
+## Ouverture
+
+step: Une proie est à 21 m ou moins et peut être atteinte par la nage
+  do: Avancer de 18 m au maximum pour la placer dans son allonge de 3 m, puis mordre avec Frappe décisive : +14 (4d6+9)
+  note: privilégier la proie accessible la plus proche ; utiliser Attaque en puissance contre une cible facile à toucher : +11 (4d6+18)
+
+step: La proie reste au-delà de cette distance
+  do: Se rapprocher par un double déplacement à la nage, jusqu'à 36 m
+  note: il ne possède aucune attaque à distance ; il poursuit dans son élément
+
+## Rounds suivants
+
+step: Une proie reste dans son allonge de 3 m
+  do: Mordre avec Frappe décisive à chaque round : +14 (4d6+9)
+  note: une attaque à outrance ne lui donne aucune morsure supplémentaire ; conserver l'action de mouvement si elle est utile
+
+step: La morsure touche facilement
+  do: Employer Attaque en puissance avec Frappe décisive : morsure +11 (4d6+18)
+  note: revenir à +14 (4d6+9) si les morsures échouent régulièrement
+
+step: La proie s'éloigne dans son milieu
+  do: La suivre à la nage, puis mordre avec Frappe décisive si un déplacement de 18 m suffit à la remettre à portée
+  note: si elle quitte son allonge en provoquant une attaque d'opportunité, mordre à +14 (2d6+9), ou +11 (2d6+18) si Attaque en puissance est active ; Frappe décisive ne s'applique pas à cette attaque
+
+step: Une proie le saisit en lutte
+  do: Tenter de se dégager avec Évasion +21, puis s'éloigner à la nage si une action de mouvement reste disponible
+  note: il ne possède ni étreinte, ni engloutissement ; sa morsure ne saisit pas automatiquement une cible
+
+## Repli
+
+step: Points de vie sous 25, ou blessures répétées dues au froid
+  do: Rompre la poursuite et gagner les profondeurs de son milieu ; nager jusqu'à 36 m par round si deux déplacements sont possibles
+  note: si un ennemi le menace, utiliser la retraite pour s'éloigner jusqu'à 36 m ; cette action protège seulement la sortie de sa case de départ contre les attaques d'opportunité

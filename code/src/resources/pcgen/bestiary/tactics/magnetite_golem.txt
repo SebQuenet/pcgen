@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Golem de magnétite, créature artificielle de taille G, neutre et sans intelligence : il exécute les consignes de son créateur. FP 10 ; 101 pv ; CA 24 ; réduction des dégâts 10/adamantium.
+  Deux coups +20, chacun infligeant 2d10+8 dégâts et pouvant déclencher prise inéluctable et désarmement magnétique. Allonge 3 m ; déplacement 6 m ; champ magnétique de 9 m de rayon.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +1. Immunités des créatures artificielles et immunité aux sorts et pouvoirs magiques autorisant la résistance à la magie, avec les exceptions ci-dessous.
+
+step: Il garde un lieu
+  do: Rester au poste ou suivre la patrouille prescrite ; attaquer les intrus conformément aux ordres reçus
+  note: Son comportement reste mécanique ; il ne prépare pas de ruse de sa propre initiative
+
+## Ouverture
+
+step: Au début de son tour, des créatures liées à du métal sont à 9 m ou moins
+  do: Appliquer le champ magnétique : une manœuvre à +22 contre le DMD de chacune, en action libre sans attaque d'opportunité
+  note: Chaque réussite attire la cible de 3 m et l'empêche de s'éloigner pendant son prochain round. Ce déplacement ne provoque pas d'attaque d'opportunité et peut soulever une cible du sol ; armures, armes et corps métalliques sont concernés
+
+step: Une cible est à 3 m ou moins après l'attraction
+  do: Porter une attaque à outrance de deux coups +20, chacun à 2d10+8 dégâts ; appliquer les pouvoirs déclenchés par chaque touche
+
+step: Aucune cible n'est à portée
+  do: Avancer jusqu'à 6 m vers l'intrus désigné par ses consignes, puis porter un seul coup s'il arrive à 3 m ou moins
+  note: Si aucune cible n'est encore à portée, effectuer un second déplacement de 6 m au lieu de frapper
+
+## Rounds suivants
+
+step: Au début de chaque tour, le magnétisme fonctionne
+  do: Répéter l'attraction sur toutes les créatures concernées à 9 m ou moins
+  note: Les objets métalliques abandonnés de taille G ou inférieure avancent automatiquement vers lui de 3 m par round
+
+step: Un coup touche une créature métallique ou portant une armure métallique
+  do: Tenter immédiatement une lutte à +26 en action libre, sans attaque d'opportunité
+  note: En cas de réussite, la victime adhère au golem ; un seul bras suffit à la retenir
+
+step: Un coup touche une créature maniant une arme métallique
+  do: Tenter immédiatement un désarmement à +22 en action libre, sans attaque d'opportunité
+  note: L'arme arrachée reste collée au golem ; la récupérer exige une manœuvre de désarmement contre lui, dont le DMD est 31
+
+step: Une victime adhère au golem
+  do: Maintenir la lutte avec un bras ; utiliser le bras libre pour un seul coup pendant son tour
+
+step: Il n'a aucune victime en lutte
+  do: Répéter les deux coups à outrance tant qu'une cible reste à portée ; sinon avancer et frapper une fois
+
+step: Un sort infligeant des dégâts de feu l'atteint
+  do: Désactiver prise inéluctable, désarmement magnétique et champ magnétique pendant 1d4 rounds, sans jet de sauvegarde ; continuer à frapper
+
+step: Une attaque magique d'électricité l'atteint
+  do: Récupérer 1 pv par tranche de 3 points de dégâts qu'elle aurait infligés, sans jet de sauvegarde
+  note: Les soins dépassant 101 pv deviennent des points de vie temporaires
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à exécuter ses ordres jusqu'à sa destruction à 0 pv ; aucun repli spontané
+
+step: Ses consignes imposent un retour au poste ou un retrait
+  do: Se déplacer vers la position prescrite à 6 m par déplacement

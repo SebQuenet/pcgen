@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Orque mutant de Numérie, barbare 7, aberration chaotique mauvaise : une brute aveugle dont un bras est inutilisable.
+  En rage : 100 pv, CA 16 ; massue de maître +18/+13 (1d6+13), allonge 1,50 m ; déplacement 12 m. Hors rage : 86 pv, CA 18 ; massue +16/+11 (1d6+10).
+  Guérison accélérée 5 et réduction des dégâts 1/– : il cherche le corps à corps et supporte les échanges prolongés.
+
+note: Repérage
+  La perception aveugle par écholocation localise les créatures à 9 m si rien ne bloque la ligne d'effet ; elle ne lui donne pas la vue.
+  Ses adversaires bénéficient toujours d'un camouflage total : 50 % de risque de rater. Combat en aveugle permet de relancer une fois chaque échec dû au camouflage en mêlée.
+  Il est immunisé aux attaques de regard, aux attaques fondées sur la vue et aux effets visuels.
+
+resource: Potion de force de taureau | 1 | préparation si le combat est prévisible ; les valeurs du profil sont données sans cette potion
+resource: Potions de soins importants | 2 | à boire à couvert, hors de portée des ennemis
+resource: Feux grégeois | 4 | solution occasionnelle contre une case ennemie repérée, en évitant ses alliés
+
+step: Il entend des ennemis approcher et dispose du temps nécessaire
+  do: Boire la potion de force de taureau, puis prendre sa massue avec son bras valide
+  note: La potion augmente sa Force de 4 ; appliquer ses effets aux attaques et aux dégâts en plus des valeurs du profil.
+
+## Ouverture
+
+step: Un ennemi est localisé à 9 m ou moins
+  do: Entrer en rage, avancer jusqu'à 1,50 m de lui et porter une attaque de massue +18 (1d6+13), avant les éventuels bonus de potion
+  note: Après un déplacement ordinaire, il porte un seul coup ; les deux attaques demandent une attaque à outrance.
+
+step: Des ennemis sont audibles mais encore hors des 9 m de son écholocation
+  do: Avancer vers les bruits pour les faire entrer dans son rayon de repérage
+  note: Il ne localise pas automatiquement une cible au-delà de cette distance ; il ne fonce pas vers une silhouette qu'il ne peut pas voir.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée de massue
+  do: Attaque à outrance, massue +18/+13 (1d6+13 par coup), avant les éventuels bonus de potion
+  note: Concentrer les coups sur le même adversaire ; appliquer le camouflage et la relance de Combat en aveugle à chaque attaque.
+
+step: Après un déplacement, deux ennemis sont adjacents entre eux et tous deux à 1,50 m ou moins
+  do: Utiliser Enchaînement : une attaque à +18, puis une autre à +18 contre le second si la première touche
+  note: Chaque coup inflige 1d6+13 avant les éventuels bonus de potion ; sa CA baisse de 2 jusqu'à son prochain tour. Préférer cette option quand une attaque à outrance est impossible.
+
+step: L'adversaire paraît facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts
+  note: Son camouflage impose déjà des échecs ; renoncer au don si la baisse de précision empêche de porter ses coups.
+
+step: Une cible repérée reste inaccessible au corps à corps
+  do: Si sa case est connue, poser la massue et lancer un feu grégeois vers cette case ; sinon continuer à chercher le contact
+  note: Son bras inutile empêche de tenir simultanément la massue et la fiole. Combat en aveugle ne permet pas de relancer les échecs de camouflage des attaques à distance.
+
+step: Il est blessé mais le combat se prolonge
+  do: Récupérer 5 pv au début de son tour grâce à la guérison accélérée, sans dépasser son maximum actuel
+  note: La réduction des dégâts 1/– réduit les dégâts des armes et attaques naturelles ; elle ne protège pas contre tous les dégâts magiques ou élémentaires.
+
+## Repli
+
+step: Sous 25 pv, si une voie de fuite est disponible
+  do: Se retirer jusqu'à 24 m, puis boire une potion de soins importants une fois hors de portée ; laisser agir la guérison accélérée
+  note: Poser ou ranger la massue pour libérer son seul bras utilisable. Éviter de mettre fin à la rage à ce stade : cela retire 14 pv et le laisse fatigué.
+
+step: À 0 pv ou moins, s'il est encore vivant et conscient grâce à la férocité
+  do: N'effectuer qu'une action simple ou de mouvement : frapper une fois si acculé, ou s'éloigner si un passage est libre
+  note: La férocité le laisse chancelant et lui fait perdre 1 pv par round ; la guérison accélérée continue tant qu'il vit. Il ne peut plus effectuer d'attaque à outrance ni de retraite sur un round entier.

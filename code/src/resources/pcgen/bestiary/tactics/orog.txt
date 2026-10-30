@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Orog, humanoïde orque de taille M, loyal mauvais, combattant de mêlée : 23 pv, CA 18, initiative +0.
+  Grande hache +5 (1d12+4), javeline +2 (1d6+3) ; allonge de 1,50 m ; vision dans le noir à 18 m ; Perception +5.
+  Déplacement de 6 m par action de mouvement ; le profil indique aussi une vitesse de 9 m sans en préciser les conditions.
+
+step: Il peut choisir où attendre les ennemis
+  do: Se placer près d'un passage étroit ou d'un obstacle pour limiter les adversaires pouvant l'entourer
+  note: sa vision dans le noir lui permet de surveiller les approches sans éclairage jusqu'à 18 m
+
+step: Il combat avec d'autres orogs
+  do: Se répartir les approches et convenir d'une cible prioritaire en commun ou en orque
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m
+  do: Attaquer à la grande hache, +5 (1d12+4)
+
+step: Un ennemi est accessible par une charge en ligne droite dégagée, entre 3 m et 12 m
+  do: Charger et porter une attaque de grande hache à +7 (1d12+4)
+  note: la charge réduit sa CA à 16 jusqu'au début de son prochain tour ; privilégier une cible isolée pour limiter les ripostes
+
+step: La charge est impossible, mais un mouvement de 6 m suffit pour arriver au contact
+  do: Avancer puis attaquer à la grande hache, +5 (1d12+4)
+
+step: L'ennemi reste hors de portée et une javeline est disponible
+  do: Lancer une javeline à +2 (1d6+3), puis avancer vers un couvert ou vers le contact
+  note: facteur de portée de 9 m ; appliquer un malus de -2 par facteur supplémentaire et éviter de tirer dans une mêlée
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Continuer les attaques de grande hache, +5 (1d12+4), en concentrant les coups sur la même cible
+  note: il ne dispose que d'une attaque par tour à son bonus de base ; rester immobile ne lui donne pas d'attaque supplémentaire
+
+step: Un allié menace le même adversaire et un déplacement sûr permet de le prendre en tenaille
+  do: Se placer de l'autre côté de la cible, puis attaquer à la grande hache à +7 (1d12+4)
+  note: privilégier un pas de placement de 1,50 m lorsque cela suffit ; un déplacement ordinaire hors d'une case menacée peut provoquer une attaque d'opportunité
+
+step: Sa cible tombe ou se met hors d'atteinte
+  do: Rejoindre l'adversaire accessible le plus proche et reprendre les attaques de grande hache
+  note: utiliser une javeline disponible si aucun ennemi ne peut être atteint ce tour ; le nombre de javelines n'est pas précisé
+
+## Repli
+
+step: Il tombe à 7 pv ou moins et dispose d'une issue
+  do: Se désengager vers un couvert ou derrière ses alliés ; employer l'action de retraite si nécessaire, jusqu'à 12 m
+  note: la retraite protège du départ de sa case initiale seulement ; choisir un trajet qui évite les autres cases menacées
+
+step: La fuite est coupée
+  do: Tenir un passage étroit et frapper à la grande hache l'adversaire qui bloque la sortie
+  note: aucun pouvoir spécial du profil ne lui permet de continuer à combattre une fois inconscient

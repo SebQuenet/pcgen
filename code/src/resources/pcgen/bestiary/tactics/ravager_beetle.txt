@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Scarabée ravageur, vermine de taille M des forêts tempérées, sans Intelligence : il combat par instinct. 26 pv, CA 19 ; immunité aux effets mentaux.
+  Morsure +6 (1d8+4 plus poison et étreinte), allonge de 1,50 m. Déplacement au sol de 9 m, vol de 6 m avec une manœuvrabilité médiocre ; Vol -4.
+  Vision dans le noir et perception des vibrations à 18 m ; Perception +0.
+
+note: Poison
+  Le profil indique un poison sur la morsure, mais ne donne ni DD, ni effets, ni fréquence : ces paramètres restent à préciser, sans leur attribuer de valeurs inventées.
+
+step: Une créature touche le même sol que lui à 18 m ou moins
+  do: La repérer grâce aux vibrations et se tourner vers elle
+  note: Utiliser aussi sa vision dans le noir ; les vibrations ne permettent pas de repérer une cible en vol.
+
+## Ouverture
+
+step: Une cible est accessible au sol
+  do: Avancer vers la cible la plus proche, jusqu'à 9 m avec une action de déplacement, puis mordre à +6 si elle est à portée
+  note: Si elle reste trop loin, poursuivre l'approche avec un second déplacement.
+
+step: Un obstacle impose une approche aérienne
+  do: Voler vers la cible, à 6 m par action de déplacement, puis se poser dès qu'un emplacement le permet
+  note: Privilégier le sol pour combattre ; sa faible compétence de Vol rend les manœuvres aériennes délicates.
+
+step: Une morsure touche une cible de taille M ou inférieure
+  do: Tenter immédiatement de l'agripper grâce à l'étreinte
+  note: Cette tentative est gratuite ; les dégâts et le poison de la morsure s'appliquent même si l'agrippement échoue.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte ; sur un test réussi, lui infliger les dégâts de morsure, soit 1d8+4
+  note: Rester sur cette proie plutôt que changer de cible à chaque round.
+
+step: La proie se libère ou l'agrippement a échoué
+  do: Mordre de nouveau à +6, puis retenter l'étreinte si la morsure touche une cible de taille M ou inférieure
+
+step: Aucun adversaire n'est à portée
+  do: Rejoindre le plus proche au sol, puis reprendre les morsures dès qu'il est à 1,50 m
+
+## Repli
+
+step: Points de vie à 6 ou moins et une issue est accessible
+  do: Lâcher toute proie et se retirer au sol, jusqu'à 18 m avec une action de retraite
+  note: Si le passage exige le vol, se retirer en volant jusqu'à 12 m ; conserver une trajectoire simple.
+
+step: Aucune issue n'est accessible
+  do: Continuer à mordre l'adversaire au contact et tenter de l'agripper

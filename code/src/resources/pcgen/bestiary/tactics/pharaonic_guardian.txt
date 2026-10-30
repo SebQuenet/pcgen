@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Gardien pharaonique, mort-vivant intangible de taille G, loyal mauvais, FP 11 : sentinelle intelligente des tombeaux et monuments royaux d'Osirion. Sa priorité est de barrer l'accès au lieu protégé.
+  142 PV, CA 25 ; vol parfait à 9 m ; espace et allonge de 3 m. Épée longue +3 spectrale de rapidité : +19/+19/+14/+9, 2d6+8, critique 17–20. L'épée frappe la CA normale.
+  Initiative +7, vision dans le noir à 18 m, Perception +21, Psychologie +21 ; télépathie à 30 m. Résistance à la canalisation +4 et immunités des morts-vivants.
+
+resource: Suggestion | 3/jour | action simple ; Volonté DD 18 annule ; portée 18 m ; une créature vivante ; jusqu'à 15 heures ou accomplissement de la tâche
+resource: Injonction suprême | 1/jour | action simple ; Volonté DD 20 annule ; portée 18 m ; jusqu'à 15 créatures, toutes à 9 m au plus les unes des autres ; durée maximale 15 rounds
+
+step: Il attend les intrus
+  do: Garder un passage obligé, épée et bouclier en main, avec une paroi mince à proximité pour changer de position grâce à son intangibilité
+  note: Il exploite son allonge de 3 m pour menacer les approches ; sa télépathie permet d'avertir d'autres gardiens présents sans crier.
+
+step: Un intrus vivant accepte encore de parlementer
+  do: Lui proposer par suggestion de quitter le tombeau pour préserver sa vie, puis le laisser partir s'il obéit
+  note: La proposition doit paraître raisonnable. Les deux pouvoirs mentaux exigent une cible capable de comprendre le message et respectent les immunités mentales et la résistance à la magie.
+
+## Ouverture
+
+step: Plusieurs intrus sont à portée, et aucun ne le menace au corps à corps
+  do: Utiliser injonction suprême avec l'ordre « Halte », puis voler pour tenir le passage entre les cibles et le lieu protégé
+  note: Les victimes qui échouent ne peuvent entreprendre aucune action, mais ne sont pas sans défense. Après leur premier tour affecté, elles refont leur sauvegarde au début de chacun de leurs tours ; toutes reçoivent le même ordre.
+
+step: Un ennemi est déjà à portée d'épée et aucun déplacement important n'est nécessaire
+  do: Porter l'attaque à outrance, +19/+19/+14/+9, pour 2d6+8 par coup
+  note: Concentrer les coups sur un adversaire capable de le blesser efficacement, notamment avec une arme spectrale ou des effets de force, si cette menace s'est révélée.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Voler jusqu'à 9 m, puis employer Science de la frappe décisive : une attaque d'épée à +19, infligeant 6d6+8
+  note: Choisir une position qui couvre encore l'accès au tombeau et menace plusieurs intrus.
+
+## Rounds suivants
+
+step: Une cible reste à portée d'épée
+  do: Répéter l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m pour conserver une cible à portée
+  note: Achever une menace avant de disperser les attaques. Une victime de « Halte » reste une cible valable et peut toujours être attaquée.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Frapper à +19 pour 2d6+8
+  note: Attaques réflexes permet jusqu'à 8 attaques d'opportunité par round, même pris au dépourvu ; un même déplacement ennemi ne donne qu'une occasion de frapper.
+
+step: Un intrus adjacent provoque une attaque d'opportunité en se déplaçant et menace de franchir la garde
+  do: Employer Immobilisation à la place du coup : test de manœuvre à +19 contre son DMD ; en cas de réussite, arrêter son déplacement pour le reste de son tour
+  note: Ce don concerne les cases adjacentes, à 1,50 m du gardien ; la cible conserve ses autres actions.
+
+step: Un ennemi adjacent fait un pas de placement pour s'éloigner
+  do: Employer Suivre en action immédiate pour avancer de 1,50 m et rester adjacent
+  note: Au prochain tour du gardien, ce choix empêche le pas de placement et retranche 1,50 m à son déplacement s'il se déplace.
+
+step: Il doit tenir le passage sous les coups de plusieurs combattants
+  do: Activer Expertise du combat en déclarant une attaque ou une attaque à outrance : CA 28, attaques et tests de manœuvre diminués de 3 jusqu'à son prochain tour
+  note: L'attaque à outrance devient +16/+16/+11/+6 ; Immobilisation passe à +16. Privilégier cette défense lorsqu'il touche encore aisément les assaillants.
+
+step: Un adversaire blessé peut être écarté et il reste une suggestion
+  do: Lui suggérer de retourner à l'entrée pour se mettre à l'abri, Volonté DD 18
+  note: Prendre cette action lorsqu'il peut utiliser son pouvoir hors de l'allonge ennemie ; la télépathie porte à 30 m, mais le pouvoir reste limité à 18 m.
+
+## Repli
+
+step: Ses PV passent sous 35 et il peut changer de position sans abandonner le lieu protégé
+  do: Traverser une paroi mince ou voler jusqu'à 9 m vers un autre passage à défendre, puis reprendre les frappes sur les intrus qui avancent
+  note: C'est un déplacement tactique dans le site gardé ; conserver un obstacle entre lui et les attaques les plus dangereuses.
+
+step: Les intrus renoncent et quittent le site
+  do: Cesser la poursuite et reprendre la garde du passage
+
+step: Les intrus atteignent l'objectif protégé et aucun repli ne permet de les arrêter
+  do: Tenir la position et combattre jusqu'à la destruction

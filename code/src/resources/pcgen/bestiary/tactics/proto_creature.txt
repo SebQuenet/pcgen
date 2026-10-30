@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Proto-créature, humanoïde monstrueux de taille M, mauvais et peu intelligent ; combattant de contact endurant, avec 125 pv et une CA de 21.
+  Deux coups +16, chacun infligeant 1d6+5 dégâts avec étreinte ; sueur acide infligeant 1d6 dégâts d'acide.
+  Déplacement de 9 m ; allonge de 1,50 m ; vision dans le noir à 18 m. Comprend le commun, mais ne peut pas parler.
+  Immunisée contre l'acide, l'électricité, les coups critiques, les dégâts non létaux et les attaques sournoises ; sa férocité lui permet de combattre avec des pv négatifs.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +13 et se placer dans un passage étroit pour les obliger à venir au contact
+  note: Elle ne possède aucune attaque à distance ; un couvert limite son exposition pendant l'approche
+
+## Ouverture
+
+step: Une cible est accessible après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à 1,50 m et porter un coup +16, infligeant 1d6+5 dégâts
+  note: Si le coup touche une créature de taille M ou inférieure, tenter immédiatement une lutte grâce à l'étreinte, sans action supplémentaire
+
+step: Aucun ennemi n'est accessible après un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour approcher en utilisant les couverts disponibles
+
+step: Un ennemi commence déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance avec ses deux coups +16, chacun infligeant 1d6+5 dégâts et permettant une tentative d'étreinte
+
+## Rounds suivants
+
+step: Un adversaire est agrippé
+  do: Consacrer une action simple à maintenir la lutte ; en cas de réussite, choisir de lui infliger les dégâts d'un coup, soit 1d6+5
+  note: Maintenir la lutte remplace l'attaque à outrance ; l'étreinte ne garantit pas la réussite des tests de lutte
+
+step: Aucun adversaire n'est agrippé et une cible reste au contact
+  do: Rester en place et effectuer les deux coups +16 ; tenter l'étreinte sur une cible de taille M ou inférieure touchée
+
+step: Une cible facile à toucher doit être abattue rapidement
+  do: Utiliser Attaque en puissance : les deux coups passent à +13 et infligent chacun 1d6+11 dégâts
+  note: Contre une défense élevée, conserver les attaques normales à +16 pour toucher plus souvent
+
+step: Elle a dû se déplacer et deux ennemis sont adjacents l'un à l'autre, tous deux à portée de 1,50 m
+  do: Utiliser Enchaînement : porter un coup +16 infligeant 1d6+5 dégâts ; s'il touche, porter un second coup au même bonus contre l'autre ennemi
+  note: Enchaînement utilise une action simple et réduit sa CA à 19 jusqu'à son prochain tour
+
+step: L'adversaire recule hors de portée
+  do: Faire un pas de placement de 1,50 m si cela suffit à conserver l'attaque à outrance ; sinon, avancer et porter un seul coup
+
+## Repli
+
+step: Moins de 25 pv, une voie de fuite dégagée et aucun avantage à tenir la position
+  do: Rompre le combat par une retraite, jusqu'à 18 m, vers un couvert ou un passage étroit
+  note: La retraite protège du départ de la case initiale ; traverser d'autres cases menacées reste dangereux
+
+step: Ses pv deviennent négatifs et un ennemi reste à portée
+  do: Continuer à combattre grâce à la férocité, avec un seul coup par round
+  note: Elle est chancelante, ne dispose que d'une action simple ou de mouvement par round et perd 1 pv par round ; elle meurt à -22 pv

@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Petit élémentaire de gravité, neutre et solitaire, peu intelligent : il privilégie des attaques simples et sa mobilité aérienne. 13 pv ; CA 15, contact 15, pris au dépourvu 13.
+  Vol à 30 m, manœuvrabilité parfaite ; vision dans le noir à 18 m. Coup +5 (1d3+1), allonge 1,50 m ; projectile +5 (dégâts selon le type) ; engloutissement ; écrasement gravitationnel.
+
+note: Défenses
+  Distorsion : le bonus de parade est déjà compris dans la CA. Immunités élémentaires et aux effets dépendant du poids ou de la masse.
+  Les armes à projectiles de sa taille ou plus petites sont absorbées ; elles peuvent ensuite servir de munitions.
+
+resource: Écrasement gravitationnel | 1/jour | rayon de 1,50 m autour de lui ; 2d4 dégâts contondants ; Vigueur DD 12 pour réduire les dégâts de moitié
+
+step: Il repère des adversaires avant d'être découvert
+  do: Se dissimuler derrière un obstacle avec Discrétion +11 et observer avec Perception +5
+  note: Garder une voie de fuite aérienne ; sa faible intelligence favorise une embuscade simple.
+
+## Ouverture
+
+step: Plusieurs ennemis sont dans son rayon de 1,50 m et l'écrasement est disponible
+  do: Déclencher l'écrasement gravitationnel par une action simple
+  note: Le champ est centré sur lui ; il doit s'approcher pour toucher les adversaires.
+
+step: Les ennemis restent à distance et un projectile est disponible
+  do: Lancer un projectile à +5 en restant hors de portée de leurs armes de mêlée
+  note: Un projectile absorbé peut être relancé, au maximum un par round ; facteur de portée de 6 m, dégâts normaux du projectile augmentés de +1.
+
+step: Un ennemi est au contact et l'écrasement n'est pas opportun
+  do: Porter un coup à +5 pour 1d3+1 dégâts
+
+## Rounds suivants
+
+step: L'adversaire reste au contact
+  do: Répéter le coup +5 ; utiliser l'écrasement encore disponible si plusieurs cibles se rapprochent
+  note: Avec 13 pv, éviter de rester entouré. Il ne possède pas Attaque en vol : une attaque ne permet pas de partager son déplacement avant et après le coup.
+
+step: Une proie de taille TP ou inférieure est isolée et peut être saisie sans trop s'exposer
+  do: Tenter une lutte avec BMO +2, puis l'engloutir par une action complexe s'il commence son tour suivant en la maintenant en lutte
+  note: Une seule créature engloutie à la fois ; elle subit 1d3+1 dégâts par round et ne peut agir que pour se libérer, par un test de BMO contre DMD 16. L'élémentaire est lui-même considéré en lutte tant qu'il la contient.
+
+step: Les adversaires tirent des projectiles qu'il peut absorber
+  do: Relancer un projectile à +5 à chaque round, en conservant la distance
+  note: Sans projectile disponible, revenir au coup plutôt que d'inventer des munitions ou une attaque à distance supplémentaire.
+
+## Repli
+
+step: Points de vie à 4 ou moins, ou plusieurs ennemis capables de le blesser l'encerclent
+  do: Se désengager en volant vers le haut ou vers un passage dégagé
+  note: L'action de retraite permet jusqu'à 60 m de déplacement ; seule la case de départ est protégée des attaques d'opportunité habituelles. Éviter de traverser d'autres cases menacées.

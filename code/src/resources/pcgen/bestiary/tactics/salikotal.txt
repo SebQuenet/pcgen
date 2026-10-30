@@ -1,0 +1,90 @@
+## Avant le combat
+
+note: Profil
+  Salikotal, diable loyal mauvais de taille M, FP 7 : infiltrateur discret qui isole une cible avant de frapper. Initiative +10, Discrétion +18 ; déplacement de 9 m, vol de 18 m avec une bonne manœuvrabilité, pattes d'araignée permanentes.
+  Dague +1 : +14/+9 au corps à corps, 1d4+5, critique 17-20 ; queue +8, 1d4+2. Sans dague : deux griffes +13, 1d4+4 chacune, et queue +8, 1d4+2. Dague lancée +16, 1d4+5, critique 17-20. Allonge de 1,50 m.
+  76 pv, CA 23, contact 17, pris au dépourvu 16 ; réduction des dégâts 5/bien, résistance à la magie 18. Immunité au feu et au poison ; résistance à l'acide 10 et au froid 10.
+  Vision dans le noir à 18 m, vision nocturne et télépathie à 30 m ; pouvoirs magiques au NLS 9.
+
+resource: Pattes d'araignée | permanent | sur lui-même
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à environ 22,5 kg d'objets uniquement ; déplacement sur le même plan
+resource: Localisation de créature | à volonté | rechercher une proie répondant aux conditions du pouvoir
+resource: Déblocage | à volonté | ouvrir les accès verrouillés
+resource: Flou | 3/jour | lui-même uniquement ; 20 % de chances d'échec des attaques concernées
+resource: Ténèbres | 3/jour | abaisse l'éclairage d'un cran dans un rayon de 6 m autour d'un objet touché
+resource: Porte dimensionnelle | 3/jour | repositionnement ou évacuation avec des alliés volontaires ; aucune autre action après son utilisation avant son prochain tour
+resource: Dissipation de la magie | 3/jour | test de dissipation à +9
+resource: Silence | 3/jour | rayon de 6 m ; Volonté DD 16 si centré sur une créature non consentante
+resource: Suggestion | 3/jour | Volonté DD 17 ; consigne formulée de manière raisonnable
+resource: Double illusoire | 1/jour | invisibilité suprême pendant 9 rounds ; Volonté DD 20 pour reconnaître le double en interagissant avec lui
+resource: Passe-muraille | 1/jour | passage dans le bois, le plâtre ou la pierre
+resource: Statue | 1/jour | lui-même uniquement ; dissimulation immobile avant une embuscade
+resource: Convocation de diables | 1/jour | 35 % de chances de convoquer quatre diablotins ; pouvoir équivalent à un sort de niveau 3
+
+step: Il peut reconnaître les lieux avant l'arrivée des adversaires
+  do: Repérer un refuge pour sa téléportation, les passages en hauteur et un endroit où surprendre une cible isolée ; approcher avec Discrétion +18, le vol ou pattes d'araignée.
+  note: Localisation de créature aide à retrouver une proie connue ; déblocage ou passe-muraille permet de contourner un accès fermé.
+
+step: Une longue attente dans un décor de statues est possible
+  do: Utiliser statue pour se fondre dans le décor, observer les arrivants, puis reprendre sa forme normale au moment d'agir.
+
+step: Le combat approche et il dispose de quelques rounds
+  do: Tenter la convocation des quatre diablotins à couvert, puis activer flou juste avant l'engagement.
+  note: Sur un échec de convocation, l'utilisation quotidienne est dépensée. Si elle réussit, coordonner les diablotins par télépathie et leur faire gêner les soutiens adverses.
+
+step: L'éclairage peut être abaissé au détriment des adversaires
+  do: Préparer ténèbres sur un objet porté pour combattre dans une zone favorable à sa vision dans le noir.
+  note: En lumière vive, le pouvoir ne produit qu'une lumière normale ; il ne gêne pas les ennemis dotés de vision dans le noir.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent immédiatement le prendre pour cible
+  do: Activer double illusoire et se déplacer vers une cible isolée pendant que le double attire les regards ailleurs.
+  note: Le double ne porte aucune attaque réelle. L'invisibilité permet ensuite d'attaquer sans se dissiper ; le double exige de la concentration à partir du round suivant et persiste encore 3 rounds après son abandon.
+
+step: Un lanceur de sorts dépend de composantes verbales
+  do: Utiliser silence sur lui, Volonté DD 16, ou sur un point fixe proche pour couvrir sa position sans jet de sauvegarde.
+  note: Une zone fixe peut être quittée. Les pouvoirs magiques du salikotal ne nécessitent pas de composantes verbales ; il communique par télépathie.
+
+step: Un adversaire peut être éloigné par une consigne plausible
+  do: Employer suggestion, Volonté DD 17, pour lui faire aller chercher des renforts ou quitter une position exposée.
+  note: Choisir cette ouverture si elle permet d'isoler la cible principale ; un ordre manifestement nuisible ne convient pas.
+
+step: Une cible vulnérable est accessible sans utiliser de pouvoir ce tour
+  do: Se déplacer vers elle et porter une seule attaque de dague à +14 ; si elle est déjà à portée sans déplacement important, effectuer l'attaque à outrance.
+  note: Ces ouvertures sont des choix selon la situation ; les pouvoirs et l'attaque à outrance ne se cumulent pas dans un même tour.
+
+## Rounds suivants
+
+step: La cible reste à portée et il peut consacrer son tour à attaquer
+  do: Attaque à outrance : dague +14/+9, 1d4+5, critique 17-20, puis queue +8, 1d4+2 ; concentrer les coups sur la même cible.
+  note: Un pas de placement de 1,50 m reste possible. S'il abandonne la concentration sur son double pour attaquer, son invisibilité continue jusqu'à la fin des 9 rounds.
+
+step: Un effet magique protège fortement la cible ou compromet son avantage
+  do: Consacrer un tour à une dissipation de la magie ciblée, test à +9, puis reprendre les attaques au tour suivant.
+
+step: Il est encerclé ou la cible se dérobe
+  do: Rompre le contact par le vol ou se téléporter vers une position reconnue pour préparer une nouvelle approche.
+  note: Un déplacement ordinaire limite le tour à une seule attaque ; une téléportation consomme l'action qui aurait permis d'attaquer. Souplesse du serpent améliore sa CA contre les attaques d'opportunité provoquées par ses déplacements.
+
+step: Il doit se déplacer sous des tirs et flou n'est plus actif
+  do: Parcourir plus de 1,50 m pendant son tour pour bénéficier de son don Wind Stance contre les attaques à distance pendant 1 round.
+  note: Les 20 % de camouflage de ce don ne s'ajoutent pas à ceux de flou.
+
+step: Une attaque à distance ponctuelle peut achever un ennemi
+  do: Lancer sa dague +1 à +16, 1d4+5, critique 17-20, en appliquant les malus de portée éventuels.
+  note: Il n'a qu'une dague et elle ne revient pas. Tant qu'il ne l'a pas récupérée, son attaque à outrance est de deux griffes +13, 1d4+4 chacune, et une queue +8, 1d4+2.
+
+## Repli
+
+step: Ses points de vie tombent sous 25, ou il ne peut plus isoler une cible sans subir les attaques du groupe
+  do: Utiliser téléportation suprême vers le refuge repéré, sur le même plan, avec sa dague s'il la porte encore.
+  note: Ce seuil est une consigne tactique. Ce pouvoir n'emporte aucun allié ni prisonnier ; il n'a pas de pouvoir de soins dans ce profil.
+
+step: Il doit aussi évacuer un allié volontaire et une utilisation reste disponible
+  do: Employer porte dimensionnelle pour l'emporter hors du combat.
+  note: Il ne peut plus agir après ce pouvoir avant son prochain tour.
+
+step: Les téléportations sont empêchées
+  do: Fuir en vol, avec un déplacement de 18 m, ou par une paroi grâce à pattes d'araignée ; utiliser passe-muraille si un mur compatible bloque sa sortie.
+  note: Si double illusoire reste disponible, l'utiliser pour masquer sa direction de fuite, puis se déplacer à couvert.

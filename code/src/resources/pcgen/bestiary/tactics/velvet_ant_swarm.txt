@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Nuée de fourmis de velours de taille Minuscule, sans intelligence, des forêts et plaines chaudes ; 27 pv, CA 17.
+  Attaque de nuée : 1d6 dégâts et poison ; distraction, Vigueur DD 13. Elle occupe un espace de 3 m de côté et doit recouvrir ses victimes, son allonge étant de 0 m.
+  Déplacement au sol de 9 m, escalade de 6 m ; Escalade +11 ; vision dans le noir à 18 m.
+
+note: Défenses
+  Immunisée aux dégâts d'armes et aux effets mentaux. Les effets de zone lui infligent 50 % de dégâts supplémentaires, conformément aux traits des nuées.
+
+note: Poison
+  Le profil ne précise ni le DD ni les effets du poison. Le DD 13 appartient à la distraction ; ne pas l'attribuer au poison.
+
+step: Des créatures approchent
+  do: Jouer une réaction instinctive à leur présence, sans embuscade élaborée ni coordination tactique.
+
+## Ouverture
+
+step: Une créature est accessible au sol
+  do: Avancer vers la plus proche et pénétrer dans son espace ; terminer le déplacement en la recouvrant.
+  note: Si plusieurs créatures sont regroupées, l'espace de 3 m de côté peut en recouvrir plusieurs.
+
+step: Une créature est accessible uniquement en grimpant
+  do: Utiliser l'escalade à 6 m pour la rejoindre sur une surface praticable.
+
+step: Des créatures occupent son espace à la fin de son déplacement
+  do: Infliger automatiquement 1d6 dégâts et le poison à chacune, sans jet d'attaque.
+
+## Rounds suivants
+
+step: Une créature vivante subit ses dégâts
+  do: Faire effectuer un jet de Vigueur DD 13 contre la distraction ; un échec la rend nauséeuse pendant 1 round.
+
+step: Des victimes restent dans son espace
+  do: Maintenir le contact pour leur infliger de nouveau les dégâts de nuée et le poison à chaque round.
+  note: Aucun jet d'attaque n'est nécessaire ; la nuée n'utilise ni morsures individuelles ni attaque à outrance.
+
+step: Les victimes quittent son espace
+  do: Suivre la créature accessible la plus proche à 9 m au sol ou à 6 m en escalade, puis terminer le déplacement sur elle si possible.
+  note: Ne pas lui prêter de sélection réfléchie des cibles selon leur classe, leur équipement ou leurs blessures.
+
+## Repli
+
+step: La douleur provoque une réaction de fuite
+  do: Éloigner instinctivement la nuée de la source des dégâts, à 9 m au sol ou à 6 m en escalade selon le terrain.
+  note: Aucun seuil de repli en pv n'est indiqué ; elle ne négocie pas et n'organise pas de retraite coordonnée.

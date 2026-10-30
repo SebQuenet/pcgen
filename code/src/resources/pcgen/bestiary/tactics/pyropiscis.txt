@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Pyropiscis, créature magique de feu de taille G, neutre, FP 8 : un prédateur volcanique d'intelligence animale qui saisit ses proies depuis la lave.
+  Morsure +17 (2d8+10, critique 19–20/×2, plus combustion et étreinte) ; bombe de lave +11 (3d6 contondants plus 2d6 de feu), facteur de portée de 9 m.
+  105 pv, CA 22, RD 5/adamantium, immunité au feu et vulnérabilité au froid. Allonge de 3 m ; déplacement terrestre de 3 m, creusement de 18 m dans la lave ou le magma uniquement.
+
+step: Des proies approchent d'une coulée ou d'un bassin de lave
+  do: Rester dissimulé dans la lave, avec Discrétion +14, et attendre qu'une proie s'approche du bord
+  note: Perception +10 ; perception des vibrations et vision dans le noir à 18 m, vision nocturne. Les vibrations permettent de repérer les déplacements en contact avec le même sol.
+
+resource: Sprint | 1 par minute | vitesse terrestre portée à 12 m pendant 1 round
+
+## Ouverture
+
+step: Une proie est accessible depuis la lave
+  do: Se déplacer dans la lave si nécessaire, puis mordre à 3 m ou moins
+  note: Après une morsure réussie, tenter gratuitement une étreinte à +22 contre le DMC d'une cible de taille G ou inférieure, sans attaque d'opportunité.
+
+step: La proie reste hors d'allonge et une ligne de tir est dégagée
+  do: Cracher une bombe de lave +11 sur une cible visible, de préférence à 9 m ou moins
+  note: Attaque à distance contre la CA normale ; la bombe frappe une seule cible.
+
+step: Il faut franchir une courte distance sur la terre ferme pour atteindre une proie
+  do: Utiliser le sprint pour se déplacer jusqu'à 12 m, puis mordre si la cible est à portée
+  note: Garder un trajet accessible vers la lave ; sans sprint, sa vitesse terrestre est de 3 m.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Consacrer l'action simple au maintien de la lutte, puis infliger les dégâts de morsure ou déplacer la proie vers la lave
+  note: BMC de lutte +22 ; bonus de +5 au maintien si la proie n'a pas rompu la prise. La morsure brûlante inflige aussi 2d6 de feu à chaque test de lutte réussi.
+  note: Déplacer une proie agrippée limite le déplacement à la moitié de la vitesse. L'amener dans la lave lui accorde une tentative gratuite de rupture avec un bonus de +4.
+
+step: La proie échappe à l'étreinte mais reste à portée
+  do: Mordre à nouveau et tenter une nouvelle étreinte
+  note: La combustion accompagne la morsure ; suivre ses effets sur la victime.
+
+step: Une cible est à 4,50 m et peut être mordue sans déplacement
+  do: Employer Attaque en allonge pour porter la morsure à 4,50 m pendant son tour
+  note: La CA descend à 20 jusqu'au début de son prochain tour ; cette allonge accrue ne permet pas de menacer à 4,50 m hors de son tour.
+
+step: Les proies se tiennent à distance du bord
+  do: Continuer les bombes de lave depuis une position offrant une ligne de tir, en se rapprochant par la lave si nécessaire
+  note: Privilégier la proie la plus proche ou déjà blessée ; son intelligence de 2 favorise une chasse instinctive.
+
+## Repli
+
+step: Points de vie sous 30, ou attaques de froid répétées
+  do: Abandonner la prise et se retirer dans la lave ou le magma, à 18 m par action de déplacement
+  note: Le froid augmente de moitié les dégâts subis. Le creusement ne traverse pas la roche solide.
+
+step: Le pyropiscis est isolé sur la terre ferme
+  do: Utiliser le sprint disponible pour rejoindre la lave ; une fois à l'abri et sans accès à celle-ci, entrer en hibernation
+  note: Il peut rester 18 heures hors de la lave avant de risquer l'asphyxie. L'hibernation demande 1 heure et ne permet pas un repli immédiat en combat.

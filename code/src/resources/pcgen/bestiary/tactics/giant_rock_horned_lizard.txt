@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Lézard géant à cornes rocheuses, animal solitaire des forêts chaudes, neutre et d'intelligence animale. 30 pv, CA 18 ; vision nocturne et Perception +8.
+  Morsure +8 (1d6+6), allonge de 1,50 m ; crachat de sang acide en ligne de 6 m, 2d8 dégâts d'acide, Réflexes DD 15 pour réduire de moitié. Déplacement de 9 m, nage de 6 m.
+
+resource: Crachat de sang | 1 par heure | Ligne de 6 m ; 2d8 dégâts d'acide, Réflexes DD 15 pour réduire de moitié
+
+step: Une présence approche sans l'avoir repéré
+  do: Rester dissimulé dans la végétation et surveiller son approche
+  note: Discrétion +10, ou +14 dans les forêts et les broussailles ; Perception +8
+
+## Ouverture
+
+step: Un adversaire menaçant se trouve dans une ligne de 6 m et le crachat est disponible
+  do: Cracher le sang acide dans sa direction
+  note: Si plusieurs adversaires sont déjà alignés, les prendre dans la même ligne
+
+step: Un adversaire est à 1,50 m et le lézard n'utilise pas son crachat ce round
+  do: Mordre à +8, pour 1d6+6 dégâts
+
+step: Il engage le combat et aucun adversaire n'est à portée
+  do: Se rapprocher d'une cible accessible, puis mordre si son déplacement permet de l'atteindre
+  note: Parcourir jusqu'à 9 m sur terre ou 6 m à la nage avant la morsure
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer à le mordre à +8, pour 1d6+6 dégâts
+  note: Il ne dispose que d'une attaque de morsure ; aucune saisie ni aucun renversement automatique
+
+step: Le crachat est encore disponible et une menace se présente dans sa ligne de 6 m
+  do: Utiliser le crachat de sang acide
+  note: Après son utilisation, il faut attendre une heure avant de pouvoir cracher de nouveau
+
+step: Sa cible s'éloigne et il poursuit le combat
+  do: La suivre pour revenir à portée de morsure
+  note: Nage +16 pour les passages aquatiques ; Escalade +12 si le trajet impose de grimper
+
+## Repli
+
+step: Très blessé ou acculé par plusieurs adversaires
+  do: Rompre le combat et fuir vers les broussailles ou une voie d'eau accessible
+  note: Utiliser le retrait si possible ; déplacement de 9 m sur terre ou de 6 m à la nage, puis se dissimuler lorsque le couvert le permet
+
+step: Un poursuivant bloque sa fuite et le crachat est encore disponible
+  do: Lui cracher le sang acide s'il est dans la ligne de 6 m, puis reprendre la fuite dès que possible

@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Pistolero numérien, humain chaotique bon de niveau 6, solitaire et amateur d'armes technologiques ; ses recherches lui ont valu des ennemis dans la Ligue technique.
+  61 pv ; CA 20, contact 16, pris au dépourvu 15 ; initiative +5 ; déplacement de 9 m ; Perception +11.
+  Pistolet laser +10 contre la CA de contact, 1d8+3 feu, facteur de portée de 15 m. Pistolet de maître +10, 1d8, critique x4 ; il vise normalement la CA de contact jusqu'à 6 m seulement.
+  Dague de maître +8/+3, 1d4+1, critique 19-20 ; allonge de 1,50 m. Il privilégie les tirs et garde la dague pour les situations désespérées.
+
+resource: Pistolet laser | 10 charges par chargement | chaque tir consomme 1 charge
+resource: Disques d'argent numériens | 5 | chacun contient 10 charges et permet de recharger le laser ; aucun générateur n'est fourni
+resource: Munitions à poudre | 20 balles, 20 doses de poudre et 20 cartouches alchimiques en papier | un tir utilise une balle et une dose de poudre, ou une cartouche
+resource: Audace | 2 points au départ | réserve commune aux exploits ; conserver si possible au moins 1 point
+resource: Potion de grâce féline | 1 | +4 en Dextérité pendant 3 minutes
+resource: Huile d'arme magique | 1 | bonus d'altération de +1 à l'attaque et aux dégâts de l'arme pendant 1 minute
+resource: Potions de soins modérés | 2 | à boire à couvert pour récupérer des pv
+resource: Antitoxine | 1 | +5 alchimique aux jets de Vigueur contre le poison pendant 1 heure
+
+step: Il peut choisir le terrain
+  do: Préparer le laser chargé, repérer un couvert et une voie de fuite ; garder une ligne de tir dégagée entre 9 et 15 m.
+  note: Éviter la fumée et le brouillard, qui donnent aux cibles un abri en plus du camouflage contre le laser.
+
+step: Le combat est imminent et il dispose de temps
+  do: Boire la grâce féline, puis appliquer l'huile d'arme magique sur le laser ; prendre l'antitoxine si un poison est prévisible.
+  note: Les valeurs d'attaque ci-dessous sont celles du profil sans consommables. Grâce féline ajoute +2 aux attaques à distance, à la CA et aux Réflexes, ainsi que +2 aux dégâts du laser grâce à son entraînement ; l'huile ajoute encore +1 aux attaques et dégâts du laser.
+
+## Ouverture
+
+step: Une cible dangereuse est visible et il doit se déplacer
+  do: Se déplacer vers un couvert, puis tirer une fois au laser à +10 contre la CA de contact, pour 1d8+3 feu.
+  note: Choisir en priorité une menace qu'il peut rapidement neutraliser ; à 9 m ou moins, Tir à bout portant ajoute +1 à l'attaque et aux dégâts.
+
+step: Il peut rester sur place sans être menacé au contact
+  do: Faire une attaque à outrance au laser avec Tir rapide : trois tirs à +8/+8/+3 contre la CA de contact, chacun pour 1d8+3 feu.
+  note: Une attaque à outrance permet seulement un pas de placement de 1,50 m. Tir de précision supprime le malus pour tirer sur un adversaire engagé en mêlée, sans supprimer les abris.
+
+## Rounds suivants
+
+step: La cible reste exposée et le laser contient assez de charges
+  do: Répéter les trois tirs de Tir rapide ; concentrer les impacts sur la même menace jusqu'à sa neutralisation.
+  note: Contre une cible facile à toucher, cumuler le tir supplémentaire du mode semi-automatique avec Tir rapide : quatre tirs à +4/+4/+4/-1, consommant 4 charges. Le malus total est alors de -6 sur chaque attaque.
+
+step: Une barrière transparente ou un effet de force sépare le tireur de sa cible visible
+  do: Tirer au laser à travers cet obstacle.
+  note: Le laser traverse les effets de force sans les endommager ; le verre ne donne pas d'abri mais subit aussi les dégâts du rayon.
+
+step: Le laser est vide
+  do: Gagner un couvert et le recharger avec un disque d'argent ; garder une main libre pour manipuler les munitions.
+  note: Décompter les charges après chaque tir ; les disques constituent une réserve finie.
+
+step: La cible résiste au feu, ou elle est invisible mais sa position est repérée
+  do: Passer au pistolet à poudre et tirer de préférence à 6 m ou moins ; conserver les risques de raté liés au camouflage.
+  note: Une créature invisible est immunisée aux dégâts du laser. Le pistolet à poudre contient un seul coup : rechargement par action de mouvement avec une cartouche, ou action simple avec balle et poudre ; il ne permet donc pas la salve du laser.
+
+step: Il doit tirer au pistolet à poudre au-delà de 6 m
+  do: Si nécessaire, utiliser l'exploit de tir au contact à longue portée en dépensant 1 point d'audace par facteur de portée au-delà du premier.
+  note: Cet exploit permet de viser la CA de contact mais conserve les malus de portée ; il est inutile avec le laser, qui vise déjà la CA de contact.
+
+step: Un tir adverse risque de le toucher
+  do: Dépenser 1 point d'audace pour l'esquive du pistolero : déplacement immédiat de 1,50 m et +2 à la CA contre ce tir, ou se jeter à terre pour +4.
+  note: Le déplacement peut provoquer des attaques d'opportunité ; éviter cette option lorsqu'il est encerclé.
+
+step: Un ennemi arrive au contact
+  do: Faire un pas de placement de 1,50 m pour sortir de son allonge avant de tirer ; sinon, dépenser 1 point d'audace pour un coup de crosse en action simple, suivi d'un croc-en-jambe gratuit si le coup touche, avec BMO +7.
+  note: S'il ne peut plus employer cet exploit, utiliser la dague ou se retirer ; tirer dans une zone menacée provoque une attaque d'opportunité.
+
+step: Le pistolet à poudre est brisé par un incident de tir
+  do: Utiliser le déblocage en action simple avec au moins 1 point d'audace disponible, ou dépenser 1 point pour le faire en action de mouvement.
+  note: Ne pas continuer à tirer avec l'arme brisée.
+
+## Repli
+
+step: Ses pv passent sous 20, ou ses armes ne permettent plus de menacer efficacement l'ennemi
+  do: Rompre le combat par une action de retraite, jusqu'à 18 m, vers le couvert ou la sortie repérée.
+  note: S'il doit traverser d'autres zones menacées, envisager Acrobaties +11 à demi-vitesse ; la retraite protège seulement la sortie de sa case initiale.
+
+step: Il est à couvert et hors de portée immédiate
+  do: Boire une potion de soins modérés, puis poursuivre la fuite si les poursuivants restent dangereux ; garder la seconde potion pour une nouvelle blessure.
+  note: Recharger seulement une fois en sécurité ; il ne sacrifie pas sa vie pour conserver une position perdue.

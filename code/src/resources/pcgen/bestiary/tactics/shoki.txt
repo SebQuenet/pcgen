@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Shoki, psychopompe neutre et solitaire de taille M, chargé de guider les âmes attardées vers le jugement. Il commence par les raisonner et réserve la violence aux résistants.
+  115 pv ; CA 25, contact 15 ; déplacement 9 m ; allonge 1,50 m. Bâton +2 en fer froid +19/+14, chaque coup infligeant 1d6+12 dégâts ; son toucher spirituel permet de frapper normalement les créatures intangibles.
+  Lumière brûlante à distance ; soins modérés de groupe employés uniquement pour blesser les morts-vivants. Invisibilité et forme éthérée lui permettent de choisir ses engagements.
+  RD 10/adamantium, RM 20, résistance à l'électricité 10 ; immunité à l'acide, au froid, au charme, aux effets de mort, aux maladies, à la peur, au poison et au sommeil.
+
+resource: Détection du Chaos, du Mal, du Bien, de la Loi et de la magie | constant | identifier les auras en prenant le temps nécessaire
+resource: Invisibilité | à volonté | lui-même uniquement ; 9 minutes au maximum, prend fin dès qu'il attaque
+resource: Forme éthérée | à volonté | 9 minutes ; ne permet pas d'attaquer les adversaires restés sur le plan Matériel
+resource: Protection contre le Mal, protection contre le Bien | à volonté | 9 minutes chacune ; choisir selon les adversaires
+resource: Lumière brûlante | à volonté | NLS 9 ; rayon de contact à distance, portée 57 m
+resource: Soins modérés de groupe | à volonté | NLS 9 ; Volonté DD 19, demi-dégâts ; blesse uniquement les morts-vivants
+resource: Changement de plan | 1/jour | lui-même uniquement ; conserver pour quitter définitivement le combat
+
+step: Une âme ou des intrus peuvent encore être raisonnés
+  do: Engager le dialogue avec Diplomatie +20 ; employer Psychologie +22 pour apprécier leurs intentions
+  note: Il cherche à accomplir sa mission, sans déclencher un combat sur le seul critère de l'alignement.
+
+step: Il prépare une intervention
+  do: Reconnaître les lieux sous invisibilité, avec Discrétion +17 et Perception +22
+  note: Vision dans le noir et perception des esprits à 18 m ; cette dernière repère et distingue les vivants et les morts-vivants comme une vision aveugle.
+
+step: Un affrontement avec un adversaire mauvais ou bon paraît imminent
+  do: Lancer sur lui-même la protection correspondant à cet alignement, puis se rendre invisible lors d'une action distincte
+  note: La protection accorde +2 de parade à la CA et +2 de résistance aux sauvegardes contre les attaques de l'alignement concerné ; les bonus des deux protections ne se cumulent pas.
+
+## Ouverture
+
+step: Plusieurs morts-vivants sont à portée de 13,50 m
+  do: Employer soins modérés de groupe pour infliger 2d8+9 dégâts à chacun, Volonté DD 19 pour réduire de moitié
+  note: Jusqu'à neuf cibles ; aucune paire de cibles ne doit être séparée de plus de 9 m. Ce pouvoir ne soigne ni le shoki ni des alliés vivants.
+
+step: Une cible isolée reste à distance
+  do: Tirer une lumière brûlante avec une attaque de contact à distance à +14
+  note: 4d8 dégâts contre une créature vivante, 9d6 contre un mort-vivant, 9d8 si ce mort-vivant est particulièrement vulnérable à la lumière vive ; aucun jet de sauvegarde, RM applicable.
+
+step: Un adversaire est déjà à 1,50 m et aucun déplacement important n'est nécessaire
+  do: Effectuer une attaque à outrance au bâton, +19/+14, chaque coup infligeant 1d6+12 dégâts
+  note: Si le shoki doit d'abord parcourir plus de 1,50 m, se déplacer puis porter une seule attaque à +19. Toute attaque met fin à son invisibilité.
+
+## Rounds suivants
+
+step: Plusieurs morts-vivants restent groupés à portée
+  do: Répéter soins modérés de groupe pour user plusieurs ennemis à la fois
+  note: Privilégier les cibles dont la Volonté semble faible ; respecter la portée et l'espacement des cibles à chaque utilisation.
+
+step: Un ennemi isolé reste au contact
+  do: Répéter l'attaque à outrance au bâton ; utiliser un pas de placement de 1,50 m pour améliorer sa position si nécessaire
+  note: Le fer froid et le toucher spirituel rendent cette arme particulièrement utile contre les adversaires vulnérables au fer froid ou intangibles.
+
+step: Un ennemi évite la mêlée ou présente une CA de contact faible
+  do: Répéter lumière brûlante en gardant une ligne de tir dégagée
+  note: Éviter de tirer sur une cible engagée en mêlée avec un allié : le shoki ne possède pas Tir de précision.
+
+step: Il doit activer un pouvoir magique alors qu'un adversaire le menace
+  do: Faire si possible un pas de placement de 1,50 m hors de son allonge avant l'activation ; sinon, tenter l'utilisation sur la défensive
+  note: Magie de guerre porte sa concentration à +16 pour une utilisation sur la défensive ; un échec fait perdre l'action sans produire le pouvoir.
+
+step: Il doit changer d'angle sans subir les attaques ordinaires du plan Matériel
+  do: Activer forme éthérée, puis se repositionner aux rounds suivants en traversant les obstacles
+  note: Mettre fin au pouvoir avant de reprendre l'offensive ; cette fin demande une action simple. Il ne peut donc pas réapparaître ainsi et attaquer dans la même action simple.
+
+## Repli
+
+step: Points de vie sous 35, ou combat devenu sans intérêt pour sa mission
+  do: Activer forme éthérée, puis s'éloigner à travers les obstacles aux rounds suivants
+  note: Les effets de force et certaines attaques d'origine éthérée restent dangereux ; choisir un trajet qui rompt rapidement le contact.
+
+step: La poursuite reste dangereuse et changement de plan est encore disponible
+  do: Utiliser changement de plan pour regagner le Cimetière
+  note: Ce pouvoir n'emporte pas d'autre créature. Les soins modérés de groupe ne peuvent pas restaurer ses propres points de vie.

@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Sahuagin brute, humanoïde monstrueux aquatique de taille M, mauvais et brutal. 36 pv ; CA 17, contact 12, pris au dépourvu 15.
+  Harpon de maître au corps à corps +8 (1d8+6, x3), morsure +2 (1d4+2) ; harpon lancé +6 (1d8+4, x3).
+  Déplacement terrestre de 12 m ; nage de 18 m. Perception aveugle à 9 m et vision dans le noir à 18 m.
+
+step: Il peut choisir le terrain du combat
+  do: Se placer dans l'eau, à proximité d'un passage que les adversaires devront emprunter
+  note: sa vitesse de nage lui permet de rejoindre une cible isolée ou de changer rapidement de position
+
+step: Il attend dans l'obscurité ou une eau peu visible
+  do: Surveiller les approches avec sa vision dans le noir et sa perception aveugle
+  note: la perception aveugle signale la présence des créatures à 9 m, mais ne supprime pas les effets du camouflage
+
+## Ouverture
+
+step: Un adversaire est déjà à portée de mêlée
+  do: Faire une attaque à outrance avec le harpon +8 et la morsure +2
+  note: le harpon inflige 1d8+6 dégâts ; la morsure inflige 1d4+2 dégâts
+
+step: Il doit se déplacer pour atteindre un adversaire
+  do: Rejoindre la cible avec son déplacement, puis porter une attaque de harpon +8
+  note: après un déplacement normal, il ne peut pas ajouter la morsure à cette attaque
+
+step: La cible reste hors de portée de mêlée et les conditions permettent un lancer
+  do: Lancer le harpon de maître +6 (1d8+4, x3) si une attaque immédiate vaut la perte de son arme en main
+  note: il ne dispose ici d'aucun harpon de rechange indiqué ; conserver son arme s'il peut bientôt engager la mêlée
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance, harpon +8 puis morsure +2, contre la même cible
+  note: concentrer les coups sur un adversaire déjà blessé pour le mettre rapidement hors de combat
+
+step: La cible s'éloigne ou une cible isolée devient accessible
+  do: Utiliser sa nage de 18 m, ou son déplacement terrestre de 12 m, pour la rejoindre puis attaquer au harpon
+  note: privilégier un trajet qui évite de s'exposer inutilement aux coups des autres adversaires
+
+step: Il a lancé son harpon et peut le récupérer sans trop s'exposer
+  do: Récupérer le harpon pour retrouver son attaque principale
+  note: tant qu'il ne l'a pas récupéré, sa seule attaque indiquée est la morsure +2 (1d4+2)
+
+## Repli
+
+step: Il tombe à 9 pv ou moins et une voie de fuite est accessible
+  do: Rompre le combat et gagner les eaux profondes en nageant à 18 m par déplacement
+  note: si un adversaire le menace, utiliser un retrait pour s'éloigner jusqu'à 36 m en nageant et éviter les attaques d'opportunité dues à la sortie de sa case de départ
+
+step: Les poursuivants perdent sa trace
+  do: Continuer à s'éloigner dans l'eau en utilisant l'obscurité et les obstacles disponibles
+  note: sa vitesse de nage est son principal moyen de survie

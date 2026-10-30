@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Nemhain, mort-vivant intangible de taille M, neutre mauvais, FP 15. Gardien intelligent et patient : il isole une victime et l'affaiblit avant de l'achever.
+  225 pv ; CA 26, contact 26 ; initiative +12 ; vol à 9 m, manœuvrabilité parfaite. Contact intangible +21 contre la CA de contact : 3d8 dégâts et diminution permanente de 1d6 Constitution ; allonge 1,50 m.
+  Régénération profane 5, interrompue par l'électricité ou le Bien ; résistance à la canalisation +4 ; immunité au froid et traits des morts-vivants ; résistances à l'acide 10 et au feu 10.
+
+resource: Mise à mal | 3/jour | Contact +21 ; 150 dégâts, Volonté DD 23 pour réduire de moitié ; ne réduit pas la cible sous 1 pv. Sur lui-même, restitue 150 pv, sans dépasser 225 pv.
+resource: Exécution | 3/jour | Contact +21 ; 12d6+15 dégâts ; Vigueur DD 22 : seulement 3d6+15 dégâts.
+resource: Télékinésie | 3/jour | DD 22 selon le mode ; les manœuvres peuvent durer jusqu'à 15 rounds avec concentration.
+resource: Coquille antivie | 1/jour | Barrière mobile de 3 m de rayon, pendant 15 minutes ; usage défensif.
+resource: Mur de force | 1/jour | Dure 15 rounds ; aucun jet de sauvegarde ni résistance à la magie.
+
+step: Intrus repérés avant l'affrontement
+  do: Se dissimuler près d'une paroi traversable, observer les intrus et préparer un trajet d'approche et de retour à couvert
+  note: Discrétion +29, Perception +28, vision dans le noir à 18 m ; télépathie à 30 m pour parler sans dévoiler sa position par la voix.
+
+## Ouverture
+
+step: Le terrain permet de séparer les intrus
+  do: Placer un mur de force entre les combattants et leurs soutiens, puis se déplacer du côté de la victime isolée
+  note: Le mur bloque aussi ses propres attaques et pouvoirs ; il contourne son bord par une paroi ordinaire, sans tenter de traverser la force.
+
+step: Une victime isolée est accessible et aucune séparation n'est nécessaire
+  do: Utiliser Attaque en vol pour approcher, délivrer mise à mal au contact, puis gagner un couvert avec le déplacement restant ; trajet total de 9 m au maximum
+  note: Privilégier une cible susceptible de rater Volonté DD 23. Ce contact délivre le pouvoir seul ; les dégâts et la diminution de Constitution du contact intangible ne s'y ajoutent pas.
+
+## Rounds suivants
+
+step: Une victime est très affaiblie, notamment après mise à mal
+  do: Revenir avec Attaque en vol et porter un contact intangible +21 pour l'achever, puis se remettre à couvert
+  note: Attaque en vol n'annule pas les attaques d'opportunité ; Souplesse du serpent donne +4 à la CA contre celles provoquées par son déplacement.
+
+step: Une cible vivante semble avoir une faible Vigueur et dispose encore de nombreux pv
+  do: Employer exécution au contact, puis s'éloigner avec Attaque en vol si le trajet le permet
+  note: Vigueur DD 22 réduit les dégâts à 3d6+15 ; ce pouvoir ne tue pas automatiquement. Garder de préférence une utilisation de mise à mal pour se soigner.
+
+step: Un adversaire reste à 3 m et s'approcher l'exposerait davantage
+  do: Utiliser Fente pour porter le contact intangible à 3 m pendant son tour
+  note: Sa CA tombe à 24 jusqu'à son prochain tour ; son allonge redevient ensuite 1,50 m. Attaques réflexes permet jusqu'à neuf attaques d'opportunité par round, sans prolonger l'allonge de Fente hors de son tour.
+
+step: Un ennemi porte une arme du Bien ou un objet dangereux produisant de l'électricité
+  do: Utiliser télékinésie pour tenter un désarmement à distance, puis maintenir la concentration pour renouveler une manœuvre par round si nécessaire
+  note: La manœuvre se résout contre la DMD, sans sauvegarde ; la résistance à la magie s'applique. La concentration consomme son action simple et remplace donc son attaque ou un autre pouvoir ce round.
+
+step: Il doit tenir à distance des adversaires vivants pendant sa récupération
+  do: Activer coquille antivie, reculer et employer télékinésie tant que la barrière reste active
+  note: Ne pas avancer pour pousser la coquille contre une créature exclue : elle s'effondrerait. Pour reprendre les attaques au contact, dissiper volontairement la coquille par une action simple. Créatures artificielles, élémentaires, Extérieurs et morts-vivants peuvent la franchir.
+
+## Repli
+
+step: Il tombe à 75 pv ou moins et dispose encore de mise à mal
+  do: Se mettre à couvert en volant, puis utiliser mise à mal sur lui-même pour récupérer 150 pv
+  note: Se soigner avant de risquer une nouvelle salve d'électricité ou une attaque du Bien ; il peut agir pendant son déplacement grâce à Attaque en vol.
+
+step: Les soins sont épuisés ou les ennemis neutralisent régulièrement sa régénération
+  do: Traverser une paroi ordinaire accessible pour rompre la ligne de vue ; si mur de force est encore disponible, fermer la poursuite avant de se retirer
+  note: La régénération rend 5 pv par round lorsqu'elle fonctionne. Après des dégâts d'électricité ou du Bien, elle cesse de fonctionner pendant le round suivant. À 0 pv, elle le maintient chancelant plutôt que détruit tant qu'elle reste active.
+
+step: Il est détruit et son objet rituel subsiste
+  do: Appliquer sa reconstruction : il revient à ses 225 pv après 1d4 jours, auprès de cet objet
+  note: La destruction de l'objet rituel empêche cette reconstruction ; elle ne constitue pas une fuite immédiate pendant le combat.

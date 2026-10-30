@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Inphidien nocturne, humanoïde monstrueux reptilien de taille M, neutre mauvais, FP 5 ; 45 pv, CA 16, initiative +6.
+  Deux morsures de mains-serpents +8, chacune à 1d4+1 dégâts plus poison, Vigueur DD 17 ; allonge de 1,50 m ; déplacement de 9 m.
+  Prédateur discret et manipulateur : Discrétion +15, +19 dans les ombres ; Perception +15 et vision dans le noir à 18 m.
+
+resource: Frayeur | 3/jour | NLS 7 ; Volonté DD 13 ; une créature vivante de 5 DV ou moins à 12 m maximum
+resource: Ténèbres | 3/jour | NLS 7 ; objet touché ; rayon de 6 m ; durée de 7 minutes
+resource: Lueurs hypnotiques | 3/jour | NLS 7 ; Volonté DD 13 ; portée de 51 m ; rayon de 3 m ; jusqu'à 2d4+7 DV de créatures
+resource: Suggestion | 1/jour | NLS 7 ; Volonté DD 15 ; une créature vivante comprenant ses paroles à 12 m maximum
+resource: Poison des morsures | À chaque morsure qui touche | Vigueur DD 17 ; les effets, la fréquence et la guérison ne sont pas précisés dans le profil fourni
+
+step: Des intrus approchent
+  do: Se dissimuler dans les ombres et les observer avant de choisir une cible isolée ou facile à atteindre.
+  note: Privilégier une position avec couvert et une voie de fuite ; son déplacement de 9 m ne garantit pas de distancer les poursuivants.
+
+step: Il combat avec la troupe indiquée dans son organisation
+  do: Laisser les deux cobrabacks et les inphidiens communs occuper les adversaires pendant qu'il cherche une ouverture.
+  note: Ne leur attribuer ici aucun pouvoir absent de leurs propres profils.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et ne menacent pas encore sa position
+  do: Employer lueurs hypnotiques pour fasciner les créatures dans un rayon de 3 m, Volonté DD 13.
+  note: Le pouvoir affecte d'abord les créatures ayant le moins de DV ; éviter d'inclure ses alliés. Il exige la concentration, puis persiste 2 rounds. Une menace manifeste rompt la fascination.
+
+step: Une cible comprend ses paroles et une consigne plausible peut la séparer du groupe
+  do: Employer suggestion, Volonté DD 15, pour lui faire surveiller un passage éloigné ou quitter les lieux sous un prétexte crédible.
+  note: Choisir cette ouverture à la place des lueurs hypnotiques ; la suggestion doit sembler raisonnable et ne peut imposer une action manifestement nuisible à la cible.
+
+step: Il peut atteindre une cible au corps à corps
+  do: S'approcher jusqu'à 1,50 m et porter une morsure +8, pour 1d4+1 dégâts plus poison, Vigueur DD 17.
+  note: Après un déplacement ordinaire, il ne porte qu'une morsure ; les deux exigent une attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans nécessiter de déplacement de plus de 1,50 m
+  do: Porter une attaque à outrance avec les deux morsures +8, chacune infligeant 1d4+1 dégâts plus poison, Vigueur DD 17.
+  note: Un pas de placement de 1,50 m peut accompagner l'attaque à outrance ; concentrer les morsures sur une cible accessible et déjà blessée.
+
+step: Il maintient les lueurs hypnotiques pendant que des ennemis non fascinés restent dangereux
+  do: Continuer à se concentrer si ses alliés peuvent contenir les ennemis libres ; sinon, cesser la concentration et agir dès que nécessaire.
+  note: Ne pas attaquer les créatures fascinées si l'objectif est de les tenir à l'écart ; le pouvoir persiste seulement 2 rounds après la fin de la concentration.
+
+step: Un adversaire vivant de 5 DV ou moins doit être écarté
+  do: Employer frayeur à 12 m maximum, Volonté DD 13.
+  note: Un échec rend la cible effrayée pendant 1d4 rounds ; une réussite la laisse secouée pendant 1 round. Les créatures de 6 DV ou plus sont immunisées.
+
+step: Réduire l'éclairage gênerait davantage ses adversaires que lui
+  do: Employer ténèbres sur un objet touché pour abaisser l'éclairage d'un cran dans un rayon de 6 m.
+  note: Sa vision dans le noir porte à 18 m, mais ne lui donne aucun avantage sur un ennemi doté du même sens. En pleine lumière, ténèbres ne produit qu'une lumière normale.
+
+## Repli
+
+step: Ses points de vie tombent à 15 ou moins, ou il est isolé face à plusieurs ennemis encore capables de combattre
+  do: Chercher le couvert et quitter le contact par un désengagement ; se retirer jusqu'à 18 m si le terrain le permet.
+  note: Le désengagement occupe le round et protège seulement contre les attaques d'opportunité dues au départ de la case initiale.
+
+step: Il dispose encore d'un pouvoir susceptible de ralentir la poursuite
+  do: À distance du contact, employer frayeur contre un poursuivant vulnérable, ou lueurs hypnotiques contre des poursuivants regroupés, puis poursuivre la fuite au round suivant.
+  note: Des ténèbres déjà en place peuvent faciliter la dissimulation contre des ennemis dépendant de la lumière ; elles ne bloquent pas physiquement la poursuite.

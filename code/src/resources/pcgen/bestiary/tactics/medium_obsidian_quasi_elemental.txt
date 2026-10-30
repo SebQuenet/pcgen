@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Quasi-élémentaire d'obsidienne de taille M, neutre et peu intelligent (Int 4), originaire du quasi-plan de l'Obsidienne. Il privilégie un combat simple au contact.
+  22 pv ; CA 17 ; griffe +7 (1d6+6), allonge 1,50 m ; déplacement 6 m ; vision dans le noir 18 m.
+  Résistance au froid 10 et au feu 10 ; immunités liées aux traits élémentaires. Ses blessures peuvent projeter du verre fondu ; à 0 pv ou moins, il explose.
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Attendre à couvert et utiliser Discrétion +5 pour préparer une attaque à courte distance
+  note: Perception +6 ; la vision dans le noir porte à 18 m
+
+## Ouverture
+
+step: Un ennemi se trouve à 1,50 m ou moins
+  do: Frapper avec la griffe +7 (1d6+6)
+
+step: L'ennemi le plus proche se trouve au-delà de son allonge
+  do: Avancer de 6 m au maximum, puis frapper s'il arrive à 1,50 m de la cible
+  note: Si un seul déplacement ne suffit pas, consacrer le round à se rapprocher ; il ne possède aucune attaque à distance
+
+## Rounds suivants
+
+step: Deux adversaires sont adjacents l'un à l'autre et tous deux à portée de sa griffe
+  do: Utiliser Enchaînement : une griffe +7 (1d6+6), puis, si elle touche, une seconde au même bonus contre l'autre adversaire
+  note: Action simple ; CA réduite à 15 jusqu'à son prochain tour. Aucun pas de placement entre les deux attaques
+
+step: Une cible isolée paraît facile à toucher
+  do: Utiliser Attaque en puissance : griffe +6 (1d6+9)
+  note: Le bonus aux dégâts tient compte de son unique attaque naturelle, dont les dégâts ajoutent une fois et demie sa Force
+
+step: La cible est difficile à toucher
+  do: Conserver la griffe +7 (1d6+6), sans Attaque en puissance
+
+step: Une arme perforante ou tranchante lui inflige 3 points de dégâts, soit ses 3 DV
+  do: Déclencher Verre fondu : la plaie projette du verre pendant 1d4 rounds
+  note: Chaque round, toute créature à 1,50 m ou moins doit réussir un jet de Réflexes DD 13 ou subir 1d6 dégâts de feu
+
+step: Une plaie projette encore du verre fondu
+  do: Rester au contact pour maintenir l'adversaire dans la zone des projections tout en poursuivant les attaques de griffe
+
+## Repli
+
+step: Il lui reste 5 pv ou moins et une issue est accessible
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 12 m vers un abri
+  note: Sa faible vitesse rend une fuite prolongée difficile
+
+step: Il est réduit à 0 pv ou moins
+  do: Déclencher automatiquement les Affres de la mort : explosion d'éclats d'obsidienne dans un rayon de 3 m
+  note: Toutes les créatures dans la zone subissent 3d6 dégâts tranchants ; Réflexes DD 13 pour réduire les dégâts de moitié

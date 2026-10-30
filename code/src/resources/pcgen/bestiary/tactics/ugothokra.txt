@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Ugothokra, aberration de petite taille, chaotique mauvaise, FP 7. Mobile et discret, il privilégie les attaques à distance depuis une position difficile à atteindre.
+  85 pv ; CA 20, contact 17, pris au dépourvu 14 ; initiative +9. Déplacement et escalade à 15 m ; vision dans le noir à 18 m.
+  À outrance : 6 attaques de fléchettes +13, chacune pour 1d4+1 dégâts et infection virale. Au contact : morsure +9, 1d4+1 dégâts et poison ; allonge de 1,50 m.
+
+note: Défenses
+  Sang infecté ; immunité au froid, aux maladies et au poison ; résistance à l'acide 5 et à l'électricité 5. Il n'a pas besoin de respirer.
+  Les effets et DD du poison, de l'infection virale et du sang infecté ne sont pas précisés dans le profil fourni.
+
+step: Des parois accessibles permettent de préparer une embuscade
+  do: Grimper vers une position offrant un couvert et une ligne de tir, puis se dissimuler avec Discrétion +22
+  note: Perception +16 pour surveiller les approches ; conserver un itinéraire de fuite praticable en escalade.
+
+## Ouverture
+
+step: Il peut agir pendant un round de surprise
+  do: Tirer une seule attaque de fléchettes +13 sur une cible exposée
+  note: Le round de surprise ne permet pas une attaque à outrance.
+
+step: Il dispose d'un tour complet et peut tirer sans se déplacer
+  do: Effectuer les 6 attaques de fléchettes +13 sur la cible exposée la plus facile à toucher
+  note: Concentrer les dégâts pour réduire rapidement le nombre d'adversaires actifs.
+
+step: Il doit quitter sa cachette pour obtenir une ligne de tir
+  do: Utiliser Tir en mouvement : se déplacer, effectuer une seule attaque de fléchettes, puis terminer son déplacement vers un couvert
+  note: Le déplacement total ne dépasse pas 15 m ; cette manœuvre ne permet pas de tirer les 6 attaques.
+
+## Rounds suivants
+
+step: Sa position reste hors d'atteinte et sa cible est visible
+  do: Répéter l'attaque à outrance de 6 fléchettes sur une même cible jusqu'à la mettre hors de combat
+
+step: Une cible de ses tirs se trouve à 9 m ou moins
+  do: Appliquer Tir à bout portant : +14 à l'attaque et 1d4+2 dégâts par fléchette
+  note: Ce bonus s'applique aussi au tir unique effectué avec Tir en mouvement.
+
+step: Des adversaires approchent de sa position
+  do: Se déplacer vers une autre paroi ou un couvert ; utiliser Tir en mouvement si une ligne de tir le permet
+  note: Exploiter son escalade à 15 m pour imposer aux poursuivants un trajet difficile. Une attaque à distance effectuée dans une zone menacée peut provoquer une attaque d'opportunité.
+
+step: Un adversaire le menace au contact et une sortie existe
+  do: Privilégier le dégagement ; utiliser Acrobaties +18 pour traverser les zones menacées si le trajet s'y prête
+  note: Se déplacer ainsi à demi-vitesse ; Souplesse du serpent accorde +4 à la CA contre les attaques d'opportunité provoquées par son déplacement.
+
+step: Il ne peut pas se dégager du contact
+  do: Mordre à +9 pour 1d4+1 dégâts et poison
+
+## Repli
+
+step: Points de vie à 25 ou moins, ou position devenue intenable
+  do: Rompre le combat et fuir par une paroi accessible ; utiliser une retraite si elle permet de quitter le contact
+  note: Une retraite permet jusqu'à 30 m de déplacement, y compris en escalade ; seule la case de départ cesse d'être considérée comme menacée par les adversaires qu'il voit.
+
+step: Il a rompu la ligne de vue
+  do: Se dissimuler avec Discrétion +22 et poursuivre sa fuite à couvert

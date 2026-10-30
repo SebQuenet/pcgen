@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Diable tourmenteur, extérieur de taille M, loyal mauvais, FP 7 : il isole une cible avec son filet et combat à distance avec ses pouvoirs magiques.
+  76 pv, CA 24, initiative +8 ; déplacement de 9 m, allonge de 1,50 m. Filet capteur d'âmes +12 à distance, 1d6 et agrippement ; contact spectral pour atteindre les créatures intangibles.
+  Rayon ardent à volonté, ancre dimensionnelle contre les fuyards, imprécation pour affaiblir une victime ; pouvoirs au NLS 12.
+
+note: Défenses
+  RD 5/Bien ou argent, immunité au feu et au poison, résistance à l'acide 10 et au froid 10, résistance à la magie 18.
+  Il privilégie les adversaires qui ne contournent pas sa RD et surveille les armes en argent ou alignées sur le Bien.
+
+resource: Détection des pensées | constant | Volonté DD 14 ; cône de 18 m
+resource: Ancre dimensionnelle | à volonté | rayon de contact à distance +12 ; aucun jet de sauvegarde ; durée de 12 minutes
+resource: Imprécation | à volonté | Volonté DD 13 annule ; une créature vivante secouée pendant 12 minutes
+resource: Rayon ardent | à volonté | portée de 16,50 m ; trois rayons de contact à distance +12, chacun infligeant 4d6 de feu
+resource: Courroux de l'ordre | 1/jour | Volonté DD 16 ; explosion occupant un cube de 9 m de côté
+resource: Téléportation suprême | à volonté | lui-même et 50 livres d'objets seulement ; destination sur le même plan
+
+step: Il peut observer les adversaires avant d'être attaqué
+  do: Étudier leurs pensées pendant trois rounds pour chercher leurs intentions et désigner une cible prioritaire ; Volonté DD 14 empêche de lire ses pensées superficielles
+  note: Sa vision dans les ténèbres lui permet d'observer sans éclairage ; elle ne lui donne pas le pouvoir de créer des ténèbres
+
+step: Il prépare son placement
+  do: Choisir une position à couvert, avec une ligne de tir, et repérer un lieu sûr où se téléporter
+
+step: Des alliés sont présents
+  do: Coordonner l'assaut par télépathie à 30 m ; leur faire occuper les combattants pendant qu'il vise une cible isolée
+
+## Ouverture
+
+step: Une cible prioritaire manifeste un moyen de fuite extradimensionnelle
+  do: Utiliser ancre dimensionnelle sur elle avant qu'elle ne s'échappe
+  note: Ce pouvoir bloque notamment la téléportation ; il ne ralentit pas une fuite à pied
+
+step: Plusieurs ennemis identifiés comme chaotiques sont regroupés et son pouvoir quotidien est disponible
+  do: Utiliser courroux de l'ordre sur le groupe
+  note: Les créatures chaotiques subissent 5d8 dégâts et sont hébétées 1 round ; Volonté DD 16 réduit les dégâts de moitié et annule l'hébétement. Les extérieurs chaotiques subissent 10d6 à la place
+  note: Les créatures neutres sur l'axe Loi-Chaos subissent la moitié des dégâts, encore réduite de moitié sur une sauvegarde réussie, sans hébétement ; les créatures loyales sont épargnées
+
+step: Une victime à capturer est isolée et à portée du filet
+  do: Lancer le filet capteur d'âmes +12, pour 1d6 dégâts et agrippement
+
+step: Aucun contrôle urgent n'est nécessaire et une cible vulnérable au feu est à 16,50 m ou moins
+  do: Concentrer les trois rayons ardents sur cette cible pour l'abattre rapidement
+  note: Chaque rayon exige son propre jet de contact à distance +12 ; aucun jet de sauvegarde. Choisir une seule de ces ouvertures par round
+
+## Rounds suivants
+
+step: Une cible reste libre et vulnérable au feu
+  do: Répéter rayon ardent en concentrant les tirs sur le même adversaire ; se déplacer pour garder une ligne de tir et rester hors du contact
+
+step: La cible résiste au feu ou doit être prise vivante
+  do: Utiliser imprécation, puis tenter le filet à un round ultérieur si elle est à portée
+  note: Volonté DD 13 annule ; une victime secouée subit un malus de -2 aux attaques, sauvegardes, tests de compétence et de caractéristique. Répéter imprécation n'aggrave pas cet état
+
+step: Le filet a agrippé une victime et ses alliés peuvent l'exploiter
+  do: Leur signaler la prise par télépathie et concentrer l'effort du groupe sur elle
+  note: Le filet inflige les effets indiqués par son attaque ; aucune capacité supplémentaire de destruction ou d'emprisonnement de l'âme n'est précisée
+
+step: Des combattants l'encerclent ou menacent de le submerger
+  do: Utiliser téléportation suprême pour gagner une position connue hors de leur contact ; reprendre les attaques au round suivant
+  note: La téléportation et les rayons occupent des rounds distincts ; au contact, utiliser le pouvoir sur la défensive si nécessaire
+
+## Repli
+
+step: Ses points de vie passent sous 25, ou les ennemis contournent ses défenses et menacent de l'abattre
+  do: Utiliser téléportation suprême vers le refuge repéré sur le même plan
+  note: Il part seul avec les objets autorisés ; ce pouvoir ne permet pas d'emporter une victime ou un allié
+
+step: Un effet empêche sa téléportation
+  do: Se retirer vers un couvert à 9 m par déplacement et demander aux alliés présents de couvrir sa fuite

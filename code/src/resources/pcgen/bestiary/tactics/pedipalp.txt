@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Pedipalp, vermine de taille M sans Intelligence, neutre, FP 2 ; 11 pv, CA 16, initiative +2.
+  Deux pinces +2, chacune infligeant 1d6+1 et permettant une saisie ; morsure +2, 1d6+1. Allonge : 1,50 m.
+  Constriction : 1d6+1 dégâts contondants à chaque test de lutte réussi contre sa proie.
+  Déplacement terrestre : 9 m ; vision dans le noir : 18 m ; Perception +4.
+
+step: Une proie approche dans l'obscurité
+  do: La repérer avec sa vision dans le noir et sa Perception, puis chercher le contact.
+  note: Son comportement reste instinctif : il cherche à saisir et à broyer une proie accessible.
+
+## Ouverture
+
+step: La proie est hors de son allonge
+  do: Avancer de 9 m au plus, puis attaquer avec une pince si la proie est à 1,50 m ou moins.
+  note: Après ce déplacement, il ne dispose que d'une attaque, sans attaque à outrance.
+
+step: La proie est déjà à portée au début de son tour
+  do: Faire une attaque à outrance avec ses deux pinces et sa morsure.
+  note: Dès qu'une pince touche, tenter une saisie gratuite sans provoquer d'attaque d'opportunité. Son BMO indiqué est +0 ; la saisie ajoute +4 aux tests pour engager ou maintenir la lutte, avant les autres modificateurs applicables.
+  note: Une saisie réussie déclenche immédiatement la constriction, en plus des dégâts de la pince. Appliquer les modificateurs de lutte aux attaques restantes.
+
+## Rounds suivants
+
+step: Il maintient une proie en lutte
+  do: Utiliser son action simple pour maintenir la lutte et choisir d'infliger les dégâts d'une pince : 1d6+1, plus 1d6+1 de constriction si le test réussit.
+  note: Le maintien bénéficie du bonus habituel de +5 si la proie n'a pas rompu la lutte depuis son tour précédent. Ne pas ajouter une attaque à outrance à cette action.
+
+step: La proie s'est libérée
+  do: Recommencer les attaques de pinces et les tentatives de saisie ; ajouter la morsure lorsqu'une attaque à outrance est possible.
+  note: Un pas de 1,50 m permet de se replacer tout en conservant l'attaque à outrance ; un déplacement ordinaire impose de se limiter à une attaque.
+
+## Repli
+
+step: Grièvement blessé, sans proie agrippée et avec une issue libre
+  do: Fuir instinctivement par une action de retrait, jusqu'à 18 m.
+
+step: Acculé ou encore occupé à broyer sa proie
+  do: Continuer les attaques ou la constriction tant qu'il peut agir.

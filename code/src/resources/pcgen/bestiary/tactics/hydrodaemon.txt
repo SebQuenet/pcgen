@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Hydrodaemon de taille G, prédateur amphibie neutre mauvais : 95 pv, CA 20, allonge de 3 m. Il privilégie les combats au bord de l'eau et nage à 18 m par round ; au sol, il se déplace à 9 m.
+  Morsure +13 (1d8+4 et étreinte), 2 griffes +13 (1d6+4) ; crachat soporifique à distance +11. Le profil fourni ne précise ni la portée, ni le DD, ni la durée du sommeil.
+  Réduction des dégâts 10/fer froid ou argent, résistance à la magie 19 ; résistances au froid, à l'électricité et au feu de 10. Immunisé à l'acide, aux effets de mort, aux maladies, au poison et aux eaux du Styx.
+  Vision dans le noir à 18 m, Perception +15 ; détection de la magie et marche sur l'onde constantes. Sa Volonté +3 rend les affrontements prolongés avec des lanceurs de sorts risqués.
+
+resource: Flèche acide, ténèbres profondes | À volonté | pouvoirs magiques, NLS 9
+resource: Contrôle de l'eau | 3/jour | pouvoir magique, NLS 9
+resource: Téléportation suprême | 3/jour | lui-même et au plus 25 kg d'objets uniquement
+resource: Convocation de monstres V | 3/jour | élémentaire de l'Eau de taille G uniquement, NLS 9
+resource: Profanation | 1/jour | pouvoir magique, NLS 9 ; sans intérêt immédiat sans morts-vivants alliés
+resource: Convocation de daemon | 1/jour | 1 hydrodaemon, 50 % de réussite ; niveau de pouvoir 3
+
+step: Il peut choisir le terrain
+  do: Se dissimuler près d'une eau assez profonde pour y combattre et s'y replier ; observer les intrus avec Perception +15 et détection de la magie
+  note: Discrétion +10 ; l'amphibie peut attendre sous l'eau, tandis que marche sur l'onde lui permet aussi d'occuper la surface
+
+step: Une attaque est imminente et il dispose du temps nécessaire
+  do: Convoquer un élémentaire de l'Eau de taille G pour renforcer sa position aquatique
+  note: La convocation demande 1 round ; à NLS 9, l'élémentaire reste 9 rounds. Ne pas la lancer trop tôt
+
+step: Des renforts sont nécessaires avant l'engagement
+  do: Tenter de convoquer un hydrodaemon, puis coordonner l'embuscade par télépathie à 30 m
+  note: La réussite n'est que de 50 % ; prévoir de combattre même sans renfort
+
+## Ouverture
+
+step: Les ennemis approchent d'une berge basse ou d'un passage inondable
+  do: Employer contrôle de l'eau pour relever le niveau et étendre le terrain aquatique
+  note: Exploiter la configuration réelle des lieux ; ce pouvoir ne crée pas une masse d'eau là où il n'y en a pas
+
+step: Une cible dangereuse est à portée du crachat soporifique
+  do: Tenter le crachat soporifique +11 pour neutraliser cette cible avant la mêlée
+  note: Utiliser les paramètres complets de cette attaque s'ils sont disponibles ; ne pas inventer de portée, de DD ou de durée à partir du seul profil fourni
+
+step: Les ennemis restent à distance et le crachat ne convient pas
+  do: Lancer flèche acide sur une cible exposée, puis utiliser les déplacements suivants pour gagner l'eau ou un couvert
+  note: Le pouvoir utilise une attaque de contact à distance ; Tir de précision permet de viser une cible engagée en mêlée sans la pénalité habituelle de -4
+
+step: Un ennemi est déjà à moins de 3 m et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : morsure +13 et 2 griffes +13 ; tenter l'étreinte si la morsure touche une cible admissible
+  note: L'étreinte ne permet pas de maîtriser automatiquement la victime ; le profil indique BMO +15 et une valeur de lutte +9, à conserver telle quelle
+
+## Rounds suivants
+
+step: Un ennemi reste à portée et l'hydrodaemon peut consacrer son round à attaquer
+  do: Répéter morsure et 2 griffes ; concentrer les attaques sur une cible isolée
+  note: Éviter de se déplacer sans nécessité : un déplacement ordinaire empêche l'attaque à outrance
+
+step: Une victime est agrippée près de l'eau
+  do: Maintenir la lutte puis, si le test réussit, choisir de déplacer la victime vers l'eau profonde
+  note: Ce déplacement exige le maintien de la lutte et se fait à la moitié de la vitesse applicable ; ne pas lui ajouter une attaque à outrance gratuite
+
+step: Un ennemi robuste est facile à toucher
+  do: Employer Attaque en puissance sur les attaques de mêlée
+  note: Avec un BBA de +10, les attaques passent à +10 et les dégâts à 1d8+10 pour la morsure et 1d6+10 par griffe
+
+step: Deux ennemis sont à portée et une attaque à outrance est impossible après le déplacement
+  do: Utiliser Enchaînement : attaquer le premier avec la morsure, puis un second adversaire adjacent au premier si l'attaque touche
+  note: Les deux cibles doivent être à portée ; Enchaînement impose -2 à la CA jusqu'au prochain tour et ne s'ajoute pas à une attaque à outrance
+
+step: Les ennemis tiennent la berge et refusent d'entrer dans l'eau
+  do: Les harceler avec flèche acide et déplacer l'élémentaire encore présent pour leur barrer l'accès ou menacer leur position
+  note: Rester mobile dans l'eau et éviter de s'exposer à plusieurs combattants sur la terre ferme
+
+step: Il doit masquer un passage ou couvrir son décrochage
+  do: Employer ténèbres profondes, puis changer de position vers l'eau
+  note: Sa vision dans le noir ne traverse pas les ténèbres surnaturelles ; ce pouvoir peut aussi l'empêcher de voir ses ennemis
+
+## Repli
+
+step: Points de vie sous 30, ou le combat tourne nettement à son désavantage
+  do: Utiliser téléportation suprême vers un refuge connu si une utilisation reste disponible
+  note: Ce pouvoir n'emporte aucun allié ni prisonnier ; garder au moins une utilisation pour ce repli lorsque c'est possible
+
+step: La téléportation est indisponible
+  do: Plonger et gagner les profondeurs à 18 m par déplacement ; laisser les alliés encore présents gêner la poursuite
+  note: Ses immunités et sa résistance à la magie protègent la fuite sans la garantir ; éviter de rester au contact d'armes en fer froid ou en argent

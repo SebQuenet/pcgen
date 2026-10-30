@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Volnagur, rejeton de Rovagug, est une créature magique colossale, chaotique mauvaise, qui ravage depuis les airs et retourne ses victimes les unes contre les autres.
+  437 pv ; CA 39 ; vol parfait à 30 m, déplacement au sol à 6 m. Morsure +29 (4d6+12), trois langues coupantes +29 (2d6+12, critique 18–20/×3, saignements et rage sanguinaire), six ailes +24 (2d8+6) ; quatre rayons oculaires +23 (4d6 soniques, critique 18–20, nausée).
+  Allonge de 9 m, portée à 15 m pour les langues ; espace occupé de 9 m. Sa perception aveugle repère les créatures à 90 m ; sa vision à 360° empêche la prise en tenaille.
+
+resource: Invisibilité suprême | à volonté | NLS 25 ; durée 25 rounds ; reste active pendant ses attaques
+resource: Chant de discorde | à volonté | Volonté DD 20 ; rayon de 6 m ; durée 25 rounds
+resource: Brouillard acide | à volonté | rayon et hauteur de 6 m ; durée 25 rounds ; 2d6 dégâts d’acide par round, sans sauvegarde ni résistance à la magie
+resource: Vents de vengeance | 3/jour | durée 25 minutes ; protège contre les projectiles et permet une riposte de vent
+
+step: Il repère des adversaires avant d’être engagé
+  do: Activer vents de vengeance, puis invisibilité suprême au tour suivant ; approcher en volant
+  note: Les armes à distance qui traversent les vents le manquent automatiquement ; cette protection ne neutralise pas tous les sorts à distance. Ses pouvoirs magiques demandent chacun une action simple.
+
+note: Endurance
+  Régénération de 30 pv par round, RD 15/épique et RM 33. Il est notamment immunisé à l’acide, à l’électricité, aux effets mentaux, à la paralysie et aux saignements ; aucune attaque ne peut supprimer sa régénération.
+
+## Ouverture
+
+step: Première attaque ou charge, adversaires dans un rayon de 90 m
+  do: Déclencher la présence terrifiante, Volonté DD 27, en accompagnement de l’assaut
+  note: Faire suivre la peur par les langues ou les rayons ; l’aura ne consomme pas son action simple.
+
+step: Plusieurs ennemis sont regroupés, Volnagur reste plus loin que leurs compagnons
+  do: Lancer chant de discorde sur le groupe, puis conserver la distance en vol
+  note: Volonté DD 20 ; chaque victime affectée a 50 % de chances, à chacun de ses tours, d’attaquer la créature la plus proche. Le positionnement doit favoriser les attaques entre compagnons.
+
+step: Les adversaires sont dispersés ou un lanceur de sorts doit être neutralisé immédiatement
+  do: S’il peut rester sur place et que les cibles sont à 36 m ou moins, effectuer une attaque à outrance avec quatre rayons oculaires +23, en visant d’abord les ennemis encore capables d’agir
+  note: Chaque impact inflige 4d6 dégâts soniques ; Vigueur DD 29 ou nausée pendant 1 minute. Après cet échec, un second jet de Vigueur DD 29 évite une affection supplémentaire pour la même durée.
+
+## Rounds suivants
+
+step: Début de chacun de ses tours
+  do: Appliquer briseur de silence aux silences magiques et aux résistances aux dégâts soniques situés à 18 m ou moins
+  note: Chacun de ces effets subit une tentative de dissipation au NLS 25 ; la suppression n’est pas automatique.
+
+step: Il peut attaquer sans se déplacer de plus de 1,50 m
+  do: Choisir une attaque à outrance à distance avec les quatre rayons, ou une attaque à outrance de mêlée selon la position des cibles
+  note: À 9 m ou moins, employer morsure, trois langues et six ailes ; entre 9 m et 15 m, seules les trois langues atteignent leurs cibles. Répartir les langues sur plusieurs ennemis pour multiplier les victimes qui saignent, puis concentrer les dégâts sur les plus dangereux.
+
+step: Il doit se déplacer pour frapper ou éviter une riposte au contact
+  do: Employer Attaque en vol : approcher, porter une unique attaque de langue à 15 m, puis terminer son déplacement, dans la limite totale de 30 m
+  note: Science de la frappe décisive porte cette attaque à 6d6+12, plus les effets habituels de la langue. Ce passage ne permet pas une attaque à outrance et ne supprime pas les attaques d’opportunité.
+
+step: Une victime subit les saignements d’une langue
+  do: Appliquer chaque round le saignement de 1d6 pv et de 1 point de Constitution, puis la rage sanguinaire tant que le saignement continue
+  note: La victime subit −4 aux jets de Volonté et doit réussir Volonté DD 16 ou attaquer son allié le plus proche, en ignorant les alliés qui saignent eux aussi à cause de Volnagur. Plusieurs blessures identiques ne cumulent pas les mêmes saignements.
+
+step: Plusieurs victimes qui saignent restent groupées avec leurs compagnons
+  do: Relancer chant de discorde si nécessaire et s’écarter pour les laisser s’entre-déchirer
+  note: Le malus de −4 en Volonté rend le DD 20 plus menaçant ; préférer cette action aux dégâts directs lorsque plusieurs adversaires peuvent être affectés.
+
+step: Des ennemis cherchent à rejoindre le combat ou à poursuivre Volnagur
+  do: Placer un brouillard acide sur leur passage pour ralentir leur progression et les blesser
+  note: Le brouillard gêne aussi la vision de Volnagur ; sa perception aveugle localise les victimes mais n’annule pas leur camouflage. Éviter de disperser son propre brouillard avec les vents de vengeance.
+
+step: Une attaque de mêlée le touche alors que vents de vengeance est actif
+  do: Utiliser sa riposte en action immédiate contre l’assaillant : 5d8 dégâts contondants et renversement s’il est au sol
+  note: Une sauvegarde de Vigueur réussie réduit les dégâts de moitié et évite le renversement ; les créatures volantes subissent les effets de vent prévus par le pouvoir selon leur taille.
+
+## Repli
+
+step: Sous 100 pv et les adversaires lui infligent plus de dégâts qu’il n’en régénère
+  do: Rompre le contact en volant ; renouveler invisibilité suprême si nécessaire, puis s’éloigner à 30 m par déplacement pour régénérer
+  note: Il récupère 30 pv par round jusqu’à son maximum de 437 et peut revenir ravager le groupe après quelques rounds hors d’atteinte.
+
+step: Il est abattu ou soumis à un effet de mort
+  do: Continuer à suivre sa régénération ; après un effet de mort réussi, le faire se relever 3 rounds plus tard avec 1 pv si ses restes n’ont subi aucun dégât supplémentaire
+  note: Une défaite ne garantit pas sa mort définitive. S’il est enfermé dans un milieu où il suffoquerait, il entre en hibernation jusqu’au retour de conditions respirables.

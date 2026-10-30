@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Greater Verduous Ooze, vase solitaire de taille G, neutre et sans intelligence ; 175 pv, CA 6.
+  Coup +17 : 1d8+10 dégâts, plus 1d8 d'acide et étreinte ; BMO +23 en lutte.
+  Déplacement de 12 m ; espace occupé et allonge de 3 m. Aura de sommeil dans un rayon de 18 m, DD 24.
+
+note: Défenses
+  Immunité à l'acide, au feu, aux effets mentaux et aux dégâts tranchants et perforants ; traits des vases et scission.
+  Impossible à faire tomber à terre. Sa CA très basse rend les attaques auxquelles elle n'est pas immunisée particulièrement dangereuses.
+
+note: Détection
+  Vision aveugle et perception des vibrations à 18 m ; Perception -5.
+  Se guider sur ces sens pour localiser les proies proches.
+
+step: En forêt ou en plaine, avant de percevoir une proie
+  do: Rester dissimulée dans le terrain et attendre qu'une proie approche
+  note: Discrétion +12 dans ces milieux, -8 ailleurs
+
+## Ouverture
+
+step: Une proie entre dans un rayon de 18 m
+  do: Laisser agir l'aura de sommeil, DD 24, et avancer vers la proie
+  note: L'aura accompagne la vase ; elle ne constitue pas une attaque à distance à lancer
+
+step: La proie est à plus de 3 m
+  do: Avancer de 12 m au maximum pour la mettre à portée ; si un déplacement ne suffit pas, effectuer un double déplacement
+  note: Après un seul déplacement, porter un coup si la proie est à portée et que l'action simple reste disponible
+
+step: Une proie est à portée et la vase peut attaquer
+  do: Porter un coup +17, infligeant 1d8+10 plus 1d8 d'acide
+  note: Sur une touche, tenter l'étreinte en action libre, avec un BMO de +23
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et choisir d'infliger les dégâts du coup, avec son acide, en cas de réussite
+  note: BMO de lutte +23 ; appliquer le bonus normal de +5 pour maintenir une lutte déjà établie
+
+step: Aucune proie n'est agrippée, mais une proie est à portée
+  do: Répéter le coup et tenter l'étreinte sur une touche
+  note: Une proie endormie à portée peut être frappée et agrippée comme les autres
+
+step: Les proies quittent son allonge
+  do: Poursuivre la proie perceptible la plus proche à 12 m par déplacement, puis frapper dès que possible
+  note: Continuer à tenir compte de l'aura de sommeil à 18 m, DD 24
+
+## Repli
+
+step: Une proie reste perceptible, quel que soit le nombre de pv restants
+  do: Continuer à avancer, frapper et agripper jusqu'à la destruction
+  note: Sans intelligence, elle ne prépare pas de retraite tactique et ne choisit pas de seuil de fuite

@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Nuée de criquets du fléau, vermine neutre sans intelligence, FP 8 ; 90 pv, CA 22. Elle submerge ses proies et inflige automatiquement 4d6 dégâts plus distraction.
+  Vol à 12 m par déplacement, manœuvrabilité moyenne ; déplacement au sol et escalade à 3 m ; vision dans le noir à 18 m. Elle occupe un espace de 3 m de côté et son allonge est nulle.
+  Immunisée aux dégâts des armes et aux effets mentaux ; elle agit par instinct, sans préparer d'embuscade élaborée.
+
+note: Défenses de nuée
+  Les effets visant un nombre déterminé de créatures sont sans effet sur elle. Les attaques de zone lui infligent 50 % de dégâts supplémentaires ; les vents violents peuvent la disperser ou entraver son vol.
+  Elle ne subit ni coups critiques ni prise en tenaille ; elle ne peut pas être agrippée, renversée ou repoussée par une bousculade.
+
+## Ouverture
+
+step: Une proie est accessible en vol
+  do: Voler jusqu'à elle et terminer le déplacement en recouvrant son espace ; englober aussi les créatures voisines si elles se trouvent dans les 3 m de côté de la nuée.
+  note: Infliger 4d6 dégâts à chaque créature recouverte, sans jet d'attaque. Une cible simplement adjacente n'est pas touchée.
+
+step: Une créature vivante subit les dégâts de la nuée
+  do: Appliquer distraction : nausée pendant 1 round, annulée par un jet de Vigueur.
+  note: Le DD de distraction n'est pas précisé dans le profil fourni.
+
+## Rounds suivants
+
+step: Des proies restent dans son espace
+  do: Continuer à les envelopper et infliger de nouveau 4d6 dégâts par round, avec distraction à chaque nouvelle application des dégâts.
+  note: La perte de points de vie ne réduit pas les dégâts de la nuée.
+
+step: Une proie quitte son espace
+  do: La poursuivre en vol à 12 m par déplacement et finir de nouveau sur elle ; traverser les espaces occupés si nécessaire.
+  note: La nuée ne porte aucune attaque d'opportunité et n'immobilise pas ses victimes. Son entrée dans un espace ennemi provoque normalement une attaque d'opportunité, mais elle reste immunisée aux dégâts des armes.
+
+step: Une ouverture laisse passer les criquets
+  do: Passer par les fissures ou les petits trous pour rejoindre une proie, en volant ou en grimpant selon le passage.
+  note: L'escalade se fait à 3 m par déplacement, avec Escalade +12 ; Vol +12 pour les manœuvres aériennes nécessaires.
+
+## Repli
+
+step: Des proies restent accessibles et la nuée possède encore des points de vie
+  do: Continuer la poursuite instinctive, sans organiser de retraite tactique.
+
+step: Points de vie à 0 ou moins
+  do: Disperser la nuée ; elle cesse de combattre.

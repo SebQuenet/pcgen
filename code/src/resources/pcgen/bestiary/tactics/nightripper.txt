@@ -1,0 +1,103 @@
+## Avant le combat
+
+note: Profil
+  Nightripper, démon chaotique mauvais de FP 24 et seigneur démon naissant, combine un assaut à l'épée vorpale, des blessures sanglantes et le contrôle du terrain. Il isole une victime avant de concentrer ses attaques sur elle.
+  526 pv, CA 42, RM 35 ; déplacement à 18 m, marche dans les airs permanente. Allonge de 1,50 m, portée à 4,50 m pour les serres.
+  Épée bâtarde +5 vorpale +43/+38/+33/+28, 1d10+18, critique 17-20 ; griffe +31, 2d6+4 ; deux serres +31, 1d6+4 chacune. Griffe et serres : critique 19-20 et saignement de 2d6.
+
+note: Défenses
+  Régénération de 15 pv par round, désactivée pendant 1 round par les dégâts d'une arme ou d'un sort du Bien. RD 15, surmontée par une arme à la fois en fer froid et du Bien.
+  Immunité aux charmes, aux coercitions, aux effets de mort, à l'électricité et au poison ; résistance de 30 à l'acide, au froid et au feu. Les bonus de l'aura maudite sont déjà compris dans les valeurs fournies.
+
+resource: Pouvoirs constants | permanents | marche dans les airs, détection du Bien, détection de la Loi, liberté de mouvement, vision lucide, aura maudite DD 25
+resource: Pouvoirs à volonté | illimité | dissipation suprême, téléportation suprême, assassin imaginaire DD 21, fosse à pieux DD 20, télékinésie DD 22
+resource: Fosse acide | 3/jour | Réflexes DD 21
+resource: Barrière de lames à incantation rapide | 3/jour | action rapide, Réflexes DD 23
+resource: Mise à mal | 3/jour | contact, Volonté DD 23 pour réduire les dégâts de moitié
+resource: Fosse affamée | 3/jour | Réflexes DD 22
+resource: Inversion de la gravité | 1/jour | séparer du combat les adversaires incapables de voler
+resource: Convocation de démons | 1/jour | réussite automatique ; un démon ou plusieurs dont la somme des FP ne dépasse pas 20
+resource: Arrêt du temps | 1/jour | 1d4+1 rounds apparents de préparation
+resource: Ennemi subconscient | 1/jour | Volonté DD 26, puis Vigueur DD 26 si l'illusion est crue
+
+step: Il repère les intrus avant d'être découvert
+  do: Observer à couvert avec Discrétion +41, Perception +36 et vision lucide ; repérer les protections magiques et les porteurs d'armes capables d'interrompre sa régénération
+  note: vision dans le noir à 18 m ; les détections du Bien et de la Loi renseignent sur les auras, sans révéler à elles seules toutes les capacités adverses
+
+step: Il dispose du temps nécessaire avant l'affrontement
+  do: Convoquer les démons et leur donner leurs rôles par télépathie à 90 m : occuper les combattants et fermer les voies de secours autour de sa future victime
+  note: choisir une position où sa marche dans les airs lui permet de franchir ses propres fosses et de menacer le sol avec ses serres
+
+## Ouverture
+
+step: Les adversaires sont prêts à combattre et il doit encore organiser le terrain
+  do: Utiliser arrêt du temps ; pendant les rounds apparents, convoquer ses renforts si nécessaire, installer des fosses et une barrière de lames, puis se placer près de la cible à isoler
+  note: les autres créatures restent invulnérables et ne peuvent pas être ciblées pendant cet effet ; les zones persistantes les affectent après sa fin. Répartir les préparatifs entre les rounds disponibles
+
+step: À son premier tour normal, plusieurs ennemis vulnérables à la peur sont à 9 m au plus les uns des autres
+  do: Lancer ennemi subconscient sur ces ennemis
+  note: Volonté DD 26 pour nier l'illusion ; en cas d'échec, Vigueur DD 26 ou mort. Une réussite en Vigueur laisse 3d6 dégâts, un étourdissement de 1 round et 1d4 dégâts de Force
+
+step: Les protections magiques adverses empêchent son assaut
+  do: Employer dissipation suprême sur la cible prioritaire ; ajouter une barrière de lames en action rapide pour la séparer de ses soutiens
+  note: la dissipation est une action simple ; la barrière rapide peut l'accompagner, dans la limite d'une action rapide par round
+
+step: Plusieurs adversaires sensibles à la peur sont à 9 m et voient son épée, et il prépare un assaut physique
+  do: Utiliser Démonstration de force avec Intimidation +37 pour les démoraliser
+  note: cette démonstration prend une action complexe ; elle prépare Briser les défenses pour les attaques des tours suivants
+
+## Rounds suivants
+
+step: Une victime est à portée et il peut consacrer son tour à l'attaquer
+  do: Faire une attaque à outrance : quatre coups d'épée +43/+38/+33/+28, une griffe +31 et deux serres +31, selon l'allonge de chaque attaque
+  note: concentrer les coups d'épée sur une cible dont la tête est vitale ; la décapitation vorpale exige un 20 naturel suivi d'une confirmation du critique, même si les critiques ordinaires commencent à 17
+  note: les saignements ordinaires de 2d6 ne s'additionnent pas entre eux ; blesser une autre cible avec une serre peut imposer un second besoin de soins
+
+step: Il touche un adversaire déjà secoué, effrayé ou paniqué
+  do: Appliquer Briser les défenses et poursuivre les attaques contre cette victime
+  note: elle est prise au dépourvu contre les attaques de Nightripper jusqu'à la fin du prochain tour de celui-ci ; les attaques restantes de ce tour en bénéficient déjà
+
+step: Il doit se déplacer et une cible est encore prise au dépourvu contre lui, ou étourdie
+  do: Se déplacer, puis utiliser Coup mortel avec l'épée en action simple : une attaque +43, dégâts normaux doublés et saignement de 1 point de Constitution
+  note: vérifier que l'état requis est présent avant cette attaque ; une simple perte du bonus de Dextérité après une feinte ne suffit pas à rendre la cible prise au dépourvu
+
+step: Une cible vivante a une CA élevée mais se laisse toucher au contact
+  do: Utiliser mise à mal : 150 dégâts, Volonté DD 23 pour moitié, sans réduire la victime sous 1 pv
+  note: achever ensuite avec l'épée ou les saignements ; ce pouvoir ne soigne pas Nightripper
+
+step: Un combattant au sol protège les lanceurs de sorts ou rejoint sa victime
+  do: Ouvrir sous lui une fosse affamée, une fosse acide ou une fosse à pieux ; conserver la marche dans les airs pour circuler au-dessus du piège
+  note: Réflexes DD 22, 21 ou 20 selon la fosse ; privilégier les cibles qui ne volent pas et ne se téléportent pas
+
+step: Plusieurs adversaires ne volent pas et n'ont aucun appui auquel se retenir
+  do: Utiliser inversion de la gravité pour les soulever et concentrer ses attaques sur ceux restés accessibles
+  note: ce pouvoir contrôle leur position ; un plafond peut aussi provoquer une chute vers le haut
+
+step: Un porteur d'arme du Bien interrompt sa régénération
+  do: Remplacer un coup d'épée par un désarmement avec Science du désarmement, ou tenter le désarmement à distance par télékinésie
+  note: le mode de manœuvre de télékinésie se résout par un test de manœuvre, sans le jet de Volonté DD 22 des autres modes
+
+step: Une barrière peut couper une poursuite ou séparer un soigneur de sa cible
+  do: Placer une barrière de lames en action rapide, puis effectuer l'action normale du tour
+  note: 15d6 dégâts à la traversée, Réflexes DD 23 pour moitié ; si elle apparaît sur une créature, un Réflexes réussi lui permet de choisir un côté et d'éviter entièrement les dégâts
+
+step: Un ennemi fragile reste hors de portée de ses armes
+  do: Employer assassin imaginaire s'il est vulnérable à la peur, ou dissipation suprême si ses protections empêchent de l'atteindre
+  note: assassin imaginaire demande Volonté DD 21, puis Vigueur DD 21 en cas d'échec ; réserver les attaques physiques aux cibles que sa portée permet réellement de frapper
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Frapper avec l'épée à 1,50 m ou avec une serre jusqu'à 4,50 m
+  note: Attaques réflexes et Dextérité 32 permettent jusqu'à 12 attaques d'opportunité par round ; une même occasion n'en donne qu'une
+
+## Repli
+
+step: Ses pv tombent à 130 ou moins et les adversaires peuvent empêcher sa régénération
+  do: Se téléporter par téléportation suprême vers un refuge connu ; si une utilisation reste disponible, placer d'abord une barrière de lames rapide entre lui et ses poursuivants
+  note: ce seuil est un choix tactique ; la téléportation emploie son action simple et ne permet pas une attaque à outrance au même tour
+
+step: Un effet bloque la téléportation
+  do: Tenter de le dissiper s'il peut être dissipé ; sinon, utiliser les fosses, les renforts et la marche dans les airs pour rompre le contact, à 18 m par déplacement horizontal
+  note: arrêt du temps, s'il est encore disponible, donne des rounds apparents supplémentaires pour s'éloigner
+
+step: Il a atteint un abri hors d'atteinte des attaques du Bien
+  do: Attendre que sa régénération redevienne active, puis récupérer 15 pv par round avant de reprendre la chasse

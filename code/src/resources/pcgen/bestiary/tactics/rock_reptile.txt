@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Reptile des rochers (Rock Reptile), créature magique de taille M, neutre, FP 4 ; prédateur souterrain solitaire ou en couple, à l'intelligence animale.
+  45 pv, CA 17 ; morsure +9 (1d6+6), allonge 1,50 m ; déplacement 6 m. Embuscade renforce sa première attaque contre une proie surprise ; charge éclair permet une charge complète jusqu'à 24 m.
+
+step: Des proies approchent dans une zone rocheuse
+  do: Rester immobile parmi les pierres, dans l'obscurité, et attendre une proie accessible
+  note: Discrétion +21 parmi les rochers, +13 ailleurs ; sa peau lui permet de se confondre avec un amas de pierres. Garder une trajectoire de charge dégagée.
+
+step: La proie n'est pas encore visible
+  do: Guetter avec Perception +7 et l'odorat
+  note: Vision dans le noir à 18 m et vision nocturne ; privilégier les passages obscurs de son repaire.
+
+## Ouverture
+
+step: Une proie est déjà à portée de morsure
+  do: Mordre à +9 (1d6+6)
+  note: Si cette première attaque surprend la cible, embuscade ajoute +4 au jet d'attaque, soit +13 ; les dégâts restent identiques.
+
+step: Une proie peut être atteinte en charge
+  do: Jaillir de sa cachette, charger en ligne droite et mordre à +11 (1d6+6)
+  note: Charge éclair autorise jusqu'à 24 m de déplacement sur un tour complet. Il faut parcourir au moins 3 m, sans obstacle ni terrain difficile ; la CA descend à 15 jusqu'au prochain tour.
+  note: Pendant le round de surprise, la charge limitée à une action simple permet seulement 6 m de déplacement. Si sa première attaque surprend la cible, la morsure de charge atteint +15.
+
+## Rounds suivants
+
+step: La proie reste au contact
+  do: La mordre à +9 (1d6+6) chaque round
+  note: Privilégier la même proie tant qu'elle reste accessible ; le bonus d'embuscade ne se répète pas.
+
+step: La proie s'écarte
+  do: Avancer jusqu'à 6 m puis mordre si elle devient accessible ; sinon charger si la trajectoire le permet
+  note: Utiliser les passages dégagés pour profiter de la charge éclair.
+
+## Repli
+
+step: Points de vie à 15 ou moins et une issue est accessible
+  do: Se désengager vers les rochers, jusqu'à 12 m sur un tour complet, puis chercher un abri
+  note: Une fois hors de vue, se cacher avec Discrétion +21 en milieu rocheux ; la charge éclair ne sert pas à fuir.

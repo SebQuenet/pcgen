@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Démon chaotique mauvais de taille M, FP 10 ; 175 pv, CA 30. Il associe une forte résistance au contact, le vol et une aura de paralysie à 3 m (DD 24).
+  Attaque à outrance : 2 griffes +20 (1d6+7 chacune) et morsure +20 (1d8+7), allonge de 1,50 m ; attaque sournoise +2d6 quand la cible est prise en tenaille ou privée de son bonus de Dextérité à la CA.
+  Déplacement au sol de 9 m, vol de 18 m avec manœuvrabilité moyenne ; vision dans le noir à 18 m, Perception +31, Discrétion +17, ou +25 dans les zones d'ombre.
+  Réduction des dégâts 10/fer froid ou Bien, résistance à la magie 21 ; immunité aux effets de mort, à l'électricité, à la paralysie et au poison ; résistances à l'acide, au froid et au feu de 10.
+
+resource: Regard de mort | 10/jour | DD 18
+resource: Ténèbres profondes | à volonté | rayon de 3 m ; NLS 13
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,7 kg d'objets uniquement
+resource: Énervation | 3/jour | NLS 13
+resource: Silence | 3/jour | DD 14 ; NLS 13
+resource: Contact vampirique | 3/jour | NLS 13
+resource: Régénération | 1/jour | NLS 13
+resource: Convocation | 1/jour | 1 nabasu mature avec 30 % de réussite, ou 2d4 goules avec 60 % de réussite
+
+step: Il peut préparer le terrain
+  do: Se dissimuler dans une zone d'ombre et choisir une position permettant de prendre son envol.
+  note: Préparer une zone de ténèbres profondes pour gêner les approches ou couvrir une fuite ; sa vision dans le noir ne traverse pas les ténèbres surnaturelles de ce pouvoir.
+
+step: Un combat sérieux est imminent et il dispose du temps nécessaire
+  do: Tenter de convoquer 2d4 goules pour multiplier les menaces et préparer des prises en tenaille.
+  note: L'autre option est un nabasu mature, avec seulement 30 % de réussite. Une tentative ratée consomme l'utilisation quotidienne. La télépathie porte à 30 m.
+
+## Ouverture
+
+step: Un lanceur de sorts est accessible et dépend d'incantations verbales
+  do: Utiliser Silence pour gêner ses incantations, en visant sa position ou un objet proche.
+  note: DD 14 lorsqu'un jet de sauvegarde s'applique ; consacrer une action distincte à ce pouvoir.
+
+step: Un adversaire prioritaire reste à distance et offre une ligne de tir
+  do: Utiliser Énervation pour l'affaiblir avant de l'affronter au contact.
+
+step: Une cible isolée est accessible
+  do: S'approcher au sol ou en vol pour la placer dans l'aura de paralysie à 3 m (DD 24), puis porter une morsure si l'action disponible le permet.
+  note: Après un déplacement ordinaire, il porte une attaque simple ; l'attaque à outrance exige de rester en position, éventuellement avec un pas de 1,50 m.
+
+## Rounds suivants
+
+step: Un adversaire est à portée et il peut effectuer une attaque à outrance
+  do: Porter les deux griffes +20 (1d6+7) et la morsure +20 (1d8+7).
+  note: Chercher la prise en tenaille avec une créature convoquée ; ajouter les +2d6 d'attaque sournoise à chaque attaque qui en remplit les conditions.
+
+step: Une cible reste paralysée et aucun autre ennemi ne menace son exécution
+  do: Porter un coup de grâce avec la morsure.
+  note: Cette action prend un round complet et provoque des attaques d'opportunité.
+
+step: Une cible peut subir son regard et des utilisations restent disponibles
+  do: Employer le regard de mort (DD 18) lorsque les conditions du pouvoir sont réunies.
+  note: Décompter les utilisations ; ne pas confondre ce pouvoir limité avec l'aura de paralysie.
+
+step: Il doit éviter de rester encerclé
+  do: Employer Attaque en vol pour approcher, porter une morsure et poursuivre son déplacement dans la limite de 18 m.
+  note: Cette passe permet une attaque simple et peut provoquer des attaques d'opportunité ; tenir compte de la manœuvrabilité moyenne.
+
+step: Il est blessé et une cible est au contact
+  do: Utiliser Contact vampirique pour obtenir des points de vie temporaires.
+  note: Ce pouvoir remplace ses attaques ordinaires pour cette action ; les points de vie temporaires ne soignent pas ses blessures.
+
+step: Plusieurs ennemis sont groupés à portée
+  do: Envisager Enchaînement suprême ; contre une cible facile à toucher, employer Attaque en puissance pour accroître les dégâts.
+  note: Privilégier l'attaque à outrance lorsqu'il faut abattre une seule cible.
+
+## Repli
+
+step: Ses points de vie tombent sous 45 ou la mêlée devient intenable
+  do: Utiliser Téléportation suprême vers un refuge connu, en laissant les créatures convoquées occuper les adversaires.
+  note: Ce pouvoir n'emporte aucun allié. S'il ne peut l'employer immédiatement, chercher une sortie par le vol.
+
+step: Il a atteint un refuge et reste blessé
+  do: Utiliser Régénération si l'utilisation quotidienne est encore disponible, puis se soustraire au combat.

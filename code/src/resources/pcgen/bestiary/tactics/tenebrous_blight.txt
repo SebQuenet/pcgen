@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Tenebrous Blight, champignon souterrain de taille TG, neutre et sans intelligence. Il attaque instinctivement les créatures qui le dérangent.
+  76 PV, CA 20 ; deux tentacules +12, chacun infligeant 1d8+8 dégâts. Espace et allonge de 4,50 m ; déplacement de 6 m.
+  Vision aveugle à 18 m, vision nocturne et vision dans les ténèbres : l'obscurité qui l'entoure ne gêne pas ses attaques.
+
+resource: Aura ténébreuse | permanente | Rayon de 9 m ; réduit l'éclairage de deux degrés, jusqu'aux ténèbres surnaturelles. Cette réduction intervient après les interactions entre lumière et ténèbres ; l'aura n'est pas un effet de ténèbres.
+resource: Régénération | 5 PV par round | Les dégâts d'acide la désactivent pendant le round suivant.
+resource: Immunités | permanentes | Feu et traits des plantes ; impossible à renverser.
+
+step: Aucun intrus ne le dérange
+  do: Rester dans sa caverne, entouré de son aura permanente.
+  note: Son absence d'intelligence exclut les préparatifs élaborés, les négociations et les feintes calculées.
+
+note: Flammes obscurcies
+  Tout feu non magique qui touche le monstre devient une flamme pourpre noire sans lumière. Il continue de consommer son combustible et s'éteint normalement ; ce pouvoir est automatique.
+
+## Ouverture
+
+step: Un intrus le dérange à 4,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux tentacules +12, pour 1d8+8 dégâts chacun.
+  note: Il peut frapper sans attendre que l'adversaire arrive juste contre lui.
+
+step: L'intrus est au-delà de son allonge
+  do: Avancer de 6 m au maximum et porter une seule attaque de tentacule +12 si la cible devient accessible.
+  note: Si un second déplacement est nécessaire pour approcher, consacrer le round à avancer, sans attaque ordinaire.
+
+## Rounds suivants
+
+step: Un adversaire reste dans son allonge
+  do: Continuer les attaques à outrance avec les deux tentacules, en frappant l'intrus le plus proche.
+  note: Un pas de placement de 1,50 m reste compatible avec ces deux attaques ; un déplacement ordinaire ne laisse qu'une attaque.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter une attaque de tentacule +12, pour 1d8+8 dégâts.
+  note: Son allonge menace les déplacements autour de lui ; il ne possède pas de saisie automatique avec ses tentacules.
+
+step: Les adversaires reculent hors de portée
+  do: Avancer vers l'intrus le plus proche, à 6 m par déplacement, et attaquer dès que les actions restantes le permettent.
+  note: L'aura de 9 m se déplace avec lui ; les adversaires qui dépendent de la vue peuvent subir l'obscurité avant d'entrer à portée des tentacules.
+
+step: Il est blessé et sa régénération fonctionne
+  do: Récupérer 5 PV au début de son tour, sans dépasser 76 PV, puis poursuivre ses attaques.
+
+## Repli
+
+step: Il est encore conscient, même très blessé
+  do: Continuer à attaquer instinctivement les intrus qui le dérangent.
+  note: Aucun seuil de fuite raisonné : son intelligence absente ne lui permet pas d'organiser une retraite tactique.
+
+step: Les blessures le rendent inconscient
+  do: Rester sur place ; récupérer grâce à la régénération si elle fonctionne, puis reprendre les attaques lorsqu'il retrouve conscience.
+  note: La régénération active l'empêche de mourir. L'acide la suspend pendant le round suivant et permet alors de le tuer normalement.

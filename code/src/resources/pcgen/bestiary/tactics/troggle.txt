@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Troggle, humanoïde géant de grande taille, chaotique mauvais, issu du croisement d'un troll et d'un ogre. Peu intelligent, il se comporte en prédateur bestial et se déplace à quatre pattes.
+  32 PV, CA 15 ; déplacement de 12 m ; espace et allonge de 3 m. Morsure +7 (1d6+5 et croc-en-jambe), 2 griffes +7 (1d4+5 chacune).
+
+resource: Régénération | permanente | Récupère 5 PV par round ; des dégâts d'acide ou de feu interrompent la régénération pendant le round suivant, durant lequel il peut mourir normalement.
+
+step: Des proies approchent sans l'avoir repéré
+  do: Attendre dans la pénombre ou l'obscurité, à couvert, puis approcher d'une cible isolée.
+  note: Discrétion +5 dans ces conditions, +1 ailleurs ; conserver les valeurs du profil, sans ajouter une seconde fois les bonus. Vision dans le noir à 18 m et vision nocturne ; Perception +6.
+
+## Ouverture
+
+step: Une cible est à portée de son allonge de 3 m
+  do: Attaque à outrance : morsure +7, puis deux griffes +7 contre la même cible.
+  note: Si la morsure touche, tenter gratuitement un croc-en-jambe, BMO +9 contre le DMD de la cible, sans provoquer d'attaque d'opportunité. Si elle tombe, les griffes suivantes bénéficient du bonus de +4 aux attaques de mêlée contre une cible à terre.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer de 12 m au maximum pour l'amener dans son allonge de 3 m, puis donner une seule morsure +7 et tenter le croc-en-jambe si elle touche.
+  note: S'il faut davantage de déplacement, consacrer le round à l'approche ; il ne dispose pas d'une attaque à outrance après un déplacement ordinaire.
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter morsure puis deux griffes en attaque à outrance ; s'acharner sur la proie à terre.
+  note: Si nécessaire, effectuer seulement un pas de placement de 1,50 m pour conserver l'attaque à outrance. Tenter le croc-en-jambe après une morsure réussie si la cible est encore debout.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Le mordre et tenter le croc-en-jambe si la morsure touche une cible debout.
+  note: Attaques réflexes permet jusqu'à deux attaques d'opportunité par round, y compris avant son premier tour, mais une seule par occasion. Se relever provoque une attaque ; celle-ci frappe avant le redressement, avec le bonus contre une cible à terre, et ne permet pas de faire retomber la cible pour l'empêcher de se relever.
+
+step: La proie s'éloigne hors de portée
+  do: La poursuivre avec son déplacement de 12 m et mordre dès qu'elle est à portée ; reprendre les attaques à outrance au round suivant si elle reste accessible.
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou blessures répétées par le feu ou l'acide
+  do: Prendre la fuite vers un couvert ou l'obscurité ; utiliser l'action de retraite pour parcourir jusqu'à 24 m si le passage est libre.
+  note: La retraite protège des attaques d'opportunité liées au départ de sa position initiale, mais pas de celles provoquées en traversant ensuite d'autres positions menacées.
+
+step: Il a rompu le contact et échappé aux attaques
+  do: Rester caché et laisser la régénération le ramener vers ses 32 PV avant de risquer un nouvel affrontement.
+  note: Attendre la reprise de la régénération si du feu ou de l'acide l'a interrompue.

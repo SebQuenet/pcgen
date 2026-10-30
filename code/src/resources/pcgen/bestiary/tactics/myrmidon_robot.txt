@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Myrmidon Robot, créature artificielle neutre de taille G, FP 11 : 112 pv, CA 25 et solidité 10. Il vole à 27 m par round avec une manœuvrabilité parfaite ; au sol, il avance à 6 m.
+  Deux fouets quantiques +22 au contact (1d10 de force, critique 19–20), allonge 6 m ; deux griffes +22 (1d6+8 et étreinte), allonge 1,50 m ; fusil laser intégré +16 au contact à distance (2d10 de feu).
+
+resource: Champ de force | 55 pv | guérison accélérée 11 pour le champ
+
+note: Défenses et faiblesses
+  Immunité au froid et immunités des créatures artificielles ; vulnérabilité à l'électricité et aux coups critiques. La solidité et le champ de force encouragent les échanges prolongés, mais les utilisateurs d'électricité sont des cibles prioritaires.
+
+step: Il peut choisir sa position
+  do: Se placer en vol, près d'un couvert et avec une trajectoire de dégagement ; surveiller les approches avec Perception +20, la vision nocturne et la vision dans le noir à 18 m
+
+## Ouverture
+
+step: Une cible dangereuse reste au-delà de 6 m
+  do: Tirer au fusil laser intégré, +16 au contact à distance, pour 2d10 de feu ; utiliser Attaque en vol pour répartir jusqu'à 27 m de déplacement avant et après le tir
+  note: Tir de précision permet de viser un adversaire engagé en mêlée sans la pénalité habituelle ; Tir à bout portant apporte ses bonus à 9 m ou moins
+
+step: Une cible est accessible en restant hors de son allonge
+  do: Effectuer une passe avec Attaque en vol : une attaque de fouet quantique +22 au contact à 6 m ou moins, puis poursuivre le déplacement
+  note: Une passe ne permet pas d'attaque à outrance ; Attaque en vol ne supprime pas les attaques d'opportunité provoquées par le déplacement
+
+## Rounds suivants
+
+step: Il peut rester entre 3 et 6 m d'un adversaire
+  do: Effectuer une attaque à outrance avec les deux fouets quantiques, chacun à +22 au contact pour 1d10 de force, critique 19–20
+  note: Exploiter l'allonge pour frapper les combattants de mêlée sans entrer à portée de leurs armes courtes
+
+step: Un ennemi est à 1,50 m et un échange au contact est favorable
+  do: Effectuer une attaque à outrance avec les deux griffes et les deux fouets quantiques
+  note: Une griffe qui touche permet une tentative d'étreinte, BMO +28 en lutte ; privilégier cette prise pour immobiliser une cible isolée lorsque rester sur place est avantageux
+
+step: Il choisit de maintenir une prise au round suivant
+  do: Consacrer son action simple au maintien de la lutte, avec son BMO de lutte +28
+  note: Le maintien de la lutte et l'attaque à outrance sont deux choix d'action distincts
+
+step: Un adversaire provoque une attaque d'opportunité dans l'allonge des fouets
+  do: Le frapper au fouet quantique, +22 au contact
+  note: Attaques réflexes et Dextérité 15 permettent jusqu'à trois attaques d'opportunité par round, sans multiplier les attaques pour une même occasion
+
+step: Un utilisateur d'électricité menace le robot ou les adversaires concentrent leurs attaques sur lui
+  do: Rompre l'échange statique, se déplacer en vol vers un couvert et reprendre les tirs ou les passes contre la menace prioritaire
+
+## Repli
+
+step: Le champ est entamé mais fonctionne encore, et un couvert est accessible
+  do: S'abriter en vol pour laisser le champ récupérer 11 pv par round, jusqu'à son maximum de 55 pv
+  note: Cette récupération concerne le champ, pas les 112 pv du robot
+
+step: Le champ est épuisé et les pv du robot descendent sous 35, si sa mission permet le retrait
+  do: Se désengager puis gagner un couvert en vol ; employer l'action de retraite si le départ de mêlée l'exige
+  note: Privilégier le vol à 27 m au déplacement terrestre à 6 m ; si sa mission impose de tenir la position, poursuivre les attaques contre la menace la plus dangereuse

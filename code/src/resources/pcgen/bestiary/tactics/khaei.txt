@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Khaei, petit humanoïde monstrueux neutre des souterrains de Kaer Maga, apathique et peu curieux ; il se défend quand on le menace plutôt que de rechercher le combat.
+  30 points de vie, CA 15, initiative +5 ; déplacement de 6 m, vision dans le noir à 18 m, Discrétion +16 et Perception +7.
+  Gourdin +5 (1d4), fronde +6 (1d3) ou contact +5 (temps perdu) ; allonge de 1,50 m. Le contact vieillissant reste un recours désespéré.
+
+resource: Flou | permanent | 20 % de chances de rater les attaques contre lui ; aucune action de préparation
+resource: Lumières dansantes | à volonté | NLS 4 ; éclairage mobile, sans dégâts ni contrainte sur les ennemis
+resource: Temps perdu | une fois par adversaire pour chaque khaei | contact +5 ; Vigueur DD 14 ou 1d4 points de dégâts de Constitution et vieillissement permanent de 1d10 ans ; inflige aussi 1d4 points de dégâts au khaei
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Rester dissimulé derrière les rochers ou les obstacles de sa caverne et observer avec Perception +7
+  note: Il profite de sa vision dans le noir et de Discrétion +16 ; il évite de révéler sa position par un éclairage inutile
+
+## Ouverture
+
+step: Les intrus ne l'attaquent pas
+  do: Garder ses distances ; s'ils comprennent le commun des profondeurs, leur demander de le laisser tranquille
+
+step: Le combat commence et l'ennemi reste hors de son allonge
+  do: Tirer à la fronde depuis un couvert, puis recharger si aucune menace ne l'atteint
+  note: Fronde +6 (1d3) ; recharger demande une action de mouvement et provoque une attaque d'opportunité
+
+step: Un ennemi l'engage au contact sans menacer immédiatement sa vie
+  do: Frapper au gourdin +5 (1d4) et garder une issue derrière lui
+
+## Rounds suivants
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Frapper au gourdin +5 (1d4)
+  note: Attaques réflexes permet jusqu'à deux attaques d'opportunité par round, sur des occasions distinctes, même pris au dépourvu
+
+step: Il craint pour sa vie et un agresseur au contact n'a pas encore subi son temps perdu
+  do: Tenter le contact +5 à la place du coup de gourdin
+  note: Ce pouvoir le blesse également ; il ne le répète pas sur le même adversaire. Les effets de plusieurs khaei se cumulent si ses congénères sont eux aussi acculés
+
+step: L'ennemi reste à distance
+  do: Continuer les tirs de fronde depuis un couvert ; se déplacer de 6 m si nécessaire pour garder un obstacle entre eux
+  note: Un déplacement puis un tir ne laisse pas d'action de mouvement pour recharger au même round
+
+## Repli
+
+step: Points de vie sous 10 ou résistance devenue trop dangereuse
+  do: Effectuer un retrait vers un passage ou un couvert de sa caverne, jusqu'à 12 m, puis se cacher une fois hors de vue
+  note: Le retrait protège seulement la case de départ des attaques d'opportunité ; éviter de traverser d'autres cases menacées
+
+step: Les agresseurs cessent de le poursuivre
+  do: Cesser le combat et rester à l'abri
+  note: Il ne poursuit pas un ennemi vaincu ; les khaei peuvent même pardonner à un agresseur vieilli et prendre soin de lui

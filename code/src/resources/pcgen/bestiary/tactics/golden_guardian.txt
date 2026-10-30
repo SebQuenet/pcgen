@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Gardien doré, créature artificielle de taille M, neutre et dépourvue d'intelligence. Il combat au contact, sans attaque à distance.
+  64 pv ; CA 19. Attaque à outrance : deux coups +12, chacun infligeant 1d8+4 dégâts et 1d6 dégâts de feu.
+  Déplacement de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m et vision nocturne.
+
+note: Défenses
+  Réduction des dégâts de 5/adamantium ; résistance à la magie de 17 ; immunité au feu, à l'électricité et immunités des créatures artificielles.
+  Le bloc mentionne aussi la conductivité et le miroitement thermique, sans en préciser les effets : ne pas leur attribuer de mécanique supplémentaire.
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m ou moins
+  do: Porter les deux coups +12 avec une attaque à outrance.
+  note: Chaque coup réussi ajoute 1d6 dégâts de feu à ses 1d8+4 dégâts.
+
+step: Un adversaire est à plus de 1,50 m et à 7,50 m ou moins, avec un passage libre
+  do: Avancer de 6 m au maximum pour arriver au contact, puis porter un seul coup +12.
+  note: Un déplacement ordinaire ne permet pas de porter les deux coups ce round.
+
+step: Aucun adversaire n'est accessible avec un déplacement de 6 m
+  do: Effectuer un double déplacement, jusqu'à 12 m, pour se rapprocher.
+  note: Il ne porte aucune attaque pendant ce double déplacement.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer les attaques à outrance, deux coups +12 par round.
+  note: Sa réduction des dégâts et ses immunités restent actives sans action ; elles lui permettent de soutenir cet échange au contact.
+
+step: Un pas de 1,50 m suffit pour remettre un adversaire à portée
+  do: Faire ce pas, puis porter les deux coups de l'attaque à outrance.
+  note: Ce pas remplace le déplacement ordinaire du round.
+
+step: Il faut parcourir plus de 1,50 m pour retrouver le contact
+  do: Avancer jusqu'à 6 m et porter un coup si une cible est à portée ; sinon, poursuivre avec un second déplacement.
+
+step: Un adversaire à portée provoque une attaque d'opportunité
+  do: Porter un coup +12, infligeant 1d8+4 dégâts et 1d6 dégâts de feu.
+  note: Une seule attaque d'opportunité par round.
+
+## Repli
+
+step: Le gardien est blessé mais possède encore au moins 1 pv
+  do: Continuer le combat au contact, sans retraite motivée par la peur.
+  note: Il est dépourvu d'intelligence et possède les immunités mentales des créatures artificielles ; aucun seuil de repli n'est indiqué.
+
+step: Ses points de vie atteignent 0
+  do: Le retirer du combat : il est détruit.

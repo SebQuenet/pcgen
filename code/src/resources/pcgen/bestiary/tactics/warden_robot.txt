@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Robot gardien neutre de taille G, intelligent et méthodique, chargé de protéger un lieu, un objet ou un prisonnier. Il attaque les intrus non autorisés sans avertissement et adapte ses positions à sa mission.
+  112 pv ; CA 23 ; solidité 10 ; déplacement 9 m ; espace et allonge 3 m. Deux coups +18 (1d8+4) ou deux disrupteurs soniques intégrés +18 au contact à distance (2d8 soniques), sous forme de rayons jusqu'à 30 m.
+  Son champ infrasonique couvre 9 m, DD 17. Sa vision aveugle porte à 9 m, sa vision dans le noir à 18 m ; Perception +20 et vision à 360° pour surveiller les approches.
+
+resource: Champ infrasonique | à volonté | aura de 9 m ; Vigueur DD 17 ou chute à terre et nausée pendant 1d4 rounds ; suppression ou réactivation par action libre
+
+note: Défenses
+  La vision à 360° empêche la prise en tenaille. Ses immunités de créature artificielle et sa solidité favorisent une garde prolongée ; ses vulnérabilités aux critiques et à l'électricité rendent les adversaires capables de les exploiter prioritaires.
+  L'armure réactive a 25 % de chances d'annuler les critiques et les attaques sournoises. Si elle annule un critique de mêlée, l'assaillant subit en feu la moitié des dégâts infligés au robot ; une arme à allonge ou à distance évite cette riposte.
+
+step: Un passage donne accès à ce qu'il protège
+  do: Occuper ce passage avec son espace de 3 m, en conservant une ligne de tir vers les approches
+  note: Éviter de placer des alliés vivants dans le champ infrasonique ; les autres robots peuvent tenir le passage avec lui.
+
+## Ouverture
+
+step: Des intrus sont à plus de 9 m
+  do: Tirer sur la menace prioritaire ; s'il reste immobile, effectuer une attaque à outrance avec les deux disrupteurs +18, chacun pour 2d8 soniques
+  note: S'il doit avancer, se déplacer de 9 m au maximum et ne tirer qu'une fois. Chercher une position qui place plusieurs intrus dans son aura tout en barrant leur accès à l'objectif.
+
+step: Des ennemis vivants sont à 9 m ou moins
+  do: Maintenir ou réactiver le champ infrasonique et attaquer les ennemis encore capables d'agir
+  note: À cette distance, Tir à bout portant porte les disrupteurs à +19 et leurs dégâts à 2d8+1 soniques ; Tir de précision supprime le malus pour tirer sur une cible engagée en mêlée.
+
+step: Un adversaire le menace au corps à corps
+  do: Préférer les coups ; sans déplacement autre qu'un pas de 1,50 m, effectuer deux attaques +18, chacune pour 1d8+4
+  note: Son allonge de 3 m peut permettre de frapper sans entrer dans l'allonge d'un adversaire plus petit. Tirer en étant menacé expose aux attaques d'opportunité.
+
+## Rounds suivants
+
+step: Plusieurs adversaires sont neutralisés par la nausée
+  do: Concentrer les attaques sur ceux qui résistent au champ, surtout une menace électrique identifiée ou un intrus proche de l'objectif
+  note: Une cible à terre est plus facile à toucher en mêlée ; éviter de lui consacrer les tirs tant qu'une cible debout reste dangereuse.
+
+step: Un intrus adjacent provoque une attaque d'opportunité en quittant sa case
+  do: Utiliser Stand Still pour remplacer l'attaque d'opportunité par un test de manœuvre à +20 contre sa DMD et arrêter son déplacement en cas de réussite
+  note: Cette interception exige une cible adjacente ; l'allonge de 3 m ne l'étend pas à toute la zone menacée. Attaques réflexes permet jusqu'à cinq attaques d'opportunité par round, si des occasions distinctes se présentent.
+
+step: Une cible facile à toucher reste en mêlée
+  do: Envisager Attaque en puissance : deux coups +14, chacun pour 1d8+12, lors d'une attaque à outrance
+  note: Conserver les coups +18 contre une CA élevée ; privilégier la précision si l'adversaire doit tomber immédiatement.
+
+step: Plusieurs robots gardiens combattent ensemble
+  do: Répartir les positions pour couvrir les issues et alterner la suppression puis la réactivation de leurs champs infrasoniques
+  note: Coordonner les champs pour prolonger l'incapacité des intrus ; conserver un gardien entre eux et ce qui doit être protégé.
+
+## Repli
+
+step: Ses points de vie diminuent, mais sa mission exige de tenir
+  do: Rester au poste et combattre jusqu'à destruction
+  note: Aucun seuil de fuite systématique ; son devoir de garde détermine sa conduite.
+
+step: Un repositionnement permet de mieux protéger l'objectif ou de se soustraire à une attaque électrique
+  do: Rejoindre un couvert ou une autre position de garde sans ouvrir l'accès à l'objectif
+  note: Utiliser un pas de 1,50 m pour conserver l'attaque à outrance, ou un déplacement avec une seule attaque. Ne poursuivre les fuyards que si ses ordres le permettent.

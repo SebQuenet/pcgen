@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Niserie, fée aquatique chaotique neutre : 22 PV, CA 13, résistance à la magie 18 et forme aqueuse. Sa fragilité favorise le combat à distance et les positions difficiles à atteindre.
+  Dague +2 (1d4), allonge de 1,50 m ; ses principales armes sont ses sorts de contrôle et d'affaiblissement.
+  Amphibie ; déplacement de 9 m, nage de 12 m par déplacement ; Discrétion +15 dans l'eau, +7 ailleurs ; vision nocturne.
+
+resource: Pouvoirs magiques | à volonté | NLS 7 : contrôle de l'eau (DD 20), nappe de brouillard, respiration aquatique sur autrui
+resource: Ténèbres maudites | 1 | Volonté DD 16
+resource: Sorts préparés de niveau 3 | 1 chacun | malédiction (Volonté DD 15), délivrance des malédictions
+resource: Sorts préparés de niveau 2 | 1 chacun | endurance de l'ours, soins modérés, silence (DD 14), cacophonie (Vigueur DD 14)
+resource: Sorts préparés de niveau 1 | 1 chacun | imprécation (Volonté DD 13), compréhension des langages, soins légers, anathème (Volonté DD 13), brume de dissimulation
+
+step: Elle repère les intrus avant d'être découverte
+  do: Se dissimuler dans l'eau et choisir une position avec une voie de fuite aquatique
+  note: Perception +9 ; elle préfère laisser les adversaires s'engager sur une berge ou dans un passage inondé avant de se révéler
+
+step: Un combat semble imminent et elle dispose du temps nécessaire
+  do: Lancer endurance de l'ours sur elle-même
+
+## Ouverture
+
+note: Choix de l'ouverture
+  Choisir le sort adapté à la situation ; chaque lancement demande son propre temps d'action.
+
+step: Le niveau de l'eau peut compromettre la progression des intrus
+  do: Utiliser contrôle de l'eau pour élever ou abaisser le niveau et rendre leur passage plus difficile
+  note: Exploiter la configuration des lieux ; ce pouvoir ne constitue pas une attaque infligeant directement des dégâts
+
+step: Plusieurs adversaires bons sont regroupés
+  do: Lancer ténèbres maudites sur eux, en évitant les alliés concernés par ses effets
+  note: Volonté DD 16 ; les créatures mauvaises sont épargnées, les créatures neutres subissent des effets réduits
+
+step: Plusieurs ennemis proches les uns des autres menacent d'approcher
+  do: Lancer cacophonie pour les blesser et tenter de les étourdir
+  note: Vigueur DD 14 contre l'étourdissement ; éviter d'inclure la niserie ou ses alliés dans la zone
+
+step: Un lanceur de sorts constitue la menace principale
+  do: Lancer silence sur lui, ou sur un point fixe dont la zone l'englobe
+  note: Volonté DD 14 si le sort cible directement la créature ; rester hors de la zone pour employer ses propres sorts à composante verbale
+
+## Rounds suivants
+
+step: Un adversaire dangereux reste à distance
+  do: Lancer anathème sur lui pour l'affaiblir, puis changer de position à la nage si nécessaire
+  note: Volonté DD 13 ; contre plusieurs ennemis assez proches, imprécation peut affaiblir plusieurs attaquants à la fois, avec le même DD
+
+step: Des tireurs la prennent pour cible ou les ennemis convergent sur elle
+  do: Créer une nappe de brouillard entre eux et elle, puis se déplacer vers l'eau profonde
+  note: Le brouillard gêne aussi sa propre vision ; elle se repositionne avant de reprendre ses attaques ciblées
+
+step: Un ennemi impose le corps à corps et elle ne peut pas se dégager immédiatement
+  do: Tenter malédiction au contact +2 si ce sort est encore disponible
+  note: Volonté DD 15 ; choisir la pénalité de -4 aux jets d'attaque, jets de sauvegarde et tests. Sa dague +2 (1d4) reste une solution de dernier recours
+
+step: Elle est blessée et dispose d'un abri
+  do: Employer soins modérés, puis soins légers si nécessaire, chacun lors d'un lancement distinct
+
+## Repli
+
+step: Ses PV tombent à 10 ou moins, ou les ennemis parviennent à la maintenir au contact
+  do: Se dégager et rejoindre l'eau ; si elle est déjà menacée en mêlée, utiliser le retrait pour commencer sa fuite
+  note: Une fois libre, elle nage de 12 m par déplacement, ou de 24 m avec deux déplacements
+
+step: Les poursuivants continuent de la chercher
+  do: Couvrir sa fuite d'une nappe de brouillard, rompre le contact visuel puis se dissimuler dans l'eau
+  note: Discrétion +15 dans l'eau ; employer les soins encore disponibles une fois à l'abri

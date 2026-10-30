@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Stygian Spawn, extérieur aquatique de taille TG, neutre mauvais, originaire du Styx. Brute peu intelligente qui encaisse les coups, saisit une proie et cherche à l'engloutir ; 162 pv, CA 24.
+  À outrance : morsure +21 (2d6+10), 2 griffes +21 (1d8+10 chacune), queue +19 (1d8+5 et étreinte). Autre option : langue +22 au contact (1d8+10 et étreinte), contre la CA de contact.
+  Allonge de 4,50 m, ou 9 m avec la langue ; espace occupé de 4,50 m. Déplacement terrestre de 12 m, nage de 9 m ; amphibie, vision dans le noir à 18 m.
+
+note: Défenses
+  Réduction des dégâts 10/Bien ; résistances à l'acide, au froid et au feu de 10 ; résistance à la magie 24.
+  Vigueur +18, Réflexes +10, Volonté +8 : éviter de s'exposer inutilement aux effets mentaux. Les armes bonnes contournent sa réduction des dégâts.
+
+resource: Souffle sonique | toutes les 1d4 rounds | ligne de 18 m, 10d6 dégâts soniques, Réflexes DD 23 pour moitié
+resource: Détection du Bien et détection de la magie | à volonté | pouvoirs magiques, NLS 9
+resource: Cercle magique contre le Bien | 3/jour | pouvoir magique, NLS 9
+resource: Ténèbres maudites | 3/jour | pouvoir magique, NLS 9, Volonté DD 17
+
+step: Des intrus approchent et il dispose de temps
+  do: Rester près d'un accès à l'eau ; utiliser détection du Bien et détection de la magie pour examiner leur approche
+  note: Se dissimuler si le terrain le permet, avec Discrétion +16 ; surveiller avec Perception +18.
+
+step: Des adversaires bons sont repérés avant l'affrontement
+  do: Activer cercle magique contre le Bien avant de se montrer
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans une ligne de 18 m
+  do: Se placer pour les aligner et utiliser le souffle sonique
+  note: Éviter de toucher ses éventuels compagnons ; noter le délai de 1d4 rounds avant le prochain souffle.
+
+step: Le souffle offre peu de cibles et une proie est à 9 m ou moins
+  do: Attaquer avec la langue +22 contre la CA de contact, pour 1d8+10 et une tentative d'étreinte
+  note: Privilégier une cible isolée ou difficile à toucher par des attaques ordinaires. La langue remplace la série morsure, griffes et queue.
+
+step: Plusieurs adversaires bons sont groupés sans former une bonne ligne pour le souffle
+  do: Utiliser ténèbres maudites sur leur groupe, Volonté DD 17
+
+step: Un adversaire est déjà à portée de 4,50 m et aucune attaque de zone n'est avantageuse
+  do: Effectuer l'attaque à outrance avec morsure, deux griffes et queue ; tenter l'étreinte si la queue touche
+  note: S'il doit d'abord effectuer un déplacement, porter une seule attaque après son approche.
+
+## Rounds suivants
+
+step: Le souffle est de nouveau disponible et plusieurs ennemis sont alignés
+  do: Souffler de nouveau, 10d6 soniques, Réflexes DD 23 pour moitié
+  note: Choisir entre souffle et attaques pour ce tour ; le souffle n'est pas ajouté à l'attaque à outrance.
+
+step: Une proie est agrippée, mais n'est pas encore en position d'être engloutie
+  do: Maintenir la prise et chercher à l'amener à la gueule
+  note: Résoudre les manœuvres nécessaires ; l'étreinte ne provoque pas à elle seule un engloutissement immédiat.
+
+step: Une proie est maintenue dans sa gueule au début de son tour et peut être engloutie
+  do: Tenter l'engloutissement ; une proie engloutie subit 6d6 dégâts d'acide par round
+  note: L'intérieur a une CA de 17 et 16 pv pour les tentatives de sortie en tailladant ; ces 16 pv ne constituent pas un seuil de repli du monstre.
+
+step: Aucune prise n'est à maintenir et un ennemi reste à portée de 4,50 m
+  do: Rester en place pour répéter morsure, deux griffes et queue, en concentrant les attaques sur une même cible
+  note: La queue peut amorcer une nouvelle étreinte. Si la cible reste au-delà de 4,50 m mais à 9 m ou moins, employer la langue à la place.
+
+step: Les ennemis bons restent groupés et le souffle n'est pas disponible
+  do: Utiliser une charge restante de ténèbres maudites si elle peut affecter plusieurs cibles
+
+## Repli
+
+step: Points de vie à 40 ou moins et combat défavorable
+  do: Se dégager et gagner l'eau ; nager à 9 m par déplacement pour chercher un couvert ou rompre la ligne de vue
+  note: Sur terre, il se déplace de 12 m. Choisir le trajet qui permet de quitter la portée ennemie ; l'eau lui permet de rester immergé grâce à amphibie.
+
+step: Les poursuivants s'alignent et le souffle est disponible
+  do: Souffler pour les frapper, puis reprendre la fuite au tour suivant
+  note: Ne pas s'attarder pour achever une proie si cela compromet sa fuite.

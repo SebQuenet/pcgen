@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Jynx, petite fée ailée des forêts tempérées, chaotique neutre et malicieuse. Harcèle les voyageurs et frappe de malchance ceux qui l'offensent ; préfère affaiblir et gêner ses adversaires depuis les airs.
+  9 pv ; CA 17 ; réduction des dégâts 5/fer froid ; immunité à l'électricité ; résistance à la magie 13. Marche à 9 m, vol à 24 m avec une manœuvrabilité parfaite.
+  Arc court +6 (1d4-2) ; épée courte +6 (1d4-2), allonge 1,50 m. Ses armes infligent peu de dégâts : ses pouvoirs décident du combat.
+
+resource: Détections du Mal, du Bien et de la magie | constantes | NLS 6
+resource: Lumières dansantes et hébétement | à volonté | hébétement : Volonté DD 13
+resource: Malchance (Jinxed) | 1/jour | une créature à 18 m ou moins ; Volonté DD 13 ; durée 1 minute
+resource: Couleurs dansantes | 1/jour | Volonté DD 14 ; NLS 6
+resource: Détection des pensées | 1/jour | Volonté DD 15 ; NLS 6
+resource: Dissipation de la magie | 1/jour | NLS 6
+resource: Enchevêtrement | 1/jour | Réflexes DD 14 ; NLS 6
+resource: Détournement | 1/jour | Volonté DD 15 ; NLS 6
+resource: Ventriloquie | 1/jour | Volonté DD 14 ; NLS 6
+
+step: Des voyageurs approchent
+  do: Les observer depuis un couvert dans les branches, avec Discrétion +13 et Perception +7 ; examiner leurs auras avec ses détections constantes
+  note: Choisir une position en hauteur et une voie de fuite entre les arbres avant de se révéler.
+
+step: Il veut égarer les voyageurs avant l'affrontement
+  do: Employer lumières dansantes pour attirer leur attention ailleurs ; ajouter ventriloquie depuis une position cachée si une fausse voix peut les détourner
+  note: Préparer ces diversions sur plusieurs rounds ; conserver ventriloquie si elle peut servir à couvrir une fuite.
+
+step: Il a le temps de sonder les intentions d'un intrus
+  do: Employer détection des pensées et observer la cible avant d'agir
+  note: Volonté DD 15 pour résister à la lecture des pensées superficielles.
+
+step: Il prévoit que ses adversaires chercheront à repérer son aura
+  do: Préparer détournement sur lui-même en choisissant un objet proche comme source d'aura de substitution
+  note: Ce pouvoir sert à tromper les détections d'aura.
+
+## Ouverture
+
+step: Plusieurs adversaires avancent dans une zone de végétation exploitable
+  do: Ouvrir avec enchevêtrement, Réflexes DD 14, en plaçant la zone sur leur trajet
+  note: Rester en vol au-dessus de la végétation affectée et épargner les éventuels autres jynxes.
+
+step: Une cible dangereuse est à 18 m ou moins et aucun contrôle de zone n'est urgent
+  do: Lui infliger Malchance, Volonté DD 13
+  note: En cas d'échec, elle subit -2 aux jets d'attaque, de sauvegarde et de compétence pendant 1 minute. Ce malus ne concerne pas tous les jets de d20. Délivrance des malédictions peut y mettre fin.
+
+step: Plusieurs ennemis sont déjà regroupés dans un cône de 4,50 m devant lui
+  do: Employer couleurs dansantes, Volonté DD 14, puis gagner une position hors de leur allonge si le déplacement est possible
+  note: Privilégier les cibles de faible nombre de DV ; éviter d'approcher volontairement un groupe dangereux pour obtenir ce placement.
+
+## Rounds suivants
+
+step: Malchance est encore disponible et un adversaire prioritaire est à 18 m ou moins
+  do: Le maudire avant de lui opposer un autre pouvoir à sauvegarde lors d'un round ultérieur
+  note: Un échec à la sauvegarde contre Malchance facilite les pouvoirs suivants pendant sa durée.
+
+step: Un humanoïde de 4 DV ou moins peut encore être affecté par hébétement
+  do: Employer hébétement, Volonté DD 13, pour lui faire perdre ses actions pendant 1 round
+  note: Une cible affectée devient ensuite immunisée à ce sort pendant 1 minute ; changer de cible pour poursuivre le harcèlement.
+
+step: Une protection magique ennemie compromet ses pouvoirs ou sa fuite
+  do: Tenter une dissipation de la magie ciblée, avec son NLS 6
+  note: Réserver cette utilisation à un effet dont la suppression changera réellement le combat.
+
+step: Aucun pouvoir disponible n'apporte un avantage immédiat
+  do: Se déplacer en vol d'au plus 24 m vers une position protégée, puis tirer une flèche d'arc court +6 (1d4-2)
+  note: Exploiter les arbres comme couverts et rester hors d'allonge ; son vol parfait permet de tenir une position en l'air.
+
+step: Un adversaire arrive au contact
+  do: Se dégager pour reprendre de la hauteur ; employer l'épée courte +6 (1d4-2) seulement si le combat rapproché est inévitable
+  note: Privilégier une retraite ou un pas de placement de 1,50 m lorsque cela permet d'échapper à l'allonge adverse.
+
+## Repli
+
+step: Points de vie à 4 ou moins, ou impossibilité de maintenir ses distances
+  do: Rompre le combat par une retraite en vol vers le couvert des arbres, puis poursuivre la fuite à 24 m par action de déplacement
+  note: Ses 9 pv rendent une poursuite sous les tirs risquée ; la réduction des dégâts ne protège pas contre les armes en fer froid.
+
+step: Un poursuivant menace encore de le rejoindre et un pouvoir utile reste disponible
+  do: Consacrer un round à enchevêtrement sur la végétation du passage, ou à hébétement sur un humanoïde vulnérable, puis continuer à fuir
+  note: Si ventriloquie a été conservée, une fausse voix peut détourner les recherches une fois le contact visuel rompu.

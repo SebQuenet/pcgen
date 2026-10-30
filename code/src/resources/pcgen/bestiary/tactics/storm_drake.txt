@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Storm Drake, dragon de l'air de taille G, loyal mauvais ; 84 pv, CA 20. Vol à 18 m, manœuvrabilité moyenne ; déplacement terrestre à 9 m ; allonge de 3 m.
+  Morsure +13 (2d6+6, critique 19–20) et 2 griffes +13 (1d6+6 chacune). Il privilégie les passes aériennes et réserve l'attaque à outrance aux adversaires isolés.
+  Résistance à l'électricité 20 ; immunité au sommeil et à la paralysie. Vision dans le noir à 18 m, vision nocturne, odorat et vision de tempête.
+
+note: Capacités non détaillées
+  Le profil mentionne un souffle de foudre, une morsure sauvage et une poussée de vitesse, sans en donner les règles. La portée, les dégâts, le DD et la fréquence du souffle restent à vérifier ; aucun effet supplémentaire n'est attribué ici aux deux autres capacités.
+
+resource: Appel de la foudre | 3/jour | DD 14, NLS 8
+resource: Nappe de brouillard | 3/jour | NLS 8
+resource: Brume de dissimulation | 3/jour | NLS 8
+resource: Tempête de neige | 3/jour | NLS 8
+resource: Contrôle du climat | 1/jour | NLS 8
+resource: Contrôle des vents | 1/jour | DD 16, NLS 8
+
+step: Il dispose d'une longue préparation avant l'arrivée des intrus
+  do: Employer contrôle du climat pour préparer des conditions favorables à une attaque aérienne
+  note: Choisir des conditions compatibles avec son propre vol ; sa résistance à l'électricité ne protège pas contre tous les dangers d'une tempête
+
+step: Les intrus sont repérés
+  do: Gagner de l'altitude et choisir un trajet de passage qui évite de traverser tout le groupe
+  note: Avec une manœuvrabilité moyenne, prévoir de l'espace pour virer et revenir
+
+## Ouverture
+
+step: Le souffle est disponible et plusieurs ennemis peuvent être atteints selon ses règles
+  do: Employer le souffle de foudre sur les ennemis regroupés
+
+step: Des combattants au sol peuvent facilement se soutenir
+  do: Placer une tempête de neige pour gêner leur progression et séparer une cible de ses alliés
+  note: Ne pas présumer que la vision de tempête permet de voir à travers cet effet sans disposer du texte de cette capacité
+
+step: Les ennemis restent à distance et une cible est visible
+  do: Lancer appel de la foudre sur un adversaire qui menace son vol, notamment un tireur ou un lanceur de sorts
+  note: DD 14 ; éviter de consacrer toute l'ouverture à des préparatifs si les ennemis peuvent déjà le blesser
+
+## Rounds suivants
+
+step: Il peut approcher une cible puis poursuivre son déplacement en vol
+  do: Effectuer une attaque en vol avec une morsure +13 (2d6+6, critique 19–20), puis continuer vers une position moins exposée
+  note: La passe utilise une seule attaque ; Attaque en vol ne supprime pas les attaques d'opportunité
+
+step: Un adversaire isolé reste à portée et ses alliés ne peuvent pas intervenir rapidement
+  do: Effectuer une attaque à outrance : morsure +13 et 2 griffes +13
+  note: Employer Attaque en puissance si la cible paraît facile à toucher ; reprendre le vol lorsque les renforts approchent
+
+step: Un appel de la foudre est encore actif et une cible est visible
+  do: Consacrer son action à faire tomber un nouvel éclair sur la menace prioritaire
+  note: Cette action remplace ses attaques du round
+
+step: Plusieurs ennemis se regroupent de nouveau et le souffle est disponible
+  do: Chercher un angle permettant d'en atteindre plusieurs avec le souffle de foudre
+
+step: Des ennemis volants le poursuivent ou tiennent une position dominante
+  do: Employer contrôle des vents pour gêner leur approche, si les conditions permettent de conserver une route de fuite praticable
+  note: DD 16 ; tenir compte des effets du vent sur son propre vol
+
+## Repli
+
+step: Points de vie sous 28, ou impossibilité de rester hors de portée du groupe
+  do: Interposer une nappe de brouillard ou une brume de dissimulation pour couper les lignes de vue, puis fuir en vol à 18 m par déplacement
+  note: Éviter les virages serrés et les passages encombrés ; le brouillard peut aussi gêner sa propre visibilité
+
+step: Des poursuivants au sol continuent à le suivre
+  do: Placer une tempête de neige sur leur trajet si une utilisation reste disponible, puis poursuivre la fuite

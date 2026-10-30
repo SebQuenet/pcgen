@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Livestone, vase de taille G, neutre et dépourvue d'intelligence : 76 pv, CA 9. Elle chasse par instinct et se confond avec la pierre.
+  Coup +10 (1d8+7), allonge de 1,50 m ; engloutissement (Réflexes DD 17, 1 point d'acide). Déplacement de 6 m ; espace occupé de 3 m sur 3 m ; vision aveugle à 18 m.
+  Immunisée contre la pétrification et dotée des immunités des vases.
+
+step: En attente dans un environnement pierreux
+  do: Rester immobile et solidifiée, puis attendre qu'une proie approche
+  note: Discrétion +16 lorsqu'elle est solidifiée ; +8 en terrain pierreux autrement, contre -4 ailleurs. Ne pas ajouter ces bonus entre eux.
+
+step: Une créature entre dans les 18 m
+  do: Repérer sa position par vision aveugle
+  note: Son comportement reste instinctif ; elle ne prépare ni diversion ni coordination élaborée.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être recouverts par son déplacement
+  do: Engloutir en avançant sur eux, dans la limite de ses 6 m de déplacement
+  note: Réflexes DD 17 pour éviter l'engloutissement ; une réussite repousse la cible sur le côté ou en arrière, à son choix. Une cible qui choisit de porter une attaque d'opportunité renonce à ce jet.
+  note: L'engloutissement utilise une action simple ; aucun autre assaut ce round.
+
+step: Une seule proie est au contact, ou l'engloutissement ne convient pas
+  do: Porter un coup +10, infligeant 1d8+7 dégâts
+  note: Si nécessaire, avancer jusqu'à 6 m pour placer la proie dans l'allonge de 1,50 m avant de frapper.
+
+## Rounds suivants
+
+step: Des créatures sont englouties
+  do: Leur infliger 1 point de dégâts d'acide par round tant qu'elles restent à l'intérieur
+  note: Elles sont immobilisées et risquent de suffoquer ; elles restent prisonnières tant qu'elles ne se sont pas libérées de l'immobilisation.
+
+step: D'autres proies restent accessibles
+  do: Continuer à frapper au contact ; engloutir à nouveau si plusieurs adversaires se trouvent sur son passage
+  note: Choisir entre le coup et l'engloutissement pour ce round. Les dégâts d'acide des victimes déjà englouties continuent.
+
+step: Les adversaires s'éloignent
+  do: Les poursuivre à 6 m par déplacement tant qu'ils restent repérables
+  note: Elle ne possède aucune attaque à distance ; sa CA 9 l'expose aux tirs pendant l'approche.
+
+## Repli
+
+step: Elle est blessée et perçoit encore une proie
+  do: Continuer son attaque instinctive
+  note: Aucun seuil de fuite organisé : son absence d'intelligence ne lui permet pas de préparer une retraite tactique.
+
+step: Plus aucune proie n'est repérée
+  do: Cesser la poursuite et se solidifier à nouveau pour attendre

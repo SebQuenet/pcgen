@@ -1,0 +1,89 @@
+## Avant le combat
+
+note: Profil
+  Proscriber, émissaire divin neutre et solitaire chargé de châtier un lanceur de sorts divins. Il cherche à accomplir sa sentence et riposte si on l'attaque.
+  157 pv ; CA 25, contact 11 ; initiative +7 ; déplacement 12 m ; allonge 1,50 m ; vision dans le noir à 18 m.
+  Épée longue +2 : +24, 1d8+9. Condamnation au toucher ; puissants pouvoirs de neutralisation ; sorts de prêtre de NLS 15.
+  RD 10/magie et argent ; RM 26 ; immunité au poison ; résistance au froid 10 et au feu 10. Privilégier les adversaires dont les armes ne franchissent pas sa RD.
+
+note: Sorts disponibles
+  Employer uniquement la liste de prêtre neutre. Chaque sort mentionné est préparé une fois ; les sorts de domaine ne sont pas précisés.
+  Une action simple par pouvoir ou sort de combat indiqué : les enchaînements ci-dessous occupent plusieurs rounds.
+
+resource: Condamnation | 1/jour | toucher au corps à corps ; Volonté DD 22 ; 10d6 dégâts même si la sauvegarde réussit
+resource: Mot de pouvoir étourdissant | 3/jour | portée 18 m ; cible à 150 pv actuels ou moins ; aucun jet de sauvegarde, RM applicable
+resource: Mot de pouvoir aveuglant | 1/jour | portée 18 m ; cible à 200 pv actuels ou moins ; aucun jet de sauvegarde, RM applicable
+resource: Vagues d'épuisement | 1/jour | cône de 18 m ; créatures vivantes ; aucun jet de sauvegarde, RM applicable
+resource: Barrière de lames, pouvoir magique | 1/jour | 15d6 dégâts ; Réflexes DD 21 ; distincte du sort préparé
+resource: Localisation suprême | 3/jour | repérer la cible de sa mission
+resource: Métamorphose | 1/jour | sur lui-même uniquement
+resource: Changement de plan | 1/jour | réserver au trajet ou au repli
+resource: Mot de rappel | 1/jour | conserver pour rejoindre son refuge prévu à l'avance
+
+step: La cible doit être retrouvée
+  do: Employer localisation suprême ; utiliser changement de plan si le trajet l'exige
+  note: Un changement de plan dépensé à l'aller ne sera plus disponible pour fuir. La métamorphose facilite une approche discrète ; il reprend sa forme véritable pour confronter sa cible.
+
+step: La confrontation est imminente et il dispose de quelques rounds
+  do: Lancer protection contre la mort, puis puissance divine et sanctuaire, un sort par round
+  note: Puissance divine dure 15 rounds : +5 de chance aux attaques et dégâts d'arme, 15 pv temporaires et une attaque supplémentaire lors d'une attaque à outrance. L'épée passe à +29, 1d8+14 ; faveur divine ne cumule pas ses bonus de chance.
+
+step: La cible accepte de parler
+  do: Énoncer ses fautes ; employer détection du mensonge à volonté, Volonté DD 19, pour vérifier ses réponses
+  note: Sanctuaire protège cette confrontation jusqu'à sa première action offensive. Il privilégie la sanction à l'exécution.
+
+## Ouverture
+
+step: Plusieurs adversaires vivants peuvent être pris dans un cône de 18 m
+  do: Ouvrir avec vagues d'épuisement
+  note: Épuisement : Force et Dextérité -6, vitesse réduite de moitié, ni course ni charge. Ne pas gaspiller le pouvoir sur des créatures déjà épuisées.
+
+step: Un adversaire prioritaire à 18 m ou moins semble avoir 150 pv actuels ou moins
+  do: Employer mot de pouvoir étourdissant, en priorité sur le lanceur divin visé ou sur celui qui peut entraver son approche
+  note: Durée selon les pv actuels : 4d4 rounds jusqu'à 50 pv, 2d4 rounds de 51 à 100, 1d4 rounds de 101 à 150. Au-delà, le pouvoir échoue ; le proscriber estime les blessures sans connaître automatiquement les pv.
+
+step: Les défenseurs empêchent d'atteindre la cible
+  do: Placer la barrière de lames entre la cible et ses alliés, en gardant un accès vers elle
+  note: Traverser inflige 15d6 dégâts, Réflexes DD 21 pour moitié. Une créature sur laquelle apparaît la barrière peut éviter tous les dégâts en réussissant ce jet et choisir son côté.
+
+## Rounds suivants
+
+step: Le lanceur divin visé est à 1,50 m et la condamnation reste disponible
+  do: Tenter condamnation par une attaque de contact au corps à corps
+  note: Volonté DD 22 ; en cas d'échec, perte des sorts et pouvoirs d'origine divine. Les effets divins bénéfiques exigent ensuite un test de NLS DD 20 pour l'affecter. La sanction persiste après le combat.
+
+step: La cible est accessible et ses alliés restent neutralisés
+  do: Frapper à l'épée ; faire une attaque à outrance s'il peut rester sur place, avec l'attaque supplémentaire de puissance divine si elle est active
+  note: Contre une faible CA, Attaque en puissance échange -4 à l'attaque contre +8 dégâts avec l'épée tenue à une main. Contre plusieurs ennemis adjacents à portée, Enchaînement ou Succession d'enchaînements permet de répartir les coups, au prix de -2 CA.
+
+step: Une arme ou un bouclier adverse constitue l'obstacle principal
+  do: Envisager une destruction d'objet avec Science de la destruction et Destruction supérieure
+  note: Choisir un objet à portée et appliquer sa solidité ; ne pas perdre plusieurs rounds sur un équipement trop résistant.
+
+step: Un adversaire dangereux échappe encore au contrôle
+  do: Employer un autre mot de pouvoir étourdissant si son seuil de pv convient ; sinon, mot de pouvoir aveuglant jusqu'à 200 pv actuels
+  note: Contre une cible protégée des effets mentaux, privilégier dissipation suprême pour retirer ses protections, ou une attaque qui ne dépend pas de ces effets.
+
+step: Une sanction suffit et la cible reste hostile
+  do: Lancer cécité, Vigueur DD 18, ou malédiction au toucher, Volonté DD 18
+  note: Éviter d'achever un adversaire qui se rend ou ne s'oppose plus à la sentence.
+
+step: Les agresseurs poursuivent un combat meurtrier
+  do: Au contact, employer mise à mal, 150 dégâts d'énergie négative, Volonté DD 22 pour moitié ; contre plusieurs cibles, colonne de feu, 15d6, Réflexes DD 20 pour moitié, ou tempête de feu, 15d6, Réflexes DD 23 pour moitié
+  note: Mise à mal exige une attaque de contact et ne réduit pas la cible sous 1 pv. Ne pas inclure le proscriber dans les zones de feu ; sa résistance ne vaut pas une immunité.
+
+## Repli
+
+step: La sentence est appliquée ou la cible se soumet
+  do: Cesser les attaques et quitter les lieux ; ne pas poursuivre les alliés qui renoncent au combat
+
+step: Points de vie sous 45, ou combat manifestement perdu
+  do: Employer immédiatement mot de rappel pour rejoindre son refuge
+  note: Les 45 pv sont un seuil de décision ; anticiper davantage si un adversaire peut infliger ces dégâts en un round.
+
+step: Mot de rappel indisponible et changement de plan encore disponible
+  do: Utiliser changement de plan sur lui-même pour quitter le combat
+
+step: Les deux moyens de fuite sont indisponibles
+  do: Utiliser la barrière de lames préparée pour couper la poursuite, puis s'éloigner à 12 m par déplacement ; si elle est déjà dépensée, lancer brume de dissimulation pour masquer son départ
+  note: Chaque lancement et chaque déplacement respecte l'économie d'actions du round ; la brume gêne aussi sa propre vision.

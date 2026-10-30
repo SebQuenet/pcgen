@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Petit humanoïde reptilien loyal neutre, très fragile : 7 pv, CA 15, initiative +7. Il privilégie les tirs et évite la mêlée.
+  Arbalète légère +4 (1d6, critique 19–20) ; deux griffes –2 chacune (1d3–3). Déplacement de 18 m ; vision dans le noir à 18 m.
+
+step: Il peut choisir sa position
+  do: Charger son arbalète et se placer à couvert, avec une ligne de tir et un passage libre pour reculer
+  note: Dans l'obscurité, garder les adversaires à moins de 18 m pour les voir avec sa vision dans le noir
+
+## Ouverture
+
+step: Un adversaire est visible à distance
+  do: Tirer à l'arbalète légère sur une cible exposée
+  note: Si un déplacement est nécessaire, parcourir au plus 18 m avant de tirer avec l'arbalète déjà chargée
+
+step: Un adversaire commence au contact
+  do: Faire un pas de placement de 1,50 m si cela suffit à sortir de son allonge, puis tirer ; recharger d'abord si nécessaire
+  note: Si ce pas ne permet pas de sortir de la zone menacée, effectuer une retraite vers un passage dégagé
+
+## Rounds suivants
+
+step: Les adversaires restent à distance et sa position reste sûre
+  do: Recharger par une action de mouvement, puis tirer par une action simple
+  note: Concentrer les tirs sur la même cible tant qu'elle reste exposée
+
+step: Un adversaire approche et l'arbalète est chargée
+  do: Reculer de 18 m au maximum vers un couvert, puis tirer
+
+step: Un adversaire approche et l'arbalète est déchargée
+  do: Se déplacer vers une position plus sûre et recharger
+  note: Le tir attend le round suivant ; un déplacement ordinaire, un rechargement et un tir ne tiennent pas dans le même round
+
+step: Il est acculé au contact et ne peut pas se dégager
+  do: Porter une attaque à outrance avec ses deux griffes, chacune à –2 pour 1d3–3 dégâts
+  note: Ses griffes constituent un dernier recours ; chercher une issue dès qu'elle se présente
+
+## Repli
+
+step: Points de vie à 3 ou moins, ou adversaire au contact impossible à tenir à distance
+  do: Effectuer une retraite vers un couvert ou un passage qui coupe la ligne de vue, jusqu'à 36 m si le terrain le permet
+  note: Une retraite prend le round entier ; il ne tire pas et ne recharge pas pendant cette action

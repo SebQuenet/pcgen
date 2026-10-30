@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Petit extérieur élémentaire de terre, neutre, au corps d'obsidienne parcouru de veines incandescentes. Intelligence 4 : privilégier un combat simple et direct.
+  5 pv, CA 16 ; griffe +4 (1d4+3), allonge 1,50 m ; déplacement de 6 m ; vision dans le noir à 18 m.
+  Son verre en fusion brûle ceux qui le frappent à mains nues ou avec une arme naturelle ; sa mort provoque une explosion d'éclats.
+
+note: Défenses
+  Résistance au froid 10 et au feu 10 ; traits des élémentaires, notamment immunité aux coups critiques et à la prise en tenaille.
+
+step: Il repère un intrus avant d'être découvert
+  do: Se dissimuler derrière un couvert disponible avec Discrétion +7 et attendre que l'intrus approche
+  note: Perception +4 ; sa vision dans le noir lui permet de surveiller les alentours sans éclairage.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m ou moins
+  do: Porter une attaque de griffe à +4, pour 1d4+3 dégâts
+
+step: L'ennemi est hors de portée
+  do: Avancer de 6 m au maximum, puis attaquer à la griffe si la cible est à portée
+  note: Si une seule action de mouvement ne suffit pas, un double déplacement permet de parcourir jusqu'à 12 m, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer les attaques de griffe à +4, pour 1d4+3 dégâts
+  note: Avec seulement 5 pv, éviter de perdre des rounds à contourner un adversaire déjà accessible.
+
+step: Une créature le touche avec une arme naturelle ou une attaque à mains nues
+  do: Infliger automatiquement 1d4 dégâts de feu à cette créature grâce au verre en fusion
+  note: La description de ce pouvoir n'indique aucun jet de sauvegarde. Ces dégâts sont une réaction passive au coup reçu.
+
+step: La cible s'éloigne
+  do: La rejoindre par le trajet accessible le plus court et reprendre les attaques de griffe
+  note: Il ne dispose d'aucune attaque à distance ni de vitesse de creusement indiquée.
+
+## Repli
+
+step: Il ne lui reste que 1 ou 2 pv et une issue est accessible
+  do: Effectuer un retrait pour s'éloigner jusqu'à 12 m, selon le terrain
+  note: Sa faible vitesse rend la fuite difficile ; chercher un couvert proche.
+
+step: Il est tué
+  do: Appliquer les affres de la mort : toutes les créatures dans un rayon de 3 m subissent 1d4 dégâts tranchants, Réflexes DD 10 pour réduire les dégâts de moitié
+  note: L'explosion est automatique et frappe toutes les créatures dans la zone.

@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Panthereon, golem de grande taille, neutre et sans intelligence ; 118 pv, CA 24, déplacement de 9 m.
+  Morsure +22 (4d6+7 et blessure maudite), à 1,50 m ; deux coups +22 (1d10+7 chacun), à 3 m. Il occupe un espace de 3 m de côté.
+  RD 10/adamantium et contondant : une attaque doit réunir ces deux propriétés pour ignorer cette réduction. Immunité à la magie et immunités des créatures artificielles.
+
+note: Vigilance
+  Vision lucide permanente, vision dans le noir à 18 m et vision nocturne ; Perception +2.
+  Il suit ses consignes de garde sans élaborer de ruse. La vision lucide lui permet de reconnaître les illusions visuelles et de voir les créatures invisibles dans sa portée.
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m
+  do: Effectuer une attaque à outrance : morsure +22 (4d6+7 et blessure maudite), puis deux coups +22 (1d10+7 chacun).
+
+step: La cible est à plus de 1,50 m, mais à 3 m ou moins
+  do: Faire un pas de placement de 1,50 m si cela permet de la mordre, puis effectuer l'attaque à outrance.
+  note: Si ce rapprochement est impossible, effectuer seulement les deux coups à portée de 3 m.
+
+step: Aucune cible n'est à 3 m ou moins
+  do: Avancer de 9 m au maximum et porter une seule morsure si la cible est à 1,50 m, sinon un seul coup si elle est à 3 m ou moins.
+  note: Si aucune attaque n'est possible après ce déplacement, consacrer aussi l'action restante à avancer ; il ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une cible reste à portée de morsure
+  do: Répéter l'attaque à outrance, morsure et deux coups.
+  note: La blessure maudite accompagne la morsure ; aucun DD ni effet supplémentaire n'est précisé dans le bloc fourni.
+
+step: La cible s'écarte de la morsure, mais reste à portée des coups
+  do: Se rapprocher par un pas de placement de 1,50 m et reprendre l'attaque à outrance ; si cela ne suffit pas, utiliser les deux coups seuls.
+
+step: La cible s'éloigne au-delà de 3 m
+  do: La poursuivre dans les limites de ses consignes, puis porter une seule attaque après un déplacement ordinaire.
+  note: Après un déplacement de plus de 1,50 m, il ne peut pas effectuer d'attaque à outrance pendant ce tour.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter un coup +22 (1d10+7).
+  note: Une seule attaque d'opportunité par round ; la morsure ne porte qu'à 1,50 m.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à exécuter ses consignes et à attaquer jusqu'à sa destruction.
+  note: Sans intelligence, il ne décide pas d'une fuite pour préserver ses 118 pv ; aucun seuil de repli autonome.

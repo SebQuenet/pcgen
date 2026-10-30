@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Skull Spider, vermine minuscule, neutre et dépourvue d'intelligence ; 4 pv, CA 16. Immunisée aux effets mentaux.
+  Aiguillon +0 (1d2-4 et poison), allonge de 1,50 m. Déplacement au sol de 6 m, escalade de 3 m ; Escalade +14.
+  Vision dans le noir à 18 m, Perception +0. Son comportement reste instinctif.
+
+note: Poison
+  Le bloc fourni ne précise ni le DD, ni les effets, ni la fréquence du poison ; ne pas lui attribuer de paramètres supplémentaires.
+
+## Ouverture
+
+step: Un adversaire se trouve à 1,50 m ou moins
+  do: Porter une attaque d'aiguillon +0 (1d2-4 et poison).
+
+step: Aucun adversaire n'est à portée
+  do: Se rapprocher de l'adversaire le plus proche, jusqu'à 6 m au sol ou 3 m en escalade, puis attaquer à l'aiguillon si la cible est à portée.
+  note: Elle ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque d'aiguillon chaque round.
+  note: Son attaque est peu précise ; elle compte sur les piqûres répétées pour inoculer son poison.
+
+step: La cible s'éloigne
+  do: La suivre au sol ou en escaladant une surface accessible ; attaquer si elle revient à portée après un déplacement.
+  note: L'escalade permet de poursuivre sur une paroi ; elle ne donne aucune allonge supplémentaire.
+
+## Repli
+
+step: Réduite à 1 pv et une issue est accessible
+  do: Fuir par instinct en utilisant l'action de retraite, jusqu'à 12 m au sol ou 6 m en escalade.
+  note: Privilégier une paroi accessible pour s'éloigner des adversaires restés au sol ; la retraite ne protège des attaques d'opportunité que dans la case de départ.
+
+step: Aucune fuite n'est possible
+  do: Continuer à piquer l'adversaire à portée.

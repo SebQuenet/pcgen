@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Giant Proto-Creature, humanoïde monstrueux de taille G, neutre mauvais, FP 12. Brute difforme et peu intelligente qui concentre ses attaques sur une seule victime pour l'agripper.
+  203 PV ; CA 26, contact 8 ; déplacement de 9 m ; espace et allonge de 3 m. Deux coups à +21, chacun infligeant 2d6+7 dégâts et permettant une tentative d'étreinte.
+  Sueur acide : 2d6 dégâts d'acide. Immunisé à l'acide, à l'électricité, aux coups critiques, aux dégâts non létaux et aux attaques sournoises ; férocité.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +17 et la vision dans le noir à 18 m, puis aller au contact dès qu'ils sont détectés.
+  note: Il comprend le commun sans pouvoir parler. La violence soulage sa douleur constante : il cherche le combat sans élaborer de manœuvre complexe.
+
+## Ouverture
+
+step: Aucun adversaire n'est à portée
+  do: Avancer de 9 m au maximum pour placer une cible à moins de 3 m, puis porter un seul coup à +21, pour 2d6+7 dégâts.
+  note: Si la distance impose un double déplacement, consacrer le tour à l'approche ; il ne possède aucune attaque à distance.
+
+step: Une cible est déjà à portée sans déplacement, ou après un pas de 1,50 m
+  do: Effectuer une attaque à outrance avec les deux coups à +21 contre cette même cible.
+  note: Après un coup réussi, tenter l'étreinte en action libre. Une touche permet la tentative de lutte ; elle ne garantit pas la capture.
+
+## Rounds suivants
+
+step: Une victime est agrippée
+  do: Consacrer l'action simple à maintenir la lutte et choisir de lui infliger les dégâts d'un coup si le maintien réussit.
+  note: Le maintien de la lutte et l'attaque à outrance sont des choix de tour distincts. Garder la victime immobilisée au contact pour profiter de la sueur acide.
+
+step: Le combat ou l'effort atteint son troisième round
+  do: Appliquer la sueur acide : chaque coup qui touche inflige aussi 2d6 dégâts d'acide ; une créature qui touche directement sa peau subit également ces dégâts.
+  note: Une victime agrippée subit 4d6 dégâts d'acide par round où la lutte est maintenue. Toucher le monstre avec une arme ou un objet ne déclenche pas les dégâts de contact. La sueur persiste 10 minutes après la fin de l'effort.
+
+step: Aucune victime n'est agrippée et une cible reste à portée
+  do: Répéter les deux coups contre la même cible et tenter de l'agripper de nouveau.
+  note: Privilégier cette concentration des attaques plutôt que de répartir les coups entre plusieurs ennemis.
+
+step: Une cible facile à toucher résiste aux coups ordinaires
+  do: Employer Attaque en puissance : coups à +17, chacun pour 2d6+15 dégâts, auxquels s'ajoute la sueur acide lorsqu'elle est active.
+  note: Renoncer à ce don si les attaques manquent trop souvent : une touche permet aussi l'étreinte et les dégâts d'acide.
+
+step: Plusieurs adversaires sont adjacents les uns aux autres et tous à portée, sans victime déjà agrippée
+  do: Envisager Succession d'enchaînements en action simple : un coup, puis un autre contre un adversaire adjacent au précédent après chaque touche, tant que la chaîne réussit.
+  note: Une seule attaque par adversaire ; un échec arrête la chaîne. La CA descend à 24 jusqu'au prochain tour. Préférer les deux coups sur une victime isolée ; interrompre l'enchaînement si une étreinte réussie devient prioritaire.
+
+step: La victime s'effondre ou cesse de se débattre
+  do: La lâcher et se tourner vers un adversaire encore actif.
+  note: La description du monstre permet de le tromper en simulant la mort : Bluff opposé à sa Psychologie, sans DD fixe.
+
+## Repli
+
+step: Ses points de vie diminuent mais restent positifs
+  do: Poursuivre le combat et chercher à garder une victime dans son étreinte.
+  note: Aucun seuil de fuite automatique : sa douleur et son attrait pour le combat favorisent l'acharnement.
+
+step: Ses points de vie deviennent négatifs, au-dessus de -26
+  do: Continuer grâce à la férocité : maintenir une lutte ou porter un seul coup avec l'unique action simple disponible.
+  note: Il est chancelant et perd 1 PV par round. Il ne peut plus effectuer d'attaque à outrance ; il meurt à -26 PV.

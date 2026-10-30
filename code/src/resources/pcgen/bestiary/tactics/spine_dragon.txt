@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Spine Dragon, dragon gigantesque de la terre, chaotique neutre, solitaire et intelligent. Il contrôle les approches, harcèle avec ses épines et exploite son allonge de 4,50 m pour tenir les combattants à distance.
+  248 pv, CA 31 ; déplacement terrestre de 9 m et vol de 18 m par round, manœuvrabilité moyenne ; espace occupé de 6 m.
+  Morsure +23 (2d8+11), griffes +23 (2d6+11), queue +18 (2d8+16) ; à distance, 4 épines +14 (2d8+11 chacune).
+
+note: Défenses et détection
+  Réduction des dégâts 10/adamantium, résistance à la magie 27 ; résistance de 20 au froid, à l'électricité et au feu ; immunité à la paralysie, au sommeil et aux effets sonores. Il dispose aussi de la déviation des rayons et de ses épines défensives.
+  Perception +25, vision aveugle à 9 m, vision dans le noir à 36 m et vision nocturne : surveiller les approches et utiliser la vision aveugle contre les adversaires dissimulés à proximité.
+
+resource: Croissance d'épines | 3/jour | DD 17 ; pouvoir magique, NLS 16
+resource: Pierres acérées | 3/jour | DD 18 ; pouvoir magique, NLS 16
+resource: Télékinésie | 3/jour | DD 19 lorsqu'une sauvegarde s'applique ; pouvoir magique, NLS 16
+resource: Sphère télékinétique | 1/jour | Réflexes DD 22 ; pouvoir magique, NLS 16
+resource: Mur de force | 1/jour | pouvoir magique, NLS 16
+
+step: Il repère les intrus assez tôt pour préparer leur passage
+  do: Lancer pierres acérées sur une approche rocheuse qu'ils devront traverser ; choisir croissance d'épines si le terrain se prête plutôt à ce pouvoir.
+  note: Ces obstacles gênent les ennemis au sol. Prévoir une position accessible en vol et une voie de fuite ; sa nature terrestre ne lui donne pas automatiquement l'immunité à ces zones.
+
+## Ouverture
+
+step: Les adversaires arrivent au sol et l'approche n'est pas encore préparée
+  do: Employer pierres acérées ou croissance d'épines pour entraver leur progression, puis les laisser venir à travers la zone.
+  note: Consacrer cette première action au contrôle du terrain ; les attaques viendront aux rounds suivants.
+
+step: Un adversaire décisif peut être enfermé pendant que le dragon affronte ses alliés
+  do: Utiliser sphère télékinétique sur lui, Réflexes DD 22, pour l'isoler.
+  note: Une cible enfermée est également protégée des attaques du dragon : attaquer les autres pendant son confinement.
+
+step: Les ennemis restent à distance et aucun contrôle immédiat n'est nécessaire
+  do: Depuis une position dégagée, effectuer une attaque à outrance avec les 4 épines +14, pour 2d8+11 chacune, en concentrant les tirs sur une cible vulnérable.
+  note: Tir de précision permet de viser un adversaire engagé en mêlée sans le malus habituel ; une salve complète exige de rester en position.
+
+step: Un ennemi est déjà à portée de mêlée
+  do: Effectuer l'attaque à outrance avec morsure +23, griffes +23 et queue +18, en concentrant les coups sur le même adversaire.
+
+## Rounds suivants
+
+step: Une cible reste à portée et il peut rester sur place
+  do: Répéter l'attaque à outrance au corps à corps ; conserver son allonge de 4,50 m pour menacer les approches.
+  note: Réflexes de combat permet plusieurs attaques d'opportunité lorsque les ennemis en provoquent ; cela ne donne pas d'attaques supplémentaires pendant son tour.
+
+step: Il doit se déplacer avant d'attaquer
+  do: Se replacer, puis employer Frappe décisive avec une morsure +23 (4d8+11), ou tirer une seule épine +14 (4d8+11) avec ce don si la cible reste à distance.
+  note: Frappe décisive s'applique à une attaque simple ; elle ne s'ajoute pas à une attaque à outrance.
+
+step: Les ennemis évitent les zones dangereuses ou se regroupent pour l'encercler
+  do: Employer télékinésie pour tenter une bousculade vers les épines du terrain ou éloigner un combattant, puis reprendre les attaques aux rounds suivants.
+  note: Résoudre la manœuvre selon télékinésie ; son BMO physique de +31 n'est pas celui du pouvoir. Une manœuvre télékinétique n'utilise pas automatiquement le DD 19.
+
+step: Plusieurs adversaires menacent de le submerger
+  do: Placer un mur de force pour couper leur progression ou séparer une partie du groupe, en conservant de son côté une cible qu'il peut vaincre.
+  note: Le mur bloque aussi ses attaques : choisir sa position avant de le créer.
+
+step: Les adversaires restent hors de portée de mêlée
+  do: Tirer les quatre épines s'il peut rester immobile ; sinon, voler vers une position favorable et ne tirer qu'une épine avec son action simple.
+  note: Exploiter les 18 m de vol pour contourner les obstacles et éviter de traverser ses propres zones d'épines au sol.
+
+## Repli
+
+step: Points de vie sous 60, ou combat devenu manifestement défavorable
+  do: Rompre le combat et s'éloigner en vol à 18 m par action de mouvement ; utiliser d'abord mur de force s'il est encore disponible et peut couper la poursuite.
+  note: Le seuil de 60 pv est un choix tactique. Si le mur a déjà été utilisé, profiter des zones d'épines encore actives pour ralentir les poursuivants terrestres ; se dégager du contact avant de prendre de la distance si possible.

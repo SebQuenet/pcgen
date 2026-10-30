@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Latten Mechanism, héraut neutre de Brigh, est un artificiel de taille G, intelligent et protecteur des créatures artificielles et de leurs créateurs. Il combat en silence pour passer pour une machine sans intelligence.
+  Morsure +27 à 3 m : 6d8+13 dégâts, plus étreinte et 6d8 d'acide ou d'électricité. Déplacement 12 m, creusement et escalade 6 m ; vision dans le noir à 18 m.
+  147 PV, CA 31, guérison accélérée 10 ; RD 10/adamantium et magie, immunité à l'acide et traits des artificiels, résistance au froid 30 et au feu 30, RM 26.
+
+resource: Création de soldats | 1/jour | jusqu'à quatre soldats mécaniques, présents pendant 1 heure
+resource: Rapidité | 3/jour | 18 rounds ; lui-même et ses alliés
+resource: Lenteur | 3/jour | Volonté DD 18 annule ; 18 rounds
+resource: Éclair | 3/jour | ligne de 36 m, 10d6 d'électricité ; Réflexes DD 18, moitié
+resource: Mur de fer | 3/jour | séparer les ennemis ou fermer un passage
+resource: Artificiel indestructible | 3/jour | unbreakable construct ; augmente de 5 la RD/adamantium ou la solidité pendant 18 rounds
+resource: Contrôle des artificiels | 3/jour | concentration ; aucun jet de sauvegarde ni RM
+resource: Porte dimensionnelle | à volonté | repositionnement ou évacuation ; aucune autre action après son utilisation jusqu'au prochain tour
+resource: Réparation rapide | à volonté | rapid repair ; guérison accélérée 5 pendant 18 rounds, sans cumul avec une guérison accélérée existante
+resource: Réparation intégrale | à volonté | make whole ; incantation de 10 minutes
+
+step: Une attaque est prévisible dans l'heure
+  do: Créer ses soldats mécaniques et les placer pour garder les accès et protéger les artisans ou les artificiels menacés
+  note: Il tient à ses créations ; il évite de les sacrifier inutilement.
+
+step: Il dispose de quelques rounds avant le contact
+  do: Lancer artificiel indestructible sur lui-même, puis rapidité sur lui et ses alliés juste avant l'engagement
+  note: Ces protections durent 18 rounds ; ne pas les lancer longtemps à l'avance.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent l'encercler
+  do: Utiliser mur de fer pour couper le groupe et affronter une partie des ennemis à la fois
+  note: Préserver un accès vers les alliés à protéger et une issue de secours.
+
+step: Plusieurs combattants approchent et aucun mur n'est nécessaire
+  do: Lancer lenteur sur les ennemis les plus dangereux, Volonté DD 18
+  note: S'il n'a pas pu se préparer et dispose d'alliés, privilégier rapidité pour soutenir tout le groupe.
+
+step: Une cible est à portée de morsure
+  do: Mordre et tenter gratuitement l'étreinte sur une touche ; choisir l'acide ou l'électricité selon les résistances constatées
+  note: Sous rapidité, une attaque à outrance permet deux morsures à +28. Après un déplacement ordinaire, il ne porte qu'une morsure.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Poursuivre les morsures ; tenter l'étreinte pour retenir une cible dangereuse loin des créatures qu'il protège
+  note: Contre une CA faible, Attaque en puissance donne une morsure +22, infligeant 6d8+28 plus les 6d8 d'énergie ; sous rapidité, le bonus d'attaque devient +23.
+
+step: Un ennemi provoque une attaque d'opportunité
+  do: Exploiter son allonge de 3 m pour le mordre
+  note: Attaques réflexes permet jusqu'à cinq attaques d'opportunité par round. Si le déplacement provoqué concerne une case adjacente, Immobilisation permet de remplacer la morsure par une manœuvre à +28 pour arrêter ce déplacement.
+
+step: Plusieurs ennemis sont alignés sans allié sur la trajectoire
+  do: Lancer éclair, Réflexes DD 18 pour réduire les 10d6 d'électricité de moitié
+
+step: Une créature artificielle ennemie menace ses protégés
+  do: Chercher d'abord à l'isoler par mur de fer ; en dernier recours, utiliser contrôle des artificiels pour lui faire cesser l'attaque
+  note: Maintenir la concentration et effectuer chaque round un test d'Art de la magie +22 contre DD 10 + les DV de la cible, ou un test opposé à son maître présent. Ce maintien occupe son action simple.
+
+step: Un allié artificiel endommagé peut être touché sans danger
+  do: Lui appliquer réparation rapide, puis reprendre la défense du groupe
+  note: Sa propre guérison accélérée rend déjà 10 PV par round ; réparation rapide ne l'améliore pas.
+
+step: Une porte ou une structure empêche d'atteindre un ennemi
+  do: Effectuer une attaque à outrance contre l'obstacle pour bénéficier des dégâts doublés contre les objets
+
+## Repli
+
+step: Moins de 40 PV et aucune nécessité de tenir la position
+  do: Utiliser porte dimensionnelle pour gagner un endroit sûr, en emmenant les alliés consentants permis par le pouvoir
+  note: Ce seuil est un choix tactique : il ne craint pas la mort, mais préfère préserver les créatures dont il a la garde.
+
+step: La menace est interrompue et les protégés sont en sécurité
+  do: Rester hors d'atteinte pendant que la guérison accélérée restaure ses PV ; réparer ensuite les artificiels survivants avec réparation rapide ou réparation intégrale
+  note: Il peut revenir affronter le maître d'un artificiel hostile après avoir mis ce dernier à l'abri.

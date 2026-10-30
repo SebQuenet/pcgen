@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Barracuda de taille M, animal aquatique neutre, guidé par l'instinct ; 16 points de vie, CA 13.
+  Morsure +4 (1d6+1, critique sur 19–20), allonge de 1,50 m ; nage à 18 m par déplacement.
+  Vision nocturne, Perception +9 et Natation +14 ; aucune capacité spéciale.
+
+step: Une proie entre dans l'eau
+  do: La repérer avec Perception +9 et s'approcher à la nage
+  note: Privilégier une proie proche et isolée ; son intelligence animale ne lui permet pas de préparer des manœuvres complexes
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m ou moins
+  do: Porter une morsure +4 (1d6+1, critique sur 19–20)
+
+step: Une cible peut être atteinte après un déplacement
+  do: Nager jusqu'à 18 m pour arriver à 1,50 m ou moins de la cible, puis la mordre
+
+step: La cible est trop éloignée pour être mordue ce round
+  do: Se rapprocher en nageant, jusqu'à 36 m avec deux déplacements
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Continuer à la mordre chaque round
+  note: Il ne dispose que d'une morsure par attaque à outrance ; aucun poison ni effet supplémentaire
+
+step: La proie s'éloigne dans l'eau
+  do: La suivre à la nage et mordre dès qu'un déplacement suffit à revenir à portée
+
+step: La proie sort de l'eau
+  do: Rester dans l'eau et chercher une autre cible accessible
+
+## Repli
+
+step: Points de vie à 5 ou moins
+  do: Utiliser une action de retraite pour s'éloigner à la nage jusqu'à 36 m vers l'eau libre ou profonde
+  note: Ce seuil est un choix de conduite pour le meneur ; le barracuda cherche à survivre et cesse de poursuivre sa proie

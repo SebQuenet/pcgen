@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Nuée de vases phlegmatiques de taille TP, sans intelligence, qui cherche instinctivement à se nourrir des fluides des êtres vivants. 8 pv, CA 7, initiative −5.
+  Attaque de nuée : 1 point de dégâts automatique, plus viscosité ; ses sécrétions peuvent entraver et rendre confus. Elle occupe 3 m sur 3 m, avec une allonge de 0 m, et se déplace de 3 m par action de mouvement.
+  Perception aveugle à 18 m ; résistance au froid 5 ; vulnérabilité au feu. Les armes perforantes et tranchantes lui infligent des dégâts réduits de moitié ; elle possède les immunités des vases et des nuées.
+
+step: Une créature est perçue à 18 m ou moins
+  do: Ramper vers la créature accessible la plus proche, sans préparer d'embuscade ni coordonner ses mouvements avec d'autres nuées.
+
+## Ouverture
+
+step: Une créature peut être atteinte ce round
+  do: Entrer dans son espace ; utiliser au besoin deux actions de mouvement pour parcourir jusqu'à 6 m.
+  note: À la fin de son déplacement du round, chaque créature dont elle occupe l'espace subit automatiquement 1 point de dégâts, sans jet d'attaque.
+
+step: Une créature de taille P ou supérieure subit l'attaque de nuée
+  do: Appliquer la viscosité : Réflexes DD 14 ou état enchevêtré jusqu'au retrait des globules.
+  note: Retirer les globules demande une action complexe ; tout dégât de feu subi par la victime les détruit immédiatement.
+
+step: Une créature vivante subit les dégâts de la nuée
+  do: Appliquer la distraction : Vigueur DD 14 ou état nauséeux pendant 1 round.
+
+## Rounds suivants
+
+step: Une créature vivante commence son tour encore couverte de globules
+  do: Appliquer le mucus aliénant : Vigueur DD 14 ou confusion pendant 1 round.
+  note: Cet effet mental ne touche pas les créatures immunisées contre le poison ; il continue tant que les globules restent, même après le départ de la nuée.
+
+step: Une proie reste dans son espace
+  do: Rester sur elle et renouveler les dégâts automatiques et les effets associés chaque round.
+
+step: La proie quitte son espace
+  do: La suivre à 3 m par action de mouvement ; recouvrir les créatures rencontrées sans choisir de cible selon leur rôle.
+  note: Sa lenteur permet aux adversaires de la distancer ; elle ne dispose d'aucune attaque à distance.
+
+## Repli
+
+step: La nuée perd des points de vie
+  do: Continuer à recouvrir les proies accessibles, sans retraite organisée ni seuil de fuite.
+  note: À 0 pv, la nuée se disperse. Sa nature sans intelligence ne lui permet pas d'élaborer un plan de repli.

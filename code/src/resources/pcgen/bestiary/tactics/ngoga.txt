@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Ngoga, bête magique de grande taille, neutre, des jungles chaudes : un grand singe cyclopéen brutal, agile et d'intelligence animale.
+  85 pv ; CA 20 ; initiative +9. Morsure +14 (1d8+6), 2 griffes +14 (1d6+6) ; allonge et espace occupé de 3 m.
+  Déplacement et escalade à 12 m ; Escalade +20. Vision dans le noir à 18 m et vision nocturne.
+
+resource: Poussée de vitesse | 1 fois tous les 1d4 rounds | permet de parcourir 24 m en une action de mouvement
+resource: Relance de Volonté | 1/jour | relancer avant de connaître le résultat ; conserver le second jet, même moins bon
+
+step: Des intrus approchent dans la jungle
+  do: Se dissimuler dans le feuillage ou gagner un arbre pour les laisser approcher ; utiliser Discrétion +7 et Perception +7
+  note: Sa puanteur peut trahir sa proximité ; sa dissimulation ne garantit pas la surprise
+
+## Ouverture
+
+step: Une créature vivante entre à 9 m ou moins
+  do: Appliquer automatiquement la puanteur : Vigueur DD 18 ou état fiévreux pendant 10 rounds
+  note: Une réussite immunise contre la puanteur de ce ngoga pendant 24 heures ; les créatures dotées de puanteur ou immunisées au poison ne sont pas affectées
+
+step: Une cible est déjà à portée de 3 m
+  do: Faire une attaque à outrance : morsure +14 (1d8+6) et 2 griffes +14 (1d6+6), en concentrant les griffes sur la même cible
+
+step: Une cible est hors d'allonge mais accessible après un déplacement
+  do: Rejoindre la cible à 12 m par action de mouvement, ou utiliser la poussée de vitesse pour parcourir 24 m, puis porter une morsure +14 (1d8+6)
+  note: Ce déplacement ne permet pas d'enchaîner une attaque à outrance ; privilégier une proie proche ou isolée
+
+step: Aucune cible n'est accessible après un seul déplacement
+  do: Se rapprocher à couvert dans la végétation ou par les arbres
+  note: Il ne dispose d'aucune attaque à distance
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance sur elle ; au besoin, effectuer seulement un pas de 1,50 m pour la garder à portée
+  note: Griffes déchirantes : si les deux griffes touchent la même créature pendant son tour, la seconde inflige 1d6 dégâts de précision supplémentaires ; une seule fois par round, sans multiplication sur un critique
+
+step: Une proie s'éloigne hors d'allonge
+  do: La poursuivre par le trajet praticable le plus direct, avec la poussée de vitesse si elle est disponible, puis mordre si une action simple reste disponible
+  note: Conserver les attaques à outrance pour les tours où aucun véritable déplacement n'est nécessaire
+
+step: Un adversaire bloque un passage nécessaire pour atteindre une proie ou fuir
+  do: Tenter une bousculade à +18 contre son DMD pour le repousser d'au moins 1,50 m en cas de réussite
+  note: Science de la bousculade ajoute +2 au BMO +16 pour cette manœuvre et évite l'attaque d'opportunité de la cible ; la bousculade remplace l'attaque à outrance
+
+step: Un jet de Volonté paraît trop faible contre un effet qui menace de le neutraliser
+  do: Dépenser la relance quotidienne avant que le résultat soit annoncé
+  note: Utiliser Volonté +6 ; accepter obligatoirement le second jet
+
+## Repli
+
+step: Moins de 25 pv et une voie de fuite existe
+  do: Faire une retraite vers les arbres, puis chercher à rompre la ligne de vue dans le feuillage
+  note: La retraite permet jusqu'à 24 m ; seule la case de départ bénéficie de sa protection contre les attaques d'opportunité
+
+step: Hors d'allonge des poursuivants
+  do: Grimper à 12 m par action de mouvement ; utiliser la poussée de vitesse disponible pour parcourir 24 m en une action de mouvement et distancer les poursuivants
+
+step: Toute fuite est bloquée
+  do: Mordre et griffer l'adversaire qui ferme le passage ; reprendre la fuite dès qu'une ouverture apparaît

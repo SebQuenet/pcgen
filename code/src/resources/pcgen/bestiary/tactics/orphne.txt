@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Orphne, fée de taille M, neutre mauvaise, élégante et sadique, qui s'entoure de morts-vivants et affaiblit les vivants à distance.
+  39 pv, CA 18, RD 5/fer froid ; déplacement de 9 m ; vision dans le noir à 18 m, Discrétion +12.
+  Rayon nécrotique +6 au contact à distance : 2d6 d'énergie négative et 2 points de dégâts de Constitution, portée 9 m. Deux griffes +5, chacune à 1d4+2, allonge 1,50 m.
+
+resource: Détection des morts-vivants | constant | repérer les morts-vivants à proximité
+resource: Contrôle des morts-vivants | à volonté | pouvoir magique, NLS 6 ; préparer des serviteurs
+resource: Invisibilité pour les morts-vivants | à volonté | pouvoir magique, NLS 6, DD 15 ; dissimuler sa présence aux morts-vivants
+resource: Animation des morts | 1/jour | pouvoir magique, NLS 6 ; animer des cadavres disponibles
+
+step: Des cadavres ou des morts-vivants sont disponibles avant l'arrivée des intrus
+  do: Animer les cadavres ou tenter de contrôler les morts-vivants présents ; placer les serviteurs entre elle et l'accès au repaire
+  note: Garder les serviteurs dans son aura de 9 m : +1 aux attaques, aux dégâts et aux sauvegardes, et +1 pv par DV.
+
+step: Le combat est imminent et le soleil ne va pas se lever
+  do: Activer la danse des os par une action simple, puis se poster derrière les serviteurs ou un abri
+  note: RD 5/contondant et fer froid ; elle bénéficie de son aura comme un mort-vivant. Les attaques capables de toucher les créatures intangibles infligent leurs dégâts complets.
+  note: Durée maximale de 1 heure, interrompue au lever du soleil ; ensuite, fatigue pendant une durée égale à celle de la danse.
+
+## Ouverture
+
+step: Un ennemi vivant est visible à 9 m ou moins, hors de son allonge
+  do: Tirer un rayon nécrotique sur une cible que ses serviteurs peuvent retenir, puis se déplacer si nécessaire pour garder ses distances
+  note: Tir à bout portant ajoute +1 à l'attaque et aux dégâts dans cette portée ; Tir de précision permet de viser un ennemi engagé en mêlée sans le malus habituel de -4.
+
+step: Elle est surprise sans avoir activé la danse des os
+  do: Activer la danse des os si les attaques physiques la menacent, puis se déplacer derrière ses serviteurs si le passage est libre
+
+## Rounds suivants
+
+step: La même cible vivante reste à portée
+  do: Répéter le rayon nécrotique pour cumuler les dégâts de Constitution ; ajuster sa position en restant derrière les serviteurs
+  note: Sous la danse des os, le bonus de l'aura ajoute encore +1 à ses attaques, dégâts et sauvegardes.
+
+step: Un adversaire la menace et un pas de 1,50 m suffit à sortir de toutes les allonges ennemies
+  do: Faire ce pas, puis tirer un rayon nécrotique
+
+step: Elle reste au contact et ne peut pas se dégager sans danger
+  do: Effectuer une attaque à outrance avec ses deux griffes contre l'adversaire qui bloque sa retraite
+  note: Les bonus d'attaque et les dégâts de base sont +5 et 1d4+2 par griffe ; ajouter le bonus de l'aura si la danse des os est active.
+
+step: Ses serviteurs sont détruits, mais des cadavres sont accessibles et son utilisation quotidienne reste disponible
+  do: Employer Animation des morts depuis une position protégée pour rétablir un écran de serviteurs
+
+step: Son aura a été annulée par une dissipation du Mal
+  do: Réactiver l'aura par une action de mouvement, puis attaquer si une cible est à portée
+
+## Repli
+
+step: Ses points de vie passent sous 13, ou ses serviteurs ne peuvent plus empêcher l'encerclement
+  do: Se retirer derrière les morts-vivants encore contrôlés, leur ordonner de bloquer la poursuite, puis fuir par le passage le moins exposé
+  note: Elle se déplace de 9 m par action de mouvement ; privilégier le désengagement si elle est menacée au contact.
+
+step: Sa fuite traverse une zone occupée par des morts-vivants hostiles
+  do: Une fois hors du contact des poursuivants, employer Invisibilité pour les morts-vivants pour traverser cette zone
+  note: Ce pouvoir ne la dissimule pas aux poursuivants vivants.

@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Pillard humain ulfe, barbare de niveau 1, spécialisé dans le combat au contact avec hache d'armes et bouclier lourd en bois.
+  Hache d'armes +6 (1d8+4, critique x3) ; avec Attaque en puissance : +5 (1d8+6, x3). CA 17, 17 pv, déplacement de 9 m et allonge de 1,50 m.
+  Les valeurs fournies incluent déjà la rage ; ne pas ajouter une seconde fois ses bonus ni son malus de CA.
+
+resource: Potion de soins légers | 1 | rend 1d8+1 pv
+
+step: Des adversaires approchent
+  do: Préparer la hache et le bouclier ; surveiller leur approche avec Perception +5.
+  note: En bande, rester assez près des autres pillards pour pouvoir combattre ensemble.
+
+## Ouverture
+
+step: Un ennemi est à une distance comprise entre 3 m et 18 m et une charge est possible
+  do: Charger et porter un coup de hache à +8 (1d8+4, x3).
+  note: La charge exige un trajet dégagé ; elle abaisse la CA à 15 jusqu'au début de son prochain tour.
+
+step: Un ennemi est déjà à portée de 1,50 m
+  do: Porter un coup de hache à +6 (1d8+4, x3).
+
+step: Aucun ennemi n'est au contact et une charge est impossible
+  do: Avancer de 9 m vers un adversaire ; attaquer s'il est alors à portée, sinon effectuer un second déplacement si nécessaire.
+  note: Il ne dispose d'aucune arme à distance dans cet équipement.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Porter un coup de hache par round et concentrer les attaques sur la même cible tant qu'elle constitue une menace.
+
+step: La cible semble facile à toucher
+  do: Employer Attaque en puissance : hache +5 (1d8+6, x3).
+  note: Ce choix remplace l'attaque normale ; contre une défense élevée, conserver le bonus de +6 et les dégâts de 1d8+4.
+
+step: Un autre pillard combat la même cible et un placement sûr est possible
+  do: Se placer de l'autre côté de la cible pour la prendre en tenaille.
+  note: La tenaille ajoute +2 aux attaques de mêlée ; éviter les déplacements qui exposeraient inutilement à des attaques d'opportunité.
+
+step: La cible tombe ou se dégage
+  do: Rejoindre l'adversaire accessible le plus proche et reprendre les attaques au contact.
+
+## Repli
+
+step: Il tombe à 5 pv ou moins et les ennemis résistent encore
+  do: Utiliser l'action de retraite pour gagner un abri ou rejoindre ses compagnons, jusqu'à 18 m si le terrain le permet.
+  note: La retraite protège seulement la sortie de sa case de départ contre les attaques d'opportunité ; choisir un trajet qui évite les autres ennemis.
+
+step: Il est à couvert, blessé, et possède encore sa potion
+  do: Ranger la hache, sortir la potion puis la boire, en répartissant ces actions sur les tours nécessaires.
+  note: Reprendre le combat seulement si les soins et la présence de ses compagnons lui permettent de tenir ; sinon poursuivre la fuite.

@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Lead Skeleton, squelette de plomb de taille M, est une créature artificielle neutre et sans intelligence. Il exécute ses consignes sans élaborer de tactique complexe.
+  75 pv ; CA 24, contact 14, pris au dépourvu 20 ; initiative +4. Déplacement de 9 m par round ; allonge de 1,50 m.
+  Attaque à outrance : deux coups +16, chacun infligeant 1d8+6 dégâts. Après un déplacement ordinaire, il ne porte qu'un coup +16.
+
+note: Défenses et perception
+  RD 10/adamantium et contondant : une attaque doit réunir ces deux propriétés pour ignorer cette réduction.
+  Immunité à l'acide, au froid, à l'électricité, au feu et à la magie ; traits des créatures artificielles.
+  Vision aveugle à 27 m, vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+step: Une consigne de garde lui a été donnée
+  do: Rester au poste indiqué jusqu'à ce qu'un intrus remplisse les conditions d'attaque de cette consigne.
+  note: Sa vision aveugle lui permet de repérer les adversaires à portée même dans l'obscurité ou s'ils sont invisibles.
+
+## Ouverture
+
+step: Un adversaire désigné par ses consignes est à 1,50 m ou moins
+  do: Porter ses deux coups +16, chacun pour 1d8+6 dégâts, avec une attaque à outrance.
+
+step: L'adversaire est au-delà de 1,50 m et à 10,50 m ou moins, avec un passage libre
+  do: Avancer de 9 m au maximum pour arriver à portée, puis porter un seul coup +16 pour 1d8+6 dégâts.
+
+step: L'adversaire est à plus de 10,50 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour l'approcher si ses consignes permettent la poursuite.
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: L'adversaire reste à portée
+  do: Répéter l'attaque à outrance avec deux coups +16, chacun pour 1d8+6 dégâts.
+
+step: Un pas de 1,50 m suffit pour remettre l'adversaire à portée
+  do: Faire ce pas, puis porter les deux coups de son attaque à outrance.
+  note: Ce pas remplace tout autre déplacement du round.
+
+step: L'adversaire s'éloigne davantage
+  do: L'approcher selon les mêmes distances qu'à l'ouverture, puis porter un seul coup si un déplacement de 9 m suffit à l'atteindre.
+  note: Respecter les limites de poursuite imposées par ses consignes ; au-delà, reprendre son poste.
+
+## Repli
+
+step: Ses points de vie diminuent sans nouvelle consigne
+  do: Continuer le combat jusqu'à sa destruction à 0 pv.
+  note: Cette créature sans intelligence n'improvise pas de retraite pour se préserver.
+
+step: Une consigne applicable lui impose de se retirer
+  do: Rejoindre la position prescrite à 9 m par déplacement, ou jusqu'à 18 m avec un double déplacement.

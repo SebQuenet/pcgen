@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Bénitier géant, vermine aquatique de taille G, sans intelligence ; 26 points de vie, CA 14. Il capture les nageurs imprudents par engloutissement, puis les digère lentement : 1d2 points de dégâts d'acide par round.
+  Il occupe un espace de 3 m, possède une allonge de 1,50 m et une vision aveugle à 9 m. Son déplacement terrestre est de 1,50 m.
+
+step: Aucune proie à portée
+  do: Attendre sur le fond des eaux côtières chaudes ou tempérées, jusqu'à 18 m de profondeur
+  note: Sa coquille couverte de balanes, d'anémones et de fragments de corail le camoufle ; Perception DD 20 pour le remarquer.
+
+step: Une créature entre dans les 9 m
+  do: La détecter par vision aveugle et attendre qu'elle arrive à portée d'engloutissement
+
+## Ouverture
+
+step: À son tour, une créature de taille M ou inférieure se trouve à 1,50 m ou moins
+  do: Tenter de l'engloutir par une action simple
+  note: La cible peut porter une attaque d'opportunité, mais renonce alors à son jet de sauvegarde. Sinon, un jet de Réflexes DD 17 réussi empêche l'engloutissement.
+  note: Une cible engloutie est agrippée et enfermée dans le corps du bénitier.
+
+step: Toutes les cibles restent hors de portée ou sont de taille G ou supérieure
+  do: Rester en embuscade et attendre une proie de taille admissible à portée
+
+## Rounds suivants
+
+step: Une créature est encore engloutie
+  do: Lui appliquer 1d2 points de dégâts d'acide chaque round
+  note: L'acide agit automatiquement ; aucune nouvelle tentative d'engloutissement n'est nécessaire pour maintenir ces dégâts.
+
+step: La tentative a échoué ou la victime s'est échappée, et une cible de taille M ou inférieure reste à portée
+  do: Tenter de nouveau l'engloutissement par une action simple, avec le même choix entre attaque d'opportunité et Réflexes DD 17
+
+step: Aucune victime n'est enfermée et aucune cible admissible n'est à portée
+  do: Attendre de nouveau sur le fond en se repérant par vision aveugle à 9 m
+
+## Repli
+
+step: Le bénitier est blessé
+  do: Poursuivre instinctivement la capture et la digestion des proies accessibles
+  note: Sans intelligence, il n'organise pas de retraite tactique ni de repli à un seuil de points de vie.

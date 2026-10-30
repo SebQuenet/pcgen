@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Stormghost, humanoïde monstrueux de grande taille, chaotique mauvais et solitaire des montagnes froides ; FP 15, 212 pv, CA 30, initiative +12.
+  Morsure +24 (1d8+8), 2 griffes +24 (1d8+8, critique 19–20, plus 1d6 d’électricité). Allonge de 3 m avec les griffes, de 1,50 m avec la morsure ; espace occupé de 3 m.
+  Aura statique à 1,50 m : 2d6 d’électricité. Déplacement de 15 m, escalade de 9 m ; aucune vitesse de vol.
+  Régénération 5 neutralisée par l’acide ; immunités à l’électricité, aux maladies et au poison ; résistances au froid 10 et au feu 10.
+
+resource: Altération des vents | à volonté | pouvoir magique, NLS 11
+resource: Nappe de brouillard | à volonté | pouvoir magique, NLS 11
+resource: Saut | à volonté | pouvoir magique, NLS 11
+resource: Ténèbres profondes | 3/jour | pouvoir magique, NLS 11
+resource: Invisibilité suprême | 3/jour | pouvoir magique, NLS 11
+resource: Bourrasque | 3/jour | pouvoir magique, NLS 11, DD 15
+resource: Tempête de grêle | 3/jour | pouvoir magique, NLS 11
+resource: Contrôle du climat | 1/jour | pouvoir magique, NLS 11
+resource: Tempête de peste | 1/jour | pouvoir magique, NLS 11, DD 19
+resource: Sirocco | 1/jour | pouvoir magique, NLS 11, DD 19
+
+step: Il peut préparer son terrain de chasse longtemps avant l’arrivée des intrus
+  do: Utiliser contrôle du climat pour installer des conditions défavorables aux intrus, dans les limites du climat et de la saison ; choisir une approche enneigée et un itinéraire de fuite escaladable.
+  note: Ce pouvoir demande une préparation prolongée ; il ne remplace pas une attaque pendant une rencontre déjà engagée.
+
+step: Des intrus approchent
+  do: Les observer à couvert, avec Discrétion +24, ou +28 dans la glace et la neige ; profiter de son camouflage adaptatif.
+  note: Perception +22, odorat, vision à 360 degrés, vision dans la brume et dans les ténèbres ; vision dans le noir à 27 m et vision nocturne.
+
+step: L’affrontement est imminent et il dispose encore d’un moment pour se préparer
+  do: Lancer invisibilité suprême juste avant d’approcher ; si nécessaire, créer d’abord une nappe de brouillard entre les intrus et sa position.
+  note: Chaque pouvoir demande sa propre action. Conserver si possible une utilisation d’invisibilité suprême pour le repli.
+
+## Ouverture
+
+step: Plusieurs adversaires sont groupés et encore hors de portée des griffes
+  do: Lancer sirocco sur leur position, DD 19 ; choisir tempête de grêle s’il veut employer une ressource moins rare ou si la chaleur semble peu efficace.
+  note: Exploiter ensuite les déplacements du groupe pour atteindre une cible isolée ; ne pas rester à découvert à échanger des attaques à distance.
+
+step: Les adversaires dépendent de leur vue et peuvent être séparés par un écran
+  do: Placer une nappe de brouillard pour couper leurs lignes de vue, puis approcher depuis cet écran ; employer ténèbres profondes si l’obscurité gêne davantage les intrus.
+  note: Sa vision dans la brume et sa vision dans les ténèbres lui permettent d’exploiter ces conditions. Ne pas supposer que tous ses ennemis en sont aveuglés.
+
+step: Une cible vulnérable est accessible, sans être adjacente au début du tour, mais une attaque à outrance est impossible
+  do: Faire une Attaque éclair : se déplacer, porter une seule griffe +24 à 3 m, puis employer le déplacement restant pour revenir vers un couvert.
+  note: Parcourir au moins 3 m avant la frappe ; le déplacement total reste limité à 15 m. La cible de cette attaque ne peut pas lui porter d’attaque d’opportunité pour ce déplacement ; les autres adversaires restent dangereux.
+
+step: Une cible est déjà à 1,50 m et il peut rester sur place
+  do: Effectuer une attaque à outrance : morsure +24 et 2 griffes +24 ; exploiter aussi l’aura statique à cette distance.
+  note: À plus de 1,50 m et jusqu’à 3 m, seules les deux griffes portent. L’invisibilité suprême continue malgré ses attaques.
+
+## Rounds suivants
+
+step: Un adversaire isolé reste à portée
+  do: Concentrer les attaques à outrance sur lui tant que le groupe ne peut pas encercler le Stormghost ; préférer une cible blessée ou capable d’infliger de l’acide.
+  note: L’aura statique inflige 2d6 d’électricité à 1,50 m ; rester à cette distance seulement si la morsure et l’aura justifient l’exposition aux attaques ennemies.
+
+step: La cible semble facile à toucher
+  do: Envisager Attaque en puissance : morsure et griffes passent à +19 et infligent chacune 1d8+18 ; les griffes conservent leur critique 19–20 et leur supplément de 1d6 d’électricité.
+  note: Garder les attaques à +24 contre une défense élevée ; le supplément d’électricité n’est pas multiplié sur un critique.
+
+step: Plusieurs combattants convergent ou une attaque à outrance l’exposerait trop
+  do: Reprendre les Attaques éclair avec une seule griffe ; utiliser le brouillard, la neige et les parois pour empêcher les adversaires de le suivre ensemble.
+  note: Choisir une cible qui n’était pas adjacente au début du tour et parcourir au moins 3 m avant la frappe. Souplesse du serpent augmente sa CA de 4 contre les attaques d’opportunité provoquées par son déplacement. Une Attaque éclair ne permet pas une attaque à outrance.
+
+step: Des adversaires provoquent des attaques d’opportunité à portée des griffes
+  do: Les frapper avec une griffe +24, notamment lorsqu’ils quittent une case menacée ou lancent imprudemment un sort à portée.
+  note: Réflexes de combat et Dextérité 27 permettent jusqu’à 9 attaques d’opportunité par round, avec une seule attaque par occasion ; un pas de placement ne les provoque pas normalement.
+
+step: Le groupe se rassemble à distance ou bloque son approche
+  do: Employer tempête de grêle pour le harceler ; utiliser tempête de peste, DD 19, si une exposition prolongée peut servir, ou bourrasque, DD 15, si le vent peut perturber la position ennemie.
+  note: L’immunité aux maladies protège le Stormghost des maladies de sa propre tempête de peste ; ce pouvoir ne garantit pas une neutralisation immédiate des ennemis.
+
+step: Son invisibilité prend fin et les ennemis le prennent pour cible
+  do: Rompre la ligne de vue, puis renouveler invisibilité suprême si une utilisation est disponible ; relancer nappe de brouillard au besoin.
+  note: Lancer ces pouvoirs depuis un emplacement hors de portée de mêlée pour éviter de provoquer des attaques d’opportunité.
+
+## Repli
+
+step: Points de vie sous 60, ou attaques acides répétées qui empêchent la régénération
+  do: Se dégager vers un couvert, utiliser invisibilité suprême ou nappe de brouillard, puis fuir à 15 m ou escalader à 9 m pour gagner un passage difficile à suivre.
+  note: Si les intrus voient dans la brume ou détectent l’invisible, privilégier un obstacle solide et un changement de niveau ; ne pas compter uniquement sur la dissimulation magique.
+
+step: Il a rompu le contact et n’est plus exposé à l’acide
+  do: Rester caché et laisser la régénération rendre 5 pv par round ; continuer à s’éloigner si les poursuivants gardent sa trace.
+  note: Une attaque acide suspend la régénération pendant le round suivant ; il ne doit pas s’attarder sous prétexte que ses blessures se referment.

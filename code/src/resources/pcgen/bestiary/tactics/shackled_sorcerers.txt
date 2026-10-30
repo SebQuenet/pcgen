@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Ensorceleurs humains de niveau 6, chaotiques neutres, du lignage aquatique ; chacun possède 35 pv et une CA de 13. Ils privilégient le bombardement à distance et évitent la mêlée.
+  Boule de feu : 6d6, Réflexes DD 19 pour moitié ; mains brûlantes : 5d4, Réflexes DD 17 pour moitié ; projectile magique : trois projectiles de 1d4+1 chacun.
+  Arbalète légère de maître +6 (1d8/19-20), dague de maître +3 (1d4-1/19-20). Déplacement et nage : 9 m ; allonge : 1,50 m.
+
+resource: Sorts de niveau 3 | 4/jour | boule de feu
+resource: Sorts de niveau 2 | 6/jour au total | bourrasque, localisation d'objet, sillage
+resource: Sorts de niveau 1 | 7/jour au total | modification des vents, mains brûlantes, poussée hydraulique, armure de mage, projectile magique ; déduire les préparatifs
+resource: Contact déshydratant | 7/jour | attaque de contact au corps à corps +2 ; 1d6+3 dégâts non létaux et état fiévreux pendant 1 round ; dégâts létaux contre vases, plantes et créatures du sous-type aquatique ou eau
+resource: Baguette de toile d'araignée | 10 charges | une charge par activation ; les DD des sorts personnels ne s'appliquent pas à la baguette
+resource: Parchemins de bouclier | 2 | protection personnelle avant un engagement imminent
+resource: Potion d'invisibilité | 1 | à conserver pour la fuite
+resource: Potions de soins légers | 2 | à boire à couvert
+resource: Parchemins de détection faussée et d'antidétection | 1 de chaque | dissimulation contre les divinations lorsque la situation le justifie
+resource: Carreaux d'arbalète | 20 | solution de réserve
+
+step: Le combat peut être préparé
+  do: Lancer armure de mage, puis sillage lors d'un autre round
+  note: Armure de mage dure 6 heures et porte la CA à 16 : son bonus d'armure remplace celui des bracelets. Sillage dure 70 minutes grâce au lignage aquatique ; déplacement sur terrain plat à 12 m, nage à 15 m.
+
+step: L'engagement est imminent et un round reste disponible
+  do: Lire un parchemin de bouclier
+  note: Son bonus de bouclier de +4 porte la CA à 20 avec armure de mage ; il protège aussi de projectile magique.
+
+step: Choix de la position de départ
+  do: Garder un obstacle ou des alliés présents entre eux et les adversaires, avec un accès dégagé à l'eau
+  note: À plusieurs, espacer leurs positions et répartir leurs cibles pour éviter de concentrer leurs sorts sur un ennemi déjà neutralisé.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés loin des alliés
+  do: Lancer boule de feu au milieu du groupe
+  note: Explosion de 6 m de rayon, portée maximale de 192 m ; 6d6 dégâts de feu, Réflexes DD 19 pour moitié. Épargner les alliés et tenir compte des matériaux inflammables du navire.
+
+step: Les ennemis approchent par un passage que la toile peut fermer
+  do: Activer la baguette de toile d'araignée pour entraver leur progression
+  note: La zone de 6 m de rayon exige au moins deux points d'ancrage solides opposés. Garder une voie de fuite libre ; réserver cette ouverture aux situations où retarder l'abordage vaut davantage qu'un bombardement immédiat.
+
+step: Une cible isolée doit être abattue sans risquer une explosion parmi les alliés
+  do: Lancer projectile magique sur elle
+  note: Trois projectiles, portée de 48 m, sans jet d'attaque ni sauvegarde ; tenir compte d'une éventuelle résistance à la magie ou protection par bouclier.
+
+## Rounds suivants
+
+step: Plusieurs adversaires restent groupés et les alliés sont hors de la zone
+  do: Répéter boule de feu tant que des emplacements de niveau 3 restent disponibles
+  note: Le feu incendie la toile d'araignée ; choisir entre maintenir l'obstacle et le brûler pour frapper les ennemis retenus.
+
+step: Un adversaire se tient près d'un bord, à 12 m ou moins
+  do: Se placer pour le repousser vers le vide, puis lancer poussée hydraulique
+  note: La poussée suit une direction opposée au lanceur. Jet de bousculade à +11 contre le DMD, sans sauvegarde ; le lignage aquatique porte le NLS de ce sort d'eau à 7.
+
+step: Plusieurs ennemis sont à courte distance sans allié dans le cône
+  do: Lancer mains brûlantes, puis reprendre de la distance si le déplacement reste possible
+  note: Cône de 4,50 m ; 5d4 dégâts de feu, Réflexes DD 17 pour moitié.
+
+step: Des ennemis légers ou des tireurs occupent un passage étroit
+  do: Lancer bourrasque dans leur direction pour gêner leur progression et leurs tirs
+  note: Ligne de 18 m pendant 1 round, Vigueur DD 18 pour annuler ; les attaques à distance dans la zone subissent un malus de -4. Ce sort ne repousse pas automatiquement les combattants de taille humaine.
+
+step: Un adversaire arrive au contact
+  do: Faire un pas de placement de 1,50 m si cela suffit à sortir de son allonge, puis lancer un sort adapté
+  note: Si le pas est impossible, privilégier le désengagement. Une incantation sur la défensive bénéficie d'une concentration de +14 grâce à Magie de guerre.
+
+step: Le contact est inévitable et il faut affaiblir un adversaire
+  do: Tenter un contact déshydratant, de préférence sur un ennemi déjà blessé
+  note: Ce pouvoir utilise une action simple et peut provoquer une attaque d'opportunité ; l'utiliser sur la défensive si nécessaire. Il ne remplace pas une attaque de dague.
+
+step: Les sorts offensifs doivent être économisés et le lanceur reste à distance
+  do: Tirer à l'arbalète et activer Frappe magique par une action rapide
+  note: Frappe magique ajoute +2 aux dégâts de l'arme pendant 1 round ; recharger l'arbalète légère demande une action de mouvement. La dague reste un dernier recours.
+
+## Repli
+
+step: Points de vie à 12 ou moins, ou accès imminent des ennemis à leur position
+  do: Rompre le contact et gagner un couvert ; boire ensuite la potion d'invisibilité dès qu'une action simple peut lui être consacrée
+  note: Ce seuil est un choix tactique. Une attaque rompt l'invisibilité ; conserver la potion pour s'éloigner plutôt que pour reprendre le bombardement.
+
+step: L'eau offre une issue plus sûre
+  do: Nager vers un abri à 9 m par déplacement, ou 15 m si sillage est actif
+  note: Au niveau 6, l'adaptation aquatique donne la nage, mais pas la respiration aquatique ; rester en surface ou retenir son souffle pour une immersion brève.
+
+step: Un abri permet de se soigner sans être rejoint immédiatement
+  do: Boire les potions de soins légers, une par action simple, puis poursuivre la fuite

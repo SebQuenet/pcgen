@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Vase morte-vivante de taille TG, solitaire et neutre mauvaise : une masse noire hérissée d'ossements qui s'en prend aux vivants. 27 pv, CA 3 ; immunité au froid et traits des vases et des morts-vivants.
+  Coup +3 : 2d4+1 dégâts plus 1d6 de froid, allonge de 3 m. Engloutissement : Réflexes DD 15, 1d6 de froid. Peut expulser des squelettes.
+  Perception aveugle à 18 m ; déplacement et escalade à 6 m, Escalade +9. Occupe un espace de 4,50 m de côté.
+
+resource: Squelettes | réserve de 10 au maximum | expulse 1d6 squelettes par action complexe, dans la limite des ossements disponibles ; ils agissent dès ce round
+
+step: Des vivants approchent dans les souterrains
+  do: Attendre derrière un angle ou un obstacle, puis avancer lorsque les proies entrent dans les 18 m de sa perception aveugle
+  note: Aucun pouvoir de camouflage ; une embuscade dépend du couvert offert par les lieux.
+
+## Ouverture
+
+step: Les adversaires sont encore trop loin pour être engloutis et des squelettes restent disponibles
+  do: Consacrer une action complexe à expulser 1d6 squelettes ; ceux-ci attaquent dès leur apparition
+  note: Ce round est consacré à l'expulsion, sans coup ni engloutissement.
+
+step: Des adversaires de taille G ou inférieure sont sur son trajet
+  do: Avancer sur leurs cases et tenter l'engloutissement en action simple, en couvrant plusieurs cibles si possible
+  note: Réflexes DD 15 pour éviter ; une cible qui choisit une attaque d'opportunité renonce à ce jet. Une réussite la repousse en arrière ou sur le côté, à son choix. Aucun coup pendant un round d'engloutissement.
+
+step: Une cible est à 3 m ou moins mais ne peut pas être engloutie ce round
+  do: Porter un coup +3, infligeant 2d4+1 dégâts plus 1d6 de froid
+
+## Rounds suivants
+
+step: Une victime reste engloutie
+  do: Appliquer les 1d6 dégâts de froid par round et poursuivre les autres vivants accessibles
+  note: La victime est immobilisée dans la masse et risque de suffoquer tant qu'elle ne s'est pas libérée.
+
+step: D'autres adversaires peuvent être recouverts
+  do: Répéter l'engloutissement ; sinon, avancer de 6 m vers la cible accessible la plus proche et frapper si elle arrive à portée
+
+step: Les adversaires restent hors de portée et la réserve contient encore des squelettes
+  do: Expulser une nouvelle vague de 1d6 squelettes en action complexe
+  note: Décompter chaque squelette expulsé. Les squelettes détruits puis réabsorbés nécessitent 1d2 heures avant de pouvoir être réanimés et expulsés de nouveau.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à engloutir, frapper ou expulser les squelettes disponibles jusqu'à sa destruction
+  note: Avec une Intelligence absente, ne pas lui attribuer de retraite organisée ni de calcul de survie.

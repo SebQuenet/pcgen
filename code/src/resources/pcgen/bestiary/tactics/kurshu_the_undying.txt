@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Kurshu l'Immortel, extérieur loyal mauvais de grande taille, FP 15 : 229 PV, CA 30, résistance à la magie 26. Son Intelligence de 31 favorise le contrôle du terrain et le choix des cibles.
+  À outrance : deux coups +21, chacun à 1d6+5 et absorption permanente de 1d4 points d'Intelligence ; queue +16, 1d8+2 et étreinte. Allonge de 3 m, déplacement de 9 m.
+  Régénération 5 neutralisée par l'acide ; réduction des dégâts 10/fer froid et magie ; résistances au froid, à l'électricité, au feu et au son de 30.
+  Perception aveugle à 18 m, vision dans le noir à 36 m, odorat et télépathie à 30 m : surveiller les approches et communiquer discrètement.
+
+resource: Détection de la magie, disque flottant, manipulation à distance, lecture de la magie, don des langues | à volonté | NLS 15
+resource: Déplacement | 3/jour | protection contre les attaques, pendant 15 rounds
+resource: Dissipation de la magie | 3/jour | affaiblir les protections adverses
+resource: Lenteur, immobilisation de personne, nuage nauséabond | 3/jour chacun | DD 20 ; Volonté pour les deux premiers, Vigueur pour le nuage
+resource: Boule de feu, éclair | 3/jour chacun | DD 20 Réflexes ; 10d6 dégâts chacun
+resource: Projectile magique, contact du vampire | 3/jour chacun | dégâts ciblés ; contact du vampire procure des PV temporaires
+resource: Soins importants | 3/jour | rend 3d8+15 PV
+resource: Souhait limité | 3/jour | adaptation par duplication d'un sort autorisé
+resource: Téléportation suprême | 3/jour | Kurshu et ses objets seulement, dans la limite de poids indiquée
+resource: Changement de plan | 3/jour | fuite planaire ; DD 24 Volonté si utilisé contre un adversaire
+
+step: Des intrus approchent sans avoir identifié Kurshu
+  do: Observer sous forme humaine et employer détection de la magie pour repérer leurs auras
+  note: Reprendre sa forme naturelle avant de compter sur ses coups et sa queue ; aucun équipement magique particulier n'est garanti.
+
+step: Le combat est imminent
+  do: Activer déplacement juste avant l'affrontement
+  note: Si des alliés charmés sont déjà présents, leur transmettre ses consignes par télépathie ; aucun pouvoir de charme n'est fourni pour en créer sur place.
+
+step: Une attaque à l'acide est prévisible et Kurshu dispose de temps
+  do: Employer souhait limité pour reproduire résistance aux énergies destructives contre l'acide
+  note: Au NLS 15, cette protection donne résistance à l'acide 30 et aide à préserver sa régénération.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent charger Kurshu
+  do: Lancer lenteur sur les menaces accessibles, DD 20 Volonté, puis se placer pour limiter les attaques simultanées
+  note: Choisir un seul pouvoir par round ; si déplacement manque et que les attaques sont imminentes, commencer par cette protection.
+
+step: Le groupe est regroupé dans un passage ou autour d'un objectif
+  do: Préférer nuage nauséabond, DD 20 Vigueur, pour couper sa progression
+  note: Garder Kurshu hors du nuage : aucune immunité au poison n'est indiquée ; le nuage gêne aussi la vue.
+
+step: Un humanoïde dangereux est isolé et paraît vulnérable à la magie mentale
+  do: Tenter immobilisation de personne, DD 20 Volonté
+  note: Ce pouvoir ne fonctionne pas sur les autres types de créatures ; exploiter la paralysie pour traiter les ennemis encore actifs.
+
+step: Un adversaire est déjà à portée et Kurshu peut consacrer son round à attaquer
+  do: Porter les deux coups et l'attaque de queue ; concentrer les coups sur une même cible
+  note: L'absorption d'Intelligence menace particulièrement les créatures peu intelligentes et les lanceurs de sorts qui dépendent de cette caractéristique.
+
+## Rounds suivants
+
+step: Une protection magique adverse empêche ses attaques ou ses contrôles de fonctionner
+  do: Employer dissipation de la magie sur la cible prioritaire
+  note: Ne pas répéter un pouvoir inefficace sans chercher ce qui protège la cible.
+
+step: Une cible reste à portée de 3 m
+  do: Répéter l'attaque à outrance ; tenter l'étreinte de la queue lorsque retenir cette cible est utile, avec MBC +27 en lutte
+  note: Aucune constriction n'est indiquée. Éviter une lutte prolongée si elle compromet le recours à ses pouvoirs magiques.
+
+step: Un ennemi traverse son allonge sans précaution
+  do: Utiliser les attaques d'opportunité permises par Attaques réflexes, en privilégiant un coup avec absorption d'Intelligence
+
+step: Les adversaires restent à distance et offrent une zone de tir favorable
+  do: Employer boule de feu contre un groupe ou éclair contre des ennemis alignés, DD 20 Réflexes
+  note: Éviter les alliés ; contre une cible isolée difficile à toucher, envisager projectile magique.
+
+step: Kurshu est blessé et une cible est accessible au contact
+  do: Employer contact du vampire pour infliger des dégâts et gagner des PV temporaires
+  note: Si attaquer serait trop risqué, se mettre à couvert et employer soins importants ; la régénération rend aussi 5 PV par round lorsqu'elle fonctionne.
+
+step: Déplacement expire et les attaques physiques restent menaçantes
+  do: Renouveler déplacement si une utilisation reste disponible
+  note: Garder une utilisation de téléportation suprême pour le repli ; souhait limité peut fournir une protection adaptée dans les limites du sort.
+
+## Repli
+
+step: Kurshu tombe à 75 PV ou moins, ou l'acide neutralise sa régénération sous une pression soutenue
+  do: Employer téléportation suprême vers un refuge connu, puis soins importants et régénération
+  note: Ce seuil est un choix tactique. La téléportation n'emporte aucun allié ; éviter de lancer ce pouvoir au milieu d'ennemis capables de l'interrompre.
+
+step: Téléportation suprême est épuisée et le voyage planaire reste possible
+  do: Employer changement de plan pour quitter le combat
+  note: Le point d'arrivée est imprécis. Une interdiction des déplacements dimensionnels peut empêcher les deux moyens de fuite.

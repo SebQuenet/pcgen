@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Yah-Thelgaad, aberration de Grande taille, chaotique mauvaise, très intelligente ; 200 pv, CA 30, résistance à la magie 25.
+  Griffe +22 (3d6+11 et poison), deux tentacules +22 (1d8+11 et étreinte) ; allonge de 3 m. Déplacement au sol de 6 m, vol parfait de 12 m.
+  Réduction des dégâts 10/magie et adamantium ; résistance au froid 10 et au feu 10 ; immunité aux maladies et aux effets mentaux.
+  Il privilégie le contrôle et les sorts à distance, puis exploite ses attaques naturelles contre une victime isolée.
+
+resource: Sorts de niveau 6 | 4/jour | désintégration, Vigueur DD 21
+resource: Sorts de niveau 5 | 6/jour | réserve commune : suffocation, Vigueur DD 22 ; communication à distance
+resource: Sorts de niveau 4 | 8/jour | réserve commune : confusion, Volonté DD 19 ; contagion, Vigueur DD 21 ; porte dimensionnelle
+resource: Sorts de niveau 3 | 8/jour | réserve commune : clairaudience/clairvoyance, dissipation de la magie, lenteur, contact vampirique
+resource: Sorts de niveau 2 | 8/jour | réserve commune comprenant image miroir, rayon ardent et main spectrale
+resource: Sorts de niveau 1 | 8/jour | réserve commune comprenant projectile magique et rayon affaiblissant
+
+step: Il peut observer les intrus avant leur arrivée
+  do: Exploiter sa vision lucide constante et sa Perception +26 pour repérer les menaces et les protections illusoires
+  note: vision dans le noir à 18 m ; clairaudience/clairvoyance peut préparer une embuscade si le temps le permet
+
+step: Le combat est imminent
+  do: Lancer image miroir, puis prendre de la hauteur avec son vol parfait
+  note: image miroir dure 12 minutes ; conserver au moins un emplacement de niveau 4 pour porte dimensionnelle
+
+## Ouverture
+
+step: Plusieurs adversaires sont regroupés
+  do: Lancer confusion sur le groupe, Volonté DD 19
+  note: viser en priorité les combattants susceptibles de se retourner contre leurs alliés ; éviter cette option contre des ennemis manifestement immunisés aux effets mentaux
+
+step: Une cible vivante dangereuse reste isolée
+  do: Lancer suffocation sur elle, Vigueur DD 22
+  note: privilégier une cible dont la Vigueur paraît faible ; rester en vol hors de portée de ses attaques de mêlée
+
+step: Les adversaires arrivent immédiatement au contact
+  do: Lancer image miroir sur la défensive si la protection manque ; sinon, effectuer une attaque à outrance avec la griffe et les deux tentacules
+  note: concentration +32 pour les sorts d'ensorceleur ; tenter de saisir une cible touchée par un tentacule
+
+## Rounds suivants
+
+step: Plusieurs combattants restent libres de le poursuivre
+  do: Lancer lenteur, Volonté DD 18, puis exploiter sa mobilité aérienne aux tours suivants
+  note: ce sort réduit notamment leur capacité à enchaîner les attaques ; choisir des cibles espacées de 9 m au maximum les unes des autres
+
+step: Une protection magique adverse empêche ses attaques ou ses sorts d'agir
+  do: Tenter une dissipation de la magie ciblée sur la protection
+  note: niveau de lanceur 12 ; la réussite de la dissipation reste soumise au jet du sort
+
+step: Une cible prioritaire reste exposée à distance
+  do: Lancer désintégration, attaque de contact à distance puis Vigueur DD 21 ; employer suffocation contre une autre cible vivante si cela paraît plus efficace
+  note: désintégration inflige 24d6 dégâts si la sauvegarde échoue, 5d6 si elle réussit ; ne pas épuiser les sorts sur une cible qui résiste régulièrement
+
+step: Une victime est isolée à portée de ses attaques naturelles
+  do: Activer Frappe magique par une action rapide, puis attaquer à outrance avec la griffe et les deux tentacules
+  note: Frappe magique ajoute 3 aux dégâts de chaque attaque naturelle ce round ; la griffe transmet le poison et les tentacules permettent l'étreinte
+
+step: Il doit se déplacer pour atteindre une victime en mêlée
+  do: Se déplacer, puis porter une seule attaque de griffe avec Vital Strike, pour 6d6+11 et poison
+  note: le bonus de Frappe magique peut s'ajouter ; Vital Strike ne s'applique pas à l'attaque à outrance
+
+step: Il préfère conserver ses sorts les plus puissants
+  do: Employer rayon ardent ou projectile magique depuis une position aérienne dégagée
+  note: rayon ardent produit trois rayons au niveau de lanceur 12 ; projectile magique produit cinq projectiles
+
+## Repli
+
+step: Ses points de vie tombent à 60 ou moins, ou les ennemis neutralisent ses principaux moyens d'attaque
+  do: Lancer porte dimensionnelle vers un refuge connu ou une position hors de leur portée, jusqu'à 264 m
+  note: aucune autre action après ce sort avant son prochain tour ; utiliser ensuite le vol pour poursuivre la fuite
+
+step: Il ne peut plus lancer porte dimensionnelle
+  do: Rompre le contact par le vol et s'éloigner, à 12 m par déplacement
+  note: profiter de sa mobilité parfaite et des obstacles pour couper les lignes de vue

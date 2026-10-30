@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Vase glaciaire (Glacial Ooze), vase solitaire de taille G, sans intelligence, des plaines froides et des eaux gelées ; 69 pv, CA 4.
+  Coup +5 (2d4+3 plus 1d6 de froid), allonge 1,50 m ; engloutissement DD 15 et étreinte glaciale.
+  Déplacement et nage à 6 m ; espace occupé de 3 m ; vision aveugle à 18 m. Immunité au froid et traits des vases ; RD 5/contondant ; vulnérabilité au feu.
+
+step: Immobile dans la neige ou près d'une eau gelée
+  do: Utiliser l'immobilité de camouflage (freeze) pour passer pour un amas de neige ou de glace
+  note: Ce pouvoir dissimule la vase ; il ne gèle pas le terrain. Son comportement reste instinctif.
+
+## Ouverture
+
+step: Des créatures plus petites qu'elle se trouvent sur son passage
+  do: Avancer sur elles et utiliser l'engloutissement en action simple ; Réflexes DD 15 pour éviter, sinon 1d6 de froid et étreinte glaciale
+  note: Couvrir les proies accessibles avec son corps. Une cible qui choisit une attaque d'opportunité contre l'engloutissement renonce à ce jet de sauvegarde. Aucun coup pendant un round où elle engloutit.
+
+step: Une cible est à 1,50 m et ne peut pas être engloutie
+  do: Porter un coup +5 (2d4+3 plus 1d6 de froid)
+
+step: Aucune proie n'est encore accessible
+  do: Avancer ou nager vers la proie perçue la plus proche, à 6 m par déplacement
+  note: Elle ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une proie vient d'être engloutie, même au round d'ouverture
+  do: Utiliser l'étreinte glaciale en action libre pour l'emprisonner dans la glace ; elle subit 2d4 de froid par round
+  note: La proie peut briser sa prison par un test de Force DD 19. Elle ne peut pas utiliser une arme pour se libérer, ni lancer de sort à composante verbale, gestuelle ou matérielle. La glace a une CA de 10, une solidité de 0 et 10 pv par section de 1,50 m.
+
+step: D'autres petites proies restent accessibles
+  do: Répéter l'engloutissement plutôt que les coups, puis appliquer l'étreinte glaciale aux nouvelles victimes
+
+step: Un adversaire reste au contact et elle n'engloutit personne ce round
+  do: Répéter le coup +5 (2d4+3 plus 1d6 de froid)
+  note: Toute attaque à mains nues ou avec une arme naturelle qui touche la vase inflige aussi 1d6 de froid à son auteur.
+
+## Repli
+
+step: Elle est blessée et une proie reste accessible
+  do: Continuer instinctivement à engloutir ou à frapper
+  note: Aucun seuil de retraite tactique : son absence d'intelligence ne justifie ni désengagement calculé ni sélection des lanceurs de sorts. Sa CA 4 et sa vulnérabilité au feu permettent de l'abattre malgré sa RD.

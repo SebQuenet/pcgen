@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Zombie des tranchées, ancien soldat humain, guerrier 6, mort-vivant intelligent et loyal neutre. Il privilégie le tir depuis une position protégée : 43 pv, CA 18, initiative +8, déplacement de 9 m, vision dans le noir à 18 m.
+  Fusil Mosin-Nagant M1891 +12/+7 (1d10+6, critique x4) ; grenade à concussion M1914 +10 (3d6) ; baïonnette à douille +9/+4 (1d6+3) ou coup +9 (1d6+4), allonge de 1,50 m.
+
+resource: Cartouches métalliques | 20 | une cartouche consommée par tir
+resource: Grenades à concussion M1914 | 2 | +10, dégâts 3d6
+
+note: Défenses
+  RD 5, ignorée par une arme à la fois magique et tranchante ; immunités à l'acide, au froid, à l'électricité et immunités des morts-vivants ; résistance au feu 10 ; résistance à la canalisation +4.
+
+step: Il peut choisir sa position
+  do: Se dissimuler derrière un couvert avec Discrétion +10 et surveiller les approches avec Perception +7 ; préparer le fusil chargé.
+
+step: Sa brume mère est présente
+  do: Se placer dans cette brume pour tirer à l'abri de son camouflage.
+  note: La symbiose lui permet de percevoir ses cibles malgré la brume ; cette protection dépend de la présence de la brume mère.
+
+## Ouverture
+
+step: Une cible est visible et aucun ennemi ne le menace au contact
+  do: S'il reste immobile et dispose des cartouches chargées nécessaires, effectuer deux tirs à +12/+7 ; s'il doit se déplacer, tirer une seule fois à +12.
+  note: Concentrer les tirs sur une cible dangereuse et exposée, en conservant son couvert.
+
+step: Plusieurs ennemis sont regroupés et ses alliés sont à l'écart
+  do: Lancer une grenade à concussion M1914 à +10, pour 3d6 dégâts ; décompter une grenade.
+
+## Rounds suivants
+
+step: Il peut effectuer une attaque à outrance au fusil
+  do: Employer Tir rapide pour trois tirs à +10/+10/+5, chacun infligeant 1d10+6 dégâts, si suffisamment de cartouches sont chargées ; sinon conserver les deux tirs à +12/+7.
+  note: À 9 m ou moins, Tir à bout portant ajoute +1 aux attaques et aux dégâts à distance. Tir de précision supprime la pénalité pour tirer sur une cible engagée en mêlée, mais ne supprime pas les effets du couvert.
+
+step: Le fusil doit être rechargé
+  do: Recharger derrière le couvert avant de reprendre les tirs ; suivre les cartouches restantes.
+
+step: Un ennemi arrive au contact
+  do: Si un pas de placement de 1,50 m suffit à sortir de sa zone de menace, le faire puis reprendre le tir ; sinon combattre à la baïonnette, +9/+4 en attaque à outrance ou +9 après un déplacement.
+  note: S'il ne peut employer la baïonnette, porter un coup à +9 (1d6+4).
+
+step: Les cartouches sont épuisées
+  do: Employer les grenades restantes si la situation s'y prête, puis combattre à la baïonnette.
+
+## Repli
+
+step: Il tombe à 10 pv ou moins et peut encore se mettre à l'abri
+  do: Rejoindre un couvert ou sa brume mère si elle est présente, à 9 m par action de déplacement ; employer le retrait s'il faut quitter une mêlée.
+
+step: Ses points de vie atteignent 0
+  do: Le détruire et appliquer Symbiote : toutes les créatures adjacentes, à 1,50 m, subissent 4d6 dégâts d'acide.
+  note: S'il est dans sa brume mère lors de sa destruction, sa guérison accélérée augmente de 1 pendant 6 rounds ; les effets de plusieurs zombies détruits se cumulent.

@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Tête de méduse morte-vivante de taille P, neutre mauvaise et sans intelligence, animée pour servir de sentinelle. Elle flotte silencieusement à hauteur des yeux.
+  30 PV, CA 15 ; vol à 12 m par round, manœuvrabilité parfaite ; vision dans le noir à 18 m, Perception +0.
+  Morsure +6 au contact, allonge de 1,50 m : 1d4+2 dégâts et pétrification temporaire. Attaque en vol permet de répartir son déplacement avant et après une morsure.
+
+resource: Morsure pétrifiante | à chaque morsure réussie | Vigueur DD 14 ou transformation en pierre pendant 1d4 rounds ; les créatures immunisées contre le poison sont immunisées contre cet effet
+
+step: Aucun intrus repéré
+  do: Rester en vol stationnaire dans la zone à garder et attaquer lorsqu'un intrus est détecté
+  note: Son absence d'intelligence appelle un comportement simple de gardien, sans négociation ni préparation élaborée.
+
+## Ouverture
+
+step: Un intrus peut être atteint avec un déplacement de 12 m au maximum
+  do: Voler jusqu'à 1,50 m de lui et porter une morsure +6, infligeant 1d4+2 dégâts et déclenchant la morsure pétrifiante
+  note: Avec Attaque en vol, utiliser le déplacement restant pour s'éloigner après la morsure ; le trajet total avant et après l'attaque reste limité à 12 m.
+
+step: Aucun intrus n'est à portée de morsure après un déplacement simple
+  do: Se rapprocher en volant, jusqu'à 24 m avec un double déplacement
+  note: Un double déplacement ne permet pas de mordre pendant ce round.
+
+## Rounds suivants
+
+step: La cible reste mobile et un passage est possible
+  do: Répéter les passages avec Attaque en vol : approcher, mordre une fois, puis poursuivre le vol avec le déplacement restant
+  note: Ce don ne protège pas des attaques d'opportunité provoquées par le déplacement.
+
+step: Une cible est pétrifiée et un autre intrus est accessible
+  do: Mordre l'autre intrus pendant les 1d4 rounds de pétrification du premier
+  note: Suivre séparément la durée de chaque pétrification ; une victime redevient de chair à son expiration.
+
+step: Le passage est bloqué et un ennemi reste au contact
+  do: Rester en vol stationnaire et mordre une fois par round
+  note: Les traits des morts-vivants la protègent notamment des effets mentaux et du poison ; son vol la rend impossible à renverser.
+
+## Repli
+
+step: La tête subit des dégâts, même s'il lui reste peu de PV
+  do: Continuer à attaquer jusqu'à sa destruction à 0 PV
+  note: Cette sentinelle sans intelligence ne choisit pas de fuir pour préserver son existence.

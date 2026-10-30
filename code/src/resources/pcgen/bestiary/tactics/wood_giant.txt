@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Géant des forêts tempérées, chaotique bon, intelligent et mobile : 67 pv, CA 20, déplacement de 12 m, vision nocturne et Perception +11.
+  Arc long composite de maître : +9/+9/+4 à outrance (2d6+5, x3), avec Tir rapide ; épée longue : +10/+5 (2d6+5, critique 19-20) ; ou deux coups à +10 (1d6+5 chacun).
+  Il occupe un espace de 3 m et possède une allonge de 3 m. Il privilégie les tirs depuis le couvert et garde assez de place pour reculer.
+
+resource: Flèches | 20 | chaque attaque à l'arc consomme une flèche
+resource: Passage sans trace | permanent | NLS 7 ; facilite les déplacements discrets sans effacer sa présence visuelle
+resource: Communication avec les animaux | permanent | permet de recueillir des renseignements, sans imposer l'obéissance
+resource: Charme animal | 3/jour | Volonté DD 12 ; NLS 7
+resource: Extinction des feux | 3/jour | NLS 7
+resource: Forme d'arbre | 3/jour | NLS 7
+resource: Agrandissement | 1/jour | uniquement sur lui-même ; NLS 7
+resource: Croissance d'épines | 1/jour | NLS 7
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Les observer depuis le couvert forestier, avec Discrétion +11 en forêt, et préparer une voie de repli
+  note: S'il a le temps de se poster, forme d'arbre lui permet d'attendre sous une apparence végétale ; il reprend sa forme avant de combattre.
+
+step: Les intentions des intrus restent incertaines
+  do: Les interpeller en commun, en géant ou en sylvestre et chercher à éviter un affrontement inutile
+  note: Les animaux peuvent renseigner le géant sur les alentours ; aucun allié supplémentaire n'est présumé présent.
+
+## Ouverture
+
+step: Plusieurs ennemis avancent par un passage couvert de végétation
+  do: Placer croissance d'épines sur leur voie d'approche, en conservant un itinéraire libre pour lui-même
+  note: Exploiter les blessures et le ralentissement des poursuivants pour maintenir la distance et tirer ensuite ; lancer ce pouvoir occupe son action offensive du round.
+
+step: Une cible est visible et aucun ennemi ne menace sa position
+  do: Effectuer une attaque à outrance à l'arc : +9/+9/+4, pour 2d6+5 par flèche, x3
+  note: Tir rapide est déjà compris dans ces bonus. Tir de précision permet de viser un ennemi engagé en mêlée avec un allié ; le couvert reste à prendre en compte.
+
+step: Un animal hostile représente une menace immédiate et le géant peut agir à distance
+  do: Tenter charme animal sur lui, Volonté DD 12, puis utiliser communication avec les animaux pour l'apaiser
+  note: Le charme modifie son attitude ; il ne permet pas de lui imposer n'importe quel ordre.
+
+## Rounds suivants
+
+step: Le géant peut conserver sa position sans être rejoint
+  do: Continuer les volées de trois flèches sur une même menace jusqu'à la neutraliser
+  note: Appliquer Tir à bout portant à 9 m ou moins ; réserver Visée mortelle aux cibles faciles à toucher. Compter les flèches dépensées.
+
+step: Un ennemi se rapproche trop pour permettre une nouvelle volée sûre
+  do: Se déplacer jusqu'à 12 m vers un autre couvert et tirer une seule flèche si la situation le permet
+  note: Une attaque à outrance exige de rester sur place, hormis un pas de 1,50 m. Éviter les tirs au contact qui exposent aux attaques d'opportunité.
+
+step: Un adversaire impose la mêlée
+  do: Dégainer l'épée longue si nécessaire et porter une attaque à +10 pour 2d6+5 ; si elle est déjà prête et qu'il peut rester sur place, attaquer à outrance à +10/+5
+  note: Sans arme prête, utiliser les coups : deux attaques à +10 lors d'une attaque à outrance. Surveiller les occasions de frapper un ennemi qui traverse son allonge.
+
+step: Une mêlée prolongée devient inévitable et le géant dispose d'un moment pour se préparer
+  do: Employer agrandissement sur lui-même, puis adapter ses attaques et son espace à sa nouvelle taille
+  note: Les valeurs du profil correspondent à sa taille habituelle ; appliquer les modifications du pouvoir pendant son effet.
+
+step: Un incendie compromet son couvert ou sa retraite
+  do: Employer extinction des feux pour dégager une zone utile, puis reprendre le combat ou le repli
+
+## Repli
+
+step: Ses points de vie tombent à 20 ou moins, ou le combat devient manifestement perdu
+  do: Rompre le contact puis gagner le couvert forestier, à 12 m par déplacement ; utiliser un désengagement si nécessaire
+  note: Exploiter une croissance d'épines déjà en place pour gêner la poursuite, sans traverser lui-même la zone dangereuse.
+
+step: Il a rompu la ligne de vue et dispose d'un emplacement approprié
+  do: Se cacher avec Discrétion +11 en forêt, ou employer une utilisation restante de forme d'arbre pour se dissimuler parmi les arbres
+  note: Passage sans trace complique le pistage ; il ne remplace ni le couvert ni la discrétion pendant la fuite.

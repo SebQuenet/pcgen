@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Oni géant de taille G, mauvais et intelligent, qui exploite les terrains rocheux et sa mobilité aérienne. 184 pv, CA 29, résistance à la magie 24 ; régénération 5, neutralisée par l'acide ou le feu.
+  Gourdin à deux mains +23/+18/+13/+8 (2d8+12), ou 2 coups +23 (1d10+8 chacun) ; projectile pierreux +21 (3d6, plus coup fabuleux). Allonge de 3 m ; vitesse au sol et en vol de 15 m, bonne manœuvrabilité.
+  Vision dans le noir à 18 m et vision nocturne ; Discrétion +29 en terrain rocheux.
+
+resource: Vol | permanent | mobilité aérienne à 15 m
+resource: Ténèbres | à volonté | réduire l'éclairage
+resource: Invisibilité | à volonté | lui-même uniquement ; cesse lorsqu'il attaque
+resource: Passe-muraille | à volonté | pierre uniquement
+resource: Pierres acérées | 3/jour | DD 16
+resource: Façonnage de la pierre | 3/jour | aménager le terrain rocheux
+resource: Communion avec les pierres | 3/jour | obtenir des renseignements des pierres
+resource: Tremblement de terre | 1/jour | désorganiser les ennemis et bouleverser le terrain
+resource: Répulsion du métal et de la pierre | 1/jour | repousser les objets concernés et gêner leurs porteurs
+resource: Transmutation de la pierre en boue | 1/jour | DD 17
+resource: Transmutation de la boue en pierre | 1/jour | DD 17
+
+step: Il peut préparer le lieu de l'affrontement
+  do: Repérer les approches et les issues ; interroger les pierres si nécessaire, puis aménager une retraite avec façonnage de la pierre ou passe-muraille.
+  note: Il vole au-dessus des zones qu'il rend dangereuses au sol.
+
+step: Il souhaite observer ou approcher sans être identifié
+  do: Se rendre invisible, ou prendre une forme humanoïde de taille M ou G ; utiliser les rochers pour se dissimuler.
+  note: Le changement de forme ne lui donne pas les pouvoirs de l'individu imité.
+
+step: Des géants des pierres l'accompagnent
+  do: Les placer sur les approches sûres et conserver une voie de vol dégagée pour lui-même.
+  note: Éviter de les prendre dans ses propres transformations du terrain.
+
+## Ouverture
+
+step: Les ennemis doivent franchir une zone rocheuse
+  do: Lancer pierres acérées sur leur trajet, puis rester en vol pour les obliger à contourner la zone ou à la traverser.
+  note: DD 16 ; privilégier les passages étroits et les accès à sa position.
+
+step: Les adversaires sont regroupés sur un terrain où un séisme lui profite
+  do: Employer tremblement de terre depuis une position sûre.
+  note: Tenir compte des éboulements, des structures et de ses alliés avant de choisir cette ouverture.
+
+step: Une cible dangereuse reste à distance
+  do: Lui lancer un projectile pierreux +21, pour 3d6 dégâts plus coup fabuleux.
+  note: Donner la priorité à un adversaire utilisant l'acide ou le feu, qui menace sa régénération.
+
+## Rounds suivants
+
+step: Une cible reste à portée de son gourdin sans déplacement
+  do: Porter une attaque à outrance : +23/+18/+13/+8, chaque coup infligeant 2d8+12 dégâts.
+  note: Utiliser Attaque en puissance contre les cibles faciles à toucher. Les 2 coups +23 (1d10+8 chacun) offrent une solution s'il ne dispose plus de son gourdin.
+
+step: L'ennemi reste hors de portée ou le contact devient défavorable
+  do: Se déplacer en vol et employer le projectile pierreux pour maintenir la pression.
+  note: Son allonge de 3 m et Attaques réflexes lui permettent de menacer les déplacements proches et de multiplier les attaques d'opportunité autorisées.
+
+step: Un adversaire compte surtout sur son armure, son bouclier ou son armure naturelle
+  do: S'il peut rester immobile pendant son tour, utiliser Pinpoint Targeting pour tirer un unique projectile pierreux en ignorant ces bonus à la CA.
+  note: Cette option remplace les autres attaques du tour et exige de ne pas se déplacer.
+
+step: Les ennemis progressent sur de la roche naturelle non travaillée
+  do: Employer transmutation de la pierre en boue pour entraver leur progression ; rester en vol au-dessus du terrain transformé.
+  note: Si des ennemis se retrouvent dans la boue, envisager ensuite transmutation de la boue en pierre pour les emprisonner ; DD 17.
+
+step: Des combattants équipés de métal menacent de l'encercler
+  do: Orienter répulsion du métal et de la pierre vers eux pour repousser leur équipement et ouvrir de l'espace.
+  note: Conserver une position qui évite de gêner ses propres alliés.
+
+step: Réduire la lumière gênerait les ennemis
+  do: Employer ténèbres, puis exploiter sa vision dans le noir pour choisir ses angles d'attaque.
+  note: Les adversaires capables de voir dans le noir peuvent conserver cet avantage eux aussi.
+
+## Repli
+
+step: Il tombe sous 50 pv, ou l'acide et le feu rendent le combat trop dangereux
+  do: Se rendre invisible, s'éloigner en vol, puis utiliser passe-muraille dans une paroi de pierre pour gagner un abri.
+  note: L'invisibilité n'empêche pas les attaques d'opportunité de créatures capables de le voir ; éviter leurs zones menacées pendant la fuite.
+
+step: Il a rompu le contact
+  do: Rester à couvert et laisser sa régénération lui rendre 5 pv par round lorsqu'elle fonctionne.
+  note: Ne revenir que si ses blessures sont suffisamment refermées et qu'il peut reprendre l'avantage sur les utilisateurs d'acide ou de feu.

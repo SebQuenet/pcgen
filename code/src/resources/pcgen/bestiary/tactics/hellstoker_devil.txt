@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Hellstoker Devil, diable loyal mauvais des chaudières infernales, brutal et peu subtil ; 37 PV, CA 19, déplacement de 9 m par round.
+  Pique +7 (1d8+3, x3), allonge de 3 m ; ou deux griffes +7 (1d6+2 chacune), allonge de 1,50 m. Soufflet : attaque de contact à distance +6, jusqu'à 9 m.
+  Vision dans le noir à 18 m ; Perception +8 ; télépathie à 30 m pour coordonner ses alliés.
+
+note: Défenses
+  Immunité au feu et au poison ; résistance à l'acide 10 et au froid 10 ; résistance à la magie 16.
+  Réduction des dégâts 5/Bien et argent : une arme doit réunir ces deux propriétés pour la franchir.
+
+resource: Cercle magique contre le Bien | à volonté | NLS 10, rayon de 3 m, durée de 100 minutes
+resource: Téléportation suprême | à volonté | lui-même et 50 livres d'objets seulement ; destination connue sur le même plan
+resource: Mains brûlantes à effet maximal | 1/jour | cône de 4,50 m ; 20 dégâts de feu, Réflexes DD 11 pour réduire de moitié ; sert aussi à allumer le soufflet
+resource: Convocation | 1/jour | niveau 5 ; choisir 2d8 lémures avec 50 % de réussite, ou un hellstoker avec 35 % ; un échec dépense l'utilisation
+
+step: Il a le temps de se préparer
+  do: Activer cercle magique contre le Bien avant de s'exposer
+  note: Lui et ses alliés dans le rayon gagnent +2 de parade à la CA et +2 de résistance aux sauvegardes contre les créatures bonnes ; sa CA passe alors à 21 contre leurs attaques
+
+step: Les ennemis sont repérés et des renforts seraient utiles
+  do: Tenter la convocation avant le contact ; préférer les lémures pour occuper les approches, ou un hellstoker pour renforcer l'attaque
+  note: Placer les renforts devant lui et attaquer à la pique depuis l'arrière
+
+step: Un échange prolongé à distance paraît probable
+  do: Dépenser mains brûlantes pour allumer le soufflet, en une action simple
+  note: Cette préparation consomme l'unique utilisation quotidienne ; garder plutôt mains brûlantes si un cône sur plusieurs adversaires paraît possible
+
+## Ouverture
+
+step: Plusieurs ennemis tiennent dans un cône de 4,50 m et mains brûlantes reste disponible
+  do: Les prendre dans mains brûlantes à effet maximal : 20 dégâts de feu, Réflexes DD 11 pour moitié
+
+step: Une cible se trouve à 3 m
+  do: Attaquer à la pique +7 (1d8+3, x3) et conserver cette distance
+  note: Profiter d'une attaque d'opportunité si un ennemi quitte une case menacée pour se rapprocher ; la pique ne frappe pas les cases adjacentes
+
+step: Une cible reste entre 3 m et 9 m et le soufflet est allumé
+  do: Tirer au soufflet avec une attaque de contact à distance +6
+  note: Une action simple, au maximum une fois par round ; une cible touchée subit 1d8 dégâts de feu et s'enflamme si elle rate Réflexes DD 15
+
+## Rounds suivants
+
+step: Il peut maintenir un adversaire à 3 m
+  do: Continuer à la pique ; effectuer un pas de 1,50 m pour rétablir l'allonge si une case libre le permet
+
+step: Une cible adjacente empêche l'usage de la pique et il ne peut pas reprendre de distance
+  do: Lâcher la pique pour libérer ses mains et effectuer une attaque à outrance avec les deux griffes +7 (1d6+2 chacune)
+  note: Après un déplacement ordinaire, il ne porte qu'une attaque de griffe
+
+step: La cible est facile à toucher
+  do: Employer Attaque en puissance : pique +5 (1d8+9, x3), ou deux griffes +5 (1d6+6 chacune)
+  note: Revenir aux bonus normaux contre une cible bien protégée
+
+step: Le soufflet est allumé et une cible vulnérable au feu reste à portée
+  do: Répéter les tirs à distance en utilisant ses alliés pour tenir les ennemis au contact
+
+step: Un effet de feu atteint son corps huileux
+  do: Rester au combat sans craindre les flammes
+  note: Son corps brûle pendant 10 rounds sans subir de dégâts ; une créature qui le touche ou lutte avec lui subit 1d6 dégâts de feu
+
+step: Un adversaire le saisit
+  do: Tenter de se dégager avec Évasion +11 s'il peut poursuivre le combat ; privilégier la téléportation si sa survie est menacée
+  note: Le bonus de la peau huileuse est déjà inclus dans Évasion +11
+
+## Repli
+
+step: Il est dépassé par le nombre, mais peut encore supporter un round de combat
+  do: Employer mains brûlantes sur les poursuivants si l'utilisation reste disponible, puis se téléporter au round suivant
+  note: Si mains brûlantes a déjà servi, se téléporter immédiatement
+
+step: Points de vie à 12 ou moins, ou risque manifeste de mourir avant son prochain tour
+  do: Utiliser immédiatement téléportation suprême vers un refuge connu sur le même plan
+  note: Il ne peut emporter aucune autre créature ; les renforts présents couvrent sa fuite

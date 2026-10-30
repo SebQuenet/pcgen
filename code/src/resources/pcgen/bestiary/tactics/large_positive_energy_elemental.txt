@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire d'énergie positive de taille G, neutre et solitaire : 68 PV, CA 21, initiative +11, réduction des dégâts 10/—, immunités des élémentaires.
+  Vol à 18 m par round, bonne manœuvrabilité ; espace et allonge de 3 m. Deux coups +15, chacun infligeant 1d8+2 et 1d8 d'énergie positive ; éclair aveuglant et canalisation complètent ses attaques.
+  Il combat rarement, mais attaque les élémentaires d'énergie négative à vue.
+
+note: Énergie positive
+  Le supplément de 1d8 blesse morts-vivants et créatures d'énergie négative, mais soigne les vivants ; le coup inflige toujours ses 1d8+2 dégâts physiques.
+  Le surplus donne des PV temporaires pendant 1 minute. À deux fois ses PV normaux : Vigueur DD 17 ou explosion.
+
+note: Aura de 9 m
+  Pouvoirs de classe : énergie positive à +2 niveaux, négative à −2 niveaux. Sorts et pouvoirs magiques positifs maximisés ; négatifs soumis à concentration DD 15 + niveau du sort, sinon perdus.
+  Sa propre canalisation ne bénéficie pas de l'aura.
+
+resource: Éclair aveuglant | une fois tous les 1d4 rounds | rayon de 3 m ; les témoins de l'éclair font Vigueur DD 17 ou deviennent aveugles pendant 1d10 rounds
+resource: Canalisation d'énergie positive | 3/jour | rayon de 9 m ; 4d6, pour soigner les vivants ou blesser les morts-vivants ; Volonté DD 16 réduit les dégâts de moitié
+
+step: Des adversaires approchent sans l'attaquer
+  do: Garder ses distances en vol ; engager le combat seulement s'il est menacé ou reconnaît un élémentaire d'énergie négative
+  note: Perception +11 et vision dans le noir à 18 m pour repérer les approches
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être réunis dans un rayon de 3 m autour de lui
+  do: Se déplacer jusqu'à eux et déclencher l'éclair aveuglant
+  note: Cette action remplace les coups du round ; utiliser Attaque en vol pour poursuivre son déplacement après l'éclair, dans la limite des 18 m
+
+step: Une cible isolée exige une approche
+  do: Utiliser Attaque en vol : approcher, porter un seul coup +15 à 3 m, puis poursuivre le déplacement hors de son allonge
+  note: Le trajet total reste limité à 18 m ; Souplesse du serpent aide contre les attaques d'opportunité provoquées par le déplacement, sans les supprimer
+
+## Rounds suivants
+
+step: Une cible reste à 3 m et il peut consacrer le round à la mêlée
+  do: Faire une attaque à outrance avec ses deux coups +15 ; concentrer les deux sur le même adversaire
+  note: Privilégier les créatures d'énergie négative et les morts-vivants, qui subissent aussi le supplément d'énergie positive
+
+step: Plusieurs morts-vivants se trouvent à 9 m ou moins et une canalisation reste disponible
+  do: Canaliser pour leur infliger 4d6, Volonté DD 16 pour moitié, à la place des coups
+
+step: L'éclair est de nouveau disponible et des ennemis proches voient encore
+  do: Réutiliser l'éclair aveuglant, puis exploiter leur cécité pour changer de position en vol
+
+step: Il lui manque au moins 14 PV et une canalisation reste disponible
+  do: S'éloigner des ennemis vivants, puis canaliser pour récupérer 4d6 PV à la place d'attaquer
+  note: Cette canalisation soigne également les vivants ennemis dans les 9 m ; choisir sa position avant de l'utiliser
+
+step: Des adversaires vivants résistent à ses coups
+  do: Alterner passages en vol et attaques à outrance lorsque la position le permet
+  note: Suivre séparément dégâts physiques et soins positifs ; ses coups peuvent entretenir un adversaire blessé plutôt que l'abattre
+
+## Repli
+
+step: Il tombe à 17 PV ou moins et peut encore fuir
+  do: Rompre le contact et s'éloigner en vol à 18 m par déplacement ; chercher de la hauteur et utiliser une canalisation restante une fois hors de portée
+  note: Éviter de rester encerclé pour porter deux coups supplémentaires
+
+step: Il est tué
+  do: Déclencher automatiquement son explosion d'agonie dans un rayon de 9 m
+  note: 4d8 d'énergie positive : dégâts aux morts-vivants et créatures d'énergie négative, Réflexes DD 17 pour moitié ; soins aux vivants, avec les mêmes risques de surcharge.
+  note: Toutes les créatures dans la zone font aussi Vigueur DD 17 ou deviennent aveugles pendant 1d10 rounds ; cette explosion ne nécessite aucune action volontaire.

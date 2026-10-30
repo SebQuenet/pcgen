@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Golem robot de Numérie, créature artificielle neutre de taille G, sans intelligence. Il exécute ses consignes sans élaborer de tactique complexe.
+  112 pv ; CA 27, contact 9 ; RD 10/adamantium ; immunités de créature artificielle et immunité à la magie.
+  Deux coups +22, chacun pour 2d10+8 dégâts ; allonge de 3 m ; espace occupé de 3 m. Déplacement de 6 m ; aucune attaque à distance.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +0, initiative +0.
+
+step: Un poste ou un passage lui a été confié
+  do: Rester à la position prescrite et appliquer les consignes d'attaque dès qu'un intrus est repéré.
+  note: Son allonge permet de frapper les ennemis situés jusqu'à 3 m ; elle ne lui permet pas de bloquer automatiquement tout le passage.
+
+## Ouverture
+
+step: Un ennemi est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux coups +22, pour 2d10+8 dégâts chacun.
+
+step: Un déplacement de 6 m au maximum permet de mettre un ennemi à portée
+  do: Avancer jusqu'à portée, puis porter un seul coup +22, pour 2d10+8 dégâts.
+  note: Après une action de déplacement, il ne porte pas ses deux coups.
+
+step: Aucun ennemi ne peut être atteint après un déplacement de 6 m
+  do: Si ses ordres autorisent la poursuite, effectuer un double déplacement, jusqu'à 12 m, pour se rapprocher.
+  note: Il ne porte aucun coup pendant ce double déplacement. S'il doit garder son poste, il y reste.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée sans déplacement nécessaire
+  do: Répéter l'attaque à outrance avec deux coups +22, pour 2d10+8 dégâts chacun.
+
+step: Un pas de placement de 1,50 m suffit pour retrouver une cible à portée
+  do: Faire ce pas, puis effectuer l'attaque à outrance avec ses deux coups.
+  note: Ce pas suppose un terrain qui le permet et aucun autre déplacement pendant le round.
+
+step: Il faut se déplacer davantage pour atteindre l'ennemi
+  do: Avancer de 6 m au maximum et porter un seul coup si la cible est désormais à portée ; sinon, continuer à se rapprocher par un double déplacement si ses ordres le permettent.
+  note: Face aux attaques à distance, il dépend du rapprochement et de ses défenses ; il ne dispose d'aucune riposte à distance.
+
+## Repli
+
+step: Ses points de vie diminuent sans nouvelle consigne
+  do: Poursuivre le combat ou la garde jusqu'à sa destruction.
+  note: Aucun seuil de points de vie ne déclenche une fuite de sa propre initiative.
+
+step: Ses consignes imposent un repli
+  do: Rejoindre la position indiquée à 6 m par déplacement, ou jusqu'à 12 m par round en double déplacement.

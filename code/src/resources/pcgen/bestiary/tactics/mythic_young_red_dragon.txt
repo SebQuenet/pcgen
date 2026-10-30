@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Jeune dragon rouge mythique de taille G, chaotique mauvais, FP 12, rang mythique 5 : cruel, colérique et vorace. Il cherche à écraser rapidement une proie isolée.
+  165 pv, CA 27 ; déplacement terrestre de 12 m, vol de 60 m à manœuvrabilité médiocre. Espace occupé de 3 m ; allonge de 1,50 m, ou 3 m avec la morsure.
+  Morsure +18 (2d6+10 et étreinte), 2 griffes +18 (1d8+8 et étreinte), queue +13 (1d8+12), 2 ailes +13 (1d6+4).
+  Guérison accélérée 5, RD 10/épique, fortification 50 % ; immunité au feu, à la paralysie et au sommeil. Le froid lui inflige 50 % de dégâts supplémentaires.
+
+resource: Sorts de niveau 1 | 3/jour au total | réserve commune à bouclier et coup au but ; NLS 1
+resource: Détection de la magie | à volonté | NLS 11 ; repérage des auras avant l'affrontement
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +15, la vision dans le noir à 36 m et la perception aveugle à 18 m ; examiner brièvement les obstacles avec la vision à rayons X.
+  note: La perception aveugle localise une créature sans supprimer les chances de rater liées à son camouflage. La vision à rayons X reste limitée par les matériaux et fatigue lors d'un usage prolongé.
+
+step: Le combat est imminent et il peut se préparer
+  do: Lancer bouclier juste avant l'engagement : CA 31 pendant 1 minute, avec protection contre projectile magique.
+  note: Dépenser une utilisation de la réserve commune ; conserver les autres pour un renouvellement ou coup au but.
+
+step: Le terrain présente déjà de la fumée ou des zones en feu
+  do: Choisir une approche à travers la fumée et un emplacement proche des flammes pour gêner les poursuivants.
+  note: Sa vision perce la fumée et son immunité au feu lui permet d'exploiter les incendies existants.
+
+## Ouverture
+
+step: Un utilisateur de froid est identifié et accessible
+  do: En faire la cible prioritaire ; rejoindre sa portée de morsure, au sol ou en se posant après un déplacement en vol, puis mordre avec Science de la frappe décisive : +18, 6d6+10 et étreinte.
+  note: Cette attaque unique consomme l'action simple ; elle convient après un déplacement, mais ne se combine pas avec une charge.
+
+step: Aucun utilisateur de froid n'est identifié
+  do: Attaquer de la même façon le lanceur de sorts ou l'adversaire isolé le moins protégé, en contournant les combattants qui lui barrent le passage si l'espace le permet.
+
+step: Un adversaire est déjà à 1,50 m et aucun déplacement important n'est nécessaire
+  do: Faire une attaque à outrance : morsure, deux griffes, queue et deux ailes, en concentrant les coups sur la même cible.
+  note: Un pas de placement de 1,50 m reste possible ; les attaques autres que la morsure exigent leur propre allonge de 1,50 m.
+
+## Rounds suivants
+
+step: Une morsure ou une griffe touche une cible de taille M ou inférieure qu'il veut immobiliser
+  do: Tenter gratuitement l'étreinte avec un test de lutte à +24 contre le DMD de la cible, sans attaque d'opportunité.
+  note: Privilégier cette prise contre un lanceur de sorts isolé. La lutte gêne aussi le dragon : renoncer à la maintenir si les autres ennemis peuvent l'encercler.
+
+step: Une proie est saisie et ses alliés restent éloignés
+  do: Maintenir la lutte par une action simple et lui infliger les dégâts de l'attaque ayant établi la prise.
+  note: Après une prise maintenue au round précédent, le test de maintien bénéficie du bonus de +5. Libérer la proie par une action libre si la situation impose de se déplacer ou de reprendre les attaques à outrance.
+
+step: Une cible reste à portée de toutes ses armes naturelles
+  do: Répéter l'attaque à outrance ; utiliser Attaque en puissance mythique contre une défense assez faible pour supporter le malus de -3 aux attaques et aux manœuvres de combat.
+  note: Sans Attaque en puissance, conserver les bonus d'attaque du profil ; le don augmente les dégâts mais peut compromettre l'étreinte.
+
+step: Il doit se déplacer pour atteindre sa prochaine cible
+  do: Se déplacer puis porter une morsure avec Science de la frappe décisive, +18 pour 6d6+10 avant les éventuels ajustements d'Attaque en puissance.
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée de morsure, mais une attaque à outrance est impossible
+  do: Utiliser Enchaînement : morsure sur le premier, puis sur le second si la première touche.
+  note: Enchaînement remplace l'attaque avec Science de la frappe décisive ; dégâts normaux de 2d6+10 par morsure et malus de -2 à la CA jusqu'au prochain tour.
+
+step: Une cible très difficile à toucher doit absolument être saisie et il peut préparer l'assaut à couvert
+  do: Lancer coup au but, puis porter au plus tard à la fin du tour suivant une morsure avec un bonus supplémentaire de +20 au jet d'attaque.
+  note: Le bonus concerne une seule attaque, pas le test de lutte déclenché par l'étreinte ; ce sort consomme une utilisation de la réserve commune.
+
+step: Il subit les attaques des ennemis
+  do: Récupérer 5 pv au début de son tour, sans dépasser 165 ; appliquer la RD 10/épique et vérifier la fortification sur chaque critique ou attaque sournoise.
+  note: Fortification : 50 % de chances de traiter le coup comme une attaque normale. Une arme perforante ou tranchante qui le blesse expose son attaquant à 1d6 de feu, ou 2d6 sur un critique ; une arme à allonge évite ce retour de sang.
+
+step: Un sort, pouvoir magique ou pouvoir surnaturel de source non mythique impose un jet de Volonté
+  do: Appliquer Volonté de fer mythique : lancer deux fois le jet à +10 et conserver le meilleur résultat.
+
+## Repli
+
+step: Ses pv tombent sous 50, ou le froid lui inflige des pertes qu'il ne peut contenir
+  do: Libérer toute prise, effectuer une retraite pour quitter le contact, puis gagner un espace dégagé et fuir en vol vers un relief qui coupe les lignes de vue.
+  note: Son vol de 60 m favorise la fuite en ligne droite ; sa manœuvrabilité médiocre rend les virages serrés et le vol stationnaire peu fiables. La retraite protège seulement la sortie de sa case initiale des attaques d'opportunité.
+
+step: Il a rompu le contact et trouvé un abri
+  do: Rester caché pendant que la guérison accélérée lui rend 5 pv par round ; attendre d'avoir récupéré avant de poursuivre les intrus.

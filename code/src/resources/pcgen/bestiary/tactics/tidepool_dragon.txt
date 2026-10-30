@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Dragon des mares littorales, de taille TP, chaotique neutre, capricieux et territorial. Il défend son petit domaine mais accepte volontiers nourriture rare et objets brillants pour laisser passer les intrus.
+  30 pv, CA 15 ; morsure +6 (1d3), deux griffes +6 (1d3 chacune, avec fixation). Il préfère harceler par magie plutôt que subir les coups d'un adversaire plus grand.
+  Amphibie ; nage à 18 m, vol à 9 m, déplacement terrestre à 3 m par action de mouvement. Allonge de 0 m ; vision dans le noir à 18 m, vision nocturne, Perception +9. Immunisé au sommeil et à la paralysie.
+
+resource: Liberté de mouvement | 3/jour | pouvoir magique sur lui-même uniquement ; durée 40 minutes
+resource: Sillage | 4/jour | sort de niveau 2 ; durée 40 minutes ; nage portée à 24 m par action de mouvement
+resource: Sorts de niveau 1 | 7/jour au total | réserve commune à poussée hydraulique et brume de dissimulation
+resource: Aspersion acide et hébétement | à volonté | portée 10,50 m ; hébétement : Volonté DD 12
+
+step: Des intrus approchent et il dispose de temps
+  do: Lancer liberté de mouvement sur lui-même, puis sillage, un sort par round ; rester près d'une échappatoire aquatique
+  note: liberté de mouvement empêche les prises adverses et permet de combattre normalement sous l'eau ; conserver une utilisation pour un affrontement ultérieur
+
+## Ouverture
+
+step: Un intrus est près du bord et peut être repoussé vers l'eau
+  do: Se placer du côté opposé à l'eau, puis lancer poussée hydraulique à 10,50 m ou moins
+  note: bousculade à +6 contre le DMD, sans jet de sauvegarde ; la poussée éloigne la cible du dragon. Elle n'inflige pas de dégâts directs
+
+step: Les ennemis restent à distance sans offrir de poussée utile
+  do: Lancer aspersion acide sur une cible visible à 10,50 m ou moins, puis se déplacer vers l'eau ou un abri
+  note: attaque de contact à distance +7, dégâts 1d3 d'acide ; garder ses distances plutôt que chercher immédiatement la mêlée
+
+step: Des tireurs le menacent alors qu'il est hors de l'eau
+  do: Lancer brume de dissimulation, puis se déplacer à couvert du brouillard vers une issue
+  note: nuage fixe de 6 m de rayon, durée 4 minutes ; il gêne aussi la vision du dragon et ne fonctionne pas sous l'eau
+
+## Rounds suivants
+
+step: Un humanoïde de 4 DV ou moins menace de le rejoindre
+  do: Lancer hébétement, puis s'éloigner si la cible perd son action
+  note: Volonté DD 12 ; effet d'un round. Après avoir été affectée, la cible est immunisée à ce sort pendant une minute
+
+step: Une cible isolée et vulnérable justifie une attaque au contact
+  do: Entrer dans son espace et porter une attaque de griffe +6, pour 1d3 et fixation en cas de réussite
+  note: l'entrée dans l'espace adverse expose aux attaques d'opportunité ; son allonge de 0 m ne lui permet pas d'attaquer depuis une case voisine
+
+step: Une griffe est fixée à un adversaire
+  do: Infliger automatiquement 1d3 avec cette griffe chaque round ; lâcher prise si la cible ou ses alliés peuvent le malmener
+  note: la fixation agrippe automatiquement la cible ; elle ne permet pas de l'entraîner gratuitement dans l'eau
+
+step: Il est libre et peut consacrer tout son round à la mêlée dans l'espace adverse
+  do: Attaque à outrance : morsure +6 et deux griffes +6, chacune pour 1d3 ; les griffes réussies permettent la fixation
+
+step: La mêlée devient défavorable
+  do: Renoncer à s'accrocher ; reprendre le harcèlement par aspersion acide ou poussée hydraulique depuis une position moins exposée
+  note: conserver au moins un sort de niveau 1 pour une brume de dissimulation si la fuite doit passer par l'air ou la berge
+
+## Repli
+
+step: Points de vie à 10 ou moins, ou plusieurs ennemis concentrent leurs attaques sur lui
+  do: Lâcher toute prise, puis effectuer une retraite vers l'eau profonde ou une sortie aérienne
+  note: une retraite permet jusqu'à 36 m à la nage, ou 48 m sous sillage ; en vol, jusqu'à 18 m. Seule la case de départ bénéficie de la protection normale de la retraite contre les attaques d'opportunité
+
+step: Il est retenu et liberté de mouvement est déjà active
+  do: Utiliser la réussite automatique du test pour échapper à la lutte, puis s'éloigner avec son action de mouvement
+
+step: Il doit rompre la ligne de vue avant de fuir hors de l'eau
+  do: Lancer brume de dissimulation, puis se déplacer vers l'issue ; poursuivre la fuite au round suivant
+  note: son tempérament intéressé lui permet aussi d'accepter une offrande et de laisser cesser le combat

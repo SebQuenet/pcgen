@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Navire en bouteille, créature artificielle neutre de taille TP, animée par un esprit de l'eau. FP 2 ; 19 pv ; CA 15 ; initiative +6.
+  Balliste +7 (1d6) ; éperonnage +6 (1d3), allonge 1,50 m ; projection d'éclats lors de la rupture de la bouteille.
+  Vol à 12 m, manœuvrabilité parfaite ; Vol +20 ; vision dans le noir à 18 m et vision nocturne ; Perception +0.
+  RD 5/contondant ; immunités des créatures artificielles ; impossible à faire tomber par un croc-en-jambe.
+
+resource: Projection d'éclats | 1 au total | La bouteille éclate au premier tir de balliste, au premier éperonnage d'une créature ou aux premiers dégâts d'arme subis. Toutes les créatures dans un rayon de 1,50 m subissent 1d6 dégâts perforants ; Réflexes DD 12 pour réduire de moitié, alliés compris.
+
+step: Des marins approchent
+  do: Se placer en hauteur, avec une trajectoire de vol dégagée vers eux et une issue pour poursuivre son passage.
+  note: Un esprit libre cherche à chasser les marins ; un esprit lié suit les ordres de son créateur ou du lanceur de sorts qui l'a lié.
+
+## Ouverture
+
+step: Bouteille intacte et plusieurs ennemis accessibles dans un rayon de 1,50 m autour du navire
+  do: Faire une passe avec Attaque en vol : approcher, éperonner à +6 (1d3), puis poursuivre le mouvement ; limiter le déplacement total à 12 m.
+  note: L'éclatement blesse les créatures autour du navire, puis cette ressource est épuisée. Attaque en vol ne supprime pas les attaques d'opportunité.
+
+step: Ennemis dispersés ou approche trop dangereuse
+  do: Tirer à la balliste à +7 (1d6) depuis les airs, puis utiliser son déplacement pour rester hors de portée des armes de mêlée.
+  note: Le premier tir brise la bouteille même si personne ne se trouve dans le rayon des éclats ; privilégier sa position plutôt que forcer une approche risquée.
+
+## Rounds suivants
+
+step: Une cible est visible et le navire peut garder ses distances
+  do: Répéter les tirs de balliste à +7 (1d6), en changeant de position par le vol ; concentrer les tirs sur une même cible.
+
+step: Un adversaire menace le navire avec une arme contondante
+  do: S'éloigner de cet adversaire et reprendre les tirs depuis une position hors de son allonge.
+  note: Les armes contondantes contournent sa RD 5 ; quitter une case menacée peut provoquer une attaque d'opportunité.
+
+step: Le combat rapproché est inévitable
+  do: Éperonner à +6 (1d3), puis reprendre de la distance dès qu'une trajectoire s'ouvre ; utiliser Attaque en vol pour les passes suivantes.
+
+step: Plusieurs navires combattent ensemble
+  do: Concentrer leurs ballistes sur le même ennemi et espacer leurs trajectoires.
+  note: Garder les autres navires hors du rayon de 1,50 m d'une bouteille encore intacte lors de son éclatement.
+
+## Repli
+
+step: Un esprit libre poursuit encore le combat malgré ses blessures
+  do: Continuer les passes et les tirs sans imposer de seuil de fuite en points de vie.
+  note: L'esprit considère même la destruction de la maquette par son propriétaire comme une victoire.
+
+step: Son maître ordonne le retrait
+  do: Se retirer par les airs à 12 m par déplacement, en profitant de la hauteur et des obstacles pour couper les lignes de tir.

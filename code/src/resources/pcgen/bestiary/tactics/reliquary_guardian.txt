@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Gardien de reliquaire, créature artificielle de taille G, loyale mauvaise, chargée de protéger un sanctuaire ou une relique. 118 pv ; CA 28, contact 10 ; déplacement de 9 m ; espace et allonge de 3 m.
+  Épée à deux mains +1 impie +26/+21/+16/+11 (3d6+16, critique 19-20), ou deux coups +25 (3d8+10). Prononcé de zone et pouvoirs maléfiques ; réduction des dégâts 10/chaotique et Bien ; immunités à la magie et traits des créatures artificielles.
+
+resource: Prononcé | 1/jour | rayon de 18 m, créatures qui l'entendent ; blasphème ou décret, fixé à la création ; Volonté DD 21 lorsque applicable
+resource: Ténèbres maudites | 1/jour | NLS 16 ; Volonté DD 17
+resource: Dissipation du Bien | 1/jour | NLS 16 ; Volonté DD 18 pour le renvoi d'une créature extraplanaire bonne
+resource: Cercle magique contre le Bien | 1/jour | NLS 16 ; rayon de 3 m autour du bénéficiaire ; durée de 160 minutes
+resource: Protection contre le Bien | 1/jour | NLS 16 ; durée de 16 minutes ; ses bonus ne se cumulent pas avec ceux du cercle
+resource: Alignement d'arme | 1/jour | alignement mauvais seulement ; son épée impie possède déjà cet alignement
+
+step: Le sanctuaire est encore intact
+  do: Rester immobile à son poste, entre l'accès et la relique ; surveiller avec Perception +25 et vision dans le noir à 18 m
+  note: Il s'active à l'intrusion des profanateurs ; ses ailes sculptées ne lui donnent aucun déplacement aérien dans ce profil
+
+step: Une intrusion est imminente et il dispose d'un round de préparation
+  do: Activer cercle magique contre le Bien avant le contact
+  note: Contre les attaques des créatures bonnes, son bonus de parade de +2 porte sa CA à 30 ; il bénéficie aussi de +2 de résistance aux sauvegardes contre leurs effets
+
+## Ouverture
+
+step: Les intrus sont à 18 m ou moins et peuvent l'entendre
+  do: Employer son prononcé en action simple, en englobant le plus d'intrus possible
+  note: Blasphème affecte les créatures non mauvaises ; décret affecte les créatures non loyales. Appliquer les effets du sort correspondant selon leurs DV. Le type de prononcé est fixé à la création et ne change pas pendant le combat
+
+step: Les intrus restent au-delà de 18 m et plusieurs peuvent être pris dans une même zone
+  do: Employer ténèbres maudites sur leur regroupement, puis avancer vers la position qui barre l'accès à la relique
+  note: Privilégier les adversaires bons ; Volonté DD 17. Chaque pouvoir employé consomme son action simple et son utilisation quotidienne
+
+## Rounds suivants
+
+step: Un ennemi menace la relique et se trouve à portée de l'épée
+  do: Faire une attaque à outrance à l'épée : +26/+21/+16/+11, chaque coup infligeant 3d6+16
+  note: Ajouter 2d6 de dégâts contre une créature bonne grâce à la propriété impie. Choisir en priorité le porteur de la relique ou l'adversaire qui ouvre le passage aux autres
+
+step: Une cible facile à toucher reste à portée pendant toute l'attaque à outrance
+  do: Employer Attaque en puissance : épée +21/+16/+11/+6, dégâts 3d6+31 par coup
+  note: Conserver les bonus d'attaque ordinaires si les coups manquent trop souvent ; les 2d6 impies éventuels s'ajoutent séparément
+
+step: Il doit parcourir plus de 1,50 m pour atteindre sa cible
+  do: Avancer de 9 m au maximum, puis porter une unique attaque avec Frappe décisive : épée +26, dégâts 6d6+16
+  note: Les dégâts fixes et les 2d6 impies éventuels ne sont pas doublés. Un pas de placement de 1,50 m suffit parfois à conserver l'attaque à outrance
+
+step: Deux adversaires sont adjacents entre eux et tous deux dans son allonge de 3 m
+  do: Employer Enchaînement si cela permet de frapper les deux après un déplacement
+  note: La seconde attaque dépend de la réussite de la première ; sa CA baisse de 2 jusqu'à son prochain tour. S'il peut rester sur place, privilégier généralement ses quatre attaques d'épée
+
+step: Plusieurs adversaires bons restent regroupés et ténèbres maudites est encore disponible
+  do: Employer ténèbres maudites avant de reprendre les attaques d'épée au round suivant
+  note: Volonté DD 17 ; lancer le pouvoir hors de l'allonge ennemie si possible, ou sur la défensive avec Incantation de guerre
+
+step: Une créature extraplanaire bonne constitue la principale menace
+  do: Activer dissipation du Bien, puis tenter le contact permettant de la renvoyer tant que le pouvoir dure
+  note: Volonté DD 18 annule le renvoi. Le pouvoir procure aussi +4 de parade à la CA contre les créatures bonnes, soit CA 32 ; ce bonus remplace celui du cercle et prend fin si le pouvoir est déchargé
+
+step: Le cercle est terminé et des adversaires bons poursuivent l'assaut
+  do: Employer protection contre le Bien si le temps gagné justifie de consacrer une action à la défense
+
+step: Il perd son épée
+  do: Combattre avec deux coups +25, chacun infligeant 3d8+10 lors d'une attaque à outrance
+
+## Repli
+
+step: Ses points de vie deviennent faibles mais la relique reste menacée
+  do: Tenir le passage et poursuivre le combat jusqu'à destruction si nécessaire
+  note: Sa mission guide ses décisions ; aucun seuil de fuite automatique ne remplace la protection du sanctuaire
+
+step: Un intrus emporte la relique
+  do: Le poursuivre à 9 m par déplacement et l'attaquer dès qu'il entre dans son allonge de 3 m
+  note: S'il récupère la relique, regagner une position qui la protège ; éviter de poursuivre ailleurs un adversaire qui détourne simplement son attention

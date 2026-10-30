@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Crabe de feu supérieur, grande vermine extraplanaire sans Intelligence, originaire du plan des Cieux en fusion ou du plan élémentaire du Feu. Il combat par instinct, au contact.
+  30 PV ; CA 16, contact 9, pris au dépourvu 16. Deux pinces +7, chacune infligeant 1d6+4 dégâts plus 1d8 de feu, avec étreinte ; constriction : 1d6 plus 1d8 de feu.
+  Déplacement et nage : 9 m par déplacement ; espace occupé : 3 m ; allonge : 1,50 m. Immunité au feu et traits des vermines ; vulnérabilité au froid.
+
+step: Une créature approche
+  do: La repérer grâce à la vision dans le noir à 18 m ou à la perception des vibrations à 18 m si elle touche le même sol
+  note: Perception +4 ; il ne prépare ni piège ni manœuvre coordonnée
+
+## Ouverture
+
+step: L'adversaire est au-delà de 1,50 m
+  do: Avancer ou nager vers lui ; porter une attaque de pince +7 s'il peut atteindre le contact avec un déplacement de 9 m
+  note: Il ne possède aucune attaque à distance ; si un déplacement ne suffit pas, poursuivre l'approche
+
+step: L'adversaire est déjà à portée et une attaque à outrance est possible
+  do: Frapper avec les deux pinces +7, chacune pour 1d6+4 dégâts plus 1d8 de feu
+
+step: Une pince touche une cible qu'il peut agripper
+  do: Tenter immédiatement l'étreinte ; si la lutte réussit, infliger aussi la constriction, soit 1d6 dégâts plus 1d8 de feu
+
+## Rounds suivants
+
+step: Une cible est agrippée
+  do: Maintenir la lutte et choisir de lui infliger les dégâts d'une pince ; ajouter la constriction lorsque le test de lutte réussit
+  note: Dégâts de pince : 1d6+4 plus 1d8 de feu ; constriction supplémentaire : 1d6 plus 1d8 de feu
+
+step: La cible se libère ou aucune cible n'est agrippée
+  do: Reprendre les attaques de pinces et les tentatives d'étreinte ; utiliser les deux pinces si une attaque à outrance est possible
+
+step: La proie s'éloigne dans l'eau
+  do: La poursuivre à la nage, à 9 m par déplacement, puis reprendre le combat au contact
+  note: Natation +12 ; sa vitesse de nage égale sa vitesse terrestre
+
+## Repli
+
+step: Il reste engagé avec une proie
+  do: Continuer à pincer et à serrer tant que le combat se poursuit
+  note: Aucun seuil de fuite n'est indiqué ; ses blessures ne déclenchent pas automatiquement une retraite
+
+step: Une fuite instinctive devient nécessaire
+  do: Lâcher sa prise et s'éloigner à 9 m par déplacement, sur terre ou à la nage selon l'issue accessible
+  note: Il ne dispose d'aucun pouvoir de fuite ni d'attaque pour couvrir son départ

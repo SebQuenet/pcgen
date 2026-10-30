@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Rattler Inphidian, humanoïde monstrueux reptilien de taille M, neutre mauvais, FP 4. Chef calculateur au corps de crotale et aux mains remplacées par des têtes de serpents ; il privilégie sa survie.
+  51 pv, CA 18 ; deux morsures de mains-serpents +11, chacune infligeant 1d6+4 et le poison, allonge de 1,50 m. Son râle mortel frappe une zone autour de lui.
+  Déplacement au sol de 9 m, escalade et nage de 6 m ; vision dans le noir à 18 m, Perception +15, Discrétion +11, Escalade +21, Natation +12.
+
+resource: Râle mortel | une fois tous les 1d4 rounds | action simple ; effet sonore dans un rayon de 12 m, 3d6 dégâts, Vigueur DD 16 pour réduire de moitié
+resource: Poison des morsures | à chaque morsure qui blesse | blessure ; Vigueur DD 18 ; 1d4 points d'affaiblissement de Force par round pendant 4 rounds ; guérison après un jet réussi
+
+step: Il repère des intrus avant d'être découvert
+  do: Observer à couvert, puis préparer une embuscade près d'un passage resserré, avec une paroi ou un arbre accessible pour fuir.
+  note: Exploiter Discrétion +11 et la vision dans le noir pour choisir le lieu de l'affrontement.
+
+step: Il commande une bande
+  do: Faire occuper les accès par les autres inphidians et leur ménager des positions hors du futur râle.
+  note: Le râle atteint les créatures dans sa zone, y compris ses compagnons.
+
+## Ouverture
+
+step: Plusieurs ennemis se trouvent à 12 m ou moins et le râle est disponible
+  do: Déclencher le râle mortel ; noter le délai de 1d4 rounds avant sa prochaine utilisation.
+  note: Garder son déplacement pour gagner un couvert ou une position qui évite l'encerclement.
+
+step: Une cible est déjà à portée de 1,50 m et le râle n'est pas prioritaire
+  do: Attaque à outrance avec les deux morsures +11, chacune à 1d6+4 et poison, sur la même cible.
+
+step: Une cible isolée est accessible avec un déplacement de 9 m
+  do: S'approcher et porter une seule morsure +11, à 1d6+4 et poison.
+  note: Un déplacement ordinaire ne permet pas de donner les deux morsures ce round.
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Poursuivre les attaques à outrance sur elle ; se limiter si nécessaire à un pas de placement de 1,50 m pour conserver les deux morsures.
+  note: En bande, chercher une position de tenaille avec un compagnon. Suivre les pertes de Force dues au poison.
+
+step: L'adversaire est facile à toucher
+  do: Activer Attaque en puissance avant les morsures : deux attaques +9, chacune à 1d6+8 et poison, lors d'une attaque à outrance.
+  note: Contre une forte CA, conserver +11 et 1d6+4 pour favoriser les injections de poison.
+
+step: Le râle redevient disponible et plusieurs ennemis sont à 12 m ou moins
+  do: Employer de nouveau le râle à la place des morsures et relancer le délai de 1d4 rounds.
+
+step: Les ennemis combattent à distance
+  do: Avancer de couvert en couvert ; escalader un obstacle si cela permet d'approcher sans traverser leur ligne de tir.
+  note: S'il ne peut pas atteindre une position favorable, rompre le combat.
+
+## Repli
+
+step: Ses points de vie passent sous 17, ou il est débordé
+  do: Se désengager par une retraite, puis gagner un couvert ; exploiter l'escalade à 6 m ou la nage à 6 m si le terrain gêne davantage les poursuivants.
+  note: En bande, ordonner aux compagnons de couvrir sa fuite et les abandonner si nécessaire.
+
+step: La fuite immédiate est impossible et plusieurs poursuivants sont dans le rayon du râle disponible
+  do: Déclencher le râle pour les affaiblir, puis profiter de la première ouverture pour s'échapper.

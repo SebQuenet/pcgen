@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Gray Nisp, grande fée aquatique chaotique neutre, peu intelligente et féroce ; 97 PV, CA 20.
+  Morsure +12 (1d8+6), 2 griffes +12 (1d6+6) ; espace et allonge de 3 m.
+  Déplacement terrestre de 9 m, nage de 18 m ; vision nocturne, odorat développé et Perception +19.
+  Ses pouvoirs mentaux préparent une attaque brutale au corps à corps.
+
+resource: Confusion | à volonté | Volonté DD 16 ; NLS 8
+resource: Détection des pensées | à volonté | Volonté DD 14 ; NLS 8
+resource: Son imaginaire | à volonté | Volonté DD 12 pour reconnaître l'illusion en cas d'interaction ; NLS 8
+resource: Immobilisation de monstre | à volonté | Volonté DD 17 ; NLS 8
+resource: Lenteur | à volonté | Volonté DD 15 ; NLS 8
+
+step: Des intrus approchent
+  do: Rester caché près de l'eau ou dans l'eau, avec Discrétion +16 ; les repérer avec Perception +19 et l'odorat
+  note: sa dépendance à l'eau l'incite à conserver un accès immédiat à son élément
+
+step: Il peut observer les intrus sans déclencher le combat
+  do: Employer détection des pensées pour préciser leur présence et son imaginaire pour détourner leur attention
+  note: les pouvoirs restent soumis à leurs jets de sauvegarde ; un bruit illusoire ne contraint personne à s'approcher
+
+## Ouverture
+
+step: Deux nisps attendent le groupe en embuscade
+  do: Le premier lance immobilisation de monstre sur le personnage de tête, tandis que le second lance confusion sur ceux de l'arrière
+  note: chaque nisp utilise sa propre action simple ; DD 17 pour l'immobilisation, DD 16 pour la confusion
+
+step: Un seul nisp attend le groupe
+  do: Lancer immobilisation de monstre sur l'adversaire de tête ; préférer confusion si plusieurs ennemis sont regroupés à l'arrière
+  note: choisir un seul de ces pouvoirs pour ce round
+
+step: Les pouvoirs d'ouverture ont été utilisés
+  do: Sortir de la cachette et gagner le contact, en nageant si le terrain le permet
+  note: après avoir lancé un pouvoir, il peut encore se déplacer, mais ne dispose plus de son action simple pour attaquer ; il se jette dans la mêlée dès le round suivant
+
+## Rounds suivants
+
+step: Un adversaire se trouve à portée de 3 m et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance : morsure +12 (1d8+6) et 2 griffes +12 (1d6+6)
+  note: privilégier une cible immobilisée ou isolée et s'acharner sur elle
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer de 9 m au sol ou nager de 18 m, puis porter une morsure +12 (1d8+6) si la cible est à portée
+  note: ce déplacement ne permet pas une attaque à outrance
+
+step: La cible paraît facile à toucher
+  do: Activer Attaque en puissance pour ses attaques de mêlée : morsure +10 (1d8+10), griffes +10 (1d6+10)
+  note: le malus de -2 aux attaques et le bonus de +4 aux dégâts durent jusqu'à son prochain tour
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée de 3 m, et il ne peut pas faire d'attaque à outrance
+  do: Utiliser Enchaînement : porter une morsure ; si elle touche, porter une seconde morsure contre l'autre ennemi
+  note: Enchaînement utilise une action simple et réduit sa CA à 18 jusqu'à son prochain tour ; la seconde attaque vise une cible différente
+
+step: Plusieurs ennemis restent hors du contact et peuvent encore agir librement
+  do: Employer confusion sur un groupe ou lenteur pour gêner leur progression ; reprendre ensuite l'assaut
+  note: lancer un seul pouvoir par round ; privilégier une position hors de l'allonge ennemie pour éviter les attaques d'opportunité provoquées par son utilisation
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Le frapper avec une morsure
+  note: Attaques réflexes permet jusqu'à 4 attaques d'opportunité par round, chacune pour une occasion distincte ; appliquer Attaque en puissance si elle est active
+
+## Repli
+
+step: Le combat est engagé, même avec très peu de PV
+  do: Combattre jusqu'à la destruction
+  note: aucun seuil de fuite ; il peut se déplacer dans l'eau pour poursuivre une cible, mais ne bat pas volontairement en retraite

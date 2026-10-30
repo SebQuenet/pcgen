@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Scarabée trancheur géant, vermine de taille G des forêts tempérées, sans intelligence et agressive. Il combat par instinct, seul ou en groupe de 2 à 5.
+  Une morsure +8 (2d8+9, critique sur 19–20), avec morsure vorpale ; 37 points de vie, CA 17. Déplacement de 6 m, espace occupé de 3 m et allonge de 1,50 m.
+  Vision dans le noir à 18 m, Perception +0 ; immunité aux effets mentaux.
+
+step: Une créature est repérée
+  do: Se rapprocher pour l'atteindre avec les mandibules
+  note: Son absence d'intelligence appelle un comportement direct ; choisir la proie accessible la plus proche.
+
+## Ouverture
+
+step: Une cible se trouve à 1,50 m ou moins
+  do: Porter une morsure +8 (2d8+9, critique sur 19–20)
+
+step: Une cible peut être atteinte avec un déplacement de 6 m
+  do: Avancer jusqu'à portée de morsure, puis attaquer à +8
+
+step: Aucune cible ne peut être mordue après un déplacement de 6 m
+  do: Effectuer un double déplacement, jusqu'à 12 m, vers la proie la plus proche
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter la morsure chaque round
+  note: Il ne possède qu'une attaque de morsure ; rester sur place ne lui donne aucune attaque supplémentaire.
+
+step: Le jet d'attaque donne un 20 naturel et le critique est confirmé
+  do: Appliquer la morsure vorpale : sectionner un membre de la victime
+  note: Lancer 1d6 : 1–3, un bras ; 4–6, une jambe. Déterminer le côté avec 50 % de chances pour chacun. Un 19 peut produire un critique ordinaire, mais ne déclenche pas cette section.
+
+step: La proie quitte sa portée
+  do: Avancer jusqu'à 6 m et mordre si elle redevient accessible ; sinon, poursuivre par un double déplacement
+
+step: Plusieurs scarabées participent au combat
+  do: Faire approcher et mordre chaque individu selon les cibles à sa portée
+  note: Leur nombre augmente la pression au contact ; ils ne coordonnent pas de manœuvres complexes.
+
+## Repli
+
+step: Le combat reste engagé au contact
+  do: Continuer à mordre tant que le scarabée peut agir
+  note: Aucun seuil de fuite n'est indiqué ; son agressivité ne justifie pas une retraite tactique calculée.

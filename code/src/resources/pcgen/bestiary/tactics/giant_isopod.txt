@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Isopode géant, vermine aquatique de taille TP, neutre et sans intelligence ; il réagit par instinct. Il possède 6 pv et une CA de 14.
+  Son unique attaque est une morsure à −1 (1d3−3), avec une allonge de 1,50 m. Il se déplace de 6 m au sol ou nage de 3 m par action de mouvement.
+  Vision dans le noir à 18 m, vision nocturne et Perception +4 ; immunité aux effets mentaux.
+
+resource: Recroquevillement (curl) | à volonté | Une action simple pour se mettre en boule : armure naturelle augmentée de +2, soit CA 16 ; aucune action de mouvement possible dans cet état. Se dérouler exige aussi une action simple.
+
+step: Aucune menace immédiate
+  do: Rester dans son milieu aquatique et vaquer à son activité, sans préparer d'embuscade ni de manœuvre coordonnée.
+
+## Ouverture
+
+step: Un adversaire le menace à 1,50 m ou moins
+  do: Mordre à −1 (1d3−3).
+
+step: Il est attaqué sans pouvoir atteindre son agresseur avec sa morsure
+  do: Se recroqueviller en une action simple pour porter sa CA à 16.
+  note: Il ne peut plus effectuer d'action de mouvement tant qu'il reste en boule.
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m ou moins
+  do: Porter une morsure à −1 (1d3−3) par round.
+  note: Le recroquevillement interdit les actions de mouvement ; sa description n'interdit pas la morsure.
+
+step: Il subit des attaques et n'est pas encore en boule
+  do: Consacrer son action simple au recroquevillement.
+  note: Ce round-là, il renonce à sa morsure pour augmenter sa CA.
+
+## Repli
+
+step: Il est blessé et la menace persiste
+  do: Rester en boule pour profiter de sa CA de 16, ou se recroqueviller s'il ne l'est pas encore.
+  note: Réaction défensive instinctive ; aucun seuil de fuite particulier n'est indiqué.
+
+step: L'adversaire s'éloigne et une issue est libre
+  do: S'il est en boule, se dérouler en une action simple, puis s'éloigner avec son action de mouvement : 6 m au sol ou 3 m à la nage.

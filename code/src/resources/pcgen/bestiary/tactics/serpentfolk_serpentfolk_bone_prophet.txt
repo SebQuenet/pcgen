@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Homme-serpent prophète des os, créature monstrueuse de taille M, neutre mauvaise, intelligente et perspicace. Il dispose de 137 points de vie, d'une CA de 23 et d'une initiative de +8.
+  Son attaque indiquée est le bâton +1. Il privilégie une mêlée contre un adversaire isolé plutôt qu'un encerclement ; sa vitesse de déplacement est de 4,50 m par round.
+
+note: Défenses et perception
+  Vision dans le noir à 18 m et odorat. Immunité aux effets mentaux, à la paralysie et au poison ; résistance à la magie de 22.
+  Jets de sauvegarde : Vigueur +11, Réflexes +11, Volonté +16.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se placer près d'un passage étroit ou d'un obstacle, avec une voie de repli accessible
+  note: Un passage resserré limite le nombre d'adversaires pouvant l'attaquer au contact.
+
+step: Des intrus approchent
+  do: Surveiller les accès avec sa vision dans le noir et chercher leur odeur avant de s'exposer
+
+## Ouverture
+
+step: Un ennemi est à portée de son bâton
+  do: Attaquer au bâton +1, en choisissant si possible un adversaire déjà blessé ou peu protégé
+
+step: Aucun ennemi n'est au contact
+  do: Avancer à couvert vers un passage permettant d'engager un seul adversaire à la fois
+  note: Éviter de traverser un espace découvert sous les tirs avec son déplacement de 4,50 m.
+
+## Rounds suivants
+
+step: Il peut rester au contact sans être encerclé
+  do: Effectuer une attaque à outrance au bâton +1 et concentrer ses coups sur la même cible
+
+step: Plusieurs ennemis cherchent à l'entourer
+  do: Reculer vers le passage préparé ; utiliser un pas de placement de 1,50 m si cela suffit à améliorer sa position
+  note: Préserver l'accès à sa voie de fuite plutôt que poursuivre une cible entre plusieurs adversaires.
+
+step: Un adversaire tente de l'affecter mentalement, de le paralyser ou de l'empoisonner
+  do: Exploiter son immunité pour maintenir la pression au bâton sur une cible accessible
+  note: Appliquer sa résistance à la magie de 22 aux sorts qui y sont soumis.
+
+## Repli
+
+step: Points de vie sous 40, ou encerclement imminent
+  do: Utiliser l'action de retraite pour gagner la voie de sortie, puis rompre la ligne de vue derrière un obstacle
+  note: Sa lenteur rend une fuite en terrain découvert difficile ; privilégier les angles et les passages qui gênent la poursuite.

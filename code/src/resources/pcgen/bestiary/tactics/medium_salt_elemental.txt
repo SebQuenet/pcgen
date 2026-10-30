@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire de sel de taille M, neutre, formé de cristaux blancs ; intelligence rudimentaire et combat au corps à corps pour affaiblir ses adversaires.
+  19 pv ; CA 17 ; déplacement de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m.
+  Une griffe +5 inflige 1d6+3 dégâts tranchants et un empoisonnement salin ; son aura de déshydratation agit dans un rayon de 3 m.
+  Traits des élémentaires ; vulnérabilité à l’eau, dont les effets chiffrés ne sont pas précisés.
+
+step: Des intrus approchent
+  do: Les attendre sur un sol sec, à l’écart des étendues d’eau ; les repérer avec Perception +6 et sa vision dans le noir
+  note: il ne dispose d’aucune attaque à distance ; il doit approcher pour imposer son aura et sa griffe
+
+## Ouverture
+
+step: Un ennemi est à plus de 1,50 m
+  do: Avancer vers la cible accessible la plus proche, de préférence de façon à placer plusieurs adversaires dans son aura de 3 m
+  note: après un déplacement de 6 m au maximum, porter une attaque de griffe si une cible est à portée ; sinon, consacrer le round à se rapprocher
+
+step: Un ennemi est à portée de griffe
+  do: Porter une griffe +5, pour 1d6+3 dégâts tranchants et empoisonnement salin
+  note: sur une touche, la cible doit réussir un jet de Vigueur DD 12 ou devenir fiévreuse pendant 6 rounds
+
+step: Des créatures vivantes sont dans un rayon de 3 m
+  do: Appliquer l’aura de déshydratation chaque round : Vigueur DD 12 ou 1d6 dégâts non létaux
+  note: l’aura agit sans action ; les créatures immunisées contre la fatigue ou l’épuisement y sont immunisées
+
+## Rounds suivants
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée de griffe
+  do: Utiliser Enchaînement : attaquer le premier à +5 ; si la griffe touche, porter une seconde attaque à +5 contre l’autre
+  note: chaque touche inflige les dégâts de griffe et impose le jet contre l’empoisonnement salin ; Enchaînement réduit sa CA de 2 jusqu’à son prochain tour
+
+step: Une seule cible est accessible
+  do: Continuer les attaques de griffe et rester assez près pour maintenir la cible dans l’aura
+  note: de nouveaux jets ratés contre l’empoisonnement salin prolongent sa durée, sans cumuler l’état fiévreux
+
+step: Ses griffes touchent facilement la cible
+  do: Employer Attaque en puissance pour augmenter les dégâts de griffe en échange d’un malus à l’attaque
+  note: privilégier les attaques ordinaires si les coups manquent souvent, afin de conserver des chances d’appliquer l’empoisonnement salin
+
+step: L’adversaire se dégage
+  do: Le suivre sur terrain sec, à 6 m par déplacement, pour le remettre dans l’aura et reprendre les attaques au contact
+  note: éviter de disperser les ennemis déjà regroupés à portée d’Enchaînement
+
+## Repli
+
+step: De l’eau menace sa position ou un adversaire l’utilise contre lui
+  do: S’éloigner de l’eau par le trajet sec le plus court ; ne pas poursuivre une cible dans l’eau
+
+step: Il lui reste 6 pv ou moins et une issue sèche est accessible
+  do: Battre en retraite vers cette issue ; utiliser une retraite totale si elle permet de quitter le contact, puis poursuivre la fuite sur terrain sec
+  note: son déplacement de base reste de 6 m ; une retraite totale permet de parcourir jusqu’à 12 m
+
+step: Aucune fuite sèche n’est possible
+  do: Continuer à griffer l’adversaire à portée et laisser l’aura agir

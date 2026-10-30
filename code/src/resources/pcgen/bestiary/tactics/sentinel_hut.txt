@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  La hutte sentinelle est une créature artificielle neutre de taille TG, sans intelligence, employée pour garder les frontières de l'Irrisen. Cette cabane sans fenêtres se déplace sur deux immenses jambes.
+  95 pv ; CA 21, contact 11, prise au dépourvu 18 ; déplacement de 9 m ; espace occupé et allonge de 4,50 m.
+  Morsure +15 (2d4+7 et étreinte), coup +15 (2d6+7) ; BMO +19, +23 en lutte ; DMD 32.
+
+note: Défenses
+  Réduction des dégâts de 5/adamantium ; immunité à l'acide, au froid et immunités des créatures artificielles.
+  Immunité aux sorts et pouvoirs magiques autorisant la résistance à la magie, sauf ceux du registre du feu, qui l'affectent normalement.
+  Esquive dansante : bonus de +3 aux jets de Réflexes, déjà compris dans Réflexes +6 ; Vigueur +3, Volonté +3.
+
+step: En attente à son poste
+  do: Garder l'accès désigné et appliquer les consignes reçues.
+  note: Perception +0 ; vision dans le noir à 18 m et vision nocturne. Son absence d'intelligence impose des réactions simples.
+
+## Ouverture
+
+step: Un intrus désigné par ses consignes est hors de son allonge
+  do: Avancer de 9 m au maximum ; si une cible devient accessible à 4,50 m, porter une morsure +15 (2d4+7).
+  note: Après un déplacement ordinaire, elle ne porte qu'une attaque.
+
+step: Un intrus est déjà à portée sans déplacement nécessaire
+  do: Faire une attaque à outrance : morsure +15 (2d4+7) et coup +15 (2d6+7).
+
+step: La morsure touche une créature de taille G ou inférieure
+  do: Tenter immédiatement une étreinte avec un test de lutte à +23, en action libre, sans provoquer d'attaque d'opportunité.
+  note: La hutte cherche ainsi à retenir l'intrus dans la zone qu'elle garde.
+
+## Rounds suivants
+
+step: Une cible reste agrippée au début de son tour
+  do: Consacrer son action simple au maintien de la lutte ; sur réussite, infliger les dégâts de morsure, 2d4+7.
+  note: BMO de lutte +23 ; ajouter le bonus de +5 au maintien si la cible ne s'est pas libérée depuis le tour précédent. Ce maintien remplace l'attaque à outrance du round.
+
+step: Aucune cible n'est agrippée et un adversaire reste à portée
+  do: Répéter morsure et coup en attaque à outrance ; tenter l'étreinte après chaque morsure réussie contre une cible de taille adaptée.
+
+step: Une cible provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Porter une morsure +15 et tenter l'étreinte si elle touche une cible de taille adaptée.
+  note: Une seule attaque d'opportunité par round.
+
+step: Les adversaires restent hors de portée
+  do: Avancer vers eux si ses consignes autorisent la poursuite ; sinon, continuer à barrer l'accès gardé.
+  note: Elle ne possède aucune attaque à distance.
+
+## Repli
+
+step: Ses points de vie diminuent, sans ordre de retrait
+  do: Continuer à garder son poste et à attaquer jusqu'à sa destruction à 0 pv.
+  note: Aucun seuil de fuite instinctive : cette sentinelle sans intelligence suit ses consignes.
+
+step: Une consigne reçue impose le retour au poste ou le retrait
+  do: Rompre la lutte si nécessaire, puis se déplacer vers la position prescrite à 9 m par action de mouvement.

@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Idole de bois, créature artificielle neutre de taille Minuscule, peu intelligente ; elle soutient son créateur et gêne les intrus plutôt que de compter sur sa force.
+  Écharde à distance +6 (1d2-4) ; morsure +2 (1d2-4), allonge 0 m. Déplacement de 3 m ; 11 PV ; CA 14.
+  Ses meilleurs moyens de combat sont la distorsion du bois et l'enchevêtrement.
+
+note: Défenses et discrétion
+  Régénération 5 sur bois, herbe ou terre ; résistances au froid 5 et à l'électricité 5 ; vulnérabilité au feu.
+  Discrétion +12, +16 parmi le bois ; Perception +5 ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Détection des animaux ou des plantes | à volonté | NLS 3 ; partage possible
+resource: Distorsion du bois | à volonté | NLS 3 ; Volonté DD 13 annule pour un objet ; portée 9 m
+resource: Création d'eau | 3/jour | NLS 3
+resource: Baie nourricière | 3/jour | NLS 3 ; préparer des baies pour ses alliés avant l'affrontement
+resource: Forme d'arbre | 3/jour | NLS 3 ; partage possible
+resource: Peau d'écorce | 1/jour | NLS 3 ; +2 à l'armure naturelle pendant 30 minutes
+resource: Enchevêtrement | 1/jour | NLS 3 ; Réflexes DD 12 ; nécessite de la végétation
+
+step: Elle attend des intrus
+  do: Rester immobile parmi le bois, sur un support permettant sa régénération, avec une cachette proche.
+  note: Inanimée, elle ressemble à une statuette ordinaire. Employer discrètement ses pouvoirs peut laisser des indices perceptibles au round suivant, Perception DD 25 ; se déplacer ou attaquer révèle son animation.
+
+step: Un affrontement paraît imminent
+  do: Lancer peau d'écorce sur elle-même, portant sa CA à 16.
+
+step: Un allié proche doit se dissimuler ou observer la faune
+  do: Lui partager forme d'arbre ou détection des animaux ou des plantes s'il se trouve à 1,50 m ou moins.
+  note: Elle comprend la langue de son créateur, mais ne parle pas ; elle suit des consignes simples.
+
+## Ouverture
+
+step: Des intrus avancent dans une zone végétalisée
+  do: Lancer enchevêtrement sur leur passage pour ralentir leur approche, en évitant d'y enfermer ses alliés et sa propre voie de retraite.
+  note: Réflexes DD 12 pour éviter d'être enchevêtré ; la zone reste un terrain difficile. Rester hors de cette zone autant que possible.
+
+step: Enchevêtrement est inutile ou déjà employé, et un adversaire utilise une arme en bois à 9 m ou moins
+  do: Lancer distorsion du bois, en priorité sur un arc ou une arbalète.
+  note: Volonté DD 13 annule ; une arme de tir déformée devient inutilisable, une arme de mêlée déformée impose -4 aux attaques.
+
+## Rounds suivants
+
+step: D'autres armes en bois menacent l'idole ou ses alliés
+  do: Répéter distorsion du bois, une utilisation par round, sur une nouvelle arme ou une cible ayant résisté.
+  note: Au NLS 3, une utilisation affecte au maximum l'équivalent de trois objets de taille Petite ; un objet Moyen en compte deux.
+
+step: Aucun objet en bois utile à déformer et une cible reste à distance
+  do: Tirer une écharde +6 (1d2-4), en gardant un abri et un support favorable à la régénération.
+
+step: Un adversaire l'oblige à combattre au contact
+  do: Chercher à se dégager ; ne mordre à +2 (1d2-4) que si elle ne peut éviter l'affrontement.
+  note: Son allonge de 0 m exige d'entrer dans l'espace de la cible pour la mordre, ce qui l'expose aux attaques d'opportunité.
+
+note: Aura incombustible
+  Dans un rayon de 9 m, toutes les créatures bénéficient d'une résistance au feu de 10, ennemis compris.
+  Chaque recours à cette résistance inflige 1 point de dégâts à l'idole. À 1 PV, l'aura cesse jusqu'à ce qu'elle récupère des PV ; surveiller cette perte pendant les attaques de feu.
+
+## Repli
+
+step: Elle tombe à 5 PV ou moins, ou subit des attaques de feu répétées
+  do: Reculer vers un abri sur bois, herbe ou terre, à 3 m par déplacement, pendant que l'enchevêtrement ou ses alliés retardent les poursuivants.
+  note: Attendre à couvert pour récupérer grâce à la régénération ; les dégâts de feu ne sont pas réparés par celle-ci.
+
+step: Elle a rompu la ligne de vue des poursuivants
+  do: Se cacher parmi le bois et redevenir immobile, ou employer une utilisation restante de forme d'arbre pour prendre l'apparence d'une souche.
+  note: Forme d'arbre sert à se dissimuler ; elle doit abandonner cette forme pour reprendre sa fuite.

@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Cavalier rouge, fée de taille M, loyal neutre et héraut de Baba Yaga. Impétueux et violent, il frappe fort avec ses pouvoirs de zone puis poursuit les survivants au cimeterre.
+  Cimeterre +2 flamboyant +18/+13 : 1d6+9, plus 1d6 de feu ; critique 15–20, x2. Déplacement à pied 9 m ; allonge 1,50 m.
+  152 pv ; CA 29, contact 15 ; réduction des dégâts 10/fer froid ; immunité au froid et au poison ; résistance à la magie 23.
+
+resource: Détection de l'invisibilité | permanent | repère les créatures invisibles dans son champ de vision
+resource: Invocation de monture | à volonté | action simple ; monture fantôme, NLS 13 ; déplacement 30 m, CA 18, 20 pv ; elle ne combat pas
+resource: Tempête de grêle | 5/jour | 3d6 contondants et 2d6 de froid, sans sauvegarde ; rayon 6 m ; terrain difficile pendant 12 rounds
+resource: Cône de froid | 3/jour | cône de 18 m ; 12d6 de froid ; Réflexes DD 20, moitié
+resource: Colonne de feu | 3/jour | rayon 3 m ; 12d6, moitié feu et moitié énergie divine ; Réflexes DD 20, moitié
+resource: Tempête de feu | 1/jour | 12d6 de feu ; Réflexes DD 23, moitié ; un échec enflamme la cible pour 4d6 de feu par round
+resource: Détection des pensées et zone de vérité | à volonté | Volonté DD 17 ; servent à sonder ou interroger avant les hostilités
+resource: Contact glacial | à volonté | attaque de contact ; 1d6 d'énergie négative et 1 point de Force ; Vigueur DD 16 annule seulement la perte de Force chez les vivants
+
+step: Il peut préparer la rencontre
+  do: Invoquer sa monture avant l'affrontement et choisir une voie dégagée pour ses charges et son repli
+  note: Ses robes permettent un déguisement illusoire ; il peut observer les intrus sous une apparence banale, avec Perception +23 et Psychologie +23.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans une même zone de flammes
+  do: Ouvrir avec tempête de feu, en couvrant le plus de cibles possible sans toucher sa monture
+  note: Portée 66 m ; jusqu'à 24 cubes de 3 m de côté. Pour éteindre les flammes persistantes, une victime doit consacrer une action complexe et réussir Réflexes DD 20.
+
+step: Les adversaires sont hors d'atteinte du cône ou il veut ralentir leur approche
+  do: Lancer tempête de grêle sur leur position ou sur un passage qu'ils doivent franchir
+  note: Portée 264 m. Les dégâts surviennent une seule fois, au lancement ; le terrain difficile persiste ensuite.
+
+step: Une cible isolée offre une ligne de charge dégagée
+  do: Charger à cheval et utiliser Attaque au galop pour porter un coup de cimeterre, puis poursuivre le déplacement en ligne droite
+  note: Une seule attaque, à +20 ; CA 27 jusqu'à son prochain tour. La charge doit comporter au moins 3 m avant la frappe. Le passage ne provoque pas d'attaque d'opportunité de la cible attaquée.
+
+## Rounds suivants
+
+step: Au moins deux adversaires restent dans un cône de 18 m
+  do: Se placer pour les englober avec cône de froid
+  note: Choisir colonne de feu si leur résistance au froid est connue ; la moitié divine de ses dégâts échappe aux résistances et immunités au feu.
+
+step: Une cible prioritaire reste au contact et il peut consacrer son round à attaquer
+  do: Effectuer l'attaque à outrance au cimeterre, +18/+13, en concentrant les deux coups sur elle
+  note: Focalisation critique donne +4 aux confirmations de critique. Contre une CA facile à toucher, Attaque en puissance donne +15/+10 et 1d6+15 par coup, plus 1d6 de feu.
+
+step: Le combat laisse de l'espace pour des passes montées
+  do: Reprendre les charges avec Attaque au galop pour frapper les adversaires isolés et finir hors de leur portée immédiate
+  note: Contourner les autres ennemis menaçants ; le don ne protège que contre les attaques d'opportunité de la cible de la charge.
+
+step: Une attaque touche sa monture
+  do: Utiliser Combat monté, une fois par round, avec Équitation +24
+  note: Le coup est annulé si le résultat du test dépasse le résultat du jet d'attaque adverse.
+
+step: Il doit employer un pouvoir magique alors qu'un ennemi le menace
+  do: Faire un pas de placement de 1,50 m si cela suffit à sortir de la zone menacée, puis employer le pouvoir
+  note: À défaut, lancer sur la défensive avec concentration +17 ; éviter de sacrifier un pouvoir précieux à une tentative trop difficile.
+
+## Repli
+
+step: 38 pv ou moins et le combat tourne en sa défaveur
+  do: Rompre le contact par une retraite à cheval et utiliser la vitesse de la monture pour distancer les poursuivants
+  note: Une retraite permet jusqu'à 60 m avec cette monture ; seule la case de départ cesse d'être considérée comme menacée. Éviter de traverser d'autres zones menacées.
+
+step: La monture a disparu et une nouvelle invocation est possible à l'abri
+  do: Invoquer une nouvelle monture en action simple, puis la monter avant de reprendre la fuite
+  note: Sans monture, il se déplace à 9 m ; si une utilisation reste disponible, une tempête de grêle placée entre lui et ses poursuivants peut ralentir leur progression.

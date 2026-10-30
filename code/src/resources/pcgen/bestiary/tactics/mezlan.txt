@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Mezlan, vase métamorphe neutre et intelligente de taille M, conçue pour l'infiltration et les frappes rapides. Elle prépare son approche plutôt que de se jeter aveuglément sur ses ennemis.
+  195 pv ; CA 30 ; résistance à la magie 25 ; immunités des vases ; vision aveugle à 36 m. Déplacement terrestre de 12 m, escalade et nage de 6 m par action de mouvement ; aucune respiration nécessaire.
+  Deux armes morphiques +22 au contact, chacune pour 2d8+10 dégâts ; arme morphique lancée +19, pour 2d8+10 dégâts. Allonge habituelle de 1,50 m.
+
+resource: Réserve de compétence | 5/jour | bonus de compétence de +4 à un test de compétence, notamment Déguisement ou Discrétion
+resource: Régénération | permanente | récupère 5 pv par round ; les dégâts d'acide interrompent cette régénération pendant le round suivant
+
+step: Les adversaires ne l'ont pas encore identifiée
+  do: Approcher sous une apparence crédible avec Déguisement +25, ou attendre à couvert avec Discrétion +25 ; réserver le bonus de compétence à une approche décisive
+  note: le corps morphique imite une créature solide de taille P ou M, sans acquérir ses pouvoirs ; exclure les formes élémentaires, intangibles ou en nuée
+
+step: Elle peut observer les intrus
+  do: Utiliser Perception +20 et Psychologie +20 pour choisir une cible isolée et repérer une issue vers l'eau ou une paroi praticable
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m et elle dispose d'un round complet
+  do: Attaque à outrance : deux armes morphiques +22, chacune pour 2d8+10 dégâts, concentrées sur la même cible
+  note: initiative +11 ; pendant un round de surprise, une seule attaque si elle ne dispose que d'une action simple
+
+step: Une cible est accessible après un déplacement de 12 m au plus
+  do: Se rapprocher et porter une seule attaque +22, pour 2d8+10 dégâts ; privilégier un adversaire isolé ou capable d'infliger de l'acide
+  note: une fois par round, un membre peut s'étendre pour porter une attaque jusqu'à 4,50 m ; cela ne donne aucune attaque supplémentaire
+
+step: L'approche exposerait inutilement le mezlan
+  do: Sous une forme paraissant manier une arme à distance, lancer un fragment de son corps sur une cible exposée : +19, pour 2d8+10 dégâts
+  note: facteur de portée de 18 m ; à 9 m ou moins, Tir à bout portant porte l'attaque à +20 et les dégâts à 2d8+11 ; Tir de précision supprime le malus pour tirer dans une mêlée
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Rester en place, ou faire un pas de placement de 1,50 m, pour conserver les deux attaques à outrance ; achever une cible avant d'en changer
+  note: les armes morphiques sont naturelles, comptent comme magiques contre la réduction des dégâts et infligent des dégâts contondants, perforants et tranchants
+
+step: Ses attaques de mêlée touchent facilement
+  do: Activer Attaque en puissance : deux attaques à +18, chacune pour 2d8+18 dégâts, lors d'une attaque à outrance
+  note: revenir aux valeurs normales si les coups manquent trop souvent
+
+step: Un ennemi utilise de l'acide
+  do: Le viser en priorité s'il est accessible ; sinon, interposer un obstacle et changer d'angle pour couper sa ligne de tir
+  note: la résistance à la magie 25 ne protège que contre les sorts auxquels elle s'applique ; l'acide reste dangereux
+
+step: Les ennemis refusent le contact
+  do: Alterner déplacement et lancer de fragment ; utiliser l'escalade ou la nage pour gagner une position favorable sans s'enfermer dans un corps à corps collectif
+
+## Repli
+
+step: Les points de vie passent sous 50, ou l'acide empêche durablement la régénération
+  do: Se retirer du combat ; utiliser l'action de retraite si elle permet de quitter le contact, puis rejoindre un couvert, une paroi ou l'eau
+  note: seuil de repli conseillé ; éviter les autres cases menacées pendant la retraite, qui ne protège que la case de départ
+
+step: Elle a rompu le contact et échappe aux attaques d'acide
+  do: Se cacher avec Discrétion +25 et laisser la régénération restaurer ses points de vie ; changer d'apparence hors de vue pour brouiller les recherches
+  note: sous l'eau, elle peut attendre sans respirer ; une nouvelle apparence ne la rend pas invisible et ne garantit pas la fuite

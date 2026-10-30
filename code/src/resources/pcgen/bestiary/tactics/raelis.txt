@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Raelis, azata chaotique bon de taille G, voyageur et conteur qui apprécie la bagarre et la lutte. Il cherche à neutraliser ses adversaires et à protéger les innocents.
+  115 pv ; CA 23 ; deux coups +19, chacun infligeant 2d8+7 ; allonge de 3 m ; lutte +23. Déplacement de 15 m, vol de 36 m par action de mouvement, avec une bonne manœuvrabilité.
+  Il combine invisibilité suprême, confusion et mobilité aérienne pour isoler une cible avant de la frapper ou de l'immobiliser.
+
+note: Défenses
+  RD 10/fer froid et Mal : une arme doit réunir les deux propriétés pour la franchir. Immunités à l'électricité et à la pétrification ; résistances au feu 10 et au froid 10.
+  Maîtrise des runes : immunité aux runes explosives, glyphe de garde, sceau du serpent, symbole de douleur et symbole de sommeil. Les DD indiqués pour ces sorts incluent déjà son bonus.
+
+resource: Liberté de mouvement et antidétection | constantes | actives dès le début de la rencontre
+resource: Sorts d'ensorceleur | niveau 1 : 7/jour ; niveau 2 : 7/jour ; niveau 3 : 7/jour ; niveau 4 : 7/jour ; niveau 5 : 4/jour | les sorts d'un même niveau partagent cette réserve ; NLS 11, concentration +15
+resource: Modification d'apparence | à volonté | pouvoir magique, NLS 12
+resource: Porte dimensionnelle | 3/jour | pouvoir magique ; conserver si possible une utilisation pour le repli
+
+step: Il peut observer les arrivants sans combattre
+  do: Employer modification d'apparence pour passer inaperçu et utiliser son langage universel pour tenter de désamorcer un malentendu
+  note: lecteur intuitif repère les écrits et leur sujet général à 15 m ; une action simple permet de lire jusqu'à 100 pages ordinaires ou un parchemin comme avec lecture de la magie
+
+step: L'affrontement est imminent et il dispose de quelques rounds
+  do: Reprendre sa forme naturelle, lancer détection de l'invisibilité, puis rapidité et invisibilité suprême sur des rounds distincts juste avant l'engagement
+  note: détection de l'invisibilité dure 110 minutes ; rapidité et invisibilité suprême durent chacune 11 rounds
+
+step: Il défend un passage et dispose d'au moins 10 minutes ainsi que des composantes nécessaires
+  do: Préparer un symbole de sommeil visible au passage des assaillants et y harmoniser ses alliés
+  note: coût de 1 000 po ; rayon de 18 m ; Volonté DD 20 annule ; seules les créatures de 10 DV ou moins s'endorment. Réserver cette préparation à un endroit où les innocents ne risquent pas d'être touchés
+
+## Ouverture
+
+step: Il est surpris sans invisibilité suprême
+  do: Lancer invisibilité suprême, puis gagner une position aérienne hors de l'allonge ennemie
+  note: attaquer ne dissipe pas ce sort ; éviter les zones d'effet et les adversaires capables de voir l'invisible
+
+step: Il est déjà protégé et plusieurs ennemis sont regroupés loin des innocents
+  do: Lancer confusion sur le groupe, Volonté DD 18, puis se déplacer en vol pour empêcher un encerclement
+  note: rayon de 4,50 m ; durée de 11 rounds. Laisser les ennemis désorganisés se gêner et viser ensuite ceux qui restent maîtres de leurs actes
+
+step: Une cible isolée menace immédiatement un allié
+  do: S'approcher et porter un coup +19, ou engager une lutte à +23 contre son DMD pour la retenir
+  note: engager la lutte demande une action simple ; ses coups ne donnent aucune saisie gratuite
+
+## Rounds suivants
+
+step: Le combat va se prolonger et rapidité n'est pas encore active
+  do: Lancer rapidité sur lui-même et les alliés à portée
+  note: ce sort coûte une utilisation de niveau 3 ; il prépare les attaques à outrance des rounds suivants
+
+step: Un ennemi reste à portée de ses coups sans nécessiter de déplacement important
+  do: Attaque à outrance : deux coups +19, chacun pour 2d8+7 ; sous rapidité, trois coups +20, chacun pour 2d8+7
+  note: contre une cible facile à toucher, Attaque en puissance donne deux coups +16 pour 2d8+13, ou trois coups +17 sous rapidité. Ces valeurs précèdent les éventuels avantages de l'invisibilité
+
+step: Il contrôle déjà une cible en lutte
+  do: Dès le round suivant la saisie, maintenir la lutte par une action de mouvement grâce à Lutte supérieure et choisir d'immobiliser la cible ; employer au besoin l'action simple pour une seconde tentative de maintien
+  note: partir du BMO de lutte +23 ; le maintien reçoit le bonus habituel de +5 si la cible n'a pas rompu la prise. Privilégier la capture lorsque la mort de l'adversaire n'est pas nécessaire
+
+step: Les ennemis restent hors de portée ou le contact devient trop dangereux
+  do: Combattre en vol et lancer rayon ardent sur une cible prioritaire à 15 m ou moins
+  note: trois rayons, chacun exigeant une attaque de contact à distance à +14 et infligeant 4d6 de feu ; aucun jet de sauvegarde. Choisir une autre attaque contre une cible résistante au feu
+
+step: Plusieurs ennemis sont alignés sans allié sur la trajectoire
+  do: Lancer éclair, 10d6 d'électricité, Réflexes DD 17 pour réduire les dégâts de moitié
+  note: ligne de 36 m ; son immunité à l'électricité ne protège pas ses alliés
+
+step: Une cible peut entendre une proposition raisonnable et une issue pacifique reste possible
+  do: Employer suggestion, Volonté DD 17, pour lui faire accepter une trêve ou quitter les lieux
+  note: le langage universel facilite l'échange ; éviter toute proposition manifestement suicidaire
+
+step: Il est encerclé ou une position ennemie rend son vol insuffisant
+  do: Utiliser porte dimensionnelle pour rejoindre un emplacement dégagé ou un couvert
+  note: aucune autre action après l'utilisation jusqu'à son prochain tour ; ce déplacement remplace donc son offensive du round
+
+## Repli
+
+resource: Téléportation suprême | 1/jour | lui-même et 22,5 kg d'objets seulement ; aucun compagnon
+resource: Changement de plan | 1/jour | pouvoir magique, NLS 12 ; solution de fuite vers un autre plan
+
+step: Ses points de vie passent sous 35 ou il ne peut plus protéger utilement ses alliés
+  do: Se retirer par téléportation suprême vers un lieu sûr connu ; à défaut, utiliser porte dimensionnelle pour rompre le contact
+  note: s'il doit emmener des compagnons, employer porte dimensionnelle dans les limites du pouvoir ; sa téléportation suprême est réservée à sa propre fuite
+
+step: La poursuite continue après le premier décrochage
+  do: Utiliser changement de plan pour quitter le champ de bataille ; si les pouvoirs de déplacement sont épuisés, fuir en vol à 36 m par action de mouvement, sous invisibilité si possible
+  note: antidétection complique les recherches magiques ; liberté de mouvement empêche qu'une simple entrave ou une lutte suffise à le retenir

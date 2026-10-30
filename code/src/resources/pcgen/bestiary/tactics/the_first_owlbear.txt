@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Le Premier Ours-hibou, bête magique mythique de taille G, est un prédateur forestier nomade et irascible, guidé par ses instincts (Intelligence 2).
+  Morsure +17 (2d6+8), 2 griffes +18 (1d8+8 et étreinte) ; BMO +23 en lutte. Espace occupé 3 m, allonge 1,50 m.
+  165 pv, CA 23, réduction des dégâts 5/épique, résistance à la magie 21. Déplacement terrestre 9 m, vol 18 m avec manœuvrabilité moyenne ; Vol +5.
+
+resource: Guérison accélérée | permanente | récupère 5 pv par round, sans dépasser 165 pv
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +16 et l'odorat, puis se rapprocher de la proie la plus accessible
+  note: vision dans le noir à 18 m et vision nocturne ; son initiative +10 favorise une attaque rapide
+
+## Ouverture
+
+step: Une proie peut être atteinte après un seul déplacement
+  do: Avancer de 9 m au maximum au sol, ou voler de 18 m au maximum, puis donner une griffe +18 (1d8+8) à 1,50 m
+  note: après ce déplacement, il ne porte qu'une attaque
+
+step: Une griffe touche une créature de taille G ou inférieure
+  do: Tenter immédiatement l'étreinte en action libre, avec BMO +23 contre sa DMD, sans provoquer d'attaque d'opportunité
+  note: la prise initiale n'ajoute aucun dégât ; une prise normale impose l'état agrippé aux deux créatures
+
+step: Un ennemi est déjà à portée au début de son tour
+  do: Faire une attaque à outrance : morsure +17 (2d6+8) et 2 griffes +18 (1d8+8 chacune), avec tentative d'étreinte après une griffe réussie
+  note: tenter la prise après la dernière griffe permet de conserver les bonus indiqués pour toute la série
+
+## Rounds suivants
+
+step: Il tient une proie et les autres ennemis ne le submergent pas
+  do: Maintenir la lutte par une action simple, avec BMO +23 et le bonus de circonstance de +5 si la proie ne s'est pas libérée ; une réussite inflige les dégâts de la griffe ayant établi la prise, soit 1d8+8
+  note: maintenir la prise utilise son action simple ; il ne cumule pas ce maintien avec une attaque à outrance
+
+step: Il est libre et un ennemi reste à portée
+  do: Répéter morsure et deux griffes en attaque à outrance, en concentrant les coups sur la même proie
+  note: un pas de placement de 1,50 m peut suffire à conserver le contact sans sacrifier cette série
+
+step: Sa proie s'éloigne
+  do: La rejoindre au sol ou en vol, puis donner une seule griffe si un déplacement suffit ; sinon, consacrer le tour à se rapprocher
+
+step: Plusieurs adversaires l'encerclent pendant qu'il lutte
+  do: Relâcher la prise en action libre et attaquer l'ennemi le plus proche, ou amorcer le repli si les blessures deviennent graves
+
+## Repli
+
+step: Points de vie sous 50, ou adversaires manifestement trop puissants
+  do: Relâcher toute prise, puis effectuer une retraite vers un passage dégagé ; privilégier le vol pour distancer les poursuivants
+  note: une retraite permet jusqu'à 36 m en vol ou 18 m au sol ; seule la sortie de la case de départ évite les attaques d'opportunité des ennemis visibles
+
+step: Hors d'atteinte des poursuivants
+  do: Rester à couvert et laisser la guérison accélérée restaurer 5 pv par round avant de reprendre la chasse
+
+note: Immortalité
+  S'il est tué, il revient à la vie 24 heures plus tard. Ce retour est empêché par un coup critique ou un coup de grâce mortel porté par une créature mythique, ou par une créature non mythique munie d'une arme capable de passer une réduction des dégâts épique.

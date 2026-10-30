@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Rhu-Chalik, aberration solitaire de taille P, chaotique mauvaise et intelligente. Il choisit ses engagements grâce à l'invisibilité, à sa Discrétion +15 et à son vol parfait à 18 m ; au sol, il ne parcourt que 1,50 m.
+  Quatre filaments +11, chacun infligeant 1d4+3 dégâts plus le toucher douloureux ; allonge 1,50 m. Ses quatre attaques exigent une attaque à outrance.
+  68 pv, CA 18, guérison accélérée 2 ; immunité au froid et aux maladies. Sa vision à 360° empêche la prise en tenaille ; il voit dans les ténèbres et ne respire pas.
+
+resource: Armure de mage | constant | déjà comprise dans la CA 18
+resource: Invisibilité | à volonté | se termine lorsqu'il attaque
+resource: Détection de pensées | à volonté | Volonté DD 14 pour résister à la lecture des pensées superficielles
+resource: Partage des souvenirs | à volonté | Volonté DD 14, au contact ; sert à obtenir des renseignements
+resource: Modification de mémoire | 1/jour | Volonté DD 16 ; à réserver à une situation permettant de se concentrer
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Devenir invisible, observer depuis les hauteurs et conserver une voie de fuite aérienne
+  note: Perception +10 ; télépathie à 30 m pour communiquer sans parler à voix haute
+
+step: Il peut observer les intrus plusieurs rounds sans danger
+  do: Employer détection de pensées et maintenir sa concentration pendant trois rounds pour lire les pensées superficielles des cibles qui échouent au jet
+  note: Le cône atteint 18 m ; utiliser les renseignements obtenus pour choisir une victime isolée et préparer l'approche
+
+## Ouverture
+
+step: Une cible isolée est déjà à 1,50 m au début d'un tour complet
+  do: Faire une attaque à outrance : quatre filaments +11, chacun à 1d4+3 plus toucher douloureux
+  note: L'invisibilité cesse dès la première attaque ; les suivantes ne bénéficient plus de sa protection
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Approcher en vol jusqu'à 18 m, puis porter une seule attaque de filament +11
+  note: Pendant un round de surprise, choisir entre se déplacer et porter cette attaque, selon sa position
+
+## Rounds suivants
+
+step: La cible reste au contact et ses alliés ne peuvent pas intervenir efficacement
+  do: Répéter les quatre attaques de filaments sur elle
+  note: Un pas de 1,50 m permet de se replacer tout en conservant l'attaque à outrance
+
+step: Il doit tenir au contact malgré les ripostes
+  do: Employer Expertise du combat en attaquant : filaments +9 et CA 20
+  note: Le malus de -2 aux attaques et le bonus d'esquive de +2 à la CA durent jusqu'à son prochain tour
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Frapper avec un filament +11, ou +9 si Expertise du combat est active
+  note: Attaques réflexes autorise jusqu'à quatre attaques d'opportunité par round, avec des occasions distinctes
+
+step: Plusieurs ennemis convergent ou la cible reçoit du renfort
+  do: Rompre le contact en vol pour retrouver une position isolée, puis réactiver l'invisibilité lorsqu'il peut le faire hors de portée
+  note: Lancer invisibilité prend une action simple ; il ne peut pas aussi effectuer une attaque à outrance ce tour-là
+
+## Repli
+
+step: Points de vie sous 24 ou combat devenu trop défavorable
+  do: Utiliser l'action de retraite pour fuir en vol jusqu'à 36 m, puis redevenir invisible au tour suivant s'il est hors de portée
+  note: La retraite protège la sortie de sa case de départ ; éviter de traverser les autres cases menacées
+
+step: Il a échappé aux poursuivants
+  do: Se cacher sous invisibilité et laisser agir la guérison accélérée, à raison de 2 pv par round
+  note: Privilégier les passages étroits accessibles grâce à compression et les refuges hors d'atteinte au sol
+
+step: Après la fuite, il peut agir sur un témoin isolé sans être interrompu
+  do: Utiliser modification de mémoire, Volonté DD 16, pour effacer jusqu'à cinq minutes de souvenirs de la rencontre
+  note: Prévoir le temps nécessaire à la modification ; ce pouvoir ne constitue pas une fuite immédiate en plein combat

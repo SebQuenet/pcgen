@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Stroke Lad, fée mauvaise de taille M, solitaire des forêts tempérées ; 57 PV, CA 22, initiative +8 et déplacement de 9 m.
+  Gifle +8 au contact, à 1,50 m : 1d6+3 dégâts et 1d6 de diminution permanente de Dextérité. Il cherche à isoler une victime et à répéter ses gifles.
+  Réduction des dégâts 10/fer froid et résistance à la magie 17 ; les armes en fer froid rendent le corps à corps plus risqué.
+
+resource: Confusion | 1/jour | NLS 8, Volonté DD 16
+resource: Lumières dansantes | 1/jour | NLS 8
+resource: Détection du Mal | 1/jour | NLS 8
+resource: Détection du Bien | 1/jour | NLS 8
+resource: Détection des pensées | 1/jour | NLS 8, Volonté DD 14
+resource: Dissipation de la magie | 1/jour | NLS 8
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Les observer à couvert avec Discrétion +15 et Perception +16 ; chercher une cible séparée du groupe
+  note: Sa vision nocturne aide sous une faible lumière, mais ne permet pas de voir dans l'obscurité totale.
+
+step: Il peut étudier les intrus sans s'exposer
+  do: Utiliser détection des pensées pour recueillir leurs pensées superficielles et préparer une tromperie avec Bluff +17
+  note: Volonté DD 14 pour résister à la lecture des pensées ; ce pouvoir ne révèle pas automatiquement toutes les capacités d'une cible.
+
+step: Une diversion lumineuse peut attirer un intrus à l'écart
+  do: Utiliser lumières dansantes pour attirer son attention vers un endroit où le Stroke Lad pourra l'approcher à couvert
+  note: Les lumières ne contraignent personne à les suivre.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et confusion est disponible
+  do: Lancer confusion sur le plus grand nombre possible avant d'entrer au contact
+  note: Volonté DD 16 ; profiter du désordre pour approcher une cible isolée. Les créatures confuses ne sont pas sous ses ordres.
+
+step: Une cible isolée est à portée de déplacement
+  do: Avancer de 9 m au maximum et donner une gifle +8, infligeant 1d6+3 dégâts et 1d6 de diminution permanente de Dextérité
+  note: Une feinte améliorée exige encore une action de mouvement ; il ne peut pas cumuler ce déplacement, une feinte et une gifle dans le même round.
+
+step: Une cible est déjà au contact
+  do: Faire une feinte avec Bluff +17 en action de mouvement, puis donner une gifle en action simple
+  note: Si la feinte réussit contre une cible qui peut être feintée, elle perd son bonus de Dextérité à la CA contre cette gifle.
+
+## Rounds suivants
+
+step: La victime reste au contact et peut encore combattre
+  do: Répéter la feinte améliorée puis la gifle ; concentrer les attaques sur cette victime
+  note: La diminution permanente de Dextérité s'accumule ; une cible réduite à 0 en Dextérité est paralysée. Passer ensuite à un adversaire encore actif.
+
+step: Des protections magiques empêchent de blesser efficacement la victime
+  do: Si possible, faire un pas de placement de 1,50 m pour sortir des allonges ennemies, puis tenter une dissipation de la magie ciblée sur elle
+  note: Cette action remplace la gifle du round ; la dissipation n'est pas automatique et son unique utilisation est consommée.
+
+step: Plusieurs adversaires se rapprochent et confusion reste disponible
+  do: Lancer confusion depuis une position hors de leurs allonges, puis chercher un passage vers une cible isolée
+  note: Éviter de rester encerclé ; Acrobaties +15 peut permettre de traverser des cases menacées, avec un risque d'échec.
+
+step: Les ennemis résistent à confusion ou emploient du fer froid
+  do: Éviter l'affrontement prolongé contre le groupe ; utiliser le terrain forestier pour limiter les ennemis capables de l'atteindre simultanément
+  note: Il ne dispose ni d'attaque à distance dommageable, ni de soin, ni de téléportation dans ce profil.
+
+## Repli
+
+step: Il tombe à 19 PV ou moins, ou plusieurs ennemis au fer froid le menacent
+  do: Prendre une action de retraite et parcourir jusqu'à 18 m vers un couvert ; une fois hors de vue, tenter de se cacher avec Discrétion +15
+  note: Seule la première case quittée est protégée des attaques d'opportunité par la retraite ; choisir un trajet qui évite les autres allonges.
+
+step: La fuite est bloquée et confusion n'a pas encore été utilisée
+  do: Tenter confusion sur les poursuivants, puis fuir au round suivant si une ouverture apparaît
+  note: Volonté DD 16 ; ce pouvoir ne garantit pas que les poursuivants cessent de l'attaquer.

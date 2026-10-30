@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Machine Slayer, humain rôdeur 9 de Numérie, chaotique neutre, chasseur de machines qui protège sa tribu. Il privilégie l'arc et réserve son marteau aux ennemis qui l'acculent.
+  79 PV ; CA 19 ; déplacement 9 m ; allonge 1,50 m. Arc long composite de maître +15/+10 (1d8+2, x3) ; marteau de guerre en adamantium +12/+7 (1d8+2, x3).
+
+resource: Peau d'écorce | 1/jour | NLS 6 ; +3 à l'armure naturelle, CA 22 pendant 60 minutes
+resource: Grand pas | 1/jour | déplacement 12 m pendant 6 heures
+resource: Résistance aux énergies destructives | 1/jour | résistance 10 à une énergie choisie pendant 60 minutes
+resource: Munitions abondantes | 1/jour | renouvelle les flèches ordinaires pendant 6 minutes ; ne reproduit ni l'adamantium ni les flèches magiques
+resource: Parchemin de grâce féline | 1 | +4 en Dextérité ; +2 aux tirs, à la CA et aux Réflexes pendant l'effet
+resource: Flèches +1 en adamantium tueuses de créatures artificielles | 10 | contre une créature artificielle, bonus d'altération effectif +3 et +2d6 dégâts
+resource: Flèches en adamantium | 10 | pour les cibles dont la réduction des dégâts est surmontée par l'adamantium
+resource: Flèches ordinaires | 20 | pour les autres adversaires
+resource: Grenade électrique | 1 | 5d6 dégâts d'électricité dans un rayon de 6 m ; Réflexes DD 15, moitié ; explose au début de son prochain tour
+resource: Parchemin de soins modérés | 1 | à conserver pour se soigner à couvert
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Repérer les ennemis avec Perception +13 et préparer une position de tir à couvert avec Discrétion +15, en gardant une voie de fuite
+  note: terrains de prédilection : plaines +4, montagnes +2 ; appliquer le bonus approprié à l'initiative, à Perception, à Discrétion et à Survie
+
+step: Il dispose de temps avant le contact
+  do: Lancer grand pas, puis peau d'écorce ; lire grâce féline juste avant l'engagement et lancer munitions abondantes si une fusillade prolongée paraît probable
+  note: lancer chaque sort séparément ; peau d'écorce et grâce féline portent ensemble sa CA à 24
+
+step: Une attaque d'énergie est prévisible
+  do: Lancer résistance aux énergies destructives contre cette énergie avant de s'exposer
+  note: choisir selon la menace observée ; la présence d'une machine ne révèle pas automatiquement ses armes ou ses vulnérabilités
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et la grenade peut exploser loin de lui et de ses alliés
+  do: Armer et lancer la grenade vers une intersection de cases au milieu du groupe
+  note: facteur de portée 6 m ; l'explosion est différée au début de son prochain tour, les ennemis peuvent donc quitter la zone
+
+step: Sinon, une cible est visible à distance
+  do: Tirer en priorité sur la machine qui menace le plus directement les siens ; employer les flèches tueuses contre les créatures artificielles
+  note: avec une action simple, une seule flèche à +15 ; avec une attaque à outrance et Tir rapide, trois flèches à +13/+13/+8, chacune pour 1d8+2 dégâts, avant les autres modificateurs
+
+## Rounds suivants
+
+step: Il peut rester en place hors de l'allonge ennemie
+  do: Répéter les attaques à outrance avec Tir rapide et concentrer les tirs sur une même cible
+  note: les flèches tueuses donnent, contre les créatures artificielles, +15/+15/+10 et 1d8+5+2d6 dégâts par flèche avec Tir rapide, avant les autres dons et grâce féline
+
+step: Ses tirs touchent assez facilement
+  do: Activer Visée mortelle pour échanger 3 points d'attaque contre 6 dégâts supplémentaires par flèche
+  note: à 9 m ou moins, Tir à bout portant ajoute +1 aux attaques et aux dégâts ; grâce féline ajoute encore +2 aux attaques si elle est active
+
+step: La cible combat un allié ou bénéficie d'une protection partielle
+  do: Continuer à la viser avec Tir de précision et Science du tir de précision
+  note: aucun malus pour tirer dans une mêlée ; ignorer abri et camouflage partiels, mais respecter abri total et camouflage total
+
+step: Un ennemi approche du contact
+  do: Faire un pas de placement de 1,50 m avant les tirs si cela suffit à sortir de son allonge ; sinon, se déplacer puis tirer une seule flèche depuis une position sûre
+  note: un déplacement normal remplace la salve ; grand pas porte ce déplacement à 12 m
+
+step: Le corps à corps devient inévitable
+  do: Lâcher l'arc si nécessaire, dégainer le marteau et frapper ; aux tours suivants, attaquer à outrance à +12/+7
+  note: dégainer demande une action de mouvement ; Attaque en puissance donne +9/+4 et 1d8+8 dégâts avec le marteau tenu à une main
+
+step: Une attaque de zone autorise un jet de Réflexes pour demi-dégâts
+  do: Appliquer esquive totale si le jet réussit
+  note: aucun dégât sur réussite ; dégâts normaux sur échec
+
+## Repli
+
+step: PV sous 25 et une voie de fuite reste ouverte
+  do: Rompre le contact et rejoindre un couvert ; utiliser un retrait si nécessaire, jusqu'à 18 m, ou 24 m sous grand pas
+  note: seuil tactique conseillé ; le retrait protège seulement la sortie de la case initiale contre les attaques d'opportunité
+
+step: Il est hors de vue et peut interrompre sa fuite
+  do: Lire le parchemin de soins modérés, puis poursuivre le repli
+
+step: PV négatifs mais supérieurs à -14
+  do: Choisir de rester conscient grâce à Dur à cuire et consacrer son unique action à s'éloigner
+  note: stabilisé automatiquement ; une seule action de mouvement ou simple par tour ; une action simple lui coûte 1 PV supplémentaire ; mort à -14 PV

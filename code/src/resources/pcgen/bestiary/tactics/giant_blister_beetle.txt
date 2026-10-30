@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Coléoptère géant vésicant, vermine de taille P sans intelligence ; 11 PV, CA 16. Morsure +2 (1d6), allonge de 1,50 m ; jet vésicant en ligne de 6 m. Déplacement au sol de 9 m.
+  Immunisé contre le poison et les effets mentaux ; il agit par instinct.
+
+note: Comportement
+  Charognard nocturne des forêts chaudes, habituellement peu agressif ; la faim peut le pousser à attaquer une créature proche. Il affectionne les abeilles et les sauterelles.
+
+step: Il attend une proie dans la végétation
+  do: Rester dissimulé avec Discrétion +8 en forêt, +4 ailleurs
+  note: Vision dans le noir et perception des vibrations à 18 m ; cette dernière repère les créatures en contact avec le sol.
+
+resource: Jet vésicant | 1 fois tous les 4 rounds | Ligne de 6 m ; Réflexes DD 12 annule. En cas d'échec : 1d3 dégâts d'acide et malus de circonstances de −2 aux jets d'attaque, tests de caractéristique et tests de compétence pendant 10 rounds. Premiers secours DD 10 ou un sort de soins supprime les cloques et les malus.
+
+## Ouverture
+
+step: Il est attaqué et son agresseur se trouve dans une ligne de 6 m
+  do: Projeter le jet vésicant sur l'agresseur, puis avancer au contact si son déplacement le permet
+  note: Le jet occupe l'action simple ; la morsure attend le round suivant. Toutes les créatures dans la ligne sont exposées.
+
+step: Sa cible se trouve au-delà de 6 m
+  do: Avancer au sol de 9 m au maximum, puis utiliser le jet si la cible est désormais à portée
+
+step: Un ennemi est à 1,50 m et le jet est indisponible
+  do: Mordre à +2 (1d6)
+
+## Rounds suivants
+
+step: Le jet est indisponible et un ennemi reste au contact
+  do: Répéter la morsure +2 (1d6) à chaque round
+
+step: La cible s'éloigne
+  do: La suivre au sol, puis mordre si elle est à 1,50 m et qu'il reste une action simple
+
+step: Quatre rounds se sont écoulés depuis le dernier jet et une cible est à portée
+  do: Employer de nouveau le jet vésicant à la place de la morsure
+  note: Un premier jet au round 1 permet les suivants aux rounds 5 et 9. Les malus identiques ne se cumulent pas.
+
+## Repli
+
+step: Un adversaire le menace encore au contact
+  do: Continuer à se défendre avec la morsure ou le jet disponible
+  note: Jouer une réaction instinctive, sans retraite coordonnée ni seuil de PV imposé.
+
+step: La menace cesse et une issue est libre
+  do: S'éloigner au sol à 9 m par déplacement et se dissimuler dans la végétation

@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Gnoll bouda de taille M, chaotique mauvais, intelligent et doté de 105 pv. CA 19, CA de contact 12 ; son arme de mêlée est une dague +2.
+  Déplacement de 9 m ; vision dans le noir à 18 m et vision à 360°. Il surveille toutes les directions et ne peut pas être pris en tenaille.
+  La fiche ne fournit aucun sort ni pouvoir offensif supplémentaire : ce plan repose sur sa dague, ses déplacements et ses sens.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se placer dans l'obscurité, près d'un passage étroit et d'une issue, si le terrain le permet
+  note: Sa vision dans le noir lui permet de repérer les adversaires jusqu'à 18 m sans éclairage ; elle ne traverse pas les obstacles.
+
+## Ouverture
+
+step: Une cible peut être atteinte avec un déplacement de 9 m
+  do: Avancer jusqu'au contact et attaquer avec la dague +2
+  note: Privilégier un adversaire isolé ou déjà blessé, en gardant un chemin vers l'issue.
+
+step: Les adversaires restent trop loin pour être rejoints et attaqués ce round
+  do: Se rapprocher en utilisant les obstacles comme couvert
+  note: Éviter de terminer son mouvement à découvert sous plusieurs attaques à distance ; la fiche ne donne aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer à l'attaquer avec la dague +2
+  note: Concentrer ses attaques sur la même cible tant qu'elle reste accessible, plutôt que disperser les blessures.
+
+step: Un pas de placement suffit pour améliorer sa position
+  do: Faire un pas de placement de 1,50 m vers un couvert, un passage étroit ou son issue, puis attaquer à la dague
+  note: Sa vision à 360° empêche la prise en tenaille, mais ne réduit pas le nombre d'attaques qu'il peut subir.
+
+step: Plusieurs adversaires peuvent l'attaquer simultanément
+  do: Reculer vers un passage qui limite le nombre d'ennemis au contact
+  note: Préférer une retraite à un déplacement ordinaire si quitter le contact l'exposerait à des attaques d'opportunité.
+
+## Repli
+
+step: Points de vie sous 35, ou position devenue intenable
+  do: Utiliser l'action de retraite pour rejoindre l'issue, jusqu'à 18 m si le passage est libre
+  note: La retraite protège seulement la case de départ contre les attaques d'opportunité ; éviter de traverser d'autres cases menacées.
+
+step: Il a rompu le contact
+  do: Continuer à s'éloigner en plaçant des obstacles entre lui et ses poursuivants
+  note: Si possible, gagner une zone sombre où sa vision dans le noir facilite sa fuite.

@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Kuru, humanoïde cannibale des côtes des Chaînes, barbare de niveau 1, chaotique mauvais. Il cherche le corps à corps, souvent avec d'autres kuru.
+  En rage : 16 pv, CA 12 ; gourdin +5 (1d6+6), morsure +0 (1d6+2 et vitalité cannibale). Déplacement de 12 m ; allonge de 1,50 m.
+  Hors rage : 14 pv, CA 14 ; gourdin +3 (1d6+4), morsure -2 (1d6+1 et vitalité cannibale).
+
+resource: Rage | 5 rounds par jour | activation par action libre ; les valeurs principales du profil comprennent déjà la rage
+resource: Courage kuru | 1 par jour | contre la peur, lancer deux fois le jet de sauvegarde et garder le meilleur résultat ; décider avant de lancer
+
+step: Il peut choisir son terrain
+  do: Privilégier la pénombre et un accès rapide au corps à corps ; repérer les adversaires avec Perception +6
+  note: Vision nocturne, sans vision dans l'obscurité totale. En plein soleil ou sous une lumière vive, il est ébloui : -1 aux attaques et à la Perception visuelle.
+
+## Ouverture
+
+step: Il peut frapper ce round
+  do: Entrer en rage juste avant d'attaquer
+  note: Garder ses rounds de rage pendant une approche trop longue pour permettre une attaque.
+
+step: Une charge est possible vers une cible isolée
+  do: Charger en ligne droite, avec un déplacement de 3 m à 24 m, puis porter une seule attaque de gourdin à +7 (1d6+6)
+  note: Le trajet doit être dégagé ; sa CA tombe à 10 jusqu'au début de son prochain tour. La charge ne permet pas d'ajouter la morsure.
+
+step: Il doit contourner un obstacle ou rejoindre la mêlée sans charger
+  do: Avancer de 12 m au maximum puis, si une cible est à 1,50 m, attaquer au gourdin à +5 (1d6+6)
+  note: Après ce déplacement, il ne porte qu'une attaque.
+
+## Rounds suivants
+
+step: Un ennemi est à portée sans déplacement, ou après un pas de 1,50 m
+  do: Attaque à outrance : gourdin +5 (1d6+6), puis morsure +0 (1d6+2)
+  note: Chaque morsure réussie contre une créature vivante pourvue de sang lui donne 1 pv temporaire ; les gains successifs ne se cumulent pas.
+
+step: Un autre kuru combat la même cible
+  do: Se placer de l'autre côté de l'adversaire pour le prendre en tenaille
+  note: La tenaille donne +2 aux attaques de mêlée ; privilégier un pas de 1,50 m pour conserver l'attaque à outrance.
+
+step: Il doit résister à un effet de peur
+  do: Utiliser son courage kuru avant le jet, si cette utilisation quotidienne est encore disponible
+  note: Volonté +4 en rage, +2 hors rage ; ce pouvoir ne rend pas immunisé à la peur.
+
+## Repli
+
+step: Il tombe à 4 pv ou moins et peut encore fuir
+  do: Se retirer vers un couvert ou ses compagnons ; une retraite permet de parcourir jusqu'à 24 m
+  note: La retraite évite les attaques d'opportunité liées au départ de sa case initiale, mais pas celles provoquées en traversant d'autres cases menacées.
+
+step: La rage prend fin
+  do: Appliquer les valeurs hors rage et perdre les 2 pv actuels et maximaux apportés par la rage
+  note: Il devient fatigué pendant deux fois le nombre de rounds passés en rage et ne peut pas reprendre sa rage tant que cette fatigue dure. Privilégier le repli avant d'épuiser les 5 rounds.

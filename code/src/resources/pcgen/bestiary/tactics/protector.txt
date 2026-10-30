@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Protector, extérieur extraplanaire loyal neutre, gardien de la Loi, très intelligent : 55 pv, CA 18. Il combat à l'épée longue +9/+4 (1d8+2, critique 19–20), soutenu par ses sorts de NLS 7.
+  Déplacement de 15 m ; marche dans les airs ; allonge de 1,50 m ; vision dans le noir à 18 m. Il connaît automatiquement l'alignement des créatures qu'il regarde à 15 m et communique par télépathie à 15 m.
+  Il attaque à vue les créatures chaotiques et les neutres, sauf les êtres sans intelligence ou peu intelligents comme les animaux. Il n'attaque jamais sciemment une créature loyale.
+
+resource: Sorts préparés de niveaux 1 à 4 | 1 lancement par sort indiqué | NLS 7 ; chaque lancement demande normalement une action simple
+resource: Contact de la Loi | 8/jour | Action simple, créature consentante touchée ; ses jets d'attaque, sauvegardes, tests de compétence et de caractéristique traitent le d20 comme un 11 pendant 1 round
+resource: Contact résistant | 8/jour | Action simple, allié touché ; lui transfère son bonus de résistance de +2 aux sauvegardes pendant 1 minute et perd lui-même ce bonus pendant cette durée
+
+step: Des adversaires approchent et il dispose de temps
+  do: Lancer cercle magique contre le Chaos ; ajouter résistance aux énergies destructives si un type d'énergie ennemi est connu
+  note: Le cercle protège dans un rayon de 3 m pendant 70 minutes. La résistance absorbe les 20 premiers points de dégâts du type choisi à chaque attaque pendant 70 minutes ; ce n'est pas une immunité.
+
+step: Un sort ennemi précis est connu avant l'affrontement
+  do: Lancer immunité contre les sorts en désignant ce sort
+  note: Au NLS 7, choisir un seul sort de niveau 4 ou moins ; cette protection ne fonctionne que contre un sort autorisant la résistance à la magie.
+
+step: La mêlée commencera dans quelques instants
+  do: Lancer puissance divine juste avant d'engager
+  note: Durée 7 rounds : +2 de chance aux attaques et aux dégâts d'arme, 7 pv temporaires et une attaque supplémentaire lors d'une attaque à outrance. Ne pas gaspiller sa courte durée en attendant l'ennemi.
+
+## Ouverture
+
+step: Puissance divine n'est pas active et il peut préparer son engagement sans subir immédiatement une attaque à outrance
+  do: Lancer puissance divine, puis se déplacer pour menacer un adversaire non loyal
+  note: Utiliser la marche dans les airs pour franchir un obstacle ou choisir son approche ; monter demande un trajet ascendant à demi-vitesse, ce n'est pas un vol libre.
+
+step: Un adversaire non loyal dangereux est à 12 m ou moins et comprend sa langue
+  do: Si interrompre cet ennemi est prioritaire, lancer ordre : halte, Volonté DD 17
+  note: En cas d'échec, la cible ne peut effectuer aucune action pendant 1 round. Cette ouverture remplace le lancement de puissance divine, elle ne s'y ajoute pas.
+
+step: Il peut engager sans lancer de sort ce round
+  do: Avancer jusqu'à 1,50 m d'une cible non loyale et porter une attaque d'épée ; si elle est déjà à portée, effectuer une attaque à outrance
+  note: Sans amélioration : +9/+4, 1d8+2. Sous puissance divine, hors autres bonus : +11/+11/+6, 1d8+4.
+
+## Rounds suivants
+
+step: Une cible reste à portée et il n'a pas besoin de se déplacer
+  do: Privilégier l'attaque à outrance ; faire au besoin un pas de placement de 1,50 m pour conserver cette possibilité
+  note: Contre une CA facile à toucher, Attaque en puissance échange −2 aux attaques contre +4 aux dégâts avec l'épée tenue à une main. Sous puissance divine, cela donne +9/+9/+4, pour 1d8+8.
+
+step: Il doit avancer et deux ennemis non loyaux sont adjacents l'un à l'autre, tous deux dans son allonge
+  do: Utiliser Enchaînement après son déplacement : attaquer le premier, puis le second au même bonus si la première attaque touche
+  note: Enchaînement est une action simple et impose −2 à la CA jusqu'à son prochain tour ; il remplace l'attaque à outrance.
+
+step: Plusieurs ennemis neutres sont groupés, sans aucune créature loyale dans la zone
+  do: Envisager marteau du Chaos, Volonté DD 19, dans une explosion de 6 m de rayon à 51 m ou moins
+  note: Contre ces neutres, le sort inflige la moitié de 3d8 dégâts, encore réduite de moitié sur une sauvegarde réussie, sans ralentissement. Les chaotiques sont indemnes : ne pas dépenser ce sort contre eux. Garder aussi le Protector hors de la zone, car il est lui-même loyal.
+
+step: Un objet non magique fragile ou une arme ennemie constitue un obstacle décisif
+  do: Utiliser fracassement, DD 18, si détruire cet objet vaut mieux qu'une attaque
+  note: Respecter les limites du sort : un objet unique visé ne peut pas dépasser 35 kg ; un objet tenu utilise la sauvegarde de son porteur. Ce sort ne détruit pas une arme magique.
+
+step: Un allié consentant au contact doit réussir une action décisive au prochain round
+  do: Employer Contact de la Loi si obtenir un résultat de 11 au d20 lui suffit ; choisir Contact résistant si ses sauvegardes sont la priorité
+  note: Ces pouvoirs consomment son action simple. Le bonus de résistance ne se cumule pas avec un autre bonus de résistance ; le transfert affaiblit les propres sauvegardes du Protector.
+
+step: Puissance divine est terminée et le combat continue
+  do: Lancer faveur divine s'il peut consacrer une action à se renforcer, puis reprendre l'épée
+  note: +2 de chance aux attaques et aux dégâts pendant 1 minute ; ces bonus ne se cumulent pas avec ceux de puissance divine.
+
+## Repli
+
+step: 15 pv ou moins et aucun impératif ne lui impose de tenir sa position
+  do: S'il est au contact, utiliser l'action de retraite pour gagner un passage dégagé, éventuellement dans les airs
+  note: La retraite permet jusqu'à 30 m horizontalement ; seule la case de départ cesse de provoquer les attaques d'opportunité habituelles. Une montée par marche dans les airs se fait à demi-vitesse.
+
+step: Il peut lancer un sort sans rester exposé au contact
+  do: Lancer sanctuaire sur lui-même, Volonté DD 17, puis poursuivre son éloignement vers un abri
+  note: Pendant 7 rounds, chaque adversaire doit réussir cette sauvegarde pour l'attaquer directement ; les effets de zone restent dangereux. Cesser toute attaque pour conserver sanctuaire et utiliser la télépathie à 15 m pour coordonner le repli des alliés présents.

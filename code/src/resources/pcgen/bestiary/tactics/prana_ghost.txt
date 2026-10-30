@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Prana Ghost, demi-elfe hydrokinésiste ascète élémentaire 11, FP 11, extérieur intangible neutre bon. Cet esprit serein privilégie sa mission, la protection des vivants et la négociation.
+  126 PV ; CA 27, contact 27, pris au dépourvu 20 ; vol parfait à 9 m ; allonge de 1,50 m.
+  Déluge de coups +18/+18/+13/+13/+8 : chaque coup inflige 1d10+4, plus 2d6 avec poing cinétique. Toucher hébétant +15 contre la CA de contact : 1d6 et hébétement pendant 1 round, Volonté DD 19 annule l'hébétement.
+
+resource: Pas astral | 4/jour | action simple ; téléportation vers une case visible à 18 m au maximum ; garder une utilisation pour le repli
+resource: Brûlure | 3 points/round, maximum 8 | son immunité aux dégâts non létaux lui interdit d'accepter de la brûlure ; employer des pouvoirs dont le coût final est nul
+resource: Réserve interne | capacité de 2 points | seulement si elle était déjà chargée ; dépenser au maximum 1 point par talent pour éviter 1 point de brûlure ; aucun renouvellement automatique
+
+step: Des intrus approchent sans hostilité certaine
+  do: Observer avec Perception +30 et Psychologie +30, puis parlementer en commun ou en elfique avec Diplomatie +8
+  note: Il cherche à guider les vivants ; il interrompt les hostilités si un accord permet de poursuivre sa mission.
+
+step: Une attaque ennemie paraît imminente
+  do: Utiliser invisibilité télékinétique, puis se placer près d'un passage étroit et d'une voie de fuite
+  note: Discrétion +29 ; l'invisibilité ajoute +10 en mouvement ou +20 immobile et cesse lorsqu'il attaque.
+
+## Ouverture
+
+step: Le combat commence
+  do: Adopter le Style du serpent par une action rapide
+  note: Son archétype canalise ses décharges dans ses poings ; les décharges de froid et télékinétique indiquées ne lui donnent pas d'attaque à distance utilisable sans une infusion de forme autorisée.
+
+step: Une menace prioritaire se trouve déjà à 1,50 m
+  do: Effectuer le déluge de coups avec poing cinétique de froid et infusion refroidissante
+  note: Chaque coup conserve 1d10+4 plus 2d6 de froid ; les dégâts de froid déclenchent Vigueur DD 19 ou la cible est chancelante pendant 1 round. La spécialisation des infusions 3 ramène le coût de cette combinaison à zéro.
+
+step: Il doit se déplacer pour atteindre une menace
+  do: Voler jusqu'à 9 m, puis employer le toucher hébétant au contact pour lui faire perdre son prochain tour
+  note: S'il faut un pas astral pour se placer, cette téléportation consomme l'action simple ; préparer le déluge du round suivant.
+
+## Rounds suivants
+
+step: Un combattant dangereux reste au contact
+  do: Maintenir le déluge de coups de froid avec infusion refroidissante
+  note: Rester en position pour conserver l'attaque à outrance ; un pas de 1,50 m permet un ajustement sans sacrifier le déluge.
+
+step: Il faut empêcher un adversaire de rejoindre un allié ou de fuir
+  do: Remplacer l'infusion refroidissante par l'infusion enchevêtrante sur les poings de froid
+  note: Réflexes DD 19 ou enchevêtré pendant 1 minute ; une nouvelle application ratée contre une cible déjà enchevêtrée l'ancre au sol. Employer une seule infusion de substance à la fois.
+
+step: Le froid est inefficace
+  do: Passer au déluge de coups avec poing cinétique télékinétique
+  note: Conserver le supplément de 2d6 du poing, au lieu d'ajouter les dégâts complets de la décharge. Ses attaques à mains nues bénéficient de la propriété spectrale et peuvent frapper les créatures tangibles.
+
+step: Il faut éloigner un ennemi d'un protégé ou dégager un passage
+  do: Employer le poing télékinétique avec l'infusion de poussée
+  note: En cas de bousculade réussie, repousser de 1,50 m avec la version de base ; réserver cette poussée à la fin du déluge pour ne pas éloigner prématurément la cible.
+
+step: Une attaque le menace pendant le Style du serpent
+  do: Dépenser son action immédiate pour remplacer sa CA, même de contact, par un test de Psychologie +30 contre cette attaque
+  note: Il doit percevoir l'attaque et ne pas être pris au dépourvu. Une seule action immédiate est disponible ; elle consomme l'action rapide de son prochain tour.
+
+step: Un adversaire à portée le manque pendant le Style du serpent
+  do: Riposter à mains nues avec Crochets du serpent en dépensant une attaque d'opportunité
+  note: Attaques réflexes autorise jusqu'à 8 attaques d'opportunité par round. Si la riposte touche et que son action immédiate reste disponible, il peut l'employer pour un second coup. Poing cinétique reste actif jusqu'au début de son prochain tour.
+
+step: Des ennemis terrestres approchent en groupe sans être au contact
+  do: Utiliser slick sur leur passage : surface glissante, Réflexes DD 15, puis profiter du vol pour garder sa liberté de mouvement
+  note: L'effet gratuit dure 1 round ; il ne prolonge pas sa durée en acceptant de la brûlure.
+
+step: Un lanceur de sorts qui respire reste à distance et menace directement sa mission
+  do: Employer suffocation à 36 m au maximum et maintenir sa concentration
+  note: La cible retient son souffle et doit réussir Vigueur DD 15 à chacun de ses tours pour parler. Cette version ne la fait pas tomber immédiatement à 0 PV ; maintenir le pouvoir empêche de consacrer son action simple à une attaque.
+
+## Repli
+
+step: Ses PV passent sous 35, ou un ennemi exploite son prana vivant
+  do: Utiliser le pas astral vers une case visible à 18 m, puis s'éloigner en vol à 9 m ; traverser une paroi mince si elle coupe la poursuite
+  note: Prana vivant augmente de 50 % les dégâts d'énergie négative et des effets de mort infligeant des dégâts ; éviter en priorité leurs utilisateurs.
+
+step: Il a rompu le contact
+  do: Rétablir l'invisibilité télékinétique et abandonner la poursuite des ennemis
+  note: S'il est dissipé, la reconstitution demande normalement 2d4 jours, deux fois plus après un effet exploitant prana vivant. Il retrouve sa mission plutôt que de chercher une revanche.

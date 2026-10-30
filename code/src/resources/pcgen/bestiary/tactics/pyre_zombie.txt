@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Pyre Zombie, mort-vivant de taille M, neutre mauvais, sans intelligence : un combattant de contact aux réactions simples.
+  12 pv ; CA 12 ; coup +4 (1d6+4), allonge de 1,50 m ; déplacement de 9 m ; vision dans le noir à 18 m.
+  RD 5/tranchant ; immunité au feu et traits des morts-vivants. Sa capacité non-staggered lui permet de se déplacer et d'attaquer dans le même tour, contrairement au zombie ordinaire.
+
+note: Immolation
+  L'immolation figure parmi ses attaques spéciales, mais le bloc fourni ne précise pas ses effets, son activation ni sa fréquence d'utilisation. Consulter son texte complet pour la résoudre.
+
+step: Une créature ennemie est repérée
+  do: Se tourner vers elle et avancer directement pour engager le corps à corps.
+  note: Jouer sa conduite sans feintes élaborées ni sélection savante des cibles.
+
+## Ouverture
+
+step: Un ennemi est à plus de 1,50 m
+  do: Avancer jusqu'à 9 m pour se placer à portée, puis porter un coup +4 (1d6+4) si la cible devient accessible.
+
+step: Aucun ennemi n'est accessible après un déplacement de 9 m
+  do: Consacrer le tour à un double déplacement, jusqu'à 18 m, vers l'ennemi le plus proche.
+
+step: Un ennemi est déjà à portée
+  do: Porter un coup +4 (1d6+4).
+
+## Rounds suivants
+
+step: Une cible reste à 1,50 m
+  do: Continuer à la frapper avec un coup +4 (1d6+4) par tour.
+
+step: L'immolation est utilisable et une cible est au contact
+  do: Employer l'immolation selon son texte complet et les actions qu'elle demande.
+
+step: La cible s'éloigne ou tombe
+  do: Avancer vers l'ennemi accessible le plus proche et reprendre les coups dès que possible.
+  note: Son immunité au feu lui permet de traverser des flammes pour rejoindre sa cible.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre le combat au contact jusqu'à sa destruction.
+  note: Pour cette créature sans intelligence, ne prévoir aucun seuil de fuite ni retraite organisée.

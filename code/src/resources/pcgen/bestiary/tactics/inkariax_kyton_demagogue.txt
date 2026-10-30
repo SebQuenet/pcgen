@@ -1,0 +1,101 @@
+## Avant le combat
+
+note: Profil
+  Inkariax, démagogue kyton loyal mauvais de taille TG, est un contrôleur volant qui immobilise ses victimes avant de les accabler de froid, de glace et de saignements. FP 26 ; 610 PV ; CA 46, contact 24 ; initiative +17.
+  Rapière +5 sanglante +43/+38/+33/+28 (4d6+17, critique 15–20, plus 1 point de saignement) et dague +3 +43 (3d6+15, critique 17–20). Ses glaçons frappent au contact à distance à +40, jusqu'à 36 m.
+  Déplacement terrestre 9 m ; vol parfait 18 m. Son regard porte à 36 m et sa télépathie à 90 m.
+
+note: Défenses permanentes
+  Vision lucide, détection du mensonge et liberté de mouvement sont constantes ; il voit dans les ténèbres. La vision lucide l'aide contre les illusions et l'invisibilité, sans révéler automatiquement un adversaire simplement caché.
+  RD 20, franchie par une attaque à la fois épique, bonne et en argent ; régénération de 30 PV par round, neutralisée par cette même combinaison. Résistance à la magie 37 ; résistances à l'acide 30 et à l'électricité 30.
+  Immunités au froid, au charme, à la coercition, à la terreur, aux dégâts non létaux, à la douleur, à la pétrification et au poison.
+  Le manteau de glace inflige 3d6 dégâts de froid aux créatures qui le frappent à mains nues ou avec des armes naturelles. Son bonus de parade de +6 est déjà compris dans sa CA ; il ne riposte pas aux coups d'armes manufacturées.
+
+resource: Glaçons sanglants | à volonté | action simple ; jusqu'à 6 cibles distinctes à 36 m ; contact à distance +40 ; chacun inflige 2d6 froid, 2d6 perforants et 1d6 saignement
+resource: Logique glaciale | à volonté | action simple ; une cible à 18 m ; Volonté DD 32 ; domination de monstre pendant 24 heures ; coercition mentale dépendante du langage
+resource: Regard déstabilisant | permanent | portée 36 m ; Volonté DD 32 ou paralysie pendant 1 round ; effet mental de terreur
+resource: Explosion glaciale | 5/jour | action simple ; rayonnement centré sur lui, rayon 9 m ; 6d6 froid et 6d6 perforants ; Réflexes DD 29 pour moitié ; échec : chancelant pendant 1d4 rounds
+resource: Invocation de 3 kytons évangélistes | 3/jour | 85 % de réussite par tentative
+resource: Porte dimensionnelle | 7/jour | conserver au moins une utilisation pour se dégager
+resource: Cône de froid | 5/jour | dégâts de froid sur plusieurs adversaires
+resource: Sphère glaciale | 5/jour | attaque de zone à distance
+resource: Tempête de grêle | 5/jour | bombarder une zone et gêner les déplacements
+resource: Mur de glace | 5/jour | séparer les adversaires ou barrer un passage
+resource: Rayon polaire | 3/jour | attaque de froid contre une cible prioritaire
+resource: Emprisonnement | 3/jour | tentative de capture au contact
+resource: Capture d'âme | 3/jour | vise l'âme d'une créature morte, pas une cible vivante
+resource: Métal gelé, changement de plan, respiration aquatique | à volonté | pouvoirs de soutien, de déplacement ou de préparation
+
+step: Il dispose d'un avertissement avant l'arrivée des intrus
+  do: Tenter l'invocation des trois évangélistes et les placer en avant, avec des lignes d'attaque distinctes
+  note: Leur confier les accès et les adversaires secondaires ; éviter de les regrouper dans les 9 m autour de lui s'il prévoit une explosion glaciale. Une invocation ratée ne fournit aucun renfort.
+
+step: Il peut choisir sa position de départ
+  do: Se placer en vol, avec une vue dégagée sur les approches et un passage de repli, à moins de 36 m de la zone où entreront les ennemis
+  note: Rester initialement à distance des combattants de mêlée ; descendre à moins de 18 m seulement si une domination promet de désorganiser le groupe.
+
+## Ouverture
+
+step: Des adversaires sont exposés à son regard à 36 m ou moins
+  do: Faire résoudre le regard déstabilisant : Volonté DD 32 ou paralysie pendant 1 round
+  note: Le regard fonctionne en plus de l'action choisie pour le round ; ne pas dépenser systématiquement cette action pour le maintenir. Les créatures immunisées aux effets mentaux ou à la terreur ne sont pas de bonnes cibles.
+
+step: Un combattant dangereux ou un soutien comprend son langage et se trouve à 18 m ou moins
+  do: Employer Logique glaciale sur lui : Volonté DD 32 ou domination pendant 24 heures
+  note: Choisir une cible capable de gêner immédiatement ses alliés ; lui ordonner de les attaquer ou de lui ouvrir un passage. Cette action simple remplace les autres attaques de ce round.
+
+step: Plusieurs adversaires sont à 9 m ou moins et ses serviteurs sont hors de la zone
+  do: Déclencher une explosion glaciale pour infliger 6d6 froid et 6d6 perforants ; Réflexes DD 29 pour moitié
+  note: Ceux qui échouent sont aussi chancelants pendant 1d4 rounds. Le rayonnement touche toutes les créatures dans la zone, y compris ses alliés et ses victimes dominées.
+
+step: Les adversaires restent dispersés à 36 m ou moins
+  do: Lancer jusqu'à six glaçons sanglants, un par cible distincte, avec des attaques de contact à distance à +40
+  note: Chaque touche inflige 2d6 froid, 2d6 perforants et 1d6 saignement. Il ne peut pas diriger les six glaçons sur une même cible.
+
+## Rounds suivants
+
+step: Une cible dominée agit déjà pour lui
+  do: Lui transmettre ses ordres par télépathie et consacrer son action à une autre menace
+  note: Garder cette cible hors de ses propres zones de dégâts ; il n'a pas besoin de renouveler chaque round une domination qui dure 24 heures.
+
+step: Un lanceur de sorts ou un porteur d'arme épique, bonne et en argent menace ses défenses
+  do: Le séparer du groupe avec un mur de glace, puis tenter Logique glaciale s'il est à 18 m et vulnérable à la coercition
+  note: Répartir ces actions sur plusieurs rounds. Un mur bloque aussi ses propres lignes d'attaque ; garder les autres ennemis visibles pour exploiter le regard.
+
+step: Plusieurs ennemis restent accessibles à distance
+  do: Répéter les glaçons sanglants jusqu'à 36 m, ou choisir une sphère glaciale, un cône de froid ou une tempête de grêle si leur zone est plus avantageuse
+  note: Préférer les dégâts mixtes des glaçons ou de l'explosion contre les résistances au froid. Réserver le rayon polaire à une cible prioritaire qui reste sensible au froid.
+
+step: Une cible importante est à portée de mêlée et il peut rester sur place
+  do: Faire une attaque à outrance : rapière +43/+38/+33/+28, puis dague +43, en concentrant ses coups sur cette cible
+  note: Rapière : 4d6+17 et 1 point de saignement par touche, critique 15–20 ; dague : 3d6+15, critique 17–20. Profiter notamment d'une paralysie encore active au moment de ses attaques.
+
+step: Il doit se déplacer avant de porter un seul coup
+  do: Se déplacer puis utiliser Frappe décisive supérieure avec la rapière : une attaque +43 infligeant 16d6+17, plus 1 point de saignement
+  note: Cette action simple ne donne ni les attaques itératives ni l'attaque de dague. Les dés supplémentaires de Frappe décisive ne sont pas multipliés sur un critique.
+
+step: Plusieurs adversaires l'entourent et sont à portée de sa rapière
+  do: Utiliser Attaque en rotation pour porter une attaque de rapière à plein bonus contre chacun d'eux
+  note: Cette option remplace son attaque à outrance habituelle. Préférer l'explosion glaciale s'il veut surtout rendre ces adversaires chancelants et dispose encore d'utilisations.
+
+step: Il souhaite capturer un adversaire isolé et peut l'approcher
+  do: Tenter emprisonnement au contact
+  note: Consacrer une action à ce pouvoir au lieu de frapper. Ne pas le traiter comme une attaque à distance ni lui attribuer les DD du regard ou de Logique glaciale.
+
+step: Une victime est morte et empêcher son retour compte davantage que continuer l'offensive
+  do: Employer capture d'âme sur cette victime
+  note: Ce pouvoir ne remplace pas une attaque efficace contre un adversaire encore vivant.
+
+step: Il perd son avantage de position ou subit une concentration d'attaques
+  do: Se dégager par le vol, utiliser un mur de glace pour couper la poursuite ou employer porte dimensionnelle
+  note: Après porte dimensionnelle, il ne peut plus agir avant son prochain tour. Exploiter ensuite sa régénération de 30 PV par round tant qu'elle fonctionne ; elle ne justifie pas de rester exposé aux armes qui la neutralisent.
+
+## Repli
+
+step: Il tombe à 200 PV ou moins, ou une arme capable de neutraliser sa régénération le maintient sous pression
+  do: Utiliser changement de plan pour quitter le plan du combat ; si une mise à l'abri immédiate à proximité suffit, employer d'abord porte dimensionnelle
+  note: Le seuil de 200 PV est un choix tactique de prudence. S'il choisit porte dimensionnelle, attendre son prochain tour avant tout autre pouvoir ; ordonner aux serviteurs encore disponibles de couvrir sa retraite.
+
+step: Il a rompu le contact et sa régénération fonctionne
+  do: Rester à couvert jusqu'à récupération, en conservant ses ressources restantes et les dominations encore actives
+  note: Ne revenir que s'il peut reprendre le combat depuis une position favorable ; sa survie prime sur la poursuite immédiate des fuyards.

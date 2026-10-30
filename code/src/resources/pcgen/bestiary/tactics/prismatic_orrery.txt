@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Planétaire prismatique (Prismatic Orrery), créature artificielle gigantesque, neutre et sans intelligence : des anneaux métalliques tournent autour d'une sphère prismatique. Immobile, il défend sa position avec 159 PV, une CA de 24 et une solidité de 10.
+  Coup +21 (6d6+10 et étreinte), lutte +33, constriction (6d6+10). Il occupe 6 m et frappe jusqu'à 4,50 m.
+  Réfraction prismatique : rayons de contact à distance +17, DD 21, recharge de 1d4 rounds ; impulsion aveuglante : regard provoquant la cécité.
+  Vision dans le noir à 18 m, vision nocturne et vision lucide permanente ; Perception +12. Sa vision à 360 degrés empêche la prise en tenaille ; appliquer les immunités des créatures artificielles.
+
+resource: Réfraction prismatique | Une fois tous les 1d4 rounds | Action simple ; toutes les cibles à 18 m ou moins ; effets de gerbe prismatique, NLS 13, DD 21
+resource: Impulsion aveuglante | À volonté | Action de mouvement pour activer ou désactiver le regard ; Vigueur DD 19 ou cécité
+
+step: Des intrus approchent sans l'attaquer et sans ordre d'attaque
+  do: Poursuivre son fonctionnement sans engager le combat
+  note: Il ne réagit que s'il est attaqué ou sur ordre du porteur du sceptre de contrôle en cristal.
+
+## Ouverture
+
+step: Le combat est déclenché et des adversaires sont à 18 m ou moins
+  do: Employer la réfraction prismatique en action simple, puis activer l'impulsion aveuglante en action de mouvement
+  note: Pour chaque cible, tirer la couleur sur 1d8 et effectuer les attaques de contact à distance +17 correspondantes ; appliquer les effets de gerbe prismatique avec DD 21.
+  note: La réfraction éteint le regard : l'activer après les rayons permet de le laisser fonctionner pendant leur recharge.
+
+step: Le combat est déclenché mais tous les adversaires sont au-delà de 18 m
+  do: Attendre qu'une cible entre à portée
+  note: Sa vitesse est de 0 m ; il ne peut pas se rapprocher.
+
+## Rounds suivants
+
+step: Une cible est déjà agrippée
+  do: Consacrer l'action simple au maintien de la lutte, avec un test à +33 contre son DMD ; choisir de lui infliger les dégâts du coup
+  note: Chaque test de lutte réussi déclenche aussi la constriction : 6d6+10 supplémentaires. Maintenir la prise et tirer les rayons demandent chacun une action simple ; choisir une seule de ces actions.
+
+step: La réfraction est rechargée, la sphère fonctionne et aucune prise n'est à maintenir
+  do: Tirer sur les cibles à 18 m ou moins, puis réactiver le regard en action de mouvement
+  note: Relancer 1d4 pour la recharge ; les couleurs restent aléatoires.
+
+step: La réfraction recharge et un ennemi est à 4,50 m ou moins
+  do: Frapper à +21 pour 6d6+10, puis tenter gratuitement l'étreinte à +33 si le coup touche
+  note: Une étreinte réussie inflige aussi 6d6+10 de constriction ; conserver le regard actif pendant la mêlée.
+
+step: La sphère centrale subit une dissipation ciblée réussie
+  do: Continuer les coups, l'étreinte et la constriction contre les ennemis à portée
+  note: La sphère se dissipe comme un effet de NLS 20 et revient après 1d3 rounds. Pendant cet intervalle, l'impulsion aveuglante et la réfraction sont indisponibles ; réactiver le regard au retour de la sphère.
+
+step: Les rayons rechargent et personne n'est à portée de mêlée
+  do: Garder le regard actif et attendre la prochaine réfraction
+
+## Repli
+
+step: Ses PV diminuent
+  do: Continuer à défendre sa position jusqu'à sa destruction à 0 PV
+  note: Cet automate immobile et sans intelligence ne dispose d'aucun moyen de fuite.
+
+step: Les adversaires sortent de portée
+  do: Rester sur place

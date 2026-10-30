@@ -1,0 +1,95 @@
+## Avant le combat
+
+note: Profil
+  Ifestus, titan unique de taille colossale, extérieur chaotique mauvais, associe une force écrasante à des pouvoirs magiques de destruction et de soin.
+  Marteau de guerre +3 anarchique +36/+31/+26/+21 (6d6+21, critique x3 ; +2d6 contre les créatures loyales), ou 2 coups +33 (2d8+18). Espace occupé 9 m ; allonge 9 m ; déplacement 12 m en armure.
+  471 PV, CA 39, CA de contact 4 ; réduction des dégâts 15/Bien et Loi, résistance à la magie 34 ; immunité au feu, aux maladies, au vieillissement et aux effets de mort.
+
+note: Pouvoirs permanents
+  Marche dans les airs, détection de pensées, renvoi des sorts et vision lucide sont déjà actifs. Vision dans le noir à 18 m ; télépathie à 90 m.
+  Le renvoi des sorts protège contre les sorts dirigés sur lui, mais pas contre les sorts de zone ni les attaques de contact. Sa très faible CA de contact reste une faiblesse.
+
+resource: Guérison suprême | 3/jour | action simple ; rend 150 PV et supprime notamment aveuglement, confusion et étourdissement
+resource: Nuée de météores | 1/jour | Réflexes DD 26 ; portée 360 m ; quatre explosions de 12 m de rayon, chacune infligeant 6d6 de feu
+resource: Tremblement de terre | 3/jour | portée 360 m ; rayon 24 m ; effets selon le terrain
+resource: Suggestion de groupe | 3/jour | Volonté DD 23 ; portée 90 m ; même suggestion raisonnable pour toutes les cibles, distantes entre elles de 9 m au maximum
+resource: Tempête vengeresse | 1/jour | DD 26 ; incantation de 1 round ; concentration, au maximum 10 rounds
+resource: Scrutation suprême | 3/jour | Volonté DD 24 ; reconnaissance avant l'affrontement
+resource: Régénération | 1/jour | incantation de 3 rounds entiers ; soigne 4d8+20 PV et restaure les membres perdus
+resource: Dissipation suprême | à volonté | NLS 20 ; dissipation des protections et des effets magiques adverses
+resource: Malédiction | à volonté | contact ; Volonté DD 21
+resource: Annulation d'enchantement et communication à distance | à volonté | préparation et échanges hors combat
+
+step: Les adversaires sont connus et leur arrivée laisse du temps
+  do: Employer scrutation suprême pour reconnaître leur approche, puis choisir une position dégagée où son gabarit et son allonge peuvent servir.
+  note: La vision lucide révèle les illusions et les créatures invisibles dans sa portée ; elle ne révèle pas automatiquement toutes les protections magiques.
+
+step: Le terrain présente des obstacles ou un risque de secousse
+  do: Se placer au-dessus du sol grâce à marche dans les airs, en conservant si possible les ennemis à portée de marteau.
+  note: Il marche dans les airs à sa vitesse habituelle ; une montée, jusqu'à 45 degrés, réduit cette vitesse de moitié.
+
+## Ouverture
+
+note: Choix du premier tour
+  Choisir l'option adaptée à la situation. Une dissipation, une attaque après déplacement et une nuée de météores occupent chacune son action simple ; elles ne se cumulent pas dans le même tour.
+
+step: Une protection magique observable empêche de blesser la cible prioritaire
+  do: Employer dissipation suprême sur cette cible ou sur l'effet précis, avec un test de dissipation à +20.
+  note: Privilégier une défense qui neutralise son marteau ou un effet de vol qui maintient l'ennemi hors de son allonge.
+
+step: Plusieurs ennemis restent groupés à distance et ne semblent pas protégés du feu
+  do: Ouvrir par nuée de météores ; superposer les explosions sur les cibles prioritaires.
+  note: Chaque explosion impose son propre jet de Réflexes DD 26 pour réduire ses dégâts de moitié. Son immunité au feu lui permet d'inclure sa propre position dans les explosions.
+
+step: Le groupe peut encore être détourné du combat par une consigne plausible
+  do: Employer suggestion de groupe, Volonté DD 23, pour lui faire emprunter une autre route ou se retirer d'un danger présenté comme imminent.
+  note: La suggestion exige une formulation raisonnable et comprise ; un ordre manifestement suicidaire échoue.
+
+step: Un ennemi dangereux est déjà dans son allonge de 9 m
+  do: Attaque à outrance au marteau, +36/+31/+26/+21, en concentrant les coups sur une cible.
+
+step: Il doit avancer pour atteindre un ennemi
+  do: Se déplacer jusqu'à 12 m, puis porter une Frappe décisive supérieure au marteau : une attaque à +36 pour 24d6+21 dégâts.
+  note: Ajouter les 2d6 anarchiques contre une cible loyale. Cette frappe utilise une action simple ; elle ne s'ajoute ni à une charge ni à une attaque à outrance.
+
+## Rounds suivants
+
+step: Ses points de vie sont à 250 ou moins et une guérison reste disponible
+  do: Employer guérison suprême sur lui-même pour récupérer 150 PV, sans dépasser 471 PV.
+  note: Se dégager d'abord de l'allonge adverse si un déplacement le permet ; sinon, utiliser le pouvoir sur la défensive. Ne pas attendre d'être presque abattu.
+
+step: Une cible prioritaire reste à portée sans déplacement important
+  do: Répéter l'attaque à outrance au marteau ; utiliser au besoin un pas de 1,50 m pour conserver cette possibilité.
+  note: Activer Attaque en puissance contre une cible facile à toucher ; conserver sa précision contre une CA élevée. Sur un critique confirmé, appliquer Critique ralentissant pour rendre l'adversaire chancelant.
+
+step: Une arme ennemie a montré qu'elle franchissait sa réduction des dégâts
+  do: Remplacer une attaque de mêlée par une destruction de cette arme, avec son bonus de manœuvre de +51 contre le DMD adverse.
+  note: Cette option prive le combattant de son avantage ; tenir compte de la solidité et des points de vie de l'arme.
+
+step: Un adversaire corporel plus petit bloque un passage ou se tient près d'un danger
+  do: Consacrer une action simple à Awesome Blow, avec une manœuvre à +49 contre son DMD, pour infliger les dégâts d'un coup, le projeter de 3 m et le mettre à terre.
+  note: Choisir une direction qui l'éloigne du combat ou le rapproche du danger. La projection doit suivre une trajectoire autorisée par le don.
+
+step: Plusieurs ennemis restent au sol dans une zone propice aux secousses
+  do: Employer tremblement de terre en restant dans les airs et hors des débris susceptibles de tomber.
+  note: Pendant la secousse, les créatures au sol dans la zone ne peuvent ni se déplacer ni attaquer ; les conséquences supplémentaires dépendent du terrain. Cette option est moins utile contre des ennemis en vol.
+
+step: Les adversaires restent éloignés et il peut soutenir un effet prolongé
+  do: Incanter tempête vengeresse depuis une position sûre, puis consacrer ses actions simples à maintenir sa concentration.
+  note: À l'apparition du nuage, Vigueur DD 26 contre la surdité ; au deuxième round, pluie acide ; au troisième, six éclairs de 10d6, un au maximum par cible, Réflexes DD 26 pour moitié ; au quatrième, grêle de 5d6.
+  note: Du cinquième au dixième round, vents et pluie entravent fortement la vue et les déplacements, empêchent les attaques à distance et perturbent les sorts. La vision lucide ne perce pas cette pluie ; Ifestus évite de subir sa propre tempête.
+  note: Maintenir la concentration empêche son attaque à outrance et l'emploi d'un autre pouvoir exigeant une action simple. Abandonner la tempête si une guérison ou le marteau devient prioritaire.
+
+step: Un adversaire provoque dans son allonge
+  do: Porter une attaque d'opportunité au marteau à +36, en priorité contre un déplacement ou une incantation imprudente.
+  note: Il ne dispose que d'une attaque d'opportunité par round.
+
+## Repli
+
+step: Ses points de vie sont à 120 ou moins, ses guérisons sont épuisées et une fuite reste possible
+  do: Rompre le contact par un désengagement, puis exploiter marche dans les airs pour franchir les obstacles et quitter la portée des poursuivants terrestres.
+  note: Un désengagement permet jusqu'à 24 m sur un trajet horizontal ; en montée, sa vitesse est réduite de moitié. Choisir une trajectoire compatible avec son gabarit colossal.
+
+step: Une fois à couvert, il reste blessé ou mutilé
+  do: Employer une guérison suprême encore disponible ; à défaut, prendre les 3 rounds entiers nécessaires à régénération.
+  note: Régénération restaure 4d8+20 PV et les parties du corps perdues ; elle ne lui confère pas une récupération automatique de PV à chaque round.

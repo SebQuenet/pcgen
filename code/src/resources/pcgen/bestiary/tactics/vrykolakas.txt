@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Vrykolakas, mort-vivant de taille M, neutre mauvais, FP 10. Il disperse ses ennemis pour s'acharner sur une seule victime, de préférence un lanceur de sorts divins.
+  115 PV, CA 23, initiative +8 ; guérison accélérée 5 ; résistance à la canalisation +4 ; vulnérabilité au feu.
+  Deux griffes +13, chacune à 1d6+6 plus absorption d'énergie ; morsure +13, 1d6+6. Allonge 1,50 m ; aura pestilentielle à 1,50 m, DD 21.
+  Déplacement 12 m, escalade 6 m ; vision dans le noir 18 m ; Perception +17, Discrétion +21.
+
+resource: Charme-animal | 3/jour | Volonté DD 17 ; NLS 10
+resource: Déguisement | 3/jour | illusion d'apparence ; DD 17 en cas d'interaction ; NLS 10
+resource: Terreur | 3/jour | Volonté DD 20 ; NLS 10
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +21 et observer avec Perception +17 ; repérer les compagnons animaux et un éventuel lanceur de sorts divins.
+  note: Choisir une approche permettant de gagner le contact, avec un mur ou un obstacle à escalader si le passage est bloqué.
+
+step: Une fausse apparence peut lui permettre d'approcher
+  do: Utiliser Déguisement avant de se montrer, puis se rapprocher sans révéler ses intentions.
+  note: Déguisement +6 ; bonus racial supplémentaire de +8 pour imiter son ancienne apparence vivante. Cette illusion ne change pas ses capacités physiques.
+
+## Ouverture
+
+step: Les adversaires ont un compagnon animal et il peut encore agir à distance
+  do: Tenter Charme-animal sur ce compagnon, Volonté DD 17, avant d'engager la mêlée.
+  note: Le charme rend l'animal amical ; il ne le force pas à attaquer son maître. Chaque utilisation occupe une action simple : traiter les animaux successivement, si la situation le permet.
+
+step: Le groupe est encore réuni après la tentative de charme, ou aucun animal n'est présent
+  do: Au tour suivant si nécessaire, utiliser Terreur, Volonté DD 20, pour disperser les adversaires.
+  note: Orienter l'effet vers plusieurs ennemis, puis choisir une victime séparée de ses alliés, de préférence un lanceur de sorts divins.
+
+step: Une victime isolée est accessible après son déplacement
+  do: Avancer jusqu'à 12 m et porter une seule attaque de griffe +13, 1d6+6 plus absorption d'énergie.
+  note: Un déplacement ordinaire ne permet pas d'enchaîner les deux griffes et la morsure ce même tour.
+
+## Rounds suivants
+
+step: La victime est à portée sans nécessiter de déplacement autre qu'un pas de 1,50 m
+  do: Effectuer une attaque à outrance : deux griffes +13 et une morsure +13, chacune à 1d6+6 ; appliquer l'absorption d'énergie aux griffes qui touchent.
+  note: Concentrer toutes les attaques sur la même cible pour l'abattre avant le retour de ses alliés.
+
+step: Une créature entre dans son aura de 1,50 m
+  do: Résoudre l'aura pestilentielle, Vigueur DD 21, sans dépenser son action d'attaque.
+
+step: La victime fuit ou un obstacle la sépare de lui
+  do: La poursuivre à 12 m, ou escalader à 6 m avec Escalade +14, puis porter une griffe si une action simple reste disponible.
+  note: Privilégier une proie accessible et isolée plutôt que traverser inutilement les positions de plusieurs ennemis.
+
+step: Plusieurs adversaires se regroupent et une utilisation de Terreur reste disponible
+  do: Relancer Terreur, Volonté DD 20, puis reprendre les attaques contre une victime séparée du groupe.
+  note: Ce pouvoir remplace les attaques de ce tour ; l'utiliser lorsque la dispersion lui permet de retrouver un combat contre une seule cible.
+
+step: Un adversaire emploie le feu ou lui interdit l'accès à sa victime
+  do: Chercher un couvert ou contourner l'obstacle par l'escalade, puis reprendre l'assaut dès qu'une cible isolée devient accessible.
+  note: Le feu exploite sa vulnérabilité ; la guérison accélérée lui rend 5 PV par round tant qu'il peut encore en bénéficier, jusqu'à son maximum de 115 PV.
+
+## Repli
+
+step: Il lui reste des points de vie
+  do: Continuer à combattre en cherchant une victime isolée ; conserver une issue vers son repaire si le terrain le permet.
+  note: Sa dernière échappatoire est la possession sauvage à 0 PV ; aucun seuil de fuite anticipée n'est indiqué.
+
+step: Il est réduit à 0 PV et une grenouille se trouve à proximité
+  do: Tenter de la posséder avec possession sauvage ; utiliser les caractéristiques du crapaud, dont Volonté +1, pour sa résistance.
+  note: Cette échappatoire exige la présence réelle d'un animal ; le vrykolakas ne peut pas en faire apparaître un.
+
+step: La possession de la grenouille réussit
+  do: Regagner discrètement son repaire dans le corps de l'animal pour récupérer.
+  note: À son réveil, sortir de sa tombe et rechercher les aventuriers pour se venger.

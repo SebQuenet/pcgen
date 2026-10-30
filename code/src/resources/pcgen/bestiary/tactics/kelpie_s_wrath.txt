@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Kelpie's Wrath est un navire hanté vivant, héraut de Besmara : un extérieur colossal chaotique neutre, vindicatif, qui recherche le butin et châtie les offenses à la Reine des pirates.
+  Il nage à 18 m ; espace occupé de 12 m, allonge de 9 m. Attaque à outrance : 3 touchers incorporels +25, chacun infligeant 3d6 dégâts plus 3d6 d'électricité et 3d6 de feu. À distance : télékinésie +21, dégâts variables.
+  297 pv, guérison accélérée 10, CA 30, CA de contact 6 ; réduction des dégâts 10/Loi, résistance à la magie 26 ; résistances acide, froid et électricité 30, feu 10. Il n'a pas besoin de respirer.
+
+resource: Télékinésie | à volonté | DD 18 ; attaque à distance +21 selon l'emploi
+resource: Convocation | 1/jour | 11 à 20 draugr, réussite automatique
+resource: Sphère d'invisibilité | 3/jour | dissimuler l'approche ; attaquer rompt son invisibilité
+resource: Image accomplie | 3/jour | DD 16 ; illusion limitée à son allonge de 9 m
+resource: Nappe de brouillard élargie | 3/jour | masquer l'approche ou couvrir le repli
+resource: Brume mortelle | 3/jour | DD 18
+resource: Contrôle des vents | 3/jour | modifier les vents autour du combat
+resource: Téléportation | 3/jour | conserver une utilisation pour le repli
+resource: Changement de plan | 3/jour | DD 18 contre une cible non consentante ; autre possibilité de fuite
+
+step: Un navire ou des intrus sont repérés
+  do: Observer avec Perception +23 et préparer une approche depuis l'eau ; utiliser la sphère d'invisibilité si la surprise est possible
+  note: vision dans le noir et perception des vibrations à 18 m ; odorat développé. La télépathie porte à 60 m, mais ne permet pas de lire les pensées
+
+step: Il veut attirer des adversaires sur son pont
+  do: Utiliser image accomplie pour montrer de faux marins ou un leurre à proximité de sa coque
+  note: garder toute l'illusion dans son allonge de 9 m ; elle ne fournit aucun combattant réel
+
+## Ouverture
+
+step: Le combat s'annonce sérieux et la convocation est disponible
+  do: Convoquer 11 à 20 draugr et leur ordonner d'occuper les assaillants pendant qu'il se place pour frapper
+  note: si la menace est repérée assez tôt, effectuer cette préparation avant le premier échange
+
+step: Les adversaires restent hors de son allonge
+  do: Employer la télékinésie pour lancer du matériel de son pont sur une cible à +21, ou projeter une créature qui échoue à son jet de Volonté DD 18
+  note: choisir en priorité un tireur ou un lanceur de sorts exposé ; les dégâts dépendent du projectile
+
+step: Une cible dangereuse se trouve déjà à 9 m ou moins
+  do: Porter les trois touchers incorporels en attaque à outrance sur cette cible
+  note: s'il doit d'abord nager pour l'atteindre, effectuer une attaque simple avec un seul toucher
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance et concentrer les trois touchers sur elle jusqu'à sa neutralisation
+  note: viser en priorité les adversaires capables de dépasser sa réduction des dégâts ou de soutenir leurs alliés
+
+step: Un lanceur de sorts est menacé par son allonge
+  do: Maintenir la pression et exploiter Perturbateur et Briseur de sorts
+  note: le DD de concentration pour incanter sur la défensive augmente de 4 ; un échec de cette incantation provoque une attaque d'opportunité. Avec sa Dextérité de 8, Attaques réflexes n'ajoute aucune attaque d'opportunité par round
+
+step: Des adversaires respirants se regroupent sur un pont, hors de l'eau
+  do: Placer une brume mortelle sur leur position pour les disperser
+  note: DD 18 ; choisir un emplacement où les vents ne disperseront pas immédiatement le gaz. Cette option remplace les attaques du round
+
+step: Les vents gênent son approche ou favorisent les ennemis
+  do: Utiliser contrôle des vents pour les modifier à son avantage
+  note: ne pas disperser sa propre brume mortelle s'il compte encore sur elle
+
+step: Il subit des attaques à distance sans pouvoir riposter efficacement
+  do: Créer une nappe de brouillard élargie, puis changer de position en nageant
+  note: le brouillard gêne aussi sa propre vision ; sa perception des vibrations ne repère que les créatures en contact avec une même surface ou une même masse d'eau
+
+## Repli
+
+step: Ses points de vie tombent à 75 ou moins et aucun ennemi décisif n'est sur le point de céder
+  do: Se téléporter vers un lieu connu ; si cette issue est indisponible, employer changement de plan
+  note: ce seuil est un choix tactique ; la guérison accélérée rend préférable une retraite avant l'épuisement de ses défenses
+
+step: Il doit fuir sans pouvoir utiliser ces pouvoirs
+  do: Couvrir sa fuite de brouillard et s'éloigner à la nage, à 18 m par déplacement, pendant que les draugr encore présents retiennent les poursuivants
+  note: récupérer 10 pv par round grâce à la guérison accélérée une fois hors de danger

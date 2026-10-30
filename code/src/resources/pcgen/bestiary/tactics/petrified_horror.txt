@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Horreur pétrifiée (Petrified Horror), créature artificielle de taille M, neutre et sans Intelligence ; combattant de contact solitaire, FP 15.
+  140 pv ; CA 24, contact 14, pris au dépourvu 20 ; RD 5/adamantium ; immunités aux effets liés à ses traits de créature artificielle et à la magie.
+  Deux coups +25, chacun infligeant 2d6+5 dégâts ; allonge de 1,50 m ; déplacement de 9 m ; initiative +8.
+  Vision aveugle à 18 m ; présence terrifiante à 18 m, DD 20.
+
+step: Un intrus entre dans les 18 m
+  do: Le repérer par vision aveugle et se préparer à l'intercepter
+  note: Ne pas lui attribuer de perception précise au-delà de cette portée ; Perception +0.
+
+resource: Tempête de sang (bloodstorm) | non précisé | Attaque spéciale mentionnée, mais activation, effets, portée et fréquence absents du profil fourni ; ne pas inventer ces paramètres.
+
+## Ouverture
+
+step: Des adversaires sont dans les 18 m
+  do: Appliquer la présence terrifiante, DD 20, selon les règles de cette aura
+  note: Le profil ne précise pas sa durée ; ne pas ajouter d'effets particuliers.
+
+step: Un adversaire est déjà à portée de ses coups
+  do: Faire une attaque à outrance : deux coups +25, chacun pour 2d6+5 dégâts
+
+step: Un déplacement de 9 m au maximum suffit pour atteindre le contact
+  do: Avancer vers l'adversaire le plus proche et porter un seul coup +25, pour 2d6+5 dégâts
+  note: Après un déplacement ordinaire, il ne porte pas ses deux coups dans le même round.
+
+step: Aucun adversaire n'est accessible avec un seul déplacement
+  do: Faire un double déplacement, jusqu'à 18 m, vers le dernier emplacement connu de l'ennemi
+  note: Aucune attaque à distance n'est indiquée.
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m ou moins
+  do: Répéter l'attaque à outrance avec les deux coups +25
+  note: Rester au contact pour conserver les deux attaques ; sa RD 5/adamantium amortit les dégâts physiques auxquels elle s'applique.
+
+step: Un pas de 1,50 m suffit pour retrouver la portée
+  do: Faire ce pas, puis porter les deux coups en attaque à outrance
+
+step: La cible s'éloigne davantage
+  do: Reprendre l'approche ; porter un seul coup si un déplacement de 9 m suffit, sinon consacrer le round au double déplacement
+  note: Ne pas poursuivre une cible devenue indétectable comme si sa position restait connue.
+
+## Repli
+
+step: Ses points de vie diminuent, même fortement
+  do: Continuer à frapper les adversaires accessibles
+  note: Aucun comportement de fuite ni seuil de repli n'est indiqué ; pour cette créature sans Intelligence, poursuivre le combat jusqu'à sa destruction à 0 pv.

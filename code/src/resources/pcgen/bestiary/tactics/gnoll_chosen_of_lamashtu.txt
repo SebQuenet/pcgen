@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Gnoll chaotique mauvais, élu de Lamashtu, qui privilégie le combat au contact avec son cimeterre à deux mains +1. Sa lance +1 peut servir au contact ou être lancée.
+  95 pv ; CA 22, contact 10 ; déplacement de 6 m ; vision dans le noir à 18 m. Vigueur +13 et Volonté +13, mais Réflexes +3.
+
+resource: Réduction des dégâts | 110 points absorbés | RD 10/adamantium ; réduit de 10 les dégâts admissibles de chaque attaque, jusqu'à épuisement de cette réserve, distincte de ses 95 pv
+
+step: Il peut choisir sa position
+  do: Préparer son cimeterre à deux mains et choisir un passage qui limite le nombre d'adversaires pouvant l'entourer.
+  note: Dans l'obscurité, sa vision dans le noir lui permet de repérer les ennemis jusqu'à 18 m ; elle ne permet pas de voir à travers les obstacles.
+
+## Ouverture
+
+step: Un ennemi est accessible après un déplacement de 6 m au maximum
+  do: Avancer et porter une attaque au cimeterre à deux mains +1.
+  note: Chercher le contact avec une cible isolée ou peu protégée, sans traverser inutilement la zone menacée par d'autres adversaires.
+
+step: Les ennemis restent trop loin pour être attaqués au contact ce round
+  do: Se rapprocher en utilisant les couverts disponibles ; si sa lance +1 est déjà en main, la lancer lorsqu'une cible est à portée utile.
+  note: Une lance lancée n'est plus disponible tant qu'il ne l'a pas récupérée. Préparer ensuite le cimeterre en tenant compte du temps nécessaire pour changer d'arme.
+
+## Rounds suivants
+
+step: Une cible reste à portée au début de son tour
+  do: Effectuer une attaque à outrance au cimeterre à deux mains +1 et concentrer ses coups sur cette cible.
+  note: Éviter les déplacements inutiles qui lui feraient perdre ses attaques supplémentaires.
+
+step: Sa cible s'éloigne
+  do: La poursuivre si un déplacement de 6 m permet de l'attaquer ; sinon, engager un ennemi plus proche.
+  note: Ne pas quitter une position favorable pour courir entre plusieurs adversaires.
+
+step: Il subit des attaques physiques
+  do: Décompter séparément les points absorbés par sa réduction des dégâts et les pv réellement perdus.
+  note: Une arme en adamantium contourne cette protection. La réduction des dégâts ne protège pas contre les dégâts d'énergie.
+
+## Repli
+
+step: Ses pv tombent à 23 ou moins et une issue reste accessible
+  do: Effectuer une retraite vers un couvert ou un passage étroit, jusqu'à 12 m si le terrain le permet.
+  note: La retraite évite les attaques d'opportunité liées au départ de sa case initiale ; les autres cases traversées peuvent encore l'exposer.
+
+step: Toute fuite est coupée
+  do: Tenir le passage le plus étroit disponible et continuer à frapper au cimeterre à deux mains +1.

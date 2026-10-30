@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Aberration neutre et solitaire, humanoïde sans traits aux bras terminés par des ventouses, qui attire sa proie au contact sous une fausse apparence.
+  33 pv, CA 14 ; deux coups +5 (1d6+1 et transposition), allonge 1,50 m ; déplacement 9 m ; vision dans le noir 18 m, Perception +13.
+
+resource: Déguisement | à volonté | NLS 6, Volonté DD 15 pour percer l'illusion après interaction ; Déguisement +13 sous cet effet
+resource: Transposition | à chaque coup réussi | Vigueur DD 14 ; lien invisible durant 1 heure, six adversaires liés au maximum
+
+step: Une proie est repérée
+  do: Prendre l'apparence d'un humanoïde ou humanoïde monstrueux, de préférence de la même espèce qu'elle, puis l'attirer à 1,50 m avec Bluff +7
+  note: Son déguisement ignore les pénalités d'espèce, d'âge et de sexe.
+
+## Ouverture
+
+step: Il peut agir pendant la surprise et la proie est à portée
+  do: Porter un seul coup +5 (1d6+1 et transposition)
+  note: Faire immédiatement résoudre le jet de Vigueur DD 14 si le coup touche.
+
+step: Il dispose d'un tour complet et un ennemi est déjà à portée
+  do: Attaque à outrance, deux coups +5 (1d6+1 chacun et transposition)
+
+step: Il doit avancer pour atteindre une cible
+  do: Se déplacer de 9 m au maximum, puis porter un seul coup si la cible est à 1,50 m
+
+## Rounds suivants
+
+step: Une proie liée reste à portée
+  do: La pilonner avec ses deux coups en attaque à outrance
+  note: Si elle le blesse par une attaque, elle subit les dégâts et lui récupère autant de pv, dans la limite de son maximum. Les autres créatures liées ne sont pas affectées.
+
+step: Un adversaire non lié le menace
+  do: Chercher à le lier avec ses coups
+  note: Ses attaques affectent normalement le transposer tant que cet adversaire reste non lié.
+
+step: Un adversaire lié emploie une magie curative sur lui
+  do: S'acharner sur cet adversaire
+  note: Ces soins blessent le transposer et soignent leur lanceur du même montant. Soigner une cible liée fonctionne normalement, sans effet sur lui.
+
+## Repli
+
+step: Ses pv tombent à 10 ou moins et des adversaires non liés peuvent encore l'atteindre
+  do: Se désengager par une retraite, jusqu'à 18 m si le terrain le permet, puis continuer à fuir
+  note: Une nouvelle apparence peut tromper des témoins qui n'ont pas vu sa fuite, mais ne le rend pas invisible.

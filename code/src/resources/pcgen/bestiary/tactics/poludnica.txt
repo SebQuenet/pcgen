@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Poludnica, fée solitaire des plaines tempérées, CN, FP 10. Elle préfère attirer les mortels par la ruse avant de recourir à la violence.
+  119 pv ; CA 24, contact 20 ; déplacement 9 m ; allonge 1,50 m. Faux +1 : +15/+10, 2d4+10, critique x4, plus 1d6 de feu et 1d2 de dégâts de Constitution par coup ; Vigueur DD 21 annule les dégâts de Constitution.
+  Son aura de chaleur porte à 3 m. Elle combine fatigue, contrôle des déplacements et coups de faux pour user ses adversaires.
+  RD 10/fer froid ; résistance à la magie 21 ; immunité au feu, à la cécité, à la fatigue et à l'épuisement.
+
+resource: Passage sans trace | constant | facilite ses déplacements sans laisser de traces
+resource: Lumière du jour, croissance végétale, contact de fatigue | à volonté | croissance végétale limitée à l'enrichissement ; contact de fatigue DD 14
+resource: Flou | 3/jour | 20 % de chances de rater les attaques contre elle ; durée 10 minutes
+resource: Porte dimensionnelle | 3/jour | conserver une utilisation pour fuir ; aucune autre action après utilisation pendant ce tour
+resource: Lueurs arc-en-ciel | 3/jour | Volonté DD 18 ; fascination, jusqu'à 24 DV de créatures
+resource: Lumière brûlante | 3/jour | attaque de contact à distance +12 ; 5d8 dégâts contre une cible ordinaire
+resource: Rayon de soleil | 1/jour | DD 21 ; jusqu'à 3 rayons sur une durée maximale de 10 rounds
+resource: Vagues de fatigue | 1/jour | cône de 9 m ; sans sauvegarde, résistance à la magie applicable
+
+step: Des intrus sont repérés avant les hostilités
+  do: Les observer avec Perception +19 et Discrétion +20 ; tenter d'isoler un interlocuteur avec Bluff +12 ou Diplomatie +13
+  note: Supprimer l'aura en action libre pendant la conversation ; ne pas blesser prématurément la personne qu'elle cherche à attirer.
+
+step: Le combat devient probable et elle dispose d'un round de préparation
+  do: Activer flou, puis choisir une position où les ennemis devront s'approcher
+  note: Croissance végétale enrichit les récoltes ; ce pouvoir ne crée pas de terrain difficile ni de plantes entravantes.
+
+## Ouverture
+
+step: Plusieurs ennemis vivants non fatigués sont dans un cône de 9 m
+  do: Lancer vagues de fatigue, puis se déplacer pour placer les combattants dans les 3 m de l'aura sans s'exposer à tout le groupe
+  note: Réactiver l'aura en action libre. Vagues de fatigue n'aggrave pas une fatigue déjà présente.
+
+step: Les ennemis restent à distance et plusieurs peuvent être alignés à moins de 18 m
+  do: Activer rayon de soleil pour préparer les tirs des rounds suivants
+  note: Préférer cette ouverture contre les morts-vivants ou des ennemis dont la vue est essentielle.
+
+step: Un ennemi est déjà à portée de faux
+  do: Faire une attaque à outrance, faux +15/+10, en concentrant les deux coups sur la même cible
+  note: Si elle doit d'abord parcourir plus de 1,50 m, se déplacer puis porter une seule attaque à +15.
+
+step: Les adversaires ne sont pas encore hostiles et peuvent être fascinés
+  do: Employer lueurs arc-en-ciel pour retenir ou attirer une partie du groupe, Volonté DD 18
+  note: La fascination ne neutralise pas durablement des combattants menacés ; une menace manifeste la rompt. Garder les sujets hors de l'aura et ne pas les attaquer pendant cette manœuvre.
+
+## Rounds suivants
+
+step: Une créature commence son tour dans les 3 m de l'aura active
+  do: Faire effectuer son jet de Vigueur DD 21
+  note: Échec : 1d6 de dégâts non létaux et fatigue ; un nouvel échec d'une victime déjà fatiguée l'épuise. Ces états persistent tant que les dégâts non létaux restent non soignés.
+
+step: Une cible reste au contact
+  do: Poursuivre les attaques à outrance ; faire au besoin un pas de 1,50 m pour conserver la portée et éviter l'encerclement
+  note: Contre une CA basse, Attaque en puissance donne +13/+8 et 2d4+16, avec les mêmes dégâts supplémentaires. Le feu et les dégâts de Constitution ne sont pas multipliés par le critique.
+
+step: Deux adversaires sont adjacents entre eux et tous deux à portée de faux, mais elle ne peut pas faire d'attaque à outrance
+  do: Utiliser Enchaînement : une attaque à +15, puis une autre à +15 contre le second si la première touche
+  note: Sa CA diminue de 2 jusqu'à son prochain tour ; éviter ce choix si elle subit déjà beaucoup d'attaques.
+
+step: Un adversaire adjacent provoque une attaque d'opportunité en se déplaçant
+  do: Employer Immobilisation : remplacer l'attaque par une manœuvre à +13 contre son DMD pour arrêter son déplacement jusqu'à la fin de son tour
+  note: Cela aide à retenir une victime dans l'aura. Réflexes de combat permet jusqu'à 6 attaques d'opportunité par round ; un pas de 1,50 m ou une retraite peuvent éviter certaines occasions.
+
+step: Rayon de soleil est actif et il reste des rayons
+  do: Consacrer une action simple à un rayon en ligne de 18 m, au maximum un par round
+  note: 4d6 dégâts et cécité ; Réflexes DD 21 réduit les dégâts de moitié et annule la cécité. Contre les morts-vivants, les dégâts sont de 10d6. Chaque tir remplace ses attaques de faux de ce tour.
+
+step: Une cible reste hors de portée de mêlée et aucun rayon de soleil n'est disponible
+  do: Utiliser lumière brûlante à +12 contre la CA de contact, ou avancer de 9 m pour reprendre le contact
+  note: Préférer la faux au contact de fatigue : elle blesse et menace la Constitution en même temps.
+
+## Repli
+
+step: Ses points de vie passent sous 30, ou des armes en fer froid rendent la mêlée trop dangereuse
+  do: Utiliser porte dimensionnelle vers un refuge connu, à 240 m au maximum
+  note: Préparer la destination avant le combat et conserver la dernière utilisation pour cette fuite.
+
+step: Des ténèbres magiques l'enveloppent
+  do: Sortir de la zone par une action de déplacement, jusqu'à 9 m ; une fois dehors, utiliser porte dimensionnelle au tour suivant si nécessaire
+  note: Dans la zone, elle est chancelante, son aura cesse et ses pouvoirs magiques sont inutilisables. Elle ne peut donc pas y lancer lumière du jour ni porte dimensionnelle.
+
+step: Le coucher du soleil approche
+  do: Rompre le combat et gagner un abri avant la nuit
+  note: Au coucher du soleil, elle passe involontairement sur le plan Éthéré jusqu'à l'aube et y subit sa faiblesse aux ténèbres. Lumière du jour ne prolonge pas sa présence sur le plan Matériel.

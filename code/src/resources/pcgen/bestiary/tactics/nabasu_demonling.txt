@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Nabasu Demonling, démon solitaire et intelligent, FP 7 ; 73 pv, CA 23. Il marche à 9 m et vole à 18 m, avec une manœuvrabilité moyenne.
+  Au contact, attaque à outrance : 2 griffes +11 (1d6+4 chacune) et morsure +11 (1d8+4), allonge 1,50 m. Regard de mort DD 15 et attaque sournoise +2d6.
+  Il affaiblit une cible par énervation, puis exploite une ouverture pour la déchirer. Sa réduction des dégâts 10/fer froid ou Bien et sa résistance à la magie 18 lui permettent de soutenir un échange bref.
+
+resource: Énervation | 3/jour | NLS 7 ; rayon, attaque de contact à distance, 1d4 niveaux négatifs sans sauvegarde
+resource: Obscurité profonde | à volonté | NLS 7 ; rayon de 3 m
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 22,5 kg d'objets seulement
+
+step: Il repère des intrus avant d'être découvert
+  do: Se dissimuler dans une zone d'ombre et choisir une approche aérienne avec de l'espace pour manœuvrer
+  note: Perception +23 ; Discrétion +10, ou +18 dans les zones d'ombre ; vision dans le noir à 18 m
+
+step: Il prépare une position de combat
+  do: Repérer un endroit où se téléporter en cas de danger et une cible qu'il pourra atteindre sans s'exposer à tout le groupe
+  note: Son vol de manœuvrabilité moyenne demande de la place ; éviter de compter sur un vol stationnaire dans un passage étroit
+
+## Ouverture
+
+step: Une cible dangereuse est visible à 12 m ou moins
+  do: Utiliser énervation sur elle, en privilégiant un adversaire peu protégé contre les attaques de contact à distance
+  note: Une utilisation par attaque ; les niveaux négatifs affaiblissent la cible pour la suite du combat
+
+step: Il peut surprendre une cible au contact
+  do: Porter une attaque de morsure +11 (1d8+4), avec +2d6 d'attaque sournoise si la cible est privée de son bonus de Dextérité à la CA
+  note: Une attaque surprise ne permet pas automatiquement une attaque à outrance ; l'approche doit laisser l'action nécessaire pour attaquer
+
+step: Les adversaires peuvent croiser son regard
+  do: Exploiter son regard de mort DD 15 pendant qu'il mène son attaque
+  note: Le regard accompagne sa pression offensive ; ne pas lui consacrer systématiquement l'action prévue pour énervation ou une attaque
+
+## Rounds suivants
+
+step: Une cible vulnérable est déjà à portée au début de son tour
+  do: Attaquer à outrance avec les deux griffes +11 et la morsure +11
+  note: Ajouter +2d6 à chaque attaque qui remplit les conditions de l'attaque sournoise ; une cible isolée ne suffit pas à elle seule
+
+step: Rester au contact l'exposerait à plusieurs adversaires
+  do: Utiliser Attaque en vol pour approcher, mordre une fois, puis terminer son déplacement en s'éloignant
+  note: Ce passage ne donne qu'une attaque et n'annule pas les attaques d'opportunité ; choisir une trajectoire qui limite les zones menacées traversées
+
+step: Une cible résiste encore et il lui reste des utilisations d'énervation
+  do: Reprendre de la distance et lui lancer une nouvelle énervation dès qu'il dispose d'une ligne de tir
+  note: Concentrer l'affaiblissement sur un adversaire qu'il peut ensuite atteindre ; ne pas disperser les trois utilisations sans raison
+
+step: Des tirs ou une mêlée défavorable l'empêchent de choisir ses engagements
+  do: Utiliser obscurité profonde pour masquer son déplacement ou préparer son départ
+  note: Sa vision dans le noir ne traverse pas l'obscurité surnaturelle ; ne pas supposer qu'il y voit ses victimes ni qu'il y obtient automatiquement des attaques sournoises
+
+## Repli
+
+step: Ses points de vie tombent à 25 ou moins, ou les ennemis neutralisent ses protections
+  do: Utiliser téléportation suprême vers le refuge repéré avant le combat
+  note: Partir avant d'être encerclé ou empêché d'agir ; ce pouvoir n'emporte aucune autre créature
+
+step: Il doit d'abord se dégager pour utiliser son pouvoir
+  do: Profiter d'une ouverture pour s'éloigner en vol, puis se téléporter dès que possible
+  note: Éviter d'activer le pouvoir au milieu d'ennemis capables de l'interrompre

@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Riftcreeper, vase extraplanaire gigantesque, chaotique mauvaise, prédateur solitaire des ravins, assez intelligent pour exploiter le relief.
+  217 pv, CA 30, guérison accélérée de 10 pv par round ; immunité à l'acide, aux dégâts et diminutions de caractéristiques, à la fatigue et à l'épuisement ; traits des vases.
+  Deux coups +24, chacun infligeant 4d6+16 dégâts et 2d6 d'acide, avec étreinte ; allonge de 6 m. Six filaments +15 au contact à distance, infligeant chacun 2d6 d'acide et s'attachant à leur cible.
+  Déplacement et escalade à 9 m, nage à 6 m ; espace occupé de 6 m. Comprend l'abyssal mais ne parle pas.
+
+resource: Jaillissement gélatineux | 1 par minute | action simple ; rejoint une surface verticale à 36 m au maximum, sans provoquer d'attaque d'opportunité
+resource: Filaments | 6 simultanément | projection par une action simple, portée maximale de 36 m
+resource: Feuille morte | constant | ralentit les chutes
+
+step: Il peut choisir le lieu de l'embuscade
+  do: Se poster sur une paroi de ravin, avec une autre surface verticale accessible pour changer de position ou fuir.
+  note: Vision aveugle à 18 m ; perception des vibrations à 36 m pour les créatures en contact avec le même sol. Une proie volante ne produit pas de vibrations au sol.
+
+## Ouverture
+
+step: Les proies repérées sont à plus de 6 m, mais à portée des filaments
+  do: Projeter jusqu'à six filaments, en visant en priorité les ennemis fragiles ou isolés ; rester sur la paroi si les combattants ne peuvent pas l'y atteindre.
+  note: Chaque filament touche contre la CA de contact, inflige 2d6 d'acide puis reste attaché. La cible subit encore 2d6 d'acide par filament attaché au début de son tour ; aucun jet de sauvegarde n'est indiqué.
+
+step: Une proie est déjà à 6 m ou moins et aucune approche importante n'est nécessaire
+  do: Effectuer une attaque à outrance avec les deux coups +24 ; tenter gratuitement l'étreinte à +35 après chaque coup réussi contre une cible de taille TG ou inférieure.
+
+step: Il doit avancer pour atteindre une proie
+  do: Se déplacer jusqu'à 9 m, puis porter un seul coup avec Science de la frappe décisive, à +24, pour 12d6+16 dégâts et 2d6 d'acide, avec étreinte.
+  note: Les dés supplémentaires de frappe décisive ne multiplient ni le bonus fixe ni l'acide ; cette attaque exige l'action d'attaque et ne se combine pas avec une charge.
+
+## Rounds suivants
+
+step: Plusieurs ennemis restent dans son allonge et aucune victime n'est agrippée
+  do: Répéter les deux coups en attaque à outrance, en concentrant les attaques sur la proie la plus facile à abattre.
+  note: Avec Attaques réflexes et sa Dextérité de 27, il peut effectuer jusqu'à neuf attaques d'opportunité par round ; exploiter son allonge de 6 m lorsque les déplacements adverses en provoquent.
+
+step: Une victime est agrippée et ses alliés ne menacent pas de l'encercler
+  do: Consacrer une action simple à maintenir la lutte et à infliger les dégâts d'un coup ; le BMO de lutte est de +35, avec le bonus de +5 au maintien si la victime ne s'est pas libérée.
+
+step: Les proies restent hors d'atteinte des coups
+  do: Laisser agir l'acide des filaments attachés ; remplacer les filaments sectionnés en projetant ceux qui sont disponibles.
+  note: Chaque filament a une CA de 25 ; le moindre dégât tranchant le sectionne. Six filaments au maximum peuvent être déployés à la fois.
+
+step: Un effet magique lui inflige du froid, de l'électricité, du feu ou des dégâts sonores
+  do: Appliquer les dégâts déclencheurs, puis noter l'immunité acquise contre cette énergie et poursuivre l'attaque.
+  note: Cette immunité dure une heure. Une adaptation à une autre de ces énergies remplace la précédente ; l'immunité permanente à l'acide demeure.
+
+step: Il est encerclé ou doit rejoindre une position plus favorable, et son jaillissement est disponible
+  do: Employer le jaillissement gélatineux vers une paroi à 36 m au maximum ; choisir si possible un trajet traversant les ennemis pour leur imposer une tentative de bousculade à +33.
+  note: Le jaillissement absorbe les filaments et libère leurs cibles. Il consomme l'action simple du round ; aucune attaque de coups ou projection de filaments ne s'y ajoute.
+
+## Repli
+
+step: Ses points de vie passent sous 60 et les ennemis continuent de lui infliger de lourds dégâts
+  do: Relâcher toute victime agrippée et utiliser le jaillissement vers une paroi hors d'atteinte ; s'il est indisponible, chercher un passage de fuite en escaladant à 9 m ou en nageant à 6 m.
+  note: Le seuil de 60 pv est un choix tactique. Un déplacement ordinaire reste soumis aux attaques d'opportunité ; feuille morte permet une descente, sans conférer le vol.
+
+step: Il a rompu le contact
+  do: Rester à couvert et laisser sa guérison accélérée restaurer 10 pv par round avant d'envisager une nouvelle attaque.

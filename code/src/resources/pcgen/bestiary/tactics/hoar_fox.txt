@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Le Hoar Fox est un renard magique de petite taille, neutre et craintif, qui habite les collines froides. Il préfère fuir et ne combat que s'il se sent menacé.
+  24 pv ; CA 16 ; déplacement de 12 m. Morsure +5 (1d6), à 1,50 m ; souffle de glace en cône de 9 m (2d6 de froid, Réflexes DD 13 pour moitié).
+  Immunité au froid ; vulnérabilité au feu. Il peut être solitaire, en couple ou en meute de 3 à 6.
+
+resource: Souffle de glace | 1 fois tous les 1d4 rounds | action simple ; cône de 9 m ; 2d6 de froid ; Réflexes DD 13 pour moitié
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +8 et l'odorat, puis rester caché ou s'éloigner sans les provoquer
+  note: Discrétion +11, ou +15 en milieu naturel ; vision dans le noir à 18 m et vision nocturne
+
+## Ouverture
+
+step: Il est menacé et peut encore s'échapper
+  do: Gagner un abri ou quitter les lieux, à 12 m par action de mouvement
+
+step: La fuite est bloquée et un ou plusieurs adversaires sont dans un cône de 9 m
+  do: Souffler sur les menaces qui barrent la sortie ; toucher plusieurs adversaires si leur position le permet
+  note: Le souffle inflige 2d6 de froid, Réflexes DD 13 pour moitié ; les autres hoar fox sont immunisés au froid
+
+step: Le souffle est indisponible et un adversaire est à 1,50 m
+  do: Mordre à +5 pour 1d6 dégâts
+
+## Rounds suivants
+
+step: Il vient d'utiliser son souffle
+  do: Lancer 1d4 pour déterminer le délai avant sa prochaine utilisation et suivre ce délai
+  note: Il ne peut pas souffler et mordre pendant le même tour : chacune de ces attaques demande une action simple
+
+step: Le souffle est de nouveau disponible et la fuite reste bloquée
+  do: Souffler de nouveau si un adversaire est dans le cône de 9 m, en visant de préférence plusieurs menaces
+
+step: Le souffle se recharge et un adversaire le maintient au contact
+  do: Mordre à +5 (1d6) s'il ne peut pas se dégager ; profiter de toute ouverture pour quitter le combat
+
+## Repli
+
+step: Une issue se libère, un adversaire emploie le feu, ou ses points de vie tombent à 12 ou moins
+  do: Se désengager s'il est au contact, puis fuir dès que possible ; hors du contact, avancer de 12 m par action de mouvement
+  note: Sa timidité justifie une fuite même avant ce seuil ; sa vulnérabilité au feu rend une confrontation avec une source de feu particulièrement dangereuse
+
+step: Il a rompu la ligne de vue
+  do: Se cacher dans le terrain naturel avec Discrétion +15 et continuer à s'éloigner des poursuivants

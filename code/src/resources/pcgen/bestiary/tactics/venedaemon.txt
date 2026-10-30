@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Venedaemon, extérieur daemon de taille M, neutre mauvais, FP 5 : un lanceur de sorts très intelligent qui affaiblit ses adversaires avant de les frapper à distance.
+  51 pv ; CA 18, contact 12 ; déplacement au sol et en vol de 9 m. Quatre tentacules +8, chacun infligeant 1d6+1, avec une allonge de 1,50 m.
+  Sorts d'ensorceleur de NLS 6 : immobilisation de personne, rayon ardent, projectile magique et protections ; pouvoirs de lenteur, dissipation de la magie et porte dimensionnelle.
+  RD 5/Bien ou argent ; RM 16 ; immunité à l'acide, aux effets de mort, aux maladies et au poison ; résistance de 10 au froid, à l'électricité et au feu.
+
+resource: Lenteur | 3/jour | Volonté DD 16 ; NLS 6
+resource: Dissipation de la magie | 3/jour | NLS 6
+resource: Porte dimensionnelle | 3/jour | NLS 6 ; conserver au moins une utilisation pour fuir
+resource: Convocation | 1/jour | soit 1 venedaemon avec 50 % de réussite, soit 2d4 cacodémons avec 70 % de réussite
+resource: Commandement de cacodémon | À volonté | DD 18 ; ne concerne que les cacodémons
+resource: Sorts de niveau 3 | 4/jour | immobilisation de personne, Volonté DD 16
+resource: Sorts de niveau 2 | 6/jour partagés | invisibilité et rayon ardent
+resource: Sorts de niveau 1 | 7/jour partagés | charme-personne DD 14, armure de mage, projectile magique et bouclier
+
+step: Il peut préparer l'affrontement
+  do: Lancer armure de mage à l'avance, puis bouclier peu avant le combat ; employer des actions distinctes pour chaque sort
+  note: Armure de mage dure 6 heures ; bouclier dure 6 minutes. Ensemble, ils portent sa CA à 26, sans améliorer sa CA de contact de 12.
+
+step: Il peut observer les adversaires sans se dévoiler
+  do: Utiliser invisibilité et sa vision magique constante pour repérer les auras et choisir une position à distance, avec une voie de fuite
+  note: Invisibilité dure 6 minutes et cesse dès qu'il attaque, y compris avec un sort offensif. Une aura magique ne révèle pas à elle seule toutes les capacités de son porteur.
+
+step: Il dispose d'un répit avant l'arrivée des ennemis
+  do: Tenter la convocation de 2d4 cacodémons et placer les renforts obtenus entre les adversaires et lui
+  note: La convocation peut échouer. Coordonner les alliés par télépathie à 30 m ; ne pas supposer que des serviteurs sont présents si aucun n'a été obtenu.
+
+## Ouverture
+
+note: Choix du premier sort
+  Choisir l'une des ouvertures suivantes selon les cibles ; chaque sort demande son action. Garder les adversaires hors de son allonge de 1,50 m en utilisant le déplacement ou le vol.
+
+step: Plusieurs adversaires sont assez proches les uns des autres
+  do: Lancer lenteur, Volonté DD 16, en visant en priorité ceux qui dépendent du déplacement et des attaques à outrance
+  note: À NLS 6, portée de 12 m, jusqu'à six créatures, aucune à plus de 9 m d'une autre ; durée de 6 rounds. Les victimes ne peuvent plus cumuler une action simple et une action de mouvement dans leur tour.
+
+step: Un humanoïde dangereux constitue la meilleure cible isolée
+  do: Lancer immobilisation de personne, Volonté DD 16, puis rester à distance
+  note: Ce sort ne vise que les humanoïdes. Il dure au plus 6 rounds ; la victime peut tenter un nouveau jet à chacun de ses tours en y consacrant une action complexe.
+
+step: Une cible doit être blessée immédiatement
+  do: Lancer rayon ardent à 12 m ou moins, avec une attaque de contact à distance à +8
+  note: À NLS 6, le sort produit un seul rayon infligeant 4d6 dégâts de feu ; éviter les cibles dont la protection contre le feu a été constatée.
+
+## Rounds suivants
+
+step: Les adversaires cherchent à le rejoindre
+  do: Se déplacer de 9 m au sol ou en vol et lancer un sort à distance si son action simple reste disponible
+  note: Exploiter la lenteur des poursuivants ; quitter une case menacée peut provoquer une attaque d'opportunité. Réserver porte dimensionnelle aux situations où le déplacement ordinaire ne suffit plus.
+
+step: Une protection magique adverse empêche ses attaques ou protège une cible prioritaire
+  do: Employer une dissipation de la magie ciblée sur cette créature
+  note: Test de dissipation à +6 contre DD 11 + NLS de l'effet ; le résultat n'est pas garanti.
+
+step: Une cible reste exposée aux attaques à distance
+  do: Employer rayon ardent contre une faible CA de contact, ou projectile magique pour infliger 3d4+3 dégâts sans jet d'attaque
+  note: Ces sorts restent soumis à la résistance à la magie. Bouclier arrête projectile magique ; choisir une autre attaque si cette protection est connue.
+
+step: Un humanoïde paralysé se libère et menace de nouveau le groupe du venedaemon
+  do: Relancer immobilisation de personne si le neutraliser reste plus utile que lui infliger des dégâts
+  note: Ne pas gaspiller ce sort sur une créature qui n'est pas humanoïde ; renouveler lenteur seulement si de nouvelles cibles ou des résistances réussies le justifient.
+
+step: Un adversaire reste au contact et le venedaemon choisit de combattre sur place
+  do: Activer Frappe magique par une action rapide, puis effectuer une attaque à outrance avec ses quatre tentacules +8
+  note: Chaque tentacule inflige alors 1d6+3 et compte comme une arme magique pour franchir la RD ; une attaque à outrance interdit un déplacement normal pendant ce tour.
+
+step: Il doit lancer un sort alors qu'un ennemi le menace
+  do: Lancer sur la défensive pour éviter l'attaque d'opportunité liée à l'incantation
+  note: Concentration +13 grâce à Magie de guerre ; DD 17 pour un sort de niveau 1, DD 19 au niveau 2 et DD 21 au niveau 3. Un échec fait perdre le sort.
+
+## Repli
+
+step: Ses points de vie tombent à 17 ou moins, ou les ennemis l'enferment au contact
+  do: Utiliser porte dimensionnelle vers un emplacement sûr connu, jusqu'à 192 m, en privilégiant un obstacle qui coupe la poursuite
+  note: Après porte dimensionnelle, il ne peut plus agir avant son prochain tour. S'il est menacé, utiliser le pouvoir sur la défensive : concentration +13 contre DD 23.
+
+step: Il a rompu le contact mais ses poursuivants peuvent encore le rejoindre
+  do: Lancer invisibilité à son tour suivant, puis s'éloigner en vol de 9 m par action de mouvement
+  note: Coordonner par télépathie les éventuels alliés restés à 30 m pour couvrir sa fuite ; éviter toute attaque qui mettrait fin à l'invisibilité.

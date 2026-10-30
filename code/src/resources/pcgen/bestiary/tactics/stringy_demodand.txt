@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Démodande filandreux, extérieur chaotique mauvais de FP 15, ravisseur et maître d'esclaves des Abysses. Il cherche à isoler une proie et à l'abattre sous ses attaques naturelles.
+  230 pv, CA 30 ; déplacement au sol et vol à 12 m, manœuvrabilité moyenne ; allonge 1,50 m. Morsure +29 (2d6+9 plus 2d6 non létaux) et 2 griffes +29 (1d10+9 plus 2d6 non létaux chacune), critiques sur 19–20.
+  RD 10/bien et magie : une arme doit réunir les deux propriétés pour la franchir. Immunité à l'acide et au poison ; résistances au froid 10 et au feu 10 ; RM 26 ; +4 aux sauvegardes contre les sorts divins.
+
+resource: Détection du Bien et détection de la magie | constantes | repérer les auras à 18 m
+resource: Détection des pensées | à volonté | Volonté DD 16 contre la lecture des pensées superficielles ; concentration
+resource: Terreur | 3/jour | cône de 9 m ; Volonté DD 18
+resource: Dissipation suprême | 3/jour | NLS 15 ; dissiper les protections adverses
+resource: Immobilisation de monstre | 1/jour | Volonté DD 19 ; nouvelle sauvegarde à chaque round au tour de la cible
+resource: Convocation | 1/jour | niveau 6 ; 40 % de réussite ; 1d4 démodandes goudronneux ou 1d2 démodandes filandreux
+
+step: Il repère les intrus avant d'être découvert
+  do: Observer depuis un couvert avec Discrétion +26 et Perception +24 ; utiliser ses détections pour choisir une cible isolée et une voie d'approche
+  note: vision dans le noir à 36 m ; détection des pensées demande trois rounds d'observation pour lire les pensées superficielles
+
+step: Un affrontement sérieux approche et il dispose de temps
+  do: Tenter sa convocation à l'abri, puis faire avancer les renforts sur un autre côté des intrus
+  note: préparer un encerclement ; prévoir de combattre seul si la convocation échoue
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans un cône de 9 m
+  do: Lancer terreur depuis une position hors de leur allonge, puis se déplacer pour menacer un adversaire séparé du groupe
+  note: Volonté DD 18 ; un échec rend paniqué, une réussite laisse secoué pendant 1 round
+
+step: Une cible dangereuse reste protégée par plusieurs effets magiques
+  do: Employer dissipation suprême ciblée sur elle avant de l'engager
+  note: consacrer ce round à affaiblir ses protections ; garder les autres utilisations pour les effets qui gênent réellement le combat
+
+step: Une cible isolée peut être neutralisée à distance
+  do: Tenter immobilisation de monstre, Volonté DD 19, puis se rapprocher si elle est paralysée
+  note: la cible peut se libérer à son prochain tour ; exploiter rapidement l'ouverture
+
+## Rounds suivants
+
+step: Une cible est à 1,50 m et il peut rester sur place
+  do: Concentrer l'attaque à outrance sur elle : morsure +29 et 2 griffes +29
+  note: chaque touche ajoute 2d6 dégâts non létaux ; surveiller leur cumul avec les blessures pour déterminer la perte de connaissance
+
+step: Il doit se déplacer pour atteindre sa proie
+  do: Avancer de 12 m au maximum et porter une morsure avec Science de la frappe décisive : +29, 6d6+9 plus 2d6 non létaux
+  note: en vol, Attaque en vol permet de placer cette attaque pendant le déplacement puis de poursuivre le mouvement, pour un total de 12 m ; les attaques d'opportunité restent possibles
+
+step: Ses attaques touchent facilement la cible
+  do: Employer Attaque en puissance : attaques à +23, morsure à 2d6+21 et griffes à 1d10+21, toujours plus 2d6 non létaux par touche
+  note: avec Science de la frappe décisive, la morsure inflige alors 6d6+21 plus 2d6 non létaux
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Le mordre ; profiter d'Attaques réflexes pour punir plusieurs occasions dans le même round
+  note: garder la pression sur les lanceurs de sorts et les ennemis qui quittent sa zone menacée
+
+## Repli
+
+step: Points de vie sous 60 et une voie de fuite existe
+  do: Battre en retraite vers un passage dégagé, jusqu'à 24 m au sol ou en vol horizontal, puis chercher un couvert
+  note: l'action de retraite protège le départ de la première case ; les autres cases menacées traversées peuvent provoquer des attaques d'opportunité
+
+step: Des poursuivants se regroupent et il reste une utilisation de terreur
+  do: Depuis une position hors de leur allonge, lancer terreur, Volonté DD 18, puis poursuivre sa fuite de 12 m
+  note: les renforts encore présents couvrent son départ

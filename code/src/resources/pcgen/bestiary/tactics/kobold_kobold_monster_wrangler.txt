@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Petit humanoïde loyal mauvais, protégé par une CA de 22 mais fragile avec 17 points de vie.
+  Lance d’arçon de maître +4 (1d6, critique ×3), allonge de 3 m ; elle ne permet pas de frapper un adversaire adjacent.
+  Déplacement de 6 m par round ; vision dans le noir à 18 m ; Volonté +0.
+
+step: Il peut choisir sa position
+  do: Se poster dans un passage étroit, avec une voie de retraite dégagée et assez de place pour reculer.
+  note: Garder les ennemis à 3 m pour exploiter l’allonge de sa lance.
+
+## Ouverture
+
+step: Un ennemi approche sans être encore à portée
+  do: Préparer une attaque de lance d’arçon dès qu’il arrive à 3 m.
+  note: Attendre que la cible soit à portée plutôt que s’avancer au milieu du groupe adverse.
+
+step: Un ennemi se trouve déjà à 3 m
+  do: Attaquer à la lance d’arçon +4 (1d6, critique ×3).
+
+## Rounds suivants
+
+step: Un adversaire reste à 3 m
+  do: Répéter l’attaque de lance d’arçon.
+  note: Porter une attaque d’opportunité si un ennemi quitte une case menacée sans protection contre cette attaque.
+
+step: Un adversaire arrive à 1,50 m et une case de recul est libre
+  do: Faire un pas de placement de 1,50 m pour remettre cet adversaire à 3 m, puis l’attaquer à la lance.
+  note: Le pas de placement exige de ne pas effectuer d’autre déplacement pendant ce round.
+
+step: Un adversaire adjacent empêche de rétablir la distance par un pas de placement
+  do: Se désengager vers un passage libre pour retrouver de l’espace.
+  note: Sa lance ne peut pas frapper cet adversaire à cette distance.
+
+## Repli
+
+step: Points de vie à 5 ou moins, ou plusieurs ennemis menacent de l’encercler
+  do: Effectuer un désengagement vers la voie de retraite, jusqu’à 12 m si le terrain le permet.
+  note: Le désengagement occupe le round ; seule la case de départ échappe aux attaques d’opportunité des ennemis visibles.

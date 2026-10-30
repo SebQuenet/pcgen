@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Vase métallique de grande taille, solitaire et dépourvue d'intelligence, rencontrée sous terre. 87 pv, CA 4 ; espace occupé de 3 m et allonge de 1,50 m.
+  Coup +7 (1d8+4 plus 1d6 d'acide et poison). Vision aveugle à 18 m ; déplacement de 6 m et escalade de 3 m par round, Escalade +11.
+  Elle agit par instinct, sans préparer d'embuscade élaborée ni coordonner ses attaques.
+
+note: Poison et vapeurs irritantes
+  Le bloc mentionne ces deux capacités sans donner leurs effets ni leurs DD ; la portée et le fonctionnement des vapeurs ne sont pas précisés. Ne pas leur attribuer de règles supplémentaires.
+
+## Ouverture
+
+step: Une créature est perçue à 18 m ou moins, hors de son allonge
+  do: Avancer vers la créature la plus proche, jusqu'à 6 m, puis porter un coup si elle se trouve à 1,50 m ou moins.
+  note: Si ce premier déplacement ne permet pas d'attaquer, effectuer un second déplacement pour approcher de 12 m au total, sans porter de coup ce round.
+
+step: Une créature est déjà à 1,50 m ou moins
+  do: Porter un coup +7, infligeant 1d8+4 dégâts plus 1d6 d'acide et le poison.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter le coup chaque round contre cette cible.
+  note: Le bloc ne donne qu'une attaque de coup ; ne pas ajouter de morsure, de saisie ou d'engloutissement.
+
+step: La cible s'éloigne mais reste perçue
+  do: La poursuivre à 6 m par déplacement ; attaquer si un seul déplacement suffit à revenir à portée, sinon effectuer un double déplacement.
+
+step: La cible est accessible en escaladant une paroi
+  do: Grimper vers elle à 3 m par déplacement, puis porter un coup si elle est à portée et qu'il reste une action pour attaquer.
+  note: Escalade +11 ; un double déplacement en escalade couvre 6 m et ne laisse pas d'attaque ce round.
+
+## Repli
+
+step: La vase est blessée et perçoit encore une cible
+  do: Continuer son attaque ou sa poursuite instinctive.
+  note: Aucun seuil de pv ne déclenche de retraite tactique dans ce plan ; elle ne possède aucun moyen de fuite particulier indiqué.
+
+step: Toutes les cibles quittent sa vision aveugle de 18 m
+  do: Cesser de diriger ses coups contre elles ; reprendre l'approche si une créature redevient perceptible.

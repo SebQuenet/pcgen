@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Gribbon, petit humanoïde monstrueux neutre mauvais des forêts tempérées : 6 pv, CA 15, initiative +3. Fragile, il privilégie l'embuscade et le soutien de ses congénères.
+  Deux griffes +3 (1d3+1 chacune, avec étreinte jusqu'à la taille M), ou dague +3 (1d3+1, critique 19–20) ; dard +5 (1d3+1). Attaque coordonnée et Attaque en vol.
+  Marche et vol à 9 m ; manœuvrabilité médiocre. Allonge de 1,50 m ; vision dans le noir à 18 m.
+
+resource: Dard | 1 | attaque à distance +5, dégâts 1d3+1
+
+step: Les adversaires ne l'ont pas encore repéré
+  do: Se dissimuler dans la végétation et observer leur progression avant de choisir une cible isolée ou déjà occupée par un allié
+  note: Discrétion +11, ou +15 en forêt ; Perception +4. Prévoir un trajet de fuite dégagé pour son vol peu maniable.
+
+step: Plusieurs gribbons sont présents
+  do: Se répartir autour de la même cible pour pouvoir l'attaquer ensemble
+  note: Le profil mentionne une attaque coordonnée sans en préciser les effets ; ne lui attribuer aucun bonus chiffré supplémentaire sur cette seule base.
+
+## Ouverture
+
+step: La cible est à distance et le dard est encore disponible
+  do: Lancer le dard depuis une position protégée, puis rejoindre un couvert si le déplacement disponible le permet
+  note: Une seule attaque à +5, pour 1d3+1 dégâts ; le dard lancé n'est plus disponible sans récupération.
+
+step: Un passage en vol permet d'atteindre la cible et de terminer hors de son allonge
+  do: Utiliser Attaque en vol pour porter une seule attaque de griffe +3, puis poursuivre son déplacement, dans la limite de 9 m au total
+  note: Ce passage ne permet pas les deux griffes et ne protège pas des attaques d'opportunité. Ne pas maintenir une étreinte si cela empêche de poursuivre le passage.
+
+step: La cible est déjà au contact et aucun déplacement n'est nécessaire
+  do: Porter les deux attaques de griffes +3, chacune pour 1d3+1 dégâts, et tenter l'étreinte après une touche si la cible est de taille M ou inférieure
+  note: Les deux griffes nécessitent une attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible reste accessible aux autres gribbons
+  do: Continuer à concentrer les attaques sur elle ; utiliser les deux griffes lorsqu'il peut rester au contact, ou une seule après un déplacement
+
+step: Une étreinte a réussi et ses alliés peuvent le soutenir
+  do: Maintenir la lutte depuis un appui stable pour immobiliser la cible pendant que les autres l'attaquent
+  note: L'étreinte ne permet pas de soulever ni d'emporter automatiquement un adversaire en vol.
+
+step: La cible résiste à la lutte ou menace de le tuer
+  do: Relâcher la prise et chercher à se dégager pour retrouver un couvert
+  note: Ne pas s'obstiner dans une lutte avec seulement 6 pv.
+
+step: Le contact devient défavorable mais un trajet aérien reste praticable
+  do: Reprendre les passages avec une seule griffe, en choisissant des trajectoires qui limitent l'exposition aux ripostes
+  note: Avec une manœuvrabilité médiocre, éviter les virages serrés et les positions qui exigent de rester en vol stationnaire.
+
+## Repli
+
+step: Points de vie à 3 ou moins, ou isolement face à plusieurs adversaires
+  do: Rompre le combat ; au contact, utiliser le retrait si possible, puis fuir vers un couvert par un trajet dégagé
+  note: Marche ou vol à 9 m par déplacement ; le retrait ne protège pas de toutes les attaques d'opportunité.
+
+step: Les poursuivants perdent sa trace
+  do: Se cacher dans la forêt avec Discrétion +15 et laisser les adversaires s'éloigner

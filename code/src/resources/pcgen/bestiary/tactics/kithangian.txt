@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Kithangian, démon de taille G, chaotique mauvais, doté de 115 pv et d'une CA de 25. Il se déplace de 15 m et menace jusqu'à 3 m.
+  Attaque à outrance : 2 griffes +16 (1d6+6, critique 19–20, étreinte) et 2 dards +16 (1d6+6, critique 19–20, poison). BMO de lutte +22.
+  Vision dans le noir à 18 m, vision à 360°, Perception +18 ; sa vision circulaire empêche la prise en tenaille.
+  Réduction des dégâts 10/Bien, résistance à la magie 20 ; immunité à l'électricité, à la peur et au poison ; résistances à l'acide, au froid et au feu de 10.
+
+resource: Communication avec les animaux | permanent | permet de parler aux animaux
+resource: Changement de forme et transformation rapide | à volonté | formes animales de taille M ou G, selon forme bestiale II
+resource: Immobilisation d'animal | à volonté | Volonté DD 15
+resource: Téléportation suprême | à volonté | lui-même et 50 livres d'objets seulement
+resource: Désir surnaturel | à volonté | Volonté DD 14
+resource: Désir surnaturel rapide | 3/jour | action rapide, Volonté DD 14
+resource: Marche dans les airs | 3/jour | déplacement aérien en marchant
+resource: Métamorphose funeste | 1/jour | Vigueur DD 18, puis Volonté DD 18 selon les effets du sort
+resource: Convocation | 1/jour | 1 kithangian, 35 % de réussite
+
+step: Il repère les intrus avant d'être découvert
+  do: Prendre une forme animale de taille M ou G et observer leurs déplacements depuis un couvert, avec Discrétion +10
+  note: Choisir une approche qui lui permettra de reprendre sa forme naturelle avant de porter ses attaques de griffes et de dards
+
+step: Il dispose d'un round entier avant l'affrontement
+  do: Tenter la convocation d'un second kithangian
+  note: En cas de réussite, coordonner leurs cibles par télépathie à 30 m ; en cas d'échec, l'utilisation quotidienne est dépensée
+
+step: Le terrain impose de franchir un vide ou d'approcher par-dessus un obstacle
+  do: Activer marche dans les airs avant de s'exposer
+  note: Ce pouvoir lui permet de marcher dans les airs ; il ne lui donne pas une vitesse de vol
+
+## Ouverture
+
+step: Il est encore sous forme animale quand le combat commence
+  do: Reprendre sa forme naturelle avec transformation rapide
+  note: Réserver désir surnaturel rapide à un round où son action rapide est disponible
+
+step: Une cible dangereuse est visible, mais encore hors de son allonge de 3 m
+  do: Tenter métamorphose funeste sur elle, puis se déplacer vers une cible accessible
+  note: Privilégier une cible dont les moyens de résistance semblent faibles ; conserver l'allonge de 3 m pour menacer les approches
+
+step: Une cible est déjà à portée et il peut consacrer son round aux attaques
+  do: Porter l'attaque à outrance avec les deux griffes et les deux dards
+  note: Si son action rapide est libre, ajouter désir surnaturel rapide sur un autre adversaire pour l'occuper ou le faire se déplacer vers l'objet de son désir
+
+step: Une monture ou un compagnon animal constitue une menace immédiate
+  do: Employer immobilisation d'animal sur cet animal, Volonté DD 15
+  note: Cette option remplace son attaque à outrance pour le round
+
+## Rounds suivants
+
+step: Il peut rester au contact d'une cible dangereuse
+  do: Répéter l'attaque à outrance et concentrer les attaques sur cette cible
+  note: Les dards appliquent leur poison ; utiliser les dégâts et le critique 19–20 indiqués au profil
+
+step: Une griffe touche une cible de taille M ou inférieure qu'il veut retenir
+  do: Tenter l'étreinte gratuite, BMO +22
+  note: Choisir une cible isolée ou un lanceur de sorts ; retenir un ennemi l'engage lui aussi dans la lutte
+
+step: Il tient déjà une cible et souhaite conserver la prise
+  do: Consacrer son action simple au maintien de la lutte ; sur une réussite, infliger les dégâts d'une griffe
+  note: BMO de base +22, avec le bonus de +5 au maintien si la cible ne s'est pas libérée depuis son tour précédent ; cette action remplace l'attaque à outrance
+
+step: Ses attaques touchent facilement une cible peu protégée
+  do: Employer Attaque en puissance : griffes et dards +13, dégâts 1d6+12 chacun
+  note: Ces valeurs supposent qu'il n'est pas lui-même en lutte ; conserver les attaques normales contre une CA élevée
+
+step: Un adversaire libre menace de secourir sa victime et son action rapide est disponible
+  do: Employer désir surnaturel rapide, Volonté DD 14, tant qu'il reste des utilisations
+  note: Désir surnaturel ne donne pas le contrôle des actions de combat de la cible ; choisir un objet de désir qui détourne son attention sans imposer un danger évident
+
+step: Les ennemis lui refusent le contact ou contrôlent son approche
+  do: Utiliser téléportation suprême pour gagner un emplacement connu proche d'une cible isolée ou derrière un couvert
+  note: La téléportation consomme son action simple ; préparer l'attaque à outrance du round suivant
+
+## Repli
+
+step: Il tombe sous 30 pv ou ne peut plus soutenir le corps à corps
+  do: Relâcher toute créature agrippée et utiliser téléportation suprême vers un refuge connu
+  note: Son pouvoir n'emporte pas un allié ou une victime ; il peut fuir sans avoir gardé une utilisation en réserve
+
+step: La téléportation est empêchée
+  do: Se retirer vers un couvert en utilisant sa vitesse de 15 m ; si marche dans les airs est déjà active, emprunter une voie aérienne inaccessible aux poursuivants terrestres
+  note: Quand un ennemi le menace, une retraite lui permet un double déplacement jusqu'à 30 m et protège seulement sa sortie de la case de départ contre les attaques d'opportunité

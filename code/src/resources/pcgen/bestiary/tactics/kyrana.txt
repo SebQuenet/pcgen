@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Kyrana, dragon terrestre de taille M, très territorial, peu intelligent et attiré par la chaleur. 30 pv, CA 14, déplacement de 9 m, allonge de 1,50 m.
+  Morsure +8 (1d4+3) et 2 griffes +7 (1d3+3). Il cherche le contact pour porter ses trois attaques.
+  Immunisé au feu, à la paralysie et au sommeil ; vulnérable au froid. Vision dans le noir à 18 m, vision nocturne et Perception +9.
+
+resource: Régénération ardente | sans limite quotidienne | Les dégâts de feu qu'il devrait subir lui rendent autant de pv, avec un maximum de 5 pv par round.
+
+step: Des intrus approchent de son territoire
+  do: Les repérer avec Perception +9 et les attendre près de la source de chaleur qu'il défend.
+  note: Il réagit en prédateur territorial ; ses manœuvres restent simples et directes.
+
+step: Des flammes sont déjà présentes et accessibles
+  do: Se placer dans les flammes si le terrain le permet, afin de profiter de la régénération ardente dès qu'il est blessé.
+
+## Ouverture
+
+step: Une cible peut être atteinte après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à 1,50 m de la cible, puis porter une morsure +8 (1d4+3).
+  note: Après ce déplacement, il ne porte pas également ses deux attaques de griffes.
+
+step: Un adversaire est déjà à 1,50 m
+  do: Attaquer à outrance : morsure +8 (1d4+3) et 2 griffes +7 (1d3+3).
+
+step: Aucun adversaire ne peut être atteint avec un seul déplacement
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m, en utilisant les obstacles présents pour limiter son exposition aux tirs.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance sur la même cible jusqu'à ce qu'elle tombe ou s'éloigne.
+  note: Rester au contact du feu déjà présent lorsque cela permet aussi de garder la cible à portée.
+
+step: Un déplacement de 1,50 m suffit pour retrouver le contact
+  do: Faire un pas de placement de 1,50 m, puis porter la morsure et les deux griffes à outrance.
+
+step: Il doit se déplacer de plus de 1,50 m pour poursuivre
+  do: Avancer de 9 m au maximum, puis mordre si la cible est à portée.
+
+## Repli
+
+step: Points de vie à 10 ou moins, ou attaques de froid répétées
+  do: Battre en retraite vers une issue ou une source de feu accessible, jusqu'à 18 m par round sur terrain dégagé.
+  note: L'action de retraite évite les attaques d'opportunité liées à la sortie de sa case initiale, mais pas celles provoquées ensuite sur le trajet.
+
+step: Il a rompu le contact et atteint des flammes
+  do: Rester au contact du feu pour récupérer des pv, jusqu'à 5 par round, et laisser partir les intrus s'ils renoncent à son territoire.

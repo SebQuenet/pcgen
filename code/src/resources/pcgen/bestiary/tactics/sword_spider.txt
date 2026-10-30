@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Sword Spider, créature artificielle de taille G, sans Intelligence, FP 10 ; 112 pv, CA 25. Elle suit ses consignes sans élaborer de stratégie complexe.
+  Patte-lame +16/+11/+6 et trois autres pattes-lames +16 (2d6+2 chacune, critique 19–20) ; morsure +16 (1d8+2 et poison). Une attaque à outrance comprend donc six coups de patte-lame et une morsure.
+  Déplacement au sol et escalade à 6 m ; espace occupé de 3 m, allonge de 3 m. Vision dans le noir à 18 m et vision nocturne.
+  Réduction des dégâts 10/adamantium ; immunité à la magie et traits des créatures artificielles.
+
+step: Elle est chargée de garder un accès
+  do: Se placer dans le passage, pour obliger les intrus à entrer dans son allonge de 3 m
+  note: Sa Perception est de +0 ; ne pas lui attribuer de détection spéciale au-delà de ses sens indiqués.
+
+## Ouverture
+
+step: Un ennemi est déjà à 3 m ou moins et aucun déplacement n'est nécessaire
+  do: Attaque à outrance avec les six coups de patte-lame et la morsure
+  note: Le poison de la morsure est indiqué, mais ses effets et son DD ne sont pas fournis ; ne pas leur attribuer de valeurs.
+
+step: Aucun ennemi n'est à portée
+  do: Avancer de 6 m au maximum vers un intrus et, s'il entre dans l'allonge de 3 m, porter un seul coup de patte-lame +16 (2d6+2, critique 19–20)
+  note: Si cela ne suffit pas pour attaquer, un double déplacement permet de parcourir jusqu'à 12 m au sol, sans attaque ce round.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Continuer les attaques à outrance sur lui jusqu'à sa chute, puis frapper un autre ennemi accessible avec les attaques restantes
+  note: Rester en position permet de multiplier les coups tout en bloquant le passage ; appliquer la réduction des dégâts à chaque attaque physique concernée.
+
+step: Un pas de 1,50 m suffit pour retrouver une cible à portée
+  do: Faire ce pas, puis effectuer l'attaque à outrance
+
+step: La cible s'éloigne davantage et les consignes autorisent la poursuite
+  do: La rejoindre à 6 m par déplacement, puis porter un seul coup de patte-lame si elle est à portée
+  note: Utiliser l'escalade à 6 m pour suivre une cible sur une paroi accessible ; elle ne possède aucune attaque à distance indiquée.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer d'exécuter ses consignes ; aucun seuil de fuite spontané
+  note: Sans Intelligence, elle ne prépare ni retraite tactique ni revanche.
+
+step: Une consigne prévoit explicitement le repli
+  do: Rejoindre la position prescrite à 6 m par déplacement au sol ou en escalade

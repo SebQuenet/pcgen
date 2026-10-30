@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Robot récupérateur de taille G, neutre et intelligent, conçu pour construire et réparer. Il défend son travail en immobilisant les intrus et en démantelant leur équipement.
+  Initiative +11 ; 5 griffes +21 (1d6+6, critique 19-20 et étreinte), allonge de 4,50 m ; fusil laser intégré +22 au contact à distance (2d6 de feu).
+  Déplacement de 9 m, escalade de 6 m ; espace occupé de 3 m. Perception +18, vision dans le noir à 18 m et vision nocturne.
+
+note: Protection
+  CA 27, contact 16 ; 168 pv au total, dont 50 pv de champ de force. Solidité 10, résistances au froid 15 et au feu 15, immunités des créatures artificielles.
+  L'électricité inflige 150 % des dégâts normaux. Tant que le champ tient, il protège des critiques ; après son effondrement, les critiques menacent aussi le fonctionnement du robot.
+
+resource: Champ de force | 50 pv | Absorbe les dégâts en premier ; récupère 10 pv par round tant qu'il reste actif. À 0 pv, s'effondre pour 24 heures.
+resource: Récupération | À volonté | Action simple : répare 2d6 pv de son châssis ou d'un robot à portée.
+resource: Escalade accélérée | Une fois tous les 1d4 rounds | Action rapide : vitesse d'escalade portée à 12 m pendant 1 round.
+
+step: Des intrus approchent du chantier
+  do: Se placer près d'un passage resserré ou d'une paroi accessible pour exploiter son allonge et conserver une voie de dégagement
+  note: Il comprend le commun et l'androffan ; une sommation peut précéder l'affrontement si ses instructions le permettent.
+
+## Ouverture
+
+step: Aucun ennemi à 4,50 m ou moins
+  do: Avancer jusqu'à 9 m vers une cible dangereuse et tirer au laser, +22 contre la CA de contact, pour 2d6 de feu
+  note: Portée du laser : 45 m ; un seul tir par round. Priorité à un utilisateur d'électricité repéré.
+
+step: Un ennemi est déjà à portée des griffes
+  do: Attaque à outrance : 5 griffes +21 et un tir laser +22 contre la CA de contact
+  note: Les armes combinées permettent ce mélange sans attaque d'opportunité pour le laser. Si une griffe agrippe la cible, réserver plutôt l'unique tir du round à l'action rapide contre elle.
+
+step: Une griffe touche une cible saisissable
+  do: Tenter gratuitement l'étreinte, BMC +31 ; infliger aussi 1d6+6 de constriction si la lutte réussit
+  note: Pour saisir avec la seule griffe et rester libre de ses mouvements, le BMC devient +21. Cette option laisse les autres membres disponibles, mais la prise devra être maintenue au round suivant.
+
+## Rounds suivants
+
+step: Une victime reste agrippée
+  do: Maintenir la lutte par une action simple, infliger les dégâts de lutte et de constriction, puis tirer sur elle au laser par une action rapide
+  note: Le tir contre une victime agrippée menace un critique sur 18-20. Il remplace le tir normal du round ; maintenir la prise empêche l'attaque à outrance ce tour.
+
+step: Aucune prise n'est à maintenir et une cible reste à portée
+  do: Répéter l'attaque à outrance avec les cinq griffes et le laser ; concentrer les griffes sur la menace électrique ou l'adversaire le plus vulnérable à l'étreinte
+  note: Attaque en puissance contre une cible facile à toucher ; conserver la précision normale contre une défense élevée.
+
+step: Une arme accessible menace sérieusement son châssis
+  do: Remplacer une attaque de griffe par une destruction de l'arme, BMC +27 contre le DMD du porteur
+  note: Science de la destruction évite l'attaque d'opportunité ; Destruction supérieure reporte sur le porteur les dégâts excédant ceux nécessaires pour détruire l'objet.
+
+step: Un critique est confirmé
+  do: Appliquer Critique aveuglant : Vigueur DD 26 ou cécité permanente ; en cas de réussite, cible éblouie pendant 1d4 rounds
+  note: Don pour les critiques ajoute +4 au jet de confirmation.
+
+step: Le laser est inefficace contre la cible
+  do: Privilégier les griffes, l'étreinte et la destruction de son équipement
+  note: Une créature invisible est insensible au laser ; fumée et brouillard le gênent. Les effets de force ne bloquent pas le rayon.
+
+## Repli
+
+step: Champ de force effondré et moins de 42 pv, si ses ordres autorisent le repli
+  do: Lâcher toute prise, rompre le contact et gagner un couvert ou une hauteur ; employer l'escalade accélérée si elle est disponible
+  note: L'action rapide d'escalade concurrence celle du tir sur une victime agrippée. Le champ détruit ne se rétablit pas pendant cette fuite.
+
+step: À couvert, sans ennemi capable de l'atteindre immédiatement
+  do: Utiliser Récupération pour réparer 2d6 pv par round avant de reprendre la défense du chantier
+  note: Cette réparation soigne le châssis, sans réactiver le champ de force effondré.
+
+step: Ses instructions lui imposent de tenir la position
+  do: Continuer à combattre jusqu'à destruction, en privilégiant les attaques à outrance tant qu'un ennemi reste à portée

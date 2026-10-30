@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Lusca, prédateur marin solitaire, intelligent et chaotique mauvais, de taille Gigantesque ; FP 17, 270 pv, CA 32. Il recherche les proies dans l'eau et attaque depuis les profondeurs.
+  Trois morsures +27 (2d8+11, critique 19-20) et huit tentacules +26 (1d8+5 plus étreinte) ; allonge et espace occupé de 6 m ; BMO +39 en lutte, DMD 45.
+  Nage 12 m, déplacement terrestre 3 m, propulsion 60 m ; immunités à l'électricité et au poison. Vision dans le noir à 18 m et vision nocturne.
+
+resource: Éclair multiple | 3/jour | NLS 18, DD 20
+resource: Geyser | 3/jour | NLS 18, DD 19
+resource: Convocation | 1/jour | niveau 8 ; 50 % de chances de convoquer 1d4+1 requins sanguinaires
+resource: Vortex | 1/jour | NLS 18, DD 21
+
+step: Des proies approchent sans l'avoir repéré
+  do: Rester immergé et approcher à couvert, avec Discrétion +11 ; observer les nageurs isolés et les adversaires proches du bord avec Perception +28
+  note: Choisir une approche laissant assez d'eau libre pour se retirer par propulsion.
+
+step: Il dispose d'un round de préparation et prévoit une forte résistance
+  do: Tenter la convocation de requins sanguinaires avant de s'exposer ; leur faire attaquer les adversaires dans l'eau
+  note: Une seule tentative quotidienne ; prévoir la suite même si la convocation échoue.
+
+## Ouverture
+
+step: Plusieurs ennemis sont visibles et hors de son allonge
+  do: Employer éclair multiple sur une cible permettant d'atteindre le plus d'adversaires secondaires à 9 m ou moins d'elle
+  note: 18d6 dégâts d'électricité ; DD 20 pour la cible principale. Ce pouvoir consomme son action simple ; il peut aussi nager pour préparer le contact.
+
+step: Des nageurs sont regroupés dans une étendue d'eau assez profonde, et vortex est disponible
+  do: Placer vortex sur leur position ou leur passage pour les immobiliser dans les courants
+  note: Tourbillon immobile, large de 9 m en surface et profond de 15 m, durant 18 rounds. Les créatures de taille G ou inférieure risquent 3d6 dégâts ; celles de taille M ou inférieure peuvent être happées après deux échecs aux Réflexes DD 21, puis subir 1d8 dégâts par round.
+
+step: Une proie se trouve déjà à 6 m ou moins, sans déplacement nécessaire
+  do: Effectuer une attaque à outrance avec les trois morsures et les huit tentacules ; concentrer les morsures sur la cible la plus dangereuse et tenter l'étreinte après chaque tentacule qui touche
+  note: Les tentacules permettent de saisir les créatures de taille TG ou inférieure. Chaque étreinte se tente gratuitement avec BMO +39.
+
+## Rounds suivants
+
+step: Une ou plusieurs victimes sont déjà tenues par les tentacules
+  do: Maintenir les prises par une action rapide grâce à vicious grapple ; choisir de blesser les victimes ou de les déplacer vers l'eau et loin de leurs alliés
+  note: Il ne reçoit pas l'état agrippé lorsqu'il saisit avec ses tentacules. Le maintien des prises laisse son action simple ou son attaque à outrance disponible ; les tentacules occupés ne frappent pas d'autres cibles.
+
+step: Des adversaires restent à portée de mêlée
+  do: Répéter l'attaque à outrance avec les morsures et les tentacules disponibles ; achever d'abord un adversaire blessé ou un lanceur de sorts accessible
+  note: Activer Attaque en puissance contre les cibles faciles à toucher ; conserver la précision contre une CA élevée.
+
+step: Un adversaire dangereux reste sur une surface horizontale hors de portée, et geyser est disponible
+  do: Faire surgir un geyser sous lui pour le projeter et le renverser, puis approcher pendant qu'il se relève
+  note: Réflexes DD 19 ; colonne occupant une case de 1,50 m, jusqu'à 27 m de haut. Éviter de rester dans les retombées brûlantes ; le geyser persiste 18 rounds après la fin de la concentration.
+
+step: Les adversaires s'éloignent ou se regroupent hors de portée
+  do: Utiliser les éclairs multiples restants ; nager pour retrouver une position permettant une attaque à outrance au round suivant
+  note: Après un déplacement normal supérieur à 1,50 m, limiter la mêlée à une attaque simple ce round.
+
+## Repli
+
+step: Points de vie sous 70, ou adversaires devenus trop dangereux
+  do: Relâcher les prises et employer la propulsion pour reculer de 60 m en ligne droite sous l'eau, par une action complexe
+  note: La propulsion ne provoque pas d'attaque d'opportunité. Les requins déjà convoqués peuvent occuper les poursuivants pendant qu'il gagne les profondeurs.

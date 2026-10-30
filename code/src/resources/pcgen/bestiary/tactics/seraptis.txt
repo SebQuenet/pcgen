@@ -1,0 +1,91 @@
+## Avant le combat
+
+note: Profil
+  Seraptis, démone chaotique mauvaise de FP 15, à quatre bras aux plaies dentées. Elle brise la résistance de ses victimes par le désespoir, puis les fait saigner au contact.
+  217 pv, CA 30 ; déplacement de 15 m ; allonge de 1,50 m. Cimeterre +3 sanglant +27/+22/+17 (1d6+11, critique 15–20), 3 griffes +21 (1d6+4 et étreinte), coup de cornes +21 (2d6+4).
+  Sans cimeterre : 4 griffes +23 (1d6+8 et étreinte), coup de cornes +23 (2d6+8). Lutte +25.
+  Regard de désespoir à 9 m, Volonté DD 22 ; les saignements qu'elle inflige à cette distance alimentent sa guérison.
+
+note: Défenses et perception
+  RD 10/fer froid et Bien, RM 26 ; immunité aux saignements, à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu.
+  Perception +30, vision dans le noir à 18 m ; perception de la mort, vision lucide et aura maudite constantes. Les bonus défensifs de l'aura sont déjà compris dans les valeurs du profil.
+
+resource: Confusion | 3/jour | Volonté DD 19
+resource: Domination d'humanoïde | 3/jour | Volonté DD 19 ; cible humanoïde
+resource: Exigence | 3/jour | Volonté DD 23 ; préparation à distance, incantation de 10 minutes
+resource: Vol | 3/jour | à lancer avant l'affrontement si possible
+resource: Symbole d'aliénation mentale | 1/jour | Volonté DD 23 ; inscription en 10 minutes
+resource: Convocation | 1/jour | un glabrezu, 40 %, ou une seraptis, 20 % ; une seule tentative, même en cas d'échec
+resource: Pouvoirs à volonté | illimité | Désespoir foudroyant, Volonté DD 18 ; dissipation de la magie ; télékinésie, DD 20 selon l'usage ; téléportation suprême
+resource: Aura maudite | constante | DD 23
+
+step: Elle dispose du temps nécessaire pour préparer le terrain
+  do: Inscrire un symbole d'aliénation mentale sur le passage prévu des intrus et choisir un déclencheur adapté.
+  note: Préparer ce piège avant leur arrivée ; son incantation est trop longue pour une ouverture de combat.
+
+step: Une attaque est imminente et elle peut encore se préparer
+  do: Tenter de convoquer un glabrezu, puis lancer vol si la hauteur lui procure un avantage.
+  note: Effectuer ces préparatifs successivement. La convocation d'une autre seraptis reste une alternative moins probable.
+
+step: Elle combat avec les succubes de son culte
+  do: Coordonner leur placement par télépathie à 30 m et leur faire couvrir les accès pendant qu'elle choisit sa cible.
+  note: Sa vision lucide l'aide à reconnaître les illusions et les déguisements magiques.
+
+## Ouverture
+
+note: Regard de désespoir
+  À 9 m, une créature exposée à son regard fait un jet de Volonté DD 22 : échec, diminution permanente de 1d6 points de Charisme et état chancelant pendant 1d6 rounds.
+  Appliquer les règles de regard au début du tour des victimes ; elle peut aussi consacrer son action simple à un regard actif contre une cible. Éviter son regard ou fermer les yeux protège au prix des désavantages correspondants.
+
+step: Plusieurs adversaires peuvent être pris dans un cône de 9 m
+  do: Lancer désespoir foudroyant, Volonté DD 18, puis rester assez près pour les exposer au regard.
+  note: Le malus de −2 aux jets de sauvegarde des victimes facilite ensuite le regard et les autres pouvoirs mentaux. Ce round sert à les affaiblir ; la confusion viendra à un round ultérieur.
+
+step: Le groupe est regroupé à distance et le cône ne convient pas
+  do: Lancer confusion, Volonté DD 19, pour désorganiser les adversaires avant l'approche.
+  note: Choisir cette ouverture plutôt que de dépenser plusieurs pouvoirs dans le même round.
+
+step: Un humanoïde dangereux est isolé ou paraît vulnérable aux influences mentales
+  do: Lancer domination d'humanoïde, Volonté DD 19, et lui ordonner d'attaquer ses compagnons ou d'entraver leur progression.
+  note: Employer les règles normales de domination ; une cible protégée contre le contrôle mental doit d'abord perdre cette protection.
+
+step: Un adversaire est déjà à 1,50 m et aucune urgence ne justifie un pouvoir
+  do: Effectuer l'attaque à outrance au cimeterre, avec les trois griffes et le coup de cornes.
+  note: Si elle doit d'abord se déplacer de plus de 1,50 m, porter une seule attaque de cimeterre +27 après le mouvement.
+
+## Rounds suivants
+
+step: Une cible vulnérable aux saignements reste au contact
+  do: Privilégier l'attaque à outrance au cimeterre et concentrer les coups sur elle.
+  note: Chaque touche du cimeterre ajoute 1 point de saignement par round ; ces points se cumulent. Critique sanglant ajoute 2d6 de saignement sur un critique confirmé ; ses effets se cumulent également.
+  note: Les dégâts de saignement surviennent au tour de la victime. Premiers secours DD 15 ou des soins magiques peuvent les arrêter.
+
+step: Une griffe touche une cible que l'étreinte peut saisir
+  do: Tenter la lutte avec l'étreinte, au bonus de +25, si immobiliser cette cible sert mieux le combat que conserver sa liberté de mouvement.
+  note: La lutte limite aussi la seraptis. Sans cimeterre, employer les quatre griffes et les cornes pour multiplier les tentatives d'étreinte.
+
+step: Elle est blessée et une victime saigne encore de ses attaques
+  do: Rester à 9 m ou moins de cette victime et poursuivre la pression sur les adversaires capables de la soigner.
+  note: Guérison par le sang lui rend autant de pv que les dégâts de saignement qu'elle a elle-même infligés dans ce rayon, sans dépasser 217 pv.
+
+step: Une protection magique empêche le regard ou la domination de fonctionner
+  do: Tenter une dissipation de la magie ciblée sur l'adversaire protégé.
+  note: Si les ennemis sont immunisés aux effets mentaux, privilégier les attaques physiques et les saignements plutôt que répéter des pouvoirs inefficaces.
+
+step: Un adversaire reste hors de portée ou occupe une position difficile à atteindre
+  do: Utiliser télékinésie pour tenter de le déplacer ou de le désarmer, ou approcher grâce à vol s'il est actif.
+  note: Le DD 20 s'applique aux usages de télékinésie qui autorisent une sauvegarde ; une manœuvre utilise ses propres règles de résolution.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Frapper au cimeterre pour ajouter une blessure sanglante.
+  note: Attaques réflexes permet jusqu'à sept attaques d'opportunité par round, si des occasions distinctes se présentent ; son allonge reste de 1,50 m.
+
+## Repli
+
+step: Points de vie à 60 ou moins, ou risque d'être neutralisée avant son prochain tour
+  do: Utiliser téléportation suprême vers un lieu sûr connu.
+  note: Elle ne peut emporter qu'elle-même et jusqu'à environ 22,5 kg d'objets ; ni allié ni victime agrippée. La téléportation consomme son action simple.
+
+step: Une entrave empêche la téléportation
+  do: Tenter de dissiper l'effet si cela est possible ; sinon, rompre le contact et fuir à 15 m par déplacement, ou par vol s'il est actif.
+  note: Placer ses alliés éventuels entre elle et les adversaires. Elle ne s'attarde à portée d'une victime qui saigne que si les soins gagnés compensent le danger.

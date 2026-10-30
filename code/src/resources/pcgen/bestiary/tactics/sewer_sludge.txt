@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Vase aquatique de taille M, sans intelligence ; 38 pv, CA 14. Elle saisit ses proies au contact et les écrase par constriction.
+  Coup +6 (1d8+4, maladie et étreinte) ; constriction (1d8+4) ; allonge de 1,50 m.
+  Perception aveugle à 9 m ; marche, escalade et nage à 6 m ; amphibie. Immunités au froid, à l'électricité et celles des vases.
+
+resource: Puanteur | permanente | rayon de 3 m, DD 17
+
+step: Aucune proie au contact
+  do: Rester immobile en profitant du camouflage, jusqu'à l'approche d'une créature.
+  note: Aucun bonus ni mécanisme précis de camouflage n'est fourni dans le profil.
+
+## Ouverture
+
+step: Une proie est détectée à 9 m ou moins, mais reste hors de l'allonge de 1,50 m
+  do: S'approcher par la marche, la nage ou l'escalade, selon le terrain, pour arriver au contact.
+  note: La puanteur entre en jeu dès que la proie se trouve à 3 m ou moins ; DD 17.
+
+step: Une proie est à 1,50 m ou moins
+  do: Porter un coup +6, infligeant 1d8+4 dégâts et exposant à la maladie ; tenter l'étreinte si le coup touche.
+  note: Une étreinte réussie déclenche aussi la constriction, pour 1d8+4 dégâts supplémentaires.
+  note: Le DD et les effets de la maladie ne sont pas précisés dans le profil fourni.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et choisir d'infliger les dégâts du coup, soit 1d8+4 ; ajouter la constriction de 1d8+4 si le test de lutte réussit.
+  note: Continuer à comprimer cette proie tant que la prise tient.
+
+step: La prise est rompue ou aucune proie n'est agrippée
+  do: Frapper une créature accessible avec le coup +6, puis tenter à nouveau l'étreinte et la constriction.
+
+step: Les proies s'écartent, mais restent détectables à 9 m ou moins
+  do: Les suivre avec le mode de déplacement adapté au terrain, puis reprendre les coups dès qu'une cible est à 1,50 m.
+  note: Son caractère amphibie lui permet de poursuivre dans l'eau comme hors de l'eau.
+
+## Repli
+
+step: La vase est blessée et une proie reste accessible
+  do: Continuer les coups, l'étreinte et la constriction, même avec peu de points de vie.
+  note: Dépourvue d'intelligence, elle n'organise pas de retraite tactique.

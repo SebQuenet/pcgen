@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Construction élémentaire d'eau de taille TG, neutre et dépourvue d'intelligence ; elle exécute ses consignes sans élaborer de stratégie personnelle.
+  205 pv ; CA 27 ; réduction des dégâts 10/adamantium ; immunités de construction, d'élémentaire et à la magie ; maîtrise de l'eau.
+  Deux coups +39, chacun infligeant 2d8+11 dégâts ; allonge de 4,50 m ; engloutissement DD 36 ; aspersion (drench).
+  Déplacement au sol de 9 m, nage de 36 m ; espace occupé de 4,50 m ; vision dans le noir à 18 m et vision nocturne.
+
+step: Un passage aquatique doit être gardé
+  do: Le placer dans l'eau, sur le trajet des intrus, pour exploiter sa nage et son allonge
+  note: Définir ses consignes avant la rencontre : zone à défendre, cibles à attaquer et limites de poursuite.
+
+## Ouverture
+
+step: Un ennemi est déjà à 4,50 m ou moins
+  do: Porter une attaque à outrance : deux coups +39, chacun pour 2d8+11 dégâts
+
+step: Un ennemi peut être atteint après un déplacement
+  do: Avancer de 9 m au sol ou nager de 36 m au maximum, puis porter un coup +39 pour 2d8+11 dégâts
+  note: Rester dans la zone assignée si ses consignes limitent la poursuite.
+
+## Rounds suivants
+
+step: Des adversaires peuvent être engloutis
+  do: Employer l'engloutissement, DD 36
+  note: Donner la priorité aux intrus qui tentent de franchir le passage défendu.
+
+step: Un adversaire reste dans son allonge et l'engloutissement n'est pas choisi
+  do: Répéter l'attaque à outrance avec ses deux coups +39, pour 2d8+11 dégâts chacun
+
+step: Les adversaires se déplacent dans l'eau
+  do: Utiliser sa nage de 36 m pour les rejoindre ou reprendre sa position de garde, selon ses consignes
+  note: Après un déplacement, ne porter qu'un coup si une cible est à portée.
+
+step: Des flammes accessibles doivent être éteintes
+  do: Employer l'aspersion (drench)
+
+## Repli
+
+step: Ses points de vie diminuent sans qu'une consigne prévoie de repli
+  do: Continuer à exécuter ses consignes et à combattre jusqu'à sa destruction
+  note: Ne pas lui attribuer de seuil de fuite instinctive : cette construction est dépourvue d'intelligence.
+
+step: Une consigne prévoit de quitter le combat
+  do: Rejoindre le point prévu, en nageant à 36 m par déplacement si le trajet passe dans l'eau, ou à 9 m au sol

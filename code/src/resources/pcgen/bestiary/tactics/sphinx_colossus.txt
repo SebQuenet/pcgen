@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Colosse sphinx neutre, construction mythique gigantesque et solitaire des déserts chauds, vestige des prêtres et des rois-dieux de l'Osirion antique.
+  199 pv, CA 31, RD 10/épique ; déplacement de 15 m et glissement dans la terre ; espace et allonge de 6 m.
+  Deux coups +29 (3d6+15 chacun), écrasement +29 (6d6+22 et immobilisation), rocher +15 (3d6+22).
+  Sa priorité tactique est d'enfermer les intrus dans son aura d'antimagie de 6 m et de maintenir les plus dangereux sous ses pattes.
+
+resource: Coup au but | 3/jour | action simple ; +20 au prochain jet d'attaque effectué avant la fin du round suivant ; ignore les chances de rater dues au camouflage
+resource: Moment de prescience | 1/jour | action simple, durée 12 heures ; bonus d'intuition de +12 à un seul jet admissible ou à la CA contre une attaque, puis le pouvoir prend fin
+resource: Puissance mythique | 4/jour | réserve commune aux dépenses mythiques ; la résilience mythique coûte 1 utilisation
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +16, la perception des vibrations à 36 m et la vision à rayons X ; distinguer les mouvements au sol des menaces aériennes.
+  note: vision dans le noir à 18 m et vision nocturne ; les rayons X ne permettent pas de frapper à travers un obstacle solide.
+
+step: Il dispose d'un round de préparation
+  do: Activer moment de prescience et conserver son bonus pour une immobilisation décisive ou un jet de sauvegarde dangereux.
+  note: le bonus s'emploie sans action, avant le jet ; il ne se cumule pas avec celui de coup au but sur une même attaque.
+
+step: Il attend sous forme de statue
+  do: Surveiller les alentours et préparer ses pouvoirs magiques dès l'alerte.
+  note: cette forme interdit déplacement et attaques ; elle permet encore les pouvoirs magiques et surnaturels.
+
+## Ouverture
+
+step: Le combat commence alors qu'il est en statue
+  do: Consacrer une action complexe à reprendre sa forme mobile.
+
+step: Il attaque avec des ennemis dans un rayon de 45 m
+  do: Faire résoudre la présence terrifiante, Volonté DD 20, en complément de son attaque.
+
+step: Un lanceur de sorts peut être rejoint
+  do: Avancer jusqu'à 15 m pour l'inclure dans l'aura d'antimagie de 6 m ; s'il est à portée, porter un coup +29 avec Science de la frappe décisive, pour 9d6+15 dégâts.
+  note: l'aura réprime la magie qu'elle affecte ; les divinations et les propres pouvoirs du colosse continuent de fonctionner. La frappe décisive accompagne une attaque simple, pas une charge.
+
+step: Une cible importante est difficile à toucher et ne peut pas être engagée immédiatement
+  do: Activer coup au but ; au round suivant, consacrer son bonus à un rocher ou à l'écrasement de cette cible.
+  note: cette préparation prend une action simple ; elle ne permet pas aussi une attaque simple pendant ce même tour.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée sans déplacement nécessaire
+  do: Attaque à outrance : deux coups +29, chacun pour 3d6+15 dégâts, en concentrant les deux sur la menace principale.
+
+step: Une créature de taille M ou inférieure est à portée et son action rapide est disponible
+  do: Ajouter un écrasement immobilisant en action rapide : +29, 6d6+22 dégâts ; en cas de touche, tenter gratuitement une lutte à +37 contre le DMD de la cible pour l'immobiliser.
+  note: privilégier un lanceur de sorts ou un combattant dangereux ; moment de prescience peut donner +12 au jet de lutte décisif.
+
+step: Une victime est immobilisée sous une patte
+  do: Rester en place et attaquer ses alliés à portée.
+  note: au début de chaque tour du colosse, la victime subit automatiquement 3d6+15 dégâts. Aucun jet de maintien n'est requis ; deux victimes au maximum. Se dégager ou le déplacement du colosse hors de son emplacement met fin à l'immobilisation.
+
+step: Au moins trois ennemis sont adjacents entre eux et tous à portée
+  do: Employer Succession d'enchaînements pour distribuer des coups à des adversaires différents tant que les attaques touchent.
+  note: cette action simple remplace les deux coups de l'attaque à outrance et impose -2 à la CA jusqu'au prochain tour.
+
+step: Les ennemis restent hors de portée ou en vol
+  do: Créer un rocher avec une action de mouvement en prélevant terre ou gravats dans une case inoccupée à portée, puis le lancer avec une action simple : +15, 3d6+22 dégâts.
+  note: viser d'abord les adversaires capables de l'attaquer à distance ; un rocher déjà disponible permet de se déplacer avant le lancer.
+
+step: Une attaque de mêlée ou à distance le touche
+  do: Utiliser le blocage d'attaques, une fois par round : faire un jet d'attaque de mêlée avec son meilleur bonus et annuler l'attaque si ce résultat dépasse le jet adverse.
+  note: privilégier une attaque très dangereuse ; sa fortification donne aussi 50 % de chances de traiter un critique ou une attaque sournoise comme un coup normal.
+
+step: Plusieurs attaques physiques menacent de l'abattre
+  do: Dépenser 1 utilisation de puissance mythique en action rapide pour porter sa RD à 20/épique pendant 1 round.
+  note: choisir cette protection à la place de l'écrasement en action rapide pendant ce tour.
+
+## Repli
+
+step: Points de vie sous 50 et possibilité de quitter momentanément son poste
+  do: Se soustraire aux attaques en glissant dans la terre ou la roche non travaillée, à 15 m par déplacement, puis gagner un emplacement protégé.
+  note: ce déplacement libère les victimes maintenues sous ses pattes.
+
+step: Il est à couvert et peut interrompre le combat
+  do: Prendre la forme de statue en une action complexe : RD 20/épique et guérison accélérée de 10 pv par round, jusqu'à 199 pv au maximum.
+  note: il devient immobile et ne peut plus attaquer ; reprendre sa forme mobile coûte aussi une action complexe. Se transformer à découvert l'expose aux ennemis capables de dépasser sa RD.
+
+step: Sa mission impose de tenir la position
+  do: Continuer à barrer le passage, immobiliser les intrus et protéger ses derniers pv avec la résilience mythique tant que sa réserve le permet.

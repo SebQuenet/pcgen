@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Gobelin mutant de petite taille, barbare 3, mauvais et brutal, au corps asymétrique couvert d'écailles et muni d'ailes de libellule.
+  37 pv, CA 16 ; deux griffes +9 (1d3+5 chacune), arc court composite +7 (1d4+5, critique x3). Allonge : 1,50 m.
+  Déplacement terrestre de 12 m, vol de 9 m à manœuvrabilité déplorable ; vision dans le noir à 18 m, Discrétion +13, initiative +7.
+  Guérison accélérée 1 : il récupère 1 pv au début de son tour. Les valeurs fournies incluent déjà la rage ; ne pas ajouter ses bonus une seconde fois.
+
+resource: Potion de force de taureau | 1 | renforce les attaques de mêlée
+resource: Potion de déplacement | 1 | protection à préparer avant de s'exposer
+resource: Potion de protection contre les projectiles | 1 | à préparer s'il prévoit des tirs
+resource: Potion de soins importants | 1 | à conserver pour une blessure sérieuse
+resource: Flèches | 20 | arc court composite
+resource: Acide | 2 | projectiles alchimiques
+resource: Feu grégeois | 2 | projectiles alchimiques incendiaires
+resource: Sacoche immobilisante | 1 | gêne la poursuite ou l'approche d'une cible
+resource: Bâton fumigène | 1 | masque un passage pendant le repli
+
+note: Souffle
+  La mutation de souffle est mentionnée, mais sa portée, ses dégâts, son DD et sa fréquence ne sont pas précisés dans les données fournies ; ne pas lui attribuer ces valeurs.
+
+step: Il repère les adversaires avant d'être découvert
+  do: Se cacher près d'un couvert, avec un accès dégagé vers une cible et une issue de fuite.
+  note: Exploiter la vision dans le noir et Discrétion +13 pour choisir le moment de l'attaque.
+
+step: Il dispose de quelques rounds de préparation
+  do: Boire la potion de déplacement, puis celle de force de taureau ; boire aussi celle de protection contre les projectiles si des archers sont visibles.
+  note: Chaque potion demande une action distincte. La force de taureau augmente la Force ; ajuster les griffes si elle est active, sans augmenter automatiquement les dégâts de l'arc composite.
+
+## Ouverture
+
+step: Un adversaire est accessible par une charge au sol
+  do: Entrer en rage et charger pour porter une seule attaque de griffe.
+  note: La charge exige un trajet dégagé ; elle ne permet pas les deux griffes de l'attaque à outrance.
+
+step: L'ennemi reste hors de portée de mêlée
+  do: Tirer à l'arc court composite +7 (1d4+5, critique x3), puis se déplacer vers un couvert ou une approche favorable.
+  note: Ne pas gaspiller des rounds de rage pendant une attente à distance.
+
+step: Un obstacle empêche l'approche au sol
+  do: Utiliser le vol à 9 m pour franchir l'obstacle et rejoindre une zone d'atterrissage dégagée.
+  note: Avec Vol -4 et une manœuvrabilité déplorable, privilégier les trajets simples ; éviter le vol stationnaire et les virages serrés.
+
+## Rounds suivants
+
+step: Un adversaire est déjà à 1,50 m et aucun déplacement important n'est nécessaire
+  do: Faire une attaque à outrance avec les deux griffes +9, chacune infligeant 1d3+5 dégâts.
+  note: Un pas de 1,50 m reste possible ; après un déplacement ordinaire, une seule griffe peut attaquer.
+
+step: Il touche facilement sa cible au corps à corps
+  do: Employer Attaque en puissance : deux griffes +8, chacune infligeant 1d3+7 dégâts lors d'une attaque à outrance.
+  note: Revenir aux attaques +9 contre une cible difficile à toucher.
+
+step: Il doit encore approcher une cible et peut lancer un objet sans s'exposer
+  do: Lancer un feu grégeois ou une fiole d'acide, puis poursuivre l'approche.
+  note: Viser une cible éloignée des alliés pour limiter les effets de l'aspersion ; ces projectiles remplacent les attaques de griffes du tour.
+
+step: Un adversaire mobile l'empêche d'engager le combat
+  do: Lancer la sacoche immobilisante pour gêner ses déplacements, puis se rapprocher.
+
+step: Ses points de vie tombent à 18 ou moins et il peut se mettre à couvert
+  do: Gagner le couvert et boire la potion de soins importants si elle est encore disponible.
+  note: Éviter de boire à portée des attaques ennemies ; la guérison accélérée continue chaque round.
+
+## Repli
+
+step: Ses points de vie tombent à 10 ou moins, ou il ne peut plus soutenir la mêlée
+  do: Se désengager, puis fuir par le sol à 12 m par déplacement ; utiliser les ailes pour franchir un obstacle qui coupe la poursuite.
+  note: Une action de retraite protège la sortie de la première case seulement. Éviter de traverser d'autres cases menacées.
+
+step: Il a obtenu assez de distance pour utiliser un objet
+  do: Activer le bâton fumigène dans un passage étroit ; utiliser la sacoche immobilisante contre le poursuivant le plus proche si elle reste disponible.
+  note: Employer ces objets sur des tours distincts si nécessaire, sans retarder une fuite urgente.
+
+step: Il a rompu le contact
+  do: Se cacher et laisser la guérison accélérée restaurer ses points de vie ; boire la potion de soins si elle reste disponible.
+  note: Ne pas interrompre la rage à très bas points de vie sans tenir compte de la perte des points de vie qu'elle accorde.

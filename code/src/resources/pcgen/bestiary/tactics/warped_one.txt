@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Warped One, extérieur chaotique mauvais de taille M : plusieurs humanoïdes fusionnés en une monstruosité démente et avide de carnage.
+  105 pv, CA 21 ; déplacement à 9 m ; allonge de 1,50 m. Attaque à outrance : 4 griffes +16, chacune infligeant 1d4+6 dégâts, critique sur 19-20.
+  Son champ de distorsion couvre un rayon de 9 m : il cherche à désorganiser plusieurs ennemis tout en déchiquetant une cible au contact.
+
+note: Défenses
+  Flou constant ; RM 19 ; résistance à l'électricité 10. Immunité aux effets mentaux, à la pétrification et aux effets de métamorphose.
+  Son corps amorphe le protège des coups critiques et des dégâts de précision ; il peut donc soutenir la mêlée contre les combattants qui en dépendent.
+
+resource: Flou | constant | 20 % de chances de rater les attaques contre lui ; ce camouflage ne permet pas à lui seul de se cacher
+resource: Porte dimensionnelle | à volonté | NLS 8 ; lui-même et jusqu'à 22,7 kg d'objets, sans passager
+resource: Convocation instable | 1/jour | 50 % de réussite ; les créatures convoquées sont immunisées au champ de ce Warped One
+
+step: Il repère des intrus avant d'être découvert
+  do: Se dissimuler derrière un couvert avec Discrétion +23 et attendre qu'une cible approche
+  note: vision dans le noir à 18 m, Perception +10 et initiative +8 ; préparer un emplacement où son aura pourra englober plusieurs adversaires
+
+## Ouverture
+
+step: Plusieurs ennemis approchent et il peut encore agir à couvert
+  do: Employer la convocation instable avant de s'exposer, puis engager la mêlée au tour suivant
+  note: en cas de réussite, tirer 1d8 : 1, 1d4+1 méphites ; 2, 1d4+1 élémentaires M ; 3, 1d3 salamandres ; 4, 1d3 élémentaires G ; 5, 1d3 babaus ; 6, un démon d'ombre ; 7, une succube ; 8, un Warped One. Les types de méphites et d'élémentaires sont aléatoires.
+
+step: Une cible est déjà à 1,50 m et il attaque ce tour
+  do: Faire une attaque à outrance avec ses quatre griffes +16, en concentrant les coups sur une cible vulnérable
+
+step: Une cible est accessible avec un déplacement de 9 m et il attaque ce tour
+  do: Avancer jusqu'au contact et porter une seule attaque de griffe +16
+  note: choisir une position qui place aussi d'autres ennemis dans le rayon de 9 m du champ
+
+step: Les adversaires restent éloignés ou un obstacle empêche l'approche
+  do: Utiliser porte dimensionnelle pour arriver près d'une cible isolée, si possible à 1,50 m d'elle et à moins de 9 m de ses alliés
+  note: après porte dimensionnelle, aucune autre action avant son prochain tour ; les griffes attendent donc le tour suivant
+
+## Rounds suivants
+
+step: Une autre créature vivante commence son tour dans le champ de 9 m sans y être immunisée
+  do: Lui faire effectuer un jet de Volonté DD 17 ; sur un échec, appliquer confusion, état fiévreux et une mutation aléatoire de la table du champ pendant 1 round
+  note: un succès immunise cette créature au champ de ce Warped One pendant 24 heures ; le champ est un effet de métamorphose. Certaines mutations aveuglent, font lâcher l'équipement ou empêchent de parler.
+
+step: Une cible reste au contact
+  do: Répéter les quatre griffes ; privilégier un ennemi affaibli ou handicapé par le champ
+  note: un pas de placement de 1,50 m permet de changer de position tout en conservant l'attaque à outrance
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 1,50 m
+  do: Le frapper avec une griffe +16
+  note: Attaques réflexes permet jusqu'à cinq attaques d'opportunité par round, chacune sur une occasion distincte ; quitter le rayon du champ ne suffit pas à en provoquer une
+
+step: Ses ennemis se dispersent ou deviennent immunisés au champ
+  do: Poursuivre une cible accessible pour garder les quatre griffes au prochain tour ; employer porte dimensionnelle si un repositionnement devient nécessaire
+  note: suivre les immunités individuelles ; revenir par téléportation ne les annule pas
+
+## Repli
+
+step: Points de vie sous 30 ou risque manifeste d'être abattu avant son prochain tour
+  do: Utiliser porte dimensionnelle vers un emplacement connu derrière un obstacle opaque, puis se cacher au tour suivant avec Discrétion +23
+  note: la téléportation termine ses actions jusqu'à son prochain tour ; depuis le contact, l'emploi du pouvoir magique peut provoquer une attaque d'opportunité, sauf utilisation sur la défensive réussie

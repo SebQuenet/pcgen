@@ -1,0 +1,99 @@
+## Avant le combat
+
+note: Profil
+  Vilsteth est un démon manipulateur et infiltrateur, capable de prendre une forme humanoïde de taille M. Il privilégie les serviteurs asservis et le contrôle mental avant de s'exposer.
+  225 pv ; CA 30, contact 14 ; déplacement 9 m ; allonge 1,50 m. Attaque à outrance : 2 griffes +24 (2d6+6), coup de cornes +24 (2d6+6 et 1d4 dégâts de Sagesse), coup de queue +19 (1d8+3).
+  Vision dans le noir à 18 m et détection de l'invisibilité permanente ; Perception +36. Il ne peut pas parler et communique par télépathie à 30 m.
+  Réduction des dégâts 10/fer froid et Bien ; résistance à la magie 27 ; immunité à l'électricité, au poison et aux effets mentaux ; résistances à l'acide, au froid et au feu de 10. Il n'a pas besoin de respirer.
+
+resource: Pouvoirs magiques | NLS 18 | concentration +24 ; DD indiqués ci-dessous
+resource: Détection de l'invisibilité | permanent | repère les créatures invisibles dans son champ de vision
+resource: Entrée dans une image, fusion dans la pierre, possession d'objet | à volonté | infiltration et dissimulation selon les supports disponibles
+resource: Téléportation suprême | à volonté | lui-même et 22,5 kg d'objets seulement ; action simple
+resource: Ventriloquie | à volonté | Volonté DD 17 pour reconnaître l'illusion
+resource: Charme-monstre | 3/jour | action simple ; Volonté DD 20
+resource: Domination de personne à incantation rapide | 3/jour | action rapide ; Volonté DD 21 ; humanoïdes seulement
+resource: Façonnage de la pierre | 3/jour | action simple ; modifie la pierre existante
+resource: Vengeance pour outrage | 3/jour | incantation de 1 round ; Volonté DD 22
+resource: Suggestion de groupe | 1/jour | action simple ; Volonté DD 22
+resource: Statue | 1/jour | action simple ; dissimulation sous forme de statue
+resource: Convocation | 1/jour | niveau 7 ; 50 % de réussite ; 1 shachath ou 1d3 succubes
+resource: Symbole de persuasion | 1/jour | Volonté DD 22 ; préparation de 10 minutes
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Prendre une apparence humanoïde et exploiter Bluff +31 et Déguisement +31 pour approcher les cibles sans révéler sa nature
+  note: transmettre ses propositions par télépathie ; son changement de forme ne lui donne pas la parole
+
+step: Il peut préparer un passage que les intrus emprunteront
+  do: Inscrire un symbole de persuasion et définir un déclencheur adapté à leur passage
+  note: Volonté DD 22 ; le symbole charme les créatures affectées, sans les placer sous domination
+
+step: Il peut isoler une future victime
+  do: Utiliser charme-monstre pour obtenir un allié, ou domination de personne rapide sur un humanoïde utile
+  note: un charme rend la cible amicale sans lui imposer une obéissance absolue ; les ordres suicidaires ne fonctionnent pas avec la domination
+
+step: Il surveille les lieux sans vouloir être découvert
+  do: Employer entrée dans une image, possession d'objet, fusion dans la pierre ou statue selon les supports présents
+  note: entrée dans une image et possession d'objet laissent son corps inerte : le cacher d'abord ; ces pouvoirs ne constituent pas une disparition physique de son corps
+
+## Ouverture
+
+step: Il a le temps d'appeler du renfort avant le contact
+  do: Tenter sa convocation depuis un emplacement protégé ; choisir un shachath ou 1d3 succubes
+  note: 50 % de réussite ; l'incantation prend 1 round et consomme son unique utilisation même si la convocation échoue
+
+step: Un humanoïde dangereux est à portée et peut être dominé
+  do: Lancer domination de personne rapide (Volonté DD 21), puis lui transmettre l'ordre d'attaquer ses alliés
+  note: conserver l'action simple pour un autre pouvoir ou une attaque ; un ordre contraire à la nature de la cible lui donne un nouveau jet avec un bonus de +2
+
+step: Plusieurs adversaires peuvent entendre et comprendre sa suggestion
+  do: Utiliser suggestion de groupe (Volonté DD 22) pour leur proposer une retraite ou une autre conduite vraisemblable qui désorganise leur attaque
+  note: formuler une suggestion raisonnable ; une consigne manifestement nuisible annule l'effet
+
+step: Une cible nourrit une rancune exploitable
+  do: Depuis une position protégée, utiliser vengeance pour outrage (Volonté DD 22) pour la pousser contre un ennemi identifiable qui lui a causé un tort réel ou perçu
+  note: l'incantation prend 1 round ; désigner un proche accorde un nouveau jet à la cible dès qu'elle entre en combat contre lui. Contre l'ennemi désigné, elle gagne +6 en Force et Constitution, +3 aux jets de Volonté et l'immunité aux états secoué et effrayé
+
+step: Un adversaire est déjà à portée de ses attaques et aucun contrôle mental n'est prioritaire
+  do: Faire une attaque à outrance avec les deux griffes, les cornes et la queue
+  note: un pas de placement de 1,50 m reste possible ; un déplacement normal empêche cette attaque à outrance
+
+## Rounds suivants
+
+step: Il peut rester au contact sans compromettre sa survie
+  do: Répéter l'attaque à outrance : 2 griffes +24 (2d6+6), cornes +24 (2d6+6 et 1d4 dégâts de Sagesse), queue +19 (1d8+3)
+  note: les dégâts de Sagesse diminuent les jets de Volonté de la victime et facilitent ses contrôles mentaux ultérieurs
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer jusqu'à 9 m et porter un coup de cornes avec Frappe décisive supérieure : +24, 8d6+6 et 1d4 dégâts de Sagesse
+  note: Frappe décisive supérieure s'utilise avec l'action d'attaque ; elle ne s'ajoute ni à une charge ni à une attaque à outrance et ne multiplie pas les dégâts de Sagesse
+
+step: Une domination échoue ou une autre cible humanoïde devient prioritaire
+  do: Utiliser une nouvelle domination de personne rapide, dans la limite des trois utilisations quotidiennes
+  note: une seule action rapide par round ; changer les instructions d'une créature déjà dominée demande une action de mouvement et peut empêcher l'attaque à outrance
+
+step: Une cible affaiblie en Sagesse reste capable de combattre
+  do: Tenter domination de personne rapide si elle est humanoïde, sinon charme-monstre si une alliance momentanée est plausible
+  note: Volonté DD 21 pour la domination, DD 20 pour le charme ; une créature menacée ou attaquée par Vilsteth ou ses alliés reçoit +5 contre le charme
+
+step: Il est contraint d'utiliser un pouvoir au contact
+  do: Faire un pas de placement de 1,50 m pour sortir de l'allonge ennemie, puis utiliser le pouvoir
+  note: si aucun placement sûr n'est possible, lancer sur la défensive ; concentration +28 grâce à Incantation de combat, contre DD 15 + deux fois le niveau du sort. Le pouvoir rapide ne provoque pas d'attaque d'opportunité
+
+step: Les ennemis résistent aux effets mentaux ou le combat tourne à son désavantage
+  do: Privilégier ses attaques naturelles si la mêlée reste favorable ; sinon utiliser téléportation suprême pour gagner un emplacement connu et plus sûr
+  note: la téléportation consomme son action simple ; elle ne lui permet pas de porter ensuite une attaque à outrance ce round
+
+## Repli
+
+step: Ses points de vie tombent sous 60, ou les adversaires neutralisent ses principaux moyens de combat
+  do: Utiliser téléportation suprême vers un refuge connu
+  note: seuil tactique conseillé sur ses 225 pv ; ce pouvoir ne transporte ni ses serviteurs ni les renforts convoqués
+
+step: Un adversaire menace sa tentative de téléportation
+  do: Sortir de son allonge par un pas de placement si possible, puis se téléporter ; sinon utiliser le pouvoir sur la défensive
+  note: pour téléportation suprême, concentration +28 contre DD 29 ; il peut encore employer une domination rapide disponible avant sa fuite
+
+step: La téléportation est empêchée
+  do: Chercher une masse de pierre assez grande pour fusion dans la pierre ; à défaut, se retirer à couvert à 9 m par déplacement
+  note: fusion dans la pierre dépend du terrain ; possession d'objet laisserait son corps inerte et exposé

@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Tête tranchée animée, mort-vivant de taille TP, neutre mauvais et dépourvu d’intelligence. 4 pv ; CA 14. Son unique attaque est un coup +1 (1d2), avec une allonge de 1,50 m.
+  Vol à 12 m par déplacement, avec une manœuvrabilité parfaite ; vision dans le noir à 18 m ; immunités des morts-vivants. Elle peut être seule, en paire ou en patrouille de 3 à 6 têtes.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m ou moins
+  do: Porter un coup +1 (1d2).
+
+step: Un ennemi peut être rejoint avec un déplacement de 12 m ou moins
+  do: Voler jusqu’à 1,50 m de lui, puis porter un coup +1 (1d2).
+  note: Utiliser le vol pour franchir les obstacles au sol et atteindre une cible en hauteur.
+
+step: Aucun ennemi ne peut être rejoint avec un seul déplacement
+  do: Effectuer un double déplacement en vol, jusqu’à 24 m, pour se rapprocher de l’ennemi le plus proche.
+  note: Elle ne dispose d’aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Répéter le coup +1 (1d2) à chaque round.
+
+step: La cible s’éloigne ou tombe et un autre ennemi est accessible
+  do: Rejoindre l’ennemi le plus proche en vol, puis frapper si un seul déplacement suffit ; sinon, poursuivre avec un double déplacement.
+  note: Son absence d’intelligence appelle un comportement simple et répétitif, sans manœuvre coordonnée entre plusieurs têtes.
+
+## Repli
+
+step: La tête est blessée mais possède encore au moins 1 pv
+  do: Continuer à attaquer ou à poursuivre une cible accessible.
+  note: Aucun repli tactique fondé sur ses blessures ; à 0 pv, elle est détruite.

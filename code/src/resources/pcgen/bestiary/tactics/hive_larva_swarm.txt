@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Nuée de larves de la ruche, aberration neutre composée de créatures infimes, sans intelligence : elle submerge ses proies par instinct. CA 20 ; 52 PV.
+  Attaque de nuée : 2d6 dégâts automatiques, plus distraction et poison. Elle occupe un carré de 3 m de côté ; allonge de 0 m. Déplacement et escalade : 3 m par action de mouvement.
+  Aveugle, elle repère les présences à 18 m par perception aveugle et les localise précisément à 3 m par vision aveugle. Elle est immunisée aux dégâts des armes, à l'acide et aux effets mentaux.
+
+resource: Poison | illimité | blessure ; Vigueur DD 16 ; 1d4 dégâts de Force ; fréquence 1/round pendant 6 rounds ; guérison après 2 sauvegardes consécutives réussies
+
+step: Des créatures de la ruche sont présentes dans la même ligne de vue
+  do: Réagir aux signaux simples de l'esprit de ruche pour rejoindre les proies repérées.
+  note: Si une créature de la ruche peut agir pendant le round de surprise, les autres dans sa ligne de vue peuvent également agir.
+
+## Ouverture
+
+step: Une proie repérée peut être atteinte
+  do: Avancer jusqu'à occuper son espace ; englober aussi les créatures immédiatement voisines si le déplacement le permet.
+  note: L'attaque exige de partager l'espace de la cible ; rester simplement adjacent ne suffit pas. À la fin du déplacement, chaque créature recouverte subit 2d6 dégâts sans jet d'attaque, une seule fois par round.
+
+step: La proie est trop loin pour un seul déplacement
+  do: Effectuer un double déplacement, jusqu'à 6 m, en suivant directement la proie ; escalader les surfaces accessibles si nécessaire.
+  note: La nuée ne vole pas et ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une ou plusieurs proies restent dans son espace
+  do: Rester sur elles et renouveler les dégâts de nuée, la distraction et l'exposition au poison chaque round.
+  note: Toute créature vivante blessée par la nuée doit réussir un jet de Vigueur DD 16 ou être nauséeuse pendant 1 round. Le poison affaiblit la Force ; il ne provoque pas directement de paralysie.
+
+step: Une proie quitte son espace
+  do: La suivre à 3 m par déplacement, ou 6 m en double déplacement, pour la recouvrir de nouveau.
+  note: La nuée ne porte pas d'attaques d'opportunité. Elle poursuit instinctivement les proies qu'elle perçoit, sans sélectionner tactiquement un lanceur de sorts.
+
+note: Défenses à appliquer
+  Les attaques infligeant des dégâts sur une zone causent 50 % de dégâts supplémentaires à la nuée. Son adaptation à la chaleur concerne le climat ; elle ne lui confère aucune résistance au feu.
+  Le sang corrosif inflige 1d4 dégâts d'acide à l'attaquant uniquement si une arme perforante ou tranchante blesse effectivement la nuée ; une arme à allonge évite cette projection. Un coup annulé par l'immunité aux dégâts des armes ne la déclenche pas.
+
+## Repli
+
+step: La nuée perd des points de vie mais perçoit encore une proie
+  do: Continuer à la recouvrir ou à la poursuivre, sans seuil de fuite raisonné.
+  note: À 0 PV, la nuée se disperse et cesse de menacer les combattants.
+
+step: Toutes les proies quittent la portée de ses sens
+  do: Cesser de les poursuivre faute de pouvoir les repérer.

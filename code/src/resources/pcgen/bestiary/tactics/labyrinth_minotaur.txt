@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Minotaure du Labyrinthe, extérieur de taille G, chaotique mauvais et garde d'élite de Baphomet : intelligent, brutal et prompt à charger les intrus.
+  232 pv ; CA 29, contact 13 ; déplacement 9 m ; espace et allonge 3 m ; vision dans le noir à 18 m.
+  Grande hache +1 : +26/+21/+16, 3d6+17, critique 19–20/×3 ; coup de cornes supplémentaire +20, 1d8+5. Avec les cornes seules : une attaque +25, 1d8+16.
+
+note: Ruse naturelle
+  Ne se perd jamais, est immunisé au sort labyrinthe et n'est jamais pris au dépourvu.
+
+resource: Résistance au feu | permanente | réduit de 20 les dégâts de feu subis
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +26 et se placer dans un couloir ou près d'un embranchement pour limiter le nombre d'adversaires qui peuvent l'entourer.
+  note: Compression lui permet de traverser un passage large de 1,50 m sans pénalité ; il peut ainsi emprunter les couloirs étroits malgré sa taille.
+
+## Ouverture
+
+step: Une cible est accessible par une charge en ligne droite
+  do: Charger, avec un déplacement maximal de 18 m, puis donner un seul coup de grande hache à +28, pour 3d6+17 dégâts.
+  note: CA 27 jusqu'à son prochain tour ; préférer une cible isolée ou peu protégée accessible sans traverser les défenseurs.
+
+step: Aucune cible n'est à portée et la charge est impossible
+  do: Avancer de 9 m au maximum et porter un coup de grande hache à +26 si une cible se trouve alors à 3 m ou moins.
+  note: Si personne n'est accessible, poursuivre par les couloirs et utiliser les angles pour couper les lignes de tir.
+
+step: Un adversaire est déjà à portée au début de son tour
+  do: Commencer immédiatement par l'attaque à outrance décrite ci-dessous.
+
+## Rounds suivants
+
+step: Une cible vulnérable reste à portée
+  do: Concentrer l'attaque à outrance sur elle : trois coups de grande hache +26/+21/+16, puis les cornes +20.
+  note: Rester sur place ou ne faire qu'un pas de placement de 1,50 m pour conserver toutes les attaques.
+
+step: La cible est facile à toucher et infliger davantage de dégâts prime sur les manœuvres
+  do: Activer Attaque en puissance avant les jets : grande hache +22/+17/+12, 3d6+29 ; cornes supplémentaires +16, 1d8+9.
+  note: Les effets durent jusqu'au prochain tour ; le malus de −4 s'applique aussi aux manœuvres offensives. Contre une forte CA, privilégier les bonus normaux.
+
+step: Repousser un défenseur permet d'attaquer une autre cible restée à portée
+  do: Utiliser Quick Bull Rush pour remplacer l'attaque de hache à +26 par une bousculade à +31 contre la DMD, puis effectuer les attaques restantes contre une cible à portée.
+  note: Repousser de 1,50 m, plus 1,50 m par tranche de 5 points au-delà de la DMD ; ne pas accompagner la cible. Le jet passe à +27 sous Attaque en puissance.
+  note: Grâce à Greater Bull Rush, le déplacement provoque les attaques d'opportunité des alliés qui menacent la cible.
+
+step: Après un déplacement, deux ennemis adjacents entre eux sont à portée
+  do: Utiliser Enchaînement en action simple : un coup de hache à +26 ; s'il touche, un second à +26 contre l'autre ennemi.
+  note: Les deux cibles doivent être à 3 m ou moins ; CA 27 jusqu'au prochain tour. Appliquer les modificateurs d'Attaque en puissance si elle est active.
+
+step: Écarter et renverser un ennemi vaut davantage qu'une attaque à outrance
+  do: Utiliser Awesome Blow en action simple contre un adversaire corporel de taille M ou inférieure : BMC +27 contre sa DMD, pour le projeter de 3 m et le mettre à terre.
+  note: Choisir une ligne droite qui éloigne la cible ; privilégier cette option pour dégager un passage ou isoler un ennemi.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter une attaque d'opportunité à la grande hache.
+  note: Son allonge est de 3 m ; il ne dispose que d'une attaque d'opportunité par round.
+
+## Repli
+
+step: Moins de 60 pv et aucune victoire rapide en vue
+  do: Battre en retraite par les couloirs, jusqu'à 18 m avec l'action de retraite, puis tourner aux embranchements pour rompre les lignes de vue.
+  note: La retraite protège seulement la case de départ des attaques d'opportunité. Sa ruse naturelle évite qu'il se perde ; Compression facilite le passage dans les corridors de 1,50 m.
+
+step: Une issue est bloquée
+  do: Bousculer l'obstacle vivant ou utiliser Awesome Blow contre une cible assez petite, puis avancer par le passage dégagé si possible.
+  note: Sans issue praticable, concentrer la hache et les cornes sur l'adversaire le plus affaibli.

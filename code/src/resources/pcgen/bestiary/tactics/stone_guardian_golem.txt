@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Golem gardien de pierre, créature artificielle neutre de taille M, sans intelligence, chargé de garder l'accès à la chapelle. 47 pv ; CA 17, contact 9, pris au dépourvu 17.
+  Deux coups +10 (1d8+5 chacun) lors d'une attaque à outrance ; allonge de 1,50 m ; déplacement de 6 m.
+  Vision dans le noir à 18 m, vision nocturne et détection de l'invisibilité ; Perception +0.
+  Fortification légère ; immunités des créatures artificielles ; résistance au froid 5, au feu 5 et à l'électricité 5.
+
+note: Anneau lié
+  L'anneau magique lié au golem est détenu par la maîtresse des fouets, dans la zone E9.
+
+step: Personne ne l'attaque et le refuge reste intact
+  do: Rester inerte dans l'accès à la chapelle.
+
+## Ouverture
+
+step: Le golem est attaqué ou le refuge subit des dégâts
+  do: S'animer et engager les intrus.
+  note: Initiative -1 ; appliquer ensuite l'action correspondant à la distance de la cible.
+
+step: Un intrus est déjà à portée
+  do: Effectuer une attaque à outrance : deux coups +10, infligeant chacun 1d8+5 dégâts.
+
+step: Un déplacement de 6 m au maximum suffit pour atteindre un intrus
+  do: Avancer jusqu'à portée de 1,50 m et porter un seul coup +10 (1d8+5).
+  note: Après une action de mouvement, il ne porte pas ses deux coups.
+
+step: Aucun intrus ne peut être atteint après un déplacement de 6 m
+  do: Consacrer le round à un double déplacement, jusqu'à 12 m, pour se rapprocher.
+
+## Rounds suivants
+
+step: Un intrus reste à portée au début du tour
+  do: Répéter l'attaque à outrance avec ses deux coups +10 (1d8+5 chacun).
+
+step: Un pas de 1,50 m suffit pour remettre un intrus à portée
+  do: Faire ce pas puis effectuer une attaque à outrance avec les deux coups.
+
+step: Les intrus s'éloignent davantage
+  do: Les poursuivre à 6 m par action de mouvement ; porter un seul coup si une action simple reste disponible et qu'une cible est à portée.
+  note: Si nécessaire, effectuer un double déplacement de 12 m sans attaquer.
+
+step: Un intrus invisible est dans son champ de vision
+  do: Le poursuivre et le frapper selon les mêmes règles de distance.
+  note: Sa détection de l'invisibilité lui permet de voir cette cible ; elle ne lui permet pas de voir à travers les obstacles.
+
+## Repli
+
+step: Les intrus fuient ou les points de vie du golem diminuent
+  do: Continuer la poursuite et les attaques jusqu'à sa destruction.
+  note: Aucun seuil de repli : le golem poursuit les intrus sans relâche et ne cherche pas à préserver ses 47 pv.

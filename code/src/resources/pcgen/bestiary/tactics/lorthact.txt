@@ -1,0 +1,97 @@
+## Avant le combat
+
+note: Profil
+  Lorthact, duc infernal loyal mauvais de FP 25, est un manipulateur et un maître de la magie qui préfère désarmer ses adversaires avant de les éliminer. Il combat seul et privilégie sa survie.
+  560 pv ; CA 45, contact 29 ; initiative +11 ; déplacement 9 m ; allonge 1,50 m. Deux griffes +44, chacune pour 1d6+6 et diminution permanente de 1 point d'Intelligence, ou bâton +2 à +40/+35/+30/+25, pour 1d6+11 et la même diminution.
+  Ses pouvoirs magiques sont de NLS 25, avec concentration +38. Ses principales armes sont la dissipation, le contrôle mental, le blasphème et la flétrissure renforcée.
+
+note: Défenses et perception
+  Esprit impénétrable, don des langues et vision lucide sont constants. Vision dans le noir à 18 m, Perception +43, télépathie à 90 m ; aura maudite, DD 31.
+  RM 36 ; RD 20, franchie par une arme à la fois bonne et en argent ; immunité au feu et au poison ; résistances à l'acide et au froid de 30 ; esquive totale. Régénération de 5 pv par round, suspendue par les armes ou sorts du Bien.
+  Ses traits de duc infernal l'immunisent également aux charmes, aux coercitions et aux effets de mort.
+
+resource: Dissipation suprême rapide | 3/jour | action rapide ; la version ordinaire reste à volonté
+resource: Flétrissure renforcée | 3/jour | Vigueur DD 31, moitié ; dégâts de 20d6 multipliés par 1,5 contre les créatures vivantes ordinaires
+resource: Renvoi des sorts | 3/jour | protection personnelle contre les sorts ciblés admissibles
+resource: Bannissement | 3/jour | Volonté DD 29 ; contre les créatures extraplanaires
+resource: Métamorphose universelle | 3/jour | Vigueur DD 31, annule ; résistance à la magie applicable
+resource: Domination de monstre | 1/jour | Volonté DD 32 ; contrôle d'une cible majeure
+resource: Disjonction | 1/jour | rayon de 12 m ; effets magiques défaits, objets soumis à Volonté DD 32
+resource: Arrêt du temps | 1/jour | 1d4+1 rounds apparents de préparation et de déplacement
+resource: Sphère prismatique | 1/jour | abri immobile pour préparer une fuite
+resource: Souhait limité | 1/jour | conserver pour une duplication de sort autorisée répondant à une urgence
+resource: Bottes de rapidité | 10 rounds/jour | activation par action libre ; déplacement porté à 18 m et bénéfices de rapidité
+
+step: Il a le temps d'observer les intrus
+  do: Employer scrutation suprême, DD 30, puis vision magique suprême pour repérer les protections et identifier les lanceurs de sorts
+  note: Préparer une image programmée, DD 29, pour détourner l'attention vers une fausse position ; choisir un lieu connu où se téléporter en cas de danger
+
+step: Le combat approche
+  do: Activer liberté de mouvement, invisibilité suprême et renvoi des sorts avant l'arrivée des ennemis ; maintenir son aura maudite
+  note: Décompter le renvoi des sorts des trois utilisations quotidiennes. Renouveler les protections à courte durée seulement lorsque la confrontation devient imminente
+
+step: Il peut aborder les intrus sans révéler sa nature
+  do: Utiliser modification d'apparence et Bluff +48, puis suggestion de groupe, DD 29, pour obtenir une séparation plausible du groupe
+  note: Une domination d'humanoïde, DD 28 et à volonté, prépare un relais intérieur si une cible dépourvue de protection mentale se présente
+
+## Ouverture
+
+step: Plusieurs adversaires dépendent de nombreuses protections magiques
+  do: Lancer disjonction sur leur regroupement, en épargnant autant que possible ses propres effets préparés
+  note: Les sorts sont défaits ; les objets magiques qui ratent Volonté DD 32 sont normalement neutralisés pendant 25 minutes. Garder cette utilisation pour un groupe dont l'équipement et les protections constituent un avantage décisif
+
+step: Une cible prioritaire est protégée, sans justifier la disjonction
+  do: Lancer dissipation suprême rapide sur elle, puis domination de monstre, DD 32, ou domination d'humanoïde, DD 28, avec l'action simple
+  note: Viser d'abord la protection qui bloque le contrôle mental. Une dissipation réussie déclenche Dispel Synergy : malus de 2 aux sauvegardes contre ses sorts jusqu'à la fin de son prochain tour. Destructive Dispel peut aussi étourdir la cible ; une sauvegarde de Vigueur réussie la laisse fiévreuse jusqu'au début de son prochain tour
+
+step: Plusieurs ennemis non mauvais sont à 12 m ou moins
+  do: Employer blasphème, Volonté DD 30, après avoir retiré les protections gênantes si nécessaire
+  note: Au NLS 25, les effets se cumulent selon les DV : hébétement jusqu'à 25 DV, affaiblissement jusqu'à 24 DV, paralysie jusqu'à 20 DV, mort jusqu'à 15 DV. La sauvegarde réduit ou annule chaque effet ; une cible de 20 DV ou moins reste paralysée 1 round même si elle réussit sa sauvegarde, sauf protection appropriée
+
+step: Il est surpris ou doit établir ses défenses sous pression
+  do: Lancer arrêt du temps ; consacrer les rounds apparents à ses protections personnelles, à un déplacement et, si nécessaire, à une sphère prismatique
+  note: Pendant son propre arrêt du temps, préparer sa position et ses défenses ; attendre sa fin pour attaquer les adversaires figés
+
+## Rounds suivants
+
+step: Plusieurs ennemis vivants restent à portée et à moins de 18 m les uns des autres
+  do: Lancer flétrissure renforcée, Vigueur DD 31 pour moitié, en sélectionnant les ennemis
+  note: Si une protection importante subsiste, employer d'abord une dissipation suprême rapide encore disponible. Limiter la flétrissure aux trois utilisations quotidiennes
+
+step: Les ennemis restent groupés dans les 12 m et vulnérables au blasphème
+  do: Répéter blasphème pour maintenir leur incapacité d'agir, puis exploiter leur dispersion ou l'épuisement de leurs défenses
+  note: Ce pouvoir est à volonté ; adapter son emploi aux DV et aux protections constatées plutôt que de le répéter contre des cibles immunisées
+
+step: Un ennemi isolé peut être retourné contre son groupe
+  do: Employer domination d'humanoïde, DD 28, ou l'unique domination de monstre, DD 32, puis lui ordonner de gêner ses alliés ou d'attaquer leur lanceur de sorts
+  note: Donner des ordres crédibles ; un ordre contraire à sa nature accorde une nouvelle sauvegarde avec un bonus de 2. Une injonction manifestement suicidaire échoue
+
+step: Un adversaire résiste au contrôle mental
+  do: Employer métamorphose universelle, Vigueur DD 31, pour lui imposer une forme inoffensive ; réserver bannissement, Volonté DD 29, aux adversaires extraplanaires
+  note: La durée de la métamorphose dépend des formes concernées. Choisir une autre approche si la cible est également protégée contre la métamorphose
+
+step: Un adversaire vulnérable reste au contact et Lorthact peut attaquer à outrance
+  do: Activer les bottes de rapidité et utiliser ses griffes ou les attaques successives de son bâton pour multiplier les diminutions d'Intelligence
+  note: Les valeurs du profil précèdent les bonus de rapidité et son attaque supplémentaire. Préférer les griffes contre une CA élevée, le bâton pour ses quatre attaques de base contre une cible facile à toucher
+
+step: Un ennemi lance arrêt du temps à 18 m ou moins
+  do: Profiter de son anomalie temporelle pour agir pendant cet arrêt du temps et attaquer directement le lanceur
+  note: Lorthact et ce lanceur peuvent s'affecter mutuellement ; les autres créatures restent figées. L'anomalie fonctionne même s'il était pris au dépourvu et déjoue les divinations qui prédisent ses actes
+
+step: Les combattants de mêlée menacent de l'encercler
+  do: Se replacer par téléportation suprême vers un point connu et reprendre les attaques magiques à distance
+  note: Utiliser les actions simples suivantes pour les pouvoirs offensifs ; dissipation suprême ordinaire reste disponible quand les trois versions rapides sont épuisées
+
+## Repli
+
+step: Ses pv passent sous 140, ou les attaques du Bien suspendent sa régénération sous une pression dangereuse
+  do: Utiliser téléportation suprême vers le refuge choisi
+  note: Décider la fuite avant qu'un adversaire puisse l'achever entre deux tours ; sa régénération ne remplace pas une issue sûre
+
+step: Un effet magique empêche sa téléportation
+  do: Tenter une dissipation suprême ciblée sur cet effet, rapide si une utilisation reste, puis se téléporter dès que possible
+  note: S'il ne peut pas partir immédiatement, employer sphère prismatique ou arrêt du temps encore disponible pour obtenir le répit nécessaire
+
+step: Il a atteint un lieu sûr
+  do: Laisser sa régénération restaurer ses pv et surveiller les survivants par scrutation suprême
+  note: Préparer une nouvelle confrontation par la tromperie et la domination, en tenant compte des protections révélées pendant ce combat

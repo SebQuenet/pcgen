@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Killer Frog, grenouille tueuse : animal de taille P, neutre, qui combat par instinct. Avec 6 pv et une CA de 14, elle compte sur la surprise et le nombre.
+  Deux griffes +2 (1d4+1 chacune, plus étreinte) et morsure +2 (1d4+1) ; pattes arrière : deux griffes supplémentaires +2 (1d4+1 chacune) en lutte.
+  Déplacement terrestre de 3 m, nage de 9 m par action de mouvement ; allonge de 1,50 m.
+
+step: Une proie approche d'une zone offrant un couvert près de l'eau
+  do: Rester cachée avec Discrétion +9 et attendre que la proie s'approche
+  note: Perception +3, odorat et vision nocturne aident à repérer la proie ; privilégier une cible proche et isolée
+
+## Ouverture
+
+step: La proie est hors de portée
+  do: S'approcher par l'eau si elle est accessible ; si un seul déplacement suffit pour arriver à 1,50 m, porter une griffe +2 (1d4+1)
+  note: Sur terre, avancer de 3 m par action de mouvement ; dans l'eau, nager de 9 m. Si deux déplacements sont nécessaires, attendre le tour suivant pour attaquer
+
+step: La proie est déjà à 1,50 m et un tour complet est disponible
+  do: Attaquer à outrance avec les deux griffes +2 et la morsure +2, pour 1d4+1 dégâts par attaque réussie
+
+step: Une griffe touche une proie de taille P ou inférieure
+  do: Tenter immédiatement une lutte grâce à l'étreinte, par une action libre sans attaque d'opportunité
+  note: Appliquer cette tentative après une griffe réussie aux tours suivants également ; les attaques de pattes arrière exigent de commencer le tour en lutte
+
+## Rounds suivants
+
+step: Elle commence son tour en agrippant une proie
+  do: Consacrer son action simple au maintien de la lutte ; sur une réussite, infliger les dégâts de la griffe qui a établi la prise, puis effectuer les deux griffes des pattes arrière +2 (1d4+1 chacune)
+  note: Les griffes des pattes arrière sont des attaques supplémentaires contre la proie agrippée
+
+step: Elle ne lutte pas et la proie reste au contact
+  do: Répéter l'attaque à outrance : deux griffes et une morsure
+
+step: Plusieurs grenouilles attaquent la même proie
+  do: Se placer de part et d'autre de la proie lorsque le terrain le permet et concentrer les attaques sur elle
+  note: La prise en tenaille donne +2 aux attaques de mêlée concernées
+
+step: La proie s'éloigne
+  do: La rejoindre en nageant si possible ; attaquer d'une seule griffe après un déplacement, ou consacrer le tour à se rapprocher si nécessaire
+
+## Repli
+
+step: Points de vie à 2 ou moins, avec une voie de fuite
+  do: Relâcher toute prise et utiliser l'action de retraite pour gagner l'eau ou un couvert
+  note: La retraite permet de parcourir jusqu'à 6 m sur terre ou 18 m à la nage ; une fois hors de vue, se cacher avec Discrétion +9

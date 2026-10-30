@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Stench Kow, bête magique extraplanaire de taille G, neutre, semblable à un bison des plans inférieurs. Intelligence 2 : il réagit au danger et défend son troupeau et ses petits.
+  25 pv ; CA 17 ; déplacement de 12 m ; espace de 3 m et allonge de 1,50 m. Cornes +6 (1d8+6), charge puissante et piétinement (1d8+6, Réflexes DD 15).
+  Immunisé au froid, au feu et au poison ; Perception +10, vision dans le noir à 18 m et vision nocturne.
+
+resource: Puanteur | permanente | rayon de 9 m ; les créatures vivantes exposées doivent réussir un jet de Vigueur DD 14 ou être fiévreuses pendant 5 rounds. Une réussite protège de la puanteur de cet individu pendant 24 heures ; les créatures immunisées au poison ou dotées de puanteur sont insensibles.
+
+step: Des intrus approchent sans menacer le troupeau
+  do: Rester près des autres adultes et surveiller leur approche.
+  note: Il engage le combat seulement si lui-même, son troupeau ou les petits sont menacés.
+
+step: Les petits sont menacés
+  do: S'interposer entre eux et l'agresseur, en gardant un passage assez large pour son corps.
+
+## Ouverture
+
+step: Plusieurs ennemis de taille M ou inférieure sont sur un trajet accessible
+  do: Consacrer le round au piétinement en traversant leurs cases : 1d8+6 dégâts par cible.
+  note: Chaque cible choisit une attaque d'opportunité avec un malus de -4, ou y renonce pour tenter un jet de Réflexes DD 15 et réduire les dégâts de moitié. Une cible ne subit ces dégâts qu'une fois par round.
+
+step: Une menace isolée est accessible par une charge en ligne droite, avec au moins 3 m d'élan
+  do: Charger sur un trajet dégagé, jusqu'à 24 m, et frapper des cornes.
+  note: La charge puissante double les dégâts des cornes, soit 2d8+12 sur une touche ordinaire. La charge donne +2 à l'attaque et impose -2 à la CA jusqu'au début de son prochain tour.
+
+step: La charge et le piétinement sont impossibles
+  do: Avancer vers l'agresseur le plus proche et donner un coup de cornes +6 (1d8+6) s'il arrive à portée de 1,50 m.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et aucun piétinement de groupe n'est possible
+  do: Donner un coup de cornes +6 (1d8+6) par round, en privilégiant l'agresseur qui menace les petits.
+  note: La puanteur agit sans action ; elle rend ses victimes fiévreuses, sans les empêcher d'agir.
+
+step: Plusieurs ennemis de taille M ou inférieure restent sur un trajet accessible
+  do: Répéter le piétinement pour traverser leur groupe.
+  note: Le piétinement occupe tout le round ; il ne s'accompagne pas d'un coup de cornes ni des dégâts de charge puissante.
+
+step: Un ennemi s'éloigne mais continue de menacer le troupeau
+  do: Charger de nouveau si un trajet rectiligne dégagé et l'élan nécessaire sont disponibles ; sinon, se rapprocher à 12 m et frapper si possible.
+
+## Repli
+
+step: Points de vie sous 8 et voie de fuite dégagée
+  do: Effectuer une retraite jusqu'à 24 m pour s'éloigner des agresseurs et rejoindre le troupeau.
+
+step: Des ennemis de taille M ou inférieure barrent la fuite
+  do: Consacrer le round à les piétiner pour ouvrir un passage.
+
+step: Les agresseurs se retirent et les petits sont hors de danger
+  do: Cesser le combat et rester auprès du troupeau.

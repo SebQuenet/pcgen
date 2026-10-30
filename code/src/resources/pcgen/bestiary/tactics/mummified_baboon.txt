@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Babouin momifié, petit mort-vivant neutre mauvais, à l'intelligence animale (Int 2). Il combat par des morsures et une poursuite instinctive.
+  Morsure +3 (1d4+1), allonge 1,50 m ; déplacement au sol 9 m ; 6 pv, CA 13, réduction des dégâts 2/— et immunités des morts-vivants.
+  Vision dans le noir à 18 m, Perception +1 ; Acrobaties +10, Escalade +5.
+
+step: Des intrus approchent dans l'obscurité
+  do: Les repérer avec sa vision dans le noir et sa Perception +1, puis avancer vers le plus proche.
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m ou moins
+  do: Le mordre à +3, pour 1d4+1 dégâts.
+
+step: Un adversaire peut être mis à portée avec un déplacement de 9 m maximum
+  do: Avancer jusqu'au contact, puis porter une morsure à +3 (1d4+1).
+
+step: Aucun adversaire ne peut être rejoint en un déplacement
+  do: Effectuer un double déplacement, jusqu'à 18 m, vers l'adversaire le plus proche.
+  note: Ce double déplacement ne laisse pas d'action pour mordre pendant ce tour.
+
+## Rounds suivants
+
+step: L'adversaire reste au contact
+  do: Répéter la morsure à +3 (1d4+1) chaque round.
+
+step: Un pas de 1,50 m suffit pour remettre la cible à portée
+  do: Faire ce pas, puis mordre.
+
+step: La cible s'éloigne davantage
+  do: La poursuivre selon les mêmes distances qu'à l'ouverture ; mordre si un déplacement simple suffit à la rejoindre.
+
+step: Un obstacle escaladable bloque la poursuite
+  do: Utiliser Escalade +5 pour franchir l'obstacle, puis reprendre la poursuite.
+  note: Il ne possède pas de vitesse d'escalade ; son déplacement au sol de 9 m ne s'applique pas directement à l'escalade.
+
+## Repli
+
+step: Blessé et encore actif
+  do: Continuer à poursuivre et à mordre jusqu'à sa destruction.
+  note: Jouer ce mort-vivant à l'intelligence animale sans repli organisé ; sa réduction des dégâts 2/— reste sa principale protection physique.

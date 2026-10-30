@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Requin de taille M, animal aquatique neutre guidé par son instinct de prédateur ; 11 pv, CA 14, initiative +6.
+  Morsure +3 (1d6+3), allonge de 1,50 m ; nage à 18 m par round. Il chasse seul, en paire ou en banc de 3 à 6.
+  Perception +6, perception aveugle à 9 m et odorat développé pour repérer une proie dans l'eau.
+
+step: Une proie est repérée dans l'eau
+  do: Se rapprocher à la nage pour pouvoir la mordre.
+  note: Son intelligence animale favorise une approche simple ; il reste dans son élément.
+
+## Ouverture
+
+step: Une proie est à plus de 1,50 m et peut être atteinte avec un déplacement de 18 m
+  do: Nager jusqu'à portée, puis porter une morsure +3 (1d6+3).
+
+step: Une proie est déjà à portée de 1,50 m
+  do: La mordre à +3 (1d6+3).
+
+step: La proie est trop éloignée pour être mordue après un déplacement
+  do: Effectuer un double déplacement à la nage, jusqu'à 36 m, pour s'en rapprocher.
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter la morsure +3 (1d6+3), une fois par round.
+
+step: La proie s'éloigne dans l'eau
+  do: La poursuivre à la nage ; mordre si un déplacement de 18 m suffit pour revenir à portée de 1,50 m.
+
+step: La proie disparaît dans une eau trouble
+  do: La rechercher avec la perception aveugle à 9 m et l'odorat développé.
+  note: La perception aveugle aide à localiser une créature, mais ne supprime pas le camouflage dont elle bénéficie.
+
+step: Les adversaires restent hors de l'eau
+  do: Rester immergé ; reprendre l'attaque si une proie entre dans l'eau à sa portée.
+
+## Repli
+
+step: Points de vie à 3 ou moins et proie encore capable de se défendre
+  do: Fuir vers l'eau libre ; se retirer jusqu'à 18 m si le contact le permet, puis nager jusqu'à 36 m par round en double déplacement.
+  note: Ce seuil est un choix de conduite pour le meneur : le requin cherche à survivre.

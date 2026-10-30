@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Killmoulis, fée de taille infime, auxiliaire des foyers et des moulins, loyale envers ses hôtes et portée aux farces inoffensives. Il évite le combat.
+  Aiguille +7 (1d2-3), allonge 0 m : il doit entrer dans l'espace de sa cible pour la frapper. Déplacement de 12 m ; 4 pv ; CA 18.
+  Discrétion +23, Perception +8 et vision nocturne ; réduction des dégâts 5/fer froid et résistance à la magie 11.
+
+resource: Télépathie | à volonté | portée 30 m ; son seul moyen de communiquer
+
+step: Des intrus approchent
+  do: Se cacher derrière un abri ou hors de leur vue avec Discrétion +23 et observer avec Perception +8
+  note: il cherche à préserver ses hôtes et à éviter une confrontation
+
+step: Ses hôtes sont à portée de télépathie
+  do: Les avertir mentalement du danger et leur indiquer où se trouvent les intrus
+
+## Ouverture
+
+step: Les intrus ne l'ont pas repéré
+  do: Rester caché et laisser passer le danger ; communiquer ses observations par télépathie
+
+step: Il est découvert et peut encore éviter le combat
+  do: Demander par télépathie qu'on le laisse tranquille, tout en gagnant un abri
+
+step: Il est acculé et doit se défendre
+  do: Entrer dans l'espace de l'adversaire le plus proche et donner un coup d'aiguille +7 (1d2-3)
+  note: son allonge nulle l'oblige à s'exposer ; entrer dans l'espace adverse peut provoquer une attaque d'opportunité
+
+## Rounds suivants
+
+step: Une voie de fuite se libère
+  do: Abandonner les attaques et rejoindre une cachette
+  note: ses dégâts très faibles ne justifient pas un échange prolongé de coups
+
+step: Il reste acculé dans l'espace d'un adversaire
+  do: Donner un coup d'aiguille +7 (1d2-3) et demander de l'aide par télépathie à une créature située à 30 m ou moins
+
+note: Protections limitées
+  La réduction des dégâts 5/fer froid et la résistance à la magie 11 peuvent lui permettre de survivre à une attaque, mais ses 4 pv rendent toute blessure dangereuse.
+
+## Repli
+
+step: Il est menacé et dispose d'une issue, ou il a perdu au moins 1 pv
+  do: Fuir vers un abri ; au contact, utiliser la retraite pour commencer à se dégager
+  note: sa vitesse de déplacement est de 12 m ; une fois hors de vue, se cacher avec Discrétion +23
+
+step: Il a rejoint une cachette
+  do: Rester dissimulé et avertir ses hôtes par télépathie s'ils sont à 30 m ou moins

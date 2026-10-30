@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Hag Ooze, vase solitaire de taille P, neutre et sans intelligence, employée comme sentinelle par les guenaudes. Elle observe prudemment les intrus et évite le combat sans ordre d'attaque.
+  34 pv, CA 6 ; coup +6 (1d4+3 et paralysie), allonge 1,50 m ; vision aveugle à 18 m ; déplacement et escalade à 6 m.
+  Immunisée contre l'acide et le froid ; résistance au feu 5 ; traits des vases.
+
+step: Des intrus approchent sans qu'elle ait reçu l'ordre d'attaquer
+  do: Observer à distance en profitant de sa transparence ; suivre les intrus sur les murs si le terrain le permet.
+  note: Elle exécute des consignes simples ; elle ne prépare pas de manœuvres complexes de sa propre initiative.
+
+## Ouverture
+
+step: Une créature la heurte sans l'avoir remarquée
+  do: Infliger automatiquement les dégâts de son coup, soit 1d4+3.
+  note: Sa transparence permet ce contact accidentel ; elle ne lui accorde aucune attaque supplémentaire volontaire.
+
+step: L'attaque est ordonnée ou le combat engagé, avec un ennemi à 1,50 m
+  do: Porter un coup +6, infligeant 1d4+3 et la paralysie.
+
+step: La cible est hors de portée
+  do: Avancer de 6 m au plus, puis porter un coup si la cible est à 1,50 m ; sinon, consacrer aussi son action simple au déplacement, jusqu'à 12 m au total.
+  note: Elle ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: La cible désignée reste au contact
+  do: Répéter le coup +6 (1d4+3 et paralysie) à chaque round.
+  note: Si la cible est paralysée, continuer à la frapper tant que l'ordre d'attaque reste applicable.
+
+step: La cible s'éloigne
+  do: La poursuivre à 6 m par déplacement, en escaladant si nécessaire, puis frapper dès qu'elle revient à portée.
+  note: La vision aveugle permet de la repérer à 18 m ; la vase poursuit son ordre sans élaborer de nouvelle tactique.
+
+step: Elle doit tenir sur une paroi ou sous un plafond
+  do: Activer la succion par une action rapide et progresser à 3 m par déplacement ; la relâcher par une action rapide lorsque l'adhérence devient inutile.
+  note: La succion ajoute +10 au DMD contre les effets qui la déplacent physiquement. Depuis une paroi ou un plafond, elle doit toujours être à 1,50 m pour frapper.
+
+## Repli
+
+step: Elle est blessée mais l'ordre d'attaque demeure
+  do: Continuer à exécuter cet ordre, sans seuil de fuite lié aux points de vie.
+
+step: Elle reçoit un contre-ordre de retrait
+  do: Rompre le contact et s'éloigner par le sol ou les murs à 6 m par déplacement, ou à 3 m avec la succion active.

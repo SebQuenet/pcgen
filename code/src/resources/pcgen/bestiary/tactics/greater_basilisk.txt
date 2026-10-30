@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Grand basilic, créature magique de grande taille des déserts chauds, neutre et d'intelligence animale. 85 pv, CA 18 ; déplacement de 6 m, allonge de 1,50 m.
+  Morsure +14 (1d8+6) et deux griffes +14 (1d6+6 chacune, plus poison). Il se dresse pour lacérer sa proie tout en l'exposant à son regard pétrifiant et à son haleine fétide.
+
+step: Une proie approche
+  do: Attendre immobile derrière un relief du désert, puis sortir quand elle est proche.
+  note: Discrétion +6, Perception +12 ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Regard pétrifiant | permanent, utilisable activement par une action simple | portée 9 m ; Vigueur DD 18 ou pétrification permanente
+resource: Haleine fétide | permanente | dans les cases directement devant lui, à 1,50 m ; Vigueur DD 18 ou 1d4 points d'affaiblissement de Constitution par round d'exposition ; une réussite immunise contre son haleine pendant 24 heures
+resource: Poison des griffes | à chaque blessure par une griffe | Vigueur DD 18 ; fréquence 1/round pendant 6 rounds ; 1d3 points d'affaiblissement de Constitution ; guérison après 1 sauvegarde réussie
+
+## Ouverture
+
+step: La proie est hors de portée de mêlée
+  do: Avancer de 6 m au maximum vers elle ; si elle voit ses yeux à 9 m ou moins après ce déplacement, diriger activement son regard sur elle par une action simple.
+  note: Le regard agit aussi au début du tour des adversaires exposés dans sa portée, sans consommer ses attaques.
+
+step: La proie est déjà à 1,50 m ou moins
+  do: Faire une attaque à outrance : une morsure +14 et deux griffes +14.
+  note: L'haleine affecte les adversaires directement devant lui ; elle accompagne le corps à corps sans remplacer ses attaques.
+
+## Rounds suivants
+
+step: Une proie reste au contact
+  do: Répéter l'attaque à outrance sur elle ; au besoin, faire seulement un pas de 1,50 m pour la garder à portée.
+  note: Le poison et l'haleine affaiblissent sa Constitution ; continuer à lui présenter ses yeux pendant les attaques.
+
+step: Une proie facile à toucher doit être achevée
+  do: Utiliser Attaque en puissance : morsure +11 (1d8+12), deux griffes +11 (1d6+12 chacune, plus poison).
+
+step: La proie est pétrifiée ou tombe
+  do: Reporter les attaques sur l'adversaire mobile le plus proche.
+
+step: Les adversaires restent à distance
+  do: Avancer vers le plus proche et diriger activement le regard dès qu'il est à 9 m ou moins.
+  note: Après un déplacement supérieur à 1,50 m, il ne peut pas faire d'attaque à outrance.
+
+## Repli
+
+step: Points de vie à 21 ou moins et une issue accessible
+  do: Prendre une action de retraite, jusqu'à 12 m, vers un couvert qui coupe les lignes de vue.
+
+step: Acculé sans issue
+  do: Continuer à mordre et griffer la menace la plus proche, en l'exposant à son haleine et à son regard.

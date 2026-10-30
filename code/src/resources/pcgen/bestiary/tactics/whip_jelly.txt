@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Vase moyenne et translucide des souterrains, sans intelligence, qui dissout les proies organiques avec ses quatre filaments enduits d'acide. 22 pv ; CA 14.
+  Quatre filaments +2, chacun infligeant 1d4 dégâts plus 1d4 dégâts d'acide ; allonge de 3 m. Déplacement et escalade à 6 m ; Escalade +8 ; vision aveugle à 18 m.
+
+step: Une créature approche dans un passage souterrain
+  do: Rester à l'affût, puis réagir lorsqu'une proie entre dans les 18 m de sa vision aveugle
+  note: son absence d'intelligence exclut les ruses élaborées et le choix réfléchi d'une cible selon son équipement
+
+## Ouverture
+
+step: Une proie est à 3 m ou moins
+  do: Faire une attaque à outrance avec les quatre filaments +2, chacun pour 1d4 dégâts plus 1d4 dégâts d'acide
+
+step: La proie est au-delà de 3 m
+  do: Avancer ou escalader jusqu'à 6 m pour l'approcher ; porter une seule attaque de filament si elle devient accessible à 3 m
+  note: un déplacement ordinaire suivi d'une attaque ne permet pas d'utiliser les quatre filaments
+
+## Rounds suivants
+
+step: Une proie reste à portée sans nécessiter de déplacement
+  do: Répéter l'attaque à outrance avec les quatre filaments
+  note: l'allonge de 3 m permet de frapper sans être adjacent à la proie
+
+step: L'acide touche une armure non métallique ou des vêtements
+  do: Faire effectuer à l'équipement un jet de Réflexes DD 14 ; en cas d'échec, il se dissout
+  note: l'acide dissout les matières organiques, mais n'endommage ni le métal ni la pierre
+
+step: Une arme en bois entre en contact avec la vase
+  do: Faire effectuer à l'arme un jet de Réflexes DD 14 ; en cas d'échec, elle se dissout immédiatement
+
+step: La proie s'éloigne ou se trouve en hauteur
+  do: La suivre au sol ou en escaladant à 6 m, puis attaquer dès qu'elle revient à portée
+  note: si le déplacement est nécessaire, limiter les attaques du tour à un seul filament
+
+step: Un adversaire tente un effet mental, un poison, un effet de sommeil, une paralysie ou un étourdissement
+  do: Appliquer les immunités des vases et poursuivre les attaques
+  note: les vases sont également immunisées aux coups critiques et aux dégâts de précision ; aucune immunité élémentaire supplémentaire n'est indiquée
+
+## Repli
+
+step: La vase perd des points de vie mais une proie reste accessible
+  do: Continuer à attaquer sans organiser de retraite
+  note: aucun seuil de fuite n'est indiqué ; cette créature sans intelligence n'élabore pas de repli tactique

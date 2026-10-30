@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Zombie desséché au soleil, mort-vivant de taille M, sans Intelligence, d'alignement neutre mauvais ; FP 1, 12 PV, CA 13.
+  Coup +4 (1d6+4), allonge de 1,50 m ; déplacement de 9 m ; vision dans le noir à 18 m, Perception +0.
+  Réduction des dégâts 5/tranchant, résistance au feu 10 et immunités des morts-vivants.
+
+note: Comportement
+  Jouer une menace directe et obstinée : aucune feinte élaborée, aucune préparation tactique ni choix savant d'une cible selon son équipement.
+  Il n'a ni attaque à distance ni pouvoir spécial offensif indiqué.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Porter un coup +4 (1d6+4).
+
+step: Un adversaire peut être atteint avec un déplacement de 9 m
+  do: Avancer jusqu'à portée de mêlée, puis porter un coup +4 (1d6+4).
+
+step: Aucun adversaire ne peut être atteint avec un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, vers l'adversaire accessible le plus proche.
+  note: Ce round ne comporte alors aucune attaque.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter le coup +4 (1d6+4) à chaque round.
+  note: Il ne possède qu'une attaque de coup ; ne pas lui ajouter de morsure ni d'effet lié à la chaleur.
+
+step: Sa cible s'éloigne
+  do: La poursuivre à 9 m et frapper si elle redevient accessible ; sinon, employer un double déplacement jusqu'à 18 m.
+  note: Ses défenses amortissent les attaques non tranchantes et le feu, mais ne lui donnent aucune raison de manœuvrer intelligemment pour les exploiter.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à avancer et à frapper, sans repli spontané.
+  note: Même à 1 PV, il poursuit le combat ; à 0 PV, ce mort-vivant est détruit.

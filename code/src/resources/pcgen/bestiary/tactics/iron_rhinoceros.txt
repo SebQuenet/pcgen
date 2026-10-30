@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Rhinocéros de fer, créature artificielle de taille TG, neutre et d'intelligence rudimentaire. Il combat au corps à corps et avance de 12 m par round.
+  131 pv ; CA 25 ; réduction des dégâts 10/adamantium ; immunité au feu et immunités des créatures artificielles.
+  Corne +21 (3d8+9, critique 19–20), allonge de 3 m ; deux chaînes +19 (2d6+4 et étreinte), allonge de 6 m ; lutte +29.
+
+note: Repérage
+  Vision dans le noir à 18 m, vision nocturne et Perception +14. Privilégier un comportement simple : se rapprocher d'un adversaire accessible et le frapper.
+
+## Ouverture
+
+step: Un adversaire est à plus de 6 m
+  do: Avancer vers lui, jusqu'à 12 m, puis porter une seule attaque de chaîne s'il est désormais à 6 m ou moins.
+  note: Si aucune cible n'est à portée après ce déplacement, continuer l'approche ; il ne possède aucune attaque à distance.
+
+step: Un adversaire est à plus de 3 m et à 6 m ou moins, sans déplacement nécessaire
+  do: Faire une attaque à outrance avec les deux chaînes +19, chacune infligeant 2d6+4.
+  note: La corne ne peut pas atteindre cette cible à cette distance.
+
+step: Un adversaire est à 3 m ou moins, sans déplacement nécessaire
+  do: Faire une attaque à outrance : corne +21 (3d8+9, 19–20) et deux chaînes +19 (2d6+4 et étreinte).
+
+step: Une chaîne touche une cible que l'étreinte permet de saisir
+  do: Tenter immédiatement la lutte à +29, par l'étreinte, sans dépenser d'action supplémentaire.
+  note: L'étreinte permet normalement de saisir une créature de taille G ou inférieure ; elle ne se déclenche pas sur la corne.
+
+## Rounds suivants
+
+step: Une cible est agrippée et le rhinocéros veut la conserver
+  do: Consacrer son action simple au maintien de la lutte ; sur une réussite, infliger les dégâts de la chaîne, soit 2d6+4.
+  note: Le bonus de lutte de base est +29 ; le maintien bénéficie de +5 si la cible n'a pas brisé la prise depuis le round précédent. Cette action remplace l'attaque à outrance.
+
+step: Aucune cible n'est agrippée et un adversaire reste à portée
+  do: Répéter l'attaque à outrance avec les armes qui peuvent l'atteindre ; tenter l'étreinte après une chaîne réussie.
+  note: Un pas de 1,50 m peut suffire à placer la corne à portée tout en conservant l'attaque à outrance.
+
+step: Un adversaire paraît facile à toucher
+  do: Utiliser Attaque en puissance pour augmenter les dégâts.
+  note: Corne +17 (3d8+17, 19–20) ; chaînes +15 (2d6+8 et étreinte). Revenir aux valeurs normales si les attaques échouent trop souvent.
+
+step: Les adversaires sortent de son allonge
+  do: Les suivre à 12 m par déplacement et attaquer avec une chaîne si une action simple reste disponible.
+
+## Repli
+
+step: Ses points de vie diminuent mais un adversaire reste accessible
+  do: Continuer le combat jusqu'à sa destruction.
+  note: Aucun seuil de fuite n'est indiqué. Avec une Intelligence de 1 et les immunités des créatures artificielles, il ne prépare pas de retraite élaborée et ne fuit pas sous l'effet de la peur.

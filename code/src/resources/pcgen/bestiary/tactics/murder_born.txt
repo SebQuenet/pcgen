@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Murder-born, mort-vivant chaotique mauvais de taille TP, incorporel : 51 pv, CA 17, initiative +6.
+  Contact incorporel +9 contre la CA de contact, infligeant 1d6 points de dégâts de Charisme ; allonge de 1,50 m. Vol à 12 m par round, bonne manœuvrabilité.
+  Résistance à la canalisation +2, immunités des morts-vivants ; vision dans le noir à 18 m, Perception +11.
+
+note: Territoire
+  Il ne peut jamais s'éloigner de plus de 150 m du lieu de sa mort. Sa haine des vivants le pousse à attaquer dès qu'il en a l'occasion.
+
+step: Des vivants pénètrent dans son territoire
+  do: Les repérer par sa perception du vivant à 30 m, fonctionnant comme détection du Mal au NLS 8, mais traversant tous les matériaux.
+  do: Se rapprocher en volant, en utilisant son incorporeité pour franchir les obstacles.
+
+resource: Gémissement de désespoir | à volonté | action simple ; vivants qui l'entendent à 18 m ; Volonté DD 16 ou malédiction permanente imposant un test de concentration DD 16 pour attaquer ou lancer un sort ; après exposition, réussite ou échec, aucune nouvelle affectation pendant 24 heures.
+
+## Ouverture
+
+step: Au moins un adversaire vivant est à 18 m ou moins
+  do: Pousser son gémissement de désespoir, puis utiliser son déplacement disponible pour gagner le contact.
+  note: Le gémissement utilise l'action simple ; il ne permet pas d'ajouter une attaque de contact pendant ce même tour.
+
+step: Aucun vivant n'est encore à portée du gémissement
+  do: Voler vers le plus proche ; employer un double déplacement, jusqu'à 24 m, si nécessaire.
+
+## Rounds suivants
+
+step: Un adversaire vivant est à 1,50 m ou moins
+  do: Porter son contact incorporel +9, infligeant 1d6 points de dégâts de Charisme ; insister sur la même cible tant qu'elle reste accessible.
+  note: Ces dégâts diminuent le Charisme ; ils ne se soustraient pas aux points de vie.
+
+step: Sa cible s'éloigne
+  do: La rejoindre en volant ; attaquer si un déplacement de 12 m suffit à revenir à portée.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 1,50 m
+  do: Porter un contact incorporel ; Attaques réflexes et sa Dextérité lui permettent jusqu'à trois attaques d'opportunité par round, sur des occasions distinctes.
+
+step: Un nouveau vivant arrive à 18 m et n'a pas encore été exposé au gémissement depuis 24 heures
+  do: Réutiliser le gémissement si maudire ce renfort vaut l'action simple.
+  note: Répéter le cri contre les seuls adversaires déjà exposés n'apporte rien pendant ces 24 heures.
+
+## Repli
+
+note: Acharnement
+  Il ne se replie pas à un seuil de points de vie : il poursuit ses attaques jusqu'à sa destruction, sauf s'il est chassé ou si ses adversaires s'enfuient.
+
+step: Les fuyards dépassent les limites de son territoire
+  do: Cesser la poursuite ; ne jamais franchir la limite de 150 m autour du lieu de sa mort.

@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Nuée de scarabées des déserts chauds, vermine neutre sans intelligence ; FP 3, 22 pv, CA 18. Elle mord les créatures qui entravent sa progression, sans choisir ses cibles selon leur rôle.
+  Attaque de nuée : 1d6 dégâts automatiques, plus maladie et distraction. Elle occupe un espace de 3 m de côté et doit recouvrir ses victimes, son allonge étant de 0 m.
+  Déplacement au sol de 9 m, escalade de 3 m et vol de 6 m par action de mouvement ; vol malhabile. Vision dans le noir à 18 m, Perception +4.
+
+note: Comportement
+  Habituellement indifférente aux autres créatures, elle se nourrit notamment de charognes et de déjections. Jouer une réaction instinctive aux intrus qui la dérangent.
+  Elle est immunisée aux dégâts des armes et aux effets mentaux. Les effets de zone lui infligent 50 % de dégâts supplémentaires, conformément aux traits des nuées.
+
+## Ouverture
+
+step: Une créature gêne la nuée
+  do: Avancer directement sur elle et terminer le déplacement en occupant ses cases ; recouvrir aussi les créatures voisines si elles se trouvent sur son passage.
+  note: Infliger 1d6 dégâts à chaque créature recouverte, sans jet d'attaque, puis appliquer maladie et distraction.
+
+step: La créature est trop loin pour être recouverte en un déplacement
+  do: S'en approcher au sol ; utiliser un double déplacement si nécessaire.
+  note: Une cible simplement traversée puis laissée derrière la nuée ne subit pas son attaque de nuée.
+
+## Rounds suivants
+
+step: Des victimes restent dans son espace
+  do: Rester sur elles et renouveler les dégâts de nuée à chaque round, avec maladie et distraction.
+  note: La distraction peut rendre une victime vivante blessée nauséeuse pendant 1 round si elle échoue à son jet de Vigueur. Les DD de distraction et de maladie ne sont pas précisés dans la fiche fournie.
+
+step: Une victime quitte son espace
+  do: La suivre si elle reste à proximité et terminer de nouveau le déplacement sur elle.
+  note: La nuée ne porte pas d'attaques d'opportunité ; elle doit rejoindre les cases de la victime pour lui infliger ses dégâts.
+
+step: Une victime gagne une hauteur accessible
+  do: Escalader à 3 m ou voler à 6 m par action de mouvement pour la rejoindre, selon le terrain.
+  note: Respecter les contraintes du vol malhabile ; la nuée ne dispose pas d'attaque à distance.
+
+## Repli
+
+step: La nuée perd des points de vie mais reste au-dessus de 0
+  do: Continuer à mordre les créatures accessibles qui la dérangent, sans retraite organisée.
+  note: Ses dégâts restent de 1d6 malgré ses pertes ; elle ne prépare ni diversion ni contre-attaque.
+
+step: Plus aucune créature ne la gêne
+  do: Reprendre sa progression ou son alimentation, sans organiser de poursuite à longue distance.
+
+step: Points de vie à 0 ou moins
+  do: Disperser la nuée ; elle cesse de combattre.

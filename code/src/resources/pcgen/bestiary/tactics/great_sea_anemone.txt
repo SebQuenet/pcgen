@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Grande anémone de mer, vermine aquatique de taille TG, neutre et sans intelligence : un prédateur fixe qui saisit les proies passant à portée. 138 pv, CA 8, déplacement 0 m.
+  Filaments +14 : venin paralysant et étreinte ; allonge et espace occupé de 4,50 m. Engloutissement : 3d8 dégâts d’acide par round, paroi interne CA 10 et 13 pv.
+  Perception aveugle à 12 m, Perception +9. RD 5/perforant ou tranchant, résistance à l’acide 20 et immunités des vermines.
+
+step: Aucune proie à portée
+  do: Attendre, filaments déployés, que le courant ou un nageur amène une proie
+  note: Un coude de chenal rocheux peut masquer sa présence ; elle ne peut pas changer de position.
+
+resource: Nuage d’acide | 1 par minute | rayon de 6 m, durée de 1d3 rounds ; 3d8 dégâts d’acide, Réflexes DD 23 pour moitié
+
+## Ouverture
+
+step: Une créature est détectée entre 4,50 m et 12 m
+  do: La laisser approcher sans quitter sa position
+
+step: Une proie entre à portée de 4,50 m
+  do: Attaquer avec les filaments +14, puis tenter l’étreinte si l’attaque touche
+  note: Venin de contact : Vigueur DD 23 ou paralysie pendant 1d6 minutes.
+
+## Rounds suivants
+
+step: Une proie saisie cesse de se débattre
+  do: Au round suivant la saisie, tenter de l’engloutir en réussissant le test de lutte requis
+  note: La digestion inflige 3d8 dégâts d’acide par round ; la victime peut percer la paroi interne, CA 10, en lui infligeant 13 points de dégâts.
+
+step: La proie résiste encore à la saisie
+  do: Maintenir la lutte pour la retenir ; si elle se libère mais reste à portée, reprendre les attaques de filaments
+
+step: Aucune proie n’est saisie et une créature reste à portée
+  do: Reprendre les attaques de filaments, suivies d’une tentative d’étreinte en cas de réussite
+
+## Repli
+
+step: Elle est blessée
+  do: Utiliser le recroquevillement défensif par une action de mouvement
+  note: Elle rentre ses filaments dans son tronc : bonus d’armure naturelle de +15, soit CA 23 ; aucune attaque de filaments dans cet état.
+
+step: Elle est grièvement blessée et le nuage est disponible
+  do: Expulser le contenu de son estomac en un nuage d’acide, même recroquevillée
+  note: Les créatures englouties sont expulsées avec le contenu stomacal. Attendre une minute avant de réutiliser ce pouvoir.
+
+step: Les agresseurs restent hors de portée
+  do: Rester recroquevillée sur place
+  note: Son immobilité lui interdit toute fuite.

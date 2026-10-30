@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Suspiridaemon, daemon de taille M, neutre mauvais, FP 7 : prédateur silencieux qui personnifie la mort par suffocation et préfère isoler ses victimes avant de les saisir avec sa langue.
+  85 PV, CA 20 ; déplacement de 9 m ; vision dans le noir à 18 m. Deux griffes +14 (1d6+5) à 1,50 m et langue +14 (1d6+7, critique 19–20, étreinte) à 3 m ; BMO de lutte +18.
+  Aura d'air raréfié à 9 m. RD 10/Bien ou argent, RM 18 ; immunités à l'acide, aux effets de mort, aux maladies et au poison ; résistances au froid, à l'électricité et au feu 10, au son 30. Il ne respire pas.
+
+resource: Nuage nauséabond | 3/jour | Vigueur DD 16 ; neutralise les adversaires qui respirent
+resource: Contact vampirique | 3/jour | contact au corps à corps ; 4d6 dégâts et autant de PV temporaires, au maximum les PV actuels de la victime plus sa Constitution ; aucun jet de sauvegarde
+resource: Brume mortelle | 1/jour | Vigueur DD 18 ; nuage de poison
+resource: Convocation | 1/jour | 1d3 lacridaemons ; 35 % de réussite ; une tentative consomme l'utilisation même en cas d'échec
+resource: Contact de la goule, rayon affaiblissant, glas | À volonté | respectivement Vigueur DD 15, Vigueur DD 14 et Volonté DD 15 ; NLS 9, concentration +12
+resource: Téléportation suprême | À volonté | lui-même et au plus 22,7 kg d'objets ; aucun autre être vivant
+
+step: Il repère des intrus avant d'être découvert
+  do: Se dissimuler avec Discrétion +15 dans un angle sombre, près d'un passage qui sépare les adversaires ; attendre qu'une victime arrive à 3 m.
+  note: Perception +14 ; il ne parle pas, mais peut coordonner des alliés par télépathie à 30 m.
+
+step: Une attaque est imminente et il dispose d'un round sans être menacé
+  do: Tenter la convocation des lacridaemons ; si elle réussit, leur demander d'occuper les autres ennemis pendant qu'il isole sa proie.
+
+note: Air raréfié
+  Dans les 9 m de l'aura, les créatures qui respirent ne peuvent retenir leur souffle que moitié moins longtemps et subissent les effets d'une basse montagne ou d'un col élevé. L'aura seule ne les fait pas immédiatement suffoquer.
+  Référence pour l'aura et le comportement : Horsemen of the Apocalypse, p. 56–57 ; Archives of Nethys, https://www.aonprd.com/MonsterDisplay.aspx?ItemName=Suspiridaemon
+
+## Ouverture
+
+step: Une victime isolée est à 3 m ou moins
+  do: Attaquer avec la langue +14 ; si elle touche, tenter immédiatement l'étreinte avec BMO +18, sans attaque d'opportunité.
+  note: Cibler une proie facile à retenir plutôt que s'exposer au milieu du groupe ; une étreinte réussie contre une cible hors de portée l'amène dans une case adjacente.
+
+step: Plusieurs adversaires qui respirent restent groupés et aucune proie n'est encore saisie
+  do: Lancer nuage nauséabond sur leur formation, en laissant une issue qui les oblige à se disperser vers sa position.
+  note: Vigueur DD 16 ; la nausée prive les victimes de leurs attaques et incantations ordinaires. Son immunité au poison lui permet de traverser le nuage, mais celui-ci gêne aussi sa vision.
+
+step: Un combattant puissant approche seul depuis une position dégagée
+  do: Lancer rayon affaiblissant : attaque de contact à distance +12, pénalité de Force de 1d6+4 ; Vigueur DD 14 pour réduire la pénalité de moitié.
+  note: Affaiblir d'abord un adversaire dont la Force rendrait la lutte dangereuse ; plusieurs rayons ne cumulent pas leurs pénalités.
+
+## Rounds suivants
+
+step: Une victime est agrippée et ses alliés ne peuvent pas intervenir immédiatement
+  do: Maintenir la lutte par une action simple, avec le bonus de +5 au maintien, puis choisir d'infliger les dégâts de langue, 1d6+7, ou d'immobiliser la victime.
+  note: Le maintien utilise ici BMO +23. Il ne permet pas également une attaque à outrance au cours du même round.
+
+step: Un adversaire est adjacent et aucune lutte n'est en cours
+  do: Faire une attaque à outrance : deux griffes +14 (1d6+5 chacune), puis langue +14 (1d6+7, critique 19–20 et étreinte).
+  note: À 3 m, seule la langue porte ; après un déplacement de plus de 1,50 m, choisir normalement une seule attaque.
+
+step: Un humanoïde vivant adjacent doit être neutralisé rapidement
+  do: Employer contact de la goule : attaque de contact au corps à corps +14, puis Vigueur DD 15 ou paralysie pendant 1d6+2 rounds.
+  note: La victime exhale une puanteur qui rend malades les créatures vivantes à 3 m, sauf lui ; Vigueur DD 15 annule cet effet. Privilégier une cible entourée de ses alliés.
+
+step: Il a perdu des PV et peut toucher une cible vivante sans s'exposer à plusieurs ennemis
+  do: Employer contact vampirique, attaque de contact au corps à corps +14, pour infliger 4d6 dégâts et gagner des PV temporaires.
+  note: Ces PV temporaires absorbent les prochains dégâts ; ils ne soignent pas ses blessures et plusieurs utilisations ne les cumulent pas.
+
+step: Des ennemis occupent encore un passage étroit et la brume mortelle est disponible
+  do: Placer brume mortelle pour les contraindre à quitter leur position ; attendre près d'une sortie dégagée pour saisir un fuyard.
+  note: Jusqu'à 3 DV, mort sans sauvegarde ; de 4 à 6 DV, Vigueur DD 18 ou mort, et 1d4 dégâts de Constitution par round même en cas de réussite ; à partir de 7 DV, 1d4 dégâts de Constitution par round, réduits de moitié sur Vigueur DD 18. Les immunités au poison protègent du nuage.
+  note: La brume s'éloigne de son point d'origine de 3 m par round et descend dans les dépressions. Elle masque les cibles ; il attaque celles qui en émergent.
+
+step: Un adversaire provoque une attaque d'opportunité à portée de langue
+  do: Frapper avec la langue et tenter l'étreinte sur une touche si cela ne compromet pas sa position.
+  note: Attaques réflexes autorise jusqu'à quatre attaques d'opportunité par round, sous réserve de déclencheurs distincts ; un simple pas de placement de 1,50 m n'en provoque pas.
+
+step: Une créature vivante agonise à portée de contact et les ennemis actifs sont contenus
+  do: Utiliser glas sur elle : Volonté DD 15 ou mort ; il gagne alors 1d8 PV temporaires, +2 en Force et +1 au NLS.
+  note: Réserver cette action au moment où il peut se permettre de cesser d'attaquer les adversaires encore debout.
+
+## Repli
+
+step: Il tombe à 25 PV ou moins, ou plusieurs ennemis surmontent sa RD et le menacent simultanément
+  do: Relâcher sa prise si nécessaire, puis utiliser téléportation suprême vers un refuge connu du même plan.
+  note: Se dégager de la portée adverse avant d'activer le pouvoir si possible ; sinon, une activation sur la défensive utilise concentration +12 contre DD 29. Une téléportation réussie l'emporte seul, sans sa victime ni ses alliés.
+
+step: Il peut préparer sa fuite sans subir une nouvelle salve dangereuse
+  do: Placer un dernier nuage nauséabond entre les poursuivants et lui, puis se téléporter au round suivant.
+  note: Si sa survie est immédiatement menacée, utiliser directement la téléportation.

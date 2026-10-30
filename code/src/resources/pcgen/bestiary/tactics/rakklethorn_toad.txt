@@ -1,0 +1,37 @@
+## Avant le combat
+
+note: Profil
+  Rakklethorn Toad, petit animal magique des marais chauds, d'intelligence animale ; 13 pv, CA 15, déplacement de 6 m.
+  Morsure +5 (1d4) à 1,50 m ; volée d'épines +5 (1d6 et poison).
+  Furtivité +7, ou +13 dans les hautes herbes et les broussailles denses ; Perception +4, odorat, vision dans le noir à 18 m et vision nocturne.
+
+step: Une proie approche sans l'avoir repéré
+  do: Rester caché dans les hautes herbes ou les broussailles denses et la laisser approcher.
+  note: Utiliser Furtivité +13 dans cette végétation ; l'odorat aide à repérer une présence sans dépendre uniquement de la vue.
+
+## Ouverture
+
+step: Une cible est à portée des épines et hors de portée de morsure
+  do: Lancer une volée d'épines +5 (1d6 et poison).
+  note: Le profil ne précise ni la portée des épines, ni leur réserve ou leur fréquence d'utilisation, ni le DD et les effets du poison ; ne pas inventer ces valeurs.
+
+step: Une cible est à 1,50 m
+  do: Mordre à +5 (1d4).
+
+## Rounds suivants
+
+step: La cible reste à distance et une volée d'épines est disponible
+  do: Répéter la volée d'épines +5 (1d6 et poison), si la cible est à portée.
+
+step: Un adversaire reste au contact
+  do: Continuer à mordre à +5 (1d4).
+  note: La morsure n'inflige pas de poison dans le profil fourni.
+
+step: La cible disparaît dans la végétation
+  do: La rechercher avec Perception +4 et l'odorat, en avançant à 6 m par action de déplacement.
+
+## Repli
+
+step: Points de vie à 4 ou moins
+  do: Rompre le contact et fuir vers les hautes herbes ou les broussailles denses.
+  note: Au contact, utiliser une retraite pour s'éloigner jusqu'à 12 m si le terrain le permet ; une fois hors de vue, tenter de se cacher avec Furtivité +13 dans la végétation adaptée.

@@ -1,0 +1,103 @@
+## Avant le combat
+
+note: Profil
+  Xaphan est un diable de taille G, loyal mauvais, doté de 717 pv, d'une CA de 46 et d'une résistance à la magie de 37. Il conjugue mêlée puissante, mobilité aérienne et sorts d'ensorceleur de niveau de lanceur 20.
+  Déplacement terrestre 12 m, vol 18 m ; espace et allonge de 3 m. Attaque à outrance au cimeterre à deux mains : +52/+47/+42/+37, 2d6+23 dégâts, plus 1d6 de feu ; critique sur 15–20. L'arme impie ajoute 2d6 contre les créatures bonnes ; ses critiques peuvent aussi infliger l'explosion de feu et le saignement de ses dons.
+  Son aura à 1,50 m inflige 1d6 de feu et 1d6 de dégâts impies. Immunités au feu et au poison ; résistances à l'acide et au froid de 10 ; RD 20/Bien et argent.
+
+resource: Sorts d'ensorceleur des niveaux 1 et 2 | 9 par niveau et par jour | Les sorts d'un même niveau partagent leur réserve
+resource: Sorts d'ensorceleur des niveaux 3 à 6 | 8 par niveau et par jour | Les sorts d'un même niveau partagent leur réserve
+resource: Sorts d'ensorceleur des niveaux 7 à 9 | 7 par niveau et par jour | Les sorts d'un même niveau partagent leur réserve
+resource: Invocation de diables | 3/jour | Niveau 9, réussite 100 % ; notamment 1d2 diables des fosses par utilisation
+resource: Boule de feu accélérée | 3/jour | Don de pouvoir magique rapide ; action rapide, Réflexes DD 23
+resource: Mot de pouvoir mortel | 1/jour | Pouvoir magique ; cible ayant 100 pv ou moins, sans jet de sauvegarde
+resource: Souhait limité | 1/jour | Pouvoir magique ; conserver pour une réponse adaptée à une difficulté décisive
+resource: Symbole de terreur | 1/jour | Pouvoir magique, Volonté DD 26
+resource: Symbole de faiblesse | 1/jour | Pouvoir magique, Vigueur DD 27
+resource: Pouvoirs magiques à volonté | Illimité | Notamment invisibilité suprême sur lui-même, vision lucide, aura maudite, dissipation suprême et téléportation suprême
+
+step: Il dispose de temps pour observer les intrus
+  do: Exploiter détection de la magie, détection du Bien et détection des pensées constante, cette dernière avec Volonté DD 22
+  note: Repérer les protections, les adversaires bons et les intentions de surface ; communiquer avec ses alliés par télépathie à 30 m
+
+step: Il prépare un lieu d'affrontement
+  do: Placer les symboles de terreur et de faiblesse sur les accès prévisibles, avec des déclencheurs adaptés
+  note: Chaque symbole demande son temps de préparation ; ces pouvoirs ne servent pas de pièges instantanés improvisés pendant la mêlée
+
+step: L'affrontement est imminent et il dispose de plusieurs rounds
+  do: Activer successivement vision lucide, aura maudite et invisibilité suprême ; lancer rapidité juste avant l'engagement
+  note: Ces préparations prennent chacune leur action. Rapidité utilise un sort de niveau 3 ; les trois autres sont des pouvoirs à volonté. Ne pas cumuler automatiquement des bonus de même type avec les valeurs du bloc
+
+step: Il peut réunir des renforts avant le contact
+  do: Invoquer 1d2 diables des fosses et les placer pour menacer les accès et les lanceurs de sorts
+  note: Leur donner des consignes par télépathie ; garder si possible une utilisation d'invocation pour remplacer les pertes
+
+## Ouverture
+
+step: Les adversaires approchent sous de nombreuses protections magiques
+  do: Employer dissipation suprême à volonté sur le lanceur de sorts ou le combattant dont les protections gênent le plus ses attaques
+  note: Ajouter une boule de feu accélérée si plusieurs ennemis vulnérables au feu sont groupés, Réflexes DD 23 ; une seule action rapide dans le round
+
+step: Plusieurs adversaires peuvent être pris dans la même zone
+  do: Lancer vagues d'épuisement pour réduire leur mobilité et leurs capacités physiques
+  note: Sort de niveau 7, sans jet de sauvegarde mais soumis à la résistance à la magie ; ne pas gaspiller cette ouverture contre des créatures immunisées à l'épuisement
+
+step: Une cible dangereuse et insuffisamment protégée doit être affaiblie à distance
+  do: Lancer absorption d'énergie, sort de niveau 9, par une attaque de contact à distance
+  note: Les niveaux négatifs préparent la cible aux attaques suivantes ; la résistance à la magie s'applique
+
+step: Un adversaire dangereux est déjà à portée et les préparations sont en place
+  do: Faire une attaque à outrance au cimeterre à deux mains, avec les quatre attaques du bloc
+  note: Sous rapidité, les cinq attaques deviennent +53/+53/+48/+43/+38. Un pas de placement de 1,50 m permet de conserver l'attaque à outrance ; un déplacement ordinaire la remplace par une seule attaque
+
+## Rounds suivants
+
+step: Il peut maintenir un adversaire à portée de son cimeterre à deux mains
+  do: Répéter les attaques à outrance ; concentrer les coups sur une cible pour la faire tomber rapidement
+  note: Son allonge atteint 3 m, mais son aura ne porte qu'à 1,50 m. Profiter des attaques d'opportunité réellement provoquées ; ne pas avancer au milieu du groupe seulement pour appliquer l'aura
+
+step: Un adversaire reste difficile à toucher ou protégé contre ses coups
+  do: Dissiper ses protections avec dissipation suprême, puis reprendre la mêlée au round suivant
+  note: Réserver Attaque en puissance aux cibles qu'il touche aisément ; sa précision et ses critiques comptent davantage contre une CA élevée
+
+step: Les ennemis se regroupent ou restent hors d'atteinte
+  do: Employer plainte d'outre-tombe, Vigueur DD 29, ou éclair multiple, Réflexes DD 26, selon leurs défenses et leur position
+  note: Ces sorts consomment respectivement les réserves des niveaux 9 et 6. Préférer l'électricité lorsque les défenses contre le feu sont manifestes
+
+step: Une cible prioritaire semble vulnérable aux effets de transformation
+  do: Lancer métamorphose funeste, Vigueur DD 25, pour la retirer du combat
+  note: Sort de niveau 5 ; choisir cette dépense si neutraliser une seule cible vaut davantage qu'une attaque à outrance
+
+step: Une cible est estimée à 100 pv ou moins
+  do: Employer mot de pouvoir mortel sur elle
+  note: Xaphan estime son état d'après les blessures et les dégâts observés ; ce pouvoir ne lui révèle pas les pv des adversaires et échoue à les tuer au-dessus du seuil
+
+step: Des adversaires non maléfiques de 20 DV ou moins sont à proximité
+  do: Employer blasphème à volonté, DD 27
+  note: Son niveau de lanceur est 20 : les créatures ayant plus de 20 DV ne sont pas affectées. Choisir un autre pouvoir contre elles
+
+step: Les adversaires cherchent à l'encercler ou protègent efficacement leurs lanceurs de sorts
+  do: Faire écran avec un mur de feu, puis voler pour changer d'angle pendant que les diables invoqués occupent le front
+  note: Le mur de feu est à volonté et ne constitue pas une barrière infranchissable ; profiter de sa propre immunité au feu pour le traverser
+
+step: Un lanceur de sorts prépare une fuite par téléportation
+  do: Lancer ancre dimensionnelle sur lui par une attaque de contact à distance
+  note: Sort de niveau 4 ; réserver cette action à une cible qu'il peut ensuite atteindre ou faire engager par ses alliés
+
+step: L'invisibilité suprême ou une préparation utile expire
+  do: Renouveler le pouvoir correspondant si le bénéfice justifie de consacrer son action à la défense
+  note: L'invisibilité suprême est limitée à Xaphan ; elle ne dissimule pas automatiquement ses renforts
+
+## Repli
+
+step: Il tombe à 180 pv ou moins et ne peut plus terminer rapidement le combat
+  do: Employer téléportation suprême vers un refuge connu ; ordonner aux diables présents de couvrir son départ
+  note: Ce pouvoir est à volonté et emporte seulement Xaphan avec 50 livres d'objets ; il ne transporte pas ses alliés
+
+step: Un effet dimensionnel empêche la téléportation
+  do: Tenter de dissiper l'effet avec dissipation suprême, puis se téléporter dès qu'il peut agir de nouveau
+  note: Pendant cet intervalle, utiliser le vol à 18 m par action de déplacement et les obstacles du terrain pour réduire l'exposition
+
+step: Il doit gagner du temps pour rompre un verrouillage ou préparer sa fuite
+  do: Lancer sphère prismatique, sort de niveau 9, pour s'abriter pendant qu'il prépare son prochain mouvement
+  note: La sphère peut aussi gêner ses propres attaques vers l'extérieur ; l'employer pour survivre et se dégager

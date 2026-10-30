@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Impundulu, Extérieur métamorphe de taille M, neutre mauvais : un prédateur ailé intelligent qui approche sous une unique apparence humanoïde et choisit des victimes isolées.
+  133 pv ; CA 25 ; initiative +9. Morsure +19 (1d6+4, plus 1d6 de saignement et 1d6 d'électricité), 2 serres +19 (1d4+4, plus 1d6 d'électricité et étreinte), 2 crochets +13 (1d4+2, plus 1d6 d'électricité). Allonge 1,50 m.
+  Vol à 18 m par déplacement ; marche à 6 m, ou 9 m sous forme humanoïde. Vision dans le noir à 18 m, vision nocturne, Perception +21 et Discrétion +22.
+  Immunité à l'électricité ; résistance au froid 10 et au feu 10 ; réduction des dégâts 10/magie et fer froid ; résistance à la magie 22.
+
+resource: Appel de la foudre | 3/jour | NLS 14 ; Réflexes DD 18, moitié ; 3d6 d'électricité, ou 3d10 dehors par temps orageux ; durée 14 minutes, 10 éclairs au maximum par utilisation
+resource: Charme-personne | 3/jour | NLS 14 ; Volonté DD 16 annule ; un humanoïde, durée 14 heures ; une cible menacée par lui ou ses alliés reçoit +5 au jet
+resource: Bourrasque | 3/jour | NLS 14 ; Vigueur DD 17 annule ; ligne de 18 m, durée 1 round
+
+step: Un humanoïde peut être approché sans hostilité
+  do: Prendre son apparence humanoïde, engager la conversation et employer charme-personne pour faciliter une rencontre à l'écart du groupe
+  note: Bluff +22 et Diplomatie +19 soutiennent la ruse ; le charme rend la cible amicale, les demandes doivent encore la convaincre
+
+step: Une attaque est prévisible dans les prochaines minutes
+  do: Reprendre sa forme d'oiseau, se dissimuler dans les arbres et préparer appel de la foudre hors de portée des ennemis
+  note: L'incantation prend 1 round ; il peut ensuite garder ses éclairs pour le combat. Privilégier naturellement le temps orageux
+
+## Ouverture
+
+step: Appel de la foudre est prêt et les ennemis sont encore éloignés
+  do: Faire tomber un éclair sur un adversaire exposé, en priorité un tireur ou un lanceur de sorts, puis changer de position en vol
+  note: Chaque éclair suivant demande une action simple, au plus un par round ; il peut continuer à se déplacer entre les frappes
+
+step: Une victime isolée est accessible en vol
+  do: Employer Attaque en vol pour approcher, porter une morsure avec Frappe décisive, puis poursuivre le même déplacement pour s'éloigner
+  note: Une seule attaque +19 : 2d6+4, plus 1d6 de saignement et 1d6 d'électricité ; le trajet total reste limité à 18 m. La sortie d'une case menacée peut provoquer une attaque d'opportunité
+
+step: Un adversaire se trouve déjà à 1,50 m et ses alliés ne peuvent pas l'encercler
+  do: Effectuer l'attaque à outrance : morsure, deux serres et deux crochets
+  note: Cette option exploite les cinq attaques et leurs dégâts électriques ; elle exige de rester sur place, sauf un pas de 1,50 m
+
+## Rounds suivants
+
+step: Les ennemis restent groupés ou leurs combattants protègent les cibles fragiles
+  do: Rester hors de leur allonge et poursuivre les éclairs si appel de la foudre est actif ; sinon, préparer ce pouvoir depuis une position protégée
+  note: Les éclairs frappent une case de 1,50 m de large, pas tout le groupe. Éviter les cibles dont une résistance à l'électricité est manifeste
+
+step: Une ouverture permet une attaque au passage sans rester encerclé
+  do: Répéter la morsure avec Frappe décisive, puis reprendre de la distance ; privilégier les victimes encore indemnes de saignement
+  note: Le saignement inflige 1d6 au début du tour de la victime jusqu'à son arrêt ; plusieurs morsures ne cumulent pas ce saignement
+
+step: Une serre touche une victime de taille M ou inférieure, isolée des autres ennemis
+  do: Tenter gratuitement l'étreinte avec un test de lutte à +22 ; aux rounds suivants, maintenir la prise si immobiliser cette cible reste avantageux
+  note: Maintenir la lutte demande une action simple et bénéficie de +5 si la victime ne s'est pas libérée. Relâcher la prise si ses alliés arrivent pour profiter de l'immobilité de l'impundulu
+
+step: Une cible vulnérable reste au contact sans soutien immédiat
+  do: Préférer l'attaque à outrance aux attaques au passage pour concentrer les cinq attaques sur elle
+  note: Le saignement et les dégâts électriques des attaques restent les seules conséquences supplémentaires à appliquer ici
+
+## Repli
+
+step: Points de vie sous 40, ou plusieurs ennemis menacent de le bloquer au sol
+  do: Abandonner toute prise, se désengager si nécessaire, puis gagner les hauteurs et fuir entre les arbres
+  note: Le désengagement permet jusqu'à 36 m en vol ; seule la case de départ cesse d'être menacée pour ce déplacement, il choisit donc un trajet qui évite les autres ennemis
+
+step: Des poursuivants terrestres de taille M suivent dans un passage étroit et il dispose d'une avance
+  do: Diriger bourrasque vers eux, puis poursuivre sa fuite en vol
+  note: Ceux qui ratent leur jet de Vigueur DD 17 ne peuvent pas avancer contre le vent pendant 1 round ; cette utilisation consomme son action simple

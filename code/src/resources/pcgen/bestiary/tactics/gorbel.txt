@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Gorbel, aberration sphérique de petite taille des forêts chaudes, à la faim insatiable ; il attaque les créatures plus petites que lui.
+  11 PV ; CA 17, contact 13, pris au dépourvu 15. Vol à 18 m, manœuvrabilité moyenne ; déplacement au sol à 1,50 m ; allonge de 1,50 m.
+  Deux griffes +3 (1d4+1 et saisie), morsure +3 (1d6+1). Après une saisie réussie, morsure en action rapide à +4 (1d6+1).
+  Vision dans le noir à 18 m ; Perception +8, Discrétion +11, Vol +9. Sa vision à 360° empêche la prise en tenaille.
+  RD 5/tranchant ou perforant : ces deux types de dégâts passent sa réduction et risquent de le faire exploser.
+
+step: Une proie plus petite approche
+  do: Se dissimuler dans les arbres, puis attendre qu'elle soit accessible en vol
+  note: Utiliser Discrétion +11 pour l'approche et Perception +8 pour repérer la proie
+
+step: Plusieurs gorbels chassent ensemble
+  do: Garder si possible plus de 1,50 m entre eux avant de fondre sur les proies
+  note: Un gorbel qui explose blesse aussi ses voisins
+
+## Ouverture
+
+step: Une proie est accessible par une passe en vol
+  do: Utiliser Attaque en vol pour approcher et porter une seule griffe +3 (1d4+1) ; si elle touche, tenter la saisie avec un BMO de +0
+  note: Si la saisie échoue, poursuivre le déplacement pour reprendre de la distance, sans dépasser 18 m de déplacement total
+
+step: La saisie réussit
+  do: Mordre immédiatement en action rapide à +4 (1d6+1) et rester au contact de la proie
+  note: La prise interrompt le projet de repartir en vol ; ne pas emporter automatiquement la victime
+
+## Rounds suivants
+
+step: La proie est toujours agrippée
+  do: Consacrer l'action simple au maintien de la lutte ; après réussite, infliger les dégâts de lutte avec une griffe (1d4+1), puis mordre en action rapide à +4 (1d6+1)
+  note: Privilégier cette proie tant qu'elle résiste ; le gorbel cherche à se nourrir
+
+step: Aucune lutte n'est en cours et une proie est déjà à portée
+  do: Effectuer une attaque à outrance avec les deux griffes +3 (1d4+1 chacune et saisie) et la morsure +3 (1d6+1)
+  note: Si une saisie réussit pendant cette attaque, ajouter la morsure en action rapide à +4 (1d6+1), une seule fois dans le round
+
+step: La proie s'est éloignée
+  do: Reprendre les passes avec une seule griffe grâce à Attaque en vol ; choisir de préférence une créature plus petite et isolée
+  note: Le vol permet de se replacer ; sa marche à 1,50 m le rend peu efficace dans une poursuite au sol
+
+step: Une arme, un sort ou un effet lui inflige des dégâts perforants ou tranchants
+  do: Faire immédiatement un jet de Vigueur à +1, DD 10 + les dégâts subis
+  note: En cas d'échec, le gorbel explose et meurt instantanément. Toutes les créatures dans un rayon de 1,50 m subissent 1d4 dégâts, Réflexes DD 12 pour réduire de moitié
+  note: Cette explosion est une conséquence subie ; le gorbel ne dispose d'aucune action pour la déclencher volontairement
+
+## Repli
+
+step: Il tombe à 5 PV ou moins, ou une proie trop dangereuse riposte avec des attaques perforantes ou tranchantes
+  do: Relâcher sa prise éventuelle et fuir en vol entre les arbres, en s'éloignant des ennemis et des autres gorbels
+  note: S'il est au contact, utiliser le désengagement pour amorcer la fuite ; chercher ensuite à mettre le couvert et la distance entre lui et ses poursuivants

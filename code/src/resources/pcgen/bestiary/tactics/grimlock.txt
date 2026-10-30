@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Grimlock, humanoïde monstrueux aveugle des souterrains, chasseur brutal qui tend des embuscades parmi les rochers. 15 pv, CA 15 ; déplacement de 9 m ; allonge de 1,50 m.
+  Hache d'armes +4 (1d8+2), ou deux coups +4 (1d4+2 chacun) en attaque à outrance. Vision aveugle à 12 m, odorat ; Perception +9.
+
+step: Un terrain rocheux permet de préparer une embuscade
+  do: Se dissimuler sur le passage des proies avec Discrétion +14, puis attendre qu'elles approchent à portée de charge ou de mêlée
+  note: ailleurs, sa Discrétion est de +6 ; il perçoit son environnement sans lumière grâce à l'ouïe et à l'odorat
+
+step: Plusieurs grimlocks chassent ensemble
+  do: Se répartir autour du passage pour attaquer une même proie et prendre les adversaires en tenaille dès que possible
+  note: il communique en grimlock ou en commun des profondeurs
+
+## Ouverture
+
+step: Une proie surprise se trouve à portée d'un déplacement de 9 m
+  do: Avancer jusqu'au contact et porter une attaque de hache d'armes +4 (1d8+2)
+  note: pendant un round de surprise, il doit choisir entre se déplacer et attaquer ; il ne fait les deux que lors d'un tour normal
+
+step: Une proie est déjà à 1,50 m et il peut effectuer une attaque à outrance
+  do: Porter deux coups +4, chacun infligeant 1d4+2 dégâts
+  note: les deux coups constituent une alternative à la hache ; il ne cumule pas ces attaques avec celle-ci
+
+step: Une cible se trouve entre 3 m et 12 m, sur une trajectoire de charge dégagée
+  do: Charger jusqu'au contact et frapper à la hache d'armes +6 (1d8+2)
+  note: la charge donne +2 à l'attaque et réduit sa CA à 13 jusqu'au début de son prochain tour ; en round de surprise, la charge est limitée à 9 m
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Privilégier les deux coups +4 (1d4+2 chacun) en attaque à outrance ; ajuster sa position d'un pas de 1,50 m si nécessaire
+  note: avec un allié placé à l'opposé de la cible, la prise en tenaille donne +2 aux attaques
+
+step: Il doit se déplacer de plus de 1,50 m pour atteindre une cible
+  do: Avancer de 9 m au maximum et porter une seule attaque de hache d'armes +4 (1d8+2) s'il arrive au contact
+
+step: Une proie fuit au-delà de 12 m
+  do: Utiliser l'odorat pour chercher sa direction et se rapprocher, en suivant sa piste avec Survie +4 si nécessaire
+  note: au-delà de 12 m, les créatures bénéficient d'un camouflage total ; l'odorat ne lui donne pas à lui seul une perception précise à distance
+
+step: L'adversaire emploie une attaque de regard ou un effet reposant sur la vue
+  do: Poursuivre l'attaque sans chercher à détourner les yeux
+  note: il est immunisé aux attaques de regard, aux effets visuels et aux illusions qui reposent sur la vue
+
+step: Son ouïe ou son odorat est neutralisé
+  do: Combattre comme s'il possédait Combat en aveugle
+  note: si les deux sens sont neutralisés, il est effectivement aveugle ; sa vision aveugle ne le guide plus
+
+## Repli
+
+step: Il tombe à 5 pv ou moins et ne peut plus compter sur la supériorité du groupe
+  do: Se retirer par une retraite sur un round complet, jusqu'à 18 m, vers un passage rocheux où se cacher
+  note: seule la case de départ échappe aux attaques d'opportunité grâce à la retraite ; il évite de traverser d'autres cases menacées
+
+step: Il a rompu le contact et peut se dissimuler derrière les rochers
+  do: Se cacher avec Discrétion +14 en terrain pierreux, puis s'éloigner en écoutant et en flairant ses poursuivants

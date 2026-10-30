@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Ourdivar, protéan chaotique neutre de taille G : combattant mobile qui désorganise ses ennemis avant de les frapper et de les saisir avec sa queue.
+  42 pv ; CA 17. Coup +8 (1d6+4), coup de queue +3 (1d8+2 et étreinte). Espace occupé et allonge : 3 m.
+  Marche, vol parfait et nage à 9 m par déplacement ; Perception +10, perception aveugle à 9 m et vision dans le noir à 18 m.
+  Anatomie amorphe, liberté de mouvement, immunité à l'acide, résistance à l'électricité 10 et au son 10, résistance à la magie 15.
+
+resource: Couleurs dansantes | 3/jour | cône de 4,50 m ; Volonté DD 13 annule ; NLS 5
+resource: Dissipation de la magie | 1/jour | dissipation ciblée ; jet de dissipation +5 ; NLS 5
+resource: Rage | 1/jour | +2 en Force et Constitution, +1 aux jets de Volonté, -2 à la CA ; persiste 5 rounds après l'arrêt de la concentration
+
+step: Une approche trompeuse est possible
+  do: Prendre une forme d'humanoïde ou d'humanoïde monstrueux et utiliser Bluff +10 pour approcher ; retrouver sa forme naturelle avant d'engager la mêlée
+
+step: Il peut choisir le terrain
+  do: Se placer près d'un passage qu'il contrôle avec son allonge, en conservant une sortie par les airs ou par l'eau
+
+## Ouverture
+
+note: Priorités
+  Choisir une seule des ouvertures suivantes selon la situation. Un pouvoir magique demande une action simple et peut provoquer une attaque d'opportunité s'il est utilisé sous la menace ennemie.
+
+step: Plusieurs ennemis peuvent être pris dans un cône sans toucher ses alliés
+  do: Se placer, au besoin en volant, puis lancer couleurs dansantes : Volonté DD 13
+  note: À 5 DV ou plus, un échec étourdit seulement 1 round ; à 3 ou 4 DV, aveuglement et étourdissement pendant 1d4 rounds, puis étourdissement 1 round ; à 2 DV ou moins, ajouter d'abord 2d4 rounds d'inconscience, d'aveuglement et d'étourdissement
+
+step: Un effet magique empêche l'approche ou protège clairement la cible prioritaire
+  do: Employer dissipation de la magie sur cet effet avant de s'engager au contact
+
+step: Aucune utilisation immédiate de ses pouvoirs ne paraît rentable
+  do: Approcher une cible isolée en volant, s'arrêter à 3 m et porter un coup +8 (1d6+4)
+  note: Après un déplacement ordinaire, il ne porte qu'une attaque ; garder l'attaque à outrance pour un tour où il est déjà à portée
+
+## Rounds suivants
+
+step: Une cible reste à portée et aucun pouvoir n'est prioritaire
+  do: Attaque à outrance : coup +8 (1d6+4), puis queue +3 (1d8+2 et étreinte)
+  note: Contre une cible facile à toucher, Attaque en puissance donne coup +6 (1d6+8) et queue +1 (1d8+4), hors rage
+
+step: La queue touche une cible de taille G ou inférieure
+  do: Tenter gratuitement l'étreinte, avec un jet de lutte à +14 hors rage, sans provoquer d'attaque d'opportunité
+  note: Si la cible est isolée, consacrer l'action simple du tour suivant au maintien de la lutte ; si ses alliés encerclent l'ourdivar, relâcher la prise pour retrouver sa mobilité
+
+step: Un ennemi quitte une case menacée ou provoque autrement une attaque d'opportunité
+  do: Le frapper avec le coup ; utiliser Attaques réflexes pour effectuer jusqu'à deux attaques d'opportunité par round
+
+step: Plusieurs ennemis se regroupent et il n'est pas en rage
+  do: Réutiliser couleurs dansantes si une utilisation reste disponible, en privilégiant les cibles qui voient et semblent vulnérables
+  note: Éviter les créatures sans vision et celles qui sont immunisées aux effets mentaux
+
+step: Il s'engage dans une mêlée prolongée et n'a plus besoin de ses autres pouvoirs
+  do: Lancer rage sur lui-même, puis combattre physiquement aux tours suivants
+  note: Sa CA passe à 15 ; pendant la rage, il renonce aux pouvoirs qui demandent de la concentration
+
+## Repli
+
+step: Ses points de vie tombent à 10 ou moins et la victoire paraît improbable
+  do: Relâcher toute prise et effectuer une retraite vers les airs ou l'eau, jusqu'à 18 m avec l'action de retraite
+  note: Choisir une direction qui évite les autres cases menacées ; liberté de mouvement facilite sa fuite hors des entraves, mais ne supprime pas les attaques d'opportunité
+
+step: Des poursuivants restent proches et il n'est pas en rage
+  do: Si une utilisation reste disponible, lancer couleurs dansantes sur les poursuivants, puis s'éloigner de 9 m vers un abri

@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Petrifern, plante forestière neutre de taille Minuscule, sans intelligence : ses réactions sont instinctives. Aucune attaque n'est indiquée ; il se protège par auto-pétrification et sécrétion toxique.
+  5 pv ; CA 15, contact 13 ; vision aveugle à 9 m ; déplacement de 6 m par action de mouvement ; allonge de 0 m ; immunités des plantes.
+
+resource: Sécrétion toxique | 1/jour | Une créature qui le touche doit réussir un jet de Vigueur DD 11 ou être fiévreuse pendant 1d4 rounds.
+resource: Auto-pétrification | À volonté | Action simple pour se pétrifier ou reprendre sa forme mobile ; durée illimitée.
+
+step: Installé dans un sol nourricier
+  do: Rester pétrifié parmi la végétation.
+  note: Sous cette forme, son armure naturelle augmente de 5 : CA 20, contact 13. Il gagne résistance au froid 10 et au feu 10, et peut faire 20 en Discrétion pour passer pour une pousse ou une branche tombée.
+
+## Ouverture
+
+step: Déjà pétrifié à l'arrivée d'une menace
+  do: Rester immobile.
+  note: Pétrifié, il ne peut ni se déplacer ni entreprendre d'action, sauf mettre fin à sa pétrification par une action simple.
+
+step: Mobile et menacé
+  do: S'éloigner de 6 m si le passage est libre, puis se pétrifier par une action simple.
+
+step: Une créature le touche alors qu'il est mobile et sa sécrétion est disponible
+  do: Libérer la toxine pour décourager le contact.
+
+## Rounds suivants
+
+step: La menace persiste autour de lui
+  do: Conserver sa forme pétrifiée et ses protections.
+
+step: La toxine a déjà été libérée
+  do: Compter sur la pétrification pour survivre.
+  note: Aucun nouvel usage de la sécrétion ce jour-là ; aucune poursuite.
+
+## Repli
+
+step: La menace s'éloigne et une issue est libre
+  do: Mettre fin à la pétrification par une action simple, puis s'éloigner de 6 m.
+
+step: Aucune fuite n'est possible
+  do: Rester pétrifié jusqu'à disparition du danger.

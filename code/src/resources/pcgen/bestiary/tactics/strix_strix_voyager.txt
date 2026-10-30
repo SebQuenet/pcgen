@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Strix voyageur, humanoïde ailé neutre des montagnes tempérées, fragile avec 27 points de vie et une CA de 19.
+  Fronde de maître +7 (1d4) ; lance de maître +5 (1d6, x3). Il privilégie le tir et la mobilité aérienne.
+  Vol à 18 m, manœuvrabilité moyenne ; vitesse terrestre de 0 m. Vision dans le noir à 18 m et vision nocturne.
+
+step: Il peut choisir sa position
+  do: Se placer sur un perchoir élevé, avec une trajectoire de fuite dégagée, et charger sa fronde
+  note: Préférer un emplacement inaccessible aux combattants terrestres ; éviter les passages exigeant de marcher.
+
+## Ouverture
+
+step: Un ennemi est visible et hors du contact
+  do: Tirer avec la fronde chargée, à +7 pour 1d4 dégâts
+  note: Il peut aussi employer son action de mouvement pour voler jusqu'à 18 m avant ou après ce premier tir.
+
+step: Le combat commence au contact
+  do: Se retirer en vol si une issue est libre ; sinon, employer la lance à +5 pour 1d6 dégâts, critique x3
+  note: Éviter de tirer ou de recharger la fronde au contact : ces actions provoquent des attaques d'opportunité.
+
+## Rounds suivants
+
+step: Son perchoir reste sûr
+  do: Recharger la fronde puis tirer sur un adversaire exposé
+  note: Recharger demande une action de mouvement et deux mains ; tirer demande une action simple. Cette séquence ne laisse pas d'action de mouvement pour voler.
+
+step: Un ennemi approche du perchoir ou sa position devient dangereuse
+  do: Voler vers un autre perchoir, en conservant la distance avec les combattants de mêlée
+  note: Si la fronde est chargée, tirer avant ou après le déplacement ; sinon, consacrer le round au déplacement et au rechargement. Ne pas compter sur un vol stationnaire automatique.
+
+step: Il ne peut pas quitter le contact
+  do: Employer la lance jusqu'à ce qu'une voie de fuite se libère
+  note: Avec seulement 27 points de vie et une Vigueur de +1, un échange prolongé l'expose rapidement à la défaite.
+
+## Repli
+
+step: Points de vie à 9 ou moins, ou impossibilité de maintenir la distance
+  do: Abandonner les tirs et fuir en vol ; employer l'action de retrait s'il est au contact
+  note: Rejoindre un relief qui coupe les lignes de vue. Le retrait protège le départ de sa case, mais pas toute la trajectoire.

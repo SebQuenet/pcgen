@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Plante de taille G, neutre mauvaise et intelligente, le Splinter Drake tient le front avec 178 pv et une CA de 23. Il se déplace de 12 m au sol par round.
+  Morsure +20 (2d6+8, critique 19–20), allonge de 3 m ; deux griffes +19 (1d6+8 chacune), allonge de 1,50 m ; volée d'épines +13 (3d6).
+  Vision nocturne, Perception +21, immunités des plantes et résistance au feu 10.
+
+resource: Souffle | fréquence non précisée | cône de 12 m, DD 24, 6d6 dégâts tranchants et perforants
+
+note: Poison
+  Le bloc mentionne un poison sans préciser son vecteur, son DD ni ses effets ; ne pas lui attribuer d'effet supplémentaire sans ces données.
+
+step: Des intrus approchent dans la forêt
+  do: Se dissimuler dans la végétation avec Discrétion +29 et observer leur progression
+  note: hors des zones boisées, sa Discrétion tombe à +17 ; choisir une position permettant de couvrir plusieurs adversaires avec le cône
+
+## Ouverture
+
+step: Le souffle est disponible et plusieurs ennemis peuvent entrer dans son cône de 12 m
+  do: Se placer pour les englober et utiliser le souffle, DD 24, pour 6d6 dégâts tranchants et perforants
+  note: éviter d'inclure un éventuel second drake dans le cône ; aucune fréquence de réutilisation n'est fournie
+
+step: Une cible isolée est accessible en mêlée
+  do: Avancer de 12 m au maximum, puis porter une morsure +20 dès que la cible est à 3 m ou moins
+  note: conserver cette distance si elle oblige l'adversaire à s'exposer pour approcher ; après un déplacement normal, ne pas ajouter les griffes
+
+step: Un ennemi reste hors de portée de mêlée mais à portée de la volée d'épines
+  do: Tirer une volée d'épines +13, pour 3d6 dégâts
+  note: la portée de cette attaque n'est pas précisée dans le bloc
+
+## Rounds suivants
+
+step: Une cible est à 1,50 m et aucun déplacement normal n'est nécessaire
+  do: Effectuer une attaque à outrance : morsure +20 et deux griffes +19
+  note: concentrer les attaques sur le même adversaire pour l'abattre rapidement
+
+step: Une cible reste entre 1,50 m et 3 m
+  do: La mordre ; ne pas utiliser les griffes tant qu'elle reste hors de leur allonge
+
+step: Plusieurs adversaires sont voisins et à portée de morsure
+  do: Utiliser Enchaînement ou Succession d'enchaînements pour répartir les morsures si cette option est préférable à l'attaque à outrance
+  note: chaque attaque supplémentaire exige que la précédente touche ; respecter les conditions de voisinage entre les cibles et subir le malus de CA de 2 jusqu'au prochain tour
+
+step: Un adversaire provoque une attaque d'opportunité dans l'allonge de la morsure
+  do: Le mordre avec Attaques réflexes
+  note: sa Dextérité de 15 autorise jusqu'à trois attaques d'opportunité par round ; un pas de placement ou un mouvement protégé ne les provoque pas automatiquement
+
+step: La cible présente une CA assez faible pour accepter une baisse de précision
+  do: Employer Attaque en puissance pour augmenter les dégâts de mêlée
+
+## Repli
+
+step: Les points de vie passent sous 45 et les adversaires restent capables de le poursuivre
+  do: Rompre le contact par une retraite, puis gagner la végétation dense en exploitant son déplacement en forêt amélioré
+  note: une retraite complète permet de parcourir jusqu'à 24 m ; les attaques d'opportunité restent possibles au-delà de la case de départ
+
+step: Le couvert permet de se dissimuler sans être observé
+  do: Utiliser Discrétion +29 en forêt pour échapper aux poursuivants

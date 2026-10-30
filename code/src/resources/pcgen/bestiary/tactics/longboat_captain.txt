@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Capitaine humain, guerrier 5, chaotique neutre : un archer qui préfère maintenir ses ennemis à distance.
+  Arc long composite +1 : +11 (1d8+5, x3) ; hache d'armes de maître : +7 (1d8+1, x3), allonge 1,50 m.
+  42 pv ; CA 17, contact 13, pris au dépourvu 14 ; déplacement 9 m. Volonté +2, avec +1 supplémentaire contre la peur.
+
+resource: Flèches | 20 | une flèche par tir
+resource: Potions de soins modérés | 2 | boire une potion demande une action simple et provoque une attaque d'opportunité
+
+step: Il peut choisir sa position
+  do: Préparer son arc et se placer avec une ligne de tir dégagée et un passage pour reculer
+  note: le premier facteur de portée de l'arc est de 33 m ; privilégier une distance de 9 m ou moins si elle permet de rester hors de portée de mêlée
+
+step: Il accompagne une bande de pillards
+  do: Demander aux 2d6 pillards ulfes de tenir les ennemis à distance pendant qu'il tire
+  note: ces ordres ne donnent aucun bonus ; Tir de précision lui permet de viser un ennemi engagé en mêlée sans le malus de -4 habituel
+
+## Ouverture
+
+step: Une cible est visible et ne le menace pas au corps à corps
+  do: Tirer une flèche sur une cible exposée, en priorité un adversaire peu protégé ou déjà blessé
+  note: un seul tir par round ; à 9 m ou moins, Tir à bout portant porte l'attaque à +12 et les dégâts à 1d8+6, x3
+
+step: La cible paraît facile à toucher
+  do: Activer Visée mortelle avant le tir pour échanger de la précision contre des dégâts
+  note: avec son attaque de base de +5, le don impose -2 au toucher et ajoute +4 aux dégâts : tir à +9 (1d8+9, x3), ou +10 (1d8+10, x3) à 9 m ou moins ; les bonus de spécialisation sont déjà inclus
+
+## Rounds suivants
+
+step: Il peut continuer à tirer sans être menacé
+  do: Concentrer ses flèches sur la même cible jusqu'à la mettre hors de combat, puis changer de cible
+  note: désactiver Visée mortelle si les tirs manquent souvent ; Tir de précision ne supprime pas les effets d'un abri
+
+step: Un ennemi arrive au contact et un pas de 1,50 m suffit à sortir de sa zone menacée
+  do: Faire ce pas, puis tirer une flèche
+  note: tirer à l'arc dans une zone menacée provoque une attaque d'opportunité ; le pas ne suffit pas forcément contre une grande allonge
+
+step: Il reste menacé et ne peut pas reprendre une position de tir
+  do: Dégainer sa hache d'armes et porter une attaque à +7 (1d8+1, x3)
+  note: il est moins efficace avec la hache ; chercher à se dégager dès qu'une occasion se présente
+
+step: Il veut affaiblir un adversaire à 9 m ou moins qui le voit et l'entend
+  do: Consacrer son action simple à démoraliser cet adversaire avec Intimidation +11
+  note: cette tentative remplace son attaque du round ; si elle réussit, l'adversaire est secoué
+
+step: Il a perdu des points de vie et dispose d'un abri hors de portée ennemie
+  do: Boire une potion de soins modérés, puis reprendre le tir dès que possible
+  note: il ne dispose que de deux potions pour toute la rencontre
+
+## Repli
+
+step: Ses points de vie tombent sous 14, ou sa bande ne peut plus empêcher les ennemis de l'encercler
+  do: Rompre le combat et gagner une issue ; demander aux pillards encore présents de couvrir son départ
+  note: au contact, utiliser le retrait pour parcourir jusqu'à 18 m ; seule la case de départ est soustraite aux attaques d'opportunité dues à ce déplacement
+
+step: Il a rejoint un endroit sûr et possède encore une potion
+  do: Boire la potion pour soigner ses blessures avant de poursuivre sa fuite

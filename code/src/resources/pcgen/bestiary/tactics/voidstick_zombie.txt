@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Mort-vivant de taille M, chaotique mauvais, FP 12 : 157 pv, CA 26, CA de contact 14, guérison accélérée 3.
+  Deux attaques de contact au corps à corps +13, chacune infligeant 1d8 dégâts d’énergie négative ; allonge de 1,50 m, déplacement de 9 m.
+  Vision dans le noir et perception vitale à 18 m ; aura sacrilège, résistance à la canalisation +4 et immunités des morts-vivants.
+
+step: Des intrus approchent
+  do: Repérer les vivants avec la perception vitale à 18 m et attendre derrière un couvert si le terrain le permet
+  note: Perception +10, Discrétion +11 ; la vision dans le noir porte également à 18 m
+
+## Ouverture
+
+step: Une cible vivante est déjà à 1,50 m
+  do: Attaque à outrance : deux attaques de contact +13 contre cette cible, chacune pour 1d8 dégâts d’énergie négative
+  note: Privilégier une cible que ses alliés peuvent difficilement dégager ; les attaques de contact permettent de menacer même un adversaire fortement cuirassé
+
+step: Une cible vivante peut être atteinte après un déplacement de 9 m au maximum
+  do: Avancer au contact et porter une seule attaque de contact +13, pour 1d8 dégâts d’énergie négative
+
+step: Aucune cible ne peut être atteinte avec un seul déplacement
+  do: Effectuer un double déplacement, jusqu’à 18 m, pour se rapprocher en utilisant les couverts disponibles
+  note: Ce double déplacement ne laisse pas d’action pour attaquer ce round
+
+## Rounds suivants
+
+step: Une cible vivante reste à portée
+  do: Répéter les deux attaques de contact +13 en attaque à outrance et concentrer les coups sur la même cible
+
+step: La cible s’éloigne
+  do: La suivre jusqu’à 9 m et porter une attaque si elle devient accessible ; sinon, poursuivre par un double déplacement
+
+step: Le zombie a perdu des points de vie
+  do: Récupérer 3 pv au début de son tour, sans dépasser 157 pv
+  note: La guérison accélérée fonctionne aussi pendant qu’il attaque
+
+## Repli
+
+step: Points de vie sous 40 et un abri est accessible
+  do: Effectuer un retrait jusqu’à 18 m vers l’abri, puis rester à couvert pour récupérer grâce à la guérison accélérée 3
+  note: Il ne possède aucun moyen indiqué de fuir en volant, en creusant ou par magie ; choisir un passage praticable à pied
+
+step: Aucun repli praticable
+  do: Continuer les attaques de contact sur la cible vivante la plus accessible en bénéficiant de la guérison accélérée

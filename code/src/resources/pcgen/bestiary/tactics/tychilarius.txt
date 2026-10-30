@@ -1,0 +1,84 @@
+## Avant le combat
+
+note: Profil
+  Tychilarius, aberration aquatique unique, chaotique mauvaise, de taille colossale et d'une intelligence exceptionnelle. Il neutralise les esprits dangereux avant de déchirer les survivants.
+  495 pv ; CA 41, contact 25 ; initiative +16. Morsure +27 (6d6+19, critique 19–20 et étreinte), 6 tentacules +25 (2d8+9, critique 19–20 et étreinte). Espace et allonge : 9 m.
+  Déplacement et vol : 18 m ; nage : 36 m. Il n'a pas besoin de respirer. Vision dans le noir à 18 m, vision lucide permanente, vision à 360° ; télépathie à 90 m.
+  RD 10/adamantium et Bien, RM 34 ; immunité au froid, aux maladies et au poison ; résistance au feu 20. Jets de sauvegarde : Vigueur +25, Réflexes +19, Volonté +25 ; +4 contre les sorts et effets psychiques.
+
+resource: Débilité | 3/jour | Volonté DD 26
+resource: Cauchemar | 3/jour | Volonté DD 26 ; préparation hors combat
+resource: Télékinésie | 3/jour | DD 26
+resource: Aliénation mentale | 1/jour | Volonté DD 28
+resource: Esprit impénétrable | 1/jour | protection personnelle à préparer
+resource: Présence écrasante | 1/jour | Volonté DD 30
+resource: Répulsion | 1/jour | Volonté DD 27
+resource: Pouvoirs à volonté | illimité | ténèbres profondes, détection de la magie, porte dimensionnelle, liberté de mouvement, protection contre le Bien, protection contre la Loi ; NLS 23
+
+step: Il prévoit une confrontation
+  do: Activer esprit impénétrable et liberté de mouvement ; renouveler cette dernière avant l'arrivée des intrus si nécessaire
+  do: Ajouter protection contre le Bien ou protection contre la Loi selon les adversaires attendus
+  note: Les bonus de même type de ces deux protections ne s'additionnent pas
+
+step: Il peut choisir le terrain
+  do: Privilégier une étendue d'eau profonde ou un espace permettant le vol, avec une destination de repli connue
+  note: Sa nage à 36 m et son absence de respiration lui permettent de prolonger une poursuite sous l'eau
+
+step: Les intrus dépendent de la lumière et ne voient pas dans les ténèbres magiques
+  do: Préparer ténèbres profondes sur la zone de rencontre
+  note: Sa vision lucide lui permet de voir dans ces ténèbres ; vérifier quels adversaires conservent leur vision
+
+## Ouverture
+
+step: Plusieurs adversaires sont groupés et sensibles aux effets mentaux
+  do: Employer présence écrasante sur les cibles admissibles, en priorité les combattants et lanceurs de sorts les plus menaçants ; Volonté DD 30
+  note: Consacrer ce tour au pouvoir ; exploiter ses effets dès le tour suivant
+
+step: Un lanceur de sorts profanes reste libre d'agir et paraît être la menace principale
+  do: Employer débilité sur lui ; Volonté DD 26
+  note: Les utilisateurs de sorts profanes subissent un malus de –4 à leur sauvegarde contre ce pouvoir
+
+step: Les ennemis sont déjà à portée et résistent aux effets mentaux
+  do: Effectuer une attaque à outrance : morsure +27 et 6 tentacules +25
+  note: Concentrer les attaques sur une cible dangereuse et accessible ; tenter l'étreinte après les touches qui la permettent
+
+step: Il doit franchir un obstacle ou rejoindre un adversaire inaccessible
+  do: Utiliser porte dimensionnelle pour gagner une position offrant une attaque au tour suivant
+  note: Après ce pouvoir, il ne peut plus agir avant son prochain tour ; éviter une arrivée au milieu de tous les ennemis
+
+## Rounds suivants
+
+step: Une cible prioritaire se trouve dans son allonge de 9 m
+  do: Répéter l'attaque à outrance et l'étreinte pour l'empêcher de se déplacer librement
+  note: L'étreinte ne lui confère ni constriction ni engloutissement
+
+step: Il doit se déplacer avant de porter une seule attaque
+  do: Avancer puis employer Science de la frappe décisive avec la morsure : +27, 18d6+19
+  note: Les dés supplémentaires de ce don ne sont pas multipliés sur un critique
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Le frapper, de préférence avec la morsure, et tenter l'étreinte si elle s'applique
+  note: Attaques réflexes et sa Dextérité de 35 permettent jusqu'à 13 attaques d'opportunité par round, sans multiplier celles dues à une même occasion
+
+step: Un adversaire dangereux reste hors de sa portée de mêlée
+  do: Employer débilité contre un lanceur de sorts, ou aliénation mentale contre une autre cible sensible ; Volonté DD 26 ou DD 28
+  note: Après une immunité manifeste aux effets mentaux, changer de moyen d'attaque
+
+step: Le terrain offre des projectiles lourds ou permet de déplacer utilement une cible
+  do: Employer télékinésie pour lancer les projectiles ou projeter une créature vers une position défavorable ; DD 26 lorsque le mode choisi autorise une sauvegarde
+  note: S'il maintient un effet exigeant de la concentration, il lui consacre l'action nécessaire au lieu d'attaquer à outrance
+
+step: Des combattants de mêlée cherchent encore à l'approcher
+  do: Activer répulsion, Volonté DD 27, puis exploiter son allonge contre les adversaires qu'il peut atteindre
+  note: Répulsion gêne l'approche ; elle n'annule pas les attaques à distance ni celles des créatures déjà en position de le frapper
+
+## Repli
+
+step: Ses pv tombent à 150 ou moins, ou les ennemis traversent régulièrement ses défenses
+  do: Employer porte dimensionnelle vers la destination de repli connue
+  note: Il ne peut plus agir avant son prochain tour ; choisir un point qui le mette immédiatement à couvert
+
+step: Il peut poursuivre sa fuite au tour suivant
+  do: Plonger et s'éloigner à la nage, 36 m par déplacement, ou voler à 18 m par déplacement si l'eau est inaccessible
+  do: Réutiliser porte dimensionnelle si les poursuivants le rejoignent
+  note: Il peut attendre sous l'eau sans remonter respirer

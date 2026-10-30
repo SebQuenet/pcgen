@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Korir-kokembe, dragon neutre de très grande taille des jungles humides, prédateur des rivières et des marais infesté de vermines. Il préfère ramper et grimper pour approcher ses proies.
+  136 pv, CA 24. Morsure +18 (2d6+10, maladie et étreinte), 2 griffes +18 (2d6+7, critique 19–20 et étreinte), coup de queue +13 (2d6+3 et étreinte).
+  Allonge de 4,50 m, ou 6 m avec la morsure ; lutte +26. Déplacement, escalade et nage à 12 m ; vol à 24 m, bonne manœuvrabilité.
+
+resource: Liberté de mouvement | permanent | protège contre les entraves magiques et les prises adverses ; permet de combattre normalement sous l'eau
+resource: Répulsif | à volonté | barrière contre les vermines à 3 m ; Volonté DD 16 pour celles capables de la franchir
+resource: Vomissement de nuée | à volonté | attendre 1d4 rounds avant chaque réutilisation ; nuée adjacente, durée 13 rounds ; guêpes ou fourmis légionnaires possibles au NLS 13
+resource: Enchevêtrement | 3/jour | Réflexes DD 13 ; végétation dans un rayon de 12 m, durée 13 minutes
+resource: Mort rampante | 1/jour | quatre nuées ; portée initiale 16,50 m, durée 13 rounds ; poison et distraction : Vigueur DD 19
+resource: Fléau d'insectes | 1/jour | quatre nuées de guêpes stationnaires et contiguës ; durée 13 minutes
+
+step: Il repère des intrus avant d'être découvert
+  do: Se dissimuler dans la végétation près d'une berge ou d'arbres praticables, avec une voie de fuite vers l'eau ou la canopée
+  note: Discrétion +18 dans la jungle ; Perception +18, odorat et vision dans le noir à 18 m pour repérer les approches
+
+## Ouverture
+
+step: Plusieurs adversaires sont à 16,50 m ou moins et aucun ne le menace au contact
+  do: Utiliser Mort rampante et faire apparaître les quatre nuées adjacentes les unes aux autres, sur les adversaires si possible
+  note: Chaque nuée inflige 4d6 dégâts ; les chevaucher sur une même victime ne multiplie pas les dégâts. Garder les ennemis occupés pendant qu'il se place derrière un couvert
+
+step: Les adversaires approchent dans une zone végétalisée et restent hors de portée de Mort rampante
+  do: Utiliser Enchevêtrement pour ralentir leur progression et séparer les premiers arrivants du reste du groupe
+  note: Même avec une sauvegarde réussie, la zone devient un terrain difficile ; un ennemi encore libre qui y reste doit renouveler sa sauvegarde à la fin du tour du korir-kokembe
+
+step: Une cible isolée est accessible après un déplacement
+  do: Approcher puis porter une morsure à 6 m ou moins ; après une touche, tenter gratuitement l'étreinte à +26
+  note: L'étreinte s'applique ici aux cibles de très grande taille ou plus petites. Lors de l'attaque, déclencher la présence terrifiante à 9 m : Volonté DD 18 pour les adversaires ayant moins de 13 DV
+
+## Rounds suivants
+
+step: Une cible est à 4,50 m ou moins et il peut consacrer son tour à la mêlée
+  do: Attaque à outrance : morsure +18, deux griffes +18 et queue +13 ; concentrer les coups sur une proie vulnérable ou un lanceur de sorts
+  note: Tenter l'étreinte après une touche utile. Les confirmations de critique bénéficient de +4 ; un critique confirmé rend la victime malade pendant 1 minute. Employer Attaque en puissance contre une cible facile à toucher
+
+step: Il tient une proie et ses alliés peuvent encore la secourir
+  do: Consacrer son action simple au maintien de la lutte ; en cas de réussite, infliger les dégâts d'une attaque naturelle ou déplacer la prise à demi-vitesse vers un endroit moins accessible
+  note: Choisir entre blesser et déplacer la prise. Relâcher celle-ci si l'immobilisation l'expose à trop d'attaques
+
+step: Les ennemis quittent les nuées de Mort rampante
+  do: Consacrer une action simple à rediriger les nuées vers les cibles encore proches
+  note: Il doit rester à 30 m ou moins pour les commander ; au-delà, elles restent sur place. Cette action remplace ses attaques ou l'emploi d'un autre pouvoir pendant ce tour
+
+step: Des ennemis sont ralentis par les plantes ou regroupés dans un passage
+  do: Utiliser Fléau d'insectes pour couvrir leur position ou le passage, en restant hors de leur mêlée
+  note: Les quatre nuées forment une zone continue et ne poursuivent personne ; les placer là où les ennemis auront du mal à s'éloigner
+
+step: Les pouvoirs quotidiens sont dépensés ou une nouvelle proie s'approche
+  do: Vomir une nuée de guêpes contre une cible aérienne ou une nuée de fourmis légionnaires contre des ennemis au sol, puis se décaler hors de leur trajectoire
+  note: La nuée apparaît à côté de lui et attaque les autres créatures dans son espace. Sans cible, elle avance dans la direction choisie ; changer sa direction exige une action simple. Respecter le délai de 1d4 rounds avant de recommencer
+
+step: Des vermines menacent sa position
+  do: Activer Répulsif et se tenir à distance de ses propres nuées
+  note: Cette barrière peut également gêner les vermines qu'il a invoquées ; son immunité aux maladies ne le protège pas de leurs dégâts ni de leur poison
+
+## Repli
+
+step: Points de vie sous 40 ou adversaires capables de le submerger
+  do: Relâcher sa prise et battre en retraite vers l'eau, les arbres ou les airs ; avec l'action de retraite et un trajet libre, parcourir jusqu'à 48 m en vol ou 24 m à la nage
+  note: Utiliser les nuées déjà présentes et la végétation enchevêtrée pour gêner la poursuite. Liberté de mouvement le protège des entraves magiques ; compression lui permet d'emprunter des passages étroits
+
+step: Il dispose encore d'Enchevêtrement et d'un tour à l'abri
+  do: Enchevêtrer la végétation sur le trajet des poursuivants, puis poursuivre sa fuite au tour suivant

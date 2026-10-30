@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Minuscule dinosaure des forêts chaudes, prédateur animal qui chasse en bande de 5 à 12 individus ou en meute de 13 à 24.
+  6 points de vie ; CA 17 ; initiative +8 ; déplacement de 18 m. Morsure +1 (1d3-1) et deux griffes +1 (1d2-1).
+  Bond lui permet de porter ses trois attaques à la fin d'une charge. Son allonge est de 0 m : il doit entrer dans la case de sa proie pour l'attaquer.
+
+step: Une proie est à proximité
+  do: La repérer avec l'odorat et la vision nocturne, puis s'approcher avec la meute
+  note: Perception +4 ; l'odorat aide à trouver la proie, mais ne dispense pas de la localiser avant de l'attaquer
+
+## Ouverture
+
+step: Une proie accessible peut être chargée en ligne droite, entre 3 m et 36 m
+  do: Charger et utiliser Bond pour porter une morsure et deux griffes sur cette même proie
+  note: La charge donne +2 aux attaques, soit +3 chacune, et réduit sa CA à 15 jusqu'au début de son prochain tour
+  note: Entrer dans la case d'un ennemi peut provoquer une attaque d'opportunité ; avec seulement 6 points de vie, cette approche est risquée
+
+step: Aucune charge n'est possible
+  do: Se rapprocher de la proie jusqu'à 18 m et porter une morsure +1 (1d3-1) s'il peut entrer dans sa case
+  note: Un déplacement ordinaire ne permet pas d'utiliser Bond pour ajouter les deux griffes
+
+## Rounds suivants
+
+step: La proie est toujours dans sa case et aucun déplacement n'est nécessaire
+  do: Faire une attaque à outrance : morsure +1 (1d3-1) et deux griffes +1 (1d2-1)
+
+step: La proie s'éloigne et une nouvelle charge est possible
+  do: La poursuivre par une charge et répéter les trois attaques grâce à Bond
+  note: Les autres membres de la meute concentrent leurs attaques sur cette même proie, si leurs déplacements le permettent
+
+step: Il faut se déplacer pour rejoindre une proie sans pouvoir charger
+  do: Se déplacer puis porter une seule morsure ; réserver l'attaque à outrance à un round sans déplacement ordinaire
+
+## Repli
+
+step: Points de vie à 3 ou moins
+  do: Se désengager pour s'éloigner jusqu'à 36 m et quitter le contact
+  note: Le désengagement protège seulement la sortie de la case de départ contre les attaques d'opportunité
+
+step: Hors du contact, une ligne droite dégagée permet de fuir
+  do: Courir jusqu'à 90 m par round grâce au don Course

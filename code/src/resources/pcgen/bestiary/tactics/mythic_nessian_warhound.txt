@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Chien de guerre nessien mythique, extérieur infernal de taille G, loyal mauvais. 166 pv, CA 28 ; déplacement de 12 m, espace et allonge de 3 m.
+  Morsure +22 (2d8+9, critique sur 18–20, plus brûlure et croc-en-jambe), 2 griffes +20 (2d6+9 plus brûlure).
+  Réduction des dégâts 10/épique, immunité au feu, vulnérabilité au froid ; vision dans le noir à 18 m, vision dans les ténèbres et odorat.
+
+resource: Localisation de créature | 3/jour | pouvoir magique, NLS 12
+resource: Porte dimensionnelle | 3/jour | pouvoir magique, NLS 12 ; aucune autre action après son utilisation pendant ce tour
+
+step: Une proie est recherchée
+  do: Employer localisation de créature pour la repérer, puis la pister avec l'odorat et Survie +17.
+
+step: Les intrus approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +17 et les laisser venir près de sa position.
+  note: Il voit dans les ténèbres ; choisir un passage sombre lui permet d'exploiter cet avantage.
+
+step: Il chasse en couple ou en meute
+  do: Répartir les chiens de part et d'autre du passage pour entourer la première proie qui s'avance.
+
+## Ouverture
+
+step: Un ennemi se trouve déjà dans son allonge de 3 m
+  do: Attaque à outrance : morsure +22 (2d8+9, 18–20, plus brûlure et croc-en-jambe), puis 2 griffes +20 (2d6+9 plus brûlure).
+  note: Faire tomber la cible dès la morsure pour faciliter les attaques suivantes ; BMO +22.
+
+step: Aucun ennemi n'est à portée, mais une proie est accessible après un déplacement
+  do: Avancer de 12 m au maximum, puis mordre une cible dans son allonge : +22, 2d8+9 plus brûlure et croc-en-jambe.
+  note: Privilégier une proie isolée ou déjà engagée par un autre chien.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Répéter l'attaque à outrance avec la morsure et les deux griffes, en concentrant les attaques sur la même proie.
+  note: Si elle est encore debout, exploiter de nouveau le croc-en-jambe de la morsure ; si elle est à terre, poursuivre les attaques pour profiter de sa position.
+
+step: Un adversaire lui inflige des dégâts de froid et reste accessible
+  do: Se porter sur cet adversaire et le mordre pour tenter de le renverser, puis concentrer sur lui les attaques suivantes.
+  note: Sa vulnérabilité au froid rend cette menace prioritaire malgré sa résistance aux autres coups.
+
+step: Un obstacle empêche d'atteindre la proie et il reste au moins deux portes dimensionnelles
+  do: Employer porte dimensionnelle pour rejoindre une position permettant de reprendre l'assaut au tour suivant.
+  note: Conserver si possible une utilisation pour le repli ; il ne peut pas attaquer pendant le tour de la téléportation.
+
+step: La proie s'enfuit sans obstacle infranchissable
+  do: La poursuivre à 12 m par déplacement, en suivant son odeur et ses traces avec Survie +17.
+
+## Repli
+
+step: Points de vie sous 40, ou attaques de froid répétées sans possibilité d'atteindre leur source
+  do: Utiliser porte dimensionnelle pour gagner une position abritée connue et rompre le combat.
+  note: Le repli par téléportation termine ses actions du tour.
+
+step: Le repli est nécessaire et les portes dimensionnelles sont épuisées
+  do: Se désengager, puis fuir en utilisant son déplacement de 12 m et les passages qui coupent la vue des poursuivants.

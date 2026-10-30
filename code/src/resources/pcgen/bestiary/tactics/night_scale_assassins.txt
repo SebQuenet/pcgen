@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Assassin demi-elfe solitaire de Magnimar, neutre mauvais ; 34 pv, CA 17, déplacement de 9 m.
+  Épée courte +4 (1d6+1, critique 19–20) ou dague +4 (1d4+1, critique 19–20) ; arbalète de poing +1 ; attaque sournoise +4d6 et attaque mortelle, Vigueur DD 13.
+  Discrétion +15 et vision nocturne : il privilégie une embuscade contre une victime isolée.
+
+resource: Potions d'invisibilité | 2 | une pour l'approche, une à réserver au repli ; attaquer met fin à l'invisibilité
+resource: Potion de soins modérés | 1 | à boire à couvert lorsque les blessures menacent sa fuite
+resource: Essence d'ombre | 1 dose | poison à appliquer sur une arme avant l'embuscade
+
+step: Il peut choisir le lieu de l'attaque
+  do: Repérer la victime avec Perception +11 et choisir un couvert proche d'une issue ; se cacher avec Discrétion +15.
+  note: Préférer un passage peu éclairé ; la vision nocturne ne permet pas de voir dans l'obscurité totale.
+
+step: Il dispose d'un round de préparation
+  do: Enduire l'épée courte d'essence d'ombre avec le talent poison persistant, au prix d'une action complexe.
+  note: La dose reste efficace pour deux attaques réussies ; les jets de sauvegarde contre ce poison bénéficient d'un bonus de circonstances de +2. L'application ne risque pas de l'empoisonner.
+
+step: L'approche nécessite de quitter le couvert
+  do: Boire une potion d'invisibilité avant de s'approcher.
+
+step: La victime reste observable sans le repérer ni l'identifier comme ennemi
+  do: L'étudier pendant 3 rounds, en consacrant une action simple par round à cette observation.
+  note: Se placer pour atteindre le contact dans les 3 rounds suivant cette étude.
+
+## Ouverture
+
+step: La victime étudiée est à 1,50 m et vulnérable à une attaque sournoise
+  do: Frapper à l'épée courte +4 : 1d6+1 et 4d6 sournois ; choisir de tuer par attaque mortelle, Vigueur DD 13 pour éviter la mort.
+  note: L'attaque mortelle exige une attaque sournoise de mêlée qui inflige des dégâts, après l'étude et dans son délai de 3 rounds. Une sauvegarde réussie laisse les dégâts de l'attaque ; l'invisibilité cesse au premier assaut.
+
+step: Le contact est inaccessible mais une cible est privée de son bonus de Dextérité à 9 m ou moins
+  do: Tirer à l'arbalète de poing +1 pour bénéficier de Tir à bout portant et des 4d6 sournois.
+  note: Ce tir ne permet pas d'attaque mortelle.
+
+## Rounds suivants
+
+step: Une attaque sournoise touche une cible vivante
+  do: Appliquer l'attaque hémorragique : 3 points de saignement au début de chacun des tours de la victime.
+  note: Ces saignements ne se cumulent pas entre eux ; des soins peuvent les arrêter. Exploiter la seconde frappe empoisonnée si elle reste disponible.
+
+step: La victime est seule au contact mais se défend normalement
+  do: Feinter avec Bluff +9, au prix d'une action simple ; si la feinte réussit, porter une attaque sournoise de mêlée au round suivant.
+  note: La feinte et l'attaque occupent deux rounds distincts. Une cible qui l'a repéré fait échouer l'attaque mortelle.
+
+step: Il poursuit le combat à distance
+  do: Garder un couvert, tirer puis recharger l'arbalète de poing par une action libre grâce à Rechargement rapide, avec une main libre.
+  note: Les dégâts sournois exigent toujours une cible privée de son bonus de Dextérité ; conserver une distance de 9 m ou moins pour en bénéficier.
+
+## Repli
+
+step: La victime tombe, il est encerclé ou ses points de vie descendent à 12 ou moins
+  do: Se dégager par une retraite ou avec Acrobaties +12 ; une fois hors des cases menacées, boire la potion d'invisibilité restante et gagner une issue.
+  note: Chercher ensuite un couvert pour se cacher avec Discrétion +15 ; employer Escalade +10 si une voie en hauteur est praticable.
+
+step: Il a rompu le contact et reste blessé
+  do: Boire la potion de soins modérés si elle reste disponible, puis poursuivre sa fuite.

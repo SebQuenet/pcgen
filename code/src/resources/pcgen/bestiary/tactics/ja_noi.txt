@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Ja Noi, oni d'apparence hobgobeline, loyal mauvais, avide de combats et de défis. Il laisse ses soldats occuper les ennemis ordinaires et recherche le chef ou le champion adverse.
+  Tetsubo de maître à deux mains +11/+6 (1d10+6, critique x4) ; arc long +8/+3 (1d8, critique x3), 20 flèches.
+  57 pv ; CA 18 ; déplacement 9 m ; allonge 1,50 m ; vision dans le noir à 18 m. Sa régénération 3 lui permet de soutenir la mêlée, mais l'acide et le feu l'interrompent.
+
+resource: Force de taureau | 1/jour | Force +4 pendant 6 minutes
+resource: Arme magique | 3/jour | arme touchée, bonus d'altération +1 pendant 6 minutes
+resource: Vol | 3/jour | vitesse de vol 18 m, bonne manœuvrabilité, pendant 6 minutes
+resource: Injonction | 3/jour | une créature vivante à 12 m, Volonté DD 13 annule, durée 1 round ; dépend du langage
+resource: Anathème | 3/jour | une créature vivante à 48 m, Volonté DD 13 annule ; secouée pendant 6 minutes
+resource: Combattant serein | 1/jour | relancer un jet de Volonté par une action immédiate
+
+step: Il dispose de deux rounds avant l'affrontement
+  do: Lancer force de taureau sur lui-même, puis arme magique sur son tetsubo, une action simple par pouvoir
+  note: Avec ces deux effets, tetsubo +13/+8 (1d10+10, critique x4). Le bonus d'arme magique remplace celui de l'arme de maître à l'attaque ; il ne s'y ajoute pas.
+
+step: Un obstacle ou un adversaire volant risque de l'empêcher d'atteindre son champion
+  do: Lancer vol avant l'engagement s'il dispose d'un round supplémentaire
+
+step: Une approche trompeuse est possible
+  do: Prendre l'apparence d'un humanoïde de taille P ou M pour se faire passer pour un allié des adversaires, puis approcher avec Bluff +11 et Déguisement +11
+  note: Le changement de forme trompe les apparences ; il ne garantit pas que les ennemis le croient amical.
+
+step: Des hobgobelins ou d'autres soldats l'accompagnent
+  do: Leur faire retenir les autres adversaires pendant qu'il se dirige vers leur chef
+
+## Ouverture
+
+step: Le champion adverse est accessible en un déplacement
+  do: Avancer de 9 m au maximum, ou voler si le pouvoir est actif, puis porter une seule attaque de tetsubo à 1,50 m
+  note: Attaque +11 (1d10+6), ou +13 (1d10+10) avec force de taureau et arme magique. S'il commence déjà au contact, faire directement une attaque à outrance.
+
+step: Le champion reste hors de portée de mêlée mais se trouve à 12 m ou moins et comprend le commun ou le gobelin
+  do: Utiliser injonction avec l'ordre d'approcher, Volonté DD 13
+  note: En cas d'échec, la cible ne fait que se déplacer vers lui à son prochain tour et provoque normalement les attaques d'opportunité dues à son déplacement.
+
+step: Le contact demande encore plusieurs rounds et une cible vivante est à 48 m ou moins
+  do: Utiliser anathème sur le combattant choisi, puis avancer vers lui
+  note: Volonté DD 13 ; secouée, la cible subit -2 aux attaques, sauvegardes, tests de compétence et de caractéristique. Ce pouvoir prend son action simple du round.
+
+## Rounds suivants
+
+step: Son adversaire reste à 1,50 m
+  do: Attaque à outrance au tetsubo, +11/+6 (1d10+6), ou +13/+8 (1d10+10) avec les deux renforcements
+  note: Se limiter à un pas de placement de 1,50 m s'il veut conserver ses deux attaques.
+
+step: Il touche assez facilement sa cible
+  do: Employer Attaque en puissance : -2 aux attaques de mêlée et +6 aux dégâts du tetsubo jusqu'à son prochain tour
+  note: Sans renforcement, +9/+4 (1d10+12) ; avec force de taureau et arme magique, +11/+6 (1d10+16). Renoncer à ce don contre une défense trop élevée.
+
+step: Après un déplacement, deux ennemis sont adjacents entre eux et tous deux à 1,50 m de lui
+  do: Utiliser Enchaînement comme action simple : une attaque au meilleur bonus, puis, si elle touche, une attaque au même bonus contre le second ennemi
+  note: Deux attaques au maximum ; CA réduite de 2 jusqu'à son prochain tour. Enchaînement remplace son attaque normale, sans s'ajouter à une attaque à outrance.
+
+step: Un allié peut prendre la même cible en tenaille
+  do: Se placer de l'autre côté de la cible pour obtenir le bonus de tenaille de +2
+  note: Si l'allié possède aussi Outflank, le bonus passe à +4 ; un critique du Ja Noi contre cette cible provoque une attaque d'opportunité de cet allié.
+
+step: La cible demeure inaccessible au tetsubo
+  do: Utiliser vol pour la rejoindre ; à défaut, tirer à l'arc long
+  note: Un tir à +8 après déplacement, ou deux tirs à +8/+3 sans déplacement autre qu'un pas de placement ; dégâts 1d8, critique x3. Décompter les 20 flèches et les pénalités de distance au-delà de 30 m.
+
+step: Un effet mental menace de le neutraliser ou de le retourner contre ses soldats
+  do: Dépenser Combattant serein pour relancer son jet de Volonté, normalement à +3, par une action immédiate
+
+## Repli
+
+note: Acharnement
+  Il recherche l'épreuve du combat et accepte d'y mourir. Une baisse de ses points de vie ne suffit généralement pas à lui faire abandonner un duel.
+
+step: Il est blessé mais n'a pas subi de dégâts d'acide ou de feu
+  do: Continuer à presser son adversaire et récupérer 3 pv par round grâce à la régénération
+  note: La régénération ne le maintient pas conscient si ses points de vie deviennent trop bas.
+
+step: L'acide ou le feu interrompt sa régénération et il choisit de survivre
+  do: Se désengager derrière ses soldats s'ils sont présents ; avec vol actif, utiliser la retraite pour gagner un abri hors d'atteinte
+  note: Des dégâts d'acide ou de feu désactivent la régénération pendant le round suivant. Attendre à couvert qu'elle reprenne avant de revenir au combat ; activer vol demande une action simple s'il n'est pas déjà actif.

@@ -1,0 +1,69 @@
+## Avant le combat
+
+note: Profil
+  Nixudaemon, daémon du labeur de taille G, FP 7, neutre mauvais : un esclavagiste cruel qui épuise ses victimes et retourne les captifs contre leurs compagnons.
+  95 pv, CA 20, déplacement de 12 m ; deux coups +12 (1d8+3) à 3 m et deux bras-fouets +13 (1d8+4 et étreinte) à 6 m ; constriction 1d8+4, lutte +18, asservissement DD 18.
+  RD 10/Bien ou argent, RM 18, guérison accélérée 2 ; immunité à l'acide, aux dégâts non létaux, à la fatigue et à l'épuisement ; résistance 10 au froid, au feu et à l'électricité.
+
+resource: Héroïsme | 3/jour | NLS 10, durée 100 minutes ; bonus de moral de +2 aux attaques, jets de sauvegarde et tests de compétence
+resource: Vagues de fatigue | 3/jour | cône de 9 m ; DD 18 indiqué dans le profil
+resource: Téléportation suprême | à volonté | lui-même et 22,5 kg d'objets seulement
+resource: Résurrection temporaire | 1/jour | contact, incantation de 10 minutes ; mort depuis moins de 48 heures, retour pour 24 heures avec un niveau négatif
+resource: Perception de la mort | permanent | repérer les vivants et distinguer les mourants dans un cône de 9 m
+
+step: Il peut préparer l'affrontement
+  do: Lancer héroïsme sur lui-même, puis attendre derrière les serviteurs déjà présents, à portée de fouet des voies d'approche
+  note: Sous héroïsme, coups +14, bras-fouets +15, lutte +20, désarmement et croc-en-jambe +18 ; les dégâts restent inchangés
+
+step: Un serviteur mort peut encore être utile et il dispose de dix minutes
+  do: Employer résurrection temporaire avant le combat, puis tenter de l'asservir par étreinte s'il faut le contraindre
+  note: La résurrection ne donne aucun contrôle sur la cible ; le nixudaemon ignore le test normalement exigé pour ranimer ses propres victimes
+
+## Ouverture
+
+step: Plusieurs adversaires vivants sont groupés dans un cône de 9 m
+  do: Employer vagues de fatigue, puis les laisser approcher dans les 6 m de ses fouets
+  note: La fatigue pénalise Force et Dextérité et empêche course et charge ; une nouvelle vague n'épuise pas les créatures déjà fatiguées
+
+step: Une cible accessible se trouve à 6 m ou moins
+  do: Frapper avec un bras-fouet et tenter l'étreinte gratuite sur une cible de taille G ou inférieure ; préférer un adversaire dont la Volonté paraît faible
+  note: Si l'étreinte réussit, renoncer aux dégâts de constriction pour tenter l'asservissement, Volonté DD 18
+
+step: Un adversaire est asservi
+  do: Lui ordonner par télépathie d'attaquer ses compagnons ou de barrer leur passage, puis relâcher la prise pour retrouver sa mobilité
+  note: Deux esclaves au maximum ; chacun refait automatiquement son jet de Volonté au début de son tour et devient immunisé à la fatigue, à l'épuisement et aux effets de douleur pendant le contrôle
+
+## Rounds suivants
+
+step: Il peut rester sur place pour attaquer
+  do: Faire une attaque à outrance : deux bras-fouets à 6 m ; ajouter les deux coups si une cible est à 3 m
+  note: Les fouets sont des attaques naturelles qui ne provoquent pas d'attaque d'opportunité ; ils ne peuvent être ni désarmés ni brisés
+
+step: Une cible saisie résiste au contrôle ou ne peut pas être dominée
+  do: Maintenir la lutte par une action simple et infliger la constriction de 1d8+4 sur une réussite, plutôt que de compter sur l'asservissement
+  note: Agrippé lui-même, il ne porte plus d'attaques d'opportunité ; éviter de s'immobiliser ainsi devant plusieurs ennemis dangereux
+
+step: Un combattant armé menace de franchir sa ligne
+  do: Remplacer une attaque par un désarmement ou un croc-en-jambe, BMO +16 avant héroïsme, selon l'arme et la stabilité de l'adversaire
+  note: Éviter les crocs-en-jambe hasardeux : ses fouets ne peuvent pas être lâchés pour éviter une chute en retour
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge et il n'est pas agrippé
+  do: Frapper au fouet pour punir son déplacement ou son incantation
+  note: Attaques réflexes permet jusqu'à deux attaques d'opportunité par round ; entrer dans son allonge ne provoque pas à soi seul une telle attaque
+
+step: Il veut tuer rapidement une cible
+  do: Désactiver la propriété miséricordieuse du fouet et conserver la propriété mortelle ; activer vicieuse seulement si l'accélération des dégâts justifie le contrecoup
+  note: Vicieuse ajoute 2d6 dégâts à la cible et inflige 1d6 au nixudaemon par touche ; sa guérison accélérée ne rend que 2 pv par round
+
+step: De nouveaux ennemis arrivent groupés et ne sont pas encore fatigués
+  do: Dépenser une nouvelle vague de fatigue si elle atteint plusieurs cibles
+  note: Ne pas gaspiller les utilisations sur les esclaves asservis, immunisés à la fatigue
+
+## Repli
+
+step: Ses points de vie passent sous 30 ou des armes du Bien ou en argent rendent la mêlée intenable
+  do: Rompre volontairement toute prise, ordonner aux esclaves encore contrôlés de couvrir le retrait, puis employer téléportation suprême vers un refuge connu
+  note: Il ne peut pas emporter ses esclaves avec cette téléportation ; quitter d'abord l'allonge adverse si possible, car le pouvoir magique peut provoquer une attaque d'opportunité
+
+step: Il est à l'abri
+  do: Laisser sa guérison accélérée restaurer 2 pv par round avant d'envisager un nouvel affrontement

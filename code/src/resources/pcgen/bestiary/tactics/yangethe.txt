@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Yangethe, aberration de taille G, chaotique mauvaise, intelligente et cruelle. Il disperse les adversaires par la terreur pour saisir une proie isolée.
+  115 PV ; CA 23 ; déplacement de 12 m ; espace et allonge de 3 m. Attaque à outrance : 2 griffes +14 (1d6+7) et 4 tentacules +13 (1d6+3 et étreinte) ; BMO +20 en lutte.
+  Réduction des dégâts 10, ignorée par les armes tranchantes ou perforantes ; résistance à la magie 20 ; immunité au froid, à la terreur et aux effets mentaux. Impossible à renverser par un croc-en-jambe.
+  Perception +19 ; perception aveugle à 36 m, vision dans le noir à 18 m, télépathie à 18 m. Il n'a pas besoin de respirer.
+
+resource: Énergie psychique | 20 PE par jour | réserve commune à tous les pouvoirs psychiques ; déduire chaque dépense
+resource: Terreur | 4 PE par utilisation | action simple ; cône de 9 m ; Volonté DD 17 ; panique pendant 10 rounds, ou secoué pendant 1 round si réussite
+resource: Contrôle de créature convoquée | 4 PE par utilisation | action simple ; portée 15 m ; Volonté DD 17 ; durée maximale 10 rounds, limitée par la durée restante de la convocation
+resource: Coup au but accéléré | 1 PE par utilisation, au plus 3 par jour | action rapide ; +20 au prochain jet d'attaque avant la fin du round suivant, pour une seule attaque
+resource: Exigence | 8 PE par utilisation | Volonté DD 21 contre la suggestion ; préparation de 10 minutes ; message de 25 mots au maximum à une créature connue
+resource: Pouvoirs magiques | à volonté | ténèbres, télékinésie (DD 18), forme d'arbre ; NLS 10
+
+step: Une embuscade est possible dans un décor boisé
+  do: Prendre une forme d'arbre et attendre que les intrus approchent à portée de terreur ou de tentacules
+  note: Reprendre sa forme normale par une action libre avant d'attaquer ; cette transformation ne donne pas d'attaques supplémentaires
+
+step: Une cible connue peut être attirée avant l'affrontement
+  do: Employer exigence pour lui suggérer une raison plausible de venir seule à un endroit favorable à l'embuscade
+  note: Dépenser 8 PE et disposer de 10 minutes ; une suggestion manifestement suicidaire ne convient pas
+
+step: Le terrain permet de dominer les accès
+  do: Exploiter la marche dans les airs constante pour se placer au-dessus d'un obstacle et garder une voie de dégagement
+  note: Marcher à 12 m par déplacement horizontal ; monter à demi-vitesse selon une pente maximale de 45 degrés
+
+## Ouverture
+
+step: Plusieurs ennemis vivants et sensibles à la terreur sont dans un cône de 9 m
+  do: Lancer terreur, puis se déplacer pour approcher un adversaire resté sur place
+  note: Chercher à séparer le groupe ; cette action simple remplace les attaques du round
+
+step: Une créature convoquée dangereuse se trouve à 15 m ou moins
+  do: Privilégier contrôle de créature convoquée et retourner la créature contre les adversaires
+  note: Son invocateur peut reprendre le contrôle par une action simple et un test opposé d'Art de la magie ; le Yangethe a +17
+
+step: Une proie isolée est accessible après un déplacement de 12 m au maximum
+  do: Utiliser coup au but accéléré, avancer si nécessaire, puis porter une seule attaque de tentacule +13 avec le bonus de +20
+  note: Si le tentacule touche une cible de taille G ou inférieure, tenter gratuitement l'étreinte à +20 contre sa DMD ; le bonus de coup au but a déjà été consommé par l'attaque
+
+## Rounds suivants
+
+step: Un ennemi est à 3 m ou moins et aucune lutte ne doit être maintenue
+  do: Faire une attaque à outrance avec les deux griffes et les quatre tentacules, en concentrant les coups sur une proie vulnérable
+  note: Un pas de placement de 1,50 m reste possible ; après un déplacement ordinaire, ne porter qu'une seule attaque. Une étreinte réussie impose l'état agrippé aux deux combattants
+
+step: Une proie est agrippée et ses alliés ne peuvent pas intervenir efficacement
+  do: Consacrer l'action simple à maintenir la lutte, puis infliger les dégâts d'un tentacule ou immobiliser la proie
+  note: Employer le BMO de lutte +20 et le bonus habituel de maintien si applicable ; maintenir la lutte ne permet pas une attaque à outrance dans le même round
+
+step: La proie agrippée expose le Yangethe aux attaques du reste du groupe
+  do: Relâcher la prise par une action libre, se replacer et disperser les renforts avec terreur si au moins 4 PE restent disponibles
+  note: Préserver sa liberté de mouvement plutôt que rester entouré pour conserver une capture
+
+step: Un adversaire reste à distance avec une arme qui ignore sa réduction des dégâts
+  do: Employer télékinésie pour tenter de le désarmer à distance
+  note: La manœuvre se résout contre la DMD, sans jet de sauvegarde ; la résistance à la magie s'applique. Maintenir la télékinésie exige une action simple par round
+
+step: Les ennemis dépendent de la lumière et les conditions d'éclairage sont favorables
+  do: Employer ténèbres sur un objet pour gêner leur vision, puis combattre à portée de sa vision dans le noir
+  note: La perception aveugle localise les créatures sans annuler leurs chances de camouflage ; ténèbres ne gêne pas les adversaires capables de voir dans le noir
+
+## Repli
+
+resource: Téléportation interplanétaire | 1 par an | lui-même et environ 22,7 kg d'objets seulement ; aucun autre passager
+
+step: Moins de 30 PV et téléportation interplanétaire disponible
+  do: Relâcher toute proie et se téléporter vers un refuge connu sur une autre planète
+  note: Se dégager des adversaires menaçants avant d'utiliser le pouvoir si possible
+
+step: Moins de 30 PV et téléportation annuelle déjà dépensée
+  do: Relâcher toute proie et effectuer une retraite par les airs vers un obstacle ou un passage hors d'atteinte
+  note: Une retraite permet jusqu'à 24 m horizontalement ; la montée reste à demi-vitesse. Employer terreur lors d'un round distinct si des poursuivants se regroupent à portée

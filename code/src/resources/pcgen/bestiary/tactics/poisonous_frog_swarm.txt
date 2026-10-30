@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Nuée animale de minuscules grenouilles venimeuses aux couleurs vives : 18 points de vie, CA 15, déplacement de 3 m. Elle occupe un espace de 3 m sur 3 m et son allonge est nulle.
+  Attaque de nuée : 1d6 dégâts automatiques et poison aux créatures dans son espace à la fin de son tour. Distraction : Vigueur DD 12. Immunité aux dégâts des armes.
+
+resource: Poison | illimité | blessure ; Vigueur DD 12 ; fréquence : 1 fois par round pendant 2 rounds ; affaiblissement de 1d3 points de Force ; guérison : 1 jet de sauvegarde réussi
+
+step: Des proies approchent dans la forêt ou le marais
+  do: Rester dissimulée dans la végétation et les laisser venir à proximité.
+  note: Discrétion +21 ; Perception +9, odorat et vision nocturne pour repérer leur présence. Son intelligence animale favorise une réaction simple à une proie proche.
+
+## Ouverture
+
+step: Une proie est accessible en un déplacement de 3 m
+  do: Avancer dans son espace ; recouvrir plusieurs créatures si leur position le permet.
+  note: À la fin du tour de la nuée, chaque créature recouverte subit 1d6 dégâts et une exposition au poison, sans jet d'attaque. Une cible simplement adjacente n'est pas touchée.
+
+step: Les proies restent trop loin
+  do: Se rapprocher à couvert, en privilégiant une proie proche d'un obstacle qui limite sa fuite.
+  note: Son déplacement de 3 m rend la poursuite en terrain dégagé peu efficace.
+
+## Rounds suivants
+
+step: Une créature vivante commence son tour dans l'espace de la nuée
+  do: Lui faire effectuer un jet de Vigueur DD 12 contre la distraction.
+  note: En cas d'échec, elle est nauséeuse pendant 1 round.
+
+step: Des proies restent à portée de déplacement
+  do: Maintenir ou rétablir le chevauchement avec elles pour infliger de nouveau les dégâts de nuée et le poison à la fin du tour.
+  note: Continuer l'assaut malgré les coups d'armes, auxquels la nuée est immunisée.
+
+step: Une créature est empoisonnée
+  do: Résoudre les jets de Vigueur DD 12 selon la fréquence du poison, même si elle quitte la nuée.
+  note: Chaque échec inflige un affaiblissement de 1d3 points de Force ; un seul jet réussi met fin au poison.
+
+## Repli
+
+step: La nuée tombe à 6 points de vie ou moins
+  do: Fuir vers la végétation la plus proche, à 3 m par déplacement, puis se dissimuler si elle échappe aux regards.
+  note: Sa lenteur rend le couvert proche essentiel à sa fuite.

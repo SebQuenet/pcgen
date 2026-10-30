@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Dragon gris mature de taille G, neutre mauvais, solitaire des côtes chaudes. Intelligent et résistant : 172 pv, CA 32, résistance à la magie 22 ; immunisé contre le sommeil et la paralysie.
+  Souffle de feu en ligne de 24 m : 14d6, Réflexes DD 22 pour moitié. Présence terrifiante à 63 m, Volonté DD 19.
+  Morsure +23 (2d6+12, critique 19–20), 2 griffes +22 (1d8+8), 2 ailes +20 (1d6+4), queue +20 (1d8+8). Allonge de 3 m avec la morsure, 1,50 m avec les autres attaques.
+  Déplacements par action de mouvement : 18 m au sol, 60 m en vol de manœuvrabilité moyenne, 12 m à la nage. Il combine passages aériens, souffle et attaques à outrance sur une cible isolée.
+
+resource: Souffle de feu | fréquence non précisée dans le bloc | ne pas lui attribuer une cadence de réutilisation absente du profil
+resource: Sorts de niveau 1 | 7/jour partagés | mains brûlantes (DD 13), projectile magique, brume de dissimulation, protection contre le Bien, bouclier ; NLS 7
+resource: Sorts de niveau 2 | 7/jour partagés | flou, splendeur de l'aigle, localisation d'objet ; NLS 7
+resource: Sorts de niveau 3 | 4/jour partagés | dissipation de la magie, forme gazeuse ; NLS 7 ; conserver si possible une utilisation pour le repli
+
+step: Intrus repérés avant l'affrontement
+  do: Observer à couvert et choisir un axe de passage qui aligne les ennemis, avec une sortie vers le large ou une zone dégagée
+  note: Prévoir des virages larges ; sa manœuvrabilité moyenne ne garantit ni vol stationnaire ni demi-tour immédiat.
+
+step: Deux rounds de préparation disponibles
+  do: Lancer bouclier, puis flou au round suivant
+  note: Bouclier ajoute +4 de bouclier à la CA et arrête les projectiles magiques ; flou impose 20 % de risque de rater. Chaque sort dure 7 minutes et consomme sa réserve de niveau.
+
+step: Adversaires d'alignement bon identifiés et un round supplémentaire disponible
+  do: Ajouter protection contre le Bien avant de se montrer
+
+## Ouverture
+
+note: Présence terrifiante
+  La déclencher lors du premier passage offensif ; appliquer Volonté DD 19 aux adversaires concernés dans les 63 m.
+  Les options ci-dessous correspondent à des ouvertures alternatives, selon la position des ennemis.
+
+step: Plusieurs ennemis peuvent être pris dans une ligne de 24 m
+  do: Effectuer une Attaque en vol, souffler pendant le déplacement, puis terminer le passage à distance de la mêlée
+  note: 14d6 de feu, Réflexes DD 22 pour moitié. Le déplacement total de ce passage reste limité à 60 m ; le souffle remplace l'attaque de morsure.
+
+step: Groupe dispersé et cible isolée accessible par les airs
+  do: Effectuer une Attaque en vol avec une seule morsure +23 à 3 m, puis poursuivre le mouvement
+  note: Privilégier un lanceur de sorts ou un tireur exposé. Ce don n'annule pas les attaques d'opportunité provoquées par le déplacement.
+
+step: Ennemi déjà à 1,50 m et possibilité de tenir sa position
+  do: Faire une attaque à outrance avec morsure, deux griffes, deux ailes et queue
+
+## Rounds suivants
+
+step: Cible vulnérable toujours à 1,50 m
+  do: Concentrer l'attaque à outrance sur elle jusqu'à la mettre hors de combat
+  note: Réserver Attaque en puissance aux adversaires faciles à toucher ; employer les bonus du profil sans ce don contre une forte CA.
+
+step: Plusieurs combattants menacent de l'encercler
+  do: Abandonner l'attaque à outrance et reprendre les passages aériens avec une morsure par passage
+  note: Exploiter l'allonge de 3 m pour frapper les ennemis dont l'allonge est inférieure ; éviter de traverser leurs zones menacées.
+
+step: Souffle de nouveau disponible et ligne de tir favorable
+  do: Reprendre un passage au-dessus de l'eau et souffler sur les cibles alignées
+  note: Si les ennemis résistent visiblement au feu, privilégier les attaques physiques.
+
+step: Une protection magique identifiée empêche sa tactique principale
+  do: Tenter une dissipation de la magie ciblée, avec un test de NLS à +7
+  note: Consacrer ce round à la dissipation, puis exploiter son éventuelle réussite au round suivant ; surveiller la réserve commune avec forme gazeuse.
+
+step: Une cible blessée reste visible mais hors de portée de morsure
+  do: Lancer projectile magique pour tenter de l'achever
+  note: Au NLS 7, quatre projectiles infligent chacun 1d4+1 ; ils utilisent une seule des sept incantations quotidiennes de niveau 1.
+
+## Repli
+
+step: Points de vie sous 50 ou défenses débordées
+  do: Se désengager et gagner le large par les airs ; choisir la nage si un accès à l'eau permet d'échapper aux poursuivants
+  note: Vol à 60 m ou nage à 12 m par action de mouvement ; privilégier la voie que les ennemis suivent le moins facilement.
+
+step: Il peut lancer un sort sans s'exposer et doit masquer sa fuite
+  do: Lancer brume de dissimulation, puis se déplacer pour rompre le contact visuel
+  note: La brume gêne également sa propre vision ; elle sert à décrocher.
+
+step: Une fissure ou une ouverture étroite offre un refuge inaccessible aux poursuivants
+  do: Lancer forme gazeuse et s'y glisser
+  note: Sous cette forme, le vol tombe à 3 m ; il ne peut ni attaquer ni souffler, et ne peut pas entrer dans l'eau. Garder cette solution pour franchir un obstacle proche.

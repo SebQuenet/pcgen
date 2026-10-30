@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Scion homme-lézard de taille G, neutre, colosse ancestral révéré par sa tribu et souvent chargé de la diriger ou de la protéger.
+  45 PV, CA 17 ; déplacement et nage à 9 m par round ; espace occupé de 3 m et allonge de 3 m.
+  Trident de maître +9 (2d6+3) et morsure +5 (1d8+1), ou deux griffes +7 (1d6+3 chacune) et morsure +5 (1d8+1). Javeline de maître +5 (1d8+3).
+
+resource: Javelines de maître | 2 | une arme dépensée par lancer
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se placer près de l'eau, sur un passage permettant de tenir les assaillants à 3 m, avec une voie de repli vers le marais
+  note: Sa nage lui permet de changer de rive ; il ne dispose d'aucun pouvoir pour contraindre les ennemis à le suivre.
+
+step: Des hommes-lézards l'accompagnent
+  do: Tenir le passage pendant que ses compagnons prennent les flancs des intrus
+
+## Ouverture
+
+step: Un ennemi peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à le placer dans son allonge de 3 m, puis porter une attaque de trident +9 (2d6+3)
+  note: Après ce déplacement, il ne peut pas ajouter sa morsure dans une attaque à outrance.
+
+step: Aucun ennemi n'est à portée de mêlée et il ne peut pas en atteindre un en avançant
+  do: Lancer une javeline de maître +5 (1d8+3), puis gagner une position proche de l'eau
+  note: Garder le trident pour le corps à corps ; il ne possède que deux javelines.
+
+## Rounds suivants
+
+step: Il a subi des dégâts au combat et commence son tour sans être en rage
+  do: Déclencher la rage sanguinaire par une action libre
+  note: Force +2, Constitution +2 et CA réduite de 2. Elle dure jusqu'à la fin du combat ou pendant 1 minute, selon la durée la plus courte ; il ne peut pas l'arrêter volontairement.
+  note: Les valeurs d'attaque du profil sont celles hors rage ; appliquer les augmentations dues à la Force pendant la rage.
+
+step: Un ennemi reste dans son allonge sans nécessiter de déplacement autre qu'un pas de 1,50 m
+  do: Effectuer une attaque à outrance au trident +9 (2d6+3), suivie de la morsure +5 (1d8+1), avant les ajustements de rage
+  note: Concentrer les deux attaques sur le même adversaire pour le mettre hors de combat.
+
+step: Il a perdu son trident
+  do: Passer aux deux griffes +7 (1d6+3 chacune) et à la morsure +5 (1d8+1) lors d'une attaque à outrance, avant les ajustements de rage
+
+step: Sa cible s'éloigne
+  do: La rejoindre en gardant si possible 3 m de distance et porter une seule attaque de trident
+  note: Exploiter son allonge pour frapper un adversaire qui quitte une case menacée et provoque une attaque d'opportunité.
+
+## Repli
+
+step: Il tombe à 12 PV ou moins et une voie de fuite reste ouverte
+  do: Utiliser l'action de retraite pour gagner l'eau, puis s'éloigner à la nage à 9 m par round
+  note: S'il est accompagné, faire couvrir son départ par les autres hommes-lézards. Une rage encore active continue selon sa durée normale.

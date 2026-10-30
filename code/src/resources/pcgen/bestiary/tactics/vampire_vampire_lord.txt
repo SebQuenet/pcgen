@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Seigneur vampire, mort-vivant de taille M, neutre mauvais, FP 15 ; 150 pv, CA 28, contact 14, pris au dépourvu 25 ; initiative +6.
+  Combattant de mêlée à l'épée longue +1 de froid, doté d'une grande force et d'une intelligence élevée. Déplacement de 6 m ; vision dans le noir à 18 m et vision nocturne.
+  Réduction des dégâts de 10, franchie par une arme à la fois magique et en argent ; résistance au froid 10 et à l'électricité 10 ; immunité au sommeil et traits des morts-vivants.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Attendre près d'un passage étroit, avec un couvert et une voie de retraite accessibles à pied
+  note: sa faible vitesse rend les poursuites et les combats en terrain ouvert défavorables ; un passage étroit limite les ennemis capables de l'entourer
+
+step: Les intrus approchent dans l'obscurité
+  do: Les observer grâce à sa vision dans le noir et choisir le moment où ils arrivent à portée de son épée
+  note: voir dans le noir ne le rend pas invisible ; il utilise les obstacles pour masquer sa position
+
+## Ouverture
+
+step: Un adversaire est déjà au contact
+  do: L'attaquer à l'épée longue +1 de froid
+  note: privilégier une cible exposée qu'il peut rapidement mettre hors de combat
+
+step: Aucun ennemi n'est au contact
+  do: Avancer à couvert vers l'adversaire accessible le plus vulnérable, puis l'attaquer dès que la distance le permet
+  note: déplacement de 6 m ; éviter de traverser inutilement les zones menacées par plusieurs ennemis
+
+## Rounds suivants
+
+step: Sa cible reste à portée
+  do: Maintenir la pression à l'épée et concentrer ses attaques sur elle jusqu'à la mettre hors de combat
+  note: éviter de disperser ses attaques entre plusieurs adversaires encore capables d'agir
+
+step: Plusieurs ennemis cherchent à l'encercler
+  do: Revenir vers le passage étroit ou un obstacle pour limiter les attaques simultanées
+  note: conserver une issue libre pour ne pas être acculé
+
+step: Un adversaire inflige des blessures malgré sa réduction des dégâts
+  do: Le traiter comme une menace prioritaire ; l'attaquer s'il est accessible sans s'exposer à tout le groupe
+  note: sa réduction des dégâts protège surtout contre les armes qui ne sont pas à la fois magiques et en argent ; ses résistances au froid et à l'électricité ne protègent pas des autres énergies
+
+## Repli
+
+step: Points de vie sous 45, ou plusieurs adversaires entament rapidement ses défenses
+  do: Rompre le contact par une retraite et rejoindre le couvert préparé
+  note: il fuit à pied ; avec un déplacement de 6 m, les portes, les angles et les passages étroits lui sont plus utiles qu'une course en terrain découvert
+
+step: La retraite est coupée
+  do: Concentrer ses attaques sur l'ennemi qui bloque l'issue, puis emprunter le passage dès qu'il se libère

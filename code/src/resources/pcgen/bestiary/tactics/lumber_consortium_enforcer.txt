@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Homme de main humain du Consortium du bois, bagarreur de niveau 4, neutre mauvais, FP 3. Il combine coups puissants et intimidation pour faire céder ses adversaires.
+  33 pv, CA 15 ; déplacement de 9 m. Pique de maître +9 (1d8+6, x3), hachette +8 (1d6+4, x3), frappe à mains nues +8 (1d8+4), javelot +5 (1d6+4). Intimidation +11.
+  Son allonge naturelle est de 1,50 m ; la pique, arme à allonge, frappe à 3 m mais pas les cases adjacentes.
+
+resource: Javelots | 3 | +5, 1d6+4 ; facteur de portée de 9 m
+
+step: Il peut choisir sa position
+  do: Garder la pique en main et surveiller les approches avec Perception +5 ; choisir un passage qui limite le nombre d'adversaires pouvant l'entourer
+
+step: Il combat avec d'autres hommes de main
+  do: Se placer pour menacer le même adversaire et préparer une prise en tenaille dès que les positions le permettent
+  note: la prise en tenaille donne +2 aux attaques de mêlée contre la cible concernée
+
+## Ouverture
+
+step: L'adversaire reste entre 3 m et 9 m et ne peut pas être frappé immédiatement
+  do: Se déplacer en dégainant un javelot, puis le lancer +5 (1d6+4) depuis une case hors de portée de mêlée
+  note: éviter le lancer si un ennemi le menace au corps à corps, car il provoque une attaque d'opportunité
+
+step: Une cible se trouve à 3 m
+  do: Frapper avec la pique +9 (1d8+6, x3) et conserver cette distance
+  note: si la cible paraît facile à toucher, employer Attaque en puissance : pique +7 (1d8+12, x3)
+
+step: Une cible se trouve à 1,50 m et peut subir des dégâts non létaux
+  do: Porter une frappe à mains nues +8 (1d8+4 non létaux), puis utiliser le don Enforcer si des dégâts non létaux sont infligés
+  note: Intimidation +11 pour démoraliser en action libre ; en cas de réussite, la cible est secouée pendant un nombre de rounds égal aux dégâts non létaux infligés. Sur un coup critique confirmé, une réussite l'effraie aussi pendant 1 round
+
+## Rounds suivants
+
+step: La cible reste au contact et l'intimidation peut l'affaiblir
+  do: Continuer les frappes non létales à mains nues et exploiter Enforcer après une touche ; privilégier une cible qui n'est pas encore secouée
+  note: Attaque en puissance donne +6 à l'attaque pour 1d8+8 dégâts non létaux. Les démoralisations répétées prolongent la durée sans aggraver l'état de peur, sauf l'effet particulier d'Enforcer sur un critique
+
+step: L'ennemi reste à 3 m ou s'approche en traversant une case menacée
+  do: Utiliser la pique et porter une attaque d'opportunité si son déplacement en provoque une
+  note: une seule attaque d'opportunité par round ; un pas de placement de 1,50 m n'en provoque pas
+
+step: Un ennemi adjacent doit être blessé mortellement ou résiste aux dégâts non létaux
+  do: Choisir une frappe à mains nues létale +8 (1d8+4) ou sortir la hachette +8 (1d6+4, x3)
+  note: les frappes létales à mains nues ne subissent pas de malus grâce à Science du combat à mains nues ; elles ne déclenchent pas Enforcer
+
+step: Il subit trop de coups mais peut encore tenir sa position
+  do: Activer Expertise du combat en attaquant en mêlée : CA 17, avec un malus de -2 aux attaques et aux manœuvres jusqu'à son prochain tour
+  note: sans Attaque en puissance, cela donne pique +7 ou frappe à mains nues et hachette +6 ; conserver les dégâts habituels
+
+## Repli
+
+step: Ses points de vie tombent à 8 ou moins, ou il se retrouve isolé face à plusieurs ennemis
+  do: Effectuer une retraite vers une issue ou ses alliés, jusqu'à 18 m si le terrain le permet
+  note: seule la case de départ cesse d'être menacée pendant cette retraite ; éviter de traverser les autres cases menacées
+
+step: Toute fuite est bloquée
+  do: Attaquer sous Expertise du combat pour tenir à CA 17 et chercher une ouverture vers une sortie

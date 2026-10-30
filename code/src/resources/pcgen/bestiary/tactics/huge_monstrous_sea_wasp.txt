@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Guêpe de mer monstrueuse de taille TG, vermine aquatique neutre et sans intelligence, vivant dans les eaux chaudes ; 52 pv, CA 13.
+  Tentacule +7 (2d6+4 et poison), allonge de 4,50 m ; enchevêtrement. Elle occupe un espace de 4,50 m et nage à 18 m par déplacement.
+  Vision dans le noir et sens aquatique à 18 m ; transparence ; immunités liées aux traits des vermines.
+
+note: Capacités non détaillées
+  Le bloc ne donne ni DD ni effets précis pour le poison, ni modalités pour l'enchevêtrement ou la propulsion. Ne pas leur ajouter de valeurs ou d'effets automatiques.
+
+step: Aucune proie à portée
+  do: Rester immergée dans les eaux chaudes et laisser sa transparence dissimuler sa présence
+  note: Perception +4, Discrétion +3 ; la transparence ne fournit ici aucun bonus chiffré supplémentaire
+
+## Ouverture
+
+step: Une proie se trouve à 4,50 m ou moins
+  do: Porter une attaque de tentacule +7, infligeant 2d6+4 dégâts et exposant la cible au poison
+  note: Le bloc donne une seule attaque de tentacule
+
+step: Une proie repérée est hors d'allonge
+  do: Nager vers elle, jusqu'à 18 m, puis attaquer au tentacule si elle entre dans l'allonge de 4,50 m
+  note: Choisir la proie accessible la plus proche ; son absence d'intelligence ne justifie pas de sélection tactique élaborée
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter l'attaque de tentacule +7 (2d6+4 et poison) chaque round
+  note: Conserver naturellement la distance permise par l'allonge de 4,50 m lorsqu'aucun déplacement n'est nécessaire
+
+step: Une proie est enchevêtrée et reste à portée
+  do: Continuer les attaques de tentacule contre elle
+  note: L'enchevêtrement ne permet pas de supposer une lutte, un déplacement forcé ou des dégâts supplémentaires
+
+step: La proie sort de son allonge mais reste accessible dans l'eau
+  do: La suivre à la nage et reprendre les attaques dès qu'elle revient à 4,50 m ou moins
+
+step: La proie gagne la terre ferme et sort de son allonge
+  do: Rester dans l'eau et attaquer seulement une cible accessible depuis celle-ci
+  note: Le bloc ne donne aucune vitesse terrestre ni attaque à distance
+
+## Repli
+
+step: Réduite à 13 pv ou moins et une fuite est possible
+  do: S'éloigner instinctivement à la nage vers l'eau libre, à 18 m par déplacement
+  note: Ce seuil sert de repère au meneur pour une réaction de survie
+
+step: Acculée avec une proie à portée
+  do: Continuer à frapper au tentacule jusqu'à pouvoir s'éloigner

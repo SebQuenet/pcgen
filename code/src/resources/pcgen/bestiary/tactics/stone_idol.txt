@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Idole de pierre, créature artificielle neutre de taille Minuscule, FP 3. Elle privilégie la discrétion et ses pouvoirs de contrôle ; sa morsure +8 (1d4+1) sert en dernier recours.
+  19 pv, CA 17, réduction des dégâts 5/— ; immunité au froid, à l'électricité, au feu et au son. Déplacement de 3 m ; allonge de 0 m : elle doit entrer dans la case adverse pour mordre.
+  Perception +7, vision dans le noir à 18 m et vision nocturne ; Discrétion +11, ou +15 parmi les pierres. Elle comprend la langue de son créateur, mais ne parle pas.
+
+resource: Hypnose des animaux | à volonté | Volonté DD 14 ; animaux ou créatures magiques d'Intelligence 1 ou 2 ; concentration
+resource: Détection des collets et des fosses | à volonté | reconnaissance des dangers ; concentration
+resource: Pierre magique | à volonté | jusqu'à 3 cailloux enchantés ; durée 30 minutes ou jusqu'à utilisation
+resource: Imprécation | 3/jour | Volonté DD 13 ; cible secouée pendant 5 minutes
+resource: Lueurs hypnotiques | 3/jour | Volonté DD 14 ; fascination ; concentration + 2 rounds
+resource: Rapetissement | 3/jour | Vigueur DD 13 ; un humanoïde ; durée 5 minutes
+resource: Endurance de l'ours | 1/jour | +4 en Constitution pendant 5 minutes ; à réserver à un allié vivant
+resource: Immobilisation de personne | 1/jour | Volonté DD 14 ; un humanoïde ; durée maximale 5 rounds
+
+step: Des intrus approchent sans l'avoir identifiée
+  do: Rester immobile parmi les pierres ou les statuettes et observer leur progression
+  note: Inanimée, elle ressemble à un objet ordinaire ; l'emploi de ses pouvoirs peut trahir sa nature, et un déplacement ou une attaque la révèle.
+
+step: Un allié est présent
+  do: Rester à proximité de lui et lui lancer endurance de l'ours juste avant l'affrontement ; préparer pierre magique s'il peut lancer les cailloux
+  note: Les cailloux donnent +1 à l'attaque et infligent 1d6+1 dégâts, ou 2d6+2 contre les morts-vivants ; facteur de portée de 6 m au lancer. L'idole n'a pas de Constitution à améliorer.
+
+note: Soutien discret
+  Partage des capacités permet de partager les pouvoirs signalés par un astérisque avec un allié à 1,50 m : hypnose des animaux, détection des collets et des fosses, lueurs hypnotiques.
+  Esprit de pierre : les divinations visant une créature ou un objet à 9 m ou moins sont redirigées vers l'idole.
+
+## Ouverture
+
+step: Plusieurs intrus sont regroupés et aucune menace immédiate ne rompt la fascination
+  do: Lancer lueurs hypnotiques à 45 m ou moins, dans une zone de 3 m de rayon, en évitant les alliés
+  note: Affecte 2d4+5 DV, en commençant par les créatures aux DV les plus faibles ; Volonté DD 14. Profiter de leur immobilité pour gagner du temps ou préparer le repli.
+
+step: Le combat est engagé et un humanoïde constitue la menace principale
+  do: Lancer immobilisation de personne sur lui à 45 m ou moins, Volonté DD 14
+  note: La victime paralysée peut consacrer son tour à un nouveau jet de sauvegarde chaque round. Les alliés éventuels concentrent leurs attaques sur elle.
+
+step: Seuls des animaux ou des créatures magiques d'Intelligence 1 ou 2 approchent
+  do: Employer hypnose des animaux à 10,50 m ou moins, Volonté DD 14
+  note: Fascine jusqu'à 2d6 DV, les plus proches d'abord ; maintenir la concentration tant que cela permet d'éviter l'affrontement.
+
+## Rounds suivants
+
+step: Une fascination tient encore
+  do: Maintenir la concentration et laisser les cibles tranquilles
+  note: Une menace manifeste rompt la fascination ; une attaque ou une arme dirigée vers la cible y met fin. Lueurs hypnotiques persiste encore 2 rounds après l'arrêt de la concentration.
+
+step: Un ennemi actif reste dangereux
+  do: Lancer imprécation à 45 m ou moins, Volonté DD 13, puis viser une autre cible aux rounds suivants si nécessaire
+  note: Secoué impose −2 aux attaques, sauvegardes, tests de compétence et de caractéristique ; répéter le pouvoir sur la même cible ne cumule pas ces pénalités.
+
+step: Un humanoïde frappe assez fort pour franchir sa réduction des dégâts
+  do: Employer rapetissement à 10,50 m ou moins, Vigueur DD 13, pour réduire sa Force et les dégâts de ses armes
+  note: La cible gagne aussi en Dextérité et en CA ; privilégier cette option pour limiter les dégâts subis.
+
+step: Les pouvoirs de contrôle sont épuisés ou inefficaces et le contact est inévitable
+  do: Entrer dans la case d'une cible isolée pour porter une morsure +8 (1d4+1)
+  note: Cette entrée peut provoquer une attaque d'opportunité. Avec son allonge de 0 m, l'idole ne menace pas les cases voisines.
+
+## Repli
+
+step: Points de vie à 6 ou moins et une issue est accessible
+  do: Se retirer vers un abri parmi les pierres, à 3 m par déplacement ou jusqu'à 6 m avec l'action de retraite
+  note: Si un allié peut l'emporter, se laisser transporter ; sinon, profiter d'un ennemi immobilisé ou fasciné pour prendre de l'avance.
+
+step: Elle a échappé aux regards
+  do: Se cacher parmi les pierres, Discrétion +15, puis rester immobile
+  note: L'apparence inanimée ne fait pas oublier sa position aux adversaires qui l'ont vue s'y réfugier.
+
+step: Aucune fuite n'est possible
+  do: Employer les pouvoirs de contrôle restants, puis mordre si un adversaire occupe sa case

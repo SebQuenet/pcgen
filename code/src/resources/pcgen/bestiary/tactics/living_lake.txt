@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Lac vivant, vase colossale neutre et intelligente : 525 pv, CA 23. Il occupe 30 m et se déplace au sol à 9 m ; son allonge est de 6 m.
+  Quatre coups au moins à +31, chacun infligeant 4d6+17 et permettant une étreinte ; constriction à 4d6+17. Engloutissement à 4d6+17 contondants ; piétinement à 4d6+25, DD 42.
+  Vision aveugle à 18 m, perception des vibrations à 36 m, Perception +40. Il peut repérer une approche sans compter sur la vue.
+  Immunisé aux regards, effets visuels, poison, sommeil, paralysie, métamorphose et étourdissement. Ces protections ne le rendent pas insensible aux dégâts.
+
+note: Magie préparée
+  NLS 20. Chaque sort de niveau 1 à 9 de la liste est disponible une seule fois ; seuls les sorts de niveau 0 sont à volonté.
+  Choisir entre lancer un sort, effectuer une attaque à outrance ou employer une autre attaque spéciale selon la situation ; ne pas cumuler ces actions dans le même round.
+
+resource: Antipathie | 1 | DD 25
+resource: Mur d'épines | 1 | canaliser les déplacements et séparer les adversaires
+resource: Convocation d'alliés naturels IX | 1 | incantation d'un round
+resource: Dissipation suprême | 1 | retirer les protections magiques adverses
+resource: Métamorphose funeste | 1 | DD 21
+resource: Guérison | 1 | rend 150 pv, sans dépasser 525 pv
+resource: Soins intensifs de groupe | 1 | rend 4d8+20 pv aux bénéficiaires
+resource: Brume de dissimulation | 1 | masquer une zone proche
+
+step: Une intrusion prévisible laisse au moins une heure de préparation
+  do: Lancer antipathie sur une zone d'accès, contre le type de créatures ou l'alignement attendu, DD 25
+  note: Choisir une catégorie pertinente ; ce sort ne repousse pas indistinctement tous les intrus.
+
+## Ouverture
+
+step: Plusieurs adversaires approchent ensemble et restent au-delà de 6 m
+  do: Placer un mur d'épines pour couper leur groupe et garder un passage donnant sur sa zone de frappe
+  note: Éviter de se barrer sa propre retraite ou de devoir traverser les épines pour atteindre ses cibles.
+
+step: Les ennemis restent éloignés et un round d'incantation est possible sans exposition excessive
+  do: Lancer convocation d'alliés naturels IX pour les occuper et les pousser vers sa portée de mêlée
+  note: Les créatures arrivent à l'achèvement de l'incantation ; elles ne sont pas disponibles immédiatement.
+
+step: Des ennemis sont déjà à 6 m ou moins et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance avec au moins quatre coups +31, 4d6+17 et étreinte chacun
+  note: Concentrer les coups sur une cible dangereuse et accessible, notamment un lanceur de sorts.
+
+## Rounds suivants
+
+step: Une cible est saisie et sa neutralisation reste prioritaire
+  do: Maintenir la lutte et appliquer la constriction de 4d6+17 lorsque le test de lutte réussit
+  note: Consacrer l'action nécessaire au maintien ; ne pas ajouter gratuitement une attaque à outrance.
+
+step: Des adversaires peuvent être pris dans son engloutissement
+  do: Employer l'engloutissement, qui inflige 4d6+17 dégâts contondants
+  note: Valeurs de l'engloutissement : CA 20, 52 pv. Ne pas les confondre avec la CA 23 et les 525 pv du lac vivant.
+
+step: Plusieurs adversaires plus petits se trouvent sur une même trajectoire
+  do: Employer le piétinement pour traverser leur position, 4d6+25 dégâts, Réflexes DD 42 pour réduire les dégâts de moitié
+
+step: Des protections magiques empêchent ses attaques de produire un résultat utile
+  do: Lancer dissipation suprême sur l'adversaire protégé ou sur l'effet gênant
+
+step: Un adversaire isolé reste hors d'atteinte et semble vulnérable à la métamorphose
+  do: Tenter métamorphose funeste, DD 21
+
+step: Plusieurs ennemis restent à portée et aucune autre priorité ne s'impose
+  do: Reprendre l'attaque à outrance, au moins quatre coups +31, 4d6+17 et étreinte
+  note: Garder les ennemis dans les 6 m d'allonge ; un déplacement ordinaire empêche cette attaque à outrance.
+
+## Repli
+
+step: Ses pv tombent sous 200 et guérison est encore disponible
+  do: Lancer guérison sur lui-même pour récupérer 150 pv
+  note: S'il reste menacé après cette récupération, préparer une issue plutôt que poursuivre l'attrition.
+
+step: Guérison est épuisée, il est blessé et des alliés invoqués ont aussi subi des dégâts
+  do: Employer soins intensifs de groupe pour récupérer 4d8+20 pv avec les alliés à portée
+
+step: Ses pv tombent sous 100 et il ne peut plus se rétablir suffisamment
+  do: Lancer brume de dissimulation si elle reste disponible, puis gagner une issue praticable au sol à 9 m par action de déplacement
+  note: Sa vision aveugle reste utile à 18 m dans la brume. Si le mur d'épines est encore disponible, l'employer lors d'un round ultérieur pour couper la poursuite.

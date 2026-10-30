@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Le witherweed est une plante de Grande taille, sans intelligence et immobile, qui menace les créatures passant près de lui. Il possède 37 points de vie et une CA de 13.
+  Attaque à outrance : cinq frondes +5, chacune infligeant 1d4+3 dégâts et 1d4 points de dégâts de Dextérité ; allonge de 3 m.
+  Perception aveugle à 9 m, camouflage et immunités des plantes. Il occupe un espace de 3 m et son déplacement est de 0 m.
+  La fumée mortelle est mentionnée dans le profil, sans précision sur son déclenchement, ses effets ou son DD.
+
+step: Il se trouve parmi la végétation d'une forêt tempérée
+  do: Demeurer immobile et profiter de son camouflage jusqu'à ce qu'une créature entre à portée des frondes.
+  note: Son absence d'intelligence exclut les préparatifs élaborés et les pièges construits.
+
+## Ouverture
+
+step: Une créature est détectée à 9 m ou moins, mais reste au-delà de son allonge de 3 m
+  do: Rester sur place et attendre qu'elle approche.
+  note: La perception aveugle permet de la repérer ; elle n'augmente pas la portée des frondes.
+
+step: Une créature entre dans son allonge de 3 m
+  do: Dès qu'il peut agir, effectuer une attaque à outrance avec les cinq frondes +5.
+  note: Chaque fronde qui touche inflige ses propres dégâts de Dextérité en plus des 1d4+3 dégâts.
+
+## Rounds suivants
+
+step: La créature attaquée reste à portée
+  do: Répéter l'attaque à outrance avec les cinq frondes sur cette créature.
+  note: Les dégâts de Dextérité s'accumulent au fil des touches et affaiblissent sa défense et ses réflexes.
+
+step: La cible quitte sa portée, mais une autre créature se trouve à 3 m ou moins
+  do: Attaquer cette autre créature avec les frondes.
+
+step: Aucune créature ne reste dans son allonge
+  do: Rester immobile et reprendre les attaques si une créature revient à portée.
+
+## Repli
+
+step: Il est blessé, même près de 0 point de vie
+  do: Continuer à frapper les créatures à portée tant qu'il peut agir.
+  note: Avec un déplacement de 0 m et aucune intelligence, il ne peut ni fuir ni organiser un repli.

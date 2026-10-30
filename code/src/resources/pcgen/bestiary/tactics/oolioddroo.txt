@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Oolioddroo, démon de taille M, FP 13, chaotique mauvais : manipulateur patient qui préfère isoler et affaiblir ses victimes avant de s'exposer.
+  175 pv ; CA 28, contact 22 ; deux griffes +21 (1d4+2 chacune), langue +21 (1d6+2 et siphon de pensées), allonge 1,50 m.
+  Déplacement 9 m, vol 12 m avec manœuvrabilité parfaite ; Discrétion +28, Perception +32 ; vision dans le noir à 18 m, télépathie à 90 m.
+  Réduction des dégâts 10/Bien, résistance à la magie 24 ; immunité à l'électricité, au poison et aux effets mentaux ; résistance 10 à l'acide, au froid et au feu.
+
+note: Ombres et pensées
+  Le manteau d'ombre fournit les bonus déjà inclus dans la CA et la Discrétion ; il ne crée pas de zone de ténèbres.
+  Sa vision des pensées révèle les créatures invisibles dotées d'Intelligence. Détection des pensées donne dès le premier round les informations normalement obtenues en trois rounds ; Volonté DD 22 pour protéger les pensées superficielles.
+
+resource: Invisibilité | à volonté | action simple ; durée 14 minutes ; cesse lorsqu'il attaque
+resource: Invisibilité accélérée | 3/jour | action rapide ; même effet que l'invisibilité ordinaire
+resource: Immobilisation de personne | 3/jour | Volonté DD 19 ; humanoïdes uniquement
+resource: Suggestion | 3/jour | Volonté DD 19 ; demande vraisemblable, sans danger manifeste
+resource: Débilité | 1/jour | Volonté DD 21
+resource: Convocation | 1/jour | choisir un oolioddroo ou 1d4 démons des ombres ; 35 % de réussite dans les deux cas
+resource: Charme-personne, apaisement des émotions, modification de mémoire | à volonté | Volonté DD 17, DD 18 et DD 19 respectivement
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 50 livres d'objets seulement
+resource: Songe, cauchemar | 1/jour chacun | préparation à longue échéance ; cauchemar : Volonté DD 21
+
+step: Il peut observer les adversaires avant l'affrontement
+  do: Se rendre invisible, observer à couvert et utiliser détection des pensées pour choisir une victime isolée et repérer les intentions du groupe
+  note: Il peut parler par télépathie sans se montrer ; lire les pensées exige l'emploi du pouvoir, pas seulement son sens spécial.
+
+step: Un humanoïde peut être approché sans combat
+  do: Employer charme-personne, puis une suggestion raisonnable pour l'éloigner de ses compagnons ; utiliser modification de mémoire après une rencontre discrète
+  note: Charme-personne rend amical, sans donner un contrôle absolu ; les menaces et les attaques compromettent la manipulation.
+
+step: Un combat est prévisible et il dispose du temps nécessaire
+  do: Tenter la convocation à couvert avant l'arrivée des ennemis ; faire écran avec les renforts obtenus
+  note: La convocation prend un round entier et peut échouer ; ne pas compter sur son succès pour survivre.
+
+## Ouverture
+
+step: Un lanceur de sorts dangereux est identifié
+  do: Lancer débilité sur lui, puis utiliser invisibilité accélérée et s'éloigner en vol vers un couvert
+  note: Volonté DD 21 ; une cible capable de lancer des sorts profanes subit un malus de 4 à cette sauvegarde. L'invisibilité doit venir après l'attaque magique.
+
+step: Débilité est indisponible ou une cible humanoïde constitue la menace principale
+  do: Lancer immobilisation de personne sur cet humanoïde, puis se repositionner hors de son allonge
+  note: Volonté DD 19 ; privilégier une cible isolée que ses alliés ne peuvent pas secourir immédiatement.
+
+## Rounds suivants
+
+step: Un adversaire reste isolé au contact et l'oolioddroo peut rester sur place
+  do: Faire une attaque à outrance : deux griffes +21 et une langue +21 ; employer ensuite invisibilité accélérée s'il doit masquer sa position
+  note: Seule la première attaque bénéficie de l'invisibilité initiale ; l'attaque à outrance empêche un déplacement normal pendant ce tour.
+
+step: La langue inflige des dégâts
+  do: Appliquer le siphon de pensées : Volonté DD 23 ou un effet choisi par l'oolioddroo
+  note: Contre un lanceur de sorts, supprimer un sort préparé ou un emplacement inutilisé de son choix ; sinon, infliger un affaiblissement permanent de 2 points de Sagesse pour fragiliser ses prochaines sauvegardes de Volonté.
+  note: Il peut aussi effacer ou modifier jusqu'à cinq minutes de souvenirs, ou supprimer tous les rangs d'une compétence choisie pendant 24 heures. Aucun de ces effets ne lui rend des pv.
+
+step: La cible est mobile et une mêlée prolongée l'exposerait
+  do: Au sol, utiliser Attaque éclair contre une cible qui n'est pas adjacente au départ : avancer d'au moins 3 m, frapper une fois de la langue, puis poursuivre le mouvement ; déplacement total maximal de 9 m
+  note: La cible de cette attaque ne peut pas lui porter d'attaque d'opportunité pendant ce déplacement ; les autres adversaires restent dangereux.
+
+step: Un humanoïde libre menace de rejoindre la mêlée
+  do: Employer une nouvelle immobilisation de personne, ou une suggestion crédible pour l'envoyer chercher du secours loin du combat
+  note: Un humanoïde immobilisé peut tenter une nouvelle sauvegarde chaque round en consacrant un round entier à se libérer ; ne pas le considérer comme neutralisé définitivement.
+
+step: Plusieurs ennemis peuvent le prendre pour cible
+  do: Rompre le contact par le vol et les couverts ; reprendre invisibilité à volonté quand il peut y consacrer son action simple
+  note: Une seule action simple et une seule action rapide par tour ; après les trois invisibilités accélérées, redevenir invisible impose de renoncer à l'attaque ou au pouvoir offensif de ce tour.
+
+## Repli
+
+step: Points de vie sous 50, ou ennemis capables de le maintenir au contact malgré son invisibilité
+  do: Utiliser téléportation suprême vers un refuge connu ; employer d'abord invisibilité accélérée s'il en reste pour gêner les attaques d'opportunité
+  note: Il ne peut pas emporter de créature avec ce pouvoir. Si une entrave empêche la téléportation, gagner un couvert en volant à 12 m par déplacement.
+
+step: Il a échappé aux poursuivants
+  do: Rester caché, transmettre des consignes par communication à distance et préparer une nouvelle approche par charme ou suggestion
+  note: Il conserve son goût de la manipulation ; aucune capacité indiquée ne lui permet de récupérer immédiatement ses pv.

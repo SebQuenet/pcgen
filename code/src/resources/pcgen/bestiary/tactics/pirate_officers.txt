@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Officiers pirates demi-elfes, bardes de niveau 4, chaotiques neutres, rencontrés seuls ou par deux. Chaque officier a 25 pv, une CA de 17 et se déplace de 9 m.
+  Rapière de maître +7 (1d6, critique 18-20) au contact à 1,50 m ; dague lancée +6 (1d4, critique 19-20), facteur de portée 3 m. Ses enchantements et invocations lui permettent de préparer un affrontement ou de soutenir un allié.
+
+resource: Sorts de niveau 1 | 4/jour | réserve commune à charme-personne, compréhension des langages, hypnose et convocation de monstres I ; DD 14 pour les enchantements
+resource: Sorts de niveau 2 | 2/jour | réserve commune à discours captivant et rage ; discours captivant : Volonté DD 15
+resource: Potion de soins modérés | 1 | à boire à couvert pour récupérer des pv
+resource: Potion d'invisibilité | 1 | à conserver pour fuir
+
+step: Il peut préparer un affrontement imminent
+  do: Lancer résistance sur lui-même et choisir un emplacement avec une voie de repli
+  note: résistance donne +1 aux sauvegardes pendant 1 minute ; message permet de coordonner discrètement un éventuel compagnon
+
+step: Un humanoïde peut encore être abordé sans menace
+  do: Lancer charme-personne à 10,50 m ou moins, puis lui demander de laisser passer ou de discuter
+  note: Volonté DD 14 ; la cible devient amicale, sans être contrôlée. Elle gagne +5 au jet si l'officier ou ses alliés la menacent ; une menace contre elle rompt le charme
+
+step: Plusieurs adversaires écoutent encore sans combattre
+  do: Utiliser discours captivant pour gagner du temps, en parlant ou chantant pendant un round complet, puis continuer
+  note: portée 42 m, Volonté DD 15 ; une attaque contre un auditeur met fin au sort. Les créatures de 4 DV ou plus, ou de Sagesse 16 ou plus, restent conscientes de leur environnement
+
+## Ouverture
+
+step: Un allié combattant au corps à corps est présent
+  do: Lancer rage sur cet allié consentant et rester derrière lui
+  note: une seule cible à ce niveau ; +2 en Force et Constitution, +1 aux sauvegardes de Volonté, -2 à la CA. L'effet dure pendant la concentration, puis encore 4 rounds ; choisir un allié qui n'a pas besoin de lancer des sorts
+
+step: Il est seul et dispose d'un round à l'abri des attaques
+  do: Lancer convocation de monstres I pour faire apparaître une créature entre l'ennemi et lui
+  note: incantation de 1 round, portée 10,50 m ; la créature apparaît au début du tour suivant et reste 4 rounds
+
+step: Un ennemi est déjà au contact
+  do: Attaquer à la rapière +7 (1d6, critique 18-20), puis chercher une position moins exposée
+  note: éviter les incantations et la consommation de potions dans une case menacée
+
+## Rounds suivants
+
+step: Un humanoïde de 4 DV ou moins est à 10,50 m ou moins
+  do: Lancer hébétement, à volonté, pour lui faire perdre ses actions pendant 1 round
+  note: Volonté DD 13 ; après avoir été affectée, la cible est immunisée à ce sort pendant 1 minute
+
+step: La créature convoquée ou un allié engage un adversaire
+  do: Prendre cet adversaire en tenaille si la position reste sûre, puis attaquer à la rapière
+  note: la tenaille apporte +2 à l'attaque ; après avoir cessé de se concentrer sur rage, profiter de ses 4 rounds restants pour agir
+
+step: Un ennemi reste hors du contact et les enchantements ne conviennent pas
+  do: Lancer la dague +6 (1d4, critique 19-20) si la cible est proche
+  note: -2 à l'attaque par facteur de portée au-delà des 3 premiers mètres ; il ne possède qu'une dague
+
+step: Il faut se dégager d'une position dangereuse
+  do: Privilégier un pas de 1,50 m vers une case sûre ; utiliser Acrobaties +10 si traverser une zone menacée est nécessaire
+  note: Acrobaties n'assure pas automatiquement le passage ; éviter de se laisser encercler
+
+## Repli
+
+step: Ses pv tombent à 8 ou moins, ou ses soutiens sont vaincus
+  do: Se dégager, boire la potion d'invisibilité à l'abri des attaques, puis fuir par la voie préparée
+  note: ne plus attaquer sous invisibilité, sous peine de la rompre ; déplacement de 9 m par action de mouvement
+
+step: Il a atteint un couvert sûr et reste blessé
+  do: Boire la potion de soins modérés, puis poursuivre la retraite si l'ennemi conserve l'avantage

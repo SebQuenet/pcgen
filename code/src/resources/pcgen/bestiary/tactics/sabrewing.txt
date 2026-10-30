@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Sabrewing, extérieur de taille M, neutre mauvais, mobile et dangereux au contact : 63 pv, CA 19, réduction des dégâts 5/Bien ou argent.
+  Deux entailles d'ailes +11 chacune (1d6+5, critique 19–20/×3) en attaque à outrance ; critique augmenté déjà compris dans ces valeurs ; blessure persistante, dont le profil fourni ne précise pas les effets.
+  Vol à 18 m, bonne manœuvrabilité ; déplacement au sol à 9 m ; allonge de 1,50 m. Vision dans le noir à 18 m et détection de l'invisibilité.
+
+resource: Arme magique supérieure | 1/jour | NLS 8 ; bonus d'altération de +2 aux ailes pendant 8 heures
+resource: Arme magique | 3/jour | NLS 8 ; bonus d'altération de +1 aux ailes pendant 8 minutes ; ne se cumule pas avec arme magique supérieure
+resource: Alignement d'arme | 3/jour | NLS 8 ; confère aux ailes un alignement choisi pendant 8 minutes pour franchir une réduction des dégâts adaptée
+
+step: Un affrontement est prévisible dans les prochaines heures
+  do: Utiliser arme magique supérieure sur ses ailes avant d'approcher
+  note: Ses deux entailles passent à +13 chacune, pour 1d6+7 dégâts ; leur critique reste 19–20/×3.
+
+step: Arme magique supérieure est indisponible et le combat est imminent
+  do: Utiliser arme magique sur ses ailes
+  note: Ses entailles passent à +12 chacune, pour 1d6+6 dégâts.
+
+step: La réduction des dégâts d'un adversaire est connue et exige un alignement
+  do: Utiliser alignement d'arme avant l'engagement, en choisissant l'alignement nécessaire
+  note: Ce pouvoir peut compléter le bonus d'altération d'arme magique ou d'arme magique supérieure.
+
+step: Les ennemis approchent
+  do: Observer depuis les airs et choisir une cible isolée ou peu protégée
+  note: Perception +13 ; la détection de l'invisibilité permet de repérer une cible invisible, sans supprimer les obstacles qui bloquent la vue.
+
+## Ouverture
+
+step: Une cible est accessible au cours d'un déplacement en vol de 18 m
+  do: Effectuer une Attaque en vol : approcher à 1,50 m, porter une seule entaille, puis poursuivre le déplacement pour s'éloigner
+  note: Les déplacements avant et après l'attaque totalisent au plus 18 m. Ce don ne supprime pas les attaques d'opportunité.
+
+step: Une cible est déjà à portée et il peut rester au contact
+  do: Effectuer une attaque à outrance avec ses deux ailes
+  note: Concentrer les deux attaques sur la même cible pour tenter de la mettre rapidement hors de combat.
+
+## Rounds suivants
+
+step: Rester au contact l'expose à plusieurs adversaires
+  do: Privilégier les passages avec Attaque en vol et terminer chaque déplacement loin des combattants de mêlée
+  note: Chaque passage ne permet qu'une entaille ; éviter les trajectoires qui traversent plusieurs zones menacées.
+
+step: Une cible demeure seule à portée au début de son tour
+  do: Porter ses deux entailles en attaque à outrance
+  note: Il doit renoncer à un déplacement normal pour conserver cette attaque à outrance.
+
+step: La cible est facile à toucher et les dégâts supplémentaires peuvent l'achever
+  do: Activer Attaque en puissance : malus de −2 aux attaques et bonus de +4 aux dégâts de chaque aile
+  note: Avec arme magique supérieure, chaque entaille devient +11 (1d6+11, 19–20/×3) ; sans amélioration magique, +9 (1d6+9, 19–20/×3).
+
+step: Un ennemi résiste à ses coups malgré les touches
+  do: Exploiter un alignement d'arme adapté si la faiblesse est connue, ou changer de cible
+  note: S'éloigner avant d'utiliser un pouvoir magique afin d'éviter de le faire sous la menace d'une attaque d'opportunité.
+
+## Repli
+
+step: Points de vie à 20 ou moins, ou combat devenu manifestement défavorable
+  do: Se désengager en vol, puis poursuivre la fuite à 18 m par action de mouvement
+  note: L'action de retraite permet jusqu'à 36 m ; elle protège seulement la sortie de la case de départ contre les attaques d'opportunité des adversaires visibles. Choisir une trajectoire dégagée.

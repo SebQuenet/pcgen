@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Stench Beetle, vermine de taille P sans intelligence, à la carapace vert-noir irisée, qui se nourrit de matières organiques en décomposition. Il réagit instinctivement aux menaces.
+  9 points de vie ; CA 14 ; morsure +2 (1d4), allonge 1,50 m. Marche et vol à 9 m ; manœuvrabilité médiocre, Vol −2.
+  Son odeur rend les créatures proches malades ; sa mort libère une bouffée susceptible de les rendre nauséeuses. Immunité aux effets mentaux ; vision dans le noir à 18 m.
+
+resource: Puanteur | permanente | rayon de 3 m ; créatures vivantes dépourvues de puanteur : Vigueur DD 11 ou malades pendant 10 rounds ; réussite : immunité à la puanteur de ce même scarabée pendant 24 heures
+resource: Spasmes d'agonie | 1, automatiquement à sa mort | rayon de 3 m ; Vigueur DD 11 ; échec : nauséeux pendant 1d4 rounds, puis malade pendant 1d4 rounds ; réussite : malade pendant 1 round
+
+step: Rencontre près de matières en décomposition
+  do: Le placer auprès de sa nourriture, seul ou parmi les autres scarabées présents
+  note: Les groupes comptent normalement 3 à 6 individus, les colonies 7 à 16 ; ils ne préparent pas de manœuvre coordonnée.
+
+## Ouverture
+
+step: Une créature vivante sans puanteur entre dans un rayon de 3 m
+  do: Appliquer la puanteur : Vigueur DD 11 ou malade pendant 10 rounds
+  note: L'effet est automatique et ne consomme pas son attaque. Une réussite protège uniquement contre la puanteur de cet individu pendant 24 heures.
+
+step: Une menace est déjà à portée de morsure
+  do: Mordre à +2, pour 1d4 dégâts
+
+step: Une menace est hors de portée et le scarabée engage le combat
+  do: Avancer vers elle de 9 m au maximum, puis mordre si elle est à 1,50 m ou moins
+  note: Utiliser la marche sur un trajet dégagé ; le vol permet de franchir un obstacle, mais sa manœuvrabilité médiocre et Vol −2 limitent les évolutions difficiles.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Continuer les morsures à +2 (1d4)
+  note: La puanteur continue d'affecter les créatures exposées selon ses conditions ; elle ne demande aucune activation.
+
+step: L'adversaire s'éloigne et le scarabée poursuit le combat
+  do: Le suivre instinctivement, à 9 m par déplacement, pour retrouver la portée de morsure
+  note: Il ne dispose d'aucune attaque à distance.
+
+step: Plusieurs scarabées sont au contact
+  do: Résoudre séparément les morsures et les expositions à la puanteur de chaque individu
+  note: Une réussite contre un scarabée ne protège pas contre les autres ; plusieurs puanteurs ne rendent pas l'état malade plus intense.
+
+step: Le scarabée est tué
+  do: Déclencher immédiatement les spasmes d'agonie sur toutes les créatures dans un rayon de 3 m : Vigueur DD 11
+  note: En cas d'échec, appliquer nauséeux pendant 1d4 rounds, puis malade pendant 1d4 rounds ; en cas de réussite, malade pendant 1 round. L'immunité acquise contre sa puanteur ne protège pas de cette bouffée.
+
+## Repli
+
+note: Réaction instinctive
+  Aucun seuil de fuite n'est indiqué. Ne lui attribuer ni retraite organisée ni sacrifice volontaire pour déclencher les spasmes d'agonie.
+
+step: Le scarabée fuit instinctivement une menace
+  do: S'éloigner à 9 m par déplacement, au sol ou en vol selon le terrain
+  note: Sa puanteur reste active pendant la fuite ; les spasmes d'agonie ne se déclenchent que s'il est tué.

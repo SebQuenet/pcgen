@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Poisson d'argent géant, vermine de taille M sans intelligence, au comportement instinctif. 22 points de vie, CA 15, initiative +3 ; déplacement au sol de 9 m.
+  Morsure +3, portée 1,50 m : 1d6+1 dégâts plus 1d6 dégâts d'acide à chaque touche, sans jet de sauvegarde.
+  Vision dans le noir à 18 m, odorat, Perception +0 ; immunité aux effets mentaux.
+
+step: Une présence est détectée dans l'obscurité
+  do: Se guider avec sa vision dans le noir et son odorat pour approcher de l'intrus.
+  note: L'odorat aide à détecter une présence ; il ne permet pas de voir une cible cachée.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Le mordre avec un bonus de +3 ; infliger 1d6+1 dégâts plus 1d6 dégâts d'acide si l'attaque touche.
+
+step: Un déplacement de 9 m au plus permet d'atteindre la portée de morsure
+  do: Avancer jusqu'à 1,50 m de l'ennemi, puis le mordre.
+
+step: L'ennemi reste trop loin pour être mordu après un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m au sol, pour se rapprocher.
+  note: Il ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter la morsure contre cet adversaire à chaque round.
+  note: Les dégâts d'acide s'ajoutent immédiatement à chaque morsure réussie ; aucun dégât persistant n'est indiqué.
+
+step: La cible tombe ou devient inaccessible
+  do: Attaquer un autre ennemi à portée ; sinon, se rapprocher de l'ennemi accessible le plus proche.
+
+step: Plusieurs poissons d'argent géants participent au combat
+  do: Faire attaquer à chacun une cible accessible, selon sa proximité.
+  note: Leur absence d'intelligence ne leur permet pas de coordonner un plan élaboré.
+
+## Repli
+
+step: Points de vie à 5 ou moins et une issue est accessible
+  do: Se retirer instinctivement au sol, jusqu'à 18 m avec l'action de retraite.
+  note: Ce seuil est un choix de conduite pour le meneur ; aucune capacité spéciale de fuite n'est indiquée.
+
+step: La fuite est impossible et un ennemi est au contact
+  do: Continuer à mordre l'ennemi à portée.

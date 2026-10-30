@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Quasi-élémentaire d'obsidienne de taille TG, Extérieur neutre de terre, solitaire et peu subtil, qui déchire ses adversaires sans leur faire quartier.
+  76 pv ; CA 17 ; deux griffes +14, chacune infligeant 2d6+8 dégâts, critique sur 19–20. Déplacement de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m ; Perception +11.
+  Réduction des dégâts 5/– ; résistances au froid 10 et au feu 10 ; immunités des élémentaires. Son verre fondu punit les assaillants au contact ; sa destruction provoque une explosion d'éclats.
+
+step: Des intrus approchent
+  do: Les repérer, puis se placer près d'un passage où ils devront venir à portée de ses griffes
+  note: Il compte sur sa robustesse et le combat rapproché ; sa vitesse de 6 m rend les longues poursuites difficiles.
+
+## Ouverture
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Attaque à outrance avec ses deux griffes +14, pour 2d6+8 dégâts chacune
+
+step: Il peut atteindre un ennemi avec un déplacement de 6 m
+  do: Avancer jusqu'au contact, puis porter une seule attaque de griffe +14, pour 2d6+8 dégâts
+  note: Après un déplacement normal, il ne porte pas ses deux attaques de griffe.
+
+step: Les ennemis sont encore trop loin
+  do: Se rapprocher de 6 m, ou de 12 m avec un double déplacement si cela permet de les rejoindre
+
+## Rounds suivants
+
+step: Une seule cible reste au contact
+  do: Rester en place et concentrer les deux griffes sur elle
+  note: Un pas de placement de 1,50 m permet de conserver l'attaque à outrance si la cible s'est légèrement écartée.
+
+step: Plusieurs ennemis sont à portée et adjacents les uns aux autres
+  do: Utiliser Succession d'enchaînements : une griffe +14 contre le premier, puis une autre contre une cible différente après chaque coup réussi
+  note: Chaque nouvelle cible doit être à portée de 1,50 m et adjacente à la précédente ; une seule attaque par cible. Cette action simple remplace les deux griffes de l'attaque à outrance et abaisse sa CA à 15 jusqu'à son prochain tour.
+
+step: La cible est facile à toucher
+  do: Activer Attaque en puissance avant les attaques : griffes +11, pour 2d6+14 dégâts chacune
+  note: Le malus de −3 s'applique jusqu'à son prochain tour ; privilégier la précision contre une forte CA.
+
+step: Un coup perforant ou tranchant inflige des dégâts égaux à ses 8 DV
+  do: Déclencher automatiquement le jaillissement de verre fondu et rester au contact des assaillants
+  note: La plaie projette du verre pendant 1d4 rounds. Chaque round, toute créature à 1,50 m ou moins doit réussir un jet de Réflexes DD 18 ou subir 2d8 dégâts de feu ; une réussite évite ces dégâts.
+
+## Repli
+
+step: Il est grièvement blessé mais peut encore combattre
+  do: Poursuivre ses attaques au contact, sans organiser de repli
+
+step: Ses points de vie tombent à 0 ou moins
+  do: Déclencher automatiquement les soubresauts d'agonie
+  note: Il explose en éclats d'obsidienne : toutes les créatures dans un rayon de 9 m subissent 6d6 dégâts, Réflexes DD 18 pour moitié. Cette explosion ne demande aucune action.

@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Ogren, humanoïde de taille M, neutre mauvais, combattant de mêlée au sang d'ogre. 13 pv ; CA 16, contact 10, pris au dépourvu 16.
+  Pique +5 (1d8+3, critique x3) ; déplacement de 9 m ; vision dans le noir à 9 m ; Perception +2 ; Discrétion +4.
+
+step: Il repère des adversaires avant d'être découvert
+  do: Se dissimuler derrière un couvert et attendre qu'une cible approche à portée de pique.
+  note: Dans l'obscurité, sa vision dans le noir lui permet de surveiller jusqu'à 9 m sans lumière.
+
+step: Il combat avec d'autres ogrens
+  do: Se répartir autour du passage attendu et garder une voie de retraite.
+  note: Privilégier une position où plusieurs combattants peuvent menacer la même cible.
+
+## Ouverture
+
+step: Un adversaire se trouve à 3 m
+  do: Porter une attaque de pique à +5, infligeant 1d8+3 dégâts, critique x3.
+  note: La pique est une arme à allonge : elle frappe à 3 m, mais pas les adversaires adjacents à 1,50 m.
+
+step: La cible est au-delà de 3 m et peut être approchée
+  do: Avancer de 9 m au maximum pour la placer à 3 m, puis l'attaquer à la pique si elle est à portée.
+  note: Se placer si possible du côté opposé à un allié pour prendre la cible en tenaille et gagner +2 au jet d'attaque.
+
+step: Un adversaire entre dans une case qu'il menace
+  do: Le laisser approcher ; porter une attaque d'opportunité s'il quitte ensuite une case menacée sans précaution.
+  note: Une seule attaque d'opportunité par round ; entrer dans son allonge ne suffit pas à la provoquer.
+
+## Rounds suivants
+
+step: Un adversaire reste à 3 m
+  do: Continuer les attaques de pique contre lui, une attaque à +5 par tour.
+  note: Concentrer les coups sur une cible déjà blessée si plusieurs adversaires sont à portée.
+
+step: Un adversaire est adjacent à 1,50 m
+  do: Faire un pas de placement de 1,50 m pour le remettre à 3 m, puis attaquer à la pique.
+  note: Le pas de placement ne provoque pas d'attaque d'opportunité et suppose un espace libre ; il empêche tout autre déplacement pendant ce tour.
+
+step: Il est acculé et ne peut plus rétablir la distance
+  do: Se dégager par une retraite vers un espace où sa pique pourra de nouveau servir.
+  note: La pique ne permet pas d'attaquer un adversaire adjacent ; il ne dispose d'aucune autre attaque indiquée.
+
+## Repli
+
+step: Ses points de vie tombent à 4 ou moins, ou il est isolé face à plusieurs adversaires
+  do: Effectuer une retraite vers un couvert ou ses alliés, jusqu'à 18 m si le terrain le permet.
+  note: La retraite protège seulement la sortie de la case de départ contre les attaques d'opportunité des ennemis visibles ; éviter de traverser les autres cases menacées.
+
+step: Il a rompu le contact et atteint un couvert
+  do: Se dissimuler avec Discrétion +4 et poursuivre sa fuite.

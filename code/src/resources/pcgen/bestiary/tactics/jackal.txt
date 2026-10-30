@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Chacal, petit animal des déserts et plaines chauds, neutre, qui se rencontre seul, en couple ou en meute de 3 à 10 individus. 9 points de vie, CA 14 ; déplacement à 12 m.
+  Morsure +2 (1d4+1 et croc-en-jambe), allonge de 1,50 m ; vision nocturne, odorat et Perception +5.
+
+step: Une proie laisse une piste odorante
+  do: La suivre à l'odorat, avec Survie +4 pour cette traque
+  note: Privilégier une proie isolée ou déjà affaiblie ; son intelligence animale limite ses tactiques à des comportements simples
+
+## Ouverture
+
+step: La proie est accessible sans danger manifeste
+  do: S'approcher jusqu'à 1,50 m, puis porter une morsure +2 (1d4+1)
+  note: Sur une morsure réussie, tenter le croc-en-jambe gratuit avec un BMO de +0, sans provoquer d'attaque d'opportunité ; un échec ne permet pas à la cible de le faire tomber en retour
+
+step: Plusieurs chacals participent au combat
+  do: Converger sur la même proie ; chercher une prise en tenaille si elle est accessible
+  note: La prise en tenaille donne +2 aux attaques de morsure, soit +4 au total
+
+## Rounds suivants
+
+step: La proie reste debout à portée
+  do: Mordre à nouveau et tenter le croc-en-jambe après chaque morsure réussie
+  note: Éviter les manœuvres de croc-en-jambe indépendantes de la morsure ; son BMO de +0 rend le renversement incertain
+
+step: La proie est à terre
+  do: Continuer à la mordre tant qu'elle reste à portée
+  note: Une cible à terre subit un malus de 4 à la CA contre les attaques de mêlée ; si elle se relève dans son allonge, le chacal peut porter une attaque d'opportunité
+
+step: La proie s'éloigne et la poursuite reste favorable
+  do: La suivre avec son déplacement de 12 m et mordre si une action simple reste disponible
+  note: Un double déplacement couvre 24 m, mais ne laisse pas d'action pour attaquer
+
+## Repli
+
+step: Points de vie à 3 ou moins, ou adversaires manifestement trop dangereux
+  do: Rompre le combat et fuir vers un espace dégagé
+  note: Au contact, utiliser le retrait pour parcourir jusqu'à 24 m ; seule la première case quittée est protégée contre les attaques d'opportunité

@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Steam Hog, sanglier de vapeur : bête magique de très grande taille, neutre, FP 7, Intelligence 1. Il réagit aux menaces immédiates et combat surtout au contact.
+  94 PV, CA 19 ; réduction des dégâts 2/—, résistance au feu 15 et férocité.
+  Défenses +14 (2d6+7 et 1d6 de feu), 2 sabots +9 (1d8+3 chacun). Espace occupé 4,50 m, allonge 3 m.
+  Déplacement 9 m, creusement 3 m ; vision dans le noir à 18 m, vision nocturne, odorat et Perception +10.
+
+step: Une présence approche
+  do: Utiliser ses sens pour repérer la menace et se tourner vers elle.
+  note: Son odorat ne lui donne pas une localisation précise à travers le sol ; il ne possède pas de perception des vibrations.
+
+## Ouverture
+
+step: Un ennemi est déjà à 3 m ou moins
+  do: Attaque à outrance : défenses +14, puis 2 sabots +9 sur la menace la plus proche.
+
+step: Une cible est accessible par une charge en ligne droite
+  do: Charger en parcourant de 3 m à 18 m, puis donner un coup de défenses +16 (2d6+7 et 1d6 de feu).
+  note: La charge impose une CA de 17 jusqu'au début de son prochain tour ; elle ne permet pas d'ajouter les deux sabots.
+
+step: La charge est impossible, mais un déplacement de 9 m suffit pour mettre une cible à portée
+  do: Avancer et donner un seul coup de défenses +14.
+
+step: Aucun ennemi ne peut être attaqué ce round
+  do: Se rapprocher par un double déplacement, jusqu'à 18 m.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Attaque à outrance avec les défenses et les deux sabots ; insister sur la même cible tant qu'elle reste menaçante.
+  note: Un pas de 1,50 m permet de se replacer sans renoncer à l'attaque à outrance, si le terrain le permet.
+
+step: La cible est facile à toucher et il faut accroître les dégâts
+  do: Activer Attaque en puissance : défenses +11 (2d6+13 et 1d6 de feu), 2 sabots +6 (1d8+6 chacun).
+  note: Le malus de −3 aux attaques s'applique jusqu'à son prochain tour ; une charge porte alors le coup de défenses à +13.
+
+step: Deux ennemis sont adjacents entre eux et tous deux dans son allonge de 3 m
+  do: Utiliser Enchaînement : un coup de défenses +14 contre le premier, puis, seulement s'il touche, un second coup de défenses +14 contre l'autre.
+  note: Enchaînement est une action simple et remplace l'attaque à outrance ; aucun sabot ne s'ajoute. Sa CA descend à 17 jusqu'à son prochain tour.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Donner un coup de défenses, en appliquant Attaque en puissance si elle est encore active.
+  note: Il dispose normalement d'une seule attaque d'opportunité par round.
+
+## Repli
+
+step: Moins de 25 PV et une issue accessible
+  do: Chercher à s'éloigner de la menace ; utiliser une retraite pour quitter le contact, ou creuser à 3 m dans un sol meuble accessible.
+  note: Creuser ne permet pas de traverser la roche compacte ; il ne peut pas se guider sous terre grâce à une perception des vibrations.
+
+step: Sous 0 PV, encore vivant et toujours engagé au contact
+  do: Utiliser la férocité pour donner un seul coup de défenses par tour si la fuite est impossible.
+  note: Il reste conscient, mais devient chancelant et perd 1 PV par round ; il ne peut plus charger ni effectuer d'attaque à outrance. Il meurt à −18 PV.

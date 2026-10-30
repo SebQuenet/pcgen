@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Totem tribal, créature artificielle de taille M, neutre et sans intelligence, gardien de sa tribu soumis aux ordres de son créateur.
+  69 pv ; CA 19, contact 12, pris au dépourvu 17 ; RD 5/tranchant ; immunités des créatures artificielles ; vulnérabilité au feu.
+  Deux coups +12 (1d10+3 chacun) en attaque à outrance ; allonge 1,50 m ; déplacement 6 m ; vision dans le noir à 18 m et vision nocturne.
+
+step: L'énergie rituelle est épuisée
+  do: Réunir au moins dix participants pour une cérémonie d'une heure ; chaque heure procure un jour d'activité.
+  note: Sans activation, il reste inerte.
+
+step: Le créateur prépare la défense
+  do: Lui assigner un passage à garder, les ennemis à attaquer et les limites de poursuite.
+  note: Il obéit aussi aux représentants désignés ; le créateur reste prioritaire.
+
+resource: Effigie | 1/jour | action complexe ; copie un humanoïde P ou M visible ; forme conservée indéfiniment
+resource: Porte-parole | 1 message enregistré par jour | parole du créateur déclenchée selon une condition, comme bouche magique
+
+## Ouverture
+
+step: Un humanoïde désigné est visible et les ordres prévoient de le marquer
+  do: Prendre son apparence avec Effigie, par une action complexe.
+  note: Cette forme permet de le suivre comme avec localisation de créature.
+
+step: Le totem possède l'apparence de sa cible et la voit
+  do: Employer Lien spirituel, action simple ; Volonté DD 16 pour résister.
+  note: Sur un échec, la victime reçoit la moitié des dégâts infligés au totem. Les sorts de contact visant celui-ci affectent la victime, avec leurs sauvegardes habituelles. Durée : quatre heures, sauf changement de forme.
+
+step: Les consignes imposent d'attaquer immédiatement
+  do: Avancer de 6 m au maximum et porter un coup +12 (1d10+3) si un ennemi est à 1,50 m.
+  note: S'il est déjà au contact, effectuer directement l'attaque à outrance avec les deux coups.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance : deux coups +12, chacun pour 1d10+3 dégâts.
+
+step: L'adversaire s'éloigne
+  do: Faire un pas de placement de 1,50 m si cela suffit, puis attaquer à outrance ; sinon avancer de 6 m et porter un seul coup si possible.
+  note: S'il reste trop loin, effectuer un double déplacement de 12 m, dans les limites des ordres reçus.
+
+step: Les ennemis utilisent le feu ou des armes tranchantes
+  do: Continuer d'exécuter les consignes reçues.
+  note: Le feu inflige 50 % de dégâts supplémentaires ; les armes tranchantes ignorent la RD 5. Le totem ne choisit pas seul une nouvelle tactique.
+
+step: Déformation du bois ou façonnage du bois lui rend sa forme normale
+  do: Continuer à combattre avec ses coups.
+  note: Effigie et le lien spirituel associé cessent ; reprendre une apparence exige une utilisation quotidienne encore disponible.
+
+## Repli
+
+step: Ses points de vie diminuent sans ordre de retraite
+  do: Poursuivre sa mission jusqu'à sa destruction à 0 pv.
+  note: Aucun seuil de fuite instinctive pour ce gardien sans intelligence.
+
+step: Le créateur ou son représentant ordonne la retraite
+  do: Rejoindre le lieu indiqué à 6 m par déplacement, ou 12 m en double déplacement.

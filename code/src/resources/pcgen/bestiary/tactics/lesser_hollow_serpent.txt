@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Serpent creux mineur, mort-vivant reptilien de taille M, neutre mauvais, FP 6. Son Intelligence de 2 favorise une chasse instinctive : approcher, mordre et retenir une proie.
+  Morsure +12 (2d8+4 et étreinte), allonge 1,50 m ; BMO de lutte +15. Déplacement au sol et escalade à 9 m par action de mouvement.
+  71 pv, CA 19 ; vision dans le noir à 18 m et perception de la vie.
+
+note: Défenses
+  RD 5/magie et argent : il faut satisfaire les deux conditions pour la franchir. Résistance à la magie 17, résistance à la canalisation +2 et immunités des morts-vivants.
+  DMD 26 ; impossible de lui faire un croc-en-jambe.
+
+resource: Guérison accélérée | permanente | Récupère 5 pv au début de son tour, sans dépasser 71 pv ; ne le sauve pas de la destruction à 0 pv.
+
+step: Des créatures vivantes approchent dans les souterrains
+  do: Attendre à couvert, près d'un passage étroit ou sur une paroi escaladable, puis laisser une proie venir à portée.
+  note: Discrétion +10, Perception +6, Escalade +16. Utiliser ses sens pour repérer les intrus, sans supposer que l'obscurité le cache à ceux qui y voient.
+
+## Ouverture
+
+step: Une proie se trouve à 1,50 m ou moins
+  do: Mordre à +12 pour 2d8+4 dégâts.
+  note: Si la morsure touche une cible de taille M ou inférieure, tenter immédiatement l'étreinte : lutte à +15 contre son DMD, par action libre et sans attaque d'opportunité. Cette saisie initiale n'ajoute pas de dégâts.
+
+step: Aucune proie n'est au contact
+  do: Rejoindre la créature vivante la plus proche, au sol ou par une paroi ; mordre si une seule action de mouvement suffit à l'atteindre.
+  note: Si nécessaire, consacrer le tour à un double déplacement, jusqu'à 18 m. Son attaque dépend du contact.
+
+## Rounds suivants
+
+step: Une proie est toujours retenue
+  do: Consacrer une action simple au maintien de la lutte : BMO +15, avec un bonus de circonstances de +5 si elle n'a pas rompu la prise.
+  note: Chaque maintien réussi inflige automatiquement les dégâts de la morsure, 2d8+4. S'acharner sur cette proie tant qu'elle reste vivante.
+
+step: La prise est rompue ou la proie est morte
+  do: Mordre de nouveau une cible vivante à portée et tenter l'étreinte après chaque morsure réussie contre une cible de taille M ou inférieure.
+
+step: Une proie se dérobe derrière les autres combattants
+  do: Suivre un passage accessible ou escalader une paroi pour revenir au contact, sans multiplier les changements de cible.
+  note: Maintenir une conduite simple, adaptée à son Intelligence de 2.
+
+## Repli
+
+step: 20 pv ou moins et un passage permet de se mettre à l'abri
+  do: Relâcher sa proie par action libre, puis effectuer une retraite vers un angle de galerie ou une paroi hors d'atteinte, jusqu'à 18 m sur le round.
+  note: La retraite protège seulement la sortie de la case initiale contre les adversaires visibles ; traverser d'autres cases menacées peut provoquer des attaques d'opportunité.
+
+step: Hors du contact et à l'abri des attaques
+  do: Rester caché pendant que la guérison accélérée restaure 5 pv par round.
+
+step: Aucun abri n'est accessible
+  do: Continuer à mordre ou à maintenir sa prise jusqu'à la destruction.

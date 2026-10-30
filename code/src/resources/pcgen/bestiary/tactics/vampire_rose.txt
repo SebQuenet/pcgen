@@ -1,0 +1,36 @@
+## Avant le combat
+
+note: Profil
+  Rose vampire, plante de Petite taille sans intelligence, prédatrice des forêts tempérées ; 30 points de vie, CA 17.
+  Tige +6 (1d4+2 et étreinte), allonge de 3 m ; drainage sanguin : 1d4 points de Constitution. Déplacement de 1,50 m ; vision aveugle à 9 m, vision crépusculaire et immunités des plantes.
+
+step: Aucune proie à portée de tige
+  do: Rester parmi la végétation et profiter du camouflage pour attendre qu'une créature approche
+
+## Ouverture
+
+step: Une créature vivante arrive à 3 m ou moins
+  do: Frapper avec la tige +6, infliger 1d4+2 dégâts et tenter l'étreinte si l'attaque touche
+  note: Exploiter l'allonge pour atteindre la proie sans devoir avancer au contact
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et drainer son sang pour lui infliger 1d4 points de dégâts de Constitution
+  note: Garder cette proie tant que la prise tient
+
+step: La prise échoue ou la proie se libère, mais reste à 3 m ou moins
+  do: Frapper de nouveau avec la tige +6 (1d4+2 et étreinte) pour tenter de l'agripper
+
+step: Aucune proie n'est à portée, mais une créature est détectée à 9 m ou moins
+  do: Avancer vers elle de 1,50 m par action de mouvement pour la ramener à portée de tige
+  note: Sa lenteur limite fortement la poursuite ; elle ne dispose d'aucune attaque à distance
+
+## Repli
+
+step: La rose est blessée et une proie reste accessible
+  do: Continuer à frapper ou à maintenir l'étreinte et le drainage sanguin
+  note: Sans intelligence, elle ne prépare pas de retraite tactique ni de seuil de fuite
+
+step: Aucune proie n'est plus détectée
+  do: Cesser la poursuite et reprendre l'attente en profitant du camouflage

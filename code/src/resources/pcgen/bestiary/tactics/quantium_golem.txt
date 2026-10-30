@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Golem de Quantium, créature artificielle neutre de taille Gigantesque, FP 20, sans intelligence ; il défend la cité selon ses consignes.
+  375 pv, CA 37 ; épée bâtarde +5 : +46/+41/+36/+31, dégâts 4d8+20, critique 19–20. Déplacement de 6 m, espace occupé de 6 m et allonge de 6 m ; Attaque en rotation contre les ennemis qui l'entourent.
+
+note: Défenses
+  RD 20/adamantium et contondant : une attaque doit réunir les deux propriétés pour l'ignorer. Immunités des créatures artificielles ; aucun effet de peur ne lui impose de fuir.
+  L'immunité à la magie concerne les sorts et pouvoirs magiques qui autorisent la résistance à la magie ; les autres effets peuvent l'atteindre. Le golem et son équipement sont immunisés à la rouille.
+  Une attaque magique de froid ralentit le golem cramoisi pendant 1 round, sans jet de sauvegarde ; une attaque magique d'électricité produit cet effet sur le golem vert.
+
+step: Patrouille autour de Quantium
+  do: Suivre le circuit de garde et rester dans la zone protégée par Défenseur urbain.
+  note: Il voit dans le noir à 18 m et dispose de la vision nocturne ; Perception +0 et initiative −2.
+
+step: Les deux golems sont présents
+  do: Appliquer leurs consignes de défense respectives.
+  note: Leur lien indique à chacun la position exacte de l'autre ; il ne permet pas de transmettre des ordres.
+
+## Ouverture
+
+step: Un ennemi est déjà à 6 m ou moins
+  do: Effectuer une attaque à outrance à l'épée : +46/+41/+36/+31, chaque coup infligeant 4d8+20.
+  note: Concentrer les coups sur l'intrus engagé jusqu'à sa chute ; attribuer les attaques restantes à un autre ennemi à portée.
+
+step: Aucun ennemi n'est à portée, mais un déplacement de 6 m suffit
+  do: Avancer de 6 m au maximum, puis porter une attaque d'épée à +46, pour 4d8+20 dégâts.
+  note: Il ne peut pas effectuer ses quatre attaques après ce déplacement.
+
+step: Les ennemis restent plus loin
+  do: Avancer vers les intrus conformément aux consignes de garde ; effectuer un double déplacement de 12 m si nécessaire.
+  note: Garder l'accès à la cité comme point de défense plutôt que poursuivre indéfiniment des tireurs.
+
+## Rounds suivants
+
+step: Un ou deux ennemis restent à portée
+  do: Répéter l'attaque à outrance ; si nécessaire, faire un pas de placement de 1,50 m avant les attaques.
+  note: Le pas de placement permet de conserver les quatre attaques, sans autre déplacement dans le round.
+
+step: Plusieurs ennemis entourent le golem et disperser les coups est utile
+  do: Utiliser Attaque en rotation : une attaque d'épée à +46 contre chaque adversaire à 6 m ou moins, pour 4d8+20 dégâts par coup réussi.
+  note: Cette action remplace toute l'attaque à outrance ; elle n'accorde pas quatre attaques contre chaque cible.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter une attaque d'épée à +46, pour 4d8+20 dégâts.
+  note: Une seule attaque d'opportunité par round ; Attaque en rotation fait renoncer à toute attaque supplémentaire accordée par un don, sort ou pouvoir.
+
+step: Une cible quitte son allonge
+  do: Reprendre l'approche à 6 m puis porter un seul coup si elle redevient accessible, ou maintenir le poste de garde selon les consignes.
+
+## Repli
+
+step: Ses points de vie diminuent, mais la menace persiste
+  do: Continuer à défendre Quantium jusqu'à la destruction à 0 pv.
+  note: Aucun seuil de fuite : ce gardien sans intelligence ne prend pas de décision de survie personnelle.
+
+step: Les intrus quittent le secteur à défendre
+  do: Cesser la poursuite selon les consignes et reprendre la patrouille autour de la cité.

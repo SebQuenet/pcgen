@@ -1,0 +1,92 @@
+## Avant le combat
+
+note: Profil
+  Xiomorn mythique, bâtisseur de caveaux loyal neutre, extérieur de taille M lié à la terre, extrêmement intelligent. Il organise le terrain et isole les intrus avant de les affronter.
+  317 PV, guérison accélérée 5, CA 38, contact 21 ; résistance à la magie 31, fortification 50 %, blocage des attaques et immunités des élémentaires. Sa RD 10 exige une arme à la fois en adamantium, contondante et épique pour être ignorée.
+  Attaque à outrance : 4 griffes +29, chacune infligeant 2d4+10 dégâts, critique sur 19–20, plus cristallisation. Allonge 1,50 m ; présence terrifiante à 9 m, DD 27.
+  Déplacement au sol et escalade à 12 m, creusement à 9 m et traversée de la terre. Vision dans le noir à 18 m, perception des vibrations à 36 m, télépathie à 90 m.
+
+resource: Labyrinthe | 1/jour | sort préparé, NLS 19
+resource: Séisme et répulsion du métal et de la pierre | 1/jour chacun | sorts préparés, NLS 19
+resource: Désintégration et pétrification | 1/jour chacune | sorts préparés, DD 24, NLS 19
+resource: Vol | 1/jour | sort préparé, NLS 19
+resource: Pétrification | 3/jour | pouvoir magique distinct du sort préparé, DD 24
+resource: Pierres acérées | 3/jour | DD 22
+resource: Mur de pierre | 3/jour | séparer les adversaires ou fermer un passage
+resource: Convocation de monstres VII | 1/jour | élémentaires de terre uniquement
+resource: Dissipation de la magie, téléportation suprême et façonnage de la pierre | à volonté | téléportation limitée à lui-même et à 50 livres d'objets
+
+step: Il dispose de temps pour préparer un terrain rocheux
+  do: Façonner la pierre pour aménager des passages et des positions de repli ; utiliser un mur de pierre si une séparation durable est utile
+  note: Préserver l'accès à la terre pour son déplacement et garder des utilisations de mur de pierre pour le combat
+
+step: L'arrivée des intrus est imminente et leur trajet est connu
+  do: Placer des pierres acérées sur leur approche et, si nécessaire, convoquer des élémentaires de terre pour tenir le passage
+  note: Les élémentaires retiennent les adversaires pendant qu'il agit depuis une autre position ; ne pas gaspiller la convocation longtemps avant l'affrontement
+
+## Ouverture
+
+step: Un combattant ennemi constitue la menace principale
+  do: Lancer labyrinthe sur lui pour le retirer temporairement du combat
+  note: Profiter de son absence pour attaquer ses soutiens ; cette ouverture consomme son action du round
+
+step: Le groupe peut être coupé en deux
+  do: Utiliser mur de pierre pour séparer les combattants de leurs soutiens
+  note: Cette ouverture remplace labyrinthe ; concentrer ensuite ses attaques sur les ennemis restés accessibles
+
+step: Les adversaires entrent dans un rayon de 9 m
+  do: Appliquer sa présence terrifiante, DD 27
+  note: Exploiter leur dispersion pour choisir une cible isolée
+
+step: Un ennemi est déjà à portée et il peut consacrer son round à la mêlée
+  do: Effectuer l'attaque à outrance avec ses quatre griffes +29
+  note: Chaque touche inflige 2d4+10 dégâts plus cristallisation ; ne pas ajouter cette attaque à un round déjà consacré à un sort
+
+## Rounds suivants
+
+step: Une cible reste à 1,50 m sans l'exposer à tout le groupe
+  do: Continuer les attaques à outrance et concentrer les griffes sur cette cible
+  note: Sa CA 38 et sa guérison accélérée de 5 PV par round favorisent un échange prolongé contre un adversaire isolé
+
+step: Plusieurs adversaires peuvent le prendre ensemble au contact
+  do: Se déplacer par la terre ou escalader pour changer d'angle, puis reprendre le combat depuis un passage plus étroit
+  note: S'il doit se déplacer, ne pas compter sur les quatre griffes de l'attaque à outrance ce round
+
+step: Une protection magique ou un vol ennemi ruine son contrôle du terrain
+  do: Tenter une dissipation de la magie ciblée
+  note: Le pouvoir est à volonté, mais chaque tentative prend une action ; privilégier la protection qui empêche réellement son plan de fonctionner
+
+step: Un adversaire paraît vulnérable aux effets de transformation
+  do: Tenter une pétrification, DD 24, en utilisant d'abord les pouvoirs magiques disponibles
+  note: Le sort préparé fournit une utilisation supplémentaire distincte
+
+step: Un obstacle doit être détruit ou une cible exposée doit être frappée à distance
+  do: Employer désintégration, DD 24 lorsqu'un jet de sauvegarde s'applique
+  note: Conserver ce sort unique jusqu'à ce qu'il ouvre un passage ou résolve une menace précise
+
+step: Des combattants équipés de métal contrôlent l'approche
+  do: Employer répulsion du métal et de la pierre pour les tenir à distance
+  note: Exploiter l'espace obtenu pour rejoindre un accès à la terre ou reprendre ses sorts
+
+step: L'arme d'un adversaire est la principale source de danger
+  do: Tenter de la briser avec une manœuvre de destruction, BMO +31
+
+step: Une zone occupée par les ennemis peut être sacrifiée
+  do: Déclencher séisme pour bouleverser leur position et les passages environnants
+  note: Éviter cette option si l'effondrement menace le caveau ou ce qu'il protège
+
+step: Il doit combattre hors du sol ou contourner un obstacle vertical
+  do: Lancer vol, puis rejoindre une position favorable
+
+## Repli
+
+step: Ses PV passent sous 100 ou il ne peut plus isoler les ennemis
+  do: Utiliser téléportation suprême pour rejoindre un refuge connu
+  note: Ce seuil est un choix tactique. La téléportation n'emporte que lui-même et jusqu'à 50 livres d'objets ; elle ne permet pas d'évacuer des alliés
+
+step: La téléportation est empêchée et la terre reste accessible
+  do: S'enfoncer dans la terre, à 9 m par déplacement, pour rompre le contact
+  note: Un mur de pierre peut d'abord fermer la poursuite si son action du round le permet
+
+step: Il a atteint une position hors d'atteinte
+  do: Laisser agir la guérison accélérée de 5 PV par round avant d'envisager une nouvelle intervention

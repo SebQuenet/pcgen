@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Ovinnik, esprit domestique féerique de taille TP, chaotique neutre, solitaire ; il habite les greniers et les séchoirs et aboie pour effrayer les voleurs.
+  22 pv ; CA 17 ; deux griffes +7, chacune à 1d3+1 dégâts ; allonge de 1,50 m. Flamme permet des attaques de contact à distance +7, à 1d6+4 dégâts de feu jusqu'à 36 m ; hébétement neutralise brièvement un humanoïde, Volonté DD 13.
+  Déplacement de 9 m ; escalade de 6 m, Escalade +11 ; Discrétion +18 ; compression pour emprunter les passages étroits.
+  Réduction des dégâts 2/fer froid ; résistance au feu 5. Il privilégie les attaques depuis un abri et évite de se laisser encercler.
+
+resource: Hébétement | à volonté | action simple ; portée 10,50 m ; un humanoïde de 4 DV ou moins ; Volonté DD 13 annule ; durée 1 round ; résistance à la magie applicable
+resource: Flamme | à volonté | NLS 4 ; activation par une action simple ; durée 4 minutes ; chaque attaque retire 1 minute de durée ; aucun jet de sauvegarde ; résistance à la magie applicable
+resource: Divination | 1/mois | conseil sur un objectif ou un événement dans la semaine à venir ; 74 % de chances de réponse correcte
+
+step: Des intrus approchent
+  do: Les observer depuis une cachette avec Discrétion +18 et Perception +9 ; repérer un accès en hauteur et une issue étroite.
+  note: Vision dans le noir à 18 m, vision nocturne et odorat aident à les détecter ; l'odorat ne permet pas de les voir à travers les obstacles.
+
+step: Une menace est prévue et divination est disponible
+  do: Demander un conseil sur la meilleure manière de protéger son refuge ou d'échapper à cette menace ; adapter sa cachette et son itinéraire de fuite à la réponse.
+
+step: Le combat est imminent et rester caché n'est plus prioritaire
+  do: Activer flamme avant l'affrontement, depuis un endroit protégé.
+  note: La flamme éclaire comme une torche et risque de révéler sa position ; attendre si la discrétion reste essentielle.
+
+## Ouverture
+
+step: Les intrus n'ont pas encore attaqué
+  do: Aboyer depuis son abri et leur ordonner de partir en commun ou en sylvestre.
+  note: Une menace peut s'appuyer sur Intimidation +5 ; les aboiements n'imposent aucun effet de peur automatique.
+
+step: Au premier round, des adversaires sont encore pris au dépourvu
+  do: Profiter de Go Unnoticed pour tenter de se cacher d'eux avec Discrétion +18, en gagnant un couvert.
+  note: Ce don ne rend pas invisible et ne permet pas de rester caché après une attaque sans respecter les règles de Discrétion.
+
+step: Un ennemi est à découvert à 36 m ou moins et flamme est active
+  do: Projeter une flamme : attaque de contact à distance +7, 1d6+4 dégâts de feu ; utiliser son déplacement pour conserver un abri hors de portée de mêlée.
+
+step: Flamme n'est pas active et aucun ennemi ne le menace au contact
+  do: Activer flamme depuis un abri ; commencer les projections au round suivant.
+
+step: Un humanoïde de 4 DV ou moins menace sa position à 10,50 m ou moins
+  do: Employer hébétement, Volonté DD 13, puis se déplacer vers un abri si le passage est sûr.
+  note: En cas d'échec au jet, la cible ne peut agir pendant 1 round ; elle n'est ni étourdie ni sans défense.
+
+## Rounds suivants
+
+step: Il peut maintenir ses ennemis à distance
+  do: Continuer les projections de flamme depuis un couvert ou un perchoir accessible par escalade ; changer de position si un adversaire s'approche.
+  note: Chaque projection retire 1 minute à la durée restante ; une activation permet au plus quatre attaques, et moins si du temps s'est écoulé.
+
+step: La flamme s'éteint
+  do: Consacrer une action simple à la réactiver depuis une position protégée ; reprendre les projections au round suivant.
+
+step: Un humanoïde admissible doit être retardé
+  do: Employer hébétement pour interrompre sa progression et gagner de la distance.
+  note: Après avoir subi l'hébétement, cette créature est immunisée contre ce sort pendant 1 minute ; changer de cible pendant ce délai.
+
+step: Un seul ennemi est au contact et une retraite immédiate n'est pas nécessaire
+  do: Faire une attaque à outrance avec les deux griffes +7, chacune à 1d3+1 dégâts.
+  note: Après un déplacement ordinaire, il ne porte qu'une attaque de griffe ; il ne cumule pas les deux griffes et un pouvoir magique dans la même action simple.
+
+step: Plusieurs ennemis approchent ou une arme en fer froid apparaît
+  do: Abandonner le contact et gagner un passage étroit ou une hauteur ; reprendre les attaques à distance seulement depuis une position sûre.
+  note: Le fer froid contourne sa réduction des dégâts ; sa résistance au feu 5 ne le protège pas de tous les dégâts de feu.
+
+## Repli
+
+step: Points de vie à 7 ou moins, ou risque manifeste d'encerclement
+  do: Se désengager si nécessaire, puis fuir vers l'issue repérée ; exploiter son déplacement de 9 m, son escalade de 6 m et sa compression selon le terrain.
+  note: Le seuil de 7 pv est une consigne tactique ; aucune capacité spéciale ne se déclenche à ce total.
+
+step: Il a rompu la ligne de vue et dispose d'un couvert ou d'une dissimulation
+  do: Se cacher avec Discrétion +18 et laisser partir les intrus ; éviter de rallumer une flamme qui révélerait sa retraite.

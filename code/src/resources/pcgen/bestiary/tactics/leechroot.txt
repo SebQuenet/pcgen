@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Leechroot, mort-vivant de taille G, amas de racines pourries sans intelligence, animé par la soif de sang. 32 pv, CA 18, RD 5/tranchant, résistance à la canalisation +2 et immunités des morts-vivants ; impossible à faire tomber à terre par un croc-en-jambe.
+  Deux racines +7, chacune infligeant 1d6+5 dégâts, 2 points de saignement et étreinte ; allonge de 3 m, espace occupé de 3 m. Déplacement et creusement à 1,50 m par action de mouvement.
+
+step: En attente d'une proie
+  do: Rester dissimulé dans les broussailles et sous la terre, avec Discrétion +11.
+  note: Perception +3, vision dans le noir à 18 m et perception des vibrations à 9 m pour repérer les intrus au contact du sol.
+
+step: Enfoui à 1,50 m sous la surface
+  do: Attendre qu'une proie entre dans son allonge de 3 m.
+  note: Barrière de terre : il reste partiellement visible, bénéficie de camouflage et d'un abri partiel, et peut attaquer avec son allonge normale.
+
+## Ouverture
+
+step: Une proie entre à portée
+  do: Frapper avec une racine +7 ; sur une touche, infliger 1d6+5 dégâts et le saignement, puis tenter gratuitement l'étreinte à +13 contre le DMD d'une cible de taille G ou inférieure.
+  note: Lors d'un round de surprise, une seule attaque ; lors d'un tour normal sans déplacement, utiliser les deux racines en attaque à outrance.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Consacrer l'action simple au maintien de la lutte, avec BMO +13 et le bonus de +5 si la prise dure depuis le tour précédent ; sur une réussite, infliger les dégâts d'une racine.
+  note: Soif de sang : au début de son tour, récupérer autant de pv que de créatures subissant un saignement dans son allonge de 3 m, sans dépasser 32 pv. Garder les victimes à portée entretient cette guérison accélérée.
+
+step: Aucune proie n'est agrippée et une cible reste à portée
+  do: Faire une attaque à outrance avec les deux racines +7 et retenter l'étreinte sur une touche.
+  note: Le saignement inflige 2 dégâts au début du tour de la victime ; plusieurs blessures identiques ne cumulent pas ce montant.
+
+step: Toutes les proies sont hors de portée
+  do: Avancer en creusant à 1,50 m par action de mouvement ; si une cible devient accessible après un seul déplacement, porter une attaque de racine.
+
+step: Un adversaire l'arrache au sol par une manœuvre d'entraînement réussie
+  do: Se réenfouir par une action de mouvement pour retrouver sa barrière de terre, puis attaquer une cible à portée avec une racine.
+  note: Ce réenfouissement provoque des attaques d'opportunité.
+
+## Repli
+
+step: Il lui reste des points de vie et une proie est accessible
+  do: Continuer à attaquer ou à maintenir sa prise jusqu'à sa destruction.
+  note: Sans intelligence et mû par sa soif de sang, il ne prévoit aucun seuil de fuite ; sa lenteur favorise le maintien sous terre et l'alimentation sur une victime immobilisée.

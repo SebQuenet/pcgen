@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Chien lunaire, extérieur de taille M, neutre bon et intelligent, qui protège les innocents et traque les menaces maléfiques. Il privilégie la reconnaissance, les protections et les attaques mobiles.
+  Morsure +17 (1d6+6 et croc-en-jambe), allonge 1,50 m ; BMO +16. Déplacement de 15 m sur quatre pattes, 9 m sur deux pattes ; il reste à quatre pattes pour combattre.
+  114 pv, CA 23, réduction des dégâts 10/Mal, résistance à la magie 20 et immunité à la peur. Il évite de compter sur sa réduction des dégâts contre les attaques maléfiques.
+
+resource: Détection du Mal, détection de la magie, détection de l'invisibilité | permanentes | NLS 12
+resource: Lumières dansantes | à volonté | détourner l'attention ou signaler une position
+resource: Modification d'apparence | 3/jour | reconnaissance sous une forme humanoïde
+resource: Image miroir | 3/jour | protection contre les attaques dirigées
+resource: Invisibilité suprême | 1/jour | 12 rounds ; attaquer ne met pas fin à l'effet
+resource: Convocation d'ombres suprême | 1/jour | DD 20 ; renforts ou créations d'ombre
+resource: Dissipation de la magie | 1/jour | dissipation ciblée, test de NLS limité à +10
+resource: Antidétection | 1/jour | dissimuler sa reconnaissance aux divinations
+resource: Ténèbres | 1/jour | diminuer l'éclairage pour couvrir une manœuvre
+resource: Brume de dissimulation | 1/jour | brouillard autour de lui pour gêner la visibilité
+
+step: Une menace est repérée avant le combat
+  do: Observer discrètement avec Perception +26 et Discrétion +17 ; utiliser ses détections pour reconnaître les auras et les créatures invisibles
+  note: Vision dans le noir à 36 m ; odorat pour suivre une piste, avec Survie +22 au pistage olfactif. Une aura maléfique ne dispense pas d'évaluer les actes et les intentions.
+
+step: Des alliés ou des innocents sont présents
+  do: Communiquer par télépathie à 30 m, organiser leur mise à l'abri et convenir des cibles prioritaires
+  note: Il ne parle pas ; Diplomatie +18 et Psychologie +22 permettent de chercher une issue pacifique avant d'engager des adversaires qui peuvent être raisonnés.
+
+step: Il dispose de quelques instants avant une attaque certaine
+  do: Activer image miroir à l'abri, puis se placer avec un passage libre pour ses attaques mobiles
+  note: Réserver l'invisibilité suprême au début de l'affrontement pour conserver ses 12 rounds d'effet ; chaque pouvoir demande sa propre action.
+
+## Ouverture
+
+step: L'ennemi ne peut pas encore l'atteindre au corps à corps
+  do: Activer invisibilité suprême, puis se déplacer vers un flanc pour menacer un lanceur de sorts ou un adversaire isolé
+  note: Attaquer au round suivant ; éviter les ennemis capables de détecter les créatures invisibles.
+
+step: Plusieurs ennemis bloquent l'accès à une cible importante
+  do: Employer convocation d'ombres suprême pour simuler une convocation de monstres de niveau VI ou inférieur et placer un renfort entre eux et les personnes à protéger
+  note: DD 20 de Volonté pour reconnaître l'illusion lors d'une interaction ; les créatures d'ombre restent partiellement efficaces à 60 % contre ceux qui n'y croient pas.
+
+step: Un adversaire est accessible et le passage permet une attaque mobile
+  do: Utiliser Attaque éclair : avancer d'au moins 3 m, mordre à +17, tenter le croc-en-jambe si la morsure touche, puis poursuivre son déplacement d'au moins 3 m
+  note: Le déplacement total ne dépasse pas 15 m. La cible ne peut pas porter d'attaque d'opportunité contre ce déplacement ; les autres ennemis restent dangereux.
+
+step: L'ennemi est déjà au contact et aucun passage sûr n'est libre
+  do: Mordre à +17 (1d6+6), puis tenter de le renverser avec le croc-en-jambe de la morsure
+  note: Le croc-en-jambe utilise le BMO +16 contre le DMD ; cette tentative ne provoque pas d'attaque d'opportunité.
+
+## Rounds suivants
+
+step: Un adversaire dangereux est isolé et le terrain reste ouvert
+  do: Répéter Attaque éclair, en frappant puis en terminant hors de son allonge
+  note: Profiter de l'invisibilité suprême tant qu'elle dure ; éviter de terminer entre plusieurs ennemis ou dans une impasse.
+
+step: La morsure a renversé une cible
+  do: Laisser les alliés exploiter sa chute ; si le chien lunaire reste au contact, mordre en attaque d'opportunité lorsqu'elle se relève
+  note: Ne pas tenter de la renverser à nouveau pendant qu'elle se relève : elle est encore à terre au moment de cette attaque d'opportunité.
+
+step: Une protection magique empêche les morsures ou rend un ennemi trop dangereux
+  do: Utiliser la dissipation de la magie ciblée sur cet ennemi depuis une position dégagée
+  note: Une seule utilisation par jour ; choisir une protection déterminante plutôt que dissiper un effet mineur.
+
+step: Les images ont disparu et les attaques ennemies deviennent trop précises
+  do: Se mettre à l'abri ou hors d'allonge, puis renouveler image miroir s'il reste une utilisation
+  note: Ne pas consacrer plusieurs rounds à accumuler des protections pendant que les innocents sont attaqués.
+
+step: Un allié blessé peut être rejoint sans exposer le groupe
+  do: Utiliser le léchage pour lui donner l'effet de soins légers, puis reprendre sa protection
+  note: NLS 12, soit 1d8+5 pv ; cet effet ne peut bénéficier qu'une fois par jour à un même destinataire. Le léchage n'est pas une régénération continue.
+
+## Repli
+
+step: Points de vie sous 30, ou adversaires capables de l'abattre malgré ses protections
+  do: Prévenir les alliés par télépathie, puis gagner une issue avec sa vitesse de 15 m ; employer le désengagement si nécessaire pour quitter le contact
+  note: Protéger la retraite des innocents tant que cela reste possible ; son immunité à la peur ne l'oblige pas à poursuivre un combat perdu.
+
+step: Des poursuivants gardent une ligne de vue sur sa retraite
+  do: Employer brume de dissimulation, ou ténèbres si la baisse d'éclairage gêne réellement les poursuivants, puis changer de direction
+  note: Ces pouvoirs ne fournissent pas un déplacement supplémentaire ; la vision dans le noir des poursuivants peut rendre les ténèbres inutiles.
+
+step: Le passage est coupé ou la poursuite reste trop dangereuse
+  do: Utiliser déplacement de plan pour gagner le plan Éthéré ou le plan Astral depuis une position où l'activation ne l'expose pas inutilement
+  note: Ce pouvoir lui permet de quitter le plan en une action simple ; ne pas compter sur une arrivée précise pour poursuivre immédiatement le combat ailleurs.

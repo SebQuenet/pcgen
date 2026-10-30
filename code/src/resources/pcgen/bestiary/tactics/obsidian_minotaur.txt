@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Minotaure d'obsidienne, créature artificielle de taille G, neutre et dépourvue d'intelligence ; 96 pv, CA 25.
+  Deux griffes +17, chacune infligeant 2d8+6 dégâts plus 1d6 de feu ; combustion. Allonge de 3 m, déplacement de 6 m par round.
+  Réduction des dégâts 10/adamantium ; immunité à la magie et traits des créatures artificielles. Vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+resource: Souffle | Réutilisable tous les 1d4+1 rounds | Cube de 3 m de côté ; DD 16 ; 1d4 points de dégâts de Dextérité.
+
+note: Comportement
+  Garder une conduite simple : avancer vers les ennemis, souffler lorsqu'ils sont regroupés et frapper ceux à portée. Son absence d'intelligence ne justifie ni ruse élaborée ni analyse des capacités adverses.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans le cube du souffle
+  do: Utiliser le souffle sur eux.
+  note: Infliger 1d4 points de dégâts de Dextérité, DD 16 ; déterminer le délai de réutilisation de 1d4+1 rounds.
+
+step: Un ennemi est à 3 m ou moins et le souffle n'est pas utilisé
+  do: Effectuer une attaque à outrance avec les deux griffes +17.
+  note: Chaque griffe inflige 2d8+6 dégâts plus 1d6 de feu.
+
+step: Aucun ennemi n'est à portée des griffes et aucune cible ne peut être prise dans le souffle
+  do: Avancer de 6 m au maximum vers l'ennemi le plus proche ; porter une seule attaque de griffe +17 si ce déplacement le met à portée.
+  note: Une attaque à outrance exige de ne pas avoir utilisé son action de mouvement pour se déplacer.
+
+## Rounds suivants
+
+step: Le souffle est disponible et plusieurs ennemis peuvent être pris dans son cube de 3 m
+  do: Souffler de nouveau, puis déterminer le prochain délai de 1d4+1 rounds.
+  note: Le souffle inflige des dégâts de Dextérité, sans retirer directement de points de vie.
+
+step: Un ennemi reste à portée et le souffle n'est pas utilisé
+  do: Répéter l'attaque à outrance : deux griffes +17, chacune à 2d8+6 dégâts plus 1d6 de feu.
+  note: Profiter de l'allonge de 3 m pour frapper sans devoir se rapprocher davantage.
+
+step: Les ennemis se sont éloignés hors de portée
+  do: Avancer vers le plus proche, à 6 m par déplacement ; attaquer d'une griffe si une cible devient accessible après un seul déplacement.
+  note: S'il faut consacrer tout le round à avancer, effectuer un double déplacement de 12 m.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à souffler et à frapper jusqu'à sa destruction.
+  note: Aucun seuil de fuite : cette créature dépourvue d'intelligence n'organise pas de retraite tactique.

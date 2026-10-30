@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Géant du feu magmablade, loyal mauvais, de taille G : combattant intelligent qui choisit ses engagements et concentre ses coups.
+  253 pv ; CA 35, contact 10 ; déplacement de 12 m. Hache d'armes +1 de dissipation acérée au corps à corps ; rocher +21 (1d8+19 plus 1d6 de feu) à distance.
+  Immunité au feu ; vision nocturne. Vigueur +23, Réflexes +10, Volonté +20 : il recherche les échanges physiques et évite de s'exposer aux attaques de contact.
+
+resource: Réduction des dégâts 10/adamantium | 140 points absorbés | Retrancher jusqu'à 10 points des dégâts de chaque attaque physique admissible ; les armes en adamantium ignorent cette protection. Décompter les dégâts effectivement absorbés de la réserve.
+
+step: Il peut choisir sa position
+  do: Se placer près d'un couvert et d'une voie de repli, avec une ligne de tir sur l'approche ennemie
+  note: Si des flammes sont déjà présentes, utiliser leur voisinage pour gêner les adversaires que le feu menace ; son immunité ne protège pas des autres dangers du terrain.
+
+## Ouverture
+
+step: Les ennemis restent à distance
+  do: Lancer un rocher sur une cible exposée ; avancer ensuite vers un couvert si nécessaire
+  note: Privilégier un adversaire peu protégé ou qui attaque à distance, sans poursuivre une cible qui l'attirerait au milieu du groupe.
+
+step: Une cible peut être engagée après un déplacement
+  do: Se déplacer de 12 m au maximum, puis porter une attaque à la hache si la cible est à portée
+  note: Choisir un côté du groupe pour limiter le nombre d'adversaires pouvant l'encercler.
+
+step: Un adversaire est déjà à portée de la hache
+  do: Faire une attaque à outrance à la hache contre cette cible
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter les attaques à outrance et concentrer les coups jusqu'à la mettre hors de combat
+  note: Éviter les déplacements inutiles qui empêcheraient une attaque à outrance.
+
+step: La cible se dérobe ou aucun ennemi n'est accessible au corps à corps
+  do: Lancer un rocher sur une cible visible ; se repositionner pour retrouver une approche favorable
+
+step: Plusieurs adversaires commencent à l'encercler
+  do: Revenir vers un passage étroit ou un obstacle, en limitant les ouvertures aux attaques d'opportunité
+
+step: Sa réduction des dégâts est épuisée ou un adversaire la contourne
+  do: Réduire son exposition aux attaques multiples et chercher à neutraliser en priorité l'adversaire qui lui inflige le plus de dégâts
+  note: L'immunité au feu reste utilisable même après l'épuisement des 140 points de protection.
+
+## Repli
+
+step: Points de vie à 63 ou moins, sans victoire immédiate en vue
+  do: Se désengager vers le couvert préparé ; utiliser l'action de retraite si elle permet d'éviter une attaque d'opportunité au départ
+  note: Une fois séparé des poursuivants, exploiter son déplacement de 12 m et les obstacles ; ne reprendre les jets de rochers que si cela ne compromet pas sa fuite.

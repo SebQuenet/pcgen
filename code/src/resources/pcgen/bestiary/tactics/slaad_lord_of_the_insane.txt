@@ -1,0 +1,98 @@
+## Avant le combat
+
+note: Profil
+  Seigneur slaad du Limbo, extérieur chaotique neutre, métamorphe intelligent : il divise ses adversaires par la magie avant d'écraser les isolés.
+  820 pv ; CA 50, contact 24 ; initiative +10. Attaque à outrance : 3 coups +54, chacun infligeant 2d6+13 et une absorption d'énergie ; allonge des coups 3 m.
+  Déplacement terrestre 12 m, vol 18 m ; télépathie 30 m. Ses pouvoirs magiques fonctionnent au NLS 29, avec concentration +37.
+
+note: Défenses et vigilance
+  RD 20/magie et Loi : une arme doit satisfaire les deux conditions pour la franchir. Résistance à la magie 37 ; résistances acide, froid, électricité, feu et son 10 ; corps amorphe.
+  Perception +61, vision dans le noir à 18 m, détection de la magie et détection de l'invisibilité constantes. Sa Volonté +21 est moins solide que sa Vigueur +39 : les spécialistes des attaques mentales deviennent des cibles prioritaires.
+
+resource: Convocation de slaads | 3/jour | niveau 9 ; réussite 100 % ; 3 rouges, bleus ou verts, ou 2 gris ou de la mort
+resource: Mot de pouvoir aveuglant | 3/jour | sans sauvegarde ; cible ayant au plus 200 pv actuels ; résistance à la magie applicable
+resource: Fracassement | 3/jour | DD 20
+resource: Cercle de mort | 2/jour | Vigueur DD 24 ; aucune créature de 9 DV ou plus n'est affectée
+resource: Symbole d'aliénation mentale | 2/jour | Volonté DD 26 ; préparation de 10 minutes ; rayon 18 m
+resource: Parole du Chaos | 2/jour | Volonté DD 25 ; rayon 12 m ; créatures non chaotiques uniquement
+resource: Doigt de mort | 1/jour | Vigueur DD 25 ; 290 dégâts, ou 3d6+29 si la sauvegarde réussit
+resource: Implosion | 1/jour | Vigueur DD 27 ; 290 dégâts ; concentration ; une nouvelle cible corporelle par round
+resource: Pouvoirs à volonté | illimité | animation d'objets, marteau du Chaos DD 22, ténèbres profondes, dissipation de la Loi DD 23, boule de feu DD 21, invisibilité sur lui-même, cercle magique contre la Loi, charme-monstre de groupe DD 26, changement de plan DD 25
+
+step: Il dispose d'au moins 10 minutes pour préparer le terrain
+  do: Inscrire un symbole d'aliénation mentale bien visible sur le passage des intrus ; choisir un mot de passe et le communiquer aux alliés
+  note: Le symbole provoque une confusion permanente sur un échec de Volonté DD 26 ; ses alliés doivent employer le mot de passe pour traverser sa zone sans danger.
+
+step: L'affrontement approche
+  do: Activer cercle magique contre la Loi ; se rendre invisible, observer les intrus et choisir une position permettant de voler hors de leur mêlée
+  note: Une forme humanoïde peut faciliter une approche pacifique ; elle ne lui accorde aucun pouvoir supplémentaire non indiqué.
+
+step: Il peut préparer des renforts avant l'arrivée des ennemis
+  do: Employer une convocation pour appeler 2 slaads de la mort ; leur ordonner par télépathie de séparer les combattants des lanceurs de sorts
+  note: Les éventuels 1 ou 2 slaads de la mort de sa troupe sont des alliés déjà présents ; les renforts convoqués consomment une utilisation du pouvoir.
+
+step: Les intrus acceptent encore de parlementer
+  do: Tenter charme-monstre de groupe, Volonté DD 26, pour obtenir une trêve ou le retrait de certains adversaires
+  note: Affecter jusqu'à 58 DV au total, ou au moins une créature ; les cibles doivent rester à 9 m au plus les unes des autres. Le charme rend amical, sans imposer des ordres suicidaires ; une menace de son camp accorde +5 à la sauvegarde, et une attaque contre une cible charmée brise son charme.
+
+## Ouverture
+
+note: Choix du premier round
+  Choisir une ouverture selon la situation ; chaque pouvoir demande son action. Il perd son invisibilité lorsqu'il attaque.
+
+step: Il est surpris sans alliés disponibles pour occuper les ennemis
+  do: Convoquer 2 slaads de la mort, puis utiliser son déplacement pour garder les adversaires derrière ces renforts
+  note: Les slaads engagent les ennemis pendant qu'il prépare son attaque décisive au round suivant.
+
+step: Plusieurs adversaires non chaotiques se trouvent à 12 m ou moins
+  do: Employer Parole du Chaos, Volonté DD 25
+  note: Au NLS 29, les effets se cumulent : surdité jusqu'à 29 DV, étourdissement jusqu'à 28 DV, confusion jusqu'à 24 DV, mort jusqu'à 19 DV. La sauvegarde annule surdité et étourdissement ; elle réduit la confusion à 1 round et remplace la mort par 3d6+25 dégâts.
+  note: Les créatures de plus de 29 DV sont hors d'atteinte de ces effets ; ses alliés chaotiques peuvent rester dans la zone.
+
+step: Les ennemis sont dispersés ou échappent à Parole du Chaos, et une cible corporelle dangereuse est à 28,50 m ou moins
+  do: Déclencher implosion sur cette cible, en privilégiant un adversaire dont la Vigueur paraît faible
+  note: Vigueur DD 27 annule les 290 dégâts. Le pouvoir n'affecte ni les créatures intangibles ni celles sous forme gazeuse.
+
+## Rounds suivants
+
+step: Implosion est active et une autre cible valable reste à portée
+  do: Consacrer son action simple à maintenir la concentration et frapper une nouvelle cible ; se déplacer en vol si nécessaire
+  note: Jusqu'à 14 rounds au total ; chaque créature ne peut être ciblée qu'une fois par cette utilisation, même si elle réussit sa sauvegarde. Lancer un autre pouvoir ou cesser de se concentrer termine implosion.
+
+step: Une cible prioritaire est à 3 m ou moins et il peut rester sur place
+  do: Effectuer les 3 coups +54, chacun pour 2d6+13 et absorption d'énergie ; concentrer les coups sur la même cible
+  note: Un pas de 1,50 m permet d'ajuster sa position avant l'attaque à outrance. L'absorption affaiblit les survivants ; le bloc fourni n'en précise ni le nombre de niveaux négatifs ni le DD.
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Se déplacer puis porter un seul coup avec Science de la frappe décisive, +54 pour 6d6+13 et absorption d'énergie
+  note: Ce don accompagne une action d'attaque ; il ne s'applique ni à une charge ni aux trois coups d'une attaque à outrance. Contre une CA faible, Attaque en puissance donne +43 pour 2d6+35 par coup, ou 6d6+35 avec ce don.
+
+step: Des adversaires quittent une case qu'il menace
+  do: Exploiter l'allonge de 3 m et Attaques réflexes pour porter des attaques d'opportunité
+  note: Jusqu'à 7 attaques d'opportunité par round, selon les occasions ; les pas de 1,50 m et les déplacements prudents peuvent éviter ces attaques.
+
+step: Un adversaire dangereux paraît suffisamment blessé
+  do: Employer mot de pouvoir aveuglant à 28,50 m ou moins si la cible semble avoir au plus 200 pv actuels
+  note: Au-delà de 200 pv, le pouvoir est sans effet. L'aveuglement facilite ensuite les coups et le travail des slaads ; il ne demande aucune sauvegarde.
+
+step: Implosion est terminée et une cible à faible Vigueur reste à 28,50 m ou moins
+  do: Employer doigt de mort, Vigueur DD 25, pour tenter de l'abattre
+  note: Les dégâts restent de 3d6+29 sur une sauvegarde réussie ; conserver ce pouvoir si une protection contre les effets de mort est manifeste.
+
+step: Des ennemis restent groupés hors de sa mêlée
+  do: Reprendre Parole du Chaos si ses conditions sont réunies ; sinon employer marteau du Chaos contre des cibles loyales, ou boule de feu en épargnant ses alliés
+  note: Marteau du Chaos est inefficace contre les créatures chaotiques ; cercle de mort sert surtout contre des auxiliaires de moins de 9 DV. Animation d'objets peut ajouter des combattants si le terrain offre des objets adaptés.
+
+step: Un combattant loyal lui oppose une forte pression
+  do: Employer dissipation de la Loi pour renforcer sa défense, ou tenter de renvoyer un extérieur loyal au contact, Volonté DD 23
+  note: Le bonus de parade de +4 contre les créatures loyales remplace le bonus de parade de +2 du cercle magique ; ils ne s'additionnent pas. Ce pouvoir ne dissipe pas librement tous les sorts adverses.
+
+## Repli
+
+step: Ses pv passent sous 205, ou le groupe menace de le neutraliser malgré ses défenses
+  do: Employer changement de plan pour rejoindre le Limbo, en laissant ses alliés couvrir son départ
+  note: Ce seuil est une décision tactique ; le pouvoir est à volonté et ne demande aucune sauvegarde pour son propre départ.
+
+step: Le voyage planaire est empêché
+  do: Rompre le contact, profiter de ses alliés pour se rendre invisible, puis fuir en vol à 18 m par déplacement
+  note: Employer ténèbres profondes pour gêner la poursuite si cela peut l'aider ; elles peuvent aussi neutraliser sa propre vision dans le noir. Il cherche à quitter leur zone plutôt qu'à y viser ses adversaires.
