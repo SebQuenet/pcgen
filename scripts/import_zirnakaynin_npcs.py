@@ -36,6 +36,7 @@ KIT_DIRECTORY = DESTINATION / 'kits'
 # Each NPC's pawn, which its .pcg names as its portrait
 PORTRAIT_DIRECTORY = NPC_DIRECTORY / 'pions'
 PCC = DESTINATION / '_zirnakaynin.pcc'
+BACKGROUND_SKILLS_RULE = 'PREVAREQ:UsePathfinderUnchainedSkills,1'
 SCENARIO_NPCS = Path.home() / 'Documents/projects/Pierrebougie/scenarios/2026-09-19-zirkayanin/module/npcs'
 SCENARIO_FOLDERS = ('nommes', 'generiques')
 SCENARIO_PAWNS = SCENARIO_NPCS.parent / 'assets/pawns'
@@ -79,6 +80,7 @@ class DataIndex:
     prestige_classes: frozenset
     prestige_requirements: dict
     pools_opened: dict
+    background_skills: frozenset
 
     def is_defined(self, kind: str, key: str) -> bool:
         return key in self.books_by_key.get(kind, {})
@@ -119,6 +121,13 @@ def object_keys(path: Path, kind: str) -> list[tuple[str, bool]]:
         visible = not any(column.strip() == 'VISIBLE:NO' for column in columns)
         found += [(key, visible), (name, visible)]
     return found
+
+
+def background_skills(path: Path) -> set:
+    """The skills of a LST file that only Pathfinder Unchained's background skills rule offers."""
+    return {next((column[4:].strip() for column in line.split('\t') if column.startswith('KEY:')), line.split('\t')[0].strip())
+            for line in path.read_text(encoding='utf-8', errors='replace').splitlines()
+            if BACKGROUND_SKILLS_RULE in line and not line.startswith('#')}
 
 
 def racial_levels(path: Path) -> dict:
@@ -212,6 +221,7 @@ def build_index() -> DataIndex:
     class_files = set()
     ability_grants: dict = defaultdict(lambda: (set(), set()))
     keys_cache: dict = {}
+    background: set = set()
     for pcc, book in books.items():
         for kind, path in loaded_files(pcc, set()):
             if not path.is_file():
@@ -220,6 +230,8 @@ def build_index() -> DataIndex:
                 keys_cache[(kind, path)] = object_keys(path, kind)
                 if kind == 'RACE':
                     races_levels = racial_levels(path) | races_levels
+                if kind == 'SKILL':
+                    background |= background_skills(path)
                 if kind == 'CLASS':
                     prestige |= prestige_classes(path)
                     class_files.add(path)
@@ -236,7 +248,8 @@ def build_index() -> DataIndex:
         for class_name, names in required_abilities(path, prestige).items():
             requirements[class_name] |= names
     return DataIndex(books_by_key, frozenset(visible_templates), races_levels, frozenset(prestige),
-                     {class_name: frozenset(names) for class_name, names in requirements.items()}, pools_opened(ability_grants))
+                     {class_name: frozenset(names) for class_name, names in requirements.items()}, pools_opened(ability_grants),
+                     frozenset(background))
 
 
 def required_books(index: DataIndex, references: set, loaded: tuple[str, ...]) -> list[Book]:
@@ -314,7 +327,7 @@ def main() -> int:
                 referenced.add((kind, key))
             return defined
 
-        lines, dropped = zirnakaynin_kit.kit_lines(npc, zirnakaynin_kit.Catalog(is_defined, index.visible_templates, index.racial_levels, index.prestige_classes, index.prestige_requirements, index.pools_opened))
+        lines, dropped = zirnakaynin_kit.kit_lines(npc, zirnakaynin_kit.Catalog(is_defined, index.visible_templates, index.racial_levels, index.prestige_classes, index.prestige_requirements, index.pools_opened, index.background_skills))
         kit_file = KIT_DIRECTORY / f'zir_kit_{pcg.stem}.lst'
         kit_file.write_text('SOURCELONG:Zirnakaynin\tSOURCESHORT:ZIR\tSOURCEDATE:2026-10\n\n' + '\n'.join(lines) + '\n', encoding='utf-8')
         books = required_books(index, referenced, npc.campaigns)

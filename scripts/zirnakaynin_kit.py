@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import re
 from collections import defaultdict
+import dataclasses
 from dataclasses import dataclass
 from typing import Callable
 
@@ -78,14 +79,15 @@ class Npc:
 class Catalog:
     """What the loaded data defines: is_defined(kind, key), the templates a player can choose,
     the monster class levels each race grants, as race -> (class, levels), the prestige classes, and the
-    abilities each prestige class requires, as class -> abilities, and the ability pools each ability opens,
-    as ability -> pools."""
+    abilities each prestige class requires, as class -> abilities, the ability pools each ability opens,
+    as ability -> pools, and the background skills, which only Pathfinder Unchained's background skills rule offers."""
     is_defined: Callable[[str, str], bool]
     visible_templates: frozenset
     racial_levels: dict
     prestige_classes: frozenset
     prestige_requirements: dict
     pools_opened: dict
+    background_skills: frozenset = frozenset()
 
 
 def fields_of(line: str) -> dict[str, str]:
@@ -230,7 +232,9 @@ def kit_lines(npc: Npc, catalog: Catalog) -> tuple[list[str], list[tuple[str, st
     lines += [f'TEMPLATE:{template}' for template in npc.templates if template in catalog.visible_templates]
     # A prestige class requires feats and ranks, so it comes after them; its levels bring feats and ranks
     # of their own, so the other feats and the ranks bought at its levels come after it
-    abilities = pools_opened_first([ability for ability in npc.abilities if known('ABILITY', ability.key)], catalog.pools_opened)
+    chosen = [without_background_skills(ability, catalog.background_skills, dropped)
+              for ability in npc.abilities if known('ABILITY', ability.key)]
+    abilities = pools_opened_first([ability for ability in chosen if ability], catalog.pools_opened)
     prestige = class_lines(npc, catalog, known, prestige=True)
     required = set().union(*(catalog.prestige_requirements.get(class_name, ()) for class_name, _, _ in npc.classes))
     used_pools = {ability.category for ability in abilities}
@@ -253,6 +257,17 @@ def kit_lines(npc: Npc, catalog: Catalog) -> tuple[list[str], list[tuple[str, st
                          + (f'\tEQMOD:{".".join(item.eqmods)}' if item.eqmods else ''))
     lines += spell_lines(npc.spells, known)
     return lines, dropped
+
+
+def without_background_skills(ability: ChosenAbility, background_skills: frozenset, dropped: list) -> ChosenAbility | None:
+    """The ability less its choices of a background skill, which a kit loaded without that rule cannot select;
+    None when no choice is left."""
+    left_out = [choice for choice in ability.choices if choice in background_skills]
+    if not left_out:
+        return ability
+    dropped += [('SKILL', choice) for choice in left_out]
+    choices = tuple(choice for choice in ability.choices if choice not in background_skills)
+    return dataclasses.replace(ability, choices=choices) if choices else None
 
 
 def class_lines(npc: Npc, catalog: Catalog, known, prestige: bool) -> list[str]:

@@ -1,5 +1,6 @@
 """Tests of the .pcg to kit translation in scripts/zirnakaynin_kit.py."""
 
+import dataclasses
 import sys
 import unittest
 from pathlib import Path
@@ -239,6 +240,11 @@ class UnknownReferences(unittest.TestCase):
         catalog = zirnakaynin_kit.Catalog(lambda kind, key: key != 'Alertness', frozenset(), {}, frozenset(), {}, {})
         lines, dropped = zirnakaynin_kit.kit_lines(zirnakaynin_kit.parse_pcg(PCG), catalog)
         self.assertEqual((any('Alertness' in line for line in lines), dropped), (False, [('ABILITY', 'Alertness')]))
+
+    def test_drops_a_choice_of_a_background_skill_and_reports_it(self):
+        catalog = dataclasses.replace(EVERYTHING_KNOWN, background_skills=frozenset({'Appraise'}))
+        lines, dropped = zirnakaynin_kit.kit_lines(zirnakaynin_kit.parse_pcg(PCG), catalog)
+        self.assertEqual((any('Skill Rank (Appraise)' in line for line in lines), dropped), (False, [('SKILL', 'Appraise')]))
 
 
 class Campaigns(unittest.TestCase):
