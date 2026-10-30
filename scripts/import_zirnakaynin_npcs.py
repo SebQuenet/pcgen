@@ -18,7 +18,14 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
+from PIL import Image
+
 import zirnakaynin_kit
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'combat_manager'))
+
+from generate_bestiary_pawns import JPEG_QUALITY, PAWN_SIZE, PAWNS, frame_as_pawn  # noqa: E402
+from generate_summon_portraits import portrait_name  # noqa: E402
 
 REPOSITORY = Path(__file__).resolve().parent.parent
 DATA = REPOSITORY / 'data'
@@ -26,9 +33,12 @@ PATHFINDER = DATA / 'pathfinder'
 DESTINATION = DATA / 'homebrew' / 'zirnakaynin'
 NPC_DIRECTORY = DESTINATION / 'pnj'
 KIT_DIRECTORY = DESTINATION / 'kits'
+# Each NPC's pawn, which its .pcg names as its portrait
+PORTRAIT_DIRECTORY = NPC_DIRECTORY / 'pions'
 PCC = DESTINATION / '_zirnakaynin.pcc'
 SCENARIO_NPCS = Path.home() / 'Documents/projects/Pierrebougie/scenarios/2026-09-19-zirkayanin/module/npcs'
 SCENARIO_FOLDERS = ('nommes', 'generiques')
+SCENARIO_PAWNS = SCENARIO_NPCS.parent / 'assets/pawns'
 # The kind of object each .pcc file token loads; FEAT files hold abilities
 FILE_KINDS = {'RACE': 'RACE', 'CLASS': 'CLASS', 'ABILITY': 'ABILITY', 'FEAT': 'ABILITY', 'SKILL': 'SKILL',
               'EQUIPMENT': 'EQUIPMENT', 'SPELL': 'SPELL', 'TEMPLATE': 'TEMPLATE', 'DEITY': 'DEITY', 'LANGUAGE': 'LANGUAGE'}
@@ -243,6 +253,27 @@ def scenario_pcg(identifier: str) -> Path | None:
     return next((path for folder in SCENARIO_FOLDERS for path in [SCENARIO_NPCS / folder / f'{identifier}.pcg'] if path.is_file()), None)
 
 
+def game_table_pawn_name(identifier: str) -> str:
+    """The pawn the game table looks up for a character file named <identifier>.pcg."""
+    return portrait_name(identifier)
+
+
+def with_portrait(pcg: str, path: str) -> str:
+    return re.sub(r'^PORTRAIT:.*$', lambda _: f'PORTRAIT:{path}', pcg, count=1, flags=re.M)
+
+
+def import_pawn(identifier: str) -> bool:
+    """Copies the scenario's pawn of this NPC for the game table and as its portrait; False when it has none."""
+    drawing = SCENARIO_PAWNS / f'{identifier}.png'
+    if not drawing.is_file():
+        return False
+    for target in (PAWNS / game_table_pawn_name(identifier), PORTRAIT_DIRECTORY / f'{identifier}.jpg'):
+        if not target.is_file() or target.stat().st_mtime < drawing.stat().st_mtime:
+            with Image.open(drawing) as pawn:
+                frame_as_pawn(pawn).resize(PAWN_SIZE, Image.LANCZOS).save(target, 'JPEG', quality=JPEG_QUALITY, optimize=True)
+    return True
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('identifiers', nargs='*', help='NPCs to add, by file name without extension')
@@ -257,8 +288,18 @@ def main() -> int:
         sys.exit(f'Unknown NPCs: {unknown}')
     NPC_DIRECTORY.mkdir(parents=True, exist_ok=True)
     KIT_DIRECTORY.mkdir(parents=True, exist_ok=True)
+    PORTRAIT_DIRECTORY.mkdir(exist_ok=True)
     for identifier, source in sources.items():
         shutil.copyfile(source, NPC_DIRECTORY / f'{identifier}.pcg')
+    without_pawn = []
+    for pcg in sorted(NPC_DIRECTORY.glob('*.pcg')):
+        if import_pawn(pcg.stem):
+            portrait = (PORTRAIT_DIRECTORY / f'{pcg.stem}.jpg').relative_to(REPOSITORY).as_posix()
+            pcg.write_text(with_portrait(pcg.read_text(encoding='utf-8'), portrait), encoding='utf-8')
+        else:
+            without_pawn.append(pcg.stem)
+    if without_pawn:
+        print(f'{len(without_pawn)} NPCs without a pawn in the scenario: {without_pawn}')
 
     index = build_index()
     kit_references = []

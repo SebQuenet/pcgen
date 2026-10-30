@@ -22,9 +22,15 @@ l'équipement, les sorts et le plan tactique.
 ```
 data/homebrew/zirnakaynin/
   _zirnakaynin.pcc            campagne « Zirnakaynin », un fichier KIT par PNJ
-  pnj/<identifiant>.pcg       copie du .pcg du scénario
+  pnj/<identifiant>.pcg       copie du .pcg du scénario, PORTRAIT pointant vers son pion
+  pnj/pions/<identifiant>.jpg pion du PNJ, 400 × 600, fond blanc
   kits/zir_kit_<identifiant>.lst
+code/src/resources/pcgen/bestiary/pawns/<identifiant en minuscules, « _ » pour séparateur>.jpg
+                              le même pion, que la table de jeu cherche sous ce nom pour un .pcg
 ```
+
+Le pion vient du scénario (`module/assets/pawns/<identifiant>.png`). Le chemin du `PORTRAIT` est
+relatif au dossier d'où PCGen est lancé, comme le dossier `data/`.
 
 Un PNJ entre dans le dossier quand les joueurs le rencontrent. Le dossier `pnj/` fait foi : un PNJ
 est dans la source si et seulement si son `.pcg` y est.
@@ -35,8 +41,17 @@ est dans la source si et seulement si son `.pcg` y est.
 
 1. Copie le `.pcg` de chaque identifiant donné depuis le scénario vers `pnj/`, en écrasant une
    copie antérieure. Un identifiant inconnu arrête le script avant toute écriture ; `--all` copie tous les profils.
-2. Régénère le kit de **chaque** `.pcg` de `pnj/`, puis réécrit `_zirnakaynin.pcc`. Lancé sans
+2. Copie le pion de chaque `.pcg` de `pnj/` vers `pnj/pions/` et vers les pions de la table de jeu,
+   quand celui du scénario est plus récent, et fait pointer le `PORTRAIT` du `.pcg` vers lui. Il
+   signale les PNJ sans pion.
+3. Régénère le kit de **chaque** `.pcg` de `pnj/`, puis réécrit `_zirnakaynin.pcc`. Lancé sans
    argument, il remet les kits à jour après une modification des `.pcg` dans le scénario.
+
+`scripts/generate_zirnakaynin_pawns.py [--only <identifiant>] [--force]` dessine, en pilotant Codex
+deux images à la fois, le pion des PNJ du scénario qui n'en ont pas : rendu fantasy « blockbuster »
+photoréaliste, en pied, sur fond blanc, 1122 × 1402 comme les autres pions du scénario. L'invite
+reprend la race, les classes et l'équipement porté du `.pcg`, le rôle, le quartier et le trait de la
+fiche `.md`.
 
 ## 4. Du `.pcg` au kit
 
