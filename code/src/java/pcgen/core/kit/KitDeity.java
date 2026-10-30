@@ -223,6 +223,8 @@ public class KitDeity extends BaseKit
 
 		if (domainsToAdd != null)
 		{
+			// In batch mode the class levels just taken have not yet told the character it gets domains
+			aPC.defaultDomainSourceToLastClassLevel();
 			for (Domain domain : domainsToAdd)
 			{
 				aPC.addDomain(domain);

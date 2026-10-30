@@ -8914,6 +8914,22 @@ public class PlayerCharacter implements Cloneable, VariableContainer
 		defaultDomainSource = cs;
 	}
 
+	/**
+	 * Gives the domains added from now on the last class level taken as their source, when no
+	 * class level has become their source yet.
+	 */
+	public void defaultDomainSourceToLastClassLevel()
+	{
+		int levelCount = getLevelInfoSize();
+		if (hasDefaultDomainSource() || levelCount == 0)
+		{
+			return;
+		}
+		PCLevelInfo highestLevelInfo = getLevelInfo(levelCount - 1);
+		setDefaultDomainSource(new ClassSource(getClassKeyed(highestLevelInfo.getClassKeyName()),
+			highestLevelInfo.getClassLevel()));
+	}
+
 	public boolean addDomain(Domain domain)
 	{
 		return addDomain(domain, defaultDomainSource);

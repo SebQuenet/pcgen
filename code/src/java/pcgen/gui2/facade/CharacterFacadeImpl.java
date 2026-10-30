@@ -62,7 +62,6 @@ import pcgen.cdom.facet.event.DataFacetChangeListener;
 import pcgen.cdom.facet.fact.XPFacet;
 import pcgen.cdom.facet.model.LanguageFacet;
 import pcgen.cdom.facet.model.TemplateFacet;
-import pcgen.cdom.helper.ClassSource;
 import pcgen.cdom.inst.PCClassLevel;
 import pcgen.cdom.meta.CorePerspective;
 import pcgen.cdom.reference.CDOMDirectSingleRef;
@@ -1943,14 +1942,7 @@ public class CharacterFacadeImpl
 			return;
 		}
 
-		if (!theCharacter.hasDefaultDomainSource())
-		{
-			// No source for the domain yet? Default to the last added class level
-			int level = charDisplay.getLevelInfoSize();
-			PCLevelInfo highestLevelInfo = charDisplay.getLevelInfo(level - 1);
-			PCClass cls = theCharacter.getClassKeyed(highestLevelInfo.getClassKeyName());
-			theCharacter.setDefaultDomainSource(new ClassSource(cls, highestLevelInfo.getClassLevel()));
-		}
+		theCharacter.defaultDomainSourceToLastClassLevel();
 
 		if (theCharacter.addDomain(domain))
 		{

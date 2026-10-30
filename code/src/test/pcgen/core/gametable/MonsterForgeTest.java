@@ -220,4 +220,12 @@ class MonsterForgeTest
 
 		assertEquals(2, ogre.feats().size(), ogre.feats().toString());
 	}
+
+	@Test
+	void aDrowNobleTakesTheDomainsHerKitGrants()
+	{
+		PlayerCharacter drow = forged(MonsterRecipe.of(new MonsterSource.BestiaryRace("Drow Noble")));
+
+		assertEquals(2, drow.getDomainCount());
+	}
 }
