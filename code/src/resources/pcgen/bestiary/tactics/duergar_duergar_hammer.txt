@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Duergar disciple gris, combattant mobile à mains nues : 93 PV, CA 26, contact 22, pris au dépourvu 20. Déplacement de 18 m ; vision dans le noir à 36 m.
+  Frappe à mains nues +14/+9 (2d6+2), ou déluge de coups +15/+15/+10/+10/+5 (2d6+2 par coup). Il possède des shurikens +2 pour attaquer à distance.
+  Immunisé contre les maladies, la paralysie, les fantasmes et le poison.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se placer dans un passage souterrain étroit, avec une voie de repli accessible
+  note: La vision dans le noir permet de surveiller les approches jusqu'à 36 m dans l'obscurité ; un passage étroit limite les possibilités d'encerclement
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de ses poings
+  do: Effectuer une attaque à outrance avec déluge de coups : +15/+15/+10/+10/+5, chaque coup infligeant 2d6+2 dégâts
+  note: Concentrer les coups sur une même cible pour la mettre rapidement hors de combat
+
+step: Il doit se déplacer pour atteindre une cible située à 18 m ou moins
+  do: Rejoindre la cible puis porter une seule frappe à mains nues à +14, pour 2d6+2 dégâts
+  note: Après ce déplacement, il ne peut pas effectuer de déluge de coups ce round
+
+step: L'approche l'exposerait à plusieurs adversaires à la fois
+  do: Utiliser ses shurikens +2 depuis une position qui oblige les ennemis à venir vers le passage étroit
+  note: Rechercher ensuite le contact avec un adversaire isolé pour pouvoir enchaîner les coups
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Répéter le déluge de coups +15/+15/+10/+10/+5, pour 2d6+2 dégâts par coup
+  note: Un pas de placement de 1,50 m reste compatible avec cette attaque à outrance ; l'utiliser pour ajuster sa position sans interrompre les cinq attaques
+
+step: Sa cible recule et un pas de 1,50 m ne suffit pas à la rejoindre
+  do: Se déplacer jusqu'à 18 m et porter une frappe à +14, pour 2d6+2 dégâts, si elle redevient accessible
+  note: Éviter de poursuivre au milieu des autres ennemis ; garder le passage étroit entre eux et lui si possible
+
+step: Plusieurs adversaires commencent à l'encercler
+  do: Revenir vers un étranglement et reprendre le déluge de coups dès qu'il peut rester sur place
+  note: Ses immunités lui permettent d'ignorer les maladies, le poison, la paralysie et les fantasmes ; elles ne le protègent pas des autres attaques ou sorts
+
+## Repli
+
+step: Ses points de vie passent sous 30 ou il ne peut plus tenir le passage
+  do: Utiliser l'action de retraite pour rejoindre un passage libre, jusqu'à 36 m en un round
+  note: La retraite protège la case de départ contre les attaques d'opportunité ; éviter de traverser les autres cases menacées et utiliser les angles du souterrain pour rompre les lignes de vue

@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Chalkydri, ange neutre bon de taille M : combattant protecteur, mobile dans les airs, qui associe épée enflammée, pouvoirs sacrés et soins.
+  126 pv, CA 30, RD 10/Mal, RM 25 ; immunisé contre l'acide, le froid, la pétrification et les effets de mort ; résistance de 10 à l'électricité et au feu.
+  Épée longue +2 de feu +21/+16/+11, 1d8+8 plus 1d6 de feu ; javeline +2 de feu +17, 1d6+8 plus 1d6 de feu. Allonge de 1,50 m.
+  Déplacement terrestre de 12 m, vol de 27 m par action de mouvement, bonne manœuvrabilité ; vision dans le noir à 18 m, détection du Mal et détection de l'invisibilité constantes.
+
+resource: Convocation | 1/jour | 35 % de chances de convoquer 1d4 dévas movaniques ; pouvoir de niveau 8
+resource: Parole sacrée | 3/jour | Volonté DD 21 ; rayon de 12 m centré sur lui ; créatures non bonnes
+resource: Colonne de feu | 3/jour | 12d6 dégâts, moitié feu et moitié puissance divine ; Réflexes DD 19 pour réduire de moitié
+resource: Guérison suprême | 1/jour | rend 120 pv, sans dépasser le maximum de la cible
+resource: Soins importants | 3/jour | rend 3d8+12 pv au toucher
+resource: Restauration suprême | 3/jour | à réserver notamment aux niveaux négatifs et aux diminutions permanentes de caractéristiques
+
+step: Des interlocuteurs peuvent encore renoncer au combat
+  do: Leur parler grâce à son don des langues et chercher une issue pacifique avec Diplomatie +19
+  note: Détection du Mal renseigne sur les auras ; Psychologie +23 et détection du mensonge, DD 18, servent à examiner les intentions et les déclarations
+
+step: Un affrontement sérieux est imminent et il dispose d'un round de préparation
+  do: Tenter la convocation avant d'être engagé ; en cas de réussite, placer les dévas entre la menace et les personnes à protéger
+  note: Une tentative échouée dépense tout de même l'unique utilisation quotidienne ; aucun renfort n'est garanti
+
+step: Des alliés doivent rester à proximité
+  do: Les maintenir autant que possible dans les 6 m de son aura protectrice
+  note: Contre les créatures mauvaises, l'aura accorde +4 de parade à la CA et +4 de résistance aux sauvegardes ; elle fonctionne aussi comme un cercle magique contre le Mal et un globe d'invulnérabilité partielle
+
+## Ouverture
+
+step: Plusieurs adversaires mauvais sont groupés à distance
+  do: Lancer châtiment sacré depuis les airs, à volonté, dans une zone de 6 m de rayon
+  note: 5d8 dégâts contre les créatures mauvaises, ou 10d6 contre les extérieurs mauvais, et aveuglement pendant 1 round ; Volonté DD 18 réduit les dégâts de moitié et annule l'aveuglement. Les créatures bonnes sont épargnées ; les neutres subissent des dégâts réduits
+
+step: Plusieurs adversaires non bons de 12 DV ou moins sont à 12 m ou moins, sans allié non bon dans la zone
+  do: Employer parole sacrée pour les neutraliser avant la mêlée, Volonté DD 21
+  note: À ce NLS 12, les effets cumulés sont surdité à 12 DV ou moins, cécité à 11 DV ou moins, paralysie à 7 DV ou moins et mort à 2 DV ou moins ; la sauvegarde atténue ou annule les effets selon le cas. Aucun effet au-delà de 12 DV
+
+step: Une cible isolée menace directement une personne à protéger
+  do: Rejoindre la cible en vol et porter une attaque d'épée à +21
+  note: Après un déplacement ordinaire, une seule attaque est disponible ; conserver l'attaque à outrance pour un round où il peut rester au contact
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et aucune urgence de soin ne prime
+  do: Attaque à outrance à l'épée longue, +21/+16/+11, chaque touche infligeant 1d8+8 plus 1d6 de feu
+  note: Contre une CA facile à toucher, Attaque en puissance avec l'épée tenue à une main donne +17/+12/+7 et 1d8+16 plus 1d6 de feu par touche
+
+step: Il doit se déplacer avant d'attaquer deux ennemis adjacents, tous deux dans son allonge
+  do: Employer Enchaînement : une attaque à son meilleur bonus, puis une attaque supplémentaire contre le second si la première touche
+  note: Cette action remplace l'attaque à outrance et impose -2 à la CA jusqu'à son prochain tour
+
+step: Les ennemis restent au sol ou cherchent à l'encercler
+  do: Reprendre de la hauteur hors de leur allonge, puis privilégier châtiment sacré aux rounds suivants
+  note: Éviter de quitter une case menacée sans précaution ; un pas de placement de 1,50 m peut suffire avant d'utiliser un pouvoir. La javeline fournit une attaque à distance +17, mais ne revient pas d'elle-même
+
+step: Un groupe résiste aux effets sacrés, ou une colonne peut atteindre plusieurs ennemis sans toucher les alliés
+  do: Employer colonne de feu dans un rayon de 3 m, Réflexes DD 19
+  note: La moitié divine des 12d6 reste utile contre la résistance au feu ; contrairement à châtiment sacré, cette attaque ne protège pas les créatures bonnes
+
+step: Une protection magique ennemie empêche les alliés de progresser
+  do: Tenter une dissipation de la magie ciblée avant de reprendre les attaques
+  note: Se placer hors des allonges ennemies pour employer ses pouvoirs magiques sans subir d'attaque d'opportunité
+
+step: Ses points de vie passent sous 60, ou un allié essentiel risque de tomber
+  do: Utiliser guérison suprême sur lui-même ou sur cet allié au toucher, si l'utilisation reste disponible
+  note: Le soin rend 120 pv ; ne pas attendre d'être à portée d'une seule attaque mortelle. Employer soins importants pour des blessures moins graves, de préférence à couvert
+
+## Repli
+
+step: Points de vie sous 30, guérison suprême déjà dépensée, et combat devenu défavorable
+  do: Se dégager, puis utiliser changement de plan vers un plan bon pour se mettre à l'abri
+  note: Ce pouvoir est à volonté ; ce n'est pas une téléportation précise vers un point du même plan. Des compagnons consentants peuvent l'accompagner s'ils se tiennent par la main
+
+step: Il doit d'abord couvrir une évacuation ou ne peut pas encore changer de plan
+  do: Créer une nappe de brouillard pour couper les lignes de vue, puis gagner un abri en vol ; employer l'invisibilité sur lui-même lors d'un round ultérieur si nécessaire
+  note: Il ne voit pas à travers son propre brouillard ; l'invisibilité ne dissimule pas automatiquement ses alliés
+
+step: Il est hors de danger
+  do: Dépenser les soins importants restants et employer restauration suprême si nécessaire avant toute reprise du combat

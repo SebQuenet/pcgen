@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Araignée astrale de grande taille, Extérieur neutre du plan Astral, FP 8. Prédateur instinctif : 104 pv, CA 22, initiative +7.
+  Attaque à outrance : quatre pattes +15 (1d6+5 chacune) et morsure +15 (1d8+5 plus poison). Allonge de 1,50 m ; espace occupé de 3 m.
+  Marche et escalade à 12 m ; vision dans le noir et perception des vibrations à 18 m ; Perception +25.
+
+resource: Toile | fréquence non précisée | attaque à distance +13 ; DD 23 ; 16 pv
+
+step: Des toiles sont déjà présentes et offrent une cachette
+  do: Se dissimuler dans les toiles et attendre qu'une proie approche
+  note: Discrétion +21 dans les toiles, +17 ailleurs ; utiliser les supports accessibles avec Escalade +25
+
+step: Une créature se déplace sur la même surface qu'elle
+  do: Exploiter la perception des vibrations à 18 m pour repérer son approche
+
+## Ouverture
+
+step: Une proie est à portée du jet de toile, mais hors de portée de mêlée
+  do: Lancer une toile à +13 pour l'entraver, puis se rapprocher si le terrain le permet
+  note: Privilégier une proie isolée, qu'elle pourra atteindre sans traverser les autres adversaires
+
+step: Une proie est déjà à 1,50 m et aucun déplacement n'est nécessaire
+  do: Effectuer une attaque à outrance : quatre pattes +15 et une morsure +15
+  note: Concentrer les cinq attaques sur la même proie
+
+step: Elle doit se déplacer de plus de 1,50 m pour atteindre une proie
+  do: Avancer de 12 m au maximum, puis porter une morsure +15 (1d8+5 plus poison) si la proie est à portée
+  note: Ce déplacement ne permet pas d'effectuer l'attaque à outrance ce round
+
+## Rounds suivants
+
+step: La proie reste à portée de mêlée
+  do: Répéter l'attaque à outrance sur elle jusqu'à la mettre hors de combat
+  note: Le profil mentionne un poison, sans en préciser le DD ni les effets
+
+step: La proie est à 3 m et une attaque à outrance est possible
+  do: Utiliser Fente pour porter les quatre attaques de pattes et la morsure avec une allonge de 3 m
+  note: Cette allonge ne vaut que pendant son tour ; sa CA passe à 20 jusqu'au début de son prochain tour
+
+step: Ses attaques touchent facilement la proie
+  do: Utiliser Attaque en puissance : pattes +12 (1d6+11 chacune), morsure +12 (1d8+11 plus poison)
+  note: Revenir aux attaques normales si les coups manquent trop souvent
+
+step: Une proie s'éloigne et reste à portée du jet de toile
+  do: Tenter de l'entraver avec une nouvelle toile si cette attaque est encore disponible
+  note: Utiliser ensuite l'escalade pour retrouver une position favorable, en tenant compte des attaques d'opportunité provoquées par ses déplacements
+
+## Repli
+
+step: Ses points de vie tombent à 26 ou moins et la proie résiste encore
+  do: Chercher à rompre le combat, puis grimper vers un passage difficile d'accès à 12 m par déplacement
+  note: Si elle est menacée au contact, utiliser le retrait pour quitter la première case sans provoquer d'attaque d'opportunité ; chercher ensuite un couvert où se dissimuler

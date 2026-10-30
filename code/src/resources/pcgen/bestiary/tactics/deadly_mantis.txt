@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Vermine colossale et solitaire des jungles tropicales de l'île de Médiogalti, guidée par l'instinct ; 152 pv, CA 25, immunité aux effets mentaux.
+  Deux griffes +17 (2d8+13 et étreinte), allonge de 9 m ; morsure +17 (4d6+13), allonge de 3 m. Lutte +37.
+  Déplacement de 18 m ; espace occupé de 9 m. Vision dans le noir à 18 m, Perception +4, Escalade +17.
+
+step: Une proie approche sans l'avoir encore attaquée
+  do: Attendre qu'elle entre à portée des griffes, à 9 m ou moins
+  note: Son absence d'intelligence exclut les plans complexes et la coordination ; elle chasse seule.
+
+## Ouverture
+
+step: Une proie est à plus de 9 m
+  do: Avancer jusqu'à 18 m vers elle ; si elle se trouve ensuite à 9 m ou moins, porter une attaque de griffe +17 (2d8+13)
+  note: Après ce déplacement, elle ne dispose pas d'une attaque à outrance.
+
+step: Une proie est déjà à 9 m ou moins, sans déplacement nécessaire
+  do: Attaquer à outrance avec les deux griffes +17 (2d8+13 chacune) ; ajouter la morsure +17 (4d6+13) si la cible est à 3 m ou moins
+
+step: Une griffe touche une créature de taille Gigantesque ou inférieure
+  do: Tenter immédiatement l'étreinte par un test de lutte à +37, en action libre, sans attaque d'opportunité
+  note: Une étreinte réussie saisit la proie ; elle n'inflige aucun dégât supplémentaire immédiat et ne permet pas de l'avaler.
+
+## Rounds suivants
+
+step: Une proie est déjà agrippée
+  do: Consacrer l'action simple au maintien de la lutte à +37, avec le bonus de +5 si la prise a été conservée depuis le round précédent ; sur une réussite, infliger les dégâts d'une griffe, soit 2d8+13
+  note: Privilégier cette proie tant qu'elle résiste ; le maintien de la lutte ne se cumule pas avec une attaque à outrance pendant le même round.
+
+step: La proie s'est libérée mais reste à portée
+  do: Reprendre les attaques à outrance avec les griffes et, à 3 m ou moins, la morsure ; retenter l'étreinte sur une griffe qui touche
+
+step: Un adversaire traverse son allonge en se déplaçant à découvert
+  do: Porter une attaque d'opportunité de griffe +17 si son déplacement en provoque une, puis tenter l'étreinte en cas de coup au but
+  note: Sans don accordant des attaques d'opportunité supplémentaires, elle n'en dispose que d'une par round.
+
+step: Les adversaires restent hors de portée
+  do: Poursuivre au sol à 18 m par déplacement et chercher à retrouver la portée des griffes
+  note: Elle ne possède ni attaque à distance ni vitesse de vol ; son bonus d'Escalade de +17 ne lui donne pas une vitesse d'escalade.
+
+## Repli
+
+step: À 38 pv ou moins, une voie de fuite reste accessible
+  do: Relâcher une éventuelle proie en action libre, puis utiliser une action de retraite pour s'éloigner jusqu'à 36 m dans la jungle
+  note: Ce seuil est un choix de conduite pour le meneur ; aucun pouvoir de fuite ni comportement de repli obligatoire n'est indiqué dans le profil.
+
+step: Toute fuite est impossible
+  do: Continuer à saisir et lacérer la proie la plus proche

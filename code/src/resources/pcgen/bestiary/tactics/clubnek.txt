@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Clubnek, bête magique de taille M et d'intelligence animale, vivant dans les forêts tempérées en bandes de 2 à 8 individus. Il compte sur sa vitesse et ses attaques naturelles au contact.
+  19 pv ; CA 14 ; déplacement 12 m ; allonge 1,50 m. Bec +5 (1d4+2) et deux griffes +5 (1d4+2 chacune).
+  Perception +7, Discrétion +5 ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Pointe de vitesse | Une fois tous les 5 rounds | Permet une charge jusqu'à 60 m ; ne s'applique pas aux autres déplacements.
+
+step: Une proie ou une menace approche
+  do: La repérer avec Perception +7 ; utiliser le couvert forestier pour s'approcher discrètement avec Discrétion +5.
+  note: Privilégier une cible accessible ; les arbres et les broussailles peuvent empêcher une charge.
+
+## Ouverture
+
+note: Charge
+  Une charge exige au moins 3 m de déplacement en ligne droite sur un trajet dégagé, sans terrain difficile. Elle donne +2 à l'attaque et impose -2 à la CA jusqu'au début du prochain tour : attaque +7, CA 12.
+  Le clubnek ne porte qu'une attaque à la fin d'une charge ; il ne dispose pas de bond lui permettant d'enchaîner ses trois attaques.
+
+step: Cible à plus de 24 m et jusqu'à 60 m, pointe de vitesse disponible et charge possible
+  do: Utiliser la pointe de vitesse pour charger et frapper d'un coup de bec +7 (1d4+2).
+  note: Compter 5 rounds entre deux utilisations ; une utilisation au round 1 redevient disponible au round 6.
+
+step: Cible entre 3 m et 24 m, charge possible
+  do: Charger et porter un coup de bec +7 (1d4+2), en conservant la pointe de vitesse.
+
+step: Cible déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance : bec +5 et deux griffes +5, chaque attaque infligeant 1d4+2 dégâts.
+
+step: Aucune charge possible et cible hors de portée
+  do: Contourner les obstacles avec son déplacement de 12 m ; porter une seule attaque de bec +5 (1d4+2) s'il atteint le contact avec une action simple encore disponible.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Privilégier l'attaque à outrance : bec +5 et deux griffes +5, pour 1d4+2 dégâts par attaque réussie.
+  note: Si un pas de placement de 1,50 m suffit pour rester à portée, il peut le faire et conserver ses trois attaques.
+
+step: Un autre clubnek combat la même cible
+  do: Profiter d'un placement sur deux côtés opposés pour prendre la cible en tenaille.
+  note: Si la tenaille est établie, le bonus de +2 porte le bec et les griffes à +7 contre cette cible.
+
+step: La cible s'éloigne
+  do: Reprendre la poursuite ; charger si le trajet le permet, en utilisant la pointe de vitesse seulement lorsqu'elle est disponible et que la distance le justifie.
+  note: Sans charge, un déplacement suivi d'une attaque ne permet qu'un seul coup ; deux déplacements permettent de parcourir jusqu'à 24 m sans attaquer.
+
+## Repli
+
+step: Points de vie à 6 ou moins
+  do: Rompre le contact par un retrait jusqu'à 24 m et gagner le couvert des arbres.
+  note: Le retrait protège seulement la sortie de sa case de départ contre les attaques d'opportunité des adversaires visibles ; éviter de traverser leurs autres cases menacées.
+
+step: Hors du contact et voie de fuite rectiligne dégagée
+  do: Courir jusqu'à 60 m par round grâce au don Course, puis se dissimuler dès que le terrain le permet.
+  note: Cette course ne consomme pas la pointe de vitesse et ne permet pas d'attaquer.

@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Golem béhémoth, créature artificielle colossale neutre, FP 17 : un mammouth de pierre portant un château. Sans intelligence, il exécute les ordres reçus.
+  Encorne +31 (4d8+16) et 2 coups +31 (3d6+16) ; 206 pv, CA 31, RD 15/adamantium ; immunités des créatures artificielles et immunité à la magie.
+  Déplacement de 9 m ; espace occupé de 9 m et allonge de 9 m ; vision dans le noir à 18 m et vision nocturne.
+
+step: Il garde un passage ou un objectif sur ordre
+  do: Rester au poste assigné et frapper les intrus désignés dès qu'ils entrent dans son allonge de 9 m
+  note: prévoir des consignes simples ; il ne conçoit pas de ruse et ne choisit pas seul une stratégie complexe
+
+note: Château dorsal
+  Il accueille jusqu'à huit créatures de taille M. Escalade DD 25 pour y monter, DD 10 si le golem coopère.
+  L'intérieur offre un abri total mais empêche d'attaquer dehors ; les parapets donnent un abri partiel. Un occupant ne peut être engagé en mêlée que depuis le château.
+
+## Ouverture
+
+step: Un intrus désigné se trouve à 9 m ou moins
+  do: Attaque à outrance : encorne +31 (4d8+16), puis 2 coups +31 (3d6+16)
+
+step: L'intrus se trouve à plus de 9 m, mais à 18 m ou moins
+  do: Avancer de 9 m au maximum pour le mettre à portée, puis porter une encorne +31 (4d8+16)
+  note: après ce déplacement, il ne porte qu'une attaque
+
+step: L'intrus se trouve au-delà de 18 m et les ordres autorisent la poursuite
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour se rapprocher
+  note: il ne porte aucune attaque ce round
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter l'attaque à outrance sur elle : encorne +31 (4d8+16) et 2 coups +31 (3d6+16)
+  note: un pas de placement de 1,50 m permet de se repositionner sans perdre l'attaque à outrance
+
+step: Une cible provoque une attaque d'opportunité dans son allonge de 9 m
+  do: Porter une encorne +31 (4d8+16)
+  note: une seule attaque d'opportunité par round
+
+step: Des intrus occupent son château
+  do: Consacrer une action complexe à les secouer ; effectuer un test de BMO à +47, dont le résultat fixe le DD de Réflexes
+  note: sur un échec, un occupant des parapets chute dans la case libre la plus proche et subit 5d6 dégâts, ou 6d6 depuis le parapet supérieur ; à l'intérieur, les occupants subissent 10d6 dégâts contondants, Réflexes au même DD pour réduire de moitié
+
+note: Magie et résistance
+  L'immunité bloque les sorts et pouvoirs magiques autorisant la résistance à la magie. Pierre en chair supprime sa RD pendant 1 round ; transmutation de la pierre en boue le ralentit pendant 1d4 rounds, sans sauvegarde.
+  Les attaques magiques acides lui rendent 1 pv par tranche de 3 dégâts prévus ; l'excédent devient des pv temporaires.
+
+step: La cible quitte son allonge
+  do: La rejoindre à 9 m par déplacement, puis porter une encorne si elle est à portée et si la poursuite respecte les ordres
+  note: contre une cible inaccessible en hauteur, il reste soumis à son allonge ; il ne dispose d'aucune attaque à distance
+
+## Repli
+
+step: Ses points de vie diminuent, sans nouvel ordre
+  do: Continuer à exécuter la consigne de combat jusqu'à sa destruction à 0 pv
+  note: aucun seuil de fuite instinctive pour ce golem sans intelligence
+
+step: Son maître lui ordonne de se retirer
+  do: Rejoindre le point prescrit à 9 m par déplacement, ou 18 m en double déplacement

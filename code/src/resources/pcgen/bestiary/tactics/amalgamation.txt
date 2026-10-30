@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Amalgamation, construction gigantesque et neutre, sans intelligence, formée d'un tourbillon d'objets et destinée à garder un trésor souterrain.
+  225 pv ; CA 25 ; réduction des dégâts 10/– ; immunité à la magie et traits des créatures artificielles.
+  Armes de mêlée +33, armes à distance +35, dégâts selon l'arme ; attaques multiples ; attaque de nuée (10d6) ; utilisation d'objets.
+  Vol à 15 m par déplacement, manœuvrabilité parfaite ; marche à 3 m ; espace occupé de 6 m et allonge de 4,50 m.
+
+note: Repérage
+  Vision aveugle à 30 m, vision dans le noir à 18 m et vision nocturne ; Perception +5, initiative +9.
+  Employer la vision aveugle pour repérer les intrus à proximité, même sans éclairage.
+
+resource: Objets utilisables | Selon l'inventaire | Armes et objets effectivement présents ; charges et consommables selon leurs propres réserves.
+
+note: Capacités non détaillées
+  Le profil ne précise pas le nombre ni l'économie d'actions des attaques multiples, ni les modalités de l'attaque de nuée. Ne pas inventer de nombre d'attaques, de zone ou de DD.
+
+step: Avant l'arrivée des intrus
+  do: Rester près du trésor ou du passage à garder, dans un espace permettant le déplacement de son corps de 6 m.
+  note: Fixer les armes et objets disponibles avant le combat ; aucun objet particulier n'est garanti par ce profil.
+
+## Ouverture
+
+step: Un intrus entre dans la zone défendue
+  do: S'interposer en volant, jusqu'à 15 m avec un déplacement, pour le mettre à portée de son allonge de 4,50 m.
+  note: Préférer le vol à sa marche de 3 m ; ne pas lui attribuer d'attaque en passant.
+
+step: Une cible est à portée de mêlée
+  do: L'attaquer avec une arme disponible à +33 ; appliquer les dégâts de cette arme.
+
+step: Une cible reste hors de portée et une arme à distance est disponible
+  do: Tirer ou lancer avec cette arme à +35, en respectant sa portée et ses munitions.
+
+## Rounds suivants
+
+step: Des ennemis restent à portée
+  do: Employer les attaques multiples avec les armes et objets disponibles, selon les modalités de cette capacité.
+  note: Maintenir la pression sur les intrus qui tentent de franchir la position gardée.
+
+step: Les conditions de l'attaque de nuée sont réunies
+  do: Employer l'attaque de nuée pour infliger 10d6 dégâts, selon ses modalités officielles.
+  note: Ce profil ne donne aucun DD ; ne pas ajouter de distraction, de poison ou d'autres propriétés de nuée.
+
+step: Les adversaires quittent sa portée
+  do: Se replacer en volant à 15 m par déplacement pour ramener un intrus à 4,50 m ou employer une arme à distance disponible.
+
+step: Un objet utilisable convient à la situation
+  do: L'employer selon son effet réel et décompter ses charges ou consommables.
+  note: Aucun sort, soin ou effet supplémentaire ne découle du seul pouvoir d'utilisation d'objets.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à défendre sa position jusqu'à sa destruction à 0 pv.
+  note: Sans intelligence, il ne décide pas d'une retraite de survie à un seuil de points de vie.
+
+step: Une consigne de repli a été fixée à cette construction
+  do: L'exécuter en volant à 15 m par déplacement vers la position prévue.

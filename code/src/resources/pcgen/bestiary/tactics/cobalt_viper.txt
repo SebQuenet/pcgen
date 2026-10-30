@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Vipère de cobalt, créature magique extraplanaire de taille M, d'intelligence animale. 42 pv, CA 18, initiative +7.
+  Morsure +9 à 1,50 m (1d8+1 et poison) ; aura de poison dans un rayon de 3 m, DD 17.
+  Déplacement au sol de 9 m, escalade et nage de 6 m ; Discrétion +11, Perception +11, odorat, vision nocturne et vision dans le noir à 18 m.
+
+note: Poison
+  Le bloc ne précise pas les effets des poisons, leur fréquence ni leur durée. Le DD 17 est indiqué pour l'aura ; aucun DD distinct n'est fourni pour le poison de la morsure.
+
+step: Une présence approche
+  do: La repérer avec ses sens et rester à couvert, en utilisant Discrétion +11 si elle peut se dissimuler
+  note: Ses décisions restent simples : approcher une proie accessible, mordre et fuir le danger.
+
+## Ouverture
+
+step: Une cible est à portée de morsure
+  do: Mordre à +9, pour 1d8+1 dégâts et poison
+  note: À cette distance, la cible se trouve aussi dans le rayon de 3 m de l'aura de poison, DD 17.
+
+step: La cible est hors de portée
+  do: Avancer vers la cible la plus accessible ; mordre si un déplacement simple permet d'arriver à 1,50 m
+  note: Compter 9 m au sol ou 6 m en escalade ou à la nage pour un déplacement simple. Elle ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: La proie reste au contact
+  do: Répéter la morsure chaque round et rester assez près pour la maintenir dans le rayon de l'aura
+  note: Ne pas attribuer à l'aura de dégâts, de fréquence ou d'effet cumulatif absents du bloc.
+
+step: La proie s'éloigne et la vipère peut encore combattre
+  do: La suivre par le chemin le plus direct et reprendre les morsures dès qu'elle revient à portée
+  note: Utiliser l'escalade ou la nage si le terrain ouvre un accès plus facile.
+
+## Repli
+
+step: Points de vie sous 14 et une issue est accessible
+  do: Faire une retraite vers un abri ; grimper ou nager si cela complique la poursuite
+
+step: Acculée sans issue
+  do: Mordre l'adversaire qui bloque le passage et fuir dès qu'une ouverture apparaît

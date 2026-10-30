@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Créature artificielle de l'air de taille TG, sans intelligence, neutre et solitaire ; 205 pv, CA 30.
+  Deux coups +36, chacun infligeant 2d6+8 dégâts ; allonge et espace occupé de 4,50 m. Vol parfait à 30 m par round.
+  Souffle de vent dans un rayon de 9 m : 2d6+12 dégâts contondants, Réflexes DD 25 pour réduire de moitié.
+
+note: Défenses
+  Réduction des dégâts 10/adamantium ; immunité à la magie et immunités des créatures artificielles et des élémentaires.
+  Maîtrise de l'air et forme insubstantielle figurent parmi ses défenses ; aucun effet chiffré supplémentaire n'est précisé ici.
+  Vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+resource: Souffle de vent | Réutilisable tous les 1d4 rounds | Rayon de 9 m ; 2d6+12 dégâts contondants ; Réflexes DD 25, moitié
+
+step: Des consignes de garde lui ont été données
+  do: Occuper le passage ou le point désigné, en volant si nécessaire, et appliquer ces consignes dès qu'un intrus est repéré.
+  note: Son absence d'intelligence limite son comportement à des réactions simples ; ne pas lui prêter de ruses élaborées.
+
+## Ouverture
+
+step: Plusieurs adversaires sont dans un rayon de 9 m et le souffle est disponible
+  do: Déclencher le souffle de vent pour les toucher ensemble : 2d6+12 dégâts contondants, Réflexes DD 25 pour réduire de moitié.
+  note: Lancer 1d4 pour déterminer le délai avant la prochaine utilisation ; aucun recul ni renversement n'est indiqué.
+
+step: Aucun adversaire n'est à portée de ses coups et le souffle n'est pas employé
+  do: Voler jusqu'à 30 m pour amener un adversaire à 4,50 m ou moins, puis porter un seul coup +36, pour 2d6+8 dégâts.
+  note: Si ce déplacement ne suffit pas, consacrer le round à l'approche ; un double déplacement en vol permet de parcourir jusqu'à 60 m.
+
+step: Un adversaire est déjà à 4,50 m ou moins et le souffle n'est pas employé
+  do: Faire une attaque à outrance : deux coups +36, chacun pour 2d6+8 dégâts.
+
+## Rounds suivants
+
+step: Le souffle est de nouveau disponible et plusieurs adversaires sont à 9 m ou moins
+  do: Employer de nouveau le souffle de vent, puis relancer le délai de 1d4 rounds.
+  note: Le souffle ne s'ajoute pas à une attaque à outrance dans le même round.
+
+step: Une cible reste à portée et le souffle n'est pas employé
+  do: Rester sur place et répéter les deux coups +36, chacun pour 2d6+8 dégâts.
+  note: Son allonge permet de frapper à 4,50 m sans devoir venir au contact immédiat.
+
+step: La cible quitte sa portée ou prend de l'altitude
+  do: La suivre en vol, dans les limites de ses consignes ; après un déplacement, porter un seul coup si elle est de nouveau à portée.
+
+step: Un déplacement ennemi provoque une attaque d'opportunité dans sa zone menacée
+  do: Porter un coup +36, pour 2d6+8 dégâts, si son attaque d'opportunité du round est encore disponible.
+
+## Repli
+
+step: Aucune consigne ne prévoit de retraite
+  do: Continuer à remplir sa tâche jusqu'à sa destruction à 0 pv.
+  note: Ne pas déclencher de fuite spontanée à un seuil de blessures ; cette créature sans intelligence ne raisonne pas en termes de survie.
+
+step: Une consigne lui impose de se retirer
+  do: Rompre l'engagement en vol vers le point prévu ; utiliser le désengagement si nécessaire, jusqu'à 60 m en terrain aérien dégagé.
+  note: Le désengagement protège du départ de la case initiale, mais pas d'une traversée ultérieure d'autres cases menacées.

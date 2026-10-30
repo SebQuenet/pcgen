@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Molosse de taille G, animal neutre d'Intelligence 2 ; FP 3, 42 pv, CA 15. Il combat par morsures et cherche à renverser sa proie.
+  Morsure +7 (1d8+6 et croc-en-jambe) ; vitesse 15 m ; espace occupé 3 m, allonge 1,50 m.
+  Vision nocturne, odorat et Perception +9 ; Survie +6 pour suivre une piste à l'odorat.
+
+step: Une proie est proche mais cachée
+  do: La chercher à l'odorat et à l'ouïe, puis suivre sa piste pour l'approcher.
+  note: L'odorat aide à localiser une proie ; il ne permet pas de la voir à travers un obstacle.
+
+## Ouverture
+
+step: Une proie est accessible par une trajectoire de charge dégagée
+  do: Charger sur une distance maximale de 30 m et mordre, puis tenter le croc-en-jambe si la morsure touche.
+  note: La charge donne +2 à l'attaque et impose -2 à la CA jusqu'au prochain tour.
+
+step: La charge est impossible mais une proie est à portée après un déplacement
+  do: Avancer de 15 m au maximum, puis mordre à 1,50 m si possible.
+
+## Rounds suivants
+
+step: Une proie reste au contact
+  do: Mordre à +7 pour 1d8+6 dégâts ; après une morsure réussie, tenter le croc-en-jambe.
+  note: Le croc-en-jambe sert à mettre la cible à terre ; la morsure ne la renverse pas automatiquement.
+
+step: Une proie est à terre ou particulièrement facile à toucher
+  do: Employer Attaque en puissance pour mordre à +6 et infliger 1d8+9 dégâts, avant les autres modificateurs de situation.
+  note: Continuer à mordre la proie renversée tant qu'elle reste à portée.
+
+step: Plusieurs mastiffs attaquent la même proie
+  do: L'encercler et chercher la prise en tenaille lorsque le terrain le permet.
+  note: Les autres mastiffs peuvent profiter d'une cible mise à terre par une morsure.
+
+step: La proie s'éloigne
+  do: La poursuivre à 15 m par déplacement et reprendre les morsures dès qu'elle revient à portée.
+
+## Repli
+
+step: Points de vie à 10 ou moins et voie de fuite accessible
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 30 m vers un passage libre.
+
+step: Acculé sans issue
+  do: Continuer à mordre l'adversaire qui bloque la fuite et tenter de le renverser.

@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Gremlin erinat, fée chaotique mauvaise de taille TP, qui cherche à provoquer des bagarres plutôt qu'à livrer un duel loyal.
+  Chaîne cloutée +6 (1d4+3), allonge de 1,50 m pendant son tour ; il ne menace pas les cases adjacentes hors de son tour. Déplacement de 9 m ; 19 PV, CA 15, réduction des dégâts 5/fer froid et résistance à la magie 13.
+  Ses principaux atouts sont la Discrétion +20, le Bluff +8 et les pouvoirs qui retournent les adversaires les uns contre les autres.
+
+resource: Modification d'apparence | à volonté | uniquement un enfant humanoïde de taille P
+resource: Son imaginaire | à volonté | Volonté DD 12 pour reconnaître l'illusion en cas d'interaction
+resource: Confusion partielle | 1/jour | Volonté DD 13 ; une créature vivante, pendant 1 round
+resource: Ordre meurtrier | 1/jour | Volonté DD 13 ; une créature vivante, pendant 1 round
+resource: Rage | 1/jour | une créature vivante consentante ; concentration, puis 3 rounds
+
+note: Aura discordante
+  Dans un rayon de 6 m, les créatures subissent un malus de -2 aux sauvegardes contre les compulsions ; les tests de Bluff dirigés contre elles gagnent +5.
+  Les DD des pouvoirs restent ceux indiqués ; appliquer le malus à la sauvegarde de la victime.
+
+step: Il peut préparer la rencontre en milieu habité
+  do: Prendre l'apparence d'un enfant négligé et lancer de fausses accusations pour dresser les passants les uns contre les autres
+  note: Son imaginaire ajoute des bruits de dispute ou de pas ; prévoir une issue et des endroits où se cacher.
+
+step: Une attaque à la chaîne devient probable
+  do: Reprendre sa forme naturelle avant l'affrontement, si possible à couvert
+  note: Les valeurs d'attaque du profil correspondent à cette forme.
+
+## Ouverture
+
+step: Un combattant ennemi se trouve près d'un de ses alliés
+  do: Se placer à moins de 6 m de la cible en restant hors de sa portée de mêlée, puis employer ordre meurtrier
+  note: Sur un échec à Volonté DD 13, la victime attaque son allié le plus proche à son prochain tour ; elle se déplace vers lui si nécessaire.
+
+step: Un adversaire est déjà à 1,50 m et le gremlin est sous sa forme naturelle
+  do: Frapper à la chaîne cloutée +6 (1d4+3), puis chercher une position moins exposée
+  note: Éviter de se laisser entourer ; son allonge ne lui donne pas d'attaques d'opportunité contre les cases adjacentes.
+
+## Rounds suivants
+
+step: Ordre meurtrier est dépensé et un adversaire menace de bloquer la fuite
+  do: Employer confusion partielle sur cet adversaire, de préférence dans l'aura de 6 m
+  note: Volonté DD 13 ; ses actions deviennent aléatoires pendant 1 round. Une attaque contre ses alliés n'est pas garantie.
+
+step: Un autre erinat a dépensé ses pouvoirs et doit combattre au contact
+  do: Lui accorder rage, puis profiter du combat pour rester à l'écart
+  note: Le bénéficiaire reçoit +2 en Force et Constitution, +1 aux sauvegardes de Volonté et -2 à la CA ; il ne peut plus utiliser ses pouvoirs magiques pendant la rage.
+
+step: Une cible isolée reste accessible à 1,50 m
+  do: Attaquer à la chaîne ; réserver Attaque en puissance aux adversaires faciles à toucher
+  note: Attaque en puissance impose -1 au jet d'attaque et ajoute +3 aux dégâts de cette arme tenue à deux mains.
+
+step: Les adversaires se battent entre eux
+  do: Rester à couvert, entretenir la querelle par le Bluff et laisser les autres prendre les coups
+
+## Repli
+
+step: Points de vie sous 7, ou un adversaire au fer froid le prend pour cible
+  do: Se retirer jusqu'à 18 m par round vers l'issue préparée, puis se cacher dès qu'un couvert le permet
+  note: Discrétion +20 ; employer Acrobaties +9 si un passage menacé doit être franchi. La réduction des dégâts ne protège pas contre le fer froid.
+
+step: Il a rompu la ligne de vue de ses poursuivants
+  do: Reprendre l'apparence d'un enfant pour se mêler aux habitants, ou rester caché dans un abri adapté à sa petite taille

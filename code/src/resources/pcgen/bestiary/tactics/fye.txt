@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Fye, mort-vivant intangible de taille M, neutre et solitaire ; 30 pv, CA 15, vol à 15 m par déplacement, manœuvrabilité parfaite ; vision dans le noir à 18 m.
+  Toucher intangible +5 (1d6 plus possession), allonge 1,50 m ; aura de désespoir à 3 m (DD 15). Ses pouvoirs magiques affaiblissent ou dispersent les adversaires avant le contact.
+
+resource: Détection des pensées | À volonté | DD 15, NLS 4
+resource: Frayeur | 3/jour | DD 14, NLS 4
+resource: Débilité | 1/jour | DD 18, NLS 4
+
+step: Des intrus approchent sans avoir engagé le combat
+  do: Utiliser détection des pensées depuis une position abritée pour repérer les présences et recueillir les pensées accessibles
+  note: Le pouvoir demande du temps et de la concentration ; ne pas traiter une simple activation comme une lecture immédiate de toutes les pensées
+
+## Ouverture
+
+step: Un lanceur de sorts est identifiable et débilité est disponible
+  do: Lui lancer débilité (DD 18), puis utiliser le déplacement pour se rapprocher d'une cible isolée
+  note: Choisir cette ouverture avant de chercher le contact ; le toucher attend le tour suivant
+
+step: Aucun lanceur de sorts n'est identifiable et plusieurs adversaires se soutiennent
+  do: Lancer frayeur (DD 14) sur un adversaire susceptible d'être affecté pour désorganiser le groupe, puis se rapprocher d'une cible restée seule
+  note: Frayeur n'affecte que les créatures de 5 DV ou moins
+
+step: Une cible est déjà à portée et aucun pouvoir prioritaire n'est nécessaire
+  do: Porter un toucher intangible +5 (1d6 plus possession)
+  note: À cette distance, la cible est aussi dans l'aura de désespoir de 3 m (DD 15)
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Répéter le toucher intangible +5 (1d6 plus possession), en privilégiant une cible isolée
+  note: Le bloc ne détaille pas la possession ; aucun DD, durée ou effet de contrôle supplémentaire n'est fourni
+
+step: Plusieurs adversaires convergent vers lui
+  do: Employer frayeur (DD 14) sur une cible admissible pour réduire la pression, puis se déplacer en vol vers une position moins exposée
+  note: Chaque utilisation de frayeur remplace le toucher de ce tour ; conserver le compte des trois utilisations quotidiennes
+
+step: Un lanceur de sorts devient identifiable et débilité n'a pas encore été utilisée
+  do: Lui lancer débilité (DD 18) avant de reprendre les attaques au toucher au tour suivant
+
+step: Un adversaire se sépare du groupe
+  do: Utiliser le vol à 15 m pour l'approcher et le toucher si une action d'attaque reste disponible
+  note: Profiter de la manœuvrabilité parfaite pour choisir l'approche ; rester à 3 m ou moins expose l'adversaire à l'aura de désespoir
+
+## Repli
+
+step: Points de vie sous 10 ou impossibilité de poursuivre le contact sans subir plusieurs attaques
+  do: Rompre le contact et fuir en vol, à 15 m par déplacement, en recherchant un obstacle qui coupe la ligne de vue
+  note: Si une frayeur reste disponible et qu'un poursuivant peut en être affecté, l'utiliser pour faciliter le décrochage

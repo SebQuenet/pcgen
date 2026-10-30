@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Bloody Bones, mort-vivant de taille M, neutre mauvais et intelligent, qui privilégie l'embuscade et les victimes isolées. 133 pv, CA 24, réduction des dégâts 10/contondant, résistance à la canalisation +2.
+  Morsure +18 et deux griffes +18 : chaque attaque inflige 1d8+8 et un saignement ; les griffes menacent un critique sur 19-20. Déplacement de 9 m, allonge de 1,50 m ; vision dans le noir à 18 m et perception de la vie.
+
+resource: Porte dimensionnelle | à volonté | action simple ; uniquement via des surfaces réfléchissantes ; portée maximale de 240 m au NLS 10 ; aucune autre action avant son prochain tour après utilisation
+resource: Blessure modérée de groupe | 3/jour | action simple ; portée 15 m ; jusqu'à 10 cibles, toutes à 9 m au plus les unes des autres ; 2d8+10 dégâts aux vivants, Volonté DD 21 pour réduire de moitié ; soigne les morts-vivants ciblés
+
+step: Il peut préparer le terrain
+  do: Repérer les surfaces réfléchissantes utilisables pour approcher et fuir ; attendre caché près d'un passage emprunté par les intrus
+  note: Discrétion +25 et capacité de se cacher à la vue de tous ; Perception +20 et perception de la vie pour surveiller l'approche des victimes
+
+## Ouverture
+
+step: Plusieurs adversaires vivants sont regroupés à 15 m ou moins, hors de son allonge
+  do: Utiliser blessure modérée de groupe sur les ennemis accessibles
+  note: Choisir les cibles ; éviter de soigner un mort-vivant ennemi. Garder si possible une utilisation pour se soigner plus tard
+
+step: Une victime isolée est accessible en un déplacement de 9 m
+  do: S'approcher et porter une seule attaque de griffe +18, pour 1d8+8 et saignement
+  note: Après ce déplacement, il ne dispose pas de son attaque à outrance
+
+step: Une victime est déjà à 1,50 m et il dispose d'un tour complet
+  do: Attaque à outrance : morsure et deux griffes, toutes à +18, chacune pour 1d8+8 et saignement
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Concentrer morsure et griffes sur elle ; effectuer au besoin un pas de 1,50 m pour conserver l'attaque à outrance
+  note: Privilégier une cible vulnérable ou un adversaire capable de contourner sa réduction des dégâts avec une arme contondante
+
+step: La cible a une défense assez faible pour accepter une baisse de précision
+  do: Activer Attaque en puissance avant les attaques : morsure et griffes passent à +15, chacune pour 1d8+14 et saignement
+
+step: Une cible se trouve à 3 m et il peut attaquer sans se déplacer
+  do: Utiliser Fente avant ses attaques pour porter son allonge à 3 m jusqu'à la fin de son tour et effectuer l'attaque à outrance
+  note: Sa CA descend à 22 jusqu'à son prochain tour ; éviter cette option si plusieurs ennemis peuvent riposter
+
+step: Il est blessé et plusieurs vivants sont encore regroupés à portée
+  do: Utiliser blessure modérée de groupe en incluant sa propre personne parmi les cibles
+  note: Il récupère 2d8+10 pv tout en blessant les vivants choisis ; respecter la séparation maximale de 9 m entre toutes les cibles
+
+step: Un adversaire dangereux reste hors de portée des griffes et il économise ses pouvoirs
+  do: Tenter de le démoraliser avec Intimidation +36, en action simple, à 9 m ou moins s'il peut le voir et l'entendre
+  note: DD égal à 10 + dés de vie de la cible + son modificateur de Sagesse ; une réussite rend la cible secouée
+
+note: Saignement
+  Le bloc fourni n'indique pas le montant du saignement : ne pas lui attribuer de valeur supplémentaire ni additionner automatiquement les saignements des trois attaques.
+
+## Repli
+
+step: Ses pv tombent sous 35, ou les ennemis contournent régulièrement sa réduction des dégâts
+  do: Rejoindre une surface réfléchissante et utiliser porte dimensionnelle vers une autre surface connue, à l'écart du combat
+  note: Si un ennemi le menace, se dégager par un pas de 1,50 m lorsque cela suffit avant d'utiliser le pouvoir ; il ne peut plus agir après la téléportation pendant ce tour
+
+step: Au tour suivant, il est à couvert et possède encore une utilisation de blessure modérée de groupe
+  do: Se cibler pour récupérer 2d8+10 pv, puis poursuivre sa fuite si la chasse continue
+  note: Sans surface réfléchissante accessible, se retirer par un déplacement de retraite, jusqu'à 18 m si le terrain le permet

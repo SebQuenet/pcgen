@@ -1,0 +1,107 @@
+## Avant le combat
+
+note: Profil
+  Dantalion, diable loyal mauvais de taille G, FP 24 : stratège résistant qui affaiblit les adversaires par ses pouvoirs avant de les écraser à la masse.
+  356 PV ; CA 40, contact 25, pris au dépourvu 32 ; initiative +12 ; déplacement 12 m ; espace et allonge 3 m.
+  Masse d'armes lourde +4 impie +38/+33/+28/+23, 2d6+19 par coup, plus 2d6 contre les créatures bonnes ; pouvoirs magiques au NLS 23, contact +32, contact à distance +35.
+  RD 15/Bien et argent : il faut réunir les deux propriétés pour la franchir ; RM 35 ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10. Sa Volonté de base est bien +3 : protéger son esprit est prioritaire.
+
+resource: Invocation | 1/jour | soit 1d4 diantrefosses avec 90 % de réussite, soit 1d8+3 diables barbelés avec 100 % de réussite ; une seule tentative, durée 1 heure
+resource: Boule de feu rapide | 3/jour | action rapide, 10d6 de feu, Réflexes DD 21 pour moitié ; boule de feu ordinaire à volonté
+resource: Absorption d'énergie | 3/jour | rayon de contact à distance +35 ; 2d4 niveaux négatifs ; Vigueur DD 27 après 24 heures, aucun jet immédiat
+resource: Nuée de météores | 3/jour | quatre météores ; contact à distance +35 pour les impacts directs ; Réflexes DD 27 pour les explosions
+resource: Métamorphose funeste | 3/jour | Vigueur DD 23 ; puis Volonté DD 23 pour conserver ses facultés mentales
+resource: Colonne de feu | 3/jour | Réflexes DD 23 pour moitié ; la moitié des dégâts échappe aux protections contre le feu
+resource: Image persistante | 3/jour | Volonté DD 23 pour reconnaître l'illusion en interagissant avec elle
+resource: Mise à mal | 1/jour | contact +32 ; 150 dégâts, Volonté DD 24 pour moitié ; laisse au moins 1 PV
+resource: Mot de pouvoir mortel | 1/jour | une créature vivante à 100 PV actuels ou moins, sans sauvegarde ; portée 24 m, RM applicable
+
+step: Il peut observer les intrus avant leur arrivée
+  do: Employer scrutation suprême, puis détection des pensées lors d'une approche assez proche, pour identifier les lanceurs de sorts, les protections visibles et les intentions
+  note: Scrutation suprême : Volonté DD 25 ; détection des pensées : Volonté DD 20 et concentration. Détection de la magie et détection de l'invisibilité sont constantes ; il voit dans les ténèbres, même magiques.
+
+step: Une discussion reste possible avant les hostilités
+  do: Employer charme-monstre de groupe, Volonté DD 26, puis Bluff +36 et Diplomatie +34 pour obtenir un accord ou désamorcer une partie du groupe
+  note: Au plus 46 DV cumulés, ou une seule créature quel que soit son nombre de DV ; cibles espacées de 9 m au maximum. Le charme rend amical ; les demandes restent soumises aux règles du charme. Une cible menacée par Dantalion ou ses alliés gagne +5 au jet.
+
+step: Le combat est imminent et il dispose d'un délai
+  do: Invoquer de préférence les diantrefosses ; choisir les diables barbelés si la certitude de recevoir des renforts prime
+  note: Placer les renforts et les éventuels 4 à 12 diables barbelés de sa troupe entre lui et les assaillants. Donner les consignes par télépathie à 30 m ; les créatures invoquées ne peuvent pas invoquer à leur tour.
+
+step: Les ennemis vont engager le combat dans les prochains rounds
+  do: Activer aura maudite sur lui-même et ses alliés réunis à 6 m au maximum
+  note: Durée 23 rounds ; bonus de parade +4 à la CA, de résistance +4 aux sauvegardes, protection contre certaines influences mentales comme protection contre le Bien. Ces bonus ne se cumulent pas avec ceux de cercle magique contre le Bien.
+  note: Une créature bonne qui touche un bénéficiaire au corps à corps subit 1d6 dégâts de Force, Vigueur DD 26 pour annuler. La RM 25 de l'aura ne s'ajoute pas à sa RM 35.
+
+## Ouverture
+
+note: Choix du premier tour
+  Choisir une action principale selon la situation ; ajouter une boule de feu rapide si une cible vulnérable au feu le justifie. Ne lancer qu'un pouvoir rapide par round.
+
+step: Il a été surpris sans aura maudite
+  do: Activer d'abord aura maudite, puis laisser les diables intercepter les combattants
+  note: Se déplacer derrière leur ligne si nécessaire ; éviter d'offrir son faible jet de Volonté aux lanceurs de sorts adverses.
+
+step: Plusieurs adversaires non mauvais de 23 DV ou moins sont à 12 m
+  do: Employer blasphème, Volonté DD 25, avant de s'engager à la masse
+  note: À 23 DV : hébétement ; à 22 DV ou moins : affaiblissement supplémentaire ; à 18 DV ou moins : paralysie supplémentaire ; à 13 DV ou moins : mort supplémentaire. Une sauvegarde réussie réduit ou annule les effets ; au-delà de 23 DV, aucun effet.
+
+step: Les adversaires restent groupés à distance et sont vulnérables au feu
+  do: Lancer nuée de météores ; concentrer plusieurs météores sur le lanceur de sorts prioritaire tout en recouvrant ses alliés par les explosions
+  note: Chaque impact direct inflige 2d6 contondants et impose -4 au jet contre son explosion ; chaque explosion de rayon 12 m inflige 6d6 de feu, Réflexes DD 27 pour moitié. Les explosions peuvent se chevaucher.
+
+step: Une cible dangereuse dispose de fortes protections magiques
+  do: Employer dissipation suprême ciblée, puis faire concentrer les attaques des diables sur elle
+  note: Test de dissipation à +20, plafond du sort malgré le NLS 23 ; privilégier les protections qui neutralisent ses pouvoirs ou facilitent la poursuite.
+
+## Rounds suivants
+
+step: Un lanceur de sorts vivant reste actif à 24 m ou moins, sans protection contre l'énergie négative
+  do: Lui lancer absorption d'énergie avec le contact à distance +35, puis concentrer les attaques sur cette cible affaiblie
+  note: Les niveaux négatifs pénalisent immédiatement ses jets et réduisent ses PV ; le DD 27 concerne seulement leur disparition après 24 heures.
+
+step: Une cible vulnérable aux effets mentaux semble avoir 200 PV actuels ou moins, à 24 m ou moins
+  do: Employer mot de pouvoir aveuglant à volonté pour gêner ses attaques et ses sorts exigeant de voir leur cible
+  note: Aucun jet de sauvegarde ; RM applicable. Dantalion estime l'état de la cible d'après les blessures observées, sans connaître automatiquement ses PV.
+
+step: Une cible vivante semble réduite à 100 PV actuels ou moins, à 24 m ou moins
+  do: Employer mot de pouvoir mortel, en priorité sur un soigneur ou un lanceur de sorts encore dangereux
+  note: Attendre une cible suffisamment blessée pour engager cette utilisation quotidienne ; tenir compte des protections contre la mort et les effets mentaux.
+
+step: Un adversaire à faible Vigueur demeure dangereux malgré ses protections
+  do: Tenter métamorphose funeste, Vigueur DD 23, pour l'écarter du combat
+  note: Choisir cette option quand l'absorption d'énergie est inadaptée ou épuisée.
+
+step: Un adversaire solide est à portée de contact et une attaque à outrance paraît peu rentable
+  do: Employer mise à mal, contact +32, puis faire achever la cible par les diables
+  note: Volonté DD 24 ; ce pouvoir blesse les vivants et soigne les morts-vivants. Il ne soigne pas Dantalion.
+
+step: Il peut rester sur place avec un adversaire à 3 m ou moins
+  do: Attaque à outrance à la masse, +38/+33/+28/+23, en concentrant les coups sur une seule cible
+  note: Ajouter une boule de feu rapide si disponible. Employer Attaque en puissance surtout contre une CA facile à toucher ; conserver sa précision contre les adversaires très protégés.
+
+step: Il doit se déplacer pour atteindre un adversaire
+  do: Avancer de 12 m au maximum et porter une seule attaque avec Frappe décisive : +38, 4d6+19, plus 2d6 contre une cible bonne
+  note: Frappe décisive accompagne l'action d'attaque simple ; l'attaque à outrance conserve les dégâts ordinaires de l'arme.
+
+step: Les combattants l'encerclent ou accèdent trop facilement à lui
+  do: Employer téléportation suprême pour se replacer derrière ses diables ; à un autre round, poser un mur de feu pour séparer les approches
+  note: Son immunité au feu lui permet de franchir son mur et de recevoir ses propres boules de feu. Une toile d'araignée, Réflexes DD 20, peut retenir une approche entre des points d'ancrage ; le feu brûle la toile.
+
+step: Les protections contre le feu rendent ses explosions peu efficaces
+  do: Préférer colonne de feu pour sa part de dégâts divins, ou éclair à volonté, Réflexes DD 21, sur des cibles alignées
+  note: Ne pas répéter les attaques de feu contre une immunité identifiée ; revenir à la masse, aux dissipations ou aux pouvoirs d'affaiblissement selon les défenses observées.
+
+step: Son aura est dissipée et la pression ennemie lui laisse une action
+  do: Renouveler aura maudite avant de reprendre les attaques
+  note: Au contact d'un adversaire menaçant, employer ses pouvoirs sur la défensive ; Magie de guerre facilite le test de concentration.
+
+## Repli
+
+step: Ses PV passent sous 110, ses renforts sont neutralisés ou une défaite devient probable
+  do: Employer téléportation suprême vers un refuge connu du même plan, pendant que les diables couvrent sa fuite
+  note: Le pouvoir ne transporte que lui-même et une quantité limitée d'objets ; ses alliés doivent se retirer par leurs propres moyens. Il n'a pas besoin de conserver une utilisation, car ce pouvoir est à volonté.
+
+step: Un effet interdit sa téléportation
+  do: Faire écran avec les diables, s'éloigner de 12 m et tenter de dissiper le verrou magique avec dissipation suprême au round approprié
+  note: Exploiter un mur de feu ou une image persistante pour gêner la poursuite quand il dispose d'une action ; retenter la téléportation dès que l'obstacle magique est levé.

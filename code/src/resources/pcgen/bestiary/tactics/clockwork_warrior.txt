@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Guerrier mécanique de taille M, créature artificielle neutre et dénuée d'intelligence ; 42 pv, CA 14. Il combat au contact avec deux coups +8, infligeant chacun 1d6+4 dégâts, avec une allonge de 1,50 m.
+  Déplacement de 6 m ; vision dans le noir à 18 m et vision nocturne. Initiative -2, Perception -1 : il réagit lentement et repère mal les intrus.
+  Il possède les immunités des créatures artificielles, mais aucune attaque à distance ni capacité spéciale indiquée.
+
+step: Une tâche ou un poste de garde lui a été assigné
+  do: Appliquer cette consigne et rester à l'emplacement prévu jusqu'à ce qu'elle impose d'agir.
+  note: Ses actions suivent des instructions simples ; il ne prépare pas seul de ruse ou de stratégie complexe.
+
+## Ouverture
+
+step: Un ennemi est déjà à portée de ses coups
+  do: Effectuer une attaque à outrance : deux coups +8, chacun pour 1d6+4 dégâts.
+
+step: Un ennemi peut être atteint après un déplacement de 6 m au maximum
+  do: Avancer jusqu'au contact et porter un seul coup +8, pour 1d6+4 dégâts.
+  note: Un déplacement ordinaire ne lui permet pas d'utiliser ses deux coups pendant ce tour.
+
+step: Aucun ennemi ne peut être atteint après un déplacement de 6 m
+  do: Si sa consigne exige d'engager l'ennemi, effectuer un double déplacement, jusqu'à 12 m, pour se rapprocher.
+
+## Rounds suivants
+
+step: Sa cible reste à portée, éventuellement après un pas de 1,50 m
+  do: Effectuer une attaque à outrance avec ses deux coups +8, chacun pour 1d6+4 dégâts.
+  note: Conserver le contact lui permet de porter deux attaques par tour.
+
+step: Sa cible s'éloigne au-delà d'un pas de 1,50 m
+  do: La suivre si ses consignes le permettent ; après un déplacement ordinaire de 6 m au maximum, porter un seul coup si elle est à portée.
+  note: S'il doit garder un passage ou un objet, rester au poste plutôt que poursuivre au-delà de la zone assignée.
+
+## Repli
+
+step: Il subit des dégâts et aucune consigne ne prévoit de repli
+  do: Continuer à exécuter sa tâche et à frapper les adversaires à portée.
+  note: Aucun seuil de fuite fondé sur ses points de vie ; il est détruit à 0 pv.
+
+step: Une consigne prévoit explicitement son retrait
+  do: Appliquer cette consigne ; utiliser le désengagement pour se retirer jusqu'à 12 m lorsque le trajet le permet.

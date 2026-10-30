@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Homme-champignon de petite taille, plante intelligente des souterrains, paisible et farouchement loyale à son roi. Il attaque immédiatement si celui-ci est menacé.
+  16 PV, CA 15 ; déplacement de 6 m ; allonge de 1,50 m. Coup +5 (1d3-2) ; nuage de spores à 1,50 m, Vigueur DD 12 ou nausée pendant 1d4+1 rounds.
+  Son nuage neutralise les adversaires proches ; son coup inflige peu de dégâts. RD 5/tranchant ou perforant, résistance au froid 5, immunité au poison et traits des plantes ; vulnérabilité au feu.
+
+resource: Nuage de spores | À volonté, une fois par round | Action simple ; effet de poison ; toute créature vivante à 1,50 m doit réussir un jet de Vigueur DD 12 ou être nauséeuse pendant 1d4+1 rounds. Une réussite immunise contre les spores de cet individu pendant 24 heures.
+
+step: Des intrus approchent sans menacer le roi
+  do: Rester pacifique et surveiller leur progression
+  note: Perception +9 et vision nocturne ; celle-ci ne permet pas de voir dans l'obscurité totale.
+
+step: Une menace approche du roi et un couvert est disponible
+  do: Se dissimuler près du passage menant au roi pour pouvoir intercepter les assaillants
+  note: Discrétion +10 ; ne pas engager le combat tant que le roi n'est pas menacé.
+
+## Ouverture
+
+step: Le roi est menacé et un assaillant peut être rejoint avec un déplacement de 6 m
+  do: S'approcher à 1,50 m de l'assaillant, en se plaçant si possible entre lui et le roi, puis libérer le nuage de spores
+  note: Chercher une position qui englobe plusieurs ennemis. Le nuage touche toutes les créatures vivantes à portée ; les alliés dépourvus d'immunité au poison risquent aussi la nausée.
+
+step: Le roi est menacé mais aucun assaillant ne peut être rejoint avec un déplacement de 6 m
+  do: Se rapprocher ou garder l'accès au roi en utilisant les couverts disponibles
+  note: Il ne possède aucune attaque à distance ; ne pas rester exposé à des attaques de feu.
+
+## Rounds suivants
+
+step: Un ennemi à 1,50 m reste sensible au poison et n'a pas réussi son jet contre ce nuage
+  do: Libérer de nouveau le nuage de spores, en privilégiant les ennemis encore capables de combattre
+  note: Le nuage consomme l'action simple du round : aucun coup ne s'y ajoute avec cette même action. Une cible ayant raté son jet n'acquiert pas l'immunité de 24 heures.
+
+step: Les ennemis proches sont nauséeux et un autre assaillant menace le roi
+  do: Se placer à 1,50 m de cet assaillant et libérer les spores s'il reste sensible au nuage
+  note: Profiter de la neutralisation temporaire des premières cibles pour protéger le roi ; surveiller la fin des 1d4+1 rounds de nausée.
+
+step: Tous les ennemis à portée sont immunisés au poison ou ont réussi leur jet contre ses spores
+  do: Porter un coup +5 (1d3-2) à l'ennemi qui menace directement le roi
+  note: Ne pas gaspiller l'action simple en spores contre ces cibles. L'immunité acquise après un jet réussi ne concerne que le nuage de cet homme-champignon.
+
+step: Plusieurs hommes-champignons défendent le roi
+  do: Répartir les défenseurs sur les accès et faire intervenir le nuage d'un autre individu contre une cible déjà immunisée au sien
+  note: Chaque individu possède son propre nuage ; aucun ne peut contourner une immunité générale au poison.
+
+step: Un adversaire utilise du feu ou une arme tranchante ou perforante
+  do: Chercher un couvert contre le feu et laisser si possible un autre défenseur contenir cet adversaire
+  note: Le feu exploite sa vulnérabilité ; les armes tranchantes ou perforantes passent sa RD 5. Les coups contondants sont moins efficaces contre lui.
+
+## Repli
+
+step: Le roi est à l'abri et ses points de vie tombent à 5 ou moins
+  do: Se retirer vers un couvert ou derrière les autres défenseurs, à 6 m par déplacement
+  note: Ce seuil est un choix tactique ; son profil ne lui donne aucun pouvoir de fuite particulier.
+
+step: Le roi reste menacé malgré ses blessures
+  do: Continuer à barrer l'accès au roi et employer les spores contre les assaillants encore sensibles
+  note: Sa loyauté au roi motive sa résistance ; chercher une occasion de reculer avec lui vers un abri.

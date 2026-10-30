@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Dragonship, navire artificiel aquatique gigantesque, neutre et sans intelligence. 170 pv, CA 23 ; réduction des dégâts 15/adamantium ; immunités des créatures artificielles, mais vulnérabilité au feu.
+  Morsure +25 (1d8+9) et 4 coups +25 (2d6+9 chacun). Allonge de 4,50 m, ou 6 m avec la morsure ; espace occupé de 6 m.
+  Nage à 12 m par round ; vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+resource: Souffle de feu | 3/jour | cône de 9 m, 10d6 dégâts de feu, Réflexes DD 20 pour réduire les dégâts de moitié
+
+note: Conduite
+  Sans intelligence, il suit un comportement simple et répétitif ; ne pas lui faire élaborer de ruses ou analyser les capacités adverses.
+  Sa vulnérabilité augmente de moitié les dégâts de feu qu'il subit ; son propre souffle ne lui confère aucune immunité au feu.
+
+step: En attente d'adversaires
+  do: Rester dans l'eau, où sa vitesse de nage lui permet d'approcher les cibles
+  note: Aucun déplacement terrestre n'est indiqué.
+
+## Ouverture
+
+step: Plusieurs ennemis tiennent dans un cône de 9 m et une utilisation du souffle reste disponible
+  do: Souffler sur le groupe : 10d6 dégâts de feu, Réflexes DD 20 pour moitié
+  note: Dépenser une des trois utilisations quotidiennes ; le souffle remplace les attaques de mêlée de ce round.
+
+step: Le souffle n'est pas retenu et une cible est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance : morsure +25 (1d8+9) et 4 coups +25 (2d6+9 chacun)
+
+step: Le souffle n'est pas retenu et une cible est accessible après un déplacement de 12 m au plus
+  do: Nager pour placer cette cible à 6 m ou moins, puis porter une seule morsure +25 (1d8+9)
+  note: Si la cible est déjà entre 4,50 m et 6 m, la morsure peut l'atteindre sans déplacement.
+
+## Rounds suivants
+
+step: Plusieurs ennemis se regroupent dans le cône de 9 m et il reste du souffle
+  do: Réutiliser le souffle à la place des attaques de mêlée
+  note: La fiche n'indique aucun délai entre deux souffles ; respecter la limite de trois utilisations par jour.
+
+step: Une cible reste à 4,50 m ou moins et le souffle n'est pas utilisé
+  do: Répéter l'attaque à outrance, en concentrant les attaques sur cette cible tant qu'elle reste à portée
+  note: Une cible située au-delà de 4,50 m et jusqu'à 6 m ne peut être atteinte que par la morsure.
+
+step: Une cible se tient à 6 m et aucun autre déplacement n'est nécessaire
+  do: Avancer de 1,50 m, puis effectuer l'attaque à outrance si ce pas suffit à mettre la cible à portée des coups
+  note: Ce pas de placement interdit tout autre déplacement pendant le round.
+
+step: Les ennemis s'éloignent et le souffle n'est pas utilisé
+  do: Les suivre à la nage, jusqu'à 12 m, puis mordre si une cible arrive à portée de 6 m
+  note: Après ce déplacement, ne porter qu'une seule attaque ; si aucune cible n'est encore accessible, poursuivre l'approche.
+
+## Repli
+
+step: Les points de vie diminuent
+  do: Poursuivre le combat sans déclencher de retraite spontanée à un seuil de points de vie
+  note: Sans intelligence et immunisé aux effets mentaux par ses traits de créature artificielle, il ne fuit pas par peur. À 0 pv, il est détruit.

@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Abysogh, géant gigantesque solitaire, chaotique mauvais, aveugle et animé d'une fureur destructrice. Il combat brutalement, sans stratégie complexe.
+  218 pv ; CA 29 ; deux coups +27, chacun infligeant 4d6+17 dégâts, critique sur 19–20 ; espace et allonge de 6 m ; déplacement et escalade à 15 m.
+  Vision aveugle à 36 m : l'obscurité et l'invisibilité ne dissimulent pas les adversaires dans cette portée. Au-delà, il ne voit pas ses cibles.
+
+note: Défenses
+  Liberté de mouvement permanente ; immunité aux regards, aux effets visuels, aux effets mentaux et au son ; résistance au froid 10 et à l'électricité 10.
+  Sa régénération lui permet de supporter les échanges de coups ; l'électricité reste son point faible malgré sa résistance.
+
+resource: Régénération 15 | permanente | récupère 15 pv par round ; des dégâts d'électricité interrompent la régénération au round suivant, pendant lequel il peut mourir normalement
+
+step: Des intrus approchent de sa caverne
+  do: Les repérer avec sa vision aveugle et les laisser entrer à portée avant de fondre sur eux
+  note: Perception +12 ; aucune préparation magique. Son repaire montagnard lui offre éventuellement des parois à escalader et des passages à barrer avec sa masse.
+
+## Ouverture
+
+step: Des ennemis sont déjà à 6 m ou moins
+  do: Attaque à outrance : deux coups +27, chacun à 4d6+17 dégâts
+  note: Concentrer les deux coups sur une cible accessible pour l'abattre rapidement.
+
+step: Il doit se rapprocher
+  do: Avancer jusqu'à 15 m, en parcourant plus de 1,50 m près des adversaires au sol, puis porter un seul coup si une cible est à portée
+  note: Terre tremblante : dès qu'il parcourt plus de 1,50 m dans le round, les créatures de taille Grande ou inférieure debout au sol et situées à 6 m ou moins de lui à un moment de ce déplacement font un jet de Réflexes DD 25 ou tombent à terre. Les vibrations suppriment aussi la perception des vibrations dans cette zone pendant 1 round, sans sauvegarde.
+
+## Rounds suivants
+
+step: Une cible reste à portée et il peut consacrer son round à la frapper
+  do: Répéter les deux coups ; employer Attaque en puissance contre une cible facile à toucher
+  note: Avec Attaque en puissance : deux coups +23, chacun à 4d6+25 dégâts, critique sur 19–20. Revenir à +27 et 4d6+17 si les attaques manquent trop souvent.
+
+step: Plusieurs ennemis au sol se sont regroupés près de lui
+  do: S'il est préférable de les renverser, se déplacer de plus de 1,50 m pour déclencher Terre tremblante, puis frapper une cible à terre
+  note: Ce déplacement remplace l'attaque à outrance par un déplacement et un seul coup. Un simple pas de 1,50 m ne déclenche pas les secousses ; les créatures en vol sont épargnées.
+
+step: Une cible corporelle plus petite que lui peut être projetée vers un obstacle ou un précipice
+  do: Employer Coup fabuleux en action simple : BMO +35 contre la DMD, sans Attaque en puissance
+  note: En cas de réussite, infliger les dégâts du coup, 4d6+17, puis projeter la cible de 3 m en ligne droite en l'éloignant et la laisser à terre. Un obstacle interrompant la projection inflige 1d6 dégâts supplémentaires à la cible et subit lui aussi 1d6 dégâts.
+
+step: Il faut dégager un passage ou pousser un ennemi vers le vide
+  do: Employer une bousculade avec BMO +37 contre la DMD, sans Attaque en puissance
+  note: Bousculade améliorée évite l'attaque d'opportunité de la cible pour cette manœuvre. La bousculade remplace les coups ; elle n'inflige pas leurs dégâts.
+
+step: Un adversaire se relève à portée ou quitte une case menacée sans précaution
+  do: Porter une attaque d'opportunité avec un coup
+  note: Une seule attaque d'opportunité par round ; tenir compte d'Attaque en puissance si elle est encore active.
+
+step: Un adversaire lui inflige des dégâts d'électricité
+  do: S'acharner sur cet adversaire s'il peut le repérer et l'atteindre
+  note: Appliquer d'abord résistance à l'électricité 10. Tant que la régénération est interrompue, les blessures peuvent le tuer ; ne pas lui rendre les 15 pv habituels au round concerné.
+
+step: Les adversaires se retranchent sur une hauteur accessible
+  do: Escalader à 15 m pour les rejoindre, puis reprendre les coups dès qu'ils sont à portée
+  note: Escalade +26. Ne pas lui attribuer une attaque de rocher : son profil ne fournit ni projectile ni attaque à distance chiffrée.
+
+## Repli
+
+note: Fureur
+  Sa rage instinctive ne favorise aucun repli organisé. Ne pas lui imposer un seuil automatique de fuite : il continue de frapper tant qu'une victime reste accessible.
+
+step: Il tombe sous 0 pv alors que sa régénération fonctionne
+  do: Le laisser inconscient et appliquer la régénération à chaque round jusqu'à ce qu'il puisse reprendre le combat
+  note: Il ne peut pas mourir tant que sa régénération fonctionne ; une interruption par l'électricité permet de le tuer normalement.
+
+step: Les ennemis ont fui et aucune cible ne reste repérable ou accessible
+  do: Regagner une caverne ou un abri montagnard et récupérer ses blessures grâce à la régénération

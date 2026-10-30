@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Elder Witchlights : fées neutres de taille infime, avec 4 pv et une CA de 21. Vol à 9 m par round, manœuvrabilité parfaite, vision crépusculaire et Discrétion +19.
+  Aucune attaque de mêlée ni pouvoir infligeant directement des dégâts. Elles gênent leurs adversaires par hébétement ou illumination et détournent leur attention par des sons ou des lumières.
+  Intelligence 3 : privilégier des réactions simples, harceler à distance et fuir le danger. Chaque ancien utilise uniquement la liste de pouvoirs qui lui correspond ; tous ont un NLS de 1.
+
+resource: Ancien n°1 | à volonté | hébétement (Volonté DD 11), son imaginaire (Volonté DD 11), assistance divine
+resource: Ancien n°2 | à volonté | lumières dansantes, illumination (Vigueur DD 11)
+resource: Purification de nourriture et d'eau | 1/heure | ancien n°2 uniquement ; aucun effet offensif
+resource: Ancien n°3 | à volonté | hébétement (Volonté DD 11), lumière, prestidigitation
+
+step: Une menace est repérée avant le combat
+  do: Chercher un abri en hauteur et se dissimuler avec Discrétion +19, en gardant une voie de fuite aérienne
+  note: Le vol permet de rester hors de portée des armes de mêlée, mais ne protège pas des projectiles ni des sorts.
+
+step: L'ancien n°1 dispose d'un instant avant l'affrontement
+  do: Utiliser assistance divine sur lui-même
+  note: Il gagne 1 pv temporaire pendant 1 minute ; ses 4 pv de base restent inchangés.
+
+## Ouverture
+
+step: L'ancien n°1 ou n°3 voit un humanoïde de 4 DV ou moins à 7,50 m ou moins
+  do: Utiliser hébétement sur celui qui menace le plus directement les fées
+  note: Volonté DD 11 annule ; sinon, la cible ne peut entreprendre aucune action pendant 1 round. Les humanoïdes de 5 DV ou plus et les autres types de créatures ne sont pas affectés.
+
+step: L'ancien n°2 voit un adversaire à 7,50 m ou moins
+  do: Utiliser illumination sur un attaquant qui n'est pas déjà ébloui
+  note: Vigueur DD 11 annule ; sinon, la cible est éblouie pendant 1 minute, avec un malus de -1 aux attaques et aux tests de Perception visuelle. Les créatures dépourvues de vue ne sont pas affectées.
+
+step: Les intrus hésitent encore et ne poursuivent pas les fées
+  do: Pour l'ancien n°1, créer un bruit de pas ailleurs à 7,50 m ou moins avec son imaginaire ; pour l'ancien n°2, utiliser lumières dansantes pour attirer les regards à l'écart
+  note: Son imaginaire dure 1 round ; Volonté DD 11 permet de reconnaître l'illusion. Ces diversions n'obligent personne à les suivre.
+
+## Rounds suivants
+
+step: Un ancien utilise un pouvoir pendant son tour
+  do: Consacrer son action simple au pouvoir, puis son déplacement à gagner jusqu'à 9 m en vol vers un abri ou hors de portée de mêlée
+  note: S'éloigner avant d'utiliser le pouvoir si cela permet d'éviter une attaque d'opportunité tout en restant à portée ; un seul de ces pouvoirs par tour.
+
+step: Hébétement a empêché une cible d'agir
+  do: Pour les anciens n°1 et n°3, viser ensuite un autre humanoïde admissible
+  note: Après avoir été hébétée par ce sort, une créature y est immunisée pendant 1 minute, quel que soit l'ancien qui le réutilise.
+
+step: Une cible admissible a résisté à hébétement et reste menaçante
+  do: Tenter de nouveau hébétement si l'ancien n°1 ou n°3 peut agir à distance sûre
+  note: Une sauvegarde réussie ne déclenche pas l'immunité d'une minute.
+
+step: Le premier adversaire visé par illumination est déjà ébloui
+  do: Pour l'ancien n°2, viser un autre attaquant encore indemne de cet effet
+  note: Répéter illumination sur une créature déjà éblouie n'apporte aucun bénéfice.
+
+step: Aucun pouvoir offensif disponible ne peut gêner les poursuivants
+  do: Rompre le combat en vol
+  note: Lumière et prestidigitation ne remplacent pas une attaque ; ces anciens ne disposent d'aucun moyen direct d'achever un adversaire.
+
+## Repli
+
+step: Points de vie à 3 ou moins, ou adversaire sur le point d'atteindre une fée au contact
+  do: Fuir vers un abri en volant ; utiliser l'action de retraite si elle est menacée au contact, jusqu'à 18 m dans le round
+  note: Si elle n'est pas menacée au contact, un double déplacement permet également de parcourir 18 m. Avec seulement 4 pv, ne pas attendre une seconde blessure pour partir.
+
+step: La poursuite continue après avoir gagné de la distance
+  do: Passer derrière un obstacle qui coupe la ligne de vue, puis chercher à se dissimuler avec Discrétion +19
+  note: Le vol parfait facilite les changements de direction ; il ne confère ni invisibilité ni protection magique.

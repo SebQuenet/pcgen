@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Demi-liche, mort-vivant de taille TP, neutre mauvais, solitaire et très intelligent : un crâne serti de gemmes qui défend son repos.
+  133 pv ; CA 24, contact 18 ; réduction des dégâts 20/— ; vol parfait à 9 m ; vision dans le noir à 18 m. Aucune attaque physique ; allonge de 0 m.
+  Ses armes sont la plainte d'outre-tombe, la capture d'âme et la malédiction supérieure. Ses immunités comprennent l'acide, le froid, l'électricité, la métamorphose et le renvoi des morts-vivants.
+
+resource: Plainte d'outre-tombe | à volonté | NLS 14 ; rayon de 6 m centré sur elle ; Vigueur DD 24 annule ; 140 points de dégâts, jusqu'à 14 créatures vivantes pouvant l'entendre, les plus proches d'abord
+resource: Malédiction supérieure | à volonté | au toucher ; Volonté DD 21 annule ; choisir un seul effet : −12 à une caractéristique, −6 à deux caractéristiques, −8 aux attaques, sauvegardes et tests, ou seulement 25 % de chances d'agir normalement à chaque tour
+resource: Capture d'âme | 8 captures par jour | cible vivante visible à 90 m au plus ; Vigueur DD 22 ; une sauvegarde réussie ne dépense aucune utilisation
+
+step: Les intrus ne l'ont pas encore dérangée
+  do: Rester immobile parmi les ossements et la poussière ; observer avec Perception +26
+  note: Elle quitte rarement son lieu de repos.
+
+note: Défenses à appliquer
+  Immunité aux sorts et pouvoirs magiques autorisant la résistance à la magie, sous réserve des exceptions propres à la créature.
+  Une arme vorpale ignore sa réduction des dégâts, mais ne lui inflige que la moitié des dégâts.
+
+## Ouverture
+
+step: On touche le crâne ou trouble son repos
+  do: S'élever verticalement, puis utiliser plainte d'outre-tombe en gardant la menace principale dans le rayon de 6 m
+  note: Se placer hors de l'allonge des combattants si la hauteur du plafond le permet.
+
+step: Au deuxième round, une cible vivante est visible à 90 m ou moins
+  do: Utiliser capture d'âme contre l'adversaire le plus dangereux, en privilégiant une faible Vigueur présumée
+  note: Échec : âme emprisonnée dans une gemme, corps réduit en poussière en un round. Réussite : trois niveaux négatifs. Protection contre la mort donne +5 au jet et protège des niveaux négatifs, sans empêcher la capture.
+
+## Rounds suivants
+
+step: Plusieurs ennemis vivants peuvent entendre la plainte dans un rayon de 6 m
+  do: Répéter plainte d'outre-tombe ; ajuster sa position en volant pour englober les cibles les plus menaçantes
+  note: Utiliser un seul pouvoir offensif par round ; le vol permet de se déplacer puis d'attaquer.
+
+step: Une cible prioritaire reste éloignée ou survit aux plaintes, et des captures sont encore disponibles
+  do: Utiliser capture d'âme ; renouveler la tentative contre une menace encore active
+
+step: Une menace isolée peut être touchée sans exposition excessive
+  do: Entrer dans sa case, puis tenter malédiction supérieure par une attaque de contact ; choisir −8 aux sauvegardes pour préparer les pouvoirs suivants, ou 25 % de chances d'agir pour entraver ses actions
+  note: L'allonge de 0 m impose cette proximité ; entrer dans une case occupée expose aux attaques d'opportunité. Volonté DD 21 annule la malédiction après un contact réussi.
+
+step: Les ennemis se dispersent ou cherchent le corps à corps
+  do: Exploiter le vol parfait pour changer de hauteur et de position ; employer capture d'âme à distance ou revenir à portée de plainte
+  note: Alterner les trois pouvoirs selon les cibles disponibles ; ne pas rester au contact pour infliger des attaques physiques inexistantes.
+
+## Repli
+
+step: Points de vie sous 35, ou un adversaire exploite efficacement ses faiblesses
+  do: Reculer en volant à 9 m par déplacement vers les hauteurs ou un passage du repaire ; attaquer à distance si cela permet de poursuivre le repli
+  note: Privilégier la capture d'âme contre le poursuivant capable de l'atteindre.
+
+note: Rajeunissement
+  Détruite, elle peut se reformer en 1d10 jours sur un test de 1d20 +14 contre DD 16, sauf si ses restes reçoivent de l'eau bénite ; ce pouvoir ne la soigne pas pendant le combat.

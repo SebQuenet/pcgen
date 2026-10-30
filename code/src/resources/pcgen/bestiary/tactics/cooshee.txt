@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Chien elfique, créature magique de taille M et d'alignement neutre bon, qui protège les elfes et ses compagnons. 22 pv, CA 16 ; déplacement 12 m, allonge 1,50 m.
+  Morsure +6 (1d8+2, avec saisie ou croc-en-jambe), 2 griffes +6 (1d4+1 chacune). Il cherche à arrêter une menace, puis à la déchirer au contact.
+
+resource: Sprint | 1 par heure | déplacement jusqu'à 120 m lors d'une charge
+
+step: Il monte la garde en forêt
+  do: Rester à couvert et surveiller les approches avec Perception +7 et odorat ; utiliser Discrétion +11 pour attendre sans se montrer
+  note: vision dans le noir à 18 m et vision nocturne
+
+step: Une menace est repérée
+  do: Aboyer pour prévenir ses maîtres ou les autres cooshees, puis se placer entre la menace et ceux qu'il protège
+  note: ses aboiements servent à donner l'alarme ; il n'attaque pas sans raison une créature inoffensive
+
+## Ouverture
+
+step: Un ennemi menace ses maîtres et une ligne de charge dégagée permet de l'atteindre
+  do: Charger et porter une morsure ; employer le sprint si la distance exige cette accélération, jusqu'à 120 m
+  note: la charge ne donne qu'une attaque de morsure ; garder le sprint si une charge ordinaire suffit
+
+step: La première morsure touche un adversaire qu'il faut arrêter
+  do: Tenter le croc-en-jambe pour le mettre à terre ; choisir plutôt la saisie s'il faut le retenir sur place
+  note: choisir un seul des deux effets ; BMO +0, sans garantie de réussite
+
+step: Un ennemi est déjà à 1,50 m et le cooshee peut consacrer son tour à attaquer
+  do: Attaque à outrance : morsure +6 (1d8+2), puis 2 griffes +6 (1d4+1 chacune)
+
+## Rounds suivants
+
+step: Une cible reste au contact et aucune lutte n'est à maintenir
+  do: Répéter l'attaque à outrance ; tenter le croc-en-jambe sur une morsure réussie si la cible est encore debout
+  note: privilégier l'adversaire qui menace directement un elfe ou un compagnon
+
+step: Une cible est saisie et ses alliés peuvent profiter de son immobilisation
+  do: Maintenir la lutte pour l'empêcher de rejoindre ceux qu'il protège
+
+step: La cible s'éloigne ou contourne le cooshee
+  do: Se déplacer jusqu'à 12 m pour lui barrer le passage et porter une morsure si elle est à portée
+  note: après un déplacement normal, ne pas ajouter les deux griffes ; réserver une nouvelle charge à une trajectoire dégagée
+
+## Repli
+
+step: Points de vie à 7 ou moins, ou menace devenue trop forte
+  do: Rompre le contact en se retirant vers les elfes, la meute ou un couvert forestier ; aboyer pour signaler le danger
+  note: déplacement normal de 12 m ; le sprint exige une charge et ne sert pas à une simple fuite
+
+step: Les adversaires abandonnent leur attaque
+  do: Cesser la poursuite et revenir auprès de ceux qu'il protège

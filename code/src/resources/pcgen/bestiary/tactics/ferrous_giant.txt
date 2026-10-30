@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Géant ferreux neutre de taille TG, intelligent et redoutable au corps à corps : 287 pv, CA 32, déplacement de 15 m, espace et allonge de 4,50 m.
+  Grande hache +31/+26/+21/+16 (4d6+22, 19–20/x3) ou épée à deux mains +31/+26/+21/+16 (4d6+22, 17–20/x2) ; à mains nues, 2 coups +31 (2d6+15 et étreinte).
+  Piétinement : 2d6+22, DD 37. Réduction des dégâts 15/fer froid ; immunité au feu et aux effets mentaux. Ses Réflexes +8 et sa CA de contact 8 constituent ses principales faiblesses défensives.
+
+resource: Chauffage du métal | à volonté | NLS 15, DD 14
+resource: Lévitation | à volonté | NLS 15 ; objets ou créatures en fer ou en acier uniquement, lui-même compris ; déplacement vertical
+resource: Mur de fer | 1/jour | NLS 15, DD 18
+
+step: Il peut choisir son terrain
+  do: Occuper un passage où son allonge de 4,50 m permet de menacer les approches et où il conserve une issue assez large pour lui.
+  note: Perception +30 et vision nocturne pour surveiller les intrus ; aucune attaque à distance n'est indiquée.
+
+## Ouverture
+
+step: Il peut atteindre un adversaire avec un déplacement de 15 m
+  do: Avancer jusqu'à portée et porter une attaque d'arme à +31, pour 4d6+22 dégâts.
+  note: Un déplacement ordinaire ne lui laisse pas les quatre attaques de l'attaque à outrance.
+
+step: Un ennemi porte une armure métallique et reste hors de sa portée pour ce round
+  do: Utiliser chauffage du métal sur cette armure, DD 14, puis avancer vers une position favorable.
+  note: La chaleur augmente progressivement ; ce pouvoir prépare les rounds suivants. Son faible DD favorise les cibles dont la défense contre ce pouvoir paraît faible.
+
+step: Des tireurs ou des lanceurs de sorts dominent le terrain
+  do: Dresser le mur de fer pour couper leur ligne de vue ou séparer leurs soutiens des combattants déjà accessibles.
+  note: Préserver une issue ; cette utilisation dépense son unique mur de la journée.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée sans déplacement important
+  do: Effectuer l'attaque à outrance avec son arme : +31/+26/+21/+16, chaque coup infligeant 4d6+22.
+  note: Employer Attaque en puissance contre une cible facile à toucher ; privilégier la précision contre une défense élevée. Exploiter les coups critiques et le don Staggering Critical, qui peut rendre la victime chancelante.
+
+step: Il doit avancer et plusieurs ennemis sont adjacents entre eux à portée de son arme
+  do: Utiliser Enchaînement ou Succession d'enchaînements pour frapper plusieurs adversaires après le déplacement.
+  note: Chaque attaque supplémentaire exige que la précédente touche ; ces dons réduisent sa CA de 2 jusqu'à son prochain tour.
+
+step: Plusieurs adversaires de taille G ou inférieure occupent un trajet dégagé
+  do: Les traverser par piétinement : 2d6+22 dégâts, Réflexes DD 37 pour réduire les dégâts de moitié.
+  note: Une victime peut choisir une attaque d'opportunité avec un malus de 4 au lieu du jet de sauvegarde.
+
+step: Immobiliser une cible de taille G ou inférieure devient prioritaire et ses mains sont libres
+  do: Porter ses coups à +31, pour 2d6+15 chacun, et tenter l'étreinte après une touche.
+  note: Cette option remplace les attaques d'arme ; aucune constriction n'est indiquée.
+
+step: Une arme ennemie compromet sa résistance ou bloque son passage
+  do: Tenter une destruction d'arme avec ses dons de destruction, ou une bousculade pour dégager l'accès.
+  note: Donner priorité à une arme en fer froid, qui contourne sa réduction des dégâts.
+
+## Repli
+
+step: Ses points de vie tombent sous 72 ou les ennemis contournent régulièrement ses défenses
+  do: Se retirer vers un couvert à 15 m par déplacement ; employer le mur de fer s'il est encore disponible pour interrompre la poursuite.
+  note: Quitter une case menacée peut provoquer des attaques d'opportunité ; utiliser le désengagement lorsque le départ l'exige.
+
+step: Monter à la verticale permet d'échapper aux combattants et les attaques à distance sont contenues
+  do: Utiliser lévitation sur lui-même pour se mettre hors de portée de mêlée.
+  note: La lévitation ne lui donne pas de déplacement horizontal libre ; choisir cette issue selon le terrain.

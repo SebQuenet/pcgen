@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Forgotten One : fée neutre minuscule des forêts, FP 2, 10 pv, CA 19 ; déplacement de 6 m par round.
+  Lance courte +9 au corps à corps ou à distance, dégâts 1d2-4 plus poison ; allonge de 0 m.
+  Discrétion +22, Perception +9 ; perception des vibrations et vision aveugle à 30 m. Il ne peut être pris au dépourvu ni être pris en tenaille.
+
+resource: Flou | à volonté | NLS 3 ; durée de 3 minutes ; les attaques contre lui ont 20 % de chances de le rater à cause du camouflage.
+resource: Présence oublieuse | 3/jour | créatures à 6 m ou moins ; Volonté DD 16 ou oubli des rencontres avec lui, comme modification de mémoire ; une sauvegarde réussie immunise pendant 24 heures.
+
+step: Une rencontre paraît imminente
+  do: Activer flou, puis se dissimuler derrière la végétation ou un autre couvert avec Discrétion +22.
+  note: Flou ne permet pas à lui seul de se cacher à découvert. Repérer les approches et une voie de fuite grâce à sa perception à 30 m.
+
+## Ouverture
+
+step: Une cible est visible depuis sa cachette
+  do: Lancer sa lance courte empoisonnée à +9, puis gagner un couvert si un déplacement reste possible.
+  note: Choisir de préférence une cible isolée ; ne pas compter sur le poison pour neutraliser rapidement tout le groupe.
+
+step: Le combat commence sans flou actif
+  do: Activer flou et se déplacer vers un couvert avant de chercher à attaquer.
+
+step: Il doit combattre au corps à corps et possède encore sa lance
+  do: Entrer dans l'espace de la cible pour porter une attaque de lance courte à +9.
+  note: Son allonge de 0 m l'oblige à entrer dans cet espace ; cette approche l'expose aux attaques d'opportunité.
+
+## Rounds suivants
+
+step: Sa lance est disponible et une attaque peut être portée sans exposition excessive
+  do: Porter une attaque empoisonnée, en privilégiant une cible qui n'est pas encore affectée.
+  note: Le poison impose Vigueur DD 11 ; fréquence de 1/heure pendant 24 heures ; malus de -1 aux jets d'attaque, aux tests de compétence et aux jets de sauvegarde, non cumulatif. Une sauvegarde réussie le guérit.
+  note: Après 8 sauvegardes ratées, le poison inflige aussi 1 point d'affaiblissement de Constitution. Les humanoïdes et humanoïdes monstrueux ont 5 % de risque d'allergie grave : malus de -2 et affaiblissement de Constitution de 1d3.
+
+step: La lance a été lancée
+  do: La récupérer seulement si le trajet et sa position le permettent ; sinon, rester à couvert et préparer le repli.
+  note: Le profil ne fournit aucune lance de réserve. Les effets du poison se poursuivent à l'échelle des heures ; ses malus ne s'additionnent pas.
+
+step: Les adversaires cherchent à l'encercler
+  do: Utiliser sa perception à 30 m pour repérer une sortie et se déplacer vers un passage libre.
+  note: Son immunité à la prise en tenaille ne le protège pas des attaques multiples ; ses 10 pv imposent d'éviter l'échange prolongé.
+
+## Repli
+
+step: Points de vie à 5 ou moins, ou combat devenu défavorable
+  do: Employer l'action de retraite pour gagner un couvert, jusqu'à 12 m si le terrain le permet, puis chercher à se cacher dès qu'il est hors de vue.
+
+step: Des poursuivants sont encore à 6 m ou moins et une utilisation reste disponible
+  do: Activer présence oublieuse pour leur faire oublier les rencontres avec lui, puis poursuivre la fuite.
+  note: Les créatures qui réussissent Volonté DD 16 sont immunisées pendant 24 heures : ne pas gaspiller d'autres utilisations sur elles. L'oubli ne les paralyse pas et ne rend pas la créature invisible ; rester caché pour éviter une nouvelle rencontre immédiate.

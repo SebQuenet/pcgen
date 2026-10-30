@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Brambleblight, plante solitaire de taille G, neutre, qui défend son domaine de ronces. 85 pv, CA 20 ; déplacement de 6 m, espace et allonge de 3 m.
+  Deux coups +13 (2d6+7) à outrance ; quatre épines +10 (1d6+7 chacune) à distance. Aura de dépérissement sur 12 m, Vigueur DD 19 ; corps épineux et immunités des plantes.
+
+step: Installé dans son territoire
+  do: Se dissimuler dans les fourrés, Discrétion +19 en forêt, et laisser les intrus s'engager entre les ronces
+  note: il traverse même les broussailles manipulées magiquement sans ralentissement ni blessure
+
+step: Une présence approche
+  do: Repérer les intrus au contact de la végétation jusqu'à 36 m ; utiliser Perception +10 pour les autres
+  note: vision dans le noir à 18 m et vision nocturne
+
+resource: Épines | 36 par période de 24 heures | 9 volées de quatre ; portée maximale 36 m, sans facteur de portée
+
+## Ouverture
+
+step: Intrus hors de son allonge et ronces infestées disponibles
+  do: Animer une ronce de son domaine par une action simple pour intercepter leur approche
+  note: une seule ronce animée à la fois, pendant 1 minute ; changer sa cible demande une action de mouvement
+
+step: Aucune ronce à animer et ennemi entre 3 m et 36 m
+  do: Tirer quatre épines +10 (1d6+7 chacune), par une action simple, puis se déplacer dans les fourrés si nécessaire
+  note: concentrer les tirs ; si plusieurs cibles sont visées, elles doivent toutes être à 9 m ou moins les unes des autres
+
+step: Ennemi déjà à portée de 3 m
+  do: Attaque à outrance, deux coups +13 (2d6+7 chacun)
+  note: après un déplacement ordinaire, porter un seul coup
+
+## Rounds suivants
+
+step: Une créature vivante entre dans l'aura de 12 m
+  do: Faire effectuer le jet de Vigueur DD 19 : échec, fiévreuse 1 round ; réussite, immunisée 24 heures
+  note: animaux, fées et plantes : nauséeux 1 round, puis fiévreux 1 minute sur un échec ; immunité aux maladies protège de l'aura
+  note: les créatures végétales subissent aussi 1d6 dégâts par round dans l'aura, Vigueur DD 19 pour moitié
+
+step: Un adversaire reste à portée de mêlée
+  do: Répéter les deux coups et concentrer les dégâts sur lui
+  note: contre une cible facile à toucher, Attaque en puissance donne deux coups +11 (2d6+11 chacun)
+
+step: Un déplacement ennemi provoque une attaque d'opportunité
+  do: Frapper dans son allonge ; contre un ennemi dans une case adjacente, employer Immobilisation pour arrêter son mouvement avec un test de manœuvre +15 contre son DMD
+  note: Attaques réflexes autorise jusqu'à quatre attaques d'opportunité par round
+
+step: Un adversaire le touche avec une arme de mêlée sans allonge, une arme naturelle ou à mains nues
+  do: Appliquer les 1d6 dégâts perforants du corps épineux
+  note: cela concerne aussi les attaques naturelles et à mains nues ; un ennemi maintenant une lutte subit également 1d6 par round
+
+step: Les ennemis restent hors de portée de mêlée
+  do: Répéter les volées tant qu'il reste des épines ; sinon avancer de 6 m à travers les ronces pour imposer le contact
+
+## Repli
+
+step: Blessé, même grièvement
+  do: Continuer à défendre son domaine jusqu'à destruction
+  note: dans la rencontre de Pathfinder Adventure Path #92, il combat jusqu'à la mort

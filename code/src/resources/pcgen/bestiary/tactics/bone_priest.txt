@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Bone Priest, prêtre d'os mort-vivant loyal mauvais, serviteur fanatique d'un dieu maléfique. Il neutralise un adversaire par ses sorts avant de l'abattre à l'épée.
+  Épée bâtarde de maître +7 (1d10+3, critique 19-20) ou coup +5 (1d4+3), à 1,50 m ; déplacement 9 m ; initiative +6 ; vision dans le noir à 18 m.
+  37 PV, CA 16 ; RD 5/contondant et magie : une arme doit être à la fois magique et contondante pour l'ignorer. Immunité au froid et traits des morts-vivants ; résistance à la canalisation +2.
+
+resource: Immobilisation de personne | 1 | Volonté DD 15 ; un humanoïde à 39 m maximum ; durée 3 rounds
+resource: Arme spirituelle | 1 | portée 39 m ; attaque +6, dégâts de force 1d8+1 ; durée 3 rounds
+resource: Idiotie | 1 | contact ; DD 15 indiqué dans le profil ; durée 30 minutes
+resource: Frayeur | 1 | Volonté DD 14 ; une créature vivante de 5 DV maximum à 9 m
+resource: Injonction | 1 | Volonté DD 14 ; une créature vivante à 9 m comprenant son ordre ; durée 1 round
+resource: Confusion partielle | 1 | Volonté DD 14 ; une créature vivante à 9 m ; durée 1 round
+resource: Protection contre le Bien | 1 | sur lui-même ; durée 3 minutes
+resource: Détection de la magie, assistance divine, lecture de la magie, résistance | à volonté | sorts de niveau 0 préparés ; NLS 3
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler grâce à Discrétion +10 et les observer avec Perception +11 ; choisir une position permettant de lancer ses sorts avant le contact
+
+step: Il dispose de quelques rounds avant le combat
+  do: Lancer protection contre le Bien si des adversaires bons sont attendus ; ajouter résistance, puis assistance divine si le délai le permet, un sort par round
+  note: Protection contre le Bien donne +2 de parade à la CA et +2 de résistance aux sauvegardes contre les adversaires bons. Résistance donne +1 aux sauvegardes pendant 1 minute, sans cumul avec ce +2 ; assistance divine donne +1 à un unique jet d'attaque, de sauvegarde ou de compétence dans la minute.
+
+## Ouverture
+
+step: Un humanoïde dangereux est visible à 39 m ou moins
+  do: Lancer immobilisation de personne sur lui pour le priver d'actions pendant que le prêtre traite les autres menaces
+  note: Volonté DD 15 ; la cible peut retenter sa sauvegarde à chacun de ses tours, par une action complexe. Ne pas compter sur trois rounds de paralysie garantis.
+
+step: Aucune cible adaptée à immobilisation de personne, ou un adversaire à distance doit être harcelé
+  do: Lancer arme spirituelle sur un lanceur de sorts ou un tireur visible à 39 m ou moins
+  note: L'arme attaque dès le lancement ; elle permet ensuite au prêtre de combattre ou de lancer un autre sort pendant qu'elle frappe.
+
+step: Un ennemi est déjà à 1,50 m
+  do: Faire un pas de placement de 1,50 m pour lancer un sort si cela suffit à sortir de sa zone menacée ; sinon frapper à l'épée bâtarde
+  note: Si une incantation sur la défensive est nécessaire, concentration +10 grâce à Magie de guerre ; DD 17 pour un sort de niveau 1, DD 19 pour un sort de niveau 2.
+
+## Rounds suivants
+
+step: Arme spirituelle est encore active
+  do: La laisser attaquer sa cible chaque round tout en utilisant normalement les actions du prêtre ; consacrer une action de mouvement à changer de cible si nécessaire
+  note: Conserver la cible en vue et à portée ; l'arme ne fournit pas de prise en tenaille.
+
+step: Un adversaire reste paralysé à 1,50 m et aucun autre ennemi ne menace le prêtre
+  do: Porter un coup de grâce à l'épée bâtarde, par une action complexe
+  note: Cette action provoque des attaques d'opportunité ; si les autres ennemis peuvent intervenir, préférer une attaque ordinaire ou maintenir ses distances.
+
+step: Un lanceur de sorts vivant est à portée de contact et idiotie est disponible
+  do: Tenter idiotie par une attaque de contact au corps à corps +5
+  note: Une touche inflige un malus de 1d6 à l'Intelligence, la Sagesse et le Charisme, sans descendre sous 1 ; cette baisse peut empêcher le lancement de certains sorts.
+
+step: Un combattant vivant de 5 DV maximum menace de l'acculer à 9 m ou moins
+  do: Lancer frayeur pour l'éloigner, puis se déplacer vers une position plus sûre si le passage est libre
+  note: Volonté DD 14 ; effrayé pendant 1d4 rounds en cas d'échec, secoué pendant 1 round en cas de réussite.
+
+step: Un ennemi vivant à 9 m comprend le commun ou le commun des profondeurs
+  do: Employer injonction « Halte » pour lui faire perdre son prochain tour, ou « Fuis » pour dégager une issue
+  note: Volonté DD 14 ; choisir un seul ordre et dépenser l'unique sort préparé.
+
+step: Une autre créature vivante à 9 m reste menaçante et confusion partielle est disponible
+  do: Lancer confusion partielle et appliquer son comportement aléatoire pendant 1 round, Volonté DD 14
+
+step: Les sorts utiles sont épuisés ou le contact devient inévitable
+  do: Frapper à l'épée bâtarde +7 (1d10+3, critique 19-20), de préférence un ennemi déjà blessé ; utiliser le coup +5 (1d4+3) si l'épée est indisponible
+  note: Exploiter un passage étroit si le terrain le permet pour limiter les adversaires au contact ; éviter en priorité les porteurs d'armes magiques contondantes.
+
+## Repli
+
+step: À 9 PV ou moins, une issue reste accessible
+  do: Si frayeur ou injonction est encore disponible, l'utiliser pour écarter le poursuivant le plus proche ; au tour suivant, battre en retraite jusqu'à 18 m vers un couvert ou hors de vue
+  note: La retraite protège seulement la case de départ contre les attaques d'opportunité ; choisir un trajet qui ne traverse pas d'autres zones menacées.
+
+step: Toute retraite est coupée
+  do: Combattre à l'épée contre l'adversaire le plus affaibli, en utilisant les sorts préparés restants si une incantation est possible

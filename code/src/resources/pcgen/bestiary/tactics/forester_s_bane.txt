@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Forester's Bane, plante carnivore de taille G, neutre et sans intelligence ; 52 pv, CA 17. Arbuste immobile des plaines tempérées, il saisit ses proies et les découpe sur place.
+  Quatre feuilles +5 au contact avec étreinte ; six tiges +5, chacune infligeant 1d4+3 dégâts. Espace occupé et allonge : 3 m ; déplacement : 0 m.
+  Vision aveugle à 9 m, vision nocturne, Perception +1 ; immunités des plantes.
+
+step: Aucune proie à portée
+  do: Attendre qu'une créature approche ; ses baies odorantes peuvent attirer les curieux jusqu'aux feuilles.
+  note: Les larges feuilles cachent les six tiges dentelées ; son comportement relève de la prédation instinctive.
+
+## Ouverture
+
+step: Une créature vivante de taille M ou inférieure arrive à 3 m ou moins
+  do: Frapper avec les feuilles à +5 au contact et tenter l'étreinte après une touche.
+  note: Les quatre feuilles permettent de saisir jusqu'à quatre adversaires ; plusieurs feuilles sur une même proie renforcent la prise.
+
+step: Un test de lutte réussit
+  do: Utiliser « snap and saw » pour scier la victime avec les tiges disponibles ; chacune inflige 1d4+3 dégâts tranchants.
+  note: Une tige ayant déjà attaqué un autre adversaire ce round ne peut pas servir à scier une victime immobilisée.
+
+step: Une créature de taille G ou supérieure est à portée
+  do: Attaquer à outrance avec les six tiges à +5, pour 1d4+3 dégâts chacune.
+  note: L'étreinte ne fonctionne que sur les créatures plus petites que lui ; les tiges peuvent frapper sans saisie préalable.
+
+## Rounds suivants
+
+step: Une proie est toujours retenue
+  do: Maintenir la lutte et poursuivre le sciage avec les tiges disponibles.
+  note: Il garde sa prise jusqu'à sa mort, celle de la victime ou la destruction de la feuille qui la retient ; une victime qui se libère échappe à cette prise.
+
+step: Une proie se libère et reste à portée
+  do: Tenter de la saisir à nouveau avec les feuilles disponibles, puis reprendre le sciage si la lutte réussit.
+
+step: Aucune proie n'est retenue, mais un adversaire reste à portée
+  do: Reprendre les attaques de feuilles contre une cible saisissable ; employer les six tiges contre une cible trop grande pour l'étreinte.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à saisir et à découper les créatures à portée jusqu'à sa destruction.
+  note: Immobile et sans intelligence, il ne peut pas organiser de retraite.
+
+step: Les survivants s'éloignent au-delà de 3 m
+  do: Rester sur place et attendre qu'une proie revienne à portée.

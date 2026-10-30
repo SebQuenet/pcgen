@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Orque à la peau blanche marquée de motifs évoquant un crâne, spécialisé dans les embuscades à la faveur des ombres.
+  7 PV, CA 13 ; grande hache +4 (1d12+4, x3), arc court +1 (1d6, x3).
+  Déplacement de 9 m ; allonge de 1,50 m ; vision dans le noir à 18 m ; Discrétion +3.
+
+note: Invisibilité dans les ombres
+  En lumière faible ou dans l'obscurité, il est effectivement invisible et bénéficie d'un camouflage total, même en combattant.
+  Un ennemi qui localise sa case subit encore 50 % de chances de rater ses attaques contre lui. Ce pouvoir cesse en lumière vive.
+
+step: Il peut préparer une embuscade
+  do: Se dissimuler dans une zone sombre avec Discrétion +3, la grande hache prête, et laisser une cible approcher.
+  note: Privilégier un passage où il peut frapper sans quitter la lumière faible ou l'obscurité.
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m ou moins
+  do: Frapper à la grande hache +4 (1d12+4, x3) depuis les ombres.
+
+step: Un adversaire est accessible après un déplacement de 9 m au plus
+  do: S'approcher en restant dans les ombres autant que possible, puis porter une attaque de grande hache +4 (1d12+4, x3).
+
+step: Aucun adversaire ne peut être rejoint et frappé ce round
+  do: Prendre l'arc court et tirer depuis une zone sombre si la cible est visible et à portée : +1 (1d6, x3).
+  note: Préparer de nouveau la grande hache avant le contact ; ne pas compter sur une attaque supplémentaire lors du changement d'arme.
+
+## Rounds suivants
+
+step: Il combat au contact dans les ombres
+  do: Porter une attaque de grande hache par round et conserver une position en lumière faible ou dans l'obscurité.
+  note: Un pas de placement de 1,50 m permet de rester dans les ombres lorsque leur limite est proche.
+
+step: Une lumière vive éclaire sa position
+  do: Regagner une zone de lumière faible ou d'obscurité pour retrouver son camouflage total.
+  note: La lumière vive supprime ce camouflage. Le soleil vif ou un sort de lumière du jour l'éblouit aussi : -1 aux jets d'attaque et aux tests de Perception fondés sur la vue.
+
+step: Ses points de vie deviennent négatifs
+  do: Utiliser la férocité pour rester conscient ; choisir une seule action simple ou une seule action de mouvement par round.
+  note: Il est chancelant et perd 1 PV par round. Si l'ennemi est à portée, il peut encore frapper à la grande hache ; sinon, il doit consacrer son action à se déplacer. Il meurt à -12 PV.
+
+## Repli
+
+step: Il lui reste de 1 à 3 PV et une issue sombre est accessible
+  do: Se retirer vers les ombres, puis rompre le contact en profitant du camouflage total.
+  note: Éviter une fuite à travers une zone de lumière vive où son principal avantage disparaît.
+
+step: Il est sous 0 PV et tente de fuir
+  do: Consacrer son unique action de mouvement à rejoindre les ombres, jusqu'à 9 m par round.
+  note: La férocité ne le soigne pas : la perte de 1 PV par round continue pendant le repli.

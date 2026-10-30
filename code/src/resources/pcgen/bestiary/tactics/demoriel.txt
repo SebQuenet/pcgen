@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Demoriel, séductrice infernale loyale mauvaise, FP 19 : 210 pv, CA 40, contact 25, prise au dépourvu 35. Elle privilégie les enchantements et laisse les diables combattre devant elle.
+  Épée courte +3 impie +30/+25/+20/+15 (1d6+9, critique 19–20) ou deux griffes +26 (1d6+6 chacune) ; allonge 1,50 m. Marche 12 m, vol 18 m avec manœuvrabilité moyenne.
+  RD 15/Bien et argent, RM 30 ; immunité au feu et au poison, résistance à l’acide 10 et au froid 10. Sa Volonté +6 rend les attaques mentales particulièrement dangereuses.
+
+resource: Invocation de diables | 3/jour | niveau 9 ; 1d6 érinyes ou 1d2 diables barbelés, réussite 100 % ; ou un diable cornu, réussite 60 %
+resource: Mur de feu | 3/jour | réserve distincte des invocations
+resource: Boule de feu rapide | 3/jour | action rapide grâce au don ; Réflexes DD 23 ; les boules de feu ordinaires restent à volonté
+resource: Nuée de météores | 1/jour | Réflexes DD 29
+resource: Mot de pouvoir étourdissant | 1/jour | aucun jet de sauvegarde ; cible ayant au plus 150 pv actuels ; RM applicable
+resource: Autres pouvoirs magiques | à volonté | NLS 20 ; charme-monstre DD 24, immobilisation de monstre DD 25, suggestion DD 23, blasphème DD 27, image accomplie DD 23, aura maudite DD 28
+
+step: Des intrus approchent
+  do: Les observer avec détection du Bien, détection de la magie et détection de l’invisibilité, toutes constantes ; repérer les combattants dangereux et les protections magiques
+  note: Vision dans le noir à 18 m, Perception +33 ; télépathie à 30 m pour coordonner les diables présents.
+
+step: Une conversation est encore possible
+  do: Employer Bluff +45, charme-monstre ou suggestion pour isoler le plus puissant adversaire avant les hostilités
+  note: Le charme ne donne pas un contrôle absolu ; une cible déjà menacée par Demoriel ou ses alliés bénéficie du bonus de sauvegarde prévu par le sort. Proposer une conduite plausible plutôt qu’un ordre suicidaire.
+
+step: Le combat devient imminent et elle dispose de plusieurs rounds
+  do: Invoquer des diables pour former un écran, puis lancer aura maudite juste avant l’affrontement, sur des rounds distincts
+  note: Privilégier une invocation certaine ; réserver le diable cornu aux situations où elle accepte le risque d’échec. Si des diables l’accompagnent déjà, les placer devant elle.
+
+## Ouverture
+
+note: Choix du premier round
+  Choisir l’ouverture adaptée ; un seul pouvoir en action simple par round. Une boule de feu rapide peut s’y ajouter si une zone de tir convient.
+
+step: Le meilleur combattant reste sensible aux enchantements et n’est pas encore menacé
+  do: Charme-monstre sur lui, Volonté DD 24, pour tenter de le soustraire au combat
+  note: Éviter de le prendre ensuite dans ses attaques de zone ou celles des diables.
+
+step: Un adversaire décisif paraît suffisamment blessé, à 22,50 m ou moins
+  do: Mot de pouvoir étourdissant pour le neutraliser immédiatement
+  note: Le seuil de 150 pv est une condition du pouvoir, pas une information que Demoriel connaît automatiquement ; elle juge d’après les blessures observées.
+
+step: Plusieurs ennemis non mauvais sont réunis à 12 m ou moins
+  do: Blasphème, Volonté DD 27, pour interrompre leur offensive
+  note: Au NLS 20, les créatures de plus de 20 DV sont immunisées ; les autres subissent des effets dépendant de leurs DV. Les diables mauvais sont épargnés.
+
+step: Les ennemis restent loin et offrent une bonne zone de tir
+  do: Nuée de météores, Réflexes DD 29, si plusieurs cibles importantes peuvent être atteintes ; sinon conserver cette utilisation et lancer boule de feu, Réflexes DD 23
+  note: Préserver les alliés non immunisés au feu et les adversaires charmés ; l’immunité au feu ne protège pas des impacts des météores.
+
+## Rounds suivants
+
+step: Des ennemis sont entravés par son envoûtement ou ses autres pouvoirs
+  do: Laisser les diables les contenir et consacrer ses prochains pouvoirs aux adversaires encore capables d’agir
+  note: Enrapture est bien présent dans le profil ; celui-ci n’en précise pas le DD ni les modalités, à reprendre dans sa description officielle.
+
+step: Un lanceur de sorts ou un combattant libre menace sa position
+  do: Immobilisation de monstre, Volonté DD 25, puis laisser les diables exploiter l’immobilisation
+  note: Contre une protection magique identifiée qui bloque ses enchantements ou réduit ses dégâts, consacrer plutôt le round à dissipation de la magie ; elle ne dispose pas de dissipation suprême.
+
+step: Une boule de feu peut atteindre des ennemis sans toucher une cible charmée
+  do: Ajouter une boule de feu rapide, Réflexes DD 23, à son pouvoir principal ou à son attaque à outrance
+  note: Une seule action rapide par round ; après trois utilisations, les boules de feu demandent une action simple.
+
+step: Des combattants tentent de franchir l’écran des diables
+  do: Mur de feu pour barrer leur approche et séparer les renforts du premier rang
+  note: Demoriel peut traverser les flammes grâce à son immunité ; le mur n’est pas une barrière solide.
+
+step: Un ennemi impose la mêlée et elle peut rester sur place
+  do: Attaque à outrance à l’épée courte +30/+25/+20/+15, ou deux griffes +26 si elle ne peut employer son arme
+  note: L’épée impie ajoute 2d6 dégâts contre les créatures bonnes. Une attaque à outrance permet au plus un pas de 1,50 m ; si elle doit se déplacer davantage, préférer un pouvoir ou une seule attaque.
+
+step: Sa position devient exposée ou les diables ne suffisent plus
+  do: Voler vers une position protégée ou employer téléportation suprême pour reprendre de la distance ; renouveler l’invocation sur un round ultérieur si nécessaire
+  note: Son déplacement aérien est de 18 m ; ne pas lui accorder gratuitement des attaques pendant son déplacement.
+
+## Repli
+
+step: Points de vie sous 70, ou menace mentale sérieuse malgré ses protections
+  do: Téléportation suprême vers un lieu sûr connu ; ordonner par télépathie aux diables de couvrir son départ
+  note: Elle n’emporte qu’elle-même et jusqu’à environ 22,5 kg d’objets ; ses alliés ne voyagent pas avec elle. Le seuil de 70 pv est un choix tactique.
+
+step: La téléportation est empêchée
+  do: Employer son action pour invisibilité sur elle-même, puis s’éloigner en vol si le passage est libre ; si elle est encerclée, se dégager d’abord par une retraite
+  note: Ses attaques rompent l’invisibilité ; elle s’abstient donc d’attaquer pendant la fuite. Un mur de feu peut couvrir un départ sur un autre round.

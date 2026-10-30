@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Barbegazi, petit humanoïde gnome des collines et montagnes froides, neutre mauvais. Avec 11 pv et une CA de 14, il privilégie l'embuscade et les pouvoirs de froid avant la mêlée.
+  Épée courte +3 (1d4) ou dague +3 (1d3) au contact, allonge 1,50 m ; dague lancée +3 (1d3). Marche et creusement à 6 m par déplacement ; vision nocturne.
+  Immunisé au froid, vulnérable au feu ; Discrétion +12, ou +15 dans son environnement natal.
+
+resource: Métal gelé | 1/jour | NLS 3 ; portée 9 m ; équipement métallique d'une créature ; Volonté DD 13 annule ; durée 7 rounds
+resource: Projection de glaçons | 1/jour | NLS 3 ; comme mains brûlantes, avec des dégâts de froid ; cône de 4,50 m ; 3d4 dégâts de froid, Réflexes DD 13 pour moitié
+resource: Dagues | 3 | À lancer ou à utiliser au contact ; chaque dague lancée quitte son équipement jusqu'à récupération
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se dissimuler derrière un couvert dans son terrain natal et repérer une issue par creusement dans un sol meuble.
+  note: Il doit observer les ennemis depuis la surface ; aucun sens indiqué ne lui permet de les localiser à travers le sol.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans le cône de 4,50 m
+  do: Utiliser projection de glaçons en orientant le cône pour épargner ses alliés sensibles au froid.
+  note: Ce pouvoir est son attaque immédiate la plus dangereuse ; le dépenser avant de se laisser enfermer au contact.
+
+step: À défaut de cibles regroupées, un ennemi porte une armure métallique à 9 m ou moins et ne le menace pas au contact
+  do: Utiliser métal gelé sur son équipement, puis se déplacer vers un couvert si nécessaire.
+  note: Le premier round du pouvoir ne cause aucun dégât ; choisir une armure que l'adversaire ne peut pas abandonner rapidement.
+
+step: Un ennemi est déjà au contact et aucun pouvoir ne peut être utilisé sans s'exposer
+  do: Attaquer à l'épée courte +3 (1d4).
+
+## Rounds suivants
+
+step: Projection de glaçons est encore disponible et plusieurs ennemis se regroupent à portée
+  do: Si nécessaire et possible, faire un pas de 1,50 m pour sortir des cases menacées, puis utiliser le cône de froid.
+  note: Utiliser un pouvoir magique dans une case menacée provoque une attaque d'opportunité ; avec 11 pv, éviter cette exposition.
+
+step: Métal gelé est encore disponible et un porteur d'armure métallique est à 9 m ou moins, hors du contact
+  do: Utiliser métal gelé, puis maintenir un obstacle ou de la distance entre cette cible et lui.
+
+step: Métal gelé affecte déjà une cible
+  do: Laisser le pouvoir agir tout en attaquant depuis un couvert ou en se déplaçant pour éviter la mêlée.
+  note: Rounds du pouvoir : aucun dégât au premier et au septième ; 1d4 de froid au deuxième et au sixième ; 2d4 aux troisième, quatrième et cinquième. Aucune concentration n'est nécessaire.
+
+step: Un ennemi approche et il reste une dague disponible
+  do: Lancer une dague +3 (1d3), puis se déplacer vers un couvert si la voie est libre.
+  note: Privilégier une cible proche ; une seule dague lancée par attaque, avec les pénalités habituelles de distance.
+
+step: La mêlée est inévitable
+  do: Frapper à l'épée courte +3 (1d4), de préférence un adversaire déjà blessé ; chercher une prise en tenaille si un allié est présent.
+  note: Il choisit l'épée ou la dague ; son profil ne lui donne pas deux attaques simultanées.
+
+## Repli
+
+step: Il tombe à 5 pv ou moins, ou un adversaire manifeste une attaque de feu
+  do: Rompre le combat et gagner l'issue repérée ; creuser à 6 m par déplacement dans un sol meuble pour se mettre hors de vue.
+  note: S'il est menacé au contact, utiliser une retraite avant de fuir lorsque le terrain le permet. Le creusement ne permet pas de traverser la roche.
+
+step: Aucun sol meuble n'est accessible
+  do: Fuir à pied en utilisant les couverts, puis se dissimuler dès qu'il échappe à la vue de ses poursuivants.

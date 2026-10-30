@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Boggart, petite créature féerique chaotique mauvaise, intelligente et discrète, qui privilégie les embuscades dans les forêts et les marais tempérés.
+  31 pv ; CA 16 ; réduction des dégâts 5/fer froid. Deux griffes +9, chacune à 1d3+2 dégâts, lors d'une attaque à outrance ; allonge de 3 m. Déplacement et nage à 9 m ; Discrétion +23, Perception +12, vision nocturne.
+  Sa magie psychique lui permet de préparer le terrain, d'isoler une victime et de couvrir sa fuite.
+
+resource: Magie psychique | 10 PE par jour | réserve commune ; NLS 8 ; concentration +12
+resource: Aversion | 2 PE par utilisation | Volonté DD 16
+resource: Terrain hallucinatoire | 4 PE par utilisation | Volonté DD 18 en cas d'interaction
+resource: Immobilisation de personne | 2 PE par utilisation | humanoïde ; Volonté DD 16
+resource: Invisibilité | 2 PE par utilisation | DD 16 indiqué au profil ; conserver si possible 2 PE pour le repli
+resource: Manœuvre télékinétique | 0 PE par utilisation | utilisable sans dépenser la réserve
+
+step: Il connaît l'approche des intrus et dispose du temps de préparation nécessaire
+  do: Utiliser terrain hallucinatoire pour donner à une zone marécageuse l'apparence d'un passage ferme, puis se cacher à proximité d'une issue praticable à la nage.
+  note: L'illusion modifie l'apparence du terrain naturel ; elle ne crée aucun obstacle réel et ne cache pas les créatures.
+
+step: Les intrus approchent de sa cachette
+  do: Observer depuis le couvert avec Discrétion +23 et repérer un humanoïde isolé, une berge et une voie de fuite.
+  note: Invisibilité coûte 2 PE supplémentaires ; après terrain hallucinatoire et invisibilité, il reste 4 PE, dont 2 à réserver à la fuite.
+
+## Ouverture
+
+step: Un humanoïde s'est séparé du groupe et le boggart peut encore dépenser 2 PE en gardant sa réserve de fuite
+  do: Lancer immobilisation de personne sur lui, Volonté DD 16.
+  note: La cible obtient une nouvelle sauvegarde à chacun de ses tours pour se libérer. Cette attaque met fin à une éventuelle invisibilité du boggart.
+
+step: Un adversaire mobile menace de le rejoindre et il peut consacrer 2 PE à son contrôle
+  do: Utiliser aversion pour lui faire éviter le passage ou le secteur par lequel il doit approcher, Volonté DD 16.
+  note: Choisir cette dépense en tenant compte des PE déjà utilisés et de ceux nécessaires au repli.
+
+step: Il économise sa magie ou la cible résiste à ses pouvoirs
+  do: Tenter un croc-en-jambe à distance avec manœuvre télékinétique, puis exploiter le ralentissement pour garder ses distances.
+
+## Rounds suivants
+
+step: Une victime est isolée et se trouve à 3 m ou moins au début de son tour
+  do: Effectuer une attaque à outrance avec ses deux griffes +9, chacune à 1d3+2 dégâts.
+  note: Profiter de son allonge pour frapper depuis une position que les autres adversaires atteignent difficilement.
+
+step: Une victime de taille M ou inférieure est adjacente, à 1,50 m, et un recul vers l'eau est possible
+  do: Tenter un entraînement à +9 contre sa DMD pour reculer en l'emmenant vers la berge ou dans l'eau.
+  note: Cette manœuvre consomme son action simple et déplace aussi le boggart ; sa nage à 9 m lui donne ensuite une voie de déplacement utile.
+
+step: Plusieurs adversaires se rapprochent ou la victime rejoint ses alliés
+  do: Se déplacer vers le couvert ou dans l'eau et utiliser les manœuvres télékinétiques pour faire trébucher un poursuivant lorsque la situation le permet.
+  note: Alterner déplacement et contrôle au lieu de rester encerclé pour multiplier les attaques de griffes.
+
+## Repli
+
+step: Il tombe à 10 pv ou moins, ou plusieurs adversaires parviennent à l'encercler
+  do: Dépenser les 2 PE réservés pour devenir invisible, puis gagner le couvert ou fuir à la nage, à 9 m par déplacement.
+  note: Rejoindre une cachette avec Discrétion +23 ; une attaque mettrait fin à l'invisibilité.
+
+step: Il doit fuir avec moins de 2 PE disponibles
+  do: Se désengager pour sortir des zones menacées, puis gagner une issue dans les fourrés ou par l'eau.
+  note: La réduction des dégâts 5/fer froid aide contre les coups ordinaires, mais ses 31 pv ne permettent pas un échange prolongé.

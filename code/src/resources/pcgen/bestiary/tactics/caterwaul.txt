@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Caterwaul, prédateur félin solitaire, bête magique de taille M, chaotique mauvaise ; 37 pv, CA 18, initiative +6.
+  Morsure +8 (1d6+2 et étreinte), 2 griffes +8 (1d4+2 chacune) ; bond et pattes arrière : 2 griffes supplémentaires (1d4+2 chacune).
+  Déplacement 15 m, escalade 6 m, allonge 1,50 m ; cri perçant et sprint pour ouvrir la chasse.
+
+resource: Cri perçant | 1 fois toutes les 10 minutes | 1d8 dégâts sonores à toutes les créatures qui l'entendent dans un rayon de 18 m ; Vigueur DD 16 annule
+resource: Sprint | 1 fois par minute | permet une charge jusqu'à 60 m
+
+step: Des proies approchent
+  do: Les observer depuis les hautes herbes, puis choisir une cible isolée et une trajectoire dégagée pour la charge.
+  note: Discrétion +14, ou +26 dans les hautes herbes ; Perception +13, odorat, vision nocturne et vision dans le noir à 18 m.
+
+step: Le terrain offre des arbres ou des parois accessibles
+  do: Utiliser l'escalade pour rejoindre une cachette ou préparer une issue de fuite.
+  note: Escalade +14 ; une charge exige une trajectoire praticable, sans obstacle ni terrain difficile.
+
+## Ouverture
+
+step: Premier round, des ennemis sont à 18 m ou moins et le cri est disponible
+  do: Pousser le cri perçant, puis se déplacer si nécessaire pour préparer la charge du round suivant.
+  note: Le cri touche toutes les créatures qui l'entendent dans la zone ; il ne laisse pas le temps de charger pendant ce même tour.
+
+step: Tour consacré à l'assaut, une cible est accessible en charge
+  do: Charger et utiliser bond pour porter la morsure, les deux griffes et les deux attaques de pattes arrière.
+  note: Charge jusqu'à 30 m, ou 60 m avec sprint disponible ; appliquer les modificateurs habituels de charge, +2 aux attaques et -2 à la CA jusqu'au prochain tour.
+
+step: La morsure touche
+  do: Tenter immédiatement de saisir la victime avec étreinte.
+  note: Cette tentative de lutte est gratuite et ne provoque pas d'attaque d'opportunité.
+
+## Rounds suivants
+
+step: Une cible est au contact et le Caterwaul n'a pas besoin de se déplacer
+  do: Faire une attaque à outrance : morsure +8 et deux griffes +8 ; tenter étreinte si la morsure touche.
+  note: Sans charge ni lutte déjà engagée, les pattes arrière ne s'ajoutent pas à cette attaque.
+
+step: Une victime est déjà agrippée au début du tour
+  do: Maintenir la lutte pour lui infliger des dégâts, puis utiliser les deux attaques de pattes arrière, chacune pour 1d4+2 dégâts.
+  note: Si la victime se libère, reprendre morsure et griffes dès qu'elle est à portée.
+
+step: La proie s'éloigne
+  do: La poursuivre et charger de nouveau si une trajectoire dégagée le permet ; réutiliser sprint seulement après une minute.
+  note: Si un déplacement ordinaire est nécessaire pour atteindre le contact, porter une seule morsure ce tour.
+
+step: Une attaque de zone permet un jet de Réflexes pour réduire les dégâts de moitié
+  do: Résoudre le jet de Réflexes à +10 et appliquer esquive totale en cas de réussite.
+  note: Une réussite annule alors les dégâts ; ce pouvoir ne protège pas contre tous les effets de zone.
+
+## Repli
+
+step: Points de vie à 10 ou moins, ou proie devenue trop dangereuse
+  do: Relâcher toute victime et effectuer une retraite jusqu'à 30 m vers les hautes herbes ou un passage escarpé ; grimper à 6 m si cela coupe la poursuite.
+  note: Une fois hors de vue et à couvert, se dissimuler. Le sprint sert uniquement à charger et ne fournit pas une vitesse de fuite de 60 m.

@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Golem fournaise, golem neutre de taille TG, sans intelligence : il exécute ses consignes sans élaborer de stratégie personnelle. 144 pv, CA 29.
+  Deux coups +28, chacun infligeant 4d6+11 dégâts plus 2d6 de feu, avec étreinte ; lutte +36. Espace et allonge de 4,50 m ; déplacement de 6 m par round.
+  RD 15/adamantium, immunités des créatures artificielles, immunité au feu et à la magie ; résistance au froid 20. Vision dans le noir à 18 m et vision nocturne.
+
+step: Ses consignes lui assignent un passage à garder
+  do: Se placer dans le passage, si ses dimensions le permettent, pour obliger les intrus à traverser son allonge de 4,50 m
+  note: Il reste à son poste tant que ses ordres ne lui imposent pas de poursuivre.
+
+## Ouverture
+
+step: Un ennemi est déjà à 4,50 m ou moins
+  do: Attaque à outrance : deux coups +28, chacun pour 4d6+11 dégâts plus 2d6 de feu
+  note: Sur un coup au but contre une cible de taille G ou inférieure, tenter l'étreinte avec un test de lutte à +36, sans provoquer d'attaque d'opportunité.
+
+step: Aucun ennemi n'est à portée, mais une cible peut être atteinte après un déplacement de 6 m ou moins
+  do: Avancer jusqu'à placer la cible dans son allonge, puis porter un seul coup +28 avec dégâts de feu et tentative d'étreinte
+  note: Son déplacement ne lui laisse pas d'attaque à outrance ce round.
+
+step: Les ennemis restent hors de portée après un déplacement simple
+  do: Avancer vers eux selon ses consignes, avec un double déplacement de 12 m si nécessaire
+  note: Il ne dispose d'aucune attaque à distance dans ce profil.
+
+## Rounds suivants
+
+step: Il tient une victime en lutte
+  do: Maintenir la lutte et choisir d'infliger les dégâts d'un coup à la victime
+  note: Maintenir la prise consomme son action simple ; il ne porte pas aussi ses deux coups en attaque à outrance.
+
+step: Il n'a aucune prise et un ennemi reste dans son allonge
+  do: Répéter les deux coups en attaque à outrance et tenter l'étreinte sur un coup au but
+  note: Profiter des attaques d'opportunité provoquées dans son allonge ; il ne dispose normalement que d'une telle attaque par round.
+
+step: Sa cible s'éloigne et ses ordres autorisent la poursuite
+  do: Avancer de 6 m au maximum pour reprendre les coups simples, puis l'attaque à outrance dès qu'il peut rester sur place
+  note: Ses défenses absorbent une partie des ripostes ; elles ne lui donnent aucune régénération ni récupération de pv.
+
+## Repli
+
+step: Il subit des dégâts sans recevoir d'ordre de repli
+  do: Continuer à exécuter ses consignes jusqu'à sa destruction
+  note: Sans intelligence, il ne décide pas de fuir à un seuil de pv ; à 0 pv, il est détruit.
+
+step: Une consigne applicable lui impose de se retirer
+  do: Relâcher toute prise et rejoindre le point prévu, à 6 m par déplacement ou 12 m en double déplacement

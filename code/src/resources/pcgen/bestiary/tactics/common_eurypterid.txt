@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Euryptéride commun, vermine aquatique amphibie de taille M, sans intelligence ; 11 pv, CA 14, immunité aux effets mentaux.
+  Deux pinces +1 (1d3 chacune), allonge de 1,50 m ; dard +1 (1d3 et poison), allonge de 3 m.
+  Déplacement de 6 m sur terre et nage de 12 m ; vision dans le noir à 18 m, vision nocturne et perception des vibrations à 9 m.
+
+resource: Poison du dard | à chaque blessure infligée par le dard | DD, effets et durée non précisés dans le bloc fourni
+
+step: Une créature approche dans son environnement aquatique
+  do: Réagir à sa présence avec ses sens et se tourner vers la cible la plus proche.
+
+## Ouverture
+
+step: La cible est à plus de 3 m
+  do: Avancer ou nager pour l'amener à portée du dard, puis porter une seule attaque de dard +1 si un déplacement suffit.
+  note: Après un déplacement normal, il ne peut pas enchaîner ses trois attaques.
+
+step: La cible est à plus de 1,50 m mais à 3 m ou moins
+  do: Frapper avec le dard +1 (1d3 et poison).
+  note: Les pinces ne portent pas à cette distance.
+
+step: La cible est déjà à 1,50 m ou moins
+  do: Effectuer une attaque à outrance : deux pinces +1 (1d3 chacune) et un dard +1 (1d3 et poison).
+
+## Rounds suivants
+
+step: Une cible reste à 1,50 m ou moins
+  do: Répéter l'attaque à outrance contre elle.
+  note: Son comportement reste instinctif : il ne reconnaît pas les rôles des adversaires et ne coordonne pas de manœuvre élaborée.
+
+step: La cible est à 3 m et un pas de placement est possible
+  do: Faire un pas de placement de 1,50 m vers elle, puis attaquer à outrance avec les deux pinces et le dard.
+
+step: La cible s'éloigne au-delà de 3 m
+  do: La suivre, de préférence dans l'eau, puis attaquer une fois avec le dard si elle revient à portée après un seul déplacement.
+  note: Il ne possède ni attaque à distance ni capacité spéciale pour saisir ou entraîner sa proie.
+
+## Repli
+
+step: Il est gravement blessé, à 3 pv ou moins, et une voie de fuite est libre
+  do: Se retirer vers l'eau et s'éloigner à la nage ; utiliser l'action de retraite si elle permet de quitter le combat.
+  note: La retraite permet jusqu'à 24 m à la nage ou 12 m sur terre.
+
+step: La fuite est impossible
+  do: Continuer à frapper la cible à portée avec le dard, ou avec les trois attaques si elle est à 1,50 m ou moins et qu'il peut attaquer à outrance.

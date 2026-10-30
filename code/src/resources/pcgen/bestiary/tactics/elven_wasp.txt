@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Guêpe elfique, vermine de taille M des forêts tempérées, sans intelligence ; elle combat par instinct. 58 pv, CA 17.
+  Aiguillon +9 (1d6+4 plus poison), allonge de 1,50 m. Vol à 18 m par déplacement, manœuvrabilité bonne ; marche à 6 m.
+  Vision dans le noir à 18 m, Perception +9, Discrétion +6 ; immunité aux effets mentaux.
+
+step: La végétation offre un couvert avant l'arrivée des intrus
+  do: Rester dissimulée dans ce couvert avec Discrétion +6 et repérer les créatures proches avec Perception +9
+
+## Ouverture
+
+step: Un adversaire est accessible en un déplacement de vol de 18 m
+  do: Voler jusqu'à portée de l'adversaire le plus proche et porter un coup d'aiguillon +9 (1d6+4 plus poison)
+  note: Elle termine son approche à 1,50 m ou moins de sa cible et reste au contact après l'attaque.
+
+step: Un adversaire est déjà à 1,50 m ou moins
+  do: Porter immédiatement un coup d'aiguillon +9 (1d6+4 plus poison)
+
+step: Aucun adversaire n'est accessible en un déplacement
+  do: Se rapprocher en vol, à 18 m par déplacement, jusqu'à pouvoir engager une cible
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter le coup d'aiguillon +9 (1d6+4 plus poison) chaque round
+  note: Elle dispose d'une seule attaque d'aiguillon par round lors de ses attaques ordinaires.
+
+note: Poison
+  Le bloc fourni ne précise ni le DD, ni la fréquence, ni les effets du poison ; ne lui attribuer aucun effet chiffré supplémentaire.
+
+step: La cible s'éloigne ou tombe hors de combat
+  do: Rejoindre la créature hostile la plus proche en vol et la piquer si un seul déplacement suffit
+  note: Son vol lui permet d'atteindre une cible en hauteur ou de franchir un obstacle au sol si le passage est dégagé.
+
+step: Plusieurs guêpes participent au combat
+  do: Faire attaquer à chacune l'adversaire accessible le plus proche
+  note: Leur absence d'intelligence appelle des réactions individuelles et instinctives.
+
+## Repli
+
+step: Les points de vie tombent sous 15 et une issue aérienne est dégagée
+  do: Battre en retraite par les airs, puis poursuivre la fuite à 18 m par déplacement vers le couvert forestier
+  note: Ce seuil sert de consigne de survie instinctive au meneur.
+
+step: Toute fuite est impossible
+  do: Continuer à piquer l'adversaire à portée

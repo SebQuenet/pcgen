@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Charonodaemon, extérieur daemon de taille M, neutre mauvais, FP 9. Combattant résistant qui disperse ses adversaires par la peur avant de frapper les isolés.
+  105 pv ; CA 24, contact 13 ; déplacement de 12 m ; allonge de 1,50 m. Bâton +15/+10 (1d6+5) ; regard de terreur à 9 m, Volonté DD 19 ou effet du sort terreur.
+  Réduction des dégâts 10/Bien ; résistance à la magie 19 ; résistances au froid, à l'électricité et au feu de 10 ; immunités à l'acide, aux effets de mort, aux maladies et au poison. Sa Volonté de +5 reste son point faible.
+
+resource: Invocation | 1/jour | 1d4 hydrodaemons ou 1 charonodaemon ; 35 % de réussite ; niveau 4
+resource: Ténèbres profondes et profanation | à volonté | pouvoirs magiques, NLS 10
+resource: Téléportation suprême et changement de plan | à volonté | lui-même et son esquif uniquement
+
+step: Des intrus approchent
+  do: Observer avec détection de la magie et détection de l'invisibilité, toutes deux constantes ; choisir une position permettant de voir les approches et de battre en retraite
+  note: Vision dans le noir à 18 m ; Perception +15. Repérer les menaces avant de s'exposer à plusieurs combattants.
+
+step: Un échange peut retarder les intrus ou les séparer
+  do: Employer Bluff +17, Diplomatie +21 ou Intimidation +21 pour négocier, tromper ou menacer
+  note: Ces compétences ne lui donnent aucun contrôle magique sur ses interlocuteurs.
+
+## Ouverture
+
+step: Plusieurs adversaires le menacent et l'invocation est disponible
+  do: Tenter l'invocation avant de se laisser enfermer au contact ; placer les renforts obtenus entre lui et une partie du groupe
+  note: Une tentative ratée consomme l'utilisation quotidienne. Communiquer avec les renforts par télépathie à 30 m.
+
+step: Un adversaire commence son tour à 9 m ou moins et peut croiser son regard
+  do: Résoudre le regard de terreur, Volonté DD 19 ou effet du sort terreur
+  note: Le regard fonctionne sans remplacer son attaque au bâton. Les ennemis qui évitent son regard ou ne peuvent pas le voir réduisent son efficacité.
+
+step: Une cible dangereuse à 9 m ou moins peut voir ses yeux et n'a pas fui
+  do: Diriger activement son regard contre elle par une action simple pour lui imposer une nouvelle sauvegarde de Volonté DD 19
+  note: Préférer cette action à un coup de bâton si mettre cette cible en fuite permet de rompre la coordination du groupe.
+
+step: Une cible accessible reste au contact
+  do: Frapper au bâton ; s'il doit se déplacer pour l'atteindre, porter une seule attaque à +15 (1d6+5)
+
+## Rounds suivants
+
+step: Une cible reste à portée et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance au bâton, +15/+10 (1d6+5 par coup)
+  note: Employer Attaque en puissance contre une cible facile à toucher ; conserver la précision contre une forte armure.
+
+step: Le regard a dispersé le groupe
+  do: Concentrer les coups sur un adversaire resté seul ; conserver autant que possible les autres dans les 9 m du regard
+  note: Éviter de poursuivre un fuyard si cela expose son dos aux combattants encore présents.
+
+step: Une arme ennemie cause l'essentiel des dégâts et paraît cassable
+  do: Tenter une destruction de cette arme avec Science de la destruction
+  note: Préférer les attaques ordinaires si la solidité de l'objet rend sa destruction peu probable.
+
+step: Il est encerclé ou les attaques à distance deviennent trop dangereuses
+  do: Utiliser téléportation suprême pour rejoindre un emplacement connu permettant de reprendre le combat dans de meilleures conditions
+  note: Seuls lui-même et son esquif sont transportés ; les renforts restent sur place.
+
+step: Il doit masquer un déplacement ou préparer sa fuite
+  do: Créer des ténèbres profondes pour gêner les adversaires qui ne peuvent pas y voir
+  note: Sa vision dans le noir ne perce pas l'obscurité surnaturelle. Si les ennemis ne le voient plus, son regard ne peut plus les affecter ; réserver ce pouvoir à la protection de ses déplacements.
+
+## Repli
+
+step: Points de vie sous 30, ou combat manifestement perdu
+  do: Utiliser téléportation suprême vers un refuge connu, avec son esquif s'il est présent
+  note: Ne pas attendre d'être immobilisé ou privé de l'usage de ses pouvoirs pour chercher à fuir.
+
+step: Une fuite vers un autre plan offre une meilleure issue
+  do: Utiliser changement de plan sur lui-même et son esquif
+  note: Ce pouvoir ne permet pas d'emporter ses renforts ni d'autres passagers.

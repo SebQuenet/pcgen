@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  L'Homme-abeille de Bellis, Vernon Vestha, est un ancien oracle forestier devenu un essaim vivant de forme humaine, une aberration de taille M, neutre mauvaise.
+  Coup au contact +9 contre la CA de contact, à 1,50 m : 3d6 dégâts et poison. Marche à 9 m, vol à 18 m avec une bonne manœuvrabilité ; il privilégie les attaques mobiles et l'usure.
+  110 pv, CA 23, réduction des dégâts 15/— et guérison accélérée de 10 pv par round. Immunités : maladie, poison, paralysie, sommeil et étourdissement.
+
+resource: Convocation | 3/jour | 1 essaim de guêpes ou 1d4+1 abeilles géantes ; réussite automatique
+resource: Mission mineure | 3/jour | Volonté DD 17 ; créature vivante de 7 DV au maximum comprenant ses instructions
+resource: Bagou | 3/jour | préparer une négociation trompeuse
+
+step: Il peut préparer la rencontre
+  do: Envoyer ses émissaires apicoles reconnaître les lieux comme des yeux indiscrets ; consulter augure ou divination pour préparer son approche
+  note: Les émissaires peuvent aussi transmettre des messages comme vent de murmures, à volonté ; communiquer avec les vermines permet de les interroger.
+
+step: Les visiteurs viennent négocier
+  do: Prendre une apparence d'homme humain avec modification d'apparence et utiliser bagou avant de marchander ses services
+  note: Il exige un prix cruel pour ses faveurs ; une mission mineure peut imposer un service à une cible admissible, avec Volonté DD 17, sans ordre suicidaire.
+
+## Ouverture
+
+step: Les ennemis sont repérés avant le contact
+  do: Depuis une position à couvert, convoquer un essaim de guêpes contre des adversaires regroupés, ou des abeilles géantes pour occuper plusieurs ennemis
+  note: Faire engager les créatures convoquées avant de s'exposer ; consacrer cette première action à la convocation.
+
+step: Une cible isolée peut être atteinte sans commencer adjacent à elle
+  do: Au tour suivant, utiliser Attaque éclair : approcher, porter un coup +9 contre la CA de contact, puis repartir hors de sa portée
+  note: Action complexe ; parcourir au moins 3 m avant le coup, dans une limite totale de 18 m en vol ou 9 m au sol. La cible ne porte pas d'attaque d'opportunité contre ce déplacement ; les autres ennemis restent dangereux.
+
+step: Un ennemi est déjà adjacent
+  do: Porter le coup au contact, puis se dégager si une trajectoire sûre existe
+  note: Mobilité donne +4 à la CA contre les attaques d'opportunité provoquées par son déplacement ; Acrobatie +23 peut aider à les éviter.
+
+## Rounds suivants
+
+step: Il dispose d'une trajectoire d'approche et de sortie
+  do: Répéter Attaque éclair contre une cible vulnérable au poison, de préférence isolée ou occupée par les créatures convoquées
+  note: Poison du coup : Vigueur DD 23, affaiblissement de 1d4 Force, une fois par round pendant 6 rounds ; guérison après deux sauvegardes consécutives réussies.
+
+step: Une cible est empoisonnée et ses alliés protègent son approche
+  do: Rester hors de portée et laisser agir le poison pendant que la guérison accélérée restaure 10 pv par round
+  note: En se déplaçant de plus de 1,50 m pendant son tour, Wind Stance lui accorde 20 % de camouflage contre les attaques à distance pendant 1 round.
+
+step: Un lanceur de sorts adjacent recule d'un pas de placement
+  do: Utiliser Step Up en action immédiate pour le suivre de 1,50 m et rester adjacent
+  note: Au prochain tour, aucun pas de placement et 1,50 m à retrancher de son déplacement éventuel.
+
+step: Les créatures convoquées sont éliminées et il peut agir sans être encerclé
+  do: Dépenser une nouvelle convocation pour occuper les poursuivants, puis reprendre les attaques mobiles au tour suivant
+
+## Repli
+
+step: Ses points de vie tombent à 35 ou moins, ou des attaques de zone rendent l'approche trop coûteuse
+  do: Rompre le contact en volant vers un couvert, avec une retraite pouvant atteindre 36 m si la trajectoire le permet ; laisser les créatures convoquées retenir les poursuivants
+  note: Son corps d'essaim subit 50 % de dégâts supplémentaires des effets de zone. Les effets physiques ciblant un nombre précis de créatures ne l'affectent pas, sauf les siens ; les effets mentaux restent possibles.
+
+step: Des vents violents menacent sa fuite
+  do: Chercher un abri et poursuivre au sol plutôt que traverser la zone venteuse
+  note: Il compte comme une créature de taille Min pour les effets du vent.
+
+step: Il a échappé aux poursuivants
+  do: Se dissimuler avec Discrétion +22 et attendre que la guérison accélérée restaure ses points de vie avant d'envisager un nouvel engagement

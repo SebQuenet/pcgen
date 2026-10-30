@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Vermine aquatique gargantuesque des eaux chaudes, neutre et dépourvue d'intelligence ; elle réagit par instinct, sans élaborer de stratégie ni coordonner ses congénères.
+  104 pv, CA 17 ; nage à 18 m ; espace occupé de 6 m et allonge de 4,50 m.
+  Une attaque de tentacule +13 (2d6+7 plus poison) ; enchevêtrement, transparence et propulsion par jet.
+
+step: Aucune proie à portée
+  do: Rester dans l'eau et laisser une proie approcher, en profitant de la transparence
+  note: Vision dans le noir et sens aquatique à 18 m ; Perception +4, Discrétion -1.
+
+## Ouverture
+
+step: Une proie se trouve à 4,50 m ou moins
+  do: La frapper d'un tentacule +13, pour 2d6+7 dégâts plus poison
+  note: Exploiter son allonge pour atteindre une proie avant qu'elle ne soit au contact immédiat.
+
+step: La proie est au-delà de 4,50 m
+  do: Nager vers elle, jusqu'à 18 m, puis attaquer si elle entre dans l'allonge de 4,50 m
+  note: Si elle reste hors de portée, poursuivre l'approche dans l'eau.
+
+## Rounds suivants
+
+step: Une proie demeure à portée
+  do: Continuer à la frapper d'un tentacule +13 chaque round, avec poison
+  note: Même sans déplacement, le bloc ne donne qu'une seule attaque de tentacule.
+
+step: L'enchevêtrement retient une proie à portée
+  do: Concentrer les attaques de tentacule sur cette proie tant qu'elle reste accessible
+  note: Le bloc fourni ne précise ni les modalités de l'enchevêtrement ni le DD et les effets du poison ; utiliser leurs règles de source sans ajouter de valeurs.
+
+step: La proie s'éloigne dans l'eau
+  do: La suivre à la nage pour la ramener dans l'allonge de 4,50 m
+
+step: Les adversaires sont hors de l'eau et hors d'allonge
+  do: Rester immergée et attaquer seulement ceux qui redeviennent accessibles
+
+## Repli
+
+step: Points de vie sous 26 et possibilité de fuir
+  do: Rompre le combat par instinct de survie, utiliser le jet pour s'éloigner dans l'eau, puis poursuivre la fuite à la nage
+  note: La nage vaut 18 m ; la vitesse et les modalités du jet ne sont pas précisées dans le bloc fourni.
+
+step: Aucune voie de fuite
+  do: Continuer à frapper la créature la plus proche à portée

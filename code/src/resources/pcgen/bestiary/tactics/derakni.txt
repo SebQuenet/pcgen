@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Derakni, démon de Grande taille, FP 10 : 126 pv, CA 25, allonge de 3 m. Déplacement de 9 m au sol et vol de 18 m, manœuvrabilité bonne.
+  Attaque à outrance : morsure +18 (1d4+8 et poison), deux griffes +18 (1d4+8 chacune), dard +18 (1d8+8, critique 19–20 et poison).
+  Réduction des dégâts 10/bien, résistance à la magie 21 ; immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10.
+
+resource: Énergie négative (enervation) | 3/jour | NLS 12 ; rayon infligeant 1d4 niveaux négatifs, sans sauvegarde
+resource: Convocation de nuées à incantation rapide | 3/jour | action rapide ; la concentration ultérieure demande une action simple
+resource: Nuée d'insectes | 1/jour | NLS 12
+resource: Invocation | 1/jour | niveau 4 ; 40 % de réussite ; un derakni ou 1d4 nuées de vescavors
+resource: Contagion | à volonté | Vigueur DD 17 ; NLS 12
+resource: Bourrasque | à volonté | NLS 12
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 22,5 kg d'objets seulement
+
+step: Il peut repérer les adversaires avant leur arrivée
+  do: Observer depuis une position surélevée, avec Perception +25, odorat et vision dans le noir à 18 m ; utiliser Discrétion +16 pour préparer l'approche.
+  note: Avec des congénères, coordonner les angles d'attaque par télépathie à 30 m.
+
+step: Le combat est imminent et il dispose du temps nécessaire
+  do: Tenter son invocation : choisir un derakni pour renforcer la mêlée, ou les nuées de vescavors pour gêner plusieurs adversaires.
+  note: Prévoir l'engagement même si l'invocation échoue ; elle ne réussit que dans 40 % des cas.
+
+## Ouverture
+
+step: Des ennemis sont à portée de ses pouvoirs et hors de son allonge
+  do: Utiliser convocation de nuées à incantation rapide sur un groupe, puis énergie négative sur l'adversaire le plus dangereux.
+  note: La convocation rapide emploie l'action rapide ; le rayon emploie l'action simple. Ces nuées sont distinctes des vescavors obtenus par son invocation quotidienne.
+
+step: Les ennemis doivent traverser un passage resserré
+  do: Privilégier nuée d'insectes pour occuper le passage et perturber leur approche ; rester en vol à proximité pour attaquer ceux qui passent.
+  note: Ce pouvoir remplace le rayon de l'ouverture pour ce round.
+
+step: Un ennemi est déjà à 3 m ou moins et aucune approche n'est nécessaire
+  do: Effectuer l'attaque à outrance avec morsure, deux griffes et dard.
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge et il peut rester sur place
+  do: Répéter l'attaque à outrance, en concentrant les quatre attaques sur une même cible.
+  note: La morsure et le dard appliquent leur poison ; le bloc fourni n'en précise ni le DD ni les effets.
+
+step: Une cible est facile à toucher
+  do: Activer Attaque en puissance : les quatre attaques passent à +15 ; morsure et griffes infligent 1d4+14, le dard 1d8+14.
+
+step: Rester au contact l'expose à trop d'attaques
+  do: Utiliser Attaque en vol : se déplacer, porter une attaque de dard à 3 m, puis poursuivre le déplacement pour s'éloigner, dans la limite de 18 m de vol.
+  note: Cette passe permet une seule attaque ; elle ne protège pas automatiquement des attaques d'opportunité.
+
+step: Il préfère combattre à distance et dispose encore d'énergie négative
+  do: Tirer un nouveau rayon sur la cible prioritaire, en profitant du vol pour conserver une ligne de tir.
+
+step: La nuée convoquée gêne encore plusieurs ennemis
+  do: Consacrer son action simple à maintenir la concentration et utiliser son déplacement pour se repositionner en vol.
+  note: S'il choisit une attaque ou un autre pouvoir à la place, il cesse de se concentrer ; la nuée persiste alors encore 2 rounds.
+
+step: Une cible est isolée et les attaques ordinaires donnent peu de résultats
+  do: Envisager contagion au contact, Vigueur DD 17 ; privilégier les attaques naturelles si leurs dégâts immédiats sont plus utiles.
+
+## Repli
+
+step: Ses points de vie tombent sous 40, ou il ne parvient plus à prendre l'avantage
+  do: Utiliser téléportation suprême vers un lieu connu hors du combat.
+  note: Il ne peut emporter aucune autre créature avec ce pouvoir.
+
+step: Il doit d'abord s'écarter de la mêlée
+  do: Effectuer un retrait en vol vers un espace dégagé, puis se téléporter dès qu'il peut utiliser son pouvoir.

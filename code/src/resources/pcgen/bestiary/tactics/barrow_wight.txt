@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Barrow Wight, mort-vivant chaotique mauvais de taille M, gardien haineux et dément d'un tumulus et de ses trésors. FP 4 ; 37 PV ; CA 17.
+  Coup +5 (1d4+3 et absorption d'énergie : 1 niveau négatif) ; allonge 1,50 m ; déplacement 9 m ; vision dans le noir à 18 m.
+  Son regard provoque la folie ; il frappe ensuite les intrus qui y résistent.
+
+resource: Regard de folie | à volonté | portée 9 m ; Volonté DD 14 annule ; comme le sort aliénation mentale ; une sauvegarde réussie immunise contre son regard pendant 24 heures
+
+step: Des intrus approchent de son tombeau
+  do: Se dissimuler près de leur passage et les laisser approcher à portée de regard
+  note: Discrétion +17 ; Perception +12. L'obscurité lui permet de surveiller les intrus avec sa vision dans le noir.
+
+## Ouverture
+
+step: L'intrus le plus proche est à 9 m ou moins et reste vulnérable au regard
+  do: Diriger activement son regard sur lui par une action simple
+  note: La folie est permanente. Employer ensuite son déplacement pour se rapprocher d'un adversaire encore capable de combattre normalement.
+
+step: Un intrus résistant au regard est déjà à 1,50 m
+  do: Le frapper avec son coup +5, pour 1d4+3 dégâts et 1 niveau négatif
+  note: L'absorption du niveau est immédiate ; le jet de Vigueur DD 14 pour supprimer ce niveau intervient après 24 heures.
+
+step: Tous les intrus sont à plus de 9 m
+  do: Avancer de 9 m vers eux en utilisant les couverts disponibles pour approcher
+
+## Rounds suivants
+
+step: Un adversaire encore lucide est à portée de mêlée
+  do: Concentrer sur lui un coup +5 par round et poursuivre l'absorption d'énergie
+  note: Le regard reste actif sur les créatures qui le croisent à 9 m ou moins ; son effet ordinaire ne consomme pas l'action consacrée au coup.
+
+step: Une cible encore vulnérable au regard reste hors de portée de mêlée
+  do: Se déplacer de 9 m au maximum pour la placer à portée du regard, puis diriger activement le regard sur elle
+
+step: Un humanoïde tué par lui se relève après 1d4 rounds
+  do: Envoyer ce rejeton sous ses ordres au contact des survivants
+  note: Le rejeton subit un malus de -2 aux jets de d20 et perd 2 PV par dé de vie ; il ne conserve aucune capacité de sa vie passée.
+
+step: Les ennemis combattent dans la pénombre ou détournent les yeux
+  do: Maintenir la pression au contact sur ceux qui restent dangereux
+  note: Combat en aveugle permet de relancer son propre jet de risque d'échec dû au camouflage en mêlée.
+
+## Repli
+
+step: Les intrus restent dans son tumulus
+  do: Continuer à défendre sa sépulture et ses trésors en frappant les adversaires encore lucides
+
+step: Il reconnaît une tentative de rappel à la vie dirigée contre lui
+  do: Rompre le contact et gagner un couvert, en ordonnant aux rejetons présents de gêner la poursuite
+  note: Ce sort le détruit s'il échoue à son jet de Volonté ; sa résistance à la canalisation de +2 ne protège pas contre ce sort.

@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Barizou, petit démon assassin et infiltrateur, chaotique mauvais ; FP 3, 16 pv, CA 17. Il privilégie l'embuscade contre une cible isolée.
+  Deux griffes +7 (1d4 chacune), morsure +6 (1d6) ; attaque sournoise +2d6 par attaque admissible. Allonge 1,50 m ; marche 9 m, vol 15 m avec une bonne manœuvrabilité.
+  RD 5/fer froid, RM 14 ; immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10. Ses sauvegardes de Vigueur et de Volonté sont de +1 : il évite de s'exposer aux lanceurs de sorts.
+
+resource: Invisibilité | à volonté | sur lui-même ; action simple ; durée 6 minutes, interrompue dès qu'il attaque
+resource: Frayeur | à volonté | action simple ; portée 12 m ; Volonté DD 11 ; une créature vivante de 5 DV ou moins
+resource: Convocation de démon | 1/jour | une tentative ; 35 % de chances de convoquer un barizou
+resource: Détection du Bien et profanation | à volonté | NLS 6
+
+step: Il observe des intrus sans être repéré
+  do: Se camoufler, devenir invisible et observer depuis un abri ou les hauteurs ; choisir un adversaire isolé, peu protégé ou déjà blessé.
+  note: Caméléon change sa coloration par une action libre ; son bonus est déjà compris dans Discrétion +12. Vision dans le noir à 18 m, Perception +8.
+
+step: Le combat est imminent et il dispose d'un répit
+  do: Tenter sa convocation quotidienne ; en cas de réussite, convenir d'une prise en tenaille avec l'autre barizou par télépathie, à 30 m au maximum.
+  note: Une tentative ratée consomme l'utilisation. Le démon convoqué reste une heure et ne peut pas en convoquer un autre pendant ce temps.
+
+note: Murmure de folie
+  Ce pouvoir corrompt progressivement son invocateur par un lien mental ; son emploi relève de cette relation durable, plutôt que des échanges de coups.
+
+## Ouverture
+
+step: Invisible, il commence un tour normal au contact d'une cible vulnérable
+  do: Faire une attaque à outrance : deux griffes +7 (1d4 chacune) et une morsure +6 (1d6).
+  note: Ajouter +2d6 à chaque attaque qui remplit les conditions de l'attaque sournoise : cible privée de son bonus de Dextérité à la CA ou prise en tenaille. L'invisibilité cesse dès la première attaque ; les suivantes exigent encore l'une de ces conditions.
+
+step: Il doit se déplacer pour atteindre sa cible pendant un tour normal
+  do: S'approcher sous invisibilité, puis porter une seule griffe +7 (1d4, plus 2d6 si l'attaque sournoise s'applique).
+  note: En round de surprise, il dispose seulement d'une action simple ou de mouvement : frapper s'il est déjà à portée, sinon se placer.
+
+## Rounds suivants
+
+step: Le second barizou est présent et une cible peut être prise en tenaille
+  do: Se placer de part et d'autre de la cible, à hauteur de mêlée, puis privilégier les attaques à outrance aux tours suivants.
+  note: La tenaille accorde +2 aux attaques de mêlée et permet les dégâts sournois sur chaque coup admissible. Un pas de placement de 1,50 m reste compatible avec l'attaque à outrance.
+
+step: Un adversaire vivant de 5 DV ou moins menace de le coincer
+  do: Depuis une position hors de son allonge, lancer frayeur pour le faire fuir et ouvrir une issue.
+  note: Volonté DD 11 : effrayé pendant 1d4 rounds en cas d'échec, secoué pendant 1 round en cas de réussite. Choisir une autre tactique contre une cible immunisée à la peur.
+
+step: Il combat seul et ne bénéficie plus de l'attaque sournoise
+  do: Effectuer une retraite vers un abri ; au tour suivant, redevenir invisible, puis chercher une nouvelle approche contre une cible isolée.
+  note: La retraite occupe un round entier. Lancer ensuite invisibilité demande une action simple ; il peut encore se déplacer, mais doit attendre un autre tour pour attaquer.
+
+## Repli
+
+step: Il lui reste 8 pv ou moins, ou ses ennemis l'empêchent durablement de tendre une embuscade
+  do: Effectuer une retraite en vol vers une issue dégagée, jusqu'à 30 m horizontalement ; au tour suivant, lancer invisibilité hors de portée de mêlée et poursuivre sa fuite.
+  note: Seule la case de départ est protégée des attaques d'opportunité par la retraite ; choisir une trajectoire qui évite les autres zones menacées. Utiliser ensuite le camouflage et les obstacles pour échapper aux poursuivants.

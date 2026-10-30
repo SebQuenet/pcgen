@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Orque noir, humanoïde chaotique mauvais de taille M, grand et brutal. Combattant de mêlée : 8 PV, CA 17, déplacement de 6 m, vision dans le noir à 18 m.
+  Pique +5 (1d8+6, x3), qui frappe à 3 m mais pas les adversaires adjacents ; arbalète légère +2 (1d8, 19-20/x2).
+
+note: Résistance
+  Réduction des dégâts 1/— contre les dégâts des armes et des attaques naturelles. Aucune sensibilité à la lumière.
+  Bénédiction d'Orcus : +4 aux jets de sauvegarde contre toute attaque ou tout effet créé par un mort-vivant, soit Vigueur +8, Réflexes +5 et Volonté +3 dans ce cas seulement.
+
+step: Il peut choisir sa position
+  do: Préparer sa pique et se placer pour recevoir les ennemis à 3 m, avec ses compagnons à proximité s'il combat en groupe
+  note: Sa Perception de -1 rend la détection des intrus peu fiable ; sa vision dans le noir ne garantit pas de les repérer
+
+## Ouverture
+
+step: Un ennemi approche à portée de pique
+  do: Frapper à 3 m avec la pique, +5 (1d8+6, x3)
+  note: Profiter d'une attaque d'opportunité si l'ennemi quitte une case menacée pour venir au contact ; sans don supplémentaire, une seule attaque d'opportunité par round
+
+step: Un ennemi peut être atteint après un déplacement de 6 m au plus
+  do: Avancer pour le placer à 3 m, puis porter une attaque de pique
+  note: Ne pas avancer jusqu'à une case adjacente : la pique ne permet pas d'y frapper
+
+step: Les ennemis restent trop éloignés et son arbalète est prête
+  do: Tirer à l'arbalète légère, +2 (1d8, 19-20/x2)
+  note: Quand un ennemi arrive à 3 m, lâcher l'arbalète et dégainer la pique par une action de mouvement avant d'attaquer
+
+## Rounds suivants
+
+step: Un adversaire reste à 3 m
+  do: Porter une attaque de pique par round et conserver cette distance
+  note: Avec un allié, chercher une prise en tenaille si le placement le permet ; le bonus de +2 à l'attaque porte alors la pique à +7
+
+step: La cible paraît facile à toucher
+  do: Activer Attaque en puissance avant d'attaquer : pique +4 (1d8+9, x3)
+  note: La pique tenue à deux mains gagne +3 aux dégâts pour -1 à l'attaque ; ces modificateurs durent jusqu'au prochain tour et s'appliquent aussi aux attaques d'opportunité
+
+step: Un adversaire est adjacent et une case de recul est libre
+  do: Faire un pas de placement de 1,50 m pour le remettre à 3 m, puis attaquer avec la pique
+  note: Ce pas ne provoque pas d'attaque d'opportunité et suppose un terrain qui l'autorise ; sans recul possible, se déplacer pour retrouver l'allonge en acceptant les attaques d'opportunité éventuelles
+
+step: Le combat reste à distance
+  do: Recharger l'arbalète légère par une action de mouvement, puis tirer
+  note: Éviter de recharger ou de tirer à portée de mêlée d'un ennemi : ces actions provoquent des attaques d'opportunité
+
+step: Ses PV passent sous 0 sans atteindre -14
+  do: Appliquer la férocité : rester conscient et choisir une seule action simple ou de mouvement par round
+  note: Il est chancelant, perd 1 PV par round et meurt à -14 PV ; une attaque de pique reste possible, mais pas un déplacement de 6 m suivi d'une attaque
+
+## Repli
+
+step: Il ne lui reste que 1 à 3 PV et une issue est accessible
+  do: Se désengager vers ses compagnons ou un abri ; avec une action de retraite complète, parcourir jusqu'à 12 m
+  note: La retraite protège seulement le départ de sa case initiale contre les attaques d'opportunité ; les cases menacées traversées ensuite restent dangereuses
+
+step: Il est sous 0 PV et peut encore fuir
+  do: Consacrer son unique action à un déplacement de 6 m vers une issue
+  note: Chancelant, il ne peut pas utiliser l'action de retraite complète et continue à perdre 1 PV par round
+
+step: Il est acculé sans issue
+  do: Continuer à frapper tout ennemi à portée, en utilisant le pas de placement si nécessaire et possible
+  note: La férocité prolonge le combat sans rendre de PV ni repousser la mort à -14 PV

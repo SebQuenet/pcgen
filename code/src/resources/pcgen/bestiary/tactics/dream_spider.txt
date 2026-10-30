@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Araignée des rêves, vermine de taille P, neutre et sans intelligence : elle agit par instinct. CA 13, 5 PV ; immunité aux effets mentaux.
+  Morsure +1 au contact, à 1,50 m : 1d4 dégâts et poison. Déplacement au sol de 9 m, escalade de 6 m ; vision dans le noir à 18 m.
+
+step: Elle se trouve dans sa toile avant l'arrivée des intrus
+  do: Rester dissimulée et attendre qu'une proie approche
+  note: Discrétion +10 dans sa toile, +6 ailleurs ; Perception +5. Le bloc ne lui donne aucune attaque de toile.
+
+## Ouverture
+
+step: Une proie est déjà à 1,50 m
+  do: La mordre : attaque +1, 1d4 dégâts et poison
+
+step: Une proie peut être rejointe avec un déplacement
+  do: Avancer jusqu'au contact, puis mordre
+  note: Elle peut parcourir 9 m au sol ou grimper de 6 m avant son attaque ; Escalade +8.
+
+step: Aucune proie n'est assez proche pour être mordue ce round
+  do: Se rapprocher en utilisant les parois accessibles ou les abris présents
+  note: Elle ne possède aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une proie reste à portée
+  do: Continuer à la mordre chaque round : +1, 1d4 dégâts et poison
+  note: Le bloc fourni ne précise ni le DD ni les effets du poison ; ne pas lui attribuer d'effet de sommeil ou de paralysie.
+
+step: La proie s'éloigne mais reste accessible
+  do: La suivre au sol ou en escalade, puis mordre si un seul déplacement suffit à la rejoindre
+
+step: Plusieurs araignées sont présentes
+  do: Faire attaquer chacune selon la proie accessible la plus proche
+  note: Leur absence d'intelligence ne justifie pas de coordination élaborée.
+
+## Repli
+
+step: Réduite à 2 PV ou moins, elle dispose d'une issue
+  do: Faire un retrait vers un abri ou une paroi accessible, puis utiliser l'escalade pour gagner un refuge hors de portée
+  note: Ce seuil est un choix de conduite instinctive pour le MJ.
+
+step: Acculée sans refuge accessible
+  do: Continuer à mordre la créature à portée

@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Gobelours echohusk, mort-vivant de taille M, neutre mauvais et dépourvu d'intelligence : un combattant direct, sans tactique élaborée.
+  19 pv ; CA 15, contact 11, pris au dépourvu 14 ; déplacement de 9 m ; vision dans le noir à 18 m ; immunités des morts-vivants.
+  Morgenstern +6 (1d8+4) ou coup +6 (1d6+4) ; javelot +3 (1d6+4).
+
+resource: Javelots | 3 | Un javelot par lancer, attaque +3, dégâts 1d6+4.
+
+note: Équipement
+  Armure de cuir, rondache en bois et morgenstern : privilégier le combat au contact avec cet équipement.
+
+## Ouverture
+
+step: Un ennemi est déjà au contact, à 1,50 m
+  do: Attaquer avec le morgenstern +6 (1d8+4).
+
+step: Un ennemi peut être rejoint avec un déplacement de 9 m
+  do: Avancer jusqu'au contact et porter une attaque de morgenstern +6 (1d8+4).
+
+step: Aucun ennemi ne peut être rejoint avec un déplacement de 9 m
+  do: Se rapprocher de 9 m en préparant un javelot, puis le lancer sur un ennemi à portée : +3 (1d6+4).
+  note: Si aucun lancer n'est possible, consacrer aussi son action simple au déplacement, pour avancer de 18 m au total.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter une attaque de morgenstern +6 (1d8+4) par round.
+  note: Il ne cumule pas le morgenstern et le coup dans la même attaque à outrance.
+
+step: Le morgenstern est indisponible
+  do: Frapper avec son coup +6 (1d6+4).
+
+step: Aucun adversaire ne reste au contact
+  do: Se rapprocher de l'ennemi le plus proche de 9 m, puis attaquer au contact si possible ; sinon, lancer un javelot restant sur une cible à portée.
+  note: Sans cible à portée ni javelot utilisable, avancer de nouveau de 9 m avec l'action simple.
+
+## Repli
+
+step: Ses points de vie diminuent, mais il lui reste au moins 1 pv
+  do: Continuer à attaquer les adversaires accessibles, sans organiser de repli spontané.
+  note: Son absence d'intelligence ne justifie pas une retraite calculée ; à 0 pv, ce mort-vivant est détruit.

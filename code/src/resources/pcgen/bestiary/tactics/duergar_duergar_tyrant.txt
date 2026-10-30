@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Duergar tyran, humanoïde de taille M, loyal mauvais, qui combat à distance dans les souterrains. 37 pv ; CA 16, contact 11, pris au dépourvu 15.
+  Décharge de terre +4 à distance (2d6+6). Déplacement de 6 m ; vision dans le noir à 36 m.
+
+note: Défenses
+  Réduction des dégâts 1/adamantium ; résistance à la magie 14 ; immunité à la paralysie, aux fantasmes et au poison.
+  Vigueur +7, Réflexes +4, Volonté +3 : éviter de s'exposer inutilement aux effets qui attaquent sa volonté.
+
+step: Il peut choisir sa position
+  do: Se placer dans un passage avec un couvert proche et une voie de repli, en gardant une ligne de vue pour ses décharges
+  note: Sa vision dans le noir lui permet de repérer les intrus sans éclairage, jusqu'à 36 m ; sa lenteur rend les poursuites risquées
+
+step: D'autres duergars sont présents
+  do: Les laisser occuper le premier rang et se placer derrière eux avec une ligne de tir dégagée
+
+## Ouverture
+
+step: Une cible est visible et aucun ennemi ne le menace au contact
+  do: Tirer une décharge de terre +4 (2d6+6) sur un adversaire exposé, de préférence peu protégé
+  note: Se déplacer jusqu'à 6 m si nécessaire pour obtenir une ligne de tir ou rejoindre un couvert
+
+## Rounds suivants
+
+step: Il peut continuer à tirer sans être menacé au contact
+  do: Répéter la décharge de terre sur la même cible jusqu'à la mettre hors de combat
+  note: Changer de cible si elle se met à couvert ; aucune limite d'utilisations n'est indiquée pour cette attaque
+
+step: Un ennemi le menace et un pas de 1,50 m suffit à sortir de toutes les allonges adverses
+  do: Faire ce pas, puis tirer une décharge de terre +4 (2d6+6)
+
+step: Un pas de 1,50 m ne suffit pas à le dégager
+  do: Battre en retraite vers un passage libre ou derrière les duergars présents, puis reprendre les tirs une fois dégagé
+  note: La réduction des dégâts n'absorbe qu'un point par coup admissible ; elle ne justifie pas de rester encerclé
+
+## Repli
+
+step: Ses points de vie passent sous 10 ou les ennemis coupent sa voie de fuite
+  do: Abandonner sa position et se retirer par le passage encore accessible, en utilisant les angles et les couverts pour rompre la ligne de vue
+  note: Avec un déplacement de 6 m, partir avant que les adversaires ne puissent l'encercler ; les duergars présents peuvent couvrir sa retraite

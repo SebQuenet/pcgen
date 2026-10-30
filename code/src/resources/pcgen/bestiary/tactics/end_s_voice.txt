@@ -1,0 +1,96 @@
+## Avant le combat
+
+note: Profil
+  Extérieur chaotique neutre de taille G, intelligent et mobile : 225 pv, CA 31, résistance à la magie 26, initiative +7. Déplacement au sol et vol à 12 m ; espace et allonge de 3 m.
+  Fléau d'armes lourd +1 de foudre : +23/+18/+13/+8, 2d8+7 et 1d6 d'électricité par coup, critique sur 17–20, plus maddening strike, dont l'effet n'est pas précisé dans le bloc fourni.
+  Ses pouvoirs mentaux désorganisent le groupe ; ses pouvoirs de mort éliminent les cibles affaiblies. Tous ses pouvoirs magiques sont de niveau de lanceur 18, avec concentration +24.
+  Prémonition et vision lucide sont constantes : il n'est jamais surpris ni pris au dépourvu. Vision dans le noir à 18 m, Perception +21 et télépathie à 30 m.
+
+note: Défenses
+  Guérison accélérée de 5 pv par round ; réduction des dégâts 10, surmontée par une arme à la fois loyale et magique. Résistance 30 à l'acide, au froid, à l'électricité et au feu ; immunité à confusion et à aliénation.
+  Il exploite ces protections pour durer, mais évite de rester encerclé. Ses immunités ne couvrent pas tous les effets mentaux.
+
+resource: Œil du mage | à volonté | reconnaissance à distance
+resource: Invisibilité de groupe | 1/jour | dure 18 minutes ; cesse lorsqu'il attaque
+resource: Moment de prescience | 1/jour | bonus d'intuition de +18 utilisable une fois, notamment sur un jet de sauvegarde ; à déclarer avant le jet
+resource: Volonté de fer supérieure | 1/jour | relancer un jet de Volonté raté et conserver le second résultat
+
+step: Il a le temps de préparer l'affrontement
+  do: Explorer les accès avec œil du mage, puis activer moment de prescience et invisibilité de groupe avant l'arrivée des adversaires.
+  note: Garder le bonus de prescience pour une sauvegarde décisive. Se placer avec une voie de fuite et assez d'espace pour voler ; ne pas supposer qu'œil du mage transmet sa vision lucide.
+
+## Ouverture
+
+note: Choisir une ouverture
+  Les options suivantes sont des alternatives : un seul de ces pouvoirs s'utilise par round. Il choisit selon les protections observées et la disposition du groupe.
+
+resource: Disjonction | 1/jour | zone de 12 m de rayon ; DD 25 pour les objets magiques concernés
+resource: Ennemi subconscient | 1/jour | Volonté DD 25, puis Vigueur DD 25 ; seuls les adversaires ratant les deux jets meurent
+resource: Brouillard mental | 5/jour | Volonté DD 21 ; les créatures affectées subissent −10 aux jets de Volonté
+resource: Confusion | 5/jour | Volonté DD 20 ; zone de 4,50 m de rayon
+
+step: Les protections magiques identifiées de plusieurs ennemis rendent ses autres attaques peu efficaces
+  do: Utiliser disjonction sur leur position, en restant hors des 12 m de rayon de la zone.
+  note: Les effets magiques dans la zone sont dissipés ; le DD 25 concerne les objets, pas une sauvegarde générale permettant de conserver les sorts actifs.
+
+step: Plusieurs adversaires sont vulnérables à la peur et aux effets mentaux
+  do: Utiliser ennemi subconscient sur les cibles à portée, jusqu'à 21 m, en respectant un écart maximal de 9 m entre deux cibles.
+  note: Privilégier les adversaires dont la Volonté ou la Vigueur semble faible ; une seule sauvegarde ratée ne suffit pas à les tuer.
+
+step: Il préfère préparer son contrôle et les ennemis occupent une zone qu'ils doivent défendre ou traverser
+  do: Poser brouillard mental sur cette zone, puis utiliser confusion au round suivant sur ceux qui ont subi son effet.
+  note: Le brouillard a un rayon de 6 m. Seuls les ennemis ayant raté leur sauvegarde contre lui subissent le malus de −10 ; ils peuvent quitter la zone, même si le malus persiste encore quelque temps.
+
+## Rounds suivants
+
+resource: Débilité | 5/jour | Volonté DD 21 ; les utilisateurs de sorts profanes subissent −4 à cette sauvegarde
+resource: Mot de pouvoir mortel | 1/jour | tue une créature ayant 100 pv ou moins, sans sauvegarde ; résistance à la magie applicable
+resource: Désintégration | 1/jour | attaque de contact à distance ; Vigueur DD 22 ; 36d6 dégâts, ou 5d6 si la sauvegarde réussit
+resource: Mise à mal | 1/jour | contact ; 150 dégâts, Volonté DD 22 pour réduire de moitié ; ne réduit pas la cible sous 1 pv
+resource: Aliénation | 1/jour | Volonté DD 23 ; confusion permanente
+resource: Assassin imaginaire | 5/jour | Volonté DD 21, puis Vigueur DD 21 ; mort seulement si les deux jets échouent
+resource: Fou rire | à volonté | Volonté DD 18
+resource: Projectile magique | à volonté | dégâts à distance contre les cibles accessibles à ce pouvoir
+resource: Saignement rapide | à volonté | DD 16 ; action rapide, sur une créature vivante stabilisée à des pv négatifs
+
+step: Un lanceur de sorts profanes reste opérationnel
+  do: Le viser avec débilité, surtout s'il a déjà subi brouillard mental.
+  note: Réserver aliénation à une cible importante vulnérable aux effets mentaux ; utiliser confusion pour perturber plusieurs ennemis encore groupés.
+
+step: Une cible dangereuse a 100 pv ou moins et se trouve à 21 m ou moins
+  do: Utiliser mot de pouvoir mortel.
+  note: Ne pas le dépenser sur une cible au-dessus de ce seuil. La résistance à la magie peut encore arrêter le pouvoir.
+
+step: Les effets mentaux échouent ou une cible y est immunisée
+  do: Passer au fléau, à désintégration ou à mise à mal selon la distance.
+  note: Désintégration exige de toucher puis autorise Vigueur DD 22. Mise à mal exige un contact et peut préparer un mot de pouvoir mortel au round suivant.
+
+step: Un ennemi se trouve à 3 m ou moins et il peut rester sur place
+  do: Porter l'attaque à outrance au fléau : +23/+18/+13/+8.
+  note: Un pas de 1,50 m reste compatible avec cette attaque. Après un déplacement plus long, il ne porte normalement qu'une attaque à +23.
+
+step: Il doit utiliser un pouvoir alors qu'un ennemi le menace
+  do: Faire d'abord un pas de 1,50 m si cela suffit à sortir de l'allonge adverse ; sinon utiliser le pouvoir sur la défensive.
+  note: Incantation de combat ajoute +4 aux tests de concentration effectués sur la défensive.
+
+step: Il veut conserver ses utilisations quotidiennes
+  do: Employer fou rire contre un adversaire isolé, ou projectile magique pour entamer une cible à distance.
+  note: Assassin imaginaire fournit une autre tentative létale contre une cible isolée, mais exige deux sauvegardes ratées. Éviter de répéter les effets mentaux contre une immunité manifeste.
+
+step: Un ennemi vivant est stabilisé à des pv négatifs
+  do: Utiliser saignement rapide en action rapide pour le remettre en état d'agonie, en plus de son action principale.
+
+## Repli
+
+resource: Téléportation suprême | 5/jour | lui-même et au maximum 22,5 kg d'objets ; conserver au moins une utilisation pour fuir
+
+step: Il tombe à 75 pv ou moins, ou ne peut plus soutenir l'affrontement
+  do: Utiliser téléportation suprême vers un lieu connu et sûr, avec son fléau.
+  note: S'il est menacé, sortir de l'allonge par un pas de 1,50 m lorsque c'est possible, ou utiliser le pouvoir sur la défensive. Il ne peut pas emporter d'autre créature avec cette téléportation.
+
+step: La téléportation est momentanément impossible
+  do: Rejoindre une issue en volant à 12 m ; utiliser l'action de retraite si elle permet de quitter le contact, jusqu'à 24 m de déplacement.
+  note: Le vol est de manœuvrabilité moyenne : tenir compte de l'espace disponible et des tests de Vol nécessaires.
+
+step: Il a rompu le contact
+  do: Rester à couvert et laisser la guérison accélérée lui rendre 5 pv par round, jusqu'à son maximum de 225 pv.

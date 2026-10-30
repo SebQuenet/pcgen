@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Vase capacitrice (Capacitor Ooze), vase de taille M, neutre et sans intelligence, qui recherche instinctivement l'électricité et la matière organique. 195 pv, CA 5 ; immunité à l'électricité et traits des vases.
+  Coup +18 à 1,50 m : 2d6+9 dégâts et 4d6 d'électricité, plus secousse neurophage. Drainage osmotique dans un rayon de 3 m, DD 25.
+  Vision aveugle à 36 m ; déplacement et escalade à 3 m par action de mouvement, Escalade +14. Initiative -5 : elle réagit lentement.
+
+step: Aucune proie à proximité
+  do: Errer dans un milieu sec, vers les sources d'électricité et de nourriture
+  note: Elle ne prépare ni pièges ni coordination ; l'eau lui est dangereuse et l'humidité douloureuse.
+
+## Ouverture
+
+step: Une proie est perçue, hors de portée du coup
+  do: Avancer vers elle, instinctivement attirée par ses appareils électriques ; effectuer un double déplacement si nécessaire
+  note: Sans énergie drainée, elle parcourt 6 m avec deux actions de mouvement. Sa vision aveugle ne lui permet pas de percevoir à travers les obstacles solides.
+
+step: Une créature portant un appareil électrique se trouve à 3 m ou moins
+  do: Appliquer le drainage osmotique : Vigueur DD 25 ou perte de 1 charge d'un appareil électrique choisi au hasard
+  note: Un objet à usage unique est entièrement déchargé ; une source renouvelable attend sa recharge, et une arme électrique perd sa fonction électrique pendant 1d4 minutes. Chaque source ne peut être drainée qu'une fois par minute.
+  note: Chaque appareil affecté ajoute 1d6 aux prochains dégâts d'électricité infligés et augmente la vitesse de 9 m pendant 1 round ; profiter de cette accélération pour atteindre la proie.
+
+step: Une proie est à 1,50 m après au plus une action de mouvement
+  do: Porter un coup +18, infligeant 2d6+9 dégâts et 4d6 d'électricité
+  note: Si le coup inflige des dégâts d'électricité, la secousse neurophage étourdit pendant 1 round, sauf réussite à un jet de Vigueur DD 25.
+
+## Rounds suivants
+
+step: La proie reste au contact
+  do: Continuer à la frapper, un coup par round
+  note: Elle s'acharne sans sélectionner savamment les adversaires selon leur rôle ou leurs défenses.
+
+step: Un nouveau coup inflige de l'électricité à une cible encore étourdie par une secousse neurophage
+  do: Appliquer la résonance cérébrale : Volonté DD 25, fréquence 1 fois par round pendant 6 rounds, affaiblissement de 1d2 Dextérité et 1d2 Intelligence ; une sauvegarde réussie suffit à guérir
+  note: Cet effet est mental. Ne pas supposer que l'étourdissement du coup précédent dure encore au tour suivant.
+
+step: Un adversaire la frappe avec une arme naturelle, à mains nues ou avec une arme métallique
+  do: Lui infliger automatiquement 4d6 dégâts d'électricité par électrisation
+  note: Une créature qui agrippe la vase subit aussi ces dégâts au début de la lutte et à chaque round où elle la maintient ; appliquer le supplément éventuel du drainage aux prochains dégâts d'électricité.
+
+step: La proie s'éloigne ou emprunte un passage étroit
+  do: La poursuivre au sol ou en escalade ; utiliser compression pour franchir les passages compatibles avec ce pouvoir
+  note: Sans drainage, sa lenteur permet aux adversaires de la distancer. Elle ne possède aucune attaque à distance.
+
+## Repli
+
+step: Elle subit des blessures mais peut encore atteindre une proie
+  do: Continuer à combattre, sans seuil de points de vie déclenchant une retraite organisée
+
+step: La poursuite la conduit vers l'eau ou un milieu humide
+  do: Éviter ce milieu et se diriger vers un endroit sec
+  note: Jouer cette réaction comme un instinct ; ne pas ajouter de dégâts d'eau ou d'autre faiblesse chiffrée absente du profil.

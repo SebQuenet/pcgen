@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Dun Pudding, vase de taille TG, neutre et sans intelligence, qui attaque instinctivement les proies proches. Il dispose de 87 pv, d'une CA de 3 et des immunités propres aux vases.
+  Coup +8 : 2d6+4 dégâts plus 2d6 d'acide, avec étreinte ; constriction : 2d6+4 dégâts plus 2d6 d'acide. Son combat repose sur la saisie et la digestion d'une même proie.
+  Perception aveugle à 18 m ; déplacement et escalade à 6 m, Escalade +11 ; espace occupé de 4,50 m et allonge de 3 m.
+
+step: Aucune proie n'est perçue
+  do: Errer dans son milieu chaud ou souterrain jusqu'à percevoir une créature à portée de ses sens.
+  note: Son absence d'intelligence exclut les préparatifs élaborés et la coordination tactique.
+
+## Ouverture
+
+step: Une proie est perçue à plus de 3 m
+  do: Avancer vers elle à 6 m par action de déplacement ; porter un coup si elle entre dans son allonge et qu'il reste une action simple.
+  note: Utiliser l'escalade à 6 m si le trajet vers la proie passe par une paroi accessible.
+
+step: Une proie se trouve à 3 m ou moins
+  do: Porter un coup +8, infligeant 2d6+4 dégâts plus 2d6 d'acide ; tenter l'étreinte si le coup touche une cible de taille admissible.
+  note: Une étreinte réussie déclenche la constriction : 2d6+4 dégâts plus 2d6 d'acide supplémentaires.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et infliger les dégâts de constriction à chaque test de lutte réussi.
+  note: Corrosion impose à la proie constrictée un malus de -4 aux jets de Réflexes destinés à protéger ses vêtements et son armure contre l'acide.
+
+step: La proie échappe à l'étreinte ou devient inaccessible
+  do: Reprendre les coups contre la créature accessible la plus proche ; avancer ou grimper pour retrouver le contact si nécessaire.
+  note: Garder une conduite instinctive : il ne distingue pas les lanceurs de sorts des combattants et ne prépare pas de manœuvre concertée.
+
+step: Une arme perforante ou tranchante le frappe alors qu'il possède plus de 10 pv
+  do: Appliquer la division : le coup ne lui inflige pas de dégâts et produit deux vases identiques, chacune avec la moitié de ses pv actuels, arrondie à l'inférieur.
+  note: Chaque masse poursuit instinctivement une proie accessible. Une masse à 10 pv ou moins ne peut plus se diviser.
+
+## Repli
+
+step: Ses points de vie diminuent et une proie reste accessible
+  do: Continuer à frapper ou à constricter jusqu'à sa destruction.
+  note: Sans intelligence, il n'organise aucun repli fondé sur un seuil de pv.
+
+step: Toutes les proies quittent sa perception aveugle de 18 m
+  do: Cesser de les poursuivre de façon dirigée et reprendre son errance jusqu'à un nouveau contact.

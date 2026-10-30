@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Biclops, géant neutre de taille Très grande, à deux têtes portant chacune un œil unique. Habituellement paisible, il défend son territoire ; il attaque à vue les géants des collines et les trolls.
+  178 PV ; CA 25, contact 9 ; espace et allonge de 4,50 m ; déplacement de 9 m en armure, 12 m sans armure ; vision nocturne, Perception +19.
+  Deux épées longues : attaque à outrance de six coups, trois par arme à +20/+15/+10, chacun infligeant 3d6+10. Son combat supérieur à deux armes supprime les malus d'attaque et de dégâts liés à cet usage.
+  À distance : deux rochers +12 (2d6+15), facteur de portée de 42 m, ou deux lances +11 (3d6+10, critique x3). Ces deux projectiles exigent une attaque à outrance.
+
+resource: Lances | 2 | Chaque lancer consomme une lance jusqu'à récupération.
+resource: Rochers | Selon les pierres disponibles | Préparer des projectiles accessibles ; aucune réserve illimitée n'est indiquée.
+
+step: Il repère des intrus avant leur arrivée
+  do: Occuper une hauteur rocheuse offrant une vue dégagée et préparer des pierres pour les repousser à distance.
+  note: Garder une voie de repli assez large pour son gabarit ; éviter de descendre entouré parmi les adversaires.
+
+step: Des intrus peuvent encore être dissuadés
+  do: Leur ordonner de partir en commun ou en géant ; employer Intimidation +25 pour appuyer la menace.
+
+## Ouverture
+
+step: Les ennemis restent hors de son allonge
+  do: Lancer deux rochers +12 chacun s'il reste immobile ; après un déplacement, n'en lancer qu'un.
+  note: Privilégier une cible exposée ; au-delà de 42 m, appliquer les malus de portée. Utiliser les lances s'il manque de pierres.
+
+step: Les ennemis approchent pour engager la mêlée
+  do: S'équiper de ses deux épées avant leur arrivée et les attendre dans un passage qu'il peut couvrir de son allonge de 4,50 m.
+
+step: Un ennemi est déjà à portée et il peut consacrer son tour à frapper
+  do: Attaque à outrance avec les deux épées : six attaques à +20/+15/+10 par arme, 3d6+10 par coup.
+  note: Concentrer les coups sur un adversaire dangereux qu'il peut abattre rapidement, puis reporter les attaques restantes sur une autre cible à portée.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Poursuivre les attaques à outrance ; n'utiliser qu'un pas de placement de 1,50 m si cela suffit pour conserver une bonne position.
+  note: Garder les adversaires devant lui et protéger l'accès à son foyer ; éviter les déplacements qui lui coûtent ses six attaques.
+
+step: Il doit se déplacer et deux ennemis sont adjacents l'un à l'autre, tous deux à portée
+  do: Utiliser Enchaînement après le déplacement : une attaque d'épée +20, puis une seconde à +20 contre l'autre ennemi si la première touche ; chaque coup inflige 3d6+10.
+  note: Enchaînement remplace l'attaque à outrance et réduit sa CA à 23 jusqu'à son prochain tour.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup d'épée +20 (3d6+10).
+  note: Une seule attaque d'opportunité par round ; entrer simplement dans son allonge ne suffit pas à la provoquer.
+
+step: Les adversaires rompent le contact et restent à distance
+  do: Reprendre les jets de pierres depuis un couvert ou une hauteur, en consacrant les actions nécessaires au changement d'armes.
+  note: S'il est visé par un rocher, utiliser son aptitude de réception de rochers lorsque ses conditions sont réunies ; elle ne protège pas contre les autres projectiles.
+
+## Repli
+
+step: Moins de 45 PV et une issue praticable
+  do: Utiliser l'action de retraite vers un couvert rocheux, jusqu'à 18 m en armure ; chercher ensuite à rompre la ligne de vue.
+  note: Se retirer avant l'encerclement. La retraite protège seulement la sortie de sa case initiale contre les attaques d'opportunité ; choisir le trajet en conséquence.
+
+step: Les intrus abandonnent leur progression ou quittent son territoire
+  do: Cesser la poursuite et revenir protéger son foyer.

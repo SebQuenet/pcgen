@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Idole de pierre gargouille, créature artificielle neutre de taille M, sans intelligence, liée à un site. 47 pv, CA 20 ; déplacement de 9 m, allonge de 1,50 m.
+  Attaque à outrance : 2 griffes +9 (1d8+4 chacune), morsure +9 (1d6+4) et coup de cornes +9 (1d6+4).
+  Souffle de feu en cône de 9 m : 4d6 dégâts, Réflexes DD 14 pour réduire de moitié.
+
+resource: Souffle de feu | tous les 1d4 rounds | cône de 9 m, 4d6 dégâts de feu, Réflexes DD 14 pour moitié
+
+note: Défenses et perception
+  Réduction des dégâts 10/adamantium, immunité à la magie et traits des créatures artificielles.
+  Vision dans le noir à 18 m, vision nocturne ; Perception +0. Elle ne dispose d'aucun moyen indiqué pour voler.
+
+step: Aucun intrus engagé
+  do: Rester sur le site auquel elle est liée et attendre qu'un adversaire soit repéré.
+  note: Son absence d'intelligence conduit à une défense simple du site, sans feintes ni coordination élaborée.
+
+## Ouverture
+
+note: Choix de l'action
+  Appliquer la première situation qui convient ; ne pas cumuler plusieurs options dans le même tour.
+
+step: Souffle disponible et plusieurs ennemis dans un même cône de 9 m
+  do: Utiliser le souffle sur ces ennemis : 4d6 dégâts de feu, Réflexes DD 14 pour moitié.
+  note: Déterminer ensuite le délai de recharge avec 1d4 ; le souffle remplace les attaques de mêlée de ce tour.
+
+step: Souffle non utilisé ce tour et ennemi déjà à 1,50 m
+  do: Effectuer une attaque à outrance : 2 griffes +9 (1d8+4 chacune), morsure +9 (1d6+4), cornes +9 (1d6+4).
+
+step: Souffle non utilisé ce tour et ennemi accessible après un déplacement de 9 m au plus
+  do: Avancer jusqu'à 1,50 m de cet ennemi, puis porter une seule attaque de griffe +9 (1d8+4).
+  note: Après un déplacement normal, elle ne peut pas effectuer son attaque à outrance.
+
+step: Aucun ennemi accessible en mêlée ce tour, mais une cible dans le cône de 9 m
+  do: Si le souffle est disponible, l'utiliser même contre cette cible seule.
+
+## Rounds suivants
+
+note: Choix de l'action
+  Appliquer la première situation qui convient, en tenant compte de la recharge du souffle.
+
+step: Souffle rechargé et plusieurs ennemis peuvent être atteints ensemble
+  do: Souffler à nouveau : cône de 9 m, 4d6 dégâts de feu, Réflexes DD 14 pour moitié ; déterminer une nouvelle recharge de 1d4 rounds.
+
+step: Souffle non utilisé ce tour et un ennemi reste à portée
+  do: Répéter l'attaque à outrance contre cet ennemi.
+  note: Un pas de placement de 1,50 m reste compatible avec cette attaque ; un déplacement normal ne l'est pas.
+
+step: Un ennemi est accessible après un déplacement de 9 m au plus
+  do: Le rejoindre dans les limites du site et porter une seule griffe +9 (1d8+4).
+
+step: Une cible reste hors d'atteinte des griffes mais dans le cône de 9 m
+  do: Employer le souffle dès sa recharge si aucun souffle n'a déjà été utilisé ce tour.
+
+step: Aucun ennemi ne peut être attaqué ce tour
+  do: Se rapprocher par un double déplacement de 18 m au plus, dans les limites du site.
+  note: Ce double déplacement ne permet pas d'attaquer ni de souffler ce tour.
+
+## Repli
+
+step: Points de vie faibles
+  do: Poursuivre la défense du site avec le souffle disponible ou les attaques de mêlée ; ne pas organiser de fuite tactique.
+  note: Aucun seuil de repli ni comportement de préservation n'est indiqué pour cette créature sans intelligence.
+
+note: Rajeunissement
+  Le bloc mentionne le rajeunissement et le lien au site sans en donner les modalités. Il ne permet pas de fixer un délai de retour, une récupération de pv ou une distance maximale d'éloignement.

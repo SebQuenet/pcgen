@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Combattant duergar loyal mauvais, de taille M ; 18 pv, CA 15, déplacement de 6 m et vision dans le noir à 36 m.
+  Attaque à mains nues +3 (1d6+2), ou déluge de coups +2/+2 (1d6+2 par coup). Shuriken +3 (1d2+2), ou déluge de shurikens +2/+2 (1d2+2 par projectile).
+  Immunisé contre la paralysie, le poison et les hallucinations ; Vigueur +5, Réflexes +5, Volonté +5.
+
+step: Il peut choisir son emplacement
+  do: Se poster dans un passage étroit, avec un chemin de retraite repéré.
+  note: L'obscurité lui permet de repérer les adversaires dépourvus de vision dans le noir ; elle ne le dissimule pas aux créatures qui possèdent ce sens.
+
+## Ouverture
+
+step: Un ennemi est déjà au contact
+  do: Effectuer un déluge de coups à mains nues, deux attaques à +2 infligeant chacune 1d6+2 dégâts.
+  note: Le déluge exige une attaque à outrance ; il peut l'accompagner d'un pas de placement de 1,50 m.
+
+step: Aucun ennemi ne le menace au contact et une cible est à portée de shuriken
+  do: Effectuer un déluge de shurikens à +2/+2, pour 1d2+2 dégâts par projectile, s'il reste sur place.
+  note: S'il doit se déplacer, avancer de 6 m au maximum puis lancer un seul shuriken à +3, si la cible est à portée.
+
+step: Aucun adversaire n'est à portée d'attaque
+  do: Se rapprocher en utilisant les angles du passage pour limiter son exposition aux tirs.
+  note: Éviter de terminer son mouvement entouré ; chercher à recevoir un seul adversaire au contact.
+
+## Rounds suivants
+
+step: Une cible reste au contact ou peut être rejointe par un pas de placement de 1,50 m
+  do: Concentrer les deux attaques du déluge de coups sur elle.
+  note: Privilégier un adversaire déjà blessé pour réduire rapidement le nombre d'ennemis actifs.
+
+step: Rejoindre la cible exige un déplacement de plus de 1,50 m
+  do: Avancer de 6 m au maximum puis porter une seule attaque à mains nues à +3 (1d6+2), si elle est au contact.
+  note: Un déplacement ordinaire empêche le déluge de coups pendant ce tour.
+
+step: Les ennemis restent à distance et aucun ne le menace au contact
+  do: Continuer les shurikens tant qu'il en dispose ; utiliser le déluge s'il peut rester sur place.
+  note: Exploiter les angles du passage pour obliger les tireurs à se rapprocher.
+
+## Repli
+
+step: Points de vie à 6 ou moins
+  do: Effectuer un retrait vers le passage repéré, jusqu'à 12 m sur terrain dégagé.
+  note: Chercher un angle qui coupe les lignes de vue ; sa vitesse de 6 m rend une fuite prolongée difficile contre des poursuivants plus rapides.

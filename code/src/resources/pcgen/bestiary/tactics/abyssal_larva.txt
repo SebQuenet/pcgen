@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Larve abyssale de grande taille, chaotique mauvaise et à peine intelligente. 42 pv, CA 17 ; déplacement de 6 m, espace occupé de 3 m et allonge de 3 m.
+  Morsure +8, infligeant 1d6+6 dégâts plus 1d6 d'acide. Vision dans le noir à 18 m, Perception +11.
+  Immunisée aux effets mentaux ; résistance de 5 à l'acide, au froid et au feu. Ne peut pas être mise à terre par un croc-en-jambe.
+
+step: Des créatures sont repérées
+  do: Prendre pour cible celle qui porte la plus grosse arme ; si aucune n'en porte, s'en prendre à une créature proche.
+  note: Elle associe les grosses armes aux blessures les plus graves. Elle ne distingue pas les aventuriers des autres habitants du donjon.
+
+## Ouverture
+
+step: La cible est à portée de morsure, à 3 m ou moins
+  do: Mordre à +8 pour 1d6+6 dégâts plus 1d6 d'acide.
+
+step: La cible est à plus de 3 m, mais à 9 m ou moins, avec un passage libre
+  do: Avancer d'au plus 6 m pour la mettre à portée, puis la mordre.
+
+step: La cible est à plus de 9 m
+  do: Consacrer ses deux actions de mouvement à la rejoindre, jusqu'à 12 m au total.
+  note: Elle ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: La créature portant la plus grosse arme est toujours à portée
+  do: Continuer à la mordre chaque round.
+
+step: Un adversaire adjacent s'éloigne par un pas de placement de 1,50 m
+  do: Utiliser Step Up en action immédiate pour faire un pas de 1,50 m et rester adjacent à cet adversaire.
+  note: Ce déplacement réduit de 1,50 m le déplacement disponible à son prochain tour et lui interdit alors un pas de placement.
+
+step: Un ennemi quitte une case menacée et provoque une attaque d'opportunité
+  do: Le mordre si son attaque d'opportunité du round est encore disponible.
+  note: Son allonge de 3 m lui permet de menacer au-delà des cases adjacentes.
+
+step: Sa cible fuit hors de portée
+  do: La poursuivre sans relâche ; avancer puis mordre si possible, sinon employer un double déplacement.
+  note: Des aventuriers peuvent l'attirer vers d'autres créatures, qu'elle est également susceptible d'attaquer.
+
+step: Une porte fermée barre le passage
+  do: Interrompre sa progression devant cet obstacle ; attaquer une autre créature accessible si l'occasion se présente.
+  note: Elle ne sait pas ouvrir les portes.
+
+## Repli
+
+step: Elle est blessée, même grièvement
+  do: Continuer à attaquer ou à poursuivre ses adversaires jusqu'à la mort.

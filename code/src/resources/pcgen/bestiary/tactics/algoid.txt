@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Algoïde, plante neutre de taille M des marais tempérés, peu intelligente, qui privilégie une embuscade simple et le combat rapproché. 42 pv, CA 15 ; déplacement de 6 m par round.
+  Coup +7 au corps à corps, 1d8+4 dégâts ; allonge de 1,50 m. Discrétion +10, portée à +18 en terrain marécageux ou forestier ; Perception +10 et vision nocturne.
+
+note: Défenses
+  RD 5/contondant et magique : une arme doit réunir les deux propriétés pour ignorer cette réduction. Immunité au feu et à l'électricité ; traits des plantes.
+  Vulnérabilité à l'eau : éviter que les adversaires l'exploitent. Le bloc ne précise pas ses effets ; ne pas inventer de dégâts ou de DD.
+
+resource: Détection des pensées | À volonté | NLS 5, DD 15
+resource: Connaissance du lieu (know location) | À volonté | NLS 5 ; effet non détaillé dans le bloc
+resource: Décharge électrique | 1/jour | NLS 5, DD 13 indiqué dans le bloc
+
+note: Pouvoirs non détaillés
+  Animation des arbres, décharge mentale et étourdissement sont mentionnés sans règles d'utilisation. Leurs portées, actions, fréquences, DD et effets ne sont pas fournis ; ce plan ne leur attribue aucune mécanique supplémentaire.
+
+step: Des intrus approchent dans un secteur boisé ou marécageux
+  do: Se dissimuler grâce à Discrétion +18 et attendre qu'une cible s'approche à portée de coup
+  note: Privilégier un emplacement couvert avec une voie de retraite praticable à pied.
+
+step: Il peut observer les intrus avant de se montrer
+  do: Utiliser détection des pensées, DD 15, pour recueillir les informations accessibles au pouvoir
+  note: Il comprend le commun, mais ne parle pas ; ne pas prévoir de négociation ou d'ordres verbaux.
+
+## Ouverture
+
+step: Un intrus arrive à 1,50 m ou moins
+  do: Porter un coup +7, pour 1d8+4 dégâts
+  note: Choisir de préférence une cible isolée ou visiblement blessée.
+
+step: Aucun ennemi n'est à portée
+  do: Avancer vers la cible la plus proche, de 6 m au maximum avec un déplacement, puis frapper si elle est à portée
+  note: Utiliser les couverts disponibles pendant l'approche.
+
+## Rounds suivants
+
+step: Une cible dangereuse est au contact et décharge électrique est disponible
+  do: Consacrer son action à décharge électrique contre cette cible, puis reprendre les coups aux rounds suivants
+  note: Une seule utilisation par jour ; NLS 5, DD 13 indiqué.
+
+step: Un adversaire reste à portée
+  do: Répéter le coup +7, pour 1d8+4 dégâts, en restant sur la même cible tant qu'elle tient debout
+
+step: La cible tombe ou devient inaccessible
+  do: Se rapprocher d'un autre adversaire accessible et reprendre les coups
+  note: Éviter les poursuites longues : son déplacement est limité à 6 m.
+
+step: Les adversaires utilisent le feu ou l'électricité
+  do: Maintenir la pression au contact en profitant de ses immunités
+
+## Repli
+
+step: Points de vie sous 11, ou vulnérabilité à l'eau exploitée par les adversaires
+  do: Rompre le contact et gagner un couvert forestier ou marécageux par un passage praticable à pied
+  note: Se déplacer de 6 m par déplacement ; une fois hors de vue, tenter de se dissimuler avec Discrétion +18 dans ce terrain. Ne pas chercher le salut en plongeant dans l'eau.

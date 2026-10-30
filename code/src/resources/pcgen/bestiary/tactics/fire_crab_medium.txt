@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Crabe de feu de taille M, vermine sans intelligence qui défend son territoire ; 19 PV, CA 16, immunité au feu et vulnérabilité au froid.
+  Deux pinces +4, chacune infligeant 1d4+2 dégâts et 1d6 dégâts de feu, avec étreinte ; constriction : 1d4+2 dégâts et 1d6 dégâts de feu par round de lutte maintenue.
+  Déplacement terrestre de 9 m, nage de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m et Perception +4.
+
+step: Des intrus approchent de son territoire
+  do: Réagir à leur présence et se préparer à les attaquer au contact
+  note: Son absence d'intelligence favorise un comportement direct, sans préparation tactique complexe.
+
+## Ouverture
+
+step: Un ennemi est à plus de 1,50 m
+  do: Se rapprocher de lui, jusqu'à 9 m sur terre ou 6 m à la nage, puis porter une seule attaque de pince +4 s'il arrive à portée
+  note: Chaque pince qui touche inflige 1d4+2 dégâts et 1d6 dégâts de feu.
+
+step: Un ennemi est déjà à 1,50 m ou moins au début de son tour
+  do: Effectuer une attaque à outrance avec ses deux pinces +4
+  note: Chaque touche permet de tenter une étreinte en action libre, sans provoquer d'attaque d'opportunité ; utiliser son BMO de +0 contre la DMD de la cible.
+
+step: Une pince touche après un déplacement
+  do: Tenter immédiatement l'étreinte en action libre, avec un BMO de +0 contre la DMD de la cible
+  note: Cette tentative ne provoque pas d'attaque d'opportunité.
+
+## Rounds suivants
+
+step: Une proie est agrippée au début de son tour
+  do: Consacrer son action au maintien de la lutte pour lui infliger les dégâts de constriction
+  note: Chaque round où la lutte est maintenue inflige 1d4+2 dégâts et 1d6 dégâts de feu ; ne pas ajouter une attaque à outrance au même tour.
+
+step: Aucune proie n'est agrippée au début de son tour
+  do: Attaquer à outrance avec les deux pinces si un ennemi est à portée ; sinon, se rapprocher et porter une seule attaque de pince si possible
+  note: Tenter de nouveau l'étreinte après une touche pour reprendre la constriction aux rounds suivants.
+
+note: Chaleur corporelle
+  Une créature qui le touche avec une attaque à mains nues ou une arme naturelle subit 1d6 dégâts de feu à chaque touche.
+  Cet effet est automatique et ne consomme aucune action ; le crabe continue à attaquer ou à maintenir sa prise.
+
+step: Le combat se déplace dans l'eau
+  do: Utiliser sa nage de 6 m et sa compétence de Natation +10 pour rester au contact
+  note: Il conserve ses pinces, son étreinte et sa constriction ; sa chaleur inflige les dégâts indiqués par son profil.
+
+## Repli
+
+step: Son repaire est menacé, même s'il est grièvement blessé
+  do: Continuer à attaquer ou à maintenir sa prise jusqu'à la mort
+  note: Défenseur territorial, il n'organise pas de fuite ; sa vulnérabilité au froid demeure son principal point faible.

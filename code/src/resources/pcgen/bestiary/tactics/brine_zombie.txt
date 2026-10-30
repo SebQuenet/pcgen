@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Zombie de saumure, mort-vivant de taille M sans intelligence, d'alignement neutre mauvais ; 22 PV, CA 13.
+  Coutelas rouillé +5 (1d6+2, critique 18–20) ou coup +5 (1d6+3) ; allonge de 1,50 m.
+  Déplacement terrestre et nage à 9 m ; vision dans le noir à 18 m ; Natation +10.
+
+note: Défenses et lenteur
+  Réduction des dégâts 5/tranchant, résistance au feu 10 et immunités des morts-vivants.
+  Chancelant : une seule action de mouvement ou action simple par round. Il peut toutefois effectuer une charge limitée à sa vitesse.
+  Il ne peut donc pas se déplacer normalement puis attaquer dans le même round.
+
+## Ouverture
+
+step: Un ennemi est à 1,50 m
+  do: Porter une attaque de coutelas +5 (1d6+2, critique 18–20), ou un coup +5 (1d6+3) s'il n'utilise pas son arme.
+
+step: Sur terre, une charge en ligne droite de 3 à 9 m permet d'arriver au contact
+  do: Charger et porter une attaque de coutelas +7 (1d6+2, critique 18–20), ou un coup +7 (1d6+3).
+  note: Le trajet doit être dégagé ; sa CA descend à 11 jusqu'au début de son prochain tour.
+
+step: Aucun ennemi au contact et aucune charge possible
+  do: Avancer ou nager jusqu'à 9 m vers l'ennemi le plus proche.
+  note: Son action de mouvement consomme son tour ; il attend le round suivant pour attaquer.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Répéter une seule attaque de coutelas +5 (1d6+2, critique 18–20), ou un coup +5 (1d6+3) s'il n'utilise pas son arme.
+  note: Il ne combine pas le coutelas et le coup dans une même attaque.
+
+step: L'ennemi s'éloigne
+  do: Le poursuivre à 9 m par round, à terre ou à la nage ; sur terre, reprendre une charge limitée à 9 m si les conditions le permettent.
+  note: Sans intelligence, il poursuit et frappe sans élaborer de diversion ni choisir ses cibles selon leurs défenses.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à poursuivre ou à frapper ; il ne se replie pas spontanément.
+  note: À 0 PV, ce mort-vivant est détruit.

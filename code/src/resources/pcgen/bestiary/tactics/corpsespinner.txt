@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Corpsespinner, prédateur arachnéen de taille TG du plan Astral, neutre, FP 11. Il encaisse avec 127 pv et une CA de 25, puis tue par morsure empoisonnée.
+  Morsure +18 (2d8+7, critique 19–20) ; espace et allonge de 4,50 m ; déplacement de 12 m, escalade de 6 m. Initiative +7.
+
+resource: Projection de toile | 8/jour | contact à distance +16 ; portée maximale 24 m, facteur de portée 3 m ; évasion ou rupture DD 28 ; toile 15 pv
+
+note: Poison
+  Blessure ; Vigueur DD 22 ; 2d6 dégâts d'Intelligence par round pendant 4 rounds ; guérison après 2 sauvegardes consécutives réussies. À Intelligence 0, mort et transformation en corpsespun après 1 heure.
+
+note: Repérage
+  Vision dans le noir à 18 m, vision nocturne, Perception +10. Le sens astral localise automatiquement les présences à 60 m sur le plan Astral.
+
+step: Il attend des proies
+  do: Se dissimuler près d'un passage, en hauteur si le terrain le permet, avec Discrétion +8 et Escalade +17
+  note: ses grandes toiles astrales doivent être préparées avant le combat
+
+step: Il est accompagné de 4 à 9 corpsespun
+  do: Les placer devant lui pour attaquer les proies qu'il prendra dans sa toile
+
+## Ouverture
+
+step: Une proie est à portée de toile, hors de son allonge
+  do: Projeter une toile sur elle, puis se déplacer pour l'approcher en évitant l'encerclement
+  note: la toile enchevêtre ; DD 28 pour s'en libérer, pas une sauvegarde de Réflexes à l'impact
+
+step: Un adversaire est déjà à 4,50 m ou moins
+  do: Le mordre à +18 pour 2d8+7 dégâts et lui inoculer le poison
+  note: choisir de préférence une proie isolée ou déjà enchevêtrée
+
+## Rounds suivants
+
+step: Une proie reste à portée de morsure
+  do: Répéter la morsure sur elle jusqu'à l'abattre
+  note: il ne possède qu'une morsure ; une attaque à outrance ne lui donne pas d'attaques supplémentaires
+
+step: Des ennemis provoquent des attaques d'opportunité dans son allonge de 4,50 m
+  do: Les mordre avec Attaques réflexes, jusqu'à 4 attaques d'opportunité par round
+  note: chaque morsure inflige aussi le poison ; une même occasion ne donne qu'une attaque
+
+step: Il combat sur le plan Matériel et peut encore utiliser son action de mouvement
+  do: Après sa morsure, passer sur le plan Astral par une action de mouvement ; revenir au round suivant par une action libre si une nouvelle attaque est favorable
+  note: ce passage permet d'espacer ses assauts pendant que le poison agit
+
+step: Une proie s'échappe et il lui reste des projections de toile
+  do: L'enchevêtrer de nouveau avant de reprendre la poursuite
+
+step: Une victime est morte
+  do: La laisser intacte s'il veut obtenir un nouveau corpsespun
+  note: une victime tuée et non dévorée se relève après 1 heure ; aucun renfort immédiat
+
+## Repli
+
+step: Points de vie sous 32, ou combat manifestement perdu
+  do: Depuis le plan Matériel, passer sur le plan Astral par une action de mouvement et regagner son repaire
+  note: s'il combat déjà sur le plan Astral, fuir vers son repaire en utilisant le terrain et ses déplacements de 12 m, ou son escalade de 6 m

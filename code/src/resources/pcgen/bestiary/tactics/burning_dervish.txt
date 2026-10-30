@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Extérieur du feu de taille M, loyal mauvais, intelligent ; 58 pv, CA 17. Immunisé au feu, vulnérable au froid.
+  Fauchard +1 : +14/+9, 2d4+7, critique 18–20. En forme de flammes : 2 coups +13, chacun infligeant 1d6+4 plus 1d6 de feu et embrasement.
+  Déplacement de 9 m au sol ; vol de 6 m, manœuvrabilité parfaite ; allonge de 1,50 m ; vision dans le noir à 18 m.
+
+resource: Invisibilité | 3/jour | lui-même uniquement ; NLS 14
+resource: Pyrotechnie | 3/jour | DD 14 ; nécessite une source de feu
+resource: Agrandissement ou réduction de personne | 1/jour au total | DD 13 ; ne cible que les humanoïdes
+resource: Changement de plan | 1/jour | plans élémentaires, astral ou matériel uniquement
+resource: Production de flamme | 1/jour | NLS 14
+
+step: Il repère les adversaires avant d'être engagé
+  do: Se dissimuler avec Discrétion +14 et observer leurs positions avec Perception +14.
+  do: Utiliser invisibilité pour approcher une cible isolée ou gagner une position favorable.
+  note: L'invisibilité cesse dès qu'il attaque ; conserver si possible une utilisation pour le repli.
+
+note: Choix des pouvoirs
+  Agrandissement et réduction de personne ne peuvent pas le cibler : il est un extérieur. Ne pas modifier sa taille ni ses caractéristiques avec ces pouvoirs.
+  Le bloc ne précise pas les modalités de la forme de flammes ni le DD et la durée de l'embrasement ; ne pas leur attribuer de valeurs supplémentaires.
+
+## Ouverture
+
+step: Plusieurs ennemis sont exposés à une source de feu existante
+  do: Utiliser pyrotechnie pour les aveugler avec les feux d'artifice, Volonté DD 14, ou couvrir une approche avec la fumée, Vigueur DD 14 contre ses effets affaiblissants.
+  note: Choisir le mode selon la position des adversaires ; éviter que la fumée gêne aussi ses propres attaques. Ce pouvoir remplace son attaque du round.
+
+step: Une cible isolée est accessible après un déplacement
+  do: Approcher sous invisibilité si elle est active, puis porter une seule attaque de fauchard à +14, pour 2d4+7 dégâts.
+  note: Le déplacement suivi d'une attaque ne permet pas d'ajouter l'attaque à +9 ; l'attaque révèle sa position et met fin à l'invisibilité.
+
+step: Aucune cible n'est accessible au corps à corps
+  do: Activer production de flamme, puis utiliser ses flammes à distance lors des rounds suivants pendant qu'il cherche une approche.
+  note: Utiliser le vol pour franchir un obstacle ou gagner de la hauteur ; sa vitesse de vol reste de 6 m.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et il peut consacrer le round à attaquer
+  do: Faire une attaque à outrance au fauchard : +14 puis +9, chaque touche infligeant 2d4+7 dégâts.
+
+step: Il combat déjà en forme de flammes et peut faire une attaque à outrance
+  do: Porter ses deux coups à +13, chacun pour 1d6+4 plus 1d6 de feu et embrasement.
+  note: Ces coups constituent l'alternative au fauchard ; ne pas cumuler les deux séries d'attaques.
+
+step: Plusieurs ennemis sont à 1,50 m de lui
+  do: Utiliser Attaque en rotation avec le fauchard : une attaque à +14 contre chaque adversaire à portée.
+  note: Cette action occupe le round entier et remplace ses attaques ordinaires ; ne pas ajouter l'attaque à +9.
+
+step: Il dispose d'un trajet dégagé pour harceler une cible
+  do: Utiliser Attaque éclair : se déplacer, porter une seule attaque, puis poursuivre son déplacement pour éviter de rester au contact.
+  note: Respecter au moins 3 m de déplacement avant et après l'attaque, dans la limite de 9 m au sol ou 6 m en vol. La cible attaquée ne peut pas lui porter d'attaque d'opportunité pour ce déplacement ; les autres ennemis le peuvent.
+
+step: Il doit rester au contact d'un adversaire dangereux
+  do: Utiliser Expertise du combat : accepter −3 aux attaques de mêlée pour gagner +3 à la CA, qui passe à 20.
+  note: Ses attaques de fauchard passent à +11/+6 ; ses coups en forme de flammes passent à +10. Mobilité ajoute encore +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements.
+
+step: Un adversaire emploie des attaques de froid
+  do: Chercher un couvert qui bloque ses attaques ou rompre la ligne de vue ; profiter du vol si le terrain le permet.
+  note: Sa vulnérabilité au froid rend cet adversaire prioritaire si une attaque directe permet de le neutraliser rapidement.
+
+## Repli
+
+step: Il tombe à 29 pv ou moins, ou ne parvient plus à éviter les attaques de froid
+  do: Utiliser changement de plan pour gagner un plan autorisé, de préférence le plan élémentaire du Feu.
+  note: Réserver cette utilisation à la fuite tant qu'il n'a pas une autre issue sûre.
+
+step: Changement de plan est déjà dépensé
+  do: Utiliser une invisibilité restante, puis s'éloigner à 9 m au sol ou 6 m en vol, en cherchant un obstacle qui coupe la poursuite.
+  note: Cesser d'attaquer pour conserver l'invisibilité ; gagner de la hauteur si les poursuivants ne peuvent pas voler.

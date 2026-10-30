@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Abandoned One, mort-vivant chaotique mauvais de taille M : ancien soldat abandonné, il approche les voyageurs sous un déguisement pour isoler une victime.
+  37 pv ; CA 17, contact 12 ; initiative +6. Déplacement de 9 m ; allonge de 1,50 m. Attaque à outrance : 2 griffes +7, chacune pour 1d8+3 dégâts.
+  Vision dans le noir et perception aveugle à 18 m ; Perception +9, Discrétion +10, Bluff +8, Psychologie +9. Immunités des morts-vivants ; parle le commun.
+
+resource: Modification d'apparence | 3/jour | NLS 5 ; durée 5 minutes ; prendre une apparence humanoïde de soldat égaré ou de guide
+resource: Invisibilité sélective | 3/jour | NLS 5 ; durée 5 minutes ; toute créature qu'il attaque peut le voir pendant 1 heure, mais l'effet persiste envers les autres
+resource: Zone de silence | 3/jour | NLS 5 ; durée 5 heures ; émanation mobile de 1,50 m de rayon centrée sur lui
+
+step: Il peut préparer une embuscade
+  do: Activer zone de silence à l'écart, puis modification d'apparence quand des voyageurs approchent ; utiliser des actions distinctes.
+  note: Les sons produits dans la zone ne sont pas audibles à l'extérieur. Les créatures à l'intérieur peuvent parler et lancer des sorts à composante verbale.
+
+step: Des voyageurs acceptent de lui parler
+  do: Converser en commun avec une personne proche, se présenter comme un guide et tenter de l'éloigner de ses compagnons avec Bluff +8.
+  note: Le mensonge ne contraint personne ; profiter de l'obscurité et des obstacles existants pour séparer les lignes de vue.
+
+## Ouverture
+
+step: La victime est isolée et il peut se préparer hors de sa vue
+  do: Mettre fin à modification d'apparence pour retrouver ses griffes, puis activer invisibilité sélective ; chaque préparation demande une action simple distincte.
+  note: Approcher ensuite avec Discrétion +10. Zone de silence étouffe les appels d'une victime située dans son rayon, sans empêcher les témoins de voir le combat.
+
+step: Le combat commence avec une victime à 1,50 m ou moins, sous sa forme véritable
+  do: Attaque à outrance avec les deux griffes +7, chacune pour 1d8+3 dégâts.
+  note: S'il bénéficie d'un round de surprise, porter une seule attaque de griffe avec son action simple. La victime attaquée voit à travers son invisibilité sélective.
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Avancer de 9 m au maximum, puis porter une seule attaque de griffe +7 pour 1d8+3 dégâts si elle est à portée.
+
+## Rounds suivants
+
+step: La même victime reste à portée
+  do: Continuer les attaques à outrance avec les deux griffes ; utiliser au besoin un pas de placement de 1,50 m.
+  note: Concentrer les attaques sur cette victime préserve l'invisibilité envers les adversaires qu'il n'a pas encore attaqués.
+
+step: La victime s'éloigne
+  do: La suivre avec un déplacement et une seule griffe si elle reste accessible ; privilégier une victime séparée du groupe.
+  note: Dès qu'elle sort de la zone de silence, ses cris redeviennent audibles à l'extérieur.
+
+step: Des renforts arrivent et l'invisibilité sélective a expiré ou été dissipée
+  do: Si une utilisation reste disponible, l'activer à couvert avant de reprendre l'approche.
+  note: Une nouvelle utilisation ne trompe pas les créatures qu'il a attaquées durant l'heure précédente.
+
+## Repli
+
+step: Il tombe à 9 pv ou moins, ou plusieurs ennemis l'encerclent
+  do: Se désengager par une retraite, jusqu'à 18 m si le terrain le permet, vers un couvert ou un obstacle qui coupe les lignes de vue.
+  note: La retraite évite les attaques d'opportunité liées au départ de sa case initiale seulement ; choisir un trajet qui contourne les autres ennemis.
+
+step: Il a rompu le contact et peut encore utiliser invisibilité sélective
+  do: L'activer si nécessaire, puis poursuivre sa fuite avec Discrétion +10 et zone de silence si elle est toujours active.
+  note: Ses anciennes cibles peuvent encore le voir pendant 1 heure ; contre elles, compter sur les obstacles et la distance.

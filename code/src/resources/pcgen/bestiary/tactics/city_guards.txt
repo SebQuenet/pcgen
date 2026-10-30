@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Garde humain de Magnimar, homme d'armes 2, neutre, FP 1/3. CA 15, 13 pv ; déplacement de 6 m ; allonge de 1,50 m ; initiative +4.
+  Hallebarde +4 (1d10+1, critique x3), matraque +3 (1d6+1 non létaux), arbalète légère +2 (1d8, critique 19–20).
+  Perception +3 et Intimidation +5 ; il peut patrouiller seul, en binôme, en patrouille de 3 à 5 ou en escouade de 6 à 10.
+
+resource: Carreaux d'arbalète légère | 20 | un carreau consommé par tir
+
+step: Il patrouille avec d'autres gardes
+  do: Rester assez près pour se soutenir et surveiller les approches avec Perception +3
+
+step: La visibilité est insuffisante
+  do: Utiliser la lanterne sourde pour éclairer la zone à surveiller
+
+## Ouverture
+
+step: Un suspect menace de résister
+  do: Lui ordonner de déposer ses armes et de se rendre ; employer Intimidation +5 si la situation permet de parlementer
+
+step: Un combat éclate
+  do: Donner l'alerte avec le sifflet de signal et se placer avec les autres gardes
+
+step: L'adversaire est à distance et une ligne de tir est dégagée
+  do: Tirer à l'arbalète légère +2 (1d8, critique 19–20), si possible depuis un couvert
+
+step: L'adversaire est à 1,50 m et une capture paraît possible
+  do: Frapper à la matraque +3 pour infliger 1d6+1 dégâts non létaux
+  note: Préparer la matraque avant d'engager une arrestation ; changer d'arme prend du temps.
+
+step: L'adversaire au contact impose un combat mortel
+  do: Frapper à la hallebarde +4 (1d10+1, critique x3)
+  note: La hallebarde a ici une allonge de 1,50 m ; elle ne permet pas de frapper depuis le second rang.
+
+## Rounds suivants
+
+step: Plusieurs gardes affrontent le même adversaire
+  do: Chercher une prise en tenaille sans s'isoler et concentrer leurs attaques sur cet adversaire
+
+step: Le combat reste à distance
+  do: Recharger l'arbalète légère puis tirer à nouveau tant qu'il reste des carreaux
+  note: Le rechargement demande une action de mouvement et provoque des attaques d'opportunité ; éviter de recharger au contact.
+
+step: Un adversaire rejoint le tireur au contact
+  do: Passer à la matraque pour une arrestation ou à la hallebarde face à une menace mortelle
+  note: Éviter de tirer à l'arbalète au contact, car le tir provoque des attaques d'opportunité.
+
+step: Un suspect se rend ou est maîtrisé
+  do: Lui faire déposer ses armes, puis lui passer les menottes lorsque cela peut se faire sans opposition
+  note: Les menottes ne remplacent pas une attaque et ne permettent pas d'entraver automatiquement un adversaire qui résiste.
+
+## Repli
+
+step: Il tombe à 6 pv ou moins, ou la patrouille est débordée
+  do: Battre en retraite vers les autres gardes ou un couvert et réclamer des renforts au sifflet
+  note: Privilégier l'action de retraite pour quitter le contact ; avec 13 pv au total et un déplacement de 6 m, une poursuite prolongée l'expose vite.

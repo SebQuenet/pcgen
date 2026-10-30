@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Chauve-souris morte-vivante de taille TP, chaotique mauvaise, à l'intelligence animale. 7 pv, CA 14 ; morsure +4 (1d3-3 plus maladie et paralysie).
+  Vol à 12 m par round, bonne manœuvrabilité ; déplacement au sol à 1,50 m. Allonge de 0 m : elle doit entrer dans l'espace de sa victime pour la mordre.
+  Perception aveugle à 6 m ; Perception +5, ou +9 avec la perception aveugle. Résistance à la canalisation +2 et immunités des morts-vivants.
+
+step: Une proie approche
+  do: La repérer depuis un perchoir et attendre qu'elle soit accessible en vol
+  note: La perception aveugle permet de localiser une proie à 6 m ; elle n'annule pas les effets du camouflage.
+
+## Ouverture
+
+step: Une proie peut être rejointe avec un déplacement de 12 m
+  do: Voler jusque dans son espace et porter une morsure +4
+  note: L'entrée dans l'espace adverse peut provoquer une attaque d'opportunité ; ses 7 pv rendent cette approche dangereuse.
+
+step: La proie est plus éloignée
+  do: Se rapprocher en vol, en utilisant le relief pour limiter son exposition, puis mordre dès qu'un déplacement suffit à l'atteindre
+
+## Rounds suivants
+
+step: La victime reste accessible
+  do: Rester dans son espace et répéter la morsure chaque round
+  note: Chaque morsure peut transmettre la maladie et provoquer la paralysie. La fiche ne donne ni leurs DD, ni la durée de la paralysie, ni les effets de la maladie.
+
+step: La victime est paralysée
+  do: Continuer à la mordre tant qu'aucun adversaire ne chasse la chauve-souris
+
+step: La victime s'éloigne
+  do: La poursuivre en vol et entrer de nouveau dans son espace pour mordre
+  note: Elle ne dispose d'aucune attaque à distance ni d'aptitude permettant de repartir après sa morsure dans le même déplacement.
+
+step: Une colonie de 4 à 12 individus est présente
+  do: Faire attaquer les chauves-souris sur les proies accessibles, plusieurs pouvant s'acharner sur la même victime
+  note: Leur intelligence de 2 favorise des attaques simples et répétées.
+
+## Repli
+
+step: Les pv tombent à 3 ou moins et une issue est accessible
+  do: Rompre le contact et fuir en vol à 12 m par déplacement, vers un passage ou un perchoir hors de portée
+  note: Quitter le contact peut provoquer une attaque d'opportunité. À 0 pv, ce mort-vivant est détruit.

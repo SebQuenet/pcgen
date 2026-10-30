@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Loup sanguinaire goule (Ghoul Dire Wolf), mort-vivant de taille G, neutre mauvais, prédateur de mêlée à l'intelligence limitée. 90 pv, CA 19, initiative +6 ; déplacement de 15 m, espace occupé de 3 m et allonge de 1,50 m.
+  Morsure +17 (2d6+12), avec paralysie et renversement : il immobilise ses proies pour les dévorer. Traits des morts-vivants et résistance à la canalisation +4.
+
+resource: Paralysie | À chaque morsure réussie | Vigueur DD 18 ou paralysie pendant 1d4+2 rounds.
+resource: Renversement | À chaque morsure réussie | Tentative gratuite avec BMO +18, sans attaque d'opportunité.
+
+step: Des proies approchent sans l'avoir repéré
+  do: Se dissimuler à couvert avec Discrétion +9 et attendre qu'une cible s'éloigne de ses compagnons.
+  note: Perception +16, vision dans le noir à 18 m et odorat ; Survie +10, ou +14 pour suivre une piste à l'odorat.
+
+step: Il chasse avec d'autres loups goules
+  do: Approcher avec la meute par plusieurs côtés pour prendre les proies en tenaille dès le contact.
+  note: Prévoir assez de place pour son espace occupé de 3 m.
+
+## Ouverture
+
+step: Une proie est accessible après un déplacement de 15 m ou moins
+  do: Avancer jusqu'à 1,50 m et porter une morsure +17 (2d6+12), puis appliquer la paralysie et tenter le renversement.
+  note: Choisir de préférence une cible isolée ou facile à atteindre.
+
+step: Une proie est plus loin, mais une charge rectiligne est possible sur 30 m au maximum
+  do: Charger et mordre à +19 (2d6+12), avec paralysie et renversement si la morsure touche.
+  note: La charge impose une CA de 17 jusqu'au début de son prochain tour ; elle exige un trajet dégagé et au moins 3 m de déplacement.
+
+step: Aucune proie n'est accessible à la morsure ce round
+  do: Se rapprocher à couvert ; effectuer un double déplacement, jusqu'à 30 m, si nécessaire.
+
+## Rounds suivants
+
+step: Une cible reste debout et mobile à portée
+  do: Répéter la morsure +17 chaque round et tenter le renversement à chaque touche, même si elle résiste à la paralysie.
+  note: Il dispose d'une seule morsure par tour ; rester immobile ne lui donne pas d'attaques supplémentaires.
+
+step: Une cible est renversée mais reste consciente et mobile
+  do: Continuer à la mordre tant qu'elle est à terre ; profiter de son éventuel relèvement pour porter une attaque d'opportunité.
+  note: Une cible à terre subit un malus de 4 à la CA contre les attaques de mêlée.
+
+step: Une cible est paralysée et d'autres adversaires menacent encore le loup
+  do: Mordre une autre cible mobile à portée ou l'approcher pour étendre la paralysie dans le groupe.
+  note: La paralysie dure 1d4+2 rounds ; une cible paralysée reste une proie à achever lorsque les menaces immédiates sont écartées.
+
+step: Une proie paralysée est seule et aucun adversaire ne peut intervenir au contact
+  do: Lui porter un coup de grâce avec la morsure.
+  note: Cette action prend un round complet et provoque des attaques d'opportunité.
+
+step: Un autre loup menace la même cible
+  do: Se placer de l'autre côté de cette cible pour la prendre en tenaille et mordre avec le bonus de +2 correspondant.
+
+## Repli
+
+step: À 22 pv ou moins, si la proie résiste encore et qu'une fuite reste possible
+  do: Rompre le contact par une retraite sur un double déplacement, jusqu'à 30 m, puis chercher un couvert.
+  note: La retraite protège du départ de sa case initiale, mais les autres cases menacées traversées peuvent provoquer des attaques d'opportunité.
+
+step: Il est dégagé et dispose d'une ligne droite libre pour fuir
+  do: Courir jusqu'à 75 m par round grâce au don Course, puis se soustraire à la vue des poursuivants.

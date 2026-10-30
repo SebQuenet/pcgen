@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  La lamproie fouisseuse (Burrowing Lamprey) est une créature magique aquatique de taille P, un parasite agressif guidé par l'instinct. Elle possède 8 pv et une CA de 15.
+  Morsure +4 au contact, à 1,50 m : 1d4 dégâts, fixation automatique et poison. Une fois fixée, elle inflige automatiquement les dégâts de morsure chaque round et peut s'enfouir dans la chair.
+  Amphibie, elle nage à 9 m par déplacement et rampe à 1,50 m. Vision dans le noir à 18 m, vision nocturne et Perception +5.
+
+step: Une proie approche de l'eau
+  do: Attendre dans l'eau puis se rapprocher à la nage dès qu'elle devient accessible
+  note: privilégier une proie dans l'eau ; sa lenteur au sol rend une poursuite terrestre peu efficace
+
+## Ouverture
+
+step: Aucune proie n'est encore au contact
+  do: Nager vers la proie la plus proche pour arriver à 1,50 m et mordre si une action simple reste disponible
+
+step: Une proie est au contact et la lamproie n'est pas fixée
+  do: Mordre à +4 pour infliger 1d4 dégâts, se fixer automatiquement et inoculer le poison
+  note: la fixation lui fait perdre son bonus de Dextérité à la CA ; sa CA passe de 15 à 13
+
+resource: Poison de morsure | à chaque morsure | blessure ; Vigueur DD 13 ; 1d2 dégâts de Dextérité par échec ; fréquence 1/round pendant 4 rounds ; guérison après 1 sauvegarde réussie
+
+## Rounds suivants
+
+step: Fixée à une proie, encore à l'extérieur de sa chair
+  do: Infliger automatiquement 1d4 dégâts de morsure, puis utiliser une action simple pour s'enfouir dans la chair et infliger 1d4 dégâts supplémentaires
+  note: l'enfouissement accorde un abri de +4 à la CA contre les attaques qui risquent de blesser l'hôte ; sa CA est alors de 17 contre ces attaques
+
+step: Déjà enfouie dans la chair
+  do: Rester fixée et continuer d'infliger automatiquement 1d4 dégâts de morsure chaque round
+  note: aucun nouveau jet d'attaque n'est nécessaire pour ces dégâts ; retirer la lamproie enfouie exige un test de Premiers secours DD 15
+
+step: Le poison affecte encore la victime
+  do: Résoudre la sauvegarde de Vigueur DD 13 à chaque échéance du poison
+  note: chaque échec inflige 1d2 dégâts de Dextérité ; une réussite arrête cette exposition, au plus tard après ses 4 rounds
+
+step: La lamproie a été retirée et peut encore combattre
+  do: Mordre de nouveau une proie à portée pour se fixer ; sinon, rejoindre à la nage la proie la plus proche
+
+## Repli
+
+step: Toujours fixée ou enfouie
+  do: Rester sur son hôte et poursuivre son alimentation
+  note: son instinct de parasite favorise la fixation et l'abri de la chair
+
+step: Détachée, blessée et sans proie immédiatement accessible
+  do: Regagner l'eau si nécessaire, puis s'éloigner à la nage à 9 m par déplacement
+  note: si elle est agrippée, utiliser Évasion +10 pour tenter de se libérer ; cette compétence ne remplace pas le test de Premiers secours nécessaire pour l'extraire d'un hôte

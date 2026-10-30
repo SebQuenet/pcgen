@@ -1,0 +1,33 @@
+## Avant le combat
+
+note: Profil
+  Poisson-archer géant, animal aquatique de taille M : 11 pv, CA 14, nage à 12 m. Il chasse par instinct, sans tactique élaborée.
+  Morsure +4 (1d6), allonge de 1,50 m ; jet d’eau à distance +4 (1d3). Vision nocturne, odorat et Perception +6 pour repérer les proies.
+
+step: Une proie approche de l’eau
+  do: Rester dans l’eau et se rapprocher pour pouvoir l’attaquer
+
+## Ouverture
+
+step: Une proie est à portée du jet d’eau, hors de portée de morsure
+  do: Tirer un jet d’eau +4 (1d3) depuis l’eau
+
+step: Une proie est à portée de morsure
+  do: Mordre à +4 (1d6)
+
+## Rounds suivants
+
+step: La proie reste à portée de morsure
+  do: Continuer à mordre à +4 (1d6)
+
+step: La proie s’éloigne dans l’eau
+  do: La suivre à la nage, jusqu’à 12 m par déplacement, puis mordre si elle est à portée
+
+step: La proie reste hors de l’eau, à portée du jet
+  do: Répéter le jet d’eau +4 (1d3) en restant immergé
+  note: Aucun effet de chute, de déséquilibre ou de déplacement n’est indiqué pour ce jet.
+
+## Repli
+
+step: Points de vie sous 5, ou proie devenue inaccessible
+  do: Abandonner la chasse et gagner une eau plus profonde à la nage, à 12 m par déplacement

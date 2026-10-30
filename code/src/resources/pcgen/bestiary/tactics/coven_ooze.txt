@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Coven Ooze, vase de taille G, neutre, à l'intelligence animale ; prédateur solitaire des marais et des souterrains. Elle attend volontiers près d'un passage fréquenté dans l'eau.
+  115 pv, CA 4 ; coup +11 (1d8+4, critique 19–20), allonge de 3 m et espace occupé de 3 m. Enchaînement et Succession d'enchaînements lui permettent de frapper plusieurs ennemis regroupés.
+  Déplacement de 9 m, escalade de 6 m ; vision aveugle à 18 m, Perception +7. Immunités à l'acide, au froid et aux effets couverts par les traits des vases ; résistance au feu 10. Impossible de lui faire un croc-en-jambe.
+
+resource: Scission | automatique sous conditions | une arme tranchante ou perforante ne lui inflige aucun dégât et la divise en trois vases, chacune avec le tiers de ses pv actuels, arrondi à l'inférieur ; nécessite plus de 10 pv et assez d'yeux pour en donner un à chaque copie
+
+resource: Adhérence | à volonté | permet de se fixer aux surfaces, y compris inversées ; activation ou interruption par action rapide, déplacement réduit de moitié pendant l'adhérence
+
+step: Un gué ou un passage étroit est disponible
+  do: Attendre près du passage, dans l'eau ou contre une paroi, jusqu'à percevoir une proie
+  note: elle utilise simplement le terrain ; elle ne prépare pas de piège élaboré
+
+## Ouverture
+
+step: Une proie est détectée à 18 m ou moins, mais reste au-delà de l'allonge
+  do: Avancer vers la plus proche, jusqu'à 9 m, puis porter un coup +11 si elle arrive à 3 m ou moins
+  note: si un déplacement simple ne suffit pas, poursuivre l'approche ; son initiative de −5 laisse généralement les intrus agir d'abord
+
+step: Plusieurs ennemis voisins les uns des autres sont à 3 m ou moins
+  do: Utiliser Succession d'enchaînements : porter un coup +11, puis, après chaque touche, frapper une nouvelle cible adjacente à la précédente et toujours dans l'allonge
+  note: action simple ; arrêter au premier échec, une seule attaque par cible ; CA réduite à 2 jusqu'au prochain tour
+
+step: Une seule proie est à portée
+  do: Porter un coup +11 (1d8+4, critique 19–20)
+  note: privilégier cette attaque simple quand aucun enchaînement n'est possible
+
+## Rounds suivants
+
+step: Les proies restent regroupées
+  do: Répéter Succession d'enchaînements en commençant par une cible facile à toucher
+  note: un déplacement préalable de 9 m au maximum reste possible ; toutes les cibles doivent ensuite être dans l'allonge de 3 m
+
+step: Une proie isolée paraît facile à toucher
+  do: Activer Attaque en puissance avant de frapper pour échanger de la précision contre davantage de dégâts
+  note: revenir au coup normal +11 si les attaques échouent trop souvent
+
+step: Une attaque tranchante ou perforante déclenche la scission
+  do: Remplacer la vase par trois copies et faire continuer chacune à attaquer la proie accessible la plus proche
+  note: à 115 pv, chaque copie commence avec 38 pv ; chacune ne conserve qu'un œil et ne peut donc plus se diviser. Les attaques tranchantes et perforantes lui infligent alors leurs dégâts normalement
+
+step: Une proie tente de se mettre à l'abri en hauteur
+  do: La suivre en escaladant à 6 m ; employer l'adhérence si la surface est inversée
+  note: sous adhérence, l'escalade passe à 3 m ; elle ne vole pas et ne traverse pas les obstacles
+
+## Repli
+
+step: La vase est blessée mais une proie reste accessible
+  do: Continuer à frapper et à poursuivre cette proie
+  note: jouer une faim animale obstinée ; aucun seuil de fuite chiffré n'est établi pour elle
+
+step: Les proies deviennent inaccessibles
+  do: Abandonner la poursuite et reprendre son errance ou son attente près d'un passage
+  note: elle peut regagner une paroi par escalade ; ne pas lui attribuer une vitesse de nage particulière

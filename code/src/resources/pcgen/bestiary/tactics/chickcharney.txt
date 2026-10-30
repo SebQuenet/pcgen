@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Chickcharney, petite créature magique neutre des régions chaudes, semblable à une chouette aux longues pattes. Curieux et confiant, il devient agressif lorsqu'on le provoque et protège farouchement ses œufs et ses petits.
+  30 pv, CA 15 ; morsure +8 (1d4-2 plus malchance), 2 griffes +8 (1d3-2 plus malchance). Allonge : 1,50 m.
+  Déplacement au sol : 6 m ; vol : 9 m, manœuvrabilité moyenne, Vol +10. Perception +6, vision dans le noir à 18 m et vision nocturne.
+
+resource: Trille béni | 1/jour | action simple ; toutes les créatures dans un rayon de 6 m gagnent un bonus de moral de +1 aux jets de sauvegarde jusqu'à la fin de la journée ; effet sonore et mental
+
+step: Des humanoïdes approchent sans manifester d'hostilité
+  do: Les observer et éventuellement s'approcher ; ne pas engager automatiquement le combat
+  note: Une menace contre le nid ou une provocation suffit à déclencher son agressivité.
+
+step: Un danger est repéré et aucun ennemi n'est encore à 6 m ou moins
+  do: Émettre le trille béni, si disponible, pour en bénéficier avec son éventuel partenaire
+  note: Le trille bénéficie aussi aux ennemis présents dans son rayon ; l'utiliser avant leur approche.
+
+## Ouverture
+
+step: L'agresseur est hors de portée de mêlée
+  do: S'approcher par un déplacement de 9 m au maximum en vol, ou de 6 m au sol, puis mordre à +8 s'il arrive à portée
+  note: Après ce déplacement, il ne porte qu'une attaque ; si la cible reste trop loin, poursuivre l'approche sans attaquer.
+
+step: L'agresseur est déjà à 1,50 m ou moins et aucun déplacement important n'est nécessaire
+  do: Attaque à outrance : morsure +8 et 2 griffes +8
+  note: Chaque attaque qui touche expose séparément la cible à la malchance.
+
+## Rounds suivants
+
+note: Malchance
+  Chaque touche impose un jet de Volonté DD 14 ; un échec inflige un malus de -1 aux jets d'attaque, de sauvegarde, de caractéristique et de compétence.
+  Les malus se cumulent jusqu'à -4. Les chickcharneys sont immunisés à cette malédiction.
+
+step: L'agresseur reste au contact
+  do: Répéter l'attaque à outrance sur lui pour multiplier les occasions de lui infliger la malchance
+  note: Ses faibles dégâts rendent les trois tentatives de malédiction particulièrement utiles.
+
+step: L'agresseur recule de 1,50 m
+  do: Faire un pas de placement de 1,50 m puis reprendre l'attaque à outrance
+
+step: L'agresseur s'éloigne davantage mais menace toujours le nid
+  do: Le rejoindre puis porter une seule morsure si un déplacement suffit
+  note: Son vol permet de franchir les obstacles au sol ; conserver une conduite animale simple, centrée sur la menace immédiate.
+
+## Repli
+
+step: Il tombe à 10 pv ou moins et n'a ni œufs ni petits à défendre
+  do: Se désengager et fuir en vol vers un perchoir hors de portée, jusqu'à 18 m sur un trajet horizontal dégagé
+  note: Éviter de traverser d'autres espaces menacés pendant le désengagement.
+
+step: Les agresseurs s'éloignent du nid
+  do: Interrompre la poursuite et revenir auprès des œufs ou des petits

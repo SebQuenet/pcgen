@@ -1,0 +1,96 @@
+## Avant le combat
+
+note: Profil
+  Dragon gris ancien, de taille TG, neutre mauvais, solitaire des côtes chaudes. Intelligent et très résistant : 283 pv, CA 39, contact 8, résistance à la magie 26 ; immunisé contre le sommeil et la paralysie.
+  Souffle de feu en ligne de 30 m, 20d6 dégâts, Réflexes DD 27 pour moitié ; présence terrifiante à 90 m, Volonté DD 24.
+  Morsure +31 (2d8+16, critique 19-20), 2 griffes +30 (2d6+11), 2 ailes +28 (1d8+5), queue +28 (2d6+11). Allonge de 3 m, de 4,50 m avec la morsure ; espace occupé de 4,50 m.
+  Marche à 18 m, vol à 60 m avec manœuvrabilité moyenne, nage à 12 m par action de mouvement. Il privilégie les passes aériennes, puis achève une cible isolée au contact.
+
+resource: Souffle de feu | une utilisation tous les 1d4 rounds | action simple ; ligne de 30 m, 20d6 feu, Réflexes DD 27 pour moitié
+resource: Sorts de niveau 6 | 4/jour | réserve commune : pétrification, Vigueur DD 20 ; glissement de terrain
+resource: Sorts de niveau 5 | 6/jour | réserve commune : brume mortelle, Vigueur DD 19 ; télékinésie ; transmutation de la pierre en boue
+resource: Sorts de niveau 4 | 7/jour | réserve commune : porte dimensionnelle, invisibilité suprême, scrutation, peau de pierre ; garder au moins une utilisation pour fuir
+resource: Sorts de niveau 3 | 7/jour | réserve commune : dissipation de la magie, état gazeux, protection contre les énergies destructives, rayon d'épuisement, Vigueur DD 17
+resource: Sorts de niveau 2 | 7/jour | réserve commune : flou, splendeur de l'aigle, bourrasque, localisation d'objet, image miroir
+resource: Sorts de niveau 1 | 7/jour | réserve commune : mains brûlantes, projectile magique, protection contre le Bien, brume de dissimulation, bouclier
+
+step: Les intrus sont repérés avant leur arrivée
+  do: Observer leurs déplacements et choisir une position offrant une ligne de souffle et une sortie par les airs ou par l'eau
+  note: Utiliser ses sens draconiques et Art de la magie +28 pour repérer les menaces ; ne pas laisser les combattants l'encercler.
+
+step: Il dispose de plusieurs rounds de préparation
+  do: Lancer bouclier, puis image miroir ; ajouter protection contre les énergies destructives si une énergie dangereuse a été identifiée
+  note: Chaque sort demande son propre round. Bouclier dure 13 minutes et porte la CA à 43 ; image miroir dure 13 minutes et crée 1d4+4 doubles, au maximum 8. La protection absorbe au maximum 120 dégâts de l'énergie choisie.
+
+step: Une attaque physique importante est prévisible et les composantes sont disponibles
+  do: Lancer peau de pierre avant le combat
+  note: Consommer les composantes, dont 250 po de poudre de diamant ; réduction des dégâts 10/adamantium, jusqu'à 130 dégâts absorbés. Cette protection vient du sort.
+
+step: Le combat va commencer dans les prochains instants
+  do: Lancer invisibilité suprême et prendre une trajectoire permettant une passe de souffle
+  note: Durée de 13 rounds ; les attaques ne rompent pas cette invisibilité. Déduire cette dépense de la réserve de niveau 4 et conserver une porte dimensionnelle.
+
+## Ouverture
+
+step: Il attaque à la vue d'adversaires dans un rayon de 90 m
+  do: Déclencher sa présence terrifiante en action libre avec l'attaque
+  note: Volonté DD 24 pour les adversaires de moins de 21 DV ; échec : secoués pendant 5d6 rounds, paniqués s'ils ont au plus 4 DV. Une réussite les immunise à cette présence pendant 24 heures ; une créature qui ne le voit pas n'est pas affectée.
+
+step: Plusieurs adversaires peuvent être alignés dans les 30 m
+  do: Effectuer une attaque en vol : se déplacer, souffler en action simple au meilleur angle, puis poursuivre son mouvement
+  note: Réflexes DD 27 pour moitié sur 20d6 feu. La passe utilise au total au plus 60 m de mouvement ; terminer hors de portée des armes de mêlée. Respecter les contraintes de virage et d'ascension du vol moyen.
+
+step: Les adversaires sont dispersés et une cible fragile reste exposée
+  do: Lancer pétrification sur un lanceur de sorts ou un tireur paraissant peu robuste, depuis une position hors de portée de mêlée
+  note: Vigueur DD 20 ; privilégier une cible dont l'élimination immédiate désorganiserait le groupe. Si ses chances de résister semblent fortes, préférer une passe avec une morsure à 4,50 m.
+
+## Rounds suivants
+
+note: Choix du round
+  Choisir une seule action simple : souffle, sort, morsure en passe ou enchaînement. Une attaque à outrance occupe le round et remplace ces options. L'attaque en vol permet de placer une action simple pendant le déplacement, sans donner d'attaque à outrance.
+
+step: Le souffle est rechargé et plusieurs ennemis peuvent être touchés
+  do: Reprendre de l'angle en vol et souffler sur la meilleure ligne de 30 m
+  note: Cibler en priorité les ennemis sans protection contre le feu ; changer de moyen d'attaque si le souffle s'avère inefficace.
+
+step: Une cible isolée est à 3 m ou moins et rester sur place est supportable
+  do: Effectuer l'attaque à outrance : morsure +31, 2 griffes +30, 2 ailes +28 et queue +28 ; concentrer les coups sur une même cible
+  note: À plus de 3 m et jusqu'à 4,50 m, seule la morsure porte. Un déplacement supérieur à un pas de 1,50 m empêche normalement cette attaque à outrance.
+
+step: Une cible au contact possède une CA assez basse pour accepter une perte de précision
+  do: Activer Attaque en puissance avant les jets d'attaque
+  note: Avec son bonus de base de +21, le malus est de -6 ; le bonus aux dégâts est de +18 à la morsure, +12 par griffe et +6 par attaque secondaire. Conserver les valeurs normales contre une cible difficile à toucher.
+
+step: Plusieurs ennemis adjacents entre eux sont à portée et il ne peut pas attaquer à outrance
+  do: Utiliser Succession d'enchaînements avec la morsure, en action simple
+  note: Chaque coup réussi permet de frapper un autre ennemi adjacent au précédent et situé à 4,50 m ou moins ; une seule attaque par ennemi. Un échec arrête la série ; CA réduite de 2 jusqu'à son prochain tour.
+
+step: Un combattant dangereux le poursuit et le souffle est indisponible
+  do: Lancer rayon d'épuisement à 16,50 m ou moins, puis maintenir la distance
+  note: Attaque de contact à distance +19 ; Vigueur DD 17. Un impact épuise la cible, ou la fatigue si elle réussit sa sauvegarde ; une cible déjà fatiguée devient épuisée. Durée de 13 minutes.
+
+step: Une protection magique empêche ses attaques de produire leur effet
+  do: Tenter une dissipation de la magie ciblée depuis les airs
+  note: Jet de dissipation à +10, malgré son niveau de lanceur de sorts de 13. Consacrer ce round à une protection décisive, telle qu'une défense contre le feu ou un moyen de vol gênant.
+
+step: Des adversaires terrestres empruntent un passage de roche naturelle non travaillée
+  do: Lancer transmutation de la pierre en boue sous leur progression et rester en vol
+  note: Le sort ralentit les créatures prises dans la boue à 1,50 m et gêne leurs attaques et leur CA. Il ne transforme ni pierre travaillée ni pierre magique ; choisir une zone assez profonde pour entraver les cibles.
+
+step: Des ennemis vivants sont regroupés au sol dans une zone abritée du vent
+  do: Lancer brume mortelle sur leur position et surveiller les sorties depuis l'extérieur du nuage
+  note: Rayon de 6 m ; contre les cibles de plus de 6 DV, 1d4 dégâts de Constitution par round d'exposition, Vigueur DD 19 pour moitié. Le nuage dérive de 3 m par round en s'éloignant du point de lancement ; rester à l'écart de ce poison. Le sort ne se lance pas sous l'eau et ne pénètre pas les liquides.
+
+step: Ses doubles sont détruits et les attaques adverses deviennent dangereuses
+  do: S'éloigner avant de renouveler image miroir ou invisibilité suprême, selon les réserves restantes
+  note: Lancer sur la défensive s'il reste menacé. Préserver l'utilisation de niveau 4 destinée à la fuite ; éviter de consacrer plusieurs rounds de suite aux protections sous le feu ennemi.
+
+## Repli
+
+step: Ses points de vie passent sous 90, ou ses défenses ne suffisent plus à contenir les dégâts
+  do: Lancer porte dimensionnelle vers un emplacement dégagé et connu, derrière un obstacle ou sur une autre portion du littoral
+  note: Portée maximale de 276 m au niveau de lanceur de sorts 13. Après le sort, aucune autre action jusqu'à son prochain tour ; reprendre ensuite la fuite en vol ou à la nage.
+
+step: Porte dimensionnelle est indisponible et une voie de fuite reste ouverte
+  do: Se désengager, puis gagner le large à la nage ou s'éloigner en vol ; utiliser brume de dissimulation pour couper la vue si le terrain et le vent s'y prêtent
+  note: Vol à 60 m ou nage à 12 m par action de mouvement. La brume gêne aussi sa propre vision ; choisir la sortie avant de la créer. Il conserve ses derniers sorts pour échapper aux poursuivants.

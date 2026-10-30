@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Oiseau de feu, créature magique de taille G, neutre bonne et intelligente, FP 8 ; 85 pv, CA 20. Il privilégie le vol et les attaques de zone pour défendre ses alliés et repousser ses agresseurs.
+  Vol à 21 m par round, manœuvrabilité bonne ; déplacement au sol à 9 m. Espace occupé : 3 m ; allonge : 1,50 m.
+  Attaque à outrance : 2 griffes +13 (1d8+5), morsure +13 (2d6+5), 2 ailes +11 (1d6+2). Souffle en cône de 18 m : 5d6 dégâts de feu, Réflexes DD 18 pour réduire de moitié.
+  Réduction des dégâts 10/mal, résistance au froid 10 et au feu 10, résistance à la magie 19 ; cercle magique contre le Mal constant.
+
+resource: Souffle | Tous les 1d4 rounds | Cône de 18 m, 5d6 feu, Réflexes DD 18 pour réduire de moitié
+resource: Détection du Mal ; illumination | À volonté | Illumination : DD 12
+resource: Soins modérés | 3/jour | DD 14 ; réserver des utilisations pour se soigner ou secourir un allié
+resource: Immobilisation de personne | 3/jour | DD 15 ; uniquement sur les créatures mauvaises, parmi les cibles normalement permises par ce sort
+resource: Bouclier de feu | 1/jour | À préparer si une mêlée paraît probable
+resource: Explosion de lumière | 1/jour | DD 20
+
+step: Des inconnus approchent sans attaquer
+  do: Les observer avec Perception +15 et, si utile, détection du Mal ; tenter de communiquer avant de combattre
+  note: Diplomatie +11 ; parle l'aérien, le céleste, le commun et le sylvestre. Une aura mauvaise ne suffit pas à justifier une attaque.
+
+step: Un affrontement se prépare et il dispose d'un round
+  do: Lancer bouclier de feu si les ennemis risquent de l'atteindre au contact, puis gagner une position aérienne dégagée
+  note: Le cercle magique contre le Mal est déjà actif ; ne pas consacrer d'action à le relancer.
+
+note: Pouvoirs sans détails
+  Le bloc cite un éclat aveuglant et un chant sans en donner les règles. Le plan ne leur attribue aucun effet supplémentaire.
+
+## Ouverture
+
+note: Choix de l'ouverture
+  Choisir une seule des actions suivantes selon la position des ennemis et des alliés.
+
+step: Plusieurs adversaires peuvent être pris dans le cône sans toucher un allié
+  do: Se placer en vol et souffler : cône de 18 m, 5d6 feu, Réflexes DD 18 pour réduire de moitié
+  note: Lancer 1d4 pour déterminer le délai avant le prochain souffle.
+
+step: Le souffle convient mal et plusieurs ennemis peuvent subir explosion de lumière sans exposer les alliés
+  do: Lancer explosion de lumière, DD 20
+  note: Cette utilisation quotidienne doit servir contre une menace importante ; ne pas la dépenser sur une cible isolée peu dangereuse.
+
+step: Un humanoïde mauvais représente la menace principale et aucune attaque de zone n'est préférable
+  do: Tenter immobilisation de personne, DD 15, puis conserver de la distance en vol
+  note: Vérifier que la cible est admissible ; ce pouvoir ne permet pas d'immobiliser n'importe quelle créature mauvaise.
+
+## Rounds suivants
+
+step: Le souffle est de nouveau disponible et une ligne de tir évite les alliés
+  do: Revenir en position, souffler, puis s'éloigner avec Attaque au passage
+  note: Le déplacement total du round reste limité à 21 m ; Attaque au passage permet une action simple pendant le déplacement, sans supprimer les attaques d'opportunité.
+
+step: Le souffle se recharge et un adversaire peut être attaqué sans rester encerclé
+  do: Effectuer une attaque au passage avec la morsure +13 (2d6+5), puis poursuivre le vol
+  note: Une attaque au passage ne permet pas l'attaque à outrance avec les cinq attaques naturelles.
+
+step: Un ennemi isolé reste au contact et le risque justifie de rester sur place
+  do: Effectuer l'attaque à outrance : 2 griffes +13 (1d8+5), morsure +13 (2d6+5), 2 ailes +11 (1d6+2)
+  note: Éviter cet échange prolongé contre des attaques qui franchissent sa réduction des dégâts ou plusieurs adversaires à la fois.
+
+step: Un humanoïde mauvais dangereux reste libre et le souffle n'offre pas de bonne cible
+  do: Tenter immobilisation de personne, DD 15, dans la limite des utilisations restantes
+  note: Profiter du répit obtenu pour se replacer ou protéger un allié menacé.
+
+step: Il est blessé et peut consacrer son action à récupérer sans subir immédiatement une nouvelle attaque
+  do: S'éloigner en vol et utiliser soins modérés sur lui-même
+  note: Il peut aussi consacrer une utilisation à un allié blessé accessible ; comptabiliser ensemble les trois utilisations quotidiennes.
+
+## Repli
+
+step: Points de vie sous 30, ou impossibilité de contenir les agresseurs
+  do: Rompre le contact et rejoindre un abri par les airs ; se déplacer jusqu'à 42 m avec un double déplacement si aucune autre action n'est nécessaire
+  note: Préférer un trajet qui évite les ennemis capables de voler ou de l'atteindre à distance ; ne pas compter sur la seule altitude pour être protégé.
+
+step: Il a atteint un endroit hors de portée immédiate
+  do: Utiliser les soins modérés restants et poursuivre le repli si la menace demeure
+  note: Il cherche à survivre et à mettre ses alliés à l'abri ; il n'a pas besoin de poursuivre des adversaires qui cessent le combat.

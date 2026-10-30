@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Nuée de chon chons, aberrations de taille TP : des têtes volantes aux oreilles démesurées, jalouses des êtres dotés d'un corps et attirées par la magie. FP 3, CN ; 27 pv, CA 16, initiative +6.
+  Attaque de nuée +6 (2d6) ; crachat d'acide +8 (2d4 d'acide). Espace occupé : 3 m ; allonge : 0 m. Vol : 18 m ; déplacement au sol : 3 m.
+  Aura de marmonnement à 4,50 m : concentration DD 11 pour lancer un sort, sous peine de le perdre. Effet sonore et mental.
+
+resource: Détection de la magie | permanent | NLS 7 ; permet de repérer les auras magiques en les observant
+
+step: Des intrus approchent
+  do: Les écouter et les observer depuis les hauteurs d'une forêt ou de ruines ; repérer les auras magiques avant de se rapprocher.
+  note: Vision dans le noir à 18 m ; Perception +10, +14 pour écouter. Le babillage incessant peut révéler la présence de la nuée ; elle comprend le commun mais ne peut pas parler.
+
+## Ouverture
+
+step: Un lanceur de sorts est repéré et accessible
+  do: Voler vers lui et terminer le déplacement en occupant son espace, si possible en englobant aussi un autre adversaire.
+  note: Les dégâts de nuée sont automatiques : 2d6 à chaque créature dont elle occupe l'espace à la fin de son déplacement, sans jet d'attaque. Le marmonnement gêne aussi les lanceurs de sorts proches.
+
+step: Aucun ennemi ne peut être englobé avec un déplacement de 18 m
+  do: Se rapprocher en vol puis, si une cible se trouve à 9 m ou moins, effectuer un crachat d'acide +8 infligeant 2d4 dégâts d'acide.
+  note: Le crachat demande un jet d'attaque à distance et une action simple ; ne pas le traiter comme une attaque de contact.
+
+## Rounds suivants
+
+step: Des adversaires restent regroupés
+  do: Occuper le plus grand nombre possible de leurs cases et infliger les 2d6 dégâts de nuée ; garder les lanceurs de sorts dans l'aura de 4,50 m.
+  note: Le marmonnement impose concentration DD 11 à chaque tentative de lancer un sort dans son rayon ; il ne coûte aucune action supplémentaire.
+
+step: Une cible quitte la nuée
+  do: La poursuivre en vol et recouvrir de nouveau son espace ; privilégier un lanceur de sorts déjà identifié.
+  note: Avec une allonge de 0 m, la nuée doit partager l'espace de sa victime pour lui infliger ses dégâts de nuée.
+
+step: Un adversaire demeure hors de l'espace de la nuée, à 9 m ou moins
+  do: Utiliser l'action simple pour lui cracher de l'acide +8, pour 2d4 dégâts, tout en conservant si possible d'autres victimes dans l'espace de la nuée.
+
+step: Les ennemis utilisent des attaques de zone
+  do: Changer de position en vol et exploiter les obstacles pour rompre leur ligne de vue ; reprendre l'attaque depuis un autre angle.
+
+## Repli
+
+step: Points de vie à 8 ou moins
+  do: Fuir en vol, avec un double déplacement de 36 m si la voie est libre, et passer derrière les arbres ou les murs des ruines pour couper la poursuite.
+  note: Éviter une fuite au sol : la vitesse y tombe à 3 m. Le marmonnement continue pendant le repli.

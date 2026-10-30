@@ -1,0 +1,87 @@
+## Avant le combat
+
+note: Profil
+  Crone Queen, morte-vivante du froid, neutre mauvaise, FP 15 : intelligente, elle sépare ses adversaires avant de les affaiblir au contact.
+  209 pv, CA 30, guérison accélérée 10, RM 26 ; immunité au froid, vulnérabilité au feu ; RD 10/fer froid et tranchant, qui exige les deux propriétés pour être contournée.
+  Déplacement de 9 m, allonge de 1,50 m. Bâton de glace +27/+22/+17/+12, chaque coup infligeant 1d6+14 plus 1d6 de froid et absorption d'énergie ; sinon, deux griffes +22, chacune infligeant 1d6+6 plus 1d6 de froid et absorption d'énergie.
+  Aura de terreur à 9 m, DD 25 ; vision dans le noir à 18 m et perception de la vie. Initiative +9, Perception +32, Discrétion +30.
+
+resource: Armure de mage | constant | déjà comprise dans la CA 30
+resource: Brume de dissimulation | à volonté | brouille la vue autour d'elle ; reste sur place après son déplacement
+resource: Projectile de glace | à volonté | comme projectile magique, mais dégâts de froid ; cinq projectiles de 1d4+1 au NLS 19
+resource: Chute de givre (frost fall) | à volonté | Vigueur DD 16 ; dégâts de froid et possibilité de chancellement initial
+resource: Cri strident (screech) | à volonté | ennemis à 9 m ; Vigueur DD 17 ou provoquent des attaques d'opportunité
+resource: Malédiction | 3/jour | contact, Volonté DD 17
+resource: Désespoir foudroyant | 3/jour | cône de 9 m, Volonté DD 18 ; affaiblit notamment attaques et sauvegardes
+resource: Tempête de grêle | 3/jour | dégâts contondants et de froid, sans sauvegarde ; gêne les déplacements
+resource: Froid pénétrant (unshakable chill) | 3/jour | Vigueur DD 16 ; froid prolongé, peu rentable pendant une mêlée brève
+resource: Mur de glace | 3/jour | DD 18 ; conserver si possible une utilisation pour le repli
+resource: Cône de froid | 1/jour | cône de 18 m, 15d6 de froid, Réflexes DD 19 pour réduire de moitié
+resource: Sphère glaciale | 1/jour | explosion de 12 m de rayon, 15d6 de froid, Réflexes DD 20 pour réduire de moitié
+resource: Rayon polaire | 1/jour | attaque de contact à distance ; 19d6 de froid et absorption de Dextérité, sans sauvegarde
+
+step: Les intrus approchent sans l'avoir repérée
+  do: Se dissimuler dans les ruines et observer leur formation ; choisir un passage qui limite le nombre d'ennemis pouvant l'encercler.
+  note: Repérer les utilisateurs de feu et les armes capables de contourner sa RD ; garder une sortie accessible à pied.
+
+step: Elle doit subir des tirs avant de pouvoir engager le combat
+  do: Installer une brume de dissimulation autour de sa position.
+  note: Sa perception de la vie lui permet de localiser les vivants dans la brume ; sa vision dans le noir ne traverse pas le brouillard.
+
+## Ouverture
+
+step: Un utilisateur de feu peut être séparé du reste du groupe
+  do: Placer un mur de glace pour couper sa ligne de vue et diviser les adversaires.
+  note: Éviter les cases occupées ; une créature adjacente peut empêcher la formation du mur avec Réflexes DD 18. Le feu peut rapidement compromettre cet obstacle.
+
+step: Plusieurs ennemis restent groupés et elle dispose d'une ligne d'effet
+  do: Lancer sphère glaciale sur leur regroupement ; préférer cône de froid s'ils sont alignés dans les 18 m.
+  note: Choisir une seule de ces actions pour ce round et préserver les éventuelles autres reines présentes.
+
+step: Plusieurs adversaires sont dans un cône de 9 m et le combat promet de durer
+  do: Utiliser désespoir foudroyant, Volonté DD 18, pour préparer les attaques des rounds suivants.
+  note: Faire également résoudre l'aura de terreur, DD 25, pour les ennemis exposés dans les 9 m.
+
+step: Un adversaire est déjà à portée du bâton
+  do: Effectuer l'attaque à outrance au bâton de glace plutôt que consacrer le round à un pouvoir moins décisif.
+  note: Concentrer les quatre attaques sur une même cible vivante pour multiplier les absorptions d'énergie.
+
+## Rounds suivants
+
+step: Une cible vivante reste au contact
+  do: Poursuivre l'attaque à outrance au bâton, +27/+22/+17/+12 ; utiliser les deux griffes +22 si le bâton est indisponible.
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant l'attaque à outrance ; un déplacement ordinaire ne le permet pas.
+
+step: Une cible se trouve à 3 m et une attaque à outrance peut la mettre hors de combat
+  do: Utiliser le don d'allonge pour porter les attaques de mêlée à 3 m pendant son tour.
+  note: Sa CA tombe à 28 jusqu'à son prochain tour. Préférer la précision aux dégâts supplémentaires d'Attaque en puissance lorsque l'absorption d'énergie est déterminante.
+
+step: Une cible prioritaire reste à distance et résiste mal au froid
+  do: Employer rayon polaire contre elle ; garder projectile de glace pour achever une cible blessée sans jet d'attaque.
+  note: La brume et les murs peuvent empêcher de la cibler. Contre une immunité au froid, revenir au bâton et à l'absorption d'énergie.
+
+step: Les ennemis se regroupent ou tentent de contourner le passage défendu
+  do: Employer tempête de grêle pour les blesser sans sauvegarde et gêner leur progression ; conserver le second grand sort de froid pour un regroupement favorable.
+  note: À défaut, chute de givre vise une petite zone de 1,50 m de rayon ; Vigueur DD 16 évite le chancellement initial.
+
+step: Plusieurs ennemis sont menacés par d'autres reines présentes
+  do: Utiliser cri strident pour leur faire provoquer des attaques d'opportunité, Vigueur DD 17.
+  note: Chaque reine doit disposer de son attaque d'opportunité ; ce cri ne remplace pas avantageusement quatre coups de bâton contre une cible isolée.
+
+step: Une cible à faible Volonté peut être touchée mais son armure rend le bâton peu efficace
+  do: Tenter malédiction au contact, Volonté DD 17, en choisissant le malus de 4 aux attaques, sauvegardes et tests.
+  note: Si elle utilise un pouvoir magique sous la menace d'un ennemi, privilégier l'utilisation sur la défensive pour éviter une attaque d'opportunité.
+
+## Repli
+
+step: Elle tombe à 60 pv ou moins, ou subit des attaques de feu répétées qu'elle ne peut interrompre
+  do: Couper la poursuite avec le mur de glace réservé, puis gagner une sortie à 9 m par déplacement.
+  note: Choisir un mur qui bloque les poursuivants sans fermer sa propre issue ; sa vulnérabilité au feu impose de rompre rapidement la ligne de vue.
+
+step: Le mur ne suffit pas à couvrir sa fuite
+  do: Créer une brume de dissimulation, puis s'éloigner derrière les angles des ruines au round suivant.
+  note: La brume gêne les tirs mais ne bloque pas les effets de zone ; elle ne se déplace pas avec la reine.
+
+step: Elle a obtenu un abri hors d'atteinte
+  do: Laisser agir la guérison accélérée de 10 pv par round avant d'envisager de reprendre le combat.
+  note: Elle ne récupère ainsi ni ses utilisations quotidiennes ni ses pv au-delà de 209 ; le seuil de repli est un choix tactique.

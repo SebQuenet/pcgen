@@ -1,0 +1,91 @@
+## Avant le combat
+
+note: Profil
+  Baaphel, diable loyal mauvais de taille M, est un combattant volant très intelligent qui combine résistance, terreur et pouvoirs magiques pour isoler ses victimes.
+  270 pv ; CA 38, contact 19, pris au dépourvu 37 ; initiative +11. Faux +3 axiomatique et acérée : +35/+30/+25/+20, 2d4+19, critique 19–20/x4 ; +2d6 contre les créatures chaotiques. Allonge 1,50 m.
+  Alternative à la faux : contact terrifiant +31 contre la CA de contact, effet de terreur, Volonté DD 27, NLS 20. Ce contact vise une créature, sans cône de terreur.
+  Réduction des dégâts 15/Bien et argent ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10 ; résistance à la magie 32. Il voit dans les ténèbres et communique par télépathie à 30 m.
+
+resource: Convocation de diables | 2/jour | niveau 9, réussite 100 % ; choisir notamment 1 ghaddar ou 2d6 diables barbus
+resource: Cercle de mort | 1/jour | Vigueur DD 23 ; seulement les créatures vivantes de moins de 9 DV
+resource: Pétrification | 1/jour | Vigueur DD 23
+resource: Symbole de douleur | 1/jour | Vigueur DD 22
+resource: Symbole de sommeil | 1/jour | Volonté DD 22 ; seulement les créatures de 10 DV ou moins
+resource: Pouvoirs magiques courants | à volonté | NLS 20 ; notamment blasphème DD 24, charme-monstre DD 21, suggestion DD 20 et aura impie DD 25
+
+step: Des intrus approchent sans avoir engagé le combat
+  do: Les observer avec Perception +35, détection du Bien et détection de la magie constantes ; choisir une position permettant le vol et une destination de fuite connue.
+  note: Psychologie +35 aide à déceler une feinte ; les détections demandent le temps d'observation nécessaire pour préciser les auras.
+
+step: Il peut négocier avant les hostilités
+  do: Employer Bluff +30, charme-monstre ou suggestion pour obtenir un passage libre, séparer un garde de ses compagnons ou retarder l'attaque.
+  note: Charme-monstre demande Volonté DD 21 ; suggestion, Volonté DD 20, doit rester raisonnable. Un charme ne donne pas un contrôle absolu de la cible.
+
+step: Il prépare un lieu de rencontre
+  do: Placer un symbole de douleur sur l'approche prévue ; ajouter un symbole de sommeil seulement si des ennemis de 10 DV ou moins sont attendus.
+  note: Prévoir un déclencheur adapté et les exemptions de ses alliés. Les symboles servent à préparer le terrain ; tenir compte de leur zone de 18 m une fois activés.
+
+step: Le combat paraît imminent et il dispose de temps
+  do: Convoquer un ghaddar ou 2d6 diables barbus pour tenir le passage, puis lancer successivement cercle magique contre le Bien, bouclier de feu, aura impie et invisibilité suprême.
+  note: Chaque pouvoir prend sa propre action. Garder si possible la seconde convocation en réserve ; lancer les protections de courte durée juste avant l'engagement et appliquer leurs bonus sans cumuler ceux de même type.
+
+## Ouverture
+
+note: Choix du premier round
+  Choisir l'option adaptée à la situation. Un pouvoir offensif et une attaque à outrance occupent des rounds distincts ; si Baaphel est surpris, ses préparatifs ne sont pas déjà actifs.
+
+step: Plusieurs ennemis non mauvais de 20 DV ou moins se trouvent à 12 m ou moins
+  do: Lancer blasphème, Volonté DD 24, pour désorganiser le groupe avant d'engager la faux.
+  note: Au NLS 20, les effets se cumulent : hébétement jusqu'à 20 DV, affaiblissement jusqu'à 19 DV, paralysie jusqu'à 15 DV, mort jusqu'à 10 DV. Le jet de Volonté réduit ou annule ces effets ; au-delà de 20 DV, le sort est inefficace.
+
+step: Une protection magique empêche ses attaques ou son contrôle de fonctionner
+  do: Employer dissipation suprême sur le porteur de cette protection, pendant que ses alliés lui ferment le passage.
+  note: Cibler en priorité les protections effectivement repérées ; la dissipation demande un test de niveau de lanceur de sorts, sans réussite automatique.
+
+step: Une cible dangereuse reste à distance et les autres ouvertures sont peu utiles
+  do: Tenter pétrification sur elle, Vigueur DD 23, en privilégiant un adversaire qui paraît peu robuste.
+  note: Cette utilisation est unique dans la journée ; conserver le pouvoir si la cible semble résister facilement aux effets de Vigueur.
+
+step: Une cible prioritaire est déjà à 1,50 m et aucune neutralisation de groupe n'est préférable
+  do: Attaquer à outrance à la faux : +35/+30/+25/+20, 2d4+19 par coup, critique 19–20/x4.
+  note: Privilégier un adversaire chaotique pour les dégâts axiomatiques supplémentaires, ou un lanceur de sorts que les diables peuvent empêcher de s'éloigner.
+
+## Rounds suivants
+
+step: Il peut rester au contact de sa cible
+  do: Répéter l'attaque à outrance à la faux ; concentrer ses coups pour éliminer une cible avant de passer à la suivante.
+  note: Contre une CA assez faible, Attaque en puissance donne +29/+24/+19/+14 et 2d4+37 par coup avec la faux tenue à deux mains ; garder les valeurs normales contre une CA élevée.
+
+step: Il doit se déplacer pour atteindre un adversaire
+  do: Utiliser le vol pour rejoindre une cible isolée, puis porter une seule attaque à la faux avec Frappe décisive : +35, 4d4+19, critique 19–20/x4.
+  note: Frappe décisive accompagne l'action d'attaque, pas l'attaque à outrance ni une charge. L'allonge reste de 1,50 m, même en vol.
+
+step: Un adversaire au contact est difficile à blesser mais paraît vulnérable à la peur
+  do: Remplacer les coups de faux par un contact terrifiant +31, Volonté DD 27, pour le faire fuir et rompre la ligne ennemie.
+  note: Ce choix prend une action simple ; ne pas ajouter le contact à la série de quatre coups. Choisir une autre tactique contre une créature immunisée à la terreur.
+
+step: Des ennemis non mauvais restent groupés à 12 m ou moins
+  do: Réutiliser blasphème si leurs DV et leurs défenses rendent ses effets utiles.
+  note: Ses alliés mauvais échappent à cet effet. Dans son plan d'origine, le blasphème peut aussi bannir les créatures extraplanaires non mauvaises ; le jet de Volonté DD 24 contre ce bannissement subit un malus de 4.
+
+step: Les ennemis restent hors de portée ou ses protections sont dissipées
+  do: Se placer en vol derrière ses alliés, puis consacrer un round à dissipation suprême, au renouvellement d'invisibilité suprême ou à celui d'une protection utile.
+  note: Invisibilité suprême persiste pendant ses attaques, mais n'empêche pas un ennemi capable de le percevoir de le viser. Il voit dans les ténèbres, sans disposer ici d'un pouvoir pour en créer.
+
+step: Ses premiers renforts ne suffisent plus et une convocation reste disponible
+  do: Employer la seconde convocation pour rétablir un écran entre lui et les adversaires ; coordonner les diables par télépathie à 30 m.
+  note: Leur demander de tenir les accès et d'occuper les combattants pendant qu'il attaque une cible isolée ; leur présence ne lui accorde aucune action supplémentaire.
+
+step: De nombreux auxiliaires vivants de moins de 9 DV encombrent le terrain
+  do: Employer cercle de mort, Vigueur DD 23, dans une zone de 12 m de rayon qui épargne autant que possible ses propres renforts.
+  note: Le pouvoir affecte jusqu'à 20d4 DV, en commençant par les créatures les plus faibles ; il est inutile contre les créatures de 9 DV ou plus et ne distingue pas les alliés des ennemis.
+
+## Repli
+
+step: Ses points de vie tombent à 90 ou moins, ou les ennemis surmontent régulièrement ses défenses
+  do: Utiliser téléportation suprême vers la destination de fuite connue ; si possible, quitter d'abord le contact par un pas de placement de 1,50 m.
+  note: Le pouvoir est à volonté, mais ne transporte que Baaphel et 22,5 kg d'objets. Il ne peut pas emmener ses alliés et ne dispose d'aucune guérison dans cette fiche.
+
+step: Un effet empêche sa téléportation
+  do: Faire couvrir son recul par les diables, gagner de la hauteur si l'espace le permet, puis tenter dissipation suprême sur l'effet qui le retient s'il est dissipable.
+  note: Renouveler invisibilité suprême si cela facilite la fuite, puis se téléporter dès que l'obstacle disparaît ; ne pas supposer qu'une dissipation enlève automatiquement le blocage.

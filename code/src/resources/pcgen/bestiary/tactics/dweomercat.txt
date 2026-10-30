@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Dweomercat, créature magique féline du Premier Monde, de taille M, intelligente et chaotique neutre. Prédateur mobile qui exploite sa discrétion et neutralise la magie adverse.
+  85 pv ; CA 23, contact 17 ; initiative +10 ; déplacement 12 m ; allonge 1,50 m. Attaque à outrance : 2 griffes +16 (1d4+2 chacune) et morsure +16 (1d6+2).
+  Réduction des dégâts 5/magie ; résistance à la magie 19 ; Vigueur +10, Réflexes +13, Volonté +6. Discrétion +19, Perception +16, odorat et vision dans le noir à 18 m.
+
+resource: Détection de la magie | constant | repérer les auras avant de choisir une cible
+resource: Globe d'invulnérabilité partielle | à volonté | action simple ; NLS 10 ; rayon 3 m ; durée 10 rounds ; immobile
+resource: Dissipation de la magie | à volonté | action simple ; dissipation ciblée : 1d20+10 contre DD 11 + NLS de l'effet
+resource: Porte dimensionnelle | 3/jour | action simple ; lui seul ; portée maximale 240 m ; garder une utilisation pour fuir
+resource: Zone d'antimagie | 3/jour | action simple ; rayon 3 m, mobile ; durée 100 minutes ; révocable
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler dans la végétation et observer leurs auras magiques ; préparer une approche vers un adversaire isolé.
+  note: Il parle le commun et le sylvestre : une rencontre sans hostilité immédiate peut commencer par un échange.
+
+step: Il prévoit de défendre un emplacement contre des sorts
+  do: Activer le globe d'invulnérabilité partielle juste avant l'affrontement.
+  note: Le globe bloque les effets de sorts et pouvoirs magiques de niveau 3 ou moins venant de l'extérieur. Il reste sur place quand le dweomercat se déplace et ne supprime pas les sorts déjà actifs lors de sa création.
+
+## Ouverture
+
+step: Une cible non adjacente est accessible avec une approche d'au moins 3 m et un trajet total de 12 m au plus
+  do: Utiliser Attaque éclair : s'approcher, porter une morsure +16 (1d6+2), puis employer le mouvement restant pour regagner un couvert.
+  note: Action complexe ; une seule attaque. La cible ne peut pas porter d'attaque d'opportunité contre ce déplacement ; les autres ennemis le peuvent. Souplesse du serpent donne alors +4 à la CA contre leurs attaques d'opportunité provoquées par le mouvement.
+
+step: Un lanceur de sorts inaccessible commande le combat
+  do: Utiliser porte dimensionnelle pour rejoindre un emplacement dégagé près de lui, si cette position ne l'expose pas à tout le groupe.
+  note: Après la téléportation, aucune autre action jusqu'à son prochain tour ; prévoir l'assaut au tour suivant.
+
+step: Un ennemi est déjà à portée et le dweomercat peut rester sur place
+  do: Attaque à outrance : 2 griffes +16 (1d4+2 chacune), puis morsure +16 (1d6+2), sur la même cible.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact sans soutien dangereux
+  do: Répéter l'attaque à outrance ; faire au besoin un pas de placement de 1,50 m pour éviter l'encerclement.
+
+step: Il peut harceler une cible sans commencer son tour adjacent à elle
+  do: Répéter Attaque éclair, avec au moins 3 m avant la morsure et 12 m de mouvement total au maximum.
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Consacrer une action simple à une dissipation de la magie ciblée sur cette protection, depuis un emplacement hors de portée de mêlée.
+  note: Ce choix remplace ses attaques du tour ; une dissipation ciblée ne retire au plus qu'un sort.
+
+step: Les sorts et objets magiques adverses font pencher le combat
+  do: Activer une zone d'antimagie hors de portée des armes, puis s'approcher pour placer le lanceur de sorts dans son rayon de 3 m ; attaquer physiquement aux tours suivants.
+  note: La zone neutralise aussi ses propres pouvoirs magiques, son lien magique et sa réduction des dégâts 5/magie. Ses griffes, sa morsure et ses dons de déplacement restent utilisables ; les armes et projectiles ordinaires restent dangereux.
+
+step: Hors antimagie, un sort le vise ou l'inclut dans sa zone et un bénéfice de lien magique serait utile
+  do: Employer le lien magique pour obtenir le bénéfice correspondant à l'école du sort ; privilégier héroïsme face à un enchantement, invisibilité face à une illusion ou simulacre de vie face à la nécromancie.
+  note: Le bénéfice s'applique avant le sort, même si la résistance à la magie arrête celui-ci, mais n'annule pas ses effets. Un seul bénéfice à la fois, pendant au plus 1 minute par niveau du sort déclencheur ; l'invisibilité cesse notamment lorsqu'il attaque.
+
+## Repli
+
+step: Il tombe à 30 pv ou moins, ou risque d'être encerclé sans cible vulnérable
+  do: Utiliser la porte dimensionnelle réservée pour gagner un refuge connu, à 240 m au plus, puis se dissimuler.
+  note: Si sa zone d'antimagie est active, la révoquer par une action simple avant de se téléporter à son tour suivant ; se déplacer entre-temps vers un couvert.
+
+step: La téléportation est épuisée ou inutilisable
+  do: Faire une retraite pour quitter le contact et parcourir jusqu'à 24 m, puis utiliser la végétation et Discrétion +19 pour rompre la poursuite.
+  note: La retraite protège contre les attaques d'opportunité au départ de sa case initiale, pas contre celles provoquées plus loin sur son trajet.

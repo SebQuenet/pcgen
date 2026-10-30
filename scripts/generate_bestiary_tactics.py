@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Write a French tactical plan for each race imported from Combat Manager that has none, by driving the Codex CLI.
 
-Codex gets the monster's Combat Manager stat block and two existing plans as models, and writes the plan to
+With --bestiary, the races are those of every monster book that have none, and the stat block is Combat Manager's
+when it has the monster, pcfinder's otherwise.
+
+Codex gets the monster's stat block and two existing plans as models, and writes the plan to
 code/src/resources/pcgen/bestiary/tactics/<race slug>.txt, where BestiaryTactics reads it. A plan whose sections
 are not the four expected ones is discarded. Races that already have a plan are skipped, so an interrupted run resumes.
 
@@ -9,9 +12,11 @@ Usage:
     python3 scripts/generate_bestiary_tactics.py <extracted dir> --dry-run
     python3 scripts/generate_bestiary_tactics.py <extracted dir> --workers 4 --limit 20
     python3 scripts/generate_bestiary_tactics.py <extracted dir> --only abhominal --force
+    python3 scripts/generate_bestiary_tactics.py <extracted dir> --bestiary --workers 4
 """
 
 import argparse
+import json
 import re
 import sys
 import tempfile
@@ -22,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "combat_manager"))
 
 import import_monsters  # noqa: E402
 import monsters  # noqa: E402
+import records  # noqa: E402
 from generate_bestiary import sanitize_name  # noqa: E402
 from generate_summon_portraits import draw_with_codex as run_codex  # noqa: E402
 
@@ -31,6 +37,15 @@ MODEL_PLANS = ("adaro", "aboleth")
 SECTIONS = ("## Avant le combat", "## Ouverture", "## Rounds suivants", "## Repli")
 LINE_STARTS = ("## ", "note:", "step:", "resource:", "  ")
 IGNORED_FIELDS = {"id", "XP", "Source", "MonsterSource"}
+PATHFINDER_DATA = REPOSITORY / "data/pathfinder"
+PCFINDER_CREATURES = REPOSITORY.parent / "pcfinder/apps/pcfinder-csr/static-data/creatures.json"
+# pcfinder's attacks parsed from the melee and ranged lines, which the stat block already gives
+PCFINDER_IGNORED_FIELDS = {"id", "parsedAttacks"}
+# Race files of the players' races, their companions and familiars, which fight as characters do
+PLAYER_RACE_FILE = re.compile(r"_(pc|companion|familiar)\.lst$")
+# Books whose races are peoples, heralds or psionic beings rather than monsters
+NOT_MONSTER_BOOKS = {"inner_sea_gods", "psionics_unleashed", "ultimate_psionics", "core_essentials", "remarkable_races",
+                     "players_guide", "support", "book_of_arcane_magic"}
 
 PROMPT = """Write the tactical plan of the Pathfinder Roleplaying Game monster "{name}" from {source}, in French,
 and save it as the UTF-8 text file {target}. Do nothing else.
@@ -102,6 +117,59 @@ def imported_monsters(extracted_dir):
     return found
 
 
+def pcfinder_fields(creature):
+    """pcfinder's creature as stat block fields, a nested value written as JSON."""
+    return {name: text if isinstance(text, str) else json.dumps(text, ensure_ascii=False)
+            for name, text in creature.items() if name not in PCFINDER_IGNORED_FIELDS}
+
+
+def stat_block_of(race_key, race_name, combat_manager, pcfinder):
+    """The race's stat block: Combat Manager's when it has the monster, pcfinder's otherwise; None when neither has."""
+    stems = (slug_of(race_key), slug_of(race_name))
+    for stem in stems:
+        if stem in combat_manager:
+            return combat_manager[stem]
+    for stem in stems:
+        if stem in pcfinder:
+            return pcfinder_fields(pcfinder[stem])
+    return None
+
+
+def bestiary_races():
+    """Each race of the monster books, as (key, name, book)."""
+    races = []
+    for races_file in sorted(PATHFINDER_DATA.rglob("*_races*.lst")):
+        if PLAYER_RACE_FILE.search(races_file.name) or "abilities" in races_file.name \
+                or NOT_MONSTER_BOOKS & set(races_file.relative_to(PATHFINDER_DATA).parts):
+            continue
+        book = "a Pathfinder book"
+        for line in races_file.read_text(encoding="utf-8", errors="replace").splitlines():
+            columns = line.split("\t")
+            if line.startswith("SOURCELONG:"):
+                book = columns[0].removeprefix("SOURCELONG:")
+            name = columns[0].strip()
+            if not name or line.startswith(("#", "SOURCE")) or re.search(r"\.(MOD|COPY|FORGET)", name):
+                continue
+            key = next((column[4:].strip() for column in columns if column.startswith("KEY:")), name)
+            races.append((key, name, book))
+    return races
+
+
+def bestiary_monsters(extracted_dir, pcfinder_creatures):
+    """Each race of the monster books that has a stat block, by the slug of its race key."""
+    combat_manager = {}
+    for record in records.load_monsters(extracted_dir) + records.load_npcs(extracted_dir):
+        combat_manager.setdefault(slug_of(sanitize_name(record.fields.get("Name") or "")), record.fields)
+    pcfinder = {slug_of(sanitize_name(creature["name"])): creature
+                for creature in json.loads(pcfinder_creatures.read_text(encoding="utf-8"))}
+    found = {}
+    for key, name, book in bestiary_races():
+        fields = stat_block_of(key, name, combat_manager, pcfinder)
+        if fields:
+            found.setdefault(slug_of(key), (name, book, fields))
+    return found
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("extracted_dir", type=Path)
@@ -110,9 +178,12 @@ def main():
     parser.add_argument("--force", action="store_true", help="rewrite plans that already exist")
     parser.add_argument("--limit", type=int, help="write at most this many plans")
     parser.add_argument("--dry-run", action="store_true", help="list the plans to write without writing them")
+    parser.add_argument("--bestiary", action="store_true", help="every race of the monster books, not only those imported")
+    parser.add_argument("--pcfinder", type=Path, default=PCFINDER_CREATURES, help="pcfinder's creatures.json")
     arguments = parser.parse_args()
 
-    found = imported_monsters(arguments.extracted_dir)
+    found = bestiary_monsters(arguments.extracted_dir, arguments.pcfinder) if arguments.bestiary \
+        else imported_monsters(arguments.extracted_dir)
     selected = arguments.only or sorted(found)
     unknown = [stem for stem in selected if stem not in found]
     if unknown:

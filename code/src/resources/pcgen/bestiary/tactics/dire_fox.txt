@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Renard géant, prédateur animal solitaire des forêts et plaines froides ou tempérées ; 34 points de vie, CA 20. Il privilégie une proie petite ou moyenne, isolée.
+  Morsure +7 (1d6+4), allonge de 1,50 m ; après une morsure réussie, tentative gratuite de croc-en-jambe avec BMO +8, sans provoquer d'attaque d'opportunité.
+  Déplacement de 15 m ; vision nocturne, odorat, Perception +11, Discrétion +13 et Survie +8.
+
+step: Une proie est repérée avant le combat
+  do: Approcher à couvert avec Discrétion +13 pour préparer une embuscade à courte distance.
+  note: Employer l'odorat et Survie +8 pour suivre sa piste ; Perception +11 pour surveiller les alentours.
+
+## Ouverture
+
+step: La proie est à portée de morsure
+  do: Mordre à +7 (1d6+4), puis tenter immédiatement un croc-en-jambe si la morsure touche.
+  note: Le croc-en-jambe est une action gratuite ; il ne remplace pas les dégâts de la morsure.
+
+step: La proie est hors de portée mais accessible en un déplacement de 15 m
+  do: Se rapprocher jusqu'à 1,50 m, puis mordre et tenter le croc-en-jambe si la morsure touche.
+
+step: La proie reste trop éloignée pour être mordue après un déplacement
+  do: Poursuivre à couvert si possible, avec deux déplacements pour parcourir jusqu'à 30 m.
+  note: Un double déplacement ne laisse pas d'action pour mordre ce round.
+
+## Rounds suivants
+
+step: La proie est à terre au contact
+  do: Continuer à la mordre ; profiter de son malus de CA contre les attaques de mêlée.
+  note: Si elle se relève dans son allonge, effectuer une morsure en attaque d'opportunité si celle-ci est disponible ; cette attaque se résout avant qu'elle soit debout.
+
+step: La proie est debout au contact
+  do: Mordre à +7 (1d6+4), puis renouveler la tentative gratuite de croc-en-jambe à BMO +8 si la morsure touche.
+
+step: La proie fuit et reste isolée
+  do: La poursuivre grâce au déplacement de 15 m ; mordre et tenter de la faire tomber dès qu'un seul déplacement suffit pour la rejoindre.
+  note: Si elle échappe à la vue, employer l'odorat et Survie +8 pour retrouver sa piste.
+
+## Repli
+
+step: Points de vie sous 10, ou plusieurs adversaires le menacent au contact
+  do: Rompre le combat ; si un adversaire le menace, utiliser un retrait pour parcourir jusqu'à 30 m vers un couvert.
+  note: Le retrait évite les attaques d'opportunité dues à la sortie de sa case de départ, mais ne protège pas le reste du trajet.
+
+step: Aucun adversaire ne le menace au contact pendant la fuite
+  do: Continuer à s'éloigner par un double déplacement de 30 m, puis se dissimuler avec Discrétion +13 lorsque le couvert le permet.

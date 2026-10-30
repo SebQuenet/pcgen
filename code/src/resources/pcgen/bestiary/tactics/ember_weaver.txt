@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Ember Weaver, psychopompe neutre de FP 8, guide des âmes et escorte des autres psychopompes. Intelligent, il combat pour protéger leur passage ou récupérer des esprits égarés.
+  104 pv ; CA 22, contact 16 ; déplacement 9 m, vol 18 m. Au contact à 1,50 m : deux attaques de contact +15, chacune infligeant 4d6 de feu ; à distance : lumière brûlante et suggestion à volonté.
+  Réduction des dégâts 10/adamantium ; résistance à la magie 19 ; immunité au feu, au charme, aux effets de mort, aux maladies, au poison et aux sorts de lumière ; résistance au froid 10 et à l'électricité 10.
+
+resource: Suggestion | à volonté | Volonté DD 19 ; portée 15 m ; nécessite une langue comprise par la cible
+resource: Lumière brûlante | à volonté | rayon de contact à distance ; portée 63 m ; NLS 11
+resource: Dissipation de la magie | 1/jour | dissipation ciblée, test de NLS +10
+resource: Liberté de mouvement | 1/jour | durée 110 minutes
+resource: Vol | 1/jour | durée 11 minutes ; utile à un allié qui ne vole pas
+resource: Localisation de créature | 1/jour | retrouver une créature connue ; durée 110 minutes
+resource: Changement de plan | 1/jour | conserver de préférence pour le repli
+resource: Exécution | 1/jour | contact sur une créature vivante ; Vigueur DD 19
+
+step: Il surveille le passage des âmes
+  do: Observer depuis les airs ; employer Perception +19 et sa perception des esprits à 18 m pour repérer les vivants et les morts-vivants
+  note: vision dans le noir à 18 m et vision nocturne ; ses langues sont l'abyssal, le céleste et l'infernal
+
+step: Un affrontement est prévisible et des entraves sont à craindre
+  do: Activer liberté de mouvement avant le combat
+
+## Ouverture
+
+step: Les adversaires disposent de protections contre les effets mentaux
+  do: Activer sa radiance inquiétante par une action simple, en excluant ses alliés
+  note: dans un rayon de 90 m, les créatures qui voient les braises font un jet de Volonté DD 19 ; un échec supprime leurs protections et immunités contre le charme, la peur et les effets mentaux
+  note: entretenir l'effet par une action libre chaque round ; la suppression persiste encore 1 round après son arrêt. Une réussite protège de cette radiance pendant 24 heures ; les psychopompes et les créatures qui ne voient pas sont épargnés
+
+step: Un adversaire à 15 m ou moins comprend l'une de ses langues
+  do: Employer suggestion pour lui proposer une raison plausible de quitter le combat, par exemple aller chercher du secours
+  note: Volonté DD 19 ; une suggestion manifestement dangereuse échoue. La radiance ne dispense ni du langage commun ni du jet de sauvegarde
+
+step: La suggestion est inadaptée ou un mort-vivant menace les âmes
+  do: Tirer une lumière brûlante depuis les airs, en gardant ses distances
+  note: 5d8 dégâts contre une créature ordinaire ; 11d6 contre un mort-vivant, ou 11d8 s'il est particulièrement vulnérable à la lumière vive ; aucun jet de sauvegarde
+
+## Rounds suivants
+
+step: Il peut harceler une cible sans rester encerclé
+  do: Avec Attaque en vol, parcourir au total jusqu'à 18 m et placer une action simple pendant le déplacement : lumière brûlante, suggestion ou une seule attaque de contact +15 pour 4d6 de feu
+  note: sortir de la zone contrôlée d'un ennemi peut provoquer une attaque d'opportunité ; Souplesse du serpent donne +4 à la CA contre celles provoquées par le déplacement
+
+step: Une cible vulnérable au feu reste à 1,50 m et une attaque à outrance est possible
+  do: Porter ses deux attaques de contact +15, chacune pour 4d6 de feu
+  note: cette attaque à outrance ne se combine pas avec le déplacement d'Attaque en vol
+
+step: Une créature vivante dangereuse est accessible au contact
+  do: Employer exécution si cette dépense permet d'écarter une menace immédiate
+  note: attaque de contact requise ; 12d6+11 dégâts, ou 3d6+11 si la cible réussit son jet de Vigueur DD 19
+
+step: Une protection magique entrave ses attaques ou la récupération des esprits
+  do: Employer sa dissipation de la magie ciblée, puis reprendre le harcèlement au round suivant
+
+step: Les ennemis résistent au feu ou ferment l'accès au contact
+  do: Privilégier lumière brûlante à distance et suggestion sur une cible réceptive ; changer de position en vol
+  note: entretenir gratuitement la radiance si elle supprime encore une protection utile aux adversaires
+
+## Repli
+
+step: Ses points de vie tombent sous 30 ou la mission ne peut plus être menée
+  do: Prendre de la distance en vol, jusqu'à 18 m avec une action de mouvement, puis employer changement de plan pour rejoindre un autre plan
+  note: si ce pouvoir est déjà dépensé, poursuivre la fuite à 36 m par round avec un double déplacement, en utilisant les obstacles pour rompre les lignes de vue
+
+step: Une entrave empêche sa fuite et liberté de mouvement reste disponible
+  do: Employer liberté de mouvement, puis s'éloigner dès que possible

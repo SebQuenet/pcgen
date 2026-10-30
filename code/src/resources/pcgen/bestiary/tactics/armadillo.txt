@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Tatou (Armadillo), animal neutre, solitaire et de taille TP ; 4 PV, CA 16. Sa survie prime sur le combat.
+  Griffe +0 (1d2-3) ; allonge 0 m : il doit entrer dans la case de sa cible pour l'attaquer.
+  Déplacement terrestre 9 m ; creusement 1,50 m ; odorat et Perception +8.
+
+step: Une présence approche
+  do: Utiliser l'odorat et Perception +8 pour repérer la menace ; garder une issue vers un terrain meuble où creuser.
+  note: Il évite d'approcher une créature menaçante pour engager le combat.
+
+## Ouverture
+
+step: Une menace est repérée et la fuite reste possible
+  do: S'éloigner par voie terrestre, à sa vitesse de 9 m, ou creuser dans un sol meuble à sa vitesse de 1,50 m.
+  note: Choisir le trajet qui permet de sortir rapidement de portée.
+
+step: Il est acculé et ne peut pas fuir
+  do: Entrer dans la case de l'adversaire accessible et donner un coup de griffe +0 (1d2-3).
+  note: Entrer dans une case adverse peut provoquer une attaque d'opportunité ; avec 4 PV, cette défense est un dernier recours.
+
+## Rounds suivants
+
+step: Il reste acculé avec un adversaire dans sa case
+  do: Répéter l'attaque de griffe +0 (1d2-3).
+
+step: Une issue devient accessible
+  do: Cesser d'attaquer et fuir ; utiliser le creusement si le sol le permet.
+  note: Ne pas poursuivre un adversaire qui s'éloigne.
+
+## Repli
+
+step: Il peut s'échapper, même sans avoir perdu de PV
+  do: Se retirer et continuer à s'éloigner ; gagner le sous-sol par creusement si cela permet d'échapper à la menace.
+
+step: Points de vie sous 4 et encore capable d'agir
+  do: Donner la priorité à la fuite dès qu'un passage se libère.
+  note: Sa CA 16 ne justifie pas de prolonger l'affrontement avec seulement 4 PV au départ.

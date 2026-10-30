@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Clockwork Brain Gear : petite créature artificielle neutre mauvaise, très intelligente, sous forme de boîtier métallique. 42 pv, CA 10, solidité 10 ; immunités des créatures artificielles.
+  Immobile, muet, sans attaque et avec une allonge de 0 m : il combat exclusivement par les automates qu'il contrôle. Il est solitaire ou accompagné de 4 à 12 automates.
+  Vision dans le noir à 18 m, vision nocturne, Perception +9.
+
+resource: Contrôle des automates | continu | contrôle automatique des automates dans un rayon d'environ 3 200 m ; perception par leurs sens et changement d'automate observé en action libre, une fois par round
+resource: Songe | 1/semaine | NLS 10 ; message onirique aux membres d'une catégorie de créatures choisie, par exemple les humains, dans un rayon d'environ 3 200 m
+
+step: Des automates sont disponibles avant l'arrivée des intrus
+  do: Leur faire installer le boîtier à l'abri, si leur capacité de transport le permet ; disposer des gardes sur les accès et un observateur en avant.
+  note: Donner des consignes simples, d'environ 100 mots au maximum par automate.
+
+step: Des intrus sont repérés par un automate
+  do: Observer à travers ses sens pour préparer l'interception ; garder des défenseurs près du boîtier.
+
+step: Une aide extérieure peut être sollicitée pendant son sommeil
+  do: Utiliser songe pour transmettre un appel à l'aide avant l'affrontement.
+  note: Le message ne contraint pas ses destinataires à obéir.
+
+## Ouverture
+
+step: Les intrus rencontrent les premiers gardes
+  do: Ordonner aux automates de barrer les passages et de concentrer leurs attaques sur le même adversaire accessible.
+  note: Employer uniquement les attaques et déplacements propres aux automates présents.
+
+step: Un adversaire se dirige vers le boîtier
+  do: Faire revenir les gardes pour lui couper l'accès ; garder le boîtier derrière leur ligne.
+
+## Rounds suivants
+
+step: Les automates combattent encore
+  do: Passer chaque round aux sens de l'automate offrant la meilleure vue ; ajuster les ordres pour concentrer les attaques et maintenir la protection du boîtier.
+
+step: Un nouvel automate entre dans le rayon de contrôle
+  do: L'intégrer à la défense ; si un autre cerveau mécanique ou superviseur le contrôle, résoudre le contrôle par un test opposé d'Intelligence, avec un bonus de +5 pour le Clockwork Brain Gear.
+
+step: Les intrus battent en retraite
+  do: Garder des défenseurs auprès du boîtier ; ne poursuivre qu'avec les automates disponibles sans dégarnir sa protection.
+  note: Au-delà d'environ 3 200 m, les automates conservent leur dernier ordre, mais risquent de s'effondrer en un tas de débris : 25 % par heure.
+
+## Repli
+
+step: Le boîtier perd sa protection ou tombe à 14 pv ou moins
+  do: Ordonner à un automate capable de le porter de l'emporter vers un abri ; faire couvrir ce déplacement par les autres.
+  note: Le boîtier ne se déplace jamais par ses propres moyens.
+
+step: Aucun automate ne peut l'évacuer
+  do: Rester sur place et rappeler les automates encore contrôlés pour le défendre.
+  note: Sans serviteurs disponibles, il ne peut ni fuir ni attaquer ; sa solidité 10 et ses 42 pv initiaux constituent sa dernière défense.

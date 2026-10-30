@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Éclaireur humain, rôdeur 6, rencontré seul ou en patrouille de 2 à 8. Il privilégie les tirs depuis un couvert et garde ses distances.
+  55 pv ; CA 17, contact 15, pris au dépourvu 12 ; déplacement 9 m ; Perception +10, Discrétion +13, Survie +10 ; terrain de prédilection : froid +2.
+  Arc long composite +1 : +12/+7, 1d8+2, critique x3. Hache d'armes de maître : +8/+3, 1d8+1, critique x3 ; allonge 1,50 m.
+
+resource: Flèches ordinaires | 20 | pour l'arc long composite +1
+resource: Flèches en fer froid | 20 | à réserver aux adversaires dont le fer froid perce la réduction des dégâts
+resource: Flèches +1 de feu | 5 | ajoutent 1d6 de feu ; leur bonus de +1 ne se cumule pas avec celui de l'arc
+resource: Potions de soins modérés | 2 | à boire à couvert, hors de portée des attaques ennemies
+resource: Fioles d'acide | 4 | armes à aspersion ; facteur de portée 3 m
+resource: Feux grégeois | 4 | armes à aspersion ; facteur de portée 3 m
+resource: Résistance aux énergies destructives | 1 | NLS 3 ; résistance 10 à une énergie choisie, pendant 30 minutes
+resource: Messager animal | 1 | NLS 3 ; transmettre un message par un petit animal disponible, sans attendre une réponse immédiate
+
+step: Il peut observer les intrus avant d'être repéré
+  do: Les suivre avec Discrétion +13 et choisir un poste de tir avec couvert et une voie de retraite
+  note: Exploiter le terrain froid ; ne pas engager au contact sans nécessité.
+
+step: Une attaque utilisant une énergie précise est prévisible
+  do: Lancer résistance aux énergies destructives contre cette énergie avant l'affrontement
+  note: Le sort consomme une action simple s'il doit être lancé pendant le combat.
+
+step: Il doit prévenir une autre patrouille et dispose d'un petit animal approprié
+  do: Employer messager animal avant d'engager le combat
+  note: L'animal transporte le message ; ce sort ne procure pas de renforts immédiats.
+
+## Ouverture
+
+step: Il bénéficie d'un round de surprise
+  do: Tirer une flèche sur un adversaire exposé, de préférence un tireur ou un lanceur de sorts
+  note: Une action simple ne permet qu'un tir, au bonus de +12 avant les modificateurs de dons.
+
+step: Il peut rester en place pendant un round complet
+  do: Effectuer une attaque à outrance à l'arc, deux tirs à +12/+7, et concentrer les flèches sur la même cible
+  note: Tir de précision supprime le malus de tir dans une mêlée ; Tir de précision amélioré ignore les abris et camouflages, sauf s'ils sont totaux.
+
+step: Il doit rejoindre son poste de tir
+  do: Se déplacer jusqu'à 9 m puis tirer une seule flèche à +12
+  note: Garder une ligne de tir et une possibilité de recul.
+
+## Rounds suivants
+
+step: La cible reste à distance et il n'a pas besoin de se déplacer
+  do: Répéter les deux tirs de l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m
+  note: Un déplacement ordinaire empêche l'attaque à outrance ce round.
+
+step: La cible est à 9 m ou moins
+  do: Appliquer Tir à bout portant : tirs à +13/+8, dégâts 1d8+3
+  note: Ces valeurs supposent une attaque à outrance sans Visée ; avec un seul tir, utiliser le premier bonus.
+
+step: La cible paraît facile à toucher
+  do: Activer Visée : accepter -2 aux attaques à distance pour ajouter +4 aux dégâts
+  note: À l'arc, cela donne +10/+5 pour 1d8+6 ; à 9 m ou moins, +11/+6 pour 1d8+7. Renoncer à Visée contre une cible difficile à toucher.
+
+step: Une défense ennemie justifie des munitions spéciales
+  do: Employer le fer froid contre la réduction des dégâts appropriée, ou les flèches de feu contre une cible sensible au feu
+  note: Ne pas gaspiller les cinq flèches de feu contre une résistance ou une immunité au feu connue.
+
+step: Un adversaire arrive au contact et un pas de 1,50 m suffit à quitter son allonge
+  do: Faire ce pas avant de tirer à l'arc
+  note: Vérifier que le nouvel emplacement est hors de l'allonge de tous les ennemis ; tirer dans une zone menacée provoque une attaque d'opportunité.
+
+step: Le contact persiste et aucun recul sûr n'est possible
+  do: Employer la hache d'armes ; si elle est déjà en main et qu'il peut rester sur place, attaquer à +8/+3 pour 1d8+1
+  note: Sortir la hache demande normalement une action de mouvement ; ne pas compter deux attaques le round où il doit la dégainer ainsi.
+
+step: Une cible proche est difficile à blesser à l'arc et vulnérable à l'acide ou au feu
+  do: Lancer une fiole adaptée contre sa CA de contact, de préférence à 3 m ou moins
+  note: Éviter d'éclabousser les compagnons ; ce lancer provoque une attaque d'opportunité s'il est effectué dans une zone menacée.
+
+## Repli
+
+step: Il tombe à 20 pv ou moins, ou risque d'être encerclé
+  do: Rompre le contact vers le couvert préparé ; utiliser le désengagement si un ennemi le menace au corps à corps
+  note: Le désengagement permet jusqu'à 18 m de déplacement ; seule la case de départ échappe normalement aux attaques d'opportunité.
+
+step: Il a atteint un couvert hors de portée immédiate
+  do: Boire une potion de soins modérés, puis poursuivre le repli si la poursuite reste dangereuse
+  note: Ne pas boire au contact, où cette action provoque une attaque d'opportunité.
+
+step: Il a rompu la ligne de vue
+  do: Se dissimuler avec Discrétion +13 et s'éloigner en utilisant le terrain
+  note: En patrouille, les éclaireurs encore à distance peuvent couvrir la retraite de leurs compagnons par leurs tirs.

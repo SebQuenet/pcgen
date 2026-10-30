@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Forgefiend, ou scanderig : extérieur de la Terre de taille G, loyal mauvais, intelligent et capable de remodeler son terrain. 137 pv, CA 25 ; espace et allonge de 3 m ; déplacement et creusement à 6 m, avec glissement dans la terre.
+  Attaque à outrance : morsure +17 (2d6+7 et déchirement d'armure), seconde morsure +17 (1d6+7), deux griffes +17 (1d6+7 chacune).
+  Voit dans les ténèbres, même magiques ; immunisé au feu et au poison ; résistance à l'acide 10 et au froid 10. Son faible Réflexes (+5) l'incite à éviter les zones dangereuses et les combats à découvert.
+
+resource: Passage sans traces | constant | dissimule sa piste
+resource: Image majeure, passe-muraille, fracassement, façonnage de la pierre | à volonté | image majeure : Volonté DD 15 en cas d'interaction ; fracassement : DD 14 selon la cible
+resource: Ténèbres profondes | 3/jour | obscurcir le terrain pour exploiter sa vision dans les ténèbres
+resource: Ancre dimensionnelle | 3/jour | rayon nécessitant une attaque de contact à distance ; empêche les déplacements dimensionnels
+resource: Pétrification | 3/jour | Vigueur DD 18
+resource: Flammes rapides | 3/jour | pouvoir magique en action rapide
+resource: Mur de feu | 3/jour | séparer les ennemis et leur imposer une zone brûlante
+resource: Mur de pierre | 3/jour | couper une ligne de vue ou diviser le groupe
+resource: Volonté de fer améliorée | 1/jour | relancer un jet de Volonté avant d'en connaître le résultat ; conserver le second résultat
+
+step: Il dispose de temps pour préparer le terrain
+  do: Employer façonnage de la pierre pour ménager un passage étroit et une issue ; utiliser image majeure pour masquer une ouverture ou suggérer un chemin plus sûr
+  note: L'illusion trompe les sens, mais ne constitue pas un obstacle matériel ; son maintien par concentration mobilise son action simple
+
+step: Les intrus approchent et il peut les observer
+  do: Repérer leur position, obscurcir le lieu avec ténèbres profondes si cela gêne leurs sens, puis se placer près d'un passage à défendre
+  note: Le glissement dans la terre permet une approche à travers la roche ; il doit ressortir pour observer de nouveau les intrus
+
+## Ouverture
+
+note: Actions
+  Choisir une ouverture selon la situation. Un pouvoir magique ordinaire occupe l'action simple ; flammes rapides peut s'y ajouter en action rapide, au plus une fois par round.
+
+step: Plusieurs ennemis risquent de l'encercler
+  do: Élever un mur de pierre, appuyé sur la pierre existante, pour séparer les combattants de leurs soutiens et garder un adversaire accessible
+  note: Privilégier une séparation du terrain plutôt qu'une tentative d'enfermement directement sur une créature
+
+step: Le terrain est déjà favorable et un adversaire dangereux reste à distance
+  do: Employer pétrification sur lui, surtout s'il paraît moins robuste que les combattants en première ligne
+  note: Vigueur DD 18 ; une réussite au jet ne consomme pas d'autre ressource que l'utilisation du pouvoir
+
+step: Les ennemis voient encore clairement et il n'a pas préparé l'obscurité
+  do: Lancer ténèbres profondes avant de les engager
+  note: L'avantage dépend de leur capacité à voir dans les ténèbres magiques et de la lumière présente
+
+step: Un ennemi est déjà à portée de 3 m et aucun obstacle urgent n'est nécessaire
+  do: Attaquer à outrance avec les deux morsures et les deux griffes, en concentrant les attaques sur une même cible
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement important
+  do: Poursuivre l'attaque à outrance ; ajuster sa position d'un pas de 1,50 m si nécessaire pour garder le passage ou éviter l'encerclement
+  note: La morsure principale ajoute le déchirement d'armure ; conserver cette pression sur les adversaires protégés par une armure
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Avancer de 6 m au maximum, puis porter une morsure principale avec Frappe décisive
+  note: Frappe décisive s'emploie avec l'action d'attaque ; elle ne s'ajoute pas à une attaque à outrance ni à une attaque d'opportunité
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Le frapper avec la morsure principale
+  note: Attaques réflexes et sa Dextérité permettent jusqu'à trois attaques d'opportunité par round, si des occasions distinctes se présentent
+
+step: Une arme ou une armure ennemie est particulièrement gênante
+  do: Tenter un bris d'objet avec Science du bris d'arme et Bris d'arme supérieur ; privilégier un équipement déjà endommagé
+  note: Bris d'arme supérieur reporte sur le porteur les dégâts excédant ceux nécessaires pour détruire l'objet ; fracassement (DD 14) peut servir contre un objet non magique admissible
+
+step: Les ennemis se regroupent ou l'attaquent à distance
+  do: Dresser un mur de feu entre leurs soutiens et le combat, ou un mur de pierre pour couper les tirs ; traverser le feu si cela lui donne une meilleure position
+  note: Son immunité au feu lui permet d'utiliser cette zone pour combattre ; si une attaque à distance devient préférable, créer une flamme en action rapide, puis la lancer avec son action simple
+
+step: Un adversaire a révélé une capacité de téléportation et cherche à rejoindre ses alliés
+  do: Employer ancre dimensionnelle avant de poursuivre son isolement
+
+step: Une cible prioritaire reste hors de portée des morsures
+  do: Réessayer pétrification s'il lui reste des utilisations, ou traverser la roche pour rejoindre une position plus favorable
+  note: Éviter de dépenser tous ses rounds en poursuite à découvert avec seulement 6 m de déplacement
+
+## Repli
+
+step: Points de vie sous 35 et une issue est accessible
+  do: Rompre le combat à la faveur d'un mur de pierre ou de ténèbres profondes, puis fuir par glissement dans la terre à 6 m par déplacement
+  note: Préférer une retraite à travers la terre ou la pierre, hors des lignes de tir
+
+step: La retraite souterraine est momentanément inaccessible
+  do: Utiliser façonnage de la pierre ou passe-muraille pour ouvrir une issue adaptée, puis la franchir dès que possible

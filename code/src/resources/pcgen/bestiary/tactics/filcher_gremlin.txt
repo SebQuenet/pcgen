@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Filcher Gremlin, petite fée chaotique mauvaise, intelligente et discrète : ses attaques sournoises +4d6 constituent sa principale source de dégâts.
+  50 pv ; CA 19, contact 17 ; initiative +5 ; déplacement 6 m ; allonge 1,50 m.
+  Épée courte +10 et morsure +5, ou morsure +10 et deux griffes +10 ; chaque attaque inflige 1d4-2 dégâts avant l'éventuelle attaque sournoise.
+  Réduction des dégâts 5/fer froid, résistance à la magie 17 ; esquive totale, esquive instinctive et sens des pièges +2.
+
+resource: Porte de phase | 3/jour | NLS 5 ; action simple ; passage dans le bois, le plâtre ou la pierre, profondeur maximale 4,50 m ; deux traversées par passage créé
+
+step: Il peut choisir le terrain
+  do: Préférer la pénombre, les angles et les obstacles qui permettent de se cacher ; repérer un mur traversable donnant sur une issue sûre
+  note: Vision nocturne et Discrétion +19 ; discrétion rapide permet de se déplacer à 6 m sans le malus habituel de déplacement rapide en Discrétion. Il lui faut toujours un abri ou du camouflage pour se cacher.
+
+step: Il prépare son approche et sa sortie
+  do: Observer avec Perception +15 et vérifier les passages ; désamorcer les pièges qui menacent sa fuite avec Sabotage +15 et recherche des pièges
+  note: Garder au moins une utilisation de porte de phase pour le repli ; désamorçage rapide réduit le temps nécessaire au désamorçage.
+
+step: Le terrain est exposé au soleil ou à une lumière vive
+  do: Attendre à l'ombre ou choisir un autre passage
+  note: La cécité à la lumière l'aveugle pendant 1 round lors d'une exposition brutale ; il reste ensuite ébloui tant que l'exposition persiste.
+
+## Ouverture
+
+step: Pendant la surprise, une cible est déjà à 1,50 m
+  do: Porter une seule morsure +10 ou un coup d'épée courte +10, avec +4d6 si la cible est privée de son bonus de Dextérité à la CA
+  note: Préférer une cible peu protégée ; l'attaque sournoise exige de voir suffisamment la cible et ne s'applique pas contre une cible bénéficiant de camouflage.
+
+step: Au premier round complet, une cible n'a pas encore agi et se trouve déjà au contact
+  do: Attaquer à outrance avec morsure +10 et deux griffes +10, chacune à 1d4-2 ; ajouter +4d6 à chaque touche tant que la cible est privée de son bonus de Dextérité
+  note: Choisir cette série lorsque ses deux mains sont libres ; une cible dotée d'esquive instinctive peut conserver sa Dextérité malgré la surprise.
+
+step: Il commence un round complet sans ennemi adjacent et dispose d'un trajet dégagé vers une cible
+  do: Utiliser Attaque éclair : avancer d'au moins 3 m avant une seule attaque de mêlée à +10, puis poursuivre le déplacement vers un abri, pour un total maximal de 6 m
+  note: Cette action complexe évite les attaques d'opportunité de la cible attaquée ; elle ne suffit pas à déclencher une attaque sournoise.
+
+## Rounds suivants
+
+step: Un allié permet de prendre une cible en tenaille à 1,50 m
+  do: Maintenir la tenaille et attaquer à outrance avec morsure +10 et deux griffes +10, pour 1d4-2 et +4d6 par touche admissible
+  note: Un pas de placement de 1,50 m peut suffire à obtenir la tenaille avant l'attaque à outrance ; sinon, se déplacer et ne porter qu'une attaque.
+
+step: Il est seul et ne peut plus placer d'attaque sournoise
+  do: Rompre le contact, rejoindre un abri et se cacher avec Discrétion +19 avant de préparer une nouvelle approche
+  note: Utiliser Acrobaties +15 pour éviter les attaques d'opportunité pendant le déplacement, en respectant la vitesse réduite ; Souplesse donne +4 à la CA contre celles provoquées par le déplacement.
+
+step: Il faut changer de côté d'une cloison pour retrouver une position favorable
+  do: Hors de portée ennemie, créer une porte de phase par une action simple, puis la franchir avec son déplacement
+  note: Le passage est invisible et normalement inaccessible aux adversaires ; ses deux traversées sont partagées entre l'aller et le retour. Réserver la dernière utilisation quotidienne à la fuite.
+
+step: Il subit des attaques ordinaires ou des sorts
+  do: Appliquer la réduction des dégâts 5/fer froid et la résistance à la magie 17 lorsqu'elles sont pertinentes
+  note: Avec Réflexes +10 et esquive totale, un jet de Réflexes réussi annule les dégâts d'un effet qui n'en infligerait normalement que la moitié ; un échec inflige les dégâts normaux.
+
+## Repli
+
+step: Points de vie sous 20, ou adversaires au fer froid qui le coincent
+  do: Gagner le mur prévu, créer une porte de phase hors de portée des attaques adverses, puis traverser et poursuivre la fuite à couvert
+  note: Si le passage existe déjà et possède encore une traversée, l'utiliser directement. Une nouvelle activation au contact peut provoquer une attaque d'opportunité.
+
+step: Aucune porte de phase n'est disponible
+  do: Utiliser le retrait pour parcourir jusqu'à 12 m, puis se cacher dès qu'un abri coupe la vue
+  note: Le retrait protège seulement la sortie de sa case de départ ; éviter de traverser les autres cases menacées. S'il est agrippé, tenter Évasion +15 avant de fuir.

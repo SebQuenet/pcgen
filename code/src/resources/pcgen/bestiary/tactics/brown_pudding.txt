@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Vase brune de très grande taille, sans intelligence, solitaire des marais tempérés et chauds. 115 pv, CA 8 ; perception aveugle à 18 m.
+  Coup +9 (2d4+4 plus 2d6 d’acide), étreinte ; constriction (2d4+4 plus 2d6 d’acide), corrosion et scission. Espace et allonge : 4,50 m ; déplacement et escalade : 6 m.
+
+step: Une proie entre dans les 18 m de sa perception aveugle
+  do: Se diriger vers la proie accessible la plus proche
+  note: Dépourvue d’intelligence, elle réagit à la présence de nourriture sans préparer de piège ni coordonner ses attaques.
+
+## Ouverture
+
+step: La proie se trouve à plus de 4,50 m
+  do: Avancer vers elle ; porter un coup si un déplacement de 6 m suffit à la mettre à portée
+  note: Son allonge lui permet de frapper sans devoir occuper une case adjacente à la cible.
+
+step: Une proie est à portée
+  do: Porter un coup +9, infliger 2d4+4 plus 2d6 d’acide et tenter l’étreinte si la cible peut être agrippée
+  note: Une étreinte réussie permet d’infliger la constriction : 2d4+4 plus 2d6 d’acide.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et infliger la constriction à chaque test de lutte réussi
+  note: La vase s’acharne sur la proie retenue ; elle ne la relâche pas pour poursuivre une cible jugée plus dangereuse.
+
+step: Aucune proie n’est agrippée
+  do: Frapper une proie à portée et tenter de nouveau l’étreinte ; sinon, avancer vers la plus proche
+  note: Appliquer aussi la corrosion lorsque ses conditions de déclenchement sont réunies.
+
+step: Une proie accessible se trouve sur un support à escalader
+  do: Grimper vers elle à 6 m par déplacement, en utilisant son adhérence
+  note: Escalade +11 ; elle suit la nourriture sans chercher un avantage tactique élaboré.
+
+step: Une attaque perforante ou tranchante déclenche la scission et la vase possède plus de 10 pv
+  do: Appliquer la scission ; chaque masse poursuit ses attaques sur une proie accessible
+  note: À 10 pv ou moins, une masse ne peut plus se scinder.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à attaquer ou à poursuivre une proie accessible, jusqu’à sa destruction
+  note: Cette vase sans intelligence ne prévoit aucun seuil de fuite et n’organise aucun repli.

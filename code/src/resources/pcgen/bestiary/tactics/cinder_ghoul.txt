@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Cinder Ghoul, mort-vivant de feu de taille G, chaotique mauvais et peu intelligent. 68 pv, CA 21 ; il attaque les adversaires les plus proches.
+  Couperet +12/+7 (1d6+5, critique 19-20) et coup +5 (1d8+1) ; chaque attaque ajoute brûlure et absorption d'énergie.
+  Vol à 12 m par round, manœuvrabilité parfaite ; espace occupé de 3 m, allonge de 1,50 m ; vision dans le noir à 18 m, Perception +8, initiative +9.
+
+note: Défenses
+  Réduction des dégâts 10/magie ; immunité au feu et traits des morts-vivants ; vulnérabilité au froid ; forme gazeuse limitée.
+  Le profil fourni ne détaille pas la forme gazeuse limitée, la brûlure ni l'absorption d'énergie : ne pas leur attribuer d'effets chiffrés supplémentaires.
+
+## Ouverture
+
+step: Aucun adversaire à portée de mêlée au début de son tour
+  do: Voler vers la cible la plus proche, jusqu'à 12 m, puis porter une attaque de couperet +12 (1d6+5, critique 19-20, plus brûlure et absorption d'énergie) si elle est à portée.
+  note: Si un déplacement ne suffit pas, effectuer un double déplacement, jusqu'à 24 m, pour s'approcher sans attaquer ; respecter la limite de poursuite décrite au repli.
+
+step: Il commence déjà le round adjacent à un adversaire
+  do: Tenter son attaque d'inhalation de fumée.
+  note: Le profil ne donne ni les effets ni le DD de cette attaque. Si une autre goule de cendres est présente, elle continue à combattre pendant cette tentative.
+
+## Rounds suivants
+
+step: Premier round qu'il commence adjacent à un ennemi, sans avoir encore tenté l'inhalation de fumée
+  do: Tenter l'inhalation de fumée ; une autre goule présente continue à combattre.
+  note: Cette tentative intervient au début du premier round commencé au contact, même s'il s'est approché au round précédent.
+
+step: Il reste au contact après avoir tenté l'inhalation de fumée et peut effectuer une attaque à outrance
+  do: Porter deux attaques de couperet +12/+7 (1d6+5, critique 19-20), puis un coup +5 (1d8+1), avec brûlure et absorption d'énergie sur chaque attaque réussie.
+
+step: Sa cible tombe ou s'éloigne
+  do: Se diriger vers l'adversaire le plus proche ; après un déplacement, porter une seule attaque de couperet +12 si la cible est à portée.
+  note: Sa faible intelligence favorise cette conduite directe ; il ne met pas en place de manœuvre complexe.
+
+## Repli
+
+step: Il subit des dégâts, même lorsqu'il ne lui reste que quelques points de vie
+  do: Continuer à combattre jusqu'à sa destruction ; aucun seuil de retraite.
+
+step: Les adversaires fuient vers le garde-manger voisin au sud-ouest
+  do: Les poursuivre jusque dans le garde-manger et reprendre les attaques contre la cible la plus proche.
+
+step: Les adversaires fuient plus loin dans le château
+  do: Cesser la poursuite ; ne pas les suivre au-delà de cette limite.

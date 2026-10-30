@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Ghaddar Devil, diable dévoreur de taille TG, loyal mauvais, FP 16 : un colosse brutal qui saisit ses proies, les mord puis dévore les morts.
+  200 pv, CA 33 ; deux griffes +26 (2d6+11 et étreinte), morsure +25 (2d8+11 et morsure vorpale). Déplacement 12 m ; espace et allonge 4,50 m ; initiative +9.
+  Il privilégie l'assaut direct et les attaques à outrance ; sans chef, il combat avec férocité plutôt qu'avec finesse.
+
+note: Défenses et perception
+  RD 10/Bien et argent : une arme doit réunir ces deux propriétés pour la contourner. Immunité au feu et au poison ; résistance à l'acide 10 et au froid 10 ; RM 27.
+  Vision dans le noir à 18 m, vision dans les ténèbres même magiques, Perception +25 et détection du Bien constante. La détection du Bien ne révèle pas instantanément la position de tous les adversaires.
+
+resource: Aura maudite | à volonté | NLS 16, durée 16 rounds, DD 22
+resource: Image persistante | à volonté | Volonté DD 19 pour reconnaître l'illusion en interagissant avec elle
+resource: Mur de feu | à volonté | NLS 16
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à environ 22,7 kg d'objets seulement
+resource: Boule de feu | 3/jour | Réflexes DD 17, 10d6 de feu, moitié en cas de réussite
+resource: Éclair | 3/jour | Réflexes DD 17, 10d6 d'électricité, moitié en cas de réussite
+resource: Convocation de diables | 1/jour | niveau 8 ; 2d10 lémures ou 1d6 diables barbus, 50 % ; 1d6 diables barbelés, 35 % ; 1 diable cornu ou 1 ghaddar, 20 %
+
+step: Il entend venir les ennemis et dispose d'un round de préparation
+  do: Activer aura maudite avant le contact
+  note: CA 37 ; Vigueur +18, Réflexes +19, Volonté +16. Sa RM reste 27. Une créature bonne qui le touche en mêlée subit 1d6 points d'affaiblissement de Force, sauf Vigueur DD 22 réussie.
+
+step: Il dispose de temps supplémentaire pour préparer une rencontre dangereuse
+  do: Tenter sa convocation quotidienne, en privilégiant 1d6 diables barbus pour les 50 % de réussite
+  note: Les placer près de lui avant d'activer aura maudite pour les inclure dans sa protection ; coordonner leurs déplacements par télépathie à 30 m.
+
+## Ouverture
+
+step: Une cible est déjà à 4,50 m ou moins et il peut rester sur place
+  do: Attaque à outrance : deux griffes +26 puis morsure +25, en concentrant les attaques sur une même proie
+  note: Après une griffe réussie, tenter gratuitement l'étreinte sans attaque d'opportunité. Elle fonctionne contre une créature de taille TG ou inférieure ; appliquer ensuite les effets de la lutte aux attaques restantes.
+
+step: Une cible devient accessible après un déplacement de 12 m au maximum
+  do: Avancer puis porter une morsure avec Frappe décisive, +25, pour 4d8+11 dégâts
+  note: Cette attaque simple remplace l'attaque à outrance du round. Une morsure obtenant un 20 naturel puis un critique confirmé tranche la tête de la victime.
+
+step: Plusieurs ennemis restent groupés hors de son allonge
+  do: Lancer boule de feu sur leur regroupement, ou éclair s'ils sont alignés
+  note: Choisir un seul pouvoir pour ce round ; son immunité au feu permet d'inclure sa propre position dans une boule de feu.
+
+## Rounds suivants
+
+step: Une proie reste à portée et il n'a pas à maintenir une lutte
+  do: Répéter l'attaque à outrance ; se limiter si nécessaire à un pas de placement de 1,50 m
+  note: Employer Attaque en puissance contre une CA facile à toucher : malus de 5 aux attaques et aux manœuvres, bonus de 10 aux dégâts de chaque attaque naturelle. Garder la précision contre une défense élevée.
+
+step: Une proie est agrippée et il veut la retenir
+  do: Consacrer son action simple au maintien de la lutte et lui infliger les dégâts de la griffe ayant établi la prise
+  note: BMO de base +29, avec le bonus de 4 de l'étreinte pour engager ou maintenir la lutte. Le maintien ne permet pas aussi une attaque à outrance ; ses dégâts automatiques ne déclenchent pas la morsure vorpale.
+
+step: Plusieurs ennemis adjacents entre eux sont à 4,50 m ou moins
+  do: Utiliser Succession d'enchaînements avec une griffe, surtout après avoir dû se déplacer
+  note: Chaque touche autorise une attaque contre un autre ennemi adjacent au précédent et à portée ; arrêter au premier échec, une attaque au maximum par cible. CA réduite de 2 jusqu'au prochain tour. Ce choix remplace l'attaque à outrance et Frappe décisive.
+
+step: Les ennemis se dispersent ou cherchent à le contourner
+  do: Placer un mur de feu pour couper leur chemin, puis combattre près du mur
+  note: Il traverse les flammes sans dégâts grâce à son immunité. Le mur inflige des dégâts mais n'est pas une barrière solide.
+
+step: Un humanoïde qu'il vient de tuer est accessible et les autres ennemis sont contenus
+  do: Employer Dévorer sur le cadavre pendant un round complet
+  note: Il détruit le corps et dévore son essence, empêchant les résurrections nécessitant une dépouille. Ce pouvoir ne lui rend pas de points de vie ; ne pas abandonner une attaque décisive pour manger sous les coups.
+
+## Repli
+
+step: Ses points de vie passent sous 50 et le prochain assaut menace de l'abattre
+  do: Relâcher toute prise, puis utiliser téléportation suprême vers un endroit connu hors du combat
+  note: Il ne peut emporter ni allié ni adversaire avec ce pouvoir. Si possible, faire un pas de placement de 1,50 m hors des zones menacées avant de l'utiliser.
+
+step: La téléportation est empêchée et il peut encore s'éloigner
+  do: Se retirer vers un passage étroit ou derrière un mur de feu déjà présent ; utiliser une image persistante depuis un abri pour détourner les poursuivants
+  note: Créer le mur ou l'image prend son action du round. Une illusion ne bloque pas physiquement la poursuite ; profiter du répit pour retenter la téléportation dès que possible.

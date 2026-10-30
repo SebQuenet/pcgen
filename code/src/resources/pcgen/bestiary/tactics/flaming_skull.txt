@@ -1,0 +1,34 @@
+## Avant le combat
+
+note: Profil
+  Crâne enflammé, mort-vivant de taille minuscule, neutre mauvais et sans intelligence. Il attaque au contact par un coup infligeant 1d2-1 dégâts plus 1d6 dégâts de feu.
+  5 pv, CA 13 ; vol à 12 m par round, manœuvrabilité parfaite ; allonge de 1,50 m ; vision dans le noir à 18 m.
+  Immunisé au feu et doté des traits des morts-vivants. Sans attaque à distance, il doit rejoindre ses adversaires au contact.
+
+## Ouverture
+
+step: Un ennemi est à plus de 13,50 m
+  do: Se rapprocher en vol ; employer un double déplacement, jusqu'à 24 m, si nécessaire pour l'atteindre.
+  note: Un double déplacement ne laisse pas d'action pour porter un coup ce round.
+
+step: Un ennemi est à plus de 1,50 m et à 13,50 m ou moins
+  do: Voler jusqu'à 12 m pour arriver à portée, puis porter un coup : 1d2-1 dégâts plus 1d6 dégâts de feu.
+
+step: Un ennemi est déjà à 1,50 m ou moins
+  do: Porter immédiatement un coup : 1d2-1 dégâts plus 1d6 dégâts de feu.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Rester en vol stationnaire et porter un coup à chaque round.
+  note: Le feu s'ajoute aux dégâts du coup ; aucune aura de dégâts ni embrasement persistant n'est indiqué.
+
+step: Sa cible s'éloigne ou tombe
+  do: Rejoindre l'ennemi accessible le plus proche en vol et reprendre les coups dès que les actions disponibles le permettent.
+  note: Son absence d'intelligence appelle un assaut simple et répétitif, sans ruse ni coordination élaborée.
+
+## Repli
+
+step: Il perd des points de vie mais reste au-dessus de 0 pv
+  do: Continuer l'assaut sans repli volontaire.
+  note: Aucun seuil de fuite n'est indiqué ; ce mort-vivant sans intelligence est détruit lorsqu'il atteint 0 pv.

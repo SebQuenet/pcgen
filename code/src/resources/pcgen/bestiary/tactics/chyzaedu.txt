@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Chyzaedu, aberration gigantesque, loyale mauvaise, FP 10 : un prêtre du Dominion du Noir pour qui dévorer est un acte sacré. Intelligent, il neutralise les adversaires avant de les saisir.
+  133 pv ; CA 24, contact 6 ; morsure +17 (2d8+11 et étreinte), griffe +17 (2d6+11) ; espace et allonge de 6 m. Déplacement 9 m, creusement et escalade 6 m.
+  RD 10/magie, RM 21, immunité à l'acide et aux effets mentaux ; 50 % de chances d'annuler les dégâts supplémentaires des critiques et des attaques sournoises. Réflexes +4 : éviter les attaques de zone.
+
+resource: Sorts préparés | 1 utilisation de chaque sort de niveau 1 à 5 indiqué | NLS 10, concentration +15 ; les sorts de niveau 0 sont à volonté
+resource: Faim extatique | permanente | rayon de 9 m ; Volonté DD 19 ; coercition mentale affectant les créatures vivantes
+
+step: Il choisit le lieu de l'affrontement
+  do: Privilégier un sol meuble pour pouvoir creuser et une approche qui oblige les intrus à entrer dans les 9 m de son aura
+  note: vision dans le noir et perception des vibrations à 18 m ; les vibrations repèrent les créatures en contact avec le même sol, pas celles qui volent
+
+step: Il entend les intrus arriver
+  do: Lancer bouclier de la foi ; ajouter faveur divine juste avant l'engagement si le délai le permet
+  note: bouclier de la foi dure 10 minutes : CA 27, contact 9. Faveur divine dure 1 minute : bonus de chance de +3 aux attaques et aux dégâts des armes, donc morsure +20 (2d8+14) et griffe +20 (2d6+14)
+
+step: Le terrain impose de combattre en hauteur
+  do: Préparer marche dans les airs avant le combat pour rejoindre les ennemis ou gagner une voie de repli
+  note: protéger son vêtement métallique : il sert de focalisateur divin et fournit sa protection contre les critiques et les effets mentaux
+
+## Ouverture
+
+step: Des créatures vivantes entrent dans les 9 m
+  do: Appliquer immédiatement la faim extatique : Volonté DD 19
+  note: un échec oblige la victime à consommer les aliments et boissons à sa portée, y compris ses potions, jusqu'à épuisement des provisions accessibles. Elle se défend normalement, mais ne fait rien d'autre pendant ce temps ; sans rien à consommer, l'aura ne la neutralise pas
+  note: une sauvegarde réussie immunise cette créature contre l'aura pendant 24 heures ; ne pas lui redemander un jet à chaque round
+
+step: Plusieurs adversaires encore actifs comprennent sa langue et sont à 15 m ou moins
+  do: Lancer injonction suprême, ordre « Halte », Volonté DD 20, puis avancer pour les garder dans son aura
+  note: jusqu'à 10 cibles, aucune distante de plus de 9 m d'une autre ; durée maximale de 10 rounds. Après le premier round d'obéissance, chaque cible retente sa sauvegarde au début de son tour. Une cible immobilisée par cet ordre n'est pas sans défense
+
+step: Un adversaire dangereux est déjà dans son allonge de 6 m
+  do: S'il peut rester sur place, effectuer une attaque à outrance : une morsure et une griffe ; concentrer les deux sur l'adversaire encore capable d'agir
+  note: sur une morsure réussie contre une cible de taille Très Grande ou moindre, tenter gratuitement l'étreinte
+
+## Rounds suivants
+
+step: Une victime est agrippée et ses alliés sont occupés à manger ou à obéir
+  do: Maintenir la lutte pour infliger les dégâts de morsure et empêcher la victime de se dégager
+  note: maintenir la lutte consomme une action simple ; cela ne permet pas aussi une attaque à outrance ce round
+
+step: Il doit se déplacer avant de mordre
+  do: Avancer puis utiliser Frappe décisive : une morsure +17 infligeant 4d8+11, avec tentative d'étreinte si elle touche
+  note: sous faveur divine, cette morsure passe à +20 et 4d8+14 ; réserver la Frappe décisive à l'action d'attaque, sans la combiner avec une charge ou une attaque à outrance
+
+step: Il peut attaquer à outrance une cible facile à toucher
+  do: Utiliser Attaque en puissance : malus de 3 aux attaques, bonus de 6 aux dégâts de chaque attaque naturelle
+  note: garder son allonge pour frapper les ennemis qui approchent ; il ne dispose que d'une attaque d'opportunité par round
+
+step: Un combattant résiste aux coercitions et menace de le submerger
+  do: Lancer cécité/surdité, option cécité, Vigueur DD 18 ; profiter ensuite de l'allonge pour le combattre
+
+step: Un lanceur de sorts reste à distance et les autres ennemis sont neutralisés
+  do: Lancer silence sur lui, Volonté DD 17, pour bloquer ses composantes verbales
+  note: incantation de 1 round ; l'effet ne commence qu'au début du prochain tour du chyzaedu. Rester hors du rayon de 6 m du silence pour conserver ses propres sorts verbaux
+
+step: Plusieurs ennemis blessés sont dans un rayon de 9 m autour d'un même point
+  do: Lancer blessure légère de groupe : 1d8+10 dégâts par cible, Volonté DD 20 pour moitié
+  note: ce sort blesse les vivants et soigne les morts-vivants ; contre une cible isolée, privilégier ses attaques naturelles
+
+## Repli
+
+step: Il passe sous 50 pv et peut consacrer un round aux soins
+  do: Lancer soins intensifs sur lui-même pour récupérer 4d8+10 pv, puis chercher une issue
+  note: garder soins légers, 1d8+5 pv, pour une fois à couvert ; chaque sort n'est disponible qu'une fois
+
+step: Il passe sous 35 pv ou ses adversaires dominent nettement le combat
+  do: Lancer sanctuaire, puis cesser les attaques et creuser dans un sol meuble à 6 m par déplacement ; utiliser sinon une issue praticable ou marche dans les airs si elle est déjà active
+  note: sanctuaire dure 10 rounds ; un adversaire doit réussir Volonté DD 16 pour l'attaquer directement. Les effets de zone restent dangereux, et une attaque du chyzaedu met fin au sort

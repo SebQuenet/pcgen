@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Horreur cristalline, aberration solitaire de taille M, neutre mauvaise, au corps de cristal et de verre. C'est une créature vivante ; 59 pv, CA 21.
+  Deux griffes +9 (1d6+4 chacune), allonge de 1,50 m ; projection d'éclats et réfraction de lumière pour aveugler. Déplacement de 9 m ; vision dans le noir à 18 m.
+  Réduction des dégâts 10/magie et résistance au froid 10 : privilégier les adversaires dont les attaques peinent à franchir ces défenses.
+
+resource: Projection d'éclats | 5/jour | cône de 12 m ; 4d6 dégâts ; Réflexes DD 18 pour moitié
+
+step: Des intrus approchent sans l'avoir repérée
+  do: Se cacher derrière un couvert avec Discrétion +12 et attendre de pouvoir prendre plusieurs ennemis dans le même cône
+  note: Perception +11 ; choisir si possible une position où la lumière naturelle permettra ensuite la réfraction
+
+## Ouverture
+
+step: Une ou plusieurs cibles sont dans un cône de 12 m
+  do: Projeter les éclats en visant le plus grand nombre, puis avancer si cela permet d'isoler une cible
+  note: Ne pas ajouter d'attaque de griffe ce round après la projection
+
+step: Aucun adversaire n'est à portée des éclats
+  do: Avancer vers un couvert ou vers une cible isolée, à 9 m par action de mouvement
+
+step: L'ennemi est déjà au contact et la projection toucherait peu de cibles
+  do: Attaque à outrance, deux griffes +9 (1d6+4 chacune)
+  note: Après un déplacement ordinaire pour atteindre le contact, ne porter qu'une attaque de griffe
+
+## Rounds suivants
+
+step: Plusieurs adversaires voyants sont à 3 m ou moins et la lumière naturelle est présente
+  do: Consacrer une action simple à réfracter la lumière ; Réflexes DD 16 ou cécité pendant 3 rounds
+  note: L'effet se répand dans un rayon de 3 m ; les créatures qui ne perçoivent pas par la vue échappent à la cécité
+
+step: Des ennemis vulnérables à la lumière sont dans ce rayon
+  do: Privilégier la réfraction si ses dégâts dépassent l'intérêt des griffes
+  note: Lumière nocive ou anormale : 2d6 dégâts ; morts-vivants : 3d6 ; morts-vivants particulièrement vulnérables au soleil : 3d8
+
+step: Une cible aveuglée ou déjà blessée reste au contact
+  do: Concentrer les deux griffes sur elle avec une attaque à outrance
+  note: Chaque critique confirmé de griffe inflige aussi 1 point de dégâts de Constitution ; les créatures immunisées aux critiques y échappent. Les griffes comptent comme magiques contre la réduction des dégâts
+
+step: Les adversaires se regroupent et il reste des projections
+  do: Remplacer les griffes par une projection d'éclats sur plusieurs cibles
+
+## Repli
+
+step: Points de vie à 15 ou moins et une issue reste accessible
+  do: Se retirer vers un couvert ; l'action de retraite permet jusqu'à 18 m de déplacement
+  note: Si des poursuivants voyants sont à 3 m en lumière naturelle, tenter d'abord de les aveugler par une action simple, puis s'éloigner de 9 m avec l'action de mouvement
+
+step: La fuite est bloquée
+  do: Aveugler les adversaires proches si possible ; sinon, concentrer les griffes sur celui qui barre le passage

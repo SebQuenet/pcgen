@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Charon, extérieur daemon neutre mauvais de FP 30, est un combattant extrêmement résistant qui combine vieillissement, pertes de mémoire et magie de mort.
+  Bâton +5 impie et voleur de sorts : sept attaques à outrance, +52/+47/+42/+37 et +52/+47/+42, chacune à 1d6+20, critique 19–20, plus malédiction des âges ; toucher +51 pour cette malédiction.
+  À distance : quatre projectiles stygiens +44, chacun à 10d6 plus perte de mémoire. CA 48, contact 38 ; 774 pv ; régénération 20 neutralisée par des attaques déifiques ou mythiques.
+  Déplacement 15 m, nage 9 m ; marche dans les airs et sur l'eau. Allonge 1,50 m : son bâton ne lui donne pas une portée supérieure.
+
+resource: Pouvoirs permanents | constants | marche dans les airs, détection du Bien, liberté de mouvement, vision lucide, aura maudite DD 30, marche sur l'eau
+resource: Dissipation suprême, téléportation suprême, blasphème, télékinésie | à volonté | NLS 30 ; blasphème DD 29, télékinésie DD 27
+resource: Cercle de mort à incantation rapide | 3/jour | DD 28 ; les utilisations ordinaires restent à volonté
+resource: Télékinésie à incantation rapide | 3/jour | DD 27 ; les utilisations ordinaires restent à volonté
+resource: Hurlement de la banshee | 3/jour | DD 31
+resource: Changement de plan | 3/jour | DD 29 contre une cible non consentante
+resource: Capture d'âme | 3/jour | DD 31
+resource: Convocation de daemons | 3/jour | renforts à préparer si le temps le permet
+resource: Symbole de mort | 3/jour | DD 30 ; piège à préparer avant l'affrontement
+resource: Arrêt du temps | 1/jour | préparer sa position et ses propres effets
+resource: Souhait | 1/jour | conserver pour une urgence ou un effet décisif approprié
+
+step: Il peut choisir le terrain et préparer la rencontre
+  do: Garder un espace dégagé pour tirer et se déplacer ; utiliser marche dans les airs ou marche sur l'eau pour compliquer l'approche des combattants terrestres.
+  do: Préparer un symbole de mort sur un passage adapté, puis convoquer des daemons si des renforts sont nécessaires ; placer les serviteurs déjà disponibles entre les intrus et lui.
+  note: Prévoir les déclencheurs du symbole et la position de ses alliés. La présence du Cheval pâle dépend de la rencontre ; ne pas lui attribuer d'attaques sans sa propre fiche.
+
+step: Les adversaires approchent
+  do: Les observer avec vision lucide, détection du Bien et Perception +50 ; identifier les protections visibles avec Art de la magie +51.
+  note: Ses défenses comprennent RM 41, résistances au froid, à l'électricité et au feu 30, et RD 20 franchie par une arme à la fois épique, bonne et en argent.
+
+## Ouverture
+
+step: Des ennemis entrent dans un rayon de 36 m
+  do: Appliquer la présence terrifiante, DD 40, selon ses conditions de déclenchement.
+
+step: Il doit prendre une meilleure position avant d'engager
+  do: Utiliser arrêt du temps pour se déplacer et se préparer, puis reprendre le combat depuis une position favorable aux tirs stygiens.
+  note: Ne pas attaquer les adversaires ni les affecter directement pendant l'arrêt du temps.
+
+step: Plusieurs adversaires vivants sont regroupés et vulnérables aux effets de mort
+  do: Lancer hurlement de la banshee, DD 31, en choisissant une position qui épargne ses alliés.
+  note: Si leurs protections rendent cette ouverture inefficace, commencer par dissipation suprême sur le lanceur de sorts ou le combattant le plus menaçant.
+
+step: Les adversaires sont dispersés ou leurs protections restent incertaines
+  do: Envoyer les quatre projectiles stygiens +44 sur la cible prioritaire, pour 10d6 chacun plus perte de mémoire ; répartir les tirs seulement si plusieurs cibles sont presque neutralisées.
+  note: Préférer le lanceur de sorts exposé ou l'adversaire capable de neutraliser sa régénération.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et Charon peut attaquer à outrance
+  do: Porter les sept attaques de bâton sur la menace principale ; exploiter la malédiction des âges et les propriétés impie et voleuse de sorts de l'arme.
+  note: Contre une CA trop élevée, préférer un toucher +51 pour imposer la malédiction. Un déplacement ordinaire empêche de porter cette attaque à outrance.
+
+step: Il peut combattre à distance
+  do: Répéter les quatre projectiles stygiens en concentrant les pertes de mémoire sur la même cible ; se déplacer si nécessaire pour conserver une ligne de tir.
+  note: Ne pas offrir inutilement d'attaques d'opportunité en tirant au contact ; faire un pas de 1,50 m si cela suffit à se dégager.
+
+step: Une protection magique compromet ses attaques
+  do: Utiliser dissipation suprême sur son bénéficiaire, puis reprendre les tirs stygiens ou la mêlée au round suivant.
+
+step: Une action rapide peut améliorer son tour
+  do: Ajouter télékinésie à incantation rapide, DD 27, pour déplacer une cible ou désorganiser sa position, puis effectuer son attaque principale.
+  note: Une seule action rapide par round. Réserver cercle de mort rapide, DD 28, aux créatures de 9 DV ou moins ; il est inefficace contre les héros dépassant cette limite.
+
+step: Des adversaires non mauvais assez proches sont vulnérables à blasphème
+  do: Utiliser blasphème, DD 29, pour les affaiblir avant de revenir à ses attaques principales.
+  note: Les effets dépendent des DV des cibles comparés à son NLS 30 ; tenir compte des alliés non mauvais présents.
+
+step: Un ennemi meurt et ses alliés pourraient le ramener au combat
+  do: Si les autres menaces lui en laissent le temps, utiliser capture d'âme, DD 31, sur le défunt.
+  note: Cette action passe après la neutralisation des adversaires encore dangereux.
+
+## Repli
+
+step: Ses pv passent sous 200, ou une menace déifique ou mythique compromet sa régénération
+  do: Utiliser téléportation suprême pour rejoindre un refuge connu ; employer changement de plan si quitter le plan est nécessaire et possible.
+  note: Partir plus tôt si ses moyens de déplacement magique risquent d'être bloqués. Ne pas compter sur la résurrection apocalyptique pour gagner l'affrontement en cours.
+
+step: Il a rompu le contact et sa régénération fonctionne
+  do: Rester hors d'atteinte et récupérer 20 pv par round avant d'envisager un retour.
+  note: Son affinité avec l'énergie négative impose de choisir des soins compatibles ; ne pas employer sur lui des soins à énergie positive.

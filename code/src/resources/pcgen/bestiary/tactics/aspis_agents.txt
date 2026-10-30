@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Agent humain de l'Aspis, barde 5 loyal mauvais, spécialisé dans l'infiltration et la manipulation. Bluff +5, Diplomatie +11, Déguisement +12, Discrétion +7, Perception +10.
+  26 PV, CA 16 ; déplacement de 9 m, allonge de 1,50 m. Rapière +1 : +6, 1d6+2, critique 18–20 ; Frappe magique porte les dégâts à 1d6+4 pendant le round.
+  Vigueur +0, Réflexes +6, Volonté +5 ; bonus de +4 contre les représentations bardiques et les effets de langage ou sonores.
+
+resource: Sorts de niveau 2 | 3/jour au total | modification d'apparence, invisibilité, image miroir ; ces sorts partagent la même réserve, NLS 5.
+resource: Sorts de niveau 1 | 5/jour au total | charme-personne et sommeil, Volonté DD 14 ; compréhension des langages, déguisement ; réserve commune.
+resource: Sorts de niveau 0 | à volonté | hébétement, son imaginaire et berceuse, DD 13 ; détection de la magie, prestidigitation, lecture de la magie.
+resource: Frappe magique | à volonté | action rapide ; +2 aux dégâts d'arme pendant 1 round.
+resource: Potions de soins légers | 2 | à boire à couvert pour récupérer des PV.
+resource: Poisons et antitoxine | 2 huiles de taggit, 2 résidus de feuilles de sassone, 1 antitoxine | aucun usage des poisons sans risque n'est indiqué dans le profil.
+
+step: Une approche discrète est possible
+  do: Utiliser Déguisement, éventuellement renforcé par déguisement ou modification d'apparence, pour approcher sous une fausse identité ; repérer une issue avant de se dévoiler.
+  note: Conserver au moins un emplacement de niveau 2 pour une invisibilité de fuite.
+
+step: Une cible humanoïde peut être abordée avant toute hostilité
+  do: Lancer charme-personne, Volonté DD 14, puis négocier ou tromper la cible.
+  note: La cible devient amicale ; le sort ne permet pas de lui imposer librement des ordres.
+
+step: Il peut contaminer discrètement une boisson ou un repas destiné à sa cible
+  do: Employer une dose d'huile de taggit, poison ingéré, avant l'affrontement.
+  note: La manipulation des poisons expose l'agent à un empoisonnement accidentel ; les DD et les effets chiffrés des poisons ne figurent pas dans ce profil.
+
+step: Le combat semble imminent et il reste au moins deux emplacements de niveau 2
+  do: Lancer image miroir avant d'entrer au contact.
+  note: Au NLS 5, le sort crée 1d4+1 doubles et dure 5 minutes.
+
+## Ouverture
+
+step: Des ennemis de faible niveau sont regroupés et l'agent peut incanter sans être interrompu
+  do: Lancer sommeil, Volonté DD 14, sur un groupe à 45 m ou moins, dans un rayon de 3 m.
+  note: Incantation de 1 round ; le sort affecte au maximum 4 DV cumulés, en commençant par les créatures ayant le moins de DV. Une créature de plus de 4 DV est hors de sa portée.
+
+step: Un adversaire arrive au contact
+  do: Activer Frappe magique par une action rapide, puis attaquer à la rapière +6, pour 1d6+4 dégâts, critique 18–20.
+  note: En présence d'autres agents, concentrer les attaques sur une même cible et chercher une prise en tenaille lorsque le terrain le permet.
+
+## Rounds suivants
+
+step: La mêlée reste favorable
+  do: Réactiver Frappe magique chaque round et porter une attaque de rapière ; employer un pas de placement de 1,50 m pour améliorer sa position.
+
+step: Un humanoïde de 4 DV ou moins menace un allié ou barre la retraite
+  do: Lancer hébétement à 10,50 m ou moins, Volonté DD 13, depuis une position permettant d'incanter sans être menacé.
+  note: L'effet dure 1 round ; une cible affectée ne peut plus l'être par ce sort pendant 1 minute.
+
+step: Le contact devient dangereux et image miroir n'est pas actif
+  do: Se dégager avant d'incanter image miroir, si cela laisse encore un emplacement de niveau 2 pour la fuite.
+  note: Une retraite à couvert peut justifier de consacrer un round à boire une potion de soins légers.
+
+## Repli
+
+step: Les PV tombent à 8 ou moins, ou les adversaires prennent nettement l'avantage
+  do: Rompre le contact, lancer invisibilité dès que l'incantation peut être effectuée sans être menacé, puis gagner l'issue repérée à 9 m par déplacement.
+  note: Invisibilité dure 5 minutes au NLS 5 et cesse si l'agent attaque ; éviter aussi les sorts offensifs pendant la fuite.
+
+step: Aucun emplacement de niveau 2 ne reste et un ennemi le menace au contact
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 18 m et chercher un couvert, puis boire une potion si la poursuite lui en laisse le temps.
+  note: La retraite protège seulement la sortie de la case de départ contre les attaques d'opportunité ; choisir un trajet qui évite les autres ennemis.

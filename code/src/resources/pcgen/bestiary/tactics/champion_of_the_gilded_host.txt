@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Champion de l'Armée dorée, créature artificielle colossale, neutre et mythique, faite pour soutenir une armée et briser sa ligne ennemie. Intelligence 7 : privilégier des ordres simples et une cible prioritaire.
+  273 PV ; CA 32, contact 3 ; RD 10/épique et immunités des créatures artificielles. Deux coups +30 (3d8+19 chacun, critique 19–20), écrasement (6d8+28) avec immobilisation et affaiblissement des défenses.
+  Espace et allonge de 9 m ; déplacement, escalade et nage à 15 m. Vision dans le noir à 18 m et vision nocturne ; Perception +11. Il parle le vudrani.
+
+resource: Espoir prolongé | 3/jour | pouvoir magique, NLS 14 ; durée 28 minutes
+resource: Outrage vengeur prolongé | 1/jour | pouvoir magique, Volonté DD 16 annule, résistance à la magie applicable ; portée 18 m, incantation 1 round, durée 28 minutes
+resource: Bénédiction de l'Armée dorée | 1/semaine | combat de masse : +2 au modificateur offensif et aux tests de moral de l'armée, jusqu'à la fin de sa prochaine bataille ou pendant une semaine au maximum
+
+note: Auras
+  Courage flamboyant à 9 m : les alliés bénéficient de bénédiction et de regain d'assurance.
+  Antimagie sélective à 9 m : les compulsions et la téléportation restent possibles ; ses propres pouvoirs magiques et surnaturels fonctionnent. Les autres effets magiques des ennemis comme des alliés sont neutralisés dans la zone.
+
+step: Des soldats alliés participent à l'affrontement
+  do: Lancer espoir prolongé sur les combattants vivants les plus exposés ; jusqu'à 14 bénéficiaires, séparés deux à deux de 9 m au maximum
+  note: Bonus de moral de +2 aux attaques, dégâts d'armes, sauvegardes et tests de caractéristique ou de compétence. Le Champion ne peut pas en bénéficier lui-même ; ce bonus ne se cumule pas avec celui de bénédiction aux attaques.
+
+step: Un allié comprenant le vudrani veut abattre un ennemi qui lui a causé du tort
+  do: Avant l'engagement, lui appliquer outrage vengeur prolongé et désigner cet ennemi
+  note: Contre l'ennemi désigné, le bénéficiaire gagne +6 de moral en Force et Constitution, +3 de moral aux sauvegardes de Volonté et l'immunité aux états secoué et effrayé. Ne pas perdre un round de mêlée pour tenter ce pouvoir au hasard sur un adversaire.
+
+## Ouverture
+
+step: L'ennemi est hors de l'allonge de 9 m
+  do: Avancer de 15 m au maximum pour englober les combattants et leurs soutiens dans l'antimagie ; si une cible devient accessible, porter un coup avec Science de la frappe décisive (9d8+19, attaque +30)
+  note: Choisir une position qui barre le passage vers ses soldats. Il n'a aucune attaque à distance indiquée.
+
+step: Une cible de taille G ou inférieure est à portée de son écrasement
+  do: En action rapide, l'écraser pour 6d8+28 dégâts ; sur une touche, tenter gratuitement la lutte à +46 pour l'immobiliser sous son pied
+  note: S'il est resté sur place ou n'a fait qu'un pas de 1,50 m, ajouter ses deux coups +30 en action complexe, de préférence sur la menace principale encore libre. L'écrasement n'est pas un piétinement de zone.
+
+## Rounds suivants
+
+step: Un adversaire reste immobilisé sous son pied
+  do: Lui infliger automatiquement 3d8+19 dégâts au début du tour et rester en place pour conserver la prise ; frapper les ennemis libres avec les deux coups
+  note: Aucun nouveau test n'est nécessaire pour maintenir cette immobilisation. Deux victimes au maximum ; une victime est libérée si elle s'échappe ou si le Champion quitte son espace.
+
+step: Une cible résistante reste accessible à l'écrasement
+  do: Répéter l'écrasement en action rapide et concentrer les coups sur elle si elle menace encore l'armée
+  note: Chaque écrasement qui inflige des dégâts réduit sa RD et sa résistance à la magie de 2 pendant 1 minute ; cumul maximal de 10, durée renouvelée à chaque écrasement. La baisse de résistance à la magie sert notamment aux compulsions qui traversent l'aura.
+
+step: Plusieurs adversaires sont à portée et faciles à toucher
+  do: Employer Succession d'enchaînements, avec Enchaînement mythique, pour distribuer les coups ; sinon, concentrer les deux coups sur une seule cible
+  note: Enchaîner tant que les attaques touchent, une fois par cible ; l'enchaînement mythique dispense de l'adjacence entre victimes. La CA baisse de 2 jusqu'au prochain tour. Activer Attaque en puissance mythique lorsque la précision reste suffisante ; les chiffres du profil sont donnés sans ce don.
+
+step: Des ennemis provoquent des attaques d'opportunité dans son allonge
+  do: Les punir d'un coup +30 grâce aux Attaques réflexes mythiques, sans plafond d'attaques d'opportunité par round
+  note: Une même occasion ne donne qu'une attaque. Pour arrêter un déplacement avec Immobilisation, la cible doit être dans une case adjacente : remplacer alors l'attaque par un test de manœuvre à +46 contre son DMD.
+
+step: Les ennemis cherchent à combattre hors de portée
+  do: Les rejoindre à 15 m, en escaladant ou en nageant si le terrain le permet ; utiliser Science de la frappe décisive après le déplacement
+  note: Ne pas quitter une position qui protège l'armée pour poursuivre une diversion. Son aura n'empêche pas une fuite par téléportation.
+
+## Repli
+
+step: Il reçoit l'ordre de couvrir le retrait de l'armée
+  do: Tenir le passage, puis se retirer à 15 m par action de mouvement lorsque les soldats sont dégagés
+  note: Se déplacer libère les victimes maintenues sous ses pieds. Ses immunités de créature artificielle lui permettent de couvrir le repli sans céder à la peur.
+
+step: Il doit tenir une position sans attaquer pour soutenir les survivants
+  do: Prendre sa forme de monument de guerre en une action complexe
+  note: Sa RD devient 20/épique et son aura de courage porte à 300 m ; il ne peut plus attaquer sous cette forme. Ce choix protège sa position et soutient l'armée, sans lui rendre de PV.

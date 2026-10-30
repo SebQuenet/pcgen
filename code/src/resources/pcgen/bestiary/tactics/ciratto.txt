@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Ciratto, démon chaotique mauvais de Grande taille, FP 16 : 187 pv, CA 29, déplacement de 18 m. Intelligent et robuste, il combine pouvoirs de contrôle et nombreuses attaques au contact.
+  Masse d'armes lourde de maître +23/+18/+13 (2d6+8, critique 19–20), 4 serpents +18 (1d6 et poison), 2 sabots +17 (1d6+8). Arc long composite +19/+14/+9 (2d6+8).
+  Espace occupé : 3 m ; allonge : 1,50 m. Sa Grande taille ne lui permet pas de frapper à 3 m.
+  Réduction des dégâts 10/Bien, résistance à la magie 27, immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10.
+
+resource: Pouvoirs constants | permanent | détection de l'invisibilité ; aura maudite, DD 24
+resource: Pouvoirs magiques | à volonté | appel de la foudre, DD 19 ; dissipation suprême ; téléportation suprême ; ralentissement, DD 19 ; ténèbres maudites, DD 20 ; NLS 15
+resource: Blasphème | 1/jour | DD 23, NLS 15
+resource: Convocation | 1/jour | niveau 5 ; au choix : 1 ciratto à 20 %, 1 nalfeshnie à 35 %, ou 1d6 glabrezus à 60 %
+
+step: Il repère les adversaires avant d'être engagé
+  do: Observer leurs positions et leurs protections avec Perception +24, sa vision dans le noir à 18 m et sa détection de l'invisibilité constante
+  note: L'aura maudite est déjà active ; ne pas consacrer son ouverture à l'activer.
+
+step: Il dispose du temps nécessaire avant l'affrontement
+  do: Tenter de convoquer 1d6 glabrezus ; en cas de réussite, les répartir pour gêner l'accès aux combattants les plus vulnérables
+  note: Ce choix offre la meilleure probabilité de réussite. Un échec consomme aussi l'unique utilisation quotidienne. Coordonner les alliés par télépathie à 30 m.
+
+## Ouverture
+
+step: Des adversaires non mauvais sont réunis à 12 m ou moins et leurs dés de vie rendent blasphème utile
+  do: Lancer blasphème, DD 23
+  note: Déterminer les effets pour chaque cible selon ses dés de vie et le NLS 15 ; ne pas attribuer automatiquement paralysie ou mort à tout le groupe.
+
+step: Des protections magiques identifiables rendent une cible difficile à atteindre ou à blesser
+  do: Employer dissipation suprême sur cette cible avant de l'engager
+  note: Donner la priorité aux protections qui empêchent ses attaques ou favorisent fortement l'adversaire.
+
+step: Plusieurs combattants adverses peuvent être visés avant le contact
+  do: Employer ralentissement, DD 19, puis exploiter leur mobilité et leurs attaques réduites aux rounds suivants
+  note: Choisir une seule de ces ouvertures selon la situation ; elles ne constituent pas une succession d'actions dans le même round.
+
+## Rounds suivants
+
+step: Une cible prioritaire reste à portée sans déplacement important
+  do: Effectuer une attaque à outrance : trois coups de masse, quatre attaques de serpents et deux coups de sabot
+  note: Concentrer les attaques sur une cible déjà blessée ou ralentie. Le poison des serpents est indiqué sans DD ni effets dans le bloc fourni ; ne pas lui inventer de caractéristiques.
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Avancer de 18 m au maximum puis utiliser Frappe décisive avec la masse : une attaque à +23, dégâts 4d6+8
+  note: Cette attaque unique ne permet pas d'ajouter les serpents, les sabots ou les attaques itératives.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge de 1,50 m
+  do: Envisager Succession d'enchaînements avec la masse pour frapper successivement des cibles différentes tant que les attaques touchent
+  note: Chaque nouvelle cible doit être adjacente à la précédente. Cette action remplace l'attaque à outrance et impose un malus de 2 à la CA jusqu'à son prochain tour.
+
+step: Une cible a une CA assez faible pour accepter une baisse de précision
+  do: Employer Attaque en puissance pour augmenter les dégâts de mêlée
+
+step: Plusieurs adversaires bons restent groupés à distance
+  do: Employer ténèbres maudites, DD 20, en plaçant la zone sur eux
+
+step: Les ennemis restent hors du contact et il peut tirer sans être menacé
+  do: Effectuer une attaque à outrance à l'arc : +19/+14/+9, chaque flèche infligeant 2d6+8
+  note: Appel de la foudre, DD 19, fournit une autre option dans un combat prolongé ; une fois le pouvoir établi, rappeler les éclairs avec les actions requises.
+
+step: Sa position l'expose à un encerclement ou l'empêche d'atteindre une cible importante
+  do: Utiliser téléportation suprême pour gagner une position connue plus favorable, puis reprendre l'offensive au round suivant
+  note: Le pouvoir transporte uniquement le ciratto et au plus 50 livres d'objets ; il ne déplace pas ses alliés.
+
+## Repli
+
+step: Ses points de vie tombent à 45 ou moins, ou les adversaires traversent régulièrement ses défenses
+  do: Utiliser téléportation suprême vers un refuge connu sur le même plan
+  note: Il peut demander à ses alliés de couvrir son départ par télépathie, mais ne peut pas les emporter avec ce pouvoir.
+
+step: La téléportation est empêchée
+  do: Se dégager et exploiter sa vitesse de 18 m ; utiliser l'action de retraite pour parcourir jusqu'à 36 m si le terrain le permet
+  note: Chercher une position permettant de retenter la téléportation dès que l'obstacle disparaît.

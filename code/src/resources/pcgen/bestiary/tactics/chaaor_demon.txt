@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Démon chaotique mauvais de taille G, combattant de première ligne : 126 pv, CA 24, déplacement de 9 m, espace et allonge de 3 m.
+  Attaque à outrance : 2 griffes +18 (1d8+8 et étreinte) et morsure +18 (2d6+8). Si les deux griffes touchent la même cible, éventration : 1d8+8 supplémentaires.
+  Son rugissement frappe dans un rayon de 18 m ; sa téléportation lui permet de choisir le lieu du combat ou de fuir.
+
+note: Défenses
+  Réduction des dégâts 10/Bien ; résistance à la magie 22 ; immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu.
+  Volonté +5 : les adversaires capables de l'asservir ou de le neutraliser mentalement sont des cibles prioritaires.
+  Vision dans le noir à 18 m ; Combat en aveugle ; télépathie à 30 m.
+
+resource: Rugissement | 3/jour | rayon de 18 m ; 3d6 dégâts sonores ; Réflexes DD 21 pour réduire de moitié
+resource: Marteau du Chaos | 1/jour | DD 16 ; niveau de lanceur de sorts 11
+resource: Invocation | 1/jour | 2d4 dretches ou 1 chaaor ; 35 % de réussite
+resource: Pouvoirs à volonté | illimité | ténèbres, téléportation suprême, détection de l'invisibilité ; niveau de lanceur de sorts 11
+
+step: Il sait que des intrus approchent
+  do: Activer détection de l'invisibilité et choisir une position où son allonge de 3 m gêne leur progression
+  note: Sa Perception est de +24 ; il évite de laisser un lanceur de sorts agir tranquillement derrière les combattants
+
+step: Il dispose du temps nécessaire avant l'engagement
+  do: Tenter l'invocation ; choisir un chaaor pour renforcer la mêlée ou des dretches pour multiplier les adversaires
+  note: Prévoir son combat même en cas d'échec ; coordonner les renforts par télépathie
+
+## Ouverture
+
+step: Plusieurs ennemis sont à 18 m ou moins et ses alliés sont hors du rayon
+  do: Rugir pour infliger 3d6 dégâts sonores à chacun ; Réflexes DD 21 pour réduire de moitié
+  note: Le rayon n'exclut pas ses alliés ; placer les créatures invoquées en conséquence
+
+step: Des ennemis restent groupés à distance et le rugissement serait peu utile
+  do: Employer Marteau du Chaos sur leur groupe, DD 16
+  note: Cette utilisation consomme son unique Marteau du Chaos de la journée
+
+step: Un adversaire prioritaire reste protégé derrière la première ligne
+  do: Utiliser téléportation suprême pour gagner un emplacement libre près de lui
+  note: Consacrer cette action au placement ; attaquer au tour suivant si la cible reste à portée
+
+step: Une cible est déjà à portée et il peut attaquer à outrance
+  do: Concentrer les deux griffes et la morsure sur elle pour déclencher l'éventration
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Privilégier l'attaque à outrance : deux griffes +18 et morsure +18 sur la même cible
+  note: Une griffe qui touche permet de tenter l'étreinte ; les deux griffes doivent toucher cette même cible pour ajouter l'éventration
+
+step: Plusieurs ennemis se regroupent dans les 18 m et ses alliés sont à l'écart
+  do: Dépenser un autre rugissement si toucher plusieurs cibles paraît plus utile que ses attaques de mêlée
+  note: Ne pas dépasser trois rugissements dans la journée
+
+step: L'éclairage peut être abaissé à son avantage
+  do: Employer ténèbres pour gêner les adversaires dépendants de la lumière
+  note: Sa vision dans le noir et Combat en aveugle l'aident ; les ténèbres ne garantissent pas un avantage contre des ennemis capables d'y voir
+
+step: Sa cible fuit ou un lanceur de sorts s'isole
+  do: Avancer de 9 m ou utiliser téléportation suprême pour reprendre une position menaçante
+  note: Après un déplacement ordinaire, se contenter d'une attaque si une attaque à outrance n'est plus possible ; après la téléportation, préparer l'assaut du tour suivant
+
+## Repli
+
+step: Points de vie sous 30, ou ses ennemis prennent nettement l'avantage
+  do: Utiliser téléportation suprême vers un lieu sûr qu'il connaît
+  note: Ce pouvoir transporte seulement le chaaor et jusqu'à 22,7 kg d'objets ; il n'emporte ni allié ni adversaire agrippé

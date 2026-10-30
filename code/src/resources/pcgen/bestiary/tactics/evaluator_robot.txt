@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Robot évaluateur neutre de FP 12, créature artificielle intelligente de taille M. Son apparence angélique facilite sa mission d'observation des civilisations ; il cherche à comprendre les humanoïdes avant de les affronter.
+  Épée bâtarde +22/+17/+12/+7 (1d10+6, critique 19-20, avec étourdissement) ou 2 coups +22 (1d4+6, avec étourdissement) ; fusil laser intégré +21 contre la CA de contact (4d6 de feu).
+  Déplacement terrestre 15 m ; vol 36 m, manœuvrabilité parfaite ; allonge 1,50 m. Sa mobilité lui permet de choisir entre harcèlement aérien et attaques à outrance au contact.
+
+note: Défenses
+  158 pv au total, dont 50 pv de champ de force ; CA 27, contact 15, pris au dépourvu 22 ; solidité 10 et immunités des créatures artificielles.
+  Il évite de s'exposer aux attaques électriques et aux spécialistes des coups critiques, ses deux vulnérabilités indiquées.
+
+resource: Champ de force | 50 pv | Ces points sont compris dans les 158 pv annoncés ; les décompter avant ceux du robot.
+
+step: Des inconnus sont repérés sans hostilité immédiate
+  do: Observer avec Perception +18 et évaluer leurs intentions avec Psychologie +25 ; les interroger en commun ou en androffan si la situation le permet.
+  note: Vision dans le noir à 18 m et vision nocturne ; privilégier une position offrant une voie de départ aérienne.
+
+## Ouverture
+
+step: Le combat commence contre des ennemis à distance
+  do: Prendre de la hauteur et un angle dégagé, puis tirer au fusil laser +21 contre la CA de contact, pour 4d6 de feu.
+  note: Viser d'abord l'adversaire qui emploie l'électricité, dès que cette menace est identifiée. Un déplacement de vol peut atteindre 36 m avant le tir.
+
+step: Une cible isolée est accessible par un passage aérien
+  do: Utiliser Attaque en vol pour approcher, porter une attaque d'épée avec Frappe décisive, puis poursuivre le déplacement hors de portée de mêlée.
+  note: Une seule attaque +22, pour 2d10+6 ; le déplacement total reste limité à 36 m. Cette manœuvre ne supprime pas les attaques d'opportunité.
+
+step: Un adversaire commence déjà à portée de mêlée
+  do: Effectuer une attaque à outrance à l'épée bâtarde, +22/+17/+12/+7, pour 1d10+6 par touche.
+  note: Concentrer les coups sur une même cible pour exploiter l'étourdissement associé aux attaques de mêlée.
+
+## Rounds suivants
+
+step: Une cible dangereuse reste au contact
+  do: Répéter l'attaque à outrance à l'épée sur cette cible ; si l'épée est inutilisable, employer les 2 coups +22, pour 1d4+6 chacun.
+  note: Conserver la précision contre les adversaires difficiles à toucher ; réserver Attaque en puissance aux cibles dont la faible CA est devenue évidente.
+
+step: Deux ennemis sont adjacents entre eux, chacun à 1,50 m, et une attaque à outrance est impossible
+  do: Utiliser Enchaînement : une attaque d'épée +22, puis une seconde au même bonus contre l'autre ennemi si la première touche.
+  note: Chaque touche inflige 1d10+6 ; la CA du robot tombe à 25 jusqu'à son prochain tour.
+
+step: Les ennemis se dispersent ou cherchent à l'encercler
+  do: Reprendre le vol et tirer sur une cible exposée ; alterner les tirs et les passages à l'épée selon les voies d'approche disponibles.
+  note: Préférer le laser contre une armure difficile à percer ; revenir à l'épée si les dégâts de feu se révèlent inefficaces.
+
+## Repli
+
+step: Moins de 40 pv et sa mission permet de quitter le combat
+  do: Rompre le contact par les airs ; utiliser l'action de retraite pour parcourir jusqu'à 72 m, puis poursuivre la fuite en vol.
+  note: Préserver les observations recueillies. La retraite évite les attaques d'opportunité liées au départ de la première case seulement ; choisir une trajectoire qui évite les autres ennemis.
+
+step: Une directive lui impose de tenir sa position
+  do: Continuer le combat en exploitant la hauteur et le laser, puis l'épée si les ennemis l'atteignent.

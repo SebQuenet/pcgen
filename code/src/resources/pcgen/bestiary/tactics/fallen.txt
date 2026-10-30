@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Fallen, ancien croisé devenu mort-vivant incorporel loyal mauvais, intelligent et méthodique ; FP 8, 93 PV, CA 22. Il cherche à obtenir des funérailles qui libéreront son âme.
+  Vol à 9 m avec une bonne manœuvrabilité ; allonge de 1,50 m ; vision dans le noir et perception aveugle à 18 m ; Perception +17.
+  Épée longue +11/+6 : 1d8 de force, critique 19–20 ; bouclier léger +13 : 1d3 de force ; arc long +11/+6 : 1d8 de force, critique x3. Chaque coup ajoute 2d6 d'énergie négative et le désespoir.
+
+resource: Ténèbres profondes | 3/jour | NLS 12 ; objet touché, rayon de 18 m, durée de 120 minutes ; lumière abaissée de deux catégories
+resource: Télékinésie | 3/jour | NLS 12 ; Volonté DD 19 contre une projection de créature ; manœuvres sans sauvegarde, résistance à la magie applicable
+
+note: Défenses
+  Incorporel : les attaques non magiques sont inefficaces ; les attaques corporelles magiques infligent normalement la moitié des dégâts, les effets de force infligent leurs dégâts entiers.
+  Résistance à la canalisation +4, résistances à l'acide et au feu de 5, immunités des morts-vivants. Ses armes de force portent des attaques physiques, sans ignorer automatiquement l'armure adverse.
+
+step: Des mortels peuvent encore accepter de l'aider
+  do: Réclamer des funérailles ; épargner le prêtre ou le paladin disposé à les accomplir
+  note: Le refus ou les délais attisent sa colère ; ses gestes au combat restent précis et silencieux
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Privilégier l'ombre, une position en hauteur et une issue à travers une paroi qu'il peut traverser
+  note: Le soleil vif l'éblouit ; il recherche le couvert plutôt que de s'y exposer
+
+## Ouverture
+
+step: La lumière gêne son approche ou permet aux ennemis de le viser facilement
+  do: Utiliser ténèbres profondes sur un objet accessible, puis se déplacer à couvert
+  note: En lumière initialement normale, sa vision dans le noir reste utile ; en pénombre ou dans l'obscurité initiale, le résultat devient surnaturellement obscur, même pour lui
+
+step: Un ennemi dangereux est visible à distance et peut être désarmé ou renversé
+  do: Employer télékinésie pour tenter un désarmement ou un croc-en-jambe, en restant hors de sa portée
+  note: Cette action remplace ses attaques du round ; conserver les utilisations suivantes si les armes suffisent
+
+step: Une cible est visible et aucune préparation n'est nécessaire
+  do: Tirer à l'arc à +11/+6 s'il reste sur place, ou voler de 9 m au maximum et tirer une seule flèche à +11
+  note: Concentrer les tirs sur un adversaire isolé ou capable de le blesser efficacement
+
+## Rounds suivants
+
+step: Une cible est à 1,50 m et une attaque à outrance est possible
+  do: Frapper à l'épée longue à +11/+6, puis au bouclier à +13, en concentrant les coups sur la même cible
+  note: Après un déplacement ordinaire, porter seulement une attaque ; un pas de placement de 1,50 m permet encore l'attaque à outrance. Le coup de bouclier conserve son bonus de bouclier à la CA
+
+step: Le coup de bouclier touche
+  do: Résoudre la bousculade gratuite de Shield Slam avec le résultat du jet d'attaque contre la DMD adverse
+  note: Privilégier une cible adossée à un mur : si l'obstacle empêche son recul, elle tombe à terre. Placer le bouclier en dernier évite d'éloigner la cible avant les coups d'épée
+
+step: Une attaque inflige des dégâts
+  do: Faire effectuer le jet de Volonté DD 19 contre le désespoir
+  note: L'échec impose –4 aux sauvegardes contre la peur et supprime temporairement une éventuelle immunité à la peur ; l'effet persiste tant que les blessures infligées par le Fallen ne sont pas entièrement soignées
+
+step: Une intimidation peut affaiblir une cible sensible à la peur
+  do: Consacrer une action simple à démoraliser avec Intimidation +18 une cible à 9 m ou moins qui le voit et l'entend
+  note: La réussite rend la cible secouée ; elle ne la fait pas automatiquement fuir
+
+step: Les ennemis restent éloignés ou se regroupent contre lui
+  do: Garder de la hauteur, changer d'angle en volant et reprendre les tirs dès qu'une cible est visible
+  note: Maintenir une télékinésie exige une action simple de concentration à chaque round, pendant 12 rounds au maximum ; abandonner la concentration pour reprendre les attaques
+
+step: Les ténèbres surnaturelles empêchent aussi sa propre vision
+  do: Utiliser sa perception aveugle à 18 m pour localiser les adversaires, puis rejoindre une position où il voit avant de privilégier les tirs ou la télékinésie
+  note: La perception aveugle ne supprime pas le camouflage total : les attaques contre une cible ainsi masquée subissent 50 % d'échec
+
+## Repli
+
+step: Points de vie sous 30 et les adversaires peuvent encore le blesser efficacement
+  do: Rompre le contact en volant vers un couvert et traverser une paroi admissible ; employer une utilisation restante de ténèbres profondes pour masquer la retraite
+  note: Éviter les attaques d'opportunité en utilisant l'action de retraite lorsque le trajet le permet ; il conserve son objectif d'obtenir des funérailles
+
+step: Un interlocuteur accepte sincèrement de lui donner une sépulture
+  do: Suspendre ses attaques contre lui et permettre la préparation des rites
+  note: Sa rage peut encore viser les compagnons qui poursuivent le combat
+
+note: Reconstitution
+  À 0 PV, il est détruit ; la reconstitution ne le soigne pas pendant le combat. Il se reforme après 2d4 jours au lieu de sa chute ou de dépôt de ses restes.
+  Selon Pathfinder Adventure Path #75, des rites funéraires d'au moins 1 minute sur ses restes, sur un sol consacré par consécration ou sanctification, le détruisent définitivement et libèrent son âme.

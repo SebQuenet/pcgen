@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Nuée de guêpes artificielles en adamantium, de taille infime et sans Intelligence ; 82 pv, CA 24, résistance à la magie 21.
+  Attaque de nuée : 3d6 dégâts automatiques et poison ; distraction, Vigueur DD 17. Elle doit occuper l'espace de ses victimes : son allonge est nulle.
+  Elle occupe un carré de 3 m de côté ; vol à 12 m par déplacement, bonne manœuvrabilité, Vol +18 ; déplacement au sol à 1,50 m.
+
+note: Repérage
+  Vision dans le noir à 18 m, vision nocturne et Perception +0. Sans Intelligence, elle ne prépare ni embuscade élaborée ni choix de cible fondé sur les capacités des adversaires.
+
+## Ouverture
+
+step: Une créature ennemie est accessible
+  do: Voler jusque dans son espace et, si les ennemis sont regroupés, recouvrir plusieurs créatures avec les 3 m de côté de la nuée.
+  note: Un déplacement en vol couvre 12 m ; un double déplacement couvre 24 m. L'attaque de nuée ne demande aucun jet d'attaque et inflige ses dégâts une seule fois par round.
+
+step: Des ennemis occupent son espace à la fin de son déplacement
+  do: Infliger 3d6 dégâts à chacun et appliquer le poison.
+  note: Toute créature vivante blessée par la nuée doit réussir un jet de Vigueur DD 17 ou être nauséeuse pendant 1 round.
+  note: Le profil fourni ne précise ni le DD ni les effets du poison ; ne pas lui attribuer le DD de distraction.
+
+## Rounds suivants
+
+step: Des ennemis restent dans son espace
+  do: Rester sur eux et répéter les dégâts de nuée, le poison et la distraction à chaque round.
+
+step: Les ennemis quittent son espace
+  do: Poursuivre la créature accessible la plus proche en vol et terminer le déplacement sur elle ; recouvrir aussi ses voisins lorsque leur position le permet.
+
+note: Défenses et vulnérabilités
+  Les armes ne lui infligent aucun dégât. Appliquer les immunités des créatures artificielles et des nuées, ainsi que la résistance à la magie 21 lorsqu'elle s'applique.
+  Les sorts et effets de zone lui infligent une fois et demie leurs dégâts habituels, conformément aux traits des nuées.
+
+## Repli
+
+step: La nuée perd des points de vie mais reste active
+  do: Continuer à attaquer les ennemis accessibles, sans retraite motivée par la peur ou les blessures.
+  note: Son absence d'Intelligence ne justifie aucun seuil de repli tactique.
+
+step: Ses points de vie atteignent 0
+  do: Mettre fin à ses attaques : la nuée artificielle est détruite.

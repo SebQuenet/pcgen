@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Créature boréale, humanoïde monstrueux de taille G, chaotique mauvaise et intelligente, adaptée aux marais froids. Elle cherche une victime isolée et privilégie le corps à corps.
+  73 pv ; CA 20 ; déplacement de 9 m ; allonge de 3 m. Attaque à outrance : morsure +14 et 2 griffes +14, chacune infligeant 1d6+8 plus 1d6 de froid.
+  Réduction des dégâts 5/contondant ; résistance à la magie 17 ; immunité au froid ; vulnérabilité au feu, qui augmente de moitié les dégâts de feu subis.
+
+resource: Modification d'apparence | 3/jour | NLS 7 ; forme humanoïde de taille P ou M ; durée 7 minutes
+resource: Nappe de brouillard | 3/jour | NLS 7 ; rayon de 6 m ; durée 70 minutes ; aucun jet de sauvegarde
+
+step: Elle prépare une embuscade dans la neige
+  do: Se dissimuler avec Discrétion +11 et laisser approcher une cible à portée de ses attaques.
+  note: Perception +13 et vision dans le noir à 18 m ; son passage sans traces empêche de la pister dans la neige, mais ne la rend pas invisible.
+
+step: Une approche trompeuse peut isoler une victime
+  do: Utiliser modification d'apparence pour se présenter comme un humanoïde inoffensif et attirer la cible avec Bluff +7, en commun ou en géant.
+  note: Reprendre sa forme naturelle avant d'attaquer avec ses morsure et griffes ; mettre fin à la transformation demande une action simple.
+
+## Ouverture
+
+step: Les tireurs ou lanceurs de sorts empêchent l'approche
+  do: Créer une nappe de brouillard entre eux et elle, puis avancer jusqu'à 9 m vers une cible isolée en profitant du brouillard.
+  note: Réserver si possible une utilisation pour la fuite ; le brouillard gêne aussi sa propre vision.
+
+step: Une cible est à 3 m ou moins et elle dispose de toutes ses actions
+  do: Attaque à outrance : morsure +14 et 2 griffes +14 sur cette cible, chacune pour 1d6+8 plus 1d6 de froid.
+
+step: Elle doit se déplacer pour atteindre une cible
+  do: Avancer jusqu'à 9 m, puis porter une seule griffe +14 dès que la cible est à 3 m ou moins.
+  note: Après un déplacement ordinaire, elle ne peut pas effectuer ses trois attaques ce round.
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m pour conserver les trois attaques.
+  note: Concentrer les coups sur un même adversaire ; choisir en priorité un utilisateur de feu accessible plutôt qu'un ennemi immunisé au froid.
+
+step: Le combat se déroule dans le brouillard
+  do: Chercher une cible à 1,50 m pour la voir et l'attaquer ; utiliser Combat en aveugle pour relancer une fois chaque jet d'échec dû au camouflage en mêlée.
+  note: À 1,50 m, le camouflage impose 20 % d'échec ; au-delà, le camouflage total impose 50 % et empêche de repérer la cible à vue. Sa vision dans le noir ne traverse pas le brouillard.
+
+step: Un ennemi visible provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter une griffe +14, pour 1d6+8 plus 1d6 de froid.
+  note: Une seule attaque d'opportunité par round ; aucune contre une cible bénéficiant d'un camouflage total.
+
+## Repli
+
+step: Points de vie sous 25, ou attaques de feu répétées sans possibilité de neutraliser leur source
+  do: Si une utilisation reste disponible, lancer nappe de brouillard pour masquer la retraite, puis s'éloigner jusqu'à 9 m.
+  note: L'utilisation d'un pouvoir magique dans l'allonge d'un ennemi peut provoquer une attaque d'opportunité.
+
+step: Le brouillard ou un couvert a rompu le contact
+  do: Poursuivre la fuite dans la neige et se dissimuler avec Discrétion +11 dès que les conditions le permettent.
+  note: Son passage sans traces empêche les poursuivants de suivre ses empreintes dans la neige.

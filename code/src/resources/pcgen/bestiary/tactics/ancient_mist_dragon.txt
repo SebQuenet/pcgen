@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Dragon gigantesque neutre, FP 16 ; 324 pv, CA 37, résistance à la magie 27, réduction des dégâts 10/magie. Très intelligent, il combine brumes, sorts défensifs et attaques physiques.
+  Morsure +32 (4d6+18 et 4d6 de feu), 2 griffes +32 (2d8+12 chacune), 2 ailes +30 (2d6+6 chacune), queue +30 (2d8+18). Souffle en cône : 10d6 de feu et cécité, Vigueur DD 29.
+  Déplacement terrestre 12 m, vol 75 m avec manœuvrabilité déplorable, nage 6 m ; respiration aquatique et vision dans la brume. Espace occupé 6 m ; allonge 4,50 m, ou 6 m avec la morsure.
+  Immunisé au feu, à la paralysie et au sommeil ; vulnérable au froid. Présence terrifiante à 90 m, DD 29.
+
+resource: Pouvoirs magiques | à volonté | création d'eau, nappe de brouillard, brouillard dense, contrôle des vents, mur de vent ; NLS 24
+resource: Sorts de niveau 1 | 8/jour partagés | notamment armure de mage, bouclier et projectile magique
+resource: Sorts de niveau 2 | 8/jour partagés | notamment détection de l'invisibilité et protection contre les projectiles
+resource: Sorts de niveau 3 | 8/jour partagés | notamment déplacement, protection contre les énergies destructives et dissipation de la magie
+resource: Sorts de niveau 4 | 7/jour partagés | notamment peau de pierre et globe d'invulnérabilité partielle
+resource: Sorts de niveau 5 | 7/jour partagés | vision lucide, téléportation et tempête de grêle ; conserver un emplacement pour fuir
+resource: Sorts de niveau 6 | 6/jour partagés | globe d'invulnérabilité et zone d'antimagie
+
+step: Il peut préparer le terrain
+  do: Installer une nappe de brouillard sur sa position et garder un accès dégagé au ciel ou à l'eau
+  note: Sa vision dans la brume lui permet d'observer les approches ; Perception +38. Sa nage est lente : l'eau sert surtout de couvert et de refuge respirable.
+
+step: Des intrus approchent et il dispose de plusieurs rounds
+  do: Lancer armure de mage, protection contre les énergies destructives contre le froid, puis bouclier et déplacement à l'approche du combat
+  note: Chaque sort demande sa propre action ; déduire les utilisations des réserves communes. Ajouter peau de pierre si ses composantes sont disponibles ; ces défenses peuvent améliorer sa CA ou sa résistance au-delà du profil de base.
+
+step: Des ennemis invisibles sont suspectés
+  do: Lancer détection de l'invisibilité ; employer vision lucide si des illusions compliquent aussi le combat
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés dans son cône de souffle
+  do: Souffler pour infliger 10d6 de feu et aveugler, Vigueur DD 29 ; appliquer la présence terrifiante lorsqu'elle se déclenche
+  note: Chercher à atteindre les lanceurs de sorts et les tireurs autant que les combattants de première ligne.
+
+step: Le groupe est dispersé ou ses combattants protègent les lanceurs de sorts
+  do: Placer un brouillard dense sur une partie du groupe pour ralentir son avance et isoler les autres adversaires
+  note: Garder sa propre position hors du brouillard dense : sa vision ne supprime pas la gêne aux déplacements. Un pouvoir magique ou un sort ne se combine pas avec une attaque à outrance dans le même tour.
+
+step: Les projectiles constituent la principale menace à distance
+  do: Dresser un mur de vent entre les tireurs et lui
+  note: Garder une voie d'approche permettant ensuite d'engager les ennemis séparés par les brumes.
+
+## Rounds suivants
+
+step: Une cible dangereuse reste à portée sans déplacement important
+  do: Faire une attaque à outrance : morsure, deux griffes, deux ailes et queue
+  note: Concentrer les attaques sur une cible. Privilégier un utilisateur de froid accessible ; employer Attaque en puissance contre une cible facile à toucher.
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Faire une morsure avec Frappe décisive : 8d6+18 physiques et 4d6 de feu
+  note: En vol, Attaque en vol permet de placer cette attaque pendant le déplacement. Prévoir une trajectoire large adaptée à son vol maladroit ; ce don n'évite pas les attaques d'opportunité.
+
+step: Plusieurs ennemis peuvent de nouveau être pris dans le cône et le souffle est disponible
+  do: Réutiliser le souffle, Vigueur DD 29
+  note: Donner la priorité aux adversaires encore capables de voir et aux groupes qui se reforment.
+
+step: Des renforts cherchent à rejoindre la mêlée
+  do: Interposer un nouveau brouillard dense pour les retarder pendant qu'il termine sa cible
+  note: Ces pouvoirs sont à volonté, mais leur emploi consomme son action ; alterner contrôle et attaques selon l'urgence.
+
+step: Une protection magique ennemie bloque ses attaques ou ses brumes
+  do: Tenter une dissipation de la magie sur cette protection
+  note: Ses sorts sont lancés au NLS 14, contrairement à ses pouvoirs magiques au NLS 24.
+
+step: Des petites créatures se massent sous lui ou autour de sa queue
+  do: Envisager écrasement ou balayage de queue si leur zone permet d'atteindre davantage d'ennemis qu'une attaque ciblée
+
+step: La magie ennemie domine le combat
+  do: Employer globe d'invulnérabilité contre les sorts de faible niveau ; envisager zone d'antimagie s'il peut ensuite imposer le corps à corps
+  note: La zone d'antimagie neutralise aussi ses propres sorts et pouvoirs concernés : renoncer alors au plan fondé sur les défenses magiques et le souffle.
+
+## Repli
+
+step: Il tombe sous 80 pv, ou le froid menace de l'abattre rapidement
+  do: Lancer téléportation vers un refuge connu avec l'emplacement de niveau 5 conservé
+  note: Ne pas attendre d'être encerclé ou incapable de lancer un sort ; mettre fin à sa propre zone d'antimagie avant de lancer la téléportation.
+
+step: La téléportation est indisponible
+  do: Couvrir sa retraite d'une nappe de brouillard, puis fuir en vol à 75 m par déplacement ou rejoindre un passage aquatique
+  note: Employer sa forme de brume si elle convient au passage de fuite ; sa respiration aquatique permet de rester immergé. Éviter une course-poursuite à la nage, limitée à 6 m par déplacement.

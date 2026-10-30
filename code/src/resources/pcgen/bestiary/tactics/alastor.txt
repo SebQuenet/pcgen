@@ -1,0 +1,104 @@
+## Avant le combat
+
+note: Profil
+  Alastor, diable de taille G, loyal mauvais, FP 25 : un combattant intelligent qui encaisse, isole une victime et l'exécute. 660 pv, CA 48, contact 25 ; allonge de 3 m ; marche à 12 m et vol à 18 m par round.
+  Hache d'armes +3 impie vorpale +59/+54/+49/+44 (2d6+19, 19-20/x3) ; autre option : griffes, morsure avec poison et maladie, ailes et queue avec étreinte, puis constriction (2d8+32).
+  RD 20/Bien et argent, RM 34 ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10. Aura de terreur à 6 m, DD 38.
+
+resource: Convocation de diables | 3/jour | niveau 9 ; choisir deux diantrefosses, réussite 100 %
+resource: Aliénation mentale | 3/jour | Volonté DD 25
+resource: Nuée de météores | 1/jour | Réflexes DD 27, selon les impacts
+resource: Mot de pouvoir mortel | 1/jour | cible à 100 pv actuels ou moins ; sans sauvegarde, RM applicable
+resource: Mot de pouvoir étourdissant accéléré | 3/jour | action rapide ; cible à 150 pv actuels ou moins ; sans sauvegarde, RM applicable
+resource: Boule de feu accélérée | 3/jour | action rapide ; Réflexes DD 21
+resource: Souhait | 1/semaine | conserver pour une urgence
+
+step: Des intrus sont repérés avant l'affrontement
+  do: Observer avec Perception +57, détection du Bien et détection des pensées constante ; activer vision lucide pour déjouer invisibilité et illusions
+  note: Détection des pensées autorise Volonté DD 20 ; elle ne révèle pas automatiquement les intentions de chaque adversaire.
+
+step: Le combat est imminent et il dispose de quelques rounds
+  do: Convoquer deux diantrefosses, puis lancer aura maudite et invisibilité, sur des rounds distincts
+  note: Aura maudite dure 20 rounds au NLS 20 ; son effet offensif contre les créatures bonnes utilise le DD 26. L'invisibilité cesse lorsqu'il attaque.
+
+step: Des diables alliés sont présents
+  do: Leur ordonner par télépathie, à 30 m, d'occuper les combattants de première ligne et de couper l'accès aux soutiens
+  note: Garder une voie de vol dégagée et choisir une destination de téléportation sûre sur le même plan.
+
+## Ouverture
+
+note: Choix du round
+  Les ouvertures ci-dessous sont des alternatives. Un pouvoir accéléré peut accompagner une action simple ou une attaque à outrance, mais un seul pouvoir accéléré peut être employé par round.
+
+step: Une cible vulnérable aux effets mentaux paraît avoir 150 pv ou moins, à 22,50 m ou moins
+  do: Mot de pouvoir étourdissant accéléré sur cette cible, puis employer l'action normale selon sa position et les autres menaces
+  note: Au-delà de 150 pv actuels, le pouvoir échoue ; après les trois accélérations quotidiennes, sa version normale reste disponible à volonté, en action simple.
+
+step: Plusieurs ennemis vivants sont regroupés et paraissent sensibles à la paralysie
+  do: Immobilisation de monstre de groupe, Volonté DD 27, puis laisser les diables engager les adversaires restés mobiles
+  note: Les cibles doivent être à 9 m au maximum les unes des autres. Éviter cette ouverture contre des ennemis protégés contre les effets mentaux ou la paralysie.
+
+step: Un ennemi prioritaire est déjà à portée de 3 m
+  do: Attaque à outrance à la hache, +59/+54/+49/+44 ; concentrer les coups sur un lanceur de sorts ou un porteur d'arme capable de franchir sa RD
+  note: La propriété impie ajoute 2d6 dégâts contre une créature bonne. La décapitation vorpale exige un 20 naturel suivi d'une confirmation ; un critique sur 19 ne suffit pas.
+
+step: Les ennemis sont éloignés et leurs protections rendent les contrôles peu prometteurs
+  do: Dissipation suprême ciblée sur le soutien le mieux protégé, ou nuée de météores si plusieurs adversaires exposés peuvent être frappés
+  note: Les pouvoirs magiques sont employés au NLS 20 ; ne pas utiliser ses 40 DV comme niveau de lanceur de sorts.
+
+## Rounds suivants
+
+step: Un adversaire entre dans les 6 m
+  do: Faire résoudre son exposition à l'aura de terreur, DD 38, en respectant les immunités applicables
+  note: Exploiter une fuite ou une désorganisation pour concentrer les attaques sur une victime isolée.
+
+step: La victime choisie reste à portée
+  do: Poursuivre les attaques à outrance à la hache ; ajouter un mot de pouvoir étourdissant accéléré si elle est descendue sous son seuil
+  note: Critique sanglant inflige 2d6 de saignement sur un critique confirmé. Employer Attaque en puissance lorsque la défense adverse permet d'accepter la baisse de précision.
+
+step: Une victime est paralysée et aucun ennemi ne peut efficacement interrompre l'exécution
+  do: Porter un coup de grâce à la hache, en action complexe
+  note: Cette action provoque des attaques d'opportunité. Une cible seulement étourdie n'est pas sans défense et ne permet pas ce coup de grâce.
+
+step: Une cible importante paraît réduite à 100 pv ou moins, à 22,50 m ou moins
+  do: Mot de pouvoir mortel pour l'achever sans jet de sauvegarde
+  note: Réserver l'unique utilisation à un adversaire susceptible d'être affecté ; sa résistance à la magie et ses protections restent applicables.
+
+step: Les protections ennemies empêchent ses contrôles
+  do: Dissipation suprême sur la protection déterminante, puis reprendre les attaques ou les contrôles au round suivant
+  note: Privilégier les protections identifiées grâce à Art de la magie +49 ; ne pas répéter un effet mental sur une cible dont l'immunité est manifeste.
+
+step: Des ennemis non mauvais de 20 DV ou moins sont réunis dans les 12 m
+  do: Blasphème, Volonté DD 25 pour réduire ou annuler ses effets
+  note: Les effets dépendent de l'écart entre leurs DV et le NLS 20 ; les créatures de plus de 20 DV sont hors d'atteinte de ce pouvoir.
+
+step: Un adversaire éloigné paraît vulnérable aux attaques mentales
+  do: Aliénation mentale, Volonté DD 25, pour le rendre confus durablement
+  note: Une victime confuse n'est pas un allié contrôlé ; éviter de compter sur ses attaques pour protéger Alastor.
+
+step: Les soutiens ennemis restent groupés derrière leurs combattants
+  do: Mur de feu, DD 22, pour rendre leur position coûteuse, ou boule de feu accélérée, DD 21, tout en conservant son action normale
+  note: Alastor peut traverser son feu grâce à son immunité. Le mur inflige des dégâts mais ne constitue pas un obstacle solide.
+
+step: Il doit atteindre une autre cible
+  do: Contourner les défenseurs par un déplacement en vol, puis porter une seule attaque à la hache si la cible est à portée ; sinon, se replacer par téléportation suprême
+  note: Un déplacement ordinaire ne permet pas une attaque à outrance. Après une téléportation en action simple, attendre le round suivant pour attaquer à la hache.
+
+step: Il choisit les armes naturelles pour tenter une capture
+  do: Attaque à outrance : deux griffes +55 (2d6+16), morsure +55 (4d6+16 et poison et maladie), deux ailes +53 (2d6+16), queue +53 (2d8+24 et étreinte)
+  note: Employer cette routine à la place de celle à la hache. L'étreinte exige un test de lutte ; conserver le BMO +2 fourni. La constriction de 2d8+32 exige une lutte réussie.
+  note: Les effets et DD du poison et de la maladie ne sont pas précisés dans le profil ; ne pas leur attribuer une incapacité immédiate inventée.
+
+## Repli
+
+step: Points de vie sous 330, souhait disponible et possibilité de poursuivre sans risque immédiat d'être abattu
+  do: Employer souhait pour effacer ses blessures et remonter jusqu'à ses 660 pv
+  note: Cette dépense consomme l'utilisation hebdomadaire et son action simple ; les diables alliés couvrent ce round.
+
+step: Points de vie sous 165, ou risque d'être neutralisé avant son prochain tour
+  do: Téléportation suprême vers le refuge choisi, en laissant les diables couvrir le départ
+  note: Ce pouvoir n'emporte qu'Alastor et jusqu'à 22,7 kg d'objets ; il ne permet pas d'emporter un prisonnier ni de changer de plan.
+
+step: La téléportation est empêchée
+  do: Si le blocage est dissipable, tenter dissipation suprême ; sinon gagner une issue en vol à 18 m par déplacement, ou 36 m en double déplacement
+  note: Un mot de pouvoir étourdissant accéléré peut neutraliser un poursuivant blessé pendant la fuite. Employer invisibilité lors d'un round ultérieur pour compliquer la poursuite.

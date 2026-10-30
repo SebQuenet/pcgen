@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Dweomercat Cub, petite créature magique féline de taille TP, chaotique neutre. 16 pv, CA 16 ; déplacement de 6 m et allonge de 1,50 m.
+  Au contact : 2 griffes +7 (1d2-1) et morsure +7 (1d3-1). Il cherche à rester près d'une cible isolée pour porter ses trois attaques.
+  Réduction des dégâts 5/magie et résistance à la magie 14 : il résiste mieux aux armes ordinaires, mais ses 16 pv imposent un combat bref.
+
+resource: Détection de la magie | constant | pouvoir magique, NLS 4 ; repère les auras, sans fournir d'attaque magique
+resource: Porte dimensionnelle | 1/semaine | pouvoir magique, NLS 4 ; lui-même uniquement ; garder cette utilisation pour fuir
+
+step: Des intrus approchent
+  do: Les observer à couvert avec Perception +5, l'odorat et la vision dans le noir à 18 m ; rester caché avec Discrétion +4.
+  note: Examiner les auras avec détection de la magie avant de s'exposer ; une aura ne suffit pas à identifier les capacités de son porteur.
+
+step: D'autres dweomercats sont présents
+  do: Approcher avec eux et choisir une cible déjà occupée par un allié.
+  note: Il comprend et parle le commun et le sylvestre ; il peut coordonner son approche verbalement.
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m ou moins
+  do: Faire une attaque à outrance : 2 griffes +7 (1d2-1) et morsure +7 (1d3-1).
+
+step: Une cible peut être atteinte avec un déplacement de 6 m
+  do: La rejoindre et porter une seule morsure +7 (1d3-1).
+  note: Privilégier une cible isolée ou exposée ; un déplacement ordinaire ne permet pas d'enchaîner ses trois attaques.
+
+step: Les ennemis sont encore trop éloignés
+  do: Avancer de couvert en couvert pour préparer une approche au round suivant.
+  note: Il ne dispose d'aucune attaque à distance ; conserver porte dimensionnelle pour le repli.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter l'attaque à outrance avec les deux griffes et la morsure.
+  note: Avec un allié, chercher une position de tenaille sans s'exposer inutilement aux autres adversaires.
+
+step: Un pas de 1,50 m suffit à retrouver une cible à portée
+  do: Faire ce pas puis porter les trois attaques.
+
+step: Il faut parcourir davantage pour rejoindre une cible
+  do: Se déplacer jusqu'à 6 m puis porter une seule morsure.
+  note: Éviter de poursuivre au milieu du groupe adverse ; sa réduction des dégâts ne le protège pas des armes magiques.
+
+## Repli
+
+step: Il tombe à 8 pv ou moins, ou risque d'être encerclé
+  do: Utiliser porte dimensionnelle, si elle est disponible, pour gagner un endroit sûr à l'écart du combat.
+  note: Si un pas de 1,50 m permet de sortir des allonges ennemies, le faire avant d'activer le pouvoir afin d'éviter une attaque d'opportunité. La téléportation n'emporte aucun allié et termine ses actions du tour.
+
+step: Porte dimensionnelle a déjà été utilisée cette semaine
+  do: Se désengager par une retraite vers le couvert le plus proche, puis se cacher dès qu'il échappe aux regards.
+  note: Son déplacement de 6 m rend une longue poursuite dangereuse ; privilégier les obstacles et les cachettes.

@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Fellsig, mort-vivant de feu neutre mauvais, FP 3 ; 27 pv, CA 15, déplacement de 6 m.
+  Coup à +6 au contact, à 1,50 m (1d4+4 et embrasement) ; boule de lave à +3 au toucher à distance (1d6 de feu et embrasement).
+  Immunisé au feu et doté des immunités des morts-vivants ; vulnérable au froid ; défense spéciale : cœur en fusion.
+  Vision dans le noir à 18 m, perception des vibrations à 9 m ; Perception +9.
+
+resource: Pyrotechnie | 5/jour | NLS 5 ; nécessite une source de feu ; la fumée peut masquer ses déplacements.
+resource: Mains brûlantes | 3/jour | NLS 5 ; DD 12.
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +9 et la perception des vibrations ; choisir un passage étroit pour limiter les adversaires au contact.
+  note: La perception des vibrations sert à localiser les créatures en contact avec le même sol, dans un rayon de 9 m.
+
+step: Un feu est présent sur le terrain
+  do: Se placer de façon à pouvoir combattre près des flammes ou se replier à travers elles.
+  note: Son immunité au feu lui permet de profiter d'un danger qui gêne ses adversaires.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés à courte distance
+  do: Utiliser mains brûlantes pour en toucher plusieurs (DD 12).
+
+step: Aucun ennemi n'est au contact et les cibles restent dispersées
+  do: Lancer une boule de lave à +3 au toucher à distance sur une cible exposée (1d6 de feu et embrasement).
+  note: Privilégier un adversaire qui emploie le froid ou une cible qui ne brûle pas encore.
+
+step: Un ennemi est déjà à 1,50 m
+  do: Donner un coup à +6 (1d4+4 et embrasement).
+
+## Rounds suivants
+
+step: Un ennemi reste au contact
+  do: Continuer les coups à +6 ; employer Attaque en puissance contre une cible facile à toucher.
+  note: Ses attaques de feu perdent leur intérêt contre une créature immunisée au feu ; conserver alors les dégâts physiques du coup.
+
+step: Une poussée permet d'envoyer un adversaire dans un feu ou de dégager le passage
+  do: Tenter une bousculade avec un BMO de +8.
+  note: Choisir cette manœuvre lorsque le déplacement obtenu vaut davantage qu'un coup.
+
+step: Des ennemis se regroupent de nouveau à courte distance
+  do: Réutiliser mains brûlantes (DD 12), tant qu'il reste des utilisations.
+
+step: Les ennemis restent à distance
+  do: Continuer les boules de lave ; avancer de 6 m au besoin pour rejoindre un abri ou menacer une cible isolée.
+
+step: Une source de feu est disponible et les attaques à distance deviennent dangereuses
+  do: Utiliser pyrotechnie pour produire de la fumée, puis exploiter ce couvert lors des rounds suivants.
+  note: Dans la fumée, privilégier le contact avec Combat en aveugle et la localisation par vibrations ; cette dernière ne supprime pas les chances de rater dues au camouflage.
+
+## Repli
+
+step: Ses points de vie tombent à 8 ou moins, ou un adversaire exploite efficacement sa vulnérabilité au froid
+  do: Rompre le combat et gagner un passage étroit ou une zone enflammée ; si un feu est disponible, employer pyrotechnie pour couvrir la fuite.
+  note: Il ne se déplace que de 6 m ; chercher à couper les lignes de vue et à gêner la poursuite avec le terrain.

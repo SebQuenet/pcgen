@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Blood Pudding, vase neutre de taille M, sans intelligence : 52 PV, CA 10. Coup +4 (2d4+1 et étreinte), allonge de 1,50 m ; infusion et dégorgement.
+  Déplacement de 9 m ; vision aveugle à 18 m. Immunités aux effets mentaux et traits des vases ; résistance au feu 10.
+
+note: Instinct
+  Solitaire des marais et des souterrains, elle recherche des proies vivantes sans préparer d'embuscade élaborée.
+
+## Ouverture
+
+step: Une proie est repérée hors de son allonge
+  do: Avancer de 9 m au maximum, puis frapper si la proie est à 1,50 m.
+  note: Un second déplacement pour l'approcher empêche d'attaquer ce round.
+
+step: Une proie est au contact
+  do: Coup +4 (2d4+1), puis étreinte si le coup touche.
+  note: Employer le BMO du bloc fourni pour le jet de lutte.
+
+step: Un jet de lutte réussit contre une créature vivante
+  do: Infusion : pénétrer dans son corps, sans dégâts immédiats.
+
+## Rounds suivants
+
+step: Elle occupe un hôte vivant
+  do: Dégorgement : une action simple par round, infligeant 1d2 points de dégâts de Constitution.
+  note: L'hôte peut l'expulser par une action simple, une fois par round : Vigueur DD 17.
+
+step: L'hôte boit de l'alcool
+  do: Continuer le dégorgement.
+  note: Dégâts de Constitution réduits de moitié pendant 1d4+1 rounds.
+
+step: Elle est expulsée sans vinaigre
+  do: Reprendre coup, étreinte et infusion.
+  note: Cet hôte gagne +2 pour l'expulser à nouveau pendant un jour.
+
+step: L'hôte boit du vinaigre pur
+  do: Sortir immédiatement ; chercher une autre proie pendant un jour.
+  note: Le buveur fait Vigueur DD 12 ou devient nauséeux pendant 1d3 rounds.
+
+step: Un effet ou une attaque de froid la touche
+  do: Continuer en appliquant le ralentissement pendant 3 rounds.
+
+## Repli
+
+step: Ses PV baissent
+  do: Continuer à attaquer sans retraite organisée.
+  note: Elle reste dans son hôte jusqu'à sa mort, sauf expulsion.
+
+step: La Constitution de l'hôte atteint 0
+  do: Se nourrir du cadavre, puis sortir une fois rassasiée.

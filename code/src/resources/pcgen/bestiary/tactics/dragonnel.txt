@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Dragonnel, bête magique de taille TG, neutre mauvaise, à l'intelligence rudimentaire. 76 pv, CA 18 ; il combat par assauts aériens et attaques naturelles.
+  Morsure +12 (2d6+6), allonge 4,50 m ; deux griffes +12 (1d8+6 chacune), allonge 3 m. Espace occupé : 4,50 m.
+  Vol à 30 m par déplacement, manœuvrabilité médiocre ; marche à 12 m. Vision dans le noir à 18 m et vision nocturne.
+
+step: Des ennemis sont repérés
+  do: Choisir une approche dégagée et viser une cible isolée, de préférence petite ou déjà blessée
+  note: Vol +6 : privilégier les trajectoires simples et les larges virages ; éviter le vol stationnaire et les passages étroits
+
+## Ouverture
+
+step: Une cible peut être atteinte au cours d'un déplacement aérien
+  do: Attaque en vol : se déplacer, porter une morsure +12 (2d6+6) à 4,50 m, puis poursuivre le déplacement, dans la limite totale de 30 m
+  note: Une seule attaque pendant ce passage ; choisir une trajectoire qui reste hors de l'allonge ennemie pour limiter les attaques d'opportunité
+
+step: Le combat commence au sol avec un ennemi à 3 m ou moins
+  do: Attaque à outrance : morsure +12 (2d6+6) et deux griffes +12 (1d8+6 chacune)
+
+## Rounds suivants
+
+step: L'ennemi reste groupé ou menace de l'encercler
+  do: Répéter les passages avec Attaque en vol et la morsure, en terminant hors de portée des combattants au sol
+
+step: Une cible isolée reste à portée des trois attaques
+  do: Rester au sol et concentrer la morsure et les deux griffes sur elle
+  note: Contre une cible facile à toucher, activer Attaque en puissance : attaques +9, morsure 2d6+12 et griffes 1d8+12 chacune ; le malus de -3 affecte aussi les tests de manœuvre jusqu'au prochain tour
+
+step: Deux ennemis sont adjacents l'un à l'autre et tous deux à portée de morsure, mais une attaque à outrance est impossible
+  do: Enchaînement, par une action simple : morsure +12 (2d6+6) contre le premier ; si elle touche, une seconde morsure identique contre le second
+  note: CA réduite à 16 jusqu'au prochain tour ; cette action peut aussi remplacer la morsure unique d'une Attaque en vol
+
+step: Une morsure ou une griffe touche une proie de taille P ou inférieure
+  do: Utiliser Capture (Snatch) pour tenter immédiatement une lutte en action libre, sans attaque d'opportunité ; BMO +33 contre le DMD de la cible, avant modificateurs de situation
+  note: Privilégier cette prise au sol ; une capture ne permet pas d'emporter automatiquement la victime dans la suite du passage aérien
+
+step: Une proie de taille P ou inférieure est déjà capturée au sol
+  do: Consacrer l'action simple à maintenir la lutte ; chaque test réussi permet de la serrer et d'infliger les dégâts de la morsure ou de la griffe qui la retient
+
+step: Il faut emporter une proie déjà capturée
+  do: Consacrer l'action simple au maintien de la lutte puis, en cas de réussite, choisir le déplacement : jusqu'à 15 m en vol avec la victime, si sa charge le permet
+  note: Une fois en hauteur, il peut la lâcher en action libre ; appliquer les dégâts de chute selon la hauteur réelle. Une mise en danger pendant le déplacement accorde à la victime une tentative gratuite pour rompre la lutte avec un bonus de +4
+
+## Repli
+
+step: Points de vie sous 25 ou assauts devenus trop dangereux
+  do: Lâcher toute proie en action libre et fuir en vol vers un relief qui coupe les lignes de tir
+  note: Au contact, utiliser le retrait pour parcourir jusqu'à 60 m ; seule la sortie de l'espace initial évite les attaques d'opportunité des ennemis visibles

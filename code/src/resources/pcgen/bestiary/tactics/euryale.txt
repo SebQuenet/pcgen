@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Euryale, humanoïde monstrueuse de taille M, chaotique mauvaise, FP 20 : une stratège qui combine magie d'oracle de niveau 18, pétrification, attaques soniques et armes empoisonnées.
+  367 PV, CA 37, initiative +15 ; déplacement à 18 m, creusement avec glissement dans la terre à 9 m. Allonge de 1,50 m, ou 3 m avec ses serpents.
+  Attaque à outrance : sceptre vipérin +35/+30/+25/+20, 1d8+14 et poison ; six morsures +28, 1d6+4 et poison. À distance : crochets +37/+32/+27/+22, 1d8+5, critique x3 et poison.
+  Perception +38, vision aveugle à 18 m, vision dans le noir à 36 m et vision lucide constante. Sa vision à 360 degrés empêche la prise en tenaille.
+  Réduction des dégâts 15, surmontée par une arme à la fois bonne et tranchante ; immunités à la cécité, à l'hébétement, à la pétrification, au poison et au son. Protection contre la mort et esprit impénétrable constants.
+
+resource: Sorts d'oracle | 9/9/8/8/8/8/7/6/4 par jour | emplacements des niveaux 1 à 9, dans cet ordre ; NLS 18, concentration +28 ; les préparatifs consomment ces réserves
+resource: Pétrification rapide | 3/jour | pouvoir magique en action rapide ; Vigueur DD 26 ; NLS 20
+resource: Boule de feu à retardement sonique | 3/jour | dégâts soniques ; Réflexes DD 27 ; NLS 20
+resource: Poussée sonique | 3/jour | DD 25 ; NLS 20
+resource: Hurlement de banshee | 1/jour | Vigueur DD 29 ; NLS 20
+resource: Pouvoirs à volonté | illimité | pétrification, Vigueur DD 26 ; cri suprême, Vigueur DD 28 ; divination ; façonnage de la pierre
+
+step: Elle peut préparer le lieu de l'affrontement
+  do: Choisir un terrain donnant accès à la terre ou à la pierre ; employer façonnage de la pierre pour aménager un abri et une issue de repli
+  note: Discrétion +35 et changement de forme en humanoïde de taille M permettent de préparer une embuscade ou de dissimuler son identité avant l'affrontement
+
+step: Elle connaît l'approche des ennemis
+  do: Lancer liberté de mouvement ; ajouter résistance aux énergies destructives contre un élément identifié et immunité contre les sorts suprême contre des sorts connus de ses adversaires
+  note: Ces protections ne sont pas constantes ; déduire leurs emplacements. Conserver des sorts de niveau 6 pour guérison
+
+step: Le combat est imminent
+  do: Lancer aura maudite ; ajouter puissance divine seulement si elle prévoit de combattre avec ses armes
+  note: Les bonus des sorts modifient les valeurs de base du profil ; ne pas les ajouter avant leur lancement
+
+## Ouverture
+
+step: Une cible vulnérable à la pétrification est visible
+  do: Employer pétrification rapide sur un lanceur de sorts ou un soutien dont la Vigueur paraît faible
+  note: Vigueur DD 26 ; une seule action rapide par round. Elle conserve son action simple pour l'une des options suivantes
+
+step: Plusieurs ennemis sont à 12 m ou moins et ne semblent pas protégés contre la mort
+  do: Employer hurlement de banshee, Vigueur DD 29
+  note: Privilégier plusieurs victimes potentielles pour cette unique utilisation quotidienne
+
+step: Le groupe est aligné ou les protections contre la mort rendent le hurlement peu intéressant
+  do: Employer cri suprême dans un cône de 18 m, Vigueur DD 28
+  note: Se placer pour épargner d'éventuels alliés ; son immunité au son ne protège pas ses serviteurs
+
+step: Les ennemis restent groupés hors du cône
+  do: Employer boule de feu à retardement sonique avec explosion immédiate, Réflexes DD 27
+  note: Les dégâts sont soniques ; choisir ce pouvoir contre les adversaires dont les défenses contre le feu seraient inutiles
+
+## Rounds suivants
+
+step: Un adversaire dangereux reste protégé par une magie identifiée
+  do: Lancer dissipation de la magie suprême sur lui avant de reprendre les attaques auxquelles cette protection le soustrayait
+  note: Une dissipation peut échouer ; ne pas considérer la protection comme levée sans résoudre le test
+
+step: Une cible prioritaire reste exposée à la pétrification
+  do: Employer les utilisations restantes de pétrification rapide, puis pétrification ordinaire à volonté si nécessaire, Vigueur DD 26
+  note: La version ordinaire prend son action simple ; les deux versions pétrifient sans constituer une attaque de regard
+
+step: Plusieurs ennemis offrent encore une bonne cible
+  do: Répéter cri suprême ou dépenser une boule sonique ; choisir rochers fracassants, le sort clashing rocks, DD 29, contre une cible majeure lorsque les attaques soniques sont inefficaces
+  note: Garder les emplacements de niveau 9 pour les adversaires qui justifient cette dépense
+
+step: Un adversaire arrive au contact et elle peut rester sur place sans être débordée
+  do: Faire une attaque à outrance au sceptre et avec les six morsures ; concentrer les attaques sur une même cible
+  note: Exploiter l'allonge de 3 m des serpents et Attaques réflexes pour punir les déplacements qui provoquent des attaques d'opportunité. Un déplacement ordinaire empêche l'attaque à outrance ce round
+
+step: Elle dispose d'une ligne de tir et préfère conserver ses sorts
+  do: Faire une attaque à outrance avec les crochets empoisonnés, +37/+32/+27/+22
+  note: Si elle doit se déplacer, se limiter à une attaque à distance après le déplacement
+
+step: Ses PV tombent à 180 ou moins et elle peut encore tenir sa position
+  do: Lancer guérison sur elle-même avant de reprendre l'offensive
+  note: Si les ennemis peuvent immédiatement lui infliger davantage de dégâts qu'elle ne récupère, passer au repli
+
+## Repli
+
+step: Ses PV tombent à 120 ou moins, ou les ennemis neutralisent ses principales attaques
+  do: Gagner la terre ou la pierre accessible et s'y enfoncer à 9 m pour rompre les lignes de vue et d'effet ; lancer guérison au round suivant si elle dispose d'un abri
+  note: Quitter une case menacée peut provoquer une attaque d'opportunité ; le glissement dans la terre ne garantit pas une fuite sans riposte
+
+step: Le passage souterrain est impossible ou les poursuivants peuvent la suivre
+  do: Lancer passage dans l'éther pour se dégager ; employer changement de plan si une fuite vers un autre plan est nécessaire et qu'elle possède le focaliseur requis
+  note: Réserver un emplacement de niveau 7 pour passage dans l'éther ou un emplacement de niveau 5 pour changement de plan ; ne pas attendre l'épuisement de toutes ses ressources de fuite

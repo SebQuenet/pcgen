@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Sphinx vénérable (Elder Sphinx), créature magique neutre de taille Gig, solitaire du désert et gardien de savoirs interdits. Il cherche à préserver ses connaissances et sa solitude.
+  241 pv ; CA 29, contact 7 ; réduction des dégâts 15/adamantium et magie ; résistance à la magie 27 ; immunité à la pétrification.
+  Deux griffes +31 (2d6+14) et deux ailes +26 (2d6+7) ; allonge 4,50 m ; espace occupé 6 m. Déplacement terrestre 12 m, vol 18 m avec manœuvrabilité médiocre.
+  Sirocco disperse et épuise les groupes ; dissipation suprême retire leurs protections. Vision lucide permanente, vision dans le noir à 18 m et Perception +27 limitent les surprises.
+
+resource: Sirocco | 3/jour | action simple ; NLS 20 ; Vigueur DD 23 ; durée 20 rounds
+resource: Dissipation suprême | 3/jour | action simple ; test de dissipation à +20
+resource: Terrain hallucinatoire | 3/jour | préparation de 10 minutes ; Volonté DD 21 en cas d'interaction
+resource: Clairaudience/clairvoyance | 3/jour | reconnaissance avant l'affrontement
+resource: Symbole de peur | 1/semaine | remplace tout autre choix de symbole cette semaine ; Volonté DD 22 ; persistance maximale d'une semaine
+
+step: Des visiteurs approchent sans hostilité manifeste
+  do: Les sonder par la conversation, avec Diplomatie +20 et Psychologie +24 ; communiquer par télépathie à 30 m si nécessaire
+  note: Un savoir inédit peut justifier une négociation ; protéger ses secrets prime sur la poursuite des intrus.
+
+step: Une attaque est prévisible et il dispose de temps
+  do: Observer l'approche par clairaudience/clairvoyance et employer terrain hallucinatoire pour dissimuler l'aspect réel du terrain naturel
+  note: L'illusion guide les déplacements adverses, mais ne crée aucun obstacle matériel. Garder un espace assez dégagé pour son immense corps et son vol peu maniable.
+
+step: Il peut préparer une défense fixe pendant 10 minutes
+  do: Inscrire un symbole de peur visible sur l'accès à défendre, avec un déclenchement adapté au passage des intrus
+  note: Une fois déclenché, le symbole menace les créatures dans un rayon de 18 m ; un échec de Volonté DD 22 provoque la panique pendant 20 rounds. Le créateur est immunisé à son symbole.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés et leurs protections ne rendent pas le feu inutile
+  do: Lancer sirocco sur eux, en restant hors du cylindre de 6 m de rayon et 18 m de haut ; portée maximale 90 m
+  note: Chaque round d'exposition inflige 4d6+20 dégâts de feu et renverse les victimes. Vigueur DD 23 réduit les dégâts de moitié et évite la chute à terre ; subir des dégâts rend fatigué, ou épuisé si déjà fatigué.
+
+step: Une protection magique identifiée empêche son attaque principale d'être efficace
+  do: Ouvrir plutôt par dissipation suprême ciblée sur le porteur de cette protection
+  note: Art de la magie +28 et détection de la magie aident à reconnaître les effets ; la dissipation consomme l'action simple de ce round.
+
+step: Un adversaire est déjà à portée et aucun contrôle de zone n'est prioritaire
+  do: Effectuer une attaque à outrance : deux griffes +31 (2d6+14 chacune), puis deux ailes +26 (2d6+7 chacune)
+  note: Concentrer les coups sur une même menace pour réduire rapidement le nombre d'adversaires actifs.
+
+## Rounds suivants
+
+step: Des ennemis restent dans le sirocco
+  do: Rester hors de la zone et frapper ceux qui tentent d'en sortir à portée de ses griffes
+  note: Le sort continue sans concentration. Exploiter l'allonge de 4,50 m et les attaques d'opportunité disponibles ; conserver les autres utilisations pour un groupe déplacé ou une poursuite.
+
+step: Une cible reste à portée sans déplacement nécessaire
+  do: Répéter l'attaque à outrance ; activer Attaque en puissance contre une CA assez basse
+  note: Avec Attaque en puissance, les griffes passent à +25 (2d6+26) et les ailes à +20 (2d6+13). Préférer la précision contre les adversaires difficiles à toucher.
+
+step: Il doit se déplacer avant de frapper
+  do: Avancer puis porter une seule griffe avec Science de la frappe décisive : +31, 6d6+14 dégâts
+  note: En vol, Attaque en vol permet cette attaque pendant un déplacement total de 18 m, puis de poursuivre le mouvement. Prévoir une trajectoire large ; ce don n'annule pas les attaques d'opportunité.
+
+step: Un adversaire corporel plus petit que lui bloque une sortie ou peut être rejeté dans le sirocco
+  do: Employer Coup fabuleux, action simple et test de manœuvre à +39 contre le DMD, pour le projeter de 3 m en ligne droite et le jeter à terre
+  note: Choisir une direction qui éloigne la cible du sphinx ; cette manœuvre remplace l'attaque à outrance.
+
+step: Un lanceur adverse entretient des protections décisives
+  do: Dépenser une nouvelle dissipation suprême ciblée si retirer ces effets apporte davantage qu'une attaque
+  note: Éviter d'utiliser un pouvoir magique à portée immédiate d'un ennemi capable de l'interrompre ; profiter de son allonge pour garder ses distances.
+
+## Repli
+
+step: Ses points de vie tombent sous 60 ou les ennemis neutralisent ses principaux moyens d'attaque
+  do: Se désengager puis gagner un espace ouvert ; s'éloigner en vol à 18 m par déplacement
+  note: Un sirocco restant peut couvrir le passage des poursuivants lors d'un round où il peut encore employer son action simple. Accepter une cessation des hostilités qui protège ses secrets.
+
+step: Il a rejoint un refuge et la poursuite est rompue
+  do: Reprendre sa solitude et, s'il le souhaite, adopter sa forme de monolithe
+  note: La transformation exige une minute d'immobilité ; la réserver à la sécurité du refuge.

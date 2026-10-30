@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Bog Strider, humanoïde monstrueux neutre de taille M, semblable à un insecte des marais. Fragile avec 15 pv et une CA de 16, il mise sur son filet et sa mobilité sur l'eau.
+  Lance +4 (1d8+3, x3) et morsure -1 (1d6+1), ou 2 griffes +4 (1d4+2 chacune) et morsure +4 (1d6+2). Allonge : 1,50 m.
+  À distance : lance +4 (1d8+2, x3) ou filet de maître +5 au contact à distance, qui enchevêtre.
+  Déplacement : 9 m sur terre, 15 m à la surface de l'eau ; vision dans le noir à 18 m, perception des vibrations à 36 m dans l'eau.
+
+resource: Filet de maître | 1 filet | le préparer déplié ; après le premier lancer, un filet non replié impose un malus de -4 au jet d'attaque
+resource: Lance | 1 lance | la conserver pour le corps à corps ; après un lancer, il faut la récupérer pour la réutiliser
+resource: Sprint aquatique | 1/heure | jusqu'à 75 m sur l'eau pour charger ou fuir, pendant 4 rounds au maximum ; ensuite, fatigue pendant autant de rounds que de rounds de sprint utilisés
+
+step: Des intrus approchent du marais
+  do: Se dissimuler près de l'eau avec Discrétion +7 et surveiller avec Perception +6 ; garder une voie de fuite sur l'eau.
+  note: Privilégier un passage inondé où sa marche sur l'eau lui donne l'avantage.
+
+step: D'autres Bog Striders sont présents sur la même étendue d'eau
+  do: Les prévenir par vibrations silencieuses jusqu'à 36 m et répartir les positions pour prendre les intrus de plusieurs côtés.
+  note: Cette communication exige une ligne d'effet et n'est comprise que par ses congénères.
+
+## Ouverture
+
+step: Une cible de taille P, M ou G se trouve à 3 m, hors du contact
+  do: Lancer le filet de maître à +5 contre la CA de contact, en visant de préférence le combattant qui menace de le poursuivre.
+  note: Le filet porte au maximum à 3 m. Une cible enchevêtrée se déplace à demi-vitesse, subit -2 aux attaques et -4 en Dextérité, et ne peut ni courir ni charger.
+
+step: Un ennemi est déjà au contact
+  do: Porter une attaque de lance +4 (1d8+3, x3) ; sans lance en main, utiliser une griffe +4 (1d4+2) ou la morsure +4 (1d6+2).
+  note: S'il n'a pas besoin de se déplacer, effectuer immédiatement l'attaque à outrance correspondante.
+
+step: La cible reste éloignée sur une berge inaccessible au contact
+  do: Lancer la lance à +4 (1d8+2, x3) si cela peut décider du combat ; sinon, se repositionner sur l'eau.
+  note: Un lancer le prive de sa seule lance jusqu'à récupération.
+
+## Rounds suivants
+
+step: Le filet a touché et la cible reste enchevêtrée
+  do: Prendre la lance en main, puis approcher la cible en utilisant la surface de l'eau pour éviter ses alliés.
+  note: Exploiter sa mobilité réduite pour choisir l'engagement ; l'enchevêtrement ne rend pas la cible incapable d'attaquer.
+
+step: Il tient sa lance et peut rester au contact
+  do: Effectuer une attaque à outrance : lance +4 (1d8+3, x3), puis morsure -1 (1d6+1).
+
+step: Il n'a plus sa lance et peut rester au contact
+  do: Effectuer une attaque à outrance : 2 griffes +4 (1d4+2 chacune) et morsure +4 (1d6+2).
+  note: S'il doit d'abord se déplacer, ne porter qu'une seule attaque.
+
+step: Plusieurs adversaires peuvent l'encercler
+  do: Se dégager vers l'eau en utilisant un pas de placement de 1,50 m ou une retraite selon la distance nécessaire.
+  note: Rechercher un adversaire isolé et éviter d'échanger des attaques avec tout le groupe.
+
+## Repli
+
+step: Ses points de vie tombent à 7 ou moins, ou il se retrouve isolé face à plusieurs ennemis
+  do: Rompre le combat vers une étendue d'eau et employer le sprint aquatique s'il est disponible pour distancer les poursuivants.
+  note: Arrêter le sprint dès qu'il est à l'abri afin de limiter la fatigue.
+
+step: La surface de l'eau ne suffit pas à le soustraire aux poursuivants
+  do: S'immerger et chercher à se cacher dans l'eau trouble avec Discrétion +7 ; utiliser Natation +11 pour gagner un abri.
+  note: Il peut retenir son souffle pendant 56 rounds avant de risquer la noyade. Sa vitesse de 15 m concerne la marche sur l'eau ; sous l'eau, il se déplace par des tests de Natation.

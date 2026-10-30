@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Coffer Corpse, mort-vivant chaotique mauvais de taille M, desséché et vêtu de haillons funéraires. Peu intelligent, il attaque les vivants et cherche à les agripper.
+  30 pv ; CA 14 ; initiative +5. Deux coups +6 en attaque à outrance, chacun infligeant 1d6+3 dégâts et permettant une étreinte ; BMO de lutte +10, DMD 17.
+  Déplacement de 6 m ; allonge de 1,50 m ; vision dans le noir à 18 m. Réduction des dégâts 5/magie et contondant, résistance à la canalisation +2 et immunités des morts-vivants.
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Rester immobile parmi les dépouilles ou dans l'ombre et attendre qu'un vivant approche à portée.
+  note: Discrétion +8, Perception +6 ; l'obscurité lui permet de surveiller les intrus jusqu'à 18 m.
+
+## Ouverture
+
+step: Un vivant se trouve à 1,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux coups +6, pour 1d6+3 dégâts chacun ; après une touche, tenter l'étreinte avec son BMO de lutte +10.
+  note: L'étreinte permet d'engager la lutte gratuitement, sans attaque d'opportunité. Chercher à immobiliser la cible la plus proche.
+
+step: Aucun vivant n'est à portée, mais une cible peut être rejointe avec un déplacement de 6 m
+  do: Avancer au contact puis porter un seul coup +6, pour 1d6+3 dégâts, suivi d'une tentative d'étreinte en cas de touche.
+
+step: Les adversaires restent plus loin
+  do: Se rapprocher en utilisant le couvert disponible ; un double déplacement permet de parcourir 12 m.
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Une victime est agrippée et la prise n'a pas été rompue
+  do: Consacrer son action simple à maintenir la lutte ; en cas de réussite, infliger les dégâts d'un coup, soit 1d6+3.
+  note: Utiliser le BMO de lutte +10, avec le bonus de +5 au maintien contre la même victime. Le maintien remplace l'attaque à outrance.
+
+step: La victime s'est libérée ou une autre cible est désormais au contact
+  do: Reprendre les deux coups +6 s'il peut attaquer à outrance ; tenter de nouveau l'étreinte après une touche.
+
+step: Il est frappé pour au moins 6 points de dégâts au cours d'un round, même si sa réduction des dégâts les réduit
+  do: Appliquer mort trompeuse : il s'effondre comme s'il était détruit et libère toute victime agrippée.
+  note: S'il n'est pas réellement détruit, il se relève à son tour suivant. Cette capacité ne lui rend aucun point de vie.
+
+step: Il vient de se relever après mort trompeuse
+  do: Porter un seul coup contre un vivant à portée, au besoin après un pas de placement de 1,50 m ; si personne n'est accessible ainsi, avancer vers la cible la plus proche.
+  note: Se relever consomme normalement une action de mouvement ; il ne peut donc pas enchaîner immédiatement une attaque à outrance.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre le combat jusqu'à sa destruction, en maintenant sa prise tant qu'elle tient.
+  note: Mort trompeuse interrompt temporairement l'assaut ; elle ne constitue ni une fuite ni une résurrection après destruction.

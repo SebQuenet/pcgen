@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Ahkhat, petit extérieur élémentaire de terre neutre, lié à un bâtiment qu'il entretient et protège. 38 pv, CA 17, initiative +5.
+  Deux coups +8 (1d6+3 chacun), allonge de 1,50 m ; urne lancée +6 (1d4+3). Mobilité structurelle à 9 m par déplacement.
+
+note: Corps intégré
+  Il émerge des murs, sols et plafonds de son bâtiment, sans pouvoir quitter leurs surfaces. Il traverse les matériaux de la structure, sauf le métal et les parties fortement endommagées.
+  Lorsqu'il ne se manifeste pas, les attaques ordinaires ne peuvent pas l'atteindre. Il doit se manifester pour frapper.
+
+resource: Ouverture/fermeture | à volonté | ne force pas les serrures ni les objets bloqués
+resource: Prestidigitation | à volonté | effets mineurs, sans dégâts
+resource: Réparation intégrale | 1/jour | uniquement son bâtiment et ses installations permanentes ; ne soigne pas ses pv
+
+step: Avant l'arrivée des intrus, une partie utile du bâtiment est endommagée
+  do: Employer réparation intégrale pour restaurer la structure, ou travailler avec Artisanat (maçonnerie ou charpenterie) +6 si le temps le permet.
+
+step: Des intrus entrent dans le bâtiment
+  do: Les observer discrètement, avec Discrétion +12 et Perception +8 ; rester dans la structure tant qu'ils ne la menacent pas.
+  note: Vision dans le noir à 18 m ; perception des vibrations à 9 m pour repérer les créatures en contact avec la structure.
+
+## Ouverture
+
+step: Les intrus dégradent le bâtiment ou deviennent hostiles
+  do: Se manifester depuis une surface intacte près du responsable ; après un déplacement, porter un seul coup +8 (1d6+3).
+  note: Choisir un point où peu d'adversaires peuvent l'atteindre à la fois ; il ne peut pas attaquer puis traverser un mur gratuitement.
+
+step: Une cible est hors de portée de mêlée et une urne est disponible
+  do: Ramasser l'urne si nécessaire, puis la lancer à +6 (1d4+3).
+  note: Utiliser les objets présents ; il ne crée pas de projectiles.
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m et l'ahkhat peut rester sur place
+  do: Effectuer une attaque à outrance avec ses deux coups +8 (1d6+3 chacun).
+
+step: Plusieurs ennemis le menacent ou sa position devient défavorable
+  do: Consacrer son déplacement à rentrer dans une portion intacte du bâtiment, puis se repositionner à travers les murs ou le sol.
+  note: Appliquer les attaques d'opportunité éventuelles ; réapparaître lors d'un tour ultérieur pour frapper depuis une autre surface.
+
+step: Une cible s'éloigne dans le bâtiment
+  do: Couper par la structure à 9 m par déplacement pour la rejoindre ; après ce mouvement, ne porter qu'un seul coup.
+
+## Repli
+
+step: Points de vie sous 10
+  do: Se retirer dans les matériaux intacts et cesser de se manifester ; rester dans son bâtiment.
+  note: Il ne dispose d'aucun soin personnel. La destruction de sa pierre d'ancrage ou de 75 % du bâtiment le détruit immédiatement, même à l'abri.
+
+step: Les intrus quittent le bâtiment
+  do: Cesser la poursuite et reprendre la surveillance de la structure.

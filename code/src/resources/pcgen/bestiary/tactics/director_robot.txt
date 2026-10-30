@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Robot directeur, créature artificielle de taille G, neutre et intelligente, conçue pour coordonner et préserver d'autres robots. 121 pv, CA 23 ; déplacement 12 m, escalade 9 m.
+  Deux tentacules +19 (1d10+6), allonge 3 m ; deux coups +19 (1d8+6), allonge 1,50 m. Fusil laser intégré +16 au contact à distance (2d6 feu).
+
+note: Défenses et priorités
+  Solidité 10, résistance au froid 10 et au feu 10, immunités des créatures artificielles ; vulnérable à l'électricité et aux coups critiques. Sa vision à 360° empêche la prise en tenaille.
+  Les analyses avancées sont déjà comprises dans ses sauvegardes : Vigueur +7, Réflexes +10, Volonté +9.
+
+resource: Réparation de robot | À volonté | action simple sans attaque d'opportunité ; rend 1d10 pv à lui-même ou à un robot adjacent
+resource: Fusil laser intégré | 1 tir par round | portée 45 m ; attaque de contact à distance ; 2d6 feu
+
+step: Il dispose de temps avant l'affrontement
+  do: Réparer ses propres dégâts et ceux des robots alliés, puis choisir un mur ou un plafond offrant une ligne de tir dégagée.
+  note: Adhérence permet de parcourir les surfaces, même à l'envers, sans test d'Escalade ; vision dans le noir à 18 m et vision nocturne.
+
+step: Des robots alliés sont présents
+  do: Leur donner des consignes pour barrer l'accès aux intrus et concentrer leurs attaques sur la même cible ; rester derrière eux ou en hauteur.
+
+## Ouverture
+
+step: Les ennemis restent à distance
+  do: Tirer au laser sur l'adversaire qui emploie l'électricité, sinon sur une cible exposée ; se déplacer pour conserver une ligne de tir.
+  note: À 9 m ou moins, Tir à bout portant porte le tir à +17 et les dégâts à 2d6+1 feu. Tir de précision supprime le malus pour tirer sur un adversaire engagé en mêlée.
+
+step: Un ennemi est déjà à 1,50 m
+  do: Attaque à outrance : deux tentacules +19 (1d10+6 chacun) et deux coups +19 (1d8+6 chacun).
+
+## Rounds suivants
+
+step: Une cible reste à portée et il peut demeurer sur place
+  do: Répéter l'attaque à outrance ; à plus de 1,50 m et jusqu'à 3 m, seuls les deux tentacules portent.
+  note: Un pas de placement de 1,50 m peut suffire à mettre les quatre attaques à portée sans sacrifier l'attaque à outrance.
+
+step: La cible est facile à toucher et il faut l'abattre rapidement
+  do: Activer Attaque en puissance pour les attaques de mêlée : +15 au toucher, tentacules à 1d10+14 et coups à 1d8+14.
+
+step: Rester au contact l'exposerait à une riposte dangereuse
+  do: Utiliser Attaque éclair : se déplacer, porter une seule attaque de tentacule, puis poursuivre le déplacement, dans la limite de 12 m au sol.
+  note: Parcourir au moins 1,50 m avant et après l'attaque ; la cible ne bénéficie pas d'attaque d'opportunité contre ce déplacement. Les autres adversaires peuvent en porter ; Souplesse du serpent apporte +4 à la CA contre celles provoquées par le déplacement.
+
+step: Les ennemis ne peuvent pas atteindre sa position en hauteur
+  do: Maintenir les tirs de laser et changer de position si un tireur ou un utilisateur d'électricité le menace.
+  note: Le laser n'endommage pas les créatures invisibles ; brouillard et fumée gênent ses tirs. Chercher une ligne dégagée plutôt que s'obstiner.
+
+step: Lui-même ou un robot adjacent est endommagé et la ligne alliée tient
+  do: Consacrer son action simple à Réparation de robot sur la cible qu'il faut maintenir opérationnelle.
+  note: La réparation remplace l'attaque de ce tour ; privilégier une attaque décisive si 1d10 pv ne suffirait pas à protéger la cible.
+
+## Repli
+
+step: Il tombe à 30 pv ou moins et sa mission permet un retrait
+  do: Se retirer derrière les robots alliés ou gagner une surface hors de portée, à 12 m au sol ou 9 m en escalade ; leur ordonner de couvrir le mouvement.
+  note: Si nécessaire, utiliser l'action de retraite pour quitter le contact ; éviter en priorité les attaques électriques.
+
+step: Il a atteint une position protégée
+  do: Se réparer à raison de 1d10 pv par action simple et remettre en état les robots alliés qui le rejoignent avant de reprendre l'affrontement.

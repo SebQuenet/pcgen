@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Fukujin, kami loyal neutre de taille TP, protecteur d'un bonsaï ou d'une petite plante. Privilégier la défense de cette plante et le départ des intrus.
+  Épée courte +7 (1d3+1, critique 19–20), allonge de 1,50 m ; déplacement de 9 m ; initiative +7 ; aura de chance de 4,50 m.
+  30 pv, CA 15, guérison accélérée 3 ; réduction des dégâts 5/fer froid ou Mal ; résistances à l'acide, à l'électricité et au feu de 10.
+  Immunisé aux saignements, aux effets mentaux, à la pétrification et à la métamorphose ; vision dans le noir à 18 m.
+
+resource: Communication avec les plantes | permanent | recueillir des informations auprès de la végétation
+resource: Réparation ; purification de nourriture et d'eau | à volonté chacun | entretien et soutien hors combat
+resource: Détection des collets et des fosses | 3/jour | examiner les accès et les chemins de repli
+resource: Soulagement des malaises (remove sickness) | 3/jour | réprimer temporairement les états fiévreux et nauséeux
+resource: Ralentissement du poison | 1/jour | retarder les effets d'un poison
+resource: Baies nourricières | 1/jour | préparer des baies pour soutenir les alliés
+resource: Ramollissement de la terre et de la pierre | 1/jour | gêner la progression sur un terrain naturel non travaillé
+
+step: Il peut préparer les lieux
+  do: Interroger les plantes, examiner les accès avec détection des collets et des fosses et repérer un chemin vers la plante protégée
+  note: Perception +12 ; conserver le ramollissement du terrain pour l'approche des intrus
+
+step: Aucun danger immédiat ne menace la plante protégée
+  do: Rester à proximité ou fusionner avec elle en attendant
+
+## Ouverture
+
+step: Les intrus peuvent encore être dissuadés
+  do: Leur demander de s'éloigner de la plante, par la parole ou par télépathie à 30 m
+  note: Diplomatie +9 et Psychologie +12 pour négocier et apprécier leurs intentions
+
+step: Des ennemis approchent sur un sol naturel non travaillé
+  do: Utiliser ramollissement de la terre et de la pierre sur leur passage, en épargnant la plante protégée et son propre chemin de repli
+  note: Choisir une bande de terrain qu'ils devront traverser ; l'effet dépend de la nature et de l'humidité du sol
+
+step: Un adversaire arrive à portée de mêlée
+  do: Frapper à l'épée courte, +7 (1d3+1, critique 19–20)
+  note: Choisir en priorité celui qui menace directement la plante protégée
+
+## Rounds suivants
+
+step: Un ennemi reste au contact
+  do: Continuer à l'épée courte en gardant la plante protégée à proximité
+  note: La réduction des dégâts et les résistances amortissent les attaques appropriées ; la guérison accélérée rend 3 pv par round
+
+step: Les adversaires restent à distance
+  do: Se placer à couvert près de la plante protégée et les laisser venir
+  note: Il ne possède ni attaque à distance ni pouvoir magique offensif infligeant des dégâts
+
+step: Un allié proche est fiévreux, nauséeux ou empoisonné
+  do: Employer remove sickness contre les malaises, ou ralentissement du poison contre le poison, si le pouvoir correspondant reste disponible
+  note: Ces pouvoirs apportent un répit ; ils ne suppriment pas la cause du mal
+
+## Repli
+
+step: Points de vie à 10 ou moins, ou dégâts reçus supérieurs à sa récupération
+  do: Se désengager et rejoindre la plante protégée, puis fusionner avec elle dès que possible
+  note: Éviter particulièrement les armes en fer froid ou maléfiques, qui franchissent sa réduction des dégâts
+
+step: Il a pu rompre le contact
+  do: Rester à l'abri pendant que la guérison accélérée restaure ses points de vie
+  note: Ne pas poursuivre les intrus qui abandonnent la plante protégée

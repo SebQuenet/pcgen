@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Cayhound, molosse extérieur de taille M, chaotique bon, originaire d'Élysée et lié à Cayden Cailéan. Champion de la liberté, il combat les oppresseurs et protège leurs victimes.
+  51 pv ; CA 18 ; réduction des dégâts 5/fer froid ; déplacement de 12 m. Morsure +11, allonge de 1,50 m : 1d10+7 dégâts plus 1d6 sonores et croc-en-jambe.
+  Sa mobilité et ses charges dimensionnelles lui permettent de contourner les défenseurs pour renverser une cible vulnérable.
+
+resource: Porte dimensionnelle | 3/jour | NLS 7 ; portée de 204 m ; chaque assaut dimensionnel dépense une utilisation ; en garder une pour le repli
+resource: Déblocage | 3/jour | ouvrir les serrures qui barrent un passage ou retiennent des captifs
+resource: Ouverture/fermeture | à volonté | agir sur une porte ou un contenant non verrouillé et non bloqué
+resource: Liberté de mouvement | constant | résister aux entraves magiques et échapper automatiquement aux prises de lutte
+
+note: Sans entraves
+  Unbound lui donne aussi l'immunité à ancre dimensionnelle ; verrou dimensionnel empêche normalement ses téléportations.
+
+step: Des adversaires sont proches
+  do: Les repérer par Perception +10, l'odorat et la vision dans le noir à 18 m ; approcher à couvert avec Discrétion +10
+  note: Survie +8 permet de suivre une piste ; l'odorat seul ne remplace pas la vue pour attaquer sans risque de manquer.
+
+step: Des captifs ou une issue verrouillée sont accessibles avant l'affrontement
+  do: Employer déblocage pour ouvrir le passage ; utiliser ouverture/fermeture pour les battants libres
+  note: Préparer une destination de repli dégagée et connue.
+
+## Ouverture
+
+step: Une cible vulnérable est accessible à pied en un déplacement
+  do: Avancer jusqu'à 12 m, puis mordre à +11 et tenter le croc-en-jambe si la morsure touche
+  note: Préférer un adversaire isolé ou celui qui menace directement une victime ; conserver les téléportations si le chemin est libre.
+
+step: Les défenseurs ou le terrain barrent l'accès à une cible située à 24 m au plus
+  do: Utiliser Assaut dimensionnel en action complexe : dépenser une porte dimensionnelle pour se téléporter au contact et porter une morsure de charge à +13
+  note: La charge donne +2 à l'attaque et impose -2 à la CA, soit CA 16 jusqu'au début de son prochain tour ; tenter le croc-en-jambe si la morsure touche.
+
+step: Une morsure touche une cible qui peut être renversée
+  do: Tenter gratuitement le croc-en-jambe avec BMC +11 contre sa DMD
+  note: Cette tentative ne provoque pas d'attaque d'opportunité ; son échec ne permet pas de renverser le cayhound en retour.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter la morsure +11 et le croc-en-jambe ; maintenir la pression sur la même cible
+  note: Il ne dispose que d'une morsure par attaque à outrance. Une cible à terre subit -4 à la CA contre les attaques de corps à corps.
+
+step: Un ennemi à terre se relève à portée
+  do: Porter une attaque d'opportunité avec la morsure, si elle est encore disponible ce round
+  note: L'attaque se résout avant le relèvement ; elle ne permet pas de renverser à nouveau une créature encore à terre.
+
+step: Il combat en paire ou en meute
+  do: Se placer de part et d'autre d'une même cible pour la prendre en tenaille, puis concentrer les morsures sur elle
+  note: La tenaille donne +2 aux attaques de corps à corps ; les compagnons profitent du renversement.
+
+step: La cible fuit ou le cayhound risque l'encerclement
+  do: Se déplacer à 12 m pour retrouver une position favorable ; employer un nouvel assaut dimensionnel seulement si son avantage justifie la dépense
+  note: Agilité dimensionnelle permet d'utiliser les actions restantes après porte dimensionnelle ; une téléportation ordinaire en action simple ne donne pas de morsure supplémentaire.
+
+## Repli
+
+step: Points de vie sous 17 ou victimes mises à l'abri et combat devenu défavorable
+  do: Utiliser la porte dimensionnelle réservée pour rejoindre une destination dégagée, hors de portée immédiate, jusqu'à 204 m
+  note: Il peut emmener jusqu'à deux créatures consentantes de taille M ou inférieure ; elles doivent être en contact entre elles et l'une d'elles avec lui.
+
+step: Plus de porte dimensionnelle disponible ou téléportation bloquée
+  do: Prendre l'action de retraite, jusqu'à 24 m, vers un passage libre ; poursuivre la fuite en profitant de liberté de mouvement
+  note: La retraite évite les attaques d'opportunité dues au départ de sa case initiale seulement ; choisir un trajet qui ne longe pas d'autres ennemis.

@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Construction élémentaire de feu de taille TG, neutre et dépourvue d'Intelligence, originaire du plan du Feu. Elle tient la ligne par sa résistance et ses attaques de mêlée.
+  205 points de vie ; CA 28 ; déplacement de 18 m ; espace occupé et allonge de 4,50 m. Vision dans le noir à 18 m et vision nocturne ; Perception +0.
+  Deux coups +36, chacun infligeant 2d6+8 dégâts et une brûlure de 1d8 de feu, DD 25. Aura de feu dans un rayon de 3 m : 2d8 de feu, DD 25.
+
+note: Résistances
+  Réduction des dégâts 10/adamantium ; immunités au feu, à la magie et celles des créatures artificielles et des élémentaires. Vulnérabilité au froid.
+
+step: Une consigne lui impose de garder un accès
+  do: Occuper cet accès avec son espace de 4,50 m et attendre que les intrus entrent dans son allonge.
+  note: Son absence d'Intelligence impose des consignes simples ; ne pas lui faire improviser une ruse ou identifier les sorts adverses.
+
+## Ouverture
+
+step: Un ennemi se trouve à plus de 4,50 m
+  do: Avancer de 18 m au maximum pour atteindre une cible, puis porter un coup +36 si elle est à portée après ce déplacement.
+  note: Si le terrain le permet, terminer à 3 m ou moins pour exposer aussi la cible à l'aura de feu. Si un seul déplacement ne suffit pas, poursuivre l'approche par un second déplacement, sans attaque ce round.
+
+step: Un ennemi est déjà dans son allonge au début de son tour
+  do: Effectuer une attaque à outrance : deux coups +36, chacun infligeant 2d6+8 dégâts et la brûlure.
+  note: L'aura de feu s'ajoute à la menace des coups pour les créatures situées à 3 m ou moins.
+
+## Rounds suivants
+
+step: Une cible demeure à portée
+  do: Répéter l'attaque à outrance et concentrer les deux coups sur elle jusqu'à ce qu'elle tombe ou sorte de portée.
+  note: Brûlure : 1d8 de feu, DD 25. Ne pas lui attribuer de pouvoir supplémentaire ni d'attaque à distance.
+
+step: Une cible est à 4,50 m et un pas vers elle est possible
+  do: Faire un pas de placement de 1,50 m pour l'amener dans le rayon de 3 m de l'aura, puis effectuer les deux coups de l'attaque à outrance.
+  note: Conserver la position imposée par ses consignes si ce déplacement lui ferait abandonner l'accès à garder.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup +36, avec ses dégâts et la brûlure.
+  note: Sans capacité indiquée permettant davantage d'attaques d'opportunité, se limiter à une par round.
+
+step: Tous les ennemis sont hors de portée
+  do: Reprendre l'approche à 18 m par déplacement si ses consignes autorisent la poursuite ; sinon tenir l'accès gardé.
+  note: Ses immunités et sa réduction des dégâts soutiennent son maintien au combat, mais ne suppriment pas sa vulnérabilité au froid.
+
+## Repli
+
+step: Aucune consigne de repli ne s'applique
+  do: Continuer à combattre jusqu'à sa destruction à 0 point de vie.
+  note: Aucun seuil de points de vie ne déclenche spontanément une fuite chez cette créature dépourvue d'Intelligence.
+
+step: Ses consignes prévoient un repli et leur condition est remplie
+  do: Effectuer un retrait jusqu'à 36 m vers la position désignée, si le terrain le permet.

@@ -55,6 +55,31 @@ class StatBlock(unittest.TestCase):
         self.assertEqual(generate_bestiary_tactics.stat_block(fields), "Name: Abhominal\nMelee: 2 claws +9 (1d6+4)")
 
 
+class PcfinderFields(unittest.TestCase):
+
+    def test_writes_a_nested_value_as_json_and_leaves_out_the_parsed_attacks(self):
+        creature = {"name": "Ghaggurath", "cr": "18", "speed": [{"moveType": "walk", "value": 20}],
+                    "parsedAttacks": {"melee": {}}}
+        self.assertEqual(generate_bestiary_tactics.pcfinder_fields(creature),
+                         {"name": "Ghaggurath", "cr": "18", "speed": '[{"moveType": "walk", "value": 20}]'})
+
+
+class BestiaryStatBlock(unittest.TestCase):
+
+    def test_takes_combat_managers_stat_block_first(self):
+        found = generate_bestiary_tactics.stat_block_of("Div (Aghash)", "Aghash", {"aghash": {"Name": "Aghash"}},
+                                                        {"aghash": {"name": "Aghash", "cr": "5"}})
+        self.assertEqual(found, {"Name": "Aghash"})
+
+    def test_falls_back_on_pcfinders_by_the_race_key(self):
+        found = generate_bestiary_tactics.stat_block_of("Ghaggurath", "Ghaggurath", {},
+                                                        {"ghaggurath": {"name": "Ghaggurath", "cr": "18"}})
+        self.assertEqual(found, {"name": "Ghaggurath", "cr": "18"})
+
+    def test_has_none_when_neither_knows_the_monster(self):
+        self.assertIsNone(generate_bestiary_tactics.stat_block_of("Unknown", "Unknown", {}, {}))
+
+
 class Slug(unittest.TestCase):
 
     def test_matches_the_java_slug_of_a_qualified_key(self):

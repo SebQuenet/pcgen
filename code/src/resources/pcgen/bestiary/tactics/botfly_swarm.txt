@@ -1,0 +1,35 @@
+## Avant le combat
+
+note: Profil
+  Botfly Swarm, nuée de vermines de taille infime des jungles et marais chauds, neutre et dépourvue d'intelligence. 40 pv ; CA 18.
+  Attaque de nuée : 2d6 dégâts plus infestation. Vol à 18 m ; espace de 3 m de côté ; allonge de 0 m ; aucun déplacement terrestre.
+  Immunisée contre les dégâts des armes et les effets mentaux ; vision dans le noir à 18 m ; Perception +0.
+
+note: Comportement
+  Jouer une attaque instinctive, sans embuscade élaborée ni coordination tactique entre les nuées d'une colonie.
+
+## Ouverture
+
+step: Une proie est repérée
+  do: Voler vers elle, à 18 m par déplacement, puis entrer dans son espace.
+  note: L'allonge de 0 m impose de partager l'espace de la victime ; rester à côté ne suffit pas.
+
+step: La nuée termine son déplacement sur une ou plusieurs créatures
+  do: Infliger automatiquement 2d6 dégâts à chacune et appliquer l'infestation.
+  note: Aucun jet d'attaque. Le profil ne précise ni les effets détaillés ni le DD de l'infestation.
+
+## Rounds suivants
+
+step: Des proies restent dans son espace
+  do: Rester sur elles et infliger de nouveau les dégâts de nuée à la fin de son déplacement du round.
+  note: Son espace peut recouvrir plusieurs victimes ; chacune subit les dégâts, sans les répartir entre elles.
+
+step: Les proies quittent son espace
+  do: Les suivre en vol et terminer son déplacement sur une proie accessible.
+  note: Les coups d'armes ne lui infligent aucun dégât ; ne pas interrompre son attaque pour les éviter.
+
+## Repli
+
+step: Une proie reste accessible et la nuée possède encore des points de vie
+  do: Poursuivre l'attaque instinctive, sans organiser de retraite tactique.
+  note: À 0 pv, la nuée se disperse et cesse de combattre.

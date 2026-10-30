@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Basilic cramoisi, créature magique de taille M, prédateur souterrain d'intelligence animale ; 68 pv, CA 19.
+  Morsure +11 (2d6+4 plus 1d6 d'acide), allonge 1,50 m ; regard blessant et frénésie sanguinaire.
+  Déplacement 6 m ; vision dans le noir à 18 m, vision nocturne ; Perception +11.
+
+resource: Frénésie sanguinaire | 1 par combat | durée 1 minute, soit 10 rounds ; impossible à interrompre volontairement
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Attendre immobile contre la pierre et les laisser approcher.
+  note: Discrétion +17 sur fond de pierre, +7 ailleurs.
+
+## Ouverture
+
+step: Proie visible à plus de 1,50 m et à 9 m ou moins
+  do: Utiliser activement le regard blessant contre elle, puis avancer de 6 m au maximum vers le contact.
+  note: Regard : Vigueur DD 14 ou 1d3 points de dégâts de Constitution. Les créatures sans sang et les autres basilics cramoisis sont immunisés.
+
+step: Proie déjà à 1,50 m ou moins
+  do: Mordre à +11 (2d6+4 plus 1d6 d'acide).
+  note: Le regard agit aussi passivement sur les adversaires qui le croisent à 9 m ou moins ; il accompagne ainsi la morsure sans consommer son action d'attaque.
+
+## Rounds suivants
+
+step: Du sang frais a été détecté à 9 m ou moins au round précédent
+  do: Déclencher la frénésie et poursuivre la proie blessée.
+  note: Les autres basilics cramoisis à 9 m ou moins entrent également en frénésie. Bonus de +2 aux attaques et aux dégâts, malus de 2 à la CA : morsure +13 (2d6+6 plus 1d6 d'acide), CA 17.
+
+step: Une proie reste au contact
+  do: La mordre chaque round en maintenant le regard exposé.
+
+step: La proie s'éloigne
+  do: La suivre ; avancer de 6 m au maximum et mordre si elle devient accessible à 1,50 m.
+  note: Si elle reste hors de portée, consacrer ses actions au déplacement pour la rejoindre.
+
+## Repli
+
+step: En frénésie, même près de la mort
+  do: Continuer à attaquer jusqu'à sa mort ou celle de ses adversaires.
+
+step: Grièvement blessé avant tout déclenchement de frénésie
+  do: Se retirer vers un abri rocheux, à 6 m par déplacement, puis se dissimuler si les poursuivants le perdent de vue.

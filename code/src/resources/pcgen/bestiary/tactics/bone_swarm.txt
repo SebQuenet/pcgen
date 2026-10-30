@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Nuée d'ossements morts-vivants de taille TP, neutre mauvaise et sans intelligence ; 27 pv, CA 14, initiative +6.
+  Elle marche à 9 m, voit dans le noir à 18 m et occupe un espace de 3 m sur 3 m, avec une allonge de 0 m.
+  Attaque de nuée : 2d6 dégâts tranchants et perforants automatiques aux créatures dont elle occupe l'espace à la fin de son tour ; distraction, Vigueur DD 13.
+
+note: Défenses
+  Immunité aux dégâts d'armes et au froid, traits des morts-vivants et des nuées ; réduction des dégâts 5/contondant.
+  Résistance à la canalisation +2 : ajouter ce bonus aux jets de sauvegarde contre la canalisation d'énergie.
+
+step: Une créature est repérée
+  do: Se diriger vers elle pour l'engloutir dans la nuée.
+  note: Son absence d'intelligence exclut les embuscades élaborées et les choix fondés sur les capacités supposées des adversaires.
+
+## Ouverture
+
+step: Une cible est accessible en un déplacement de 9 m
+  do: Entrer dans son espace et y terminer son tour ; si plusieurs créatures sont regroupées sur son passage, les recouvrir ensemble.
+  note: Aucun jet d'attaque : chaque créature recouverte subit les 2d6 dégâts à la fin du tour de la nuée.
+
+step: La cible la plus proche est à plus de 9 m
+  do: Effectuer deux déplacements, jusqu'à 18 m au total, pour la rejoindre ; terminer dans son espace si possible.
+  note: Les dégâts de nuée s'appliquent aussi après deux déplacements si une créature est recouverte à la fin du tour.
+
+## Rounds suivants
+
+step: Une créature subit les dégâts de la nuée
+  do: Lui faire effectuer un jet de Vigueur DD 13 contre la distraction.
+  note: En cas d'échec, elle est nauséeuse pendant 1 round ; répéter ce jet chaque fois qu'elle subit les dégâts de la nuée.
+
+step: Des victimes restent dans son espace
+  do: Rester sur elles et infliger de nouveau les dégâts à la fin de son tour.
+  note: Les coups d'armes et le froid ne la blessent pas ; elle continue à submerger les créatures présentes.
+
+step: Toutes les victimes quittent son espace
+  do: Poursuivre la plus proche à 9 m par déplacement et terminer de nouveau sur elle dès que possible.
+  note: Elle ne dispose d'aucune attaque à distance ; son allonge de 0 m ne lui permet pas de porter d'attaques d'opportunité.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre l'assaut tant qu'une cible reste accessible, sans seuil de fuite calculé.
+  note: Cette nuée sans intelligence combat jusqu'à sa destruction ; comme tout mort-vivant, elle est détruite à 0 pv.

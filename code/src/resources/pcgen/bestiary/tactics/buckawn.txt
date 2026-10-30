@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Buckawn, petite fée neutre des forêts tempérées, recluse et territoriale. Il harcèle les intrus au poison et cherche à les chasser de son domaine.
+  Dague +5 au contact, à 1,50 m, ou dard +5 à distance : 1d3 dégâts et poison. Déplacement de 9 m ; 11 points de vie, CA 17, réduction des dégâts 5/fer froid et résistance à la magie 13.
+  Discrétion +13, Perception +9 et vision nocturne : il privilégie une embuscade depuis la végétation et évite les échanges prolongés au contact.
+
+resource: Invisibilité | à volonté | sur lui-même uniquement ; niveau de lanceur de sorts 3
+resource: Lumières dansantes | à volonté | diversion visuelle
+resource: Son imaginaire | à volonté | diversion sonore ; Volonté DD 12 pour le dévoiler
+resource: Déguisement | à volonté | modifier son apparence
+resource: Enchevêtrement | 1/jour | Réflexes DD 13
+resource: Fléau d'insectes | 1/jour | une seule nuée
+resource: Passage sans trace | 1/jour | à conserver pour la fuite si possible
+
+step: Il repère des intrus avant d'être découvert
+  do: Se rendre invisible, observer leur progression et choisir une position près d'une zone de végétation, avec une voie de repli.
+  note: Préparer ces actions avant l'affrontement ; ses pouvoirs et ses attaques se succèdent sur des rounds distincts.
+
+step: Il dispose de baies empoisonnées
+  do: Enduire ses armes avant le combat ; éventuellement souiller un objet que les intrus risquent de manipuler.
+  note: Utilisation du poison : aucun risque de s'empoisonner accidentellement en enduisant une lame. Le nombre de doses disponibles n'est pas précisé.
+
+note: Poison des baies
+  Contact ou ingestion ; Vigueur DD 13 ; affaiblissement de 1d2 Constitution par round pendant 4 rounds ; une sauvegarde réussie met fin au poison.
+  Les attaques de dague et de dard indiquent ce poison en supplément de leurs dégâts.
+
+## Ouverture
+
+step: Plusieurs intrus traversent une zone de végétation
+  do: Lancer enchevêtrement sur leur passage, depuis sa position préparée.
+  note: Réflexes DD 13. Cette action hostile met fin à son invisibilité ; garder de la distance et une voie de fuite hors de la zone.
+
+step: Les intrus sont dispersés ou la végétation ne permet pas l'enchevêtrement
+  do: Lancer un dard empoisonné depuis une position dissimulée, puis se déplacer vers un couvert accessible.
+  note: Cette attaque met fin à l'invisibilité ; il doit la relancer lors d'un autre round pour en bénéficier de nouveau.
+
+step: Un intrus l'a déjà rejoint au contact
+  do: Se dégager si une sortie existe ; sinon, porter un coup de dague empoisonnée +5 pour 1d3 dégâts et poison.
+
+## Rounds suivants
+
+step: Plusieurs adversaires restent regroupés et le pouvoir est disponible
+  do: Lancer fléau d'insectes pour faire apparaître son unique nuée sur leur position, à distance de lui-même.
+  note: Profiter de la pression exercée par la nuée pour se replacer ou préparer sa fuite.
+
+step: Les adversaires restent ralentis ou séparés et ne le menacent pas au contact
+  do: Lancer un dard empoisonné +5, puis changer de position en utilisant son déplacement de 9 m.
+  note: Privilégier une cible encore indemne de poison et accessible sans s'exposer ; laisser le poison agir sur les victimes déjà atteintes.
+
+step: Sa position est découverte et il peut employer un pouvoir sans être menacé au contact
+  do: Consacrer son action à redevenir invisible, puis s'éloigner pour préparer une nouvelle attaque depuis un autre angle.
+  note: Il ne porte pas de coup pendant ce round de préparation.
+
+step: Les intrus hésitent ou cherchent sa position et aucune attaque sûre ne se présente
+  do: Employer son imaginaire ou lumières dansantes pour détourner leur attention avant de se déplacer.
+  note: Ces diversions ne causent aucun dégât et ne remplacent pas une protection physique.
+
+step: Un ennemi l'atteint au contact malgré ses déplacements
+  do: Privilégier le désengagement ; n'utiliser la dague que s'il ne peut éviter l'affrontement.
+  note: Sa réduction des dégâts et sa résistance à la magie l'aident à survivre, mais ses 11 points de vie ne permettent pas de tenir longtemps, surtout face au fer froid.
+
+## Repli
+
+step: Points de vie à 5 ou moins, ou adversaires capables de le poursuivre efficacement
+  do: Se désengager, puis employer invisibilité dès qu'il peut le faire hors de leur portée immédiate ; fuir dans la forêt à 9 m par déplacement.
+  note: Utiliser les obstacles et la végétation pour rompre la poursuite, puis se cacher avec Discrétion +13.
+
+step: Il a rompu le contact et passage sans trace est encore disponible
+  do: Lancer passage sans trace et poursuivre sa fuite.
+  note: Si les intrus quittent son territoire, cesser la poursuite plutôt que risquer sa vie pour les achever.

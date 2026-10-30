@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Ghoran, plante humanoïde neutre et barde de niveau 1 ; 12 pv, CA 13, déplacement de 9 m. Fragile au contact, il privilégie les enchantements pour interrompre le combat ou se dégager.
+  Rapière +1 (1d6-1, critique 18-20), allonge de 1,50 m ; sommeil et charme-personne, Volonté DD 14 ; hébétement, Volonté DD 13.
+  Vision nocturne, Perception +5 ; immunités des plantes, notamment aux effets mentaux, au poison, au sommeil, à la paralysie et à l'étourdissement.
+
+resource: Sorts de niveau 1 | 2/jour au total | réserve commune à sommeil et charme-personne ; NLS 1, concentration +4
+resource: Hébétement | à volonté | humanoïde de 4 DV ou moins à 7,50 m ; Volonté DD 13
+resource: Baies nourricières | 1/jour | enchante 2d4 baies fraîches ; chacune rend 1 pv, maximum 8 pv par créature en 24 heures ; durée 1 jour
+
+step: Des baies fraîches sont disponibles avant une rencontre dangereuse
+  do: Utiliser baies nourricières et conserver les baies pour les soins à l'abri.
+
+step: Des intrus sont repérés avant les hostilités
+  do: Garder une issue libre ; parler en commun ou en sylvestre, et employer Bluff +7 pour gagner du temps.
+  note: Avec des compagnons, utiliser message pour convenir d'un repli ; rester en retrait des combattants.
+
+note: Vulnérabilités
+  Prévoir une exposition quotidienne au soleil : chaque journée sans soleil inflige 1d4 points de dégâts de Constitution. Lumière éclaire mais ne remplace pas le soleil.
+  Éviter les prédateurs dotés d'une morsure avec étreinte : délicieux impose un malus de -2 aux tests d'Évasion et de manœuvre pour échapper à leur lutte.
+
+## Ouverture
+
+step: Un humanoïde à 7,50 m ou moins peut encore être abordé sans menace
+  do: Lancer charme-personne, Volonté DD 14, puis lui demander de laisser passer le ghoran ou d'apaiser ses compagnons.
+  note: Durée 1 heure ; la cible devient amicale. Un ordre inhabituel exige un test opposé de Charisme ; une menace du ghoran ou de ses alliés rompt le charme. Une cible déjà menacée ou attaquée par eux reçoit +5 à sa sauvegarde.
+
+step: Le combat commence et des adversaires de faible puissance sont regroupés à distance
+  do: Depuis une position protégée, commencer sommeil, Volonté DD 14, sur une zone de 3 m de rayon à 33 m ou moins, en évitant les alliés vulnérables.
+  note: L'incantation dure 1 round et s'achève au début de son prochain tour. Le sort affecte au maximum 4 DV, les plus faibles d'abord ; sommeil pendant 1 minute. Une créature de plus de 4 DV est hors de sa portée d'effet.
+
+step: Un humanoïde de 4 DV ou moins arrive à 7,50 m et sommeil serait trop lent
+  do: Lancer hébétement, Volonté DD 13, puis s'éloigner de 9 m si le passage est libre.
+  note: En cas d'échec à la sauvegarde, la cible ne peut agir pendant 1 round.
+
+## Rounds suivants
+
+step: Des adversaires dorment encore
+  do: Les contourner et concentrer les actions sur les ennemis éveillés, ou profiter de cette ouverture pour partir.
+  note: Une blessure ou une gifle réveille un dormeur ; un allié peut le réveiller par une action simple.
+
+step: Un humanoïde admissible reste menaçant à 7,50 m ou moins
+  do: Employer hébétement pour lui faire perdre un round et continuer à prendre de la distance.
+  note: Après avoir été affectée, une cible est immunisée à ce sort pendant 1 minute ; changer de cible pendant ce délai.
+
+step: Plusieurs ennemis admissibles restent groupés et un sort de niveau 1 est encore disponible
+  do: Relancer sommeil seulement si le ghoran dispose du temps et de la protection nécessaires pour terminer l'incantation.
+
+step: Un ennemi menace directement le ghoran
+  do: Faire un pas de placement de 1,50 m pour sortir de son allonge avant de lancer un sort, si cela suffit ; sinon, préparer le repli.
+  note: Si la fuite est bloquée et les enchantements inutilisables, se défendre à la rapière +1 (1d6-1, critique 18-20), sans rechercher une lutte avec BMO -1 et DMD 10.
+
+## Repli
+
+step: Points de vie à 6 ou moins, ou adversaires hors de portée de ses enchantements
+  do: Se retirer jusqu'à 18 m par une action de retraite sur un passage dégagé ; demander aux compagnons présents de couvrir la fuite.
+  note: La retraite protège des attaques d'opportunité liées au départ de la case initiale ; éviter de traverser d'autres cases menacées.
+
+step: Le ghoran a atteint un abri et possède des baies enchantées
+  do: Manger les baies nécessaires pour récupérer des pv, dans la limite des baies restantes et de 8 pv rendus en 24 heures.
+
+note: Graine de ghorus
+  Protéger sa graine pendant la fuite. Plantée en sol fertile et laissée intacte, elle exige 2d6 jours pour produire un double ; son expulsion impose un niveau négatif, et la pousse du double entraîne la mort du corps précédent.

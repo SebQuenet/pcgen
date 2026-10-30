@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Deinotherium, animal de taille TG, neutre, apparenté à l'éléphant : herbivore irascible, il attaque à la moindre provocation et protège son petit avec acharnement.
+  84 PV ; CA 19 ; déplacement 9 m ; espace occupé et allonge de 4,50 m. Défenses +13 (2d6+9) et coup +13 (1d8+9).
+  Intelligence 2 : il réagit aux menaces proches et combat par force brute.
+
+step: Présence suspecte dans les environs
+  do: Repérer les intrus avec Perception +11, l'odorat et la vision nocturne ; se tourner vers la menace.
+
+step: Un petit est présent
+  do: Se placer entre lui et les intrus ; attaquer en priorité l'adversaire qui s'en approche.
+
+resource: Attaque en puissance | à volonté | choisir avant les attaques ; jusqu'au prochain tour, -2 aux attaques de mêlée et aux manœuvres, +4 aux dégâts de chaque attaque naturelle.
+
+## Ouverture
+
+step: Un ennemi est déjà à 4,50 m ou moins
+  do: Attaque à outrance : défenses +13 (2d6+9), puis coup +13 (1d8+9), sur la menace la plus proche.
+
+step: Ennemi hors d'allonge ; charge possible sur un trajet rectiligne et dégagé de 3 à 18 m
+  do: Charger jusqu'à la première position permettant de l'atteindre ; porter une seule attaque de défenses +15 (2d6+9).
+  note: CA 17 jusqu'au prochain tour. Avec Attaque en puissance : défenses +13 (2d6+13). La charge s'arrête après l'attaque.
+
+step: Charge impossible
+  do: Avancer de 9 m au maximum et porter une seule attaque de défenses si l'ennemi entre dans l'allonge de 4,50 m ; sinon, consacrer aussi l'action simple au déplacement, pour parcourir jusqu'à 18 m sans attaquer.
+
+## Rounds suivants
+
+step: La cible reste dans son allonge
+  do: Rester sur place et répéter défenses et coup en attaque à outrance ; un pas de placement de 1,50 m peut suffire à la garder à portée.
+
+step: Les coups portent facilement
+  do: Activer Attaque en puissance avant d'attaquer : défenses +11 (2d6+13) et coup +11 (1d8+13) en attaque à outrance.
+  note: Si les attaques manquent souvent, renoncer à ce don au tour suivant pour retrouver les bonus normaux.
+
+step: La cible s'éloigne hors d'allonge
+  do: La rejoindre et porter une attaque de défenses ; charger de nouveau seulement si le trajet le permet et si le petit reste protégé.
+
+step: Un adversaire provoque une attaque d'opportunité à 4,50 m ou moins
+  do: Porter une attaque de défenses, avec les modificateurs encore actifs.
+  note: Une seule attaque d'opportunité par round ; aucune tant qu'il est pris au dépourvu.
+
+## Repli
+
+step: 21 PV ou moins et aucun petit immédiatement menacé
+  do: Effectuer une retraite sur un round entier, jusqu'à 18 m, pour quitter les adversaires.
+  note: Seule la case de départ ne provoque pas d'attaque d'opportunité pendant cette retraite ; le trajet doit éviter les autres cases menacées.
+
+step: 21 PV ou moins et petit encore menacé
+  do: Rester entre le petit et l'agresseur ; frapper ce dernier pour permettre au petit de s'éloigner, puis se replier dès qu'il est à l'abri.
+
+step: PV négatifs, de -1 à -21
+  do: Utiliser Dur à cuire pour rester conscient ; privilégier une seule action de mouvement, jusqu'à 9 m, pour s'éloigner.
+  note: Stabilisation automatique ; état chancelant, donc aucune attaque à outrance, charge ou retraite sur un round entier. S'il attaque pour défendre le petit, une seule attaque de défenses et perte de 1 PV après l'action. Mort à -22 PV.

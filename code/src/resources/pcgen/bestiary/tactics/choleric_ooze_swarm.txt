@@ -1,0 +1,39 @@
+## Avant le combat
+
+note: Profil
+  Nuée de vases cholériques, assemblage de minuscules globules alchimiques souterrains attirés par les fluides des êtres vivants. Sans intelligence, elle agit par instinct de prédation.
+  25 pv, CA 7 ; déplacement de 3 m ; perception aveugle à 18 m. Elle occupe quatre cases de 1,50 m et possède une allonge de 0 m.
+  Attaque de nuée : 1 point de dégâts plus 1d4 d'acide et effet visqueux. Résistance à l'acide 5 ; vulnérabilité à l'électricité ; immunités des vases et des nuées.
+
+step: Aucune proie détectée
+  do: Rester dans la zone souterraine contaminée où elle se nourrit, jusqu'à percevoir une créature.
+  note: Elle ne prépare ni piège ni embuscade concertée.
+
+## Ouverture
+
+step: Une proie est perçue à 18 m ou moins
+  do: Ramper vers la créature la plus proche et entrer dans son espace dès que possible ; avancer de 3 m, ou de 6 m avec un double déplacement.
+  note: Son allonge de 0 m impose de recouvrir les cases de sa victime pour l'attaquer.
+
+step: Une ou plusieurs créatures occupent son espace à la fin de son déplacement
+  do: Infliger à chacune les dégâts de nuée : 1 plus 1d4 d'acide, avec l'effet visqueux.
+  note: Les dégâts de nuée sont automatiques, sans jet d'attaque ; une attaque à outrance ne les multiplie pas.
+
+## Rounds suivants
+
+step: Une proie reste dans son espace
+  do: Maintenir le contact et lui infliger de nouveau les dégâts de nuée chaque round.
+
+step: La proie s'écarte mais reste perceptible
+  do: La suivre à 3 m par déplacement et tenter de recouvrir à nouveau ses cases.
+  note: Sa lenteur permet à une créature plus rapide de la distancer.
+
+step: Plusieurs proies sont regroupées à portée de déplacement
+  do: Avancer dans leur groupe pour que son espace recouvre plusieurs créatures et appliquer l'attaque à chacune.
+  note: Elle suit les proies accessibles sans distinguer leurs rôles ni coordonner ses mouvements avec d'autres nuées.
+
+## Repli
+
+step: La nuée perd des points de vie
+  do: Poursuivre ses attaques tant qu'une proie reste accessible ; à 0 pv, la nuée se disperse.
+  note: Son absence d'intelligence ne justifie aucun seuil de retraite ni repli tactique face à l'électricité.

@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Troll des crues, humanoïde géant de taille M, chaotique mauvais ; prédateur solitaire qui privilégie l’embuscade près des rivières.
+  22 pv ; CA 14 ; initiative +8. Deux griffes +6, chacune infligeant 1d6+2 dégâts ; allonge 1,50 m.
+  Déplacement terrestre 9 m, nage 3 m ; Natation +11. Vision dans le noir à 18 m et vision nocturne.
+
+resource: Régénération de pluie | permanente sous condition | récupère 5 pv par round au contact d’eau courante ou de précipitations, même une bruine ; les dégâts d’acide ou de feu suspendent la régénération au round suivant
+
+note: Peau absorbante
+  Après au moins 24 heures sans toucher d’eau courante, bénéficie d’un bonus d’armure naturelle de +2, soit CA 16.
+  S’il a touché de l’eau dans les dernières 24 heures, bénéficie à la place d’une résistance au froid de 5.
+
+step: Il peut choisir son terrain
+  do: Se dissimuler près d’un passage étroit, au bord d’un cours d’eau peu profond ; attendre une proie isolée ou la pluie.
+  note: Discrétion +5, Perception +4 ; privilégier une position permettant de rester dans le courant pendant la mêlée.
+
+## Ouverture
+
+step: Une proie arrive à 1,50 m
+  do: Si une action complète est disponible, porter les deux attaques de griffes +6, pour 1d6+2 chacune.
+  note: Pendant un round de surprise, une seule action simple permet une seule attaque de griffe.
+
+step: La proie est accessible avec un déplacement de 9 m au plus
+  do: S’approcher par la berge et porter une seule attaque de griffe +6, pour 1d6+2 dégâts.
+  note: Choisir de préférence une cible déjà séparée de ses alliés ; terminer au contact du courant si possible.
+
+step: Les ennemis restent trop éloignés
+  do: Gagner un couvert ou conserver l’embuscade jusqu’à ce qu’ils approchent.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et aucun repli n’est nécessaire
+  do: Répéter l’attaque à outrance avec les deux griffes sur la même cible.
+  note: Un pas de placement de 1,50 m permet de suivre la cible tout en conservant les deux attaques, si le terrain l’autorise.
+
+step: Le combat s’éloigne de l’eau courante et il ne pleut pas
+  do: Revenir vers le courant plutôt que poursuivre loin sur la terre ferme.
+  note: Une mare stagnante ne réactive pas sa régénération.
+
+step: Il reçoit des dégâts d’acide ou de feu
+  do: Chercher un couvert contre leur source et préparer sa fuite si les attaques se répètent.
+  note: Rester dans l’eau ne supprime pas l’interruption de régénération provoquée par ces dégâts.
+
+## Repli
+
+step: Points de vie sous 8, ou attaques répétées de feu ou d’acide
+  do: Effectuer une retraite vers un couvert proche du courant ; privilégier la berge pour distancer les poursuivants.
+  note: Sa vitesse terrestre de 9 m dépasse sa nage de 3 m ; plonger sert surtout à se cacher.
+
+step: Un abri immergé permet d’échapper aux poursuivants
+  do: Plonger, retenir son souffle et se soustraire aux attaques, puis remonter respirer à couvert.
+  note: Il doit respirer de l’air. Hors de portée des ennemis, rester au contact du courant ou sous la pluie pour récupérer jusqu’à 22 pv.

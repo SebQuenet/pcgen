@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Azgenzak, aberration aquatique de grande taille, solitaire et malveillante, avide de proies vivantes. 95 pv, CA 22 ; corps amorphe ; immunité au feu et au poison.
+  Au contact : 3 coups +11 (1d6+4, plus brûlure et étreinte) en attaque à outrance ; BMO +16 en lutte. Allonge de 1,50 m malgré un espace occupé de 3 m.
+  Amphibie ; déplacement et nage à 6 m par action de mouvement. Vision à 360°, vision nocturne et vision dans le noir à 18 m ; Perception +20.
+
+step: Des intrus approchent d'une eau calme ou d'un marais
+  do: Attendre immergé, sous sa forme fermée, et laisser une proie s'approcher du bord
+  note: Discrétion +18 sous l'eau ; garder ses yeux enflammés dissimulés pour préserver l'embuscade
+
+## Ouverture
+
+step: Une proie est déjà à 1,50 m ou moins
+  do: S'inverser par une action de mouvement, puis porter un coup +11 et tenter l'étreinte gratuite si le coup touche une cible de taille M ou inférieure
+  note: L'inversion expose ses yeux brûlants et active sa présence terrifiante dans un rayon de 9 m, Volonté DD 16
+
+step: Il faut se déplacer pour atteindre une proie
+  do: Avancer ou nager jusqu'à 6 m, puis porter un seul coup si la cible est à portée ; sinon, poursuivre l'approche à couvert
+  note: Réserver l'inversion au moment où le contact est établi ; elle coûte une action de mouvement
+
+## Rounds suivants
+
+step: Au contact, encore sous sa forme fermée
+  do: S'inverser, puis porter un seul coup et tenter l'étreinte
+  note: Sous forme inversée, les créatures adjacentes subissent 2d6 dégâts de feu et risquent de prendre feu ; Réflexes DD 16 réduit les dégâts de moitié et évite l'embrasement
+
+step: Inversé, libre de lutter et avec un ennemi à portée
+  do: Effectuer l'attaque à outrance : 3 coups +11 (1d6+4, plus brûlure et étreinte), en concentrant les attaques sur une proie accessible
+  note: Tenter l'étreinte gratuite sur un coup réussi contre une cible de taille M ou inférieure ; garder les ennemis adjacents pour exploiter l'aura de feu
+
+step: Une proie est agrippée
+  do: Maintenir la lutte par une action simple pour infliger les dégâts d'un coup ou entraîner la victime jusqu'à 3 m vers l'eau
+  note: BMO +16 ; bonus de +5 pour maintenir une prise dont la victime ne s'est pas libérée. Ce choix remplace l'attaque à outrance du round
+
+step: Un adversaire adjacent effectue un pas de placement de 1,50 m
+  do: Utiliser Step Up pour le suivre de 1,50 m par une action immédiate et conserver le contact
+  note: Déduire ce déplacement du mouvement disponible au prochain tour ; aucun pas de placement à ce tour
+
+## Repli
+
+step: À 25 pv ou moins, si les adversaires restent dangereux
+  do: Lâcher toute proie et utiliser le retrait vers l'eau calme, jusqu'à 12 m si le passage est libre
+  note: Une fois à couvert, reprendre sa forme fermée pour retrouver Discrétion +18 sous l'eau ; la forme inversée supprime ce bonus et impose un malus supplémentaire de -10
+
+step: Un passage étroit permet de distancer les poursuivants
+  do: Utiliser compression pour s'y glisser, puis se cacher sous l'eau

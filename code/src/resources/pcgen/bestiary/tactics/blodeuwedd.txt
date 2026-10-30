@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Blodeuwedd, fée des prairies de taille M, chaotique neutre, gardienne rusée des espaces sauvages. Elle sépare les intrus par les végétaux et les illusions avant de frapper les adversaires isolés.
+  66 pv ; CA 20 ; réduction des dégâts 5/fer froid ; déplacement de 9 m. Deux griffes +8 (1d8+4 chacune) en attaque à outrance ; fronde de maître +9 (1d4+4).
+  Aura allergène à 9 m : Vigueur DD 16 ou état fiévreux pendant 1d6 rounds ; une sauvegarde réussie immunise contre cette aura pendant 24 heures. Elle peut la supprimer par une action libre.
+
+resource: Communication avec les plantes | constant | interroger la végétation sur les passages et les alentours
+resource: Enchevêtrement | à volonté | Réflexes DD 15 ; végétation nécessaire ; durée 7 minutes
+resource: Croissance végétale | à volonté | épaissir la végétation existante ; aucun jet de sauvegarde
+resource: Lumières dansantes et vent de murmures | à volonté | détourner l'attention et transmettre des avertissements
+resource: Sommeil profond | 3/jour | Volonté DD 17 ; jusqu'à 10 DV au total ; durée 7 minutes
+resource: Croissance d'épines | 3/jour | durée 7 heures ; dégâts au déplacement et Réflexes DD 17 contre le ralentissement
+resource: Modification de mémoire | 3/jour | Volonté DD 18 ; jusqu'à 5 minutes de souvenirs ; nécessite ensuite une concentration aussi longue que le souvenir modifié
+resource: Terrain hallucinatoire | 1/jour | préparation de 10 minutes ; durée 14 heures ; Volonté DD 18 pour reconnaître l'illusion en interagissant avec elle
+resource: Mission | 1/jour | Volonté DD 17 ; cible vivante de 7 DV au maximum, comprenant ses instructions
+resource: Baies nourricières | 1/jour | 2d4 baies ; chacune rend 1 pv ; maximum 8 pv récupérés par créature en 24 heures
+resource: Changement de forme | 1/jour | forme humanoïde propre à cette blodeuwedd ou chouette des prairies ; jusqu'à 7 heures au total
+resource: Pas verdoyant | 3/jour | transport personnel entre deux points d'une même étendue de hautes herbes ou de broussailles ; garder une utilisation pour fuir
+resource: Billes de fronde | 20 | une bille par tir
+
+step: Elle surveille une prairie avant l'arrivée des intrus
+  do: Observer depuis les herbes, avec Discrétion +19 en prairie, et consulter les plantes ; employer éventuellement sa forme de chouette pour reconnaître les lieux.
+  note: Elle peut supprimer les pousses qui accompagnent ses pas pour éviter de signaler son passage.
+
+step: Elle dispose du temps nécessaire pour préparer le terrain
+  do: Utiliser croissance végétale pour fermer certaines approches, en laissant des couloirs libres pour elle ; préparer croissance d'épines sur un passage probable et terrain hallucinatoire pour déguiser les abords naturels.
+  note: L'illusion ne dissimule ni les créatures ni leur équipement. Elle reste elle-même vulnérable aux zones dangereuses qu'elle prépare.
+
+step: Les intrus peuvent encore être dissuadés
+  do: Leur adresser un avertissement par vent de murmures ; proposer leur départ avec Diplomatie +14.
+
+## Ouverture
+
+step: Les adversaires avancent dans la végétation sans être encore au contact
+  do: Lancer enchevêtrement sur leur groupe en restant hors de la zone ; bloquer surtout les combattants qui cherchent à l'approcher.
+  note: Réflexes DD 15 ; la zone reste un terrain difficile même pour ceux qui réussissent leur sauvegarde.
+
+step: Une ou plusieurs cibles vulnérables sont regroupées à 12 m ou moins
+  do: Depuis une position protégée, lancer sommeil profond sur une zone de 3 m de rayon ; privilégier les ennemis que leurs compagnons ne pourront pas réveiller immédiatement.
+  note: Incantation de 1 round ; Volonté DD 17. Les plus faibles DV sont affectés d'abord, jusqu'à 10 DV cumulés ; une créature dépassant seule cette limite ne peut pas être endormie.
+
+step: Un ennemi est déjà au contact
+  do: Si elle peut rester sur place sans être encerclée, effectuer ses deux attaques de griffes +8, chacune pour 1d8+4 dégâts.
+  note: Son allonge est de 1,50 m ; après un déplacement ordinaire, elle ne porte qu'une attaque de griffe.
+
+## Rounds suivants
+
+step: Des ennemis vivants entrent dans un rayon de 9 m
+  do: Maintenir son aura allergène active et appliquer Vigueur DD 16 aux créatures exposées qui ne sont pas immunisées.
+  note: L'état fiévreux inflige notamment un malus de 2 aux attaques, dégâts d'armes et sauvegardes ; en profiter pour placer ses pouvoirs de contrôle.
+
+step: Les adversaires sont ralentis et restent à distance
+  do: Tirer à la fronde sur un ennemi éveillé, de préférence un lanceur de sorts ; recharger entre les tirs.
+  note: Fronde +9, 1d4+4 dégâts ; facteur de portée 15 m. Éviter de blesser les dormeurs, que les dégâts réveilleraient.
+
+step: Un adversaire contourne les obstacles ou cherche à la poursuivre
+  do: Placer croissance d'épines sur son trajet, ou renouveler enchevêtrement pour couper son approche.
+  note: Les épines infligent 1d4 dégâts perforants par 1,50 m parcouru ; après avoir subi des dégâts, Réflexes DD 17 ou vitesse terrestre réduite de moitié.
+
+step: Elle est menacée par plusieurs combattants ou par une arme en fer froid
+  do: Employer pas verdoyant pour rejoindre un autre point du même champ, puis reprendre le contrôle du terrain lors des rounds suivants.
+  note: Le fer froid ignore sa réduction des dégâts. Sans issue végétale, se désengager avant d'utiliser un pouvoir magique ; une utilisation au contact peut provoquer une attaque d'opportunité.
+
+step: Un adversaire isolé est maîtrisé et les autres ne peuvent plus intervenir
+  do: Lui imposer par mission de quitter les lieux, ou modifier un bref souvenir de la rencontre pour protéger son domaine.
+  note: Mission : Volonté DD 17, limite de 7 DV, aucune instruction suicidaire. Modification de mémoire : Volonté DD 18 ; achever la concentration nécessaire en gardant la cible à 12 m ou moins.
+
+## Repli
+
+step: Ses points de vie tombent à 22 ou moins, ou le combat tourne nettement à son désavantage
+  do: Utiliser la dernière utilisation réservée de pas verdoyant pour disparaître à un point éloigné du même champ, derrière les hautes herbes et les obstacles préparés.
+  note: Ce seuil est un choix tactique ; elle cherche à survivre pour continuer de garder son domaine.
+
+step: Pas verdoyant est épuisé ou aucune étendue végétale adaptée n'est accessible
+  do: Prendre une action de retraite vers un couloir libre ; dès qu'elle a de l'espace, bloquer la poursuite par enchevêtrement ou croissance végétale.
+  note: Sa vitesse normale est de 9 m ; une retraite permet jusqu'à 18 m si le terrain le permet. Consommer les baies disponibles une fois à l'abri.

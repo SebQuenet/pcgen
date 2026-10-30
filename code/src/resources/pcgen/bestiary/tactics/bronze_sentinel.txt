@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Sentinelle de bronze, créature artificielle de taille P, neutre, chargée de garder un lieu. Intelligence 1 : elle suit des consignes simples et comprend le thassilonien sans parler.
+  32 pv ; CA 18, contact 14, prise au dépourvu 15 ; initiative +7.
+  Deux griffes +9 (1d4+4 chacune), allonge 1,50 m ; projectile enflammé +8 (1d6 feu), attaque de contact à distance, portée maximale 9 m.
+  Déplacement 12 m ; escalade 6 m, Escalade +12 ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Détection de la magie | permanent | NLS 2 ; repère les auras magiques, sans révéler automatiquement les intrus
+resource: Projectile enflammé | à volonté | une action simple par tir
+
+step: Aucun intrus identifié
+  do: Rester immobile comme un objet de bronze grâce à immobilité, au poste fixé par ses consignes
+  note: Discrétion +9 ; Perception +5 pour surveiller les approches.
+
+note: Défenses
+  Immunité au feu et immunités des créatures artificielles. L'immunité à la magie concerne les sorts et pouvoirs magiques autorisant la résistance à la magie, sauf ceux du registre de l'électricité.
+  Les effets sans résistance à la magie peuvent donc l'atteindre ; elle ne possède ni réduction des dégâts ni régénération indiquée.
+
+## Ouverture
+
+step: Un intrus est identifié
+  do: Donner l'alerte avant d'engager le combat
+  note: Alerte mentale à la créature liée si elle se trouve à 1 584 m ou moins ; sinon, sonnerie audible à 150 m. L'alerte mentale réveille son destinataire.
+
+step: Un intrus est déjà à 1,50 m
+  do: Attaque à outrance avec les deux griffes +9, chacune infligeant 1d4+4 dégâts
+
+step: Aucun intrus n'est au contact
+  do: Avancer vers l'intrus le plus proche en respectant la zone à garder ; porter une griffe +9 si le déplacement permet de l'atteindre
+  note: Après un déplacement ordinaire, elle ne porte qu'une griffe. Si elle reste hors de portée de mêlée mais à 9 m ou moins, tirer un projectile enflammé +8 à la place.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer les attaques à outrance avec les deux griffes
+  note: Un pas de placement de 1,50 m permet d'ajuster sa position tout en conservant les deux attaques.
+
+step: L'adversaire reste inaccessible en mêlée mais se trouve à 9 m ou moins
+  do: Tirer un projectile enflammé par round
+  note: Viser la CA de contact ; aucun jet de sauvegarde. Éviter de tirer depuis une case menacée si un pas de placement suffit à s'en dégager.
+
+step: Un intrus gagne une position surélevée accessible par escalade
+  do: Grimper à 6 m par déplacement pour le rejoindre, si ses consignes autorisent la poursuite
+  note: Rester dans le périmètre à protéger ; son intelligence limitée ne justifie pas de feinte complexe ni de poursuite élaborée.
+
+## Repli
+
+step: Aucun ordre de repli n'a été prévu
+  do: Tenir son poste et combattre jusqu'à sa destruction à 0 pv
+  note: La baisse de ses 32 pv ne déclenche pas à elle seule une fuite.
+
+step: Une consigne simple impose de rejoindre un autre poste
+  do: Se désengager et gagner ce poste à 12 m par déplacement, ou 6 m en escalade

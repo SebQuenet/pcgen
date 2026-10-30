@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Titan mécanique de taille G, créature artificielle neutre et dépourvue d’intelligence. 68 points de vie ; CA 19, contact 9 ; immunités des créatures artificielles.
+  Deux coups +12, chacun infligeant 2d8+6 dégâts ; espace occupé de 3 m et allonge de 3 m. Déplacement de 9 m ; vision dans le noir à 18 m, vision nocturne ; Perception −2.
+
+step: Un passage doit être gardé
+  do: Placer le titan dans le passage, avec assez de place pour son corps, afin que les intrus doivent traverser son allonge de 3 m
+  note: Son absence d’intelligence appelle un comportement simple, sans feinte ni sélection élaborée des cibles
+
+## Ouverture
+
+step: Un adversaire est déjà à 3 m ou moins
+  do: Attaque à outrance : deux coups +12, chacun pour 2d8+6 dégâts
+
+step: Aucun adversaire n’est à portée
+  do: Avancer de 9 m au maximum vers un adversaire accessible, puis porter un coup +12 pour 2d8+6 dégâts s’il est à 3 m ou moins
+  note: Si aucun coup n’est possible, effectuer un second déplacement ; deux déplacements permettent de parcourir jusqu’à 18 m pendant le round
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l’attaque à outrance avec les deux coups +12, chacun pour 2d8+6 dégâts
+  note: Un pas de 1,50 m permet d’ajuster sa position tout en conservant les deux attaques ; un déplacement ordinaire ne laisse qu’un coup
+
+step: Un adversaire provoque une attaque d’opportunité dans son allonge de 3 m
+  do: Porter un coup +12 pour 2d8+6 dégâts
+  note: Une seule attaque d’opportunité par round
+
+step: La cible s’éloigne et aucun adversaire ne reste à portée
+  do: Reprendre l’approche à 9 m par déplacement et frapper dès qu’une cible devient accessible
+  note: Le titan ne dispose d’aucune attaque à distance ni capacité spéciale pour arrêter une cible qui le tient à distance
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre le combat sans déclencher de fuite spontanée liée aux blessures
+  note: Dépourvu d’intelligence, il n’improvise pas de retraite tactique. À 0 point de vie, cette créature artificielle est détruite

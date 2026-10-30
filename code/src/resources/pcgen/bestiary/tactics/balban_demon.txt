@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Démon balban, brute chaotique mauvaise de taille G : 103 pv, CA 23, déplacement de 12 m, espace et allonge de 3 m. Il bloque le passage et écrase les adversaires qui restent à portée.
+  Attaque à outrance : deux coups +16 (2d6+8 chacun) et une morsure +16 (1d8+8). Piétinement : 2d8+12, Réflexes DD 22 pour réduire les dégâts de moitié. Dégâts doublés contre les objets.
+  Réduction des dégâts 10/bien ; immunité à l’électricité et au poison ; résistance 10 à l’acide, au froid et au feu ; résistance à la magie 19. Ses Réflexes +5 constituent sa sauvegarde la plus faible.
+
+resource: Vision de l’invisible | à volonté | NLS 10
+resource: Ténèbres | à volonté | NLS 10
+resource: Dissipation suprême | à volonté | NLS 10
+resource: Frayeur | à volonté | Volonté DD 12 ; inefficace contre les créatures de 6 DV ou plus
+resource: Téléportation suprême | à volonté | NLS 10 ; lui-même et jusqu’à 50 livres d’objets seulement
+
+step: Il peut se préparer avant l’arrivée des intrus
+  do: Activer vision de l’invisible et se poster dans un passage où son espace de 3 m gêne la progression
+  note: sa vision dans le noir porte à 18 m ; il privilégie un endroit où les ennemis doivent venir à son contact
+
+step: Les intrus dépendent de la lumière et les conditions s’y prêtent
+  do: Placer ténèbres sur un objet près de sa position avant leur arrivée
+  note: il profite de sa vision dans le noir si l’éclairage devient insuffisant pour eux ; les adversaires dotés d’une vision adaptée peuvent également voir
+
+## Ouverture
+
+step: Une protection magique visible empêche de frapper efficacement la cible
+  do: Employer dissipation suprême sur cette cible avant d’engager la mêlée
+  note: cette utilisation remplace ses attaques du round ; il ne tente pas de dissiper une protection dont il ignore l’existence
+
+step: Plusieurs ennemis de taille M ou inférieure se trouvent sur un trajet accessible
+  do: Les traverser avec un piétinement : 2d8+12 dégâts, Réflexes DD 22 pour moitié
+  note: le piétinement prend le round entier ; chaque victime choisit entre une attaque d’opportunité avec un malus de −4 et le jet de Réflexes
+
+step: Un ennemi est déjà à son allonge de 3 m
+  do: Effectuer une attaque à outrance : deux coups +16 (2d6+8) et morsure +16 (1d8+8), concentrés sur la même cible
+
+step: Aucun ennemi n’est à portée et le piétinement n’est pas intéressant
+  do: Avancer de 12 m au maximum pour porter un seul coup +16 (2d6+8), si une cible devient accessible
+  note: s’il faut davantage de mouvement, consacrer le round à l’approche ; un déplacement ordinaire ne permet pas ensuite l’attaque à outrance
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l’attaque à outrance jusqu’à l’abattre, en utilisant au besoin un pas de 1,50 m pour se replacer
+  note: il privilégie l’ennemi qui le blesse malgré sa réduction des dégâts et exploite son allonge contre ceux qui s’approchent
+
+step: La cible paraît facile à toucher
+  do: Employer Attaque en puissance : deux coups +13 (2d6+14 chacun) et morsure +13 (1d8+14)
+  note: revenir aux attaques normales si les coups manquent trop souvent
+
+step: Plusieurs adversaires de taille M ou inférieure se regroupent de nouveau
+  do: Remplacer l’attaque à outrance par un nouveau piétinement si cela permet d’en atteindre plusieurs
+  note: chaque victime ne subit les dégâts du piétinement qu’une fois pendant ce round
+
+step: Un adversaire de taille M ou inférieure bloque l’accès à une cible plus vulnérable
+  do: Employer Coup fabuleux pour le projeter de 3 m et le jeter à terre, ou une bousculade pour le repousser
+  note: ces manœuvres servent à ouvrir le passage ; elles ne s’ajoutent pas gratuitement à ses trois attaques
+
+step: Une porte, une barricade ou un autre objet fait obstacle
+  do: Le fracasser avec ses coups, qui infligent des dégâts doublés aux objets
+  note: appliquer normalement la solidité ; il ne possède pas de moyen de l’ignorer
+
+step: Un ennemi devient invisible ou renouvelle une protection décisive
+  do: Renouveler vision de l’invisible si nécessaire, ou employer dissipation suprême contre la protection
+  note: chaque pouvoir prend son action ; il doit choisir entre ce pouvoir et ses attaques du round
+
+step: Un adversaire manifestement faible doit être écarté sans le poursuivre
+  do: Tenter frayeur, Volonté DD 12, puis profiter de son éloignement lors des rounds suivants
+  note: réserver ce pouvoir aux créatures de 5 DV ou moins ; son faible DD le rend peu fiable contre les ennemis principaux
+
+## Repli
+
+step: Points de vie sous 30 et le combat tourne à son désavantage
+  do: Employer téléportation suprême vers un lieu sûr qu’il connaît
+  note: le pouvoir transporte seulement le balban et jusqu’à 50 livres d’objets ; il ne peut pas emporter un autre démon ou un prisonnier
+
+step: Il doit fuir mais ne peut pas utiliser sa téléportation
+  do: Se retirer par un passage étroit en profitant de son déplacement de 12 m et des obstacles existants
+  note: s’il dispose d’un round à l’abri, ténèbres peut gêner les poursuivants qui dépendent de la lumière

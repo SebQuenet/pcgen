@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Lézard de feu, bête magique de taille TG, neutre et peu intelligente : un prédateur qui combat par instinct. 105 pv, CA 17 ; déplacement de 9 m, espace de 4,50 m et allonge de 3 m.
+  Morsure +17 (2d6+8) et 2 griffes +16 (1d8+8 chacune). Souffle de feu en cône de 6 m : 4d6 de feu, DD 22.
+  Immunisé au feu, vulnérable au froid. Sa CA modeste favorise les combats courts malgré ses nombreux points de vie.
+
+resource: Souffle de feu | fréquence non précisée | Le profil ne donne ni nombre d'utilisations ni délai de recharge.
+
+step: Un couvert permet d'attendre les intrus
+  do: Rester dissimulé avec Discrétion +11 et laisser les proies approcher.
+  note: Vision dans le noir à 18 m et vision nocturne ; Perception +0, sans sens supplémentaire pour repérer les intrus cachés.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans le cône de 6 m
+  do: Souffler sur le groupe : 4d6 de feu, DD 22 ; avancer au besoin de 9 m au maximum pour se placer.
+  note: Le souffle remplace les attaques de mêlée de ce tour.
+
+step: Le souffle n'est pas choisi et une proie est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance : morsure +17 (2d6+8), puis 2 griffes +16 (1d8+8 chacune).
+  note: Concentrer les attaques sur la même proie tant qu'elle tient debout.
+
+step: Le souffle n'est pas choisi et aucune proie n'est à portée
+  do: Avancer vers la proie la plus proche ; porter une morsure +17 (2d6+8) si elle devient accessible après un déplacement de 9 m au maximum.
+  note: Après ce déplacement, il ne peut pas effectuer son attaque à outrance.
+
+## Rounds suivants
+
+step: Une proie reste à portée sans déplacement nécessaire
+  do: Répéter l'attaque à outrance et maintenir la pression sur cette proie.
+  note: Occuper un passage avec son espace de 4,50 m et son allonge de 3 m pour gêner l'accès aux zones derrière lui.
+
+step: La proie est facile à toucher
+  do: Utiliser Attaque en puissance : morsure +14 (2d6+14), 2 griffes +13 (1d8+14 chacune) lors d'une attaque à outrance.
+  note: Désactiver ce choix si les attaques manquent trop souvent.
+
+step: Il doit avancer et deux adversaires sont adjacents entre eux, tous deux à portée après son déplacement
+  do: Utiliser Enchaînement avec la morsure : +17 (2d6+8) contre le premier ; si elle touche, même attaque contre le second.
+  note: Enchaînement réduit sa CA à 15 jusqu'à son prochain tour ; il remplace l'attaque à outrance.
+
+## Repli
+
+step: Ses points de vie passent sous 26, ou des attaques de froid répétées le mettent en danger
+  do: Se désengager et fuir vers un couvert ou un passage libre, en s'éloignant de la source du froid.
+  note: Son déplacement de base est de 9 m ; il ne dispose d'aucun moyen de fuite spécial.

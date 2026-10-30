@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Créature artificielle élémentaire de terre, de taille TG et sans intelligence, à employer comme rempart au corps à corps. 205 pv, CA 25, réduction des dégâts 10/adamantium ; immunités de créature artificielle et d'élémentaire, immunité à la magie.
+  Deux coups à +42, chacun infligeant 2d10+14 dégâts ; martèlement 2d10+14, DD 39 ; piétinement 2d10+21, DD 39. Marche à 9 m par round ; espace occupé et allonge de 4,50 m.
+
+step: Un emplacement de garde lui est assigné
+  do: Occuper le passage à défendre, sur un sol ferme, pour exploiter son allonge et sa maîtrise de la terre
+  note: Sa vision dans le noir porte à 18 m ; il possède aussi la vision nocturne. Sa Perception est de +0.
+
+## Ouverture
+
+step: Un ennemi est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance avec ses deux coups à +42, pour 2d10+14 dégâts chacun
+
+step: Un ennemi peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à le placer dans son allonge de 4,50 m, puis porter un seul coup à +42, pour 2d10+14 dégâts
+
+step: Plusieurs ennemis de taille G ou inférieure sont sur son passage
+  do: Effectuer un piétinement pour traverser leurs positions et infliger 2d10+21 dégâts
+  note: Le piétinement prend une action complexe et permet de parcourir jusqu'à 18 m. Les victimes qui renoncent à leur attaque d'opportunité peuvent tenter un jet de Réflexes DD 39 pour réduire les dégâts de moitié.
+
+## Rounds suivants
+
+step: Un ennemi reste dans son allonge
+  do: Répéter l'attaque à outrance et concentrer les deux coups sur la même cible jusqu'à ce qu'elle tombe ou quitte sa portée
+  note: Éviter les déplacements inutiles qui empêcheraient de porter les deux coups.
+
+note: Martèlement
+  Le bloc indique 2d10+14 dégâts et DD 39, mais ne donne ni les conditions ni les effets détaillés du martèlement. Ne pas lui attribuer un déclenchement ou un effet supplémentaire sans la description du pouvoir.
+
+step: Plusieurs adversaires de taille G ou inférieure se regroupent à nouveau sur un trajet praticable
+  do: Répéter le piétinement si cela permet de toucher plusieurs cibles ; sinon, conserver les deux coups contre une cible à portée
+
+step: Les adversaires restent hors de portée
+  do: Avancer à 9 m par déplacement si ses consignes permettent la poursuite ; sinon, tenir le passage assigné
+  note: Il ne dispose d'aucune attaque à distance dans ce bloc.
+
+## Repli
+
+step: Aucun ordre de repli ne lui a été donné
+  do: Poursuivre l'exécution de ses consignes jusqu'à sa destruction, sans déclencher de fuite à un seuil de points de vie
+  note: Sans intelligence, il n'élabore pas spontanément une retraite pour préserver ses 205 pv.
+
+step: Ses consignes prévoient un repli et leur condition est remplie
+  do: Rejoindre l'emplacement prévu en marchant à 9 m par déplacement

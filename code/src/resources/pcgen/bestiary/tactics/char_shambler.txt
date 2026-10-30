@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Char Shambler, créature magique de feu de taille M, chaotique mauvaise, qui combat au contact et retient ses victimes avec ses griffes. 147 pv ; CA 25, contact 10 ; déplacement 6 m ; allonge 1,50 m.
+  Morsure +19 (1d6+4 plus 1d6 de feu), 2 griffes +18 (1d4+4 plus 1d6 de feu et saisie). Immunité au feu, vulnérabilité au froid ; Volonté +6.
+  Comprend le commun des profondeurs mais ne peut pas parler ; privilégier des décisions simples et une pression constante sur une victime proche.
+
+resource: Aura profanatrice | permanente | rayon 6 m
+resource: Nuage de fumée | permanent | rayon 3 m ; DD 24
+resource: Puanteur | permanente | rayon 3 m ; DD 22 ; durée de l'effet 1d8 rounds
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se dissimuler près d'un passage resserré et attendre qu'une cible s'approche
+  note: Discrétion +11 ; Perception +7 ; vision dans le noir à 18 m et vision nocturne. Choisir un emplacement qui limite le contournement et rapproche les ennemis de ses auras.
+
+## Ouverture
+
+step: Aucun ennemi n'est à portée de mêlée
+  do: Avancer de 6 m vers la cible accessible la plus proche ; si elle est alors à 1,50 m, porter une morsure
+  note: Il ne possède aucune attaque à distance indiquée. Après un déplacement ordinaire, il ne peut pas effectuer son attaque à outrance.
+
+step: Une cible est déjà à portée, éventuellement après un pas de 1,50 m
+  do: Effectuer une attaque à outrance : morsure +19 et deux griffes +18 ; tenter la saisie après une griffe réussie
+  note: Chaque attaque inflige les dégâts de feu indiqués. Garder autant que possible les autres adversaires à moins de 3 m pour les exposer au nuage de fumée et à la puanteur.
+
+## Rounds suivants
+
+step: La cible reste libre et à portée
+  do: Répéter l'attaque à outrance et les tentatives de saisie ; concentrer les attaques sur la même victime
+  note: Éviter les déplacements inutiles : rester au contact permet de porter les trois attaques chaque round.
+
+step: Une victime est saisie
+  do: Tenter de maintenir la lutte pour l'immobiliser ou lui infliger les dégâts d'une attaque naturelle autorisée par la lutte
+  note: Le maintien utilise son action ; ne pas y ajouter automatiquement une attaque à outrance. Aucune constriction n'est indiquée.
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée, mais une attaque à outrance est impossible ce round
+  do: Employer Enchaînement ; si la première attaque touche, porter l'attaque supplémentaire contre le second ennemi
+  note: Enchaînement exige une action simple et réduit sa CA de 2 jusqu'à son prochain tour.
+
+step: Ses attaques touchent facilement une cible
+  do: Employer Attaque en puissance pour augmenter les dégâts physiques ; y renoncer si les attaques manquent régulièrement
+  note: Les dégâts de feu restent ceux indiqués dans le profil.
+
+step: Un adversaire l'attaque avec du froid ou cherche à rester à distance
+  do: Se rapprocher en utilisant les obstacles disponibles pour couper les lignes de vue
+  note: Sa vulnérabilité au froid et son déplacement de 6 m rendent une poursuite à découvert défavorable. Attendre derrière un angle si l'ennemi refuse le contact.
+
+## Repli
+
+step: Points de vie sous 40, ou attaques de froid répétées sans possibilité d'atteindre leur source
+  do: Rompre le combat et gagner un passage couvert ou un angle, à 6 m par déplacement
+  note: Chercher un trajet court et protégé ; il ne dispose d'aucun moyen de fuite surnaturel indiqué.
+
+step: Toute retraite est bloquée
+  do: Tenir le passage et concentrer morsure, griffes et saisie sur l'ennemi qui empêche sa fuite

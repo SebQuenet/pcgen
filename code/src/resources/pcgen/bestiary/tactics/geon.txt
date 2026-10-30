@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Geon, extérieur neutre de taille G lié à la terre : 92 pv, CA 22, déplacement de 6 m, vision dans le noir à 18 m.
+  Au contact, deux coups +15, chacun infligeant 2d8+7 dégâts ; allonge de 1,50 m et espace occupé de 3 m. Il dispose aussi d'animation de rochers et de pouvoirs qui modifient le terrain.
+  Réduction des dégâts 5/–, résistance au feu 5, résistance à la magie 20 et immunités des élémentaires. Réflexes +1 : éviter les positions où plusieurs attaques de zone peuvent le frapper.
+
+resource: Façonnage de la pierre | à volonté | NLS 8
+resource: Glissement de terrain | 1/jour | NLS 8 ; préparer le terrain avant l'affrontement
+resource: Passe-muraille | 1/jour | NLS 8 ; conserver si possible pour le repli
+resource: Transmutation de la pierre en boue | 1/jour | NLS 8 ; DD 16
+resource: Mur de pierre | 1/jour | NLS 8 ; DD 16 lorsqu'un jet de sauvegarde s'applique
+
+step: Il peut préparer les lieux
+  do: Utiliser glissement de terrain pour aménager les approches, puis façonnage de la pierre pour resserrer un passage rocheux et limiter le nombre d'assaillants au contact.
+  note: Repérer une issue et une paroi adaptée à passe-muraille avant de choisir sa position.
+
+step: Il attend dans un environnement pierreux
+  do: Rester immobile parmi les rochers et laisser les intrus approcher.
+  note: Immobilité ; Discrétion +14 dans cet environnement, Perception +12.
+
+## Ouverture
+
+step: Des rochers sont disponibles et les ennemis sont encore à distance
+  do: Utiliser animation de rochers pour commencer l'affrontement.
+
+step: Plusieurs adversaires peuvent l'encercler
+  do: Dresser un mur de pierre pour séparer leurs forces et garder un seul front à défendre.
+  note: Privilégier une séparation qui coupe les lignes de vue des soutiens ennemis.
+
+step: Un ennemi est déjà à portée
+  do: Porter une attaque à outrance avec les deux coups +15, chacun pour 2d8+7 dégâts.
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m ou moins
+  do: Répéter l'attaque à outrance et concentrer les deux coups sur la même cible.
+  note: Contre une cible facile à toucher, Attaque en puissance donne deux coups +12, chacun pour 2d8+13 dégâts.
+
+step: Il doit rejoindre une cible
+  do: Avancer de 6 m au maximum et porter un seul coup +15 pour 2d8+7 dégâts.
+  note: Choisir la cible accessible la plus proche pour retrouver rapidement une position permettant ses deux attaques.
+
+step: Des renforts approchent sur de la roche naturelle non travaillée
+  do: Transmuter cette roche en boue pour gêner leur progression pendant qu'il affronte les ennemis déjà engagés.
+  note: DD 16 ; garder son propre emplacement et son chemin de sortie sur un sol ferme.
+
+## Repli
+
+step: Ses points de vie passent sous 30 et une paroi adaptée est accessible
+  do: Utiliser passe-muraille, puis emprunter le passage pour quitter le combat.
+  note: Le passage peut aussi servir aux poursuivants ; gagner ensuite du couvert et masquer son déplacement.
+
+step: Il doit rompre le contact et dispose encore de mur de pierre
+  do: Interposer le mur entre les adversaires et lui, puis rejoindre l'issue repérée à 6 m par déplacement.
+
+step: Il a brisé les lignes de vue dans un secteur rocheux
+  do: Se dissimuler parmi les pierres et reprendre son immobilité.
+  note: Discrétion +14 dans les environs pierreux.

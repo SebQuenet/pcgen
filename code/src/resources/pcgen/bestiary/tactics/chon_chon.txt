@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Chon Chon, aberration de taille TP, chaotique neutre : une tête volante aux oreilles démesurées, qui hait les êtres pourvus d'un corps et marmonne des formules incohérentes.
+  9 pv, CA 14 ; vol à 18 m, bonne manœuvrabilité, Vol +15 ; déplacement au sol à 3 m. Crachat acide +5 (1d4 d'acide) ; morsure +1 (1d3-2), allonge de 0 m.
+  Il harcèle depuis les airs ; sa morsure médiocre et sa fragilité rendent la mêlée peu intéressante.
+
+resource: Détection de la magie | permanente | NLS 3 ; concentration +4
+resource: Jabber, babillage | permanent | rayon de 4,50 m ; concentration DD 11 pour lancer un sort, sinon le sort est perdu ; effet sonore et mental
+resource: Crachat acide | à volonté | attaque à distance +5, portée maximale de 9 m sans facteur de portée ; 1d4 d'acide et Vigueur DD 11 ou nausée pendant 1 round
+
+step: Des intrus approchent
+  do: Les repérer à l'ouïe et depuis les hauteurs, en restant en vol près des arbres ou des ruines.
+  note: Perception +6, +10 pour écouter ; vision dans le noir à 18 m. Son babillage peut signaler sa présence.
+
+step: Il a le temps d'observer les intrus
+  do: Examiner leurs auras avec sa détection de la magie permanente.
+  note: Une aura indique de la magie, sans prouver que son porteur lance des sorts.
+
+## Ouverture
+
+step: Un lanceur de sorts est repéré
+  do: S'approcher en vol à 3 à 4,50 m de lui, hors de portée des armes adverses si possible, puis lui cracher de l'acide.
+  note: Le babillage gêne automatiquement ses incantations dans ce rayon ; le crachat peut aussi lui infliger la nausée.
+
+step: Aucun lanceur de sorts n'est identifié
+  do: Cracher sur une cible accessible à 9 m ou moins, en gardant de la hauteur et de la distance avec les combattants.
+
+## Rounds suivants
+
+step: Une cible reste à portée de crachat
+  do: Répéter le crachat acide ; utiliser au besoin un déplacement en vol pour conserver une ligne de tir et éviter la mêlée.
+  note: Un déplacement et une attaque par round ; ne pas répartir le déplacement avant et après le tir.
+
+step: Un adversaire continue à lancer des sorts
+  do: Rester à 4,50 m ou moins de lui tant que cette position permet d'éviter les coups.
+  note: Chaque tentative d'incantation dans l'aura exige son propre test de concentration DD 11.
+
+step: Un ennemi l'engage au corps à corps
+  do: S'éloigner en vol avant de reprendre les crachats ; s'il est menacé, privilégier un retrait.
+  note: Pour mordre, il doit entrer dans l'espace de sa cible, avec le risque d'une attaque d'opportunité ; réserver la morsure aux situations où il ne peut plus combattre à distance.
+
+## Repli
+
+step: Points de vie à 4 ou moins, ou impossibilité de rester hors de portée des coups
+  do: Consacrer son tour à fuir en vol vers les arbres ou derrière les ruines, en coupant les lignes de vue.
+  note: Sa vitesse de vol est de 18 m par déplacement ; quitter la zone plutôt que poursuivre l'échange de coups.

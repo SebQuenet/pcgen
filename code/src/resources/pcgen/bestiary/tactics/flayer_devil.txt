@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Diable écorcheur (Flayer Devil), extérieur de taille G, loyal mauvais, FP 11 ; chasseur infernal brutal qui privilégie les attaques à outrance.
+  174 pv, CA 27 ; déplacement de 12 m, espace et allonge de 3 m. Deux griffes +21 (1d8+9, critique 19–20) et morsure +21 (2d6+9).
+  Réduction des dégâts 10/Bien et argent : une arme doit réunir les deux propriétés pour la surmonter. Immunité au feu et au poison, résistance à l'acide et au froid de 10, résistance à la magie 22.
+
+resource: Détection du Bien | constante | repérer les auras bonnes, sans connaître instantanément tous les alignements
+resource: Aura maudite | 1/jour | NLS 12, DD 20 ; durée de 12 rounds
+resource: Mur de feu | 1/jour | NLS 12
+resource: Explosion impie | 3/jour | rayon de 9 m ; Vigueur DD 25 ou état fiévreux pendant 1d6 rounds ; les créatures bonnes qui échouent subissent aussi 3d6 dégâts impies
+resource: Rayon ardent | à volonté | NLS 12 ; trois rayons, chacun à +13 contre la CA de contact, 4d6 dégâts de feu ; portée de 16,50 m
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 50 livres d'objets ; aucun autre combattant transporté
+
+step: Il peut observer les intrus avant l'affrontement
+  do: Utiliser Perception +21, la vision dans le noir à 18 m et la détection du Bien pour choisir une proie accessible et un passage à tenir
+  note: S'il chasse avec d'autres diables, coordonner leur approche par télépathie à 30 m.
+
+step: Le combat va commencer dans les prochains instants
+  do: Activer aura maudite sur lui-même
+  note: Elle donne +4 de parade à la CA et +4 de résistance aux sauvegardes ; une créature bonne qui le frappe au corps à corps risque 1d6 points d'affaiblissement temporaire de Force, Vigueur DD 20 pour annuler.
+
+## Ouverture
+
+step: Une cible est déjà à 3 m ou moins et il peut rester sur place
+  do: Faire une attaque à outrance : deux griffes +21 et une morsure +21, concentrées sur cette cible
+  note: Un pas de placement de 1,50 m reste compatible avec l'attaque à outrance. Chaque critique de griffe confirmé provoque l'écorchement : 1d3 points d'affaiblissement temporaire de Constitution supplémentaires.
+
+step: Plusieurs adversaires sont à 9 m ou moins et aucune attaque à outrance n'est possible
+  do: Déclencher une explosion impie, puis se déplacer si nécessaire pour menacer une proie au round suivant
+  note: Privilégier les groupes comprenant des créatures bonnes ; l'explosion remplace les attaques naturelles de ce round.
+
+step: Aucun adversaire n'est à portée de mêlée, mais une proie peut être atteinte en marchant
+  do: Avancer de 12 m au maximum, puis porter une seule attaque de griffe à +21 si la cible est dans son allonge de 3 m
+  note: Après un déplacement ordinaire, il ne porte pas ses trois attaques naturelles.
+
+step: La proie est inaccessible au corps à corps
+  do: Utiliser rayon ardent si elle est à 16,50 m ou moins ; sinon se téléporter sur un emplacement connu permettant de l'intercepter
+  note: La téléportation prend son action ; les attaques naturelles attendent le round suivant.
+
+## Rounds suivants
+
+step: Une proie reste dans son allonge
+  do: Répéter l'attaque à outrance et concentrer les griffes sur la même victime pour multiplier les occasions d'écorchement
+  note: Employer Attaque en puissance contre une cible facile à toucher : griffes +17 (1d8+17) et morsure +17 (2d6+17). Garder les valeurs normales contre une CA élevée.
+
+step: Les ennemis se regroupent et il doit renoncer à l'attaque à outrance
+  do: Dépenser une explosion impie encore disponible avant de reprendre griffes et morsure au round suivant
+  note: Ne pas gaspiller les utilisations pour renouveler immédiatement un état fiévreux qui dure encore.
+
+step: Des renforts ou des tireurs restent derrière la première ligne
+  do: Dresser le mur de feu pour couper leur approche ou séparer une proie de ses soutiens
+  note: Son immunité au feu lui permet de traverser son propre mur. L'activation remplace ses attaques de ce round.
+
+step: Une cible tente de fuir ou de traverser la zone qu'il menace
+  do: Exploiter son allonge de 3 m pour porter une attaque d'opportunité si le mouvement la provoque
+  note: Sans Attaques réflexes, il ne dispose que d'une attaque d'opportunité par round.
+
+step: La proie conserve ses distances
+  do: Employer rayon ardent ou téléportation suprême pour reprendre une position menaçante
+  note: Éviter les rayons contre un adversaire immunisé au feu ; la téléportation ne permet pas d'emporter une victime.
+
+## Repli
+
+step: Ses points de vie tombent à 40 ou moins, ou les adversaires surmontent régulièrement ses défenses
+  do: Utiliser téléportation suprême vers un refuge connu, dès que son tour le permet
+  note: Le seuil de 40 pv est un choix tactique. Ne pas attendre d'être incapable d'agir ; aucune régénération n'est indiquée dans ce profil.
+
+step: La téléportation est empêchée
+  do: Reculer à 12 m par déplacement ; si le mur de feu est encore disponible, le dresser pour couvrir la retraite
+  note: Une utilisation de mur de feu et un déplacement sont possibles dans le même round ; il ne porte alors aucune attaque naturelle.

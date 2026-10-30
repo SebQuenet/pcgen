@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Fafnheir, Père des linnorms, est un dragon colossal, chaotique mauvais, rusé et jaloux de son trésor. Il attire les intrus dans son repaire de Grungir et les affronte sur un terrain familier.
+  526 pv ; CA 42, contact 12 ; résistance à la magie 35 ; réduction des dégâts 20/fer froid et épique ; liberté de mouvement. Immunisé notamment au feu, à l'électricité, au poison et aux effets mentaux.
+  Morsure +36 (6d6+17, critique 19-20, plus poison), deux griffes +36 (2d8+17 chacune, critique 19-20), corne +36 (4d6+17, critique 19-20), queue +31 (4d6+8 et étreinte).
+  Espace et allonge : 9 m. Déplacement terrestre et nage : 15 m ; creusement : 9 m ; vol : 30 m par déplacement.
+
+resource: Dissipation suprême | à volonté | action simple ; NLS 20, jet de dissipation 1d20+20
+resource: Dissipation suprême rapide | 3/jour | action rapide ; une seule action rapide par round
+resource: Souhait limité | 3/jour | action simple ; reproduit notamment un sort de magicien de niveau 6 ou moins
+resource: Changement de plan | 3/jour | action simple ; uniquement entre le Premier Monde et le plan Matériel ; conserver une utilisation pour fuir
+resource: Renvoi des sorts | 3/jour | action simple ; renvoie 1d4+6 niveaux de sorts ciblés ; durée maximale de 200 minutes
+resource: Mur de force | 3/jour | action simple ; durée de 20 rounds
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +46, odorat et vision lucide ; attendre dans une partie du repaire assez vaste pour son corps et ses déplacements.
+  note: Sa vision dans le noir porte à 18 m ; la vision lucide permet de déjouer les leurres visuels dans les limites de cet effet.
+
+step: Le combat est prévisible et il reste un round de préparation
+  do: Activer renvoi des sorts avant de s'exposer.
+  note: Cette protection ne renvoie ni les sorts de zone ni les sorts de contact.
+
+step: Les intrus ont révélé des attaques de froid ou d'acide et il peut encore se préparer
+  do: Employer souhait limité pour reproduire protection contre les énergies destructives, en choisissant l'énergie observée.
+  note: La protection absorbe jusqu'à 120 points de dégâts de l'énergie choisie ; décompter une utilisation de souhait limité.
+
+## Ouverture
+
+step: Un adversaire protégé par magie est déjà à portée de mêlée
+  do: Tenter une dissipation suprême rapide ciblée sur lui, puis une attaque à outrance s'il reste à portée.
+  note: Privilégier le combattant capable de le blesser ou le lanceur de sorts accessible ; la dissipation ciblée peut supprimer jusqu'à cinq sorts sur cette cible.
+
+step: Le groupe est encore hors de portée et peut être séparé
+  do: Placer un mur de force entre les combattants avancés et leurs soutiens, puis se déplacer vers le côté où se trouve la cible la plus vulnérable.
+  note: Garder la cible du même côté que Fafnheir ; le mur bloque aussi ses propres attaques et pouvoirs dirigés à travers lui. Choisir un passage que les ennemis ne peuvent pas simplement contourner.
+
+step: Une cible devient accessible après un déplacement
+  do: Avancer ou voler jusqu'à pouvoir la mordre, puis employer Frappe décisive supérieure : morsure +36, 24d6+17 et poison.
+  note: Cette attaque utilise l'action simple ; elle ne se combine ni avec une charge ni avec une attaque à outrance.
+
+## Rounds suivants
+
+step: Une cible prioritaire reste dans son allonge
+  do: Concentrer l'attaque à outrance sur elle : morsure, deux griffes, corne et queue ; ne faire qu'un pas de 1,50 m si cela suffit à se replacer.
+  note: Sur un critique confirmé, son don rend la cible chancelante pendant 1d4+1 rounds ; un jet de Vigueur réussi réduit cette durée à 1 round. Concentration critique donne +4 au jet de confirmation.
+
+step: Une protection magique empêche d'achever sa cible
+  do: Employer une dissipation suprême rapide avant ses attaques tant qu'il reste des utilisations ; sinon consacrer une action simple à la dissipation à volonté si retirer la protection vaut davantage qu'une attaque.
+  note: Dissiper en priorité les défenses qui neutralisent ses coups ou permettent à sa cible de rester hors d'atteinte.
+
+step: Les ennemis quittent des cases menacées ou lancent sans précaution dans son allonge
+  do: Porter des attaques d'opportunité avec la morsure.
+  note: Attaques réflexes permet jusqu'à onze attaques d'opportunité par round, selon les occasions réellement provoquées ; ne pas appliquer Frappe décisive à ces attaques.
+
+step: La queue touche une créature plus petite et son immobilisation serait utile
+  do: Tenter gratuitement l'étreinte avec un bonus de +56 pour retenir cette cible.
+  note: Maintenir la lutte aux rounds suivants coûte une action simple ; relâcher la prise si une attaque à outrance devient plus avantageuse.
+
+step: La cible a une défense assez faible pour supporter une baisse de précision
+  do: Activer Attaque en puissance avant les jets : -7 aux attaques, +14 aux dégâts de morsure, griffes et corne, +7 aux dégâts de queue.
+  note: Les modificateurs durent jusqu'à son prochain tour ; conserver sa précision normale contre les adversaires difficiles à toucher.
+
+step: Une cible fuit ou le groupe tente de l'encercler
+  do: Exploiter son vol, son creusement ou sa nage pour reprendre une position favorable ; après un déplacement ordinaire, préférer la morsure avec Frappe décisive supérieure si une cible est accessible.
+  note: S'il faut rompre complètement un encerclement, souhait limité peut reproduire porte dimensionnelle ; il ne peut plus agir après cette téléportation jusqu'à son prochain tour.
+
+## Repli
+
+step: Il tombe sous 130 pv et les ennemis peuvent encore le blesser sérieusement
+  do: Employer changement de plan sur lui-même pour gagner le Premier Monde depuis le plan Matériel, ou inversement.
+  note: Ce seuil guide sa décision ; il n'attend pas un dernier coup potentiellement mortel pour préserver sa vie et préparer sa revanche.
+
+step: Le changement de plan est épuisé ou empêché
+  do: Placer un mur de force entre lui et ses poursuivants, puis gagner une galerie, l'eau ou les airs selon le terrain ; creuser à 9 m, nager à 15 m ou voler à 30 m par déplacement.
+  note: S'il renonce à toute action simple pour fuir, un double déplacement permet respectivement 18 m, 30 m ou 60 m pendant son tour.

@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Familier mécanique neutre de taille TP, intelligent, qui sert surtout de soutien et intervient contre une cible isolée.
+  Morsure +7 (1d3 plus 1d6 d’électricité), allonge de 1,50 m ; déplacement au sol de 9 m, vol de 15 m avec manœuvrabilité parfaite.
+  16 pv, CA 18, RD 5/adamantium ; résistances au froid 10 et au feu 10 ; immunités des créatures artificielles. L’électricité lui inflige 50 % de dégâts supplémentaires.
+
+step: Avant de prendre position
+  do: Faire remonter son mécanisme, puis se dissimuler près d’un abri ou en hauteur avec Discrétion +12
+  note: Perception +5, vision dans le noir à 18 m et vision nocturne ; il peut transmettre oralement ses observations en commun.
+
+note: Installation d’objet
+  Aucun objet installé n’est précisé dans cette fiche. Les options liées à une baguette ou à des charges exigent un objet effectivement présent, du type prévu à sa création.
+
+## Ouverture
+
+step: Une cible isolée est accessible avec un déplacement de 15 m en vol
+  do: Profiter de son initiative +6 pour approcher par un trajet dégagé et porter une morsure +7 à 1,50 m
+  note: Privilégier une cible peu protégée et éviter de traverser les cases menacées par plusieurs adversaires.
+
+step: La cible est trop éloignée pour être mordue ce round
+  do: Se rapprocher en vol jusqu’à un abri et conserver de la hauteur
+  note: Son vol parfait permet de rester en vol stationnaire ; Vol +19.
+
+step: Une baguette est déjà installée et un ennemi est à 9 m ou moins
+  do: Rester à distance et cracher de l’acide par une attaque de contact à distance, pour 1d4 dégâts
+  note: Dépenser une charge avant le jet d’attaque porte les dégâts de ce tir à 2d4 ; conserver des charges pour les réparations si nécessaire.
+
+## Rounds suivants
+
+step: La cible reste au contact et la riposte est supportable
+  do: Répéter la morsure +7 (1d3 plus 1d6 d’électricité), en prenant une position de tenaille si un allié est présent
+  note: La RD protège contre les armes ordinaires ; les résistances absorbent les premiers 10 dégâts de froid ou de feu de chaque attaque.
+
+step: La cible résiste à l’électricité ou plusieurs ennemis convergent
+  do: Changer de cible ou gagner un abri en vol
+  note: Après une approche suivie d’une morsure, attendre le round suivant pour repartir ; il ne possède pas Attaque en vol.
+
+step: Il est blessé, à couvert, et son objet installé contient encore de la magie
+  do: Consacrer une action simple à absorber une charge ou un niveau de sort pour récupérer 1d6 pv, sans dépasser 16 pv
+  note: Cette réparation remplace la morsure du round et consomme réellement la magie de l’objet.
+
+## Repli
+
+step: Points de vie sous 8 ou adversaire utilisant l’électricité
+  do: Se désengager en vol vers un abri, jusqu’à 30 m par une action de retraite sur un trajet dégagé
+  note: Seule la première case quittée est protégée des attaques d’opportunité par la retraite ; éviter les autres zones menacées et rompre la ligne de vue du lanceur d’électricité.

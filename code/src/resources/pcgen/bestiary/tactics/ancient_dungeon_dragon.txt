@@ -1,0 +1,79 @@
+## Avant le combat
+
+note: Profil
+  Dragon des donjons ancien, neutre, de taille TG : 218 pv, CA 35, réduction des dégâts 15/magie, résistance à la magie 25 ; immunisé aux enchantements, à la paralysie et au sommeil.
+  Manipulateur des souterrains, il préfère observer les aventures dans son donjon et éviter de combattre lui-même. Sa boule de cristal est son bien le plus précieux.
+  Morsure +28 (2d8+16), 2 griffes +28 (2d6+11), 2 ailes +26 (1d8+5), queue +26 (2d6+16). Allonge 3 m, ou 4,50 m avec la morsure ; espace occupé 4,50 m.
+  Marche 9 m, vol 60 m par déplacement, manœuvrabilité médiocre ; Attaque en vol et Vol stationnaire. Souffle de confusion et présence terrifiante pour désorganiser les intrus.
+
+resource: Souffle | tous les 1d4 rounds | ligne de 30 m ou cône de 15 m ; Vigueur DD 25 ou confusion pendant 1d6 rounds
+resource: Pouvoirs magiques | à volonté | NLS 19 ; charme-personne DD 15, charme-monstre DD 18, détection des pensées DD 16, suggestion DD 17, suggestion de groupe DD 20
+resource: Sorts de niveau 1 | 7/jour au total | notamment alarme, bouclier et fermeture
+resource: Sorts de niveau 2 | 7/jour au total | notamment détection de l'invisibilité et verrou du mage
+resource: Sorts de niveau 3 | 7/jour au total | notamment vision magique, dissipation de la magie et image accomplie DD 17
+resource: Sorts de niveau 4 | 7/jour au total | notamment œil du mage, détection de la scrutation, mur illusoire DD 18 et globe d'invulnérabilité partielle
+resource: Sorts de niveau 5 | 6/jour au total | image persistante, yeux indiscrets et téléportation ; garder une utilisation pour fuir
+resource: Sorts de niveau 6 | 5/jour au total | zone d'antimagie et dissipation suprême
+resource: Immobilisation de personne de groupe | 3/jour | niveau 7, Volonté DD 21 ; uniquement des humanoïdes
+
+step: Il dispose de temps pour préparer son repaire
+  do: Placer alarme sur les accès et mur illusoire devant un passage de fuite ; surveiller les intrus avec sa boule de cristal, œil du mage ou yeux indiscrets
+  note: Les illusions dissimulent les passages sans constituer des obstacles matériels. Prévoir une salle assez vaste pour sa taille et ses déplacements aériens.
+
+step: Des intrus approchent sans avoir engagé les hostilités
+  do: Employer Bluff +32, détection des pensées et charme-monstre pour comprendre leurs intentions et négocier leur départ
+  note: Le charme rend la cible amicale ; ses demandes restent soumises aux limites du sort. Il peut se présenter sous forme humanoïde grâce à changement de forme, puis reprendre sa forme draconique avant la mêlée.
+
+step: Une attaque semble imminente et il dispose de plusieurs rounds
+  do: Lancer détection de l'invisibilité puis bouclier, chacun à son tour
+  note: Au NLS 14, ces sorts durent respectivement 140 minutes et 14 minutes ; bouclier porte sa CA à 39 tant qu'il fonctionne.
+
+## Ouverture
+
+step: Les intrus peuvent encore être dissuadés
+  do: Employer suggestion de groupe, Volonté DD 20, pour leur proposer de quitter ce lieu dangereux et de revenir mieux préparés
+  note: Tous reçoivent la même suggestion, formulée de façon raisonnable dans une langue qu'ils comprennent ; les cibles doivent rester à 9 m au plus les unes des autres.
+
+step: Le combat devient inévitable et plusieurs ennemis peuvent être pris dans le souffle
+  do: Activer sa présence terrifiante et souffler ; choisir la ligne de 30 m dans un couloir ou le cône de 15 m contre un groupe étalé
+  note: Présence terrifiante à 90 m, Volonté DD 23 : les adversaires ayant moins de 19 DV sont secoués, ou paniqués avec 4 DV ou moins ; une sauvegarde réussie immunise pendant 24 heures.
+  note: Le souffle impose Vigueur DD 25 ; les victimes sont confuses pendant 1d6 rounds. Utiliser leur désorganisation pour gagner une issue.
+
+step: Plusieurs humanoïdes restent hors de portée du souffle
+  do: À la place du souffle, lancer immobilisation de personne de groupe, Volonté DD 21
+  note: Les cibles doivent être à 9 m au plus les unes des autres. Une victime paralysée peut retenter sa sauvegarde à chacun de ses tours, au prix d'une action complexe.
+
+## Rounds suivants
+
+step: Il peut voler et garder une route de sortie
+  do: Utiliser Attaque en vol pour se déplacer, souffler si le souffle est disponible ou porter une seule morsure, puis terminer son déplacement
+  note: Le déplacement total reste limité à 60 m ; privilégier la morsure à 4,50 m contre les ennemis à faible allonge. Attaque en vol laisse subsister les attaques d'opportunité normales.
+
+step: Un adversaire bloque sa fuite et reste à portée
+  do: Attaque à outrance avec morsure, deux griffes, deux ailes et queue ; concentrer les attaques sur cet obstacle
+  note: Cette séquence exige une action complexe ; seul un pas de 1,50 m peut l'accompagner. Frapper en priorité les ennemis encore lucides : attaquer une créature confuse provoque sa riposte au tour suivant.
+
+step: Des protections magiques empêchent sa fuite ou neutralisent ses attaques
+  do: Employer dissipation suprême sur la cible ou l'effet gênant
+  note: Jet de dissipation à +14. Réserver la dissipation de la magie ordinaire, limitée à +10, aux effets moins difficiles.
+
+step: Des ennemis de taille P ou inférieure sont regroupés sous lui
+  do: S'il doit les neutraliser, utiliser écrasement en atterrissant sur eux, au prix d'une action simple
+  note: Réflexes DD 25 ou immobilisation sous son corps ; 2d8+16 dégâts au round suivant s'il reste en place. Maintenir l'immobilisation demande ensuite un test de manœuvre ; son BMO est de +32.
+
+step: La magie ennemie domine le combat et il peut prendre l'avantage au contact
+  do: Lancer zone d'antimagie, rayon de 3 m, puis combattre avec ses armes naturelles aux tours suivants
+  note: La zone suspend aussi ses propres sorts, pouvoirs magiques et souffle surnaturel. Ce choix l'engage dans un combat physique et impose de révoquer la zone avant une téléportation.
+
+## Repli
+
+step: Une sortie devient accessible ou ses points de vie tombent sous 70
+  do: Emporter sa boule de cristal et lancer téléportation vers un refuge connu ; sinon, gagner une grande galerie en vol
+  note: Il privilégie le repli dès qu'il peut échapper au combat. Le seuil de 70 pv sert de limite tactique ; il abandonne volontiers le reste de son trésor.
+
+step: Sa zone d'antimagie est encore active au moment de fuir
+  do: La révoquer par une action simple, puis lancer téléportation au tour suivant
+
+step: La téléportation est impossible et des poursuivants le suivent
+  do: Souffler dès que disponible pour les désorganiser, ou lancer image persistante pour masquer sa direction ; poursuivre la fuite au tour suivant
+  note: Utiliser fermeture ou verrou du mage sur une porte existante si cela lui fait gagner du temps ; un mur illusoire peut dissimuler son passage sans arrêter physiquement les poursuivants.

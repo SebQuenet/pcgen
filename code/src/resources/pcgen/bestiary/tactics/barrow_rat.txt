@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Rat des tumulus, créature magique de taille TP, nocturne et charognarde, qui attaque en meute par instinct. Avec 5 PV et une CA de 15, il dépend surtout de sa peau de pierre pour survivre au contact.
+  Morsure +5 (1d3-3), allonge de 0 m : il doit entrer dans la case de sa cible pour la mordre. Déplacement et escalade à 4,50 m.
+  Jusqu'à quatre rats peuvent occuper une même case de 1,50 m de côté.
+
+resource: Peau de pierre | 1/jour par rat | action simple ; réduction des dégâts 10/— pendant 1 minute, soit 10 rounds
+
+step: Des intrus approchent
+  do: Rester dissimulés dans l'obscurité, près des cadavres ou des passages du repaire, et attendre qu'une cible s'approche
+  note: Discrétion +12 ; vision dans le noir à 18 m, vision nocturne et odorat pour repérer les intrus
+
+## Ouverture
+
+step: Le combat est imminent et la peau de pierre est disponible
+  do: Activer la peau de pierre avant d'entrer dans la case d'un adversaire ; avancer ensuite si nécessaire
+  note: L'activation prend l'action simple du round : le rat peut encore se déplacer de 4,50 m, mais ne mord pas ce round
+
+step: Une cible peut être rejointe et le rat dispose encore de son action simple
+  do: Entrer dans sa case et porter une morsure +5 (1d3-3)
+  note: Entrer dans la case ennemie expose le rat à une attaque d'opportunité ; la peau de pierre protège cette approche contre les dégâts auxquels sa réduction s'applique
+
+## Rounds suivants
+
+step: Une cible reste dans la même case que les rats
+  do: Chaque rat la mord à son tour, avec une attaque à +5 (1d3-3)
+  note: Concentrer jusqu'à quatre rats dans cette case. Leur capacité de regroupement ne donne ni dégâts automatiques d'essaim ni attaque collective : chaque rat attaque séparément
+
+step: La cible quitte leur case
+  do: La suivre et entrer de nouveau dans sa case pour mordre si un déplacement de 4,50 m suffit
+  note: Si elle est plus loin, utiliser un double déplacement jusqu'à 9 m pour la rejoindre, sans morsure ce round ; ne pas quitter les abris pour une poursuite prolongée
+
+## Repli
+
+step: Le rat tombe à 2 PV ou moins, ou sa peau de pierre expire face à un adversaire encore dangereux
+  do: Se désengager et fuir vers une fissure ou un passage étroit ; utiliser l'escalade pour gagner un abri accessible
+  note: Déplacement et escalade à 4,50 m ; une retraite par désengagement permet de parcourir jusqu'à 9 m. La peau de pierre réduit les dégâts, mais ne rend aucun PV

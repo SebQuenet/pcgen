@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Aluum, créature artificielle de taille G, neutre et sans Intelligence. Combat exclusivement au corps à corps : deux coups +21, chacun infligeant 2d10+8 dégâts et la paralysie.
+  107 pv ; CA 25, contact 10, pris au dépourvu 24 ; réduction des dégâts 10/adamantium ; immunité à la magie et traits des créatures artificielles.
+  Déplacement de 9 m ; espace occupé de 3 m et allonge de 3 m ; vision dans le noir à 18 m et vision nocturne ; Perception +0.
+
+note: Paralysie
+  Le profil fourni ne précise ni le DD ni la durée de la paralysie : ne pas leur attribuer de valeur arbitraire.
+
+step: Un poste ou une cible lui est assigné
+  do: Appliquer les consignes reçues et attendre qu'un adversaire soit repéré.
+  note: Sans Intelligence, il ne prépare pas de ruse et ne réévalue pas sa mission de lui-même.
+
+## Ouverture
+
+step: Un ennemi est déjà à 3 m ou moins
+  do: Effectuer une attaque à outrance : deux coups +21, chacun pour 2d10+8 dégâts et paralysie.
+
+step: Un ennemi hors de portée peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer pour le placer dans son allonge de 3 m, puis porter un seul coup +21, pour 2d10+8 dégâts et paralysie.
+  note: Un déplacement ordinaire ne permet pas de porter les deux coups pendant ce tour.
+
+step: Aucun ennemi ne peut être atteint après un déplacement de 9 m
+  do: Avancer vers la cible jusqu'à 18 m par un double déplacement, dans les limites de ses consignes.
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: Sa cible reste à portée
+  do: Répéter l'attaque à outrance avec les deux coups +21 et appliquer la paralysie à chaque coup qui touche.
+  note: Rester à portée permet de conserver les deux attaques à chaque tour.
+
+step: Un pas de 1,50 m suffit pour remettre la cible à portée
+  do: Faire ce pas, puis effectuer l'attaque à outrance avec les deux coups.
+
+step: La cible s'éloigne davantage
+  do: La poursuivre à 9 m et porter un seul coup si elle devient accessible ; sinon, effectuer un double déplacement jusqu'à 18 m.
+  note: Respecter toute limite de poursuite fixée par ses consignes.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Porter un coup +21, pour 2d10+8 dégâts et paralysie.
+  note: Une seule attaque d'opportunité par round ; elle ne donne pas les deux coups de l'attaque à outrance.
+
+## Repli
+
+step: Ses consignes imposent un repli
+  do: Rejoindre le point prévu à 9 m par déplacement, ou 18 m par double déplacement.
+  note: Il ne possède aucun moyen spécial de fuite.
+
+step: Aucune consigne de repli ne s'applique
+  do: Continuer sa mission et combattre les cibles accessibles jusqu'à sa destruction à 0 pv.
+  note: Aucun seuil de pv ne déclenche une fuite de sa propre initiative.

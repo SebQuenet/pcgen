@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Idole d'os, créature artificielle neutre de taille Min, FP 2 : une petite statuette macabre qui soutient ses défenseurs et sème la discorde plutôt que de compter sur ses dégâts.
+  Morsure +3 (1d2-4 plus rage démente), allonge 0 m : elle doit entrer dans la case adverse pour mordre. Déplacement 3 m ; 16 pv ; CA 16 ; réduction des dégâts 5/contondant ; résistances au froid, à l'électricité et au feu de 5 ; immunités des créatures artificielles.
+  Ses principaux moyens d'action sont imprécation, frayeur et la rage démente de sa morsure. Elle comprend la langue de son créateur, mais ne parle pas.
+
+resource: Imprécation | 3/jour | NLS 5 ; Volonté DD 12 ; ennemis dans un rayon de 15 m, malus de -1 aux attaques et aux sauvegardes contre la peur pendant 5 minutes
+resource: Frayeur | 3/jour | NLS 5 ; Volonté DD 12 ; portée 10,50 m ; cible de 5 DV au maximum ; effrayée 1d4 rounds, ou secouée 1 round si elle réussit sa sauvegarde
+resource: Perception de la mort | 3/jour | NLS 5 ; cône de 9 m ; durée 50 minutes ; pouvoir partageable
+resource: Invisibilité pour les morts-vivants | 3/jour | NLS 5 ; contact ; jusqu'à cinq bénéficiaires ; durée 50 minutes ; Volonté DD 12 pour les morts-vivants intelligents
+resource: Animation des morts | 1/jour | NLS 5 ; contact ; nécessite des cadavres appropriés ; les zombies créés à 9 m ou moins de l'idole deviennent des zombies rapides
+resource: Glas funèbre | 1/jour | NLS 5 ; contact sur une créature vivante à -1 pv ou moins ; Volonté DD 14 ; bénéfices personnels partageables
+
+step: Elle attend les intrus
+  do: Rester immobile comme une statuette ordinaire, avec une ligne d'effet vers la zone à défendre ; se dissimuler parmi les os si elle doit changer de position.
+  note: Discrétion +13, ou +17 parmi les os. Son immobilité masque sa nature ; le round suivant l'emploi discret d'un pouvoir, Perception DD 25 permet d'en remarquer les indices. Un déplacement ou une attaque la révèle aux témoins.
+
+step: Des cadavres appropriés sont disponibles avant l'affrontement
+  do: Employer animation des morts pour préparer des défenseurs, en créant les zombies à 9 m ou moins afin d'obtenir des zombies rapides.
+  note: Cette préparation consomme l'unique utilisation quotidienne ; elle ne fournit aucun serviteur si aucun cadavre n'est disponible.
+
+step: Des alliés vivants se tiennent près d'elle
+  do: Les laisser former un écran devant sa position ; partager perception de la mort avec un allié situé à 1,50 m ou moins si ce pouvoir lui est utile.
+  note: Son aura de 9 m accorde +2 aux sauvegardes contre maladies et poisons à toutes les créatures présentes, ennemis compris.
+
+## Ouverture
+
+step: Plusieurs adversaires sont à 15 m ou moins et ne l'attaquent pas encore directement
+  do: Lancer imprécation sans bouger, en conservant ses défenseurs entre elle et les intrus.
+  note: Les ennemis qui ratent leur sauvegarde deviennent plus vulnérables à frayeur ; imprécation ne réduit pas leur sauvegarde contre la rage démente.
+
+step: Un adversaire de 5 DV ou moins menace sa position à 10,50 m ou moins
+  do: Lancer frayeur sur lui, en priorité sur un porteur d'arme contondante.
+  note: Choisir cette ouverture si éloigner un assaillant est plus urgent que d'affaiblir le groupe.
+
+step: Un intrus la manipule ou occupe déjà sa case
+  do: Le mordre pour déclencher la rage démente.
+  note: La morsure sert surtout à provoquer la rage ; se déplacer dans la case d'un adversaire peut exposer l'idole à une attaque d'opportunité.
+
+## Rounds suivants
+
+step: Un ennemi a été mordu
+  do: Lui faire effectuer une sauvegarde de Volonté DD 16 contre la rage démente.
+  note: En cas d'échec, rage et confusion pendant 1 minute. Si le résultat de confusion devrait le faire fuir ou attaquer l'idole, celle-ci désigne à la place une cible à attaquer, de préférence un compagnon de la victime. Elle ne contrôle pas les autres résultats ; c'est un effet mental.
+
+step: Elle peut encore agir derrière ses défenseurs
+  do: Employer frayeur contre les assaillants admissibles ; réserver les nouvelles imprécations aux ennemis arrivés après la première ou à ceux qui y ont résisté.
+  note: Chaque pouvoir magique demande normalement une action simple ; lancer à portée d'un ennemi expose à une attaque d'opportunité, sauf emploi sur la défensive réussi.
+
+step: Un ennemi non affecté par la rage occupe sa case et elle n'a pas besoin de fuir
+  do: Le mordre, puis laisser la confusion désorganiser ses compagnons.
+  note: Éviter de traverser la mêlée à 3 m par déplacement pour chercher une victime éloignée.
+
+step: Une créature vivante mourante est accessible au contact sans exposition excessive
+  do: Employer glas funèbre ; si un allié à 1,50 m ou moins peut mieux en profiter, partager les bénéfices avec lui.
+  note: Sur un échec de Volonté DD 14, la victime meurt ; le bénéficiaire gagne 1d8 pv temporaires, +2 en Force et +1 au niveau de lanceur de sorts. Ce pouvoir ne soigne pas les 16 pv de l'idole.
+
+step: Aucun défenseur n'a été préparé et un cadavre approprié devient accessible
+  do: Employer animation des morts si l'utilisation quotidienne reste disponible et si elle peut agir sans être immédiatement détruite.
+  note: Un zombie créé à 9 m ou moins devient rapide ; cette aptitude ne transforme pas les zombies déjà existants.
+
+## Repli
+
+step: Ses pv passent sous 8 ou un assaillant avec une arme contondante l'atteint
+  do: Se retirer derrière un obstacle ou ses défenseurs, jusqu'à 6 m avec l'action de retraite ; employer frayeur lors d'un autre tour si cela peut dégager la fuite.
+  note: La retraite ne protège que la case de départ contre les attaques d'opportunité. Si une voie droite est dégagée, le don Course permet ensuite de parcourir 15 m par round en courant.
+
+step: La poursuite vient de morts-vivants
+  do: Employer invisibilité pour les morts-vivants si une utilisation reste disponible, puis gagner un abri.
+  note: Ce pouvoir ne cache pas l'idole aux vivants. Une attaque d'un bénéficiaire met fin au sort pour tous ; les morts-vivants intelligents peuvent résister avec Volonté DD 12.
+
+step: Elle a rompu la ligne de vue des poursuivants
+  do: Se dissimuler parmi les os si possible et reprendre son immobilité.
+  note: Se figer sous les yeux d'un témoin qui l'a vue bouger ne lui fait pas oublier sa nature.

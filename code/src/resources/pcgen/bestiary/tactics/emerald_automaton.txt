@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Automate d'émeraude de taille M, créature artificielle sans intelligence : il applique ses consignes. 47 pv, CA 17, réduction des dégâts 5/adamantium et immunités des créatures artificielles ; faiblesse : dépendance à la magie.
+  Guisarme +10 (2d4+7, x3), allonge de 3 m ; épée longue +10 (1d8+5, 19-20) et coup +5 (1d4+2), allonge de 1,50 m.
+  Déplacement de 9 m ; vision dans le noir à 18 m et vision nocturne. Aura d'électricité dans un rayon de 1,50 m, DD 12.
+
+step: Une position ou un passage lui est confié
+  do: Tenir le poste avec la guisarme en main, prêt à frapper les intrus à 3 m
+  note: Ses choix suivent des consignes simples ; il ne prépare pas de ruse élaborée.
+
+## Ouverture
+
+step: Un intrus est à 3 m
+  do: Porter une attaque de guisarme +10 (2d4+7, x3)
+  note: La guisarme ne permet pas de frapper un ennemi adjacent, à 1,50 m.
+
+step: L'intrus est hors de portée et ses consignes autorisent l'approche
+  do: Avancer de 9 m au maximum ; porter une attaque de guisarme si l'intrus se trouve ensuite à 3 m
+
+step: Un intrus est adjacent et un recul est possible
+  do: Faire un pas de placement de 1,50 m pour mettre l'intrus à 3 m, puis frapper à la guisarme
+  note: Ce pas suppose qu'il n'effectue aucun autre déplacement pendant le round.
+
+step: Un intrus est adjacent, le recul est impossible et la guisarme est en main
+  do: Lâcher la guisarme, dégainer l'épée longue avec une action de mouvement et porter une attaque d'épée +10 (1d8+5, 19-20)
+  note: L'intrus est aussi dans le rayon de l'aura d'électricité, DD 12.
+
+## Rounds suivants
+
+step: Un ennemi reste à 3 m et la guisarme est en main
+  do: Répéter l'attaque de guisarme +10 (2d4+7, x3)
+
+step: Un ennemi quitte une case menacée à 3 m en provoquant une attaque d'opportunité
+  do: Porter une attaque de guisarme +10 (2d4+7, x3)
+  note: Il dispose d'une attaque d'opportunité par round.
+
+step: L'épée est déjà en main et un ennemi reste à 1,50 m sans nécessiter de déplacement
+  do: Faire une attaque à outrance : épée longue +10 (1d8+5, 19-20), puis coup +5 (1d4+2)
+  note: L'ennemi est dans le rayon de l'aura d'électricité, DD 12.
+
+step: Il combat à la guisarme et touche facilement sa cible
+  do: Utiliser Attaque en puissance : guisarme +8 (2d4+13, x3)
+  note: Le malus de -2 s'applique aussi aux attaques d'opportunité jusqu'à son prochain tour.
+
+step: Ses consignes demandent de briser une arme ennemie à portée
+  do: Remplacer une attaque par une manœuvre de destruction d'arme, BMO +12
+  note: Science de la destruction lui évite de provoquer une attaque d'opportunité pour cette manœuvre ; la solidité de l'arme absorbe les dégâts normalement.
+
+## Repli
+
+step: Ses points de vie diminuent et ses consignes restent applicables
+  do: Continuer à les exécuter jusqu'à destruction, quel que soit son total de pv
+
+step: Un ordre de repli ou une limite de poursuite prévue par ses consignes s'applique
+  do: Revenir au point assigné, à 9 m par déplacement

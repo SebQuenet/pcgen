@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Chien mort-vivant de taille M, chaotique mauvais, FP 1, à l'intelligence animale. Il combat par des assauts simples et cherche à mettre sa proie à terre.
+  13 PV, CA 14, initiative +6 ; vitesse de 15 m et allonge de 1,50 m. Morsure +5 (1d6+6, maladie, paralysie et croc-en-jambe).
+  Vision dans le noir à 18 m, Perception +6, Discrétion +6 ; résistance à la canalisation +2 et immunités des morts-vivants.
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Rester dissimulé avec Discrétion +6 et les laisser approcher d'une position permettant de bondir au contact
+  note: Privilégier l'obscurité, où sa vision porte à 18 m
+
+step: Des goules ou d'autres chiens goules sont présents
+  do: Rester à proximité pour attaquer les mêmes intrus
+  note: Son intelligence de 2 favorise une chasse de meute simple
+
+## Ouverture
+
+step: Une proie est déjà à 1,50 m
+  do: Mordre à +5, pour 1d6+6 dégâts, plus maladie et paralysie
+  note: Sur une morsure réussie, tenter gratuitement le croc-en-jambe avec BMC +5 ; cette tentative ne provoque pas d'attaque d'opportunité
+
+step: Une proie est accessible avec un déplacement de 15 m au plus
+  do: Rejoindre la proie et porter une morsure à +5
+  note: Choisir de préférence une proie isolée ou déjà engagée par un allié
+
+step: La proie est plus loin, mais une charge est possible sur un trajet dégagé de 30 m au plus
+  do: Charger et mordre à +7, puis tenter le croc-en-jambe si la morsure touche
+  note: La charge abaisse sa CA à 12 jusqu'au début de son prochain tour
+
+## Rounds suivants
+
+step: La proie est encore debout
+  do: Répéter la morsure à +5 et tenter le croc-en-jambe à chaque morsure réussie
+  note: Chaque morsure expose de nouveau la cible à la maladie et à la paralysie
+
+step: La proie est à terre
+  do: Continuer à la mordre en profitant du bonus de +4 aux attaques de mêlée contre elle
+  note: Si elle se relève dans sa zone menacée, profiter de l'attaque d'opportunité pour la mordre
+
+step: Un allié combat la même proie
+  do: Se placer de l'autre côté si un déplacement sûr le permet, puis mordre en tenaille
+  note: La tenaille donne +2 au jet d'attaque ; éviter de traverser les zones menacées pour l'obtenir
+
+step: La proie fuit
+  do: La poursuivre avec sa vitesse de 15 m et mordre dès qu'elle est à portée
+
+## Repli
+
+step: Isolé et réduit à 4 PV ou moins, avec une voie de fuite libre
+  do: Effectuer une retraite jusqu'à 30 m vers un abri ou les autres membres de la meute
+  note: La retraite protège du départ de la première case menacée ; traverser d'autres cases menacées reste dangereux
+
+step: Acculé sans voie de fuite
+  do: Continuer à mordre l'ennemi au contact et tenter de le faire tomber

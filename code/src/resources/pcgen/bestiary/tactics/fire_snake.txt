@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Serpent de feu, Petit extérieur neutre du plan du Feu, d'intelligence animale ; 13 pv, CA 17.
+  Morsure +6 au contact, à 1,50 m : 1d4 dégâts et paralysie, Vigueur DD 12 ou paralysé pendant 1d6 rounds.
+  Déplacement au sol et escalade à 6 m ; vision dans le noir à 18 m. Immunisé au feu, vulnérable au froid.
+
+step: Une cachette est disponible
+  do: Se dissimuler avec Discrétion +15 et attendre qu'une proie approche
+  note: Perception +9 pour repérer les intrus ; il réagit par instinct, sans élaborer de plan complexe
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m
+  do: Mordre immédiatement avec un bonus de +6
+  note: La morsure inflige 1d4 dégâts et impose Vigueur DD 12 contre la paralysie pendant 1d6 rounds ; elle n'inflige aucun dégât de feu supplémentaire
+
+step: L'adversaire le plus proche est hors de portée
+  do: Avancer jusqu'à 6 m vers lui, puis le mordre s'il est à 1,50 m
+  note: Utiliser son escalade à 6 m si une paroi praticable permet de rejoindre la cible
+
+## Rounds suivants
+
+step: Un adversaire encore mobile le menace au contact
+  do: Continuer à mordre cet adversaire chaque round
+  note: Chaque morsure qui touche impose de nouveau Vigueur DD 12 contre la paralysie
+
+step: Sa proie est paralysée et un autre adversaire le menace au contact
+  do: Mordre l'adversaire encore mobile le plus proche
+  note: Suivre séparément la durée de paralysie de chaque victime
+
+step: Sa proie est paralysée et aucun autre adversaire ne le menace
+  do: Continuer à mordre la proie immobilisée
+
+step: Les ennemis restent à distance
+  do: Les poursuivre au sol ou en escalade, jusqu'à 6 m puis une morsure si la portée le permet, ou jusqu'à 12 m en double déplacement
+  note: Il ne possède aucune attaque à distance
+
+## Repli
+
+step: Points de vie à 4 ou moins, ou blessure infligée par le froid
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 12 m, au sol ou en escalade, vers un abri accessible
+  note: Le froid lui inflige 50 % de dégâts supplémentaires ; privilégier instinctivement la fuite après une telle blessure

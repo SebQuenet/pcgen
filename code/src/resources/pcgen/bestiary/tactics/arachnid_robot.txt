@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Robot arachnide de Numeria, créature artificielle de taille P, neutre et intelligente. 15 PV ; CA 14, contact 12, pris au dépourvu 13.
+  Deux griffes +3, chacune infligeant 1d3-1 dégâts ; allonge de 1,50 m. Déplacement au sol de 12 m, escalade de 6 m.
+  Immunités des créatures artificielles ; résistance au feu 5. Structure fragile, vulnérabilité aux coups critiques et à l'électricité.
+
+step: Des intrus approchent
+  do: Les observer depuis un couvert ou une paroi accessible, en utilisant Discrétion +10 et Perception +5
+  note: Vision dans le noir à 18 m et vision nocturne ; l'obscurité lui permet de surveiller les approches sans éclairage
+
+step: Un mécanisme accessible permet de gêner l'approche des intrus
+  do: Tenter de le saboter avec Sabotage +10 avant l'affrontement
+  note: Cette compétence exige du temps et dépend du mécanisme ; elle ne permet pas de neutraliser automatiquement un équipement ennemi
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m
+  do: Effectuer une attaque à outrance avec ses deux griffes +3, chacune pour 1d3-1 dégâts
+
+step: Une cible peut être atteinte avec un déplacement de 12 m au sol ou de 6 m en escalade
+  do: Rejoindre la cible, puis porter une seule attaque de griffe +3 pour 1d3-1 dégâts
+  note: Choisir de préférence un adversaire isolé et facile à toucher ; ses griffes infligent peu de dégâts
+
+step: Aucun adversaire n'est accessible après un seul déplacement
+  do: Se rapprocher à couvert, en utilisant les parois si elles offrent un meilleur accès
+  note: Un double déplacement permet de parcourir 24 m au sol ou 12 m en escalade, sans attaquer ce round
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance avec les deux griffes
+  note: Un pas de placement de 1,50 m permet d'ajuster sa position en conservant les deux attaques ; un déplacement ordinaire ne laisse qu'une attaque
+
+step: Un autre robot ou un allié engage la même cible
+  do: Se placer de l'autre côté de l'adversaire pour le prendre en tenaille
+  note: La tenaille donne +2 aux attaques de mêlée contre une cible qui y est sensible, portant ses griffes à +5
+
+step: Un adversaire utilise l'électricité
+  do: Chercher un couvert ou contourner l'obstacle par une paroi pour limiter son exposition
+  note: Éviter de rester à découvert face à cette faiblesse ; sa résistance au feu 5 ne protège pas contre l'électricité
+
+step: La cible s'éloigne
+  do: La poursuivre si un déplacement suffit à porter une attaque ; sinon, rejoindre une position couverte avant de reprendre l'approche
+  note: Il ne possède aucune attaque à distance
+
+## Repli
+
+step: Ses PV tombent à 5 ou moins et sa mission permet de se retirer
+  do: Utiliser l'action de retraite pour rejoindre un abri, jusqu'à 24 m au sol ou 12 m en escalade
+  note: La retraite protège du départ de sa case initiale, mais pas des attaques d'opportunité sur le reste du trajet
+
+step: Le repli est impossible ou sa mission impose de tenir la position
+  do: Se placer dans un passage étroit et continuer les attaques à outrance contre l'adversaire au contact
+  note: Éviter d'être encerclé ; ses 15 PV et sa vulnérabilité aux critiques rendent un combat prolongé dangereux

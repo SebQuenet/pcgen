@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Diable de cabale (uniila), manipulateur loyal mauvais, intelligent, volant et incorporel. Il préfère préparer l'affrontement et neutraliser les adversaires capables de le menacer.
+  95 pv ; CA 22, contact 22 ; vol 12 m ; allonge 1,50 m. Attaque à outrance : quatre dagues +1 à +17, chacune pour 1d4+1 dégâts, critique 19-20, au corps à corps ou lancées.
+  RD 10/Bien, RM 21 ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10. Vision dans le noir à 18 m, vision dans les ténèbres et télépathie à 30 m.
+
+resource: Malédiction | 3/jour | toucher, Volonté DD 19
+resource: Clignotement | 3/jour | défense temporaire
+resource: Détection de pensées | 3/jour | Volonté DD 17
+resource: Dissipation de la magie | 3/jour | NLS 8
+resource: Invisibilité | 3/jour | cesse lorsqu'il attaque
+resource: Blasphème | 1/jour | rayon de 12 m, Volonté DD 22, NLS 8
+resource: Marque de la justice | 1/jour | préparation sur une victime maîtrisée
+resource: Convocation de diables | 1/jour | 2d4 diablotins, 55 % de réussite
+resource: Téléportation suprême | à volonté | lui-même et 22,5 kg d'objets seulement
+
+step: Il dispose de quelques instants avant l'arrivée des intrus
+  do: Activer vision lucide, puis invisibilité ; choisir une position en hauteur et repérer un refuge connu pour sa téléportation
+  note: Ces pouvoirs prennent des actions distinctes. Vision lucide sert à reconnaître les illusions et les créatures invisibles avant de choisir ses cibles.
+
+step: Il peut observer les adversaires sans déclencher le combat
+  do: Employer détection de pensées pour recueillir leurs pensées superficielles, puis préparer son approche avec Bluff +18 et Psychologie +17
+  note: La télépathie transmet ses paroles ; la lecture des pensées dépend du pouvoir et de son DD 17.
+
+step: Il prévoit un combat difficile et dispose du temps nécessaire
+  do: Tenter la convocation des diablotins ; en cas de réussite, leur assigner des positions dispersées pour détourner l'attention
+  note: Une tentative ratée consomme l'utilisation quotidienne.
+
+## Ouverture
+
+step: Plusieurs ennemis non mauvais ayant au plus 8 DV sont à 12 m ou moins
+  do: Employer blasphème pour les neutraliser avant de s'exposer au contact
+  note: Volonté DD 22 ; les créatures ayant plus de 8 DV sont indemnes. Sur un échec, celles de 8 DV sont hébétées 1 round ; celles de 7 DV ou moins sont aussi affaiblies ; celles de 3 DV ou moins sont aussi paralysées. Une sauvegarde réussie atténue ou annule ces effets.
+
+step: Blasphème serait inefficace et une protection magique adverse gêne son offensive
+  do: Lancer dissipation de la magie sur la cible prioritaire, puis utiliser son déplacement pour rester hors de portée de mêlée
+  note: Test de dissipation à +8 ; un seul pouvoir offensif par action simple.
+
+step: Une cible vulnérable est accessible au toucher sans l'exposer à plusieurs combattants
+  do: Employer malédiction, Volonté DD 19, et choisir l'effet donnant à la victime 50 % de chances de ne pouvoir agir à chaque tour
+  note: L'emploi offensif met fin à son invisibilité ; il ne cumule pas cette action avec ses quatre attaques de dagues.
+
+## Rounds suivants
+
+step: Un adversaire au contact peut être achevé sans déplacement important
+  do: Faire une attaque à outrance avec les quatre dagues +17, chacune pour 1d4+1 dégâts, critique 19-20
+  note: Les quatre attaques exigent une action complexe ; il peut seulement y joindre un pas de 1,50 m.
+
+step: Il doit se déplacer pour conserver ses distances
+  do: Voler jusqu'à 12 m et effectuer une seule attaque de dague, ou employer un pouvoir magique
+  note: Les dagues lancées ont un facteur de portée de 3 m. Il n'en possède que quatre et elles ne reviennent pas automatiquement ; réserver les lancers aux occasions décisives.
+
+step: Un adversaire maintient un effet magique déterminant
+  do: Employer une nouvelle dissipation de la magie, en donnant priorité aux effets qui permettent de le repérer ou de l'atteindre efficacement
+
+step: Des attaques magiques le mettent sous pression et il compte poursuivre le combat
+  do: Activer clignotement, puis chercher une position moins exposée
+  note: Clignotement peut aussi faire échouer ses propres attaques ; éviter de consacrer plusieurs rounds à se protéger si une téléportation permet déjà de rompre le combat.
+
+step: Un ennemi porte déjà son talisman de sorcière
+  do: Exploiter le malus de -5 du porteur aux sauvegardes contre ses effets ; si l'éliminer devient prioritaire, faire éclater le talisman par une action simple pour lui infliger 10d6 dégâts
+  note: Le talisman doit avoir été préparé et accepté auparavant ; il ne crée pas un nouveau porteur pendant le combat.
+
+## Repli
+
+step: Ses points de vie tombent à 30 ou moins, ou les ennemis surmontent régulièrement ses défenses
+  do: Employer téléportation suprême vers son refuge connu
+  note: Il emporte seulement lui-même et jusqu'à 22,5 kg d'objets ; ses alliés ne voyagent pas avec lui.
+
+step: Sa téléportation est empêchée
+  do: Rompre le contact en volant à 12 m par déplacement, utiliser l'incorporéité pour traverser une paroi accessible, puis réessayer la téléportation dès que possible
+  note: Invisibilité peut couvrir la fuite si les poursuivants ne la percent pas ; une fois invisible, il cesse ses attaques pour conserver cet avantage.

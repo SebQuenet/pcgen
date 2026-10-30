@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Idole de pierre en forme de grenouille, créature artificielle de taille G, neutre et sans intelligence. Elle garde le site auquel elle est liée et applique des réactions simples aux intrusions.
+  79 points de vie, CA 20 ; déplacement de 6 m ; espace occupé de 3 m et allonge de 1,50 m. Morsure +13 (2d6+7) ; écrasement (4d6+7, Réflexes DD 16 pour moitié).
+
+note: Défenses
+  Réduction des dégâts de 10/adamantium, immunité à la magie et immunités des créatures artificielles. Ses 79 points de vie comprennent déjà les 30 points supplémentaires de son type.
+  La reconstitution (rejuvenation) est distincte d'une guérison pendant le combat ; aucun rythme de récupération n'est indiqué dans ce profil.
+
+step: En attente sur son site
+  do: Tenir sa position et surveiller les accès
+  note: Vision dans le noir à 18 m, vision nocturne et Perception +0 ; ne pas lui attribuer de détection automatique des intrus dissimulés.
+
+## Ouverture
+
+step: Un intrus peut être atteint par un écrasement
+  do: Employer l'écrasement : 4d6+7 dégâts, Réflexes DD 16 pour moitié
+  note: Le profil ne précise ni les conditions ni la zone de cette attaque ; ne pas lui attribuer une portée ou plusieurs victimes sans ces règles.
+
+step: L'écrasement n'est pas applicable et un intrus est à 1,50 m ou moins
+  do: Mordre : +13 au toucher, 2d6+7 dégâts
+
+step: Aucun intrus n'est à portée de morsure
+  do: Avancer de 6 m au maximum vers l'intrus le plus proche et mordre s'il devient accessible
+  note: Rester dans les limites du site auquel l'idole est liée.
+
+## Rounds suivants
+
+step: L'écrasement est applicable
+  do: Réutiliser l'écrasement : 4d6+7 dégâts, Réflexes DD 16 pour moitié
+  note: Choisir entre écrasement et morsure ; ce profil ne donne aucune attaque combinant les deux.
+
+step: Un adversaire reste au contact et l'écrasement n'est pas applicable
+  do: Répéter la morsure +13 (2d6+7) contre lui
+  note: Conserver une conduite simple ; son absence d'intelligence ne justifie pas une sélection élaborée des cibles.
+
+step: L'adversaire s'éloigne tout en restant sur le site
+  do: Le suivre à 6 m par déplacement pour retrouver la portée de morsure
+  note: Pour franchir un obstacle par un saut, utiliser Acrobaties +8 ; le bonus aux autres usages d'Acrobaties est de +0.
+
+## Repli
+
+step: L'idole perd des points de vie
+  do: Continuer à défendre le site tant qu'elle peut agir
+  note: Aucun seuil de fuite n'est indiqué ; ne pas lui inventer de retraite motivée par la peur.
+
+step: Les intrus quittent le site auquel elle est liée
+  do: Cesser la poursuite à la limite de ce site et reprendre la garde
+
+step: L'idole est détruite
+  do: Appliquer sa reconstitution (rejuvenation)
+  note: Le délai et les conditions de retour ne figurent pas dans le profil fourni.

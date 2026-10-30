@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Ectoplasme, vase vivante de taille G, neutre, solitaire et sans intelligence ; 47 points de vie, CA 11.
+  Contact intangible +3 contre la CA de contact : 1d8 points de dégâts de Force aux vivants ; souffle soporifique ; fléau des morts-vivants.
+  Vol à 9 m, manœuvrabilité parfaite ; vision aveugle à 18 m ; espace occupé de 3 m, allonge de 1,50 m.
+
+note: Comportement
+  Consomme les dépouilles et réagit instinctivement aux créatures qui le dérangent. Sa lueur permanente ne peut être éteinte ; il se déplace silencieusement.
+
+resource: Souffle | Une fois tous les 2 rounds | Action simple ; cône de 6 m ; Vigueur DD 17 ou sommeil, comme le sort, NLS 7 ; réussite : immunité à ce souffle pendant 24 heures.
+
+## Ouverture
+
+step: Une créature le dérange dans les 18 m
+  do: Se manifester si nécessaire, puis voler vers elle.
+  note: Manifesté, il est visible et intangible ; il peut traverser les obstacles solides. Il doit se manifester pour agir sur le plan Matériel.
+
+step: Un vivant se trouve dans le cône de 6 m et le souffle est disponible
+  do: Souffler sur lui ; englober les autres adversaires déjà dans le cône.
+  note: Appliquer les limites du sort sommeil : 4 DV de créatures au total, en commençant par les plus faibles ; durée de 7 minutes.
+
+step: Le souffle ne peut servir et un adversaire est à 1,50 m ou moins
+  do: Porter un contact intangible +3.
+
+## Rounds suivants
+
+step: Un vivant reste au contact
+  do: Répéter le contact intangible +3, infligeant 1d8 points de dégâts de Force par coup réussi.
+  note: Ces dégâts diminuent la Force, pas les points de vie.
+
+step: Le souffle redevient disponible et un vivant non immunisé est à 6 m ou moins
+  do: Souffler de nouveau à la place du contact.
+
+step: Un mort-vivant corporel est présent
+  do: L'assaillir au contact et poursuivre ses attaques.
+  note: Fléau des morts-vivants ajoute 1d8 points de dégâts et ignore sa réduction des dégâts ; son immunité aux dégâts de Force reste applicable.
+
+step: La cible s'éloigne
+  do: La suivre en volant à 9 m et reprendre le contact à 1,50 m.
+
+## Repli
+
+step: Après quelques rounds contre des vivants
+  do: Rompre le combat et s'éloigner en volant à 9 m, en traversant les obstacles solides présents.
+  note: Il ne tire aucune nourriture des vivants ; aucun seuil de points de vie ne déclenche ce départ.
+
+step: Un mort-vivant reste à combattre
+  do: Continuer jusqu'à la destruction de l'un des deux.

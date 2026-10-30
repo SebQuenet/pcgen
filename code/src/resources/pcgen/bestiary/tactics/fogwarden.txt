@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Fogwarden, aberration gazeuse de taille M, neutre mauvaise : 22 pv, CA 16 ; vol à 12 m, bonne manœuvrabilité ; vision dans le noir à 18 m.
+  Il combat avec un éclair en ligne de 9 m et une aura de peur de 9 m (DD 14), en s'appuyant sur les morts-vivants qu'il anime. Aucune attaque de corps à corps n'est indiquée.
+  Décharge électrique défensive : 3d6 dégâts d'électricité, DD 13. Réduction des dégâts 10/magie ; immunité au froid, à l'électricité, au poison et aux manœuvres de combat ; vulnérabilité à la lumière du soleil.
+
+resource: Éclair | un round sur deux | ligne de 9 m, 3d6 dégâts d'électricité, DD 16
+resource: Animation des morts | à volonté | pouvoir magique, NLS 4
+
+step: Il peut choisir le terrain
+  do: Se poster à l'abri du soleil, dans une brume ou un brouillard déjà présent, près d'un itinéraire de fuite couvert
+  note: Discrétion +10, +14 pour se déplacer silencieusement et +22 pour se cacher dans la brume ou le brouillard ; aucun pouvoir de création de brouillard n'est indiqué
+
+step: Des cadavres sont disponibles avant l'arrivée des intrus
+  do: Utiliser animation des morts pour préparer des serviteurs avant le combat
+
+step: Il est accompagné de zombies
+  do: Les placer entre les intrus et sa position, en gardant un couloir libre pour ses éclairs
+  note: Une troupe peut comprendre de 1 à 6 zombies ; ne pas compter sur leur présence s'il est rencontré seul
+
+## Ouverture
+
+step: Des ennemis peuvent être pris dans une ligne de 9 m
+  do: Se déplacer en vol pour aligner le plus d'adversaires possible, puis lancer un éclair sans traverser ses serviteurs
+  note: Éclair : 3d6 dégâts d'électricité, DD 16 ; les ennemis situés à 9 m ou moins sont aussi dans son aura de peur, DD 14
+
+step: Les adversaires sont trop éloignés pour l'éclair
+  do: Approcher en vol en utilisant les obstacles et la brume disponibles, avec les zombies en première ligne
+  note: Rechercher une position permettant de tirer à 9 m tout en restant hors de portée des armes de mêlée
+
+## Rounds suivants
+
+step: L'éclair est de nouveau disponible
+  do: Se replacer et tirer sur plusieurs ennemis alignés ; à défaut, viser celui qui menace le plus sa survie
+  note: Après un éclair au premier round, il peut en lancer un au troisième, puis au cinquième, et ainsi de suite
+
+step: L'éclair a été utilisé au round précédent
+  do: Utiliser son vol pour maintenir la distance, chercher le prochain angle de tir et laisser les zombies occuper les combattants adverses
+  note: Maintenir les ennemis dans l'aura de peur de 9 m lorsque cela permet aussi de rester hors de leur portée de mêlée
+
+step: Un adversaire parvient au contact
+  do: S'éloigner en vol vers un obstacle ou ses serviteurs, puis reprendre les attaques à l'éclair dès que possible
+  note: Sa décharge électrique est une défense ; le bloc fourni ne précise pas son déclenchement et ne permet pas d'en faire une attaque volontaire
+
+## Repli
+
+step: Ses points de vie tombent à 7 ou moins
+  do: Rompre le combat en volant vers son itinéraire couvert et laisser les zombies couvrir sa fuite s'il en dispose
+  note: Chercher les obstacles et la brume pour échapper aux tirs ; sa réduction des dégâts 10/magie ne suffit pas à protéger ses 22 pv contre les armes magiques
+
+step: La lumière du soleil atteint sa position
+  do: Gagner immédiatement un abri ombragé en vol et poursuivre la fuite sous couvert
+  note: Éviter de traverser une zone ensoleillée pour obtenir un meilleur angle de tir

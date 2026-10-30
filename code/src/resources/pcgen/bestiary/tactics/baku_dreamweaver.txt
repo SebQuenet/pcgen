@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Baku tisseur de rêves, créature magique neutre de taille M, FP 11. Solitaire et intelligent, il recherche les rêves des êtres créatifs et combat les guenaudes nocturnes et les créatures de cauchemar.
+  174 pv ; CA 25, contact 25 ; initiative +11. Deux griffes +19 (2d8+4 et siphon mental), coup de corne +19 (1d8+4) ; allonge 1,50 m. Marche à 9 m, vol parfait à 18 m.
+  Réduction des dégâts 15, surmontée par une arme à la fois magique et en fer froid ; résistance à la magie 22 ; immunité au sommeil et aux effets mentaux.
+
+resource: Énergie psychique | 30 PE par jour | réserve commune ; sommeil profond 3 PE, analyse des rêves 5 PE, voyage onirique 9 PE, chaînes intangibles 6 PE, modification de mémoire 5 PE ; NLS 18
+resource: Pouvoirs magiques | à volonté | invisibilité, berceuse, sommeil (Volonté DD 21), conseil onirique ; NLS 11
+resource: Poings éthérés | constant | les griffes infligent leurs dégâts normaux aux créatures éthérées ; ce pouvoir ne rend pas le baku éthéré
+
+step: Une présence suspecte approche
+  do: Se rendre invisible et observer en vol, avec Discrétion +22 et Perception +25
+  note: perception des pensées et vision dans le noir à 18 m ; repérer les esprits proches même sans les voir, puis choisir une approche qui évite les combattants regroupés
+
+step: Les intrus ne menacent ni le baku ni les rêveurs
+  do: Tenter le dialogue avec Diplomatie +20 et jauger leurs intentions avec Psychologie +22
+
+## Ouverture
+
+step: Des adversaires vulnérables au sommeil totalisent au plus 4 DV
+  do: Employer sommeil à volonté, Volonté DD 21, pour les neutraliser sans dépenser de PE
+  note: explosion de 3 m de rayon ; les plus faibles DV sont affectés en premier ; les créatures immunisées au sommeil échappent à cet effet
+
+step: Une cible vulnérable possède de 5 à 10 DV, à 21 m ou moins
+  do: Employer sommeil profond pour 3 PE, Volonté DD 21, depuis une position protégée
+  note: explosion de 3 m de rayon, plafond de 10 DV au total ; au-delà de 10 DV pour une seule cible, renoncer à cette option
+
+step: Le sommeil est inadapté et une cible isolée est accessible
+  do: Utiliser Attaque en vol : approcher, porter une griffe +19, puis poursuivre le déplacement pour finir hors de portée de mêlée, sur 18 m au total
+  note: une seule attaque ; ce don ne supprime pas les attaques d'opportunité provoquées par le déplacement
+
+## Rounds suivants
+
+step: Une cible dangereuse reste au contact et le baku peut y demeurer
+  do: Attaque à outrance : deux griffes +19 (2d8+4 chacune) et coup de corne +19 (1d8+4)
+  note: chaque griffe qui touche inflige aussi 1d4 point de dégâts à l'Intelligence, la Sagesse ou le Charisme, au choix du baku ; Volonté DD 24 annule ces seuls dégâts de caractéristique
+  note: choisir la caractéristique de magie d'un lanceur de sorts, ou la Sagesse pour affaiblir la Volonté ; concentrer les griffes sur la même cible
+
+step: Plusieurs ennemis peuvent l'entourer ou leurs armes traversent sa réduction des dégâts
+  do: Reprendre les attaques en vol contre une cible isolée ; utiliser les autres rounds pour se rendre invisible et changer d'angle
+  note: une attaque offensive met fin à l'invisibilité ; ne pas rester au sol entre deux assauts
+
+step: Des adversaires intangibles sont à 21 m ou moins
+  do: Dépenser 6 PE en chaînes intangibles, puis maintenir la concentration pour prolonger leur lutte
+  note: aucun jet de sauvegarde, mais résistance à la magie applicable ; les cibles doivent être à 9 m ou moins les unes des autres ; ce sort ne saisit que les créatures intangibles
+
+step: Le combat se déroule dans la Dimension des Rêves
+  do: Employer l'oniromancie pour relancer un jet d'attaque ou de sauvegarde raté, une fois par round
+  note: privilégier une sauvegarde décisive ; ce pouvoir ne fonctionne que dans cette dimension
+
+step: Un ennemi présente son corps lucide à 30 m ou moins dans la Dimension des Rêves
+  do: Consommer son rêve pour expulser immédiatement son corps lucide de cette dimension, sans sauvegarde
+
+## Repli
+
+step: Les points de vie tombent sous 50, ou les ennemis résistent à ses attaques
+  do: Se rendre invisible, puis gagner de la distance en vol ; employer le désengagement si quitter la mêlée l'exposerait trop
+  note: une fois hors d'atteinte, privilégier la fuite plutôt qu'un nouvel assaut
+
+step: Il peut activer son pouvoir de berger des rêves sans être interrompu
+  do: Entrer dans la Dimension des Rêves grâce à ce pouvoir, qui fonctionne comme voyage par les rêves
+  note: rejoindre le rêve de destination prend 30 minutes sur le même plan ; cette durée concerne le trajet après l'entrée dans la dimension

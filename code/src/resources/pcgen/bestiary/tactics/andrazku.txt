@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Andrazku, démon du froid chaotique mauvais de taille M, FP 5 ; 57 pv, CA 18. Prédateur de mêlée qui exploite la glace et les parois pour isoler une victime.
+  Deux coups +10 (1d6+4 chacun), morsure +10 (1d6+4, plus saignement et 1d6 de froid) ; allonge 1,50 m. Déplacement et escalade : 9 m par action de mouvement.
+  Vision dans le noir à 18 m, odorat, télépathie à 30 m. Marche sur la glace : déplacement sans pénalité sur la glace et adhérence aux surfaces glacées.
+
+note: Défenses
+  Réduction des dégâts 5/fer froid ou Bien ; résistance à la magie 16. Immunité au froid, à l'électricité et au poison ; résistance à l'acide 10 et au feu 10.
+  Sa vulnérabilité au feu reste dangereuse malgré sa résistance ; sa Volonté +2 le rend exposé aux effets mentaux qui franchissent sa résistance à la magie.
+
+resource: Effroi | 3/jour | action simple ; portée 12 m ; Volonté DD 13 ; une créature vivante de 5 DV ou moins, effrayée pendant 1d4 rounds, ou secouée pendant 1 round si elle réussit son jet
+resource: Localisation de créature | 3/jour | repérer la direction d'une proie répondant aux conditions du sort
+resource: Téléportation | 3/jour | action simple ; lui-même et au plus 22,5 kg d'objets ; conserver une utilisation pour fuir
+resource: Force du colosse | 1/jour | righteous might ; action simple ; 6 rounds ; taille G et allonge 3 m ; appliquer les ajustements de caractéristiques, de défenses et de dégâts du sort
+resource: Convocation | 1/jour | pouvoir de niveau 3 ; un andrazku, avec 25 % de chances de réussite
+
+step: Une proie est recherchée avant l'affrontement
+  do: Employer l'odorat et, si nécessaire, localisation de créature ; rejoindre un passage glacé ou une paroi qui permet de choisir le point de contact
+  note: Préférer une approche à couvert ; la localisation ne dispense pas de repérer précisément la cible avant de l'attaquer
+
+step: Il dispose du temps nécessaire avant l'arrivée des ennemis
+  do: Tenter la convocation, puis activer force du colosse juste avant le contact
+  note: Garder l'agrandissement pour les six rounds décisifs ; choisir un emplacement assez vaste pour sa taille G
+
+## Ouverture
+
+step: Le combat commence sans préparation et un assaut au contact est imminent
+  do: Activer force du colosse, puis se placer pour menacer la cible prioritaire avec son allonge accrue
+  note: Ce pouvoir consomme son action simple ; il ne porte pas ses attaques ce même round
+
+step: Un adversaire de 5 DV ou moins peut être écarté avant le contact
+  do: Employer effroi sur lui, à 12 m au plus, pour ouvrir un passage vers une cible isolée
+  note: Éviter de dépenser ce pouvoir contre une créature de 6 DV ou plus, qui y est immunisée
+
+step: Une cible est accessible par une trajectoire de charge dégagée, à 18 m au plus
+  do: Charger et porter une seule morsure pour infliger les dégâts physiques, le froid et le saignement
+  note: La marche sur la glace permet de charger sur la glace sans test d'Acrobaties ; une charge ne permet pas les trois attaques
+
+step: Une cible est déjà à portée au début de son tour
+  do: Porter immédiatement une attaque à outrance avec les deux coups et la morsure
+
+## Rounds suivants
+
+step: La victime reste à portée
+  do: Concentrer les deux coups +10 et la morsure +10 sur elle ; privilégier une victime blessée ou peu protégée
+  note: Ces valeurs sont celles de la forme normale, avant les ajustements de force du colosse et d'Attaque en puissance
+
+step: Les attaques touchent facilement une cible peu protégée
+  do: Activer Attaque en puissance avant les jets : malus de 2 aux attaques de mêlée et bonus de 4 aux dégâts physiques de chacune des trois attaques
+  note: Renoncer à ce don au tour suivant si les attaques manquent trop souvent
+
+step: Un allié ou l'andrazku convoqué peut rejoindre la même victime
+  do: Coordonner le placement par télépathie à 30 m et prendre la victime en tenaille
+  note: Le bonus de tenaille favorise les trois attaques ; ne pas compter sur une nouvelle convocation du démon convoqué
+
+step: La victime s'éloigne
+  do: Faire un pas de placement de 1,50 m si cela suffit à retrouver la portée et conserver l'attaque à outrance ; sinon avancer et porter une seule morsure
+  note: Exploiter les surfaces glacées et l'escalade pour contourner les obstacles ; un déplacement ordinaire empêche l'attaque à outrance
+
+step: Un ennemi emploie le feu ou menace de le neutraliser par magie
+  do: Chercher un couvert et concentrer les attaques sur cet ennemi s'il est accessible
+  note: Si un contournement normal est impossible, une téléportation peut permettre de se replacer ; elle consomme l'action simple et ne laisse pas d'attaque ce tour-là
+
+## Repli
+
+step: Points de vie sous 20, ou attaques de feu répétées sans possibilité de riposte
+  do: Employer une téléportation vers un refuge connu, en gardant seulement les objets autorisés
+  note: Si un pas de placement de 1,50 m suffit à sortir des cases menacées, le faire avant d'utiliser le pouvoir ; la téléportation n'emporte aucun allié ni prisonnier
+
+step: Téléportation épuisée ou inutilisable
+  do: Effectuer une retraite vers une paroi glacée, puis exploiter l'escalade à 9 m par action de mouvement pour gagner un abri
+  note: Un allié encore présent peut couvrir la fuite ; éviter de rester exposé pour tenter un dernier pouvoir offensif

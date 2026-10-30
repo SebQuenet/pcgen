@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Bottled Armada : essaim neutre de navires miniatures en bouteille, animé par des esprits de l'eau qui veulent chasser les marins des mers.
+  64 pv ; CA 18 ; réduction des dégâts 5/— ; immunités des créatures artificielles. Vol parfait à 12 m ; attaque d'essaim : 2d6+4 et distraction.
+
+note: Défenses d'essaim
+  Les armes tranchantes et perforantes infligent la moitié des dégâts ; les effets de zone infligent 50 % de dégâts supplémentaires. Éviter de rester à découvert face à ces derniers.
+
+step: Des intrus approchent
+  do: Les repérer avec la vision dans le noir à 18 m et la vision nocturne, puis se rapprocher en volant
+  note: Intelligence 5 : privilégier une poursuite directe et des objectifs simples ; l'armada comprend l'aquatique et le commun
+
+resource: Éclatement des bouteilles | automatique, sans limite indiquée | Quand l'armada assaille une créature ou subit des dégâts d'arme, une bouteille éclate : toutes les créatures dans un rayon de 1,50 m subissent 1d6 dégâts perforants, Réflexes DD 13 pour réduire de moitié
+
+## Ouverture
+
+step: Une cible est à 12 m ou moins
+  do: Voler jusque dans sa case et y terminer le déplacement : 2d6+4 dégâts automatiques, sans jet d'attaque, puis appliquer l'éclatement des bouteilles
+  note: Distraction : une créature vivante blessée doit réussir un jet de Vigueur DD 16 ou être nauséeuse pendant 1 round ; entrer dans son espace peut provoquer une attaque d'opportunité
+
+step: Les adversaires sont plus éloignés
+  do: Effectuer un double déplacement en vol, jusqu'à 24 m, pour les rejoindre ; terminer dans la case d'une cible si possible
+  note: Les dégâts d'essaim dépendent de la position finale, sans action d'attaque séparée
+
+## Rounds suivants
+
+step: La cible reste dans la case occupée
+  do: Rester sur elle et renouveler les dégâts d'essaim, la distraction et l'éclatement des bouteilles chaque round
+
+step: La cible s'éloigne
+  do: La poursuivre en vol et terminer de nouveau dans sa case ; préférer une cible proche si elle devient inaccessible
+
+step: Plusieurs adversaires sont voisins
+  do: Occuper la case d'un adversaire dont les compagnons sont à 1,50 m ou moins pour les atteindre aussi avec les éclats
+  note: L'éclatement touche toutes les créatures dans son rayon, y compris d'éventuels alliés ; les dégâts d'essaim touchent seulement les créatures dont l'espace est occupé
+
+step: Un adversaire inflige des dégâts avec une arme
+  do: Déclencher immédiatement l'éclatement des bouteilles, même en dehors du tour de l'armada
+  note: Une attaque entièrement absorbée par la réduction des dégâts ne déclenche pas cet effet
+
+## Repli
+
+step: Les marins résistent encore
+  do: Continuer à les harceler, même avec peu de pv
+  note: Les esprits peuvent considérer leur destruction par les marins comme une victoire ; à 0 pv, l'armada est détruite
+
+step: Les intrus sont partis ou un maître auquel elle est liée ordonne le retrait
+  do: Rompre le contact et s'éloigner en vol à 12 m par déplacement

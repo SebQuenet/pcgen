@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Grand cerf de taille G, animal neutre de FP 3 : 42 pv, CA 17, déplacement de 12 m par round.
+  Coup de bois +7 (1d8+5) et deux sabots +5 chacun (1d6+2). Il occupe un espace de 3 m et possède une allonge de 1,50 m.
+  Perception +12, odorat et vision nocturne : il repère les menaces proches et réagit instinctivement.
+
+step: Une menace approche
+  do: La surveiller et conserver une voie dégagée pour avancer ou fuir
+  note: Privilégier un affrontement simple contre la menace la plus proche.
+
+step: Il accompagne une harde
+  do: S'interposer entre la menace et les cerfs
+  note: Éviter de poursuivre un adversaire qui s'éloigne de la harde.
+
+## Ouverture
+
+step: Un ennemi est accessible par une charge en ligne droite, entre 3 m et 24 m
+  do: Charger et porter un coup de bois +9 (1d8+5)
+  note: La charge donne une seule attaque ; sa CA passe à 15 jusqu'au début de son prochain tour.
+
+step: La charge est impossible, mais un déplacement de 12 m suffit pour atteindre l'ennemi
+  do: Avancer et porter un coup de bois +7 (1d8+5)
+  note: Après ce déplacement, il ne porte qu'une attaque.
+
+step: Un ennemi est déjà à portée de 1,50 m
+  do: Effectuer une attaque à outrance : coup de bois +7 (1d8+5), puis deux sabots +5 chacun (1d6+2)
+
+## Rounds suivants
+
+step: Une cible reste à portée
+  do: Répéter l'attaque à outrance contre cette cible
+  note: Si nécessaire, effectuer un pas de placement de 1,50 m pour conserver le contact avant l'attaque à outrance.
+
+step: La cible s'écarte au-delà d'un pas de placement
+  do: Avancer jusqu'à elle et porter un seul coup de bois +7 (1d8+5)
+  note: Si elle fuit et ne menace plus le cerf ou sa harde, cesser la poursuite.
+
+step: Des adversaires l'attaquent à distance et restent inaccessibles
+  do: Gagner un couvert ou s'éloigner des tirs
+
+## Repli
+
+step: Ses points de vie tombent à 14 ou moins
+  do: Se retirer jusqu'à 24 m vers une issue dégagée
+  note: L'action de retraite évite les attaques d'opportunité pour la première case quittée seulement ; éviter ensuite les autres zones menacées.
+
+step: Il est dégagé du contact et dispose d'une ligne droite libre
+  do: Courir jusqu'à 60 m par round grâce au don Course pour distancer les poursuivants

@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Orque sanguinaire, humanoïde de taille M, chaotique mauvais et brutal : 8 PV, CA 15, déplacement de 9 m, allonge de 1,50 m.
+  Grande hache +5 (1d12+6, x3), morsure secondaire +0 (1d4+2) ; javeline +2 (1d6+4). Sa frénésie renforce le corps à corps et sa férocité le maintient conscient sous 0 PV.
+  Vision dans le noir à 18 m et odorat ; Perception -2, Volonté -2. Il privilégie l'assaut direct.
+
+resource: Frénésie | 1/jour | S'il sent ou goûte du sang pendant le combat, il peut entrer en frénésie au round suivant ; il ne peut pas y mettre fin volontairement.
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Se poster dans l'ombre ou l'obscurité et laisser approcher l'ennemi.
+  note: Le soleil vif et le sort lumière du jour l'éblouissent : -1 aux jets d'attaque et aux tests de Perception fondés sur la vue.
+
+step: Un ennemi est dissimulé ou difficile à voir
+  do: Utiliser son odorat pour détecter sa présence et chercher à se rapprocher.
+  note: L'odorat ne lui permet pas de voir la cible ni d'ignorer ses protections visuelles.
+
+## Ouverture
+
+step: Un ennemi est accessible avec un déplacement de 9 m au plus
+  do: Avancer jusqu'à portée de 1,50 m et porter une attaque de grande hache +5 (1d12+6, x3).
+  note: Après ce déplacement, il ne peut pas ajouter sa morsure à une attaque simple.
+
+step: L'ennemi reste hors d'atteinte au corps à corps
+  do: Avancer de 9 m vers lui et lancer une javeline +2 (1d6+4) si le tir est possible.
+
+step: Un ennemi commence déjà à portée de 1,50 m
+  do: Faire une attaque à outrance : grande hache +5 (1d12+6, x3), puis morsure +0 (1d4+2).
+
+## Rounds suivants
+
+step: Il a senti ou goûté du sang au round précédent et sa frénésie est disponible
+  do: Déclencher la frénésie et s'acharner sur son adversaire jusqu'à la mort de l'un des deux.
+  note: Force 20, Constitution 16, CA 13 ; ses PV actuels et maximaux augmentent de 1, portant son maximum à 9 PV.
+  note: En frénésie, grande hache +6 (1d12+7, x3), morsure +1 (1d4+2) ; javeline +2 (1d6+5).
+
+step: Il peut rester au contact sans se déplacer de plus de 1,50 m
+  do: Faire une attaque à outrance avec la grande hache et la morsure sur le même adversaire.
+  note: Un pas de placement de 1,50 m permet de conserver cette attaque à outrance.
+
+step: La cible semble facile à toucher
+  do: Utiliser Attaque en puissance pour augmenter les dégâts.
+  note: Hors frénésie : grande hache +4 (1d12+9, x3), morsure -1 (1d4+3). En frénésie : grande hache +5 (1d12+10, x3), morsure +0 (1d4+3).
+  note: Le malus s'applique aux deux attaques ; éviter ce choix si les attaques manquent souvent.
+
+step: L'adversaire s'éloigne au-delà d'un pas de placement
+  do: Le suivre jusqu'à 9 m et porter une seule attaque de grande hache s'il revient à portée.
+
+## Repli
+
+step: La frénésie est active
+  do: Continuer à poursuivre et à attaquer son adversaire ; ne pas organiser de repli volontaire.
+
+step: Hors frénésie, il ne lui reste que 1 à 3 PV et une issue existe
+  do: Rompre le contact par une retraite et rejoindre l'ombre ou ses compagnons.
+
+step: Ses PV passent sous 0 sans atteindre son seuil de mort
+  do: Continuer à combattre grâce à la férocité ; s'il est au contact, porter une seule attaque de grande hache par round.
+  note: Il est chancelant : une seule action de mouvement ou simple par round, sans attaque à outrance ; il perd 1 PV par round.
+  note: Il meurt à -14 PV, ou à -16 PV tant que la frénésie maintient sa Constitution à 16.

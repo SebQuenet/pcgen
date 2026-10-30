@@ -1,0 +1,90 @@
+## Avant le combat
+
+note: Profil
+  Naga de la mort, grand mort-vivant loyal mauvais, intelligent et prudent : 85 PV, CA 24, déplacement de 12 m et vision dans le noir à 18 m.
+  Morsure +15 (1d8+4) à 1,50 m ; dard +12 (2d4+4 plus poison) à 3 m ; souffle atrophiant DD 22. Ses sorts de NLS 9 lui permettent de se protéger, de gêner les déplacements et de frapper à distance.
+  Immunités des morts-vivants ; Volonté +4 : éviter de s'exposer aux effets qui peuvent affecter un mort-vivant et demandent ce jet.
+
+note: Pouvoirs incomplets
+  Le bloc ne précise ni les effets, la zone et la recharge du souffle, ni les paramètres du poison. Employer leur texte de règle pour les résoudre ; ne pas inventer de dégâts, de DD ou de fréquence.
+  La bénédiction infernale est une défense mentionnée dans le profil ; ne pas ajouter arbitrairement un bonus à la CA 24 fournie.
+
+resource: Sorts de niveau 4 | 5/jour | Réserve commune : invisibilité suprême, peau de pierre
+resource: Sorts de niveau 3 | 7/jour | Réserve commune : déplacement, rapidité, éclair
+resource: Sorts de niveau 2 | 7/jour | Réserve commune : grâce féline, contrôle des morts-vivants, rayon ardent, toile d'araignée
+resource: Sorts de niveau 1 | 7/jour | Réserve commune : armure de mage, projectile magique, rayon affaiblissant, bouclier, image silencieuse
+resource: Sorts de niveau 0 | À volonté | Notamment détection de la magie et son imaginaire
+
+step: Les intrus approchent sans l'avoir repéré
+  do: Observer depuis un couvert avec Discrétion +17 et Perception +17 ; choisir un passage étroit avec une issue de fuite
+  note: Garder ses distances ; son allonge au dard ne protège pas de tous les adversaires capables de l'atteindre à 3 m.
+
+step: Il dispose du temps nécessaire pour se préparer
+  do: Lancer successivement armure de mage, puis grâce féline et bouclier à l'approche du combat
+  note: Durées au NLS 9 : 9 heures pour armure de mage ; 9 minutes pour grâce féline et bouclier. Décompter chaque lancement de sa réserve de niveau.
+
+step: Il possède la composante coûteuse de peau de pierre
+  do: Lancer peau de pierre avant le combat
+  note: Nécessite 250 po de poussière de diamant ; Dispense de composantes ne supprime pas ce coût. Réduction des dégâts 10/adamantium, jusqu'à 90 points absorbés, pendant 90 minutes au maximum.
+
+step: L'affrontement est imminent
+  do: Lancer invisibilité suprême juste avant d'engager
+  note: Durée de 9 rounds ; ses attaques ne mettent pas fin à cette invisibilité. Garder si possible un sort de niveau 4 pour le repli.
+
+## Ouverture
+
+step: Pris par surprise, sans protection contre les attaques
+  do: Lancer invisibilité suprême ; employer déplacement si les sorts de niveau 4 doivent être conservés
+  note: Déplacement dure 9 rounds et impose 50 % de chances d'échec aux attaques concernées ; ne pas cumuler ces pourcentages avec ceux de l'invisibilité.
+
+step: Déjà protégé, plusieurs ennemis empruntent un passage comportant des points d'ancrage
+  do: Lancer toile d'araignée pour gêner leur progression et séparer les combattants de leurs soutiens
+  note: Rester du côté libre de la toile et conserver son propre accès à la sortie.
+
+step: Déjà protégé, plusieurs ennemis sont alignés sans allié sur la trajectoire
+  do: Lancer éclair : 9d6 dégâts d'électricité, Réflexes DD 17 pour moitié
+  note: Choisir cet angle de tir avant de se laisser enfermer au contact.
+
+## Rounds suivants
+
+step: Le souffle est disponible et sa zone permet de toucher plusieurs adversaires
+  do: Employer le souffle atrophiant, DD 22
+  note: Ne le répéter qu'en respectant sa recharge réelle ; ses paramètres manquants doivent être vérifiés avant utilisation.
+
+step: Une cible dangereuse reste à distance et aucune attaque de zone n'est avantageuse
+  do: Lancer rayon ardent : deux rayons, chacun avec une attaque de contact à distance +11 et 4d6 dégâts de feu
+  note: Concentrer les deux rayons sur la même cible pour tenter de la mettre hors de combat.
+
+step: Un combattant puissant menace de le rejoindre
+  do: Lancer rayon affaiblissant, contact à distance +11, Vigueur DD 15 pour réduire l'effet de moitié
+  note: Au NLS 9, la pénalité de Force vaut 1d6+4 ; elle ne se cumule pas avec une autre application du même sort.
+
+step: Une cible blessée reste visible et accessible au sort
+  do: Lancer projectile magique : cinq projectiles, pour un total de 5d4+5 dégâts s'ils visent tous cette cible
+  note: Préférer ce sort lorsqu'un jet d'attaque risquerait d'échouer ; tenir compte des protections adverses contre projectile magique.
+
+step: Un ennemi est à 3 m, hors de portée de la morsure
+  do: Porter une attaque de dard +12, pour 2d4+4 dégâts plus poison
+  note: Ne pas avancer au contact uniquement pour ajouter la morsure.
+
+step: Un ennemi est à 1,50 m et rester au contact est acceptable
+  do: Effectuer une attaque à outrance : morsure +15 (1d8+4) et dard +12 (2d4+4 plus poison)
+  note: Cette séquence exige une action complexe ; après un déplacement ordinaire, ne porter qu'une attaque.
+
+step: Le combat va durer et plusieurs nagas du nid peuvent profiter du sort
+  do: Lancer rapidité sur lui-même et les alliés présents à portée
+  note: Durée de 9 rounds ; sa vitesse passe à 21 m. L'attaque supplémentaire de morsure exige une attaque à outrance ; appliquer aussi les bonus du sort.
+
+step: Il doit lancer un sort alors qu'un adversaire le menace
+  do: Faire un pas de 1,50 m vers une case hors de l'allonge adverse si possible ; sinon, lancer sur la défensive avec Incantation de combat
+  note: Un pas de 1,50 m ne suffit pas si l'adversaire conserve une allonge permettant de le menacer.
+
+## Repli
+
+step: Ses PV tombent sous 30 ou les ennemis percent ses protections
+  do: Rompre le combat sous invisibilité suprême, puis gagner l'issue choisie à 12 m par déplacement, ou 21 m sous rapidité
+  note: Lancer le sort consomme l'action simple du round ; le double déplacement ne devient possible qu'au round suivant. L'invisibilité ne garantit pas la fuite contre un ennemi qui la perce.
+
+step: Des poursuivants risquent de le rattraper
+  do: Lancer toile d'araignée dans un passage adapté, puis poursuivre la fuite en contournant sa zone
+  note: Si aucun sort défensif ne reste disponible, utiliser les couverts et les embranchements du repaire pour rompre la ligne de vue.

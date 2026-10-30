@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Caypup, petit extérieur natif chaotique bon ressemblant à un jeune dogue roux ; il aide les innocents et s'oppose aux mauvaises actions.
+  Morsure +6 (1d4+3), allonge 1,50 m ; déplacement de 9 m. Il combat seul ou en meute de 2 à 4.
+  22 points de vie, CA 14 ; réduction des dégâts 5/fer froid. Initiative +4, vision dans le noir à 18 m et odorat.
+  Il comprend le céleste mais ne parle pas ; son intelligence limitée favorise les décisions simples.
+
+resource: Déblocage | 3/jour | pouvoir magique, NLS 3 ; portée 39 m ; test de niveau de lanceur de sorts à +13 contre le DD de la serrure
+resource: Ouverture/fermeture | 3/jour | pouvoir magique, NLS 3 ; portée 9 m ; objet de 30 livres au plus, sans verrou ni résistance
+resource: Stabilisation | 3/jour | pouvoir magique, NLS 3 ; portée 9 m ; stabilise une créature vivante mourante sans lui rendre de points de vie
+resource: Porte dimensionnelle | 1/jour | pouvoir magique, NLS 3 ; portée 156 m ; lui-même et au plus 5 livres d'objets, aucun passager
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +5, l'odorat et la vision dans le noir ; rester près des alliés et repérer une issue.
+
+step: Un passage verrouillé bloque l'accès ou la retraite avant le combat
+  do: Tenter déblocage pour dégager le passage avant d'engager les adversaires.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m
+  do: Le mordre à +6 (1d4+3), en privilégiant celui qui menace un allié vulnérable.
+
+step: Un adversaire est accessible avec un déplacement de 9 m
+  do: S'approcher puis porter une morsure à +6 (1d4+3).
+  note: Choisir un trajet qui évite les attaques d'opportunité des autres adversaires.
+
+step: Les adversaires restent trop loin pour être mordus ce round
+  do: Se rapprocher en profitant des abris, à 9 m par action de mouvement.
+  note: Garder porte dimensionnelle pour la fuite lorsque l'approche à pied reste possible.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer à le mordre ; concentrer les attaques de la meute sur la même cible.
+
+step: Un allié permet une prise en tenaille sans déplacement dangereux
+  do: Se placer de l'autre côté de la cible puis mordre à +8 (1d4+3), bonus de prise en tenaille inclus.
+  note: Sa morsure ne possède aucun effet de croc-en-jambe automatique.
+
+step: Un allié vivant est mourant à 9 m ou moins et le caypup peut utiliser un pouvoir sans être menacé
+  do: Employer stabilisation sur cet allié plutôt que mordre ce round.
+  note: Il faudra recommencer si le blessé subit de nouveaux dégâts et recommence à mourir.
+
+## Repli
+
+step: Points de vie sous 8, ou adversaire au fer froid qui prend nettement le dessus
+  do: Si cela suffit à sortir des cases menacées, faire un pas de placement de 1,50 m ; employer porte dimensionnelle vers un emplacement libre et sûr, à 156 m au plus.
+  note: Agilité dimensionnelle permet d'utiliser les actions restantes après la téléportation ; celle-ci consomme son action simple et ne transporte aucun allié.
+
+step: Porte dimensionnelle déjà utilisée et retraite nécessaire
+  do: Effectuer une retraite jusqu'à 18 m en action de round complet, vers un abri ou les alliés.
+  note: Seule sa case de départ est protégée contre les attaques d'opportunité des ennemis visibles ; éviter les autres cases menacées.
+
+step: Une porte légère non verrouillée peut ralentir les poursuivants une fois le caypup hors de leur portée
+  do: Utiliser ouverture/fermeture pour la refermer à 9 m ou moins.
+  note: La porte reste déverrouillée et les poursuivants peuvent la rouvrir.

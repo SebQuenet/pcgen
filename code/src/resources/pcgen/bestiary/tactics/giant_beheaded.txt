@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Décapité géant : tête animée de Grande taille, mort-vivant neutre mauvais et dépourvu d'intelligence. 19 pv ; CA 13.
+  Coup +4 (1d8+3) ; allonge de 1,50 m ; espace occupé de 3 m.
+  Vol de 9 m par round, manœuvrabilité parfaite ; vision dans le noir à 18 m ; Perception −1. Immunités des morts-vivants.
+
+step: Aucun adversaire n'est encore repéré
+  do: Rester sur place ou poursuivre son déplacement jusqu'à percevoir une cible
+  note: Son absence d'intelligence exclut les préparatifs tactiques élaborés
+
+## Ouverture
+
+step: Une cible est à plus de 1,50 m, mais peut être atteinte avec un déplacement de 9 m
+  do: Voler jusqu'à portée et porter un coup +4 (1d8+3)
+  note: Le vol permet de franchir les obstacles au sol ; il faut un passage assez large pour sa taille
+
+step: Une cible est déjà à portée de 1,50 m
+  do: Porter un coup +4 (1d8+3)
+
+step: Aucune cible ne peut être frappée après un déplacement de 9 m
+  do: Se rapprocher en volant, avec un double déplacement de 18 m au maximum
+  note: Ce double déplacement ne laisse pas d'action pour attaquer
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter le coup +4 (1d8+3) à chaque round
+  note: Il ne possède qu'une attaque de coup ; une attaque à outrance n'ajoute aucun coup supplémentaire
+
+step: La cible s'éloigne ou devient inaccessible
+  do: La poursuivre en vol ; se déplacer de 9 m au maximum pour pouvoir encore attaquer, ou de 18 m sans attaquer
+  note: Il n'a aucune attaque à distance ; contre une cible inaccessible, il cherche simplement à atteindre le contact
+
+step: La cible est abattue et un autre adversaire est perceptible
+  do: Se tourner vers l'adversaire accessible le plus proche et reprendre les coups
+  note: Il ne choisit pas ses victimes selon leur classe ou leurs défenses
+
+## Repli
+
+step: Il subit des dégâts, même près de 0 pv
+  do: Continuer à poursuivre et à frapper jusqu'à sa destruction
+  note: Dépourvu d'intelligence, il ne prévoit pas de fuite pour préserver son existence

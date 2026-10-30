@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Scarabée juggernaut, créature magique souterraine de taille TG, FP 14. Intelligence 2 : le jouer comme une bête aux réactions simples, qui cherche le contact.
+  210 points de vie, CA 29, CA de contact 7 ; déplacement de 9 m. Morsure +28 (4d10+15, critique 19–20).
+  Immunisé à l'acide et aux effets mentaux. Vision dans le noir à 36 m et vision nocturne ; aucune attaque à distance indiquée.
+
+step: Des intrus approchent dans l'obscurité
+  do: Les repérer avec sa vision dans le noir et se tourner vers le passage par lequel ils arrivent
+  note: Son initiative est de +0 ; ne pas lui attribuer automatiquement la première action.
+
+## Ouverture
+
+step: Un adversaire est déjà à portée de morsure
+  do: Le mordre à +28 pour 4d10+15 dégâts
+
+step: Un adversaire est accessible après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à portée et porter une morsure à +28
+  note: Choisir une cible directement accessible, sans chercher à contourner tout le groupe pour atteindre un adversaire précis.
+
+step: Un adversaire plus éloigné est accessible par une charge en ligne droite dégagée
+  do: Charger sur une distance maximale de 18 m et mordre
+  note: La charge porte l'attaque à +30 et abaisse sa CA à 27 jusqu'au début de son prochain tour.
+
+step: Aucun adversaire ne peut être atteint ce round
+  do: Avancer vers le plus proche ; effectuer un double déplacement, jusqu'à 18 m, si le passage le permet
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter la morsure à +28 à chaque tour
+  note: L'attaque à outrance ne lui donne qu'une morsure ; son bonus de base à l'attaque de +20 n'ajoute pas de morsures supplémentaires.
+
+step: La cible tombe ou devient inaccessible
+  do: Se rabattre sur l'adversaire accessible le plus proche et reprendre les morsures
+
+step: Les adversaires reculent et attaquent à distance
+  do: Les poursuivre à 9 m par déplacement et charger dès qu'une ligne droite dégagée le permet
+  note: Sa CA de contact de 7 le rend facile à toucher avec les attaques de contact ; éviter de le laisser immobile sous les tirs.
+
+## Repli
+
+step: Points de vie sous 50 et une issue est accessible
+  do: Utiliser l'action de retraite pour fuir par le passage libre le plus proche, jusqu'à 18 m si le terrain le permet
+  note: Ce seuil est un repère de conduite pour le meneur, pas une capacité du monstre.
+
+step: La fuite est impossible
+  do: Continuer à mordre l'adversaire qui bloque le passage

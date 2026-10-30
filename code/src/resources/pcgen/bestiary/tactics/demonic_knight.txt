@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Chevalier démoniaque, extérieur chaotique mauvais des Abysses, intelligent et fidèle à son maître. Il affaiblit les adversaires puissants avant de les achever au corps à corps.
+  Épée longue +1 anarchique +17/+12 (1d8+7, critique 19–20), ou deux coups +15 (1d6+6) s'il est désarmé ; allonge de 1,50 m. Souffle de non-vie, aura de terreur à 9 m (Volonté DD 18) et invocation de démons.
+  94 pv ; CA 31, contact 14 ; réduction des dégâts 10/fer froid ou magie ; résistance à la magie 23. Déplacement de 6 m en armure, 9 m de base ; vision dans le noir à 18 m ; Perception +26.
+
+resource: Détection de la magie, détection de l'invisibilité, mur de glace | à volonté | pouvoirs magiques, NLS 20 ; mur de glace DD 18
+resource: Dissipation de la magie | 2/jour | NLS 20
+resource: Boule de feu | 1/jour | Réflexes DD 17
+resource: Symbole de douleur | 1/jour | Vigueur DD 19
+resource: Symbole de terreur | 1/jour | Volonté DD 20
+resource: Convocation de démons | 1/jour | 50 % de réussite ; au choix, 1d4 démons d'ombre, 1 vrock, 1 marilith, 2 glabrezus ou 2 hezrous
+resource: Souffle de non-vie | une fois tous les 1d4 rounds | cône de 3 m ; Réflexes DD 20 ou 2d4 dégâts de Force ; une victime réduite à Force 0 meurt
+
+step: Il peut se préparer avant l'arrivée des intrus
+  do: Activer détection de l'invisibilité ; examiner les accès avec détection de la magie
+  note: Ces pouvoirs servent à repérer les menaces avant de choisir son adversaire et son terrain.
+
+step: Il dispose du temps nécessaire pour préparer son repaire
+  do: Inscrire les symboles de douleur et de terreur sur les accès que les intrus devront emprunter ; prévoir des déclencheurs et exempter ses alliés
+  note: Préparer les symboles avant l'affrontement : leur inscription demande 10 minutes chacun. Les disposer sur des surfaces fixes, visibles au passage.
+
+step: Il est accompagné de 2 à 4 démons d'ombre
+  do: Leur donner en abyssal l'ordre de harceler les adversaires isolés et de couvrir ses flancs
+
+## Ouverture
+
+step: Les intrus arrivent ensemble et peuvent se soutenir
+  do: Utiliser mur de glace pour couper le groupe et isoler un combattant des tireurs et lanceurs de sorts
+  note: Conserver un passage vers la cible choisie et une issue de repli ; le mur doit séparer les ennemis plutôt que lui barrer l'accès à tous.
+
+step: Plusieurs ennemis restent groupés à distance, sans allié dans la zone
+  do: Lancer boule de feu sur eux (Réflexes DD 17), si aucun isolement immédiat par mur de glace n'est plus utile
+
+step: Un adversaire puissant se trouve dans le cône de 3 m
+  do: Utiliser le souffle de non-vie avant d'engager le duel à l'épée
+  note: Réflexes DD 20 ou 2d4 dégâts de Force ; orienter le cône pour éviter les alliés et toucher plusieurs ennemis si possible.
+
+step: Il avance vers un ennemi isolé
+  do: Exploiter l'aura de terreur à 9 m (Volonté DD 18), puis porter une attaque d'épée +17 s'il doit se déplacer pour atteindre sa cible
+  note: Une attaque à outrance exige de rester sur place, à un pas de placement de 1,50 m près.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée de l'épée
+  do: Attaque à outrance à l'épée +17/+12 (1d8+7, critique 19–20), en concentrant les coups sur l'adversaire affaibli ou isolé
+  note: S'il est désarmé, employer à la place ses deux coups +15 (1d6+6).
+
+step: Le souffle est de nouveau disponible et une cible dangereuse est à 3 m ou moins
+  do: Réutiliser le souffle de non-vie pour diminuer sa Force, surtout si elle a déjà été affaiblie
+  note: Le souffle remplace les attaques de ce round ; suivre le délai de 1d4 rounds entre deux utilisations.
+
+step: Un humanoïde est tué par le souffle de non-vie
+  do: Continuer le combat en surveillant sa transformation, puis ordonner au démon d'ombre créé d'attaquer un ennemi isolé
+  note: La création de rejeton prend 2d4 rounds ; le démon reste asservi au chevalier jusqu'à la mort de celui-ci. Une victime tuée à l'épée ne déclenche pas ce pouvoir.
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Employer une dissipation de la magie ciblée, puis reprendre l'offensive au round suivant
+  note: Réserver les deux utilisations aux effets qui changent réellement l'issue du combat.
+
+step: Deux adversaires sont adjacents entre eux et tous deux à sa portée
+  do: Envisager Enchaînement pour frapper le second si la première attaque touche
+  note: Cette action remplace l'attaque à outrance et impose un malus de −2 à la CA jusqu'au prochain tour ; l'éviter s'il risque d'être encerclé.
+
+step: Ses attaques touchent aisément une cible peu protégée
+  do: Envisager Attaque en puissance pour augmenter les dégâts
+  note: Conserver les bonus d'attaque normaux contre une défense élevée.
+
+step: Des renforts rejoignent le combat ou les ennemis rétablissent leur formation
+  do: Poser un nouveau mur de glace pour limiter le nombre d'adversaires capables de l'attaquer
+  note: Ses jets de Réflexes +4 et de Volonté +2 rendent préférable la coupure des lignes de vue avec les lanceurs de sorts.
+
+## Repli
+
+step: Le corps à corps tourne à son désavantage et la convocation reste disponible
+  do: Tenter de convoquer une marilith ou deux glabrezus pour reprendre l'avantage ou couvrir son départ
+  note: L'unique tentative quotidienne a 50 % de chances de réussir ; prévoir de se retirer même en cas d'échec.
+
+step: Points de vie sous 30, ou adversaires capables de le submerger malgré ses défenses
+  do: Se désengager ; une fois hors de leur allonge, dresser un mur de glace entre lui et ses poursuivants, puis gagner une issue à 6 m par déplacement
+  note: Employer des tours distincts selon la situation : le désengagement et le pouvoir magique ne se cumulent pas dans le même tour. Ordonner aux démons présents de couvrir la fuite.

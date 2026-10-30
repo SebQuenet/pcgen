@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Prêtresse humaine de Besmara de niveau 5, chaotique neutre ; 33 pv, CA 17, initiative +5, déplacement de 9 m. Elle soutient ses alliés, soigne et gêne l'ennemi avec le brouillard.
+  Rapière de maître +4 (1d6, critique 18-20) ou matraque +3 (1d6 non létaux), allonge de 1,50 m. À distance : stalactite de glace ou explosion orageuse, attaques de contact à distance +4 jusqu'à 9 m, chacune infligeant 1d6+2 dégâts.
+
+resource: Stalactite de glace | 6/jour | 1d6+2 dégâts de froid
+resource: Explosion orageuse | 6/jour | 1d6+2 dégâts non létaux ; cible touchée : -2 aux jets d'attaque pendant 1 round
+resource: Bénédiction et aide | 1 chacune/jour | durée de 5 minutes chacune
+resource: Nappe de brouillard | 1/jour | portée de 45 m, rayon de 6 m, durée de 50 minutes
+resource: Brume de dissimulation | 1/jour | rayon de 6 m autour d'elle à l'incantation ; immobile, durée de 5 minutes
+resource: Respiration aquatique | 1/jour | 10 heures à répartir également entre les bénéficiaires touchés
+resource: Soins préparés | 1 de chaque/jour | soins légers : 1d8+5 pv ; soins modérés : 2d8+5 pv, au contact
+resource: Délivrance de la peur | 1/jour | supprime temporairement une peur existante ; bonus de moral de +4 contre la peur, 10 minutes
+resource: Baguette de soins modérés | 9 charges | une charge par soin au contact
+resource: Baguette de force de taureau | 8 charges | une charge par utilisation ; +4 de bonus d'altération en Force
+resource: Potions de soins légers | 5 potions | une potion consommée par soin
+resource: Eau bénite | 2 flasques | à réserver aux morts-vivants et aux Extérieurs maléfiques
+
+step: Elle dispose de quelques rounds avant l'affrontement
+  do: Lancer aide sur elle-même pour gagner 1d8+5 pv temporaires et +1 de moral aux attaques et aux sauvegardes contre la peur
+  note: S'il reste un round et que des alliés sont présents, lancer bénédiction pour leur donner aussi +1 de moral aux attaques et contre la peur ; ces bonus ne se cumulent pas avec ceux d'aide
+
+step: Un allié de mêlée peut recevoir une préparation supplémentaire
+  do: Utiliser une charge de force de taureau sur lui ; seule, se renforcer si le corps à corps paraît inévitable
+  note: Sur elle-même, la rapière passe à +6 (1d6+2) et la matraque à +5 (1d6+2 non létaux), avant le bonus d'aide ou de bénédiction
+
+step: Une immersion est probable
+  do: Lancer respiration aquatique avant le combat, sur elle-même et les alliés concernés
+  note: Le sort permet de respirer sous l'eau ; sa Natation reste de +1 sans autre modification
+
+## Ouverture
+
+step: Des alliés combattent avec elle et bénédiction n'est pas déjà active
+  do: Lancer bénédiction en restant derrière eux, avec les bénéficiaires à 15 m ou moins
+
+step: Un ennemi visible se trouve à 9 m ou moins et les préparatifs sont terminés
+  do: Employer explosion orageuse contre un combattant dangereux ; préférer stalactite de glace pour infliger des dégâts de froid à une cible à abattre
+  note: Chaque pouvoir demande une action simple ; viser de préférence un adversaire qui n'est pas engagé en mêlée avec un allié, pour éviter le malus de -4 au tir dans une mêlée
+
+step: Des tireurs dominent l'échange ou elle risque d'être débordée
+  do: Placer nappe de brouillard entre les ennemis et son groupe, puis se déplacer vers un abri
+  note: Le brouillard masque aussi sa propre vue : elle ne continue pas à viser normalement à travers lui
+
+## Rounds suivants
+
+step: Elle peut garder un ennemi visible entre 3 m et 9 m
+  do: Rester derrière ses alliés et employer un pouvoir de domaine par round, selon la cible
+  note: Répéter explosion orageuse sur la principale menace pour renouveler son malus d'attaque ; choisir stalactite contre une cible insensible aux dégâts non létaux, si elle est vulnérable au froid
+
+step: Un ennemi arrive au contact
+  do: Faire un pas de placement de 1,50 m pour sortir de son allonge avant d'utiliser un sort ou un pouvoir ; sinon, frapper à la rapière
+  note: Pour capturer plutôt que tuer, choisir la matraque. Sous force de taureau, appliquer les valeurs renforcées indiquées avant le combat
+
+step: Un soin ou un sort défensif doit être lancé alors qu'elle reste menacée
+  do: Lancer sur la défensive : concentration +12 grâce à Magie de guerre, DD 17 pour un sort de niveau 1 ou DD 19 pour un sort de niveau 2
+  note: Un échec fait perdre le sort. Une baguette peut être activée sans attaque d'opportunité ; sortir ou boire une potion peut en provoquer
+
+step: Elle-même ou un allié essentiel a perdu assez de pv pour profiter d'un soin
+  do: Employer soins modérés au contact ; réserver soins légers aux blessures moins graves et utiliser la baguette pour prolonger les soins
+  note: Soigner à couvert si possible ; stabilisation, à volonté, sert à empêcher un allié mourant de perdre davantage de pv quand elle ne peut pas le rejoindre
+
+step: La peur neutralise un allié ou compromet son propre combat
+  do: Lancer délivrance de la peur sur la victime
+
+## Repli
+
+step: Ses pv tombent à 10 ou moins, ou ses alliés ne peuvent plus la protéger
+  do: Lancer brume de dissimulation si elle est encore disponible, puis se déplacer vers une issue ; utiliser nappe de brouillard à la place si elle l'a conservée
+  note: Dans ces brumes, une cible à 1,50 m bénéficie de 20 % de chances de faire rater une attaque ; au-delà, camouflage total. Les brumes restent en place, le vent les disperse et elles ne fonctionnent pas sous l'eau
+
+step: Elle est encore au contact et doit fuir immédiatement
+  do: Effectuer une retraite jusqu'à 18 m si le passage est libre
+  note: La case de départ ne provoque pas d'attaque d'opportunité de la part d'ennemis visibles ; ailleurs, Souplesse du serpent porte sa CA à 21 contre les attaques d'opportunité dues au déplacement
+
+step: Elle a rompu le contact
+  do: Se soigner avec la baguette ou une potion à couvert, puis poursuivre sa fuite
+  note: Ne choisir une fuite par l'eau que si respiration aquatique est active et si la traversée convient à sa faible Natation

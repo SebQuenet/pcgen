@@ -1,0 +1,100 @@
+## Avant le combat
+
+note: Profil
+  L’Empereur des écailles, Extérieur de taille TG, chaotique mauvais, est le héraut d’Ydersius : une tête de serpent flottante entourée de serpents qui mordent. Il désorganise ses ennemis avant de les accabler de morsures empoisonnées.
+  225 PV ; CA 30 ; résistance à la magie 26. Morsure +24 (2d8+8, critique 19–20, poison et étreinte), huit morsures de serpents +22 (1d6+4 et poison).
+  Espace occupé : 4,50 m ; allonge : 3 m, ou 4,50 m avec les serpents. Déplacement et escalade : 9 m ; vol permanent : 18 m, bonne manœuvrabilité. Vision dans le noir à 18 m, vision à 360°, odorat ; Perception +26.
+
+note: Défenses
+  Régénération 5, interrompue par les dégâts d’électricité ; réduction des dégâts 15, surmontée par une arme à la fois bonne et en argent.
+  Immunisé contre l’acide, le feu, les effets mentaux, la paralysie, le poison et les effets des armes vorpales.
+
+resource: Image miroir | 3/jour | NLS 15
+resource: Flou | 3/jour | NLS 15
+resource: Image accomplie | 3/jour | Volonté DD 19 pour distinguer l’illusion en interagissant avec elle
+resource: Domination de personne | 3/jour | Volonté DD 21 ; humanoïdes seulement
+resource: Suggestion | 3/jour | Volonté DD 19
+resource: Suggestion de groupe | 1/jour | Volonté DD 22
+resource: Cécité/surdité | 3/jour | Vigueur DD 18
+resource: Accélération du poison | 3/jour | Vigueur DD 18
+resource: Marteau du Chaos | 1/jour | Volonté DD 20
+resource: Ténèbres maudites | 1/jour | Volonté DD 20
+resource: Poison | À volonté | Attaque de contact au corps à corps ; Vigueur DD 20
+resource: Téléportation | À volonté | NLS 15 ; prévoir une destination connue pour le repli
+
+step: Il détecte les intrus assez tôt
+  do: Lancer image miroir, puis flou au round suivant, avant de s’exposer
+  note: Chaque pouvoir demande sa propre action ; ces deux protections durent 15 minutes au NLS 15.
+
+step: Des serpents sont présents
+  do: Utiliser commandement des serpents pour les placer sur les voies d’approche et gêner les adversaires
+  note: Ce pouvoir commande les serpents animaux ou créatures magiques en action libre, Volonté DD 25 ; il n’en invoque aucun. La télépathie porte à 30 m.
+
+step: Une embuscade reste possible
+  do: Utiliser image accomplie pour présenter un faux adversaire ou un passage apparemment sûr et attirer les intrus dans ses auras
+  note: Maintenir l’illusion exige de la concentration ; après l’arrêt de celle-ci, l’image ne persiste que 3 rounds.
+
+## Ouverture
+
+step: Des créatures sont à 30 m ou moins
+  do: Faire retentir le sifflement aliénant en action libre
+  note: Volonté DD 25 ou confusion pendant 1 round ; une réussite immunise contre ce sifflement pendant 24 heures. Il peut aussi affecter ses serviteurs.
+
+step: Il attaque ou charge et des adversaires sont à 18 m ou moins
+  do: Appliquer la présence terrifiante, Volonté DD 25, aux adversaires ayant moins de 18 DV
+  note: Déclencher cette aura ne remplace pas son attaque.
+
+step: Un humanoïde dangereux est encore à distance
+  do: Lancer domination de personne et lui ordonner de protéger l’Empereur ou de gêner ses compagnons
+  note: Volonté DD 21 ; un ordre contraire à la nature de la victime lui accorde un nouveau jet avec un bonus de +2. Choisir un adversaire sans protection connue contre le contrôle mental.
+
+step: Plusieurs ennemis peuvent encore être détournés du combat par un conseil raisonnable
+  do: Employer suggestion de groupe pour leur faire évacuer les lieux face au danger
+  note: Volonté DD 22 ; formuler une proposition plausible, sans ordre manifestement suicidaire.
+
+step: Le combat commence directement au contact
+  do: S’il peut rester sur place, effectuer une attaque à outrance ; sinon, se déplacer et porter une seule morsure
+  note: Privilégier le porteur d’attaques électriques ou un lanceur de sorts vulnérable.
+
+## Rounds suivants
+
+step: Une cible est à 3 m ou moins et aucune urgence n’impose un pouvoir
+  do: Effectuer une attaque à outrance avec la grande morsure et les huit morsures de serpents, en concentrant les coups sur une cible dangereuse
+  note: La grande morsure permet une étreinte avec un test de lutte à +32. Maintenir ensuite une lutte coûte une action simple ; relâcher la prise si les neuf attaques sont plus utiles.
+
+step: Un ennemi se tient entre 3 m et 4,50 m
+  do: Le frapper avec les huit serpents ; se rapprocher d’un pas de 1,50 m si cela permet aussi la grande morsure
+  note: Exploiter Attaques réflexes pour sanctionner les déplacements qui provoquent dans son allonge ; il dispose de huit attaques d’opportunité par round.
+
+note: Venins
+  Grande morsure : Vigueur DD 25 ; fréquence 1/round pendant 10 rounds ; effet de chaque échec : 2d6 dégâts d’acide et 1d4 affaiblissement de Force.
+  Serpents : Vigueur DD 20 ; fréquence 1/round pendant 6 rounds ; effet de chaque échec : 1d2 affaiblissement de Constitution. Chaque venin exige deux sauvegardes consécutives réussies pour guérir.
+
+step: Une victime dangereuse souffre déjà d’un de ses venins
+  do: Employer accélération du poison, Vigueur DD 18, si précipiter l’empoisonnement vaut davantage qu’une attaque à outrance
+  note: Le pouvoir poison à volonté reste une autre attaque de contact ; il ne remplace pas les venins propres aux morsures.
+
+step: Les ennemis restent regroupés hors de son allonge
+  do: Employer ténèbres maudites contre les créatures bonnes, ou marteau du Chaos contre les créatures loyales
+  note: DD 20 ; choisir la zone pour éviter ses serviteurs. Adapter le choix à l’alignement qu’il connaît ou peut raisonnablement supposer.
+
+step: Un adversaire dangereux reste hors d’atteinte et résiste au contrôle mental
+  do: Tenter cécité, Vigueur DD 18, ou voler à 18 m pour menacer sa position
+  note: Répéter le sifflement en action libre contre les créatures qui n’y sont pas encore immunisées ; ne pas gaspiller une domination sur une cible immunisée aux effets mentaux.
+
+step: Les combattants tentent de l’entourer
+  do: Exploiter le vol et son allonge pour rejoindre une position moins exposée
+  note: Sa vision à 360° empêche la prise en tenaille. Un déplacement ordinaire peut provoquer des attaques d’opportunité ; un simple pas de placement préserve son attaque à outrance.
+
+## Repli
+
+step: Ses PV passent sous 75, ou l’électricité rend la poursuite du combat trop dangereuse
+  do: Se téléporter vers une destination connue, en lançant le pouvoir sur la défensive s’il est menacé
+  note: Téléportation demande une action simple ; elle n’est pas automatique et peut être perturbée. Il peut l’utiliser à volonté.
+
+step: La téléportation est empêchée
+  do: S’éloigner en vol à 18 m par déplacement, utiliser les obstacles comme couvert et ordonner aux serviteurs encore contrôlés de gêner la poursuite
+  note: Renouveler image miroir ou flou si nécessaire et si une utilisation reste disponible.
+
+step: Il a rejoint un abri et ne subit plus de dégâts électriques
+  do: Laisser sa régénération restaurer 5 PV par round avant d’envisager une nouvelle attaque

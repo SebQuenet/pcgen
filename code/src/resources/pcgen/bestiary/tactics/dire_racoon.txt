@@ -1,0 +1,35 @@
+## Avant le combat
+
+note: Profil
+  Raton laveur géant, petit animal agressif des forêts tempérées et des villes. Il possède 17 points de vie et une CA de 19.
+  Morsure +5 (1d4+1 et maladie chez les individus urbains), allonge de 1,50 m ; déplacement et escalade à 9 m.
+  Vision nocturne, Perception +11, Discrétion +11, Escalade +9 : il peut se dissimuler et gagner une position en hauteur.
+
+step: Des intrus approchent
+  do: Les surveiller depuis un couvert ou une hauteur, en utilisant Discrétion +11 et Perception +11
+  note: En ville, les tas d'ordures et les égouts lui offrent des abris ; en forêt, il peut grimper aux arbres.
+
+## Ouverture
+
+step: Un adversaire arrive à 1,50 m ou moins
+  do: Le mordre à +5 pour 1d4+1 dégâts, avec transmission possible de la maladie
+
+step: Aucun adversaire n'est au contact, mais un déplacement de 9 m suffit à en atteindre un
+  do: Se rapprocher de la cible la plus accessible et la mordre
+  note: Il doit terminer son déplacement à 1,50 m ou moins de sa cible pour porter sa morsure.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Continuer à le mordre, une morsure +5 par round, pour 1d4+1 dégâts
+  note: La fièvre des marais des individus urbains se transmet par blessure : Vigueur DD 15 ; incubation de 1d3 jours, puis un jet par jour ; effet de 1d3 dégâts de Dextérité et 1d3 dégâts de Constitution ; guérison après deux jets consécutifs réussis.
+  note: La maladie n'affaiblit pas immédiatement la victime pendant le combat.
+
+step: L'adversaire s'éloigne et reste accessible
+  do: Le rejoindre si un déplacement de 9 m permet de revenir à portée, puis le mordre
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou plusieurs adversaires le pressent
+  do: Rompre le combat et gagner un abri ; grimper à 9 m vers une hauteur accessible ou fuir vers les égouts et les tas d'ordures
+  note: Le seuil de 8 points de vie est un repère de conduite pour le meneur ; il privilégie une issue proche qui le met hors de portée des morsures et des armes de mêlée.

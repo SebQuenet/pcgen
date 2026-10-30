@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Abrakarn Viper, gardien artificiel de taille TG, chaotique mauvais, animé par une âme démoniaque. Sans intelligence, il suit les ordres du porteur de son diadème.
+  Attaque à outrance : trois morsures +25, chacune infligeant 2d8+9 dégâts et injectant du poison tant que le réservoir en contient. Allonge et espace occupé : 4,50 m ; déplacement : 12 m.
+  139 pv ; CA 30, contact 11 ; réduction des dégâts 10/— ; résistance de 10 à l'acide, au froid, à l'électricité et au feu ; résistance à la magie 24 ; immunités des créatures artificielles. Impossible à faire tomber par un croc-en-jambe.
+  Vision dans le noir à 36 m, vision nocturne, Perception +4.
+
+resource: Réservoir de poison | 3 morsures réussies si rempli | Poison de blessure choisi par le créateur ; DD et effets selon le produit chargé, non précisés dans le bloc fourni.
+
+step: Le porteur lui ordonne de le garder
+  do: Se placer entre lui et les intrus, en le maintenant à 4,50 m ou moins.
+  note: Garde impose alors un malus de –2 aux attaques contre le porteur.
+
+step: Le porteur veut partager ses blessures
+  do: Lui faire activer protection d'autrui par une action simple, à 30 m ou moins du gardien.
+  note: La moitié des dégâts du porteur est transférée au gardien, sans réduction par ses défenses ; aucun bonus de CA ou de sauvegarde n'est accordé.
+
+## Ouverture
+
+step: Un adversaire est déjà à 4,50 m ou moins
+  do: Effectuer une attaque à outrance avec les trois morsures +25, en priorité contre l'agresseur du porteur.
+  note: Chaque morsure inflige 2d8+9 dégâts ; chaque touche consomme une dose si le réservoir en contient.
+
+step: Aucun adversaire n'est à portée
+  do: Avancer de 12 m au maximum vers l'ennemi désigné, puis porter une seule morsure +25 si celui-ci est désormais à portée.
+  note: Si l'ordre est de garder le porteur, rester assez près de lui pour maintenir Garde.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée
+  do: Répéter les trois morsures à outrance, en concentrant les attaques sur la menace désignée contre le porteur.
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant l'attaque à outrance.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Porter une morsure +25, pour 2d8+9 dégâts et une dose de poison si disponible.
+  note: Une seule attaque d'opportunité par round ; elle peut aussi épuiser le réservoir.
+
+step: Les trois doses ont été consommées
+  do: Continuer les morsures pour leurs dégâts physiques.
+  note: Le créateur doit recharger manuellement le réservoir : 5 rounds, en provoquant des attaques d'opportunité ; réserver cette opération à une accalmie.
+
+## Repli
+
+step: Le porteur ordonne la retraite
+  do: L'accompagner à 12 m par déplacement, en restant à 4,50 m ou moins pour le protéger par Garde.
+
+step: Le gardien est séparé du porteur
+  do: Rejoindre le porteur grâce à localisation du maître, en se déplaçant normalement.
+  note: Sur le même plan, il retrouve infailliblement le porteur ou le diadème retiré.
+
+step: L'ordre de tenir demeure
+  do: Combattre jusqu'à destruction à 0 pv ; aucune fuite spontanée fondée sur un seuil de blessures.

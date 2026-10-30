@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Érodaemon, extérieur maléfique d'Abaddon, FP 11, manipulateur qui préfère isoler ses victimes et briser leurs liens avant de frapper.
+  147 pv ; CA 25 ; initiative +9 ; déplacement 9 m ; allonge 1,50 m. Morsure +19 (1d8+5 et diminution permanente de 1d4 points de Charisme), 2 griffes +19 (1d6+5 chacune).
+  RD 10/Bien ou argent ; résistance à la magie 22 ; immunité à l'acide, aux effets de mort, aux maladies et au poison ; résistance 10 au froid, à l'électricité et au feu.
+
+resource: Suggestion à incantation rapide | 3/jour | action rapide, Volonté DD 19, portée 18 m
+resource: Désespoir foudroyant | 3/jour | Volonté DD 20, cône de 9 m, durée 14 minutes
+resource: Énervation | 3/jour | rayon de contact à distance +19, portée 18 m, 1d4 niveaux négatifs temporaires, sans sauvegarde
+resource: Profanation | 3/jour | réserver aux lieux où elle peut favoriser des morts-vivants ; aucun renforcement direct de l'érodaemon
+resource: Modification de mémoire | 1/jour | Volonté DD 20 ; préparer une tromperie avant l'affrontement, si le temps le permet
+resource: Mépris absolu | 1/jour | Volonté DD 20, portée 18 m, durée 14 minutes
+resource: Convocation | 1/jour | 35 % de chances d'appeler 1d3 ceustodaemons, équivalent d'un sort de niveau 4
+
+step: Il peut observer ses futures victimes sans être attaqué
+  do: Employer Bluff +33 et Déguisement +24 pour approcher sous une identité trompeuse ; utiliser détection du Bien et détection des pensées à volonté pour choisir une victime et adapter ses mensonges
+  note: Détection des pensées : cône de 18 m, concentration ; les pensées superficielles exigent 3 rounds d'étude et une sauvegarde de Volonté DD 18 ratée. Don des langues est permanent ; télépathie à 30 m.
+
+step: Il peut attirer une victime à l'écart
+  do: Lui proposer un entretien privé ou une aide mensongère ; préparer une destination connue pour sa téléportation de repli
+  note: Il exploite ses compétences sociales ; aucun changement de forme supplémentaire n'est nécessaire à cette approche.
+
+step: Un affrontement est imminent et il dispose encore de son appel quotidien
+  do: Tenter la convocation avant de s'exposer ; en cas de réussite, placer les ceustodaemons entre lui et les adversaires
+  note: L'appel peut échouer ; prévoir de combattre seul.
+
+## Ouverture
+
+step: Plusieurs ennemis entrent dans un cône de 9 m
+  do: Lancer désespoir foudroyant, puis suggestion à incantation rapide sur une cible affectée
+  note: Désespoir impose -2 aux attaques, sauvegardes, tests de caractéristique et de compétence, ainsi qu'aux dégâts des armes. Suggérer une conduite raisonnable, comme aller chercher des renforts, pour éloigner un adversaire.
+
+step: Les ennemis sont dispersés ou une menace prioritaire reste à 18 m ou moins
+  do: Lancer énervation sur un adversaire vivant dangereux ; ajouter une suggestion rapide si une consigne crédible peut le détourner du combat
+  note: Les niveaux négatifs affaiblissent aussi les sauvegardes ; les pouvoirs mentaux deviennent ensuite plus difficiles à repousser.
+
+## Rounds suivants
+
+step: Une cible vulnérable est à portée de mêlée au début de son tour
+  do: Faire une attaque à outrance : morsure +19 et 2 griffes +19 ; ajouter une suggestion rapide s'il en reste une utilisation utile
+  note: Privilégier une victime isolée ou dépendante du Charisme. S'il doit se déplacer de plus de 1,50 m, se contenter d'une morsure après son déplacement.
+
+step: Un tireur ou un lanceur de sorts reste en retrait, à 18 m ou moins
+  do: Employer désir contre nature à volonté, Volonté DD 18, pour lui faire rejoindre et embrasser ou caresser une créature ou un objet visible désigné à portée
+  note: En cas d'échec à la sauvegarde, la cible y consacre son prochain tour entier. Elle reçoit +4 à sa sauvegarde si ce désir lui est inhabituel ; choisir une destination accessible qui dérange sa position.
+
+step: Une cible résiste aux effets mentaux
+  do: Préférer énervation ou les attaques naturelles ; concentrer les énervations restantes sur une même menace vivante
+  note: Les niveaux négatifs se cumulent ; le rayon reste soumis à la résistance à la magie.
+
+step: Il peut encore compromettre la coopération adverse
+  do: Employer mépris absolu sur un membre influent du groupe
+  note: L'attitude de la cible envers toutes les autres créatures se dégrade de deux crans ; cela ne lui ordonne pas d'attaquer ses alliés.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Utiliser la morsure pour ajouter la diminution de Charisme aux dégâts
+  note: Attaques réflexes permet jusqu'à 6 attaques d'opportunité par round, sans multiplier les attaques pour une même occasion.
+
+step: Un vivant agonise à son contact et aucune menace pressante ne l'oblige à agir autrement
+  do: Employer glas à volonté, Volonté DD 18, pour l'achever et obtenir les bénéfices du pouvoir
+  note: Ne pas consacrer cette action à une victime que les ennemis peuvent exploiter pour l'encercler.
+
+## Repli
+
+step: Ses points de vie passent sous 45, ou le groupe surmonte ses défenses et l'encercle
+  do: Utiliser téléportation suprême à volonté vers sa destination de refuge ; si possible, faire d'abord un pas de 1,50 m hors de portée des attaques d'opportunité
+  note: Le pouvoir transporte seulement l'érodaemon et jusqu'à 22,5 kg d'objets, aucune autre créature. Les ceustodaemons encore présents peuvent couvrir sa fuite.
+
+step: La téléportation est empêchée
+  do: Se désengager à pied derrière les ceustodaemons ou un obstacle ; employer une suggestion rapide pour éloigner un poursuivant si une utilisation reste disponible
+  note: Sa vitesse est de 9 m ; il cherche une occasion de quitter la zone qui bloque la téléportation.

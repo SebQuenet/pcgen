@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Éphialtès kyton, extérieur loyal mauvais de taille TG, FP 16 : un chasseur qui verrouille les approches avec ses chaînes et concentre ses attaques sur une proie.
+  243 pv, CA 30 ; déplacement de 9 m ; espace occupé de 4,50 m ; vision dans le noir à 18 m.
+  Deux chaînes +25 (2d8+8 chacune, critique 19-20), allonge de 9 m ; morsure +24 (2d6+8), deux griffes +24 (1d8+8 chacune) et queue +19 (1d8+4), allonge de 4,50 m.
+
+note: Défenses
+  RD 10/argent ou Bien ; régénération de 5 pv par round, interrompue pendant le round suivant par les armes en argent, les armes de Bien et les sorts de Bien.
+  Immunité au froid, à la terreur et au poison ; résistance à l'acide 10 et au feu 10 ; résistance à la magie 27. L'armure de chaînes est déjà comprise dans sa CA.
+
+resource: Flou | à volonté | sur lui-même uniquement ; NLS 16, durée 16 minutes, 20 % de chances de rater les attaques contre lui
+resource: Ancre dimensionnelle | à volonté | rayon, attaque de contact à distance ; bloque les déplacements extradimensionnels de la cible pendant 16 minutes, sans jet de sauvegarde ; résistance à la magie applicable
+resource: Ténèbres profondes | 3/jour | rayon de 18 m autour de l'objet touché ; abaisse l'éclairage de deux degrés, durée 160 minutes
+resource: Silence | 3/jour | rayon de 6 m, durée 16 rounds ; incantation de 1 round ; Volonté DD 15 si centré sur un ennemi
+resource: Traversée des ombres | 3/jour | nécessite une zone de lumière faible ; Volonté DD 19 pour une créature emmenée contre son gré
+resource: Localisation suprême | 1/jour | retrouver une créature déjà vue ou dont il possède un objet ; préparer la poursuite avant l'affrontement
+
+step: Il peut préparer l'affrontement
+  do: Activer flou, puis choisir une approche qui lui permette de frapper à 9 m et de rejoindre une zone de lumière faible en cas de repli.
+  note: Perception +24 et Survie +22 servent à repérer et suivre la proie ; il ne connaît pas automatiquement les capacités des intrus.
+
+step: Des incantateurs approchent et l'embuscade est imminente
+  do: Placer silence sur lui-même avant leur arrivée, puis prévoir de les approcher à 6 m ou moins.
+  note: Les sorts à composante verbale sont bloqués dans la zone ; ses propres pouvoirs magiques restent utilisables. Tenir compte des 16 rounds de durée.
+
+## Ouverture
+
+step: Il attaque et des adversaires sont à 9 m ou moins
+  do: Déclencher la présence terrifiante : Volonté DD 22 ; résoudre ensuite l'attaque choisie.
+  note: Cette présence accompagne son offensive ; elle ne remplace pas son action d'attaque. Une sauvegarde réussie immunise la créature contre cette présence pendant 24 heures.
+
+step: Une proie identifiée risque de se téléporter et n'est pas encore ancrée
+  do: Utiliser ancre dimensionnelle sur elle, puis se déplacer pour menacer sa position avec les chaînes.
+  note: Ce round sert à interdire sa fuite ; il ne permet pas aussi une attaque à outrance.
+
+step: Aucun pouvoir prioritaire n'est nécessaire et la cible est hors de portée
+  do: Avancer de 9 m au maximum, puis porter une seule attaque de chaîne +25 (2d8+8) si la cible est désormais à 9 m ou moins.
+  note: Chercher d'abord le porteur d'une arme en argent ou de Bien, s'il est identifiable et accessible ; sinon, choisir une cible vulnérable.
+
+step: Une cible est déjà à portée et il peut rester sur place
+  do: Passer directement à l'attaque à outrance adaptée à sa distance.
+
+## Rounds suivants
+
+step: La proie est à 4,50 m ou moins
+  do: Attaque à outrance : deux chaînes +25, morsure +24, deux griffes +24 et queue +19 ; concentrer les coups pour abattre une cible.
+  note: Un pas de placement de 1,50 m peut précéder cette attaque ; un déplacement ordinaire la remplace par une seule attaque.
+
+step: La proie est au-delà de 4,50 m et à 9 m ou moins
+  do: Attaque à outrance avec les deux chaînes +25 (2d8+8 chacune), en conservant la distance si elle protège des ripostes.
+  note: Les autres attaques n'atteignent pas cette cible. Les chaînes menacent un critique sur 19-20 ; Don pour les critiques ajoute +4 au jet de confirmation.
+
+step: Un critique perforant ou tranchant est confirmé
+  do: Appliquer Critique sanglant : 2d6 points de saignement à chaque tour de la victime.
+  note: Les saignements de ce don se cumulent ; Premiers secours DD 15 ou des soins magiques les arrêtent.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 9 m
+  do: Le frapper avec une chaîne +25 ; réserver les occasions les plus utiles aux incantations et aux déplacements exposés.
+  note: Attaques réflexes permet jusqu'à trois attaques d'opportunité par round ; entrer dans l'allonge ne suffit pas, à lui seul, à en provoquer une.
+
+step: Un adversaire provoque par son déplacement depuis une case adjacente, à 1,50 m
+  do: Si le retenir importe davantage que le blesser, remplacer l'attaque d'opportunité par Immobiliser : BMO +28 contre son DMD ; réussite, déplacement arrêté pour le reste de son tour.
+  note: Immobiliser s'applique aux cases adjacentes, pas à toute l'allonge des chaînes.
+
+step: Il veut masquer une approche et l'éclairage s'y prête
+  do: Employer ténèbres profondes seulement si l'obscurité obtenue lui laisse un avantage visuel, ou pour couvrir une rupture de contact.
+  note: Une lumière normale devient obscurité, où sa vision dans le noir fonctionne. Une lumière déjà faible ou l'obscurité deviennent des ténèbres surnaturelles qui bloquent aussi sa propre vision dans le noir.
+
+## Repli
+
+step: Moins de 60 pv et le combat tourne à son désavantage
+  do: Rejoindre la zone de lumière faible préparée, puis utiliser traversée des ombres pour quitter le combat ; conserver au moins une utilisation à cette fin.
+  note: Une ancre dimensionnelle qui le frappe empêche cette fuite. Les ténèbres surnaturelles ne remplacent pas la lumière faible nécessaire au pouvoir.
+
+step: La fuite magique est impossible
+  do: Se désengager vers un couvert par une retraite, jusqu'à 18 m ; utiliser ensuite le terrain pour rompre la poursuite.
+  note: La retraite protège seulement la sortie de sa case initiale des attaques d'opportunité ; traverser d'autres cases menacées reste dangereux.
+
+step: Il a rompu le contact
+  do: Laisser la régénération restaurer 5 pv par round lorsqu'elle est active, renouveler flou et reprendre la traque seulement après récupération.

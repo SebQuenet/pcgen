@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Canopy Creeper, plante TG neutre et solitaire des forêts chaudes, prédateur d'embuscade peu intelligent. 150 PV, CA 23, initiative +7.
+  Quatre lianes à distance +10, portée 30 m, avec étreinte, drainage et traction ; morsure +16 (2d6+12), allonge 3 m. Déplacement et escalade à 6 m ; Escalade +19.
+  Immunités des plantes et à l'électricité ; résistance au feu 10 ; faiblesse au froid. DMD 32 ; impossible à faire tomber par un croc-en-jambe.
+
+resource: Guérison accélérée | permanente | récupère 2 PV par round, jusqu'à 150 PV
+resource: Lianes offensives | 4 simultanément | chacune : 10 PV, RD 5/tranchant, rupture par Force DD 21
+
+step: Une chasse se prépare en forêt
+  do: S'installer dans la canopée, parmi les lianes, à 30 m au plus du passage des proies ; attendre immobile.
+  note: Discrétion +20 en forêt ; Perception +13, odorat et vision nocturne pour repérer les proies.
+  note: Camouflage : avant sa première attaque, Perception DD 20, modifié par la distance ; Survie ou Connaissances (nature) peuvent remplacer ce test si la compétence est entraînée.
+
+## Ouverture
+
+step: Une proie entre dans les 30 m
+  do: Privilégier une créature de taille M ou supérieure. Au premier tour permettant une attaque à outrance, lancer les quatre lianes +10 sur cette proie.
+  note: Pendant un round de surprise, une seule attaque de liane avec l'action simple disponible.
+
+step: Une liane touche
+  do: Tenter gratuitement la traction : BMO +19 contre le DMD, pour rapprocher la cible de 9 m. Tenter aussi l'étreinte gratuite, BMO +23.
+  note: Traction et étreinte concernent les créatures de taille TG ou inférieure. La traction cesse devant un obstacle et ne provoque pas d'attaque d'opportunité.
+  note: La liane ne possède pas de dégâts d'impact indiqués ; la prise draine 1d8 PV et inflige 1 point de dégâts de Force.
+
+## Rounds suivants
+
+step: Une proie reste agrippée
+  do: Consacrer l'action simple au maintien de la lutte : BMO +23, avec le bonus habituel de +5 contre une cible qui ne s'est pas dégagée. Continuer à la drainer.
+  note: Le drainage cesse si la prise est rompue ou la liane sectionnée.
+  note: Une lutte normale impose aussi l'état agrippé au monstre. Immobiliser uniquement avec une liane sans subir cet état impose un malus de -20 aux tests de lutte ; ne pas multiplier les prises à +23 en restant libre.
+
+step: La cible est suspendue sans appui solide
+  do: Appliquer l'attaque aérienne : +2 aux attaques, aux manœuvres et au DMD contre elle.
+
+step: Aucune prise n'est maintenue et les proies restent à distance
+  do: Reprendre l'attaque à outrance avec les lianes disponibles ; rapprocher les victimes par traction.
+
+step: Un ennemi résiste aux lianes et se trouve à 3 m ou moins, sans prise à maintenir
+  do: Mordre à +16 pour 2d6+12 dégâts.
+
+step: Une liane est détruite et une autre est disponible dans le réseau végétal
+  do: Dépenser une action de mouvement pour contrôler une liane de remplacement.
+
+step: Un adversaire provoque une attaque d'opportunité dans les 3 m
+  do: Mordre ; Attaques réflexes permet jusqu'à quatre attaques d'opportunité par round.
+
+## Repli
+
+step: Le froid le blesse ou les blessures deviennent trop importantes
+  do: Relâcher sa proie et grimper à 6 m par action de mouvement vers le feuillage protecteur ; laisser agir la guérison accélérée à couvert.
+
+step: Il se retrouve au sol, loin du feuillage
+  do: Se ruer vers l'arbre ou la hauteur la plus proche, en mordant les obstacles vivants, puis remonter dans la canopée.

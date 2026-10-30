@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Vase de cristal, vase aquatique de taille M, solitaire et sans intelligence ; 65 pv, CA 5.
+  Coup +6 à 1,50 m : 1d6+4 dégâts, plus 1d6 d'acide, étreinte et paralysie pendant 3d6 rounds (DD 18). Constriction : 1d6+4 dégâts.
+  Perception aveugle à 18 m ; nage à 9 m, déplacement au sol à 3 m. Immunisée au froid et au feu ; traits des vases. Transparente et dépendante de l'eau.
+
+step: Aucune proie détectée
+  do: Rester dans l'eau ; sa transparence rend sa présence difficile à distinguer
+  note: Son absence d'intelligence conduit à un comportement instinctif ; sa perception aveugle lui permet de repérer une proie proche sans dépendre de la vue
+
+## Ouverture
+
+step: Une proie est détectée dans l'eau, à moins de 18 m
+  do: Se rapprocher à la nage, jusqu'à 9 m par action de mouvement, puis porter un coup si la proie est à portée de 1,50 m
+
+step: Le coup touche
+  do: Infliger 1d6+4 dégâts et 1d6 d'acide, appliquer la paralysie (DD 18, durée 3d6 rounds) et tenter l'étreinte
+  note: L'étreinte permet une tentative de lutte gratuite après le coup ; une lutte réussie déclenche aussi la constriction, pour 1d6+4 dégâts
+
+## Rounds suivants
+
+step: Une proie est maintenue en lutte
+  do: Maintenir la lutte et infliger 1d6+4 dégâts de constriction à chaque jet de lutte réussi
+  note: Les 1d6 dégâts d'acide accompagnent le coup ; la constriction n'indique aucun dégât d'acide supplémentaire
+
+step: Aucune proie n'est saisie, mais un adversaire est à 1,50 m
+  do: Porter un coup +6 et tenter de nouveau l'étreinte ; appliquer les dégâts d'acide et la paralysie à chaque coup qui touche
+
+step: La proie s'éloigne dans l'eau
+  do: La suivre à la nage tant qu'elle reste détectable, puis reprendre les coups dès qu'elle revient à portée
+
+step: Les adversaires restent hors de portée sur la berge
+  do: Rester dans l'eau et attaquer dès qu'une proie entre à portée de 1,50 m
+
+## Repli
+
+step: La vase est blessée et une proie reste au contact
+  do: Continuer ses coups ou sa constriction selon qu'elle tient déjà une proie
+  note: Aucun seuil de fuite en points de vie ; elle agit par instinct, sans organiser de retraite tactique
+
+step: La vase est sortie de l'eau
+  do: Ramper vers l'eau accessible, à 3 m par action de mouvement
+  note: Sa dépendance à l'eau rend le retour à son milieu prioritaire

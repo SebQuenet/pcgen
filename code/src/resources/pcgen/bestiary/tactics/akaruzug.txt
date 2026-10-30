@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Akaruzug, créature artificielle de taille G, loyale mauvaise et intelligente, façonnée comme un ange cornu portant un cadavre crucifié. FP 15 ; 220 PV ; CA 30.
+  Deux griffes +27 (2d6+8, critique 19-20), empalement +27 (2d8+8, critique 19-20), deux ailes +22 (1d8+4). Allonge et espace occupé : 3 m ; vol parfait à 12 m par déplacement.
+  Réduction des dégâts 15, contournée par une attaque à la fois contondante et bonne ; immunités des créatures artificielles. Le bouclier d'âme est déjà inclus dans ses PV et sa CA.
+
+resource: Esclave d'âme | 1/jour | action simple ; équivalent d'allié spirituel, NLS 20 ; durée 20 rounds
+resource: Vol d'âme | une fois tous les 1d4 rounds | explosion de 6 m de rayon ; Vigueur DD 24
+resource: Sanctification maléfique | permanente | aura de 12 m ; aucun sort supplémentaire précisé
+resource: Attaques d'opportunité | 4/round | Réflexes de combat ; allonge de 3 m
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +24 et la vision dans le noir à 18 m ; attendre en vol stationnaire près du passage à défendre
+  note: Se placer pour menacer leur approche à 3 m sans offrir immédiatement une attaque à outrance aux combattants de faible allonge
+
+## Ouverture
+
+step: Plusieurs adversaires vivants sont à 6 m ou moins
+  do: Utiliser Vol d'âme en action simple
+  note: Chaque victime échouant à Vigueur DD 24 reçoit 1d4 niveaux négatifs ; l'akaruzug récupère 5 PV par victime affectée, sans dépasser ses 220 PV
+
+step: Les ennemis restent hors de son allonge et ne sont pas regroupés pour Vol d'âme
+  do: Manifester l'esclave d'âme près d'une cible vulnérable, puis approcher en vol si cela permet de préparer le contact
+  note: L'esclave attaque à +24/+19/+14/+9 et inflige 1d10+5 dégâts de force ; il peut prendre un ennemi en tenaille
+
+step: Une cible est déjà à portée et Vol d'âme n'est pas prioritaire
+  do: Faire une attaque à outrance avec les deux griffes, l'empalement et les deux ailes
+
+## Rounds suivants
+
+step: Vol d'âme est de nouveau disponible et plusieurs vivants sont dans son rayon
+  do: Réutiliser Vol d'âme, surtout si l'akaruzug a perdu des PV
+  note: Relancer le délai de 1d4 rounds après chaque utilisation
+
+step: Une cible reste à 3 m ou moins
+  do: Concentrer l'attaque à outrance sur elle ; ajuster la position par un pas de 1,50 m si nécessaire
+  note: Sur un critique confirmé, Critique aveuglant impose Vigueur DD 30 : cécité permanente en cas d'échec, éblouissement pendant 1d4 rounds en cas de réussite ; seulement contre une cible sensible à cet effet
+
+step: Une cible est facile à toucher
+  do: Envisager Attaque en puissance pour augmenter les dégâts
+  note: Conserver les bonus d'attaque normaux contre les adversaires difficiles à toucher afin de favoriser les critiques
+
+step: L'esclave d'âme est actif
+  do: Le déplacer en action rapide pour poursuivre une cible ou soutenir une prise en tenaille
+
+step: Un adversaire provoque une attaque d'opportunité à portée
+  do: Frapper d'une griffe ou par empalement, dans la limite de quatre attaques d'opportunité par round
+  note: Un simple pas de 1,50 m ne provoque pas d'attaque d'opportunité
+
+step: Un adversaire tente de libérer le cadavre crucifié
+  do: Concentrer les attaques sur lui et empêcher son immobilisation en lutte
+  note: Retirer le corps exige d'abord d'immobiliser l'akaruzug, puis de réussir une manœuvre de combat ; le retrait entraîne sa désactivation après 1d4 rounds
+
+## Repli
+
+step: La défaite approche et sa mission permet de quitter le combat
+  do: Se désengager en vol, puis gagner de la hauteur et s'éloigner à 12 m par déplacement ; laisser l'esclave d'âme actif gêner la poursuite
+  note: Protéger le cadavre qui alimente son moteur d'âme ; aucun pouvoir de téléportation ne permet une fuite instantanée
+
+step: Sa mission exige de tenir la position
+  do: Combattre jusqu'à la destruction à 0 PV, en privilégiant Vol d'âme pour récupérer des PV quand des victimes sont accessibles

@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Cat Sith, bête magique de taille TP, chaotique neutre, ressemblant à un chat noir à tache blanche. Intelligent et rusé, il privilégie la discrétion et les diversions.
+  19 pv, CA 15 ; déplacement de 9 m. Deux griffes +4 (1d2-1 et malchance), morsure +4 (1d3-1) ; allonge de 0 m : il doit entrer dans l'espace adverse pour frapper.
+  Discrétion +18, Perception +6, Bluff +4, Évasion +5 ; vision dans le noir à 18 m et vision nocturne.
+
+resource: Détection de l'invisibilité | permanent | repère les créatures invisibles dans son champ de vision
+resource: Son imaginaire | 3/jour | portée 9 m, durée 3 rounds ; Volonté DD 12 pour reconnaître l'illusion
+resource: Hypnose | 3/jour | incantation de 1 round, portée 9 m ; Volonté DD 13 ; affecte 2d4 DV au total pendant 2d4 rounds
+resource: Aura magique | 3/jour | modifie l'aura d'un objet touché pendant 3 jours
+resource: Repos éternel | 1/semaine | sur un cadavre touché ; entrave les sorts qui communiquent avec le mort, le ramènent à la vie ou l'animent
+
+step: Il peut observer les intrus sans être repéré
+  do: Rester à couvert avec Discrétion +18, repérer une issue et surveiller les approches avec Perception +6
+  note: Il parle le commun et peut communiquer avec les animaux pour obtenir des renseignements ; cela ne lui donne aucun contrôle sur eux.
+
+step: Un objet disponible peut attirer l'attention avant la rencontre
+  do: Lui donner une fausse aura magique et le laisser à l'écart du passage qu'il compte emprunter
+  note: Ce leurre sert à détourner l'attention ; son efficacité dépend de la réaction des intrus.
+
+## Ouverture
+
+step: Les intrus ne sont pas encore hostiles et se trouvent à 9 m ou moins
+  do: Utiliser Hypnose depuis un endroit où ils peuvent le voir ou l'entendre, puis demander brièvement qu'on le laisse passer
+  note: Les créatures ayant le moins de DV sont affectées en premier. Une cible unique hors combat subit -2 à sa sauvegarde ; en combat, chaque cible reçoit au contraire +2.
+
+step: Le combat commence alors qu'il est encore hors de portée des armes
+  do: Créer avec Son imaginaire des bruits de pas ou des cris à l'écart, puis se déplacer vers un couvert
+  note: La diversion peut détourner l'attention, mais ne contraint personne à quitter sa position.
+
+## Rounds suivants
+
+step: Des adversaires restent fascinés par Hypnose
+  do: Profiter de leur attention pour négocier une demande simple et raisonnable en commun
+  note: Une menace manifeste, notamment une attaque, rompt la fascination ; il privilégie le passage ou l'évitement du combat.
+
+step: Une cible isolée et affaiblie peut être attaquée sans l'exposer au reste du groupe
+  do: Entrer dans son espace et porter une griffe +4 s'il a dû se déplacer ; s'il peut rester sur place, effectuer une attaque à outrance avec les deux griffes et la morsure
+  note: Entrer dans l'espace adverse peut provoquer une attaque d'opportunité. Avec seulement 19 pv, il évite cette approche contre un combattant prêt à le recevoir.
+
+step: Une griffe touche
+  do: Faire effectuer à la victime un jet de Volonté DD 13 contre la malchance
+  note: En cas d'échec, elle ne bénéficie plus des bonus de chance pendant 1d4 rounds.
+
+step: Un adversaire utilise l'invisibilité
+  do: Suivre sa position grâce à la détection de l'invisibilité et conserver une issue libre
+  note: Il exploite cette information pour éviter d'être encerclé.
+
+## Repli
+
+step: Ses points de vie passent sous 10, il est encerclé ou ses diversions échouent
+  do: Effectuer une retraite jusqu'à 18 m vers l'issue repérée, puis se dissimuler dès qu'un couvert ou un camouflage le permet
+  note: La retraite protège des attaques d'opportunité liées au départ de sa case initiale ; traverser d'autres espaces menacés reste dangereux.
+
+step: Il a rompu le contact et un poursuivant approche encore
+  do: Utiliser un Son imaginaire restant pour suggérer une fuite dans une autre direction, puis poursuivre sa propre fuite
+  note: Il conserve ses distances et cherche à survivre plutôt qu'à reprendre une mêlée défavorable.

@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Bristle Boar, sanglier à piquants de Belkzen : animal neutre de taille M, FP 3, solitaire ou en paire dans les plaines et les collines. Il combat avec des réactions animales simples.
+  30 pv, CA 16 ; déplacement de 12 m, allonge de 1,50 m. Coup de défense +7 (1d8+6 plus piquants) ; férocité et Attaque en puissance.
+
+step: Une menace approche
+  do: La repérer avec Perception +6 et lui faire face avant de se jeter au contact
+  note: Sa vision nocturne aide dans la pénombre.
+
+resource: Attaque en puissance | à volonté | Jusqu'au prochain tour : attaque −1, dégâts +3 ; coup de défense +6 (1d8+9 plus piquants).
+
+## Ouverture
+
+step: Ennemi entre 3 m et 24 m, avec une trajectoire de charge rectiligne et dégagée
+  do: Charger et porter un coup de défense avec Attaque en puissance : +8 (1d8+9 plus piquants)
+  note: La charge réduit sa CA à 14 jusqu'au début de son prochain tour.
+
+step: Ennemi accessible avec un déplacement de 12 m, mais charge impossible
+  do: Avancer jusqu'à 1,50 m de lui et porter un coup de défense +7 (1d8+6 plus piquants)
+
+step: Ennemi déjà à 1,50 m
+  do: Porter immédiatement un coup de défense ; employer Attaque en puissance si la cible paraît facile à toucher
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter le coup de défense contre la menace immédiate ; garder +7 contre une cible difficile à toucher, ou choisir +6 et 1d8+9 avec Attaque en puissance
+
+step: Le coup de défense touche
+  do: Appliquer les piquants : Réflexes DD 16 ; en cas d'échec, 1d4 dégâts perforants supplémentaires et 1 dégât de saignement par round pendant 3 rounds
+  note: Les saignements des piquants ne se cumulent pas ; une nouvelle application renouvelle leur durée. Des soins magiques ou un test de Premiers secours DD 15 arrêtent ce saignement.
+
+step: La cible s'éloigne
+  do: La rejoindre avec son déplacement de 12 m et attaquer si possible ; charger seulement si la trajectoire et la distance le permettent
+
+## Repli
+
+step: Toujours menacé au contact malgré ses blessures
+  do: Continuer à frapper avec ses défenses
+  note: La férocité lui permet de rester conscient sous 0 pv.
+
+step: Entre −1 et −16 pv
+  do: Porter un seul coup de défense si une cible est à portée ; sinon, utiliser son unique action pour se déplacer
+  note: Il est chancelant : une action simple ou une action de mouvement par tour. Il perd 1 pv par round et meurt à −17 pv.

@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Roi-prêtre boggard, humanoïde de taille M, chaotique mauvais, des marais tempérés. Il combat au corps à corps avec un morgenstern +1.
+  120 points de vie ; CA 20, contact 9 ; résistance au froid 10. Déplacement terrestre de 4,50 m et nage de 9 m par round.
+  Vision dans le noir à 18 m et vision nocturne ; Vigueur +14, Réflexes +6, Volonté +14.
+
+step: Il peut choisir son lieu de combat
+  do: Se placer près d'une voie d'eau permettant d'approcher les adversaires ou de se retirer à la nage
+  note: Sa nage lui permet de se déplacer deux fois plus vite que sa marche ; garder un accès à la surface
+
+## Ouverture
+
+step: Un ennemi est à portée de corps à corps
+  do: L'attaquer avec le morgenstern +1
+
+step: Un ennemi peut être rejoint avec un déplacement de 4,50 m à terre ou de 9 m à la nage
+  do: Se déplacer jusqu'à lui et porter une attaque au morgenstern +1
+  note: Choisir un trajet qui évite de traverser la zone menacée par d'autres adversaires
+
+step: Les ennemis sont encore trop éloignés
+  do: Avancer en utilisant les couverts disponibles et privilégier un passage à la nage s'il rapproche du combat
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Effectuer une attaque à outrance au morgenstern +1
+  note: Concentrer les coups sur la même cible pour la mettre hors de combat
+
+step: La cible s'éloigne
+  do: La rejoindre et attaquer si un seul déplacement suffit
+  note: Éviter une poursuite à pied qui l'exposerait plusieurs rounds aux attaques à distance
+
+step: Plusieurs adversaires cherchent à l'encercler
+  do: Se replacer vers la voie d'eau en évitant les attaques d'opportunité, puis reprendre le combat contre une cible accessible
+  note: Sa CA de contact de 9 et ses Réflexes de +6 rendent les attaques de contact et les effets de zone particulièrement préoccupants ; sa résistance au froid ne réduit que de 10 points chaque attaque de froid
+
+## Repli
+
+step: Points de vie sous 30, avec une voie d'eau accessible
+  do: Utiliser l'action de retraite pour gagner l'eau, puis fuir à la nage en restant à la surface
+  note: Un déplacement de nage couvre 9 m ; une retraite entièrement effectuée à la nage peut couvrir 18 m
+
+step: Points de vie sous 30, sans voie d'eau accessible
+  do: Utiliser l'action de retraite vers un couvert ou un passage qui limite le nombre de poursuivants au contact
+  note: Une retraite entièrement terrestre peut couvrir 9 m ; le déplacement à pied de 4,50 m rend une fuite en terrain découvert difficile

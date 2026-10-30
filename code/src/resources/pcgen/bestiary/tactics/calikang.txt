@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Calikang, humanoïde monstrueux de taille G, loyal neutre, FP 12 : gardien à six bras qui privilégie la protection de ce qui lui est confié.
+  Deux épées longues +1 : +18/+13/+8 et +18 (2d6+8 chacune, critique 17-20) ; quatre coups à +16 (1d6+3 chacun). Il cherche l'attaque à outrance pour porter ses huit attaques.
+  157 pv ; CA 27, contact 11 ; guérison accélérée 5 ; résistance à la magie 23. Déplacement de 9 m, espace occupé de 3 m et allonge de 3 m.
+
+note: Défenses
+  Garder quatre mains sans arme manufacturée : elles donnent le bonus de bouclier de +4 déjà inclus dans la CA 27, même lorsqu'elles frappent.
+  Immunité à l'électricité, aux effets mentaux et à l'énergie négative. Ces immunités permettent de tenir sa position face aux attaques correspondantes.
+
+resource: Éclair | 3/jour | pouvoir magique, NLS 12 ; Réflexes DD 16 pour demi-dégâts
+resource: Éclair multiple | 1/jour | pouvoir magique, NLS 12 ; Réflexes DD 19 sur la cible principale pour demi-dégâts
+
+note: Pouvoirs constants
+  Marche dans les airs et marche sur l'onde permettent de contourner un obstacle ou de tenir une position inaccessible par le sol ; marcher dans les airs ne permet pas de monter verticalement comme en vol.
+  Vision dans le noir à 18 m, vision lucide et Perception +20 : surveiller les approches et repérer les intrus malgré leurs déguisements ou illusions. Arme magique est déjà prise en compte dans les épées +1.
+
+step: Il attend les intrus à son poste
+  do: Garder un passage étroit ou l'accès au bien protégé ; entrer en animation suspendue par une action complexe si une veille immobile convient.
+  note: Il reste conscient de son environnement. Il quitte cet état par une action immédiate pour engager le combat et gagne alors +4 à l'initiative, soit +10 au lieu de +6.
+
+## Ouverture
+
+step: Plusieurs intrus sont accessibles mais ne sont pas alignés, et aucun ne le menace au corps à corps
+  do: Employer éclair multiple sur l'adversaire le plus dangereux, puis choisir les autres intrus situés à 9 m ou moins de cette cible comme cibles secondaires.
+  note: Épargner ses alliés et les biens à protéger ; appliquer aux cibles secondaires le DD réduit prévu par le sort.
+
+step: Plusieurs intrus sont alignés et aucun ne le menace au corps à corps
+  do: Employer éclair dans leur axe, en évitant ses alliés et les objets qu'il garde.
+
+step: Un intrus est déjà dans son allonge, éventuellement après un pas de 1,50 m
+  do: Effectuer l'attaque à outrance avec les deux épées et les quatre coups ; concentrer les attaques sur celui qui menace directement sa charge.
+
+## Rounds suivants
+
+step: Une cible reste à 3 m ou moins sans nécessiter de déplacement supérieur à 1,50 m
+  do: Répéter l'attaque à outrance ; employer au besoin un pas de 1,50 m pour conserver une bonne position dans le passage.
+  note: Les critiques d'épée permettent de rendre la cible chancelante grâce à son don de critique ; profiter de cette gêne pour maintenir la pression.
+
+step: Il doit se déplacer pour atteindre un intrus
+  do: Avancer jusqu'à 9 m puis porter une seule attaque d'épée avec Frappe décisive, pour 4d6+8 dégâts.
+  note: Frappe décisive accompagne une action d'attaque simple ; elle ne s'ajoute pas à l'attaque à outrance.
+
+step: Les intrus restent hors de son allonge
+  do: Employer les éclairs restants si plusieurs cibles peuvent être touchées ; sinon les rejoindre par marche dans les airs ou sur l'onde lorsque le terrain le permet.
+  note: Ne pas abandonner le bien gardé pour poursuivre un intrus qui cherche à l'attirer au loin.
+
+step: Il a perdu des points de vie
+  do: Récupérer 5 pv au début de son tour grâce à la guérison accélérée, sans dépasser 157 pv.
+  note: Un sort infligeant des dégâts d'énergie arrêté par sa résistance à la magie ou son immunité à l'électricité lui rend aussi un nombre de pv égal au niveau de lanceur du sort absorbé.
+
+## Repli
+
+step: Ses points de vie passent sous 40 et un recul permet encore de protéger sa charge
+  do: Se retirer vers une position défendable, par marche dans les airs ou sur l'onde si cela gêne la poursuite ; utiliser le désengagement si nécessaire.
+  note: À couvert, laisser agir la guérison accélérée avant de reprendre le combat. Son objectif reste de barrer l'accès au bien protégé.
+
+step: Reculer livrerait immédiatement ce qu'il garde aux intrus
+  do: Tenir le passage et concentrer ses attaques sur celui qui tente de passer.
+  note: L'animation suspendue le laisse immobile et vulnérable aux coups : elle ne constitue pas un moyen de fuite pendant le combat.

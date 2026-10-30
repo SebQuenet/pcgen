@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Dragon des nuages adulte, chaotique neutre, solitaire et intelligent, de taille TG : 184 pv, CA 29, réduction des dégâts 5/magie, résistance à la magie 24 ; immunisé à l'électricité, à la paralysie et au sommeil.
+  Morsure +22 (2d8+10, critique 19-20), 2 griffes +22 (2d6+7 chacune), queue +19 (2d6+10), 2 ailes +19 (1d8+3 chacune). Allonge de 3 m, ou 4,50 m avec la morsure.
+  Vol à 60 m, manœuvrabilité médiocre ; marche et nage à 12 m. Sa vision des brumes lui permet de voir clairement dans le brouillard et les nuages : il masque ses approches et sépare les ennemis avant de les mordre.
+
+resource: Pouvoirs magiques | à volonté | Brume de dissimulation, nappe de brouillard et brouillard dense ; NLS 16
+resource: Sorts du 1er niveau | 7/jour au total | Réserve commune à bouclier, coup au but, charme-personne (Volonté DD 15) et détection des passages secrets ; NLS 5
+resource: Sorts du 2e niveau | 5/jour au total | Réserve commune à flou et détection de l'invisibilité ; NLS 5
+resource: Forme nuageuse | 16 rounds/jour au total | Transformation en action rapide, comme forme gazeuse, en conservant le vol à 60 m ; à réserver au repli
+
+step: Il repère des intrus avant qu'ils arrivent à portée
+  do: Préparer une nappe de brouillard pour couvrir son approche et repérer une zone où se poser à couvert
+  note: Perception +24 ; il surveille les positions adverses depuis la brume plutôt que de s'exposer aux tirs.
+
+step: Le combat paraît imminent et il dispose de deux rounds
+  do: Lancer bouclier, puis flou, un sort par round
+  note: Bouclier porte sa CA à 33 pendant 5 minutes ; flou donne 20 % de chances d'échec aux attaques pendant 5 minutes. Flou ne se cumule pas avec les chances d'échec du brouillard.
+
+step: Il soupçonne un adversaire invisible
+  do: Lancer détection de l'invisibilité avant d'approcher
+  note: Durée de 50 minutes ; cette dépense utilise la même réserve que flou.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent se soutenir mutuellement
+  do: Placer un brouillard dense sur leurs renforts ou leurs tireurs, en laissant une cible isolée hors de la zone
+  note: Rayon de 6 m, sans sauvegarde ni résistance à la magie. Le brouillard divise la vitesse par deux, inflige -2 aux attaques et dégâts de mêlée, empêche les pas de 1,50 m et les tirs d'armes efficaces ; les rayons magiques restent possibles.
+  note: Sa vision traverse ce brouillard, mais il en subit aussi les entraves physiques : garder son propre espace hors de la zone.
+
+step: Il attaque ou survole les adversaires à 54 m ou moins
+  do: Déclencher sa présence terrifiante, Volonté DD 22
+  note: Elle affecte les créatures ayant moins de 16 DV ; un jet réussi les immunise pendant 24 heures. Ne pas demander un nouveau jet à chaque round aux mêmes cibles immunisées.
+
+step: Une cible isolée est accessible après un déplacement
+  do: Approcher sous le couvert d'une nappe de brouillard et porter une morsure +22 (2d8+10), à 4,50 m au plus
+  note: Après un déplacement, il ne porte qu'une attaque ; choisir une position qui permet de rester hors de l'allonge adverse.
+
+## Rounds suivants
+
+step: Une cible est à 3 m ou moins et il peut combattre depuis un appui stable
+  do: Faire une attaque à outrance : morsure, 2 griffes, queue et 2 ailes ; concentrer les attaques sur la même cible
+  note: Se poser à couvert pour cette séquence ; son vol médiocre ne lui garantit pas le vol stationnaire. Un pas de 1,50 m peut suffire à ajuster sa position hors du brouillard dense.
+
+step: La cible reste entre 3 m et 4,50 m
+  do: Utiliser la morsure et menacer son approche avec cette allonge
+  note: Les griffes, les ailes et la queue n'atteignent pas cette distance.
+
+step: Les renforts sortent du brouillard dense ou les tireurs retrouvent une vue dégagée
+  do: Consacrer son action à un nouveau brouillard dense sur les renforts, ou à une nappe de brouillard pour masquer sa propre position
+  note: Dans la nappe, un adversaire situé au-delà de 1,50 m ne le voit plus et subit 50 % de chances d'échec s'il attaque la bonne case ; le dragon conserve sa vision normale.
+
+step: Un ennemi peu protégé reste au contact
+  do: Employer Attaque en puissance pour augmenter les dégâts de ses attaques naturelles
+  note: Préférer les bonus d'attaque ordinaires contre une CA élevée ; les attaques et dégâts du profil sont donnés sans Attaque en puissance.
+
+step: Une cible invisible échappe à ses attaques et le sort n'est pas actif
+  do: Lancer détection de l'invisibilité à couvert, puis reprendre les attaques au round suivant
+
+## Repli
+
+step: Ses points de vie passent sous 50, ou les adversaires neutralisent durablement son avantage dans la brume
+  do: Depuis sa forme normale, créer un brouillard dense entre les poursuivants et sa voie de fuite, puis prendre sa forme nuageuse en action rapide et s'éloigner en vol
+  note: Le pouvoir magique et le déplacement utilisent leurs actions habituelles. Choisir un trajet hors du brouillard dense pour conserver sa vitesse ; la forme nuageuse interdit les attaques et fait perdre l'armure naturelle.
+  note: Décompter chaque round sur les 16 disponibles et poursuivre la fuite à 60 m par déplacement ; cette forme ne permet pas de courir.
+
+step: La réserve de forme nuageuse est épuisée
+  do: Rompre la ligne de vue avec une nappe de brouillard et fuir en vol à 60 m par déplacement
+  note: Profiter de la distance et du couvert avant de reprendre les échanges ou de chercher un abri.

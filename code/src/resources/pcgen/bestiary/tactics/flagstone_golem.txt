@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Golem de dalles de taille G, gardien artificiel sans intelligence : il applique les consignes de son créateur. 74 pv, CA 20, RD 10/adamantium ; immunités des créatures artificielles et à la magie permettant la résistance à la magie.
+  Deux coups +13, chacun infligeant 2d8+6 et un étourdissement ; allonge de 3 m, espace de 3 m, déplacement de 9 m. Vision dans le noir à 18 m et vision nocturne.
+
+step: En attente devant le passage ou l'objet à garder
+  do: S'aplatir dans le dallage et attendre le déclencheur prévu par ses consignes
+  note: S'aplatir et se reformer demandent chacun une action simple. Aplati, il ne peut ni bouger ni attaquer ; sa RD devient 20/adamantium. Camouflage : Perception DD 25 pour le reconnaître, avec +2 pour les nains.
+
+## Ouverture
+
+step: Un intrus marche sur lui ou déclenche sa consigne d'attaque
+  do: Reprendre sa forme humanoïde avec son action simple
+  note: Cette transformation ne donne aucune attaque gratuite ; garder les coups pour le prochain tour.
+
+step: Déjà déployé, une cible est à 3 m ou moins
+  do: Attaque à outrance : deux coups +13 contre l'intrus le plus proche
+  note: Chaque coup réussi impose Vigueur DD 16 ; un échec étourdit pendant 1 round.
+
+step: Déjà déployé, aucun intrus n'est à portée
+  do: Avancer de 9 m au maximum et porter un seul coup si une cible entre dans l'allonge
+
+## Rounds suivants
+
+step: Un intrus reste dans l'allonge
+  do: Répéter les deux coups en attaque à outrance, en achevant la cible engagée
+  note: Rester devant l'accès gardé ; frapper aussi les intrus qui provoquent une attaque d'opportunité dans l'allonge.
+
+step: Une attaque d'acide, de feu, de froid, d'électricité ou de son le cible directement
+  do: Absorber l'énergie sans subir ses dégâts ; s'il est blessé, la convertir en soins
+  note: Il récupère 1 pv par tranche de 3 dégâts évités. L'absorption ne constitue pas une immunité générale aux effets de zone.
+
+resource: Énergie absorbée | Selon les attaques reçues ; conservation de 4 rounds | Choisir les soins ou une décharge, sans utiliser deux fois la même énergie.
+
+step: Une énergie est conservée et plusieurs intrus sont regroupés devant lui
+  do: La libérer en cône de 9 m à la place des coups
+  note: 3d8 dégâts du type absorbé ; Réflexes DD 14 pour moitié. Décharger avant la fin des 4 rounds de conservation.
+
+note: Exceptions à la magie
+  Transmutation de la pierre en boue le ralentit 2d6 rounds sans sauvegarde ; transmutation de la boue en pierre restaure tous ses pv ; pierre en chair annule sa RD pendant 1 round.
+
+## Repli
+
+step: Ses pv diminuent et aucun ordre de retrait n'est prévu
+  do: Continuer à défendre l'accès jusqu'à sa destruction
+  note: Ce gardien sans intelligence ne décide pas de fuir par peur.
+
+step: Ses consignes prévoient de se mettre en protection sur place
+  do: S'aplatir par une action simple pour retrouver la RD 20/adamantium
+  note: Cette protection immobilise le golem et interrompt ses attaques ; elle ne lui rend aucun pv et ne bloque pas l'adamantium.

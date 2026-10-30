@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Reine fongique, plante extraplanaire chaotique mauvaise, FP 9 : une manipulatrice intelligente qui préfère retourner les intrus les uns contre les autres.
+  114 pv ; CA 23, contact 13 ; déplacement 6 m ; allonge 1,50 m. Attaque à outrance : 2 griffes +14 (1d6+5) et 4 tentacules +12 (1d4+2 et étreinte) ; lutte +18.
+  RD 10/fer froid ou Bien ; immunité à l'électricité et traits des plantes ; résistance à l'acide 10 et au froid 10 ; résistance à la magie 20.
+  Vision dans le noir à 18 m, vision nocturne, Perception +18 ; détection du Bien et langues constantes ; télépathie à 30 m.
+
+resource: Voile | à volonté | DD 23 ; sur elle seule
+resource: Charme-monstre | 3/jour | Volonté DD 21
+resource: Détection des pensées | 3/jour | Volonté DD 19
+resource: Suggestion | 3/jour | Volonté DD 20
+resource: Domination de personne | 1/jour | Volonté DD 22 ; cible humanoïde
+resource: Brume mentale | 1/jour | Volonté DD 22
+resource: Lenteur | 1/jour | Volonté DD 20
+
+step: Elle peut préparer une rencontre
+  do: Prendre par voile une apparence accueillante ou crédible, puis engager la conversation avec Bluff +22 et Déguisement +28
+  note: Langues facilite les échanges ; détection du Bien aide à repérer des adversaires potentiels. Détection des pensées permet de sonder les interlocuteurs avant de choisir une cible.
+
+step: Elle peut approcher une créature isolée sans la menacer
+  do: Utiliser charme-monstre pour obtenir un interlocuteur amical, puis suggestion pour lui faire accepter une tâche plausible qui l'éloigne de ses compagnons
+  note: Le charme ne donne pas un contrôle absolu ; conserver domination de personne pour un humanoïde dont les actes doivent être dirigés.
+
+step: Elle dispose déjà de serviteurs ou de plantes alliées
+  do: Les placer entre elle et les accès, avec un passage libre vers une issue
+  note: Son empathie végétale +23 facilite les rapports avec les plantes ; elle ne lui donne pas ici de pouvoir de domination des plantes.
+
+## Ouverture
+
+step: Les intrus approchent groupés et aucun ne menace encore de la frapper au contact
+  do: Placer brume mentale sur leur passage pour préparer ses enchantements des rounds suivants
+  note: Une cible qui échoue au jet de Volonté DD 22 subit un malus de 10 aux tests de Sagesse et aux jets de Volonté dans la brume, puis pendant 2d6 rounds après sa sortie. La brume ne masque pas la vue ; la reine, immunisée aux effets mentaux par ses traits de plante, peut y rester.
+
+step: Une charge ennemie impose de freiner immédiatement plusieurs assaillants
+  do: Utiliser lenteur (Volonté DD 20), puis se déplacer derrière ses serviteurs si le passage est libre
+  note: Lenteur réduit la mobilité et empêche les attaques à outrance des victimes ; elle facilite ensuite les déplacements de la reine.
+
+step: Un ennemi est déjà à portée et elle choisit de combattre au corps à corps
+  do: Faire une attaque à outrance avec ses 2 griffes et ses 4 tentacules
+  note: Après une touche de tentacule contre une créature de taille P ou inférieure, tenter l'étreinte à +18 comme action libre si retenir cette cible sert sa position.
+
+## Rounds suivants
+
+step: Un humanoïde dangereux est vulnérable aux effets mentaux, surtout après brume mentale
+  do: Utiliser domination de personne (Volonté DD 22), puis lui ordonner de protéger la reine et de contenir ses compagnons
+  note: Choisir une cible capable de bloquer l'accès à la reine ; les ordres contraires à la nature de la victime peuvent lui permettre de résister de nouveau.
+
+step: La domination est dépensée, ou la meilleure cible n'est pas humanoïde
+  do: Employer suggestion (Volonté DD 20) pour faire accepter un départ plausible, comme aller chercher des renforts
+  note: Réserver charme-monstre aux occasions où la cible n'est plus menacée ; un ennemi menacé ou attaqué par la reine ou ses alliés reçoit +5 à sa sauvegarde contre ce charme.
+
+step: Elle veut lancer un pouvoir magique alors qu'un adversaire la menace
+  do: Si un pas de placement de 1,50 m suffit à sortir des allonges ennemies, le faire avant d'utiliser le pouvoir
+  note: Chaque pouvoir magique demande normalement une action simple ; enchaîner brume mentale et domination exige donc deux rounds distincts.
+
+step: Les ennemis résistent aux enchantements ou restent au contact
+  do: Répéter l'attaque à outrance ; utiliser Attaque en puissance contre une défense faible, ou Expertise du combat si elle doit privilégier sa protection
+  note: Attaques réflexes permet de saisir plusieurs occasions à 1,50 m ; sa portée reste courte. Maintenir une étreinte demande une action simple : choisir entre maintenir la prise, lancer un pouvoir ou effectuer une attaque à outrance après avoir relâché la cible.
+
+## Repli
+
+step: Ses points de vie passent sous 35, ou des adversaires capables de franchir sa RD la submergent
+  do: Ordonner aux serviteurs disponibles de couvrir sa fuite ; au contact, utiliser un retrait vers une issue, jusqu'à 12 m
+  note: Sa vitesse ordinaire de 6 m rend une poursuite à découvert défavorable ; privilégier les passages que ses alliés peuvent défendre.
+
+step: Elle a quitté le contact et lenteur est encore disponible
+  do: Lancer lenteur sur les poursuivants (Volonté DD 20), puis poursuivre sa fuite de 6 m
+
+step: Elle a rompu le contact visuel
+  do: Changer d'apparence avec voile pour brouiller sa piste et préparer une nouvelle approche sous une autre identité

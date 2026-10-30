@@ -1,0 +1,83 @@
+## Avant le combat
+
+note: Profil
+  Le démon choronzon est un extérieur chaotique mauvais de taille Très Grande, FP 18 : 290 pv, CA 32. Il immobilise ses victimes par ses griffes et désorganise les groupes avec son aura et son souffle.
+  Attaque à outrance : morsure +30 (2d8+11, critique 19–20) et 2 griffes +29 (1d8+11 chacune, plus hébétement). Chaque griffe impose Vigueur DD 31 ou un hébétement de 1d3 rounds.
+  Déplacement de 12 m ; espace et allonge de 4,50 m ; vision dans le noir à 18 m ; Perception +39 ; télépathie à 30 m.
+
+note: Défenses
+  Réduction des dégâts 10/fer froid et bien ; résistance à la magie 29 ; immunité à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10.
+  Sa Volonté +10 est son jet de sauvegarde le plus faible ; préparer son aura maudite et empêcher les lanceurs de sorts d'agir sont des priorités.
+
+resource: Aura de confusion | permanente | rayon de 3 m, DD 24
+resource: Souffle | réutilisable tous les 1d4 rounds | cône de 12 m, 10d6 dégâts, Vigueur DD 29 pour moitié
+resource: Vision lucide | à volonté | NLS 20
+resource: Téléportation suprême | à volonté | lui-même et au plus 50 livres d'objets, soit environ 22,7 kg
+resource: Frayeur | à volonté | DD 15
+resource: Aura maudite | 3/jour | DD 22, NLS 20
+resource: Marteau du chaos | 3/jour | DD 18, NLS 20
+resource: Ténèbres maudites | 3/jour | DD 18, NLS 20
+resource: Parole du chaos | 1/jour | DD 21, NLS 20
+resource: Convocation de démons | 1/jour | 35 % de réussite ; choisir 1d4 hezrous, 1d4 nalfeshnies ou 2d4 vrocks
+
+step: Il peut préparer le combat
+  do: Activer vision lucide pour repérer les tromperies visuelles, puis aura maudite avant de s'exposer.
+  note: Prévoir le temps nécessaire à chaque pouvoir ; renouveler la protection si elle expire avant l'affrontement.
+
+step: Il dispose du temps nécessaire pour tenter une convocation
+  do: Tenter de convoquer des nalfeshnies pour renforcer le front, ou des vrocks s'il faut multiplier les assaillants.
+  note: La tentative consomme l'utilisation quotidienne même si elle échoue. Ne compter sur aucun renfort avant de résoudre les 35 % de réussite.
+
+step: Des démons l'accompagnent
+  do: Leur transmettre par télépathie les cibles à harceler et les placer sur les flancs.
+  note: Garder un axe de souffle dégagé et éviter d'exposer inutilement les alliés à l'aura de confusion.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés dans un cône de 12 m
+  do: Ouvrir avec le souffle, en orientant le cône pour épargner ses alliés.
+  note: Infliger 10d6 dégâts, Vigueur DD 29 pour moitié ; déterminer immédiatement le délai de recharge de 1d4 rounds.
+
+step: Une cible dangereuse est déjà à portée de 4,50 m et le souffle offre peu de prises
+  do: Effectuer une attaque à outrance sur cette cible, en donnant la priorité au lanceur de sorts accessible.
+  note: Les griffes peuvent l'hébéter avant qu'elle puisse riposter ; la morsure apporte les dégâts les plus élevés.
+
+step: Aucun ennemi n'est à portée de mêlée
+  do: Avancer jusqu'à pouvoir menacer les adversaires avec son allonge, puis utiliser le souffle s'il peut toucher une cible utile.
+  note: S'il faut une téléportation suprême pour atteindre une position favorable, y consacrer son action et préparer l'assaut du round suivant.
+
+## Rounds suivants
+
+step: Une cible reste à portée au début de son tour
+  do: Privilégier l'attaque à outrance ; concentrer les attaques pour éliminer un adversaire.
+  note: Se placer si possible à 3 m ou moins des ennemis pour ajouter l'aura de confusion aux griffes. Entre 3 m et 4,50 m, seule son allonge les atteint.
+
+step: Une victime est hébétée
+  do: Exploiter son incapacité à agir pour l'achever, ou reporter les griffes sur un autre adversaire encore actif si les alliés peuvent la terminer.
+  note: Suivre séparément la durée de 1d3 rounds de chaque hébétement.
+
+step: Le souffle est rechargé et plusieurs ennemis peuvent être touchés
+  do: Souffler de nouveau si cela rapporte davantage que l'attaque à outrance.
+  note: Ne pas dépenser le souffle dès sa recharge si les cibles sont dispersées ou mêlées à ses renforts.
+
+step: Plusieurs adversaires non chaotiques peuvent subir parole du chaos
+  do: Employer parole du chaos, DD 21, si elle peut faire basculer le combat.
+  note: Réserver son unique utilisation à un groupe de cibles susceptibles d'en subir les effets.
+
+step: Les ennemis se tiennent hors de sa portée et le souffle est indisponible
+  do: Employer marteau du chaos contre les adversaires loyaux, ou ténèbres maudites contre les adversaires bons, puis chercher à rétablir le contact.
+  note: Leurs DD 18 les rendent moins fiables que le souffle et l'hébétement. Frayeur, DD 15, reste un recours contre les créatures faibles qu'elle peut affecter.
+
+step: Un adversaire est facile à toucher
+  do: Envisager Attaque en puissance pour augmenter les dégâts.
+  note: Contre une forte CA, préserver les chances de toucher avec les griffes : chaque touche peut retirer plusieurs rounds d'action à la cible.
+
+## Repli
+
+step: Ses points de vie tombent sous 75, ou il ne peut plus soutenir le combat
+  do: Utiliser téléportation suprême vers un refuge connu.
+  note: La téléportation n'emporte ni ses alliés ni ses victimes ; respecter la limite de 50 livres d'objets. Ne pas attendre le dernier round possible pour fuir.
+
+step: La téléportation est empêchée
+  do: Se retirer à pied vers une issue accessible, avec l'aide des démons présents.
+  note: Utiliser le souffle s'il est prêt pour desserrer la poursuite, puis retenter la téléportation dès que l'obstacle disparaît.

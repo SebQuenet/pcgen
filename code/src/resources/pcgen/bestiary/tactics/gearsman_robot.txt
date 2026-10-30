@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Gearsman Robot, robot neutre de taille M, garde ou soldat de choc intelligent qui exécute sa mission avec une efficacité froide. Ses directives internes priment sur les ordres de son maître.
+  42 pv, CA 18, solidité 5 ; immunités des créatures artificielles, mais vulnérable aux coups critiques et à l'électricité. Déplacement de 6 m, allonge de 1,50 m.
+  Lance de maître à deux mains +10 (1d8+7, x3, plus 1d6 d'électricité) ; à défaut, coup +9 (1d4+7). Lance lancée +6 (1d8+5, x3).
+
+resource: Réparation par nanites | 1/jour | action complexe ; rend 4d6 pv à lui-même ou à un robot touché
+resource: Réparation passive | permanente | récupère 4 pv par heure ; aucun soin par round
+resource: Apprentissage adaptatif | 1/jour | 1 minute de concentration sans autre action pour réaffecter ses 4 rangs bonus à une seule compétence, ou obtenir le maniement d'une arme
+
+step: Il garde un passage ou un objectif
+  do: Se placer pour intercepter les intrus au contact, lance en main ; surveiller avec Perception +8, vision dans le noir à 18 m et vision nocturne.
+  note: Sa lance frappe à 1,50 m ; elle ne lui donne pas une allonge de 3 m. L'arme tenue se charge automatiquement d'électricité.
+
+step: Plusieurs gearsmen défendent le même lieu
+  do: Couvrir les accès et prévoir des positions permettant de prendre un intrus en tenaille, sans abandonner l'objectif.
+
+## Ouverture
+
+step: Un ennemi est à portée de mêlée
+  do: Attaquer à la lance +10 (1d8+7, x3, plus 1d6 d'électricité).
+  note: Privilégier un adversaire qui menace directement l'objectif ; si un utilisateur d'électricité est accessible, chercher à l'engager rapidement.
+
+step: La cible peut être atteinte avec un déplacement de 6 m
+  do: Avancer puis porter une attaque de lance ; éviter de s'exposer à plusieurs ennemis à la fois.
+
+step: Une cible se trouve entre 3 et 12 m, avec une trajectoire de charge dégagée
+  do: Si quitter sa position sert la mission, charger et frapper à la lance +12 ; sa CA tombe à 16 jusqu'au début de son prochain tour.
+
+step: Aucun ennemi ne peut être engagé ce round et un lancer peut arrêter une menace immédiate
+  do: Lancer la lance +6 (1d8+5, x3).
+  note: Ce lancer ne bénéficie pas du supplément électrique indiqué pour la mêlée. Il abandonne ainsi sa meilleure arme ; conserver la lance si les ennemis vont bientôt arriver au contact.
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Continuer les attaques de lance ; en groupe, chercher une tenaille et concentrer les coups sur la même cible.
+
+step: L'adversaire est facile à toucher
+  do: Utiliser Attaque en puissance avec la lance à deux mains : +8 (1d8+13, x3, plus 1d6 d'électricité).
+  note: Le malus de -2 aux attaques et le bonus de +6 aux dégâts physiques durent jusqu'au prochain tour. Contre une défense élevée, conserver l'attaque normale +10.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 1,50 m
+  do: Frapper à la lance en appliquant Réflexes de combat.
+  note: Jusqu'à deux attaques d'opportunité par round, sur des occasions distinctes ; le don permet aussi d'en porter lorsqu'il est pris au dépourvu.
+
+step: Sa lance est perdue ou inaccessible
+  do: Utiliser le coup +9 (1d4+7) ; récupérer la lance si cela ne l'expose pas inutilement.
+  note: Le coup ne reçoit pas les dégâts électriques de l'arme chargée.
+
+step: Il reste 20 pv ou moins, et la réparation quotidienne est disponible
+  do: Si possible, se décaler de 1,50 m à couvert d'un allié puis consacrer une action complexe à récupérer 4d6 pv.
+  note: Il renonce à son attaque du round. En escouade, un gearsman peut employer sa réparation sur un robot allié touché si cela protège mieux l'objectif.
+
+## Repli
+
+step: Il reste 10 pv ou moins, la réparation est épuisée et ses directives autorisent le repli
+  do: Se retirer vers un passage défendu ou des alliés ; utiliser le désengagement pour quitter la mêlée, jusqu'à 12 m si le terrain le permet.
+  note: Son déplacement ordinaire reste de 6 m. Une fois à l'abri, sa réparation passive ne rend que 4 pv par heure.
+
+step: Ses directives imposent de tenir la position
+  do: Continuer à barrer l'accès et à frapper jusqu'à la destruction ; employer sa réparation quotidienne dès qu'une accalmie le permet.

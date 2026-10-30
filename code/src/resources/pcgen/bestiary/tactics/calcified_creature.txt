@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Humaine calcifiée, roublarde 8, neutre ; 79 pv, CA 23, contact 15. Déplacement de 9 m ; allonge de 1,50 m.
+  Rapière de maître +12/+7 (1d6+2, critique 18-20) ; pistolet +10 (1d8, critique x4). Elle privilégie les embuscades et les duels contre une cible isolée.
+  Immunisée contre les effets mentaux ; esquive totale et esquive instinctive supérieure.
+
+resource: Disparition | 2/jour | pouvoir magique, NLS 8 ; invisibilité pendant 5 rounds au maximum, interrompue dès qu'elle attaque
+resource: Lumière | 3/jour | pouvoir magique, NLS 8
+resource: Potion de soins modérés | 1 | à boire à couvert pour récupérer des points de vie
+resource: Balles de pistolet | 20 | une balle par tir ; rechargement par une action simple, avec une main libre
+
+step: Elle peut préparer une embuscade
+  do: Charger le pistolet et se dissimuler derrière un abri, de préférence dans la pénombre ; laisser approcher une cible à 6 m ou moins.
+  note: Discrétion +13, ou +17 dans la pénombre ou l'obscurité ; Perception +11. Ce bonus ne lui donne pas la capacité de voir dans le noir.
+
+step: L'obscurité l'empêche de distinguer ses adversaires
+  do: Utiliser lumière sur un objet pour éclairer la zone nécessaire au combat.
+  note: Éclairer sa cachette compromet sa dissimulation ; préférer une zone déjà faiblement éclairée lorsqu'elle peut choisir le terrain.
+
+## Ouverture
+
+step: Une cible est visible à 6 m ou moins, hors du contact
+  do: Tirer au pistolet à +10, en visant de préférence un adversaire isolé ou déjà blessé.
+  note: Dans cette première portée, le tir vise la CA de contact. Éviter de tirer lorsqu'un ennemi peut lui porter une attaque d'opportunité.
+
+step: Un adversaire est déjà à portée de rapière
+  do: Feinter avec Bluff +12 par une action de mouvement, puis porter une attaque de rapière à +12.
+  note: Si la feinte réussit, la cible perd son bonus de Dextérité à la CA contre cette attaque de corps à corps.
+
+step: Elle doit rejoindre une cible au corps à corps
+  do: Se déplacer jusqu'à 9 m en dégainant la rapière, puis attaquer à +12 si la cible est à 1,50 m.
+
+## Rounds suivants
+
+step: Elle peut rester au contact sans devoir feinter
+  do: Attaque à outrance à la rapière, +12/+7, chaque touche infligeant 1d6+2.
+  note: Un pas de placement de 1,50 m reste possible ; un déplacement plus long empêche cette attaque à outrance.
+
+step: La Dextérité de la cible rend ses attaques difficiles
+  do: Reprendre la feinte améliorée avec Bluff +12, puis une seule attaque à +12.
+  note: La feinte consomme l'action de mouvement ; elle ne se combine pas avec les deux attaques d'une attaque à outrance.
+
+step: Elle subit une forte pression au corps à corps
+  do: Utiliser Expertise du combat en attaquant : CA 25, rapière +10, ou +10/+5 en attaque à outrance.
+  note: Le bonus d'esquive de +2 à la CA et le malus de -2 aux attaques de corps à corps durent jusqu'à son prochain tour.
+
+step: Les ennemis restent à distance et le pistolet est déchargé
+  do: Se mettre à couvert et recharger par une action simple ; tirer au round suivant si une cible se présente.
+  note: Le rechargement provoque des attaques d'opportunité ; libérer une main avant de recharger. Si le pistolet s'enraye, privilégier la rapière.
+
+## Repli
+
+step: Points de vie sous 25 et une utilisation de disparition reste disponible
+  do: Si possible, faire un pas de placement de 1,50 m hors de l'allonge adverse ; utiliser disparition, puis s'éloigner dès que possible vers un abri.
+  note: Le pouvoir demande une action simple et provoque des attaques d'opportunité. Elle cesse d'attaquer pour conserver l'invisibilité ; elle se déplace de 9 m par action de mouvement.
+
+step: Elle est à couvert, blessée et possède encore sa potion
+  do: Boire la potion de soins modérés pendant un round consacré aux soins, puis poursuivre le repli.
+
+step: Disparition est épuisée ou inefficace
+  do: Se désengager par l'action de retraite, jusqu'à 18 m, vers un abri permettant de rompre la ligne de vue.
+  note: La retraite protège seulement contre les attaques d'opportunité liées à la sortie de sa case initiale ; éviter de traverser d'autres zones menacées.

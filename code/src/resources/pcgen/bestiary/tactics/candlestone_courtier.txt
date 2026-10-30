@@ -1,0 +1,80 @@
+## Avant le combat
+
+note: Profil
+  Candlestone Courtier, fée de taille M, neutre mauvaise, émissaire souterrain qui préfère la ruse et le chantage à la violence. Il isole une victime, l'affaiblit au toucher et exploite les chutes pour multiplier ses coups de rapière.
+  Rapière +1 acérée +20/+15 (1d6+4, critique 15–20) ; croc-en-jambe +16 ; déplacement 9 m, allonge 1,50 m. Initiative +9 ; 161 pv ; CA 26 ; réduction des dégâts 10/fer froid ; résistance à la magie 23.
+
+resource: Leurre et détection de l'invisibilité | constants | vision nocturne et vision dans les ténèbres également disponibles
+resource: Déguisement, lueurs féeriques, contact défigurant, idiotie, vent de murmures | à volonté | contact défigurant : Volonté DD 18 ; pouvoirs au toucher à employer au contact
+resource: Image accomplie | 3/jour | Volonté DD 19 pour reconnaître l'illusion après interaction
+resource: Déformation insoutenable | 3/jour | excruciating deformation ; toucher ; Vigueur DD 19, effet partiel ; durée 19 rounds
+resource: Sables du temps | 3/jour | toucher ; aucun jet de sauvegarde ; résistance à la magie applicable
+resource: Forme éthérée | 1/jour | fuite à travers les obstacles ; durée 19 rounds
+resource: Traversée des ombres | 1/jour | départ depuis une zone de pénombre
+resource: Coursier fantôme | 1/jour | préparer la monture avant une rencontre si un déplacement prolongé est prévu
+
+step: Une rencontre peut être préparée
+  do: Observer avec Perception +25 et Psychologie +15 ; approcher sous déguisement ou se dissimuler avec Discrétion +30 derrière un couvert, de préférence dans les ténèbres
+  note: Il voit les créatures invisibles et dans les ténèbres, mais ne possède aucun pouvoir pour créer l'obscurité.
+
+step: Les intrus acceptent de parlementer
+  do: Employer Bluff +27 et proposer un marché féerique pour obtenir leur coopération ou séparer une victime de ses compagnons
+  note: Le marché exige un accord ; il ne permet pas de dominer instantanément un ennemi hostile.
+
+## Ouverture
+
+step: Les adversaires restent groupés et hors de portée
+  do: Créer une image accomplie de menace ou de passage obstrué pour détourner leur progression et isoler une cible
+  note: L'illusion ne forme aucun obstacle matériel ; la concentration nécessaire à son maintien utilise son action simple.
+
+step: Un ennemi invisible ou dissimulé par magie gêne le combat
+  do: Le désigner avec lueurs féeriques pour supprimer les avantages visuels de son invisibilité et permettre aux éventuels autres courtiers de le viser
+
+step: Un lanceur de sorts vivant est accessible au contact
+  do: Utiliser idiotie par attaque de contact pour lui infliger un malus de 1d6 en Intelligence, Sagesse et Charisme, sans sauvegarde
+  note: Ce malus peut empêcher le lancement de certains sorts ; la résistance à la magie reste applicable.
+
+step: Un combattant pouvant être renversé arrive à 1,50 m
+  do: Tenter un croc-en-jambe +16 contre son DMD, puis porter l'attaque d'opportunité provoquée par le croc-en-jambe supérieur
+  note: La tentative ne provoque pas d'attaque d'opportunité. S'il attaque à outrance, il peut remplacer sa première attaque par cette manœuvre et conserver la seconde attaque de rapière à +15.
+
+## Rounds suivants
+
+step: Une cible vulnérable aux douleurs reste au contact
+  do: Utiliser déformation insoutenable, puis la laisser s'affaiblir pendant qu'il combat ou se replace aux rounds suivants
+  note: Chaque round : 2d6 dégâts non létaux, 1 dégât de Dextérité, 1 dégât de Constitution et vitesse réduite de 3 m. Vigueur DD 19 ; la victime peut ensuite refaire ce jet à son tour pour suspendre l'effet pendant un round.
+
+step: Il veut affaiblir durablement un adversaire
+  do: Employer contact défigurant, Volonté DD 18, en choisissant un malus de –2 aux jets d'attaque d'un combattant ou aux sauvegardes d'une prochaine cible de déformation insoutenable
+  note: Chaque pouvoir demande sa propre action simple ; un pouvoir utilisé au contact peut être activé sur la défensive avec concentration +25.
+
+step: Une cible résiste bien aux sauvegardes ou est un mort-vivant ou une créature artificielle
+  do: Utiliser sables du temps au toucher : vieillissement d'une catégorie pour une créature mortelle, ou 3d6+15 dégâts contre un mort-vivant ou une créature artificielle
+  note: Le vieillissement inflige les malus physiques de la nouvelle catégorie sans ses bonus mentaux, pendant 190 minutes ; les créatures immortelles ou sans âge y sont immunisées.
+
+step: Une victime à terre reste à portée
+  do: Attaquer à outrance à la rapière +20/+15, avec le bonus de +4 aux attaques de mêlée contre une cible à terre
+  note: Attaques réflexes autorise jusqu'à 10 attaques d'opportunité par round, sur des occasions distinctes. Frapper lorsqu'elle se relève ; cette attaque se résout avant son redressement, sans pouvoir la faire tomber une seconde fois alors qu'elle est encore à terre.
+
+step: Il commence son tour sans être adjacent à sa cible et un passage reste libre
+  do: Utiliser Attaque éclair : avancer d'au moins 3 m, frapper une fois à +20, puis poursuivre le déplacement, dans une limite totale de 9 m
+  note: Cette action complexe évite les attaques d'opportunité de la cible attaquée ; elle exige que celle-ci ne soit pas adjacente au début du tour. Acrobaties +30 peut aider à éviter les autres ennemis, au prix du déplacement requis.
+
+step: Au moins trois ennemis sont à 1,50 m et le repli peut attendre
+  do: Utiliser Attaque en rotation : une attaque de rapière à +20 contre chaque adversaire à portée, à la place des deux attaques habituelles
+
+step: Il doit tenir face à un adversaire dangereux au contact
+  do: Activer Expertise du combat en attaquant : CA 29, attaques de rapière +17/+12 et croc-en-jambe +13 jusqu'à son prochain tour
+
+## Repli
+
+step: Ses points de vie tombent sous 50, ou les armes en fer froid rendent le contact trop dangereux
+  do: Activer forme éthérée, sur la défensive si nécessaire, puis traverser un obstacle pour couper la poursuite
+  note: Concentration +25 ; il doit retrouver un emplacement sûr avant la fin des 19 rounds. Il ne peut pas frapper les adversaires matériels depuis le plan Éthéré.
+
+step: Forme éthérée est indisponible et une zone de pénombre est accessible
+  do: Utiliser traversée des ombres pour quitter la rencontre ; sur la défensive s'il reste menacé
+
+step: Les deux pouvoirs de fuite sont épuisés
+  do: Se retirer par une issue libre, puis rompre la ligne de vue et se cacher avec Discrétion +30 ; reprendre un déguisement une fois hors de vue
+  note: Utiliser l'action de retraite pour limiter les attaques d'opportunité ; un déguisement ne le rend pas invisible.

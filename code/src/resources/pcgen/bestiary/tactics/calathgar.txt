@@ -1,0 +1,62 @@
+## Avant le combat
+
+note: Profil
+  Calathgar, plante neutre de taille P des forêts froides, FP 4 ; 39 PV, CA 16, initiative +8.
+  Fleur +7 à 1,50 m (1d6+2 plus 1d6 de froid) et deux vrilles +7 jusqu'à 3 m (1d4+2 chacune). Déplacement et escalade : 6 m.
+  Immunité au froid et traits des plantes ; le froid le soigne, mais le feu lui inflige 50 % de dégâts supplémentaires.
+
+step: Des intrus approchent
+  do: Se dissimuler dans la végétation avec Discrétion +17 et les laisser venir à portée des vrilles
+  note: odorat, vision nocturne et vision dans le noir à 9 m aident à repérer les approches ; Perception +2
+
+step: Une zone de froid intense ou une moisissure brune est déjà présente
+  do: Choisir une position de combat dans cette zone, si elle offre aussi un couvert
+  note: guérison accélérée 1 dans le froid intense ; à moins de 9 m d'une moisissure brune, le froid suffit à l'activer
+
+## Ouverture
+
+step: Une cible est à 1,50 m et aucune approche n'est nécessaire
+  do: Attaque à outrance : fleur +7 (1d6+2 plus 1d6 de froid) et deux vrilles +7 (1d4+2 chacune)
+  note: concentrer les trois attaques sur la même cible pour la mettre rapidement hors de combat
+
+step: Une cible est à 3 m et le calathgar peut rester sur place
+  do: Attaque à outrance avec les deux vrilles +7 (1d4+2 chacune)
+  note: la fleur ne porte qu'à 1,50 m ; laisser l'ennemi s'approcher expose celui-ci aux attaques d'opportunité si son déplacement en provoque
+
+step: Aucun adversaire n'est à portée
+  do: Avancer ou grimper de 6 m au maximum vers une cible accessible, puis porter une seule attaque si elle est à portée
+  note: préférer la fleur à 1,50 m ; sinon employer une vrille jusqu'à 3 m
+
+## Rounds suivants
+
+resource: Attaques d'opportunité | 5 par round | Attaques réflexes et Dextérité 19 ; une seule attaque par occasion
+
+step: Un ennemi provoque une attaque d'opportunité dans la zone menacée
+  do: Frapper avec une vrille jusqu'à 3 m, ou avec la fleur à 1,50 m
+  note: entrer simplement dans la zone menacée ne provoque pas ; exploiter les déplacements qui quittent une case menacée et les actions qui provoquent
+
+step: Une cible reste à 1,50 m
+  do: Répéter l'attaque à outrance avec la fleur et les deux vrilles
+  note: un pas de placement de 1,50 m permet d'ajuster la position tout en conservant l'attaque à outrance
+
+step: Une cible reste à 3 m
+  do: Avancer d'un pas de placement de 1,50 m si le terrain le permet, puis attaquer avec la fleur et les deux vrilles
+  note: sinon, conserver les deux attaques de vrilles à distance
+
+step: Le camouflage gêne ses attaques de mêlée
+  do: Appliquer Combat en aveugle : relancer une fois chaque jet de camouflage raté
+  note: ce don ne révèle pas automatiquement la position d'une créature invisible
+
+step: Un effet devrait lui infliger des dégâts de froid
+  do: Récupérer 1 PV au lieu de subir ces dégâts, quelle que soit leur valeur
+  note: dans une zone de froid intense, ajouter la guérison accélérée de 1 PV par round, sans dépasser 39 PV
+
+## Repli
+
+step: Il tombe à 10 PV ou moins, ou subit des attaques de feu répétées
+  do: Se désengager puis gagner les arbres ou un couvert grâce à son escalade de 6 m, en recherchant le froid intense
+  note: au contact, utiliser la retraite si nécessaire ; une fois hors d'atteinte, se cacher avec Discrétion +17 et récupérer si le froid permet la guérison accélérée
+
+step: Il est réduit à 0 PV
+  do: Appliquer automatiquement sa transformation mortelle en plaque de moisissure brune de 1,50 m, ou de 3 m si le feu l'a tué
+  note: la moisissure inflige 3d6 dégâts non létaux de froid aux créatures à 1,50 m ou moins ; s'il meurt sur une plaque existante, celle-ci double de taille. Cette transformation tue le calathgar et ne constitue pas une fuite

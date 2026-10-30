@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Globe défenseur, Extérieur élémentaire natif de taille P, neutre et solitaire ; 26 pv, CA 17, initiative +3.
+  Décharge électrique à distance +8, infligeant 2d6 dégâts d’électricité ; aucune attaque de corps à corps indiquée.
+  Immunité à l’électricité ; résistance au froid 10 et au feu 10. Vision dans le noir à 18 m, Perception +8.
+
+resource: Lumière | permanent | pouvoir magique constant, NLS 4
+
+step: Un obstacle offre un abri et une ligne de tir sur les intrus
+  do: Se placer derrière cet abri avant leur approche
+  note: Sa lumière constante peut révéler sa présence ; ne pas compter sur l’obscurité pour le dissimuler
+
+## Ouverture
+
+step: Une cible est visible et aucun adversaire ne le menace au corps à corps
+  do: Tirer une décharge électrique sur la cible la plus exposée
+  note: Attaque à distance +8, 2d6 dégâts d’électricité ; aucun jet de sauvegarde n’est indiqué
+
+step: Un pas de placement de 1,50 m suffit à sortir de toutes les zones menacées
+  do: Faire ce pas, puis tirer une décharge électrique
+  note: Éviter de tirer depuis une case menacée, car une attaque à distance peut provoquer une attaque d’opportunité
+
+## Rounds suivants
+
+step: La cible précédente reste accessible et subit ses décharges
+  do: Continuer à lui tirer dessus, à raison d’une décharge par round
+  note: Concentrer les dégâts jusqu’à la mettre hors de combat
+
+step: Les décharges semblent sans effet sur la cible
+  do: Choisir un autre adversaire visible
+
+step: Un adversaire le menace et un pas de placement de 1,50 m ne suffit pas à se dégager
+  do: Consacrer le round à une retraite vers une position permettant de reprendre les tirs
+  note: La retraite empêche les attaques d’opportunité dues au départ de la case initiale ; les autres cases menacées traversées restent dangereuses
+
+## Repli
+
+step: Il tombe à 8 pv ou moins et une issue est accessible
+  do: Battre en retraite vers un abri qui coupe les lignes de vue, puis poursuivre sa fuite
+  note: S’il est au contact, employer l’action de retraite ; ne pas tirer durant ce round
+
+step: Il ne peut pas fuir
+  do: Tirer sur l’adversaire qui bloque l’issue, après un pas de placement de 1,50 m si celui-ci permet de se dégager

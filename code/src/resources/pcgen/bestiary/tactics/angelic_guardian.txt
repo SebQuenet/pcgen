@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Gardien angélique, créature artificielle neutre de taille M, sans intelligence, façonnée comme une statue d’ange pour protéger son maître à Magnimar.
+  53 pv ; CA 18, contact 12, pris au dépourvu 16 ; réduction des dégâts 5/adamantium ; immunité au feu et traits des créatures artificielles.
+  Attaque à outrance : 2 coups +10 (1d6+4 chacun) et 2 ailes +5 (1d4+2 chacune, dégâts tranchants grâce aux plumes métalliques). Allonge : 1,50 m.
+  Déplacement terrestre de 9 m, vol de 18 m avec une manœuvrabilité moyenne ; vision dans le noir à 18 m et vision nocturne ; Perception +0. Comprend le commun, mais ne parle pas.
+
+resource: Ailes déviantes | à volonté | Action simple ; protège une créature adjacente, à 1,50 m, contre la prochaine attaque à distance qui devrait la toucher. Cette attaque est déviée et ne lui inflige aucun dégât ; une seule attaque déviée par tour. La protection cesse au début du prochain tour du gardien ou dès que la créature protégée quitte sa case.
+
+step: Il garde son maître ou un lieu
+  do: Rester immobile à son poste, près de la personne à protéger ou sur le passage des intrus
+  note: Son apparence de statue ne lui donne aucun camouflage particulier ; son halo brûlant reste visible.
+
+## Ouverture
+
+step: Son maître est menacé par des tirs
+  do: Se placer à côté de lui si nécessaire, puis utiliser les ailes déviantes
+  note: Cette protection vise une autre créature ; le gardien ne l’utilise pas sur lui-même et renonce à son attaque à outrance ce round.
+
+step: Un agresseur est déjà à portée et la protection contre les tirs n’est pas prioritaire
+  do: Effectuer une attaque à outrance avec les deux coups et les deux ailes
+
+step: Un agresseur menace son maître depuis une position éloignée ou élevée
+  do: Rejoindre l’agresseur à pied ou en vol, puis porter un seul coup +10 (1d6+4) si une action simple reste disponible
+  note: Il ne peut pas effectuer ses quatre attaques après un déplacement ordinaire.
+
+## Rounds suivants
+
+step: Un ennemi reste au contact
+  do: Répéter l’attaque à outrance ; si un ajustement de 1,50 m suffit à retrouver la portée, le faire avant les attaques
+  note: Garder la menace occupée près du poste à défendre ; sa réduction des dégâts et son immunité au feu fonctionnent sans action.
+
+step: La personne protégée reste exposée aux attaques à distance
+  do: Rester adjacent et renouveler les ailes déviantes à chaque tour où cette protection est prioritaire
+  note: Une seule attaque est déviée ; les tirs suivants peuvent toucher normalement. La protection doit être renouvelée même si aucun tir ne l’a déclenchée.
+
+step: Un adversaire s’éloigne du gardien pour rejoindre son maître
+  do: Le suivre et s’interposer selon ses consignes de garde, en utilisant le vol pour franchir les obstacles
+  note: Sans intelligence, il applique sa mission simplement et ne met pas en place de ruse élaborée.
+
+## Repli
+
+step: Ses points de vie diminuent et sa mission de garde reste active
+  do: Continuer à protéger son maître ou son poste jusqu’à sa destruction ; aucun seuil de fuite
+
+step: Son maître se replie et sa mission est de l’escorter
+  do: Accompagner son déplacement et renouveler les ailes déviantes lorsqu’il est adjacent et exposé aux tirs
+  note: À 0 pv, cette créature artificielle est détruite.

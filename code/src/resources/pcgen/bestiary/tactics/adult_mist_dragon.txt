@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Dragon des brumes adulte, neutre, de taille TG, intelligent et solitaire ; il préfère la tranquillité près de l'eau et combat lorsqu'il est menacé ou provoqué.
+  184 PV, CA 28, réduction des dégâts 5/magie, résistance à la magie 22 ; immunisé au feu, à la paralysie et au sommeil, vulnérable au froid.
+  Souffle de vapeur brûlante : 6d6 de feu et cécité, Vigueur DD 23. Morsure +22 (2d8+12), deux griffes +22 (2d6+8 chacune), deux ailes +20 (1d8+4 chacune), queue +20 (2d6+12).
+  Déplacement terrestre 12 m, vol 60 m avec manœuvrabilité médiocre, nage 6 m par action de déplacement ; respiration aquatique. Allonge de 3 m, ou 4,50 m avec la morsure.
+
+resource: Souffle | à volonté, intervalle de 1d4 rounds | action simple ; cône de 15 m ; Vigueur DD 23
+resource: Pouvoirs magiques | à volonté | création d'eau, nappe de brouillard, mur de vent ; NLS 16
+resource: Sorts de niveau 1 | 8/jour, réserve commune | bouclier, projectile magique, brume de dissimulation, mains brûlantes (Réflexes DD 16) ; NLS 5
+resource: Sorts de niveau 2 | 5/jour, réserve commune | détection de l'invisibilité, hébétement de monstre (Volonté DD 17) ; NLS 5
+resource: Forme de brume | à volonté | action simple pour prendre une forme gazeuse ; durée illimitée, vol 6 m avec manœuvrabilité parfaite
+
+step: Des intrus approchent sans attaquer
+  do: Les observer avec Perception +28 et leur demander de quitter les lieux ; employer Diplomatie +24 pour éviter une bataille inutile
+
+step: Un affrontement paraît imminent et il dispose de temps
+  do: Lancer bouclier, puis placer une nappe de brouillard sur sa position de combat, près d'une issue aérienne ou aquatique
+  note: Bouclier dure 5 minutes et porte sa CA à 32 ; sa vision des brumes traverse le brouillard, contrairement à celle d'adversaires ordinaires.
+
+step: Une présence invisible est soupçonnée
+  do: Lancer détection de l'invisibilité avant de s'exposer
+  note: Durée 50 minutes ; décompter cette dépense de la réserve commune des sorts de niveau 2.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans le même cône
+  do: En forme solide, effectuer une attaque en vol pour souffler sur le groupe, puis poursuivre son déplacement vers le brouillard ou une position difficile à atteindre
+  note: Infliger 6d6 de feu, Vigueur DD 23 pour réduire de moitié ; cette passe utilise une action simple et ne permet pas une attaque à outrance.
+
+step: Il attaque pour la première fois à proximité des intrus
+  do: Déclencher sa présence terrifiante dans un rayon de 54 m, Volonté DD 23
+  note: Elle affecte les adversaires ayant moins de 16 DV ; profiter de leur peur pour isoler les plus dangereux.
+
+step: Un adversaire est déjà à 3 m ou moins et le dragon peut rester sur place
+  do: Effectuer une attaque à outrance avec la morsure, les deux griffes, les deux ailes et la queue
+  note: Concentrer les attaques sur un lanceur de froid repéré, puis sur une cible fragile ; à plus de 3 m et jusqu'à 4,50 m, seule la morsure porte.
+
+## Rounds suivants
+
+step: La vapeur du souffle persiste dans un air calme
+  do: Combattre depuis cette zone et frapper ceux qui cherchent à en sortir
+  note: Le nuage subsiste 1d4 rounds, sur un rayon de 15 m. Dès le deuxième round, il inflige 1d6 de feu par round, Vigueur DD 23 pour réduire de moitié ; un échec aveugle la victime tant qu'elle y reste et pendant 2 rounds après sa sortie.
+
+step: Le souffle est de nouveau disponible et plusieurs cibles sont exposées
+  do: Reprendre une passe de souffle, en évitant de traverser l'allonge adverse pendant le déplacement
+  note: Entre deux souffles, suivre le délai de 1d4 rounds ; son immunité au feu lui permet de rester dans sa propre vapeur.
+
+step: Le souffle se recharge et une cible reste à portée
+  do: Répéter l'attaque à outrance depuis le brouillard ; si un déplacement important est nécessaire, effectuer plutôt une seule morsure en attaque en vol
+  note: La morsure bouillante est mentionnée sans dégâts supplémentaires chiffrés dans ce bloc ; conserver les dégâts de morsure indiqués, 2d8+12.
+
+step: Des archers le menacent depuis une direction précise
+  do: Interposer un mur de vent, puis reprendre l'offensive au round suivant
+  note: Ce pouvoir demande une action simple ; il arrête les flèches et carreaux ordinaires, sans constituer une protection générale contre les sorts.
+
+step: Une cible visible résiste au feu ou doit être achevée à distance, à 45 m ou moins
+  do: Lancer projectile magique : trois projectiles infligeant chacun 1d4+1 dégâts, sans jet d'attaque
+  note: Dépenser un emplacement de niveau 1 ; privilégier le souffle ou les attaques naturelles lorsque leur rendement est supérieur.
+
+step: Plusieurs adversaires de taille P ou inférieure se regroupent sous lui
+  do: En volant ou en sautant, atterrir sur eux pour les écraser dans son espace de 4,50 m de côté
+  note: Action simple ; Réflexes DD 23 ou immobilisation sous son corps. Les victimes subissent 2d8+12 dégâts au round suivant s'il reste sur elles ; maintenir l'immobilisation exige ensuite un test de manœuvre, BMO +26.
+
+step: Un ennemi attaque depuis l'eau ou le poursuit sous la surface
+  do: Plonger et combattre immergé, avec souffle ou attaques naturelles selon la position des cibles
+  note: Sa respiration aquatique lui permet aussi d'utiliser ses sorts et ses pouvoirs sous l'eau ; sa nage de 6 m favorise une embuscade près d'un abri plutôt qu'une longue poursuite.
+
+## Repli
+
+step: Ses PV tombent à 46 ou moins, ou des attaques de froid répétées menacent de l'abattre
+  do: Masquer sa position avec une nappe de brouillard si nécessaire, puis gagner une issue par les airs ou plonger à couvert
+  note: En forme solide, son vol de 60 m lui permet de prendre de la distance ; sous l'eau, il peut attendre sans remonter respirer.
+
+step: Une fissure ou un passage étroit offre une sortie inaccessible sous sa forme solide
+  do: Prendre sa forme de brume et s'échapper par cette ouverture
+  note: Le vol tombe à 6 m ; cette forme sert à franchir les obstacles. Il ne peut ni porter ses attaques physiques ni souffler sous cette forme.

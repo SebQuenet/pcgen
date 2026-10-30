@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Esprit enchaîné, mort-vivant intangible de taille M, loyal mauvais, FP 14 : un gardien intelligent, mort à son poste et prisonnier de son devoir.
+  200 pv, CA 30, initiative +8 ; vol à 18 m, manœuvrabilité parfaite. Quatre chaînes +23, chacune infligeant 2d4+7 dégâts et un affaiblissement permanent de 1 point de Charisme, critique sur 19–20 ; allonge de 9 m.
+  Contact intangible +17 contre la CA de contact, à 1,50 m : affaiblissement permanent de 1d6 points de Charisme. Chaque atteinte de chaîne ou de contact autorise Volonté DD 25 pour éviter cet affaiblissement.
+  Immunité à l'énergie positive et immunités des morts-vivants ; guérison accélérée 20. Il privilégie les attaques répétées plutôt que les échanges brefs.
+
+note: Liens spectraux
+  Repérer sa case d'attache. Tant qu'une ancre spirituelle subsiste, il y réapparaît automatiquement à la fin de chacun de ses tours, sans action ni attaque d'opportunité pour ce retour.
+  Ses déplacements servent à frapper puis à revenir ; ils ne permettent pas de changer durablement de position.
+
+step: Des intrus approchent
+  do: Surveiller leurs mouvements par les sens des ancres spirituelles et préparer l'attaque depuis la case d'attache.
+  note: Perception +30 ; vision dans le noir à 18 m. Son sens des esprits repère les vivants à 30 m comme une vision aveugle, et détecte les morts-vivants jusqu'à 150 m.
+
+resource: Guérison accélérée | 20 pv par round | au début de son tour, sans dépasser 200 pv, tant que les quatre ancres subsistent
+
+## Ouverture
+
+step: Une cible est déjà à 9 m ou moins et aucun déplacement important n'est nécessaire
+  do: Attaquer à outrance avec les quatre chaînes +23, en concentrant les coups sur une même cible.
+  note: Privilégier un adversaire déjà affaibli ou facile à toucher ; chaque chaîne peut réduire davantage son Charisme. Ajouter le contact intangible +17 si la cible est à 1,50 m.
+
+step: La cible est au-delà de 9 m mais accessible avec un déplacement de 18 m
+  do: Voler jusqu'à pouvoir la frapper d'une seule chaîne +23, puis appliquer le retour automatique à la case d'attache en fin de tour.
+  note: Un déplacement ordinaire ne permet pas l'attaque à outrance. Choisir une trajectoire qui évite les attaques d'opportunité.
+
+step: Aucun ennemi n'est accessible
+  do: Attendre qu'un intrus entre dans sa zone de frappe ; surveiller les approches.
+
+## Rounds suivants
+
+step: Une cible reste à portée des chaînes
+  do: Répéter l'attaque à outrance sur elle jusqu'à sa neutralisation, puis changer de cible.
+  note: À proximité immédiate, ajouter le contact intangible pour son affaiblissement plus important et son attaque contre la CA de contact.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 9 m
+  do: Le frapper avec une chaîne +23.
+  note: Attaques réflexes et Dextérité 19 permettent jusqu'à cinq attaques d'opportunité par round ; un même déplacement ne donne pas plusieurs occasions contre la même cible.
+
+step: Des combattants le touchent régulièrement en mêlée
+  do: Activer Expertise du combat pendant ses attaques : malus de 4 aux attaques, bonus d'esquive de +4 à la CA.
+  note: CA 34, chaînes +19 et contact +13 ; conserver les valeurs normales si la précision devient prioritaire.
+
+step: Une ancre spirituelle est détruite ou libérée
+  do: Retirer une attaque de chaîne, 2 points de CA et 5 points de guérison accélérée par ancre perdue.
+  note: Sans aucune ancre : CA 22, aucune chaîne, aucune guérison accélérée, aucune vision par les ancres ni immunité à l'énergie positive ; combattre au contact intangible.
+
+## Repli
+
+step: Il est blessé et conserve au moins une ancre
+  do: Continuer à défendre son poste en laissant sa guérison accélérée compenser les blessures.
+  note: Le retour automatique interdit une fuite durable. Réduit à 0 pv, il réapparaît à 200 pv une minute plus tard tant qu'une ancre subsiste.
+
+step: Toutes les ancres ont disparu et le combat tourne à son désavantage
+  do: Se retirer en volant à 18 m par déplacement, à travers une paroi si nécessaire, en restant dans le lieu auquel il est lié.
+  note: Il ne revient plus automatiquement à sa case d'attache. Désormais destructible et privé de guérison accélérée, il cherche un abri avant de reprendre le combat.

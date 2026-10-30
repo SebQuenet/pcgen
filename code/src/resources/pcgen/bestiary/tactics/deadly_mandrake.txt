@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Mandragore mortelle, plante de taille TP aux traits humanoïdes, qui tourmente ses proies par les illusions et la peur. Avec 16 PV et une CA de 17, elle privilégie les embuscades dans la végétation.
+  Deux griffes +8 (1d2-2), allonge de 0 m : elle doit entrer dans l'espace adverse pour frapper. Son cri de mort effraie les créatures dans un rayon de 9 m, Volonté DD 14.
+  Déplacement de 9 m, creusement de 3 m ; vision nocturne et perception des vibrations à 18 m. Discrétion +16, ou +24 dans la végétation ; Perception +7.
+  Réduction des dégâts 5/fer froid, résistance à la magie 13 et immunités des plantes : elle reste néanmoins fragile si les adversaires peuvent l'atteindre régulièrement.
+
+resource: Cri de mort | 1/jour | action simple ; rayon de 9 m ; Volonté DD 14 ou effrayé pendant 1d4 rounds ; effet sonore, mental et de terreur
+resource: Confusion partielle | 3/jour | Volonté DD 14
+resource: Hypnose | 3/jour | Volonté DD 14
+resource: Sommeil | 1/jour | Volonté DD 14
+resource: Terrain hallucinatoire | 1/jour | Volonté DD 17
+resource: Lumières dansantes | à volonté | diversion visuelle
+resource: Son imaginaire | à volonté | Volonté DD 13 ; diversion sonore
+resource: Prestidigitation | à volonté | DD 13 ; petits effets destinés à intriguer les intrus
+
+step: Elle peut préparer son terrain avant l'arrivée des intrus
+  do: Utiliser terrain hallucinatoire pour donner aux lieux une apparence trompeuse, puis se dissimuler dans la végétation réelle, près d'un sol où elle peut creuser
+  note: Le terrain illusoire ne crée aucun obstacle matériel ; son camouflage repose sur la végétation et sa Discrétion.
+
+step: Des intrus approchent sans l'avoir repérée
+  do: Produire des sons imaginaires et des lumières dansantes pour attirer leur attention vers un endroit choisi
+  note: Observer leur approche grâce à Perception +7 et aux vibrations du sol ; ces dernières repèrent les créatures en contact avec le même sol.
+
+## Ouverture
+
+step: Plusieurs adversaires sont réunis à 9 m ou moins
+  do: Dépenser une action simple pour pousser son cri de mort
+  note: Chaque créature dans le rayon fait un jet de Volonté DD 14 ; un échec l'oblige à fuir pendant 1d4 rounds. Le cri touche aussi les alliés susceptibles d'en subir les effets et n'inflige aucun dégât.
+
+step: Les intrus ne sont pas encore engagés dans un combat et elle dispose de temps
+  do: Tenter hypnose pour fasciner des intrus et faciliter son repositionnement
+  note: Volonté DD 14 ; une menace peut rompre la fascination. Elle ne traite pas les victimes comme des serviteurs obéissants.
+
+step: Les ennemis restent à distance et elle peut incanter depuis une position protégée
+  do: Employer sommeil sur les adversaires susceptibles d'y succomber
+  note: Volonté DD 14 ; l'incantation dure 1 round. Le sort affecte au plus 4 DV de créatures au total et aucune créature de plus de 4 DV.
+
+## Rounds suivants
+
+step: Un adversaire dangereux reste capable de combattre
+  do: Lui lancer confusion partielle, Volonté DD 14, puis profiter de son éventuel désordre pour changer de position
+  note: L'effet ne dure qu'un round ; déterminer normalement le comportement de la cible. Suivre les trois utilisations quotidiennes.
+
+step: Un ennemi isolé est accessible et l'approche paraît supportable
+  do: Entrer dans son espace, puis utiliser les deux griffes +8 (1d2-2) lors d'une attaque à outrance si elle peut rester sur place
+  note: Entrer dans l'espace ennemi expose aux attaques d'opportunité. Après un déplacement ordinaire, elle ne porte qu'une attaque de griffe ; ses faibles dégâts rendent les échanges prolongés peu avantageux.
+
+step: Les adversaires se dispersent ou cherchent sa position
+  do: Gagner un nouveau couvert végétal et employer sons imaginaires ou lumières dansantes pour détourner les recherches
+  note: Elle utilise Discrétion +24 dans la végétation lorsque les conditions permettent de se cacher ; les illusions ne la rendent pas invisible.
+
+## Repli
+
+step: Ses points de vie tombent à 8 ou moins, ou un adversaire au fer froid la menace directement
+  do: Si son cri reste disponible et que les poursuivants sont à 9 m ou moins, l'utiliser pour ouvrir une possibilité de fuite ; gagner ensuite la végétation ou creuser dans un sol praticable
+  note: Elle se déplace à 9 m au sol ou creuse à 3 m. Réserver le creusement à une sortie accessible et éviter de prolonger la mêlée.
+
+step: Les poursuivants ont perdu sa trace
+  do: Rester cachée et s'éloigner des vibrations repérées dans un rayon de 18 m

@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Boarfolk, créature magique de grande taille des forêts tempérées, combattant de première ligne : 126 pv, CA 18, déplacement de 12 m et allonge de 3 m.
+  Massue +20/+15 (1d10+10) ; défenses +20 (2d6+10) ; piétinement (1d6+10, Réflexes DD 23). Sa rage soutient l'assaut et sa férocité lui permet de combattre avec des pv négatifs.
+
+resource: Rage | 32 rounds/jour | décompter chaque round passé en rage
+
+step: Des intrus approchent
+  do: Les repérer avec l'odorat, la vision nocturne et la vision dans le noir à 18 m ; se placer sur leur passage, près d'un couvert accessible.
+  note: Occuper un passage avec son espace de 3 m et menacer les ennemis jusqu'à 3 m grâce à son allonge.
+
+## Ouverture
+
+step: Le combat au contact est imminent et il reste des rounds de rage
+  do: Entrer en rage avant de lancer l'assaut.
+
+step: Plusieurs adversaires de taille M ou inférieure peuvent être traversés
+  do: Piétiner en parcourant jusqu'à 24 m ; infliger 1d6+10 dégâts à chaque cible traversée, une seule fois par cible dans le round.
+  note: Chaque cible choisit une attaque d'opportunité avec un malus de -4, ou un jet de Réflexes DD 23 pour réduire les dégâts de moitié.
+
+step: Le piétinement est peu avantageux et une cible est accessible
+  do: Avancer de 12 m au maximum si nécessaire, puis frapper avec les défenses à +20 (2d6+10) dès que la cible est à 3 m ou moins.
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement nécessaire
+  do: Effectuer une attaque à outrance à la massue, +20/+15, chaque coup infligeant 1d10+10 dégâts.
+
+step: Plusieurs ennemis sont à portée et adjacents les uns aux autres
+  do: Utiliser Succession d'enchaînements à la massue ; après chaque coup réussi, frapper un autre ennemi adjacent au précédent et toujours à portée.
+  note: Une seule attaque par cible ; la succession s'arrête au premier échec. Cette action remplace l'attaque à outrance et impose -2 à la CA jusqu'au prochain tour.
+
+step: Une cible paraît facile à toucher
+  do: Employer Attaque en puissance pour augmenter les dégâts au prix de la précision.
+
+step: Les ennemis se regroupent de nouveau sur une trajectoire praticable
+  do: Répéter le piétinement contre les cibles de taille M ou inférieure.
+
+## Repli
+
+step: Il reste de 1 à 30 pv et une issue est accessible
+  do: Utiliser l'action de retraite pour rejoindre un couvert, jusqu'à 24 m si le passage est libre.
+
+step: Les pv sont négatifs mais le boarfolk est encore vivant
+  do: Grâce à la férocité, porter un dernier coup de défenses si une victoire immédiate paraît possible ; sinon consacrer son action à s'éloigner de 12 m.
+  note: Il est chancelant, ne dispose que d'une action simple ou de mouvement par tour et perd 1 pv à chaque round ; il ne peut plus effectuer d'attaque à outrance, de piétinement ou d'action de retraite.

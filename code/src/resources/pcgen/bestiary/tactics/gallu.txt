@@ -1,0 +1,97 @@
+## Avant le combat
+
+note: Profil
+  Gallu, démon belliqueux de FP 19, chaotique mauvais, de taille M : un instigateur de guerres et un commandant rusé qui désorganise ses ennemis avant de les tailler en pièces.
+  Cimeterre à deux mains +1 sanglant +31/+26/+21/+16 (2d4+17, critique 15-20), morsure +25 (1d8+5), cornes +25 (1d6+5) ; allonge 1,50 m. Marche et vol à 15 m ; manœuvrabilité bonne.
+  332 pv, guérison accélérée 10, CA 34, RM 30 ; réduction des dégâts 15/fer froid et Bien. Immunisé aux saignements, à l'électricité et au poison ; résistances à l'acide, au froid et au feu de 10.
+
+note: Vigilance et auras
+  Vision lucide permanente, vision dans le noir à 18 m et Perception +36 : repérer les approches dissimulées avant de choisir sa position.
+  Aura de chaos permanente à 6 m, DD 25 ; ses bonus défensifs sont déjà compris dans les valeurs du profil. Un assaillant loyal qui le touche en mêlée risque la confusion pendant 1 round, Volonté DD 25 pour annuler.
+  Aura de désordre à 9 m : gêner la coordination adverse en restant près du front ; les bonus d'aide et de prise en tenaille y sont neutralisés, mais les attaques sournoises restent possibles.
+
+resource: Immobilisation de monstre à incantation rapide | 3/jour | action rapide, Volonté DD 22
+resource: Immobilisation de monstres de groupe | 1/jour | action simple, Volonté DD 26
+resource: Chant de discorde | 3/jour | action simple, Volonté DD 22
+resource: Verrou dimensionnel | 3/jour | bloque aussi les déplacements extradimensionnels du gallu dans la zone
+resource: Convocation | 1/jour | une seule tentative : 1 gallu à 20 %, 1 marilith à 35 % ou 1d4 nalfeshnies à 60 %
+resource: Symbole d'aliénation mentale | 1/jour | Volonté DD 25
+resource: Parole du chaos | 1/jour | Volonté DD 24
+resource: Pouvoirs à volonté | illimité | confusion DD 21, terreur DD 21, mission, télékinésie DD 22, téléportation suprême
+
+step: Il peut approcher les adversaires sans révéler sa nature
+  do: Prendre une forme humanoïde de taille P ou M ; employer Bluff +29 et Déguisement +29 pour reconnaître les forces adverses et les attirer sur un terrain favorable
+  note: mission sert à préparer une contrainte avant l'affrontement si le temps nécessaire est disponible ; ce pouvoir ne remplace pas une attaque immédiate
+
+step: Il défend un passage et dispose du temps de préparation nécessaire
+  do: Préparer un symbole d'aliénation mentale sur le passage attendu, avec un déclencheur adapté à l'arrivée des intrus
+  note: Volonté DD 25 ; organiser le passage des alliés pour éviter qu'ils ne déclenchent ou subissent le symbole
+
+step: L'affrontement approche et il manque de soutien
+  do: Tenter de convoquer 1d4 nalfeshnies, l'option offrant 60 % de réussite
+  note: une tentative ratée consomme aussi l'utilisation quotidienne ; convoquer avant d'installer un verrou dimensionnel
+
+step: Des démons alliés sont présents
+  do: Donner les consignes par télépathie à 30 m ; les placer pour retenir les combattants pendant qu'il vise les ennemis vulnérables
+  note: il peut commander un peloton de 1 à 3 mariliths et de 3 à 12 vrocks, mais leur présence dépend de la rencontre
+
+## Ouverture
+
+note: Choix des actions
+  Choisir l'ouverture adaptée à la situation ; une action simple consacrée à un pouvoir ne permet pas aussi une attaque à outrance. L'immobilisation rapide peut accompagner son action principale, dans la limite d'une action rapide par round.
+
+step: Plusieurs ennemis vivants sont regroupés, sans que deux cibles soient séparées de plus de 9 m
+  do: Lancer immobilisation de monstres de groupe, Volonté DD 26, puis se rapprocher d'une cible paralysée si le déplacement le permet
+  note: privilégier les adversaires susceptibles d'être paralysés ; les victimes disposent ensuite d'un nouveau jet à leur tour pour se libérer
+
+step: Il peut laisser les ennemis s'entretuer avant d'engager la mêlée
+  do: Lancer chant de discorde sur leur groupe, dans une zone de 6 m de rayon, Volonté DD 22 ; rester plus loin des victimes que leurs propres compagnons
+  note: chaque victime a 50 % de chances, à chacun de ses tours, d'attaquer la créature la plus proche ; éviter d'inclure ses alliés dans la zone
+
+step: Un ennemi dangereux est déjà à portée de mêlée
+  do: Employer immobilisation de monstre rapide sur lui, Volonté DD 22, puis porter une attaque à outrance
+  note: si la paralysie réussit, concentrer les attaques sur cette cible ; sinon, exploiter tout de même les attaques disponibles
+
+## Rounds suivants
+
+step: Une cible prioritaire reste à 1,50 m et il peut consacrer le round à attaquer
+  do: Attaque à outrance : cimeterre +31/+26/+21/+16 (2d4+17), morsure +25 (1d8+5), cornes +25 (1d6+5)
+  note: le cimeterre sanglant accumule les saignements sur les touches ; les critiques peuvent rendre la victime chancelante. Employer Attaque en puissance contre une cible facile à toucher
+
+step: Il doit se déplacer pour atteindre une cible
+  do: Se déplacer jusqu'à 15 m, au sol ou en vol, puis effectuer une seule attaque de cimeterre avec Science de la frappe décisive : +31, dégâts 6d4+17
+  note: cette frappe remplace l'attaque simple ; elle ne s'ajoute ni à une charge ni à une attaque à outrance
+
+step: Un adversaire encore libre menace de lancer un sort ou de briser sa ligne
+  do: Dépenser une immobilisation de monstre rapide restante, Volonté DD 22, tout en poursuivant son attaque principale
+  note: changer de cible après des résistances répétées ou une immunité manifeste aux effets mentaux ; contre ces adversaires, privilégier les armes
+
+step: Plusieurs ennemis non chaotiques de 18 DV ou moins se trouvent à 12 m ou moins
+  do: Employer parole du chaos, Volonté DD 24, pour tenter de les étourdir et ouvrir une brèche
+  note: les créatures chaotiques et celles de plus de 19 DV ne sont pas affectées ; à 19 DV, le pouvoir ne provoque que la surdité
+
+step: Les adversaires restent groupés à distance et ne sont pas déjà neutralisés
+  do: Employer confusion, Volonté DD 21, ou renouveler chant de discorde, Volonté DD 22, si des utilisations restent disponibles
+  note: terreur, Volonté DD 21, permet de disperser un groupe pris dans un cône de 9 m ; profiter de la séparation pour attaquer un isolé
+
+step: Une cible distante doit être déplacée pour rompre la formation adverse
+  do: Employer télékinésie pour la projeter si sa masse le permet, Volonté DD 22 ; choisir une trajectoire qui l'éloigne de ses soutiens
+  note: ce pouvoir consomme l'action simple du round ; ne pas y ajouter une attaque à outrance
+
+step: Une téléportation adverse menace de lui faire perdre sa cible et il peut conserver une issue
+  do: Poser un verrou dimensionnel sur la position ennemie, dans une zone de 6 m de rayon ; rester hors de la zone si possible
+  note: le verrou interdit aussi sa propre téléportation depuis ou vers la zone ; prévoir une sortie accessible à pied ou en vol
+
+## Repli
+
+step: Il tombe à 100 pv ou moins, ou ses ennemis menacent de l'abattre avant son prochain tour
+  do: Employer téléportation suprême pour rejoindre un refuge connu
+  note: ce pouvoir transporte uniquement le gallu et une quantité limitée d'objets ; il n'emporte aucun allié
+
+step: Un verrou dimensionnel empêche sa téléportation
+  do: Sortir de la zone à pied ou en volant à 15 m, puis se téléporter dès que cela devient possible
+  note: si des alliés sont présents, leur ordonner par télépathie de retenir les poursuivants
+
+step: Il a atteint un refuge hors de portée
+  do: Laisser sa guérison accélérée restaurer 10 pv par round avant d'envisager un retour
+  note: privilégier une nouvelle attaque avec des renforts et des adversaires divisés

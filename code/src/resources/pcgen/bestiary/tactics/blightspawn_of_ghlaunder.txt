@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Blightspawn de Ghlaunder, aberration chaotique mauvaise de taille M : un moustique monstrueux qui affaiblit ses proies avant de les piquer. 52 pv, CA 18 ; dard +10 (2d6+7, critique 19–20, fixation et poison), allonge de 3 m.
+  Vol à 15 m, marche et escalade à 9 m ; initiative +8, vision dans le noir à 18 m, odorat et Perception +13. Son aura de stagnation porte à 6 m, DD 16.
+  Guérison accélérée 3 ; réduction des dégâts 5/magie ; immunité à l'acide, au froid et au poison. Il comprend l'aklo mais ne parle pas.
+
+resource: Liberté de mouvement et passage sans trace | constants | actifs sans préparation ; la liberté de mouvement protège notamment contre la paralysie et les entraves
+resource: Flou | 1/jour | dissimulation, 20 % de chances de rater ; durée 5 minutes
+resource: Immobilisation de monstre | 1/jour | Volonté DD 17 ; paralyse une créature, jusqu'à 5 rounds
+resource: Malédiction | 1/jour | contact, Volonté DD 16 ; choisir 50 % de chances de ne pas agir à chaque tour
+resource: Contagion | 1/jour | contact, Vigueur DD 16 ; inflige une maladie
+resource: Bourrasque | 1/jour | vent violent ; peut disperser un brouillard et gêner les petites créatures
+resource: Rabougrissement des plantes | 1/jour | éclaircit la végétation ordinaire qui encombre un passage
+
+step: Les ennemis approchent et il dispose d'un round de préparation
+  do: Activer flou, puis gagner une position permettant d'attaquer à 3 m sans être encerclé
+
+## Ouverture
+
+step: Il vient de sortir de son hôte
+  do: Rester au sol ou escalader pendant les 1d4 rounds nécessaires au séchage de ses ailes
+  note: pendant ce délai, employer flou s'il reste disponible, puis immobilisation de monstre contre l'adversaire le plus menaçant
+
+step: Un adversaire dangereux peut être isolé
+  do: Employer immobilisation de monstre, puis l'attaquer au dard au round suivant si la paralysie persiste
+  note: la victime peut tenter un nouveau jet de Volonté chaque round en y consacrant une action complexe
+
+step: Le vol est possible et une cible est accessible
+  do: Utiliser Attaque en vol : approcher, porter un coup de dard à 3 m, puis poursuivre le déplacement si le monstre ne reste pas fixé
+  note: le déplacement total reste limité à 15 m ; Attaque en vol n'empêche pas les attaques d'opportunité
+
+## Rounds suivants
+
+step: Des ennemis entrent à 6 m ou moins
+  do: Appliquer l'aura de stagnation, Volonté DD 16 contre un effet de lenteur
+  note: l'effet persiste dans l'aura puis 1d3 rounds après la sortie ; un jet réussi protège contre cette aura pendant 24 heures
+
+step: Une cible isolée est à portée du dard
+  do: La piquer ; privilégier les adversaires ralentis ou paralysés et conserver l'allonge de 3 m quand il reste libre
+  note: poison du dard : Vigueur DD 16, une fois par round pendant 6 rounds ; chaque échec inflige 1d4 dégâts de Sagesse et 1 round de confusion ; guérison après 2 sauvegardes réussies
+
+step: Il s'est fixé à une victime et ses alliés ne peuvent pas le submerger
+  do: Maintenir la lutte avec son bonus de +14
+  note: rester fixé l'expose aux autres combattants ; abandonner la prise si plusieurs ennemis peuvent le frapper
+
+step: Une cible facile à toucher reste dangereuse
+  do: Employer Attaque en puissance avec le dard
+
+step: Un adversaire résiste aux piqûres et malédiction reste disponible
+  do: Depuis une position aussi sûre que possible, tenter malédiction au contact pour lui faire perdre des tours
+  note: employer un pouvoir magique à portée d'un ennemi peut provoquer une attaque d'opportunité
+
+step: Plusieurs ennemis convergent sur lui
+  do: Se dégager et reprendre les attaques en vol contre une cible en bordure du groupe ; laisser la guérison accélérée rendre 3 pv par round
+
+## Repli
+
+step: Il tombe à 15 pv ou moins et peut encore fuir
+  do: Abandonner toute fixation et s'éloigner en volant à 15 m par déplacement ; si ses ailes sont encore inutilisables, escalader à 9 m par déplacement
+  note: chercher un obstacle qui coupe les tirs et poursuivre la fuite pendant que la guérison accélérée lui rend 3 pv par round, jusqu'à 52 pv
+
+step: Une végétation dense bloque sa fuite et le pouvoir est disponible
+  do: Employer rabougrissement des plantes pour ouvrir le passage, puis reprendre le déplacement

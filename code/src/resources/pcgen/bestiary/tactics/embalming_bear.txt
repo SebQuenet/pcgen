@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Ours d'embaumement, créature artificielle de taille G, neutre et sans intelligence. 74 pv ; CA 20 ; solidité 5 ; immunités des créatures artificielles.
+  Deux griffes +13, chacune infligeant 1d8+6 dégâts, avec étreinte et poison. BMO +15 ; DMD 24, 28 contre le croc-en-jambe.
+  Déplacement 9 m ; espace occupé 3 m ; allonge 1,50 m. Vision dans le noir à 18 m et vision nocturne ; Perception +0 ; initiative −1.
+
+note: Préparation
+  Aucun pouvoir préparatoire indiqué. Son absence d'intelligence appelle un comportement simple : approcher, frapper et retenir sa cible.
+
+note: Poison
+  Les griffes transmettent un poison, mais le bloc fourni ne précise ni son DD, ni ses effets, ni sa fréquence.
+
+## Ouverture
+
+step: Un adversaire est déjà à 1,50 m au début de son tour
+  do: Effectuer une attaque à outrance : deux griffes +13, chacune pour 1d8+6 dégâts plus poison.
+  note: Sur une griffe qui touche une cible admissible à l'étreinte, tenter immédiatement de l'agripper grâce à cette capacité.
+
+step: Un adversaire peut être atteint après un déplacement de 9 m au maximum
+  do: Avancer jusqu'à placer cet adversaire à 1,50 m, puis porter une seule griffe +13, pour 1d8+6 dégâts plus poison.
+  note: Tenter l'étreinte si la griffe touche ; le déplacement ne permet pas les deux griffes de l'attaque à outrance.
+
+step: Aucun adversaire ne peut être atteint après un déplacement de 9 m
+  do: Effectuer un double déplacement, jusqu'à 18 m, pour se rapprocher de l'adversaire accessible le plus proche.
+  note: Aucune attaque ce tour ; il ne dispose d'aucune attaque à distance indiquée.
+
+## Rounds suivants
+
+step: Une cible est agrippée
+  do: Consacrer son action simple au maintien de la lutte ; en cas de réussite, infliger les dégâts d'une griffe, soit 1d8+6, avec le poison associé.
+  note: Maintenir la même victime au contact ; aucune constriction ni attaque de morsure n'est indiquée.
+
+step: Aucune cible n'est agrippée et un adversaire est à 1,50 m
+  do: Effectuer les deux attaques de griffes +13 et tenter de nouveau l'étreinte après une touche admissible.
+  note: Chaque griffe inflige 1d8+6 dégâts plus poison ; concentrer les attaques sur la même cible tant qu'elle reste accessible.
+
+step: Aucun adversaire n'est à portée
+  do: Reprendre l'approche : déplacement de 9 m et une griffe si possible, sinon double déplacement jusqu'à 18 m.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Poursuivre les attaques et les tentatives d'étreinte jusqu'à sa destruction à 0 pv.
+  note: Sans intelligence, il ne choisit pas spontanément un seuil de fuite ; aucun moyen de repli particulier n'est indiqué.

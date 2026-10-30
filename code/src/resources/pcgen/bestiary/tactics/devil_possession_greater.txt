@@ -1,0 +1,72 @@
+## Avant le combat
+
+note: Profil
+  Diable possesseur supérieur, ou gidim, FP 15 : esprit malveillant, intelligent et patient, qui use la résistance des mortels par la peur avant de les attaquer.
+  Intangible, sous invisibilité suprême constante ; 187 PV, CA 24, contact 24 ; RD 10/Bien, RM 26, résistance à l'acide et au froid 10.
+  Deux griffes +19 (1d4+5) et morsure +19 (1d6+5) en attaque à outrance ; allonge 1,50 m. Déplacement 9 m, vol 12 m avec manœuvrabilité parfaite.
+  Perception +27, Discrétion +26 ; vision dans le noir à 18 m et vision dans les ténèbres. Il privilégie les manifestations terrifiantes et les ennemis isolés.
+
+resource: Invisibilité suprême | constante | reste invisible lorsqu'il attaque
+resource: Manifestations | à volonté | son imaginaire DD 15, image accomplie DD 18, prestidigitation DD 15, déblocage DD 17, lévitation DD 17, serviteur invisible DD 16 ; ces pouvoirs peuvent provoquer l'effroi
+resource: Extension depuis l'Éthéré | 5/jour | action libre pour permettre à un pouvoir magique d'affecter une cible du plan Matériel depuis le plan Éthéré
+resource: Convocation | 1/jour | 40 % de chances de convoquer 1d4 diables possesseurs inférieurs ; pouvoir équivalent à un sort de niveau 5
+
+note: Effroi
+  En restant invisible, il peut rendre terrifiant un pouvoir marqué d'un astérisque. Les témoins à 3 m ou moins de l'effet doivent réussir un jet de sauvegarde ou être secoués pendant 1 minute ; cette peur peut aggraver une peur existante.
+
+step: Il peut préparer sa venue depuis le plan Éthéré
+  do: Observer une même victime effrayée, mourante ou en rage ; provoquer ses frayeurs par des manifestations étendues au plan Matériel
+  note: Nourri par la négativité : +1 au jet d'entrée, cumulable par nouvelle observation espacée de 12 à 24 heures. Entrer à 9 m ou moins de cette victime ; le bonus aide ensuite à résister à l'expulsion et diminue de 1 par minute.
+
+step: Il tente de rejoindre le plan Matériel
+  do: Utiliser forme éthérée ou changement de plan ; effectuer le jet de Volonté DD 30 avec son bonus de +12 et la négativité accumulée
+  note: Échec : entrée interdite pendant 12 heures. Sur le plan Matériel, refaire ce jet chaque minute sous peine d'expulsion vers le plan de départ.
+
+step: Les intrus approchent et il dispose du temps nécessaire
+  do: Tenter la convocation avant l'affrontement, puis placer les éventuels renforts sur les voies de passage
+  note: Un échec consomme la tentative quotidienne ; ne pas bâtir toute l'embuscade sur sa réussite.
+
+## Ouverture
+
+resource: Nuage nauséabond | 3/jour | Vigueur DD 18 ; neutralise temporairement les actions des victimes nauséeuses
+resource: Suggestion | 3/jour | Volonté DD 18 ; instruction plausible, exprimée dans une langue comprise
+
+step: Les ennemis sont regroupés et le combat commence
+  do: Lancer nuage nauséabond sur le groupe, en priorité sur les lanceurs de sorts ; rester invisible à distance de mêlée
+  note: Le nuage gêne aussi sa propre vision ; rester hors de sa zone et guetter les adversaires qui en sortent.
+
+step: Une victime peut être séparée de ses alliés par une instruction crédible
+  do: Employer suggestion pour lui faire inspecter seule une issue supposée sûre ou chercher de l'aide ailleurs
+  note: Choisir cette ouverture à la place du nuage si la diversion semble plus rentable ; la suggestion ne garantit pas une obéissance à un ordre manifestement dangereux.
+
+## Rounds suivants
+
+resource: Malédiction | 3/jour | contact, Volonté DD 19
+resource: Forme éthérée | 3/jour | passage entre les plans Éthéré et Matériel ; NLS 12
+resource: Changement de plan | 3/jour | lui-même uniquement ; plans Éthéré, Matériel ou Enfer
+
+step: Plusieurs adversaires restent capables de combattre
+  do: Produire une image accomplie terrifiante près d'eux, ou un son imaginaire inquiétant ; ajouter l'effroi et changer de position en volant
+  note: Image accomplie DD 18, son imaginaire DD 15. Maintenir l'image demande de la concentration ; interrompre celle-ci avant de lancer un autre pouvoir.
+
+step: Un combattant dangereux est isolé et accessible
+  do: Approcher à couvert de l'invisibilité et tenter malédiction pour lui imposer un malus de -4 aux attaques, sauvegardes, tests de caractéristique et de compétence
+  note: Le contact doit réussir, puis la cible bénéficie d'une sauvegarde de Volonté DD 19 ; ne pas compter sur le malus avant son échec.
+
+step: Une cible vulnérable est déjà à 1,50 m et il peut consacrer son round aux attaques
+  do: Attaque à outrance : deux griffes +19 (1d4+5 chacune), puis morsure +19 (1d6+5)
+  note: Concentrer les trois attaques sur la même cible. Après un déplacement ordinaire, porter une seule attaque naturelle.
+
+step: Les adversaires localisent sa position ou l'encerclent
+  do: Utiliser téléportation suprême pour gagner un autre poste dans le même plan, puis reprendre le harcèlement au round suivant
+  note: Pouvoir à volonté, limité à lui-même et à environ 22,5 kg d'objets ; il ne peut pas emporter une victime ou ses renforts.
+
+## Repli
+
+step: Ses PV tombent sous 60, ou les ennemis surmontent régulièrement son invisibilité et ses défenses
+  do: Se téléporter immédiatement vers un lieu connu hors du combat
+  note: Conserver autant que possible une utilisation de forme éthérée ou de changement de plan pour quitter ensuite le plan Matériel.
+
+step: La poursuite continue et un pouvoir de voyage planaire reste disponible
+  do: Rejoindre le plan Éthéré par forme éthérée, ou fuir en Enfer par changement de plan
+  note: Une fois à l'abri, préparer une nouvelle embuscade ; il privilégie sa survie à une mêlée prolongée.

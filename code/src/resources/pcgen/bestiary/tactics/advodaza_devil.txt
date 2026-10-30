@@ -1,0 +1,94 @@
+## Avant le combat
+
+note: Profil
+  Advodaza, diable loyal mauvais de taille TG, intelligent et dominateur : il isole une victime, la frappe sous invisibilité et se soigne pour prolonger le combat.
+  297 pv, CA 35, résistance à la magie 29, réduction des dégâts 10/Bien et argent ; immunités au froid, à l'électricité, au feu, au poison, au son et au renvoi ; résistance à l'acide 10.
+  Morsure +28 (2d6+12), deux griffes +28 (1d8+12 et blessure infernale), deux sabots +26 (1d8+6), queue +26 (2d6+6).
+  Allonge de 4,50 m, 6 m avec la queue ; déplacement de 12 m, vol de 24 m avec manœuvrabilité moyenne. Vision dans les ténèbres, vision dans le noir à 18 m, télépathie à 30 m ; initiative +11.
+
+resource: Invisibilité suprême | à volonté | sur lui-même ; reste invisible en attaquant
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 22,5 kg d'objets seulement
+resource: Rayon ardent | à volonté | trois rayons, chacun infligeant 4d6 dégâts de feu ; portée de 19,50 m au NLS 16
+resource: État gazeux et vent de murmures | à volonté chacun | infiltration, fuite ou transmission d'un message
+resource: Blasphème | 3/jour | Volonté DD 24 ; rayon de 12 m ; NLS 16
+resource: Dissipation de la magie | 3/jour | retirer une protection magique gênante
+resource: Passage dans l'éther | 3/jour | se soustraire temporairement aux attaques matérielles
+resource: Mise à mal | 3/jour | contact ; 150 dégâts, Volonté DD 23 pour moitié ; ne réduit pas la cible sous 1 pv
+resource: Guérison suprême | 3/jour | rend 150 pv ; DD 23 si un jet de sauvegarde est applicable
+resource: Immobilisation de monstre | 3/jour | Volonté DD 22 ; nouveau jet à chaque tour de la victime
+resource: Mur de pierre | 3/jour | séparer les adversaires ; nécessite un support rocheux existant
+resource: Scrutation | 1/jour | Volonté DD 22 ; reconnaissance avant l'affrontement
+resource: Convocation | 1/jour | un diable cornu, 60 % de réussite
+resource: Sanctification maléfique | 1/jour | préparer un lieu défendu si le temps le permet
+
+step: Il connaît les futurs intrus et dispose du temps nécessaire
+  do: Employer scrutation pour repérer leur approche et choisir une victime prioritaire, notamment un soigneur ou un lanceur de sorts peu protégé
+
+step: L'affrontement est imminent et il dispose d'un round complet
+  do: Tenter la convocation du diable cornu ; en cas de réussite, lui faire garder un accès et coordonner ses actions par télépathie
+  note: l'échec consomme l'utilisation quotidienne
+
+step: Il peut préparer son entrée en combat
+  do: Activer invisibilité suprême, puis se placer en hauteur ou près d'un passage où son allonge gênera l'approche
+  note: renouveler l'invisibilité si l'attente se prolonge ; voir dans les ténèbres ne permet pas de voir les créatures invisibles
+
+## Ouverture
+
+step: Plusieurs adversaires non mauvais de 16 DV ou moins sont à 12 m ou moins
+  do: Lancer blasphème, Volonté DD 24, pour briser leur première offensive
+  note: les créatures de plus de 16 DV sont insensibles à ce pouvoir au NLS 16 ; choisir une autre ouverture contre elles
+
+step: Les combattants protègent efficacement les lanceurs de sorts et un support rocheux permet un mur
+  do: Dresser un mur de pierre entre les deux groupes, en laissant la victime choisie de son côté
+  note: couper les déplacements et les lignes de vue plutôt que chercher à enfermer directement une créature
+
+step: Une cible prioritaire est exposée et semble vulnérable aux effets mentaux
+  do: Lancer immobilisation de monstre, Volonté DD 22, puis s'approcher pour l'attaquer au round suivant si elle reste paralysée
+
+step: Une victime est déjà à 4,50 m ou moins et aucune ouverture magique ne paraît préférable
+  do: Faire une attaque à outrance avec morsure, deux griffes, deux sabots et queue, en concentrant les coups sur cette victime
+
+## Rounds suivants
+
+step: Une victime reste à portée sans déplacement important
+  do: Répéter l'attaque à outrance ; privilégier les griffes porteuses de blessure infernale et achever une cible avant d'en changer
+  note: un pas de 1,50 m reste compatible avec l'attaque à outrance ; après un déplacement plus long, ne porter qu'une attaque simple
+
+step: Un adversaire vivant très résistant offre une occasion de contact
+  do: Employer mise à mal, Volonté DD 23, puis réserver les attaques naturelles des rounds suivants pour l'achever
+  note: ce pouvoir remplace les attaques du round ; il peut être résisté et ne tue pas directement
+
+step: Une protection magique empêche d'atteindre ou de neutraliser la cible
+  do: Tenter une dissipation de la magie ciblée avant de reprendre l'offensive
+
+step: Les ennemis restent hors de portée et sont vulnérables au feu
+  do: Voler pour garder une position favorable et lancer rayon ardent, en concentrant les trois rayons sur la cible prioritaire
+  note: chaque rayon exige une attaque de contact à distance ; rester hors de portée des combattants autant que possible
+
+step: Il doit harceler une cible sans terminer son déplacement près d'elle
+  do: Employer Attaque en vol pour porter une seule attaque de griffe pendant son déplacement, puis poursuivre son vol
+  note: cette passe ne donne pas une attaque à outrance et n'empêche pas automatiquement les attaques d'opportunité
+
+step: Un adversaire tangible de taille G ou inférieure bouche une issue
+  do: Employer Coup fabuleux pour le repousser et le renverser, ou une bousculade pour dégager le passage
+  note: choisir cette manœuvre seulement si libérer l'accès vaut mieux que porter l'attaque à outrance
+
+step: Ses points de vie sont à 147 ou moins et il dispose encore de guérison suprême
+  do: Se mettre à couvert si possible, puis employer guérison suprême sur lui-même pour récupérer 150 pv
+  note: donner priorité à la fuite si les ennemis peuvent le tuer avant qu'il se soigne ; une guérison consomme l'action du round
+
+step: Son invisibilité a pris fin et les ennemis ne la percent pas
+  do: Renouveler invisibilité suprême avant de reprendre les attaques
+
+## Repli
+
+step: Points de vie sous 75, ou combat devenu intenable malgré les soins
+  do: Employer téléportation suprême vers un refuge connu, puis se soigner avec les utilisations restantes de guérison suprême
+  note: il ne peut pas emporter une autre créature avec cette téléportation
+
+step: La téléportation est empêchée, mais le passage dans l'éther reste possible
+  do: Passer dans l'éther et traverser les obstacles pour rompre le contact avant de chercher une sortie
+
+step: Il doit encore fuir par des moyens matériels
+  do: Couper la poursuite par un mur de pierre si le terrain le permet, puis s'éloigner en volant à 24 m par déplacement sous invisibilité suprême
+  note: si seule une fissure offre une issue, employer état gazeux ; le changement de forme et le déplacement demandent du temps

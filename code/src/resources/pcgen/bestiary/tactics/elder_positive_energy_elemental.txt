@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Élémentaire vénérable d'énergie positive, extérieur neutre de taille TG : 152 pv, CA 27, réduction des dégâts 10/— et immunités élémentaires.
+  Deux coups +25, chacun infligeant 2d8+6 dégâts physiques et 2d8 d'énergie positive ; allonge de 4,50 m. Vol à 18 m, bonne manœuvrabilité ; initiative +14.
+
+resource: Canalisation d'énergie positive | 5/jour | action simple, rayon de 9 m, 8d6 ; Volonté DD 20 pour réduire de moitié les dégâts aux morts-vivants
+resource: Éclair aveuglant | une fois tous les 1d4 rounds | rayon de 3 m ; Vigueur DD 22 ou cécité pendant 1d10 rounds pour qui voit l'éclair
+
+note: Aura
+  Dans un rayon de 15 m, les pouvoirs de classe utilisant l'énergie positive fonctionnent à deux niveaux de plus ; les sorts et pouvoirs magiques positifs sont maximisés. Sa propre canalisation reste à 8d6.
+  Les pouvoirs de classe négatifs fonctionnent à deux niveaux de moins ; lancer un sort négatif exige Concentration DD 15 + niveau du sort, sinon il est perdu.
+
+step: Aucun adversaire ne le contraint à combattre
+  do: Éviter l'affrontement ; attaquer toutefois à vue un élémentaire d'énergie négative
+
+## Ouverture
+
+step: Plusieurs morts-vivants sont à 9 m ou moins
+  do: Canaliser pour leur infliger 8d6 dégâts, Volonté DD 20 pour moitié
+
+step: Plusieurs adversaires voyants sont à 3 m ou moins et l'éclair est disponible
+  do: Déclencher l'éclair aveuglant, puis utiliser son déplacement pour prendre une position favorable
+
+step: Il doit rejoindre une cible
+  do: Voler jusqu'à la placer dans son allonge de 4,50 m, puis porter un seul coup +25
+
+## Rounds suivants
+
+step: Une cible reste à portée sans déplacement nécessaire
+  do: Attaque à outrance : deux coups +25, chacun à 2d8+6 plus 2d8 d'énergie positive
+  note: Les 2d8 positifs blessent les morts-vivants et créatures d'énergie négative, mais soignent les vivants ; les dégâts physiques s'appliquent toujours. L'excédent devient des pv temporaires pendant 1 minute ; atteindre le double des pv normaux impose Vigueur DD 22 ou explosion mortelle.
+
+step: Rester au contact l'expose à plusieurs attaquants
+  do: Utiliser Attaque en vol : avancer, porter un seul coup, puis poursuivre son déplacement, pour un total maximal de 18 m
+  note: Exploiter l'allonge ; Attaque en vol ne supprime pas les attaques d'opportunité adverses.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge
+  do: Porter un coup +25 ; exploiter Attaques réflexes contre les autres occasions du round
+
+step: Une cible est facile à toucher
+  do: Activer Attaque en puissance : coups +20, chacun à 2d8+16 plus 2d8 d'énergie positive
+
+step: Il est blessé et peut consacrer son action à récupérer
+  do: Canaliser pour se soigner de 8d6 pv ; conserver si possible une utilisation pour le repli
+  note: Ce choix soigne aussi les adversaires vivants dans le rayon de 9 m ; privilégier une position éloignée d'eux.
+
+step: L'éclair est de nouveau disponible et plusieurs ennemis voyants sont proches
+  do: Le réutiliser pour interrompre leur pression, à la place de l'attaque du round
+
+## Repli
+
+step: Moins de 38 pv et une voie de fuite existe
+  do: Se désengager en vol, jusqu'à 36 m avec l'action de retraite ; se soigner par canalisation au round suivant si une utilisation reste disponible
+
+step: Il est tué
+  do: Appliquer automatiquement l'explosion dans un rayon de 15 m : 8d8 dégâts positifs aux morts-vivants et créatures d'énergie négative, Réflexes DD 22 pour moitié ; les vivants reçoivent ces pv en soins
+  note: Tous font aussi Vigueur DD 22 ou deviennent aveugles pendant 1d10 rounds. Les soins suivent les règles d'excédent et de doublement des pv décrites plus haut.

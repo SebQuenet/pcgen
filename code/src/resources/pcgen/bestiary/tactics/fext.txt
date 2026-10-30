@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Fext, officier mort-vivant loyal mauvais de taille M, FP 10 : un combattant méthodique qui mêle escrime, malédictions et épuisement d'énergie.
+  127 pv, CA 25 ; déplacement de 9 m en armure, allonge de 1,50 m, vision dans le noir à 18 m, Perception +20.
+  Épée bâtarde +1 : +20/+15/+10, 1d10+8, critique 17–20 ; ou coup +18, 1d4+10 et épuisement d'énergie.
+
+note: Défenses
+  RD 10/verre ou obsidienne, immunité au froid et traits des morts-vivants ; résistances à l'électricité 10 et au feu 10, résistance à la magie 21.
+  Il accepte les échanges contre des armes ordinaires, mais surveille les armes en verre ou en obsidienne qui peuvent le détruire définitivement.
+
+resource: Malédiction | 3/jour | action simple, contact, Volonté DD 17 annule ; NLS 15, concentration +19
+resource: Protection contre le Bien | à volonté | action simple, durée 15 minutes
+resource: Glas | à volonté | action simple, contact sur un vivant à moins de 0 pv, Volonté DD 16 annule
+resource: Communication avec les morts | à volonté | incantation de 10 minutes, Volonté DD 17 selon les conditions du sort
+
+step: Le combat approche
+  do: Activer protection contre le Bien et choisir une position où les adversaires devront venir au contact sans pouvoir l'encercler facilement
+  note: La protection accorde +2 de parade à la CA et +2 de résistance aux sauvegardes contre les attaques et effets des créatures bonnes.
+
+step: Des cadavres peuvent renseigner sur les ennemis avant l'affrontement
+  do: Utiliser communication avec les morts pour apprendre leurs accès, leur organisation et leur armement
+  note: Ce pouvoir recueille des renseignements ; il ne relève pas les cadavres et ne procure aucun serviteur.
+
+## Ouverture
+
+step: Un adversaire vivant dangereux est accessible après un déplacement maximal de 9 m
+  do: L'approcher et porter un coup +18, infligeant 1d4+10 et 1d4 niveaux négatifs
+  note: L'épuisement d'énergie s'applique dès que le coup touche, sans sauvegarde immédiate ; affaiblir ainsi la cible facilite les attaques et malédictions suivantes.
+
+step: La cible est déjà au contact et ses défenses physiques rendent le coup peu fiable
+  do: Tenter malédiction au contact, Volonté DD 17 ; choisir 50 % de chances de ne pouvoir agir à chaque tour
+  note: Employer ce pouvoir sur la défensive si le fext est menacé, avec concentration +19. Cette action remplace ses attaques du round.
+
+step: Les ennemis restent hors de portée
+  do: Avancer à couvert, jusqu'à 18 m avec un double déplacement si nécessaire, pour imposer le combat rapproché
+  note: Il ne dispose d'aucune attaque à distance dans ce profil.
+
+## Rounds suivants
+
+step: Une cible reste au contact et il peut consacrer le round à ses attaques
+  do: Attaque à outrance à l'épée bâtarde +1, +20/+15/+10, chaque touche infligeant 1d10+8, critique 17–20
+  note: Concentrer les trois attaques sur le même ennemi ; un pas de placement de 1,50 m permet d'ajuster sa position.
+
+step: La cible à l'épée est facile à toucher
+  do: Activer Attaque en puissance : attaques +17/+12/+7, dégâts 1d10+14 avec l'épée tenue à une main et le bouclier conservé
+  note: Revenir aux attaques normales contre une CA élevée ; le choix vaut jusqu'à son prochain tour.
+
+step: Plusieurs ennemis sont à son allonge de 1,50 m et adjacents les uns aux autres, surtout après un déplacement
+  do: Utiliser Succession d'enchaînements à l'épée, en action simple : une attaque +20 par cible, en poursuivant vers une cible adjacente à la précédente après chaque touche
+  note: Arrêter au premier échec ; une seule attaque par cible. La CA subit un malus de 2 jusqu'au prochain tour. Choisir cette action à la place de l'attaque à outrance.
+
+step: Une cible vivante n'était pas adjacente au début du tour et il peut conserver ses distances
+  do: Utiliser Attaque éclair : parcourir au moins 3 m avant un unique coup +18 avec épuisement d'énergie, puis continuer à se déplacer, sans dépasser 9 m au total
+  note: Le déplacement ne provoque pas d'attaque d'opportunité de la cible attaquée. Souplesse du serpent accorde +4 d'esquive à la CA contre celles que le déplacement provoque chez les autres ennemis.
+
+step: Un ennemi affaibli par l'épuisement d'énergie reste une menace et des utilisations sont disponibles
+  do: Tenter malédiction, Volonté DD 17, pour lui faire perdre des actions ; changer de cible si une malédiction produit déjà cet effet
+  note: Les niveaux négatifs réduisent aussi ses sauvegardes. Éviter de sacrifier plusieurs attaques à une malédiction contre une cible qui résiste régulièrement.
+
+step: Un vivant à moins de 0 pv est au contact et le fext peut consacrer une action à l'achever
+  do: Utiliser glas, Volonté DD 16 ; sur un échec, la victime meurt et le fext gagne 1d8 pv temporaires, +2 en Force et +1 au NLS
+  note: Les bénéfices durent 10 minutes par DV de la victime. Le bonus de Force augmente de 1 ses jets d'attaque à l'épée et ses dégâts à l'épée ; les pv temporaires ne soignent pas ses blessures.
+
+## Repli
+
+step: Moins de 32 pv, ou une arme en verre ou en obsidienne menace de l'achever
+  do: Rompre le combat par une retraite, jusqu'à 18 m en armure, vers un couvert ou un passage étroit
+  note: La retraite protège la sortie de sa case initiale ; les autres cases menacées peuvent encore provoquer des attaques d'opportunité.
+
+step: Réduit à 0 pv autrement que par une arme en verre ou en obsidienne
+  do: Le laisser inconscient ; après 1d4 minutes, appliquer guérison accélérée 1, soit 1 pv par round, puis reprendre la fuite lorsqu'il peut agir
+  note: Immortel ne le maintient pas en état de combattre. Une arme en verre ou en obsidienne le détruit si elle le réduit à 0 pv ; inconscient, il peut aussi être détruit en lui tranchant la tête puis en l'oignant d'eau bénite.

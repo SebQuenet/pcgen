@@ -1,0 +1,56 @@
+## Avant le combat
+
+note: Profil
+  Domovoi, fée de taille TP, chaotique bonne, esprit du foyer qui protège la maison et ses habitants. Il préfère écarter les intrus par la ruse et le sommeil.
+  Gourdin +4 (1d3), allonge 1,50 m ; sommeil (Volonté DD 13), préparé si possible par berceuse (Volonté DD 12).
+  27 PV ; CA 17 ; réduction des dégâts 5/fer froid ; résistance à la magie 14 ; déplacement de 6 m.
+
+resource: Sommeil | 3/jour | Volonté DD 13 ; portée 45 m ; rayon 3 m ; durée 5 minutes ; affecte au plus 4 DV cumulés, en commençant par les plus faibles ; aucune créature de 5 DV ou plus
+resource: Rapetissement | 3/jour | Vigueur DD 13 ; un humanoïde à 10,50 m ou moins ; durée 5 minutes
+resource: Invisibilité | à volonté | durée 5 minutes ; prend fin dès qu'il attaque ou utilise un pouvoir contre un ennemi, même si celui-ci réussit son jet de sauvegarde
+resource: Berceuse | à volonté | Volonté DD 12 ; portée 45 m ; rayon 3 m ; concentration puis 5 rounds
+resource: Main du mage, réparation, prestidigitation | à volonté | petits services et diversions ; aucun dégât direct
+resource: Augure | 1/semaine | consulter avant une décision risquée ; renseigne sur les conséquences dans les 30 prochaines minutes
+
+step: Des intrus approchent du foyer
+  do: Observer sous invisibilité, avec Discrétion +17 et Perception +7 ; repérer un couvert et une issue étroite.
+  do: Si les intrus peuvent être raisonnés, leur demander de partir en commun ou en sylvestre, avec Diplomatie +8.
+
+step: Il doit passer inaperçu avant l'alerte
+  do: Prendre l'apparence d'un chat ou d'un chien ; retrouver sa forme habituelle à l'abri avant d'engager le combat.
+
+## Ouverture
+
+step: Plusieurs ennemis susceptibles de dormir sont regroupés et il dispose de temps
+  do: Depuis un couvert, utiliser berceuse sur leur groupe, puis sommeil au round suivant.
+  note: Berceuse impose aux victimes un malus de -5 en Perception et de -2 aux jets de Volonté contre le sommeil ; elle ne les endort pas elle-même. Ses effets persistent 5 rounds après l'arrêt de la concentration.
+  note: La berceuse hostile met fin à son invisibilité ; garder une distance suffisante pour ne pas être rejoint immédiatement.
+
+step: La menace est immédiate et une cible peut être affectée par sommeil
+  do: Utiliser directement sommeil depuis une position protégée ; placer la zone pour épargner les habitants et ses éventuels compagnons.
+  note: Ne pas gaspiller ce pouvoir contre des créatures immunisées au sommeil ou trop puissantes pour sa limite de 4 DV.
+
+## Rounds suivants
+
+step: Des adversaires dorment et d'autres restent actifs
+  do: Laisser les dormeurs tranquilles et employer une nouvelle utilisation de sommeil contre les adversaires encore éveillés qui peuvent en subir l'effet.
+  note: Une blessure ou une gifle réveille un dormeur ; le bruit ordinaire ne suffit pas. Profiter de leur sommeil pour mettre les habitants à l'abri.
+
+step: Un humanoïde frappe surtout grâce à sa force et sommeil ne convient pas
+  do: Depuis un couvert, utiliser rapetissement pour diminuer sa Force et les dégâts de ses armes de mêlée.
+  note: La cible gagne aussi en Dextérité, en CA et aux attaques. Ce pouvoir ne peut pas rapetisser le domovoi, qui est une fée.
+
+step: Il est exposé après un pouvoir hostile
+  do: Consacrer son prochain pouvoir à redevenir invisible, puis se déplacer vers un autre couvert avant de reprendre l'offensive.
+  note: Invisibilité et pouvoir offensif demandent des actions distinctes ; son invisibilité ne le rend pas silencieux.
+
+step: Un ennemi arrive au contact
+  do: Se dégager par un pas de 1,50 m si cela suffit à sortir de son allonge, puis utiliser invisibilité ; sinon privilégier la retraite.
+  note: Souplesse du serpent apporte +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements. Le gourdin +4 (1d3) reste un dernier recours.
+
+## Repli
+
+step: Points de vie à 9 ou moins, arme en fer froid repérée, ou adversaires impossibles à neutraliser
+  do: Rompre le contact, devenir invisible dès que possible et quitter la zone à 6 m par déplacement, ou 12 m avec un double déplacement.
+  do: Utiliser compression pour emprunter une ouverture étroite et rompre la poursuite ; une fois hors de vue, prendre l'apparence d'un chat ou d'un chien pour se fondre dans les environs.
+  note: Il cherche à survivre et à protéger le foyer ; il cesse les attaques lorsque les intrus se retirent.

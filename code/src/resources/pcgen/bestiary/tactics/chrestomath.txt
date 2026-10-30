@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Chrestomath, extérieur extraplanaire neutre de taille M, bibliothèque vivante des caulborns. Intelligence 25 ; 95 pv ; CA 16, contact 12 ; RM 17 ; vol à 3 m, manœuvrabilité moyenne.
+  Son attaque principale est le déluge mental, qui affaiblit l'Intelligence et la Sagesse et provoque la confusion. Aucune attaque physique n'est indiquée ; il combat à distance derrière ses alliés.
+
+resource: Détection de la magie, détection des pensées et don des langues | constants | NLS 7 ; concentration +12
+resource: Science de la Volonté de fer | 1/jour | relancer un jet de Volonté avant d'en connaître le résultat ; conserver le second résultat
+
+step: Des caulborns ou d'autres chrestomaths sont présents
+  do: Les avertir par télépathie et rester à moins de 90 m d'au moins un congénère pour partager les alertes de l'esprit de ruche supérieur
+  note: Le groupe ne peut être pris en tenaille ou au dépourvu que si tous ses membres le sont. Les caulborns à 90 m reçoivent aussi +3 de parade à la CA ; les autres chrestomaths ne reçoivent pas ce bonus. Sa propre parade de +6 est déjà comprise dans sa CA 16.
+
+step: Au moins trois participants disposent du temps nécessaire pour observer les intrus
+  do: Utiliser la scrutation coopérative en maintenant le contact physique et la concentration
+  note: NLS 7, Volonté DD 20 ; cette préparation mobilise les participants et ne remplace pas une action offensive pendant le combat.
+
+## Ouverture
+
+step: Une créature vivante et consciente est repérée par sa perception des pensées à 18 m ou moins
+  do: Déluge mental sur une cible dangereuse, en priorité un adversaire dont la Volonté paraît faible ; action simple
+  note: Volonté DD 19 ou 1d6 points de dégâts d'Intelligence et de Sagesse, et confusion pendant 1d6 rounds. Une réussite annule ces effets.
+
+step: Aucun adversaire ne peut encore être ciblé
+  do: Rester à couvert derrière les caulborns et leur transmettre les positions repérées ; se déplacer de 3 m si cela suffit à obtenir une cible sans s'exposer
+  note: Perception aveugle à 18 m ; la perception des pensées localise les créatures vivantes et conscientes à cette même distance. Antidétection et esprit impénétrable peuvent soustraire une cible à ce dernier sens.
+
+## Rounds suivants
+
+step: Un adversaire encore lucide menace le groupe
+  do: Répéter le déluge mental sur lui et conserver les alliés entre le chrestomath et les combattants ennemis
+  note: Aucune limite d'utilisation n'est indiquée. Les dégâts de Sagesse peuvent affaiblir les prochains jets de Volonté de la victime.
+
+step: Une victime est déjà confuse et d'autres cibles restent disponibles
+  do: Déplacer le déluge mental vers un adversaire encore capable d'agir normalement
+  note: La confusion ne donne aucun contrôle sur les actions de la victime ; surveiller aussi les attaques qu'elle pourrait porter aux caulborns.
+
+step: Un ennemi approche au contact
+  do: Faire un pas de placement de 1,50 m si le vol le permet, puis poursuivre le déluge mental ; demander aux alliés d'intercepter l'assaillant
+  note: Le déluge mental est surnaturel et ne provoque pas d'attaque d'opportunité. Éviter les zones dangereuses : Réflexes −1. L'immunité aux effets sensoriels ne protège pas contre tous les effets mentaux.
+
+## Repli
+
+step: Moins de 30 pv, protection des alliés rompue ou adversaires impossibles à affecter
+  do: Prévenir les caulborns par télépathie et battre en retraite vers un abri ; une action de retraite permet jusqu'à 6 m de vol
+  note: Sa lenteur impose de préparer une voie de repli. La retraite protège seulement la case de départ des attaques d'opportunité ; les alliés doivent couvrir le trajet. L'inconscience met fin à sa parade psychique et au bonus accordé aux caulborns.

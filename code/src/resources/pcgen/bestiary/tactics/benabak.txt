@@ -1,0 +1,59 @@
+## Avant le combat
+
+note: Profil
+  Benabak est un diablotin loyal mauvais de taille TP, intelligent et habile à mentir (Bluff +8). Il privilégie les attaques empoisonnées depuis les airs et les disparitions pour éviter les représailles.
+  Dard +8 (1d4 et poison), fléchette +8 (1d2 et poison) ; 16 pv, CA 16, guérison accélérée 2. Déplacement au sol de 6 m, vol de 15 m avec une manœuvrabilité parfaite.
+  Réduction des dégâts 5/Bien ou argent ; immunité au feu et au poison ; résistance à l'acide 10 et au froid 10.
+
+resource: Invisibilité personnelle | à volonté | cesse lorsqu'il attaque
+resource: Fléchettes empoisonnées | 20 | attaque à distance +8, dégâts 1d2 et poison
+resource: Augure | 1/jour | évaluer les conséquences d'une action prochaine
+resource: Recherche de pensées | 1/jour | Volonté DD 15
+resource: Communion | 1/semaine | 6 questions, niveau de lanceur de sorts 12
+resource: Baguette de contrôle des morts-vivants | 7 charges | activation par Utilisation d'objets magiques +8
+
+step: Il peut préparer la rencontre
+  do: Utiliser augure pour évaluer son projet d'embuscade ; réserver communion aux renseignements qui peuvent orienter ses préparatifs
+  note: Ces pouvoirs fournissent des informations ; ils ne remplacent pas une reconnaissance du terrain.
+
+step: Il cherche à observer sans se faire reconnaître
+  do: Prendre la forme d'un rat, d'une chauve-souris ou d'un corbeau ; retrouver sa forme de diablotin avant d'utiliser ses attaques habituelles
+  note: Perception +6, détection du Bien et détection de la magie constantes ; vision dans le noir à 18 m et vision dans les ténèbres.
+
+step: Les adversaires approchent
+  do: Se rendre invisible, puis gagner une position en hauteur avec une issue dégagée et un couvert accessible en vol
+  note: Discrétion +17 ; l'invisibilité ne masque pas les bruits de ses déplacements.
+
+## Ouverture
+
+step: Une cible est exposée à distance
+  do: Lancer une fléchette empoisonnée +8 (1d2 et poison), puis utiliser son déplacement pour gagner un couvert
+  note: L'attaque met fin à son invisibilité. Privilégier une cible isolée qu'il pourra attaquer de nouveau sans traverser le groupe.
+
+step: Un mort-vivant présent peut servir ses intérêts
+  do: Tenter d'activer la baguette par Utilisation d'objets magiques +8 pour le contrôler
+  note: Il ne dispose d'aucun serviteur garanti ; l'activation peut échouer et les morts-vivants intelligents peuvent résister au sort.
+
+## Rounds suivants
+
+step: Il est visible après une attaque
+  do: Consacrer son action à redevenir invisible, puis se déplacer en vol pour changer d'angle d'approche
+  note: Alterner les rounds d'attaque et de remise à couvert ; lancer invisibilité et attaquer demandent chacun une action simple.
+
+step: Une cible reste accessible à distance
+  do: Reprendre les tirs de fléchettes empoisonnées depuis une position qui permet de s'éloigner après l'attaque
+  note: Compter les fléchettes dépensées ; il n'en possède que 20.
+
+step: Une cible isolée justifie le risque du corps à corps
+  do: Approcher sous invisibilité, entrer dans son espace et porter une attaque de dard +8 (1d4 et poison)
+  note: Son allonge est de 0 m : il doit entrer dans l'espace adverse. Après l'attaque, il redevient visible et un déplacement hors d'une zone menacée peut provoquer une attaque d'opportunité.
+
+step: Il subit des blessures et peut rompre le contact
+  do: Se cacher sous invisibilité et laisser sa guérison accélérée récupérer 2 pv par round avant une nouvelle approche
+  note: Éviter particulièrement les armes en argent ou alignées sur le Bien, qui contournent sa réduction des dégâts.
+
+## Repli
+
+step: Ses points de vie tombent à 8 ou moins, ou ses adversaires l'empêchent de se mettre à couvert
+  do: Se rendre invisible et fuir en vol, à 15 m par déplacement, vers une issue hors de vue
+  note: Chercher d'abord à rompre la ligne de vue si les adversaires peuvent le voir malgré son invisibilité ; une fois à l'abri, récupérer ses blessures grâce à la guérison accélérée 2.

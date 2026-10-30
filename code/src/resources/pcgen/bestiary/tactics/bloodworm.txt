@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Bloodworm (ver de sang), vermine de taille G sans Intelligence, rencontrée sur les côtes tempérées ou chaudes et dans les souterrains. 45 pv, CA 15.
+  Morsure +8 (2d6+7 et saignement de 1d6) ; allonge de 1,50 m ; espace occupé de 3 m. Déplacement et nage à 6 m, creusement à 3 m ; Natation +13.
+  Perception du sang à 36 m, vision dans le noir et perception des vibrations à 18 m ; Perception +0. Immunisé aux effets mentaux.
+
+step: Une proie approche de son habitat
+  do: Se tenir près de l'eau ou dans un substrat qu'il peut creuser, puis se rapprocher dès qu'il détecte une proie
+  note: Son comportement reste instinctif ; il ne prépare ni diversion ni manœuvre coordonnée
+
+## Ouverture
+
+step: Une proie est à 1,50 m ou moins
+  do: Mordre à +8 pour infliger 2d6+7 dégâts et un saignement de 1d6
+
+step: Aucune proie n'est à portée de morsure
+  do: Avancer ou nager jusqu'à 6 m vers la proie accessible la plus proche, puis mordre si elle est à portée
+  note: S'il doit creuser pour l'atteindre, sa vitesse est de 3 m ; il doit émerger à portée pour mordre
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter la morsure à chaque round
+  note: Le saignement inflige 1d6 dégâts par round tant qu'il persiste ; les morsures suivantes infligent toujours leurs dégâts directs
+
+step: La proie s'éloigne
+  do: La poursuivre à 6 m au sol ou à la nage, et mordre dès que la distance le permet
+  note: Il ne possède aucune attaque à distance ; si une autre proie devient plus proche et accessible, il peut se rabattre sur elle
+
+## Repli
+
+step: Points de vie à 10 ou moins et issue accessible
+  do: Fuir instinctivement en nageant à 6 m ou en creusant à 3 m dans un substrat adapté
+  note: Ce seuil sert de repère au meneur ; sa fuite ne comporte ni ruse ni préparation d'une revanche
+
+step: Aucune issue accessible
+  do: Continuer à mordre la créature la plus proche à portée

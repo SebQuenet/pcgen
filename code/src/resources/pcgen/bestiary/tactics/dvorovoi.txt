@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Petit esprit féerique chaotique neutre, discret et opportuniste ; 38 pv, CA 17, réduction des dégâts 5/fer froid et résistance à la magie 15.
+  Fourche au contact +8 (1d8+6), fourche lancée +7 (1d8+6) ; allonge de 1,50 m et déplacement de 9 m.
+  Il prépare ses approches sous invisibilité et cherche à isoler une cible avant de frapper.
+
+resource: Communication avec les animaux | permanent | permet de parler aux animaux
+resource: Charme-animal | à volonté | Volonté DD 14
+resource: Dissimulation aux animaux | à volonté | facilite ses déplacements face aux animaux
+resource: Invisibilité | à volonté | prend fin lorsqu'il attaque ou utilise un effet offensif contre un ennemi
+resource: Bris | 3/jour | DD 14
+resource: Rapetissement | 3/jour | Vigueur DD 14 ; cible humanoïde
+resource: Enchevêtrement | 1/jour | Réflexes DD 14 ; nécessite de la végétation
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Se rendre invisible, observer avec Perception +9 et l'odorat, puis choisir une position discrète et une issue de fuite
+  note: Discrétion +16 ; vision nocturne pour exploiter la faible luminosité
+
+step: Des animaux sont présents
+  do: Leur parler et tenter de gagner leur confiance par empathie sauvage +18, Dressage +13 ou charme-animal
+  note: Leur amitié peut faciliter une diversion ; elle ne garantit pas leur participation au combat
+
+## Ouverture
+
+step: Plusieurs adversaires approchent à travers une zone de végétation
+  do: Lancer enchevêtrement sur leur passage, en gardant une voie libre pour lui-même
+  note: Réflexes DD 14 ; rester hors de la zone et exploiter la séparation du groupe. Cet effet offensif met fin à son invisibilité
+
+step: Une cible isolée est accessible au contact
+  do: S'approcher sous l'invisibilité préparée avant le combat, puis frapper à la fourche +8 (1d8+6)
+  note: La première attaque révèle sa présence ; choisir une cible qui ne bénéficie pas du soutien immédiat de ses compagnons
+
+step: Une cible est accessible à distance mais le contact serait défavorable
+  do: Lancer la fourche +7 (1d8+6) seulement s'il peut ensuite la récupérer sans trop s'exposer
+  note: Aucun stock de fourches de rechange n'est indiqué
+
+## Rounds suivants
+
+step: Un adversaire reste au contact et le duel lui est favorable
+  do: Porter une attaque de fourche +8 (1d8+6) par round et garder une voie de dégagement
+  note: Sa réduction des dégâts absorbe 5 points par attaque physique, sauf avec du fer froid ; sa résistance à la magie est de 15
+
+step: Un ennemi provoque une attaque d'opportunité à moins de 1,50 m
+  do: Frapper à la fourche grâce à Attaques réflexes
+  note: Jusqu'à quatre attaques d'opportunité par round avec sa Dextérité de 16 ; une seule par occasion déclenchante
+
+step: Une arme ou un objet adverse est décisif dans le combat
+  do: Consacrer son action à bris sur cet objet, DD 14, tant qu'il reste des utilisations
+  note: Viser un objet de taille M ou inférieure ; un échec au jet de sauvegarde lui donne l'état brisé, ou le détruit s'il était déjà brisé
+
+step: Un combattant humanoïde dangereux compte sur sa force et ses armes
+  do: Tenter rapetissement sur lui, Vigueur DD 14, puis reprendre les attaques aux rounds suivants
+  note: La réduction de taille diminue sa Force et les dégâts de ses armes ; le dvorovoi, de type féerique, ne peut pas se cibler lui-même
+
+step: Plusieurs ennemis convergent sur lui ou il doit changer de position
+  do: Utiliser invisibilité, puis se déplacer vers un couvert ou une cible isolée
+  note: Lancer ce pouvoir au contact expose à une attaque d'opportunité ; privilégier un lancement hors de leur allonge. Attaquer de nouveau met fin à l'invisibilité
+
+## Repli
+
+step: Points de vie sous 12, ou adversaires équipés de fer froid qui prennent l'avantage
+  do: Rompre le contact, utiliser invisibilité dès qu'il peut la lancer sans s'exposer, puis fuir à 9 m par déplacement
+  note: S'il est menacé au contact, une retraite permet d'abord de s'éloigner ; garder l'invisibilité pour un round ultérieur
+
+step: Une ouverture étroite permet de semer les poursuivants
+  do: Exploiter compression pour s'y glisser et poursuivre sa fuite
+  note: Ne pas attaquer pendant la fuite afin de conserver l'invisibilité

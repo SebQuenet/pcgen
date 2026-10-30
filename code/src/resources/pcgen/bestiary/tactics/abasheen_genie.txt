@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Génie abasheen, extérieur neutre de l'Air de taille G, très intelligent ; 85 pv, CA 21, initiative +7. Il privilégie le vol, les injonctions et les coups de poing.
+  Deux coups +12 (2d6+3 chacun) ou cimeterre à deux mains de maître +13/+8 (2d6+3, critique 18-20) ; allonge 3 m.
+  Vol parfait à 15 m, marche à 6 m ; vision dans le noir à 18 m, Perception +17, télépathie à 30 m.
+
+resource: Injonction | à volonté | Volonté DD 14 ; portée 15 m ; une créature vivante comprenant l'ordre ; durée 1 round
+resource: Charme-personne | à volonté | Volonté DD 14 ; portée 15 m ; un humanoïde ; durée 10 heures
+resource: Changement de plan | à volonté | lui-même et cibles consentantes uniquement ; plans élémentaires, plan Astral ou plan Matériel
+resource: Quête | 1/jour | une créature vivante comprenant ses instructions ; sans jet de sauvegarde ; à préparer hors combat
+
+step: Les adversaires sont repérés avant les hostilités
+  do: Rester en vol et observer leurs armes et leurs positions ; approcher par la parole avec Diplomatie +16, éventuellement sous charme-personne sur un interlocuteur humanoïde encore non menacé
+  note: Le charme rend la cible amicale ; il ne lui impose pas de trahir ses compagnons.
+
+step: Une créature est captive et il dispose du temps nécessaire
+  do: Utiliser quête pour lui imposer un service précis et réalisable, par exemple transmettre une proposition de trêve
+  note: Donner les instructions dans une langue comprise de la cible ; éviter toute tâche suicidaire.
+
+## Ouverture
+
+step: L'adversaire le plus proche est à 15 m ou moins et comprend sa langue
+  do: Lancer injonction, « Lâche » contre un porteur d'arme ou « Fuis » contre une menace qu'il veut éloigner
+  note: « Lâche » fait tomber les objets tenus et interdit de les ramasser avant le tour suivant ; « Fuis » impose de s'éloigner pendant son prochain tour et peut provoquer des attaques d'opportunité.
+
+step: Aucune cible ne peut recevoir une injonction
+  do: Se déplacer en vol pour atteindre un adversaire isolé et porter une seule attaque au cimeterre à deux mains +13 (2d6+3), ou un coup +12 (2d6+3) s'il combat sans arme
+  note: Rester en l'air et utiliser son allonge de 3 m pour limiter les ripostes des adversaires à faible allonge.
+
+## Rounds suivants
+
+step: Un adversaire est à portée et il peut consacrer le round à frapper
+  do: Attaque à outrance : deux coups +12 (2d6+3 chacun), ou cimeterre à deux mains +13/+8 (2d6+3)
+  note: Un déplacement ordinaire ne permet qu'une seule attaque ; il ne peut pas effectuer une attaque à outrance puis repartir en vol.
+
+step: Aucun adversaire n'est à portée de mêlée et un lanceur de sorts humanoïde est à 15 m ou moins
+  do: Tenter charme-personne sur ce lanceur de sorts et lui demander de suspendre les hostilités
+  note: Une cible déjà menacée ou attaquée par le génie ou ses alliés bénéficie de +5 à sa sauvegarde. Toute menace du génie ou de ses alliés contre la cible charmée rompt le charme.
+
+step: Un combattant approche ou un charme échoue
+  do: Réutiliser injonction pour faire fuir une menace ou lui faire lâcher son arme, puis se repositionner en vol si nécessaire
+  note: Une utilisation de pouvoir remplace ses attaques de ce tour ; privilégier les cibles qui semblent les moins résistantes aux effets mentaux.
+
+step: Un ennemi volant l'attaque
+  do: Exploiter la maîtrise de l'air en restant en vol et concentrer les coups sur cet adversaire s'il est isolé
+  note: Les créatures en l'air subissent -1 aux jets d'attaque et de dégâts contre lui ; ce malus dépend de leur position, pas simplement de celle du génie.
+
+## Repli
+
+step: Points de vie sous 30, ou combat manifestement perdu
+  do: Se soustraire à la mêlée puis utiliser changement de plan sur lui-même vers un plan autorisé où il peut se mettre à l'abri
+  note: Il combat rarement jusqu'à la mort ; le changement de plan ne permet pas d'emporter de force un ennemi récalcitrant.
+
+step: Une menace au contact rend l'utilisation du pouvoir dangereuse
+  do: Se désengager en vol avant de changer de plan au tour suivant, ou utiliser le pouvoir sur la défensive si la fuite ne peut attendre
+  note: Avec Incantation de combat, son test de concentration sur la défensive est à +17 ; le pouvoir peut échouer si le test est raté.

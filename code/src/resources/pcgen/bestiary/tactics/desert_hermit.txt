@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Ermite du désert d’Osirion, humain druide 9, neutre, solitaire et méfiant envers les étrangers. Il défend sa tranquillité en exploitant le terrain et en gardant ses adversaires à distance.
+  80 PV, CA 18, déplacement 9 m, immunité au poison. Ses principales armes sont les vents, les sables changeants et le crachat de venin ; au contact, cimeterre de maître +9/+4 (1d6+2, critique 18–20), ou fronde +9 (1d4+2) à distance.
+
+resource: Sorts préparés | 1 utilisation de chaque sort indiqué | NLS 9, concentration +12 ; sorts de niveau 0 à volonté
+resource: Brume de chaleur | 6 rounds par jour | action libre, 20 % de chances de rater contre lui ; un ennemi qui le touche en mêlée est ébloui 1 round, Vigueur DD 17 annule ; rounds utilisables séparément
+resource: Allié d’outreplan | 1 par jour | jann uniquement ; convenir de son service avant de compter sur son aide
+resource: Baguette de soins modérés | 16 charges | une charge par activation
+resource: Baguette d’endurance aux énergies destructives | 20 charges | protection contre les températures ambiantes extrêmes
+
+step: Il dispose de plusieurs rounds avant l’affrontement
+  do: Lancer successivement grand pas et peau d’écorce, puis manteau d’ombre si le soleil l’exige
+  note: Grand pas porte son déplacement terrestre à 12 m pendant 9 heures ; peau d’écorce porte sa CA à 22 pendant 90 minutes
+
+step: Une attaque d’énergie particulière est prévisible
+  do: Lancer résistance aux énergies destructives contre cette énergie
+  note: Résistance 20 pendant 90 minutes ; la baguette d’endurance ne protège pas des attaques d’énergie
+
+step: Il dispose de 10 minutes pour préparer les lieux
+  do: Lancer terrain hallucinatoire pour donner à un passage difficile l’apparence d’un terrain facile et orienter l’approche des intrus
+  note: Volonté DD 17 pour reconnaître l’illusion en interagissant avec elle ; le relief réel conserve ses effets sur les déplacements
+
+## Ouverture
+
+step: Les ennemis commencent à le prendre pour cible
+  do: Activer la brume de chaleur en action libre, puis choisir un sort d’ouverture selon la menace principale
+  note: Décompter chaque round d’utilisation ; lancer un seul sort d’ouverture par round
+
+step: Plusieurs ennemis avancent sur une surface de terre ou de sable
+  do: Lancer sables changeants sous leur groupe, en restant hors de la zone
+  note: Portée 57 m, rayon 6 m, durée 9 rounds ; terrain difficile, Réflexes DD 16 à l’entrée ou au début du tour pour éviter l’enchevêtrement ; se déplacer en étant enchevêtré exige un second jet de Réflexes ou provoque une chute
+
+step: Les tireurs ou les créatures volantes constituent la menace principale
+  do: Lancer contrôle des vents pour renforcer et orienter le vent contre eux, avec un œil calme autour de sa position
+  note: Modifier la force du vent de trois catégories au maximum selon le vent existant ; Vigueur DD 19 contre ses effets. Le rayon maximal est de 108 m, celui de l’œil calme de 12 m ; adapter la zone pour gêner les tirs et le vol sans s’exposer
+
+## Rounds suivants
+
+step: Des ennemis restent pris dans les sables changeants
+  do: Déplacer la zone jusqu’à 3 m par une action de mouvement pour maintenir la séparation entre les adversaires
+  note: Les créatures enchevêtrées ou à terre sont entraînées avec le sable si le déplacement est possible ; son action simple reste disponible
+
+step: Des ennemis sont ralentis et il peut rester à distance
+  do: Lancer nuée grouillante sur eux, puis entretenir le sort par concentration tant que la nuée menace les intrus
+  note: Incantation de 1 round, portée 13,50 m ; la nuée attaque les créatures les plus proches, sans obéir à ses ordres. Entretenir la concentration consomme son action simple ; elle persiste 2 rounds après son arrêt
+
+step: Un scorpion, des araignées ou des mille-pattes ordinaires sont effectivement présents
+  do: Si vermine géante est encore préparé, transformer un scorpion, deux araignées ou trois mille-pattes et leur donner l’ordre simple d’attaquer
+  note: Portée 13,50 m, durée 9 minutes ; les placer entre les assaillants et lui
+
+step: Les adversaires franchissent une zone de roche naturelle non travaillée
+  do: Utiliser transmutation de la pierre en boue pour convertir leur passage en sable meuble et entraver leur progression
+  note: Cette version produit du sable ; elle ne transforme pas la pierre magique ni les maçonneries. Sous une voûte naturelle, une chute provoquée par le sort inflige 8d6 dégâts contondants, Réflexes DD 19 pour moitié
+
+step: Une cible dangereuse se trouve à 13,50 m ou moins et crachat de venin est encore préparé
+  do: Lancer crachat de venin, attaque de contact à distance +9, puis profiter de la cécité pour s’éloigner
+  note: Une touche aveugle pendant 1 round ; Vigueur DD 17 pour éviter le poison, avec le même DD pour ses jets ultérieurs
+
+step: Un ennemi utilise l’invisibilité ou un camouflage magique que lueurs féeriques peut contrer
+  do: Lancer lueurs féeriques pour révéler sa silhouette
+
+step: Un adversaire arrive au contact
+  do: Faire un pas de placement de 1,50 m si cela suffit à sortir de son allonge, puis lancer un sort ; sinon, tenter une incantation défensive avec concentration +16
+  note: Si le recours au cimeterre devient nécessaire, une attaque après déplacement à +9, ou attaque à outrance +9/+4 en restant sur place ; conserver la brume de chaleur pendant les rounds les plus exposés
+
+## Repli
+
+step: Ses PV tombent à 30 ou moins, ou ses protections ne suffisent plus
+  do: Lancer fouissement sur lui-même et quitter le combat sous terre, en retenant son souffle
+  note: Durée 9 minutes ; vitesse de fouissement 4,50 m dans le sable, la terre meuble ou le gravier, et 1,50 m dans la pierre. Les matériaux meubles se referment après 1 round ; ressortir à l’écart pour respirer
+
+step: Fouissement a déjà été dépensé
+  do: Se retirer à pied en gardant les zones de sable entre lui et ses poursuivants, à 12 m par déplacement si grand pas est actif, sinon 9 m
+
+step: Il a atteint un abri hors de portée des ennemis
+  do: Utiliser la baguette de soins modérés, une charge à la fois, puis reprendre sa retraite

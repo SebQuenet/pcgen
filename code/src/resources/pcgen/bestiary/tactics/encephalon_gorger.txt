@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Encephalon Gorger, aberration extraplanaire de taille M, chaotique mauvaise et très intelligente ; il privilégie les proies au cerveau le plus développé.
+  65 points de vie ; CA 20, contact 14, pris au dépourvu 16 ; résistance au froid 10. Déplacement de 9 m ; allonge de 1,50 m ; vision dans le noir à 18 m ; initiative +7.
+  Deux griffes +10, chacune infligeant 1d6+1 dégâts et permettant une étreinte ; alimentation cérébrale sur une victime immobilisée en lutte.
+
+resource: Poussée d'adrénaline | 2/jour | effet de rapidité sur lui-même, NLS 10, pendant 10 rounds
+
+step: Des proies approchent
+  do: Se dissimuler avec Discrétion +11 et surveiller avec Perception +21
+  do: Consacrer une action de mouvement au sens mental pour évaluer l'intelligence relative d'une créature à 18 m ou moins
+
+step: Des congénères ou des serviteurs sont présents
+  do: Leur faire occuper les combattants pendant qu'il approche la proie intelligente la moins protégée
+
+step: Le combat est imminent et il dispose d'un round de préparation
+  do: Dépenser une poussée d'adrénaline
+  note: Rapidité porte son déplacement à 18 m, ajoute +1 aux attaques, à la CA et aux Réflexes, et permet une griffe supplémentaire lors d'une attaque à outrance
+
+note: Écran mental
+  Toute lecture de ses pensées impose à l'intrus Volonté DD 20 : folie permanente en cas d'échec, confusion pendant 1d4 rounds même en cas de réussite. Cette défense est passive.
+
+## Ouverture
+
+step: Sa cible est hors de son allonge mais accessible en un déplacement
+  do: Approcher puis porter une seule griffe +10, ou +11 sous rapidité, pour 1d6+1 dégâts
+  note: Sur une touche, tenter immédiatement l'étreinte par un test de lutte, sans attaque d'opportunité
+
+step: Une cible est déjà à 1,50 m ou moins
+  do: Attaquer à outrance avec deux griffes +10 ; sous rapidité, trois griffes +11 ; chaque touche inflige 1d6+1 dégâts et permet l'étreinte
+
+step: Il n'a pas encore utilisé sa poussée d'adrénaline et l'ennemi reste éloigné
+  do: Activer rapidité, puis se déplacer pour préparer l'approche
+
+## Rounds suivants
+
+step: Il commence son tour en lutte et les autres ennemis sont neutralisés ou occupés
+  do: Réussir le test de lutte pour immobiliser la victime et drainer son fluide cérébral ; maintenir ensuite l'immobilisation
+  note: Alimentation cérébrale : diminution permanente de 1d4 points d'Intelligence par round d'immobilisation maintenue ; chaque alimentation réussie lui donne 5 points de vie temporaires
+  note: Il doit atteindre la tête ou le cou ; les créatures non vivantes ou dépourvues de cerveau central sont impropres à cette alimentation
+
+step: D'autres ennemis libres menacent de l'encercler pendant sa prise
+  do: Relâcher la victime si nécessaire et combattre les menaces immédiates avec ses griffes
+  note: Il attend que ses adversaires soient occupés avant de se nourrir
+
+step: Sa cible échappe à l'étreinte
+  do: La reprendre avec ses griffes ; faire une attaque à outrance s'il peut rester sur place, une seule attaque après un déplacement
+
+## Repli
+
+step: Ses points de vie tombent à 20 ou moins, ou il reste seul face à plusieurs ennemis libres
+  do: Relâcher sa prise et effectuer une retraite vers un passage dégagé, jusqu'à 18 m, ou 36 m sous rapidité
+  note: La retraite protège seulement le départ de sa première case ; Souplesse du serpent donne +4 à la CA contre les autres attaques d'opportunité provoquées par son déplacement
+
+step: Il a rompu le contact et conserve une poussée d'adrénaline
+  do: L'activer si nécessaire pour distancer les poursuivants, puis se cacher avec Discrétion +11 dès qu'un couvert le permet

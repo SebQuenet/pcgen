@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Devastator, créature artificielle extraplanaire gigantesque, chaotique mauvaise, FP 22, rang mythique 8. Intelligent, il sépare ses adversaires avant de les broyer au corps à corps.
+  365 pv ; CA 44, contact 20 ; RM 33 ; RD 15/adamantium et épique. Immunisé contre l'acide, le froid, l'électricité et le feu ; immunités des créatures artificielles.
+  Quatre bras ignobles +45 (2d8+18, critique 19-20) et deux ailes +40 (2d6+11, critique 19-20, plus saignement 2d6). Espace et allonge : 6 m.
+  Déplacement 15 m, creusement 9 m, vol 18 m avec manœuvrabilité moyenne ; vision dans le noir 18 m, vision nocturne, vision mythique 9 m ; Perception +34.
+
+resource: Aura maudite | permanente | DD 24 ; protection déjà comprise dans les valeurs du profil
+resource: Barrière de lames | à volonté | Réflexes DD 22 ; NLS 20
+resource: Ancre dimensionnelle | à volonté | rayon de contact à distance ; empêche les déplacements extradimensionnels
+resource: Blasphème | 3/jour | Volonté DD 23 ; rayon de 12 m ; NLS 20
+resource: Changement de plan | 3/jour | Volonté DD 21 pour une cible non consentante ; conserver une utilisation pour le repli
+resource: Destruction | 1/jour | Vigueur DD 23, effet partiel en cas de réussite
+resource: Tremblement de terre | 1/jour | effets selon le terrain
+resource: Implosion | 1/jour | Vigueur DD 25 ; concentration ; NLS 20
+
+step: Il peut choisir le lieu de l'affrontement
+  do: Occuper un passage permettant de tenir les ennemis à 6 m et de couper leur groupe avec une barrière de lames ; garder un dégagement pour s'envoler.
+  note: Son absorption de la magie du Bien complète ses immunités et sa RM ; privilégier l'élimination des adversaires capables de contourner ces défenses.
+
+step: Des Extérieurs chaotiques mauvais d'au moins 15 DV sont déjà présents
+  do: Les maintenir dans les 18 m de son aura de corruption pendant l'approche.
+  note: Ils gagnent +10 d'altération en Force et en Charisme, ainsi que +5 de RM ; cette aura ne renforce pas le Devastator lui-même, qui est une créature artificielle.
+
+## Ouverture
+
+note: Choix de l'action
+  Choisir l'ouverture adaptée ; chaque pouvoir magique remplace l'attaque du round.
+
+step: Plusieurs ennemis non mauvais de 20 DV ou moins se trouvent à 12 m ou moins
+  do: Employer blasphème pour les hébéter et affaiblir les moins puissants, puis préparer l'assaut au round suivant.
+  note: Volonté DD 23 réduit ou annule les effets ; les créatures de plus de 20 DV sont immunisées à ce blasphème.
+
+step: Le groupe approche et une séparation permet d'isoler une cible
+  do: Placer une barrière de lames entre les combattants et leurs soutiens ; rester du côté de la victime choisie.
+  note: Traverser la barrière inflige 15d6 dégâts, Réflexes DD 22 pour moitié. Si elle apparaît sur une créature, un jet réussi lui permet de choisir son côté sans dégâts.
+
+step: Une cible corporelle à faible Vigueur est visible à 22,50 m ou moins et il peut rester à distance
+  do: Déclencher implosion sur elle, Vigueur DD 25 pour annuler les 200 dégâts.
+  note: Choisir en priorité un lanceur de sorts ou un soigneur ; les créatures intangibles ou gazeuses ne sont pas affectées.
+
+step: Une cible prioritaire est déjà dans son allonge et aucune ouverture magique n'est préférable
+  do: Faire une attaque à outrance avec les quatre bras et les deux ailes, en concentrant les coups pour éliminer cette cible.
+
+## Rounds suivants
+
+step: Implosion est active et une nouvelle cible valable reste à portée
+  do: Consacrer l'action simple à la concentration et infliger 200 dégâts à une nouvelle cible, Vigueur DD 25 pour annuler.
+  note: Une seule tentative par créature pendant cette utilisation ; durée maximale 10 rounds. Attaquer à outrance ou lancer un autre pouvoir fait cesser la concentration.
+
+step: Il peut rester sur place ou se contenter d'un pas de 1,50 m
+  do: Répéter l'attaque à outrance : quatre bras +45 et deux ailes +40 ; frapper d'abord l'adversaire qui menace le plus ses défenses.
+  note: Les ailes provoquent un saignement de 2d6 par round ; plusieurs blessures identiques ne cumulent pas ce saignement. Exploiter les critiques avec son don de critique ralentissant.
+
+step: Il doit se déplacer pour atteindre sa victime
+  do: Marcher ou voler jusqu'à la placer dans son allonge, puis employer Frappe décisive avec un bras : +45, 4d8+18, critique 19-20.
+  note: Cette frappe est une action simple ; elle remplace l'attaque à outrance.
+
+step: Un ennemi tente de fuir par téléportation ou de changer de plan
+  do: Le viser avec ancre dimensionnelle, puis le poursuivre au round suivant.
+  note: C'est un rayon nécessitant une attaque de contact à distance, soumis à la RM ; il n'accorde pas de jet de sauvegarde.
+
+step: Une cible vivante à faible Vigueur demeure dangereuse et implosion est indisponible
+  do: Employer destruction, Vigueur DD 23 ; conserver ses attaques physiques pour les adversaires qui résistent mieux à ce type de pouvoir.
+
+step: Des ennemis traversent son allonge ou y accomplissent une action qui provoque une attaque d'opportunité
+  do: Exploiter ses réflexes de combat mythiques pour multiplier les attaques d'opportunité autorisées.
+  note: Lorsqu'il emploie un pouvoir magique à portée d'un ennemi, se dégager d'abord si possible ou utiliser le pouvoir sur la défensive ; concentration +26.
+
+step: Les adversaires dépendent d'un bâtiment, d'un tunnel ou d'un sol que le séisme peut rendre dangereux
+  do: Employer tremblement de terre pour détruire leur position, puis profiter du vol pour éviter les dangers du sol.
+  note: Prévoir les conséquences de l'effondrement sur sa propre position avant de déclencher le pouvoir.
+
+## Repli
+
+step: La destruction paraît imminente et il dispose encore de changement de plan
+  do: Employer changement de plan pour rejoindre les Abysses ; utiliser le pouvoir sur la défensive si un ennemi le menace.
+  note: Le retour sur un autre plan ne permet pas de choisir un point d'arrivée précis.
+
+step: Le voyage planaire est impossible et une voie de fuite demeure
+  do: Se retirer en volant à 18 m ou en creusant à 9 m par déplacement ; si un round de répit le permet, dresser une barrière de lames entre lui et les poursuivants.
+  note: Le creusement suppose un terrain qu'il peut effectivement traverser ; sa vitesse ne lui donne pas la capacité de traverser toute roche ou toute construction.
+
+step: Toute retraite est coupée
+  do: Concentrer les attaques à outrance sur l'adversaire qui bloque l'issue, puis tenter de s'échapper dès que le passage est libre.

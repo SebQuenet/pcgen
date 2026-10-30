@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Sombre rejeton de Shub-Niggurath : aberration de taille TG, chaotique mauvaise, intelligente et rusée, qui exploite la végétation pour isoler ses proies.
+  161 pv ; CA 27, contact 11 ; déplacement 9 m ; espace et allonge 4,50 m. Quatre tentacules +19 (1d8+10, critique 19–20, étreinte), BMO de lutte +26.
+  Réduction des dégâts 15/tranchant ; immunité à l'acide, à l'électricité, au feu et au poison ; impossible à faire tomber par un croc-en-jambe.
+  Perception +21, vision dans le noir à 18 m, perception des vibrations à 9 m ; Discrétion +20 en forêt, +12 ailleurs.
+
+resource: Liberté de mouvement | permanent | traverse ses enchevêtrements sans être entravé ; les tentatives de lutte adverses contre lui échouent automatiquement
+resource: Marche dans les airs | à volonté | NLS 12 ; préparer avant le combat pour poursuivre les adversaires aériens
+resource: Forme d'arbre | à volonté | camouflage immobile ; retour à sa forme normale par une action libre
+resource: Enchevêtrement | 3/jour | Réflexes DD 16 ; végétation dans un rayon de 12 m, durée 12 minutes
+resource: Contrôle des plantes | 3/jour | Volonté DD 19 ; affecte jusqu'à 24 DV de créatures végétales, à 16,50 m ; ne transforme pas les arbres ordinaires en combattants
+resource: Aliénation mentale | 1/jour | Volonté DD 22 ; une créature vivante à 66 m ; confusion persistante
+resource: Voyage par les arbres | 1/jour | NLS 12 ; conserver de préférence pour le repli entre arbres vivants de même essence, assez larges pour l'accueillir
+
+step: Il peut préparer une embuscade en forêt ou dans un marais
+  do: Activer marche dans les airs, puis prendre une forme d'arbre au bord d'une zone de végétation dense
+  note: Observer les approches ; prévoir un arbre vivant suffisamment large pour servir d'issue de secours
+
+step: Des créatures végétales sont présentes avant l'arrivée des intrus
+  do: Employer contrôle des plantes pour les rendre amicales et leur demander de barrer un passage ou de soutenir l'embuscade
+  note: Elles comprennent ses demandes ; un ordre inhabituel exige un test opposé de Charisme et aucun ordre suicidaire n'est accepté
+
+## Ouverture
+
+step: Les intrus avancent dans la végétation sans l'avoir engagé
+  do: Quitter la forme d'arbre et lancer enchevêtrement sur le groupe, puis se déplacer pour menacer une cible isolée à 4,50 m
+  note: Liberté de mouvement lui permet de traverser sa propre zone ; les ennemis qui y restent doivent renouveler leur sauvegarde à la fin de ses tours
+
+step: Il attaque ou charge et des adversaires sont à 9 m ou moins
+  do: Activer sa présence terrifiante ; Volonté DD 24 pour les adversaires ayant moins de 14 DV
+  note: Cette activation est une action libre ; une sauvegarde réussie protège contre cette présence pendant 24 heures
+
+step: Un combattant ou un roublard dangereux reste hors d'atteinte, ou la végétation ne permet pas l'enchevêtrement
+  do: Employer aliénation mentale, Volonté DD 22, puis approcher à couvert
+  note: Privilégier une cible dont la Volonté paraît faible ; un lanceur de sorts est généralement un moins bon choix
+
+step: Une proie est déjà à portée et il peut consacrer son tour à la mêlée
+  do: Attaque à outrance avec ses quatre tentacules +19, chacun infligeant 1d8+10, critique 19–20
+  note: Concentrer les coups sur une cible vulnérable plutôt que disperser les dégâts
+
+## Rounds suivants
+
+step: Un tentacule touche une proie de taille TG ou inférieure qu'il veut retenir
+  do: Tenter gratuitement l'étreinte, BMO +26 contre son DMD, sans provoquer d'attaque d'opportunité
+  note: Une prise normale donne aussi au rejeton l'état agrippé, qui limite ses déplacements et ses attaques d'opportunité ; choisir sa proie avant de s'immobiliser
+
+step: Il tient une proie isolée et peut rester sur place
+  do: Maintenir la lutte par une action simple ; bénéficier de +5 au test si la victime n'a pas rompu la prise depuis le tour précédent
+  note: Les maintiens réussis infligent les dégâts du tentacule, 1d8+10 ; cette action remplace son attaque à outrance
+
+step: Plusieurs ennemis le menacent alors qu'il retient une proie
+  do: Relâcher la prise par une action libre pour retrouver sa mobilité, puis choisir entre une attaque à outrance et un déplacement
+  note: Sa liberté de mouvement ne supprime pas les contraintes d'une lutte qu'il a lui-même engagée
+
+step: Une cible facile à toucher reste à portée
+  do: Employer Attaque en puissance pour porter ses tentacules à +16, avec 1d8+16 dégâts chacun
+  note: Garder les valeurs normales contre une CA élevée ; le malus s'applique aussi aux manœuvres de lutte jusqu'à son prochain tour
+
+step: Il doit se déplacer pour atteindre sa prochaine proie
+  do: Avancer de 9 m au maximum, puis utiliser Frappe décisive : un tentacule +19, 2d8+10 dégâts, avec possibilité d'étreinte
+  note: Frappe décisive s'utilise avec l'action d'attaque ; elle ne s'ajoute ni à une charge ni à une attaque à outrance
+
+step: Un adversaire provoque dans son allonge et il n'est pas agrippé
+  do: Frapper d'un tentacule ; grâce à Attaques réflexes, il dispose de quatre attaques d'opportunité par round
+  note: Exploiter les déplacements et les incantations qui provoquent réellement ; une même occasion ne donne pas plusieurs attaques
+
+step: Les adversaires sortent de la zone entravée ou prennent de la hauteur
+  do: Replacer un enchevêtrement s'il reste des utilisations, ou les poursuivre avec marche dans les airs déjà active
+  note: En montée, marcher dans les airs limite sa vitesse à 4,50 m et l'inclinaison à 45 degrés ; réserver chaque pouvoir à un tour où il renonce à l'attaque à outrance
+
+## Repli
+
+step: Sous 40 pv et le combat tourne à son désavantage
+  do: Relâcher toute prise, rejoindre l'arbre de secours et activer voyage par les arbres ; entrer dans l'arbre, puis consacrer une action complexe au transport
+  note: L'arbre d'arrivée doit être vivant, de même essence et assez large ; la portée d'un transport varie de 300 à 900 m selon l'essence
+
+step: Aucun arbre utilisable n'est accessible ou voyage par les arbres est épuisé
+  do: Se retirer par la végétation enchevêtrée ou par les airs ; employer l'action de retraite si nécessaire, puis se cacher une fois hors de vue
+  note: Utiliser forme d'arbre après avoir rompu le contact ; prendre cette forme l'immobilise

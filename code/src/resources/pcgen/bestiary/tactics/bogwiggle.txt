@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Bogwiggle, petite aberration aquatique chaotique mauvaise, semblable à un têtard aux crocs acérés ; intelligence rudimentaire, compagnon de chasse et gardien fidèle des boggards.
+  16 PV, CA 12, initiative +5 ; morsure +4 (1d4+1) à 1,50 m ; langue gluante −1 au contact à 3 m.
+  Amphibie ; déplacement de 9 m, nage de 12 m ; vision dans le noir à 18 m.
+
+step: Des intrus approchent dans le marais
+  do: Se dissimuler dans la végétation ou à couvert sur la berge et attendre qu'une proie s'approche.
+  note: Discrétion +17 et Perception +5 dans les marais ; ailleurs, Discrétion +9 et Perception +1.
+
+step: Il doit se déplacer dans le marais
+  do: Traverser les terrains difficiles naturels à sa vitesse normale pour approcher la cible.
+  note: Traversée des marais ne protège pas contre les terrains modifiés par magie.
+
+## Ouverture
+
+step: Une proie est à plus de 1,50 m mais à 3 m ou moins
+  do: Attaquer avec la langue gluante, −1 contre la CA de contact.
+  note: Une langue fixée inflige −2 à la CA et empêche la cible de s'éloigner à plus de 3 m du bogwiggle. Elle ne cause aucun dégât et ne permet pas de tirer la cible vers lui.
+
+step: Une proie est déjà à 1,50 m
+  do: En attaque à outrance, tenter d'abord la langue −1 au contact, puis la morsure +4 (1d4+1).
+  note: Si la langue touche, la morsure profite immédiatement de la baisse de CA.
+
+step: Aucune proie n'est à portée
+  do: Approcher par le marais ou à la nage, puis mordre si le déplacement permet d'atteindre une cible à 1,50 m.
+
+## Rounds suivants
+
+step: Sa langue est fixée à une cible encore hors de portée de morsure
+  do: Avancer jusqu'à 1,50 m de cette cible et la mordre +4 (1d4+1).
+  note: Le bogwiggle aussi reste limité à 3 m de sa cible tant que la langue adhère ; celle-ci n'immobilise pas complètement l'adversaire.
+
+step: Une cible est à portée de morsure
+  do: La mordre chaque round ; si la langue est libre et qu'il peut attaquer à outrance, tenter de la fixer avant la morsure.
+  note: Contre une cible facile à toucher, employer Attaque en puissance : morsure +3 (1d4+3), langue −2 au contact si elle attaque aussi ce round.
+
+step: Plusieurs bogwiggles combattent ensemble
+  do: Mordre la même proie et, si le terrain le permet, se placer de part et d'autre pour la prendre en tenaille.
+  note: Les malus de CA de plusieurs langues ne se cumulent pas.
+
+note: Détacher la langue
+  La victime peut consacrer une action simple à un test opposé de Force ; le bogwiggle a Force +1. Elle peut aussi infliger 2 points de dégâts tranchants à la langue, CA 11, sans réduire les PV du monstre.
+
+## Repli
+
+step: Il tombe à 5 PV ou moins et aucun maître boggard n'est directement menacé
+  do: Lâcher sa langue par une action libre, puis battre en retraite vers l'eau ou la végétation épaisse.
+  note: Privilégier un retrait pour éviter les attaques d'opportunité ; sa nage de 12 m et sa traversée des marais facilitent la fuite.
+
+step: Son maître boggard bat en retraite
+  do: Le suivre en relâchant toute cible retenue par la langue.
+  note: Sa fidélité peut le pousser à rester au combat tant que son maître demeure menacé.

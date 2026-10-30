@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Égophage, aberration de petite taille, chaotique mauvaise, FP 10, intelligente et discrète ; 123 PV, CA 25, contact 19, pris au dépourvu 17.
+  Huit griffes +18, chacune infligeant 1d4+2 dégâts ; si au moins deux griffes touchent la même créature, fixation possible une fois par round. Allonge de 1,50 m.
+  Vol parfait à 15 m, déplacement au sol à 3 m ; vision dans le noir à 18 m et télépathie à 30 m. Il privilégie les approches invisibles et les adversaires isolés.
+
+note: Défenses
+  RD 10/adamantium et magie, RM 25 ; immunité au feu et aux effets mentaux ; résistance de 20 au froid, à l'électricité et au son.
+  Protection contre le Mal constitue une faiblesse : éviter de choisir comme proie une créature ainsi protégée.
+
+resource: Magie psychique | 24 PE | NLS 10, concentration +14 ; réserve commune à tous les pouvoirs psychiques
+resource: Anticipation des pensées | selon les PE restants | anticipate thoughts, 2 PE, DD 16
+resource: Fouet d'ego IV | selon les PE restants | ego whip IV, 6 PE, DD 20
+resource: Globe d'invulnérabilité | selon les PE restants | globe of invulnerability, 4 PE
+resource: Insinuation du ça III | selon les PE restants | id insinuation III, 4 PE, DD 17
+resource: Invisibilité et réduction de taille | à volonté | NLS 10 ; réduction de taille sur lui-même uniquement
+resource: Analyse d'aura | permanent | observer les intrus avant de choisir une cible
+
+step: Des intrus approchent sans l'avoir repéré
+  do: Se rendre invisible et les observer depuis une position accessible en vol, en exploitant Discrétion +35 et analyse d'aura
+  note: Réduction de taille peut faciliter l'approche ; reprendre sa taille habituelle avant l'assaut pour employer les valeurs de griffes indiquées.
+
+step: Il prévoit un affrontement contre des lanceurs de sorts
+  do: Activer globe d'invulnérabilité avant de s'exposer, pour 4 PE
+  note: Décompter cette dépense de la réserve de 24 PE.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être affectés par le même pouvoir
+  do: Lancer insinuation du ça III, pour 4 PE, DD 17
+  note: Profiter de la confusion pour approcher une proie séparée du reste du groupe ; une attaque met fin à l'invisibilité ordinaire.
+
+step: Un adversaire isolé constitue la menace prioritaire
+  do: Lancer fouet d'ego IV sur lui, pour 6 PE, DD 20
+  note: Utiliser le vol pour garder une voie de sortie et éviter de se retrouver encerclé.
+
+step: Il choisit d'engager directement une cible au contact
+  do: S'il doit se déplacer, voler jusqu'à elle et porter une seule attaque de griffe +18, pour 1d4+2 dégâts
+  note: Les huit griffes demandent une attaque à outrance ; le déplacement d'approche ne donne pas les huit attaques.
+
+## Rounds suivants
+
+step: Une proie est à portée et il peut rester sur place
+  do: Effectuer une attaque à outrance avec les huit griffes +18, chacune pour 1d4+2 dégâts, en concentrant les attaques sur cette proie
+  note: Déclencher la fixation si au moins deux griffes touchent la même créature ; une seule fixation par round.
+
+step: Le contact devient défavorable et il conserve des PE
+  do: Se dégager en vol puis reprendre les attaques psychiques depuis une position moins exposée
+  note: Choisir insinuation du ça III contre plusieurs ennemis ou fouet d'ego IV contre une menace prioritaire ; respecter les coûts de 4 ou 6 PE.
+
+step: Il peut consacrer une action à préparer un duel
+  do: Employer anticipation des pensées sur la cible, pour 2 PE, DD 16
+  note: Ce pouvoir prépare l'affrontement ; il remplace l'attaque ou l'autre pouvoir prévu pour cette action.
+
+step: Une cible bénéficie de protection contre le Mal
+  do: Changer de proie ou rompre le contact pour attaquer sous un autre angle
+  note: Il ne dispose d'aucun pouvoir indiqué permettant de dissiper cette protection.
+
+## Repli
+
+step: Il tombe à 30 PV ou moins, ou ne peut plus soutenir le contact
+  do: Utiliser une retraite pour quitter la mêlée en vol, puis lancer invisibilité dès qu'il peut y consacrer une action
+  note: Gagner les hauteurs ou un passage souterrain et poursuivre la fuite à 15 m par déplacement ; éviter une fuite au sol à 3 m.
+
+step: Il est invisible et hors du contact immédiat
+  do: Cesser les attaques et s'éloigner en exploitant sa discrétion
+  note: Invisibilité ne le soigne pas ; son bloc ne lui donne aucun moyen de récupérer ses PV pendant le combat.

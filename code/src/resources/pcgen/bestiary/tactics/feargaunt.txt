@@ -1,0 +1,65 @@
+## Avant le combat
+
+note: Profil
+  Feargaunt, extérieur incorporel de taille G, chaotique mauvais, FP 9 : un cauchemar devenu prédateur solitaire dans la Dimension des rêves, qui embusque ses victimes et leur laisse croire qu'elles ont échappé à sa poursuite.
+  102 pv ; CA 23, contact 23 ; initiative +9 ; vol parfait à 12 m. Contact tourmenteur +16 contre la CA de contact, 6d6 dégâts ; allonge de 3 m. Peur et confusion dispersent les adversaires avant ses attaques.
+  Vision dans le noir à 18 m, Perception +18, Discrétion +22 ; télépathie à 30 m, mais aucune parole. Sa défense orgueilleuse est déjà comprise dans sa CA.
+
+resource: Terreur | à volonté | Volonté DD 17 ; cône de 9 m ; panique pendant 12 rounds, ou secoué 1 round si réussite
+resource: Son imaginaire | à volonté | DD 14 pour reconnaître l'illusion après interaction ; diversion sonore
+resource: Confusion | 3/jour | Volonté DD 17 ; rayon de 4,50 m, portée 66 m, durée 12 rounds
+resource: Cauchemar | 3/jour | Volonté DD 19 ; harcèlement d'une créature endormie
+resource: Assassin imaginaire | 3/jour | portée 66 m ; Volonté DD 18, puis Vigueur DD 18 ; mort si les deux échouent, 3d6 dégâts si seule la Vigueur réussit
+resource: Jamais bien loin | 4/jour | téléportation suprême auprès d'une cible admissible ; uniquement dans la Dimension des rêves
+
+step: Les proies approchent sans l'avoir repéré
+  do: Se dissimuler avec Discrétion +22 et préparer une approche aérienne ; utiliser son imaginaire pour attirer un isolé ou détourner l'attention
+  note: Il peut supprimer son aura par une action rapide, puis la réactiver au moment de se montrer.
+
+step: Une victime connue dort et il dispose du temps nécessaire avant la rencontre
+  do: La harceler par cauchemar, Volonté DD 19
+  note: Un échec inflige 1d10 dégâts, empêche le repos réparateur, laisse la victime fatiguée et bloque la récupération des sorts profanes pendant 24 heures ; appliquer les modificateurs de sauvegarde liés à sa connaissance de la cible.
+
+## Ouverture
+
+step: Les adversaires sont groupés au-delà de 9 m
+  do: Lancer confusion sur le plus grand nombre, Volonté DD 17, puis maintenir ses distances en volant
+  note: Éviter ensuite de frapper les victimes confuses : une créature confuse attaquée riposte contre son agresseur à son prochain tour.
+
+step: Plusieurs adversaires peuvent être pris dans un cône de 9 m
+  do: Lancer terreur, Volonté DD 17, pour rompre leur formation et isoler une proie
+
+step: Une proie isolée termine son tour à 18 m ou moins
+  do: La garder dans l'aura de cauchemar et préparer le contact tourmenteur au tour suivant
+  note: À sa première fin de tour dans l'aura, Volonté DD 20 ou secouée jusqu'à sa sortie, puis pendant 1d4 rounds ; une réussite protège de cette aura pendant 24 heures.
+
+## Rounds suivants
+
+step: Une victime sous un effet de peur est accessible
+  do: Effectuer une attaque en vol : approcher, porter un contact tourmenteur +16 pour 6d6 dégâts, puis poursuivre le déplacement, dans la limite de 12 m au total
+  note: Le contact ignore la réduction des dégâts et ajoute un saignement de Charisme de 1d2 par round si la victime subit la peur ; ce saignement cesse aussi lorsque la peur prend fin. L'attaque en vol ne supprime pas les attaques d'opportunité.
+
+step: Frapper depuis 4,50 m permet de rester hors de l'allonge ennemie
+  do: Utiliser Lunge avant l'attaque pour augmenter son allonge à 4,50 m pendant son tour
+  note: Sa CA descend à 21 jusqu'à son prochain tour.
+
+step: Une cible secouée semble vulnérable aux attaques mentales et à la mort par peur
+  do: Lancer assassin imaginaire, DD 18, de préférence sur un adversaire encore libre d'agir
+  note: L'état secoué impose un malus de 2 aux sauvegardes ; choisir cette attaque lorsque les deux sauvegardes requises ont des chances d'échouer.
+
+step: Une proie fuit dans la Dimension des rêves
+  do: Utiliser Jamais bien loin, par une action simple, pour apparaître dans une case adjacente ; reprendre les attaques au tour suivant
+  note: La cible doit encore être secouée par son aura ou blessée par son contact tourmenteur ; les deux créatures doivent se trouver dans la Dimension des rêves.
+
+step: Une victime apeurée tente un exploit impossible dans le rêve
+  do: Maintenir la victime dans le rayon de 18 m de l'aura
+  note: Dans l'aura, une créature soumise à un effet de peur échoue automatiquement aux tests de Charisme pour accomplir de tels exploits.
+
+step: Les adversaires résistent à la peur ou y sont immunisés
+  do: Privilégier les contacts tourmenteurs à 6d6 et les passages en vol ; essayer confusion contre ceux qui restent sensibles aux effets mentaux
+
+## Repli
+
+step: Points de vie sous 30, ou attaques adverses capables de le détruire rapidement
+  do: Rompre le contact en volant à 12 m, ou à 24 m en double déplacement ; traverser une paroi mince grâce à son intangibilité pour couper les lignes de vue
+  note: Il peut couvrir sa fuite par terreur, DD 17, avec un seul déplacement ce round. Il laisse volontiers croire aux survivants qu'ils lui ont échappé avant de préparer une nouvelle embuscade.

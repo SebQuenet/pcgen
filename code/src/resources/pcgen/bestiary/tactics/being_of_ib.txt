@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Être d’Ib, aberration aquatique amphibie de taille M, prêtre de Bokrug de niveau 1, chaotique neutre. Paisible en général, mais profondément dévoué à son dieu ; il privilégie ses pouvoirs et sa survie.
+  10 PV, CA 11 ; ranseur −2 (2d4−2, critique x3). Sa faible Force rend la mêlée peu fiable : ses principales armes sont la rafale de tempête et le contact du Chaos.
+  Déplacement de 6 m sur terre et nage de 9 m par action de mouvement ; vision dans le noir à 18 m et vision nocturne.
+  Amorphe : immunisé aux coups critiques et aux dégâts de précision. Muet : il communique en Ib par gestes et expressions ; ses sorts remplacent les composantes verbales par des composantes mentales.
+
+resource: Rafale de tempête (storm burst) | 6/jour | action simple ; contact à distance +1, portée 9 m ; 1d6 dégâts non létaux et −2 aux jets d’attaque pendant 1 round, sans sauvegarde
+resource: Contact du Chaos (touch of chaos) | 6/jour | action simple ; contact au corps à corps −2 ; pendant 1 round, la cible lance deux fois chaque d20 et conserve le résultat le moins favorable, sans sauvegarde
+resource: Bouclier de la foi | 1 préparé | contact ; +2 de parade à la CA pendant 1 minute, soit CA 13 sur lui-même
+resource: Brume de dissimulation | 1 préparée, domaine | brume immobile de 6 m de rayon et de hauteur, pendant 1 minute ; ne fonctionne pas sous l’eau
+resource: Soins légers | 1 préparé | contact ; rend 1d8+1 PV, sans dépasser le maximum de 10 PV
+resource: Assistance divine | à volonté | contact ; +1 de compétence à un seul jet d’attaque, de sauvegarde ou de compétence dans la minute suivante
+
+step: Il peut choisir sa position
+  do: Rester près d’une étendue d’eau offrant une voie de fuite ; si des alliés sont présents, les laisser entre les intrus et lui.
+
+step: Un affrontement paraît imminent
+  do: Lancer bouclier de la foi sur lui-même ; s’il reste un round de préparation, lancer ensuite assistance divine pour sa première attaque.
+  note: Ces deux préparatifs prennent chacun une action simple et durent au maximum 1 minute.
+
+## Ouverture
+
+step: Il est surpris sans protection, mais aucun ennemi ne le menace au corps à corps
+  do: Lancer bouclier de la foi, puis se déplacer vers l’eau ou derrière ses alliés.
+
+step: Il est déjà protégé et un adversaire visible se trouve à plus de 1,50 m et à 9 m ou moins
+  do: Employer rafale de tempête contre l’attaquant le plus menaçant, puis se déplacer pour conserver ses distances.
+  note: Assistance divine porte cette première attaque de contact à distance à +2 si son bonus est encore disponible.
+
+step: Un adversaire le menace déjà au corps à corps
+  do: Faire un pas de placement de 1,50 m pour sortir de sa zone menacée, si possible, avant d’employer un pouvoir ou un sort ; sinon privilégier le désengagement.
+  note: Les sorts et les pouvoirs magiques peuvent provoquer des attaques d’opportunité ; éviter de les utiliser sous la menace.
+
+## Rounds suivants
+
+step: Un adversaire visible reste à portée et aucun ennemi ne le menace au corps à corps
+  do: Répéter rafale de tempête, une fois par round, en privilégiant celui qui menace de le rejoindre ou d’attaquer ses alliés.
+  note: Renouveler le malus de −2 aux attaques ; les applications successives ne cumulent pas ce malus.
+
+step: Une cible est à 1,50 m, un allié peut exploiter son affaiblissement et il peut employer son pouvoir sans s’exposer
+  do: Tenter contact du Chaos, idéalement avant que l’allié n’attaque ou n’impose une sauvegarde à cette cible.
+  note: Ce pouvoir affaiblit la cible pendant 1 round ; il ne la contrôle pas et n’inflige aucun dégât.
+
+step: Ses pouvoirs offensifs sont épuisés et un ennemi est à portée de sa mêlée
+  do: Frapper au ranseur à −2 (2d4−2, critique x3) seulement si la fuite est impossible ou si un allié dépend de son intervention.
+
+## Repli
+
+step: Il lui reste 5 PV ou moins, ou plusieurs ennemis le prennent pour cible
+  do: Rompre le combat ; si l’occasion est sûre et le sort encore disponible, lancer brume de dissimulation avant de gagner l’eau.
+  note: À 1,50 m, la brume donne 20 % de chances de rater ; au-delà, elle bloque la vue et donne un camouflage total. Elle gêne aussi sa propre vision, même dans le noir.
+
+step: Un ennemi le menace et il ne peut pas lancer la brume sans s’exposer
+  do: Utiliser l’action de retraite pour rejoindre l’eau : jusqu’à 12 m sur terre ou 18 m à la nage si le trajet se fait entièrement dans ce milieu.
+  note: La retraite protège seulement la sortie de sa case initiale contre les attaques d’opportunité des adversaires qu’il voit ; choisir un trajet qui évite les autres zones menacées.
+
+step: Il a atteint l’eau ou un abri et n’est plus immédiatement menacé
+  do: Lancer soins légers sur lui-même si le sort reste disponible, puis poursuivre sa fuite à la nage et rester immergé tant que nécessaire.
+  note: Il respire sous l’eau ; sa vitesse de nage lui donne une meilleure chance de distancer les poursuivants terrestres.

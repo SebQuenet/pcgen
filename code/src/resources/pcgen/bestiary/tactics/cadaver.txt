@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Cadavre pourrissant animé par la magie noire, mort-vivant de taille M, chaotique mauvais et sans intelligence ; il combat par assauts directs et répétés.
+  16 pv ; CA 13 ; initiative +5 ; déplacement de 9 m ; vision dans le noir à 18 m ; allonge de 1,50 m.
+  Deux griffes +2 (1d4+1 chacune, plus maladie) et morsure +2 (1d6+1, plus maladie).
+
+note: Résistance
+  Réduction des dégâts 5/contondant ; immunité au froid et traits des morts-vivants.
+  Sa réanimation peut lui permettre de reprendre le combat après être tombé inerte.
+
+## Ouverture
+
+step: Un adversaire est à plus de 1,50 m
+  do: Avancer vers lui, jusqu'à 9 m avec une action de mouvement ; s'il arrive à portée, porter une morsure +2 (1d6+1, plus maladie).
+  note: Si un seul déplacement ne suffit pas, consacrer le round à se rapprocher ; il ne possède aucune attaque à distance.
+
+step: Un adversaire est déjà à portée sans déplacement nécessaire
+  do: Effectuer une attaque à outrance : deux griffes +2 (1d4+1 chacune) et une morsure +2 (1d6+1), toutes porteuses de maladie.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter l'attaque à outrance pour multiplier les blessures et les expositions à la maladie.
+
+step: Sa cible s'éloigne
+  do: La poursuivre ; après une action de mouvement, n'effectuer qu'une morsure si elle est à portée.
+  note: Il ne développe pas de tactique élaborée et ne choisit pas ses cibles selon leurs armes ou leurs sorts.
+
+step: Une griffe ou une morsure blesse une créature sensible à la maladie
+  do: Faire effectuer un jet de Vigueur DD 11 contre la fièvre des marais, transmise par blessure.
+  note: Incubation de 1d3 jours, puis fréquence de 1 fois par jour ; effet : 1d3 dégâts de Dextérité et 1d3 dégâts de Constitution ; guérison après deux sauvegardes consécutives réussies.
+  note: La maladie n'affaiblit pas immédiatement la victime pendant ce combat.
+
+## Repli
+
+step: Ses points de vie diminuent mais restent positifs
+  do: Continuer à attaquer sans organiser de retraite.
+
+step: Il tombe à 0 pv ou moins
+  do: Le laisser inerte et appliquer sa réanimation : récupération de 1 pv par round ; reprendre ses assauts lorsqu'il retrouve des pv positifs.
+  note: Les dégâts infligés par des armes magiques ou des sorts ne sont pas récupérés par cette réanimation.
+  note: Bénédiction divise la vitesse de réanimation par deux, soit 1 pv tous les deux rounds.
+
+step: Il est détruit par une canalisation d'énergie positive, ou reçoit préservation des morts à 0 pv
+  do: Empêcher toute réanimation.

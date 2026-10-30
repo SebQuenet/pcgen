@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Carapace animée de blatte géante, mort-vivant de taille P sans intelligence, qui attaque les créatures vivantes dès qu'il les repère.
+  12 pv ; CA 13 ; morsure +3 (1d4+1), allonge de 1,50 m ; réduction des dégâts de 5, sauf contre les armes contondantes ; immunités des morts-vivants.
+  Déplacement au sol et escalade à 9 m ; vol à 12 m, de manœuvrabilité déplorable. Aucun plan complexe ni choix raisonné des cibles.
+
+note: Repérage
+  Vision dans le noir à 18 m et perception des vibrations à 18 m ; cette dernière repère les créatures en contact avec la même surface que lui. Perception +0.
+
+step: En plein soleil ou dans la zone d'un sort de lumière du jour
+  do: Appliquer la sensibilité à la lumière : il est ébloui.
+  note: Sa morsure passe à +2 ; ses tests de Perception fondés sur la vue subissent un malus de 1.
+
+## Ouverture
+
+step: Un vivant est déjà à 1,50 m
+  do: Mordre immédiatement : +3, dégâts 1d4+1.
+
+step: Un vivant est repéré hors de son allonge
+  do: Se diriger vers lui par le trajet accessible le plus direct ; mordre si une seule action de déplacement suffit à l'atteindre.
+  note: S'il faut deux déplacements, avancer sans attaquer ce round.
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Répéter la morsure chaque round, jusqu'à sa destruction ou celle de la cible.
+  note: Appliquer la réduction des dégâts de 5 aux attaques physiques reçues, sauf si elles sont contondantes.
+
+step: La cible s'éloigne ou devient inaccessible au sol
+  do: La poursuivre ; escalader à 9 m ou voler à 12 m par action de déplacement pour rejoindre sa position.
+  note: Escalade +9 ; Vol -5. Son vol maladroit se prête mal aux manœuvres serrées.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à attaquer sans battre en retraite ; ce mort-vivant sans intelligence ne cherche pas à préserver son existence.
+
+step: Il est détruit, à 0 pv
+  do: Déclencher automatiquement l'éclatement de sa carapace en poussière.
+  note: Chaque créature adjacente, à 1,50 m, doit réussir un jet de Vigueur DD 11 ou être chancelante pendant 1 round. Les créatures qui n'ont pas besoin de respirer sont immunisées.

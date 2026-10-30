@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Vermine souterraine de taille G, sans intelligence, qui combat par instinct. 26 points de vie, CA 17 ; déplacement de 9 m et vision dans le noir à 18 m.
+  Morsure +6 (2d8+6). Immunité à l'acide et aux effets mentaux.
+  Malgré son nom, la fiche ne donne aucune attaque de crachat : son seul moyen d'attaque indiqué est la morsure.
+
+step: Des intrus approchent dans l'obscurité
+  do: Les laisser venir à portée de sa vision dans le noir, puis se tourner vers le plus proche
+  note: Sans intelligence, il ne prépare ni piège ni manœuvre complexe.
+
+## Ouverture
+
+step: Un ennemi est à portée de morsure
+  do: Le mordre à +6, pour 2d8+6 dégâts
+
+step: Aucun ennemi n'est à portée de morsure
+  do: Avancer vers l'ennemi accessible le plus proche, jusqu'à 9 m, puis le mordre s'il est à portée
+  note: Si ce déplacement ne suffit pas, consacrer aussi son action restante à avancer ; il ne mord pas ce round.
+
+## Rounds suivants
+
+step: L'adversaire attaqué est toujours debout et à portée
+  do: Répéter la morsure +6 (2d8+6) chaque round
+  note: La fiche ne lui donne qu'une seule attaque de morsure ; aucune attaque supplémentaire ne s'ajoute lorsqu'il reste immobile.
+
+step: Sa cible tombe ou devient inaccessible
+  do: Se reporter sur l'ennemi accessible le plus proche et avancer si nécessaire, à 9 m par déplacement
+  note: Privilégier une proie à portée plutôt que poursuivre une cible éloignée à travers les autres combattants.
+
+## Repli
+
+step: Points de vie à 6 ou moins et une issue est accessible
+  do: Fuir instinctivement par le passage libre le plus proche, à 9 m par déplacement
+  note: Ce seuil est un choix de conduite pour le meneur, pas une capacité spéciale.
+
+step: Aucune issue n'est accessible
+  do: Continuer à mordre l'adversaire à portée jusqu'à pouvoir fuir ou être abattu

@@ -1,0 +1,63 @@
+## Avant le combat
+
+note: Profil
+  Chemnosit, bête magique colossale et solitaire des profondeurs, rejeton chaotique mauvais de Rovagug ; FP 23, Int 5. Il combat brutalement, sans manœuvres complexes.
+  472 pv, CA 39 ; six tentacules dentés +33, chacun infligeant 2d10+13 dégâts, critique sur 19–20 et étreinte. Allonge et espace occupé : 9 m.
+  Désintégration à volonté : rayon +20 au contact à distance, critique sur 19–20, Vigueur DD 21. Déplacement au sol et creusement : 12 m ; pas de vol.
+
+note: Résistance
+  Régénération 30, réduction des dégâts 15/épique et résistance à la magie 34. Ses immunités comprennent l’acide, le froid, le poison, la paralysie et les effets mentaux.
+  Sa CA de contact n’est que de 3 et sa Volonté de +13 : privilégier les abris du terrain contre les attaques auxquelles ses immunités ne répondent pas.
+
+resource: Désintégration | à volonté | NLS 27, rayon +20, Vigueur DD 21
+resource: Tremblement de terre | 1/jour | NLS 27
+
+step: Des intrus approchent dans les profondeurs
+  do: Repérer leurs déplacements par perception des vibrations à 54 m, puis se rapprocher en creusant pour émerger près d’eux.
+  note: Cette perception repère les créatures en contact avec le sol ; elle ne révèle pas les adversaires qui volent. Vision dans le noir à 18 m et Perception +27.
+
+## Ouverture
+
+step: Chemnosit attaque ou charge
+  do: Déclencher la présence terrifiante dans un rayon de 90 m, Volonté DD 26, puis résoudre son attaque.
+  note: Les créatures ayant au moins 27 DV sont immunisées à cette présence ; une sauvegarde réussie protège pendant 24 heures.
+
+step: Plusieurs ennemis sont déjà à 9 m ou moins
+  do: Attaque à outrance : six tentacules +33, 2d10+13 chacun ; tenter gratuitement une étreinte à BMO +52 après une touche sur une cible de taille admissible.
+  note: Concentrer les attaques sur un adversaire dangereux encore debout ; il peut changer de cible entre ses attaques si la première tombe.
+
+step: Les ennemis sont hors d’allonge, dans une galerie ou au milieu de constructions
+  do: Employer tremblement de terre si un effondrement peut les ensevelir ou leur couper le passage ; sinon, avancer pour préparer le contact.
+  note: Dépenser l’unique utilisation lorsque le terrain rend le séisme utile ; ses effets dépendent du lieu.
+
+step: Une cible reste à distance avec une ligne de tir dégagée
+  do: Lancer désintégration contre elle, avec le rayon +20 ; privilégier une cible facile à toucher plutôt qu’un adversaire très agile.
+  note: Le rayon vise la CA de contact ; il inflige 40d6 dégâts, réduits à 5d6 par une sauvegarde de Vigueur DD 21 réussie. La résistance à la magie s’applique.
+
+## Rounds suivants
+
+step: Des ennemis restent dans son allonge et aucune étreinte n’est à maintenir
+  do: Répéter les six attaques de tentacules ; se limiter à un pas de 1,50 m pour conserver l’attaque à outrance.
+  note: Contre une défense facile à toucher, Attaque en puissance donne six attaques à +26, infligeant chacune 2d10+27 dégâts. Garder +33 et 2d10+13 lorsque la précision importe davantage.
+
+step: Un tentacule confirme un coup critique
+  do: Appliquer Critique sanglant : la victime subit 2d6 dégâts de saignement par round si elle peut saigner.
+  note: Critique focalisé ajoute +4 au jet de confirmation ; les tentacules menacent sur 19–20.
+
+step: Une victime est déjà agrippée et la retenir vaut mieux qu’une nouvelle salve de tentacules
+  do: Consacrer l’action simple au maintien de la lutte et choisir de lui infliger les dégâts du tentacule.
+  note: BMO de lutte +52, avec le bonus de +5 au maintien si la victime ne s’est pas libérée. Ce maintien remplace l’attaque à outrance du round ; relâcher la prise est une action libre.
+
+step: Les adversaires reculent au-delà de 9 m ou prennent leur envol
+  do: Employer désintégration tant qu’une cible est visible, ou avancer de 12 m pour retrouver le contact.
+  note: Après un déplacement normal, il ne reste qu’une attaque de tentacule avec l’action simple ; lancer un pouvoir magique au contact expose aux attaques d’opportunité.
+
+## Repli
+
+step: Ses pv passent sous 120 et les attaques adverses dépassent nettement sa régénération
+  do: Chercher à rompre le contact en creusant à 12 m, puis rester sous terre pour récupérer avant de ressortir.
+  note: Ce seuil est un repère tactique. Creuser ne le téléporte pas et quitter une zone menacée peut provoquer des attaques d’opportunité.
+
+step: Il a rompu le contact et sa régénération fonctionne
+  do: Rester à couvert et récupérer 30 pv par round, sans pouvoir magique de soin à dépenser.
+  note: De 112 à 472 pv, il lui faut 12 rounds sans nouveaux dégâts ; la perception des vibrations permet de surveiller les poursuivants restés au sol.

@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Taureau de Zagresh, animal neutre de taille TG, FP 7. Avec une Intelligence de 2, il privilégie une réaction simple à la menace immédiate.
+  85 PV ; CA 20, contact 9, pris au dépourvu 18. Déplacement de 12 m ; espace occupé et allonge de 4,50 m.
+  Coup de corne +14 (2d6+15), son unique attaque naturelle. Attaque en puissance porte ce coup à +12 (2d6+21).
+  Vision nocturne et Perception +8 ; Vigueur +10, Réflexes +7, Volonté +3.
+
+step: Une menace approche
+  do: La repérer avec Perception +8 et se tourner vers elle, en gardant un passage pour avancer ou fuir.
+  note: La vision nocturne aide sous une lumière faible, sans permettre de voir dans l'obscurité totale.
+
+step: Le taureau appartient à une paire ou à un troupeau
+  do: Rester près des autres et faire face à l'intrus le plus proche.
+  note: Son comportement reste animal ; il ne prépare pas de manœuvre coordonnée complexe.
+
+## Ouverture
+
+step: Une cible est accessible par une charge en ligne droite et le trajet est dégagé
+  do: Charger sur une distance maximale de 24 m et terminer dès que la cible est à portée de corne, à 4,50 m ou moins.
+  note: Il faut parcourir au moins 3 m. Coup de corne +16 (2d6+15), ou +14 (2d6+21) avec Attaque en puissance ; sa CA tombe à 18 jusqu'au début de son prochain tour.
+
+step: Une cible est déjà à 4,50 m ou moins
+  do: Donner un coup de corne +14 (2d6+15).
+  note: Activer Attaque en puissance si la cible paraît facile à toucher : +12 (2d6+21). Garder la précision contre un adversaire difficile à atteindre.
+
+step: La charge est impossible et aucune cible n'est à portée
+  do: Avancer jusqu'à 12 m puis donner un coup de corne si une cible entre dans son allonge.
+  note: S'il faut parcourir davantage, effectuer un double déplacement jusqu'à 24 m, sans attaquer ce round.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter le coup de corne contre la menace la plus proche ; insister sur la même cible tant qu'elle demeure accessible.
+  note: Il n'a qu'une attaque par tour, même avec une attaque à outrance. Aucun piétinement ni attaque supplémentaire n'est indiqué.
+
+step: Les coups touchent facilement
+  do: Employer Attaque en puissance : coup de corne +12 (2d6+21).
+  note: Le malus et le bonus persistent jusqu'à son prochain tour et s'appliquent aussi à ses attaques d'opportunité pendant cet intervalle.
+
+step: Les coups manquent régulièrement
+  do: Renoncer à Attaque en puissance à sa prochaine attaque pour revenir à +14 (2d6+15).
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Lui donner un coup de corne, avec les modificateurs actuellement actifs.
+  note: Une seule attaque d'opportunité par round. Un pas de placement de 1,50 m ne la provoque pas.
+
+step: L'adversaire se met hors de portée
+  do: Le suivre et frapper si un déplacement de 12 m suffit ; charger de nouveau si les conditions le permettent.
+  note: Face à une cible inaccessible, chercher un passage praticable ou se mettre à couvert ; il ne possède aucune attaque à distance.
+
+## Repli
+
+step: Ses PV sont inférieurs à 30 mais encore positifs, et une issue existe
+  do: Rompre le combat avec une action de retraite, jusqu'à 24 m vers un espace dégagé ou son troupeau.
+  note: Ce seuil est un choix de conduite pour le meneur. S'il est acculé, il continue à donner des coups de corne pour se dégager.
+
+step: Ses PV sont entre −1 et −18
+  do: Grâce à Dur à cuire, choisir de rester conscient pour s'éloigner ; s'il est acculé, donner un dernier coup de corne.
+  note: Il se stabilise automatiquement, mais ne peut faire qu'une action de mouvement ou une action simple par tour. Un déplacement seul ne lui coûte pas de PV ; une attaque ou un autre effort lui fait perdre 1 PV après l'action. Il ne peut plus charger.
+  note: Il peut aussi choisir de tomber inconscient. À −19 PV, il meurt.

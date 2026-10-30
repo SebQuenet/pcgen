@@ -1,0 +1,85 @@
+## Avant le combat
+
+note: Profil
+  Genthodaemon, extérieur de grande taille, neutre mauvais, FP 5 : fantassin d’Abaddon voué aux guerres sans espoir, obéissant aux daemons supérieurs et loyal envers son escouade.
+  51 pv, CA 18 ; déplacement au sol et vol à 9 m par round, manœuvrabilité moyenne ; espace et allonge de 3 m ; vision dans le noir à 18 m.
+  Morsure +10 (1d8+4), deux griffes +10 (1d6+4 et saignement 1d4), queue +4 (1d8+2 et saignement 1d4). À distance : quatre éclats +5 (1d6+4 chacun, critique sur 19–20).
+
+note: Défenses
+  Réduction des dégâts 5, annulée par une arme bonne ou en argent ; immunité à l’acide, aux effets de mort, aux maladies et au poison ; résistance 10 au froid, à l’électricité et au feu.
+  Défense barbelée : chaque coup reçu au corps à corps inflige 1d4+4 dégâts perforants à son auteur ; les armes à allonge évitent cette riposte.
+  Sa Volonté de +3 le rend vulnérable aux attaques mentales ; éviter de laisser un lanceur de sorts agir librement.
+
+resource: Détection du Bien | permanent | repérer les auras bonnes en respectant le temps d’observation du pouvoir
+resource: Frayeur | à volonté | Volonté DD 13 ; seulement les créatures vivantes de 5 DV ou moins
+resource: Confusion partielle | à volonté | Volonté DD 13 ; une cible, pendant 1 round
+resource: Message et brume de dissimulation | à volonté | coordination ou écran de fuite
+resource: Désespoir foudroyant | 1/jour | cône de 9 m ; Volonté DD 16 ; durée 6 minutes
+resource: Dissipation de la magie | 1/jour | test de dissipation à +6
+resource: Fusion dans la pierre | 1/jour | refuge dans un bloc assez grand pour son corps ; durée 60 minutes
+resource: Glissement de terrain | 1/jour | préparer le terrain de terre meuble avant l’affrontement
+resource: Éclats | 24 par période de 24 heures | six salves de quatre ; action simple, portée 54 m ; cibles distantes entre elles de 9 m au maximum
+
+step: Il peut préparer la position
+  do: Utiliser glissement de terrain pour aménager des talus et canaliser les approches vers sa zone de tir
+  note: Ses connaissances en ingénierie +9 guident le choix de la position ; conserver un passage assez large pour son gabarit.
+
+step: Il combat en escouade
+  do: Coordonner les cibles et les déplacements par télépathie à 30 m, ou par message
+  note: Prévoir des angles de tir dégagés et éviter de prendre ses camarades dans le cône de désespoir.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être pris dans un cône de 9 m
+  do: Lancer désespoir foudroyant avant qu’ils se dispersent
+  note: Volonté DD 16 annule ; sinon, malus de −2 aux attaques, jets de sauvegarde, tests de caractéristique et de compétence, et dégâts d’armes.
+
+step: Les ennemis restent éloignés et visibles à 54 m ou moins
+  do: Lancer quatre éclats, avec un jet à +5 par projectile, puis se déplacer si nécessaire pour conserver une ligne de tir
+  note: Concentrer la salve sur un adversaire vulnérable ; les quatre tirs demandent une seule action simple.
+
+step: Un ennemi est déjà à portée de 3 m
+  do: Faire une attaque à outrance avec morsure, deux griffes et queue
+  note: Un déplacement supérieur au pas de 1,50 m empêche cette attaque à outrance ; après une approche normale, porter une seule morsure.
+
+## Rounds suivants
+
+step: L’aura favorise ses attaques et celles de son escouade
+  do: Activer l’aura de destruction, de rayon 9 m, par une action libre
+  note: Les menaces de critique contre une cible dans l’aura sont automatiquement confirmées, y compris contre lui ; les mourants y subissent −10 aux tests de stabilisation.
+
+step: Les critiques ennemis rendent l’aura trop dangereuse
+  do: Supprimer l’aura par une action libre
+
+step: Une cible reste au contact
+  do: Répéter l’attaque à outrance et concentrer les coups sur elle jusqu’à la mettre hors de combat
+  note: Les saignements de ses griffes et de sa queue ne s’additionnent pas : conserver 1d4 par round. Activer Attaque en puissance contre une cible facile à toucher.
+
+step: Un adversaire tente de franchir son allonge
+  do: Exploiter les 3 m d’allonge pour porter l’attaque d’opportunité permise par son déplacement
+  note: Sans Attaques réflexes, il dispose d’une seule attaque d’opportunité par round.
+
+step: Une protection magique gêne fortement ses attaques
+  do: Employer dissipation de la magie contre l’effet gênant
+  note: Dépenser cette utilisation seulement si le bénéfice attendu justifie de renoncer aux attaques du round.
+
+step: Une cible isolée menace de reprendre l’avantage et ses attaques directes sont peu efficaces
+  do: Tenter confusion partielle, Volonté DD 13 ; contre une créature vivante de 5 DV ou moins, préférer frayeur pour l’éloigner
+  note: Frayeur effraie pendant 1d4 rounds ; une sauvegarde réussie laisse la cible secouée pendant 1 round. Les créatures de 6 DV ou plus y sont immunisées.
+
+step: Il ne peut pas atteindre une cible au corps à corps
+  do: Continuer les salves d’éclats tant qu’il en reste et utiliser son vol pour changer d’angle
+  note: Décompter quatre éclats par salve ; éviter les attaques à distance lorsqu’un ennemi le menace au corps à corps.
+
+## Repli
+
+step: Ses pv tombent sous 15 et ses ordres autorisent la retraite
+  do: Créer une brume de dissimulation, puis s’éloigner au sol ou en vol à 9 m
+  note: Il ne voit pas à travers sa propre brume ; celle-ci masque également ses cibles. Prévenir l’escouade par télépathie.
+
+step: Il atteint un bloc de pierre assez grand et possède encore fusion dans la pierre
+  do: Se fondre dans la pierre pour se cacher, puis ressortir avant la fin des 60 minutes
+  note: Il ressort par la surface d’entrée ; ce pouvoir ne lui permet pas de traverser une paroi.
+
+step: Un daemon supérieur lui a ordonné de tenir la position jusqu’à la mort
+  do: Rester au combat et poursuivre les attaques à outrance ou les salves jusqu’à sa destruction

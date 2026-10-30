@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  First Blade, héraut de Gorum : Extérieur chaotique neutre de taille G, voué aux batailles. Il avance au milieu des combattants pour les broyer au contact.
+  261 pv ; CA 30 ; déplacement de 9 m ; espace et allonge de 3 m. Attaque à outrance : 2 coups +29, chacun infligeant 2d10+16 et un saignement.
+  Régénération 5 interrompue par l'adamantium ; RD 15/adamantium et Loi : une arme doit réunir ces deux propriétés pour ignorer la RD.
+
+note: Défenses
+  Immunité au poison et aux sorts ou pouvoirs magiques autorisant la résistance à la magie ; résistance au froid 10 et au son 10. La fortification lourde annule 75 % des critiques et attaques sournoises.
+  L'électricité magique le ralentit pendant 1 round ; le feu magique dissipe ce ralentissement et le soigne de 1 pv par tranche de 3 dégâts. La rouille l'affecte normalement.
+
+resource: Métal brûlant | 3/jour | pouvoir magique, NLS 18
+resource: Métal gelé | 3/jour | pouvoir magique, NLS 18
+resource: Répulsion du métal et de la pierre | 3/jour | pouvoir magique, NLS 18
+resource: Mur de fer | 3/jour | pouvoir magique, NLS 18
+resource: Barrière de lames | 1/jour | pouvoir magique, NLS 18
+resource: Toujours armé | à volonté | action rapide : fait apparaître une arme de mêlée ordinaire adaptée au besoin
+
+step: Des ennemis approchent
+  do: Les repérer avec Perception +23, sa vision dans le noir à 18 m et sa détection du fer et de l'acier à 18 m ; choisir un passage où son allonge gênera leur progression
+  note: Un porteur de métal reste détectable malgré l'obscurité. Il préfère ses coups à une arme créée sans nécessité.
+
+note: Aura de rage
+  Dans un rayon de 30 m, la rage ne touche que les créatures consentantes, alliées ou ennemies. Elle ne contraint personne à attaquer.
+
+## Ouverture
+
+step: Plusieurs ennemis approchent ensemble, encore hors de mêlée
+  do: Placer une barrière de lames pour séparer les combattants de leurs soutiens, puis avancer vers le sous-groupe accessible
+  note: Garder une voie pour atteindre ses cibles ; consacrer l'action simple au pouvoir, puis utiliser son déplacement.
+
+step: Un adversaire porte une armure métallique mais reste trop loin pour être frappé ce round
+  do: Employer métal brûlant ou métal gelé sur son équipement, puis avancer de 9 m vers lui
+  note: Choisir un seul de ces pouvoirs ; leurs dégâts augmentent progressivement, sans immobiliser automatiquement la cible.
+
+step: Un adversaire est accessible au contact
+  do: S'approcher à 3 m et porter un coup +29 ; s'il n'a pas besoin de se déplacer, porter ses deux coups à outrance
+  note: Viser d'abord un porteur d'arme en adamantium repéré, car il menace la régénération.
+
+## Rounds suivants
+
+step: Une cible dangereuse reste dans son allonge
+  do: Concentrer les deux coups +29 sur elle et maintenir la pression jusqu'à sa chute
+  note: Les coups infligent des dégâts contondants et tranchants ; le saignement est de 1d10. Attaque en puissance convient contre une CA facile à toucher ; conserver la précision contre une forte CA.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge
+  do: Employer Succession d'enchaînements pour frapper les cibles successives tant que ses attaques touchent
+  note: Cette action remplace l'attaque à outrance ; chaque cible doit être adjacente à la précédente. Sa CA baisse de 2 jusqu'à son prochain tour.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge
+  do: Le frapper avec un coup +29
+  note: Attaques réflexes permet jusqu'à deux attaques d'opportunité par round ; une même occasion n'en donne pas plusieurs.
+
+step: Le groupe se disperse ou cherche à l'encercler
+  do: Dresser un mur de fer pour couper les renforts ou un accès latéral, puis continuer contre les ennemis restés de son côté
+  note: Privilégier une cloison stable qui divise réellement le terrain.
+
+step: Des ennemis équipés de métal ou de pierre doivent être tenus à distance
+  do: Orienter répulsion du métal et de la pierre vers eux pour dégager un côté du combat
+  note: Ce pouvoir sert à contrôler leur approche ; éviter de repousser les seules cibles qu'il pourrait frapper.
+
+step: Plusieurs ennemis serrés sont difficiles à toucher avec ses coups
+  do: Prendre sa forme d'essaim par une action simple, puis se déplacer sur leurs cases
+  note: L'essaim inflige 4d6 et provoque distraction ; il perd ses coups. Reprendre forme humanoïde coûte aussi une action simple. Les fragments flottent près du sol, sans permettre le vol.
+
+## Repli
+
+step: Le combat reste favorable et aucun ennemi n'interrompt sa régénération
+  do: Tenir le terrain et poursuivre ses attaques
+  note: Récupérer 5 pv par round ; une simple baisse des pv ne justifie pas d'abandonner la bataille.
+
+step: Une retraite devient nécessaire, surtout face à l'adamantium
+  do: Interposer un mur de fer avec une utilisation restante, puis se retirer à 9 m par déplacement pour récupérer grâce à la régénération
+  note: La régénération reste suspendue le round suivant une blessure d'adamantium. Choisir une issue terrestre et éviter les porteurs de cette matière.

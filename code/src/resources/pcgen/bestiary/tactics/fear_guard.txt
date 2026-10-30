@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Fear Guard, mort-vivant intangible de taille M, chaotique mauvais ; 51 pv, CA 17, initiative +6. Il vole à 9 m par déplacement avec une bonne manœuvrabilité.
+  Contact intangible +7 contre la CA de contact, à 1,50 m : 1d3 dégâts de Sagesse. Son aura de peur porte à 6 m, DD 17 ; il affaiblit aussi les combattants par rayon affaiblissant.
+  Vision dans le noir à 18 m et vision dans les ténèbres ; Discrétion +10, portée à +18 dans la pénombre et les ténèbres. Résistance à la canalisation +2, immunités des morts-vivants et vulnérabilité à la lumière du jour.
+
+resource: Ténèbres | à volonté | pouvoir magique, NLS 8
+resource: Rayon affaiblissant | à volonté | pouvoir magique, NLS 8, DD 15
+resource: Ténèbres profondes | 2/jour | pouvoir magique, NLS 8
+
+step: Il peut préparer son terrain
+  do: Choisir un passage souterrain sombre, proche de parois qu'il peut traverser grâce à son intangibilité
+  note: Garder un trajet de fuite vers les profondeurs, à l'abri de la lumière du jour
+
+step: Un éclairage gêne son approche
+  do: Employer ténèbres pour obscurcir la zone ; choisir ténèbres profondes si un obscurcissement plus marqué est nécessaire
+  note: Se dissimuler ensuite avec Discrétion +18 et observer les intrus grâce à sa vision dans les ténèbres
+
+## Ouverture
+
+step: Un combattant dangereux reste à distance
+  do: Employer rayon affaiblissant sur celui qui dépend le plus de sa Force
+  note: Consacrer cette première action à l'affaiblissement, puis chercher une approche sous couvert des ténèbres
+
+step: Il peut atteindre une cible isolée
+  do: Approcher en volant, faire intervenir l'aura de peur à 6 m, puis porter un contact intangible +7 dès qu'il est à 1,50 m
+  note: Le contact inflige 1d3 dégâts de Sagesse ; l'aura demande un DD 17, sans action offensive supplémentaire
+
+## Rounds suivants
+
+step: Une cible reste accessible au contact
+  do: Répéter le contact intangible et concentrer les dégâts de Sagesse sur cette même cible
+  note: Profiter de son isolement sans s'enfoncer au milieu de tous ses alliés
+
+step: Plusieurs adversaires peuvent le prendre pour cible
+  do: Se déplacer en volant vers un flanc ou traverser une paroi pour rompre leur ligne de vue
+  note: Utiliser les ténèbres et sa mobilité pour choisir le prochain contact ; son intangibilité ne dispense pas d'éviter les attaques dangereuses
+
+step: Il doit combattre à distance pendant un round
+  do: Employer rayon affaiblissant sur un autre adversaire dépendant de sa Force
+  note: Privilégier une nouvelle cible plutôt que chercher à cumuler plusieurs rayons sur la même
+
+step: Les adversaires rétablissent un éclairage favorable
+  do: Consacrer une action à rétablir les ténèbres ; employer une utilisation restante de ténèbres profondes si nécessaire
+  note: Reprendre les attaques de contact au round suivant si une cible est accessible
+
+## Repli
+
+step: Points de vie à 13 ou moins, ou exposition imminente à la lumière du jour
+  do: Rompre le contact et gagner un passage obscur en volant à 9 m par déplacement, en traversant les obstacles solides si le trajet le permet
+  note: Utiliser les parois pour couper les lignes de vue et poursuivre vers les profondeurs ; éviter toute sortie au grand jour

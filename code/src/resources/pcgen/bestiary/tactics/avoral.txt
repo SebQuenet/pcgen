@@ -1,0 +1,81 @@
+## Avant le combat
+
+note: Profil
+  Agathion de taille M, neutre bon, intelligent et très mobile : 94 PV, CA 25, initiative +6. Il se déplace de 12 m au sol et vole à 27 m, avec une bonne manœuvrabilité.
+  Au contact, allonge de 1,50 m : 2 griffes +16 (2d6+3 chacune) et 2 ailes +10 (2d6+1 chacune) en attaque à outrance. À distance, il privilégie éclair et projectile magique à effet augmenté.
+  Il exploite son vol pour choisir ses cibles et éviter de rester encerclé.
+
+note: Vigilance et défenses
+  Perception +23, vision dans le noir à 18 m, vision nocturne, détection de la magie, détection de l'invisibilité et vision lucide : examiner les approches et les adversaires avant de s'exposer.
+  Réduction des dégâts 10/Mal ou argent, résistance à la magie 20, immunité à l'électricité et à la pétrification, résistance au froid 10 et au son 10. Les armes mauvaises ou en argent rendent le corps à corps plus dangereux.
+
+resource: Éclair | 3/jour | NLS 9 ; ligne de 36 m ; 9d6 d'électricité, Réflexes DD 16 pour moitié
+resource: Projectile magique à effet augmenté | 3/jour | NLS 9 ; portée 57 m ; cinq projectiles de 1d4+1 dégâts de force chacun, dégâts augmentés de 50 %
+resource: Imposition des mains | 7/jour | Rend 4d6 PV ; action rapide sur lui-même, action simple sur une autre créature vivante au contact
+
+step: Il dispose de quelques rounds avant l'affrontement
+  do: Activer successivement cercle magique contre le Mal sur lui-même, aide, puis flou sur lui-même
+  note: Chaque pouvoir exige une action simple distincte. Aide apporte 1d8+9 PV temporaires et un bonus de moral de +1 aux attaques et aux sauvegardes contre la peur ; flou impose 20 % de chances de rater les attaques dirigées contre lui.
+  note: Aide et flou durent 9 minutes ; cercle magique contre le Mal dure 90 minutes. Les PV temporaires de plusieurs aides ne se cumulent pas.
+
+step: Des alliés vont combattre à ses côtés et il reste du temps
+  do: Leur accorder aide individuellement, puis choisir une position de départ avec une voie de vol dégagée
+  note: Aide est utilisable à volonté ; conserver les impositions des mains pour les blessures réelles.
+
+## Ouverture
+
+step: Plusieurs ennemis peuvent être alignés à 36 m ou moins
+  do: Se déplacer en vol pour obtenir un angle dégagé, puis lancer éclair sans toucher ses alliés
+  note: Réflexes DD 16 pour réduire les 9d6 dégâts de moitié ; éviter de dépenser une utilisation contre des cibles manifestement immunisées à l'électricité.
+
+step: Un humanoïde dangereux peut être neutralisé à 57 m ou moins
+  do: Lancer immobilisation de personne sur lui, puis exploiter son immobilité pour traiter les autres menaces
+  note: Volonté DD 16 ; ce pouvoir ne fonctionne que sur les humanoïdes. La cible peut tenter une nouvelle sauvegarde à chacun de ses tours pour mettre fin à l'effet.
+
+step: Une cible prioritaire reste à distance sans offrir un bon angle pour éclair
+  do: Lui consacrer les cinq projectiles d'un projectile magique à effet augmenté, en restant en vol hors de sa portée de mêlée
+  note: Les projectiles touchent sans jet d'attaque ni sauvegarde ; la résistance à la magie et les protections contre projectile magique restent applicables.
+
+## Rounds suivants
+
+step: Des ennemis se trouvent dans les 6 m autour de lui
+  do: Appliquer son aura de peur, DD 17, et profiter des ouvertures créées pour se dégager ou isoler une cible
+  note: Ne pas poursuivre au sol un adversaire qui fuit si cela l'expose au reste du groupe.
+
+step: Une protection magique adverse compromet ses attaques ou menace ses alliés
+  do: Utiliser dissipation de la magie sur l'effet ou la créature concernée
+  note: Pouvoir à volonté, NLS 9 ; la dissipation peut échouer et consomme son action simple du round.
+
+step: Il peut harceler une cible au contact sans rester entouré
+  do: Utiliser Attaque en vol : approcher, porter une seule griffe +16 (2d6+3), puis poursuivre son déplacement pour reprendre de la distance
+  note: Le déplacement total reste limité à 27 m. Cette manœuvre ne permet pas une attaque à outrance et ne supprime pas les attaques d'opportunité normalement provoquées.
+
+step: Il est au sol, déjà au contact, et peut supporter les ripostes
+  do: Faire une attaque à outrance : 2 griffes +16 (2d6+3 chacune), puis 2 ailes +10 (2d6+1 chacune)
+  note: Ne pas effectuer de déplacement supérieur à un pas de 1,50 m pendant ce round ; reprendre le vol si plusieurs adversaires convergent sur lui.
+
+step: Les adversaires restent inaccessibles au corps à corps
+  do: Employer les éclairs restants contre les alignements favorables, ou les projectiles magiques à effet augmenté contre une cible prioritaire
+  note: Une fois ces réserves épuisées, immobilisation de personne reste disponible à volonté contre les humanoïdes ; injonction, Volonté DD 14, peut imposer un ordre bref à une cible qui le comprend.
+
+step: Il a perdu assez de PV pour profiter de soins tout en poursuivant le combat
+  do: Utiliser imposition des mains sur lui-même en action rapide, puis effectuer normalement son déplacement et son action simple, ou son attaque à outrance
+  note: Chaque utilisation rend 4d6 PV et consomme une des 7 utilisations quotidiennes. Sur un allié, les soins exigent le contact et une action simple.
+
+step: Un ennemi menace la case depuis laquelle il veut utiliser un pouvoir magique
+  do: Tenter de l'utiliser sur la défensive si une attaque d'opportunité risque de l'interrompre
+  note: Concentration +12 ; éviter de s'exposer inutilement en lançant ses pouvoirs au contact.
+
+## Repli
+
+step: Ses PV tombent à 30 ou moins, ou les attaques ennemies rendent sa position intenable
+  do: Utiliser imposition des mains sur lui-même en action rapide si disponible, puis porte dimensionnelle vers un abri connu
+  note: Porte dimensionnelle est utilisable à volonté. Effectuer les soins avant la téléportation : il ne peut plus agir après celle-ci jusqu'à son prochain tour.
+
+step: Un allié consentant au contact doit être évacué
+  do: L'emmener avec porte dimensionnelle vers une position sûre
+  note: Préparer le contact avant d'activer le pouvoir ; ne pas rester exposé pour poursuivre un ennemi déjà repoussé.
+
+step: La téléportation ne permet pas de rejoindre un abri
+  do: Se dégager par les airs, jusqu'à 54 m avec un double déplacement, en recherchant un obstacle qui coupe les attaques à distance
+  note: Une fois à couvert, employer les impositions des mains restantes pour se soigner ou secourir ses alliés.

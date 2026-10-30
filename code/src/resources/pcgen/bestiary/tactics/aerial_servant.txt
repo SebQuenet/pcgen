@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Serviteur aérien, extérieur de l'air neutre de taille M, solitaire et peu intelligent ; il poursuit sa cible avec obstination et supporte mal la servitude.
+  149 pv, CA 23, RD 10/magie ; vol à 18 m par déplacement, manœuvrabilité parfaite. Deux coups +19, chacun infligeant 2d8+6 et permettant une étreinte ; allonge de 1,50 m, BMO de lutte +23, DMD 35.
+
+resource: Invisibilité naturelle | permanente | reste invisible même en attaquant ; insensible à négation de l'invisibilité. Sur les plans Astral et Éthéré, elle est remplacée par un camouflage donnant 20 % de chances d'échec.
+resource: Réflexes de combat | 7 attaques d'opportunité par round | chaque attaque exige une occasion distincte ; les attaques de Step Up and Strike utilisent cette réserve.
+
+step: Une cible doit être retrouvée
+  do: Suivre ses traces avec Survie +24, sans ralentir grâce au pistage amélioré
+  note: Perception +16 et vision dans le noir à 18 m pour repérer la proie ; il ne connaît pas automatiquement sa position.
+
+step: La cible est repérée
+  do: Approcher en vol sous invisibilité, avec Discrétion +20 avant les bonus d'invisibilité, et attendre qu'elle soit isolée
+  note: Préférer une approche qui évite les autres combattants ; son invisibilité ne lui permet pas de traverser les obstacles.
+
+## Ouverture
+
+step: La cible est à plus de 1,50 m
+  do: Voler jusqu'au contact ; si un déplacement de 18 m suffit et qu'une action simple reste disponible, porter un coup +19, pour 2d8+6
+  note: S'il doit consacrer tout son tour à l'approche, attendre le tour suivant pour frapper.
+
+step: La cible est déjà au contact et un tour complet est disponible
+  do: Attaque à outrance avec les deux coups +19, pour 2d8+6 chacun
+  note: Au round de surprise, une action simple ne permet qu'un seul coup. Contre une cible qui ne le voit pas, appliquer le bonus de +2 à l'attaque et lui retirer son bonus de Dextérité à la CA, sauf aptitude contraire.
+
+step: Un coup touche une cible de taille M ou inférieure
+  do: Déclencher l'étreinte : tentative gratuite de lutte à +23 contre son DMD, sans attaque d'opportunité
+  note: La saisie initiale n'ajoute aucun dégât. Privilégier la proie désignée ou un lanceur de sorts isolé.
+
+## Rounds suivants
+
+step: Une victime reste agrippée au début de son tour
+  do: Maintenir la lutte par une action simple, avec le bonus de +5 du maintien, soit +28 si la prise n'a pas été rompue
+  note: Sur une réussite, infliger les dégâts du coup associés à l'étreinte, 2d8+6 ; choisir l'immobilisation si empêcher la victime d'agir est prioritaire.
+
+step: Les alliés de la victime viennent la secourir
+  do: Sur un maintien réussi, utiliser l'option de déplacement de la lutte pour l'entraîner à l'écart, jusqu'à la moitié de sa vitesse, soit 9 m
+  note: Pour l'emporter en vol, respecter sa capacité de charge ; un placement dangereux accorde à la victime une tentative gratuite pour rompre la prise avec un bonus de +4.
+
+step: Aucune victime n'est agrippée et un ennemi reste au contact
+  do: Répéter les deux coups et tenter une nouvelle étreinte dès qu'un coup touche une cible admissible
+  note: Contre une cible facile à toucher, activer Attaque en puissance avant d'attaquer : coups +15, pour 2d8+14 chacun ; le malus de -4 touche aussi ses manœuvres de combat jusqu'à son prochain tour.
+
+step: Un adversaire adjacent fait un pas de placement de 1,50 m pour s'éloigner
+  do: Le suivre par une action immédiate avec Step Up et Following Step, jusqu'à 3 m en terminant adjacent, puis porter un coup grâce à Step Up and Strike
+  note: Ce coup compte comme une attaque d'opportunité. Following Step préserve le déplacement et le pas de placement de son prochain tour ; ce suivi ne se déclenche pas sur un déplacement ordinaire.
+
+step: Un ennemi à portée provoque une attaque d'opportunité
+  do: Porter un coup et tenter l'étreinte s'il touche une cible admissible
+  note: Garder la pression sur les lanceurs de sorts qui incantent sans défense ; l'invisibilité persiste pendant ces attaques.
+
+## Repli
+
+step: Moins de 37 pv et la mission permet de rompre le combat
+  do: Relâcher une éventuelle prise gratuitement, puis se désengager en vol, jusqu'à 36 m, vers un espace hors d'atteinte
+  note: Contre les adversaires incapables de le voir, conserver l'invisibilité et changer de direction pour rendre sa position difficile à deviner.
+
+step: La proie s'échappe et il peut encore poursuivre sa mission
+  do: Quitter la mêlée et reprendre le pistage plutôt que combattre tout le groupe

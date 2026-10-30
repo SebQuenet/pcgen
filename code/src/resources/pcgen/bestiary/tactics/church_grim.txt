@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Church Grim, petit chien spectral loyal bon, gardien solitaire des sépultures. 37 PV, CA 15, RD 10/mal, intangibilité ; vol à 12 m, manœuvrabilité parfaite.
+  Morsure intangible +8 au contact, allonge 1,50 m : 1d6 dégâts sacrés et 1d4 d'affaiblissement temporaire de Sagesse. Hurlement pour disperser les intrus.
+
+note: Domaine
+  Il reste dans le cimetière et les dépendances consacrées de l'église ; franchir cette limite lui est impossible.
+
+resource: Hurlement | à volonté | une seule exposition par créature et par jour, jet réussi ou non
+
+step: Des visiteurs entrent
+  do: Connaître automatiquement leur alignement ; surveiller avec Perception +12 et Psychologie +9
+  note: Épargner les visiteurs respectueux ; attaquer les morts-vivants à vue et combattre les profanateurs.
+
+step: Il choisit sa position
+  do: Survoler les tombes près des sépultures menacées et repérer les obstacles où se mettre à couvert
+  note: Vision dans le noir à 18 m et vision nocturne ; ne pas quitter son domaine pour reconnaître les alentours.
+
+## Ouverture
+
+step: Des intrus maléfiques sont présents dans le domaine
+  do: Consacrer son action simple au hurlement, puis voler vers la menace prioritaire si nécessaire
+  note: Volonté DD 16 ou panique pendant 2d4 rounds ; portée égale au domaine. Les bons et neutres sont épargnés, sauf s'ils viennent piller les morts ou attaquer l'église.
+
+step: Le hurlement ne peut pas affecter la menace
+  do: Voler jusqu'à portée et mordre +8 si le déplacement nécessaire ne dépasse pas 12 m
+  note: Vigueur DD 14 annule seulement l'affaiblissement de Sagesse ; chaque morsure qui l'inflige procure 5 PV temporaires au gardien.
+
+## Rounds suivants
+
+step: Un adversaire menace encore les tombes ou l'église
+  do: Le mordre à chaque tour ; concentrer les attaques sur une même cible tant qu'elle reste dangereuse
+  note: Exploiter le vol pour contourner les obstacles et rejoindre les profanateurs ; au contact, un pas de placement de 1,50 m permet de se repositionner avant de mordre.
+
+step: Une créature tente de créer des morts-vivants dans le domaine
+  do: Appliquer Défenseur des âmes, puis prendre le lanceur pour cible
+  note: Test de niveau de lanceur DD 20 ; échec : sort perdu. Cette protection ne demande aucune action au gardien.
+
+step: De nouveaux ennemis arrivent et peuvent encore subir le hurlement
+  do: Hurler si les disperser protège mieux les sépultures qu'une morsure
+  note: Ne pas consacrer un tour à hurler contre les mêmes adversaires déjà exposés.
+
+## Repli
+
+step: PV à 10 ou moins et possibilité de protéger les lieux depuis un couvert
+  do: Rompre le contact et voler derrière un obstacle dans le domaine ; revenir lorsque l'ennemi se rapproche des sépultures
+  note: Le seuil de 10 PV guide la tactique ; le gardien reste pour défendre les lieux si le repli abandonnerait l'église aux profanateurs.
+
+step: Les ennemis quittent le terrain consacré
+  do: Arrêter la poursuite à la limite et reprendre la garde
+
+step: Le gardien est détruit
+  do: Résoudre sa reconstitution : 1d20+5 contre DD 16, retour sous 24 heures en cas de réussite
+  note: Ce retour différé ne le soigne pas pendant le combat.

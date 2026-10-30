@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Eye Killer, bête magique de taille M, chaotique mauvaise, prédateur souterrain à l'intelligence animale. 45 pv, CA 17 ; déplacement de 9 m, allonge de 1,50 m.
+  Coup de queue +10 (1d8+4 et étreinte), constriction (1d8+4) ; rayon oculaire +9 au contact à distance (regard mortel).
+  Vision dans le noir à 36 m, vision nocturne, Perception +10, Discrétion +8 ; vulnérabilité à la lumière du soleil.
+
+step: Des intrus approchent dans les souterrains
+  do: Se dissimuler dans un passage obscur et attendre qu'une proie s'éloigne de ses compagnons
+  note: Discrétion +8 pour l'approche ; sa vision dans le noir permet de surveiller les intrus sans éclairage
+
+step: Le passage donne sur une zone ensoleillée
+  do: Rester à couvert sous terre et laisser la proie venir
+  note: Le bloc ne précise pas les effets de la vulnérabilité au soleil ; ne pas lui attribuer de dégâts chiffrés
+
+## Ouverture
+
+step: Une cible est à portée du rayon oculaire
+  do: La viser avec le rayon oculaire, attaque de contact à distance +9
+  note: Le bloc ne donne ni portée, ni DD, ni effet détaillé, ni fréquence d'utilisation du regard mortel ; ces paramètres doivent être disponibles pour résoudre cette attaque
+
+step: Une proie est accessible au corps à corps
+  do: S'approcher et frapper avec la queue +10 (1d8+4), puis tenter l'étreinte si le coup touche
+  note: Si le test de lutte réussit, appliquer la constriction (1d8+4) ; privilégier une cible isolée pour limiter les attaques de ses compagnons
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Maintenir la lutte et infliger la constriction (1d8+4) sur un test réussi
+  note: Rester concentré sur cette proie tant que les autres adversaires ne rendent pas la position intenable
+
+step: La proie se libère ou aucune cible n'est agrippée
+  do: Frapper de nouveau avec la queue +10 (1d8+4) et tenter une nouvelle étreinte
+
+step: Les adversaires restent hors d'atteinte de la queue
+  do: Utiliser le rayon oculaire si ses paramètres permettent de résoudre l'attaque ; sinon, chercher une approche à couvert dans les souterrains
+  note: Ne pas poursuivre une cible au soleil
+
+## Repli
+
+step: Points de vie sous 15 ou nécessité de traverser une zone ensoleillée pour poursuivre
+  do: Relâcher toute proie agrippée et gagner un passage souterrain abrité du soleil
+  note: Déplacement de 9 m ; utiliser les angles du passage pour couper les lignes de vue

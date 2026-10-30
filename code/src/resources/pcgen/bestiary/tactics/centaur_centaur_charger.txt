@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Centaure de taille G, neutre, rapide et robuste : 183 points de vie, CA 27, déplacement de 27 m par round et vision dans le noir à 18 m.
+  Arme principale : lance d'arçon +2. À distance : lance lancée +17/+12/+7, dégâts 1d8+5, critique x3.
+
+step: Il peut choisir son terrain
+  do: Se placer dans une zone dégagée, avec un trajet rectiligne vers les adversaires et une voie de fuite libre
+  note: Les plaines et les espaces entre les arbres permettent de profiter de sa vitesse ; les obstacles gênent ses charges
+
+## Ouverture
+
+step: Une cible est accessible par une charge en ligne droite
+  do: Charger avec la lance d'arçon +2, en parcourant jusqu'à 54 m
+  note: La charge permet une seule attaque ; choisir une cible accessible sans traverser les autres combattants
+
+step: La charge est impossible et aucun ennemi n'est au contact
+  do: Se déplacer de 27 m au plus pour obtenir un angle dégagé, puis lancer une lance à +17, pour 1d8+5 dégâts, critique x3
+  note: Chercher une position permettant une charge au round suivant
+
+step: Un adversaire est déjà à portée de la lance d'arçon
+  do: Effectuer une attaque à outrance avec la lance d'arçon +2
+
+## Rounds suivants
+
+step: La cible reste à portée de la lance d'arçon
+  do: Continuer les attaques à outrance sur cette cible
+  note: Rester sur place permet de concentrer ses attaques ; un déplacement ordinaire ne laisse qu'une attaque
+
+step: La cible s'éloigne et un trajet de charge est libre
+  do: La poursuivre par une nouvelle charge à la lance d'arçon +2
+
+step: Plusieurs adversaires l'encerclent ou lui ferment sa voie de fuite
+  do: Consacrer le round à une retraite vers un espace dégagé, jusqu'à 54 m, puis préparer une nouvelle approche
+  note: La retraite protège contre les attaques d'opportunité dues au départ de sa position initiale ; éviter ensuite de traverser d'autres zones menacées
+
+## Repli
+
+step: Points de vie à 45 ou moins
+  do: Rompre le combat par une retraite jusqu'à 54 m, puis continuer à s'éloigner en terrain dégagé
+  note: Exploiter sa vitesse de 27 m pour distancer les poursuivants et éviter de se laisser enfermer entre les obstacles

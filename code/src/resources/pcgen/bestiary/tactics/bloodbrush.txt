@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Bloodbrush, plante de taille P, neutre et sans intelligence, semblable à un buisson sec qui roule à la recherche de proies.
+  Coup +6 (1d3+3 et étreinte), lutte +8 ; déplacement 9 m, allonge 1,50 m ; 26 PV, CA 13.
+  Ses épines punissent le contact ; il cherche à s'accrocher à une victime plutôt qu'à multiplier les cibles.
+
+note: Défenses
+  RD 5/tranchant et immunités des plantes ; vision nocturne et vision à 360° : impossible de le prendre en tenaille.
+  Impossible de lui faire un croc-en-jambe. Vulnérable au feu : dégâts de feu reçus augmentés de moitié.
+
+step: Une créature bouge à proximité
+  do: Se diriger instinctivement vers elle
+  note: Le mouvement l'attire, surtout avec chaleur et humidité ; aucune préparation tactique élaborée.
+
+## Ouverture
+
+step: Une proie peut être atteinte avec un déplacement de 9 m
+  do: Gagner le contact et porter un coup +6 (1d3+3)
+  note: Sur une touche, tenter immédiatement l'étreinte à +8, sans action supplémentaire, contre une cible de taille M ou inférieure.
+
+step: Aucune proie n'est encore accessible
+  do: Avancer vers la plus proche ; deux déplacements permettent de parcourir 18 m sans attaquer
+
+## Rounds suivants
+
+step: Une victime est agrippée au début de son tour
+  do: Appliquer les épines : 1d4 dégâts perforants, saignement 1 et exposition au poison
+  note: Puis maintenir la lutte à +8 ; sur une réussite, choisir d'infliger les dégâts du coup, 1d3+3.
+
+step: Une créature le frappe en mêlée sans arme à allonge, ou tente une manœuvre ou un test d'Évasion contre lui
+  do: Appliquer les épines et le poison
+  note: Les manœuvres et tests d'Évasion déclenchent les épines même en cas de réussite.
+
+note: Poison des épines
+  Blessure ; Vigueur DD 14 ; hébété ; un jet par round pendant 4 rounds, une réussite guérit.
+  Sans effet sur les créatures immunisées aux effets mentaux.
+
+step: Sa victime se libère ou tombe et une autre proie reste accessible
+  do: Reprendre les coups et les tentatives d'étreinte sur une proie proche
+
+step: Il subit des dégâts de feu
+  do: L'enflammer ; poursuivre son attaque instinctive
+  note: Aucun dégât d'embrasement au round initial ; ensuite, au début de chaque tour, Réflexes DD 15 pour éteindre les flammes, sinon 1d6 dégâts de feu, soumis à sa vulnérabilité.
+  note: Tant qu'il brûle, ses coups et ses épines infligent aussi 1d6 dégâts de feu, y compris aux attaquants exposés aux épines.
+
+## Repli
+
+step: Ses points de vie diminuent
+  do: Continuer à s'accrocher et à attaquer tant qu'il peut agir
+  note: Jouer cet organisme sans intelligence comme un prédateur instinctif ; aucun seuil de PV ne déclenche une retraite calculée.

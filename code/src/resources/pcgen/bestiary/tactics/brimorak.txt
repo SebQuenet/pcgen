@@ -1,0 +1,66 @@
+## Avant le combat
+
+note: Profil
+  Brimorak, petit démon chaotique mauvais, incendiaire cruel qui affaiblit ses victimes par le feu avant de les achever au contact. 57 pv, CA 18, initiative +7 ; déplacement de 9 m, allonge de 1,50 m.
+  Épée longue +11/+6 (1d6+3, critique 19–20, plus 1d6 de feu), sabot +5 (1d3+1 plus 1d6 de feu). Le feu de l'épée est déjà compris dans ces dégâts.
+  Immunisé au feu et à l'électricité ; résistance à l'acide 10 et au froid 10, mais vulnérable au froid ; réduction des dégâts 5/fer froid ou Bien ; résistance à la magie 16. Sa Volonté +3 reste son point faible.
+
+resource: Dissipation de la magie | 3/jour | NLS 6 ; retirer une protection ou un renforcement gênant
+resource: Métal brûlant | 3/jour | Volonté DD 14 ; viser une armure métallique
+resource: Flammes | 3/jour | projectiles de feu contre une cible distante
+resource: Marche dans les airs | 1/jour | mobilité au-dessus des obstacles et des combattants au sol
+resource: Boule de feu | 1/jour | 6d6 de feu, Réflexes DD 15 pour moitié ; rayon de 6 m
+resource: Téléportation suprême | 1/jour | lui-même et au plus 22,5 kg d'objets ; réserver au repli
+resource: Convocation | 1/jour | 1 brimorak, 50 % de réussite ; équivalent d'un sort de niveau 3
+
+step: Il repère les intrus avant d'être découvert
+  do: Se dissimuler avec Discrétion +16 et observer avec Perception +18 ; préparer une attaque depuis un couvert
+  note: Vision dans le noir à 18 m ; télépathie à 30 m pour coordonner d'éventuels autres brimoraks.
+
+step: Il dispose du temps nécessaire avant l'affrontement
+  do: Tenter la convocation ; utiliser marche dans les airs si le terrain permet de prendre de la hauteur
+  note: Prévoir un round entier pour la convocation. Un échec consomme la tentative quotidienne.
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés
+  do: Lancer boule de feu pour en toucher le plus possible
+  note: Sa propre immunité au feu lui permet de s'inclure dans l'explosion si nécessaire.
+
+step: Les ennemis sont dispersés et un adversaire porte une armure métallique
+  do: Lancer métal brûlant sur cette armure, puis laisser la chaleur agir pendant les rounds suivants
+  note: Ce pouvoir ne remplace pas une attaque immédiate contre un ennemi déjà au contact.
+
+step: Un ennemi est déjà à portée et aucune boule de feu avantageuse n'est possible
+  do: Attaque à outrance : épée longue +11/+6 et sabot +5
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Privilégier l'attaque à outrance ; utiliser au besoin un pas de placement de 1,50 m pour garder la cible à portée
+  note: L'aura de fumée à 1,50 m rend fiévreux les adversaires qui respirent et ne sont pas immunisés au poison, Vigueur DD 17. Une réussite immunise contre la fumée de ce brimorak pendant 24 heures ; elle ne lui procure aucun camouflage.
+
+step: Un adversaire le blesse avec une arme de mêlée tranchante ou perforante sans allonge
+  do: Appliquer son sang bouillant : l'assaillant subit 1d4 de feu par coup réussi
+  note: Cet effet défensif n'exige aucune action ; il ne justifie pas de subir volontairement des attaques dangereuses.
+
+step: Une protection magique neutralise ses flammes ou renforce fortement sa cible
+  do: Consacrer un round à dissipation de la magie, puis reprendre ses attaques au round suivant
+
+step: Une cible reste hors de portée de son épée
+  do: Lancer un projectile de flammes si le pouvoir est déjà actif ; sinon, l'activer ce round. Avancer de 9 m au plus si cela permet de préparer le contact
+  note: Sous marche dans les airs, contourner les obstacles ou les combattants qui protègent une cible fragile ; ce pouvoir ne lui donne pas une vitesse de vol.
+
+step: Il doit employer un pouvoir magique alors qu'un ennemi le menace
+  do: Sortir de la zone menacée par un pas de placement de 1,50 m si cela suffit ; sinon, envisager une utilisation sur la défensive
+  note: Concentration +8, portée à +12 sur la défensive grâce à Magie de guerre. Une attaque à outrance reste préférable à un pouvoir peu décisif lancé sous pression.
+
+## Repli
+
+step: Ses pv tombent à 18 ou moins, ou des attaques de froid mettent sa survie en danger
+  do: Utiliser téléportation suprême vers un refuge connu, en sortant d'abord de la zone menacée si possible
+  note: Il ne peut emporter aucun allié avec ce pouvoir.
+
+step: Téléportation suprême est déjà dépensée ou inutilisable
+  do: Fuir sous marche dans les airs si elle est active ; sinon, effectuer une retraite pour se dégager, puis gagner un couvert
+  note: Il préfère survivre pour incendier de nouvelles victimes ; éviter les poursuivants capables de l'atteindre avec du froid.

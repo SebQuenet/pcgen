@@ -1,0 +1,49 @@
+## Avant le combat
+
+note: Profil
+  Démon chaotique mauvais de taille G, solitaire, doté de 203 pv et d'une CA de 28. Il combat avec une lance +1 en fer froid, utilisable au corps à corps ou comme arme de jet.
+  Déplacement et escalade à 12 m ; vision dans le noir à 18 m et vision lucide. Il utilise les obstacles et les passages verticaux pour choisir où engager le combat.
+
+note: Défenses
+  Réduction des dégâts 10/Bien et résistance à la magie 25 ; immunité à l'électricité, au poison et au sommeil ; résistance de 10 à l'acide, au froid et au feu.
+  Sa CA de contact de 12 et sa Volonté de +10 sont ses défenses les plus vulnérables : il cherche à mettre rapidement sous pression les adversaires qui les visent.
+
+step: Il peut choisir sa position
+  do: Se placer près d'un obstacle ou d'une paroi escaladable, avec une voie de retraite dégagée
+  note: Sa vision lucide l'aide à reconnaître les déguisements et obstacles illusoires ; il choisit ses cibles d'après ce qu'il voit réellement
+
+## Ouverture
+
+step: Un adversaire vulnérable est accessible en un déplacement de 12 m
+  do: Avancer et porter une attaque de lance, en privilégiant un ennemi isolé ou un lanceur de sorts
+  note: Éviter de terminer son déplacement au milieu du groupe adverse
+
+step: Un ennemi est déjà à portée de son arme
+  do: Effectuer une attaque à outrance à la lance contre cette cible
+
+step: Aucun ennemi n'est accessible au corps à corps
+  do: Se rapprocher à couvert ou escalader pour contourner un obstacle
+  note: Ne lancer la lance que si sa récupération paraît possible ; après le jet, il doit la récupérer pour reprendre ses attaques avec cette arme
+
+## Rounds suivants
+
+step: Une cible reste à portée de lance
+  do: Poursuivre les attaques à outrance jusqu'à la mettre hors de combat
+  note: Concentrer les attaques sur une même cible réduit le nombre d'adversaires capables d'agir
+
+step: Plusieurs ennemis cherchent à l'encercler
+  do: Se déplacer vers un passage étroit ou une position accessible par escalade pour limiter les attaques simultanées
+  note: Un déplacement ou une escalade au contact peut provoquer des attaques d'opportunité ; privilégier le pas de placement de 1,50 m lorsqu'il suffit à améliorer sa position
+
+step: Un adversaire contourne régulièrement ses défenses
+  do: Le prendre pour cible s'il est accessible ; sinon, utiliser les obstacles pour couper sa ligne de vue
+  note: Une arme qui ignore sa réduction des dégâts ou des attaques répétées contre sa CA de contact rendent dangereux un échange prolongé
+
+## Repli
+
+step: Points de vie à 50 ou moins, sans victoire imminente
+  do: Rompre le combat en utilisant les obstacles, puis gagner une issue ou une corniche par escalade à 12 m
+  note: Chercher d'abord à sortir de la portée adverse ; son escalade ne le protège ni des attaques d'opportunité ni des tirs
+
+step: Toute retraite est coupée
+  do: Concentrer les attaques de lance sur l'adversaire qui bloque l'issue, puis emprunter le passage dès qu'il est libre

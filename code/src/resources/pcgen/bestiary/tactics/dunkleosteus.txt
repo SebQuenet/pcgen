@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Prédateur aquatique solitaire de taille TG, d'Intelligence 1 : il poursuit une proie proche sans élaborer de stratégie complexe. Il possède 75 pv et une CA de 19.
+  Morsure +16 (3d8+15, critique sur 19–20, plus étreinte) ; BMO +23 en lutte. Nage à 18 m ; espace et allonge de 4,50 m.
+  Vision nocturne et Perception +15 pour repérer les créatures dans l'eau.
+
+step: Une proie est repérée
+  do: S'approcher dans l'eau et privilégier une créature isolée ou la plus proche.
+  note: Il reste dans son milieu aquatique ; il ne possède aucune vitesse terrestre.
+
+## Ouverture
+
+step: La proie est à 4,50 m ou moins au début de son tour
+  do: Mordre à +16 ; en cas de touche sur une créature de taille G ou inférieure, tenter immédiatement l'étreinte avec un BMO de +23.
+  note: L'étreinte est une action libre qui ne provoque pas d'attaque d'opportunité.
+
+step: La proie nécessite un déplacement de 18 m au plus pour entrer dans son allonge
+  do: Nager jusqu'à portée de morsure, puis mordre et tenter l'étreinte si la taille de la cible le permet.
+
+step: La proie reste hors d'allonge après un déplacement de 18 m
+  do: Effectuer un double déplacement de nage, jusqu'à 36 m, pour se rapprocher.
+  note: Ce double déplacement ne laisse pas d'action pour mordre ce tour-ci.
+
+## Rounds suivants
+
+step: Une proie est maintenue dans sa gueule
+  do: Maintenir la lutte ; sur un test réussi, infliger les dégâts de morsure, soit 3d8+15.
+  note: Continuer à broyer la même proie tant qu'elle résiste.
+
+step: La proie échappe à l'étreinte ou la tentative initiale échoue
+  do: Mordre de nouveau et retenter l'étreinte sur une touche, si la taille de la cible le permet.
+
+step: La cible est trop grande pour l'étreinte
+  do: Répéter les morsures à +16, en nageant pour rester à portée.
+
+## Repli
+
+step: Ses points de vie passent sous 20 et la proie résiste encore
+  do: Relâcher toute prise et se retirer vers les eaux profondes ; utiliser un double déplacement de nage, jusqu'à 36 m, si le passage est libre.
+  note: Ce seuil est un choix de conduite pour le MJ : l'instinct de survie prend le dessus sur la chasse.

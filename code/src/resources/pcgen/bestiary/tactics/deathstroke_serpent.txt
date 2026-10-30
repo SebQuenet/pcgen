@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Deathstroke Serpent, bête magique de taille TG, chaotique mauvaise et solitaire ; 161 pv, CA 25. Il isole une proie, la mord et l'écrase plutôt que de se laisser encercler.
+  Morsure +24, 3d6+16, critique 19-20, avec étreinte ; constriction 3d6+16. Allonge 3 m, espace occupé 4,50 m ; déplacement, escalade et nage à 6 m par action de mouvement.
+  Réduction des dégâts 10/fer froid ; résistances au froid, à l'électricité et au feu 10 ; résistance à la magie 23. Sa Volonté de -1 rend ses protections magiques prioritaires.
+  Perception +19, odorat, vision nocturne, vision dans le noir à 18 m et détection de l'invisibilité permanente.
+
+resource: Détection du Bien et détection de la magie | à volonté | pouvoirs distincts, utilisés successivement pour examiner les intrus
+resource: Cercle magique contre le Bien | 3/jour | protection pendant 140 minutes
+resource: Aura maudite | 3/jour | durée 14 rounds ; riposte contre les attaquants bons, Vigueur DD 20
+resource: Éclair | 3/jour | ligne de 36 m, 10d6 d'électricité, Réflexes DD 15 pour moitié
+resource: Ténèbres maudites | 3/jour | rayon de 6 m, Volonté DD 16 pour réduire les effets
+resource: Mur de feu | 3/jour | opaque ; traversée : 2d6+14 de feu, sans jet de sauvegarde
+resource: Blasphème | 1/jour | rayon de 12 m centré sur lui, Volonté DD 19, effets selon les DV
+resource: Désacralisation | 1/jour | peut contrer une consécration ; ne renforce pas directement cette bête magique
+resource: Téléportation suprême | 1/jour | lui-même et jusqu'à 22,5 kg d'objets seulement ; réserver au repli
+
+step: Il peut choisir le terrain et observer les intrus
+  do: Se placer près d'un passage resserré ou d'une paroi accessible à l'escalade ; repérer les créatures bonnes et les auras magiques avec ses détections
+  note: Prévoir une destination sûre pour la téléportation ; garder un accès à l'eau si elle permet de contourner les adversaires
+
+step: Une intrusion est probable
+  do: Activer cercle magique contre le Bien à l'avance, puis aura maudite seulement lorsque le combat devient imminent
+  note: L'aura accorde +4 de parade à la CA et +4 de résistance aux sauvegardes ; ces bonus ne se cumulent pas avec ceux du cercle. Elle donne aussi une résistance à la magie de 25 contre les sorts du Bien et ceux lancés par des créatures bonnes
+
+## Ouverture
+
+step: Le combat commence sans aura maudite active
+  do: Activer aura maudite avant de chercher le contact
+  note: Un attaquant bon qui le touche en mêlée subit 1d6 de dégâts de Force, sauf réussite de Vigueur DD 20
+
+step: Plusieurs ennemis non mauvais de 14 DV ou moins sont à 12 m ou moins, et ses protections sont actives
+  do: Utiliser blasphème pour affaiblir le groupe avant la morsure
+  note: À 14 DV, hébétement pendant 1 round ; à 13 DV ou moins, ajouter une réduction de Force de 2d6 pendant 2d4 rounds ; à 9 DV ou moins, ajouter la paralysie pendant 1d10 minutes ; à 4 DV ou moins, ajouter la mort. Volonté DD 19 annule l'hébétement et la mort, réduit de moitié la perte de Force et ramène la paralysie à 1 round ; les créatures de plus de 14 DV sont immunisées
+
+step: Les ennemis sont encore éloignés et plusieurs sont alignés
+  do: Lancer éclair dans leur axe, puis employer son déplacement pour préparer le contact
+
+step: Une proie vulnérable est accessible à son allonge de 3 m
+  do: La mordre, puis tenter l'étreinte gratuite si la morsure touche
+  note: Une étreinte réussie déclenche immédiatement la constriction, en plus des dégâts de morsure
+
+## Rounds suivants
+
+note: Priorités
+  Choisir une seule action standard par round : maintenir la lutte, mordre ou utiliser un pouvoir magique. Privilégier l'ennemi isolé qui menace le plus ses défenses, notamment un lanceur de sorts ou un porteur d'arme en fer froid.
+
+step: Il tient déjà une proie et les autres ennemis ne le submergent pas
+  do: Maintenir la lutte et infliger les dégâts de morsure, auxquels s'ajoute la constriction de 3d6+16 sur le test réussi
+  note: Le maintien occupe son action standard ; il ne donne pas une nouvelle attaque de morsure séparée
+
+step: Il est libre et plusieurs adversaires convergent sur lui
+  do: Placer un mur de feu entre une proie et ses soutiens, face brûlante vers les ennemis ; attaquer la proie au round suivant
+  note: Le mur oblige à contourner ou à subir les flammes, sans bloquer physiquement le passage. Il persiste 14 rounds après l'arrêt de la concentration
+
+step: Plusieurs créatures bonnes restent regroupées hors de mêlée
+  do: Employer ténèbres maudites, puis recommencer aux rounds suivants tant que le groupe reste une bonne cible et qu'il reste des utilisations
+  note: 5d8 de dégâts et état fiévreux pendant 1d4 rounds ; Volonté DD 16 réduit les dégâts de moitié et annule cet état. Les extérieurs bons subissent 10d6 ; les créatures neutres subissent la moitié des dégâts, sans état fiévreux, et les mauvaises sont épargnées
+
+step: Aucun groupe ne justifie un pouvoir de zone et aucune proie n'est tenue
+  do: Avancer de 6 m au maximum et mordre dès qu'une cible est à portée ; employer Attaque en puissance si elle est facile à toucher
+  note: Sa morsure reste son unique attaque naturelle ; son bonus de base à l'attaque ne lui donne pas de morsures supplémentaires
+
+step: Aura maudite expire et le combat reste dangereux
+  do: La renouveler si une utilisation reste disponible, en relâchant d'abord une éventuelle proie
+
+## Repli
+
+step: Points de vie sous 40, ou ses protections ne suffisent plus à contenir les ennemis
+  do: Relâcher sa proie et utiliser téléportation suprême vers la destination sûre prévue
+  note: La téléportation ne peut emporter aucune autre créature, même agrippée
+
+step: Téléportation suprême est indisponible
+  do: Se désengager vers une paroi à escalader ou une voie d'eau, à 6 m par action de mouvement ; si la distance le permet, dresser d'abord un mur de feu pour gêner les poursuivants
+  note: Sa résistance au feu de 10 ne suffit pas à annuler les dégâts de traversée de son propre mur

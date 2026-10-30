@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Black Rot, nuée de vermines de taille M, neutre et sans intelligence : 108 PV, CA 15, initiative +5.
+  Son attaque de nuée transmet une maladie ; distraction DD 22. Elle doit occuper l'espace de ses victimes : espace de 1,50 m et allonge de 0 m.
+  Vol à 3 m par round, manœuvrabilité parfaite ; perception de la vie à 18 m.
+  Immunité aux dégâts des armes et aux effets mentaux ; esquive totale. Vulnérabilité à guérison des maladies.
+
+step: Des créatures vivantes approchent
+  do: Les repérer grâce à la perception de la vie à 18 m.
+  note: Perception +0 ; ne pas lui prêter de raisonnement tactique ni de préparation élaborée.
+
+step: La nuée se trouve dans l'obscurité
+  do: Utiliser Discrétion +21 pour déterminer si les intrus la remarquent avant le contact.
+  note: Discrétion +5 hors de l'obscurité.
+
+## Ouverture
+
+step: Une créature vivante est accessible
+  do: Voler vers la créature la plus proche et entrer dans son espace pour l'exposer à l'attaque de nuée.
+  note: Sa vitesse de vol est de 3 m ; elle ne possède aucune attaque à distance indiquée.
+
+step: La nuée atteint une victime
+  do: Résoudre l'attaque de nuée et sa maladie, ainsi que la distraction, Vigueur DD 22.
+  note: Aucun dégât chiffré, DD de maladie, délai d'incubation ou effet de maladie n'est fourni ; ne pas en inventer.
+
+## Rounds suivants
+
+step: Une victime reste dans son espace
+  do: Maintenir le contact pour répéter l'attaque de nuée, la maladie et la distraction DD 22.
+  note: Elle n'emploie ni arme, ni prise, ni attaque à allonge.
+
+step: La victime quitte son espace
+  do: La suivre en volant et tenter de recouvrir de nouveau son espace ; si une autre créature vivante est plus proche, se porter sur celle-ci.
+  note: La nuée ne coordonne pas ses mouvements et ne choisit pas ses proies selon leur rôle dans le groupe.
+
+step: Les adversaires frappent avec des armes
+  do: Appliquer l'immunité aux dégâts des armes et poursuivre l'attaque de nuée.
+
+step: Un effet permet un jet de Réflexes pour réduire les dégâts de moitié
+  do: Effectuer le jet à +13 ; en cas de réussite, appliquer l'esquive totale et ne subir aucun dégât.
+  note: La vulnérabilité à guérison des maladies est indiquée sans mécanisme chiffré ; ne pas lui attribuer de dégâts ou de destruction automatique.
+
+## Repli
+
+step: La nuée est blessée et une proie reste accessible
+  do: Continuer à l'envahir ; ne pas organiser de retraite à un seuil arbitraire de PV.
+  note: Son absence d'intelligence exclut une fuite calculée, une négociation ou une feinte.
+
+step: Une proie fuit
+  do: La poursuivre avec son vol à 3 m tant qu'elle reste repérable et accessible.
+  note: Au-delà de 18 m, la perception de la vie ne permet plus de la localiser ; ne pas prolonger cette portée pour maintenir la poursuite.

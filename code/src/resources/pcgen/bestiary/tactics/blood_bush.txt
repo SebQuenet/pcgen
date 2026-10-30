@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Blood Bush, plante de taille P, neutre, sans Intelligence et immobile : vitesse 0 m, 57 pv, CA 18.
+  Vrille +7 (1d4+2), allonge 1,50 m ; dard floral à distance +5 (1d2+2).
+  Vision aveugle à 9 m et vision nocturne ; il attend que les proies viennent à portée.
+
+note: Défenses
+  Immunité à l'électricité ; résistance au froid 10 et au feu 10 ; vulnérabilité aux dégâts sonores.
+
+step: Aucune cible à portée
+  do: Rester sur place et attendre ; repérer les créatures proches grâce à la vision aveugle à 9 m.
+  note: Il ne peut pas se déplacer pour approcher une proie ou choisir une meilleure position.
+
+## Ouverture
+
+step: Un adversaire est à 1,50 m ou moins
+  do: Frapper avec la vrille +7 (1d4+2).
+
+step: Aucun adversaire au contact, mais une cible est à portée du dard floral
+  do: Tirer un dard floral +5 (1d2+2).
+  note: La portée du dard n'est pas indiquée dans le bloc fourni ; les 9 m de vision aveugle ne constituent pas une portée de tir.
+
+## Rounds suivants
+
+step: Un adversaire reste au contact
+  do: Répéter l'attaque de vrille +7 (1d4+2).
+  note: Résoudre ses attaques comme des réactions simples à une proie accessible ; son absence d'Intelligence ne permet pas de plan concerté.
+
+step: Les adversaires restent à distance, à portée du dard floral
+  do: Employer l'attaque de dard floral +5 (1d2+2).
+  note: Aucun nombre d'utilisations ni délai entre les tirs n'est fourni.
+
+note: Implantation
+  Le bloc mentionne ce pouvoir sans en décrire le déclencheur, les effets ou le DD ; ne pas lui attribuer de règles supplémentaires.
+
+## Repli
+
+step: Le buisson est grièvement blessé ou subit des dégâts sonores
+  do: Rester sur place et continuer à attaquer les cibles à portée.
+  note: Sa vitesse de 0 m ne lui permet aucun repli autonome ; il ne peut pas chercher un abri.
+
+step: Les adversaires sortent de portée
+  do: Cesser les attaques et attendre qu'une cible redevienne accessible ; aucune poursuite.

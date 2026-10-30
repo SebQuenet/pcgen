@@ -1,0 +1,52 @@
+## Avant le combat
+
+note: Profil
+  Battlehulk, créature artificielle de taille TG sans intelligence, FP 13. 177 pv, CA 27, initiative −4 ; déplacement de 3 m.
+  Bélier +38 (4d8+22), allonge de 1,50 m ; quatre coups +38 (2d10+15 chacun), allonge de 3 m. Il occupe un espace de 4,50 m de côté.
+  Piétinement : 8d8+44, Réflexes DD 37 pour réduire les dégâts de moitié.
+
+note: Résistance
+  RD 15/adamantium, résistance à la magie 20 ; immunité à l'acide, au froid, à l'électricité et au feu, ainsi que les immunités des créatures artificielles.
+  Sa CA de contact de 4 et ses Réflexes de +4 le rendent vulnérable aux attaques de contact et aux effets demandant ce jet de sauvegarde.
+
+step: Placement possible avant l'arrivée des adversaires
+  do: Occuper un passage sur un terrain relativement plat et sec, avec assez de place pour son emprise et une approche rectiligne
+  note: Vision dans le noir à 18 m et vision nocturne ; Perception +0. Ne pas compter sur lui pour repérer une approche discrète.
+
+## Ouverture
+
+step: Plusieurs adversaires de taille G ou inférieure se trouvent sur un trajet accessible
+  do: Piétiner en traversant leurs espaces, sur un déplacement maximal de 6 m
+  note: Infliger 8d8+44 ; chaque victime choisit une attaque d'opportunité avec un malus de −4, ou renonce à cette attaque pour tenter Réflexes DD 37 et réduire les dégâts de moitié.
+
+step: Une cible isolée est accessible par une charge en ligne droite
+  do: Charger et porter une attaque de bélier (4d8+22)
+  note: La charge exige au moins 3 m de déplacement et permet de parcourir au maximum 6 m ; appliquer les modificateurs ordinaires de charge.
+
+step: Un adversaire est déjà à 1,50 m
+  do: Effectuer une attaque à outrance : bélier +38 et quatre coups +38
+
+step: Aucun ennemi n'est accessible immédiatement
+  do: Avancer vers l'ennemi le plus proche ; utiliser un double déplacement de 6 m si aucune attaque n'est possible
+  note: Aucune attaque à distance n'est indiquée.
+
+## Rounds suivants
+
+step: Une cible demeure à portée du bélier
+  do: Répéter l'attaque à outrance : bélier +38 (4d8+22) et quatre coups +38 (2d10+15 chacun)
+
+step: Une cible est à 3 m et un pas de placement permet de l'approcher
+  do: Faire un pas de placement de 1,50 m, puis effectuer l'attaque à outrance avec le bélier et les quatre coups
+
+step: Une cible reste à portée des coups mais hors de portée du bélier
+  do: Effectuer les quatre coups +38, chacun pour 2d10+15
+
+step: Plusieurs ennemis de taille G ou inférieure se regroupent sur son passage
+  do: Remplacer l'attaque à outrance par un piétinement (8d8+44, Réflexes DD 37 pour moitié)
+  note: Une même créature ne subit ses dégâts de piétinement qu'une fois par round.
+
+## Repli
+
+step: Le Battlehulk perd des points de vie
+  do: Poursuivre sa routine de combat, sans déclencher de fuite à un seuil de pv
+  note: Sans intelligence et immunisé aux effets mentaux par ses traits de créature artificielle, il ne fuit pas sous l'effet de la peur. À 0 pv, il est détruit.

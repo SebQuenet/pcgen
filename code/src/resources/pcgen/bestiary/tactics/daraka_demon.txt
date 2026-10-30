@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Démon chaotique mauvais de grande taille, FP 12, intelligent et robuste : 162 pv, CA 27, allonge de 3 m, déplacement de 12 m.
+  Au contact : 2 griffes +21 (1d8+9 et étreinte), morsure +20 (2d6+9). À distance : scorpions +11 (1d6 et poison).
+  Réduction des dégâts 10/Bien, résistance à la magie 23 ; immunité à l'électricité et au poison ; résistance de 10 à l'acide, au froid et au feu. Volonté +3 : surveiller les lanceurs de sorts qui peuvent le neutraliser.
+
+resource: Pouvoirs magiques à volonté | illimité | NLS 12 ; marteau du Chaos (DD 19), ténèbres profondes, détection du Bien, dissipation de la magie, téléportation suprême sur lui-même, invisibilité sur lui-même, aura maudite (DD 23)
+resource: Contact glacial | 3/jour | DD 16
+resource: Débilité | 1/jour | DD 20
+resource: Fracassement | 1/jour | DD 17
+resource: Convocation | 1/jour | niveau 5 ; 4d10 dretches ou 1d2 vrocks avec 50 % de réussite ; 1 daraka avec 20 % de réussite
+
+step: Il peut se préparer avant l'arrivée des adversaires
+  do: Activer aura maudite, puis invisibilité sur lui-même, en consacrant une action distincte à chaque pouvoir
+  note: Renouveler l'aura si elle expire avant l'engagement ; l'invisibilité cesse lorsqu'il attaque.
+
+step: Il peut observer les intrus sans être découvert
+  do: Employer détection du Bien et observer leur équipement et leurs sorts pour choisir sa première cible
+  note: Perception +31, Psychologie +23 et Art de la magie +16 l'aident à évaluer les menaces ; la détection du Bien ne révèle pas leur profession.
+
+step: Un affrontement difficile est imminent et il dispose du temps nécessaire
+  do: Tenter sa convocation quotidienne ; privilégier les vrocks pour renforcer l'assaut, ou les dretches pour occuper plusieurs adversaires
+  note: Le daraka supplémentaire offre un renfort puissant, mais sa probabilité d'arrivée n'est que de 20 % ; prévoir le combat même en cas d'échec.
+
+## Ouverture
+
+step: Un lanceur de sorts profanes est identifié et constitue la menace principale
+  do: Employer débilité sur lui, DD 20
+  note: Cette action sert à neutraliser une menace avant de s'exposer au contact.
+
+step: Plusieurs adversaires loyaux sont regroupés et aucun lanceur de sorts n'exige une neutralisation immédiate
+  do: Employer marteau du Chaos sur leur groupe, DD 19
+  note: Choisir la zone pour atteindre les ennemis concernés par ce pouvoir en épargnant ses éventuels alliés.
+
+step: Des protections magiques visibles empêchent un engagement favorable
+  do: Employer dissipation de la magie sur la protection ou le porteur prioritaire
+  note: Ne lancer qu'un pouvoir par round ; choisir cette ouverture à la place de débilité ou de marteau du Chaos.
+
+step: Une cible vulnérable est accessible au corps à corps
+  do: Avancer jusqu'à 12 m et porter une griffe +21 (1d8+9 et étreinte), en exploitant son allonge de 3 m
+  note: S'il commence déjà à portée et peut consacrer son tour à l'attaque, utiliser les deux griffes et la morsure.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée sans déplacement important
+  do: Attaque à outrance : 2 griffes +21 (1d8+9 et étreinte), morsure +20 (2d6+9)
+  note: Concentrer les attaques sur une même cible pour la mettre hors de combat ; choisir Attaque en puissance surtout contre une CA facile à toucher.
+
+step: Une griffe touche une cible admissible à l'étreinte
+  do: Tenter la saisie permise par l'étreinte si immobiliser cette cible apporte un avantage immédiat
+  note: Le profil indique BMO +8 et DMD 22 ; évaluer la lutte avec ces valeurs, sans les recalculer d'après sa Force. Aucune constriction n'est indiquée.
+
+step: Plusieurs ennemis se tiennent à portée et adjacents les uns aux autres
+  do: Envisager Enchaînement ou Succession d'enchaînements pour répartir ses coups entre eux
+  note: Cette option remplace l'attaque à outrance ; conserver cette dernière lorsqu'abattre une seule cible est plus utile.
+
+step: Les ennemis restent hors de portée de ses griffes
+  do: Employer marteau du Chaos contre un groupe approprié, ou les scorpions +11 (1d6 et poison) contre une cible à portée
+  note: Le profil ne précise pas la portée des scorpions, les paramètres du poison ni l'effet défensif « scorpions » ; ne pas leur attribuer de mécanisme supplémentaire.
+
+step: Une protection magique ou un objet fragile gêne directement son assaut
+  do: Choisir dissipation de la magie contre la protection, ou fracassement contre une cible admissible, DD 17
+  note: Réserver fracassement à un objet dont la destruction change réellement le combat.
+
+step: Réduire la visibilité gênerait davantage les adversaires que le daraka
+  do: Employer ténèbres profondes, puis exploiter Combat en aveugle s'il doit combattre sans bien voir
+  note: Sa vision dans le noir porte à 18 m et ne perce pas les ténèbres surnaturelles de ce pouvoir ; éviter de s'aveugler sans avantage tactique.
+
+step: Sa position l'empêche d'atteindre une cible prioritaire
+  do: Employer téléportation suprême pour se replacer, puis reprendre l'assaut au round suivant
+  note: La téléportation ne transporte pas ses alliés et consomme l'action nécessaire à son utilisation.
+
+## Repli
+
+step: Points de vie à 40 ou moins, ou poursuite du combat manifestement défavorable
+  do: Employer téléportation suprême sur lui-même pour gagner un lieu sûr qu'il connaît
+  note: Déclencher le repli avant qu'un contrôle mental ou une incapacité l'empêche d'agir ; ses éventuels renforts ne voyagent pas avec lui.
+
+step: La téléportation est empêchée
+  do: Employer dissipation de la magie contre un obstacle magique dissipable ; sinon, devenir invisible puis s'éloigner de 12 m par déplacement
+  note: Consacrer les actions nécessaires à chaque étape ; l'invisibilité protège sa fuite tant qu'il ne reprend pas l'attaque.

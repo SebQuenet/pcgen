@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Bog Creeper, plante fongique solitaire de taille M des marais chauds, neutre et peu intelligente ; 95 pv, CA 15.
+  Coup +11 (1d6+4), morsure +11 (2d4+4), quatre vrilles +9 (1d4+2 et étreinte) ; constriction (1d4+4).
+  Allonge de 1,50 m, ou 3 m avec les vrilles ; déplacement au sol de 3 m, nage de 6 m.
+
+note: Jet d'acide
+  Cette attaque est mentionnée, mais le bloc fourni ne précise ni portée, ni dégâts, ni DD, ni fréquence d'utilisation.
+
+step: Une proie approche du marais
+  do: Rester camouflé dans la végétation près de l'eau et attendre qu'elle arrive à portée des vrilles.
+  note: Perception +21, vision nocturne et perception des vibrations à 18 m ; aucun bonus chiffré de camouflage n'est fourni.
+
+## Ouverture
+
+step: Une proie se trouve à plus de 1,50 m et à 3 m ou moins
+  do: Frapper avec une vrille +9 (1d4+2) et tenter l'étreinte si elle touche.
+  note: Si une attaque à outrance est possible, employer les quatre vrilles ; le coup et la morsure n'atteignent pas cette distance.
+
+step: Une proie est à 1,50 m et une attaque à outrance est possible
+  do: Porter le coup +11, la morsure +11 et les quatre attaques de vrille +9 ; tenter l'étreinte sur une vrille qui touche.
+  note: Une manœuvre de lutte réussie déclenche la constriction, pour 1d4+4 dégâts supplémentaires.
+
+## Rounds suivants
+
+step: Une proie est saisie
+  do: Maintenir la lutte pour poursuivre la constriction (1d4+4).
+  note: Le maintien demande une action simple ; ne pas lui ajouter une attaque à outrance dans le même round.
+
+step: Aucune proie n'est saisie et un adversaire reste à portée
+  do: Reprendre les attaques de vrilles pour obtenir une étreinte ; ajouter le coup et la morsure en attaque à outrance si l'adversaire est à 1,50 m.
+
+step: Les adversaires restent hors de portée
+  do: Se rapprocher en nageant si l'eau le permet, puis attaquer avec une vrille dès que la distance le permet.
+  note: Après une action de déplacement, ne porter qu'une attaque.
+
+## Repli
+
+step: Points de vie sous 25 et une voie de fuite aquatique est accessible
+  do: Relâcher toute proie, se retirer vers l'eau et s'éloigner à la nage ; chercher à nouveau le couvert de la végétation.
+  note: Sa nage de 6 m facilite la fuite ; au sol, sa vitesse n'est que de 3 m.

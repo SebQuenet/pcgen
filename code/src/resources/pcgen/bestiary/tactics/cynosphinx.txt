@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Cynosphinx, créature magique de taille G, neutre mauvaise : gardien de ruines à tête de chacal, avide de secrets et soucieux de survivre.
+  76 pv, CA 20 ; morsure +13 (1d8+7, maladie et croc-en-jambe), 2 griffes +13 (1d6+5). Allonge de 1,50 m malgré un espace occupé de 3 m.
+  Déplacement terrestre de 9 m, vol de 18 m avec une manœuvrabilité médiocre ; immunité aux maladies, odorat, vision nocturne et vision dans le noir à 18 m.
+
+resource: Communication avec les morts | à volonté | Volonté DD 15 ; renseignements auprès des cadavres, hors combat
+resource: Détection des pensées | 3/jour | Volonté DD 14 ; cône de 18 m, concentration
+resource: Animation des morts | 1/jour | NLS 9 ; crée des squelettes ou des zombis à partir de cadavres appropriés
+resource: Recherche de pensées | 1/jour | Volonté DD 15 ; rayon de 12 m, concentration ; repère les esprits occupés par un sujet précis
+
+step: Des intrus acceptent de parlementer
+  do: Exiger un secret en tribut et orienter les questions vers leurs intentions ; utiliser Détection des pensées pendant l'échange.
+  note: Les pensées superficielles ne deviennent lisibles qu'au troisième round de concentration. Un secret intéressant peut acheter le passage ; un refus attise sa colère.
+
+step: Il cherche qui possède un renseignement particulier
+  do: Employer Recherche de pensées pendant la conversation pour identifier les interlocuteurs visibles qui pensent au sujet évoqué.
+  note: Ce pouvoir indique qui pense au sujet, sans révéler le contenu de ses pensées.
+
+step: Des cadavres appropriés sont disponibles avant l'affrontement
+  do: Les interroger, puis utiliser Animation des morts ; placer les serviteurs obtenus sur l'accès terrestre au repaire.
+  note: Au NLS 9, une utilisation anime au maximum 18 DV ; le total contrôlé ne dépasse pas 36 DV.
+
+## Ouverture
+
+step: Une cible isolée est accessible par une trajectoire de vol dégagée
+  do: Utiliser Attaque en vol : parcourir au maximum 18 m au total, placer une morsure +13 en passant à 1,50 m, puis poursuivre le déplacement hors de portée.
+  note: Une morsure réussie permet un croc-en-jambe gratuit à +17 contre le DMD, sans attaque d'opportunité pour cette manœuvre. Le déplacement en vol peut, lui, provoquer des attaques d'opportunité.
+
+step: Un adversaire est déjà à portée et rester au sol est supportable
+  do: Faire une attaque à outrance : morsure d'abord, croc-en-jambe si elle touche, puis les deux griffes sur la même cible.
+  note: Une cible mise à terre subit un malus de 4 à la CA contre les attaques de mêlée. Après un déplacement ordinaire, se limiter à une morsure.
+
+## Rounds suivants
+
+step: Une cible reste isolée et à portée
+  do: Répéter l'attaque à outrance, en concentrant les dégâts sur elle ; tenter le croc-en-jambe après chaque morsure réussie si elle est debout.
+  note: Privilégier un adversaire vulnérable plutôt qu'un combattant protégé par ses alliés ; conserver une issue aérienne dégagée.
+
+step: La cible est facile à toucher, notamment lorsqu'elle est à terre
+  do: Activer Attaque en puissance : morsure +10 (1d8+16, maladie et croc-en-jambe), 2 griffes +10 (1d6+11).
+  note: Le croc-en-jambe passe à +14. Renoncer à ce don contre une CA ou un DMD élevés.
+
+step: Il doit se déplacer et deux ennemis adjacents entre eux sont ensuite à portée
+  do: Utiliser Enchaînement comme action simple : une morsure sur le premier, puis une sur le second uniquement si la première touche.
+  note: Chaque morsure réussie peut déclencher son croc-en-jambe ; la CA descend à 18 jusqu'au prochain tour. Préférer l'attaque à outrance lorsqu'elle est possible.
+
+step: Il doit tenir brièvement au contact avant de pouvoir partir
+  do: Utiliser Expertise du combat lors d'une attaque : CA 23, attaques à +10 et croc-en-jambe à +14, sans Attaque en puissance.
+  note: S'il risque d'être encerclé, reprendre les passes en vol plutôt que prolonger l'échange au sol ; privilégier les trajectoires simples avec Vol +4.
+
+## Repli
+
+step: Points de vie sous 25, ou adversaires manifestement supérieurs
+  do: Prendre la fuite avant d'être encerclé ; au contact, employer l'action de retraite et gagner une voie aérienne dégagée, puis poursuivre en vol à 18 m par action de mouvement.
+  note: La retraite ne protège des attaques d'opportunité que pour la case de départ face aux adversaires visibles. Si des morts-vivants sont présents, leur ordonner de retenir les poursuivants ; sa survie prime sur la défense du repaire.

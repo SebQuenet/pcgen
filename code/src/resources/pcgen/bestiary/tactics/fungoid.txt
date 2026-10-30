@@ -1,0 +1,51 @@
+## Avant le combat
+
+note: Profil
+  Fungoid, plante fongique de taille M, neutre mauvaise, peu intelligente ; FP 3, 37 pv, CA 18, initiative +5.
+  Deux coups +8 chacun (1d8+4), allonge de 1,50 m ; déplacement de 9 m. Il doit rester au contact pour porter ses deux attaques.
+  Vision dans le noir à 18 m, vision nocturne, Perception +10 ; Discrétion +6, ou +14 en milieu marécageux ou forestier.
+  Traits des plantes ; résistance à l'électricité 10. Il comprend le commun mais ne parle pas.
+
+step: Des intrus approchent en forêt ou dans un marais
+  do: Se dissimuler derrière la végétation et attendre qu'une cible approche, en utilisant Discrétion +14
+  note: La discrétion exige un abri ou du camouflage ; le terrain ne le rend pas invisible. Il ne possède aucune attaque à distance.
+
+## Ouverture
+
+step: Une cible est déjà à 1,50 m ou moins
+  do: Porter une attaque à outrance : deux coups +8, chacun infligeant 1d8+4
+  note: Pendant un round de surprise, il ne dispose que d'une action simple ou de mouvement : porter un seul coup si la cible est à portée.
+
+step: Une cible peut être atteinte après un déplacement de 9 m au plus
+  do: Avancer au contact et porter un seul coup +8 (1d8+4)
+  note: Un déplacement ordinaire ne permet pas de porter ensuite les deux coups. En terrain difficile, chaque case coûte davantage de déplacement.
+
+step: Aucun ennemi ne peut être frappé ce round
+  do: Se rapprocher en utilisant les couverts disponibles ; effectuer un double déplacement, jusqu'à 18 m si le terrain le permet
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Concentrer les deux coups +8 (1d8+4 chacun) sur cette cible jusqu'à ce qu'elle tombe ou s'éloigne
+  note: Un pas de placement de 1,50 m permet de se repositionner tout en conservant l'attaque à outrance, si le terrain autorise ce pas.
+
+step: Ses coups touchent facilement la cible
+  do: Activer Attaque en puissance avant d'attaquer : chaque coup passe à +7 et inflige 1d8+6
+  note: Le choix s'applique à tous ses jets d'attaque jusqu'à son prochain tour. Revenir aux valeurs normales au tour suivant si les coups manquent trop souvent.
+
+step: Un autre fungoid combat la même cible
+  do: Chercher une position opposée à celle de son allié pour prendre la cible en tenaille
+  note: La tenaille donne +2 aux attaques de mêlée lorsque les deux alliés menacent la cible depuis des côtés opposés. S'il faut un déplacement ordinaire pour y parvenir, ne porter qu'un coup ce round.
+
+step: Sa cible s'éloigne
+  do: La suivre si elle reste accessible, puis porter un coup si le déplacement nécessaire ne dépasse pas 9 m
+  note: Profiter d'une attaque d'opportunité si elle quitte une case menacée sans protection contre cette attaque.
+
+## Repli
+
+step: Points de vie à 9 ou moins et une voie de fuite est libre
+  do: Se désengager vers la végétation, jusqu'à 18 m si le terrain le permet, puis tenter de se cacher une fois hors de vue
+  note: Le désengagement protège seulement la sortie de la case de départ contre les attaques d'opportunité ; éviter de traverser d'autres cases menacées.
+
+step: La fuite est impossible
+  do: Continuer les attaques à outrance contre l'adversaire qui bloque le passage

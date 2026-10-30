@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Brume démoniaque, extérieur chaotique mauvais de taille M : 47 pv, CA 16, contact 16, initiative +9. Elle vole à 15 m par round avec une manœuvrabilité parfaite ; espace et allonge de 1,50 m.
+  Son contact à +10 inflige 5d6 dégâts. Confusion désorganise le groupe ; énergie négative affaiblit une cible ; contact vampirique lui procure des pv temporaires.
+  RD 5/magie, RM 16, immunités à l'acide et au froid, résistance au feu 10. Vigueur +8, Réflexes +9, Volonté +20. Amorphe et gazeuse, elle reste vulnérable au vent.
+  Vision dans le noir à 18 m, Perception +9, Discrétion +13, ou +21 dans le brouillard ou la brume ; télépathie à 30 m.
+
+resource: Détection de la magie | à volonté | NLS 5 ; demande de la concentration.
+resource: Énergie négative (enervation) | 2/jour | NLS 5 ; rayon, contact à distance ; portée 10,50 m ; 1d4 niveaux négatifs.
+resource: Contact vampirique | 2/jour | NLS 5 ; contact +10 ; 2d6 dégâts et gain de pv temporaires selon les dégâts infligés.
+resource: Frayeur (cause fear) | 1/jour | NLS 5 ; portée 10,50 m ; Volonté DD 14 ; cible de 5 DV ou moins.
+resource: Confusion | 1/jour | NLS 5 ; portée 45 m ; rayon de 4,50 m ; Volonté DD 17 ; durée 5 rounds.
+
+step: Un brouillard ou une brume est déjà présent
+  do: S'y dissimuler avec Discrétion +21 et approcher par les airs en choisissant une voie de fuite abritée du vent.
+  note: Aucun pouvoir fourni ne lui permet de créer ce brouillard.
+
+step: Elle peut observer les intrus avant de se révéler
+  do: Utiliser détection de la magie pour repérer leurs auras et préparer sa première cible.
+  note: Sans brouillard, employer Discrétion +13 et les couverts disponibles ; elle ne dispose pas d'invisibilité indiquée.
+
+## Ouverture
+
+step: Plusieurs adversaires tiennent dans un rayon de 4,50 m et sont à portée
+  do: Lancer confusion, Volonté DD 17, puis gagner une position hors de leur portée de mêlée si le déplacement disponible le permet.
+  note: Éviter d'inclure d'autres brumes démoniaques dans la zone. Les victimes restent soumises aux résultats du sort ; la brume ne choisit pas leurs actions.
+
+step: Le groupe est dispersé et une cible dangereuse se trouve à 10,50 m ou moins
+  do: Employer énergie négative contre un lanceur de sorts identifié ou le combattant qui menace le plus directement sa survie.
+  note: Il faut réussir le rayon ; aucun jet de sauvegarde n'est indiqué pour ce sort.
+
+step: Un adversaire est déjà au contact et aucun pouvoir de contrôle ne présente un meilleur avantage
+  do: Porter son contact à +10 pour 5d6 dégâts.
+  note: Privilégier une cible isolée pour limiter les ripostes des autres combattants.
+
+## Rounds suivants
+
+note: Rythme du combat
+  Choisir un contact ou un pouvoir magique par round, avec un déplacement de 15 m au maximum si nécessaire. Sa manœuvrabilité parfaite lui permet de rester en vol stationnaire.
+  Quitter une case menacée peut provoquer une attaque d'opportunité ; aucun don ne lui permet d'attaquer au milieu d'un déplacement puis de repartir librement.
+
+step: Confusion a désorganisé une partie du groupe
+  do: Se concentrer sur un adversaire encore maître de ses actes, en utilisant énergie négative à distance ou le contact à 5d6 s'il est accessible sans s'exposer au groupe entier.
+  note: Éviter de frapper une victime confuse sans nécessité : le sort peut la pousser à attaquer son agresseur à son prochain tour.
+
+step: Un adversaire de 5 DV ou moins peut être écarté du combat
+  do: Utiliser frayeur à 10,50 m ou moins, Volonté DD 14, pour dégager une approche ou une voie de fuite.
+  note: Le sort ne fonctionne pas sur une créature de 6 DV ou plus ; une sauvegarde réussie la laisse seulement secouée pendant 1 round.
+
+step: Elle veut obtenir un tampon de pv temporaires et peut atteindre une victime vivante
+  do: Utiliser contact vampirique à +10 à la place du contact ordinaire.
+  note: Ce pouvoir inflige 2d6 à NLS 5 ; ne pas y ajouter les 5d6 du contact ordinaire. Les pv temporaires ne restaurent pas ses pv perdus et ne se cumulent pas entre deux utilisations.
+
+step: Les pouvoirs pertinents sont épuisés ou une cible isolée est à portée
+  do: Répéter le contact à +10 pour 5d6 dégâts, en utilisant le vol pour choisir ses angles d'approche.
+  note: Le bloc mentionne psychic crush sans en donner les modalités ; aucun effet ni DD supplémentaire ne peut en être déduit.
+
+## Repli
+
+step: Un vent menaçant atteint sa position
+  do: Chercher immédiatement un abri hors du courant d'air en volant, puis rompre le combat si le vent la poursuit.
+  note: Les effets précis de sa vulnérabilité au vent ne sont pas fournis ; ne pas leur attribuer de seuil ni de dégâts supplémentaires.
+
+step: Ses pv tombent à 15 ou moins, ou les ennemis peuvent la concentrer sous leurs attaques
+  do: Rompre le contact et fuir en volant : 15 m avec une action de déplacement, ou 30 m avec un double déplacement ; rejoindre un couvert ou une brume existante.
+  note: Si une frayeur encore disponible peut libérer le passage, l'employer puis se déplacer de 15 m. Tenir compte des attaques d'opportunité lors du départ.

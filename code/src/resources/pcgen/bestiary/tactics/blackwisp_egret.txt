@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Blackwisp Egret, petit échassier noir des marais tempérés, animal neutre de taille P, FP 1/3. Prédateur et charognard, il attaque surtout les voyageurs lorsque la faim le pousse à bout.
+  Morsure +3 (1d4-3), allonge 1,50 m ; 4 pv, CA 13. Déplacement au sol 3 m, vol 12 m par action de mouvement, manœuvrabilité moyenne ; vision nocturne, Discrétion +10, Vol +4.
+
+resource: Cible trompeuse (Ext) | passive | Dans la pénombre ou l'obscurité, les attaques à distance contre lui ont 20 % de chances de rater.
+
+step: Il n'est ni affamé ni menacé
+  do: Continuer à chercher de petites proies ou des charognes ; garder ses distances avec les voyageurs.
+
+step: Il chasse ou approche une proie
+  do: Profiter de la végétation pour se dissimuler avec Discrétion +10 ; privilégier les endroits faiblement éclairés.
+  note: Ses yeux orangés peuvent être confondus avec des feux follets la nuit ; cette ressemblance n'impose aucun effet de peur.
+
+## Ouverture
+
+step: La faim le pousse à attaquer un voyageur
+  do: S'approcher en vol, jusqu'à 12 m, se poser à portée de morsure et attaquer à +3 (1d4-3).
+  note: Si la cible est trop éloignée, consacrer ce tour à l'approche ; chaque oiseau d'une bande agit séparément.
+
+step: Une menace est déjà à 1,50 m et lui barre la fuite
+  do: Donner une morsure +3 (1d4-3), puis chercher une occasion de s'échapper.
+
+## Rounds suivants
+
+step: La proie reste à portée et oppose peu de résistance
+  do: Répéter la morsure +3 (1d4-3), une fois à son tour.
+
+step: La proie se déplace et reste accessible sans danger évident
+  do: La rejoindre avec un déplacement, au sol jusqu'à 3 m ou en vol jusqu'à 12 m, puis mordre si elle est à portée.
+  note: S'il doit voler pour l'approcher, se poser avant de mordre ; il ne dispose pas d'Attaque en vol pour repartir après son attaque.
+
+step: Des adversaires l'attaquent à distance
+  do: Rejoindre la pénombre ou l'obscurité et chercher un couvert dans la végétation.
+  note: Cible trompeuse protège contre les attaques à distance dans ces conditions ; elle n'améliore pas sa CA et ne protège pas contre les attaques de mêlée.
+
+## Repli
+
+step: Il tombe à 2 pv ou moins, ou la proie riposte dangereusement
+  do: Effectuer un retrait en vol, jusqu'à 24 m, vers une zone sombre ou un abri du marais.
+  note: Le retrait évite les attaques d'opportunité dues au départ de sa case initiale ; contourner les autres ennemis pendant la fuite.
+
+step: Il a échappé aux poursuivants
+  do: Se dissimuler avec Discrétion +10 et abandonner cette proie.

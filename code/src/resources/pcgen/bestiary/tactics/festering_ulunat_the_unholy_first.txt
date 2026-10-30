@@ -1,0 +1,70 @@
+## Avant le combat
+
+note: Profil
+  Festering Ulunat, l'Impie Premier : bête magique colossale, chaotique mauvaise, FP 24. Avec une Intelligence de 3, le jouer comme une brute qui s'acharne sur ce qui lui résiste.
+  525 pv ; CA 42, contact 7 ; réduction des dégâts 15/épique ; résistance à la magie 35 ; régénération 30.
+  Morsure +36 (4d8+14, critique 19-20, plus 6d6 d'acide) et quatre griffes +36 (4d6+14 chacune, critique 19-20). Espace et allonge de 18 m.
+  Déplacement et escalade à 18 m ; vol à 27 m, manœuvrabilité médiocre ; nage à 12 m. Il n'a pas besoin de respirer.
+
+resource: Régénération | permanente | récupère 30 pv par round, jusqu'à 525 pv
+resource: Présence terrifiante | à volonté | rayon de 90 m, Volonté DD 30
+
+note: Défenses
+  Immunisé au feu, au son, au poison, aux maladies, aux saignements, aux effets mentaux, à la paralysie, à la pétrification et à la métamorphose.
+  Également immunisé aux affaiblissements de caractéristiques, à l'absorption d'énergie et aux blessures permanentes. S'appuyer sur ces protections pour avancer sous les attaques.
+
+step: Des intrus approchent
+  do: Les repérer grâce à la vision dans le noir et à la perception des vibrations, toutes deux à 180 m, puis se tourner vers leur approche.
+  note: Les vibrations signalent les créatures en contact avec le même sol ; elles ne localisent pas les adversaires en vol. Ulunat comprend l'aklo mais ne parle pas.
+
+## Ouverture
+
+step: Il attaque pour la première fois devant les adversaires
+  do: Activer sa présence terrifiante par une action libre en même temps que l'attaque.
+  note: Les témoins à 90 m ayant moins de 30 DV font un jet de Volonté DD 30 ; un échec les rend secoués pendant 5d6 rounds, ou paniqués s'ils ont au plus 4 DV. Une réussite immunise contre cette présence pendant 24 heures.
+
+step: Une cible est déjà dans son allonge de 18 m
+  do: Faire une attaque à outrance : morsure et quatre griffes, en concentrant les coups sur l'adversaire qui lui inflige le plus de dégâts.
+  note: Ne pas avancer inutilement : son immense allonge permet de frapper plusieurs positions sans perdre ses cinq attaques.
+
+step: Un déplacement simple suffit pour atteindre une cible
+  do: Avancer de 18 m au maximum, puis utiliser Science de la frappe décisive avec la morsure : +36, 12d8+14 plus 6d6 d'acide.
+  note: Cette attaque remplace la morsure ordinaire d'une action d'attaque ; elle ne s'ajoute ni à une attaque à outrance ni à une charge. L'acide et le bonus fixe ne sont pas triplés.
+
+step: Aucun adversaire ne peut être atteint après un déplacement simple
+  do: Faire un double déplacement pour se rapprocher : jusqu'à 36 m au sol, ou 54 m en vol si l'espace permet de manœuvrer.
+  note: Il ne dispose d'aucune attaque à distance dans ce profil.
+
+## Rounds suivants
+
+step: Une ou plusieurs cibles restent à portée
+  do: Répéter l'attaque à outrance et poursuivre la même cible tant qu'elle résiste ; reporter les attaques restantes sur une autre cible à portée si elle tombe.
+
+step: Ses attaques touchent facilement
+  do: Activer Attaque en puissance avant les jets : morsure et griffes passent à +28 ; morsure à 4d8+30 plus 6d6 d'acide, griffes à 4d6+30.
+  note: Le malus de 8 affecte aussi ses manœuvres jusqu'à son prochain tour. Renoncer à ce don contre une défense qui lui fait manquer trop souvent.
+
+step: Une morsure ou une griffe menace un critique
+  do: Confirmer avec le bonus de +4 du don Critical Focus : +40 normalement, ou +32 avec Attaque en puissance.
+  note: Sur un critique confirmé, appliquer Critique étourdissant : Vigueur DD 40, soit 10 + BBA 30 ; échec, étourdi 1d4 rounds ; réussite, chancelant 1d4 rounds. Un seul don de critique s'applique par critique.
+
+step: Une arme ou un bouclier à portée lui oppose une résistance manifeste
+  do: Remplacer une attaque de mêlée par une destruction, BMC +56, contre le DMD du porteur.
+  note: Destruction supérieure permet de reporter sur le porteur les dégâts excédant ceux nécessaires pour détruire l'objet. Tenir compte de la solidité de l'objet.
+
+step: Un adversaire corporel plus petit que lui bloque sa progression
+  do: Employer Coup fabuleux par une action simple, manœuvre à +52 : en cas de réussite, le projeter de 3 m en ligne droite et le faire tomber à terre.
+  note: Réserver cette action au dégagement d'un passage ; elle remplace toute l'attaque à outrance.
+
+step: Les survivants cherchent refuge en hauteur ou dans l'eau
+  do: Les rejoindre en escaladant à 18 m, en volant à 27 m ou en nageant à 12 m, puis reprendre les morsures et les griffes dès qu'ils sont à portée.
+  note: Privilégier les trajectoires simples en vol ; sa manœuvrabilité est médiocre et sa compétence de Vol n'est que de +8.
+
+## Repli
+
+step: Ses points de vie diminuent mais il peut encore combattre
+  do: Continuer à attaquer et laisser la régénération restaurer 30 pv par round ; ne pas lui imposer de seuil automatique de fuite.
+
+step: Les ennemis rompent le contact
+  do: Poursuivre ceux qui restent accessibles avec ses déplacements, tout en régénérant les blessures reçues.
+  note: S'il ne peut plus les atteindre, récupérer jusqu'à 525 pv.

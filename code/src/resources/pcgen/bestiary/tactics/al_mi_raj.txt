@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Al-mi'raj, petite créature magique neutre : un lapin jaune portant une corne spiralée dorée ou noire. Agressif, il attaque ce qu'il perçoit comme une menace.
+  Corne +5 (1d4-2), allonge de 1,50 m ; déplacement de 12 m. Avec 6 PV et une CA de 14, il compte sur le clignotement et la téléportation pour survivre.
+  Immunité au poison ; résistance à la magie 11.
+
+step: Une menace approche sans l'avoir repéré
+  do: Rester dissimulé et observer avec Perception +5 ; utiliser Discrétion +11 pour éviter de se montrer trop tôt
+  note: vision dans le noir à 18 m, vision nocturne et odorat ; Survie +5 pour suivre une piste à l'odorat
+
+resource: Clignotement | à volonté | action libre ; disparaît et réapparaît instantanément
+resource: Porte dimensionnelle | 1 par round | action simple ; ne transporte que l'al-mi'raj, sans réapparition dans un objet solide ; il peut agir immédiatement après
+
+## Ouverture
+
+step: Le combat commence
+  do: Utiliser le clignotement en action libre pour se dérober aux attaques
+
+step: Une menace est au contact ou accessible après un déplacement de 12 m au plus
+  do: Rejoindre la cible si nécessaire, puis donner un coup de corne +5 (1d4-2) à 1,50 m
+
+step: La menace est trop éloignée ou un obstacle empêche de l'approcher
+  do: Utiliser porte dimensionnelle pour gagner une position proche à couvert
+  note: la téléportation consomme son action simple ; il peut encore se déplacer si son action de mouvement est disponible, mais le coup de corne attend le round suivant
+
+## Rounds suivants
+
+step: Une menace reste accessible au corps à corps
+  do: Utiliser le clignotement en action libre, puis attaquer avec la corne +5 (1d4-2), après un déplacement de 12 m au plus si nécessaire
+
+step: Plusieurs adversaires l'entourent ou l'accès à sa cible devient dangereux
+  do: Utiliser porte dimensionnelle pour sortir de l'encerclement et rejoindre un couvert
+  note: ce round sert au repositionnement ; reprendre les coups de corne au round suivant si une menace reste proche
+
+## Repli
+
+step: Il tombe à 3 PV ou moins
+  do: Utiliser le clignotement en action libre, puis porte dimensionnelle vers un abri déjà repéré, à l'écart des ennemis
+  note: s'il lui reste une action de mouvement, poursuivre la fuite de 12 m ; aux rounds suivants, renouveler la téléportation si les poursuivants le rejoignent

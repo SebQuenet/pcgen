@@ -1,0 +1,47 @@
+## Avant le combat
+
+note: Profil
+  Inphidien commun, humanoïde monstrueux reptilien de taille M, neutre mauvais ; 30 pv, CA 17, initiative +7.
+  Deux morsures de mains-serpents +6 en attaque à outrance, chacune infligeant 1d4+2 dégâts et le poison ; allonge de 1,50 m.
+  Il ouvre le combat par une projection aveuglante, puis attaque avec ses mains-serpents. Déplacement de 9 m ; vision dans le noir à 18 m.
+
+resource: Projection aveuglante | 1 fois tous les 1d4 rounds | Ligne de 6 m ; Réflexes DD 14 annule ; cécité pendant 6 rounds
+resource: Poison des morsures | À chaque morsure réussie | Blessure ; Vigueur DD 16 ; 1d4 dégâts de Force, fréquence 1/round pendant 4 rounds ; guérison après 1 sauvegarde réussie
+
+step: Il peut préparer sa position
+  do: Se dissimuler avec Discrétion +8 et laisser approcher les adversaires à portée de projection ; conserver un passage pour se retirer.
+  note: Dans l'obscurité, sa vision dans le noir lui permet de repérer les intrus jusqu'à 18 m.
+
+## Ouverture
+
+step: Un adversaire est à 6 m ou moins
+  do: Utiliser une action simple pour projeter le liquide aveuglant ; chercher à toucher plusieurs ennemis alignés sans inclure ses alliés.
+  note: S'il n'a pas encore utilisé son déplacement, avancer ensuite vers une victime aveuglée, jusqu'à 9 m ; aucune morsure ce round après la projection.
+
+step: Tous les adversaires sont à plus de 6 m
+  do: Se déplacer jusqu'à 9 m pour mettre une cible à portée, puis utiliser la projection aveuglante si elle devient possible.
+  note: Si personne n'est à portée après ce déplacement, poursuivre l'approche en utilisant les obstacles disponibles.
+
+## Rounds suivants
+
+step: Une cible est à 1,50 m et la projection n'est pas prioritaire
+  do: Effectuer une attaque à outrance avec les deux mains-serpents, chacune à +6 pour 1d4+2 dégâts et poison.
+  note: Privilégier une victime aveuglée ou déjà affaiblie ; un pas de placement de 1,50 m permet de conserver l'attaque à outrance.
+
+step: Il doit se déplacer de plus de 1,50 m pour atteindre sa cible
+  do: Avancer jusqu'à 9 m et porter une seule morsure à +6 pour 1d4+2 dégâts et poison.
+  note: Le déplacement ordinaire ne permet pas les deux morsures de l'attaque à outrance.
+
+step: La projection est de nouveau disponible et une menace voit encore
+  do: Employer la projection sur cette menace, ou sur plusieurs ennemis alignés, puis reprendre les morsures au round suivant.
+  note: Respecter le délai de 1d4 rounds entre les projections ; ne pas gaspiller cette action sur une cible encore aveuglée.
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou combat manifestement perdu
+  do: Si elle est disponible, projeter le liquide aveuglant sur les poursuivants et utiliser son déplacement pour gagner un obstacle ou une issue.
+  note: Le seuil de 8 pv est un choix tactique du meneur.
+
+step: Un ennemi le menace au contact et la projection est indisponible
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 18 m, vers un passage libre ou des alliés.
+  note: Seule la case de départ est protégée des attaques d'opportunité par cette action ; éviter de traverser d'autres cases menacées.

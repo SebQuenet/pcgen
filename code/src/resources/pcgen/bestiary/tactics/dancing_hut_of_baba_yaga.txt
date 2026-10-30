@@ -1,0 +1,78 @@
+## Avant le combat
+
+note: Profil
+  Hutte dansante de Baba Yaga, créature artificielle neutre de taille TG, FP 17, sans intelligence. Elle défend les lieux selon ses consignes, sans peur ni négociation.
+  Deux griffes +38 (2d6+13) et un coup +38 (2d8+13), chacun avec étreinte ; allonge et espace occupé de 4,50 m ; déplacement de 18 m ; vision aveugle à 36 m.
+  188 PV, CA 34, réduction des dégâts 15/adamantium, résistance à la magie 28 et guérison accélérée de 20 PV par round : elle excelle dans les combats prolongés.
+
+note: Commandes
+  Elle suit des ordres permanents simples. Un occupant peut choisir précisément ses actions depuis les commandes intérieures, avec un test d'Utilisation d'objets magiques DD 30 à chaque round.
+  Les changements de tactique complexes supposent ce pilotage ; sans pilote, appliquer sa consigne et ses réactions défensives habituelles.
+
+resource: Ancre dimensionnelle | à volonté | rayon de contact à distance ; bloque les déplacements extradimensionnels pendant 15 minutes
+resource: Liberté de mouvement | à volonté | durée de 150 minutes
+resource: Danse irrésistible | à volonté | contact ; Volonté DD 25 ; durée de 1d4+1 rounds, réduite à 1 round si le jet réussit
+resource: Clignotement | 3/jour | durée de 15 rounds
+resource: Porte dimensionnelle | 3/jour | conserver si possible une utilisation pour le repli
+resource: Nuage incendiaire | 3/jour | durée de 15 rounds ; 6d6 dégâts de feu par round, Réflexes DD 25 pour moitié
+
+step: Elle dispose de temps avant l'arrivée des intrus
+  do: Activer liberté de mouvement sur elle-même
+  note: Elle évite ainsi les entraves et les prises qui pourraient empêcher ses déplacements.
+
+step: Des assaillants armés approchent et le combat est imminent
+  do: Activer clignotement si une utilisation est disponible
+  note: Les attaques physiques ordinaires ont 50 % de chances de la manquer ; ses propres attaques ont aussi 20 % de chances d'échouer. Certains moyens de voir ou de frapper l'éthéré réduisent cette protection.
+
+## Ouverture
+
+step: Elle attaque ou charge pour la première fois
+  do: Déclencher sa présence terrifiante sur les ennemis dans un rayon de 18 m, Volonté DD 30
+  note: Cette activation accompagne son offensive ; elle ne remplace pas son attaque ou son pouvoir du round.
+
+step: Un adversaire manifeste des pouvoirs magiques et pourrait s'échapper
+  do: Lancer ancre dimensionnelle sur lui pour empêcher sa fuite magique
+  note: Le rayon doit toucher ; ce pouvoir n'empêche pas la fuite à pied.
+
+step: Un combattant vivant dangereux est à portée de contact
+  do: Employer danse irrésistible pour lui faire perdre ses actions
+  note: La danse est un effet mental ; respecter les immunités et la résistance à la magie. Même un jet de Volonté réussi laisse la cible danser pendant 1 round.
+
+step: Plusieurs ennemis sont regroupés ou des adversaires volants restent hors de portée
+  do: Placer un nuage incendiaire sur leur position
+  note: Rayon de 6 m et hauteur de 6 m ; portée de 75 m. Elle ne vole pas et doit placer le nuage à la hauteur des cibles aériennes.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée et aucune neutralisation urgente n'est nécessaire
+  do: Effectuer une attaque à outrance : deux griffes +38 (2d6+13 chacune) et un coup +38 (2d8+13)
+  note: Concentrer les attaques sur une cible. Un déplacement dépassant le pas de 1,50 m empêche cette attaque à outrance ; après un déplacement ordinaire, porter une seule attaque.
+
+step: Une attaque touche une cible de taille G ou inférieure qu'elle veut retenir
+  do: Tenter l'étreinte gratuitement, avec un BMC de +46 en lutte
+  note: Pour conserver les trois attaques sans pénalité de lutte, tenter la prise après la dernière attaque. Maintenir ensuite une lutte demande une action simple et remplace l'attaque à outrance.
+
+step: Une cible danse encore à portée
+  do: La frapper à outrance et exploiter les attaques d'opportunité provoquées par sa danse
+  note: La cible subit -4 à la CA, perd son bonus de bouclier et subit -10 aux Réflexes. La hutte ne possède pas de don lui accordant plusieurs attaques d'opportunité par round.
+
+step: La danse prend fin et le combattant reste dangereux
+  do: Renouveler danse irrésistible au lieu de porter l'attaque à outrance
+
+step: Un nuage incendiaire est actif
+  do: Rester hors des flammes et frapper les ennemis qui en sortent
+  note: La vision aveugle repère les créatures à 36 m malgré la fumée. La hutte n'est pas immunisée au feu de son propre nuage ; sa réduction des dégâts ne le réduit pas.
+
+step: Une cible s'éloigne ou contourne la hutte
+  do: La rejoindre grâce au déplacement de 18 m ; employer porte dimensionnelle seulement si un obstacle empêche la poursuite
+  note: Après porte dimensionnelle, aucune autre action n'est possible jusqu'au prochain tour : préparer les attaques pour le round suivant.
+
+## Repli
+
+step: Les PV passent sous 60 et ses ordres ou son pilote prévoient le repli
+  do: Employer porte dimensionnelle pour se mettre hors d'atteinte ; à défaut, s'éloigner à 18 m par déplacement
+  note: Laisser la guérison accélérée rendre 20 PV par round avant de reprendre le combat. Sans ordre de repli, elle continue sa tâche sans céder à la peur.
+
+step: Elle tombe à 0 PV
+  do: Ses pattes cèdent ; elle s'effondre et reste inactive pendant 24 heures
+  note: Structure immortelle : elle ne descend pas sous 0 PV. Après 24 heures, elle retrouve 94 PV et sa guérison accélérée reprend. Son intérieur extradimensionnel et ses occupants ne subissent pas cette défaite.

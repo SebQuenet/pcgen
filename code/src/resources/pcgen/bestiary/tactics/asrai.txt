@@ -1,0 +1,57 @@
+## Avant le combat
+
+note: Profil
+  Asrai, fée aquatique de taille Très petite, chaotique neutre. Avec 9 pv et une CA de 18, il privilégie la dissimulation, les sorts et la fuite par l’eau ; nage à 15 m et marche à 6 m par round.
+  Attaque de contact +7 (1d4 de froid), allonge de 0 m : il doit entrer dans la case adverse pour toucher, en s’exposant aux attaques d’opportunité.
+  Réduction des dégâts 5/fer froid, immunité au froid et résistance à la magie 16. Sa dépendance à l’eau impose de conserver un accès à son milieu.
+
+resource: Pouvoirs magiques | 2/jour chacun | contrôle de l’eau, nappe de brouillard, brume de dissimulation ; NLS 5
+resource: Sorts de niveau 2 | 5/jour au total | fou rire (Volonté DD 14), convocation de monstres II ; réserve commune, NLS 5
+resource: Sorts de niveau 1 | 7/jour au total | charme-personne, hypnose, sommeil (Volonté DD 13), rapetissement (Vigueur DD 13) ; réserve commune
+resource: Sorts de niveau 0 | à volonté | lumières dansantes, hébétement (Volonté DD 12), détection de la magie, rayon de givre, résistance, fatigue (Vigueur DD 12)
+
+step: Des intrus approchent sans l’avoir repéré
+  do: Se dissimuler dans l’eau avec Discrétion +14 et observer avec Perception +6 ; repérer une issue aquatique.
+  note: Sa vision nocturne facilite la surveillance dans la pénombre.
+
+step: Un échange avec un humanoïde peut éviter le combat
+  do: Parler en commun, en aquatique ou en sylvestre selon l’interlocuteur ; employer éventuellement charme-personne (Volonté DD 13) avant les hostilités.
+  note: Une créature charmée devient amicale ; elle conserve son jugement et ses limites.
+
+## Ouverture
+
+step: Il dispose d’un abri et d’un round pour préparer l’affrontement
+  do: Lancer convocation de monstres II pour appeler un petit élémentaire de l’Eau et lui faire intercepter l’ennemi dans l’eau.
+  note: L’incantation demande 1 round ; la créature reste 5 rounds. L’asrai demeure à distance pendant qu’elle combat.
+
+step: Un adversaire dangereux approche à 10,50 m ou moins
+  do: Lancer fou rire sur lui (Volonté DD 14), puis exploiter son incapacité à agir pour s’éloigner au round suivant.
+  note: Une créature d’un autre type que les fées bénéficie de +4 à sa sauvegarde ; une Intelligence de 2 ou moins rend la cible immunisée.
+
+step: Plusieurs adversaires faibles peuvent être neutralisés ensemble
+  do: Employer sommeil (Volonté DD 13) si les cibles visées ne dépassent pas 4 DV au total et qu’il peut consacrer 1 round à l’incantation.
+  note: Les créatures de plus de 4 DV sont immunisées ; ce sort sert surtout contre des accompagnateurs faibles.
+
+## Rounds suivants
+
+step: La créature convoquée retient les poursuivants
+  do: Garder ses distances à la nage ; choisir à chaque round entre fou rire sur une menace encore active et rayon de givre contre une cible visible.
+  note: Rayon de givre inflige 1d3 de froid sans consommer les réserves de niveaux 1 et 2. Épargner les adversaires neutralisés par sommeil pour éviter de les réveiller.
+
+step: Les tirs ou les sorts rendent sa position dangereuse près de la surface
+  do: Placer une nappe de brouillard sur la ligne de vue adverse, puis changer de position dans l’eau.
+  note: Le brouillard gêne aussi sa propre vue ; rejoindre un trajet de fuite repéré auparavant.
+
+step: Une cible isolée offre une occasion de contact sans riposte immédiate
+  do: Entrer dans sa case et porter une attaque de contact +7, pour 1d4 de froid.
+  note: Avec seulement 9 pv, réserver cette attaque aux occasions favorables ; quitter la case adverse peut également provoquer une attaque d’opportunité.
+
+## Repli
+
+step: Il perd des points de vie ou un adversaire menace de le bloquer au contact
+  do: Rompre le combat ; près de la surface, lancer brume de dissimulation pour couvrir son départ, puis gagner l’eau profonde à 15 m par action de mouvement.
+  note: Si un adversaire le menace déjà, privilégier un désengagement vers une issue libre. Une créature encore convoquée peut couvrir la fuite.
+
+step: Une variation du niveau de l’eau peut ouvrir une voie de fuite
+  do: Employer contrôle de l’eau pour relever ou abaisser le niveau selon la configuration, puis emprunter le passage accessible.
+  note: Conserver un trajet aquatique continu jusqu’à un abri et s’y dissimuler.

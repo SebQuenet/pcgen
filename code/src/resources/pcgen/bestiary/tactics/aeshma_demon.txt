@@ -1,0 +1,73 @@
+## Avant le combat
+
+note: Profil
+  Démon aeshma, extérieur de taille G, chaotique mauvais, FP 11. Combattant de mêlée volant : 189 pv, CA 25, allonge et espace occupé de 3 m ; marche à 12 m, vol à 18 m, manœuvrabilité bonne.
+  Lance +1 sanglante +21/+16/+11 (2d6+10, 19–20/x3 et 1 saignement), deux griffes +19 (1d6+6). Lance lancée +19 (2d6+6, 19–20/x3 et 1 saignement).
+  RD 10/Bien, résistance à la magie 22 ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu. Vision dans le noir à 18 m, Perception +28, détection de l'invisibilité constante ; télépathie à 30 m.
+
+resource: Détection de l'invisibilité | constant | repérer les adversaires invisibles
+resource: Dissipation de la magie | à volonté | NLS 14
+resource: Téléportation suprême | à volonté | lui-même et au plus 22,7 kg d'objets seulement ; aucun allié transporté
+resource: Ténèbres maudites | à volonté | DD 17, NLS 14
+resource: Blasphème | 2/jour | DD 20, NLS 14
+resource: Toile d'araignée | 2/jour | DD 15, NLS 14
+resource: Convocation | 1/jour | niveau 5 ; 1 aeshma ou 4d10 dretches, 35 % de réussite pour l'option choisie
+
+step: Le combat est imminent et il dispose d'un round de préparation
+  do: Tenter la convocation : choisir un aeshma pour renforcer la mêlée, ou les dretches pour encombrer les accès et multiplier les menaces.
+  note: L'échec consomme l'unique utilisation quotidienne ; ne pas retenter l'autre option.
+
+step: Des alliés sont présents
+  do: Coordonner leur placement par télépathie ; leur faire occuper les accès pendant qu'il conserve une voie de sortie aérienne.
+
+## Ouverture
+
+step: Plusieurs ennemis non mauvais sont à 12 m ou moins et il peut lancer son pouvoir sans être menacé
+  do: Employer blasphème pour affaiblir le groupe avant la mêlée.
+  note: Résoudre les effets selon les DV de chaque cible et le NLS 14 ; DD 20. Les créatures mauvaises ne sont pas affectées.
+
+step: Les ennemis approchent par un passage où une toile peut être ancrée
+  do: Lancer toile d'araignée, DD 15, pour couper leur progression et isoler les premiers arrivants ; se placer en vol près d'un bord de la zone.
+  note: Garder un accès libre à la cible choisie pour la lance.
+
+step: Le groupe reste à distance et aucune toile utile ne peut être ancrée
+  do: Employer ténèbres maudites, DD 17, sur les adversaires regroupés ; privilégier les créatures bonnes.
+
+step: Une cible isolée peut être atteinte au corps à corps
+  do: S'approcher à pied ou en vol, puis porter une seule attaque de lance à +21 depuis son allonge de 3 m.
+  note: Une approche avec déplacement ne permet pas la séquence complète +21/+16/+11 et les griffes.
+
+## Rounds suivants
+
+step: Il s'engage durablement au corps à corps
+  do: Employer sa rage et concentrer ses attaques sur une cible accessible.
+  note: Le bloc fourni ne précise pas les effets ni la durée de la rage ; aucun bonus chiffré supplémentaire n'est présumé.
+
+step: Une cible est déjà dans son allonge et aucun déplacement important n'est nécessaire
+  do: Effectuer une attaque à outrance : lance +21/+16/+11 et deux griffes +19, avec les dégâts du profil.
+  note: Achever en priorité un adversaire affaibli ; le saignement de la lance entretient la pression entre les attaques. Employer Attaque en puissance contre une cible facile à toucher.
+
+step: Plusieurs ennemis sont adjacents les uns aux autres dans son allonge de 3 m
+  do: Envisager Succession d'enchaînements avec la lance pour frapper plusieurs cibles au cours de la même action.
+  note: Chaque attaque doit toucher pour poursuivre ; une seule attaque par cible. Cette option réduit sa CA de 2 jusqu'à son prochain tour.
+
+step: Une protection magique empêche ses attaques d'être efficaces
+  do: Consacrer un round à dissipation de la magie, NLS 14, sur l'adversaire protégé avant de reprendre la mêlée.
+  note: Se placer hors de la zone menacée avant d'employer le pouvoir si possible.
+
+step: Les adversaires se regroupent à nouveau
+  do: Employer ténèbres maudites, ou le second blasphème si les cibles non mauvaises sont à 12 m ou moins et vulnérables à ses effets.
+  note: Choisir un seul de ces pouvoirs pour l'action du round ; suivre les deux utilisations quotidiennes de blasphème.
+
+step: Il est encerclé, tenu à distance ou séparé de sa cible
+  do: Utiliser le vol pour changer d'angle, ou téléportation suprême vers un emplacement connu qui lui rend l'initiative du placement.
+  note: Après une téléportation, préparer l'attaque à outrance du round suivant. La lance lancée reste une option ponctuelle : elle n'a aucun pouvoir de retour indiqué.
+
+## Repli
+
+step: Ses points de vie passent sous 45, ou la mêlée devient intenable
+  do: Employer téléportation suprême vers un lieu sûr connu, en respectant la limite d'objets transportés.
+  note: Prévenir ses alliés par télépathie s'ils sont à 30 m ou moins ; ils doivent assurer leur propre fuite.
+
+step: La téléportation est empêchée
+  do: Se dégager et fuir en vol, à une vitesse de 18 m, en recherchant un passage hors d'atteinte des combattants au sol.

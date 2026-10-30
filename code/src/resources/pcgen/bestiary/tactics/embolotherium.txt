@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Animal de Grande taille des plaines, neutre et d'intelligence limitée. Il mise sur sa force et son allonge : coup +12 (2d6+12), à 3 m de portée.
+  59 PV, CA 17 ; déplacement de 9 m. Perception +10 et vision en faible lumière.
+
+step: Une menace approche
+  do: Lui faire face en terrain dégagé, où son déplacement et son allonge lui permettent de l'atteindre.
+  note: Son intelligence de 2 favorise une réaction directe à la menace la plus proche.
+
+## Ouverture
+
+step: Un ennemi peut être chargé en ligne droite sur un terrain dégagé
+  do: Charger sur 18 m au maximum et porter un coup +14 (2d6+12).
+  note: La charge réduit sa CA à 15 jusqu'au début de son prochain tour.
+
+step: La charge est impossible et aucun ennemi n'est à portée
+  do: Avancer de 9 m au maximum, puis porter un coup +12 (2d6+12) si une cible se trouve à 3 m ou moins.
+  note: Si cette approche ne suffit pas, consacrer le round à un double déplacement de 18 m pour se rapprocher.
+
+step: Un ennemi est déjà à 3 m ou moins
+  do: Porter immédiatement un coup +12 (2d6+12).
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Continuer à le frapper avec son coup +12 (2d6+12).
+  note: Il ne possède qu'une seule attaque naturelle ; rester immobile ne lui donne pas d'attaques supplémentaires.
+
+step: Ses coups touchent facilement la cible
+  do: Employer Attaque en puissance : coup +10 (2d6+18), ou +12 (2d6+18) lors d'une charge.
+  note: Renoncer à ce don si les attaques manquent trop souvent.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 3 m
+  do: Lui porter un coup, dans la limite d'une attaque d'opportunité par round.
+
+step: La cible s'éloigne et le combat continue
+  do: La suivre à 9 m et frapper dès qu'elle revient à portée ; charger de nouveau si la trajectoire le permet.
+
+## Repli
+
+step: Il lui reste 15 PV ou moins et une issue est accessible
+  do: Faire retraite pour s'éloigner de 18 m vers un espace dégagé.
+  note: Ce seuil est un choix de conduite pour le meneur : l'animal cherche à survivre lorsqu'il est gravement blessé.
+
+step: Ses PV tombent entre -1 et -17
+  do: Utiliser Dur à cuire pour rester conscient et s'éloigner de 9 m avec une seule action de mouvement par round.
+  note: Il se stabilise automatiquement. Il ne peut effectuer qu'une action simple ou de mouvement par round ; une action simple lui fait perdre 1 PV après son exécution. Il meurt à -18 PV.

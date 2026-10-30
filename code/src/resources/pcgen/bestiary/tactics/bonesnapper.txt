@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Bonesnapper, créature magique de taille M des forêts chaudes, peu intelligente, solitaire ou en meute de 2 à 4. Il cherche à saisir une proie avec ses mâchoires et à la garder au contact.
+  Morsure +7 (1d8+2 et capture), coup de queue +4 (1d8+1) ; allonge de 1,50 m ; déplacement de 9 m ; 30 pv, CA 15.
+
+step: Des proies approchent dans la forêt
+  do: Se dissimuler derrière la végétation et attendre qu'une proie s'écarte de ses compagnons
+  note: Discrétion +11 en forêt chaude, +7 ailleurs ; Perception +8 ; vision dans le noir à 18 m et vision nocturne
+
+step: Plusieurs bonesnappers chassent ensemble
+  do: Approcher la même proie par des côtés opposés pour la prendre en tenaille
+
+## Ouverture
+
+step: Une proie peut être rejointe avec un déplacement de 9 m
+  do: Avancer jusqu'à 1,50 m et porter une morsure +7 (1d8+2 et capture)
+  note: Après ce déplacement, il ne porte qu'une attaque ; il choisit la morsure pour tenter de saisir sa proie
+
+step: Une proie est déjà à portée et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : coup de queue +4 (1d8+1), puis morsure +7 (1d8+2 et capture)
+  note: Porter le coup de queue avant d'engager la lutte évite de lui appliquer les malus de l'état agrippé
+
+## Rounds suivants
+
+step: Une morsure touche une créature de taille M ou inférieure
+  do: Tenter immédiatement la capture : un test de lutte en action libre, sans attaque d'opportunité
+  note: La capture permet de tenter la prise ; elle ne réussit pas automatiquement et n'ajoute aucun dégât à la morsure initiale
+
+step: La proie est toujours tenue dans ses mâchoires au début de son tour
+  do: Maintenir la lutte par une action simple ; un test réussi inflige les dégâts de morsure, 1d8+2
+  note: Ce maintien remplace l'attaque à outrance ; rester concentré sur cette proie tant qu'elle se débat
+
+step: Aucune proie n'est agrippée et un ennemi reste à portée
+  do: Répéter l'attaque à outrance, queue puis morsure, et tenter une nouvelle capture si la morsure touche
+
+step: La proie se dégage et s'éloigne
+  do: La suivre jusqu'à 9 m et mordre si elle revient à portée ; en meute, poursuivre la même cible avec les autres
+
+## Repli
+
+step: Points de vie sous 10 et adversaires encore dangereux
+  do: Relâcher toute proie tenue, puis effectuer une retraite vers la végétation, jusqu'à 18 m selon le terrain
+  note: Chercher à rompre la ligne de vue, puis se cacher ; sa Discrétion atteint +11 dans les forêts chaudes

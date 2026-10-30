@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Ahlinni, bête magique de taille M, chaotique neutre : oiseau arboricole incapable de voler, peureux, des forêts et marais tempérés ou froids. 30 PV, CA 17.
+  Morsure +7 (1d8+2), allonge 1,50 m ; empalement en charge : dégâts de morsure doublés (2d8+4). Souffle de gaz qui fait tomber à terre et rire.
+  Déplacement au sol 12 m, escalade 6 m ; résistance au son 10. Il préfère neutraliser ses poursuivants et fuir.
+
+resource: Souffle de gaz | Une fois tous les 3 rounds | Cône de 6 m ; Vigueur DD 13 annule ; chute à terre et fou rire pendant 1d3 rounds, NLS 4
+
+step: Des intrus approchent
+  do: Rester dissimulé dans un arbre assez fourni pour le cacher ; repérer un passage vers d'autres arbres
+  note: Discrétion +15 dans les arbres, +5 ailleurs ; Perception +7 ; vision dans le noir à 18 m et vision nocturne
+
+## Ouverture
+
+step: Au moins un adversaire est dans un cône de 6 m
+  do: Souffler en prenant autant d'ennemis que possible dans le cône, puis utiliser son déplacement pour gagner un abri
+  note: Le souffle ne cause aucun dégât ; les victimes qui ratent Vigueur DD 13 tombent à terre et ne peuvent agir pendant le fou rire
+
+step: Aucun adversaire n'est à portée du souffle
+  do: Rester caché et attendre leur approche ; s'ils l'ont repéré, se déplacer vers les arbres pour éviter l'encerclement
+
+## Rounds suivants
+
+step: Le souffle est disponible et des poursuivants sont dans son cône
+  do: Souffler de nouveau, puis s'éloigner
+  note: Un souffle utilisé au round 1 redevient disponible au round 4
+
+step: Il poursuit l'offensive et dispose d'une trajectoire de charge dégagée au sol
+  do: Charger une cible isolée : morsure +9, dégâts 2d8+4 grâce à l'empalement
+  note: La charge exige au moins 3 m de déplacement en ligne droite ; sa CA tombe à 15 jusqu'à son prochain tour. Il ne charge pas au même tour qu'il souffle
+
+step: Un ennemi le bloque au contact et la fuite est impossible
+  do: Mordre à +7 (1d8+2), en privilégiant une victime encore à terre
+  note: Les dégâts doublés d'empalement s'appliquent uniquement en charge
+
+## Repli
+
+step: Le souffle neutralise les poursuivants ou une issue se libère
+  do: Fuir aussitôt au sol ou grimper dans les arbres, puis se dissimuler dans le feuillage
+  note: Exploiter ses déplacements de 12 m au sol et 6 m en escalade ; il ne peut pas s'envoler
+
+step: Il tombe à 15 PV ou moins et reste menacé
+  do: Privilégier le désengagement ; si le souffle est disponible, l'utiliser pour arrêter les poursuivants avant de s'éloigner

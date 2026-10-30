@@ -1,0 +1,58 @@
+## Avant le combat
+
+note: Profil
+  Robot de guerre gigantesque, neutre et intelligent, généralement solitaire (FP 16). Il possède 170 pv, une CA de 31 et une solidité de 10.
+  Deux canons rotatifs intégrés +19 (8d6 chacun, critique x4) ; deux griffes +28 (2d6+12 chacune, critique 19-20). Emprise et allonge : 6 m.
+  Déplacement de 15 m, escalade de 9 m ; Acrobaties +28, ou +36 pour sauter avec ses réacteurs d'appoint.
+
+resource: Champ de force | 80 pv | guérison accélérée 16 ; suivre cette réserve séparément des 170 pv du robot
+
+note: Défenses et faiblesses
+  Immunité au froid et immunités des créatures artificielles ; résistance au feu 30 et à l'électricité 30.
+  Sa vulnérabilité à l'électricité reste à prendre en compte malgré cette résistance. Les coups critiques constituent également une faiblesse.
+
+step: Il recherche des intrus
+  do: Surveiller les approches avec Perception +24, sa vision dans le noir à 36 m, sa vision nocturne et sa perception des vibrations à 18 m
+  note: Les vibrations aident à repérer les adversaires en contact avec le sol ; obtenir une ligne de vue avant de les prendre pour cibles.
+
+step: Il peut choisir sa position
+  do: Occuper un espace assez large pour ses 6 m d'emprise, avec un champ de tir dégagé et un couvert accessible
+  note: Une position accessible par escalade peut compliquer l'approche des combattants de mêlée.
+
+## Ouverture
+
+step: Les ennemis restent au-delà de son allonge de 6 m
+  do: Effectuer une attaque à outrance avec ses deux canons rotatifs et concentrer les tirs sur la menace prioritaire
+  note: Viser d'abord un adversaire qui emploie l'électricité, s'il l'a identifié ; sinon, chercher à neutraliser rapidement une cible exposée.
+
+step: Un ennemi est déjà à portée de ses griffes
+  do: Effectuer une attaque à outrance avec ses deux griffes +28, pour 2d6+12 chacune
+  note: Exploiter les 6 m d'allonge pour frapper avant que les adversaires aux armes courtes ne puissent l'atteindre.
+
+## Rounds suivants
+
+step: Il peut rester immobile et tirer sans être menacé au corps à corps
+  do: Répéter les attaques à outrance avec les deux canons, en achevant une cible avant de changer de priorité
+  note: Contre une cible facile à toucher, Visée mortelle échange 6 points d'attaque contre 12 points de dégâts : chaque canon passe à +13 et inflige 8d6+12.
+
+step: Des adversaires traversent les cases qu'il menace
+  do: Exploiter son allonge et Attaques réflexes pour porter des attaques d'opportunité avec ses griffes
+  note: Jusqu'à trois attaques d'opportunité par round ; chaque attaque exige une occasion distincte. Entrer dans son allonge ne suffit pas à en provoquer une.
+
+step: Les assauts de mêlée mettent sa protection en difficulté
+  do: Employer Expertise du combat pendant ses attaques de griffes pour privilégier la défense
+  note: Au maximum, les griffes passent à +22 et sa CA à 37 jusqu'à son prochain tour.
+
+step: Un obstacle coupe ses tirs ou les ennemis se mettent à couvert
+  do: Se déplacer de 15 m, escalader de 9 m ou sauter avec Acrobaties +36 pour retrouver un angle de tir
+  note: Réserver l'attaque à outrance à un round où il n'a pas besoin de ce déplacement.
+
+## Repli
+
+step: Le champ de force est affaibli, encore actif, et un abri est accessible
+  do: Rompre la ligne de vue et laisser le champ récupérer 16 pv par round, jusqu'à son maximum de 80 pv
+  note: Cette récupération concerne le champ de force ; elle ne répare pas les 170 pv du robot.
+
+step: La poursuite rend le repli dangereux
+  do: Utiliser son escalade ou ses sauts pour compliquer la poursuite ; exploiter ses griffes et son allonge contre ceux qui le rejoignent
+  note: S'il doit quitter une case menacée au corps à corps, envisager une retraite pour réduire son exposition aux attaques d'opportunité.

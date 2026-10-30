@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Atamahuta, oni loyal mauvais de taille G à l'apparence d'un ettin : deux têtes, une seule volonté, brutale et calculatrice. Il cherche à dominer et à inspirer la peur.
+  147 pv ; CA 25 ; résistance à la magie 22 ; régénération 5, interrompue pendant 1 round par des dégâts d'acide ou de feu.
+  Hache double orque +2 : attaque à outrance +22/+22/+17/+17/+12/+12, chaque coup infligeant 2d6+12, critique sur 19–20. Allonge et espace occupé : 3 m ; déplacement : 9 m.
+  Il sépare les adversaires par magie, puis concentre ses coups sur une victime accessible. Ses deux têtes ne lui donnent pas deux tours de jeu.
+
+resource: Vision de l'invisible | permanent | repérer les adversaires invisibles ; vision dans le noir à 18 m et vision nocturne
+resource: Peau de pierre | 1/jour | réduction des dégâts 10/adamantium ; absorbe jusqu'à 110 points de dégâts ; durée 110 minutes
+resource: Rapidité | 3/jour | 11 rounds ; déplacement 18 m ; +1 aux attaques, à la CA et aux Réflexes ; une attaque supplémentaire lors d'une attaque à outrance
+resource: Tentacules noirs | 1/jour | rayon de 6 m ; 11 rounds ; BMO +16 ; aucun jet de sauvegarde ni résistance à la magie
+resource: Mur de feu | 1/jour | séparer le groupe ou couvrir le repli ; aucune sauvegarde ; concentration, puis 11 rounds
+resource: Boule de feu | 3/jour | 10d6 de feu dans un rayon de 6 m ; Réflexes DD 16, moitié
+resource: Porte dimensionnelle | 3/jour | portée maximale 252 m ; conserver au moins une utilisation pour fuir
+resource: Poigne électrique | 3/jour | 5d6 d'électricité au toucher ; aucune sauvegarde
+resource: Contact glacial | 3/jour | jusqu'à 11 contacts par utilisation ; 1d6 d'énergie négative et 1 point de Force ; Vigueur DD 14 annule la perte de Force
+resource: Rage | 3/jour | soutien éventuel à des alliés combattants ; éviter sur lui-même tant qu'il doit utiliser ses pouvoirs magiques
+
+step: Il peut préparer le combat
+  do: Activer peau de pierre ; choisir un passage où son allonge de 3 m gêne l'approche et repérer une destination de fuite.
+  note: Si l'affrontement est imminent, activer rapidité juste avant l'arrivée des ennemis ; ses 11 rounds ne permettent pas une longue attente.
+
+step: Il doit approcher sans révéler sa nature
+  do: Prendre une forme d'humanoïde de taille G et exploiter Bluff +20 et Déguisement +20 pour choisir le moment de l'affrontement.
+  note: Ce changement de forme ne lui permet pas de se faire passer pour un humanoïde de taille M.
+
+## Ouverture
+
+step: Plusieurs adversaires sont regroupés et hors de son allonge
+  do: Placer tentacules noirs sous les ennemis, en restant hors de la zone, puis se déplacer vers son bord pour menacer une victime accessible.
+  note: Les tentacules agrippent sans distinguer les camps, infligent 1d6+4 sur une lutte réussie et rendent toute la zone difficile ; ne pas y entrer lui-même.
+
+step: Le groupe est dispersé et ses soutiens restent en arrière
+  do: Employer mur de feu pour séparer les combattants de leurs soutiens, puis avancer sur une cible isolée.
+  note: Orienter la chaleur vers les ennemis et rester hors des flammes ; son propre feu peut interrompre sa régénération.
+
+step: Un ennemi est déjà à portée et rapidité est active
+  do: Effectuer une attaque à outrance sur lui : sept attaques, +23/+23/+23/+18/+18/+13/+13, chacune à 2d6+12.
+  note: Si rapidité manque et que le combat doit durer, l'activer ce round ; l'attaque à outrance attend le round suivant.
+
+## Rounds suivants
+
+step: Une victime reste à portée
+  do: Concentrer l'attaque à outrance sur elle, avec un pas de placement de 1,50 m si nécessaire.
+  note: Privilégier les utilisateurs de feu ou d'acide identifiés ; employer Attaque en puissance contre une défense facile à toucher.
+
+step: Il doit se déplacer avant de frapper
+  do: Avancer de 9 m au maximum, ou 18 m sous rapidité, puis porter une attaque avec Frappe décisive : +22, 4d6+12 ; +23 sous rapidité.
+  note: Contre deux ennemis adjacents entre eux et tous deux à portée, Enchaînement constitue une autre option ; il réduit sa CA de 2 jusqu'à son prochain tour.
+
+step: Une seule frappe magique paraît préférable à une attaque à outrance
+  do: Utiliser poigne électrique et transmettre le pouvoir par la hache grâce à sa frappe magique : une attaque à +22, ou +23 sous rapidité, infligeant 2d6+12 plus 5d6 d'électricité si elle touche.
+  note: Cette frappe accompagne l'activation du pouvoir ; elle ne permet pas une attaque à outrance le même round. Contact glacial offre une variante pour affaiblir la Force, avec Vigueur DD 14 contre cet affaiblissement.
+
+step: Plusieurs ennemis restent groupés à distance
+  do: Lancer boule de feu en plaçant son rayon de 6 m hors de son propre espace et de celui de ses alliés éventuels.
+  note: Réflexes DD 16 pour réduire de moitié les 10d6 de feu ; les victimes agrippées par les tentacules constituent des cibles commodes.
+
+step: Il doit activer un pouvoir alors qu'un ennemi le menace
+  do: Faire un pas de placement pour sortir de l'allonge adverse si possible ; sinon, envisager une activation sur la défensive.
+  note: Concentration +14, portée à +18 sur la défensive par Magie de guerre. Sa seconde tête lui donne +4 à la CA contre les attaques d'opportunité provoquées par l'activation ; elle ne les supprime pas.
+
+## Repli
+
+step: Points de vie sous 40, ou feu et acide menacent de le faire tomber
+  do: Utiliser porte dimensionnelle vers la destination de fuite repérée, hors de portée des poursuivants.
+  note: Il ne peut plus agir après cette téléportation jusqu'à son prochain tour ; ne pas prévoir une attaque ou un déplacement supplémentaire à l'arrivée.
+
+step: La téléportation est impossible ou épuisée
+  do: Si la situation le permet, dresser mur de feu entre lui et ses poursuivants, puis gagner un abri ; profiter de rapidité si elle est encore active.
+
+step: Il a rompu le contact
+  do: Rester à couvert et laisser la régénération restaurer 5 pv par round dès qu'aucun dégât de feu ou d'acide ne la suspend.
+  note: Il préserve sa vie et son pouvoir ; il ne revient combattre qu'après récupération et avec une position favorable.

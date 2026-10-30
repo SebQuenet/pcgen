@@ -1,0 +1,74 @@
+## Avant le combat
+
+note: Profil
+  Conshee, fée souterraine de taille TP, chaotique neutre, qui sème la confusion par ses illusions et ses pouvoirs magiques. Avec 3 pv et une CA de 16, elle privilégie la discrétion et le combat à distance.
+  Arc court +4 (1d3-2), dague +0 (1d2-2). Allonge de 0 m : la dague exige d'entrer dans l'espace adverse et reste un dernier recours.
+  Déplacement au sol de 9 m, vol de 15 m avec manœuvrabilité parfaite ; Vol +18, Discrétion +14, Perception +7 et vision nocturne. Réduction des dégâts de 4/fer froid.
+
+resource: Détection du Mal, détection du Bien | constants | renseignent sur les alignements moraux, sans révéler les intentions
+resource: Lueur féerique, lumière, image silencieuse | 3/jour chacune | image silencieuse : DD 12
+resource: Clignotement, enchevêtrement, invisibilité, lévitation | 2/jour chacun | enchevêtrement : DD 12 ; invisibilité : DD 13
+resource: Terreur | 1/jour | Volonté DD 15
+resource: Silence | 1/jour | DD 13
+resource: Déformation du bois | 1/jour | DD 13
+resource: Arc court | 20 flèches | attaque +4, dégâts 1d3-2
+
+step: Des voyageurs approchent
+  do: Les observer depuis une cachette en hauteur et employer les détections d'alignement pour choisir qui tromper ou éviter
+  note: La détection exige du temps et de l'attention ; elle ne justifie pas une connaissance immédiate de tous les adversaires
+
+step: Une embuscade est possible
+  do: Préparer une image silencieuse qui détourne les regards ou masque visuellement un passage, puis se tenir près d'une issue accessible en vol
+  note: L'illusion ne constitue aucun obstacle physique ; la maintenir demande de se concentrer
+
+## Ouverture
+
+note: Choix du premier pouvoir
+  Choisir l'ouverture adaptée à la situation ; employer les autres pouvoirs lors de rounds distincts. Garder une utilisation d'invisibilité pour fuir.
+
+step: Plusieurs ennemis sont réunis dans un cône de 9 m
+  do: Employer terreur, Volonté DD 15, pour disperser le groupe, puis gagner de la hauteur si l'espace le permet
+  note: Ne pas s'exposer à la mêlée uniquement pour placer le cône
+
+step: Des ennemis avancent dans une zone pourvue de végétation
+  do: Employer enchevêtrement, Réflexes DD 12, pour ralentir leur progression, puis survoler la zone
+  note: Sans végétation disponible, choisir une autre ouverture
+
+step: Un lanceur de sorts représente la principale menace
+  do: Employer silence sur lui, DD 13, ou sur un point fixe proche de sa position
+  note: Une zone fixe peut être quittée ; elle sert surtout à imposer un déplacement aux utilisateurs de composantes verbales
+
+## Rounds suivants
+
+step: Les adversaires peuvent la viser et le combat doit continuer
+  do: Activer clignotement, puis changer de position en vol
+  note: Au NLS 5, clignotement dure 5 rounds ; sa protection reste incertaine et peut aussi gêner ses propres attaques
+
+step: Une cible isolée reste accessible à distance
+  do: Tirer à l'arc court, +4, dégâts 1d3-2, depuis une position haute ou derrière un abri
+  note: Les faibles dégâts rendent le harcèlement préférable à un échange prolongé de tirs
+
+step: Une illusion peut détourner une poursuite
+  do: Créer ou maintenir une image silencieuse, DD 12, pour suggérer une fausse menace ou dissimuler visuellement une issue
+  note: Une action consacrée à maintenir l'image empêche de tirer à l'arc ou d'employer un autre pouvoir pendant cette même action
+
+step: Un adversaire compte sur une arme ou un objet en bois
+  do: Employer déformation du bois, DD 13, sur un objet admissible pour gêner son utilisation
+
+step: Une cible invisible est repérée assez précisément
+  do: Employer lueur féerique sur sa position pour faciliter les attaques du groupe
+  note: Ce pouvoir ne permet pas, à lui seul, de localiser une créature invisible
+
+step: Une diversion lumineuse peut éloigner les regards de sa cachette
+  do: Employer lumière sur un objet et l'utiliser comme leurre
+  note: Lévitation sert surtout à déplacer verticalement un objet ou une cible admissible ; son propre vol reste plus souple pour se déplacer
+
+## Repli
+
+step: Points de vie sous 3, arme en fer froid repérée ou adversaire capable de l'abattre à distance
+  do: Rompre le combat, employer invisibilité dès qu'elle peut le faire sans s'exposer au contact, puis fuir en vol à 15 m par déplacement vers un passage couvert
+  note: L'invisibilité sur elle-même ne demande pas de jet de sauvegarde ; attaquer y met fin. La réduction des dégâts ne compense pas ses 3 pv
+
+step: Un adversaire la menace déjà au contact
+  do: Se retirer en vol vers une issue dégagée, puis employer invisibilité au round suivant si nécessaire
+  note: Privilégier la survie ; une attaque de dague à +0 ne justifie pas de rester dans l'espace adverse

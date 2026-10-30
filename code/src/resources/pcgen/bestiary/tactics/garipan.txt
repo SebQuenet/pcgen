@@ -1,0 +1,64 @@
+## Avant le combat
+
+note: Profil
+  Garipan, extérieur natif de taille M, neutre mauvais, intelligent et discret : 133 pv, CA 23, discrétion +25, perception +19 et vision dans le noir à 18 m.
+  Morsure +17 (1d6+3 et brûlure), 2 griffes +17 (1d8+3 chacune) ; allonge de 1,50 m. Le bloc ne précise ni les dégâts ni le DD de la brûlure.
+  Déplacement au sol de 6 m, vol de 15 m avec une bonne manœuvrabilité. Il privilégie les pouvoirs à distance et les passages en vol pour éviter de rester au contact.
+  Réduction des dégâts 5/–, immunité au poison, résistance de 5 à l'acide, au froid et au feu ; vulnérabilité au son.
+
+resource: Statue | à volonté | pouvoir magique personnel, NLS 10
+resource: Fusion dans la pierre | 3/jour | refuge dans une masse de pierre assez grande pour le contenir
+resource: Rayon ardent | 3/jour | deux rayons de 4d6 dégâts de feu chacun, attaques de contact à distance +16, portée de 15 m
+resource: Boule de feu | 1/jour | 10d6 dégâts de feu, rayon de 6 m, Réflexes DD 14 pour moitié
+resource: Pétrification | 1/jour | Vigueur DD 17 annule
+resource: Mur de feu | 1/jour | écran opaque et dégâts de feu, NLS 10
+
+step: Il dispose de temps pour préparer une embuscade
+  do: Choisir un emplacement en pierre avec de l'espace pour décoller, puis utiliser statue et attendre immobile en surveillant les arrivants
+  note: Statue lui laisse ses sens ; il reprend sa forme normale avant d'agir. Ne pas lui accorder automatiquement la surprise si les intrus l'ont repéré.
+
+## Ouverture
+
+step: Une cible dangereuse semble avoir une faible Vigueur
+  do: Lancer pétrification sur elle, puis gagner de la hauteur ou un couvert avec son déplacement
+  note: DD 17 ; un lanceur de sorts vulnérable constitue une bonne cible. Cette ouverture consomme son unique pétrification.
+
+step: Plusieurs ennemis sont regroupés et il n'a pas encore utilisé son action du round
+  do: Lancer boule de feu en plaçant l'explosion pour toucher plusieurs adversaires sans s'y inclure
+  note: Le DD 14 est modeste ; préférer une zone qui atteint plusieurs cibles à un tir sur un ennemi isolé.
+
+step: Le terrain permet de séparer les adversaires et il n'a pas encore utilisé son action du round
+  do: Élever un mur de feu entre les combattants et leurs soutiens, avec le côté brûlant tourné vers les ennemis
+  note: Le mur coupe la vue dans les deux sens ; conserver une route aérienne pour le contourner.
+
+## Rounds suivants
+
+step: Une cible est visible à 15 m ou moins et des rayons ardents restent disponibles
+  do: Effectuer un passage en vol, lancer rayon ardent pendant le déplacement, puis poursuivre vers un couvert ou hors de portée du corps à corps
+  note: Attaque en vol permet de placer l'action simple pendant le déplacement ; la distance totale parcourue reste limitée à 15 m. Concentrer les deux rayons sur une cible prioritaire si possible.
+
+step: Les pouvoirs offensifs sont épuisés ou une cible isolée est facile à atteindre
+  do: Effectuer un passage avec une seule morsure +17, puis poursuivre le vol hors de son allonge
+  note: Le passage ne permet pas une attaque à outrance. Il peut provoquer des attaques d'opportunité ; Souplesse du serpent donne +4 à la CA contre celles provoquées par son déplacement.
+
+step: Un ennemi reste à portée et Garipan peut se permettre de rester sur place
+  do: Effectuer une attaque à outrance : morsure +17 et deux griffes +17
+  note: Réserver cette option à une cible isolée ou affaiblie ; rester au contact expose Garipan aux attaques à outrance adverses.
+
+step: Le mur de feu est encore actif
+  do: Exploiter la séparation pour affronter les ennemis qui le contournent ou le franchissent, en gardant les autres derrière le mur
+  note: Maintenir le mur par concentration demande une action simple ; sinon, il persiste encore 10 rounds après la fin de la concentration.
+
+## Repli
+
+step: Ses points de vie tombent sous 40, ou des attaques sonores rendent le combat trop dangereux
+  do: Rompre le contact et fuir en vol, en utilisant les obstacles pour couper les lignes de vue
+  note: S'il ne fait que se déplacer, deux déplacements lui permettent de parcourir 30 m dans le round.
+
+step: Les poursuivants restent proches et une utilisation de fusion dans la pierre est disponible
+  do: Rejoindre une masse de pierre assez grande et s'y fondre pour se soustraire aux attaques
+  note: Il ne voit pas l'extérieur depuis la pierre ; ce refuge ne lui permet pas de viser les poursuivants.
+
+step: Il a échappé aux regards et trouve un endroit où une statue paraît plausible
+  do: Utiliser statue et rester immobile pour laisser passer les poursuivants
+  note: Cette apparence ne restaure aucun point de vie et ne garantit pas qu'il échappera à une fouille.

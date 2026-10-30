@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Caïman nain, petit animal neutre des eaux chaudes, doté de 6 points de vie et d'une CA de 14.
+  Morsure +1 (1d4), au contact à 1,50 m ; déplacement terrestre de 3 m et nage de 9 m par action de mouvement.
+  Discrétion +11, ou +19 dans l'eau ; Natation +8 ; vision nocturne et Perception +0.
+
+step: Une proie approche de l'eau
+  do: Rester dissimulé dans l'eau et attendre qu'elle arrive à portée de morsure.
+  note: Utiliser Discrétion +19 dans l'eau ; privilégier une approche aquatique, car sa marche est lente.
+
+## Ouverture
+
+step: Une proie est à 1,50 m ou moins
+  do: Porter une morsure +1 (1d4).
+
+step: La proie est accessible en nageant sur 9 m ou moins
+  do: Nager jusqu'au contact, puis porter une morsure +1 (1d4).
+  note: Sur terre, il ne peut parcourir que 3 m avec une action de mouvement avant de mordre.
+
+## Rounds suivants
+
+step: La cible reste au contact
+  do: Continuer à mordre une fois par round, à +1 pour 1d4 points de dégâts.
+  note: Sa morsure ne confère ni étreinte ni attaque spéciale permettant d'entraîner automatiquement la cible sous l'eau.
+
+step: La cible s'éloigne dans l'eau
+  do: La suivre à la nage et mordre si une seule action de mouvement suffit pour revenir au contact.
+
+step: La cible s'éloigne sur la terre ferme
+  do: Rester près de l'eau et abandonner la poursuite si elle s'éloigne hors de portée.
+  note: Son déplacement terrestre de 3 m rend une longue poursuite peu efficace.
+
+## Repli
+
+step: Réduit à 3 points de vie ou moins et capable de fuir
+  do: Rejoindre l'eau ou s'éloigner à la nage ; utiliser un double déplacement pour parcourir jusqu'à 18 m si la voie est libre.
+  note: Ce seuil est un choix de conduite pour le meneur. Quitter une case menacée peut provoquer une attaque d'opportunité.
+
+step: La fuite immédiate l'expose à une attaque d'opportunité
+  do: Utiliser l'action de retraite, jusqu'à 6 m sur terre ou 18 m à la nage.
+  note: La case de départ n'est pas considérée comme menacée pour ce déplacement ; les autres cases menacées restent dangereuses.

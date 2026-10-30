@@ -1,0 +1,41 @@
+## Avant le combat
+
+note: Profil
+  Brontotherium, animal de taille TG des plaines, peu intelligent et guidé par son instinct ; 105 pv, CA 21.
+  Coup +17 (3d6+18) ; déplacement de 12 m ; espace occupé et allonge de 4,50 m.
+  Vision nocturne, odorat et Perception +16 pour repérer les menaces.
+
+step: Une menace approche
+  do: Se tourner vers elle et garder assez d'espace pour avancer ou fuir.
+  note: Son intelligence de 2 favorise les réactions simples : frapper la menace proche ou s'en éloigner.
+
+## Ouverture
+
+step: Un ennemi est à 4,50 m ou moins
+  do: Porter un coup +17 (3d6+18) contre cet ennemi.
+
+step: L'ennemi est hors d'allonge
+  do: Avancer de 12 m au maximum, puis porter un coup si la cible est désormais à 4,50 m ou moins.
+  note: Si aucune cible n'est accessible après ce déplacement, un second déplacement permet de parcourir jusqu'à 24 m dans le round, sans attaquer.
+
+## Rounds suivants
+
+step: Un adversaire reste à portée
+  do: Répéter le coup +17 (3d6+18), en privilégiant celui qui vient de le blesser.
+  note: Il ne possède qu'une attaque de coup par round à son tour, même en restant immobile.
+
+step: Ses coups touchent facilement la cible
+  do: Activer Attaque en puissance avant de frapper : coup +15 (3d6+24).
+  note: Le malus et le bonus s'appliquent aussi aux attaques d'opportunité jusqu'à son prochain tour ; revenir au coup normal si les attaques manquent trop souvent.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 4,50 m
+  do: Porter un coup contre lui, au maximum une attaque d'opportunité par round.
+
+## Repli
+
+step: Points de vie entre 1 et 29 et voie de fuite accessible
+  do: Se retirer jusqu'à 24 m vers un espace dégagé, puis poursuivre la fuite si l'adversaire insiste.
+
+step: Points de vie entre 0 et -21
+  do: Rester conscient grâce à Dur à cuire et consacrer son unique action du round à un déplacement de 12 m pour fuir.
+  note: Une action simple ou une autre action fatigante lui fait perdre 1 pv après son accomplissement ; il meurt à -22 pv.

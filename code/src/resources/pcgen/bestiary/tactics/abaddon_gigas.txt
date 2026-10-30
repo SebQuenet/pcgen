@@ -1,0 +1,96 @@
+## Avant le combat
+
+note: Profil
+  Abaddon Gigas, géant extraplanaire neutre mauvais de taille Gigantesque, FP 17. Combattant solitaire et intelligent, il affaiblit ses victimes par absorption d'énergie et contrôle l'approche avec sa magie et son allonge.
+  241 pv ; CA 33, contact 9 ; déplacement de 13,50 m en armure ; espace et allonge de 6 m. Vision dans le noir à 18 m, vision nocturne, Perception +30 et initiative +8.
+  Épée à deux mains +3 sanglante en adamantium : +30/+25/+20, 6d6+27 et absorption d'énergie, critique 19-20. Alternatives : ceste clouté +5 neutralisant en adamantium +32/+27/+22, 2d6+21 ; bâton +5 impie en adamantium +32/+27/+22, 3d6+29 ; faux +3 cruelle et acérée +30/+25/+20, 4d6+27, critique 19-20/×4. Toutes ces attaques de mêlée ajoutent l'absorption d'énergie indiquée au profil.
+  Rocher : +15, 4d6+24. Les séries d'attaques correspondent à une attaque à outrance avec une seule des armes proposées.
+
+note: Défenses
+  Réduction des dégâts 10/Bien ; immunité à l'acide et aux effets de mort ; résistance de 10 au froid, à l'électricité, au feu et au son. Vigueur +19, Réflexes +11, Volonté +15.
+  Sa CA de contact de 9 le rend vulnérable aux rayons : utiliser les obstacles contre les tireurs et les lanceurs de sorts plutôt que compter sur son armure.
+
+resource: Terreur | à volonté | pouvoir magique, Volonté DD 20
+resource: Chaîne d'éclairs | 3/jour | pouvoir magique, Réflexes DD 22
+resource: Cône de froid | 3/jour | pouvoir magique, Réflexes DD 21
+resource: Ancre dimensionnelle | 3/jour | pouvoir magique, rayon de contact à distance, sans sauvegarde
+resource: Colonne de feu | 3/jour | pouvoir magique, Réflexes DD 21
+resource: Dissipation suprême | 3/jour | pouvoir magique, test de dissipation à +17
+resource: Flétrissure | 3/jour | pouvoir magique, Vigueur DD 24
+resource: Ténèbres maudites | 3/jour | pouvoir magique, Volonté DD 20
+resource: Destruction | 1/jour | pouvoir magique, Vigueur DD 23, effet partiel en cas de réussite
+resource: Absorption d'énergie | 1/jour | pouvoir magique, rayon ; DD 25 pour les sauvegardes ultérieures contre les niveaux négatifs
+
+step: Il repère les intrus avant d'être engagé
+  do: Se placer sur un terrain où son espace de 6 m reste praticable et où son allonge couvre leur approche ; repérer une voie de retraite.
+  note: Conserver son armure. Il ne dispose d'aucun pouvoir préparatoire explicitement détaillé dans ce profil ; éviter de gaspiller ses pouvoirs offensifs avant d'avoir des cibles.
+
+## Ouverture
+
+step: Plusieurs ennemis vivants sont à découvert et hors de son allonge
+  do: Lancer flétrissure sur plusieurs cibles, Vigueur DD 24, puis avancer pour menacer leur approche.
+  note: C'est une option d'ouverture ; choisir plutôt une autre action ci-dessous si les protections ou le placement des ennemis le justifient.
+
+step: Une protection magique visible compromet ses attaques ou son absorption d'énergie
+  do: Employer dissipation suprême sur le porteur de cette protection avant de concentrer ses coups sur lui.
+  note: Le test de dissipation est de +17 ; la protection n'est pas automatiquement supprimée.
+
+step: Plusieurs adversaires vulnérables à la peur tiennent dans un cône de 9 m
+  do: Lancer terreur, Volonté DD 20, pour disperser le groupe et isoler une victime.
+  note: Un ennemi qui réussit sa sauvegarde est seulement secoué pendant 1 round ; ne pas supposer que tout le groupe fuit.
+
+step: Une cible prioritaire est déjà à portée de mêlée
+  do: Faire une attaque à outrance avec l'arme utilisée, en concentrant les coups sur elle.
+  note: L'épée à deux mains offre de lourds dégâts et le saignement. Privilégier un adversaire vivant que l'absorption d'énergie peut affaiblir.
+
+## Rounds suivants
+
+step: La cible reste à portée
+  do: Répéter l'attaque à outrance ; effectuer au besoin un pas de placement de 1,50 m pour conserver l'allonge.
+  note: Après un déplacement ordinaire, faire une seule attaque ou employer un pouvoir magique au lieu d'une attaque à outrance. Un pouvoir magique et une attaque à outrance occupent normalement des tours distincts.
+
+step: La défense de la cible permet de sacrifier de la précision
+  do: Activer Attaque en puissance avec une arme tenue à deux mains : malus de -4 aux attaques et bonus de +12 aux dégâts.
+  note: Avec l'épée, cela donne +26/+21/+16 et 6d6+39. Renoncer à ce malus contre une CA élevée afin de multiplier les touches et les absorptions d'énergie.
+
+step: Plusieurs ennemis adjacents les uns aux autres sont dans son allonge après son déplacement
+  do: Employer Succession d'enchaînements pour attaquer successivement des adversaires différents tant que les attaques touchent et que les conditions du don restent réunies.
+  note: Cette action simple remplace l'attaque ordinaire ; elle réduit sa CA de 2 jusqu'à son prochain tour.
+
+step: Un adversaire provoque une attaque d'opportunité dans son allonge de 6 m
+  do: Le frapper grâce à Attaques réflexes ; réserver si possible une réaction aux lanceurs de sorts imprudents.
+  note: Sa Dextérité de 19 autorise jusqu'à 5 attaques d'opportunité par round, sans multiplier les attaques pour une même occasion. Immobilisation ne remplace une telle attaque par une manœuvre d'arrêt que pour un déplacement dans ses cases adjacentes, à 1,50 m.
+
+step: Un ennemi de taille inférieure bloque une issue qu'il faut ouvrir
+  do: Employer Coup fabuleux, par une action simple et un test de manœuvre à +35, pour repousser de 3 m et renverser une cible corporelle plus petite que lui.
+  note: Pour traverser plutôt la position d'un adversaire, utiliser le renversement à +39 ; Renversement supérieur permet une attaque d'opportunité contre une victime mise à terre.
+
+step: Une victime dangereuse reste à distance et paraît vulnérable aux niveaux négatifs
+  do: Employer le pouvoir quotidien absorption d'énergie : rayon de contact à distance +15, infligeant 2d4 niveaux négatifs s'il touche.
+  note: Aucun jet de sauvegarde n'annule l'effet initial ; Vigueur DD 25 intervient après 24 heures pour chaque niveau négatif. Éviter les morts-vivants, que ce rayon renforce.
+
+step: Un ennemi isolé doit être éliminé immédiatement
+  do: Tenter destruction, Vigueur DD 23, de préférence contre une cible dont la Vigueur semble faible.
+  note: Garder cette utilisation pour une cible décisive plutôt que la dépenser contre un adversaire secondaire.
+
+step: Une cible emploie une fuite ou des déplacements extradimensionnels
+  do: Lui lancer ancre dimensionnelle, rayon de contact à distance +15, puis la poursuivre avec ses attaques ou ses autres pouvoirs.
+  note: Ce pouvoir bloque les déplacements extradimensionnels ; il ne bloque pas un déplacement terrestre ordinaire.
+
+step: Les adversaires se dispersent ou évitent la mêlée
+  do: Employer chaîne d'éclairs contre des cibles réparties, Réflexes DD 22 ; cône de froid contre un groupe dans un cône de 18 m, Réflexes DD 21 ; ou colonne de feu contre un petit regroupement, Réflexes DD 21.
+  note: Choisir l'énergie d'après les résistances observées. Ténèbres maudites, Volonté DD 20, convient surtout aux adversaires bons ; les créatures mauvaises y sont immunisées.
+
+step: Les pouvoirs appropriés sont épuisés ou un ennemi reste inaccessible
+  do: Lancer un rocher à +15 pour 4d6+24 dégâts, en restant près d'un obstacle contre les ripostes.
+  note: Utiliser la réception de rochers contre les projectiles auxquels cette défense s'applique.
+
+## Repli
+
+step: Il tombe sous 60 pv et une issue reste praticable
+  do: Si les poursuivants sont regroupés, consacrer un tour à terreur, Volonté DD 20, puis se replier ; sinon se retirer immédiatement derrière un obstacle.
+  note: Se déplacer de 13,50 m avec une action de mouvement, ou de 27 m avec un double déplacement. Utiliser l'action de retraite pour limiter les attaques d'opportunité lorsque la situation le permet.
+
+step: La retraite est bloquée
+  do: Dégager l'issue par Coup fabuleux ou renversement, puis fuir au tour suivant ; si aucune échappée n'est possible, concentrer ses coups sur l'ennemi le plus affaibli.
+  note: La vitesse de 18 m concerne uniquement le gigas sans armure ; enlever son harnois ne constitue pas une manœuvre de fuite immédiate.

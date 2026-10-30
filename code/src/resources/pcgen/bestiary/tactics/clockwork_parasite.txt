@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Parasite mécanique de taille TP, construit neutre sans Intelligence : 22 pv, CA 14, déplacement de 6 m. Vision dans le noir à 18 m et vision nocturne ; immunités des créatures artificielles.
+  Morsure +7 (1d4+1), allonge de 0 m. Il anime un cadavre en s'y fixant et récupère 1 pv par round par réparation automatique.
+
+step: Un cadavre est disponible
+  do: S'enfouir à la base de son crâne et s'y fixer avec les pinces pour l'animer par Contrôle de l'hôte
+  note: L'hôte conserve ses DV, son bonus de base à l'attaque, ses sauvegardes, ses pv, sa CA, ses attaques naturelles et ses maîtrises d'armes et d'armures. Sa Sagesse devient 10, son Charisme 1 et son Intelligence disparaît ; il perd compétences, dons, aptitudes de classe et incantation.
+  note: Détection des morts-vivants et détection de la magie ne révèlent ni le parasite ni l'hôte. Le contrôle exige le maintien du contact.
+
+## Ouverture
+
+step: Le parasite contrôle déjà un hôte
+  do: Engager l'ennemi avec les attaques naturelles de l'hôte ou une arme qu'il maîtrise
+  note: Employer les valeurs de l'hôte, en retirant les effets des dons et aptitudes perdus ; la morsure +7 du parasite ne remplace pas les attaques de l'hôte.
+
+step: Le parasite est sans hôte et un adversaire est accessible
+  do: Se déplacer jusqu'à 6 m pour entrer dans la case de l'adversaire, puis porter une morsure +7 (1d4+1)
+  note: Son allonge de 0 m impose de partager la case de sa cible pour la mordre. Entrer dans cette case peut provoquer une attaque d'opportunité.
+
+## Rounds suivants
+
+step: Le contact avec l'hôte est maintenu
+  do: Poursuivre les attaques de l'hôte
+  note: Le pouvoir anime un cadavre ; il ne permet pas de prendre le contrôle d'un adversaire vivant.
+
+step: Le parasite combat sans hôte
+  do: Rester dans la case d'une cible et répéter la morsure +7 (1d4+1)
+
+step: Le parasite a subi des dégâts
+  do: Lui rendre 1 pv par round par réparation automatique, jusqu'à son maximum de 22 pv
+  note: Les dégâts d'acide, de froid et de feu ne peuvent pas être réparés par cette capacité. Cette réparation concerne le parasite, pas son hôte.
+
+## Repli
+
+note: Comportement
+  Sans Intelligence, le parasite ne prépare pas de retraite élaborée ni de négociation.
+
+step: Le parasite est exposé et un cadavre est accessible
+  do: Rejoindre le cadavre et s'y fixer pour reprendre le combat à travers un hôte
+
+step: Le parasite tombe à 0 pv ou moins
+  do: Continuer à appliquer la réparation automatique de 1 pv par round
+  note: Elle fonctionne même à 0 pv ou moins, mais ne répare toujours pas les dégâts d'acide, de froid ou de feu.

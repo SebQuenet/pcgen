@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Baleine bleue, animal colossal neutre, FP 12 ; 184 pv, CA 26. Généralement paisible, elle combat pour écarter une menace, sans considérer les humanoïdes comme des proies.
+  Coup de queue +21 (8d6+24 et étourdissement) ; espace occupé et allonge de 9 m ; nage à 12 m par action de mouvement.
+  Perception +27, vision nocturne, Natation +35 ; elle retient son souffle pour plonger et doit revenir respirer en surface.
+
+step: Aucune menace immédiate
+  do: Continuer à nager et à se nourrir, ou s'éloigner des intrus.
+  note: Son intelligence animale favorise les réactions simples : fuir une blessure ou repousser l'agresseur le plus proche.
+
+step: Une menace approche
+  do: La repérer avec Perception +27 et conserver assez d'eau libre pour tourner et plonger.
+
+## Ouverture
+
+step: Un agresseur est à 9 m ou moins
+  do: Frapper avec la queue, +21, pour 8d6+24 dégâts et l'effet d'étourdissement indiqué dans le profil.
+  note: Viser celui qui la blesse ou lui barre le passage ; chaque coup vise une seule cible.
+
+step: Un agresseur à distance impose le combat
+  do: Nager d'au plus 12 m, puis donner un coup de queue si la cible est désormais dans son allonge de 9 m.
+  note: Si la cible reste hors de portée, employer les deux actions de mouvement pour nager jusqu'à 24 m, sans attaquer ce round.
+
+## Rounds suivants
+
+step: L'agresseur reste à portée et continue d'attaquer
+  do: Répéter le coup de queue +21 (8d6+24 et étourdissement).
+  note: Elle ne dispose que d'une attaque naturelle ; rester immobile ne lui donne pas plusieurs coups de queue.
+
+step: Une cible facile à toucher persiste au contact
+  do: Activer Attaque en puissance avant le jet : coup de queue +17, dégâts 8d6+36 et étourdissement.
+  note: Le malus de 4 aux attaques et aux manœuvres dure jusqu'au prochain tour ; conserver l'attaque normale contre une cible difficile à toucher.
+
+step: Un adversaire corporel plus petit qu'elle lui bloque la fuite
+  do: Sans Attaque en puissance, utiliser Coup fabuleux en action simple : manœuvre +36 contre sa DMD pour lui infliger les dégâts du coup, le repousser de 3 m en ligne droite et le renverser.
+  note: Choisir une direction qui dégage le passage, puis employer son mouvement pour s'éloigner.
+
+step: L'adversaire cesse d'être une menace
+  do: Rompre le combat et reprendre de la distance en eau libre.
+
+## Repli
+
+step: Points de vie à 46 ou moins, ou possibilité de quitter un combat inutile
+  do: Se retirer vers les profondeurs ; l'action de retraite permet de nager jusqu'à 24 m.
+  note: La retraite évite les attaques d'opportunité dues au départ de sa position initiale, mais pas celles provoquées en traversant d'autres espaces menacés.
+
+step: Points de vie négatifs, mais supérieurs à -25
+  do: Utiliser Dur à cuire pour rester consciente et consacrer son unique action de mouvement à nager de 12 m vers la sécurité.
+  note: Elle se stabilise automatiquement ; une action simple lui coûte encore 1 pv. À -25 pv, elle meurt.

@@ -1,0 +1,86 @@
+## Avant le combat
+
+note: Profil
+  Fisherman, Extérieur aquatique de taille G, loyal mauvais, intelligent et amphibie. 202 PV, CA 21 ; déplacement terrestre de 12 m et nage de 9 m par round ; allonge de 3 m.
+  Trident +25/+20/+15 (2d6+13) ou gaffe +25/+20/+15 (1d8+13) ; filet +16, qui enchevêtre. Le trident est son meilleur choix pour infliger des dégâts.
+  Réduction des dégâts 15/magie, immunité au froid, résistances à l'électricité et au feu de 10, résistance à la magie 26. Liberté de mouvement permanente sous l'eau ; vision dans le noir à 18 m.
+
+resource: Convocation d'alliés naturels V | 1/jour | pouvoir magique, NLS 15
+resource: Exécution | 2 | NLS 9, contact au corps à corps +23, Vigueur DD 20 pour réduire les dégâts
+resource: Ténèbres maudites | 1 | NLS 9, Volonté DD 19
+resource: Malédiction | 1 | NLS 9, contact au corps à corps +23, Volonté DD 18
+resource: Contrôle de l'eau | 1 | NLS 9
+resource: Cercle magique contre le Bien | 1 | NLS 9
+resource: Immunité contre les sorts | 1 | NLS 9
+resource: Silence | 1 | NLS 9, Volonté DD 17 si lancé sur une créature réticente
+resource: Brume de dissimulation | 1 | NLS 9
+resource: Sanctuaire | 1 | NLS 9, Volonté DD 16 pour l'attaquer
+
+step: Des intrus approchent
+  do: Choisir une position dans l'eau, près d'un accès étroit, pour recevoir les ennemis à 3 m avec son trident
+  note: Sa veille sur la mort permanente renseigne sur l'état vital des créatures ; il s'en sert pour choisir une cible déjà affaiblie.
+
+step: Il prévoit un combat contre des adversaires bons
+  do: Lancer cercle magique contre le Bien avant leur arrivée
+
+step: Il connaît les sorts employés par ses adversaires et dispose de temps
+  do: Lancer immunité contre les sorts en désignant deux sorts précis de niveau 4 ou inférieur auxquels ce sort peut l'immuniser
+
+## Ouverture
+
+step: Les ennemis sont encore assez loin pour lui laisser préparer un allié
+  do: Utiliser convocation d'alliés naturels V pour appeler une créature autorisée par le sort et adaptée au milieu
+  note: L'allié occupe un adversaire pendant que le Fisherman garde l'accès à l'eau.
+
+step: Plusieurs adversaires bons sont regroupés
+  do: Lancer ténèbres maudites sur leur groupe, Volonté DD 19
+  note: Les créatures mauvaises sont immunisées ; les créatures neutres subissent des effets réduits.
+
+step: Une cible dangereuse et déjà blessée est à portée de contact
+  do: Lancer exécution et porter l'attaque de contact à +23, Vigueur DD 20
+  note: Le sort inflige des dégâts ; une sauvegarde réussie les réduit. Garder la seconde utilisation pour une autre occasion favorable.
+
+step: Un adversaire mobile se trouve à 3 m et doit être ralenti
+  do: Lancer le filet avec une attaque de contact à distance à +16 pour l'enchevêtrer
+  note: Le filet sert à entraver une cible ; il faut le récupérer pour le réutiliser.
+
+## Rounds suivants
+
+step: Un ennemi reste à portée et aucun déplacement important n'est nécessaire
+  do: Attaquer à outrance au trident, +25/+20/+15, chaque coup infligeant 2d6+13
+  note: Profiter de l'allonge de 3 m et des attaques d'opportunité que provoquent les déplacements adverses.
+
+step: Il doit se déplacer pour atteindre sa cible
+  do: Se repositionner puis porter une attaque au trident avec Frappe décisive
+  note: Frappe décisive renforce cette attaque unique ; elle ne s'applique pas aux trois attaques d'une attaque à outrance.
+
+step: Plusieurs ennemis sont adjacents entre eux et dans son allonge
+  do: Utiliser Succession d'enchaînements au trident pour frapper successivement les cibles accessibles
+  note: Chaque coup doit toucher pour poursuivre l'enchaînement ; sa CA baisse de 2 jusqu'à son prochain tour.
+
+step: Un adversaire résistant doit être affaibli pour la suite du combat
+  do: Lancer malédiction au contact à +23, Volonté DD 18, et choisir la pénalité de -4 aux attaques, sauvegardes et tests
+
+step: Un lanceur de sorts dépend de composantes verbales
+  do: Lancer silence sur lui, Volonté DD 17, puis exploiter la gêne pour engager le combat au trident
+  note: Le silence s'étend à 6 m autour de la cible et gêne aussi les propres sorts à composante verbale du Fisherman s'il entre dans cette zone.
+
+step: Le niveau de l'eau peut rendre l'accès à sa position plus difficile
+  do: Utiliser contrôle de l'eau pour modifier le niveau et favoriser un affrontement dans une zone immergée
+  note: Sous l'eau, sa liberté de mouvement et son caractère amphibie lui permettent de prolonger le combat dans son élément.
+
+step: Une ouverture permet d'achever une cible importante
+  do: Employer la seconde exécution si elle reste disponible, contact +23 et Vigueur DD 20
+
+## Repli
+
+step: Ses PV tombent à 50 ou moins, ou plusieurs ennemis traversent facilement ses défenses
+  do: Gagner l'eau profonde à la nage, à 9 m par déplacement ; s'il est encore sur la berge ou à la surface, lancer d'abord brume de dissimulation pour couper la vue
+  note: Il conserve sous l'eau sa liberté de mouvement ; un allié convoqué encore présent peut occuper les poursuivants.
+
+step: La poursuite continue et il peut consacrer une action à sa protection
+  do: Lancer sanctuaire, DD 16, puis poursuivre sa fuite en cessant les attaques
+  note: Une action offensive met fin à la protection.
+
+step: Ses PV deviennent négatifs et il est encore vivant
+  do: Utiliser Dur à cuire pour rester conscient et consacrer son action limitée au déplacement vers une issue immergée

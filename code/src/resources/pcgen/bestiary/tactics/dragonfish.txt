@@ -1,0 +1,38 @@
+## Avant le combat
+
+note: Profil
+  Dragonfish, petit poisson aquatique solitaire et peu agressif ; 9 pv, CA 16, nage à 6 m par déplacement.
+  Morsure +2 (1d4), allonge de 1,50 m. Ses épines dorsales assurent sa défense et transmettent son poison.
+
+step: Aucune menace immédiate
+  do: Rester immobile sur le fond, en eau peu profonde, et laisser les intrus approcher
+  note: Camouflage : Perception DD 20 pour reconnaître le poisson immobile ; Discrétion +10 pour se cacher
+
+resource: Poison des épines | passif | blessure ; Vigueur DD 11 ; fréquence 1/round pendant 6 rounds ; effet 1d2 Constitution ; guérison après 1 sauvegarde réussie
+
+## Ouverture
+
+step: Une créature lui marche dessus ou le frappe à mains nues ou avec une arme naturelle
+  do: Appliquer les épines : 1d4 dégâts perforants et exposition au poison
+  note: Une créature qui lui marche dessus pendant une charge ou une course s'arrête immédiatement. Si les dégâts d'épine dépassent 2, sa vitesse est réduite de moitié jusqu'au retrait de l'épine.
+
+step: Contraint de combattre un adversaire à 1,50 m ou moins
+  do: Mordre à +2 (1d4)
+
+## Rounds suivants
+
+step: L'adversaire reste au contact et l'empêche de fuir
+  do: Répéter la morsure +2 (1d4)
+  note: Appliquer les épines à chaque nouveau contact déclencheur ; les coups portés avec une arme de mêlée n'exposent pas leur utilisateur aux épines
+
+step: Une victime subit encore le poison
+  do: Résoudre son jet de Vigueur DD 11 à chaque round prévu, jusqu'à guérison ou fin des 6 rounds
+
+step: Les intrus s'éloignent
+  do: Les laisser partir et reprendre sa position immobile sur le fond
+
+## Repli
+
+step: Points de vie à 4 ou moins, ou possibilité de quitter un combat dangereux
+  do: Se retirer vers un abri aquatique ; au contact, utiliser l'action de retraite pour nager jusqu'à 12 m
+  note: Une fois à couvert et hors de vue, s'immobiliser de nouveau pour profiter du camouflage

@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Ceru, bête magique de taille TP, neutre bonne et intelligente, des villes du Vudra. Il privilégie l'évitement et ne se bat que pour se défendre ou protéger autrui.
+  Coup de corne +7 (1d3-1 plus poison) ; allonge 0 m : il doit entrer dans la case de sa cible pour l'attaquer. Déplacement 6 m ; 22 pv ; CA 16 ; initiative +6.
+  Guérison accélérée 2 ; immunité au poison ; résistances à l'acide 5 et à l'électricité 5 ; résistance à la magie 13.
+
+resource: Détection de la magie | constant | NLS 6 ; se concentrer pour examiner les auras
+resource: Manipulation à distance | à volonté | NLS 6 ; déplacer de petits objets non magiques laissés sans surveillance
+resource: Guérison accélérée | permanent | récupère 2 pv au début de chacun de ses tours, jusqu'à 22 pv
+
+step: Des inconnus approchent sans hostilité manifeste
+  do: Observer depuis un couvert avec Discrétion +15 et Perception +6 ; chercher une issue avant de s'exposer
+  note: Vision dans le noir à 18 m et vision nocturne. Il comprend le commun mais ne peut pas parler ; il communique par gestes.
+
+step: Un petit objet accessible permet d'attirer l'attention loin de sa cachette
+  do: Employer manipulation à distance depuis l'abri pour déplacer cet objet
+  note: Ce pouvoir ne constitue pas une attaque et n'inflige aucun état préjudiciable à lui seul.
+
+## Ouverture
+
+step: Un adversaire adjacent l'oblige à combattre
+  do: Faire un pas de placement de 1,50 m dans la case adverse, puis porter un coup de corne +7 (1d3-1 plus poison)
+  note: Le pas de placement évite l'attaque d'opportunité normalement provoquée en entrant dans la case ennemie par un déplacement ordinaire.
+
+step: L'adversaire est plus loin et ne menace personne qu'il doit protéger
+  do: Gagner un couvert ou une issue à 6 m par action de mouvement
+  note: Il ne dispose d'aucune attaque à distance ; éviter une approche à découvert.
+
+## Rounds suivants
+
+step: La cible partage toujours sa case et le combat reste nécessaire
+  do: Répéter le coup de corne +7 (1d3-1 plus poison), en privilégiant l'adversaire qui menace directement le ceru ou son protégé
+  note: Le profil fourni ne précise ni le DD ni les effets du poison ; ne pas lui attribuer d'effet chiffré supplémentaire.
+
+step: La cible quitte sa case
+  do: Ne la rejoindre que si cela reste nécessaire ; depuis une case adjacente, privilégier un pas de placement de 1,50 m avant d'attaquer
+  note: Avec une allonge de 0 m, le ceru ne menace pas les cases voisines et ne porte normalement pas d'attaques d'opportunité.
+
+## Repli
+
+step: Points de vie à 8 ou moins, ou menace devenue trop dangereuse
+  do: Effectuer un retrait jusqu'à 12 m vers un couvert, puis se dissimuler dès que le terrain le permet avec Discrétion +15
+  note: Le retrait protège seulement la sortie de sa case initiale contre les adversaires visibles ; éviter de traverser d'autres cases menacées.
+
+step: Il a rompu le contact
+  do: Rester à couvert et laisser sa guérison accélérée rendre 2 pv par round
+  note: Ne pas reprendre le combat si les agresseurs cessent de menacer le ceru ou ceux qu'il protège.

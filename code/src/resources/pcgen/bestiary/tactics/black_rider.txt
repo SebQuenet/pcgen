@@ -1,0 +1,82 @@
+## Avant le combat
+
+note: Profil
+  Cavalier noir, fée loyale neutre de FP 13 et héraut de Baba Yaga ; il prononce ses jugements de nuit, sous une apparence effrayante.
+  Lance +2 de froid intense +18/+13 : 1d8+11, critique 19-20/x3, plus 1d6 de froid ; explosion de 2d10 de froid supplémentaires sur un critique confirmé. Allonge 1,50 m ; charges montées et pouvoirs de froid.
+  171 pv ; CA 29 ; réduction des dégâts 10/fer froid ; résistance à la magie 24 ; immunité au froid et au poison. Déplacement à pied 9 m ; vision dans le noir à 18 m.
+
+resource: Détection de l'invisibilité | permanent | repère les créatures invisibles dans son champ de vision
+resource: Invocation de monture | à volonté | action simple ; coursier fantôme, NLS 13, durée 13 heures ; déplacement 30 m ; ne combat pas
+resource: Contact glacial | à volonté | Vigueur DD 16
+resource: Détection des pensées | à volonté | Volonté DD 17
+resource: Zone de vérité | à volonté | Volonté DD 17
+resource: Ténèbres profondes | 5/jour | rayon de 18 m autour d'un objet touché ; durée 130 minutes
+resource: Tempête de grêle | 5/jour | rayon de 6 m ; 3d6 contondants et 2d6 de froid, sans sauvegarde ; terrain difficile pendant 13 rounds
+resource: Cône de froid | 3/jour | cône de 18 m ; 13d6 de froid ; Réflexes DD 20, moitié
+resource: Poussière du crépuscule | 3/jour | rayon de 3 m ; éteint les éclairages ordinaires ; Vigueur DD 17 ou fatigue
+resource: Folie lunaire | 3/jour | un humanoïde ; Volonté DD 19 ; durée 13 rounds
+resource: Manteau de rêves | 1/jour | aura de 1,50 m ; Volonté DD 21 ; durée 13 rounds
+
+step: Il peut choisir le lieu et l'heure de l'affrontement
+  do: Agir de nuit ; invoquer sa monture et choisir un terrain offrant une ligne de charge dégagée et une sortie
+  note: Discrétion +26 pour approcher à couvert ; Perception +25 et détection de l'invisibilité pour repérer les guetteurs
+
+step: Il peut observer ou interroger les futurs adversaires
+  do: Employer détection des pensées pour examiner leurs intentions, ou zone de vérité lors d'un interrogatoire
+  note: Psychologie +25 aide à évaluer leurs réponses ; la télépathie fonctionne à 18 m
+
+step: Le contact est imminent et il prévoit de rester en mêlée
+  do: Activer manteau de rêves juste avant l'engagement
+  note: Les créatures vivantes qui commencent leur tour ou terminent leur déplacement à 1,50 m doivent réussir Volonté DD 21 ou dormir 1 minute ; recommencer le jet à chaque exposition prévue par le pouvoir
+
+## Ouverture
+
+step: Plusieurs ennemis sont regroupés à distance
+  do: Placer une tempête de grêle sur eux pour les blesser et gêner leur approche
+  note: Les dégâts surviennent seulement au lancement ; conserver une voie libre pour ses propres charges
+
+step: Plusieurs ennemis peuvent être pris dans un cône de 18 m et résistent peu au froid
+  do: Privilégier cône de froid pour infliger immédiatement 13d6 de froid, Réflexes DD 20 pour moitié
+
+step: Une cible prioritaire est isolée et une charge montée est possible
+  do: Charger à la lance avec Charge dévastatrice, puis poursuivre le déplacement grâce à Attaque au galop
+  note: Attaque +20 grâce à la charge ; dégâts de l'arme doublés, dés supplémentaires de froid non multipliés ; CA 27 jusqu'au prochain tour. Poursuivre en ligne droite, sans dépasser le déplacement total autorisé par la charge
+
+## Rounds suivants
+
+step: Un adversaire reste à 1,50 m et il peut consacrer son round aux attaques
+  do: Effectuer l'attaque à outrance à la lance, +18/+13, et concentrer les coups sur une même cible
+  note: Aura glaciale à 3 m : Vigueur DD 24 ou ralentissement tant que la victime demeure dans l'aura, puis pendant 1 round après sa sortie
+
+step: La cible possède une CA assez faible pour accepter une moindre précision
+  do: Employer Attaque en puissance à deux mains : lance +15/+10, dégâts 1d8+20, plus le froid
+
+step: Deux ennemis sont adjacents entre eux et tous deux à portée de la lance
+  do: Utiliser Enchaînement en action simple : attaque +18, puis une seconde attaque +18 sur l'autre si la première touche
+  note: CA réduite de 2 jusqu'au prochain tour ; choisir cette option lorsqu'une attaque à outrance est impossible
+
+step: Un lanceur de sorts humanoïde reste dangereux à distance
+  do: Employer folie lunaire, Volonté DD 19, puis attaquer ses compagnons
+  note: Sur un échec, la cible est hébétée au premier round et lâche ses objets ; elle subit ensuite rage et confusion, privilégiant ses attaques naturelles. Elle est de nouveau hébétée au dernier round
+
+step: Des ennemis regroupés s'appuient sur leurs éclairages ou doivent encore parcourir du terrain
+  do: Employer poussière du crépuscule pour éteindre les lumières ordinaires et infliger la fatigue, Vigueur DD 17
+  note: La fatigue empêche de courir et de charger ; sa vision dans le noir reste utile dans l'obscurité ordinaire
+
+step: La monture est touchée
+  do: Utiliser Combat monté et Équitation +26 pour tenter d'annuler le coup
+  note: Une fois par round, en action immédiate ; le résultat d'Équitation doit dépasser le jet d'attaque adverse
+
+step: Un adversaire s'endort sous manteau de rêves
+  do: Reporter les attaques sur les ennemis encore actifs pour conserver cet avantage
+  note: Blesser un dormeur le réveille ; un allié peut aussi le réveiller par une action simple
+
+## Repli
+
+step: Points de vie sous 45 et la poursuite du combat compromet sa mission
+  do: Rompre le contact, puis s'éloigner sur sa monture ; employer une tempête de grêle pour entraver les poursuivants si une utilisation reste disponible
+  note: Ce seuil est un choix tactique ; il dispose de 171 pv au départ. Sans monture, chercher un couvert avant d'en invoquer une nouvelle en action simple
+
+step: Il peut masquer sa fuite par les ténèbres
+  do: Employer ténèbres profondes sur un objet accessible pour couper la vue des poursuivants, puis gagner une issue repérée
+  note: Dans une zone initialement sombre ou faiblement éclairée, ces ténèbres deviennent surnaturelles : sa propre vision dans le noir et détection de l'invisibilité ne permettent pas d'y voir

@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Imposteur androïde, guerrier 6 des plaines froides de Numérie, qui se fait passer pour un barbare kellide et simule une rage au combat.
+  55 PV, CA 16 ; déplacement 9 m, allonge 1,50 m ; vision dans le noir à 18 m. Grande hache +1 : +12/+7 (1d12+8, x3) ; arc long composite de maître : +7/+2 (1d8+3, x3) ; hache de lancer : +7 (1d6+4).
+  Immunisé aux maladies, aux effets fondés sur les émotions, à l'épuisement, à la fatigue, à la peur et au sommeil.
+
+resource: Potion de force de taureau | 1 | bonus d'altération de +4 en Force ; Force 20 pendant l'effet
+resource: Potions de soins légers | 2 | à boire à couvert pour récupérer des PV
+resource: Feux grégeois | 2 | projectiles à dispersion ; éviter les alliés proches de la cible
+resource: Flèches | 20 | pour l'arc long composite de maître
+
+step: Il prépare son identité d'emprunt
+  do: Utiliser sa trousse de déguisement pour masquer sa peau pâle et ses iris métalliques ; dissimuler ses circuits sous des tatouages tribaux
+  note: Déguisement +8, Bluff +8 ; il cherche à se couvrir du sang adverse pour cacher la pâleur du sien lorsqu'il est blessé.
+
+step: Un affrontement est imminent et il dispose d'un moment à l'abri
+  do: Boire la potion de force de taureau, puis préparer sa grande hache
+
+## Ouverture
+
+step: Il peut rejoindre un ennemi avec un déplacement de 9 m au maximum
+  do: Avancer au contact et porter une attaque de grande hache avec Attaque en puissance : +10 (1d12+14, x3), ou +12 (1d12+17, x3) sous force de taureau
+  note: Il joue le berserker pour entretenir sa couverture ; cette mise en scène ne lui confère aucun pouvoir de rage.
+
+step: Les ennemis restent hors d'atteinte de mêlée
+  do: Utiliser l'arc long composite : une attaque à +7 après un déplacement, ou deux attaques à +7/+2 s'il reste sur place ; dégâts 1d8+3, x3
+  note: Privilégier une cible dégagée ; passer à la grande hache quand l'ennemi approche. La potion n'augmente pas les dégâts de cet arc composite.
+
+## Rounds suivants
+
+step: Une cible reste au contact
+  do: Effectuer une attaque à outrance à la grande hache avec Attaque en puissance : +10/+5 (1d12+14, x3), ou +12/+7 (1d12+17, x3) sous force de taureau
+  note: Se limiter à un pas de placement de 1,50 m pour conserver les deux attaques ; concentrer les coups sur le même adversaire.
+
+step: Une cible à 3 m peut être frappée sans déplacement important
+  do: Utiliser le don Lunge pour porter l'allonge de ses attaques de mêlée à 3 m jusqu'à la fin de son tour
+  note: Décider avant les attaques ; sa CA tombe à 14 jusqu'à son prochain tour. Son allonge revient à 1,50 m après son tour ; éviter ce risque s'il est encerclé.
+
+step: Les attaques échouent régulièrement contre une armure solide
+  do: Renoncer à Attaque en puissance au prochain tour : grande hache +12/+7 (1d12+8, x3), ou +14/+9 (1d12+11, x3) sous force de taureau
+
+step: Plusieurs ennemis sont regroupés hors du contact de ses alliés
+  do: Si un lancer est possible sans s'exposer aux attaques d'opportunité, utiliser un feu grégeois pour les atteindre par dispersion
+
+## Repli
+
+step: Il reste à 15 PV ou moins et ne peut pas terminer rapidement le combat
+  do: Utiliser l'action de retraite pour gagner un couvert, jusqu'à 18 m sur terrain dégagé
+  note: Seule la case de départ est protégée des attaques d'opportunité par cette action ; choisir un trajet qui évite les autres ennemis.
+
+step: Il a rompu le contact et peut se soigner à l'abri
+  do: Boire une potion de soins légers, puis la seconde si nécessaire ; poursuivre la fuite si les poursuivants approchent

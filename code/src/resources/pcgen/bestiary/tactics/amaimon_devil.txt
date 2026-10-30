@@ -1,0 +1,60 @@
+## Avant le combat
+
+note: Profil
+  Diable de taille G, loyal mauvais, intelligent et manipulateur ; 94 pv, CA 23. Déplacement de 12 m, espace et allonge de 3 m.
+  Attaque à outrance : 2 griffes +16 (1d8+7 chacune) et morsure +15 (2d6+7). Son souffle en cône de 12 m inflige 4d6 de feu et 2d6 de dégâts de Constitution, DD 21 Réflexes.
+  Aura de terreur à 3 m, DD 15 Volonté. Vision dans le noir à 18 m et télépathie à 30 m.
+  Immunisé au feu et au poison ; résistance à l'acide 10 et au froid 10 ; réduction des dégâts 10/argent et résistance à la magie 19.
+
+resource: Souffle | réutilisable après 1d4 rounds | cône de 12 m ; 4d6 de feu et 2d6 de Constitution ; DD 21 Réflexes
+resource: Pouvoirs magiques | à volonté | NLS 10 ; téléportation suprême, image majeure (DD 14), protection contre le Bien, mur de feu (DD 15)
+resource: Convocation | 1/jour | choisir 2d10 lémures avec 50 % de réussite ou 1 amaimon avec 35 % de réussite ; une seule tentative
+
+step: Les intrus sont repérés avant l'affrontement
+  do: Lancer protection contre le Bien, puis tenter la convocation si le temps le permet
+  note: Choisir les lémures pour occuper le terrain, ou l'amaimon pour disposer d'un second combattant doté du même souffle ; un échec consomme la tentative quotidienne.
+
+step: Il peut préparer une embuscade
+  do: Employer image majeure pour présenter une fausse cible ou attirer les intrus dans un passage favorable au souffle
+  note: Préparer le leurre peu avant leur arrivée ; ne pas compter sur une illusion permanente. Coordonner les alliés présents par télépathie.
+
+## Ouverture
+
+step: Plusieurs adversaires peuvent être pris dans le cône de 12 m
+  do: Se placer pour les englober, puis souffler ; DD 21 Réflexes
+  note: Éviter les alliés dans le cône : leur éventuelle immunité au feu ne les protège pas des dégâts de Constitution.
+
+step: Les adversaires sont dispersés ou hors du cône
+  do: Dresser un mur de feu pour couper leur formation ou barrer un passage ; DD 15
+  note: Exploiter son immunité au feu pour traverser le mur et combattre auprès de lui.
+
+step: Une cible est déjà à portée et le souffle n'offre pas de meilleure occasion
+  do: Porter les deux griffes et la morsure en attaque à outrance
+  note: À 3 m ou moins, appliquer aussi l'aura de terreur, DD 15 Volonté.
+
+## Rounds suivants
+
+note: Priorités
+  Choisir chaque round entre souffle, pouvoir magique et attaque à outrance. Après un déplacement de plus de 1,50 m, porter une seule attaque de griffe si l'action disponible permet encore d'attaquer.
+
+step: Le souffle est de nouveau disponible et peut atteindre plusieurs ennemis ou une cible prioritaire
+  do: Souffler à nouveau ; rechercher un angle qui épargne les alliés
+  note: Tirer le délai de 1d4 rounds après chaque utilisation et suivre sa recharge.
+
+step: Le souffle recharge et une cible reste dans son allonge de 3 m
+  do: Effectuer l'attaque à outrance : 2 griffes +16 (1d8+7) et morsure +15 (2d6+7)
+  note: Contre une cible facile à toucher, activer Attaque en puissance : griffes +13 (1d8+13), morsure +12 (2d6+13).
+
+step: Les ennemis cherchent à l'encercler ou un adversaire vulnérable reste inaccessible
+  do: Utiliser mur de feu pour diviser les ennemis, ou téléportation suprême pour rejoindre une position favorable
+  note: La téléportation consomme son action ; reprendre l'offensive au round suivant. Elle ne transporte que lui-même et au maximum 50 livres d'objets, sans allié.
+
+## Repli
+
+step: Ses points de vie tombent à 30 ou moins, ou il ne peut plus soutenir l'affrontement
+  do: Utiliser téléportation suprême vers un lieu sûr connu
+  note: Partir avant de risquer d'être abattu ; les créatures convoquées ne peuvent pas l'accompagner par ce pouvoir.
+
+step: La téléportation est impossible
+  do: Dresser un mur de feu entre les poursuivants et lui, puis se déplacer de 12 m vers une issue
+  note: Passer lui-même à travers les flammes si cela ouvre la fuite.

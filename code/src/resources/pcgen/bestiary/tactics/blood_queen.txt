@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Reine sanglante, extérieur natif chaotique mauvais de taille Gig, FP 23 : une ancienne puissance vénérée par les kuru, à l'apparence de larve monstrueuse. Intelligente et cruelle, elle neutralise les intrus avant de les déchiqueter.
+  471 pv ; CA 38, contact 6 ; RM 34 ; RD 15/épique et loyal. Régénération 10, interrompue par les attaques bonnes. Immunités : maladie, électricité, effets mentaux, poison et son.
+  Morsure +29 (2d6+10), 5 dards +29 (2d6+10, critique 19–20, plus 2d6 électricité), 6 tentacules +24 (2d8+5, critique 19–20, étreinte). Allonge et espace occupé : 6 m ; déplacement : 3 m ; perception aveugle : 36 m ; télépathie : 30 m.
+
+resource: Suffocation de masse | 1/jour | action simple ; Vigueur DD 32 ; portée 24 m ; 11 créatures vivantes devant respirer, distantes de 9 m au maximum les unes des autres ; durée 23 rounds
+resource: Injonction suprême | 3/jour | action simple ; Volonté DD 28 ; portée 24 m ; jusqu'à 23 cibles distantes de 9 m au maximum les unes des autres ; durée 23 rounds
+resource: Appel cacophonique | 5/jour | action simple ; Volonté DD 25 ; une cible à 24 m au maximum ; nausée pendant 23 rounds
+resource: Ténèbres profondes | 5/jour | action simple ; objet touché ; rayon 18 m ; durée 230 minutes
+resource: Dissipation du Bien | 5/jour | action simple ; protection pendant 23 rounds ou jusqu'à décharge ; renvoi au toucher d'une créature bonne extraplanaire, Volonté DD 28
+resource: Blessure critique | 5/jour | action simple ; attaque de contact ; 4d8+20 dégâts, Volonté DD 27 pour réduire de moitié
+resource: Lien de sang | 3/jour | action simple ; jusqu'à 23 DV de kuru à 30 m d'elle ou d'un relais kuru ; Volonté DD 28 ; durée 1 minute
+
+step: Des intrus approchent
+  do: Observer par ses relais kuru et les attendre dans sa salle, en gardant ses relais hors du danger immédiat
+  note: Elle voit et entend par ses relais ; la mort de l'un d'eux la rend hébétée pendant 1 round. Dans son temple de Ganagsau, sa masse ne passe plus par les sorties.
+
+step: Elle a le temps de préparer sa position
+  do: Lancer ténèbres profondes sur un objet proche de sa position
+  note: La lumière baisse de deux degrés ; dans une zone initialement sombre ou faiblement éclairée, même la vision dans le noir devient inutile. Sa perception aveugle lui permet de combattre dans les ténèbres.
+
+step: Des kuru sont présents et le combat est imminent
+  do: Utiliser le lien de sang et leur ordonner par télépathie de gêner l'approche des intrus
+  note: Les kuru liés obéissent, gagnent +4 de moral en Force et Constitution et deviennent immunisés aux effets mentaux. À la rupture du lien, ils subissent 1 dégât d'Intelligence et ne peuvent être liés de nouveau pendant 24 heures.
+
+step: Des adversaires bons sont identifiés avant l'assaut
+  do: Activer dissipation du Bien juste avant leur arrivée
+  note: Elle gagne +4 de parade à la CA contre les attaques de créatures bonnes, tant que le pouvoir reste actif.
+
+## Ouverture
+
+step: Plusieurs ennemis vivants qui respirent sont groupés à 24 m ou moins
+  do: Employer suffocation de masse en priorité sur les ennemis dangereux et leurs soigneurs
+  note: Une réussite initiale en Vigueur DD 32 laisse la cible chancelante pendant 1 round. Après un échec initial, chaque échec suivant fait progresser la suffocation : inconscience à 0 pv, puis −1 pv et état mourant, puis mort. Les sauvegardes réussies retardent cette progression pendant les 23 rounds d'effet.
+
+step: La suffocation ne convient pas et plusieurs ennemis comprennent une même langue qu'elle parle
+  do: Employer injonction suprême avec l'ordre « Approchez » pour amener les tireurs et lanceurs de sorts dans son allonge
+  note: Tous reçoivent le même ordre ; Volonté DD 28 annule. Après leur premier tour d'obéissance, ils retentent une sauvegarde au début de chacun de leurs tours. Les déplacements imposés provoquent normalement des attaques d'opportunité.
+
+step: Une seule menace prioritaire reste à distance
+  do: Employer appel cacophonique sur le soigneur ou le lanceur de sorts
+  note: Une cible nauséeuse ne peut ni attaquer ni lancer de sorts ; elle ne conserve qu'une action de mouvement par tour. Éviter les cibles immunisées aux effets mentaux.
+
+## Rounds suivants
+
+step: Un ennemi dangereux se trouve à 6 m ou moins et elle peut rester sur place
+  do: Faire une attaque à outrance avec morsure, cinq dards et six tentacules ; concentrer les coups sur celui dont les attaques bonnes interrompent sa régénération
+  note: Les tentacules qui touchent permettent une tentative d'étreinte gratuite à +41, sans attaque d'opportunité, contre une cible de taille TG ou inférieure. Saisir en priorité un lanceur de sorts ; maintenir ensuite la lutte exige une action simple et remplace donc l'attaque à outrance de ce tour.
+  note: Les dards infligent leur électricité même sans critique. Sur un critique de morsure ou de dard, Critique sanglant ajoute 2d6 de saignement par round ; ces saignements se cumulent. Focalisation critique donne +4 aux confirmations de critique.
+
+step: Elle doit avancer pour atteindre une cible
+  do: Se déplacer de 3 m au maximum puis porter un seul coup de dard avec Frappe décisive : +29, 4d6+10 plus 2d6 électricité
+  note: Préférer attirer les ennemis par injonction suprême plutôt que poursuivre ceux qui restent hors d'atteinte.
+
+step: Les ennemis restent hors de son allonge
+  do: Alterner injonction suprême et appel cacophonique selon leurs résistances observées
+  note: Ne pas dépenser ses pouvoirs mentaux contre des créatures qui y sont immunisées. Contre un ennemi facile à toucher, Attaque en puissance peut renforcer ses attaques physiques, au prix de leur précision.
+
+step: Une créature bonne extraplanaire la menace au contact
+  do: Décharger une dissipation du Bien active par une attaque de contact pour tenter de la renvoyer, Volonté DD 28
+  note: Cette décharge met fin à la protection. Contre un adversaire ordinaire au contact, l'attaque à outrance est généralement préférable à blessure critique.
+
+## Repli
+
+step: Ses pv passent sous 120 ou des attaques bonnes interrompent régulièrement sa régénération
+  do: Employer injonction suprême avec l'ordre « Fuyez » sur les assaillants qui comprennent sa langue, ou appel cacophonique sur la menace principale ; se décaler de 3 m vers une position moins exposée
+  note: Ces choix occupent l'action simple ; elle ne fait pas aussi une attaque à outrance. Si les ténèbres ont été dissipées, les rétablir constitue une autre action simple possible.
+
+step: Les adversaires perdent le contact et cessent les attaques bonnes
+  do: Profiter du répit pour récupérer 10 pv par round par régénération, puis reprendre ses attaques à distance
+  note: Une attaque bonne suspend la régénération pendant le round suivant. Blessure critique ne la soigne pas.
+
+step: Le combat se déroule dans sa salle de Ganagsau et les ennemis maintiennent la pression
+  do: Tenir sa position dans les ténèbres et concentrer ses dernières attaques sur le porteur d'attaques bonnes
+  note: Elle est trop volumineuse pour quitter cette salle : son repli consiste à gagner du temps sur place, puis à combattre jusqu'à la destruction si les intrus ne cèdent pas.

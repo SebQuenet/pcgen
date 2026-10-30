@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Esobok, psychopompe neutre de taille M, prédateur brutal et peu intelligent qui recherche surtout les morts-vivants. Il chasse seul ou en meute et suit les directives d'un vanth présent.
+  30 PV, CA 15 ; déplacement de 12 m, allonge de 1,50 m. Morsure +6 (1d6+2 et étreinte), 2 griffes +6 (1d4+2) en attaque à outrance.
+  RD 2/adamantium ; résistances au froid 10 et à l'électricité 10 ; immunité aux effets de mort, maladies et poisons. Mangeur de morts le protège aussi des états nauséeux et fiévreux.
+
+resource: Invisibilité | 3/jour | lui-même uniquement ; NLS 4, durée maximale de 4 minutes ; cesse dès qu'il attaque
+resource: Détection des morts-vivants | permanent | repérage des proies mortes-vivantes
+
+step: Il recherche une proie
+  do: Exploiter la détection des morts-vivants, l'odorat et Survie +8 pour suivre les traces ; privilégier un mort-vivant accessible.
+  note: Perception des esprits à 18 m : il localise les créatures vivantes et mortes-vivantes, même invisibles, mais pas les objets. Vision dans le noir à 18 m et vision nocturne.
+
+step: Une proie est repérée et il peut préparer son approche
+  do: Activer invisibilité hors de portée des ennemis, puis approcher en utilisant les couverts et Discrétion +9.
+  note: L'invisibilité ne supprime ni ses bruits ni son odeur ; garder si possible une utilisation pour le repli.
+
+## Ouverture
+
+step: La proie est à plus de 1,50 m, mais accessible avec un déplacement de 12 m
+  do: Se déplacer jusqu'au contact puis porter une morsure +6 (1d6+2 et étreinte).
+  note: Depuis l'invisibilité, la première attaque bénéficie de +2 contre une cible qui ne le voit pas et ignore son bonus de Dextérité à la CA ; il redevient ensuite visible.
+
+step: La proie est déjà à portée sans déplacement, ou après un pas de placement de 1,50 m
+  do: Faire une attaque à outrance : morsure +6 (1d6+2), puis 2 griffes +6 (1d4+2).
+
+step: La morsure touche une créature de taille M ou inférieure
+  do: Tenter immédiatement l'étreinte par un test de lutte à +10 contre son DMD, en action libre et sans attaque d'opportunité.
+  note: Le bonus comprend le +4 de l'étreinte. En attaque à outrance, s'il engage la lutte avant ses griffes, celles-ci subissent le malus de lutte de -2.
+
+## Rounds suivants
+
+step: Il tient encore une proie et peut rester sur place
+  do: Consacrer son action simple à maintenir la lutte ; sur réussite, infliger les dégâts de morsure, 1d6+2.
+  note: Le maintien bénéficie de +5 si la proie ne s'est pas libérée depuis le tour précédent. Cette action ne permet pas aussi une attaque à outrance.
+
+step: Il n'est pas en lutte et un ennemi reste au contact
+  do: Répéter morsure et deux griffes ; en meute, chercher une prise en tenaille avec un allié.
+
+step: L'adversaire est facile à toucher et il privilégie les dégâts
+  do: Employer Attaque en puissance : morsure +4 (1d6+6), 2 griffes +4 (1d4+6).
+  note: Le malus de -2 dure jusqu'à son prochain tour et affecte aussi ses manœuvres offensives ; l'étreinte passe alors à +8.
+
+step: Un ennemi provoque une attaque d'opportunité à 1,50 m
+  do: Porter une morsure et tenter l'étreinte si elle touche.
+  note: Attaques réflexes permet jusqu'à 4 attaques d'opportunité par round, même pris au dépourvu ; une même occasion n'en donne qu'une.
+
+step: La proie est intangible
+  do: La poursuivre au contact et employer ses attaques naturelles.
+  note: Toucher spirituel donne à ses armes naturelles les effets de la propriété spectrale.
+
+## Repli
+
+step: Points de vie sous 8 et aucune proie ne peut être rapidement abattue
+  do: Libérer une éventuelle prise en action libre, puis faire une retraite vers un couvert, jusqu'à 24 m.
+  note: La retraite protège des attaques d'opportunité dues au départ de sa case initiale, pas de celles provoquées plus loin.
+
+step: Il a rompu le contact et dispose encore d'invisibilité
+  do: Au tour suivant, devenir invisible hors des cases menacées, puis poursuivre sa fuite à 12 m par déplacement.
+  note: Éviter d'attaquer pendant la fuite pour conserver l'invisibilité.

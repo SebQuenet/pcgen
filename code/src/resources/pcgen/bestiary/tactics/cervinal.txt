@@ -1,0 +1,87 @@
+## Avant le combat
+
+note: Profil
+  Cervinal, agathion de taille G, neutre bon : un chevalier de Nirvana au corps de grand cervidé, courageux et protecteur de ses alliés.
+  283 pv, CA 32 ; déplacement de 15 m, espace occupé de 3 m, allonge de 1,50 m. Arc long composite +3 : +29/+24/+19/+14, 1d8+13, critique x3 ; au contact, 2 coups +30 (1d6+10) et 2 sabots +25 (2d6+5).
+  RD 10, surmontée par une arme à la fois mauvaise et en argent ; immunité à l'électricité et à la pétrification ; résistances au froid 10 et au son 10 ; RM 28.
+
+resource: Clairaudience/clairvoyance | 5/jour | reconnaissance à distance
+resource: Scrutation suprême | 1/jour | Volonté DD 21
+resource: Localisation suprême | 1/jour | localiser une cible connue, selon les conditions du pouvoir
+resource: Force de taureau de groupe | 3/jour | +4 en Force, bonus d'altération, pendant 20 minutes
+
+step: Il peut préparer le terrain
+  do: Repérer les accès par clairaudience/clairvoyance ; choisir une position avec des lignes de tir et une destination de téléportation sûre
+  note: Perception +31, vision dans le noir à 18 m, vision nocturne, détection de l'invisibilité et détection de la scrutation permanentes ; message et communication avec les animaux facilitent la reconnaissance
+
+step: L'affrontement devient probable
+  do: Activer liberté de mouvement sur lui-même ; renforcer les combattants alliés par force de taureau de groupe si une mêlée se prépare
+  note: Liberté de mouvement est à volonté et dure 200 minutes. Le bonus de Force améliore ses attaques naturelles ; l'arc reste limité à son bonus de Force de +10 aux dégâts
+
+step: Une discussion reste possible
+  do: Employer Diplomatie +28 et détection du mensonge avant de recourir à la violence
+  note: Son don des langues lui permet de se faire comprendre ; il privilégie la protection des innocents
+
+## Ouverture
+
+resource: Renvoi | 5/jour | Volonté DD 18 ; créature extraplanaire à 22,50 m au plus
+resource: Dissipation de la magie | 5/jour | dissipation ciblée ; test à +10 malgré le NLS 20
+
+step: Un ennemi extraplanaire à faible Volonté menace immédiatement ses alliés
+  do: Tenter renvoi pour l'écarter du combat
+  note: Choisir cette option plutôt qu'une volée seulement si le renvoi paraît susceptible de réussir
+
+step: Une cible prioritaire est visible et il peut rester sur place
+  do: Tirer à outrance avec Tir rapide et Feu nourri : +27/+27/+22/+17/+12, chaque flèche infligeant 1d8+13
+  note: Le premier jet envoie deux flèches sur la même cible : six flèches pour cinq jets. Un critique ne multiplie que les dégâts d'une des deux premières flèches
+  note: À 9 m ou moins, ajouter +1 aux attaques et aux dégâts. Tir de précision supprime le malus pour tirer sur un adversaire engagé en mêlée
+
+step: Il doit se déplacer pour obtenir une ligne de tir
+  do: Avancer de 15 m au plus, puis tirer une seule flèche à +29
+  note: Tir rapide et Feu nourri nécessitent une attaque à outrance ; une téléportation consomme aussi son action simple
+
+## Rounds suivants
+
+resource: Imposition des mains | 14/jour | 10d6 pv ; action rapide sur lui-même, simple au contact sur un allié
+resource: Soins intensifs | 5/jour | 4d8+20 pv au contact ; action simple
+resource: Souffle de vie | 3/jour | 5d8+20 pv au contact ; action simple
+
+step: Il conserve une position de tir sûre
+  do: Concentrer les volées sur le lanceur de sorts ou l'ennemi qui menace le plus ses protégés
+  note: Contre une faible CA, accepter le malus de -6 aux attaques pour +12 aux dégâts par flèche ; avec Tir rapide, cela donne +21/+21/+16/+11/+6 et 1d8+25, avant Tir à bout portant
+
+step: Un adversaire arrive au contact
+  do: Faire un pas de 1,50 m et reprendre le tir si cela le place hors de toute zone menacée ; sinon, employer ses quatre attaques naturelles à outrance
+  note: Avec force de taureau de groupe : 2 coups +32 (1d6+12), 2 sabots +27 (2d6+6). Attaques réflexes permet jusqu'à six attaques d'opportunité par round, dans son allonge de 1,50 m
+
+step: Un effet magique adverse décide du combat
+  do: Remplacer sa volée par une dissipation de la magie ciblée sur cet effet
+
+step: Un invisible menace ses alliés dans un rayon de 30 m
+  do: Activer négation de l'invisibilité, à volonté, pour le rendre visible dans cette zone
+  note: Le cervinal possède déjà la détection de l'invisibilité ; ce pouvoir aide surtout ses compagnons
+
+step: Ses points de vie tombent sous 180
+  do: Utiliser une imposition des mains sur lui-même en action rapide, puis poursuivre son action habituelle
+
+step: Un allié vient de mourir depuis un round au plus
+  do: Le rejoindre et employer souffle de vie au contact en priorité
+  note: Le retour à la vie exige que les soins remontent ses pv au-dessus du seuil de mort ; ce pouvoir ne répare pas une mort due à un effet de mort
+
+step: Un allié vivant risque de tomber
+  do: Le soigner au contact par imposition des mains ou soins intensifs, en renonçant à la volée de ce round
+
+## Repli
+
+resource: Changement de plan | 3/jour | évacuation vers un autre plan ; Volonté DD 19 pour une cible non consentante
+
+step: Ses points de vie tombent sous 70 ou sa position devient intenable
+  do: Se soigner en action rapide, puis employer téléportation suprême vers le refuge préparé
+  note: Téléportation suprême est à volonté, sur le même plan, pour lui-même et 25 kg d'objets au maximum ; elle ne transporte aucun allié
+
+step: Des alliés doivent quitter le plan avec lui
+  do: Employer changement de plan avec les compagnons consentants, jusqu'à huit créatures se tenant par la main
+  note: L'arrivée peut être éloignée du refuge visé ; organiser ce départ avant l'effondrement du groupe
+
+step: Une menace pèse encore sur des innocents
+  do: Couvrir leur fuite tant qu'il peut tenir, puis se mettre à l'abri et dépenser ses soins restants

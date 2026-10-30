@@ -1,0 +1,55 @@
+## Avant le combat
+
+note: Profil
+  Béhémoth ravageur, créature magique colossale neutre, peu intelligente, qui domine le combat rapproché par sa force et sa régénération. 337 pv ; CA 35, contact 0.
+  Morsure +33 (4d6+16 et Capture), encornement +33 (4d6+16), 2 piétinements +28 (2d8+8) ; rocher +16 (2d8+24).
+  Déplacement et nage à 9 m ; espace occupé de 9 m ; allonge de 6 m.
+
+resource: Régénération | 15 pv par round | des dégâts d'électricité la suppriment au round suivant
+resource: Défenses | permanentes | RD 15/adamantium ; résistance au froid 20 et au feu 20 ; RM 29
+resource: Immunités | permanentes | acide, effets de malédiction, maladie, effets mentaux, paralysie, poison et son
+
+step: Terrain favorable avant l'approche des adversaires
+  do: Exploiter le camouflage pour attendre que les ennemis arrivent à portée de mêlée
+  note: perception aveugle et vision dans le noir à 18 m ; vision nocturne, odorat et Perception +17 pour repérer les intrus
+
+## Ouverture
+
+step: Un adversaire est déjà à 6 m ou moins et aucun déplacement n'est nécessaire
+  do: Attaque à outrance : morsure, encornement et deux piétinements contre la menace la plus proche
+  note: concentrer les attaques sur une même cible pour la mettre rapidement hors de combat
+
+step: Un déplacement suffit à mettre une cible à portée
+  do: Avancer jusqu'à 9 m, puis porter une morsure +33 (4d6+16 et Capture)
+  note: après ce déplacement, ne porter qu'une attaque naturelle
+
+step: Les adversaires restent hors de portée et un rocher est disponible
+  do: Lancer le rocher +16 (2d8+24), puis avancer jusqu'à 9 m pour préparer le contact
+  note: viser en priorité l'adversaire qui inflige des dégâts d'électricité s'il est accessible
+
+## Rounds suivants
+
+step: Une cible reste à portée et le béhémoth n'est pas engagé dans une lutte
+  do: Répéter l'attaque à outrance sans se déplacer, en concentrant morsure, encornement et piétinements
+  note: laisser la régénération compenser les blessures pendant cet échange ; les attaques de contact contournent sa très forte armure naturelle
+
+step: La morsure touche une créature de taille G ou inférieure
+  do: Exploiter Capture pour tenter de la saisir ; BMO de base +49 contre sa DMD
+  note: une proie retenue ne peut plus librement s'éloigner ; poursuivre la lutte pour lui infliger les dégâts de morsure
+
+step: De nombreux ennemis sont adjacents entre eux et à portée
+  do: Utiliser Succession d'enchaînements avec la morsure : continuer vers une nouvelle cible adjacente à la précédente tant que chaque attaque touche
+  note: chaque cible ne peut être attaquée qu'une fois par cette action ; la CA descend à 33 jusqu'au prochain tour
+
+step: Un adversaire inflige des dégâts d'électricité
+  do: En faire la cible prioritaire dès qu'il est accessible ; avancer vers lui ou lui lancer un rocher disponible
+  note: l'électricité neutralise temporairement la principale source de récupération du béhémoth
+
+## Repli
+
+step: Le combat tourne mal, surtout si la régénération est neutralisée
+  do: Effectuer une retraite vers un couvert ou une étendue d'eau, jusqu'à 18 m avec l'action de retraite
+  note: sa nage à 9 m par déplacement permet de poursuivre la fuite dans l'eau ; rester hors de portée des attaques électriques pour récupérer 15 pv par round lorsque la régénération reprend
+
+step: Un refuge est atteint
+  do: Rester camouflé et laisser la régénération ramener les points de vie jusqu'au maximum de 337 avant de reprendre le combat

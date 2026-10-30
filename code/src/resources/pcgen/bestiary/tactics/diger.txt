@@ -1,0 +1,48 @@
+## Avant le combat
+
+note: Profil
+  Diger, vase aquatique de taille G, presque transparente, qui attend ses proies dans les eaux souterraines. Sans intelligence, il agit par instinct ; 31 pv, CA 14.
+  Coup +3 au contact, allonge 1,50 m : 1d4+3 dégâts physiques, plus 1d4 d'acide et paralysie ; Vigueur DD 17 ou paralysie pendant 1d6 rounds.
+  Enveloppement : Réflexes DD 17 pour l'éviter ; une créature enveloppée subit 1d4 dégâts d'acide et doit résister à la paralysie.
+  Nage à 12 m, déplacement au sol à 1,50 m ; espace occupé de 3 m. Vision aveugle à 18 m et immunités des vases.
+
+step: En attente de proies
+  do: Rester dans une eau souterraine fréquentée, puis attendre qu'une créature entre dans l'eau.
+  note: Transparence : Perception DD 15 pour remarquer le diger ; Discrétion +4, bonus de transparence déjà compris.
+
+## Ouverture
+
+step: Une proie entre dans l'eau et son espace est accessible
+  do: Nager jusque dans son espace pour tenter de l'envelopper.
+  note: Réflexes DD 17 pour éviter l'enveloppement ; en cas d'échec, 1d4 dégâts d'acide et Vigueur DD 17 ou paralysie pendant 1d6 rounds.
+
+step: Une proie est à portée de 1,50 m et l'enveloppement est impossible
+  do: Porter un coup +3 : 1d4+3 dégâts physiques et 1d4 dégâts d'acide.
+  note: Une cible touchée doit réussir un jet de Vigueur DD 17 ou être paralysée pendant 1d6 rounds.
+
+## Rounds suivants
+
+step: Une proie paralysée reste hors de son corps
+  do: Se déplacer dans son espace pour tenter de l'envelopper.
+  note: La paralysie dure 1d6 rounds ; elle ne dispense pas d'appliquer la résolution de l'enveloppement.
+
+step: Une proie est enveloppée
+  do: Poursuivre sa digestion par l'acide de l'enveloppement.
+  note: L'enveloppement inflige 1d4 dégâts d'acide et expose à la paralysie, Vigueur DD 17 ; ne pas ajouter les dégâts physiques du coup.
+
+step: Une proie mobile reste dans l'eau
+  do: La suivre à la nage, jusqu'à 12 m par action de déplacement, puis tenter de l'envelopper dès que son espace est accessible.
+  note: Si elle reste seulement à portée de contact, utiliser le coup ; la vision aveugle permet de la repérer dans un rayon de 18 m sans dépendre de la vue.
+
+step: Les proies restent sur la berge
+  do: Attaquer celles qui sont à portée de 1,50 m ; sinon, rester dans l'eau à proximité.
+  note: Au sol, le diger ne parcourt que 1,50 m par déplacement. Son vol limité est maladroit et réservé à de courtes distances ; aucune vitesse de vol n'est indiquée.
+
+## Repli
+
+step: Le diger subit des blessures
+  do: Continuer instinctivement à attaquer ou à digérer les proies accessibles.
+  note: Aucun seuil de fuite n'est indiqué ; son absence d'intelligence ne justifie ni retraite calculée ni changement de cible fondé sur les défenses adverses.
+
+step: Aucune proie n'est encore repérable à 18 m
+  do: Cesser la poursuite et reprendre l'attente dans l'eau.

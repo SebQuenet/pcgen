@@ -1,0 +1,92 @@
+## Avant le combat
+
+note: Profil
+  Gigas des Abysses, humanoïde géant extraplanaire de taille Gigantesque, chaotique mauvais, FP 16. Tyran intelligent et brutal : 283 pv, CA 31, déplacement de 15 m en armure, espace et allonge de 6 m, vision aveugle à 30 m.
+  Marteau de guerre de maître en adamantium +25/+20/+15 (4d6+19, critique 19-20/x3) et morsure +19 (2d8+6 et spasmes). Rocher +13 (4d6+19) contre une cible distante.
+  Immunité à l'électricité ; résistances acide, froid, feu et son de 10 ; RD 3/— et 10/Loi, qui ne s'additionnent pas contre un même coup.
+
+resource: Ténèbres profondes | à volonté | gêner la vision ennemie ; sa vision aveugle fonctionne à 30 m
+resource: Terreur | à volonté | Volonté DD 15 ; cône de 9 m
+resource: Image miroir | à volonté | protection à renouveler si nécessaire
+resource: Dissipation de la magie | 3/jour | dissipation ciblée, test à +10
+resource: Domination | 3/jour | humanoïde seulement, Volonté DD 17
+resource: Télékinésie | 3/jour | DD 17 lorsque le mode employé autorise une sauvegarde
+resource: Vision lucide | 3/jour | repérer les tromperies visuelles ; portée de 36 m
+
+step: Il entend venir les intrus et dispose de plusieurs rounds
+  do: Activer image miroir, puis ténèbres profondes sur un objet qu'il porte ; garder les ennemis dans les 30 m de sa vision aveugle
+  note: Chaque pouvoir demande son action ; préparer les protections avant le contact. Les ténèbres gênent aussi ses éventuels serviteurs qui ne peuvent pas y voir.
+
+step: Des illusions ou des dissimulations magiques sont probables
+  do: Activer vision lucide avant l'engagement
+
+step: Le combat se déroule dans les Abysses
+  do: Préparer manteau du Chaos avant d'approcher
+  note: La puissance planaire donne les trois pouvoirs suivants uniquement dans les Abysses.
+
+resource: Blasphème | 1/jour | uniquement dans les Abysses ; DD 24
+resource: Manteau du Chaos | 1/jour | uniquement dans les Abysses ; DD 25 pour l'effet qui exige une sauvegarde
+resource: Tremblement de terre | 1/jour | uniquement dans les Abysses ; DD 25
+
+## Ouverture
+
+step: Un humanoïde dangereux peut être retourné avant le contact
+  do: Tenter domination, Volonté DD 17, puis lui ordonner d'attaquer ses compagnons
+  note: Réserver cette tentative à une cible vraisemblablement vulnérable ; ses faibles DD rendent la mêlée plus fiable contre des adversaires bien protégés.
+
+step: Plusieurs adversaires vulnérables à la peur tiennent dans un cône de 9 m
+  do: Lancer terreur, Volonté DD 15, pour disperser le groupe
+  note: Une sauvegarde réussie laisse la cible secouée pendant 1 round ; une créature immunisée à la peur ignore cet effet.
+
+step: Les adversaires sont hors de son allonge
+  do: Avancer de 15 m au maximum puis porter un coup de marteau si une cible arrive à 6 m ; sinon lancer un rocher sur une cible perceptible
+  note: Une charge est possible sur une trajectoire dégagée, jusqu'à 30 m, mais ne donne qu'une attaque de marteau.
+
+step: Une cible est déjà à 6 m ou moins au début de son tour
+  do: Faire une attaque à outrance, avec les trois coups de marteau puis la morsure
+
+## Rounds suivants
+
+step: Une cible reste dans son allonge
+  do: Répéter l'attaque à outrance ; limiter le déplacement à un pas de 1,50 m pour conserver toutes ses attaques
+  note: Contre une CA facile à toucher, activer Attaque en puissance : marteau +21/+16/+11, dégâts 4d6+31 ; morsure +15, dégâts 2d8+10.
+
+step: Sa morsure touche
+  do: Faire résoudre les spasmes : Vigueur DD 29
+  note: Un échec rend la victime nauséeuse et inflige 1d6 dégâts de Force et de Dextérité ; les spasmes durent 1d6 heures. L'effet ne se cumule pas. Une sauvegarde réussie protège contre les spasmes de ce gigas pendant 24 heures.
+  note: Mordre ensuite une autre cible encore capable de combattre ; guérison suprême, régénération ou restauration suprême peuvent mettre fin aux spasmes.
+
+step: Une arme ou un bouclier ennemi constitue un obstacle décisif
+  do: Remplacer une attaque de mêlée par une destruction d'objet, avec le bonus de manœuvre +36
+  note: Son marteau en adamantium ignore une solidité inférieure à 20. Son don de destruction supérieure permet de reporter sur le porteur les dégâts excédentaires après destruction de l'objet.
+
+step: Un ennemi provoque une attaque d'opportunité dans son allonge de 6 m
+  do: Frapper au marteau pour punir son mouvement ou son action imprudente
+  note: Réflexes de combat permet deux attaques d'opportunité par round, sans multiplier les attaques contre une même occasion.
+
+step: Un mouvement provoque une attaque d'opportunité dans une case adjacente
+  do: Employer son don d'immobilisation : remplacer cette attaque par une manœuvre à +32 contre la DMD pour arrêter le déplacement
+  note: Cette immobilisation exige une case adjacente ; elle ne fonctionne pas sur toute son allonge.
+
+step: Une protection magique empêche ses attaques de porter
+  do: Employer une dissipation ciblée, puis reprendre la mêlée au round suivant
+
+step: Une cible reste hors de portée ou occupe une position favorable
+  do: Employer télékinésie pour la déplacer par une manœuvre adaptée, ou projeter des objets sur elle ; à défaut, lancer un rocher
+  note: Choisir un seul mode de télékinésie et respecter sa concentration ; la force violente autorise une sauvegarde de Volonté DD 17.
+
+step: Dans les Abysses, plusieurs ennemis non mauvais sont proches et leurs DV les rendent vulnérables
+  do: Employer blasphème, DD 24, avant de reprendre les attaques physiques
+
+step: Dans les Abysses, le terrain permet d'isoler les adversaires sans compromettre sa position
+  do: Employer tremblement de terre, DD 25, pour désorganiser leur progression
+
+## Repli
+
+step: Il combat des adversaires autres que des gigas
+  do: Combattre jusqu'à la mort pour affirmer la supériorité de sa lignée
+  note: Aucun seuil de pv ne déclenche automatiquement la fuite ; près de la défaite, concentrer ses attaques sur une victime qu'il peut abattre.
+
+step: Un duel contre un autre gigas risque de devenir mortel
+  do: Rompre le combat, renouveler image miroir si nécessaire, puis s'éloigner de 30 m par round en double déplacement
+  note: Les gigas préservent leurs rares semblables et évitent de pousser leurs duels jusqu'à la mort ; une retraite peut provoquer des attaques d'opportunité.

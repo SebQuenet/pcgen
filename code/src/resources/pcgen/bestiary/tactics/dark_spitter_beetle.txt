@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Dark Spitter Beetle, vermine de grande taille, neutre et sans intelligence, vivant sous terre. Ses réactions restent instinctives.
+  26 pv ; CA 17 ; morsure +6 (2d8+6), allonge de 1,50 m. Déplacement de 9 m ; espace occupé de 3 m ; vision dans le noir à 18 m.
+  Immunisé à l'acide et aux effets mentaux ; sensible à la lumière vive.
+
+step: Dans son milieu souterrain
+  do: Rester dans les zones obscures et réagir aux intrus qu'il perçoit
+  note: Perception +0 ; sa vision dans le noir ne lui permet pas de voir au-delà de 18 m dans l'obscurité
+
+## Ouverture
+
+step: Un ennemi est à portée de morsure
+  do: Mordre à +6, pour 2d8+6 dégâts
+
+step: Aucun ennemi n'est à portée
+  do: Avancer vers l'intrus le plus proche, jusqu'à 9 m, puis mordre si celui-ci est à 1,50 m ou moins
+  note: Si un déplacement supplémentaire est nécessaire ce round, continuer à avancer et reporter la morsure au round suivant
+
+## Rounds suivants
+
+step: L'adversaire reste à portée
+  do: Répéter la morsure chaque round
+  note: Sans intelligence, le scarabée ne choisit pas ses cibles selon leur classe ou leurs défenses supposées
+
+step: L'adversaire s'éloigne
+  do: Le suivre au sol et reprendre les morsures dès qu'il est à portée
+  note: Son espace de 3 m limite les passages qu'il peut emprunter normalement
+
+step: Plusieurs scarabées sont présents
+  do: Faire avancer chacun vers un ennemi accessible et mordre au contact
+  note: Ils peuvent être deux ou former un groupe de 3 à 6 ; leur présence commune n'implique pas de coordination tactique élaborée
+
+## Repli
+
+step: La lumière vive le gêne et une zone obscure est accessible
+  do: Gagner l'obscurité en se déplaçant de 9 m par action de mouvement
+
+step: Acculé sans issue accessible
+  do: Continuer à mordre l'ennemi à portée
+  note: Aucun seuil de fuite n'est indiqué ; jouer sa réaction comme un réflexe de survie

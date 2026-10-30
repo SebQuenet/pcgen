@@ -1,0 +1,68 @@
+## Avant le combat
+
+note: Profil
+  Birelu, esprit des bêtes solitaire, extérieur extraplanaire et intangible de taille M, chaotique neutre, FP 10. Il se montre hostile aux signes de civilisation et privilégie la nature sauvage.
+  110 pv ; CA 21, contact 21 ; réduction des dégâts 10/fer froid ; résistance à la magie 21. Vol parfait à 15 m ; allonge de 1,50 m ; initiative +10.
+  Cornes +19 (1d8 plus 2d6 de force), deux griffes +19 (1d6 plus 2d6 de force chacune). Il désorganise les intrus par ses pouvoirs avant de frapper une cible isolée.
+
+resource: Communication avec les animaux | permanent | recueillir des renseignements et donner des consignes compréhensibles aux animaux
+resource: Appel d'animal | à volonté | attire un animal sauvage existant ; ne le crée pas et ne le place pas sous contrôle
+resource: Charme-animal | à volonté | Volonté DD 15 ; rend un animal amical sans garantir son obéissance
+resource: Domination d'animal | 3/jour | Volonté DD 17 ; portée 16,50 m ; durée 13 rounds ; ordres simples
+resource: Frénésie lunaire (moonstruck) | 3/jour | Volonté DD 18 ; un humanoïde à 69 m au plus ; durée 13 rounds
+resource: Métamorphose funeste | 1/jour | portée 16,50 m ; Vigueur DD 19 annule ; après un échec, Volonté DD 19 pour conserver ses facultés mentales
+resource: Communion avec la nature | 1/jour | reconnaissance du milieu naturel ; niveau de lanceur de sorts 13 pour tous ses pouvoirs magiques
+
+step: Il dispose de temps avant l'arrivée des intrus
+  do: Employer communion avec la nature pour connaître le terrain et choisir des passages permettant de rompre la ligne de vue.
+  note: Utiliser ensuite Discrétion +22 pour préparer l'approche ; Perception +17, odorat et vision dans le noir à 18 m pour surveiller les environs.
+
+step: Des animaux sauvages vivent à proximité
+  do: Les attirer par appel d'animal, puis communiquer avec eux et employer charme-animal pour obtenir leur aide.
+  note: Leur arrivée prend le temps du trajet. Le charme ne les oblige pas à risquer leur vie ; réserver la domination aux ordres de combat indispensables.
+
+## Ouverture
+
+step: Un animal ennemi dangereux se trouve à 16,50 m ou moins
+  do: Employer domination d'animal, Volonté DD 17, puis lui ordonner d'attaquer un adversaire du birelu.
+  note: Un compagnon animal peut être visé s'il est de type animal ; ce pouvoir ne domine pas les autres types de créatures.
+
+step: Un humanoïde armé reste près de ses alliés et aucune domination n'est prioritaire
+  do: Employer frénésie lunaire, Volonté DD 18, en restant hors de portée de mêlée.
+  note: Sur un échec, la cible est hébétée pendant 1 round et lâche ses objets. Elle subit ensuite rage et confusion, privilégiant ses nouvelles armes naturelles ; elle est de nouveau hébétée au dernier round. Ses attaques contre ses alliés restent soumises à la confusion.
+
+step: Un adversaire décisif paraît vulnérable aux effets exigeant un jet de Vigueur
+  do: Employer métamorphose funeste à 16,50 m ou moins pour le changer en petit animal inoffensif, Vigueur DD 19.
+  note: Choisir une forme adaptée au milieu pour ne pas faciliter son jet de sauvegarde. Ce pouvoir constitue une autre ouverture possible et demande sa propre action simple.
+
+## Rounds suivants
+
+step: Une cible isolée est accessible sans rester encerclé
+  do: Faire une Attaque en vol : approcher, porter un seul coup de cornes +19 (1d8 plus 2d6 de force), puis poursuivre le déplacement.
+  note: Le déplacement total reste limité à 15 m. Attaque en vol n'empêche pas les attaques d'opportunité ; Souplesse du serpent donne +4 à la CA contre celles provoquées par son déplacement.
+
+step: Une cible reste à 1,50 m et les autres ennemis ne peuvent pas le submerger
+  do: Effectuer une attaque à outrance : cornes +19 et deux griffes +19, avec les dégâts indiqués dans le profil.
+  note: Cette séquence demande une action complexe ; elle ne se combine pas avec les 15 m de déplacement d'une Attaque en vol.
+
+step: Une nouvelle cible humanoïde peut désorganiser le groupe
+  do: Réemployer frénésie lunaire, Volonté DD 18, jusqu'à épuisement des trois utilisations.
+  note: Éviter de frapper une victime confuse : elle pourrait riposter contre lui. Garder ses distances pendant que le groupe gère sa frénésie.
+
+step: Un animal dominé peut encore agir
+  do: Maintenir un ordre simple utile, comme attaquer une cible désignée ou barrer le passage ; renouveler la domination seulement si nécessaire.
+  note: La durée est de 13 rounds, pas une soumission permanente. Ne pas sacrifier inutilement les animaux sauvages qui l'aident.
+
+step: Un adversaire provoque une attaque d'opportunité à 1,50 m
+  do: Frapper avec les cornes et exploiter Attaques réflexes pour saisir plusieurs occasions dans le round.
+  note: Sa Dextérité lui permet jusqu'à sept attaques d'opportunité par round, si autant d'occasions distinctes se présentent.
+
+## Repli
+
+step: Ses points de vie passent sous 30, ou les ennemis surmontent efficacement ses défenses
+  do: Rompre le contact et fuir en vol, à 15 m par action de mouvement ; traverser un obstacle mince grâce à son intangibilité pour couper la poursuite.
+  note: Un double déplacement permet 30 m si aucune action simple n'est employée. Choisir un obstacle qu'il peut traverser en restant adjacent à sa surface extérieure ; ne pas compter sur l'intangibilité pour devenir invisible.
+
+step: La poursuite menace encore sa fuite et une utilisation reste disponible
+  do: Employer frénésie lunaire sur un poursuivant humanoïde, puis s'éloigner avec son action de mouvement.
+  note: Si les intrus acceptent de quitter les lieux et de cesser leurs atteintes à la nature, le birelu peut renoncer au combat.

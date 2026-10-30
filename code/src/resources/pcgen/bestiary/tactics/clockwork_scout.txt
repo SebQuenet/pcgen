@@ -1,0 +1,54 @@
+## Avant le combat
+
+note: Profil
+  Automate de reconnaissance de taille minuscule, sans intelligence, qui ressemble à un animal ordinaire et suit les consignes reçues. Il privilégie l'observation et évite les affrontements.
+  5 pv ; CA 16, contact 15, pris au dépourvu 13 ; coup +1 (1d6-2). Déplacement terrestre de 12 m ; allonge de 0 m : il doit entrer dans la case adverse pour frapper.
+  Vision dans le noir à 18 m, vision nocturne et Perception +3 ; immunités des créatures artificielles.
+
+note: Apparence animale
+  Son apparence lui accorde +10 de circonstances aux tests de Déguisement pour passer pour l'animal qu'il imite. Une inspection rapprochée ou un test de Perception DD 20 révèle sa nature mécanique.
+  Une apparence d'oiseau ne lui donne pas de vitesse de vol : tous ses déplacements restent terrestres.
+
+step: Mission de surveillance avant toute alerte
+  do: Observer les cibles en conservant une distance suffisante pour éviter une inspection rapprochée ; suivre leur progression au sol selon les consignes reçues.
+  note: L'apparence animale ne le rend ni invisible ni silencieux ; il ne possède aucun pouvoir de transmission à distance indiqué.
+
+## Ouverture
+
+step: Les cibles ne l'ont pas identifié et ne l'attaquent pas
+  do: Poursuivre l'observation sans engager le combat.
+  note: Son faible bonus d'attaque et ses 5 pv rendent tout affrontement direct risqué.
+
+step: Il est découvert et ses consignes permettent la fuite
+  do: S'éloigner immédiatement ; effectuer un double déplacement jusqu'à 24 m si aucun adversaire ne le menace au corps à corps.
+
+step: Un ordre impose le combat ou aucune issue n'est accessible
+  do: Entrer dans la case d'un adversaire accessible, puis porter un coup +1 (1d6-2) si une action simple reste disponible.
+  note: Entrer dans la case adverse provoque une attaque d'opportunité ; il ne peut pas frapper depuis une case voisine avec son allonge de 0 m.
+
+## Rounds suivants
+
+step: La surveillance reste possible
+  do: Suivre les cibles à distance en utilisant son déplacement terrestre de 12 m, ou jusqu'à 24 m avec un double déplacement.
+  note: Continuer à éviter les inspections rapprochées et respecter les consignes initiales.
+
+step: Le combat reste imposé et l'adversaire partage sa case
+  do: Répéter un coup +1 (1d6-2) par round.
+  note: Il n'a qu'une seule attaque et aucune attaque à distance indiquée.
+
+step: L'adversaire quitte sa case et la poursuite est imposée
+  do: Le rejoindre au sol et entrer de nouveau dans sa case pour frapper, si la distance laisse une action simple disponible.
+  note: Ce déplacement peut provoquer des attaques d'opportunité ; ne pas lui attribuer de capacité d'acrobatie ou de déplacement spécial.
+
+## Repli
+
+step: Repéré ou blessé mais encore actif, si ses consignes autorisent le repli
+  do: Emprunter une issue libre et s'éloigner jusqu'à 24 m par round avec un double déplacement.
+  note: Avec seulement 5 pv, il fuit dès les premiers dégâts si cette réaction fait partie de ses consignes.
+
+step: Un adversaire le menace au corps à corps au moment du repli
+  do: Utiliser l'action de retraite pour s'éloigner jusqu'à 24 m.
+  note: La première case quittée ne provoque pas d'attaque d'opportunité de la part des adversaires visibles ; traverser ensuite d'autres cases menacées peut en provoquer.
+
+step: Ses points de vie atteignent 0
+  do: Cesser toute action : la créature artificielle est détruite.

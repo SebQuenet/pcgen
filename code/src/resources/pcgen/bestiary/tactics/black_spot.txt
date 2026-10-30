@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Black Spot, oursin de taille TP, bête magique aquatique sans intelligence ni langage. 5 pv ; CA 15, contact 13, pris au dépourvu 14.
+  Morsure +4 (1d3-5) ; piquants -2 (1d2-5 et malédiction). Allonge 0 m ; déplacement et nage à 6 m par round ; amphibie.
+
+note: Perception et défenses
+  Vision dans le noir à 18 m, vision crépusculaire et odorat ; Perception +0.
+  Immunité aux effets mentaux ; résistance au froid 5 ; stabilité : DMD 13 contre la bousculade et le croc-en-jambe, 5 autrement.
+
+note: Malédiction des piquants
+  Le bloc fourni ne précise ni son DD, ni ses effets, ni sa durée. Employer ces paramètres uniquement si la description officielle est disponible.
+
+## Ouverture
+
+step: Une cible est accessible avec un déplacement de 6 m au maximum
+  do: Entrer dans la case de la cible, puis attaquer avec les piquants -2 (1d2-5 et malédiction).
+  note: Son allonge de 0 m impose de partager la case adverse pour attaquer. Cette entrée peut provoquer une attaque d'opportunité : ses 5 pv rendent l'approche dangereuse.
+
+step: Une cible occupe déjà la même case
+  do: Effectuer une attaque à outrance : morsure +4 (1d3-5) et piquants -2 (1d2-5 et malédiction).
+
+step: Aucune cible n'est accessible en un déplacement
+  do: Se rapprocher au sol ou à la nage, jusqu'à 12 m avec un double déplacement.
+  note: Il ne dispose d'aucune attaque à distance.
+
+## Rounds suivants
+
+step: La cible reste dans sa case
+  do: Répéter l'attaque à outrance : morsure +4 et piquants -2.
+  note: Les piquants apportent la malédiction ; conserver les deux attaques tant qu'aucun déplacement important n'est nécessaire.
+
+step: La cible s'éloigne mais reste accessible en un déplacement
+  do: La rejoindre dans sa case et porter une attaque de piquants -2.
+  note: Son allonge de 0 m ne lui permet pas de menacer les cases voisines.
+
+## Repli
+
+step: Il est blessé et dispose d'une issue dégagée
+  do: Effectuer un retrait jusqu'à 12 m, sur terre ou à la nage, pour s'éloigner de l'agresseur.
+  note: Le retrait protège la sortie de sa case initiale ; traverser d'autres cases menacées reste dangereux. Son caractère amphibie lui permet de franchir la limite entre terre et eau.
+
+step: Il reste coincé avec un adversaire dans sa case
+  do: Continuer les attaques à outrance de morsure et de piquants.

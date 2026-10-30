@@ -1,0 +1,75 @@
+## Avant le combat
+
+note: Profil
+  Satyre des bois, fée de taille M, chaotique neutre : il privilégie la manipulation, les enchantements et le tir depuis les arbres aux échanges de coups.
+  83 pv ; CA 20 ; réduction des dégâts 10/fer froid ; déplacement de 12 m. Perception +22, Discrétion +17, vision nocturne.
+  Arc long +1 : +11 (1d8+1, x3). Au contact : dague +6 (1d4+2, 19-20) et cornes +1 (1d6+1), à 1,50 m.
+  Aura de charme incorrigible dans un rayon de 9 m, Volonté DD 19 ; pouvoirs magiques de sommeil, de suggestion et d'illusion.
+
+resource: Lumières dansantes, son imaginaire | à volonté | DD 15
+resource: Sommeil profond, suggestion | à volonté | Volonté DD 18
+resource: Image majeure | 3/jour | Volonté DD 18 pour reconnaître l'illusion en interagissant avec elle
+resource: Engouement irréfléchi | 3/jour | Volonté DD 18
+resource: Charme-monstre | 1/jour | Volonté DD 19
+resource: Convocation d'alliés naturels IV | 1/jour | NLS 8
+resource: Flèches de sommeil | 3 | réserver aux adversaires qu'il veut neutraliser sans les tuer
+resource: Flèches +1 traqueuses | 5 | ignorer les chances de rater dues au camouflage, en visant la bonne case
+resource: Flèches ordinaires | 20 | munitions pour l'arc long +1
+
+step: Des intrus approchent
+  do: Les observer à couvert avec Perception +22 et Discrétion +17 ; choisir une position offrant une ligne de tir et un passage pour fuir.
+  note: Il ne possède ni vitesse d'escalade ni déplacement spécial à travers les broussailles ; utiliser les chemins dégagés.
+
+step: Il peut encore éviter les hostilités
+  do: Engager la conversation en commun ou en sylvestre ; utiliser Bluff +14 et Diplomatie +17 pour détourner les intrus ou les faire approcher sans menace apparente.
+  note: Chaque créature qui commence son tour à 9 m ou moins fait un jet de Volonté DD 19 contre l'aura, qui agit comme charme-personne. Il peut suspendre ou rétablir cette aura à volonté.
+
+## Ouverture
+
+step: Une cible importante est accessible avant les premiers coups
+  do: Utiliser charme-monstre sur elle, Volonté DD 19, puis lui demander de calmer ses compagnons ou de rester à l'écart.
+  note: Un charme rend amical ; il ne permet pas d'ordonner automatiquement d'attaquer ses alliés. Menacer ou attaquer la cible charmée rompt l'effet.
+
+step: Des ennemis vulnérables au sommeil sont regroupés et il peut rester protégé pendant l'incantation
+  do: Lancer sommeil profond, Volonté DD 18, pour retirer plusieurs adversaires du combat.
+  note: Incantation de 1 round ; portée de 13,50 m, rayon de 3 m, maximum de 10 DV au total, les plus faibles d'abord. Une créature de plus de 10 DV ne peut pas être affectée.
+
+step: Les ennemis chargent ou résistent aux enchantements
+  do: Tirer à l'arc long +1, +11 (1d8+1, x3), puis se déplacer vers un autre couvert si cela permet de garder ses distances.
+  note: Employer une flèche de sommeil sur une menace prioritaire ; éviter de blesser les créatures déjà endormies ou charmées.
+
+## Rounds suivants
+
+step: Un combattant peut être détourné sans lui proposer un danger évident
+  do: Utiliser suggestion, Volonté DD 18, pour lui faire chercher des renforts ou protéger un compagnon resté en arrière.
+  note: La demande doit paraître raisonnable ; ce pouvoir ne garantit pas qu'il accepte une instruction suicidaire.
+
+step: Un ennemi poursuit le satyre loin de ses compagnons
+  do: Utiliser engouement irréfléchi, Volonté DD 18, en désignant comme objet de son affection un compagnon qu'il connaît et qui reste en arrière.
+  note: La cible cherche à rester à 9 m ou moins de cette personne ; au-delà, elle est chancelante jusqu'à son retour à proximité. Un danger physique évident lui permet un second jet de sauvegarde.
+
+step: Il faut détourner une poursuite ou masquer sa position
+  do: Créer une image majeure de sa silhouette prenant un autre chemin, ou d'une menace surgissant sur le flanc des adversaires.
+  note: L'illusion ne blesse pas réellement. La maintenir demande de se concentrer ; après la fin de la concentration, elle persiste 3 rounds.
+
+step: Il dispose d'un round à couvert et doit retenir les assaillants
+  do: Utiliser convocation d'alliés naturels IV et faire intercepter les poursuivants par la créature appelée.
+  note: L'invocation demande 1 round et dure 8 rounds ; elle fournit un obstacle temporaire pendant qu'il change de position.
+
+step: Les enchantements sont inefficaces ou les adversaires restent à distance
+  do: Continuer les tirs à +11 et les déplacements de 12 m entre les couverts ; employer les flèches traqueuses contre une cible localisée bénéficiant de camouflage.
+  note: Le bonus magique des flèches +1 ne s'ajoute pas à celui de l'arc +1. Un couvert solide reste un obstacle aux tirs.
+
+step: Un adversaire le rejoint au contact
+  do: Faire un pas de placement de 1,50 m puis tirer si cela le met hors de portée ; sinon se dégager ou se retirer. S'il doit combattre sur place, attaquer à outrance avec dague +6 et cornes +1.
+  note: Souplesse du serpent donne +4 à la CA contre les attaques d'opportunité provoquées par ses déplacements ; elle ne protège pas un tir à bout portant ni l'emploi d'un pouvoir magique.
+
+## Repli
+
+step: Points de vie sous 25, ou adversaire au fer froid impossible à tenir à distance
+  do: Rompre le contact avec l'action de retraite, jusqu'à 24 m si le terrain le permet, puis gagner un couvert et se cacher avec Discrétion +17.
+  note: La réduction des dégâts ne protège pas du fer froid ; ne pas prolonger le duel pour préserver une position.
+
+step: Il a gagné de la distance mais reste poursuivi
+  do: Employer son imaginaire pour suggérer une fuite dans une autre direction, ou une suggestion encore utilisable pour faire renoncer un poursuivant ; continuer vers les chemins forestiers dégagés.
+  note: Un pouvoir magique et une retraite complète demandent des actions distinctes ; consacrer d'abord son tour à sortir du danger immédiat.

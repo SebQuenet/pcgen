@@ -1,0 +1,42 @@
+## Avant le combat
+
+note: Profil
+  Fungus Weird, prédateur végétal solitaire et neutre des souterrains, semblable à un serpent de champignons et de lianes. Il chasse à l'affût.
+  39 pv, CA 16 ; morsure +7 (1d8+4 et étreinte), allonge 1,50 m ; spores soporifiques. Déplacement de 9 m, espace occupé de 3 m ; réduction des dégâts 5/contondant et immunités des plantes.
+
+step: Aucun intrus au contact
+  do: Attendre camouflé dans son amas de végétaux et de champignons ; surveiller les approches avec Perception +12
+  note: Son bassin végétal couvre normalement un rayon de 6 m ; il lui est lié et ne peut jamais en sortir.
+
+resource: Spores soporifiques | Une fois tous les 1d4 rounds | Action simple ; cône de 3 m ; Volonté DD 15 ou sommeil, sans limite de DV affectés
+
+## Ouverture
+
+step: Une proie arrive à 1,50 m
+  do: Surgir et mordre à +7 (1d8+4), puis tenter l'étreinte si la morsure touche
+  note: Choisir une cible proche du bassin pour pouvoir l'y entraîner ensuite.
+
+step: Plusieurs assaillants sont dans un même cône de 3 m
+  do: Employer les spores pour les endormir
+  note: Les spores remplacent la morsure de ce round.
+
+## Rounds suivants
+
+step: Une proie est agrippée hors du bassin
+  do: La déplacer dans le bassin en réussissant la manœuvre de lutte nécessaire
+  note: Toute créature qui entre dans le bassin est automatiquement enchevêtrée ; se dégager exige une action complexe et un test d'Évasion DD 15 ou de Force DD 19, puis permet de se déplacer à demi-vitesse.
+
+step: Une proie résiste ou ses compagnons interviennent, et les spores sont disponibles
+  do: Souffler les spores vers les adversaires encore actifs
+
+step: Les spores récupèrent et un ennemi reste à portée
+  do: Maintenir la lutte contre la proie capturée ou mordre un assaillant libre
+
+## Repli
+
+step: Les intrus restent hors du bassin
+  do: Rester dans son domaine et attendre leur retour à portée
+
+step: Il tombe à 0 pv ou moins
+  do: S'effondrer dans le bassin ; appliquer sa reformation quatre rounds plus tard
+  note: Il revient à 39 pv moins les dégâts de feu subis ; ce pouvoir ne lui permet pas de fuir son bassin.

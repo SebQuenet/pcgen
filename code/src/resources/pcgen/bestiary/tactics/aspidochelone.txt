@@ -1,0 +1,53 @@
+## Avant le combat
+
+note: Profil
+  Aspidochelone, baleine monstrueuse colossale, bête magique aquatique neutre et solitaire, à l'intelligence rudimentaire ; 297 points de vie, CA 27.
+  Morsure +25 (4d6+11 et agrippement), coup de queue +20 (4d6+5) ; espace occupé de 45 m, allonge de 6 m.
+  Nage à 36 m par action de mouvement, aucun déplacement terrestre ; vision dans le noir à 36 m et vision nocturne. Il combat dans l'eau et réagit par la fuite ou la prédation.
+
+step: Il hiberne à la surface
+  do: Dériver immobile, le dos émergé semblable à une île rocheuse
+  note: Discrétion -1, avec un bonus racial de +10 pour passer pour une île ; l'hibernation lui permet de faire 20 sur ce test. Après plus de dix ans de sommeil, hibernation des âges ajoute encore +10 ; végétation et oiseaux renforcent l'illusion.
+
+resource: Science de la vigueur surhumaine | 1/jour | relancer un jet de Vigueur avant d'en connaître le résultat ; conserver le second résultat
+resource: Science de la volonté de fer | 1/jour | relancer un jet de Volonté avant d'en connaître le résultat ; conserver le second résultat
+
+## Ouverture
+
+step: Des assaillants le réveillent brutalement
+  do: Plonger pour quitter la surface, puis revenir vers les agresseurs si la faim le pousse à les attaquer
+  note: Son adaptation aux grandes profondeurs l'immunise aux dégâts de pression ; il peut chercher refuge bien au-dessous des nageurs.
+
+step: Une proie est à plus de 6 m
+  do: Nager jusqu'à la placer dans son allonge, puis porter une morsure +25 (4d6+11)
+  note: Après un déplacement, il ne porte qu'une attaque ; sur une morsure réussie, tenter immédiatement l'agrippement en action libre, sans attaque d'opportunité.
+
+step: Une proie est déjà dans son allonge et il n'a pas besoin de se déplacer
+  do: Attaque à outrance : coup de queue +20 (4d6+5), puis morsure +25 (4d6+11) et tentative immédiate d'agrippement si elle touche
+  note: L'agrippement fonctionne sur une créature de taille inférieure à la sienne ; BMO +41, avec +4 aux tests de lutte grâce à cette capacité.
+
+## Rounds suivants
+
+step: Une proie est agrippée
+  do: Consacrer son action simple au maintien de la lutte ; sur une réussite, infliger les dégâts de morsure, 4d6+11
+  note: Le maintien remplace l'attaque à outrance. Le bonus de +5 au maintien s'ajoute si la proie n'a pas rompu la prise depuis le round précédent.
+
+step: Aucune proie n'est agrippée et des ennemis restent dans son allonge
+  do: Répéter le coup de queue puis la morsure en attaque à outrance ; chercher à agripper une proie avec la morsure
+
+step: Une cible facile à toucher permet de privilégier les dégâts
+  do: Activer Attaque en puissance avant les attaques : morsure +19 (4d6+23), coup de queue +14 (4d6+11)
+  note: Le malus de -6 s'applique aussi aux manœuvres offensives jusqu'à son prochain tour ; conserver les valeurs normales si la priorité est de réussir l'agrippement.
+
+step: Les adversaires s'éloignent de son allonge
+  do: Les rejoindre à la nage et mordre ; privilégier une proie accessible dans l'eau
+
+## Repli
+
+step: Points de vie sous 75 ou blessures répétées sans possibilité de saisir une proie
+  do: Rompre le combat et gagner les profondeurs ; utiliser deux mouvements pour nager jusqu'à 72 m par round si aucune prise ne le retient
+  note: Il préfère survivre et retrouver le repos plutôt que poursuivre des adversaires dangereux.
+
+step: Points de vie négatifs, mais supérieurs à -27
+  do: Utiliser Dur à cuire pour rester conscient et consacrer son unique action de mouvement à plonger de 36 m
+  note: Il est chancelant dans cet état ; une action de mouvement seule ne lui coûte aucun point de vie supplémentaire. Il meurt à -27 points de vie.

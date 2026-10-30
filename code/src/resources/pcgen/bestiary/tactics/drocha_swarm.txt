@@ -1,0 +1,45 @@
+## Avant le combat
+
+note: Profil
+  Essaim de drochas, mort-vivant chaotique mauvais composé de minuscules esprits intangibles aux visages hurlants. Sans intelligence, il agresse les vivants par instinct.
+  76 pv ; CA 20, contact 20, pris au dépourvu 16. Vol parfait à 9 m par round ; vision dans le noir à 18 m.
+  Espace de 3 m ; allonge nulle. Attaque d'essaim : 4d6 dégâts automatiques et absorption de sang ; aura de peur à 9 m, DD 18, pendant 1d6 rounds.
+
+note: Approche
+  Il erre sur les lieux de sa mort ou dans la Plaie du Monde, sans préparer d'embuscade ni coordonner ses attaques avec d'autres essaims.
+
+resource: Aura de peur | permanente | rayon de 9 m ; Volonté DD 18 ; peur pendant 1d6 rounds
+resource: Projection de la mort | à volonté | action simple ; une créature à 9 m au plus ; effet mental de peur
+
+## Ouverture
+
+step: Un vivant est repéré
+  do: Voler vers lui à 9 m par déplacement et appliquer l'aura de peur dès qu'il est à 9 m ou moins.
+  note: L'essaim poursuit une cible proche sans élaborer de stratégie contre les défenses du groupe.
+
+step: Une ou plusieurs cibles sont accessibles en un déplacement
+  do: Terminer le déplacement en recouvrant leurs cases pour infliger 4d6 dégâts d'essaim et l'absorption de sang.
+  note: Aucun jet d'attaque ; l'allonge nulle impose d'occuper les cases des victimes. L'absorption inflige 1d2 points de dégâts de Constitution.
+
+step: Une cible est à 9 m ou moins et l'action simple reste disponible
+  do: Utiliser projection de la mort : Volonté DD 18 ; en cas d'échec, Vigueur DD 18 ou mort de peur ; une réussite en Vigueur laisse subir 4d6 dégâts.
+  note: Une réussite au premier jet de Volonté protège contre la projection de ce même essaim pendant 24 heures. Les dégâts d'essaim ne consomment pas l'action simple.
+
+## Rounds suivants
+
+step: Des vivants restent dans l'essaim
+  do: Rester sur leurs cases pour répéter les dégâts d'essaim et l'absorption de sang ; employer l'action simple pour une projection de la mort sur une cible non protégée.
+  note: Les mâchoires possèdent la propriété spectrale : elles blessent les créatures corporelles et infligent leurs dégâts normaux aux créatures intangibles.
+
+step: Les victimes quittent son espace
+  do: Les suivre en vol et finir le déplacement sur une cible accessible ; recouvrir plusieurs adversaires s'ils sont regroupés.
+  note: L'attaque d'essaim ne menace aucune case et ne permet aucune attaque d'opportunité.
+
+step: Aucun vivant n'est accessible en un déplacement
+  do: Avancer et utiliser projection de la mort si une cible est à 9 m ; sinon, consacrer les deux actions au déplacement pour parcourir jusqu'à 18 m.
+
+## Repli
+
+step: Les points de vie diminuent
+  do: Continuer à poursuivre et à submerger les vivants ; aucun seuil de fuite raisonnée.
+  note: À 0 pv, cet essaim mort-vivant est détruit au lieu de simplement se disperser.

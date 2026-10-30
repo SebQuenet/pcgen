@@ -1,0 +1,61 @@
+## Avant le combat
+
+note: Profil
+  Derghodaemon, extérieur de grande taille, neutre mauvais, brutal et peu subtil. Il submerge ses ennemis de nuées, puis les déchiquette s'ils l'encerclent.
+  161 pv ; CA 27 ; déplacement de 12 m ; allonge de 3 m. Attaque à outrance : 5 griffes +21, chacune infligeant 1d6+8 dégâts, critique sur 19–20.
+  Réduction des dégâts 10/Bien ; résistance à la magie 23 ; immunité à l'acide, aux effets de mort, aux maladies et au poison ; résistances au froid, à l'électricité et au feu de 10.
+
+resource: Convocation de daemon | 1/jour | 30 % de chances de convoquer un derghodaemon
+resource: Plaie d'insectes | 1/jour | pouvoir magique, NLS 12
+resource: Mort rampante | 1/jour | pouvoir magique, NLS 12
+resource: Convocation de nuées à incantation rapide | 3/jour | action rapide, une utilisation au maximum par round
+resource: Terreur | 3/jour | Volonté DD 17
+resource: Téléportation suprême | à volonté | lui-même et jusqu'à 25 kg d'objets uniquement
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +28, sa vision dans le noir à 18 m et sa détection de la magie et détection de l'invisibilité constantes
+  note: Sa vision à 360° empêche les prises en tenaille ; elle ne l'empêche pas d'être encerclé ou de subir plusieurs attaques.
+
+## Ouverture
+
+step: Premier round, tant qu'il peut privilégier ses pouvoirs magiques
+  do: Tenter la convocation d'un derghodaemon, puis ajouter une convocation de nuées à incantation rapide sur les adversaires
+  note: La tentative de convocation est consommée même en cas d'échec. Garder l'aura d'imbécillité inactive pendant ce round.
+
+step: Un congénère répond à la convocation
+  do: Se coordonner avec lui par télépathie, à 30 m au maximum, pour accabler les mêmes adversaires
+
+## Rounds suivants
+
+step: Deuxième round, s'il n'est pas encerclé
+  do: Utiliser plaie d'insectes pour couvrir les positions ennemies, puis ajouter une convocation de nuées à incantation rapide
+  note: Placer les nuées sur les adversaires plutôt que derrière eux ; les nuées de plaie d'insectes restent sur place.
+
+step: Troisième round, s'il n'est pas encerclé
+  do: Utiliser mort rampante contre les ennemis encore menaçants, puis dépenser la dernière convocation de nuées à incantation rapide si les deux premières ont été utilisées
+  note: Diriger les nuées de mort rampante avec les actions prévues par ce pouvoir ; les nuées de convocation de nuées ne sont pas sous son contrôle.
+
+step: Les ennemis doivent traverser ses nuées pour l'atteindre
+  do: Rester parmi les nuées et les laisser user les assaillants
+  note: Swarmwalking le rend immunisé aux dégâts et à la distraction des nuées.
+
+step: Il est encerclé ou plusieurs ennemis sont à portée de ses griffes
+  do: Passer à l'attaque à outrance : 5 griffes +21, 1d6+8 chacune, en concentrant les coups sur un adversaire blessé
+  note: Exploiter son allonge de 3 m ; un pas de placement de 1,50 m permet de se replacer sans renoncer à l'attaque à outrance.
+
+step: Il combat aux griffes et des ennemis vulnérables aux effets mentaux sont à 9 m ou moins
+  do: Activer et maintenir son aura d'imbécillité par une action libre ; Volonté DD 20 pour résister
+  note: L'aura affecte les créatures autres que les daemons ; une sauvegarde réussie immunise contre cette aura pendant 24 heures. Aucun pouvoir magique, même rapide, pendant un round où il utilise l'aura.
+
+step: Il doit avancer pour atteindre une cible et ne peut pas porter une attaque à outrance
+  do: Se déplacer puis utiliser Frappe décisive : une griffe +21 infligeant 2d6+8 dégâts
+
+step: Ses grandes convocations sont dépensées et plusieurs ennemis restent groupés hors de portée de ses griffes
+  do: Utiliser terreur, Volonté DD 17, pour disperser le groupe
+  note: Ne pas employer ce pouvoir pendant un round où l'aura d'imbécillité est active.
+
+## Repli
+
+step: Ses points de vie diminuent, même jusqu'à une blessure mortelle
+  do: Poursuivre le combat jusqu'à la mort, en maintenant la pression des nuées ou de ses cinq griffes
+  note: Il ne fuit pas ; sa téléportation suprême ne constitue pas un plan de retraite.

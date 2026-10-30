@@ -1,0 +1,67 @@
+## Avant le combat
+
+note: Profil
+  Le Burning Child est un enfant mort-vivant unique de taille P, chaotique neutre, qui cherche ses parents et appelle au secours au milieu des combats. Ses flammes incontrôlées ravagent les deux camps.
+  150 PV, CA 17, initiative +7 ; déplacement de 12 m. Coup +10 à 1,50 m (1d4-2 plus embrasement), pouvoirs de feu à volonté et boules de feu rapides.
+  Immunisé au feu et doté des immunités des morts-vivants ; résistance à la canalisation +4 ; vulnérable au froid.
+
+resource: Boule de feu à incantation rapide | 3/jour | action rapide ; Réflexes DD 17, moitié ; NLS 11
+resource: Mains brûlantes | à volonté | Réflexes DD 16, moitié ; NLS 11
+resource: Rayon ardent | à volonté | trois rayons au NLS 11 ; attaques de contact à distance, sans sauvegarde
+resource: Aura élémentaire de feu ; traînée de feu | constantes | DD 17
+
+step: Il erre sans assister à un combat
+  do: Rester dans son état passif, invisible et intangible, en sanglotant
+  note: ses pleurs et son odeur de chair brûlée permettent de localiser sa position avec Perception DD 30.
+
+step: Il rencontre une bataille
+  do: Déterminer s'il devient actif : 1 % de chances par créature combattante, jusqu'à 100 %
+  note: dans cet état, il devient visible et corporel ; il entre dans la mêlée en criant pour qu'on le secoure.
+
+## Ouverture
+
+step: Il est actif et plusieurs combattants sont regroupés
+  do: Déclencher une boule de feu rapide sur leur groupe, puis utiliser rayon ardent sur un adversaire à portée
+  note: boule de feu inflige 10d6 de feu dans un rayon de 6 m ; son immunité au feu lui permet d'être dans l'explosion. Une seule boule rapide par round, en plus du pouvoir utilisé en action simple.
+
+step: Plusieurs adversaires sont dans un cône de 4,50 m
+  do: Utiliser mains brûlantes en action simple pour infliger 5d4 de feu
+  note: cette action remplace rayon ardent ; une boule de feu rapide reste possible s'il lui reste des utilisations.
+
+step: Il s'avance au milieu des combattants
+  do: Appliquer sa présence terrifiante aux créatures concernées dans un rayon de 18 m, Volonté DD 21
+  note: il avance en appelant à l'aide, laissant derrière lui sa traînée de feu.
+
+## Rounds suivants
+
+step: Des créatures sont adjacentes au début de son tour
+  do: Appliquer l'aura élémentaire : 2d6 de feu, Réflexes DD 17 pour réduire de moitié et éviter de prendre feu
+  note: l'aura fonctionne sans dépenser son action simple.
+
+step: Une cible est à 15 m ou moins et il peut utiliser son pouvoir sans être menacé
+  do: Utiliser rayon ardent, trois rayons de 4d6 de feu chacun, concentrés sur cette cible
+  note: si les combattants se regroupent, ajouter une boule de feu rapide tant qu'il reste des utilisations.
+
+step: Un adversaire le menace au contact
+  do: Faire un pas de placement de 1,50 m si cela suffit à se dégager, puis utiliser un pouvoir ; sinon, porter son coup +10 avec embrasement
+  note: utiliser ses pouvoirs au contact peut provoquer des attaques d'opportunité ; ses décharges à distance sont plus dangereuses que son coup.
+
+step: Il se déplace entre les combattants
+  do: Laisser la traînée de feu dans les cases traversées pour gêner ceux qui le suivent
+  note: chaque portion brûle pendant 1 round ; 1d6+10 de feu à l'entrée ou au début du tour dans les flammes, 1d6 au début du tour dans une case adjacente. La traînée peut couvrir jusqu'à 18 m par round.
+
+## Repli
+
+step: Les attaques, surtout de froid, le poussent à s'éloigner
+  do: Fuir en pleurant à 12 m par déplacement, en laissant sa traînée de feu derrière lui
+  note: il reste corporel et visible pendant sa fuite ; le froid lui inflige 50 % de dégâts supplémentaires.
+
+step: Il passe 1d4 heures sans être attaqué ni voir de conflit
+  do: Revenir à son état passif, invisible et intangible, et reprendre son errance
+
+step: Il est détruit
+  do: Se reformer après 2d4 jours grâce à l'étreinte finale
+
+step: Un humanoïde l'étreint et tente de l'apaiser pendant son état actif
+  do: Résoudre la possibilité de mettre définitivement fin à son existence
+  note: l'humanoïde doit réussir un test de Diplomatie DD 28 pendant chacun de 3 rounds consécutifs.

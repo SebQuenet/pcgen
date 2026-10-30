@@ -1,0 +1,76 @@
+## Avant le combat
+
+note: Profil
+  Boruta, créature végétale neutre de FP 9, protectrice de son territoire. Il ralentit les intrus, les maintient à distance et les frappe avec la foudre.
+  105 pv ; CA 23, contact 13 ; déplacement 9 m ; allonge 1,50 m. Deux griffes +13, chacune infligeant 1d4+3 et la malédiction d'enracinement.
+  Immunité à l'électricité et immunités des plantes. Perception +20, Discrétion +19 ; vision nocturne.
+
+resource: Passage sans trace | permanent | déplacements sans traces
+resource: Enchevêtrement | à volonté | Réflexes DD 14 ; nécessite de la végétation
+resource: Contrôle des plantes | 3/jour | Volonté DD 17 ; affecte des créatures végétales, jusqu'à 14 DV au total
+resource: Convocation d'alliés naturels V | 1/jour | un tertre errant seulement ; durée 7 rounds
+resource: Forme animale | 3/jour | comme un druide de niveau 7 ; conserver une utilisation pour fuir
+resource: Appel de la foudre | 2 préparations | Réflexes DD 16, moitié ; jusqu'à 7 éclairs par préparation, pendant 7 minutes
+resource: Pierres acérées | 1 préparation | Réflexes DD 17 ; durée 7 heures
+resource: Croissance végétale | 1 préparation | épaissit la végétation existante, sans jet de sauvegarde
+resource: Nappe de brouillard | 1 préparation | écran de fuite ; durée 70 minutes
+resource: Morsure magique | 1 préparation | une seule griffe améliorée pendant 7 minutes
+resource: Ramollissement de la terre et de la pierre | 1 préparation | exige un sol naturel non travaillé
+
+step: Des intrus approchent
+  do: Les observer à couvert et interroger les plantes grâce à son langage végétal ; choisir un passage étroit et garder une sortie libre.
+  note: La communication avec les plantes renseigne le boruta ; elle ne les anime pas.
+
+step: Le combat est imminent et il dispose de plusieurs rounds
+  do: Préparer le passage avec pierres acérées sur un sol rocheux, ou croissance végétale dans des fourrés ; lancer morsure magique juste avant l'affrontement.
+  note: Morsure magique porte une griffe à +14 pour 1d4+4 ; l'autre reste à +13 pour 1d4+3. Ses propres zones gênent aussi ses déplacements.
+
+## Ouverture
+
+step: Des ennemis avancent dans la végétation
+  do: Lancer enchevêtrement sur leur progression, en restant hors de la zone et à couvert.
+  note: Rayon 12 m ; terrain difficile pendant 7 minutes. Un échec au jet de Réflexes DD 14 arrête le déplacement et enchevêtre la cible ; les créatures encore présentes doivent renouveler leur sauvegarde à la fin de ses tours.
+
+step: Il lui faut un défenseur pour tenir le passage
+  do: Invoquer le tertre errant entre les adversaires et lui, sur un emplacement libre des pièges de terrain.
+  note: Le tertre retient les combattants tandis que le boruta prépare ses sorts ; sa présence ne dure que 7 rounds.
+
+step: Les adversaires sont ralentis et il peut consacrer un round à son attaque à distance
+  do: Lancer appel de la foudre et faire tomber le premier éclair sur une cible visible.
+  note: Incantation de 1 round ; portée 63 m. Chaque éclair inflige 3d6 d'électricité, ou 3d10 dehors par temps orageux ; Réflexes DD 16 pour réduire de moitié.
+
+## Rounds suivants
+
+step: Appel de la foudre est actif et une cible reste visible
+  do: Dépenser une action simple pour un nouvel éclair, puis se déplacer si nécessaire pour garder ses obstacles entre lui et les combattants.
+  note: Un seul éclair par round ; les suivants ne partent pas automatiquement. Privilégier un ennemi immobilisé ou un lanceur de sorts exposé.
+
+step: Un adversaire contourne les obstacles
+  do: Étendre le contrôle avec enchevêtrement ; employer croissance végétale si elle reste disponible et que la végétation convient.
+  note: Sur sol naturel humide, ramollissement de la terre et de la pierre peut aussi créer une zone boueuse pour freiner la poursuite.
+
+step: Un ennemi atteint son allonge et il peut rester sur place
+  do: Faire une attaque à outrance avec ses deux griffes, ou une seule griffe s'il doit se déplacer.
+  note: Chaque griffe blessant une créature vivante impose Vigueur DD 20 contre la malédiction. Au tour suivant de la victime : 1d6 dégâts, enchevêtrement et enracinement pendant 10 minutes. S'arracher au sol exige Force DD 10 et inflige 1d4 dégâts supplémentaires.
+
+step: Des adversaires provoquent des attaques d'opportunité à 1,50 m
+  do: Les frapper d'une griffe pour tenter de les enraciner.
+  note: Attaques réflexes autorise jusqu'à trois attaques d'opportunité par round, sans multiplier les attaques pour une même occasion.
+
+step: Une créature végétale hostile intervient
+  do: Employer contrôle des plantes, Volonté DD 17, pour obtenir sa coopération.
+  note: Les demandes inhabituelles exigent un test opposé de Charisme ; ce pouvoir ne commande pas les humanoïdes et n'anime pas les arbres ordinaires.
+
+step: Aucun ennemi n'offre une bonne cible à un éclair déjà disponible
+  do: Envisager de frapper le boruta lui-même ou son tertre errant avec la foudre pour accroître leur Constitution.
+  note: La foudre ne blesse pas le boruta ; elle augmente temporairement sa Constitution de 1d4, dont il perd ensuite 1 point par heure. Ce choix consomme l'action du round et un éclair.
+
+## Repli
+
+step: Ses points de vie passent sous 30, ou les adversaires neutralisent son contrôle du terrain
+  do: Lancer nappe de brouillard entre les poursuivants et lui, puis gagner sa sortie à 9 m par déplacement ; laisser le tertre couvrir sa fuite tant qu'il subsiste.
+  note: Le brouillard gêne aussi sa propre vision ; il cesse de viser des éclairs à travers cet écran.
+
+step: Il a rompu le contact et conserve une forme animale
+  do: Prendre une forme animale volante autorisée à un druide de niveau 7 pour s'éloigner, puis se dissimuler dans la végétation avec passage sans trace.
+  note: Incantation animale permet de lancer ses sorts sous cette forme ; réserver son action au déplacement si la fuite est prioritaire.

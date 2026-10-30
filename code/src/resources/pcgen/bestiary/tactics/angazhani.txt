@@ -1,0 +1,77 @@
+## Avant le combat
+
+note: Profil
+  Angazhani, grande créature magique chaotique mauvaise, intelligente et brutale. Il combine domination, terreur et assauts à quatre bras.
+  114 pv ; CA 24. Au contact : morsure +16 (1d8+5) et 4 griffes +16 (1d6+5, avec déchirement). Espace occupé : 3 m ; allonge : 1,50 m.
+  Avec ses haches de lancer de maître : une hache +16/+11/+6 (1d8+5), 3 autres haches +16 (1d8+2) et morsure +11 (1d8+2). À distance : 4 haches +16 (1d8+5).
+  Déplacement et escalade à 9 m. Vision dans le noir à 18 m, vision nocturne, odorat et détection de l'invisibilité permanente.
+  Réduction des dégâts 10/fer froid ou Bien ; immunité à l'électricité et au poison ; résistance 10 à l'acide, au froid et au feu ; résistance à la magie 19.
+
+resource: Domination de monstre | 3/jour | Volonté DD 21 ; NLS 14
+resource: Terreur | 3/jour | Volonté DD 16 ; NLS 14
+resource: Ténèbres profondes | à volonté | NLS 14
+resource: Porte dimensionnelle | à volonté | NLS 14 ; aucune autre action après son utilisation jusqu'au prochain tour
+resource: Dissipation de la magie | à volonté | NLS 14
+resource: Haches de lancer de maître | 8 | deux salves de quatre sans récupération ; conserver des haches si elles doivent servir au contact
+
+step: Des intrus approchent
+  do: Les repérer avec Perception +11, l'odorat et la détection de l'invisibilité ; choisir un accès étroit ou une position en hauteur accessible par escalade
+  note: Discrétion +6 : privilégier le couvert et la position plutôt qu'une embuscade reposant uniquement sur sa discrétion
+
+step: Il combat avec des alliés
+  do: Placer ceux qui sont présents devant lui et garder une voie d'accès vers une cible isolée
+  note: Il parle abyssal, commun et polyglotte ; coordonner les mouvements sans supposer de renforts supplémentaires
+
+## Ouverture
+
+step: Un combattant ennemi dangereux est visible et peut être pris pour cible
+  do: Utiliser domination de monstre, Volonté DD 21, puis lui ordonner d'attaquer ses compagnons
+  note: Privilégier un adversaire dont la résistance mentale paraît faible ; ne pas compter sur la réussite du pouvoir avant le jet de sauvegarde
+
+step: Plusieurs ennemis peuvent être pris ensemble par terreur
+  do: Utiliser terreur, Volonté DD 16, pour disperser le groupe et dégager l'accès aux adversaires restants
+  note: Choisir cette ouverture à la place de la domination si elle permet d'écarter plusieurs combattants immédiatement
+
+step: Un ennemi est déjà à portée de 1,50 m et aucun contrôle n'est prioritaire
+  do: Effectuer une attaque à outrance avec la morsure et les quatre griffes
+  note: Concentrer les griffes sur une même cible pour exploiter le déchirement ; le bloc ne précise pas ses dégâts supplémentaires
+
+## Rounds suivants
+
+step: Une cible reste à portée de 1,50 m
+  do: Poursuivre les attaques à outrance, morsure +16 et quatre griffes +16 ; ajuster la position par un pas de 1,50 m si nécessaire
+  note: Les haches constituent l'autre routine de mêlée ; choisir celle qui convient aux défenses observées de la cible
+
+step: Il doit avancer pour atteindre un ennemi
+  do: Se déplacer jusqu'à 9 m puis porter une attaque ; réserver l'attaque à outrance à un tour où il peut rester sur place
+  note: Si deux ennemis sont adjacents entre eux et tous deux à portée, Enchaînement permet de tenter une seconde attaque si la première touche ; sa CA baisse alors de 2 jusqu'à son prochain tour
+
+step: Une cible importante reste hors du contact mais peut être atteinte avec les haches
+  do: Lancer une salve de quatre haches s'il peut consacrer son tour à l'attaque à outrance ; après un déplacement, n'en lancer qu'une
+  note: Décompter chaque hache lancée ; ne pas traiter les huit haches comme des munitions illimitées
+
+step: Une protection magique adverse gêne réellement ses attaques ou ses pouvoirs
+  do: Tenter une dissipation de la magie ciblée, puis reprendre l'assaut au tour suivant
+  note: Choisir une protection déterminante plutôt que dissiper systématiquement ; le pouvoir ne garantit pas de supprimer tous les effets présents
+
+step: Une cible isolée est inaccessible par un déplacement ordinaire
+  do: Utiliser porte dimensionnelle pour gagner une position proche avec un appui sûr et préparer l'assaut du tour suivant
+  note: Il ne peut pas attaquer après cette téléportation pendant le même tour ; éviter d'arriver seul au milieu du groupe
+
+step: Le groupe se reforme et il reste des utilisations de ses pouvoirs de contrôle
+  do: Employer terreur sur plusieurs ennemis ou domination de monstre sur une nouvelle cible intéressante
+  note: Donner des ordres utiles aux créatures déjà dominées ; conserver une utilisation si un adversaire plus dangereux reste en réserve
+
+step: Un ennemi se déplace imprudemment ou utilise une capacité qui provoque à portée de 1,50 m
+  do: Exploiter Attaques réflexes pour porter les attaques d'opportunité disponibles
+  note: Sa grande taille n'augmente pas son allonge au-delà des 1,50 m indiqués
+
+## Repli
+
+step: Points de vie sous 30, ou plusieurs adversaires capables de franchir sa réduction des dégâts le cernent
+  do: Utiliser porte dimensionnelle pour rejoindre un emplacement sûr ; ordonner aux alliés ou aux créatures dominées présents de couvrir sa fuite
+  note: Ses 114 pv et ses résistances autorisent un combat prolongé, mais ne justifient pas de rester encerclé sans possibilité de riposte
+
+step: Une retraite à pied est nécessaire et il dispose d'un peu de distance
+  do: Employer ténèbres profondes pour gêner la poursuite, puis gagner un couvert ou escalader à 9 m par round
+  note: Sa vision dans le noir et sa détection de l'invisibilité ne lui permettent pas de voir dans les ténèbres surnaturelles ; choisir une issue connue avant d'obscurcir le passage

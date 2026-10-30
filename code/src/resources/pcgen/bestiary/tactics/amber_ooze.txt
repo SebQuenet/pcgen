@@ -1,0 +1,44 @@
+## Avant le combat
+
+note: Profil
+  Vase ambrée solitaire, neutre, de taille infime, ressemblant à de l'hydromel. Sans intelligence, elle agit par instinct.
+  6 PV ; CA 14, contact 14, pris au dépourvu 14 ; déplacement de 3 m ; vision aveugle à 18 m ; allonge de 0 m ; immunités des vases.
+  Aucune attaque ordinaire. Ses attaques spéciales sont l'infusion, l'affaiblissement de la volonté et la diminution permanente de caractéristiques.
+
+step: Dans un tonneau
+  do: Hiberner jusqu'à son déplacement ou sa mise en perce
+
+## Ouverture
+
+step: La boisson est servie
+  do: Passer par le robinet dans une chope
+
+step: Une créature avale la vase
+  do: Déclencher l'infusion : jet de Vigueur ; sur un échec, fusionner avec l'hôte
+  note: Le DD n'est pas indiqué dans le bloc fourni.
+
+step: Découverte avant l'ingestion
+  do: Se déplacer à 3 m ; aucune attaque de mêlée n'est disponible
+  note: Le contact seul ne permet pas l'infusion.
+
+## Rounds suivants
+
+step: L'infusion a réussi
+  do: Rester dans l'hôte ; lui appliquer -4 en Volonté contre les sorts et effets mentaux
+  note: La vase ne lance elle-même aucun sort de contrôle.
+
+step: Une semaine d'infestation s'est écoulée
+  do: Infliger quotidiennement une diminution permanente de 1 point d'Intelligence, de Sagesse et de Charisme
+  note: Une de ces caractéristiques à 0 tue l'hôte.
+
+note: Extraction
+  Détection de la magie révèle la vase ; guérison des maladies l'élimine.
+
+## Repli
+
+step: L'hôte réussit sa sauvegarde contre l'infusion
+  do: Ressortir par sa bouche dès les premiers dégâts digestifs
+  note: Les sucs digestifs infligent 1 point de dégâts d'acide par round à la vase.
+
+note: Instinct
+  Aucun seuil de PV ne déclenche de retraite tactique.

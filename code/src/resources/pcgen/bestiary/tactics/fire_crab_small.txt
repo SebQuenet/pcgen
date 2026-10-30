@@ -1,0 +1,43 @@
+## Avant le combat
+
+note: Profil
+  Crabe de feu de taille TP, vermine sans intelligence qui attaque les créatures proches. 5 pv, CA 18 ; déplacement au sol de 9 m, nage de 6 m, vision dans le noir à 18 m.
+  Deux pinces +0, chacune infligeant 1d2-2 dégâts plus 1d4 dégâts de feu, avec agrippement ; constriction lors du maintien de la lutte. Allonge de 0 m : il doit entrer dans la case de sa cible pour la frapper.
+
+note: Défenses
+  Immunité au feu et immunités des vermines ; vulnérabilité au froid. Il ne prépare ni embuscade élaborée ni combinaison tactique.
+
+## Ouverture
+
+step: Une cible peut être rejointe avec un déplacement
+  do: Avancer jusqu'à sa case, puis porter une attaque de pince +0, infligeant 1d2-2 dégâts plus 1d4 dégâts de feu si elle touche.
+  note: Entrer dans une case occupée l'expose aux attaques d'opportunité habituelles ; son agrippement, lui, n'en provoque pas.
+
+step: La cible est trop éloignée pour être frappée ce round
+  do: Se rapprocher au sol ou à la nage, selon le terrain.
+  note: Il ne possède aucune attaque à distance.
+
+step: Le round commence déjà dans la case de la cible, sans lutte en cours
+  do: Effectuer une attaque à outrance avec ses deux pinces +0.
+
+step: Une pince touche
+  do: Tenter aussitôt d'agripper la cible en action libre, avec un BMO de +0, sans provoquer d'attaque d'opportunité.
+  note: Les dégâts de feu de la pince s'appliquent même si l'agrippement échoue.
+
+## Rounds suivants
+
+step: Une cible est agrippée
+  do: Chercher à maintenir la lutte pour lui infliger la constriction.
+  note: Chaque round où la lutte est maintenue, la constriction inflige automatiquement 1d2-2 dégâts contondants plus 1d4 dégâts de feu.
+
+step: La lutte a échoué ou la cible s'est libérée
+  do: Reprendre les attaques de pinces et tenter de nouveau l'agrippement à chaque touche ; utiliser les deux pinces si une attaque à outrance est possible.
+
+step: Une attaque naturelle ou à mains nues touche le crabe
+  do: Infliger immédiatement 1d4 dégâts de feu à l'attaquant grâce à la chaleur du corps.
+  note: Cet effet se produit à chaque touche ; il ne s'applique pas aux coups portés avec une arme manufacturée.
+
+## Repli
+
+note: Instinct
+  Aucun seuil de fuite n'est indiqué. Cette vermine sans intelligence n'organise pas de retraite tactique ; tant qu'une cible reste proche, il poursuit ses attaques ou sa lutte.

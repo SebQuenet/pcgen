@@ -1,0 +1,71 @@
+## Avant le combat
+
+note: Profil
+  Dosojin, kami neutre bon de taille M, gardien d'une route ou d'un sentier. Il protège les voyageurs respectueux et égare les malfaiteurs ; contre les oni et les profanateurs, il défend résolument son domaine.
+  85 pv, CA 20 ; déplacement de 9 m. Au contact, deux coups à +13, chacun à 1d6+2, en attaque à outrance ; allonge de 1,50 m. Il privilégie les illusions, les obstacles et l'esquive.
+  Réduction des dégâts 5/fer froid ; résistances à l'acide, à l'électricité et au feu de 10. Immunisé aux saignements, aux effets mentaux, à la pétrification et à la métamorphose.
+
+resource: Dissipation de la magie | 3/jour | NLS 10, test de dissipation à +10
+resource: Nappe de brouillard | 3/jour | masque la vue dans un rayon de 6 m ; gêne aussi le dosojin
+resource: Invisibilité accélérée | 3/jour | action rapide ; prend fin s'il attaque
+resource: Grand pas | 3/jour | déplacement porté à 12 m pendant 10 heures
+resource: Passage sans trace | 3/jour | dissimule ses traces pendant 10 heures
+resource: Façonnage de la pierre | 3/jour | remodèle la pierre existante
+resource: Localisation d'objet | 1/jour | recherche un objet connu ou un type d'objet
+resource: Mirage | 1/jour | Volonté DD 18 pour reconnaître l'illusion en interagissant avec elle
+resource: Antidétection | 1/jour | protège contre les divinations pendant 10 heures
+
+step: Il surveille son chemin sans menace immédiate
+  do: Imiter une statue de taille M, immobile au bord du passage ; interroger les plantes sur les passages récents.
+  note: Imitation de statue demande une action simple ; Déguisement +36 sous cette apparence. Elle ne rend pas automatiquement indétectable.
+
+step: Des intrus hostiles approchent et il dispose de temps
+  do: Lancer Grand pas et Passage sans trace avant leur arrivée ; préparer un Mirage pour masquer une bifurcation ou faire paraître un accès impraticable.
+  note: L'illusion modifie l'apparence du terrain ; elle ne crée aucun obstacle solide. Préserver la route et laisser une issue aux voyageurs innocents.
+
+## Ouverture
+
+step: Les intentions des voyageurs restent incertaines
+  do: Leur demander par télépathie de respecter le chemin et de renoncer aux dégradations ; évaluer leur réponse avec Psychologie +19.
+  note: Télépathie à 30 m ; Diplomatie +16 pour obtenir un départ sans violence.
+
+step: Des ennemis s'engagent sur la route protégée
+  do: Manipuler le chemin, en action simple, pour le rendre difficile pour leur groupe ; se déplacer à l'écart du contact.
+  note: L'effet dure tant qu'ils restent dans le domaine. Faciliter le voyage des alliés ne leur accorde aucun bonus de vitesse en combat.
+
+step: L'attaque est imminente et il doit se soustraire aux regards
+  do: Activer Invisibilité accélérée en action rapide, puis employer son action simple à manipuler le chemin ou à lancer Nappe de brouillard selon le besoin.
+  note: Choisir une seule de ces actions simples ce round ; se déplacer ensuite vers un abri ou le chemin protégé.
+
+## Rounds suivants
+
+step: Les ennemis hésitent devant le terrain illusoire
+  do: Rester hors de portée et les laisser se détourner ; employer Bluff +16 pour renforcer la tromperie si une intervention est utile.
+  note: Le but est de les écarter du domaine ; le Mirage ne les contraint pas à suivre une direction.
+
+step: Une protection magique permet à un adversaire de franchir les obstacles ou de poursuivre le dosojin
+  do: Tenter une Dissipation de la magie ciblée sur cette protection, puis changer de position.
+
+step: Les archers ou les lanceurs de sorts le prennent pour cible
+  do: Placer une Nappe de brouillard entre eux et lui, puis se déplacer hors de leur ligne de vue.
+  note: Sa vision dans le noir à 18 m ne traverse pas le brouillard ; éviter d'y chercher un duel au contact.
+
+step: Une pierre existante permet de fermer un passage secondaire sans endommager la route
+  do: Employer Façonnage de la pierre pour obstruer ce passage et compliquer la poursuite.
+
+step: Un ennemi isolé est à 1,50 m et le contact est favorable
+  do: Attaque à outrance : deux coups à +13, chacun à 1d6+2 ; s'il doit d'abord se déplacer, porter un seul coup.
+  note: Une attaque rompt l'invisibilité. Éviter les échanges prolongés avec un porteur d'arme en fer froid.
+
+## Repli
+
+step: Ses points de vie passent sous 30 ou plusieurs adversaires l'encerclent
+  do: Employer une Invisibilité accélérée encore disponible, rejoindre le chemin protégé, puis fusionner avec lui en action simple.
+  note: S'il a déjà utilisé son action simple pour le brouillard, attendre le round suivant pour fusionner. Sans invisibilité, utiliser le brouillard pour couvrir l'approche.
+
+step: Il est fusionné avec son chemin
+  do: Observer et récupérer 4 pv par round ; attendre que les poursuivants s'éloignent avant de ressortir en un autre point du même chemin, en action simple.
+  note: Pendant la fusion, il ne communique pas et n'entreprend aucune autre action. Sa guérison accélérée fonctionne également lorsqu'il reste à 36 m ou moins du chemin protégé.
+
+step: Les intrus renoncent à nuire et quittent les lieux
+  do: Cesser les hostilités et reprendre la surveillance de la route.

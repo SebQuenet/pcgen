@@ -1,0 +1,50 @@
+## Avant le combat
+
+note: Profil
+  Grenouille géante abyssale, Extérieur de taille G, chaotique mauvaise ; prédateur peu intelligent du plan de la Vase. 58 points de vie, CA 24, initiative +8.
+  Morsure +10 (1d8+8 et étreinte), allonge 3 m ; ou langue +10 au contact, allonge 6 m, avec étreinte et attraction de 3 m.
+  Déplacement terrestre et nage à 12 m ; vision dans le noir à 18 m, vision nocturne et odorat.
+
+resource: Châtiment du Bien | 1/jour | +4 aux dégâts contre la cible bonne choisie
+
+note: Défenses
+  Résistance au froid 5 et au feu 5 ; résistance à la magie 9. Sa Volonté +4 reste son jet de sauvegarde le plus faible.
+
+step: Des intrus approchent d'une zone aquatique
+  do: Attendre près de l'eau et laisser une proie s'approcher à portée de langue
+  note: Perception +8 et Discrétion +4 ; privilégier une proie isolée et une approche simple.
+
+## Ouverture
+
+step: Une proie se trouve à plus de 3 m et à 6 m ou moins
+  do: Attaquer avec la langue +10 au contact, tenter l'étreinte, puis l'attirer de 3 m grâce à l'attraction
+  note: La langue ne donne aucun dégât indiqué ; elle sert à rapprocher la victime de la gueule.
+
+step: Une proie se trouve à 3 m ou moins
+  do: Mordre à +10 pour 1d8+8 dégâts et tenter l'étreinte
+  note: Choisir la morsure ou la langue pour l'attaque ; ne pas les cumuler.
+
+step: Une cible bonne est identifiée et devient sa proie principale
+  do: Utiliser le châtiment du Bien contre elle
+  note: Le bonus indiqué est de +4 aux dégâts ; aucun pouvoir de détection du Bien n'est fourni.
+
+## Rounds suivants
+
+step: La langue a rapproché une proie à portée de morsure
+  do: Chercher à la saisir avec la morsure +10, puis la maintenir dans la gueule
+
+step: Une proie est maintenue dans la gueule et peut être engloutie
+  do: Tenter de l'engloutir
+  note: Engloutissement : 1d8+8 dégâts contondants ; intérieur CA 12, 2 points de vie pour s'ouvrir une issue.
+
+step: Une proie est engloutie et d'autres ennemis restent à portée
+  do: Laisser l'engloutissement blesser la victime et attaquer un autre ennemi avec la morsure ou la langue selon sa distance
+
+step: Aucun adversaire n'est à portée
+  do: Se rapprocher à 12 m par déplacement, par la terre ou à la nage, puis reprendre les attaques dès que possible
+
+## Repli
+
+step: Points de vie sous 15 et plusieurs ennemis combattent encore
+  do: Gagner l'eau et s'éloigner à la nage, à 12 m par déplacement
+  note: Relâcher une proie agrippée si elle entrave la fuite ; chercher un obstacle qui coupe la poursuite.

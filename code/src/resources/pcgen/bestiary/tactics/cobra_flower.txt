@@ -1,0 +1,40 @@
+## Avant le combat
+
+note: Profil
+  Fleur cobra, plante de taille G sans intelligence, prédateur des forêts tempérées et froides. 45 points de vie, CA 14 ; immunités des plantes.
+  Morsure +6 : 1d8+4 dégâts plus 1d6 d'acide et étreinte. Constriction : 1d8+4 dégâts plus 1d6 d'acide.
+  Espace occupé et allonge : 3 m ; déplacement : 1,50 m. Perception aveugle à 9 m et vision nocturne.
+
+step: Aucune proie n'est encore à portée
+  do: Attendre qu'une créature approche ; réagir à sa présence sans élaborer de piège ni de manœuvre coordonnée.
+  note: Sa lenteur favorise l'attente ; aucune attaque à distance n'est indiquée.
+
+## Ouverture
+
+step: Une proie est à 3 m ou moins
+  do: Porter une morsure +6, infligeant 1d8+4 dégâts plus 1d6 d'acide.
+
+step: La morsure touche
+  do: Tenter immédiatement de saisir la proie grâce à l'étreinte.
+  note: Un test de lutte réussi déclenche la constriction : 1d8+4 dégâts plus 1d6 d'acide supplémentaires.
+
+## Rounds suivants
+
+step: Une proie est toujours saisie
+  do: Maintenir la lutte pour continuer à la broyer ; appliquer la constriction à chaque test de lutte réussi.
+  note: Rester concentrée sur cette proie tant que l'étreinte tient.
+
+step: La proie se libère et reste à portée
+  do: La mordre de nouveau et tenter une nouvelle étreinte si la morsure touche.
+
+step: Aucune proie n'est à portée, mais une créature reste perceptible
+  do: Avancer vers la proie la plus proche à 1,50 m par action de déplacement, puis mordre si une action reste disponible et si elle est à portée.
+
+## Repli
+
+step: La fleur cobra est blessée et une proie reste accessible
+  do: Continuer à mordre ou à maintenir l'étreinte, sans organiser de retraite.
+  note: Sans intelligence, elle ne choisit pas un seuil de points de vie pour préparer une fuite.
+
+step: Plus aucune proie n'est perceptible
+  do: Cesser la poursuite et attendre qu'une créature se présente à nouveau.

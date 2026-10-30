@@ -1,0 +1,46 @@
+## Avant le combat
+
+note: Profil
+  Araignée cavernicole albinos de la taille d'un poing, vermine sans intelligence qui chasse sous terre et attaque toute proie à portée. Elle possède 4 pv et une CA de 17.
+  Morsure +6 (1d3-3 et venin) ; allonge de 0,75 m. Son venin inflige des dégâts de Constitution et constitue sa principale menace.
+  Déplacement au sol de 6 m, escalade de 3 m ; Discrétion +16, Escalade +12, Acrobaties +4 (+12 pour sauter).
+
+resource: Venin | à chaque morsure qui blesse | blessure ; Vigueur DD 14 ; fréquence 1 fois par round pendant 4 rounds ; effet 1d2 dégâts de Constitution ; guérison après 1 sauvegarde réussie
+
+step: Aucune proie à portée immédiate
+  do: Rester dissimulée parmi les champignons ou sur une paroi de la caverne, en utilisant Discrétion +16
+  note: Sa coloration blanche et ses taches brunes se confondent avec les champignons ; elle ne crée ni toile ni piège avec les capacités indiquées
+
+step: Une proie approche dans l'obscurité
+  do: La repérer avec sa vision dans le noir à 18 m ou sa perception des vibrations à 18 m
+  note: La perception des vibrations exige que la proie soit en contact avec le sol ou une surface reliée à celle de l'araignée
+
+## Ouverture
+
+step: Une proie est déjà à portée de morsure
+  do: Mordre immédiatement à +6 et appliquer le venin si la morsure blesse
+  note: Vigueur DD 14 ; elle attaque instinctivement, sans choisir une cible selon ses défenses ou son rôle
+
+step: Une proie est repérée mais reste hors de portée
+  do: S'en approcher au sol à 6 m ou en escalade à 3 m, puis mordre si les actions disponibles le permettent
+  note: Avec son allonge de 0,75 m, elle doit entrer dans la case d'un adversaire occupant une case de 1,50 m pour le mordre ; cette entrée provoque une attaque d'opportunité
+
+## Rounds suivants
+
+step: La proie reste à portée
+  do: Répéter la morsure +6 chaque round, sans attendre que le venin ait terminé d'agir
+  note: Chaque nouvelle morsure qui blesse peut inoculer le venin ; les dégâts directs restent de 1d3-3
+
+step: Une proie est empoisonnée
+  do: Résoudre ses sauvegardes de Vigueur DD 14 à la fréquence du venin
+  note: Chaque échec inflige 1d2 dégâts de Constitution ; une sauvegarde réussie guérit le poison, qui ne dure autrement que 4 rounds
+
+step: La proie s'éloigne
+  do: La suivre par le sol ou les parois accessibles, puis reprendre les morsures une fois à portée
+  note: Utiliser Escalade +12 pour franchir les parois et Acrobaties +12 si un saut est nécessaire ; ces compétences ne garantissent pas la réussite du passage
+
+## Repli
+
+step: Elle est blessée et une proie reste accessible
+  do: Continuer à mordre selon son comportement agressif
+  note: Aucun seuil de fuite particulier n'est indiqué ; avec seulement 4 pv, elle peut être abattue avant de pouvoir se dégager
