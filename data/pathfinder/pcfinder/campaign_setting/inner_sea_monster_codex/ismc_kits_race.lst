@@ -5,6 +5,7 @@ ALIGN:TN
 RACE:Centaur, Centaur Charger	!PRERACE:1,%
 NAME:Centaur, Centaur Charger
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Spear	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Centaur, Centaur Forager Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Centaur, Centaur Forager],[!PRERACE:1,%]	SOURCEPAGE:p.7
 ALIGN:TN
@@ -35,12 +36,14 @@ ALIGN:CE
 RACE:Charau-ka, Devotee of the Ravener King	!PRERACE:1,%
 NAME:Charau-ka, Devotee of the Ravener King
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Spear	QTY:1	SIZE:S	LOCATION:Both Hands
 
 STARTPACK:Charau-ka, Jungle Trickster Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Charau-ka, Jungle Trickster],[!PRERACE:1,%]	SOURCEPAGE:p.15
 ALIGN:CE
 RACE:Charau-ka, Jungle Trickster	!PRERACE:1,%
 NAME:Charau-ka, Jungle Trickster
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Whip	QTY:1	SIZE:S	LOCATION:Primary Hand
 
 STARTPACK:Charau-ka, Simian Sharpshooter Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Charau-ka, Simian Sharpshooter],[!PRERACE:1,%]	SOURCEPAGE:p.13
 ALIGN:CE
@@ -53,78 +56,96 @@ ALIGN:TN
 RACE:Cyclops, Cyclops Grand-Eye	!PRERACE:1,%
 NAME:Cyclops, Cyclops Grand-Eye
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Crossbow (Heavy)	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Cyclops, Cyclops Lorekeeper Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Cyclops, Cyclops Lorekeeper],[!PRERACE:1,%]	SOURCEPAGE:p.21
 ALIGN:NE
 RACE:Cyclops, Cyclops Lorekeeper	!PRERACE:1,%
 NAME:Cyclops, Cyclops Lorekeeper
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Quarterstaff	QTY:1	SIZE:L	LOCATION:Primary Hand
+GEAR:Crossbow (Heavy)	QTY:1	SIZE:L	LOCATION:Carried
 
 STARTPACK:Cyclops, Cyclops Manhunter Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Cyclops, Cyclops Manhunter],[!PRERACE:1,%]	SOURCEPAGE:p.18
 ALIGN:NE
 RACE:Cyclops, Cyclops Manhunter	!PRERACE:1,%
 NAME:Cyclops, Cyclops Manhunter
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Greataxe	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Cyclops, Cyclops Smasher Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Cyclops, Cyclops Smasher],[!PRERACE:1,%]	SOURCEPAGE:p.19
 ALIGN:NE
 RACE:Cyclops, Cyclops Smasher	!PRERACE:1,%
 NAME:Cyclops, Cyclops Smasher
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Longbow	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Derro, Derro Bodysnatcher Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Derro, Derro Bodysnatcher],[!PRERACE:1,%]	SOURCEPAGE:p.26
 ALIGN:CE
 RACE:Derro, Derro Bodysnatcher	!PRERACE:1,%
 NAME:Derro, Derro Bodysnatcher
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Sap	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Crossbow (Repeating Heavy)	QTY:1	SIZE:S	LOCATION:Carried
+GEAR:Net	QTY:1	SIZE:S	LOCATION:Carried
 
 STARTPACK:Derro, Derro Brainwasher Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Derro, Derro Brainwasher],[!PRERACE:1,%]	SOURCEPAGE:p.24
 ALIGN:CE
 RACE:Derro, Derro Brainwasher	!PRERACE:1,%
 NAME:Derro, Derro Brainwasher
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Crossbow (Repeating Light)	QTY:1	SIZE:S	LOCATION:Both Hands
 
 STARTPACK:Derro, Urban Stalker Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Derro, Urban Stalker],[!PRERACE:1,%]	SOURCEPAGE:p.25
 ALIGN:CE
 RACE:Derro, Urban Stalker	!PRERACE:1,%
 NAME:Derro, Urban Stalker
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Dart	QTY:1	SIZE:S	LOCATION:Primary Hand
 
 STARTPACK:Derro, White-Eyed Torturer Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Derro, White-Eyed Torturer],[!PRERACE:1,%]	SOURCEPAGE:p.27
 ALIGN:CE
 RACE:Derro, White-Eyed Torturer	!PRERACE:1,%
 NAME:Derro, White-Eyed Torturer
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Crossbow (Repeating Light)	QTY:1	SIZE:S	LOCATION:Both Hands
 
 STARTPACK:Gillman, Awakened Agent Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Gillman, Awakened Agent],[!PRERACE:1,%]	SOURCEPAGE:p.33
 ALIGN:LE
 RACE:Gillman, Awakened Agent	!PRERACE:1,%
 NAME:Gillman, Awakened Agent
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Gillman, Ship Scavenger Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Gillman, Ship Scavenger],[!PRERACE:1,%]	SOURCEPAGE:p.30
 ALIGN:TN
 RACE:Gillman, Ship Scavenger	!PRERACE:1,%
 NAME:Gillman, Ship Scavenger
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Shortspear	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Gillman, Squall Seer Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Gillman, Squall Seer],[!PRERACE:1,%]	SOURCEPAGE:p.32
 ALIGN:CN
 RACE:Gillman, Squall Seer	!PRERACE:1,%
 NAME:Gillman, Squall Seer
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Quarterstaff	QTY:1	LOCATION:Primary Hand
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Carried
 
 STARTPACK:Gillman, Wet-House Emissary Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Gillman, Wet-House Emissary],[!PRERACE:1,%]	SOURCEPAGE:p.31
 ALIGN:TN
 RACE:Gillman, Wet-House Emissary	!PRERACE:1,%
 NAME:Gillman, Wet-House Emissary
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Girtablilu, Divine Chieftain Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Girtablilu, Divine Chieftain],[!PRERACE:1,%]	SOURCEPAGE:p.39
 ALIGN:TN
 RACE:Girtablilu, Divine Chieftain	!PRERACE:1,%
 NAME:Girtablilu, Divine Chieftain
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Spear	QTY:1	SIZE:L	LOCATION:Both Hands
+GEAR:Sling	QTY:1	SIZE:L	LOCATION:Carried
 
 STARTPACK:Girtablilu, Dune Strider Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Girtablilu, Dune Strider],[!PRERACE:1,%]	SOURCEPAGE:p.37
 ALIGN:TN
@@ -137,30 +158,36 @@ ALIGN:TN
 RACE:Girtablilu, Quick Striker	!PRERACE:1,%
 NAME:Girtablilu, Quick Striker
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Spear	QTY:1	SIZE:L	LOCATION:Both Hands
+GEAR:Shortbow (Composite)	QTY:1	SIZE:L	LOCATION:Carried
 
 STARTPACK:Girtablilu, Raging Sting Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Girtablilu, Raging Sting],[!PRERACE:1,%]	SOURCEPAGE:p.36
 ALIGN:CN
 RACE:Girtablilu, Raging Sting	!PRERACE:1,%
 NAME:Girtablilu, Raging Sting
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Axe (Throwing)	QTY:1	SIZE:L	LOCATION:Primary Hand
 
 STARTPACK:Minotaur, Labyrinth Guardian Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Minotaur, Labyrinth Guardian],[!PRERACE:1,%]	SOURCEPAGE:p.43
 ALIGN:CE
 RACE:Minotaur, Labyrinth Guardian	!PRERACE:1,%
 NAME:Minotaur, Labyrinth Guardian
 STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
+GEAR:Crossbow (Heavy)	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Minotaur, Minotaur Marauder Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Minotaur, Minotaur Marauder],[!PRERACE:1,%]	SOURCEPAGE:p.42
 ALIGN:CE
 RACE:Minotaur, Minotaur Marauder	!PRERACE:1,%
 NAME:Minotaur, Minotaur Marauder
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Longbow (Composite)	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Minotaur, Prophet of Baphomet Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Minotaur, Prophet of Baphomet],[!PRERACE:1,%]	SOURCEPAGE:p.45
 ALIGN:CE
 RACE:Minotaur, Prophet of Baphomet	!PRERACE:1,%
 NAME:Minotaur, Prophet of Baphomet
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Crossbow (Light)	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Minotaur, Tangle Tender Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Minotaur, Tangle Tender],[!PRERACE:1,%]	SOURCEPAGE:p.44
 ALIGN:NE
@@ -173,12 +200,17 @@ ALIGN:NE
 RACE:Ogrekin, Kin Seeker	!PRERACE:1,%
 NAME:Ogrekin, Kin Seeker
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Club	QTY:1	LOCATION:Primary Hand
+GEAR:Bolas	QTY:1	LOCATION:Carried
+GEAR:Shortbow (Composite)	QTY:1	LOCATION:Carried
 
 STARTPACK:Ogrekin, Kreegwood Stalker Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ogrekin, Kreegwood Stalker],[!PRERACE:1,%]	SOURCEPAGE:p.48
 ALIGN:NE
 RACE:Ogrekin, Kreegwood Stalker	!PRERACE:1,%
 NAME:Ogrekin, Kreegwood Stalker
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Warhammer	QTY:1	LOCATION:Primary Hand
+GEAR:Axe (Throwing)	QTY:1	LOCATION:Carried
 
 STARTPACK:Ogrekin, Stroud Apprentice Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ogrekin, Stroud Apprentice],[!PRERACE:1,%]	SOURCEPAGE:p.51
 ALIGN:NE
@@ -197,24 +229,31 @@ ALIGN:CN
 RACE:Strix, Itaraak Champion	!PRERACE:1,%
 NAME:Strix, Itaraak Champion
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Longbow (Composite)	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Strix, Strix Infiltrator Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Strix, Strix Infiltrator],[!PRERACE:1,%]	SOURCEPAGE:p.54
 ALIGN:TN
 RACE:Strix, Strix Infiltrator	!PRERACE:1,%
 NAME:Strix, Strix Infiltrator
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
+GEAR:Shortbow	QTY:1	LOCATION:Carried
 
 STARTPACK:Strix, Strix Rokoa Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Strix, Strix Rokoa],[!PRERACE:1,%]	SOURCEPAGE:p.57
 ALIGN:LN
 RACE:Strix, Strix Rokoa	!PRERACE:1,%
 NAME:Strix, Strix Rokoa
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Quarterstaff	QTY:1	LOCATION:Primary Hand
+GEAR:Dart	QTY:1	LOCATION:Carried
 
 STARTPACK:Strix, Strix Voyager Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Strix, Strix Voyager],[!PRERACE:1,%]	SOURCEPAGE:p.55
 ALIGN:TN
 RACE:Strix, Strix Voyager	!PRERACE:1,%
 NAME:Strix, Strix Voyager
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Spear	QTY:1	LOCATION:Both Hands
+GEAR:Sling	QTY:1	LOCATION:Carried
 
 STARTPACK:Urdefhan, Half-Fiend Scion Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Urdefhan, Half-Fiend Scion],[!PRERACE:1,%]	SOURCEPAGE:p.63
 ALIGN:NE
@@ -239,4 +278,5 @@ ALIGN:NE
 RACE:Urdefhan, Skaveling Rider	!PRERACE:1,%
 NAME:Urdefhan, Skaveling Rider
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
+GEAR:Shortbow (Composite)	QTY:1	LOCATION:Both Hands
 

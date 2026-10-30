@@ -87,6 +87,7 @@ ABILITY:CATEGORY=FEAT|Intimidating Prowess
 ABILITY:CATEGORY=FEAT|Iron Will
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Toughness
+GEAR:Greatsword	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Amalgamation Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Amalgamation],[!PRERACE:1,%]
 ALIGN:TN
@@ -99,6 +100,7 @@ ALIGN:TN
 RACE:Amber Skeleton	!PRERACE:1,%
 NAME:Amber Skeleton
 STAT:STR=10|DEX=10|WIS=10|CHA=10
+GEAR:Spear	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Ancient Gray Dragon Default	TYPE:Default Monster.Dragon	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ancient Gray Dragon],[!PRERACE:1,%]
 ALIGN:NE
@@ -256,7 +258,7 @@ NAME:Black Rot
 STAT:DEX=10|CON=10|WIS=10|CHA=10
 SKILL:Fly	RANK:5
 SKILL:Stealth	RANK:1
-ABILITY:CATEGORY=FEAT|Ability Focus (disease)
+ABILITY:CATEGORY=FEAT|Ability Focus (Disease)
 
 STARTPACK:Black Troll Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Black Troll],[!PRERACE:1,%]
 ALIGN:CE
@@ -358,11 +360,9 @@ SKILL:Disguise	RANK:3
 SKILL:Perception	RANK:10
 SKILL:Stealth	RANK:2
 ABILITY:CATEGORY=FEAT|Cleave
-ABILITY:CATEGORY=FEAT|Improved Critical (bone blade)
 ABILITY:CATEGORY=FEAT|Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Lunge
 ABILITY:CATEGORY=FEAT|Power Attack
-ABILITY:CATEGORY=FEAT|Weapon Focus (bone blade)
 
 STARTPACK:Bone Delver Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Bone Delver],[!PRERACE:1,%]
 ALIGN:CE
@@ -390,7 +390,7 @@ STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Perception	RANK:3
 SKILL:Stealth	RANK:2
 SKILL:Swim	RANK:9
-ABILITY:CATEGORY=FEAT|Ability Focus (wail)
+ABILITY:CATEGORY=FEAT|Ability Focus (Wail)
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Improved Critical (claw)
 ABILITY:CATEGORY=FEAT|Power Attack
@@ -429,6 +429,7 @@ ALIGN:TN
 RACE:Bronze Minotaur	!PRERACE:1,%
 NAME:Bronze Minotaur
 STAT:STR=10|DEX=10|WIS=10|CHA=10
+GEAR:Greataxe	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Bucentaur Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Bucentaur],[!PRERACE:1,%]
 ALIGN:CE
@@ -517,7 +518,6 @@ STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Intimidate	RANK:2
 SKILL:Perception	RANK:4
 SKILL:Stealth	RANK:8
-ABILITY:CATEGORY=FEAT|Ability Focus (smoke cloud)
 ABILITY:CATEGORY=FEAT|Cleave
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Iron Will
@@ -546,7 +546,7 @@ SKILL:Perception	RANK:14
 SKILL:Sense Motive	RANK:6
 SKILL:Stealth	RANK:7
 SKILL:Swim	RANK:14
-ABILITY:CATEGORY=FEAT|Ability Focus (paralysis)
+ABILITY:CATEGORY=FEAT|Ability Focus (Paralysis)
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Blind-Fight
 ABILITY:CATEGORY=FEAT|Combat Reflexes
@@ -589,6 +589,7 @@ ABILITY:CATEGORY=FEAT|Iron Will
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Vital Strike
 ABILITY:CATEGORY=FEAT|Weapon Focus (greatsword)
+GEAR:Greatsword	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Ciratto Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ciratto],[!PRERACE:1,%]
 ALIGN:CE
@@ -642,6 +643,7 @@ SKILL:Perception	RANK:1
 SKILL:Sleight of Hand	RANK:1
 SKILL:Stealth	RANK:1
 ABILITY:CATEGORY=FEAT|Alertness
+GEAR:Dagger	QTY:1	SIZE:T	LOCATION:Primary Hand
 
 STARTPACK:Coral Giant Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Coral Giant],[!PRERACE:1,%]
 ALIGN:CN
@@ -661,6 +663,7 @@ ABILITY:CATEGORY=FEAT|Intimidating Prowess
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 ABILITY:CATEGORY=FEAT|Weapon Focus (trident)
+GEAR:Trident	QTY:1	SIZE:L	LOCATION:Primary Hand
 
 STARTPACK:Crag Giant Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Crag Giant],[!PRERACE:1,%]
 ALIGN:CE
@@ -680,6 +683,7 @@ ABILITY:CATEGORY=FEAT|Intimidating Prowess
 ABILITY:CATEGORY=FEAT|Iron Will
 ABILITY:CATEGORY=FEAT|Martial Weapon Proficiency (greatclub)
 ABILITY:CATEGORY=FEAT|Power Attack
+GEAR:Greatclub	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Crawling Offspring Default	TYPE:Default Monster.Aberration	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Crawling Offspring],[!PRERACE:1,%]
 ALIGN:TN
@@ -728,7 +732,6 @@ SKILL:Perception	RANK:15
 SKILL:Sense Motive	RANK:1
 SKILL:Stealth	RANK:7
 SKILL:Survival	RANK:15
-ABILITY:CATEGORY=FEAT|Ability Focus (petrifying bite)
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Improved Critical (claw)
 ABILITY:CATEGORY=FEAT|Improved Initiative
@@ -773,7 +776,7 @@ ABILITY:CATEGORY=FEAT|Iron Will
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Quicken Spell-Like Ability ~ Spell (fireball)
 ABILITY:CATEGORY=FEAT|Vital Strike
-ABILITY:CATEGORY=FEAT|Weapon Focus (mace)
+GEAR:Mace (Heavy)	QTY:1	SIZE:L	LOCATION:Primary Hand
 
 STARTPACK:Daochyn Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Daochyn],[!PRERACE:1,%]
 ALIGN:TN
@@ -837,7 +840,6 @@ SKILL:Perception	RANK:11
 SKILL:Sense Motive	RANK:11
 SKILL:Spellcraft	RANK:9
 SKILL:Stealth	RANK:11
-ABILITY:CATEGORY=FEAT|Ability Focus (atrophic breath)
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Combat Casting
 ABILITY:CATEGORY=FEAT|Dodge
@@ -864,7 +866,7 @@ SKILL:Survival	RANK:8
 ABILITY:CATEGORY=FEAT|Blind-Fight
 ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Improved Initiative
-ABILITY:CATEGORY=FEAT|Weapon Focus (snake-hands)
+GEAR:Quarterstaff	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Deathstroke Serpent Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Deathstroke Serpent],[!PRERACE:1,%]
 ALIGN:CE
@@ -923,7 +925,6 @@ SKILL:Perception	RANK:14
 SKILL:Stealth	RANK:14
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Great Fortitude
-ABILITY:CATEGORY=FEAT|Improved Channel Resistance
 ABILITY:CATEGORY=FEAT|Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Mobility
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
@@ -1025,6 +1026,7 @@ SKILL:Stealth	RANK:6
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Iron Will
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Dracohydra Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Dracohydra],[!PRERACE:1,%]
 ALIGN:TN
@@ -1156,7 +1158,7 @@ SKILL:Knowledge (Local)	RANK:5
 SKILL:Perception	RANK:8
 SKILL:Sense Motive	RANK:8
 SKILL:Stealth	RANK:8
-ABILITY:CATEGORY=FEAT|Ability Focus (malevolence)
+ABILITY:CATEGORY=FEAT|Ability Focus (Malevolence)
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Iron Will
@@ -1253,6 +1255,7 @@ ABILITY:CATEGORY=FEAT|Iron Will
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Toughness
 ABILITY:CATEGORY=FEAT|Weapon Focus (greatclub)
+GEAR:Greatclub	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Feral Vampire Spawn Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Feral Vampire Spawn],[!PRERACE:1,%]
 ALIGN:CE
@@ -1274,7 +1277,7 @@ NAME:Festering Lung
 STAT:DEX=10|CON=10|WIS=10|CHA=10
 SKILL:Fly	RANK:5
 SKILL:Stealth	RANK:1
-ABILITY:CATEGORY=FEAT|Ability Focus (disease)
+ABILITY:CATEGORY=FEAT|Ability Focus (Disease)
 
 STARTPACK:Fire Crab, Medium Default	TYPE:Default Monster.Vermin	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Fire Crab, Medium],[!PRERACE:1,%]
 ALIGN:TN
@@ -1352,6 +1355,8 @@ ABILITY:CATEGORY=FEAT|Iron Will
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Two-Weapon Fighting
 ABILITY:CATEGORY=FEAT|Vital Strike
+GEAR:Trident	QTY:1	SIZE:L	LOCATION:Primary Hand
+GEAR:Net	QTY:1	SIZE:L	LOCATION:Carried
 
 STARTPACK:Flame Drakeling Default	TYPE:Default Monster.Dragon	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Flame Drakeling],[!PRERACE:1,%]
 ALIGN:TN
@@ -1429,6 +1434,7 @@ SKILL:Perception	RANK:1
 SKILL:Stealth	RANK:1
 SKILL:Survival	RANK:2
 ABILITY:CATEGORY=FEAT|Weapon Focus (battleaxe)
+GEAR:Battleaxe	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Fungus Man Default	TYPE:Default Monster.Plant	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Fungus Man],[!PRERACE:1,%]
 ALIGN:TN
@@ -1605,7 +1611,6 @@ SKILL:Climb	RANK:8
 SKILL:Perception	RANK:1
 SKILL:Stealth	RANK:1
 ABILITY:CATEGORY=FEAT|Lunge
-ABILITY:CATEGORY=FEAT|Virulent Poison
 
 STARTPACK:Giant Proto-Creature Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Giant Proto-Creature],[!PRERACE:1,%]
 ALIGN:NE
@@ -1756,7 +1761,6 @@ SKILL:Swim	RANK:5
 ABILITY:CATEGORY=FEAT|Cleave
 ABILITY:CATEGORY=FEAT|Improved Critical (bite)
 ABILITY:CATEGORY=FEAT|Power Attack
-ABILITY:CATEGORY=FEAT|Uncontrolled Rage
 
 STARTPACK:Great Wyrm Gray Dragon Default	TYPE:Default Monster.Dragon	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Great Wyrm Gray Dragon],[!PRERACE:1,%]
 ALIGN:NE
@@ -1833,7 +1837,7 @@ SKILL:Intimidate	RANK:6
 SKILL:Perception	RANK:6
 SKILL:Sense Motive	RANK:6
 SKILL:Stealth	RANK:6
-ABILITY:CATEGORY=FEAT|Ability Focus (gaze)
+ABILITY:CATEGORY=FEAT|Ability Focus (Gaze)
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 ABILITY:CATEGORY=FEAT|Weapon Focus (incorporeal touch)
 
@@ -1847,6 +1851,8 @@ SKILL:Fly	RANK:1
 SKILL:Perception	RANK:1
 SKILL:Stealth	RANK:1
 ABILITY:CATEGORY=FEAT|Flyby Attack
+GEAR:Dagger	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Dart	QTY:1	SIZE:S	LOCATION:Carried
 
 STARTPACK:Grimlock Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Grimlock],[!PRERACE:1,%]
 ALIGN:NE
@@ -1860,6 +1866,7 @@ SKILL:Stealth	RANK:2
 SKILL:Survival	RANK:2
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
+GEAR:Battleaxe	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Grimshrike Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Grimshrike],[!PRERACE:1,%]
 ALIGN:NE
@@ -1891,6 +1898,7 @@ ABILITY:CATEGORY=FEAT|Combat Reflexes
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Weapon Focus (scimitar)
+GEAR:Scimitar	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Ha-Naga Default	TYPE:Default Monster.Aberration	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ha-Naga],[!PRERACE:1,%]
 ALIGN:CE
@@ -2004,6 +2012,7 @@ ABILITY:CATEGORY=FEAT|Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Improved Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Two-Weapon Fighting
 ABILITY:CATEGORY=FEAT|Weapon Focus (scimitar)
+GEAR:Scimitar	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Hooded Horror Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Hooded Horror],[!PRERACE:1,%]
 ALIGN:CE
@@ -2018,7 +2027,6 @@ SKILL:Knowledge (Religion)	RANK:5
 SKILL:Perception	RANK:10
 SKILL:Sense Motive	RANK:10
 SKILL:Stealth	RANK:10
-ABILITY:CATEGORY=FEAT|Ability Focus (desiccating breath)
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Iron Will
@@ -2083,6 +2091,7 @@ ABILITY:CATEGORY=FEAT|Cleave
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Weapon Focus (spear)
+GEAR:Spear	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Impaled Spirit Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Impaled Spirit],[!PRERACE:1,%]
 ALIGN:CE
@@ -2165,6 +2174,7 @@ ABILITY:CATEGORY=FEAT|Improved Sunder
 ABILITY:CATEGORY=FEAT|Martial Weapon Proficiency (greataxe)
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
+GEAR:Greataxe	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Juvenile Gray Dragon Default	TYPE:Default Monster.Dragon	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Juvenile Gray Dragon],[!PRERACE:1,%]
 ALIGN:NE
@@ -2200,6 +2210,8 @@ SKILL:Sense Motive	RANK:2
 SKILL:Stealth	RANK:2
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+GEAR:Sword (Short)	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Shortbow	QTY:1	SIZE:S	LOCATION:Carried
 
 STARTPACK:Kamarupa Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Kamarupa],[!PRERACE:1,%]
 ALIGN:CE
@@ -2230,6 +2242,7 @@ SKILL:Ride	RANK:1
 SKILL:Stealth	RANK:1
 ABILITY:CATEGORY=FEAT|Cleave
 ABILITY:CATEGORY=FEAT|Power Attack
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Korog Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Korog],[!PRERACE:1,%]
 ALIGN:LE
@@ -2356,6 +2369,7 @@ SKILL:Stealth	RANK:6
 ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
+GEAR:Spear	QTY:1	SIZE:L	LOCATION:Both Hands
 
 STARTPACK:Lesser Banshee Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Lesser Banshee],[!PRERACE:1,%]
 ALIGN:NE
@@ -2369,7 +2383,7 @@ SKILL:Knowledge (Arcana)	RANK:15
 SKILL:Perception	RANK:15
 SKILL:Sense Motive	RANK:15
 SKILL:Stealth	RANK:15
-ABILITY:CATEGORY=FEAT|Ability Focus (wail)
+ABILITY:CATEGORY=FEAT|Ability Focus (Wail)
 ABILITY:CATEGORY=FEAT|Combat Reflexes
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Flyby Attack
@@ -2453,6 +2467,8 @@ SKILL:Stealth	RANK:1
 SKILL:Survival	RANK:2
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Power Attack
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
+GEAR:Longbow	QTY:1	LOCATION:Carried
 
 STARTPACK:Lurker Wraith Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Lurker Wraith],[!PRERACE:1,%]
 ALIGN:NE
@@ -2507,7 +2523,7 @@ ABILITY:CATEGORY=FEAT|Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Mobility
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Spring Attack
-ABILITY:CATEGORY=FEAT|SwimBy Attack
+ABILITY:CATEGORY=FEAT|Swim-By Attack
 ABILITY:CATEGORY=FEAT|Vital Strike
 ABILITY:CATEGORY=FEAT|Weapon Focus (slam)
 
@@ -2577,7 +2593,6 @@ STAT:STR=10|DEX=10|INT=10|WIS=10|CHA=10
 SKILL:Fly	RANK:9
 SKILL:Perception	RANK:9
 SKILL:Stealth	RANK:9
-ABILITY:CATEGORY=FEAT|Ability Focus (lash of fury)
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 ABILITY:CATEGORY=FEAT|Weapon Finesse
@@ -2613,8 +2628,8 @@ SKILL:Intimidate	RANK:5
 SKILL:Knowledge (Dungeoneering)	RANK:4
 SKILL:Perception	RANK:7
 SKILL:Stealth	RANK:7
-ABILITY:CATEGORY=FEAT|Light Armor Proficiency
-ABILITY:CATEGORY=FEAT|Medium Armor Proficiency
+ABILITY:CATEGORY=FEAT|Armor Proficiency (Light)
+ABILITY:CATEGORY=FEAT|Armor Proficiency (Medium)
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Martial Weapon Proficiency
@@ -2638,6 +2653,7 @@ SKILL:Swim	RANK:4
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Improved Initiative
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Nithu Default	TYPE:Default Monster.Aberration	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Nithu],[!PRERACE:1,%]
 ALIGN:NE
@@ -2810,7 +2826,7 @@ SKILL:Disguise	RANK:3
 SKILL:Escape Artist	RANK:1
 SKILL:Perception	RANK:3
 SKILL:Stealth	RANK:8
-ABILITY:CATEGORY=FEAT|Ability Focus (disease)
+ABILITY:CATEGORY=FEAT|Ability Focus (Disease)
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Stealthy
 ABILITY:CATEGORY=FEAT|Weapon Focus (slam)
@@ -2907,7 +2923,7 @@ ABILITY:CATEGORY=FEAT|Improved Critical (bite)
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Step Up
 ABILITY:CATEGORY=FEAT|Weapon Focus (bite)
-ABILITY:CATEGORY=FEAT|slam)
+ABILITY:CATEGORY=FEAT|Weapon Focus (slam)
 
 STARTPACK:Rat-Ghouls Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Rat-Ghouls],[!PRERACE:1,%]
 ALIGN:TN
@@ -2993,6 +3009,7 @@ SKILL:Perception	RANK:1
 SKILL:Stealth	RANK:1
 SKILL:Survival	RANK:1
 ABILITY:CATEGORY=FEAT|Dodge
+GEAR:Shortspear	QTY:1	SIZE:S	LOCATION:Primary Hand
 
 STARTPACK:Scorpionfolk Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Scorpionfolk],[!PRERACE:1,%]
 ALIGN:LE
@@ -3040,6 +3057,7 @@ ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Mobility
 ABILITY:CATEGORY=FEAT|Power Attack
+GEAR:Scimitar	QTY:1	SIZE:L	LOCATION:Primary Hand
 
 STARTPACK:Serpent Creeper Default	TYPE:Default Monster.Plant	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Serpent Creeper],[!PRERACE:1,%]
 ALIGN:TN
@@ -3087,7 +3105,7 @@ SKILL:Climb	RANK:5
 SKILL:Perception	RANK:7
 SKILL:Stealth	RANK:1
 SKILL:Swim	RANK:5
-ABILITY:CATEGORY=FEAT|Ability Focus (poison)
+ABILITY:CATEGORY=FEAT|Ability Focus (Poison)
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
 ABILITY:CATEGORY=FEAT|Weapon Focus (bite)
@@ -3101,7 +3119,7 @@ SKILL:Climb	RANK:3
 SKILL:Perception	RANK:3
 SKILL:Stealth	RANK:2
 SKILL:Swim	RANK:3
-ABILITY:CATEGORY=FEAT|Ability Focus (poison)
+ABILITY:CATEGORY=FEAT|Ability Focus (Poison)
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 
 STARTPACK:Shadow Wing Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Shadow Wing],[!PRERACE:1,%]
@@ -3114,7 +3132,6 @@ SKILL:Perception	RANK:10
 SKILL:Sense Motive	RANK:1
 SKILL:Stealth	RANK:3
 ABILITY:CATEGORY=FEAT|Alertness
-ABILITY:CATEGORY=FEAT|Greater Flyby Attack
 ABILITY:CATEGORY=FEAT|Flyby Attack
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
@@ -3127,12 +3144,12 @@ STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Climb	RANK:12
 SKILL:Perception	RANK:7
 SKILL:Stealth	RANK:3
-ABILITY:CATEGORY=FEAT|Ability Focus (poison)
+ABILITY:CATEGORY=FEAT|Ability Focus (Poison)
 ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
-ABILITY:CATEGORY=FEAT|Stealth)
+ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
 
 STARTPACK:Shedu Stone Idol Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Shedu Stone Idol],[!PRERACE:1,%]
 ALIGN:TN
@@ -3164,6 +3181,7 @@ RACE:Skiff Golem	!PRERACE:1,%
 NAME:Skiff Golem
 STAT:STR=10|DEX=10|WIS=10|CHA=10
 SKILL:Swim	RANK:5
+GEAR:Quarterstaff	QTY:1	SIZE:H	LOCATION:Primary Hand
 
 STARTPACK:Skin Feaster Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Skin Feaster],[!PRERACE:1,%]
 ALIGN:CE
@@ -3241,6 +3259,7 @@ ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Weapon Focus (greatsword)
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Combat Reflexes
+GEAR:Greatsword	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Sparksting Swarm Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Sparksting Swarm],[!PRERACE:1,%]
 ALIGN:TN
@@ -3266,6 +3285,7 @@ ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Blind-Fight
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Iron Will
+GEAR:Greataxe	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Sphinx Stone Idol Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Sphinx Stone Idol],[!PRERACE:1,%]
 ALIGN:TN
@@ -3420,7 +3440,6 @@ ABILITY:CATEGORY=FEAT|Combat Reflexes
 ABILITY:CATEGORY=FEAT|Critical Focus
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Flyby Attack
-ABILITY:CATEGORY=FEAT|Greater Flyby Attack
 ABILITY:CATEGORY=FEAT|Great Cleave
 ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Improved Initiative
@@ -3454,6 +3473,7 @@ ABILITY:CATEGORY=FEAT|Blind-Fight
 ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
 ABILITY:CATEGORY=FEAT|Toughness
 ABILITY:CATEGORY=FEAT|Weapon Focus (greatsword)
+GEAR:Greatsword	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Swordtooth Shark Default	TYPE:Default Monster.Animal	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Swordtooth Shark],[!PRERACE:1,%]
 ALIGN:TN
@@ -3473,6 +3493,7 @@ NAME:Talorani
 STAT:STR=10|DEX=10|CON=10|INT=10|WIS=10|CHA=10
 SKILL:Swim	RANK:1
 ABILITY:CATEGORY=FEAT|Endurance
+GEAR:Longspear	QTY:1	LOCATION:Both Hands
 
 STARTPACK:The Ravager Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,The Ravager],[!PRERACE:1,%]
 ALIGN:TN
@@ -3589,6 +3610,7 @@ SKILL:Stealth	RANK:4
 SKILL:Survival	RANK:1
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Very Old Gray Dragon Default	TYPE:Default Monster.Dragon	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Very Old Gray Dragon],[!PRERACE:1,%]
 ALIGN:NE
@@ -3660,7 +3682,7 @@ SKILL:Knowledge (Planes)	RANK:5
 SKILL:Perception	RANK:5
 SKILL:Stealth	RANK:5
 SKILL:Survival	RANK:2
-ABILITY:CATEGORY=FEAT|Ability Focus (death throes)
+ABILITY:CATEGORY=FEAT|Ability Focus (Death Throes)
 ABILITY:CATEGORY=FEAT|Iron Will
 ABILITY:CATEGORY=FEAT|Weapon Focus (longsword)
 
@@ -3673,6 +3695,8 @@ SKILL:Perception	RANK:6
 ABILITY:CATEGORY=FEAT|Lightning Reflexes
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+GEAR:Rapier	QTY:1	LOCATION:Primary Hand
+GEAR:Dagger	QTY:1	LOCATION:Carried
 
 STARTPACK:Water Leaper Default	TYPE:Default Monster.Magical Beast	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Water Leaper],[!PRERACE:1,%]
 ALIGN:TN
@@ -3698,6 +3722,8 @@ SKILL:Survival	RANK:3
 ABILITY:CATEGORY=FEAT|Power Attack
 ABILITY:CATEGORY=FEAT|Skill Focus (Intimidate)
 ABILITY:CATEGORY=FEAT|Toughness
+GEAR:Battleaxe	QTY:1	LOCATION:Primary Hand
+GEAR:Axe (Throwing)	QTY:1	LOCATION:Carried
 
 STARTPACK:Wichtlein Default	TYPE:Default Monster.Fey	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Wichtlein],[!PRERACE:1,%]
 ALIGN:NG
@@ -3803,6 +3829,7 @@ SKILL:Perception	RANK:1
 SKILL:Sense Motive	RANK:1
 SKILL:Stealth	RANK:1
 ABILITY:CATEGORY=FEAT|Alertness
+GEAR:Spear	QTY:1	LOCATION:Both Hands
 
 STARTPACK:Yhakkor Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Yhakkor],[!PRERACE:1,%]
 ALIGN:CE

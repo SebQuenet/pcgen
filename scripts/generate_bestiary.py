@@ -120,6 +120,23 @@ NATURAL_WEAPON_MAP = {
     'incorporeal claw': ('Incorporeal Claw', 'Slashing'),
     'incorporeal claws': ('Incorporeal Claw', 'Slashing'),
     'slam': ('Slam', 'Bludgeoning'),
+    'tendril': ('Tendril', 'Bludgeoning'),
+    'tendrils': ('Tendril', 'Bludgeoning'),
+    'vine': ('Vine', 'Bludgeoning'),
+    'vines': ('Vine', 'Bludgeoning'),
+    'spine': ('Spine', 'Piercing'),
+    'spines': ('Spine', 'Piercing'),
+    'frond': ('Frond', 'Slashing'),
+    'fronds': ('Frond', 'Slashing'),
+    'tongues': ('Tongue', 'Bludgeoning'),
+    'beak': ('Beak', 'Piercing'),
+    'kick': ('Kick', 'Bludgeoning'),
+    'kicks': ('Kick', 'Bludgeoning'),
+    'ram': ('Ram', 'Bludgeoning'),
+    'rake': ('Rake', 'Slashing'),
+    'rakes': ('Rake', 'Slashing'),
+    'incorporeal touches': ('Incorporeal Touch', 'Bludgeoning'),
+    'touches': ('Touch', 'Bludgeoning'),
 }
 
 # Standard PCGen immunity ability names
@@ -840,6 +857,17 @@ def get_fly_maneuverability(speed_array):
     return None
 
 
+def natural_weapon_of(name):
+    """The natural weapon a stat block's attack names, read past its adjectives ("barbed tentacles" are tentacles);
+    a named touch, "corrupting touch", is a touch. None for a manufactured weapon."""
+    words = name.split()
+    for start in range(len(words)):
+        reading = ' '.join(words[start:])
+        if reading in NATURAL_WEAPON_MAP:
+            return NATURAL_WEAPON_MAP[reading]
+    return None
+
+
 def build_natural_attacks(creature):
     """Build NATURALATTACKS tags from parsed attack data."""
     parsed = creature.get('parsedAttacks', {})
@@ -857,10 +885,11 @@ def build_natural_attacks(creature):
             if not cleaned:
                 cleaned = name
 
-            if cleaned not in NATURAL_WEAPON_MAP:
+            natural_weapon = natural_weapon_of(cleaned)
+            if not natural_weapon:
                 continue
 
-            pcgen_name, damage_types = NATURAL_WEAPON_MAP[cleaned]
+            pcgen_name, damage_types = natural_weapon
             qty = atk.get('quantity', 1)
             damage = atk.get('damage', {})
             dice = damage.get('dice', {})

@@ -27,6 +27,7 @@ ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Arcane Strike
 ABILITY:CATEGORY=FEAT|Deceitful
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+GEAR:Rapier	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:City Guards Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,City Guards],[!PRERACE:1,%]
 ALIGN:TN
@@ -37,6 +38,9 @@ SKILL:Intimidate	RANK:2
 SKILL:Perception	RANK:1
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Weapon Focus (halberd)
+GEAR:Halberd	QTY:1	LOCATION:Both Hands
+GEAR:Sap	QTY:1	LOCATION:Carried
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Carried
 
 STARTPACK:City Watch Captains Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,City Watch Captains],[!PRERACE:1,%]
 ALIGN:LN
@@ -50,12 +54,15 @@ SKILL:Knowledge (Local)	RANK:1
 SKILL:Perception	RANK:2
 SKILL:Ride	RANK:1
 ABILITY:CATEGORY=FEAT|Combat Expertise
-ABILITY:CATEGORY=FEAT|Exotic Weapon Proficiency (swordbreaker dagger)
+ABILITY:CATEGORY=FEAT|Exotic Weapon Proficiency (Dagger (Swordbreaker))
 ABILITY:CATEGORY=FEAT|Improved Disarm
 ABILITY:CATEGORY=FEAT|Two-Weapon Fighting
 ABILITY:CATEGORY=FEAT|Weapon Focus (longsword)
-ABILITY:CATEGORY=FEAT|Weapon Focus (swordbreaker dagger)
+ABILITY:CATEGORY=FEAT|Weapon Focus (Dagger (Swordbreaker))
 ABILITY:CATEGORY=FEAT|Weapon Specialization (longsword)
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
+GEAR:Dagger	QTY:1	LOCATION:Carried
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Carried
 
 STARTPACK:Mystery Cultists Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Mystery Cultists],[!PRERACE:1,%]
 ALIGN:CG
@@ -68,6 +75,8 @@ SKILL:Knowledge (Religion)	RANK:2
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Mobility
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Carried
 
 STARTPACK:Night Scale Assassins Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Night Scale Assassins],[!PRERACE:1,%]
 ALIGN:NE
@@ -88,6 +97,8 @@ ABILITY:CATEGORY=FEAT|Point-Blank Shot
 ABILITY:CATEGORY=FEAT|Rapid Reload (Crossbow (Hand))
 ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
 ABILITY:CATEGORY=FEAT|Weapon Focus (Crossbow (Hand))
+GEAR:Sword (Short)	QTY:1	LOCATION:Primary Hand
+GEAR:Dagger	QTY:1	LOCATION:Carried
 
 STARTPACK:Sczarni Thugs Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Sczarni Thugs],[!PRERACE:1,%]
 ALIGN:LE
@@ -105,6 +116,8 @@ SKILL:Sleight of Hand	RANK:2
 SKILL:Stealth	RANK:2
 ABILITY:CATEGORY=FEAT|Agile Maneuvers
 ABILITY:CATEGORY=FEAT|Combat Reflexes
+GEAR:Sword (Short)	QTY:1	LOCATION:Primary Hand
+GEAR:Dagger	QTY:1	LOCATION:Carried
 
 STARTPACK:Shifty Nobles Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Shifty Nobles],[!PRERACE:1,%]
 ALIGN:LN
@@ -124,6 +137,7 @@ SKILL:Stealth	RANK:3
 ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Great Fortitude
 ABILITY:CATEGORY=FEAT|Skill Focus (Bluff)
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
 
 STARTPACK:Shoanti Gladiators Default	TYPE:Default Monster.Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Shoanti Gladiators],[!PRERACE:1,%]
 ALIGN:CN
@@ -174,4 +188,5 @@ SKILL:Stealth	RANK:3
 ABILITY:CATEGORY=FEAT|Point-Blank Shot
 ABILITY:CATEGORY=FEAT|Precise Shot
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+GEAR:Starknife	QTY:1	LOCATION:Primary Hand
 

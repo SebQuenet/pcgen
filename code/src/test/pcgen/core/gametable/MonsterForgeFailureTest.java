@@ -33,16 +33,17 @@ class MonsterForgeFailureTest
 	private static MonsterForge forge;
 
 	@BeforeAll
-	static void loadAnAdventurePath()
+	static void loadAnAdventurePathWithoutTheTechnologyGuide()
 	{
-		forge = TestSources.forge(List.of("Core Rulebook", "Bestiary", "Pathfinder Adventure Path #60 ~ Creatures"));
+		forge = TestSources.forge(List.of("Core Rulebook", "Bestiary", "Pathfinder Adventure Path #88 ~ Creatures"));
 	}
 
 	@Test
-	void aRaceWhoseDataFailToBuildIsMissingWithTheReason()
+	void aRaceWhoseDataNeedAnUnloadedBookIsMissingWithTheReason()
 	{
-		ForgedMonster built = forge.forge(MonsterRecipe.of(new MonsterSource.BestiaryRace("Ugash-iram")));
+		// Its kit gives it Technologist, a feat of the Technology Guide
+		ForgedMonster built = forge.forge(MonsterRecipe.of(new MonsterSource.BestiaryRace("Reclamation Robot")));
 		ForgedMonster.Missing missing = assertInstanceOf(ForgedMonster.Missing.class, built);
-		assertTrue(missing.reason().contains("Ugash-iram"), missing.reason());
+		assertTrue(missing.reason().contains("Reclamation Robot"), missing.reason());
 	}
 }
