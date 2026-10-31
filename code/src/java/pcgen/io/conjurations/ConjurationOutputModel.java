@@ -143,6 +143,8 @@ public final class ConjurationOutputModel
 			Map.entry("allRoles", LanguageBundle.getString("in_conjurations_all_roles")),
 			Map.entry("levelMin", LanguageBundle.getString("in_conjurations_level_min")),
 			Map.entry("levelMax", LanguageBundle.getString("in_conjurations_level_max")),
+			Map.entry("alignment", LanguageBundle.getString("in_conjurations_alignment")),
+			Map.entry("alignments", alignmentLabels()),
 			Map.entry("roleUsage", LanguageBundle.getString("in_conjurations_role_usage")),
 			Map.entry("ranking", LanguageBundle.getString("in_conjurations_ranking")),
 			Map.entry("unranked", LanguageBundle.getString("in_conjurations_unranked")),
@@ -204,6 +206,17 @@ public final class ConjurationOutputModel
 			Map.entry("value", LanguageBundle.getString("in_conjurations_value")),
 			Map.entry("building", LanguageBundle.getString("in_conjurations_building")),
 			Map.entry("authoredStats", LanguageBundle.getString("in_conjurations_authored_stats")));
+	}
+
+	/** The nine alignments a filter offers, from lawful good to chaotic evil, by their abbreviation. */
+	private static Map<String, Object> alignmentLabels()
+	{
+		Map<String, Object> labels = new LinkedHashMap<>();
+		for (String alignment : List.of("LG", "NG", "CG", "LN", "TN", "CN", "LE", "NE", "CE"))
+		{
+			labels.put(alignment, LanguageBundle.getString("in_conjurations_alignment_" + alignment));
+		}
+		return labels;
 	}
 
 	/**
@@ -313,6 +326,7 @@ public final class ConjurationOutputModel
 		described.put("note", summon.metadata().containsKey("publishedName")
 			? publishedNote(summon.metadata()) : summon.metadata().getOrDefault("note", ""));
 		described.put("family", summon.metadata().getOrDefault("family", ""));
+		described.put("alignment", PathfinderSummonOptions.alignmentOf(summon).orElse(""));
 		described.put("forms", SummonForms.forSummon(summon).stream().map(form -> Map.of("key", form.key(),
 			"label", form.label(), "description", form.description(), "source", form.source())).toList());
 		described.put("collectiveForm", SummonForms.collectiveForm(summon).map(form -> Map.of("label", form.label(),

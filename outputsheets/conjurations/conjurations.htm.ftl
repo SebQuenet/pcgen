@@ -251,6 +251,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     <#assign romanLevels = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]>
     <label>${labels.levelMin} <select class="level-min"><#list romanLevels as roman><option value="${roman?counter?c}"<#if roman?is_first> selected</#if>>${roman}</option></#list></select></label>
     <label>${labels.levelMax} <select class="level-max"><#list romanLevels as roman><option value="${roman?counter?c}"<#if roman?is_last> selected</#if>>${roman}</option></#list></select></label>
+    <span class="filters alignment-filters" role="group" aria-label="${labels.alignment}">${labels.alignment}<#list labels.alignments as alignment, abbreviation> <button type="button" class="filter on" data-alignment="${alignment}" aria-pressed="true">${abbreviation}</button></#list></span>
     <button type="button" class="download-sheet" hidden>${labels.downloadSheet}</button>
     <span class="sheet-status" aria-live="polite" data-building="${labels.sheetBuilding}" data-saved="${labels.sheetSaved}" data-failed="${labels.sheetFailed}"></span>
   </div>
@@ -270,7 +271,7 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
       <th><button class="sort" type="button" data-sort="combatManeuverDefense">${conjurations.statLabels.cmd}</button></th>
     </tr></thead>
     <#list conjurations.summons as summon>
-    <tbody class="summon" data-creature="${summon.name}" data-variant-group="${summon.variantGroup}" data-variant-base="${summon.variantBase?c}"<#if !summon.variantBase> data-folded="true"</#if> data-display-name="${summon.displayName}" data-group="${summon.group}" data-family="${summon.family}" data-level="${summon.levelRank?c}" data-roles="<#list summon.roles as role>${role}<#sep>|</#sep></#list>" data-order="${summon?index?c}" data-authored="${summon.authored?c}" data-available="${summon.available?c}"<#if summon.ranking.score??> data-sort-ranking="${summon.ranking.score?c}"</#if>>
+    <tbody class="summon" data-creature="${summon.name}" data-variant-group="${summon.variantGroup}" data-variant-base="${summon.variantBase?c}"<#if !summon.variantBase> data-folded="true"</#if> data-display-name="${summon.displayName}" data-group="${summon.group}" data-family="${summon.family}" data-alignment="${summon.alignment}" data-level="${summon.levelRank?c}" data-roles="<#list summon.roles as role>${role}<#sep>|</#sep></#list>" data-order="${summon?index?c}" data-authored="${summon.authored?c}" data-available="${summon.available?c}"<#if summon.ranking.score??> data-sort-ranking="${summon.ranking.score?c}"</#if>>
       <tr>
         <td><#if (summon.family == "Expanded" || summon.family == "Versatile SM") && summon.choiceRequired><button type="button" class="select-choice" data-creature="${summon.name}" title="${summon.choiceHint}">${labels.selectChoice}</button><#else><button type="button" class="conjure" data-creature="${summon.name}"<#if !summon.available> disabled title="${summon.unavailableHint}"</#if>>${labels.conjure}</button><#if summon.family != "Skeleton 1/day"> <input type="number" class="conjure-count" min="1" max="15" value="1" title="${labels.conjureCount}" aria-label="${labels.conjureCount}"<#if !summon.available> disabled</#if>></#if></#if></td>
         <td class="metric" title="${summon.displayGroup}"><#if summon.level?has_content>${summon.level}<#else>${summon.displayGroup}</#if></td>
@@ -736,7 +737,9 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
   var levelMinFilter = document.querySelector(".level-min");
   var levelMaxFilter = document.querySelector(".level-max");
 
-  // A creature with no known level is kept whatever the level bounds.
+  var alignmentFilters = document.querySelectorAll(".alignment-filters .filter");
+
+  // A creature with no known level or alignment is kept whatever the filters.
   function filterCatalog() {
     if (!catalogTable) {
       return;
@@ -744,17 +747,32 @@ tr.details td{color:var(--text-dim);font-size:11px;padding-bottom:4px}
     var role = roleFilter.value;
     var lowest = whole(levelMinFilter.value, 1);
     var highest = whole(levelMaxFilter.value, 9);
+    var shownAlignments = [];
+    each(alignmentFilters, function (filter) {
+      if (filter.classList.contains("on")) {
+        shownAlignments.push(filter.getAttribute("data-alignment"));
+      }
+    });
     each(catalogTable.querySelectorAll("tbody.summon"), function (row) {
       var level = whole(row.getAttribute("data-level"), 0);
       var roles = row.getAttribute("data-roles").split("|");
       var levelFits = level === 0 || (level >= lowest && level <= highest);
-      row.hidden = !levelFits || (role !== "" && roles.indexOf(role) < 0);
+      var alignment = row.getAttribute("data-alignment");
+      var alignmentFits = alignment === "" || shownAlignments.indexOf(alignment) >= 0;
+      row.hidden = !levelFits || !alignmentFits || (role !== "" && roles.indexOf(role) < 0);
     });
   }
 
   if (catalogTable) {
     each([roleFilter, levelMinFilter, levelMaxFilter], function (filter) {
       filter.addEventListener("change", filterCatalog);
+    });
+    each(alignmentFilters, function (filter) {
+      filter.addEventListener("click", function () {
+        filter.classList.toggle("on");
+        filter.setAttribute("aria-pressed", String(filter.classList.contains("on")));
+        filterCatalog();
+      });
     });
   }
 

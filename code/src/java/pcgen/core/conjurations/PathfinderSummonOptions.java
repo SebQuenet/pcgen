@@ -244,7 +244,7 @@ public final class PathfinderSummonOptions
 	 */
 	private static boolean withinOneStepOfDeity(SummonTemplate summon, Optional<String> deityAlignment)
 	{
-		return deityAlignment.isEmpty() || creatureAlignment(summon)
+		return deityAlignment.isEmpty() || alignmentOf(summon)
 			.filter(alignment -> SummonAlignment.isWithinOneStep(deityAlignment.get(), alignment)).isPresent();
 	}
 
@@ -265,7 +265,7 @@ public final class PathfinderSummonOptions
 	}
 
 	/** The alignment of the Bestiary's default kit for the race, changed by the summoning templates. */
-	private static Optional<String> creatureAlignment(SummonTemplate summon)
+	public static Optional<String> alignmentOf(SummonTemplate summon)
 	{
 		Kit kit = Globals.getContext().getReferenceContext().silentlyGetConstructedCDOMObject(Kit.class,
 			summon.metadata().getOrDefault("kit", summon.sourceRaceKey() + " Default"));
