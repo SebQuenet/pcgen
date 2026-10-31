@@ -24,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catalog  # noqa: E402
 import monsters  # noqa: E402
 import statblock  # noqa: E402
-from generate_bestiary import NATURAL_WEAPON_MAP, build_natural_attacks  # noqa: E402
+from generate_bestiary import NATURAL_WEAPON_MAP, attack_title, build_natural_attacks  # noqa: E402
 from repair_kit_feats import named_exactly  # noqa: E402
 
 TWO_HANDED = 'Both Hands'
@@ -36,21 +36,49 @@ PATHFINDER_DATA = REPOSITORY / 'data' / 'pathfinder'
 BESTIARY_INDEX = REPOSITORY / 'code/src/resources/pcgen/bestiary/index.json'
 # Weapons held in both hands: two-handed melee weapons and bows
 TWO_HANDED_TYPES = ('TwoHanded', 'Projectile')
+# The last word of a ranged attack the creature makes with its own body: "earth blast", "sonic ray", "thorns"
+RANGED_NATURAL_WORDS = ('blast', 'ray', 'rays', 'bolt', 'lash', 'thorns', 'spore', 'vortices')
+
+
+def cleaned_attack_line(text: str) -> str:
+    """The attack line without the slips of its stat block: "slam +7 melee (1d8+4)", "hook-blade +5 (1d4))",
+    a last alternative left as a dangling "or"."""
+    text = re.sub(r'\s+melee\s*\(', ' (', text or '').replace('))', ')')
+    return re.sub(r'(?:[\s,]+or)?[\s,]*$', '', text)
 
 
 def weapon_names(text: str) -> list[str]:
     """The name of every attack of an attack line, its bonus and damage left out when the line gives them."""
     names = []
-    for alternative in re.split(r'\s+or\s+', text or ''):
+    for alternative in re.split(r'\s+or\s+', cleaned_attack_line(text)):
         for piece in statblock.split_list(alternative):
             attack = monsters.parse_attack(piece)
             names.append(attack['name'] if attack else re.sub(r'\s+[+\-]\d.*$|\s*\(.*$', '', piece.strip()).lower())
     return [name for name in names if name]
 
 
-def natural_attacks_tag(melee_text: str) -> str:
-    """The NATURALATTACKS tag of the melee line's natural attacks; empty when it has none."""
-    return build_natural_attacks({'parsedAttacks': {'melee': {'primary': {'attacks': monsters.natural_attacks(melee_text or '')}}}})
+def natural_attacks_tag(melee_text: str, ranged_text: str = '') -> str:
+    """The NATURALATTACKS tag of the natural attacks of the melee and ranged lines; empty when they have none."""
+    melee = build_natural_attacks({'parsedAttacks': {'melee': {'primary': {'attacks': monsters.natural_attacks(cleaned_attack_line(melee_text))}}}})
+    melee_names = {entry.split(',')[0] for entry in melee.removeprefix('NATURALATTACKS:').split('|') if entry}
+    ranged = [entry for entry in ranged_natural_attacks(ranged_text) if entry.split(',')[0] not in melee_names]
+    entries = [entry for entry in melee.removeprefix('NATURALATTACKS:').split('|') if entry] + ranged
+    return 'NATURALATTACKS:' + '|'.join(entries) if entries else ''
+
+
+def ranged_natural_attacks(ranged_text: str) -> list[str]:
+    """The entries of the ranged line's attacks the creature makes with its own body, as "earth blast +4 (2d6+6)"."""
+    entries = []
+    for attack in monsters.natural_attacks(cleaned_attack_line(ranged_text)):
+        if attack['name'].split()[-1] not in RANGED_NATURAL_WORDS:
+            continue
+        dice = attack['damage']['dice']
+        damage = f"{dice['count']}d{dice['sides']}" if dice else '0'
+        touch = '.Touch' if attack.get('isTouch') else ''
+        entry = f"{attack_title(attack['name'])},Weapon.Natural.Ranged{touch},*{attack['quantity']},{damage}"
+        effects = [effect['name'] for effect in attack.get('specialEffects', [])]
+        entries.append(entry + (f",SPROP=plus {' and '.join(effects)}" if effects else ''))
+    return entries
 
 
 def with_natural_attacks(race_line: str, tag: str) -> str:
@@ -132,7 +160,7 @@ def main() -> None:
                 continue
             melee = fields.get('Melee') or fields.get('melee') or ''
             ranged = fields.get('Ranged') or fields.get('ranged') or ''
-            tag = natural_attacks_tag(melee)
+            tag = natural_attacks_tag(melee, ranged)
             if tag and 'NATURALATTACKS:' not in line:
                 lines[number] = with_natural_attacks(line, tag)
                 natural += 1

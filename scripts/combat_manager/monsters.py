@@ -135,15 +135,17 @@ def natural_attacks(text: str) -> list[dict]:
 
 
 def parse_attack(text: str) -> dict | None:
-    match = re.match(rf'^(?:(\d+)\s+)?(.+?)\s+{SIGNED_NUMBER}(?:/{SIGNED_NUMBER})*(?:\s+touch)?\s*\((.*)\)\s*$', text.strip())
-    # A swarm's attack hits automatically, so its stat block gives no bonus: "swarm (2d6 plus distraction)"
-    match = match or re.match(r'^()(swarm)\s*\((.*)\)\s*$', text.strip(), re.IGNORECASE)
+    match = re.match(rf'^(?:(\d+)\s+)?(.+?)\s+{SIGNED_NUMBER}(?:/{SIGNED_NUMBER})*(\s+touch)?\s*\((.*)\)\s*$', text.strip())
+    # The attack of a swarm, a troop or a horde hits automatically, so its stat block gives no bonus: "swarm (2d6 plus distraction)"
+    match = match or re.match(r'^()(swarm|troop|horde attack)()\s*\((.*)\)\s*$', text.strip(), re.IGNORECASE)
     if not match:
         return None
-    count, name, damage = match.groups()
+    count, name, touch, damage = match.groups()
     dice = re.match(r'^(\d+)d(\d+)', damage.strip())
     attack = {'name': name.lower(), 'quantity': int(count or 1),
               'damage': {'dice': {'count': int(dice.group(1)), 'sides': int(dice.group(2))} if dice else {}}}
+    if touch:
+        attack['isTouch'] = True
     effects = re.split(r'\s+and\s+|,\s*', damage.split(' plus ', 1)[1]) if ' plus ' in damage else []
     if effects:
         attack['specialEffects'] = [{'name': effect.strip(), 'effectType': effect.strip().lower()} for effect in effects if effect.strip()]

@@ -58,6 +58,30 @@ class NaturalAttacks(unittest.TestCase):
         tag = repair_monster_attacks.natural_attacks_tag('swarm (3d6 plus poison)')
         self.assertTrue(tag.startswith('NATURALATTACKS:Swarm,Weapon.Natural.Weapon Group Natural.Melee.Finesseable.Bludgeoning,*1,3d6'), tag)
 
+    def test_reads_a_troop_written_without_an_attack_bonus(self):
+        tag = repair_monster_attacks.natural_attacks_tag('troop (3d6+4)')
+        self.assertTrue(tag.startswith('NATURALATTACKS:Troop,'), tag)
+
+    def test_names_a_touch_attack_after_its_effect(self):
+        tag = repair_monster_attacks.natural_attacks_tag('touch of madness +19 touch (10d6)')
+        self.assertTrue(tag.startswith('NATURALATTACKS:Touch of Madness,Weapon.Natural.Weapon Group Natural.Melee.Finesseable.Touch.'), tag)
+
+    def test_reads_a_melee_line_with_a_stray_melee_word(self):
+        tag = repair_monster_attacks.natural_attacks_tag('slam +7 melee (1d8+4)')
+        self.assertTrue(tag.startswith('NATURALATTACKS:Slam,'), tag)
+
+    def test_reads_a_melee_line_ending_with_a_dangling_or(self):
+        tag = repair_monster_attacks.natural_attacks_tag('2 slams +16 (2d6+7 plus consume humanity) or')
+        self.assertTrue(tag.startswith('NATURALATTACKS:Slam,'), tag)
+
+    def test_writes_a_ranged_ray_the_creature_makes_with_its_own_body(self):
+        tag = repair_monster_attacks.natural_attacks_tag('', 'sonic ray +10 touch (2d6 sonic)')
+        self.assertEqual('NATURALATTACKS:Sonic Ray,Weapon.Natural.Ranged.Touch,*1,2d6', tag)
+
+    def test_writes_no_natural_attack_for_a_ranged_weapon(self):
+        tag = repair_monster_attacks.natural_attacks_tag('', '3 Maxim M1910 machine guns +15 (2d8/19-20)')
+        self.assertEqual('', tag)
+
 
 class GearLines(unittest.TestCase):
 

@@ -138,6 +138,31 @@ NATURAL_WEAPON_MAP = {
     'incorporeal touches': ('Incorporeal Touch', 'Bludgeoning'),
     'touches': ('Touch', 'Bludgeoning'),
     'swarm': ('Swarm', 'Bludgeoning'),
+    'troop': ('Troop', 'Bludgeoning'),
+    'horde attack': ('Horde Attack', 'Bludgeoning'),
+    'leaf': ('Leaf', 'Slashing'),
+    'leaves': ('Leaf', 'Slashing'),
+    'stalk': ('Stalk', 'Bludgeoning'),
+    'stalks': ('Stalk', 'Bludgeoning'),
+    'root': ('Root', 'Bludgeoning'),
+    'roots': ('Root', 'Bludgeoning'),
+    'branch': ('Branch', 'Bludgeoning'),
+    'branches': ('Branch', 'Bludgeoning'),
+    'antlers': ('Antlers', 'Piercing'),
+    'butt': ('Butt', 'Bludgeoning'),
+    'wing slash': ('Wing Slash', 'Slashing'),
+    'wing slashes': ('Wing Slash', 'Slashing'),
+    'lash': ('Lash', 'Slashing'),
+    'lashes': ('Lash', 'Slashing'),
+    'ink blade': ('Ink Blade', 'Slashing'),
+    'ink blades': ('Ink Blade', 'Slashing'),
+    'arm blade': ('Arm Blade', 'Slashing'),
+    'arm blades': ('Arm Blade', 'Slashing'),
+    'tail fan': ('Tail Fan', 'Slashing'),
+    'tail-barb': ('Tail Barb', 'Piercing'),
+    'slap': ('Slap', 'Bludgeoning'),
+    'buffet': ('Buffet', 'Bludgeoning'),
+    'slice': ('Slice', 'Slashing'),
 }
 
 # Standard PCGen immunity ability names
@@ -869,6 +894,11 @@ def natural_weapon_of(name):
     return None
 
 
+def attack_title(name):
+    """The attack's name as a natural weapon's: "touch of madness" is Touch of Madness."""
+    return ' '.join(word if word in ('of', 'the') else word.capitalize() for word in name.split())
+
+
 def build_natural_attacks(creature):
     """Build NATURALATTACKS tags from parsed attack data."""
     parsed = creature.get('parsedAttacks', {})
@@ -887,6 +917,9 @@ def build_natural_attacks(creature):
                 cleaned = name
 
             natural_weapon = natural_weapon_of(cleaned)
+            # A touch attack the stat block names after its effect, "touch of madness +19 touch (10d6)"
+            if not natural_weapon and atk.get('isTouch'):
+                natural_weapon = (attack_title(cleaned), 'Touch.Bludgeoning')
             if not natural_weapon:
                 continue
 
