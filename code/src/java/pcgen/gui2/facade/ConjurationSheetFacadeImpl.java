@@ -214,6 +214,7 @@ class ConjurationSheetFacadeImpl implements ConjurationSheetFacade
 		Optional<SummonTemplate> summon = catalog().find(creature);
 		if (summon.isEmpty() || "true".equals(summon.get().metadata().get("choiceRequired"))
 			|| "true".equals(summon.get().metadata().get("dailyUsed"))
+			|| "true".equals(summon.get().metadata().get(PathfinderSummonOptions.BEYOND_REACH))
 			|| !CatalogResolution.unresolvedIn(summon.get()).isEmpty())
 		{
 			return 0;

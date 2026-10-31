@@ -331,9 +331,13 @@ public final class ConjurationOutputModel
 			? LanguageBundle.getString("in_conjurations_versatile_choice_required")
 			: LanguageBundle.getString("in_conjurations_choice_required"));
 		boolean dailyUsed = "true".equals(summon.metadata().get("dailyUsed"));
-		described.put("available", !choiceRequired && !dailyUsed && CatalogResolution.unresolvedIn(summon).isEmpty());
+		boolean beyondReach = "true".equals(summon.metadata().get(PathfinderSummonOptions.BEYOND_REACH));
+		described.put("available", !choiceRequired && !dailyUsed && !beyondReach
+			&& CatalogResolution.unresolvedIn(summon).isEmpty());
 		described.put("unavailableHint", dailyUsed ? LanguageBundle.getString("in_conjurations_skeleton_used")
-			: choiceRequired ? described.get("choiceHint") : LanguageBundle.getString("in_conjurations_source_unavailable"));
+			: choiceRequired ? described.get("choiceHint")
+			: beyondReach ? LanguageBundle.getString("in_conjurations_beyond_reach")
+			: LanguageBundle.getString("in_conjurations_source_unavailable"));
 		described.put("hpMax", summon.authoredHitPoints().orElse(0));
 		String level = levelOf(summon, group);
 		described.put("level", level);

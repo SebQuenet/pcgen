@@ -8,6 +8,8 @@
  */
 package pcgen.core.conjurations;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
@@ -17,14 +19,17 @@ import pcgen.cdom.base.UserSelection;
 import pcgen.cdom.content.CNAbilityFactory;
 import pcgen.cdom.enumeration.Nature;
 import pcgen.cdom.helper.CNAbilitySelection;
+import pcgen.cdom.util.CControl;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
+import pcgen.core.Deity;
 import pcgen.core.Globals;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.Race;
 import pcgen.core.SettingsHandler;
 import pcgen.core.character.CharacterSpell;
 import pcgen.core.spell.Spell;
+import pcgen.output.channel.ChannelUtilities;
 
 import org.junit.jupiter.api.Test;
 
@@ -34,14 +39,22 @@ import org.junit.jupiter.api.Test;
  */
 class DevotedHeraldSummonsTest
 {
-	private static PlayerCharacter devotedHerald()
+	private static PlayerCharacter devotedHerald(String highestSummonMonster, int spellLevel)
+	{
+		return devotedHerald(highestSummonMonster, spellLevel, Optional.empty());
+	}
+
+	private static PlayerCharacter devotedHerald(String highestSummonMonster, int spellLevel, Optional<String> deity)
 	{
 		PlayerCharacter character = BestiarySources.newCharacter("Devoted herald");
+		// The deity goes first: choosing it afterwards drops the summon spell added below
+		deity.ifPresent(key -> ChannelUtilities.setControlledChannel(character.getCharID(), CControl.DEITYINPUT,
+			Globals.getContext().getReferenceContext().silentlyGetConstructedCDOMObject(Deity.class, key)));
 		Race race = character.getRace();
 		Spell summonMonster = new Spell();
-		summonMonster.setName("Summon Monster IX");
+		summonMonster.setName(highestSummonMonster);
 		CharacterSpell known = new CharacterSpell(race, summonMonster);
-		known.addInfo(9, 1, Globals.getDefaultSpellBook());
+		known.addInfo(spellLevel, 1, Globals.getDefaultSpellBook());
 		character.addCharacterSpell(race, known);
 		AbilityCategory specialAbilities = SettingsHandler.getGameAsProperty().get()
 			.getAbilityCategory("Special Ability");
@@ -54,8 +67,103 @@ class DevotedHeraldSummonsTest
 
 	private static List<String> heraldSummons()
 	{
-		return PathfinderSummonOptions.withPublishedOptions(devotedHerald(), Optional.empty()).groups().stream()
+		return PathfinderSummonOptions.withPublishedOptions(devotedHerald("Summon Monster IX", 9), Optional.empty())
+			.groups().stream().flatMap(group -> group.summons().stream()).map(SummonTemplate::name).toList();
+	}
+
+	private static Optional<SummonTemplate> summonOfFourthLevelHerald(String name)
+	{
+		return PathfinderSummonOptions.withPublishedOptions(devotedHerald("Summon Monster IV", 4), Optional.empty())
+			.groups().stream().flatMap(group -> group.summons().stream())
+			.filter(summon -> summon.name().equals(name)).findFirst();
+	}
+
+	private static List<String> heraldSummonsWithAuthored(String catalog)
+	{
+		return PathfinderSummonOptions.withPublishedOptions(devotedHerald("Summon Monster IX", 9),
+				SummonCatalogParser.catalogOf(catalog)).groups().stream()
 			.flatMap(group -> group.summons().stream()).map(SummonTemplate::name).toList();
+	}
+
+	@Test
+	void dropsAHandWrittenCreatureOutsideSaintTherosAndSummonGoodMonstersLists()
+	{
+		assertFalse(heraldSummonsWithAuthored("## Convocation de monstres VI\nsummon: Tigre sanguinaire céleste\n"
+			+ "  template: Celestial Creature\n  race: Tiger (Dire)\n").contains("Tigre sanguinaire céleste"));
+	}
+
+	@Test
+	void keepsAHandWrittenServantOfSaintThero()
+	{
+		assertTrue(heraldSummonsWithAuthored("## Convocation de monstres IV\nsummon: Lion céleste\n"
+			+ "  template: Celestial Creature\n  race: Lion\n").contains("Lion céleste"));
+	}
+
+	private static List<String> summonsOfSaintTherosHerald(Optional<SummonCatalog> authored)
+	{
+		PlayerCharacter character = devotedHerald("Summon Monster IX", 9, Optional.of("Saint Thero"));
+		return PathfinderSummonOptions.withPublishedOptions(character, authored).groups().stream()
+			.flatMap(group -> group.summons().stream()).map(SummonTemplate::name).toList();
+	}
+
+	@Test
+	void dropsAChaoticCreatureOfSummonGoodMonsterForALawfulGoodDeity()
+	{
+		assertFalse(summonsOfSaintTherosHerald(Optional.empty()).contains("Lillend azata [Good VI]"));
+	}
+
+	@Test
+	void keepsALawfulGoodCreatureOfSummonGoodMonsterForALawfulGoodDeity()
+	{
+		assertTrue(summonsOfSaintTherosHerald(Optional.empty()).contains("Lantern archon [Good III]"));
+	}
+
+	@Test
+	void keepsACelestialAnimalOneStepFromALawfulGoodDeity()
+	{
+		assertTrue(summonsOfSaintTherosHerald(Optional.empty()).contains("Celestial dog · Celestial Creature [Good I]"));
+	}
+
+	@Test
+	void dropsAHandWrittenChaoticCreatureForALawfulGoodDeity()
+	{
+		assertFalse(summonsOfSaintTherosHerald(SummonCatalogParser.catalogOf(
+			"## Convocation de monstres VI\nsummon: Azata lillend\n  race: Azata (Lillend)\n"))
+			.contains("Azata lillend"));
+	}
+
+	@Test
+	void keepsAChaoticServantThatSaintTheroChoseHimself()
+	{
+		assertTrue(summonsOfSaintTherosHerald(Optional.empty()).contains("Lyrakien azata [Saint Thero III]"));
+	}
+
+	@Test
+	void keepsAHandWrittenChaoticServantOfSaintThero()
+	{
+		assertTrue(summonsOfSaintTherosHerald(SummonCatalogParser.catalogOf(
+			"## Convocation de monstres III\nsummon: Azata lyrakien\n  race: Azata (Lyrakien)\n"))
+			.contains("Azata lyrakien"));
+	}
+
+	@Test
+	void showsTheNinthLevelServantsBeforeTheHeraldCanSummonThem()
+	{
+		assertTrue(summonOfFourthLevelHerald("Phoenix [Saint Thero IX]").isPresent());
+	}
+
+	@Test
+	void marksTheServantsAboveTheHeraldsReachAsNotYetSummonable()
+	{
+		assertEquals(Optional.of("true"), summonOfFourthLevelHerald("Phoenix [Saint Thero IX]")
+			.map(summon -> summon.metadata().get("beyondReach")));
+	}
+
+	@Test
+	void leavesTheServantsWithinTheHeraldsReachSummonable()
+	{
+		assertEquals(Optional.empty(), summonOfFourthLevelHerald("Stag archon [Saint Thero IV]")
+			.flatMap(summon -> Optional.ofNullable(summon.metadata().get("beyondReach"))));
 	}
 
 	@Test

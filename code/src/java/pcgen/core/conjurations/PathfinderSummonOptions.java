@@ -21,16 +21,25 @@ import java.util.Map;
 import java.util.Optional;
 
 import pcgen.cdom.base.CDOMList;
+import pcgen.cdom.enumeration.ListKey;
+import pcgen.cdom.enumeration.ObjectKey;
+import pcgen.cdom.reference.CDOMSingleRef;
+import pcgen.cdom.util.CControl;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
+import pcgen.core.Deity;
 import pcgen.core.Equipment;
 import pcgen.core.Globals;
+import pcgen.core.Kit;
+import pcgen.core.PCAlignment;
 import pcgen.core.PCClass;
 import pcgen.core.PObject;
 import pcgen.core.PlayerCharacter;
 import pcgen.core.SettingsHandler;
 import pcgen.core.character.CharacterSpell;
+import pcgen.core.kit.KitAlignment;
 import pcgen.core.spell.Spell;
+import pcgen.output.channel.ChannelUtilities;
 
 /**
  * The published Pathfinder 1 summoning tables, including additions granted by
@@ -54,6 +63,8 @@ public final class PathfinderSummonOptions
 	private static final String MIGHTY_SUMMONS = "Mythic Path Ability ~ Mighty Summons";
 	private static final String SUPERIOR_SUMMONING = "Superior Summoning";
 	private static final String MYTHIC_TEMPLATE = "mythicTemplate";
+	/** Metadata flag of a creature on a list above the highest summon spell the character knows. */
+	public static final String BEYOND_REACH = "beyondReach";
 	private static final Map<String, String> MYTHIC_VARIANTS = Map.of(
 		"Mythic Simple Template ~ Agile", "Agile", "Mythic Simple Template ~ Savage", "Savage");
 	private static final String DEVOTED_HERALD = "Invocateur de Saint Thero ~ Héraut Divin";
@@ -79,8 +90,9 @@ public final class PathfinderSummonOptions
 	/**
 	 * Adds rulebook groups to a handwritten catalog. The character's feats and
 	 * equipped rings determine which supplemental tables appear. The character
-	 * must know a summon spell of the corresponding family and at least the
-	 * option's level; higher-tier spells can summon from lower-tier lists.
+	 * must know a summon spell of the corresponding family; every level up to
+	 * the ninth is listed, and the levels above the highest spell it knows are
+	 * flagged as beyond its reach.
 	 */
 	public static SummonCatalog withPublishedOptions(PlayerCharacter character, Optional<SummonCatalog> authored)
 	{
@@ -88,17 +100,20 @@ public final class PathfinderSummonOptions
 			character.getDisplay().getConjurationCatalog().orElse(""), versatileFeatChoices(character));
 		int[] knownLevels = knownSummonLevels(character);
 		boolean devotedHerald = hasSpecialAbility(character, DEVOTED_HERALD);
+		Optional<String> heraldDeityAlignment = heraldDeityAlignment(character);
 		boolean mightySummons = hasSpecialAbility(character, MIGHTY_SUMMONS);
 		List<SummonGroup> groups = new ArrayList<>();
-		authored.ifPresent(catalog -> groups.addAll(catalog.groups()));
+		authored.ifPresent(catalog -> groups.addAll(devotedHerald
+			? heraldGroupsOf(catalog, heraldDeityAlignment) : catalog.groups()));
 		Map<String, List<SummonTemplate>> generated = new LinkedHashMap<>();
 		for (Option option : optionsFor(character))
 		{
-			if (!enabled(character, option.family()) || option.level() > knownLevels[familyIndex(option.family())]
-				|| "Expanded".equals(option.family()))
+			int highestKnown = knownLevels[familyIndex(option.family())];
+			if (!enabled(character, option.family()) || highestKnown == 0 || "Expanded".equals(option.family()))
 			{
 				continue;
 			}
+			boolean beyondReach = option.level() > highestKnown;
 			String title = title(option.family(), option.level());
 			for (String template : templatesFor(character, option.templatePolicy()))
 			{
@@ -141,6 +156,11 @@ public final class PathfinderSummonOptions
 				{
 					metadata.put("kit", option.kit());
 				}
+				// Shown up to the ninth level so the whole list can be read and exported ahead of time
+				if (beyondReach)
+				{
+					metadata.put(BEYOND_REACH, "true");
+				}
 				if ("Versatile SNA".equals(option.family()))
 				{
 					metadata.put("suppressAugment", "true");
@@ -161,9 +181,14 @@ public final class PathfinderSummonOptions
 				{
 					continue;
 				}
+				// Saint Thero chose his servants himself, whatever their alignment
+				if (!SAINT_THERO.equals(option.family()) && !withinOneStepOfDeity(summon, heraldDeityAlignment))
+				{
+					continue;
+				}
 				List<SummonTemplate> titled = generated.computeIfAbsent(title, ignored -> new ArrayList<>());
 				titled.add(summon);
-				if (mightySummons && option.level() >= knownLevels[familyIndex(option.family())] - 1)
+				if (mightySummons && !beyondReach && option.level() >= highestKnown - 1)
 				{
 					mythicVariantsOf(summon, option, suffix).stream()
 						.filter(variant -> CatalogResolution.unresolvedIn(variant).isEmpty()).forEach(titled::add);
@@ -172,6 +197,95 @@ public final class PathfinderSummonOptions
 		}
 		generated.forEach((title, summons) -> groups.add(new SummonGroup(title, summons)));
 		return new SummonCatalog(groups);
+	}
+
+	/**
+	 * Héraut Divin also limits a hand-written catalog to Saint Thero's servants
+	 * and to Summon Good Monster's creatures within one step of the deity's
+	 * alignment, matched by race and summoning level.
+	 */
+	private static List<SummonGroup> heraldGroupsOf(SummonCatalog catalog, Optional<String> deityAlignment)
+	{
+		List<SummonGroup> kept = new ArrayList<>();
+		for (SummonGroup group : catalog.groups())
+		{
+			List<SummonTemplate> summons = group.summons().stream()
+				.filter(summon -> servesSaintThero(summon, levelOf(summon, group))
+					|| summonsGood(summon, levelOf(summon, group)) && withinOneStepOfDeity(summon, deityAlignment))
+				.toList();
+			if (!summons.isEmpty())
+			{
+				kept.add(new SummonGroup(group.title(), summons));
+			}
+		}
+		return kept;
+	}
+
+	private static boolean servesSaintThero(SummonTemplate summon, int level)
+	{
+		return onList(SAINT_THERO, summon, level);
+	}
+
+	private static boolean summonsGood(SummonTemplate summon, int level)
+	{
+		return onList("Good", summon, level);
+	}
+
+	private static boolean onList(String family, SummonTemplate summon, int level)
+	{
+		return OPTIONS.stream().filter(option -> family.equals(option.family()))
+			.anyMatch(option -> option.race().equals(summon.sourceRaceKey()) && (level == 0 || option.level() == level));
+	}
+
+	/**
+	 * A cleric summons only creatures within one step of his deity's alignment,
+	 * except Saint Thero's own servants; a creature whose alignment is unknown
+	 * is left out.
+	 */
+	private static boolean withinOneStepOfDeity(SummonTemplate summon, Optional<String> deityAlignment)
+	{
+		return deityAlignment.isEmpty() || creatureAlignment(summon)
+			.filter(alignment -> SummonAlignment.isWithinOneStep(deityAlignment.get(), alignment)).isPresent();
+	}
+
+	/** The alignment of the Héraut Divin's deity, when the character has both. */
+	private static Optional<String> heraldDeityAlignment(PlayerCharacter character)
+	{
+		if (!hasSpecialAbility(character, DEVOTED_HERALD))
+		{
+			return Optional.empty();
+		}
+		Object deity = ChannelUtilities.readControlledChannel(character.getCharID(), CControl.DEITYINPUT);
+		if (!(deity instanceof Deity heraldDeity))
+		{
+			return Optional.empty();
+		}
+		return Optional.ofNullable(heraldDeity.get(ObjectKey.ALIGNMENT)).map(CDOMSingleRef::get)
+			.map(PCAlignment::getKeyName);
+	}
+
+	/** The alignment of the Bestiary's default kit for the race, changed by the summoning templates. */
+	private static Optional<String> creatureAlignment(SummonTemplate summon)
+	{
+		Kit kit = Globals.getContext().getReferenceContext().silentlyGetConstructedCDOMObject(Kit.class,
+			summon.metadata().getOrDefault("kit", summon.sourceRaceKey() + " Default"));
+		if (kit == null)
+		{
+			return Optional.empty();
+		}
+		return kit.getSafeListFor(ListKey.KIT_TASKS).stream().filter(KitAlignment.class::isInstance)
+			.map(KitAlignment.class::cast).flatMap(task -> task.getAlignments().stream())
+			.map(CDOMSingleRef::get).map(PCAlignment::getKeyName).findFirst()
+			.map(alignment -> summon.templateKeys().stream().reduce(alignment, SummonAlignment::withTemplate));
+	}
+
+	/** The level written on the summon, else the roman numeral ending its group title, else 0. */
+	private static int levelOf(SummonTemplate summon, SummonGroup group)
+	{
+		String[] words = group.title().strip().split("\\s+");
+		String level = summon.metadata().getOrDefault("level", words[words.length - 1]);
+		int rank = List.of(ROMAN).indexOf(level.toUpperCase(Locale.ROOT));
+		return Math.max(rank, 0);
 	}
 
 	/**

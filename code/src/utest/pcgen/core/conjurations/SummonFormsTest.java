@@ -48,6 +48,56 @@ class SummonFormsTest
 		assertEquals("1d8+6", direWolf.attacks().getFirst().damage());
 	}
 
+	private static final SummonTemplate STAG = new SummonTemplate("Archon (Stag)", List.of(), 1);
+	private static final CreatureStats STAG_ARCHON = new CreatureStats(6, "40 ft.", 33, 18, 12, 16,
+		List.of(new CreatureAttack("Gore", "+7", "1d6+1"),
+			new CreatureAttack("Longbow", "+9/+4", "1d8")), "+7", 19, "+7", "+5", "+7", "+2");
+
+	@Test
+	void theStagArchonOffersTheLargeStagForm()
+	{
+		assertEquals(List.of("stag"), SummonForms.forSummon(STAG).stream().map(SummonForms.Form::key).toList());
+	}
+
+	@Test
+	void theLargeStagGoresAndKicksWithItsHooves()
+	{
+		assertEquals(List.of(new CreatureAttack("Gore", "+8", "1d8+3"), new CreatureAttack("Hooves (2)", "+3", "1d4+1")),
+			SummonForms.statsOf(STAG, "stag", STAG_ARCHON).attacks());
+	}
+
+	@Test
+	void theLargeStagRunsAtFiftyFeet()
+	{
+		assertEquals("50 ft.", SummonForms.statsOf(STAG, "stag", STAG_ARCHON).speed());
+	}
+
+	@Test
+	void theLargeStagLosesArmorClassToItsSizeAndDexterity()
+	{
+		CreatureStats stag = SummonForms.statsOf(STAG, "stag", STAG_ARCHON);
+
+		assertEquals(List.of(16, 10, 15), List.of(stag.armorClass(), stag.touchArmorClass(),
+			stag.flatFootedArmorClass()));
+	}
+
+	@Test
+	void theLargeStagGainsStrengthAndSizeOnManeuvers()
+	{
+		CreatureStats stag = SummonForms.statsOf(STAG, "stag", STAG_ARCHON);
+
+		assertEquals(List.of("+10", "21"), List.of(stag.combatManeuverBonus(),
+			Integer.toString(stag.combatManeuverDefense())));
+	}
+
+	@Test
+	void theLargeStagLosesADexterityPointOnReflexAndInitiative()
+	{
+		CreatureStats stag = SummonForms.statsOf(STAG, "stag", STAG_ARCHON);
+
+		assertEquals(List.of("+6", "+1"), List.of(stag.reflex(), stag.initiative()));
+	}
+
 	@Test
 	void lanternGestaltIsCollectiveRatherThanAnIndividualShape()
 	{

@@ -19,6 +19,12 @@ public final class SummonForms
 	private static final String HOUND_RULE = "https://aonprd.com/MonsterDisplay.aspx?ItemName=Hound+Archon";
 	private static final String LANTERN_RULE = "https://aonprd.com/MonsterDisplay.aspx?ItemName=Lantern+Archon";
 	private static final String BRALANI_RULE = "https://aonprd.com/MonsterDisplay.aspx?ItemName=Bralani";
+	private static final String STAG_RULE = "https://aonprd.com/MonsterDisplay.aspx?ItemName=Stag%20Archon";
+	/** Beast shape II into a Large animal: +4 Strength, -2 Dexterity, -1 size modifier. */
+	private static final int LARGE_STRENGTH_MODIFIER = 2;
+	private static final int LARGE_DEXTERITY_MODIFIER = -1;
+	private static final int LARGE_SIZE_MODIFIER = -1;
+	private static final int SECONDARY_ATTACK_PENALTY = 5;
 
 	public record Form(String key, String label, String description, String source)
 	{
@@ -38,6 +44,8 @@ public final class SummonForms
 				new Form("dire-wolf", label("dire_wolf_label"), label("dire_wolf_description"), HOUND_RULE));
 			case "Azata (Bralani)" -> List.of(new Form("wind", label("wind_label"),
 				label("wind_description"), BRALANI_RULE));
+			case "Archon (Stag)" -> List.of(new Form("stag", label("stag_label"), label("stag_description"),
+				STAG_RULE));
 			default -> List.of();
 		};
 	}
@@ -72,6 +80,10 @@ public final class SummonForms
 				base.touchArmorClass(), base.flatFootedArmorClass(), attacks, base.combatManeuverBonus(),
 				base.combatManeuverDefense(), base.reflex(), base.fortitude(), base.will(), base.initiative(),
 				base.specialAbilities());
+		}
+		if ("Archon (Stag)".equals(summon.sourceRaceKey()))
+		{
+			return "stag".equals(form) ? largeStagOf(base) : base;
 		}
 		if (form == null || form.isBlank() || !"Archon (Hound)".equals(summon.sourceRaceKey()))
 		{
@@ -130,6 +142,40 @@ public final class SummonForms
 			base.reflex().isBlank() ? "" : signed(firstSigned(base.reflex()) + dexterityDelta),
 			base.fortitude(), base.will(), base.initiative().isBlank() ? ""
 				: signed(firstSigned(base.initiative()) + dexterityDelta), base.specialAbilities());
+	}
+
+	/**
+	 * The stag archon's change shape takes the form of a Large stag through
+	 * beast shape II: its gore grows a die size and it kicks with two hooves
+	 * as secondary attacks. Its racial natural armor (+6) already exceeds the
+	 * spell's (+4), and the two do not stack, so its armor stays.
+	 */
+	private static CreatureStats largeStagOf(CreatureStats base)
+	{
+		Optional<CreatureAttack> originalGore = base.attacks().stream()
+			.filter(attack -> attack.name().toLowerCase().contains("gore")).findFirst();
+		int goreBonus = originalGore.map(attack -> firstSigned(attack.toHit())).orElse(0)
+			+ LARGE_STRENGTH_MODIFIER + LARGE_SIZE_MODIFIER;
+		int goreDamage = originalGore.map(attack -> diceModifier(attack.damage())).orElse(0) + LARGE_STRENGTH_MODIFIER;
+		List<CreatureAttack> attacks = List.of(new CreatureAttack("Gore", signed(goreBonus), "1d8" + signed(goreDamage)),
+			new CreatureAttack("Hooves (2)", signed(goreBonus - SECONDARY_ATTACK_PENALTY),
+				"1d4" + signed(Math.floorDiv(goreDamage, 2))));
+		int armorDelta = LARGE_DEXTERITY_MODIFIER + LARGE_SIZE_MODIFIER;
+		int maneuverSizeModifier = -LARGE_SIZE_MODIFIER;
+		return new CreatureStats(base.hitDice(), "50 ft.", base.maximumHitPoints(), base.armorClass() + armorDelta,
+			base.touchArmorClass() + armorDelta, base.flatFootedArmorClass() + LARGE_SIZE_MODIFIER, attacks,
+			signed(firstSigned(base.combatManeuverBonus()) + LARGE_STRENGTH_MODIFIER + maneuverSizeModifier),
+			base.combatManeuverDefense() + LARGE_STRENGTH_MODIFIER + LARGE_DEXTERITY_MODIFIER + maneuverSizeModifier,
+			base.reflex().isBlank() ? "" : signed(firstSigned(base.reflex()) + LARGE_DEXTERITY_MODIFIER),
+			base.fortitude(), base.will(), base.initiative().isBlank() ? ""
+				: signed(firstSigned(base.initiative()) + LARGE_DEXTERITY_MODIFIER), base.specialAbilities());
+	}
+
+	/** The modifier right after the dice, as in "1d6+1 plus push". */
+	private static int diceModifier(String damage)
+	{
+		java.util.regex.Matcher modifier = java.util.regex.Pattern.compile("\\d+d\\d+([+-]\\d+)").matcher(damage);
+		return modifier.find() ? Integer.parseInt(modifier.group(1)) : 0;
 	}
 
 	private static int firstSigned(String value)
