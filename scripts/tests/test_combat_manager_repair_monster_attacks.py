@@ -54,6 +54,10 @@ class NaturalAttacks(unittest.TestCase):
         tag = repair_monster_attacks.natural_attacks_tag('2 incorporeal touches +9 touch (2d6 negative energy)')
         self.assertTrue(tag.startswith('NATURALATTACKS:Incorporeal Touch,'), tag)
 
+    def test_reads_a_swarm_written_without_an_attack_bonus(self):
+        tag = repair_monster_attacks.natural_attacks_tag('swarm (3d6 plus poison)')
+        self.assertTrue(tag.startswith('NATURALATTACKS:Swarm,Weapon.Natural.Weapon Group Natural.Melee.Finesseable.Bludgeoning,*1,3d6'), tag)
+
 
 class GearLines(unittest.TestCase):
 

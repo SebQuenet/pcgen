@@ -137,6 +137,7 @@ NATURAL_WEAPON_MAP = {
     'rakes': ('Rake', 'Slashing'),
     'incorporeal touches': ('Incorporeal Touch', 'Bludgeoning'),
     'touches': ('Touch', 'Bludgeoning'),
+    'swarm': ('Swarm', 'Bludgeoning'),
 }
 
 # Standard PCGen immunity ability names

@@ -136,6 +136,8 @@ def natural_attacks(text: str) -> list[dict]:
 
 def parse_attack(text: str) -> dict | None:
     match = re.match(rf'^(?:(\d+)\s+)?(.+?)\s+{SIGNED_NUMBER}(?:/{SIGNED_NUMBER})*(?:\s+touch)?\s*\((.*)\)\s*$', text.strip())
+    # A swarm's attack hits automatically, so its stat block gives no bonus: "swarm (2d6 plus distraction)"
+    match = match or re.match(r'^()(swarm)\s*\((.*)\)\s*$', text.strip(), re.IGNORECASE)
     if not match:
         return None
     count, name, damage = match.groups()
