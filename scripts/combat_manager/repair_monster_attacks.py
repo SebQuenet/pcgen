@@ -38,6 +38,10 @@ BESTIARY_INDEX = REPOSITORY / 'code/src/resources/pcgen/bestiary/index.json'
 TWO_HANDED_TYPES = ('TwoHanded', 'Projectile')
 # The last word of a ranged attack the creature makes with its own body: "earth blast", "sonic ray", "thorns"
 RANGED_NATURAL_WORDS = ('blast', 'ray', 'rays', 'bolt', 'lash', 'thorns', 'spore', 'vortices')
+# The last word of a touch attack made with a firearm, "+1 sonic pistol +14 touch (1d8+7)", not with the body
+FIREARM_WORDS = ('pistol', 'rifle', 'musket', 'gun', 'guns')
+# Races whose stat block attacks come from their class levels, as the Duergar Tyrant's kineticist blast
+ATTACKS_FROM_CLASS_LEVELS = frozenset({'Duergar, Duergar Tyrant'})
 
 
 def cleaned_attack_line(text: str) -> str:
@@ -50,7 +54,7 @@ def cleaned_attack_line(text: str) -> str:
 def weapon_names(text: str) -> list[str]:
     """The name of every attack of an attack line, its bonus and damage left out when the line gives them."""
     names = []
-    for alternative in re.split(r'\s+or\s+', cleaned_attack_line(text)):
+    for alternative in statblock.split_alternatives(cleaned_attack_line(text)):
         for piece in statblock.split_list(alternative):
             attack = monsters.parse_attack(piece)
             names.append(attack['name'] if attack else re.sub(r'\s+[+\-]\d.*$|\s*\(.*$', '', piece.strip()).lower())
@@ -59,7 +63,9 @@ def weapon_names(text: str) -> list[str]:
 
 def natural_attacks_tag(melee_text: str, ranged_text: str = '') -> str:
     """The NATURALATTACKS tag of the natural attacks of the melee and ranged lines; empty when they have none."""
-    melee = build_natural_attacks({'parsedAttacks': {'melee': {'primary': {'attacks': monsters.natural_attacks(cleaned_attack_line(melee_text))}}}})
+    bodily = [attack for attack in monsters.natural_attacks(cleaned_attack_line(melee_text))
+              if attack['name'].split()[-1] not in FIREARM_WORDS]
+    melee = build_natural_attacks({'parsedAttacks': {'melee': {'primary': {'attacks': bodily}}}})
     melee_names = {entry.split(',')[0] for entry in melee.removeprefix('NATURALATTACKS:').split('|') if entry}
     ranged = [entry for entry in ranged_natural_attacks(ranged_text) if entry.split(',')[0] not in melee_names]
     entries = [entry for entry in melee.removeprefix('NATURALATTACKS:').split('|') if entry] + ranged
@@ -93,7 +99,8 @@ def weapon_key(name: str, weapons: dict[str, str]) -> str | None:
     if name in NATURAL_WEAPON_MAP:
         return None
     index = catalog.KeyIndex(sorted(weapons))
-    words = name.split()
+    # "mwk earth breaker*" marks its book with a star; "nine-ring broadsword" is the Broadsword (Nine Ring)
+    words = name.rstrip('*').replace('-', ' ').split()
     return next((key for key in (named_exactly(index, ' '.join(words[start:])) for start in range(len(words))) if key), None)
 
 
@@ -110,20 +117,26 @@ def gear_lines(melee_text: str, ranged_text: str, weapons: dict[str, str], size:
 
 
 def load_weapons() -> dict[str, str]:
-    """The weapons PCGen sells, each with the hands it is wielded in."""
+    """The weapons PCGen sells, each with the hands it is wielded in: those copied from a "(Base)" weapon, and those
+    a book defines on their own, as the Katana."""
     wield_of_base = {}
     copies = []
+    weapons = {}
     for path in PATHFINDER_DATA.rglob('*equip*.lst'):
         for line in path.read_text(encoding='utf-8', errors='replace').splitlines():
             columns = line.split('\t')
             key = next((column[4:].strip() for column in columns if column.startswith('KEY:')), columns[0].strip())
             types = next((column for column in columns if column.startswith('TYPE:')), '')
-            if key.endswith('(Base)') and 'Weapon' in types and 'Natural' not in types:
-                wield_of_base[key] = TWO_HANDED if any(kind in types for kind in TWO_HANDED_TYPES) else ONE_HANDED
+            is_weapon = 'Weapon' in types.split(':', 1)[-1].split('.') and 'Natural' not in types
+            wield = TWO_HANDED if any(kind in types for kind in TWO_HANDED_TYPES) else ONE_HANDED
             copied = re.match(r'^(.+?)\.COPY=', columns[0])
             if copied:
                 copies.append((copied.group(1).strip(), key))
-    return {key: wield_of_base[base] for base, key in copies if base in wield_of_base}
+            elif key.endswith('(Base)') and is_weapon:
+                wield_of_base[key] = wield
+            elif is_weapon and not re.search(r'\.(MOD|FORGET)$', columns[0].strip()):
+                weapons[key] = wield
+    return weapons | {key: wield_of_base[base] for base, key in copies if base in wield_of_base}
 
 
 def races_without_attacks() -> list[str]:
@@ -152,7 +165,7 @@ def main() -> None:
         for number, line in enumerate(lines):
             columns = line.split('\t')
             key = next((column[4:].strip() for column in columns if column.startswith('KEY:')), columns[0].strip())
-            if key not in targets:
+            if key not in targets or key in ATTACKS_FROM_CLASS_LEVELS:
                 continue
             fields = tactics.stat_block_of(key, columns[0].strip(), combat_manager, pcfinder)
             if not fields:

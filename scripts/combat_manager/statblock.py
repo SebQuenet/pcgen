@@ -31,6 +31,21 @@ def parse_lycanthropy(template_name: str) -> tuple[str, str] | None:
     return f'{(match.group(1) or "natural").title()} Lycanthrope', title_case(match.group(2))
 
 
+def split_alternatives(text: str | None) -> list[str]:
+    """Split an attack line on its "or", but not inside parentheses: "touch +8 (shadow touch or possession)"."""
+    pieces, depth, start = [], 0, 0
+    for match in re.finditer(r'[()\[\]]|\s+or\s+', text or ''):
+        token = match.group(0)
+        if token in '([':
+            depth += 1
+        elif token in ')]':
+            depth = max(0, depth - 1)
+        elif depth == 0:
+            pieces.append(text[start:match.start()])
+            start = match.end()
+    return pieces + [(text or '')[start:]]
+
+
 def split_list(text: str | None) -> list[str]:
     """Split a stat block list on its commas, but not inside parentheses or a number."""
     if not text:

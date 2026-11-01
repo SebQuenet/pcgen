@@ -125,7 +125,7 @@ def speeds(text: str) -> list[dict]:
 def natural_attacks(text: str) -> list[dict]:
     """Every attack of the melee line, once per name across its alternatives."""
     attacks, names = [], set()
-    for alternative in re.split(r'\s+or\s+', text):
+    for alternative in statblock.split_alternatives(text):
         for piece in statblock.split_list(alternative):
             attack = parse_attack(piece)
             if attack and attack['name'] not in names:

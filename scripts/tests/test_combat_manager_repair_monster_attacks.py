@@ -22,6 +22,9 @@ class WeaponKey(unittest.TestCase):
     def test_reads_a_qualified_key_written_the_other_way_round(self):
         self.assertEqual('Longbow (Composite)', repair_monster_attacks.weapon_key('mwk composite longbow', WEAPONS))
 
+    def test_reads_a_weapon_marked_with_its_books_star(self):
+        self.assertEqual('Longsword', repair_monster_attacks.weapon_key('mwk longsword*', WEAPONS))
+
     def test_has_none_for_a_natural_attack(self):
         self.assertIsNone(repair_monster_attacks.weapon_key('claws', WEAPONS))
 
@@ -74,9 +77,17 @@ class NaturalAttacks(unittest.TestCase):
         tag = repair_monster_attacks.natural_attacks_tag('2 slams +16 (2d6+7 plus consume humanity) or')
         self.assertTrue(tag.startswith('NATURALATTACKS:Slam,'), tag)
 
+    def test_reads_an_or_inside_the_damage_as_part_of_the_attack(self):
+        tag = repair_monster_attacks.natural_attacks_tag('touch +8 (shadow touch or possession)')
+        self.assertTrue(tag.startswith('NATURALATTACKS:Touch,'), tag)
+
     def test_writes_a_ranged_ray_the_creature_makes_with_its_own_body(self):
         tag = repair_monster_attacks.natural_attacks_tag('', 'sonic ray +10 touch (2d6 sonic)')
         self.assertEqual('NATURALATTACKS:Sonic Ray,Weapon.Natural.Ranged.Touch,*1,2d6', tag)
+
+    def test_writes_no_natural_attack_for_a_firearm_touch(self):
+        tag = repair_monster_attacks.natural_attacks_tag('+1 sonic pistol +14/+9/+4 touch (1d8+7/19-20 sonic)')
+        self.assertEqual('', tag)
 
     def test_writes_no_natural_attack_for_a_ranged_weapon(self):
         tag = repair_monster_attacks.natural_attacks_tag('', '3 Maxim M1910 machine guns +15 (2d8/19-20)')

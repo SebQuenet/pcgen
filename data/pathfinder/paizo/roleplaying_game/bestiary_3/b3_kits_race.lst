@@ -752,7 +752,7 @@ STAT:STR=10|DEX=11|CON=10|INT=11|WIS=10|CHA=11
 #ABILITY:CATEGORY=FEAT|Multiattack
 
 
-STARTPACK:Clockwork Goliath Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Goliath)],[!PRERACE:1,%]	SOURCEPAGE:p.54
+STARTPACK:Clockwork (Goliath) Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Goliath)],[!PRERACE:1,%]	SOURCEPAGE:p.54
 ALIGN:TN
 RACE:Clockwork (Goliath)	!PRERACE:1,%
 NAME:Clockwork Goliath
@@ -762,7 +762,7 @@ STAT:STR=11|DEX=10|CON=10|INT=10|WIS=11|CHA=11
 GEAR:Cannon	LOCATION:Equipped
 
 
-STARTPACK:Clockwork Leviathan Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Leviathan)],[!PRERACE:1,%]	SOURCEPAGE:p.55
+STARTPACK:Clockwork (Leviathan) Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Leviathan)],[!PRERACE:1,%]	SOURCEPAGE:p.55
 ALIGN:TN
 RACE:Clockwork (Leviathan)	!PRERACE:1,%
 NAME:Clockwork Leviathan
@@ -774,7 +774,7 @@ STAT:STR=11|DEX=10|CON=10|INT=10|WIS=11|CHA=11
 
 
 
-STARTPACK:Clockwork Servant Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Servant)],[!PRERACE:1,%]	SOURCEPAGE:p.56
+STARTPACK:Clockwork (Servant) Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Servant)],[!PRERACE:1,%]	SOURCEPAGE:p.56
 ALIGN:TN
 RACE:Clockwork (Servant)	!PRERACE:1,%
 NAME:Clockwork Servant
@@ -785,7 +785,7 @@ GEAR:Net	QTY:1	LOCATION:Equipped
 GEAR:Net	QTY:4	LOCATION:Carried
 
 
-STARTPACK:Clockwork Soldier Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Soldier)],[!PRERACE:1,%]	SOURCEPAGE:p.57
+STARTPACK:Clockwork (Soldier) Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Soldier)],[!PRERACE:1,%]	SOURCEPAGE:p.57
 ALIGN:TN
 RACE:Clockwork (Soldier)	!PRERACE:1,%
 NAME:Clockwork Soldier
@@ -795,7 +795,7 @@ STAT:STR=10|DEX=11|CON=10|INT=10|WIS=11|CHA=11
 GEAR:Halberd	LOCATION:Primary Hand	EQMOD:Special Ability ~ +1 ~ Weapon
 
 
-STARTPACK:Clockwork Spy Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Spy)],[!PRERACE:1,%]	SOURCEPAGE:p.58
+STARTPACK:Clockwork (Spy) Default	TYPE:Default Monster.Construct	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Clockwork (Spy)],[!PRERACE:1,%]	SOURCEPAGE:p.58
 ALIGN:TN
 RACE:Clockwork (Spy)	!PRERACE:1,%
 NAME:Clockwork Spy
@@ -2242,6 +2242,7 @@ STAT:STR=10|DEX=11|CON=10|INT=11|WIS=10|CHA=11
 #ABILITY:CATEGORY=FEAT|Catch Off-Guard
 #ABILITY:CATEGORY=FEAT|Iron Will
 #ABILITY:CATEGORY=FEAT|Throw Anything
+GEAR:Greatclub	QTY:1	SIZE:T	LOCATION:Carried
 
 
 STARTPACK:Kami (Toshigami) Default	TYPE:Default Monster.Outsider	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Kami (Toshigami)],[!PRERACE:1,%]	SOURCEPAGE:p.164
@@ -4162,7 +4163,7 @@ GEAR:Longsword
 GEAR:Sword (Short)
 
 
-STARTPACK:Thriae Queen Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Thriae (Queen)],[!PRERACE:1,%]	SOURCEPAGE:p.263-265
+STARTPACK:Thriae (Queen) Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Thriae (Queen)],[!PRERACE:1,%]	SOURCEPAGE:p.263-265
 ALIGN:LN
 RACE:Thriae (Queen)	!PRERACE:1,%
 NAME:Thriae Queen
@@ -4192,7 +4193,7 @@ STAT:STR=10|DEX=10|CON=10|INT=11|WIS=11|CHA=11
 GEAR:Mace (Light)	LOCATION:Primary Hand	EQMOD:Special Ability ~ +2 ~ Weapon.Special Ability ~ Axiomatic ~ Weapon
 
 
-STARTPACK:Thriae Seer Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Thriae (Seer)],[!PRERACE:1,%]	SOURCEPAGE:p.266
+STARTPACK:Thriae (Seer) Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Thriae (Seer)],[!PRERACE:1,%]	SOURCEPAGE:p.266
 ALIGN:LN
 RACE:Thriae (Seer)	!PRERACE:1,%
 NAME:Thriae Seer
@@ -4215,7 +4216,7 @@ STAT:STR=10|DEX=10|CON=11|INT=11|WIS=10|CHA=11
 GEAR:Quarterstaff	LOCATION:Equipped	EQMOD:Special Ability ~ +2 ~ Weapon
 
 
-STARTPACK:Thriae Soldier Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Thriae (Soldier)],[!PRERACE:1,%]	SOURCEPAGE:p.267
+STARTPACK:Thriae (Soldier) Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Thriae (Soldier)],[!PRERACE:1,%]	SOURCEPAGE:p.267
 ALIGN:LN
 RACE:Thriae (Soldier)	!PRERACE:1,%
 NAME:Thriae Soldier
