@@ -4100,3 +4100,124 @@ NAME:Tuatara
 STAT:STR=10|DEX=11|CON=10|INT=11|WIS=10|CHA=11
 SKILL:Acrobatics	RANK:1
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+
+STARTPACK:Kasatha Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Kasatha],[!PRERACE:1,%]
+RACE:Kasatha	!PRERACE:1,%
+NAME:Kasatha
+GENDER:Male
+ALIGN:LN
+STAT:STR=13|DEX=15|CON=12|INT=10|WIS=14|CHA=8
+CLASS:Monk	LEVEL:1
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=Favored Class|Monk
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Monk Bonus Feat|Monk Bonus Feat ~ Combat Reflexes
+ABILITY:CATEGORY=Monk Class Selection|Empty Selection ~ Standard Monk
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Acrobatics	RANK:1	CLASS:Monk
+SKILL:Climb	RANK:1	CLASS:Monk
+SKILL:Escape Artist	RANK:1	CLASS:Monk
+SKILL:Survival	RANK:1	CLASS:Monk
+LANGBONUS:Common|Kasatha
+GEAR:Sai	QTY:2	LOCATION:Primary Hand
+
+STARTPACK:Samsaran Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Samsaran],[!PRERACE:1,%]
+RACE:Samsaran	!PRERACE:1,%
+NAME:Samsaran
+GENDER:Male
+ALIGN:TN
+STAT:STR=8|DEX=14|CON=13|INT=10|WIS=12|CHA=15
+CLASS:Oracle	LEVEL:1
+ABILITY:CATEGORY=FEAT|Toughness
+ABILITY:CATEGORY=Favored Class|Oracle
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Oracle Curse|Oracle ~ Lame
+ABILITY:CATEGORY=Oracle Mystery|Oracle ~ Lore Mystery
+ABILITY:CATEGORY=Lore Mystery Revelation|Lore Mystery ~ Lore Keeper
+ABILITY:CATEGORY=Oracle Spell Choice|Oracle ~ Inflict Wounds
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Samsaran Shards of the Past Skills|Samsaran ~ Shards of the Past (Acrobatics)
+ABILITY:CATEGORY=Samsaran Shards of the Past Skills|Samsaran ~ Shards of the Past (Spellcraft)
+SKILL:Diplomacy	RANK:1	CLASS:Oracle
+SKILL:Disable Device	RANK:1	CLASS:Oracle
+SKILL:Heal	RANK:1	CLASS:Oracle
+SKILL:Knowledge (History)	RANK:1	CLASS:Oracle
+SKILL:Perception	RANK:1	CLASS:Oracle
+LANGBONUS:Celestial|Common|Samsaran
+SPELLS:SPELLBOOK=Known Spells|CLASS=Oracle|Command|Cure Light Wounds|Guidance|Inflict Light Wounds|Light|Read Magic|Resistance
+GEAR:Spear	QTY:1	LOCATION:Both Hands
+GEAR:Sling	QTY:1	LOCATION:Carried
+GEAR:Studded Leather	QTY:1	LOCATION:Equipped
+GEAR:Bullet (Sling)	QTY:10	LOCATION:Carried
+GEAR:Thieves' Tools	QTY:1	LOCATION:Carried
+
+STARTPACK:Trox Default	TYPE:Default Monster.Monstrous Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Trox],[!PRERACE:1,%]
+RACE:Trox	!PRERACE:1,%
+NAME:Trox
+GENDER:Male
+ALIGN:CN
+STAT:STR=15|DEX=13|CON=14|INT=10|WIS=12|CHA=8
+CLASS:Barbarian	LEVEL:1
+ABILITY:CATEGORY=Barbarian Class Selection|Empty Selection ~ Standard Barbarian
+ABILITY:CATEGORY=FEAT|Power Attack
+ABILITY:CATEGORY=Favored Class|Barbarian
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Climb	RANK:1	CLASS:Barbarian
+SKILL:Intimidate	RANK:1	CLASS:Barbarian
+SKILL:Survival	RANK:1	CLASS:Barbarian
+LANGBONUS:Terran
+GEAR:Warhammer	QTY:1	SIZE:L	LOCATION:Primary Hand
+GEAR:Leather	QTY:1	SIZE:L	LOCATION:Equipped
+
+STARTPACK:Wayang Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Wayang],[!PRERACE:1,%]
+RACE:Wayang	!PRERACE:1,%
+NAME:Wayang
+GENDER:Male
+ALIGN:CN
+STAT:STR=8|DEX=14|CON=12|INT=15|WIS=10|CHA=13
+CLASS:Wizard	LEVEL:1	SUBCLASS:Illusionist
+ABILITY:CATEGORY=Arcane Bond|Arcane Bond ~ Bonded Object
+ABILITY:CATEGORY=Arcane Opposition School|Necromancy Opposition School
+ABILITY:CATEGORY=Arcane Opposition School|Transmutation Opposition School
+ABILITY:CATEGORY=FEAT|Combat Casting
+ABILITY:CATEGORY=Favored Class|Wizard
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Craft (Alchemy)	RANK:1	CLASS:Wizard
+SKILL:Knowledge (Arcana)	RANK:1	CLASS:Wizard
+SKILL:Perception	RANK:1	CLASS:Wizard
+SKILL:Spellcraft	RANK:1	CLASS:Wizard
+SKILL:Stealth	RANK:1	CLASS:Wizard
+LANGBONUS:Abyssal|Common|Draconic|Goblin|Wayang
+SPELLS:SPELLBOOK=Known Spells|CLASS=Wizard|Acid Splash|Arcane Mark|Dancing Lights|Daze|Detect Magic|Detect Poison|Flare|Ghost Sound|Hypnotism|Light|Prestidigitation|Ray of Frost|Read Magic|Resistance|Spark|Vanish
+SPELLS:SPELLBOOK=Prepared Spells|CLASS=Wizard|Detect Magic|Ghost Sound|Hypnotism|Read Magic|Vanish
+GEAR:Dagger	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Blowgun	QTY:1	SIZE:S	LOCATION:Carried
+
+STARTPACK:Wyrwood Default	TYPE:Default Monster.Construct	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Wyrwood],[!PRERACE:1,%]
+RACE:Wyrwood	!PRERACE:1,%
+NAME:Wyrwood
+GENDER:Male
+ALIGN:TN
+STAT:STR=14|DEX=15|CON=0|INT=13|WIS=12|CHA=8
+CLASS:Rogue	LEVEL:1
+ABILITY:CATEGORY=FEAT|Deft Hands
+ABILITY:CATEGORY=Favored Class|Rogue
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Rogue Class Selection|Empty Selection ~ Standard Rogue
+SKILL:Appraise	RANK:1	CLASS:Rogue
+SKILL:Climb	RANK:1	CLASS:Rogue
+SKILL:Craft (Alchemy)	RANK:1	CLASS:Rogue
+SKILL:Escape Artist	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Dungeoneering)	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Local)	RANK:1	CLASS:Rogue
+SKILL:Perception	RANK:1	CLASS:Rogue
+SKILL:Sleight of Hand	RANK:1	CLASS:Rogue
+SKILL:Stealth	RANK:1	CLASS:Rogue
+SKILL:Use Magic Device	RANK:1	CLASS:Rogue
+LANGBONUS:Common|Elven|Gnome
+GEAR:Dagger	QTY:2	SIZE:S	LOCATION:Primary Hand
+GEAR:Leather	QTY:1	SIZE:S	LOCATION:Equipped
+GEAR:Thieves' Tools	QTY:1	SIZE:S	LOCATION:Carried

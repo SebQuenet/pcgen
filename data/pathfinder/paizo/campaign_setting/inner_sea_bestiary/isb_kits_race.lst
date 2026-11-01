@@ -1184,3 +1184,93 @@ ABILITY:CATEGORY=FEAT|Alertness
 ABILITY:CATEGORY=FEAT|Improved Initiative
 ABILITY:CATEGORY=FEAT|Iron Will
 
+STARTPACK:Android Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Android],[!PRERACE:1,%]
+RACE:Android	!PRERACE:1,%
+NAME:Android
+GENDER:Male
+ALIGN:TN
+STAT:STR=13|DEX=15|CON=14|INT=12|WIS=10|CHA=8
+CLASS:Rogue	LEVEL:1
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+ABILITY:CATEGORY=Favored Class|Rogue
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Rogue Class Selection|Empty Selection ~ Standard Rogue
+SKILL:Acrobatics	RANK:1	CLASS:Rogue
+SKILL:Climb	RANK:1	CLASS:Rogue
+SKILL:Diplomacy	RANK:1	CLASS:Rogue
+SKILL:Escape Artist	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Engineering)	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Local)	RANK:1	CLASS:Rogue
+SKILL:Perception	RANK:1	CLASS:Rogue
+SKILL:Sense Motive	RANK:1	CLASS:Rogue
+SKILL:Sleight of Hand	RANK:1	CLASS:Rogue
+SKILL:Stealth	RANK:1	CLASS:Rogue
+LANGBONUS:Common|Dwarven|Elven
+GEAR:Rapier	QTY:1	LOCATION:Primary Hand
+GEAR:Leather	QTY:1	LOCATION:Equipped
+
+STARTPACK:Ghoran Default	TYPE:Default Monster.Plant	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ghoran],[!PRERACE:1,%]	SOURCEPAGE:p.15
+RACE:Ghoran	!PRERACE:1,%
+NAME:Ghoran
+GENDER:Male
+ALIGN:TN
+STAT:STR=8|DEX=13|CON=14|INT=10|WIS=12|CHA=15
+CLASS:Bard	LEVEL:1
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+ABILITY:CATEGORY=Favored Class|Bard
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Bluff	RANK:1	CLASS:Bard
+SKILL:Knowledge (History)	RANK:1	CLASS:Bard
+SKILL:Knowledge (Local)	RANK:1	CLASS:Bard
+SKILL:Perception	RANK:1	CLASS:Bard
+SKILL:Perform (Sing)	RANK:1	CLASS:Bard
+LANGBONUS:Common|Sylvan
+SPELLS:SPELLBOOK=Known Spells|CLASS=Bard|Charm Person|Daze|Light|Mending|Message|Sleep
+GEAR:Rapier	QTY:1	LOCATION:Primary Hand
+
+STARTPACK:Lashunta Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Lashunta],[!PRERACE:1,%]
+RACE:Lashunta	!PRERACE:1,%
+NAME:Lashunta
+GENDER:Female
+ALIGN:NG
+STAT:STR=6|DEX=13|CON=8|INT=15|WIS=14|CHA=16
+CLASS:Wizard	LEVEL:1	SUBCLASS:Abjurer
+ABILITY:CATEGORY=Arcane Bond|Arcane Bond ~ Bonded Object
+ABILITY:CATEGORY=Arcane Opposition School|Enchantment Opposition School
+ABILITY:CATEGORY=Arcane Opposition School|Evocation Opposition School
+ABILITY:CATEGORY=FEAT|Toughness
+ABILITY:CATEGORY=Favored Class|Wizard
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Lashunta Knowledgeable Selection|Lashunta ~ Knowledgeable Selection (Knowledge (Dungeoneering))
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Diplomacy	RANK:1	CLASS:Wizard
+SKILL:Handle Animal	RANK:1	CLASS:Wizard
+SKILL:Knowledge (Arcana)	RANK:1	CLASS:Wizard
+SKILL:Perception	RANK:1	CLASS:Wizard
+SKILL:Spellcraft	RANK:1	CLASS:Wizard
+LANGBONUS:Celestial|Common|Draconic|Elven|Lashunta
+SPELLS:SPELLBOOK=Known Spells|CLASS=Wizard|Acid Splash|Arcane Mark|Bleed|Charm Person|Detect Magic|Detect Poison|Disrupt Undead|Flare|Ghost Sound|Haunted Fey Aspect|Mage Armor|Mage Hand|Magic Missile|Mending|Message|Open/Close|Prestidigitation|Read Magic|Resistance|Touch of Fatigue
+SPELLS:SPELLBOOK=Prepared Spells|CLASS=Wizard|Acid Splash|Charm Person|Detect Magic|Flare|Mage Armor
+GEAR:Quarterstaff	QTY:1	LOCATION:Primary Hand
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Carried
+GEAR:Bolt (Crossbow)	QTY:20	LOCATION:Carried
+
+STARTPACK:Syrinx Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Syrinx],[!PRERACE:1,%]
+RACE:Syrinx	!PRERACE:1,%
+NAME:Syrinx
+GENDER:Male
+ALIGN:LE
+STAT:STR=8|DEX=10|CON=9|INT=12|WIS=13|CHA=11
+CLASS:Adept	LEVEL:1
+ABILITY:CATEGORY=FEAT|Combat Casting
+ABILITY:CATEGORY=Favored Class|Adept
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Fly	RANK:1	CLASS:Adept
+SKILL:Perception	RANK:1	CLASS:Adept
+SKILL:Spellcraft	RANK:1	CLASS:Adept
+LANGBONUS:Celestial|Syrinx
+SPELLS:SPELLBOOK=Prepared Spells|CLASS=Adept|Command|Detect Magic|Ghost Sound|Read Magic
+GEAR:Quarterstaff	QTY:1	LOCATION:Primary Hand

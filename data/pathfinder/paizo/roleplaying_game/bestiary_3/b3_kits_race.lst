@@ -4537,3 +4537,13 @@ STAT:STR=11|DEX=10|CON=10|INT=11|WIS=10|CHA=11
 
 STARTPACK:Unfettered Eidolon
 STAT:STR=10|DEX=10|CON=11|INT=11|WIS=10|CHA=11
+
+STARTPACK:Graveknight Default	TYPE:Default Monster.Undead	VISIBLE:QUALIFY	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Graveknight],[!PRERACE:1,%]	SOURCEPAGE:p.137
+RACE:Graveknight	!PRERACE:1,%
+NAME:Graveknight
+ALIGN:LE
+GEAR:Greatsword	QTY:1	LOCATION:Both Hands	EQMOD:Special Ability ~ +1 ~ Weapon
+GEAR:Longbow (Composite)	QTY:1	LOCATION:Carried
+GEAR:Full Plate	QTY:1	LOCATION:Equipped	EQMOD:Special Ability ~ +1 ~ Armor
+GEAR:Arrow	QTY:20	LOCATION:Carried
+GEAR:Belt of Giant Strength +2	QTY:1	LOCATION:Equipped

@@ -1,0 +1,444 @@
+SOURCELONG:Advanced Race Guide	SOURCESHORT:ARG	SOURCEWEB:http://paizo.com/products/btpy8rv2?Pathfinder-Roleplaying-Game-Advanced-Race-Guide	SOURCEDATE:2012-06
+
+STARTPACK:Aasimar Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Aasimar],[!PRERACE:1,%]	SOURCEPAGE:p.7
+RACE:Aasimar	!PRERACE:1,%
+NAME:Aasimar
+GENDER:Male
+ALIGN:NG
+STAT:STR=8|DEX=10|CON=14|INT=13|WIS=17|CHA=14
+CLASS:Cleric	LEVEL:1
+ABILITY:CATEGORY=Channel Energy|Cleric ~ Channel Positive Energy
+ABILITY:CATEGORY=FEAT|Turn Undead
+ABILITY:CATEGORY=Favored Class|Cleric
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Diplomacy	RANK:1	CLASS:Cleric
+SKILL:Heal	RANK:1	CLASS:Cleric
+SKILL:Knowledge (Religion)	RANK:1	CLASS:Cleric
+LANGBONUS:Celestial
+GEAR:Mace (Heavy)	QTY:1	LOCATION:Primary Hand
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Carried
+GEAR:Scale Mail	QTY:1	LOCATION:Equipped
+GEAR:Bolt (Crossbow)	QTY:10	LOCATION:Carried
+
+STARTPACK:Catfolk Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Catfolk],[!PRERACE:1,%]
+RACE:Catfolk	!PRERACE:1,%
+NAME:Catfolk
+GENDER:Male
+ALIGN:NG
+STAT:STR=14|DEX=15|CON=12|INT=8|WIS=13|CHA=10
+CLASS:Ranger	LEVEL:1
+ABILITY:CATEGORY=FEAT|Weapon Focus (Longbow)
+ABILITY:CATEGORY=Favored Class|Ranger
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Favored Enemy|Favored Enemy ~ Aberration
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Diplomacy	RANK:1	CLASS:Ranger
+SKILL:Handle Animal	RANK:1	CLASS:Ranger
+SKILL:Knowledge (Nature)	RANK:1	CLASS:Ranger
+SKILL:Sense Motive	RANK:1	CLASS:Ranger
+SKILL:Survival	RANK:1	CLASS:Ranger
+LANGBONUS:Catfolk|Common
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
+GEAR:Longbow	QTY:1	LOCATION:Carried
+GEAR:Studded Leather	QTY:1	LOCATION:Equipped
+GEAR:Arrow	QTY:20	LOCATION:Carried
+
+STARTPACK:Dhampir Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Dhampir],[!PRERACE:1,%]
+RACE:Dhampir	!PRERACE:1,%
+NAME:Dhampir
+GENDER:Male
+ALIGN:CE
+STAT:STR=13|DEX=15|CON=12|INT=10|WIS=8|CHA=14
+CLASS:Fighter	LEVEL:1
+ABILITY:CATEGORY=FEAT|Toughness
+ABILITY:CATEGORY=Favored Class|Fighter
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Fighter Bonus Feat|Weapon Finesse
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Intimidate	RANK:1	CLASS:Fighter
+SKILL:Ride	RANK:1	CLASS:Fighter
+LANGBONUS:Common
+GEAR:Rapier	QTY:1	LOCATION:Primary Hand
+GEAR:Chain Shirt	QTY:1	LOCATION:Equipped
+
+STARTPACK:Dwarf Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Dwarf],[!PRERACE:1,%]
+RACE:Dwarf	!PRERACE:1,%
+NAME:Dwarf
+GENDER:Male
+ALIGN:TN
+STAT:STR=13|DEX=11|CON=12|INT=10|WIS=8|CHA=9
+CLASS:Warrior	LEVEL:1
+ABILITY:CATEGORY=Dwarf Racial Subtype|Racial Subtype ~ None
+ABILITY:CATEGORY=FEAT|Weapon Focus (Waraxe (Dwarven))
+ABILITY:CATEGORY=Favored Class|Warrior
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Intimidate	RANK:1	CLASS:Warrior
+SKILL:Perception	RANK:1	CLASS:Warrior
+LANGBONUS:Common|Dwarven
+GEAR:Waraxe (Dwarven)	QTY:1	LOCATION:Primary Hand
+GEAR:Dagger	QTY:1	LOCATION:Carried
+GEAR:Crossbow (Light)	QTY:1	LOCATION:Carried
+GEAR:Chainmail	QTY:1	LOCATION:Equipped
+GEAR:Shield (Heavy/Wooden)	QTY:1	LOCATION:Shield
+GEAR:Bolt (Crossbow)	QTY:20	LOCATION:Carried
+
+STARTPACK:Elf Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Elf],[!PRERACE:1,%]
+RACE:Elf	!PRERACE:1,%
+NAME:Elf
+GENDER:Female
+ALIGN:CN
+STAT:STR=12|DEX=15|CON=14|INT=8|WIS=13|CHA=10
+CLASS:Rogue	LEVEL:1
+ABILITY:CATEGORY=Elf Racial Subtype|Racial Subtype ~ None
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=Favored Class|Rogue
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Rogue Class Selection|Empty Selection ~ Standard Rogue
+SKILL:Acrobatics	RANK:1	CLASS:Rogue
+SKILL:Bluff	RANK:1	CLASS:Rogue
+SKILL:Climb	RANK:1	CLASS:Rogue
+SKILL:Escape Artist	RANK:1	CLASS:Rogue
+SKILL:Perception	RANK:1	CLASS:Rogue
+SKILL:Sleight of Hand	RANK:1	CLASS:Rogue
+SKILL:Stealth	RANK:1	CLASS:Rogue
+SKILL:Swim	RANK:1	CLASS:Rogue
+LANGBONUS:Common|Elven
+GEAR:Rapier	QTY:1	LOCATION:Primary Hand
+GEAR:Dagger	QTY:12	LOCATION:Carried
+GEAR:Leather	QTY:1	LOCATION:Equipped
+GEAR:Backpack	QTY:1	LOCATION:Carried
+GEAR:Grappling Hook	QTY:1	LOCATION:Carried
+GEAR:Lantern (Hooded)	QTY:1	LOCATION:Carried
+GEAR:Oil (1 Pint Flask)	QTY:5	LOCATION:Carried
+GEAR:Rope (Silk/50 ft)	QTY:1	LOCATION:Carried
+GEAR:Thieves' Tools	QTY:1	LOCATION:Carried
+
+STARTPACK:Fetchling Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Fetchling],[!PRERACE:1,%]
+RACE:Fetchling	!PRERACE:1,%
+NAME:Fetchling
+GENDER:Male
+ALIGN:TN
+STAT:STR=13|DEX=15|CON=14|INT=8|WIS=10|CHA=12
+CLASS:Rogue	LEVEL:1
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+ABILITY:CATEGORY=Favored Class|Rogue
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Rogue Class Selection|Empty Selection ~ Standard Rogue
+SKILL:Appraise	RANK:1	CLASS:Rogue
+SKILL:Bluff	RANK:1	CLASS:Rogue
+SKILL:Diplomacy	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Local)	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Planes)	RANK:1	CLASS:Rogue
+SKILL:Perception	RANK:1	CLASS:Rogue
+SKILL:Sense Motive	RANK:1	CLASS:Rogue
+LANGBONUS:Common
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
+GEAR:Chain Shirt	QTY:1	LOCATION:Equipped
+
+STARTPACK:Gnome Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Gnome],[!PRERACE:1,%]
+RACE:Gnome	!PRERACE:1,%
+NAME:Gnome
+GENDER:Male
+ALIGN:NE
+STAT:STR=12|DEX=15|CON=14|INT=10|WIS=13|CHA=8
+CLASS:Ranger	LEVEL:1
+ABILITY:CATEGORY=FEAT|Weapon Focus (Longbow)
+ABILITY:CATEGORY=Favored Class|Ranger
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Favored Enemy|Favored Enemy ~ Aberration
+ABILITY:CATEGORY=Gnome Obsessive Skill Bonus|Obsessive Craft Bonus (Craft (Alchemy))
+ABILITY:CATEGORY=Gnome Racial Subtype|Racial Subtype ~ None
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Handle Animal	RANK:1	CLASS:Ranger
+SKILL:Heal	RANK:1	CLASS:Ranger
+SKILL:Intimidate	RANK:1	CLASS:Ranger
+SKILL:Knowledge (Nature)	RANK:1	CLASS:Ranger
+SKILL:Sense Motive	RANK:1	CLASS:Ranger
+SKILL:Survival	RANK:1	CLASS:Ranger
+LANGBONUS:Common|Gnome|Sylvan
+GEAR:Sword (Short)	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Longbow (Composite)	QTY:1	SIZE:S	LOCATION:Carried
+GEAR:Chain Shirt	QTY:1	SIZE:S	LOCATION:Equipped
+GEAR:Arrow	QTY:20	SIZE:S	LOCATION:Carried
+
+STARTPACK:Grippli Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Grippli],[!PRERACE:1,%]
+RACE:Grippli	!PRERACE:1,%
+NAME:Grippli
+GENDER:Male
+ALIGN:TN
+STAT:STR=14|DEX=15|CON=13|INT=12|WIS=10|CHA=8
+CLASS:Ranger	LEVEL:1
+ABILITY:CATEGORY=FEAT|Self-Sufficient
+ABILITY:CATEGORY=Favored Class|Ranger
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Favored Enemy|Favored Enemy ~ Aberration
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Acrobatics	RANK:1	CLASS:Ranger
+SKILL:Climb	RANK:1	CLASS:Ranger
+SKILL:Handle Animal	RANK:1	CLASS:Ranger
+SKILL:Heal	RANK:1	CLASS:Ranger
+SKILL:Perception	RANK:1	CLASS:Ranger
+SKILL:Stealth	RANK:1	CLASS:Ranger
+SKILL:Survival	RANK:1	CLASS:Ranger
+LANGBONUS:Common|Grippli|Sylvan
+GEAR:Sword (Short)	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Dart	QTY:4	SIZE:S	LOCATION:Carried
+GEAR:Net	QTY:1	SIZE:S	LOCATION:Carried
+GEAR:Leather	QTY:1	SIZE:S	LOCATION:Equipped
+
+STARTPACK:Half-Elf Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Half-Elf],[!PRERACE:1,%]
+RACE:Half-Elf	!PRERACE:1,%
+NAME:Half-Elf
+GENDER:Male
+ALIGN:LE
+STAT:STR=12|DEX=15|CON=13|INT=14|WIS=8|CHA=10
+CLASS:Fighter	LEVEL:1
+ABILITY:CATEGORY=Ability Bonus|+2 Dexterity
+ABILITY:CATEGORY=Adaptability Bonus Feat|Skill Focus (Perception)
+ABILITY:CATEGORY=FEAT|Weapon Focus (Longsword)
+ABILITY:CATEGORY=Favored Class|Adept
+ABILITY:CATEGORY=Favored Class|Fighter
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Fighter Bonus Feat|Combat Expertise
+ABILITY:CATEGORY=Half-Elf Racial Subtype|Racial Subtype ~ None
+ABILITY:CATEGORY=Human Ethnicity|Human Ethnicity ~ None
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Climb	RANK:1	CLASS:Fighter
+SKILL:Intimidate	RANK:1	CLASS:Fighter
+SKILL:Knowledge (Arcana)	RANK:1	CLASS:Fighter
+SKILL:Spellcraft	RANK:1	CLASS:Fighter
+LANGBONUS:Common|Elven|Giant|Orc
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
+GEAR:Shortbow	QTY:1	LOCATION:Carried
+GEAR:Chainmail	QTY:1	LOCATION:Equipped
+
+STARTPACK:Half-Orc Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Half-Orc],[!PRERACE:1,%]
+RACE:Half-Orc	!PRERACE:1,%
+NAME:Half-Orc
+GENDER:Male
+ALIGN:NE
+STAT:STR=13|DEX=11|CON=12|INT=9|WIS=10|CHA=8
+CLASS:Warrior	LEVEL:1
+ABILITY:CATEGORY=Ability Bonus|+2 Strength
+ABILITY:CATEGORY=FEAT|Toughness
+ABILITY:CATEGORY=Favored Class|Warrior
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Half-Orc Racial Subtype|Racial Subtype ~ None
+ABILITY:CATEGORY=Human Ethnicity|Human Ethnicity ~ None
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Perception	RANK:1	CLASS:Warrior
+LANGBONUS:Common|Orc
+GEAR:Club	QTY:1	LOCATION:Primary Hand
+GEAR:Chain Shirt	QTY:1	LOCATION:Equipped
+
+STARTPACK:Human Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Human],[!PRERACE:1,%]
+RACE:Human	!PRERACE:1,%
+NAME:Human
+GENDER:Male
+ALIGN:TN
+STAT:STR=13|DEX=12|CON=11|INT=8|WIS=10|CHA=9
+CLASS:Warrior	LEVEL:1
+ABILITY:CATEGORY=Ability Bonus|+2 Strength
+ABILITY:CATEGORY=FEAT|Step Up
+ABILITY:CATEGORY=FEAT|Toughness
+ABILITY:CATEGORY=Favored Class|Warrior
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Human Ethnicity|Human Ethnicity ~ None
+ABILITY:CATEGORY=Human Racial Subtype|Racial Subtype ~ None
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Craft (Weapons)	RANK:1	CLASS:Warrior
+SKILL:Profession (Soldier)	RANK:1	CLASS:Warrior
+LANGBONUS:Common
+GEAR:Longspear	QTY:1	LOCATION:Both Hands
+GEAR:Greatsword	QTY:1	LOCATION:Carried
+GEAR:Dagger	QTY:1	LOCATION:Carried
+GEAR:Javelin	QTY:1	LOCATION:Carried
+GEAR:Chainmail	QTY:1	LOCATION:Equipped
+
+STARTPACK:Ifrit Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ifrit],[!PRERACE:1,%]
+RACE:Ifrit	!PRERACE:1,%
+NAME:Ifrit
+GENDER:Male
+ALIGN:TN
+STAT:STR=10|DEX=14|CON=12|INT=13|WIS=8|CHA=15
+CLASS:Sorcerer	LEVEL:1
+ABILITY:CATEGORY=Sorcerer Bloodline|Aberrant Bloodline	FREE:YES
+ABILITY:CATEGORY=FEAT|Martial Weapon Proficiency (Scimitar)
+ABILITY:CATEGORY=Favored Class|Sorcerer
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Bluff	RANK:1	CLASS:Sorcerer
+SKILL:Knowledge (Arcana)	RANK:1	CLASS:Sorcerer
+SKILL:Spellcraft	RANK:1	CLASS:Sorcerer
+LANGBONUS:Common|Gnome|Ignan
+SPELLS:SPELLBOOK=Known Spells|CLASS=Sorcerer|Acid Splash|Burning Hands|Detect Magic|Flare|Mage Armor|Prestidigitation
+GEAR:Scimitar	QTY:1	LOCATION:Primary Hand
+
+STARTPACK:Oread Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Oread],[!PRERACE:1,%]
+RACE:Oread	!PRERACE:1,%
+NAME:Oread
+GENDER:Male
+ALIGN:TN
+STAT:STR=13|DEX=15|CON=14|INT=8|WIS=12|CHA=10
+CLASS:Fighter	LEVEL:1
+ABILITY:CATEGORY=FEAT|Iron Will
+ABILITY:CATEGORY=Favored Class|Fighter
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Fighter Bonus Feat|Weapon Focus (Longbow)
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Intimidate	RANK:1	CLASS:Fighter
+LANGBONUS:Common|Terran
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
+GEAR:Longbow (Composite)	QTY:1	LOCATION:Carried
+GEAR:Leather	QTY:1	LOCATION:Equipped
+GEAR:Arrow	QTY:20	LOCATION:Carried
+
+STARTPACK:Ratfolk Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Ratfolk],[!PRERACE:1,%]
+RACE:Ratfolk	!PRERACE:1,%
+NAME:Ratfolk
+GENDER:Male
+ALIGN:TN
+STAT:STR=8|DEX=13|CON=11|INT=12|WIS=10|CHA=9
+CLASS:Expert	LEVEL:1
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Perception)
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Craft (Alchemy))
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Appraise)
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Use Magic Device)
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Sense Motive)
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Survival)
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Diplomacy)
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Handle Animal)
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Knowledge (Local))
+ABILITY:CATEGORY=Expert Class Skills|Expert Class Skills (Bluff)
+ABILITY:CATEGORY=FEAT|Skill Focus (Perception)
+ABILITY:CATEGORY=Favored Class|Expert
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Appraise	RANK:1	CLASS:Expert
+SKILL:Craft (Alchemy)	RANK:1	CLASS:Expert
+SKILL:Diplomacy	RANK:1	CLASS:Expert
+SKILL:Handle Animal	RANK:1	CLASS:Expert
+SKILL:Perception	RANK:1	CLASS:Expert
+SKILL:Sense Motive	RANK:1	CLASS:Expert
+SKILL:Survival	RANK:1	CLASS:Expert
+SKILL:Use Magic Device	RANK:1	CLASS:Expert
+LANGBONUS:Common|Gnome|Halfling
+GEAR:Dagger	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Crossbow (Light)	QTY:1	SIZE:S	LOCATION:Carried
+GEAR:Leather	QTY:1	SIZE:S	LOCATION:Equipped
+GEAR:Bolt (Crossbow)	QTY:20	SIZE:S	LOCATION:Carried
+
+STARTPACK:Suli Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Suli],[!PRERACE:1,%]
+RACE:Suli	!PRERACE:1,%
+NAME:Suli
+GENDER:Male
+ALIGN:TN
+STAT:STR=13|DEX=12|CON=11|INT=12|WIS=9|CHA=8
+CLASS:Ranger	LEVEL:1
+ABILITY:CATEGORY=FEAT|Weapon Focus (Scimitar)
+ABILITY:CATEGORY=Favored Class|Ranger
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Favored Enemy|Favored Enemy ~ Aberration
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Suli Language Choice|Suli Language ~ Auran
+SKILL:Diplomacy	RANK:1	CLASS:Ranger
+SKILL:Knowledge (Geography)	RANK:1	CLASS:Ranger
+SKILL:Knowledge (Nature)	RANK:1	CLASS:Ranger
+SKILL:Perception	RANK:1	CLASS:Ranger
+SKILL:Sense Motive	RANK:1	CLASS:Ranger
+SKILL:Survival	RANK:1	CLASS:Ranger
+LANGBONUS:Auran|Common
+GEAR:Scimitar	QTY:1	LOCATION:Primary Hand
+GEAR:Shortbow	QTY:1	LOCATION:Carried
+GEAR:Chainmail	QTY:1	LOCATION:Equipped
+GEAR:Arrow	QTY:20	LOCATION:Carried
+
+STARTPACK:Sylph Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Sylph],[!PRERACE:1,%]
+RACE:Sylph	!PRERACE:1,%
+NAME:Sylph
+GENDER:Male
+ALIGN:TN
+STAT:STR=8|DEX=15|CON=12|INT=13|WIS=14|CHA=10
+CLASS:Rogue	LEVEL:1
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=Favored Class|Rogue
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Rogue Class Selection|Empty Selection ~ Standard Rogue
+SKILL:Acrobatics	RANK:1	CLASS:Rogue
+SKILL:Appraise	RANK:1	CLASS:Rogue
+SKILL:Bluff	RANK:1	CLASS:Rogue
+SKILL:Climb	RANK:1	CLASS:Rogue
+SKILL:Diplomacy	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Local)	RANK:1	CLASS:Rogue
+SKILL:Perception	RANK:1	CLASS:Rogue
+SKILL:Sleight of Hand	RANK:1	CLASS:Rogue
+SKILL:Stealth	RANK:1	CLASS:Rogue
+SKILL:Use Magic Device	RANK:1	CLASS:Rogue
+LANGBONUS:Auran|Common|Elven|Halfling
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand
+GEAR:Leather	QTY:1	LOCATION:Equipped
+
+STARTPACK:Undine Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Undine],[!PRERACE:1,%]
+RACE:Undine	!PRERACE:1,%
+NAME:Undine
+GENDER:Male
+ALIGN:TN
+STAT:STR=13|DEX=12|CON=8|INT=10|WIS=15|CHA=14
+CLASS:Cleric	LEVEL:1
+ABILITY:CATEGORY=Channel Energy|Cleric ~ Channel Negative Energy
+ABILITY:CATEGORY=FEAT|Extra Channel
+ABILITY:CATEGORY=Extra Channel|Cleric Extra Channel
+ABILITY:CATEGORY=Favored Class|Cleric
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Diplomacy	RANK:1	CLASS:Cleric
+SKILL:Knowledge (Religion)	RANK:1	CLASS:Cleric
+LANGBONUS:Aquan|Common
+SPELLS:SPELLBOOK=Prepared Spells|CLASS=Cleric|Bless|Create Water|Divine Favor|Guidance|Stabilize
+GEAR:Trident	QTY:1	LOCATION:Primary Hand
+GEAR:Sling	QTY:1	LOCATION:Carried
+GEAR:Scale Mail	QTY:1	LOCATION:Equipped
+
+STARTPACK:Vanara Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Vanara],[!PRERACE:1,%]
+RACE:Vanara	!PRERACE:1,%
+NAME:Vanara
+GENDER:Male
+ALIGN:LG
+STAT:STR=13|DEX=14|CON=10|INT=12|WIS=15|CHA=8
+CLASS:Monk	LEVEL:1
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=Favored Class|Monk
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Monk Bonus Feat|Monk Bonus Feat ~ Combat Reflexes
+ABILITY:CATEGORY=Monk Class Selection|Empty Selection ~ Standard Monk
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Acrobatics	RANK:1	CLASS:Monk
+SKILL:Climb	RANK:1	CLASS:Monk
+SKILL:Perception	RANK:1	CLASS:Monk
+SKILL:Sense Motive	RANK:1	CLASS:Monk
+SKILL:Stealth	RANK:1	CLASS:Monk
+LANGBONUS:Common|Sylvan|Vanaran
+GEAR:Quarterstaff	QTY:1	LOCATION:Primary Hand
+
+STARTPACK:Halfling Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Halfling],[!PRERACE:1,%]
+RACE:Halfling	!PRERACE:1,%
+NAME:Halfling
+ALIGN:TN
+STAT:STR=8|DEX=13|CON=9|INT=12|WIS=10|CHA=10
+CLASS:Aristocrat	LEVEL:1
+ABILITY:CATEGORY=FEAT|Fleet
+ABILITY:CATEGORY=Favored Class|Aristocrat
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+SKILL:Diplomacy	RANK:1	CLASS:Aristocrat
+SKILL:Knowledge (Local)	RANK:1	CLASS:Aristocrat
+SKILL:Knowledge (Nobility)	RANK:1	CLASS:Aristocrat
+SKILL:Perception	RANK:1	CLASS:Aristocrat
+SKILL:Stealth	RANK:1	CLASS:Aristocrat
+LANGBONUS:Common|Halfling
+GEAR:Dagger	QTY:1	SIZE:S	LOCATION:Primary Hand
+GEAR:Outfit (Courtier's)	QTY:1	SIZE:S	LOCATION:Equipped

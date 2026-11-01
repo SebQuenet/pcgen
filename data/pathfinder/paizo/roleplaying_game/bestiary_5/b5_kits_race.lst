@@ -2822,3 +2822,89 @@ RACE:Zygomind	!PRERACE:1,%
 NAME:Zygomind
 STAT:STR=10|DEX=10|CON=10|WIS=10|CHA=10
 
+STARTPACK:Caligni Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Caligni],[!PRERACE:1,%]	SOURCEPAGE:p.66
+RACE:Caligni	!PRERACE:1,%
+NAME:Caligni
+GENDER:Male
+ALIGN:CN
+STAT:STR=13|DEX=15|CON=14|INT=12|WIS=8|CHA=10
+CLASS:Rogue	LEVEL:1
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=Favored Class|Rogue
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Rogue Class Selection|Empty Selection ~ Standard Rogue
+SKILL:Acrobatics	RANK:1	CLASS:Rogue
+SKILL:Bluff	RANK:1	CLASS:Rogue
+SKILL:Climb	RANK:1	CLASS:Rogue
+SKILL:Disguise	RANK:1	CLASS:Rogue
+SKILL:Escape Artist	RANK:1	CLASS:Rogue
+SKILL:Knowledge (Dungeoneering)	RANK:1	CLASS:Rogue
+SKILL:Perception	RANK:1	CLASS:Rogue
+SKILL:Stealth	RANK:1	CLASS:Rogue
+GEAR:Sword (Short)	QTY:1	LOCATION:Primary Hand
+GEAR:Dart	QTY:10	LOCATION:Carried
+GEAR:Leather	QTY:1	LOCATION:Equipped
+GEAR:Thieves' Tools	QTY:1	LOCATION:Carried
+
+STARTPACK:Deep One Hybrid Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Deep One Hybrid],[!PRERACE:1,%]	SOURCEPAGE:p.70
+RACE:Deep One Hybrid	!PRERACE:1,%
+NAME:Deep One Hybrid
+GENDER:Male
+ALIGN:CE
+STAT:STR=13|DEX=12|CON=15|INT=10|WIS=14|CHA=8
+CLASS:Cleric	LEVEL:1
+ABILITY:CATEGORY=Channel Energy|Cleric ~ Channel Negative Energy
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=Favored Class|Cleric
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+ABILITY:CATEGORY=Variant Channeling|Variant Channeling - Madness
+SKILL:Knowledge (Religion)	RANK:1	CLASS:Cleric
+SKILL:Perception	RANK:1	CLASS:Cleric
+LANGBONUS:Aklo|Common
+SPELLS:SPELLBOOK=Prepared Spells|CLASS=Cleric|Bleed|Cause Fear|Cure Light Wounds|Light|Resistance
+GEAR:Dagger	QTY:1	LOCATION:Primary Hand	EQMOD:Special Quality ~ Masterwork ~ Weapon
+GEAR:Leather	QTY:1	LOCATION:Equipped
+
+STARTPACK:Orang-Pendak Default	TYPE:Default Monster.Humanoid	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Orang-Pendak],[!PRERACE:1,%]	SOURCEPAGE:p.186
+RACE:Orang-Pendak	!PRERACE:1,%
+NAME:Orang-Pendak
+GENDER:Male
+ALIGN:TN
+STAT:STR=15|DEX=14|CON=13|INT=8|WIS=10|CHA=10
+CLASS:Fighter	LEVEL:1
+ABILITY:CATEGORY=FEAT|Skill Focus (Stealth)
+ABILITY:CATEGORY=Favored Class|Fighter
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Skill Rank (Acrobatics)
+ABILITY:CATEGORY=Fighter Bonus Feat|Power Attack
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Climb	RANK:1	CLASS:Fighter
+LANGBONUS:Sasquatch
+GEAR:Spear	QTY:1	LOCATION:Both Hands
+GEAR:Bolas	QTY:2	LOCATION:Carried
+
+STARTPACK:Shabti Default	TYPE:Default Monster.Outsider	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Shabti],[!PRERACE:1,%]	SOURCEPAGE:p.227
+RACE:Shabti	!PRERACE:1,%
+NAME:Shabti
+GENDER:Male
+ALIGN:LN
+STAT:STR=10|DEX=12|CON=14|INT=13|WIS=8|CHA=15
+CLASS:Oracle	LEVEL:1
+ABILITY:CATEGORY=FEAT|Martial Weapon Proficiency (Longsword)
+ABILITY:CATEGORY=Favored Class|Oracle
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Oracle Curse|Oracle ~ Lame
+ABILITY:CATEGORY=Oracle Mystery|Oracle ~ Heavens Mystery
+ABILITY:CATEGORY=Heavens Mystery Revelation|Heavens Mystery ~ Lure of the Heavens
+ABILITY:CATEGORY=Oracle Spell Choice|Oracle ~ Inflict Wounds
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Diplomacy	RANK:1	CLASS:Oracle
+SKILL:Knowledge (Religion)	RANK:1	CLASS:Oracle
+SKILL:Perception	RANK:1	CLASS:Oracle
+SKILL:Sense Motive	RANK:1	CLASS:Oracle
+SKILL:Spellcraft	RANK:1	CLASS:Oracle
+LANGBONUS:Celestial|Common
+SPELLS:SPELLBOOK=Known Spells|CLASS=Oracle|Bleed|Command|Create Water|Cure Light Wounds|Detect Magic|Inflict Light Wounds|Stabilize
+GEAR:Longsword	QTY:1	LOCATION:Primary Hand
+GEAR:Potion of Cure Moderate Wounds	QTY:1	LOCATION:Carried

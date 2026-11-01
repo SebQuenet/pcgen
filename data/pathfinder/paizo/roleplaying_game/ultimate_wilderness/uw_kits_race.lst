@@ -471,3 +471,21 @@ NAME:Wallaby
 STAT:STR=10|DEX=10|CON=11|INT=10|WIS=10|CHA=10
 SKILL:Perception	RANK:1
 ABILITY:CATEGORY=FEAT|Skill Focus (Acrobatics)
+
+STARTPACK:Gathlain Default	TYPE:Default Monster.Fey	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Gathlain],[!PRERACE:1,%]
+RACE:Gathlain	!PRERACE:1,%
+NAME:Gathlain
+GENDER:Male
+ALIGN:CN
+STAT:STR=12|DEX=14|CON=13|INT=10|WIS=8|CHA=15
+CLASS:Sorcerer	LEVEL:1
+ABILITY:CATEGORY=Sorcerer Bloodline|Aberrant Bloodline	FREE:YES
+ABILITY:CATEGORY=FEAT|Dodge
+ABILITY:CATEGORY=Favored Class|Sorcerer
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+ABILITY:CATEGORY=Region of Origin|Region ~ None
+SKILL:Knowledge (Arcana)	RANK:1	CLASS:Sorcerer
+SKILL:Spellcraft	RANK:1	CLASS:Sorcerer
+LANGBONUS:Common|Sylvan
+SPELLS:SPELLBOOK=Known Spells|CLASS=Sorcerer|Color Spray|Dancing Lights|Daze|Ghost Sound|Magic Missile|Ray of Frost
+GEAR:Spear	QTY:1	SIZE:S	LOCATION:Both Hands
