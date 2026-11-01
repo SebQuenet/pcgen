@@ -489,3 +489,17 @@ SKILL:Spellcraft	RANK:1	CLASS:Sorcerer
 LANGBONUS:Common|Sylvan
 SPELLS:SPELLBOOK=Known Spells|CLASS=Sorcerer|Color Spray|Dancing Lights|Daze|Ghost Sound|Magic Missile|Ray of Frost
 GEAR:Spear	QTY:1	SIZE:S	LOCATION:Both Hands
+
+STARTPACK:Vine Leshy Default	TYPE:Default Monster.Plant	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Vine Leshy],[!PRERACE:1,%]	SOURCEPAGE:p.20
+RACE:Vine Leshy	!PRERACE:1,%
+NAME:Vine Leshy
+ALIGN:TN
+STAT:STR=13|DEX=12|CON=12|INT=10|WIS=11|CHA=9
+CLASS:Warrior	LEVEL:1
+ABILITY:CATEGORY=FEAT|Toughness
+ABILITY:CATEGORY=Favored Class|Warrior
+ABILITY:CATEGORY=Favored Class Bonus|Favored Class Bonus ~ Hit Point
+SKILL:Climb	RANK:1	CLASS:Warrior
+SKILL:Intimidate	RANK:1	CLASS:Warrior
+GEAR:Spear	QTY:1	SIZE:S	LOCATION:Both Hands
+GEAR:Leather	QTY:1	SIZE:S	LOCATION:Equipped

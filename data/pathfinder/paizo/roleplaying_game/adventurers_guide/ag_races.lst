@@ -2,5 +2,5 @@ Companion (Bird (Raven))		SORTKEY:z_Companion	OUTPUTNAME:Companion [NAME]			FACT
 
 Companion (Bear).MOD							BONUS:VAR|RaceReducedCompanion|1
 
-# No Reference
-Companion (Embolotherium)	TYPE:Missing	FACT:BaseSize|S
+# Embolotherium Companions, Pathfinder Adventure Path #91
+Companion (Embolotherium)	SORTKEY:z_Companion	OUTPUTNAME:Companion Embolotherium	SIZE:M	MOVE:Walk,30	REACH:5	PREMULT:1,[PREVARGTEQ:NotAllowed,1],[PRERACE:1,Companion (Embolotherium)]	BONUS:ABILITYPOOL|Companion Level Increase Choice|1|PREVARGTEQ:MasterLevel,7	BONUS:STAT|STR|4	BONUS:STAT|CON,WIS|3	BONUS:STAT|INT|-8	BONUS:STAT|CHA|-7	BONUS:VAR|AC_Natural_Armor|6|TYPE=Base	BONUS:VAR|HasLowLightVision|1	BONUS:VAR|RaceSizeIsLong|1|TYPE=Base	BONUS:VAR|NoTypeTraits|1	BONUS:WEAPONPROF=Bite|DAMAGE|max(0,(STR/2))	ABILITY:Special Ability|AUTOMATIC|Animal Traits Output|PRERULE:1,DISPLAYTYPETRAITS	ABILITY:Special Ability|AUTOMATIC|Embolotherium Companion Natural Attack|!PRETEMPLATE:1,Embolotherium Companion Advancement	ABILITY:Special Ability|AUTOMATIC|Companion Advancement ~ Embolotherium|PREABILITY:1,CATEGORY=Special Ability,Companion Advancement	LEGS:4	DEFINE:NoTypeTraits|0	MONSTERCLASS:Companion:2	RACETYPE:Companion	TYPE:Companion.AnimalCompanion	KIT:1|Companion ~ Embolotherium	FACT:BaseSize|M

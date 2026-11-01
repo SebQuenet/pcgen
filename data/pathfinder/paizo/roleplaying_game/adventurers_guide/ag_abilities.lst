@@ -128,3 +128,6 @@ Equipment Bonus ~ Ioun Stone Save Bonus					CATEGORY:Internal		TYPE:NonDisplayed
 Equipment ~ Select Single Knowledge Skill for +1 Competence Bonus	CATEGORY:Internal																																																						STACK:NO	MULT:YES	CHOOSE:SKILL|TYPE=Knowledge																																																																BONUS:SKILL|%LIST|1|TYPE=Competence
 Ioun Stone Rogue Talent								CATEGORY:Internal																																																						STACK:YES	MULT:YES	CHOOSE:ABILITYSELECTION|Special Ability|TYPE=RogueTalent	ABILITY:Special Ability|AUTOMATIC|%LIST
 
+# Embolotherium companion
+Embolotherium Companion Natural Attack	CATEGORY:Special Ability	VISIBLE:NO	NATURALATTACKS:Bite,Weapon.Natural.Weapon Group Natural.Melee.Finesseable.Bludgeoning.Piercing.Slashing,*1,1d6
+Companion Advancement (Embolotherium)	KEY:Companion Advancement ~ Embolotherium	CATEGORY:Special Ability	TYPE:CompanionAdvancement	VISIBLE:DISPLAY	PRERACE:1,Companion (Embolotherium)	TEMPLATE:Embolotherium Companion Advancement

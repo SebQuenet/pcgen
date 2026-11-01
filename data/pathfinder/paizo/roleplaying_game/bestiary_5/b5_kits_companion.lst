@@ -245,3 +245,20 @@ SKILL:Perception		RANK:1
 SKILL:Sleight of Hand	RANK:1
 ABILITY:CATEGORY=FEAT|Stealthy
 ABILITY:CATEGORY=FEAT|Weapon Finesse
+
+STARTPACK:Familiar (Liminal Sprite) Default	TYPE:Default Monster.Familiar	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Familiar (Liminal Sprite)],[!PRERACE:1,%]	SOURCEPAGE:p.158
+RACE:Familiar (Liminal Sprite)	!PRERACE:1,%
+NAME:Liminal Sprite
+ALIGN:CN
+STAT:STR=10|DEX=11|CON=10|INT=11|WIS=10|CHA=11
+SKILL:Diplomacy		RANK:3
+SKILL:Escape Artist	RANK:3
+SKILL:Fly			RANK:3
+SKILL:Knowledge (local)	RANK:3
+SKILL:Perception		RANK:3
+SKILL:Perform (comedy)	RANK:3
+SKILL:Sense Motive	RANK:3
+SKILL:Stealth		RANK:3
+ABILITY:CATEGORY=FEAT|Improved Initiative
+ABILITY:CATEGORY=FEAT|Weapon Finesse
+GEAR:Rapier	QTY:1	SIZE:T	LOCATION:Primary Hand

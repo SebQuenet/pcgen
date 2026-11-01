@@ -6111,3 +6111,33 @@ SKILL:Use Magic Device	RANK:2
 ABILITY:CATEGORY=FEAT|Dodge
 ABILITY:CATEGORY=FEAT|Weapon Finesse
 GEAR:Sword (Short)	LOCATION:Primary Hand	EQMOD:Special Quality ~ Masterwork ~ Weapon
+
+STARTPACK:Familiar (Brownie) Default	TYPE:Default Monster.Familiar	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Familiar (Brownie)],[!PRERACE:1,%]	SOURCEPAGE:p.49
+RACE:Familiar (Brownie)	!PRERACE:1,%
+NAME:Brownie
+ALIGN:TN
+STAT:STR=11|DEX=10|CON=10|INT=10|WIS=11|CHA=11
+SKILL:Acrobatics
+SKILL:Bluff
+SKILL:TYPE.Craft
+SKILL:Escape Artist
+SKILL:Handle Animal
+SKILL:Perception
+SKILL:Sense Motive
+SKILL:Stealth
+ABILITY:CATEGORY=FEAT|Dodge
+GEAR:Sword (Short)	QTY:1	SIZE:T	LOCATION:Primary Hand
+
+STARTPACK:Familiar (Arbiter) Default	TYPE:Default Monster.Familiar	VISIBLE:NO	EQUIPBUY:0	PREMULT:1,[PRERACE:1,Familiar (Arbiter)],[!PRERACE:1,%]	SOURCEPAGE:p.162
+RACE:Familiar (Arbiter)	!PRERACE:1,%
+NAME:Arbiter
+ALIGN:LN
+STAT:STR=11|DEX=10|CON=10|INT=11|WIS=11|CHA=10
+SKILL:Diplomacy			RANK:2
+SKILL:Fly				RANK:2
+SKILL:Knowledge (Planes)	RANK:2
+SKILL:Perception			RANK:2
+SKILL:Sense Motive		RANK:2
+SKILL:Stealth			RANK:2
+ABILITY:CATEGORY=FEAT|Flyby Attack
+GEAR:Sword (Short)	QTY:1	SIZE:T	LOCATION:Primary Hand
