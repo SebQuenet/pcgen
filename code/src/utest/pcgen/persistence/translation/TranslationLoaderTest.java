@@ -28,11 +28,14 @@ import java.util.Comparator;
 import java.util.List;
 
 import pcgen.cdom.base.CDOMObject;
+import pcgen.cdom.enumeration.ListKey;
 import pcgen.core.Ability;
 import pcgen.core.AbilityCategory;
 import pcgen.core.Campaign;
+import pcgen.core.prereq.Prerequisite;
 import pcgen.core.spell.Spell;
 import pcgen.gui2.util.treetable.TreeTableNode;
+import pcgen.persistence.lst.CampaignSourceEntry;
 import pcgen.rules.context.AbstractReferenceContext;
 import pcgen.rules.context.ConsolidatedListCommitStrategy;
 import pcgen.rules.context.RuntimeLoadContext;
@@ -106,6 +109,49 @@ class TranslationLoaderTest
 		List<String> problems = TranslationLoader.load(List.of(coreRulebook), "fr", references);
 
 		assertTrue(problems.getFirst().contains("core_rulebook.fr.tsv:1"));
+	}
+
+	@Test
+	void reportsNothingForAnObjectOfAFileLoadedOnlyWithAnotherBook() throws IOException
+	{
+		writeTable("core_rulebook.fr.tsv", "ABILITY\tFEAT\tSpell Duel\tNAME\tDuel de sorts\n");
+		Path conditionalFile = dataFolder.resolve("cr_feats_ue.lst");
+		Files.writeString(conditionalFile, "Spell Duel\tCATEGORY:FEAT\tTYPE:General\n", StandardCharsets.UTF_8);
+		CampaignSourceEntry conditionalEntry = new CampaignSourceEntry(coreRulebook, conditionalFile.toUri());
+		conditionalEntry.getPrerequisites().add(new Prerequisite());
+		coreRulebook.addToListFor(ListKey.FILE_ABILITY, conditionalEntry);
+
+		List<String> problems = TranslationLoader.load(List.of(coreRulebook), "fr", references);
+
+		assertTrue(problems.isEmpty(), problems.toString());
+	}
+
+	@Test
+	void reportsNothingForAClassOfAFileLoadedOnlyWithAnotherBook() throws IOException
+	{
+		writeTable("core_rulebook.fr.tsv", "CLASS\t\tStudent of Perfection\tNAME\tÉlève de la perfection\n");
+		Path conditionalFile = dataFolder.resolve("cr_classes_pu.lst");
+		Files.writeString(conditionalFile, "CLASS:Student of Perfection\tHD:8\tTYPE:PC.Prestige\n", StandardCharsets.UTF_8);
+		CampaignSourceEntry conditionalEntry = new CampaignSourceEntry(coreRulebook, conditionalFile.toUri());
+		conditionalEntry.getPrerequisites().add(new Prerequisite());
+		coreRulebook.addToListFor(ListKey.FILE_CLASS, conditionalEntry);
+
+		List<String> problems = TranslationLoader.load(List.of(coreRulebook), "fr", references);
+
+		assertTrue(problems.isEmpty(), problems.toString());
+	}
+
+	@Test
+	void reportsAnObjectOfAFileLoadedWithTheBook() throws IOException
+	{
+		writeTable("core_rulebook.fr.tsv", "ABILITY\tFEAT\tSpell Duel\tNAME\tDuel de sorts\n");
+		Path file = dataFolder.resolve("cr_feats.lst");
+		Files.writeString(file, "Spell Duel\tCATEGORY:FEAT\tTYPE:General\n", StandardCharsets.UTF_8);
+		coreRulebook.addToListFor(ListKey.FILE_ABILITY, new CampaignSourceEntry(coreRulebook, file.toUri()));
+
+		List<String> problems = TranslationLoader.load(List.of(coreRulebook), "fr", references);
+
+		assertEquals(1, problems.size());
 	}
 
 	@Test

@@ -18,6 +18,7 @@
 package pcgen.persistence.translation;
 
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -30,7 +31,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import pcgen.cdom.enumeration.ListKey;
 import pcgen.core.Campaign;
+import pcgen.persistence.lst.CampaignLoader;
+import pcgen.persistence.lst.CampaignSourceEntry;
 import pcgen.rules.context.AbstractReferenceContext;
 
 /**
@@ -43,6 +47,7 @@ public final class TranslationLoader
 	private static final String CAMPAIGN_EXTENSION = ".pcc";
 	private static final String TABLE_EXTENSION = ".tsv";
 	private static final String FILE_SCHEME = "file";
+	private static final String KEY_TAG = "KEY:";
 
 	private TranslationLoader()
 	{
@@ -73,7 +78,8 @@ public final class TranslationLoader
 				continue;
 			}
 			List<TranslationProblem> tableProblems = new ArrayList<>(parsed.problems());
-			tableProblems.addAll(TranslationApplier.apply(parsed, references));
+			Set<String> conditionalKeys = keysOfConditionalFiles(campaign);
+			tableProblems.addAll(TranslationApplier.apply(parsed, references, conditionalKeys::contains));
 			tableProblems.forEach(problem -> problems.add(tableName + ":" + problem.line() + ": " + problem.message()));
 		}
 		applyPathfinderNames(campaigns, language, references);
@@ -82,6 +88,65 @@ public final class TranslationLoader
 
 	private record NameKey(String type, String category, String key)
 	{
+	}
+
+	/**
+	 * The keys defined in the files a campaign loads only when a condition holds, such as another
+	 * book being loaded: a translation of one of them is not a problem when it finds nothing.
+	 */
+	private static Set<String> keysOfConditionalFiles(Campaign campaign)
+	{
+		Set<String> keys = new HashSet<>();
+		for (ListKey<CampaignSourceEntry> fileKey : CampaignLoader.OBJECT_FILE_LISTKEY)
+		{
+			for (CampaignSourceEntry file : campaign.getSafeListFor(fileKey))
+			{
+				URI source = file.getURI();
+				if (file.getPrerequisites().isEmpty() || source == null || !FILE_SCHEME.equals(source.getScheme()))
+				{
+					continue;
+				}
+				try (Stream<String> lines = Files.lines(Path.of(source), StandardCharsets.UTF_8))
+				{
+					lines.forEach(line -> addKeysOf(line, keys));
+				}
+				catch (IOException | UncheckedIOException ignored)
+				{
+					// The file loader has already reported a file it could not read.
+				}
+			}
+		}
+		return keys;
+	}
+
+	private static void addKeysOf(String line, Set<String> keys)
+	{
+		String[] columns = line.split("\t");
+		String first = columns[0].strip();
+		if (first.isEmpty() || first.startsWith("#"))
+		{
+			return;
+		}
+		if (!first.startsWith("CATEGORY="))
+		{
+			// A class file names its class after a tag, as CLASS:Student of Perfection
+			first = first.substring(first.indexOf(':') + 1);
+		}
+		int copy = first.indexOf(".COPY=");
+		if (copy >= 0)
+		{
+			keys.add(first.substring(copy + ".COPY=".length()).strip());
+			first = first.substring(0, copy);
+		}
+		first = first.replaceFirst("\\.(MOD|FORGET)$", "");
+		keys.add(first.substring(first.indexOf('|') + 1).strip());
+		for (String column : columns)
+		{
+			if (column.startsWith(KEY_TAG))
+			{
+				keys.add(column.substring(KEY_TAG.length()).strip());
+			}
+		}
 	}
 
 	private static void applyPathfinderNames(Iterable<Campaign> campaigns, String language,

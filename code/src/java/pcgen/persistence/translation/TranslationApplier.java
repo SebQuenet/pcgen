@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -57,14 +58,28 @@ public final class TranslationApplier
 	 */
 	public static List<TranslationProblem> apply(TranslationTable table, AbstractReferenceContext references)
 	{
+		return apply(table, references, key -> false);
+	}
+
+	/**
+	 * @param isLoadedOnlyWithAnotherBook whether a key belongs to a file the campaign loads only
+	 *        with another book, so that its absence is not a problem
+	 * @return the entries left out, and why; every other entry is applied
+	 */
+	public static List<TranslationProblem> apply(TranslationTable table, AbstractReferenceContext references,
+		Predicate<String> isLoadedOnlyWithAnotherBook)
+	{
 		List<TranslationProblem> problems = new ArrayList<>();
 		for (TranslationEntry entry : table.entries())
 		{
 			CDOMObject translated = objectOf(entry, references);
 			if (translated == null)
 			{
-				problems.add(new TranslationProblem(entry.line(),
-					"No loaded " + entry.type() + " with the key " + entry.key()));
+				if (!isLoadedOnlyWithAnotherBook.test(entry.key()))
+				{
+					problems.add(new TranslationProblem(entry.line(),
+						"No loaded " + entry.type() + " with the key " + entry.key()));
+				}
 				continue;
 			}
 			String refusal = store(entry, translated);
