@@ -1,0 +1,71 @@
+TYPE	CATEGORY	KEY	FIELD	TEXT
+KIT		Bear (Polar) Default	NAME	Ours (polaire) (par défaut)
+KIT		Frost Fir Default	NAME	Sapin de givre (par défaut)
+KIT		Witchcrow (Greater) Default	NAME	Corneille-sorcière (supérieure) (par défaut)
+KIT		Witchcrow Default	NAME	Corneille-sorcière (par défaut)
+KIT		Wolf (Timber) Default	NAME	Loup (des bois) (par défaut)
+RACE		Bear (Polar)	NAME	Ours (polaire)
+RACE		Frost Fir	NAME	Sapin de givre
+RACE		Witchcrow	NAME	Corneille-sorcière
+RACE		Witchcrow (Greater)	NAME	Corneille-sorcière (supérieure)
+RACE		Wolf (Timber)	NAME	Loup (des bois)
+ABILITY	Special Ability	Boreal Creature ~ Trackless Step	NAME	Absence de traces
+ABILITY	Special Ability	Domovoi ~ Change Shape	NAME	Changement de forme
+ABILITY	Special Ability	Domovoi ~ Telekinesis	NAME	Télékinésie
+ABILITY	Special Ability	Giant Weasel ~ Attach	NAME	Accrochage
+ABILITY	Special Ability	Winter-Touched Fey ~ Numbing Cold	NAME	Froid engourdissant
+ABILITY	Special Ability	Witchcrow ~ Hexes	NAME	Maléfices
+RACE		Bear (Polar)	OUTPUTNAME	Ours sanguinaire
+RACE		Wolf (Timber)	OUTPUTNAME	Loup sanguinaire
+TEMPLATE		Boreal Creature	NAME	Créature boréale
+ABILITY	Special Ability	Boreal Creature ~ Cold Damage	NAME	Dégâts de froid
+ABILITY	Special Ability	Boreal Creature ~ Cold Damage	DESC	Les attaques naturelles d'une créature boréale infligent 1d6 points de dégâts de froid supplémentaires.
+ABILITY	Special Ability	Boreal Creature ~ Trackless Step	DESC	Une créature boréale ne laisse pas de trace dans la neige et ne peut pas être pistée. Elle peut choisir de laisser une trace si elle le souhaite.
+ABILITY	Special Ability	Domovoi ~ Change Shape	DESC	Un domovoï peut prendre l'apparence d'un chat ou d'un chien, mais conserve la plupart de ses qualités physiques. Ce pouvoir fonctionne comme forme bestiale I, mais le domovoï ne modifie pas ses valeurs de caractéristiques.
+ABILITY	Special Ability	Domovoi ~ Telekinesis	DESC	Un domovoï se défend, lui et son foyer, par télékinésie. Ce pouvoir fonctionne comme le sort télékinésie, utilisable à volonté, avec un niveau de lanceur de sorts de %1. Un domovoï peut l'utiliser sur des objets pesant jusqu'à 25 kg. S'il tente de projeter une créature avec ce pouvoir, celle-ci peut résister à l'effet en réussissant un jet de Volonté DD %3. Le DD de sauvegarde est basé sur le Charisme
+ABILITY	Special Ability	Dvorovoi ~ Oversized Weapons	NAME	Armes surdimensionnées
+ABILITY	Special Ability	Dvorovoi ~ Oversized Weapons	DESC	Un dvorovoï peut manier sans malus des armes conçues pour des créatures de taille M.
+ABILITY	Special Ability	Frost Fir ~ Sticky Resin	NAME	Résine collante
+ABILITY	Special Ability	Frost Fir ~ Sticky Resin	DESC	L'écorce d'un sapin de givre exsude en permanence une résine collante qui l'aide dans ses manœuvres de combat et ses attaques naturelles. La résine lui accorde un bonus de circonstances de +2 à toutes les manœuvres de combat de désarmement, de lutte et de vol, ainsi qu'aux jets de sauvegarde contre les effets qui lui feraient lâcher ce qu'il tient. Toute créature blessée par le coup du sapin de givre, qui le blesse avec une arme naturelle ou une attaque à mains nues ou qui le touche de toute autre façon (y compris par une manœuvre de lutte) doit réussir un jet de Réflexes DD %1 sous peine d'être enduite de sa résine collante. Une créature affectée par cette résine subit un malus de -2 à tous les jets d'attaque et tests de concentration (les malus de contacts multiples ne se cumulent pas). Tout ennemi agrippé par un sapin de givre subit un malus de -2 aux tentatives pour se libérer de la lutte et pour s'échapper avec la compétence Évasion. Un alcool fort, le solvant universel ou n'importe quelle quantité de dégâts de feu infligés à une créature enduite de résine retire la résine. Le DD de sauvegarde est basé sur la Constitution.
+ABILITY	Special Ability	Giant Weasel ~ Attach	DESC	Une belette géante s'accroche automatiquement à sa cible quand elle réussit une attaque de morsure. La belette géante est considérée comme en train de lutter, mais pas la cible. La cible peut attaquer la belette géante ou lutter contre elle normalement, ou se décrocher en réussissant un test de lutte ou d'Évasion.
+ABILITY	Special Ability	Mantle of the Black Rider	NAME	Manteau du Cavalier noir
+ABILITY	Special Ability	Mantle of the Black Rider	DESC	Vous avez accepté de la cavalière de Baba Yaga, Minuit la Noire, la lourde responsabilité de rechercher la Reine sorcière.
+ABILITY	Special Ability	Mantle of the Black Rider (Charisma)	NAME	Manteau du Cavalier noir (Charisme)
+ABILITY	Special Ability	Mantle of the Black Rider (Charisma)	DESC	Vous avez accepté de la cavalière de Baba Yaga, Minuit la Noire, la lourde responsabilité de rechercher la Reine sorcière. Ces liens mystiques avec la Reine sorcière vous accordent un bonus de +2 en Charisme.
+ABILITY	Special Ability	Mantle of the Black Rider (Constitution)	NAME	Manteau du Cavalier noir (Constitution)
+ABILITY	Special Ability	Mantle of the Black Rider (Constitution)	DESC	Vous avez accepté de la cavalière de Baba Yaga, Minuit la Noire, la lourde responsabilité de rechercher la Reine sorcière. Ces liens mystiques avec la Reine sorcière vous accordent un bonus de +2 en Constitution.
+ABILITY	Special Ability	Mantle of the Black Rider (Dexterity)	NAME	Manteau du Cavalier noir (Dextérité)
+ABILITY	Special Ability	Mantle of the Black Rider (Dexterity)	DESC	Vous avez accepté de la cavalière de Baba Yaga, Minuit la Noire, la lourde responsabilité de rechercher la Reine sorcière. Ces liens mystiques avec la Reine sorcière vous accordent un bonus de +2 en Dextérité.
+ABILITY	Special Ability	Mantle of the Black Rider (Intelligence)	NAME	Manteau du Cavalier noir (Intelligence)
+ABILITY	Special Ability	Mantle of the Black Rider (Intelligence)	DESC	Vous avez accepté de la cavalière de Baba Yaga, Minuit la Noire, la lourde responsabilité de rechercher la Reine sorcière. Ces liens mystiques avec la Reine sorcière vous accordent un bonus de +2 en Intelligence.
+ABILITY	Special Ability	Mantle of the Black Rider (Strength)	NAME	Manteau du Cavalier noir (Force)
+ABILITY	Special Ability	Mantle of the Black Rider (Strength)	DESC	Vous avez accepté de la cavalière de Baba Yaga, Minuit la Noire, la lourde responsabilité de rechercher la Reine sorcière. Ces liens mystiques avec la Reine sorcière vous accordent un bonus de +2 en Force.
+ABILITY	Special Ability	Mantle of the Black Rider (Wisdom)	NAME	Manteau du Cavalier noir (Sagesse)
+ABILITY	Special Ability	Mantle of the Black Rider (Wisdom)	DESC	Vous avez accepté de la cavalière de Baba Yaga, Minuit la Noire, la lourde responsabilité de rechercher la Reine sorcière. Ces liens mystiques avec la Reine sorcière vous accordent un bonus de +2 en Sagesse.
+ABILITY	Special Ability	Ovinnik ~ Luck Touch	NAME	Contact de chance
+ABILITY	Special Ability	Ovinnik ~ Luck Touch	DESC	Par une attaque de griffes ou une attaque de contact, un ovinnik peut modifier la chance d'une créature. Si la cible rate un jet de Volonté DD %1, elle gagne un bonus de +4 ou subit un malus de -4 (au choix de l'ovinnik) à ses trois prochains jets de d20. La cible peut choisir de rater automatiquement le jet de sauvegarde, mais doit le décider avant de savoir si le contact sera bénéfique ou néfaste. Le DD de sauvegarde est basé sur le Charisme.
+ABILITY	Special Ability	Speak with Animals birds only ~ Constant	NAME	Communication avec les animaux (oiseaux uniquement)
+SPELL		Speak with Animals (birds only)	NAME	Communication avec les animaux (oiseaux uniquement)
+ABILITY	Special Ability	Speak with Animals birds only ~ Constant	DESC	Vous pouvez utiliser communication avec les animaux (oiseaux uniquement), comme le sort, en permanence.	You can use Speak with Animals (birds only), as per the spell, as a constant ability.
+ABILITY	Special Ability	Speak with Animals birds only ~ Constant	DESC	Vous pouvez utiliser communication avec les animaux (oiseaux uniquement), comme le sort, en permanence. Les pouvoirs magiques permanents fonctionnent en tout temps, mais peuvent être dissipés. Ils peuvent être réactivés par une action rapide.	You can use Speak with Animals (birds only), as per the spell, as a constant ability. Constant spell-like abilities function at all times but can be dispelled. Constant spell-like abilities can be reactivated as a swift action.
+ABILITY	Special Ability	Winter-Touched Fey ~ Numbing Cold	DESC	Toute créature touchée par l'attaque (naturelle ou armée) d'une créature touchée par l'hiver doit réussir un jet de Vigueur DD %1 sous peine d'être chancelante pendant 1 round.
+ABILITY	Special Ability	Witchcrow ~ Apportation	NAME	Transport
+ABILITY	Special Ability	Witchcrow ~ Apportation	DESC	En groupes assez nombreux (comme une volée), les corneilles-sorcières supérieures peuvent pratiquer une fois par jour une forme de magie collective qui ouvre en un lieu un anneau lumineux menant ailleurs sur la planète. Cela passe toujours par un rituel aérien bruyant, généralement centré sur ceux qui veulent profiter de ce pouvoir. Le rituel fonctionne comme cercle de téléportation (NLS 17), sauf qu'il exige 1 minute d'incantation ininterrompue, que le cercle n'a pas besoin d'être placé sur une surface horizontale, et qu'il n'est ni invisible ni difficile à détecter. Une fois apparu, le bord du cercle luit et l'effet reste en place pendant 1 minute. La plupart des corneilles-sorcières détestent utiliser ce pouvoir, mais certaines le proposent à ceux qui ont besoin de voyager vite, en exigeant un prix élevé pour ce service, généralement un objet que possède le demandeur, qui lui est cher, de grande valeur et presque toujours magique.
+ABILITY	Special Ability	Witchcrow ~ Hexes	DESC	Une corneille-sorcière supérieure utilise des maléfices comme une sorcière de niveau 5. Ces pouvoirs comprennent invariablement les maléfices caquètement, mauvais œil et infortune, et il faut réussir un jet de Volonté DD %1 pour les annuler ou leur résister. Le caquètement des corneilles-sorcières est particulièrement inquiétant, car il ressemble à des croassements extrêmement moqueurs.
+EQUIPMENT		Attentive Mirror	NAME	Miroir attentif
+EQUIPMENT		Cauldron of Overwhelming Allies	NAME	Chaudron d'alliés écrasants
+EQUIPMENT		Cloak of the Yeti	NAME	Cape du yéti
+EQUIPMENT		Ice Floe Elixir	NAME	Élixir de banquise
+EQUIPMENT		Icicle Wand	NAME	Baguette de stalactites
+EQUIPMENT		Icicle Wand (CL 7th)	NAME	Baguette de stalactites (NLS 7)
+EQUIPMENT		Pitchfork	NAME	Fourche
+WEAPONPROF		Pitchfork	NAME	Fourche
+EQUIPMENT		Snowshoes of Northern Pursuit	NAME	Raquettes de la poursuite nordique
+EQUIPMENT		Spear of Manhunting	NAME	Lance de la chasse à l'homme
+EQUIPMENT		Spiteful Cookie	NAME	Biscuit rancunier
+EQUIPMENT		Suggestive Tea	NAME	Thé suggestif
+RACE		Witchcrow (Greater)	OUTPUTNAME	Corneille-sorcière [NAME]
+SPELL		Irriseni Mirror Sight	NAME	Vision par miroir d'Irrisen
+SPELL		Irriseni Mirror Sight	DESC	Vous regardez dans un miroir et voyez l'image reflétée dans un autre miroir de votre choix.
+SPELL		Speak with Animals (birds only)	DESC	Vous pouvez poser des questions aux oiseaux et recevoir leurs réponses, mais le sort ne les rend pas plus amicaux que d'habitude.
+TEMPLATE		Winter-Touched Fey	NAME	Fée touchée par l'hiver
