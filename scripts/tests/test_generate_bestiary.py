@@ -144,6 +144,27 @@ class KitSkills(unittest.TestCase):
     def test_leaves_a_plain_skill_alone(self):
         self.assertEqual(generate_bestiary.normalize_kit_skills('Stealth'), ['Stealth'])
 
+    def test_renames_a_skill_written_under_its_old_name(self):
+        self.assertEqual(generate_bestiary.normalize_kit_skills('Use Magical Device'), ['Use Magic Device'])
+
+    def test_renames_a_specialty_written_under_another_name(self):
+        self.assertEqual(generate_bestiary.normalize_kit_skills('Knowledge (the planes)'), ['Knowledge (Planes)'])
+
+    def test_replaces_a_skill_pathfinder_merged_into_another(self):
+        self.assertEqual(generate_bestiary.normalize_kit_skills('Balance'), ['Acrobatics'])
+
+    def test_drops_a_skill_pathfinder_has_not(self):
+        self.assertEqual(generate_bestiary.normalize_kit_skills('Search'), [])
+
+    def test_drops_a_specialty_pathfinder_has_not(self):
+        self.assertEqual(generate_bestiary.normalize_kit_skills('Profession (scientist)'), [])
+
+    def test_drops_a_craft_without_a_specialty(self):
+        self.assertEqual(generate_bestiary.normalize_kit_skills('Craft'), [])
+
+    def test_drops_a_stat_block_heading_read_as_a_skill(self):
+        self.assertEqual(generate_bestiary.normalize_kit_skills('Racial M odifiers'), [])
+
 
 def innate_spells(*spells):
     return generate_bestiary.build_sla_tags({'slas': {'cl': 5, 'entries': {'3/day': [{'spell': spell} for spell in spells]}}})

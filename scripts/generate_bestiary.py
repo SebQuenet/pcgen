@@ -1389,10 +1389,36 @@ def normalize_languages(entries, known_languages):
 
 
 PERFORM_INSTRUMENT_FAMILIES = ('keyboard', 'percussion', 'string', 'wind')
+# Skills stat blocks name in 3.5 or in their own words, under the Pathfinder key PCGen loads
+KIT_SKILL_ALIASES = {
+    'Balance': 'Acrobatics',
+    'Use Magical Device': 'Use Magic Device',
+    'Knowledge (The Planes)': 'Knowledge (Planes)',
+    'Craft (Sculpture)': 'Craft (Sculptures)',
+    'Craft (Crystal Carving)': 'Craft (Gemcutting)',
+    'Craft (Weaving)': 'Craft (Cloth)',
+    'Craft (Trapmaking)': 'Craft (Traps)',
+    'Craft (Metalworking)': 'Craft (Blacksmithing)',
+    'Craft (Weaponsmithing)': 'Craft (Weapons)',
+    'Craft (Herbalism)': 'Profession (Herbalist)',
+    'Perform (Acting)': 'Perform (Act)',
+    'Perform (Dancing)': 'Perform (Dance)',
+    'Perform (Limericks)': 'Perform (Comedy)',
+    'Profession (Farmer Or Miller)': 'Profession (Farmer)',
+    'Profession (Peddler)': 'Profession (Merchant)',
+}
+# Skills no Pathfinder book defines, and stat block words read as a skill
+KIT_SKILLS_DROPPED = {'Search', 'Skill', 'Craft', 'Racial M odifiers', 'Craft (Musical Instruments)',
+                      'Craft (Firearms)', 'Profession (Scientist)'}
 
 
 def normalize_kit_skills(skill_name):
     """Turn one skill as d20pfsrd writes it into the PCGen skill keys a kit can grant."""
+    keys = [KIT_SKILL_ALIASES.get(key, key) for key in written_kit_skills(skill_name)]
+    return [key for key in keys if key not in KIT_SKILLS_DROPPED]
+
+
+def written_kit_skills(skill_name):
     specialty_match = re.match(r'^([^(]+?)\s*\((.*)\)$', skill_name)
     if not specialty_match:
         return [skill_name]
