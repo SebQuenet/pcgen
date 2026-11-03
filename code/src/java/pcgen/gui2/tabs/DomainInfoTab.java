@@ -299,7 +299,8 @@ public class DomainInfoTab extends FlippingSplitPane implements CharacterInfoTab
 		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
 			int row, int column)
 		{
-			super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+			Object displayedValue = (value instanceof QualifiedObject<?> qualifiedValue) ? qualifiedValue.getRawObject() : value;
+			super.getTableCellRendererComponent(table, displayedValue, isSelected, hasFocus, row, column);
 			if (value instanceof QualifiedObject
 				&& ((QualifiedObject<?>) value).getRawObject() instanceof Domain
 				&& !character.isQualifiedFor((QualifiedObject<Domain>) value))
