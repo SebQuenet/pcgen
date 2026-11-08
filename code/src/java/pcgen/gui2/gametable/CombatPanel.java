@@ -116,6 +116,7 @@ final class CombatPanel extends JPanel
 		JPanel manage = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		manage.add(GameTablePanel.button("in_gametable_addPlayer", this::addPlayer));
 		manage.add(GameTablePanel.button("in_gametable_addMonster", this::addMonster));
+		manage.add(GameTablePanel.button("in_gametable_rename", this::rename));
 		manage.add(GameTablePanel.button("in_gametable_remove", this::removeCombatant));
 		manage.add(GameTablePanel.button("in_gametable_endCombat", this::endCombat));
 		JPanel bars = new JPanel(new GridLayout(2, 1));
@@ -191,6 +192,7 @@ final class CombatPanel extends JPanel
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_I, 0), "initiative", this::initiative);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_R, 0), "delay", this::delayOrResume);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_C, 0), "conjure", this::conjure);
+		bind(KeyStroke.getKeyStroke(KeyEvent.VK_N, 0), "rename", this::rename);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0), "remove", this::removeCombatant);
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_UP, InputEvent.ALT_DOWN_MASK), "moveUp", () -> moveSelected(-1));
 		bind(KeyStroke.getKeyStroke(KeyEvent.VK_DOWN, InputEvent.ALT_DOWN_MASK), "moveDown", () -> moveSelected(1));
@@ -435,6 +437,18 @@ final class CombatPanel extends JPanel
 			LanguageBundle.getFormattedString("in_gametable_initiativeOf", combatant.name()),
 			combatant.initiative().score().orElse(0))
 			.ifPresent(score -> table.session().setInitiative(combatant.id(), score)));
+	}
+
+	private void rename()
+	{
+		target().ifPresent(combatant -> {
+			String name = JOptionPane.showInputDialog(this,
+				LanguageBundle.getFormattedString("in_gametable_renameOf", combatant.name()), combatant.name());
+			if (name != null && !name.isBlank())
+			{
+				table.session().rename(combatant.id(), name);
+			}
+		});
 	}
 
 	private void delayOrResume()

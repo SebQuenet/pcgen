@@ -127,9 +127,9 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 	/**
 	 * @param id    a combatant's id.
 	 * @param score the initiative rolled or announced.
-	 * @return this fight with that score given to the combatant and the rest of its group,
-	 *         which move to their place, each followed by the creatures it conjured; the
-	 *         others keep theirs.
+	 * @return this fight with that score given to the combatant and, unless it was conjured, the
+	 *         rest of its group, which move to their place, each followed by the creatures it
+	 *         conjured; the others keep theirs.
 	 */
 	public Combat withInitiative(int id, int score)
 	{
@@ -295,6 +295,16 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 		}
 		Combat nextRound = new Combat(round + 1, remaining, Optional.empty(), experience, encounters);
 		return nextRound.withCurrent(nextRound.turns().stream().findFirst()).turnBegun(expired);
+	}
+
+	/**
+	 * @param id   a combatant's id.
+	 * @param name its new name; never blank.
+	 * @return this fight with the combatant renamed, in its old place.
+	 */
+	public Combat renamed(int id, String name)
+	{
+		return update(id, combatant -> combatant.withName(name));
 	}
 
 	public Combat damaged(int id, int amount)
@@ -586,9 +596,11 @@ public record Combat(int round, List<Combatant> order, Optional<Turn> current, l
 		return turn.second() ? score - Initiative.SECOND_TURN_DROP : score;
 	}
 
+	/** A conjured creature acts on its own initiative, even among creatures conjured with it. */
 	private static boolean sameTroop(Combatant target, Combatant other)
 	{
-		return other.id() == target.id() || (!target.group().isEmpty() && target.group().equals(other.group()));
+		return other.id() == target.id() || (target.summonerId().isEmpty() && !target.group().isEmpty()
+			&& target.group().equals(other.group()));
 	}
 
 	/** Places the combatant before the first one it outranks, after any it ties with. */

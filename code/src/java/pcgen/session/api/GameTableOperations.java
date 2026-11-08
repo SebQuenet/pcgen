@@ -344,7 +344,7 @@ public final class GameTableOperations
 	{
 		return Operation.exclusive("set_initiative",
 			"Give a combatant its initiative. Its troop of identical monsters and the creatures it conjured take "
-				+ "the same score and move to their place." + STATE,
+				+ "the same score and move to their place; a conjured creature takes it alone." + STATE,
 			"""
 				{
 					"type": "object",

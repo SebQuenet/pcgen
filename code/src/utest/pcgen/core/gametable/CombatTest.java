@@ -307,6 +307,27 @@ class CombatTest
 	}
 
 	@Test
+	void eachConjuredCreatureTakesItsOwnInitiative()
+	{
+		Combatant first = Combatant.player(9, "Hound Archon 1", Optional.empty());
+		Combatant second = Combatant.player(10, "Hound Archon 2", Optional.empty());
+		Combat combat = skirmish().summoned(2, List.of(first, second));
+
+		Combat placed = combat.withInitiative(9, 30);
+
+		assertEquals(List.of("Hound Archon 1", "Valeros", "Seoni", "Hound Archon 2", "Goblin 3", "Goblin 4"),
+			names(placed));
+	}
+
+	@Test
+	void aCombatantCanBeRenamed()
+	{
+		Combat combat = skirmish().renamed(3, "  Goblin chief ");
+
+		assertEquals("Goblin chief", combat.combatant(3).orElseThrow().name());
+	}
+
+	@Test
 	void aConjuredCreatureLeavesWhenItsDurationEnds()
 	{
 		Combatant archon = Combatant.player(9, "Hound Archon 1", Optional.empty()).withRoundsLeft(OptionalInt.of(1));

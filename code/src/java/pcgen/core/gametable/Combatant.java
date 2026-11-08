@@ -30,7 +30,8 @@ import java.util.OptionalInt;
  * @param id            unique within the fight
  * @param name          what the list shows, such as "Goblin 2". Never blank.
  * @param group         combatants sharing one initiative, such as the goblins of an
- *                      encounter; blank for one acting alone
+ *                      encounter, or conjured together, each then on its own initiative;
+ *                      blank for one acting alone
  * @param initiative    its place in the order
  * @param health        its hit points, present exactly when it is a monster
  * @param conditions    its conditions, temporary bonuses and labels
@@ -110,6 +111,12 @@ public record Combatant(int id, String name, String group, Initiative initiative
 	public Combatant withInitiative(Initiative newInitiative)
 	{
 		return new Combatant(id, name, group, newInitiative, health, conditions, spells, recipe, characterFile, summonerId,
+			roundsLeft, delaying);
+	}
+
+	public Combatant withName(String newName)
+	{
+		return new Combatant(id, newName, group, initiative, health, conditions, spells, recipe, characterFile, summonerId,
 			roundsLeft, delaying);
 	}
 

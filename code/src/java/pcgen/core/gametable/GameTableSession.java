@@ -538,6 +538,12 @@ public final class GameTableSession
 		changed();
 	}
 
+	public synchronized void rename(int id, String name)
+	{
+		scenario = scenario.withCombat(scenario.combat().renamed(id, name));
+		changed();
+	}
+
 	public synchronized void start()
 	{
 		scenario = scenario.withCombat(scenario.combat().rollingMissing(d20).started());
