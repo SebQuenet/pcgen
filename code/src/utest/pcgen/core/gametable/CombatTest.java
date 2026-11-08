@@ -307,6 +307,14 @@ class CombatTest
 	}
 
 	@Test
+	void aMonsterWrittenByHandIsTheGameMasters()
+	{
+		Combatant brigand = Combatant.freehand(5, "Brigand", "", 12, 3);
+
+		assertEquals(CombatantKind.MONSTER, brigand.kind());
+	}
+
+	@Test
 	void eachConjuredCreatureTakesItsOwnInitiative()
 	{
 		Combatant first = Combatant.player(9, "Hound Archon 1", Optional.empty());

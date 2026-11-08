@@ -24,8 +24,9 @@ import java.util.Optional;
 import java.util.OptionalInt;
 
 /**
- * One entry of the fight. A monster carries the recipe it is rebuilt from and the hit
- * points the game master tracks; a player's character carries neither.
+ * One entry of the fight. A monster carries the hit points the game master tracks and,
+ * unless the game master wrote it by hand, the recipe it is rebuilt from; a player's
+ * character carries neither.
  *
  * @param id            unique within the fight
  * @param name          what the list shows, such as "Goblin 2". Never blank.
@@ -36,7 +37,7 @@ import java.util.OptionalInt;
  * @param health        its hit points, present exactly when it is a monster
  * @param conditions    its conditions, temporary bonuses and labels
  * @param spells        the spells it cast and keeps track of, counted down on its turns
- * @param recipe        how to rebuild it, present exactly when it is a monster
+ * @param recipe        how to rebuild it, present for a monster PCGen builds
  * @param characterFile the player's saved character, read for a glance at a few numbers
  * @param summonerId    the conjurer's id, for a conjured creature
  * @param roundsLeft    rounds before a conjured creature leaves
@@ -60,9 +61,9 @@ public record Combatant(int id, String name, String group, Initiative initiative
 		Objects.requireNonNull(characterFile);
 		Objects.requireNonNull(summonerId);
 		Objects.requireNonNull(roundsLeft);
-		if (health.isPresent() != recipe.isPresent())
+		if (recipe.isPresent() && health.isEmpty())
 		{
-			throw new IllegalArgumentException("A monster, and only a monster, has hit points and a recipe: " + name);
+			throw new IllegalArgumentException("A monster PCGen builds has hit points: " + name);
 		}
 	}
 
@@ -97,11 +98,26 @@ public record Combatant(int id, String name, String group, Initiative initiative
 	}
 
 	/**
+	 * @param id                 unique within the fight.
+	 * @param name               the name the list shows.
+	 * @param group              combatants sharing its initiative.
+	 * @param maximumHitPoints   its full hit points.
+	 * @param initiativeModifier its initiative modifier.
+	 * @return an unhurt monster the game master wrote by hand, with no sheet, its initiative not rolled yet.
+	 */
+	public static Combatant freehand(int id, String name, String group, int maximumHitPoints, int initiativeModifier)
+	{
+		return new Combatant(id, name, group, new Initiative(OptionalInt.empty(), initiativeModifier, false),
+			Optional.of(new Health(maximumHitPoints, 0)), List.of(), List.of(), Optional.empty(), Optional.empty(),
+			OptionalInt.empty(), OptionalInt.empty(), false);
+	}
+
+	/**
 	 * @return who it is to the game master.
 	 */
 	public CombatantKind kind()
 	{
-		if (recipe.isPresent())
+		if (health.isPresent())
 		{
 			return summonerId.isPresent() ? CombatantKind.MONSTER_SUMMON : CombatantKind.MONSTER;
 		}

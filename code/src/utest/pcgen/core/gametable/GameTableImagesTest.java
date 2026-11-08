@@ -23,6 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,15 @@ class GameTableImagesTest
 	{
 		session = new GameTableSession(() -> 10);
 		session.setEncounters(List.of(Encounter.named("Camp")));
+	}
+
+	@Test
+	void monstersWrittenByHandEnterTheFightWithTheirInitiativeRolled()
+	{
+		session.addFreehandMonsters("Brigand", 12, 3, 2);
+
+		assertEquals(List.of(OptionalInt.of(13), OptionalInt.of(13)),
+			session.combat().order().stream().map(brigand -> brigand.initiative().score()).toList());
 	}
 
 	@Test

@@ -119,6 +119,17 @@ class ScenarioJsonTest
 	}
 
 	@Test
+	void aMonsterWrittenByHandComesBack()
+	{
+		Combatant brigand = Combatant.freehand(1, "Brigand", "", 12, 3);
+		Scenario scenario = Scenario.empty().withCombat(Combat.empty().with(brigand).damaged(1, 4));
+
+		ScenarioReading reading = ScenarioJson.read(ScenarioJson.write(scenario));
+
+		assertEquals(new ScenarioReading.Read(scenario), reading);
+	}
+
+	@Test
 	void anEncounterMonsterBuiltFromAKitComesBack()
 	{
 		MonsterRecipe captain = MonsterRecipe.of(new MonsterSource.NpcKit("Black Claw Elite")).withHitDice(1);

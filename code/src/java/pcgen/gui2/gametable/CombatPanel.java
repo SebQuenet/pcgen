@@ -484,7 +484,8 @@ final class CombatPanel extends JPanel
 	private void addMonster()
 	{
 		Object[] choices = {LanguageBundle.getString("in_gametable_addFromBestiary"),
-			LanguageBundle.getString("in_gametable_addFromFile"), LanguageBundle.getString("in_gametable_cancel")};
+			LanguageBundle.getString("in_gametable_addFromFile"), LanguageBundle.getString("in_gametable_addFreehand"),
+			LanguageBundle.getString("in_gametable_cancel")};
 		int choice = JOptionPane.showOptionDialog(this, LanguageBundle.getString("in_gametable_addMonster"),
 			LanguageBundle.getString("in_gametable_title"), JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
 			null, choices, choices[0]);
@@ -500,6 +501,11 @@ final class CombatPanel extends JPanel
 				() -> table.session().addMonsters(file.getName().replaceFirst("\\.pcg$", ""),
 					MonsterRecipe.of(new MonsterSource.CharacterFile(file.getAbsolutePath())), 1),
 				table::reportProblems));
+		}
+		else if (choice == 2)
+		{
+			FreehandMonsterDialog.ask(this).ifPresent(monster -> table.session().addFreehandMonsters(monster.name(),
+				monster.maximumHitPoints(), monster.initiativeModifier(), monster.count()));
 		}
 	}
 

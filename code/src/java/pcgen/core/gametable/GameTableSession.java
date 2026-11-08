@@ -418,6 +418,25 @@ public final class GameTableSession
 	}
 
 	/**
+	 * @param name               the name of one, numbered when several enter.
+	 * @param maximumHitPoints   the full hit points of each.
+	 * @param initiativeModifier their initiative modifier.
+	 * @param count              how many enter, sharing one rolled initiative.
+	 */
+	public synchronized void addFreehandMonsters(String name, int maximumHitPoints, int initiativeModifier, int count)
+	{
+		Combat combat = scenario.combat();
+		String group = "troop:" + combat.nextId();
+		for (String monsterName : numberedNames(combat, name, count))
+		{
+			combat = combat.with(Combatant.freehand(combat.nextId(), monsterName, group, maximumHitPoints,
+				initiativeModifier));
+		}
+		scenario = scenario.withCombat(combat.rollingMissing(d20));
+		changed();
+	}
+
+	/**
 	 * @param name          the character's name.
 	 * @param characterFile its saved character, if the game master has a copy.
 	 */
